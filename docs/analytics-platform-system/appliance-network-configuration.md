@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d11184c1fd12ae40188ef4e4442e7f9b7fb6b04a
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 341db2791f99d72d293fe00dbf92c1f59df444ca
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909807"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697915"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>分析平台系统的设备的网络配置
 生成和配置修补程序在所有服务器和从 IHV 的工厂车间适用设备的 IP 地址一 Analytics Platform System (APS) 设备。 设备的传递，时必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。  
@@ -52,9 +52,9 @@ ms.locfileid: "37909807"
 ## <a name="manufacturer-references"></a>制造商的引用  
 有关 Dell 设备的其他信息，请参阅：  
   
--   PowerConnect 开关说明[Dell PowerConnect 6200 系列系统 CLI 参考指南](http://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
+-   PowerConnect 开关说明[Dell PowerConnect 6200 系列系统 CLI 参考指南](https://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC[集成 Dell 远程访问控制器 7 (iDRAC7) 版本 1.30.30 用户指南](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   iDRAC/BMC[集成 Dell 远程访问控制器 7 (iDRAC7) 版本 1.30.30 用户指南](https://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
   
 -   PDU 的**Dell 按流量计费的机架 PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   

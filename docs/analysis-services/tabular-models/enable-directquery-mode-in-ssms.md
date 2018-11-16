@@ -1,5 +1,5 @@
 ---
-title: 启用在 SSMS 中的 DirectQuery 模式 |Microsoft 文档
+title: SSMS 中启用 DirectQuery 模式 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e643f90a5df9b113f2fd59a2328868131bf9c63d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045121"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700585"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中启用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,17 +22,17 @@ ms.locfileid: "34045121"
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，DirectQuery 配置步骤取决于模型的兼容级别。 下面是适用于所有兼容级别的步骤。  
   
- 本文假定你已创建并验证在兼容性级别为 1200年或更高版本，并仅需要启用 DirectQuery 访问并更新连接字符串的内存中表格模型。 若从较低的兼容级别开始，则首先需要手动升级。 有关步骤，请参阅 [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) 。  
+ 本文假定你已创建并验证在兼容性级别为 1200年或更高版本，并仅需启用 DirectQuery 访问并更新连接字符串的内存中表格模型。 若从较低的兼容级别开始，则首先需要手动升级。 有关步骤，请参阅 [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) 。  
   
 > [!IMPORTANT]  
 >  建议使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 而非 Management Studio 来切换数据存储模式。 当你使用  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 来更改模型，然后又进行部署到服务器的操作时，该模型与数据库将保持同步。此外，在模型中更改存储模式后，你就可以查看已发生的验证错误。 按本文说明使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 时，不报告验证错误。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  在表格模型中启用 DirectQuery 模式是一个多步骤过程：  
   
 -   确保模型的功能不会在 DirectQuery 模式中导致验证错误，然后将模型中的数据存储模式从内存中更改为 DirectQuery。  
   
-     中记录的功能限制列表[DirectQuery 模式下](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
+     在中记录一系列功能限制[DirectQuery 模式下](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
   
 -   查看已部署数据库使用的连接字符串和凭据，以便从后端外部数据库检索数据。 确保只有一个连接，且其设置适合执行查询。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34045121"
   
 -   在缓存和关系数据源都可用时，您可以设置首选连接方法，但最终还是客户端使用 DirectQueryMode 连接字符串属性来控制所使用的源。  
   
--   你可以将缓存上的分区配置为从不处理用于 DirectQuery 模式的主分区，并且主分区必须始终引用关系数据源。 有许多方法可以使用分区来优化模型设计和报表体验。 有关详细信息，请参阅[在 DirectQuery 模型中定义分区](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。  
+-   你可以将缓存上的分区配置为从不处理用于 DirectQuery 模式的主分区，并且主分区必须始终引用关系数据源。 有许多方法可以使用分区来优化模型设计和报表体验。 有关详细信息，请参阅[DirectQuery 模型中定义的分区](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。  
   
 -   在部署了模型后，您可以更改首选连接方法。 例如，您可以使用混合模式来进行测试，并且仅在全面测试了使用该模型的所有报表或查询后，才将模型切换到“仅限 DirectQuery”  模式。 有关详细信息，请参阅[设置或更改 DirectQuery 的首选连接方法](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)。  
   
@@ -124,10 +124,10 @@ ms.locfileid: "34045121"
   
 3.  在跟踪中，你会看到针对关系数据库执行查询的证据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [兼容性级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
- [扩展的事件](../../relational-databases/extended-events/extended-events.md)   
- [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [扩展事件](../../relational-databases/extended-events/extended-events.md)   
+
   
   

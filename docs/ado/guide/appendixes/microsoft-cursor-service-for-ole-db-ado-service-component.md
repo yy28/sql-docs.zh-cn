@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c859de289a9f93a23702c63bd50269bb0881b34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714985"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350501"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>用于 OLE DB 概述 Microsoft 游标服务
 用于 OLE DB 的 Microsoft 游标服务补充数据访问接口的游标支持函数。 因此，用户可以体验从所有数据提供程序相对统一的功能。
@@ -31,7 +31,7 @@ ms.locfileid: "47714985"
 ## <a name="keyword"></a>关键字
  若要调用此服务组件，请设置[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。
 
-```
+```vb
 connection.CursorLocation=adUseClient
 recordset.CursorLocation=adUseClient
 ```
@@ -41,7 +41,7 @@ recordset.CursorLocation=adUseClient
 
  游标服务调用后，对某些动态属性的更改不到基础数据源可见。 例如，设置*命令超时*上的属性**记录集**不会对基础数据提供程序可见。
 
-```
+```vb
 
 Recordset1.CursorLocation = adUseClient     'invokes cursor service
 Recordset1.Open "authors", _
@@ -75,7 +75,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 
  此外可以设置或通过指定其名称为索引来检索动态属性**属性**集合。 例如，获取并打印的当前值[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)动态属性，然后设置新值，如下所示：
 
-```
+```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```

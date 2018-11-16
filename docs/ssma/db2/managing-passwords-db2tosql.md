@@ -10,12 +10,12 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3761e7918b76b5917c53e93356bc07f51a521992
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2a2ba7cfb16c4df96fa40edb23d9bccea3599005
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099218"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675648"
 ---
 # <a name="managing-passwords-db2tosql"></a>管理密码 (DB2ToSQL)
 本部分是如何确保数据库密码和导入或导出跨服务器的过程：  
@@ -128,6 +128,6 @@ SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上
     Please confirm password: xxxxxxxx
 
   
-## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+## <a name="see-also"></a>请参阅  
+[执行 SSMA 控制台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

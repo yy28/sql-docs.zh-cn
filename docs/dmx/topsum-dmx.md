@@ -1,5 +1,5 @@
 ---
-title: TopSum (DMX) |Microsoft 文档
+title: TopSum (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd8d762f3bdb9ac1dd74ddb72d456ea69eb52917
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: e94af73873414f1486908b63b508143093194508
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842680"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606587"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +29,18 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>适用范围  
- 一个表达式，返回一个表，如\<表列引用 >，或函数返回一个表。  
+ 一个表达式，返回一个表，如\<表的列引用 >，或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>Remarks  
- **TopSum**函数返回的最顶层的行的排名基于的计算值的按降序\<排名表达式 > 自变量对于每一行，以便的总和\<排名表达式 > 值至少是指定的给定的总数\<总和 > 自变量。 **TopSum**返回可能最少数量的元素，同时仍满足指定的和值。  
+## <a name="remarks"></a>备注  
+ **TopSum**函数根据的计算值的降序返回最前面的行\<排名表达式 > 参数对于每个行，使之和\<排名表达式 >值至少是指定的总数\<总和 > 参数。 **TopSum**最少数量的元素同时，尽量返回满足指定的总和值。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建针对你通过使用生成的关联模型的预测查询[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例创建针对关联模型，它使用生成的预测查询[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
- 若要了解 TopPercent 的工作原理，它可能是第一次执行返回嵌套的表的预测查询很有帮助。  
+ 若要了解 TopPercent 的工作方式，可能会先执行返回嵌套的表的预测查询很有帮助。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -68,7 +68,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- **TopSum**函数使用此查询的结果，并返回指定的计数包含的最大值的行求和。  
+ **TopSum**函数接受此查询的结果，并返回总值为指定计数的最大值行。  
   
 ```  
 SELECT   
@@ -83,11 +83,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- 第一个参数**TopSum**函数是一个表列的名称。 在此示例中，嵌套的表返回通过调用预测函数并使用 INCLUDE_STATISTICS 自变量。  
+ 第一个参数**TopSum**函数是表列的名称。 在此示例中，通过调用预测函数和使用 INCLUDE_STATISTICS 参数返回嵌套的表。  
   
  第二个参数**TopSum**函数是使用对结果进行排序的嵌套表中的列。 在此示例中，INCLUDE_STATISTICS 选项返回 $SUPPORT、$PROBABILTY 和 $ADJUSTED PROBABILITY 列。 此示例使用 $PROBABILITY 返回概率总值至少为 50% 的行。  
   
- 第三个参数**TopSum**函数指定的目标总和，作为双精度。 若要获取概率总值为 50% 的最前面的产品行，请键入 .5。  
+ 第三个参数**TopSum**函数指定目标和双精度。 若要获取概率总值为 50% 的最前面的产品行，请键入 .5。  
   
  示例结果：  
   
@@ -97,11 +97,11 @@ NATURAL PREDICTION JOIN
 |Water Bottle|2866|0.19…|0.17…|  
 |Patch kit|2113|0.14…|0.13…|  
   
- **请注意**提供了此示例仅为说明的使用情况**TopSum**。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
+ **请注意**提供了此示例仅用于说明的使用情况**TopSum**。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
   
 ## <a name="see-also"></a>请参阅  
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
   
   

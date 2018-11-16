@@ -12,12 +12,12 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f196050cfb3f32ba85f82dcdb6496483be8ff099
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d994b13d063c3a72e6273b95d47e320285cd2d16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667016"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>将转换数据库对象加载到 SQL Server (SybaseToSQL)
 转换 Sybase Adaptive Server Enterprise (ASE) 的数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以加载到生成的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 SSMA 此外，还允许使用的实际内容更新目标元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库。  
@@ -108,7 +108,7 @@ ms.locfileid: "47750479"
 已加载到的已转换的数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以授予和拒绝对这些对象的权限。 它是一个好办法迁移之前执行此操作将数据到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关如何帮助保护信息对象中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅"安全注意事项的数据库和数据库应用程序"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[迁移 Sybase ASE 数据到 SQL Server / SQL Azure(SybaseToSQL)](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)。  
+迁移过程中的下一步是[迁移 Sybase ASE 数据到 SQL Server / SQL Azure(SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)。  
   
 ## <a name="see-also"></a>请参阅  
 [将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL 数据库&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

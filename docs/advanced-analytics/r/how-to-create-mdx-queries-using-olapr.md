@@ -1,5 +1,5 @@
 ---
-title: 如何创建 MDX 查询中 R 在 SQL Server 机器学习中使用 olapR |Microsoft 文档
+title: 如何创建 MDX 查询中使用 olapR 中 SQL Server 机器学习的 R |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,30 +7,30 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76602c41fd6f8d300c240a6072f2a6decec18e3f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7fe2749e6f70522fbd010d5af78890dfe897426b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203589"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696926"
 ---
-# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在使用 olapR R 中创建 MDX 查询
+# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 创建 MDX 查询
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)包支持针对托管在 SQL Server Analysis Services 多维数据集的 MDX 查询。 你可以生成针对现有多维数据集的查询、 浏览维度和其他多维数据集对象，并粘贴中现有的 MDX 查询以检索数据。
+[OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)包支持针对托管在 SQL Server Analysis Services 多维数据集的 MDX 查询。 可以生成针对现有的多维数据集的查询、 浏览的维度和多维数据集的其他对象，并粘贴现有 MDX 查询以检索数据中。
 
 本文介绍的两个主要用途**olapR**包：
 
-+ [从 R，使用 olapR 包中提供的构造函数生成的 MDX 查询](#buildMDX)
-+ [执行现有的有效 MDX 查询使用 olapR 和 OLAP 提供程序](#executeMDX)
++ [从 R 使用 olapR 包中提供的构造函数生成的 MDX 查询](#buildMDX)
++ [执行现有的有效 MDX 查询使用 olapR 和 OLAP 访问接口](#executeMDX)
 
 不支持以下操作：
 
-+ 对表格模型的 DAX 查询
++ 针对表格模型的 DAX 查询
 + 创建新的 OLAP 对象
-+ 到分区，包括度量值或总和的写回
++ 写回分区，包括度量值或求和
 
-## <a name="buildMDX"></a> 从 R 生成的 MDX 查询
+## <a name="buildMDX"></a> 从 R 生成 MDX 查询
 
 1. 定义指定 OLAP 数据源（SSAS 实例）和 MSOLAP 提供程序的连接字符串。
 
@@ -40,23 +40,23 @@ ms.locfileid: "31203589"
 
 4. 使用以下帮助程序函数，提供要包含在 MDX 查询中的维度和度量值的相关详细信息：
 
-     + `cube()` 指定 SSAS 数据库的名称。 如果连接到命名实例，则提供的计算机名称和实例名称。 
-     + `columns()` 提供要在中使用的度量值的名称**ON 列**自变量。
-     + `rows()` 提供要在中使用的度量值的名称**ON 行**自变量。
+     + `cube()` 指定 SSAS 数据库的名称。 如果连接到命名实例，请提供计算机名称和实例名称。 
+     + `columns()` 提供要在中使用的度量值的名称**ON COLUMNS**参数。
+     + `rows()` 提供要在中使用的度量值的名称**ON ROWS**参数。
      + `slicers()` 指定要作为切片器使用的字段或成员。 切片器就像应用于所有 MDX 查询数据的筛选器一样。
      
      + `axis()` 指定要在查询中使用的附加轴的名称。 
      
-         OLAP 多维数据集最多可以包含 128 个查询轴。 通常前, 四个轴称为**列**，**行**，**页**，和**章节**。 
+         OLAP 多维数据集最多可以包含 128 个查询轴。 通常情况下前, 四个轴称为**列**，**行**，**页**，以及**章节**。 
          
          如果查询相对简单，可以使用函数 `columns`、 `rows`等生成查询。 但也可以使用带非零索引值的 `axis()` 函数，生成具有许多限定符的 MDX 查询或将额外维度添加为限定符。
 
-5. 将句柄，并且已完成的 MDX 查询，传递到以下函数，具体取决于结果的形状之一： 
+5. 将句柄，并已完成的 MDX 查询，传递到的以下函数，具体取决于结果的形状之一： 
 
   + `executeMD` 返回多维数组
   + `execute2D` 返回二维（表格）数据帧
 
-## <a name="executeMDX"></a> 执行从 R 有效的 MDX 查询
+## <a name="executeMDX"></a> 从 R 执行有效的 MDX 查询
 
 1. 定义指定 OLAP 数据源（SSAS 实例）和 MSOLAP 提供程序的连接字符串。
 
@@ -71,11 +71,11 @@ ms.locfileid: "31203589"
 
 ## <a name="examples"></a>示例
 
-下面的示例基于 AdventureWorks 数据市场和多维数据集项目，因为该项目是广泛使用，在多个版本中，包括可轻松地将还原到 Analysis Services 的备份文件。 如果你没有现有的多维数据集，获取示例多维数据集使用这些选项之一：
+下面的示例基于 AdventureWorks 数据市场和多维数据集项目，因为该项目是广泛可用，在多个版本中，包括可轻松地将还原到 Analysis Services 的备份文件。 如果没有现有的多维数据集，获取示例多维数据集使用这些选项之一：
 
-+ 按照下面的第 4 课到 Analysis Services 教程在这些示例中创建使用多维数据集：[创建 OLAP 多维数据集](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ 创建多维数据集，可在这些示例中按照 Analysis Services 教程第 4 课：[创建的 OLAP 多维数据集](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ 下载为备份，现有多维数据集并将其还原到的 Analysis Services 实例。 例如，此站点提供了完全处理的多维数据集，以压缩格式： [Adventure Works 多维模型 SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件，然后将其还原到 SSAS 实例。 有关详细信息，请参阅[备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[还原 ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
++ 下载为备份，将现有多维数据集并将其还原到的 Analysis Services 实例。 例如，此站点提供了完全处理的多维数据集，以压缩格式： [Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件，并再将其还原为 SSAS 实例。 有关详细信息，请参阅[备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.带切片器的基本 MDX
 
@@ -90,8 +90,8 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + 在列上可将多个度量值指定为逗号分隔字符串的元素。
 + “行”轴使用“产品系列”维度的所有可能的值（所有成员）。 
-+ 此查询将返回具有三个列，包含的表_汇总_来自所有国家/地区的 Internet sales 的摘要。
-+ WHERE 子句指定_切片器轴_。 在此示例中，切片器使用的成员**SalesTerritory**维度来筛选查询，以便在计算中使用仅澳大利亚的销售额。
++ 此查询将返回一个表包含三列，其中包含_汇总_摘要的所有国家/地区的 Internet 销售额。
++ WHERE 子句指定_切片器轴_。 在此示例中，切片器使用的成员**SalesTerritory**维度来筛选查询，以便在计算中使用仅从澳大利亚的销售额。
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>使用 olapR 中提供的函数生成此查询
 
@@ -109,7 +109,7 @@ result1 <- executeMD(ocs, qry)
 
 ```
 
-对于命名实例，请确保可以将其视为的控制字符在。 任何字符进行转义 例如，以下连接字符串引用实例 OLAP01，名为 ContosoHQ 的服务器上：
+对于命名实例，请确保任何被视为在 R 中的控制字符的字符进行转义 例如，以下连接字符串引用实例 OLAP01，名为 ContosoHQ 的服务器上：
 
 ```R
 cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
@@ -126,7 +126,7 @@ mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sal
 result2 <- execute2D(ocs, mdx)
 ```
 
-如果你使用的 MDX 生成器在 SQL Server Management Studio 中定义的查询，然后保存 MDX 字符串，它将编号从 0，开始的轴，如下所示： 
+如果您在 SQL Server Management Studio 中使用 MDX 生成器定义查询，然后保存 MDX 字符串，它将从 0，开始为轴编号，如下所示： 
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amount]} ON AXIS(0), 
@@ -135,7 +135,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
    WHERE [Sales Territory].[Sales Territory Countr,y].[Australia]
 ```
 
-仍可将此查询作为预定义的 MDX 字符串运行。 但是，若要生成相同的查询使用 R 使用`axis()`函数，你必须重新编号从 1 开始的轴。
+仍可将此查询作为预定义的 MDX 字符串运行。 但是，若要生成相同的查询使用 R 使用`axis()`函数，您必须重新编号从 1 开始的轴。
 
 ### <a name="2-explore-cubes-and-their-fields-on-an-ssas-instance"></a>2.浏览 SSAS 实例上的多维数据集及其字段
 
@@ -146,7 +146,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
 若要查看有权查看的实例上的所有多维数据集或透视，将句柄作为 `explore`的参数提供。
 
 > [!IMPORTANT]
-> 最终结果是**不**多维数据集;TRUE 只是表示元数据操作是否成功。 如果参数无效，将引发错误。
+> 最终结果是**不**多维数据集;TRUE 仅表示元数据操作是否成功。 如果参数无效，将引发错误。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -181,7 +181,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>返回指定维度和层次结构的所有成员
 
-定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，以作为前缀的项**->** 表示的上一个成员的子级。
+定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，带有前缀的项**->** 表示上一个成员的子级。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -194,11 +194,11 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 | 附件|
 |自行车|
 |服装|
-|_Components_|
+|_组件_|
 |-> 程序集组件|
 |-> 程序集组件|
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [在 R 中使用来自 OLAP 多维数据集的数据](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734989"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350061"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 数据整理服务的 OLE DB 概述
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "47734989"
 ## <a name="provider-keyword"></a>提供程序关键字
  若要调用的 OLE DB Data Shaping 服务，请连接字符串中指定以下关键字和值。
 
-```
+```vb
 "Provider=MSDataShape"
 ```
 
@@ -44,14 +44,14 @@ ms.locfileid: "47734989"
 
  此外可以通过指定其名称为连接字符串中的关键字设置可写的动态属性。 例如，在 Microsoft Visual Basic 中，设置**数据提供程序**动态属性设置为"MSDASQL"通过指定：
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
  此外可以设置或通过指定其名称为索引来检索动态属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)属性。 例如，下面的代码示例获取并列显的当前值**数据提供程序**动态属性，然后设置新值，如果 cn。数据提供程序已设置为"MSDataShape"(直接或间接通过连接字符串) 和未打开连接：
 
-```
+```vb
 Debug.Print cn.Properties("Data Provider")
 cn.Properties("Data Provider") = "MSDASQL"
 ```

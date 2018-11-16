@@ -16,12 +16,12 @@ ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebaffdc7404730a059b38186d55209033c8847c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788435"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670927"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 驱动程序
 Microsoft Visual FoxPro 是数据库构造和应用程序开发功能强大的面向对象的环境。 Microsoft Visual FoxPro ODBC 驱动程序使应用程序以打开查询，并更新 Visual FoxPro 和早期版本的 FoxPro 通过开放式数据库连接 (ODBC) 界面中的数据。  
@@ -45,4 +45,4 @@ Microsoft Visual FoxPro 是数据库构造和应用程序开发功能强大的�
 |查看使用 Visual c + + 访问 Visual FoxPro 数据的简单示例|[Visual FoxPro ODBC 驱动程序中使用 C 或 c + + 应用程序](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |请参阅受支持的硬件和软件的列表|[系统要求](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- 有关下载和安装的 Visual FoxPro ODBC 驱动程序的信息，请参阅[Visual FoxPro ODBC 驱动程序](http://go.microsoft.com/fwlink/?LinkId=121318)在 MSDN 下载。
+ 有关下载和安装的 Visual FoxPro ODBC 驱动程序的信息，请参阅[Visual FoxPro ODBC 驱动程序](https://go.microsoft.com/fwlink/?LinkId=121318)在 MSDN 下载。

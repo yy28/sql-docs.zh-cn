@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852857"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667778"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47852857"
   
 |*ValuePtr*值|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|默认值。 在调用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)，将延迟语句准备，直到**SQLExecute**称为或元属性操作 (**SQLDescribeCol**或**SQLDescribeParam**) 执行。|  
+|SQL_DP_ON|默认值。 在调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)，将延迟语句准备，直到**SQLExecute**称为或元属性操作 (**SQLDescribeCol**或**SQLDescribeParam**) 执行。|  
 |SQL_DP_OFF|准备的语句就立即**SQLPrepare**执行。|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -150,7 +150,7 @@ ms.locfileid: "47852857"
  如果的目录函数则当 SQL_SOPT_SS_NAME_SCOPE 具有值而不调用 SQLTables、 SQLColumns 或 SQLPrimaryKeys SQL_SS_NAME_SCOPE_TABLE，将返回 SQL_ERROR。 生成具有 SQLSTATE HY010 和消息“函数序列错误(SQL_SOPT_SS_NAME_SCOPE 未设置为 SQL_SS_NAME_SCOPE_TABLE)”的诊断记录。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLGetStmtAttr 函数](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

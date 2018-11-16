@@ -1,7 +1,7 @@
 ---
 title: ADO 安全设计问题 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c961c24f0ffcbb3f0cbafabce2988edb6c8d607
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716365"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293123"
 ---
 # <a name="ado-security-design-features"></a>ADO 安全设计功能
 以下各节介绍安全设计功能在 ActiveX 数据对象 (ADO) 2.8 和更高版本。 这些更改是在 ADO 中 2.8 为了提高安全性。 ADO 6.0 中，包含在 Windows Vista 中的 Windows DAC 6.0 中，是功能上等效于 ADO 2.8，它包括在 Windows XP 和 Windows Server 2003 中的 MDAC 2.8。 本主题提供有关如何最好地保护 ADO 2.8 或更高版本中的应用程序的信息。
@@ -32,7 +32,7 @@ ms.locfileid: "47716365"
 ### <a name="revised-and-improved-security-warning-message-box-now-used-to-alert-users"></a>现在，以提醒用户使用修改后的和改进的安全警告消息框
  ADO 2.7 和更早版本中，对于以下警告消息显示已编写脚本的 Web 页上尝试运行不受信任的提供程序中的 ADO 代码时：
 
-```
+```console
 This page accesses data on another domain. Do you want to allow this? To
 avoid this message in Internet Explorer, you can add a secure Web site to
 your Trusted Sites zone on the Security tab of the Internet Options dialog
@@ -41,7 +41,7 @@ box.
 
  针对 ADO 2.8 和更高版本中，前面的消息不会再出现。 相反，在此上下文中将显示以下消息：
 
-```
+```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
@@ -87,7 +87,7 @@ Website, click OK, otherwise click Cancel.
 
  安全警告现在的显示位置的情况下，在消息框，通知用户：
 
-```
+```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 

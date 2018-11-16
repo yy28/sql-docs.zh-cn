@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a287cca62e5d6f9c28624008d3a8d136cc76dd8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba121e26858aaff8a34e07ecad4aa5a465116cd4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766605"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662856"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) 接口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "47766605"
   
  这[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口编程参考未提供所有的 OLE DB 接口和方法，这些接口和方法的使用时显示特定于提供程序的行为仅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB提供程序。  
   
- 有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232)（OLE DB 程序员参考）。  
+ 有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232)（OLE DB 程序员参考）。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [接口&#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+-   [接口&#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d1c6c05e196e1a845c073545c3f79f0f83a19b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622275"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656756"
 ---
 # <a name="creating-an-assembly"></a>创建程序集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   所调用或被引用的程序集是在同一个数据库中创建的。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>创建程序集时指定安全性  
- 创建程序集时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库中，您可以指定三个不同级别的安全性可以在其中运行你的代码之一：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**. 当**CREATE ASSEMBLY**运行语句时，可能会导致无法在服务器上注册的程序集对代码程序集上执行某些检查。 有关详细信息，请参阅 》 上模拟示例[CodePlex](http://msftengprodsamples.codeplex.com/)。  
+ 创建程序集时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库中，您可以指定三个不同级别的安全性可以在其中运行你的代码之一：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**. 当**CREATE ASSEMBLY**运行语句时，可能会导致无法在服务器上注册的程序集对代码程序集上执行某些检查。 有关详细信息，请参阅 》 上模拟示例[CodePlex](https://msftengprodsamples.codeplex.com/)。  
   
  **安全**是默认权限集，适用于大多数方案。 若要指定给定的安全级别，您可以按如下所示修改 CREATE ASSEMBLY 语句的语法：  
   
@@ -136,6 +136,6 @@ WITH PERMISSION_SET = UNSAFE;
  [删除程序集](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 集成代码访问安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md)   
- [允许部分可信任的调用方](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [允许部分可信任的调用方](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

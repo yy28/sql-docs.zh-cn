@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b480c400ae2068bb6701192e77d97672ddeb024e
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254443"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701445"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>使用快速启动板服务和 SQL Server 中的外部脚本执行常见的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  SQL Server Trusted Launchpad 服务对 R 和 Python 支持外部脚本执行。 在 SQL Server 2016 R Services，SP1 将提供服务。 SQL Server 2017 包括快速启动板 ervice 作为开头几安装的一部分。
 
-多个问题会阻止从开始，包括配置问题或更改，或缺少的网络协议的快速启动板。 本文提供许多问题的疑难解答的指引。 对于任何我们错过了，您可以发布到的问题[Machine Learning Server 论坛](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)。
+多个问题会阻止从开始，包括配置问题或更改，或缺少的网络协议的快速启动板。 本文提供许多问题的疑难解答的指引。 对于任何我们错过了，您可以发布到的问题[Machine Learning Server 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)。
 
 **适用于：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
 

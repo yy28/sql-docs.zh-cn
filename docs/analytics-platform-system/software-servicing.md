@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 79231b6e2867154bc4d826b83a0a4fd27487f438
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909797"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700206"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>在分析平台系统中的软件维护服务
 本部分总结了服务的分析平台系统设备，包括 WSUS 和 Analytics Platform System 修补程序要求的软件。  
   
 ## <a name="Basics"></a>软件维护基础  
-**WSUS:** 分析平台系统 appliance 需要进行配置以接收从 Windows Server Update Services (WSUS) 的更新。 这些更新包括设备软件的重要更改。 配置后，许多更新将自动安装，并不需要实际操作管理。 通常情况下，WSUS 更新配置期间[配置 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md)新设备安装过程中执行的步骤。 如果没有，可以稍后执行此配置步骤。 有关 WSUS 的信息，请参阅[WSUS 网站指南](http://go.microsoft.com/fwlink/?LinkId=202417)。  
+**WSUS:** 分析平台系统 appliance 需要进行配置以接收从 Windows Server Update Services (WSUS) 的更新。 这些更新包括设备软件的重要更改。 配置后，许多更新将自动安装，并不需要实际操作管理。 通常情况下，WSUS 更新配置期间[配置 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md)新设备安装过程中执行的步骤。 如果没有，可以稍后执行此配置步骤。 有关 WSUS 的信息，请参阅[WSUS 网站指南](https://go.microsoft.com/fwlink/?LinkId=202417)。  
   
 **修补程序：** 此外，您可能需要应用 Analytics Platform System 修补程序。 一个*修补程序*是为特定客户来解决问题，分析平台系统软件创建的软件更新。 每个修补程序是安装特定于客户的问题的修补程序的可执行文件。 每个修补程序还包含 Windows、 SQL Server 和分析平台系统的所有以前发布的软件更新的累积。 如果你需要安装的修补程序，Microsoft 支持部门将提供您的修补程序和说明。  
   

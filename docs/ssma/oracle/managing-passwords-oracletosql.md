@@ -13,12 +13,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 903fd6b9af4bc363f5f37ea353ab9ddeb93e347c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: efe58d365cacd0f163299ce6c030bdc34a4b76cd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664496"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密码 (OracleToSQL)
 本部分是如何确保数据库密码和导入或导出跨服务器的过程：  
@@ -126,6 +126,6 @@ SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台 (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+## <a name="see-also"></a>请参阅  
+[执行 SSMA 控制台 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95e948a80d4749a92ef1c8e299b47272d72c333f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659255"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601908"
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象将数据从 SQL Server 数据库绑定到可视对象 （在这种情况下，DHTML 表），应用程序的客户端 HTML 页中。 事件驱动的 VBScript 程序逻辑使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)到：  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 -   查询数据库，将更新发送到数据库，并刷新该数据网格。  
   
@@ -33,10 +33,10 @@ ms.locfileid: "47659255"
   
  下面的代码定义**rds。DataControl**组件：  
   
-```  
+```vb
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
    ID=DC1 Width=1 Height=1>  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider=sqloledb;  
 Initial Catalog=AddrBookDb;Integrated Security=SSPI;">  
 </OBJECT>  
@@ -61,7 +61,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |参数|Description|  
 |---------------|-----------------|  
-|[服务器](../../../ado/reference/rds-api/server-property-rds.md)|如果使用 HTTP，值是前面的服务器计算机名称`http://`。|  
+|[服务器](../../../ado/reference/rds-api/server-property-rds.md)|如果使用 HTTP，值是前面的服务器计算机名称`https://`。|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|提供必要的连接信息**rds。DataControl**以连接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|设置或返回用来检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   

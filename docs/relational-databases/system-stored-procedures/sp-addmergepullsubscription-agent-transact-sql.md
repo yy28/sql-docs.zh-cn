@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749735"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681365"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@publisher_login =** ] **'publisher_login**   
  同步时连接到发布服务器所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。  
   
- [  **@publisher_password =** ] **'***publisher_password*****  
+ [  **@publisher_password =** ] **'publisher_password**   
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
@@ -230,7 +230,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
  间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
+ [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  第一次安排合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
@@ -253,7 +253,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  作业 ID 的输出参数。 *merge_jobid*是**binary(16)**，默认值为 NULL。  
   
  [  **@enabled_for_syncmgr =** ] **'enabled_for_syncmgr**   
- 指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  [  **@ftp_address =** ] **'ftp_address**   
  仅为保持向后兼容。  
@@ -280,7 +280,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@use_interactive_resolver =** ] **'use_interactive_resolver** ]   
- 使用交互式冲突解决程序解决所有允许交互式解决方法的项目的冲突。 *use_interactive_resolver*是**nvarchar(5)**，默认值为 FALSE。  
+ 使用交互式冲突解决程序解决所有允许交互式解决方法的项目的冲突。 *use_interactive_resolver* 是 **nvarchar(5)**，默认值为 FALSE。  
   
  [  **@offloadagent =** ] **'remote_agent_activation**   
  > [!NOTE]  
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  现有代理作业的名称。 *job_name*是**sysname**，默认值为 NULL。 只有在使用现有作业而不是新创建的作业（此为默认设置）来同步订阅时，才需要指定此参数。 如果你不属于**sysadmin**固定服务器角色，则必须指定*job_login*并*job_password*时指定*job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'dynamic_snapshot_location** ]   
- 在使用已筛选的数据快照时要读取的快照文件所在文件夹的路径。 *dynamic_snapshot_location*是**nvarchar(260)**，默认值为 NULL。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 在使用已筛选的数据快照时要读取的快照文件所在文件夹的路径。 *dynamic_snapshot_location*是**nvarchar(260)**，默认值为 NULL。 有关详细信息，请参阅 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  指示已启用 Web 同步。 *use_web_sync*是**位**，默认值为 0。 **1**指定，可以使用 HTTP 通过 internet 同步请求订阅。  
   
  [  **@internet_url =** ] **'执行**   
- 用于 Web 同步的复制侦听器 (REPLISAPI.DLL) 的位置。 *执行*是**nvarchar(260)**，默认值为 NULL。 *执行*是一个完全限定的 URL，格式`http://server.domain.com/directory/replisapi.dll`。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `http://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
+ 用于 Web 同步的复制侦听器 (REPLISAPI.DLL) 的位置。 *执行*是**nvarchar(260)**，默认值为 NULL。 *执行*是一个完全限定的 URL，格式`https://server.domain.com/directory/replisapi.dll`。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `https://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
   
  [  **@internet_login =** ] **'internet_login**   
  合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时所用的登录名。 *internet_login*是**sysname**，默认值为 NULL。  

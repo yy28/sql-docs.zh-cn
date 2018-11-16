@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040395"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600387"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +34,11 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **TopPercent**函数根据的计算值的降序返回最前面的行\<排名表达式 > 参数对于每个行，使之和\<排名表达式 >值之至少由指定的百分比\<%> 参数。 **TopPercent**最少数量的元素同时，尽量返回满足指定百分比值。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建针对关联模型，它使用生成的预测查询[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例创建针对关联模型，它使用生成的预测查询[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
  若要了解 TopPercent 的工作方式，可能会先执行返回嵌套的表的预测查询很有帮助。  
   

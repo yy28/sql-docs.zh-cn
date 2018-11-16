@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54c32287a977899838a091543fc776577d54e02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10e0b4a5206116d90340633b8904e78352f77882
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845195"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350331"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 扩展示例
 此程序说明如何从字段中检索和转换为 C/c + + 变量值。  
@@ -30,30 +30,30 @@ ms.locfileid: "47845195"
   
  没有智能指针的情况下将代码：  
   
-```  
-IADORecordBinding   *picRs = NULL;  
+```cpp
+IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
-          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
+          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
 ...  
 if (picRs) picRs->Release();  
 ```  
   
  使用智能指针派生`IADORecordBindingPtr`类型从`IADORecordBinding`接口使用此语句：  
   
-```  
+```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
  并实例化此类的指针：  
   
-```  
+```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
  因为由实现 Visual c + + 扩展**记录集**对象，智能指针构造函数`picRs`，采用 _`RecordsetPtr`指针， `pRs`。 构造函数调用`QueryInterface`使用`pRs`若要查找`IADORecordBinding`接口。  
   
-```  
+```cpp
 // Visual_Cpp_Extensions_Example.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

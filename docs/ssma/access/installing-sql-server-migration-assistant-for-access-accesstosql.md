@@ -23,12 +23,12 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f8dd4dcfc08366e78f11fc8b10fa269f17bb09e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708435"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664116"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装 SQL Server 迁移助手进行访问 (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for Access 使用的基于 Windows Installer 的向导进行安装。 本主题提供有关安装、 许可、 卸载和升级 SSMA 安装先决条件、 SSMA，最新版本的链接的信息和说明。  
@@ -46,12 +46,12 @@ ms.locfileid: "47708435"
   
 -   Microsoft 数据访问对象 (DAO) 提供程序版本 12.0 或 14.0。 可以从 Microsoft Office 2010/2007年产品安装 DAO 提供程序或从 Microsoft 网站上下载它。  
   
--   SQL Server Native Access Client (SNAC) 版本 10.5 及更高版本迁移到 SQL Azure。 你可以获取最新版本从 SNAC [Microsoft® SQL Server® 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=196940)  
+-   SQL Server Native Access Client (SNAC) 版本 10.5 及更高版本迁移到 SQL Azure。 你可以获取最新版本从 SNAC [Microsoft® SQL Server® 2008 R2 功能包](https://go.microsoft.com/fwlink/?LinkId=196940)  
   
 -   4 GB RAM （推荐）。  
   
 ## <a name="installing-ssma"></a>安装 SSMA  
-SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Migration Assistant 下载页](http://aka.ms/ssmaforaccess)。  
+SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Migration Assistant 下载页](https://aka.ms/ssmaforaccess)。  
   
 下载最新版本后，您必须提取中的安装文件，然后才能安装 SSMA。
 
@@ -88,7 +88,7 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Mig
   
 如果您打开 SSMA for Access 的早期版本中创建的项目，SSMA 询问您是否要将项目转换为较新版本。 单击**是**以使用较新版本的 SSMA 中的项目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [链接到 SQL Server 访问应用程序](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  

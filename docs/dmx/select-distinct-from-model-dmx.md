@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985322"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601449"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **SELECT DISTINCT FROM**语句只适用于单个列或与一组相关的列。 该子句不可用于一组不相关的列。  
   
  **SELECT DISTINCT FROM**语句可以直接引用嵌套表内的列。 例如：  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |连续|列中各值的中点。|  
   
 ## <a name="discrete-column-example"></a>离散列示例  
- 下面的代码示例基于`[TM Decision Tree]`中创建的模型[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询返回离散列 `Gender` 中存在的唯一值。  
+ 下面的代码示例基于`[TM Decision Tree]`中创建的模型[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询返回离散列 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  

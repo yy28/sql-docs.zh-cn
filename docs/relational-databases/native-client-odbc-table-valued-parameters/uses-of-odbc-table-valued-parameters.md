@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e79708ffe1ca40a38d93378b93481d6fdd91ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673106"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 表值参数的用法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47766565"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>完全绑定多行缓冲区情况下的表值参数（在所有值都位于内存中时将数据作为 TVP 发送）  
  用于完全绑定多行缓冲区时，所有参数值都位于内存中。 这是 OLTP 事务（举例来说）的典型情况，在这种情况下，可以将表值参数封装到单个存储过程中。 如果不使用表值参数，这通常需要动态生成复杂的多语句批处理，或者执行多个针对服务器的调用。  
   
- 通过使用绑定表值参数本身[SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328)以及其他参数。 绑定所有参数后，应用程序上每个表值参数设置参数焦点属性 SQL_SOPT_SS_PARAM_FOCUS，并调用 SQLBindParameter 为表值参数的列。  
+ 通过使用绑定表值参数本身[SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)以及其他参数。 绑定所有参数后，应用程序上每个表值参数设置参数焦点属性 SQL_SOPT_SS_PARAM_FOCUS，并调用 SQLBindParameter 为表值参数的列。  
   
  表值参数的服务器类型是特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新增类型 SQL_SS_TABLE。 SQL_SS_TABLE 的绑定 C 类型必须始终为 SQL_C_DEFAULT。 不为表值参数绑定参数传输任何数据；该参数用于传递表元数据，并且控制如何传递表值参数各构成列中的数据。  
   

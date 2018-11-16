@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419262"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677908"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -118,9 +118,9 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 对于 Core 转储 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-对于 SQL 转储 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 
 2. 错误：主机名称必须不超过 15 个字符。
 
-   这是一个已知问题，在尝试安装 SQL Server Debian 包的计算机名超过 15 个字符时则会出现此问题。 除了更改计算机名外，目前尚无其他的解决方法。 可以编辑主机名文件并重启计算机以更改此名称。 以下[网站指南](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)详细说明了此。
+   这是一个已知问题，在尝试安装 SQL Server Debian 包的计算机名超过 15 个字符时则会出现此问题。 除了更改计算机名外，目前尚无其他的解决方法。 可以编辑主机名文件并重启计算机以更改此名称。 以下[网站指南](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)详细说明了此。
 
 3. 重置系统管理 (SA) 密码。
 
@@ -239,7 +239,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   资源：[特殊字符](http://tldp.org/LDP/abs/html/special-chars.html)
-   [转义](http://tldp.org/LDP/abs/html/escapingsection.html)
+   资源：[特殊字符](https://tldp.org/LDP/abs/html/special-chars.html)
+   [转义](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720865"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665667"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>对于 Linux 部署 SQL Server 可用性基础知识
 
@@ -77,7 +77,7 @@ Samba，这是服务器消息块 (SMB) 的 Linux 变体，也可用于创建共�
 
 此外可以使用基于 Windows 的 SMB 共享;SMB 共享不需要是基于 Linux 的只要承载的 Linux 服务器上正确配置 Samba 的客户端部分[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]并且共享包含正确的访问权限。 对于那些在混合环境中，这将是一种方法来利用现有基础结构基于 Linux 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署。
 
-非常重要的一点是 Samba 部署的版本应为 SMB 3.0 兼容。 在添加对 SMB 的支持时[!INCLUDE[sssql11-md](../includes/sssql11-md.md)]，它需要支持 SMB 3.0 的所有共享。 如果使用 Samba 共享并不是 Windows Server，Samba 4.0 或更高版本，并在理想情况下 4.3 或更高版本，支持 SMB 3.1.1 应当使用基于 Samba 共享。 是很好的 SMB 和 Linux 上的信息来源[Samba 中的 SMB3](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)。
+非常重要的一点是 Samba 部署的版本应为 SMB 3.0 兼容。 在添加对 SMB 的支持时[!INCLUDE[sssql11-md](../includes/sssql11-md.md)]，它需要支持 SMB 3.0 的所有共享。 如果使用 Samba 共享并不是 Windows Server，Samba 4.0 或更高版本，并在理想情况下 4.3 或更高版本，支持 SMB 3.1.1 应当使用基于 Samba 共享。 是很好的 SMB 和 Linux 上的信息来源[Samba 中的 SMB3](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)。
 
 最后，使用网络文件系统 (NFS) 共享是一个选项。 使用 NFS 不上的基于 Windows 的部署选项[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，并且仅用于基于 Linux 的部署。
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **防火墙文档：**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安装[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]包可用性
@@ -156,7 +156,7 @@ Pacemaker 的完整文档，其中包括的所有内容的完整参考信息，�
 
 Ubuntu 没有可用性的指南。
 
-有关整个堆栈的详细信息，另请参阅官方[Pacemaker 文档页](http://clusterlabs.org/doc/)Clusterlabs 站点上。
+有关整个堆栈的详细信息，另请参阅官方[Pacemaker 文档页](https://clusterlabs.org/doc/)Clusterlabs 站点上。
 
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker 概念和术语
 本部分介绍常见的概念和术语的 Pacemaker 实现。
@@ -208,13 +208,13 @@ Pacemaker 群集的日志位置因分发而异。
 本部分讨论 Pacemaker 群集的重要规划点。
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>为虚拟化的基于 Linux 的 Pacemaker 群集 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-使用虚拟机部署基于 Linux 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Ag 和 Fci 的部署涵盖与基于 Windows 的对应的相同规则。 还有一组基本的可支持性的规则的虚拟化[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署中 Microsoft 提供的[Microsoft 支持知识库 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)。 如 Microsoft 的 HYPER-V 和 VMware 的 ESXi 虚拟机监控程序可能具有不同的方差最重要的是，由于平台本身之间的差异。
+使用虚拟机部署基于 Linux 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Ag 和 Fci 的部署涵盖与基于 Windows 的对应的相同规则。 还有一组基本的可支持性的规则的虚拟化[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署中 Microsoft 提供的[Microsoft 支持知识库 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)。 如 Microsoft 的 HYPER-V 和 VMware 的 ESXi 虚拟机监控程序可能具有不同的方差最重要的是，由于平台本身之间的差异。
 
 谈到 Ag 和 Fci 下虚拟化，请确保给定的 Pacemaker 群集的节点设置反相关性。 配置以实现高可用性在 AG 或 FCI 配置中，托管的 Vm 时[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]应永远不会在同一个虚拟机监控程序主机上运行。 例如，如果部署两个节点 FCI，则需要*至少*三个虚拟机监控程序主机，非常有某处个托管节点的 Vm 继续出现主机故障时，尤其是如果使用的功能如 Live迁移或 vMotion。
 
 有关更多详细信息，请参阅：
 -   Hyper V 文档 –[使用来宾群集实现高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   白皮书 （编写为基于 Windows 的部署，但大部分概念仍适用） –[规划高度可用的任务关键型 SQL Server 部署使用 VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   白皮书 （编写为基于 Windows 的部署，但大部分概念仍适用） –[规划高度可用的任务关键型 SQL Server 部署使用 VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >HYPER-V 尚不支持使用 STONITH RHEL 与 Pacemaker 群集。 支持之前，有关详细信息和更新，请查阅[RHEL 高可用性群集的支持策略](https://access.redhat.com/articles/29440#3physical_host_mixing)。

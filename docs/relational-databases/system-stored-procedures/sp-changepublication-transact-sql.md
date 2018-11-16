@@ -17,12 +17,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c715b7af71fc98df34036daf9311f1ed32b1c772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689725"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670166"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,11 +116,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**并发**|在快照生成期间生成所有表的本机模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 ||**concurrent_c**|在快照生成期间生成所有表的字符模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 |**任务 id**||不推荐使用该属性，也不再支持该属性。|  
-|**allow_drop**|**true**|使`DROP TABLE`DLL 的支持文章都是事务复制的一部分。 支持的最低版本： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 或更高版本和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 或更高版本。 其他参考： [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|使`DROP TABLE`DLL 的支持文章都是事务复制的一部分。 支持的最低版本： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 或更高版本和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 或更高版本。 其他参考： [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|禁用`DROP TABLE`属于事务复制的项目的支持 DLL。 这是**默认**此属性的值。|
 |**NULL** （默认值）||返回支持的值的列表*属性*。|  
   
-[  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+[ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   - **0**指定对项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   - **1**指定对项目的更改可能导致快照无效。 如果有现有订阅需要新快照，该值授予将现有快照标记为过时快照的权限，并生成新快照。   

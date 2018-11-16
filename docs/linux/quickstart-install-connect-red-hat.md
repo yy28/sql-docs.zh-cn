@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269840"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669446"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：在 Red Hat 上安装 SQL Server 并创建数据库
 
@@ -41,7 +41,7 @@ ms.locfileid: "51269840"
 
 必须使用 RHEL 7.3 或 7.4 计算机，且必须拥有**至少 2 GB** 的内存。
 
-若要在自己的计算机上安装 Red Hat Enterprise Linux，请访问[ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 也可在 Azure 中创建 RHEL 虚拟机。 请参阅[使用 Azure CLI 创建和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并在对 `az vm create` 的调用中使用 `--image RHEL`。
+若要在自己的计算机上安装 Red Hat Enterprise Linux，请访问[ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 也可在 Azure 中创建 RHEL 虚拟机。 请参阅[使用 Azure CLI 创建和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并在对 `az vm create` 的调用中使用 `--image RHEL`。
 
 如果以前已安装的 CTP 或 SQL Server 2017 的 RC 版本，必须执行以下步骤之前先删除旧存储库。 有关详细信息，请参阅[配置 Linux 存储库以用于 SQL Server 2017 和 2019年](sql-server-linux-change-repo.md)。
 

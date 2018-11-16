@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。用例 (DMX) |Microsoft 文档
+title: SELECT FROM&lt;模型&gt;。用例 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bba9e354eb1925ed4175f720f8008550364dc1a5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842800"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604228"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。用例 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34842800"
 > [!NOTE]  
 >  在数据挖掘扩展插件 (DMX) 中，只能在创建模型时启用钻取功能。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 向现有的模型中添加钻取功能，但是必须先重新处理模型，然后才能查看或查询事例。  
   
- 有关如何启用钻取的详细信息，请参阅[创建挖掘模型&#40;DMX&#41;](../dmx/create-mining-model-dmx.md)， [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)，和[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 有关如何启用钻取功能的详细信息，请参阅[CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)， [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)，以及[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  若要包括挖掘模型中没有包括的结构列，请使用函数 `StructureColumn('<structure column name>')`。  
   
  *model*  
- 一个模型标识符。  
+ 模型标识符。  
   
  *条件表达式*  
  一个限制条件，用于限制从列列表返回的值。  
@@ -54,15 +54,15 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
- 如果对挖掘模型和挖掘结构都启用了钻取功能，那么作为具有模型和结构钻取权限的角色成员的用户，可以访问没有包括在挖掘模型中的挖掘结构列。 因此，为了保护敏感数据或个人信息，你应该构建你的数据源视图来屏蔽个人信息，并授予**AllowDrillthrough**必要时的挖掘结构权限。  
+## <a name="remarks"></a>备注  
+ 如果对挖掘模型和挖掘结构都启用了钻取功能，那么作为具有模型和结构钻取权限的角色成员的用户，可以访问没有包括在挖掘模型中的挖掘结构列。 因此，若要保护敏感数据或个人信息，应构造数据源视图来屏蔽个人信息，并授予**AllowDrillthrough**必要时对挖掘结构的权限。  
   
- [延隔时间&#40;DMX&#41; ](../dmx/lag-dmx.md)函数可与时序模型返回或筛选每个用例和初始时间之间的时间间隔。  
+ [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md)函数可用于时序模型返回或筛选每个事例与初始时间之间的时间延迟。  
   
- 使用[IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)函数中**其中**子句将返回架构行集的 NODE_UNIQUE_NAME 列指定的节点与相关联的情况。  
+ 使用[IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)函数，在**其中**子句将返回与指定的架构行集的 NODE_UNIQUE_NAME 列的节点相关联的情况。  
   
 ## <a name="examples"></a>示例  
- 下面的示例基于挖掘结构目标邮递，基于[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据库和其关联的挖掘模型。 有关详细信息，请参阅[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例基于挖掘结构 Targeted Mailing，基于[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据库和其关联的挖掘模型。 有关详细信息，请参阅[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>示例 1：钻取到模型事例和结构列  
  以下示例返回用于测试目标邮件模型的所有事例的列。 如果建立模型所依据的挖掘结构不存在维持测试数据集，此查询将返回 0 个事例。 可以使用表达式列表仅返回需要的列。  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 638633a84721532ad05a52126aa7bcfd3f2bb6b7
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 15bee3f68bf922ec9220c9ac570e5bd372f47483
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237168"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697855"
 ---
 # <a name="configure-tls-12-in-aps"></a>在 AP 中配置 TLS 1.2
 
@@ -22,7 +22,7 @@ ms.locfileid: "50237168"
 
 > [!WARNING]
 > 本节、方法或任务所含的步骤告知您如何修改注册表。 但是，如果修改了注册表不正确，可能会导致数据丢失并需要重新安装操作系统的则可能会出现严重问题。 我们强烈建议备份注册表之前对其进行修改。 如果发生问题，以后可还原注册表。 有关如何备份和还原注册表的详细信息，请单击下面的文章编号，以查看 Microsoft 知识库中相应的文章：<br>
-[322756](https://support.microsoft.com/en-us/help/322756)如何备份和还原 Windows 中的注册表
+[322756](https://support.microsoft.com/help/322756)如何备份和还原 Windows 中的注册表
 
 **禁用：**
 ```

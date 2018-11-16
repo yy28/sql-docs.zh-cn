@@ -12,12 +12,12 @@ ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2af7a385ff4b98025271948f7c8e89557c3f20b9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 0b5b534e4b6d9152642dacd4b294476b6b9e71c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099998"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663787"
 ---
 # <a name="appendix---1-sybasetosql"></a>附录 - 1 (SybaseToSQL)
 SSMA 控制台命令行选项的快速视图：  
@@ -33,6 +33,6 @@ SSMA 控制台命令行选项的快速视图：
 |7|-p/securepassword|否|-a/添加 {< server_id > [，...n]&#124;所有} – c&#124;serverconnection < 服务器连接文件 > [-v&#124;变量 < 变量值文件 >] [-o/覆盖]<br /><br />或多个<br /><br />-a/添加 {< server_id > [，...n]&#124;所有} – s&#124;脚本 < 脚本文件 > [-v&#124;变量 < 变量值文件 >] [-o/覆盖]<br /><br />– r/删除 {< server_id > [，...n]&#124;所有}<br /><br />-l/列表<br /><br />– e/导出 {< 服务器 id > [，...n]&#124;所有} < 加密的密码-文件 ><br /><br />– i / 导入 {< 服务器 id > [，...n]&#124;所有} < 加密密码的文件 >|如果指定，此选项不能结合任何其他选项配合使用。<br /><br />服务器 id: {string} 的服务器提供的唯一 ID<br /><br />服务器连接文件： 服务器定义文件 （serverconnectionfile 或脚本文件）。<br /><br />变量值文件： 它是一个变量定义文件，并使用服务器连接文件中。<br /><br />加密密码 – 文件： 它是使用用户指定通行短语加密的服务器的密码文件。|  
 |8|-?|否|不适用|不适用|  
   
-## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台 (Sybase)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+## <a name="see-also"></a>请参阅  
+[执行 SSMA 控制台 (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

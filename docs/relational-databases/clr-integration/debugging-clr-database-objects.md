@@ -16,18 +16,18 @@ ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1594b912a8914e253cc89ce236fd26ad7a1c32c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6811dc26bf473d5b720f843735f5f2f2ef3bab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693855"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670626"
 ---
 # <a name="debugging-clr-database-objects"></a>调试 CLR 数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和数据库中的公共语言运行时 (CLR) 对象提供支持。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行调试的主要特点一个是易于设置和使用，另一个是 SQL Server 调试器与 Microsoft Visual Studio 调试器集成。 此外，还可以跨语言进行调试。 用户可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中无缝地单步执行 CLR 对象，反之亦然。 SQL Server Management Studio 中的 Transact-SQL 调试器无法用于调试托管数据库对象，但您可以通过使用 Visual Studio 中的调试器来调试这些对象。 Visual Studio 中的托管数据库对象调试支持所有常见的调试功能，例如，在服务器上执行的例程中的“单步执行”语句和“逐过程”语句。 调试器可以在调试过程中设置断点、检查调用堆栈、检查变量以及修改变量值。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或调试。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
   
- 有关调试托管的代码使用 Visual Studio 的详细信息，请参阅"[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio 文档中的主题。  
+ 有关调试托管的代码使用 Visual Studio 的详细信息，请参阅"[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio 文档中的主题。  
   
 ## <a name="debugging-permissions-and-restrictions"></a>调试权限和限制  
  调试是高特权的操作，因此只有的成员**sysadmin**固定的服务器角色中执行此操作允许[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -43,7 +43,7 @@ ms.locfileid: "47693855"
 ## <a name="overview-of-debugging-managed-database-objects"></a>关于调试托管数据库对象的概述  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行的调试遵循单连接模式。 一个调试器只能检测和调试其附加到的客户端连接的活动。 由于调试器的功能不受连接类型的限制，因此表格格式数据流 (TDS) 和 HTTP 连接都可以进行调试。 不过，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许调试现有连接。 调试支持在服务器上执行的例程中使用所有常见的调试功能。 调试器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间的交互通过分布式组件对象模型 (COM) 进行。  
   
- 有关详细信息和有关调试托管存储的过程、 函数、 触发器、 用户定义类型和聚合的方案，请参阅"[SQL Server CLR 集成数据库调试](http://go.microsoft.com/fwlink/?LinkId=120378)"在 Visual Studio 中的主题文档。  
+ 有关详细信息和有关调试托管存储的过程、 函数、 触发器、 用户定义类型和聚合的方案，请参阅"[SQL Server CLR 集成数据库调试](https://go.microsoft.com/fwlink/?LinkId=120378)"在 Visual Studio 中的主题文档。  
   
  必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 网络协议，才能使用 Visual Studio 进行远程开发、调试和开发。 有关在服务器上启用 TCP/IP 协议的详细信息，请参阅[配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)。  
   

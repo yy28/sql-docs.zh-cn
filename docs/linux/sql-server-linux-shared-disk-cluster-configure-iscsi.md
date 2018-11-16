@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 3c40ef7b0115dea0c0167729676e2203f62d2ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633905"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676336"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-Linux 上的 SQL Server
 
@@ -38,8 +38,8 @@ iSCSI 使用网络来提供从服务器到服务器的已知目标磁盘。 连�
 本部分将介绍如何将充当 FCI 节点的服务器上配置 iSCSI 发起程序。 在 RHEL 和 Ubuntu，说明应适用。
 
 ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链接：
-- [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
-- [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
+- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
 1.  在 FCI 配置中选择一个将加入的服务器。 并不重要哪一个。 iSCSI 应为在专用网络中，因此配置 iSCSI 以便识别和使用该网络。 运行`sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`其中`<iSCSIIfaceName>`是网络的唯一或友好名称。 下面的示例使用`iSCSINIC`:

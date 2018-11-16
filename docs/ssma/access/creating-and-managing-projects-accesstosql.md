@@ -18,12 +18,12 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d016498e0b46ce17cfd705264c6996c56302be32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663376"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>创建和管理项目 (AccessToSQL)
 将 Access 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须首先创建 SSMA 项目。 项目是一个包含有关你想要迁移到 Access 数据库的元数据文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，有关的目标实例的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 迁移的对象和数据，将接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接信息和项目设置。  
@@ -39,19 +39,19 @@ SSMA 包含多个选项用于将转换和同步数据库对象，并将数据转
   
 3.  在左窗格中，单击**转换**。  
   
-4.  在右窗格中查看的选项。 有关这些选项的详细信息，请参阅[项目设置 （转换）](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)。  
+4.  在右窗格中查看的选项。 有关这些选项的详细信息，请参阅[项目设置 （转换）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)。  
   
 5.  根据需要更改选项。  
   
 6.  重复前面的步骤对于**迁移**， **GUI**，并**类型映射**页。  
   
-    -   有关迁移选项的信息，请参阅[项目设置 （迁移）](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
+    -   有关迁移选项的信息，请参阅[项目设置 （迁移）](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
   
-    -   有关用户界面选项的信息，请参阅[项目设置 (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+    -   有关用户界面选项的信息，请参阅[项目设置 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
-    -   有关数据类型映射设置的详细信息，请参阅[项目设置 （类型映射）](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+    -   有关数据类型映射设置的详细信息，请参阅[项目设置 （类型映射）](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
   
-    -   有关 SQL Azure 设置信息，请参阅[项目设置 (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)。  
+    -   有关 SQL Azure 设置信息，请参阅[项目设置 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)。  
   
 **请注意**仅当选择迁移到 SQL Azure 在创建项目时，可以使用 SQL Azure 设置。  
   

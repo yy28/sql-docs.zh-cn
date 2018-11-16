@@ -18,12 +18,12 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af24a0656f46f0256775f4ea1649ab806e207fdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856314"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677316"
 ---
 # <a name="connecting-using-file-data-sources"></a>使用文件数据源连接
 .Dsn 文件中存储文件数据源的连接信息。 因此，可以重复使用单个用户的或如果他们具有适当的驱动程序安装在多个用户之间共享的连接字符串。 该文件包含驱动程序名称 （或在共享的文件数据源的情况下的另一个数据源名称） 和 （可选） 可以使用一个连接字符串**SQLDriverConnect**。 驱动程序管理器生成连接字符串为调用**SQLDriverConnect**从.dsn 文件中的关键字。  
@@ -55,4 +55,4 @@ DSN = MyDataSource
  用于文件数据源的连接字符串是.dsn 文件中指定的关键字和关键字对的调用中的连接字符串中指定的联合**SQLDriverConnect**。 如果任何.dsn 文件中的关键字的连接字符串中的关键字冲突，则驱动程序管理器会决定应使用的关键字值。 有关详细信息，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960781"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601817"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -31,7 +31,7 @@ ms.locfileid: "49960781"
 - 指定工具的计算机将会启动 DMA 在网络上。 请确保此计算机已连接到 SQL Server 目标。
 - 下载并安装：
     - [数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)v3.6 或更高版本。
-    - [PowerShell](http://aka.ms/wmf5download) 5.0 版或更高版本。
+    - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更高版本。
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更高版本。
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更高版本。
     - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。

@@ -15,16 +15,16 @@ ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61403b9a720a456c08b121be4f36cef0d59ced17
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696526"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606977"
 ---
 # <a name="handler-property-example-vc"></a>Handler 属性示例 (VC++)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  此示例演示[RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象[处理程序](../../../ado/reference/rds-api/handler-property-rds.md)属性。 (请参阅[自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)的更多详细信息。)  
   
@@ -78,7 +78,7 @@ void HandlerX() {
       dc->Handler = "MSDFMAP.Handler";  
       dc->ExecuteOptions = 1;  
       dc->FetchOptions = 1;  
-      dc->Server = "http://MyServer";  
+      dc->Server = "https://MyServer";  
       dc->Connect = "Data Source=AuthorDatabase";  
       dc->SQL = "AuthorById('267-41-2394')";  
   

@@ -1,73 +1,38 @@
 ---
-title: 在 Azure 虚拟机上安装 SQL Server 机器学习功能 |Microsoft 文档
+title: 在 Azure 虚拟机上使用 R 和 Python 安装 SQL Server 机器学习服务 |Microsoft Docs
+description: R 和 Python 的数据科学和机器学习解决方案在 Azure 云中的 SQL Server 虚拟机上运行。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a0780d4f974761af563ff2ed6e20e444b2d85ef9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e416b99c3d4597cb2fe9346819184be43cd98402
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563675"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512692"
 ---
-# <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安装 SQL Server 机器学习 Azure 虚拟机上的功能
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上使用 R 和 Python 安装 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+在 Azure 中，消除了安装和配置任务的 SQL Server 虚拟机上，可以使用机器学习服务安装 R 和 Python 集成。 虚拟机部署后，功能是可供使用。
  
-我们建议使用[数据科学虚拟机](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm)，但如果你想了刚 SQL Server 自 2017 年 1 机器学习 Services 或 SQL Server 2016 R Services 的 VM，本文将引导你完成的步骤。
+有关分步说明，请参阅[如何预配 Windows SQL Server 虚拟机在 Azure 门户中](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)。
 
-## <a name="create-a-virtual-machine-on-azure"></a>在 Azure 上创建虚拟机
+[配置 SQL server 设置](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#4-configure-sql-server-settings)步是在其中将机器学习添加到你的实例。
 
-1. 在左侧列表中的 Azure 门户，单击**虚拟机**，然后单击**添加**。
-2. SQL Server 自 2017 年 1 Enterprise Edition 或 SQL Server 2016 Enterprise Edition 的搜索。
-3. 配置服务器名称和帐户权限，然后选择定价计划。
-4. 在**SQL Server 设置**(VM 安装向导中的步骤 4)，找到**机器学习服务 （高级分析）** (或**R Services** for SQL Server 2016)，然后单击**启用**。
-5. 查看用于验证的摘要，然后单击“确定”。
-6. 虚拟机准备就绪后，请与它建立连接，然后打开预先安装的 SQL Server Management Studio。 机器学习已准备好运行。
-7. 若要验证是否可运行，可以打开一个新的查询窗口，然后运行如下所示的简单语句（使用 R 生成从 1 到 10 的序列号）。
+<a name="firewall"></a>
 
-    ```
-    EXEC sp_execute_external_script
-    @language = N'R'
-    , @script = N' OutputDataSet <- as.data.frame(seq(1, 10, ));'
-    , @input_data_1 = N'   ;'
-    WITH RESULT SETS (([Sequence] int NOT NULL));
-    ```
+## <a name="unblock-the-firewall"></a>取消阻止防火墙
 
-6. 如果你计划从远程数据科学客户端连接到的实例，完成[其他步骤](#additional-steps)根据需要。
+默认情况下，Azure 虚拟机上的防火墙包含阻止网络访问本地用户帐户的规则。
 
-### <a name="disable-machine-learning-features-on-a-sql-server-vm"></a>禁用 SQL Server 虚拟机上的机器学习功能
+必须禁用此规则，以确保可以访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从远程数据科学客户端的实例。  否则，不能在使用虚拟机的工作区的计算上下文中执行机器学习代码。
 
-你还可以启用或禁用现有的 SQL Server 虚拟机上的功能在任何时间。
-
-1. 打开虚拟机边栏选项卡。
-2. 单击“设置”，然后选择“SQL Server 配置”。
-3. 对功能进行更改并应用。
-
-### <a name="existing"></a>将 R Services 添加到现有的 SQL Server 2016 Enterprise VM
-
-如果你创建 Azure 虚拟机而无需机器学习中包含 SQL Server，你可以通过执行以下步骤添加该功能：
-
-1. 重新运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序，在向导的“服务器配置”页上添加该功能。
-2. 启用外部脚本执行并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
-3. （可选）如果需要，请为远程脚本执行配置 R 辅助角色帐户的数据库访问。
-4. （可选）如果想要允许从远程数据科学客户端执行 R 脚本，请修改 Azure 虚拟机上的防火墙规则。 有关详细信息，请参阅[取消阻止防火墙](#firewall)。
-5. 安装或启用所需的网络库。 有关详细信息，请参阅[添加网络协议](#network)。
-
-## <a name="additional-steps"></a>额外的步骤
-
-如果希望远程客户端访问服务器作为远程 SQL Server 计算上下文，则需要执行一些其他步骤。
-
-### <a name="firewall"></a>取消阻止防火墙
-
-默认情况下，Azure 虚拟机上的防火墙包括阻止网络访问本地用户帐户的规则。
-
-必须禁用此规则，以确保可以访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从远程数据科学客户端的实例。  否则，你的机器学习代码无法在使用虚拟机的工作区的计算上下文中执行。
-
-若要启用从远程数据科学客户端的访问：
+若要启用从远程数据科学客户端的访问权限：
 
 1. 在虚拟机上打开“高级安全 Windows 防火墙”。
 2. 选择“出站规则”。
@@ -75,12 +40,15 @@ ms.locfileid: "34563675"
   
      `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`
   
-### <a name="enable-odbc-callbacks-for-remote-clients"></a>启用远程客户端的 ODBC 回调
+## <a name="enable-odbc-callbacks-for-remote-clients"></a>启用远程客户端的 ODBC 回调
 
-如果希望客户端调用服务器将需要发出 ODBC 查询作为其机器学习解决方案的一部分，则必须确保快速启动板可代表远程客户端的 ODBC 调用。 为此，必须允许 Launchpad 使用的 SQL 辅助角色帐户登录到实例。
-有关详细信息，请参阅[安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
+如果希望客户端调用服务器需要发出 ODBC 查询作为其机器学习解决方案的一部分，则必须确保快速启动板可以代表远程客户端的 ODBC 调用。 
 
-### <a name="network"></a>添加网络协议
+为此，必须允许 Launchpad 使用的 SQL 辅助角色帐户登录到实例。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../security/add-sqlrusergroup-to-database.md)。
+
+<a name="network"></a>
+
+## <a name="add-network-protocols"></a>添加网络协议
 
 + 启用命名管道
   
@@ -88,6 +56,4 @@ ms.locfileid: "34563675"
   
 + 启用 TCP/IP
 
-  TCP/IP 是必需的环回连接。 如果你收到以下错误，虚拟机支持实例上启用 TCP/IP:
-
-  "DBNETLIB;SQL Server 不存在或拒绝访问"
+  TCP/IP 是环回连接所必需的。 如果收到错误"DBNETLIB;SQL Server 不存在或访问被拒绝"，在支持该实例的虚拟机上启用 TCP/IP。

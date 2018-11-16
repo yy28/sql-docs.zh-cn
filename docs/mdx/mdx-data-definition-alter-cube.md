@@ -1,5 +1,5 @@
 ---
-title: ALTER CUBE 语句 (MDX) |Microsoft 文档
+title: ALTER CUBE 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698295"
 ---
-# <a name="mdx-data-definition---alter-cube"></a>MDX 数据定义的 ALTER 多维数据集
+# <a name="mdx-data-definition---alter-cube"></a>MDX 数据定义 - ALTER CUBE
 
 
-  更改指定多维数据集的结构，通常用于支持维度写回。 有关应用程序中使用写回的详细信息，请参阅此博客文章：[构建写回应用程序与 Analysis Services （博客）](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  更改指定多维数据集的结构，通常用于支持维度写回。 有关应用程序中使用写回的详细信息，请参阅此博客文章：[生成写回应用程序使用 Analysis Services （博客）](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  请注意，并发写回会造成死锁，其中，第一个写回会因为由第二个写回保持的共享锁而无法完成提交。 在这种情况下，不会生成错误，但是也不能继续操作。 最终会发生超时和回滚。  
   
@@ -101,24 +101,24 @@ CELL CALCULATION Calculation_Name
  *Property_Name*  
  代表成员属性的有效多维表达式 (MDX) 标识符。  
   
- *Property_Value*  
+ *Property_value 为*  
  定义计算成员属性值的有效多维表达式 (MDX) 标量表达式。  
   
-## <a name="dropping-a-dimension-member"></a>删除维度成员  
+## <a name="dropping-a-dimension-member"></a>删除一个维度成员  
  如果从可写维度中删除一个维度成员，就会从基础维度表中删除该成员和与其对应的行。  
   
 ### <a name="arguments"></a>参数  
  *Cube_Name*  
- 提供一个多维数据集的名称是有效的字符串表达式。  
+ 提供多维数据集名称的有效字符串表达式。  
   
  *Member_Name*  
  提供成员名称或成员键的有效字符串表达式。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>备注  
  如果未使用 WITH DESCENDANTS 子句，则已删除成员的子级将成为已删除成员父级的子级。 如果使用 WITH DESCENDANTS 子句，则还会删除维度表内的所有后代及其对应的行。  
   
 > [!NOTE]  
->  有关删除计算的成员、 命名集、 操作和单元计算，请参阅[DROP 成员语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)， [DROP 设置语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)，[DROP 操作语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)，和[DROP 单元格计算语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
+>  了解有关删除计算的成员、 命名集、 操作和单元格计算，请参阅[DROP MEMBER 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)， [DROP SET 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)，[DROP ACTION 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)，和[DROP CELL CALCULATION 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="updating-the-default-dimension-member"></a>更新默认维度成员  
  该子句更新多维数据集的默认成员，并且在定义默认成员的 MDX 计算脚本中使用。 可以为数据库维度、多维数据集维度或者用户登录名指定默认成员。 还可以在会话期间更改默认成员。  
@@ -130,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  返回单个成员的有效 MDX 表达式。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>备注  
  指定的 MDX 表达式可以为静态或动态。  
   
 ## <a name="moving-a-dimension-member"></a>移动维度成员  
@@ -158,11 +158,11 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  返回单个成员的有效 MDX 表达式。  
   
- *Property_Value*  
+ *Property_value 为*  
  定义计算成员属性值的有效 MDX 标量表达式。  
   
 ## <a name="creating-a-cell-calculation"></a>创建单元计算  
- 有关创建使用 ALTER CUBE 语句的单元计算的详细信息，请参阅[DROP 单元格计算语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
+ 有关创建单元计算使用 ALTER CUBE 语句的详细信息，请参阅[DROP CELL CALCULATION 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

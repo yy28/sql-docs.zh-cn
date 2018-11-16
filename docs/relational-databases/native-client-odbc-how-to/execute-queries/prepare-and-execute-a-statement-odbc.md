@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df6353935efe167023b39d51d53e061b5a6b5deb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e67a239248271720e943ec80eeef6a2cb6f875e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677226"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>准备和执行语句 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47673524"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>准备一次语句，然后多次执行它  
   
-1.  调用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)准备语句。  
+1.  调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)准备语句。  
   
-2.  （可选） 调用[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
+2.  （可选） 调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
   
 3.  （可选）对于预定义语句中的每个参数：  
   
@@ -43,9 +43,9 @@ ms.locfileid: "47673524"
   
     -   如果语句有参数标记，请将数据值放到绑定参数缓冲区中。  
   
-    -   调用[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)执行已准备的语句。  
+    -   调用[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)执行已准备的语句。  
   
-    -   如果使用执行时数据输入的参数， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)返回 SQL_NEED_DATA。 通过使用分块区发送数据[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)并[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+    -   如果使用执行时数据输入的参数， [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)返回 SQL_NEED_DATA。 通过使用分块区发送数据[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)并[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>用按列参数绑定预定义语句  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47673524"
   
 2.  调用 SQLPrepare 准备语句。  
   
-3.  （可选） 调用[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
+3.  （可选） 调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
   
 4.  （可选） 对于预定义语句中的每个参数，调用 SQLDescribeParam 以获得参数信息。  
   

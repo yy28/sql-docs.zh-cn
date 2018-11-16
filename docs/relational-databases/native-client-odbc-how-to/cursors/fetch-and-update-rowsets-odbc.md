@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0669adbf316b27dcec6c57d33aff4fa25168459
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2789762eca102fd684e74704a57315a6a39b3821
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677926"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>提取和更新行集 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47625395"
   
 1.  （可选） 调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)使用 SQL_ROW_ARRAY_SIZE 若要更改的行集中的行 (R) 数。  
   
-2.  调用[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)获取行集。  
+2.  调用[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)获取行集。  
   
 3.  如果使用绑定列，则在行集的绑定列缓冲区中现在可以使用数据值和数据长度。  
   
-     如果使用未绑定的列，为每个行调用[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)使用 SQL_POSITION 设置游标位置，然后，为每个未绑定列：  
+     如果使用未绑定的列，为每个行调用[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)使用 SQL_POSITION 设置游标位置，然后，为每个未绑定列：  
   
     -   调用[SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)最后一个绑定列的行集后，若要获取的数据的一个或多个时间未绑定列。 调用[SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)应按列号递增的顺序。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47625395"
   
 4.  设置任意执行时数据 text 或 image 列。  
   
-5.  调用[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)或[SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398)若要设置光标位置，刷新、 更新、 删除或添加该行集内的行。  
+5.  调用[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)或[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)若要设置光标位置，刷新、 更新、 删除或添加该行集内的行。  
   
      如果执行时数据 text 或 image 列用于某个更新或添加操作，则处理它们。  
   

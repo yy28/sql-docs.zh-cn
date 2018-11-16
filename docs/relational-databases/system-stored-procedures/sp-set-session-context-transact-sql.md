@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d278e7540ef27e4c6041406bc7c4011976a5a213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832755"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811868"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "47832755"
 ## <a name="syntax"></a>语法  
   
 ```  
-sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'  
+sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'  
     [ , [ @read_only = ] { 0 | 1 } ]  
 [ ; ]  
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @key=] 'key'  
+ [ @key=] N'key  
  正在设置的类型的键**sysname**。 最大密钥大小为 128 个字节。  
   
  [ @value=] 'value'  
@@ -58,7 +58,7 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
 ## <a name="remarks"></a>备注  
  与其他存储过程一样可以作为参数传递唯一文本和变量 （非表达式或函数调用）。  
   
- 会话上下文的总大小被限制为 256 kb。 如果设置一个值，导致超过此限制，该语句将失败。 你可以监视中的总体内存使用情况[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
+ 会话上下文的总大小限于 1 MB。 如果设置一个值，导致超过此限制，该语句将失败。 你可以监视中的总体内存使用情况[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
  可以通过查询监视总体内存使用情况[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) ，如下所示： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
@@ -66,14 +66,14 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  下面的示例演示如何设置，然后返回一个名为的值为英语语言的会话上下文密钥。  
   
 ```  
-EXEC sp_set_session_context 'language', 'English';  
+EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
  下面的示例演示如何将可选的只读标志。  
   
 ```  
-EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  
+EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
 ## <a name="see-also"></a>请参阅  

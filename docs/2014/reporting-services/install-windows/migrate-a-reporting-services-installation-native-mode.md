@@ -1,32 +1,23 @@
 ---
 title: 迁移 Reporting Services 安装（本机模式）| Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082887"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604057"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
+
   本主题提供有关将以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署的支持的版本之一迁移到新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的分步说明。  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082887"
   
  对于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本存在限制。 如果您在重复使用在以前安装中已创建的报表服务器数据库，请查看以下文章。  
   
--   [创建报表服务器数据库&#40;SSRS 配置管理器&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [创建报表服务器数据库（SSRS 配置管理器）](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> 固定数据库名称  
  不能重命名报表服务器数据库。 创建数据库时，数据库的标识将记录在报表服务器存储过程中。 重命名报表服务器主数据库或临时数据库会在过程运行时导致错误，从而使报表服务器安装无效。  
@@ -246,7 +237,7 @@ ms.locfileid: "48082887"
   
 1.  打开浏览器，并在 URL 地址中键入报表服务器虚拟目录和报表管理器虚拟目录，对这些目录进行测试。 有关详细信息，请参阅[验证 Reporting Services 安装](verify-a-reporting-services-installation.md)  
   
-2.  测试报表，并验证它们是否包含所需的数据。 检查数据源信息，查看是否仍指定了数据源连接信息。 报表服务器在处理和呈现报表时使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表对象模型，但是该服务器不将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 构造替换为新的报表定义语言元素。 若要了解有关如何在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]报表服务器上运行现有报表的详细信息，请参阅[升级报表](upgrade-reports.md)。  
+2.  测试报表，并验证它们是否包含所需的数据。 检查数据源信息，查看是否仍指定了数据源连接信息。 报表服务器在处理和呈现报表时使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表对象模型，但是该服务器不将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 构造替换为新的报表定义语言元素。 若要了解有关如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器上运行现有报表的详细信息，请参阅 [升级报表](upgrade-reports.md)。  
   
 ##  <a name="bkmk_remove_unused"></a> 删除未使用的程序和文件  
  一旦成功将报表服务器迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例，则可能需要执行以下步骤以删除不再需要的程序和文件。  
@@ -268,8 +259,8 @@ ms.locfileid: "48082887"
 2.  如果此计算机上不再需要 IIS，则将其删除。  
   
 ## <a name="see-also"></a>请参阅  
- [迁移 Reporting Services 安装&#40;SharePoint 模式&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [报表服务器数据库&#40;SSRS 本机模式&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [迁移 Reporting Services 安装（SharePoint 模式）](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [报表服务器数据库（SSRS 本机模式）](../report-server/report-server-database-ssrs-native-mode.md)   
  [升级和迁移 Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services 的向后兼容性](../reporting-services-backward-compatibility.md)   
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

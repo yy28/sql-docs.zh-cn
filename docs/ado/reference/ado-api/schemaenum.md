@@ -16,24 +16,24 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749225"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603658"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的架构的类型**记录集**的[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法检索。  
   
 ## <a name="remarks"></a>备注  
- 为每个 ADO 常量，可以找到主题中返回的函数和列有关的其他信息[附录 b： 架构行集](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程序员参考。 下表描述部分中的括号中列出每个主题的名称。  
+ 为每个 ADO 常量，可以找到主题中返回的函数和列有关的其他信息[附录 b： 架构行集](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程序员参考。 下表描述部分中的括号中列出每个主题的名称。  
   
- 为每个 ADO MD 常量可以找到主题中返回的函数和列有关的其他信息[OLE DB for OLAP 对象和架构行集](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB 中的联机分析处理 (OLAP) 文档。 下表描述列中的括号中列出每个主题的名称。  
+ 为每个 ADO MD 常量可以找到主题中返回的函数和列有关的其他信息[OLE DB for OLAP 对象和架构行集](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB 中的联机分析处理 (OLAP) 文档。 下表描述列中的括号中列出每个主题的名称。  
   
  可以通过引用 ADO 的说明列转换到 ADO 数据类型的 OLE DB 文档中的列的数据类型[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)主题。 例如，类型为 OLE DB 数据类型**DBTYPE_WSTR**到 ADO 数据类型的等效**adWChar**。  
   
- ADO 将会生成常数，类似于架构的结果**adSchemaDBInfoKeywords**并**adSchemaDBInfoLiterals**。 创建 ADO**记录集**，然后以分别返回的值填充的每一行**IDBInfo::GetKeywords**并**IDBInfo::GetLiteralInfo**方法。 中可以找到有关这些方法的更多信息[IDBInfo](http://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3)的 OLE DB 程序员参考的部分。  
+ ADO 将会生成常数，类似于架构的结果**adSchemaDBInfoKeywords**并**adSchemaDBInfoLiterals**。 创建 ADO**记录集**，然后以分别返回的值填充的每一行**IDBInfo::GetKeywords**并**IDBInfo::GetLiteralInfo**方法。 中可以找到有关这些方法的更多信息[IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3)的 OLE DB 程序员参考的部分。  
   
 |常量|ReplTest1|Description|约束列|  
 |--------------|-----------|-----------------|------------------------|  

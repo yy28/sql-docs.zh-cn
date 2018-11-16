@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678955"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659146"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 控制台 (DB2ToSQL) 中的命令行选项
 Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
@@ -120,7 +120,7 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
 ### <a name="secure-password-option-psecurepassword"></a>安全的密码选项:-p/securepassword  
 此选项指示服务器连接的加密的密码。 它不同于所有其它选项： 选项不执行任何脚本或有助于与迁移相关的所有活动中，但可帮助管理迁移项目中使用的服务器连接的密码加密。  
   
-不能输入任何其他选项或密码作为命令行参数。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)部分。  
+不能输入任何其他选项或密码作为命令行参数。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)部分。  
   
 支持下面的子选项`–p/securepassword`:  
   

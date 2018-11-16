@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d688a977222960710c84a197ae47f8b48aafc3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311e0589e2257a1bb465ae210c013780cf9fee42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636925"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605207"
 ---
 # <a name="install-sql-server-database-engine"></a>安装 SQL Server 数据库引擎
 
@@ -65,7 +65,7 @@ ms.locfileid: "47636925"
 -   文档组件  
   
 > [!NOTE]  
->  默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 若要安装示例数据库和示例代码，请参阅 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)。 请参阅 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843) 上的旧示例。  
+>  默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 若要安装示例数据库和示例代码，请参阅 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)。 请参阅 [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843) 上的旧示例。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2017 的各版本和支持的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)   

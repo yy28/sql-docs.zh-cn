@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142087"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703675"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>使用 PowerShell （演练） 对数据进行准备
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ GitHub 存储库中提供了所需的所有代码。 可使用 PowerShell 脚本
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 此示例使用 R grep 函数搜索可用路径的向量，并查找包括"Program Files"的路径。 有关详细信息，请参阅[ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)。
+    - 此示例使用 R grep 函数搜索可用路径的向量，并查找包括"Program Files"的路径。 有关详细信息，请参阅[ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep)。
 
     - 如果您认为已安装的软件包，通过运行检查已安装的包列表`installed.packages()`。
 
@@ -173,7 +173,7 @@ This step (plugging in database information) takes 0.48 seconds.
 
 若需手动下载数据，请右键单击下面的链接，然后选择“目标另存为” 。
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 记下已下载的数据文件的路径以及保存有数据的文件的文件名。 您需要将数据加载到表使用的完整路径**bcp**。
 
@@ -265,7 +265,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 该数据是纽约市出租车数据集的一个代表样本，其包含 2013 年逾 1.73 亿次单个行程的记录，包括每次行程支付的车费和小费。 为更轻松地使用数据，Microsoft 数据科学团队进行了缩小取样，仅获取 1% 的数据。  此数据已以 CSV 格式共享在 Azure 中的公共 Blob 存储容器中。 源数据是未压缩的文件，低于 350 MB。
 
-+ 公共数据集： [NYC 出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ 公共数据集： [NYC 出租车和礼车委员会](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [在 NYC 出租车数据集构建 Azure 机器学习模型](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/)。
 

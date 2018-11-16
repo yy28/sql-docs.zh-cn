@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 003fc3496a68f0437dc2c7d313179da1f37a9c7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623715"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669056"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux 上的 SQL Server 客户反馈
 
@@ -22,7 +22,7 @@ ms.locfileid: "47623715"
 
 默认情况下，Microsoft SQL Server 收集有关其客户如何使用应用程序的信息。 具体来说，SQL Server 收集有关安装体验、使用情况和性能的信息。 此信息有助于 Microsoft 改进产品以更好地满足客户需求。 例如，Microsoft 收集有关客户遇到的错误代码类型信息，这样我们就可以修复相关 bug，改进关于如何使用 SQL Server 的文档，并确定是否应将功能添加到产品中以更好地为客户服务。
 
-本文档提供了有关收集哪些类型的信息以及有关如何发送，收集在 Linux 上配置 Microsoft SQL Server 详细信息到 Microsoft 的信息。 SQL Server 2017 包含隐私声明，其中介绍了我们执行操作并不会从用户收集哪些信息。 有关详细信息，请参阅[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。
+本文档提供了有关收集哪些类型的信息以及有关如何发送，收集在 Linux 上配置 Microsoft SQL Server 详细信息到 Microsoft 的信息。 SQL Server 2017 包含隐私声明，其中介绍了我们执行操作并不会从用户收集哪些信息。 有关详细信息，请参阅[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
 具体而言，Microsoft 不会通过这种机制发送以下任何类型的信息：
 

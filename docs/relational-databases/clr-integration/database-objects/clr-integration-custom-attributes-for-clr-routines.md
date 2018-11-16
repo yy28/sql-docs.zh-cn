@@ -22,12 +22,12 @@ ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56d6091be1fee645cf877e85ffee5604706c6e2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c59df39f3d4d0df423f48df092e49e53dba1861c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750655"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664959"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR 例程的 CLR 集成自定义属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,43 +36,43 @@ ms.locfileid: "47750655"
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 属性  
  **SqlUserDefinedAggregate**属性指示方法应注册为用户定义的聚合。 必须使用此属性注释每个用户定义聚合。  
   
- 有关详细信息，请参阅[SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)。  
+ 有关详细信息，请参阅[SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)。  
   
 ## <a name="the-sqlfunction-attribute"></a>SqlFunction 属性  
  **SqlFunction**属性指示方法应注册为具有相应函数属性集的函数。  
   
- 有关详细信息，请参阅[SqlFunctionAttribute](http://go.microsoft.com/fwlink/?LinkId=128019)。  
+ 有关详细信息，请参阅[SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019)。  
   
 ## <a name="the-sqlfacet-attribute"></a>SqlFacet 属性  
  **SqlFacet**属性用于返回有关用户定义类型 (UDT) 表达式的返回类型的信息。  
   
- 有关详细信息，请参阅[SqlFacetAttribute](http://go.microsoft.com/fwlink/?LinkId=128020)。  
+ 有关详细信息，请参阅[SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020)。  
   
 ## <a name="the-sqlprocedure-attribute"></a>SqlProcedure 属性  
  **SqlProcedure**属性指示方法应注册为存储过程。 此属性仅由 Visual Studio 用于将指定的方法自动注册为存储过程；[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不使用此属性。  
   
- 有关详细信息，请参阅[SqlProcedureAttribute](http://go.microsoft.com/fwlink/?LinkId=128021)。  
+ 有关详细信息，请参阅[SqlProcedureAttribute](https://go.microsoft.com/fwlink/?LinkId=128021)。  
   
 ## <a name="the-sqltrigger-attribute"></a>SqlTrigger 属性  
  **SqlTrigger**属性指示方法应注册为触发器。  
   
- 有关详细信息，请参阅[SqlTriggerContext](http://go.microsoft.com/fwlink/?LinkId=128022)并[SqlTriggerAttribute](http://go.microsoft.com/fwlink/?LinkId=203898)。  
+ 有关详细信息，请参阅[SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022)并[SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898)。  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>SqlUserDefinedTypeAttribute  
  可将 SqlUserDefinedTypeAttribute 应用于程序集中的类定义。 此属性会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建绑定到具有此自定义属性的类定义的用户定义类型。  
   
- 有关详细信息，请参阅[SqlUserDefinedTypeAttribute](http://go.microsoft.com/fwlink/?LinkId=128024)。  
+ 有关详细信息，请参阅[SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024)。  
   
 ## <a name="the-sqlmethod-attribute"></a>SqlMethod 属性  
  **SqlMethod**特性用于指示一种方法的确定性和数据访问属性或 udt 属性。  
   
- 有关详细信息，请参阅[SqlMethodAttribute](http://go.microsoft.com/fwlink/?LinkId=128025)。  
+ 有关详细信息，请参阅[SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025)。  
   
 ## <a name="see-also"></a>请参阅  
  [CLR 用户定义聚合](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR 用户定义函数](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR 用户定义类型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
- [CLR 存储过程](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [CLR 触发器](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [CLR 存储过程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [CLR 触发器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
   
   

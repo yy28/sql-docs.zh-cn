@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64655ad666954b2fb63448cb1e55430dd6191491
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655625"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350461"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -35,14 +35,14 @@ ms.locfileid: "47655625"
   
  您可以复制，将从这些文件的常量定义粘贴到 ASP 页中，或者，如果你正在执行服务器端脚本，将 Adojavas.inc 文件复制到你的网站上的文件夹和引用从 ASP 页如下：  
   
-```  
+```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>在 JScript 中创建 ADO 对象  
  必须改用**CreateObject**函数调用：  
   
-```  
+```javascript
 var Rs1;  
 Rs1 = Server.CreateObject("ADODB.Recordset");  
 ```  
@@ -50,15 +50,15 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ## <a name="jscript-example"></a>JScript 示例  
  下面的代码是打开的 Active Server Page (ASP) 文件中的 JScript 服务器端编程的一般示例**记录集**对象：  
   
-```  
-<%  @LANGUAGE="JScript" %>  
+```javascript
+<%  @LANGUAGE="JScript" %>  
 <!--#include File="adojavas.inc"-->  
 <HTML>  
 <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
 <%  
 var Source = "SELECT * FROM Authors";  
 var Connect =  "Provider=sqloledb;Data Source=srv;" +  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
 var Rs1 = Server.CreateObject( "ADODB.Recordset.2.5" );  
 Rs1.Open(Source,Connect,adOpenForwardOnly);  
 Response.Write("Success!");  

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d715fd65da1b89efd02368564d2f82cac278d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5d789812cb8dc3b6c880c4e2234aedbba3cc25bb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168487"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558504"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>创建和管理角色（SSAS 表格）
   在表格模型中，角色定义模型的成员权限。 可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“角色管理器”对话框为模型项目定义角色。 在部署模型时，数据库管理员可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
@@ -65,9 +65,9 @@ ms.locfileid: "48168487"
 9. 单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [角色&#40;SSAS 表格&#41;](roles-ssas-tabular.md)   
- [透视&#40;SSAS 表格&#41;](perspectives-ssas-tabular.md)   
- [在 Excel 中分析&#40;SSAS 表格&#41;](analyze-in-excel-ssas-tabular.md)   
+ [角色（SSAS 表格）](roles-ssas-tabular.md)   
+ [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
+ [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)   
  [USERNAME 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [CUSTOMDATA 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

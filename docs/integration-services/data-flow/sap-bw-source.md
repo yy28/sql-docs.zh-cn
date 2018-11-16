@@ -11,12 +11,12 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49912f010400e81fb120c5f8abd0dbc94718b999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1bd77fa65a3667bdc06934386b293783270bc1a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773575"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641194"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
   SAP BW 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件。 因此，SAP BW 源从 SAP Netweaver BW 版本 7 系统提取数据，并将这些数据提供给 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据流。  
@@ -111,11 +111,11 @@ ms.locfileid: "47773575"
   
 -   使用您选择的选项预览要提取的数据。  
   
- 您还可以启用源 RFC 函数调用的日志记录功能。 （此日志记录与可对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包启用的可选日志记录是分开进行的。）配置源将要使用的 SAP BW 连接管理器时，会启用 RFC 函数调用的日志记录功能。 有关如何配置 SAP BW 连接管理器的详细信息，请参阅 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
+ 您还可以启用源 RFC 函数调用的日志记录功能。 （此日志记录与您可对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包启用的可选日志记录是分开进行的。）配置源将要使用的 SAP BW 连接管理器时，会启用 RFC 函数调用的日志记录功能。 有关如何配置 SAP BW 连接管理器的详细信息，请参阅 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
   
  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  
   
- 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](http://go.microsoft.com/fwlink/?LinkID=137090)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
+ 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](https://go.microsoft.com/fwlink/?LinkID=137090)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 设计器配置源  
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的 SAP BW 源属性的详细信息，请单击以下主题之一：  

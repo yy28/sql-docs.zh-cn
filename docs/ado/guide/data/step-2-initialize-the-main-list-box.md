@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735515"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600007"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步骤 2：初始化主列表框
 若要声明全局记录和记录集对象，请插入 （常规） （声明） 为 Form1 的以下代码：  
@@ -34,19 +34,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=http://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- 此代码实例化的全局的记录和记录集对象。 记录对象`grec`，使用指定为 ActiveConnection URL 打开。 如果 URL 存在，它会打开;如果它尚不存在，则创建它。 请注意，应将为"http://servername/foldername/"与您的环境中有效的 URL。  
+ 此代码实例化的全局的记录和记录集对象。 记录对象`grec`，使用指定为 ActiveConnection URL 打开。 如果 URL 存在，它会打开;如果它尚不存在，则创建它。 请注意，应将为"https://servername/foldername/"与您的环境中有效的 URL。  
   
  记录集对象中， `grs`，在该记录的子级上打开`grec`。 然后`lstMain`填充用于发布到的 URL 的资源的文件名称。  
   

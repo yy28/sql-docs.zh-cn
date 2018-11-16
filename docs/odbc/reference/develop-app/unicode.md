@@ -14,17 +14,17 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9ee58c367e83a61afef45d7df3358488dcb85a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821065"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661806"
 ---
 # <a name="unicode"></a>Unicode
 Unicode 定义针对多种语言中的字符进行编码。  
   
- 有关 Unicode 标准的详细信息，请参阅[Unicode Consortium](http://www.unicode.org)。  
+ 有关 Unicode 标准的详细信息，请参阅[Unicode Consortium](https://www.unicode.org)。  
   
  Unicode 定义通用字符集。 Windows ANSI 代码页定义字符集，通常包含一种语言的字符。 可能会更难编写的应用程序需要使用不同的代码页。  
   

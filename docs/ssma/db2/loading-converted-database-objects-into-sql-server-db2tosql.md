@@ -10,12 +10,12 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 20e52c835d54ec1cac31e1821bfe49876683e324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3df0803e7c4d86126077b716a2a66ebab3379b9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657287"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>转换数据库对象加载到 SQL Server (DB2ToSQL)
 转换 DB2 架构后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以将生成数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 SSMA 此外，还允许使用的实际内容更新目标元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
@@ -104,7 +104,7 @@ ms.locfileid: "47631265"
 已加载到的已转换的数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以授予和拒绝对这些对象的权限。 它是一个好办法迁移之前执行此操作将数据到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关如何帮助保护信息对象中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅"安全注意事项的数据库和数据库应用程序"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[将 DB2 数据迁移到 SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)。  
+迁移过程中的下一步是[将 DB2 数据迁移到 SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)。  
   
 ## <a name="see-also"></a>请参阅  
 [将 DB2 数据迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

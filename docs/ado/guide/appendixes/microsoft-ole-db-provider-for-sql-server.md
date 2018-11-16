@@ -15,12 +15,12 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98de1a3a2e03a576b84543bf3578d87e7ad6c655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657966"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350471"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>有关 SQL Server 概述 Microsoft OLE DB 提供程序
 Microsoft OLE DB 提供程序的 SQL Server，SQLOLEDB，允许 ADO 访问 Microsoft SQL Server。
@@ -30,7 +30,7 @@ Microsoft OLE DB 提供程序的 SQL Server，SQLOLEDB，允许 ADO 访问 Micro
 ## <a name="connection-string-parameters"></a>连接字符串参数
  若要连接到此提供程序，将*提供商*参数[连接字符串](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性：
 
-```
+```vb
 SQLOLEDB
 ```
 
@@ -39,7 +39,7 @@ SQLOLEDB
 ## <a name="typical-connection-string"></a>典型的连接字符串
  此提供程序的典型的连接字符串是：
 
-```
+```vb
 "Provider=SQLOLEDB;Data Source=serverName;"
 Initial Catalog=databaseName;
 User ID=MyUserID;Password=MyPassword;"
@@ -76,14 +76,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="command-object-usage"></a>命令对象使用
  SQLOLEDB 接受综合 ODBC、 ANSI 和特定于 SQL Server 的事务处理 SQL 语法有效。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：
 
-```
+```sql
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 
 ```
 
  LCASE 返回一个字符串，将所有大写字母字符转换为相应的小写字母字符。 ANSI SQL 字符串函数低执行相同的操作，因此下面的 SQL 语句是 ANSI 等效于前面提到的 ODBC 语句：
 
-```
+```sql
 SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ```
@@ -95,14 +95,14 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ## <a name="odbc-sql"></a>ODBC SQL
 
-```
+```vb
 {call SalesByCategory('Produce', '1995')}
 
 ```
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-```
+```sql
 EXECUTE SalesByCategory 'Produce', '1995'
 
 ```
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>动态属性
  Microsoft OLE DB 提供程序的 SQL Server 将插入到多个动态属性**属性**集合未打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。
 
- 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考引用 ADO 属性名称术语"说明"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称或请参阅[附录 c: OLE DB 属性](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考引用 ADO 属性名称术语"说明"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称或请参阅[附录 c: OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>连接的动态属性
  下列属性被添加到**属性**集合的**连接**对象。
@@ -355,7 +355,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML 根|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- 有关特定的实现详细信息和有关 Microsoft SQL Server OLE DB 提供程序的功能信息，请参阅[SQL Server 提供程序](http://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)。
+ 有关特定的实现详细信息和有关 Microsoft SQL Server OLE DB 提供程序的功能信息，请参阅[SQL Server 提供程序](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)。
 
 ## <a name="see-also"></a>请参阅
  [ConnectionString 属性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [提供程序属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a227848ac7f7fde500aa03a1ab206d19c11f3fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758715"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674106"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47758715"
 
 ## <a name="download"></a>下载
 
-该示例的最新版本，请参阅[wide world 导入程序版本](http://go.microsoft.com/fwlink/?LinkID=800630)。 下载*每日 ETL.ispac* Integration Services 包文件。
+该示例的最新版本，请参阅[wide world 导入程序版本](https://go.microsoft.com/fwlink/?LinkID=800630)。 下载*每日 ETL.ispac* Integration Services 包文件。
 
 若要重新创建示例数据库的源代码，请参阅[wide world importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)。
 

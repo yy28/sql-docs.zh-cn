@@ -14,12 +14,12 @@ ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 038cb740cd2d8e2457f83f829c85f4d6598b9f97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 653e29f8666f63cd4867b11b378ee8711f8b0508
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824075"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606437"
 ---
 # <a name="handler-property-rds"></a>Handler 属性 (RDS)
 指示服务器端自定义程序 （处理程序） 的功能进行扩展的名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，并使用任何参数*处理程序*。  
@@ -27,7 +27,7 @@ ms.locfileid: "47824075"
  **适用于：** [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ DataControl.Handler = String
  *DataControl*  
  表示的对象变量[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
- *字符串*  
+ *String*  
  一个**字符串**值，该值包含名称的处理程序和任何参数，所有通过以逗号分隔 (例如， `"handlerName,parm1,parm2,...,parm` *N*`"`)。  
   
 ## <a name="remarks"></a>备注  

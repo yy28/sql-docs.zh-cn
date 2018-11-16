@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638305"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350641"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调用到数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源是尚未公开这种方式。 但是，可以通过 ODBC 访问大多数系统 （DBMS） 目前所用。
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>动态属性
  Microsoft OLE DB Provider for ODBC 将插入到多个动态属性**属性**的未打开集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，以及[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。
 
- 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考指 ADO 属性名称，术语"Description"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称或请参阅[附录 c: OLE DB 属性](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考指 ADO 属性名称，术语"Description"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称或请参阅[附录 c: OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>连接的动态属性
  以下属性添加到**连接**对象的**属性**集合。
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |可更新性|DBPROP_UPDATABILITY|
 |使用书签|DBPROP_BOOKMARKS|
 
- 有关特定的实现和有关 Microsoft OLE DB 提供程序用于 ODBC 的功能信息的详细信息，请参阅[OLE DB 程序员参考](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)或访问 MSDN 上的数据访问和存储开发人员中心网站。
+ 有关特定的实现和有关 Microsoft OLE DB 提供程序用于 ODBC 的功能信息的详细信息，请参阅[OLE DB 程序员参考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)或访问 MSDN 上的数据访问和存储开发人员中心网站。
 
 ## <a name="see-also"></a>请参阅
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString 属性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [执行方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md) [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供程序属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支持方法](../../../ado/reference/ado-api/supports-method.md)

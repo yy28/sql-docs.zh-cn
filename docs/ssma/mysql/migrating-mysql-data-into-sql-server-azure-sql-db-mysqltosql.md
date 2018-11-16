@@ -13,23 +13,23 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 32b017e53d36560b5330a25f7167f865bea6ea88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a366f9ff19099ba640a02aecfe00a944e0fa6299
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745455"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681265"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据迁移到 SQL Server-Azure SQL DB (MySQLToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，你可以将数据从迁移到 MySQL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 > [!IMPORTANT]  
-> 如果正在使用的引擎是服务器端数据迁移引擎，然后，在迁移之前，数据，必须安装 SSMA for MySQL 的扩展包，并正在运行的 SSMA 的计算机上的 MySQL 提供程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也必须运行代理服务。 有关如何安装扩展包的详细信息，请参阅[SQL Server （mysql 迁移到 SQL） 上安装 SSMA 组件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> 如果正在使用的引擎是服务器端数据迁移引擎，然后，在迁移之前，数据，必须安装 SSMA for MySQL 的扩展包，并正在运行的 SSMA 的计算机上的 MySQL 提供程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也必须运行代理服务。 有关如何安装扩展包的详细信息，请参阅[SQL Server （mysql 迁移到 SQL） 上安装 SSMA 组件](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>设置迁移选项  
 在迁移之前，数据到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，查看中的项目迁移选项**项目设置**对话框。  
   
--   通过使用此对话框可以设置选项，如迁移批大小、 表锁定、 约束检查，null 值处理和标识值处理。 有关项目迁移设置的详细信息，请参阅[项目设置 （迁移）](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)。  
+-   通过使用此对话框可以设置选项，如迁移批大小、 表锁定、 约束检查，null 值处理和标识值处理。 有关项目迁移设置的详细信息，请参阅[项目设置 （迁移）](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)。  
   
     有关详细信息**扩展数据迁移设置**，请参阅[数据迁移设置](data-migration-settings-mysqltosql.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47745455"
   
 **服务器端数据迁移：**  
   
--   在服务器端数据迁移期间，引擎驻留在目标数据库上。 它通过扩展包安装。 有关如何安装扩展包的详细信息，请参阅[SQL Server （mysql 迁移到 SQL） 上安装 SSMA 组件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+-   在服务器端数据迁移期间，引擎驻留在目标数据库上。 它通过扩展包安装。 有关如何安装扩展包的详细信息，请参阅[SQL Server （mysql 迁移到 SQL） 上安装 SSMA 组件](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 -   若要启动的服务器端上的迁移，选择**服务器端数据迁移引擎**选项**项目设置**对话框。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "47745455"
   
 5.  在中**连接到 MySQL**对话框中，输入连接凭据，然后单击**Connect**。 连接到 MySQL 的详细信息，请参阅[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
-    如果目标数据库为 SQL Server，然后，输入中的连接凭据**连接到 SQL Server**对话框中，单击**Connect**。 连接到 SQL Server 的详细信息，请参阅[连接到 SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    如果目标数据库为 SQL Server，然后，输入中的连接凭据**连接到 SQL Server**对话框中，单击**Connect**。 连接到 SQL Server 的详细信息，请参阅[连接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
     如果目标数据库为 SQL Azure，然后输入中的连接凭据**连接到 SQL Azure**对话框中，单击**Connect**。 连接到 SQL Azure 的详细信息，请参阅[连接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
-    消息将出现在**输出**窗格。 在迁移完成后，**数据迁移报表**出现。 如果未迁移的任何数据，单击包含错误的行，然后单击**详细信息**。 与报表一起完成后，单击**关闭**。 数据迁移报表的详细信息，请参阅[数据迁移报表 （SSMA 常见）](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    消息将出现在**输出**窗格。 在迁移完成后，**数据迁移报表**出现。 如果未迁移的任何数据，单击包含错误的行，然后单击**详细信息**。 与报表一起完成后，单击**关闭**。 数据迁移报表的详细信息，请参阅[数据迁移报表 （SSMA 常见）](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > 如果 SQL Express 版本用作目标数据库，则允许仅限客户端数据迁移，并且不支持服务器端数据迁移。  

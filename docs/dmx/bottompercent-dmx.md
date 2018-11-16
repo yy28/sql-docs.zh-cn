@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b678aafac0c189983f69cc6db75bcaa48bd9ccf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002109"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602927"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>结果类型  
  表。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **BottomPercent**函数返回的最底层的行中的升序排列。 排名为基础的计算结果值的\<排名表达式 > 参数对于每一行，以便的总和\<排名表达式 > 的值之至少由指定的百分比\<%>自变量。 **BottomPercent**最少数量的元素同时，尽量返回满足指定百分比值。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建针对内置的关联模型的预测查询[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例创建针对内置的关联模型的预测查询[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
  若要了解 BottomPercent 的工作方式，可能会先执行返回嵌套的表的预测查询很有帮助。  
   

@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703655"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604337"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47703655"
 
 #### <a name="try-it-out"></a>进行试用
 
-- 若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)![下载](../analysis-services/media/download.png "下载")。
+- 若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)![下载](../analysis-services/media/download.png "下载")。
 
 - 已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。
 
@@ -121,7 +120,7 @@ ms.locfileid: "47703655"
 
 内存优化表的存储格式在 SQL Server 2014 和 2016 之间更改。 对于升级和从 SQL Server 2014 附加/还原，在数据库恢复过程中，序列化新的存储格式，并重启一次数据库。
 
-- [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
+- [升级到 SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
 
 
 ### <a name="alter-table-is-log-optimized-and-runs-in-parallel"></a>ALTER TABLE 进行了日志优化且并行运行
@@ -373,7 +372,7 @@ SQL Server 2016 针对导入和导出 JSON 以及处理 JSON 字符串添加了�
 - [sys.dm_exec_function_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) 提供有关标量值函数的执行统计信息。
 - 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，[sys.dm_db_index_usage_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 中的条目会像 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 以前的版本中那样得到保留。
 - 新的动态管理函数 [sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 可以返回提交到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的语句的相关信息。
-- 两个新视图支持 [SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services.md)：[sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 
+- 两个新视图支持 [SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services.md)： [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 
 
 
 ## <a name="security-enhancements"></a>安全性改进
@@ -441,17 +440,17 @@ Always On 现在支持加密的数据库。 当你创建新的可用性组、添
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 支持正在开发的、用于连接到 Microsoft Azure 的 Active Directory 身份验证库 (ADAL)。 它取代了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中使用的基于证书的身份验证。
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安装要求安装 .NET 4.6 作为先决条件。 安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 时，安装程序将自动安装 .NET 4.6。
 - 新的查询结果网格支持在从结果网格中复制或保存文本时保留回车符/换行符。 可以从“工具”-“选项”菜单设置此功能。
-- 不再从主功能树安装 SQL Server 管理工具；有关详细信息，请参阅 [安装带有 SSMS 的 SQL Server 管理工具](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)。
+- 不再从主功能树安装 SQL Server 管理工具；有关详细信息，请参阅 [安装带有 SSMS 的 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)。
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安装要求 .NET 4.6.1 作为先决条件。 安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 时，安装程序将自动安装 .NET 4.6.1。
 
 ### <a name="upgrade-advisor"></a>升级顾问
 SQL Server 2016 Upgrade Advisor Preview 是一个独立的工具，可让以前版本的用户针对其 SQL Server 数据库运行一组升级规则，以查明重大更改和行为更改与已弃用的功能，以及为采用新功能（例如 Stretch Database）提供帮助。
 
- 你可以从 [此处](https://www.microsoft.com/en-us/download/details.aspx?id=48119) 下载 Upgrade Advisor Preview，也可以使用 Web 平台安装程序来安装它。
+ 你可以从 [此处](https://www.microsoft.com/download/details.aspx?id=48119) 下载 Upgrade Advisor Preview，也可以使用 Web 平台安装程序来安装它。
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md) 
  
-[安装带有 SSMS 的 SQL Server 管理工具](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[安装带有 SSMS 的 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

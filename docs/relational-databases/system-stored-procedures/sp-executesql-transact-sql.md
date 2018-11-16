@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20ddff9570c3d7bd092b9dbd757fb0541234b4af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4561ff563bf04322c290571cf9df3a94f8faf5d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647055"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668306"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -250,7 +250,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- 有关其他示例，请参阅[sp_executesql (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms188001.aspx)。  
+ 有关其他示例，请参阅[sp_executesql (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)。  
   
 ## <a name="see-also"></a>请参阅  
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   

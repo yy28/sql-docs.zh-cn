@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050889"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702948"
 ---
 # <a name="run-python-using-t-sql"></a>使用 T-SQL 运行 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColM
 
 可以作为 SQL 变量传递其他类型的输入： 例如，您可以传递训练的模型作为变量，如使用序列化函数[pickle](https://docs.python.org/3.0/library/pickle.html)或[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)中编写模型二进制格式。
 
-存储的过程返回单个 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)数据帧为 output，但您也可以输出标量和作为变量的模型。 例如，可以输出为二进制变量已训练的模型，并将其传递给 T-SQL INSERT 语句，该模型写入表。 您还可以生成绘图 （以二进制格式） 或标量 （单个值，如日期和时间，经过的时间来训练该模型，等等）。
+存储的过程返回单个 Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)数据帧为 output，但您也可以输出标量和作为变量的模型。 例如，可以输出为二进制变量已训练的模型，并将其传递给 T-SQL INSERT 语句，该模型写入表。 您还可以生成绘图 （以二进制格式） 或标量 （单个值，如日期和时间，经过的时间来训练该模型，等等）。
 
 现在，让我们看看只是默认的 sp_execute_external_script 的输入和输出变量：`InputDataSet`和`OutputDataSet`。 
 
@@ -313,7 +313,7 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
 
 让我们标量数学函数的结果转换为表格结构时，我们仍需要将它们转换为 SQL Server 可以处理的格式。 
 
-1. 若要将序列转换为 data.frame，调用 pandas[数据帧](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
+1. 若要将序列转换为 data.frame，调用 pandas[数据帧](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
 
     ```sql
     execute sp_execute_external_script 

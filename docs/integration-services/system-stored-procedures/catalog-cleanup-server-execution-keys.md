@@ -11,12 +11,12 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a39ae6682829121d2471d49c3dd8fd9fdfbfd8d
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 6a1b585c5d4288d05e00d24e0f17b4823899a418
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864196"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640975"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      可指定范围或级别（执行与项目）以及要删除的密钥数量。 删除的默认批大小为 1000。 将级别设置为 2 时，仅当关联的项目已被删除时才会删除密钥和证书。  
   
- 有关详细信息，请参阅下面的知识库文章。 [修复：在 SQL Server 2012 中将 SSISDB 用作部署存储时的性能问题](http://support.microsoft.com/kb/2972285)  
+ 有关详细信息，请参阅下面的知识库文章。 [修复：在 SQL Server 2012 中将 SSISDB 用作部署存储时的性能问题](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>示例  
  以下示例调用 cleanup_server_execution_keys 存储过程。  

@@ -16,12 +16,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ab8fe68907b558b5556f9a68e445fe6412155c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d74b4642fc3a8b9ad08796a4ff032088310acbe
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853655"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639444"
 ---
 # <a name="copy-package-objects"></a>复制包对象
   此主题介绍如何在包内或包之间复制控制流项、数据流项和连接管理器。  
@@ -64,8 +64,8 @@ ms.locfileid: "47853655"
   
 ## <a name="see-also"></a>另请参阅  
  [“控制流”](../integration-services/control-flow/control-flow.md)   
- [数据流](../integration-services/data-flow/data-flow.md)   
+ [“数据流”](../integration-services/data-flow/data-flow.md)   
  [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [复制项目项](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+ [复制项目项](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

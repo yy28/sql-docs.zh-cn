@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 43f4a29f67c474ff30a7da0512d89b106769e90c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018132"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600522"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -154,7 +154,7 @@ GO
 
 ## <a name="sql-server-instance-offline"></a>SQL Server 实例脱机
 
-如果连接字符串中指定的 SQL Server 实例不可用（发生中断），则无论目标服务器上的副本扮演何种角色，连接都将失败。 若要避免长时间的应用程序故障时间，请在连接字符串中配置备用 `FailoverPartner`。 应用程序必须实现重试逻辑，以适应在实际故障转移期间未联机的主要副本和次要副本。 有关连接字符串的信息，请参阅 [SqlConnection.ConnectionString 属性](http://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)。
+如果连接字符串中指定的 SQL Server 实例不可用（发生中断），则无论目标服务器上的副本扮演何种角色，连接都将失败。 若要避免长时间的应用程序故障时间，请在连接字符串中配置备用 `FailoverPartner`。 应用程序必须实现重试逻辑，以适应在实际故障转移期间未联机的主要副本和次要副本。 有关连接字符串的信息，请参阅 [SqlConnection.ConnectionString 属性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)。
 
 ## <a name="see-also"></a>另请参阅  
 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

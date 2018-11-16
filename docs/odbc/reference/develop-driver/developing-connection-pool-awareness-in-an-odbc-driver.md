@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661746"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>在 ODBC 驱动程序中开发连接池感知
 本主题讨论开发包含有关该驱动程序应如何提供连接池的服务的信息的 ODBC 驱动程序的详细信息。  
@@ -68,7 +68,7 @@ ms.locfileid: "47820185"
 ## <a name="the-connection-rating"></a>连接级别  
  与建立新连接相比，可以通过重置一些 （如数据库） 中已入池连接的连接信息来获取更好的性能。 因此，您可能不希望要在集中的键属性的数据库名称。 否则，您可以有一个单独的池的每个数据库，这可能不会在中间层应用程序中的客户在其中使用各种不同的连接字符串。  
   
- 每当你重复使用具有某些属性不匹配的连接，以便返回的连接是与应用程序请求相同，则应重置基于新的应用程序请求的不匹配的属性 （请参阅属性 SQL_ATTR 的讨论在 _DBC_INFO_TOKEN [SQLSetConnectAttr 函数](http://go.microsoft.com/fwlink/?LinkId=59368))。 但是，重置这些属性可能会降低性能。 例如，重置数据库需要对服务器的网络调用。 如果可用，因此，重复使用完全匹配的连接。  
+ 每当你重复使用具有某些属性不匹配的连接，以便返回的连接是与应用程序请求相同，则应重置基于新的应用程序请求的不匹配的属性 （请参阅属性 SQL_ATTR 的讨论在 _DBC_INFO_TOKEN [SQLSetConnectAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59368))。 但是，重置这些属性可能会降低性能。 例如，重置数据库需要对服务器的网络调用。 如果可用，因此，重复使用完全匹配的连接。  
   
  驱动程序中的分级函数可以计算的现有连接使用新的连接请求。 例如，可以确定驱动程序分级函数：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47820185"
   
  驱动程序管理器**SQLAllocHandle**并**SQLFreeHandle**将不接受此新的句柄类型。  
   
- SQL_HANDLE_DBC_INFO_TOKEN 可能包含机密信息，例如凭据。 因此，驱动程序应安全地清除内存缓冲区 (使用[SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx))，其中包含敏感信息之前释放与此句柄**SQLFreeHandle**。 每当应用程序的环境句柄已关闭，将关闭所有关联的连接池。  
+ SQL_HANDLE_DBC_INFO_TOKEN 可能包含机密信息，例如凭据。 因此，驱动程序应安全地清除内存缓冲区 (使用[SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx))，其中包含敏感信息之前释放与此句柄**SQLFreeHandle**。 每当应用程序的环境句柄已关闭，将关闭所有关联的连接池。  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>评级算法的驱动程序管理器连接池  
  本部分讨论用于驱动程序管理器连接池的评分算法。 驱动程序开发人员可以实现向后兼容性相同的算法。 此算法可能不是最好的一个。 你需要优化此算法基于您的实现 （否则，将无需实现此功能）。  

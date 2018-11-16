@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633475"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663267"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633475"
 |percent_complete|**int**|操作已完成的百分比。 值不是连续和下面列出了有效的值。 不为 NULL。<br/><br/>0 = 未启动的操作<br/>50 = 正在进行的操作<br/>100 = 操作完成|  
 |error_code|**int**|指示在操作失败过程中发生的错误的代码。 如果值为 0，则指示操作已成功完成。|  
 |error_desc|**nvarchar(2048)**|在操作失败过程中发生的错误的说明。|  
-|error_severity|**int**|在操作失败过程中发生的错误的严重性级别。 有关错误严重性的详细信息，请参阅[数据库引擎错误严重性](http://go.microsoft.com/fwlink/?LinkId=251052)。|  
+|error_severity|**int**|在操作失败过程中发生的错误的严重性级别。 有关错误严重性的详细信息，请参阅[数据库引擎错误严重性](https://go.microsoft.com/fwlink/?LinkId=251052)。|  
 |error_state|**int**|保留供将来使用。 不保证以后的兼容性。|  
 |start_time|**datetime**|开始操作的时间戳。|  
 |last_modify_time|**datetime**|上次修改长时间运行的操作的记录的时间戳。 在成功完成操作的情况下，此字段显示操作完成的时间戳。|  

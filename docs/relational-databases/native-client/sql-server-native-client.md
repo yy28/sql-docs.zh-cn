@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677796"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,13 +45,13 @@ SQL Server ODBC 驱动程序的更多信息，请参阅[Windows 上的 SQL Serve
 
 中的 ODBC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端支持已添加到 Windows 7 SDK 中的标准 ODBC 的三个功能：  
 
--   异步执行与连接相关的操作。 有关详细信息，请参阅[异步执行](http://go.microsoft.com/fwlink/?LinkID=191493)。  
+-   异步执行与连接相关的操作。 有关详细信息，请参阅[异步执行](https://go.microsoft.com/fwlink/?LinkID=191493)。  
 
--   C 数据类型扩展能力。 有关详细信息，请参阅[ODBC 中的 C 数据类型](http://go.microsoft.com/fwlink/?LinkID=191495)。  
+-   C 数据类型扩展能力。 有关详细信息，请参阅[ODBC 中的 C 数据类型](https://go.microsoft.com/fwlink/?LinkID=191495)。  
 
      若要支持此功能的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端，可以返回 SQLGetDescField **SQL_C_SS_TIME2** (对于**时间**类型) 或**SQL_C_SS_TIMESTAMPOFFSET** （适用于**datetimeoffset**) 而不是**SQL_C_BINARY**，如果你的应用程序使用 ODBC 3.8。 有关详细信息，请参阅[ODBC 日期和时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
 
--   调用**SQLGetData**用小缓冲区多次来检索大型参数值。 有关详细信息，请参阅[使用 SQLGetData 检索输出参数](http://go.microsoft.com/fwlink/?LinkID=191494)。  
+-   调用**SQLGetData**用小缓冲区多次来检索大型参数值。 有关详细信息，请参阅[使用 SQLGetData 检索输出参数](https://go.microsoft.com/fwlink/?LinkID=191494)。  
 
  下列主题描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 行为更改。  
 
@@ -61,6 +61,6 @@ SQL Server ODBC 驱动程序的更多信息，请参阅[Windows 上的 SQL Serve
 
 -   [处理字符转换时 ODBC 驱动程序行为的变化](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

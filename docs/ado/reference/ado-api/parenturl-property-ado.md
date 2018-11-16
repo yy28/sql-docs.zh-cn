@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822105"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603017"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 属性 (ADO)
 指示指向父级的绝对 URL 字符串[记录](../../../ado/reference/ado-api/record-object-ado.md)的当前**记录**对象。  
@@ -35,13 +35,13 @@ ms.locfileid: "47822105"
  假定一个文件夹包含"first"下的"第二个"。 打开**记录**对象通过使用以下语法：  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- 现在的值`the` **ParentURL**属性是`"http://first"`，则与相同**ActiveConnection**。  
+ 现在的值`the` **ParentURL**属性是`"https://first"`，则与相同**ActiveConnection**。  
   
- 源也可以是绝对 URL 如， `"http://first/second"`。 **ParentURL**属性，即`"http://first"`，上面的层`"second"`。  
+ 源也可以是绝对 URL 如， `"https://first/second"`。 **ParentURL**属性，即`"https://first"`，上面的层`"second"`。  
   
  如果此属性可能为 null 值：  
   

@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662185"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603567"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>侦听器、客户端连接、应用程序故障转移
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662185"
  可用性组侦听器由以下各项定义：  
   
  唯一的 DNS 名称  
- 这也称为虚拟网络名称 (VNN)。 适用 DNS 主机名的 Active Directory 命名规则。 有关详细信息，请参阅知识库文章： [Active Directory 中计算机、域、站点和 OU 的命名约定](http://support.microsoft.com/kb/909264) 。  
+ 这也称为虚拟网络名称 (VNN)。 适用 DNS 主机名的 Active Directory 命名规则。 有关详细信息，请参阅知识库文章： [Active Directory 中计算机、域、站点和 OU 的命名约定](https://support.microsoft.com/kb/909264) 。  
   
  一个或多个虚拟 IP 地址 (VIP)  
  为可用性组可以故障转移到的一个或多个子网配置 VIP。  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [可用性组侦听器简介](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) （SQL Server Always On 团队博客）  
   

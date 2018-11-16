@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845777"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668394"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) 是旨在自动从 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 数据库迁移到 SQL Server 的工具。  
@@ -49,11 +49,11 @@ SSMA 支持以下目标版本。
 * * 仅适用于 Oracle 的 SSMA 支持此目标。
  
 ## <a name="downloads"></a>下载
-- [适用于 Access 的 SSMA](http://aka.ms/ssmaforaccess)
-- [适用于 DB2 的 SSMA](http://aka.ms/ssmafordb2)
-- [适用于 MySql 的 SSMA](http://aka.ms/ssmaformysql)
-- [适用于 Oracle 的 SSMA](http://aka.ms/ssmafororacle)
-- [适用于 SAP ASE 的 SSMA](http://aka.ms/ssmaforsybase)
+- [适用于 Access 的 SSMA](https://aka.ms/ssmaforaccess)
+- [适用于 DB2 的 SSMA](https://aka.ms/ssmafordb2)
+- [适用于 MySql 的 SSMA](https://aka.ms/ssmaformysql)
+- [适用于 Oracle 的 SSMA](https://aka.ms/ssmafororacle)
+- [适用于 SAP ASE 的 SSMA](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>获取 SSMA 支持  
 **帮助和支持的 Microsoft SQL Server Migration Assistant (SSMA):**  
@@ -62,9 +62,9 @@ SSMA 支持以下目标版本。
   
 -   **SQL Server 社区论坛**– SQL Server 社区中提出问题  
   
-    -   [SQL Server 社区](http://go.microsoft.com/fwlink/?LinkId=42455)的新闻组和 SQL Server 社区所监视的论坛。 此站点还列出了诸如博客和网站之类的社区信息源。  
+    -   [SQL Server 社区](https://go.microsoft.com/fwlink/?LinkId=42455)的新闻组和 SQL Server 社区所监视的论坛。 此站点还列出了诸如博客和网站之类的社区信息源。  
   
-    -   [SQL Server 开发人员中心社区](http://go.microsoft.com/fwlink/?LinkId=42456)的新闻组、 论坛和其他社区资源，则适用于 SQL Server 开发人员  
+    -   [SQL Server 开发人员中心社区](https://go.microsoft.com/fwlink/?LinkId=42456)的新闻组、 论坛和其他社区资源，则适用于 SQL Server 开发人员  
   
 -   辅助支持-请转到[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts)并搜索 SQL Server Migration Assistant。  选择您的版本，然后选择"启动请求"。  包含 SQL Server 迁移助手工具协助的支持。  
   

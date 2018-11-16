@@ -1,5 +1,5 @@
 ---
-title: BottomCount (DMX) |Microsoft 文档
+title: BottomCount (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b844f4337a0d09a9457da0658b44e8225f6c224
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 382cfe7e7ce77fec66d2b9e5b370f397abd14dce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843030"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602907"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +29,18 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>适用范围  
- 一个表达式，返回一个表，如\<表列引用 >，或函数返回一个表。  
+ 一个表达式，返回一个表，如\<表的列引用 >，或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>Remarks  
- 由提供的值\<排名表达式 > 自变量确定中提供的行级别的递增顺序\<表表达式 > 自变量，并在指定的最底部的行数\<计数 > 返回自变量。  
+## <a name="remarks"></a>备注  
+ 通过提供的值\<排名表达式 > 自变量确定按排名的升序排列的行中提供的\<表表达式 > 参数，并在指定的最底层的行数\<计数 > 返回自变量。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建针对你通过使用生成的关联模型的预测查询[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例创建针对关联模型，它使用生成的预测查询[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
- 若要了解 BottomCount 的工作原理，它可能是第一次执行返回嵌套的表的预测查询很有帮助。  
+ 若要了解 BottomCount 的工作方式，可能会先执行返回嵌套的表的预测查询很有帮助。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -68,7 +68,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- BottomCount 函数使用此查询的结果，并将最小值行返回其总和的指定百分比。  
+ BottomCount 函数接受此查询的结果，并返回总值为指定百分比最小值行。  
   
 ```  
 SELECT   
@@ -83,7 +83,7 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- BottomCount 函数的第一个参数是一个表列的名称。 在此示例中，嵌套的表返回通过调用预测函数并使用 INCLUDE_STATISTICS 自变量。  
+ BottomCount 函数的第一个参数是列的表的名称。 在此示例中，通过调用预测函数和使用 INCLUDE_STATISTICS 参数返回嵌套的表。  
   
  BottomCount 函数的第二个参数是使用对结果进行排序的嵌套表中的列。 在此示例中，INCLUDE_STATISTICS 选项返回 $SUPPORT、$PROBABILTY 和 $ADJUSTED PROBABILITY 列。 此示例使用 $SUPPORT，因为支持值不带有小数，所以很容易进行验证。  
   
@@ -97,11 +97,11 @@ NATURAL PREDICTION JOIN
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Fender Set - Mountain|1415|0.095100477|0.090718432|  
   
- **请注意**提供了此示例仅为说明 BottomCount 使用。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
+ **请注意**提供本示例只是为了举例说明 BottomCount 的使用。 运行此查询可能需要很长时间，具体取决于数据集的大小。  
   
 ## <a name="see-also"></a>请参阅  
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [常规预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
  [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
  [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  

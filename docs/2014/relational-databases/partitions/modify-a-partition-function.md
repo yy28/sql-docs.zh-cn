@@ -10,12 +10,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9371a82366f31c2d8221834a1bd29f9cfd9cc0d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049037"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640754"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
   通过通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在已分区的表或已分区的索引的分区函数中增加或减少指定的分区数（加 1 或减 1），可以更改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表或索引的分区方式。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
@@ -56,7 +56,7 @@ ms.locfileid: "48049037"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不对修改分区函数提供复制支持。 如果要对发布数据库中的分区函数进行更改，必须在订阅数据库中手动执行此操作。  
   
--   ALTER PARITITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
+-   受 ALTER PARTITION FUNCTION 的所有文件组必须处于联机状态。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48049037"
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>将一个分区拆分为两个分区  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48049037"
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>将两个分区合并为一个分区  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -15,12 +15,12 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61e3ab4bd3fb7afda858dd7e2b14fd2bddbd599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752385"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600917"
 ---
 # <a name="ado-errors"></a>ADO 错误
 **ErrorValueEnum**常量介绍 ADO 错误值。 包括的值，这些枚举常量的完整列表请参阅[附录 B:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将检查的一些更有趣的错误，并介绍它们，或若要解决此问题的解决方案可以引发某些特定情况。 这两个**ErrorValueEnum**列出了常量和简短的正十进制数。
@@ -64,7 +64,7 @@ ms.locfileid: "47752385"
 |**3724**|**adErrCantConvertvalue**|不能转换数据值，而原因并非符号不匹配或数据溢出。 例如，转换将截断数据。|
 |**3725**|**adErrCantCreate**|数据值不能设置或检索，因为字段数据类型未知，或提供程序出现资源不足，无法执行该操作。|
 |**3726**|**adErrColumnNotOnThisRow**|记录不包含此字段。 指定了不正确的字段名称或字段不在**字段**引用了当前记录的集合。|
-|**3727**|**adErrURLDoesNotExist**|源 URL 或目标 URL 的父级不存在。 源或目标 URL 中没有犯了输入错误。 你可能`http://mysite/photo/myphoto.jpg`时实际上应具有`http://mysite/photos/myphoto.jpg`相反。 父 URL 中的输入错误 (在这种情况下，*照片*而不是*照片*) 导致该错误。|
+|**3727**|**adErrURLDoesNotExist**|源 URL 或目标 URL 的父级不存在。 源或目标 URL 中没有犯了输入错误。 你可能`https://mysite/photo/myphoto.jpg`时实际上应具有`https://mysite/photos/myphoto.jpg`相反。 父 URL 中的输入错误 (在这种情况下，*照片*而不是*照片*) 导致该错误。|
 |**3728**|**adErrTreePermissionDenied**|权限是不足以访问树或子树。 连接字符串中指定的用户没有适当的权限。|
 |**3729**|**adErrInvalidURL**|URL 包含无效字符。 请确保键入的 URL 正确。 URL 采用注册到当前提供程序的方案 （例如，Internet 发布提供程序注册为 http）。|
 |**3730**|**adErrResourceLocked**|指定 URL 表示的对象已由一个或多个其他进程锁定。 等待，直到该过程完成，然后重试该操作。 尝试访问的对象已由另一个用户或应用程序中的另一个进程锁定。 这是最有可能会出现在多用户环境中。|

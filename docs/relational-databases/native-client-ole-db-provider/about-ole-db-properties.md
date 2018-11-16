@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 194cd3894fa03abe4a435419c78f469df5f4464e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 376a367bd6679c9ff1a70fad5e440365289db74c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826315"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668556"
 ---
 # <a name="about-ole-db-properties"></a>关于 OLE DB 属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,6 +52,6 @@ ms.locfileid: "47826315"
   
 ## <a name="see-also"></a>请参阅  
  [创建 SQL Server Native Client OLE DB 提供程序应用程序](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [属性 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [属性 (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

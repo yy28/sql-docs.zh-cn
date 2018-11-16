@@ -10,12 +10,12 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728751"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668296"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>开始使用 SSMA for DB2 控制台 (DB2ToSQL)
 本部分介绍的过程启动并开始使用 DB2 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口中。  
@@ -42,9 +42,9 @@ ms.locfileid: "47728751"
   
 其他功能：  
   
-1.  [管理密码](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)和导出 / 导入到其他窗口机  
+1.  [管理密码](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)和导出 / 导入到其他窗口机  
   
-2.  [生成报告](http://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883)若要查看详细的 xml 输出为评估 /conversion 和数据迁移的报告。 此外可以刷新和同步命令的生成详细的错误报告。  
+2.  [生成报告](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883)若要查看详细的 xml 输出为评估 /conversion 和数据迁移的报告。 此外可以刷新和同步命令的生成详细的错误报告。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
 执行 SSMA 脚本命令和选项，时控制台程序为用户在控制台上显示的结果和消息 （信息、 错误等），或如有必要，将重定向到的 xml 输出文件。 每种类型的输出中的消息是由唯一的颜色表示。 例如，白色颜色中的文本消息表示文件的脚本命令;以绿色表示一个表示提示用户输入，依此类推。  
@@ -63,5 +63,5 @@ ms.locfileid: "47728751"
 |蓝绿色|开始、 完成和操作的结果|  
   
 ## <a name="see-also"></a>请参阅  
-[安装 SSMA for DB2](http://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
+[安装 SSMA for DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

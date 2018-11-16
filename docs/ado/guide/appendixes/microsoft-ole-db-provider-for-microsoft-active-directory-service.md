@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758585"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350441"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 访问接口允许 ADO 连接到通过 ADSI 异类目录服务。 这样，ADO 应用程序只读访问权限对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务，除了任何符合 LDAP 的目录服务和 Novell 目录服务。 ADSI 本身基于提供程序模型，以便如果没有新的提供程序让访问到另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程，并支持 Unicode。  
@@ -29,7 +29,7 @@ Active Directory 服务接口 (ADSI) 访问接口允许 ADO 连接到通过 ADSI
 ## <a name="connection-string-parameters"></a>连接字符串参数  
  若要连接到此提供程序，请设置**提供程序**的参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性设置为以下：  
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -38,7 +38,7 @@ ADSDSOObject
 ## <a name="typical-connection-string"></a>典型的连接字符串  
  此提供程序的典型连接字符串如下所示：  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -56,7 +56,7 @@ ADSDSOObject
 ## <a name="command-text"></a>命令文本  
  通过以下语法中的提供程序识别由四部分组成的命令文本字符串：  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
@@ -65,17 +65,17 @@ ADSDSOObject
 |*Root*|指示**ADsPath**对象从其开始搜索 （即，搜索的根）。|  
 |*Filter*|指示 RFC 1960 格式中的搜索筛选器。|  
 |*属性*|指示要返回的特性的以逗号分隔列表。|  
-|*作用域*|可选。 一个**字符串**，它指定搜索范围。 可以为以下各项之一：<br /><br /> -基础-搜索基对象 （搜索的根）。<br />-OneLevel-搜索只有一个级别。<br />-子树 — 搜索整个子树。|  
+|*范围*|可选。 一个**字符串**，它指定搜索范围。 可以为以下各项之一：<br /><br /> -基础-搜索基对象 （搜索的根）。<br />-OneLevel-搜索只有一个级别。<br />-子树 — 搜索整个子树。|  
   
  例如：  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  提供程序还支持 SQL SELECT 命令文本。 例如：  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  

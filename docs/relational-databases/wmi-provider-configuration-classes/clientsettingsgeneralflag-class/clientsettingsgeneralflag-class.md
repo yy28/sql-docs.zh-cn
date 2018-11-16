@@ -17,12 +17,12 @@ ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af6697d9fb19e129289f37312684cd7cfd719ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1318ded7f247dff457a2f417ede2630074c6829d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746995"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663896"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag 类
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "47746995"
 -   查看并修改标志值。  
   
 ## <a name="see-also"></a>请参阅  
- [配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)  
+ [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

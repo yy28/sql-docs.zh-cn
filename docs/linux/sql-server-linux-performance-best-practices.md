@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4b05826bd25c711a70914982daf701b15edb1c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629645"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676897"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>性能最佳实践和 Linux 上的 SQL Server 配置准则
 
@@ -36,7 +36,7 @@ ms.locfileid: "47629645"
 
 - **配置多个 tempdb 数据文件**
 
-   由于 Linux 安装上的 SQL Server 不提供一个选项以配置多个 tempdb 文件，我们建议您考虑在安装后创建多个 tempdb 数据文件。 有关详细信息，请参阅文章中的指导[建议，以减少 SQL Server tempdb 数据库中的分配争用](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)。
+   由于 Linux 安装上的 SQL Server 不提供一个选项以配置多个 tempdb 文件，我们建议您考虑在安装后创建多个 tempdb 数据文件。 有关详细信息，请参阅文章中的指导[建议，以减少 SQL Server tempdb 数据库中的分配争用](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)。
 
 ### <a name="advanced-configuration"></a>高级的配置
 

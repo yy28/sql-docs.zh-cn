@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b7ffeec1ca14aa57876ea14cbfdb536d9207c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630775"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350005"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 暂留提供程序概述
 Microsoft OLE DB 永久性提供程序使您可以保存[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象到文件中，并在以后还原该**记录集**文件中的对象。 架构信息和数据，而挂起的更改将保留。
@@ -30,7 +30,7 @@ Microsoft OLE DB 永久性提供程序使您可以保存[记录集](../../../ado
 ## <a name="provider-keyword"></a>提供程序关键字
  若要调用此提供程序，请连接字符串中指定以下关键字和值。
 
-```
+```vb
 "Provider=MSPersist"
 ```
 

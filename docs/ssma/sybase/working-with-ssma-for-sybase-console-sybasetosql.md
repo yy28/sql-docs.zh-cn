@@ -10,12 +10,12 @@ ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 75e37a0e54204c4aeb190e3ae4db7944d01c8f29
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 117438f012686ee7fb40070539aa0848ecc78661
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099498"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663386"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Sybase 控制台 (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA)，版本为 Sybase Adaptive Server Enterprise (ASE)，现可通过在命令行控制台应用程序访问。 脚本文件窗体应用程序以执行命令的输入。 作为控制台应用程序，SSMA 使脚本级别进行连接，可减少迁移周期，并可缩放的迁移工作。  
@@ -38,6 +38,6 @@ ms.locfileid: "50099498"
 |[生成报告&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|列出的命令来生成报告。|  
 |[故障排除&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|提供了关于解决迁移问题的信息摘要。|  
   
-## <a name="see-also"></a>另请参阅  
-[入门 Sybase Console(SybaseToSQL) SSMA](http://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
+## <a name="see-also"></a>请参阅  
+[入门 Sybase Console(SybaseToSQL) SSMA](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

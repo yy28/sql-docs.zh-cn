@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,17 @@ ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fcff12760076a47e31fc6b140e0f3cdb7fc590e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657745"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558445"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上配置 RDS
 如果您遇到获取 RDS 才能正常工作后升级到 Windows 2000 的问题，请按照下列步骤来解决此问题：  
   
-1.  请确保 World Wide Web 发布服务通过使用 Internet 资源管理器导航到 http:// 服务器运行第一个。 如果不能访问 Web 服务器以这种方式，请打开命令提示符并输入以下命令，"NET 启动 W3SVC"。  
+1.  请确保 World Wide Web 发布服务通过使用 Internet 资源管理器导航到 https:// 服务器运行第一个。 如果不能访问 Web 服务器以这种方式，请打开命令提示符并输入以下命令，"NET 启动 W3SVC"。  
   
 2.  在开始菜单中，选择运行。 键入 msdfmap.ini，然后单击确定以在记事本中打开 msdfmap.ini 文件。 检查 [连接默认值] 部分中，并访问参数设置为 NOACCESS，如果将其更改为只读。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47657745"
  务必尝试重新启动服务器，如果更改不会显示为解决在第一个问题。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。从 Windows 8 和 Windows Server 2012 开始，RDS 服务器组件不再包含在 Windows 操作系统中。 将使用到 RDS 的应用程序迁移[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。从 Windows 8 和 Windows Server 2012 开始，RDS 服务器组件不再包含在 Windows 操作系统中。 将使用到 RDS 的应用程序迁移[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="see-also"></a>请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)

@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 61558536574750e7588124afb75cf26ee580b22a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701505"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668526"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>链接到 SQL Server-Azure SQL DB (AccessToSQL) 访问应用程序
 如果想要使用现有的 Access 应用程序，用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以将原始 Access 表链接到已迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表。 链接会修改你的 Access 数据库，以便你的查询、 窗体、 报表和数据访问页使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库而不是你的 Access 数据库中的数据。  
@@ -56,7 +56,7 @@ ms.locfileid: "47701505"
   
 > [!IMPORTANT]  
 > 若要使用的 Azure 数据库的 access 表链接，你需要 SQL Server 本机 Client(SNAC) 版本 10.5 或更高版本。   
-> 你可以获取最新版本从 SNAC [Microsoft® SQL Server® 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=196940)。  
+> 你可以获取最新版本从 SNAC [Microsoft® SQL Server® 2008 R2 功能包](https://go.microsoft.com/fwlink/?LinkId=196940)。  
   
 ## <a name="unlinking-access-tables"></a>取消链接访问表  
 取消链接从一个访问表时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表，SSMA 还原原始访问表及其数据。  
@@ -153,6 +153,6 @@ Recordset.LastModified
   
 **解决方法：** 可以定义只返回这些行与支持的数据类型的访问查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

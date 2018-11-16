@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850975"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664927"
 ---
 # <a name="clr-integration---overview"></a>CLR 集成 - 概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "47850975"
  可以生成扩展存储过程来执行使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程无法实现的功能。 但是，扩展存储过程可能有损于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的完整性，而经过验证确定为类型安全的托管代码则不会。 进一步来说，在 CLR 的托管代码与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间更深入地集成了内存管理、线程及纤程的调度以及同步服务。 如果所编写的存储过程需要执行在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中不可能完成的任务，则 CLR 集成有比扩展存储过程更安全的方式来实现它。 有关 CLR 集成和扩展存储的过程的详细信息，请参阅[CLR 集成性能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [安装.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [CLR 集成体系结构](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [安装.NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [CLR 集成体系结构](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [从 CLR 数据库对象的数据访问](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 集成入门](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

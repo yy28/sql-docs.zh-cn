@@ -17,12 +17,12 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3481d9b7c186f3492e403b6881f4ffafbe90912b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787276"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606207"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 从提供程序获取数据库架构信息。  
@@ -62,7 +62,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **远程数据服务使用情况** **OpenSchema**方法不是客户端上可用[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
 > [!NOTE]
->  在 Visual Basic 中，具有四个字节无符号的整数 (DBTYPE UI4) 中的列**记录集**返回从**OpenSchema**方法**连接**对象不能与其他变量进行比较。 有关 OLE DB 数据类型的详细信息，请参阅[OLE DB (OLE DB) 中的数据类型](http://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)并[附录 a： 数据类型](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)中的 Microsoft OLE DB 程序员参考。  
+>  在 Visual Basic 中，具有四个字节无符号的整数 (DBTYPE UI4) 中的列**记录集**返回从**OpenSchema**方法**连接**对象不能与其他变量进行比较。 有关 OLE DB 数据类型的详细信息，请参阅[OLE DB (OLE DB) 中的数据类型](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)并[附录 a： 数据类型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)中的 Microsoft OLE DB 程序员参考。  
   
 > [!NOTE]
 >  **Visual C/c + + 用户**不使用客户端游标时，检索的列架构在 ADO 中的"ORDINAL_POSITION"返回类型 VT_R8 MDAC 2.7、 MDAC 2.8 和 MDAC 中使用的类型时的 Windows 数据访问组件 (Windows DAC) 6.0 中的变体2.6 为 VT_I4。 为安装 MDAC 2.6 编写查找一个变体的唯一程序返回的类型 VT_I4 会得到每个序号 MDAC 2.7、 MDAC 2.8 和 Windows DAC 6.0 无需修改即可运行时才为零。 因为 OLE DB 返回数据类型为 DBTYPE_UI4，进行此更改和已签名的 VT_I4 类型中没有足够的空间以包含所有可能的值，而无需可能截断发生，从而导致数据丢失。  

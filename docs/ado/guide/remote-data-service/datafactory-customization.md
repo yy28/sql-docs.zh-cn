@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1054596c74c00169f9a043acc3fdf47269c5b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31434e08443bc533c7e2ae14ed70d6962aea04cf
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825205"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558604"
 ---
 # <a name="datafactory-customization"></a>自定义 DataFactory
 远程数据服务 (RDS) 提供了一种方法轻松地在三层客户端/服务器系统中执行数据访问。 客户端数据控件指定远程数据源或连接字符串上执行查询的连接和命令的字符串参数和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象参数，以执行更新。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  参数传递到服务器的程序，后者将执行对远程数据源的数据访问操作。 RDS 提供了默认的服务器程序调用[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象。 **提高**对象返回任何**记录集**对客户端的查询生成的对象。  
   

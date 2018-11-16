@@ -11,12 +11,12 @@ ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e113f931e318c501f69540ec19e97e3ae72b553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130529"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638614"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>处理表格模型分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 本主题中的任务说明如何使用 **中的** “处理分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框在模型数据库中处理分区。  
@@ -27,7 +27,7 @@ ms.locfileid: "48130529"
   
 2.  在 **“分区”** 对话框的 **“分区”** 中，单击“处理”按钮。  
   
-3.  在“处理分区”对话框的“模式”列表框中，选择以下处理模式之一：  
+3.  在中**处理分区**对话框中**模式**列表框中，选择下列处理模式之一：  
   
     |“模式”|Description|  
     |----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48130529"
 4.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [表格模型分区&#40;SSAS 表格&#41;](partitions-ssas-tabular.md)   
- [创建和管理表格模型分区&#40;SSAS 表格&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [表格模型分区（SSAS 表格）](partitions-ssas-tabular.md)   
+ [创建和管理表格模型分区（SSAS 表格）](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633426"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601347"
 ---
 # <a name="shape-commands-in-general"></a>常用 Shape 命令
 数据整理定义的形状的列**记录集**，所列的方式表示的实体之间的关系**记录集**用数据填充。  
@@ -46,7 +46,7 @@ ms.locfileid: "47633426"
   
  您可以访问**记录集**组件的形状**记录集**以编程方式或通过相应的可视化控件。  
   
- Microsoft 提供了一种可视化工具生成形状命令 (请参阅[数据环境设计器](http://go.microsoft.com/fwlink/?LinkId=5689)Visual Basic 6 文档中)，另一个显示分层光标 （请参阅"使用 Microsoft 层次结构Flexgrid 控件"中的 Visual Basic 6 文档）。  
+ Microsoft 提供了一种可视化工具生成形状命令 (请参阅[数据环境设计器](https://go.microsoft.com/fwlink/?LinkId=5689)Visual Basic 6 文档中)，另一个显示分层光标 （请参阅"使用 Microsoft 层次结构Flexgrid 控件"中的 Visual Basic 6 文档）。  
   
  了解如何浏览的分层**记录集**，请参阅[访问分层记录集的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
