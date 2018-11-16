@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ab72d572ee533ed43dfde39b362c5bb16120a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726665"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641384"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
@@ -168,11 +168,11 @@ ms.locfileid: "47726665"
   
 ## <a name="external-resources"></a>外部资源  
   
--   [表达式和配置荧光笔 (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [表达式和配置荧光笔 (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+-   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>另请参阅  
- [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

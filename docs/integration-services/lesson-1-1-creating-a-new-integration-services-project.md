@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d8fff1dbb0d7e44ad814c312be65efccaa731ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3d91b56ea331d443252206f627aa4b0b3b40345
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792467"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639694"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>第 1-1 课 - 创建新的 Integration Services 项目
 若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建包，第一步是创建一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 此项目包含在数据转换解决方案中使用的数据源、数据源视图和包等对象的模板。  
@@ -26,7 +26,7 @@ ms.locfileid: "47792467"
 > [!NOTE]  
 > 本教程需要 Microsoft SQL Server Data Tools。  
 >   
-> 有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](http://msdn.microsoft.com/data/hh297027)。  
+> 有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](https://msdn.microsoft.com/data/hh297027)。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   

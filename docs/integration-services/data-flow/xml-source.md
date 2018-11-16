@@ -20,12 +20,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 977a4c0b0406a3da51d7f36210e797fc2024d77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854985"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640454"
 ---
 # <a name="xml-source"></a>XML 源
   XML 源读取 XML 数据文件，并用数据填充源输出中的列。  
@@ -79,7 +79,7 @@ ms.locfileid: "47854985"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [XML 源自定义属性](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47854985"
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
-|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：** [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：** [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |来自变量的 XML 数据|从变量检索 XML 数据。|  
   
  **使用内联架构**  
