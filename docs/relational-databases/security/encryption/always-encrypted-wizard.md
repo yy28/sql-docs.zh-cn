@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 863c4664560b42103e3ed2ff288bdbcb7d69a52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630165"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673573"
 ---
 # <a name="always-encrypted-wizard"></a>始终加密向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47630165"
  
  - 有关显示如何使用向导配置始终加密并在客户端应用程序中使用它的端对端演练，请参阅 [SQL 数据库教程：使用始终加密保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。  
  
- - 有关包括使用该向导的视频，请参阅 [使用始终加密保持敏感数据的安全](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，还可参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全团队博客 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)（SSMS 加密向导 - 用几个简单的步骤启用 Always Encrypted）。  
+ - 有关包括使用该向导的视频，请参阅 [使用始终加密保持敏感数据的安全](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，还可参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全团队博客 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)（SSMS 加密向导 - 用几个简单的步骤启用 Always Encrypted）。  
  
  - **权限：** 若要查询加密列并使用此向导选择密钥，则必须具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 权限。 若要创建新密钥，还必须具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 权限。  
  

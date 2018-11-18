@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 983a09448d1f78b67b1df4d7874be762d746c668
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ace2295a1d8d75b9311597f25c99540c4090ce6e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970390"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703895"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -261,10 +261,10 @@ FIELDQUOTE **=** 'field_quote'
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，format_file_path 可位于 Azure Blob 存储中。
 
- FIELDTERMINATOR ='field_terminator'****  
+ FIELDTERMINATOR **='***field_terminator***’**  
  指定要用于 **char** 和 **widechar** 数据文件的字段终止符。 默认字段终止符为 \t（制表符）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
- ROWTERMINATOR ='row_terminator'****  
+ ROWTERMINATOR **='***row_terminator***’**  
  指定要用于 **char** 和 **widechar** 数据文件的行终止符。 默认行终止符为 **\r\n**（换行符）。  有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
   
@@ -304,7 +304,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  ```
  <?xml version="1.0"?> 
- <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"> 
  <RECORD> 
  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 

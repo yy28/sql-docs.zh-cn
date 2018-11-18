@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839555"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812950"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
@@ -47,21 +47,21 @@ ms.locfileid: "47839555"
  不支持使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 代理端点。 代理终结点包含一个端口号，例如 `http:*//servername:8080/reportserver*`。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 服务器站点或子站点的 URL  
- 部署报表或报表数据源时，必须使用 SharePoint 站点和子站点的 URL（如果有）。 在 URL 中，站点名称紧接在服务器名称之后出现，例如 `http://*servername/site*` 或 `http://*servername/site/subsite*`。  
+ 部署报表或报表数据源时，必须使用 SharePoint 站点和子站点的 URL（如果有）。 在 URL 中，站点名称紧接在服务器名称之后出现，例如 `https://*servername/site*` 或 `https://*servername/site/subsite*`。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”**，然后单击 **“所有网站内容”**。 滚动到底部并查找 **“站点和工作区”**。 站点列表将显示在此部分中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 库的 URL  
  向 SharePoint 库中部署报表或相关项时，必须使用 SharePoint 库的 URL。 要用于库的 URL 根据所使用的 SharePoint 版本而不同。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或中 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中，库显示在服务器名之后，例如 `http://*servername/*Shared Documents`。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或中 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中，库显示在服务器名之后，例如 `https://*servername/*Shared Documents`。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如， `http://*servername/site/*Documents`。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如， `https://*servername/site/*Documents`。  
   
  若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口。 文件地址中包含发布操作所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 站点上的项的完全限定 URL  
- 始终通过完全限定的 URL 对存储在 SharePoint 库中的项进行寻址，这种完全限定的 URL 以 Web 应用程序开头 (`http://*server*`) 作为根节点，并以所引用的文件名结束。  
+ 始终通过完全限定的 URL 对存储在 SharePoint 库中的项进行寻址，这种完全限定的 URL 以 Web 应用程序开头 (`https://*server*`) 作为根节点，并以所引用的文件名结束。  
   
  URL 中的文件名必须包括文件扩展名。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839555"
  若要指定钻取报表，请在表达式中包含 URL。 例如，若要将名为 SalesDetails 的报表指定为钻取报表，请在文本框或占位符文本的“操作”中，将 ReportName 设置为以下表达式：  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>SharePoint 站点上的保留名称  
@@ -94,11 +94,11 @@ ms.locfileid: "47839555"
   
 |目标|示例 URL|  
 |------------|-----------------|  
-|SharePoint 服务器。|`http://TestServer`|  
-|SharePoint 服务器站点或子站点。|`http://TestServer/toplevelsite/subsite`|  
-| 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 部署的 Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 示例报表。|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|**或** 实例的 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 文件夹中的 Company Sales 示例报表。|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-| 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 实例的“报表中心” [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 示例报表。|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|SharePoint 服务器。|`https://TestServer`|  
+|SharePoint 服务器站点或子站点。|`https://TestServer/toplevelsite/subsite`|  
+| 或 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 部署的 Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 示例报表。|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|**或** 实例的 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 文件夹中的 Company Sales 示例报表。|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+| 或 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 实例的“报表中心” [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 示例报表。|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> 从创作工具发布到 SharePoint 库  
  使用报表创作工具向库中发布报表和相关文件时，在添加文件之前会对文件进行验证。 如果通过使用 SharePoint 库的 **“上载”** 操作来上载报表和相关文件，则不进行验证检查。 直到通过管理、编辑和运行报表来访问时，您才会知道文件是否有效。  

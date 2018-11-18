@@ -14,12 +14,12 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14abdd44fca86401238db0216febb5a6a002ffa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596785"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662336"
 ---
 # <a name="data-collection"></a>“数据收集”
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47596785"
   
  您可以使用数据收集器根据自己的测试和生产环境调整数据收集的范围。 数据收集器还使用数据仓库，数据仓库是一个关系数据库，借助此数据库，您可以通过为数据设置不同的保持期来管理收集的数据。  
   
- 数据收集器支持对数据收集进行动态优化并可通过其 API 进行扩展。 有关详细信息，请参阅 [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)。  
+ 数据收集器支持对数据收集进行动态优化并可通过其 API 进行扩展。 有关详细信息，请参阅 [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)。  
   
  下图显示数据收集器如何配合 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据收集和数据管理的总体策略。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47596785"
   
 -   代理帐户  
   
- 有关详细信息，请参阅 [自动执行管理任务（SQL Server 代理）](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)。  
+ 有关详细信息，请参阅 [自动执行管理任务（SQL Server 代理）](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 用于执行从各个数据提供程序收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
   

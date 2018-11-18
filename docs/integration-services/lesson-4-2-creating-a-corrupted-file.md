@@ -11,12 +11,12 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a348823679ab464bb35520d309d5c8cc50b3ae2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77bcdee3a2382bef57d6b8c2ceb791da983d399
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829626"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637564"
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>第 4-2 课 - 创建损坏的文件
 为阐释如何配置和处理转换错误，必须创建一个在处理时导致组件失败的示例平面文件。  
@@ -29,7 +29,7 @@ ms.locfileid: "47829626"
   
     示例数据与 SSIS 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=267527)。  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
   
     2.  单击 **“下载”** 选项卡。  
   

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8b8c0544ace2f02fbd202cbdf673b8c6b34f1cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 030bcb218a5865973ffaee0b02c0aa2f69282be7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820125"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698945"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  要在视图中保留的事件数。 例如，如果指定 100，则将在诊断会话中保留 100 个匹配筛选条件的最新事件。 如果找到的匹配事件少于 100 个，则诊断会话将包含少于 100 个事件。 max_item_count_num 必须至少为 100 且小于或等于 100,000。  
   
  event_name  
- 定义要在诊断会话中收集的实际事件。  event_name 是 [sys.pdw_diag_events](http://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587)（其中 `sys.pdw_diag_events.is_enabled='True'`）中列出的事件之一。  
+ 定义要在诊断会话中收集的实际事件。  event_name 是 [sys.pdw_diag_events](https://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587)（其中 `sys.pdw_diag_events.is_enabled='True'`）中列出的事件之一。  
   
  filter_property_name  
  基于其限制结果的属性名称。 例如，如果想要基于会话 ID 实施限制，则 filter_property_name 应为 SessionId。 有关 filter_property_name 的可能值的列表，请参阅下面的 property_name。  
@@ -90,7 +90,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|服务进程 ID。|  
   
 ## <a name="remarks"></a>Remarks  
- 允许每个用户最多拥有 10 个并发诊断会话。 请参阅 [sys.pdw_diag_sessions](http://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) 获取当前会话的列表，并使用 `DROP DIAGNOSTICS SESSION` 删除任何不需要的会话。  
+ 允许每个用户最多拥有 10 个并发诊断会话。 请参阅 [sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) 获取当前会话的列表，并使用 `DROP DIAGNOSTICS SESSION` 删除任何不需要的会话。  
   
  诊断会话将持续收集元数据，直到被删除。  
   

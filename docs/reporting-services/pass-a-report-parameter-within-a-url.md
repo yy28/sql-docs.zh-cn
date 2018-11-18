@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2a07266abcf2a1ebc10c4a6b37a28ee8179885f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686041"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812820"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   您可以通过在报表 URL 中包含报表参数，将它们传递到报表。 这些 URL 参数不带前缀，因为它们被直接传递到报表处理引擎。  
@@ -49,13 +49,13 @@ parameter=value
  例如，若要指定在报表中定义的两个参数“ReportMonth”和“ReportYear”，请将以下 URL 用于本机模式报表服务器：  
   
 ```  
-http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
+https://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
 ```  
   
  例如，若要指定在报表中定义的两个相同参数，请将以下 URL 用于 SharePoint 集成模式的报表服务器。 注意 `/_vti_bin`：  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
 ```  
   
  若要为参数传递 Null 值，请使用以下语法：  
@@ -100,7 +100,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
  以下 URL 示例为本机模式报表服务器传递单个参数 SellStartDate，其值为“7/1/2005”。  
   
 ```  
-http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
+https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>另请参阅  

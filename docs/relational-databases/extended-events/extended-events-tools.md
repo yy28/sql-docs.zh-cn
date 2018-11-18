@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46a154647b09f0a785773ff1fc85ba13aea12e09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1280641e4788a2ed1724c27fdf4abc7dd3b96f30
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792925"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678026"
 ---
 # <a name="extended-events-tools"></a>扩展事件工具
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "47792925"
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server 扩展事件表 (Transact-SQL)](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
+ [SQL Server 扩展事件表 (Transact-SQL)](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
  [使用 system_health 会话](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   

@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100188"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696775"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  隐式权限还可继承自覆盖的权限或父级权限。 例如，通过对包含该表的架构具有 UPDATE 权限，或对该表具有 CONTROL 权限，可以继承对某个表的 UPDATE 权限。  
   
 ### <a name="ownership-chaining"></a>所有权链接  
- 当多个数据库对象按顺序互相访问时，该序列便称为“链”。 尽管这样的链不会单独存在，但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遍历链中的链接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 评估对构成对象的权限时的方式与单独访问对象时不同。 所有权链对管理安全性具有重要的影响。 有关所有权链的详细信息，请参阅[所有权链](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教程：所有权链和上下文切换](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
+ 当多个数据库对象按顺序互相访问时，该序列便称为“链”。 尽管这样的链不会单独存在，但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遍历链中的链接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 评估对构成对象的权限时的方式与单独访问对象时不同。 所有权链对管理安全性具有重要的影响。 有关所有权链的详细信息，请参阅[所有权链](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教程：所有权链和上下文切换](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
   
 ## <a name="permission-list"></a>权限列表  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFRENCES  
   
- 有关每种类型的权限定义，请参阅[权限（数据库引擎）](http://msdn.microsoft.com/library/ms191291.aspx)。  
+ 有关每种类型的权限定义，请参阅[权限（数据库引擎）](https://msdn.microsoft.com/library/ms191291.aspx)。  
   
 ### <a name="chart-of-permissions"></a>权限的图表  
  所有权限均以图形方式呈现在此发布程序上。 这是查看权限的嵌套层次结构最简单的方法。 例如，ALTER ON LOGIN 权限可由其本身授予，但如果授予某一登录名对该登录名的 CONTROL 权限，或者授予某一登录名 ALTER ANY LOGIN 权限，它也包含在内。  
   
  ![APS 安全性权限发布程序](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性权限发布程序")  
   
- 若要下载此发布程序的完整版本，请参阅 APS Yammer 站点文件部分中的 [SQL Server PDW 权限](http://go.microsoft.com/fwlink/?LinkId=244249)（或通过 apsdoc@microsoft.com 发送电子邮件请求）。  
+ 若要下载此发布程序的完整版本，请参阅 APS Yammer 站点文件部分中的 [SQL Server PDW 权限](https://go.microsoft.com/fwlink/?LinkId=244249)（或通过 apsdoc@microsoft.com 发送电子邮件请求）。  
   
 ## <a name="default-permissions"></a>默认权限  
  以下列表对默认权限进行了说明：  

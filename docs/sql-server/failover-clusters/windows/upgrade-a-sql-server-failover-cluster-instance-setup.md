@@ -16,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2763491ea1e6ee9793d2b2641e46d957a0982e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84016132e2f61816cc392175927296786f27ce24
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763945"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696755"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升级 SQL Server 故障转移群集实例（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47763945"
   
 3.  如果需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序支持文件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将安装它们。 如果安装程序指示您重新启动计算机，请在继续操作之前重新启动。  
   
-4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
+4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
 5.  在“产品密钥”页上输入与旧产品版本匹配的新版本的 PID 密钥。 例如，若要升级 Enterprise 故障转移群集，必须提供 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]的 PID 密钥。 单击 **“下一步”** 继续。 请注意，对于同一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的所有故障转移群集节点，用于故障转移群集升级的 PID 密钥必须一致。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47763945"
   
 10. “磁盘空间要求”页计算指定的功能所需的磁盘空间，并将磁盘空间要求与正在运行安装程序的计算机上的可用磁盘空间进行比较。  
   
-11. 在“全文搜索升级”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+11. 在“全文搜索升级”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
   
 12. 在 **“错误报告”** 页上，指定要发送到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 以帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的信息。 默认情况下，将启用用于错误报告的选项。  
   
@@ -104,11 +104,11 @@ ms.locfileid: "47763945"
   
 -   [更改数据库兼容性模式和使用 Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [利用新的 SQL Server 2016 功能](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [利用新的 SQL Server 2016 功能](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
 ## <a name="see-also"></a>另请参阅  
  [升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
- [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [向 SQL Server 2016 的实例添加功能（安装程序）](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   
   

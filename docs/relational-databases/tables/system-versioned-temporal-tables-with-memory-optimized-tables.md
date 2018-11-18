@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614435"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658071"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系统版本控制临时表与内存优化表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  用于 [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 的系统版本控制临时表旨在为以下情形提供经济高效的解决方案：需要基于使用内存中 OLTP 工作负荷收集的数据进行 [数据审核和时间点分析](http://msdn.microsoft.com/library/mt631669.aspx) 。 它们不仅提供高事务吞吐量和无锁并发，还能存储大量可轻松查询的历史记录数据。  
+  用于 [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 的系统版本控制临时表旨在为以下情形提供经济高效的解决方案：需要基于使用内存中 OLTP 工作负荷收集的数据进行 [数据审核和时间点分析](https://msdn.microsoft.com/library/mt631669.aspx) 。 它们不仅提供高事务吞吐量和无锁并发，还能存储大量可轻松查询的历史记录数据。  
   
 ## <a name="overview"></a>概述  
  系统版本控制临时表自动保留完整的数据更改历史记录，并公开了一些实用的 Transact-SQL 扩展以用于时间点分析。 在典型方案中，即使是不定期查询的数据历史记录，也会保留很长时间（数月甚至数年）。  

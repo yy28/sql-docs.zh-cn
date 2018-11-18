@@ -13,15 +13,15 @@ ms.assetid: 6f8616cb-9119-42c3-a9b1-936e088763e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a847748b0f0025402da1feb794f5c441ea2a3f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe3172d876c7a74a0ad54f25b58e949646c0f74
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661756"
 ---
 # <a name="install-sql-server-data-tools"></a>安装 SQL Server 数据工具
-本主题介绍如何安装 SQL Server Data Tools。 SQL Server Data Tools 下载页（[ SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)）上提供了 SQL Server Data Tools 的更新。  
+本主题介绍如何安装 SQL Server Data Tools。 SQL Server Data Tools 下载页（[ SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)）上提供了 SQL Server Data Tools 的更新。  
   
 无论你使用的是 Visual Studio 2012 还是 Visual Studio 2013，请安装最新的 SQL Server Data Tools 更新以获取最新功能。  
   
@@ -38,5 +38,5 @@ SQL Server Data Tools 在 Visual Studio 2012 中的 Professional SKU 或更高�
   
 若要创建安装布局，请下载 SSDTSetup.EXE 并使用 `/layout`*位置* 选项运行它以在 *位置*处创建布局。 然后，用户可以从 *位置*运行 SSDTSetup.Exe。  
   
-若要下载 SSDTSetup.exe，请转到 [安装最新的 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)，单击你的 Visual Studio 版本对应的链接，然后下载你的语言对应的 SSDTSetup.exe。  
+若要下载 SSDTSetup.exe，请转到 [安装最新的 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)，单击你的 Visual Studio 版本对应的链接，然后下载你的语言对应的 SSDTSetup.exe。  
   

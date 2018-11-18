@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], target service
@@ -16,12 +15,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb36c8e5c92672132c07228bb265ad90d327b97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cc1e8e4405c6900860d8323d31d52e4a320639d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704507"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662228"
 ---
 # <a name="implement-event-notifications"></a>实现事件通知
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47704507"
  无需创建 [!INCLUDE[ssSB](../../includes/sssb-md.md)]启动服务，因为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包含以下特定的事件通知消息类型和约定：  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  接收事件通知的目标服务必须使用此预先存在的约定。  
@@ -44,7 +43,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  创建队列以接收消息。  
   
     > [!NOTE]  
-    >  队列接收下列消息类型： `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
+    >  队列接收下列消息类型： `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
   
 2.  在引用事件通知约定的队列上创建服务。  
   
@@ -61,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

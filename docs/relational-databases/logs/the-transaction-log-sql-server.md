@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664685"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677296"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47664685"
 还原每个日志备份时，数据库引擎将重新应用日志中记录的所有修改，前滚所有事务。 最后的日志备份还原后，数据库引擎将使用日志信息回退到该点上未完成的所有事务。 
 
 ### <a name="supporting-transactional-replication"></a>支持事务复制
-日志读取器代理程序监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 有关详细信息，请参阅 [事务复制的工作原理](http://msdn.microsoft.com/library/ms151706.aspx)。
+日志读取器代理程序监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 有关详细信息，请参阅 [事务复制的工作原理](https://msdn.microsoft.com/library/ms151706.aspx)。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支持高可用性和灾难恢复解决方案
 备用服务器解决方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]数据库镜像和日志传送极大程度地依赖于事务日志。 
@@ -121,7 +121,7 @@ ms.locfileid: "47664685"
 |14|OTHER_TRANSIENT|当前未使用此值。|  
   
 ##  <a name="MinimallyLogged"></a>可尽量减少日志量的操作  
-最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志[恢复模式](../backup-restore/recovery-models-sql-server.md)下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志 [恢复模式](../backup-restore/recovery-models-sql-server.md) 下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > [!NOTE]
 > 内存优化表不支持最小日志记录。  
@@ -157,7 +157,7 @@ ms.locfileid: "47664685"
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作。
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="RelatedTasks"></a> Related tasks  
  **管理事务日志**  
   
 -   [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

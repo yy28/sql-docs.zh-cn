@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c965c86385141a589a2de9f815f73ad7f9b5990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854485"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638744"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器包含可用于解决 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流问题的功能和工具。  
@@ -122,7 +122,7 @@ order by source_component_name desc
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>使用“配置错误输出”对话框配置错误输出  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
@@ -210,7 +210,7 @@ order by source_component_name desc
 9. 在“要显示的列”区域中，选择要在数据查看器中显示的列。 默认情况下，所有可用列都处于选定状态并在 **“已显示的列”** 列表中列出。 选择不希望使用的列，然后单击向左键，将它们移到 **“未使用的列”** 列表中。  
   
     > [!NOTE]  
-    >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 **T** 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+    >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 **T** 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 10. 单击“确定” 。  
 
@@ -270,7 +270,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  启用详细日志记录级别并添加数据分流点会增加数据集成解决方案所执行的 I/O 操作数。 因此，建议仅出于故障排除目的添加数据分流点。  
   
 ### <a name="video"></a>视频  
- 此 [video on TechNet](http://technet.microsoft.com/sqlserver/dn600163) 演示了如何在 SQL Server 2012 SSISDB 目录中添加/使用数据分流点，从而有助于以编程方式对包进行调试并在运行时捕获部分结果。 它还讨论了如何列出/删除这些数据分流点，并讨论了在 SSIS 包中使用数据分流点的最佳实践。  
+ 此 [video on TechNet](https://technet.microsoft.com/sqlserver/dn600163) 演示了如何在 SQL Server 2012 SSISDB 目录中添加/使用数据分流点，从而有助于以编程方式对包进行调试并在运行时捕获部分结果。 它还讨论了如何列出/删除这些数据分流点，并讨论了在 SSIS 包中使用数据分流点的最佳实践。  
  
 ## <a name="see-also"></a>另请参阅  
  [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1928122dd8ca4c4ab5043a57ddc29cc82b8d42c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d225f20cae31e9f462d7f7c85c7109a3cecf43d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615465"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812957"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 访问集成 Reporting Services - Windows 应用程序
   尽管可以针对 Web 环境优化对报表服务器的 URL 访问，但也可以使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表嵌入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序中。 不过，涉及 Windows 窗体的 URL 访问仍然要求您使用 Web 浏览器技术。 您可以将以下集成方案用于 URL 访问和 Windows 窗体：  
@@ -98,14 +98,14 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
  可以通过调用其 Navigate 方法将 <xref:System.Windows.Forms.WebBrowser> 控件定向到 URL。 可以在运行时将特定的 URL 访问字符串分配给 <xref:System.Windows.Forms.WebBrowser> 控件，如下面的示例所示。  
   
 ```vb  
-Dim url As String = "http://localhost/reportserver?/" & _  
+Dim url As String = "https://localhost/reportserver?/" & _  
                     "AdventureWorks2012 Sample Reports/" & _  
                     "Company Sales&rs:Command=Render"  
 WebBrowser1.Navigate(url)  
 ```  
   
 ```csharp  
-string url = "http://localhost/reportserver?/" +  
+string url = "https://localhost/reportserver?/" +  
              "AdventureWorks2012 Sample Reports/" +  
              "Company Sales&rs:Command=Render";  
 webBrowser1.Navigate(url);  

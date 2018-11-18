@@ -11,12 +11,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77563c8bcd8a2cd60ddcf87c2481057f139236e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8ed30954131f756401f054c35992d3339dfddb5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847345"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638414"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>第 1-2 课 — 添加和配置平面文件连接管理器
 在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -43,7 +43,7 @@ ms.locfileid: "47847345"
   
     示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -86,10 +86,10 @@ ms.locfileid: "47847345"
   
     |平面文件列|建议的类型|目标列|目标类型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
   
     为 **CurrencyID** 列建议的数据类型与目标表中字段的数据类型不兼容。 由于 `DimCurrency.CurrencyAlternateKey` 的数据类型为 nchar (3)，CurrencyID 必须从字符串 [DT_STR] 改为 Unicode 字符串 [DT_WSTR]。 另外，字段 `DimDate.FullDateAlternateKey` 被定义为日期数据类型，因此 **CurrencyDate** 需要从日期 [DT_Date] 改为数据库日期 [DT_DBDATE]。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec30904cc7c434d5450de025feb0cb7698a2e128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836947"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813930"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
 除了[从 Excel 文件中加载数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)外，SQL Server 移动报表发布服务器还可以访问几乎任何来源的数据。 访问数据需要在 Reporting Services Web 门户上配置的共享数据源。 了解有关 [创建共享数据源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [创建共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)的详细信息。  
@@ -41,7 +41,7 @@ ms.locfileid: "47836947"
   
 导入数据集后，可以按照自己的意愿使用模拟数据或 Excel 文件中的本地数据设计移动报表。  
   
-默认情况下，共享数据集始终确保是最新数据，因为每次用户查看基于该数据集的移动报表时，SQL Server 都会运行基础查询并返回最新数据。 显然，如果很多人查看你的移动报表，这个方法可能并不适合，因此你可以设置缓存，以定期运行查询并缓存生成的数据集。 此博客文章介绍 [Web 门户中缓存和数据刷新的工作原理](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)。  
+默认情况下，共享数据集始终确保是最新数据，因为每次用户查看基于该数据集的移动报表时，SQL Server 都会运行基础查询并返回最新数据。 显然，如果很多人查看你的移动报表，这个方法可能并不适合，因此你可以设置缓存，以定期运行查询并缓存生成的数据集。 此博客文章介绍 [Web 门户中缓存和数据刷新的工作原理](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)。  
   
 ## <a name="add-edit-or-remove-a-report-server"></a>添加、编辑或删除报表服务器  
   
@@ -60,8 +60,8 @@ ms.locfileid: "47836947"
 ### <a name="see-also"></a>另请参阅  
 - [使用 SQL Server Mobile Report Publisher 创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)  
--  [在 iPad 应用中查看 SQL Server 移动报表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
--  [View SQL Server mobile reports and KPIs in the iPhone app (Power BI for iOS)（在 iPhone 应用 (Power BI for iOS) 中查看 SQL Server 移动报表和 KPI）](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
+-  [在 iPad 应用中查看 SQL Server 移动报表和 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
+-  [View SQL Server mobile reports and KPIs in the iPhone app (Power BI for iOS)（在 iPhone 应用 (Power BI for iOS) 中查看 SQL Server 移动报表和 KPI）](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
   
   
   

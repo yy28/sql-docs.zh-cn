@@ -12,12 +12,12 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b53c7c52c63fa12b5398b8b09ffeec50262ad9a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6aca1a7488b6767e0259647a320c238ec753836
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730255"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665306"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47730255"
 -   用户试图从在同一服务器上执行的备份还原系统数据库。 但是，执行备份时服务器运行的是不同的内部版本。 即执行备份后对服务器进行了升级。  
   
 ## <a name="user-action"></a>用户操作  
-在此情况下的还原过程相当复杂，应在不得已的情况下才使用。 有关详细信息，请参阅“[无法将系统数据库备份还原到不同内部版本的 SQL Server](http://support.microsoft.com/kb/264474)”。  
+在此情况下的还原过程相当复杂，应在不得已的情况下才使用。 有关详细信息，请参阅“[无法将系统数据库备份还原到不同内部版本的 SQL Server](https://support.microsoft.com/kb/264474)”。  
   
 ## <a name="see-also"></a>另请参阅  
 [备份和还原系统数据库 (SQL Server)](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

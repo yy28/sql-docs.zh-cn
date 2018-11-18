@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69d6721aae55102a9f48bd1a1bc4cb2d8540c71d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f82b79c8f5484a10e59827b7821038d93142e664
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782415"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677632"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
 -   [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## <a name="see-also"></a>另请参阅  
-**[SQL Server 备份和还原操作故障排除](https://support.microsoft.com/en-us/kb/224071)**          
+**[SQL Server 备份和还原操作故障排除](https://support.microsoft.com/kb/224071)**          
 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

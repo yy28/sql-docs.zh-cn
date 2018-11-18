@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6c423333401e9c6a85e94c6e27c49d355d1af6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790295"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657546"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  快照代理将在创建发布后生成快照。 可以使用复制管理对象 (RMO) 和直接托管代码对复制代理功能的访问权限以编程的方式生成这些快照。 所使用的对象取决于复制的类型。 可以使用 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 对象同步启动快照代理，也可以使用代理作业异步启动快照代理。 初始快照生成后，该快照将在订阅首次同步时传输并应用到订阅服务器。 只要现有快照不再包含有效的最新数据，您就需要重新运行代理。 有关详细信息，请参阅[维护发布](../../relational-databases/replication/publish/maintain-publications.md)。  
   
 > [!IMPORTANT]  
->  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
+>  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>通过启动快照代理作业（异步）为快照发布或事务发布生成初始快照  
   
@@ -247,7 +247,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
 ## <a name="see-also"></a>另请参阅  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
  [创建并应用快照](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [使用快照初始化订阅](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   

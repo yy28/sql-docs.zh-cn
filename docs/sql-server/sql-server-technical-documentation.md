@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0a7e900b727f7967ad38c26d40f717d382bfd7f
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6da677a558c2af47d49fa7c8f957604ab7fc1b78
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970988"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698833"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 **试用 SQL Server 2016！**
-- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
@@ -87,7 +87,7 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 **试用 SQL Server！**
-- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![在 Linux 上安装 SQL Server](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [在 Linux 上安装 SQL Server](../linux/sql-server-linux-setup.md)
 - [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)

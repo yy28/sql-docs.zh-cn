@@ -14,12 +14,12 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0433940c558dc6cac8aeb7310bb6b038e911b971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1dab0e7496a41d897b927c4a53d6cc75ca8bdc4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827185"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640765"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 服务器和目录
   当您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -35,7 +35,7 @@ ms.locfileid: "47827185"
 ## <a name="high-availability"></a>高可用性  
  像其他用户数据库一样，SSISDB 数据库不支持数据库镜像和复制。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- 还可以利用 SSIS 和 Always On 可用性组，提供高可用性的 SSISDB 及其内容。 有关详细信息，请参阅[对 SSIS 目录 (SSISDB) 使用 Always On](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另请参阅 blogs.msdn.com 上 Matt Masson 的博客文章[结合使用 SSIS 和 Always On](http://go.microsoft.com/fwlink/?LinkId=255873)。  
+ 还可以利用 SSIS 和 Always On 可用性组，提供高可用性的 SSISDB 及其内容。 有关详细信息，请参阅[对 SSIS 目录 (SSISDB) 使用 Always On](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另请参阅 blogs.msdn.com 上 Matt Masson 的博客文章[结合使用 SSIS 和 Always On](https://go.microsoft.com/fwlink/?LinkId=255873)。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services 服务器  
  在您连接到承载 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库的 **ssDEnoversion** 实例时，您将在对象资源管理器中看到下列对象：  
@@ -57,6 +57,6 @@ ms.locfileid: "47827185"
 -   [运行 Integration Services (SSIS) 包](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>相关内容  
- blogs.msdn.com 上的博客文章[结合使用 SSIS 和 Always On](http://go.microsoft.com/fwlink/?LinkId=255873)。  
+ blogs.msdn.com 上的博客文章[结合使用 SSIS 和 Always On](https://go.microsoft.com/fwlink/?LinkId=255873)。  
   
   

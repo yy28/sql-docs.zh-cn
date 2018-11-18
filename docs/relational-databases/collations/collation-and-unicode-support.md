@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636476"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661716"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "49636476"
     
 当[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在具有不同排序规则设置的不同数据库上下文中运行时，其运行结果可能会不同。 如果可能，请为您的组织使用标准化排序规则。 这样就不必显式指定每个字符或 Unicode 表达式中的排序规则。 如果必须使用具有不同排序规则和代码页设置的对象，请对查询进行编码，以考虑排序规则的优先顺序规则。 有关详细信息，请参阅 [排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
     
-与排序规则关联的选项区分大小写、区分重音、区分假名、区分全半角以及区分变体选择符。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 编码引入了其他选项。 指定这些选项的方法是将它们追加到排序规则名称。 例如，排序规则 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 区分大小写、区分重音、区分假名、区分全半角以及进行 UTF-8 编码。 再举一例，此排序规则 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 就不区分大小写、不区分重音、区分假名、区分全半角、区分变体选择符以及使用非 Unicode 编码。 下表描述了与这些不同选项关联的行为。    
+与排序规则关联的选项区分大小写、区分重音、区分假名、区分全半角以及区分变体选择符。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 编码引入了其他选项。 指定这些选项的方法是将它们追加到排序规则名称。 例如，排序规则 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 区分大小写、区分重音、区分假名、区分全半角以及进行 UTF-8 编码。 再举一例，此排序规则 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 就不区分大小写、不区分重音、区分假名、区分全半角、区分变体选择符以及使用非 Unicode 编码。 下表描述了与这些不同选项关联的行为。    
     
 |选项|描述|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ ms.locfileid: "49636476"
 |区分重音 (_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将字母的重音形式和非重音形式视为相同。 通过指定 _AI，可以显式选择不区分重音。|    
 |区分假名 (_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|    
 |区分全半角 (_WS)|区分全角字符和半角字符。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在排序时将同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|    
-|区分变体选择符 (_VSS) | 区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符。 变体序列包含基本字符加上其他变体选择符。 如果未选择 _VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，SQL Server 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 另请参阅  [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库） <br/><br/> 全文搜索索引中不支持区分变体选择符 (_VSS) 排序规则。 全文搜索索引仅支持区分重音 (_AS)、区分假名 (_KS) 和区分全半角 (_WS) 选项。 SQL Server XML 和 CLR 引擎不支持变体选择符 (_VSS)。
+|区分变体选择符 (_VSS) | 区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符。 变体序列包含基本字符加上其他变体选择符。 如果未选择 _VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，SQL Server 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 另请参阅  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库） <br/><br/> 全文搜索索引中不支持区分变体选择符 (_VSS) 排序规则。 全文搜索索引仅支持区分重音 (_AS)、区分假名 (_KS) 和区分全半角 (_WS) 选项。 SQL Server XML 和 CLR 引擎不支持变体选择符 (_VSS)。
 |UTF-8 (_UTF8)|启用要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的 UTF-8 编码数据。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对适用的数据类型使用默认的非 Unicode 编码格式。| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下排序规则集：    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> 区域设置    
-区域设置是与位置或区域性相关联的一组信息。 它可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)。    
+区域设置是与位置或区域性相关联的一组信息。 它可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。     
@@ -258,10 +258,10 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 |介绍如何更改有关日期、时间和货币数据的使用和显示方式的错误消息和首选项的语言。|[设置会话语言](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> 相关内容    
-[SQL Server 最佳实践 - 排序规则更改](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[SQL Server 最佳实践 - 排序规则更改](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-[“SQL Server 最佳实践 - 迁移到 Unicode”](http://go.microsoft.com/fwlink/?LinkId=113890)- 不再保留   
-[Unicode Consortium 网站](http://go.microsoft.com/fwlink/?LinkId=48619)    
+[“SQL Server 最佳实践 - 迁移到 Unicode”](https://go.microsoft.com/fwlink/?LinkId=113890)- 不再保留   
+[Unicode Consortium 网站](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>另请参阅    
 [包含数据库的排序规则](../../relational-databases/databases/contained-database-collations.md)     

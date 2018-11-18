@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820105"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642124"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器是用于创建和维护 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的图形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器作为 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目的一部分，位于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中。  
@@ -89,7 +89,7 @@ ms.locfileid: "47820105"
 ### <a name="event-handlers-tab"></a>“事件处理程序”选项卡  
  在 **“事件处理程序”** 选项卡设计图面上构造包中的事件。在 **“事件处理程序”** 选项卡上选择要为之创建事件处理程序的包或包对象，再选择要与事件处理程序相关联的事件。 一个事件处理程序有一个控制流，如果需要，还可以有多个可选的数据流。  
   
- 有关详细信息，请参阅 [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
+ 有关详细信息，请参阅 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
   
 ### <a name="package-explorer-tab"></a>“包资源管理器”选项卡  
  包可以很复杂，包括多项任务、连接管理器、变量和其他元素。 在包的资源管理器视图中，可以查看完整的包元素列表。  
@@ -104,7 +104,7 @@ ms.locfileid: "47820105"
 #### <a name="connection-managers-area"></a>连接管理器区域  
  **“连接管理器”** 区域用于添加和修改包使用的连接管理器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括连接到多种数据源（如文本文件、OLE DB 数据库和 .Net 提供程序）的连接管理器。  
   
- 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
  
 ## <a name="control-flow-tab"></a>“控制流”选项卡
 可以使用 **设计器的** “控制流” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中生成控制流。  

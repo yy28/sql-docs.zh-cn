@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0c343a3a0326fe8da74ed475bc8dbf6b018a27f0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021041"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811800"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括可用于创建、管理和查看报表的若干工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
@@ -42,7 +42,7 @@ ms.locfileid: "50021041"
  [Reporting Services 概念 (SSRS)](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services 报表 (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [报表数据集 (SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   
- [报表生成器入门](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [报表生成器入门](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [使用 Report Builder 1.0 设计和实现报表](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c57b9ae4cdf3a8cd34e6fc256f36619ccbb3d2c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cf0f16e4f1a5e831442bf143cd11b45ab2d319f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761455"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813470"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
   XML 呈现扩展插件可以按 XML 格式返回分页报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。  
@@ -76,7 +76,7 @@ ms.locfileid: "47761455"
   
  在该报表元素中还将包含 XML 命名空间定义和架构引用属性。 变量将以粗体形式注明：  
   
- <**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  变量的值如下所示：  
   

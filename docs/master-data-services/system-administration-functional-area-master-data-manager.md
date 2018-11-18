@@ -12,12 +12,12 @@ ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0e472d25292413e6fcbd9e3a9be60b587955010d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5c0111b59f0c6ff03fc8daaf3c3f1da13c2f3a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697478"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系统管理功能区域（主数据管理器）
 
@@ -52,7 +52,7 @@ ms.locfileid: "47622155"
   
  [使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [模型部署故障排除 (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [模型部署故障排除 (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>业务规则  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  

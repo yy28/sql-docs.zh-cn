@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9234f5c413abe2344132473c047b20c5addc5d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89e7093dfa3b749d0f6ed021a461414a10f2910e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793066"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657168"
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools - 许可条款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47793066"
 &nbsp;&nbsp;**a.  SQL Server Reporting Services 地图报表项。** 该软件可能会包含一些功能，用来通过 Bing 地图（或后继品牌）应用程序编程接口（“Bing 地图 API”）检索内容（如地图、图像和其他数据）。 这些功能可以用于创建在地图、航拍图和合成图上显示数据的报表。 如果包含这些功能，您可以使用它们来创建和查看动态或静态文档。 只能通过软件中集成的访问方法才能这样做。 您不得以任何其他方式复制、存储、存档或创建可通过 Bing 地图 API 访问的内容的数据库。 您不得出于任何目的使用以下功能，即使它们通过 Bing 地图 API 可用：  
 * Bing 地图 API 以提供基于传感器的导航/路径分析，或  
 * 任何道路交通数据或鸟瞰图（或关联元数据）。  
-使用 Bing 地图时还需遵守 http://go.microsoft.com/?linkid=9710837 处提供的 Bing 地图最终用户使用条款和 http://go.microsoft.com/fwlink/?LinkID=248686 处提供的 Bing 地图隐私声明。  
+使用 Bing 地图时还需遵守 https://go.microsoft.com/?linkid=9710837 处提供的 Bing 地图最终用户使用条款和 https://go.microsoft.com/fwlink/?LinkID=248686 处提供的 Bing 地图隐私声明。  
   
 &nbsp;&nbsp;**b.**  该软件设计为允许 SQL Server Integration Services (SSIS) 的用户 (a) 在本地存储与 Microsoft Online Services 之间移动数据，以及 (b) 在 Microsoft Online Services 中触发某些操作。 为此，该软件使用 Internet 协议 (i) 向这些服务发送数据（包括由你指定的你自己的数据和关于软件配置的数据）以及 (ii) 从这些服务请求数据（包括由你指定的你自己的数据和关于你的 Microsoft Online Services的特性和配置的数据）。 在配置该软件与这些服务进行通信后，当软件连接到这些服务时，你可能不会收到单独的声明。  
   

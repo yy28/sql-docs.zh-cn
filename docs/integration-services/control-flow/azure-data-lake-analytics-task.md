@@ -15,12 +15,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: a43a9d8d3b5ecf3f9d28f46db0b354891b40b183
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906077"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641744"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 任务
 
@@ -58,7 +58,7 @@ SourceType 指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交�
 |-----------|-----------------|  
 |SourceType = DirectInput|直接在选项框中键入要提交的 U-SQL 查询，或选择浏览按钮 (...) 以在“输入 U-SQL 查询”对话框中键入 U-SQL 查询。|  
 |SourceType = FileConnection|选择现有文件连接管理器，或选择“<新建连接...>”以新建文件连接。 若要了解相关信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
-|SourceType = 变量|选择现有变量，或选择“\<新建变量...>”以新建变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)和[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
+|SourceType = 变量|选择现有变量，或选择“\<新建变量...>”以新建变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)和[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
 
 
 ### <a name="job-configuration"></a>作业配置

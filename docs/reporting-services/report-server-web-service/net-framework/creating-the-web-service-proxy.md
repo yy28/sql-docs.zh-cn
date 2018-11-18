@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766ae518aad577c4f8a700dbbdd433e1794e9c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05901af8c6f11379b186495d1ae744c5f7598d91
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842245"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814270"
 ---
 # <a name="creating-the-web-service-proxy"></a>创建 Web 服务代理
   客户端和 Web 服务可以通过 SOAP 消息进行通信，这些消息将输入参数和输出参数封装为 XML。 代理类将参数映射到 XML 元素，然后通过网络发送 SOAP 消息。 通过这种方法，代理类使您不必在 SOAP 级别与 Web 服务通信，并允许您在支持 SOAP 和 Web 服务代理的任何开发环境中调用 Web 服务方法。  
@@ -36,7 +36,7 @@ ms.locfileid: "47842245"
      例如，下面的命令提示符语句为报表服务器 Web 服务的管理端点指定 URL。  
   
     ```  
-    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
+    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" https://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
      WSDL 工具接受多种用于生成代理的命令提示符参数。 前一示例指定语言 C# 和建议在代理中使用的一个命名空间（以防止在使用多个 Web 服务端点时出现名称冲突），并生成一个名为 ReportingService2010.cs 的 C# 文件。 如果本示例已指定 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则该示例应已生成名为 ReportingService2010.vb 的代理文件。 将在您运行此命令的目录中创建此文件。  
@@ -79,7 +79,7 @@ ReportingService2010 service = new ReportingService2010();
      报表服务器 Web 服务的报表执行端点的简化 URL 可能如下所示：  
   
     ```  
-    http://<Server Name>/reportserver/reportexecution2005.asmx  
+    https://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
      此 URL 包含在其中部署报表服务器 Web 服务的域、包含该服务的文件夹的名称以及该服务的发现文件的名称。 有关不同 URL 元素的完整说明，请参阅[访问 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
@@ -105,13 +105,13 @@ ReportingService2010 service = new ReportingService2010();
   
 ```vb  
 Dim rs As New myNamespace.myReferenceName.ReportExecutionService()  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
 ```  
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  

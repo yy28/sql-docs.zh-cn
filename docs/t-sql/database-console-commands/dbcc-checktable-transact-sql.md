@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831935"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697186"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ PHYSICAL_ONLY
 DATA_PURITY  
  使 DBCC CHECKTABLE 检查表中是否存在无效或越界的列值。 例如， DBCC CHECKTABLE 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列。  
  默认情况下将启用列值完整性检查，并且不需要使用 DATA_PURITY 选项。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的数据库，您可以使用 DBCC CHECKTABLE WITH DATA_PURITY 查找和更正特定表中的错误；但是，默认情况下不会对该表启用列值检查，直到 DBCC CHECKDB WITH DATA_PURITY 在数据库中正确运行时为止。 然后，DBCC CHECKDB 和 DBCC CHECKTABLE 将默认检查列值完整性。  
- 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 和更高版本中的 DBCC 错误 2570](http://support.microsoft.com/kb/923247)。  
+ 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 和更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
  如果指定了 PHYSICAL_ONLY，则不执行列完整性检查。  
     
 MAXDOP  

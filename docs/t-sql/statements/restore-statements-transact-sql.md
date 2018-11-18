@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252154"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703665"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 还原使用 BACKUP 命令所做的 SQL 数据库备份。 
@@ -365,7 +365,7 @@ RESTORE 在出现错误之后可以重新启动。 此外，您可以指示 REST
 RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原、文件和文件组还原，以及差异文件和文件组还原。 此外，RESTORE 可以仅还原全文文件，也可以同时还原数据库数据。  
   
 > [!NOTE] 
-> 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入的全文目录仍然被视为数据库文件。 对于这些目录，用于备份全文目录的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 过程仍然适用，只是在备份操作期间不再需要暂停和恢复。 有关详细信息，请参阅[备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkId=107381)。  
+> 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入的全文目录仍然被视为数据库文件。 对于这些目录，用于备份全文目录的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 过程仍然适用，只是在备份操作期间不再需要暂停和恢复。 有关详细信息，请参阅[备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=107381)。  
   
 ## <a name="metadata"></a>元数据  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含备份和还原历史记录表，这些表可以跟踪每个服务器实例的备份和还原活动。 执行还原时，还将修改备份历史记录表。 有关这些表的信息，请参阅[备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。  
@@ -745,7 +745,7 @@ FROM URL
 指定放置在将用于还原操作的 URL 上的一个或多个备份设备。 URL 格式用于从 Microsoft Azure 存储服务还原备份。 
 
 > [!IMPORTANT]  
-> 从 URL 还原时，若要从多个设备进行还原，必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
+> 从 URL 还原时，若要从多个设备进行还原，必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
   
 *n*  
 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。  

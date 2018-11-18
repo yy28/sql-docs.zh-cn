@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb30ef71e0467d6f35fdd21cc8a1b1c42eed76fa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: de8212e368af4af5eea3f0dba358b93d211af539
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031356"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812680"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
   通过与报表服务器直接连接，您可以使用支持的任何 Web 浏览器查看报表。 每个报表在报表服务器上都有一个 URL 地址。 无需使用 Web 应用程序，输入报表的 Web 地址即可在浏览器窗口中打开相应报表。 相应的报表会以 HTML 格式打开，并且包含报表工具栏，这样在此报表中您就可以在各页间导航或按数据值进行搜索。 您可以在 URL 中设置参数以隐藏报表工具栏或选择报表的输出格式。  
@@ -49,9 +49,9 @@ ms.locfileid: "50031356"
 ## <a name="typing-the-url-address-of-a-report"></a>键入报表的 URL 地址  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持通过 URL 访问报表服务器上的特定项。 相应的 URL 必须包含报表的完全限定路径以及用来呈现报表的命令。 如果相应报表包含参数，您还必须指定打开此报表所需的所有值。 如果您键入的报表 URL 在路径、参数值或呈现扩展插件中包含空格，则必须在该 URL 中加入 URL 编码字符才能获得预期的结果。 下例是一个在路径名称、参数和呈现扩展插件中包含空格编码的报表 URL：  
   
- `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
+ `https://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- 在 Internet Explorer 中对 URL 的最大长度限制为 2,083 个字符。 有关详细信息，请参阅 [Internet Explorer 中的最大 URL 长度](http://support.microsoft.com/kb/208427)。  
+ 在 Internet Explorer 中对 URL 的最大长度限制为 2,083 个字符。 有关详细信息，请参阅 [Internet Explorer 中的最大 URL 长度](https://support.microsoft.com/kb/208427)。  
   
  有关通过 URL 访问报表的详细信息，包括有关 URL 构造方式的信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
   

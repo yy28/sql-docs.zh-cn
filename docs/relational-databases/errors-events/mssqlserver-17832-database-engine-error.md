@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6431ccfaff9cf9b78a257db3908edc7134904a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bf4143ad0d446e526a72ad32b45d4397933827c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664255"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657207"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47664255"
   
 如果未正确创建该标记或该标记在传输过程中受损，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法提供有关此问题的其他信息。  
   
-如果用户是多个组的成员或具有多个策略，则该标记的长度可能会比正常标记大一些以全部列出这些信息。 如果该标记的长度大于服务器计算机的 **MaxTokenSize** 值，则客户端将无法连接并显示常规网络错误 (GNE)，且会出现错误 17832。 此问题可能只会影响某些用户，即拥有多个组的成员身份或具有多个策略的用户。 当问题在于服务器计算机的 **MaxTokenSize** 值时，在出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中的错误 17832 的同时还会出现状态为 9 的错误。 有关 Kerberos 和 **MaxTokenSize** 的其他详细信息，请参阅 [KB327825](http://support.microsoft.com/kb/327825)。  
+如果用户是多个组的成员或具有多个策略，则该标记的长度可能会比正常标记大一些以全部列出这些信息。 如果该标记的长度大于服务器计算机的 **MaxTokenSize** 值，则客户端将无法连接并显示常规网络错误 (GNE)，且会出现错误 17832。 此问题可能只会影响某些用户，即拥有多个组的成员身份或具有多个策略的用户。 当问题在于服务器计算机的 **MaxTokenSize** 值时，在出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中的错误 17832 的同时还会出现状态为 9 的错误。 有关 Kerberos 和 **MaxTokenSize** 的其他详细信息，请参阅 [KB327825](https://support.microsoft.com/kb/327825)。  
   
 ## <a name="user-action"></a>用户操作  
 若要解决此问题，请将服务器计算机的 **MaxTokenSize** 值增大到足以包含单位中任一用户的最长标记的大小。 若要研究适合于您单位的正确标记长度，请考虑使用 **Tokensz** 应用程序。  

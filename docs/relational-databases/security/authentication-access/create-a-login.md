@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630355"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675411"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "47630355"
   
     2.  在 **“从此位置”** 下，单击 **“位置…”** 以打开 **“位置”** 对话框，并选择一个可用的服务器位置。 完成后，单击 **“确定”**。  
   
-    3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](http://technet.microsoft.com/library/cc771712.aspx)。  
+    3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](https://technet.microsoft.com/library/cc771712.aspx)。  
   
-    4.  单击 **“高级…”** 以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](http://technet.microsoft.com/library/cc733110.aspx)。  
+    4.  单击 **“高级…”** 以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](https://technet.microsoft.com/library/cc733110.aspx)。  
   
     5.  单击 **“确定”** 中创建登录名。  
   

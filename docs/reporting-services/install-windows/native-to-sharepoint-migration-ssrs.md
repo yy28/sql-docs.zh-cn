@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d413485fc85b0599921524e339a900a5067f496c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 620b936f976bca27ba1bb0c95e8b882d589e77d7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029246"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814030"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50029246"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 迁移工具  
  此工具支持将内容从本机模式部署迁移到 SharePoint 模式部署。 此工具不支持从 SharePoint 模式迁移到 SharePoint 模式或从 SharePoint 模式迁移到本机模式。  
   
- 有关详细信息，请参阅 [Reporting Services 迁移工具](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560)。  
+ 有关详细信息，请参阅 [Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560)。  
   
 ## <a name="use-script-to-migrate-content"></a>使用脚本迁移内容  
  如果迁移工具不满足您的要求，您可以手动迁移报表服务器数据。 下面概述了要将报表项从一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署迁移到另一个时所需完成的步骤。 此方法支持将本机或 SharePoint 模式作为源或目标服务器。  
@@ -34,7 +34,7 @@ ms.locfileid: "50029246"
   
     -   [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 以下主题说明如何使用可从 CodePlex 下载的示例脚本。  
   
-    -   CodePlex 上的示例 rss 脚本，可将一个报表服务器中的内容迁移到另一个中的 [Reporting Services RS.exe 脚本](http://azuresql.codeplex.com/releases/view/115207)  
+    -   CodePlex 上的示例 rss 脚本，可将一个报表服务器中的内容迁移到另一个中的 [Reporting Services RS.exe 脚本](https://azuresql.codeplex.com/releases/view/115207)  
   
     -   [脚本编写和带 Reporting Services 的 PowerShell](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   

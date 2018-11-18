@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d05481a9946a411d9fc83156e81e0abcc232561
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7165b90db10cab6060d674ad8ae4779af843173
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671576"
 ---
 # <a name="stored-procedures-database-engine"></a>存储过程（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -95,6 +95,6 @@ ms.locfileid: "47709155"
 |介绍如何在存储过程中使用参数。|[参数](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>相关内容  
- [CLR 存储过程](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [CLR 存储过程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

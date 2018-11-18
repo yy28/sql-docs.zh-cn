@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d70480cc1acbfe6e8a4a9f6c80fc57a9c8cfbd8
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 4b597fffe92f7cfc8a0000ccdf2d34005c8f7164
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216711"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660576"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -342,6 +342,6 @@ GO
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [创建全文搜索查询 (Visual Database Tools)](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [创建全文搜索查询 (Visual Database Tools)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [改进全文查询的性能](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
  

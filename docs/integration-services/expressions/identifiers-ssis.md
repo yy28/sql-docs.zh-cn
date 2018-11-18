@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651575"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638784"
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
   在表达式中，标识符是可供运算使用的列和变量。 表达式可以使用常规标识符和限定标识符。  
@@ -102,7 +102,7 @@ ms.locfileid: "47651575"
 ## <a name="unique-variable-names"></a>唯一变量名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持自定义变量并提供一组系统变量。 默认情况下，自定义变量属于 **User** 命名空间，而系统变量属于 **System** 命名空间。 可以为自定义变量创建其他命名空间并更新命名空间名称来满足应用程序要求。 表达式生成器列出了所有命名空间中的作用域内变量。  
   
- 所有变量都有作用域并属于某个命名空间。 变量的作用域可以是包或者包中的容器或任务。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的表达式生成器仅列出作用域内变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 所有变量都有作用域并属于某个命名空间。 变量的作用域可以是包或者包中的容器或任务。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的表达式生成器仅列出作用域内变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
  表达式中使用的变量必须具有唯一的名称，表达式计算器才能正确地计算表达式。 如果包使用多个同名变量，则它们的命名空间必须不同。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了命名空间解析运算符，该运算符由两个冒号 (::) 组成，用于以命名空间限定变量。 例如，下面的表达式使用两个名为 **Count**的变量；一个属于 **User** 命名空间，另一个属于 **MyNamespace** 命名空间。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651575"
 ```  
   
 ## <a name="related-content"></a>相关内容  
- pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
+ pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=746575)。  
   
   

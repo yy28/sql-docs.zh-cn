@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71f8cb6faeb5010cc39a05e2611753a04de812e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822425"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642226"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -108,9 +108,9 @@ ms.locfileid: "47822425"
   
 2.  将任务和容器添加到 Foreach 循环容器。 有关详细信息，请参阅 [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
-3.  使用优先约束连接 Foreach 循环容器中的任务和容器。 有关详细信息，请参阅 [使用默认优先约束来连接任务和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
+3.  使用优先约束连接 Foreach 循环容器中的任务和容器。 有关详细信息，请参阅 [使用默认优先约束来连接任务和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
   
-4.  配置 Foreach 循环容器。 有关详细信息，请参阅 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+4.  配置 Foreach 循环容器。 有关详细信息，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
 
 ## <a name="configure-a-foreach-loop-container"></a>配置 Foreach 循环容器
 此过程介绍如何配置 Foreach 循环容器，包括如何在枚举器级和容器级上配置属性表达式。  
@@ -178,7 +178,7 @@ ms.locfileid: "47822425"
 ## <a name="general-page---foreach-loop-editor"></a>“常规”页 - Foreach 循环编辑器
 可以使用 **“Foreach 循环编辑器”** 对话框的 **“常规”** 页，对 Foreach 循环容器进行命名和说明，该容器使用指定的枚举器重复集合中每个成员的工作流。  
   
- 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -193,7 +193,7 @@ ms.locfileid: "47822425"
 ## <a name="collection-page---foreach-loop-editor"></a>“集合”页 - Foreach 循环编辑器
  可以使用“Foreach 循环编辑器”对话框的“集合”页，指定枚举器类型以及配置枚举器。  
   
- 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 ### <a name="static-options"></a>静态选项  
  **枚举器**  
@@ -281,7 +281,7 @@ ms.locfileid: "47822425"
  **“列”**  
  单击此项可以配置项中的列的数据类型。  
   
- **相关主题：**[“For Each Item 列”对话框 UI 参考](http://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **相关主题：**[“For Each Item 列”对话框 UI 参考](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Enumerator = Foreach ADO 枚举器  
  您可以使用 Foreach ADO 枚举器枚举变量中存储的 ADO 或 ADO.NET 对象中的行或表。 例如，如果 Foreach 循环包括可将数据集写入变量的脚本任务，则可以使用 Foreach ADO 枚举器枚举数据集中的行。 如果变量包含 ADO.NET 数据集，则可以将枚举器配置为枚举多个表中的行或枚举表。  
@@ -292,7 +292,7 @@ ms.locfileid: "47822425"
 > [!NOTE]  
 >  变量必须有 Object 数据类型，否则会发生错误。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **第一个表中的行**  
  选择此项将只枚举第一个表中的行。  
@@ -320,7 +320,7 @@ ms.locfileid: "47822425"
  **设置限制**  
  设置要应用于指定架构的限制。  
   
- **相关主题：**[“架构限制”对话框](http://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **相关主题：**[“架构限制”对话框](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerator = Foreach 源变量枚举器  
  您可以使用 Foreach 源变量枚举器枚举指定变量中的可枚举对象。 例如，如果 Foreach 循环包括运行查询并在变量中存储结果的执行 SQL 任务，则可以使用 Foreach 源变量枚举器枚举查询结果。  
@@ -328,14 +328,14 @@ ms.locfileid: "47822425"
  **变量**  
  从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 枚举器  
  您可以使用 Foreach Nodelist 枚举器枚举一组通过将 XPath 表达式应用到 XML 文件而生成的 XML 节点。 例如，如果 Foreach 循环包括脚本任务，则可以使用 Foreach NodeList 枚举器将满足 XPath 表达式条件的值从 XML 文件传递到脚本任务。  
   
  应用到 XML 文件的 XPath 表达式为外部 XPath 运算，存储于 OuterXPathString 属性中。 如果 XPath 枚举类型设置为 **ElementCollection**，则 Foreach NodeList 枚举器可以将内部 XPath 表达式（存储于 InnerXPathString 属性中）应用到元素的集合。  
   
- 若要了解有关使用 XML 文档和数据的详细信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)”。  
+ 若要了解有关使用 XML 文档和数据的详细信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)”。  
   
  **DocumentSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项：  
@@ -355,7 +355,7 @@ ms.locfileid: "47822425"
   
  如果将 **DocumentSourceType** 设置为“变量”，请选择现有变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项：  
@@ -385,7 +385,7 @@ ms.locfileid: "47822425"
   
  如果将 **OuterXPathStringSourceType** 设置为“变量”，请选择现有变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **InnerElementType**  
  如果将 **EnumerationType** 设置为 **ElementCollection**，请从列表中选择内部元素的类型。  
@@ -408,7 +408,7 @@ ms.locfileid: "47822425"
   
  如果将 **InnerXPathStringSourceType** 设置为“变量”，请选择现有变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 枚举器  
  您可以使用 Foreach SMO 枚举器枚举 SQL Server 管理对象 (SMO) 对象。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach SMO 枚举器枚举 **AdventureWorks** 数据库中的表并运行计算每个表中行数的查询。  
@@ -424,7 +424,7 @@ ms.locfileid: "47822425"
  **“浏览”**  
  选择 SMO 枚举。  
   
- **相关主题：**[“选择 SMO 枚举”对话框](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **相关主题：**[“选择 SMO 枚举”对话框](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
 ####  <a name="ForeachHDFSFile"></a> 枚举器 = Foreach HDFS 文件枚举器  
  “Foreach HDFS 文件枚举器”  允许 SSIS 包在指定的 HDFS 位置枚举 HDFS 文件。 每个 HDFS 文件名都可以存储在变量中并用于 Foreach 循环容器内的任务。  
@@ -453,7 +453,7 @@ ms.locfileid: "47822425"
 ####  <a name="ForeachAzureBlob"></a> 枚举器 = Foreach Azure Blob 枚举器  
  “Azure Blob 枚举器”   允许 SSIS 包在指定的 blob 位置枚举 blob 文件。 枚举的 blob 文件名可以存储在变量中并用于 Foreach 循环容器内的任务。  
   
- **Azure Blob 枚举器**是适用于 Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 SQL Server Integration Services (SSIS) 功能包的组件。 从 [此处](http://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
+ **Azure Blob 枚举器** 是适用于 Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的 SQL Server Integration Services (SSIS) 功能包的组件。 从 [此处](https://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
   
  **Azure 存储连接管理器**  
  选择一个现有的 Azure 存储连接管理器或创建一个新的、引用 Azure 存储帐户的连接管理器。  
@@ -490,7 +490,7 @@ ms.locfileid: "47822425"
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>“变量映射”页 - Foreach 循环编辑器
  可以使用 **“Foreach 循环编辑器”** 对话框的 **“变量映射”** 页，将变量映射到集合值。 循环每次迭代时，都会用集合值更新变量的值。  
   
- 若要了解如何在 Integration Services 包中使用 Foreach 循环容器，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。 若要了解如何配置该循环容器，请参阅 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+ 若要了解如何在 Integration Services 包中使用 Foreach 循环容器，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。 若要了解如何配置该循环容器，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 教程“创建简单 ETL 包教程”包括一节介绍如何添加和配置 Foreach 循环的课程。  
   
@@ -501,7 +501,7 @@ ms.locfileid: "47822425"
 > [!NOTE]  
 >  映射一个变量之后，“变量”列表中会自动增加一行。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Index**  
  如果使用的是 Foreach Item 枚举器，请指定集合值中要映射到变量的列的索引。 对于其他枚举器类型，索引是只读的。  
@@ -522,7 +522,7 @@ ms.locfileid: "47822425"
  **变量**  
  使用变量来定义限制。 从列表中选择变量，或单击“新建变量...”以创建新的变量。   
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Text**  
  提供文本来定义限制。  
