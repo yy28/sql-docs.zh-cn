@@ -25,7 +25,7 @@ ms.locfileid: "49643935"
 
 若要管理 （查询、 监视器等） 您需要使用工具的数据库。 您的数据库可以在云中，Windows，或在运行时[Linux](../linux/sql-server-linux-overview.md)，所需的工具不需要与数据库相同的平台上运行。 
 
-有许多可用的数据库工具，因此本文提供了一些可用于处理SQL数据库的工具的说明和指南。 如果您需要帮助来决定所需的工具，请参阅[应使用哪种工具？](#which-tool-should-i-choose)。
+有许多可用的数据库工具，因此本文提供的说明和指南介绍了一些可用于处理 SQL 数据库的工具。如果不知道如何确定所需的工具，请参阅[应使用哪种工具？](#which-tool-should-i-choose)。
 
 
 ## <a name="gui-tools-to-manage-databases"></a>GUI 工具来管理数据库  
