@@ -33,7 +33,7 @@ ms.locfileid: "49461012"
 ### <a name="new-word-breakers-and-stemmers-installed"></a>安装了新的断字符和词干分析器  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 更新全文搜索和语义搜索所使用的所有断字符和词干分析器。 为了保持索引内容和查询结果之间的一致性，建议您重新填充现有全文索引。  
   
-1.  英语已有了新的断字符。 如果您必须保留先前行为，请参阅 [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
+1.  英语已有了新的断字符。 如果您必须保留先前行为，请参阅 [更改用于美国英语和英国英语的断字符](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
 2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的先前版本附带的丹麦语、波兰语和土耳其语的第三方断字符已替换为 [!INCLUDE[msCoName](../includes/msconame-md.md)] 组件。 默认情况下启用这些新组件。  
   
