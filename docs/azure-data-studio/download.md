@@ -40,7 +40,7 @@ ms.locfileid: "51217805"
 
 **安装程序**
 
-1. 下载并运行适用于 Windows 的 [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 安装程序(https://go.microsoft.com/fwlink/?linkid=2038320)。
+1. 下载并运行[[!INCLUDE[name-sos](../includes/name-sos-short.md)]适用于 Windows 安装程序](https://go.microsoft.com/fwlink/?linkid=2038320)。
 1. 启动[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]应用。
 
 
@@ -160,16 +160,16 @@ ms.locfileid: "51217805"
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
-* 此版本的 Azure Data Studio 适用于所有受支持版本的 SQL Server 2014 - [!INCLUDE [sql-server-2019 预览版](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，同时支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。Azure Data Studio 还为 Azure SQL 托管实例提供预览支持。
+* 此版本的 Azure Data Studio 适用于所有受支持版本的 SQL Server 2014 - [!INCLUDE [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，同时支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。 Azure Data Studio 还为 Azure SQL 托管实例提供预览支持。
 
 ## <a name="move-user-settings"></a>移动用户设置
 
-如果想要移动自定义设置、键盘快捷方式或代码片段，请执行以下步骤。如果要从 SQL Operations Studio 版本升级到 Azure Data Studio，执行这些步骤非常重要。
+如果想要移动自定义设置、键盘快捷方式或代码片段，请执行以下步骤。 如果要从 SQL Operations Studio 版本升级到 Azure Data Studio，执行这些步骤非常重要。
 
-*如果已有 Azure Data Studio，或者从未安装或自定义 SQL Operations Studio，则可以忽略此部分。*
+*如果已有 Azure Data Studio，或你永远不会安装或自定义 SQL Operations Studio，则可以忽略此部分。*
 
 
-1. 打开**设置**：单击左下方的齿轮并单击**设置**。
+1. 通过单击左下角的齿轮，然后单击打开设置**设置。**
 
    ![打开设置](./media/download/open-settings.png)
 
@@ -181,7 +181,7 @@ ms.locfileid: "51217805"
 
    ![复制设置](./media/download/copy-settings.png)
 
-4. 在新版 Azure Data Studio 中，请执行步骤 1-2，然后在步骤 3 中将保存的内容粘贴到文件夹中。还可以手动从各自的位置复制设置、键绑定或代码片段。
+4. 在新版 Azure Data Studio 中，请执行步骤 1-2，然后在步骤 3 中将保存的内容粘贴到文件夹中。 还可以手动从各自的位置复制设置、键绑定或代码片段。
 
 5. 如果要覆盖现有安装，请在安装前删除旧安装目录，以避免在资源浏览器连接到 Azure 帐户时出错。
 
