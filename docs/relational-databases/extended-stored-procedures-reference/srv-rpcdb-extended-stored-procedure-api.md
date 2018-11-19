@@ -20,12 +20,12 @@ ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1647f7a59db06a8fbd7e0a4058a8555b5227e20
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9cb924bbaa93322a93d77d4a5e1234ba95d4324a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033014"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661079"
 ---
 # <a name="srvrpcdb-extended-stored-procedure-api"></a>srv_rpcdb（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +57,6 @@ SRV_PROC * srvproc,int *len );
  此函数只返回远程存储过程对象名称的数据库部分。 它不包括所有者、远程存储过程名称和远程存储过程编号的可选说明符。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
   

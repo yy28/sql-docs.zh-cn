@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57b606af70ac4018fbedd266a9fe38243347458d
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460582"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700525"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 脱机帮助和帮助查看器
 
@@ -134,7 +134,7 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 
 此过程将使用帮助查看器 1.x 从 Microsoft 下载中心下载 SQL Server 2014 帮助，并将其安装在计算机上。
 
-1. 请导航到 [Microsoft SQL Server 2014 产品文档](https://www.microsoft.com/en-us/download/details.aspx?id=42557)下载站点并单击“下载”。  
+1. 请导航到 [Microsoft SQL Server 2014 产品文档](https://www.microsoft.com/download/details.aspx?id=42557)下载站点并单击“下载”。  
 2. 在消息框中单击“保存”，将 SQLServer2014Documentation\_\*.exe 文件保存到计算机。  
    
    >[!NOTE]

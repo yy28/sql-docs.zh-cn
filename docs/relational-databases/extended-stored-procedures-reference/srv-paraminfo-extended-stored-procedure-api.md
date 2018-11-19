@@ -20,12 +20,12 @@ ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 262ef81630f192d45065c093346336331a590502
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e473b213321af7366881f0f9a0f32c5ac4ab70cd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031754"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677566"
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ pfNull
  如果成功获取参数信息，则返回 SUCCEED，否则返回 FAIL。 如果没有当前远程存储过程并且没有第 n 个远程存储过程参数，将返回 FAIL。  
   
 ## <a name="remarks"></a>Remarks  
- **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+ **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展存储过程程序员参考](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
