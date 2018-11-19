@@ -32,12 +32,12 @@ ms.locfileid: "49643935"
 
 下面是主要的图形用户界面 (GUI) 工具：
 
-| 工具 | 描述 | 运行环境 |
+| 工具 | 说明 | 运行平台 |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一款免费，轻量级的工具，用于管理数据库，无论在哪里它们正在运行。 此预览版本中提供数据库管理功能，包括扩展的Transact-SQL编辑器以及可自定义的数据库操作状态见解。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一款轻型免费工具，用于管理数据库，无论数据库在何处运行。此预览版提供各种数据库管理功能，其中包括扩展的 Transact-SQL 编辑器以及可自定义的数据库操作状态见解。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 使用 SQL Server Management Studio (SSMS) 来查询、 设计和管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。 | **SSMS 在 Windows 上运行**。|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将Visual Studio变成SQL Server，Azure SQL数据库和Azure SQL数据仓库的强大开发环境。| **SSDT在 Windows 上运行 **。|
-| [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 安装用于开发 Microsoft SQL Server、 Azure SQL 数据库和 SQL 数据仓库的[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)。| **Visual Studio Code 在 Windows、 macOS 和 Linux 上运行**。|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将 Visual Studio 变成适用于 SQL Server、Azure SQL 数据库和 Azure SQL 数据仓库的强大开发环境。| **SSDT 在 Windows 上运行**。|
+| [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 请安装用于开发 Microsoft SQL Server、Azure SQL 数据库和 SQL 数据仓库的 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)。| **Visual Studio Code 在 Windows、 macOS 和 Linux 上运行**。|
 
 
 ## <a name="command-line-tools-to-manage-databases"></a>命令行工具来管理数据库
