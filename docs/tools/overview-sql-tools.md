@@ -35,7 +35,7 @@ ms.locfileid: "51292973"
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一款轻型免费工具，用于管理数据库，无论数据库在何处运行。 此预览版提供各种数据库管理功能，其中包括扩展的 Transact-SQL 编辑器以及可自定义的数据库操作状态见解。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 使用 SQL Server Management Studio (SSMS) 来查询、 设计和管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。 | **SSMS 在 Windows 上运行**。|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将 Visual Studio 变成功能强大的开发环境的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。| **SSDT 在 Windows 上运行**。|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将 Visual Studio 变成适用于 SQL Server、Azure SQL 数据库和 Azure SQL 数据仓库的强大开发环境。| **SSDT 在 Windows 上运行**。|
 | [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 请安装用于开发 Microsoft SQL Server、Azure SQL 数据库和 SQL 数据仓库的 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)。| **Visual Studio Code 在 Windows、 macOS 和 Linux 上运行**。|
 
 
@@ -57,11 +57,11 @@ ms.locfileid: "51292973"
 
 ## <a name="which-tool-should-i-choose"></a>应该选择哪种工具？
 
-- 若要管理 SQL Server 实例或数据库，在 Windows、 Linux 或 Mac 上的轻型编辑器吗？ 请选择 [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
-- 若要管理 SQL Server 实例或具有 GUI 的完全支持在 Windows 上的数据库吗？ 请选择 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- 执行你想要创建或维护数据库代码，包括编译时验证，重构和设计器支持在 Windows 上？ 请选择 [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- 你想要使用命令行工具，它的 IntelliSense、 语法高-照明，查询 SQL Server 和的详细信息？ 选择[mssql cli](mssql-cli.md)
-- 你是否想要在 Windows、 Linux 或 Mac 上的轻型编辑器中编写 T-SQL 脚本？ 选择[Visual Studio Code](https://code.visualstudio.com/)和[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+- 想要在 Windows、Linux 或 Mac 上的轻型编辑器中管理 SQL Server 实例或数据库？ 请选择 [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
+- 想要在具有完整 GUI 支持的 Windows 上管理 SQL Server 实例或数据库？ 请选择 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- 想要创建或维护数据库代码，包括 Windows 上的编译时验证、重构和设计器支持？ 请选择 [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- 想要使用具有 IntelliSense、语法高亮等功能的命令行工具查询 SQL Server？ 请选择 [mssql-cli](mssql-cli.md)
+- 想要在 Windows、Linux 或 Mac 上的轻型编辑器中编写 T-SQL 脚本？ 请选择 [Visual Studio Code](https://code.visualstudio.com/) 和 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 
 
