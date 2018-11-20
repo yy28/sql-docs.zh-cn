@@ -2,20 +2,20 @@
 title: SQL 客户端编程的主页 |Microsoft Docs
 description: 使用带批注的链接下载和文档的语言和操作系统，用于连接到 SQL Server 或 Azure SQL 数据库的许多组合的中心页。
 author: MightyPen
-ms.date: 04/16/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: meetb
+ms.reviewer: v-daveng
 ms.author: genemi
-ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633795"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289897"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>客户端编程到 Microsoft SQL Server 主页
 
@@ -34,8 +34,8 @@ ms.locfileid: "47633795"
 
 有关连接到 Azure SQL 数据库的连接字符串的详细信息，请参阅：
 
-- [使用.NET Core (C#) 来查询 Azure SQL 数据库](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)。
-- 附近的其他语言的内容，表中的上一篇文章是其他 Azure SQL 数据库。 例如，请参阅[使用 PHP 查询 Azure SQL 数据库](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
+- [使用.NET Core (C#) 来查询 Azure SQL 数据库](/azure/sql-database/sql-database-connect-query-dotnet-core)。
+- 附近的其他语言的内容，表中的上一篇文章是其他 Azure SQL 数据库。 例如，请参阅[使用 PHP 查询 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
 
 
 #### <a name="build-an-app-webpages"></a>生成一个应用网页
@@ -79,8 +79,8 @@ ms.locfileid: "47633795"
 | :-- | :-- |
 | [使用 ADO.NET 连接到 SQL 的概念证明](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | 小代码示例侧重于连接和查询 SQL Server。 |
 | [使用 ADO.NET 实现对 SQL 的弹性连接](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 重试逻辑中的代码示例，因为连接可能偶尔会遇到的连接丢失。<br /><br />重试逻辑适用于通过维护，internet 到任何云数据库中，如 Azure SQL 数据库的连接良好。 |
-| [Azure SQL 数据库： 演示如何在 Windows/Linux/macOS 上使用.NET Core 创建一个 C# 程序，来连接和查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL 数据库示例。 |
-| [生成的应用： C#，ADO.NET 中，Windows](http://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 配置信息，以及代码示例。 |
+| [Azure SQL 数据库： 演示如何在 Windows/Linux/macOS 上使用.NET Core 创建一个 C# 程序，来连接和查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL 数据库示例。 |
+| [生成的应用： C#，ADO.NET 中，Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文档
@@ -88,8 +88,8 @@ ms.locfileid: "47633795"
 |||
 | :-- | :-- |
 | [使用 ADO.NET 通过 C#](./ado-net/index.md)| 我们的文档的根。 |
-| [Namespace: System.Data](http://docs.microsoft.com/dotnet/api/system.data) | 一组用于 ADO.NET 的类。 |
-| [命名空间：System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最直接 ADO.NET center 的类的组。 |
+| [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | 一组用于 ADO.NET 的类。 |
+| [命名空间：System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最直接 ADO.NET center 的类的组。 |
 | &nbsp; | <br /> |
 
 
@@ -103,14 +103,14 @@ ms.locfileid: "47633795"
 EF 有直接或间接关系具有以下技术：
 
 - .NET Framework
-- [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - 语言语法增强功能，如**=>** C# 中的运算符。
-- 便捷的程序，以便将映射到 SQL 数据库中表的类生成源代码。 例如， [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
+- 便捷的程序，以便将映射到 SQL 数据库中表的类生成源代码。 例如， [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 
 #### <a name="original-ef-and-new-ef"></a>原始 EF 和新的 EF
 
-[实体框架的起始页](http://docs.microsoft.com/ef/)引入 EF 了类似于以下的说明：
+[实体框架的起始页](https://docs.microsoft.com/ef/)引入 EF 了类似于以下的说明：
 
 - 实体框架是对象关系映射器 (O/RM)，.NET 开发人员可使用使用.NET 对象的数据库。 它不需要的大部分开发人员通常需要编写数据访问源代码。
 
@@ -118,8 +118,8 @@ EF 有直接或间接关系具有以下技术：
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft 首次在 2008 年 8 月发布 EF。 在 2015 年 3 月 Microsoft 宣布推出的 EF 6.x 是 Microsoft 像开发的最终版本。 Microsoft 发布到公共域的源代码。<br /><br />最初 EF 是.NET Framework 的一部分。 但 EF 6.x 已从.NET Framework 中删除。<br /><br />[在 Github 存储库中的 EF 6.x 源代码*aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | 2016 年 6 月，Microsoft 发布了新开发的 EF Core。 EF Core 专为更好的灵活性和可移植性。 EF Core 可以只是 Microsoft Windows 以外的操作系统上运行。 和 EF Core 可以与超出不仅仅是 Microsoft SQL Server 数据库和其他关系数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[使用 Entity Framework Core 入门](https://docs.microsoft.com/ef/core/get-started/index)<br />[开始使用 EF Core 与现有数据库的.NET Framework 上](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft 首次在 2008 年 8 月发布 EF。 在 2015 年 3 月 Microsoft 宣布推出的 EF 6.x 是 Microsoft 像开发的最终版本。 Microsoft 发布到公共域的源代码。<br /><br />最初 EF 是.NET Framework 的一部分。 但 EF 6.x 已从.NET Framework 中删除。<br /><br />[在 Github 存储库中的 EF 6.x 源代码*aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | 2016 年 6 月，Microsoft 发布了新开发的 EF Core。 EF Core 专为更好的灵活性和可移植性。 EF Core 可以只是 Microsoft Windows 以外的操作系统上运行。 和 EF Core 可以与超出不仅仅是 Microsoft SQL Server 数据库和其他关系数据库进行交互。<br /><br />**C&#x23;代码示例：**<br />[使用 Entity Framework Core 入门](https://docs.microsoft.com/ef/core/get-started/index)<br />[开始使用 EF Core 与现有数据库的.NET Framework 上](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 和相关的技术功能强大，并且是为开发人员想要掌握的整个区域学到很多。
@@ -141,8 +141,8 @@ Microsoft 提供的 Java 数据库连接 (JDBC) 驱动程序使用与 SQL Server
 | [代码示例](./jdbc/code-samples/index.md) | 介绍有关数据类型，结果集和大型数据的代码示例。 |
 | [连接 URL 示例](./jdbc/connection-url-sample.md) | 介绍如何使用连接 URL 来连接到 SQL Server。 然后使用它来使用 SQL 语句来检索数据。 |
 | [数据源示例](./jdbc/data-source-sample.md) | 介绍如何使用数据源连接到 SQL Server。 然后使用存储的过程来检索数据。 |
-| [使用 Java 查询 Azure SQL 数据库](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL 数据库示例。 |
-| [创建在 Ubuntu 上使用 SQL Server 的 Java 应用](http://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 配置信息，以及代码示例。 |
+| [使用 Java 查询 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL 数据库示例。 |
+| [创建在 Ubuntu 上使用 SQL Server 的 Java 应用](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文档
@@ -164,15 +164,15 @@ JDBC 文档包括以下主要方面：
 
 与 Node.js 配合使用可以连接到 SQL Server 从 Windows、 Linux 或 mac。 我们的 Node.js 文档的根是[此处](./node-js/index.md)。
 
-SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱动程序使用支持的所有最新版本的 SQL Server 的 TDS 协议。 该驱动程序是一个开放源代码项目，[可在 Github 上](http://tediousjs.github.io/tedious/)。
+SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱动程序使用支持的所有最新版本的 SQL Server 的 TDS 协议。 该驱动程序是一个开放源代码项目，[可在 Github 上](https://tediousjs.github.io/tedious/)。
 
 #### <a name="code-examples"></a>代码示例
 
 |||
 | :-- | :-- |
 | [使用 Node.js 连接到 SQL 的概念证明](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | 基本源连接到 SQL Server 和执行查询的代码。 |
-| [Azure SQL 数据库： 使用 Node.js 查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 在云中的 Azure SQL 数据库的示例。 |
-| [创建 Node.js 应用程序以在 macOS 上使用 SQL Server](http://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 配置信息，以及代码示例。 |
+| [Azure SQL 数据库： 使用 Node.js 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 在云中的 Azure SQL 数据库的示例。 |
+| [创建 Node.js 应用程序以在 macOS 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
 
 
@@ -227,8 +227,8 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 | :-- | :-- |
 | [使用 PHP 连接到 SQL 的概念验证](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 小代码示例侧重于连接和查询 SQL Server。 |
 | [使用 PHP 实现对 SQL 的弹性连接](./php/step-4-connect-resiliently-to-sql-with-php.md) | 重试逻辑中的代码示例，因为通过 Internet 和云的连接偶尔遇到的连接丢失。 |
-| [Azure SQL 数据库： 使用 PHP 查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL 数据库示例。 |
-| [创建要在 RHEL 上使用 SQL Server 的 PHP 应用程序](http://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 配置信息，以及代码示例。 |
+| [Azure SQL 数据库： 使用 PHP 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL 数据库示例。 |
+| [创建要在 RHEL 上使用 SQL Server 的 PHP 应用程序](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
 
 
@@ -245,8 +245,8 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 |||
 | :-- | :-- |
 | [连接到使用 pyodbc Python 与 SQL 的概念证明](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [Azure SQL 数据库： 使用 Python 查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL 数据库示例。 |
-| [创建 PHP 应用，在 SLES 上使用 SQL Server](http://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 配置信息，以及代码示例。 |
+| [Azure SQL 数据库： 使用 Python 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL 数据库示例。 |
+| [创建 PHP 应用，在 SLES 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文档
@@ -270,15 +270,15 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 |||
 | :-- | :-- |
 | [使用 Ruby 连接到 SQL 的概念证明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小代码示例侧重于连接和查询 SQL Server。 |
-| [Azure SQL 数据库： 使用 Ruby 查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL 数据库示例。 |
-| [创建 Ruby 应用程序以在 MacOS 上使用 SQL Server](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 配置信息，以及代码示例。 |
+| [Azure SQL 数据库： 使用 Ruby 查询](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL 数据库示例。 |
+| [创建 Ruby 应用程序以在 MacOS 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-204-aka-ms-sqldev" />
 
-## <a name="build-an-app-website-for-sql-client-developmenthttpwwwmicrosoftcomsql-serverdeveloper-get-started"></a>[生成的应用网站，用于 SQL 客户端开发](http://www.microsoft.com/sql-server/developer-get-started/)
+## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[生成的应用网站，用于 SQL 客户端开发](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
 在我们[*生成的应用*](https://www.microsoft.com/sql-server/developer-get-started/)网页可以选择从一长串的编程语言连接到 SQL Server。 和客户端程序可以运行各种操作系统。
@@ -346,16 +346,16 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 #### <a name="developer-hub-for-azure"></a>适用于 Azure 的开发人员中心
 
-- [适用于 Azure 的开发人员中心](http://docs.microsoft.com/azure/)
-- [面向 .NET 开发人员的 Azure](http://docs.microsoft.com/dotnet/azure/)
-- [面向 Java 开发人员的 azure](http://docs.microsoft.com/java/azure/)
-- [面向 Node.js 开发人员的 azure](http://docs.microsoft.com/nodejs/azure/)
-- [面向 Python 开发人员的 azure](http://docs.microsoft.com/python/azure/)
-- [在 Azure 中创建 PHP web 应用](http://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
+- [适用于 Azure 的开发人员中心](https://docs.microsoft.com/azure/)
+- [面向 .NET 开发人员的 Azure](https://docs.microsoft.com/dotnet/azure/)
+- [面向 Java 开发人员的 azure](https://docs.microsoft.com/java/azure/)
+- [面向 Node.js 开发人员的 azure](https://docs.microsoft.com/nodejs/azure/)
+- [面向 Python 开发人员的 azure](https://docs.microsoft.com/python/azure/)
+- [在 Azure 中创建 PHP web 应用](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>其他语言
 
-- [创建使用 Windows 上的 SQL Server 的 Go 应用](http://www.microsoft.com/sql-server/developer-get-started/go/windows/)
+- [创建使用 Windows 上的 SQL Server 的 Go 应用](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
 
 
 
