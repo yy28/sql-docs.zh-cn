@@ -11,12 +11,12 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770945"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605127"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步骤 3：使用 PHP 连接到 SQL 的概念验证
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47770945"
   
 ## <a name="step-2--execute-query"></a>步骤 2： 执行查询  
   
-[Sqlsrv_query （)](http://php.net/manual/en/function.sqlsrv-query.php)函数可用于检索针对 SQL 数据库的查询集的结果。 此函数实际上可接受任何查询和连接对象并返回一个结果集，可以循环访问与使用[sqlsrv_fetch_array （)](http://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
+[Sqlsrv_query （)](https://php.net/manual/en/function.sqlsrv-query.php)函数可用于检索针对 SQL 数据库的查询集的结果。 此函数实际上可接受任何查询和连接对象并返回一个结果集，可以循环访问与使用[sqlsrv_fetch_array （)](https://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
   
 ```php  
     function ReadData()  
@@ -80,7 +80,7 @@ ms.locfileid: "47770945"
   
 ## <a name="step-3--insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中您将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句，传递参数以保护应用程序免遭[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+此示例展示了如何安全执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
   
 ```php 

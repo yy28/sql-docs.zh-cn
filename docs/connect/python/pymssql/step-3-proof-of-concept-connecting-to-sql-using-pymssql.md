@@ -11,12 +11,12 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764055"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606817"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步骤 3：使用 pymssql 连接到 SQL 的概念验证
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47764055"
   
 ## <a name="step-1--connect"></a>步骤 1： 连接  
   
-[Pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html)函数用于连接到 SQL 数据库。  
+[Pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html)函数用于连接到 SQL 数据库。  
   
 ```python
     import pymssql  
@@ -35,7 +35,7 @@ ms.locfileid: "47764055"
   
 ## <a name="step-2--execute-query"></a>步骤 2： 执行查询  
   
-[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函数可用于检索针对 SQL 数据库的查询集的结果。 此函数实际上可接受任何查询并返回一个结果集，可以循环访问与使用[cursor.fetchone （)](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)。  
+[Cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函数可用于检索针对 SQL 数据库的查询集的结果。 此函数实际上可接受任何查询并返回一个结果集，可以循环访问与使用[cursor.fetchone （)](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)。  
   
   
 ```python
@@ -51,7 +51,7 @@ ms.locfileid: "47764055"
   
 ## <a name="step-3--insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中您将了解如何执行[插入](../../../t-sql/statements/insert-transact-sql.md)语句，传递参数以保护应用程序免遭[SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+此示例展示了如何安全执行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
   
 ```python

@@ -5,54 +5,53 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643935"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292973"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和实用程序的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-若要管理（查询、监视等）数据库，需要一个工具。虽然数据库可以在云中、Windows 上或 [Linux](../linux/sql-server-linux-overview.md) 上运行，但工具不需与数据库在相同的平台上运行。
+若要管理 （查询、 监视器等） 您需要使用工具的数据库。 您的数据库可以在云中，Windows，或在运行时[Linux](../linux/sql-server-linux-overview.md)，所需的工具不需要与数据库相同的平台上运行。 
 
-有许多可用的数据库工具，因此本文提供的说明和指南介绍了一些可用于处理 SQL 数据库的工具。如果不知道如何确定所需的工具，请参阅[应使用哪种工具？](#which-tool-should-i-choose)。
+有许多数据库工具，因此本文提供了说明和指针的一些可用工具的 SQL 数据库使用。 如果需要帮助确定哪种工具所需，请参阅[应使用哪种工具？](#which-tool-should-i-choose)。
 
 
-## <a name="gui-tools-to-manage-databases"></a>管理数据库的 GUI 工具
+## <a name="gui-tools-to-manage-databases"></a>GUI 工具来管理数据库  
 
 下面是主要的图形用户界面 (GUI) 工具：
 
-| 工具 | 说明 | 运行平台 |
+| 工具 | 描述 | 在上运行 |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一款轻型免费工具，用于管理数据库，无论数据库在何处运行。此预览版提供各种数据库管理功能，其中包括扩展的 Transact-SQL 编辑器以及可自定义的数据库操作状态见解。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是免费的轻型工具，用于管理数据库，无论在哪里它们正在运行。 此预览版本中提供数据库管理功能，包括扩展的 TRANSACT-SQL 编辑器和操作状态的数据库的可自定义见解。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 使用 SQL Server Management Studio (SSMS) 来查询、 设计和管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。 | **SSMS 在 Windows 上运行**。|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将 Visual Studio 变成适用于 SQL Server、Azure SQL 数据库和 Azure SQL 数据仓库的强大开发环境。| **SSDT 在 Windows 上运行**。|
-| [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 请安装用于开发 Microsoft SQL Server、Azure SQL 数据库和 SQL 数据仓库的 [mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)。| **Visual Studio Code 在 Windows、 macOS 和 Linux 上运行**。|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 将 Visual Studio 变成功能强大的开发环境的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。| **SSDT 在 Windows 上运行**。|
+| [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 安装[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)用于开发 Microsoft SQL Server、 Azure SQL 数据库和 SQL 数据仓库。| **Visual Studio Code 在 Windows、 macOS 和 Linux 上运行**。|
 
 
-## <a name="command-line-tools-to-manage-databases"></a>用于管理数据库的命令行工具
+## <a name="command-line-tools-to-manage-databases"></a>命令行工具来管理数据库
 
 下面是主要的命令行工具：
 
 | 工具 | 描述 | 在上运行 |
 |:--|:--|:--|
-|[**mssql-cli（预览版）**](mssql-cli.md)|**mssql-cli** 是一项用于查询 SQL Server 的交互式命令行工具。 | Windows、 macOS 和 Linux|
+|[**mssql-cli（预览版）**](mssql-cli.md)|**mssql cli**是交互式的命令行工具，用于查询 SQL Server。 | Windows、 macOS 和 Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**是一个命令行实用工具，可以自动执行多个数据库开发任务。 macOS 和 Linux 版本的 sqlpackage 目前处于预览状态。 | Windows、 macOS 和 Linux|
-|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** 提供了用于处理 SQL 的 cmdlet| Windows、 macOS 和 Linux|
+|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell**提供 cmdlet 用于处理 SQL| Windows、 macOS 和 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**实用工具，可以输入 TRANSACT-SQL 语句、 系统过程和脚本文件的命令提示符处。 | Windows、 macOS 和 Linux|
 |[**bcp**](../2014/tools/bcp-utility.md)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。|Windows、 macOS 和 Linux|
 |[**mssql 脚本编写器 （预览版）**](https://github.com/Microsoft/mssql-scripter)|**mssql 脚本专家**是多平台命令行体验，用于编写脚本的 SQL Server 数据库|Windows、 macOS 和 Linux|
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql-conf** 配置在 Linux 上运行的 SQL Server。|Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf**配置 Linux 上运行的 SQL Server。|Linux|
 
 
 

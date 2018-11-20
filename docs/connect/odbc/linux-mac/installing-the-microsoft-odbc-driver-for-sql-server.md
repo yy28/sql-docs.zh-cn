@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7cbc1a78a2cce71494da04ffeb19649b22b2585e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736475"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600797"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47736475"
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
 
 > [!IMPORTANT]
-> 如果你安装了 v17`msodbcsql`简要可用的包，则应将其删除然后再安装`msodbcsql17`包。 这可以避免冲突。 `msodbcsql17`可以并行安装包`msodbcsql`v13 包。
+> 如果安装了暂时可用的 v17 `msodbcsql` 包，应先删除它，再安装 `msodbcsql17` 包。 这可以避免冲突。 `msodbcsql17`可以并行安装包`msodbcsql`v13 包。
 
 ### <a name="debian-8-and-9"></a>Debian 8 和 9
 ```
@@ -369,12 +369,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE：```glibc, libuuid1, krb5, openssl, unixODBC```
 
-每个这些包反过来有其自己的依赖项，可能会或可能不会显示在系统上。 有关此问题的常规解决方案，请参阅分发的包管理器文档： [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
+每个这些包反过来有其自己的依赖项，可能会或可能不会显示在系统上。 有关此问题的常规解决方案，请参阅分发的包管理器文档： [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 它也是很常见手动下载所有依赖包并将它们一起放安装在计算机上，然后手动安装反过来，每个包使用[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 包。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 下载最新`msodbcsql``.rpm`从此处： http://packages.microsoft.com/rhel/7/prod/
+  - 下载最新`msodbcsql``.rpm`从此处： https://packages.microsoft.com/rhel/7/prod/
   - 安装依赖项和驱动程序
   
 ```
@@ -383,7 +383,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- 下载最新`msodbcsql``.deb`从此处： http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- 下载最新`msodbcsql``.deb`从此处： https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - 安装依赖项和驱动程序 
 
 ```
@@ -392,7 +392,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 下载最新`msodbcsql``.rpm`从此处： http://packages.microsoft.com/sles/12/prod/
+- 下载最新`msodbcsql``.rpm`从此处： https://packages.microsoft.com/sles/12/prod/
 - 安装依赖项和驱动程序
 
 ```
@@ -436,7 +436,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 若要验证 Linux 上的 Microsoft ODBC 驱动程序是否已成功注册，请执行以下命令：```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```。  
   
-[对 Linux 上的 ODBC 驱动程序使用现有 MSDN C++ ODBC 示例](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 会使用 Linux 上的 ODBC 驱动程序显示一个连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的代码示例。  
+[对 Linux 上的 ODBC 驱动程序使用现有 MSDN C++ ODBC 示例](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 会使用 Linux 上的 ODBC 驱动程序显示一个连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的代码示例。  
   
 **卸载**  
   
@@ -488,15 +488,15 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 有关解决这种连接失败的详细信息，请参阅：  
   
--   [解决 SQL 连接问题的步骤](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [解决 SQL 连接问题的步骤](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
--   [SQL Server 2005 连接问题疑难解答 - 第 I 部分](http://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
+-   [SQL Server 2005 连接问题疑难解答 - 第 I 部分](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [带有连接环形缓冲区的 SQL Server 2008 中的连接疑难解答](http://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [带有连接环形缓冲区的 SQL Server 2008 中的连接疑难解答](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
--   [SQL Server 身份验证疑难解答](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
+-   [SQL Server 身份验证疑难解答](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [错误详细信息 (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [错误详细信息 (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     应更改在 URL 中指定的错误号 (11001) 以与你看到的错误相匹配。  
   

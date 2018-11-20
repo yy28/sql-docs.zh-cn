@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828265"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604709"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -347,7 +347,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 SQL Server 的 ODBC 驱动程序附带以下内置密钥存储提供程序：
 
-| 名称 | 描述 | 提供程序 （元数据） 的名称 |可用性|
+| “属性” | 描述 | 提供程序 （元数据） 的名称 |可用性|
 |:---|:---|:---|:---|
 |Azure Key Vault |在 Azure Key Vault 中存储 Cmk | `AZURE_KEY_VAULT` |Windows、 macOS、 Linux|
 |Windows 证书存储|Windows 密钥存储在本地存储 Cmk| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -567,7 +567,7 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 ### <a name="connection-string-keywords"></a>连接字符串关键字
 
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |`ColumnEncryption`|接受的值是`Enabled` / `Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。 <br><br>默认值为 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret` |
@@ -576,7 +576,7 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 ### <a name="connection-attributes"></a>连接属性
 
-|名称|类型|描述|  
+|“属性”|类型|描述|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)--禁用始终加密 <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)--启用始终加密|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|后连接|[设置]尝试加载 CEKeystoreProvider<br>[获取]返回 CEKeystoreProvider 名称|
@@ -586,7 +586,7 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 ### <a name="statement-attributes"></a>语句属性
 
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)--语句禁用了 always Encrypted <br>`SQL_CE_RESULTSETONLY` (1)--仅解密。 结果集和返回值解密的、 和未加密的参数 <br>`SQL_CE_ENABLED` (3)--始终加密已启用并使用参数和结果|
 
@@ -594,16 +594,16 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 |IPD 字段|大小/类型|默认值|描述|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD （2 个字节）|0|当 0 （默认值）：决定加密此参数由加密元数据的可用性。<br><br>当非零值： 如果此参数加密元数据不可用，则被加密。 否则，请求将失败，错误 [CE300] 为参数指定了 [Microsoft] [ODBC Driver 13 for SQL Server] 强制加密，但通过服务器提供的加密元数据。|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD （2 个字节）|0|如果值为 0（默认值）：决定是否加密此参数取决于加密元数据的可用性。<br><br>当非零值： 如果此参数加密元数据不可用，则被加密。 否则，请求将失败，错误 [CE300] 为参数指定了 [Microsoft] [ODBC Driver 13 for SQL Server] 强制加密，但通过服务器提供的加密元数据。|
 
 ### <a name="bcpcontrol-options"></a>bcp_control 选项
 
 |选项名称|默认值|描述|
 |-|-|-|
-|`BCPMODIFYENCRYPTED` (21)|FALSE|为 TRUE 时，允许 varbinary (max) 值插入到加密列。 为 FALSE 时，阻止插入，除非提供正确的类型和加密元数据。|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|如果值为 TRUE，可以将 varbinary(max) 值插入加密列。 为 FALSE 时，阻止插入，除非提供正确的类型和加密元数据。|
 
 ## <a name="see-also"></a>另请参阅
 
 - [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [始终加密博客](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [始终加密博客](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

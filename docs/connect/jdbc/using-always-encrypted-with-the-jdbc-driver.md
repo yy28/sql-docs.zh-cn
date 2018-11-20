@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842745"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600967"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +29,9 @@ Always Encrypted 允许客户端对敏感数据进行加密，并且永远不向
 - 请确保 Microsoft JDBC Driver 6.0 （或更高版本） 在开发计算机上安装 SQL 服务器。 
 - 下载并安装 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files。  请确保阅读包含在 zip 文件中的自述文件，以获取安装说明和导出/导入问题的相关详细信息。  
 
-    - 如果使用 mssql-jdbc-X.X.X.jre7.jar 或 sqljdbc41.jar，则可以从 [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 下载](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)下载策略文件
+    - 如果使用 mssql-jdbc-X.X.X.jre7.jar 或 sqljdbc41.jar，则可以从 [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 下载](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)下载策略文件
 
-    - 如果使用 mssql-jdbc-X.X.X.jre8.jar 或 sqljdbc42.jar，则可以从 [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 下载](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)下载策略文件
+    - 如果使用 mssql-jdbc-X.X.X.jre8.jar 或 sqljdbc42.jar，则可以从 [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 下载](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)下载策略文件
 
     - 如果使用 mssql jdbc X.X.X.jre9.jar，不需要下载任何策略文件。 Java 9 中的管辖权策略默认设置为不受限制的强度的加密。
 
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 > 有关如何在 Maven 项目中包含这些依赖关系的示例，请参阅[下载 ADAL4J 和 AKV 依赖项使用 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
-### <a name="using-windows-certificate-store-provider"></a>使用 Windows 证书存储区提供程序
+### <a name="using-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证书存储区中存储列主密钥。 使用 SQL Server Management Studio (SSMS) 始终加密向导或其他支持的工具的列主密钥和列加密密钥定义在数据库中创建。 可以使用相同的向导可用于始终加密的数据作为列主密钥的 Windows 证书存储中生成自签名的证书。 有关列主密钥和列加密密钥的 T-SQL 语法的详细信息，请参阅[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)并[创建列加密密钥](../../t-sql/statements/create-column-encryption-key-transact-sql.md)分别。
 
 SQLServerColumnEncryptionCertificateStoreProvider 名称是 MSSQL_CERTIFICATE_STORE，并且可以通过提供程序对象 getName() API 进行查询。 它会自动注册的驱动程序，并可以无缝使用而无需任何应用程序更改。
@@ -154,7 +154,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 在连接属性中存在这些凭据时，JDBC 驱动程序自动实例化 SQLServerColumnEncryptionJavaKeyStoreProvider。
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>创建 Java 密钥存储列主密钥
-SQLServerColumnEncryptionJavaKeyStoreProvider 可以用于 JKS 或 PKCS12 密钥存储类型。 若要创建或导入要使用此提供程序使用的密钥使用 Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html)实用程序。 该密钥必须拥有自己的密钥存储的相同密码。 下面是如何创建一个公钥和使用 keytool 实用工具及其关联的私钥的示例：
+SQLServerColumnEncryptionJavaKeyStoreProvider 可以用于 JKS 或 PKCS12 密钥存储类型。 若要创建或导入要使用此提供程序使用的密钥使用 Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html)实用程序。 该密钥必须拥有自己的密钥存储的相同密码。 下面是如何创建一个公钥和使用 keytool 实用工具及其关联的私钥的示例：
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
@@ -637,7 +637,7 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (int columnEncryptionKeyCache
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 ```
 
-天、小时、分钟或秒为时间单位支持。  
+仅支持使用 DAYS、HOURS、MINUTES 或 SECONDS 作为时间单位。  
 
 ## <a name="copying-encrypted-data-using-sqlserverbulkcopy"></a>复制 SQLServerBulkCopy 使用的加密的数据
 
@@ -652,4 +652,4 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 
 ## <a name="see-also"></a>另请参阅
 
-[Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

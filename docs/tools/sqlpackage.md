@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051219"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629620"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -102,6 +102,8 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{交互式&#124;ClientIdSecret}|指定用于访问 Azure Key Vault 的身份验证方法 |
 |**/ClientId:**|**/cid**|{string}|必要时，指定在对 Azure KeyVault 进行身份验证时使用的客户端 ID |
+|**/ DeployScriptPath:**|**/dsp**|{string}|指定要部署脚本输出的可选文件路径。 对于 Azure 部署，如果有用于创建或修改 master 数据库的 TSQL 命令，脚本便会写入相同路径，不同之处在于使用“Filename_Master.sql”作为输出文件名。 |
+|**/ DeployReportPath:**|**/drp**|{string}|指定要部署报表的 xml 文件的输出的可选文件路径。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定诊断日志记录是否输出到控制台。 默认为 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
 |**/ MaxParallelism:**|**/mp**|{int}| 指定针对数据库运行的并发操作的并行度。 默认值为 8。 |
@@ -476,6 +478,8 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |---|---|---|---|
 |**/Action:**|**/a**|脚本|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
+|**/ DeployScriptPath:**|**/dsp**|{string}|指定要部署脚本输出的可选文件路径。 对于 Azure 部署，如果有用于创建或修改 master 数据库的 TSQL 命令，脚本便会写入相同路径，不同之处在于使用“Filename_Master.sql”作为输出文件名。 |
+|**/ DeployReportPath:**|**/drp**|{string}|指定要部署报表的 xml 文件的输出的可选文件路径。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定诊断日志记录是否输出到控制台。 默认为 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
 |**/ MaxParallelism:**|**/mp**|{int}| 指定针对数据库运行的并发操作的并行度。 默认值为 8。 |

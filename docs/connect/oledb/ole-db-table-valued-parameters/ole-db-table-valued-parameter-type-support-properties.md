@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7e2e9fde43deb3b6efbac62dc39d27897d32c9ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783195"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559615"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 表值参数类型支持（属性）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47783195"
   本主题提供有关与表值参数行集对象相关联的 OLE DB 属性和属性集的信息。  
   
 ## <a name="properties"></a>属性  
- 下面的列表列出了通过表值参数行集对象的 IRowsetInfo::GetPropeties 方法公开的属性 。 请注意，所有表值参数行集属性都是只读的。 因此，尝试设置任何通过 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 属性的方法为非默认值将导致错误，并且会创建任何对象。  
+ 下面列出了通过表值参数行集对象上的 IRowsetInfo::GetProperties 方法公开的属性。 请注意，所有表值参数行集属性都是只读的。 因此，尝试设置任何通过 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 属性的方法为非默认值将导致错误，并且会创建任何对象。  
   
  在此处未列出在表值参数行集对象中未实现的属性。 有关属性的完整列表，请参阅 Windows 数据访问组件中的 OLE DB 文档。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47783195"
 |SSPROP_COL_COMPUTED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 类型：VT_BOOL<br /><br /> 说明：在设置为 VARIANT_TRUE 时，指示该列是计算列。 VARIANT_FALSE 指示它不是计算列。|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 这些属性是由使用者读取发现对 ISSCommandWithParamters::GetParameterProperties 的调用中的表值参数类型信息时，由使用者设置有关表值参数的特定属性时设置通过 isscommandwithparameters:: Setparameterproperties。  
+ 这些属性是由使用者读取发现对 isscommandwithparameters:: Getparameterproperties 的调用中的表值参数类型信息时，由使用者设置有关表值参数的特定属性时设置通过 isscommandwithparameters:: Setparameterproperties。  
   
  下表详细说明了这些属性。  
   
