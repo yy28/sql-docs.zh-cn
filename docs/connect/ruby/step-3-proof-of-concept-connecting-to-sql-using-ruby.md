@@ -11,12 +11,12 @@ ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9eed37349152b48ab49859b44cc23cb463d8541b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f384f179983012d5acf4726fb641245ca8a2cfb2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801375"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599967"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步骤 3：使用 Ruby 连接到 SQL 的概念证明
 
@@ -55,11 +55,11 @@ ms.locfileid: "47801375"
   
 ## <a name="step-3--insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句，传递参数以保护应用程序免遭[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+此示例展示了如何安全执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
 若要使用 TinyTDS 和 Azure，建议运行多个`SET`语句以更改当前会话处理特定信息的方式。 建议`SET`语句代码示例中所提供。 例如，`SET ANSI_NULL_DFLT_ON`将允许创建新列来允许 null 值，即使未显式指定列的为空性状态。  
   
-若要符合 Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md)格式，请使用[strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)函数转换成相应的日期时间格式。  
+若要符合 Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md)格式，请使用[strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)函数转换成相应的日期时间格式。  
   
 ``` ruby
     require 'tiny_tds'  
