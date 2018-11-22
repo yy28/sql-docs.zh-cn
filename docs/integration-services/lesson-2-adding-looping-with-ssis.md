@@ -11,17 +11,17 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b26f7b7a36d024ec18de617b08fdefe2d352083
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed4b198ab8f0582f3e01cfaca957af4f72e343e2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686195"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641214"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>第 2 课：使用 SSIS 添加循环
-在 [第 1 课：使用 SSIS 创建项目包和基础包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，创建了从单个平面文件源中提取数据的包，然后使用查找转换功能对数据进行了转换，最后将数据加载到 **AdventureWorksDW2012** 示例数据库的 **FactCurrency** 事实数据表中。  
+在[第 1 课：使用 SSIS 创建项目和基础包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，创建了从单个平面文件源中提取数据的包，然后使用查找转换功能对数据进行了转换，最后将数据加载到了 AdventureWorksDW2012 示例数据库的 FactCurrencyRate 事实数据表的副本中。  
   
-但是，提取、转换和加载 (ETL) 过程很少使用单个平面文件。 典型的 ETL 过程从多个平面文件源提取数据。 从多个源提取数据需要采用迭代控制流。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最可能出现的功能之一是可以方便快捷地向包中添加迭代或循环。  
+但是，提取、转换和加载 (ETL) 过程很少使用单个平面文件。 典型的 ETL 过程从多个平面文件源提取数据。 从多个源提取数据需要采用迭代控制流。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最可能出现的功能之一是可以方便快捷地向包中添加迭代或循环。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为循环遍历包提供了两种容器类型：Foreach 循环容器和 For 循环容器。 Foreach 循环容器使用枚举器执行循环，而 For 循环容器则通常使用变量表达式。 本课使用 Foreach 循环容器。  
   
@@ -48,7 +48,7 @@ Foreach 循环容器使包能够对指定枚举器的每个成员重复执行控
 在本课中，将不修改数据流，而只修改控制流。  
   
 > [!IMPORTANT]  
-> 本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](http://go.microsoft.com/fwlink/p/?LinkID=526910)。  
+> 本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](https://go.microsoft.com/fwlink/p/?LinkID=526910)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  

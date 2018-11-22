@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e80daf389baedb35dc7416c95096fe346854dfe9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678066"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 表包含错误消息号和对应说明，此说明即 sys.messages 目录视图中的错误消息的正文。 
@@ -1035,10 +1035,10 @@ ms.locfileid: "49384172"
 |   2117    |   16  |   否  |   因为 %S_MSG 具有 FILESTREAM 列，所以无法对 %S_MSG '%.* ls' %S_MSG INSTEAD OF 触发器 '%.*ls'。  |
 |   2201    |   16  |   否  |   %s不允许通过限制从 "anySimpleType" 派生，仅在未指定约束方面时，才允许通过限制从通过扩展从 "anySimpleType" 派生的类型派生。 |
 |   2202    |   16  |   否  |   %s在编译查询时出错。 若要获得有关错误的详细信息，该查询必须由对查询中使用的 xml 架构集合具有 EXECUTE 权限的用户运行。    |
-|   2203    |   16  |   否  |   %sOnly 'http://www.w3.org/2001/XMLSchema#decimal?', 'http://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 表达式作为谓词，但找到 '%ls' |
-|   2204    |   16  |   否  |   %sOnly 'http://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 表达式，但找到 '%ls'   |
+|   2203    |   16  |   否  |   %sOnly 'https://www.w3.org/2001/XMLSchema#decimal?', 'https://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 表达式作为谓词，但找到 '%ls'   |
+|   2204    |   16  |   否  |   %sOnly 'https://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 表达式，但找到 '%ls'  |
 |   2205    |   16  |   否  |   %s应为 "%ls"。   |
-|   2206    |   16  |   否  |   %s命名空间前缀 'xml' 只能与 URI 'http://www.w3.org/XML/1998/namespace' 关联，此 URI 不能与其他前缀一起使用。    |
+|   2206    |   16  |   否  |   %s命名空间前缀 'xml' 只能与 URI 'https://www.w3.org/XML/1998/namespace' 关联，此 URI 不能与其他前缀一起使用。   |
 |   2207    |   16  |   否  |   %s只能插入非文档节点。 实际上找到 "%ls"。 |
 |   2208    |   16  |   否  |   %s以 '%ls' 开头的 URI 太长。 允许的最大长度为 %d 字符。  |
 |   2209    |   16  |   否  |   %s'%ls' 附近有语法错误   |
@@ -1121,7 +1121,7 @@ ms.locfileid: "49384172"
 |   2309    |   16  |   否  |   %s"%ls" 的值不是有效数字。 |
 |   2310    |   16  |   否  |   %s属性 "%ls" 声明了多次。   |
 |   2311    |   16  |   否  |   %s属性 "%ls" 在 "%ls" 内声明了多次。  |
-|   2312    |   16  |   否  |   %s属性 '%ls' 的值不符合类型定义 'http://www.w3.org/2001/XMLSchema#%ls': '%ls'。   |
+|   2312    |   16  |   否  |   %s属性 '%ls' 的值不符合类型定义 'https://www.w3.org/2001/XMLSchema#%ls': '%ls'。  |
 |   2313    |   16  |   否  |   %s属性 "%ls" 的值不能是 "%ls"。 |
 |   2314    |   16  |   否  |   %s属性 "%ls" 的值不能为负。 |
 |   2315    |   16  |   否  |   %s属性 "%ls" 应为字符串值。   |
@@ -3044,7 +3044,7 @@ ms.locfileid: "49384172"
 |   6869    |   16  |   否  |   尝试重新定义命名空间前缀 '%.*ls'    |
 |   6870    |   16  |   否  |   WITH XMLNAMESPACES 子句中使用的前缀 '%.*ls' 包含无效的 XML 标识符。 '%c'(0x%04X)是出错的第一个字符。  |
 |   6871    |   16  |   否  |   WITH XMLNAMESPACES 中使用的前缀 '%.*ls' 是保留的，不能用作用户定义前缀。  |
-|   6872    |   16  |   否  |   XML 命名空间前缀 'xml' 只能与 URI http://www.w3.org/XML/1998/namespace 关联。 此 URI 不能与其他前缀一起使用。   |
+|   6872    |   16  |   否  |   XML 命名空间前缀 'xml' 只能与 URI https://www.w3.org/XML/1998/namespace 关联。 此 URI 不能与其他前缀一起使用。  |
 |   6873    |   16  |   否  |   FOR XML 的 ELEMENTS XSINIL 选项不支持重新定义 XML 命名空间前缀 'xsi'。 |
 |   6874    |   16  |   否  |   WITH XMLNAMESPACES 子句中不允许出现空 URI。  |
 |   6875    |   16  |   否  |   WITH XMLNAMESPACES 中使用的 URI '%.*ls' 无效。 '%c'(0x%04X)是出错的第一个字符。    |
@@ -3423,7 +3423,7 @@ ms.locfileid: "49384172"
 |   7802    |   16  |   否  |   SOAP 调用不支持返回类型为 "%.*ls" 的函数。   |
 |   7803    |   15  |   否  |   %.* ls 语句中不能使用子句 %.*ls。    |
 |   7804    |   15  |   否  |   %.*ls 和 %.* ls 不能共享同一值。   |
-|   7805    |   16  |   否  |   参数 SITE 不能以方案 'http://' 为前缀。 对 SITE 有效的值包括 {'*' | '+' | 'site_name'}.  |
+|   7805    |   16  |   否  |   参数 SITE 不能以“https://”等方案为前缀。 对 SITE 有效的值包括 {'*' | '+' | 'site_name'}. |
 |   7806    |   16  |   否  |   端点 '%.*ls' 指定的 URL 已注册为接收请求，或已保留供其他服务使用。  |
 |   7807    |   16  |   否  |   试图注册端点 '%.*ls' 时出错('0x%x')。   |
 |   7808    |   10  |   否  |   无法撤消注册端点 '%.*ls'。 |
@@ -4176,11 +4176,11 @@ ms.locfileid: "49384172"
 |   9304    |   16  |   否  |   %s此版本的服务器仅支持 XQuery 版本 '1.0'。    |
 |   9305    |   16  |   否  |   %s在 'instance of' 的目标中仅支持后跟 '?' 的类型名称。 |
 |   9306    |   16  |   否  |   %s 'replace value of' 的目标不能是联合类型，发现 '%ls'。 |
-|   9308    |   16  |   否  |   %s '%ls' 的参数必须属于单一数字原始类型或 'http://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'。 发现了 '%ls' 类型的参数。  |
-|   9309    |   16  |   否  |   %s 'replace value of' 的目标不能是 'http://www.w3.org/2001/XMLSchema#anySimpleType'，发现 '%ls'。 |
+|   9308    |   16  |   否  |   %s '%ls' 的参数必须属于单一数字原始类型或 'https://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'。 发现了 '%ls' 类型的参数。 |
+|   9309    |   16  |   否  |   %s 'replace value of' 的目标不能是 'https://www.w3.org/2001/XMLSchema#anySimpleType'，发现 '%ls'。    |
 |   9310    |   16  |   否  |   %s 'replace value of' 的 'with' 子句不能包含 XML 构造。   |
 |   9311    |   16  |   否  |   %s '%ls' 中不允许异类序列，发现 '%ls' 和 '%ls'。  |
-|   9312    |   16  |   否  |   %s简单类型化元素或 'http://www.w3.org/2001/XMLSchema#anyType' 元素上不支持 '%ls'，发现 '%ls'。   |
+|   9312    |   16  |   否  |   %s简单类型化元素或 'https://www.w3.org/2001/XMLSchema#anyType' 元素上不支持 '%ls'，发现 '%ls'。  |
 |   9313    |   16  |   否  |   %s此版本的服务器不支持属性构造函数中含有多个表达式或与字符串混合的表达式。   |
 |   9314    |   16  |   否  |   %s无法隐式地对复杂内容元素进行原子化或应用 'fn:data()'，在推断类型 '%ls' 内发现类型 '%ls'。  |
 |   9315    |   16  |   否  |   %s计算元素和属性构造函数的名称表达式仅支持常量表达式。   |
@@ -4200,7 +4200,7 @@ ms.locfileid: "49384172"
 |   9330    |   16  |   否  |   %s在 '%ls' 中仅允许类似的类型，发现了 '%ls'。  |
 |   9331    |   16  |   否  |   %s '%ls' 附近存在语法错误，应为 '%ls' 或 '%ls'。 |
 |   9332    |   16  |   否  |   %s '%ls' 附近存在语法错误，应为 'where'、'(stable) order by' 或 'return'。   |
-|   9333    |   16  |   否  |   %s在遇到简单类型化元素或 'http://www.w3.org/2001/XMLSchema#anyType' 元素时不支持 '//' 后面跟有 'self'、'parent' 或 'descendant-or-self' 轴，但发现了 '%ls'。  |
+|   9333    |   16  |   否  |   %s在遇到简单类型化元素或 'https://www.w3.org/2001/XMLSchema#anyType' 元素时不支持 '//' 后面跟有 'self'、'parent' 或 'descendant-or-self' 轴，但发现了 '%ls'。 |
 |   9334    |   16  |   否  |   %s不能对本地属性或具有 'ref' 属性的元素定义指定 'form' 属性。 位置: '%ls'。    |
 |   9335    |   16  |   否  |   %s不支持 XQuery 语法 '%ls'。 |
 |   9336    |   16  |   否  |   %s不支持 XML 架构语法 '%ls'。 |
@@ -4270,10 +4270,10 @@ ms.locfileid: "49384172"
 |   9461    |   16  |   否  |   以 '%.*ls' 开头的 XML %ls 为 %d 个字符长，其长度超出限制。 允许的最大长度为 %d 字符。  |
 |   9462    |   16  |   否  |   XML 分析: 行 %d，字符 %d，未读取所有值块区  |
 |   9463    |   16  |   否  |   XML 分析: 行 %d，字符 %d，xml:space 的值非法 |
-|   9464    |   16  |   否  |   XML 分析: 行 %d，字符 %d，XML 命名空间前缀 'xml' 只能与 URI http://www.w3.org/XML/1998/namespace 关联。 此 URI 不能与其他前缀一起使用。   |
+|   9464    |   16  |   否  |   XML 分析: 行 %d，字符 %d，XML 命名空间前缀 'xml' 只能与 URI https://www.w3.org/XML/1998/namespace 关联。 此 URI 不能与其他前缀一起使用。  |
 |   9465    |   16  |   否  |   XML 分析: 行 %d，字符 %d，XML 命名空间前缀 'xmlns' 已保留供 XML 使用。    |
-|   9466    |   16  |   否  |   XML 分析: 行 %d，字符 %d，XML 命名空间 URI (http://www.w3.org/XML/1998/namespace) 只能分配给前缀 'xml'。   |
-|   9467    |   16  |   否  |   XML 分析: 行 %d，字符 %d，xmlns 命名空间 URI (http://www.w3.org/2000/xmlns/) 已保留，不得使用。   |
+|   9466    |   16  |   否  |   XML 分析: 行 %d，字符 %d，XML 命名空间 URI (https://www.w3.org/XML/1998/namespace) 只能分配给前缀 'xml'。  |
+|   9467    |   16  |   否  |   XML 分析: 行 %d，字符 %d，xmlns 命名空间 URI (https://www.w3.org/2000/xmlns/) 已保留，不得使用。  |
 |   9480    |   16  |   否  |   XML 分析: 行 %d，字符 %d，不支持的 xml |
 |   9500    |   16  |   否  |   VALUE 方法中使用的数据类型 '%.*ls' 无效。  |
 |   9501    |   16  |   否  |   XQuery: 无法解析 sql:variable('%.*ls')。 必须将此变量声明为标量 TSQL 变量。   |
@@ -8894,7 +8894,7 @@ ms.locfileid: "49384172"
 |   33024   |   16  |   否  |   DLL 中的加密提供程序 %S_MSG '%ls' 不同于系统目录中记录的 ID 为 %d 的提供程序的 GUID。   |
 |   33025   |   16  |   否  |   加密提供程序属性 %S_MSG 无效。   |
 |   33026   |   16  |   否  |   GUID 为 '%ls' 的加密提供程序已存在。  |
-|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   由于 Authenticode 签名或文件路径无效，未能加载加密提供程序“%.*ls”。 请检查以前的消息，了解其他失败信息。    |
+|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   由于 Authenticode 签名或文件路径无效，未能加载加密提供程序“%.*ls”。 请检查以前的消息，了解其他失败信息。    |
 |   33027   |   16  |   否  |   无法加载库 '%.*ls'。 有关详细信息，请查看错误日志。 |
 |   [33028](mssqlserver-33028-database-engine-error.md) |   16  |   否  |   无法为 %S_MSG '%.*ls' 打开会话。 提供程序错误代码: %d。 (%S_MSG)   |
 |   33029   |   16  |   否  |   无法初始化加密提供程序。 提供程序错误代码: %d。 (%S_MSG) |
@@ -9069,7 +9069,7 @@ ms.locfileid: "49384172"
 
 ## <a name="see-also"></a>另请参阅
 [了解数据库引擎错误](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
-[数据库引擎错误的原因和解决方法](http://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
+[数据库引擎错误的原因和解决方法](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
 
   
   

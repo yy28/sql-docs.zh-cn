@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c7fe58cb279924ac60c2902c29dcd6bade82dd6f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029496"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813820"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -29,9 +29,9 @@ ms.locfileid: "50029496"
 若要下载 SQL Server 2017 Reporting Services，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55252)。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 预览版 Reporting Services
 
-SQL Server vNext CTP 2.0 Reporting Services 不支持预览版。 安装最新版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。 
+[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services 不适用于 CTP 2.1。 安装最新版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -76,12 +76,12 @@ SQL Server vNext CTP 2.0 Reporting Services 不支持预览版。 安装最新�
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   你可以通过品牌包使用组织的徽标和颜色来自定义 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 。  
   
   有关自定义品牌的详细信息，请参阅 [设置 Web 门户的品牌](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 你可以在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中直接创建与你所在的文件夹有上下文关系的 KPI。 在创建 KPI 时，可以选择数据集字段并汇总这些值。 还可以选择相关内容以钻取到更多详细信息。
   
@@ -95,7 +95,7 @@ SQL Server vNext CTP 2.0 Reporting Services 不支持预览版。 安装最新�
 Reporting Services 移动报表是针对各种外形规格进行了优化的专用报表，可以在用户访问移动设备上的报表时为其提供最佳体验。 移动报表提供各式各样的可视化效果：从时间表、类别图表和比较图表，到树状图和自定义地图。 将移动报表连接到各种数据源，包括本地 SQL Server Analysis Services 多维数据和表格数据。 在网格行和列可调整且移动报表元素灵活的设计图面上设计移动报表，这些报表可轻松缩放至任何屏幕大小。 然后，将这些移动报表保存到 Reporting Service 服务器，并在 iPad、iPhone、Android 手机和 Windows 10 设备上的浏览器或 Power BI 移动应用中进行查看和交互。
   
 #### <a name="mobile-report-publisher"></a>移动报表发布服务器  
- [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]允许你创建 SQL Server 移动报表并将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
+  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]允许你创建 SQL Server 移动报表并将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -147,7 +147,7 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
  你还可以选择适用于订阅输出的 PPTX 格式，并使用 Report Server URL 访问权限来呈现和导出报表。 例如，浏览器中的以下 URL 命令从报表服务器的命名实例导出报表。  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  有关详细信息，请参阅 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  
