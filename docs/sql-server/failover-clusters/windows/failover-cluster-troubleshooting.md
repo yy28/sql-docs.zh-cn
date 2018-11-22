@@ -57,7 +57,7 @@ ms.locfileid: "47608395"
   
 -   [推荐用于基于 Windows Server 2012 R2 的故障转移群集的修补程序和更新](https://support.microsoft.com/kb/2920151)  
   
--   [推荐用于基于 Windows Server 2012 的故障转移群集的修补程序和更新](https://support.microsoft.com/kb/278426)  
+-   [推荐用于基于 Windows Server 2012 的故障转移群集的修补程序和更新](https://support.microsoft.com/kb/2784261)  
   
 -   [推荐用于基于 Windows Server 2008 R2 的故障转移群集的修补程序和更新](https://support.microsoft.com/kb/980054)  
   
