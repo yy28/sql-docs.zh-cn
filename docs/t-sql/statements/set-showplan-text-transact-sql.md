@@ -27,12 +27,12 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fd5f24cf6effcac0682026ae49b933256176afe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834785"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558664"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  当 SET SHOWPLAN_TEXT 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行信息，但不执行语句。 将该选项设置为 ON 以后，将返回有关所有后续 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的执行计划信息，直到将该选项设置为 OFF 为止。 例如，如果在 SET SHOWPLAN_TEXT 为 ON 时执行 CREATE TABLE 语句，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息，以便通知用户：指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_TEXT 是 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成包含执行计划信息的报表。  
   
- SET SHOWPLAN_TEXT 旨在返回可由 Microsoft Win32 命令提示符应用程序（如 osql 实用工具）的可读取输出。 SET SHOWPLAN_ALL 则返回更详细的输出，以使专门处理其输出的程序进行处理。  
+ SET SHOWPLAN_TEXT 旨在返回可由 Microsoft Win32 命令提示符应用程序（如 sqlcmd 实用工具）读取的输出。 SET SHOWPLAN_ALL 则返回更详细的输出，以使专门处理其输出的程序进行处理。  
   
  不能在存储过程中指定 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL。 它们必须是批处理中的唯一语句。  
   

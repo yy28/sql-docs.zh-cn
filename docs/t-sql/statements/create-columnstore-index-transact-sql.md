@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336296"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699405"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -369,12 +369,15 @@ filegroup_name
 **非聚集列存储索引：**
 -   包含的列数不能超过 1024。
 -   无法创建为基于约束的索引。 对于具有列存储索引的表，可以具有唯一约束、主键约束和外键约束。 总是通过行存储索引强制执行约束。 无法使用列存储（群集或非群集）索引强制执行约束。
--   不能基于视图或索引视图创建。  
 -   不能包含稀疏列。  
 -   不能使用 **ALTER INDEX** 语句进行更改。 若要更改非聚集索引，必须先删除该列存储索引，然后重新创建它。 可以使用 **ALTER INDEX** 禁用并重新生成列存储索引。  
 -   不能使用 **INCLUDE** 关键字创建。  
 -   不能包括用来对索引排序的 **ASC** 或 **DESC** 关键字。 根据压缩算法对列存储索引排序。 排序将抵销许多性能优势。  
 -   不能在非聚集列存储索引中包含 nvarchar(max)、varchar(max) 和 varbinary(max) 类型的大型对象 (LOB) 列。 仅从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版本开始以及在高级层、标准层（S3 及更高）以及所有 VCore 产品/服务层配置的 Azure SQL 数据库中，聚集列存储索引才支持 LOB 类型。 请注意，以前的版本不管是在聚集列存储索引还是非聚集列存储索引中都不支持 LOB 类型。
+
+
+> [!NOTE]  
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以在索引视图上创建非聚集列存储索引。  
 
 
  **列存储索引不能与以下功能结合使用：**  
@@ -392,6 +395,7 @@ filegroup_name
 -   变更数据捕获。 不能对非聚集列存储索引 (NCCI) 使用变更数据捕获，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
 -   可读辅助副本。 不能通过 Always OnReadable 可用性组的可读辅助副本访问聚集列存储索引 (CCI)。  可以通过可读辅助副本访问非聚集列存储索引 (NCCI)。  
 -   多重活动结果集 (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 对包含列存储索引的表执行只读连接。 不过，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支持使用 MARS 对包含列存储索引的表执行并发数据操作语言 (DML) 操作。 如果发生这种情况，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会终止连接，并中止事务。  
+-  无法在视图或索引视图上创建非聚集列存储索引。
   
  有关列存储索引的性能优势和限制的信息，请参阅[列存储索引概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
@@ -731,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 将列存储表转换回行存储堆  
- 使用 [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 删除聚集列存储索引并将表转换为行存储堆。 此示例会将 cci_xDimProduct 表转换为行存储堆。 可继续分配该表，但将其存储为堆。  
+ 使用 [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 删除聚集列存储索引并将表转换为行存储堆。 此示例会将 cci_xDimProduct 表转换为行存储堆。 可继续分配该表，但将其存储为堆。  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

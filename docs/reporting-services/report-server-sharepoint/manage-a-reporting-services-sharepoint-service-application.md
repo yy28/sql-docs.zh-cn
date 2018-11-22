@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5edf3a09bb12f39541413e52ba5afcabe20fd5c8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021671"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814000"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
 
@@ -92,7 +92,7 @@ ms.locfileid: "50021671"
 |设置|注释|  
 |-------------|--------------|  
 |启用报表生成器下载|默认值为 TRUE。<br /><br /> 指定客户端是否能够看到可用于下载报告生成器应用程序的按钮。|  
-|报表生成器启动 URL|当报表服务器不使用默认报表生成器 URL 时，可指定自定义 URL。 此设置是可选的。 如果不指定值，将使用默认 URL，它将启动报表生成器。 若要将 Report Builder 3.0 作为 Click-Once 应用程序启动，请输入以下值： http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
+|报表生成器启动 URL|当报表服务器不使用默认报表生成器 URL 时，可指定自定义 URL。 此设置是可选的。 如果不指定值，将使用默认 URL，它将启动报表生成器。 要将报表生成器 3.0 作为 Click-Once 应用程序启动，请输入以下值： https://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
 |启用客户端打印|默认值为 TRUE。<br /><br /> 指定用户是否可以下载提供打印选项的客户端控件。|  
 |编辑会话超时|默认值为 7200 秒。|  
 |编辑会话缓存限制|默认值为 5。|  

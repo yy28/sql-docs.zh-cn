@@ -11,12 +11,12 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c1c48583a37a959a0922dc12ac72ef064e51c91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769488"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629540"
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>第 1-9 课 - 测试第 1 课教程包
 在本课中，已经完成了下列任务：  
@@ -44,7 +44,7 @@ ms.locfileid: "47769488"
   
 1.  在 **“调试”** 菜单中，单击 **“启动调试”**。  
   
-    包将开始运行，结果有 1097 个行被成功添加到 **AdventureWorksDW2012** 中的 **FactCurrency**事实数据表中。  
+    包将开始运行，结果有 1097 行被成功添加到 AdventureWorksDW2012 中的 NewFactCurrencyRate 事实数据表中。  
   
 2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
   

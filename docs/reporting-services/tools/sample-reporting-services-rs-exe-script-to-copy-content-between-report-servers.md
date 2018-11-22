@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b279c177a7e5b627c8ead3103cb2bd8ad6a58d78
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b44b5afff54cf0630e3bde1d5668862d1d969133
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031436"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813730"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本
 
@@ -104,7 +104,7 @@ ms.locfileid: "50031436"
   
  下面的示例将本机模式 **Sourceserver** 中的内容迁移到本机模式 **Targetserver**。  
   
- `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
+ `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
  **使用注意事项：**  
   
@@ -187,13 +187,13 @@ ms.locfileid: "50031436"
   
 -   SOURCE_URL 和 TARGET_URL 必须是指向源和目标 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的有效报表服务器 URL。 在本机模式下，报表服务器 URL 如以下 URL 所示：  
   
-    -   `http://servername/reportserver`  
+    -   `https://servername/reportserver`  
   
      在 SharePoint 模式下，URL 如以下 URL 所示：  
   
-    -   `http://servername/_vti_bin/reportserver`  
+    -   `https://servername/_vti_bin/reportserver`  
   
--   在 SharePoint 中提供给用户的虚拟文件夹结构可能与基础结构不同。 在浏览器中打开 `http://servername/_vti_bin/reportserver` 或 `http://servername/sites/site_name/_vti_bin/reportserver` 可看到非虚拟文件夹结构。 对于 SharePoint 模式下的服务器，这有助于将源文件夹和目标文件夹设置为“/”以外的内容。  
+-   在 SharePoint 中提供给用户的虚拟文件夹结构可能与基础结构不同。 在浏览器中打开 `https://servername/_vti_bin/reportserver` 或 `https://servername/sites/site_name/_vti_bin/reportserver` 可看到非虚拟文件夹结构。 对于 SharePoint 模式下的服务器，这有助于将源文件夹和目标文件夹设置为“/”以外的内容。  
   
 -   不迁移密码，并且必须重新输入密码，例如具有存储凭据的数据源。  
   
@@ -217,13 +217,13 @@ ms.locfileid: "50031436"
  下面的示例将本机模式 **Sourceserver** 中的内容迁移到本机模式 **Targetserver**。  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
 ```  
   
  以下示例添加安全开关：  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> 本机模式到 SharePoint 模式 – 根网站  
@@ -232,14 +232,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_with_site"></a> 本机模式到 SharePoint 模式 –“bi”网站集  
  下面的示例将本机模式服务器的内容迁移到包含网站集“sites/bi”和共享文档库的 SharePoint 服务器。 该脚本在目标文档库中创建文件夹。 例如，该脚本在目标文档库中创建“报表”和“数据源”文件夹。  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 模式到 SharePoint 模式 –“bi”网站集  
@@ -250,7 +250,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 -   到包含网站集“sites/bi”和共享文档库的 **TargetServer** SharePoint 服务器。  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_to_native_Azure_vm"></a> 本机模式到本机模式 – Windows Azure 虚拟机  
@@ -261,7 +261,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
 -   到在 Windows Azure 虚拟机上运行的 **TargetServer** 本机模式报表服务器。 “TargetServer”未加入“SourceServer”的域，并且“User2”是 Windows Azure 虚拟机“TargetServer”上的管理员。  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
@@ -275,7 +275,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 -   到在 Windows Azure 虚拟机上运行的 **TargetServer** 本机模式报表服务器。 “TargetServer”未加入“SourceServer”的域，并且“User2”是 Windows Azure 虚拟机“TargetServer”上的管理员。  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
 ##  <a name="bkmk_verification"></a> 验证  
@@ -310,11 +310,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> 故障排除  
  使用跟踪标志 **–t** 可获得详细信息。 例如，如果您运行此脚本并看到如下消息  
   
--   无法连接到服务器： http://\<servername>/ReportServer/ReportService2010.asmx  
+-   无法连接到服务器： https://\<servername>/ReportServer/ReportService2010.asmx  
   
  使用“–t”标记再次运行该脚本，以便看到如下消息：  
   
--   System.Exception: 无法连接到服务器: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **请求失败，具有 HTTP 状态 401: 未授权**。   在 System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse （SoapClientMessage 消息、 WebResponse 响应、 流 responseStream、 布尔值 asyncCall） 在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke （字符串方法名称，对象 [] 参数） 在 Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() 在 Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService （字符串 url、 String userName、 字符串密码字符串域、 Int32 超时) 在 Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()-内部异常堆栈跟踪结束----  
+-   System.Exception: 无法连接到服务器: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: 请求失败，具有 HTTP 状态 401: 未授权。   在 System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse （SoapClientMessage 消息、 WebResponse 响应、 流 responseStream、 布尔值 asyncCall） 在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke （字符串方法名称，对象 [] 参数） 在 Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() 在 Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService （字符串 url、 String userName、 字符串密码字符串域、 Int32 超时) 在 Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()-内部异常堆栈跟踪结束----  
   
 ## <a name="see-also"></a>另请参阅  
  [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

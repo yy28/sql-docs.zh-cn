@@ -23,12 +23,12 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c7f8c07725d702eb09cf538dc688136f230659c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2612f61d9a64d8b7d7cf156a1bd03d32d29dc1c9
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812715"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289877"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  是应用审核操作或审核操作组的数据库中的表、视图或其他安全对象。 有关详细信息，请参阅 [Securables](../../relational-databases/security/securables.md)。  
   
  principal  
- 应用审核操作或审核操作组的数据库主体的名称。 有关详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
+ 应用审核操作或审核操作组的数据库主体的名称。 使用数据库主体 `public` 审核所有数据库主体。 有关详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
  WITH ( STATE = { ON | OFF } )  
  允许或禁止审核收集此审核规范的记录。  
@@ -91,8 +91,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
  在创建数据库审核规范之后，拥有 `CONTROL SERVER`、`ALTER ANY DATABASE AUDIT` 权限的主体或 `sysadmin` 帐户可查看该规范。  
   
-## <a name="examples"></a>示例  
- 下面的示例创建名为 `Payrole_Security_Audit` 的服务器审核，然后创建名为 `Payrole_Security_Audit` 的数据库审核规范，该规范针对 `SELECT` 数据库中的 `INSERT` 表，审核 `dbo` 用户发出的 `HumanResources.EmployeePayHistory` 和 `AdventureWorks2012` 语句。  
+## <a name="examples"></a>示例
+
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 审核任何数据库主体的表上的 SELECT 和 INSERT 
+ 下面的示例针对 `SELECT` 数据库中的 `INSERT` 表，创建名为 `Payrole_Security_Audit` 的服务器审核，然后创建可由任何用户 (`public`) 审核 `HumanResources.EmployeePayHistory` 和 `AdventureWorks2012` 语句的数据库审核规范，其名称为 `Payrole_Security_Audit`。  
   
 ```  
 USE master ;  
@@ -116,8 +118,39 @@ ADD (SELECT , INSERT
      ON HumanResources.EmployeePayHistory BY dbo )  
 WITH (STATE = ON) ;  
 GO  
-```  
+``` 
+
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 审核特定数据库角色“sales”架构中所有对象上的任何 DML（INSERT、UPDATE 或 DELETE）  
+ 下面的示例针对 `AdventureWorks2012` 数据库中 `Sales` 架构的所有对象，创建名为 `DataModification_Security_Audit` 的服务器审核，然后创建可由新数据库角色 `SalesUK` 中的用户审核 `INSERT`、`UPDATE` 和 `DELETE` 语句的数据库审核规范，其名称为 `Audit_Data_Modification_On_All_Sales_Tables`。  
   
+```  
+USE master ;  
+GO  
+-- Create the server audit.
+-- Change the path to a path that the SQLServer Service has access to. 
+CREATE SERVER AUDIT DataModification_Security_Audit  
+    TO FILE ( FILEPATH = 
+'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ; 
+GO  
+-- Enable the server audit.  
+ALTER SERVER AUDIT DataModification_Security_Audit   
+WITH (STATE = ON) ;  
+GO  
+-- Move to the target database.  
+USE AdventureWorks2012 ;  
+GO  
+CREATE ROLE SalesUK
+GO
+-- Create the database audit specification.  
+CREATE DATABASE AUDIT SPECIFICATION Audit_Data_Modification_On_All_Sales_Tables  
+FOR SERVER AUDIT DataModification_Security_Audit  
+ADD ( INSERT, UPDATE, DELETE  
+     ON Schema::Sales BY SalesUK )  
+WITH (STATE = ON) ;    
+GO  
+```  
+
+
 ## <a name="see-also"></a>另请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   

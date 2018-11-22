@@ -11,12 +11,12 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31c66aaacdcebfeabf43cc6466659e25d47d4d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606935"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269740"
 ---
 # <a name="the-memory-optimized-filegroup"></a>内存优化的文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47606935"
   
 以下是针对内存优化文件组的限制：  
   
--   创建内存优化的文件组后，您只能通过删除数据库来删除它。 在生产环境中，您不太可能需要删除内存优化的文件组。  
+-   使用内存优化的文件组后，只能通过删除数据库来删除它。 在生产环境中，您不太可能需要删除内存优化的文件组。  
   
 -   在内存优化的文件组中，您无法删除非空容器或将数据和差异文件对移至另一个容器。  
   

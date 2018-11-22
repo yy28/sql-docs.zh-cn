@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614775"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813680"
 ---
 # <a name="html-device-information-settings"></a>HTML 设备信息设置
 下表列出了以 HTML 格式呈现时的设备信息设置。  
@@ -39,12 +39,12 @@ ms.locfileid: "47614775"
 |**LinkTarget**|报表中超链接的目标。 可以通过提供窗口的名称来确定窗口或框架的目标（如 LinkTarget=window_name），也可以使用 LinkTarget=_blank 确定新窗口的目标。 其他有效的目标名称包括 _self、_parent 和 _top。|  
 |**OnlyVisibleStyles(\*)**|指示仅为当前呈现的页生成共享样式。|  
 |**OutlookCompat**|指示是否呈现可改善报表在 Outlook 中的外观的额外元数据。 对于其他应用程序，默认值为 **false**。|  
-|**Parameters**|指示是显示还是隐藏工具栏的参数区域。 如果您将此参数设置为值 **true**，将显示工具栏的参数区域。 此参数的默认值为 **true**。|  
+|**参数**|指示是显示还是隐藏工具栏的参数区域。 如果您将此参数设置为值 **true**，将显示工具栏的参数区域。 此参数的默认值为 **true**。|  
 |**PrefixId**|在与 **HTMLFragment**一起使用时，请为已创建的 HTML 碎片中的所有 **ID** 属性添加指定的前缀。|  
 |**ReplacementRoot(\*)**|在 ReportViewer 控件之外呈现时预置在报表中的所有钻取、切换和书签链接之前的字符串。 例如，可使用此设置将用户的单击操作重定向到某个自定义页。|  
 |**ResourceStreamRoot(\*)**|此字符串预置在所有图像资源的 URL 之前，如用于切换或排序的图像。|  
 |**部分**|要呈现的报表的页码。 值为 **0** 指示将呈现报表的所有部分。 默认值是 **1**秒。|  
-|**StreamRoot (\*)**|一个路径，用于添加在由报表服务器返回的 HTML 报表中 IMG 元素的 **src** 属性的值之前。 默认情况下，报表服务器提供此路径。 可以使用此设置为报表中的图像指定根路径（例如， http://\<servername>/resources/companyimages）。|  
+|**StreamRoot (\*)**|一个路径，用于添加在由报表服务器返回的 HTML 报表中 IMG 元素的 **src** 属性的值之前。 默认情况下，报表服务器提供此路径。 可以使用此设置为报表中的图像指定根路径（例如， https://\<servername>/resources/companyimages）。|  
 |**StyleStream**|指示是否将样式和脚本创建为单独的流，而不是在文档中创建它们。 默认值是 **false**秒。|  
 |**工具栏**|指示是显示还是隐藏工具栏。 此参数的默认值为 **true**。 如果此参数的值为 **false**，将忽略所有剩余的选项（文档结构图除外）。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。<br /><br /> 当您使用 URL 访问以呈现报表时，将呈现报表查看器工具栏。 此工具栏不通过 SOAP API 呈现。 然而， **Toolbar** 设备信息设置影响使用 SOAP **Render** 方法时显示报表的方式。 如果当使用 SOAP 呈现到 HTML 时，此参数的值为 **true** ，则只呈现报表的第一部分。 如果值为 **false**，则整个 HTML 报表将呈现为单个 HTML 页。|  
 |**UserAgent**|发出请求的浏览器的 **user-agent** 字符串，可在 HTTP 请求中找到。|  

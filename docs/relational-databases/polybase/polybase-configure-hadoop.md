@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806717"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606557"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -35,11 +35,9 @@ ms.locfileid: "49806717"
 
 - PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 Hadoop 遵循其新版本的“Major.Minor.Version”模式，且主要和次要版本中支持的所有版本均受支持。 支持以下 Hadoop 提供程序：
 
-  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
-  - Linux 上的 Hortonworks HDP 2.1 - 2.6
-  - Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
-  - Linux 上的 Cloudera CDH 4.3  
-  - Linux 上的 Cloudera CDH 5.1 – 5.5、5.9 - 5.13
+  - Linux 上的 Hortonworks HDP 1.3、2.1-2.6、3.0
+  - Windows Server 上的 Hortonworks HDP 1.3、2.1-2.3
+  - Linux 上的 Cloudera CDH 4.3、5.1 – 5.5、5.9 - 5.13
 
 > [!NOTE]
 > 从 SQL Server 2016 SP1 CU7 和 SQL Server 2017 CU3 开始，PolyBase 支持 Hadoop 加密区域。 如果使用 [PolyBase 横向扩展组](polybase-scale-out-groups.md)，所有计算节点还必须在包含对 Haddop 加密区域的支持的内部版本上。
@@ -75,7 +73,7 @@ ms.locfileid: "49806717"
 1. 在 SQL Server 的安装路径中查找文件 **yarn-site.xml** 。 通常情况下，该路径为：  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. 对于 Hadoop 计算机，在 Hadoop 配置目录中查找类似文件。 在文件中，查找并复制配置密钥 yarn.application.classpath 的值。  

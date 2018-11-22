@@ -11,22 +11,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419402"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703765"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 本主题介绍 SQL Server 2017 的限制和问题。 若要了解相关信息，请参阅：
 - [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux 发行说明](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [SQL Server 2017 累积更新](http://aka.ms/sql2017cu)，了解有关最新累积更新 (CU) 版本的信息
+- [SQL Server 2017 累积更新](https://aka.ms/sql2017cu)，了解有关最新累积更新 (CU) 版本的信息
 
 **试用 SQL Server！**
-- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [启动具有 SQL Server 2017 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
@@ -44,12 +44,12 @@ ms.locfileid: "49419402"
     3. 再次对原始共享名称选中“针对文件 I/O 流访问启用 FILESTREAM”，然后单击“应用”。
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- 问题及其对客户的影响：在用户权限页上，当向实体树视图中的根级别授予权限时，看到以下错误：`"The model permission cannot be saved. The object guid is not valid"`
+- **问题及其对客户的影响**： 在用户权限页上，当向实体树视图中的根级别授予权限时，看到以下错误：`"The model permission cannot be saved. The object guid is not valid"`
 
 - **解决方法：** 
   - 向树视图中的子节点而非根级别授予权限。
   - 或多个
-  - 运行以下 MDS 团队博客中介绍的脚本：[在实体级别上应用权限时出错](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+  - 运行以下 MDS 团队博客中介绍的脚本：[在实体级别上应用权限时出错](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services
 - **问题和对客户的影响：** 对于 1400 兼容级别的表格模型，适用于以下源的数据连接器尚不可用。
@@ -116,7 +116,7 @@ ms.locfileid: "49419402"
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **问题和客户影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项 *。系统找不到指定文件。*
+- **问题和客户影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项 *。系统找不到指定文件。
 
    此外，尝试重新安装 2016 版 TSqlLanguageService.msi 也会失败，并且会看到以下消息：无法安装 Microsoft SQL Server 2016 T-SQL 语言服务，因为计算机上已安装更高版本。
 

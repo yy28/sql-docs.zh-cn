@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905131"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672936"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>改进 Windows 上的 PolyBase 横向扩展组
 
@@ -52,7 +52,7 @@ ms.locfileid: "48905131"
   
    - PQTH4A-CMP02  
   
-2. 域帐户：PQTH4A\PolybaseUser  
+2. 域帐户：PQTH4A\PolyBaseUser  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>在所有机器上安装具有 PolyBase 的 SQL Server
 
@@ -60,7 +60,7 @@ ms.locfileid: "48905131"
   
 2. 在“功能选择”页上，选择“针对外部数据的 PolyBase 查询服务”。
   
-3. 在“服务器配置”页上，对 SQL Server PolyBase 引擎和 SQL Server PolyBase 数据移动服务使用域账户 PQTH4A\PolybaseUser。
+3. 在“服务器配置”页上，对 SQL Server PolyBase 引擎和 SQL Server PolyBase 数据移动服务使用域帐户 PQTH4A\PolybaseUser。
   
 4. 在“PolyBase 配置”页中，选择“将 SQL Server 实例用作 PolyBase 横向扩展组的一部分”选项。 这将打开防火墙以允许 PolyBase 服务的传入连接。
   
@@ -106,6 +106,6 @@ ms.locfileid: "48905131"
   
 ## <a name="next-steps"></a>后续步骤  
 
-有关故障排除，请参阅 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。
+有关故障排除，请参阅 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。
   
 有关 PolyBase 的详细信息，请参阅 [PolyBase 概述](../../relational-databases/polybase/polybase-guide.md)。

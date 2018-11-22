@@ -11,24 +11,24 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384072"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642074"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 课：使用 SSIS 创建项目和基本包
 
-在本课中，将创建一个简单 ETL 包，该包可以从单个平面文件源中提取数据，使用两个查找转换组件转换该数据，然后将该数据写入 **AdventureWorksDW2012** 的 **FactCurrency**事实数据表中。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
+本课中，你将创建一个简单 ETL 包，该包可以从单个平面文件源提取数据，使用两个查找转换组件转换该数据，然后将该数据写入“AdventureWorksDW2012”中的“FactCurrencyRate”事实数据表的副本。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
   
 > [!IMPORTANT]  
-> 本教程需要 **AdventureWorksDW2012** 示例数据库。 有关安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](http://go.microsoft.com/fwlink/p/?LinkID=526910)。  
+> 本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](https://go.microsoft.com/fwlink/p/?LinkID=526910)。  
   
 ## <a name="understanding-the-package-requirements"></a>了解包要求  
 本教程需要 Microsoft SQL Server Data Tools。  
   
-有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](http://msdn.microsoft.com/data/hh297027)。  
+有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](https://msdn.microsoft.com/data/hh297027)。  
   
 在创建包之前，需要充分了解在源数据和目标数据中使用的格式。 了解了这些数据格式后，便可定义将源数据映射到目标数据所需的转换。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "49384072"
 在使用平面文件源数据时，需要了解平面文件连接管理器如何解释平面文件数据，这一点很重要。 如果平面文件源是 Unicode 编码的，则平面文件连接管理将所有列定义为 [DT_WSTR]，默认列宽为 50。 如果平面文件源是 ANSI 编码的，则将列定义为 [DT_STR]，默认列宽为 50。 您可能必须更改这些默认设置，才能使字符串列类型与所使用的数据更相符。 为此，您需要查看将写入数据的目标的数据类型，然后在平面文件连接管理器中选择正确的类型。  
   
 ### <a name="looking-at-the-destination"></a>查看目标  
-源数据的最终目标是 **AdventureWorksDW** 中的 **FactCurrency**事实数据表。 **FactCurrency** 事实数据表有四列，并且与两个维度表有关系，如下表所示。  
+源数据的最终目标是“AdventureWorksDW”中“FactCurrencyRate”事实数据表的副本。 “FactCurrencyRate”事实数据表有四列，并且与两个维度表有关，如下表所示。  
   
 |列名|数据类型|查找表|查找列|  
 |---------------|-------------|----------------|-----------------|  
@@ -65,10 +65,10 @@ ms.locfileid: "49384072"
   
 |平面文件列|表名|列名|数据类型|  
 |--------------------|--------------|---------------|-------------|  
-|0|AdventureWorksDW2012|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
 |2|DimDate|FullDateAlternateKey|日期|  
-|3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  

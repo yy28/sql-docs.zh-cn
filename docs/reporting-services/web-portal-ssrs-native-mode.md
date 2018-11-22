@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021891"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814330"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Web 门户（SSRS 本机模式）
 
@@ -75,9 +75,9 @@ Web 门户是一种 Web 应用程序，可通过在浏览器窗口的地址栏�
 
 2. 在 Web 浏览器的地址栏中，键入 Web 门户 URL。
 
-    默认情况下，该 URL 为 *http://[ComputerName]/reports*。
+    默认情况下，该 URL 为 https://[ComputerName]/reports。
 
-    报表服务器可能已配置为使用特定的端口。 例如， *http://[ComputerName]:80/reports* 或 *http://[ComputerName]:8080/reports*。
+    报表服务器可能已配置为使用特定的端口。 例如， https://[ComputerName]:80/reports 或 https://[ComputerName]:8080/reports。
 
 ## <a name="grouping-by-categories"></a>按类别分组
 

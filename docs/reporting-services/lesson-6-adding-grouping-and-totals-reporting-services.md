@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051010"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813670"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教程课程中，你将向 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中添加分组和总计以便组织和汇总数据。  
@@ -115,7 +115,7 @@ ms.locfileid: "50051010"
 3.  在 **TargetServerURL** 中，键入报表服务器的名称，例如   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` 如果你的设计报表在报表服务器上，则使用。  
+    - `https://localhost/reportserver` 如果你的设计报表在报表服务器上，则使用。  
   
   
 4. 请注意，“TargetReportFolder”是教程，是项目的名称。  这是在下一步骤中将报表部署到其中的文件夹的名称。  
@@ -129,7 +129,7 @@ ms.locfileid: "50051010"
     > Skipping 'Sales Orders.rdl'. 项是最新版本。  
     > 生成完成 -- 0 个错误，0 个警告  
     > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
-    > 部署到 http://[server name]/reportserver  
+    > 部署到 https://[server name]/reportserver  
     > 部署 report '/tutorial/Sales Orders'。  
     > 部署完成 - 0 个错误，0 个警告  
     > ==========生成：1 个成功或最新，0 个失败，0 个跳过==========  
@@ -143,8 +143,8 @@ ms.locfileid: "50051010"
   
     浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户 URL。   
     **注意：** 门户 URL 为“Reports”，而不是“Reportserver”的报表服务器 URL。  例如：   
-    `http://<server name>/reports`的用户。  
-    如果在报表服务器上设计报表，则 `http://localhost/reports` 有效。  
+    `https://<server name>/reports`的用户。  
+    如果在报表服务器上设计报表，则 `https://localhost/reports` 有效。  
   
 8.  浏览到包含该报表的文件夹。 默认名称是教程，即项目的名称或在项目属性中的“TargetReportFolder fiedl”中键入的名称。   
 单击报表“Sales Orders”的名称以在浏览器中查看呈现的报表。  

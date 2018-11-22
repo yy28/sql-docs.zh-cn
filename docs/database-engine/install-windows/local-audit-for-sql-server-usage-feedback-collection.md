@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4b53d5804668a46ade48d0beb41eae8fb7650374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794385"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601673"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用反馈收集的本地审核
 
@@ -27,7 +27,7 @@ ms.locfileid: "47794385"
 
 ## <a name="introduction"></a>简介
 
-Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和发送关于计算机或设备的信息。 这被称为“标准计算机信息”。 [SQL Server 使用反馈收集](http://support.microsoft.com/kb/3153756) 的本地审核组件将服务收集的数据写入指定文件夹（表示将发送给 Microsoft 的数据（日志））。 本地审核的用途是使客户可以出于合规性、监管或隐私验证原因而查看 Microsoft 使用此功能收集的所有数据。  
+Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和发送关于计算机或设备的信息。 这被称为“标准计算机信息”。 [SQL Server 使用反馈收集](https://support.microsoft.com/kb/3153756) 的本地审核组件将服务收集的数据写入指定文件夹（表示将发送给 Microsoft 的数据（日志））。 本地审核的用途是使客户可以出于合规性、监管或隐私验证原因而查看 Microsoft 使用此功能收集的所有数据。  
 
 从 SQL Server 2016 CU2 开始，本地审核可在实例级别针对 SQL Server 数据库引擎和 Analysis Services (SSAS) 进行配置。 在 SQL Server 2016 CU4 和 SQL Server 2016 SP1 中，也为 SQL Server Integration Services (SSIS) 启用了本地审核功能。 在安装过程中安装的其他 SQL Server 组件以及在安装之后下载或安装的 SQL Server Tools 没有使用反馈收集的本地审核功能。 
 
@@ -37,7 +37,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 1. 实例修补为 SQL Server 2016 RTM CU2 或更高版本。 对于 Integration Services，实例被修补为 SQL 2016 RTM CU4 或 SQL 2016 SP1
 
-1. 用户必须是系统管理员，或是具有添加和修改注册表项、创建文件夹、管理文件夹安全性以及停止/启动 Windows 服务的访问权限的角色。  
+1. 用户必须是系统管理员，或是具有添加和修改注册表项、创建文件夹、管理文件夹安全性以及停止/启动 Windows 服务的访问权限的角色。  
 
 ## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>打开本地审核之前的预配置步骤 
 
@@ -66,7 +66,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>为本地审核文件配置新文件夹。    
 
-创建本地审核将在其中写入日志的新文件夹（本地审核目录）。 例如，数据库引擎的默认实例的本地审核目录完整路径是：C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\。 
+创建本地审核将在其中写入日志的新文件夹（本地审核目录）。 例如，数据库引擎的默认实例的本地审核目录完整路径是：C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\。 
  
   >[!NOTE] 
   >将本地审核的目录路径配置为 SQL Server 安装路径之外的其他路径，以避免允许审核功能和修补导致与 SQL Server 有关的潜在问题。
@@ -127,7 +127,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 完成预配置步骤之后，可以打开本地审核。 为此，请使用系统管理员帐户或具有修改注册表项的访问权限的角色，通过执行以下步骤来打开或关闭本地审核。 
 
-1. 启动 **regedit**。  
+1. 启动 **regedit**。  
 
 1. 导航到相应的 CPE [路径](#create-a-registry-key-setting-to-configure-local-audit-target-directory)。 
 
@@ -162,9 +162,9 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 ## <a name="maintenance"></a>维护 
 
-1. 若要限制本地审核写入的文件的磁盘空间使用，请设置策略或定期作业以清理本地审核目录，从而删除较旧的不需要的文件。  
+1. 若要限制本地审核写入的文件的磁盘空间使用，请设置策略或定期作业以清理本地审核目录，从而删除较旧的不需要的文件。  
 
-2. 保护本地审核目录路径，以便只有相应人员才能访问它。 请注意，日志文件包含[如何配置 SQL Server 2016 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)中概述的信息。 针对此文件的访问权限会阻止组织的大多数成员读取它。  
+2. 保护本地审核目录路径，以便只有相应人员才能访问它。 请注意，日志文件包含[如何配置 SQL Server 2016 以向 Microsoft 发送反馈](https://support.microsoft.com/kb/3153756)中概述的信息。 针对此文件的访问权限会阻止组织的大多数成员读取它。  
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>本地审核输出数据结构的数据字典 
 
@@ -177,9 +177,9 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 - data 包含对应查询执行（花费时间为 queryTimeInTicks）的输出。
 - T-SQL 查询的**queryIdentifiers** 具有查询中存储的 T-SQL 查询定义。
 
-| 逻辑本地审核信息层次结构 | 相关列 |
+| 逻辑本地审核信息层次结构 | 相关列 |
 | ------ | -------|
-| 标题 | emitTime、schemaVersion 
+| 标题 | emitTime、schemaVersion 
 | 计算机 | operatingSystem 
 | 实例 | instanceUniqueID、correlationID、clientVersion 
 | Session | sessionID、traceName 
@@ -188,12 +188,12 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>名称/值对定义和示例 
 
-下面列出的列表示本地审核文件输出的顺序。 采用 SHA 256 的单向哈希常常是下面一些列的匿名值。  
+下面列出的列表示本地审核文件输出的顺序。 采用 SHA 256 的单向哈希常常是下面一些列的匿名值。  
 
 | “属性” | 描述 | 示例值
 |-------|--------| ----------|
 |instanceUniqueID| 匿名实例标识符 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|schemaVersion| SQLCEIP 的架构版本 |  3 
+|schemaVersion| SQLCEIP 的架构版本 |  3 
 |emitTime |数据点发出时间 (UTC) | 2016-09-08T17:20:22.1124269Z 
 |sessionID | 用于处理 SQLCEIP 服务的会话标识符 | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 |correlationId | 其他标识符的占位符 | 0 
@@ -204,8 +204,8 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 |traceName | 跟踪的类别：（SQLServerXeQueries、SQLServerPeriodicQueries、SQLServerOneSettingsException） | SQLServerPeriodicQueries 
 |queryIdentifier | 查询的标识符 | SQLServerProperties.002 
 |data   | 以 T-SQL 查询、XE 会话或应用程序输出的形式，对 queryIdentifier 收集的信息的输出 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Query| 如果适用，是与生成数据的 queryIdentifier 相关的 T-SQL 查询定义。        此组件不会由 SQL Server CEIP 服务上传。 它包含在本地审核中仅供客户参考。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | 具有以下跟踪类别的查询执行所需的持续时间：（SQLServerXeQueries、SQLServerPeriodicQueries） |  0 
+|Query| 如果适用，是与生成数据的 queryIdentifier 相关的 T-SQL 查询定义。        此组件不会由 SQL Server CEIP 服务上传。 它包含在本地审核中仅供客户参考。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | 具有以下跟踪类别的查询执行所需的持续时间：（SQLServerXeQueries、SQLServerPeriodicQueries） |  0 
  
 ### <a name="trace-categories"></a>跟踪类别 
 我们当前收集以下跟踪类别： 
@@ -263,7 +263,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
         "Version": "Microsoft SQL Server 2017 (RTM-CU6) (KB4101464) - 14.0.3025.34 (X64) \n\tApr  9 2018 18:00:41 \n\tCopyright (C) 2017 Microsoft Corporation\n\tEnterprise Edition: Core-based Licensing (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 16299: )\n"
       }
     ],
-    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolybaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolybaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
+    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolyBaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolyBaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
     "queryTimeInTicks": 0
   },
   {
@@ -322,7 +322,7 @@ DBA 需要自行管理该目录中文件的清理，以避免占用过多磁盘�
 
 **是否存在可以用于读取此 JSON 输出的客户端或工具？**
 可以使用记事本、Visual Studio 或选择的任何 JSON 读取器来读取输出。
-或者，可以按如下所示在 SQL Server 2016 实例中读取 JSON 文件并分析数据。 有关如何在 SQL Server 中读取 JSON 文件的更多详细信息，请访问 [使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 将 JSON 文件导入 SQL Server](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)。
+或者，可以按如下所示在 SQL Server 2016 实例中读取 JSON 文件并分析数据。 有关如何在 SQL Server 中读取 JSON 文件的更多详细信息，请访问 [使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 将 JSON 文件导入 SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

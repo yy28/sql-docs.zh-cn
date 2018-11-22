@@ -15,12 +15,12 @@ ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 46dc98904bc82a167fa1c014b5ace8b8699170a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82ca5e58e5e24c128e37a9335fd87bc3bb2d4e28
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626215"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700255"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>叶成员临时表 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47626215"
 |**Code**<br /><br /> 必需，自动为 **ImportType1** 或 **2** 生成代码的情况除外。有关详细信息，请参阅[自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)|成员的唯一代码。||  
 |**名称**<br /><br /> 可选|成员的名称。||  
 |**NewCode**|仅当要更改成员代码时才使用。||  
-|\<属性名称>|实体中的每个属性对应的列。 对于 **ImportType** 为 **0** 或 **2**时使用它。 对于自由格式属性，请为该属性指定新的文本或字符串值。 对于基于域的属性，请为将要成为属性的成员指定代码。 对于链接属性，URL 必须以 **http://** 开头。<br /><br /> 注意：不能暂存文件属性。||  
+|\<属性名称>|实体中的每个属性对应的列。 对于 **ImportType** 为 **0** 或 **2**时使用它。 对于自由格式属性，请为该属性指定新的文本或字符串值。 对于基于域的属性，请为将要成为属性的成员指定代码。 对于链接属性，URL 必须以“https://”开头。<br /><br /> 注意：不能暂存文件属性。||  
   
 ## <a name="see-also"></a>另请参阅  
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

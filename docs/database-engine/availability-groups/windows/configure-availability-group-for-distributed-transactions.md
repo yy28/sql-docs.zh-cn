@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411767"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639116"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>为分布式事务配置可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50411767"
 为确保分布式事务的一致性，必须配置可用性组，使其将数据库注册为分布式事务资源管理器。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50411767"
 
 * 参与分布式事务的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的所有实例必须为 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更高版本。
 
-* 可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)。  
+* 可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)。  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>为分布式事务创建可用性组
 
@@ -180,16 +180,16 @@ following the guideline for Troubleshooting DTC Transactions.
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-有关解决未决事务的详细信息，请参阅[手动解决事务](http://technet.microsoft.com/library/cc754134.aspx)。
+有关解决未决事务的详细信息，请参阅[手动解决事务](https://technet.microsoft.com/library/cc754134.aspx)。
 
 ## <a name="next-steps"></a>Next Steps  
 
-[分布式事务](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[分布式事务](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [事务 - AlwaysOn 可用性组和数据库镜像](transactions-always-on-availability-and-database-mirroring.md)  
 
-[支持 XA 事务](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[支持 XA 事务](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[工作原理：会话/SPID (– 2) 的 DTC 事务](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[工作原理：会话/SPID (– 2) 的 DTC 事务](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

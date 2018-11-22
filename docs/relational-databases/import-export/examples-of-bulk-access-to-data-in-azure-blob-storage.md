@@ -5,8 +5,7 @@ ms.date: 01/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], from Azure blob storage
@@ -18,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941c3348f487c501650b903d1413c540c6a9eb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791733"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560404"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>批量访问 Azure Blob 存储中数据的示例
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +30,11 @@ ms.locfileid: "47791733"
 `BULK INSERT` 和 `OPENROWSET` 语句可以直接访问 Azure Blob 存储中的文件。 下面的示例使用 CSV（逗号分隔值）文件（名为 `inv-2017-01-19.csv`）中的数据，该文件存储在容器（名为 `Week3`）中，该容器存储在存储帐户（名为 `newinvoices`）中。 可以使用格式文件的路径，但这些示例不包含该路径。 
 
 从 SQL Server 批量访问 Azure Blob 存储至少需要 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 版本 1.1。
+
+>  [!IMPORTANT]
+>  blob 上容器和文件的所有路径都是 `CASE SENSITIVE`。 如果不正确，它可能会返回错误，如“无法进行大容量加载。 文件 "file.csv" 不存在或你没有文件访问权限。”
+"
+
 
 ## <a name="create-the-credential"></a>创建凭据   
    

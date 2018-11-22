@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031698"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813210"
 ---
 # <a name="configure-the-web-portal"></a>配置 Web 门户
 
@@ -80,7 +80,7 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 2. 打开 Internet Explorer。
 
-3. 输入 Web 门户 URL。 默认情况下，该 URL 为 http://\<your-server-name>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 http://\<your-server-name>/reports\<_instancename>。
+3. 输入 Web 门户 URL。 默认情况下，该 URL 为 https://\<your-server-name>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 https://\<your-server-name>/reports\<_instancename>。
 
 4. 选择“站点设置”。 
 

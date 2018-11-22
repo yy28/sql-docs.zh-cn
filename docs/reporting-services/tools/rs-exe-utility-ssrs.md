@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30457df56828e9a2c197b44126555c63f17c40f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681935"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813040"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
@@ -56,7 +56,7 @@ rs {-?}
  （必需）指定要执行的 .rss 文件。 此值可以是指向 .rss 文件的相对路径或完全限定路径。  
   
  -s serverURL  
- （必需）指定执行文件的 Web 服务器的名称和报表服务器的虚拟目录名。 以下是报表服务器 URL 的一个示例： `http://examplewebserver/reportserver`。 服务器名称开头处的前缀 http:// 或 https:// 是可选的。 如果省略前缀，报表服务器脚本主机将先尝试使用 https，并在 https 无效时使用 http。  
+ （必需）指定执行文件的 Web 服务器的名称和报表服务器的虚拟目录名。 以下是报表服务器 URL 的一个示例： `https://examplewebserver/reportserver`。 服务器名称开头处的前缀 http:// 或 https:// 是可选的。 如果省略前缀，报表服务器脚本主机将先尝试使用 https，并在 https 无效时使用 http。  
   
  -u [domain\\]username  
  （可选）指定用于连接到报表服务器的用户帐户。 如果省略 **-u** 和 **-p** ，则使用当前的 Windows 用户帐户。  
@@ -88,7 +88,7 @@ rs {-?}
   
  **-v** 参数在命令行上指定，可用来为运行时在脚本中定义的全局变量设置值。 例如，如果脚本中包含一个名为 *parentFolder*的变量，则可以在命令行上为该文件夹指定一个名称：  
   
- `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
+ `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
  全局变量以给定的名称命名，并设置为提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 将生成一个名为 **a** 且值为 "**1**" 的变量，以及一个值为 " **2** " 的变量**b**。  
   
@@ -104,7 +104,7 @@ rs {-?}
  下面的示例说明如何指定包含 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本的脚本文件以及要执行的 Web 服务方法。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  

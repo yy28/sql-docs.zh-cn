@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29172f4a1abca10e5b2968b77cfdd62ee44810e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827105"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640474"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>第 2-1 课 - 复制第 1 课包
 在本任务中，将为第 1 课中创建的 Lesson 1.dtsx 包创建一个副本。 如果未完成第 1 课的学习，则可以向项目添加本教程中附带的已完成 Lesson 1 包，然后再对其进行复制。 将使用这一新副本来完成第 2 课剩余部分。  
@@ -39,7 +39,7 @@ ms.locfileid: "47827105"
   
 7.  在“属性”窗口中，将“Name”属性更新为 **Lesson 2**。  
   
-8.  依次单击“ID”属性框和下拉箭头，然后单击“<Generate New ID>”。  
+8.  单击 ID 属性框，再单击下拉箭头，然后单击“\<生成新 ID\>”。  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>添加已完成的 Lesson 1 包  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47827105"
   
     要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   

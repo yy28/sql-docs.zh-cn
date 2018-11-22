@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100288"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703955"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,7 +142,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  database_name . [ schema_name ] . | schema_name. ] *table_name*  
  要创建的表的一到三部分名称。 对于外部表，只有表元数据以及有关 Hadoop 或 Azure blob 存储中引用的文件和/或文件夹的基本统计信息才存储在 SQL 中。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不移动或存储任何实际数据。  
   
- \<column_definition> [ ,...n ] CREATE EXTERNAL TABLE 允许使用一个或多个列定义。 CREATE EXTERNAL TABLE 和 CREATE TABLE 可以使用相同语法定义列。 对于此点有一个例外，不能对外部表使用 DEFAULT CONSTRAINT。 有关列定义及其数据类型的完整详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL 数据库上的 CREATE TABLE](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
+ \<column_definition> [ ,...n ] CREATE EXTERNAL TABLE 允许使用一个或多个列定义。 CREATE EXTERNAL TABLE 和 CREATE TABLE 可以使用相同语法定义列。 对于此点有一个例外，不能对外部表使用 DEFAULT CONSTRAINT。 有关列定义及其数据类型的完整详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL 数据库上的 CREATE TABLE](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
   
  列定义（包括数据类型和列数）必须与外部文件中的数据匹配。 如果存在不匹配，则在查询实际数据时会拒绝文件行。  
   
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始；根文件夹是外部数据源中指定的数据位置。  
 
 
-在 SQL Server 中，如果路径和文件夹不存在，CREATE EXTERNAL TABLE 语句会进行创建。 然后，可使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 有关详细信息，请参阅 [Polybase 查询](/sql/relational-databases/polybase/polybase-queries)。 
+在 SQL Server 中，如果路径和文件夹不存在，CREATE EXTERNAL TABLE 语句会进行创建。 然后，可使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 有关详细信息，请参阅 [PolyBase 查询](/sql/relational-databases/polybase/polybase-queries)。 
 
 在 SQL 数据仓库和分析平台系统中，如果路径和文件夹不存在，[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 语句会进行创建。 在这两个产品，CREATE EXTERNAL TABLE 不会创建路径和文件夹。
 
@@ -161,7 +161,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")  
   
- 若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。  
+ 若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。  
   
  DATA_SOURCE = *external_data_source_name*  
  指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 或 Azure blob 存储。 若要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
@@ -265,7 +265,7 @@ REJECTED_ROW_LOCATION = 目录位置
 ## <a name="general-remarks"></a>一般备注  
  在即席查询方案（即 SELECT FROM EXTERNAL TABLE）中，PolyBase 会将从外部数据源检索的行存储在临时表中。 查询完成之后，PolyBase 会移除并删除临时表。 任何永久数据都不会存储在 SQL 表中。  
   
- 相反，在导入方案（即 SELECT INTO FROM EXTERNAL TABLE）中，PolyBase 会将从外部数据源检索的行作为永久数据存储在 SQL 表中。 当 Polybase 检索外部数据时，会在查询执行期间创建新表。  
+ 相反，在导入方案（即 SELECT INTO FROM EXTERNAL TABLE）中，PolyBase 会将从外部数据源检索的行作为永久数据存储在 SQL 表中。 当 PolyBase 检索外部数据时，会在查询执行期间创建新表。  
   
  PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 这称为谓词下推。 若要启用此功能，请在 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 中指定 Hadoop 资源管理器位置选项。  
   
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [常见元数据查询示例 (SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [常见元数据查询示例 (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

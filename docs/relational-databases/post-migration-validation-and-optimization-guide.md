@@ -1,12 +1,10 @@
 ---
 title: 迁移后验证和优化指南 | Microsoft Docs
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662945"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658517"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "47662945"
 
 这是因为，自 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 起，所有查询优化器更改都会绑定到最新的[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)，因此计划不会在升级后立即更改，而是在用户将 `COMPATIBILITY_LEVEL` 数据库更改为最新版本后更改。 利用此功能和 Query Store，你可以在升级过程中对查询性能进行精确的控制。 
 
-若要详细了解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中引入的查询优化器变更，请参阅[使用 SQL Server 2014 基数估算器优化查询计划](http://msdn.microsoft.com/library/dn673537.aspx)。
+若要详细了解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中引入的查询优化器变更，请参阅[使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)。
 
 ### <a name="steps-to-resolve"></a>解决步骤
 
@@ -53,7 +51,7 @@ ms.locfileid: "47662945"
 **适用于：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
 > [!NOTE]
-> 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法应对此方案。 
+> 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  将无法应对此方案。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可针对存储过程编译查询计划，方法是在首次编译时截取输入参数，生成参数化且可重复使用的计划，然后对该输入数据分发进行优化。 即使未使用存储过程，生成普通计划的大多数据语句仍将被参数化。 缓存计划后，任何后期执行都会映射到之前缓存的计划中。
 如果首次编译未使用适用于常用工作负载的最常用参数集，可能会出现潜在问题。 对不同的参数使用相同的执行计划可能导致效率低下。 有关本主题的详细信息，请参阅[参数探查](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
@@ -81,7 +79,7 @@ ms.locfileid: "47662945"
 
 1.  对任何缺失索引的引用使用图形执行计划。
 2.  [数据库引擎优化顾问](../tools/dta/tutorial-database-engine-tuning-advisor.md)生成的索引建议。
-3.  利用[缺失索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)或通过 [SQL Server 性能仪表板](https://www.microsoft.com/en-us/download/details.aspx?id=29063)。
+3.  利用[缺失索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)或通过 [SQL Server 性能仪表板](https://www.microsoft.com/download/details.aspx?id=29063)。
 4.  利用可使用现有 DMV 的预先存在的脚本深入了解任何缺失、重复、冗余、较少使用和完全未使用过的索引，还可以了解数据库中是否有可以编写提示/硬编码为现有过程或函数的任何索引引用。 
 
 > [!TIP] 

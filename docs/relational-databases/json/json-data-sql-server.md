@@ -14,15 +14,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a049e4b6d965f5eccc661414214585430a305290
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664616"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 JSON 是一种流行的数据格式，用于在现代 Web 和移动应用程序中交换数据。 JSON 还可用于在日志文件或 Microsoft Azure Cosmos DB 等 NoSQL 数据库中存储非结构化数据。 许多 REST Web 服务以 JSON 文本格式返回结果，或接受采用 JSON 格式的数据。 例如，大多数 Azure 服务（如 Azure 搜索、Azure 存储和 Azure Cosmos DB）都提供返回或使用 JSON 的 REST 终结点。 JSON 也是用于通过 AJAX 调用在网页与 Web 服务器之间交换数据的主要格式。 
 
@@ -62,9 +65,9 @@ SQL Server 中的 JSON 函数使用户能在同一数据库中将 NoSQL 和相�
 如果使用存储在数据库表中的 JSON 文本，则可以使用以下内置函数来读取或修改 JSON 文本中的值：  
     
 -   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) 测试字符串是否包含有效 JSON。
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 从 JSON 字符串中提取标量值。
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) 从 JSON 字符串中提取对象或数组。
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 更改 JSON 字符串中的值。
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 从 JSON 字符串中提取标量值。
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) 从 JSON 字符串中提取对象或数组。
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 更改 JSON 字符串中的值。
 
 
 **示例**
@@ -244,7 +247,7 @@ JSON 文本存储在 varchar 或 nvarchar 列中，并编制了纯文本形式�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>在 SQL Server 中存储 JSON 数据并编制索引
 
-JSON 是一种文本格式，因此 JSON 文档可存储于 SQL 数据库中的 `NVARCHAR` 列。 由于所有 SQL Server 子系统中支持 `NVARCHAR` 类型，可将 JSON 文档放置于具有“聚集列存储”索引的表、内存优化表或者可使用 OPENROWSET 或 Polybase 读取的外部文件。
+JSON 是一种文本格式，因此 JSON 文档可存储于 SQL 数据库中的 `NVARCHAR` 列。 由于所有 SQL Server 子系统中支持 `NVARCHAR` 类型，可将 JSON 文档放置于具有“聚集列存储”索引的表、内存优化表或者可使用 OPENROWSET 或 PolyBase 读取的外部文件。
 
 要了解有关在 SQL Server 中存储、索引和优化 JSON 数据的详细信息，请参阅以下文章：
 -   [在 SQL Server 或 SQL 数据库中存储 JSON 文档](store-json-documents-in-sql-tables.md)
@@ -255,7 +258,7 @@ JSON 是一种文本格式，因此 JSON 文档可存储于 SQL 数据库中的 
 
 可将文件中存储的信息格式化为标准 JSON 或行分隔的 JSON。 SQL Server 可以导入 JSON 文件的内容，使用 OPENJSON 或 JSON_VALUE 函数分析内容，并将其加载到表中。  
   
--   如果 JSON 文档存储在可由 SQL Server 访问的本地文件、共享网络驱动器或 Azure 文件位置，则可以使用批量导入将 JSON 数据加载到 SQL Server。 有关此方案的详细信息，请参阅[Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)（使用 OPENROWSET (BULK) 将 JSON 文件导入 SQL Server）。  
+-   如果 JSON 文档存储在可由 SQL Server 访问的本地文件、共享网络驱动器或 Azure 文件位置，则可以使用批量导入将 JSON 数据加载到 SQL Server。 有关此方案的详细信息，请参阅[Importing JSON files into SQL Server using OPENROWSET (BULK)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)（使用 OPENROWSET (BULK) 将 JSON 文件导入 SQL Server）。  
   
 -   如果行分隔的 JSON 文件存储在 Azure Blob 存储或 Hadoop 文件系统中，你可以用 PolyBase 来加载 JSON 文本，以 Transact-SQL 代码形式分析文本，然后将其载入表中。  
 
@@ -335,12 +338,12 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
   
 -   请求： `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   响应： `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+-   响应： `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
 此 OData URL 代表针对 `id` 为 1 的产品的 ProductID 和 ProductName 列的请求。 可以使用 **FOR JSON** 按 SQL Server 中所需的格式设置输出格式。  
   
 ```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
 FROM Production.Product  
@@ -377,7 +380,7 @@ FOR JSON AUTO
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
   
-若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
+若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
 
 ### <a name="microsoft-videos"></a>Microsoft 视频
 

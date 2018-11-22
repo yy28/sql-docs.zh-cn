@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020561"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813501"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>并行安装 Reporting Services 和 Internet Information Services
 
@@ -41,11 +41,11 @@ ms.locfileid: "50020561"
   
 |示例|请求|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收发送到 `http://123.234.345.456/reports` 或 `http://\<computername>/reports` 的所有请求。|  
-|`http://+:80/reports`|只要 URL 包含“reports”虚拟目录名，就将接收发送到对于该计算机有效的任何 IP 地址或主机名的任何请求。|  
-|`http://123.234.345.456:80`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收指定 `http://123.234.345.456` 或 `http://\<computername>` 的所有请求。|  
-|`http://+:80`|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
-|`http://*:80`|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
+|`https://123.234.345.456:80/reports`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收发送到 `https://123.234.345.456/reports` 或 `https://\<computername>/reports` 的所有请求。|  
+|`https://+:80/reports`|只要 URL 包含“reports”虚拟目录名，就将接收发送到对于该计算机有效的任何 IP 地址或主机名的任何请求。|  
+|`https://123.234.345.456:80`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收指定 `https://123.234.345.456` 或 `https://\<computername>` 的所有请求。|  
+|`https://+:80`|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
+|`https://*:80`|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   
  端口冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "50020561"
   
 |应用程序|URL 预留|描述|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
-|报表服务器|`http://+:80/ReportServer`|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 http://\<computername>/reportserver 的所有请求。|  
-|Web 门户|`http://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收针对 http://\<computername>/reports 的所有请求。|  
-|IIS|`http://*:80/`|针对端口 80 使用弱通配符。|接收端口 80 上尚未由其他应用程序接收的所有剩余请求。|  
+|报表服务器|`https://+:80/ReportServer`|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 https://\<computername>/reportserver 的所有请求。|  
+|Web 门户|`https://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收针对 https://\<computername>/reports 的所有请求。|  
+|IIS|`https://*:80/`|针对端口 80 使用弱通配符。|接收端口 80 上尚未由其他应用程序接收的所有剩余请求。|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>在 IIS 8.0、8.5 上并行部署 SQL Server Reporting Services
 
@@ -66,7 +66,7 @@ ms.locfileid: "50020561"
   
 -   在默认配置中安装的报表服务器实例，其中 URL 预留还指定了端口 80，[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 应用程序也使用“Reports”作为虚拟目录名。  
   
- 对于该配置，发送到 http://\<computername>:80/reports 的请求将由 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收。 在安装了报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
+ 对于该配置，发送到 https://\<computername>:80/reports 的请求将由 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收。 在安装了报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
   
  如果您并行运行所部署的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的新旧版本，则有可能会遇到上面描述的路由问题。 这是由于所有版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 都使用“ReportServer”和“Reports”作为报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 应用程序的虚拟目录名，从而增加了在 IIS 中拥有“reports”和“reportserver”虚拟目录的可能性。  
   

@@ -1,12 +1,10 @@
 ---
 title: 管理和监视变更数据捕获 (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -16,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d12ba58b2257425356b01c38c8fddeb41f6336a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780025"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560514"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.locfileid: "47780025"
 ### <a name="structure-of-the-cleanup-job"></a>清除作业的结构  
  变更数据捕获使用基于保持期的清理策略来管理更改表的大小。 清除机制包含一个在启用第一个数据库表时所创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业。 单个清除作业可处理所有数据库更改表的清除工作并将相同的保持值应用到所有定义的捕获实例。  
   
- 可通过运行无参数的存储过程 **sp_MScdc_cleanup_job**来启动清除作业。 此存储过程通过从 **msdb.dbo.cdc_jobs**中提取为清除作业配置的保持期和阈值来启动。 保持值用于计算更改表的新低水印。 从 *cdc.lsn_time_mapping* 表的最大 **tran_end_time** 值中减去指定分钟数即可获得以日期时间值形式表示的新低使用标记。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 **lsn** 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 **lsn** 的项相对应的 **lsn** 作为新低水印。 此 **lsn** 值传递给 **sp_cdc_cleanup_change_tables** 以从数据库更改表中删除更改表项。  
+ 可通过运行无参数的存储过程 **sp_MScdc_cleanup_job**来启动清除作业。 此存储过程通过从 **msdb.dbo.cdc_jobs**中提取为清除作业配置的保持期和阈值来启动。 保持值用于计算更改表的新低水印。 从 cdc.lsn_time_mapping 表的最大 tran_end_time 值中减去指定分钟数即可获得以日期时间值形式表示的新低使用标记。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 **lsn** 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 **lsn** 的项相对应的 **lsn** 作为新低水印。 此 **lsn** 值传递给 **sp_cdc_cleanup_change_tables** 以从数据库更改表中删除更改表项。  
   
 > [!NOTE]  
 >  使用最近事务的提交时间作为计算新低水印的基准的优点在于：它可使更改在更改表中保留指定的时间。 即使在捕获进程运行落后时也会出现这种情况。 通过为实际低水印选择具有共享提交时间的最小 **lsn** ，与当前低水印具有相同提交时间的所有项会继续保留在更改表中。  
@@ -78,7 +76,7 @@ ms.locfileid: "47780025"
  执行清除时，所有捕获实例的低水印会在单个事务中初次更新。 然后，它会尝试从更改表和 cdc.lsn_time_mapping 表中删除过时项。 可配置的阈值用于限制使用任何单个语句中所删除的项数。 对任何单个表执行删除操作失败并不会阻止对其他表尝试执行该操作。  
   
 ### <a name="cleanup-job-customization"></a>清除作业自定义  
- 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于 **lsn** 而不是时间，所以可使用任何数量的策略来确定要保存在更改表中的最小 **lsn** 。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同的 **lsn** 来清除所有数据库的更改表，但还可以调用基础清除过程，以在捕获实例级别上进行清除。  
+ 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于 lsn 而不是时间，所以可使用任何数量的策略来确定要保存在更改表中的最小 lsn。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同的 **lsn** 来清除所有数据库的更改表，但还可以调用基础清除过程，以在捕获实例级别上进行清除。  
   
 ##  <a name="Monitor"></a> 监视变更数据捕获进程  
  通过监视变更数据捕获进程，可以确定更改是否正以合理的滞后时间正确写入更改表中。 监视还可以帮助您标识可能发生的任何错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两个动态管理视图，用于帮助你监视变更数据捕获： [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) 和 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)。  
@@ -86,18 +84,24 @@ ms.locfileid: "47780025"
 ### <a name="identify-sessions-with-empty-result-sets"></a>标识包含空结果集的会话  
  sys.dm_cdc_log_scan_sessions 中的每一行表示一个日志扫描会话（ID 为 0 的行除外）。 一个日志扫描会话等效于执行一次 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)。 在会话期间，扫描可以返回更改，也可以返回空结果。 如果结果集为空，则 sys.dm_cdc_log_scan_sessions 中的 empty_scan_count 列将设置为 1。 如果有连续的空结果集（例如，当捕获作业正在连续运行时），则最后一个现有行中的 empty_scan_count 将递增。 例如，如果 sys.dm_cdc_log_scan_sessions 已经包含与返回了更改的扫描相对应的 10 行，并且存在五个连续的空结果，则该视图包含 11 行。 最后一行在 empty_scan_count 列的值是 5。 若要确定有空扫描的会话，请运行以下查询：  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### <a name="determine-latency"></a>确定滞后时间  
  sys.dm_cdc_log_scan_sessions 管理视图包括一个用于记录每个捕获会话滞后时间的列。 滞后时间是指在源表上提交的事务与在更改表上提交的最后一个捕获的事务之间所经过的时间。 只为活动会话填充滞后时间列。 对于其 empty_scan_count 列的值大于 0 的会话，滞后时间列将设置为 0。 以下查询返回最近进行的会话的平均滞后时间：  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  可以使用滞后时间数据确定捕获进程正在以多快或多慢的速度处理事务。 当捕获进程连续运行时，该数据最有用。 如果捕获进程正在按计划运行，那么，由于在源表上提交的事务与按计划时间运行的捕获进程之间存在滞后，因此滞后时间可能会很长。  
   
  捕获进程效率的另一个重要度量值是吞吐量。 它是在每个会话期间每秒处理的平均命令数。 若要确定会话的吞吐量，请将 command_count 列中的值除以持续时间列中的值。 以下查询返回最近会话的平均吞吐量：  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>使用数据收集器收集抽样数据  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据收集器用于从任何表或动态管理视图中收集数据的快照，并生成性能数据仓库。 对数据库启用变更数据捕获时，最好按固定时间间隔取得 sys.dm_cdc_log_scan_sessions 视图和 sys.dm_cdc_errors 视图的快照，以便随后进行分析。 以下过程设置一个数据收集器，用于从 sys.dm_cdc_log_scan_sessions 管理视图收集示例数据。  
@@ -130,10 +134,10 @@ ms.locfileid: "47780025"
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -146,7 +150,7 @@ ms.locfileid: "47780025"
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

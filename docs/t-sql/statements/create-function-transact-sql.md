@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,17 +36,20 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864285"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704065"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建用户定义函数。 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或公共语言运行时 (CLR) 例程。 返回值可以是标量（单个）值或表。 使用此语句可以创建可通过以下方式使用的重复使用的例程：  
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建用户定义函数。 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或公共语言运行时 (CLR) 例程。 返回值可以是标量（单个）值或表。 使用此语句可以创建可通过以下方式使用的重复使用的例程：  
   
 -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 SELECT）中  
   
@@ -135,6 +138,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -367,7 +371,7 @@ RETURNS return_data_type
   
  \<table_type_definition> ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...n ] ) 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。  
   
- \< clr_table_type_definition >  ( { column_namedata_type } [ ,...n ] )  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
+ \< clr_table_type_definition >  ( { column_namedata_type } [ ,...n ] )  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
   
  定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。 表始终放在主文件组中。  
   
@@ -418,18 +422,21 @@ RETURNS return_data_type
   
 -   执行 CREATE FUNCTION 语句的用户对该函数引用的数据库对象具有 REFERENCES 权限。  
   
- RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT  
- 指定标量值函数的 OnNULLCall 属性。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。  
+RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT  
+指定标量值函数的 OnNULLCall 属性。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。  
   
- 如果在 CLR 函数中指定了 RETURNS NULL ON NULL INPUT，它指示当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接收到的任何一个参数为 NULL 时，它可以返回 NULL，而无需实际调用函数体。 如果 \<method_specifier> 中指定的 CLR 函数的方法已具有指示 RETURNS NULL ON NULL INPUT 的自定义属性，但 CREATE FUNCTION 语句指示 CALLED ON NULL INPUT，则优先采用 CREATE FUNCTION 语句指示的属性。 不能为 CLR 表值函数指定 OnNULLCall 属性。 
+如果在 CLR 函数中指定了 RETURNS NULL ON NULL INPUT，它指示当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接收到的任何一个参数为 NULL 时，它可以返回 NULL，而无需实际调用函数体。 如果 \<method_specifier> 中指定的 CLR 函数的方法已具有指示 RETURNS NULL ON NULL INPUT 的自定义属性，但 CREATE FUNCTION 语句指示 CALLED ON NULL INPUT，则优先采用 CREATE FUNCTION 语句指示的属性。 不能为 CLR 表值函数指定 OnNULLCall 属性。 
   
- EXECUTE AS 子句  
- 指定用于执行用户定义函数的安全上下文。 所以，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用哪一个用户帐户来验证针对该函数引用的任何数据库对象的权限。  
+EXECUTE AS 子句  
+指定用于执行用户定义函数的安全上下文。 所以，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用哪一个用户帐户来验证针对该函数引用的任何数据库对象的权限。  
   
 > [!NOTE]  
->  不能为内联用户定义函数指定 EXECUTE AS。  
+>  不能为内联表值函数指定 EXECUTE AS。
   
  有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
+
+INLINE = { ON | OFF }  
+指定是否应内联此标量 UDF。 此子句仅适用于标量用户定义函数。 `INLINE` 子句不是强制性的。 如果未指定 `INLINE` 子句，则会基于 UDF 是否可内联而自动设定为 ON/OFF。 如果指定了 `INLINE=ON` 但发现 UDF 不可内联，则会引发错误。 有关详细信息，请参阅[标量 UDF 内联](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
   
  **\< column_definition >::=** 
   
@@ -580,7 +587,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|函数可以访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例中的系统数据（系统目录或虚拟系统表）。||  
 |**UserDataAccess**|函数可以访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例中的用户数据。|包含用户定义表和临时表，但不包含表变量。|  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的精度和确定性属性由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动确定。 CLR 函数的数据访问权限和确定性属性可由用户指定。 有关详细信息，请参阅 [CLR 集成自定义属性概述](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的精度和确定性属性由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动确定。 CLR 函数的数据访问权限和确定性属性可由用户指定。 有关详细信息，请参阅 [CLR 集成自定义属性概述](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)。  
   
  若要显示这些属性的当前值，请使用 [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)。  
   

@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709735"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637864"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  文件组必须处于联机状态，并且必须由使用此分区函数的分区方案标记为 NEXT USED，以保存新分区。 在 CREATE PARTITION SCHEME 语句中，将把文件组分配给分区。 如果 CREATE PARTITION SCHEME 语句分配了多余的文件组（在 CREATE PARTITION FUNCTION 语句中创建的分区数少于用于保存它们的文件组），则存在未分配的文件组，分区方案将把其中的某个文件组标记为 NEXT USED。 该文件组将保存新的分区。 如果分区方案未将任何文件组标记为 NEXT USED，则必须使用 ALTER PARTITION SCHEME 添加一个文件组或指定一个现有文件组来保存新分区。 可以指定已保存分区的文件组来保存附加分区。 由于一个分区函数可以参与多个分区方案，因此所有使用分区函数（您向其中添加了分区）的分区方案都必须拥有一个 NEXT USED 文件组。 否则，ALTER PARTITION FUNCTION 将失败并出现错误，该错误显示缺少 NEXT USED 文件组的一个或多个分区方案。  
   
- 如果在同一文件组创建所有分区，则最初自动将该文件组分配为 NEXT USED 文件组。 但是，在执行拆分操作后，将不再有指定的 NEXT USED 文件组。 您必须通过使用 ALTER PARITION SCHEME 显式将该文件组分配为 NEXT USED 文件组，否则后续的拆分操作将失败。  
+ 如果在同一文件组创建所有分区，则最初自动将该文件组分配为 NEXT USED 文件组。 但是，在执行拆分操作后，将不再有指定的 NEXT USED 文件组。 您必须通过使用 ALTER PARTITION SCHEME 显式将该文件组分配为 NEXT USED 文件组，否则后续的拆分操作将失败。  
   
 > [!NOTE]  
 >  列存储索引限制：当表上存在列存储索引时，仅可拆分空分区。 需要先删除或禁用此列存储索引才能执行此操作  
@@ -93,7 +93,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   执行一系列 ALTER PARTITION FUNCTION 语句。  
   
- ALTER PARITITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
+ ALTER PARTITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
   
  如果使用分区函数的任何表中存在已禁用的聚集索引，ALTER PARTITION FUNCTION 都将失败。  
   

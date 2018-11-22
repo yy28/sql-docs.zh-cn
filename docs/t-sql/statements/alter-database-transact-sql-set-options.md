@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252194"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814350"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 
@@ -668,7 +668,7 @@ DIRECTORY_NAME = *\<directory_name>*
   
 **\<mixed_page_allocation_option> ::=**  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。 
+**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } 控制数据库能否使用混合区为表或索引的前 8 页创建初始页面。  
  
@@ -682,7 +682,7 @@ ON
   
 **\<PARAMETERIZATION_option> ::=**  
   
-控制参数化选项。  
+控制参数化选项。 有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ FORCED
 **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 打开|关闭|清除[全部]  
-控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。  
+控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。 有关详细信息，请参阅 [查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md)。 
   
 ON  
 启用查询存储。  
   
 OFF  
-禁用查询存储。  这是默认值。   
+禁用查询存储。 这是默认值。   
   
 CLEAR  
 删除查询存储的内容。  
@@ -809,7 +809,7 @@ TORN_PAGE_DETECTION
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对因校验和、页撕裂或其他 I/O 错误而失败的任何读取都重试四次。 如果在其中一次重试中读取成功，则会向错误日志中写入一条消息，且触发读取的命令将继续执行。 如果重试失败，则该命令失败，且显示错误消息 824。  
   
-有关错误消息 823、824 和 825 的详细信息，请参阅[如何解决 SQL Server 中的消息 823 错误](http://support.microsoft.com/help/2015755)、[如何解决 SQL Server 中的消息 824](http://support.microsoft.com/help/2015756) 以及[如何解决 SQL Server 中的消息 825（读取重试）](http://support.microsoft.com/help/2015757)。
+有关错误消息 823、824 和 825 的详细信息，请参阅[如何解决 SQL Server 中的消息 823 错误](https://support.microsoft.com/help/2015755)、[如何解决 SQL Server 中的消息 824](https://support.microsoft.com/help/2015756) 以及[如何解决 SQL Server 中的消息 825（读取重试）](https://support.microsoft.com/help/2015757)。
   
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 *page_verify_option* 列，或者查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 *IsTornPageDetectionEnabled* 属性，来确定此选项的当前设置。  
   
@@ -866,7 +866,7 @@ NEW_BROKER
 指定数据库应接收新的 Broker 标识符。 由于该数据库被视为新的 Service Broker，所以将立即删除数据库中的所有现有会话，而不生成结束对话框消息。 必须使用新标识符重新创建任何引用旧 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符的路由。  
   
 ERROR_BROKER_CONVERSATIONS  
-指定启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递。 这会保留数据库的现有 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将结束数据库中的所有会话，并显示错误消息。 这样，您的应用程序即可为现有会话执行定期清理。  
+指定启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递。 这将保留数据库的现有 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将结束数据库中的所有会话，并显示错误消息。 这样，您的应用程序即可为现有会话执行定期清理。  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1154,7 +1154,7 @@ NO_WAIT
 - 还原数据库备份。  
 -   分离数据库。  
   
-清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划高速缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
+清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
 ## <a name="examples"></a>示例  
   
@@ -1171,7 +1171,7 @@ GO
 ```  
   
 ### <a name="b-setting-the-database-to-readonly"></a>B. 将数据库设置为 READ_ONLY  
-将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY`，并将对数据库的访问权返回给所有用户。  
+将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。  
   
 > [!NOTE]  
 >  此示例在第一个 `WITH ROLLBACK IMMEDIATE` 语句中使用终止选项 `ALTER DATABASE` 。 所有未完成事务都将被回滚，并将立刻断开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的所有其他连接。  
@@ -1279,7 +1279,7 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\*SQL 数据库<br />逻辑服务器\*_**&nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|_\*SQL 数据库<br />逻辑服务器\*_&nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -1964,7 +1964,7 @@ NO_WAIT
 ## <a name="examples"></a>示例  
   
 ### <a name="a-setting-the-database-to-readonly"></a>A. 将数据库设置为 READ_ONLY  
-将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY`，并将对数据库的访问权返回给所有用户。  
+将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。  
   
 ```sql  
 USE master;  
@@ -2066,7 +2066,7 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\*SQL 数据库<br />托管实例\*_**&nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |_\*SQL 数据库<br />托管实例\*_&nbsp;|
 
 
 
@@ -2666,7 +2666,7 @@ NO_WAIT
 ## <a name="examples"></a>示例  
   
 ### <a name="a-setting-the-database-to-readonly"></a>A. 将数据库设置为 READ_ONLY  
-将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY`，并将对数据库的访问权返回给所有用户。  
+将数据库或文件组的状态改为 READ_ONLY 或 READ_WRITE 需要具有数据库的独占访问权。 下面的示例将数据库设置为 `RESTRICTED_USER` 模式，以限制访问。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。  
   
 ```sql  
 USE master;  

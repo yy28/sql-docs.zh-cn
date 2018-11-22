@@ -16,12 +16,12 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692125"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638655"
 ---
 # <a name="odata-source"></a>OData 源
 在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。
@@ -38,13 +38,13 @@ ms.locfileid: "47692125"
 
 OData 源包括对以下数据源的支持：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
--   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL： http://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。
+-   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL： https://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](https://msdn.microsoft.com/library/ff521587.aspx)。
 
 ## <a name="supported-data-types"></a>支持的数据类型
 
 OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string 和 TimeSpan。
 
-若要发现数据源中列的数据类型，请查看 `http://<OData feed endpoint>/$metadata` 页。
+若要发现数据源中列的数据类型，请查看 `https://<OData feed endpoint>/$metadata` 页。
 
 > [!IMPORTANT]
 > OData 源组件不支持 SharePoint 列表中的复杂类型，例如多选项。

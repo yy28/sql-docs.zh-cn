@@ -12,12 +12,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 3d3b048b5aa0c2a2cfd0eaf89e03d49f37152497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b229fb722c1a6de85e4c26179c776ba605909441
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610935"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269930"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据仓库中
 
@@ -96,7 +96,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 1. 使用 Azure Blob 上载任务可在 Azure Blob 存储中暂存数据。 若要获取 Azure Blob 上传任务，请下载[用于 Azure 的 Microsoft SQL Server Integration Services 功能包][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。
 
-2. 然后使用 SSIS 执行 SQL 任务，以启动 Polybase 脚本，将数据加载到 SQL 数据仓库中。 有关将数据从 Azure Blob 存储加载到 SQL 数据仓库（不使用 SSIS）的示例，请参阅[教程：将数据加载到 Azure SQL 数据仓库](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)。
+2. 然后使用 SSIS 执行 SQL 任务，以启动 PolyBase 脚本，将数据加载到 SQL 数据仓库中。 有关将数据从 Azure Blob 存储加载到 SQL 数据仓库（不使用 SSIS）的示例，请参阅[教程：将数据加载到 Azure SQL 数据仓库](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)。
 
 ## <a name="option-2---use-a-source-and-destination"></a>选项 2 - 使用源和目标
 

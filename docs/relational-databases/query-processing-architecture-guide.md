@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226379"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701475"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器不只选择资源成本最低的执行计划，还选择能将结果最快地返回给用户且资源成本合理的计划。 例如，与串行处理查询相比，并行处理查询使用的资源一般更多但完成查询的速度更快。 因此如果不对服务器的负荷产生负面影响，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器将使用并行执行计划返回结果。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器在估计用于从表或索引中提取信息的不同方法所需的资源成本时，依赖于分发内容统计信息。 对列和索引保留有分发内容统计。 这些统计信息表明特定索引或列中的值的选择性。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 VIN 索引比制造商索引更具选择性。 如果索引统计信息不是当前的，则查询优化器可能无法对表的当前状态做出最佳选择。 有关保持索引统计信息最新的详细信息，请参阅[统计信息](../relational-databases/statistics/statistics.md)。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器在估计用于从表或索引中提取信息的不同方法所需的资源成本时，依赖于分发内容统计信息。 为列和索引保留分布统计信息，并保存有关基础数据的密度 <sup>1</sup> 的信息。 这些信息表明特定索引或列中的值的选择性。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 如果索引统计信息不是当前的，则查询优化器可能无法对表的当前状态做出最佳选择。 有关密度的详细信息，请参阅 [统计信息](../relational-databases/statistics/statistics.md#density)。 
+
+<sup>1</sup> 密度定义数据中存在的唯一值的分布，或给定列的重复值平均数。 密度与值的选择性成反比，密度越小，值的选择性越大。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器很重要，因为它可以使数据库服务器针对数据库内的更改情况进行动态调整，而无需程序员或数据库管理员输入。 这样程序员可以集中精力描述最终的查询结果。 他们可以相信每次运行语句时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器总能针对数据库的状态生成一个有效的执行计划。
 
@@ -138,11 +139,11 @@ GO
 
 上述处理 `SELECT` 语句的基本步骤也适用于其他 SQL 语句，例如 `INSERT`、 `UPDATE`和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT 语句，该语句提供要更新或插入的数据值。
 
-即使像 `CREATE PROCEDURE` 或 `ALTER TABL`E 这样的数据定义语言 (DDL) 语句也被最终解析为系统目录表上的一系列关系操作，而有时则根据数据表解析（如 `ALTER TABLE ADD COLUMN`）。
+即使像 `CREATE PROCEDURE` 或 `ALTER TABLE` 这样的数据定义语言 (DDL) 语句也被最终解析为系统目录表上的一系列关系操作，而有时则根据数据表解析（如 `ALTER TABLE ADD COLUMN`）。
 
 ### <a name="worktables"></a>工作表
 
-关系引擎可能需要生成一个工作表以执行 SQL 语句中指定的逻辑操作。 工作表是用于保存中间结果的内部表。 某些 `GROUP BY`、 `ORDER BY`或 `UNION` 查询会生成工作表。 例如，如果 `ORDER BY` 子句引用了不为任何索引涵盖的列，则关系引擎可能需要生成一个工作表以按所请求的顺序对结果集进行排序。 工作表有时也用作临时保存执行部分查询计划所得结果的假脱机。 工作表在 `tempdb` 中生成，并在不再需要时自动删除。
+关系引擎可能需要生成一个工作表以执行 SQL 语句中指定的逻辑操作。 工作表是用于保存中间结果的内部表。 某些 `GROUP BY`、 `ORDER BY`或 `UNION` 查询会生成工作表。 例如，如果 `ORDER BY` 子句引用了不为任何索引涵盖的列，则关系引擎可能需要生成一个工作表以按所请求的顺序对结果集进行排序。 工作表有时也用作临时保存执行部分查询计划所得结果的假脱机。 工作表在 tempdb 中生成，并在不再需要时自动删除。
 
 ### <a name="view-resolution"></a>视图解析
 
@@ -698,7 +699,7 @@ WHERE ProductID = 63;
 
 将“最大并行度”选项设置为 0 (默认值) 可使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在执行并行计划时使用所有可用的处理器（最多可达 64 台处理器）。 尽管 MAXDOP 选项设置为 0 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将运行时目标设置为 64 个逻辑处理器，但如果需要，可以手动设置不同的值。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在并行计划执行中针对给定的查询或索引使用所有可用的处理器（最多可达 64 个处理器）。 MAXDOP 并不是所有并行查询的强制值，而是所有符合并行性要求的查询的暂定目标值。 这意味着如果在运行时没有足够的可用工作线程，查询可能会以比 MAXDOP 服务器配置选项更低的并行度执行。
 
-请参阅 [Microsoft 支持文章](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)，了解有关配置 MAXDOP 的最佳实践。
+请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)，了解有关配置 MAXDOP 的最佳实践。
 
 ### <a name="parallel-query-example"></a>并行查询示例
 
@@ -1019,7 +1020,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * 使用具有快速处理器的服务器以及尽可能多的处理器核，以充分利用并行查询处理能力。
 * 确保服务器具有足够的 I/O 控制器带宽。 
 * 对每个大型已分区表创建聚集索引，以充分利用 B 树扫描优化。
-* 向已分区的表中大容量加载数据时，请遵照白皮书 [The Data Loading Performance Guide（数据加载性能指南）](http://msdn.microsoft.com/library/dd425070.aspx)中的最佳做法建议操作。
+* 向已分区的表中大容量加载数据时，请遵照白皮书 [The Data Loading Performance Guide（数据加载性能指南）](https://msdn.microsoft.com/library/dd425070.aspx)中的最佳做法建议操作。
 
 ### <a name="example"></a>示例
 

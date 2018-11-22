@@ -1,7 +1,7 @@
 ---
 title: SSIS 目录 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864295"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641404"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   **SSISDB**目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -36,7 +36,7 @@ ms.locfileid: "47864295"
   
  要维护 **SSISDB** 数据库，建议您应用管理用户数据库的标准企业策略。 有关创建维护计划的信息，请参阅 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)。  
   
- **SSISDB** 目录和 **SSISDB** 数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+ **SSISDB** 目录和 **SSISDB** 数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
  有关如何查看操作数据的详细信息，请参阅 [监视运行包和其他操作](../../integration-services/performance/monitor-running-packages-and-other-operations.md)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47864295"
   
 -   [项目和包](../../integration-services/catalog/ssis-catalog.md#ProjectsAndPackages)  
   
--   [Parameters](../../integration-services/catalog/ssis-catalog.md#Parameters)  
+-   [参数](../../integration-services/catalog/ssis-catalog.md#Parameters)  
   
 -   [服务器环境、服务器变量和服务器环境引用](../../integration-services/catalog/ssis-catalog.md#ServerEnvironments)  
   
@@ -356,12 +356,12 @@ ms.locfileid: "47864295"
   
     ```  
   
-     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=254267)。  
 
 ## <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
   使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
   
- 您还可以在 catalog.catalog_property 视图中查看目录属性，并且通过使用 catalog.configure_catalog 存储过程设置属性。 有关详细信息，请参阅 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)和 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
+ 还可以在 `catalog.catalog_properties` 视图中查看目录属性，并使用 `catalog.configure_catalog` 存储过程设置属性。 有关详细信息，请参阅 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)和 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
   
  **您希望做什么？**  
   
@@ -380,15 +380,14 @@ ms.locfileid: "47864295"
 ###  <a name="options"></a> 配置选项  
   
 #### <a name="options"></a>选项  
- 下表描述该对话框中的某些属性以及 catalog.catalog_property 视图中的相应属性。  
+ 下表描述对话框中的某些属性以及 `catalog.catalog_properties` 视图中的相应属性。  
   
-|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|描述|  
+|属性名称（“目录属性”对话框）|属性名称（catalog.catalog_properties 视图）|描述|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|加密算法名称|ENCRYPTION_CLEANUP_ENABLED|指定用于对于目录中的敏感参数值进行加密的加密类型。 下面是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256（默认值）|  
-|验证超时（秒）|VALIDATION_TIMEOUT|指定项目验证或包验证最长可以运行多少秒。 默认值为 300 秒。<br /><br /> 执行验证是一个异步操作。 项目或包越大，验证所需时间就越长。<br /><br /> 有关验证项目和包的信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。|  
+|加密算法名称|ENCRYPTION_ALGORITHM|指定用于对于目录中的敏感参数值进行加密的加密类型。 下面是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256（默认值）|  
+|每个项目的最大版本数|MAX_PROJECT_VERSIONS|指定可以在目录中存储项目的多少个版本。 当项目版本清理作业运行时，如果旧版项目数超过此上限，就会遭到删除。|  
 |定期清理日志|OPERATION_CLEANUP_ENABLED|将该属性设置为 True 可指示 SQL Server 代理作业“操作清除”运行。 否则，将该属性设置为 False。|  
 |保持期(天)|RETENTION_WINDOW|指定可允许操作数据的最长时间（天）。 指定天数前的数据由 SQL 代理作业“操作清理”删除。|  
-|每个项目的最大版本数|MAX_PROJECT_VERSIONS|指定可以在目录中存储项目的多少个版本。 当项目版本清理作业运行时，如果旧版项目数超过此上限，就会遭到删除。|  
 
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>备份、还原和移动 SSIS 目录
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -413,7 +412,7 @@ ms.locfileid: "47864295"
   
     ```  
   
-3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅 [如何备份数据库 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅 [如何备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  通过执行以下操作，生成 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 脚本。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)。  
   
@@ -437,7 +436,7 @@ ms.locfileid: "47864295"
   
 ### <a name="to-restore-the-ssis-database"></a>还原 SSIS 数据库  
   
-1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请通过运行 sp_configure 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [clr enabled 选项](http://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请通过运行 sp_configure 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [clr enabled 选项](https://go.microsoft.com/fwlink/?LinkId=231855)。  
   
     ```  
     use master   
@@ -580,7 +579,7 @@ ms.locfileid: "47864295"
 ###  <a name="prereq"></a> 先决条件  
 为 SSISDB 数据库启用 Always On 支持前，请先执行以下先决性步骤。  
   
-1.  设置 Windows 故障转移群集。 请参阅 [安装适用于 Windows Server 2012 的故障转移群集功能和工具](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 的博客文章以获取相关说明。 在所有群集节点上安装功能和工具。  
+1.  设置 Windows 故障转移群集。 请参阅 [安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 的博客文章以获取相关说明。 在所有群集节点上安装功能和工具。  
   
 2.  在群集的每个节点上安装具有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
@@ -662,8 +661,8 @@ ms.locfileid: "47864295"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+-   blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
--   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](http://go.microsoft.com/fwlink/?LinkId=246669)。  
+-   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
   
--   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+-   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=254267)。  

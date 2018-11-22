@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的智能查询处理 | Microsoft Docs
 description: 智能查询处理功能，用于提高 SQL Server 和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030934"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660949"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 “智能查询处理”功能系列包含有广泛影响的功能，以提升现有工作负载的性能，同时最大限度地减少实现工作量。
 
-![“智能查询处理”功能](./media/2_IQPFeatureFamily.png)
+![“智能查询处理”功能](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>自适应查询处理
 “自适应查询处理”功能系列包含查询处理改进，以对应用程序工作负载的运行时状况采用优化策略。 具体改进包括：批处理模式自适应联接、内存授予反馈和多语句表值函数交错执行。
@@ -54,6 +54,14 @@ ms.locfileid: "51030934"
 使用“表变量延迟编译”，引用表变量的语句会延迟编译，直到首次实际执行语句后。 此延迟编译行为等同于临时表行为，这一变化会导致使用实际基数，而不是原始的一行猜测。 若要在 Azure SQL 数据库中启用“表变量延迟编译”的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
 
 有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation )。
+
+## <a name="scalar-udf-inlining"></a>标量 UDF 内联
+> [!NOTE]
+> 标量 UDF 内联是公共预览版功能。  
+
+标量 UDF 内联自动将标量用户定义函数 (UDF) 转换为关系表达式，并将其嵌入调用 SQL 查询，从而提高利用标量 UDF 的工作负载性能。 标量 UDF 内联有助于实现基于成本的 UDF 内部操作优化，并产生面向集合的并行高效计划，而不是低效、迭代、串行执行计划。 在数据库兼容性级别 150 下默认启用此功能。
+
+有关详细信息，请参阅[标量 UDF 内联](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions)。
 
 ## <a name="approximate-query-processing"></a>近似查询处理
 > [!NOTE]

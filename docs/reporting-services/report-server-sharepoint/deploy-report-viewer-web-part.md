@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030616"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813170"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -79,7 +79,7 @@ ms.locfileid: "50030616"
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
-    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 http://<computer name> 打开根网站集以访问 SharePoint 网站。
+    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https://<computer name> 打开根网站集以访问 SharePoint 网站。
 
 3. 在“网站集管理”中，选择“网站集功能”。
 
@@ -119,7 +119,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
-    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 http://<computer name> 打开根网站集以访问 SharePoint 网站。
+    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https://<computer name> 打开根网站集以访问 SharePoint 网站。
 
 2. 在“Web 设计器库”下，选择“Web 部件”。
 

@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90e24f7de0ca9950962cd078c7e7360572de89da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ed3ce76d449e6e67418a13fe1d61baeed1edf0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673715"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638514"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47673715"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不对修改分区函数提供复制支持。 如果要对发布数据库中的分区函数进行更改，必须在订阅数据库中手动执行此操作。  
   
--   ALTER PARITITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
+-   ALTER PARTITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47673715"
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>将一个分区拆分为两个分区  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47673715"
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>将两个分区合并为一个分区  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

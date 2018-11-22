@@ -1,7 +1,7 @@
 ---
 title: 在可用性组中配置 SQL Server 分发数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817995"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602627"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>在 Always On 可用性组中设置复制分发数据库
 
@@ -48,6 +48,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 - 为现有分发数据库 AG 添加或删除节点。
 - 分发服务器可能具有多个分发数据库。 每个分发数据库都可以在各自的 AG 中，但不能在任意 AG 中。 多个分发数据库可以共享一个 AG。
 - 发布服务器和分发服务器都需要在单独的 SQL Server 实例上。
+- 如果托管分发数据库的可用性组的侦听器配置为使用非默认端口，则需要为侦听器和非默认端口设置别名。
 
 ## <a name="limitations-or-exclusions"></a>限制或排除
 
@@ -63,6 +64,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 - 分发数据库 AG 必须具有已配置的侦听器。
 - 分发数据库 AG 中的次要副本可以是同步的，也可以是异步的。 建议和首选同步模式。
 - 不支持双向事务复制。
+- 分发数据库添加到可用性组后，SSMS 不会将分发数据库显示为同步/同步。
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>另请参阅  
