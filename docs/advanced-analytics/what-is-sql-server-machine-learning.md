@@ -22,7 +22,7 @@ SQL Server 2017 机器学习服务是用于 SQL 服务器上执行的 R 和 Pyth
 
 如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的机器学习服务是与更新版本的基本 R，RevoScaleR，MicrosoftML，R 支持，下一代和 2016 版本中引入的其他库。 
 
-Azure SQL 数据库中[机器学习服务 （使用 R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r))目前处于公共预览状态。
+Azure SQL 数据库中[机器学习服务 （带有 R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r))目前处于公开预览状态。
 
 机器学习服务的关键价值主张是其企业 R 和 Python 包的强大功能提供高级的分析大规模和能够将计算和处理到数据所在的位置，从而无需在提取数据在网络中。
 
