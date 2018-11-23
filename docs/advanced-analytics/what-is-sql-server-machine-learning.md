@@ -24,7 +24,7 @@ SQL Server 2017 机器学习服务是用于 SQL 服务器上执行的 R 和 Pyth
 
 Azure SQL 数据库中[机器学习服务 （使用 R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r))目前处于公共预览状态。
 
-机器学习服务的关键价值主张是其企业 R 和 Python 包的强大功能提供高级的分析大规模和能够将计算和处理到数据所在的位置，从而无需在提取数据在网络中。
+机器学习服务的关键价值主张是其企业R和Python软件包的强大功能，可以大规模提供高级分析，并能够将计算和处理带到数据所在的位置，从而消除了在网络上提取数据的需求。
 
 ## <a name="components"></a>组件
 
