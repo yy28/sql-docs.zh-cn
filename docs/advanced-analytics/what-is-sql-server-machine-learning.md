@@ -45,15 +45,16 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ## <a name="using-sql-mls"></a>使用 SQL MLS
 
-开发人员和分析师通常具有在本地 SQL Server 实例上运行的代码。 通过添加机器学习服务并启用外部脚本执行，便能够在 SQL 服务器模式中运行 R 和 Python 代码： 包装存储过程中的脚本、 存储模型中的 SQL Server 表，或结合使用 T-SQL 和 R 或 Python 函数在查询中。
+开发人员和分析人员通常在本地SQL服务器实例上运行代码。通过添加机器学习服务并启用外部脚本执行，您可以在SQL Server模式中运行R和Python代码:将脚本包装在存储过程中，将模型存储在SQL Server表中，或者在查询中组合T-SQL和R或Python函数。
 
-脚本执行的数据安全模型的范围内仍： 关系数据库的权限是在脚本中的数据访问的基础。 运行 R 或 Python 脚本的用户应不能使用 SQL 查询中的该用户无法访问任何数据。 需要标准数据库读取和写入权限，以及要运行外部脚本的其他权限。 模型和关系数据的编写的代码是包装在存储过程，或为二进制格式序列化和存储在表中，或如果序列化到文件的原始字节流从磁盘加载。
+脚本执行位于数据安全模型的边界内：关系数据库的权限是脚本中数据访问的基础。运行R或Python脚本的用户不应该能够使用SQL查询中该用户无法访问的任何数据。您需要标准数据库读取和写入权限，以及运行外部脚本的其他权限。为关系数据编写的模型和代码包装在存储过程中，或者序列化为二进制格式并存储在表中，或者如果将原始字节流序列化为文件，则从磁盘加载。
 
-数据库内分析的最常见方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，传递 R 或 Python 脚本作为输入参数。
+数据库内分析最常用的方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，将R或Python脚本作为输入参数传递。
 
-经典的客户端-服务器交互是另一种方法。 从任何客户端工作站上具有一个 IDE，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写将推送执行的代码 (称为*远程计算上下文*) 对数据和到远程 SQL Server 的操作。 
 
-最后，如果使用的[独立服务器](r/r-server-standalone.md)和 Developer edition 中，你可以构建解决方案，客户端工作站上使用相同的库和解释器，并随后部署生产代码中的对 SQL Server 机器学习服务 （数据库内）。 
+经典客户端 - 服务器交互是另一种方法。从具有IDE的任何客户端工作站，您可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写代码，将执行(称为远程计算上下文)推送到数据，并将操作推送到远程SQL服务器。
+
+最后，如果您使用的是[独立服务器](r/r-server-standalone.md)和Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在SQL Server机器学习服务（数据库中）上部署生产代码。
 
 ## <a name="how-to-get-started"></a>如何开始
 
