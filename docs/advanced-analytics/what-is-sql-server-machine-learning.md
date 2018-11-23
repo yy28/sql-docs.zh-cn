@@ -28,7 +28,7 @@ Azure SQL 数据库中[机器学习服务 （使用 R)]((https://docs.microsoft.
 
 ## <a name="components"></a>组件
 
-SQL Server 2017 支持 R 和 Python。 下表介绍的组件。
+SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 | 组件 | Description |
 |-----------|-------------|
