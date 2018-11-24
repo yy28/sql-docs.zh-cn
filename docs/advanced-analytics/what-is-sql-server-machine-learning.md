@@ -33,7 +33,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 | 组件 | Description |
 |-----------|-------------|
 | SQL Server Launchpad服务 | 管理外部R和Python运行时与数据库引擎实例之间通信的服务。 |
-| R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是可扩展R的主要库。此库中的函数是使用最广泛的函数。在这些库中可以找到数据转换和操作，统计摘要，可视化以及许多形式的建模和分析。此外，这些库中的功能可自动在可用内核之间分配工作负载以进行并行处理，并能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加了机器学习算法，以创建用于文本分析，图像分析和情感分析的自定义模型。 <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)用于在R脚本中构建或执行MDX查询。|
+| R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是主库的此库中的可缩放。 函数是最广泛使用。 这些库中找到数据转换和操作、 统计汇总、 可视化和建模和分析多种形式。 此外，这些库中的函数会自动将工作负荷分散到以便并行处理，能够工作的协调和管理计算引擎的数据块上的可用内核。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。 <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)用于 R 脚本置于 T-SQL 存储过程、 向数据库注册存储的过程和从 R 开发环境运行存储的过程提供帮助器函数。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的开放源代码分发的。包含包和解释器。 始终使用 MRO 由安装程序安装的版本。 |
 | R 工具 | R 控制台窗口和命令提示中的 R 分发版的标准工具。  |
 | R 示例和脚本 |  开放源代码 R 和 RevoScaleR 包包括内置的数据集，以便您可以创建和运行脚本使用预安装的数据。 |
@@ -45,16 +45,15 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ## <a name="using-sql-mls"></a>使用 SQL MLS
 
-开发人员和分析人员通常在本地SQL服务器实例上运行代码。通过添加机器学习服务并启用外部脚本执行，您可以在SQL Server模式中运行R和Python代码:将脚本包装在存储过程中，将模型存储在SQL Server表中，或者在查询中组合T-SQL和R或Python函数。
+开发人员和分析人员通常在本地SQL服务器实例上运行代码。 通过添加机器学习服务并启用外部脚本执行，您可以在SQL Server模式中运行R和Python代码:将脚本包装在存储过程中，将模型存储在SQL Server表中，或者在查询中组合T-SQL和R或Python函数。
 
-脚本执行位于数据安全模型的边界内：关系数据库的权限是脚本中数据访问的基础。运行R或Python脚本的用户不应该能够使用SQL查询中该用户无法访问的任何数据。您需要标准数据库读取和写入权限，以及运行外部脚本的其他权限。为关系数据编写的模型和代码包装在存储过程中，或者序列化为二进制格式并存储在表中，或者如果将原始字节流序列化为文件，则从磁盘加载。
+脚本执行位于数据安全模型的边界内：关系数据库的权限是脚本中数据访问的基础。 运行R或Python脚本的用户不应该能够使用SQL查询中该用户无法访问的任何数据。 您需要标准数据库读取和写入权限，以及运行外部脚本的其他权限。 为关系数据编写的模型和代码包装在存储过程中，或者序列化为二进制格式并存储在表中，或者如果将原始字节流序列化为文件，则从磁盘加载。
 
 数据库内分析最常用的方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，将R或Python脚本作为输入参数传递。
 
+经典的客户端-服务器交互是另一种方法。 从任何客户端工作站上具有一个 IDE，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写将推送执行的代码 (称为*远程计算上下文*) 对数据和到远程 SQL Server 的操作。 
 
-经典客户端 - 服务器交互是另一种方法。从具有IDE的任何客户端工作站，您可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写代码，将执行(称为远程计算上下文)推送到数据，并将操作推送到远程SQL服务器。
-
-最后，如果您使用的是[独立服务器](r/r-server-standalone.md)和Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在SQL Server机器学习服务（数据库中）上部署生产代码。
+最后，如果使用的[独立服务器](r/r-server-standalone.md)和 Developer edition 中，你可以构建解决方案，客户端工作站上使用相同的库和解释器，并随后部署生产代码中的对 SQL Server 机器学习服务 （数据库内）。 
 
 ## <a name="how-to-get-started"></a>如何开始
 
