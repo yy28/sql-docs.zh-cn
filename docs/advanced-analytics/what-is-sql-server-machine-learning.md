@@ -131,13 +131,12 @@ SQL Server 2017 机器学习服务是新一代的 SQL Server 2016 R Services，�
 
 有关版本的包版本，请参阅中的映射的版本[升级 R 和 Python 组件](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)。
 
-## <a name="portability-and-related-products"></a>可移植性及相关的产品
+## <a name="portability-and-related-products"></a>可移植性和相关产品
+自定义R和Python代码的可移植性通过内置于多个产品中的软件包分发和解释器来解决。 SQL Server中提供的相同软件包也可用于其他几种Microsoft产品和服务，包括名为[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)的非SQL版本。
 
-通过包分发和解释器内置于多个产品，自定义 R 和 Python 代码的可移植性将得到解决。 在 SQL Server 中提供的相同包也会出现在多个其他 Microsoft 产品和服务，包括一个名为非 SQL 版本[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)。 
+包含我们的R和Python解释器的免费客户端是[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)并[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
 
-免费包含我们 R 和 Python 解释器的客户端[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)并[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
-
-在 Azure 上，Microsoft 的 R 和 Python 包，以及解释器提供了 Azure 机器学习和 Azure 服务，如[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)，并[Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)。 [数据科学虚拟机](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)包括从多个供应商并将库的工具和来自 Microsoft 的解释器的完全配备的开发工作站。
+在Azure上，Microsoft的R和Python包和解释器也可用于Azure机器学习，以及Azure服务，如[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)和[Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)。 Data Science虚拟机(https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)包括一个配备齐全的开发工作站，其中包含来自多个供应商的工具以及Microsoft的库和解释器。
 
 ## <a name="see-also"></a>请参阅
 
