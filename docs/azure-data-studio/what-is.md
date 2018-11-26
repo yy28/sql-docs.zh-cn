@@ -51,11 +51,9 @@ T-SQL 代码片段生成正确的 T-SQL 语法来创建数据库、 表、 视�
 
 ## <a name="extensibility-and-extension-authoring"></a>可扩展性和扩展创建
 
-
-通过扩展基本安装的功能来增强Azure Data Studio体验。 Azure Data Studio为数据管理活动提供了可扩展性点，并支持扩展创作。
-
-要了解Azure Data Studio中的可扩展性，请参阅[可扩展性](extensibility.md)。
-要了解创作扩展，请参阅[扩展插件创作](extension-authoring.md)。
+增强[!INCLUDE[name-sos](../includes/name-sos-short.md)]通过扩展功能的基本安装体验。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 数据管理活动，以及对扩展创建的支持，提供了扩展点。
+若要了解有关中的可扩展性[!INCLUDE[name-sos](../includes/name-sos-short.md)]，请参阅[扩展性](extensibility.md)。
+若要了解有关创作扩展，请参阅[扩展插件创作](extension-authoring.md)。
 
 
 
