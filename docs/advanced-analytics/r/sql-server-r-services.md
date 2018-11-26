@@ -51,19 +51,18 @@ SQL Server 2016 仅为 R。 下表介绍了 SQL Server 2016 中的功能。
 最后，如果使用的[独立服务器](r-server-standalone.md)和 Developer edition 中，你可以构建解决方案，客户端工作站上使用相同的库和解释器，并随后部署生产代码中的对 SQL Server 机器学习服务 （数据库内）。 
 
 ## <a name="how-to-get-started"></a>如何开始
-
-开始安装程序，将二进制文件附加到您最喜欢的开发工具，编写第一个脚本。
+从安装开始，将二进制文件附加到您最喜欢的开发工具上，并编写第一个脚本。
 
 **步骤 1:** 安装和配置软件。 
 
 + [安装 SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)
 
-**步骤 2:** 获得亲身体验，使用这些教程之一：
+**步骤 2:** 使用以下任何一种教程获得实践经验:：
 
 + [教程： 了解使用 R 的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [教程： 使用 R 的端到端演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**步骤 3:** 添加你最喜欢的 R 程序包并使用它们以及由 Microsoft 提供的包
+**步骤 3:** 添加您喜欢的R包，并将它们与Microsoft提供的包一起使用
 
 + [SQL Server 的 R 包管理](install-additional-r-packages-on-sql-server.md)
 
