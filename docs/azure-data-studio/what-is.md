@@ -39,15 +39,15 @@ T-SQL 代码片段生成正确的 T-SQL 语法来创建数据库、 表、 视�
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自定义服务器和数据库仪表板
 
-创建丰富的可定制仪表板，以监视和快速排除数据库中的性能瓶颈。要了解Insight控件和数据库（和服务器）仪表板，请参阅使用Insight控件管理服务器和数据库。(insight-widgets.md)。
+创建丰富的可定制仪表板，以监视并快速解决数据库中的性能瓶颈。若要了解见解小组件和数据库（以及服务器）仪表板，请参阅[使用见解小组件管理服务器和数据库](insight-widgets.md)。
 
 ## <a name="connection-management-server-groups"></a>连接管理（服务器组）
 
-服务器组提供了一种组织您使用的服务器和数据库的连接信息的方法。有关详细信息，请参阅[服务器组](server-groups.md)。
+可以通过服务器组来组织所用服务器和数据库的连接信息。有关详细信息，请参阅[服务器组](server-groups.md)。
 
-## <a name="integrated-terminal"></a>集成终端
+## <a name="integrated-terminal"></a>集成的终端
 
-在Azure Data Studio用户界面的Integrated Terminal窗口中使用您喜欢的命令行工具（例如，Bash，PowerShell，sqlcmd，bcp和ssh）。要了解集成终端，请参阅[集成的终端](integrated-terminal.md)。
+使用你最喜爱的命令行工具 (例如 Bash、 PowerShell、 sqlcmd、 bcp 和 ssh 配合使用) 在集成终端窗口中右[!INCLUDE[name-sos](../includes/name-sos-short.md)]用户界面。 若要了解有关集成终端的信息，请参阅[集成的终端](integrated-terminal.md)。
 
 ## <a name="extensibility-and-extension-authoring"></a>可扩展性和扩展创建
 
