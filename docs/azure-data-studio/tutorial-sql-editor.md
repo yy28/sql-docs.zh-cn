@@ -19,7 +19,7 @@ ms.locfileid: "49355928"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程： 使用 TRANSACT-SQL 编辑器来创建数据库对象， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-创建并运行查询，存储的过程、 脚本等是数据库专业人员的核心任务。 本教程演示如何在 T-SQL 编辑器中创建数据库对象的主要功能。
+创建并运行查询、存储过程、脚本等是数据库专业人员的核心任务。本教程演示如何在 T-SQL 编辑器中创建数据库对象的主要功能。
 
 您可以在本教學課程中，了解如何使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 來完成下列工作：
 > [!div class="checklist"]
