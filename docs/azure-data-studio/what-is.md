@@ -43,7 +43,6 @@ T-SQL 代码片段生成正确的 T-SQL 语法来创建数据库、 表、 视�
 
 ## <a name="connection-management-server-groups"></a>连接管理（服务器组）
 
-
 服务器组提供了一种组织您使用的服务器和数据库的连接信息的方法。有关详细信息，请参阅[服务器组](server-groups.md)。
 
 ## <a name="integrated-terminal"></a>集成终端
