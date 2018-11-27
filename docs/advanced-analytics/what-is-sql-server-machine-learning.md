@@ -1,4 +1,4 @@
-﻿---
+---
 title: R 和 Python 机器学习 SQL Server 中的服务 |Microsoft Docs
 description: 在 SQL Server 和 Python 在 SQL Server 中，与用于数据科学和统计建模、 机器学习模型，预测分析、 数据可视化效果和的详细信息的关系数据集成的 R。
 ms.prod: sql
@@ -18,8 +18,7 @@ ms.locfileid: "51269700"
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务 （R、 Python）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017机器学习服务是数据库引擎实例的加载项，用于在 SQL Server 上执行 R 和 Python 代码。代码在可扩展性框架中运行，与核心引擎进程隔离，但完全可用于关系数据（作为存储过程、包含 R 或 Python 语句的 T-SQL 脚本或包含 T-SQL 的 R 或 Python 代码）。
-
+SQL Server 2017机器学习服务是数据库引擎实例的加载项，用于在 SQL Server 上执行 R 和 Python 代码。 代码在可扩展性框架中运行，与核心引擎进程隔离，但完全可用于关系数据（作为存储过程、包含 R 或 Python 语句的 T-SQL 脚本或包含 T-SQL 的 R 或 Python 代码）。 
 
 如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的机器学习服务是与更新版本的基本 R，RevoScaleR，MicrosoftML，R 支持，下一代和 2016 版本中引入的其他库。 
 
@@ -35,14 +34,14 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 |-----------|-------------|
 | SQL Server Launchpad服务 | 管理外部R和Python运行时与数据库引擎实例之间通信的服务。 |
 | R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是主库的此库中的可缩放。 函数是最广泛使用。 这些库中找到数据转换和操作、 统计汇总、 可视化和建模和分析多种形式。 此外，这些库中的函数会自动将工作负荷分散到以便并行处理，能够工作的协调和管理计算引擎的数据块上的可用内核。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。 <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)用于 R 脚本置于 T-SQL 存储过程、 向数据库注册存储的过程和从 R 开发环境运行存储的过程提供帮助器函数。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 的 R 开源分发版，内含包和解释器。请始终使用安装程序安装的 MRO 版本。 |
-| R 工具 | R 控制台窗口和命令提示是 R 分发版中的标准工具。 |
-| R 示例和脚本 | 开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
-| Python 包 | [**revoscalepy** ](python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有用于数据操作、转换、可视化和分析的函数。<br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，用于为文本分析、图像分析和情绪分析创建自定义模型。 |
-| Python 工具 | 内置的 Python 命令行工具，可用于临时测试和多种任务。 |
-| Anaconda | Anaconda 是 Python 的开源分发版，包含大量基本包。 |
-| Python 示例和脚本 | 与 R一样，Python 包含内置的数据集和脚本。 |
-| R 和 Python 中预先训练的模型 | 预先训练的模型为特定用例而创建，由 Microsoft 的数据科学工程团队维护。可以按原样使用预先训练的模型对文本中的积极/消极情绪进行评分，或者使用你提供的新数据输入检测图像中的特征。这些模型在机器学习服务中运行，但不能通过 SQL Server 安装程序安装。有关详细信息，请参阅[在 SQL Server 上安装预先训练的机器学习模型](install/sql-pretrained-models-install.md)。 |
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的开放源代码分发的。包含包和解释器。 始终使用 MRO 由安装程序安装的版本。 |
+| R 工具 | R 控制台窗口和命令提示是 R 分发版中的标准工具。  |
+| R 示例和脚本 |  开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
+| Python 包 | [**revoscalepy** ](python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有用于数据操作、转换、可视化和分析的函数。 <br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，用于为文本分析、图像分析和情绪分析创建自定义模型。  |
+| Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。  |
+| Anaconda | Anaconda 是开放源代码的 Python 和基本包的发行版本。 |
+| Python 示例和脚本 | 如使用 R、 Python 包含内置的数据集和脚本。  |
+| R 和 Python 中预先训练的模型 | 预先训练的模型创建的特定用例和在 Microsoft 数据科学工程团队维护的。 可以使用预先训练的模型作为-是正负情绪评分中的文本，或在映像中，使用你提供的新数据输入检测功能。 模型在机器学习服务中运行，但不能通过 SQL Server 安装程序安装。 有关详细信息，请参阅[安装预先定型的机器学习模型的 SQL Server](install/sql-pretrained-models-install.md)。 |
 
 ## <a name="using-sql-mls"></a>使用 SQL MLS
 
