@@ -39,11 +39,11 @@ T-SQL 代码片段生成正确的 T-SQL 语法来创建数据库、 表、 视�
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自定义服务器和数据库仪表板
 
-创建丰富的可定制仪表板，以监视并快速解决数据库中的性能瓶颈。若要了解见解小组件和数据库（以及服务器）仪表板，请参阅[使用见解小组件管理服务器和数据库](insight-widgets.md)。
+创建丰富的可定制仪表板，以监视并快速解决数据库中的性能瓶颈。 若要了解见解小组件和数据库（以及服务器）仪表板，请参阅[使用见解小组件管理服务器和数据库](insight-widgets.md)。
 
 ## <a name="connection-management-server-groups"></a>连接管理（服务器组）
 
-可以通过服务器组来组织所用服务器和数据库的连接信息。有关详细信息，请参阅[服务器组](server-groups.md)。
+可以通过服务器组来组织所用服务器和数据库的连接信息。 有关详细信息，请参阅[服务器组](server-groups.md)。
 
 ## <a name="integrated-terminal"></a>集成的终端
 
