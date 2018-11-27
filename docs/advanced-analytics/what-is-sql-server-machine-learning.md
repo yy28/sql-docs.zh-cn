@@ -34,10 +34,10 @@ SQL Server 2017 支持 R 和 Python。 下表介绍的组件。
 |-----------|-------------|
 | SQL Server 快速启动板服务 | 用于管理外部的 R 和 Python 运行时和数据库引擎实例之间的通信的服务。 |
 | R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是主库的此库中的可缩放。 函数是最广泛使用。 这些库中找到数据转换和操作、 统计汇总、 可视化和建模和分析多种形式。 此外，这些库中的函数会自动将工作负荷分散到以便并行处理，能够工作的协调和管理计算引擎的数据块上的可用内核。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。 <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)用于 R 脚本置于 T-SQL 存储过程、 向数据库注册存储的过程和从 R 开发环境运行存储的过程提供帮助器函数。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是微软的R的开源发行版。包括和解释器。始终使用安装程序安装的MRO版本。 |
-| R 工具 | 控制台窗口和命令提示符是R发行版中的标准工具。 |
-| R 示例和脚本 |  开源的R和RevoScaleR包包括内置的数据集，这样您就可以使用预安装的数据创建和运行脚本。 |
-| Python 包 | [**revoscalepy** ](python/what-is-revoscalepy.md)是可伸缩Python的主要库，具有数据操作，转换，可视化和分析功能。 <br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)添加了机器学习算法，以创建用于文本分析，图像分析和情感分析的自定义模型。  |
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 的 R 开源分发版，内含包和解释器。请始终使用安装程序安装的 MRO 版本。 |
+| R 工具 | R 控制台窗口和命令提示是 R 分发版中的标准工具。 |
+| R 示例和脚本 | 开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
+| Python 包 | [**revoscalepy** ](python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有用于数据操作、转换、可视化和分析的函数。<br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，用于为文本分析、图像分析和情绪分析创建自定义模型。 |
 | Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。  |
 | Anaconda | Anaconda 是开放源代码的 Python 和基本包的发行版本。 |
 | Python 示例和脚本 | 如使用 R、 Python 包含内置的数据集和脚本。  |
