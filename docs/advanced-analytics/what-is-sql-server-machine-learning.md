@@ -1,4 +1,4 @@
----
+﻿---
 title: R 和 Python 机器学习 SQL Server 中的服务 |Microsoft Docs
 description: 在 SQL Server 和 Python 在 SQL Server 中，与用于数据科学和统计建模、 机器学习模型，预测分析、 数据可视化效果和的详细信息的关系数据集成的 R。
 ms.prod: sql
@@ -39,10 +39,10 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 | R 工具 | R 控制台窗口和命令提示是 R 分发版中的标准工具。 |
 | R 示例和脚本 | 开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
 | Python 包 | [**revoscalepy** ](python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有用于数据操作、转换、可视化和分析的函数。<br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，用于为文本分析、图像分析和情绪分析创建自定义模型。 |
-| Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。  |
-| Anaconda | Anaconda 是开放源代码的 Python 和基本包的发行版本。 |
-| Python 示例和脚本 | 如使用 R、 Python 包含内置的数据集和脚本。  |
-| R 和 Python 中预先训练的模型 | 预先训练的模型创建的特定用例和在 Microsoft 数据科学工程团队维护的。 可以使用预先训练的模型作为-是正负情绪评分中的文本，或在映像中，使用你提供的新数据输入检测功能。 模型在机器学习服务中运行，但不能通过 SQL Server 安装程序安装。 有关详细信息，请参阅[安装预先定型的机器学习模型的 SQL Server](install/sql-pretrained-models-install.md)。 |
+| Python 工具 | 内置的 Python 命令行工具，可用于临时测试和多种任务。 |
+| Anaconda | Anaconda 是 Python 的开源分发版，包含大量基本包。 |
+| Python 示例和脚本 | 与 R一样，Python 包含内置的数据集和脚本。 |
+| R 和 Python 中预先训练的模型 | 预先训练的模型为特定用例而创建，由 Microsoft 的数据科学工程团队维护。可以按原样使用预先训练的模型对文本中的积极/消极情绪进行评分，或者使用你提供的新数据输入检测图像中的特征。这些模型在机器学习服务中运行，但不能通过 SQL Server 安装程序安装。有关详细信息，请参阅[在 SQL Server 上安装预先训练的机器学习模型](install/sql-pretrained-models-install.md)。 |
 
 ## <a name="using-sql-mls"></a>使用 SQL MLS
 
