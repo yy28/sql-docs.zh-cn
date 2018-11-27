@@ -18,7 +18,8 @@ ms.locfileid: "51269700"
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务 （R、 Python）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 机器学习服务是用于 SQL 服务器上执行的 R 和 Python 代码的数据库引擎实例的附加内容。 独立于核心引擎进程，但完全可用于关系数据作为存储过程、 包含 R 或 Python 语句的 T-SQL 脚本或包含的 T-SQL 的 R 或 Python 代码，代码中的可扩展性框架，运行。 
+SQL Server 2017机器学习服务是数据库引擎实例的加载项，用于在 SQL Server 上执行 R 和 Python 代码。代码在可扩展性框架中运行，与核心引擎进程隔离，但完全可用于关系数据（作为存储过程、包含 R 或 Python 语句的 T-SQL 脚本或包含 T-SQL 的 R 或 Python 代码）。
+
 
 如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的机器学习服务是与更新版本的基本 R，RevoScaleR，MicrosoftML，R 支持，下一代和 2016 版本中引入的其他库。 
 
