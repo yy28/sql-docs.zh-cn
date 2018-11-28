@@ -23,8 +23,7 @@ SQL Server 提供独立的 R Server 或运行独立于 SQL Server 的机器学�
 在 SQL Server 2016 中，此功能称为**R Server （独立版）** 是仅限 R 的。 在 SQL Server 2017 中，名为**Machine Learning Server （独立版）** 并包括 R 和 Python。  
 
 > [!Note]
-> 由SQL Server安装程序安装，独立服务器在功能上等同于[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)的非SQL品牌版本，支持相同的用户场景，包括远程执行，操作和Web服务，以及R和Python的完整集合库。
-
+> 独立服务器由 SQL Server 安装程序安装，在功能上等同于 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) 的非 SQL 品牌版本，支持相同的用户场景，包括远程执行、操作和 Web 服务，以及 R 和 Python 的完整集合库。
 
 ## <a name="components"></a>组件
 
