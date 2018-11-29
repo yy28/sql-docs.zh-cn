@@ -133,11 +133,11 @@ SQL Server 2017 机器学习服务是新一代的 SQL Server 2016 R Services，�
 
 ## <a name="portability-and-related-products"></a>可移植性和相关产品
 
-自定义R和Python代码的可移植性通过内置于多个产品中的软件包分发和解释器来解决。 SQL Server中提供的相同软件包也可用于其他几种Microsoft产品和服务，包括名为[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)的非SQL版本。
+包含我们的 R 和 Python 解释器的免费客户端包括 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) 和 [Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
 
 包含我们的R和Python解释器的免费客户端是[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)并[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
 
-在Azure上，Microsoft的R和Python包和解释器也可用于Azure机器学习，以及Azure服务，如[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)和[Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)。 Data Science虚拟机(https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)包括一个配备齐全的开发工作站，其中包含来自多个供应商的工具以及Microsoft的库和解释器。
+在 Azure 中，Microsoft 的 R 和 Python 包和解释器也在 Azure 机器学习、Azure 服务（如 [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)）以及 [Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux) 中提供。Data Science Virtual Machine(https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) 具有一个配备齐全的开发工作站，其中包含多家供应商提供的工具以及 Microsoft 的库和解释器。
 
 ## <a name="see-also"></a>请参阅
 
