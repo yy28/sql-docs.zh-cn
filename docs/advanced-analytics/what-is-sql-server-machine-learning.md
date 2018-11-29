@@ -86,7 +86,6 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ### <a name="step-4-optimize-your-solution"></a>步骤 4： 优化您的解决方案
 
-
 当模型准备扩展到企业数据时，数据科学家经常与DBA或SQL开发人员合作，优化以下流程：
 
 + 特征工程
