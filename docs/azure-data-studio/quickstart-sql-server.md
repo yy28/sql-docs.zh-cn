@@ -29,14 +29,14 @@ ms.locfileid: "49356088"
 如果您无权访问SQL Server，请从以下链接中选择您的平台（确保记住您的SQL登录名和密码！）：
 - [Windows - 下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - 在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux-下载 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -只需按照步骤最多*创建和查询数据*。
+- [Linux-下载 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -您只需按照创建和查询数据的步骤进行操作即可。
 
 
 ## <a name="connect-to-a-sql-server"></a>连接到 SQL Server
 
    
 1. 启动**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
-1. 首次运行*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **连接**对话框随即打开。 如果**连接**不会打开对话框中，单击**新的连接**中的图标**服务器**页：
+1. 第一次运行*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 时，将打开**连接**对话框。 如果**连接**对话框未打开，请单击**服务器**页面中的**新的连接**图标：
    
    ![新的连接图标](media/quickstart-sql-server/new-connection-icon.png)
 
@@ -81,7 +81,7 @@ ms.locfileid: "49356088"
 
 ## <a name="create-a-table"></a>创建表
 
-查询编辑器仍连接到*主*数据库中，但我们想要创建的表中*TutorialDB*数据库。 
+查询编辑器仍然连接到*master*数据库，但我们想在*TutorialDB*数据库中创建一个表。 
 
 1. 将连接上下文更改为**TutorialDB**:
 
