@@ -1,5 +1,5 @@
 ---
-title: 快速入门： 连接和查询 SQL Server 使用 Azure Data Studio |Microsoft Docs
+title: 快速入门：使用Azure Data Studio连接和查询SQL Server |Microsoft Docs
 description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 SQL Server 并运行查询
 ms.custom: tools|sos
 ms.date: 09/24/2018
@@ -17,16 +17,16 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49356088"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 使用连接和查询 SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-本快速入门介绍如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 SQL Server，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接和查询 SQL Server
+本快速入门显示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到SQL Server，然后使用Transact-SQL（T-SQL）语句创建[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程中使用的*TutorialDB*。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要条件
 
-若要完成本快速入门教程，需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和对 SQL Server 访问权限。
+要完成此快速入门，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]并访问SQL Server。
 
 - [安装[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
-如果你没有访问 SQL Server，通过以下链接选择平台 （请确保记住 SQL 登录名和密码 ！）：
+如果您无权访问SQL Server，请从以下链接中选择您的平台（确保记住您的SQL登录名和密码！）：
 - [Windows - 下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - 在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 - [Linux-下载 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -只需按照步骤最多*创建和查询数据*。
@@ -55,7 +55,7 @@ ms.locfileid: "49356088"
 
 ## <a name="create-a-database"></a>创建数据库
 
-以下步骤创建一个名为数据库**TutorialDB**:
+以下步骤创建名为**TutorialDB**的数据库:
 
 1. 右键单击您的服务器上**localhost**，然后选择**新查询。**
 1. 将以下代码片段粘贴到查询窗口： 
@@ -76,23 +76,23 @@ ms.locfileid: "49356088"
    ```
 1. 若要执行查询时，请单击**运行**。
 
-在查询完成后，新**TutorialDB**显示数据库列表中。 如果看不到它，请右击**数据库**节点，然后选择**刷新**。
+在查询完成后，新的**TutorialDB**将出现在数据库列表中。 如果看不到，请右击**数据库**节点，然后选择**刷新**。
 
 
 ## <a name="create-a-table"></a>创建表
 
 查询编辑器仍连接到*主*数据库中，但我们想要创建的表中*TutorialDB*数据库。 
 
-1. 更改到的连接上下文**TutorialDB**:
+1. 将连接上下文更改为**TutorialDB**:
 
    ![更改上下文](media/quickstart-sql-server/change-context.png)
 
 
 
-1. 以下代码片段粘贴到查询窗口，然后单击**运行**:
+1. 将以下代码段粘贴到查询窗口中，然后单击**运行**：
 
    > [!NOTE]
-   > 可以将其追加或覆盖在编辑器中前面的查询。 请注意，单击**运行**执行所选查询。 如果未选择任何项，则单击**运行**执行所有查询编辑器中。
+   > 您可以将其追加到编辑器中，或者覆盖编辑器中的前一个查询。 注意，单击**运行**只执行所选的查询。 如果没有选择，单击**运行**执行编辑器中的所有查询。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +115,7 @@ ms.locfileid: "49356088"
 
 ## <a name="insert-rows"></a>插入行
 
-- 以下代码片段粘贴到查询窗口，然后单击**运行**:
+- 将以下代码段粘贴到查询窗口中，然后单击**运行**：
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -132,7 +132,7 @@ ms.locfileid: "49356088"
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>查看由查询返回的数据
-1. 以下代码片段粘贴到查询窗口，然后单击**运行**:
+1. 将以下代码段粘贴到查询窗口中，然后单击**运行**：
 
    ```sql
    -- Select rows from table 'Customers'
