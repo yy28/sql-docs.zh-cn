@@ -36,7 +36,7 @@ public boolean rowUpdated()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果行已由所有者或其他用户可见地更新了并且更新被检测到了，则为“ture”。 否则为 **false**。  
+ 如果行已由所有者或其他用户可见地更新了并且更新被检测到了，则为“true”。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
