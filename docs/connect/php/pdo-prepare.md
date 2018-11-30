@@ -48,7 +48,7 @@ key_pair：包含属性名称和值的数组。 有关详细信息，请参阅�
 |PDO::ATTR_CURSOR|指定游标行为。 默认值为 PDO::CURSOR_FWDONLY。 PDO::CURSOR_SCROLL 是静态游标。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果使用 PDO::CURSOR_SCROLL，你可以使用下方介绍的 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
 |PDO::ATTR_EMULATE_PREPARES|默认情况下，此属性为 false，这可以更改此`PDO::ATTR_EMULATE_PREPARES => true`。 请参阅[模拟准备](#emulate-prepare)有关详细信息和示例。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8（默认值）<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
-|PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 Ture，则指定直接查询执行。 False 表示已准备的语句执行。 有关 PDO::SQLSRV_ATTR_DIRECT_QUERY 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 True，则指定直接查询执行。 False 表示已准备的语句执行。 有关 PDO::SQLSRV_ATTR_DIRECT_QUERY 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|  
   
 如果使用 PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL，你可以使用 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 例如，  
