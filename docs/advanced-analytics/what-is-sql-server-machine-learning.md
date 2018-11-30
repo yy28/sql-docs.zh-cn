@@ -33,8 +33,8 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 | 组件 | Description |
 |-----------|-------------|
 | SQL Server Launchpad服务 | 管理外部R和Python运行时与数据库引擎实例之间通信的服务。 |
-| R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是主库的此库中的可缩放。 函数是最广泛使用。 这些库中找到数据转换和操作、 统计汇总、 可视化和建模和分析多种形式。 此外，这些库中的函数会自动将工作负荷分散到以便并行处理，能够工作的协调和管理计算引擎的数据块上的可用内核。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。 <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)用于 R 脚本置于 T-SQL 存储过程、 向数据库注册存储的过程和从 R 开发环境运行存储的过程提供帮助器函数。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的开放源代码分发的。包含包和解释器。 始终使用 MRO 由安装程序安装的版本。 |
+| R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是可扩展R的主要库。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作，统计摘要，可视化以及许多形式的建模和分析。 此外，这些库中的功能可自动在可用内核之间分配工作负载以进行并行处理，并能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加了机器学习算法，以创建用于文本分析，图像分析和情感分析的自定义模型。 <br/>[**sqlRUtils**](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)用于在R脚本中构建或执行MDX查询。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 的 R 开源分发版，内含包和解释器。 请始终使用安装程序安装的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示是 R 分发版中的标准工具。  |
 | R 示例和脚本 |  开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
 | Python 包 | [**revoscalepy** ](python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有用于数据操作、转换、可视化和分析的函数。 <br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，用于为文本分析、图像分析和情绪分析创建自定义模型。  |
@@ -53,7 +53,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 经典的客户端-服务器交互是另一种方法。 从任何客户端工作站上具有一个 IDE，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写将推送执行的代码 (称为*远程计算上下文*) 对数据和到远程 SQL Server 的操作。 
 
-最后，如果使用的[独立服务器](r/r-server-standalone.md)和 Developer edition 中，你可以构建解决方案，客户端工作站上使用相同的库和解释器，并随后部署生产代码中的对 SQL Server 机器学习服务 （数据库内）。 
+最后，如果您使用的是[独立服务器](r/r-server-standalone.md)和Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在SQL Server机器学习服务（数据库中）上部署生产代码。 
 
 ## <a name="how-to-get-started"></a>如何开始
 
@@ -86,18 +86,18 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ### <a name="step-4-optimize-your-solution"></a>步骤 4： 优化你的解决方案
 
-当模型可基于企业数据进行扩展时，数据科学家往往会与 DBA 或 SQL 开发人员合作以优化以下流程：
+准备好根据企业数据缩放模型时，数据科研人员通常会与 DBA 或 SQL 开发人员一起优化以下流程非常有效：
 
 + 特征工程
 + 数据引入和数据转换
-+ 评分
++ 计分
 
-传统上，使用 R 的数据科学家会遇到性能和规模方面的问题，使用大型数据集时尤其如此。这是因为公共运行时实现是单线程的，并且只能容纳适合本地计算机上可用内存的那些数据集。与 SQL Server 机器学习服务集成可提供多种功能，有助于提升性能，同时还可提供更多数据：
+传统上，数据科学家使用 R 已与性能和规模，问题，尤其是在使用大型数据集。 因为通用运行时实现是单线程的，只能适应可装入本地计算机上可用内存的数据集。 与 SQL Server 机器学习服务集成提供多种功能，更好的性能，更多的数据：
 
-+ **RevoScaleR**： 此 R 包包含一些最常用的 R 函数，经过重新设计可提供并行性和扩展性。此包还包括一些功能，可通过将计算推送到 SQL Server 计算机来进一步提高性能和扩展性，这些计算机通常具有更大内存和更强的计算能力。
++ **RevoScaleR**： 此 R 包包含部分最常用 R 函数，可提供并行度与伸缩性重新设计的实现实现。 包还包括函数来进一步提升性能和规模，通过将计算推送到通常具有大得多的内存和计算能力的 SQL Server 计算机。
 
-+ **revoscalepy**。该 Python 库实现了 RevoScaleR 中最常用的函数（例如远程计算上下文）以及许多支持分布式处理的算法。
- 
++ **revoscalepy**。 例如远程计算上下文中 RevoScaleR，此 Python 库实现最常用的函数和许多算法支持的分布式处理。
+
 有关性能的详细信息，请参阅此[性能案例研究](r/performance-case-study-r-services.md)并[R 和数据优化](r/r-and-data-optimization-r-services.md)。
 
 ### <a name="step-5-deploy-and-consume"></a>步骤 5： 部署和使用
@@ -131,13 +131,13 @@ SQL Server 2017 机器学习服务是新一代的 SQL Server 2016 R Services，�
 
 有关版本的包版本，请参阅中的映射的版本[升级 R 和 Python 组件](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)。
 
-## <a name="portability-and-related-products"></a>可移植性和相关产品
+## <a name="portability-and-related-products"></a>可移植性及相关的产品
 
-包含我们的 R 和 Python 解释器的免费客户端包括 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) 和 [Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
+通过包分发和解释器内置于多个产品，自定义 R 和 Python 代码的可移植性将得到解决。 在 SQL Server 中提供的相同包也会出现在多个其他 Microsoft 产品和服务，包括一个名为非 SQL 版本[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)。 
 
-包含我们的R和Python解释器的免费客户端是[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)并[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
+免费包含我们 R 和 Python 解释器的客户端[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)并[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
 
-在 Azure 中，Microsoft 的 R 和 Python 包和解释器也在 Azure 机器学习、Azure 服务（如 [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)）以及 [Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux) 中提供。Data Science Virtual Machine(https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) 具有一个配备齐全的开发工作站，其中包含多家供应商提供的工具以及 Microsoft 的库和解释器。
+在 Azure 上，Microsoft 的 R 和 Python 包，以及解释器提供了 Azure 机器学习和 Azure 服务，如[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)，并[Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)。 [数据科学虚拟机](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)包括从多个供应商并将库的工具和来自 Microsoft 的解释器的完全配备的开发工作站。
 
 ## <a name="see-also"></a>请参阅
 
