@@ -161,7 +161,7 @@ ms.locfileid: "51640674"
  如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
   
  **ExecuteOutOfProcess**  
- 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **true**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 **ture**，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
+ 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **true**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 **true**，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 #### <a name="referencetype-dynamic-options"></a>ReferenceType 动态选项  
   
