@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server 2016 中的 R Services |Microsoft Docs
 description: 对关系数据，包括数据科学和统计建模和预测分析、 数据可视化等集成的 R 任务的 SQL Server 中的 R。
 ms.prod: sql
