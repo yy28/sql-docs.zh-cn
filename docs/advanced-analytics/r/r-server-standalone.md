@@ -32,9 +32,9 @@ SQL Server 2016 仅为 R。 SQL Server 2017 支持 R 和 Python。 下表介绍�
 | 组件 | Description |
 |-----------|-------------|
 | R 包 | [**RevoScaleR** ](revoscaler-overview.md)适用于具有可实现数据操作、 转换、 可视化和分析功能的可缩放 R 是主库。  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)用于 R 脚本置于 T-SQL 存储过程、 向数据库注册存储的过程和从 R 开发环境运行存储的过程提供帮助器函数。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md)产品/服务的 web 服务部署 （在仅 SQL Server 2017)。 <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md)用于在 R 中指定的 MDX 查询|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是微软r的开源发行版，包和解释器都包括在内。始终使用安装程序中附带的MRO版本。 |
-| R 工具 | 控制台窗口和命令提示符是R发行版中的标准工具。在\程序文件\Microsoft SQL Server\140\R_SERVER\bin\x64找到它们。 |
-| R 示例和脚本 |  开源R和RevoScaleR软件包包含内置数据集，因此您可以使用预安装的数据创建和运行脚本。在\ Program files \ Microsoft SQL Server \ 140 \ R_SERVER \ library \ datasets和\ library \ RevoScaleR中查找它们。 |
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版，内含包和解释器。始终使用安装程序中附带的 MRO 版本。 |
+| R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。可在 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 中找到它们。 |
+| R 示例和脚本 | 开源 R 和 RevoScaleR 包中包含内置数据集，你可以使用预安装的数据创建和运行脚本。可在 Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR 中找到它们。 |
 | Python 包 | [**revoscalepy** ](../python/what-is-revoscalepy.md)用于具有可实现数据操作、 转换、 可视化和分析功能的可缩放 Python 是主库。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。  |
 | Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。 在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe 中找到该工具。 |
 | Anaconda | Anaconda 是开放源代码的 Python 和基本包的发行版本。 |
