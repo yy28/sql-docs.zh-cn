@@ -1,3 +1,4 @@
+items:
 - name: 安装 SQL Server 迁移助手
   href: installing-sql-server-migration-assistant-for-access-accesstosql.md
 - name: SSMA for Access 控制台入门
@@ -13,7 +14,7 @@
 - name: Access 清单架构
   href: access-inventory-schemas-accesstosql.md
 - name: 保存元数据
-  href: save-metadata-acesstosql.md
+  href: save-metadata-accesstosql.md
 - name: 连接到 SQL Server
   href: connecting-to-sql-server-accesstosql.md
 - name: 将 Access 数据迁移到 Azure SQL DB
@@ -122,3 +123,9 @@
   href: find-databases-wizard-select-locations-accesstosql.md
 - name: 附录 - 1
   href: appendix-1-accesstosql.md
+ms.openlocfilehash: 31527936a79f48cbdfbb8f8bd0a069c2a9baffe1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617497"
