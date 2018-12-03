@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server 中的独立的 R Server 或 Machine Learning Server 安装 |Microsoft Docs
 description: 为独立版 R Server 概述简介和机器学习服务器在 SQL Server 安装程序
 ms.prod: sql
@@ -31,15 +31,15 @@ SQL Server 2016 仅为 R。 SQL Server 2017 支持 R 和 Python。 下表介绍�
 
 | 组件 | Description |
 |-----------|-------------|
-| R 包 | [**RevoScaleR** ](revoscaler-overview.md) 是可扩展 R 的主要库，包含数据操作、转换、可视化和分析功能。<br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 可添加机器学习算法，以创建用于文本分析、图像分析和情感分析的自定义模型。<br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) 可提供帮助程序函数，从而将 R 脚本放入 T-SQL 存储过程，向数据库注册存储过程，以及从 R 开发环境运行存储过程。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) 可提供 Web 服务部署（仅在 SQL Server 2017 中）。<br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) 可用于在 R 中指定 MDX 查询。|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的开放源代码分发的。包含包和解释器。 始终使用 MRO 捆绑在一起安装程序中的版本。 |
-| R 工具 | R 控制台窗口和命令提示中的 R 分发版的标准工具。 在 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 中找到它们。 |
-| R 示例和脚本 |  开放源代码 R 和 RevoScaleR 包包括内置的数据集，以便您可以创建和运行脚本使用预安装的数据。 为其查看 \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR。 |
-| Python 包 | [**revoscalepy** ](../python/what-is-revoscalepy.md)用于具有可实现数据操作、 转换、 可视化和分析功能的可缩放 Python 是主库。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。  |
+| R 包 | [**RevoScaleR** ](revoscaler-overview.md) 是可扩展 R 的主要库，包含数据操作、转换、可视化和分析功能。  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 可添加机器学习算法，以创建用于文本分析、图像分析和情感分析的自定义模型。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) 可提供帮助程序函数，从而将 R 脚本放入 T-SQL 存储过程，向数据库注册存储过程，以及从 R 开发环境运行存储过程。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) 可提供 Web 服务部署（仅在 SQL Server 2017 中）。 <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) 可用于在 R 中指定 MDX 查询。|
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版，内含包和解释器。始终使用安装程序中附带的 MRO 版本。 |
+| R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。可在 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 中找到它们。 |
+| R 示例和脚本 | 开源 R 和 RevoScaleR 包中包含内置数据集，你可以使用预安装的数据创建和运行脚本。可在 Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR 中找到它们。 |
+| Python 包 | [**revoscalepy** ](../python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有数据操作、转换、可视化和分析功能。<br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，以创建用于文本分析、图像分析和情绪分析的自定义模型。 |
 | Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。 在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe 中找到该工具。 |
-| Anaconda | Anaconda 是开放源代码的 Python 和基本包的发行版本。 |
-| Python 示例和脚本 | 如使用 R、 Python 包含内置的数据集和脚本。 在 \Program files\Microsoft SQL 查找 revoscalepy 数据 Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 数据。 |
-| R 和 Python 中预先训练的模型 | 针对特定用例创建预先训练的模型，并由Microsoft的数据科学工程团队维护。您可以使用预先训练的模型按原样评估文本中的正负情绪，或使用您提供的新数据输入检测图像中的特征。预先训练的模型在独立服务器上受支持和可用，但您无法通过SQL Server安装程序进行安装。有关更多信息，请参阅[在SQL Server上安装预训练机器学习模型](../install/sql-pretrained-models-install.md)。 |
+| Anaconda | Anaconda 是 Python 和必备包的开源分发版。 |
+| Python 示例和脚本 | 与 R 一样，Python 包含内置数据集和脚本。请在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data 中查找 revoscalepy 数据。|
+| R 和 Python 中预先训练的模型 | 预先训练的模型针对特定用例创建，并由 Microsoft 的数据科学工程团队维护。可以按原样使用预先训练的模型对文本中的积极/消极情绪进行评分，或使用你提供的新数据输入检测图像中的特征。预先训练的模型在独立服务器上受支持并且可用，但不能通过 SQL Server 安装程序进行安装。有关详细信息，请参阅[在 SQL Server 上安装预训练的机器学习模型](../install/sql-pretrained-models-install.md)。 |
 
 ## <a name="using-a-standalone-server"></a>使用独立服务器
 
@@ -55,33 +55,31 @@ R 和 Python 开发人员通常选择要移动的开源 R 和 Python 的内存�
 
 ### <a name="step-1-install-the-software"></a>步骤 1： 安装软件
 
-安装以下任一版本：
+安装这些版本的之一：
 
 + [SQL Server 2017 机器学习服务器 （独立版）](../install/sql-machine-learning-standalone-windows-install.md)
 + [SQL Server 2016 R Server （独立版）-仅 R](../install/sql-r-standalone-windows-install.md)
 
 ### <a name="step-2-configure-a-development-tool"></a>步骤 2： 配置开发工具
 
-在独立服务器上，通常使用安装在同一台计算机上的开发工具在本地工作。
+在独立服务器上，很常见，若要运行使用本地安装在同一台计算机上的开发。
 
 + [设置 R 工具](set-up-a-data-science-client.md)
 + [设置 Python 工具](../python/setup-python-client-tools-sql.md)
 
 ### <a name="step-3-write-your-first-script"></a>第 3 步： 编写第一个脚本
 
-使用RevoScaleR，revoscalepy和机器学习算法中的函数编写R或Python脚本。
+编写使用 RevoScaleR 和 revoscalepy，机器学习算法中的函数的 R 或 Python 脚本。
   
-  + [探索R和RevoScaleR中的25个功能](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)：从基本的R命令开始，然后进入RevoScaleR可分配的分析功能，为R解决方案提供高性能和扩展。包括许多最流行的R建模软件包的可并行化版本，例如k-means集群，决策树和决策林，以及用于数据操作的工具。
+  + [探索 R 和 25 个函数的 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)： 开始使用 R 的基本命令，然后提供高性能的 RevoScaleR 可分发分析函数的进度和缩放 R 解决方案。 包括许多最流行的 R 建模包的可并行化版本，例如 K-均值聚类、决策树和决策林以及用于数据操作的工具。
 
-  + [快速入门： 使用 microsoftml Python 包的二进制分类的示例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)： 使用microsoftml和众所周知的乳腺癌数据集中的函数创建二进制分类模型。
+  + [快速入门： 使用 microsoftml Python 包的二进制分类的示例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)： 创建使用从 microsoftml 和已知乳腺癌癌症数据集的函数的二元分类模型。
 
-
-选择最适合该任务的语言。 R最适合于使用SQL难以实现的统计计算。对于基于集合的数据操作，利用SQL Server的强大功能来实现最高性能。使用内存数据库引擎可以非常快速地对列进行计算。
+选择该任务的最佳语言。 使用 SQL 难以实现统计计算，但适合使用 R 来实现。 对于基于集的操作数据，充分利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为了实现最佳性能。 对列进行快速计算时，可使用内存数据库引擎。
 
 ### <a name="step-4-operationalize-your-solution"></a>步骤 4： 操作你的解决方案
 
-
-独立服务器可以使用非SQL品牌的[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)的操作功能(https://docs.microsoft.com//machine-learning-server/what-is-operationalization)。您可以配置独立服务器进行操作，从而为您带来以下好处：将代码部署和托管为Web服务，运行诊断程序，测试Web服务容量。
+可以使用独立的服务器[实施](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)功能的非 SQL 品牌[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)。 可以配置独立的服务器的操作化，可以为您提供这些优点： 部署和托管你的代码，因为 web 服务，运行诊断程序，测试 web 服务容量。
 
 ## <a name="see-also"></a>请参阅
 
