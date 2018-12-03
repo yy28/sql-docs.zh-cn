@@ -11,12 +11,12 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 823411df1521292914f7b8decf0636d1e6a330e7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: eb6e81dc3968677571fea444fc83a4b999a74b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544371"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  有关访问扩展的事件日志中的诊断信息的详细信息，请参阅[访问扩展的事件日志中的诊断信息](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
  以下示例显示如何获取连接 ID：  
@@ -49,9 +49,9 @@ UUID id = ((ISQLServerConnection)con).getClientConnectionId();
   
 ```  
 SQLServerConnectionPoolDataSource ds = new SQLServerConnectionPoolDataSource();  
-ds.setUser("…");  
-ds.setPassword("…");  
-ds.setServerName("…");  
+ds.setUser("...");  
+ds.setPassword("...");  
+ds.setServerName("...");  
 PooledConnection pcon= ds.getPooledConnection();  
 Connection cn = pcon.getConnection();  
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  

@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cecdeb5d702346110c37068a51aebd755a57411
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601627"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616678"
 ---
 # <a name="sql-data-developer"></a>SQL 数据开发人员
 使用 Microsoft SQL 数据平台，要在移动设备和桌面系统对 web 服务器、 企业服务器和云之间创建以数据为中心的解决方案。  

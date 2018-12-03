@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527101"
 ---
 # <a name="idle-connection-resiliency"></a>空闲连接复原
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -23,16 +23,16 @@ ms.locfileid: "49460372"
 
 连接复原能力实现与可以添加到连接字符串的两个连接关键字： **ConnectRetryCount**并**ConnectRetryInterval**。
 
-|关键字|值|，则“默认”|描述|
+|关键字|值|默认|说明|
 |-|-|-|-|
 |**ConnectRetryCount**| 0 到 255 （含） 之间的整数|1|尝试重新建立断开的连接之前放弃的最大次数。 默认情况下进行一次尝试以重新建立连接时中断。 值为 0 表示将尝试任何重新连接。|
 |**ConnectRetryInterval**| 介于 1 和 60 （含） 之间的整数|1| 以秒为单位，两次尝试重新建立的连接之间的时间。 应用程序将尝试在检测到断开的连接后立即重新连接，然后等待**ConnectRetryInterval**秒，然后重试。 如果，则忽略此关键字**ConnectRetryCount**等于 0。
 
 如果的乘积**ConnectRetryCount**乘以**ConnectRetryInterval**大于**LoginTimeout**，则客户端将停止尝试一次连接**LoginTimeout**达到; 否则，它将继续尝试重新连接之前**ConnectRetryCount**为止。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>注释
 
-当连接处于空闲状态时，将应用连接复原能力。 故障发生时执行的事务，例如，不会触发重新连接尝试 – 它们将失败，因为预期的要。 以下情况下，名为不可恢复的会话状态，不会触发重新连接尝试：
+当连接处于空闲状态时，将应用连接复原能力。 故障发生时执行的事务，例如，不会触发重新连接尝试-它们将失败，因为预期的要。 以下情况下，名为不可恢复的会话状态，不会触发重新连接尝试：
 
 * 临时表
 * 全局和局部游标

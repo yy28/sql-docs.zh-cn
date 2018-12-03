@@ -11,12 +11,12 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 543651938433e2ac6824ea771edc1eba11540558
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c677cd46b4d3366b997e4d1effe5c056ec62a158
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529589"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51603037"
 >  有关部署 Java 应用程序的一般信息，请参阅 Java 网站。  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>在 Windows 系统中部署 JDBC 驱动程序  
- 在 Windows 操作系统上部署 JDBC 驱动程序时，必须使用安装包的可执行 zip 文件版本，其名称通常为 `sqljdbc_<version>_<language>.exe`。  
+ 在 Windows 操作系统中部署 JDBC 驱动程序时，必须使用安装包的可执行 zip 文件版本，其名称通常为 `sqljdbc_<version>_<language>.exe`。  
   
  若要无提示地运行可执行 zip 文件，必须在命令行上或批处理文件中使用 `/auto` 命令行选项，如下所示：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "51603037"
   
  若要解压缩此 tar 文件，请将它移到您要安装驱动程序的目录中，然后键入以下命令：  
   
- `tar –xf sqljdbc_<version>_<language>.tar`  
+ `tar -xf sqljdbc_<version>_<language>.tar`  
   
 ## <a name="see-also"></a>另请参阅  
  [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

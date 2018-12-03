@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 849acd4eabc86882912d72309b6507e4ba2fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 124c1f9cfa058b3f59141af0a16d8db25fef700b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535121"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>适用于 SQL Server 的 OLE DB 驱动程序编程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47810765"
   
  OLE DB 驱动程序适用于 SQL Server 提供对应用程序连接到 OLE DB 支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- SQL Server 的 OLE DB 驱动程序是 OLE DB 版本 2.0 兼容的提供程序。  
+ SQL Server 的 OLE DB 驱动程序是一个 OLE DB 版本 2.0 兼容提供程序。  
   
 ## <a name="in-this-section"></a>本节内容  
   

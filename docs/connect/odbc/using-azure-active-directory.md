@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536652"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>结合使用 Azure Active Directory 和 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -32,16 +32,16 @@ Microsoft ODBC Driver for SQL Server 使用版本 13.1 或更高版本允许 ODB
 
 `Authentication`关键字可用于使用 DSN 或连接字符串进行连接时控制身份验证模式。 在连接字符串中设置的值覆盖，在 DSN 中，如果提供。 _预先属性值_的`Authentication`设置为从连接字符串和 DSN 值计算的值。
 
-|“属性”|值|，则“默认”|描述|
+|“属性”|值|默认|说明|
 |-|-|-|-|
-|`Authentication`|（未设置），（空字符串）、 `SqlPassword`， `ActiveDirectoryPassword`， `ActiveDirectoryIntegrated`， `ActiveDirectoryInteractive`|(未设置)|控制身份验证模式。<table><tr><th>ReplTest1<th>描述<tr><td>(未设置)<td>身份验证模式由其他关键字 （现有旧的连接选项。）<tr><td>(空字符串)<td>连接字符串为“{0}”重写和取消设置`Authentication`值在 DSN 中的设置。<tr><td>`SqlPassword`<td>直接进行身份验证使用的用户名和密码的 SQL Server 实例。<tr><td>`ActiveDirectoryPassword`<td>使用 Azure Active Directory 标识使用用户名和密码进行身份验证。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用集成身份验证进行身份验证。<tr><td>`ActiveDirectoryInteractive`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用交互式身份验证进行身份验证。</table>|
+|`Authentication`|（未设置），（空字符串）、 `SqlPassword`， `ActiveDirectoryPassword`， `ActiveDirectoryIntegrated`， `ActiveDirectoryInteractive`|(未设置)|控制身份验证模式。<table><tr><th>ReplTest1<th>说明<tr><td>(未设置)<td>身份验证模式由其他关键字 （现有旧的连接选项。）<tr><td>(空字符串)<td>连接字符串为“{0}”重写和取消设置`Authentication`值在 DSN 中的设置。<tr><td>`SqlPassword`<td>直接进行身份验证使用的用户名和密码的 SQL Server 实例。<tr><td>`ActiveDirectoryPassword`<td>使用 Azure Active Directory 标识使用用户名和密码进行身份验证。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用集成身份验证进行身份验证。<tr><td>`ActiveDirectoryInteractive`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用交互式身份验证进行身份验证。</table>|
 |`Encrypt`|(未设置)、`Yes``No`|（请参见说明）|控制连接的加密。 如果预属性值`Authentication`设置不是_无_在 DSN 或连接字符串中，默认值是`Yes`。 否则默认值为 `No`。 如果该属性`SQL_COPT_SS_AUTHENTICATION`重写的预特性值`Authentication`、 显式 DSN 或连接字符串或连接属性中设置的加密值。 加密的预属性值是`Yes`的值设置为如果`Yes`的 DSN 或连接字符串中。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>新的和/或修改连接属性
 
 以下预连接属性已引入或修改，以支持 Azure Active Directory 身份验证的连接。 当连接属性都有相应的连接字符串或 DSN 关键字，并且设置时，连接属性优先。
 
-|Attribute|类型|值|，则“默认”|描述|
+|Attribute|类型|值|默认|说明|
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`、`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_RESET`|(未设置)|请参阅说明`Authentication`关键字更高版本。 `SQL_AU_NONE` 若要显式重写一组提供`Authentication`值在 DSN 和/或连接字符串中，虽然`SQL_AU_RESET`取消设置该属性，如果它已设置，从而允许为具有更高优先级的 DSN 或连接字符串值。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|指向`ACCESSTOKEN`或为 NULL|NULL|如果非 null，指定 azure Ad 访问令牌来使用。 它是指定的访问令牌，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`连接字符串关键字或其等效的属性。 <br> **注意：** ODBC 驱动程序版本 13.1 才支持此上_Windows_。|
@@ -88,13 +88,13 @@ SQLDriverConnect 请求以完成连接所需的信息时显示提示对话框包
 这些选项对应于相同的五个 DSN 设置 UI 更高版本中可用。
 
 ### <a name="example-connection-strings"></a>连接字符串示例
-1. SQL Server 身份验证 – 旧语法。 不验证服务器证书，并且仅当服务器强制实施它使用加密。 在连接字符串中传递用户名/密码。
+1. SQL Server 身份验证的旧式语法。 不验证服务器证书，并且仅当服务器强制实施它使用加密。 在连接字符串中传递用户名/密码。
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. SQL 身份验证 – 新的语法。 客户端请求加密 (默认值`Encrypt`是`true`) 和服务器证书获取已验证，而不考虑加密设置 (除非`TrustServerCertificate`设置为`true`)。 在连接字符串中传递用户名/密码。
+2. SQL 身份验证的新语法。 客户端请求加密 (默认值`Encrypt`是`true`) 和服务器证书获取已验证，而不考虑加密设置 (除非`TrustServerCertificate`设置为`true`)。 在连接字符串中传递用户名/密码。
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. 集成 Windows 身份验证 (Kerberos Linux 和 macOS 上) 使用 SSPI （到 SQL Server 或 SQL IaaS） – 当前的语法。 不验证服务器证书，除非使用加密。 
+3. 集成 Windows 身份验证 (Kerberos Linux 和 macOS 上) 使用 SSPI （到 SQL Server 或 SQL IaaS） 的当前语法。 不验证服务器证书，除非使用加密。 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Windows 驱动程序_。)集成 Windows 身份验证使用 SSPI （如果目标数据库位于 SQL Server 或 SQL IaaS） – 新语法。 客户端请求加密 (默认值`Encrypt`是`true`) 和服务器证书获取已验证，而不考虑加密设置 (除非`TrustServerCertificate`设置为`true`)。 
+4. (_Windows 驱动程序_。)集成 Windows 身份验证使用 SSPI （如果目标数据库是在 SQL Server 或 SQL IaaS 中） 的新语法。 客户端请求加密 (默认值`Encrypt`是`true`) 和服务器证书获取已验证，而不考虑加密设置 (除非`TrustServerCertificate`设置为`true`)。 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. AAD 用户名/密码身份验证 （如果目标数据库是在 Azure SQL 数据库）。 获取验证服务器证书，而不考虑加密设置 (除非`TrustServerCertificate`设置为`true`)。 在连接字符串中传递用户名/密码。 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`

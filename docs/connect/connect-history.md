@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: d040c333aec94cc1de41df03906470356a530faa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 98f49213afaaac17ea41a366bf4888043cc61045
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529436"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL server 驱动程序历史记录
 
@@ -139,7 +139,7 @@ MDAC/WDAC 包含以下组件：
 
 以下组件被视为已过时：
 
-* **Db-library:** DB 库是一个特定于 SQL Server – 编程模型，其中包含 C Api。 SQL Server 6.5 以来已有的 Db-library 没有功能的增强功能。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
-* **(E SQL) 的嵌入式 SQL:** E SQL 是特定于 SQL Server – 编程模型，在 Visual C 代码中嵌入的 TRANSACT-SQL 语句。 无需增强功能具有已对 SQL Server 6.5 E SQL。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
+* **Db-library:** DB 库是一个特定于 SQL Server 的编程模型，其中包含 C Api。 SQL Server 6.5 以来已有的 Db-library 没有功能的增强功能。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
+* **(E SQL) 的嵌入式 SQL:** E SQL 是特定于 SQL Server 的编程模型，在 Visual C 代码中嵌入的 TRANSACT-SQL 语句。 无需增强功能具有已对 SQL Server 6.5 E SQL。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
 * **数据访问对象 (DAO):** DAO 提供对 JET （访问） 数据库的访问。 此 API 可用于从 Microsoft Visual Basic、 Microsoft Visual c + + 和脚本语言。 它已包含在 Microsoft Office 2000 和 Office XP。 DAO 3.6 是这项技术的最终版本。 它不会在 64 位 Windows 操作系统上可用。
 * **远程数据对象 (RDO):** RDO 设计为专门用于访问远程 ODBC 关系数据源，并更轻松地使用 ODBC，而无需复杂的应用程序代码。 它是随 Microsoft Visual Basic 版本 4、 5 和 6。 RDO 2.0 版是这项技术的最终版本。

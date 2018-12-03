@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838495"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509965"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -253,13 +253,13 @@ FIELDQUOTE **=** 'field_quote'
 >    消息 491，级别 16，状态 1，第 20 行    
 >    必须在 FROM 子句中为大容量行集指定相关名称。    
   
--   `SELECT...FROM OPENROWSET(BULK...)` 语句将直接查询文件中的数据，无需将数据导入表中。 `SELECT…FROM OPENROWSET(BULK...)` 语句还可以通过使用格式化文件指定列名和数据类型，从而列出大容量列别名。  
+-   `SELECT...FROM OPENROWSET(BULK...)` 语句将直接查询文件中的数据，无需将数据导入表中。 `SELECT...FROM OPENROWSET(BULK...)` 语句还可以通过使用格式化文件指定列名和数据类型，从而列出大容量列别名。  
   
 -   将 `OPENROWSET(BULK...)` 用作 `INSERT` 或 `MERGE` 语句中的源表，将数据文件中的数据大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 有关详细信息，请参阅[使用 BULK INSERT 或 OPENROWSET (BULK...) 导入批量数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
 -   `OPENROWSET BULK` 选项与 `INSERT` 语句一起使用时，BULK 子句支持表提示。 除了常规表提示（例如 `TABLOCK`），`BULK` 子句还可以接受以下专用表提示：`IGNORE_CONSTRAINTS`（仅忽略 `CHECK` 和 `FOREIGN KEY` 约束）、`IGNORE_TRIGGERS`、`KEEPDEFAULTS` 和 `KEEPIDENTITY`。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- 有关如何使用 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 语句的信息，请参阅[批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。 有关何时在事务日志中记录由批量导入执行的行插入操作的信息，请参阅[《Prerequisites for Minimal Logging in Bulk Import》](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)（批量导入的最小日志记录的先决条件）。  
+ 有关如何使用 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 语句的信息，请参阅[批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。 有关何时在事务日志中记录由批量导入执行的行插入操作的信息，请参阅 [《Prerequisites for Minimal Logging in Bulk Import》](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)（批量导入的最小日志记录的先决条件）。  
   
 > [!NOTE]  
 >  使用 `OPENROWSET` 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是如何处理模拟的。 有关安全注意事项的信息，请参阅[使用 BULK INSERT 或 OPENROWSET (BULK...) 批量导入数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545481"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  由语句和交错执行的原子块所做的更改是相互隔离的。 例如，如果一个语句或原子块进行一些更改，然后生成执行转移到另一个语句，新的语句将看不由第一个语句所做的更改。 此外，当第一条语句继续执行时，它不会由任何其他语句所做的任何更改。 语句将只能看到完成并提交该语句前的更改。  
   
- 可以使用 BEGIN TRANSACTION 语句在当前用户事务中启动新的用户事务 – 这是支持仅在互操作模式中，因此，仅从 T-SQL 语句，名为 BEGIN TRANSACTION，不从在本机编译存储过程。 您可以创建了一个保存点在事务中使用 SAVE TRANSACTION 或对事务的 API 调用。Save(save_point_name) 回滚到保存点。 此功能还会启用仅从 T-SQL 语句，不能从在本机编译存储的过程。  
+ 可以使用 BEGIN TRANSACTION 语句在当前用户事务中启动新的用户事务-这是支持仅在互操作模式中，因此，仅从 T-SQL 语句，名为 BEGIN TRANSACTION，不能从在本机编译存储过程。 您可以创建了一个保存点在事务中使用 SAVE TRANSACTION 或对事务的 API 调用。Save(save_point_name) 回滚到保存点。 此功能还会启用仅从 T-SQL 语句，不能从在本机编译存储的过程。  
   
  **MARS 和列存储索引**  
   

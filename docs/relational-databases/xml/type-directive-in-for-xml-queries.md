@@ -14,12 +14,12 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5b77195b24c4b60b2ad11fc19e8557aec220d1e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 466786158509916d8f71f00eb9809d4753ee3dd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543841"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- 内部 `SELECT … FOR XML` 查询返回 **xml** 类型结果，外部 `SELECT` 将 `query()` 方法应用于该 **xml** 类型。 请注意指定的 `TYPE` 指令。  
+ 内部 `SELECT ... FOR XML` 查询返回 **xml** 类型结果，外部 `SELECT` 将 `query()` 方法应用于该 **xml** 类型。 请注意指定的 `TYPE` 指令。  
   
  结果如下：  
   
@@ -105,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 在下面的查询中，**xml** 数据类型的 `value()` 方法用于检索 `SELECT…FOR XML` 查询返回的 XML 结果中的值。 有关详细信息，请参阅 [value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md)。  
+ 在下面的查询中，**xml** 数据类型的 `value()` 方法用于检索 `SELECT...FOR XML` 查询返回的 XML 结果中的值。 有关详细信息，请参阅 [value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md)。  
   
 ```  
 USE AdventureWorks2012;  
