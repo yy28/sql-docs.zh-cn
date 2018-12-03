@@ -37,8 +37,8 @@ SQL Server 2016 仅为 R。 SQL Server 2017 支持 R 和 Python。 下表介绍�
 | R 示例和脚本 |  开放源代码 R 和 RevoScaleR 包包括内置的数据集，以便您可以创建和运行脚本使用预安装的数据。 为其查看 \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR。 |
 | Python 包 | [**revoscalepy** ](../python/what-is-revoscalepy.md)用于具有可实现数据操作、 转换、 可视化和分析功能的可缩放 Python 是主库。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。  |
 | Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。 在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe 中找到该工具。 |
-| Anaconda | Anaconda是Python和必备软件包的开源发行版。 |
-| Python 示例和脚本 | 与R一样，Python包含内置数据集和脚本。在\ Program files \ Microsoft SQL Server \ 140 \ PYTHON_SERVER \ lib \ site-packages \ revoscalepy \ data \ sample-data中查找revoscalepy数据。|
+| Anaconda | Anaconda 是 Python 和必备包的开源分发版。 |
+| Python 示例和脚本 | 与 R 一样，Python 包含内置数据集和脚本。请在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data 中查找 revoscalepy 数据。|
 | R 和 Python 中预先训练的模型 | 预先训练的模型创建的特定用例和在 Microsoft 数据科学工程团队维护的。 可以使用预先训练的模型作为-是正负情绪评分中的文本，或在映像中，使用你提供的新数据输入检测功能。 预先训练的模型支持的和可用的独立服务器上，但您不能通过 SQL Server 安装程序安装它们。 有关详细信息，请参阅[安装预先训练的机器学习模型，在 SQL Server 上](../install/sql-pretrained-models-install.md)。 |
 
 ## <a name="using-a-standalone-server"></a>使用独立服务器
