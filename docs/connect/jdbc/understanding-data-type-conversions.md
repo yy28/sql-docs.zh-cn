@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762405"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520202"
 ---
 # <a name="understanding-data-type-conversions"></a>了解数据类型转换
 
@@ -107,7 +107,7 @@ JDBC Driver 的 setObject 方法支持三类转换：
 
 - **非丢失 (x)**：适用于 setter 类型与基础服务器类型相同或者小于基础服务器类型时的数值转换。 例如，对基础服务器十进制数列调用 setBigDecimal 时，无需进行转换。 对于数值转换为字符的情形，Java numeric 数据类型转换为 String。 例如，使用值“53”对 varchar(50) 列调用 setDouble 时将在该目标列中生成字符值“53”。
 
-- **已转换 (y)**：从 Java numeric 类型转换为更小的基础服务器 numeric 类型。 该转换为常规转换，并且遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发不支持转换的错误。 例如，通过值“1.9999”对基础整数列使用 updateDecimal 时，将在目标列中生成“1”；但如果传递的值为“3000000000”，驱动程序将引发错误。
+- **已转换 (y)**：从 Java numeric 类型转换为更小的基础服务器 numeric 类型。 该转换为常规转换，并且遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 转换约定。 总是直接截取有效位数（从不四舍五入），而溢出将引发“不支持的转换”错误。 例如，通过值“1.9999”对基础整数列使用 updateDecimal 时，将在目标列中生成“1”；但如果传递的值为“3000000000”，驱动程序将引发错误。
 
 - **依赖于数据 (z)**：从 Java String 类型转换到基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型取决于以下条件：如有必要，驱动程序会将字符串值发送给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 再执行转换。 如果 sendStringParametersAsUnicode 连接属性设置为 True，并且基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型为 image，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不允许将 nvarchar 转换为 image 并会引发 SQLServerException。 如果 sendStringParametersAsUnicode 设置为 False，并且基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型为 image，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将允许将 varchar 转换为 image，而不会引发异常。
 
