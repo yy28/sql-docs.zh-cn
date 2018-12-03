@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506982"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查找转换完全缓存模式 - OLE DB 连接管理器
   可以将查找转换配置为使用完全缓存模式和 OLE DB 连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
@@ -52,11 +52,11 @@ ms.locfileid: "47616027"
   
     -   单击 **“使用表或视图”**，然后选择一个表或视图，或单击 **“新建”** 创建表或视图。  
   
-         — 或 —  
+         -或 -  
   
     -   单击 **“使用 SQL 查询的结果”**，然后在 **“SQL 命令”** 窗口中生成查询，或者单击 **“生成查询”** ，使用 **查询生成器** 提供的图形工具生成查询。  
   
-         — 或 —  
+         -或 -  
   
     -   或者，单击 **“浏览”** ，从文件中导入 SQL 语句。  
   

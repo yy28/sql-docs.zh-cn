@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814090"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393331"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -179,7 +179,7 @@ ms.locfileid: "51814090"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 文件的 Word 呈现器。 WORD 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 指示 Word 2003 呈现器处于隐藏状态。 有关详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
+ WORDOPENXML 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 文件的 Word 呈现器。 WORD 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = "false"` 指示 Word 2003 呈现器处于隐藏状态。 有关详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
   
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Word 呈现器和 Word 2003 呈现器之间的差异  
  使用 Word 呈现器或 Word 2003 呈现器呈现的报表往往从外观上无法区分。 但是，您可以在 Word 或 Word 2003 格式之间注意到这两者之间的细微差异。  

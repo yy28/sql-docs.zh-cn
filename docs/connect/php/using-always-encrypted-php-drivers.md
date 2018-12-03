@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695675"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403422"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 下面的示例演示如何根据加密的值和从使用 SQLSRV 和 PDO_SQLSRV 驱动程序的加密列中检索纯文本数据的筛选数据。 请注意以下几点：
  -   WHERE 子句中用于筛选 SSN 列的值需要使用 bind 参数进行传递，以便驱动程序可以在将其发送到数据库之前以透明方式对其加密。
  -   执行带有绑定参数的查询，PHP 驱动程序将自动确定用户的 SQL 类型，除非用户明确指定的 SQL 类型时使用 SQLSRV 驱动程序。
- -   该程序打印的所有值都均以纯文本形式，因为该驱动程序以透明方式解密从 SSN 和 BirthDate 列中检索的数据。
+ -   程序打印的所有值均为纯文本形式，因为驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
  
 注意： 查询才可以执行相等比较对加密列加密是确定性的。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
@@ -278,7 +278,7 @@ Azure Key Vault 提供了一种方法来存储加密密钥、 密码和其他机
      -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStorePrincipalId`必须是应用程序客户端 id。
  -   `KeyStoreSecret` 采用一个字符串，表示凭据机密。 
      -   如果`KeyStoreAuthentication`设置为`KeyVaultPassword`，然后`KeyStoreSecret`必须是用户的密码。 
-     -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStoreSecret`必须与应用程序客户端 ID 关联的应用程序机密。
+     -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStoreSecret`必须与应用程序客户端 id。关联的应用程序机密
 
 所有三个选项中必须存在要使用 Azure 密钥保管库的连接字符串。 此外，`ColumnEncryption`必须设置为`Enabled`。 如果`ColumnEncryption`设置为`Disabled`但 Azure 密钥保管库选项都存在，该脚本将继续而不进行错误但会执行任何加密。
 

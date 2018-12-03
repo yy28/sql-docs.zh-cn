@@ -1,7 +1,7 @@
 ---
 title: SQL 工具和实用程序的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292973"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190987"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和实用程序的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51292973"
 
 下面是主要的图形用户界面 (GUI) 工具：
 
-| 工具 | 说明 | 运行平台 |
+| 工具 | 描述 | 运行平台 |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一款轻型免费工具，用于管理数据库，无论数据库在何处运行。 此预览版提供各种数据库管理功能，其中包括扩展的 Transact-SQL 编辑器以及可自定义的数据库操作状态见解。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上运行**。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 使用 SQL Server Management Studio (SSMS) 来查询、 设计和管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库。 | **SSMS 在 Windows 上运行**。|
@@ -43,13 +43,13 @@ ms.locfileid: "51292973"
 
 下面是主要的命令行工具：
 
-| 工具 | 说明 | 运行平台 |
+| 工具 | 描述 | 运行平台 |
 |:--|:--|:--|
 |[**mssql-cli（预览版）**](mssql-cli.md)|**mssql-cli** 是一项用于查询 SQL Server 的交互式命令行工具。 | Windows、 macOS 和 Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**是一个命令行实用工具，可以自动执行多个数据库开发任务。 macOS 和 Linux 版本的 sqlpackage 目前处于预览状态。 | Windows、 macOS 和 Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** 提供了用于处理 SQL 的 cmdlet| Windows、 macOS 和 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**实用工具，可以输入 TRANSACT-SQL 语句、 系统过程和脚本文件的命令提示符处。 | Windows、 macOS 和 Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。|Windows、 macOS 和 Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。|Windows、 macOS 和 Linux|
 |[**mssql 脚本编写器 （预览版）**](https://github.com/Microsoft/mssql-scripter)|**mssql 脚本专家**是多平台命令行体验，用于编写脚本的 SQL Server 数据库|Windows、 macOS 和 Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql-conf** 配置在 Linux 上运行的 SQL Server。|Linux|
 
@@ -67,7 +67,7 @@ ms.locfileid: "51292973"
 
 ## <a name="additional-tools"></a>其他工具
 
-| 工具 | 说明 |
+| 工具 | 描述 |
 |:--|:--|
 | [配置管理器](../tools/configuration-manager/sql-server-configuration-manager-help.md) | 使用 SQL Server 配置管理器来配置 SQL Server 服务并配置网络连接。 在 Windows 上运行 configuration Manager|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | 使用 SQL Server Migration Assistant 自动将数据库从 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 迁移到 SQL Server。|

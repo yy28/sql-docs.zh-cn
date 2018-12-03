@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750105"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510505"
 ---
 # <a name="using-advanced-data-types"></a>使用高级数据类型
 
@@ -162,7 +162,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 ## <a name="user-defined-data-type"></a>用户定义的数据类型  
 
-通过允许在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储对象和自定义数据结构，在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了用户定义的类型 (UDT)，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 可使用 Microsoft .NET 公共语言运行时 (CLR)（生成可验证的代码）所支持的任意一种语言定义 UDT。 这些语言包括 Microsoft Visual C# 和 Visual Basic .NET。 数据被公开为基于 .NET Framework 的类或结构的字段和属性，行为由类或结构的方法定义。  
+通过允许在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库中存储对象和自定义数据结构，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引入了用户定义的类型 (UDT)，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 可使用 Microsoft .NET 公共语言运行时 (CLR)（生成可验证的代码）所支持的任意一种语言定义 UDT。 这些语言包括 Microsoft Visual C# 和 Visual Basic .NET。 数据被公开为基于 .NET Framework 的类或结构的字段和属性，行为由类或结构的方法定义。  
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，UDT 可用作表的列定义、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理的变量或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或存储过程的参数。  
   

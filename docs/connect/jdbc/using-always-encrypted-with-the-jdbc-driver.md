@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600967"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510723"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -106,7 +106,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > 有关如何在 Maven 项目中包含这些依赖关系的示例，请参阅[下载 ADAL4J 和 AKV 依赖项使用 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
-SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证书存储区中存储列主密钥。 使用 SQL Server Management Studio (SSMS) 始终加密向导或其他支持的工具的列主密钥和列加密密钥定义在数据库中创建。 可以使用相同的向导可用于始终加密的数据作为列主密钥的 Windows 证书存储中生成自签名的证书。 有关列主密钥和列加密密钥的 T-SQL 语法的详细信息，请参阅[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)并[创建列加密密钥](../../t-sql/statements/create-column-encryption-key-transact-sql.md)分别。
+SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证书存储区中存储列主密钥。 使用 SQL Server Management Studio (SSMS) 始终加密向导或其他支持的工具的列主密钥和列加密密钥定义在数据库中创建。 可以使用相同的向导可用于始终加密的数据作为列主密钥的 Windows 证书存储中生成自签名的证书。 有关列主密钥和列加密密钥的 T-SQL 语法的详细信息，请参阅[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)并[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)分别。
 
 SQLServerColumnEncryptionCertificateStoreProvider 名称是 MSSQL_CERTIFICATE_STORE，并且可以通过提供程序对象 getName() API 进行查询。 它会自动注册的驱动程序，并可以无缝使用而无需任何应用程序更改。
 
@@ -260,7 +260,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

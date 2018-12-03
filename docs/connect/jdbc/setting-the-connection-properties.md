@@ -11,12 +11,12 @@ ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 273a8d6893caf5552dc2945561e51cf4c5170f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e43274ff06c741252f5bd4926a8ff28ef82e1a9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783885"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412194"
 ---
 # <a name="setting-the-connection-properties"></a>设置连接属性
 
@@ -66,7 +66,7 @@ ms.locfileid: "47783885"
 | gsscredential<br/><br/>org.ietf.jgss.GSSCredential<br/><br/>null | 从开始 Microsoft JDBC Driver 6.2 for SQL Server，可以在此属性中传递用户凭据以用于 Kerberos 约束委派。 <br/><br/>这应该用于**integratedSecurity**作为**true**并**JavaKerberos** **authenticationscheme**。 |
 | hostNameInCertificate<br/><br/>String<br/><br/>null | 要用于验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 证书的主机名。<br/><br/> 如果未指定 hostNameInCertificate 属性或此属性设置为空，则 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将使用连接 URL 上的 serverName 属性值作为主机名来验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 证书。<br/><br/> **注意：** 结合使用此属性**加密**/**身份验证**属性和**trustServerCertificate**属性。 此属性影响证书验证，当且仅当连接使用安全套接字层 (SSL) 加密和**trustServerCertificate**设置为"false"。 确保传递给 hostNameInCertificate 的值与服务器证书的公用名 (CN) 或使用者替代名称 (SAN) 中的 DNS 名称完全匹配，以便成功建立 SSL 连接。 有关详细信息，请参阅[了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)。 |
 | INSTANCENAME<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 要连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名。 如果未指定，则连接到默认实例。 对于 instanceName 和端口均已指定的情况，请参阅有关端口的备注。<br/><br/> 如果在 Server 连接属性中指定虚拟机名称，则无法使用 instanceName 连接属性。 请参阅[高可用性和灾难恢复的 JDBC 驱动程序支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)有关详细信息。 |
-| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | 设置为"true"表示，通过使用 Windows 凭据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 操作系统上。 如果为“true”，则 JDBC 驱动程序将搜索本地计算机凭据缓存，以寻找在登录计算机或网络时已提供的凭据。<br/><br/> 设置为"true"(与**authenticationscheme = JavaKerberos**)，以指示由 Kerberos 凭据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 Kerberos 身份验证的详细信息，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 如果为“false”，则必须提供用户名和密码。 |
+| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | 设置为"true"表示，通过使用 Windows 凭据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 操作系统上。 如果为“true”，则 JDBC 驱动程序将搜索本地计算机凭据缓存，以寻找在登录计算机或网络时已提供的凭据。<br/><br/> 设置为"true"(与**authenticationscheme = JavaKerberos**)，以指示由 Kerberos 凭据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 如果为“false”，则必须提供用户名和密码。 |
 | jaasConfigurationName<br/><br/>String<br/><br/>SQLJDBCDriver | 从开始 Microsoft JDBC Driver 6.2 for SQL Server，SQL Server 的每个连接可以具有其自己 JAAS 登录配置文件以建立 Kerberos 连接。 可以通过此属性传递的登录配置文件的名称。 <br/> 默认情况下，驱动程序将属性设置`useDefaultCcache = true`为 IBM Jvm 和`useTicketCache = true`为其他 Jvm。 |
 | keyStoreAuthentication<br/><br/>String<br/><br/>null | 从 Microsoft JDBC Driver 6.0 for SQL Server，此属性标识的无缝使用始终加密的连接设置的密钥存储区并确定用于存储密钥存储进行身份验证的身份验证机制。 Microsoft JDBC Driver 6.0 for SQL Server 支持设置向上 Java 密钥存储的无缝地使用此属性需要设置"**keyStoreAuthentication = JavaKeyStorePassword**"。 请注意，若要使用此属性，您还需要设置**keyStoreLocation**并**keyStoreSecret** Java 密钥存储的属性。 <br/><br/>有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
 | keyStoreLocation<br/><br/>String<br/><br/>null | 当**keyStoreAuthentication = JavaKeyStorePassword**，则**keyStoreLocation**属性标识存储用于始终加密对列主密钥的 Java 密钥存储文件的路径数据。 请注意该路径必须包含的密钥存储文件名。<br/><br/>有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |

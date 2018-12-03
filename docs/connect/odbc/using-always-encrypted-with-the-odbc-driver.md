@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604709"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506831"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 
 该驱动程序支持对 Azure 密钥保管库中使用下列凭据类型进行身份验证：
 
-- 用户名/密码 – 使用此方法时，凭据是 Azure Active Directory 用户和其密码的名称。
+- 用户名/密码-使用此方法时，凭据是 Azure Active Directory 用户和其密码的名称。
 
-- 客户端 ID/机密 – 使用此方法的凭据是应用程序客户端 ID 和应用程序密码。
+- 使用此方法，客户端 ID/密码的凭据是应用程序客户端 ID 和应用程序密码。
 
 若要允许使用 Cmk 存储在 AKV 中的列加密的驱动程序，请使用以下的仅限连接字符串关键字：
 

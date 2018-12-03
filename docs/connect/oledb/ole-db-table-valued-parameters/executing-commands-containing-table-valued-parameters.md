@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 539c9ffd8d7447761a2331d4895aec0f1de2544d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466f2b5b8b84519d8b4d9c98ad324b3e4187ac61
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634235"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396690"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>执行包含表值参数的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47634235"
 ## <a name="table-valued-parameter-specification"></a>指定表值参数  
  使用者可以指定表值参数的类型。 此信息包括表值参数的类型名称。 如果连接的当前默认架构中不存在该表值参数的用户定义表类型，则它还包括架构名称。 根据服务器的支持情况，使用者还可以指定可选的元数据信息（如列的排序），以及指示特定列的所有行都具有默认值。  
   
- 若要指定表值参数，使用者调用 ISSCommandWithParamter::SetParameterInfo，并可以选择调用 isscommandwithparameters:: Setparameterproperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE。 ulParamSize 字段设为 ~0 以指示长度是未知的。 可以通过 isscommandwithparameters:: Setparameterproperties 设置特定属性对于表值参数，如架构名称、 类型名称、 列顺序和默认列。  
+ 若要指定表值参数，使用者调用 ISSCommandWithParameter::SetParameterInfo，并可以选择调用 isscommandwithparameters:: Setparameterproperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE。 ulParamSize 字段设为 ~0 以指示长度是未知的。 可以通过 isscommandwithparameters:: Setparameterproperties 设置特定属性对于表值参数，如架构名称、 类型名称、 列顺序和默认列。  
   
 ## <a name="table-valued-parameter-binding"></a>绑定表值参数  
  表值参数可以是任意行集对象。 访问接口在执行期间从该对象中读取数据并将表值参数发送到服务器。  
