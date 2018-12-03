@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560504"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403242"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ ms.locfileid: "51560504"
      > **注意** 可以从任何数据库启动复制数据库向导。  可以从源服务器或目标服务器使用复制数据库向导。
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.使用分离和附加方法将数据库移动到其他物理服务器上的实例。同时将移动登录名和 SQL Server 代理作业。**  
-以下示例会将 `Sales` 数据库、名为 `contoso\Jennie` 的 Windows 登录名和名为 `Jennie’s Report` 的 SQL Server 代理作业从 `Server1` 上的 SQL Server 2008 实例移动到 `Server2`上的 SQL Server 2016 实例。  `Jennie’s Report` 使用 `Sales` 数据库。  `Sales` 在目标服务器 `Server2`上尚不存在。  `Server1` 将在数据库移动后重新分配到其他团队。
+以下示例会将 `Sales` 数据库、名为 `contoso\Jennie` 的 Windows 登录名和名为 `Jennie's Report` 的 SQL Server 代理作业从 `Server1` 上的 SQL Server 2008 实例移动到 `Server2`上的 SQL Server 2016 实例。  `Jennie's Report` 使用 `Sales` 数据库。  `Sales` 在目标服务器 `Server2`上尚不存在。  `Server1` 将在数据库移动后重新分配到其他团队。
   
 6.  如前面的 [限制和局限](#Restrictions)中所述，在传输一个引用目标服务器上尚不存在的数据库的 SQL Server 代理作业时，需在目标服务器上创建一个 Shell 数据库。  在目标服务器上创建一个名为 `Sales` 的 Shell 数据库。 
 
@@ -322,7 +322,7 @@ ms.locfileid: "51560504"
   
 9.  “配置目标数据库”页：**向导**已确定目标服务器上已存在 `Sales`（在前面的**步骤 6** 中创建），并且已将 `_new` 追加到该“目标数据库”名称。  从“目标数据库”文本框中删除 `_new`。  根据需要更改“文件名”和“目标文件夹”。  选择“删除目标服务器上同名的任何数据库，然后继续传输数据库，覆盖现有数据库文件”。  单击“下一步” 。
   
-10. “选择服务器对象”页：在“所选相关对象:”面板中，单击“对象名称登录名”的省略号按钮。  在“复制选项”下面，选择“只复制所选登录名:”。  选中“显示所有服务器登录名”的对应框。  选中 `contoso\Jennie` 的对应“登录”框。  单击“确定” 。  在“可用相关对象:”面板中，选择“SQL Server 代理作业”，然后单击 **>** 按钮。  在“所选相关对象:”面板中，单击“SQL Server 代理作业”的省略号按钮。  在“复制选项”下面，选择“只复制所选作业”。  选中 `Jennie’s Report` 的对应框。  单击“确定” 。  单击“下一步” 。  
+10. “选择服务器对象”页：在“所选相关对象:”面板中，单击“对象名称登录名”的省略号按钮。  在“复制选项”下面，选择“只复制所选登录名:”。  选中“显示所有服务器登录名”的对应框。  选中 `contoso\Jennie` 的对应“登录”框。  单击“确定” 。  在“可用相关对象:”面板中，选择“SQL Server 代理作业”，然后单击 **>** 按钮。  在“所选相关对象:”面板中，单击“SQL Server 代理作业”的省略号按钮。  在“复制选项”下面，选择“只复制所选作业”。  选中 `Jennie's Report` 的对应框。  单击“确定” 。  单击“下一步” 。  
   
 11. “源数据库文件的位置”页：单击“源服务器上的文件共享”的省略号按钮，并导航到给定文件夹位置的相应位置。  例如，对于文件夹位置 `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA`，请对“源服务器上的文件共享”使用 `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA`。  单击“下一步” 。
   
@@ -354,7 +354,7 @@ ms.locfileid: "51560504"
 由于 `Server1` 将移动到其他团队，并且“移动”操作不会重复，因此，请考虑执行以下步骤：
      -    删除 `Server2` 上的 SSIS 包 `SalesFromServer1toServer2_Move`。
      -    删除 `SalesFromServer1toServer2_Move` 上的 SQL Server 代理作业 `Server2`。
-     -    删除 `Jennie’s Report` 上的 SQL Server 代理作业 `Server1`。
+     -    删除 `Jennie's Report` 上的 SQL Server 代理作业 `Server1`。
      -    删除 `contoso\Jennie` 上的登录名 `Server1`。
 
 

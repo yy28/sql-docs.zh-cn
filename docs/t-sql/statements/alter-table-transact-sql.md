@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701115"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503654"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ WITH ( ONLINE = ON | OFF) \<应用于更改列>
   
 -   `WAIT_AT_LOW_PRIORITY` 选项不能与联机更改列同时使用。  
   
--   联机更改列不支持 `ALTER COLUMN … ADD/DROP PERSISTED`。  
+-   联机更改列不支持 `ALTER COLUMN ... ADD/DROP PERSISTED`。  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` 不受联机更改列的影响。  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` 不受联机更改列的影响。  
   
 -   启用了更改跟踪或作为合并复制的发布者时，联机更改列不支持对表进行更改。  
   
@@ -627,7 +627,7 @@ WITH CHECK | WITH NOCHECK
 
 ALTER INDEX index_name 指定要变更或更改 index_name 的桶计数。
   
-语法 ALTER TABLE... 内存优化表仅支持 ADD/DROP/ALTER INDEX。    
+语法 ALTER TABLE...内存优化表仅支持 ADD/DROP/ALTER INDEX。    
 
 > [!IMPORTANT]
 > 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)[ALTER INDEX](alter-index-transact-sql.md) 和 [PAD_INDEX](alter-table-index-option-transact-sql.md) 语句。
@@ -660,7 +660,7 @@ CONSTRAINT constraint_name
 INDEX index_name    
 指定要从表中删除的 index_name。
   
-语法 ALTER TABLE... 内存优化表仅支持 ADD/DROP/ALTER INDEX。    
+语法 ALTER TABLE...内存优化表仅支持 ADD/DROP/ALTER INDEX。    
 
 > [!IMPORTANT]
 > 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)[ALTER INDEX](alter-index-transact-sql.md) 和 [PAD_INDEX](alter-table-index-option-transact-sql.md) 语句。
@@ -1008,7 +1008,7 @@ IF EXISTS
  可以通过在 ALTER COLUMN 子句中指定列数据类型的新大小来更改列的长度、精度或小数位数。 如果列中存在数据，则新大小不能小于数据的最大大小。 此外，不能在某个索引中定义该列，除非该列的数据类型为 varchar、nvarchar 或 varbinary 并且该索引不是 PRIMARY KEY 约束的结果。 请参见示例 P。  
   
 ## <a name="locks-and-alter-table"></a>锁和 ALTER TABLE  
- ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在 `ALTER TABLE…SWITCH` 操作中，源表和目标表都需要锁。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响超大型表中所有行的更改，例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本上删除列或者用默认值添加 NOT NULL 列，可能需要较长时间才能完成，并将生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
+ ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在 `ALTER TABLE...SWITCH` 操作中，源表和目标表都需要锁。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响超大型表中所有行的更改，例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本上删除列或者用默认值添加 NOT NULL 列，可能需要较长时间才能完成，并将生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以联机操作的形式添加 NOT NULL 列  
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 开始，当默认值为“运行时常量”时，添加具有该默认值的 NOT NULL 列是一个联机操作。 这意味着不论表中有多少行都几乎可以在瞬间完成该操作。 这是因为表中的现有行在操作期间不更新；相反，默认值仅存储在该表的元数据中，并且按需在访问这些行的查询中查找该值。 这种行为是自动的；无需在 ADD COLUMN 语法之外额外执行其他语法来执行该联机操作。 运行时常量是一个表达式，它可以在运行时为表中的每行生成相同的值，而与其确定性无关。 例如，常量表达式“My temporary data”或系统函数 GETUTCDATETIME() 均为运行时常量。 相反，函数 `NEWID()` 或 `NEWSEQUENTIALID()` 就不是运行时常量，因为这些函数为表中每行都生成唯一值。 添加具有非运行时常量的默认值的 NOT NULL 列始终脱机执行，并且在该操作期间需要一个排他 (SCH-M) 锁。  

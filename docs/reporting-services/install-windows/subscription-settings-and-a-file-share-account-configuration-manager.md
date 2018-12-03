@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813110"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402107"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>订阅设置和文件共享帐户（配置管理器）
   使用 **配置管理器的**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “订阅设置”页为本机模式报表服务器和文件共享订阅配置文件共享帐户。 文件共享帐户运行使用将报表传递给文件共享的多个订阅中的单组凭据。 需要更改凭据时，可以为文件共享帐户配置更改并且无需更新每个单独的订阅。  
@@ -43,7 +43,7 @@ ms.locfileid: "51813110"
 > [!IMPORTANT]
 > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户可控制订阅传递，并且可以与用于文件共享订阅的帐户进行交互。 Windows 安全功能限制以下两者的组合：1) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户和 2) 用于文件共享帐户的帐户。 例如，如果内置操作系统帐户用于文件共享帐户，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务帐户必须是另一个具有模拟权限的服务帐户。 如果配置了一个显式文件共享帐户和密码，则文件共享帐户需要具有登录到运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的计算机的权限。 如果文件共享帐户没有所需的权限，则使用文件共享帐户的订阅将失败，并会显示类似于以下内容的错误消息：  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>审核文件共享帐户的使用情况的 PowerShell 示例  
  运行以下 Windows PowerShell 脚本以列出所有配置为使用“文件共享帐户” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**的**订阅。 将报表服务器的 `SERVERNAME` 更新为相应的值。  

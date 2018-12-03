@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963ea851b052d3a460aad1bbfd6e59051ecc6f7d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571207"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302680"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51571207"
 - [授权其他连接](#additional) 
 
 ## <a name="tools">入门工具</a> 
- - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
+- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
 
 ### <a name="basic-tools"></a>基本工具
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 SSMS 可以从 [Microsoft 下载中心](https://msdn.microsoft.com/library/mt238290.aspx)免费下载。 最新版本可同较旧版本的 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]一同使用。  
@@ -45,10 +45,10 @@ ms.locfileid: "51571207"
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>启动 SQL Server 配置管理器  
 - 在当前版本的 Windows 中，在“开始”菜单上，键入 **Configuration Manager**，然后单击“SQL Server 版本配置管理器”。   
- -- 若使用较旧版本的 Windows，在“开始”菜单上，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
- -  
+- 使用较旧版本的 Windows 时，在“开始”菜单上，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
+
 ## <a name="connect"></a>使用 Management Studio 进行连接  
- - 如果知道实例名并且以计算机上的本地管理员组成员身份进行连接，则可通过同一台计算机上运行的工具轻松连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。 必须在承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的同一台计算机上执行下面的过程。  
+- 如果知道实例名并且以计算机上的本地管理员组成员身份进行连接，则可以使用同一台计算机上运行的工具轻松连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 必须在承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的同一台计算机上执行下面的过程。  
 
 > [!NOTE]  
 > 本主题讨论连接到本地 SQL Server 的相关内容。 要连接到 Azure SQL 数据库，请参阅 [Connect to SQL Database with SQL Server Management Studio and execute a sample T-SQL query](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/)（使用 SQL Server Management Studio 连接到 SQL 数据库并执行示例 T-SQL 查询）。  

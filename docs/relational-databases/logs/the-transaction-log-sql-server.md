@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677296"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711588"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ ms.locfileid: "51677296"
 |7|DATABASE_SNAPSHOT_CREATION|正在创建数据库快照。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因，通常也是主要原因。|  
 |8|LOG_SCAN|发生日志扫描。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因，通常也是主要原因。|  
 |9|AVAILABILITY_REPLICA|可用性组的辅助副本正将此数据库的事务日志记录应用到相应的辅助数据库。 （完整恢复模式）<br /><br /> 有关详细信息，请参阅： [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
-|10|—|仅供内部使用|  
-|11|—|仅供内部使用|  
-|12|—|仅供内部使用|  
+|10|-|仅供内部使用|  
+|11|-|仅供内部使用|  
+|12|-|仅供内部使用|  
 |13|OLDEST_PAGE|如果将数据库配置为使用间接检查点，数据库中最早的页可能比检查点[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 早。 在这种情况下，最早的页可以延迟日志截断。 （所有恢复模式）<br /><br /> 有关间接检查点的信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
 |14|OTHER_TRANSIENT|当前未使用此值。|  
   
@@ -158,17 +158,17 @@ ms.locfileid: "51677296"
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作。
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **管理事务日志**  
+**管理事务日志**  
   
 -   [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [解决事务日志已满的问题（SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **备份事务日志（完整恢复模式）**  
+**备份事务日志（完整恢复模式）**  
   
 -   [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **还原事务日志（完整恢复模式）**  
+**还原事务日志（完整恢复模式）**  
   
 -   [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
