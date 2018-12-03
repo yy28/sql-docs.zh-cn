@@ -35,7 +35,7 @@ SQL Server 2016 仅为 R。 SQL Server 2017 支持 R 和 Python。 下表介绍�
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版，内含包和解释器。始终使用安装程序中附带的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。可在 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 中找到它们。 |
 | R 示例和脚本 | 开源 R 和 RevoScaleR 包中包含内置数据集，你可以使用预安装的数据创建和运行脚本。可在 Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR 中找到它们。 |
-| Python 包 | [**revoscalepy** ](../python/what-is-revoscalepy.md)用于具有可实现数据操作、 转换、 可视化和分析功能的可缩放 Python 是主库。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)添加机器学习算法来创建自定义文本分析、 图像分析和情绪分析模型。  |
+| Python 包 | [**revoscalepy** ](../python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有数据操作、转换、可视化和分析功能。<br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，以创建用于文本分析、图像分析和情绪分析的自定义模型。 |
 | Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。 在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe 中找到该工具。 |
 | Anaconda | Anaconda 是开放源代码的 Python 和基本包的发行版本。 |
 | Python 示例和脚本 | 如使用 R、 Python 包含内置的数据集和脚本。 在 \Program files\Microsoft SQL 查找 revoscalepy 数据 Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 数据。 |
