@@ -6,12 +6,12 @@ description: 查找有助于安装或升级 SQL Server 及相关服务的内容�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: be4c1d4fed73718c0a2aa7e5d386613444c3072d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 729759ad9e60f5ec45845545f7b81e1cbc1bae73
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402074"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -154,7 +154,7 @@ ms.locfileid: "51697935"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>安装 SQL Server Reporting Services (SSRS)</h3>
-                                                    <p>一种解决方案，用于创建、发布和管理报表，然后以不同方式将其传送到正确的用户，用户可在 Web 浏览器或移动设备中查看报表，也可在收件箱中查看电子邮件形式的报表。 </p>
+                                                    <p>一种解决方案，用于创建、发布和管理报表，然后以不同方式将其传送给合适的用户，用户可在 Web 浏览器或移动设备中查看报表，也可在收件箱中查看电子邮件形式的报表。 </p>
                                                 </div>
                                             </div>
                                         </div>
