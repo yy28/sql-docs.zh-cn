@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 88af4571f126098ecdda1eff8978112459d917e9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0ec072bae284fad63cea677830bad307d9961f4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560085"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512244"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>创建复制登录名的用户  
  如果创建了一个有密码的包含数据库用户，所使用的名称与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名相同，而且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进行连接时将包含的数据库指定为初始目录，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名将无法连接。 该连接将被判定为包含数据库上的具有密码主体的包含数据库用户发起，而不是基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户发起。 这可能导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名遭遇到拒绝服务。  
   
--   最佳做法是， **sysadmin** 固定服务器角色的成员应该始终考虑在连接时不使用初始目录选项。 这样会使登录名连接到 master 数据库，并可避免数据库所有者滥用登录名的可能性。 然后，管理员可以通过使用 USE\<database> 语句更改为包含的数据库。 您也可以将登录操作的默认数据库设置为包含的数据库，这样会先登录到 **master**数据库，然后再转而登录到包含的数据库。  
+-   最佳做法是， **sysadmin** 固定服务器角色的成员应该始终考虑在连接时不使用初始目录选项。 这样会使登录名连接到 master 数据库，并可避免数据库所有者滥用登录名的可能性。 然后，管理员可以通过使用 **USE**_\<数据库>_ 语句更改为包含的数据库。 您也可以将登录操作的默认数据库设置为包含的数据库，这样会先登录到 **master**数据库，然后再转而登录到包含的数据库。  
   
 -   最佳做法是，创建有密码的包含数据库用户时，其名称不得与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名相同。  
   

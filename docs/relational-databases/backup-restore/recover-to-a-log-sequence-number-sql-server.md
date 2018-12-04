@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540300"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>恢复到日志序列号 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694775"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>还原到 LSN 的 Transact-SQL 语法  
  通过使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句，可以在 LSN 处或刚好在 LSN 之前停止，如下所示：  
   
--   使用 WITH STOPATMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
+-   使用 WITH STOPATMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
   
      STOPATMARK 前滚到 LSN，并且前滚中包括该日志记录。  
   
--   使用 WITH STOPBEFOREMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
+-   使用 WITH STOPBEFOREMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
   
      STOPBEFOREMARK 前滚到 LSN，并从前滚中排除该日志记录。  
   

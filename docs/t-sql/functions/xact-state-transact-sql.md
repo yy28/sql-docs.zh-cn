@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799335"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530525"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
  XACT_STATE 和 @@TRANCOUNT 函数都可用于检测当前请求是否具有活动的用户事务。 @@TRANCOUNT 不能用于确定事务是否已分类为不可提交的事务。 XACT_STATE 不能用于确定是否有嵌套事务。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`XACT_STATE` 构造的 `CATCH` 块中的 `TRY…CATCH` 来确定是提交事务还是回滚事务。 由于 `SET XACT_ABORT` 设置为 `ON`，因此违反约束的错误将导致事务进入无法提交的状态。  
+ 下面的示例使用`XACT_STATE` 构造的 `CATCH` 块中的 `TRY...CATCH` 来确定是提交事务还是回滚事务。 由于 `SET XACT_ABORT` 设置为 `ON`，因此违反约束的错误将导致事务进入无法提交的状态。  
   
 ```  
 USE AdventureWorks2012;  

@@ -20,12 +20,12 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cabcdc95bbdf748774a0435715ae93241cdb33ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7ad315244d6a236285abdd6784237856c3d442f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511427"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非对称密钥权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

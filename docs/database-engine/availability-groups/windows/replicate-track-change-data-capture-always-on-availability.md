@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc5770d8390c7a7014eec86e7b576d1c64deec23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596086"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512096"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ ms.locfileid: "47596086"
   
 |||||  
 |-|-|-|-|  
-||**发布服务器**|**Distributor***\*|**订阅服务器**|  
+||**发布服务器**|**分发服务器**|**订阅服务器**|  
 |**事务性**|用户帐户控制<br /><br /> 注意：不包括对双向和相互事务复制的支持。|用户帐户控制|用户帐户控制| 
 |**P2P**|否|否|否|  
 |**合并**|用户帐户控制|否|否|  

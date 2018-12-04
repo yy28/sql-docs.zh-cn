@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537603"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>查看与 SQL 跟踪事件类等效的扩展事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635435"
   
 -   从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的查询编辑器中，运行以下查询：  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635435"
     -   SQL 跟踪列映射到与扩展事件的事件相关联的数据字段之一。  
   
         > [!NOTE]  
-        >  每个扩展事件的事件都具有在结果集中自动包括的数据字段的默认集合。  
+        > 每个扩展事件的事件都具有在结果集中自动包括的数据字段的默认集合。  
   
     -   操作列不具有等效的有意义的扩展事件。 与此有关的一个示例就是 SQL 跟踪中的“事件类”列。 该列不是扩展事件中所必需的，因为事件名称起到相同作用。  
   

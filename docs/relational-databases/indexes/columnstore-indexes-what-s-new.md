@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629505"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514551"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47629505"
   
 -   列存储索引支持读提交快照隔离级别 (RCSI) 和快照隔离 (SI)。 这样可以在无锁的情况下进行事务一致性分析查询。  
   
--   列存储支持索引碎片整理，即可以移除已删除的行而无需显式重新生成索引。 `ALTER INDEX … REORGANIZE` 语句将根据内部定义的策略，以联机操作的方式从列存储移除已删除的行  
+-   列存储支持索引碎片整理，即可以移除已删除的行而无需显式重新生成索引。 `ALTER INDEX ... REORGANIZE` 语句将根据内部定义的策略，以联机操作的方式从列存储移除已删除的行  
   
 -   可以在 AlwaysOn 可读次要副本上访问列存储索引。 你可以将分析查询卸载到 AlwaysOn 次要副本，从而改进运行分析的性能。  
   

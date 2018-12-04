@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7509dbd825679377b9284928efd8720a9579793c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88a7eb6303509766cbd7ae703135d6a33a4e54fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750325"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518245"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ HAVING 子句：
 
 ```sql
 DECLARE @v INT = 9000;
-SELECT TOP (@v) … FROM … ORDER BY …
+SELECT TOP (@v) ... FROM ... ORDER BY ...
 ```
 
 不过，与使用变量相比，在 **TOP** 子句中使用常量将提供更好的性能。  

@@ -16,12 +16,12 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5d1a7e6361fad5d7e37ca624b98c7220e622d398
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714001"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616937"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,5 +131,5 @@ ms.locfileid: "47714001"
   
 ## <a name="see-also"></a>另请参阅  
  [网络协议和网络库](../../sql-server/install/network-protocols-and-network-libraries.md)  
-  
+ [隐藏 SQL Server 数据库引擎的实例](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

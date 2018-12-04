@@ -14,12 +14,12 @@ ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bb442b6495ca32795d491a55902064643b947d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a211647949ff4f234ac0287076e608b83e5a9421
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502217"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>向关系图中添加表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47795365"
   
     若要在当前关系图中创建表，请单击工具栏上的“新建表”按钮。  
   
-    - 或 -  
+    -或 -  
   
     在关系图中右键单击，然后选择“新建表”。  
   

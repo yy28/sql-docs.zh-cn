@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8272586fc2621a22ffa6337624fab4414e8229e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514698"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47770125"
   
 -   DAC 最初尝试连接到与登录帐户关联的默认数据库。 连接成功后，可以连接到 master 数据库。 如果默认数据库脱机或不可用，则连接返回错误 4060。 但是，如果使用以下命令覆盖默认数据库，改为连接到 master 数据库，则连接会成功：  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      由于只要启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，就能保证 master 数据库处于可用状态，因此建议使用 DAC 连接到 master 数据库。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "47770125"
   
  DAC 端口由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时动态分配。 当连接到默认实例时，DAC 会避免在连接时对 SQL Server Browser 服务使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解决协议 (SSRP) 请求。 它先通过 TCP 端口 1434 进行连接。 如果失败，则通过 SSRP 调用来获取端口。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有侦听 SSRP 请求，则连接请求将返回错误。 若要了解 DAC 所侦听的端口号，请参阅错误日志。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为接受远程管理连接，则必须使用显式端口号启动 DAC：  
   
- sqlcmd –S tcp:\<server>,\<port>*  
+ **sqlcmd -S tcp:***\<server>,\<port>*  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志列出了 DAC 的端口号，默认情况下为 1434。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只接受本地 DAC 连接，请使用以下命令和环回适配器进行连接：  
   
- **sqlcmd –S 127.0.0.1,1434**  
+ **sqlcmd -S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  连接到具有 DAC 的 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 时，还必须通过使用 -d 选项在连接字符串中指定数据库名称。  
@@ -105,7 +105,7 @@ ms.locfileid: "47770125"
 ## <a name="example"></a>示例  
  在此示例中，管理员发现服务器 `URAN123` 不响应，因此要诊断该问题。 为此，用户激活 `sqlcmd` 命令提示实用工具，并使用 `URAN123` 指明 DAC 连接到服务器 `-A` 。  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  现在，管理员可以执行查询来诊断问题，并且可以终止停止响应的会话。  
   
