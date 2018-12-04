@@ -11,12 +11,12 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58155e7529eb8bb94064fd4d7a9fd48df213f0f4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9667da7696e7fe2cd483504d4a44d14519d736f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638864"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523206"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目标自定义属性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标具有自定义属性和所有数据流组件共有的属性。  
@@ -32,7 +32,7 @@ ms.locfileid: "51638864"
 |BulkInsertKeepIdentity|Boolean|一个值，指定值是否可以插入到标识列。 此属性的默认值为 **False**。|  
 |BulkInsertKeepNulls|Boolean|一个值，指定大容量插入是否可以保持 Null 值。 此属性的默认值为 **False**。|  
 |BulkInsertLastRow|Integer|一个值，指定要插入的最后一行。 此属性的默认值为 **-1**，表示尚未分配值。|  
-|BulkInsertMaxErrors|Integer|一个值，指定在大容量插入任务停止之前可以发生的错误数。 此属性的默认值为 **–1**，表示尚未分配值。|  
+|BulkInsertMaxErrors|Integer|一个值，指定在大容量插入任务停止之前可以发生的错误数。 此属性的默认值为 **-1**，表示尚未分配值。|  
 |BulkInsertOrder|String|排序列的名称。 每一列都可以按升序或降序排序。 如果使用了多个排序列，则使用逗号分隔列名称。|  
 |BulkInsertTableName|String|向其中复制数据的数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图。|  
 |BulkInsertTablock|Boolean|一个值，指定大容量插入期间是否锁定表。 此属性的默认值为 **True**。|  

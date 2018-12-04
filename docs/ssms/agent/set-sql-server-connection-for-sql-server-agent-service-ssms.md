@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b2857e00a9892922d69a41a293382e77d3d2c49f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a794cdf7990f5b4a1ca2325d7d2d4433030b08a9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545771"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>为 SQL Server 代理服务设置 SQL Server 连接 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47634775"
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性sever_name”对话框的“选择页”下，单击“连接”。  
+3.  在“SQL Server 代理属性 sever_name” 对话框中，在“选择页”下，单击“连接”。  
   
 4.  在“SQL Server 连接”下，选择“使用 Windows 身份验证”以启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，从而使用[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例。 与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本数据库的连接需要 Windows 身份验证。  
   
