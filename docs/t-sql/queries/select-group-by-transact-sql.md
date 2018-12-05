@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509054"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ NULL 值：
   
 -   不允许在 GROUP BY 子句中使用分组集，除非它们是显式 GROUPING SETS 列表的一部分。 例如，在该标准中允许使用 `GROUP BY Column1, (Column2, ...ColumnN`)，但在 Transact-SQL 中不允许使用。  Transact-SQL 支持 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` 和 `GROUP BY Column1, Column2, ... ColumnN`，它们在语义上等效。 这些示例与上面的 `GROUP BY` 示例在语义上等效。 这是为了避免 `GROUP BY Column1, (Column2, ...ColumnN` 被误解为 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`，它们在语义上不等效。  
   
--   不允许在分组集内部使用分组集。 例如，在 SQL-2006 标准中允许使用 `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))`，但在 Transact-SQL 中不允许使用。 Transact-SQL 允许使用 `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` 或 `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`，它们与第一个 GROUP BY 示例在语义上等效，但其语法更清楚。  
+-   不允许在分组集内部使用分组集。 例如，在 SQL-2006 标准中允许使用 `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))`，但在 Transact-SQL 中不允许使用。 Transact-SQL 允许使用 `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` 或 `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`，它们与第一个 GROUP BY 示例在语义上等效，但其语法更清楚。  
   
 -   仅允许在包含列表达式的简单 GROUP BY 子句中使用 GROUP BY [ALL/DISTINCT]。 不允许与 GROUPING SETS、ROLLUP、CUBE、WITH CUBE 或 WITH ROLLUP 构造一起使用。 ALL 是隐式默认值。 仅允许用在向后兼容语法中使用。
   

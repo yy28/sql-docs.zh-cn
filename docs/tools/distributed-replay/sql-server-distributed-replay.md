@@ -12,23 +12,23 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a966bec7dc015bf29d8a8ae2e2a217f3b7bf7402
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 900fdcafe18c2a885ea7191ce8619e46e8f0f963
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531808"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化的影响。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化的影响。  
   
 ## <a name="benefits-of-distributed-replay"></a>分布式重播的优点  
  与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]类似，您可以使用分布式重播针对升级后的测试环境重播捕获的跟踪。 与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不同的是，分布式重播并不仅限于从单台计算机重播工作负荷。  
   
  与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播，您可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负荷。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负荷。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
   
 ## <a name="when-to-use-distributed-replay"></a>何时使用分布式重播  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和分布式重播在功能上有些重复。  
@@ -73,7 +73,7 @@ ms.locfileid: "51656696"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 分布式重播论坛](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用分布式重播对您的 SQL Server 进行负载测试 – 第 2 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [使用 Distributed Replay 对 SQL Server 进行负载测试 - 第 2 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [使用 Distributed Replay 对 SQL Server 进行负载测试 – 第 1 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

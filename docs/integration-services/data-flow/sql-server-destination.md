@@ -22,12 +22,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 110c9dea73d84417d54dc99ea946998aea85cfef
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3b165b4579497f28ad1b7dc2cb930daf5162941a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640224"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503301"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
   SQL Server 目标连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，并将数据大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表和视图中。 如果包访问远程服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则不能在包中使用 SQL Server 目标。 相反，包应使用 OLE DB 目标。 有关详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
@@ -120,7 +120,7 @@ ms.locfileid: "51640224"
 -   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](https://go.microsoft.com/fwlink/?LinkId=233701)。  
   
 ## <a name="sql-destination-editor-connection-manager-page"></a>SQL 目标编辑器（“连接管理器”页）
-  可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表或视图中。  
+  可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表或视图中。  
   
 ### <a name="options"></a>选项  
  **“无缓存”**  
@@ -189,7 +189,7 @@ ms.locfileid: "51640224"
 >  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
   
  **最大错误数**  
- 指定在大容量插入任务停止之前可以发生的错误数量。 此属性的默认值为 **–1**，表示尚未分配值。  
+ 指定在大容量插入任务停止之前可以发生的错误数量。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
 >  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
