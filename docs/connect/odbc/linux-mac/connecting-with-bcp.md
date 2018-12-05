@@ -13,12 +13,12 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527528"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,7 +61,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -d *database_name*  
 指定要连接到的数据库。  
   
-- -d  
+- -D  
 使值传递给将解释为数据源名称 (DSN) 的 `bcp` -S 选项。 有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的“sqlcmd 和 bcp 中的 DSN 支持”。  
   
 - -e error_file 指定错误文件的完整路径，此文件用于存储 `bcp` 实用工具无法从文件传输到数据库的所有行。  
@@ -79,7 +79,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。  
   
 - -l  
-指定登录超时。 –l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值为 0 指定无限超时。
+指定登录超时。 -l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值为 0 指定无限超时。
   
 - -L *last_row*  
 指定要从表中导出或从数据文件中导入的最后一行的编号。  
@@ -93,7 +93,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -P *password*  
 指定登录 ID 的密码。  
   
-- -S  
+- -q  
 在 `bcp` 实用工具和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例之间的连接中，执行 SET QUOTED_IDENTIFIERS ON 语句。  
   
 - -r *row_terminator*  
@@ -112,9 +112,9 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定 `bcp` 实用工具通过信任连接（集成安全性）连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 - -U *login_id*  
-指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登录 ID。  
+指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登录 ID。  
   
-- -V  
+- -v  
 报告 `bcp` 实用工具的版本号和版权。  
   
 - -w  
@@ -134,16 +134,16 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -i *input_file*  
 指定响应文件的名称。  
   
-- -n  
+- -N  
 对非字符数据使用数据的本机（数据库）数据类型，对字符数据使用 Unicode 字符。  
   
 - -o *output_file*  
 指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
   
 - -V (80 | 90 | 100)  
-使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的数据类型。  
+使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据类型。  
   
-- -X  
+- -x  
 结合使用该格式和 -f format_file 选项一起使用，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。  
   
 ## <a name="see-also"></a>另请参阅

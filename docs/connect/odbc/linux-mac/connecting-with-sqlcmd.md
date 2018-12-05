@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604757"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512542"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "51604757"
 下面的命令演示如何使用 Windows 身份验证 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]身份验证，分别：
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>可用选项
@@ -58,7 +58,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -H 指定工作站名称。  
   
-- -i input_file[,input_file[,…]] 标识包含一批 SQL 语句或存储过程的文件。  
+- -i input_file[,input_file[,...]] 标识包含一批 SQL 语句或存储过程的文件。  
   
 - -我集`SET QUOTED_IDENTIFIER`连接选项为 ON。  
   
@@ -75,7 +75,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -m error_level 控制将哪些错误消息发送到 stdout。  
   
 - **-M**_单子\_故障转移_  
-在连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 **-M**。 -M 将为（当前）活动服务器提供更快的故障检测和连接速度。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，请参阅[Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+在连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 **-M**。 -M 将为（当前）活动服务器提供更快的故障检测和连接速度。 如果 -M 未指定，-M 处于关闭状态。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，请参阅[Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > **-M** 在适用于 SUSE Linux 的 CTP 中不受支持。 但是，可以在传递给 `sqlcmd` 的 DSN 文件中指定 MultiSubnetFailover=Yes 关键字。 有关详细信息，请参阅本主题末尾的“`sqlcmd` 和 `bcp` 中的 DSN 支持”。  
@@ -184,7 +184,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 运行`sqlcmd`，并使用`c.sql`为输入文件：  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - -z*密码*更改密码。  
   
@@ -222,9 +222,9 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 在 DSN 中，只有 DRIVER 项是必需的；但若要连接到服务器，`sqlcmd` 或 `bcp` 需要 SERVER 项中的值。  
 
-如果在 DSN 和 `sqlcmd` 或 `bcp` 命令行中指定了相同的选项，命令行选项将替代 DSN 中使用的值。 例如，如果 DSN 具有 DATABASE 项且 `sqlcmd` 命令行包含 -d，将使用传递给 -d 的值。 如果在 DSN 中指定了 Trusted_Connection=yes，将使用 Kerberos 身份验证，并忽略用户名 (–U) 和密码 (–P)（如果提供）。
+如果在 DSN 和 `sqlcmd` 或 `bcp` 命令行中指定了相同的选项，命令行选项将替代 DSN 中使用的值。 例如，如果 DSN 具有 DATABASE 项且 `sqlcmd` 命令行包含 -d，将使用传递给 -d 的值。 如果在 DSN 中指定了 Trusted_Connection=yes，便会使用 Kerberos 身份验证，并忽略用户名 (-U) 和密码 (-P)（若有）。
 
-通过定义别名 `alias isql="sqlcmd –D"`，可将调用 `isql` 的现有脚本修改为使用 `sqlcmd`。  
+可以通过定义以下别名对调用 `isql` 的现有脚本进行修改来使用 `sqlcmd`：`alias isql="sqlcmd -D"`。  
 
 ## <a name="see-also"></a>另请参阅  
 [使用 bcp 连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

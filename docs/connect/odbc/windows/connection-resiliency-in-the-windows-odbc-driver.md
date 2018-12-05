@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545289"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驱动程序中的连接弹性
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51600857"
 > [!IMPORTANT]  
 >  连接复原功能在 Microsoft Azure SQL Databases 和 SQL Server 2014（以及更高版本）服务器版本上受支持。  
   
- 有关空闲连接复原的其他信息，请参阅[技术文章 - 空闲连接复原](https://go.microsoft.com/fwlink/?LinkId=393996)。  
+ 若要详细了解空闲连接复原，请参阅[技术文章 - 空闲连接复原](https://go.microsoft.com/fwlink/?LinkId=393996)。  
   
  为控制重新连接行为，Windows 上 的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有以下两个选项：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51600857"
   
 -   连接重试间隔。  
   
-     连接重试间隔指定每次连接重试尝试之间的秒数。 有效值为 1 到 60。 重新连接的总时间不能超过连接超时（SQLSetStmtAttr 中的 SQL_ATTR_QUERY_TIMEOUT）。 默认值为 10 秒。  
+     连接重试间隔指定每次连接重试尝试之间的秒数。 有效值介于 1 和 60 之间。 重新连接的总时间不能超过连接超时（SQLSetStmtAttr 中的 SQL_ATTR_QUERY_TIMEOUT）。 默认值为 10 秒。  
   
      在以下情况下可以修改连接重试间隔：  
   

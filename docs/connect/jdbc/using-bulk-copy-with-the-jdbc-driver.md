@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534694"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
 
@@ -46,7 +46,7 @@ BulkCopyDemoMatchingColumns 表和 BulkCopyDemoDifferentColumns 表均基于 Adv
 多个代码示例演示如何使用一个 SQLServerBulkCopy 类写入多个表。 对于这些示例，BulkCopyDemoOrderHeader 和 BulkCopyDemoOrderDetail 表将用作目标表。 这些表基于 AdventureWorks 中的 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 表。  
   
 > [!NOTE]  
-> 提供的 SQLServerBulkCopy 代码示例演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，则可以更轻松且更快速地使用 TRANSACT-SQL INSERT ... 用于复制数据的 SELECT 语句。  
+> 提供的 SQLServerBulkCopy 代码示例演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ### <a name="table-setup"></a>表设置  
 
@@ -144,7 +144,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 下面的应用程序演示了如何使用 SQLServerBulkCopy 类加载数据。 在此示例中，ResultSet 用于将数据从 SQL Server AdventureWorks 数据库中的 Production.Product 表复制到同一数据库中的一个类似表。  
   
 > [!IMPORTANT]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，则可以更轻松且更快速地使用 TRANSACT-SQL INSERT ... 用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -238,7 +238,7 @@ try (Connection con = DriverManager.getConnection(connectionUrl);
 在使用同一 SQLServerBulkCopy 对象执行多次大容量复制操作时，对于每个操作中的源信息或目标信息相同与否没有限制。 但是，必须确保每次写入服务器时正确设置列关联信息。  
   
 > [!IMPORTANT]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，则可以更轻松且更快速地使用 TRANSACT-SQL INSERT ... 用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -367,7 +367,7 @@ public class BulkCopyMultiple {
 执行大容量复制操作，并将 BatchSize 属性设置为 10。 当操作遇到无效行时，将引发异常。 在此第一个示例中，大容量复制操作是非事务的。 将提交在发生错误之前复制的所有批；将回滚包含重复项的批，并且在处理任何其他批之前中止大容量复制操作。  
   
 > [!NOTE]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，则可以更轻松且更快速地使用 TRANSACT-SQL INSERT ... 用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -476,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 下面的应用程序与 BulkCopyNonTransacted 类似，但有一个例外：在此示例中，大容量复制操作包含在较大的外部事务中。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
 
 > [!NOTE]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，则可以更轻松且更快速地使用 TRANSACT-SQL INSERT ... 用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -575,7 +575,7 @@ public class BulkCopyExistingTransactions {
   
 1. 打开 SQL Server Management Studio 并连接到带有 AdventureWorks 数据库的 SQL Server。  
   
-2. 展开数据库、右键单击“AdventureWorks 数据库”，然后依次选择“任务”和“导出数据”。  
+2. 展开数据库，右键单击“AdventureWorks 数据库”，再依次选择“任务”和“导出数据”...  
   
 3. 对于数据源，请选择允许你连接到 SQL Server（例如 SQL Server Native Client 11.0）的“数据源”、检查配置，然后选择“下一步”  
   
@@ -583,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. 依次选择“编写查询以指定要传输的数据”和“下一步”。  输入你的 SQL 语句 SELECT ProductID, Name, ProductNumber FROM Production.Product 并选择“下一步”  
   
-6. 检查配置：可以将行分隔符保留为 {CR}{LF}，并将列分隔符保留为逗号 {,}。  选择“编辑映射”… 检查每个列的数据类型是否正确（例如，整数用于 ProductID，而 Unicode 字符串用于其他值）。  
+6. 检查配置：可以将行分隔符保留为 {CR}{LF}，并将列分隔符保留为逗号 {,}。  选择“编辑映射”，并检查每个列的数据“类型”是否正确（例如，整数用于 ProductID，而 Unicode 字符串则用于其他列）。  
   
 7. 跳到“完成”，并运行导出。  
 
@@ -678,17 +678,17 @@ Microsoft SQL Server 包含名为“bcp”的受欢迎的命令提示符实用�
   
 SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源并不局限于 SQL Server；可以使用任何数据源，只要数据可以使用 ResultSet 实例或 ISQLServerBulkRecord 实现进行读取即可。  
   
-| 构造函数                             | 描述                                                                                                                                                                                                                    |
+| 构造函数                             | 说明                                                                                                                                                                                                                    |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SQLServerBulkCopy(Connection)           | 使用指定的 SQLServerConnection 开放实例初始化 SQLServerBulkCopy 类的新实例。 如果 Connection 已启用事务，将在该事务内执行复制操作。 |
 | SQLServerBulkCopy (字符串 connectionURL) | 基于提供的 connectionURL，初始化并打开 SQLServerConnection 的新实例。 构造函数使用 SQLServerConnection 来初始化 SQLServerBulkCopy 类的新实例。                     |
   
-| “属性”                    | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 属性                    | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 字符串 DestinationTableName | 服务器上的目标表的名称。<br /><br /> 如果在调用 writeToServer 时尚未设置 DestinationTableName，将引发 SQLServerException。<br /><br /> DestinationTableName 名称包含三个部分 (\<database>.\<owningschema>.\<name>)。 可以使用表名称的数据库和所属架构（如果选择）对表名称进行限定。 但是，如果表名称使用下划线（“_”）或任何其他特殊字符，则必须使用方括号将名称括起来以对其进行转义。 有关详细信息，请参阅 SQL Server 联机丛书中的“标识符”。 |
 | ColumnMappings              | 列映射定义数据源中的列与目标中的列之间的关系。<br /><br /> 如果未定义映射，将基于序号位置隐式映射该列。 对于这种方式，源架构和目标架构必须匹配。 如果它们不匹配，将引发异常。<br /><br /> 如果映射不为空，则并非数据源中存在的每一列均需要指定。 将忽略那些未映射的列。<br /><br /> 可以按名称或序号引用源列和目标列。               |
   
-| 方法                                                                | 描述                                                                                                                                                                |
+| 方法                                                                | 说明                                                                                                                                                                |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Void addColumnMapping （int sourceColumn (int destinationColumn）       | 使用序号指定源列和目标列来添加一个新的列映射。                                                                                  |
 | Void addColumnMapping （int sourceColumn (字符串 destinationColumn）   | 对源列使用序号，对目标列使用列名，来添加一个新的列映射。                                                            |
@@ -708,13 +708,13 @@ SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源�
 
  控制 writeToServer 方法在 SQLServerBulkCopy 实例中的行为方式的设置集合。  
   
-| 构造函数                | 描述                                                                                              |
+| 构造函数                | 说明                                                                                              |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- |
 | SQLServerBulkCopyOptions() | 使用所有设置的默认值初始化 SQLServerBulkCopyOptions 类的新实例。 |
   
  Getter 和 setter 存在以下选项：  
   
-| 选项                                   | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | ，则“默认”                                                              |
+| 选项                                   | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 默认                                                              |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 布尔 CheckConstraints                 | 在插入数据的同时检查约束。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | False-不会检查约束                                   |
 | 布尔 FireTriggers                     | 当指定后，导致服务器对于行插入数据库触发插入触发器。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | False - 不会触发触发器                                        |
@@ -728,7 +728,7 @@ SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源�
   
  Getter 和 setter:  
   
-| 方法                                                                            | 描述                                                                                                                                                                               |
+| 方法                                                                            | 说明                                                                                                                                                                               |
 | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 布尔 isCheckConstraints()                                                       | 指示是否要检查在插入数据的同时检查约束。                                                                                                      |
 | Void setCheckConstraints(Boolean checkConstraints)                                 | 设置是否要检查在插入数据的同时检查约束。                                                                                                           |
@@ -753,13 +753,13 @@ SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源�
 
  ISQLServerBulkRecord 接口可用于创建读取来自任何源（如文件）的数据的类，并且允许 SQLServerBulkCopy 实例大容量加载带有该数据的 SQL Server 表。  
   
-| 接口方法                   | 描述                                                                                                                                                                                                                                                                                            |
+| 接口方法                   | 说明                                                                                                                                                                                                                                                                                            |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 设置\<整数 > getColumnOrdinals()   | 获取此数据记录中所表示的每个列的序号。                                                                                                                                                                                                                              |
 | 字符串 getColumnName(int column)    | 获取给定列的名称。                                                                                                                                                                                                                                                                      |
 | Int getColumnType （int 列）       | 获取给定列的 JDBC 数据类型。                                                                                                                                                                                                                                                            |
 | Int getPrecision （int 列）        | 获取给定列的精度。                                                                                                                                                                                                                                                                |
-| 对象 [] getRowData()               | 获取作为对象数组的当前行的数据。<br /><br /> 每个对象必须匹配 Java 语言类型，该类型用于代表针对给定列指示的 JDBC 数据类型。  有关详细信息，请参阅“‘了解 JDBC 驱动程序数据类型’以获取相应映射”。 |
+| 对象 [] getRowData()               | 获取作为对象数组的当前行的数据。<br /><br /> 每个对象必须匹配 Java 语言类型，该类型用于代表针对给定列指示的 JDBC 数据类型。  有关详细信息，请参阅“‘了解 JDBC Driver 数据类型”，以了解相应映射。 |
 | Int getScale （int 列）            | 获取给定列的小数位数。                                                                                                                                                                                                                                                                    |
 | 布尔 isAutoIncrement （int 列） | 指示列是否表示一个标识列。                                                                                                                                                                                                                                            |
 | 布尔 next （)                      | 前移到下一数据行。                                                                                                                                                                                                                                                                         |
@@ -776,17 +776,17 @@ SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源�
   
 3. 为 CSV 文件指定的分隔符不应显示在数据中的任意位置，并且如果该分隔符是 Java 正则表达式中限制使用的字符，应对其正确转义。  
   
-4. 在 CSV 文件实现中，将双引号视为数据的一部分。 例如，如果分隔符是逗号，会将行 hello,”world”,”hello,world” 视为带有以下值的四个列：hello、“world”、“hello 和 world”。  
+4. 在 CSV 文件实现中，将双引号视为数据的一部分。 例如，如果分隔符是逗号，行 hello,"world","hello,world" 被视为包含具有以下值的四列：hello、“world”、“hello 和 world”。  
   
 5. 新的换行符用作行终止符，并且不允许出现在数据中的任意位置。  
   
-| 构造函数                                                                                                                                                                 | 描述                                                                                                                                                                                                                                                                                                                        |
+| 构造函数                                                                                                                                                                 | 说明                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SQLServerBulkCSVFileRecord （字符串 fileToParse、 字符串编码、 字符串分隔符，布尔 firstLineIsColumnNamesSQLServerBulkCSVFileRecord （字符串、 字符串、 字符串、 布尔值） | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用提供的分隔符和编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。  如果编码为 NULL，将使用默认编码。            |
 | SQLServerBulkCSVFileRecord (字符串 fileToParse，字符串编码布尔 firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String，String，boolean)                           | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用逗号分隔符和提供的编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。  如果编码为 NULL，将使用默认编码。 |
 | SQLServerBulkCSVFileRecord (字符串 fileToParse，布尔 firstLineIsColumnNamesSQLServerBulkCSVFileRecord （字符串、 布尔值）                                                    | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用逗号分隔符和默认编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。                                                           |
   
-| 方法                                                                                                 | 描述                                                                                         |
+| 方法                                                                                                 | 说明                                                                                         |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
 | Void addColumnMetadata （int positionInFile，字符串列名称、 int jdbcType、 int 精度，int 规模）  | 为文件中的给定列添加元数据。                                                     |
 | Void close （)                                                                                           | 释放与文件读取器关联的任何资源。                                             |

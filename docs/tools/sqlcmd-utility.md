@@ -1,7 +1,7 @@
 ---
 title: sqlcmd 实用工具 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fbda7d318e797bb5336534cf380089d3bc5b7d38
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661236"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712718"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,10 +50,32 @@ ms.locfileid: "51661236"
 - 在 Windows 脚本文件。
 - 在 SQL Server 代理作业的操作系统 (Cmd.exe) 作业步骤。
 
-该实用工具使用 ODBC 执行 TRANSACT-SQL 批处理。 
+该实用工具使用 ODBC 执行 TRANSACT-SQL 批处理。
+
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>下载最新版本的 sqlcmd 实用工具
+
+**[![下载](../ssdt/media/download.png)下载 Microsoft 命令行实用程序 15.0.x 适用于 SQL Server (x64) (2.4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![下载](../ssdt/media/download.png)下载 Microsoft 命令行实用程序 15.0.x 适用于 SQL Server (x86) (2.2 MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+命令行工具是正式版 (GA)，但它们一同发行的安装程序包为[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+
+**版本信息**
+
+版本号：15.0 <br>
+生成号：15.0.1000.34<br>
+发布日期： 2018 年 10 月 18 日
+
+SQLCMD 的新版本支持 Azure AD 身份验证，包括对 SQL 数据库、 SQL 数据仓库和始终加密功能的多重身份验证 (MFA) 支持。
+新的 BCP 支持 Azure AD 身份验证，包括多重身份验证 (MFA) 支持用于 SQL 数据库和 SQL 数据仓库。
+
+**系统要求**Windows 10、 Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1、 Windows Server 2012 中，Windows Server 2012 R2 此组件要求[Windows 安装程序4.5](https://www.microsoft.com/download/details.aspx?id=8483)并[SQL Server 的 Microsoft ODBC 驱动程序 17.2](https://www.microsoft.com/download/details.aspx?id=56567)。
  
+若要检查的 SQLCMD 版本执行`sqlcmd -?`命令并确认该 15.0.1000.34 版本或更高版本中使用。
+
+
+
 > [!NOTE]
-> Sqlcmd 实用工具的最新版本可作为 Web 版本从 [下载中心](https://go.microsoft.com/fwlink/?LinkID=825643)获取。 您需要版本 13.1 或更高版本以支持 Always Encrypted (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
+> 您需要版本 13.1 或更高版本以支持 Always Encrypted (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
 
 预安装默认情况下，可以尝试从 Azure Cloud Shell sqlcmd 实用工具： [![启动 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "启动 Cloud Shell")](https://shell.azure.com)
 
@@ -63,7 +85,7 @@ ms.locfileid: "51661236"
 > 在“查询编辑器”的常规模式和 SQLCMD 模式下，[!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient 执行操作。 通过命令行运行 sqlcmd 时，sqlcmd 使用 ODBC 驱动程序。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 **sqlcmd** 实用工具中执行相同的查询时，可能会看到不同的行为。  
 >   
   
- sqlcmd 暂不要求命令行选项和值之间必须有空格。 不过，在今后推出的版本中，可能会要求在命令行选项和值之间必须有空格。  
+ sqlcmd 暂不要求在命令行选项和值之间使用空格。 不过，在今后推出的版本中，可能会要求在命令行选项和值之间必须有空格。  
  
  其他主题：
 - [启动 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
@@ -124,7 +146,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令行选项  
  **登录相关选项**  
   **-A**  
- 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 此连接仅适用于支持 DAC 的服务器计算机。 如果 DAC 不可用，sqlcmd 会生成错误消息并退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 当连接到 SQL 数据库使用-A，您必须是 SQL server 管理员。 DAC 不适用于 Azure Active Directory 管理员。
+ 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 此连接仅适用于支持 DAC 的服务器计算机。 如果 DAC 不可用，sqlcmd 会生成错误消息并退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 当连接到 SQL 数据库使用-A，您必须是 SQL server 管理员。 DAC 不可用于 Azure Active Directory 管理员。
   
  **-C**  
  该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
@@ -147,8 +169,8 @@ sqlcmd
  当连接到 SQL 数据库或 SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 **sqlcmd** 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 **sqlcmd** 版本 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -A 选项不支持使用-G 选项。
 
 > [!IMPORTANT]
-> **-G** 选项仅适用于 Azure SQL 数据库 和 Azure 数据仓库。
-> 目前在 Linux 或 macOS 上不支持 AAD 集成身份验证。 
+> `-G` 选项仅适用于 Azure SQL 数据库和 Azure 数据仓库。
+> 在 Linux 或 macOS 上不当前支持 AAD 集成和交互式身份验证。
 
 - **Azure Active Directory 用户名和密码：** 
 
@@ -169,7 +191,7 @@ sqlcmd
    *AAD 集成身份验证目前不支持在 Linux 或 macOS 上*。
 
     ```
-    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
+    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
     ```  
 
     这将在后端生成以下连接字符串： 
@@ -179,7 +201,41 @@ sqlcmd
     ``` 
 
     > [!NOTE] 
-    > -E 选项 (Trusted_Connection) 不能与 -G 选项一起使用。
+    > `-E` 选项 (Trusted_Connection) 无法与 `-G` 选项结合使用。
+
+
+- **Azure Active Directory 交互式身份验证**  
+ 
+   交互式 Azure AD 身份验证用于 Azure SQL 数据库和 SQL 数据仓库，可以使用支持多重身份验证的交互式方法。 有关详细信息，请参阅[Active Directory 交互式身份验证](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
+
+   交互式 azure AD 要求**sqlcmd** [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility)或更高版本，以及[ODBC 版本 17.2 或更高版本](https://www.microsoft.com/download/details.aspx?id=56567)。  
+
+   若要启用交互式身份验证，请提供-G 选项与用户名 (-U)，但不提供密码。
+
+   下面的示例将使用 Azure AD 交互模式下，该值指示用户名的用户是指的 AAD 帐户的数据导出。 这是在上一节中使用的同一示例： *Azure Active Directory 用户名和密码*。  
+
+   交互模式要求提供密码才能手动输入，或者将启用，多重身份验证的帐户完成配置的 MFA 身份验证方法。
+
+   ``` 
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
+   ```
+
+   前一个命令在后端生成以下连接字符串：  
+
+   ```
+   SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
+   ```
+
+   如果 Azure AD 用户是使用 Windows 帐户的域联合的用户，需要在命令行中的用户名包含其域帐户 (例如，joe@contoso.com如下所示):
+
+   ```
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
+   ```
+ 
+   如果来宾用户特定的 Azure AD 中存在并且具有数据库权限以执行 sqlcmd 命令的 SQL DB 中存在的组的一部分，使用来宾用户是其别名 (例如， *keith0@adventureworks.com*)。
+
+  >[!IMPORTANT]
+  >没有已知的问题时使用`-G`并`-U`选项与 SQLCMD，其中将置于`-U`选项之前`-G`选项可能会导致身份验证失败。 始终以开头`-G`选项后跟`-U`选项。
 
     
  **-H** *workstation_name*  
@@ -191,8 +247,8 @@ sqlcmd
  **-K** *application_intent*  
  连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
- **-M** *multisubnet_failover*  
- 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息 [！包括[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[创建和配置的可用性组的&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 Alwayson 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，并[活动次要副本： 可读次要副本 (Alwayson 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)。  
+**-M** *multisubnet_failover*  
+ 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果 -M 未指定，-M 处于关闭状态。 有关详细信息，请参阅[侦听程序、客户端连接、应用程序故障转移](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)。 
   
  **-N**  
  此开关供客户端用于请求加密连接。  
@@ -204,10 +260,10 @@ sqlcmd
 
 建议使用强密码。
  
-#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**使用强密码！**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**使用强密码！**](../relational-databases/security/strong-passwords.md)
   
   
- 通过向控制台输出密码提示，可以显示密码提示，如下所示： `Password:`  
+ 通过向控制台输出密码提示，可以显示密码提示，如下所示：`Password:`  
   
  隐藏用户输入。 也就是说，将不会显示任何输入的内容，光标保留原位不动。  
   
@@ -246,9 +302,9 @@ sqlcmd
 > [!NOTE]  
 >  OSQLUSER 环境变量可用于实现向后兼容性。 SQLCMDUSER 环境变量优先于 OSQLUSER 环境变量。 也就是说， **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰。 此外，现有的 **osql** 脚本可以继续使用。  
   
- 如果 -U 选项和 -P 选项均未指定，sqlcmd 将尝试使用 Microsoft Windows 身份验证模式进行连接。 身份验证基于运行 **sqlcmd**的用户的 Windows 帐户。  
+ 如果 -U 选项和 -P 选项均未指定，sqlcmd 会尝试使用 Microsoft Windows 身份验证模式进行连接。 身份验证基于运行 **sqlcmd**的用户的 Windows 帐户。  
   
- 如果 -U 选项与 -E 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 **–U** 选项后有多个参数，将生成错误消息并退出程序。  
+ 如果 -U 选项与 -E 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 -U 选项后跟多个参数，便会生成错误消息并退出程序。  
   
  **-z** *new_password*  
  更改密码：  
@@ -309,7 +365,7 @@ sqlcmd
  将错误消息输出重定向到屏幕 (**stderr**)。 如果未指定参数或指定参数为 **0**，则仅重定向严重级别为 11 或更高的错误消息。 如果指定参数为 **1**，则将重定向所有消息输出（包括 PRINT）。 如果使用 -o，将不起任何作用。 默认情况下，消息将发送到 **stdout**。  
   
  **-R**  
- 促使 sqlcmd 根据客户端的区域设置本地化从 SQL Server 中检索到的数字、货币、日期和时间列。 默认情况下，将使用服务器的区域设置显示这些列。  
+ 让 sqlcmd 根据客户端的区域设置，本地化从 SQL Server 中检索到的数字、货币、日期和时间列。 默认情况下，这些列使用服务器的区域设置进行显示。  
   
  **-u**  
  指定无论 *input_file* 为何种格式，都以 Unicode 格式存储 *output_file*。  
@@ -369,7 +425,7 @@ sqlcmd
   
  **格式设置选项**  
   **-h** *headers*  
- 指定要在列标题之间输出的行数。 默认为每一组查询结果输出一次标题。 此选项设置 **sqlcmd** 脚本变量 SQLCMDHEADERS。 使用 -1 指定不应输出标题。 任何无效的值都将导致 **sqlcmd** 生成错误消息并随后退出。  
+ 指定要在列标题之间输出的行数。 默认为每一组查询结果输出一次标题。 此选项设置 **sqlcmd** 脚本变量 SQLCMDHEADERS。 使用 -1 指定不要打印的标题。 任何无效的值都将导致 **sqlcmd** 生成错误消息并随后退出。  
   
  **-k** [**1** | **2**]  
  删除输出中的所有控制字符，例如制表符和换行符。 此参数在返回数据时保留列格式。 如果指定了 1，则控制字符被一个空格替代。 如果指定了 2，则连续的控制字符被一个空格替代。 **-k** 与 **-k1**相同。  
@@ -490,7 +546,7 @@ sqlcmd
  **-?**  
  显示 **sqlcmd** 的版本和 **sqlcmd** 选项的语法摘要。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  不必按语法部分所示的顺序使用选项。  
   
  在返回多个结果时， **sqlcmd** 在批处理中的每个结果集之间输出一个空行。 此外，如果没有应用于已执行的语句，则不会出现 `<x> rows affected` 消息。  
@@ -519,7 +575,7 @@ sqlcmd
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
   
-|变量|相关开关|R/W|，则“默认”|  
+|变量|相关开关|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -528,10 +584,10 @@ sqlcmd
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8"（秒）|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 无限期等待|  
-|SQLCMDHEADERS|-H|R/W|"0"|  
+|SQLCMDHEADERS|-h|R/W|"0"|  
 |SQLCMDCOLSEP|-S|R/W|“ ”|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 无限制|  
@@ -690,7 +746,7 @@ sqlcmd
   
  SQL Server 保留了介于 -1 到 -99 之间的返回值；sqlcmd 定义了以下附加返回值：  
   
-|返回值|描述|  
+|返回值|说明|  
 |-------------------|-----------------|  
 |-100|选择返回值前遇到错误。|  
 |-101|选择返回值时找不到行。|  
@@ -711,7 +767,7 @@ sqlcmd
  当遇到批处理终止符之后，将读取并执行该文件。 可以发出多个 **:r** 命令。 该文件可以包含任何 **sqlcmd** 命令， 包括批处理终止符 **GO**。  
   
 > [!NOTE]  
->  每遇到一个 **:r** 命令，交互模式下显示的行计数都会加一。 **:r** 命令会出现在 list 命令的输出中。  
+>  每遇到一个 `:r` 命令，交互模式下显示的行计数都会加一。 `:r` 命令会显示在 list 命令的输出中。  
   
  **:Serverlist**  
  列出在本地配置的服务器和在网络上广播的服务器的名称。  
@@ -763,7 +819,7 @@ sqlcmd
   
 -   如果从本地计算机的 sqlcmd 调用远程服务器上的输入文件，并且该文件包含驱动器文件路径（如 :Out c:\OutputFile.txt）， 将在本地计算机而不是远程服务器上创建输出文件。  
   
--   有效文件路径包括： `C:\<filename>`、 `\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路径中包含空格，请使用引号。  
+-   有效文件路径包括：`C:\<filename>`、`\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路径中包含空格，请使用引号。  
   
 -   每个新的 **sqlcmd** 会话都将覆盖现有的同名文件。  
   
@@ -827,7 +883,7 @@ sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中
  XML（流式）数据和行集数据不能混合。 如果在执行输出 XML 流的 Transact-SQL 语句之前未发出 XML ON 命令，则输出为乱码。 发出 XML ON 命令后，将无法执行输出常规行集的 Transact-SQL 语句。  
   
 > [!NOTE]  
->  **:XML** 命令不支持 SET STATISTICS XML 语句。  
+>  `:XML` 命令不支持 SET STATISTICS XML 语句。  
   
 ###  <a name="OutputJSON"></a> JSON 输出格式  
  若要得到 JSON 输出，请使用以下命令： `:XML ON`。 否则，输出包括的列名和 JSON 文本。 此输出不是有效的 JSON。  
@@ -840,7 +896,7 @@ sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中
 使用 Azure Active Directory 身份验证的示例：
 ```
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
-sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyAADPassword -G -l 30
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
 ```
   
 ## <a name="sqlcmd-best-practices"></a>sqlcmd 最佳方法  
@@ -866,13 +922,10 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
  [管理作业步骤](~/ssms/agent/manage-job-steps.md)   
  [创建 CmdExec 作业步骤](~/ssms/agent/create-a-cmdexec-job-step.md)  
   
-  
 
+## <a name="feedback"></a>反馈
 
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 客户端工具论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
-
-
-
-
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

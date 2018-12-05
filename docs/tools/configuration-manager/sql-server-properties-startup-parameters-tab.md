@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e28be468ff1c8e4f7248f0a6296ca9ca2476a63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602885"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540666"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47602885"
   
 -   前导空格和尾随空格将会从任何启动参数中删除。  
   
--   所有启动参数都以短划线 – 开头并且第二个值是字母。  
+-   所有启动参数都以短破折号 (-) 开头，且第二个值是字母。  
   
 ## <a name="required-parameters"></a>必需的参数  
  下列参数是必需的。 可以更改这些参数，但不能删除它们。  
@@ -63,7 +63,7 @@ ms.locfileid: "47602885"
   
 |参数|简短说明|  
 |---------------|-----------------------|  
-|-M|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
+|-m|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |-T1204|返回参与死锁的锁的资源和类型，以及受影响的当前命令。|  
 |-T1224|基于锁数禁用锁升级。|  
 |-T3608|禁止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动启动和恢复除 master 数据库之外的任何数据库。|  

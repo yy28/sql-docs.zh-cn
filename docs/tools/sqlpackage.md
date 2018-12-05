@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 8d06e0f985a9e50d1eee0a7e6c96f440d8ef7dcd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528575"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -48,7 +48,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
   
 ### <a name="help-for-the-extract-action"></a>有关提取操作的帮助
 
-|参数|缩写|ReplTest1|描述|
+|参数|缩写|ReplTest1|说明|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -72,7 +72,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ### <a name="properties-specific-to-the-extract-action"></a>特定于提取操作属性
 
-|“属性”|ReplTest1|描述|
+|属性|ReplTest1|说明|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32"60")|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|DacApplicationDescription=(STRING)|定义要存储在 DACPAC 元数据中的应用程序说明。|
@@ -96,7 +96,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 
 ### <a name="help-for-publish-action"></a>有关发布操作的帮助
 
-|参数|缩写|ReplTest1|描述|
+|参数|缩写|ReplTest1|说明|
 |---|---|---|---|
 |**/Action:**|**/a**|发布|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -135,7 +135,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 
 ### <a name="properties-specific-to-the-publish-action"></a>特定于发布操作的属性
 
-|“属性”|ReplTest1|描述|
+|属性|ReplTest1|说明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|为部署参与者指定其他部署参与者参数。 这应该是用分号分隔的值列表。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定应在部署 dacpac 时运行的其他部署参与者。 这应该是以分号分隔的完全限定的生成参与者名称或 ID 列表。|
@@ -229,7 +229,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 
 下表介绍可用于重写发布操作过程中使用的 SQL 命令 (sqlcmd) 变量的值的选项的格式。 命令行上指定的变量的值将重写分配给变量（例如，在发布配置文件中）的其他值。  
   
-|参数|，则“默认”|描述|  
+|参数|默认|说明|  
 |-------------|-----------|---------------|  
 |**/ 变量: {PropertyName} = {Value}**||为特定于操作的变量指定名称值对；{VariableName}={Value}。 该 DACPAC 文件包含有效 SQLCMD 变量的列表。 如果没有为每个变量都提供值，则会发生错误。|  
   
@@ -239,7 +239,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
   
 ### <a name="help-for-export-action"></a>有关导出操作的帮助
 
-|参数|缩写|ReplTest1|描述|
+|参数|缩写|ReplTest1|说明|
 |---|---|---|---|
 |**/Action:**|**/a**|导出|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -263,7 +263,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 
 ### <a name="properties-specific-to-the-export-action"></a>特定于导出操作的属性
 
-|“属性”|ReplTest1|描述|
+|属性|ReplTest1|说明|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32"60")|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|存储 = ({文件&#124;内存} File)|指定在提取过程中使用的架构模型的后备存储的类型。|
@@ -273,11 +273,11 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
   
 ## <a name="import-parameters-and-properties"></a>导出参数和属性
 
-SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件）导入到 SQL Server 或 Azure SQL 数据库中的新的或空白的数据库中。 在对现有数据库进行导入操作时，目标数据库无法包含任何用户定义的架构对象。  
+SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件）导入 SQL Server 或 Azure SQL 数据库中的新数据库或空白数据库。 在对现有数据库进行导入操作时，目标数据库无法包含任何用户定义的架构对象。  
   
 ### <a name="help-for-command-actions"></a>命令操作帮助
 
-|参数|缩写|ReplTest1|描述|
+|参数|缩写|ReplTest1|说明|
 |---|---|---|---|
 |**/Action:**|**/a**|导入|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -299,7 +299,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否应使用通用身份验证。 设置为 True 时，支持 MFA 激活的交互式身份验证协议。 此选项还可用于 Azure AD 身份验证，而无需 MFA，使用交互式协议要求用户输入其用户名和密码或集成身份验证 （Windows 凭据）。 没有 Azure AD 身份验证时 /UniversalAuthentication 设置为 True，可以指定在 SourceConnectionString (/ scs)。 Azure AD 身份验证时 /UniversalAuthentication 设置为 False 时，必须指定在 SourceConnectionString (/ scs)。 <br/> 有关 Active Directory 通用身份验证的详细信息，请参阅[SQL 数据库和 SQL 数据仓库 （对 MFA 的 SSMS 支持） 的通用身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 特定于导入操作的属性：
-|“属性”|ReplTest1|描述|
+|属性|ReplTest1|说明|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32"60")|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|DatabaseEdition = ({Basic&#124;标准&#124;高级&#124;默认} Default)|定义版本的 Azure SQL 数据库。|
@@ -315,7 +315,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 操作的帮助
 
-|参数|缩写|ReplTest1|描述|
+|参数|缩写|ReplTest1|说明|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -351,7 +351,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>特定于 DeployReport 操作属性
 
-|“属性”|ReplTest1|描述|
+|属性|ReplTest1|说明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|为部署参与者指定其他部署参与者参数。 这应该是用分号分隔的值列表。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定应在部署 dacpac 时运行的其他部署参与者。 这应该是以分号分隔的完全限定的生成参与者名称或 ID 列表。|
@@ -447,7 +447,7 @@ SqlPackage.exe 报告操作创建自注册数据库注册以来已对其做出�
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 操作有关的帮助
 
-|参数|缩写|ReplTest1|描述|
+|参数|缩写|ReplTest1|说明|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -474,7 +474,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
   
 ### <a name="help-for-the-script-action"></a>有关脚本操作的帮助
 
-|参数|缩写|ReplTest1|描述|
+|参数|缩写|ReplTest1|说明|
 |---|---|---|---|
 |**/Action:**|**/a**|脚本|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -512,7 +512,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 
 ### <a name="properties-specific-to-the-script-action"></a>特定于脚本操作属性
 
-|“属性”|ReplTest1|描述|
+|属性|ReplTest1|说明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|为部署参与者指定其他部署参与者参数。 这应该是用分号分隔的值列表。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定应在部署 dacpac 时运行的其他部署参与者。 这应该是以分号分隔的完全限定的生成参与者名称或 ID 列表。

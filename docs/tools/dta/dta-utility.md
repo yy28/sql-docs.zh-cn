@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9a091731d5eccbf7dca054450d4735077ad7d6d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529125"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ dta
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -d database_name ]   
       [ -Tl table_list | -Tf table_list_file ]  
@@ -106,13 +106,13 @@ dta
  指定要优化的每个数据库的名称。 第一个数据库是默认数据库。 可以指定多个数据库，各数据库名称用逗号进行分隔。例如：  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- 此外，也可以在指定多个数据库时，使用 **–D** 参数逐个指定数据库名称。例如：  
+ 此外，也可以对各个数据库名称使用 -D 参数，从而指定多个数据库。例如：  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  **-D** 参数是必需的。 如果尚未指定 **-d** 参数，则 **dta** 将默认连接到工作负荷中第一个 `USE database_name` 子句指定的数据库。 如果工作负荷中没有显式的 `USE database_name` 子句，则必须使用 **-d** 参数。  
@@ -152,9 +152,9 @@ dta -d AdventureWorks2012 ...
   
 |参数|默认值|详细信息|  
 |---------------|-------------------|-------------|  
-|*database_name*|使用*database_name* 选项指定的 **database_name** ||  
+|*database_name*|使用 -D 选项指定的 database_name||  
 |*owner_name*|**dbo**|*owner_name* 必须为 **dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
-|*table_name*|None||  
+|*table_name*|无||  
   
  如果使用文件，则指定 .xml 作为其扩展名。 例如，TuningLog.xml。  
   
@@ -167,7 +167,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时， **dta** 将使用默认值 **-fa****IDX**。  
   
-|ReplTest1|描述|  
+|ReplTest1|说明|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引视图。|  
 |IDX|仅限索引。|  
@@ -188,9 +188,9 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  指定 **dta** 在生成其建议时必须保留的现有物理设计结构。 下表列出并介绍了可以为此参数指定的值：  
   
-|ReplTest1|描述|  
+|ReplTest1|说明|  
 |-----------|-----------------|  
-|无|无现有结构|  
+|NONE|无现有结构|  
 |ALL|所有现有结构|  
 |ALIGNED|所有分区对齐结构。|  
 |CL_IDX|表中的所有聚集索引|  
@@ -199,7 +199,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  指定 **dta** 建议的新物理设计结构（索引和索引视图）是否应进行分区以及如何进行分区。 下表列出并介绍了可以为此参数指定的值：  
   
-|ReplTest1|描述|  
+|ReplTest1|说明|  
 |-----------|-----------------|  
 |无|不分区|  
 |FULL|完全分区（选择该值可增强性能）|  
@@ -214,10 +214,10 @@ dta -d AdventureWorks2012 ...
  为优化会话指定一个数字标识符。 如果未指定，则 **dta** 将生成一个 ID 号。 可以使用此标识符查看现有优化会话的信息。 如果不指定 **-ID**值，则必须用 **-s**指定会话名。  
   
  **-ip**  
- 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可以使用 **–n** 选项更改此值。  
+ 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n 选项更改此值。  
  
 **-iq**  
- 指定查询存储用作工作负荷。 分析显式选择的数据库查询存储中的前 1000 个事件。 可以使用 **–n** 选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
+ 指定查询存储用作工作负荷。 分析显式选择的数据库查询存储中的前 1000 个事件。 可使用 -n 选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
 |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
@@ -233,7 +233,7 @@ dta -d AdventureWorks2012 ...
   
 |参数|默认值|  
 |---------------|-------------------|  
-|*database_name*|使用*database_name* 选项指定的 **database_name** 。|  
+|*database_name*|使用 -D 选项指定的 database_name|  
 |*owner_name*|**dbo**。|  
 |*table_name*|无。|  
   
@@ -249,7 +249,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  指定是否联机创建物理设计结构。 下表列出并说明了可为此参数指定的值：  
   
-|ReplTest1|描述|  
+|ReplTest1|说明|  
 |-----------|-----------------|  
 |OFF|建议的物理设计结构都无法联机创建。|  
 |ON|所有建议的物理设计结构都可以联机创建。|  
@@ -302,7 +302,7 @@ dta -iq -I 48
  **-rl** *analysis_report_list*  
  指定要生成的分析报告列表。 下表列出并说明了可为此参数指定的值：  
   
-|ReplTest1|报告|  
+|ReplTest1|报表|  
 |-----------|------------|  
 |ALL|所有分析报告|  
 |STMT_COST|语句开销报告|  
@@ -362,7 +362,7 @@ dta -iq -I 48
  **-x**  
  启动优化会话，然后退出。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  按 Ctrl+C 一次可停止优化会话，并可根据 **dta** 此时已完成的分析生成建议。 系统将提示您确定是否要生成建议。 再次按 Ctrl+C 停止优化会话，而不生成建议。  
   
 ## <a name="examples"></a>示例  
@@ -371,7 +371,7 @@ dta -iq -I 48
  此示例使用安全连接 (`-E`) 连接到 MyServer 中的 **tpcd1G** 数据库，以分析工作负荷并创建建议。 此示例将输出写入到名为 script.sql 的脚本文件。 如果 script.sql 已存在，由于指定了 **参数，** dta `-F` 将覆盖该文件。 优化会话的运行时间没有限制，以确保完成工作负荷分析 (`-A 0`)。 建议必须至少提供 5% 的改进 (`-m 5`)。 **dta** 应在其最终建议中包含索引和索引视图 (`-fa IDX_IV`)。  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B.限制磁盘使用**  
@@ -379,7 +379,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  此示例将数据库总大小（包括原始数据和其他索引）限定为 3 GB (`-B 3000`)，并将输出定向到 d:\result_dir\script1.sql。 该示例的运行时间不会超过 1 小时 (`-A 60`)。  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C.限制优化查询的数量**  
@@ -387,7 +387,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  此示例将从 orders_wkld.sql 文件读取的最大查询数限定为 10 (`-n 10`)，并将运行时间设为 15 分钟 (`-A 15`)，以先完成的为准。 要确保所有 10 个查询都得到优化，请用 `-A 0` 指定不受限制的优化时间。 如果时间紧迫，则通过用 `-A` 参数指定用于优化的分钟数来指定适当的时间限制，如本例所示。  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D.优化文件中列出的特定表**  
@@ -413,7 +413,7 @@ AdventureWorks2012.Production.Product  2000000
  优化时间为 2 小时 (`-A 120`)，输出将写入 XML 文件 (`-ox XMLTune.xml`)。  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
