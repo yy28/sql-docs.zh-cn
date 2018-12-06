@@ -127,7 +127,9 @@ SQL Server 2017机器学习服务是SQL Server 2016 R服务的下一代，增强
 | SQL Server 2017 机器学习服务器 （独立版） | R Server 9.2.1 <br/> Python 服务器 9.2 | 2017 年 10 月 |
 | SQL Server 2016 R Services （数据库内） | R Server 9.1  | 2017 年 7 月  |
 | SQL Server 2016 R Server （独立版）  |  R Server 9.1 | 2017 年 7 月 |
+
 有关发行版的软件包版本，请参阅[Upgrade R 和 Python 组件](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)中的版本映射。
+
 ## <a name="portability-and-related-products"></a>可移植性及相关的产品
 
 通过包分发和解释器内置于多个产品，自定义 R 和 Python 代码的可移植性将得到解决。 在 SQL Server 中提供的相同包也会出现在多个其他 Microsoft 产品和服务，包括一个名为非 SQL 版本[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)。 
