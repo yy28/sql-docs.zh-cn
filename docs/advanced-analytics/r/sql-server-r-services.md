@@ -37,8 +37,8 @@ SQL Server 2016 仅适用于 R。下表介绍了 SQL Server 2016 中的功能。
 | R 包 | [**RevoScaleR** ](revoscaler-overview.md) 是用于可缩放R的主要库。此库中的函数是使用最广泛的函数。在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。 <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。<br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) 提供了辅助函数，用于将R脚本放入T-SQL存储过程、向数据库注册存储过程以及从R开发环境中运行存储过程。<br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) 用于在R中指定MDX查询。|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版。包含包和解释器。 始终使用安装程序安装的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示是 R 分发版中的标准工具。  |
-| R 示例和脚本 |  开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本 |
-| 在 R 中预先训练的模型 | 预先训练的模型针对特定用例创建，并由 Microsoft 的数据科学工程团队维护。 你可以按原样使用预先训练的模型为文本中的正负情绪评分，或使用你提供的新数据输入检测图像中的特征。 该模型在 R 服务中运行，但无法通过 SQL Server 安装程序安装。 有关详细信息，请参阅[在 SQL Server 上安装预先训练的机器学习模型](../install/sql-pretrained-models-install.md)。 |
+| R 示例和脚本 | 开源 R 和 RevoScaleR 包中包括内置数据集，以便你可以使用预安装的数据来创建和运行脚本 |
+| 在 R 中预先训练的模型 | 预先训练的模型为特定用例创建，由 Microsoft 的数据科学工程团队维护。可以按原样使用预先训练的模型对文本中的积极/消极情绪进行评分，或者使用你提供的新数据输入检测图像中的特征。这些模型在 R 服务中运行，但不能通过 SQL Server 安装程序安装。有关详细信息，请参阅[在 SQL Server 上安装预先训练的机器学习模型]。 |
 
 ## <a name="using-r-services"></a>使用 R Services
 
