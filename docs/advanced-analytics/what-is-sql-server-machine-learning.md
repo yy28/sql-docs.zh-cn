@@ -75,14 +75,14 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ### <a name="step-3-write-your-first-script"></a>第 3 步： 编写第一个脚本
 
-从T-SQL脚本中调用R或Python函数:
+从 T-SQL 脚本中调用 R 或 Python 函数：
 
 + [： 了解使用 R 的数据库内分析](tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [： 使用 R 的端到端演练](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 + [Python：使用 T-SQL 运行 Python](tutorials/run-python-using-t-sql.md)
 + [Python： 了解数据库内分析使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-为任务选择最好的语言。R最适合于使用SQL难以实现的统计计算。对于基于集合的数据操作，可以利用SQL Server的强大功能来实现最大的性能。使用内存数据库引擎可以非常快速地对列进行计算。
+选择最适合任务的语言。R 最适合使用 SQL 难以实现的统计计算。对于基于集合的数据操作，可以利用 SQL Server 的强大功能来实现性能最大化。使用内存中数据库引擎可以非常快速地对列进行计算。
 
 ### <a name="step-4-optimize-your-solution"></a>步骤 4： 优化你的解决方案
 
