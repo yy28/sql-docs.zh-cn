@@ -79,7 +79,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用一个数值表达式，并返回 Australia 中每个 State-Province 的 Internet Sales Amount 及其占所有国家总 Internet Sales Amount 的百分比。  
+ 下面的示例使用一个数值表达式，并返回 Australia 中每个 State-Province 的 Internet Sales Amount 及其占所有国家/地区总 Internet Sales Amount 的百分比。  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   
