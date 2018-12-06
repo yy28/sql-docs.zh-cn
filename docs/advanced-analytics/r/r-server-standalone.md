@@ -17,7 +17,8 @@ ms.locfileid: "51657496"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （独立版） 和 SQL Server 中的机器学习服务器 （独立版）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-SQL Server为独立于SQL Server运行的独立R服务器或机器学习服务器提供安装支持。根据SQL Server版本的不同，独立服务器具有开源R和Python的基础，上面覆盖了来自Microsoft的高性能库，这些库可以大规模地添加统计和预测分析。库还支持用R或Python编写的机器学习任务。
+
+SQL Server 为独立于 SQL Server 运行的独立 R Server 或 Machine Learning Server 提供安装支持。根据 SQL Server 版本，独立服务器具有开放源 R 和 Python（可能具有）的基础，再加上可大规模添加统计和预测分析的 Microsoft 高性能库。这些库还支持用 R 或 Python 编写脚本的机器学习任务。
 
 在 SQL Server 2016 中，此功能称为**R Server （独立版）** 是仅限 R 的。 在 SQL Server 2017 中，名为**Machine Learning Server （独立版）** 并包括 R 和 Python。  
 
