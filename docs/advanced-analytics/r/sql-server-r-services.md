@@ -20,9 +20,9 @@ ms.locfileid: "51659926"
 
 R Services 是 SQL Server 2016 数据库引擎实例的附加组件，用于在 SQL Server 上执行 R 代码和函数。代码在可扩展性框架中运行（与核心引擎进程隔离），但可作为存储过程、包含 R 语句的 T-SQL 脚本或包含 T-SQL 的 R 代码，此时完全适用于关系数据。
 
-R Services 包括基本分发，，上面有来自 Microsoft 的企业 R 包，以便可以加载和处理大量数据的多个核心上并聚合到单个合并输出结果。 Microsoft 的 R 函数和算法设计规模和实用程序： 提供预测分析、 统计建模、 数据可视化效果和先进的机器学习算法中设计商业服务器产品和由 Microsoft 支持。 
+R Services 包括 R 的基本分发，与 Microsoft 的企业 R 包重叠，以便你可以加载和处理多个核心上的大量数据，并将结果聚合成一个统一输出。Microsoft 的 R 函数和算法专为规模和实用性而设计：在 Microsoft 设计和支持的商业服务器产品中提供预测分析、统计建模、数据可视化功能和领先的机器学习算法。
 
-R 库包括 RevoScaleR、 MicrosoftML，和其他人。 因为与数据库引擎集成 R Services，可以让分析贴近数据，并消除成本和与数据移动相关的安全风险。
+R 库包括 RevoScaleR、MicrosoftML 等。由于 R Services 与数据库引擎集成，你可以使分析与数据位于较近的位置，并消除与数据移动相关的成本和安全风险。
 
 > [!Note]
 > R Services 已在 SQL Server 2017 中对重命名[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)，专用于反映将 Python 添加。
