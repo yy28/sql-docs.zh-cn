@@ -63,7 +63,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
  
 ### <a name="step-2-configure-a-development-tool"></a>步骤 2： 配置开发工具
 
-数据科学家通常在他们自己的笔记本电脑或开发工作站上使用R或Python来探索数据，并构建和优化预测模型，直到获得一个好的预测模型。使用SQL Server中的数据库内分析，不需要更改这个过程。安装完成后，可以在本地和远程SQL Server上运行R或Python代码。
+数据科学家通常在他们自己的笔记本电脑或开发工作站上使用 R 或 Python 来探索数据，并构建和调整预测模型，直到获得效果良好的预测模型。使用 SQL Server 中的数据库内分析则不需要更改此过程。安装完成后，可以在本地和远程 SQL Server 上运行 R 或 Python 代码。
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 + **使用喜欢的 IDE**。您可以将R和Python库链接到您选择的开发工具。有关更多信息，请参见[设置R工具](r/set-up-a-data-science-client.md)和[设置Python工具](python/setup-python-client-tools-sql.md)
