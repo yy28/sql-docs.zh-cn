@@ -46,9 +46,9 @@ SQL Server 2016 仅适用于 R。下表介绍了 SQL Server 2016 中的功能。
 
 数据库内分析的最常见方法是使用[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，将 R 脚本作为输入参数传递。
 
-经典的客户端-服务器交互是另一种方法。 从任何客户端工作站上具有一个 IDE，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，然后编写将推送执行的代码 (称为*远程计算上下文*) 对数据和到远程 SQL 操作服务器。 
+经典的客户端-服务器交互是另一种方法。在具有 IDE 的任何客户端工作站中，可以安装 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，然后编写代码，将执行（称为“远程计算上下文”）推送到数据，以及将操作推送到远程 SQL 服务器。
 
-最后，如果使用的[独立服务器](r-server-standalone.md)和 Developer edition 中，你可以构建解决方案，客户端工作站上使用相同的库和解释器，并随后部署生产代码中的对 SQL Server 机器学习服务 （数据库内）。 
+最后，如果使用的是[独立服务器](r-server-standalone.md)和 Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在 SQL Server 机器学习服务（数据库中）上部署生产代码。  
 
 ## <a name="how-to-get-started"></a>如何开始
 
