@@ -63,15 +63,15 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
  
 ### <a name="step-2-configure-a-development-tool"></a>步骤 2： 配置开发工具
 
-数据科研人员通常在自己的笔记本电脑或开发工作站上使用 R 或 Python 来研究数据并生成和调整预测模型，直到生成效果良好的预测模型。 使用 SQL Server 中的数据库内分析，没有必要更改此过程。 安装完成后，您可以在 SQL Server 上运行 R 或 Python 代码，本地和远程。
+数据科学家通常在他们自己的笔记本电脑或开发工作站上使用 R 或 Python 来探索数据，并构建和调整预测模型，直到获得效果良好的预测模型。使用 SQL Server 中的数据库内分析则不需要更改此过程。安装完成后，可以在本地和远程 SQL Server 上运行 R 或 Python 代码。
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
++ **使用喜欢的 IDE**。您可以将R和Python库链接到您选择的开发工具。有关更多信息，请参见[设置R工具](r/set-up-a-data-science-client.md)和[设置Python工具](python/setup-python-client-tools-sql.md)
 
-+ **使用喜欢的 IDE**。 你可以链接到所选的开发工具的 R 和 Python 库。 有关详细信息，请参阅[设置的 R 工具](r/set-up-a-data-science-client.md)并[设置 Python 工具](python/setup-python-client-tools-sql.md)。  
++ **处理远程或本地**。数据科学家可以像往常一样连接到SQL Server并将数据带到客户机进行本地分析。但是，更好的解决方案是使用**RevoScaleR**或**revoscalepy**api将计算推入SQL Server计算机，从而避免代价高昂且不安全的数据移动。
 
-+ **处理远程或本地**。 数据科研人员可以像平时一样连接到 SQL Server，然后将数据取回到客户端进行本地分析。 但是，更好的解决方案是使用**RevoScaleR**或**revoscalepy** Api 将计算推送到 SQL Server 计算机，避免成本高昂且不安全的数据移动。
 
-+ **在 SQL Server 存储过程中嵌入 R 或 Python 脚本**。 代码充分优化后，将其封装在一个存储过程中，以避免不必要的数据移动和优化数据处理任务。
++ **在 SQL Server 存储过程中嵌入 R 或 Python 脚本**。当代码完全优化后，将其封装在存储过程中，以避免不必要的数据移动和优化数据处理任务。
 
 ### <a name="step-3-write-your-first-script"></a>第 3 步： 编写第一个脚本
 
