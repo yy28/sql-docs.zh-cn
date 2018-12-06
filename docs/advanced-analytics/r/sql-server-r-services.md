@@ -41,13 +41,14 @@ SQL Server 2016 仅为 R。 下表介绍了 SQL Server 2016 中的功能。
 | 在 R 中预先训练的模型 | 预先训练的模型创建的特定用例和在 Microsoft 数据科学工程团队维护的。 可以使用预先训练的模型作为-是正负情绪评分中的文本，或在映像中，使用你提供的新数据输入检测功能。 模型在 R Services 中运行，但不能通过 SQL Server 安装程序安装。 有关详细信息，请参阅[安装预先定型的机器学习模型的 SQL Server](../install/sql-pretrained-models-install.md)。 |
 
 ## <a name="using-r-services"></a>使用 R Services
+
 开发人员和分析师通常具有在本地 SQL Server 实例上运行的代码。 可以通过添加机器学习服务并启用外部脚本执行，在 SQL 服务器模式中运行 R 代码的能力： 存储过程中包装脚本、 存储模型中的 SQL Server 表，或结合查询中的 T-SQL 和 R 函数。
 
 数据库内分析的最常见方法是使用[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，将 R 脚本作为输入参数传递。
 
-经典客户端 - 服务器交互是另一种方法。从具有IDE的任何客户端工作站，您可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，然后编写代码，将执行(称为*远程计算上下文*)推送到数据，并将操作推送到远程SQL服务器。
+经典的客户端-服务器交互是另一种方法。在具有 IDE 的任何客户端工作站中，可以安装 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，然后编写代码，将执行（称为“远程计算上下文”）推送到数据，以及将操作推送到远程 SQL 服务器。
 
-最后，如果您使用的是[独立服务器](r-server-standalone.md)和Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在SQL Server机器学习服务（数据库中）上部署生产代码。 
+最后，如果使用的是[独立服务器](r-server-standalone.md)和 Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在 SQL Server 机器学习服务（数据库中）上部署生产代码。  
 
 ## <a name="how-to-get-started"></a>如何开始
 
