@@ -17,7 +17,8 @@ ms.locfileid: "51659926"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-R Services是SQL Server 2016数据库引擎实例的一个附加组件，用于在SQL Server上执行R代码和函数。代码在可扩展性框架中运行，与核心引擎进程隔离，但作为存储过程完全可用于关系数据，包含R语句的T-SQL脚本或包含T-SQL的R代码。
+
+R Services 是 SQL Server 2016 数据库引擎实例的附加组件，用于在 SQL Server 上执行 R 代码和函数。代码在可扩展性框架中运行（与核心引擎进程隔离），但可作为存储过程、包含 R 语句的 T-SQL 脚本或包含 T-SQL 的 R 代码，此时完全适用于关系数据。
 
 R Services 包括基本分发，，上面有来自 Microsoft 的企业 R 包，以便可以加载和处理大量数据的多个核心上并聚合到单个合并输出结果。 Microsoft 的 R 函数和算法设计规模和实用程序： 提供预测分析、 统计建模、 数据可视化效果和先进的机器学习算法中设计商业服务器产品和由 Microsoft 支持。 
 
