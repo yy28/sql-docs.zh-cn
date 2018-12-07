@@ -18,7 +18,7 @@ ms.locfileid: "48878090"
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-从 SQL Server 2017 中，R 和 Python 支持的数据库内分析提供在 SQL Server 机器学习服务的后继[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 中引入。 函数库可在 R 和 Python 中，并作为外部脚本的数据库引擎实例上运行。 
+从SQL Server 2017开始，SQL Server机器学习服务提供了对数据库内分析的R和Python支持，SQL Server机器学习服务是SQL Server 2016中引入的[SQL Server R Services](../r/sql-server-r-services.md)的后续版本。函数库在R和Python中可用，并作为外部脚本运行在数据库引擎实例上。
 
 此文章介绍了如何通过运行安装机器学习组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导和以下屏幕上的提示。
 
