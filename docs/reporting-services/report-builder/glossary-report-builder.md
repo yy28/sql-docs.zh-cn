@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857155"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541797"
 ---
 # <a name="glossary-report-builder"></a>词汇表（报表生成器）
   
@@ -186,7 +186,7 @@ ms.locfileid: "47857155"
 |KPI|请参阅另一术语：关键绩效指标 (key performance indicator)|  
 |标签字段 (label field)|标识相应键字段的标签的报表数据集字段。 参数和数据区域可以显示键字段而非值的标签。|  
 |latency|在一台服务器上完成数据更改到此更改显示在另一台服务器上所用的时间。|  
-|纬度 (latitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的纬度坐标。 有效范围是从 –90.0 到 +90.0。|  
+|纬度 (latitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的纬度坐标。 有效范围是从 -90.0 到 +90.0。|  
 |层 (layer)|在地图报表项中，层指定空间数据的类型和单个类型的表示形式。 一个地图报表项是多个层的容器。|  
 |LCID|标识基于 Windows 的区域设置的数字。|  
 |图例 (legend)|在报表图表、地图或仪表数据区域中，指的是在数据的显示表示形式和基础数据值之间提供指导的元素。|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857155"
 |日志文件 (log file)|包含数据库中所做修改的记录的文件或文件集。|  
 |逻辑名称 (logical name)|SQL Server 用来标识文件的名称。|  
 |逻辑运算符 (logical operators)|运算符 AND、OR 和 NOT。 用于在 WHERE 子句中连接搜索条件。|  
-|经度 (longitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的坐标。 有效范围是从 –180.0 到 +180.0。|  
+|经度 (longitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的坐标。 有效范围是从 -180.0 到 +180.0。|  
 |多对多关系 (many-to-many relationship)|这样的两个表之间的关系：每个表中的行在相关表中都有多个匹配行。 例如，每张销售发票可以包含多个产品，但每个产品可以出现在多张销售发票上。|  
 |多对一关系 (many-to-one relationship)|这样的两个表之间的关系：一个表中的一个行可以与另一个表中的许多行相关。|  
 |地图 (map)|作为标题、不同类型的图例和地图层的容器的报表项。|  

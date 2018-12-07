@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531560"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>演练：扩展数据库项目部署以修改部署计划
 可以创建部署参与者以便在部署 SQL 项目时执行自定义操作。 可以创建 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 或 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。 使用 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 可在执行计划前更改计划，使用 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 可在执行计划时执行操作。 在本演练中，你将创建一个名为 SqlRestartableScriptContributor 的 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，用于将 IF 语句添加到部署脚本中的批处理，以便脚本能在执行期间出错时重新运行直至批处理完成。  
@@ -191,7 +191,7 @@ ms.locfileid: "51681345"
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -672,7 +672,7 @@ ms.locfileid: "51681345"
   
     1.  导航到 %Program Files%\MSBuild。  
   
-    2.  创建一个将存储您的目标文件的新文件夹“MyContributors”。  
+    2.  创建一个将存储目标文件的新文件夹“MyContributors”。  
   
     3.  在该目录中创建一个新文件“MyContributors.targets”，将下列文本添加到该文件中并保存该文件：  
   
@@ -697,17 +697,17 @@ ms.locfileid: "51681345"
 在使用了这些方法之一后，您可以使用 MSBuild 来传入命令行生成的参数。  
   
 > [!NOTE]  
-> 您必须始终更新“DeploymentContributors”属性以指定您的参与者 ID。 此 ID 与参与者源文件中的“ExportDeploymentPlanModifier”属性中使用的 ID 相同。 如果没有此 ID，你的参与者在生成项目时将不会运行。 仅在您具有运行参与者所需的参数时需要更新“ContributorArguments”属性。  
+> 您必须始终更新“DeploymentContributors”属性以指定您的参与者 ID。 此 ID 与参与者源文件中的“ExportDeploymentPlanModifier”属性中使用的 ID 相同。 如果没有此 ID，你的参与者在生成项目时将不会运行。 仅在具有运行参与者所需的参数时需要更新“ContributorArguments”属性。  
   
 ## <a name="deploy-the-database-project"></a>部署数据库项目  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>部署 SQL 项目并生成部署报告  
   
--   可以像在 Visual Studio 中一样正常发布或部署您的项目。 只需打开一个包含 SQL 项目的解决方案，然后通过右键单击项目的上下文菜单来选择“发布...” 选项，或使用 F5 进行对 LocalDB 的调试部署。 在此示例中，我们将使用“发布...” 对话框来生成部署脚本。  
+-   可以像在 Visual Studio 中一样正常发布或部署您的项目。 只需打开包含 SQL 项目的解决方案，并从该项目的右键单击上下文菜单中选择“发布…”选项，或使用 F5 以对 LocalDB 进行调试部署即可。 在此示例中，我们将使用“发布…”对话框来生成部署脚本。  
   
     1.  打开 Visual Studio 并打开包含您的 SQL 项目的解决方案。  
   
-    2.  在解决方案资源管理器中右键单击项目，并选择“发布…” 选项。  
+    2.  在解决方案资源管理器中右键单击项目，并选择“发布…”选项。  
   
     3.  设置要发布到的服务器和数据库的名称。  
   

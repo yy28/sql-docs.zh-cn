@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530786"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>如何创建项目的快照
 数据层应用程序文件为你在创建数据库架构时提供数据库架构的只读表示形式。 该文件实质上被视为可以将其中的架构对象导入回某一项目的一种数据库架构。 您还可以将其与某一数据库或项目的架构进行比较，并且更新该数据库或项目以便反映在该快照中定义的架构。  
@@ -43,7 +43,7 @@ ms.locfileid: "47840225"
   
 ### <a name="to-import-a-snapshot"></a>导入快照  
   
-1.  在“解决方案资源管理器”中，右键单击“TradeDev”项目，选择“导入”，然后从上下文菜单选择“数据层应用程序(\*.dacpac)…” 。  
+1.  在“解决方案资源管理器”中，右键单击“TradeDev”项目，选择“导入”，然后从上下文菜单中选择“数据层应用程序(\*.dacpac)…”。  
   
 2.  在“导入数据层应用程序”对话框中，单击“浏览”以便选择要用作导入的源的 TradeDev1.dacpac。  
   

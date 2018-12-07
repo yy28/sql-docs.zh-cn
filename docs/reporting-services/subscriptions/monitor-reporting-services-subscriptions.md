@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535610"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -85,9 +85,9 @@ ms.locfileid: "50100178"
   
 1.  浏览到包含该报表的文档库  
   
-2.  打开报表的上下文菜单 (**…**)。  
+2.  打开报表的上下文菜单 (…)。  
   
-3.  选择展开的菜单选项 (**…**)。  
+3.  选择展开的菜单选项 (…)。  
   
 4.  选择   
   

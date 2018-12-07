@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703475"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302551"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，将使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户数据驱动订阅页来连接到订阅数据源，生成一个检索订阅数据的查询，然后将结果集映射到报表和传递选项。  
@@ -32,14 +32,17 @@ ms.locfileid: "47703475"
   
 ## <a name="define-a-description"></a>定义说明  
 1.  在说明中键入 **销售订单传递** 。
+
 ## <a name="type"></a>类型
 1.  单击“数据驱动订阅”。  
+
 ## <a name="schedule"></a>“计划”
 1. 在“计划”部分中，单击“报表特定计划”。
 2. 单击“编辑计划”。
 3.  在 **“计划详细信息”** 中，单击 **“一次”**。  
 4.  将开始时间指定为当前时间的前几分钟。  
 5.  单击 **“应用”**。
+
 ## <a name="destination"></a>目标  
 1.  在“目标”部分中，选择“Windows 文件共享”作为传递方法。  
 
@@ -53,22 +56,24 @@ ms.locfileid: "47703475"
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>凭据
- 1. 选择“使用以下凭据”。
- 2. 选择“Windows 用户名和密码”。
- 3.  在 **“用户名”** 和 **“密码”** 中，键入您的域用户名和密码。 请在指定 **“用户名”** 时同时包括域和用户帐户。
-     > [!NOTE]  
+## <a name="credentials"></a>凭据
+1. 选择“使用以下凭据”。
+2. 选择“Windows 用户名和密码”。
+3.  在 **“用户名”** 和 **“密码”** 中，键入您的域用户名和密码。 请在指定 **“用户名”** 时同时包括域和用户帐户。
+    > [!NOTE]  
     > 用于连接到订阅服务器数据源的凭据不会传递回 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果以后修改了该订阅，则必须重新键入连接到该数据源所用的密码。
+
 ## <a name="query"></a>查询      
 1.  在查询框中，键入以下查询：  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  指定 30 秒的超时。  
   
 3.  单击“验证查询”，然后单击“应用”。
+
 ## <a name="delivery-options"></a>传递选项
 填写以下值：
 

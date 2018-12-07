@@ -11,12 +11,12 @@ ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a59b05b349c626896e45cc47c9670a1e1daf1897
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05b5eb61afee1c38c64c2b071efd7b808fade030
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825855"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396800"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Overview: Exporting Data to Excel (MDS Add-in for Excel)
 
@@ -38,7 +38,7 @@ ms.locfileid: "47825855"
  如果总要连接同一服务器并导出相同的一组数据，可以创建快捷查询文件，其中包含连接和筛选器信息。 有关查询文件的详细信息，请参阅[快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
   
 ## <a name="refreshing-data"></a>刷新数据  
- 在导出 MDS 存储库中的数据后，其他用户可能更新这些数据。 您可以检索此数据，而不会丢失您对非 MDS 数据所做的更改。 有关详细信息，请参阅[刷新数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)。  
+ 在导出 MDS 存储库中的数据后，其他用户可能更新这些数据。 可以检索此数据，而不会丢失对非 MDS 数据所做的更改。 有关详细信息，请参阅[刷新数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

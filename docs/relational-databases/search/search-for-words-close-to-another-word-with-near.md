@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 542ce78c267dc863f18604dd8ba43f2e4c5c6cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26e17abccd023172dee0d42d06d519ef72f87e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760605"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538361"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,11 +60,11 @@ ms.locfileid: "47760605"
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   

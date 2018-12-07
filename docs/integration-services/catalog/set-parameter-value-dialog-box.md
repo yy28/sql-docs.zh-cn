@@ -11,12 +11,12 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db8bb8e87f7daf14a96c614c4574654f0d6adc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6892f59a80eafeabdbf62164e5aac448e9d2b4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672505"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410154"
 ---
 # <a name="set-parameter-value-dialog-box"></a>设置参数值对话框
   使用 **“设置参数值”** 对话框可为项目和包设置参数和连接管理器属性的值。  
@@ -31,7 +31,7 @@ ms.locfileid: "47672505"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
-     您在连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
+     你将连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
   
 2.  在对象资源管理器中，展开树以便显示 **“Integration Services 目录”** 节点。  
   

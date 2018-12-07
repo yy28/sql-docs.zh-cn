@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79b653f3e93e896c3a7f72f4d3473fac2f34988b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520971"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "47648095"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>更新稀疏列所需的内存中开销  
  当使用稀疏列设计表时，请记住，在更新行时，表中的每个非 NULL 值稀疏列需要 2 个字节的额外开销。 由于此额外的内存要求，当总的行大小（包括此内存开销）超过 8019 但没有列可以推送到行外时，更新可能意外失败，错误为 576。  
   
- 以具有 600 个 bigint 类型的稀疏列的表为例。 如果有 571 个非 Null 列，则磁盘上的总大小为 571 * 12 = 6852 字节。 在包含额外行开销和稀疏列标题之后，这会导致增加大约 6895 个字节。 在磁盘上，该页仍有约 1124 字节可用。 这可以给出其他列可以成功更新的印象。 但是，在更新过程中，内存中有额外开销，此开销为 2\*(非 NULL 值的稀疏列数目)。 在此示例中，包含额外开销 – 2 \* 571 = 1142 字节 – 将磁盘上的行大小增加到约 8037 个字节。 该大小超过最大允许的 8019 个字节。 由于所有列都是固定长度的数据类型，所以无法将其推送到行外。 因此，更新将会失败，错误为 576。  
+ 以具有 600 个 bigint 类型的稀疏列的表为例。 如果有 571 个非 Null 列，则磁盘上的总大小为 571 * 12 = 6852 字节。 在包含额外行开销和稀疏列标题之后，这会导致增加大约 6895 个字节。 在磁盘上，该页仍有约 1124 字节可用。 这可以给出其他列可以成功更新的印象。 但是，在更新过程中，内存中有额外开销，此开销为 2\*(非 NULL 值的稀疏列数目)。 在此示例中，包含额外开销 - 2 \* 571 = 1142 字节 - 将磁盘上的行大小增加到约 8037 个字节。 该大小超过最大允许的 8019 个字节。 由于所有列都是固定长度的数据类型，所以无法将其推送到行外。 因此，更新将会失败，错误为 576。  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>使用稀疏列的限制  
  稀疏列可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，其行为与任何其他列类似，但有以下限制：  

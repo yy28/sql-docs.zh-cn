@@ -13,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18a953d0bf5619fec9ee443df19130cca0a8314d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93fea5756d35e116ae9d265d2c0c157e538258ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785887"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512153"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>“XML 索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47785887"
 显示 XML 索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
 **Description**  
-描述该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (**…**)。 这可以提供一个更大的文本编写区域。  
+描述该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)。 这可以提供一个更大的文本编写区域。  
   
 **表设计器类别**  
 展开此项可显示有关此 XML 索引的属性的信息。  

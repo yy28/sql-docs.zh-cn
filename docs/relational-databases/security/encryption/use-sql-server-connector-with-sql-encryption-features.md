@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653795"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401080"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47653795"
  请先完成主题 [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)的第 I 到 IV 部分，然后执行该主题中的步骤。  
  
 > [!NOTE]  
->  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 页面上的指南。  
+>  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 密钥保管库的非对称密钥实现透明数据加密  
  完成主题“Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）”的第 I 到 IV 部分之后，使用 Azure 密钥保管库密钥来加密使用 TDE 的数据库加密密钥。  
@@ -214,7 +214,7 @@ ms.locfileid: "47653795"
     
     若要还原使用 TDE 加密的数据库备份，目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须先对用于加密的非对称 Key Vault 密钥进行复制。 为此，可执行如下操作：  
     
-    - 如果用于 TDE 的原始非对称密钥不再位于 Key Vault 中，请还原 Key Vault 密钥备份，或者从本地 HSM 重新导入该密钥。 **重要提示：** 为了让密钥的指纹与数据库备份中记录的指纹匹配，密钥的名称与以前的原始名称必须为**同一 Key Vault 密钥名称**。
+    - 如果用于 TDE 的原始非对称密钥不再位于 Key Vault 中，请还原 Key Vault 密钥备份，或者从本地 HSM 重新导入该密钥。 **重要提示：** 为了让密钥的指纹与数据库备份中记录的指纹匹配，密钥的名称与以前的原始名称必须为同一 Key Vault 密钥名称。
     
     - 对目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例应用步骤 1 和 2 的操作。
     
@@ -235,7 +235,7 @@ ms.locfileid: "47653795"
  以下示例创建了受 key vault 中非对称密钥保护的对称密钥。 然后该对称密钥用于对数据库中的数据进行加密。  
   
 > [!IMPORTANT]  
->  如果你已将非对称密钥用于 TDE 或备份加密（以上示例），则不能将此同一个密钥用于备份加密。  
+>  如果已将非对称密钥用于 TDE 或备份加密（以上示例），则不能将此同一个密钥用于备份加密。  
   
  此示例使用存储在密钥保管库中的 `CONTOSO_KEY_COLUMNS` 非对称密钥，该密钥可能是以前导入或创建的，如 [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)的第 3 部分的步骤 3 所述。 若要在 `ContosoDatabase` 数据库中使用此非对称密钥，必须再次执行 `CREATE ASYMMETRIC KEY` 语句，以便为 `ContosoDatabase` 数据库提供对该密钥的引用。  
   

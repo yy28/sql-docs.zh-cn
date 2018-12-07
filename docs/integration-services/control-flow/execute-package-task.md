@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535698"
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -103,7 +103,7 @@ ms.locfileid: "51640674"
  有关详细信息，请参阅 [在子包中使用变量和参数的值](../../integration-services/packages/legacy-package-deployment-ssis.md#child)。  
   
 ### <a name="accessing-parent-package-variables"></a>访问父包变量  
- 子包可以通过使用脚本任务访问父包变量。 在 **“脚本任务编辑器”** 的 **“脚本”** 页上输入父包变量的名称时，不要在变量名称中包括 **“用户:”** 。 否则，子包在您运行父包时找不到该变量。  
+ 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”。 否则，子包在运行父包时找不到该变量。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
@@ -161,7 +161,7 @@ ms.locfileid: "51640674"
  如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
   
  **ExecuteOutOfProcess**  
- 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **true**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 **true**，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
+ 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **true**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 **ture**，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 #### <a name="referencetype-dynamic-options"></a>ReferenceType 动态选项  
   

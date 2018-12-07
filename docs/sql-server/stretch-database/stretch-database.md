@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503794"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "51701984"
  **可以通过经济高效的方式来使用冷数据**  
  可以通过 SQL Server Stretch Database 以动态方式将冷、暖事务性数据从 SQL Server 延伸到 Microsoft Azure。 你的数据始终在线并可供查询使用，这与典型的冷数据存储不同。 你可以延长数据的保留时间，而不超出 Customer Order History 之类的大型表的限制。 充分利用 Azure 提供的低成本存储，不必进行昂贵的本地存储缩放。 你可以在 Azure 门户中选择定价层并配置设置，因此始终能够对价格和成本进行控制。 根据需要进行扩展或缩减。 有关详细信息，请访问 [SQL Server Stretch Database 定价](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) 。  
   
- **不需更改查询或应用程序**  
- 无缝访问 SQL Server 数据，不管这些数据是位于本地还是延伸到云中。  你设置决定数据存储位置的策略，而 SQL Server 则处理后台的数据移动。 整个表始终处于联机状态，始终可供查询。 而且，Stretch Database 不需对现有查询或应用程序进行任何更改 – 数据的位置对于应用程序来说是完全透明的。  
+ **无需更改查询或应用程序**  
+ 无缝访问 SQL Server 数据，不管这些数据是位于本地还是延伸到云中。  你设置决定数据存储位置的策略，而 SQL Server 则处理后台的数据移动。 整个表始终处于联机状态，始终可供查询。 而且，Stretch Database 无需对现有查询或应用程序进行任何更改，数据的位置对应用程序来说是完全透明的。  
   
  **简化了本地数据维护过程**  
  降低了数据的本地维护和存储成本 对本地数据的备份运行速度更快，并在维护时段内完成。 自动运行对数据的云部分的备份。 你对本地存储的需求大大减少。 与增加本地 SSD 相比，Azure 存储空间的成本要便宜 80%。  
   
  **即使在迁移过程中，也会确保数据的安全性**  
- 将你最重要的应用程序安全地延伸到云中，整个过程你都可以高枕无忧。 SQL Server 的始终加密功能为你的数据提供动态加密。 此外，还可以使用行级别安全性 (RLS) 和其他高级 SQL Server 安全功能以及 Stretch Database 来保护数据。  
+ 将你最重要的应用程序安全地延伸到云中，整个过程你都可以高枕无忧。 SQL Server 的 Always Encrypted 功能为数据提供动态加密。 此外，还可以使用行级别安全性 (RLS) 和其他高级 SQL Server 安全功能以及 Stretch Database 来保护数据。  
   
 ## <a name="what-does-stretch-database-do"></a>Stretch Database 的功能是什么？  
  为 SQL Server 实例、数据库启用 Stretch Database 并且选择至少一个表以后，Stretch Database 就会开始以静默方式将你的冷数据迁移到 Azure。  
@@ -63,7 +63,7 @@ ms.locfileid: "51701984"
 |--------------------------------|---------------------|  
 |我必须长期保留事务数据。|我的表的大小失去控制。|  
 |有时候，我必须查询冷数据。|我的用户说他们想要访问冷数据，但只是偶尔使用。|  
-|我安装了应用，包括较旧的应用，我不想对其进行更新。|我必须不断地购买和添加更多的存储。|  
+|我安装了应用（包括较旧的应用），我不想对其进行更新。|我必须不断地购买和添加更多的存储。|  
 |我想找到一种节省存储费用的方法。|我不能在 SLA 条件下备份或还原此类大型表。|  
   
 ## <a name="what-kind-of-databases-and-tables-are-candidates-for-stretch-database"></a>什么类型的数据库和表适用于 Stretch Database？  

@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2684a24c333014ee351359ee229d32603ee11acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515465"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47833395"
   
     |很好|好|一般|较差|严重|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   对于合并复制，性能质量独立于任意一个阈值（行处理阈值确定是否在 **“状态”** 列中显示 **“‘严重’状态下的性能”** 值）。 性能质量通过将具有相同连接类型（拨号或 LAN）的发布的单个订阅性能与订阅的平均历史性能进行比较来确定。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果包含 50 或 50 多次更改的同步不到五次，或最新同步中的更改少于 50 次，复制监视器将不显示值。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47833395"
   
     |很好|好|一般|较差|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  如何查看订阅信息的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   

@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bcbef7c771d402d1532ecaece4426666920f785b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513395"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
   **dtexec** 命令提示实用工具用于配置和执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 使用 **dtexec** 实用工具，可以访问所有包配置和执行功能，如参数、连接、属性、变量、日志和进度指示器等。 使用 **dtexec** 实用工具，可以加载来自以下源的包： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器、.ispac 项目文件、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。  
@@ -168,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      可以使用 **/ConfigFile** 选项在运行时加载在设计时未指定的其他配置。 不过，不能使用 **/ConfigFile** 选项来替换在设计时也指定了的配置值。 若要了解如何应用包配置，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*：（可选）。 指定带有指定名称或 GUID 的连接管理器位于包中，并指定了连接字符串。  
+-   /Conn[ection] id_or_name;connection_string [[;id_or_name;connection_string]...]：（可选）。 指定带有指定名称或 GUID 的连接管理器位于包中，并指定了连接字符串。  
   
      该选项要求同时指定两个参数：必须在 *id_or_name* 参数中提供连接管理器名称或 GUID，并且在 *connection_string* 参数中指定有效的连接字符串。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
@@ -222,7 +222,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De[crypt]**  *password*：（可选）。 设置加载使用密码加密的包时所用的解密密码。  
   
--   （可选）在包运行期间发生一个或多个指定事件时，创建调试转储文件 .mdmp 和 .tmp。 *error code* 参数指定将触发系统创建调试转储文件的事件代码类型：错误、警告或信息。 若要指定多个事件代码，请用分号 (;) 分隔每个 *error code* 参数。 不要对 *error code* 参数使用引号。  
+-   （可选）在包运行期间发生一个或多个指定事件时，创建调试转储文件 .mdmp 和 .tmp。 error code 参数指定将触发系统创建调试转储文件的事件代码类型：错误、警告或信息。 若要指定多个事件代码，请用分号 (;) 分隔每个 *error code* 参数。 不要对 *error code* 参数使用引号。  
   
      以下示例在发生 DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER 错误时生成调试转储文件。  
   
@@ -333,7 +333,7 @@ dtexec /option [value] [/option [value]]...
   
      以下示例执行一个包并为项目参数 (myparam) 提供 myvalue 以及为包参数 (anotherparam) 提供整数值 12。  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      您还可以通过使用参数设置连接管理器属性。 可以使用 CM 前缀来表示连接管理器参数。  
   
@@ -625,7 +625,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  以下示例显示如何使用 **/ISServer** 选项并设置项目参数和连接管理器参数。  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   

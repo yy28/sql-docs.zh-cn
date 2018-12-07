@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d201f4cd41acb71a1b6502e0a6dd2b2d27ceb9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754645"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617428"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
 
@@ -34,7 +33,7 @@ ms.locfileid: "47754645"
   
     -   如果该复合域未映射到某一引用数据服务，则将基于为该复合域定义的分析方法对复合域进行分析。 有关为复合域指定分析方法的详细信息，请参阅 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)。  
   
--   源数据由多个字段构成（例如“名字”、“中名”和“姓氏”），这些字段映射到复合域内的单独域。  
+-   源数据由多个字段构成（例如“名字”、“中间名”和“姓氏”），这些字段映射到复合域内的单独域。  
   
  有关如何将复合域映射到源数据的示例，请参阅[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47754645"
   
  请考虑下面的示例：有一个复合域 Product，该复合域有三个单独的域：ProductName、CompanyName 和 ProductVersion。 创建以下明确的跨域规则：  
   
- IF Domain ‘CompanyName’ Value contains *Microsoft* and Domain ‘ProductName’ Value is equal to *Office* and ‘ProductVersion’ Value is equal to *2010* THEN Domain ‘ProductName’ Value is equal to *Microsoft Office 2010*.  
+ 如果域名“CompanyName”值包含“Microsoft”，域名“ProductName”值等于“Office”，“ProductVersion”值等于“2010”，那么域名“ProductName”值等于“Microsoft Office 2010”。  
   
  当此跨域规则运行时，源数据 (ProductName) 将在清理活动后进行如下更正：  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47754645"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，此明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已由规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
+ 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，这个明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已由规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
   
 > [!NOTE]  
 >  明确的跨域规则将不适用于附加到引用数据服务的复合域。  

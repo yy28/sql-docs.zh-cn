@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50819e03af647245949d3c60638767ce3ab859d7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d984799a7ac2ac3c6dd6241e98c3a5af175759b0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605807"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527159"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>为可用性组配置只读路由 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "51605807"
   
     -   若要配置主角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 选项，如下所示：  
   
-         PRIMARY_ROLE ( READ_ONLY_ROUTING_LIST =(‘server’ [ ,...n ] ))****  
+         PRIMARY_ROLE ( READ_ONLY_ROUTING_LIST =(‘server’ [ ,...n ]))****  
   
          其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。  
   
@@ -145,7 +145,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
  仅支持一个级别的嵌套圆括号。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 以下示例将修改现有可用性组 `AG1` 的两个可用性副本以支持只读路由（如果其中一个副本拥有主角色）。 为了标识承载可用性副本的服务器实例，此示例指定了实例名称`COMPUTER01` 和 `COMPUTER02`。  
+ 以下示例将修改现有可用性组 `AG1` 的两个可用性副本以支持只读路由（如果其中一个副本拥有主角色）。 为了标识承载可用性副本的服务器实例，此示例指定了实例名称 `COMPUTER01` 和 `COMPUTER02`。  
   
 ```  
 ALTER AVAILABILITY GROUP [AG1]  

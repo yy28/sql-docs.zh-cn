@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512902"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
   变量存储 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其容器、任务和事件处理程序在运行时可以使用的值。 脚本任务和脚本组件中的脚本也可以使用变量。 将任务和容器按顺序组织为工作流的优先约束在其约束定义包含表达式时可以使用变量。  
@@ -46,7 +46,7 @@ ms.locfileid: "51642004"
 ## <a name="system-and-user-defined-variables"></a>系统变量和用户定义变量  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持两种类型的变量：用户定义变量和系统变量。 用户定义变量由包开发人员定义，系统变量由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定义。 可以创建包所需数量的用户定义变量，但不能另外创建系统变量。  
   
- 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅[执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md)和[执行 SQL 任务中的参数和返回代码](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅 [执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
 > [!NOTE]  
 >  用户定义变量和系统变量的名称是区分大小写的。  
@@ -221,7 +221,7 @@ ms.locfileid: "51642004"
   
 4.  选择要删除的变量，然后单击 **“删除变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击 **“网格选项”** ，然后选择 **“显示所有作用域的变量”**。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”。  
   
 5.  如果 **“确认删除变量”** 对话框打开，请单击 **“是”** 确认删除。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "51642004"
   
 4.  选择该变量，然后单击 **“移动变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击 **“网格选项”** ，然后选择 **“显示所有作用域的变量”**。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”。  
   
 5.  在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
   

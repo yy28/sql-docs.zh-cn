@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 92b4b124f2cf76d0fedd2f22e32f10204ed06ad6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c62db9ef3d635f8486285aef75f6e3d9bfc06c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733806"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534841"
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
 
@@ -51,7 +51,7 @@ ms.locfileid: "47733806"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 优点  
+##  <a name="Benefits"></a> 优势  
   
 -   为单个主数据库以及一个或多个辅助数据库（每个数据库都位于单独的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上）提供灾难恢复解决方案。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47733806"
 ### <a name="a-typical-log-shipping-configuration"></a>典型日志传送配置  
  下图显示了具有主服务器实例、三个辅助服务器实例和一个监视服务器实例的日志传送配置。 此图阐释了备份作业、复制作业以及还原作业所执行步骤，如下所示：  
   
-1.  主服务器实例执行备份作业以在主数据库上备份事务日志。 然后，该服务器实例将日志备份放入主日志备份文件（此文件将被发送到备份文件夹中）。  在此图中，备份文件夹位于共享目录（“备份共享 ”）下。  
+1.  主服务器实例执行备份作业以在主数据库上备份事务日志。 然后，该服务器实例将日志备份放入主日志备份文件（此文件将被发送到备份文件夹中）。  在这个图中，备份文件夹位于共享目录“备份共享”中。  
   
 2.  全部三个辅助服务器实例都执行其各自的复制作业，以将主日志备份文件复制到它本地的目标文件夹中。  
   

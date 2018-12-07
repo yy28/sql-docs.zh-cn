@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abaa798e164df9fb552360357dbfc7a4943c9124
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08234fcf8e50851d40a86859244e6bc2840fd1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857077"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526391"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
   生成一个 SQL 脚本，用来向用户授予运行报表服务器所需的报表服务器数据库和其他数据库的权限。 调用者需要能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器并能够执行该脚本。  
@@ -80,8 +80,8 @@ out Int32 HRESULT);
 |LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Local Service|错误 – 参见下方内容。|  
-|NT AUTHORITY\LocalService|Local Service|错误 – 参见下方内容。|  
+|(S-1-5-19)|Local Service|错误 - 参见下方内容。|  
+|NT AUTHORITY\LocalService|Local Service|错误 - 参见下方内容。|  
   
  在 [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]上，如果使用的是内置帐户，且报表服务器数据库是远程数据库，将返回错误。  
   
@@ -91,9 +91,9 @@ out Int32 HRESULT);
   
 |DatabaseServerName 的值|示例|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
 |\<MachineFQDN>|example.redmond.microsoft.com|  

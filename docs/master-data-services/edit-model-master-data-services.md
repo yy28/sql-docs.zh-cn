@@ -14,12 +14,12 @@ ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 64a3c2b613dfb13c10103f1663c55c58d653c306
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf87200aff98c95d96dab65d8af8a7fab20bcce4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673521"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419138"
 ---
 # <a name="edit-model-master-data-services"></a>编辑模型 (Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "47673521"
   
 7.  在“日志保留期(以天为单位)”  字段中，选择一个日志数据保留选项。 默认值是“系统设置” ，指示值继承自 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系统设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-     若要替代系统设置且不删除事务日志数据，请选择“否” 。 若要仅保留今日的日志数据并截断之前所有天数的日志数据，请选择“是”  并将“天数”  字段设置为 0。 若要保留特定天数的日志数据，请选择“是”  ，然后将“天数”  字段设置为相应天数。  
+     若要替代系统设置且不删除事务日志数据，请选择“否” 。 若要仅保留今日的日志数据并截断之前所有天数的日志数据，请选择“是”并将“天数”字段设置为 0。 若要保留特定天数的日志数据，请选择“是”  并将“天数”  字段设置为相应天数。  
   
 8.  单击 **“保存模型”**。  
   

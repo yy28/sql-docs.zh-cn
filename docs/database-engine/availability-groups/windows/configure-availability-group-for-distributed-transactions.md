@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513684"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>为分布式事务配置可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51639116"
 为确保分布式事务的一致性，必须配置可用性组，使其将数据库注册为分布式事务资源管理器。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]!INCLUDE[SQL2016] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
 

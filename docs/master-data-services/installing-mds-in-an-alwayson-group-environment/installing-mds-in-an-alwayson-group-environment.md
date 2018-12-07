@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692185"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395670"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -92,7 +92,7 @@ ms.locfileid: "47692185"
 
 如前一部分中的图 1 所示，本文所述的解决方案包括 Windows Server 故障转移群集 (WSFC)。 由于 SQL AlwaysOn 进行故障检测和故障转移时依赖于 WFSC，因此需要安装 WSFC。
 
-WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一组独立的 Windows Server 实例以及在这些实例上运行的 Microsoft 故障转移群集服务组成。 这些 Windows Server 实例（或有时被称为节点）彼此连接，以实现相互通信，这样就可以进行故障检测。 WSFC 提供故障检测和故障转移功能。 如果群集中的某个节点或服务出现故障，则会检测到该故障，并且另一个节点将自动或手动开始提供托管在故障节点上的服务。 因此，用户仅遇到最小程度的服务中断，服务可用性得以提升。  
+WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一组独立的 Windows Server 实例以及在这些实例上运行的 Microsoft 故障转移群集服务组成。 这些 Windows Server 实例（或有时被称为节点）彼此连接，以实现相互通信，这样就可以进行故障检测。 WSFC 提供故障检测和故障转移功能。 如果群集中的某个节点或服务出现故障，则会检测到该故障，并且另一个节点将自动或手动开始提供托管在故障节点上的服务。 因此，用户仅遇到最小程度的服务中断，服务可用性得以提升。  
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -156,8 +156,8 @@ WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一�
 7.  在“摘要”页上，检查是否出现任何警告或错误消息。
 
     请务必修复错误。 但警告可能不表示项目存在问题。 警告消息是指“测试的项目虽符合要求，但有一些需要进行检查”。 例如，图 7 所示为一条“验证磁盘访问延迟”警告，这可能是由于磁盘暂时忙于其他任务，可以忽略此警告。 应当查看每个警告和错误消息的在线文档以获取更多详细信息。 请参阅图 7。
- 
-    ![验证配置向导、验证页](media/Fig6_ValidationTests.png)
+ 
+![验证配置向导、验证页](media/Fig6_ValidationTests.png)
 
     图 6
 
@@ -326,7 +326,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
     d.  在“网络模式”文本框中输入 DHCP，然后单击“下一步”继续。
 
     >[!NOTE] 
-    >或者，可以选择“静态 IP”作为“网络模式”并输入静态 IP。 也可输入不同于 1433 的端口。 
+    >或者，可以选择“静态 IP”作为“网络模式”并输入静态 IP。 也可输入不同于 1433 的端口。 
 
     ![配置侦听器](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
     ![配置数据同步](media/Fig19_AvailabilityGroupDataSync.png)
 
-    图 19 
+    图 19 
 
 10. 在“验证”页上，确保所有验证均传递成功，并更正所有错误。 单击 **“下一步”** 继续。
 
@@ -354,11 +354,11 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
     ![查看仪表板](media/Fig20_ShowDashboard.png)
 
-    图 20 
+    图 20 
 
 3.  单击“故障转移”，对同步副本和异步副本执行故障转移。 此操作是为了验证故障转移是否正确运行，未出现任何问题。
 
- AlwaysOn 的安装已完成。
+ AlwaysOn 的安装已完成。
 
 有关 AlwaysOn 可用性组的详细信息，请参阅 [SQL Server 2016 AlwaysOn 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。
 

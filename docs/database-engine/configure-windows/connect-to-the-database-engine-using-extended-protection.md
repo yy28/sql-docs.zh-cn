@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606007"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395350"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51606007"
 >  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅 [针对验证的扩展保护](https://support.microsoft.com/kb/968389)。  
   
 ## <a name="description-of-extended-protection"></a>扩展保护的描述  
- **扩展保护** 使用服务绑定和渠道绑定来帮助防止身份验证中继攻击。 在身份验证中继攻击中，可以执行 NTLM 身份验证的客户端（例如，Windows Explorer、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient 应用程序等）连接到攻击者（例如，恶意的 CIFS 文件服务器）。 攻击者使用客户端的凭据来伪装成此客户端并经受服务（例如， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的实例）对其进行身份验证。  
+ **扩展保护** 使用服务绑定和渠道绑定来帮助防止身份验证中继攻击。 在身份验证中继攻击中，可以执行 NTLM 身份验证的客户端（例如，Windows Explorer、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient 应用程序等）连接到攻击者（例如，恶意的 CIFS 文件服务器）。 攻击者使用客户端的凭据来伪装成此客户端并经受服务（例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的实例）对其进行身份验证。  
   
  这种攻击具有两种变体：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51606007"
  服务绑定解决引诱攻击，它是通过要求客户端发送该客户端要连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的一个签名服务主体名称 (SPN) 来实现的。 作为身份验证响应的一部分，此服务验证在数据包中收到的 SPN 与其自己的 SPN 匹配。 如果客户端被引诱连接到攻击者，则客户端将包含攻击者的已签名 SPN。 攻击者无法作为客户端来中继数据包以对实际 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务进行身份验证，因为它包含攻击者的 SPN。 服务绑定引发的成本是一次性的且微不足道，但它无法解决假冒攻击。 客户端应用程序不使用加密方式连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，发生服务绑定。  
   
 ### <a name="channel-binding"></a>渠道绑定  
- 通道绑定在客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的实例之间建立安全通道 (Schannel)。 此服务通过将客户端特定于该通道的通道绑定标记 (CBT) 与其自己的 CBT 进行比较，验证客户端的身份。 渠道绑定可同时解决引诱攻击和假冒攻击。 然而，它引发的运行时成本较高，因为它要求对所有会话流量进行传输层安全 (TLS) 加密。 客户端应用程序使用加密方式连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，发生通道绑定，这与加密由客户端还是服务器实施无关。  
+ 通道绑定在客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的实例之间建立安全通道 (Schannel)。 此服务通过将客户端特定于该通道的通道绑定标记 (CBT) 与其自己的 CBT 进行比较，以验证客户端的身份。 渠道绑定可同时解决引诱攻击和假冒攻击。 然而，它引发的运行时成本较高，因为它要求对所有会话流量进行传输层安全 (TLS) 加密。 客户端应用程序使用加密方式连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，发生通道绑定，这与加密由客户端还是服务器实施无关。  
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据提供程序支持 TLS 1.0 和 SSL 3.0。 如果通过在操作系统 SChannel 层中进行更改来强制使用不同的协议（例如 TLS 1.1 或 TLS 1.2），你可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

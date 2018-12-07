@@ -29,12 +29,12 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540886"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
@@ -44,7 +44,7 @@ ms.locfileid: "51638895"
   
  模糊分组转换要求与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例建立连接，以创建该转换算法完成工作所需的临时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 该连接必须解析为有权在数据库中创建表的用户。  
   
- 若要配置该转换，您必须选择要在确定重复项时使用的输入列，而且必须为每列选择匹配类型（模糊匹配或完全匹配）。 完全匹配保证只对该列中具有相同值的行进行分组。 完全匹配可以应用到除 DT_TEXT、DT_NTEXT 和 DT_IMAGE 之外的任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的列。 模糊匹配对具有相似值的行进行分组。 近似匹配数据的方法基于用户指定的相似性得分。 在模糊匹配中，只能使用具有 DT_WSTR 和 DT_STR 数据类型的列。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 若要配置该转换，必须选择要在确定重复项时使用的输入列，而且必须为每列选择匹配类型（模糊匹配或完全匹配）。 完全匹配保证只对该列中具有相同值的行进行分组。 完全匹配可以应用到除 DT_TEXT、DT_NTEXT 和 DT_IMAGE 之外的任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的列。 模糊匹配对具有相似值的行进行分组。 近似匹配数据的方法基于用户指定的相似性得分。 在模糊匹配中，只能使用具有 DT_WSTR 和 DT_STR 数据类型的列。 有关详细信息，请参阅 [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  该转换输出包括所有输入列、一个或多个具有标准化数据的列以及一个包含相似性得分的列。 该得分是一个介于 0 和 1 之间的小数值。 规范行的得分为 1。 模糊组中其他行具有的得分指明该行与规范行的匹配程度。 得分越接近 1，行与规范行的匹配程度越高。 如果模糊组包括与规范行完全匹配的行，则这些行的得分也为 1。 该转换不删除这些重复的行；它通过创建一个将规范行与相似行关联的键对重复行进行分组。  
   

@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673666"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521245"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  导入数据层应用程序 (DAC) 文件（.bacpac 文件），以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  
+  导入数据层应用程序 (DAC) 文件 - .bacpac 文件 - 以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  
   
 ## <a name="before-you-begin"></a>开始之前  
  导入过程分两个阶段生成新的 DAC。  
@@ -92,14 +92,14 @@ ms.locfileid: "51673666"
   
 -   **不再显示此页。** - 选中此复选框可以停止在将来显示“简介”页。  
   
--   **“下一步”** - 进入 **“导入设置”** 页。  
+-   **下一步** - 进入“导入设置”页。  
   
--   **“取消”** – 取消操作并关闭向导。  
+-   **取消** - 取消操作并关闭向导。  
   
 ###  <a name="Import_settings"></a> “导入设置”页  
  使用此页可以指定要导入的 .bacpac 文件的位置。  
   
--   **“从本地磁盘导入”** - 单击“浏览…” **“浏览…”** 以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
+-   **从本地磁盘导入** - 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
 -   **从 Azure 导入** - 从 Microsoft Azure 容器中导入一个 BACPAC 文件。 必须连接到 Microsoft Azure 容器才能验证此选项。 请注意，此选项还要求您为临时文件指定一个本地目录。 将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "51673666"
   
  **对于 SQL Server 的本地实例：**  
   
--   “新数据库名称” – 提供导入的数据库的名称。  
+-   **新数据库名称** - 提供导入的数据库的名称。  
   
--   “数据文件路径” – 提供数据文件的本地目录。 单击  以导航本地计算机，或在提供的空间中指定路径。  
+-   **数据文件路径** - 提供数据文件的本地目录。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。  
   
--   **“日志文件路径”** – 提供日志文件的本地目录。 单击 **“浏览…”** 以导航本地计算机，或在提供的空间中指定路径。  
+-   **日志文件路径** - 提供日志文件的本地目录。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。  
   
  若要继续，请单击 **“下一步”**。  
   

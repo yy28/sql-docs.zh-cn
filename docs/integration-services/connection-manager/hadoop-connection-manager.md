@@ -13,12 +13,12 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 051fb627684e8a094ac0f39d5fffad9d9e399d0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841625"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417909"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 连接管理器
   Hadoop 连接管理器通过使用你为属性指定的值使 SQL Server Integration Services (SSIS) 包能够连接到 Hadoop 群集。  
@@ -153,7 +153,7 @@ ms.locfileid: "47841625"
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
-3.  在 hadoop.security.auth_to_local HDFS 服务配置文件中，添加 `RULE:[1:$1@$0](.*@AD.COM)s/@.*//`。
+3.  在 **hadoop.security.auth_to_local** HDFS 服务配置文件中，添加 `RULE:[1:$1@$0](.*@AD.COM)s/@.*//`。
 
 在域控制器上：
 

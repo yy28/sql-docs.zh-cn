@@ -14,12 +14,12 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82431376b5c7fbb052d5f36e158d269587dd7300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36ded1687894433f5539e2b28f174729112407ec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506682"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
   通过使用你为以下属性指定的值， **Azure 订阅连接管理器** 使 SSIS 包能够连接到 Azure 订阅：Azure 订阅 ID 和管理证书。  
@@ -36,7 +36,7 @@ ms.locfileid: "47671415"
   
 3.  从下拉列表中选择“管理证书存储位置”和“管理证书存储名称”。  
   
-4.  输入**管理证书指纹**或单击“浏览...” “浏览…”，从所选存储中选择一个证书。 必须将证书作为订阅的管理证书上载。 为此，请在以下 Azure 门户页上单击“上传”（请参阅这篇 [MSDN 帖子](https://msdn.microsoft.com/library/azure/gg551722.aspx)以了解详细信息）。  
+4.  输入“管理证书指纹”或单击“浏览…”，从所选存储中选择一个证书。 必须将证书作为订阅的管理证书上载。 为此，请在以下 Azure 门户页上单击“上传”（请参阅这篇 [MSDN 帖子](https://msdn.microsoft.com/library/azure/gg551722.aspx)以了解详细信息）。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

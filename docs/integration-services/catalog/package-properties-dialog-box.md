@@ -14,12 +14,12 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d13838dc09757cecc03fd3520ad327546a85e10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d494a687462617dbb66e3d631c30d7ae6dca4960
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753465"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411974"
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
   使用 **“包属性”** 对话框可以查看在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储的包的属性。  
@@ -36,7 +36,7 @@ ms.locfileid: "47753465"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
-     您在连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
+     你将连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
   
 2.  在对象资源管理器中，展开树以便显示 **“Integration Services 目录”** 节点。  
   

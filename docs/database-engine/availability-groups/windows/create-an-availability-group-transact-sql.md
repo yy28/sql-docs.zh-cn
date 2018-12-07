@@ -12,12 +12,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7bfbcea3785b15396e4ee02615cb860d250d45c0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601085"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512502"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>创建可用性组 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51601085"
   
 |任务|Transact-SQL 语句|执行任务的位置**\***|  
 |----------|----------------------------------|---------------------------------|  
-|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|在缺少数据库镜像端点的每个服务器实例上执行。|  
+|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md)“endpointName”…FOR DATABASE_MIRRORING|在缺少数据库镜像端点的每个服务器实例上执行。|  
 |创建可用性组|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|在要承载初始主副本的服务器实例上执行。|  
 |将辅助副本联接到可用性组|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|在承载辅助副本的各服务器实例上执行。|  
 |准备辅助数据库|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) 和 [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md)。|在承载主副本的服务器实例上创建备份。<br /><br /> 使用 RESTORE WITH NORECOVERY 在承载辅助副本的各服务器实例上还原备份。|  

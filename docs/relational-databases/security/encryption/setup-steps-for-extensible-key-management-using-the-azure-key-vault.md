@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522923"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ SQL Server 版本  |可再发行组件安装链接
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     调用 `Get-AzureRmKeyVault` cmdlet 以确认权限。 在“访问策略”下方的语句输出中，你应看到作为有权访问此密钥保管库的另一个租户列出的 AAD 应用程序名称。  
+     调用 `Get-AzureRmKeyVault` cmdlet 以确认权限。 在“访问策略”下方的语句输出中，应看到作为有权访问此密钥保管库的另一个租户列出的 AAD 应用程序名称。  
   
        
 5.  **在密钥保管库中生成非对称密钥**  
@@ -190,16 +190,16 @@ SQL Server 版本  |可再发行组件安装链接
     -   **受 HSM 保护的密钥：** 由硬件安全模块 (HSM) 创建并保护，以增加安全性。 每个密钥版本的费用大约为 1 美元。  
   
         > [!IMPORTANT]  
-        >  SQL Server 连接器要求密钥名称只能使用字符“a-z”、“A-Z”、“0-9”和“-”，其长度限制为 26 个字符。   
-        > Azure 密钥保管库中具有同一密钥名称的不同密钥版本不会使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 若要轮换 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用的 Azure 密钥保管库密钥，请参阅 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)熟悉使用 Azure 密钥保管库的 EKM 存储的主体。  
+        >  SQL Server 连接器要求密钥名称只能使用字符 “a-z”、“A-Z”、“0-9” 和 “-”，其长度限制为 26 个字符。   
+        > Azure 密钥保管库中具有同一密钥名称的不同密钥版本不会使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 若要轮换 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用的 Azure Key Vault 密钥，请参阅 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)中的“密钥滚动更新”步骤。  
 
     ### <a name="import-an-existing-key"></a>导入现有密钥   
   
     如果已有 2048 位 RSA 软件保护密钥，则可以将该密钥上传到 Azure 密钥保管库。 例如，如果 `C:\\` 驱动器中保存了要上传到 Azure 密钥保管库的、名为 `softkey.pfx` 的 .PFX 文件，请键入以下内容，以便为该 .PFX 文件的密码 `securepfxpwd` 设置变量 `12987553` ：  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     然后可以键入以下内容从 .PFX 文件导入密钥，以便硬件（建议）在密钥保管库服务中保护密钥：  
@@ -215,7 +215,7 @@ SQL Server 版本  |可再发行组件安装链接
 
     ### <a name="create-a-new-key"></a>创建新密钥
     #### <a name="example"></a>例如：  
-    或者，可直接在 Azure Key Vault 中创建新的加密密钥，并使其受软件保护或受 HSM 保护。  在此示例中，让我们使用 `Add-AzureKeyVaultKey cmdlet`创建软件保护的密钥：  
+    或者，可直接在 Azure Key Vault 中创建新的加密密钥，并使其受软件保护或受 HSM 保护。  在此示例中，让我们使用 `Add-AzureKeyVaultKey cmdlet` 创建受软件保护的密钥：  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -242,7 +242,7 @@ SQL Server 版本  |可再发行组件安装链接
  从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下载 SQL Server 连接器。 （此操作应由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员完成。）  
 
 > [!NOTE]  
->  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 页面上的指南。
+>  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344)，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。
 
 > [!NOTE]  
 > 1.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 版后，可能会遭遇数据库还原失败。 请参阅 KB 文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
@@ -345,7 +345,7 @@ SQL Server 版本  |可再发行组件安装链接
   
      如果按照上述第 II 部分所述导入了一个非对称密钥，请通过在以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本中提供密钥名称来打开密钥。  
   
-    -   将 `CONTOSO_KEY` 替换为你想要的该密钥在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的名称。  
+    -   将 `CONTOSO_KEY` 替换为希望该密钥在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中显示的名称。  
   
     -   将 `ContosoRSAKey0` 替换为 Azure 密钥保管库中的密钥的名称。  
   

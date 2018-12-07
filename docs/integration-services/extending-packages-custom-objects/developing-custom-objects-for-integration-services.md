@@ -14,12 +14,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8413b1386d60ded8d9257e3a58a7e682355824f6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2a69f590c6ee1cdc95fc13b3a07fa17fb04feeab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640204"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528906"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
   当随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的控制流和数据流对象不能完全满足你的要求时，可以自己开发各种类型的自定义对象，其中包括：  
@@ -92,7 +92,7 @@ ms.locfileid: "51640204"
 ## <a name="providing-a-custom-user-interface"></a>提供自定义用户界面  
  为了允许自定义对象的用户配置自定义对象的属性，您可能还需要开发一个自定义用户界面。 对于那些自定义用户界面要求不是很严格的情况，您可选择创建一个自定义用户界面，以提供比默认编辑器更加友好的用户界面。  
   
- 在自定义用户界面项目或程序集中，您通常有两个类：一个用于实现特定类型自定义对象的用户界面的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的类和用于显示以收集用户信息的 Windows 窗体。 您实现的接口只有少量方法，因此开发自定义用户界面并不困难。  
+ 在自定义用户界面项目或程序集中，通常有两个类：一个用于实现特定类型自定义对象的用户界面的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的类和用于显示以收集用户信息的 Windows 窗体。 您实现的接口只有少量方法，因此开发自定义用户界面并不困难。  
   
 > [!NOTE]  
 >  许多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并使用已筛选的可用连接管理器下拉列表替换“配置”文本框。 但是，此版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。 为 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性指定值不起作用。  

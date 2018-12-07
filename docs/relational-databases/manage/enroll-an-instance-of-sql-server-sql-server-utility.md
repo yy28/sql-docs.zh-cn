@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681335"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509795"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "51681335"
  若要继续，请单击 **“下一步”**。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的实例  
- 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击 **“连接…”**。 以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
  若要继续，请单击 **“下一步”**。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51681335"
 > [!NOTE]  
 >  如果连接是加密的，则使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
   
- 若要继续，请单击 **“连接…”**。  
+ 若要继续，请单击“连接…”。  
   
 ##  <a name="Proxy_configuration"></a> 实用工具收集组帐户  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 Windows 域帐户。 此帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 此外，也可以使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 若要满足验证要求，请使用以下准则来指定帐户。  
@@ -176,7 +176,7 @@ ms.locfileid: "51681335"
 >  有关排除此故障的详细信息，请参阅 [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。  
   
 > [!IMPORTANT]  
->  不要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例上“实用工具信息”收集组的任何属性，并且不要手动打开或关闭数据收集，因为数据收集由实用工具代理作业控制。  
+>  不要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例上“实用工具信息”收集组的任何属性，并且不要手动打开或关闭数据收集，因为数据收集由实用工具代理作业控制。  
   
  在完成注册实例向导后，在 SSMS 的 **“实用工具资源管理器导航”** 窗格中单击 **“托管实例”** 节点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已注册实例将显示在 **“实用工具资源管理器内容”** 窗格的列表视图中。  
   

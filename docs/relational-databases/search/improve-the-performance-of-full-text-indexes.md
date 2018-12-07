@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672526"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532552"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,23 +132,23 @@ ms.locfileid: "51672526"
   
 有关以下公式的基本信息，请参阅表后面的说明。  
   
-|平台|估计 fdhost.exe 的内存需求量 (MB) -*F*^1|用于计算最大服务器内存的公式 -*M*^2|  
+|平台|估计 fdhost.exe 的内存需求量 (MB) -F^1|用于计算最大服务器内存的公式 -M^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *爬网范围数* * 50|*M* =minimum(*T*, 2000) – F – 500|  
-|x64|*F* = *爬网范围数* * 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *爬网范围数* * 50|M =minimum(T, 2000) - F - 500|  
+|x64|*F* = *爬网范围数* * 10 * 8|M = T - F - 500|  
 
 **有关公式的说明**
-1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T– sigma(Fi)。  
+1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T- sigma(_F_i)。  
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>示例：估计 fdhost.exe 的内存需求量  
   
- 此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值*F*。 爬网范围数是 `8`。  
+ 此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F。 爬网范围数是 `8`。  
   
  `F = 8*10*8=640`  
   
- 然后，计算出 **最大服务器内存**的最佳值*M*。 该系统的可用物理内存总量（以 MB 为单位）—T— 为 `8192`。  
+ 然后，计算出最大服务器内存的最佳值 -M。 该系统的可用物理内存总量（以 MB 为单位）-T- 为 `8192`。  
   
  `M = 8192-640-500=7052`  
   

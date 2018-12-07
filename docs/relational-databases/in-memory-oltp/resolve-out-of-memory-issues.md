@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518611"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "51671680"
   
 |主题|概述|  
 |-----------|--------------|  
-|[解决 OOM 导致的数据库还原故障](#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，数据库 '*\<databaseName>*' 的还原操作失败”时应采取的操作。|  
+|[解决 OOM 导致的数据库还原故障](#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '\<databaseName>' 的还原操作失败”时应采取的操作。|  
 |[消除工作负荷的低内存或 OOM 情况的影响](#bkmk_recoverFromOOM)|发现内存不足问题对性能产生负面影响时应采取的操作。|  
-|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”时应采取的操作。 …” 当可用内存足以进行操作时。|
+|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，不允许对数据库 '\<databaseName>' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|
 |[在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)|在虚拟化环境中使用内存中 OLTP 需要注意的内容。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> 解决 OOM 导致的数据库还原故障  
- 尝试还原数据库时，你可能会收到错误消息：“由于资源池 '*\<resourcePoolName>*' 内存不足，数据库 '*\<databaseName>*' 的还原操作失败”。这表明服务器没有足够的可用内存来还原数据库。 
+ 尝试还原数据库时，你可能会收到错误消息：“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '\<databaseName>' 的还原操作失败”。这表明服务器没有足够的可用内存来还原数据库。 
    
 将数据库还原到的服务器必须有足够的可用内存用于数据库备份中的内存优化表，否则数据库不会联机，并且会被标记为可疑。  
   
@@ -130,7 +130,7 @@ GO
  有关 MAX_MEMORY_PERCENT 最大值的信息，请参阅主题部分 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)。  
   
 ##### <a name="install-additional-memory"></a>安装更多内存  
- 如果可能，最终的最佳解决方案是安装更多物理内存。 这时，请注意，你还是可以增加 MAX_MEMORY_PERCENT 的值（请参阅子主题 [更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)），因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能不需要更多内存，当新安装的内存不能都用于此资源池时，这可以得到最好的效果。  
+ 如果可能，最终的最佳解决方案是安装更多物理内存。 这时，请注意，还是可以增加 MAX_MEMORY_PERCENT 的值（请参阅子主题[更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)），因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能不需要更多内存，当新安装的内存不能都用于此资源池时，这可以得到最好的效果。  
   
 > [!IMPORTANT]  
 >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为相同值。   

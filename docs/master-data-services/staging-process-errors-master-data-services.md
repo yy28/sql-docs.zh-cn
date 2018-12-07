@@ -14,12 +14,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65239f7dbdb0690115f50172ea34f72a62924250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798065"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395385"
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
 
@@ -31,12 +31,12 @@ ms.locfileid: "47798065"
 |----------|-----------|--------------------------|----------------------|  
 |210001|临时表中多次出现同一成员代码。|您的临时批次多次包含同一成员代码。 既不创建也不更新成员。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210003|属性值引用不存在或非活动的成员。|暂存基于域的属性时，您必须使用代码而不是名称。 适用于 **ImportType0**、 **1**和 **2**。|叶<br /><br /> 合并|  
-|210006|该成员代码处于非活动状态。|**ImportType** = **1** 并且指定了不存在的成员代码。|叶<br /><br /> 合并<br /><br /> 关系|  
+|210006|该成员代码处于非活动状态。|ImportType = 1 并且指定了不存在的成员代码。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210032|该层次结构名称缺失或无效。|找不到显式层次结构或 **HierarchyName** 值为空白。|合并<br /><br /> 关系|  
 |210035|因为不存在代码生成业务规则，所以 **MemberCode** 是必需的。|创建或更新成员时，始终需要 **MemberCode** ，除非您使用的是自动代码生成。 有关详细信息，请参阅[自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)。|叶<br /><br /> 合并|  
 |210036|因为存在代码生成业务规则，所以 **MemberCode** 不是必需的。|创建或更新成员时，如果您使用的是自动代码生成，则不需要 **MemberCode** 。 不过，您可以选择指定一个代码。 有关详细信息，请参阅[自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)。|叶<br /><br /> 合并|  
-|210041|“ROOT”不是有效的成员代码。|**MemberCode** 值包含单词“ROOT”。|叶<br /><br /> 合并<br /><br /> 关系|  
-|210042|“MDMUNUSED”不是有效的成员代码。|**MemberCode** 值包含单词“MDMUNUSED”。|叶<br /><br /> 合并<br /><br /> 关系|  
+|210041|“ROOT”不是有效的成员代码。|MemberCode 值包含单词“ROOT”。|叶<br /><br /> 合并<br /><br /> 关系|  
+|210042|“MDMUNUSED”不是有效的成员代码。|MemberCode 值包含单词“MDMUNUSED”。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210052|由于将 MemberCode 用作基于域的属性值，所以无法停用该代码。|**ImportType** = **3** 或 **4**时，如果将此成员用作其他成员的属性值，则暂存过程失败。 使用 **ImportType5** 或 **6** 将值设置为 NULL，或者在运行暂存过程之前更改值。|叶<br /><br /> 合并|  
 |300002|该成员代码无效。|关系：不存在任何父或子成员代码。<br /><br /> 叶或合并： **ImportType** = **3** 或 **4** 且成员代码不存在。|叶<br /><br /> 合并<br /><br /> 关系|  
 |300004|该成员代码已存在。|**ImportType** = **1** ，且使用了实体中已存在的成员代码。|叶<br /><br /> 合并|  

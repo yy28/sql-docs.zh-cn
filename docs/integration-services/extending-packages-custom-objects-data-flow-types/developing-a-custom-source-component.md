@@ -22,12 +22,12 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79e015043fe256037e808d68a4188e1091780797
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528768"
 ---
 # <a name="developing-a-custom-source-component"></a>开发自定义源组件
   开发人员可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到自定义数据源的源组件，并可以将这些自定义数据源中的数据提供给数据流任务中的其他组件。 如果必须连接到无法使用现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源之一进行访问的数据源，则创建自定义源是非常重要的。  

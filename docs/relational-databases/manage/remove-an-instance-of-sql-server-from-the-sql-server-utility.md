@@ -13,12 +13,12 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80dec43a9bafbd4466f0dabd7025eec2f46ef933
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7db64758c57b586982a2f2edfa2008dbec164f90
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535224"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>从 SQL Server 实用工具中删除 SQL Server 实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51678001"
   
 2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择“删除托管实例…”。  
   
-3.  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例指定具有管理员权限的凭据：单击 **“连接…”**，验证 **“连接到服务器”** 对话框中的信息，然后单击 **“连接”**。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
+3.  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例指定具有管理员权限的凭据：单击“连接…”，验证“连接到服务器”对话框中的信息，然后单击“连接”。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
   
 4.  若要确认该操作，请单击 **“确定”**。 若要退出该操作，请单击 **“取消”**。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51678001"
 ```  
 # Get Ucp connection  
 $UcpServerInstanceName = "ComputerName\InstanceName";  
-$UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
 $UcpConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::Connect($UcpConnection);  
   

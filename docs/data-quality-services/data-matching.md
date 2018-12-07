@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2f587ce68a05e8c09438323d8ce3bc75bb3d2ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0464dc24bcb2842c822ac2b2a38e19283b428ad2
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702125"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617357"
 ---
 # <a name="data-matching"></a>数据匹配
 
@@ -69,7 +68,7 @@ ms.locfileid: "47702125"
   
  数据匹配项目由一个计算机辅助过程和一个交互式过程组成。 匹配项目将匹配策略中的匹配规则应用到要进行评估的数据源。 这一过程评估在匹配分数中任何两行是匹配项的可能性。 只有匹配概率大于由数据专员在匹配策略中设置的值的记录才被视为匹配。  
   
- 当 DQS 执行匹配分析时，它会创建 DQS 认为是匹配的分类。 DQS 随机将每个群集中的一条记录确定为透视记录或前导记录。 数据专员验证匹配结果，并拒绝任何对群集而言不是适当匹配的记录。 然后，数据专员选择一条存活规则，DQS 将使用此规则来确定在匹配过程中存活的记录并替换匹配记录。 存活规则可以是“透视记录”（默认设置）、“最完整和最长的记录”、“最完整记录”或“最长记录”。 DQS 根据哪条记录与存活规则中的条件的匹配最密切，以确定每个群集中的存活（前导）记录。 如果给定群集中的多个记录符合存活规则，DQS 将随机选择其中一条记录。 DQS 可让您通过选择“显示不重叠的群集”，选择显示将共有记录作为单个群集的群集。 为了根据此设置显示结果，您必须执行匹配过程。  
+ 当 DQS 执行匹配分析时，它会创建 DQS 认为是匹配的分类。 DQS 随机将每个群集中的一条记录确定为透视记录或前导记录。 数据专员验证匹配结果，并拒绝任何对群集而言不是适当匹配的记录。 然后，数据专员选择一条存活规则，DQS 将使用此规则来确定在匹配过程中存活的记录并替换匹配记录。 存活规则可以是“透视记录”（默认设置）、“最完整且最长的记录”、“最完整记录”或“最长记录”。 DQS 根据哪条记录与存活规则中的条件的匹配最密切，以确定每个群集中的存活（前导）记录。 如果给定群集中的多个记录符合存活规则，DQS 将随机选择其中一条记录。 DQS 可让你通过选择“显示不重叠的群集”，选择显示将共有记录作为单个群集的群集。 为了根据此设置显示结果，您必须执行匹配过程。  
   
  您可以将匹配过程的结果导出到 SQL Server 表或 .csv 文件。 您可以按两种格式导出匹配结果：第一，匹配记录和未匹配记录；或者第二，存活记录（只包括群集的存活记录和未匹配记录）。 在存活记录中，如果同一条记录被标识为多个群集的存活记录，则该记录只能导出一次。  
   

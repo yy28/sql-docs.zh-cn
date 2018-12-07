@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 311e0589e2257a1bb465ae210c013780cf9fee42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605207"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532764"
 ---
 # <a name="install-sql-server-database-engine"></a>安装 SQL Server 数据库引擎
 
@@ -43,7 +43,7 @@ ms.locfileid: "51605207"
 
 -   全文搜索 - 是一个可选组件  
   
--   Data Quality Services — 一个可选组件  
+-   Data Quality Services - 一个可选组件  
   
     > [!NOTE]  
     >  在此版本中，在安装程序中选中“Data Quality Services”复选框不会安装 Data Quality Services (DQS) 服务器。 您必须执行其他安装后步骤以安装 DQS 服务器。 有关详细信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  

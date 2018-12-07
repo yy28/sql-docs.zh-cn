@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 459119eb08117ed52a455fdfb80fe3f393a410fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807096"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617057"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,10 +58,8 @@ ERROR_PROCEDURE ( )
 ## <a name="remarks"></a>Remarks  
 `ERROR_PROCEDURE` 支持在 CATCH 块作用域内的任意位置调用。  
   
-无论 `CATCH` 运行多少次或在 `ERROR_PROCEDURE` 块作用域内的任意位置运行，它都将返回出现错误的存储过程或触发器的名称。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
-  
-在嵌套 `CATCH` 块中，`ERROR_PROCEDURE` 返回特定于引用该 `CATCH` 块的 `CATCH` 块的作用域的错误号。 例如，外部 TRY...CATCH 构造的 `CATCH` 块可能具有内部 `TRY...CATCH` 构造。 在该内部 `CATCH` 块内，`ERROR_PROCEDURE` 将返回调用内部 `CATCH` 块的错误号。 如果 `ERROR_PROCEDURE` 在外部 `CATCH` 块中运行，它将返回调用该外部 `CATCH` 块的错误号。  
-  
+无论 `ERROR_PROCEDURE` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回出现错误的存储过程或触发器的名称。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
+   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_PROCEDURE  

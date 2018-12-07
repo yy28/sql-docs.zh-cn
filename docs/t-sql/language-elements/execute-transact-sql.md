@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799705"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641018"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,6 +235,8 @@ Execute a character string
   
  如果参数值是一个对象名、字符串或由数据库名称或架构名称限定，则整个名称必须用单引号括起来。 如果参数值是一个关键字，则该关键字必须用双引号括起来。  
   
+如果传递一个不以 `@` 开头且不以问号结尾的单词（例如，如果忘记参数名称中的 `@`），则尽管缺少引号，也会将该单词视为 nvarchar 字符串。
+
  如果在模块中定义了默认值，用户执行该模块时可以不必指定参数。  
   
  默认值也可以为 NULL。 通常，模块定义会指定当参数值为 NULL 时应该执行的操作。  
@@ -287,7 +289,7 @@ Execute a character string
  常量字符串，包含要传递给链接服务器的命令。 如果包含 N，则字符串将解释为 **nvarchar** 数据类型。  
   
  [?]  
- 指示参数，其值在 EXEC('…', \<arg-list>) AT \<linkedsrv> 语句所使用的传递命令的 \<arg-list> 中提供。  
+ 指示参数，其值在 EXEC('...', \<arg-list>) AT \<linkedsrv> 语句所使用的传递命令的 \<arg-list> 中提供。  
   
  AT *linked_server_name*  
 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
@@ -315,7 +317,7 @@ Execute a character string
 |schema_name|拥有表、视图或表值函数的架构的名称。|  
 |table_name &#124; view_name &#124; table_valued_function_name|指定返回的列是在命名的表、视图或表值函数中指定的列。 AS 对象语法中不支持表变量、临时表以及同义词。|  
 |AS TYPE [schema_name.]table_type_name|指定返回的列是在表类型中指定的列。|  
-|AS FOR XML|指定由 EXECUTE 语句调用的语句或存储过程返回的 XML 结果将转换为仿佛是由 SELECT … FOR XML … 语句生成的格式 语句时使用。 来自原始语句中类型指令的所有格式设置都被删除，返回的结果就好像未指定任何类型指令一样。 AS FOR XML 不将所执行的语句和存储过程的非 XML 表格结果转换为 XML。|  
+|AS FOR XML|指定将 EXECUTE 语句调用的语句或存储过程返回的 XML 结果转换为仿佛是由 SELECT …FOR XML ... 语句生成的格式。 来自原始语句中类型指令的所有格式设置都被删除，返回的结果就好像未指定任何类型指令一样。 AS FOR XML 不将所执行的语句和存储过程的非 XML 表格结果转换为 XML。|  
   
 |术语|定义|  
 |----------|----------------|  
@@ -391,7 +393,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. 使用 EXECUTE 传递单个参数  
- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `uspGetEmployeeManagers` 存储过程需要一个参数 (`@EmployeeID`)。 以下示例执行`uspGetEmployeeManagers` 存储过程，以 `Employee ID 6` 作为参数值。  
+ `uspGetEmployeeManagers` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 存储过程需要一个参数 (`@EmployeeID`)。 以下示例执行`uspGetEmployeeManagers` 存储过程，以 `Employee ID 6` 作为参数值。  
   
 ```  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -416,7 +418,7 @@ GO
 ```  
   
 ### <a name="b-using-multiple-parameters"></a>B. 使用多个参数  
- 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中执行 `spGetWhereUsedProductID` 存储过程。 该存储过程将传递两个参数：第一个参数为产品 ID (`819`)，第二个参数 `@CheckDate,` 是 `datetime` 值。  
+ 下面的示例在 `spGetWhereUsedProductID` 数据库中执行 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 存储过程。 该存储过程将传递两个参数：第一个参数为产品 ID (`819`)，第二个参数 `@CheckDate,` 是 `datetime` 值。  
   
 ```  
 DECLARE @CheckDate datetime;  
@@ -532,7 +534,7 @@ GO
 ```  
   
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. 对用户定义函数使用 EXECUTE  
- 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中执行 `ufnGetSalesOrderStatusText` 标量用户定义函数。 该语句使用 `@returnstatus` 变量存储函数的返回值。 函数需要一个输入参数 `@Status`。 该参数定义为 **tinyint** 数据类型。  
+ 下面的示例在 `ufnGetSalesOrderStatusText` 数据库中执行 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 标量用户定义函数。 该语句使用 `@returnstatus` 变量存储函数的返回值。 函数需要一个输入参数 `@Status`。 该参数定义为 **tinyint** 数据类型。  
   
 ```  
 DECLARE @returnstatus nvarchar(15);  

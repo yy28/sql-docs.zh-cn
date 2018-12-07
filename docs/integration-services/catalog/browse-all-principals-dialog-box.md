@@ -13,15 +13,15 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06f636c920ed86313a6e8954af9151fa401e8bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e764f1cfd8cca7d8504a5389475e770cf934f8f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788805"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396670"
 ---
 # <a name="browse-all-principals-dialog-box"></a>“浏览所有主体”对话框
-  使用 **“浏览所有主体”** 对话框可以选择某一数据库主体以便更改该主体对所选项目或者所选文件夹中包含的所有项目的权限。  
+  使用“浏览所有主体”对话框选择数据库主体，以更改所选项目或所选文件夹中包含的所有项目的主体权限。  
   
  **您希望做什么？**  
   
@@ -33,15 +33,15 @@ ms.locfileid: "47788805"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
-     您在连接到承载 SSISDB 目录的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
+     正在连接到托管 SSISDB 目录的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
   
 2.  在对象资源管理器中，展开树以便显示 **“Integration Services 目录”** 节点。  
   
 3.  展开 **“SSISDB”** 节点。  
   
-4.  若要更改该主体对所选文件夹中包含的所有项目的权限，请右键单击该文件夹，然后单击“属性”。  
+4.  要更改所选文件夹中包含的所有项目的主体权限，请右键单击该文件夹，然后单击“属性”。  
   
-     若要更改该主体对所选项目的权限，请展开包含该项目的文件夹，右键单击该项目，然后单击“属性”。  
+     要更改所选文件的主体权限，请扩展包含该项目的文件夹，右键单击该项目，然后单击“属性”。  
   
 5.  选择 **“权限”** 页，然后单击 **“浏览”**。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16a9ad6bc26b304be0ad3308c2e5afe2084a3a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732295"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394850"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 设备信息设置
   下表列出以 PPTX 格式呈现 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表时的设备信息设置。  
@@ -37,7 +37,7 @@ ms.locfileid: "47732295"
 |**PageHeight**|要为报表设置的页高，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如， **11in**）。 此值将覆盖报表的原始设置。|  
 |**PageWidth**|要为报表设置的页宽，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如， **8.5in**）。 此值将覆盖报表的原始设置。|  
 |**StartPage**|要呈现的报表的第一页。 值为 **0** 指示将呈现所有页。 默认值是 **1**秒。|  
-|**UseReportPageSize**|如果 UseReportPageSize =**false** ，则默认幻灯片大小为 PowerPoint 的默认值 13.333” x 7.5”（16:9 纵横比）。 如果 UseReportPageSize = true，则默认幻灯片大小是报表的定义页面大小。<br /><br /> 默认值为 **false**。<br /><br /> 请注意，PageWidth 和 PageHeight 设置会覆盖默认宽度和高度。|  
+|**UseReportPageSize**|如果 UseReportPageSize =false，则默认幻灯片大小为 PowerPoint 的默认值 13.333” x 7.5”（16:9 纵横比）。 如果 UseReportPageSize = true，则默认幻灯片大小是报表的定义页面大小。<br /><br /> 默认值为 **false**。<br /><br /> 请注意，PageWidth 和 PageHeight 设置会覆盖默认宽度和高度。|  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

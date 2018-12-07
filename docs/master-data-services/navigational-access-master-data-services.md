@@ -15,12 +15,12 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b3a57de7e071a66fa1b8a6091d51fb4d799f2cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dc91a21f83283a78e5d47e49dbe1a36ec166e05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610305"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419958"
 ---
 # <a name="navigational-access-master-data-services"></a>导航访问权限 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47610305"
 
   导航访问权限适用于在 **“模型”** 选项卡上分配的模型对象安全性。  
   
- 导航访问权限是您获得的高于已分配安全性级别的级别。  
+ 导航访问权限是所获得的高于已分配安全性级别的访问权限。  
   
  在本示例中，权限将分配给某一实体，因此在模型级别授予导航访问权限。  
   

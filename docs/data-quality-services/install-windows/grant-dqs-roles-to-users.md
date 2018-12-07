@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ff1856d340c5a95c1ed02109b74621361952f41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768805"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617147"
 ---
 # <a name="grant-dqs-roles-to-users"></a>将 DQS 角色授予用户
 
@@ -39,13 +38,13 @@ ms.locfileid: "47768805"
   
 3.  右键单击“安全性”文件夹，指向“新建”，然后单击“登录名”。  
   
-4.  在 **“登录名 - 新建”** 对话框中，在 **“登录名”** 框中指定 Windows 用户的名称，将身份验证类型指定为 **“Windows 身份验证”**，然后单击 **“搜索”** 以验证此用户。  
+4.  在“登录名 - 新建”对话框中，在“登录名”框中指定 Windows 用户的名称，将身份验证类型指定为“Windows 身份验证”，然后单击“搜索”以验证此用户。  
   
 5.  在验证该用户后，在左侧窗格中单击 **“用户映射”** 。  
   
-6.  在右侧窗格中，选中 **DQS_MAIN** 数据库的“映射”列下的复选框，然后根据用户所需的访问级别，在“数据库角色成员身份: DQS_MAIN”窗格中选中 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 复选框。 有关这三个 DQS 角色的信息，请参阅 [DQS Security](../../data-quality-services/dqs-security.md)。  
+6.  在右侧窗格中，选中 **DQS_MAIN** 数据库的“映射”列下的复选框，然后根据用户所需的访问级别，在“数据库角色成员身份: DQS_MAIN”窗格中选中 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 复选框。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../../data-quality-services/dqs-security.md)。  
   
-7.  在 **“登录名 - 新建”** 对话框中，单击 **“确定”** 以便应用更改。  
+7.  在“登录名 - 新建”对话框中，单击“确定”以便应用更改。  
   
     > [!NOTE]  
     >  如果你向某一用户授予 **dqs_administrator** 角色，应用更改，然后重新选中用户权限，则其他两个 DQS 角色复选框（**dq_kb_editor** 和 **dqs_kb_operator**）也将被选中。  
@@ -55,6 +54,6 @@ ms.locfileid: "47768805"
   
 ## <a name="see-also"></a>另请参阅  
  [安装 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [创建一个登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

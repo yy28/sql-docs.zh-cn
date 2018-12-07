@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543962"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
@@ -84,7 +84,7 @@ rs {-?}
  （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理了异常，并从 **Main**正常返回，则将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
  -v globalvar  
- （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 **–v** 参数指定一个全局变量。  
+ （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 –v 参数指定一个全局变量。  
   
  **-v** 参数在命令行上指定，可用来为运行时在脚本中定义的全局变量设置值。 例如，如果脚本中包含一个名为 *parentFolder*的变量，则可以在命令行上为该文件夹指定一个名称：  
   
@@ -104,7 +104,7 @@ rs {-?}
  下面的示例说明如何指定包含 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本的脚本文件以及要执行的 Web 服务方法。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  

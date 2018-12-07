@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029793"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529743"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 报表服务器（SharePoint 模式）
 
@@ -80,7 +80,7 @@ ms.locfileid: "50029793"
   
 -   Reporting Services 页也不支持 SharePoint 个性化。 如果对 SharePoint Web 应用程序启用匿名访问，则不支持报表服务器集成。  
   
--   SQL Server Reporting Services  不支持 SharePoint 文档库版本控制。 如果您将报表项保存在启用“文档版本历史记录”配置的文档库中，则 Reporting Services 功能将不能正确操作并会在 ULS 日志中生成错误。 下面是 ULS 日志中错误的示例：  
+-   SQL Server Reporting Services  不支持 SharePoint 文档库版本控制。 如果将报表项保存在启用“文档版本历史记录”配置的文档库中，则 Reporting Services 功能将不能正确操作并会在 ULS 日志中生成错误。 下面是 ULS 日志中错误的示例：  
   
     -   “… 与报表关联的数据源已禁用”。  
   

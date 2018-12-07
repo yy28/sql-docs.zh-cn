@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ca94f7ef5ed0c6f070424c47aee10c7848a061d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503616"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47822445"
 |功能|筛选索引|内存优化的表不支持筛选的索引。 从索引定义中省略 **WHERE** 子句。|  
 |功能|包含列|指定包含列不是内存优化表所必需的。 内存优化表的所有列都隐式包含在每个内存优化索引中。|  
 |运算|DROP INDEX|不支持删除内存优化的表的索引。 可使用 ALTER TABLE 删除索引。<br /><br /> 有关详细信息，请参阅 [更改内存优化表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。|  
-|索引选项|*索引选项*|仅支持一个索引选项 – BUCKET_COUNT for HASH 索引。|  
+|索引选项|*索引选项*|仅支持一个索引选项 - BUCKET_COUNT for HASH 索引。|  
   
 ## <a name="nonclustered-hash-indexes"></a>非聚集哈希索引  
  下表列出可在涉及非聚集哈希索引的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
@@ -105,7 +105,7 @@ ms.locfileid: "47822445"
 |功能|非常量参数默认值|将默认值与本机编译的存储过程参数一起使用时，这些值必须为常量。 从参数声明中删除所有通配符。|  
 |功能|EXTERNAL|无法本机编译 CLR 存储过程。 从 CREATE PROCEDURE 语句中删除 AS EXTERNAL 子句或 NATIVE_COMPILATION 选项。|  
 |功能|带编号的存储过程|不能对本机编译的存储过程编号。 从 CREATE PROCEDURE 语句中删除 ; number。|  
-|功能|多行 INSERT... VALUES 语句|在本机编译的存储过程中无法使用同一 **INSERT** 语句插入多行。 为每行创建 **INSERT** 语句。|  
+|功能|多行 INSERT ...VALUES 语句|在本机编译的存储过程中无法使用同一 **INSERT** 语句插入多行。 为每行创建 **INSERT** 语句。|  
 |功能|公用表表达式 (CTE)|本机编译的存储过程中不支持公用表表达式 (CTE)。 重写查询。|  
 |功能|COMPUTE|不支持 **COMPUTE** 子句。 从查询中删除它。|  
 |功能|SELECT INTO|**INTO** 语句不支持 **SELECT** 子句。 将查询重写为 INSERT INTO Table SELECT。|  

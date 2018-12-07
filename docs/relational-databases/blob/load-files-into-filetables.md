@@ -15,12 +15,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 894570fc0f262c499bcadffc5c8d6d4bf6549b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526713"
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   带 CHECK_CONSTRAINTS 子句的 BULK INSERT。  
   
-    -   INSERT INTO … 不带 IGNORE_CONSTRAINTS 子句的 SELECT * FROM OPENROWSET(BULK …)。  
+    -   INSERT INTO... 不带 IGNORE_CONSTRAINTS 子句的 SELECT * FROM OPENROWSET(BULK …)。  
   
 -   不强制执行约束的大容量加载操作将失败，除非 FileTable 系统定义的约束已禁用。 此类别包括下列操作：  
   
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   不带 CHECK_CONSTRAINTS 子句的 BULK INSERT。  
   
-    -   INSERT INTO … 带 IGNORE_CONSTRAINTS 子句的 SELECT * FROM OPENROWSET(BULK …)。  
+    -   INSERT INTO... 带 IGNORE_CONSTRAINTS 子句的 SELECT * FROM OPENROWSET(BULK …)。  
   
 ###  <a name="HowToBulkLoad"></a> 如何大容量加载文件到 FileTable  
  您可以使用各种方法来大容量加载文件到 FileTable：  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   禁用 FileTable 命名空间并不使用 **CHECK_CONSTRAINTS** 子句调用。 然后重新启用 FileTable 命名空间。  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ...SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   使用 **IGNORE_CONSTRAINTS** 子句调用。  
   

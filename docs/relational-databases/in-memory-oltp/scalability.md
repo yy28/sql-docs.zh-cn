@@ -12,37 +12,42 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad3dd62bbf82314be6b981944186711eaa5ce62b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f672c1b3d7ff8d4480e6fb1647058c50715b657
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766065"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858562"
 ---
 # <a name="scalability"></a>可伸缩性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  SQL Server 2016 包含内存优化表磁盘存储的可伸缩性增强功能。  
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包含内存优化表磁盘存储的可伸缩性增强功能。 
+
+## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>要保留内存优化表的多个线程  
   
--   **要保留内存优化表的多个线程**  
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中曾经存在单个脱机检查点线程以扫描内存优化表更改的事务日志并将其保存在检查点文件（如数据和差异文件）中。 在具有较大内核数的计算机中，单个脱机检查点线程可能落后。  
   
-     在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，存在单个脱机检查点线程以扫描内存优化表更改的事务日志并将其保存在检查点文件（如数据和差异文件）中。 具有较大内核数，单个脱机检查点线程会落后。  
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，有多个并发线程负责保存内存优化表的更改。  
   
-     在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，有多个并发线程负责保存内存优化表的更改。  
+## <a name="multi-threaded-recovery"></a>多线程恢复
+在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，日志应用属于恢复操作的一部分，是单个线程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，日志应用是多线程。  
   
--   **多线程恢复**  
+## <a name="merge-operation"></a>合并操作  
+合并操作现在是多线程。  
+   
+> [!NOTE]
+> 手动合并已禁用，因为多线程合并需要与负荷保持一致。 
+
+## <a name="dynamic-management-views"></a>动态管理视图  
+DMV [sys.dm_db_xtp_checkpoint_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) 和 [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) 发生了显著变化。  
+
+## <a name="storage-management"></a>存储管理
+内存中 OLTP 引擎将基于文件流继续使用内存优化文件组，但该文件组中的单个文件脱离文件流。 这些文件完全由内存中 OLTP 引擎管理（例如对于创建、删除和垃圾回收）。 
+
+> [!NOTE]
+> 不支持 [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)。  
   
-     在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，日志应用属于恢复操作的一部分，是单个线程。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，日志应用是多线程。  
-  
--   **合并操作**  
-  
-     合并操作现在是多线程。  
-  
--   **动态管理视图**  
-  
-     [sys.dm_db_xtp_checkpoint_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) 和 [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) 发生了显著变化。  
-  
- 手动合并已禁用，因为多线程合并需要与负荷保持一致。  
-  
- 内存中 OLTP 引擎将基于文件流继续使用内存优化文件组，但该文件组中的单个文件脱离文件流。 这些文件完全由内存中 OLTP 引擎管理（例如对于创建、删除和垃圾回收）。 不支持 [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)。  
-  
-  
+## <a name="see-also"></a>另请参阅   
+[创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)     
+[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
+[ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)    

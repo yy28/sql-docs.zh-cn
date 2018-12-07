@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503487"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 ### <a name="download-pages-and-more-information-for-sp1"></a>下载页和 SP1 详细信息
 
 - [下载 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 has released – Updated](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)（SQL Server 2014 Service Pack 1 已发布 - 已更新）
+- [SQL Server 2014 Service Pack 1 已发布 - 已更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
 - [Microsoft SQL Server 2014 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -292,7 +292,7 @@ DATEPART(weekday, @d)
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 本机模式报表服务器不能与 SQL Server 2014 Reporting Services SharePoint 组件并行运行  
-**问题：** 同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 无法启动。  
+**问题：** 同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 无法启动。  
   
 **解决方法：** 卸载 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件并重新启动 Microsoft SQL Server 2012 Reporting Services Windows 服务。  
   
@@ -359,7 +359,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：**  
   
-1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
+1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
 2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](https://technet.microsoft.com/library/hh758436.aspx)。  
   
@@ -374,7 +374,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：**  
   
-1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
+1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 提供程序”[Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
 2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](https://technet.microsoft.com/library/hh758436.aspx)。  
   

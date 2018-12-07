@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516463"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>先决条件、限制、建议 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "51600947"
   
 3.  使用 **Get-ClusterResource** cmdlet 查找网络名称资源，然后使用 **Set-ClusterParameter** cmdlet 设置 **HostRecordTTL** 值，如下所示：  
   
-     Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource “\<NetworkResourceName>” | Set-ClusterParameter HostRecordTTL \<TimeInSeconds>  
   
      下面的 PowerShell 示例为名为 `SQL Network Name (SQL35)` 的网络名称资源将 HostRecordTTL 设置为 300 秒。  
   

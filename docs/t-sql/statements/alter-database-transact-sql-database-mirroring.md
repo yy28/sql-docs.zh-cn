@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5fcda605644c29f21b6fd9f71578a4d860f59619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530497"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 数据库镜像 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,11 +92,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  ' partner_server '  
  指定在新数据库镜像会话中用作故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器网络地址。 每个会话需要两个伙伴：一个作为主体服务器启动，另一个作为镜像服务器启动。 建议这两个伙伴驻留在不同的计算机上。  
   
- 在每个伙伴上，为每个会话指定一次此选项。 启动数据库镜像会话需要两个 ALTER DATABASE database SET PARTNER ='partner_server' 语句****。 这两个语句的顺序非常重要。 首先，连接到镜像服务器，并将主体服务器实例指定为 partner_server (SET PARTNER ='principal_server')****。 然后，连接到主体服务器，并将镜像服务器实例指定为 partner_server (SET PARTNER ='mirror_server')；此操作会在这两个伙伴之间启动数据库镜像会话****。 有关详细信息，请参阅本主题后面的 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
+ 在每个伙伴上，为每个会话指定一次此选项。 启动数据库镜像会话需要两个 ALTER DATABASE database SET PARTNER ='partner_server' 语句。 这两个语句的顺序非常重要。 首先，连接到镜像服务器，并将主体服务器实例指定为 partner_server (SET PARTNER ='principal_server')。 然后，连接到主体服务器，并将镜像服务器实例指定为 partner_server (SET PARTNER ='mirror_server')；此操作会在这两个伙伴之间启动数据库镜像会话。 有关详细信息，请参阅本主题后面的 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
  partner_server 的值为服务器网络地址。 其语法如下所示：  
   
- TCP*://\<system-address>:\<port>**  
+ TCP **://**_\<system-address>_**:**_\<port>_  
   
  其中  
   
@@ -106,7 +106,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
- 以下示例阐释了 SET PARTNER ='partner_server' 子句****：  
+ 以下示例阐释了 SET PARTNER ='partner_server' 子句：  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -198,7 +198,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  ' witness_server '  
  指定一个[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，作为数据库镜像会话的见证服务器。 只能在主体服务器上指定 SET WITNESS 语句。  
   
- 在 SET WITNESS ='witness_server' 语句中，witness_server 的语法与 partner_server 的语法相同****。  
+ 在 SET WITNESS ='witness_server' 语句中，witness_server 的语法与 partner_server 的语法相同。  
   
  OFF  
  从数据库镜像会话中删除见证服务器。 将见证服务器设置为 OFF 会禁用自动故障转移。 如果数据库设置为 FULL SAFETY 并且见证服务器设置为 OFF，则镜像服务器上的故障会导致主体服务器使该数据库不可用。  

@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604947"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418664"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "51604947"
   
  若要结合使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本，你需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover**的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
   
-> **错误消息：** “关键字不受支持的 "applicationintent"”  
+> **错误消息：**“关键字不受支持的‘applicationintent’”  
   
- 当在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串中包含一个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 属性但是服务器无法识别该属性时，显示此消息。 当您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 用户界面中单击“测试连接”按钮以及预览报表（如果在报表服务器上启用远程错误）时，将显示所述的错误消息。  
+ 当在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串中包含一个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 属性但是服务器无法识别该属性时，显示此消息。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 用户界面中单击“测试连接”按钮以及预览报表（如果在报表服务器上启用远程错误）时，将显示所述的错误消息。  
   
  有关所需修补程序的详细信息，请参阅[将 SQL Server 2012 中对 AlwaysOn 功能的支持引入 .NET Framework 3.5 SP1 的 KB 2654347A 修补程序](https://go.microsoft.com/fwlink/?LinkId=242896)。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51604947"
   
 -   **远程或服务器模式预览：** 如果在将报表发布到报表服务器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]中使用预览后，您看到与以下内容相似的错误，指出您正在预览报表服务器上的报表而该报表服务器上未安装针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
   
-> **错误消息：** “关键字不受支持的 "applicationintent"”  
+> **错误消息：**“关键字不受支持的‘applicationintent’”  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 报表服务器数据库和可用性组  
  Reporting Services 和 Power BI 报表服务器为将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和报表服务器数据库结合使用提供了有限的支持。 可以在 AG 中将报表服务器数据库配置为副本的一部分；但是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在发生故障转移时不会自动将另一副本用于报表服务器数据库。 不支持使用 MultiSubnetFailover 与报表服务器数据库。  
@@ -142,7 +142,7 @@ ms.locfileid: "51604947"
   
 -   ReportServerTempDB  
   
- 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，你将服务应用程序数据库名称配置为你作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[为 SharePoint 服务器配置和管理 SQL Server 可用性组 (](https://go.microsoft.com/fwlink/?LinkId=245165)https://go.microsoft.com/fwlink/?LinkId=245165)。  
+ 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，将服务应用程序数据库名称配置为作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[为 SharePoint 服务器配置和管理 SQL Server 可用性组 (](https://go.microsoft.com/fwlink/?LinkId=245165)https://go.microsoft.com/fwlink/?LinkId=245165)。  
   
 > [!NOTE]  
 >  SharePoint 模式的报表服务器使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序数据库和 SharePoint 内容数据库之间的同步过程。 将报表服务器数据库和内容数据库一起维护很重要。 您应考虑在同一可用性组中配置它们以便它们作为一个整体进行故障转移和恢复。 请考虑下列方案：  

@@ -12,18 +12,18 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f4c71f7e0fdf539ab9a70213eeb275b45e33056
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61252bf85ab9862508bed327e27068add2cc0c74
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628445"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403832"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 来管理您组织的主数据。 了解如何创建和操作模型对象（数据的容器）。 了解如何组织和维护主数据本身。 了解如何导入和导出主数据，以及在测试环境和生产环境之间共享模型。 最后，了解如何开发用于访问 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务的自定义应用程序。  
+  了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 来管理组织的主数据。 了解如何创建和操作模型对象（数据的容器）。 了解如何组织和维护主数据本身。 了解如何导入和导出主数据，以及在测试环境和生产环境之间共享模型。 最后，了解如何开发用于访问 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务的自定义应用程序。  
   
 ## <a name="create-structures-to-contain-data"></a>创建要包含数据的结构  
   

@@ -13,12 +13,12 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 644a789343b68e6808b5d1bf61f8c5768d01c70c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 27d94b747eb1a12a4318e41fe6b4200074a2fc42
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512656"
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Always On 可用性组入门 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,9 +87,9 @@ ms.locfileid: "51603947"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   **视频 - AlwaysOn 简介：**[Microsoft SQL Server Code 命名为“Denali”的 AlwaysOn 系列，第一部分：下一代高可用性解决方案简介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+-   **视频 - Always On 简介：**[Microsoft SQL Server Code 命名为“Denali”的 Always On 系列，第一部分：下一代高可用性解决方案简介](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
--   **视频 - 深入了解 AlwaysOn：**[Microsoft SQL Server Code 命名为“Denali”的 AlwaysOn 系列，第二部分：使用 AlwaysOn 生成任务关键型高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+-   **视频 - 深入了解 Always On：**[Microsoft SQL Server Code 命名为“Denali”的 Always On 系列，第二部分：使用 Always On 生成任务关键型高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮书：**[Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery（用于高可用性和灾难恢复的 Microsoft SQL Server Always On 解决方案指南）](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

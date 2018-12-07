@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e5dcf629121edc7d4502b0cedbf9825e74813587
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530647"
 ---
 # <a name="xml-task"></a>XML 任务
   XML 任务用于与 XML 数据配合使用。 使用此任务，包可以检索 XML 文档，使用可扩展样式表语言转换 (XSLT) 样式表和 XPath 表达式对文档应用运算，合并多个文档，还可以验证、比较更新的文档并将其保存到文件和变量。  
@@ -165,7 +165,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **数据源**  
- 如果将“源”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
+ 如果将“源”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码。  
   
  如果将“源”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **SecondOperand**  
- 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“源编辑器”对话框提供 XML 代码。  
+ 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“源编辑器”对话框提供 XML 代码。  
   
  如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **SecondOperand**  
- 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“源编辑器”对话框提供 XML 代码。  
+ 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“源编辑器”对话框提供 XML 代码。  
   
  如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **SecondOperand**  
- 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“源编辑器”对话框提供 XML 代码。  
+ 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“源编辑器”对话框提供 XML 代码。  
   
  如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
@@ -353,7 +353,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **XPathStringSource**  
- 如果将“XPathStringSourceType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
+ 如果将“XPathStringSourceType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码。  
   
  如果将“XPathStringSourceType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
@@ -398,7 +398,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **SecondOperand**  
- 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
+ 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码。  
   
  如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
@@ -473,7 +473,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **SecondOperand**  
- 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
+ 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码。  
   
  如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
@@ -519,7 +519,7 @@ ms.locfileid: "51639674"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **SecondOperand**  
- 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
+ 如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码。  
   
  如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   

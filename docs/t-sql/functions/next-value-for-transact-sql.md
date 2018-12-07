@@ -23,12 +23,12 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2ad33a42cc05644fa2ce56836361fe8fee56324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800319"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525735"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** - 对于每个引用的序列对象，将为语句结果中的每一行生成一次新值。  
   
--   **INSERT** … **VALUES** - 对于每个引用的序列对象，将为语句中的每一个插入行生成一个新值。  
+-   INSERT ...**VALUES** - 对于每个引用的序列对象，将为语句中的每一个插入行生成一个新值。  
   
 -   **UPDATE** - 对于每个引用的序列对象，将为语句所更新的每一行生成一个新值。  
   
@@ -93,7 +93,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在使用 **DISTINCT****UNION****UNION ALL****EXCEPT** 或 **INTERSECT** 运算符的语句中。  
   
--   在使用 **ORDER BY** 子句的语句中，除非使用了 **NEXT VALUE FOR** … **OVER** (**ORDER BY** …)。  
+-   在使用 ORDER BY 子句的语句中，除非使用了 NEXT VALUE FOR …OVER (ORDER BY …)。  
   
 -   在以下子句中：**FETCH****OVER****OUTPUT****ON****PIVOT****UNPIVOT****GROUP BY****HAVING****COMPUTE****COMPUTE BY** 或 **FOR XML**。  
   
@@ -130,7 +130,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   可以更改默认约束中引用的序列对象。  
   
--   如果 `INSERT … SELECT` 或 `INSERT … EXEC` 语句中插入的数据来自使用 **ORDER BY** 子句的查询，则按照 **ORDER BY** 子句指定的顺序生成 **NEXT VALUE FOR** 函数返回的值。  
+-   如果 `INSERT ... SELECT` 或 `INSERT ... EXEC` 语句中插入的数据来自使用 **ORDER BY** 子句的查询，则按照 **ORDER BY** 子句指定的顺序生成 **NEXT VALUE FOR** 函数返回的值。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>通过 OVER ORDER BY 子句使用序列对象  
  通过将 **OVER** 子句应用于 **NEXT VALUE FOR** 调用，**NEXT VALUE FOR** 函数支持生成排序的序列值。 通过使用 **OVER** 子句，可以向用户保证返回的值是按照 **OVER** 子句的 **ORDER BY** 子句的顺序生成的。 将 **NEXT VALUE FOR** 函数与 **OVER** 子句一起使用时，下列附加规则适用：  
@@ -143,7 +143,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   如果 **SELECT** 语句中对 **NEXT VALUE FOR** 函数的所有调用均指定 **OVER** 子句，则可以在 **SELECT** 语句中使用 **ORDER BY** 子句。  
   
--   在 **SELECT** 语句或 `INSERT … SELECT …` 语句中使用时，允许将 **OVER** 子句与 **NEXT VALUE FOR** 函数一起使用。 不允许在 **UPDATE** 或 **MERGE** 语句中将 **OVER** 子句与 **NEXT VALUE FOR** 函数一起使用。  
+-   在 **SELECT** 语句或 `INSERT ... SELECT ...` 语句中使用时，允许将 **OVER** 子句与 **NEXT VALUE FOR** 函数一起使用。 不允许在 **UPDATE** 或 **MERGE** 语句中将 **OVER** 子句与 **NEXT VALUE FOR** 函数一起使用。  
   
 -   如果另一个进程同时访问序列对象，则返回的编号可能会出现间断。  
   
@@ -278,8 +278,8 @@ GO
   
 ```  
   
-### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. 将 NEXT VALUE FOR 函数与 SELECT … 一起使用 INTO  
- 以下示例使用 `SELECT … INTO` 语句创建一个名为 `Production.NewLocation` 的表，然后使用 `NEXT VALUE FOR` 函数为每一行编号。  
+### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. 将 NEXT VALUE FOR 函数与 SELECT … 一起使用INTO  
+ 以下示例使用 `SELECT ... INTO` 语句创建一个名为 `Production.NewLocation` 的表，然后使用 `NEXT VALUE FOR` 函数为每一行编号。  
   
 ```  
 USE AdventureWorks2012 ;   

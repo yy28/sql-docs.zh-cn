@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f793de9e36968021155387ce0f926899f81f753d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bf1a42cb16c499490bd7ea1ff5657e8dff58bcde
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027776"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524423"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>访问 Reporting Services WMI 提供程序
   Reporting Services WMI 提供程序公开了两个 WMI 类，用于通过脚本管理本机模式报表服务器实例：  
@@ -41,25 +41,25 @@ ms.locfileid: "50027776"
  若要列出 WMI 命名空间路径中报表服务器实例的编码实例名称，请使用以下 PowerShell 命令：  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
+PS C:\windows\system32> Get-WmiObject -namespace root\Microsoft\SqlServer\ReportServer  -class __Namespace -ComputerName hostname | select Name  
 ```  
   
 ## <a name="access-the-wmi-classes-using-powershell"></a>使用 PowerShell 访问 WMI 类  
  若要访问 WMI 类，请运行以下命令：  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace <namespacename> –class <classname> –ComputerName <hostname>  
+PS C:\windows\system32> Get-WmiObject -namespace <namespacename> -class <classname> -ComputerName <hostname>  
 ```  
   
  例如，若要访问主机 myrshost 的默认报表服务器实例上的 MSReportServer_ConfigurationSetting 类，请运行以下命令： 默认报表服务器实例必须安装在 myrshost 上，这样此命令才会成功。  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  此命令语法会输出所有的类属性名称和值。 请注意，会返回 MSReportServer_ConfigurationSetting 类的所有实例，即使您在默认报表服务器实例 (RS_MSSQLSERVER) 的命名空间中访问此类也是如此。 例如，如果 myrshost 上安装了默认报表服务器实例和名为 SHAREPOINT 的命名报表服务器实例，此命令将返回两个 WMI 对象并输出这两个报表服务器实例的属性名称和值。  
   
- 若要在返回多个实例时返回特定类实例，请使用 –Filter 参数基于值唯一的属性（如 InstanceName）对结果进行筛选。 例如，若要仅返回默认报表服务器实例的 WMI 对象，请使用以下命令：  
+ 若要在返回多个实例时返回特定类实例，请使用 -Filter 参数基于值唯一的属性（如 InstanceName）对结果进行筛选。 例如，若要仅返回默认报表服务器实例的 WMI 对象，请使用以下命令：  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  

@@ -11,12 +11,12 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c893a38541d6e79380b25f0e8e5414a6ee0d2b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853365"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393711"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>连接到平面文件数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到平面文件（文本文件）数据源。 对于平面文件，向导的这两页显示的选项集不同，所以本主题会分别介绍平面文件源和平面文件目标。

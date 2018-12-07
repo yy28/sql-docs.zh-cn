@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4319663f79c07772bb3b72c9de9d4120f8d83ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718975"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535285"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "47718975"
   
      将订阅服务器升级到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，即可升级订阅服务器上的订阅所用的合并代理。 若要利用众多新功能和性能优化，则需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的合并代理。  
   
--   如果通过快速连接来同步订阅，并通过发布服务器和订阅服务器发送更改，请为合并代理使用 **–ParallelUploadDownload** 参数。  
+-   如果通过快速连接来同步订阅，并通过发布服务器和订阅服务器发送更改，请为合并代理使用 ParallelUploadDownload 参数。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了一个新的合并代理参数： **–ParallelUploadDownload**。 设置此参数能够使合并代理并行处理上载到发布服务器和下载到订阅服务器的更改。 这对于使用高速网络带宽的大容量环境非常有用。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了一个新的合并代理参数：-ParallelUploadDownload。 设置此参数能够使合并代理并行处理上载到发布服务器和下载到订阅服务器的更改。 这对于使用高速网络带宽的大容量环境非常有用。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   
     -   [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

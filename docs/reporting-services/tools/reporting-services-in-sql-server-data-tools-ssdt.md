@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030376"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403002"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
@@ -56,7 +56,7 @@ ms.locfileid: "50030376"
   
 -   **数据集** 每个数据集都包括一个查询，该查询指定要从数据源中检索的数据。 展开数据集可查看由数据集查询指定的字段集合。  
   
-     在针对多维数据集的某些查询设计器中，您可以在“筛选器”窗格中指定筛选器，并且指示是否创建报表参数。 如果您指定了报表参数选项，则将自动创建一个特殊的数据集，以便填充该参数的有效值列表。  默认情况下，该数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
+     在针对多维数据集的某些查询设计器中，您可以在“筛选器”窗格中指定筛选器，并且指示是否创建报表参数。 如果指定报表参数选项，则将自动创建一个特殊的数据集，以便填充该参数的有效值列表。  默认情况下，该数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
 -   **报表参数** 报表参数的列表。 参数可手动创建，也可以在数据集查询包括查询参数时自动创建。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "50030376"
   
 
 ##  <a name="bkmk_SourceControl"></a> 源代码管理  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。**  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自定义报表模板  
  若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于以下位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  

@@ -23,12 +23,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c20a95bcdb8c91059c63590c333c71a10542473a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514038"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "43814043"
 ###  <a name="ChoseDACUpgOptions"></a> 选择 DAC 升级选项  
  就地升级有四种升级选项：  
   
--   **忽略数据丢失** – 如果为 **True**，则即使某些操作导致数据丢失，升级也将继续。 如果为 **False**，则上述操作将终止升级。 例如，如果当前数据库中的表在新的 DAC 的架构中不存在，则在指定 **True** 时该表将被删除。 默认设置为 **True**。  
+-   **忽略数据丢失** - 如果为 True，则即使某些操作导致数据丢失，升级也将继续。 如果为 **False**，则上述操作将终止升级。 例如，如果当前数据库中的表在新的 DAC 的架构中不存在，则在指定 **True** 时该表将被删除。 默认设置为 **True**。  
   
--   **更改时阻止** - 如果为 **True**，则在数据库架构不同于在之前的 DAC 中定义的架构时，升级将终止。 如果为 **False**，则即使检测到更改，升级也将继续。 默认设置为 **False**。  
+-   **更改时阻止** - 如果为 True，则在数据库架构不同于在之前的 DAC 中定义的架构时，升级将终止。 如果为 **False**，则即使检测到更改，升级也将继续。 默认设置为 **False**。  
   
--   **失败时回滚** - 如果为 **True**，则升级将封装在事务中，并且在遇到错误时，将尝试回滚。 如果为 **False**，则在进行更改时所有更改都将提交，并且在出错时，您可能要还原数据库的以前的备份。 默认设置为 **False**。  
+-   **失败时回滚** - 如果为 True，则升级将封装在事务中，并且在遇到错误时，将尝试回滚。 如果为 **False**，则在进行更改时所有更改都将提交，并且在出错时，您可能要还原数据库的以前的备份。 默认设置为 **False**。  
   
--   **跳过策略验证** - 如果为 **True**，将不评估 DAC 服务器选择策略。 如果为 **False**，将评估策略，并且在存在验证错误时升级将终止。 默认设置为 **False**。  
+-   **跳过策略验证** - 如果为 True，将不评估 DAC 服务器选择策略。 如果为 **False**，将评估策略，并且在存在验证错误时升级将终止。 默认设置为 **False**。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  DAC 升级只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本中执行。  
@@ -193,13 +193,13 @@ ms.locfileid: "43814043"
   
  **将使用以下操作升级 DAC。** - 查看显示的信息以便确保将执行的操作正确。 “操作”列显示要用于执行升级的操作（如 Transact-SQL 语句）。 **“数据丢失”** 列将包含在相关操作删除数据时给出的警告。  
   
- **刷新** – 刷新操作列表。  
+ **刷新** - 刷新操作列表。  
   
  **保存操作报告** - 将操作窗口的内容保存到某一 HTML 文件。  
   
  **继续而不管可能的更改丢失** - 指定你理解当前数据库中的某些对象或数据在新数据库中将不存在，并且愿意继续进行升级。 只有在您对更改报表进行了分析并且理解您必须执行以便手动传输新数据库中所需的任何对象或数据的步骤后，才应选择此按钮。 如果你不能确定，请单击“保存操作报告”按钮以保存更改报告，单击“保存脚本”按钮以保存 Transact-SQL 脚本，然后单击“取消”。 对报告和脚本进行分析，计划如何在升级完成后传输所需的任何对象和数据，然后重新启动该向导。  
   
- **保存脚本** – 将用于执行升级的 Transact-SQL 语句保存为文本文件。  
+ **保存脚本** - 将用于执行升级的 Transact-SQL 语句保存为文本文件。  
   
  **还原默认值** - 将选项恢复为默认设置 False。  
   

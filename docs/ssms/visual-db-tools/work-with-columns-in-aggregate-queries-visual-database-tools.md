@@ -16,12 +16,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 393bc1e434071c82bc198531e855f9c355feaac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b3d6a176379c4cdfae4509e3ab3988202831c49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540646"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47819245"
     WHERE price > 10  
     ```  
   
--   如果创建的搜索条件所涉及的列同时也用于 GROUP BY 子句或聚合函数中，则该搜索条件既可以作为 WHERE 子句出现也可以作为 HAVING 子句出现，您可以在创建条件时决定以哪一种形式出现。 例如，下面的语句创建每个出版商的书籍的平均价格，然后显示平均价格超过 10.00 美元的出版商的平均值：  
+-   如果创建的搜索条件所涉及的列同时也用于 GROUP BY 子句或聚合函数中，则该搜索条件既可以作为 WHERE 子句出现也可以作为 HAVING 子句出现，你可以在创建条件时决定以哪一种形式出现。 例如，下面的语句创建每个出版商的书籍的平均价格，然后显示平均价格超过 10.00 美元的出版商的平均值：  
   
     ```  
     SELECT pub_id, AVG(price)  

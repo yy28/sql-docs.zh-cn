@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e4f359f5ba8a1a55452985375e3c6f0754e5f6b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 95806dd597798b5a8a629d8b49d8502fff4de9ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031656"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399170"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>选择用于分析和报告的 Microsoft 商业智能 (BI) 工具
 选择正确的商业智能工具可能令人难以应付。 了解不同 Microsoft 产品，找到最适合你需求的一个产品。

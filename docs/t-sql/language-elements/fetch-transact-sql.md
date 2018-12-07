@@ -24,12 +24,12 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f284273004cd01c927473b9114ed06742f3fe794
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68d27a88ec604de05f8165f6c251982e53914794
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804615"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586210"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "47804615"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -55,10 +54,10 @@ FETCH
   
 ## <a name="arguments"></a>参数  
  NEXT  
- 紧跟当前行返回结果行，并且当前行递增为返回行。 如果 FETCH NEXT 为对游标的第一次提取操作，则返回结果集中的第一行。 NEXT 为默认的游标提取选项。  
+ 紧跟当前行返回结果行，并且当前行递增为返回行。 如果 `FETCH NEXT` 为对游标的第一次提取操作，则返回结果集中的第一行。 `NEXT` 为默认的游标提取选项。  
   
  PRIOR  
- 返回紧邻当前行前面的结果行，并且当前行递减为返回行。 如果 FETCH PRIOR 为对游标的第一次提取操作，则没有行返回并且游标置于第一行之前。  
+ 返回紧邻当前行前面的结果行，并且当前行递减为返回行。 如果 `FETCH PRIOR` 为对游标的第一次提取操作，则没有行返回并且游标置于第一行之前。  
   
  FIRST  
  返回游标中的第一行并将其作为当前行。  
@@ -70,7 +69,7 @@ FETCH
  如果 n 或 @nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为 0，则不返回行。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int。  
   
  RELATIVE { n| @nvar}  
- 如果 n 或 @nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为 0，则返回当前行。 在对游标进行第一次提取时，如果在将 n 或 @nvar 设置为负数或 0 的情况下指定 FETCH RELATIVE，则不返回行。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int。  
+ 如果 n 或 @nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为 0，则返回当前行。 在对游标进行第一次提取时，如果在将 n 或 @nvar 设置为负数或 0 的情况下指定 `FETCH RELATIVE`，则不返回行。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int。  
   
  GLOBAL  
  指定 cursor_name 是指全局游标。  
@@ -85,27 +84,27 @@ FETCH
  允许将提取操作的列数据放到局部变量中。 列表中的各个变量从左到右与游标结果集中的相应列相关联。 各变量的数据类型必须与相应的结果集列的数据类型匹配，或是结果集列数据类型所支持的隐式转换。 变量的数目必须与游标选择列表中的列数一致。  
   
 ## <a name="remarks"></a>Remarks  
- 如果 SCROLL 选项未在 ISO 样式的 DECLARE CURSOR 语句中指定，则 NEXT 是唯一支持的 FETCH 选项。 如果在 ISO 样式的 DECLARE CURSOR 语句中指定了 SCROLL 选项，则支持所有 FETCH 选项。  
+ 如果 ISO 样式 `DECLARE CURSOR` 语句中未指定 `SCROLL` 选项，则 `NEXT` 是唯一受支持的 `FETCH` 选项。 如果 ISO 样式 `DECLARE CURSOR` 中指定了 `SCROLL`，则支持所有 `FETCH` 选项。  
   
  如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE 游标扩展插件，则应用下列规则：  
   
--   如果指定了 FORWARD_ONLY 或 FAST_FORWARD，则 NEXT 是唯一受支持的 FETCH 选项。  
+-   如果指定了 `FORWARD_ONLY` 或 `FAST_FORWARD`，则 `NEXT` 是惟一受支持的 `FETCH` 选项。  
   
--   如果未指定 DYNAMIC、FORWARD_ONLY 或 FAST_FORWARD 选项，并且指定了 KEYSET、STATIC 或 SCROLL 中的某一个，则支持所有 FETCH 选项。  
+-   如果 `DYNAMIC`、`FORWARD_ONLY` 或 `FAST_FORWARD` 未指定，且指定了 `KEYSET`、`STATIC` 或 `SCROLL` 中的一个，则支持所有 `FETCH` 选项。  
   
--   DYNAMIC SCROLL 游标支持除 ABSOLUTE 以外的所有 FETCH 选项。  
+-   `DYNAMIC SCROLL` 游标支持除了 `ABSOLUTE` 的所有 `FETCH` 选项。  
   
- @@FETCH_STATUS 函数报告上一个 FETCH 语句的状态。 相同的信息记录在由 sp_describe_cursor 返回的游标中的 fetch_status 列中。 这些状态信息应该用于在对由 FETCH 语句返回的数据进行任何操作之前，以确定这些数据的有效性。 有关详细信息，请参阅 [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)。  
+ `@@FETCH_STATUS` 函数报告上一个 `FETCH` 语句的状态。 相同的信息记录在由 sp_describe_cursor 返回的游标中的 fetch_status 列中。 这些状态信息应该用于在对由 `FETCH` 语句返回的数据进行任何操作之前，以确定这些数据的有效性。 有关详细信息，请参阅 [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
- FETCH 权限默认授予任何有效的用户。  
+ `FETCH` 语句的权限默认情况下授予任何有效用户。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-fetch-in-a-simple-cursor"></a>A. 在简单的游标中使用 FETCH  
  以下示例为 `Person.Person` 表中姓氏以字母 `B` 开头的行声明了一个简单的游标，并使用 `FETCH NEXT` 逐个提取这些行。 `FETCH` 语句以单行结果集形式返回在 `DECLARE CURSOR` 中指定的列的值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE contact_cursor CURSOR FOR  
@@ -133,7 +132,7 @@ GO
 ### <a name="b-using-fetch-to-store-values-in-variables"></a>B. 使用 FETCH 将值存入变量  
  以下示例与示例 A 相似，但 `FETCH` 语句的输出存储于局部变量而不是直接返回到客户端。 `PRINT` 语句将变量组合成单一字符串并将其返回到客户端。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
@@ -173,7 +172,7 @@ GO
 ### <a name="c-declaring-a-scroll-cursor-and-using-the-other-fetch-options"></a>C. 声明 SCROLL 游标并使用其他 FETCH 选项  
  以下示例创建一个 `SCROLL` 游标，使其通过 `LAST`、`PRIOR`、`RELATIVE` 和 `ABSOLUTE` 选项支持全部滚动功能。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Execute the SELECT statement alone to show the   

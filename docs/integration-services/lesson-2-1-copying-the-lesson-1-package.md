@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba8f4ef0845ebad226eb8a57edb15347eacf5814
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541965"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>第 2-1 课 - 复制第 1 课包
 在本任务中，将为第 1 课中创建的 Lesson 1.dtsx 包创建一个副本。 如果未完成第 1 课的学习，则可以向项目添加本教程中附带的已完成 Lesson 1 包，然后再对其进行复制。 将使用这一新副本来完成第 2 课剩余部分。  
@@ -49,7 +49,7 @@ ms.locfileid: "51640474"
   
 3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-4.  单击浏览“(...)”按钮，导航到计算机上的“Lesson 1.dtsx”，然后单击“打开”。  
+4.  单击“浏览(…)”按钮，导航到计算机上的“Lesson 1.dtsx”，然后单击“打开”。  
   
     要下载此教程的所有课程包，请执行以下操作：  
   

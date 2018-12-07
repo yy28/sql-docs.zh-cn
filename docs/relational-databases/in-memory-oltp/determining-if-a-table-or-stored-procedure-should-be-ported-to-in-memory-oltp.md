@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8042627fcc85cf6b9418f7a0b16eae9255441a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684055"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531624"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的事务性能分析报表，可帮助你评估内存中 OLTP 是否将改进数据库应用程序的性能。 该报表还能够指明在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
+  通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的事务性能分析报表，可帮助你评估内存中 OLTP 是否将改进数据库应用程序的性能。 该报表还能够指明在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。 有关迁移方法的信息，请参阅[内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  事务性能分析报表将直接对生产数据库或具有类似于生产工作负载的活动工作负载的测试数据库运行。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47684055"
     > [!IMPORTANT]  
     >  数据库的性能取决于多种因素，不是所有这些因素都能被事务性能收集器发现和度量。 因此，事务性能分析报告不保证实际性能收益会符合其预测（如果作出任何预测）。  
   
- 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或 [下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装。    
+ 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或[下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装。    
   
 ## <a name="transaction-performance-analysis-reports"></a>事务性能分析报表  
  通过右键单击数据库，然后依次选择“报表”、“标准报表”、“事务性能分析概述”，可以在“对象资源管理器”中生成事务性能分析报表。 数据库需要有活动的工作负载或最近运行的工作负载，才能生成有意义的分析报表。  
@@ -137,7 +137,7 @@ ms.locfileid: "47684055"
 2.  输入下面的命令。  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport -FolderPath "<folder_path>"  
     ```  
   
 3.  验证下列各项。  
@@ -158,12 +158,12 @@ ms.locfileid: "47684055"
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
   
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
   
     ```  
   

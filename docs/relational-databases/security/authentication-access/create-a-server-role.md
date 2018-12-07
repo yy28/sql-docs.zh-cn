@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1467b692a574d7f3497d5f0426a841543cdeee76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520903"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47659769"
   
 4.  在“新建服务器角色 - server\_role\_name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称。  
   
-5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 **(…)** 打开“选择服务器登录名或角色”对话框。  
+5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 (…) 打开“选择服务器登录名或角色”对话框。  
   
 6.  在“安全对象”下，选择一个或多个服务器级别的安全对象。 当选择安全对象时，可以向此服务器角色授予或拒绝针对该安全对象的权限。  
   

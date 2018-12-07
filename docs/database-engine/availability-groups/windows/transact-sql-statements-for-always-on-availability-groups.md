@@ -13,12 +13,12 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9711abe965e293824da78bf0d956311679fc7c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506548"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性组的 Transact-SQL 语句
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47771415"
 -   [有关 AVAILABILITY GROUP Transact-SQL 语句的限制](#Restrictions)  
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 创建数据库镜像终结点（如果服务器实例上不存在任何终结点）。 要对其部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像的每个服务器实例都需要一个数据库镜像端点。  
+ [CREATE ENDPOINT ...FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 创建数据库镜像终结点（如果服务器实例上不存在任何终结点）。 要对其部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像的每个服务器实例都需要一个数据库镜像端点。  
   
  在您对其创建端点的服务器实例上执行此语句。 仅能在给定的服务器实例上创建一个数据库镜像端点。 有关详细信息，请参阅 [数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47771415"
   
  在承载当前主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上执行 ALTER AVAILABILITY GROUP。  
   
-##  <a name="AlterDb"></a> 更改数据库… SET HADR …  
+##  <a name="AlterDb"></a> ALTER DATABASE ...SET HADR ...  
  使用 ALTER DATABASE 语句的 [SET HADR](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 子句的选项，您可以将辅助数据库联接到相应主数据库的可用性组、删除已联接的数据库、在已联接的数据库上挂起数据同步以及继续数据同步。  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  

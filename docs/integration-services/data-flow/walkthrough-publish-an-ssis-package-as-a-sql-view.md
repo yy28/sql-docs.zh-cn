@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521232"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
@@ -243,7 +243,7 @@ GO
  OPENQUERY 函数的语法是：  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Folder、Project 和 Package 参数是必需的。 Use32BitRuntime、Timeout 和 Parameters 是可选的。  
@@ -256,15 +256,15 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  以下列表指定了查询子句中允许的特殊字符：  
   
--   单引号 (‘) – 标准 OPENQUERY 支持此字符。 如果你想要在查询子句中使用单引号，请使用两个单引号 (‘’)。  
+-   单引号 (') - 标准 OPENQUERY 支持此字符。 如果你想要在查询子句中使用单引号，请使用两个单引号 ('')。  
   
--   双引号 (“) – 查询的参数部分括在双引号中。 如果参数值本身包含双引号，请使用转义符。 例如：\”。  
+-   双引号 (") - 查询的参数部分括在双引号中。 如果参数值本身包含双引号，请使用转义符。 例如： \"。  
   
--   左右方括号（[ 和 ]）– 这些字符用于指示首部/尾部空格。 例如，“[ some spaces ]”表示字符串“ some spaces ”的首部和尾部各有一个空格。 如果在查询子句中使用这些字符本身，必须将其转义。 例如， \\[ 和 \\]。  
+-   左右方括号（[ 和 ]）- 这些字符用于指示首部/尾部空格。 例如，“[ some spaces ]”表示字符串“ some spaces ”的首部和尾部各有一个空格。 如果在查询子句中使用这些字符本身，必须将其转义。 例如， \\[ 和 \\]。  
   
--   正斜杠 (\\) – 查询子句中使用的每个 \ 必须使用转义符。 例如，查询子句中的 \\\ 将作为 \ 计算。  
+-   正斜杠 (\\) - 查询子句中使用的每个 \ 必须使用转义符。 例如，查询子句中的 \\\ 将作为 \ 计算。  
   
- 正斜杠 (\\) – 查询子句中使用的每个 \ 必须使用转义符。 例如，查询子句中的 \\\ 将作为 \ 计算。  
+ 正斜杠 (\\) - 查询子句中使用的每个 \ 必须使用转义符。 例如，查询子句中的 \\\ 将作为 \ 计算。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流目标](../../integration-services/data-flow/data-streaming-destination.md)   

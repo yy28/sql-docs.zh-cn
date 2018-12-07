@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545455"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 
@@ -1079,7 +1079,7 @@ OFF
   
 指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。  
   
-TARGET_RECOVERY_TIME =target_recovery_time { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 指定在发生崩溃的情况下恢复指定数据库的最大上限时间。  
   
@@ -1910,7 +1910,7 @@ OFF
   
 指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。  
   
-TARGET_RECOVERY_TIME =target_recovery_time { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 指定在发生崩溃的情况下恢复指定数据库的最大上限时间。  
   
@@ -2638,7 +2638,7 @@ OFF
   
 指定每个数据库上间接检查点的频率。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，新数据库的默认值为 1 分钟，表示数据库使用间接检查点。 较旧版本的默认值为 0，表示数据库使用自动检查点，其频率依赖于服务器实例的恢复间隔设置。 对于大多数系统，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议设置为 1 分钟。  
   
-TARGET_RECOVERY_TIME =target_recovery_time { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 指定在发生崩溃的情况下恢复指定数据库的最大上限时间。  
   

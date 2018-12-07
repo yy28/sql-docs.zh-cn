@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de1896d8c94113070dbfc57e31e7af8851b5ce0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507723"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "51560175"
   
 8.  指定文件的初始大小。 根据数据库中您希望的最大数据量，使数据文件尽可能大。  
   
-9. 若要指定文件的增长方式，请在“自动增长”列中单击 (**…**)。 从下列选项中进行选择：  
+9. 若要指定文件的增长方式，请在“自动增长”列中单击 (…)。 从下列选项中进行选择：  
   
     1.  若要允许当前选中的文件根据数据空间量的需求增加而增长，请选中 **“启用自动增长”** 复选框，然后从下列选项中进行选择：  
   

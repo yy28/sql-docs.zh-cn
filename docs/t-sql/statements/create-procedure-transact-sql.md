@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512121"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -231,7 +231,7 @@ ENCRYPTION
 EXECUTE AS 子句  
  指定在其中执行过程的安全上下文。  
   
- 对于本机编译存储过程（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中），EXECUTE AS 子句没有任何限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，对于本机编译的存储过程，支持 SELF、OWNER 和 ‘user_name’ 子句。  
+ 对于本机编译存储过程（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中），EXECUTE AS 子句没有任何限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，对于本机编译的存储过程，支持 SELF、OWNER 和“user_name”子句。  
   
  有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
@@ -498,7 +498,7 @@ GO
 |[基本语法](#BasicSyntax)|CREATE PROCEDURE|  
 |[传递参数](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • 表值参数类型 <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[使用存储过程修改数据](#Modify)|UPDATE|  
-|[错误处理](#Error)|TRY…CATCH|  
+|[错误处理](#Error)|TRY...CATCH|  
 |[对过程定义进行模糊处理](#Encrypt)|WITH ENCRYPTION|  
 |[强制过程重新编译](#Recompile)|WITH RECOMPILE|  
 |[设置安全性上下文](#Security)|EXECUTE AS|  
@@ -797,7 +797,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> 错误处理  
  此节中的示例介绍一些方法，这些方法用于处理在执行存储过程时可能出现的错误。  
   
-#### <a name="j-using-trycatch"></a>J. 使用 TRY…CATCH  
+#### <a name="j-using-trycatch"></a>J. 使用 TRY...CATCH  
  以下示例使用 TRY…CATCH 构造返回在执行存储过程期间捕获的错误信息。  
   
 ```sql  

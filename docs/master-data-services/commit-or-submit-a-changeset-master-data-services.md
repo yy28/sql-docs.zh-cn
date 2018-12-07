@@ -12,24 +12,24 @@ ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d225720f7ee2f975df742400117852f3bb6e60d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6e6be6a7ac89e2d7eee61c1c44cf5392532ffc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606015"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395320"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>确认提交变更集 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  变更集是主数据的挂起更改的集合。 如果实体的更改不需要管理员审批，则你可以确认变更集。 如果实体的更改需要管理员审批，则你可以提交变更集以供审批。  
+  变更集是主数据的挂起更改的集合。 如果实体的更改不需要管理员审批，则可以提交变更集。 如果实体的更改需要管理员审批，则你可以提交变更集以供审批。  
   
 ## <a name="prerequisites"></a>必备条件  
   
 -    您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)  
   
--   如果实体的更改不需要管理员审批，仅当你拥有变更集并且变更集状态为打开时，你才可以确认变更集。  
+-   如果实体的更改不需要管理员审批，只有当拥有变更集并且变更集状态为打开时，才可以确认变更集。  
   
 -   如果实体的更改需要管理员审批，仅当你拥有变更集并且变更集状态为打开或已拒绝时，你才可以提交变更集以供审批。  
   

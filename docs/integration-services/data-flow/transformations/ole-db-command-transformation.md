@@ -16,12 +16,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506562"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
   OLE DB 命令转换对数据流中的每一行运行一条 SQL 语句。 例如，您可以运行 SQL 语句以在数据库表中插入、更新或删除行。  
@@ -67,7 +67,7 @@ ms.locfileid: "47799868"
   
 6.  在 **“连接管理器”** 选项卡上，从 **“连接管理器”** 列表中选择 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-7.  单击“组件属性”选项卡，并单击 **SqlCommand** 框中的省略号按钮 **(…)**。  
+7.  单击“组件属性”选项卡，并单击“SqlCommand”框中的省略号按钮 (…)。  
   
 8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。  
   

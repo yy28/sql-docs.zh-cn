@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539725"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,13 +88,13 @@ ms.locfileid: "47717935"
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在 **“索引键列”** 选项卡下，单击 **“添加…”**。  
+6.  在“索引键列”选项卡下，单击“添加…”。  
   
 7.  在“从 _table\_name_ 中选择列”对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   
-9. 在 **“包含性列”** 选项卡下，单击 **“添加…”**。  
+9. 在“包含性列”选项卡下，单击“添加…”。  
   
 10. 在“从 _table\_name_ 中选择列”对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47717935"
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>创建带有非键列的索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

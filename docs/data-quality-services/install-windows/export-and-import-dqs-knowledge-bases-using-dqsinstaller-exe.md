@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e1f999908a0cf5ed006c651da31701cb4aa93ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b76eca15b4c435230c2449d79dd892fd9bd736a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772175"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617447"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 
@@ -33,7 +32,7 @@ ms.locfileid: "47772175"
 -   若要将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，请通过命令提示符使用 `exportkbs` 参数并使用要将知识库导出到的位置的完整路径和文件名来运行 DQSInstaller.exe。 例如，将所有知识库导出到 C: 驱动器中的 DQSBackup.dqsb 文件：  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -42,7 +41,7 @@ ms.locfileid: "47772175"
 -   若要在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]时将所有知识库导出到 DQS 备份文件，请通过命令提示符使用 `uninstall` 并使用要将知识库导出到的位置的完整路径和文件名来运行 DQSInstaller.exe。 例如，将所有知识库导出到 C: 驱动器中的 DQSBackup.dqsb 文件，然后卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]：  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -54,7 +53,7 @@ ms.locfileid: "47772175"
  通过命令提示符使用 `importkbs` 参数并使用要从中导入知识库的位置的完整路径和文件名来运行 DQSInstaller.exe 文件。 例如，从 C: 驱动器中的 DQSBackup.dqsb 文件导入所有知识库：  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
  如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中存在使用要导入的知识库的名称的知识库，则导入的知识库名称将追加一条下划线 (_)，后跟从 1 开始的整数值。 例如，如果“CompanyName”域重复，则导入的域名称将为“CompanyName_1”。  

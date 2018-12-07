@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2d9dcbb729c09ef327861430a36f4565c2645d3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642662"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541902"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "51642662"
 ##  <a name="SetOEServerColor"></a> 在对象资源管理器中为服务器设置状态颜色  
  **在对象资源管理器中设置服务器状态颜色**  
   
-1.  在 **“对象资源管理器”** 中，选择 **“连接”** 按钮，然后选择 **“数据库引擎…”**。  
+1.  在“对象资源管理器”中，选择“连接”按钮，然后选择“数据库引擎…”。  
   
 2.  在“连接到服务器”对话框上，选择“选项 >>”。  
   
 3.  选中 **“使用自定义颜色”** 复选框。  
   
-4.  若要选择颜色，请选择 **“选择…”** 按钮。  
+4.  若要选择颜色，请选择“选择...”按钮。  
   
 5.  选择基础颜色或自定义颜色，然后选择“确定”。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "51642662"
 ##  <a name="SetRegServerColor"></a> 为已注册服务器设置状态颜色  
  **为已注册服务器设置服务器颜色**  
   
-1.  在 **“已注册服务器”** 中，右键单击服务器节点，然后选择 **“属性…”**。  
+1.  在“已注册服务器”中，右键单击服务器节点，然后选择“属性…”。  
   
 2.  在 **“编辑服务器注册属性”** 对话框中，选择 **“连接属性”** 选项卡。  
   
 3.  选中 **“使用自定义颜色”** 复选框。  
   
-4.  若要选择颜色，请选择 **“选择…”** 按钮。  
+4.  若要选择颜色，请选择“选择...”按钮。  
   
 5.  选择基础颜色或自定义颜色，然后选择“确定”。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "51642662"
   
 -   选中 **“使用自定义颜色”** 复选框。  
   
--   若要选择颜色，请选择 **“选择…”** 按钮。  
+-   若要选择颜色，请选择“选择...”按钮。  
   
 -   选择基础颜色或自定义颜色，然后选择“确定”。  
   

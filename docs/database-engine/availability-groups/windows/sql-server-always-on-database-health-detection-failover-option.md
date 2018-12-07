@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 649ebf4f39013ccc44b26c74acd311fe4f712f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525113"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ NAME  |  db_failover
 >
 >2016-04-25 12:20:21.15 spid79      错误: 41653，严重性: 21，状态: 1。
 >
->2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。**
+>2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。
 >
 >2016-04-25 12:20:21.17 spid79      数据库“AutoHa-Sample”的状态信息 - 强化的 Lsn:“(34:664:1)”    提交 LSN:“(34:656:1)”    提交时间:“Apr 25 2016 12:19PM”
 >

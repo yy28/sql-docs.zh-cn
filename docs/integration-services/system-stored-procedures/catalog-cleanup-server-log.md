@@ -11,12 +11,12 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbcf940b5679a22ff6d2c0692878b6c57e104ddb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544702"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ catalog.cleanup_server_log
 ## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表。 该属性有两个可能值：  
   
--   PER_EXECUTION (1) - 为每次执行创建用于保护敏感执行参数和执行日志的证书和对称密钥。 因为每次执行都会生成证书/密钥，生产环境中可能会出现性能问题（死锁、失败的维护工作等）。 但是，此设置提供的安全性级别比其他值 (2) 高。  
+-   **PER_EXECUTION (1)** - 为每次执行创建用于保护敏感执行参数和执行日志的证书和对称密钥。 因为每次执行都会生成证书/密钥，生产环境中可能会出现性能问题（死锁、失败的维护工作等）。 但是，此设置提供的安全性级别比其他值 (2) 高。  
   
--   PER_PROJECT (2) – 为每个项目创建用于保护敏感参数的证书和对称密钥。 PER_PROJECT (2) 是默认值。 此设置提供比 PER_EXECUTION 级别更好的性能，因为密钥和证书针对一个项目生成一次，而不是为每次执行生成。  
+-   **PER_PROJECT (2)** - 为每个项目创建用于保护敏感参数的证书和对称密钥。 PER_PROJECT (2) 是默认值。 此设置提供比 PER_EXECUTION 级别更好的性能，因为密钥和证书针对一个项目生成一次，而不是为每次执行生成。  
   
  必须先运行 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) 存储过程，然后才可将 SERVER_OPERATION_ENCRYPTION_LEVEL 从 2 更改为 1 或从 1 更改为 2。 在运行此存储过程之前，请执行以下操作：  
   

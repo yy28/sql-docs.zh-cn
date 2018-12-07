@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c123c562a9f0d6c581fb6a69fcc52d0126302a6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642716"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508734"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "51642716"
 ### <a name="using-the-filenew-menu"></a>使用“文件”/“新建”菜单  
  在 **“文件”** 菜单上，单击 **“新建”**，然后选择一个查询编辑器选项：  
   
--   **使用当前连接查询** – 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开一个类型与当前连接相关联的新的编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后使用 **“使用当前连接查询”**， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
+-   **使用当前连接查询** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开一个类型与当前连接相关联的新的编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后使用 **“使用当前连接查询”**， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
   
--   **数据库引擎查询** – 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例所需的信息。  
+-   **数据库引擎查询** - 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例所需的信息。  
   
 -   **Analysis Services MDX 查询** - 打开一个新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所需的信息。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "51642716"
 ### <a name="using-the-toolbar"></a>使用工具栏  
  在 **“标准”** 工具栏上，单击下列按钮之一：  
   
--   **新建查询** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开一个类型与当前连接相关联的新编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后单击 **“新建查询”** 按钮， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
+-   **新建查询** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开一个类型与当前连接相关联的新编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后单击 **“新建查询”** 按钮， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
   
--   **数据库引擎查询** – 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例所需的信息。  
+-   **数据库引擎查询** - 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例所需的信息。  
   
 -   **Analysis Services MDX 查询** - 打开一个新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所需的信息。  
   

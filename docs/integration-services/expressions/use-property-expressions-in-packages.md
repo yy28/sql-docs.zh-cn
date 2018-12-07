@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531614"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
@@ -70,7 +70,7 @@ ms.locfileid: "51641384"
   
  ![属性表达式的用户界面](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "属性表达式的用户界面")  
   
- 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮 “(…)”，以打开“属性表达式编辑器”对话框。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 **(…)** 以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。  
+ 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮“(…)”，以打开“属性表达式编辑器”对话框。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 (…) 以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。  
   
  还可以从 **“属性表达式编辑器”** 对话框打开 **“表达式生成器”** 对话框。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808755"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414095"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
@@ -324,7 +324,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |“列”|描述|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
-|ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath。|  
+|ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath|  
 |UserName|用户标识符。|  
 |ExecutionID||  
 |RequestType|请求类型（用户或系统）。|  

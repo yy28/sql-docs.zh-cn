@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceaaa60f305bceb51e6c0cfec45da926b1084a37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543451"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
   创建 SSL 证书绑定。  
@@ -71,7 +71,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  指定的 IPAddress 与此计算机的 IPAddress 不对应。  
   
-3.  指定的 IPAddress 为 DHCP IPAddress（定期更改）– 请改用通配符 IP 地址 (0.0.0.0)。  
+3.  指定的 IPAddress 为 DHCP IPAddress（定期更改）- 请改用通配符 IP 地址 (0.0.0.0)。  
   
 4.  指定的 IPAddress 与某个 URL 预留的 IP 地址不匹配，并且没有通配符或主机名 URL 预留。  
   

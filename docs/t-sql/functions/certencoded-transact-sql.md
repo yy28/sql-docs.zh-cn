@@ -18,17 +18,17 @@ ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6764a93f2dc1f6cb81d1c592a3392c12aa86bb41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc3aec9795bd8d002602020e97d061b358ad55c9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674985"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506851"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-此函数返回二进制格式的证书的公共部分。 此函数将证书 ID 作为参数，并返回已编码的证书。 若要创建新证书，请将二进制结果传递给 CREATE CERTIFICATE … WITH BINARY。
+此函数返回二进制格式的证书的公共部分。 此函数将证书 ID 作为参数，并返回已编码的证书。 若要创建新证书，请将二进制结果传递给 **CREATE CERTIFICATE ...WITH BINARY**。
   
 ## <a name="syntax"></a>语法  
   

@@ -13,12 +13,12 @@ ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cb783b76e29ec77dd421fb3a73b34aa04dbb228d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a20d3850b281519d05769de2af5b0fd2dd1cbe85
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850885"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302800"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 数据库属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47850885"
   
  这两种情况均要求具有特定程度的权限，并且在已附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库的上下文中使用这两种情况时，应采取相应的机制保护这两种情况。 但是，如果数据库脱机，则对数据库文件具有访问权限的用户可能会将其附加到其选择的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，并将有害内容添加到数据库中。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中分离和附加数据库时，将对限制访问数据库文件的数据和日志文件设置某些权限。  
   
- 因为无法立即信任附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库，所以不允许数据库访问超出数据库范围的资源，直到数据库已显式标记为可信。 此外，旨在访问数据库以外资源的模块和带有 EXTERNAL_ACCESS 或 UNSAFE 权限设置的程序集还需要其他条件才能成功运行。  
+ 因为无法立即信任附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库，所以不允许数据库访问超出数据库范围的资源，直到数据库已显式标记为可信。 因此，如果备份或分离 TRUSTWORTHY 选项设置为 ON 的数据库并将该数据库附加或还原到同一个或另一个 SQL Server 实例，则附加/还原完成后 TRUSTWORTHY 属性将设置为 OFF。 此外，旨在访问数据库以外资源的模块和带有 EXTERNAL_ACCESS 或 UNSAFE 权限设置的程序集还需要其他条件才能成功运行。  
   
 ## <a name="related-content"></a>相关内容  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

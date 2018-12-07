@@ -34,12 +34,12 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638814"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540898"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
@@ -123,7 +123,7 @@ ms.locfileid: "51638814"
 ## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊查找转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引。 这些临时表和索引的大小与引用表中的行数和标记数以及模糊查找转换所创建的标记数成比例；因此，它们有可能会占用相当大的磁盘空间。 该转换也会查询这些临时表。 因此，应该考虑将模糊查找转换连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的非生产实例中，在生产服务器只有有限的可用磁盘空间时，尤其应该如此。  
   
- 如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。 如果模糊查找转换使用的引用表位于生产服务器上，您应该考虑将该表复制到非生产服务器，并将模糊查找转换配置为访问该副本。 这样做可以防止查找查询占用生产服务器上的资源。 此外，如果模糊查找转换维护匹配索引（即如果 MatchIndexOptionsis 设置为 **GenerateAndMaintainNewIndex**），则转换可以在执行数据清理操作的过程中锁定引用表，以防止其他用户和应用程序访问该表。  
+ 如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。 如果模糊查找转换使用的引用表位于生产服务器上，您应该考虑将该表复制到非生产服务器，并将模糊查找转换配置为访问该副本。 这样做可以防止查找查询占用生产服务器上的资源。 此外，如果模糊查找转换维护匹配索引（即如果 MatchIndexOptionsis 设置为“GenerateAndMaintainNewIndex”），则转换可以在执行数据清理操作的过程中锁定引用表，以防止其他用户和应用程序访问该表。  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>配置模糊查找转换  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  

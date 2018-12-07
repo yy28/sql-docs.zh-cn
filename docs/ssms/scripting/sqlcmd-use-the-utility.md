@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd2bd8733c3de4a7ca14000fb56f11e9a63780
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642681"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617868"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -479,7 +479,7 @@ ms.locfileid: "51642681"
   
 -   -N 开关，客户端使用它来请求加密连接。 此选项等同于 ADO.net 选项 `ENCRYPT = true`。  
   
--   –C 开关，客户端用来将其配置为隐式信任服务器证书且不对其进行验证。 此选项等同于 ADO.net 选项 `TRUSTSERVERCERTIFICATE = true`。  
+-   -C 开关，客户端用来将其配置为隐式信任服务器证书且不对其进行验证。 此选项等同于 ADO.net 选项 `TRUSTSERVERCERTIFICATE = true`。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务并不支持 SQL Server 实例上所有可用的 `SET` 选项。 当将相应的 `SET` 选项设置为 `ON` 或 `OFF`时，下面的选项将引发错误：  
   
@@ -505,21 +505,21 @@ ms.locfileid: "51642681"
  使用 Windows 凭据进行连接并对通信加密：  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  使用 Windows 凭据进行连接并信任服务器证书：  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -528,28 +528,28 @@ SQLCMD –E –N –C
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

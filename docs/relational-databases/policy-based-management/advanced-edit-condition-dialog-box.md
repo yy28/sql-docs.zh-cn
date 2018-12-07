@@ -13,12 +13,12 @@ ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 677f361bacec8b5298f777069ed387e3d2cc418c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 516e038e8ef8d13585cb1c06470ae88ef993a3e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535425"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>“高级编辑”（条件）对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "51661786"
 |**DateTime()**|DateTime DateTime (String dateString)|根据字符串创建一个 datetime 值。|dateString - 字符串形式的 datetime 值。|返回一个根据输入字符串创建的 datatime 值。|`DateTime('3/12/2006')`|  
 |**Divide()**|Numeric Divide (Numeric expression_dividend, Numeric expression_divisor)|用一个数除以另一个数。|expression_dividend - 被除数的数值表达式。 被除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。<br /><br /> expression_divisor - 除数的数值表达式。 除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。|返回优先级高的参数的数据类型。|**例如：** `Divide(Property1, 2)`<br /><br /> 注意：这是一个双精度运算。 若要进行整数比较，必须将结果与 `Round()`结合。 例如： `Round(Divide(10, 3), 0) = 3`。|  
 |**Enum()**|Numeric Enum (String enumTypeName, String enumValueName)|根据字符串创建枚举值。|enumTypeName - 枚举类型的名称。<br /><br /> enumValueName - 枚举的值。|返回数值类型的枚举值。|`Enum('CompatibilityLevel','Version100')`|  
-|**Escape()**|String Escape (String replaceString, String stringToEscape, String escapeString)|使用给定的转义字符串将输入字符串的子字符串转义。|*replaceString* – 输入字符串。<br /><br /> *stringToEscape* – *replaceString*的子字符串。 这是您要在前面添加转义字符串的字符串。<br /><br /> *escapeString* – 您要在每个 *stringToEscape*实例的前面添加的转义字符串。|返回修改的 *replaceString* ，其中 *stringToEscape* 的每个实例的前面都有 *escapeString*。|`Escape("Hello", "l", "[")` 返回“`He[l[lo`”。|  
+|**Escape()**|String Escape (String replaceString, String stringToEscape, String escapeString)|使用给定的转义字符串将输入字符串的子字符串转义。|replaceString - 输入字符串。<br /><br /> stringToEscape - replaceString的子字符串。 这是您要在前面添加转义字符串的字符串。<br /><br /> escapeString - 要在每个 stringToEscape 实例的前面添加的转义字符串。|返回修改的 *replaceString* ，其中 *stringToEscape* 的每个实例的前面都有 *escapeString*。|`Escape("Hello", "l", "[")` 返回“`He[l[lo`”。|  
 |**ExecuteSQL()**|Variant ExecuteSQL (String returnType, String sqlQuery)|对目标服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。<br /><br /> 有关 ExecuteSql() 的详细信息，请参阅 [ExecuteSql() 函数](https://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)。|returnType - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句返回的数据类型。 *returnType* 的有效文字如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> sqlQuery - 包含要执行的查询的字符串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 针对 SQL Server 的目标实例运行一个标量值 TRANSACT-SQL 查询。 在 `SELECT` 语句中只能指定一列；第一列之外的其他列将被忽略。 生成的查询应只返回一行；第一行以外的其他行将被忽略。 如果查询返回空集，则围绕 `ExecuteSQL` 构建的条件表达式的计算结果将为 false。 `ExecuteSql` 支持 **按需** 和 **按计划** 计算模式。<br /><br /> -`@@ObjectName`设置用户帐户 ：<br />                      对应于 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名称字段。 该变量将替换为当前对象的名称。<br /><br /> -`@@SchemaName`：对应于 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 该变量将替换为当前对象的架构名称（如果适用）。<br /><br /> 注意：若要在 ExecuteSQL 语句中包含单引号，请再使用一个单引号将其转义。 例如，若要加入对用户 O'Brian 的引用，请键入 O''Brian。|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string returnType , string namespace, string wql)|对提供的命名空间执行 WQL 脚本。 Select 语句只能包含一个返回列。 如果提供多个列，则会引发错误。|returnType - 指定 WQL 返回的数据的返回类型。 有效文字为 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> namespace - 要对其执行脚本的 WMI 命名空间。<br /><br /> wql - 包含要执行的 WQL 的字符串。||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|返回布尔值 FALSE。|无|返回布尔值 FALSE。|`IsDatabaseMailEnabled = False()`|  

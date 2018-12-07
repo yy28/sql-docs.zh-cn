@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f53679294052b114ab2247ee47916aac6ff5fd3f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697821"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394514"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1049,7 +1049,7 @@ GO
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全局临时表（表名以 ## 开头）存储在 tempdb 中，并跨整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在所有用户会话之间共享。 有关 SQL 表类型的信息，请参阅上述“创建表”章节。  
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支持存储在 tempdb 中，且范围限定为数据库级别的全局临时表。 也就是说，全局临时表对同一 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中的所有用户会话进行共享。 其他数据库中的用户会话无法访问全局临时表。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支持存储在 tempdb 中，且范围限定为数据库级别的全局临时表。 也就是说，全局临时表对同一 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的所有用户会话进行共享。 其他数据库中的用户会话无法访问全局临时表。
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的全局临时表遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对临时表使用的相同语法和语义。 同样，全局临时存储过程也在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中将范围限定为数据库级别。 局部临时表（表名以 # 开头）也受 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支持，并遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的相同语法和语义。  请参阅上述[临时表](#temporary-tables)章节。  
 

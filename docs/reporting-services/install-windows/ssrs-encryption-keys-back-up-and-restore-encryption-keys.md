@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6c7dd24c716849d6d36ca28908d57c0e715f17c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81bfdfb8d622096b30ea76a7632c5fd61ac833e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514996"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密密钥 - 备份和还原加密密钥
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47645095"
   
 5.  选择“确定”。  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> 备份加密密钥 – rskeymgmt（本机模式）  
+###  <a name="bkmk_backup_rskeymgmt"></a> 备份加密密钥 - rskeymgmt（本机模式）  
   
 1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 必须使用 **-e** 提取参数来复制密钥、提供文件名并指定密码。 下面的示例演示必须指定的参数：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47645095"
   
 5.  选择“确定”。 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> 还原加密密钥 – rskeymgmt（本机模式）  
+###  <a name="bkmk_restore_rskeymgmt"></a> 还原加密密钥 - rskeymgmt（本机模式）  
   
 1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 使用 **-a** 参数还原密钥。 必须提供完全限定的文件名，并指定密码。 下面的示例演示必须指定的参数：  
   

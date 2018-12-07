@@ -13,12 +13,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39044dfd57f4ae6a05a85e7cf21d4e7def5fb1c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 635fe088e51c17e1367eaaeab7e528e2f12e5dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659515"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529681"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47659515"
  有关详细信息，请参阅本主题后面的“备注”。  
   
 ## <a name="remarks"></a>Remarks  
- 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”**。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
+ 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”**。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示“等待数据...”。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47659515"
  在给定的伙伴上，记录的事件取决于它当前的角色，即主体或镜像。 但是，我们建议您在两个伙伴中都为给定的事件设置警告阈值，以确保数据库进行故障转移时警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。  
   
 > [!NOTE]  
->  也可以使用 **sp_dbmmonitorchangealertt** 系统存储过程来为等价的事件（如未发送日志、未恢复日志、最早的未发送事务和镜像提交开销）配置阈值。 有关详细信息，请参阅 [sp_dbmmonitorchangealert & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)。  
+>  也可以使用“sp_dbmmonitorchangealertt”系统存储过程来为等价的事件（如未发送日志、未恢复日志、最早的未发送事务和镜像提交开销）配置阈值。 有关详细信息，请参阅 [sp_dbmmonitorchangealert & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)。  
   
  下表显示与每个警告关联的事件 ID。  
   

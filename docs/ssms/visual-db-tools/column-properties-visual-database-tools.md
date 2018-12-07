@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6914306472ae5eb438c8d7384f2a5e0d9128c17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527084"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "51698775"
 展开此项可显示剩余的属性。  
   
 **排序规则**  
-显示所选列的排序规则设置。 若要更改此设置，请单击“排序规则”，再单击值右侧的省略号 **(…)**。  
+显示所选列的排序规则设置。 若要更改此设置，请单击“排序规则”，再单击值右侧的省略号“(…)”。  
   
 **计算列规范类别**  
 展开此项可显示“公式”和“是持久的”属性。 如果该列是计算列，则还会显示公式。 若要编辑公式，请展开此类别，然后在“公式”属性中对其进行编辑。  
@@ -128,7 +128,7 @@ ms.locfileid: "51698775"
 按与 SQL CREATE TABLE 语句同样的格式显示有关字段的数据类型的信息。 例如，一个包含可变长度字符串（最大长度为 20 个字符）的字段将表示为“varchar(20)”。 若要更改此属性，请直接键入值。  
   
 **Description**  
-显示列的说明。 若要查看或编辑完整说明，请单击“说明”，再单击属性右侧的省略号 **(…)** 。  
+显示列的说明。 若要查看或编辑完整说明，请单击“说明”，再单击属性右侧的省略号“(…)”。  
   
 **全文本规范类别**  
 展开此项可显示专用于全文本列的属性。  

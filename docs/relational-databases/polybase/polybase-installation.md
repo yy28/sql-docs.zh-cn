@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523481"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -180,11 +180,11 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 SQL Server PolyBase 安装程序将在计算机上创建以下防火墙规则：  
    
-- SQL Server PolyBase – 数据库引擎 - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - Database Engine - \<SQLServerInstanceName> (TCP-In)  
    
-- SQL Server PolyBase – PolyBase 服务 - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - PolyBase Services - \<SQLServerInstanceName> (TCP-In)  
 
-- SQL Server PolyBase – SQL Browser - (UDP-In)  
+- SQL Server PolyBase - SQL Browser - (UDP-In)  
    
 安装时，如果使用 SQL Server 实例作为 PolyBase 横向扩展组中的一部分，则将启用这些规则。 防火墙将开启以允许传入连接。 允许将这些连接用于 SQL Server 数据库引擎、SQL Server PolyBase 引擎、SQL Server PolyBase 数据移动服务和 SQL Browser。 如果安装期间未运行计算机上的防火墙服务，SQL Server 安装程序将无法启用这些规则。 在这种情况下，请在计算机上启动防火墙服务并启用这些安装后规则。  
    

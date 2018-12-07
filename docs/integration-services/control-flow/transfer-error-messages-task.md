@@ -17,12 +17,12 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640854"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518789"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
   传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
@@ -116,13 +116,13 @@ ms.locfileid: "51640854"
 |**False**|仅复制指定的用户定义消息。|  
   
  **ErrorMessagesList**  
- 单击浏览按钮 **(…)** 可选择要复制的错误消息。  
+ 单击浏览按钮 (...) 以选择要复制的错误消息。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  
   
  **ErrorMessageLanguagesList**  
- 单击浏览按钮 **(…)** 可选择要将哪些语言的用户定义错误消息复制到目标服务器。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
+ 单击浏览按钮 (...) 以选择将用户定义的错误消息发送到目标服务器所使用的语言。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  

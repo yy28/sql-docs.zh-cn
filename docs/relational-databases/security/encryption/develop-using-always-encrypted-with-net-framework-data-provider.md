@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6ad65d148f35255a93563cbdcb247efe8a61da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526524"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ cmd.ExecuteNonQuery();
 
 ## <a name="working-with-column-master-key-stores"></a>使用列主密钥存储
 
-若要对参数值进行加密或对查询结果中的数据进行解密，用于 SQL Server 的 .NET Framework 数据提供程序需要获取为目标列配置的列加密密钥。 列加密密钥以加密形式存储在数据库元数据中。 每个列加密密钥都有一个用于加密列加密密钥的相应列主密钥。 数据库元数据不会存储列主密钥 — 它只包含含有特定列主密钥的密钥存储的相关信息，以及该密钥在密钥存储中的位置。
+若要对参数值进行加密或对查询结果中的数据进行解密，用于 SQL Server 的 .NET Framework 数据提供程序需要获取为目标列配置的列加密密钥。 列加密密钥以加密形式存储在数据库元数据中。 每个列加密密钥都有一个用于加密列加密密钥的相应列主密钥。 数据库元数据不会存储列主密钥 - 它只包含含有特定列主密钥的密钥存储的相关信息，以及该密钥在密钥存储中的位置。
 
 为了获取列加密密钥的纯文本值，用于 SQL Server 的 .NET Framework 数据提供程序首先会获取列加密密钥和其相应列主密钥的相关元数据，然后使用元数据中的信息连接包含列主密钥的密钥存储，并对加密列的加密密钥进行解密。 用于 SQL Server 的 .NET Framework 数据提供程序使用列主密钥存储提供程序（一个派生自 [SqlColumnEncryptionKeyStoreProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)的类实例）与密钥存储通信。
 

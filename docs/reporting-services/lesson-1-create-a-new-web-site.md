@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9766b511d5dfce57dd91a4f19466249e00ad7ad8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d0cb8c5b4f5c11ee979724a7ebe519abfdf3f0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816315"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396441"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 课：创建新网站
-在本课程中，您将学习如何使用 Visual C# 的 ASP.NET 网站模板创建新网站项目。  
+在本课程中，你将学习如何使用 Visual C# 的 ASP.NET 网站模板创建新网站项目。  
   
 ## <a name="to-create-a-new-website"></a>创建新的网站  
   
@@ -31,4 +31,4 @@ ms.locfileid: "47816315"
 网站项目会打开并启动“报表向导”。 选择“取消”，取消“数据源”和“报表向导”，因为我们将在下一步中创建自定义数据集。  
   
 ## <a name="next-task"></a>下一个任务  
-您已成功地创建了一个新的网站项目。 接下来，将创建用于父报表的数据连接和数据表。 请参阅 [第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。
+你已成功地创建了一个新的网站项目。 接下来，将创建用于父报表的数据连接和数据表。 请参阅 [第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。

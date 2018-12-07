@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a171b8a55394ae974cdc9e891e94bd84c9511f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543797"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47653365"
 |反斜杠*|\\\|  
 |空终止符（不可见终止符）**|\0|  
 |任何可打印的字符（控制字符是不可打印的，除空值、制表符、换行符和回车之外）|（*、A、t、l 等）|  
-|最长可达 10 个可打印字符的字符串，包括上面列出的部分或全部终止符|（**\t\*\*、end、!!!!!!!!!!、\t—\n 等）|  
+|最长可达 10 个可打印字符的字符串，包括上面列出的部分或全部终止符|（**\t\*\*、end、!!!!!!!!!!、\t-\n 等）|  
   
  *只有 t、n、r、0 和 '\0' 字符与反斜杠转义字符一起使用才能生成控制符。  
   

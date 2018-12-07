@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522915"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -380,7 +380,7 @@ OUTPUT 子句
     ```  
   
 ## <a name="error-handling"></a>错误处理  
- 您可以通过在 TRY…CATCH 构造函数中指定 INSERT 语句，实现对该语句的错误处理。  
+ 可以通过在 TRY…CATCH 构造函数中指定 INSERT 语句，实现对该语句的错误处理。  
   
  如果 INSERT 语句违反约束或规则，或者包含与列的数据类型不兼容的值，则该语句将失败，并且返回错误消息。  
   

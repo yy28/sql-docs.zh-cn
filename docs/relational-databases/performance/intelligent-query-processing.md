@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660949"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403922"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ ms.locfileid: "51660949"
 ![“智能查询处理”功能](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>自适应查询处理
-“自适应查询处理”功能系列包含查询处理改进，以对应用程序工作负载的运行时状况采用优化策略。 具体改进包括：批处理模式自适应联接、内存授予反馈和多语句表值函数交错执行。
+“自适应查询处理”功能系列包含查询处理改进，以对应用程序工作负荷的运行时状况采用优化策略。 这些改进功能包括： 
+-  批处理模式自适应联接
+-  内存授予反馈
+-  多语句表值函数 (MSTVF) 交错执行
 
 ### <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
 此功能可让你的计划在使用单个缓存计划执行期间动态切换到更好的连接策略。
+
+有关批处理模式自适应联接的详细信息，请参阅 [SQL 数据库中的自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)。
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>行模式和批处理模式内存授予反馈
 > [!NOTE]
@@ -40,10 +45,12 @@ ms.locfileid: "51660949"
 
 此功能会重新计算查询所需的实际内存，然后更新缓存计划的授予值，从而减少影响并发的过度内存授予并修复导致磁盘大量溢出的低估内存授予。
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>多语句表值函数 (MSTVF) 交错执行
-通过交错执行，函数中的实际行计数可用于做出更明智的下游查询计划决策。 
+有关内存授予反馈的详细信息，请参阅 [SQL 数据库中的自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)。
 
-有关详细信息，请参阅 [SQL 数据库中的自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)。
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>多语句表值函数 (MSTVF) 交错执行
+通过交错执行，函数中的实际行计数可用于做出更明智的下游查询计划决策。 有关多语句表值函数 (MSTVF) 的详细信息，请参阅[表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+
+有关交错执行的详细信息，请参阅 [SQL 数据库中的自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)。
 
 ## <a name="table-variable-deferred-compilation"></a>表变量延迟编译
 > [!NOTE]
@@ -59,7 +66,7 @@ ms.locfileid: "51660949"
 > [!NOTE]
 > 标量 UDF 内联是公共预览版功能。  
 
-标量 UDF 内联自动将标量用户定义函数 (UDF) 转换为关系表达式，并将其嵌入调用 SQL 查询，从而提高利用标量 UDF 的工作负载性能。 标量 UDF 内联有助于实现基于成本的 UDF 内部操作优化，并产生面向集合的并行高效计划，而不是低效、迭代、串行执行计划。 在数据库兼容性级别 150 下默认启用此功能。
+标量 UDF 内联自动将[标量用户定义函数 (UDF)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) 转换为关系表达式，并将其嵌入调用 SQL 查询，从而提高利用标量 UDF 的工作负荷性能。 标量 UDF 内联有助于实现基于成本的 UDF 内部操作优化，并产生面向集合的并行高效计划，而不是低效、迭代、串行执行计划。 在数据库兼容性级别 150 下默认启用此功能。
 
 有关详细信息，请参阅[标量 UDF 内联](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions)。
 
@@ -76,9 +83,9 @@ ms.locfileid: "51660949"
 > 行存储的批处理模式是公共预览功能。  
 
 ### <a name="background"></a>背景
-SQL Server 2012 引入了一项可加速分析工作负载的新功能：列存储索引。 我们扩展了用例并改进了每个后续版本中列存储索引的性能。 到目前为止，我们将所有这些功能作为单一功能进行了表述和记录：在表上创建列存储索引，分析工作负载“只会更快”。 然而，事实上，有两套相关但不同的技术：
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引入了一项可加速分析工作负荷的新功能：列存储索引。 我们扩展了用例并改进了每个后续版本中列存储索引的性能。 到目前为止，我们将所有这些功能作为单一功能进行了表述和记录：在表上创建列存储索引，分析工作负载“只会更快”。 然而，事实上，有两套相关但不同的技术：
 - 列存储索引允许分析查询仅访问所需列中的数据。 与传统“行存储”索引中的页压缩相比，列存储格式还允许更有效的压缩。 
-- **批处理模式**处理允许查询运算符更有效地处理数据，方法是一次处理一批行，而不是一次一行。 许多其他可伸缩性改进都与批处理模式处理相关。
+- **批处理模式**处理允许查询运算符更有效地处理数据，方法是一次处理一批行，而不是一次一行。 许多其他可伸缩性改进都与批处理模式处理相关。 有关批处理模式的详细信息，请参阅[执行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 
 两组功能协同工作以提高 I/O 和 CPU 利用率：
 - 列存储索引允许更多数据适应内存，从而减少对 I/O 的需求。
@@ -117,6 +124,7 @@ SQL Server 2012 引入了一项可加速分析工作负载的新功能：列存�
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>配置行存储的批处理模式
 BATCH_MODE_ON_ROWSTORE 数据库作用域配置默认情况下处于启用状态，并且可用于禁用行存储的批处理模式，而无需更改数据库兼容性级别：
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 可以通过数据库作用域配置禁用行存储的批处理模式，但仍使用 ALLOW_BATCH_MODE 查询提示替代查询级别的设置。 以下示例启用行存储的批处理模式，即使通过数据库作用域配置禁用了该功能：
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 还可以通过使用 DISALLOW_BATCH_MODE 查询提示为特定查询禁用行存储的批处理模式。 例如：
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

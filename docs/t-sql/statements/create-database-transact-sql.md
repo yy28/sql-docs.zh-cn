@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 创建适用于 SQL Server、Azure SQL 数据库、Azure SQL 数据仓库和并行数据仓库的数据库语法
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532559"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -898,7 +898,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
@@ -1075,10 +1075,7 @@ AS COPY OF [source_server_name.]source_database_name
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的数据库具有多个在创建数据库时设置的默认设置。 有关这些默认设置的详细信息，请参阅 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 中的值列表。  
   
 MAXSIZE 提供限制数据库大小的功能。 如果数据库的大小达到其 MAXSIZE，你将收到错误代码 40544。 如果发生这种情况，您不能插入或更新数据或创建新的对象（如表、存储过程、视图和函数）。 不过，您仍可以读取和删除数据、截断表、删除表和索引以及重新建立索引。 然后，您可以将 MAXSIZE 更新为比当前数据库大小更大的值，或者删除一些数据以释放存储空间。 在您可以插入新数据之前，可能有长达十五分钟的延迟。  
-  
-> [!IMPORTANT]  
->  `CREATE DATABASE` 语句必须是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的唯一语句。 
-  
+   
 若要在以后更改大小、版本或服务目标值，请使用 [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbls)。  
 
 CATALOG_COLLATION 参数仅在数据库创建期间可用。 
@@ -1186,7 +1183,7 @@ CREATE DATABASE db_copy
 下面的示例在数据库创建期间将目录排序规则设置为 DATABASE_DEFAULT，其会将目录排序规则设置为与数据库排序规则相同。
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 'basic')  
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
@@ -1320,11 +1317,11 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *MAXSIZE*  
 默认为 245,760 GB (240 TB)。  
 
-适用于：“已针对弹性进行优化”性能层
+适用于：已针对计算 Gen1 进行优化
 
 允许的最大数据库大小。 数据库大小不能超出 MAXSIZE。 
 
-适用于：“已针对计算进行优化”性能层
+适用于：已针对计算 Gen2 进行优化
 
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。  压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。
   

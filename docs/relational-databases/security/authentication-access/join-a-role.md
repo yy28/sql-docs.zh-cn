@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539127"
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47699355"
   
 5.  在“服务器角色属性 - _server\_role\_name_”对话框的“成员”页中，单击“添加”。  
   
-6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - _server\_role\_name_”对话框。  
+6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - _server\_role\_name_”对话框。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47699355"
   
 8.  在“数据库角色属性 - _database\_role\_name_”对话框的“常规”页中，单击“添加”。  
   
-9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - _database\_role\_name_”对话框。  
+9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - _database\_role\_name_”对话框。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

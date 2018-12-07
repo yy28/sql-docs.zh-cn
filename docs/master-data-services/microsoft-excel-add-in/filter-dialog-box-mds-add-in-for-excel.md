@@ -11,12 +11,12 @@ ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4516be4acd8512feee743e986eea9fd554e4089e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808655"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403892"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
 
@@ -43,7 +43,7 @@ ms.locfileid: "47808655"
   
 |控件名称|描述|  
 |------------------|-----------------|  
-|Attribute|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：你可以依据你不准备在工作表中显示的属性进行筛选。|  
+|Attribute|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：可依据不准备在工作表中显示的属性进行筛选。|  
 |运算符|显示对应于所选属性的类型的运算符。 有关详细信息，请参阅 [Filter 运算符 (Master Data Services)](../../master-data-services/filter-operators-master-data-services.md)。|  
 |条件|筛选要依据的条件。|  
 |更新摘要|处理大型数据集时，单击该选项可使用要加载的数据的详细信息来更新 **“摘要”** 部分。|  

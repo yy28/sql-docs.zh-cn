@@ -1,7 +1,7 @@
 ---
 title: SQL Server 数据库引擎和 Azure SQL 数据库的性能中心 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/08/2016
+ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,15 +20,15 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd4ba3f1606c1d62a0cd85760213552770f6e94e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6211647a58035ef4ef9ca38ed6ca5c51ce5d419c
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665586"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302850"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL 数据库的性能中心
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中的性能的必要信息。  
   
  **图例**  
@@ -47,7 +47,12 @@ ms.locfileid: "51665586"
 |**数据库配置优化选项**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [数据压缩](../../relational-databases/data-compression/data-compression.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |**表配置优化**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|  
 |**Azure 虚拟机中的数据库引擎性能**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [快速检查列表](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [虚拟机大小和存储帐户注意事项](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [磁盘和性能注意事项](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [I/O 性能注意事项](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [功能特定的性能注意事项](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)|  
-  
+
+> [!IMPORTANT]
+> 其他注意事项请参阅：    
+> -  [适用于具有高性能工作负载的 SQL Server 2012 和 SQL Server 2014 的推荐更新和配置选项](https://support.microsoft.com/help/2964518)
+> -  [适用于具有高性能工作负载的 SQL Server 2017 和 SQL Server 2016 的推荐更新和配置选项](https://support.microsoft.com/help/4465518)
+
 ## <a name="query-performance-options"></a>查询性能选项  
   
 |||  
@@ -57,11 +62,12 @@ ms.locfileid: "51665586"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[联接](../../relational-databases/performance/joins.md)**|[联接基础知识](../../relational-databases/performance/joins.md#fundamentals)<br />[嵌套循环联接](../../relational-databases/performance/joins.md#nested_loops)<br />[合并联接](../../relational-databases/performance/joins.md#merge)<br />[联接](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[子查询](../../relational-databases/performance/subqueries.md)**|[子查询基础知识](../../relational-databases/performance/subqueries.md#fundamentals)<br />[相关子查询](../../relational-databases/performance/subqueries.md#correlated)<br />[子查询类型](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [存储过程](../stored-procedures/stored-procedures-database-engine.md)|[CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [用户定义函数](../user-defined-functions/user-defined-functions.md)|[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md#best-practices)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [用户定义函数](../user-defined-functions/user-defined-functions.md)|[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md#best-practices)<br />[创建用户定义函数（数据库引擎）](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **并行优化**|[配置 max worker threads 服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **查询优化器优化**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **查询优化器优化**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [统计信息](../../relational-databases/statistics/statistics.md)|[何时更新统计信息](../statistics/statistics.md)<br />[更新统计信息](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[通过本机编译的存储过程创建和访问 TempDB 中的表](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[对内存优化哈希索引的常见性能问题进行故障排除](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[演示：内存中 OLTP 的性能改进](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[通过本机编译的存储过程创建和访问 TempDB 中的表](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[对内存优化哈希索引的常见性能问题进行故障排除](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[演示：内存中 OLTP 的性能改进](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[智能查询处理](../../relational-databases\performance\intelligent-query-processing.md)**|[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)|
   
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

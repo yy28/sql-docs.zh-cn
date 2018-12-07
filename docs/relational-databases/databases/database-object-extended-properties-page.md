@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65d7ed2f7b7639ae2b92222ad97af6edba873f6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 773edf9a47ab10af5a1b00ee7f64b27f60c14191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522252"
 ---
 # <a name="database-object-extended-properties-page"></a>数据库对象（“扩展属性”页）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51671866"
  查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
   
  **“浏览”按钮**  
- 单击“值”后面的“浏览(…)”按钮可打开“扩展属性对话框的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。  
+ 单击“值”后面的浏览 (…) 按钮可打开“扩展属性对话框的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。  
   
  **删除**  
  删除所选扩展属性。  

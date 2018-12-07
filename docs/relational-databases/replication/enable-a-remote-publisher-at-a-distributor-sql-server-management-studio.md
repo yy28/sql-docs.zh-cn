@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63b21aec220de42f9bf9fb8cd5fae1f109e501fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05bbc6f6eaad17fc49f210d20ab78126a68eeb60
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541978"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在分发服务器上启用远程发布服务器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47710095"
   
 4.  在 **“分发服务器密码”** 页的 **“密码”** 和 **“确认密码”** 文本框中，为 **distributor_admin** 帐户指定强密码，复制将使用该密码从发布服务器连接到分发服务器以执行管理任务。  
   
-5.  若要查看并修改发布服务器的设置，请单击属性按钮 (**...**)。  
+5.  若要查看并修改发布服务器的设置，请单击属性按钮 (...)。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47710095"
   
 4.  在 **“分发服务器”** 页的 **“密码”** 和 **“确认密码”** 文本框中，为 **distributor_admin** 帐户指定强密码，复制将使用该密码从发布服务器连接到分发服务器以执行管理任务。  
   
-5.  若要查看并修改发布服务器的设置，请单击属性按钮 (**...**)。  
+5.  若要查看并修改发布服务器的设置，请单击属性按钮 (...)。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.opendqproject.f1
@@ -19,12 +18,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc3dd7357788f1a4aa305161f5c4d837e5f9a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773188"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617817"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>打开、解锁、重命名和删除数据质量项目
 
@@ -64,9 +63,9 @@ ms.locfileid: "47773188"
   
 4.  数据质量项目打开时的状态就是上次在其中关闭该项目的活动的状态。 数据质量项目具有以下状态：  
   
-    -   对于 **“清理”** 活动，数据质量项目可具有以下状态： **“清理 - 映射”**、 **“清理 - 清理”**、 **“清理 – 管理和查看结果”** 和 **“清理 – 导出”**。  
+    -   对于“清理”活动，数据质量项目可具有以下状态：“清理 - 映射”、“清理 - 清理”、“清理 - 管理和查看结果”和“清理 - 导出”。  
   
-    -   对于 **“匹配”** 活动，数据质量项目可具有以下状态： **“匹配 - 映射”**、 **“匹配 - 匹配”**、 **“匹配 – 存活”** 和 **“匹配 – 导出”**。  
+    -   对于“匹配”活动，数据质量项目可具有以下状态：“匹配 - 映射”、“匹配 - 匹配”、“匹配 - 存活”和“匹配 - 导出”。  
   
 ##  <a name="Unlock"></a> 解锁数据质量项目  
  数据质量项目在创建时处于锁定状态，以防其他用户使用或修改。 在完成操作后，如果您希望其他用户使用您的数据质量项目，则必须对该数据质量项目解锁。 锁定的项目将显示一个锁符号。  

@@ -1,7 +1,7 @@
 ---
 title: 服务器性能和活动监视 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,12 +20,12 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 579601ec5a7a3a9890c38d8f4883779d07e2a135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747255"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513669"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>服务器性能和活动监视
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,30 +33,50 @@ ms.locfileid: "47747255"
   
  下一节包含的主题说明了如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 性能以及活动监视工具。 本节包含以下主题：  
   
-## <a name="in-this-section"></a>本节内容  
- **使用 Windows 工具执行监视任务**  
+## <a name="to-perform-monitoring-tasks-with-windows-tools"></a>使用 Windows 工具执行监视任务 
   
 -   [启动系统监视器 (Windows)](../../relational-databases/performance/start-system-monitor-windows.md)  
   
 -   [查看 Windows 应用程序日志 (Windows)](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
- **使用 Windows 工具创建 SQL Server 数据库警报**  
+## <a name="to-create-sql-server-database-alerts-with-windows-tools"></a>使用 Windows 工具创建 SQL Server 数据库警报  
   
 -   [设置 SQL Server 数据库警报 (Windows)](../../relational-databases/performance/set-up-a-sql-server-database-alert-windows.md)  
 
- **使用扩展事件执行监视任务**  
+## <a name="to-perform-monitoring-tasks-with-extended-events"></a>使用扩展事件执行监视任务  
  
  -   [扩展事件](../../relational-databases/extended-events/extended-events.md)
  
-  -   [快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ 
+ -   [在对象资源管理器中管理事件会话](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+ 
+ -   [更改扩展事件会话](../../relational-databases/extended-events/alter-an-extended-events-session.md)
+ 
+ -   [将现有 SQL 跟踪脚本转换为扩展事件会话](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)
+ 
+ -   [查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
    
- **使用 SQL Server Management Studio 执行监视任务**  
+## <a name="to-perform-monitoring-tasks-with-sql-server-management-studio"></a>使用 SQL Server Management Studio 执行监视任务  
   
 -   [查看 SQL Server 错误日志 (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
 -   [打开活动监视器 (SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
-  
- **使用 Transact-SQL 存储过程并通过 SQL 跟踪执行监视任务**  
+
+-   [使用查询数据存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+
+## <a name="to-perform-monitoring-tasks-with-sql-trace-and-sql-server-profiler"></a>使用 SQL 跟踪和 SQL Server Profiler 执行监视任务
+
+> [!IMPORTANT]
+> 后续部分将介绍使用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方法。  
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的 Microsoft.SqlServer.Management.Trace 命名空间也已弃用。   
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+
+> [!NOTE] 
+> 针对 Analysis Services 工作负荷的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 尚未弃用，我们将继续提供支持。
+
+### <a name="to-perform-monitoring-tasks-with-sql-trace-by-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 存储过程并通过 SQL 跟踪执行监视任务  
   
 -   [创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
@@ -70,7 +90,7 @@ ms.locfileid: "47747255"
   
 -   [删除跟踪 (Transact-SQL)](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)  
   
- **使用 SQL Server Profiler 创建和修改跟踪**  
+### <a name="to-create-and-modify-traces-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 创建和修改跟踪  
   
 -   [创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -102,7 +122,7 @@ ms.locfileid: "47747255"
   
 -   [组织跟踪中显示的列 (SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
- **使用 SQL Server Profiler 启动、暂停和停止跟踪**  
+### <a name="to-start-pause-and-stop-traces-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 启动、暂停和停止跟踪  
   
 -   [连接到服务器后自动启动跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
@@ -112,7 +132,7 @@ ms.locfileid: "47747255"
   
 -   [在跟踪暂停或停止之后运行跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
- **使用 SQL Server Profiler 打开跟踪并配置如何显示跟踪**  
+### <a name="to-open-traces-and-configure-how-traces-are-displayed-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 打开跟踪并配置如何显示跟踪  
   
 -   [打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -126,7 +146,7 @@ ms.locfileid: "47747255"
   
 -   [设置跟踪显示默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
- **使用 SQL Server Profiler 重播跟踪**  
+### <a name="to-replay-traces-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 重播跟踪  
   
 -   [重播跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
@@ -140,7 +160,7 @@ ms.locfileid: "47747255"
   
 -   [重播 Transact-SQL 脚本 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
- **使用 SQL Server Profiler 创建、修改和使用跟踪模板**  
+### <a name="to-create-modify-and-use-trace-templates-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 创建、修改和使用跟踪模板  
   
 -   [创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -154,7 +174,7 @@ ms.locfileid: "47747255"
   
 -   [导入跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
- **使用 SQL Server Profiler 跟踪来收集和监视服务器性能**  
+### <a name="to-use-sql-server-profiler-traces-to-collect-and-monitor-server-performance"></a>使用 SQL Server Profiler 跟踪来收集和监视服务器性能  
   
 -   [在跟踪时查找值或数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   

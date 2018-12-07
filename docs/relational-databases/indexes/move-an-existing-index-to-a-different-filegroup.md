@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6919f19a3feec0122ac76d2b4cb4f0bdbbc68466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515783"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47691488"
   
 8.  单击 **“关闭”**。  
   
-9. 在“文件”菜单上，选择“保存table_name”。  
+9. 在“文件”菜单上，选择“保存”以保存 _table_name_。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>在“对象资源管理器”中将现有索引移到其他文件组  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47691488"
   
 8.  单击“确定” 。  
   
- “索引属性 – ”*index_name* 对话框的“存储”页中提供以下信息：  
+ “索引属性 - index_name” 对话框的“存储”页中提供以下信息：  
   
  **文件组**  
  在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。  
@@ -148,7 +148,7 @@ ms.locfileid: "47691488"
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

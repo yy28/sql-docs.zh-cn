@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 35273d3b60abf328f916907a0a6cfeb8b6a206c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021241"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405706"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
 
@@ -53,7 +53,7 @@ ms.locfileid: "50021241"
 
 ### <a name="back-up-the-encryption-keys-using-sharepoint-central-administration"></a>使用 SharePoint 管理中心备份加密密钥
 
-有关备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
+有关备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
 
 ### <a name="back-up-the-service-application-using-sharepoint-central-administration"></a>使用 SharePoint 管理中心备份服务应用程序
 
@@ -131,7 +131,7 @@ ms.locfileid: "50021241"
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>使用 SharePoint 管理中心还原加密密钥
 
- 有关还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
+ 有关还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>配置执行帐户和数据库身份验证
 

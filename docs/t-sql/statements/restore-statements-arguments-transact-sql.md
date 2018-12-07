@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527405"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -582,20 +582,20 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 > [!NOTE]  
 >  PARTIAL 选项仅受 RESTORE DATABASE 支持。  
   
- 下表列出了受一个或多个语句支持的 WITH 选项，并指明每个选项受哪些语句的支持。 选中标记 (√) 表示支持选项；短划线 (—) 表示不支持选项。  
+ 下表列出了受一个或多个语句支持的 WITH 选项，并指明每个选项受哪些语句的支持。 选中标记 (√) 表示支持选项；短划线 (-) 表示不支持选项。  
   
 |WITH 选项|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
-|FILE<sup>1</sup>|√|√|√|—|—|√|  
-|LOADHISTORY|—|—|—|—|—|√|  
-|MEDIANAME|√|√|√|√|—|√|  
-|MEDIAPASSWORD|√|√|√|√|—|√|  
-|MOVE|√|—|—|—|—|√|  
-|PASSWORD|√|√|√|—|—|√|  
-|{ REWIND &#124; NOREWIND }|√|仅限 REWIND|仅限 REWIND|仅限 REWIND|—|√|  
-|STATS|√|—|—|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
+|FILE<sup>1</sup>|√|√|√|-|-|√|  
+|LOADHISTORY|-|-|-|-|-|√|  
+|MEDIANAME|√|√|√|√|-|√|  
+|MEDIAPASSWORD|√|√|√|√|-|√|  
+|MOVE|√|-|-|-|-|√|  
+|PASSWORD|√|√|√|-|-|√|  
+|{ REWIND &#124; NOREWIND }|√|仅限 REWIND|仅限 REWIND|仅限 REWIND|-|√|  
+|STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=**_backup\_set\_file\_number_，与 {FILE | FILEGROUP} 不同。  

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 494272f6609af4d8cf8747aff8d3dd5eda85483f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510168"
 ---
 # <a name="create-statistics"></a>创建统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "47672095"
      以下属性将显示在“新建 _table\_name_ 的统计信息”对话框的“筛选器”页面上。  
   
      **筛选表达式**  
-     定义要将哪些数据行包含在筛选的统计信息中。 例如，使用 IPv4 地址 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  在“新建表 _table\_name_ 的统计信息”对话框中，在“常规”页面上，单击“添加”。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "47672095"
   
 #### <a name="to-create-statistics"></a>创建统计信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

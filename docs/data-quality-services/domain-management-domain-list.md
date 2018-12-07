@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
@@ -14,12 +13,12 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0317dea3113fafdf7f3cb9a43553103f3ba51c99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 088629be0f2dfa11e563b0ef7441a1b7c59ec515
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699605"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617027"
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
 
@@ -40,7 +39,7 @@ ms.locfileid: "47699605"
  在知识库中创建一个新域。 此命令将显示 **“创建域”** 对话框。 通过右键单击某个域或单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
   
  **创建所选域的副本**  
- 创建所选域的精确副本，并将其添加到知识库。 其名称将为从中创建该副本的域的名称，并在此名称之后追加“ – Copy”。 通过右键单击某个域，然后单击 **“创建副本”**，或者单击域列表上方的图标，可以使用此命令。 此命令不适用于复合域。  
+ 创建所选域的精确副本，并将其添加到知识库。 其名称将为从中创建该副本的域的名称，并在此名称之后追加“ - Copy”。 通过右键单击某个域，然后单击 **“创建副本”**，或者单击域列表上方的图标，可以使用此命令。 此命令不适用于复合域。  
   
  **从数据文件导入域**  
  从 .dqs 文件导入域。 此命令将显示 **“从数据文件导入”** 对话框，该对话框用于浏览文件系统并为单一域或复合域选择 .dqs 文件。 通过单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [从 .dqs 文件导入域](../data-quality-services/import-a-domain-from-a-dqs-file.md)。  

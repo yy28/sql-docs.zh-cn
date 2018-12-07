@@ -14,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f38f7da3ae5dc67a8f4282f38e5d8ebd6b110129
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518382"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>“索引 - 键”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51699454"
 显示键或索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
 **Description**  
-提供一个描述键或索引的位置。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (**…**)。 这可以提供一个更大的文本编写区域。  
+提供一个描述键或索引的位置。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (“…”)。 这可以提供一个更大的文本编写区域。  
   
 **表设计器类别**  
 展开此项可显示有关“创建为聚集的”的信息。  

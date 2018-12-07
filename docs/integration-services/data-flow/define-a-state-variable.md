@@ -11,12 +11,12 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 637993cecd7b5a7c750956042b245f670d9aa0f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cbccb0ba6fa66cba9b8e57e628bef4710414cf7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533397"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
   本过程介绍如何定义用于存储 CDC 状态的包变量。  
@@ -87,6 +87,6 @@ ms.locfileid: "47628625"
   
 ## <a name="see-also"></a>另请参阅  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC 控制任务编辑器](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

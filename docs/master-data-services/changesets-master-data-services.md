@@ -12,12 +12,12 @@ ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b341dc48a5f72e3f3a0067c9f4d00267175243be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 728f79c1856cf4447bf12333162fcd209583468e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713225"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395280"
 ---
 # <a name="changesets-master-data-services"></a>变更集 (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "47713225"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 现在支持将任何挂起的更改作为变更集保存到实体。 此功能有两种使用场景。  
   
--   **当实体管理员打开“需要批准”时进行更改**  
+-   当实体管理员打开“需要批准”时进行更改  
   
      如果实体管理员指定对指定实体的更改在提交前需要批准，那么对实体的任何更改必须先保存到新的或现有的变更集，才能提交以供批准。  有关详细信息，请参阅[需要审批 (Master Data Services)](../master-data-services/approval-required-master-data-services.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47713225"
  [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
  [应用并更新变更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
- [批准或拒绝变更集 &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
+ [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
  [管理变更集 &#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md)  
   
   

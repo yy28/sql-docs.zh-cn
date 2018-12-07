@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 95cda6788643ac19fd21c2838f10c8a3c3e54f8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2b85546e79e426f078ff77ab11b4eb9eb076aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519516"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47828725"
 **max server memory** 所允许的最小内存量是 128 MB。
   
 > [!IMPORTANT]  
-> 将“max server memory”值设置得太高可能导致一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能需要与同一主机上承载的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例争用内存。 但是，将此值设置得太低可能会导致极大的内存压力和性能问题。 将“max server memory”设置为最小值甚至可能导致无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请使用 ***–f*** 启动选项启动它，并将 **max server memory** 重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+> 将“max server memory”值设置得太高可能导致一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能需要与同一主机上承载的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例争用内存。 但是，将此值设置得太低可能会导致极大的内存压力和性能问题。 将“max server memory”设置为最小值甚至可能导致无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用“-f”启动选项启动它，并将“max server memory”重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可动态使用内存；但也可以手动设置内存选项并限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以访问的内存量。 在设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存量之前，请通过从总物理内存中减去操作系统所需的内存（即不受 max_server_memory 设置控制的内存分配）以及任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所需的内存（如果计算机并非完全由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专用，则还要减去其他系统使用的内存量）。 这个差值就是可以分配给当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的最大内存量。  
  

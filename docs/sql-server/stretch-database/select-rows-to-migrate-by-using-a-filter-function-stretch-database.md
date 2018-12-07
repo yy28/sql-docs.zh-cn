@@ -14,12 +14,12 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03c2b23d2a4d320c7a96f04788bb2354aacabad5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ce518617b3e7728e503504bfea838fee4f1beb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698605"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400890"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用筛选器函数选择要迁移的行 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>常量表达式  
  在筛选器函数中使用的常量可以是定义函数时可以计算的任何确定性表达式。 常量表达式可以包含以下内容。  
   
--   文字。 例如， `N’abc’, 123`。  
+-   文字。 例如， `N'abc', 123`。  
   
 -   代数表达式。 例如， `123 + 456`。  
   

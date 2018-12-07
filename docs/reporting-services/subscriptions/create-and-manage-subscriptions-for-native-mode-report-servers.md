@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400900"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
   标准订阅是由希望通过电子邮件传递报表或将报表传递到共享文件夹的各个用户所创建的订阅。 本主题提供了由各个用户创建和管理的标准订阅的有关信息。 而数据驱动订阅具有不同的要求和步骤，将在另一个主题中进行讨论。 有关详细信息，请参阅 [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -112,7 +112,7 @@ ms.locfileid: "50021681"
     > [!NOTE]  
     >  根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址。 这要求您具有管理所有订阅的权限。  
   
-7.  ：默认为“在 @ExecutionTime 执行 @ReportName”。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量。  
+7.  主题：默认为“在 @ExecutionTime 执行 @ReportName”。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量。  
   
 8.  按如下说明选择传递选项：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "50021681"
 >  报表服务器管理员无法从一个位置管理在给定的报表服务器上正在使用的所有单独的订阅。 但是，报表服务器管理员可以访问每个单独的订阅来进行修改或删除。  
   
 ##  <a name="bkmk_delete_subscription"></a> 删除订阅  
- 删除订阅  
+ 删除订阅”  
   
 1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   

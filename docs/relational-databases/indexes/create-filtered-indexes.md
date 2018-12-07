@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523491"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,13 +117,13 @@ ms.locfileid: "47603245"
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在 **“索引键列”** 下，单击 **“添加…”**。  
+6.  在“索引键列”下，单击“添加…”。  
   
 7.  在“从 table\_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   
-9. 在 **“筛选器”** 页的 **“筛选表达式”** 下，输入要用于创建筛选索引的 SQL 表达式。  
+9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式。  
   
 10. 单击“确定” 。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "47603245"
   
 #### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "47603245"
   
 #### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>确保在 SQL 查询中使用筛选索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

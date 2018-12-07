@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719255"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517711"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -216,7 +216,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
   
  详细信息：  
   
--   若要分隔月、日和年值，可以使用“–”、“/”或“.”。 为简单起见，该表仅使用“–”分隔符。
+-   若要分隔月、日和年值，可以使用“-”、“/”或“.”。 为简单起见，该表仅使用“-”分隔符。
   
 -   若要将月指定为文本，请使用三个或更多字符。 使用一个或两个字符的月会解释为数字。
   

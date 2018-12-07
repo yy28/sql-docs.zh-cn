@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505762"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>第 5-2 课 - 启用和配置包配置
 在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 将使用此向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 **Directory** 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  
@@ -40,11 +40,11 @@ ms.locfileid: "47634765"
   
 7.  返回到“控制流”选项卡，然后双击“文件夹中的 Foreach 文件”容器。  
   
-8.  在“Foreach 循环编辑器”的“集合”页上，依次单击“表达式”和省略号按钮 **(…)**。  
+8.  在“Foreach 循环编辑器”的“集合”页上，依次单击“表达式”和省略号按钮 (…)。  
   
 9. 在“属性表达式编辑器”中，单击“属性”列表，然后选择“Directory”。  
   
-10. 在“表达式”框中，单击省略号按钮 **(…)**。  
+10. 在“表达式”框中，单击省略号按钮 (…)。  
   
 11. 在“表达式生成器”中，展开“变量”文件夹，然后将变量 **User::varFolderName** 拖到“表达式”框中。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47634765"
   
 16. 单击 **“关闭”**。  
   
-17. 向导将创建名为 SSISTutorial.dtsConfig 的配置文件，该文件包含特定变量的**值** 的配置设置，且该变量可用于设置枚举器的 **Directory** 属性。  
+17. 向导将创建名为 SSISTutorial.dtsConfig 的配置文件，该文件包含特定变量的“值”的配置设置，且该变量可用于设置枚举器的“Directory”属性。  
   
     > [!NOTE]  
     > 配置文件通常包含有关包属性的复杂信息，但对于本教程，唯一的配置信息应当是  

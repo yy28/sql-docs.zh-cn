@@ -14,16 +14,16 @@ ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98b26a032576a9f80ebe35a2e76fd5e6cd4575ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83dd7ab7b393ba172d38278f689becc86c1c1bed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515041"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>“联接”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 **(…)**。  
+使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 (…)。  
   
 默认情况下，相关表使用内部联接进行联接，内部联接可基于联接列中包含匹配信息的行创建结果集。 通过在“联接”对话框中设置选项，可以指定基于不同运算符的联接，还可以指定外部联接。  
   
@@ -33,8 +33,8 @@ ms.locfileid: "47807945"
   
 |**术语**|**定义**|  
 |------------|------------------|  
-|**表**|联接中涉及的表或表值对象的名称。 不能在此处更改表名 — 此信息仅作为信息显示。|  
-|**列**|用于联接表的列的名称。 运算符列表中的运算符指定了这些列中数据之间的关系。 不能在此处更改列名 — 此信息仅作为信息显示。|  
+|**表**|联接中涉及的表或表值对象的名称。 不能在此处更改表名（此信息仅作为信息显示）。|  
+|**列**|用于联接表的列的名称。 运算符列表中的运算符指定了这些列中数据之间的关系。 不能在此处更改列名（此信息仅作为信息显示）。|  
 |**“运算符”**|指定用于使联接列相关的运算符。 若要指定等号 (=) 以外的运算符，请从列表中进行选择。 关闭该属性页后，您选择的运算符将显示在联接线的菱形图中，如下所示：<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 图标")|  
 |**所有行 <table1>**|指定即使右表中没有相应的匹配行，左表中的所有行也都显示在输出中。 右表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 LEFT OUTER JOIN。|  
 |**所有行 <table2>**|指定即使左表中没有相应的匹配行，右表中的所有行也都显示在输出中。 左表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 RIGHT OUTER JOIN。|  

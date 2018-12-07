@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540411"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47787175"
   
 4.  右键单击某一存储过程，然后选择“属性”。  
   
-5.  在“存储过程属性 – _stored\_procedure\_name_”对话框中选择某页面，然后选择“权限”。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
+5.  在“存储过程属性 - stored\_procedure\_name”对话框中选择某页面，然后选择“权限”。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
   
 6.  完成后，单击 **“确定”**。  
   

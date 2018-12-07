@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs
 description: 自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,25 +14,27 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503415"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文将介绍以下自适应查询处理功能，这些功能可用于提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的查询性能：
-- 批处理模式内存授予反馈。
-- 批处理模式自适应联接。
-- 交错执行。 
+- 批处理模式内存授予反馈
+- 批处理模式自适应联接
+- 交错执行
 
-一般而言，SQL Server 执行查询的过程如下所示：
+一般而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行查询的过程如下所示：
 1. 查询优化过程为特定查询生成一组可行的执行计划。 在此期间，估计计划选项的成本并使用估价最低的计划。
 1. 查询执行过程采用查询优化器所选的计划，并将它用于执行。
-    
+
+有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查询进程和执行模块的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)。
+
 有时，出于各种原因，查询优化器所选计划不是最优计划。 例如，预计流经查询计划的行数可能不正确。 估计成本有助于确定选择用于执行的计划。 如果基数估计不正确，不管最初的假设有多差劲，仍会使用原计划。
 
 ![自适应查询处理功能](./media/1_AQPFeatures.png)
@@ -88,7 +90,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-禁用后，此设置在 sys.database_scoped_configurations 将显示为已启用。
+启用后，此设置在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 将显示为已启用。
 
 若要对源自数据库的所有查询执行重新启用批处理模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
 
@@ -96,7 +98,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-此外，将 DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK 指定为 USE HINT 查询提示也可对特定查询禁用批处理模式内存授予反馈。  例如：
+此外，将 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可为特定查询禁用批处理模式内存授予反馈。 例如：
 
 ```sql
 SELECT * FROM Person.Address  
@@ -107,23 +109,23 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
 
 ## <a name="row-mode-memory-grant-feedback"></a>行模式内存授予反馈
-**适用于**：SQL 数据库（作为公共预览版功能提供）
+适用对象：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 为公开预览版功能
 
 > [!NOTE]
 > 行模式内存授予反馈是一项公共预览版功能。  
 
 通过调整批处理模式和行模式运算符的内存授予大小，行模式内存授予反馈扩展了批处理模式内存授予反馈功能。  
 
-若要在 Azure SQL 数据库中启用行模式内存授予反馈的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
+若要在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中启用行模式内存授予反馈的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
 
 通过 memory_grant_updated_by_feedback XEvent，可以查看行模式内存授予反馈活动。 
 
-从行模式内存授予反馈开始，将会对实际执行后计划显示两个新查询计划属性：IsMemoryGrantFeedbackAdjusted 和 LastRequestedMemory（它们添加到 MemoryGrantInfo 查询计划 XML 元素中）。 
+从行模式内存授予反馈开始，将会对实际执行后计划显示两个新查询计划属性：“IsMemoryGrantFeedbackAdjusted”和“LastRequestedMemory”（它们添加到“MemoryGrantInfo”查询计划 XML 元素中）。 
 
 LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节 (KB) 为单位）。 使用 IsMemoryGrantFeedbackAdjusted 属性，可以查看实际查询执行计划内语句的内存授予反馈状态。 下面列出了此属性的可取值：
 
 | IsMemoryGrantFeedbackAdjusted 值 | 描述 |
-|--- |--- |
+|---|---|
 | No: First Execution | 内存授予反馈不调整用于首次编译和相关执行的内存。  |
 | No: Accurate Grant | 如果没有溢出到磁盘，且语句使用至少 50% 的授予内存，就不会触发内存授予反馈。 |
 | No: Feedback disabled | 如果内存授予反馈不断触发，且在内存增加和内存减少操作之间波动，就会对语句禁用内存授予反馈。 |
@@ -131,7 +133,7 @@ LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节
 | Yes: Stable | 内存授予反馈已应用，并且授予内存现在处于稳定状态。也就是说，为上一次执行最后授予的内存是为当前执行授予的内存。 |
 
 > [!NOTE]
-> 公共预览版行模式内存授予反馈计划特性在 SQL Server Management Studio 版本 17.9 及更高版本中的图形查询执行计划内可见。 
+> 公共预览版行模式内存授予反馈计划特性在版本 17.9 及更高版本中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图形查询执行计划内可见。 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用行模式内存授予反馈
 可在数据库或语句范围内禁用行模式内存授予反馈，同时将数据库兼容级别维持在 150 或更高。 若要对源自数据库的所有查询执行禁用行模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
@@ -146,7 +148,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-此外，将 DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK 指定为 USE HINT 查询提示也可对特定查询禁用行模式内存授予反馈。  例如：
+此外，将 `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可对特定查询禁用行模式内存授予反馈。 例如：
 
 ```sql
 SELECT * FROM Person.Address  
@@ -166,15 +168,14 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 以下查询用于说明自适应联接示例：
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-查询将返回 336 行。 启用[实时查询统计信息](../../relational-databases/performance/live-query-statistics.MD)后，将看到以下计划：
+查询将返回 336 行。 启用[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)后，将看到以下计划：
 
 ![查询生成 336 行](./media/4_AQPStats336Rows.png)
 
@@ -186,8 +187,7 @@ WHERE [fo].[Quantity] = 360;
  现将计划与同一查询进行对比，但此次针对表格中只有一行的的 Quantity 值：
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
@@ -249,14 +249,14 @@ WHERE [fo].[Quantity] = 361;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-禁用后，此设置在 sys.database_scoped_configurations 将显示为已启用。
+启用后，此设置在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 将显示为已启用。
 若要对源自数据库的所有查询执行重新启用自适应联接，请在对应数据库的上下文中执行以下命令：
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-此外，将 DISABLE_BATCH_MODE_ADAPTIVE_JOINS 指定为 USE HINT 查询提示也可对特定查询禁用自适应联接。  例如：
+此外，将 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可为特定查询禁用自适应联接。 例如：
 
 ```sql
 SELECT s.CustomerID,
@@ -264,17 +264,18 @@ SELECT s.CustomerID,
        sc.CustomerCategoryName
 FROM Sales.Customers AS s
 LEFT OUTER JOIN Sales.CustomerCategories AS sc
-ON s.CustomerCategoryID = sc.CustomerCategoryID
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
 OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
 ```
 
 USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>多语句表值函数的交错执行
-交错执行可更改单一查询执行的优化和执行阶段之间的单向边界，并使计划能够根据修订后的基数估值进行调整。 如果遇到交错执行的候选项，该项当前为多语句表值函数 (MSTVF)，将暂停优化，执行适用的子树，捕获准确的基数估值，然后针对下游操作继续优化。
-在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，MSTVF 具有固定的基数猜测“100”，而早期版本为“1”。 交错执行有助于解决由于与多语句表值函数相关联的这些固定基数估值而产生的工作负荷性能问题。
+交错执行可更改单一查询执行的优化和执行阶段之间的单向边界，并使计划能够根据修订后的基数估值进行调整。 如果遇到交错执行的候选项，该项当前为“多语句表值函数 (MSTVF)”，将暂停优化，执行适用的子树，捕获准确的基数估值，然后针对下游操作继续优化。   
 
-下图描绘了实时查询统计信息输出，一个显示 MSTVF 的固定基数估值影响的整体执行计划的子集。 可查看实际行流与估计行数。 有三个值得注意的计划区域（从右到左显示）：
+自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，MSTVF 的固定基数猜测为“100”，而早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本为“1”。 交错执行有助于解决由于与 MSTVF 关联的这些固定基数估值而导致的工作负荷性能问题。 有关 MSTVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+
+下图描绘了[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)输出，一个显示 MSTVF 的固定基数估值影响的整体执行计划的子集。 可查看实际行流与估计行数。 有三个值得注意的计划区域（从右到左显示）：
 1. MSTVF 表扫描具有 100 行的固定估值。 然而，对于此示例，有 527,597 行流经此 MSTVF 表扫描，如通过“527597 行，共 100 行”的实际与估值的实时查询统计信息中所示，因此固定估值偏差显著。
 1. 对于嵌套循环操作，仅假定联接的外侧将返回 100 行。 如果 MSTVF 实际返回惊人的行数，最好将另一联接算法一起使用。
 1. 对于哈希匹配操作，请注意小型警告符号，在本示例中指示到磁盘的溢出。
@@ -297,7 +298,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 一般来说，交错执行有益于以下情况中的查询：
 1. 对于中间结果集（本例中为 MSTVF），估计行数和实际行数之间存在巨大偏差。
 1. 整体查询对中间结果的大小更改十分敏感。 这通常发生在查询计划中的该子树上存在复杂树的情况。
-MSTVF 中简单的“SELECT*”不会获益于交错执行。
+MSTVF 中简单的 `SELECT *` 不会获益于交错执行。
 
 ### <a name="interleaved-execution-overhead"></a>交错执行的开销
 开销应为最少-到-无。 MSTVF 已在引入交错执行前具体化，但区别是现在已允许延迟优化，并可利用具体化行集的基数估值。
@@ -339,18 +340,18 @@ MSTVF 中简单的“SELECT*”不会获益于交错执行。
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-禁用后，此设置在 sys.database_scoped_configurations 将显示为已启用。
+启用后，此设置在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 将显示为已启用。
 若要对源自数据库的所有查询执行重新启用交错执行，请在适用的数据库的上下文中执行以下命令：
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-此外，将 DISABLE_INTERLEAVED_EXECUTION_TVF 指定为 USE HINT 查询提示也可对特定查询禁用交错执行。  例如：
+此外，将 `DISABLE_INTERLEAVED_EXECUTION_TVF` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可对特定查询禁用交错执行。 例如：
 
 ```sql
-SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM    [Fact].[Order] AS [fo]
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
                             '1-01-2013',
                             '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
@@ -371,5 +372,6 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)    
 [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [联接](../../relational-databases/performance/joins.md)    
-[演示自适应查询处理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)          
-
+[演示自适应查询处理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)    
+[USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[创建用户定义的函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

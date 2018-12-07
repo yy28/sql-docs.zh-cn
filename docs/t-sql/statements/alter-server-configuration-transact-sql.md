@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e219907601a7c517c7fb7f53bb301bee14b06e6b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703645"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545625"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,11 +161,11 @@ SET <optionspec>
  VERBOSE LOGGING = { 'logging_detail' | DEFAULT }  
  设置 SQL Server 故障转移群集的日志记录级别。 可以通过启用该属性在错误日志中提供更多详细信息以排除故障。  
   
--   0 – 禁用日志记录（默认值）  
+-   0 - 关闭日志记录（默认值）  
   
 -   1 - 仅限错误  
   
--   2 – 错误和警告  
+-   2 - 错误和警告  
   
 SQLDUMPEREDUMPFLAGS  
  确定 SQL Server SQLDumper 实用工具生成的转储文件的类型。 默认设置为 0。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  

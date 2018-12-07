@@ -24,12 +24,12 @@ ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9be3d672d96ffc686ea38f81caa3ecea62b0a578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3405aa23caf7df2f0f2f02425a681d84197d8f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759733"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521564"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

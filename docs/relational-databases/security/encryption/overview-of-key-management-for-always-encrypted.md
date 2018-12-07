@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535390"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 密钥管理概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47790225"
 存在两种不同的用户角色来管理“始终加密”密钥：安全管理员和数据库管理员 (DBA)：
 
 - **安全管理员** - 生成列加密密钥和列主密钥，以及管理包含列主密钥的密钥存储。 若要执行这些任务，安全管理员需要能够访问密钥和密钥存储，但不需要访问数据库。
-- **DBA** – 管理数据库中的密钥的元数据。 若要执行密钥管理任务，DBA 需要能够管理数据库中的密钥元数据，但不需要访问密钥或托管列主密钥的密钥存储。
+- **DBA** - 管理数据库中的密钥的元数据。 若要执行密钥管理任务，DBA 需要能够管理数据库中的密钥元数据，但不需要访问密钥或托管列主密钥的密钥存储。
 
 考虑到上述角色，执行“始终加密”的密钥管理任务有两种不同方式：使用角色分离和不使用角色分离。 根据你的组织的需求，你可以选择最适合你的要求的密钥管理过程。
 
@@ -70,14 +70,14 @@ ms.locfileid: "47790225"
 
 可以使用 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](../../scripting/sql-server-powershell.md)管理“始终加密”密钥：
 
-- **SQL Server Management Studio (SSMS)** – 通过对话框和向导合并涉及密钥存储访问和数据库访问的任务，因此 SSMS 不支持角色分离，但是它会让你的密钥配置很轻松。 有关使用 SSMS 管理密钥的详细信息，请参阅：
+- **SQL Server Management Studio (SSMS)** - 通过对话框和向导合并涉及密钥存储访问和数据库访问的任务，因此 SSMS 不支持角色分离，但是它会让你的密钥配置很轻松。 有关使用 SSMS 管理密钥的详细信息，请参阅：
     - [预配列主密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [预配列加密密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [轮替列主密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
     - [轮替列加密密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** – 包括使用和不使用角色分离管理“始终加密”密钥的 cmdlet。 有关详细信息，请参阅：
+- **SQL Server PowerShell** - 包括使用和不使用角色分离管理“Always Encrypted”密钥的 cmdlet。 有关详细信息，请参阅：
     - [使用 PowerShell 配置 Always Encrypted 密钥](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [使用 PowerShell 轮换 Always Encrypted 密钥](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -93,7 +93,7 @@ ms.locfileid: "47790225"
 
 若要确保“始终加密”在阻止这些类型的攻击中有效，密钥管理过程必须确保列主密钥和列加密密钥，以及包含列主密钥的密钥存储的凭据永远不会暴露给潜在的攻击者。 下面是需要遵守的一些准则：
 
-- 不在托管数据库的计算机上生成列主密钥或列加密密钥。 在单独的计算机上生成密钥，该计算机专门用于密钥管理，或者是该计算机中托管的应用程序需要访问密钥。 这意味着 **不要在托管数据库的计算机上运行用于生成密钥的工具** ，因为如果攻击者访问用于预配或维护“始终加密”密钥的计算机，即使密钥仅在工具的内存中出现了一会，攻击者也有可能获取密钥。
+- 不在托管数据库的计算机上生成列主密钥或列加密密钥。 在单独的计算机上生成密钥，该计算机专门用于密钥管理，或者是该计算机中托管的应用程序需要访问密钥。 这意味着不要在托管数据库的计算机上运行用于生成密钥的工具，因为如果攻击者访问用于预配或维护“Always Encrypted”密钥的计算机，即使密钥仅在工具的内存中出现了一会，攻击者也有可能获取密钥。
 - 为确保密钥管理过程不会无意中泄露列主密钥或列加密密钥，在定义并执行密钥管理过程之前识别潜在的攻击者和安全威胁很重要。 例如，如果你的目标是要确保 DBA 没有访问敏感数据的权限，那么 DBA 就不能负责生成密钥。 但是，DBA 可以管理数据库中的密钥元数据，因为元数据不包含纯文本密钥。
 
 ## <a name="next-steps"></a>Next Steps

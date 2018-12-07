@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638944"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507471"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
   字词提取转换从转换输入列的文本中提取字词，然后将这些字词写入转换输出列。 该转换仅处理英文文本，并使用它自身的英语字典和有关英语的语言信息。  
@@ -142,7 +142,7 @@ ms.locfileid: "51638944"
   
 -   ASCII 换行字符 0x0d（回车符）和 0x0a（换行符）。 若要使用此字符作为句子的边界，则每行中必须有两个或更多的换行字符。  
   
--   连字符 (–)。 若要将此字符用作句子边界，连字符左侧和右侧的字符均不能为字母。  
+-   连字符 (-)。 若要将此字符用作句子边界，连字符左侧和右侧的字符均不能为字母。  
   
 -   下划线 (_)。 若要将此字符用作句子边界，连字符左侧和右侧的字符均不能为字母。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "51638944"
   
 -   数字、标点符号和字母字符的组合。 例如， *A23B#99* 返回字词 *A23B*。  
   
--   字符 %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 ‘。  
+-   字符：%、@，&、$、#、\*、;、。、！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包括一个或多个句点 (.) 的首字母缩略词不分隔为多个句子。  

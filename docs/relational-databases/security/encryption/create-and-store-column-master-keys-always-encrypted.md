@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fca24650ef1d7b26dc9fac93c0ab5d714bf7d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534764"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
 $azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
@@ -165,7 +165,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 若要使 HSM 可用于指定计算机上的应用程序，必须在该计算机上安装并配置实现 CNG 的密钥存储提供者 (KSP)。 始终加密客户端驱动程序（驱动程序内的列主密钥存储提供者）使用 KSP 加密和解密使用存储在密钥存储中的列主密钥保护的列加密密钥。
 
-Windows 包括 Microsoft 软件密钥存储提供者 – 可用于测试的基于软件的 KSP。 请参阅 [《CNG Key Storage Providers》](/windows/desktop/SecCertEnroll/cng-key-storage-providers)（CNG 密钥存储提供者）。
+Windows 包括 Microsoft 软件密钥存储提供者 - 可用于测试目的的基于软件的 KSP。 请参阅 [《CNG Key Storage Providers》](/windows/desktop/SecCertEnroll/cng-key-storage-providers)（CNG 密钥存储提供者）。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>使用 CNG/KSP 在密钥存储中创建列主密钥
 

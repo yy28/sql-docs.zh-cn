@@ -11,12 +11,12 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7aaea76c93cdce4864c4a1e2491d542acee30b08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 456ab997ac599f4525f62a5eb6267600b0767c24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829436"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519640"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47829436"
   
 |属性名称|描述|  
 |-------------------|-----------------|  
-|**DEFAULT_EXECUTION_MODE**|服务器范围的默认包执行模式 — `Server` (0) 或 `Scale Out` (1)。 |
+|**DEFAULT_EXECUTION_MODE**|服务器范围的默认包执行模式 - `Server` (0) 或 `Scale Out` (1)。 |
 |**ENCRYPTION_ALGORITHM**|用于加密敏感数据的加密算法的类型。 支持的值包括：`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192` 和 `AES_256`。 注意：要更改此属性，目录数据库必须处于单用户模式。|
 |**IS_SCALEOUT_ENABLED**|值如果为 `True`，SSIS Scale Out 功能为启用状态。 如果未启用 Scale Out，该属性可能不会显示在视图中。|
 |**MAX_PROJECT_VERSIONS**|为单个项目保留的新项目版本的数量。 当启用了版本清理时，超出了此计数的较早版本将被删除。|  

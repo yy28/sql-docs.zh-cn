@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01be3d3e15f85a5b95a0d704f40bfb0cc0017732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 085764ce76a5a6eb18d23c1c77ef67dd63282a56
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545699"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -183,7 +183,7 @@ ms.locfileid: "47625765"
 |从列存储索引中删除行|[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) 删除行。<br /><br /> **列存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将它标记为已逻辑删除但是未回收行的物理存储空间，直到重新生成索引。<br /><br /> **增量存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以逻辑和物理方式删除该行。|  
 |更新列存储索引中的行|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) 更新行。<br /><br /> **列存储** 行：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将它标记为已逻辑删除，然后将更新的行插入增量存储中。<br /><br /> **增量存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在增量存储中更新它。|  
 |强制增量存储中的所有行进入列存储。|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) ...REBUILD<br /><br /> [列存储索引 - 碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|结合 REBUILD 选项的 ALTER INDEX 会强制所有行进入列存储。|  
-|对列存储索引进行碎片整理|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX … REORGANIZE 可在线对列存储索引进行碎片整理。|  
+|对列存储索引进行碎片整理|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ...REORGANIZE 可在线对列存储索引进行碎片整理。|  
 |合并具有列存储索引的表。|[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)|
 
 

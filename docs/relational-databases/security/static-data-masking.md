@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662993"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539107"
 ---
 # <a name="static-data-masking"></a>静态数据掩码
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "51662993"
  
  ![掩码函数下拉列表](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 注意：大部分掩码函数有其他配置参数。 静态数据掩码为 Shuffle 掩码提供一个默认参数。 对于分组 Shuffle 掩码、单值掩码和字符串复合掩码，用户必须提供配置参数。 要更改或提供配置参数，请单击“配置...” 选项，并在弹出的对话框中为参数指定一个（可选）值。 [掩码函数](#masking-functions)详细介绍了每个掩码函数。
+ 注意：大部分掩码函数有其他配置参数。 静态数据掩码为 Shuffle 掩码提供一个默认参数。 对于分组 Shuffle 掩码、单值掩码和字符串复合掩码，用户必须提供配置参数。 若要更改或提供配置参数，请单击“配置...”选项，然后在弹出的对话框中为参数指定（备用）值。 [掩码函数](#masking-functions)详细介绍了每个掩码函数。
  
  ![掩码函数配置按钮](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  

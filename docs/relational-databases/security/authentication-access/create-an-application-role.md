@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d9b5b5de9948c72aa3654c0236516886f4c4a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539734"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47633675"
   
 4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”。  
   
-5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”** 页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
+5.  在“常规”页的“应用程序角色 - 新建”对话框中，在“角色名称”框中输入新的应用程序角色的新名称。  
   
-6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号 **(…)** 以打开 **“定位架构”** 对话框。  
+6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号“(…)”以打开“定位架构”对话框。  
   
 7.  在 **“密码”** 框中，输入新角色的密码。 在 **“确认密码”** 框中再次输入该密码。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47633675"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“应用程序– 新建”** 对话框还在两个其他页上提供了选项： **“安全对象”** 和 **“扩展属性”**。  
+ “应用程序角色 - 新建”对话框还在两个其他页上提供了选项：和“扩展属性”。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   

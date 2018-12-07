@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520955"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>将 MSDeploy 用于 dbSqlPackage 提供程序
 DbSqlPackage 是一个 MSDeploy 提供程序，可使你与 SQL Server/SQL Azure 数据库交互。 DbSqlPackage 支持以下操作：  
@@ -39,7 +39,7 @@ DbSqlPackage 是一个 MSDeploy 提供程序，可使你与 SQL Server/SQL Azure
   
 ```  
   
-MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] –dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
+MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] -dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
 ```  
   
 ## <a name="ms-deploy-verbs"></a>MS-Deploy 谓词  
@@ -47,8 +47,8 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
   
 |谓词|描述|  
 |--------|---------------|  
-|dump|提供 .dacpac 文件中包含的源数据库的信息（包括名称、版本号和说明）。 在命令行上使用以下格式指定源数据库：<br /><br />**msdeploy –verb:dump –source:dbSqlPackage=”***.dacpac-file-path***”**|  
-|sync|在命令行上使用以下格式指定 dbSqlPackage 操作：<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**=”input” *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=”input” *[,DbSqlPackage-destination-parameters]*<br /><br />请参阅以下各节以了解同步谓词的有效源和目标参数。|  
+|dump|提供 .dacpac 文件中包含的源数据库的信息（包括名称、版本号和说明）。 在命令行上使用以下格式指定源数据库：<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
+|sync|在命令行上使用以下格式指定 dbSqlPackage 操作：<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />请参阅以下各节以了解同步谓词的有效源和目标参数。|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 源  
 dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或是 .dacpac 文件磁盘路径的输入。  指定提供程序输入源的语法如下：  
@@ -134,7 +134,7 @@ dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或
 |**IgnoreLockHintsOnIndexes= {True &#124; False}**|**False**|指定当您发布到数据库时，是忽略还是更新索引上的锁提示之间的差异。|  
 |**IgnoreLoginSids= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新安全标识符 (SID) 之间的差异。|  
 |**IgnoreNotForReplication= {True &#124; False}**|**False**|指定当您发布到数据库时，是忽略还是更新 not-for-replication 设置之间的差异。|  
-|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新对象在分区方案上的位置之间的差异。|  
+|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|指定当发布到数据库时，是忽略还是更新对象在分区方案上的位置之间的差异。|  
 |**IgnorePartitionSchemes= {True &#124; False}**|**False**|指定当您发布到数据库时，是忽略还是更新分区方案和函数之间的差异。|  
 |**IgnorePermissions= {True &#124; False}**|**False**|指定当您发布到数据库时，是忽略还是更新权限之间的差异。|  
 |**IgnoreQuotedIdentifiers= {True &#124; False}**|**False**|指定当您发布到数据库时，是忽略还是更新带引号的标识符设置之间的差异。|  
@@ -183,24 +183,24 @@ dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或
 下面是使用 dbSqlPackage 的 Extract 操作的示例语法：  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>”,<source parameter> –dest:dbSqlPackage="<target dacpac file path>”  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 下面是使用 dbSqlPackage 的 Publish 操作的示例语法：  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
 下面是使用 dbSqlPackage 的 DeployReport 操作的示例语法：  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
 下面是使用 dbSqlPackage 的  操作的示例语法：  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
   

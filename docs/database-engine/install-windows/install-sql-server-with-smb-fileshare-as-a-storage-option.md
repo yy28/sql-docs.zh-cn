@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d81475de98512e01be65b4c8c23c40809eec73fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b7e44d2a4e9d5e368b9232706ab53e1fd8ad6eac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603627"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416508"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
 
@@ -63,9 +63,9 @@ ms.locfileid: "51603627"
   
 ### <a name="installation-options"></a>安装选项  
   
--   在安装程序 UI“数据库引擎配置”页的“数据目录”选项卡上，将参数“数据根目录”设置为“\\\fileserver1\share1\”。  
+-   在安装程序 UI“数据库引擎配置”页的“数据目录”选项卡上，将参数“数据根目录”设置为“\\\fileserver1\share1\"”。  
   
--   在命令提示安装中，将“/INSTALLSQLDATADIR”指定为“\\\fileserver1\share1\”。  
+-   在命令提示安装中，将“/INSTALLSQLDATADIR”指定为“\\\fileserver1\share1\"”。  
   
      下面是使用 SMB 文件共享选项在独立服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的语法示例：  
   

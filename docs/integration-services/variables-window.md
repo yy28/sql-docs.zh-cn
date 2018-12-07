@@ -16,17 +16,17 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3417b53ba41027b5d629069676818b8f54f13d0b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640864"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420508"
 ---
 # <a name="variables-window"></a>“变量”窗口
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。  
   
- 默认情况下， **“变量”** 窗口位于 **中 SSIS 设计器的** “连接管理器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]区域之下。 如果看不到 **“变量”** 窗口，请单击 **SSIS** 菜单上的 **“变量”** 以显示该窗口。  
+ 默认情况下， **“变量”** 窗口位于 **中 SSIS 设计器的** “连接管理器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]区域之下。 如果看不到“变量”窗口，请单击 SSIS 菜单上的“变量”以显示该窗口。  
   
  您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   

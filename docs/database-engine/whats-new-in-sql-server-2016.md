@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504515"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "51604337"
 
 有关更多详细信息，请参阅联机丛书的 [列存储索引指南](../relational-databases/indexes/columnstore-indexes-overview.md) 一节中的以下主题：
 
-- [列存储索引版本的功能摘要](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) — 包括新增功能。
+- [列存储索引版本的功能摘要](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)，包括新增功能。
 
 - [列存储索引数据加载](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -225,7 +225,7 @@ ms.locfileid: "51604337"
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>更新统计信息的次线性阈值
 现在针对大型表的统计信息自动更新变得更加主动（兼容性级别 130）。 从 SQL Server 2016 开始，针对大型表的统计信息自动更新的触发阈值为 20%，此阈值随着表中行数的增加而减小（仍用百分比表示）。 不再需要设置跟踪标志 2371 来减小阈值。 
 ### <a name="other-enhancements"></a>其他增强功能
-Insert-select 语句中的 Insert 是多线程，或者可以具有并行计划（兼容性级别 130）。 若要获取并行计划，INSERT ... SELECT 语句必须使用 TABLOCK 提示。 有关详细信息，请参阅 [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)（并行的 Insert Select 语句）
+Insert-select 语句中的 Insert 是多线程，或者可以具有并行计划（兼容性级别 130）。 若要获取并行计划，INSERT...SELECT 语句必须使用 TABLOCK 提示。 有关详细信息，请参阅 [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)（并行的 Insert Select 语句）
 
 ## <a name="live-query-statistics"></a>实时查询统计信息
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个查询计划操作员到另一个操作员的查询执行过程。 有关详细信息，请参阅 [Live Query Statistics](../relational-databases/performance/live-query-statistics.md)。
@@ -293,7 +293,7 @@ SQL Server 2016 针对导入和导出 JSON 以及处理 JSON 字符串添加了�
  有关详细信息，请参阅 [PolyBase 指南](../relational-databases/polybase/polybase-guide.md)。
 
 ## <a name="stretch-database"></a>Stretch Database
- Stretch Database 是 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的新功能，可以既透明又安全地将历史数据迁移到 Microsoft Azure 云。 可以无缝访问 SQL Server 数据，不管这些数据位于本地还是延伸到云中。 你设置决定数据存储位置的策略，而 SQL Server 则处理后台的数据移动。 整个表始终处于联机状态，始终可供查询。 而且，Stretch Database 无需对现有查询或应用程序进行任何更改 — 数据的位置对于应用程序来说是完全透明的。 有关详细信息，请参阅 [Stretch Database](../sql-server/stretch-database/stretch-database.md)。
+ Stretch Database 是 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的新功能，可以既透明又安全地将历史数据迁移到 Microsoft Azure 云。 可以无缝访问 SQL Server 数据，不管这些数据位于本地还是延伸到云中。 你设置决定数据存储位置的策略，而 SQL Server 则处理后台的数据移动。 整个表始终处于联机状态，始终可供查询。 而且，Stretch Database 无需对现有查询或应用程序进行任何更改，数据的位置对应用程序来说是完全透明的。 有关详细信息，请参阅 [Stretch Database](../sql-server/stretch-database/stretch-database.md)。
  
 ## <a name="support-for-utf-8"></a>支持 UTF-8
 [bcp 实用工具](../tools/bcp-utility.md)、[BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) 现在支持 UTF-8 代码页。 有关详细信息，请参阅这些主题以及[创建格式化文件 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。
@@ -382,7 +382,7 @@ SQL Server 2016 针对导入和导出 JSON 以及处理 JSON 字符串添加了�
 
 
 ### <a name="always-encrypted"></a>始终加密
-使用始终加密，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以对加密数据执行操作，最重要的是，加密密钥与应用程序驻留在客户所信任的环境中，而不是驻留在服务器上。 始终加密保护客户的数据，因此 DBA 不需要访问纯文本数据。 数据的加密和解密在驱动程序级别透明地进行，这样在最大程度上减少了必须对现有应用程序所做的更改。 有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../relational-databases/security/encryption/always-encrypted-database-engine.md)。
+使用 Always Encrypted，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以对加密数据执行操作，最重要的是加密密钥与应用程序驻留在客户所信任的环境中，而不是驻留在服务器上。 始终加密保护客户的数据，因此 DBA 不需要访问纯文本数据。 数据的加密和解密在驱动程序级别透明地进行，这样在最大程度上减少了必须对现有应用程序所做的更改。 有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
 
 ### <a name="dynamic-data-masking"></a>动态数据屏蔽
@@ -426,7 +426,7 @@ Always On 现在支持加密的数据库。 当你创建新的可用性组、添
 
 直接种子设定允许通过网络自动设定次要副本的种子（而手动种子设定需要在次要副本上还原目标数据库的物理备份）。 可以通过在 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) 语句中设置 **SEEDING_MODE=AUTOMATIC** 来指定直接种子设定。 还必须在用于直接种子设定的每个次要副本上使用 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) 指定 **GRANT CREATE ANY DATABASE**。
 
-**性能改进** — 通过在主要副本上对日志块进行更快速的并行压缩（一种优化的同步协议），并在次要副本上对日志记录进行并行解压缩和恢复，将可用性组的同步吞吐量提升了约 10 倍。 这将提高可读次要副本的新鲜度，并减少故障转移时的数据库恢复时间。 请注意，在 SQL Server 2016 中，对内存优化表的恢复操作目前不是并行的。
+**性能改进** - 通过在主要副本上对日志块进行更快速的并行压缩（一种优化的同步协议），并在次要副本上对日志记录进行并行解压缩和恢复，将可用性组的同步吞吐量提升了约 10 倍。 这将提高可读次要副本的新鲜度，并减少故障转移时的数据库恢复时间。 请注意，在 SQL Server 2016 中，对内存优化表的恢复操作目前不是并行的。
 
 ## <a name="replication-enhancements"></a>复制增强功能
 - 现在支持复制内存优化表。 有关详细信息，请参阅 [复制到内存优化表订阅服务器](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。

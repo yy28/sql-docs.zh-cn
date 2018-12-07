@@ -22,12 +22,12 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7437ae3e5a0489d582699c77af6d8d13c4ef6ae2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbb81d75413909fe8d205d781cef1ec89640044
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657515"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533372"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：见证服务器如何影响数据库可用性（数据库镜像）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "47657515"
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [数据库镜像期间可能出现的故障](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

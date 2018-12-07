@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641284"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528446"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -102,7 +102,7 @@ ms.locfileid: "51641284"
   
 ### <a name="options"></a>选项  
  **SMTPConnection**  
- 从列表中选择一个 SMTP 连接管理器，或单击 \<“新建连接…”> 创建新的连接管理器。  
+ 从列表中选择一个 SMTP 连接管理器，或单击“\<新建连接…>”创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
@@ -146,17 +146,17 @@ ms.locfileid: "51641284"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接输入  
  **MessageSource**  
- 键入邮件正文，或单击“浏览(…)”按钮，然后在“消息源”对话框中键入邮件内容。  
+ 键入邮件正文，或单击浏览按钮 (…)，然后在“消息源”对话框中键入邮件内容。  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 文件连接  
  **MessageSource**  
- 从列表中选择一个文件连接管理器，或单击 **“新建连接…”\<**> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
- 从列表中选择一个变量，或单击 **“新建变量...”\<**> 创建新变量。  
+ 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

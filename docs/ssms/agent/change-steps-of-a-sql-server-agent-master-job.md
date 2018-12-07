@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7802eb9297a21e41c5cfdac5b5f1ab380df15ba3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bcb614a09b3c2313bdceeb9cc10c20ba4e17db8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698875"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537075"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "51698875"
   
 4.  右键单击要修改步骤的作业，然后选择“属性”。  
   
-5.  在“作业属性 – job\_name”对话框中的“选择页”下，选择“步骤”。  
+5.  在“作业属性 - job\_name”对话框中的“选择页”下，选择“步骤。  
   
-6.  单击“编辑”，打开“作业步骤属性 - job\_step\_name”对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
+6.  单击“编辑”，打开“作业步骤属性 -job \_step\_name”对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成后，单击 **“确定”**。  
   

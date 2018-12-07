@@ -17,12 +17,12 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddbb2e0fe97024fe0ae44fcdcd971746263fad24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529587"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。
@@ -256,7 +256,7 @@ public class ScriptMain
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFolder 变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFolder”变量。  
   
 3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
@@ -264,7 +264,7 @@ public class ScriptMain
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFiles 变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
   
 4.  单击“编辑脚本”以打开脚本编辑器。  
   
@@ -331,7 +331,7 @@ public class ScriptMain
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFile 变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
   
 3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
@@ -339,7 +339,7 @@ public class ScriptMain
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelTablesvariable。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTables”变量。  
   
 4.  单击“编辑脚本”以打开脚本编辑器。  
   
@@ -444,7 +444,7 @@ public class ScriptMain
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (**…**) 按钮，然后在“”选择变量对话框中选择变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“”选择变量对话框中选择变量。  
   
 5.  单击“编辑脚本”以打开脚本编辑器。  
   

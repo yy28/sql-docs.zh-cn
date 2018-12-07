@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3989426a807b5d4fbcfa078a41fdaf6856dea98d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91439c93e0c21ca447bb0ca585904ddf41d885c9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541081"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>通过内存中 OLTP 使用查询存储
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47709675"
   
 -   查询存储捕获的查询编译的持续时间仅包括在生成本机代码之前，查询优化所用的时间。 更确切地说，持续时间不包括 C 代码编译的时间，以及 C 代码生成所需的内部结构生成的时间。  
   
--   [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 范围内的内存授予度量值并不会填充本机编译查询；它们的值始终是 0。 内存授予列有：avg_query_max_used_memory、last_query_max_used_memory、min_query_max_used_memory、max_query_max_used_memory 和 stdev_query_max_used_memory。  
+-   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 范围内的内存授予度量值并不会填充本机编译查询；它们的值始终是 0。 内存授予列有：avg_query_max_used_memory、last_query_max_used_memory、min_query_max_used_memory、max_query_max_used_memory 和 stdev_query_max_used_memory。  
   
 ## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>通过内存中 OLTP 启用并使用查询存储  
  下面的简单示例演示了在端到端用户方案中，通过内存中 OLTP 使用查询存储。 在此示例中，我们假定为内存中 OLTP 启用了一个数据库 (`MemoryOLTP`)。  
@@ -138,7 +138,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ## <a name="see-also"></a>另请参阅  
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
- [查询存储最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)   
+ [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   

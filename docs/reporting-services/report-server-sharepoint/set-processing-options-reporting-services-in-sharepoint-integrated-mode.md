@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0d40fe3cece9f2f8ae290e09e4b722fdfc3873a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412084"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
 
@@ -88,7 +88,7 @@ ms.locfileid: "50020681"
   
 ## <a name="set-database-timeout"></a>设置数据库超时
   
-*  使用 Windows PowerShell 设置 SharePoint 报表服务器的数据库超时。 有关详细信息，请参阅 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)中的“获取并设置报表服务应用程序数据库的属性”一节。  
+*  使用 Windows PowerShell 设置 SharePoint 报表服务器的数据库超时。 有关详细信息，请参阅[用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 中的“获取并设置报表服务应用程序数据库的属性”一节。  
   
 ## <a name="next-steps"></a>后续步骤
 

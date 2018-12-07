@@ -16,12 +16,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eed8e2ea431b38ff11c61d86c869cbc3f3de82cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539156"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47618516"
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  右键单击“审核”文件夹，然后选择“新建审核…”。 有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  右键单击“审核”文件夹，然后选择“新建审核…”。有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  在完成选项选择后，请单击 **“确定”**。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "47618516"
      **Object Name**  
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
   
-     **省略号 (…)**  
+     **省略号 (...)**  
      打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”** 浏览和选择可用对象。  
   
      **主体名称**  
      对于所审核的对象，要作为审核筛选依据的帐户。  
   
-     **省略号 (…)**  
+     **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
 4.  在完成选项选择后，请单击 **“确定”**。  

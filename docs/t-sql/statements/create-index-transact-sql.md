@@ -55,18 +55,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518328"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助我们改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
 > [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 为表或视图创建相关索引。 也称为行存储索引，因为它可能是聚集或非聚集的 B 树索引。 可以在表中不存在数据时创建行存储索引。 使用行存储索引提高查询性能，尤其是在查询从特定列中进行选择或需要按特定顺序对值进行排序时。  
@@ -731,7 +730,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 若要立即暂停索引操作，则可以停止 (Ctrl-C) 正在进行的命令，执行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令或执行 KILL `<session_id>` 命令。 暂停命令之后，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令恢复它。 
 - 重新执行原始 CREATE INDEX 语句的可恢复索引，会自动恢复暂停的索引创建操作。
 - 可恢复索引不支持 SORT_IN_TEMPDB=ON 选项。 
-- 无法在显式事务（不能属于 begin TRAN … COMMIT 块）中执行具有“RESUMEABLE = ON”的 DDL 命令。
+- 无法在显式事务（不能属于 begin TRAN …COMMIT 块）中执行具有“RESUMEABLE = ON”的 DDL 命令。
 - 若要恢复/中止索引创建/重新生成，请使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 语法
 
 > [!NOTE]

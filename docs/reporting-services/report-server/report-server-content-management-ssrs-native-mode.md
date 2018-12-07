@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0398062e9b57d536a0cc1a2c71c25e6983bea5c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df1121e89f1ec62148852e7b8a7aefaedd436fc9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399280"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。 从 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 开始，提供了  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户。 本文将介绍报表管理器和新的 Web 门户体验。  
@@ -123,7 +123,7 @@ ms.locfileid: "47678935"
  项在文件夹中的可见性取决于角色分配（即查看项的权限）以及对文件夹有效的查看选项这两个方面。 在报表管理器中，可以将“内容”页设置为列表视图或详细信息视图。 在某些情况下，可能会在列表视图中隐藏特定报表或项。 在删除某个文件夹的内容之前，请确保先在详细信息视图中查看该文件夹。  
   
 ##  <a name="bkmk_Resources"></a> Resources  
- 资源是指存储在报表服务器上但不由报表服务器处理的托管项。 通常，资源为报表用户提供外部内容。 例如描述报表中所使用业务规则的 .jpg 文件、包含空间数据的 ESRI 形状文件或 HTML 文件中的图像。 JPG、SHP 或 HTML 文件存储在报表服务器上，但报表服务器会将文件直接传递到浏览器，而不会首先对其进行处理。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)以及[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)中的“向地图添加数据”一节。  
+ 资源是指存储在报表服务器上但不由报表服务器处理的托管项。 通常，资源为报表用户提供外部内容。 例如描述报表中所使用业务规则的 .jpg 文件、包含空间数据的 ESRI 形状文件或 HTML 文件中的图像。 JPG、SHP 或 HTML 文件存储在报表服务器上，但报表服务器会将文件直接传递到浏览器，而不会首先对其进行处理。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)以及[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)中的“向地图添加数据”部分。  
   
 ### <a name="adding-and-viewing-a-resource"></a>添加和查看资源  
  若要向报表服务器中添加资源，请上载或发布文件：  

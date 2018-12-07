@@ -13,12 +13,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b302626d3a1f13a2be13d0da77f2f3aca684b83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503460"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47772005"
 > [!NOTE]  
 >  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)中的“高可用性 (AlwaysOn)”。
   
- 将事务安全设置为 OFF 时，数据库镜像会话便会异步运行。 异步操作仅支持一种操作模式 - 高性能模式。 此模式可增强性能，但要牺牲高可用性。 高性能模式仅使用主体服务器和镜像服务器。 镜像服务器上出现的问题不会影响主体服务器。 在丢失主体服务器的情况下，镜像数据库将标记为 DISCONNECTED，但仍可以作为备用数据库。  
+ 将事务安全设置为 OFF 时，数据库镜像会话便会异步运行。 异步操作仅支持一种操作模式，即高性能模式。 此模式可增强性能，但要牺牲高可用性。 高性能模式仅使用主体服务器和镜像服务器。 镜像服务器上出现的问题不会影响主体服务器。 在丢失主体服务器的情况下，镜像数据库将标记为 DISCONNECTED，但仍可以作为备用数据库。  
   
  高性能模式仅支持一种角色切换形式：强制服务（可能造成数据丢失），此服务使用镜像服务器作为备用服务器。 强制服务是可能对主体服务器故障作出的响应之一。 由于可能造成数据丢失，因此，应当在将服务强制到镜像之前考虑其他备选服务器。 有关详细信息，请参阅本主题后面的 [对主体服务器故障的响应](#WhenPrincipalFails)。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47772005"
   
  与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器通过验证主体服务器是否已启用并运行来仅支持自动故障转移。 只有在镜像服务器和见证服务器与主体服务器断开连接之后而保持相互连接时，镜像服务器才启动自动故障转移。  
   
- 设置见证服务器时，会话需要“仲裁 ”（允许数据库可用的至少两个服务器实例之间的关系）。 有关详细信息，请参阅[数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 设置见证服务器时，会话需要“仲裁”（允许数据库可用的至少两个服务器实例之间的关系）。 有关详细信息，请参阅[数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自动故障转移需要下列条件：  
   

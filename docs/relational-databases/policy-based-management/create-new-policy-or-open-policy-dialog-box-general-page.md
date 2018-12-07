@@ -15,12 +15,12 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 76a3fe793e43af89dbbf29c934604d1e3102076a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: beda08746db1d0632c237afe1312f84d934b8924
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502668"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>“创建新策略”或“打开策略”对话框，“常规”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51661113"
  使用 **“按需”** 评估模式运行的策略不使用此复选框。  
   
  **检查条件**  
- 选择此策略使用的基于策略的管理条件。 将列出服务器上关联的基于策略的管理方面的所有条件。 单击 **“新建条件”** 可创建新的条件。 单击省略号 (**…**) 按钮可修改条件。  
+ 选择此策略使用的基于策略的管理条件。 将列出服务器上关联的基于策略的管理方面的所有条件。 单击 **“新建条件”** 可创建新的条件。 单击省略号“(…)”按钮可修改条件。  
   
  **“针对目标”**  
  选择此方面完成筛选表达式时可使用的目标类型。  

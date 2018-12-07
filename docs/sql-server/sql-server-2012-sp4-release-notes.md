@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503275"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "51701095"
 - 替换 DBCC INPUTBUFFER 的新 DMF - 已引入将 session_id 作为参数的新动态管理函数 sys.dm_input_buffer，用于替换 DBCC INPUTBUFFER
 - 针对可用性组的读取路由问题的 Xevent 增强功能 - 当前，如果存在路由列表，但路由列表中的任何服务器都不可用于连接，则只会激发 read_only_rout_fail XEvent。 这一改进包括用于帮助进行故障排除的其他信息，还会在用于激发 XEvent 的码位中展开。 
 - 通过可用性组故障转移，改进了 Service Broker 的处理 - 当前，如果在可用性组故障转移上启用了 Service Broker，则 AG 故障转移期间，主要副本发起的所有 Service Broker 连接均保持打开状态。 AG 故障转移期间，这一改进会关闭所有此类打开的连接。
-- **自动 Soft-NUMA 分区** – 在服务级别启动了跟踪标志 8079 后，会借助 SQL 2014 SP2 引入自动 [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) 技术。 如果在启动期间启用了跟踪标志 8079，SQL Server 2014 SP2 会询问硬件布局，并在报告每个 NUMA 节点 8 个或多个 CPU 的系统上自动配置 Soft NUMA。 自动 Soft NUMA 行为是超线程（HT/逻辑处理器）感知。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。 建议首先测试自动 Soft NUMA 的工作负荷性能，然后再在生产中启用该技术。
+- **自动 Soft-NUMA 分区** - 在服务级别启动了跟踪标志 8079 后，会借助 SQL 2014 SP2 引入自动 [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) 技术。 如果在启动期间启用了跟踪标志 8079，SQL Server 2014 SP2 会询问硬件布局，并在报告每个 NUMA 节点 8 个或多个 CPU 的系统上自动配置 Soft NUMA。 自动 Soft NUMA 行为是超线程（HT/逻辑处理器）感知。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。 建议首先测试自动 Soft NUMA 的工作负荷性能，然后再在生产中启用该技术。
 
 ## <a name="service-pack-3-release-notes"></a>Service Pack 3 发行说明
 
@@ -226,11 +226,11 @@ DACFx 现在支持所有 DAC 方案和客户端工具中的 SXI 索引。 SXI �
   
 **对 SqlPackage.exe（DACFx 命令行工具）的更新**  
   
--   带数据提取 DACPAC – 从一个活动 SQL Server 或 Windows Azure SQL Database 创建数据库快照文件 (.dacpac)，该文件除了包含数据库架构之外还包含用户表的数据。 可以使用 SqlPackage.exe“发布”操作将这些包发布到新的或现有 SQL Server 或 Windows Azure SQL Database。 包中包含的数据将替代目标数据库中的现有数据。  
+-   带数据提取 DACPAC - 从一个活动 SQL Server 或 Windows Azure SQL Database 创建数据库快照文件 (.dacpac)，该文件除了包含数据库架构之外还包含用户表的数据。 可以使用 SqlPackage.exe“发布”操作将这些包发布到新的或现有 SQL Server 或 Windows Azure SQL Database。 包中包含的数据将替代目标数据库中的现有数据。  
   
 -   导出 BACPAC - 创建包含数据库架构和用户数据的活动 SQL Server 或 Windows Azure SQL Database 的逻辑备份文件 (.bacpac)，这些架构和数据可用于将数据库从内部 SQL Server 迁移到 Windows Azure SQL Database。 可以在支持的 SQL Server 版本间导出与 Azure 兼容的数据库，之后再导入。  
   
--   导入 BACPAC – 导入 .bacpac 文件以新建或填充空的 SQL Server 或 Windows Azure SQL Database。  
+-   导入 BACPAC - 导入 .bacpac 文件以新建或填充空的 SQL Server 或 Windows Azure SQL Database。  
   
 MSDN 上的完整 SqlPackage.exe 文档可以在 [此处](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)找到。  
   

@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686555"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542377"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   由于一个 FileTable 包含一个 FILESTREAM 列，因此，FileTable 需要有效的 FILESTREAM 文件组。 可以指定有效的 FILESTREAM 文件组作为 **CREATE TABLE** 命令的一部分以创建 FileTable（可选）。 如果未指定文件组，则 FileTable 使用数据库的默认 FILESTREAM 文件组。 如果数据库没有 FILESTREAM 文件组，将引发错误。  
   
--   您不能将表约束作为 **CREATE TABLE…AS FILETABLE** 语句的一部分创建。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
+-   不能将表约束作为 CREATE TABLE…AS FILETABLE 语句的一部分创建。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
   
 -   不能在 **tempdb** 数据库或任何其他系统数据库中创建 FileTable。  
   

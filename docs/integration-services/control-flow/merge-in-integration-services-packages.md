@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638004"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393970"
 ---
 # <a name="merge-in-integration-services-packages"></a>在 Integration Services 包中执行 MERGE
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，执行 SQL 任务中的 SQL 语句可以包含 MERGE 语句。 使用此 MERGE 语句可以在一个语句中完成多个 INSERT、UPDATE 和 DELETE 操作。  

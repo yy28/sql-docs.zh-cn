@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511772"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661106"
   
  如果批中出现运行时语句错误（如违反约束），那么[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的默认行为是只回滚产生该错误的语句。 可以使用 `SET XACT_ABORT` 语句更改此行为。 在执行 `SET XACT_ABORT` ON 之后，任何运行时语句错误将导致当前事务的自动回滚。 编译错误（如语法错误）不受 `SET XACT_ABORT` 的影响。 有关详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](../t-sql/statements/set-xact-abort-transact-sql.md)。  
   
- 出现错误时，纠正操作（`COMMIT` 或 `ROLLBACK`）应包括在应用程序代码中。 处理错误（包括那些事务中的错误）的一种有效工具是 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY…CATCH` 构造。 有关包括事务的示例的详细信息，请参阅 [TRY...CATCH (Transact-SQL)](../t-sql/language-elements/try-catch-transact-sql.md)。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，可使用 `THROW` 语句引发异常并将执行转移到 `TRY…CATCH` 构造的 `CATCH` 块。 有关详细信息，请参阅 [THROW (Transact-SQL)](../t-sql/language-elements/throw-transact-sql.md)。  
+ 出现错误时，纠正操作（`COMMIT` 或 `ROLLBACK`）应包括在应用程序代码中。 处理错误（包括那些事务中的错误）的一种有效工具是 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH` 构造。 有关包括事务的示例的详细信息，请参阅 [TRY...CATCH (Transact-SQL)](../t-sql/language-elements/try-catch-transact-sql.md)。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，可使用 `THROW` 语句引发异常并将执行转移到 `TRY...CATCH` 构造的 `CATCH` 块。 有关详细信息，请参阅 [THROW (Transact-SQL)](../t-sql/language-elements/throw-transact-sql.md)。  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>自动提交模式下的编译和运行时错误  
  在自动提交模式下，有时看起来好像[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例回滚了整个批处理而不是仅仅一个 SQL 语句。 当遇到的错误是编译错误而非运行时错误时，会发生这种情况。 编译错误会阻止[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]生成执行计划，这样批处理中的任何语句都不会执行。 尽管看起来好像是回滚了产生错误的语句之前的所有语句，但该错误阻止了批处理中的所有语句的执行。 在下面的示例中，由于发生编译错误，第三个批处理中的 `INSERT` 语句都没有执行。 但看起来好像是前两个 `INSERT` 语句没有执行便进行了回滚。  
@@ -1839,7 +1839,7 @@ GO
   
  长时间运行的事务可能导致数据库的严重问题，如下所示：  
   
--   如果服务器实例在活动事务已执行很多未提交的修改后关闭，后续重新启动的恢复阶段持续时间将远远多于恢复间隔服务器配置选项或 `ALTER DATABASE … SET TARGET_RECOVERY_TIME` 选项指定的时间。 这些选项分别控制活动检查点和间接检查点的频率。 有关检查点类型的详细信息，请参阅[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)。  
+-   如果服务器实例在活动事务已执行很多未提交的修改后关闭，后续重新启动的恢复阶段持续时间将远远多于恢复间隔服务器配置选项或 `ALTER DATABASE ... SET TARGET_RECOVERY_TIME` 选项指定的时间。 这些选项分别控制活动检查点和间接检查点的频率。 有关检查点类型的详细信息，请参阅[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
 -   更重要的是，尽管等待事务可能生成很小的日志，但是它无限期阻止日志截断，导致事务日志不断增加并可能填满。 如果事务日志填满，数据库将无法再执行任何更新。 有关详细信息，请参阅 [SQL Server 事务日志体系结构和管理指南](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)、[解决事务日志已满的问题（SQL Server 错误 9002）](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)和[事务日志 (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)。  
   

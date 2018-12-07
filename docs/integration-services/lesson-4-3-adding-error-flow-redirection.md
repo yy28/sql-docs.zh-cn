@@ -11,12 +11,12 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03e6618461a81fa086e66db65d72de4e49fea634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710285"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302880"
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>第 4-3 课 - 添加错误流重定向
 如上一个任务中所示，当 Lookup Currency Key 转换尝试对产生错误的已损坏示例平面文件进行处理时，该转换无法生成匹配。 由于转换针对错误输出使用了默认设置，因此，任何错误都将导致该转换失败。 当转换失败时，该包的其余部分也将失败。  
@@ -51,7 +51,7 @@ ms.locfileid: "47710285"
   
 9. 在“名称”属性中，键入 **ErrorDescription**并将“DataType”属性设置为“Unicode string [DT_WSTR]”。  
   
-10. 在“脚本”页中，验证确保已将“LocaleID”属性设置为“英语(美国)”  
+10. 在“脚本”页，验证是否已将“LocaleID”属性设置为“英语(美国)”。  
   
 11. 单击“编辑脚本”打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在“Input0_ProcessInputRow”方法中，键入或粘贴以下代码。  
   

@@ -1,7 +1,7 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: daad1b738030efa48d5a85f91b70ebf747d4702c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812522"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586250"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,15 @@ ms.locfileid: "51812522"
 > [!div class="nextstepaction"]
 > [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-使用指定的分隔符拆分字符表达式。  
-  
-> [!NOTE]  
-> STRING_SPLIT 函数仅在兼容性级别 130 和更高级别下可用。 如果数据库兼容性级别低于 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法找到并执行 STRING_SPLIT 函数。 若要更改数据库的兼容性级别，请参阅[查看或更改数据库的兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。
-> 请注意，兼容性级别 120 可能是默认级别，即使在新的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中也是如此。  
-  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+一个表值函数，它根据指定的分隔符将字符串拆分为子字符串行。
+
+#### <a name="compatibility-level-130"></a>兼容性级别为 130
+
+STRING_SPLIT 要求兼容性级别至少为 130。 级别低于 130 时，SQL Server 找不到 STRING_SPLIT 函数。
+
+若要更改数据库的兼容性级别，请参阅[查看或更改数据库的兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。
+
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,26 +52,37 @@ STRING_SPLIT ( string , separator )
  任何字符类型（例如 nvarchar、varchar、nchar 或 char）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  separator  
- 任何字符类型（例如 nvarchar(1)、varchar(1)、nchar(1) 或 char(1)）的单字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联字符串的分隔符。  
+ 任何字符类型（例如 nvarchar(1)、varchar(1)、nchar(1) 或 char(1)）的单字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联子字符串的分隔符。  
   
 ## <a name="return-types"></a>返回类型  
- 返回包含片段的单列表。 该列名为“value”。 如果任何输入参数为 nvarchar 或 nchar，则返回 nvarchar。 否则，返回 varchar。 返回类型的长度与字符串参数的长度相同。  
+
+返回其行是子字符串的单列表。 该列名为“value”。 如果任何输入参数为 nvarchar 或 nchar，则返回 nvarchar。 否则，返回 varchar。 返回类型的长度与字符串参数的长度相同。  
   
 ## <a name="remarks"></a>Remarks  
-STRING_SPLIT 采用应被拆分的字符串和将用于拆分字符串的分隔符。 返回包含子字符串的单列表。 例如，以下语句 `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` 使用空格字符作为分隔符，返回以下的结果表：  
+
+STRING_SPLIT 输入包含分隔子字符串的字符串，并输入一个字符用作分隔符。 STRING_SPLIT 输出其行包含子字符串的单列表。 输出列的名称为“value”。
+
+输出行可以按任意顺序排列。 顺序不保证与输入字符串中的子字符串顺序匹配。 可以通过在 SELECT 语句中使用 ORDER BY 子句覆盖最终排序顺序 (`ORDER BY value`)。
+
+当输入字符串包含两个或多个连续出现的分隔符字符时，将出现长度为零的空子字符串。 空子字符串的处理方式与普通子字符串相同。 可以通过使用 WHERE 子句筛选出包含空的子字符串的任何行 (`WHERE value <> ''`)。 如果输入字符串为 NULL，则 STRING_SPLIT 表值函数返回一个空表。  
+
+例如，以下 SELECT 语句使用空格字符作为分隔符：
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
+```
+
+在实践运行中，前面的 SELECT 返回以下结果表：  
   
 |值|  
-|-----------|  
+| :-- |  
 |Lorem|  
 |ipsum|  
 |dolor|  
 |sit|  
 |amet.|  
-  
-如果输入字符串为 NULL，则 STRING_SPLIT 表值函数返回一个空表。  
-  
-STRING_SPLIT 至少要求使用兼容模式 130。  
-  
+| &nbsp; |
+
 ## <a name="examples"></a>示例  
   
 ### <a name="a-split-comma-separated-value-string"></a>A. 拆分逗号分隔值字符串  
@@ -157,9 +170,9 @@ FROM Product
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
-  
-以下是常见反模式（例如在应用程序层或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建动态 SQL ，或使用 LIKE 运算符）的替代方式：  
-  
+
+上述 STRING_SPLIT 使用情况是常见反模式的替代。 此类反模式可能涉及在应用程序层或 Transact-SQL 中创建动态 SQL 字符串。 或者可以通过使用 LIKE 运算符来实现反模式。 请参阅以下示例 SELECT 语句：
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  

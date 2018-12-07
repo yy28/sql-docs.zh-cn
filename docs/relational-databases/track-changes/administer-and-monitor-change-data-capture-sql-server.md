@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: fd3fc6793ce2c95bfbb03d80e0413d0b0f6148d1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560514"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404982"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "51560514"
  执行清除时，所有捕获实例的低水印会在单个事务中初次更新。 然后，它会尝试从更改表和 cdc.lsn_time_mapping 表中删除过时项。 可配置的阈值用于限制使用任何单个语句中所删除的项数。 对任何单个表执行删除操作失败并不会阻止对其他表尝试执行该操作。  
   
 ### <a name="cleanup-job-customization"></a>清除作业自定义  
- 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于 lsn 而不是时间，所以可使用任何数量的策略来确定要保存在更改表中的最小 lsn。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同的 **lsn** 来清除所有数据库的更改表，但还可以调用基础清除过程，以在捕获实例级别上进行清除。  
+ 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于 lsn 而不是时间，所以可使用任何数量的策略来确定要保存在更改表中的最小 lsn。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同的 lsn 来清除所有数据库的更改表，但还可以调用基础清除过程，以在捕获实例级别上进行清除。  
   
 ##  <a name="Monitor"></a> 监视变更数据捕获进程  
  通过监视变更数据捕获进程，可以确定更改是否正以合理的滞后时间正确写入更改表中。 监视还可以帮助您标识可能发生的任何错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两个动态管理视图，用于帮助你监视变更数据捕获： [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) 和 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)。  

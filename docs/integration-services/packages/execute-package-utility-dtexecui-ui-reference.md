@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506239"
 ---
 # <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
@@ -99,11 +99,11 @@ ms.locfileid: "49169107"
 >  请尽可能使用 Windows 身份验证。  
   
  **“包”**  
- 键入包的名称或者单击省略号按钮 **(…)**，使用“选择 SSIS 包”对话框定位包。  
+ 键入包的名称或者单击省略号按钮 (…)，使用“选择 SSIS 包”对话框定位包。  
   
 #### <a name="package-source--file-system"></a>包源 = 文件系统  
  **“包”**  
- 键入包的名称或者单击省略号按钮 **(…)** ，使用“打开”对话框定位包。 默认情况下，该对话框仅列出扩展名为 .dtsx 的文件。  
+ 键入包的名称或者单击省略号按钮 (…) ，使用“打开”对话框定位包。 默认情况下，该对话框仅列出扩展名为 .dtsx 的文件。  
   
 #### <a name="package-source--ssis-package-store"></a>包源 = SSIS 包存储区  
  **Server**  
@@ -119,7 +119,7 @@ ms.locfileid: "49169107"
  在运行存储于“SSIS 包存储区”的包时，此选项不可用。  
   
  **“包”**  
- 键入包的名称或者单击省略号按钮 **(…)**，使用“选择 SSIS 包”对话框定位包。  
+ 键入包的名称或者单击省略号按钮 (…)，使用“选择 SSIS 包”对话框定位包。  
   
 ## <a name="configurations-page"></a>配置页  
  可以使用 **“执行包实用工具”** 对话框的 **“配置”** 页，选择在运行时加载的配置文件并指定它们的加载顺序。  
@@ -207,7 +207,7 @@ ms.locfileid: "49169107"
  如果启用包检查点，则列出包所使用的检查点文件。  
   
  **“浏览”**  
- 如果启用了包检查点，则单击浏览按钮 **(…)** 可以通过“打开”对话框查找检查点文件。 如果已经指定了检查点文件，将用所选文件替换该文件。  
+ 如果启用了包检查点，则单击浏览按钮 (…) 可以通过“打开”对话框查找检查点文件。 如果已经指定了检查点文件，将用所选文件替换该文件。  
   
  **覆盖重新启动选项**  
  指示是否覆盖重新启动选项（如果启用了包检查点）。  

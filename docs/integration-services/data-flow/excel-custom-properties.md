@@ -11,12 +11,12 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5217d0b8e3bd9e786e8afa18b2561f5e154ca938
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0b000870562295381c9c61d54327da4ae7059a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542992"
 ---
 # <a name="excel-custom-properties"></a>Excel 自定义属性
   **源自定义属性**  
@@ -47,8 +47,8 @@ ms.locfileid: "51639314"
   
 |属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> **OpenRowset** (0) - 需要提供表或视图的名称。<br /><br /> **OpenRowset from Variable** (1) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **OpenRowset Using Fastload** (3) - 需要提供表或视图的名称。<br /><br /> **OpenRowset Using Fastload from Variable** (4) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **SQL 命令** (2) - 需要提供 SQL 语句。|  
-|CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。<br /><br /> 注意：此属性在“Excel 目标编辑器” 中不可用，但可以使用“高级编辑器” 进行设置。|  
+|AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> “OpenRowset”(0) - 需要提供表或视图的名称。<br /><br /> “OpenRowset from Variable”(1) - 需要提供包含表或视图名称的变量的名称。<br /><br /> “OpenRowset Using Fastload” (3) - 需要提供表或视图名称。<br /><br /> “OpenRowset Using Fastload from Variable”(4) - 需要提供包含表或视图名称的变量的名称。<br /><br /> “SQL 命令”(2) - 需要提供 SQL 语句。|  
+|CommandTimeout|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。<br /><br /> 注意：此属性在“Excel 目标编辑器” 中不可用，但可以使用“高级编辑器” 进行设置。|  
 |FastLoadKeepIdentity|Boolean|该值指定加载数据时是否复制标识值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 **False**。|  
 |FastLoadKeepNulls|Boolean|一个值，指定加载数据时是否复制 Null 值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 **False**。|  
 |FastLoadMaxInsertCommitSize|Integer|指定 Excel 目标在快速加载操作期间尝试提交的批大小的值。 默认值为 **2147483647**。 值 **0** 指示处理所有行后的单个提交操作。|  

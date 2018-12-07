@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639884"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503995"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
@@ -153,17 +153,17 @@ ms.locfileid: "51639884"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **DataFileMessage**  
- 键入数据文件的路径，或单击省略号 **(…)** 后再定位到相应的文件。  
+ 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **VariableMessage**  
- 键入变量名称，或单击省略号 **(…)** 后再选择相应的变量。 各变量之间用逗号分隔。  
+ 键入变量名称，或单击省略号 (…) 后再选择相应的变量。 各变量之间用逗号分隔。  
   
  **相关主题：** 选择变量  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **StringMessage**  
- 键入字符串消息，或单击省略号 **(…)** 后在“输入字符串消息”对话框中键入消息。  
+ 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。  
   
 ## <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
   可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列 (MSMQ) 消息。  
@@ -192,7 +192,7 @@ ms.locfileid: "51639884"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **SaveFileAs**  
- 键入要使用的文件的路径，或单击省略号按钮 **(…)** ，然后查找该文件。  
+ 键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。  
   
  **Overwrite**  
  指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认值为 **False**。  
@@ -213,7 +213,7 @@ ms.locfileid: "51639884"
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
  **Identifier**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 **(…)** ，再指定包。  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
   
  **相关主题：**[选择包](../../integration-services/control-flow/select-a-package.md)  
   
@@ -239,7 +239,7 @@ ms.locfileid: "51639884"
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
  **Identifier**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 **(…)** ，再指定包。  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
   
  **相关主题：**[选择包](../../integration-services/control-flow/select-a-package.md)  
   

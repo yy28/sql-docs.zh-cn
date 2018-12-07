@@ -20,17 +20,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa19bc25c662c5010bf3cb424510117640795223
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: cb09b9028f2ef994d57f8a52ad21f6c80be63293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537624"
 ---
 # <a name="securables"></a>安全对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  
+  安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  
   
 ## <a name="securable-scope-server"></a>安全对象范围：服务器  
  **服务器** 安全对象范围包含以下安全对象：  
@@ -87,7 +87,7 @@ ms.locfileid: "47864225"
   
 -   XML 架构集合  
   
--   对象 – 对象类包含以下成员：  
+-   对象 - 对象类包含以下成员：  
   
     -   Aggregate  
   

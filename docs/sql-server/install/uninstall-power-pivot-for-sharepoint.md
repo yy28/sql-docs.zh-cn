@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d60a5174b5ca067e9f0e0d9f5db7efd6e71466ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 105401dc20d20b3414624d5dd0a40238a32bd243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535126"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>卸载 Power Pivot for SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47840425"
 -   您必须是 Analysis Services 系统管理员和本地 Administrators 组的成员才能卸载 Analysis Services 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
 ##  <a name="bkmk_before"></a> 步骤 1：卸载前一览表  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 作为第一步，您应该主动删除不再正常运行的文件和库。 这样，您可以在卸载软件前解决与“缺少数据”有关的任何问题。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 作为第一步，您应该主动删除不再正常运行的文件和库。 这样，可以在卸载软件前解决与“缺少数据”有关的任何问题。  
   
 1.  删除与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的安装相关联的所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿、文档和库。 一旦卸载软件后，库和文档都将失效。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47840425"
 ##  <a name="bkmk_remove"></a> 步骤 2：从 SharePoint 删除功能和解决方案  
  使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具从 SharePoint 中删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务和应用程序。  
   
--   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的 **db_owner** 。  
+-   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的“db_owner”。  
   
 -   使用适合 SharePoint 版本的配置工具版本。 不能对 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安装使用这两个工具。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47840425"
   
 6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。  
   
-7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击 **“运行”** 后，出现以下警告，提醒您将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
+7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
   
 8.  单击 **“是”** 继续操作。  
   
@@ -119,15 +119,15 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  以管理员身份启动 SharePoint Management Shell，然后运行以下命令查看队列中的作业：  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
 3.  检查现有部署的以下信息： **“类型”** 是“收回”或“部署”， **“文件”** 为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
-4.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制 **JobId** 的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）：  
+4.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制“JobId”的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）：  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  通过依次单击 **“验证”** 和 **“运行”**，在该配置工具中重试该任务。  

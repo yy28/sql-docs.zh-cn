@@ -15,12 +15,12 @@ ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0862cc4baffd68b42723ff4037e48613170d488d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22d55490c9149a857d74b7719d88fd7b25ea9a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768205"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504624"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改联接运算符 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47768205"
   
 1.  在[“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)中，右键单击要修改的联接线，再从快捷菜单中选择“属性”。  
   
-2.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的省略号 (…)。  
+2.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的“省略号 (…)”。  
   
 3.  在“联接”对话框中，选择一个新运算符。  
   

@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540558"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51703935"
 **解决方法：** 可以参考系统配置检查报告，了解有关这些安装规则的详细信息。 系统配置检查将会生成一个报告，该报告包含对每个执行规则的简短说明以及执行状态。 该系统配置检查报告位于 %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 为分布式重播控制器服务添加本地用户帐户可能会意外终止安装程序  
-**问题：** 在 SQL Server 安装程序的“ **分布式重播控制器** ”页中，在尝试为分布式重播控制器服务添加本地用户帐户时，安装程序可能会意外终止并且显示“SQL Server 安装失败”错误消息。  
+**问题：** 在 SQL Server 安装程序的“分布式重播控制器”页中，在尝试为分布式重播控制器服务添加本地用户帐户时，安装程序可能会意外终止并且显示“SQL Server 安装失败”错误消息。  
   
 **解决方法：** 在 SQL 安装过程中，不要通过“添加当前用户”或“添加…”来添加本地用户帐户。 在安装过程后，通过执行下面的步骤来手动添加本地用户帐户：  
   
@@ -341,7 +341,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 **解决方法：** 为避免此问题，请在开始新活动之前发布需要保留在知识库中的工作。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 对于大字号，控件不能正确缩放  
-**问题：** 如果将文本大小更改为“更大 – 150%”（在 Windows Server 2008 或 Windows 7 中），或者将自定义 DPI 设置更改为 200%（在 Windows 7 中），则“ **新建知识库** ”页上的“ **取消** ”和“ **创建** ”按钮将无法访问。  
+**问题：** 如果将文本大小更改为“更大 – 150%”（在 Windows Server 2008 或 Windows 7 中），或者将自定义 DPI 设置更改为 200%（在 Windows 7 中），则“新建知识库”页上的“取消”和“创建”按钮将无法访问。  
   
 **解决方法：** 若要解决此问题，请设置较小的字号。  
   
@@ -403,7 +403,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 此错误是由于 DQS 在 SQL Server 数据库和 C# 中采用不同的方法对字符串进行比较导致的。 SQL Server 数据库中的字符串比较不区分大小写，而在 C# 中则区分大小写。  
   
-我们将用一个示例加以说明。 以用户 Domain\user1 为例。 该用户使用“user1”帐户登录到数据质量客户端计算机，并且对某个知识库进行处理。 DQS 将每个用户的最近知识库作为 DQS_MAIN 数据库的 A_CONFIGURATION 表的一条记录存储。 在这个示例中，将用以下名称存储该记录：RecentList:KB:Domain\user1。 之后，该用户以“User1”的身份登录到数据质量客户端计算机（请注意，U 为大写），并且尝试为域管理活动在“ **最近的知识库** ”列表中打开该知识库。 DQS 中的基础代码将比较这两个字符串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，并且在 C# 中考虑区分大小写的字符串比较，这两个字符串将不匹配，因此，DQS 将尝试为用户 (User1) 在 DQS_MAIN 数据库的 A_CONFIGURATION 表中插入一个新记录。 但是，由于在 SQL 数据库中采用不区分大小写的字符串比较，所以，该字符串在 DQS_MAIN 数据库的 A_CONFIGURATION 表中已存在，并且插入操作将失败。  
+我们将用一个示例加以说明。 以用户 Domain\user1 为例。 该用户使用“user1”帐户登录到数据质量客户端计算机，并且对某个知识库进行处理。 DQS 将每个用户的最近知识库作为 DQS_MAIN 数据库的 A_CONFIGURATION 表的一条记录存储。 在这个示例中，将用以下名称存储该记录：RecentList:KB:Domain\user1。 之后，该用户以“User1”的身份登录到数据质量客户端计算机（请注意，U 为大写），并且尝试为域管理活动在“最近的知识库”列表中打开该知识库。 DQS 中的基础代码将比较这两个字符串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，并且在 C# 中考虑区分大小写的字符串比较，这两个字符串将不匹配，因此，DQS 将尝试为用户 (User1) 在 DQS_MAIN 数据库的 A_CONFIGURATION 表中插入一个新记录。 但是，由于在 SQL 数据库中采用不区分大小写的字符串比较，所以，该字符串在 DQS_MAIN 数据库的 A_CONFIGURATION 表中已存在，并且插入操作将失败。  
   
 **解决方法：** 若要解决此问题，可以执行以下操作之一：  
   

@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3b9207af9dcf70db110768dbf4f6895767d22f0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e00bb3652d3692f498bbbb2cd6cae2330865b841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642724"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530389"
 ---
 # <a name="code-outlining"></a>代码大纲显示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中的大纲显示功能可在编辑查询时有选择地隐藏代码， 从而可以更加方便地查看您正在处理的代码，尤其是大型查询文件中的代码。  
   
 ## <a name="outlining-overview"></a>大纲显示概述  
- 默认情况下，打开查询编辑器窗口时所有代码均可见。 可将代码区域折叠起来以便在视图中隐藏该区域。 编辑器窗口左侧边缘的竖线使用一个方块和一个减号 (-) 来标识每个可折叠代码区域的起点。 单击减号时，代码区域的文本将更换为一个含有三个句点 ( ) 的框，且减号将变为加号 (+)。 单击加号时，将显示折叠的代码，且加号将变为减号。 将指针移动到含有三个句点的框上方时，该处出现工具提示，显示折叠部分包含的代码。  
+ 默认情况下，打开查询编辑器窗口时所有代码均可见。 可将代码区域折叠起来以便在视图中隐藏该区域。 编辑器窗口左侧边缘的竖线使用一个方块和一个减号 (-) 来标识每个可折叠代码区域的起点。 单击减号时，代码区域的文本将更换为一个含有三个句点 (...) 的框，且减号将变为加号 (+)。 单击加号时，将显示折叠的代码，且加号将变为减号。 将指针移动到含有三个句点的框上方时，该处出现工具提示，显示折叠部分包含的代码。  
   
 ## <a name="system-outline-regions"></a>系统大纲区域  
  每个 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器均生成一组默认的系统定义的大纲区域。  
@@ -43,7 +43,7 @@ ms.locfileid: "51642724"
   
  ![隐藏了内部节点的 XML 代码](../../ssms/scripting/media/editoutlinexmlinnercol.gif "隐藏了内部节点的 XML 代码")  
   
- 将指针移动到含有三个句点 ( ) 的框上方时，折叠区域中的代码将出现在工具提示中，如下图所示。  
+ 将指针移动到含有三个句点 (...) 的框上方时，折叠区域中的代码将出现在工具提示中，如下图所示。  
   
  ![带有显示了隐藏代码的提示的 XML 代码](../../ssms/scripting/media/editoutlinexmlmouse.gif "带有显示了隐藏代码的提示的 XML 代码")  
   

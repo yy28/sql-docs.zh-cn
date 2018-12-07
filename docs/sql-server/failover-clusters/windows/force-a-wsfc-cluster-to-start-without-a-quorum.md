@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520211"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动 WSFC 群集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51697575"
   
 1.  打开故障转移群集管理器并连接到所需的群集节点，以强制联机。  
   
-2.  在 **“操作”** 窗格中，单击 **“强制启动群集”**，然后单击 **“是 – 强制启动我的群集”**。  
+2.  在“操作”窗格中，单击“强制启动群集”，然后单击“是 - 强制启动我的群集”。  
   
 3.  在左窗格中，在 **“故障转移群集管理器”** 树中单击该群集名称。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "51697575"
   
 3.  使用 `Stop-ClusterNode` 以确保群集服务已停止。  
   
-4.  将 `Start-ClusterNode` 和 `–FixQuorum` 结合使用以强制启动群集服务。  
+4.  将 `Start-ClusterNode` 和 `-FixQuorum` 结合使用以强制启动群集服务。  
   
-5.  将 `Get-ClusterNode` 和 `–Propery NodeWieght = 1` 结合使用以设置确保节点是仲裁的投票成员的值。  
+5.  将 `Get-ClusterNode` 和 `-Propery NodeWieght = 1` 结合使用以设置确保节点是仲裁的投票成员的值。  
   
 6.  以可读格式输出群集节点属性。  
   
@@ -73,8 +73,8 @@ ms.locfileid: "51697575"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

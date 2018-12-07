@@ -30,12 +30,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbfac38c561a8943a6e15753f3ba20f9ca534311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbfda8b5768242980d61cce90f1ca16f5de6aa9f
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667765"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586260"
 ---
 # <a name="monitor-and-tune-for-performance"></a>监视和优化性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,30 +61,29 @@ ms.locfileid: "47667765"
   
 -   通过监视试图连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的用户，可以确定安全设置是否得当并测试应用程序或开发系统。  
   
- 响应时间是指以可视确认信息（指出正在处理查询）的形式将结果集的首行返回给用户所需的时间。 吞吐量是指在一段给定时间内，服务器处理的查询总数。  
+响应时间是指以可视确认信息（指出正在处理查询）的形式将结果集的首行返回给用户所需的时间。 吞吐量是指在一段给定时间内，服务器处理的查询总数。  
   
- 随着用户数量的增加，对服务器资源的竞争也会更激烈，进而导致响应时间增加和总体吞吐量减少。  
+随着用户数量的增加，对服务器资源的竞争也会更激烈，进而导致响应时间增加和总体吞吐量减少。  
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>监视和性能优化任务  
   
 |主题| 任务|  
 |-----------|----------------------|  
-|[监视 SQL Server 组件](../../relational-databases/performance/monitor-sql-server-components.md)|监视任何 SQL Server 组件的必要步骤。|  
-|[性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|列出了适用于 SQL Server 的监视和优化工具。|  
+|[监视 SQL Server 组件](../../relational-databases/performance/monitor-sql-server-components.md)|监视任何 SQL Server 组件所需的步骤，如活动监视器、扩展事件、动态管理视图和函数等。|  
+|[性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|列出随 SQL Server 提供的监视和优化工具，如实时查询统计信息和数据库引擎优化顾问。|  
+|[使用查询优化助手升级数据库](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|升级到更新的数据库兼容级别期间保持工作负荷性能稳定性。|  
+|[使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|使用查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。|  
 |[建立性能基线](../../relational-databases/performance/establish-a-performance-baseline.md)|如何建立性能基线。|  
 |[隔离性能问题](../../relational-databases/performance/isolate-performance-problems.md)|隔离数据库性能问题。|  
 |[识别瓶颈](../../relational-databases/performance/identify-bottlenecks.md)|监视和跟踪服务器性能，以发现瓶颈。|  
+|[使用 DMV 来确定视图的使用情况统计信息和性能](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|本文介绍了一些方法和脚本，用于获取查询性能的相关信息。|  
 |[服务器性能和活动监视](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 性能和活动监视工具。|  
-|[显示和保存执行计划](../../relational-databases/performance/display-and-save-execution-plans.md)|显示执行计划并将其保存到 XML 格式的文件中。|  
-|[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)|显示有关查询执行步骤的实时统计信息。|  
-|[使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|使用查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。|  
-|[通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|内存优化表的注意事项|  
-|[Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)|有关使用查询存储的建议。|  
+|[监视资源使用情况](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|使用系统监视器（也称为 perfmon）通过性能计数器来测量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能。|  
+
   
 ## <a name="see-also"></a>另请参阅  
- [企业范围的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)   
- [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)   
- [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [企业范围的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)    
+ [比较和分析执行计划](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
+ [显示和保存执行计划](../../relational-databases/performance/display-and-save-execution-plans.md)    
   
   

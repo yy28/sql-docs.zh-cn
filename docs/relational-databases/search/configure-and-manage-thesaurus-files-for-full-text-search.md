@@ -15,12 +15,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3fc363a3ea7922c6c486f250222b5ce62da8e6e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514268"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47731395"
 2.  然后，对全局同义词库重复执行这些步骤。 但是，如果字词已经是特定于语言的同义词库文件中的匹配项的一部分，则不会在全局同义词库中对该字词再次进行匹配。  
 
 ##  <a name="structure"></a>同义词库文件的结构  
- 每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus`的 XML 容器，以及一个包含示例同义词库的注释 `<!--`    `-->`。 同义词库是在 `<thesaurus>` 元素中定义的，其中包含定义标注字符设置、扩展集和替换集的子元素的示例。
+ 每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus` 的 XML 容器，以及一个包含示例同义词库的注释 `<!--`...`-->`。 同义词库是在 `<thesaurus>` 元素中定义的，其中包含定义标注字符设置、扩展集和替换集的子元素的示例。
 
 典型的空同义词库文件包含以下 XML 文本：  
   

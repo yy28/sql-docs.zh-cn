@@ -11,12 +11,12 @@ ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 606b835328f704adcaa282d0a2c4d3984c9ddec0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42896bb62b5566c955c86c43618a8f64e4968b5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655778"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405864"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>数据库代码分析规则的扩展性概述
 包含 SQL Server Data Tools 的 Visual Studio 版本在数据库代码中包括要报告的有关 Transact\-SQL 设计、命名和性能警告的代码分析规则。 有关详细信息，请参阅[分析数据库代码以改进代码质量](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)。  

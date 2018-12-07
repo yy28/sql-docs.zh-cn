@@ -11,12 +11,12 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 447e132edc25da64984ec6fb165ab0d032cdb1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396950"
 ---
 # <a name="token--ssis-expression"></a>TOKEN（SSIS 表达式）
   基于分隔字符串中的标记的指定分隔符以及表示要返回的标记的标记数目，从字符串返回标记（子字符串）。  
@@ -32,7 +32,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  包含分隔符分隔的标记的字符串。  
   
  *delimiter_string*  
- 包含分隔符字符的字符串。 例如，“; ,”包含三个分隔符字符，即一个分号、一个空白空间和一个逗号。  
+ 包含分隔符字符的字符串。 例如，”; ,”包含三个分隔符字符，即一个分号、一个空白空间和一个逗号。  
   
  *occurrence*  
  指定要返回的标记的有符号或无符号整数。 例如，如果您指定 3 作为此参数的值，则返回字符串中的第三个标记。  

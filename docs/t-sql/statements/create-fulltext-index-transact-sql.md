@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 33eb48be31cccdc96f8a38d008c7d1ebfa865981
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169279"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516138"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
  column_name  
  全文索引中包含的列的名称。 只能为 char、varchar、nchar、nvarchar、text、ntext、image、xml 或 varbinary 类型的列编制索引，以供全文搜索使用。 若要指定多个列，请按如下方式重复 column_name 子句：  
   
- CREATE FULLTEXT INDEX ON table_name (column_name1 […], column_name2 […]) …  
+ CREATE FULLTEXT INDEX ON table_name (column_name1 [...], column_name2 [...]) ...  
   
  TYPE COLUMN type_column_name  
  指定表列的名称 (type_column_name)，用于存储 varbinary(max) 或 image 文档的文档类型。 此列（称为类型列）包含用户提供的文件扩展名（.doc、.pdf、.xls 等）。 类型列必须是 **char**、 **nchar**、 **varchar**或 **nvarchar**类型。  
@@ -121,7 +121,7 @@ CREATE FULLTEXT INDEX ON table_name
  指定是否由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对全文索引所覆盖的表列所做的更改（更新、删除或插入）传播到全文索引。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
   
  MANUAL  
- 指定必须通过调用 ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（手动填充）。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+ 指定必须通过调用 ALTER FULLTEXT INDEX …START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（手动填充）。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
  **AUTO**  
  指定当基表中的数据修改时，所跟踪的更改将会自动传播（自动填充）。 尽管是自动传播更改，但这些更改可能不会立即反映到全文索引中。 默认值为 AUTO。  

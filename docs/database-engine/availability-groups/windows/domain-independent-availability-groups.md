@@ -12,12 +12,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f17ff228c8cf71cc766c6f6fe43a6917577fe983
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788515"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415074"
 ---
 # <a name="domain-independent-availability-groups"></a>域独立可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 
 ## <a name="set-and-verify-the-dns-suffix-on-all-replica-servers"></a>在所有副本服务器上设置并验证 DNS 后缀
 
-域独立可用性组的工作组集群需要常见 DNS 后缀。 若要在将托管可用性组的副本的每个 Windows Server 上设置和验证 DNS 后缀，请遵循以下说明：
+域独立可用性组的工作组群集需要常见 DNS 后缀。 若要在将托管可用性组的副本的每个 Windows Server 上设置和验证 DNS 后缀，请遵循以下说明：
 
 1. 使用 Windows 键 + X 快捷方式，选择“系统”。
 2. 如果计算机名和完整计算机名相同，则尚未设置 DNS 后缀。 例如，如果计算机名为 ALLAN，则完整计算机名的值不应为 ALLAN。 它应该类似于 ALLAN.SQLHA.LAB。 SQLHA.LAB 是 DNS 后缀。 工作组的值应显示为 WORKGROUP。 如果需要设置 DNS 后缀，选择“更改设置”。

@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a11a7160f5ba6128358531c15bf24e304fdbaad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522353"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "47688935"
  例如，可以将 **@pub_identity_range**指定为 10000，将 **@identity_range** 指定为 1000（假定订阅服务器上的更新较少），将 **@threshold**。 在订阅服务器上进行 800 次插入后（即 1000 的 80%），将为订阅服务器分配一个新范围。 在发布服务器上进行 8000 次插入后，将为发布服务器分配一个新范围。 分配新范围后，表中的标识范围值之间将有一定的间隔。 指定较高的阈值会产生较小的间隔，但这会降低系统的容错能力：如果分发代理由于某种原因无法运行，订阅服务器就更容易用完标识。  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>为手动标识范围管理分配范围  
- 如果指定手动标识范围管理，则必须确保发布服务器和每个订阅服务器使用不同的标识范围。 例如，假设发布服务器上具有标识列定义为 `IDENTITY(1,1)`的表：标识列从 1 开始，在每次插入行时递增 1。 如果发布服务器上的表有 5,000 行，并预计表中的行数在应用程序生存期间会有增长，则发布服务器可使用范围 1-10,000。 假定有两个订阅服务器，订阅服务器 A 可以使用 10,001–20,000，订阅服务器 B 可使用 20,001-30,000。  
+ 如果指定手动标识范围管理，则必须确保发布服务器和每个订阅服务器使用不同的标识范围。 例如，假设发布服务器上具有标识列定义为 `IDENTITY(1,1)`的表：标识列从 1 开始，在每次插入行时递增 1。 如果发布服务器上的表有 5,000 行，并预计表中的行数在应用程序生存期间会有增长，则发布服务器可使用范围 1-10,000。 假定有两个订阅服务器，订阅服务器 A 可以使用 10,001-20,000，订阅服务器 B 可使用 20,001-30,000。  
   
  使用快照或其他方式初始化订阅服务器后，执行 DBCC CHECKIDENT，为订阅服务器分配其标识范围的起点。 例如，在订阅服务器 A 上，将执行 `DBCC CHECKIDENT('<TableName>','reseed',10001)`。 在订阅服务器 B 上，将执行 `CHECKIDENT('<TableName>','reseed',20001)`。  
   

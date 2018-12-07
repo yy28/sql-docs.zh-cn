@@ -11,12 +11,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0faaa704bb7a160d4a17d80a97efd2bae85b629
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0cf5f24bc4c330c40323ee18189cc10b0aed080e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671237"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398730"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51671237"
 > [!NOTE]  
 >  在备份期间，如果检测到内存优化文件组中的一个或多个文件存在校验和错误，备份操作会失败。 在这种情况下，必须从最新的已知良好备份还原数据库。  
 >   
->  如果您没有备份，可从内存优化表和基于磁盘的表导出数据，然后在删除并重新创建数据库之后重新加载数据。  
+>  如果没有备份，可从内存优化表和基于磁盘的表导出数据，然后在删除并重新创建数据库之后重新加载数据。  
   
  具有一个或多个内存优化表的数据库的完整备份包括基于磁盘的表（如果有）的已分配存储、活动事务日志以及内存优化表的数据和差异文件对（也称为检查点文件对）。 但是，如 [内存优化表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述，内存优化表使用的存储可以比其在内存中的大小大得多，会影响数据库备份的大小。  
   

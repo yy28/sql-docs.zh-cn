@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696975"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507287"
 ---
 # <a name="system-settings-master-data-services"></a>系统设置 (Master Data Services)
 
@@ -84,7 +84,7 @@ ms.locfileid: "51696975"
   
 |配置管理器设置|系统设置|描述|  
 |-----------------------------------|--------------------|-----------------|  
-|**层次结构中的默认成员数**|**HierarchyChildNodeLimit**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“资源管理器”** 功能区域，显示 **“...更多...”** 之前每个层次结构中显示的最大成员数。 可以单击 **“...更多...”** 以显示下一组成员。 默认值为“50” 。|  
+|**层次结构中的默认成员数**|**HierarchyChildNodeLimit**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]“资源管理器”功能区域，显示“...更多...”之前每个层次结构中显示的最大成员数。 可以单击“...更多...”以显示下一组成员。 默认值为“50” 。|  
 |**默认显示层次结构中的名称**|**ShowNamesInHierarchy**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“资源管理器”** 功能区域，确定查看层次结构时选择的默认设置。<br /><br /> 默认值为 **“是”** 或 **“1”**，表示显示每个成员的名称和代码。 更改为 **“否”** 或 **“2”** 可仅显示代码。|  
 |**列表中基于域的属性的数目**|**DBAListRowLimit**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的“资源管理器”功能区域，双击网格中基于域的属性值时显示在列表中的属性数。 默认值为“50” 。 如果存在的成员超过 50，则会改为显示一个可搜索对话框。|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“资源管理器”** 功能区域，使用 **“匹配”** 筛选条件时使用的相似性级别。 默认值为“0.3” 。 设置的值越接近 **1** ，返回的匹配项就越接近搜索条件。 设置为 **1** 表示完全匹配。|  

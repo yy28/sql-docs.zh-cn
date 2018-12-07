@@ -13,18 +13,18 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61ce02c05248eb5041c54abe1106109843d97507
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e347f35f176a1c0419d160206cbcb6ee9313590
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515381"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>“列列表”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 编写查询时，查看所选表值对象中的可用列的列表会非常有用。  
   
-若要访问此对话框，请在“查询设计器”菜单的“关系图”窗格中，右键单击某表值对象的标题，再单击“属性”。 在“属性”窗口中，单击“列列表”字段。 随后单击该字段右侧的省略号 **(…)**。  
+若要访问此对话框，请在“查询设计器”菜单的“关系图”窗格中，右键单击某表值对象的标题，再单击“属性”。 在“属性”窗口中，单击“列列表”字段。 随后单击该字段右侧的省略号 (…)。  
   
 此对话框提供了所选表值对象中的列的列表和一些基本属性，如数据类型以及这些列是否允许空值。  
   

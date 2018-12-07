@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39b9349d1ae4a9bb986808f6af2c6fbb7e96f9f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518670"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "43810103"
   
  **在 SQL Server 开发工具中查看 DAC**  
   
-1.  打开 **“文件”** 菜单，选择 **“新建”**，然后选择 **“项目…”**。  
+1.  打开“文件”菜单，选择“新建”，然后选择“项目…”。  
   
 2.  选择 **SQL Server** 项目模板，然后指定 **“名称”**、 **“位置”** 和 **“解决方案名称”**。  
   
-3.  在 **“解决方案资源管理器”** 中，右键单击该项目节点，然后选择 **“属性…”**。  
+3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…”。  
   
 4.  在“项目设置” 选项卡上的“输出类型”部分中，选中“数据层应用程序（.dacpac 文件）”复选框，然后关闭属性对话框。  
   
-5.  在“解决方案资源管理器” 中，右键单击该项目节点，然后选择“导入数据层应用程序…”。  
+5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…”。  
   
 6.  使用“解决方案资源管理器”可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
   

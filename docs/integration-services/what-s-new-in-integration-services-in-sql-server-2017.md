@@ -11,12 +11,12 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1563485139b438580afc14da1262eff61b74be4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fe0017d3797f260aede9e712cbf1cecfe6a45a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642145"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420568"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services 中的新增功能
 本主题介绍 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中新增或更新的功能。
@@ -50,7 +50,7 @@ ms.locfileid: "47642145"
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的新增功能
 
-现在，可在 Visual Studio 2017 或 Visual Studio 2015 中开发面向 SQL Server 2012 到 SQL Server 2017 的 SSIS 项目和包。 有关详细信息，请参阅[下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
+现在，可在 Visual Studio 2017 或 Visual Studio 2015 中开发面向 SQL Server 2012 到 SQL Server 2017 的 SSIS 项目和包。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>SQL Server 2017 RC1 中新的 SSIS 功能
 

@@ -12,6 +12,8 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
+- TVF
+- MSTVF
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -31,17 +33,20 @@ helpviewer_keywords:
 - nesting user-defined functions
 - deterministic functions
 - scalar-valued functions
+- scalar UDF
+- MSTVF
+- TVF
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704065"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818513"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,10 +73,10 @@ ms.locfileid: "51704065"
 -   使用内联函数作为安全策略的筛选器谓词  
   
 > [!NOTE]  
->  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure SQL 数据库。
+> 本主题讨论 .NET Framework CLR 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的集成。 CLR 集成不适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 > [!NOTE]  
->  对于 Azure SQL 数据仓库，请参阅 [CREATE FUNCTION（SQL 数据仓库）](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016)一文。
+> 有关 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，请参阅[CREATE FUNCTION（SQL 数据仓库）](../../t-sql/statements/create-function-sql-data-warehouse.md)。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -268,12 +273,12 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>参数
 *OR ALTER*  
- 适用范围：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  只有在函数已存在时才对其进行有条件地更改。 
  
 > [!NOTE]  
->  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1 开始，可以使用 CLR 的可选 [OR ALTER] 语法。   
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1 开始，可以使用 CLR 的可选 [OR ALTER] 语法。   
  
  *schema_name*  
  用户定义函数所属的架构的名称。  
@@ -282,7 +287,7 @@ RETURNS return_data_type
  用户定义函数的名称。 函数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，并且在数据库中以及对其架构来说是唯一的。  
   
 > [!NOTE]  
->  即使未指定参数，函数名称后也需要加上括号。  
+> 即使未指定参数，函数名称后也需要加上括号。  
   
  @parameter_name  
  用户定义函数中的参数。 可声明一个或多个参数。  
@@ -292,24 +297,22 @@ RETURNS return_data_type
  通过将 at 符号 (@) 用作第一个字符来指定参数名称。 参数名称必须符合标识符规则。 参数是对应于函数的局部参数；其他函数中可使用相同的参数名称。 参数只能代替常量，而不能用于代替表名、列名或其他数据库对象的名称。  
   
 > [!NOTE]  
->  在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 INSERT 或 UPDATE 语句可以成功执行。  
+> 在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 `INSERT` 或 `UPDATE` 语句可以成功执行。  
   
  [ type_schema_name. ] *parameter_data_type*  
  参数的数据类型及其所属的架构，后者为可选项。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，允许使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型和用户定义表类型）。 对于 CLR 函数，允许使用除 text、ntext、image、用户定义表类型和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为参数数据类型。  
   
- 如果未指定 *type_schema_name*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会按以下顺序查找 *scalar_parameter_data_type*：  
+如果未指定 *type_schema_name*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会按以下顺序查找 *scalar_parameter_data_type*：  
   
 -   包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型名称的架构。  
-  
 -   当前数据库中当前用户的默认架构。  
-  
 -   当前数据库中的 **dbo** 架构。  
   
- [ =default ]  
- 参数的默认值。 如果定义了 default 值，则无需指定此参数的值即可执行函数。  
+[ =default ]  
+参数的默认值。 如果定义了 default 值，则无需指定此参数的值即可执行函数。  
   
 > [!NOTE]  
->  可以为除 **varchar(max)** 和 **varbinary(max)** 数据类型之外的 CLR 函数指定默认的参数值。  
+> 可以为除 **varchar(max)** 和 **varbinary(max)** 数据类型之外的 CLR 函数指定默认的参数值。  
   
  如果函数的参数有默认值，则调用该函数以检索默认值时，必须指定关键字 DEFAULT。 此行为与在存储过程中使用具有默认值的参数不同，在后一种情况下，不提供参数同样意味着使用默认值。 但在通过使用 EXECUTE 语句调用标量函数时，DEFAULT 关键字不是必需的。  
   
@@ -320,31 +323,29 @@ RETURNS return_data_type
  标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为返回数据类型。  
   
  function_body  
- 指定一系列定义函数值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句在一起使用不会产生负面影响（例如修改表）。 function_body 仅用于标量函数和多语句表值函数。  
+ 指定一系列定义函数值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句在一起使用不会产生负面影响（例如修改表）。 function_body 仅用于标量函数和多语句表值函数 (MSTVF)。  
   
  在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值。  
   
- 在多语句表值函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句将填充 TABLE 返回变量。  
+ 在 MSTVF 中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句将填充 TABLE 返回变量。  
   
  *scalar_expression*  
  指定标量函数返回的标量值。  
   
  TABLE  
- 指定表值函数的返回值为表。 只有常量和 @*local_variables* 可以传递到表值函数。  
+ 指定表值函数 (TVF) 的返回值为表。 只有常量和 @local_variables 可以传递到 TVF。  
   
- 在内联表值函数中，TABLE 返回值是通过单个 SELECT 语句定义的。 内联函数没有关联的返回变量。  
+ 在内联 TVF 中，TABLE 返回值是通过单个 SELECT 语句定义的。 内联函数没有关联的返回变量。  
   
- 在多语句表值函数中，@*return_variable* 是 TABLE 变量，用于存储和汇总应作为函数值返回的行。只能将  @*return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
-  
-> [!WARNING]  
->  可以将多语句表值函数加入 **FROM** 子句，但性能不佳。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法对可以加入多语句函数的某些语句使用所有优化技术，导致生成的查询计划不佳。 若要获得最佳的性能，尽可能在基表之间使用联接而不是函数。  
+ <a name="mstvf"></a>在 MSTVF 中，@return_variable 是 TABLE 变量，用于存储和汇总应作为函数值返回的行。只能将  @*return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
   
  *select_stmt*  
- 定义内联表值函数返回值的单个 SELECT 语句。  
+ 定义内联表值函数 (TVF) 返回值的单个 SELECT 语句。  
   
  ORDER (\<order_clause>) 指定从表值函数中返回结果的顺序。 有关详细信息，请参阅本主题后面的“[在 CLR 表值函数中使用排序顺序](#using-sort-order-in-clr-table-valued-functions)”部分。  
   
- EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ EXTERNAL NAME \<method_specifier> assembly_name.class_name.method_name    
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）
   
  指定创建的函数名称应引用的程序集和方法。  
   
@@ -360,18 +361,19 @@ RETURNS return_data_type
     `SELECT * FROM sys.assembly_modules;`的用户。  
     该方法必须是静态方法。  
   
- 在典型示例中，对于 MyFood.DLL（其中所有类型都位于 MyFood 命名空间中），`EXTERNAL NAME` 值可以是：   
+在典型示例中，对于 MyFood.DLL（其中所有类型都位于 MyFood 命名空间中），`EXTERNAL NAME` 值可以是：   
 `MyFood.[MyFood.MyClass].MyStaticMethod`  
   
 > [!NOTE]  
->  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用此选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+> 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用此选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
 > [!NOTE]  
->  此选项在包含数据库中不可用。  
+> 此选项在包含数据库中不可用。  
   
  \<table_type_definition> ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...n ] ) 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。  
   
- \< clr_table_type_definition >  ( { column_namedata_type } [ ,...n ] )  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
   
  定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。 表始终放在主文件组中。  
   
@@ -395,7 +397,7 @@ RETURNS return_data_type
  指定函数将具有以下一个或多个选项：  
   
  ENCRYPTION  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
   
  指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将 CREATE FUNCTION 语句的原始文本转换为模糊格式。 模糊代码的输出在任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据库文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -408,9 +410,9 @@ RETURNS return_data_type
   
 -   删除函数。  
   
--   在未指定 SCHEMABINDING 选项的情况下，使用 ALTER 语句修改函数。  
+-   在未指定 `SCHEMABINDING` 选项的情况下，使用 `ALTER` 语句修改函数。  
   
- 只有满足以下条件时，函数才能绑定到架构：  
+只有满足以下条件时，函数才能绑定到架构：  
   
 -   函数是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数。  
   
@@ -420,10 +422,10 @@ RETURNS return_data_type
   
 -   该函数及其引用的对象属于同一数据库。  
   
--   执行 CREATE FUNCTION 语句的用户对该函数引用的数据库对象具有 REFERENCES 权限。  
+-   执行 `CREATE FUNCTION` 语句的用户对该函数引用的数据库对象具有 `REFERENCES` 权限。  
   
 RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT  
-指定标量值函数的 OnNULLCall 属性。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。  
+指定标量函数的 OnNULLCall 属性。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。  
   
 如果在 CLR 函数中指定了 RETURNS NULL ON NULL INPUT，它指示当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接收到的任何一个参数为 NULL 时，它可以返回 NULL，而无需实际调用函数体。 如果 \<method_specifier> 中指定的 CLR 函数的方法已具有指示 RETURNS NULL ON NULL INPUT 的自定义属性，但 CREATE FUNCTION 语句指示 CALLED ON NULL INPUT，则优先采用 CREATE FUNCTION 语句指示的属性。 不能为 CLR 表值函数指定 OnNULLCall 属性。 
   
@@ -431,9 +433,9 @@ EXECUTE AS 子句
 指定用于执行用户定义函数的安全上下文。 所以，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用哪一个用户帐户来验证针对该函数引用的任何数据库对象的权限。  
   
 > [!NOTE]  
->  不能为内联表值函数指定 EXECUTE AS。
+> 不能为内联表值函数指定 `EXECUTE AS`。
   
- 有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
+有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
 
 INLINE = { ON | OFF }  
 指定是否应内联此标量 UDF。 此子句仅适用于标量用户定义函数。 `INLINE` 子句不是强制性的。 如果未指定 `INLINE` 子句，则会基于 UDF 是否可内联而自动设定为 ON/OFF。 如果指定了 `INLINE=ON` 但发现 UDF 不可内联，则会引发错误。 有关详细信息，请参阅[标量 UDF 内联](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
@@ -456,7 +458,8 @@ INLINE = { ON | OFF }
   
  COLLATE 子句只能用来更改数据类型为 char、varchar、nchar 和 nvarchar 的列的排序规则。  
   
- 不能为 CLR 表值函数指定 COLLATE。  
+ > [!NOTE]
+ > 不能为 CLR 表值函数指定 `COLLATE`。  
   
  ROWGUIDCOL  
  指示新列是行的全局唯一标识符列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列。  
@@ -533,12 +536,15 @@ INLINE = { ON | OFF }
  指定是否允许使用页锁。 默认值为 ON。  
   
 ## <a name="best-practices"></a>最佳实践  
- 如果用户定义函数不是使用 SCHEMABINDING 子句创建的，则对基础对象进行的任何更改可能会影响函数定义并在调用函数时可能导致意外结果。 我们建议您实现以下方法之一，以便确保函数不会由于对于其基础对象的更改而过期：  
+如果用户定义函数不是使用 `SCHEMABINDING` 子句创建的，则对基础对象进行的任何更改可能会影响函数定义并在调用函数时可能导致意外结果。 我们建议您实现以下方法之一，以便确保函数不会由于对于其基础对象的更改而过期：  
   
--   在您创建函数时指定 WITH SCHEMABINDING 子句。 这确保除非也修改了函数，否则无法修改在函数定义中引用的对象。  
+-   创建函数时指定 `WITH SCHEMABINDING` 子句。 这确保除非也修改了函数，否则无法修改在函数定义中引用的对象。  
   
 -   在修改在函数定义中指定的任何对象后执行 [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) 存储过程。  
   
+> [!IMPORTANT]  
+> 有关内联表值函数（内联 TVF）和多语句表值函数 (MSTVF) 的详细信息和性能注意事项，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。 
+
 ## <a name="data-types"></a>数据类型  
  如果在 CLR 函数中指定了参数，则这些参数应为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型，即以前为 *scalar_parameter_data_type* 定义的类型。 有关将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型与 CLR 集成数据类型或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时数据类型进行比较的信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
@@ -555,26 +561,26 @@ INLINE = { ON | OFF }
  有关如何对 CLR 函数编程的详细信息，请参阅 [CLR 用户定义函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)。  
   
 ## <a name="general-remarks"></a>一般备注  
- 可在使用标量表达式的位置调用标量值函数。 这包括计算列和 CHECK 约束定义。 也可以使用 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 语句执行标量值函数。 必须使用至少由两部分组成名称的函数来调用标量值函数。 有关多部分名称的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 在允许表表达式的情况下，可在 SELECT、INSERT、UPDATE 或 DELETE 语句的 FROM 子句中调用表值函数。 有关详细信息，请参阅[执行用户定义函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)。  
+ 可在使用标量表达式的位置调用标量函数。 这包括计算列和 CHECK 约束定义。 也可以使用 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 语句执行标量函数。 必须使用至少由两部分组成名称的函数来调用标量函数 (<schema><function>)。 有关多部分名称的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 在允许表表达式的情况下，可在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 语句的 `FROM` 子句中调用表值函数。 有关详细信息，请参阅[执行用户定义函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)。  
   
 ## <a name="interoperability"></a>互操作性  
  下列语句在函数内有效：  
   
 -   赋值语句。  
-  
--   TRY...CATCH 语句以外的流控制语句。  
-  
--   定义局部数据变量和局部游标的 DECLARE 语句。  
-  
--   SELECT 语句，其中的选择列表包含为局部变量分配值的表达式。  
-  
--   游标操作，该操作引用在函数中声明、打开、关闭和释放的局部游标。 只允许使用以 INTO 子句向局部变量赋值的 FETCH 语句；不允许使用将数据返回到客户端的 FETCH 语句。  
-  
--   修改本地表变量的 INSERT、UPDATE 和 DELETE 语句。  
-  
--   调用扩展存储过程的 EXECUTE 语句。  
-  
--   有关详细信息，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
+
+-   `TRY...CATCH` 语句以外的控制流语句。  
+
+-   定义局部数据变量和局部游标的 `DECLARE` 语句。  
+
+-   `SELECT` 语句，其中的选择列表包含为局部变量分配值的表达式。  
+
+-   游标操作，该操作引用在函数中声明、打开、关闭和释放的局部游标。 只允许使用以 `INTO` 子句向局部变量赋值的 `FETCH` 语句；不允许使用将数据返回到客户端的 `FETCH` 语句。  
+
+-   修改本地表变量的 `INSERT`、`UPDATE` 和 `DELETE` 语句。  
+
+-   调用扩展存储过程的 `EXECUTE` 语句。  
+
+有关详细信息，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   
 ### <a name="computed-column-interoperability"></a>计算列互操作性  
  函数具有下列属性。 这些属性的值确定了函数是否可用于持久化计算列或索引计算列。  
@@ -591,19 +597,17 @@ INLINE = { ON | OFF }
   
  若要显示这些属性的当前值，请使用 [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)。  
   
- 必须使用确定性的架构绑定创建函数。  
+> [!IMPORTANT]
+> 必须使用确定性的 `SCHEMABINDING` 创建函数。  
   
- 如果用户定义函数具有下列属性值，则可以在索引中使用调用用户定义函数的计算列：  
+如果用户定义函数具有下列属性值，则可以在索引中使用调用用户定义函数的计算列：  
   
 -   **IsDeterministic** = true  
-  
 -   **IsSystemVerified** = true（计算列是持久性计算列时除外）  
-  
--   **UserDataAccess** = false  
-  
+-   **UserDataAccess** = false    
 -   **SystemDataAccess** = false  
   
- 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
+有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
 ### <a name="calling-extended-stored-procedures-from-functions"></a>从函数中调用扩展存储过程  
  如果在函数中调用扩展存储过程，则该过程不能向客户端返回结果集。 向客户端返回结果集的任何 ODS API 都将返回 FAIL。 扩展存储过程可以连接回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例；不过，该过程不应尝试与调用扩展存储过程的函数同时联接到同一事务。  
@@ -613,44 +617,44 @@ INLINE = { ON | OFF }
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  用户定义函数不能用于执行修改数据库状态的操作。  
   
- 用户定义函数不能包含将表作为其目标的 OUTPUT INTO 子句。  
+ 用户定义函数不能包含将表作为其目标的 `OUTPUT INTO` 子句。  
   
  下列 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 语句不能包含在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数的定义中：  
   
--   BEGIN DIALOG CONVERSATION  
+-   `BEGIN DIALOG CONVERSATION`  
   
--   END CONVERSATION  
+-   `END CONVERSATION`  
   
--   GET CONVERSATION GROUP  
+-   `GET CONVERSATION GROUP`  
   
--   MOVE CONVERSATION  
+-   `MOVE CONVERSATION`  
   
--   RECEIVE  
+-   `RECEIVE`  
   
--   SEND  
+-   `SEND`  
   
- 用户定义函数可以嵌套；也就是说，用户定义函数可相互调用。 被调用函数开始执行时，嵌套级别将增加；被调用函数执行结束后，嵌套级别将减少。 用户定义函数的嵌套级别最多可达 32 级。 如果超出最大嵌套级别数，整个调用函数链将失败。 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数对托管代码的任何引用都将根据 32 级嵌套限制计入一个级别。 从托管代码内部调用的方法不根据此限制进行计数。  
+用户定义函数可以嵌套；也就是说，用户定义函数可相互调用。 被调用函数开始执行时，嵌套级别将增加；被调用函数执行结束后，嵌套级别将减少。 用户定义函数的嵌套级别最多可达 32 级。 如果超出最大嵌套级别数，整个调用函数链将失败。 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数对托管代码的任何引用都将根据 32 级嵌套限制计入一个级别。 从托管代码内部调用的方法不根据此限制进行计数。  
   
 ### <a name="using-sort-order-in-clr-table-valued-functions"></a>在 CLR 表值函数中使用排序顺序  
- 在 CLR 表值函数中使用 ORDER 子句时请遵循以下准则：  
+在 CLR 表值函数中使用 `ORDER` 子句时请遵循以下准则：  
   
 -   必须确保始终按指定的顺序对结果进行排序。 如果没有按指定的顺序对结果进行排序，则在执行查询时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将生成一条错误消息。  
   
--   如果指定了 ORDER 子句，则必须根据列（显式或隐式）的排序规则对表值函数的输出进行排序。 例如，如果列排序规则为中文（在表值函数的 DDL 中指定或从数据库排序规则中获取），则必须根据中文排序规则对返回的结果进行排序。  
+-   如果指定了 `ORDER` 子句，则必须根据列（显式或隐式）的排序规则对表值函数的输出进行排序。 例如，如果列排序规则为中文（在表值函数的 DDL 中指定或从数据库排序规则中获取），则必须根据中文排序规则对返回的结果进行排序。  
   
--   如果指定了 ORDER 子句，则在返回结果时始终由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 验证 ORDER 子句，而不管查询处理器是否会使用该子句执行进一步的优化。 只有您知道 ORDER 子句对查询处理器有用时才使用它。  
+-   如果指定了 `ORDER` 子句，则在返回结果时始终由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对其验证，而不管查询处理器是否会使用该子句执行进一步的优化。 只有知道 `ORDER` 子句对查询处理器有用时才使用它。  
   
--   在以下情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器将自动使用 ORDER 子句：  
+-   在以下情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器将自动使用 `ORDER` 子句：  
   
-    -   其中 ORDER 子句与索引兼容的“插入”查询。  
+    -   “插入”查询，其中 `ORDER` 子句与索引兼容。  
   
-    -   与 ORDER 子句兼容的 ORDER BY 子句。  
+    -   与 `ORDER` 子句兼容的 `ORDER BY` 子句。  
   
-    -   其中 GROUP BY 与 ORDER 子句兼容的聚合。  
+    -   聚合，其中 `GROUP BY` 与 `ORDER` 子句兼容。  
   
-    -   其中不同列与 ORDER 子句兼容的 DISTINCT 聚合。  
+    -   `DISTINCT` 聚合，其中不同的列与 `ORDER` 子句兼容。  
   
- 除非在查询中还指定了 ORDER BY，否则 ORDER 子句不保证在执行 SELECT 查询时得到有序结果。 有关如何查询表值函数排序顺序中所包含的列的信息，请参阅 [sys.function_order_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)。  
+除非在查询中还指定了 `ORDER BY`，否则 `ORDER` 子句不保证在执行 SELECT 查询时得到有序结果。 有关如何查询表值函数排序顺序中所包含的列的信息，请参阅 [sys.function_order_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)。  
   
 ## <a name="metadata"></a>元数据  
  下表列出可用于返回与用户定义函数有关的元数据的系统目录视图。  
@@ -663,14 +667,17 @@ INLINE = { ON | OFF }
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|显示函数所引用的基础对象。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要在数据库中具有 CREATE FUNCTION 权限，并对创建函数时所在的架构具有 ALTER 权限。 如果函数指定用户定义类型，则需要对该类型具有 EXECUTE 权限。  
+ 需要在数据库中具有 `CREATE FUNCTION` 权限，并对创建函数时所在的架构具有 `ALTER` 权限。 如果函数指定用户定义类型，则需要对该类型具有 `EXECUTE` 权限。  
   
 ## <a name="examples"></a>示例  
-  
+
+> [!NOTE]
+> 有关 UDF 的更多示例和性能注意事项，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。 
+
 ### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. 使用计算 ISO 周的标量值用户定义函数  
  下面的示例将创建用户定义函数 `ISOweek`。 此函数使用日期参数来计算 ISO 周数。 要使此函数能正确计算，必须在调用该函数前调用 `SET DATEFIRST 1`。  
   
- 该示例还演示了如何使用 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 子句指定可执行存储过程的安全上下文。 在该示例中，`CALLER` 选项指定该过程将在调用该过程的用户的上下文中执行。 你还可以指定 SELF、OWNER 和 *user_name* 等其他选项。  
+ 该示例还演示了如何使用 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 子句指定可执行存储过程的安全上下文。 在该示例中，`CALLER` 选项指定该过程将在调用该过程的用户的上下文中执行。 还可以指定 `SELF`、`OWNER` 和 user_name 等其他选项。  
   
  下面是函数调用。 请注意，`DATEFIRST` 设置为 `1`。  
   
@@ -783,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. 创建 CLR 函数  
  此示例会创建 CLR 函数 `len_s`。 在创建该函数之前，程序集 `SurrogateStringFunction.dll` 已在本地数据库中注册。  
   
-**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  
@@ -817,10 +824,11 @@ JOIN sys.objects AS o ON m.object_id = o.object_id
 GO  
 ```  
   
- 不能使用 sys.sql_modules 查看使用 ENCRYPTION 选项创建的函数定义；不过，可显示有关加密函数的其他信息。  
+ 不能使用 sys.sql_modules 查看使用 `ENCRYPTION` 选项创建的函数定义；不过，可显示有关加密函数的其他信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
+ [创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
@@ -828,7 +836,6 @@ GO
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [CLR 用户定义函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)  
+ [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
   
  
-

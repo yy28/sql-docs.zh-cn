@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410854"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` 确立允许或禁止哪个操作。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 可以指定 230 种权限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 具有较少的权限，因为某些操作在 Azure 中不相关。 这些权限在[权限（数据库引擎）](../../../relational-databases/security/permissions-database-engine.md)主题和下面引用的图表中列出。  
   
--   `ON SECURABLE::NAME` 是安全对象（服务器、服务器对象、数据库或数据库对象）的类型及其名称。 某些权限不需要 `ON SECURABLE::NAME` ，因为它是明确的或在上下文中不适当。 例如， `CREATE TABLE` 权限不需要 `ON SECURABLE::NAME` 子句。 （例如， `GRANT CREATE TABLE TO Mary;` 允许 Mary 创建表。）  
+-   `ON SECURABLE::NAME` 是安全对象（服务器、服务器对象、数据库或数据库对象）的类型及其名称。 某些权限不需要 `ON SECURABLE::NAME` ，因为它是明确的或在上下文中不适当。 例如，`CREATE TABLE` 权限不需要 `ON SECURABLE::NAME` 子句。 （例如， `GRANT CREATE TABLE TO Mary;` 允许 Mary 创建表。）  
   
 -   `PRINCIPAL` 是获得或失去权限的安全主体（登录名、用户或角色）。 尽可能向角色授予权限。  
   
@@ -175,7 +175,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   可以使用 `sys.database_principals` 视图查看数据库中的用户和用户定义的角色。  
   
--   可以使用 `sys.server_permissions` 视图查看授予登录名和用户定义的固定服务器角色的权限。 此视图在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中不可用。  
+-   可以使用 `sys.server_permissions` 视图查看授予登录名和用户定义的固定服务器角色的权限。 此视图在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 中不可用。  
   
 -   可以使用 `sys.database_permissions` 视图查看授予用户和用户定义的固定数据库角色的权限。  
   

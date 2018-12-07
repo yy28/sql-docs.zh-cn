@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637754"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512997"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教程：使用 OData 源
   本教程介绍了从示例 Northwind OData 服务 (https://services.odata.org/V3/Northwind/Northwind.svc/)) 提取 Employees 集合，然后将它加载到某一平面文件中的过程。  
@@ -43,7 +43,7 @@ ms.locfileid: "51637754"
   
 4.  双击“OData 源”组件可启动“OData 源编辑器”对话框。  
   
-5.  单击 **“新建…”** 可添加新的 OData 连接管理器。  
+5.  单击“新建…”可添加新的 OData 连接管理器。  
   
 6.  为 **“服务文档位置”** 输入 OData 服务 URL。 这可以是指向服务文档的 URL，也可以是指向特定源或实体的 URL。 就本教程而言，请将以下 URL 输入到服务文档中：[https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/)。  
   

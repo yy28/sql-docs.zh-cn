@@ -14,12 +14,12 @@ ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6cce05ab1b3511dca7258dd1ec5dfc61e965715b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d0e58f0756cdd2d6564e4ef1c352f330e4c06bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510671"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>创建数据库向导（主数据服务配置管理器）
 

@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668026"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535816"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ OGC 的 SQL 简单特征规范讨论了外环和内环，但此差别对 [!INCLU
 
 有关 OGC 规范的详细信息，请参阅以下内容：  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](https://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)（OGC 规范：简单特征访问第 2 部分 - SQL 选项）  
 
 ##  <a name="circular"></a> 圆弧线段  
 三种可实例化类型可以采用圆弧线段： **CircularString**、 **CompoundCurve**和 **CurvePolygon**。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。  
@@ -124,7 +124,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 此代码片段生成以下结果：  
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 与 LineString 实例相比，CircularString 实例使用更少的点来存储曲线边界，而且更精确。 **CircularString** 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 **LineString** 实例则适合存储线性边界（如方形城市街区）。  

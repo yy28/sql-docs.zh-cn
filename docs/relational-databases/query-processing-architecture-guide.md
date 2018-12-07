@@ -1,7 +1,7 @@
 ---
 title: 查询处理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542524"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中执行任何 SQL 语句时，关系引擎将首先查看计划缓存，以确认是否存在用于同一 SQL 语句的现有执行计划。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用找到的任何现有计划，从而节省重新编译 SQL 语句的开销。 如果没有现有执行计划，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为查询生成新的执行计划。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中执行任何 SQL 语句时，关系引擎将首先查看计划缓存，以确认是否存在用于同一 SQL 语句的现有执行计划。 如果 SQL 语句与先前根据缓存计划执行的 SQL 语句（每个字符的字符）完全匹配，则该语句符合现有条件。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用找到的任何现有计划，从而节省重新编译 SQL 语句的开销。 如果没有现有执行计划，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为查询生成新的执行计划。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一个高效的算法，可查找用于任何特定 SQL 语句的现有执行计划。 在大多数系统中，这种扫描所使用的最小资源比通过重新使用现有计划而不是编译每个 SQL 语句所节省的资源要少。
 
-该算法将新的 SQL 语句与缓存内现有的未用执行计划相匹配，并要求所有的对象引用完全合法。 例如，在下列 `SELECT` 语句中，第一个语句与现有计划不匹配，而第二个语句匹配：
+该算法将新的 SQL 语句与缓存内现有的未用执行计划相匹配，并要求所有的对象引用完全合法。 例如，假定 `Person` 是用户执行以下 `SELECT` 语句的默认架构。 虽然在此示例中不需要 `Person` 表完全限定执行，但这意味着第二个语句与现有计划不匹配，但第三个语句匹配：
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>从计划缓存中删除执行计划
@@ -637,7 +640,6 @@ WHERE ProductID = 63;
 * 应用程序可以控制何时创建和重新使用执行计划。
 * 准备/执行模型可移植到其他数据库，包括早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
- 
 ### <a name="ParamSniffing"></a>参数截取
 “参数探查”指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在编译或重新编译期间“探查”当前参数值，并将其传递给查询优化器，以便将这些参数值用于生成可能更高效的查询执行计划的这一过程。
 
@@ -655,6 +657,24 @@ WHERE ProductID = 63;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为具有多个微处理器 (CPU) 的计算机提供了并行查询，以优化查询执行和索引操作。 由于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用多个操作系统工作线程并行执行查询或索引操作，因此可以快速有效地完成操作。
 
 在查询优化过程中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将查找可能会受益于并行执行的查询或索引操作。 对于这些查询，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将交换运算符插入查询执行计划中，以便为查询的并行执行做准备。 交换运算符是在查询执行计划中提供进程管理、数据再分发和流控制的运算符。 交换运算符包含作为子类型的 `Distribute Streams`、 `Repartition Streams`和 `Gather Streams` 逻辑运算符，其中的一个或多个运算符会出现在并行查询的查询计划的显示计划输出中。 
+
+> [!IMPORTANT]
+> 某些构造禁止 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在整个执行计划或部分执行计划中利用并行度的功能。
+
+禁止并行度的构造包括：
+>
+> - **标量 UDF**    
+>   有关标量用户定义函数的详细信息，请参阅[创建用户定义函数](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 从 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能够内联这些函数，并在查询处理期间解锁并行度的使用。 有关标量 UDF 内联的详细信息，请参阅 [SQL 数据库中的智能查询处理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
+> - **远程查询**    
+>   有关远程查询的详细信息，请参阅 [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
+> - **动态游标**    
+>   有关游标的详细信息，请参阅 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
+> - **递归查询**    
+>   有关递归的详细信息，请参阅[定义和使用递归公用表表达式的准则](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的递归](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
+> - **表值函数 (TVF)**    
+>   有关 TVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+> - **TOP 关键字**    
+>   有关详细信息，请参阅 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
 
 插入交换运算符之后，结果便为并行查询执行计划。 并行查询执行计划可以使用多个工作线程。 非并行查询使用的串行执行计划仅使用一个工作线程来实现执行。 并行查询使用的实际工作线程数在查询计划执行初始化时确定，并由计划的复杂程度和并行度确定。 并行度确定要使用的最大 CPU 数；它并不表示要使用的工作线程数。 并行度的值在服务器级别设置，并可使用 sp_configure 系统存储过程进行修改。 通过指定 `MAXDOP` 查询提示或 `MAXDOP` 索引选项，可以针对单个查询语句或索引语句覆盖此值。 
 
@@ -1098,4 +1118,6 @@ GO
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基数估计](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)   
- [运算符优先级](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [运算符优先级](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [执行计划](../relational-databases/performance/execution-plans.md)    
+ [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

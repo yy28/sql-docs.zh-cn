@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966b2acdeff68d445935b55ea1bf8ab24f2ad74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ab6c88467b20299574003c17fd96ac563dbc25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502581"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47684695"
 时区偏移量指定某个 time 或 datetime 值相对于 UTC 的时区偏移量。 时区偏移量可以表示为 [+|-] hh:mm：
 -   hh 是两位数，范围为 00 到 14，表示时区偏移量中的小时数。  
 -   mm 是两位数，范围为 00 到 59，表示时区偏移量中的额外分钟数。  
--   时区偏移量中必须包含 \+（加）或 –（减）号。 这两个符号表示是在 UTC 时间的基础上加上还是从中减去时区偏移量以得出本地时间。 时区偏移量的有效范围为 -14:00 到 +14:00。  
+-   时区偏移量中必须包含 \+（加）或 -（减）号。 这两个符号表示是在 UTC 时间的基础上加上还是从中减去时区偏移量以得出本地时间。 时区偏移量的有效范围为 -14:00 到 +14:00。  
   
 时区偏移量的范围遵循 XSD 架构定义的 W3C XML 标准，与 SQL 2003 标准定义（12:59 到 +14:00）略有不同。
   

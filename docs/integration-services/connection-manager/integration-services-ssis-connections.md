@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639134"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514128"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -159,7 +159,7 @@ ms.locfileid: "51639134"
   
     -   单击要添加到包中的连接管理器类型。  
   
-         — 或 —  
+         -或 -  
   
     -   如果没有列出您要添加的类型，请单击 **“新建连接”** 打开 **“添加 SSIS 连接管理器”** 对话框，选择某种连接管理器类型，然后单击 **“确定”**。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "51639134"
 4.  或者，在“解决方案资源管理器”窗口中的“连接管理器”节点下或在“SSIS 设计器”窗口的“连接管理器”选项卡中，右键单击连接管理器，再单击“重命名”，然后修改连接管理器的默认名称。  
   
     > [!NOTE]  
-    >  在“SSIS 设计器”窗口的“连接管理器”选项卡中，不能覆盖连接管理器名称中的 **(project)** 前缀。 这是设计的结果。  
+    >  在“SSIS 设计器”窗口的“连接管理器”选项卡中，不能覆盖连接管理器名称中的 (project) 前缀。 这是设计的结果。  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>添加 SSIS 连接管理器对话框
 使用 **“添加 SSIS 连接管理器”** 对话框可以选择要为包添加的连接类型。  

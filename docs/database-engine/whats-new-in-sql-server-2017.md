@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541388"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>数据库引擎中的新增功能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47838675"
 - 针对内存优化表上的非群集索引生成的性能增强。 显著优化了数据库恢复期间 MEMORY_OPTIMIZED 表的 bwtree（非群集）索引重新生成的性能。 这一改进明显缩短了使用非群集索引时的数据库恢复时间。  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三个新列：socket_count、cores_per_socket、numa_node_count。 这在 VM 中运行服务器时非常有用，因为超出 NUMA 会导致过度使用主机，这最终会转化为性能问题。
 - 在 [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中引入了新列 modified_extent_page_count\,，用于跟踪数据库的每个数据库文件中的差异更改。 使用新列 modified_extent_page_count 可生成智能备份解决方案，如果数据库中发生更改的页面的百分比低于阈值（假设为 70-80%），此解决方案将执行差异备份；否则将执行完整数据库备份。
-- SELECT INTO… ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 现支持将表加载到文件组，使用 SELECT INTO TSQL 语法中添加的 ON 关键字的用户的默认文件组除外。
+- SELECT INTO ...ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 现支持将表加载到文件组，使用 SELECT INTO TSQL 语法中添加的 ON 关键字的用户的默认文件组除外。
 - Tempdb 安装程序改进 - 此安装程序允许最多将初始 tempdb 文件大小指定为 256 GB (262,144 MB)/文件；如果文件大小设置为大于 1 GB 的值且未启用 IFI，客户会收到警告。 请务必了解不启用实例文件初始化 (IFI) 的影响，此时安装时间可能会呈指数增加，具体取决于指定的 tempdb 数据文件的初始大小。 IFI 不适用于事务日志大小，因此在安装期间启动 tempdb 时，指定较大的事务日志值始终会增加安装时间，这与 SQL Server 服务帐户的 IFI 设置无关。
 - 引入了新的 dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)，用于跟踪每个数据库的版本存储使用情况。 新 dmv 可用于监视 tempdb 获取版本存储使用情况，借此可根据每个数据库的版本存储使用情况要求预先规划 tempdb 的大小，不会产生任何性能开销或在生产数据库上运行此 dmv 的开销。
 - 引入了新的 DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)，用于向 DBCC LOGINFO 公开 VLF 等信息，以监视和发出警报，并避免由于 VLF 数量、VLF 大小而导致的潜在事务日志问题或客户遇到的 shrinkfile 问题。

@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ec49399b46b39217a41ee1c18f0475bf2f64ffd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602637"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537744"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|兼容级别|sp_dbcmptlevel|更改数据库… SET COMPATIBILITY_LEVEL。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|sp_dbcmptlevel|80|  
+|兼容级别|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|sp_dbcmptlevel|80|  
 |兼容级别|数据库兼容性级别 110 和 120。|计划为未来版本升级数据库和应用程序。 但是，我们将继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 110<br /><br /> 数据库兼容性级别 120||  
 |XML|内联 XDR 架构生成|不推荐使用 FOR XML 选项的 XMLDATA 指令。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICT 模式下，没有可以代替 XMLDATA 指令的项。|XMLDATA|181|  
 |备份和还原|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 或 LOG TO TAPE|235|  
@@ -102,7 +102,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |索引选项|选项两侧没有括号的 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 语法。|请重写语句以使用当前语法。|INDEX_OPTION|33|  
 |实例选项|sp_configure option 'allow updates'|系统表不再可更新。 其设置不起作用。|sp_configure 'allow updates'|173|  
 |实例选项|sp_configure 选项：<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|这些选项目前为自动配置。 其设置不起作用。|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|实例选项|sp_configure option 'priority boost'|系统表不再可更新。 其设置不起作用。 改用 Windows start /high … program.exe 选项。|sp_configure 'priority boost'|199|  
+|实例选项|sp_configure option 'priority boost'|系统表不再可更新。 其设置不起作用。 请改用 Windows start /high … program.exe 选项。|sp_configure 'priority boost'|199|  
 |实例选项|sp_configure option 'remote proc trans'|系统表不再可更新。 其设置不起作用。|sp_configure 'remote proc trans'|37|  
 |链接服务器|对于链接服务器，指定 SQLOLEDB 访问接口。|SQL Server Native Client (SQLNCLI)|对于链接服务器使用 SQLOLEDDB|19|  
 |锁定|sp_lock|sys.dm_tran_locks|sp_lock|99|  

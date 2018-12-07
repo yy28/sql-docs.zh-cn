@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 959b778d613376197774a01de8efb6fa031cee14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bb5b57845613a408a0e374fd26dd67ebad7cd82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621855"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617167"
 ---
 # <a name="managing-a-composite-domain"></a>管理复合域
 
@@ -27,7 +26,7 @@ ms.locfileid: "47621855"
   
  复合域中的单一域必须具有一个共同的知识范畴。 一个例子是具有街道、城市、省/市/自治区、国家/地区和邮政编码数据的地址字段。 此字段中不同字词可能具有不同的数据类型。 为处理这种情况，您将这些字词映射到不同的单一域。 另一个例子是具有名字、中间名和姓氏数据的全名字段。 若要使用某一复合域，您必须能够将字段中的数据分析到不同的单一域中，为字段创建复合域并且为字段部分创建单一域。  
   
- 复合域具有与单一域不同的功能。 您不能更改复合域中的值 - 必须在单一域中进行更改。 对于复合域，您可以使用跨域规则来测试复合域中单一域的值。 此外，还可以查看在复合域中找到的值的组合。  
+ 复合域具有与单一域不同的功能。 不能更改复合域中的值 - 必须在单一域中进行更改。 对于复合域，您可以使用跨域规则来测试复合域中单一域的值。 此外，还可以查看在复合域中找到的值的组合。  
   
 ## <a name="in-this-section"></a>本节内容  
  通过使用复合域，您可以执行以下操作：  

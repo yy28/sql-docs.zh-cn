@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513746"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,14 +95,14 @@ ms.locfileid: "47817575"
  您作为 DBA，可以控制用户是否可通过以下语句对数据库使用延迟事务持续性。 您必须使用 ALTER DATABASE 来设置延迟持续性设置。    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **DISABLED**    
  [默认] 使用此设置时，不管提交级别设置如何 (DELAYED_DURABILITY=[ON | OFF])，对数据库提交的所有事务都是完全持久事务。 无需更改和重新编译存储过程。 这样能确保任何数据都不会因延迟持续性面临风险。    
     
  **ALLOWED**    
- 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { *OFF* | ON }。 有关详细信息，请参阅 [原子块级别控制 - 本机编译存储过程](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 和 [提交级别控制 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) 。    
+ 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }。 有关详细信息，请参阅 [原子块级别控制 - 本机编译存储过程](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl)和[提交级别控制 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)。    
     
  **FORCED**    
  使用此设置，对数据库提交的每个事务都是延迟持久事务。 无论事务指定完全持久 (DELAYED_DURABILITY = OFF) 还是不进行任何指定，事务都是延迟持久事务。 当数据库适合使用延迟事务持续性，并且您不希望更改任何应用程序代码时，此设置很有用。    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **示例代码：**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    
@@ -142,7 +142,7 @@ END
 |**DELAYED_DURABILITY = OFF**|原子块启动新的完全持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|    
 |**DELAYED_DURABILITY = ON**|原子块启动新的延迟持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|    
     
-###  <a name="bkmk_T-SQLControl"></a> 提交级别控制 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> 提交级别控制 -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 语法已扩展，您可以强制实施延迟事务持续性。 如果 DELAYED_DURABILITY 在数据库级别设置为 DISABLED 或 FORCED（请参阅上文），则忽略此 COMMIT 选项。    
     
 ```sql    

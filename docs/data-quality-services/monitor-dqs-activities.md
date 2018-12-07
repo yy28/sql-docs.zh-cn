@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.administration.activitymonitoring.f1
@@ -17,12 +16,12 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0864e25376f514186da5afe35d9dd4355ae939c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e084b6db8576f4bd1f7c7d020ac9fe908a0eec
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801795"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617527"
 ---
 # <a name="monitor-dqs-activities"></a>监视 DQS 活动
 
@@ -127,7 +126,7 @@ ms.locfileid: "47801795"
   
     -   **活动步骤**：显示与选定活动关联的计算进程（活动步骤）的网格。 对于此选项卡之下的某一活动，可以显示若干活动步骤。这可能会在用户在活动中运行若干次相同活动步骤的情况下发生。 例如，停止活动步骤后再次开始该步骤。 此选项卡下的网格为与该活动相关联的每个活动步骤都显示以下信息： **“类型”**、 **“当前状态”**、 **“开始时间”**、 **“占用时间”** 和 **“结束时间”**。  
   
-    -   **事件探查器**：显示当前活动和历史活动的事件探查信息。 对于当前活动，它包含部分但一致的信息。 在您将相应的活动详细信息导出到某一 Excel 文件时，活动的事件探查信息将导出到该 Excel 文件。 这些信息在导出的 Excel 文件的 **“事件探查器 – 源”** 和 **“事件探查器 – 字段”** 工作表中提供。  
+    -   **事件探查器**：显示当前活动和历史活动的事件探查信息。 对于当前活动，它包含部分但一致的信息。 在您将相应的活动详细信息导出到某一 Excel 文件时，活动的事件探查信息将导出到该 Excel 文件。 导出的 Excel 文件的“事件探查器 - 源”和“事件探查器 - 字段”工作表中提供这些信息。  
   
 ##  <a name="Export"></a> 导出 DQS 活动详细信息  
  您可以将监视屏幕中某一活动的活动属性、活动进程和事件探查信息导出到 Excel 文件中。 为此：  

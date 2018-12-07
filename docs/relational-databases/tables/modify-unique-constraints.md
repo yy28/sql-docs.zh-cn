@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 241596df017e06519c2a2cc1993a7fb025addc97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f8d334eca117ed0ab63f2a82e5e6d59200c87c0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526351"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47734615"
   
 1.  在“对象资源管理器”中，右键单击包含唯一约束的表，然后选择“设计”。  
   
-2.  在“表设计器”菜单上，单击“索引/键”。  
+2.  在“表设计器”菜单上，单击“索引/键...”。  
   
 3.  在“索引/键”对话框中的“选定的主/唯一键或索引”下，选择要编辑的约束。  
   

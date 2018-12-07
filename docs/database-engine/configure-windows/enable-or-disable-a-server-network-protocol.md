@@ -21,12 +21,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1247bcaa04c14a822a333dc99f5a38e5354b247
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0818c47f0b62240786e76b7e35fc7ea6db2dfd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534007"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51606187"
   
 4.  在控制台窗格中，单击“SQL Server 服务”。  
   
-5.  在详细信息窗格中，右键单击“SQL Server (\<实例名称>)”****，然后单击“重启”，停止并重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+5.  在细节窗格中，右键单击“SQL Server (\<实例名称>)”，然后单击“重启”停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51606187"
   
 2.  可以从任务栏启动 Windows PowerShell，也可以通过依次单击“开始”、“所有程序”、“附件”、“Windows PowerShell”、“Windows PowerShell”来启动。  
   
-3.  通过输入 **sqlps** 导入 **Import-Module “sqlps”** 模块。  
+3.  通过输入“sqlps”导入“Import-Module “sqlps””模块。  
   
 4.  执行以下语句以启用 TCP 和 Named Pipes 协议。 `<computer_name>` 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替换为运行  的计算机的名称。 `MSSQLSERVER` 如果您在配置命名实例，请将  替换为该实例的名称。  
   

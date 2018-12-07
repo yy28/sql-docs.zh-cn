@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502606"
 ---
 # <a name="web-service-task"></a>Web 服务任务
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
@@ -84,7 +84,7 @@ ms.locfileid: "51642344"
   
 ### <a name="options"></a>选项  
  **HTTPConnection**  
- 在列表中选择一个连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -92,7 +92,7 @@ ms.locfileid: "51642344"
  **相关主题：**[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 **(…)** 找到此文件。  
+ 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 (…) 并定位到该文件。  
   
  如果您已经将该 WSDL 文件手动下载到计算机，请选择此文件。 但是，如果尚未下载该 WSDL 文件，请执行以下步骤：  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642344"
  从列表中为要执行的任务选择 Web 方法。  
   
  **WebMethodDocumentation**  
- 键入对 Web 方法的说明，或单击浏览按钮 **(…)**，再在“Web 方法文档”对话框中键入说明。  
+ 键入对 Web 方法的说明，或单击浏览按钮 (…)，再在“Web 方法文档”对话框中键入说明。  
   
  **名称**  
  列出为 Web 方法提供的输入名称。  
@@ -170,13 +170,13 @@ ms.locfileid: "51642344"
   
 #### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
  **File**  
- 从列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  
- 在列表中选择一个变量，或单击“\<新建变量...>”创建一个新变量。  
+ 从列表中选择变量，或单击“\<新建变量...>”，创建新的变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

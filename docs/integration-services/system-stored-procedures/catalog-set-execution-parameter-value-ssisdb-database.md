@@ -11,12 +11,12 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808665"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405645"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|执行实例的唯一标识符|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
  若要指定 Integration Services 服务器在包执行期间出现事件时生成转储文件，请为未运行的执行实例设置以下参数值：  
@@ -98,7 +98,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|执行实例的唯一标识符|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
  若要指定在包执行期间导致 Integration Services 服务器生成转储文件的事件，请为未运行的执行实例设置以下参数值： 使用分号分隔多个事件代码。  

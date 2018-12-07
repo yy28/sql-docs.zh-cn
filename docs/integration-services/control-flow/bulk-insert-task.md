@@ -19,12 +19,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be86ec99816b6d609400aeb1f703c4bbe2adc131
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641764"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531831"
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
   大容量插入任务为将大量的数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图提供了有效的方法。 例如，假定贵公司在大型主机系统上存储了数百万行的产品列表，但公司的电子商务系统却使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来填充网页。 您必须每晚都用大型机的主产品列表更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品表。 若要更新表，请以制表符分隔格式保存产品列表，并使用大容量插入任务将数据直接复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
@@ -153,7 +153,7 @@ ms.locfileid: "51641764"
   
 #### <a name="format--use-file"></a>Format = 使用文件  
  **FormatFile**  
- 键入格式化文件的路径，或单击省略号按钮 **(…)** 定位到该格式化文件。  
+ 键入格式化文件的路径，或单击省略号按钮“(…)”定位到该格式化文件。  
   
 #### <a name="format--specify"></a>Format = 指定  
  **RowDelimiter**  

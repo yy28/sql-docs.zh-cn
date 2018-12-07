@@ -1,7 +1,7 @@
 ---
 title: model 数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf51363b4dc2e09e0a86de1d02be5bc60de5a318
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558824"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191027"
 ---
 # <a name="model-database"></a>model 数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51558824"
 |----------|------------------|-------------------|-----------------|  
 |主数据|modeldev|model.mdf|以 64 MB 的速度自动增长到磁盘充满为止。|  
 |日志|modellog|modellog.ldf|以 64 MB 的速度自动增长到最大 2 TB。|  
-  
- 对于低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本，请参阅[模型数据库](../../2014/relational-databases/databases/model-database.md)，以了解默认文件增加值。  
-  
+
+对于 SQL Server 2014，请参阅[模型数据库](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014)，了解默认文件增加值。  
+
  若要移动 **model** 数据库或日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   
 ### <a name="database-options"></a>数据库选项  

@@ -1,24 +1,24 @@
 ---
 title: 用于报表查看器 Web 部件的 SharePoint 网站设置 - SSRS | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 517a73d2b972cab7295a2a1d1710658d26685484
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8add27eefcd46769bd8d06c980f10edb8d0739b8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021548"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416164"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>用于报表查看器 Web 部件的 SharePoint 网站设置 - Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
-报表查看器 Web 部件有一些可配置的设置。 可由网站管理员在 SharePoint 网站设置页上启用或禁用这些设置。 请注意，每个站点都有其自己的设置。 另外，重新安装报表查看器 Web 部件之后，不会重置这些设置。
+报表查看器 Web 部件有一些可配置的设置。 可由网站管理员在 SharePoint 网站设置页上启用或禁用这些设置。 每个站点都有其自己的设置。 另外，重新安装报表查看器 Web 部件之后，不会重置这些设置。
 
 ## <a name="accessing-the-site-settings-page"></a>访问“站点设置”页
 

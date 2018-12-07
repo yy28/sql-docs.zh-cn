@@ -15,12 +15,12 @@ ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97e6fea955e2ee82250f094fcf9f2bf76b15f452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d833e97138dd184f35378ad39f96a9f71675d67
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701155"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535833"
 ---
 # <a name="distribution-database-properties"></a>分发数据库属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47701155"
  为所有类型的复制存储的历史记录元数据的时间长度。  
   
  **队列读取器代理安全性**  
- 队列读取器代理由带有排队更新订阅的事务复制使用。 如果在新建发布向导的 **“发布类型”** 页上选择 **“带有更新订阅的事务发布”** ，将自动创建队列读取器代理。 单击 **“安全设置…”** 可以更改运行代理并连接到分发服务器时所使用的帐户。  
+ 队列读取器代理由带有排队更新订阅的事务复制使用。 如果在新建发布向导的 **“发布类型”** 页上选择 **“带有更新订阅的事务发布”** ，将自动创建队列读取器代理。 单击“安全设置…”可以更改运行代理并连接到分发服务器时所使用的帐户。  
   
  还可以在此页上选择 **“创建队列读取器代理”** （如果已创建该代理，此选项将被禁用），来创建队列读取器代理。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47701155"
 ## <a name="see-also"></a>另请参阅  
  [“配置分发”](../../relational-databases/replication/configure-distribution.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   
   

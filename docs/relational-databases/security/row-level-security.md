@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13e2f3c63a9712ffa04bf7842815a51ba5a420c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672412"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409894"
 ---
 # <a name="row-level-security"></a>行级安全性
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51672412"
   
  对表中的行级数据的访问将受到定义为内联表值函数的安全谓词的限制。 随后调用该函数，并由安全策略进行实施。 对于筛选谓词，应用程序不知道从结果集中筛选的行；如果筛选了所有行，则返回空集。 对于阻止谓词，违反该谓词的任何操作将失败并出错。  
   
- 从基表中读取数据时会应用筛选谓词，它会影响所有获取操作：SELECT、DELETE（即用户无法删除筛选的行）和 UPDATE（用户无法更新已筛选的行，但可以更新行，以便以后对其进行筛选）。。 阻止谓词影响所有写入操作。  
+ 从基表中读取数据时会应用筛选谓词，它会影响所有获取操作：SELECT、DELETE（即用户无法删除筛选的行）和 UPDATE（用户无法更新已筛选的行，但可以更新行，以便以后对其进行筛选）。 阻止谓词影响所有写入操作。  
   
 -   AFTER INSERT 和 AFTER UPDATE 谓词可以防止用户将行更新为违反该谓词的值。  
   

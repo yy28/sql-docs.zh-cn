@@ -18,17 +18,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db55a3bdbe795b027d7f46a6eff541d0a49060c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812075"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517080"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改关系的外键端。 修改表的外键会更改哪些列与主键表中的列相关。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改关系的外键端。 修改表的外键会更改与主键表中的列相关的列。  
   
  **本主题内容**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47812075"
      根据约束对创建或重新启用约束前表中的全部已有数据进行验证。  
   
      **表和列规范类别**  
-     展开此项可显示哪些表中的哪些列用作关系中的外键和主键（或唯一键）。 若要编辑或定义这些值，请单击属性字段右侧的省略号按钮 (**…**)。  
+     展开此项可显示哪些表中的哪些列用作关系中的外键和主键（或唯一键）。 若要编辑或定义这些值，请单击属性字段右侧的省略号按钮 (…)。  
   
      **外键基表**  
      显示哪个表包含用作所选关系中外键的列。  

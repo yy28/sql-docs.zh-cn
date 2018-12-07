@@ -25,12 +25,12 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516139"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER SERVICE MASTER KEY
 ## <a name="remarks"></a>Remarks  
  当第一次需要使用服务主密钥对链接服务器密码、凭据或数据库主密钥进行加密时，便会自动生成服务主密钥。 使用本地计算机密钥和 Windows 数据保护 API 对服务主密钥进行加密。 该 API 使用从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的 Windows 凭据中派生的密钥。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
 ##  <a name="_changing"></a> 更改 SQL Server 服务帐户  
  若要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。 为了对服务帐户的变更进行管理，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将存储服务主密钥的冗余副本，该密钥由具有授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务组的必要权限的计算机帐户对其加以保护。 在重建计算机时，将可以为该服务帐户以前使用的同一域用户恢复服务主密钥。 这不适用于本地帐户或者 Local System、Local Service 或 Network Service 帐户。 如果要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移至另一台计算机，请使用备份和还原功能迁移服务主密钥。  
@@ -101,7 +101,7 @@ ALTER SERVICE MASTER KEY
 > [!CAUTION]  
 >  服务主密钥为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密层次结构的根。 服务主密钥直接或间接地保护树中的所有其他密钥和机密内容。 如果在强制的重新生成过程中不能对某个相关密钥进行解密，则由该密钥所保护的数据会丢失。  
   
- 如果将 SQL 移到另一计算机，则必须使用相同的服务帐户来解密 SMK – SQL Server 将自动修复计算机帐户加密。  
+ 如果将 SQL 移到另一计算机，则必须使用相同的服务帐户来解密 SMK - SQL Server 将自动修复计算机帐户加密。  
   
 ## <a name="permissions"></a>Permissions  
  需要对服务器的 CONTROL SERVER 权限。  

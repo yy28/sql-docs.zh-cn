@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085253"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302690"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085253"
 -   管理存储空间  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>数据库引擎优化顾问优点  
- 在未完全了解数据库结构和针对数据库运行的查询的情况下，优化查询性能较为困难。 数据库引擎优化顾问可以简化此任务，也即，分析当前查询计划缓存，或分析您创建的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的工作负荷并提出适当的物理设计建议。 对于更高级的数据库管理员，DTA 公开一个强大机制，用于执行不同物理设计的探索性“假设”分析。 DTA 可以提供下列信息。  
+ 在未完全了解数据库结构和针对数据库运行的查询的情况下，优化查询性能较为困难。 数据库引擎优化顾问 (DTA) 可以简化此任务，也即，分析当前查询计划缓存，或分析所创建的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的工作负载并提出适当的物理设计建议。 对于更高级的数据库管理员，DTA 公开一个强大机制，用于执行不同物理设计的探索性“假设”分析。 DTA 可以提供下列信息。  
   
 -   通过使用查询优化器分析工作负荷中的查询，推荐数据库的最佳行存储和[列存储](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)索引组合。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085253"
 
 -   考虑备选方案，即：您以假定配置的形式提供可能的设计结构方案，供数据库引擎优化顾问进行评估。
 
--  优化各种源（包括 SQL Server Query Store、计划缓存、SQL Server Profiler 跟踪文件，或者表或 .SQL 文件）中的工作负荷。
+-   优化各种源（包括 SQL Server Query Store、计划缓存、SQL Server Profiler 跟踪文件，或者表或 .SQL 文件）中的工作负荷。
 
   
- 数据库引擎优化顾问旨在处理以下查询工作负荷类型。  
+数据库引擎优化顾问旨在处理以下查询工作负载类型：  
   
 -   仅联机事务处理 (OLTP) 查询  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085253"
 -   大量更新工作负荷（数据修改多于查询）  
   
 ## <a name="dta-components-and-concepts"></a>DTA 组件和概念  
- 数据库引擎优化顾问图形用户界面  
+ **数据库引擎优化顾问图形用户界面**  
  一个易于使用的界面，可用来指定工作负荷和选择各种优化选项。  
   
  **dta** 实用工具  
  数据库引擎优化顾问的命令提示符版本。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
   
- 工作负荷  
+ **工作负载**  
  Transact-SQL 脚本文件、跟踪文件或跟踪表，包含要优化的数据库的代表性工作负荷。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以指定计划缓存作为工作负荷。  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以[将 Query Store 指定为工作负荷](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。 
   
- XML 输入文件  
- 数据库引擎优化顾问可用于优化工作负荷的 XML 格式文件。 XML 输入文件支持在 GUI 或 **dta** 实用工具中不可用的高级优化选项。  
+ **XML 输入文件**  
+ 数据库引擎优化顾问可用于优化工作负载的 XML 格式文件。 XML 输入文件支持在 GUI 或 **dta** 实用工具中不可用的高级优化选项。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  数据库引擎优化顾问具有下列限制和局限性。  
   
--   它不能添加或删除唯一索引或强制 PRIMARY KEY 或 UNIQUE 约束的索引。  
+-   它不能添加或删除唯一索引或强制 `PRIMARY KEY` 或 `UNIQUE` 约束的索引。  
   
 -   它无法分析设置为单用户模式的数据库。  
   

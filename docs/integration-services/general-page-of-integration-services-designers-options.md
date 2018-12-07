@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526917"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 设计器选项的“常规”页
   使用 **“选项”** 对话框中 **“Integration Services 设计器”** 页的 **“常规”** 页，可以指定用于加载、显示和升级包的选项。  
@@ -37,7 +37,7 @@ ms.locfileid: "47649035"
  选择此项将在加载未经签名的包时显示警告。  
   
  **显示优先约束标签**  
- 选择在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中查看包时，显示哪种优先约束标签（“成功”、“失败”或“完成”）。  
+ 选择在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中查看包时，显示哪种优先约束标签（“成功”、“失败”或“完成”）。  
   
  **脚本语言**  
  选择新脚本任务和脚本组件的默认脚本语言。  

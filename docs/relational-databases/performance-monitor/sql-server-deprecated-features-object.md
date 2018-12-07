@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523340"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |PERMISSIONS|遇到对 PERMISSIONS 内部函数的引用。 请改为查询 sys.fn_my_permissions。 每次查询时发生。|  
 |ProcNums|遇到不推荐使用的 ProcNums 语法。 请重写语句以删除引用。 每次编译时发生。|  
 |READTEXT|遇到 READTEXT 语法。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text** 数据类型语法。 每次查询时发生。|  
-|RESTORE DATABASE 或 LOG WITH DBO_ONLY|遇到 RESTORE … WITH DBO_ONLY 语法。 改用 RESTORE … RESTRICTED_USER。|  
-|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|遇到 RESTORE … WITH MEDIAPASSWORD 语法。 WITH MEDIAPASSWORD 提供弱安全性，应删除。|  
-|RESTORE DATABASE 或 LOG WITH PASSWORD|遇到 RESTORE … WITH PASSWORD 语法。 WITH PASSWORD 提供弱安全性，应删除。|  
+|RESTORE DATABASE 或 LOG WITH DBO_ONLY|RESTORE ...WITH DBO_ONLY 语法。 使用 RESTORE ...RESTRICTED_USER。|  
+|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|RESTORE ...WITH MEDIAPASSWORD 语法。 WITH MEDIAPASSWORD 提供弱安全性，应删除。|  
+|RESTORE DATABASE 或 LOG WITH PASSWORD|RESTORE ...WITH PASSWORD 语法。 WITH PASSWORD 提供弱安全性，应删除。|  
 |从触发器返回结果|每次触发器调用时发生此事件。 请重写该触发器以便不会返回结果集。|  
 |ROWGUIDCOL|遇到 ROWGUIDCOL 语法。 请重写语句以使用 $rowguid 语法。 每次编译时发生。|  
 |SET ANSI_NULLS OFF|遇到 SET ANSI_NULLS OFF 语法。 请删除此不推荐使用的语法。 每次编译时发生。|  
@@ -173,13 +173,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_configure 'ft notify bandwidth (min)'|遇到 sp_configure 的 ft notify bandwidth (min) 选项。 请勿使用。 每次查询时发生。|  
 |sp_configure 'locks'|遇到 sp_configure 的 locks 选项。 锁不再可配置。 请勿使用。 每次查询时发生。|  
 |sp_configure 'open objects'|遇到 sp_configure 的 open objects 选项。 打开对象的数目不再可配置。 请勿使用。 每次查询时发生。|  
-|sp_configure 'priority boost'|遇到 sp_configure 的 priority boost 选项。 请勿使用。 每次查询时发生。 改用 Windows start /high … program.exe 选项。|  
+|sp_configure 'priority boost'|遇到 sp_configure 的 priority boost 选项。 请勿使用。 每次查询时发生。 请改用 Windows start /high … program.exe 选项。|  
 |sp_configure 'remote proc trans'|遇到 sp_configure 的 remote proc trans 选项。 请勿使用。 每次查询时发生。|  
 |sp_configure 'set working set size'|遇到 sp_configure 的 set working set size 选项。 工作集大小不再可配置。 请勿使用。 每次查询时发生。|  
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 存储过程不检查是否存在主密钥。 这是为了向后兼容，但会显示警告。 不推荐使用此行为。 在将来版本中，主密钥必须存在，并且在存储过程 sp_control_dbmasterkey_password 中使用的密码必须与用来对数据库主密钥进行加密的密码之一相同。|  
 |sp_create_removable|遇到 sp_create_removable 过程。 请改用 CREATE DATABASE。 每次查询时发生。|  
 |sp_db_vardecimal_storage_format|遇到 **vardecimal** 存储格式的使用。 请改用数据压缩。|  
-|sp_dbcmptlevel|遇到 sp_dbcmptlevel 过程。 改用 ALTER DATABASE ... SET COMPATIBILITY_LEVEL。 每次查询时发生。|  
+|sp_dbcmptlevel|遇到 sp_dbcmptlevel 过程。 使用 ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 每次查询时发生。|  
 |sp_dbfixedrolepermission|遇到 sp_dbfixedrolepermission 过程。 请勿使用。 每次查询时发生。|  
 |sp_dboption|遇到 sp_dboption 过程。 请改用 ALTER DATABASE 和 DATABASEPROPERTYEX。 每次编译时发生。|  
 |sp_dbremove|遇到 sp_dbremove 过程。 请改用 DROP DATABASE。 每次查询时发生。|  

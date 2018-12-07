@@ -18,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845405"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523032"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +96,8 @@ ms.locfileid: "47845405"
      **文件路径**  
      指定当“审核目标”是文件时，要将审核数据写入的文件夹所在的位置。  
   
-     **省略号 (…)**  
-     打开“定位文件夹 - _server\_name_”对话框，以指定文件路径或创建要写入审核文件的文件夹。  
+     **省略号 (...)**  
+     打开“定位文件夹 - server\_name”对话框，以指定文件路径或创建要写入审核文件的文件夹。  
   
      **审核文件最大限制：**  
      **最大滚动更新文件数**  
@@ -145,13 +145,13 @@ ms.locfileid: "47845405"
      **Object Name**  
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
   
-     **省略号 (…)**  
+     **省略号 (...)**  
      打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”** 浏览和选择可用对象。  
   
      **主体名称**  
      对于所审核的对象，要作为审核筛选依据的帐户。  
   
-     **省略号 (…)**  
+     **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
 3.  在完成后，单击 **“确定”**。  

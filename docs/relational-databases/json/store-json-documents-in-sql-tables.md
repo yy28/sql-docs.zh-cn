@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663606"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502783"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 现在可在 SQL Server 或 SQL 数据库中存储 JSON 文档并查询 JSON 数据，操作与在 NoSQL 数据库中类似。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
@@ -48,17 +48,17 @@ ALTER TABLE WebSite.Logs
 在表中存储 JSON 文档时，可使用标准 Transact-SQL 语言查询文档。 例如：
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 可使用任意 T-SQL 函数和查询子句来查询 JSON 文档。 SQL Server 和 SQL 数据库不会在可以用来分析 JSON 文档的查询中引入任意约束。 可通过 `JSON_VALUE` 函数从 JSON 文档中提取值，并在查询中使用该值，如同使用任何其他值一样。
 
-能够使用大量 T-SQL 查询语法是 SQL Server 和 SQL 数据库与经典 NoSQL 数据库的主要区别 – 在 Transact-SQL 中，可能有需要处理 JSON 数据的任何函数。
+能够使用大量 T-SQL 查询语法是 SQL Server 和 SQL 数据库与经典 NoSQL 数据库的主要区别 - 在 Transact-SQL 中，可能有需要处理 JSON 数据的任何函数。
 
 ## <a name="indexes"></a>索引
 

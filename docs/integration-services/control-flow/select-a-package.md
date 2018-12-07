@@ -15,12 +15,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 170b40c086e3fe2c9d3ec7fbf3278a5ceeabe080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d269e2e18c7c098e5f4149f4083d81a228b89da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783985"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527930"
 ---
 # <a name="select-a-package"></a>选择包
   可以使用 **“选择包”** 对话框，指定消息队列任务可从中接收消息的包。  
@@ -56,8 +56,8 @@ ms.locfileid: "47783985"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 文件  
- **File name**  
- 提供包的路径，或单击浏览按钮 **(…)** 并查找包。  
+ **文件名**  
+ 提供包的路径，或单击浏览按钮“(…)”并查找包。  
   
 ## <a name="see-also"></a>另请参阅  
  [消息队列任务](../../integration-services/control-flow/message-queue-task.md)  

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 89ab3aab8806c32c15496a3544e5fc660368d511
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604347"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394751"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>是否从 SQL Server 2005、2008 或 2008R2 进行升级？
 
@@ -35,7 +35,7 @@ ms.locfileid: "51604347"
 >  对于 SQL Server 2008 和 2008r2 的扩展支持将于 2019 年 7 月 9 日结束。 如果 2019 年 7 月 9 日后仍在运行 SQL Server 2008 或 2008R2，将不会再收到安全更新。 有关详细信息，请查看博客[宣布推出适用于 SQL Server 2008 的新选项](https://azure.microsoft.com/blog/announcing-new-options-for-sql-server-2008-and-windows-server-2008-end-of-support/)。  
   
 ## <a name="choose-your-upgrade-option"></a>选择升级选项  
-如果要从较旧版本的 SQL Server 升级关系数据库，下面是用于 Microsoft 平台上的关系存储的选项。  
+如果要从较旧版本的 SQL Server 升级关系数据库，下面是用于 Microsoft 平台上关系存储的选项。  
   
 若要查看有关这些选项的更全面分析，请 [单击此处](https://sql05upgrade.azurewebsites.net/)。  
   

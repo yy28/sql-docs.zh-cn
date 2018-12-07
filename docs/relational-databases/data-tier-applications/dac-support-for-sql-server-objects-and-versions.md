@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85f07a1380cf59db3944ab905d6aca9156a4b94b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ec1a3488a8b28054f211e4d68dc329371e4cfb6b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513204"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "51672036"
   
 3.  针对 sql_variant 列中以下条件的部署操作失败。 在受影响的情况下，您将会看到一条包含以下消息的对话框：  **由于 DAC Framework 中的数据限制，操作失败。**  
   
-    -   DATETIME2、SMALLDATETIME 和 DATE 基类型：值超出 DATETIME 范围 – 例如，年份小于 1753。  
+    -   DATETIME2、SMALLDATETIME 和 DATE 基类型：值超出 DATETIME 范围 - 例如，年份小于 1753。  
   
     -   DECIMAL、NUMERIC 基类型：值的精度大于 28。  
   
@@ -119,11 +119,11 @@ ms.locfileid: "51672036"
   
 -   **提取/导出** - 对于使用 DAC Framework 从数据库创建包的操作（例如，提取 .dacpac 文件，导出 .bacpac 文件），这些限制不适用。 该包中的数据是源数据库中数据的完全保真表示形式。 如果该包中存在其中任意条件，则提取/导出日志将包含通过上述消息所提供问题的摘要。 这将向用户警告他们所创建的包存在潜在数据部署问题。 用户也将会在日志中看到以下摘要消息：**这些限制不影响 DAC Framework 创建的 DAC 包中存储的数据类型和值的保真度; 它们只适用于因将 DAC 包部署到数据库而产生的数据类型和值。有关受影响的数据以及如何绕开此限制的详细信息，请参阅**[此主题](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
--   **部署/发布/导入** - 对于使用 DAC Framework 将包部署到数据库的操作（例如，部署或发布 .dacpac 文件，以及导入 .bacpac 文件），这些限制适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 – 请参阅上述类别 3 - 但将继续显示其他警告。  
+-   **部署/发布/导入** - 对于使用 DAC Framework 将包部署到数据库的操作（例如，部署或发布 .dacpac 文件，以及导入 .bacpac 文件），这些限制适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 - 请参阅上述类别 3 - 但将继续显示其他警告。  
   
      有关此情况下受影响的数据以及如何在部署/发布/导入操作中绕开此限制的详细信息，请参阅 [此主题](https://go.microsoft.com/fwlink/?LinkId=267087)。  
   
--   **解决方法** – 提取和导出操作将完全保真的 BCP 数据文件写入 .dacpac 或 .bacpac 文件。 若要避免限制，请使用 SQL Server BCP.exe 命令行实用工具将完全保真数据从 DAC 包部署到目标数据库。  
+-   **解决方法** - 提取和导出操作将完全保真的 BCP 数据文件写入 .dacpac 或 .bacpac 文件。 若要避免限制，请使用 SQL Server BCP.exe 命令行实用工具将完全保真数据从 DAC 包部署到目标数据库。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)  

@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc7dac6572ac10d6526fbf4052a046a2093bbd52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2197d120799041cb679453b6b6a1c3dc2070e7d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507615"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
 了解如何使用图表数据区域帮助 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表的读者一目了然地理解大量聚合数据。  
@@ -38,7 +38,7 @@ ms.locfileid: "47662815"
   
  
 ##  <a name="DesigningChart"></a> 设计图表  
- 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 在您单击设计图面上的图表时，“图表数据”窗格将出现，并且具有三个区域（类别组、序列组和值）。 如果该报表具有共享的或嵌入的数据集，则数据集中的字段将显示在“报表数据”窗格中。 将数据集中的字段拖到“图表数据”窗格的适当区域中。 默认情况下，将字段添加到图表的某一区域中时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 您还可以使用序列分组动态生成序列。 图表[组织成矩阵](#SimilarMatrix)样式。  
+ 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击设计图面上的图表时，“图表数据”窗格将出现，并且具有三个区域（类别组、序列组和值）。 如果该报表具有共享的或嵌入的数据集，则数据集中的字段将显示在“报表数据”窗格中。 将数据集中的字段拖到“图表数据”窗格的适当区域中。 默认情况下，将字段添加到图表的某一区域中时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 您还可以使用序列分组动态生成序列。 图表[组织成矩阵](#SimilarMatrix)样式。  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   

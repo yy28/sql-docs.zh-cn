@@ -14,12 +14,12 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9980566e30c496398045804e9f22be245bab8637
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607127"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508701"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51607127"
   
  为解决此问题，请执行以下过程：  
   
-1.  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高级属性中删除 –m 启动参数。  
+1.  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高级属性中删除 -m 启动参数。  
   
 2.  使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源脱机。  
   

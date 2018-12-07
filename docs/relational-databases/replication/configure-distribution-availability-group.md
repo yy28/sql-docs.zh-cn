@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 719fc39579f76b8f028de27cf8d22623968231c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602627"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405964"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>在 Always On 可用性组中设置复制分发数据库
 
@@ -48,7 +48,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 - 为现有分发数据库 AG 添加或删除节点。
 - 分发服务器可能具有多个分发数据库。 每个分发数据库都可以在各自的 AG 中，但不能在任意 AG 中。 多个分发数据库可以共享一个 AG。
 - 发布服务器和分发服务器都需要在单独的 SQL Server 实例上。
-- 如果托管分发数据库的可用性组的侦听器配置为使用非默认端口，则需要为侦听器和非默认端口设置别名。
+- 如果托管分发数据库的可用性组的侦听器配置为使用非默认端口，则需要为侦听器和非默认端口设置别名。 需要在所有发布服务器、分发服务器和订阅服务器（适用于在拉取模式下运行的订阅服务器）副本上创建此别名。 
 
 ## <a name="limitations-or-exclusions"></a>限制或排除
 

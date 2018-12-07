@@ -12,43 +12,40 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b83d38db1a9713356fa0592683d8d4fb477736b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ebd403911b6247964c5f512e45ce64e72290578
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697621"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302430"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>使用 Query Store 中的工作负荷优化数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-SQL Server 中的 [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) 功能可自动捕获查询、计划和运行时统计信息的历史记录，并将此信息保存在数据库中。 [数据库引擎优化顾问 (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支持使用一个新选项来利用 Query Store 自动选择用于优化的适当工作负荷。 对于许多用户而言，使用此功能便不需要显式收集用于优化的工作负荷。 仅当数据库已启用 Query Store 功能时，此功能才可用。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [查询存储](../../relational-databases/performance/how-query-store-collects-data.md) 功能可自动捕获查询、计划和运行时统计信息的历史记录，并将此信息保存在数据库中。 [数据库引擎优化顾问 (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支持使用一个新选项来利用 Query Store 自动选择用于优化的适当工作负荷。 对于许多用户而言，使用此功能便不需要显式收集用于优化的工作负荷。 仅当数据库已启用 Query Store 功能时，此功能才可用。 
   
-  SQL Server Management Studio **16.4** 或更高版本提供此功能。 
+此功能与 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.4 或更高版本一起提供。 
   
-<a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>如何在数据库引擎优化顾问 GUI 中优化 Query Store 的工作负荷
----
+## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>如何在数据库引擎优化顾问 GUI 中优化 Query Store 的工作负荷
 在 DTA GUI 中的“常规”窗格内选中“Query Store”单选按钮以启用此功能（参阅下图）。
-![Query Store 中的 DTA 工作负荷](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
+
+![查询存储中的 DTA 工作负载](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  
-<a name="how-to-tune-a-workload-from-query-store-in-dtaexe-command-line-utility"></a>如何在 dta.exe 命令行实用工具中优化 Query Store 的工作负荷
----
+## <a name="how-to-tune-a-workload-from-query-store-in-dtaexe-command-line-utility"></a>如何在 dta.exe 命令行实用工具中优化 Query Store 的工作负荷
 在命令行 (dta.exe) 中，选择 **-iq** 选项来选择 Query Store 中的工作负荷。 
 
 选择 Query Store 中的工作负荷时，可通过命令行调用其他两个选项来帮助优化 DTA 的行为。 无法通过 GUI 调用这些选项：
-  1. 要优化的工作负荷事件数：此选项是使用 **-n** 命令行参数指定的，可让用户控制要优化 Query Store 中的多少个事件。 默认情况下，DTA 对此选项使用值 1000。 请注意，DTA 始终根据总持续时间选择开销最大的事件。 
+  1. **要优化的工作负载事件数**：此选项是使用 -n 命令行参数指定的，可让用户控制要优化查询存储中的多少个事件。 默认情况下，DTA 对此选项使用值 1000。 DTA 始终根据总持续时间选择开销最大的事件。 
   
-  2. 要优化的事件时限：由于 Query Store 包含的查询可能是很久以前执行的，因此，此选项可让用户指定过去的某个时限（以小时为单位），DTA 只考虑优化已执行了该时限的查询。 此选项是使用 **-I** 命令行参数指定的。 
+  2. **要优化的事件时限**：由于查询存储包含的查询可能是很久以前执行的，因此，此选项可让用户指定过去的某个时限（以小时为单位），DTA 只考虑优化已执行了该时限的查询。 此选项是使用 **-I** 命令行参数指定的。 
 
-有关详细信息，请参阅 [dta 实用工具](../../tools/dta/dta-utility.md)。
+有关详细信息，请参阅 [dta Utility](../../tools/dta/dta-utility.md)。
 
-<a name="difference-between-using-workload-from-query-store-and-plan-cache"></a>使用 Query Store 和计划缓存中的工作负荷的差别 
---- 
+## <a name="difference-between-using-workload-from-query-store-and-plan-cache"></a>使用 Query Store 和计划缓存中的工作负荷的差别 
 Query Store 与计划缓存选项之间的差别在于，前者包含已针对数据库执行的、每次重新启动服务器都会保存的查询的更长历史记录， 而计划缓存只包含最近执行的、其计划缓存在内存中的查询的子集。 重新启动服务器时，将会丢弃计划缓存中的项。
 
-<a name="see-also"></a>另请参阅 
---- 
+## <a name="see-also"></a>另请参阅  
 [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)     
 [教程：数据库引擎优化顾问](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [查询存储的数据收集方式](../../relational-databases/performance/how-query-store-collects-data.md)     

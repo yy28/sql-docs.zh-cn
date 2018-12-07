@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788475"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586280"
 ---
 # <a name="update-statistics"></a>更新统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,13 +60,13 @@ ms.locfileid: "47788475"
   
 5.  右键单击要更新的统计信息对象，然后选择“属性”。  
   
-6.  在“统计信息属性 – statistics\_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”。  
+6.  在“统计信息属性 - statistics\_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-update-a-specific-statistics-object"></a>更新特定的统计信息对象  
+### <a name="to-update-a-specific-statistics-object"></a>更新特定的统计信息对象  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "47788475"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>更新表中的所有统计信息  
+### <a name="to-update-all-statistics-in-a-table"></a>更新表中的所有统计信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "47788475"
     GO  
     ```  
   
- 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。  
+有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>更新数据库中的所有统计信息  
+### <a name="to-update-all-statistics-in-a-database"></a>更新数据库中的所有统计信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -112,7 +112,9 @@ ms.locfileid: "47788475"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- 有关详细信息，请参阅 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。  
-  
-  
+
+有关详细信息，请参阅 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。   
+
+### <a name="automatic-index-and-statistics-management"></a>自动索引和统计信息管理
+利用[自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
+

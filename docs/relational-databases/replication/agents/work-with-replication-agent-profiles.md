@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760885"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536435"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "47760885"
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
-2.  单击配置文件旁边的属性按钮 (**...**)。  
+2.  单击配置文件旁边的属性按钮 (...)。  
   
 3.  查看“\<ProfileName> 配置文件属性”对话框中的参数和值。  
   

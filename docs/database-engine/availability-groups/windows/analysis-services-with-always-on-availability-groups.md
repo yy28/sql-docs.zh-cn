@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635015"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395450"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
 
@@ -120,11 +120,11 @@ ms.locfileid: "47635015"
   
 3.  修改该脚本，用对您的部署有效的值取代占位符：  
   
-    -   用承载主副本的服务器实例的名称取代 ‘Computer01’。  
+    -   用承载主副本的服务器实例的名称取代“Computer01”。  
   
-    -   用承载辅助副本的服务器实例的名称取代 ‘Computer02’。  
+    -   用承载辅助副本的服务器实例的名称取代“Computer02”。  
   
-    -   用您所在域的名称取代 ‘contoso.com’；如果所有计算机都位于相同的域中，则可在该脚本中省略该域。 如果侦听器使用的是默认端口，可保留该端口号。 侦听器实际使用的端口列在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]的属性页中。  
+    -   用所在域的名称取代“contoso.com”；如果所有计算机都位于相同的域中，则可在该脚本中省略该域。 如果侦听器使用的是默认端口，可保留该端口号。 侦听器实际使用的端口列在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]的属性页中。  
   
 4.  执行脚本。  
   
@@ -212,9 +212,9 @@ ms.locfileid: "47635015"
 9. 在 Analysis Services 解决方案中重复处理或查询命令，然后在 SQL Server Profiler 中并排观察跟踪状况。 您应能发现在另一个实例（即现在的新辅助副本）上执行处理的证据。  
   
 ##  <a name="bkmk_whathappens"></a> 故障转移之后的情形  
- 在故障转移期间，辅助副本转换为主角色，以前的主副本转换为辅助角色。 所有客户端连接都已终止，可用性组侦听器的所有权随主副本角色移至新的 SQL Server 实例，并且该侦听器端点绑定到新实例的虚拟 IP 地址和 TCP 端口。 有关详细信息，请参阅[关于可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)。  
+ 在故障转移期间，辅助副本转换为主角色，以前的主副本转换为辅助角色。 所有客户端连接都已终止，可用性组侦听器的所有权随主副本角色移至新的 SQL Server 实例，并且该侦听器终结点绑定到新实例的虚拟 IP 地址和 TCP 端口。 有关详细信息，请参阅本主题后面的 [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)之类的系统数据库。  
   
- 如果执行过程中出现故障转移，Analysis Services 中会出现以下错误并显示在日志文件或输出窗口中：“OLE DB 错误: OLE DB 或 ODBC 错误: 通讯链接失败；08S01；TCP 访问接口: 现有连接已被远程主机强行关闭。 ；08S01。”  
+ 如果执行过程中出现故障转移，Analysis Services 中会出现以下错误并显示在日志文件或输出窗口中：“OLE DB 错误: OLE DB 或 ODBC 错误通讯链接失败; 08S01; TPC 提供程序: 现有连接已被远程主机强行关闭。 ; 08S01。”  
   
  稍等片刻然后重试，该错误应自行解决。 如果为可读辅助副本正确配置了可用性组，那么在您重试处理后，处理将在新的辅助副本上继续执行。  
   
@@ -231,7 +231,7 @@ ms.locfileid: "47635015"
   
 ## <a name="see-also"></a>另请参阅  
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [创建数据源（SSAS 多维）](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [启用维度写回](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

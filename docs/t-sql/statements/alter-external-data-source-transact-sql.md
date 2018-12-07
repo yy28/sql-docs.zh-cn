@@ -19,12 +19,12 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3654e06666c4b8d9639cf3d6ce792cdf80e4cdd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667245"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396810"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>参数  
  data_source_name 指定数据源的用户定义名称。 该名称必须是唯一的。
   
- LOCATION = ‘server_name_or_IP’ 指定服务器名称或 IP 地址。
+ LOCATION = 'server_name_or_IP' 指定服务器名称或 IP 地址。
   
  RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’ 指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。
   

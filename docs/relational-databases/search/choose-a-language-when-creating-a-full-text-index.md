@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad984721f43f478f35adc53b68c3d207fb2a2527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2aa416e1913925c095e75888a624021f7eb3543f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696606"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541266"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
 
@@ -108,7 +108,7 @@ ms.locfileid: "47696606"
 ##  <a name="type"></a> 列类型对全文搜索的影响  
  选择语言时的另一个注意事项与数据的表示方式有关。 对于未存储在 **varbinary(max)** 列中的数据，不会执行专门的筛选， 而一般通过断字组件按原样传递该文本。  
   
- 此外，断字符主要用于处理书面文本。 因此，如果文本中包含任何类型的标记（例如 HTML），则在索引和搜索过程中可能无法获得很好的语言准确性。 在这种情况下，你有两个选择 - 首选方法是只将文本数据存储在 **varbinary(max)** 列中，并指示数据文档类型，以便对其进行筛选。 如果不能使用此方法，那么可以考虑使用非特定语言断字符，并且（如果可能）将标记数据（例如 HTML 中的“br”）添加到干扰词列表中。  
+ 此外，断字符主要用于处理书面文本。 因此，如果文本中包含任何类型的标记（例如 HTML），则在索引和搜索过程中可能无法获得很好的语言准确性。 在这种情况下，你有两个选择 - 首选方法是只将文本数据存储在 varbinary(max) 列中，并指示数据文档类型，以便对其进行筛选。 如果不能使用此方法，那么可以考虑使用非特定语言断字符，并且（如果可能）将标记数据（例如 HTML 中的“br”）添加到干扰词列表中。  
   
 > [!NOTE]  
 >  当指定非特定语言时，基于语言的词干分析将不起作用。  

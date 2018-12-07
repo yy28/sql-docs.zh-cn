@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 985c1117e5913c38769a1baddd50a09ac6978ab1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e23e27ea5806e40e3cea3d97552b59db3915732e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604807"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412754"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安装 SQL Server 服务更新
 
@@ -52,7 +52,7 @@ ms.locfileid: "51604807"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新 (MU)、Windows Server Update Services (WSUS) 和 Microsoft 下载中心获得。 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全更新和关键更新通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新提供，并且能够通过控制面板中的 Windows Update 小程序查看您需要的选择进入 MU 的这些更新。  
   
-在您通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新接收某一更新时，它会以无人参与模式将所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能更新为最新版本。 如果需要更多的灵活性或者没有 Internet 或 WSUS 访问，则必须从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心获取更新。  
+在您通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新接收某一更新时，它会以无人参与模式将所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能更新为最新版本。 如果需要更多的灵活性或者没有 Internet 或 WSUS 访问权限，则必须从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心获取更新。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用安装向导安装 SQL Server（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)

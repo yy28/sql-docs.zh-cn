@@ -12,12 +12,12 @@ author: Jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8793d30d1db90b31020c0273de803608d92c62e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96c8f204f1be7775dbf77490e3fd3749c40e6a3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780295"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531633"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>通过使用内存优化获得更快的临时表和表变量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ go
     - _旧表名：_&#x23;tempSessionC  
     - _新表名：_ dbo.soSessionC  
 2. 将代码中的 `CREATE TABLE #tempSessionC` 语句替换为 `DELETE FROM dbo.soSessionC`，以确保会话不会公开到由具有同一 session_id 的以前会话插入的表内容。 请务必在部署时（而不是在运行时）创建内存优化表，以避免创建表时附带的编译开销。
-3. 从代码中删除 `DROP TABLE #tempSessionC` 语句 – 如果内存大小是一个潜在的忧患，则还可以插入一个 `DELETE FROM dbo.soSessionC` 语句
+3. 从代码中删除 `DROP TABLE #tempSessionC` 语句 - 如果内存大小是一个潜在的忧患，则还可以插入一个 `DELETE FROM dbo.soSessionC` 语句
   
   
   

@@ -22,12 +22,12 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526201"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,13 +76,13 @@ ALTER FULLTEXT INDEX ON table_name
  通过禁用全文索引，您可以关闭更改跟踪但保留全文索引，并且可以随时使用 ENABLE 重新激活全文索引。 如果禁用全文索引，则全文索引元数据将保留在系统表中。 禁用全文索引时，如果 CHANGE_TRACKING 处于启用状态（自动或手动更新），则索引状态将冻结，任何正在进行的爬网将停止，并且不会跟踪对表数据进行的新更改，也不会将这些更改传播到索引。  
   
  SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
- 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否会将对全文检索所覆盖的表列的更改（更新、删除或插入）传播到全文检索。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否会将对全文索引所覆盖的表列的更改（更新、删除或插入）传播到全文索引。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
   
 > [!NOTE]  
 >  有关更改跟踪交互和 WITH NO POPULATION 的信息，请参阅本主题后面的“备注”。  
   
  MANUAL  
- 指定所跟踪的更改将通过调用 ALTER FULLTEXT INDEX 而手动传播... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（手动填充）。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+ 指定跟踪的更改会手动传播，方法是调用 ALTER FULLTEXT INDEX ...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（手动填充）。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
  AUTO  
  指定当基表中的数据修改时，所跟踪的更改将会自动传播（自动填充）。 尽管是自动传播更改，但这些更改可能不会立即反映到全文索引中。 默认值为 AUTO。  
@@ -119,7 +119,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
- 对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源。 如果这些资源不支持指定的语言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
+ 对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源。 如果这些资源不支持指定的语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
  对于包含多种语言的文本数据的非 BLOB 和非 XML 列，或者列中所存储文本的语言未知时，请使用非特定 (0x0) 语言资源。 对于存储在 XML 或 BLOB 类型列中的文档，在创建索引时，将使用文档内的语言编码。 例如，在 XML 列中，XML 文档中的 xml:lang 属性将标识语言。 在查询时，除非将 language_term 指定为全文查询的一部分，否则将使用以前在 language_term 中指定的值作为全文查询的默认语言。  
   
@@ -128,7 +128,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  创建作为统计语义索引一部分的附加关键短语和文档相似性索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
- [ ,...n]  
+ [ **,**_...n_]  
  指示可以为 ADD、ALTER 或 DROP 子句指定多个列。 指定多个列时，请使用逗号分隔这些列。  
   
  WITH NO POPULATION  
@@ -185,7 +185,7 @@ ALTER FULLTEXT INDEX ON table_name
  更改与索引（如果有）关联的搜索属性列表。  
   
  OFF  
- 指定不会将任何属性列表与全文索引相关联。 如果关闭全文索引的搜索属性列表 (ALTER FULLTEXT INDEX... SET SEARCH PROPERTY LIST OFF)，则不再能够对基表进行属性搜索。  
+ 指定不会将任何属性列表与全文索引相关联。 如果关闭全文索引的搜索属性列表 (ALTER FULLTEXT INDEX ...SET SEARCH PROPERTY LIST OFF)，则不再能够对基表进行属性搜索。  
   
  默认情况下，在关闭现有的搜索时属性列表时，将自动重新填充全文索引。 如果在关闭搜索属性列表时指定 WITH NO POPULATION，则不会自动进行重新填充。 但是，我们建议您在方便的时候对此全文索引运行完全填充。 重新填充全文索引将删除每个删除的搜索属性的属性特定元数据，从而使全文索引更小更有效。  
   
@@ -274,7 +274,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  全文索引将再次与相同或不同的搜索属性列表相关联。  
   
-     例如，以下语句重新将全文检索与原始搜索属性列表 `spl_1` 相关联：  
+     例如，以下语句重新将全文索引与原始搜索属性列表 `spl_1` 相关联：  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -283,7 +283,7 @@ ALTER FULLTEXT INDEX ON table_name
      此语句启动完全填充（默认行为）。  
   
     > [!NOTE]  
-    >  还需要对不同的搜索属性列表进行重新生成，例如 `spl_2`。  
+    >  还需要对不同的搜索属性列表进行重新生成，例如，`spl_2`。  
   
 ## <a name="permissions"></a>Permissions  
  用户必须对相应表或索引视图拥有 ALTER 权限，或者必须是 sysadmin 固定服务器角色、db_ddladmin 固定数据库角色或 db_owner 固定数据库角色的成员。  

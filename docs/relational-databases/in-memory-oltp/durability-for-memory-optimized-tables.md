@@ -11,12 +11,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2093e1445f7328090d71c6c133960597da5ddf6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650145"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419908"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "47650145"
 |CFP0 (30%), CFP1 (20%), CFP2 (50%), CFP3 (10%)|(CFP0, CFP1, CFP2)。 从左侧开始选择文件。<br /><br /> 未选择 CTP3，因为它将使最后生成的数据文件超过 100% 的理想大小。|  
 |CFP0 (80%), CFP1 (30%), CFP2 (10%), CFP3 (40%)|(CFP1, CFP2, CFP3)。 从左侧开始选择文件。<br /><br /> 将跳过 CFP0，因为如果与 CFP1 合并，最后生成的数据文件超过 100% 的理想大小。|  
   
- 不是具有可用空间的所有 CFP 都符合合并条件。 例如，如果两个相邻的 CFP 为 60% 满，则它们将不符合合并条件，并且其中每个 CFP都将有 40% 的未使用存储空间。 在最差情形下，所有 CFP 都将为 50% 满，存储利用率仅为 50%。 当已删除行可能在存储中存在时，因为 CFP 不符合合并条件，所以，已删除行可能已被内存中垃圾回收从内存中删除。 存储和内存的管理与垃圾回收是独立的。 活动 CFP（不是所有 CFP 都在更新）使用的内存可以最高达到内存中持久表大小的 2 倍。  
+ 不是具有可用空间的所有 CFP 都符合合并条件。 例如，如果两个相邻的 CFP 为 60% 满，则它们将不符合合并条件，并且其中每个 CFP都将有 40% 的未使用存储空间。 在最差情形下，所有 CFP 都将为 50% 满，存储利用率仅为 50%。 已删除的行可能由于 CFP 不符合合并条件而仍存在于存储中，但这些行可能已因内存中垃圾回收而从内存中删除。 存储和内存的管理与垃圾回收是独立的。 活动 CFP（不是所有 CFP 都在更新）使用的内存可以最高达到内存中持久表大小的 2 倍。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命周期  
  CFP 要先经过若干状态才可被释放。 需要生成数据库检查点和日志备份，以通过这些阶段转换这些文件，并最终清理不再需要的文件。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)。  

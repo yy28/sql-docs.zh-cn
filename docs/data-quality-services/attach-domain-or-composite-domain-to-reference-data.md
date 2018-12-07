@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730815"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617078"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730815"
 > [!WARNING]  
 >  当将域映射到引用数据服务架构中的列时，附加到引用数据服务的复合域会出现在域下拉列表中。 不要将复合域映射到引用数据服务中的列；只需将复合域内的各个域映射到引用数据服务架构中的相应列。 否则，将导致错误。  
   
- 如果您应该选择使用某一引用数据服务，则引用数据服务架构可能具有一个必须映射到适当域的必填列。 引用数据架构中的必填列使用“(M)”与列名称区分开来。 例如， **AddressLine** 是 **Melissa Data – Address Data** 中的必填架构列，而 **CompanyName** 是 **Digital Trowel Inc. – Us companies and professional data for SQL users**中的必填架构列。  
+ 如果您应该选择使用某一引用数据服务，则引用数据服务架构可能具有一个必须映射到适当域的必填列。 引用数据架构中的必填列使用“(M)”与列名称区分开来。 例如，“AddressLine”是“Melissa Data - Address Data”中的必填架构列，而“CompanyName”是“Digital Trowel Inc. - Us companies and professional data for SQL users”中的必填架构列。  
   
- 在此主题中，我们将创建四个域： **Address Line**、 **City**、 **State**和 **Zip**。在复合域 **Address Verification**之下，将该复合域附加到 **Melissa Data – Address Check** 引用数据服务，然后将复合域内的各个域映射到引用数据服务架构中的相应列。  
+ 在此主题中，我们将创建四个域：Address Line、City、State 和 Zip。在复合域 Address Verification 之下，将该复合域附加到 Melissa Data - Address Check 引用数据服务，然后将复合域内的各个域映射到引用数据服务架构中的相应列。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47730815"
   
 8.  在 **“联机引用数据提供程序目录”** 对话框中：  
   
-    1.  在 **DataMarket Data Quality Services**下，选中 **Melissa Data – Address** 复选框。  
+    1.  在“DataMarket Data Quality Services”下，选中“Melissa Data - Address”复选框。  
   
-    2.  将 Melissa Data – Address Check 引用数据服务的列映射到适当的域（Address Line、City、State 和 Zip）。 您通过在 **“RDS 架构”** 列中选择某一引用数据服务列，然后在 **“域”** 列中选择适当的域，映射这些列。 若要在表中添加更多的行，请单击 **“添加架构项”** 图标。  
+    2.  将 Melissa Data - Address Check 引用数据服务的列映射到适当的域（Address Line、City、State 和 Zip）。 您通过在 **“RDS 架构”** 列中选择某一引用数据服务列，然后在 **“域”** 列中选择适当的域，映射这些列。 若要在表中添加更多的行，请单击 **“添加架构项”** 图标。  
   
     3.  单击 **“确定”** 保存更改并关闭 **“联机引用数据提供程序目录”** 对话框。  
   

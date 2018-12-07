@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da1568dfbdee3c772c583569d04d31cba65f6458
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f9bee1c43bd086f3d32f514f4f2b51c5986b5f38
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028656"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414674"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>脚本编写和带 Reporting Services 的 PowerShell
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持广泛的开发和管理方案（通过脚本进行），包括 rs.exe 命令行实用工具、适用于 SharePoint 模式报告服务器的 PowerShell cmdlet 以及利用 PowerShell 中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对象模式实现本机模式和 SharePoint 模式。  
@@ -52,7 +52,7 @@ ms.locfileid: "50028656"
   
 -   [使用 PowerShell 来创建带有本机模式报表服务器的 Azure VM](https://msdn.microsoft.com/library/azure/dn449661.aspx)。  
   
--   请参阅 [访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)中的“使用 PowerShell 访问 WMI 类”一节。  
+-   请参阅[访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)中的“使用 PowerShell 访问 WMI 类”一节。  
   
 
 ## <a name="rsexe-scripting-samples"></a>RS.exe 脚本示例  

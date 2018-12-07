@@ -15,12 +15,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8b62b974951172924ac475c68a652e80ce444c4
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 89a6251bca61f49b5acd6803702dc44cb21584c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544525"
 ---
 # <a name="create-a-database"></a>创建数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "51560257"
   
 4.  若要通过接受所有默认值创建数据库，请单击 **“确定”**；否则，请继续后面的可选步骤。  
   
-5.  若要更改所有者名称，请单击 (**…**) 选择其他所有者。  
+5.  若要更改所有者名称，请单击 (…) 选择其他所有者。  
   
     > [!NOTE]  
     >  “使用全文检索”选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  

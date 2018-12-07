@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ca5faedafdd1eaedb110eacff43af85af6593fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648085"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505730"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以获取有关视图的定义或属性的信息。 您可能需要查看视图定义以了解数据从源表中的提取方式，或查看视图所定义的数据。  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以获取有关视图的定义或属性的信息。 您可能需要查看视图定义以了解数据从源表中的提取方式，或查看视图所定义的数据。  
   
 > [!IMPORTANT]  
 >  如果更改视图所引用对象的名称，则必须更改视图，使其文本反映新的名称。 因此，在重命名对象之前，首先显示该对象的依赖关系，以确定即将发生的更改是否会影响任何视图。  
@@ -140,7 +140,7 @@ ms.locfileid: "47648085"
      显示所有列是否都由所选视图返回。 这是在创建视图时设置的。  
   
      **SQL 注释**  
-     显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。 您的注释可以包含视图使用者和使用时间等信息。  
+     显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。 您的注释可以包含视图使用者和使用时间等信息。  
   
      **Top 规范**  
      展开此项可显示“Top”、“表达式”、“百分比”和“等同值”属性的属性。  
@@ -182,7 +182,7 @@ ms.locfileid: "47648085"
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>获取视图的定义和属性  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "47648085"
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>获取视图的依赖关系  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

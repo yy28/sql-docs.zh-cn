@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bff2fbab16e2f087e0e670e91185aad7b817d3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1b47a38cd1fc5cc4d95b611dbafbf8d30b22878
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407465"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看表的依赖关系。  
+  可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看表的依赖关系。  
   
  **本主题内容**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47724585"
   
      [Security](#Security)  
   
--   **使用以下工具查看表的依赖关系：**  
+-   使用以下工具查看表的依赖关系：  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47724585"
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>查看依赖于表的对象  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47724585"
   
 #### <a name="to-view-the-objects-on-which-a-table-depends"></a>查看表依赖的对象  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

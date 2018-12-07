@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513821"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51657076"
   
 3.  右键单击数据库名称。  
   
-4.  单击“任务” ，然后选择“导出数据层应用程序…”  
+4.  单击“任务”，然后选择“导出数据层应用程序…”  
   
 5.  完成向导对话框：  
   
@@ -90,12 +90,12 @@ ms.locfileid: "51657076"
   
  **下一步** - 继续到“选择 DAC 包”页。  
   
- **取消** – 取消操作并关闭向导。  
+ **取消** - 取消操作并关闭向导。  
   
 ##  <a name="Export_settings"></a> “导出设置”页  
  使用此页可以指定要创建 BACPAC 文件的位置。  
   
--   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击 **“浏览…”** 以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
+-   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
 -   **保存到 Windows Azure** - 在 Windows Azure 容器中创建 BACPAC 文件。 若要验证此选项，则您必须连接到 Microsoft Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 请注意，将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   

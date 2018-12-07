@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533399"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "51660366"
 对数据引入使用内存优化表。 如果引入主要包括插入（而非更新），且需考虑到数据的内存中 OLTP 存储占用，则请
 
 - 使用执行 [的作业，通过](../indexes/columnstore-indexes-overview.md)群集列存储索引 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`定期将数据批量卸载到基于磁盘的表中；或者
-- 使用 [临时内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 管理历史数据 – 在此模式下，历史数据则驻留在磁盘上，并且数据移动由系统管理。
+- 使用 [临时内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 管理历史数据 - 在此模式下，历史数据则驻留在磁盘上，并且数据移动由系统管理。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示例存储库包含一个智能网格应用程序，该应用程序使用临时内存优化表、内存优化表类型和本机编译的存储过程来提高数据引入速度，同时管理传感器数据的内存中 OLTP 存储占用： 
 
@@ -92,7 +92,7 @@ ms.locfileid: "51660366"
  
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)（Quorum 利用 Azure SQL 数据库中的内存中 OLTP，将主要数据库的工作负荷翻倍，同时降低了 70% 的资源使用率）
 - EdgeNet 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，提高了批量数据加载的性能，同时不再需要维持中层缓存：[Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)（数据服务公司通过内存中技术实现了实时访问产品数据）
 - 贝斯以色列女执事医疗中心利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，大幅提高了从域控制器引入数据的速率，同时可以处理剧增的工作负荷：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 
@@ -232,4 +232,4 @@ GO
 [使用内存优化改进临时表和表变量性能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [在 SQL 数据库中使用内存中技术优化性能](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [系统版本控制临时表与内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[内存中 OLTP – 常见工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。 
+[内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。 

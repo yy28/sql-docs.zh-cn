@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525265"
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -118,8 +118,8 @@ ms.locfileid: "51642228"
   
 |“属性”|描述|  
 |--------------|-----------------|  
-|**配置**|包使用的配置集合。 单击浏览按钮 **(…)** 可以查看和配置包配置。|  
-|**表达式**|单击浏览按钮 **(…)** 可以为包属性创建表达式。<br /><br /> 请注意，你可以为对象模型包含的所有包属性（而不仅仅是“属性”窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅[在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 **Expressions**。 单击表达式文本框中的浏览按钮 **(…)** 可以修改和计算表达式。|  
+|**配置**|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置。|  
+|**表达式**|单击浏览按钮 (…) 可以为包属性创建表达式。<br /><br /> 请注意，你可以为对象模型包含的所有包属性（而不仅仅是“属性”窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅[在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 **Expressions**。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式。|  
 |**ForceExecutionResult**|包的执行结果。 其值为： **None**、 **Success**、 **Failure**和 **Completion**。 此属性的默认值为 **None**。 有关详细信息，请参阅 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |**LocaleId**|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。|  
 |**LoggingMode**|指定包日志记录行为的值。 具体的值为 **Disabled**、 **Enabled**和 **UseParentSetting**。 此属性的默认值为 **UseParentSetting**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  

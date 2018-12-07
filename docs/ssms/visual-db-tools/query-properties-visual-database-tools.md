@@ -14,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5564de165e053a871202798ee55b07f2dccc1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733893"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524822"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,10 +62,10 @@ ms.locfileid: "47733893"
 指定当前查询中所有表的全部列都将包含在结果集中。 选择此选项等效于在 SQL 语句的 SELECT 关键字后指定星号 (*) 代替单个列名。  
   
 **查询参数列表**  
-显示查询参数。 若要编辑这些参数，请单击相应属性，再单击该属性右侧的省略号 **(…)** 。 （仅适用于一般性的 OLE DB。）  
+显示查询参数。 若要编辑这些参数，请单击相应属性，再单击该属性右侧的省略号 (…)。 （仅适用于一般性的 OLE DB。）  
   
 **SQL 注释**  
-显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本的数据库。）  
+显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本的数据库。）  
   
 **Top 规范类别**  
 展开此项可显示“Top”、“百分比”、“表达式”和“With Ties”属性的属性。  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a912718146d2c106072615577c130b2da576a578
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021451"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518513"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -206,7 +206,7 @@ ms.locfileid: "50021451"
   
  若要在新的报表服务器计算机上重新建立可逆加密，必须还原先前备份的密钥。 报表服务器数据库中存储的完整密钥集由对称密钥值和服务标识信息组成，后者用于限制密钥的访问，使密钥仅可供存储它的报表服务器实例使用。 在密钥还原过程中，报表服务器将用密钥的新版本替换密钥的现有副本。 新版本包括当前计算机上定义的计算机标识值和服务标识值。 有关详细信息，请参阅以下主题：  
   
--   SharePoint 模式：请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“密钥管理”部分  
+-   SharePoint 模式：请参阅[管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“密钥管理”部分  
   
 -   本机模式：请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   

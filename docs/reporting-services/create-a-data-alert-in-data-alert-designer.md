@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021611"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504113"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
 
@@ -75,15 +75,15 @@ ms.locfileid: "50021611"
   
 10. 键入比较值。  
   
-11. 也可以再次单击省略号 **(…)** 。  
+11. 也可以再次单击省略号 (…)。  
   
-     省略号 **(…)** 将显示在包含第一个子句的行中。  
+     省略号 (…) 将显示在包含第一个子句的行中。  
   
      OR 子句将添加在 AND 规则下面和内部。  
   
 12. 还可以单击向下箭头，选择“字段选择模式”，然后选择该列表中的列。  
   
-     你将会发现单击以添加 OR 子句的省略号 **(…)** 已消失。  
+     你将会发现单击以添加 OR 子句的省略号 (…) 已消失。  
   
 13. 或者，再次单击 **“添加规则”** 以便添加其他规则。  
   

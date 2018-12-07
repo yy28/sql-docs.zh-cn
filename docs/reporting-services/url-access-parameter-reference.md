@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813720"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515124"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -117,7 +117,7 @@ ms.locfileid: "51813720"
   
 -   *Stylesheet*：指定要应用于 HTML 查看器的样式表。  
   
--   设备信息设置：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称（请参阅 Format 参数的说明）。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
+-   设备信息设置：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称（请参阅 Format 参数的说明）。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
   
 ##  <a name="bkmk_reportserver"></a> 报表服务器命令 (rs:)  
  报表服务器命令以 *rs:* 为前缀，用于指向报表服务器：  
@@ -332,7 +332,7 @@ ms.locfileid: "51813720"
   
     -   **Hidden**：隐藏文档结构图区域。  
   
--   *DockToolBar*：控制报表查看器 Web 部件的工具栏是否停靠在顶部或底部。 有效值为 **Top** 和 **Bottom**。 默认值是 **Top**秒。  
+-   DockToolBar：控制报表查看器 Web 部件的工具栏是否停靠在顶部或底部。 有效值为 **Top** 和 **Bottom**。 默认值是 **Top**秒。  
   
      例如在 **SharePoint** 模式中，将工具栏停靠在底部。  
   

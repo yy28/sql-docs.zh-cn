@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c9855f798a7867dfd67a52a1c8452340cdf2a69a
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439899"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 
@@ -28,6 +28,8 @@ ms.locfileid: "51697685"
 |---|---|
 | [在浏览器中编辑](#githubui) | 适用于对任何文章进行少量快速编辑。 |
 | [使用工具在本地编辑](#tools) | 适用于更复杂的编辑、涉及多篇文章的编辑，以及针对 docs.microsoft.com 的频繁编辑。 |
+
+SQL 内容团队会对所有公开发表的内容进行验证，以确保技术准确性和一致性。 
 
 ## <a id="githubui"></a>在浏览器中编辑
 

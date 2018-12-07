@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504067"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -181,7 +181,7 @@ ms.locfileid: "51641815"
   
 #### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = 直接输入  
  **SQLStatement**  
- 在选项框中键入要执行的 SQL 语句，或者单击“浏览(…)”按钮，在“输入 SQL 查询”对话框中键入 SQL 语句，还可以单击“生成查询”，使用“查询生成器”对话框编写 SQL 语句。  
+ 在选项框中键入要执行的 SQL 语句，或者单击浏览按钮 (…)，在“输入 SQL 查询”对话框中键入 SQL 语句，还可以单击“生成查询”，使用“查询生成器”对话框编写 SQL 语句。  
   
  **相关主题：** [“查询生成器”](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -464,7 +464,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 ##  <a name="Return_codes"></a>获取返回代码的值  
  存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，需要使用 **ReturnValue** 类型的参数。  
   
- 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 **input** 参数。 对于所有参数类型（**Input**、 **Output**和 **ReturnValue**），参数标记和参数名称的使用规则都相同。  
+ 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 **input** 参数。 对于所有参数类型（“Input”、“Output”和“ReturnValue”），参数标记和参数名称的使用规则都是相同的。  
   
  某些语法不支持参数文字。 在此情况下，必须通过使用变量来提供参数值。  
   

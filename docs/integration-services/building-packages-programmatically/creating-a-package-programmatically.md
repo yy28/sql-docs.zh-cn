@@ -19,12 +19,12 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4782edbfb3b353dbd07313e0568847d5c696ad8
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cf68976e003eb3466d613f7f1c41db129c70f570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637724"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540878"
 ---
 # <a name="creating-a-package-programmatically"></a>以编程方式创建包
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 对象是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 项目解决方案中的所有其他对象的顶级容器。 作为顶级容器，包是第一个创建的对象，并将后续对象添加到该包，然后在包的上下文中执行这些对象。 包本身并不移动或转换数据。 包依靠自己包含的任务执行工作。 任务执行大多数由包执行的工作，并定义包的功能。 只需三行代码即可完成包的创建和执行，但需要向包中添加各种任务和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象以增加其功能。 本节讨论如何以编程方式创建包。 不提供有关如何创建任务或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的信息。 有关信息，请参阅后续相关章节。  
@@ -153,7 +153,7 @@ End Module
   
 -   blogs.msdn.com 上的博客文章 [API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824)（API 示例 - OleDB 源和 OleDB 目标）。  
   
--   blogs.msdn.com 上的博客文章 [EzAPI – Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI – 为 SQL Server 2012 更新）。  
+-   blogs.msdn.com 上的博客文章 [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI - 为 SQL Server 2012 更新）。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式添加任务](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

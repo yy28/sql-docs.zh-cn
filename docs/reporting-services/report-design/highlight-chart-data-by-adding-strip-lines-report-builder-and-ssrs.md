@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ed4c6eb7a61f28b22a349f2ef2511cba382a3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94dba56cee823d5e8df68244b4d8d44fee5c98a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730855"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529772"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>通过添加条带线突出显示图表数据（报表生成器和 SSRS）
   条带线（或条带）是按固定或自定义间隔使图表背景带有阴影的水平或垂直区域。 可以使用条带线执行以下操作：  
@@ -47,7 +47,7 @@ ms.locfileid: "47730855"
   
      轴属性将显示在“属性”窗口中。  
   
-2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合 (…)”按钮打开“ChartStripLine 集合编辑器”。  
+2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合(…)”按钮打开“ChartStripLine 集合编辑器”。  
   
 3.  单击 **“添加”** 向集合中添加一个新条带线。  
   

@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75492ffdd6246050c086deea74975921a19156b4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702215"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617697"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -53,7 +52,7 @@ ms.locfileid: "51702215"
  您可以在 **的** “配置” **屏幕的** “引用数据” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]选项卡中执行这些活动。  
   
 ##  <a name="Direct"></a> 使用直接来自第三方引用数据提供程序的引用数据  
- 如果您没有连接到 Internet 并因此无法使用市场，DQS 还支持直接连接到您组织的网络中提供的数据提供程序。 若要使用来自直接联机第三方引用数据提供程序的引用数据，您必须在 DQS 中为此数据提供程序创建一条记录。  
+ 如果没有连接到 Internet 并由此无法使用市场，DQS 也支持直接连接到组织的网络中提供的数据提供程序。 若要使用来自直接联机第三方引用数据提供程序的引用数据，您必须在 DQS 中为此数据提供程序创建一条记录。  
   
 ##  <a name="HowToCleanse"></a> 如何使用引用数据清理数据  
  在 DQS 中使用引用数据清理您的数据包括以下这些步骤：  

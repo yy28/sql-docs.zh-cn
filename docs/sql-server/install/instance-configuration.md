@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701059"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535737"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51701059"
 ### <a name="options"></a>选项  
  仅限故障转移群集实例 - 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集网络名称。 此名称可用来在网络上标识故障转移群集实例。  
   
- 默认实例或命名实例 - 当您决定是安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是命名实例时，请考虑以下信息：  
+ 默认实例或命名实例 - 当决定是安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例还是命名实例时，请考虑以下信息：  
   
 -   如果计划在数据库服务器上安装单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则该实例应为默认实例。  
   
@@ -451,6 +451,6 @@ ms.locfileid: "51701059"
   
  确保“要设置的用户”字段中列出了应更新其权限的用户的 DomainName\UserName。 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “可用权限” **窗格的** 实例列表中选择要更新的角色，然后单击向右箭头。 若要将用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有可用实例的所有可用角色中，请单击向右双箭头。  
   
- 若要在完成选择后实现这些更改， [!INCLUDE[clickOK](../../includes/clickok-md.md)]。 若要在不进行更改的情况下结束使用此工具，请单击 **“取消”**。  
+ 要在选择完成后实现更改，[!INCLUDE[clickOK](../../includes/clickok-md.md)]若要结束使用此工具而不进行更改，请单击“取消”。  
   
   

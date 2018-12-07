@@ -12,27 +12,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fbc8d15cace6ea33f8b64936e18bae25a28708c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a4d94524bfe9b991f59dfbe21a5160c5b726ef1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501988"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>配置编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   您可以通过为每个编辑器配置选项，自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器的操作。  
   
 ## <a name="settng-editor-options"></a>设置编辑器选项  
- 通过使用 **“工具”** 菜单，然后选择 **“选项…”** 以便显示 **“选项”** 对话框，可设置大多数编辑器选项。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  
+ 通过使用“工具”菜单，然后选择“选项…”以便显示“选项”对话框，可设置大多数编辑器选项。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  
   
-1.  **所有语言** – 使用此节点设置的选项将应用于所有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 编辑器。 可通过使用其他节点为特定的编辑器设置不同选项，覆盖这些设置。  
+1.  **所有语言** - 使用此节点设置的选项将应用于所有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 编辑器。 可通过使用其他节点为特定的编辑器设置不同选项，覆盖这些设置。  
   
-2.  **纯文本** – 使用此节点设置的选项将应用于 MDX、DMX 和文本编辑器。  
+2.  **纯文本** - 使用此节点设置的选项将应用于 MDX、DMX 和文本编辑器。  
   
-3.  **Transact-SQL** – 使用此节点设置的选项将应用于数据库引擎查询编辑器。  
+3.  **Transact-SQL** - 使用此节点设置的选项将应用于数据库引擎查询编辑器。  
   
-4.  **XML** – 使用此节点设置的选项将应用于 XML for Analysis 编辑器。  
+4.  **XML** - 使用此节点设置的选项将应用于 XML for Analysis 编辑器。  
   
  打开 **“查询执行”** 或 **“查询结果”** 节点，以便自定义查询的执行以及显示结果的方式。  
   

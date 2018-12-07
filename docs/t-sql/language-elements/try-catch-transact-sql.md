@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b782d10d323ea7e548a149a873812359552345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674925"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545755"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) 返回错误消息的完整文本。 该文本包括为所有可替换参数提供的值，如长度、对象名或时间。  
   
- 如果是在 CATCH 块的作用域之外调用这些函数，则这些函数返回空值。 可以从 CATCH 块作用域内的任何位置使用这些函数检索错误消息。 例如，下面的脚本显示了包含错误处理函数的存储过程。 在 `CATCH` 构造的 `TRY…CATCH` 块中，调用了该存储过程并返回有关错误的信息。  
+ 如果是在 CATCH 块的作用域之外调用这些函数，则这些函数返回空值。 可以从 CATCH 块作用域内的任何位置使用这些函数检索错误消息。 例如，下面的脚本显示了包含错误处理函数的存储过程。 在 `CATCH` 构造的 `TRY...CATCH` 块中，调用了该存储过程并返回有关错误的信息。  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -156,7 +156,7 @@ END CATCH;
   
  如果某个错误在 TRY 块内的编写或语句级别重新编写过程中并在较低的执行级别（例如，执行 sp_executesql 或用户定义存储过程时）发生，则该错误会在低于 TRY…CATCH 构造的级别上发生，并由相关联的 CATCH 块处理。  
   
- 以下示例显示在存储过程中执行相同的 `SELECT` 语句时，由 `TRY…CATCH` 语句生成的对象名解析错误是如何不被 `CATCH` 构造捕捉，却被 `SELECT` 块捕捉的。  
+ 以下示例显示在存储过程中执行相同的 `SELECT` 语句时，由 `TRY...CATCH` 语句生成的对象名解析错误是如何不被 `CATCH` 构造捕捉，却被 `SELECT` 块捕捉的。  
   
 ```sql  
 BEGIN TRY  
@@ -171,9 +171,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- 未捕捉错误，控制从 `TRY…CATCH` 构造传递给下一更高级别。  
+ 未捕捉错误，控制从 `TRY...CATCH` 构造传递给下一更高级别。  
   
- 在存储过程内运行 `SELECT` 语句将导致错误在低于 `TRY` 块的级别上发生。 该错误将由 `TRY…CATCH` 构造处理。  
+ 在存储过程内运行 `SELECT` 语句将导致错误在低于 `TRY` 块的级别上发生。 该错误将由 `TRY...CATCH` 构造处理。  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -205,7 +205,7 @@ END CATCH;
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-trycatch"></a>A. 使用 TRY…CATCH  
+### <a name="a-using-trycatch"></a>A. 使用 TRY...CATCH  
  以下示例显示一个会生成被零除错误的 `SELECT` 语句。 该错误会使执行跳转到关联的 `CATCH` 块。  
   
 ```sql  
@@ -226,7 +226,7 @@ GO
 ```  
   
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. 在事务内使用 TRY…CATCH  
- 以下示例显示 `TRY…CATCH` 块在事务内的工作方式。 `TRY` 块内的语句会生成违反约束的错误。  
+ 以下示例显示 `TRY...CATCH` 块在事务内的工作方式。 `TRY` 块内的语句会生成违反约束的错误。  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -255,7 +255,7 @@ GO
 ```  
   
 ### <a name="c-using-trycatch-with-xactstate"></a>C. 将 TRY…CATCH 与 XACT_STATE 配合使用  
- 以下示例显示如何使用 `TRY…CATCH` 构造来处理事务内发生的错误。 `XACT_STATE` 函数确定应提交事务还是应回滚事务。 在本示例中，`SET XACT_ABORT` 状态为 `ON`。 在发生违反约束的错误时，这会使事务处于不可提交状态。  
+ 以下示例显示如何使用 `TRY...CATCH` 构造来处理事务内发生的错误。 `XACT_STATE` 函数确定应提交事务还是应回滚事务。 在本示例中，`SET XACT_ABORT` 状态为 `ON`。 在发生违反约束的错误时，这会使事务处于不可提交状态。  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  
@@ -323,7 +323,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
+### <a name="d-using-trycatch"></a>D. 使用 TRY...CATCH  
  以下示例显示一个会生成被零除错误的 `SELECT` 语句。 该错误会使执行跳转到关联的 `CATCH` 块。  
   
 ```sql  

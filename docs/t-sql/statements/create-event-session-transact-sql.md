@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696675"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401322"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696675"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时是否自动启动此事件会话。  
   
 > [!NOTE]  
->  如果 STARTUP_STATE = ON，则事件会话将只在 SQL Server 停止并重新启动的情况下启动。  
+> 如果 `STARTUP_STATE = ON`，则事件会话将只在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止并重新启动的情况下才启动。  
   
  ON  
  启动时事件会话会启动。  
@@ -239,15 +238,15 @@ ON SERVER
  启动时事件会话不启动。  
   
 ## <a name="remarks"></a>Remarks  
- 逻辑运算符的优先顺序是 NOT（最高），然后是 AND，最后是 OR。  
+逻辑运算符的优先顺序是 `NOT`（最高），然后是 `AND`，最后是 `OR`。  
   
 ## <a name="permissions"></a>Permissions  
- 要求具有 ALTER ANY EVENT SESSION 权限。  
+需要 `ALTER ANY EVENT SESSION` 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例说明如何创建一个名为 `test_session` 的事件会话。 此示例添加了两个事件并使用 Windows 事件跟踪目标。  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 80ddd9fb25dcd9246da0b9cb9ac86e8872888e7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79c6f65a6ceba8eef0a61f27512fa09b6fb3f474
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531805"
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>第 2-3 课 - 修改平面文件连接管理器
 在本任务中，您将修改在第 1 课中创建和配置的平面文件连接管理器。 平面文件连接管理器在最初创建时配置为静态加载单个文件。 若要启用平面文件连接管理器以重复加载文件，必须修改连接管理器的 ConnectionString 属性以接受用户定义的变量 `User:varFileName`，该变量包含要在运行时加载的文件的路径。  
@@ -27,11 +27,11 @@ ms.locfileid: "47785868"
   
 1.  在 **“连接管理器”** 窗格中，右键单击 **Sample Flat File Source Data**，再选择 **“属性”**。  
   
-2.  在“属性”窗口中，针对 **“表达式”**，单击空单元，然后单击省略号按钮 **“(…)”**。  
+2.  在“属性”窗口中，针对“表达式”，单击空单元，然后单击省略号按钮“(…)”。  
   
 3.  在 **“属性表达式编辑器”** 对话框的 **“属性”** 列中，键入或选择 **ConnectionString**。  
   
-4.  在 **“表达式”** 列中，单击省略号按钮 **“(…)”** 以打开 **“表达式生成器”** 对话框。  
+4.  在“表达式”列中，单击省略号按钮“(…)”以打开“表达式生成器”对话框。  
   
 5.  在 **“表达式生成器”** 对话框中，展开 **“变量”** 节点。  
   

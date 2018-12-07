@@ -12,12 +12,12 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4f691fa89bf3d6db014542088fdd127e344a8346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545365"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>使用 DTA 建议改进性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "47690695"
 
 **针对包含多个查询的工作负荷中的建议有效性**：对应于客户 2 整个工作负荷的最后一组条形示范了 DTA 在工作负荷中分析多个查询，以建议一组适当的、可改善整个工作负荷的执行开销的行存储索引和列存储索引的能力。 DTA（行存储 + 列存储）建议四个列存储索引和几十个行存储索引，与仅生成列存储索引的选项相比，对工作负荷的改善超过了一个量级；与 DTA（仅限行存储）相比，带来了 4 到 5 倍的改善。
 
-概括而言，上面的示例演示了 DTA 适当利用 SQL Server 数据库引擎中支持的行存储索引和列存储索引，建议可大幅降低工作负荷的 CPU 时间的索引组合的能力。 
+概括而言，上面的示例演示了 DTA 适当利用 SQL Server 数据库引擎中支持的行存储索引和列存储索引，建议可大幅降低工作负载的 CPU 时间的索引组合的能力。 
 
 <a name="see-also"></a>另请参阅
 ---
-[数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)
+[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)
 
 [数据引擎优化顾问 (DTA) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 

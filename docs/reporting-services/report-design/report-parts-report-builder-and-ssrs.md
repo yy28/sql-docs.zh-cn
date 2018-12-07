@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542221"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
   表、矩阵、图表和图像等报表项可以作为“报表部件”发布。 报表部件是单独发布到报表服务器上并且可以在其他分页报表中重复使用的分页报表项。 报表部件具有 .rsc 文件扩展名。  
@@ -85,7 +85,7 @@ ms.locfileid: "50021941"
  创建报表的最简单方式是从报表部件库将现有报表部件（如表或图表）添加到您的报表。 将报表部件添加到您的报表后，可以根据需要进行修改，或者接受来自服务器的更新。 更改您的报表中的报表项将不会对站点或服务器上发布的报表部件的实例产生影响，并且不会破坏报表中的实例与站点或服务器上的实例之间的关系 如果您具有足够的权限，则可以将更新的副本保存回站点或服务器。 如果其他人修改站点或服务器上的副本，您可以决定是将您的副本保持原样，还是更新该副本以便与站点或服务器上的副本相符。  
   
 ### <a name="searching-for-report-parts"></a>搜索报表部件  
- 您可以在报表部件库中查找要添加到您的报表中的报表部件。 您可以按照报表部件的全名或部分名称、创建者、最后修改者、最后修改时间、存储位置以及报表部件的类型，对报表部件进行筛选。 例如，您可以搜索由您的同事之一在上周创建的所有图表。  
+ 您可以在报表部件库中查找要添加到您的报表中的报表部件。 可以按照报表部件的全名或部分名称、创建者、最后修改者、最后修改时间、存储位置以及报表部件的类型，对报表部件进行筛选。 例如，您可以搜索由您的同事之一在上周创建的所有图表。  
   
  您可以采用缩略图或列表的形式查看搜索结果，并且可以按名称、创建日期和修改日期以及创建者对搜索结果进行排序。 有关详细信息，请参阅 [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)。  
   

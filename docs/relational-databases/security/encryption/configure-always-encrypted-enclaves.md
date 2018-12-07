@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534775"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -157,7 +157,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
 
 1. 使用 SSMS 连接到你的数据库。
 2. 在“对象资源管理器”中，展开数据库，然后导航到“安全” > “Always Encrypted 密钥”。
-3. 预配新的已启用 enclave 的列主密钥：
+3. 预配已启用 enclave 的新列主密钥：
 
     1. 右键单击“Always Encrypted 密钥”，然后选择“新列主密钥...”。
     2. 选择列主密钥名称。
@@ -180,7 +180,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
 
 以下各节提供示例 PowerShell 脚本来预配已启用 enclave 的密钥。 将突出显示特定于具有安全 enclave 的 Always Encrypted 的（新）步骤。 有关使用 PowerShell 预配密钥的详细信息（不特定于具有安全 enclave 的 Always Encrypted），请参阅[使用 PowerShell 配置 Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell)。
 
-预配已启用 Enclave 的密钥 - Windows 证书存储
+**预配已启用 Enclave 的密钥 - Windows 证书存储**
 
 在客户端/开发计算机上，打开 Windows PowerShell ISE，并运行以下脚本。
 
@@ -213,7 +213,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>预配已启用 Enclave 的密钥 – Azure Key Vault
+### <a name="provisioning-enclave-enabled-keys---azure-key-vault"></a>预配已启用 Enclave 的密钥 - Azure Key Vault
 
 在客户端/开发计算机上，打开 Windows PowerShell ISE，并运行以下脚本。
 
@@ -237,7 +237,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -511,7 +511,7 @@ GO
 - 缺点：
   - 不支持将加密类型从确定性加密更改为随机加密，因此，虽然它会对确定性加密的列解锁就地加密，但不会启用丰富计算。
   - 不允许选择性地转换一些与给定的列主密钥关联的列。
-  - 产生密钥管理开销 – 需要创建新的列主密钥并使其可用于查询受影响列的应用程序。  
+  - 产生密钥管理开销 - 需要创建新的列主密钥并使其可用于查询受影响列的应用程序。  
 
 
 #### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>选项 2：此方法涉及到两个步骤：1) 轮换列主密钥（如选项 1 所示）2) 使用随机加密重新加密通过确定性加密的列子集，以便为这些列启用丰富计算。
@@ -522,7 +522,7 @@ GO
   
 - 缺点：
   - 不允许选择性地转换一些与给定的列主密钥关联的列。
-  - 它会产生密钥管理开销 – 需要创建新的列主密钥并使其可用于查询受影响列的应用程序。
+  - 它会产生密钥管理开销 - 需要创建新的列主密钥并使其可用于查询受影响列的应用程序。
 
 #### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>选项 3：在客户端上使用新的已启用 enclave 的列加密密钥和随机加密（如果需要）重新加密所选的列。
   
@@ -741,7 +741,7 @@ GO
 
 尝试对已启用 enclave 的列的丰富查询的最快方法是通过 SSMS 查询窗口，同时启用 Always Encrypted 参数化。 有关 SSMS 中此有用功能的详细信息，请参阅：
 
-- [Always Encrypted 参数化 – 使用 SSMS 插入、更新和按加密列进行筛选](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Always Encrypted 参数化 - 使用 SSMS 插入、更新和按加密列进行筛选](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
 - [查询加密列](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 
@@ -758,7 +758,7 @@ GO
 2.  启用 Always Encrypted 参数化。
     
     1.  在 SSMS 的主菜单中，选择“查询”。
-    2.  选择“查询选项…” 。
+    2.  选择“查询选项…”。
     3.  导航到“执行” > “高级”。
     4.  选择或取消选择“启用 Always Encrypted 参数化”。
     5.  单击“确定”。

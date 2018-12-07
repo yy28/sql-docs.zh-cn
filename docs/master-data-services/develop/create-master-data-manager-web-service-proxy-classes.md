@@ -11,12 +11,12 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebf916f83a801005d16c860a9dc84205b1fd43d1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4bbcfeb2e4b3c9d8d49f269d93e87ce217befe58
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703125"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400440"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>创建主数据管理器 Web 服务代理类
 
@@ -37,7 +37,7 @@ ms.locfileid: "51703125"
 3.  保存对文件的更改。  
   
 4.  通过浏览服务 URL 来测试元数据发布，例如：`https://yourserver/MDS/service/service.svc`。 如果启用元数据发布，则会显示一个以   
-    “您已创建服务”开头的页面。  
+    “你已创建服务”开头的页面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>通过使用 Visual Studio 创建代理类  
  如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： `https://yourserver/MDS/service/service.svc`。 有关详细信息，请参阅[如何添加、更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  

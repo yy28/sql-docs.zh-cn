@@ -3,7 +3,7 @@ title: 次要副本的自动种子设定 (SQL Server) | Microsoft Docs
 description: 使用自动种子设定初始化次要副本。
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,17 +14,17 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506690"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>次要副本的自动种子设定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在 SQL Server 2012 和 2014 中，初始化 SQL Server Always On 可用性组中的次要副本的唯一方法是使用备份、复制和还原。 SQL Server 2016 引入了用于初始化次要副本的新功能 - 自动种子设定。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 最初创建可用性组或将数据库添加到可用性组时，可以使用此新功能。 支持 AlwaysOn 可用性组的所有 SQL Server 版本都支持自动种子设定，并可与传统可用性组和[分布式可用性组](distributed-availability-groups.md)一起使用。
+在 SQL Server 2012 和 2014 中，初始化 SQL Server Always On 可用性组中的次要副本的唯一方法是使用备份、复制和还原。 SQL Server 2016 引入了用于初始化次要副本的新功能“自动种子设定”。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 最初创建可用性组或将数据库添加到可用性组时，可以使用此新功能。 支持 AlwaysOn 可用性组的所有 SQL Server 版本都支持自动种子设定，并可与传统可用性组和[分布式可用性组](distributed-availability-groups.md)一起使用。
 
 ## <a name="considerations"></a>注意事项
 
@@ -117,16 +117,14 @@ WITH (
 
 在成为次要副本的实例上，一旦联接实例，SQL Server 日志中将添加以下消息：
 
->可用性组“AGName”的本地可用性副本无权创建数据库，但 `SEEDING_MODE` 为 `AUTOMATIC`。 使用 `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` 命令，以允许创建由主要可用性副本进行种子设定的数据库。
+>可用性组“AGName”的本地可用性副本无权创建数据库，但 `SEEDING_MODE` 为 `AUTOMATIC`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令，以允许创建由主要可用性副本进行种子设定的数据库。
 
 ### <a name = "grantCreate"></a>授予可用性组在复制副本上创建数据库的权限
 
 加入后，授予可用性组在 SQL Server 的辅助副本实例上创建数据库的权限。 为了使自动种子设定正常工作，可用性组均需创建数据库的权限。 
 
 >[!TIP]
->当可用性组在辅助副本上创建数据库时，它将数据库所有者设置为运行 `ALTER AVAILABILITY GROUP` 语句的帐户以授予创建任意数据库的权限。 大多数应用程序需要辅助副本上的数据库所有者与主副本上的数据库所有者相同。
->
->若要确保所有数据库均使用与主副本相同的数据库所有者进行创建，请根据主副本上的数据库所有者的登录名的安全性上下文允许下面的示例命令。 请注意，此登录名需要 `ALTER AVAILABILITY GROUP` 权限。 
+>当可用性组在辅助副本上创建数据库时，它将“sa”（更具体地说是 sid 0x01 的帐户）设置为数据库所有者的所有者。 
 >
 >若要在辅助副本自动创建数据库后更改数据库所有者，请使用 `ALTER AUTHORIZATION`。 请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md)。
  
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

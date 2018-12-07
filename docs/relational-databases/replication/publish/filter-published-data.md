@@ -21,12 +21,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 864edbeff7ce15e4cae3d2994ffa9ba2fd05f8ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac4d217245516edf109c137897d5e7cee24b172b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625785"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404374"
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "47625785"
   
 -   事务复制允许您将索引视图按视图或表来复制。 如果将视图按表复制，则无法从表中筛选列。  
   
- 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 **sp_replcmds** 的执行（执行筛选器）限制为数据库所有者 (**dbo**)。 **dbo** 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，**sp_replcmds** 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会限制此逻辑的执行，以使恶意的 **dbo** 无法劫持此执行路径。 例如，恶意的 **dbo** 可能在 CDC 表上添加触发器，然后这些触发器会在调用 **sp_replcmds**的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 **dbo** 可以提升其权限。  
+ 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 **sp_replcmds** 的执行（执行筛选器）限制为数据库所有者 (**dbo**)。 **dbo** 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，**sp_replcmds** 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会限制此逻辑的执行，以使恶意的 dbo 无法劫持此执行路径。 例如，恶意的 **dbo** 可能在 CDC 表上添加触发器，然后这些触发器会在调用 **sp_replcmds**的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 **dbo** 可以提升其权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

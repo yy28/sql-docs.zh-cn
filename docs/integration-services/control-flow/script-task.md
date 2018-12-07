@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fb3f42c9b997b35492166d96a7eec698106f2ae9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522956"
 ---
 # <a name="script-task"></a>脚本任务
   脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
@@ -127,13 +127,13 @@ ms.locfileid: "51641955"
  若要更改 VSTA 项目中方法的名称，则必须更改 **EntryPoint** 属性的值。  
   
  **ReadOnlyVariables**  
- 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (**…**) 按钮，然后在“选择变量”对话框中选择变量。  
+ 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
   
  **ReadWriteVariables**  
- 键入以逗号分隔的可供脚本使用的读/写变量列表，或单击省略号 (**…**) 按钮，然后在“选择变量”对话框中选择变量。  
+ 以逗号分隔的形式键入一列可供脚本使用的读/写变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  

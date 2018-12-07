@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f973f4894eb79456376250a838b9e71745a83c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501980"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定防故障操作员
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47678965"
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 – _server\_name_”对话框的“选择页”下，选择“警报系统”。  
+3.  在“SQL Server 代理属性 - server\_name”对话框的“选择页”下，选择“警报系统”。  
   
 4.  在“防故障操作员”下，选中“启用防故障操作员”。  
   

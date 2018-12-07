@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845705"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537785"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -224,7 +224,7 @@ ALTER INDEX { index_name | ALL }
   
 1.  不使用排序顺序。  
   
-2.  在重新生成进行时获取表或分区上的排他锁。  数据是“离线”的，在重新生成期间不可用，即使使用 NOLOCK、RCSI 或 SI 也是如此。  
+2.  在重新生成进行时获取表或分区上的排他锁。  数据是“处于脱机状态”，在重新生成期间不可用，即便使用 NOLOCK、RCSI 或 SI 也是如此。  
   
 3.  将所有数据重新压缩到列存储中。 在进行重新生成时存在列存储索引的两个副本。 在重新生成完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除原始列存储索引。  
   
@@ -720,7 +720,7 @@ Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。
  
 -  使用相同参数重新执行原始 ALTER INDEX REBUILD 语句会恢复暂停的索引重新生成操作。 还可以通过执行 ALTER INDEX RESUME 语句来恢复暂停的索引重新生成操作。
 -  可恢复索引不支持 SORT_IN_TEMPDB=ON 选项 
--  无法在显式事务（不能属于 begin tran … commit 块）中执行具有 RESUMABLE=ON 的 DDL 命令。
+-  无法在显式事务（不能属于 tran ... commit 块）中执行具有“RESUMEABLE = ON”的 DDL 命令。
 -  只有暂停的索引操作才可恢复。
 -  恢复暂停的索引操作时，可以将 MAXDOP 值更改为新值。  如果在恢复暂停的索引操作时未指定 MAXDOP，则采用最后一个 MAXDOP 值。 如果对于索引重新生成操作完全未指定 MAXDOP 选项，则采用默认值。
 - 若要立即暂停索引操作，则可以停止正在进行的命令 (CTRL-C)，也可以执行 ALTER INDEX PAUSE 命令或 KILL session_id 命令。 暂停命令之后，可以使用 RESUME 选项恢复它。
@@ -733,7 +733,7 @@ Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。
    -    RESUMABLE=ON 不支持重新生成已禁用的索引
    -    ALTER INDEX REBUILD ALL 命令
    -    使用索引重新生成的 ALTER TABLE  
-   -    无法在显式事务（不能属于 begin tran … commit 块）中执行具有“RESUMEABLE = ON”的 DDL 命令
+   -    无法在显式事务（不能属于 tran ... commit 块）中执行具有“RESUMEABLE = ON”的 DDL 命令
    -    重新生成具有已计算或 TIMESTAMP 列（作为键列）的索引。
 -   如果基表包含 LOB 列，则可恢复聚集索引重新生成在此操作开始时需要 Sch-M 锁
    -    可恢复索引不支持 SORT_IN_TEMPDB=ON 选项 
@@ -768,7 +768,7 @@ Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。
 -   ALTER INDEX \<index> ...REBUILD WITH ... 语法可重新生成索引的所有分区。  
   
 ## <a name="statistics"></a>统计信息  
- 对表执行 **ALTER INDEX ALL …** 时，只更新与索引相关联的统计信息。 针对表（而不是索引）自动或手动创建的统计信息不会更新。  
+ 在对某个表执行 ALTER INDEX ALL ... 时，只更新与索引相关联的统计信息。 针对表（而不是索引）自动或手动创建的统计信息不会更新。  
   
 ## <a name="permissions"></a>Permissions  
  若要执行 ALTER INDEX，至少需要对表或视图具有 ALTER 权限。  
@@ -1000,7 +1000,7 @@ GO
 ## <a name="examples-rowstore-indexes"></a>示例：行存储索引  
   
 ### <a name="a-rebuilding-an-index"></a>A. 重新生成索引  
- 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Employee` 表中重新生成单个索引。  
+ 下面的示例在 `Employee` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中重新生成单个索引。  
   
 ```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
@@ -1040,7 +1040,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. 设置索引的选项。  
- 下面的示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的索引 `AK_SalesOrderHeader_SalesOrderNumber` 设置了几个选项。  
+ 下面的示例为 `AK_SalesOrderHeader_SalesOrderNumber` 数据库中的索引 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 设置了几个选项。  
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -1056,7 +1056,7 @@ GO
 ```  
   
 ### <a name="e-disabling-an-index"></a>E. 禁用索引。  
- 下面的示例禁用了对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Employee` 表的非聚集索引。  
+ 下面的示例禁用了对 `Employee` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的非聚集索引。  
   
 ```sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
@@ -1095,7 +1095,7 @@ GO
 ```  
   
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. 重新生成分区索引  
- 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中重新生成一个分区索引为 `5` 的分区，分区号为 `IX_TransactionHistory_TransactionDate`。 分区 5 是联机重新生成的，并且对索引重新生成操作获取的每个锁分别应用低优先级锁的 10 分钟等待时间。 如果在此时间无法获取锁来完成索引重新生成，重新生成操作语句就会中止。  
+ 下面的示例在 `5` 数据库中重新生成一个分区索引为 `IX_TransactionHistory_TransactionDate` 的分区，分区号为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 分区 5 是联机重新生成的，并且对索引重新生成操作获取的每个锁分别应用低优先级锁的 10 分钟等待时间。 如果在此时间无法获取锁来完成索引重新生成，重新生成操作语句就会中止。  
   
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   

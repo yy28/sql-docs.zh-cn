@@ -19,12 +19,12 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48a90afb091382446900cd1875533f8976810f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542031"
 ---
 # <a name="save-packages"></a>保存包
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，通过使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器可以生成包，并将包作为 XML 文件（.dtsx 文件）保存到文件系统中。 还可以将包 XML 文件的副本保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 数据库，或保存到包存储区。 包存储区表示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的文件系统位置中的文件夹。  
@@ -68,7 +68,7 @@ ms.locfileid: "47693395"
   
 5.  如果保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请指定身份验证类型；如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，还请提供用户名和密码。  
   
-6.  若要指定包路径，请键入路径或单击浏览按钮 **(…)** ，以指定包的位置。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
+6.  若要指定包路径，请键入路径或单击浏览按钮 (…)，以指定包的位置。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
   
      如果选择 **SQL Server** 作为 **“包路径”** 选项，则包路径由 **msdb** 中的逻辑文件夹和包名称构成。 例如，如果包 DownloadMonthlyData 与 MSDB 文件夹中的 Finance 文件夹（ **msdb**中的根逻辑文件夹的默认名称）相关联，则名为 DownloadMonthlyData 的包的包路径为 MSDB/Finance/DownloadMonthlyData  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47693395"
   
 7.  查看包保护级别。  
   
-8.  还可以单击“保护级别”旁边的 **(…)** 浏览按钮，更改保护级别。  
+8.  还可以单击“保护级别”旁边的 (…) 浏览按钮，更改保护级别。  
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   

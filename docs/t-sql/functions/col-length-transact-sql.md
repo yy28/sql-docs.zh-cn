@@ -21,12 +21,12 @@ ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b91e8a8c1d3bd3e4b5e865f386518a2652f3ec03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07f040e9a44507c698a5a5066036038a1c103312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674235"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541155"
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ COL_LENGTH ( 'table' , 'column' )
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其所拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 这意味着，如果用户对该对象没有正确的权限，那些发出元数据的内置函数（如 COL_LENGTH）则可能会返回 NULL。 有关详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>Remarks  
-对于使用 max 说明符 (varchar(max)) 声明的 varchar 列，COL_LENGTH 将返回值 –1。
+对于使用 max 说明符 (varchar(max)) 声明的 varchar 列，COL_LENGTH 将返回值 -1。
   
 ## <a name="examples"></a>示例  
 此示例将显示类型为 `varchar(40)` 和 `nvarchar(40)` 的列的返回值：

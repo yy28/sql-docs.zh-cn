@@ -19,12 +19,12 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c2284e6e60dfce00888f836da060cb4362db5b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d73910b856702b2785a39fc2b8ad021f1a6d9405
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519011"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47814695"
   
 2.  展开 **“管理”** 节点。  
   
-3.  展开“数据层应用程序”节点。  
+3.  展开 **数据层应用程序** 节点。  
   
 4.  右键单击要删除的 DAC，然后选择“删除数据层应用程序…”  
   

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533972"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安装向导升级 SQL Server（安装程序）
 
@@ -104,9 +104,9 @@ ms.locfileid: "51607157"
   
      **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例的默认方式都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请为“实例 ID”文本框提供一个值。  
   
-     所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的每个组件。  
+     所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
   
-     **已安装的实例**  - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的命名实例。  
+     **已安装的实例** - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的命名实例。  
   
 13. 本文中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "51607157"
 ## <a name="next-steps"></a>Next Steps  
  升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，请完成下列任务：  
   
--   **注册服务器** - 升级会删除早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的注册表设置。 升级之后，必须重新注册服务器。  
+-   **注册服务器** - 升级会删除早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的注册表设置。 升级之后，必须重新注册服务器。  
   
--   **更新统计信息** - 为了帮助优化查询性能，建议您在升级之后更新所有数据库的统计信息。 使用 **sp_updatestats** 存储过程可以更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中用户定义的表中的统计信息。  
+-   **更新统计信息** - 为了帮助优化查询性能，建议在升级之后更新所有数据库的统计信息。 使用 **sp_updatestats** 存储过程可以更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中用户定义的表中的统计信息。  
   
 -   **配置新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** - 为了减少系统的可攻击外围应用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将有选择地安装和启用一些关键服务和功能。 有关外围应用配置器工具的详细信息，请参阅此版本的自述文件。  
   

@@ -42,12 +42,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640734"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507710"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -82,16 +82,16 @@ ms.locfileid: "51640734"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|一个介于 1 和 100 之间的值，用于指定在聚合过程中内存可扩展的百分比。 此属性的默认值为 **25**。|  
 |CountDistinctKeys|Integer|该值用于指定聚合可以写入的非重复值的精确数目。 如果指定了 CountDistinctScale 值，则 CountDistinctKeys 中的值优先。|  
-|CountDistinctScale|Integer（枚举）|该值用于说明聚合可以计数的列中非重复值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) — 指示最多 500,000 个键值<br /><br /> **中** (2) — 指示最多 500 万个键值<br /><br /> **高** (3) — 指示超过 2500 万个键值。<br /><br /> **未指定** (0) — 指示未使用 CountDistinctScale 值。 使用“未指定”(0) 选项可能会影响大型数据集的性能。|  
+|CountDistinctScale|Integer（枚举）|该值用于说明聚合可以计数的列中非重复值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) - 指示最多 500,000 个键值<br /><br /> **中** (2) - 指示最多 500 万个键值<br /><br /> **高** (3) - 指示超过 2500 万个键值。<br /><br /> **未指定** (0) - 指示未使用 CountDistinctScale 值。 使用“未指定”(0) 选项可能会影响大型数据集的性能。|  
 |键|Integer|该值用于指定聚合写入的分组依据键的精确数目。 如果指定了 KeyScale 值，则 Keys 中的值优先。|  
-|KeyScale|Integer（枚举）|该值用于说明聚合可以写入的分组依据键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) — 指示最多 500,000 个键值。<br /><br /> **中** (2) — 指示最多 500 万个键值。<br /><br /> **高** (3) — 指示超过 2500 万个键值。<br /><br /> **未指定** (0) — 指示未使用 KeyScale 值。|  
+|KeyScale|Integer（枚举）|该值用于说明聚合可以写入的分组依据键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) - 指示最多 500,000 个键值。<br /><br /> **中** (2) - 指示最多 500 万个键值。<br /><br /> **高** (3) - 指示超过 2500 万个键值。<br /><br /> **未指定** (0) - 指示未使用 KeyScale 值。|  
   
  下表介绍聚合转换的输出的自定义属性。 所有属性均可读/写。  
   
 |“属性”|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |键|Integer|该值用于指定聚合可以写入的分组依据键的精确数目。 如果指定了 KeyScale 值，则 Keys 中的值优先。|  
-|KeyScale|Integer（枚举）|该值用于说明聚合可以写入的分组依据键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) — 指示最多 500,000 个键值，<br /><br /> **中** (2) — 指示最多 500 万个键值，<br /><br /> **高** (3) — 指示超过 2500 万个键值。<br /><br /> **未指定** (0) — 指示未使用 KeyScale 值。|  
+|KeyScale|Integer（枚举）|该值用于说明聚合可以写入的分组依据键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) - 指示最多 500,000 个键值，<br /><br /> **中** (2) - 指示最多 500 万个键值，<br /><br /> **高** (3) - 指示超过 2500 万个键值。<br /><br /> **未指定** (0) - 指示未使用 KeyScale 值。|  
   
  下表介绍聚合转换的输出列的自定义属性。 所有属性均可读/写。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51640734"
 |AggregationComparisonFlags|Integer|该值用于指定聚合转换如何比较列中的字符串数据。 有关详细信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。|  
 |AggregationType|Integer（枚举）|该值用于指定要对列执行的聚合操作。 此属性可以具有下列值之一：<br /><br /> **Group by** (0)<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)|  
 |CountDistinctKeys|Integer|该值用于指定聚合类型为 **Count distinct**时聚合可以写入的键的精确数目。 如果指定了 CountDistinctScale 值，则 CountDistinctKeys 中的值优先。|  
-|CountDistinctScale|Integer（枚举）|该值用于指定聚合类型为 **Count distinct**时聚合可以写入的键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) — 指示最多 500,000 个键值，<br /><br /> **中** (2) — 指示最多 500 万个键值，<br /><br /> **高** (3) — 指示超过 2500 万个键值。<br /><br /> **未指定** (0) — 指示未使用 CountDistinctScale 值。|  
+|CountDistinctScale|Integer（枚举）|该值用于指定聚合类型为 **Count distinct**时聚合可以写入的键值的大致数目。 此属性可以具有下列值之一：<br /><br /> **低** (1) - 指示最多 500,000 个键值，<br /><br /> **中** (2) - 指示最多 500 万个键值，<br /><br /> **高** (3) - 指示超过 2500 万个键值。<br /><br /> **未指定** (0) - 指示未使用 CountDistinctScale 值。|  
 |IsBig|Boolean|该值用于指示列是包含大于 40 亿的值还是精度超过双精度浮点值的值。 该值可以是 0 或 1。 0 指示 IsBig 为 **False** 并且该列不包含大值或精确值。 此属性的默认值为 1。|  
   
  聚合转换的输入和输入列不包含自定义属性。  
@@ -272,7 +272,7 @@ ms.locfileid: "51640734"
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Integer（枚举）|该值用于指定转换是执行模糊匹配还是完全匹配。 有效值是 **Exact** 和 **Fuzzy**。 此属性的默认值为 **Fuzzy**。|  
 |FuzzyComparisonFlags|Integer（枚举）|该值用于指定转换如何比较列中的字符串数据。 此属性可以具有下列值之一：<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> 有关详细信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。|  
-|LeadingTrailingNumeralsSignificant|Integer（枚举）|该值用于指定数字的重要性。 此属性可以具有下列值之一：<br /><br /> **NumeralsNotSpecial** (0) — 如果数字不重要则使用。<br /><br /> **LeadingNumeralsSignificant** (1) — 如果前导数字重要则使用。<br /><br /> **TrailingNumeralsSignificant** (2) — 如果尾随数字重要则使用。<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) — 如果前导数字和尾随数字都重要则使用。|  
+|LeadingTrailingNumeralsSignificant|Integer（枚举）|该值用于指定数字的重要性。 此属性可以具有下列值之一：<br /><br /> **NumeralsNotSpecial** (0) - 如果数字不重要则使用。<br /><br /> **LeadingNumeralsSignificant** (1) - 如果前导数字重要则使用。<br /><br /> **TrailingNumeralsSignificant** (2) - 如果尾随数字重要则使用。<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) - 如果前导数字和尾随数字都重要则使用。|  
 |MinSimilarity|双精度|用于列上的联接的相似性阈值，指定为 0 和 1 之间的值。 只有大于阈值的行才能作为匹配值。|  
 |ToBeCleaned|Boolean|该值用于指定是否使用列来标识重复值，即：是否存在要分组的列。 此属性的默认值为 **False**。|  
   

@@ -1,7 +1,7 @@
 ---
 title: 创建索引视图 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650965"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191047"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,8 @@ ms.locfileid: "47650965"
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> 将 `ANSI_WARNINGS` 设置为 ON 会隐式地将 `ARITHABORT` 设置为 ON。  
   
@@ -107,6 +108,7 @@ ms.locfileid: "47650965"
     |PRECISE = TRUE|必须显式声明为 .NET Framework 方法的属性。|  
     |DATA ACCESS = NO SQL|通过将 DataAccess 属性设置为 DataAccessKind.None 并将 SystemDataAccess 属性设置为 SystemDataAccessKind.None 来确定。|  
     |EXTERNAL ACCESS = NO|对于 CLR 例程，该属性的默认设置为 NO。|  
+    |&nbsp;|&nbsp;|
   
 -   必须使用 `WITH SCHEMABINDING` 选项创建视图。  
   
@@ -126,6 +128,7 @@ ms.locfileid: "47650965"
     |表变量|`OUTER APPLY` 或 `CROSS APPLY`|`PIVOT`、`UNPIVOT`|  
     |稀疏列集|内联 (TVF) 或多语句表值函数 (MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> 索引视图可以包含 float 列；但聚集索引键中不能包含此类列。  
   
@@ -152,8 +155,9 @@ ms.locfileid: "47650965"
   
  可以禁用表和视图的索引。 禁用表的聚集索引时，与该表关联的视图的索引也将被禁用。  
  
-<a name="nondeterministic"></a> 将字符串隐式转换为 datetime 或 smalldatetime 所涉及的表达式被视为具有不确定性。 这是因为结果取决于服务器会话的 LANGUAGE 和 DATEFORMAT 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`listopad`在不同语言中表示不同的月份。 同样，在 `DATEADD(mm,3,'2000-12-01')`表达式中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于 DATEFORMAT 设置解释 `'2000-12-01'` 字符串。 非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性。  
-  
+<a name="nondeterministic"></a> 将字符串隐式转换为 datetime 或 smalldatetime 所涉及的表达式被视为具有不确定性。 有关详细信息，请参阅[文字日期字符串转换为日期值的不确定性转换](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
+
+
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -163,7 +167,7 @@ ms.locfileid: "47650965"
   
 #### <a name="to-create-an-indexed-view"></a>创建索引视图  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

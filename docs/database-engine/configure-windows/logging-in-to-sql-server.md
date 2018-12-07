@@ -22,12 +22,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05631087cc98f2b148072f954f3400bbcbaba41a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600527"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617667"
 ---
 # <a name="logging-in-to-sql-server"></a>登录到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51600527"
 |通过同时指定正在使用的 IP 地址和 TCP 端口（在此情况下为 2828）连接到命名实例。|192.168.17.28\SQLEXPRESS,2828|  
 |使用名称连接到强制 TCP 连接的默认实例。|tcp:APPHOST|  
 |使用名称连接到强制 TCP 连接的命名实例。|tcp:APPHOST\SQLEXPRESS|  
-|通过指定命名管道名称连接到默认实例。|\\\APPHOST\pipe\unit\app|  
+|通过指定命名管道名称连接到默认实例。|\\\APPHOST\pipe\SQL\query|  
 |通过指定命名管道名称连接到命名实例。|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |使用名称连接到强制命名管道连接的默认实例。|np:APPHOST|  
 |使用名称连接到强制命名管道连接的命名实例。|np:APPHOST\SQLEXPRESS|  

@@ -1,7 +1,7 @@
 ---
 title: 显示估计的执行计划 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 11/21/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94191f5127e5236d106dd9061f52bb7285debd39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d58470fa6427a37510f28ca1305c1ab4c7927697
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606727"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302760"
 ---
 # <a name="display-the-estimated-execution-plan"></a>显示估计的执行计划
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,15 +34,23 @@ ms.locfileid: "47606727"
   
  为了使用此功能，用户必须具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（为其生成图形执行计划）的相应权限，并且用户必须获得了对查询引用的所有数据库的 SHOWPLAN 权限。  
   
-### <a name="to-display-the-estimated-execution-plan-for-a-query"></a>显示查询的估计的执行计划  
+## <a name="to-display-the-estimated-execution-plan-for-a-query"></a>显示查询的估计的执行计划  
   
 1.  在工具栏上，单击 **“数据库引擎查询”**。 通过单击 **“打开文件”** 工具栏按钮，再定位到该现有查询，也可以打开一个现有查询并显示估计的执行计划。  
   
 2.  输入您希望为其显示估计的执行计划的查询。  
   
-3.  在 **“查询”** 菜单上，单击 **“显示估计的执行计划”** ，或单击 **“显示估计的执行计划”** 工具栏按钮。 估计的执行计划在结果窗格中的 **“执行计划”** 选项卡上显示。 若要查看其他信息，请将鼠标暂停在逻辑和物理运算符图标上，并查看显示的工具提示中有关运算符的说明和属性。 另外，还可以在“属性”窗口中查看运算符属性。 如果属性不可见，请右键单击一个运算符并单击“属性”。 选择要查看其属性的运算符。  
+3.  在 **“查询”** 菜单上，单击 **“显示估计的执行计划”** ，或单击 **“显示估计的执行计划”** 工具栏按钮。 估计的执行计划在结果窗格中的 **“执行计划”** 选项卡上显示。 
+
+    ![工具栏上的“估计执行计划”按钮](../../relational-databases/performance/media/estimatedexecplantoolbar.png "Estimated Execution Plan button on toolbar")    
+
+    若要查看其他信息，请将鼠标暂停在逻辑和物理运算符图标上，并查看显示的工具提示中有关运算符的说明和属性。 另外，还可以在“属性”窗口中查看运算符属性。 如果属性不可见，请右键单击一个运算符并单击“属性”。 选择要查看其属性的运算符。  
+
+    ![右键单击计划运算符中的“属性”](../../relational-databases/performance/media/planproperties.png "Right-click Properties in plan operator")    
   
 4.  若要更改执行计划的显示，请右键单击“执行计划”并选择“放大”、“缩小”、“自定义显示比例”或“缩放到合适大小”。 “放大”和“缩小”允许你按固定量扩大或减小执行计划。 “自定义缩放” 允许你定义自己的显示放大倍数，例如缩放到 80%。 **“缩放到合适大小”** 会放大执行计划以适应结果窗格。 或者，使用 Ctrl 键和鼠标滚轮的组合来激活动态缩放。  
+
+5.  若要导航执行计划的显示，请使用垂直和水平滚动条，或单击并按住执行计划的任何空白区域，然后拖动鼠标。 或者，在右下角的执行计划窗口中单击并按住加号 (+)，以显示整个执行计划的缩略图。
  
- > [!NOTE] 
- > 或者，使用 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-xml-transact-sql.md) 返回语句的执行信息，但不执行语句。 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用，“结果”选项卡中将包含用于以图形格式打开执行计划的链接。   
+> [!NOTE] 
+> 或者，使用 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-xml-transact-sql.md) 返回语句的执行信息，但不执行语句。 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用，“结果”选项卡中将包含用于以图形格式打开执行计划的链接。   

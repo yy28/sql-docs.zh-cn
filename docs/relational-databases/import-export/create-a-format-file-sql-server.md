@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538075"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 ```  
   
- 如果尝试使用“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] …”将数据导入到 `bcp in –c –C65001 –f format_file` ， 或“`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …”），有关排序规则/代码页的信息会优先于 65001 选项。  
+ 如果尝试使用 `bcp in -c -C65001 -f format_file` ..." 或 "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..." 将数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有关排序规则/代码页的信息会优先于 65001 选项。  
 因此，如要生成格式化文件，必须在开始将数据导回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，手动从生成的格式化文件中删除排序规则信息。  
 以下是不具有排序规则信息的格式化文件的示例。  
   
@@ -203,7 +203,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  生成的格式化文件 `Department-c.xml`包含以下 XML 元素：  

@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30d728c87ec3f83f20491933c0cda1af845ea6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509363"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47651398"
 显示空间索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定一个默认名称。 您可以随时更改该名称。  
   
 **Description**  
-说明该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (**…**)。 这可以提供一个更大的文本编写区域。  
+说明该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)。 这可以提供一个更大的文本编写区域。  
   
 **表设计器类别**  
 展开此项可显示有关此空间索引的属性的信息。  

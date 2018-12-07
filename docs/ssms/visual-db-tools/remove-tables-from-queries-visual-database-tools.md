@@ -16,16 +16,16 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba7a8f577f9b05007e8b6b9a9477e1b3ffd6b441
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f0d0304757cb8b724a93ce02d03a889bb27e453a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532805"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>从查询中删除表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-您可从查询中移除表或任何表值对象。  
+可从查询中移除表或任何表值对象。  
   
 > [!NOTE]  
 > 移除表或表值对象不会从数据库中删除任何内容，该操作只会将表或表值对象从当前查询中移除。 有关从数据库中删除表的详细信息，请参阅 [如何从数据库中删除表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)。  
@@ -34,7 +34,7 @@ ms.locfileid: "51701817"
   
 -   在“关系图”窗格中，选择表、视图、用户定义函数、同义词或查询，再按 Delete；或者右键单击该对象，然后在显示的对话框中选择“删除”。 您可一次选择和移除多个对象。  
   
-    - 或 -  
+    -或 -  
   
 -   在 **SQL 窗格**中删除对该对象的所有引用。  
   

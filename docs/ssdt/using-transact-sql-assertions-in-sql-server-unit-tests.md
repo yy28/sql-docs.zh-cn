@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671238"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543904"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用 Transact-SQL 断言
 在 SQL Server 单元测试中，Transact\-SQL 测试脚本将运行并返回结果。 有时，结果以结果集的形式返回。 您可以使用测试条件来验证结果。 例如，您可以使用测试条件来检查特定结果集中返回的行数，或验证特定测试的运行时长。 有关测试条件的详细信息，请参阅[在 SQL Server 单元测试中使用测试条件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)。  

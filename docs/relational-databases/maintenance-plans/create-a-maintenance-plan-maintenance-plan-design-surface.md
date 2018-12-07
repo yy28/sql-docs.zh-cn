@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 570a859d3db7a2d5dbe219199bb251515d9862cf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514389"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "51217945"
   
     3.  在 **“连接属性”** 对话框的 **“连接名称”** 框中，输入要创建的连接的名称。  
   
-    4.  在“指定下列选项以连接到 SQL Server 数据” 下的  “选择或输入服务器名称”框中，输入你要使用的 SQL Server 的名称，或者单击省略号 **(…)** 并在 **SQL Server** 对话框中选择某一服务器。 如果您从 **SQL Server** 对话框中选择某一服务器，则单击 **“确定”**。  
+    4.  在“指定下列选项以连接到 SQL Server 数据”下的“选择或输入服务器名称”框中，输入要使用的 SQL Server 的名称，或者单击省略号 (…) 并在 SQL Server 对话框中选择某一服务器。 如果您从 **SQL Server** 对话框中选择某一服务器，则单击 **“确定”**。  
   
     5.  在 **“输入登录服务器所需的信息”** 下，选择 **“使用 Windows NT 集成安全性”** 或 **“使用特定用户名和密码”**。 如果您选择使用特定的用户名和密码，则分别在 **“用户名”** 和 **“密码”** 框中输入该信息。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "51217945"
   
         1.  如果您选择了 **“生成文本文件报告”**，则选择 **“创建新文件”** 或 **“追加到文件”**。  
   
-        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号（“…”）并从“定位文件夹 - server\_name”或“定位数据库文件 - server\_name”对话框中选择该文件夹的路径或文件名。  
+        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号 (...) 并从“定位文件夹 -server\_name”或“定位数据库文件 -server\_name”对话框中选择该文件夹的路径或文件名。  
   
         3.  如果您选择 **“将报告发送给电子邮件收件人”**，则在 **“代理操作员”** 列表上，选择以电子邮件形式发送的报告的收件人。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "51217945"
   
 12. 若要在日志文件查看器中查看结果，请在“对象资源管理器” 中右键单击“维护计划”  文件夹或特定维护计划，然后选择“查看历史记录” 。  
   
-     “日志文件查看器 - server\_name”对话框中提供以下选项。  
+     “日志文件查看器 -server\_name”对话框中提供以下选项。  
   
      **加载日志**  
      打开一个对话框，您可以在其中指定要加载的日志文件。  

@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670558"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510696"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "51670558"
   
  如果审核管理员将文件复制到其他位置（用于存档等），新位置的 ACL 应降至以下权限：  
   
--   审核管理员 – 读/写  
+-   审核管理员 - 读/写  
   
--   审核读取者 – 读  
+-   审核读取者 - 读  
   
  建议您从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的单独实例（例如， [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]的单独实例）生成审核报告（如果只有审核管理员或审核读取者可以访问此实例）。 通过使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的单独实例进行报告，可以帮助防止未获授权的用户访问审核记录。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51670558"
  有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [创建服务器审核和数据库审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
 ## <a name="considerations"></a>注意事项  
- 如果在启动审核期间出现问题，则服务器将不会启动。 在这种情况下，可以在命令行中使用 **–f** 选项来启动服务器。  
+ 如果在启动审核期间出现问题，则服务器将不会启动。 在这种情况下，可以在命令行中使用 -f 选项来启动服务器。  
   
- 如果由于为审核指定了 ON_FAILURE=SHUTDOWN 而使得审核失败导致服务器关闭或不启动，则 MSG_AUDIT_FORCED_SHUTDOWN 事件将写入日志。 由于在第一次遇到此设置时将出现关机，此事件将写入一次。 在出现有关审核导致关闭的失败消息后，将写入此事件。 管理员可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **标志以单用户模式启动** ，从而绕过审核引起的关闭。 如果在单用户模式下启动，则会将指定了 ON_FAILURE=SHUTDOWN 的任何审核降级为在相应会话中以 ON_FAILURE=CONTINUE 运行。 当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **标志启动** 时，MSG_AUDIT_SHUTDOWN_BYPASSED 消息将写入错误日志。  
+ 如果由于为审核指定了 ON_FAILURE=SHUTDOWN 而使得审核失败导致服务器关闭或不启动，则 MSG_AUDIT_FORCED_SHUTDOWN 事件将写入日志。 由于在第一次遇到此设置时将出现关机，此事件将写入一次。 在出现有关审核导致关闭的失败消息后，将写入此事件。 管理员可以使用 -m 标志以单用户模式启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，从而绕过审核引起的关闭。 如果在单用户模式下启动，则会将指定了 ON_FAILURE=SHUTDOWN 的任何审核降级为在相应会话中以 ON_FAILURE=CONTINUE 运行。 使用 -m 标志启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，MSG_AUDIT_SHUTDOWN_BYPASSED 消息将写入错误日志。  
   
  有关服务启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   

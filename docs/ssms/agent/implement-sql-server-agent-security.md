@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521666"
 ---
 # <a name="implement-sql-server-agent-security"></a>实现 SQL Server 代理安全性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "51696166"
   
 -   请不要将 NT 管理帐户指定为服务帐户或代理帐户。  
   
--   请注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理有权互相访问资产。 这两项服务共享一个进程空间，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 sysadmin。  
+-   请注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理有权互相访问资产。 这两项服务共享一个进程空间，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 sysadmin。  
   
 -   当 TSX 使用 MSX 进行登记时，MSX sysadmins 将获得对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 TSX 实例的完全控制权。  
   
@@ -72,13 +72,13 @@ ms.locfileid: "51696166"
   
 -   ACE 取决于 SSDP 拥有的以下配置 DLL，因为这些 DLL 的 API 是由 ACE 调用的：  
   
-    -   **SCO** – Microsoft.SqlServer.Configuration.Sco.dll，包括针对虚拟帐户的新 SCO 验证  
+    -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll，包括针对虚拟帐户的新 SCO 验证  
   
-    -   **Cluster** – Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extension** - Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>另请参阅  
 [使用预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)  

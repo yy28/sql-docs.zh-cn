@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264897"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393980"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>租用、群集和运行状况检查超时机制和指南 
 
@@ -39,13 +39,13 @@ Always On 资源 DLL 监视内部 SQL Server 组件的状态。 `sp_server_diagn
 
 ## <a name="lease-mechanism"></a>租用机制  
 
-与其他故障转移机制不同，SQL 服务器实例在租用机制中发挥着积极的作用。 使 AG 作为主副本联机时，SQL Server 实例会为 AG 生成一个专用的租用工作进程线程。 租用工作进程与包含续租和租用停止事件的资源主机共享一小块内存区域。 租用工作进程和资源主机以循环方式工作，发出信号通知各自的续租事件，然后休眠，等待另一方发出信号通知自己的续租事件或停止事件。 资源主机和 SQL Server 租用线程都会维护一个生存时间值，每次线程在由另一个线程发出信号后唤醒时都会更新这个值。 如果在等待信号时达到生存时间，则租约到期，然后将副本转换到该特定 AG 的解析状态。 如果发出信号通知租用停止事件，则副本将转换为解析角色。 
+与其他故障转移机制不同，SQL Server 实例在租用机制中发挥着积极的作用。 租用机制用于充当群集资源主机与 SQL Server 进程之间的“表面活跃度”验证机制。 该机制用于确保双方（群集服务器和 SQL Server 服务）通信频繁，检查彼此的状态并最终避免出现裂脑情况。  使 AG 作为主副本联机时，SQL Server 实例会为 AG 生成一个专用的租用工作进程线程。 租用工作进程与包含续租和租用停止事件的资源主机共享一小块内存区域。 租用工作进程和资源主机以循环方式工作，发出信号通知各自的续租事件，然后休眠，等待另一方发出信号通知自己的续租事件或停止事件。 资源主机和 SQL Server 租用线程都会维护一个生存时间值，每次线程在由另一个线程发出信号后唤醒时都会更新这个值。 如果在等待信号时达到生存时间，则租约到期，然后将副本转换到该特定 AG 的解析状态。 如果发出信号通知租用停止事件，则副本将转换为解析角色。 
 
 ![图像](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 租用机制强制执行 SQL Server 和 Windows Server 故障转移群集之间的同步。 发出故障转移命令时，群集服务会对当前主副本的资源 DLL 进行脱机调用。 资源 DLL 首先尝试使用存储过程使 AG 脱机。 如果此存储过程失败或超时，则会将失败报告回群集服务，然后发出终止命令。 终止再次尝试执行相同的存储过程，但使 AG 在一个新副本上联机之前，群集这次不会等待资源 DLL 报告成功或失败。 如果第二个过程调用失败，那么资源主机将不得不依赖租用机制使实例脱机。 调用资源 DLL 使 AG 脱机时，资源 DLL 会发出租用停止事件的信号，唤醒 SQL Server 租用工作线程使 AG 脱机。 即使未发出停止事件的信号，租用也将过期，并且副本将转换为解析状态。 
 
-租用主要是主实例和群集之间的同步机制，但它也可以创建无需故障转移的故障条件。 例如，高 CPU 或 tempdb 压力会使租用工作线程陷于瘫痪，阻止 SQL 实例续约并导致故障转移。 
+租用主要是主实例和群集之间的同步机制，但它也可以创建无需故障转移的故障条件。 例如，高 CPU，内存不足的情况，SQL 进程在生成内存转储时无法响应，系统范围的挂起或 tempdb 压力会使租用辅助线程陷入瘫痪，阻止 SQL 实例续租并导致故障转移。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>群集超时值的准则 
 

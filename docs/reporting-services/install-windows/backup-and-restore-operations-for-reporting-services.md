@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/24/2018
-ms.openlocfilehash: 42ca036f069d5c7014e14a4c3ccb0d1e9d298a2b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 557dd30f14bf990cdfce2dd5e2de153bec3a72c4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390280"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的备份和还原操作
 
@@ -48,7 +48,7 @@ ms.locfileid: "50030117"
 >  如果你的报表服务器处于 SharePoint 模式下，则会有其他一些数据库需要加以注意，包括 SharePoint 配置数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警报数据库。 在 SharePoint 模式下，对于每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序将创建三个数据库。 **reportserver**、 **reportservertempdb**和 **dataalerting** 数据库。 有关详细信息，请参阅 [备份和还原 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>备份加密密钥  
- 首次配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装时，应备份加密密钥。 此外，任何时候更改服务帐户标识或重命名计算机时，都应备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 有关 SharePoint 模式报表服务器的信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)中的“密钥管理”部分。  
+ 首次配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装时，应备份加密密钥。 此外，任何时候更改服务帐户标识或重命名计算机时，都应备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 有关 SharePoint 模式报表服务器的信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)中的“密钥管理”部分。  
   
 ## <a name="backing-up-the-configuration-files"></a>备份配置文件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用配置文件来存储应用程序设置。 首次配置服务器时和部署任何自定义扩展插件之后，都应备份文件。 要备份的文件包括：  

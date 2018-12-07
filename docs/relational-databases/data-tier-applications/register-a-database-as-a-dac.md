@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813990"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513234"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51813990"
   
 2.  展开 **“数据库”** 节点。  
   
-3.  右键单击要注册的数据库，指向 “任务”，然后选择   
+3.  右键单击要注册的数据库，指向“任务”，然后选择“注册为数据层应用程序...”  
   
 4.  完成向导对话框：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51813990"
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>验证对象  
- **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 SchemaName.ObjectName** 确定当前正在验证的对象。  
+ **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 _SchemaName_**.**_ObjectName_ 确定当前正在验证的对象。  
   
  “<上一步”- 返回到“设置属性”页以便更改条目。  
   

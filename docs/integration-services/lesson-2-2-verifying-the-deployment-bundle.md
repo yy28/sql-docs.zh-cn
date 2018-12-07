@@ -11,12 +11,12 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d17c1ceb03cfc452a925d41fdeab98c6f90339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532065"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>第 2-2 课 - 验证部署捆绑
 在第 1 课中，创建了 Deployment Tutorial 项目，并向该项目添加了包和辅助文件；在上一任务中，您为项目生成了部署实用工具。  

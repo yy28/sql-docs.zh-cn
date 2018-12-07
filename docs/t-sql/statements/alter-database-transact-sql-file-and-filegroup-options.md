@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 文件和文件组选项 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252144"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403552"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 文件和文件组选项 
 
@@ -145,7 +145,7 @@ REMOVE FILE *logical_file_name*
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。  
   
 > [!WARNING]  
-> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库文件将会成功，但不会删除任何关联的快照，以免使引用该数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+> 删除具有与其关联的 `FILE_SNAPSHOT` 备份的数据库文件将会成功，但不会删除任何关联的快照，以免使引用该数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 MODIFY FILE  
 指定应修改的文件。 一次只能更改一个 \<filespec> 属性。 必须始终在 \<filespec> 中指定 NAME，以标识要修改的文件。 如果指定了 SIZE，那么新大小必须比文件当前大小要大。  
@@ -171,7 +171,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 可以将 FILESTREAM 文件设置为 OFFLINE。 在 FILESTREAM 文件处于脱机状态时，它的父文件组将在内部标记为脱机；因此，针对该文件组内 FILESTREAM 数据的所有访问均将失败。  
   
 > [!NOTE]  
->  \<add_or_modify_files> 选项在包含的数据库中不可用。
+> \<add_or_modify_files> 选项在包含的数据库中不可用。
   
 **\<filespec>::=**  
   
@@ -195,7 +195,8 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_mem
 ' *os_file_name* '  
 对于标准 (ROWS) 文件组，这是在创建文件时操作系统所使用的路径和文件名。 该文件必须驻留在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上。 在执行 ALTER DATABASE 语句前，指定的路径必须已经存在。  
   
-如果为该文件指定了 UNC 路径，则无法设置 SIZE、MAXSIZE 和 FILEGROWTH 参数。  
+> [!NOTE]
+> 如果为该文件指定了 UNC 路径，则无法设置 SIZE、MAXSIZE 和 FILEGROWTH 参数。  
   
 > [!NOTE]  
 > 系统数据库不能位于 UNC 共享目录中。  
@@ -205,16 +206,20 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_mem
 如果文件位于原始分区上，则 *os_file_name* 必须仅指定现有原始分区的驱动器号。 每个原始分区上只能存放一个文件。  
   
 ' filestream_path '  
-对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 C:\MyFiles\MyFilestreamData、C:\MyFiles 必须存在才能运行 ALTER DATABASE，但 MyFilestreamData 文件夹不能存在。  
+对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyFilestreamData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyFilestreamData` 文件夹不能存在。  
   
-SIZE 和 FILEGROWTH 属性不适用于 FILESTREAM 文件组。  
+> [!NOTE]
+> SIZE 和 FILEGROWTH 属性不适用于 FILESTREAM 文件组。  
   
 ' memory_optimized_data_path '  
-对于内存优化文件组，文FILENAME 会引用将存储内存优化数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 C:\MyFiles\MyData、C:\MyFiles 必须存在才能运行 ALTER DATABASE，但 MyData 文件夹不能存在。  
+对于内存优化文件组，文FILENAME 会引用将存储内存优化数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyData` 文件夹不能存在。  
   
 必须在同一语句中创建文件组和文件 (`<filespec>`)。  
   
-SIZE、MAXSIZE 和 FILEGROWTH 属性不适用于内存优化文件组。  
+> [!NOTE]
+> SIZE、MAXSIZE 和 FILEGROWTH 属性不适用于 MEMORY_OPTIMIZED_DATA 文件组。  
+
+有关内存优化文件组的详细信息，请参阅[内存优化文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)。
   
 SIZE *size*  
 指定文件大小。 SIZE 不适用于 FILESTREAM 文件组。  
@@ -227,6 +232,11 @@ size
 如果没有为主文件提供 *size*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用 **model** 数据库中主文件的大小。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 1 MB 作为该文件的大小。  
   
 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 若要指定兆字节的分数，请通过将数字乘以 1024 将该值转换为千字节。 例如，应指定 1536 KB 而不是 1.5MB (1.5 x 1024 = 1536)。  
+
+> [!NOTE] 
+> 以下情况无法设置 `SIZE`：
+> - 为文件指定了 UNC 路径时  
+> - 用于 `FILESTREAM` 和 `MEMORY_OPTIMIZED_DATA` 文件组时   
   
 MAXSIZE { *max_size*| UNLIMITED }  
 指定文件可增大到的最大文件大小。  
@@ -236,6 +246,9 @@ MAXSIZE { *max_size*| UNLIMITED }
   
 UNLIMITED  
 指定文件将增长到磁盘充满。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定为不限制增长的日志文件的最大大小为 2 TB，而数据文件的最大大小为 16 TB。 为 FILESTREAM 容器指定此选项时，没有最大大小。 它将继续增大，直到磁盘已满。  
+
+> [!NOTE] 
+> 当为文件指定了 UNC 路径时无法设置 `MAXSIZE`。
   
 FILEGROWTH growth_increment  
 指定文件的自动增量。 文件的 FILEGROWTH 设置不能超过 MAXSIZE 设置。 FILEGROWTH 不适用于 FILESTREAM 文件组。  
@@ -254,12 +267,17 @@ growth_increment
 |自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起|数据 64 MB。 日志文件 64 MB。|  
 |自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 起|数据 1 MB。 日志文件 10%。|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|  
-  
+
+> [!NOTE] 
+> 以下情况无法设置 `FILEGROWTH`：
+> - 为文件指定了 UNC 路径时  
+> - 用于 `FILESTREAM` 和 `MEMORY_OPTIMIZED_DATA` 文件组时   
+
 OFFLINE  
 将文件设置为脱机并使文件组中的所有对象都不可访问。  
   
 > [!CAUTION]  
->  仅当文件已损坏但可以还原时，才能使用该选项。 对于设置为 OFFLINE 的文件，只有通过从备份中还原该文件，才能将其设置为联机。 有关还原单个文件的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。  
+> 仅当文件已损坏但可以还原时，才能使用该选项。 对于设置为 OFFLINE 的文件，只有通过从备份中还原该文件，才能将其设置为联机。 有关还原单个文件的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
 > [!NOTE]  
 > \<filespec> 选项在包含的数据库中不可用。  
@@ -278,21 +296,13 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）
   
-指定文件组在文件系统中存储内存优化数据。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每个数据库只能有一个 MEMORY_OPTIMIZED_DATA 文件组。 在创建内存优化表时，文件组不能为空。 其中必须至少包含一个文件。 *filegroup_name* 引用一个路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。  
-  
-下面的示例创建添加到一个添加到名为 xtp_db 的数据库的文件组，然后向该文件组添加一个文件。 该文件组存储 memory_optimized 数据。  
-  
-```sql  
-ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
-GO  
-ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
-```  
-  
+指定文件组在文件系统中存储内存优化数据。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每个数据库只允许一个 `MEMORY_OPTIMIZED_DATA` 文件组。 在创建内存优化表时，文件组不能为空。 其中必须至少包含一个文件。 *filegroup_name* 引用一个路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。  
+ 
 REMOVE FILEGROUP *filegroup_name*  
 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。  
   
 > [!NOTE]  
-> 除非 FILESTREAM 垃圾回收器已从 FILESTREAM 容器中删除所有文件，删除 FILESTREAM 容器的 ALTER DATABASE REMOVE FILE 操作将失败并返回错误。 请参阅本主题后面“备注”中的“删除 FILESTREAM 容器”部分。  
+> 除非 FILESTREAM 垃圾回收器已从 FILESTREAM 容器中删除所有文件，否则删除 FILESTREAM 容器的 `ALTER DATABASE REMOVE FILE` 操作将失败并返回错误。 请参阅本主题后面的[删除 FILESTREAM 容器](#removing-a-filestream-container)部分。  
   
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。  
   
@@ -327,21 +337,21 @@ READ_ONLY | READONLY
 指定文件组为只读。 不允许更新其中的对象。 主文件组不能设置为只读。 若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。  
   
 因为只读数据库不允许数据修改，所以将发生以下情况：  
-  
 - 系统启动时，将跳过自动恢复。  
 - 不能收缩数据库。  
 - 在只读数据库中不会进行锁定。 这可以加快查询速度。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 READONLY 关键字。 请避免在新的开发工作中使用 READONLY，并计划修改当前使用 READONLY 的应用程序。 Use READ_ONLY instead.  
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 `READONLY` 的应用程序。 该工具将由 `READ_ONLY` 代替。  
   
 READ_WRITE | READWRITE   
 将该组指定为 READ_WRITE。 允许更新文件组中的对象。 若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。  
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。  
   
-可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。  
+> [!TIP]
+> 可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。  
   
 ## <a name="remarks"></a>Remarks  
 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
@@ -352,7 +362,15 @@ READ_WRITE | READWRITE
   
 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，对数据库文件状态（例如，联机或脱机）的维护是独立于数据库状态的。 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。 
 - 文件组中文件的状态决定整个文件组的可用性。 文件组中的所有文件都必须联机，文件组才可用。 
-- 如果文件组脱机，则使用 SQL 语句访问文件组的所有尝试都会失败并报告错误。 在为 `SELECT` 语句生成查询计划时，查询优化器会避免使用驻留在脱机文件组中的非聚集索引和索引视图。 这样，这些语句就会成功。 但是，如果脱机文件组包含目标表的堆或聚集索引，`SELECT` 语句将失败。 此外，如果 `INSERT`、`UPDATE` 或 `DELETE` 语句修改的表的索引包含在脱机文件组中，这些语句将失败。  
+- 如果文件组脱机，则使用 SQL 语句访问文件组的所有尝试都会失败并报告错误。 在为 `SELECT` 语句生成查询计划时，查询优化器会避免使用驻留在脱机文件组中的非聚集索引和索引视图。 这样，这些语句就会成功。 但是，如果脱机文件组包含目标表的堆或聚集索引，`SELECT` 语句将失败。 此外，如果 `INSERT`、`UPDATE` 或 `DELETE` 语句修改的表的索引包含在脱机文件组中，这些语句将失败。 
+
+如果为该文件指定了 UNC 路径，则无法设置 SIZE、MAXSIZE 和 FILEGROWTH 参数。 
+
+无法为内存优化文件组设置 SIZE 和 FILEGROWTH 参数。 
+
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 READONLY 的应用程序。 该工具将由 `READ_ONLY` 代替。 
+
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。 
   
 ## <a name="moving-files"></a>移动文件  
 您可通过在 FILENAME 中指定新位置来移动系统或用户定义的数据和日志文件。 这在下列情况下可能很有用：  
@@ -408,7 +426,6 @@ ADD FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 向数据库中添加由两个文件组成的文件组  
@@ -438,7 +455,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;  
 GO  
-  
 ```  
   
 ### <a name="c-adding-two-log-files-to-a-database"></a>C. 向数据库中添加两个日志文件  
@@ -464,7 +480,6 @@ ADD LOG FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="d-removing-a-file-from-a-database"></a>D. 从数据库中删除文件  
@@ -586,8 +601,7 @@ GO
 以下示例将一个包含 `FILEGROUP` 子句的 `FILESTREAM` 添加到 `FileStreamPhotoDB` 数据库。  
   
 ```sql  
---Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
---the FileStreamPhotoDB database.  
+--Create and add a FILEGROUP that CONTAINS the FILESTREAM clause.  
 ALTER DATABASE FileStreamPhotoDB  
 ADD FILEGROUP TodaysPhotoShoot  
 CONTAINS FILESTREAM;  
@@ -602,7 +616,27 @@ ADD FILE
 )  
 TO FILEGROUP TodaysPhotoShoot;  
 GO  
-```      
+```     
+
+以下示例将一个包含 `FILEGROUP` 子句的 `MEMORY_OPTIMIZED_DATA` 添加到 `xtp_db` 数据库。 该文件组存储内存优化数据。  
+  
+```sql 
+--Create and add a FILEGROUP that CONTAINS the MEMORY_OPTIMIZED_DATA clause.
+ALTER DATABASE xtp_db 
+ADD FILEGROUP xtp_fg 
+CONTAINS MEMORY_OPTIMIZED_DATA;  
+GO  
+
+--Add a file for storing memory optimized data to FILEGROUP
+ALTER DATABASE xtp_db 
+ADD FILE 
+(
+    NAME='xtp_mod', 
+    FILENAME='d:\data\xtp_mod'
+) 
+TO FILEGROUP xtp_fg;  
+GO
+```  
         
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. 更改文件组，以便当文件组中的某个文件达到自动增长阈值时，文件组中的所有文件都会增长
  以下示例会生成所需的 `ALTER DATABASE` 语句，以使用 `AUTOGROW_ALL_FILES` 设置修改读写文件组。  
@@ -1057,6 +1091,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
- 
-::: moniker-end
+[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[内存优化文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+

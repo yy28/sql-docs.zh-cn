@@ -13,17 +13,17 @@ ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7e305cc2ceb178b0adb812d8215022f981d2c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d24c998c17e9fb265defa252b37b955e451bda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763905"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414664"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SQL Server Data Tools (SSDT) 通过引入跨 Visual Studio 内所有数据库开发阶段的无所不在的声明性模型，为数据库开发带来变革。 可以使用 SSDT Transact\-SQL 设计功能来生成、调试、维护和重构数据库。 您可以使用数据库项目，或者在内部或外部直接使用所连接的数据库实例。  
   
-开发人员可以使用熟悉的 Visual Studio 工具来进行数据库开发。 这些工具包括 Transact\-SQL 编辑器中的代码导航、IntelliSense、与可用于 C# 和 Visual Basic 的支持类似的语言支持、特定于平台的验证、调试和声明性编辑。 SSDT 还提供可视的表设计器，以便在数据库项目或连接的数据库实例中创建和编辑表。 当你在基于团队的环境中处理你的数据库项目时，可以将版本控制用于所有文件。 在要发布你的项目时，你可以发布到所有支持的 SQL 平台，包括 SQL Database 和 SQL Server。 SSDT 的平台验证功能确保您的脚本适用于您指定的目标。  
+开发人员可以使用熟悉的 Visual Studio 工具来进行数据库开发。 这些工具包括 Transact\-SQL 编辑器中的代码导航、IntelliSense、与可用于 C# 和 Visual Basic 的支持类似的语言支持、特定于平台的验证、调试和声明性编辑。 SSDT 还提供可视的表设计器，以便在数据库项目或连接的数据库实例中创建和编辑表。 当你在基于团队的环境中处理你的数据库项目时，可以将版本控制用于所有文件。 在要发布你的项目时，可以发布到所有支持的 SQL 平台，包括 SQL Database 和 SQL Server。 SSDT 的平台验证功能确保您的脚本适用于您指定的目标。  
   
 Visual Studio 中的 SQL Server 对象资源管理器提供类似于 SQL Server Management Studio 的数据库对象视图。 SQL Server 对象资源管理器可减轻你的数据库管理和设计工作。 您可以轻松地创建、编辑、重命名和删除表、存储过程、类型和函数。 还可以通过使用 SQL Server 对象资源管理器中的上下文菜单编辑表数据、比较架构或执行查询。  
   

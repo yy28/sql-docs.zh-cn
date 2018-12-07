@@ -22,21 +22,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701747"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586290"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  更新表或索引视图的查询优化统计信息。 默认情况下，查询优化器已根据需要更新统计信息以改进查询计划；但在某些情况下，可以通过使用 UPDATE STATISTICS 或存储过程 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 来比默认更新更频繁地更新统计信息，提高查询性能。  
+更新表或索引视图的查询优化统计信息。 默认情况下，查询优化器已根据需要更新统计信息以改进查询计划；但在某些情况下，可以通过使用 `UPDATE STATISTICS` 或存储过程 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 来比默认更新更频繁地更新统计信息，提高查询性能。  
   
- 更新统计信息可确保查询使用最新的统计信息进行编译。 不过，更新统计信息会导致查询重新编译。 我们建议不要太频繁地更新统计信息，因为需要在改进查询计划和重新编译查询所用时间之间权衡性能。 具体的折衷方案取决于你的应用程序。 UPDATE STATISTICS 可以使用 tempdb 对行样本进行排序以生成统计信息。  
+更新统计信息可确保查询使用最新的统计信息进行编译。 不过，更新统计信息会导致查询重新编译。 我们建议不要太频繁地更新统计信息，因为需要在改进查询计划和重新编译查询所用时间之间权衡性能。 具体的折衷方案取决于你的应用程序。 `UPDATE STATISTICS` 可以使用 tempdb 对行样本进行排序以生成统计信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -183,25 +183,28 @@ MAXDOP = max_degree_of_parallelism
 
 ## <a name="remarks"></a>Remarks  
   
-## <a name="when-to-use-update-statistics"></a>何时使用 UPDATE STATISTICS  
- 有关何时使用 UPDATE STATISTICS 的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
+### <a name="when-to-use-update-statistics"></a>何时使用 UPDATE STATISTICS  
+ 有关何时使用 `UPDATE STATISTICS` 的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
 
-## <a name="limitations-and-restrictions"></a>限制和局限  
+### <a name="limitations-and-restrictions"></a>限制和局限  
 * 外部表格中不支持更新统计信息。 若要更新外部表格中的统计信息，请删除并重新创建统计信息。  
-* MAXDOP 选项与 STATS_STREAM、ROWCOUNT 和 PAGECOUNT 选项不兼容。
-* 如果使用，MAXDOP 选项会受 Resource Governor 工作负载组 MAX_DOP 设置的限制。
+* `MAXDOP` 选项与 `STATS_STREAM`、`ROWCOUNT` 和 `PAGECOUNT` 选项不兼容。
+* 如果使用的话，`MAXDOP` 选项会受资源调控器工作负载组 `MAX_DOP` 设置的限制。
 
-## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 更新所有统计信息  
- 有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，以下命令调用 sp_updatestats 来更新数据库的所有统计信息。  
+### <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 更新所有统计信息  
+有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，以下命令调用 sp_updatestats 来更新数据库的所有统计信息。  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### <a name="automatic-index-and-statistics-management"></a>自动索引和统计信息管理
+利用[自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
   
-## <a name="determining-the-last-statistics-update"></a>确定最近的统计信息更新  
+### <a name="determining-the-last-statistics-update"></a>确定最近的统计信息更新  
  若要确定最近一次更新统计信息的时间，请使用 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函数。  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW/SQL 数据仓库  
+### <a name="pdw--sql-data-warehouse"></a>PDW/SQL 数据仓库  
  以下语法不受 PDW/SQL 数据仓库支持  
   
 ```sql  
@@ -225,7 +228,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 要求对表或视图具有 ALTER 权限。  
+ 要求具有对表或视图的 `ALTER` 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -306,8 +309,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

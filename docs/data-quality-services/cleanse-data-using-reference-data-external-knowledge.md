@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04193939b04167f3103d72b162f41044c89b435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736515"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617187"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
 
@@ -50,7 +49,7 @@ ms.locfileid: "47736515"
 ## <a name="before-you-begin"></a>开始之前  
   
 ###  <a name="Prerequisites"></a> 先决条件  
- 您必须将 DQS 知识库中的所需域映射到适当的引用数据服务。 此外，知识库必须包含有关您要清理的数据类型的知识。 例如，如果您要清理包含美国地址的源数据，则必须将您的域映射到为美国地址提供高质量数据的引用数据服务提供程序。 有关详细信息，请参阅 [将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
+ 您必须将 DQS 知识库中的所需域映射到适当的引用数据服务。 此外，知识库必须包含有关您要清理的数据类型的知识。 例如，如果要清理包含美国地址的源数据，则必须将自己的域映射到为美国地址提供高质量数据的引用数据服务提供程序。 有关详细信息，请参阅 [将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -72,7 +71,7 @@ ms.locfileid: "47736515"
     > [!NOTE]  
     >  在 **“清理”** 页上，DQS 通过以下两种方式显示与附加到引用数据服务的域有关的信息：  
     >   
-    >  -   “开始”按钮下会显示一条消息：“Domains \<Domain1>, \<Domain2>,… \<DomainN> 已使用引用数据服务提供程序进行清理。” 在此示例中，将显示以下消息：“使用引用数据服务提供程序清理域地址验证。”  
+    >  -   “开始”按钮下会显示一条消息：“Domains \<Domain1>, \<Domain2>,…\<DomainN> 已使用引用数据服务提供程序进行清理。” 在此示例中，将显示以下消息：“使用引用数据服务提供程序清理域地址验证。”  
     > -   ![将域附加到 RDS](../data-quality-services/media/dqs-rdsindicator.JPG "Domain is attached to RDS") 图标根据附加到引用数据服务提供程序的域显示在“探查器”区域中。 在此示例中，将针对 **“地址验证”** 复合域显示该图标。  
   
 4.  在 **“管理和查看结果”** 页上，查看您的域值。 根据在将域映射到引用数据服务的过程中在 **“建议的候选项”** 框中指定的建议的最大数目，引用数据服务可为一个值显示多个建议（如果可用）。 例如，为下面的美国地址显示两项建议：  

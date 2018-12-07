@@ -1,7 +1,7 @@
 ---
 title: SQL 跟踪 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439799"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序中的跟踪信息。  
+在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
-  
+> [!IMPORTANT]
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用。 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+
 ## <a name="benefits-of-sql-trace"></a>SQL 跟踪的优点  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系统存储过程来创建对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的跟踪。 可以不使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，而使用这些系统存储过程从您自己的应用程序中手动创建跟踪。 这样，您就可以针对企业的特定需求编写自定义应用程序。  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系统存储过程来创建对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的跟踪。 可以不使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，而使用这些系统存储过程从您自己的应用程序中手动创建跟踪。 这样，您就可以针对企业的特定需求编写自定义应用程序。  
   
 ## <a name="sql-trace-architecture"></a>SQL 跟踪结构  
- 事件源可以是生成跟踪事件（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理）或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件（例如死锁）的任何源。 有关事件的详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。 事件发生后，如果该事件类已经包含在跟踪定义中，则跟踪将收集该事件信息。 如果已经在跟踪定义中为该事件类定义筛选器，则将应用这些筛选器并将跟踪事件信息传递到队列。 从队列中，跟踪信息或者被写入文件，或者由应用程序（例如 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]）中的 SMO 使用。 以下关系图显示了在跟踪期间 SQL 跟踪如何收集事件。  
+事件源可以是生成跟踪事件（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理）或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件（例如死锁）的任何源。 有关事件的详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。 事件发生后，如果该事件类已经包含在跟踪定义中，则跟踪将收集该事件信息。 如果已经在跟踪定义中为该事件类定义筛选器，则将应用这些筛选器并将跟踪事件信息传递到队列。 从队列中，跟踪信息或者被写入文件，或者由应用程序（例如 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]）中的 SMO 使用。 以下关系图显示了在跟踪期间 SQL 跟踪如何收集事件。  
   
- ![数据库引擎事件跟踪进程](../../relational-databases/sql-trace/media/tracarch.gif "数据库引擎事件跟踪进程")  
+![数据库引擎事件跟踪进程](../../relational-databases/sql-trace/media/tracarch.gif "数据库引擎事件跟踪进程")  
   
 ## <a name="sql-trace-terminology"></a>SQL 跟踪的术语  
- 下列词汇介绍了 SQL 跟踪的重要概念。  
+下列词汇介绍了 SQL 跟踪的重要概念。  
   
  **事件**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例内发生的操作。  
@@ -70,7 +72,7 @@ ms.locfileid: "51571446"
  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，将跟踪保存到表时创建的表。  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>使用数据列描述返回的事件  
- 跟踪运行时，SQL 跟踪使用跟踪输出中的数据列来描述返回的事件。 下表说明了 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列（这些数据列与 SQL 跟踪使用的数据列相同），并指示默认情况下选择的列。  
+跟踪运行时，SQL 跟踪使用跟踪输出中的数据列来描述返回的事件。 下表说明了 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列（这些数据列与 SQL 跟踪使用的数据列相同），并指示默认情况下选择的列。  
   
 |数据列|列号|描述|  
 |-----------------|-------------------|-----------------|  

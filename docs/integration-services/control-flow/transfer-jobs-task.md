@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639014"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502742"
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
   传输作业任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。  
@@ -116,7 +116,7 @@ ms.locfileid: "51639014"
 |**False**|仅复制指定的作业。|  
   
  **JobsList**  
- 单击浏览按钮 **(…)** 可选择要复制的作业。 必须至少选择一个作业。  
+ 单击浏览按钮 (…)，选择要复制的作业。 必须至少选择一个作业。  
   
 > [!NOTE]  
 >  在选择要复制的作业前，请指定 **SourceConnection** 。  

@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b910382d1357c9a854a58908fef6972ff8b1fb55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb896309e39a2abe054ce470fd9cec33b690181c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818881"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535574"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "47818881"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY… ****  
+ RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…****  
   
  恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
   

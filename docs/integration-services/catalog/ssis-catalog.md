@@ -15,15 +15,15 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535538"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
-  **SSISDB**目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
+  SSISDB 目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
  
 > [!NOTE]
 > 本文介绍常规 SSIS 目录及在本地运行的 SSIS 目录。 还可在 Azure SQL 数据库中创建 SSIS 目录，并在 Azure 中部署和运行 SSIS 包。 有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
@@ -394,7 +394,7 @@ ms.locfileid: "51641404"
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
   
- **SSISDB** 目录存储您部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。 有关该目录的详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
+ SSISDB 目录存储部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。 有关该目录的详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 ###  <a name="backup"></a> 备份 SSIS 数据库  
   
@@ -627,7 +627,7 @@ ms.locfileid: "51641404"
 > [!WARNING]  
 >  为 AlwaysOn 启用 SSIS 支持之前，不支持 SSISDB 数据库的自动故障转移。  
   
- 表中列出了从 Always On 可用性组新添加的次要副本。 单击 **“连接…”** 按钮，然后输入身份验证凭据以连接到副本。 用户帐户必须是每个副本上 sysadmin 组的成员，才能为 Always On 启用 SSIS 支持。 成功连接到每个副本后，单击“确定”  按钮以启用对 AlwaysOn 的 SSIS 支持。  
+ 表中列出了从 Always On 可用性组新添加的次要副本。 单击列表中每个副本的“连接…”按钮，然后输入身份验证凭据以连接到副本。 用户帐户必须是每个副本上 sysadmin 组的成员，才能为 Always On 启用 SSIS 支持。 成功连接到每个副本后，单击“确定”  按钮以启用对 AlwaysOn 的 SSIS 支持。  
  
 如果在完成其他先决性步骤后，关联菜单中的“启用 Always On 支持”选项显示为已禁用，请尝试执行以下操作：
 1.  单击“刷新”选项，刷新关联菜单。

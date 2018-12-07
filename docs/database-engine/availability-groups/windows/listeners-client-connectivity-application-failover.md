@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603567"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408884"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>侦听器、客户端连接、应用程序故障转移
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  如果在客户端应用程序的连接尝试期间但在连接超时期限之前可用性组回到联机状态，则在其内部的其中一次重试期间，客户端驱动程序可能会成功连接，并且在此情况下应用程序不会出现任何错误。  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> 支持可用性组多子网故障转移  
- 如果您在使用支持连接字符串中的 MultiSubnetFailover 连接选项的客户端库，则可通过将 MultiSubnetFailover 设置为“True”或“Yes”（根据您在使用的访问接口的语法），优化到不同子网的可用性组故障转移。  
+ 如果使用支持连接字符串中 MultiSubnetFailover 连接选项的客户端库，则可通过将 MultiSubnetFailover 设置为“True”或“Yes”（根据使用的提供程序的语法），优化到不同子网的可用性组故障转移。  
   
 > [!NOTE]  
 >  对于到可用性组侦听器以及到 SQL Server 故障转移群集实例名称的单个和多子网连接，建议使用此设置。  启用此选项将添加额外的优化，即使对于单子网方案也不例外。  

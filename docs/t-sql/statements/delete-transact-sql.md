@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532172"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  使用 @@ROWCOUNT 函数将删除的行数返回给客户端应用程序。 有关详细信息，请参阅 [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)。  
   
 ## <a name="error-handling"></a>错误处理  
- 您可以通过在 TRY…CATCH 构造函数中指定 DELETE 语句，实现对该语句的错误处理。  
+ 可以通过在 TRY…CATCH 构造函数中指定 DELETE 语句，实现对该语句的错误处理。  
   
  如果 DELETE 语句违反了触发器，或试图删除另一个有 FOREIGN KEY 约束的表内的数据被引用行，则可能会失败。 如果 DELETE 删除了多行，而在删除的行中有任何一行违反触发器或约束，则将取消该语句，返回错误且不删除任何行。  
   

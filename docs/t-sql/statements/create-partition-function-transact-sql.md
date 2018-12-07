@@ -1,7 +1,7 @@
 ---
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755355"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191010"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,11 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  为使用 partition_function_name 的已分区表或索引的每个分区指定边界值。 如果 boundary_value 为空，则分区函数使用 partition_function_name 将整个表或索引映射到单个分区。 只能使用 CREATE TABLE 或 CREATE INDEX 语句中指定的一个分区列。  
   
  boundary_value 是可以引用变量的常量表达式。 这包括用户定义类型变量，或函数以及用户定义函数。 它不能引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value 必须匹配或可以隐式转换为 input_parameter_type 中提供的数据类型，并且当值的大小和小数位数不匹配其对应 input_parameter_type 时，将无法在隐式转换过程中被截断。  
-  
+
 > [!NOTE]  
->  如果 boundary_value 包含 datetime 或 smalldatetime 文字值，则为这些文字值在计算时假设会话语言为 us_english。 不推荐使用此行为。 要确保分区函数定义对于所有会话语言都具有预期的行为，建议使用对于所有语言设置都以相同方式进行解释的常量，例如 yyyymmdd 格式；或者将文字值显式转换为特定样式。 若要确定服务器的语言会话，请运行 `SELECT @@LANGUAGE`。  
+>  如果 boundary_value 包含 datetime 或 smalldatetime 文字值，则为这些文字值在计算时假设会话语言为 us_english。 不推荐使用此行为。 要确保分区函数定义对于所有会话语言都具有预期的行为，建议使用对于所有语言设置都以相同方式进行解释的常量，例如 yyyymmdd 格式；或者将文字值显式转换为特定样式。 若要确定服务器的语言会话，请运行 `SELECT @@LANGUAGE`。
+>
+> 有关详细信息，请参阅[文字日期字符串转换为日期值的不确定性转换](../data-types/nondeterministic-convert-date-literals.md)。
   
  ...n  
  指定 boundary_value 提供的值的数目，不能超过 14,999。 创建的分区数等于 n + 1。 不必按顺序列出各值。 如果值未按顺序列出，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将对它们进行排序、创建函数并返回一个警告，说明未按顺序提供值。 如果 n 包括任何重复的值，则数据库引擎将返回错误。  

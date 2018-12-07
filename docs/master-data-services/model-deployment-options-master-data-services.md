@@ -12,12 +12,12 @@ ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98abe1434ea11e17c222c807c23eebee6974a06a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e09058b71b920a109bccc05c1ee480dc82036c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680609"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415024"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署选项 (Master Data Services)
 
@@ -40,7 +40,7 @@ ms.locfileid: "47680609"
 |选项|描述|说明|  
 |------------|-----------------|-----------|  
 |新版|使用唯一名称创建一个新模型。 为所有模型对象创建新的标识符。|如果您使用新的标识符创建一个新模型，则在以后无法使用模型部署工具将更新应用于该模型。 在 Web 应用程序中使用向导部署一个模型包时，只有在具有相同名称或 ID 的模型已存在时，您才能选择创建一个新模型。|  
-|克隆|创建一个新模型，该模型是包中模型的精确克隆。 这仅适用于该模型在目标环境中不存在的情况（按名称或标识符）。 当您想要在多个环境中具有相同的模型并且经过一段时间后更新克隆的模型时，使用“克隆”。|这是 Web 应用程序中向导的默认行为。 如果已经存在具有相同名称或 ID 的模型，则系统将会提示您改为创建新的模型。|  
+|克隆|创建一个新模型，该模型是包中模型的精确克隆。 这仅适用于该模型在目标环境中不存在的情况（按名称或标识符）。 如果想要在多个环境中拥有相同的模型并在经过一段时间后更新克隆的模型，请使用“克隆”。|这是 Web 应用程序中向导的默认行为。 如果已经存在具有相同名称或 ID 的模型，则系统将会提示您改为创建新的模型。|  
 |Update|使用包中的模型更新现有模型。 标识符在这两个模型中必须相同。 这用来更新您以前克隆的模型。|您只能更新以前克隆的模型。 （名称和 ID 必须匹配。）|  
   
 ## <a name="see-also"></a>另请参阅  

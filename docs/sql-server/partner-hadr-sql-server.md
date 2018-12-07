@@ -12,19 +12,19 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 9d9dbe423415e1014a31621ba15f44fb0758e1a5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5dc3ba843314297131de569bafa5412577a24adf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510423"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和灾难恢复合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 要对 SQL Server 服务提供高可用性和灾难恢复，请从各种行业领先工具进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的高可用性和灾难恢复解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>高可用性和灾难恢复合作伙伴
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partner | 描述 | 链接 | 
@@ -36,7 +36,7 @@ ms.locfileid: "51699107"
 |![NEC][7]|**NEC**<br>ExpressCluster 是面向所有主要故障的全面和完全自动化的高可用性灾难恢复解决方案，这些故障包括 SQL Server 的硬件、软件、网络和站点故障，以及在本地或云环境中的物理计算机或虚拟机上运行的相关应用程序的故障。<br><br>Microsoft SQL Server：2005 版或更高版本；所有版本 |[网站][necec_website]<br>[数据表][necec_datasheet]<br>[视频][necec_youtube]<br>[下载][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx 是适用于在生产中运行的有状态容器的解决方案。 借助 Portworx，用户可以使用任何容器计划程序（包括 Kubernetes、Mesosphere DC/OS 和 Docker Swarm）在任何基础结构上管理任何数据库或有状态服务。 Portworx 解决了 DevOps 团队在生产中运行容器化数据库及其他有状态服务时遇到的五个最常见问题：持久性、高可用性、数据自动化、支持多个数据存储区和基础结构，以及安全性。<br><br>SQL Server 2017 on Docker |[网站][portworx_website]<br>[文档][portworx_docs]<br>[视频][portworx_youtube]|
 |![SIOS][8] |SIOS<br>SIOS 技术为 Windows 或 Linux 上的 SQL Server 交付经济高效的高可用性和灾难恢复解决方案。 SIOS SANless 群集消除了使用共享存储 SAN 的必要性，使你能够完全灵活地保护你在单个和多站点环境中的物理、虚拟、云和混合云配置中最为重要的应用程序。<br><br>将 SIOS DataKeeper 添加到你的 Windows Server 故障转移群集环境，以创建替换传统共享存储的 SANless 卷资源，从而便于在 Azure 中运行 WSFC。<br><br>SIOS 保护套件是完全灵活的群集解决方案，它保护关键 Linux 应用程序（例如，SQL Server、SAP、HANA、Oracle 和许多其他应用程序）。|[网站][sios_website]<br>[数据表][sios_datasheet]<br>[Twitter][sios_twitter]<br>[市场][sios_marketplace]<br>[视频][sios_youtube]|
-|![Veeam][1] |**Veeam**<br>Veeam 备份和复制是一种功能强大、简单易用、经济实惠的备份和可用性解决方案。 它可以快速、灵活、可靠地恢复虚拟化应用程序和数据，将 VM（虚拟机）备份和复制整合为一种软件解决方案。 Veeam 备份和复制为 VMware vSphere 和 Microsoft Hyper-V 虚拟环境提供一流的支持。<br><br>SQL Server 2005 SP4 – SQL Server 2016 on Windows |[网站][veeam_website]<br>[数据表][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[视频][veeam_youtube]|
+|![Veeam][1] |**Veeam**<br>Veeam 备份和复制是一种功能强大、简单易用、经济实惠的备份和可用性解决方案。 它可以快速、灵活、可靠地恢复虚拟化应用程序和数据，将 VM（虚拟机）备份和复制整合为一种软件解决方案。 Veeam 备份和复制为 VMware vSphere 和 Microsoft Hyper-V 虚拟环境提供一流的支持。<br><br>SQL Server 2005 SP4 - SQL Server 2016 on Windows |[网站][veeam_website]<br>[数据表][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[视频][veeam_youtube]|
 
 ## <a name="next-steps"></a>后续步骤
 要深入了解其他合作伙伴，请参阅[监视][mon_partners]、[管理合作伙伴][management_partners]以及[开发合作伙伴][dev_partners]。

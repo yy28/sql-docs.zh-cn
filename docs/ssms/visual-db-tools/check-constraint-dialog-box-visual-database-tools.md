@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504012"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51697615"
 显示选定的 CHECK 约束的名称。 若要更改此约束的名称，请直接在属性字段键入文本。  
   
 **Description**  
-描述此 CHECK 约束。 你既可以在属性字段中键入内容来编辑说明，也可以单击属性字段右侧显示的省略号按钮 (**…**)，然后在“说明属性”对话框中编辑说明。  
+描述此 CHECK 约束。 既可以在属性字段中键入内容来编辑说明，也可以单击属性字段右侧显示的省略号按钮(…)，然后在“说明属性”对话框中编辑说明。  
   
 **表设计器类别**  
 展开此项可显示“在创建或重新启用时检查现有数据”、“强制用于 INSERT 和 UPDATE”和“强制用于复制”的属性。  

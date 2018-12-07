@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525316"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
@@ -161,7 +161,7 @@ ms.locfileid: "51640126"
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
  **表或视图的名称**  
  使用此列表从数据库中选择表或视图，或单击“新建”创建新表。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "51640126"
  指定目标在加载数据时是否检查约束。 此属性的默认值为 **true**。  
   
  **每批行数**  
- 指定每批中的行数。 此属性的默认值为 **–1**，表示尚未分配值。  
+ 指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
 >  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  
@@ -204,7 +204,7 @@ ms.locfileid: "51640126"
  **变量名称**  
  选择包含表或视图名称的变量。  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>数据访问模式 = 表名变量或视图名变量 – 快速加载  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>数据访问模式 = 表名变量或视图名变量 – 快速加载）  
  **变量名称**  
  选择包含表或视图名称的变量。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51640126"
  指定任务是否检查约束。 此属性的默认值为 **false**。  
   
  **每批行数**  
- 指定每批中的行数。 此属性的默认值为 **–1**，表示尚未分配值。  
+ 指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
 >  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  

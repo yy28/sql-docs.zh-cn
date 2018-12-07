@@ -15,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525724"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47680305"
   
  相比之下，BACPAC 侧重于捕获架构和数据，支持以下两种主要操作：  
   
--   **EXPORT**- 用户可以将数据库的架构和数据导出到 BACPAC。  
+-   **EXPORT** - 用户可以将数据库的架构和数据导出到 BACPAC。  
   
 -   **IMPORT** - 用户可以将架构和数据导入到主机服务器上的新数据库中。  
   

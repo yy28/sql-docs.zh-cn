@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e8665fe9028def0d8ad2c6f15010b51fe5b5fe9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10e04d4864ac3f6ecf7c59f989a8886cee2409d5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708747"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414774"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 网站设置和网站功能（SharePoint 模式）
 
@@ -34,7 +34,7 @@ Reporting Services SharePoint 模式具有几个网站级自定义功能和可�
   
 ## <a name="open-the-reporting-services-site-settings-page"></a>打开 Reporting Services“网站设置”页
   
-1.  在 SharePoint 网站的“网站操作”菜单中，选择“网站设置”。  
+1.  在 SharePoint 站点的“站点操作”菜单中，选择“站点设置”。  
   
 2.  在 Reporting Services 部分中，选择“Reporting Services 网站设置”。  
   

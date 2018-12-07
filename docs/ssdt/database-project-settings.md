@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516018"
 ---
 # <a name="database-project-settings"></a>数据库项目设置
 使用数据库项目设置可控制数据库、调试和生成配置的各个方面。 这些设置分为以下几类。  
@@ -226,7 +226,7 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 |如果可能发生数据丢失则阻止增量部署|用户帐户控制|指定在更新可能会造成数据丢失的情况下是否应停止部署。 如果选中此复选框，则可能造成数据丢失的更改会导致部署因出现错误而停止，从而防止丢失数据。 例如，在将 `varchar(50)` 列更改为 `varchar(30)`时，部署将会停止。<br /><br />注意：只有当可能发生数据丢失的表中包含数据时，才会阻止部署。 如果不会丢失任何数据，则部署将继续。|  
 |DROP 目标中但不在项目中的对象|否|指定是否应将目标数据库中存在而数据库项目中不存在的对象作为部署脚本的一部分删除。 您可以排除项目中的一些文件以将它们暂时从生成脚本中移除。 但是，您可能希望在目标数据库中保留这些对象的现有版本。 如果选中“始终重新创建数据库”复选框，该复选框将没有任何作用，因为数据库会被删除。|  
 |不使用 ALTER ASSEMBLY 语句更新 CLR 类型|否|指定在部署更改时，是否使用 ALTER ASSEMBLY 语句来更新公共语言运行时 (CLR) 类型，或者是否将删除并重新创建实例化 CLR 类型的对象。|  
-|高级…|否|一种命令按钮，可用于指定控制部署的事件和行为的选项。|  
+|高级...|否|一种命令按钮，可用于指定控制部署的事件和行为的选项。|  
   
 ## <a name="bkmk_ref_paths"></a>引用路径  
 使用此页，可以定义与跨数据库引用相关联的服务器变量和数据库变量。 此外，你可以指定这些变量的值。 有关详细信息，请参阅 [在数据库项目中使用引用](https://msdn.microsoft.com/library/bb386242.aspx)。  

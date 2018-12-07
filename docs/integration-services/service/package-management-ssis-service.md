@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532077"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
   包管理包括监视、管理、导入和导出包。  
@@ -127,7 +127,7 @@ ms.locfileid: "47701625"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击 \<“浏览更多...”>，定位要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "47701625"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击 \<“浏览更多...”>，定位要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   
@@ -221,13 +221,13 @@ ms.locfileid: "47701625"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包的路径，或单击浏览按钮 **(…)** 并查找包。  
+ 键入包的路径，或单击浏览按钮 (…) 并查找包。  
   
  **包名称**  
  可以根据需要对包进行重命名。 默认名称是要导入的包的名称。  
   
  **保护级别**  
- 单击浏览按钮 **(…)**，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅[“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>“导出包”对话框 UI 参考
   可以使用 **中的** “导出包” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包导出到其他位置并根据需要修改包的保护级别。  
@@ -261,10 +261,10 @@ ms.locfileid: "47701625"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包路径，或单击浏览按钮 **(…)** ，然后定位存储包的文件夹。  
+ 键入包路径，或单击浏览按钮 (…)，然后定位存储包的文件夹。  
   
  **保护级别**  
- 单击浏览按钮 **(…)**，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅[“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="back-up-and-restore-packages"></a>备份和还原包
   

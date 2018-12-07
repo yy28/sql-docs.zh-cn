@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813180"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396830"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
@@ -99,7 +99,7 @@ ms.locfileid: "51813180"
   
 -   单击“报表生成器”  。  
   
-     如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”对话框，并单击 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 底部的“连接” ，以连接到服务器。  
+     如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”对话框，并单击 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 底部的“连接”，以连接到服务器。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)   

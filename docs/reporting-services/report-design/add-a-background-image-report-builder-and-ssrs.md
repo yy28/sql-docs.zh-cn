@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a03db689605fe26f9ba6c21ff26377fcbe40e8c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 635783deea70ed334ad3b73f1c0136809415c332
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031176"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527291"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>添加背景图像（报表生成器和 SSRS）
   您可以向报表项（如矩形、文本框、列表、矩阵、表和某些图表部件）或报表区域（如页眉、页脚或表体）添加背景图像。 在“属性”窗格中，可以为报表设计图面上显示 **BackgroundImage** 的任何所选项定义背景图像。 与其他图像相似，背景图像可以是指向报表服务器上的图像的 URL、数据集字段的图像，也可以是报表定义中嵌入的图像。 若要使用在报表中嵌入的图像，您必须首先向报表定义中添加该嵌入图像，然后才能向设计图面中添加该图像。  
@@ -56,7 +56,7 @@ ms.locfileid: "50031176"
   
          将 **“值”** 设置为报表数据集中某个字段的名称。 有关详细信息，请参阅[添加数据绑定图像（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)。  
   
-         对于 **MIMEType**或文件格式，为图像选择适当的 MIME 类型，如 .bmp。  
+         对于 MIMEType 或文件格式，为图像选择适当的 MIME 类型，如 .bmp。  
   
         > [!NOTE]  
         >  仅当 **Source** 属性设置为 **Database**时，MIMEType 才适用。 如果将 **Source** 属性设置为 **External** 或 **Embedded**，则忽略 **MIMEType** 的值。  

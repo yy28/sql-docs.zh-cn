@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33955a8d77403209c74a7de39cf4af17694cf80c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666776"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395170"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,11 +100,11 @@ ms.locfileid: "51666776"
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>检查索引的碎片  
   
-1.  在“对象资源管理器”中，展开其中包含您要检查索引碎片的表的数据库。  
+1.  在“对象资源管理器”中，展开其中包含要检查索引碎片的表的数据库。  
   
 2.  展开 **“表”** 文件夹。  
   
-3.  展开您要检查索引碎片的表。  
+3.  展开要检查索引碎片的表。  
   
 4.  展开 **“索引”** 文件夹。  
   

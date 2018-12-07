@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2ff2cff49acefb568a0d052b00e4ec8d7e838f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630406"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401622"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47630406"
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>使用表设计器指定填充因子  
   
-1.  在对象资源管理器中，单击加号以便展开包含您要指定索引填充因子的表的数据库。  
+1.  在对象资源管理器中，单击加号以便展开包含你要指定索引填充因子的表的数据库。  
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "47630406"
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
-1.  在对象资源管理器中，单击加号以便展开包含您要指定索引填充因子的表的数据库。  
+1.  在对象资源管理器中，单击加号以便展开包含你要指定索引填充因子的表的数据库。  
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  单击加号以展开您要指定索引的填充因子的表。  
+3.  单击加号以展开要指定索引的填充因子的表。  
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "47630406"
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>在现有索引中指定填充因子  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "47630406"
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>为索引指定填充因子的其他方法  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

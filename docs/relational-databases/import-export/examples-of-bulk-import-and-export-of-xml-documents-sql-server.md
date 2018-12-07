@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670596"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530557"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51670596"
 -  [E.批量导出 XML 数据](#bulk_export_xml_data)  
   
 ## <a name="binary_byte_stream"></a>以二进制字节流的形式大容量导入 XML 数据  
- 在从文件大容量导入 XML 数据时，如果文件中包含您要应用的编码声明，则应在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 选项。 SINGLE_BLOB 选项可确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器根据 XML 声明中指定的编码方案导入数据。  
+ 在从文件大容量导入 XML 数据时，如果文件中包含要应用的编码声明，则应在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 选项。 SINGLE_BLOB 选项可确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器根据 XML 声明中指定的编码方案导入数据。  
   
 #### <a name="sample-table"></a>示例表  
  若要测试下方的示例 A，请创建示例表 `T`。  
@@ -158,7 +158,7 @@ GO
   
  若要解决此问题，可以使用 `OPENROWSET(BULK...)` 函数，并在命令的 `CONVERT` 子句中指定 `SELECT` 选项，以从包含 DTD 的数据文件中导入 XML 数据。 该命令的基本语法如下：  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>示例数据文件  
  在测试此批量导入示例之前，需要先创建一个包含以下示例实例的文件 (`C:\temp\Dtdfile.xml`)：  

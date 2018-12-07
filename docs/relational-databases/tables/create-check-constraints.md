@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ace4a96004e22a1c922a491a8f2906c98caefc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856370"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521664"
 ---
 # <a name="create-check-constraints"></a>创建 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47856370"
   
 1.  在“对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击“约束”，然后单击“新建约束”。  
   
-2.  在 “CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 **(…)**。  
+2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)。  
   
 3.  在 **“CHECK 约束表达式”** 对话框中，键入 CHECK 约束的 SQL 表达式。 例如，若要将 `SellEndDate` 表的 `Product` 列中的条目限制为大于等于 `SellStartDate` 列中的日期的值，或者为 NULL 值，则键入：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47856370"
   
 #### <a name="to-create-a-new-check-constraint"></a>创建新的 CHECK 约束  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -11,18 +11,18 @@ ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6361994dfc613ef3a3d9367574047b92555bfe3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854355"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419298"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果想要确保用户使用和你一样的数据，则可以通过电子邮件向他们发送快捷查询文件。 您应该共享查询，而不是将工作表保存并通过电子邮件发送。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，如果想要确保用户使用和你一样的数据，则可以通过电子邮件向他们发送快捷查询文件。 您应该共享查询，而不是将工作表保存并通过电子邮件发送。  
   
 ## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  

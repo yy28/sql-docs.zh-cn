@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5ee5a106bf8b412f4096c06255be2e16f90a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516982"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：为表报表定义数据集 (Reporting Services)
 定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  
@@ -22,7 +22,7 @@ ms.locfileid: "47594836"
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>为报表数据定义 Transact-SQL 查询  
   
-1.  在“报表数据”窗格中，单击“新建”，然后单击“数据集…”。 此时将打开 **“数据集属性”** 对话框。  
+1.  在“报表数据”窗格中，单击“新建”，然后单击“数据集…”。此时将打开 **“数据集属性”** 对话框。  
   
 2.  在“名称”框中，键入 AdventureWorksDataset。  
   

@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6580a1df3ed83d0eec4d6dada7ed2954f44b8989
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700795"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407856"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51700795"
 ##  <a name="DNS"></a> 故障转移期间的客户端恢复延迟  
  默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 **MultiSubnetFailover=True** 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 和 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- 对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 **MultiSubnetFailover** 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在其能够循环访问您的多子网 FCI 中的所有 IP 地址之前不会超时。  
+ 对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 **MultiSubnetFailover** 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在它能够循环访问多子网 FCI 中的所有 IP 地址之前不会超时。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的默认客户端连接超时期限为 15 秒。  
   

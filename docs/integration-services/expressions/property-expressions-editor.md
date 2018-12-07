@@ -15,12 +15,12 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca50777271309b338940abc2bfde8c8d6ae679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532148"
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
   可以使用 **“属性表达式编辑器”** 对话框创建、编辑或删除用于更新属性值的属性表达式。  
@@ -35,7 +35,7 @@ ms.locfileid: "47793565"
 > [!NOTE]  
 >  用户定义的变量名和系统变量名区分大小写。  
   
- **表达式 (…)**  
+ **表达式 (...)**  
  单击省略号可以打开 **“表达式生成器”** 对话框。 有关详细信息，请参阅 [Expression Builder](../../integration-services/expressions/expression-builder.md)。  
   
  **删除**  

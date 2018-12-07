@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505931"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -155,7 +155,7 @@ ms.locfileid: "51642226"
   
     -   若要使用 Foreach SMO 枚举器，请选择一个现有的 ADO.NET 连接，或在 **“连接”** 列表中，单击 **“新建连接”** ，然后键入需要的字符串或单击 **“浏览”**。 如果选择单击 **“浏览”**，则请在 **“选择 SMO 枚举”** 对话框中，选择要枚举的对象类型和枚举类型，然后单击 **“确定”**。  
   
-6.  也可单击“集合”页上的“表达式”文本框中的浏览按钮 **(…)** 来创建可用于更新属性值的表达式。 有关详细信息，请参阅 [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
+6.  也可单击“集合”页上的“表达式”文本框中的浏览按钮 (…) 来创建可用于更新属性值的表达式。 有关详细信息，请参阅 [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
     > [!NOTE]  
     >  在“属性”列表中列出的属性因枚举器而异。  
@@ -213,7 +213,7 @@ ms.locfileid: "51642226"
 |**Foreach ADLS 文件枚举器**|枚举指定 Data Lake Store 目录中的文件。 选择此值会显示“Foreach ADLS 文件枚举器”部分中的动态选项。|
   
  **表达式**  
- 单击或展开 **表达式** 可以查看现有属性表达式的列表。 单击省略号按钮 **(…)** 可以添加枚举器属性的属性表达式，或编辑并计算现有属性表达式。  
+ 单击或展开 **表达式** 可以查看现有属性表达式的列表。 单击省略号按钮 (…) 可以添加枚举器属性的属性表达式，或编辑并计算现有属性表达式。  
   
  **相关主题：**[Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)、[属性表达式编辑器](../../integration-services/expressions/property-expressions-editor.md)、[表达式生成器](../../integration-services/expressions/expression-builder.md)  
   
@@ -240,11 +240,11 @@ ms.locfileid: "51642226"
  指定要枚举的文件。  
   
 > [!NOTE]  
->  使用通配符 (*) 可以指定要包括在集合中的文件。 例如，要包括名称包含“abc”的文件，请使用下面的筛选器： \*abc\*。  
+>  使用通配符 (*) 可以指定要包括在集合中的文件。 例如，要包括名称包含“abc”的文件，请使用下面的筛选器：abc\*\*。  
 >   
 >  当指定文件扩展名时，枚举器还会返回与所追加的附加字符具有相同扩展名的文件。 （这与操作系统中的 **dir** 命令的行为相同，该命令也会比较 8.3 文件名以检查是否具有向后兼容性。）枚举器的这种行为可能会导致意外的结果。 例如，您只想枚举 Excel 2003 文件且指定了“*.xls”。 但是，枚举器还会返回 Excel 2007 文件，因为这些文件具有扩展名“.xlsx”。  
 >   
->  可以通过在“集合”页上展开“表达式”，选择 **FileSpec** 属性，然后单击省略号按钮 (…) 来添加属性表达式，从而使用表达式指定要在集合中包含的文件。  
+>  可以通过在“集合”页上展开“表达式”，选择 FileSpec 属性，然后单击省略号按钮 (…) 来添加属性表达式，从而使用表达式指定要在集合中包含的文件。  
   
  **完全限定的**  
  选择此项可以检索文件名的完全限定路径。 如果在“文件”选项中指定通配符，则返回的完全限定路径与该筛选条件匹配。  
@@ -347,7 +347,7 @@ ms.locfileid: "51642226"
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
  **DocumentSource**  
- 如果将 **DocumentSourceType** 设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…) 以通过使用“文档源编辑器”对话框来提供 XML。  
+ 如果将 DocumentSourceType 设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…) 以通过使用“文档源编辑器”对话框来提供 XML。  
   
  如果将 **DocumentSourceType** 设置为“文件连接”，请选择文件连接管理器，或单击 **“新建连接...”\<**> 创建新的连接管理器。  
   

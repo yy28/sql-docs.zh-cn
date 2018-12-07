@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 976c052b519cc72de226c06f27abf8b8f43fd74c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543831"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  指定启动对话的服务。 指定的名称必须是当前数据库中的服务的名称。 为发起方服务指定的队列将接收由目标服务返回的消息，以及 Service Broker 为此会话创建的消息。  
   
- TO SERVICE **'***target_service_name***'**  
+ TO SERVICE 'target_service_name'  
  指定启动对话时的目标服务。 *target_service_name* 的类型为 **nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 target_service_name 字符串匹配。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
   
  *service_broker_guid*  
@@ -92,13 +92,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  指定此会话遵循的约定。 当前数据库中必须有该约定。 如果目标服务不接受遵循指定约定的新会话，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 如果省略此子句，则会话会遵循名为 **DEFAULT** 的约定。  
   
- RELATED_CONVERSATION **=***related_conversation_handle*  
+ RELATED_CONVERSATION =related_conversation_handle  
  指定将新对话添加到的现有会话组。 如果使用该子句，则新对话与 *related_conversation_handle* 指定的对话属于同一个会话组。 *related_conversation_handle* 的类型必须可隐式转换为类型 **uniqueidentifier**。 如果 *related_conversation_handle* 不引用现有的对话，则该语句将失败。  
   
- RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP =related_conversation_group_id  
  指定将新对话添加到的现有会话组。 如果使用该子句，则新对话将添加到 *related_conversation_group_id* 指定的会话组中。 *related_conversation_group_id* 的类型必须可隐式转换为类型 **uniqueidentifier**。 如果 *related_conversation_group_id* 不引用现有的会话组，Service Broker 会使用指定的 *related_conversation_group_id* 创建一个新的会话组，并将新对话与该会话组关联。  
   
- LIFETIME **=***dialog_lifetime*  
+ LIFETIME =dialog_lifetime  
  指定对话将保持打开状态的最长时间。 为使对话成功完成，两个端点都必须在生存期内显式结束对话。 *dialog_lifetime* 的值必须以秒表示。 生存期的类型为 **int**。如果未指定 LIFETIME 子句，则对话的生存期为 **int** 数据类型的最大值。  
   
  ENCRYPTION  

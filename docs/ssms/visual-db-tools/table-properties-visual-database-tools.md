@@ -14,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d650e4af3018cf1bf5967943a080d3001479777b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508856"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47665005"
 显示所选表的数据源的名称。  
   
 **Description**  
-显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。  
+显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号“(…)”。  
   
 **架构**  
 显示此表所属的架构的名称。 （仅适用于 Microsoft SQL Server。）  

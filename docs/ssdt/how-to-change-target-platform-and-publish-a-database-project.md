@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668883"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516700"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何更改目标平台和发布数据库项目
 可以将 SQL Server Data Tools (SSDT) 数据库项目的目标 SQL Server 版本更改为任何受支持的 SQL Server 实例（SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure）。 通过这样做，可以针对一个项目进行数据库开发，但在需要时将其发布到多种不同风格的 SQL Server 实例中。  
@@ -63,7 +63,7 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
   
 6.  您还可以将发布设置保存到某一配置文件中，以便为将来的发布操作重复使用相同的设置。 为此，在 **“发布数据库”** 对话框中单击 **“将配置文件另存为”** 按钮。 在将来，您可以在想要重新加载现有设置时单击 **“加载配置文件”** 按钮。  
   
-7.  请注意 **“数据工具操作”** 窗口中的消息。 单击 **“创建发布预览…”** 右侧的“视图预览”链接。这将打开部署预览报表。 如果您的项目的目标平台并不与项目发布到的数据库服务器完全相同，则 SSDT 将在报表中发出警告。  例如，如果你的项目的目标平台是 Microsoft SQL Server 2012 并且你在尝试将该项目发布到某一 SQL Server 2008 R2 服务器实例，则会在“输出”窗口中将看到以下警告：  
+7.  请注意 **“数据工具操作”** 窗口中的消息。 单击“创建发布预览…”右侧的“查看预览”链接右侧的“视图预览”链接。这将打开部署预览报表。 如果项目的目标平台并不是项目所发布到的数据库服务器，则 SSDT 将在报表中发出警告。  例如，如果项目的目标平台是 Microsoft SQL Server 2012 并且正在尝试将该项目发布到某一 SQL Server 2008 R2 服务器实例，则你将会在“输出”窗口中看到以下警告：  
   
 将 Microsoft SQL Server 2012 指定为目标平台的项目可能会遇到与 SQL Server 2008 的兼容性问题    如果此类项目包含 Microsoft SQL Server 2012 中引入的实体（例如，一个 Sequence 对象），则发布操作将失败。  
   

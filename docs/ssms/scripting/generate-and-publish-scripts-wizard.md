@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700265"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530562"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,11 +122,11 @@ ms.locfileid: "51700265"
   
  **选项** - 如果您希望向导将脚本保存到您选择的位置，则选择 **“将脚本保存到特定位置”**。 您以后可以对数据库引擎的实例或者对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]运行这些脚本。 如果您希望向导将数据库对象发布到远程 Web 宿主提供程序，请选择 **“发布到 Web 服务”**。  
   
- **将脚本保存到特定位置** – 将一个或多个 Transact-SQL 脚本文件保存到指定位置。  
+ **将脚本保存到特定位置** - 将一个或多个 Transact-SQL 脚本文件保存到指定位置。  
 
   ![保存](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击 **“浏览(…)”** 按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
+-   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击浏览 (…) 按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
   
 -   **保存到剪贴板** - 将 Transact-SQL 脚本保存到剪贴板。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "51700265"
   
  **选项** - 通过从每个选项右侧的可用设置列表中选择一个值来指定高级选项。  
   
- **常规** – 以下选项将应用于整个脚本。  
+ **常规** - 以下选项将应用于整个脚本。  
   
 -   **ANSI 填充** - 在脚本中包括 **ANSI PADDING ON** 。 默认值为 **True**。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "51700265"
   
 -   **编写更改跟踪的脚本** - 如果在源数据库或源数据库中的表上启用了“编写更改跟踪的脚本”选项，则编写更改跟踪的脚本。 默认值为 **False**。 有关详细信息，请参阅[关于更改跟踪 (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)。  
   
--   **编写 CHECK 约束脚本** – 在脚本中添加 **CHECK** 约束。 默认值为 **True**。 **CHECK** 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
+-   **编写 CHECK 约束脚本** - 在脚本中添加 CHECK 约束。 默认值为 **True**。 **CHECK** 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
 -   “编写数据压缩选项的脚本” - 如果在源数据库或源数据库中的表上配置了编写数据压缩选项的脚本选项，则编写数据压缩选项的脚本。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 默认值为 **False**。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "51700265"
   
  **选项** - 通过从每个选项右侧的可用设置列表中选择一个值来指定高级选项。  
   
- **常规** – 以下选项将应用于整个发布。  
+ **常规** - 以下选项将应用于整个发布。  
   
 1.  **将 UDDT 转换为基类型** - 值为 **True**时，用户定义数据类型 (UDDT) 被转换为用于创建它们的基本数据类型。 将运行脚本的数据库中不存在 UDDT 时，请使用 **True** 。 值为 **False**时，使用 UDDT。 默认值为 **False**。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "51700265"
   
 12. “要发布的数据的类型” - 选择应对其编写脚本的目标：“仅限数据”、“仅限架构”或同时针对这两者。 默认值为 **“架构和数据”**。  
   
- **发布选项** – 指定是否在发布到 Web 主机提供商时使用事务。  
+ **发布选项** - 指定是否在发布到 Web 主机提供商时使用事务。  
   
 1.  **使用事务进行发布** - 在发布到远程 Web 宿主提供程序时使用事务。 如果目标数据库无法完成发布，则这些事务将被回滚。 默认值为 **True**。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "51700265"
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>在 Azure SQL 数据仓库上生成脚本  
 
-若在使用“编写脚本为…”时生成的语法 看起来不像 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 语法，或如果你收到一条错误消息，则可能需要将 SQL Server Management Studio 中的脚本选项设置为 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
+如果使用“Script As…”生成的语法看起来不像 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 语法，或如果你收到一条错误消息，则可能需要将 SQL Server Management Studio 中的脚本选项设置为 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>如何将默认脚本选项设置为 SQL 数据仓库  
 

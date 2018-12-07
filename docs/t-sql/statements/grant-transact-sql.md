@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256fd27b738070b1f18e77cd89b0fe8e75fbf952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6105d05a89ad05b0b20d45cb67f394796811e0ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505290"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -135,7 +135,7 @@ AS principal
  sp_helprotect 系统存储过程可报告对数据库级安全对象的权限。  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- GRANT … WITH GRANT OPTION 指定向接收权限的安全主体提供向其他安全帐户授予指定权限的能力。 当接收权限的主体是某一角色或某一 Windows 组时，如果需要进一步将对象权限授予不是该组成员或该角色的用户，则必须使用 AS 子句。 因为只有用户（而非某个组或角色）才能执行 GRANT 语句，所以，在授予权限时，该组或角色的特定成员必须使用 AS 子句显式调用该角色或组成员身份。 下面的示例说明如何在授予角色或 Windows 组时使用 WITH GRANT OPTION。  
+ **GRANT** ...WITH GRANT OPTION 指定向接收权限的安全主体提供向其他安全帐户授予指定权限的能力。 当接收权限的主体是某一角色或某一 Windows 组时，如果需要进一步将对象权限授予不是该组成员或该角色的用户，则必须使用 AS 子句。 因为只有用户（而非某个组或角色）才能执行 GRANT 语句，所以，在授予权限时，该组或角色的特定成员必须使用 AS 子句显式调用该角色或组成员身份。 下面的示例说明如何在授予角色或 Windows 组时使用 WITH GRANT OPTION。  
   
 ```  
 -- Execute the following as a database owner  

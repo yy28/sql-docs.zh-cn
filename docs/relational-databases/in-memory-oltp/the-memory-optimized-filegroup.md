@@ -11,18 +11,18 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7558ff9f09d003088dc1f7c4d00d3a032d8c478a
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269740"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858552"
 ---
 # <a name="the-memory-optimized-filegroup"></a>内存优化的文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要创建内存优化表，必须首先创建内存优化的文件组。 内存优化的文件组容纳一个或多个容器。 每个容器都包含数据文件或差异文件，或是同时包含两者。  
   
- 即使 SCHEMA_ONLY 表中的数据行未保留，并且内存优化表和本机编译的存储过程中的元数据存储在传统目录中， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎仍需要 SCHEMA_ONLY 内存优化表的内存优化的文件组来提供针对带内存优化表的数据库的一致体验。  
+ 即使 `SCHEMA_ONLY` 表中的数据行未保留，并且内存优化表和本机编译的存储过程中的元数据存储在传统目录中，[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎仍需要 `SCHEMA_ONLY` 内存优化表的内存优化的文件组来提供针对带内存优化表的数据库的一致体验。  
   
  内存优化的文件组基于文件流文件组，具有以下差异：  
   
@@ -48,16 +48,21 @@ ms.locfileid: "51269740"
   
 -   使用内存优化的文件组后，只能通过删除数据库来删除它。 在生产环境中，您不太可能需要删除内存优化的文件组。  
   
--   在内存优化的文件组中，您无法删除非空容器或将数据和差异文件对移至另一个容器。  
-  
--   无法指定容器的 `MAXSIZE`。  
+-   在内存优化的文件组中，您无法删除非空容器或将数据和差异文件对移至另一个容器。    
   
 ## <a name="configuring-a-memory-optimized-filegroup"></a>配置内存优化的文件组  
- 您应考虑在内存优化的文件组中创建多个容器，并在不同的驱动器上分配这些容器以实现更多带宽来将数据流式传输到内存中。  
+请考虑在内存优化的文件组中创建多个容器，并在不同的驱动器上分配这些容器以实现更多带宽来将数据流式传输到内存中。 
+ 
+在具有多个容器和多个驱动器的情况下，采用循环法将数据和差异文件分配到容器中。 从第一个容器中分配第一个数据文件，并从下一个容器中分配差异文件，随后按此分配模式重复操作。 如果您有奇数个驱动器，并且每个驱动器均映射到一个容器，则此分配方案将跨容器均匀分配数据和差异文件。 但是，如果您有偶数个驱动器，并且每个驱动器均映射到一个容器，则可能会导致存储不均衡，其中数据文件映射到奇数个驱动器，而差异文件映射到偶数个驱动器。 若要在恢复时获得平衡 IO 流，可考虑将数据和差异文件对放在相同的主轴/存储上。
   
- 在配置存储时，您必须提供大小为持久内存优化表大小的四倍的可用磁盘空间。 还必须确保 I/O 子系统支持工作负荷所需的 IOPS。 如果按给定的 IOPS 填充数据和差异文件对，则您需要考虑按 3 倍的 IOPS 来进行存储和合并操作。 可以通过将一个或多个容器添加到内存优化的文件组来增加存储容量和 IOPS。  
+在配置存储时，您必须提供大小为持久内存优化表大小的四倍的可用磁盘空间。 还应确保 I/O 子系统支持工作负荷所需的 IOPS。 如果按给定的 IOPS 填充数据和差异文件对，则您需要考虑按 3 倍的 IOPS 来进行存储和合并操作。 可以通过将一个或多个容器添加到内存优化的文件组来增加存储容量和 IOPS。  
+ 
+> [!CAUTION]
+> 如果为内存优化文件组设置了 `MAXSIZE` 值，且检查点文件超过容器的最大大小，则数据库将变为 SUSPECT 状态。   
+> 在这种情况下，不要尝试将数据库设置为“OFFLINE”和“ONLINE”，这将导致数据库处于 RECOVERY_PENDING 状态。
   
 ## <a name="see-also"></a>另请参阅  
- [创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
- [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md) 
-  
+[创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
+[ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
+

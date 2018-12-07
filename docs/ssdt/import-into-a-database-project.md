@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667096"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400390"
 ---
 # <a name="import-into-a-database-project"></a>导入到数据库项目
 可以通过“导入”从活动的数据库或 .dacpac 使用新项目填充项目，或使用脚本中的新定义更新您项目中的现有对象。 请注意这三种途径存在一些行为差异，下面将进行说明。  

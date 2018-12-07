@@ -13,12 +13,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3e0a936d4898988dfeacfefe1bf00058b16fa5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757805"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522368"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 与其他 SQL Server 功能的兼容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47757805"
   
 -   可以通过将文件的路径添加为视图中的显式列，在视图中显示该路径。 例如：  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **索引视图**  
  当前索引视图不能包括 FILESTREAM 列或依赖 FILESTREAM 列的计算/持久计算列。 对于在 FileTable 上定义的视图也同样如此。  

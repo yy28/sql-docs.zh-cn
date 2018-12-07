@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527922"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
 可以使用 Team Foundation Build 将 SQL Server 单元测试作为生成验证测试 (BVT) 的一部分运行。 可以配置单元测试以部署数据库、生成测试数据，然后运行选定测试。 如果您不熟悉 Team Foundation Build，则应该在执行本主题中的过程之前查看以下信息：  
@@ -252,7 +252,7 @@ ms.locfileid: "51669856"
   
 5.  在导航栏中，单击“进程”。  
   
-6.  在“必需”组中的“要生成的项”中，单击浏览 (…) 按钮。  
+6.  在“必需”组中的“要生成的项”中，单击“浏览(…)”按钮。  
   
 7.  在“生成项目列表编辑器”对话框中，单击“添加”。  
   

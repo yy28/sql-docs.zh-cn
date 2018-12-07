@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34a278c1ec90d9ddc49771850cf6226e9ee702ba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4a2468c9c129c1c2e06101d7d7d1ec44c712f9bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642184"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400698"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以计划并且自动执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
@@ -175,7 +175,7 @@ ms.locfileid: "51642184"
     |**日志记录**|将日志提供程序与包执行操作相关联。<br /><br /> **用于文本文件的 SSIS 日志提供程序**<br /> 将日志条目写入 ASCII 文本文件<br /><br /> **用于 SQL Server 的 SSIS 日志提供程序**<br /> 将日志条目写入 MSDB 数据库的 sysssislog 表中。<br /><br /> **用于 SQL Server Profiler 的 SSIS 日志提供程序**<br /> 写入可用 SQL Server 事件探查器查看的跟踪。<br /><br /> **用于 Windows 事件日志的 SSIS 日志提供程序**<br /> 将日志条目写入 Windows 事件日志中的应用程序日志。<br /><br /> **用于 XML 文件的 SSIS 日志提供程序**<br /> 将日志文件写入 XML 文件。<br /><br /> 对于文本文件、XML 文件以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件探查器日志提供程序，您需要选择包内所含的文件连接管理器。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志提供程序，您需要选择包内所含的 OLE DB 连接管理器。<br /><br /> 此选项对应于 **dtexec** 的 **/Logger**选项。|  
     |**设置值**|覆盖包属性设置。 在 **“属性”** 框中的 **“属性路径”** 和 **“值”** 列中输入值。 为一个属性输入值后， **“属性”** 框中会出现一个空行，支持您为另一个属性输入值。<br /><br /> 若要从“属性”框中删除某个属性，请单击该行，然后单击 **“删除”**。<br /><br /> 你可以通过执行以下操作之一查找属性路径：<br /><br /> - 从 XML 配置文件 (\*.dtsconfig) 复制属性路径。 该路径列在该文件的 Configuration 部分中，作为 Path 属性的值。 下面是 MaximumErrorCount 属性的路径的示例：\Package.Properties[MaximumErrorCount]<br /><br /> - 运行“包配置向导”，并从最后的“完成向导”页中复制属性路径。 随后可以取消该向导。|  
     |**验证**|**仅执行已签名的包**<br /> 指示是否已检查包签名。 如果包未签名或签名无效，则包将失败。 此选项对应于 **dtexec** 的 **/VerifySigned**选项。<br /><br /> **验证包内部版本**<br /> 指示是否根据在此选项旁边的 **“内部版本”** 框中输入的内部版本号，验证包的内部版本号。 如果出现不匹配，则将不执行包。 此选项对应于 **dtexec** 的 **/VerifyBuild**选项。<br /><br /> **验证包 ID**<br /> 指示是否通过将包的 GUID 与此选项旁边的 **“包 ID”** 框中输入的包 ID 进行比较，对该 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyPackageID**选项。<br /><br /> **验证版本 ID**<br /> 指示是否通过将包的版本 GUID 与此选项旁边的 **“版本 ID”** 框中输入的版本 ID 进行比较，对该版本 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyVersionID**选项。|  
-    |**命令行**|修改 dtexec 的命令行选项。 有关这些选项的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。<br /><br /> **还原原始选项**<br /> 使用在“作业集属性”对话框的“包”、“配置”、“命令文件”、“数据源”、“执行选项”、“日志记录”、“设置值”和“验证”选项卡上设置的命令行选项。<br /><br /> **手动编辑命令**<br /> 在“命令行”框中键入附加命令行选项。<br /><br /> 单击 **“确定”** 将更改保存至作业步骤之前，您可以通过单击 **“还原原始选项”** 删除您在 **“命令行”** 框中键入的所有附加选项。<br /><br /> **\*\* 提示 \*\*** 你可以将命令行复制到命令提示符窗口，添加 `dtexec`，然后从该命令行运行包。 这是一种生成命令行文本的简单方法。|  
+    |**命令行**|修改 dtexec 的命令行选项。 有关这些选项的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。<br /><br /> **还原原始选项**<br /> 使用在“作业集属性”对话框的“包”、“配置”、“命令文件”、“数据源”、“执行选项”、“日志记录”、“设置值”和“验证”选项卡上设置的命令行选项。<br /><br /> **手动编辑命令**<br /> 在“命令行”框中键入附加命令行选项。<br /><br /> 单击“确定”将更改保存至作业步骤之前，可以通过单击“还原原始选项”删除在“命令行”框中键入的所有附加选项。<br /><br /> **\*\* 提示 \*\*** 你可以将命令行复制到命令提示符窗口，添加 `dtexec`，然后从该命令行运行包。 这是一种生成命令行文本的简单方法。|  
   
 9. 单击 **“确定”** 保存设置，然后关闭 **“新建作业步骤”** 对话框。  
   

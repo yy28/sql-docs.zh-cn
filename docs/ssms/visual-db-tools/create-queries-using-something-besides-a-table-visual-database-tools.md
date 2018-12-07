@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701952"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504085"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用表以外的对象创建查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ FROM sales
 有关向查询添加视图的详细信息，请参阅[向查询中添加表 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)。  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>使用查询代替表  
-您可以从查询选择行。 例如，假设您编写了一个查询，检索合著书籍（有一个以上作者的书）的书名和标识符。 该 SQL 可能类似以下形式：  
+您可以从查询选择行。 例如，假设已编写了一个查询，用于检索合著书籍（有一个以上作者的书）的书名和标识符。 该 SQL 可能类似以下形式：  
   
 ```  
 SELECT   
@@ -133,7 +133,7 @@ FROM
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>使用用户定义函数代替表  
 在 SQL Server 2000 或更高版本中，可以创建返回表的用户定义函数。 此类函数对执行复杂逻辑操作或逐步逻辑操作很有用。  
   
-例如，假设 employee 表包含一个附加列 employee.manager_emp_id，且存在从 manager_emp_id 到 employee.emp_id 的外键。 在 employee 表的每个行中，在 manager_emp_id 列显示该雇员的老板。 更确切地说，它显示该雇员的老板的 emp_id。 您可以创建用户定义函数以返回这样的表：在某个特定高级经理的所辖部门层次结构中工作的每个雇员在该表中各占一行。 您可以调用函数 fn_GetWholeTeam，并对其进行设计以获得输入变量（待检索部门的经理的 emp_id）。  
+例如，假设 employee 表包含一个附加列 employee.manager_emp_id，且存在从 manager_emp_id 到 employee.emp_id 的外键。 在 employee 表的每个行中，在 manager_emp_id 列显示该雇员的老板。 更确切地说，它显示该雇员的老板的 emp_id。 您可以创建用户定义函数以返回这样的表：在某个特定高级经理的所辖部门层次结构中工作的每个雇员在该表中各占一行。 可以调用函数 fn_GetWholeTeam，并对其进行设计以获得输入变量（待检索部门的经理的 emp_id）。  
   
 随后可以编写将 fn_GetWholeTeam 函数用作数据源的查询。 生成的 SQL 结果可能类似以下形式：  
   

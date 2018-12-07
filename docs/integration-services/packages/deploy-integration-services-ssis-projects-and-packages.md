@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642264"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526608"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和旧的包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -100,7 +100,7 @@ ms.locfileid: "51642264"
   
  若要将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，请完成以下任务：  
   
-1.  创建一个 SSISDB 目录（如果您尚未创建）。 有关详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
+1.  创建一个 SSISDB 目录（如果尚未创建）。 有关详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明： [将项目转换为项目部署模型](#convert)  
   
@@ -293,7 +293,7 @@ static void Main()
 
 **OR**
 
- - 在 SQL Server 安装文件夹下搜索可执行文件 **ISDeploymentWizard.exe** ；例如：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
+ - 在 SQL Server 安装文件夹下搜索可执行文件 ISDeploymentWizard.exe；例如：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
  
  > **注意：** 如果显示“简介”页，则单击“下一步”切换到“选择源”页。 
  
@@ -318,7 +318,7 @@ static void Main()
 #### <a name="select-source"></a>选择源  
  在“部署模型”  中选择“包部署”  选项后，“Integration Services 部署向导”  中的“选择源” 页会显示包部署模型的特定设置。  
   
- 若要选择源包，请单击“浏览...” 按钮以选择包含包的“文件夹”，或在“包文件夹路径”文本框中键入文件夹路径，然后单击页面底部的“刷新”按钮。 现在，将可以在列表框中看见特定文件夹中的所有包。 默认情况下，所有的包都会被选中。 单击第一列中的“复选框”  以选择要部署到服务器的包。  
+ 若要选择源包，请单击“浏览…”按钮以选择包含包的“文件夹”，或在“包文件夹路径”文本框中键入文件夹路径，然后单击页面底部的“刷新”按钮。 现在，将可以在列表框中看见特定文件夹中的所有包。 默认情况下，所有的包都会被选中。 单击第一列中的“复选框”  以选择要部署到服务器的包。  
   
  请参阅“状态”  和“消息”  列以验证包的状态。 如果将状态设置为“就绪”  或“警告” ，部署向导则不会妨碍部署过程。 而如果将状态设置为“错误” ，向导则无法进一步部署所选包。 若要查看详细的警告/错误消息，请单击“消息”列中的链接。  
   
@@ -327,7 +327,7 @@ static void Main()
  如果所有选定包的状态未设置为“错误” ，则可使用“下一步”  按钮以继续进行包部署过程。  
   
 #### <a name="select-destination"></a>选择目标  
- 在选择包源后，单击“下一步”  按钮以切换到“选择目标”  页。 必须将包部署到 SSIS 目录 (SSISDB) 中的项目。 因此，在部署包之前，请确保 SSIS 目录中已存在该目标项目。 否则创建一个空项目。在“选择目标”页中，在“服务器名称”文本框中键入服务器名称，或单击“浏览…” 按钮以选择服务器实例。 然后单击“浏览…” 按钮以指定目标项目，此按钮位于“路径”文本框旁。 如果项目不存在，请单击“新建项目...” 以创建空项目作为目标项目。 **必须** 在文件夹下创建项目。  
+ 在选择包源后，单击“下一步”  按钮以切换到“选择目标”  页。 必须将包部署到 SSIS 目录 (SSISDB) 中的项目。 因此，在部署包之前，请确保 SSIS 目录中已存在该目标项目。 否则创建一个空项目。在“选择目标”页中的“服务器名称”文本框中键入服务器名称，或单击“浏览…”按钮以选择服务器实例。 然后单击“路径”文本框旁的“浏览…”按钮以指定目标项目。 如果项目不存在，请单击“新建项目…”以创建空项目作为目标项目。 **必须** 在文件夹下创建项目。  
   
 #### <a name="review-and-deploy"></a>查看和部署  
  在“选择目标”  页上单击“下一步”  以切换到“Integration Services 部署向导”  中的“审阅” 页。 在审阅页中，审阅有关部署操作的摘要报表。 验证之后，单击“部署”  按钮以执行部署操作。  
@@ -336,7 +336,7 @@ static void Main()
  部署完成之后，将看到“结果”  页。 在“结果”  页中，查看部署过程中每个步骤的结果。 在“结果”  页上，单击“保存报表”  以保存部署报表，或单击“关闭”  以关闭该向导。  
 
 ## <a name="create-and-map-a-server-environment"></a>创建和映射服务器环境
-  您创建服务器环境来指定已部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目中所含包的运行时值。 您可以随后针对特定包、入口点包或给定项目中的所有包，将环境变量映射到参数。 入口点包通常是执行子包的父包。  
+  创建服务器环境来指定已部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目中所含包的运行时值。 您可以随后针对特定包、入口点包或给定项目中的所有包，将环境变量映射到参数。 入口点包通常是执行子包的父包。  
   
 > [!IMPORTANT]  
 >  对于给定的执行，只能使用单个服务器环境中包含的值来执行包。  
@@ -380,7 +380,7 @@ static void Main()
 7.  若要编写环境的脚本，请单击 **“脚本”**。 默认情况下，该脚本显示在一个新的查询编辑器窗口中。  
   
     > [!TIP]  
-    >  在您对环境属性进行了更改（例如添加变量）后，并且在 **“环境属性”** 对话框中单击 **“确定”** 前，需要单击 **“脚本”** 。 否则，将不会生成脚本。  
+    >  对环境属性进行了更改（例如添加变量）后，并且在“环境属性”对话框中单击“确定”前，需要单击“脚本”。 否则，将不会生成脚本。  
   
 8.  单击 **“确定”** 保存对环境属性的更改。  
   
@@ -676,7 +676,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **在转换后删除所有包的配置**  
  建议通过选择此选项从项目中删除所有配置。  
   
- 如果您没有选择此选项，将只删除您已选择用参数替换的配置。  
+ 如果没有选择此选项，将只删除已选择用参数替换的配置。  
   
 ###  <a name="createParameters"></a> 设置“创建参数”页上的选项  
  选择每个配置属性的参数名称和作用域。  
@@ -709,9 +709,9 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **“设置参数详细信息”** 对话框还列出参数值的数据类型和参数的来源。  
   
 ###  <a name="review"></a> 设置“检查”页上的选项  
- 使用 **“检查”** 页可以确认您为项目转换选择的选项。  
+ 使用“检查”页可以确认为项目转换选择的选项。  
   
- **Previous**  
+ **“上一步”**  
  单击以更改选项。  
   
  **转换**  

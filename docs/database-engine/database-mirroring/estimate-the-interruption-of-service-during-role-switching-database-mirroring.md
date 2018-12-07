@@ -18,12 +18,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 405c8ed92f76c2b08baf8c4fd7b7e29a366344f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534092"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47720625"
  数据库的故障转移时间取决于镜像服务器前滚重做队列中日志的速度，此速度反过来主要由系统硬件和当前的工作负荷决定。 主体数据库可能会非常忙，以至于主体服务器将日志传送到镜像服务器的速度远远大于镜像服务器前滚日志的速度。 在这种情况下，当镜像服务器前滚重做队列中的日志时，故障转移可能占用大量时间。 若要了解重做队列当前的大小，请使用数据库镜像性能对象中的 **Redo Queue** 计数器。 有关详细信息，请参阅 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
   
 ### <a name="estimating-the-failover-redo-rate"></a>估计故障转移重做速度  
- 可以使用生产数据库的测试副本测量前滚日志记录所需的时间（“重做速度 ”）。  
+ 可以使用生产数据库的测试副本测量前滚日志记录所需的时间（“重做速度”）。  
   
  估计故障转移过程中的前滚时间所用的方法取决于重做阶段中镜像服务器使用的线程数。 线程数取决于以下情况：  
   

@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0996aa061c8c662c0ff14700961559bdbf22102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596655"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509016"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能将表变量或表值参数指定为新表。  
   
- 即使已对源表进行分区，也不能使用 `SELECT…INTO` 创建已分区表。 `SELECT...INTO` 不使用源表的分区方案；而是在默认文件组中创建新表。 若要在已分区表中插入行，必须先创建已分区表，然后使用 `INSERT INTO...SELECT...FROM` 语句。  
+ 即使已对源表进行分区，也不能使用 `SELECT...INTO` 创建已分区表。 `SELECT...INTO` 不使用源表的分区方案；而是在默认文件组中创建新表。 若要在已分区表中插入行，必须先创建已分区表，然后使用 `INSERT INTO...SELECT...FROM` 语句。  
   
  源表中定义的索引、约束和触发器不会转移到新表中，也不能在 `SELECT...INTO` 语句中指定它们。 如果需要使用这些对象，可以在执行 `SELECT...INTO` 语句后创建它们。  
   
@@ -232,7 +232,7 @@ ORDER BY YearlyIncome;
  **适用范围：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
@@ -241,7 +241,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>另请参阅  

@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511267"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
  使用 OData 连接管理器连接到 OData 数据源。 OData 源组件使用 OData 连接管理器连接到 OData 数据源，并使用来自服务的数据。 有关详细信息，请参阅 [OData Source](../../integration-services/data-flow/odata-source.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "51641818"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>向 SSIS 包添加 OData 连接管理器  
  可以通过三种方式向 SSIS 包添加新 OData 连接管理器：  
   
--   单击 **“OData 源编辑器”** 中的 **“新建…”**  
+-   单击“OData 源编辑器”中的“新建…”按钮  
   
 -   在“解决方案资源管理器”  中，右键单击“连接管理器” 文件夹，然后单击“新建连接管理器” 。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   

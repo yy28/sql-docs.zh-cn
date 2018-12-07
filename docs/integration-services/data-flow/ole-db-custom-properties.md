@@ -11,12 +11,12 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9942a24879e9e9c8d3b2bfa0c20c0f3f7400992
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb7cf5fed46000c77634ad0c5461b926d6c361dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524514"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自定义属性
   **源自定义属性**  
@@ -52,7 +52,7 @@ ms.locfileid: "51638984"
   
 |属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> <br /><br /> **OpenRowset** (0) - 需要提供表或视图的名称。<br /><br /> **OpenRowset from Variable** (1) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **OpenRowset Using Fastload** (3) - 需要提供表或视图的名称。<br /><br /> **OpenRowset Using Fastload from Variable** (4) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **SQL 命令** (2) - 需要提供 SQL 语句。|  
+|AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> <br /><br /> “OpenRowset”(0) - 需要提供表或视图的名称。<br /><br /> “OpenRowset from Variable”(1) - 需要提供包含表或视图名称的变量的名称。<br /><br /> “OpenRowset Using Fastload”(3) - 需要提供表或视图的名称。<br /><br /> “OpenRowset Using Fastload from Variable”(4) - 需要提供包含表或视图名称的变量的名称。<br /><br /> “SQL 命令”(2) - 需要提供 SQL 语句。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 **DefaultCodePage** 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 **False**。|  
 |CommandTimeout|Integer|SQL 命令在超时前可以运行的最大秒数。如果值为 0，则表示不限制时间。 此属性的默认值为 0。<br /><br /> 注意：此属性在 **OLE DB 目标编辑器**中不可用，但可以使用 **高级编辑器**进行设置。|  
 |DefaultCodePage|Integer|与 OLE DB 目标关联的默认代码页。|  

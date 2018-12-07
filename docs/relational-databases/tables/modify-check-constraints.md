@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 802fe8653cc33582ee22edd59eea3fb37561e3d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d325480ad39800d28161e79cf468419278fb894f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507351"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47689175"
   
 1.  在“对象资源管理器” 中，右键单击包含 CHECK 约束的表，然后选择“设计”。  
   
-2.  在 **“表设计器”** 菜单上，单击 **“CHECK 约束…”**。  
+2.  在“表设计器”菜单上，单击“CHECK 约束…”。  
   
 3.  在 **“CHECK 约束”** 对话框中，在 **“选定的 CHECK 约束”** 下选择要编辑的约束。  
   

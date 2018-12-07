@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e547f591debaf4bfd3497a2a4c2d1d5580bca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739735"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531536"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储适进行实时运行分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "47739735"
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -203,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **插入/查询工作负载：** 如果工作负载主要是插入数据和查询数据，则建议将 COMPRESSION_DELAY 的默认值设置为 0。 在单个增量行组中插入 100 万行后，新插入的行将被压缩。  
     此类工作负载的某些示例包括：(a) 传统的 DW 工作负载 (b) 需要分析 Web 应用程序中的点击模式时执行的点击流分析。  
   
--   **OLTP 工作负载：** 如果工作负载频繁执行 DML（即大量混合更新、删除和插入操作），可以通过检查 DMV sys 来查看列存储索引碎片。 dm_db_column_store_row_group_physical_stats 来查看列存储索引碎片。 如果你看到在最近压缩的行组中，10% 以上的行标记为已删除，则可以使用 COMPRESSION_DELAY 选项来增加时间延迟，达到该延迟后，行可供压缩。 例如，对于你的工作负载，如果新插入的数据保持“热”状态（即多次更新）60 分钟，则应该将 COMPRESSION_DELAY 指定为 60。  
+-   **OLTP 工作负载：** 如果工作负载频繁执行 DML（即大量混合更新、删除和插入操作），可以通过检查 DMV sys 来查看列存储索引碎片。 dm_db_column_store_row_group_physical_stats 来查看列存储索引碎片。 如果你看到在最近压缩的行组中，10% 以上的行标记为已删除，则可以使用 COMPRESSION_DELAY 选项来增加时间延迟，达到该延迟后，行可供压缩。 例如，对于工作负载，如果新插入的数据保持“热”状态（即多次更新）60 分钟，则应该将 COMPRESSION_DELAY 指定为 60。  
   
  我们预计大多数客户不需要采取任何措施。 COMPRESSION_DELAY 选项的默认值应可满足需要。  
 对于高级用户，我们建议运行以下查询并收集过去 7 天已删除的行的百分比。  
@@ -218,7 +218,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- 如果压缩行组中已删除的行数超过 20%，则平整变化率小于 5% 的旧行组（称为冷行组）会将 COMPRESSION_DELAY 设置为 (youngest_rowgroup_created_time – current_time)。 请注意，这种方法最适合用于稳定且性质相对统一的工作负载。  
+ 如果压缩行组中已删除的行数超过 20%，则平整变化率小于 5% 的旧行组（称为冷行组）会将 COMPRESSION_DELAY 设置为 (youngest_rowgroup_created_time - current_time)。 请注意，这种方法最适合用于稳定且性质相对统一的工作负载。  
   
 ## <a name="see-also"></a>另请参阅  
  [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)   

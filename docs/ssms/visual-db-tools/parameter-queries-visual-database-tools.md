@@ -13,12 +13,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 323a630d1c3178f079319e00069e311b054f982a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd110c3ac8a222bb808e1ca5b084e36d4056b367
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505257"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>参数查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>可以使用参数的位置  
-您可以将参数用作文本值（文本值或数值）的占位符。 最常见的情况是，在单个行或组的搜索条件中（即在 SQL 语句的 WHERE 或 HAVING 子句中）使用参数作为占位符。  
+可以将参数用作文本值（文本值或数值）的占位符。 最常见的情况是，在单个行或组的搜索条件中（即在 SQL 语句的 WHERE 或 HAVING 子句中）使用参数作为占位符。  
   
 您可以在表达式中使用参数作为占位符。 例如，可能希望在每次运行查询时，通过提供不同的折扣值来计算打折价格。 为此，可以指定以下表达式：  
   

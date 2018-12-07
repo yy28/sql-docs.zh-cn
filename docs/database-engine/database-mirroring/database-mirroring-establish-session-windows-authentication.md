@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529920"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>数据库镜像 - 建立会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47599095"
   
      其中，_system-address>\<_ 是明确标识目标计算机系统的字符串，_port>\<_ 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为 **AdventureWorks**，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像端点使用的端口为 7022：  
+     例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7022：  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -90,7 +90,7 @@ ms.locfileid: "47599095"
   
      有关详细信息，请参阅步骤 4。  
   
-     例如，在主体服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始镜像服务器实例。 数据库名称为 **AdventureWorks**，系统地址为 DBSERVER2（伙伴系统的名称），伙伴数据库镜像端点使用的端口为 7025：  
+     例如，在主体服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始镜像服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER2（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7025：  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  

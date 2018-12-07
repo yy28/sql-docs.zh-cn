@@ -23,12 +23,12 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04664f3e8553ba1c9a29f6036532d2b8bc8fe3dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49a603d7b5307c2ddac938b32361e67716f705f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742785"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534376"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
@@ -239,7 +239,7 @@ ms.locfileid: "47742785"
 |**TextQualified**|指示是否使用文本限定符限定文本数据：<br /><br /> **True**：平面文件中的文本数据是受限定的。<br /><br /> **False**：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供列名。 默认为带编号的列列表，不过，您也可以任选一个唯一的描述性名称。|  
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}** – 列由回车符和换行符的组合分隔<br /><br /> **{CR}** – 列由回车符分隔<br /><br /> **{LF}** – 列由换行符分隔<br /><br /> **分号 {;}** – 列由分号分隔<br /><br /> **冒号 {:}** – 列由冒号分隔<br /><br /> **逗号 {,}** - 列由逗号分隔<br /><br /> **制表符 {t}** – 列由制表符分隔<br /><br /> **竖线 {&#124;}** – 列由竖线分隔|  
+|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}** - 列由回车符和换行符的组合分隔<br /><br /> **{CR}** - 列由回车符分隔<br /><br /> **{LF}** - 列由换行符分隔<br /><br /> **分号 {;}** - 列由分号分隔<br /><br /> **冒号 {:}** - 列由冒号分隔<br /><br /> **逗号 {,}** - 列由逗号分隔<br /><br /> **制表符 {t}** - 列由制表符分隔<br /><br /> **竖线 {&#124;}** - 列由竖线分隔|  
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   

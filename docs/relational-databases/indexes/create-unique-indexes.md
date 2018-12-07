@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515081"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47680484"
   
 7.  在主网格中，在“(常规)”下，选择“类型”，然后从列表中选择“索引”。  
   
-8.  选择“列”，然后单击省略号 **(…)**。  
+8.  选择“列”，然后单击省略号 (…)。  
   
 9. 在 **“索引列”** 对话框中的 **“列名”** 下，选择要编制索引的列。 最多可选择 16 列。 为获得最佳的性能，请只为每个索引选择一列或两列。 对于所选的每一列，指定索引是以升序还是以降序来排列此列的值。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47680484"
   
 6.  选中 **“唯一”** 复选框。  
   
-7.  在 **“索引键列”** 下，单击 **“添加…”**。  
+7.  在“索引键列”下，单击“添加…”。  
   
 8.  在“从 table\_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "47680484"
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>创建表的唯一索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -15,12 +15,12 @@ ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf8c50739d1579087000aabf9dfbb9e958663118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125da46c853c66d79abc7a28efa5000223711f50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532821"
 ---
 # <a name="remove-joins-visual-database-tools"></a>删除联接 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47670045"
 > [!NOTE]  
 > 从查询中移除联接不会更改数据库中的基础关系。  
   
-如果两个联接表都是查询的一部分，而且您移除了它们之间的所有联接条件，那么生成的查询结果将变为这两个表的积，即变为 CROSS JOIN。  
+如果两个联接表都是查询的一部分，而且移除了它们之间的所有联接条件，那么生成的查询结果将变为这两个表的积，即变为 CROSS JOIN。  
   
 ### <a name="to-remove-a-join"></a>移除联接  
   

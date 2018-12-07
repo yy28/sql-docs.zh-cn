@@ -15,12 +15,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ffbb59250f7038ce235b959dd5ea183133d0bf11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acd6c8da6560b0daed5eb1f029c71619b2e5d0fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790795"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502592"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "47790795"
 |Command|描述|  
 |-------------|-----------------|  
 |**撤消注册此数据库**|从数据库镜像监视器中删除选定的数据库。|  
-|**设置警告阈值…**|打开 **“设置警告阈值”** 对话框。 在此，系统管理员可以在每个伙伴上启用或禁用数据库警告，并可更改每个警告的阈值。 建议您在两个伙伴上都为给定警告设置阈值，以确保数据库进行故障转移时，警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。<br /><br /> 更新状态表时，只有在性能值处于或高于阈值的情况下，才会将事件写入性能的事件日志。 如果峰值在两次状态更新之间瞬间达到阈值，峰值将丢失。|  
+|**设置警告阈值...**|打开 **“设置警告阈值”** 对话框。 在此，系统管理员可以在每个伙伴上启用或禁用数据库警告，并可更改每个警告的阈值。 建议您在两个伙伴上都为给定警告设置阈值，以确保数据库进行故障转移时，警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。<br /><br /> 更新状态表时，只有在性能值处于或高于阈值的情况下，才会将事件写入性能的事件日志。 如果峰值在两次状态更新之间瞬间达到阈值，峰值将丢失。|  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   

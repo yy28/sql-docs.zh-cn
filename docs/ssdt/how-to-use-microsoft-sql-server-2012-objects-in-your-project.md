@@ -11,12 +11,12 @@ ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 539eb7ed053ff4f1d41aaa34360cd71772bbfc9c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681085"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397088"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何在您的项目中使用 Microsoft SQL Server 2012 对象
 在此示例中，你将向一个面向 Microsoft SQL Server 2012 的数据库项目中添加序列对象。  

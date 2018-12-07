@@ -14,12 +14,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5deb922fc370b6bc418d6b5f266bab83b306eba1
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: e1d7799abc3a930e72a9040c537e99fe7641a641
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505904"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>查看或修改基于策略的管理策略的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51512342"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
-1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 若要深入了解“查看策略 – object_name”对话框中的可用选项息，请参阅[“查看策略”对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
+1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[“查看策略”对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
 2.  完成后，单击“关闭”。  
   

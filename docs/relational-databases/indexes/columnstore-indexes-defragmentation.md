@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667586"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511544"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>列存储索引 - 碎片整理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,7 +182,7 @@ ms.locfileid: "51667586"
 ## <a name="rebuild"></a> 使用 ALTER INDEX REBUILD 对列存储索引进行离线碎片整理  
  在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本中，通常不需要重新生成列存储索引，因为 `REORGANIZE` 以在线操作形式在后台执行重要的重新生成。  
   
- 重新生成列存储索引会删除碎片，并将所有行移到列存储中。 使用 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 或 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) 执行完全重新生成现有聚集列存储索引。 此外，你也可以使用 ALTER INDEX... REBUILD，用于重新生成特定分区。  
+ 重新生成列存储索引会删除碎片，并将所有行移到列存储中。 使用 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 或 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) 执行完全重新生成现有聚集列存储索引。 此外，也可以使用 ALTER INDEX ...REBUILD，用于重新生成特定分区。  
   
 ### <a name="rebuild-process"></a>重新生成过程  
  要重新生成列存储索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 中数据库引擎功能的重大更改 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2016
+ms.date: 11/27/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2680ee81bbf2f4b49eb3835bb18a3d4b712f8c5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 83725ee74e17a91465356b426b13afc0c265f851
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536370"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中数据库引擎功能的重大更改
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题介绍了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。  
+  本主题介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。  
   
 ##  <a name="SQL15"></a> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的重大更改  
   
@@ -35,15 +35,15 @@ ms.locfileid: "51602687"
 -   使用 MD2、MD4、MD5、SHA 或 SHA1 哈希算法（不推荐）需要将数据库兼容级别设置为早于 130。  
 
 -   在数据库兼容级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，从 **datetime** 到 **datetime2** 数据类型的隐式转换显得更加准确。 只要 datetime 和 datetime2 数据类型之间存在混合比较情况，就需要使用 datetime2 数据类型的隐式转换。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4010261)。
-  
-## <a name="previous-versions"></a>先前版本  
-  
--   [SQL Server 2014 中数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-  
--   [SQL Server 2012 中数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-  
--   [SQL Server 2008 中数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-  
+
+## <a name="previous-versions"></a> 先前版本  
+
+有关 SQL Server 2014 版本和一些早期版本中重大更改的信息，请参见 [SQL Server 2014 中数据库引擎功能的重大更改](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14)。
+
+#### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>为非常旧的 SQL Server 版本归档文档
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中不推荐使用的数据库引擎功能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016 中废止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   

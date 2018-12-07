@@ -22,12 +22,12 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 715803e27516df04c0fb1267ceabc8a162d5da4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747825"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586200"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,49 +39,48 @@ ms.locfileid: "47747825"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## <a name="arguments"></a>参数  
  cursor_name  
- 已声明游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标。  
+ 已声明游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 `GLOBAL`，则 cursor_name 指全局游标，如果未指定 `GLOBAL`，则指局部游标。  
   
- @*cursor_variable_name*  
+ @cursor_variable_name  
  cursor 变量的名称。 @cursor_variable_name 必须为 cursor 类型。  
   
 ## <a name="remarks"></a>Remarks  
- 对游标进行操作的语句使用游标名称或游标变量引用游标。 DEALLOCATE 删除游标与游标名称或游标变量之间的关联。 如果一个名称或变量是最后引用游标的名称或变量，则将释放游标，游标使用的任何资源也随之释放。 用于保护提取隔离的滚动锁在 DEALLOCATE 上释放。 用于保护更新（包括通过游标进行的定位更新）的事务锁一直到事务结束才释放。  
+对游标进行操作的语句使用游标名称或游标变量引用游标。 `DEALLOCATE` 删除游标与游标名称或游标变量之间的关联。 如果一个名称或变量是最后引用游标的名称或变量，则将释放游标，游标使用的任何资源也随之释放。 用于保护提取隔离的滚动锁在 `DEALLOCATE` 上释放。 用于保护更新（包括通过游标进行的定位更新）的事务锁一直到事务结束才释放。  
   
- DECLARE CURSOR 语句分配游标并将其与游标名称关联。  
+`DECLARE CURSOR` 语句分配游标并将其与游标名称关联。  
   
-```  
+```sql  
 DECLARE abc SCROLL CURSOR FOR  
 SELECT * FROM Person.Person;  
 ```  
   
- 游标名称与某个游标关联之后，该名称在游标释放之前不能用作相同作用域（GLOBAL 或 LOCAL）内另一个游标的名称。  
+游标名称与某个游标关联之后，该名称在游标释放之前不能用作相同作用域（GLOBAL 或 LOCAL）内另一个游标的名称。  
   
  游标变量使用下列两种方法之一与游标关联：  
   
--   通过名称，使用 SET 语句将游标设置为游标变量。  
+-   通过名称，使用 `SET` 语句将游标设置为游标变量。  
   
-    ```  
+    ```sql  
     DECLARE @MyCrsrRef CURSOR;  
     SET @MyCrsrRef = abc;  
     ```  
   
 -   也可以不定义游标名称而创建游标并将其与变量关联。  
   
-    ```  
+    ```sql  
     DECLARE @MyCursor CURSOR;  
     SET @MyCursor = CURSOR LOCAL SCROLL FOR  
     SELECT * FROM Person.Person;  
     ```  
   
- A DEALLOCATE @cursor_variable_name 语句只删除对游标命名变量的引用。 直到批处理、存储过程或触发器结束时变量离开作用域，才释放变量。 在 DEALLOCATE @cursor_variable_name 语句之后，可以使用 SET 语句将变量与另一个游标关联。  
+ `DEALLOCATE <@cursor_variable_name>` 语句只删除对游标命名变量的引用。 直到批处理、存储过程或触发器结束时变量离开作用域，才释放变量。 在 `DEALLOCATE <@cursor_variable_name>` 语句之后，可以使用 SET 语句将变量与另一个游标关联。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -96,15 +95,15 @@ SET @MyCursor = CURSOR LOCAL SCROLL FOR
 GO  
 ```  
   
- 不必显式释放游标变量。 变量在离开作用域时被隐式释放。  
+不必显式释放游标变量。 变量在离开作用域时被隐式释放。  
   
 ## <a name="permissions"></a>Permissions  
- 默认情况下，将 DEALLOCATE 权限授予任何有效用户。  
+ `DEALLOCATE` 语句的权限默认情况下授予任何有效用户。  
   
 ## <a name="examples"></a>示例  
  以下脚本显示游标如何持续到最后的名称或持续到引用它们的变量已释放。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create and open a global named cursor that  

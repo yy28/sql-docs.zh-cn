@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540396"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "51673346"
   
 3.  展开 **“数据库”** 节点。  
   
-4.  右键单击要部署的数据库，选择 **“任务”**，然后选择 **“将数据库部署到 SQL Azure…”**  
+4.  右键单击要部署的数据库，选择 “任务”，然后选择“将数据库部署到 SQL Azure…”  
   
 5.  完成向导对话框：  
   
@@ -92,22 +92,22 @@ ms.locfileid: "51673346"
   
 -   **下一步** - 进入 **“部署设置”** 页。  
   
--   **取消** – 取消操作并关闭向导。  
+-   **取消** - 取消操作并关闭向导。  
   
 ##  <a name="Deployment_settings"></a> “部署设置”页  
  使用此页可以指定目标服务器并提供有关新数据库的详细信息。  
   
  **本地主机：**  
   
--   **服务器连接** – 指定服务器连接详细信息，然后单击 **“连接”** 来验证连接。  
+-   **服务器连接** - 指定服务器连接详细信息，然后单击“连接”来验证连接。  
   
--   **新数据名称** – 指定新数据库的名称。  
+-   **新数据库名称** - 指定新数据库的名称。  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库设置：**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本** – 从下拉菜单中选择 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的版本。  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本** - 从下拉菜单中选择 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的版本。  
   
--   **最大数据库大小** – 从下拉菜单中选择最大数据库大小。  
+-   **最大数据库大小** - 从下拉菜单中选择最大数据库大小。  
   
  **其他设置：**  
   

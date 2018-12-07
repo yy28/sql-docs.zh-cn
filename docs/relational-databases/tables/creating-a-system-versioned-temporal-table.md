@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665516"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409614"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665516"
 -   使用事先创建的用户定义的历史记录表创建临时表：创建最满足你的需求的历史记录表，然后在临时表创建过程中引用该表。  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>使用匿名历史记录表创建临时表  
- 使用“匿名”历史记录表创建临时表是一个可快速创建对象的方便选项，特别是在原型环境和测试环境中。 它也是创建临时表的最简单方法，因为它不需要在 **SYSTEM_VERSIONING** 子句中指定任何参数。 下面的示例将在不定义历史记录表名称的情况下，创建启用了系统版本控制的新表。  
+ 使用“匿名”历史记录表创建临时表是一个可快速创建对象的方便选项，特别是在原型环境和测试环境中。 它也是创建时态表的最简单方法，因为它不需要在 SYSTEM_VERSIONING 子句中指定任何参数。 下面的示例将在不定义历史记录表名称的情况下，创建启用了系统版本控制的新表。  
   
 ```  
 CREATE TABLE Department   

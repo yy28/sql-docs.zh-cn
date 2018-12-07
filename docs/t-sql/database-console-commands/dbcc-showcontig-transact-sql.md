@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1937d8b4da1b824b0a1b46808b5e03f9bbdc77d9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697585"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510709"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ DBCC SHOWCONTIG 可确定表是否高度碎片化。 在对表进行数据修改
 -   删除然后重新创建聚集索引。  
      重新创建聚集索引将重新组织数据，从而使数据页填满。 填充度可以使用 CREATE INDEX 中的 FILLFACTOR 选项进行配置。 这种方法的缺点是索引在删除/重新创建周期内为脱机状态，并且该操作是一个整体，不可中断。 如果中断索引创建，则不能重新创建索引。  
 -   对索引的叶级页按逻辑顺序重新排序。  
-     使用 INDEX…REORGANIZE，对索引的页级页按逻辑顺序重新排序。 由于此操作是联机操作，因此语句运行时索引可用。 此外，中断该操作不会丢失已完成的工作。 这种方法的缺点是在重新组织数据方面没有聚集索引的删除/重新创建操作有效。  
+     使用 INDEX…REORGANIZE 对索引的叶级页按逻辑顺序重新排序。 由于此操作是联机操作，因此语句运行时索引可用。 此外，中断该操作不会丢失已完成的工作。 这种方法的缺点是在重新组织数据方面没有聚集索引的删除/重新创建操作有效。  
 -   重新生成索引。  
      使用 REBUILD 和 ALTER INDEX 重新生成索引。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   

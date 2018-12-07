@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532736"
 ---
 # <a name="temporal-table-usage-scenarios"></a>临时表使用方案
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  在带有 FOR SYSTEM_TIME 的临时子句中指定的筛选条件为 SARG 型（即 SQL Server 可以利用基础聚集索引以执行搜索而不是扫描操作。   
-> 如果直接查询历史记录表，请确保筛选条件也是 SARG 型的，即在指定筛选器时采用 \<period column>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 格式。  
+> 如果直接查询历史记录表，请确保筛选条件也是 SARG 型的，即在指定筛选器时采用 \<period column>  {< | > | =, …} date_condition AT TIME ZONE 'UTC' 格式。  
 > 如果将 AT TIME ZONE 应用到时间段列，SQL Server 会执行开销可能很大的表/索引扫描。 在查询中要避免这种类型的条件：  
-> \<period column>  AT TIME ZONE ‘\<your time zone>’  >  {< | > | =, …} date_condition。  
+> \<period column>  AT TIME ZONE '\<your time zone>'  >  {< | > | =, ...} date_condition。  
   
  另请参见： [在系统版本控制的临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
   
@@ -446,7 +446,7 @@ FROM CTE
  以下示例演示了该过程，并假定 DimLocation 维度表已经有 ValidFrom 和 ValidTo 作为 datetime2 非空列，通过 ETL 过程对这些列进行填充：  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

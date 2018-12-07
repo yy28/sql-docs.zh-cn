@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 397bc5c7597aedc91c3f6382c505eca9d1cd887b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516005"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,8 +114,8 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 |项目模板|支持的 SQL 平台|  
 |-------------------|--------------------|  
 关系数据库|  SQL Server 2005* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL Database<br /><br />Azure SQL 数据仓库（仅支持查询；尚不支持数据库项目）<br /><br />  * SQL Server 2005 支持已停止提供，<br /><br /> 请转至官方支持的 SQL 版本|
-  |Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 – SQL Server 2017|
-  |Integration Services 包| SQL Server 2012 – SQL Server 2017    |
+  |Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 - SQL Server 2017|
+  |Integration Services 包| SQL Server 2012 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
 SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4.1：[下载数据层应用程序框架 (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508)。

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028753b3af98748bd99c9b4b7adfa0801c1751e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409155"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止对系统版本的临时表的系统版本控制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47595247"
 可以通过将 **SYSTEM_VERSIONING** 子句设置为 **OFF**实现此操作。  
   
 ## <a name="setting-systemversioning--off"></a>将 SYSTEM_VERSIONING 设置为 OFF  
- 如果希望对临时表执行特定的维护操作或者不再需要版本控制的表，请停止系统版本控制。 完成此操作后，将获得两个独立的表：  
+ 如果希望对时态表执行特定的维护操作或者不再需要版本控制的表，请停止系统版本控制。 完成此操作后，将获得两个独立的表：  
   
 -   具有时间段定义的当前表  
   

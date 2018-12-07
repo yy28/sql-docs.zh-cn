@@ -13,12 +13,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522322"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立数据库镜像会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47838935"
   
  若要建立数据库镜像会话并修改数据库的数据库镜像属性，请使用 **“数据库属性”** 对话框中的 **“镜像”** 页。在使用 **“镜像”** 页配置数据库镜像之前，请确保已满足下列要求：  
   
--   主体服务器实例和镜像服务器实例必须运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（Standard 或 Enterprise）。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
+-   主体服务器实例和镜像服务器实例必须运行同一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（Standard 或 Enterprise）。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
   
     > [!NOTE]  
     >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均未提供见证服务器实例。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  

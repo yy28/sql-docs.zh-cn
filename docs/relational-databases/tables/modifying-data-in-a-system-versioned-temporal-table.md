@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04ca2c0792b1b10ffd4baf182ac8aa12fb5c1f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b1b2098d1486c8dbc6958c9668387c815047d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810428"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403442"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制的临时表中修改数据
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
 ```  
   
- 如果你尝试在没有时间段定义的情况下从表中执行 PARTITION SWITCH，将收到错误消息： `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
+ 如果你尝试在没有时间段定义的情况下从表中执行 PARTITION SWITCH，将收到错误消息：`Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
 ## <a name="updating-data"></a>更新数据  
  用常规的 **UPDATE** 语句在当前表中更新数据。 你可以将当前表中的数据从历史记录表更新到“哎呀”方案。 但是，无法更新 **PERIOD** 列且当 **SYSTEM_VERSIONING = ON**时不能直接在历史记录表中更新数据。   
@@ -147,7 +147,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 ```  
   
 ### <a name="updating-the-current-table-from-the-history-table"></a>从历史记录表更新当前表  
- 可以对当前表使用 **UPDATE** 以便在过去的特定时间点将实际行状态恢复为有效状态（恢复为“上次已知完好的行版本”）。 下面的示例显示了恢复为截至 2015-04-25 的历史记录表中的值，其中的 DeptID = 10。  
+ 可以对当前表使用 UPDATE 以便在过去的特定时间点将实际行状态恢复为有效状态（恢复为“上次已知完好的行版本”）。 下面的示例显示了恢复为截至 2015-04-25 的历史记录表中的值，其中的 DeptID = 10。  
   
 ```  
 UPDATE Department   

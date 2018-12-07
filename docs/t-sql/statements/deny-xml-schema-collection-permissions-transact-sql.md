@@ -18,12 +18,12 @@ ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0fb17be22b1dc970b83ca28d1fec44afd4e80f9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 096bc5aa18727eec1e01d1cf2da1fbd0c48834f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781295"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534068"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY XML 架构集合权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

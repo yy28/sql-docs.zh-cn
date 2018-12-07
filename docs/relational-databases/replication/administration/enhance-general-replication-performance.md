@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c57fd45ac2633e8027e916055b2850033bf69e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539190"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,11 +154,11 @@ ms.locfileid: "47665035"
   
 -   降低复制代理的详细级别，在初始测试、监视或调试期间除外。  
   
-     降低分发代理或合并代理的 **–HistoryVerboseLevel** 参数和 **–OutputVerboseLevel** 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
+     降低分发代理或合并代理的 –HistoryVerboseLevel 参数和 –OutputVerboseLevel 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
   
--   使用快照代理、合并代理和分发代理的 **–MaxBCPThreads** 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
+-   使用快照代理、合并代理和分发代理的 –MaxBCPThreads 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
   
--   使用分发代理和合并代理的 **–UseInprocLoader** 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
+-   使用分发代理和合并代理的 –UseInprocLoader 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
   
  代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   

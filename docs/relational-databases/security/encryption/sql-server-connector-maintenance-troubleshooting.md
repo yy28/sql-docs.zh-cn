@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649505"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520693"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47649505"
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器要求密钥名称只能使用字符“a-z”、“A-Z”、“0-9”和“-”，其长度限制为 26 个字符。   
-> Azure 密钥保管库中具有同一密钥名称的不同密钥版本不会使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 若要轮换 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]正在使用的 Azure 密钥保管库密钥，必须创建一个具有新的密钥名称的新密钥。  
+> Azure 密钥保管库中具有同一密钥名称的不同密钥版本不会使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 若要轮换 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用的 Azure Key Vault 密钥，必须创建一个具有新的密钥名称的新密钥。  
   
  通常，用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的服务器非对称密钥每隔 1 - 2 年需要重设版本。 请务必注意，尽管密钥保管库允许重设密钥版本，但客户不应使用该功能来实施版本控制。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器无法处理密钥保管库密钥版本的更改。 若要实施密钥版本控制，客户需要在密钥保管库中创建新密钥，然后在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中重新加密数据加密密钥。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649505"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -159,7 +159,7 @@ ms.locfileid: "47649505"
 ### <a name="on-azure-key-vault"></a>在 Azure 密钥保管库  
   
 **密钥操作如何与 Azure 密钥保管库配合使用？**  
- 密钥保管库中的非对称密钥用于保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密密钥。 仅非对称密钥的公共部分会离开保管库，其私有部分绝不会由保管库导出。 使用非对称密钥的所有加密操作都委托给了 Azure 密钥保管库服务，并受到该服务的安全性的保护。  
+ 密钥保管库中的非对称密钥用于保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密密钥。 仅非对称密钥的公共部分会离开保管库，其私有部分绝不会由保管库导出。 使用非对称密钥的所有加密操作都委托给了 Azure Key Vault 服务，并受到该服务的安全性的保护。  
   
  **什么是密钥 URI？**  
  Azure 密钥保管库中的所有密钥都有一个统一资源标识符 (URI)，你可以使用它在应用程序中引用密钥。 使用格式 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 可获取当前版本，使用 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 可获取特定的版本。  
@@ -242,7 +242,7 @@ SQL Server 连接器需要哪些终结点的访问权限？ 该连接器与两�
   
 如果未在此表中看到你的错误代码，以下是发生此错误的一些其他原因：   
   
--   你可能无法访问 Internet，以及无法访问 Azure 密钥保管库 - 请检查你的 Internet 连接。  
+-   你可能无法访问 Internet，以及无法访问 Azure Key Vault - 请检查你的 Internet 连接。  
   
 -   Azure 密钥保管库服务可能已关闭。 请另选时间重试一次。  
   

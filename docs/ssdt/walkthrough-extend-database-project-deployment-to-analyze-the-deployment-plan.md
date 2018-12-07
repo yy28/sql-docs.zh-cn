@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664626"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512613"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>演练：扩展数据库项目部署以分析部署计划
 可以创建部署参与者以便在部署 SQL 项目时执行自定义操作。 可以创建 DeploymentPlanModifier 或 DeploymentPlanExecutor。 使用 DeploymentPlanModifier 可在执行计划前更改计划，使用 DeploymentPlanExecutor 可在执行计划时执行操作。 在本演练中，您创建一个名为 DeploymentUpdateReportContributor 的 DeploymentPlanExecutor，它可创建有关在部署数据库项目时执行的操作的报告。 由于此生成参与者接受用于控制是否生成报告的参数，因此您必须额外执行一个必需步骤。  
@@ -92,7 +92,7 @@ ms.locfileid: "51664626"
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ ms.locfileid: "51664626"
   
     ```  
   
-    在此示例中，该属性的第一个参数应是一个唯一标识符，该标识符将用于在项目文件中标识您的参与者。 最佳做法是将库的命名空间（在本演练中为“MyDeploymentContributor”）与类名称（在本演练中为“DeploymentUpdateReportContributor”）结合使用来生成标识符。  
+    在此示例中，该属性的第一个参数应是一个唯一标识符，该标识符将用于在项目文件中标识你的参与者。 最佳做法是将库的命名空间（在本演练中为“MyDeploymentContributor”）与类名称（在本演练中为“DeploymentUpdateReportContributor”）结合使用来生成标识符。  
   
 3.  接下来，添加下面的成员，您将使用该成员以使此提供程序能够接受命令行参数：  
   
@@ -586,7 +586,7 @@ ms.locfileid: "51664626"
   
 1.  导航到 %Program Files%\MSBuild。  
   
-2.  创建一个将存储您的目标文件的新文件夹“MyContributors”。  
+2.  创建一个将存储目标文件的新文件夹“MyContributors”。  
   
 3.  在该目录中创建一个新文件“MyContributors.targets”，将下列文本添加到该文件中并保存该文件：  
   
@@ -610,16 +610,16 @@ ms.locfileid: "51664626"
 在使用了这些方法之一后，您可以使用 MSBuild 来传入命令行生成的参数。  
   
 > [!NOTE]  
-> 您必须始终更新“DeploymentContributors”属性以指定您的参与者 ID。 此 ID 与参与者源文件中的“ExportDeploymentPlanExecutor”属性中使用的 ID 相同。 如果没有此 ID，你的参与者在生成项目时将不会运行。 仅在您具有运行参与者所需的参数时需要更新“ContributorArguments”属性。  
+> 您必须始终更新“DeploymentContributors”属性以指定您的参与者 ID。 此 ID 与参与者源文件中的“ExportDeploymentPlanExecutor”属性中使用的 ID 相同。 如果没有此 ID，你的参与者在生成项目时将不会运行。 仅在具有运行参与者所需的参数时需要更新“ContributorArguments”属性。  
   
 ### <a name="deploy-the-database-project"></a>部署数据库项目  
-可以像在 Visual Studio 中一样正常发布或部署您的项目。 只需打开一个包含 SQL 项目的解决方案，然后通过右键单击项目的上下文菜单来选择“发布...” 选项，或使用 F5 进行对 LocalDB 的调试部署。 在此示例中，我们将使用“发布...” 对话框生成部署脚本。  
+可以像在 Visual Studio 中一样正常发布或部署您的项目。 只需打开包含 SQL 项目的解决方案，并从该项目的右键单击上下文菜单中选择“发布…”选项，或使用 F5 以对 LocalDB 进行调试部署即可。 在此示例中，我们将使用“发布…”对话框来生成部署脚本。  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>部署 SQL 项目并生成部署报告  
   
 1.  打开 Visual Studio 并打开包含您的 SQL 项目的解决方案。  
   
-2.  选择您的项目，并点击“F5”以进行调试部署。 注意：由于 ContributorArguments 元素设置为仅在配置为“调试”时包含，因此现在仅为调试部署生成部署报告。 若要更改此情况，请从 ContributorArguments 定义中删除 Condition="'$(Configuration)' == 'Debug'" 语句。  
+2.  选择你的项目，并点击 F5 以进行调试部署。 注意：由于 ContributorArguments 元素设置为仅在配置为“调试”时包含，因此现在仅为调试部署生成部署报告。 若要更改此情况，请从 ContributorArguments 定义中删除 Condition="'$(Configuration)' == 'Debug'" 语句。  
   
 3.  输出窗口中将显示与下面类似的输出：  
   

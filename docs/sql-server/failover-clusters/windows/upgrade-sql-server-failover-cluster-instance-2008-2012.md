@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394142"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例
 

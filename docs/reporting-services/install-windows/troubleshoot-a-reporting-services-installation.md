@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814020"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391660"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
 
@@ -75,7 +75,7 @@ ms.locfileid: "51814020"
  ![用于返回首页链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安装 SQL Server 2016 SSRS 后，在 SharePoint 管理中心看不到 SQL Server Reporting Services 服务  
- 说明： 如果在 SharePoint 模式中成功安装 SQL Server 2016 Reporting Services 和适用于 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 外接程序后，在以下两个菜单中看不到“SQL Server Reporting Services”，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务尚未注册：  
+ 说明：如果在 SharePoint 模式中成功安装 SQL Server 2016 Reporting Services 和适用于 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 外接程序后，在以下两个菜单中看不到“SQL Server Reporting Services”，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务尚未注册：  
   
 -   SharePoint 2013/2016 管理中心 ->“应用程序管理” ->“管理服务器上的服务”页  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51814020"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  确认在以下页面上 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的状态显示为“**已启动**”：SharePoint 2013/2016 管理中心 ->“**应用程序管理**” ->“**管理服务器上的服务**”  
+2.  确认在以下页面上 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的状态显示为“已启动”：SharePoint 2013/2016 管理中心 ->“应用程序管理”->“管理服务器上的服务”  
   
  ![用于返回首页链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   

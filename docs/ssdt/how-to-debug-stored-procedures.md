@@ -13,12 +13,12 @@ ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70ed380939046fd66f3d829c96d798190c039918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533426"
 ---
 # <a name="how-to-debug-stored-procedures"></a>如何调试存储过程
 使用 Transact\-SQL 调试器，你可以通过为 SQL 存储过程显示 SQL 调用堆栈、局部变量和参数，以交互方式调试存储过程。 与其他编程语言中的调试一样，你可以在调试 Transact\-SQL 脚本的同时查看和修改局部变量和参数、查看全局变量以及控制和管理断点。  
@@ -57,7 +57,7 @@ ms.locfileid: "47605145"
   
 7.  按下 Transact\-SQL 编辑器工具栏中的绿色箭头按钮上的下拉箭头，然后选择“使用调试器执行”，以便使用调试执行查询。  
   
-8.  或者，你可以从 SQL Server 对象资源管理器开始调试。 右键单击 AddProduct 存储过程（位于 “本地” -> “TradeDev”数据库 -> “可编程性” -> “存储过程”下）。 选择“调试过程...”。 如果对象需要参数，则会出现“调试过程”对话框，显示一个包含各个参数行的表。 表中的每一行都包含参数名称列和参数值列。 输入各个参数的值，再单击“确定”。  
+8.  或者，你可以从 SQL Server 对象资源管理器开始调试。 右键单击 AddProduct 存储过程（位于 “本地” -> “TradeDev”数据库 -> “可编程性” -> “存储过程”下）。 选择“调试过程...”。如果对象需要参数，则会出现“调试过程”对话框，显示一个包含各个参数行的表。 表中的每一行都包含参数名称列和参数值列。 输入各个参数的值，再单击“确定”。  
   
 9. 请确保“本地”窗口打开。 如果未打开，则单击“调试”菜单，选择“窗口”和“本地”。  
   

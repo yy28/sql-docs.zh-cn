@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 115435aae796ea846e6412e6db5526cd9eb50526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505826"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>配置灵活的自动故障转移策略
 
@@ -114,7 +114,7 @@ ms.locfileid: "47599305"
   
     -   若要设置故障转移条件级别，请使用 FailureConditionLevel level 参数，其中 level 为以下值之一：  
   
-        |ReplTest1|Level|当出现以下情况时，自动启动故障转移…|  
+        |ReplTest1|级别|当出现以下情况时，自动启动故障转移…|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
         |**OnServerUnresponsive**|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  

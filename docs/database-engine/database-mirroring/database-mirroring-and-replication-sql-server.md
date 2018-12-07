@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534438"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637485"
   
     -   将 **@working_directory** 参数的值设置为主体数据库使用的快照文件夹。  
   
-4.  为 **–PublisherFailoverPartner** 代理参数指定镜像名称。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
+4.  为“-PublisherFailoverPartner”代理参数指定镜像名称。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
   
     -   快照代理（对于所有发布）  
   
@@ -97,9 +97,9 @@ ms.locfileid: "47637485"
   
     -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [复制代理可执行文件概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     建议将 **–PublisherFailoverPartner** 添加到代理配置文件，然后在配置文件中指定镜像名称。 例如，如果您通过存储过程配置复制，请执行以下操作：  
+     建议将“-PublisherFailoverPartner”添加到代理配置文件，然后在配置文件中指定镜像名称。 例如，如果您通过存储过程配置复制，请执行以下操作：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

@@ -18,12 +18,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1633811117b65b397f3f961898895b785cb86d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5d13e7ee8fa8bcf058abfada37583c7d69cfa72
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648792"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527434"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
   在脚本组件中编写自定义代码之前，必须选择要创建的数据流组件的类型：源、转换或目标，然后在“脚本转换编辑器”中配置组件的元数据和属性。  
@@ -85,9 +85,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  “脚本转换编辑器”创建第一个输出时，该编辑器会将输出的 SynchronousInputID 属性设置为组件的输入 ID。 但是，当编辑器创建后续输出时，它会将那些输出的 SynchronousInputID 属性设置为零。  
 >   
->  如果要创建具有同步输出的组件，则每个输出的 SynchronousInputID 属性必须设置为组件的输入 ID。 因此，编辑器在第一个输出之后创建的每个输出的 SynchronousInputID 值必须从零更改为组件的输入 ID。  
+>  如果要创建具有同步输出的组件，则每个输出的“SynchronousInputID”属性必须设置为组件的输入“ID”。 因此，编辑器在第一个输出之后创建的每个输出的 SynchronousInputID 值必须从零更改为组件的输入 ID。  
 >   
->  如果要创建具有异步输出的组件，则每个输出的 SynchronousInputID 属性必须设置为零。 因此，第一个输出的 SynchronousInputID 值必须从组件的输入 ID 更改为零。  
+>  如果要创建具有异步输出的组件，则每个输出的 SynchronousInputID 属性必须设置为零。 因此，第一个输出的“SynchronousInputID”值必须从组件的输入“ID”更改为零。  
   
  有关将行定向到脚本组件中两个同步输出之一的示例，请参阅[使用脚本组件创建同步转换](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。  
   

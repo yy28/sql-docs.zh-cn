@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696205"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533357"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER DATABASE database_name
  SET HADR  
  在指定的数据库上执行指定的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 命令。  
   
- { AVAILABILITY GROUP *=***group_name | OFF }  
+ { AVAILABILITY GROUP =group_name | OFF }  
  在指定的可用性组中加入或删除可用性数据库，如下所示：  
   
  group_name  
@@ -82,7 +82,7 @@ ALTER DATABASE database_name
  OFF  
  从可用性组中删除指定的辅助数据库。  
   
- 如果辅助数据库已远远落后于主数据库，并且您不想等待辅助数据库赶上主数据库，则删除辅助数据库可能有用。 在删除辅助数据库之后，可以通过用最新的日志备份（使用 RESTORE …）还原备份序列来更新此数据库 WITH NORECOVERY).  
+ 如果辅助数据库已远远落后于主数据库，并且您不想等待辅助数据库赶上主数据库，则删除辅助数据库可能有用。 在删除辅助数据库之后，可以通过用最新的日志备份（使用 RESTORE …）还原备份序列来更新此数据库WITH NORECOVERY).  
   
 > [!IMPORTANT]  
 >  若要从可用性组中完全删除可用性数据库，请连接到承载主副本的服务器实例，并使用 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)group_name REMOVE DATABASE availability_database_name语句。 有关详细信息，请参阅[从可用性组中删除主数据库 (SQL Server)](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  

@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 125ce02e483cc927cf5b6a1d37f4209dcc3dcb22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836655"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617430"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-在第二个参数中指定的某些字符转换为字符目标集后，返回作为第一个参数提供的字符串。
+在第二个参数中指定的某些字符转换为第三个参数中指定的字符目标集后，返回作为第一个参数提供的字符串。
 
 ## <a name="syntax"></a>语法   
 ```
@@ -36,23 +36,23 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>参数   
 
-inputString   
-任何字符类型（nvarchar、varchar、nchar、char）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
+ inputString   
+ 是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 inputString 可以是任何字符数据类型（nvarchar、varchar、nchar、char）。
 
-字符   
-任何包含应替换字符的字符类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
+ 字符   
+ 是一个包含应替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 字符可以是任何字符数据类型。
 
-翻译   
-类型和长度与第二个参数匹配的字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
+转换   
+ 是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同。
 
 ## <a name="return-types"></a>返回类型   
-返回与 `inputString`（第二个参数中的字符被替换为第三个参数中的匹配字符）具有相同类型的字符表达式。
+返回与 `inputString`（第二个参数中的字符被替换为第三个参数中的匹配字符）具有相同数据类型的字符表达式。
 
 ## <a name="remarks"></a>Remarks   
 
-如果字符和转换长度不同，则 `TRANSLATE` 函数将返回错误。 如果 null 值作为字符或替换参数提供，则 `TRANSLATE` 函数应返回不变的输入。 `TRANSLATE` 函数的行为应与 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函数的行为相同。   
+如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
 
-`TRANSLATE` 函数行为等同于使用多个 `REPLACE` 函数。
+`TRANSLATE` 函数行为等同于使用多个 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函数。
 
 `TRANSLATE` 始终可以感知 SC 排序规则。
 
@@ -68,9 +68,34 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 2*(3+4)/(7-2)
 ```
 
->  [!NOTE]
->  此示例中的 `TRANSLATE` 函数相当于以下语句使用`REPLACE`：`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');`，但是更加的简单 
+#### <a name="equivalent-calls-to-replace"></a>与 REPLACE 等效的调用
 
+在以下 SELECT 语句中，有一组对 REPLACE 函数的四个嵌套调用。 此组相当于上述 SELECT 中对 TRANSLATE 函数的一次调用：
+
+```sql
+SELECT
+REPLACE
+(
+      REPLACE
+      (
+            REPLACE
+            (
+                  REPLACE
+                  (
+                        '2*[3+4]/{7-2}',
+                        '[',
+                        '('
+                  ),
+                  ']',
+                  ')'
+            ),
+            '{',
+            '('
+      ),
+      '}',
+      ')'
+);
+```
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. 将 GeoJSON 点转换为 WKT    
 GeoJSON 格式可用于对各种地理数据结构进行编码。 通过 `TRANSLATE` 函数，开发人员可以轻松地将 GeoJSON 点转换为 WKT 格式，反之亦然。 以下查询将输入中的方括号和大括号替换为圆括号：   

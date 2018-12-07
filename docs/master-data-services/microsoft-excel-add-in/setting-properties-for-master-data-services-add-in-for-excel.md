@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4ca842edd22eb0b4eadd7a44ededcd30530654f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d00e95ad228d38b3984cb38a3ef5f976a2dad6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644475"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414114"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>设置用于 Excel 的 Master Data Services 外接程序的属性
 
@@ -42,7 +42,7 @@ ms.locfileid: "47644475"
 |数据：筛选器|最大行数|选择要加载的行数的阈值，超过该值将发布一个筛选器警告。|  
 |数据：筛选器|最大列数|选择要加载的列数的阈值，超过该值将发布一个筛选器警告。|  
 |数据：单元格格式|属性值更改时更改颜色|单击此选项可以指定：当您使用 MDS 库中的新数据刷新 Excel 外接程序表时，如果某个单元格中的属性值发生更改，则更改该单元格的颜色。|  
-|数据：单元格格式|添加成员时更改颜色|单击此选项可以指定：当您使用 MDS 库中的新数据刷新 Excel 外接程序表时，如果在某个行中添加了新成员，则更改该行的单元格的颜色。|  
+|数据：单元格格式|添加成员时更改颜色|单击此选项可以指定：当使用 MDS 存储库中的新数据刷新 Excel 外接程序表时，如果在某个行中添加了新成员，则更改该行的单元格的颜色。|  
 |数据：单元格格式|显示格式|选择首选格式，以便显示基于域的属性的值。 选项包括：Code {Name}、Code 和 Name {Code}。|  
   
   

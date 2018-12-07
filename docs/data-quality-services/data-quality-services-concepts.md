@@ -5,19 +5,18 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738455"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617108"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -30,7 +29,7 @@ ms.locfileid: "47738455"
   
  **知识发现**  
   
- 知识发现是分析您组织的数据样本以建立有关数据的知识的计算机辅助过程。 一旦得到了分析结果，您就可以验证并改进知识，然后应用知识来执行数据清理、数据匹配和事件探查。 有关详细信息，请参阅 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
+ 知识发现是分析组织的数据样本以建立有关数据的知识的计算机辅助过程。 一旦得到了分析结果，您就可以验证并改进知识，然后应用知识来执行数据清理、数据匹配和事件探查。 有关详细信息，请参阅 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
  **域管理**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "47738455"
   
  **数据匹配**  
   
- 借助匹配过程，数据专员可以比较数据，以便通过消除重复过程整理类似但稍有不同的数据。 DQS 基于知识库中包含的匹配规则执行消除重复操作；数据专员从数据质量项目中为匹配过程指定参数。 有关详细信息，请参阅 [数据匹配](../data-quality-services/data-matching.md)。  
+ 借助匹配过程，数据专员可以比较数据，以便通过消除重复过程整理类似但稍有不同的数据。 DQS 基于知识库中包含的匹配规则执行消除重复操作；数据专员从数据质量项目中为匹配过程指定参数。 有关详细信息，请参阅 [Data Matching](../data-quality-services/data-matching.md)。  
   
  **事件探查和通知**  
   

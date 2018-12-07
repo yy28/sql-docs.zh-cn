@@ -14,12 +14,12 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1724fcbf34817dbb87c2c57a68735c1502bcdce3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f8ef15874d9777aeb1b47481ba4f9933b13b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502011"
 ---
 # <a name="operator-precedence-and-associativity"></a>运算符优先级和结合性
   表达式计算器支持的运算符集中的每个运算符在优先级层次结构中具有指定的优先级，并包含计算方向。 运算符的计算方向就是运算符结合性。 具有高优先级的运算符先于低优先级的运算符进行计算。 如果复杂的表达式有多个运算符，则运算符优先级将确定执行操作的顺序。 执行顺序可能对结果值有明显的影响。 某些运算符具有相等的优先级。 如果表达式包含多个具有相等的优先级的运算符，则按照从左到右或从右到左的方向进行运算。  
@@ -29,10 +29,10 @@ ms.locfileid: "47651845"
 |运算符|运算类型|结合性|  
 |---------------------|-----------------------|-------------------|  
 |( )|表达式|从左到右|  
-|–, !, ~|一元|从右到左|  
+|-, !, ~|一元|从右到左|  
 |casts|一元|从右到左|  
 |*, / ,%|乘法性的|从左到右|  
-|+, –|累加性|从左到右|  
+|+, -|累加性|从左到右|  
 |\<, >, \<=, >=|关系|从左到右|  
 |==, !=|等式|从左到右|  
 |&|位与|从左到右|  

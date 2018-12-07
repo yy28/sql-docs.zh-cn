@@ -18,12 +18,12 @@ ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd926d424d02f5fb4e078688b62511e13340b206
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1abb3fe0d6a6ce1459ad3d29de0d9a5e6cf4d49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844585"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517363"
 ---
 # <a name="security-and-protection-replication"></a>安全性和保护（复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "47844585"
  [更多信息...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
  ![小文件文件夹图标](../../../analysis-services/media/filefolder-small.png "小文件文件夹图标") **安全开发**  
- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ [复制代理安全性模式](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   
- [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [复制安全最佳做法](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   
  [更多信息...](../../../relational-databases/replication/security/secure-development-replication.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47844585"
   
  [保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [保护通过 Internet 进行的复制](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
   
  [更多信息...](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   

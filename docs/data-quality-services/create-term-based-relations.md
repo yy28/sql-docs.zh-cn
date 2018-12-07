@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
@@ -14,20 +13,20 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1d46bc9edd1c907c1d8b13fb5677f1bec5f7c2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700865"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617267"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，你可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  
+  本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  
   
- 若要使用基于字词的关系，你可以生成一个“值/更正为”对的列表，例如“Inc.” 和“Incorporated”或“Senior”和“Sr.”。 通过使用基于字词的关系，您可以在整个域中更改某一字词，而不必手动将单独的域值设置为同义词。 您也可以指定更正某个值，即使知识发现以前尚未发现该值。 如果基于字词的关系转换导致两个值完全相同，则 DQS 将在它们之间创建一个同义词关系（在知识发现中）、更正关系（在数据更正中）或精确匹配（在匹配中）。  
+ 若要使用基于字词的关系，可以生成一个“值/更正为”对的列表，例如“Inc.” 和“Incorporated”或“Senior”和“Sr.”。 通过使用基于字词的关系，您可以在整个域中更改某一字词，而不必手动将单独的域值设置为同义词。 您也可以指定更正某个值，即使知识发现以前尚未发现该值。 如果基于字词的关系转换导致两个值完全相同，则 DQS 将在它们之间创建一个同义词关系（在知识发现中）、更正关系（在数据更正中）或精确匹配（在匹配中）。  
   
  基于字词的关系转换和符号转换（其中，特殊字符将被空格或 null 替换）都在分析前的预处理阶段中完成。 如果请求复合域分析，将在这两个转换前执行分析，因为分隔符分析要求符号。 其他操作（例如域规则和域值更改）将会在转换后执行。 对于匹配，在匹配活动前，将基于字词的关系应用于源数据，而与您是否运行清理无关。  
   

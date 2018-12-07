@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702925"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617947"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
 
@@ -67,7 +66,7 @@ ms.locfileid: "47702925"
     > [!NOTE]  
     >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域。 有关 DQS 中支持的数据类型的信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
-4.  单击 **加号 (+)** 控件可向映射表中添加行，单击 **减号 (–)** 控件可删除行。  
+4.  单击“加号 (+)”控件可向映射表中添加行，单击“减号 (-)”控件可删除行。  
   
 5.  单击 **“预览数据源”** 可查看您选择的 SQL Server 表或视图中的数据，或查看您所选 Excel 工作表中的数据。  
   

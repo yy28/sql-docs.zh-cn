@@ -13,12 +13,12 @@ ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a91e1c346b6b85155b3b187387fec4ce56803f89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a50885411e37c82b1121607dfb8b4408c7f9d9f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526733"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47819315"
   
 5.  在该窗格中，双击“锁定内存页”。  
   
-6.  在 **“本地安全设置 – 锁定内存中的页”** 对话框中，单击 **“添加用户或组”**。  
+6.  在“本地安全设置 - 锁定内存中的页”对话框中，单击“添加用户或组”。  
   
 7.  在“选择用户”、“服务帐户”或“组”对话框中，选择 SQL Server 服务帐户。  
   

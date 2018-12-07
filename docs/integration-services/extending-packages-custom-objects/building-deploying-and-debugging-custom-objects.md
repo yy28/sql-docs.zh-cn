@@ -13,12 +13,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b67c3deaa58efe3b9a180f51d812ee0cec96f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826525"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502885"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>生成、部署和调试自定义对象
   在为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的自定义对象编写代码后，必须生成和部署程序集，并将该程序集集成到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使其可在包中使用，然后对其进行测试和调试。  
@@ -62,7 +62,7 @@ ms.locfileid: "47826525"
 ##  <a name="building"></a> 生成程序集  
  为项目签名后，必须使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的“生成”菜单上可用的命令来生成或重新生成项目或解决方案。 您的解决方案可能包含单独的自定义用户界面项目，该项目也必须使用强名称签名，并且可以同时生成。  
   
- 下两个步骤是部署程序集并将其安装在全局程序集缓存中，执行这两个步骤最简便的方法是编写这些步骤的脚本，作为 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的生成后事件。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目的项目属性的“编译”页和 C# 项目的“生成事件”页都提供可用的生成事件。 命令提示实用工具（如 gacutil.exe）需要完整路径。 包含空格的路径和展开为包含空格的路径的宏（如 $(TargetPath)）的前后都需要引号。  
+ 执行下两个步骤（部署程序集并将其安装在全局程序集缓存中）的最简便方法是将这些步骤编写为 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的生成后事件。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目的项目属性的“编译”页和 C# 项目的“生成事件”页都提供可用的生成事件。 命令提示实用工具（如 gacutil.exe）需要完整路径。 包含空格的路径和展开为包含空格的路径的宏（如 $(TargetPath)）的前后都需要引号。  
   
  下面是自定义日志提供程序的生成后事件命令行的示例：  
   

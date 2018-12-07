@@ -20,24 +20,23 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778c3bdb9fc17a27af4fbc3a7b0fd6e2aa89f402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c98cff1909bc74ff550ea9d68359d7a845d04d7
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629105"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586230"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  释放当前结果集，然后解除定位游标的行上的游标锁定，从而关闭一个开放的游标。 CLOSE 将保留数据结构以便重新打开，但在重新打开游标之前，不允许提取和定位更新。 必须对打开的游标发布 CLOSE；不允许对仅声明或已关闭的游标执行 CLOSE。  
+  释放当前结果集，然后解除定位游标的行上的游标锁定，从而关闭一个开放的游标。 `CLOSE` 将保留数据结构以便重新打开，但在重新打开游标之前，不允许提取和定位更新。 必须对打开的游标发布 CLOSE；不允许对仅声明或已关闭的游标执行 `CLOSE`。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -54,7 +53,7 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="examples"></a>示例  
  以下示例将显示 `CLOSE` 语句在基于游标的进程中的正确位置。  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT EmployeeID, Title FROM AdventureWorks2012.HumanResources.Employee;  
 OPEN Employee_Cursor;  

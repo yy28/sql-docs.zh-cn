@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642164"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527133"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>第 2-2 课 — 添加和配置 Foreach 循环容器
 在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
@@ -74,7 +74,7 @@ ms.locfileid: "51642164"
   
 1.  单击“变量映射”。  
   
-2.  在“变量映射”页的“变量”列中，单击空单元，然后选择“\<新建变量…>”。  
+2.  在“变量映射”页的“变量”列中，单击空单元格，然后选择“\<新建变量…>”。  
   
 3.  在“添加变量”对话框中，为“名称”键入 **varFileName**。  
   

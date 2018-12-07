@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638744"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521536"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器包含可用于解决 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流问题的功能和工具。  
@@ -89,9 +89,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - 组件发送的所有行的总和  
   
--   **wall_clock_time_ms** – 每个组件已使用的执行总时间（以毫秒为单位）  
+-   **wall_clock_time_ms** - 每个组件已使用的执行总时间（以毫秒为单位）  
   
--   **num_rows_per_millisecond** – 每个组件每毫秒发送的行数  
+-   **num_rows_per_millisecond** - 每个组件每毫秒发送的行数  
   
  **HAVING** 子句用于防止在计算中出现被零除错误。  
   

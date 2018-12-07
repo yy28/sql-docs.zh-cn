@@ -12,17 +12,17 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: c3c9936c7a69ec2d4f54f1f4412c5b39f60035e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539133"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-数据发现和分类引入了全新工具，并将其内置于 SQL Server Management Studio (SSMS)，以便发现数据库中的敏感数据并对其进行分类、标记和报告。
+数据发现和分类引入了全新工具，并将其内置于 SQL Server Management Studio (SSMS)，以便发现数据库中的敏感数据并对其进行分类、标记和报告 & 。
 发现最敏感的数据（如商业、金融、医疗等）并对其进行分类在组织的信息保护中可起到关键作用。 它可以充当基础结构，用于：
 * 帮助满足数据隐私标准。
 * 控制对包含高度敏感数据的数据库/列的访问，并加强其安全性。

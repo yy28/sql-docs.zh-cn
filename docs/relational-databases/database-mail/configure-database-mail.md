@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505137"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ ms.locfileid: "51678016"
 ###  <a name="Welcome"></a> “欢迎”页  
  此页说明配置数据库邮件的步骤。  
   
- **不再显示此页** – 选中它可以在将来跳过显示此“欢迎”页。  
+ **不再显示此页** - 选中它，可在以后的显示中跳过此“欢迎”页。  
   
  **下一步** - 继续到“选择配置任务”页。  
   
- **取消** - 终止向导而不配置数据库邮件  
+ **取消** - 终止向导而无需配置数据库邮件  
   
  [数据库邮件配置向导](#DBWizard)  
   

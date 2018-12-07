@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f716dc0189ea509d48888c0dde25ea77e87f4a97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f73fa8fe85be39cb64b66cd6672fe9901c6e89e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027386"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507487"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
   您可以通过选择预定义调色板或定义自定义调色板来更改图表的调色板。 自定义调色板是针对具体报表而言。  
@@ -42,7 +42,7 @@ ms.locfileid: "50027386"
   
 3.  在 **“图表”** 部分，为 **“调色板”** 属性选择 **“自定义”**。  
   
-4.  在 CustomPaletteColors 属性中，单击“编辑集合”(**…**) 按钮。 将打开 **“ReportColorExpression 集合编辑器”** 。  
+4.  在 CustomPaletteColors 属性中，单击“编辑集合”(…) 按钮。 将打开 **“ReportColorExpression 集合编辑器”** 。  
   
 5.  单击 **“添加”** 以添加颜色。 从下拉列表中选择颜色或选择“表达式”并为特定颜色指定十六进制值，例如“橙色”为 ff6600。  
   

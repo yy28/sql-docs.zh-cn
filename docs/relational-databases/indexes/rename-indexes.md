@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7547210622ca3a1bf9aa33ffb4b6d143b4a943d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b61ab4da7de38c045fe222a6c0784b7032658ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653636"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511460"
 ---
 # <a name="rename-indexes"></a>重命名索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47653636"
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”菜单上，单击“保存table_name”。  
+8.  在“文件”菜单上，单击“保存”以保存 _table_name_。  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>通过使用对象资源管理器重命名索引  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47653636"
   
 #### <a name="to-rename-an-index"></a>重命名索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

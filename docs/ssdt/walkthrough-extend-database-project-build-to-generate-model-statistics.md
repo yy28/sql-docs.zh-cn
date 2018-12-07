@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523424"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
 可以创建生成参与者以便在生成数据库项目时执行自定义操作。 在本演练中，您将创建一个名为 ModelStatistics 的生成参与者，该参与者可在生成数据库项目时从 SQL 数据库模型中输出统计信息。 由于此生成参与者在您生成时会使用一些参数，因此需要执行一些额外步骤。  
@@ -46,7 +46,7 @@ ms.locfileid: "51659136"
   
 -   生成模型统计信息并报告给用户。 这是此处显示的示例。  
   
-生成参与者的主入口点是 OnExecute 方法。 继承自 BuildContributor 的所有类都必须实现此方法。 BuildContributorContext 对象将传递给此方法 – 这包含生成的所有相关数据，例如，数据库模型、生成属性以及生成参与者将使用的参数/文件。  
+生成参与者的主入口点是 OnExecute 方法。 继承自 BuildContributor 的所有类都必须实现此方法。 BuildContributorContext 对象将传递给此方法 - 这包含生成的所有相关数据，例如，数据库模型、生成属性以及生成参与者将使用的参数/文件。  
   
 **TSqlModel 和数据库模型 API**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51659136"
   
 |**类**|**方法/属性**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|用于查询对象的模型，并且是模型 API 的主入口点。 只能查询顶级类型，如表或视图 – 诸如列这样的类型只能通过遍历模型来查找。 如果未指定 ModelTypeClass 筛选器，则将返回所有顶级类型。|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|用于查询对象的模型，并且是模型 API 的主入口点。 只能查询顶级类型，如表或视图 - 诸如列这样的类型只能通过遍历模型来查找。 如果未指定 ModelTypeClass 筛选器，则将返回所有顶级类型。|  
 |[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|查找与当前 TSqlObject 引用的元素的关系。 例如，对于表，这将返回类似表的列的对象。 在此情况下，ModelRelationshipClass 筛选器可用于指定要查询的确切关系（例如，使用“Table.Columns”筛选器将确保仅返回列）。<br /><br />有多种类似的方法，如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 有关详细信息，请参阅 API 文档。|  
   
 **唯一标识你的参与者**  
@@ -68,7 +68,7 @@ ms.locfileid: "51659136"
   
 ```  
   
-在此示例中，该属性的第一个参数应是一个唯一标识符，该标识符将用于在项目文件中标识您的参与者。 最佳做法是将库的命名空间（在本演练中为“ExampleContributors”）与类名称（在本演练中为“ModelStatistics”）结合使用来生成标识符。 您将了解如何使用此命名空间来指定应在演练的后面部分运行参与者。  
+在此示例中，该属性的第一个参数应是一个唯一标识符，该标识符将用于在项目文件中标识你的参与者。 最佳做法是将库的命名空间（在本演练中为 “ExampleContributors”）与类名称（在本演练中为 “ModelStatistics”）结合使用来生成标识符。 您将了解如何使用此命名空间来指定应在演练的后面部分运行参与者。  
   
 ## <a name="CreateBuildContributor"></a>创建生成参与者  
 若要创建生成参与者，您必须执行以下任务：  
@@ -480,7 +480,7 @@ ms.locfileid: "51659136"
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -493,7 +493,7 @@ ms.locfileid: "51659136"
   
     1.  导航到 %Program Files%\MSBuild\\。  
   
-    2.  创建一个将存储您的目标文件的新文件夹“MyContributors”。  
+    2.  创建一个用于存储目标文件的新文件夹“MyContributors”。  
   
     3.  在该目录中创建一个新文件“MyContributors.targets”，将下列文本添加到该文件中并保存该文件：  
   
@@ -517,13 +517,13 @@ ms.locfileid: "51659136"
 在使用了这些方法之一后，您可以使用 MSBuild 来传入命令行生成的参数。  
   
 > [!NOTE]  
-> 您必须始终更新“BuildContributors”属性以指定您的参与者 ID。 此 ID 与参与者源文件中的“ExportBuildContributor”属性中使用的 ID 相同。 如果没有此 ID，则您的参与者在生成项目时将不会运行。 仅在您具有运行参与者所需的参数时必须更新“ContributorArguments”属性。  
+> 您必须始终更新“BuildContributors”属性以指定您的参与者 ID。 此 ID 与参与者源文件中的“ExportBuildContributor”属性中使用的 ID 相同。 如果没有此 ID，则您的参与者在生成项目时将不会运行。 仅在具有运行参与者所需的参数时才必须更新“ContributorArguments”属性。  
   
 ### <a name="build-the-sql-project"></a>生成 SQL 项目  
   
 ##### <a name="to-rebuild-your-database-project-by-using-msbuild-and-generate-statistics"></a>使用 MSBuild 重新生成数据库项目并生成统计信息  
   
-1.  在 Visual Studio 中，右键单击您的项目并选择“重新生成”。 这将重新生成项目，您应该看到生成的模型统计信息，其中输出将包含在生成输出中并保存到 ModelStatistics.xml。 请注意，您可能需要在解决方案资源管理器中选择“显示所有文件”才能看到 xml 文件。  
+1.  在 Visual Studio 中，右键单击项目并选择“重新生成”。 这将重新生成项目，您应该看到生成的模型统计信息，其中输出将包含在生成输出中并保存到 ModelStatistics.xml。 请注意，可能需要在解决方案资源管理器中选择“显示所有文件”才能看到 xml 文件。  
   
 2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”。  
   

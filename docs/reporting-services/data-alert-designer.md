@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511660"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
 
@@ -82,9 +82,9 @@ ms.locfileid: "50031166"
 ### <a name="rules-and-clauses"></a>规则和子句  
  数据更改的作用域以及警报规则中的规则定义触发警报的数据更改。 数据更改的作用域如下：  
   
--   **任何数据具有**— 数据中至少一个值符合该条件指定的规则。  
+-   **任何数据具有** - 数据中至少一个值符合该条件指定的规则。  
   
--   **没有任何数据具有**— 数据中没有任何值符合该条件指定的规则。  
+-   **没有任何数据具有** - 数据中没有任何值符合该条件指定的规则。  
   
  一个规则可包含零个、一个或多个子句。 多个规则由 AND 逻辑运算符组合在一起。 如果该列具有字符串数据类型，则规则可包含使用 OR 运算符组合的多个子句。 下面的内容显示仅使用一个子句的基本规则、使用 AND 运算符组合的多个规则、使用一个或多个 OR 子句的多个规则。  
   

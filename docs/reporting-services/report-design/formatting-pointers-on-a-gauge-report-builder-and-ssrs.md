@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17ecab14fce7cc302fafb64e949a7ed896e2ccdb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b4ebed5355fdbbd4185301fa87e4c525a89b3171
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028586"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504043"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表指针指示仪表的当前值。   
@@ -37,7 +37,7 @@ ms.locfileid: "50028586"
 ##  <a name="DisplayingMultiple"></a> 在仪表上显示多个指针  
  可以为仪表添加多个指针以便指向基于相同刻度的多个值。 这对同时显示较低值和较高值很有用。 若要在仪表上为相同刻度指定多个指针，请右键单击仪表内的任意位置，并单击快捷菜单上的“添加指针”。 或者，也可以通过右键单击仪表内的任意位置，再单击“添加刻度”来添加刻度。 然后，可以添加新指针，该指针将与最新刻度自动关联。  
   
- 指针重叠时，指针的绘制顺序由它们添加到仪表中的顺序确定。 更改数据窗格中的字段顺序无法对指针的绘制顺序进行重新排序。 若要更改多个指针的绘制顺序，请打开“属性”窗格，再单击“指针(…)”。 然后，更改指针在指针集合中的顺序。  
+ 指针重叠时，指针的绘制顺序由它们添加到仪表中的顺序确定。 更改数据窗格中的字段顺序无法对指针的绘制顺序进行重新排序。 若要更改多个指针的绘制顺序，请打开“属性”窗格并单击“指针 (…)”。然后，更改指针在指针集合中的顺序。  
   
 ##  <a name="SettingGradients"></a> 在指针顶端上设置渐变  
  只能在径向仪表上指定可绘制在指针上面或下面的顶端。 所有指针顶端样式都是使用无法修改的内置渐变绘制的。 但 **RoundedDark** 样式除外，你可以为该样式指定渐变颜色和渐变样式。  

@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641374"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517212"
 ---
 # <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  
@@ -49,7 +49,7 @@ ms.locfileid: "51641374"
   
 -   City 列中值的分布。  
   
--   State 列对 Zip 列的函数依赖强度，即对于指定的邮政编码值州应始终是一样的。  
+-   State 列对 Zip 列的函数依赖强度，即对于指定的邮政编码值，省/市/自治区应始终是一样的。  
   
  数据配置文件提供的统计信息为您提供了所需信息，可以有效地最大限度降低使用源数据过程中可能出现的质量问题。  
   

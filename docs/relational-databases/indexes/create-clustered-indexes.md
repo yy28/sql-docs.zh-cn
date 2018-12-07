@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703205"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539025"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47703205"
   
 3.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-4.  在 **“索引键列”** 下，单击 **“添加…”**。  
+4.  在“索引键列”下，单击“添加…”。  
   
 5.  在“从表名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框_\__。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "47703205"
   
 #### <a name="to-create-a-clustered-index"></a>创建聚集索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

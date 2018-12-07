@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517673"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,16 +245,16 @@ ms.locfileid: "51661123"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  若要修改用于分析的事件数，指定 **–n** 选项。 以下示例将缓存项数提高到 2,000。  
+2.  若要修改用于分析的事件数，请指定“–n”选项。 以下示例将缓存项数提高到 2,000。  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  若要分析实例中的所有数据库的事件，请指定 **-ipf** 选项。  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>使用工作负荷和 dta 实用工具的默认设置优化数据库  

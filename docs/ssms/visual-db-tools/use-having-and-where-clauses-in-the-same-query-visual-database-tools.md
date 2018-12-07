@@ -21,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f30ac6e2e597f822fde99d52840a2d39ac23ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a6e778155ad0a470bd5b9e97484aea94d205055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537302"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ HAVING 子句与 WHERE 子句类似，但仅应用于整个组（即应用于表
   
 -   然后将 HAVING 子句应用于结果集中的行。 只有满足 HAVING 条件的组才会显示在查询输出中。 可以将 HAVING 子句仅应用于也同时出现在 GROUP BY 子句或聚合函数中的列。  
   
-例如，假设您要联接 `titles` 和 `publishers` 表以创建一个查询，显示一组出版商的平均书籍价格。 您只希望看到一组特定出版商（也许只是加利福尼亚州的出版商）的平均价格。 甚至仅希望看到高于 10.00 美元的平均价格。  
+例如，假设您要联接 `titles` 和 `publishers` 表以创建一个查询，显示一组出版商的平均书籍价格。 想要查看一组特定出版商（也许只是加利福尼亚州的出版商）的平均价格。 甚至仅希望看到高于 10.00 美元的平均价格。  
   
 在计算平均价格前，可通过包含 WHERE 子句建立第一个条件，该条件放弃不属于加利福尼亚的所有出版商。 第二个条件要求使用 HAVING 子句，因为该条件基于对数据进行分组和汇总的结果。 最终得到的 SQL 语句可能与以下代码类似：  
   

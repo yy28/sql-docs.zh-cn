@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809635"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413304"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **在使用非 XML 格式化文件的情况下使用 bcp 和 Unicode 字符格式导入数据**<a name="bcp_widechar_import_fmt"></a>
-**-w** 和 **-f** 切换以及 **IN** 命令。  由于此示例讲到 bcp、格式化文件、Unicode 字符以及数据文件中的第一个数据字段为非字符，因此需要使用解决方法。  请参阅上面的 [使用 Unicode 字符格式、bcp 和格式化文件的特殊注意事项](#special_considerations)。  数据文件 `myWidechar.bcp` 将通过添加其他记录为“虚拟”记录来进行更改，然后使用 `-F 2` 切换跳过该记录。
+**-w** 和 **-f** 切换以及 **IN** 命令。  由于此示例讲到 bcp、格式化文件、Unicode 字符以及数据文件中的第一个数据字段为非字符，因此需要使用解决方法。  请参阅上面的 [使用 Unicode 字符格式、bcp 和格式化文件的特殊注意事项](#special_considerations)。  数据文件 `myWidechar.bcp` 将通过添加其他记录为“虚拟”记录来进行更改，然后使用 `-F 2` 开关跳过该记录。
 
 在命令提示符中，输入以下命令，然后按照修改步骤操作：
 ```
@@ -243,6 +243,6 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

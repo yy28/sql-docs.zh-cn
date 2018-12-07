@@ -16,19 +16,19 @@ ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db9e0371282532c2ef70db963dfbb48b45cafa02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c87f8b4d9cca7ac486c680bd8e758c8b81ae1e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641455"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516966"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>向查询中添加列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 若要在查询中使用列，必须将其添加到查询中。 您可以添加某个列，以在查询输出中显示该列，使用该列进行排序，搜索该列的内容或对其内容进行汇总。 您可以决定在运行查询时，“结果”窗格中将包括查询中使用的哪些列。 有关详细信息，请参阅[从查询结果中删除列 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)  
   
 > [!NOTE]  
-> 若要在查询和视图设计器中查看列的数据类型，请在“关系图”窗格中选择表或表值对象，然后在“属性”窗口中单击“列列表”。 再单击省略号 **(…)** 以打开“列列表”对话框。  
+> 若要在查询和视图设计器中查看列的数据类型，请在“关系图”窗格中选择表或表值对象，然后在“属性”窗口中单击“列列表”。 再单击省略号“(…)”以打开“列列表”对话框。  
   
 无论在查询中的任何位置使用列，都还可使用由列、文本、运算符和函数的任意组合组成的表达式。  
   

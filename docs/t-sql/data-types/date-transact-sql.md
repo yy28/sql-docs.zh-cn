@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9b7d2b24b2687de6e5736e6ef2ca523c2ade6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533022"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,10 +80,10 @@ ms.locfileid: "47635955"
   
 |W3C XML 格式|描述|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|专为用于 XML/SOAP 而支持的格式。<br /><br /> TZD 是时区指示符（Z 或 +hh:mm 或 -hh:mm）：<br /><br /> -   hh:mm 表示时区偏移量。 hh 是两位数，范围为 0 到 14，它表示时区偏移量中的小时数。<br />-   MM 是两位数，范围为 0 到 59，它表示时区偏移量中的额外分钟数。<br />-   +（加）或 –（减）是时区偏移量中必须包含的符号。 这两个符号表示用协调世界时 (UTC) 加上或减去时区偏移量以得出本地时间。 时区偏移量的有效范围为 -14:00 到 +14:00。|  
+|yyyy-mm-ddTZD|专为用于 XML/SOAP 而支持的格式。<br /><br /> TZD 是时区指示符（Z 或 +hh:mm 或 -hh:mm）：<br /><br /> -   hh:mm 表示时区偏移量。 hh 是两位数，范围为 0 到 14，它表示时区偏移量中的小时数。<br />-   MM 是两位数，范围为 0 到 59，它表示时区偏移量中的额外分钟数。<br />-   +（加）或 -（减）是时区偏移量中必须包含的符号。 这两个符号表示用协调世界时 (UTC) 加上或减去时区偏移量以得出本地时间。 时区偏移量的有效范围为 -14:00 到 +14:00。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>对 ANSI 和 ISO 8601 的遵从性  
-date 符合公历的 ANSI SQL 标准定义：“备注 85 - Datetime 数据类型将允许存储日期范围从 0001–01–01 CE 到 9999–12–31 CE 之间的公历格式的日期。”
+date 符合公历的 ANSI SQL 标准定义：“备注 85 - Datetime 数据类型将允许存储日期范围从 0001-01-01 CE 到 9999-12-31 CE 之间的公历格式的日期。”
   
 默认字符串文字格式（用于下级客户端）将遵照 SQL 标准格式（定义为 YYYY-MM-DD）。 该格式与 ISO 8601 对 DATE 的定义相同。
   

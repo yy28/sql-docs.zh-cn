@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13703e197580c544b28a2ebf45d192cedfd2f581
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f92c64d5270cfbb24bbedb5c649fe9a15ba56e9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683095"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413844"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ SET QUOTED_IDENTIFIER ON
   
  SET QUOTED_IDENTIFIER 在分析时生效，只会影响分析，不影响查询执行。  
   
- 对于顶级即席批处理，使用会话的当前 QUOTED_IDENTIFIER 设置开始分析。  分析批处理时，只要出现 SET QUOTED_IDENTIFIER，就会更改之后的分析行为，并保存会话的设置。  因此，分析和执行批处理后，会根据批处理中最后一次出现的 SET QUOTED_IDENTIFIER，设置会话的 QUOTED_IDENTIFER 设置。  
+ 对于顶级即席批处理，请使用会话的当前 QUOTED_IDENTIFIER 设置开始分析。  分析批处理时，只要出现 SET QUOTED_IDENTIFIER，就会更改之后的分析行为，并保存会话的设置。  因此，分析和执行批处理后，会根据批处理中最后一次出现的 SET QUOTED_IDENTIFIER，设置会话的 QUOTED_IDENTIFER 设置。  
  存储过程中的静态 SQL 是使用对于创建或更改存储过程的批处理有效的 QUOTED_IDENTIFIER 设置分析的。  SET QUOTED_IDENTIFIER 作为静态 SQL 出现在存储过程的正文中时是无效的。  
   
  对于使用 sp_executesql 或 exec() 的嵌套批处理，使用会话的 QUOTED_IDENTIFIER 设置开始进行分析。  如果嵌套批处理在存储过程内，则使用存储过程的 QUOTED_IDENTIFIER 设置开始进行分析。  分析嵌套批处理时，只要出现 SET QUOTED_IDENTIFIER，就会改变之后的分析行为，但不会更新会话的 QUOTED_IDENTIFIER 设置。  

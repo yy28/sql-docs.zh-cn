@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4c3cd3a35cd15d1e9751ba939809a5d596bd2ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c9c330ab53b83eb46fa60002bc8aa6c0ed72e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603977"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534666"
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,17 +67,17 @@ ms.locfileid: "51603977"
 |**-n**|不要使用 Windows 应用程序日志来记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如果你使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **启动**实例，我们建议你同时使用 **-e** 启动选项。 否则，将不会记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。|  
 |**-s**|用于启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命名实例。 如果 **-s** 参数未设置，则系统会尝试启动默认实例。 必须先在命令提示符处切换到实例的相应 BINN 目录，然后才能启动 **sqlservr.exe**。 例如，如果 Instance1 为其二进制文件使用了 `\mssql$Instance1`，则用户必须位于 `\mssql$Instance1\binn` 目录中才能启动 sqlservr.exe -s instance1。|  
 |**-T**  *trace#*|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#*) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。<br /><br /> 重要提示：使用 -T 选项指定跟踪标志时，请使用大写“T”来传递跟踪标志号。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也可接受小写“t”，只是它用于设置仅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持工程师才需要的其他内部跟踪标志。 （不读取“控制面板”启动窗口中指定的参数。）|  
-|**-x**|禁用下列监视功能：<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能监视器计数器<br /> - 保留 CPU 时间和高速缓存命中率统计信息<br /> - 收集 DBCC SQLPERF 命令的信息<br /> - 收集某些动态管理视图的信息<br /> - 许多扩展事件事件点<br /><br /> 警告：使用 –x 启动选项会导致你在诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能和功能问题时获得的信息大大减少。|  
+|**-x**|禁用下列监视功能：<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能监视器计数器<br /> - 保留 CPU 时间和高速缓存命中率统计信息<br /> - 收集 DBCC SQLPERF 命令的信息<br /> - 收集某些动态管理视图的信息<br /> - 许多扩展事件事件点<br /><br /> **警告**：使用“–x”启动选项会导致你在诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能和功能问题时获得的信息大大减少。|  
 |**-E**|增加为文件组中的每个文件分配的区数。 对于那些运行索引或数据扫描的用户数量受到限制的数据仓库应用程序，此选项可能十分有用。 不应在其他应用程序中使用此选项，因为它可能降低性能。 32 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持此选项。|  
   
 ## <a name="using-startup-options-for-troubleshooting"></a>使用启动选项进行故障排除  
- 某些启动选项（如单用户模式和最低配置模式）主要在故障排除过程中使用。 使用 **–m** 或 **–f** 选项启动服务器进行故障排除的最简单方法是使用命令行，同时还能手动启动 sqlservr.exe。  
+ 某些启动选项（如单用户模式和最低配置模式）主要在故障排除过程中使用。 使用“-m”或“-f”选项启动服务器进行故障排除的最简单方法是使用命令行，同时还能手动启动 sqlservr.exe。  
   
 > [!NOTE]  
 >  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net start **启动**时，启动选项使用的是左斜线 (/)，而不是连字符 (-)。  
   
 ## <a name="using-startup-options-during-normal-operations"></a>在正常操作中使用启动选项  
- 最好在每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时使用某些启动选项。 完成这些选项（如 **–g** 或用跟踪标志启动）的最简单方法是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器来配置启动参数。 这些工具将启动选项保存为注册表项，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将始终用这些启动选项来启动。  
+ 最好在每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时使用某些启动选项。 完成这些选项（如“-g”或用跟踪标志启动）的最简单方法是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器来配置启动参数。 这些工具将启动选项保存为注册表项，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将始终用这些启动选项来启动。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
  **不支持**  -h [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]参数。 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的 32 位实例使用此参数以便为热添加内存元数据保留虚拟内存地址空间。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。  

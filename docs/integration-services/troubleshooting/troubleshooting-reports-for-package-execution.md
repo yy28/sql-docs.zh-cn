@@ -11,12 +11,12 @@ ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a52a29196fb0578482ebfff068adff736c954efa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed8aedc5ac55f933651d66826a58e7ba09f36c8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526048"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>对包执行进行故障排除的报告
   在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了标准报告，可帮助您监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包并排除其问题。 这些包报告中有两个报告尤其有助您查看包的执行状态，并确定执行失败的原因。  
@@ -25,7 +25,7 @@ ms.locfileid: "47818945"
   
      开始时间、结束时间和持续时间可以解释如下：  
   
-    -   如果包仍在运行，则持续时间 = 当前时间 – 开始时间  
+    -   如果包仍在运行，则持续时间 = 当前时间 - 开始时间  
   
     -   如果包已完成操作，则持续时间 = 结束时间 - 开始时间  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47818945"
   
      您可以通过单击 **“筛选器”** ，然后在 **“筛选设置”** 对话框中选择条件，对在任何页上显示的表进行筛选。 可用的筛选条件依赖于要显示的数据。 您可以通过在 **“筛选设置”** 对话框中单击排序图标，更改报告的排序顺序。  
   
--   **“活动 - 所有执行”报告** – 此报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 执行的摘要。 摘要中显示每次执行的信息，如状态、开始时间和结束时间。 每个摘要条目都包含指向有关执行的详细信息的连接，包括在执行期间生成的消息和性能数据。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
+-   **“活动 - 所有执行”报告** - 此报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 执行的摘要。 摘要中显示每次执行的信息，如状态、开始时间和结束时间。 每个摘要条目都包含指向有关执行的详细信息的连接，包括在执行期间生成的消息和性能数据。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
 ## <a name="related-content"></a>相关内容  
  [Integration Services 服务器的报告](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)  

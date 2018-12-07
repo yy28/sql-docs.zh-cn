@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e69ce37e35b259ff44d1f1d1ddb064894729adf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800705"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406684"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47800705"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  单击加号以展开您要查看统计信息的属性的表。  
+3.  单击加号以展开要查看统计信息的属性的表。  
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "47800705"
   
 #### <a name="to-view-statistics-properties"></a>查看统计信息属性  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

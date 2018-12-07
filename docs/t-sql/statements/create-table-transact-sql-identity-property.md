@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507391"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY（属性）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,13 +64,13 @@ IDENTITY [ (seed , increment) ]
   
  列上的标识属性不确保：  
   
--   **值的唯一性**：唯一性必须通过 **PRIMARY KEY** 或 **UNIQUE** 约束或者通过 **UNIQUE** 索引来实现。  
+-   **值的唯一性** - 唯一性必须通过“PRIMARY KEY”或“UNIQUE”约束或者通过“UNIQUE”索引来实现。  
   
--   **事务内的连续值**：不保证插入多个行的事务能够为这些行获得连续的值，因为表上可能发生其他并发插入操作。 如果值必须是连续的，事务应针对表使用排他锁或使用 **SERIALIZABLE** 隔离级别。  
+-   **事务内的连续值** - 不保证插入多个行的事务能够为这些行获得连续的值，因为表上可能发生其他并发插入操作。 如果值必须是连续的，事务应针对表使用排他锁或使用 **SERIALIZABLE** 隔离级别。  
   
--   **服务器重新启动或出现其他故障后的连续值**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能出于性能原因而缓存标识值，在数据库故障或服务器重新启动期间，一些分配的值可能丢失。 这可能导致在插入时标识值之间有间隔。 如果不允许有间隔，应用程序应使用自己的机制来生成键值。 将序列生成器与 **NOCACHE** 选项结合使用可以限制从未提交的事务的间隔。  
+-   **服务器重新启动或出现其他故障后的连续值** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - 可能出于性能原因而缓存标识值，在数据库故障或服务器重新启动期间，一些分配的值可能丢失。 这可能导致在插入时标识值之间有间隔。 如果不允许有间隔，应用程序应使用自己的机制来生成键值。 将序列生成器与 **NOCACHE** 选项结合使用可以限制从未提交的事务的间隔。  
   
--   **值的重用**：对于具有特定种子/增量的指定标识属性，引擎不重用标识值。 如果特定 insert 语句失败或回滚该 insert 语句，则使用的标识值会丢失，且不会重新生成。 这可能导致在生成后续标识值时引入间隔。  
+-   **值的重用** - 对于具有特定种子/增量的指定标识属性，引擎不重用标识值。 如果特定 insert 语句失败或回滚该 insert 语句，则使用的标识值会丢失，且不会重新生成。 这可能导致在生成后续标识值时引入间隔。  
   
  这些限制是为了提升性能而在设计中加入的，而且在大多数情形下是可接受的。 如果您因为这些限制而不能使用标识值，则可以创建一个包含当前值的独立表，并使用您的应用程序管理对该表的访问和数字分配。  
   
@@ -114,7 +114,7 @@ VALUES
  以下示例显示了删除了数据时，用于在标识值中查找间隔的常规语法。  
   
 > [!NOTE]  
->  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本的第一部分仅供阐释之用。 您可以运行以下面的注释开头的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本：`-- Create the img table`  
+>  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本的第一部分仅供阐释之用。 [!INCLUDE[tsql](../../includes/tsql-md.md)]您可以运行以下面的注释开头的 `-- Create the img table` 脚本：  
   
 ```  
 -- Here is the generic syntax for finding identity value gaps in data.  

@@ -11,12 +11,12 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbb13ae1c48166df820375ff42be24fab19df579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717325"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407344"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
   建议不要对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行聚类分析，因为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不是群集服务或群集感知服务，而且不支持从一个群集节点故障转移到另一个节点。 因此，在群集环境内，应当在群集的每个节点上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 并将其作为一个独立服务来启动。  
@@ -99,7 +99,7 @@ ms.locfileid: "47717325"
   
 4.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“资源”**。  
   
-5.  在“资源向导”的 **“新资源”** 页上，键入名称并选择 **“一般服务”** 作为 **“服务类型”**。 不要更改 **“组”** 的值。 单击“下一步” 。  
+5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”。 不要更改 **“组”** 的值。 单击“下一步” 。  
   
 6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步” 。  
   

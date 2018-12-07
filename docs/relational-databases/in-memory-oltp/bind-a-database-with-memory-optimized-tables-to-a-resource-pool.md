@@ -11,12 +11,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9ea3f4ea5649f6c23d5874c38f151839cbdc4b4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513154"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ GO
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
- 例如，如果您的“目标提交内存”为 100 GB，并且估计您的内存优化表和索引需要 60GB 的内存，则可以使用 MAX_MEMORY_PERCENT = 67（需要的 60GB / 0.90 = 66.667GB – 化整为 67GB；67GB / 安装的 100GB = 67%）创建一个资源池，以便确保您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 对象具有它们需要的 60GB。  
+ 例如，如果“目标提交内存”为 100 GB，并且估计内存优化表和索引需要 60GB 的内存，则可以使用 MAX_MEMORY_PERCENT = 67（需要的 60GB / 0.90 = 66.667GB – 化整为 67GB；67GB / 安装的 100GB = 67%）创建一个资源池，以便确保 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 对象具有其需要的 60GB。  
   
  在数据库已绑定到某一命名资源池后，使用以下查询可查看跨不同资源池分配的内存。  
   
@@ -206,7 +206,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  有关详细信息，请参阅 [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
- 如果未将您的数据库绑定到某一命名资源池，则它将绑定到“默认”池。 由于对于大多数其他分配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用默认资源池，因此，对于感兴趣的数据库，您将不能使用 DMV sys.dm_resource_governor_resource_pools 精确监视内存优化表使用的内存。  
+ 如果未将数据库绑定到某一命名资源池，则它将绑定到“默认”池。 由于对于大多数其他分配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用默认资源池，因此，对于感兴趣的数据库，您将不能使用 DMV sys.dm_resource_governor_resource_pools 精确监视内存优化表使用的内存。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   

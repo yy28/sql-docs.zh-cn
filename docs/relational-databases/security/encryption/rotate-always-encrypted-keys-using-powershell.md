@@ -12,23 +12,23 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dca46f2aa08235e69c93efb4a9538ef5004b71b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652985"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617837"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 轮换 Always Encrypted 密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文提供使用 SqlServer PowerShell 模块来轮换“Always Encrypted”密钥的步骤。 有关如何开始将 SqlServer PowerShell 模块用于 Always Encrypted 的信息，请参阅 [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
 
-轮换“始终加密”密钥是使用新密钥替换现有密钥的过程。 如果密钥已泄漏，或者为了遵守强制规定必须定期轮换加密密钥的组织的策略或遵从性规则，则可能需要轮换密钥。 
+轮换“始终加密”密钥是使用新密钥替换现有密钥的过程。 如果密钥已泄漏，或者为了遵守强制规定必须定期轮换加密密钥的组织的策略或符合性规则，则可能需要轮换密钥。 
 
 “始终加密”使用两种类型的密钥，因此有两个高级密钥轮换工作流：轮换列主密钥和轮换列加密密钥。
 
-* **列加密密钥轮换** - 包括解密使用当前密钥加密的数据，和使用新的列加密密钥对数据进行加密。 因为轮换列加密密钥需要访问密钥和数据库，所以只能不使用角色分离来执行列加密密钥轮换。
+* **列加密密钥轮换** - 包括解密使用当前密钥加密的数据，和使用新的列加密密钥对数据进行加密。 由于轮换列加密密钥需要访问密钥和数据库，因此在不分离角色的情况下，只能执行列加密密钥轮换。
 * **列主密钥转换** - 包括解密使用当前列主密钥保护的列加密密钥，使用新的列主密钥重新加密列加密密钥，以及更新这两种类型的密钥的元数据。 可以使用或不使用角色分离来完成列主密钥轮换（当使用 SqlServer PowerShell 模块时）。
 
 

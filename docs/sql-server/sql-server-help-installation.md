@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700525"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514535"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 脱机帮助和帮助查看器
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 可使用 SQL Server Management Studio (SSMS) 或 Visual Studio (VS) 中的帮助查看器，从联机源或磁盘处下载和安装 SQL Server 帮助包，并在脱机状态下查看它们。 本文介绍安装帮助查看器的相关工具、如何安装脱机帮助内容，以及如何在 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和SQL Server 2017 中查看帮助。
+
+在具有 internet 访问权限的系统上下载了内容之后，可以将内容迁移到没有 internet 访问权的系统。 
 
 > [!NOTE]
 > SQL Server 2016 和 SQL Server 2017 的帮助现已合并。尽管某些主题仅适用于另有说明的单独版本， 但大多数主题是通用的。
@@ -125,7 +127,8 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
    ![查看帮助](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    帮助目录显示在左侧，选定的帮助主题显示在右侧。 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>使用帮助查看器 v1.x
 
 早期版本的 SSMS 和 VS 使用帮助查看器 1.x，该查看器支持 SQL Server 2014 帮助。 
@@ -165,13 +168,15 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>查看联机帮助
 
 联机帮助始终显示最新内容。 
 
 **在 SSMS 17.x 中查看 SQL Server 联机帮助**
 
-- 在“帮助”菜单中单击“查看帮助”。 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 中的最新 SQL Server 2016/2017 文档在浏览器中显示。 
+- 在“帮助”菜单中单击“查看帮助”。 [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 中的最新 SQL Server 2016/2017 文档在浏览器中显示。 
 
    ![查看帮助](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +209,22 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 
 >  [!NOTE]
 >  F1 帮助仅在联机状态可用。 F1 帮助不提供脱机资源。 
+
+## <a name="systems-without-internet-access"></a>没有 internet 访问权限的系统
+按照[前文所述步骤](#use-help-viewer-v2x)，在具有 internet 访问权限的系统上使用 SQL Server 帮助查看器下载脱机内容，可以将该内容迁移到没有 Internet 访问权限的系统。 可通过以下步骤执行操作。 
+
+  >[!NOTE]
+  >必须在脱机系统上安装支持帮助查看器的软件（如 SQL Server Management Studio）。 
+
+1. 打开帮助查看器 (Ctrl + Alt + F1)。
+1. 选择感兴趣的文档。 例如，通过 SQL 进行筛选并选择 SQL Server 技术文档。 
+1. 标识可以在“本地存储路径”下找到的磁盘上文件的物理路径。
+1. 使用文件系统资源管理器导航到此位置。 
+    1.  默认位置是： `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. 选择三个文件夹（“ContentStore”、“传入”、“IndexStore”），并将它们复制到脱机系统上的同一位置。 可能需要使用临时媒体设备（如 USB 或 CD）。 
+1. 移动这些文件后，在脱机系统上启动帮助查看器，然后便可以使用 SQL Server 技术文档。
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>后续步骤

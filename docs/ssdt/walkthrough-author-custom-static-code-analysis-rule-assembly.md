@@ -11,12 +11,12 @@ ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de84aa458952ad06d330b7a32b6c68bc3e29bdaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5dcb7c6c40c17cf2cfa68d493217359511b93b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751065"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406234"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
 此演练演示创建 SQL Server 代码分析规则的步骤。 在此演练中创建的规则用于避免存储过程、触发器和函数中的 WAITFOR DELAY 语句。  

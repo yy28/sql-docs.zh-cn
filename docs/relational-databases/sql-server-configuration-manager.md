@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510588"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,9 +75,9 @@ ms.locfileid: "51657028"
   
 -   服务器别名 — 客户端所连接到的计算机的服务器别名。  
   
--   协议 — 用于配置条目的网络协议。  
+-   协议 - 用于配置条目的网络协议。  
   
--   连接参数 — 与用于网络协议配置的连接地址关联的参数。  
+-   连接参数 - 与用于网络协议配置的连接地址关联的参数。  
   
  虽然某些操作（例如启动和停止服务）应使用群集管理器，但使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器也可以查看有关故障转移群集实例的信息。  
   

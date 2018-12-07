@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518307"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升级 Power Pivot for SharePoint
 
@@ -84,7 +84,7 @@ ms.locfileid: "51605417"
   
     1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中单击 **“安装”**。  
   
-    2.  单击 **“从 SQL Server 升级...”**。  
+    2.  单击“从 SQL Server 升级...”。  
   
     3.  在 **“选择实例”** 页上，选择 **POWERPIVOT** 实例名，然后单击 **“下一步”**。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51605417"
   
          在“开始”菜单上，指向“所有程序”，然后依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] “配置工具”和 “SharePoint 2013 配置工具”**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
-    2.  启动时，该配置工具会检查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 场解决方案和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较早版本，你将看到消息“已检测到**解决方案文件的更高版本[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。请选择升级选项以升级你的场**。” 单击“确定”  关闭系统验证消息。  
+    2.  启动时，该配置工具会检查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 场解决方案和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较早版本，将看到消息“**已检测到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案文件的更高版本。请选择升级选项以升级场**。” 单击“确定”  关闭系统验证消息。  
   
     3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”**。  
   
@@ -121,11 +121,11 @@ ms.locfileid: "51605417"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“**在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。是否继续？**”。  
+    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“**在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。是否继续?**”。  
   
     8.  单击 **“是”** 继续操作。  
   
-    9. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求**将失败**，并显示类似“无法刷新数据”或“**试图执行请求操作期间出错。请重试**。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
+    9. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求“将失败”，并显示类似“无法刷新数据”或“试图执行请求操作期间出错 **。请重试**。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
      有关详细信息，请参见以下内容：  
   
@@ -172,11 +172,11 @@ ms.locfileid: "51605417"
   
     1.  在“开始”菜单上，指向“所有程序”，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”和“配置工具”**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
-    2.  启动时，该配置工具会检查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 场解决方案和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较早版本，你将看到消息“已检测到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案文件的更高版本。 请选择升级选项以升级你的场。” 单击“确定”  关闭消息框。  
+    2.  启动时，该配置工具会检查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 场解决方案和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较早版本，将看到消息“已检测到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案文件的更高版本。 请选择升级选项以升级场。” 单击“确定”  关闭消息框。  
   
     3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”** 继续操作。  
   
-    4.  出现以下警告：“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
+    4.  出现以下警告：“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
   
          此警告指的是报告数据刷新活动的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的工作簿。 如果您已经自定义了这些工作簿，当使用新版本替换现有文件时，对这些工作簿的所有修改都将丢失。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "51605417"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击 **“运行”** 后，出现以下警告，提醒您将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
+    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
   
     9. 单击 **“是”** 继续操作。  
   
@@ -216,15 +216,15 @@ ms.locfileid: "51605417"
     1.  以管理员身份启动 SharePoint 2010 Management Shell，然后运行以下命令查看队列中的作业：  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
     2.  检查现有部署的以下信息： **“类型”** 是“收回”或“部署”， **“文件”** 为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
-    3.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制 **JobId** 的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）：  
+    3.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制“JobId”的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）：  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  通过依次单击 **“验证”** 和 **“运行”**，在该配置工具中重试该任务。  

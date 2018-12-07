@@ -11,12 +11,12 @@ ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211d4d23367e08d8a30ec4b7e71f7ad477a6030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502942"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概述：从 Excel（用于 Excel 的 MDS 外接程序）导入数据
 
@@ -24,7 +24,7 @@ ms.locfileid: "47685965"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，要想与其他用户共享数据，可将数据发布到 MDS 存储库。 数据一经发布，即可供该外接程序的其他用户下载。  
   
- 当您发布数据时，您已经添加或更新的所有数据都发布到 MDS 存储库。 已删除的数据不会发布 — 您必须单独删除数据。 有关详细信息，请参阅 [删除行（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
+ 发布数据时，已添加或更新的所有数据都会发布到 MDS 存储库。 已删除的数据不会发布，必须单独删除数据。 有关详细信息，请参阅 [删除行（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
   
 > [!NOTE]  
 >  发布不能用于创建新实体。 有关创建实体的详细信息，请参阅[创建实体（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "47685965"
   
 -   如果更改成员的 **Code** 值，该成员以前所有的事务都将不可用。 通过将 **Code** 值返回为原始值，你可以访问以前的事务。  
   
--   您可以查看其他用户对成员执行的事务。 您还可以查看您对成员执行的所有事务，即便您不再对特定属性拥有权限。 你不能查看与你的权限设置为拒绝的属性相关的事务。  
+-   您可以查看其他用户对成员执行的事务。 还可以查看对成员执行的所有事务，即便不再对特定属性拥有权限。 你不能查看与你的权限设置为拒绝的属性相关的事务。  
   
  您可以查看对成员执行的所有事务。 有关详细信息，请参阅 [查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47685965"
 >  如果您输入的批注超过 500 个字符，该批注将被自动截断。  
   
 ## <a name="business-rule-and-other-validation"></a>业务规则和其他验证  
- 当您发布数据时，将执行验证，在确保数据准确无误后才将其添加到 MDS 存储库中。 如果数据不符合指定的条件，则不会将其发布到存储库。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
+ 发布数据时，将执行验证，在确保数据准确无误后才将其添加到 MDS 存储库中。 如果数据不符合指定的条件，则不会将其发布到存储库。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

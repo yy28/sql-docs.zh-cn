@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -17,12 +16,12 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822035"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617647"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS（内部）知识清理数据
 
@@ -38,7 +37,7 @@ ms.locfileid: "47822035"
   
 -   您必须已为清理活动指定了适当的阈值。 有关此操作的信息，请参阅 [有关此操作的信息，请参阅](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
--   在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中必须有您要针对其比较和清理源数据的 DQS 知识库。 此外，知识库必须包含有关您要清理的数据类型的知识。 例如，如果您要清理包含美国地址的数据源，您必须具有一个针对美国地址的“高质量”示例数据创建的知识库。  
+-   在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中必须有您要针对其比较和清理源数据的 DQS 知识库。 此外，知识库必须包含有关您要清理的数据类型的知识。 例如，如果要清理包含美国地址的数据源，则必须具有一个针对美国地址的“高质量”示例数据创建的知识库。  
   
 -   如果要清理的源数据在 Excel 文件中，则必须在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 计算机上安装 Microsoft Excel。 否则，您在映射阶段中将无法选择 Excel 文件。 由 Microsoft Excel 创建的文件可以具有 .xlsx、.xls 或 .csv 扩展名。 如果使用 64 位版本的 Excel，则仅支持 Excel 2003 文件 (.xls)；而不支持 Excel 2007 或 2010 文件 (.xlsx)。 如果您使用的是 64 位版本的 Excel 2007 或 2010，则将文件另存为 .xls 文件或 .csv 文件，或者改而安装 32 位版本的 Excel。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "47822035"
   
     -   下部窗格显示右上窗格中选择的域值在单独出现时的情形。 显示以下信息：用于指定其他（正确）值的框、置信度（对于 **“正确”** 选项卡下的值不显示此项）、DQS 对值采取措施的原因、批准和拒绝该值的更正和建议的选项以及原始值。  
   
-3.  如果您创建某个域时为该域启用了 **“拼写检查器”** 功能，则会针对标识为潜在错误的此类域值显示红色波浪下划线。 将为整个值显示下划线。 例如，如果“New York”错误地拼写为“Neu York”，则拼写检查器将在“Neu York”之下（而不仅仅是“Neu”）显示红色下划线。 如果您右键单击该值，您将看到建议的更正。 如果建议数目超过 5 个，则可以在上下文菜单中单击 **“更多建议”** ，以查看剩余建议。 当显示错误时，建议值是针对整个值的替换值。 例如，在上个示例中，“New York”将显示为一个建议，而不仅仅显示“New”。 您可以选择其中一项建议，或将值添加到要针对该值显示的字典中。 值以用户帐户级别存储在字典中。 当您从拼写检查器上下文菜单中选择一项建议时，所选建议将添加到 **“更正为”** 列中。 但是，如果您在 **“更正为”** 列中选择一项建议，则列中的值将替换为所选建议。  
+3.  如果您创建某个域时为该域启用了 **“拼写检查器”** 功能，则会针对标识为潜在错误的此类域值显示红色波浪下划线。 将为整个值显示下划线。 例如，如果“New York”错误地拼写为“Neu York”，则拼写检查器将在“Neu York”之下（而不仅仅是“Neu”）显示红色下划线。 如果您右键单击该值，您将看到建议的更正。 如果建议数目超过 5 个，则可以在上下文菜单中单击 **“更多建议”** ，以查看剩余建议。 当显示错误时，建议值是针对整个值的替换值。 例如，在上一个示例中，“New York”将显示为一个建议，而不仅仅显示“New”。 您可以选择其中一项建议，或将值添加到要针对该值显示的字典中。 值以用户帐户级别存储在字典中。 当您从拼写检查器上下文菜单中选择一项建议时，所选建议将添加到 **“更正为”** 列中。 但是，如果您在 **“更正为”** 列中选择一项建议，则列中的值将替换为所选建议。  
   
      默认情况下，交互式清理阶段中启用了拼写检查器功能。 您可以在交互式清理阶段中禁用拼写检查器，步骤为：单击 **“启用/禁用拼写检查器”** 图标，或者右键单击域值区域，然后在快捷菜单中单击 **“拼写检查器”** 。 若要再次启用它，请按相同方式操作。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "47822035"
   
         -   \<Domain>_Status：数据清理后域值的状态。 例如， **“建议”**、 **“新建”**、 **“无效”**、 **“已更正”** 或 **“正确”**。  
   
-        -   记录状态：除了对每个映射域具有状态字段 (\<DomainName>_Status) 之外，“记录状态”字段还显示记录的状态。 如果记录中的任何域状态为 *“新建”* 或 *“正确”*，则 **“记录状态”** 设置为 *“正确”*。 如果记录中的任何域状态为 *“建议”*、 *“无效”* 或 *“已更正”*，则 **“记录状态”** 设置为各自的值。 例如，如果记录中的任何域状态为 *“建议”*，则 **“记录状态”** 设置为 *“建议”*。  
+        -   记录状态：除了对每个映射域具有状态字段 (\<DomainName>_Status) 之外，“记录状态”字段还显示记录的状态。 如果记录中的任何域状态为“新建”或“正确”，则“记录状态”设置为“正确”。 如果记录中的任何域状态为“建议”、“无效”或“已更正”，则“记录状态”设置为各自的值。 例如，如果记录中的任何域状态为“建议”，则“记录状态”设置为“建议”。  
   
             > [!NOTE]  
             >  如果您使用引用数据服务来进行清理操作，则还可以导出有关域值的其他数据。 有关详细信息，请参阅[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  

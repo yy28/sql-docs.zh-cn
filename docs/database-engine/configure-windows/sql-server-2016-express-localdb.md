@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d7fa27844de363c2a703a95e20df11277309fa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b3886ac725556683a3b20d8c3cd513b2fe5949f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606907"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617714"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
 ## <a name="description"></a>描述  
  **LocalDB** 安装程序使用 SqlLocalDB.msi 程序在计算机上安装所需文件。 安装后， **LocalDB** 是可以创建和打开 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 数据库的系统数据库文件存储于用户本地 AppData 路径中，这个路径通常是隐藏的。 例如 **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**。 用户数据库文件存储在用户指定的位置，通常为 **C:\Users\\<user\>\Documents\\** 文件夹中的某个位置。  
   
- 有关在应用程序中包含 **LocalDB** 的详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文档[本地数据概述](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)、[演练：创建 SQL Server LocalDB 数据库](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)和[演练：连接到 SQL Server LocalDB 数据库中的数据（Windows 窗体）](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)。  
+ 有关在应用程序中包含 **LocalDB** 的详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文档[本地数据概述](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))、[演练：创建 SQL Server LocalDB 数据库](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233763(v=vs.110))和[演练：连接到 SQL Server LocalDB 数据库中的数据（Windows 窗体）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms171890(v=vs.110))。  
   
- 有关 **LocalDB** API 的详细信息，请参阅 [SQL Server Express LocalDB 实例 API 参考](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) 和 [LocalDBStartInstance 函数](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx)。  
+ 有关 LocalDB API 的详细信息，请参阅 [SQL Server Express LocalDB 参考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
  SqlLocalDb 实用工具可以创建 **LocalDB**的新实例，启动和停止 **LocalDB**的实例，并且包含可帮助你管理 **LocalDB**的选项。  有关 SqlLocalDb 实用工具的详细信息，请参阅 [SqlLocalDB 实用工具](../../tools/sqllocaldb-utility.md)。  
   
@@ -71,7 +71,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
 ### <a name="automatic-and-named-instances"></a>自动实例和命名实例  
  **LocalDB** 支持两种类型的实例：自动实例和命名实例。  
   
--   **LocalDB** 的自动实例是公共的。 系统自动为用户创建和管理此类实例，并可由任何应用程序使用。 安装在用户计算机上的每个 **LocalDB** 版本都存在一个自动 **LocalDB** 实例。 自动 **LocalDB** 实例提供无缝的实例管理。 无需创建实例；它可以自动执行工作。 这使得应用程序可以轻松地安装和迁移到另一台计算机。 如果目标计算机已安装指定版本的 **LocalDB** ，则目标计算机也提供此版本的自动 **LocalDB** 实例。 自动 **LocalDB** 实例具有属于保留命名空间的特殊实例名称模式。 这可以防止名称与 **LocalDB**的命名实例发生冲突。 自动实例的名称为 **MSSQLLocalDB**。  
+-   **LocalDB** 的自动实例是公共的。 系统自动为用户创建和管理此类实例，并可由任何应用程序使用。 安装在用户计算机上的每个 LocalDB 版本都存在一个自动 LocalDB 实例。 自动 **LocalDB** 实例提供无缝的实例管理。 无需创建实例；它可以自动执行工作。 这使得应用程序可以轻松地安装和迁移到另一台计算机。 如果目标计算机已安装指定版本的 **LocalDB** ，则目标计算机也提供此版本的自动 **LocalDB** 实例。 自动 **LocalDB** 实例具有属于保留命名空间的特殊实例名称模式。 这可以防止名称与 **LocalDB**的命名实例发生冲突。 自动实例的名称为 **MSSQLLocalDB**。  
   
 -   **LocalDB** 的命名实例是专用的。 这些命名实例由负责创建和管理该实例的单个应用程序所拥有。 命名实例提供与其他实例的隔离，并可以通过减少与其他数据库用户的资源争用来提高性能。 命名实例必须由用户通过 **LocalDB** 管理 API 显式创建，或者通过托管应用程序的 app.config 文件隐式创建（尽管托管应用程序也会在需要时使用 API）。 **LocalDB** 的每个命名实例都具有关联的 **LocalDB** 版本，指向相应的 **LocalDB** 二进制文件集。 **LocalDB** 的命名实例为 **sysname** 数据类型并且可具有最多 128 个字符。 （这不同于常规的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例，此类命名实例将名称限制为 16 个 ASCII 字符的常规 NetBIOS 名称。）**LocalDB** 实例名称可包含在文件名内合法的任何 Unicode 字符。  使用自动实例名称的命名实例将成为自动实例。  
   
@@ -128,7 +128,7 @@ REM Gather information about the instance of LocalDB
  由于 Windows 文件系统重定向，NT AUTHORITY\SYSTEM 等内置帐户拥有的 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** 的实例是用户为其使用而创建的实例。 计算机上的任何用户都可以使用 **LocalDB**实例创建数据库，在用户配置文件下存储文件并使用凭据来运行进程。 默认情况下，对 **LocalDB** 实例的访问仅限于其所有者。 **LocalDB** 中包含的数据受到对数据库文件的文件系统访问的保护。 如果用户数据库文件存储于某一共享位置，则通过使用他们自己拥有的 **LocalDB** 实例对该位置具有文件系统访问权限的任何人都可以打开该数据库。 如果数据库文件处于某一受保护的位置，例如用户数据文件夹，则只有该用户以及有权访问该文件夹的任何管理员才能打开该数据库。 **LocalDB** 文件只能一次通过一个 **LocalDB** 实例来打开。  
   
 > [!NOTE]  
->  **LocalDB** 始终在用户安全上下文中运行；即 **LocalDB** 从不使用本地 Administrator 组的凭据来运行。 这意味着 **LocalDB** 实例使用的所有数据库文件必须可以通过拥有的用户的 Windows 帐户来访问，而不必考虑本地 Administrators 组中的成员资格。  
+>  LocalDB 始终在用户安全上下文中运行；即 LocalDB 从不使用本地 Administrator 组的凭据来运行。 这意味着 LocalDB 实例使用的所有数据库文件必须可以通过拥有的用户的 Windows 帐户来访问，而不必考虑本地 Administrators 组中的成员资格。  
   
 ## <a name="see-also"></a>另请参阅  
 
