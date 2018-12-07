@@ -25,7 +25,7 @@ R Services 包括 R 的基本分发，与 Microsoft 的企业 R 包重叠，以�
 R 库包括 RevoScaleR、MicrosoftML 等。 由于 R Services 与数据库引擎集成，你可以使分析与数据位于较近的位置，并消除与数据移动相关的成本和安全风险。
 
 > [!Note]
-> R Services 已在 SQL Server 2017 中对重命名[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)，专用于反映将 Python 添加。
+> R Services 已在 SQL Server 2017 中重命名为 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)，以反映添加了 Python。
 
 ## <a name="components"></a>组件
 
