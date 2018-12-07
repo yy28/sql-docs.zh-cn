@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98d4a19731c8d54326346522ffe9a1d458543d10
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: bfcbf1862968a00009bca4d735eb95a3bb5d1719
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991230"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712109"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "49991230"
 计划指南将固定查询计划和/或查询提示应用于查询。
   
 ##  <a name="Restrictions"></a> 限制和局限  
-  
 -   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide**的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果指定了 **@name =**，则也必须指定 **@stmt =**、**@type =** 等。 同样，如果省略了 **@name =** 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
 -   您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
@@ -37,18 +36,14 @@ ms.locfileid: "49991230"
 -   无法为引用存储过程、函数或 DML 触发器（指定了 WITH ENCRYPTION 子句或为临时触发器）的 @module_or_batch 值创建 OBJECT 类型的计划指南。  
   
 -   如果尝试删除或修改的函数、存储过程或 DML 触发器由某个计划指南引用，则不管该指南为启用状态还是禁用状态，都会导致错误。 尝试删除计划指南被引用并已为其定义触发器的表也将导致错误。  
- 
-  
+
 ##  <a name="Permissions"></a> Permissions  
  若要创建类型为 OBJECT 的计划指南，需要拥有对被引用对象的 ALTER 权限。 若要创建类型为 SQL 或 TEMPLATE 的计划指南，需要拥有对当前数据库的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SSMS 创建计划指南  
-
- 
 1.  单击加号以便展开您要在其中创建计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。
-![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  在 **“新建计划指南”** 对话框的 **“名称”** 框中，输入计划指南的名称。  
   
@@ -56,7 +51,7 @@ ms.locfileid: "49991230"
   
 5.  在 **“作用域类型”** 列表中，选择 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其中出现的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL**和 **TEMPLATE**。  
   
-6.  在 **“作用域批处理”** 框中，请输入其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的批处理文本。 批处理文本不能包括 USE``*database* 语句。 只有在 **SQL** 选择为作用域类型时， **“作用域批处理”** 框才可用。 如果在 SQL 为作用域类型时在“作用域批处理”框中未输入任何内容，则将批处理文本的值设置为与 **“语句”** 框中相同的值。  
+6.  在 **“作用域批处理”** 框中，请输入其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的批处理文本。 批处理文本不能包括 `USE`database 语句。 只有在 **SQL** 选择为作用域类型时， **“作用域批处理”** 框才可用。 如果在 SQL 为作用域类型时在“作用域批处理”框中未输入任何内容，则将批处理文本的值设置为与 **“语句”** 框中相同的值。  
   
 7.  在 **“作用域批处理”** 列表中，输入其中包含该对象的架构的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域架构名称”** 框才可用。  
   
@@ -64,11 +59,11 @@ ms.locfileid: "49991230"
   
 9. 在 **“参数”** 框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中嵌入的所有参数的参数名称和数据类型。  
   
-     只有当下列任意一个条件为真时才会应用参数：  
+   只有当下列任意一个条件为真时才会应用参数：  
   
-    -   作用域类型为 **SQL** 或 **TEMPLATE**。 如果为 **TEMPLATE**，则参数不能为 NULL。  
+   -   作用域类型为 **SQL** 或 **TEMPLATE**。 如果为 **TEMPLATE**，则参数不能为 NULL。  
   
-    -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用 sp_executesql 进行提交，并且指定了该参数的值，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在参数化某语句之后内部提交该语句。  
+   -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用 sp_executesql 进行提交，并且指定了该参数的值，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在参数化某语句之后内部提交该语句。  
   
 10. 在 **“提示”** 框中，输入要应用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的查询提示或查询计划。 若要指定一个或多个查询提示，请输入一个有效的 OPTION 子句。  
   
@@ -76,16 +71,14 @@ ms.locfileid: "49991230"
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-  
 ##  <a name="TsqlProcedure"></a> 使用 T-SQL 创建计划指南  
-  
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql  
     -- creates a plan guide named Guide1 based on a SQL statement  
     EXEC sp_create_plan_guide   
         @name = N'Guide1',   
@@ -98,7 +91,7 @@ ms.locfileid: "49991230"
         @hints = N'OPTION (MAXDOP 1)';  
   
     ```  
-  
- 有关详细信息，请参阅 [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)。  
-  
+
+有关详细信息，请参阅 [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)。  
+
   

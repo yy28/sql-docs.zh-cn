@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021581"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712488"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021581"
 
 关键绩效指标 (KPI) 是一个视觉提示，用于传达某个目标的进度量。  关键绩效指标对于团队、经理和企业很有价值，可快速评估针对可度量的目标所进行的工作进度。   
   
-通过使用 SQL Server 2016 Reporting Services 中的 KPI，你可以轻松地将以下问题的答案可视化：  
+通过使用 SQL Server Reporting Services 中的 KPI，你可以轻松地将以下问题的答案可视化：  
   
 -   我是超前还是落后？  
   
@@ -60,7 +60,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
 > **警告**：虽然可以在设计时使用用于“状态”  字段的单词，如果要刷新数据集，还是应当使用数值。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  
   
-> **请注意**：“值” 、“目标”  和“状态”  字段只能从数据集结果的第一行选择一个值。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
+> **请注意**：“值”、“目标”和“状态”字段只能从数据集结果的第一行选择一个值。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
   
 若要使用来自共享数据集的数据，则可以执行以下操作。  
   

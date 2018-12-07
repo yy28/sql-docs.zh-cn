@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764075"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711238"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>报表设计提示（报表生成器和 SSRS）
   以下提示可帮助你设计 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。  
@@ -156,7 +156,7 @@ ms.locfileid: "47764075"
  通过将此行为、报表项的宽度和高度属性、表体的大小、页面高度和页面宽度定义、父报表的边距设置、呈现器对于分页的特定支持等组合起来，可共同确定哪些报表项适合一起呈现在页面上。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)  
   

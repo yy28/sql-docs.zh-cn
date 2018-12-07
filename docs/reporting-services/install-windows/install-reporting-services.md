@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812970"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712648"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>安装 SQL Server Reporting Services（2017 及更高版本）
 
@@ -124,7 +124,7 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 
 ## <a name="related-information"></a>相关信息
 
-有关如何安装 SQL Server 2016 Reporting Services 本机模式的信息，请参阅[安装 Reporting Services 本机模式报表服务器](install-reporting-services-native-mode-report-server.md)。 有关如何在 SharePoint 集成模式下安装 SQL Server 2016 Reporting Services 的信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。
+有关如何安装 SQL Server Reporting Services 本机模式的信息，请参阅[安装 Reporting Services 本机模式报表服务器](install-reporting-services-native-mode-report-server.md)。 有关如何在 SharePoint 集成模式下安装 SQL Server 2016 Reporting Services（及更早版本）的信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

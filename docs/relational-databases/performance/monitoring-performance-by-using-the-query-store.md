@@ -1,7 +1,7 @@
 ---
 title: 使用查询存储监视性能 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673326"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711498"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询存储功能让你可以探查查询计划选项和性能。 它可帮助你快速找到查询计划更改所造成的性能差异，从而简化了性能疑难解答。 查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。 它按时间窗口将数据分割开来，使你可以查看数据库使用模式并了解服务器上何时发生了查询计划更改。 可以使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 选项来配置查询存储。 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> 使用回归查询功能  
- 在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储”  部分。  
+在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储”  部分。  
   
- ![对象资源管理器中的 Query Store 树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "对象资源管理器中的 Query Store 树")  
+![SSMS 对象资源管理器中的 SQL Server 2016 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 Query Store tree in SSMS Object Explorer")   ![SSMS 对象资源管理器中的 SQL Server 2017 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 Query Store tree in SSMS Object Explorer") 
   
- 选择“回归查询”  ，以在 **中打开“回归查询”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框以基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
+选择“回归查询”  ，以在 **中打开“回归查询”**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框根据各种条件筛选查询：持续时间（单位 ms，此为默认值）、CPU 时间 (ms)、逻辑读取 (KB)、逻辑写入 (KB)、物理读取 (KB)、CLR 时间 (ms)、DOP、内存使用量 (KB)、行计数、已用日志内存 (KB)、已用临时 DB 内存 (KB) 和等待时间 (ms)。  
+选择某个计划以查看图形查询计划。 可以使用按钮查看源查询、强制执行和取消强制执行查询计划、在网格和图表格式之间进行切换、比较所选的计划（如果选择多个）及刷新显示。  
   
- ![对象资源管理器中的回归查询](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "对象资源管理器中的回归查询")  
+![SSMS 对象资源管理器中的 SQL Server 2016 回归查询](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")  
   
- 若要强制执行某一计划，请选择查询和计划，然后单击“强制计划” 。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。  
+若要强制执行某一计划，请选择查询和计划，然后单击“强制计划” 。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。
+
 ##  <a name="Waiting"></a>查找等待查询
 
-从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 开始，查询存储中将提供随时间变化每个查询的等待统计信息。 在查询存储中，等待类型将合并到等待类别中。 [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).中提供从等待类别到等待类型的映射。
+从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 开始，查询存储中将提供随时间变化每个查询的等待统计信息。 在查询存储中，等待类型将合并到等待类别中。 [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).中提供从等待类别到等待类型的映射。
+
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更高版本中，选择“查询等待统计信息”以打开“查询等待统计信息”窗格。 “查询等待统计信息”窗格显示包含查询存储中排在前面的等待类别的条形图。 使用顶部的下拉框选择等待时间的聚合条件：平均值、最大值、最小值、标准偏差和总计（默认）。
+
+ ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 Query Wait Statistics in SSMS Object Explorer")
+
+通过单击条形图和所选等待类别展示的详细信息视图，选择等待类别。 这个新的条形图包含对该等待类别有贡献的查询。 
+  
+ ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息的详细信息视图](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017 Query Wait Statistics detail view in SSMS Object Explorer")
+
+使用顶部的下拉框根据各种等待时间条件为所选等待类别筛选查询：平均值、最大值、最小值、标准偏差和总计（默认）。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
 
 等待类别可将不同等待类型按性质合并为类似的桶。 不同的等待类别需要不同的后续分析才能解决此问题，但相同类别的等待类型可引起非常相似的故障排除体验，并假定基于等待的受影响的查询会成为用于成功完成此类调查的大部分内容的缺少的部分。
 
@@ -124,10 +136,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 |每个数据库的高 RESOURCE_SEMAPHORE 等待|特定查询在查询存储中的高内存等待|查找查询存储中前几个使用内存最多的查询。 这些查询可能会进一步延迟受影响查询的进度。 请考虑对这些查询或受影响的查询使用 MAX_GRANT_PERCENT 查询提示。|
 |每个数据库的高 LCK_M_X 等待|特定查询在查询存储中的高锁定等待|检查受影响查询的查询文本，并确定目标实体。 在查询存储中查找修改同一实体的其他查询，该实体频繁执行和/或具有较高持续时间。 确定这些查询后，请考虑更改应用程序逻辑，以提高并发性，或使用限制性较弱的隔离级别。|
 |每个数据库的高 PAGEIOLATCH_SH 等待|特定查询在查询存储中的高缓冲 IO 等待|在查询存储中查找读取数越高的查询。 如果它们与含较高 IO 等待的查询匹配，执行执行搜索而不是扫描时，请考虑引入关于基础实体的索引，以便减少查询的 IO 开销。|
-|每个数据库的高 SOS_SCHEDULER_YIELD 等待|特定查询在查询存储中的高 CPU 等待|查找查询存储中前几个使用 CPU 最多的查询。 其中，请确定其高 CPU 趋势与受影响查询的高 CPU 等待关联的查询。 重点优化这些查询 – 可能存在计划回归，或缺失的索引。|
+|每个数据库的高 SOS_SCHEDULER_YIELD 等待|特定查询在查询存储中的高 CPU 等待|查找查询存储中前几个使用 CPU 最多的查询。 其中，请确定其高 CPU 趋势与受影响查询的高 CPU 等待关联的查询。 重点优化这些查询 - 可能存在计划回归，或缺失的索引。|
 
 ##  <a name="Options"></a> 配置选项 
-
 以下选项可用于配置查询存储参数。
 
 OPERATION_MODE  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> 维护查询性能稳定性  
- 对于执行多次的查询，你可能注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了会导致不同资源利用率和持续时间的不同计划。 借助查询存储，可以检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来的查询执行强制执行此最优计划。  
+对于执行多次的查询，你可能注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了会导致不同资源利用率和持续时间的不同计划。 借助查询存储，可以检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来的查询执行强制执行此最优计划。  
   
- 你还可以使用参数（自动参数化或手动参数化）来标识某一查询内不一致的查询性能。 你可以在不同计划中标识出对所有或大多数参数值而言足够快和最佳的计划，并强制执行此计划，为更大范围的用户方案保留可预测的性能。  
+你还可以使用参数（自动参数化或手动参数化）来标识某一查询内不一致的查询性能。 你可以在不同计划中标识出对所有或大多数参数值而言足够快和最佳的计划，并强制执行此计划，为更大范围的用户方案保留可预测的性能。  
   
- **强制执行或计划查询（应用强制策略）。** 当向某一查询强制执行某个计划时，每次查询开始执行时其强制执行的计划都会随同一起执行。  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>强制执行查询计划（应用强制策略）
+
+当强制执行某一查询的计划时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试在优化器中强制执行该计划。 如果计划强制实施失败，将触发 XEvent，并指示优化器正常优化。
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- 使用 **sp_query_store_force_plan** 时，你只可以强制执行查询存储记录为该查询计划的那些计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已用于执行该查询的计划。  
+使用 **sp_query_store_force_plan** 时，你只可以强制执行查询存储记录为该查询计划的那些计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已用于执行该查询的计划。  
   
- **删除强制执行查询的计划。** 若要再次依靠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器来计算最佳查询计划，请使用 **sp_query_store_unforce_plan** 来取消强制执行为查询选定的计划。  
+### <a name="remove-plan-forcing-for-a-query"></a>删除为查询强制执行的计划
+
+若要再次依靠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器来计算最佳查询计划，请使用 **sp_query_store_unforce_plan** 来取消强制执行为查询选定的计划。  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

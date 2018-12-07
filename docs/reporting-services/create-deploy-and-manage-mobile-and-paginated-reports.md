@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fe389985659013e88009822eb20cf21302423e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029426"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712548"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
 
@@ -36,9 +36,9 @@ ms.locfileid: "50029426"
 
 SQL Server Reporting Services 是客户在其本地部署的一种解决方案，用于创建、发布和管理报表，然后以不同方式将其传送到正确的用户，用户可在 Web 浏览器或移动设备中查看报表，也可在收件箱中查看电子邮件形式的报表。
 
-对于 SQL Server 2016，Reporting Services 提供产品的更新套件：
+SQL Server Reporting Services 提供产品的更新套件：
 
-* 提供最新的**传统分页报表** ，使用户可通过更新工具和用于创建报表的新功能创建新式报表。
+* 提供最新的“传统”分页报表，使用户可通过更新工具和用于创建报表的新功能创建新式报表。
 * 具有响应式布局的**新移动报表** ，可适应不同设备和保存方式。
 * **新式 Web 门户** ，可在任何新式浏览器中查看。 在新门户中，可以组织和显示移动和分页 Reporting Services 报表及 KPI。 还可在门户中存储 Excel 工作薄。
 
@@ -46,7 +46,7 @@ SQL Server Reporting Services 是客户在其本地部署的一种解决方案�
 
 ### <a name="whats-new-in-reporting-services"></a>Reporting Services 中的新增功能
 
-这些源让你可以随时了解最新的 SQL Server 2016 Reporting Services 新增功能。
+这些源让你可以随时了解最新的 SQL Server Reporting Services 新增功能。
 
 * [Reporting Services 中的新增功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 * [SQL Server Reporting Services 团队博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
@@ -73,7 +73,7 @@ Reporting Services 与“传统”分页文档样式报表相关联，这种报�
 
 这些差异很大的屏幕外形规格所需的不是固定布局，而是可适应不同设备和不同保留方式的响应式布局。 为此，我们添加了新的报表类型：移动报表，此报表基于我们在约一年前获得并集成到产品中的 Datazen 技术。 使用 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128)可以将现有 Datazen 报表迁移到 Reporting Services。 
 
-在新的 [移动报表发布服务器](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 应用中创建这些移动报表。 然后在本机适用于 Windows 10、iOS、Android 和 HTML5 的 [用于移动设备的 Power BI 应用](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 中，可访问 Power BI 云中的数据以及本地 SQL Server 2016 Reporting Services 数据。 创建可视化效果时，移动报表发布服务器自动生成每种可视化效果的示例数据，因此可查看数据的可视化效果以及每种可视化效果中可正常运行的数据类型。
+在新的 [移动报表发布服务器](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 应用中创建这些移动报表。 然后在本机适用于 Windows 10、iOS、Android 和 HTML5 的[用于移动设备的 Power BI 应用](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)中，可访问 Power BI 云中的数据以及本地 SQL Server Reporting Services 数据。 创建可视化效果时，移动报表发布服务器自动生成每种可视化效果的示例数据，因此可查看数据的可视化效果以及每种可视化效果中可正常运行的数据类型。
 
 ## <a name="web-portal"></a>Web 门户
 

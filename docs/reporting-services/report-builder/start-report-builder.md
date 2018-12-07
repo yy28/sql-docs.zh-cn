@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15b4e8094c5d45c5001002edfcf4e2202c09576f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 0159f5193d2d492696e399989ad18580ed142155
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814260"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711768"
 ---
 # <a name="start-report-builder"></a>启动报表生成器
 
@@ -64,7 +64,7 @@ ms.locfileid: "51814260"
 
 ## <a name="next-steps"></a>后续步骤
 
-[SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+[SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [设置报表生成器的默认选项](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

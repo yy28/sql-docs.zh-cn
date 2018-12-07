@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cfffb3e3df68d28fc7798461f1f45133f47148e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785641"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712438"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
 本教程将使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 中的向导，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中创建条形图。 然后添加筛选器，并优化图表。 
@@ -298,6 +298,6 @@ ms.locfileid: "47785641"
   
 ## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
-[SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

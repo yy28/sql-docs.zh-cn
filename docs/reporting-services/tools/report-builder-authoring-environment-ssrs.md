@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ea8e6931ef27faf80d1bd5f2aa23c9e5499266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699745"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711668"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>报表生成器创作环境 (SSRS)
   报表生成器 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是独立的创作环境，用于创建 Visual Studio 之外的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 你可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
@@ -41,7 +41,7 @@ ms.locfileid: "47699745"
   
 -   将你的报表和相关项导出到 SharePoint 库、报表服务器或你的本地计算机。  
   
- 报表生成器和报表设计器共享许多功能。 阅读有关 [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)的详细信息。  
+ 报表生成器和报表设计器共享许多功能。 阅读有关 [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)的详细信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   

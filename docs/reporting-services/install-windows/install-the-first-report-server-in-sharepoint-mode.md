@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8e65d1f965b45d808ba68a9cdffc87fad6f08814
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814130"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712308"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式下安装第一个 Report Server
 
@@ -108,7 +108,7 @@ ms.locfileid: "51814130"
   
 2.  在向导的左侧选择“安装”，然后选择“全新 SQL Server 独立安装或向现有安装添加功能”。  
 
-3.  如果您看到 **“产品密钥”** 页，则键入密钥或接受 Enterprise Evaluation Edition 的默认密钥。  
+3.  如果看到“产品密钥”页，请键入密钥或接受 Enterprise Evaluation 版本的默认密钥。  
   
      选择“下一步” 。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "51814130"
  
 8. 在 **“功能选择”** 页中，选择以下选项：  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **用于 SharePoint 产品的 Reporting Services 外接程序**。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "51814130"
 3.  Reporting Services 服务的状态将从 **“已停止”** 更改为 **“已启动”**。 如果 Reporting Services 服务不在列表中，则使用 PowerShell 安装该服务。  
   
     > [!NOTE]  
-    >  如果 Reporting Services 服务停留在 **“正在启动”** 状态，并且未更改为 **“已启动”**，则验证是否已在 Windows 服务器管理器中启动“SharePoint 2013 管理”服务。  
+    >  如果 Reporting Services 服务停留在“正在启动”状态，并且未更改为“已启动”，则验证是否已在 Windows 服务器管理器中启动“SharePoint 2013 管理”服务。  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 步骤 3：创建 Reporting Services 服务应用程序  
  本节提供您在查看现有服务应用程序的情况下，用于创建服务应用程序的步骤和属性说明。  
@@ -299,9 +299,9 @@ ms.locfileid: "51814130"
   
 -   更新服务代理的 **-Account** 。 该帐户在 SharePoint 场中必须是一个托管服务帐户。 有关详细信息，请参阅 SharePoint 主题 [规划 SharePoint 2013 中的管理和服务帐户](https://technet.microsoft.com/library/cc263445.aspx)。  
   
--   更新服务应用程序的 **–DatabaseServer** 参数。 此参数是数据库引擎实例  
+-   更新服务应用程序的 -DatabaseServer 参数。 此参数是数据库引擎实例  
   
--   更新您希望 **功能启用的站点的** –url [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 参数。  
+-   更新希望 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能启用的站点的 -url 参数。  
   
  **若要使用该脚本，请执行以下操作：**  
   
@@ -318,7 +318,7 @@ $starttime=Get-Date
 write-host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
-Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
+Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
 Write-Host -ForegroundColor Green "Install SSRS Service and Service Proxy, and start the service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -397,7 +397,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  对于 SharePoint 2016，你需要创建并配置一个 Excel Services 应用程序。 有关详细信息，请参见以下内容：  
   
--   [在 Power Pivot 模式下安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)中的“为 Analysis Services 集成配置 Excel Services”部分。  
+-   [在 Power Pivot 模式下安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md) 中的“为 Analysis Services 集成配置 Excel Services”部分。  
   
 -   [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)。  
 
@@ -428,7 +428,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+[SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

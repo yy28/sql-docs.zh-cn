@@ -8,19 +8,19 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 530b37d346235f829c0ac1e8ccacd4cbcfb157cc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: c68f8070bba8f392ded453f36078f0141d80ee04
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051199"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711890"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 
   将第二个或更多的 SharePoint 模式报表服务器添加到您的 SharePoint 场可改进报表服务器处理的性能和响应时间。 如果您在将更多的用户、报表和其他应用程序添加到报表服务器时发现性能下降，则添加其他报表服务器可改进性能。 在存在硬件问题或者您在对环境中的单独服务器执行一般性的维护时，也建议添加第二个报表服务器以便提高报表服务器的可用性。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本开始，用于在 SharePoint 模式中扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境的步骤遵循标准 SharePoint 场部署并且利用 SharePoint 负载平衡功能。  
   
 > [!IMPORTANT]  
->  并非所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的扩展。 有关详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 2016 各个版本支持的功能 [中的](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)部分。  
+>  并非所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的扩展。 有关详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SQL Server 各个版本支持的功能[中的 ](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS) 部分。  
   
 > [!TIP]  
 >  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，您将不使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器添加服务器和扩展报表服务器。 将带有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的 SharePoint 服务器添加到场中时，SharePoint 产品管理 Reporting Services 的扩展。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814330"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711218"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Web 门户（SSRS 本机模式）
 
@@ -54,12 +54,12 @@ Reporting Services Web 门户是一种基于 Web 的体验，支持查看报表�
 
 Web 门户仅适用于在本机模式下运行的报表服务器。 配置为 SharePoint 集成模式的报表服务器不支持报表管理器。
 
-仅在特定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中才提供某些 Web 门户功能。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的 Reporting Services 功能 ](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+仅在特定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中才提供某些 Web 门户功能。 有关详细信息，请参阅 [SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
 如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅[授予用户报表服务器的访问权限](security/grant-user-access-to-a-report-server-report-manager.md)
 
 > [!NOTE]
-> 如果浏览至服务器正在其上运行的本地计算机上的 Web 门户，你可能会看到一条消息指示你不能查看此文件夹。 这是由于通用访问控制 (UAC) 以及你未以管理员身份运行浏览器的原因造成的。你不能以管理员身份运行 Edge。你将需要使用 Internet Explorer。 你可以远程浏览至服务器，或以管理员身份启动 Internet Explorer 并浏览至 Web 门户。 如果想要远程使用 Web 门户，则需要给为你的帐户授予文件夹的内容管理者权限。  
+> 如果浏览至服务器正在其上运行的本地计算机上的 Web 门户，你可能会看到一条消息指示你不能查看此文件夹。 这是由于通用访问控制 (UAC) 以及你未以管理员身份运行浏览器的原因造成的。你不能以管理员身份运行 Microsoft Edge。你将需要使用 Internet Explorer。 你可以远程浏览至服务器，或以管理员身份启动 Internet Explorer 并浏览至 Web 门户。 如果想要远程使用 Web 门户，则需要给为你的帐户授予文件夹的内容管理者权限。  
 
 ## <a name="start-and-use-the-web-portal"></a>启动和使用 Web 门户
 
@@ -126,6 +126,6 @@ Web 门户将项按不同的类别分组。 可用类别如下。
 [配置 URL（SSRS 配置管理器）](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [Reporting Services 浏览器支持计划](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[SQL Server 2016 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

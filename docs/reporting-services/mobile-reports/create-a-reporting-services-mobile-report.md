@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030192"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710698"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>创建 Reporting Services 移动报表
-借助 SQL Server 移动报表发布服务器，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建 SQL Server 2016 Reporting Services 移动报表，这些报表可轻松缩放至任何屏幕大小。  
+借助 SQL Server 移动报表发布服务器，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建 SQL Server Reporting Services 移动报表，这些报表可轻松缩放至任何屏幕大小。  
   
 首次创建移动报表时，请从 Reporting Services Web 门户开始，以在本地计算机上安装 SQL Server 移动报表发布服务器。 也可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=733527)安装此应用程序。 在首次安装之后，就可以从 Web 门户或本地开始了。   
     
@@ -62,7 +62,7 @@ ms.locfileid: "50030192"
   
 11. 保存报表的时间。 在左上角选择“保存”图标，然后选择“保存在本地”  或“保存到服务器” 。  
   
-   若要将其保存到服务器，需要访问 SQL Server 2016 Reporting Services 报表服务器。  
+   若要将其保存到服务器，需要访问 SQL Server Reporting Services 报表服务器。  
      
    ### <a name="see-also"></a>另请参阅  
      

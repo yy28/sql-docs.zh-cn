@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677896"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712603"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51677896"
 
 **SSIS：**
 
-1. 添加对 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的支持。
+1. 添加对 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支持。
 2. 删除对 SQL Server 2012 的支持。
 
 ### <a name="known-issues"></a>已知问题：
@@ -207,7 +207,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 1. 将图标替换为更高质量的版本。
 
 **Integration Services (IS)**
-1. 在 ADF 中将包部署到 Azure SSIS IR 时，部署向导中添加了包验证步骤，可发现要在 Azure SSIS IR 中执行的 SSIS 包的潜在兼容性问题。 有关详细信息，请参阅[验证部署到 Azure 的 SSIS 包](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+1. 在 ADF 中将包部署到 Azure SSIS IR 时，部署向导中添加了包验证步骤，可发现要在 Azure SSIS IR 中执行的 SSIS 包的潜在兼容性问题。 有关详细信息，请参阅[验证部署到 Azure 的 SSIS 包](../integration-services/lift-shift/ssis-azure-validate-packages.md)。
 1. SSIS 扩展已本地化。
 
 ### <a name="bug-fixes"></a>Bug 修复
@@ -234,7 +234,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
   - 运行背景分析 - 启用此选项后，新式数据源的查询编辑器会在加载查询时对数据源运行查询，以分析查询的输出架构。
 
 **Integration Services (IS)**
-- 在 ADF 中将包部署到 Azure SSIS IR 时，部署向导中添加了包验证步骤，可发现要在 Azure SSIS IR 中执行的 SSIS 包的潜在兼容性问题。 有关详细信息，请参阅[验证部署到 Azure 的 SSIS 包](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+- 在 ADF 中将包部署到 Azure SSIS IR 时，部署向导中添加了包验证步骤，可发现要在 Azure SSIS IR 中执行的 SSIS 包的潜在兼容性问题。 有关详细信息，请参阅[验证部署到 Azure 的 SSIS 包](../integration-services/lift-shift/ssis-azure-validate-packages.md)。
 
 
 ### <a name="bug-fixes"></a>Bug 修复
@@ -290,9 +290,9 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 - 修复了安装 Azure 功能包后导入/导出向导无法列出数据源的问题。
 - 修复了切换连接时编辑 SSIS Analysis Services 进程任务会引发异常的问题。
 - 修复了在应用添加 __$command_id 列的 SQL 修补程序后 CDC 组件会中断的问题。
-- 修复了将目标指向旧版 SQL Server 时无法编辑和执行第三方包的问题。
+- 修复了面向旧版 SQL Server 时无法编辑和执行第三方包的问题。
 - 修复了双击 DTSWizard.exe 并选择“平面文件源”时“平面文件源”配置对话框无法正确显示的问题。
-- 修复了将目标指向 SQL Server 2017 时包含 Azure 功能包任务/组件的包无法执行的问题。
+- 修复了面向 SQL Server 2017 时包含 Azure 功能包任务/组件的包无法执行的问题。
 
 
 **已知问题**
@@ -617,11 +617,11 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 **发布操作**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **脚本操作**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 在 DacFx 中已添加两个新的 API：DacServices.Publish() 和 DacServices.Script()。 这些 API 还支持通过单个操作执行发布 + 脚本 + 报告操作。 示例用法：
 
@@ -658,15 +658,15 @@ Console.WriteLine(result.DeploymentReport);
 
 **Database Tools**
 
-* [连接 bug 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) – 无法从使用显式架构的 CROSS APPLY OPENJSON 中选择列
-* 已修复 – 自动生成的历史记录表索引问题：重新部署时 DacFx 会删除索引
-* 已修复 – DacFx 批处理分析器无法分析转义的括号“]”字符，导致发布失败的问题
-* 已改进 – 现在，SqlPackage 将在帮助输出中包含每个操作的说明
-* 已修复 – 编辑“高级”选项以及编辑发布、架构比较和其他文件中保存的连接字符串时，连接对话框中的“记住密码”选项不会保留设置
-* 已修复 – 对于“历史记录”选项卡中显示的、IntegratedAuthentication = true 的连接，连接属性中的“身份验证”字段保留空白。 现在会按预期显示“Windows 身份验证”
-* 已修复 – 对“工具”->“选项”->“文本编辑器”下的“SQL Server Tools Intellisense”设置所做的更改不会保留
-* 已改进 – 连接对话框中“历史记录”选项卡上的“固定”/“取消固定”按钮现在更紧凑，减少了出现滚动条的可能性
-* 已修复 – 已修复连接对话框中的多个辅助功能问题。
+* [连接 bug 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) - 无法从使用显式架构的 CROSS APPLY OPENJSON 中选择列
+* 已修复 - 自动生成的历史记录表索引问题：重新部署时 DacFx 会删除索引
+* 已修复 - DacFx 批处理分析器无法分析转义的括号“]”字符，导致发布失败的问题
+* 已改进 - 现在，SqlPackage 将在帮助输出中包含每个操作的说明
+* 已修复 - 编辑“高级”选项以及编辑发布、架构比较和其他文件中保存的连接字符串时，不会保留连接对话框中的“记住密码”选项
+* 已修复 - 对于“历史记录”选项卡中显示的、IntegratedAuthentication = true 的连接，连接属性中的“身份验证”字段保留空白。 现在会按预期显示“Windows 身份验证”
+* 已修复 - 不会保留对“工具”->“选项”->“文本编辑器”下的“SQL Server Tools Intellisense”设置所做的更改
+* 已改进 - 连接对话框中“历史记录”选项卡上的“固定”/“取消固定”按钮现在更紧凑，减少了出现滚动条的可能性
+* 已修复 - 已修复连接对话框中的多个辅助功能问题。
 
 **Analysis Services 和 Reporting Services**
 
@@ -693,7 +693,7 @@ Console.WriteLine(result.DeploymentReport);
 
 现在，SqlPackage.exe 和数据层应用程序框架 (DacFx) API 支持架构比较。 有关详细信息，请参阅  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)（SqlPackage 和数据层应用程序框架中的架构比较）。
 
-**Analysis Services – 适用于 SSDT Tabular 的集成工作区模式 (SSAS)**
+**Analysis Services - 适用于 SSDT Tabular 的集成工作区模式 (SSAS)**
 
 SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式，SSDT Tabular 将在后台自动启动该实例，使你能够在模型设计器中添加和查看表、列与数据，而无需提供外部工作区服务器实例。 集成工作区模式不会更改 SSDT 表格与工作区服务器和数据库配合工作的方式。 更改的是 SSDT 表格托管工作区数据库的位置。 若要启用集成工作区模式，请在创建新表格项目时显示的“表格模型设计器”对话框中选择“集成工作区”选项。 对于当前使用显式工作区服务器的现有表格项目，可以通过在“属性”窗口（在解决方案资源管理器中选择 Model.bim 文件时会显示该窗口）中，将“集成工作区模式”参数设置为 True 切换到集成工作区模式。 有关详细信息，请参阅 [Analysis Services 博客文章](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)。
 
@@ -704,7 +704,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 - [连接问题 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648)：在 SSDT 比较结果中 IsPersistedNullable 显示为有差异
 - [连接问题 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735)：导入 BACPAC 时标识重置
 - [连接问题 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167)：运行 SSDT 单元测试会留下临时文件
-- [连接问题 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712)：破坏向后兼容性 – AppLocal 和 Nugetization
+- [连接问题 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712)：破坏向后兼容性 - AppLocal 和 Nugetization
 
 **Analysis Services 和 Reporting Services**
 
@@ -732,8 +732,8 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 **新增功能**
 
 - **发行版本控制和编号：** 现在，发行版按编号顺序而不是按月份标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
-- **Analysis Services – 表格模型资源管理器：** 使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
-- **数据库工具 – Always Encrypted**：此发行版提供新的[“Always Encrypted 密钥管理”](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
+- **Analysis Services - 表格模型资源管理器：** 使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
+- **数据库工具 - Always Encrypted**：此发行版提供新的 [Always Encrypted 密钥管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
     - 创建列主密钥或列加密密钥时，单击“更新数据库”后，更改可能不会立即显示在 SQL Server 对象资源管理器中。 若要解决此问题，可在 SQL Server 对象资源管理器中刷新数据库节点。
     - 如果尝试加密某个表中包含 SQL Server 对象资源管理器中数据的列，该操作可能会失败。 此功能目前仅在 SSDT 数据库项目和 SSMS 中受支持。 以后的发行版将会实现对 SQL Server 对象资源管理器的支持。
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb425c4f9ec8ada6e5d2b7d6df88127f88762564
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b227ef4d93c5629305c711e46b4278428986ce0b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028017"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712468"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含支持在托管环境中开发和使用具有丰富功能的报表的一组图形和脚本编写工具。 该工具集包括开发工具、配置和管理工具以及报表查看工具。 本主题简要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的各工具以及如何访问该工具。  
@@ -39,7 +39,7 @@ ms.locfileid: "50028017"
 |[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]|借助 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，你可以创建移动报表，这些报表会动态调整内容以适合屏幕或浏览器窗口，并且能轻松缩放为任何屏幕大小。<br /><br /> 在网格行和列可调整且移动报表元素灵活的设计图面上创建移动报表。<br /><br /> 有关详细信息，请参阅 [使用 SQL Server 移动报表发布服务器创建移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。|下载 [SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=733527)|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|交互式数据浏览和直观显示体验，为使您可基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型创建报表和与报表交互而专门设计。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 具有 Silverlight 的浏览器。|  
 |报表设计器|使用此工具来设计报表。 包括以下功能：<br /><br /> 部署到本机模式或 SharePoint 模式的报表服务器。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 用于组织在报表中使用的数据的“报表数据”窗格<br /><br /> 用于交互式报表设计的设计和预览的选项卡式视图<br /><br /> 可帮助指定要从数据源中检索的数据以及与 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)中的数据源类型相关联的查询设计器<br /><br /> 具有 IntelliSense 的表达式编辑器，生成可自定义报表内容和外观的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 表达式<br /><br /> 支持自定义报表项和自定义查询设计器<br /><br /> <br /><br /> 有关详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
-|报表生成器|使用此工具来设计报表。 包括以下功能：<br /><br /> 部署到本机模式或 SharePoint 模式的报表服务器。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 类似 Office 的创作环境[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> 能够将报表项另存为报表部件<br /><br /> 用于创建地图的向导<br /><br /> 聚合的聚合<br /><br /> 增强的对表达式的支持<br /><br /> 帮助指定要从所选内置数据源类型检索的数据的查询设计器<br /><br /> 有关详细信息，请参阅 [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)。|下载 [报表生成器的独立版本](https://go.microsoft.com/fwlink/?LinkID=219138)<br /><br /> 或者从报表管理器/SharePoint 打开|  
+|报表生成器|使用此工具来设计报表。 包括以下功能：<br /><br /> 部署到本机模式或 SharePoint 模式的报表服务器。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 类似 Office 的创作环境[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> 能够将报表项另存为报表部件<br /><br /> 用于创建地图的向导<br /><br /> 聚合的聚合<br /><br /> 增强的对表达式的支持<br /><br /> 帮助指定要从所选内置数据源类型检索的数据的查询设计器<br /><br /> 有关详细信息，请参阅 [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)。|下载 [报表生成器的独立版本](https://go.microsoft.com/fwlink/?LinkID=219138)<br /><br /> 或者从报表管理器/SharePoint 打开|  
   
 ## <a name="tools-for-report-server-administration"></a>用于报表服务器管理的工具  
  为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中管理报表服务器提供了一组图形和脚本撰写工具。 您使用的工具取决于您的报表服务器的部署模式。  

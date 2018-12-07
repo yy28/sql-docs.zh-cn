@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703905"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711828"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云以及操作系统选项。 本文汇总了 SQL Server 2019 的新增功能。 有关详细信息和已知问题，请参阅 [SQL Server 2019 发行说明](sql-server-ver15-release-notes.md)。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云以及操作系统选项。 本文汇总了 SQL Server 2019 的新增功能。 有关详细信息和已知问题，请参阅 [SQL Server 2019 发行说明](sql-server-ver15-release-notes.md)。
 
 试用 SQL Server 2019！
 - [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下载 SQL Server 2019 以在 Windows 上安装](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ ms.locfileid: "51703905"
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-社区技术预览版 (CTP) 2.1 是 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的最新公开发行版。 以下是 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1 的新增功能或增强功能。
+社区技术预览版 (CTP) 2.1 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公开发行版。 以下是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 的新增功能或增强功能。
 
 - [大数据群集](#bigdatacluster)
   - 部署 Python 和 R 应用
@@ -46,7 +46,7 @@ ms.locfileid: "51703905"
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-社区技术预览版 (CTP) 2.0 是 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的第一个公开发行版。 以下是 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0 的新增功能或增强功能。
+社区技术预览版 (CTP) 2.0 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 第一个公开发行版。 以下是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 的新增功能或增强功能。
 
 - [大数据群集](#bigdatacluster)
   - 在 Kubernetes 上部署带 SQL 和 Spark Linux 容器的大数据群集
@@ -159,11 +159,11 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
 
 ### <a name="utf-8-support-ctp-20"></a>UTF-8 支持 (CTP 2.0)
 
-完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，或作为文本数据的数据库级或列级排序规则。 `CHAR` 和 `VARCHAR` 数据类型中允许 UTF-8，并在创建对象的排序规则或将其更改为带 `UTF8` 后缀的排序规则时启用。 
+完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，或作为文本数据的数据库级或列级排序规则。 `CHAR` 和 `VARCHAR` 数据类型允许使用 UTF-8，并在创建或将对象的排序规则更改为带有 `UTF8` 后缀的排序规则时启用 UTF-8。 
 
 例如：将 `LATIN1_GENERAL_100_CI_AS_SC` 更改为 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 SQL Server 2012 中所引入的。 `NCHAR` 和 `NVARCHAR` 仅允许 UTF-16 编码，并保持不变。
 
-此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 Latin 字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少近 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 22 个字节进行存储，而 `CHAR(10)` 需要 12 个字节存储相同的 Unicode 字符串。
+此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 Latin 字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
 
 ### <a name="resumable-online-index-create-ctp-20"></a>可恢复联机索引创建 (CTP 2.0)
 

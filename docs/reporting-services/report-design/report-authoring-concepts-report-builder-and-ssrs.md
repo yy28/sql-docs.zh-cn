@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51c8ac3fce465e6742001eb884332d2eb1e4309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800567"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710988"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>报表创作概念（报表生成器和 SSRS）
   本节简要定义报表生成器和报表设计器文档中用来描述分页报表的某些主要概念。 有关具体字词或术语的定义，请参阅[术语（报表生成器）](../../reporting-services/report-builder/glossary-report-builder.md)。  
@@ -38,6 +38,6 @@ ms.locfileid: "47800567"
  介绍用于定义和使用报表参数的方法，以及如何从报表服务器上的报表定义独立地管理这些参数。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: 配置本机模式报表服务器扩展部署 | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021641"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710638"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services 本机模式支持扩展部署模式。该模式允许运行共享单个报表服务器数据库的多个报表服务器实例。 扩展部署用来增加报表服务器的可扩展性，以处理更多的并发用户和更大的报表执行负载， 还可用来在特定服务器上专门处理交互式报表或计划报表。
 
 对于 Power BI 报表服务器，为确保其良好性能，需要在负载均衡器上为任何横向扩展环境配置客户端关联（有时称为粘滞会话）。  
   
-对于 SQL Server 2016 Reporting Services，SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行扩展。通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+对于 SQL Server 2016 Reporting Services 及更早版本，SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行横向扩展。通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
   在以下情形中使用“扩展部署”  ：  
   
@@ -46,7 +46,7 @@ Reporting Services 本机模式支持扩展部署模式。该模式允许运行�
   
  **若要计划、安装和配置扩展部署，请按照下列步骤操作：**  
   
--   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中查看[使用安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)以获取有关如何安装报表服务器实例的说明。  
+-   请查看[使用安装向导安装 SQL Server（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)，获取有关如何安装报表服务器实例的说明。  
   
 -   如果打算在网络负载平衡 (NLB) 群集上承载扩展部署，则应当在配置扩展部署之前配置 NLB 群集。 有关详细信息，请参阅 [在网络负载平衡群集上配置报表服务器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
   
@@ -133,7 +133,7 @@ An error occurred within the report server database.  This may be due to a conne
 3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”。  
   
     > [!NOTE]  
-    >  **问题：** 尝试将一个 Reporting Services 报表服务器实例联接到扩展部署时，你可能遇到类似“拒绝访问”的错误消息。  
+    >  **问题：** 尝试将一个 Reporting Services 报表服务器实例联接到横向扩展部署时，可能遇到类似“拒绝访问”的错误消息。  
     >   
     >  **解决方法：** 从第一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥并将该密钥还原到第二个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。  
   

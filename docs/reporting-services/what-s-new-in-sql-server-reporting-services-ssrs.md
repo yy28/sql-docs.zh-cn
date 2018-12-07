@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c7fe58cb279924ac60c2902c29dcd6bade82dd6f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813820"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712398"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -59,7 +59,7 @@ ms.locfileid: "51813820"
  
 在 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)上了解详细信息。
 
-* 下载 [SQL Server 2016 报表生成器](https://go.microsoft.com/fwlink/?LinkId=734968)。
+* 下载 [SQL Server 报表生成器](https://go.microsoft.com/fwlink/?LinkId=734968)。
 * 下载 [SQL Server Data Tools - 候选发布](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
 
 > 请注意：只能在 SQL Server 2016 及更高版本中内置的 SSAS 表格数据源中使用 DAX 查询设计器。
@@ -76,12 +76,12 @@ ms.locfileid: "51813820"
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   你可以通过品牌包使用组织的徽标和颜色来自定义 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 。  
   
   有关自定义品牌的详细信息，请参阅 [设置 Web 门户的品牌](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中的关键绩效指标 (KPI) 
 
 你可以在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中直接创建与你所在的文件夹有上下文关系的 KPI。 在创建 KPI 时，可以选择数据集字段并汇总这些值。 还可以选择相关内容以钻取到更多详细信息。
   
@@ -95,7 +95,7 @@ ms.locfileid: "51813820"
 Reporting Services 移动报表是针对各种外形规格进行了优化的专用报表，可以在用户访问移动设备上的报表时为其提供最佳体验。 移动报表提供各式各样的可视化效果：从时间表、类别图表和比较图表，到树状图和自定义地图。 将移动报表连接到各种数据源，包括本地 SQL Server Analysis Services 多维数据和表格数据。 在网格行和列可调整且移动报表元素灵活的设计图面上设计移动报表，这些报表可轻松缩放至任何屏幕大小。 然后，将这些移动报表保存到 Reporting Service 服务器，并在 iPad、iPhone、Android 手机和 Windows 10 设备上的浏览器或 Power BI 移动应用中进行查看和交互。
   
 #### <a name="mobile-report-publisher"></a>移动报表发布服务器  
-  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]允许你创建 SQL Server 移动报表并将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
+ [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]允许你创建 SQL Server 移动报表并将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -192,7 +192,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 [Analysis Services 中的新增功能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [后向兼容性](reporting-services-backward-compatibility.md)   
-[SQL Server 2016 各个版本支持的 Reporting Services 功能](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 [升级和迁移 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 

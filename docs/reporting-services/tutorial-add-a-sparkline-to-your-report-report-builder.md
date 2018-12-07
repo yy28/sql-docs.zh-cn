@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98a4d2d4bcc7faeb18352360b51b5fe4dcf722c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030826"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711139"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
 
@@ -220,7 +220,7 @@ ms.locfileid: "50030826"
   
     请注意迷你图中的各条形并不相互对齐。 在第二行数据中只有四个条形，因此，这些条比第一行中的条宽，因为第一行中有六个条形。 您不能比较每天每个产品的值。 它们之间需要相互对齐。  
   
-    还要注意的是，对于每一行，该行的最高的条形是行高。 这也会产生误导，因为每一行的最大值不相等：Budget Movie-Maker 的最大值是 $10,400，但 Slim Digital 的最大值是 $26,576 — 是前者的两倍还多。 并且，这两行的最大的条形大约为相同高度。 所有迷你图需要使用相同的比例。  
+    还要注意的是，对于每一行，该行的最高的条形是行高。 这也会产生误导，因为每一行的最大值不相等：Budget Movie-Maker 的最大值是 $10,400，但 Slim Digital 的最大值是 $26,576 - 是前者的两倍还多。 并且，这两行的最大的条形大约为相同高度。 所有迷你图需要使用相同的比例。  
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
@@ -319,6 +319,6 @@ ms.locfileid: "50030826"
 用于创建具有迷你图的表报表的教程到此结束。 有关迷你图的详细信息，请参阅[迷你图和数据条](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
-[SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

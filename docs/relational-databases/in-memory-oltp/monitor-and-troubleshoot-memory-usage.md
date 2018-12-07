@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292b6a00e92ced31fc57c604c5d614df832dd9fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666676"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711999"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "51666676"
 ##  <a name="bkmk_Monitoring"></a> 监视内存使用量  
   
 ###  <a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 附随内置的标准报表，以便监视内存中表使用的内存。 您可以使用 [此处](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述的对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 附随内置的标准报表，以便监视内存中表使用的内存。 可以使用对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。  
   
 #### <a name="consumption-at-the-database-level"></a>数据库级别的内存使用情况  
  您可以按如下所示在数据库级别监视内存使用情况。  

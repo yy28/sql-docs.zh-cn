@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813860"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712568"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -68,7 +68,7 @@ ms.locfileid: "51813860"
  有关自定义数据处理扩展插件的详细信息，请参阅 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。 有关标准 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的详细信息，请参阅 <xref:System.Data> 命名空间。   
   
 ## <a name="platform-support-for-report-data-sources"></a>报表数据源的平台支持  
- 可在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署中使用的数据源因 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本和平台的不同而不同。 有关功能的详细信息，请参阅 [SQL Server 2016 各个版本支持的 Reporting Services 功能](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。 本主题后面的表按版本和平台列出了所支持数据源的相关信息。  
+ 可在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署中使用的数据源因 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本和平台的不同而不同。 有关功能的详细信息，请参阅 [SQL Server 各个版本支持的 Reporting Services 功能](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。 本主题后面的表按版本和平台列出了所支持数据源的相关信息。  
   
  报表创作客户端和报表服务器对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源有不同的平台要求。  
   

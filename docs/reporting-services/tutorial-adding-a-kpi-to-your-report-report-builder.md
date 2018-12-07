@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6364a5c3aec5a96bfa3b05cdccc7e91da6f50b71
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905787"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712638"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
 在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程中，向 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表添加关键绩效指标 (KPI)。  
@@ -342,6 +342,6 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 ## <a name="see-also"></a>另请参阅  
 * [报表生成器教程](../reporting-services/report-builder-tutorials.md)
-* [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307111"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711178"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -48,14 +48,14 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 借助安全 enclave，Always Encrypted 可保护敏感数据的机密性，同时提供以下优势：
 
-- 就地加密 – 针对敏感数据的加密操作（例如：初始数据加密或轮替列加密密钥）在安全 enclave 内执行，且不需要将数据移出数据库。 可以使用 ALTER TABLE Transact-SQL 语句执行就地加密，且不需要使用 SSMS 中的 Always Encrypted 向导或 Set-SqlColumnEncryption PowerShell cmdlet。
+- **就地加密** – 针对敏感数据的加密操作（例如：初始数据加密或轮替列加密密钥）在安全 enclave 内执行，且不需要将数据移出数据库。 可以使用 ALTER TABLE Transact-SQL 语句执行就地加密，且不需要使用 SSMS 中的 Always Encrypted 向导或 Set-SqlColumnEncryption PowerShell cmdlet。
 
-- 富计算（预览）– 在安全 enclave 内支持针对加密列的操作，包括模式匹配（LIKE 谓词）和范围比较，这样会将 Always Encrypted 解锁到需要在数据库系统内执行此类计算的广泛应用和方案。
+- **富计算（预览）**– 在安全 enclave 内支持针对加密列的操作，包括模式匹配（LIKE 谓词）和范围比较，这样会将 Always Encrypted 解锁到需要在数据库系统内执行此类计算的广泛应用和方案。
 
 > [!IMPORTANT]
-> 在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中，富计算正在等待多项性能优化，包括有限的功能（无索引等），并且当前默认处于禁用状态。 若要启用富计算，请参阅[启用富计算](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
+> 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，富计算正在等待多项性能优化，包括有限的功能（无索引等），并且当前默认处于禁用状态。 若要启用富计算，请参阅[启用富计算](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
 
-在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中，具有安全 enclave 的 Always Encrypted 使用[基于虚拟化的安全 (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) 保护 Windows 中的内存 enclave（也称为虚拟安全模式或 VSM enclave）。
+在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)][ 中，具有安全 enclave 的 Always Encrypted 使用](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)基于虚拟化的安全 (VBS) 保护 Windows 中的内存 enclave（也称为虚拟安全模式或 VSM enclave）。
 
 ## <a name="secure-enclave-attestation"></a>安全 Enclave 证明
 
@@ -63,18 +63,18 @@ SQL Server 引擎内的安全 enclave 可以访问加密数据库列中存储的
 
 验证 enclave 的过程称为“enclave 证明”，通常包括应用程序内用于连接外部证明服务的客户端驱动程序（有时还包括 SQL Server）。 证明过程的细节取决于 enclave 技术和证明服务。
 
-SQL Server 支持 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中的 VBS 安全 enclave 的证明过程是 Windows Defender System Guard 运行时证明，该证明将主机保护者服务 (HGS) 用作证明服务。 需要在你的环境中配置 HGS 并注册用于托管 HGS 中的 SQL Server 实例的计算机。 还必须使用 HGS 证明配置客户端应用程序或工具（例如，SQL Server Management Studio）。
+SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中的 VBS 安全 enclave 的证明过程是 Windows Defender System Guard 运行时证明，该证明将主机保护者服务 (HGS) 用作证明服务。 需要在你的环境中配置 HGS 并注册用于托管 HGS 中的 SQL Server 实例的计算机。 还必须使用 HGS 证明配置客户端应用程序或工具（例如，SQL Server Management Studio）。
 
 ## <a name="secure-enclave-providers"></a>安全 Enclave 提供程序
 
-若要使用具有安全 enclave 的 Always Encrypted，应用程序必须使用支持该功能的客户端驱动程序。 在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中，应用程序必须使用 .NET Framework 4.7.2 和用于 SQL Server 的 .NET Framework 数据提供程序。 此外，.NET 应用程序还必须使用特定于 enclave 类型（例如，VBS）的安全 enclave 提供程序和所使用的证明服务（例如，HGS）进行配置。 支持的 enclave 提供程序在 NuGet 包中单独装运，你需要将该包与你的应用程序集成。 Enclave 提供程序实施证明协议的客户端逻辑，用于使用给定类型的安全 enclave 建立安全通道。
+若要使用具有安全 enclave 的 Always Encrypted，应用程序必须使用支持该功能的客户端驱动程序。 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，应用程序必须使用 .NET Framework 4.7.2 和用于 SQL Server 的 .NET Framework 数据提供程序。 此外，.NET 应用程序还必须使用特定于 enclave 类型（例如，VBS）的安全 enclave 提供程序和所使用的证明服务（例如，HGS）进行配置。 支持的 enclave 提供程序在 NuGet 包中单独装运，你需要将该包与你的应用程序集成。 Enclave 提供程序实施证明协议的客户端逻辑，用于使用给定类型的安全 enclave 建立安全通道。
 
 ## <a name="enclave-enabled-keys"></a>已启用 enclave 的密钥
 
 具有安全 enclave 的 Always Encrypted 引入了已启用 enclave 的密钥的概念：
 
-- 已启用 enclave 的列主密钥 – 具有数据库内的列主密钥元数据对象中指定的 ENCLAVE_COMPUTATIONS 属性的列主密钥。 列主密钥元数据对象还必须包含元数据属性的有效签名。
-- 已启用 enclave 的列加密密钥 – 使用已启用 enclave 的列主密钥加密的列加密密钥。
+- **已启用 enclave 的列主密钥** – 具有数据库内的列主密钥元数据对象中指定的 ENCLAVE_COMPUTATIONS 属性的列主密钥。 列主密钥元数据对象还必须包含元数据属性的有效签名。
+- **已启用 enclave 的列加密密钥** – 使用已启用 enclave 的列主密钥加密的列加密密钥。
 
 当 SQL Server 引擎确定需要在安全 enclave 内执行查询中指定的操作时，SQL Server 引擎会请求客户端驱动程序共享使用安全 enclave 进行计算所需的列加密密钥。 仅当密钥已启用 enclave（即，使用已启用 enclave 的列主密钥进行加密）且已进行正确签名时，客户端驱动程序才会共享列加密密钥。 否则，查询将失败。
 

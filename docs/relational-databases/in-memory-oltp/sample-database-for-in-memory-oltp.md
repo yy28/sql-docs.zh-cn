@@ -1,7 +1,7 @@
 ---
 title: 内存中 OLTP 的示例数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 11/30/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665616"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712478"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "51665616"
   
 -   [基于 AdventureWorks 安装内存中 OLTP 示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
--   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures) – 包括通过内存中 OLTP 示例添加到 AdventureWorks 的表和过程的说明，以及将一些原始 AdventureWorks 表迁移到内存优化表的注意事项  
+-   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures) - 包括通过内存中 OLTP 示例添加到 AdventureWorks 的表和过程的说明，以及将一些原始 AdventureWorks 表迁移到内存优化表的注意事项  
   
--   执行 [使用演示工作负荷执行度量](#PerformanceMeasurementsusingtheDemoWorkload) 的说明 – 包括有关安装和运行 ostress（一种用于驱动工作负荷的工具）以及运行演示工作负荷本身的说明  
+-   执行[使用演示工作负荷执行度量](#PerformanceMeasurementsusingtheDemoWorkload)的说明 - 包括有关安装和运行 ostress（一种用于驱动工作负荷的工具）以及运行演示工作负荷本身的说明  
   
 -   [示例中的内存和磁盘空间利用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -48,8 +48,8 @@ ms.locfileid: "51665616"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
-  
+-   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16GB 内存可供 SQL Server 使用。 有关用于内存中 OLTP 的硬件的一般指导，请参阅以下博客文章：[SQL Server 2014 的内存中 OLTP 的硬件注意事项](blog-hardware-in-memory-oltp.md)
+
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装内存中 OLTP 示例  
  请按照以下步骤安装示例：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "51665616"
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> 示例表和过程的说明  
  示例基于 AdventureWorks 中的现有表为产品和销售订单创建新表。 新表的架构类似于现有表，不过有几个区别，如下所述。  
   
- 新的内存优化表带有后缀“_inmem”。 示例还包括带有后缀“_ondisk”的对应表 – 这些表可以用于在系统上进行内存优化表与基于磁盘的表性能之间的一对一比较。  
+ 新的内存优化表带有后缀“_inmem”。 示例还包括带有后缀“_ondisk”的对应表 - 这些表可以用于在系统上进行内存优化表与基于磁盘的表性能之间的一对一比较。  
   
  请注意，用于性能比较的工作负荷中使用的内存优化表具有完全持久性并且会完整记录。 这些表不会牺牲持久性或可靠性来获取性能提升。  
   
@@ -158,15 +158,15 @@ ms.locfileid: "51665616"
   
  Sales.SalesOrderDetail  
   
--   *默认约束* – 类似于 SalesOrderHeader，未迁移需要系统时间/时间的默认约束，而是由插入销售订单的存储过程负责在第一次插入时插入当前系统日期/时间。  
+-   *默认约束* - 类似于 SalesOrderHeader，未迁移需要系统时间/时间的默认约束，而是由插入销售订单的存储过程负责在第一次插入时插入当前系统日期/时间。  
   
--   计算列 - 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 若要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
+-   *计算列* - 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 若要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
  Production.Product  
   
--   *别名 UDT* – 原始表使用等效于系统数据类型位的用户定义数据类型 dbo.Flag。 迁移的表改用位数据类型。  
+-   *别名 UDT* - 原始表使用等效于系统数据类型位的用户定义数据类型 dbo.Flag。 迁移的表改用位数据类型。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "51665616"
   
  Sales.SpecialOffer_inmem 在 (SpecialOfferID) 上有一个 HASH 索引：对特价商品进行的点查找是演示工作负荷的关键因素。 bucket_count 大小为 100 万，允许将来增加。  
   
- Sales.SpecialOfferProduct_inmem 未在演示工作负荷中进行引用，因而表面上无需使用此表中的哈希索引优化工作负荷 – (SpecialOfferID, ProductID) 和 (ProductID) 上的索引是 NONCLUSTERED。  
+ Sales.SpecialOfferProduct_inmem 未在演示工作负荷中进行引用，因而表面上无需使用此表中的哈希索引优化工作负荷 - (SpecialOfferID, ProductID) 和 (ProductID) 上的索引是 NONCLUSTERED。  
   
  请注意，以上某些 bucket_count 过大，但是 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引的 bucket_count 并非如此：其大小仅用于 1000 万个销售订单。 这样做是为了可以在内存可用性较低的系统上安装示例，不过在这些情况下，演示工作负荷会由于内存不足而失败。 如果的确要扩展为远远超过 1000 万个销售订单，可以随意相应地提高桶计数。  
   
@@ -299,9 +299,9 @@ ms.locfileid: "51665616"
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   可选参数： @object_id - 要验证其完整性的对象的 ID  
+    -   可选参数：@object_id - 要验证其完整性的对象的 ID  
   
-    -   此过程依赖于用于需要验证的完整性规则的表 dbo.DomainIntegrity、dbo.ReferentialIntegrity 和 dbo.UniqueIntegrity – 示例基于对 AdventureWorks 数据库中的原始表存在的检查、外键和唯一约束来填充这些表。  
+    -   此过程依赖于用于需要验证的完整性规则的表 dbo.DomainIntegrity、dbo.ReferentialIntegrity 和 dbo.UniqueIntegrity - 示例基于对 AdventureWorks 数据库中的原始表存在的检查、外键和唯一约束来填充这些表。  
   
     -   它依赖于帮助器过程 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 来生成执行完整性检查所需的 T-SQL。  
   
@@ -313,8 +313,8 @@ ms.locfileid: "51665616"
   
  安装步骤：  
   
-1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
-  
+1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[下载 SQL Server 的报表标记语言 (RML)](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+
 2.  如果出现指示某些文件正在使用的对话框，请单击“继续”  
   
 ### <a name="running-ostress"></a>运行 Ostress  
@@ -330,7 +330,7 @@ ms.locfileid: "51665616"
   
 -   -S：要连接到的 Microsoft SQL Server 实例的名称  
   
--   -E：使用 Windows 身份验证连接（默认）；如果使用 SQL Server 身份验证，请使用选项 –U 和 –P 分别指定用户名和密码  
+-   -E：使用 Windows 身份验证连接（默认）；如果使用 SQL Server 身份验证，请使用选项 -U 和 -P 分别指定用户名和密码  
   
 -   -d 数据库的名称，对于此示例为 AdventureWorks2014  
   
@@ -380,7 +380,7 @@ END
  我们将使用 Ostress 工具通过几个并发连接执行脚本。 我们将使用参数“-n”控制连接数，使用参数“r”控制对每个连接执行脚本的次数。  
   
 #### <a name="running-the-workload"></a>运行工作负荷  
- 为了进行大规模测试，我们使用 100 个连接插入 1000 万个销售订单。 此测试适合在中等服务器（例如，8 个物理核心、16 个逻辑核心以及用于日志的基本 SSD 存储）上执行。 如果该测试在你的硬件上性能不佳，请查看 [解决测试运行缓慢的问题](#Troubleshootingslow-runningtests)一节。如果要降低此测试的压力级别，请通过更改参数“-n”减少连接数。 例如，若要将连接计数减少为 40，请将参数“-n100”更改为“-n40”。  
+ 为了进行大规模测试，我们使用 100 个连接插入 1000 万个销售订单。 此测试适合在中等服务器（例如，8 个物理核心、16 个逻辑核心以及用于日志的基本 SSD 存储）上执行。 如果该测试在你的硬件上性能不佳，请查看[解决测试运行缓慢的问题](#Troubleshootingslow-runningtests)一节。如果要降低此测试的压力级别，请通过更改参数“-n”减少连接数。 例如，若要将连接计数减少为 40，请将参数“-n100”更改为“-n40”。  
   
  作为工作负荷的性能度量，我们使用 ostress.exe 在运行工作负荷之后报告的占用时间。  
   
@@ -394,7 +394,7 @@ END
  单击“复制”按钮复制该命令，将其粘贴到 RML 实用工具命令提示符处。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  在一台共有 8 个物理（16 个逻辑）核心的测试服务器上，需要 2 分 5 秒。 在另一台有 24 个物理（48 个逻辑）核心的测试服务器上，需要 1 分 0 秒。  
@@ -409,7 +409,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
  单击“复制”按钮复制该命令，将其粘贴到 RML 实用工具命令提示符处。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  在一台共有 8 个物理（16 个逻辑）核心的测试服务器上，需要 41 分 25 秒。 在另一台有 24 个物理（48 个逻辑）核心的测试服务器上，需要 52 分 16 秒。  
@@ -595,7 +595,7 @@ WHERE f.type=N'FX'
 ```  
   
 #### <a name="initial-state"></a>初始状态  
- 最初创建示例文件组和示例内存优化表时，会预先创建一些检查点文件，并且系统开始填充这些文件 – 预先创建的检查点文件数取决于系统中的逻辑处理器数。 因为示例最初非常小，所以预先创建的文件在初始创建之后大部分为空。  
+ 最初创建示例文件组和示例内存优化表时，会预先创建一些检查点文件，并且系统开始填充这些文件 - 预先创建的检查点文件数取决于系统中的逻辑处理器数。 因为示例最初非常小，所以预先创建的文件在初始创建之后大部分为空。  
   
  下面是示例在有 16 个逻辑处理器的计算机上的初始磁盘上大小：  
   

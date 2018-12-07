@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2016 中的报表生成器 | Microsoft Docs
-ms.date: 03/30/2017
+title: SQL Server 中的报表生成器 | Microsoft Docs
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690955"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711415"
 ---
-# <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 中的报表生成器
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一种用于创建分页报表的工具，主要面向更愿意在独立环境中工作而不是使用 Visual Studio 中的报表设计器的业务用户。  当你设计分页报表时，需要创建一个报表定义，用于指定在何处获取数据、获取哪些数据以及如何显示数据。 当你运行报表时，报表处理器将使用你指定的报表定义检索数据，并将数据与报表布局相结合生成报表。 你可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中预览报表，并且将报表发布到本机模式或 SharePoint 集成模式（其他用户可运行此报表）的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。  
+# <a name="report-builder-in-sql-server"></a>SQL Server 中的报表生成器
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一种用于创建分页报表的工具，主要面向更愿意在独立环境中工作而不是使用 Visual Studio 中的报表设计器的业务用户。  当你设计分页报表时，需要创建一个报表定义，用于指定在何处获取数据、获取哪些数据以及如何显示数据。 当你运行报表时，报表处理器将使用你指定的报表定义检索数据，并将数据与报表布局相结合生成报表。 可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中预览报表。 然后在本机模式或 SharePoint 集成模式下（2016 及更早版本），将报表发布到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 还可以将分页报表发布到 Power BI 服务。 详细了解 [Power BI Premium 中的分页报表](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi)（预览版）。
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47690955"
   
   [安装报表生成器](../../reporting-services/install-windows/install-report-builder.md)
 
-  [SQL Server 2016 的 Reporting Services 和报表生成器中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [SQL Server Reporting Services 和报表生成器中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   介绍此版本的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的新增功能。   
   [教程：脱机创建快速图表报表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介绍 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 以及可用来帮助创建报表的向导。 教程提供了一组供您使用的数据，因此不需要连接到数据源即可开始工作。  
@@ -89,6 +89,6 @@ ms.locfileid: "47690955"
  介绍共享数据集设计视图的不同窗格和区域。  
   
  [键盘快捷键（报表生成器）](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- 概述可用于在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中导航和设计报表的快捷键。  
+ 概述可用于在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中导航和设计报表的快捷键。  
   
 

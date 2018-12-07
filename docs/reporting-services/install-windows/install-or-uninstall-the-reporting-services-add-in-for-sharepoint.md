@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b6abe93a63e24a2526da7b29caeb469db0c1750
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 55c88749d84290636fd6a9fc3ac3866f5499450f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051169"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711608"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序
 
@@ -51,7 +51,7 @@ ms.locfileid: "50051169"
 ##  <a name="bkmk_3ways_to_install"></a> 安装方法概述  
  使用以下两种方法之一可以安装用于 SharePoint 产品的 SQL Server 2016 Reporting Services 外接程序：  
   
--   安装向导：![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "请注意")作为 SQL Server 2016 中的新增功能，此外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
+-   **安装向导：**![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")在 SQL Server 2016 中，此外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
   
 -   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -114,7 +114,7 @@ Rssharepoint.msi /?
     3.  更改生效所需的时间可能因您的服务器环境而异。 您还可以运行 **iisreset** 以强制实施更快的更新。  
   
 ### <a name="quiet-installation-for-scripting"></a>用于脚本撰写的静默安装  
- 你可以使用 **/q** 或 **/quiet** 开关，进行不显示任何对话框或警告的“静默”安装。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
+ 你可以使用 /q 或 /quiet 开关，进行不显示任何对话框或警告的“静默”安装。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
   
 > [!NOTE]  
 >  如果你将 **/q** 开关用于无提示命令行安装，将不显示最终用户许可协议。 对此软件的使用受到许可协议控制并且由您负责遵守该许可协议，而与安装方法无关。  

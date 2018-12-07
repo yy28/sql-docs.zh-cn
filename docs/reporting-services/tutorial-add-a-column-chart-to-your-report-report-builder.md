@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2aaa46b763e58cff11fec353a46745cb4065325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802985"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711479"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
 本教程中将创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，该报表包含一个柱形图，将序列显示为一组按类别分组的垂直条。 
@@ -302,6 +302,6 @@ ms.locfileid: "47802985"
   
 ## <a name="see-also"></a>另请参阅  
 -    [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
--    [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+-    [SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

@@ -1,7 +1,7 @@
 ---
 title: Query Store 的数据收集方式 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775055"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711069"
 ---
 # <a name="how-query-store-collects-data"></a>查询存储的数据收集方法
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   查询存储的作用是作为 **数据记录器** 不断地收集与运行和计划相关的编译和运行时信息。 与查询相关的数据将永久保存在内部表中，并通过一组视图向用户显示。  
   
@@ -30,8 +30,7 @@ ms.locfileid: "47775055"
  下图显示了查询存储视图及其逻辑关系，以及显示为蓝色实体的编译时间信息：  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **查看描述**  
+**查看描述**  
   
 |“查看”|描述|  
 |----------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "47775055"
 |**sys.query_store_runtime_stats_interval**|查询存储将时间划分为自动生成的时间窗口（间隔），并根据每个执行计划的间隔存储聚合的统计信息。 间隔大小由配置选项“统计信息收集间隔”（位于 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中）或 `INTERVAL_LENGTH_MINUTES` 使用 [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) 进行控制。|  
 |**sys.query_store_runtime_stats**|执行计划的聚合运行时统计信息。 所有捕获的度量值以 4 种统计函数形式表示：平均值、最小值、最大值和标准偏差。|  
   
- 有关查询存储视图的其他详细信息，请参阅 **使用查询存储来监视性能** 中的 [相关视图、函数和过程](monitoring-performance-by-using-the-query-store.md)部分。  
+ 有关查询存储视图的其他详细信息，请参阅[使用查询存储来监视性能](monitoring-performance-by-using-the-query-store.md)中的“相关视图、函数和过程”部分。  
   
 ## <a name="query-processing"></a>查询处理  
  查询存储在以下关键点与查询处理管道进行交互：  
@@ -63,10 +62,10 @@ ms.locfileid: "47775055"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- 发生系统崩溃时，查询存储可能会丢失不超过按照 `DATA_FLUSH_INTERVAL_SECONDS`定义的运行时数据数量。 默认值 900 秒（15 分钟）是查询捕获性能和数据可用性之间的最佳平衡。  
-如果出现内存压力，运行时统计信息会在按照 `DATA_FLUSH_INTERVAL_SECONDS`所定义的时间之前刷新到磁盘。  
+ 如果系统崩溃，查询存储可能会丢失不超过按照 `DATA_FLUSH_INTERVAL_SECONDS` 定义的运行时数据数量。 默认值 900 秒（15 分钟）是查询捕获性能和数据可用性之间的最佳平衡。  
+如果系统出现内存压力，运行时统计信息会在按照 `DATA_FLUSH_INTERVAL_SECONDS` 所定义的时间之前刷新到磁盘。  
 读取查询存储过程中，内存中数据和磁盘上的数据以透明方式统一。
-如果会话终止或客户端应用程序重启/故障，将不会记录查询统计信息。  
+如果会话终止或者客户端应用程序重启或崩溃，则不会记录查询统计信息。  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

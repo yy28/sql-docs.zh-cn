@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5c01a12200ed62cfc462fa25d3d75a95fd8589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385d8cfa69e7407aec2f31ee99962b2a1200e4aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716625"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710848"
 ---
 # <a name="planning-a-report-report-builder"></a>规划报表 (报表生成器)
   利用报表生成器可创建多种类型的分页报表。 例如，可以创建显示摘要或详细销售数据、营销和销售趋势的报表、操作报表或面板。 还可以为销售订单、产品目录或套用信函等创建利用丰富格式文本的报表。 所有这些报表都是在报表生成器中使用相同基本构造块的不同组合创建的。 若要创建有用且易于理解的报表，报表生成器可帮助首先进行规划。 开始创建报表之前最好考虑以下几个问题：  
@@ -50,7 +50,7 @@ ms.locfileid: "47716625"
      您可以将报表保存到本地计算机，并继续在本地使用它或运行它，供自己参考。 但是，若要与其他人共享报表，需要将报表保存到配置为本机模式的报表服务器或 SharePoint 集成模式下的报表服务器。 将报表保存到服务器可允许其他人在需要时运行报表。 另外，报表服务器管理员可以设置对报表的订阅，或者设置通过电子邮件向他人传递报表。 您可以根据需要以特定导出格式传递报表。 有关详细信息，请参阅 [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)  
   

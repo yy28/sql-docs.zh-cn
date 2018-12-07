@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 238461d1d191c9e62fa713e46c7483c09df51f38
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031726"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711598"
 ---
 # <a name="report-builder-tutorials"></a>报表生成器教程
 
@@ -71,7 +71,7 @@ ms.locfileid: "50031726"
 ## <a name="next-steps"></a>后续步骤
 
 [报表设计视图](../reporting-services/report-builder/report-design-view-report-builder.md)  
-[SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [教程：脱机创建快速图表报表](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

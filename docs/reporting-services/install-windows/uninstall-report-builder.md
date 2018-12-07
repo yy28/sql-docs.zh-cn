@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 581ffe4fc93116892085cbe6b7701e7a3349cd00
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f99654ed02b96ed2f1b0d26f7e5b4f64851d815b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028076"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710928"
 ---
 # <a name="uninstall-report-builder"></a>卸载报表生成器
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028076"
   
 2.  在“控制面板”中，单击 **“程序和功能”**。  
   
-3.  在“名称”列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 报表生成器并单击它。  
+3.  在“名称”列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 报表生成器并单击它。  
   
 4.  单击 **“卸载”**。  
   

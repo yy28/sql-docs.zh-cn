@@ -1,7 +1,7 @@
 ---
 title: Query Store 最佳做法 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/24/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657836"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712114"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   本文概述使用查询存储处理工作负载的最佳实践。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "51657836"
   
 ##  <a name="Insight"></a>在 Azure SQL 数据库中使用 Query Performance Insight  
  如果你在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中运行 Query Store，则可使用 **Query Performance Insight** 来分析一定时段内的 DTU 消耗情况。  
-虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来获取所有查询的详细资源消耗情况（CPU、内存、IO 等），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。  
+虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来获取所有查询的详细资源消耗情况（CPU、内存、I/O 等），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。  
 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)（Azure SQL 数据库的 Query Performance Insight）。    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>将 Query Store 与弹性池数据库配合使用
@@ -48,11 +48,11 @@ ms.locfileid: "51657836"
   
  下面是设置参数值时应遵循的准则：  
   
- **最大大小 (MB)：** 为 Query Store 在数据库中占用的数据空间指定一个限制。  这是最重要的设置，直接影响 Query Store 的操作模式。  
+ **最大大小 (MB)：** 为 Query Store 在数据库中占用的数据空间指定一个限制。 这是最重要的设置，直接影响 Query Store 的操作模式。  
   
  当 Query Store 收集查询、执行计划和统计信息时，其在数据库中的大小会一直增长，直至达到此限制。 达到此限制后，Query Store 会自动将操作模式更改为只读，并停止收集新数据，这意味着你的性能分析自此不再精确。  
   
- 如果你的工作负荷会生成大量不同的查询和计划，或者你想要让查询历史记录保存较长的时间，则默认值 (100 MB) 可能不够大。 跟踪当前的空间使用情况，增大“最大大小(MB)”以防 Query Store 转换到只读模式。  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或执行以下脚本，以便获取有关 Query Store 大小的最新信息：  
+ 如果你的工作负荷会生成大量不同的查询和计划，或者你想要让查询历史记录保存较长的时间，则默认值 (100 MB) 可能不够大。 跟踪当前的空间使用情况，增大“最大大小(MB)”以防 Query Store 转换到只读模式。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或执行以下脚本，以便获取有关 Query Store 大小的最新信息：  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -69,11 +69,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **统计信息收集间隔：** 定义已收集的运行时统计信息的粒度级别（默认值为 1 小时）。 如果你需要更细的粒度或更短的时间来检测问题和解决问题，则可考虑使用更低的值，但请记住，这会直接影响 Query Store 数据的大小。 使用 SSMS 或 Transact-SQL 为“统计信息收集间隔”设置不同的值：  
+
+ **数据刷新间隔：** 定义将收集的运行时统计信息保存到磁盘的频率（以秒为单位，默认为 900 秒，即 15 分钟)。 如果工作负荷不生成大量不同的查询和计划或者你能够在数据库关闭之前撑住更长时间来保留数据，请考虑使用更高的值。 
+ 
+> [!NOTE]
+> 如果出现故障转移或关闭命令，使用跟踪标志 7745 会阻止查询存储数据写入磁盘。 请查阅[在任务关键型服务器上使用跟踪标志改善灾难恢复](#Recovery)部分，了解详情。
+
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为数据刷新间隔设置不同的值：  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **统计信息收集间隔：** 定义已收集的运行时统计信息的粒度级别（默认值为 60 分钟）。 如果你需要更细的粒度或更短的时间来检测问题和解决问题，则可考虑使用更低的值，但请记住，这会直接影响 Query Store 数据的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 为统计信息收集间隔设置不同的值：  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **过时查询阈值（天）：** 基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期。  
@@ -97,11 +110,11 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Query Store 捕获模式：** 指定 Query Store 的查询捕获策略。  
   
--   **All** – 捕获所有查询。 这是默认选项。  
+-   **All** - 捕获所有查询。 这是默认选项。  
   
--   **Auto** – 忽略不太频繁的查询以及编译和执行持续时间不长的查询。 执行计数、编译和运行时持续时间的阈值由内部决定。  
+-   **Auto** - 忽略不太频繁的查询以及编译和执行持续时间不长的查询。 执行计数、编译和运行时持续时间的阈值由内部决定。  
   
--   **None** – Query Store 停止捕获新查询。  
+-   **None** - 查询存储停止捕获新查询。  
   
  以下脚本将“查询捕获模式”设置为“Auto”：  
   
@@ -132,7 +145,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  下图显示了如何查找 Query Store 视图：  
   
- ![query-store-views](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![查询存储视图](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")  
   
  下表说明了何时使用每个 Query Store 视图：  
   
@@ -143,10 +156,11 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |资源使用排名靠前的查询|选择所关注的执行度量值，确定在指定的时间间隔内哪些查询的值最极端。 <br />此视图可以帮助你关注最相关的查询，这些查询对数据库资源消耗的影响最大。|  
 |具有强制计划的查询|使用查询存储列出以前的强制计划。 <br />使用此视图快速访问当前的所有强制计划。|  
 |变化程度高的查询|分析执行变化程度较高的查询，因为此类查询与任何可用的维度相关，例如所需时间间隔内的持续时间、CPU 时间、IO 和内存使用情况。<br />使用此视图可以标识性能有很大差异且可能会影响用户跨应用程序体验的查询。|  
+|查询等待统计信息|分析数据库中最活跃的等待类别和哪些查询对所选等待类别贡献最大。<br />使用此视图分析等待统计信息并识别可能在应用程序中影响用户体验的查询。<br /><br />**适用范围：** 从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始|  
 |跟踪的查询|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|
   
 > [!TIP]  
->  如需详细了解如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来确定资源使用排名靠前的查询并修复那些因计划选择变化而导致回归的查询，请参阅 [@Azure 博客中的查询存储](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
+> 如需详细了解如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来确定资源使用排名靠前的查询并修复那些因计划选择变化而导致回归的查询，请参阅 [@Azure 博客中的查询存储](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
  如果确定某个查询的性能不够理想，则可根据问题性质进行操作。  
   

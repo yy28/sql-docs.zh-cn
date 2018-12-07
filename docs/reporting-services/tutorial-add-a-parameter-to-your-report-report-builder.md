@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9a62e1258bb5c7babda59f9c3b64b9afd16afe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833285"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712358"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
 在本教程中，将参数添加到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，使报表读者可以筛选报表数据的一个或多个值。 
@@ -501,5 +501,5 @@ ms.locfileid: "47833285"
   
 ## <a name="see-also"></a>另请参阅  
 * [报表生成器教程](../reporting-services/report-builder-tutorials.md)
-* [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup 函数](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

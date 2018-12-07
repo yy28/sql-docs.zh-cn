@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021861"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712178"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
 
-  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“*\<报表项目名称>*属性”。  
+  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“\<报表项目名称>属性”。  
   
  定义配置属性后，可以从位于工具栏上的“解决方案配置”下拉列表中选择配置。  
 
@@ -54,7 +54,7 @@ ms.locfileid: "50021861"
  选择 **True** 可在发布报表时使用项目中的数据源覆盖服务器上的数据源。 选择 **False** 可保留服务器上的现有数据源。  
   
  **TargetServerVersion**  
- 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值为 **SQL Server 2016**。  
+ 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值为 SQL Server 2017。  
   
  **TargetDataSourceFolder**  
  要在其中存储已发布共享数据源的文件夹的名称。 如果您没有指定文件夹，那么数据源将发布到与报表所在文件夹相同的文件夹。 如果报表服务器上没有该文件夹，则报表设计器将在发布报表时创建该文件夹。  

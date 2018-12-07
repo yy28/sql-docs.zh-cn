@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815397"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712518"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教程通过一个简单示例，介绍了如何创建数据驱动订阅，生成筛选报表输出并将其保存到文件共享，解释了数据驱动订阅的概念。 
@@ -56,7 +56,7 @@ ms.locfileid: "47815397"
   
 您的计算机必须安装以下软件才能使用此教程：  
   
--   支持数据驱动订阅的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 有关详细信息，请参阅 [SQL Server 2016 的版本和组件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
+-   支持数据驱动订阅的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 有关详细信息，请参阅 [SQL Server 2017 的各版本和功能](../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 -   必须在本机模式下运行报表服务器。 本教程中介绍的用户界面基于本机模式报表服务器。 在 SharePoint 模式报表服务器上支持订阅，但用户界面将不同于在本教程中介绍的用户界面。  
   

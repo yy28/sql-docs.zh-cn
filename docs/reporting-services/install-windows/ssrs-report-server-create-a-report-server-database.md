@@ -6,12 +6,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050892"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712218"
 ---
 # <a name="create-a-report-server-database"></a>创建报表服务器数据库
 
@@ -43,7 +43,7 @@ ms.locfileid: "50050892"
   
  **SharePoint 模式：** “报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项 **“仅安装”**。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
   
--   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的“服务应用程序”一节。  
+-   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅[步骤 3：创建 Reporting Services 服务应用程序](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的“服务应用程序”部分。  
   
 -   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 创建服务应用程序和报表服务器数据库。 有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)主题中创建服务应用程序的示例。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50050892"
 >  报表服务器和用于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可位于不同的域中。 对于 Internet 部署，通常的做法是使用防火墙后的服务器。 如果要配置用于 Internet 访问的报表服务器，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据连接到位于防火墙后的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并使用 IPSEC 保护连接的安全。  
   
 ## <a name="database-server-edition-requirements"></a>数据库服务器版本类别要求  
- 创建报表服务器数据库时，请注意并非所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 均可用来承载数据库。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的 Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)中的[报表服务器数据库的服务器版本要求](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)部分。  
+ 创建报表服务器数据库时，请注意并非所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 均可用来承载数据库。 有关详细信息，请参阅 [SQL Server 2017 各个版本支持的 Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)中的[报表服务器数据库的服务器版本要求](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)部分。  
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703985"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712728"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
@@ -198,10 +198,10 @@ SSMS 不会添加到 PATH 环境变量：
 
 - SSMS.EXE 的路径（以及常规工具）不再添加到路径中。 用户可以自己添加，也可以在新式 Windows 上依赖于“开始”菜单。
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 支持
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持
 
-- 本版本是 SSMS 第一个完全“感知”[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]（compatLevel 150 等）的版本。
-- 支持 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 中的“BATCH_STARTED_GROUP”和“BATCH_COMPLETED_GROUP”以及 SSMS 中的托管实例。
+- 本版本是 SSMS 第一个完全“感知”[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]（compatLevel 150 等）的版本。
+- 支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中的“BATCH_STARTED_GROUP”和“BATCH_COMPLETED_GROUP”以及 SSMS 中的托管实例。
 - GraphDB：在 Graph TC 序列的显示计划中添加标志。
 - Always Encrypted：增加了对[具有安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) 的支持。
   - 当用户单击“选项”按钮以启用和配置 Enclave 支持时，连接对话框将显示一个新的“Always Encrypted”选项卡。
@@ -430,7 +430,36 @@ SSIS
 - 当面向旧版本的 SQL Server 并且同时包含脚本任务/脚本组件时，无法成功部署或执行包。
 - SSMS 无法连接到远程 Integration Services。
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9（最新公开发布版本）
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1（最新公开发布版本）
+
+![下载](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- 版本号：17.9.1<br>
+- 内部版本号：14.0.17289.0<br>
+- 发布日期：2018 年 11 月 21 日
+
+17.9.1 是对 17.9 的一个小更新，修复了以下 bug：
+
+- 修复了在使用带有 SQL 查询编辑器的“Active Directory - 通用且具有 MFA 支持”身份验证时，用户可能会遇到关闭连接并在每次查询调用时重新打开连接的问题。 此类关闭连接的副作用包括意外删除全局临时表，有时还会向连接提供新的 SPID。
+- 修复了长期未解决的问题，即还原计划无法查找还原计划，或在某些情况下生成低效的还原计划。
+- 修复了“导入数据层应用程序”向导中的问题，该问题在连接到 Azure SQL 数据库时可能出现错误。
+
+
+
+> [!NOTE]
+> 如果安装在以下平台中，非英语本地化版本的 SSMS 17.x 需要 [KB 2862966 安全更新程序包](https://support.microsoft.com/kb/2862966)：Windows 8、Windows 7、Windows Server 2012 和 Windows Server 2008 R2。
+
+[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [中文（台湾）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![下载](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -582,7 +611,7 @@ Always Encrypted：
 
 ### <a name="known-issues"></a>已知问题
 
-- 在“属性”窗口中修改任何文件组属性后，单击“脚本”按钮，生成两个脚本 - 一个脚本带有 USE<database> 语句，另一个脚本带有 USE master 语句。  带有 USE master 的脚本错误生成，应该放弃。 运行包含 USE<database> 语句的脚本。
+- 在“属性”窗口中修改任何文件组属性后，单击“脚本”按钮，生成两个脚本 - 一个脚本带有“USE<database>”语句，另一个脚本带有“USE master”语句。  带有 USE master 的脚本错误生成，应该放弃。 运行包含 USE<database> 语句的脚本。
 - 使用新的“常规用途”或“业务关键”Azure SQL 数据库版本时，部分对话框显示版本无效错误。
 - 可能会观察到 XEvents 查看器中的一些延迟。 这是 [.Net Framework 中的已知问题](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 考虑升级到 NetFx 4.7.2。
 
@@ -978,7 +1007,7 @@ XE 探查器：
 **常规 SSMS**
 
 - 对于使用含 MFA 的 UA 的 Azure AD 身份验证，不支持以下 SSMS 功能：
-   - 对于 Azure AD 身份验证，不支持数据库引擎优化顾问；存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory,…”令人费解，而不是预期的“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库。 (DTAClient)”。
+   - 对于 Azure AD 身份验证，不支持数据库引擎优化顾问；存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory,…”令人费解，而不是所需的“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库。 (DTAClient)”。
 - 尝试在 DTA 中分析查询会导致发生错误：“对象必须实现 IConvertible。 (mscorlib)”。
 - 回归的查询缺少对象资源管理器中报表的查询存储列表。
    - 解决方法：右键单击“查询存储”节点，然后选择“查看回归的查询”。
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - “新建表/视图”设计器显示旧式登录提示，并且不适用于 Azure AD 身份验证。
   - “编辑前 200 行”功能不支持 Azure AD 身份验证。
   - “已注册的服务器”组件不支持 Azure AD 身份验证。
-  - “数据库引擎优化顾问”不支持 Azure AD 身份验证。 存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory”无用， 而不是显示“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库 (DTAClient)”。
+  - “数据库引擎优化顾问”不支持 Azure AD 身份验证。 存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory，…”帮助不大，而不是所需的“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库 *。(DTAClient)”*。
 
 **Analysis Services (AS)**
 
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - 解决了“新建服务器注册”对话框中的 UI 截断问题
 - 解决了 DMF 条件 UI 无法正确更新带有其中包含引号的字符串常量值的表达式的问题
 - 解决了在运行自定义报表时有可能导致 SSMS 崩溃的问题
-- 将“在扩展中执行…”菜单项 添加到文件夹节点
+- 将“在横向扩展里执行...”菜单项添加到文件夹节点
 - 修复了 Azure SQL DB 防火墙白名单 IP 地址功能的问题
 - 修复了 SSMS 中的一个问题：编辑 AS 多维分区的源时，此问题会导致对象引用不会设置为异常
 - 修复了 SSMS 中的一个问题：删除多维 AS 服务器中的客户程序集时，此问题会导致对象引用不会设置为异常

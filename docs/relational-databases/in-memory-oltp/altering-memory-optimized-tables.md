@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bcf4ff6daa7a6d5e5fe710a51d78a8730a56cfeb
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 698272ee29fe7828f9298d534476db7948b2bde7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636466"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641268"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
 
@@ -26,7 +26,7 @@ ms.locfileid: "49636466"
 可以使用 ALTER TABLE 语句来更改内存优化表的架构和索引。 在 SQL Server 2016 和 Azure SQL 数据库中，对内存优化表的 ALTER TABLE 操作属于 OFFLINE，表示操作正在进行时，表格不能用于查询。 数据库应用程序可以继续运行，并且访问该表的任何操作都将被阻止，直到更改过程完成。 可以将多个 ADD、DROP 或 ALTER 操作合并为单个 ALTER TABLE 语句。
 
 > [!IMPORTANT]
-> Azure SQL 数据库托管实例不支持内存优化表。
+> Azure SQL 数据库托管实例不支持常规用途服务层中的内存优化表。
   
 ## <a name="alter-table"></a>ALTER TABLE  
 
@@ -34,7 +34,7 @@ ms.locfileid: "49636466"
   
 - 语法 ALTER TABLE...内存优化表仅支持 ADD/DROP/ALTER INDEX。  
   
-- 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 和 [PAD_INDEX](../../t-sql/statements/alter-table-index-option-transact-sql.md) 语句。  
+- 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 和 [PAD_INDEX](../../t-sql/statements/alter-table-index-option-transact-sql.md) 语句。  
   
 支持下列更改类型：  
   

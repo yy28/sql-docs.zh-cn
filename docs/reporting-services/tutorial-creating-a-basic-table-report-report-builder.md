@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a241d0c1bde3eea57c21ca8a14b465a79aa89c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627885"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712348"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
 本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
@@ -312,7 +312,7 @@ SalesDate 值将显示月份名而非月份数字。
 4.  单击 **“保存”**。  
   
 ## <a name="Export"></a>7.导出报表  
-可以将报表导出为不同的格式，如 Microsoft Excel 和逗号分隔值 (CSV) 文件。 有关详细信息，请参阅[导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+可以将报表导出为不同的格式，如 Microsoft Excel 和逗号分隔值 (CSV) 文件。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
   
 在本教程中，您将报表导出为 Excel 格式，并设置报表的属性以便为工作簿选项卡提供自定义名称。  
   
@@ -355,6 +355,6 @@ SalesDate 值将显示月份名而非月份数字。
   
 ## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
-[SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

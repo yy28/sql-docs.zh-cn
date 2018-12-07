@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9aaa281d1d91c8031182133976f1395417c4502
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812590"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710858"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 移动报表发布服务器创建移动报表
 了解 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，其针对移动设备进行了优化，可连接到本地数据，且具有多种类型的数据可视化效果。 
 
 >[!NOTE]
-> 是否需要将 Datazen 服务器内容（如仪表板和 KPI）迁移到 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/download/details.aspx?id=53128)。 
+> 是否需要将 Datazen 服务器内容（如仪表板和 KPI）迁移到 SQL Server[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -35,7 +35,7 @@ ms.locfileid: "51812590"
 这些文章可帮助你入门。
 -  下载 [SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [创建 Reporting Services 移动报表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server 2016 Reporting Services（端到端演练：在 SQL Server 2016 Reporting Services 中创建移动报表和 KPI）](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) （Christopher Finlan 博客）  
+-  [端到端演练：在 SQL Server Reporting Services 中创建移动报表和 KPI](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)（Christopher Finlan 的博客）  
 - [设计为先还是数据为先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：决定是先使用模拟数据设计报表，还是使用自己的数据开始。  
 - [用于 Reporting Services 移动报表的数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)：使用来自共享数据集的数据，或从 Excel 工作簿准备数据，以在移动报表中使用。
 - [Reporting Services 中移动报表和 KPI 的数据刷新工作原理](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) （Christopher Finlan 的博客）：了解如何设置共享数据集的缓存，以便控制刷新数据的频率并提升报表性能。

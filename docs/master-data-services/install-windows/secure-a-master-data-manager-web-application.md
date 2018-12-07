@@ -10,12 +10,12 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aa72013df7e229c76154b6de1839c2ff0e0f0dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701245"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641471"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -58,9 +58,12 @@ ms.locfileid: "51701245"
   
 10. 现在，从驱动器：\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication 打开 web.config 文件。  
   
-11. 找到字符串 `<security mode="Message">`，然后将其更改为 `<security mode="Transport">`。  
-  
-12. 保存并关闭该文件。 如果您遇到错误，可能是因为您已启用了 UAC。 有关详细信息，请参阅 [关闭用户帐户控制](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx)。 用户现在应该能够使用 HTTPS 访问该站点了。  
+11. 找到字符串 `<security mode="Message">` ，然后将其更改为 `<security mode="Transport">`。  
+
+12. 将 `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` 更改为 `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`，以防止在 Silverlight 客户端中可能出现的问题。
+
+13. 保存并关闭该文件。 如果您遇到错误，可能是因为您已启用了 UAC。 有关详细信息，请参阅 [关闭用户帐户控制](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx)。 用户现在应该能够使用 HTTPS 访问该站点了。  
+
   
 ## <a name="see-also"></a>另请参阅  
  [创建主数据管理器 Web 应用程序 (Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030166"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711939"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>启用和禁用 Reporting Services 的客户端打印
 
   报表查看器工具栏上的打印按钮使用可移植文档格式 (PDF) 以实现客户端打印在浏览器中查看的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表。 新的远程打印体验使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]附带的 PDF 呈现扩展插件，以便以 PDF 格式呈现报表。 你可以下载 PDF 格式的报表，或者如果安装了用于查看 .PDF 文件的应用程序，则打印按钮会针对页面一般配置项目显示打印对话框，例如 .PDF 文件的页面大小、方向和预览。 虽然默认情况下将启用客户端打印功能，但是您也可以将其禁用，以禁止使用该功能。  
   
- 以前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控件，该控件需要从报表服务器下载到客户端计算机上。 如果将报表服务器升级到 SQL Server 2016，则打印控件不会从报表服务器或客户端计算机上删除。  
+ 以前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控件，该控件需要从报表服务器下载到客户端计算机上。 如果将报表服务器升级到 SQL Server 2016 或更高版本，则打印控件不会从报表服务器或客户端计算机上删除。  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> 打印体验  
  单击报表查看器工具栏上的打印 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 按钮时，体验根据客户端计算机上安装的 .PDF 查看应用程序以及使用的浏览器而有所不同。   你可以下载 PDF 文件或从对话框中配置打印选项，或者采用两种方法，具体取决于客户端计算机。  
@@ -98,7 +98,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

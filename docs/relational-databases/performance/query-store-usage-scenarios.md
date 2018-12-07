@@ -1,7 +1,7 @@
 ---
 title: Query Store 使用方案 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,30 +14,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673826"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711198"
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在需要跟踪工作负荷并确保其性能可预测的很多情况下，都可以使用 Query Store。 下面是可以考虑使用 Query Store 的一些示例：  
   
 -   找出并解决使用计划选择回归的查询  
-  
 -   识别并优化资源使用排名靠前的查询  
-  
 -   A/B 测试  
-  
 -   升级到新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间保持性能稳定  
-  
 -   识别并改进即席工作负荷  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>找出并解决使用计划选择回归的查询  
- 在常规查询执行过程中，查询优化器可以决定是否因下述重要输入变得不同而选择不同计划：数据基数已更改，索引已创建、更改或删除，统计信息已更新，等等。大多数情况下，新计划要优于以前使用的计划，或二者的效果差不多。 但有时候，新计划的效果要差很多 - 这种情况称为计划选择更改回归。 在查询存储出现之前，这是一个很难确定和解决的问题，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有针对使用过一段时间的执行计划为用户提供可供查看的内置数据存储。  
+ 在常规查询执行过程中，查询优化器可以决定是否因下述重要输入变得不同而选择不同计划：数据基数已更改，索引已创建、更改或删除，统计信息已更新，等等。大多数情况下，新计划要优于以前使用的计划，或二者的效果差不多。 但有时候，新计划的效果要差很多 - 这种情况称为计划选择更改回归。 在查询存储出现之前，这是一个很难确定和解决的问题，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有针对使用过一段时间的执行计划为用户提供可供查看的内置数据的存储。  
   
  使用查询存储，可快速执行以下操作：  
   
@@ -81,7 +77,7 @@ ms.locfileid: "51673826"
   
 -   在消耗资源大的查询所引用的表上创建缺失索引。  
   
--   应用筛选策略以确保行级别安全性。 有关详细信息，请参阅[使用查询存储优化行级别安全性](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)。  
+-   应用筛选策略以确保行级别安全性。 有关详细信息，请参阅 [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)（使用查询存储优化行级别安全性）。  
   
 -   将临时系统版本控制添加到由 OLTP 应用程序频繁修改的表。  
   
@@ -122,7 +118,7 @@ ms.locfileid: "51673826"
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而不更改数据库兼容性级别。 它不会公开最新的查询优化器更改，但仍会向你提供包括查询存储在内的新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
+1.  升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而不更改数据库兼容性级别。 它不会公开最新的查询优化器更改，但仍会提供包括查询存储在内的新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
 2.  启用查询存储。 有关本主题的详细信息，请参阅[使查询存储适应工作负荷](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure)。
 
@@ -145,10 +141,10 @@ ms.locfileid: "51673826"
   
 可以通过“执行计数”度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 从上图可以看出，90% 的“资源使用排名靠前的查询”仅执行一次。  
   
-此外，你还可以通过运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本来获取系统中查询文本、查询和计划的总数，并可通过比较 query_hash 和 plan_hash 来确定其差异：  
+此外，还可以通过运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本来获取系统中查询文本、查询和计划的总数，并可通过比较 query_hash 和 plan_hash 来确定其差异：  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
 使用单个查询模板进行操作时，需要创建计划指南：  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ EXEC sp_create_plan_guide
 如果所有查询（或大部分查询）都可以进行自动参数化，则针对整个数据库更改 `FORCED PARAMETERIZATION` 可能是一个更好的选项：  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 
@@ -204,7 +200,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
   
 某些情况下，你的应用程序可能会生成大量不同的查询，而这些查询并不适合进行自动参数化。 在这种情况下，你会看到系统中存在大量查询，但唯一查询和唯一 `query_hash` 之间的比率可能接近 1。  
   
-在这种情况下，建议启用[“针对即席工作负荷进行优化”](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)服务器选项，防止将缓存内存浪费在不大可能再次执行的查询上。 若要防止在 Query Store 中捕获这些查询，可将 `QUERY_CAPTURE_MODE` 设置为 `AUTO`。  
+在这种情况下，建议启用“[针对即席工作负荷进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)”服务器选项，防止将缓存内存浪费在不大可能再次执行的查询上。 若要防止在 Query Store 中捕获这些查询，可将 `QUERY_CAPTURE_MODE` 设置为 `AUTO`。  
   
 ```sql  
 EXEC sys.sp_configure N'show advanced options', N'1' RECONFIGURE WITH OVERRIDE
