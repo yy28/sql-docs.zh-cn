@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 0768ae40b110bbb2b85890f0a8b4eff0339cedde
 ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/07/2018
 ms.locfileid: "51269700"
@@ -33,7 +33,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 | 组件 | Description |
 |-----------|-------------|
 | SQL Server Launchpad服务 | 管理外部R和Python运行时与数据库引擎实例之间通信的服务。 |
-| R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是可扩展R的主要库。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作，统计摘要，可视化以及许多形式的建模和分析。 此外，这些库中的功能可自动在可用内核之间分配工作负载以进行并行处理，并能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加了机器学习算法，以创建用于文本分析，图像分析和情感分析的自定义模型。 <br/>[**sqlRUtils**](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)用于在R脚本中构建或执行MDX查询。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
+| R 包 | [**RevoScaleR** ](r/revoscaler-overview.md)是可扩展R的主要库。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作，统计摘要，可视化以及许多形式的建模和分析。 此外，这些库中的功能可自动在可用内核之间分配工作负载以进行并行处理，并能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加了机器学习算法，以创建用于文本分析，图像分析和情感分析的自定义模型。 <br/>[**sqlRUtils**](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 的 R 开源分发版，内含包和解释器。 请始终使用安装程序安装的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示是 R 分发版中的标准工具。  |
 | R 示例和脚本 |  开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
@@ -63,15 +63,15 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
  
 ### <a name="step-2-configure-a-development-tool"></a>步骤 2： 配置开发工具
 
-数据科学家通常在他们自己的笔记本电脑或开发工作站上使用 R 或 Python 来探索数据，并构建和调整预测模型，直到获得效果良好的预测模型。使用 SQL Server 中的数据库内分析则不需要更改此过程。安装完成后，可以在本地和远程 SQL Server 上运行 R 或 Python 代码。
+数据科学家通常在他们自己的笔记本电脑或开发工作站上使用 R 或 Python 来探索数据，并构建和调整预测模型，直到获得效果良好的预测模型。 使用 SQL Server 中的数据库内分析则不需要更改此过程。 安装完成后，可以在本地和远程 SQL Server 上运行 R 或 Python 代码。
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
-+ **使用喜欢的 IDE**。您可以将R和Python库链接到您选择的开发工具。有关更多信息，请参见[设置R工具](r/set-up-a-data-science-client.md)和[设置Python工具](python/setup-python-client-tools-sql.md)
 
-+ **处理远程或本地**。数据科学家可以像往常一样连接到SQL Server并将数据带到客户机进行本地分析。但是，更好的解决方案是使用**RevoScaleR**或**revoscalepy**api将计算推入SQL Server计算机，从而避免代价高昂且不安全的数据移动。
++ **使用喜欢的 IDE**。 你可以链接到所选的开发工具的 R 和 Python 库。 有关详细信息，请参阅[设置的 R 工具](r/set-up-a-data-science-client.md)并[设置 Python 工具](python/setup-python-client-tools-sql.md)。  
 
++ **处理远程或本地**。 数据科研人员可以像平时一样连接到 SQL Server，然后将数据取回到客户端进行本地分析。 但是，更好的解决方案是使用**RevoScaleR**或**revoscalepy** Api 将计算推送到 SQL Server 计算机，避免成本高昂且不安全的数据移动。
 
-+ **在 SQL Server 存储过程中嵌入 R 或 Python 脚本**。当代码完全优化后，将其封装在存储过程中，以避免不必要的数据移动和优化数据处理任务。
++ **在 SQL Server 存储过程中嵌入 R 或 Python 脚本**。 代码充分优化后，将其封装在一个存储过程中，以避免不必要的数据移动和优化数据处理任务。
 
 ### <a name="step-3-write-your-first-script"></a>第 3 步： 编写第一个脚本
 
@@ -82,7 +82,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 + [Python：使用 T-SQL 运行 Python](tutorials/run-python-using-t-sql.md)
 + [Python： 了解数据库内分析使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-选择最适合任务的语言。R 最适合使用 SQL 难以实现的统计计算。对于基于集合的数据操作，可以利用 SQL Server 的强大功能来实现性能最大化。使用内存中数据库引擎可以非常快速地对列进行计算。
+选择最适合任务的语言。 R 最适合使用 SQL 难以实现的统计计算。 对于基于集合的数据操作，可以利用 SQL Server 的强大功能来实现性能最大化。 使用内存中数据库引擎可以非常快速地对列进行计算。
 
 ### <a name="step-4-optimize-your-solution"></a>步骤 4： 优化你的解决方案
 
@@ -102,12 +102,13 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ### <a name="step-5-deploy-and-consume"></a>步骤 5： 部署和使用
 
-在脚本或模型准备好用于生产后，数据库开发人员可以将代码或模型嵌入到存储过程中，以便可以从应用程序中调用已保存的 R 或 Python 代码。通过 SQL Server 存储和运行 R 代码有许多好处：可以使用便捷的 SQL Server 接口，并且所有计算都在数据库中进行，从而避免不必要的数据移动。
+在脚本或模型准备好用于生产后，数据库开发人员可以将代码或模型嵌入到存储过程中，以便可以从应用程序中调用已保存的 R 或 Python 代码。 通过 SQL Server 存储和运行 R 代码有许多好处：可以使用便捷的 SQL Server 接口，并且所有计算都在数据库中进行，从而避免不必要的数据移动。
 
 ![rsql_keyscenario1](r/media/rsql-keyscenario1.png)
 
-+ **安全且可扩展**。SQL Server 使用新的可扩展性体系结构，可以保护数据库引擎的安全，并隔离 R 和 Python 会话。你还可以控制可以执行脚本的用户，并且可以指定可通过代码访问的数据库。你可以控制分配给运行时的资源量，以防止大量计算危及整体服务器性能。
-+ **调度和审计**。在 SQL Server 中运行外部脚本作业时，可以控制和审核数据科学家使用的数据。还可以安排包含外部 R 或 Python 脚本的作业和创作者工作流，就像安排任何其他 T-SQL 作业或存储过程一样。
++ **安全且可扩展**。 SQL Server 使用新的可扩展性体系结构，可以保护数据库引擎的安全，并隔离 R 和 Python 会话。 你还可以控制可以执行脚本的用户，并且可以指定可通过代码访问的数据库。 你可以控制分配给运行时的资源量，以防止大量计算危及整体服务器性能。
+
++ **调度和审计**。 在 SQL Server 中运行外部脚本作业时，可以控制和审核数据科学家使用的数据。 还可以安排包含外部 R 或 Python 脚本的作业和创作者工作流，就像安排任何其他 T-SQL 作业或存储过程一样。
 
 要利用 SQL Server 中的资源管理和安全功能，部署过程可能包括以下任务：
 
@@ -118,7 +119,8 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 有关详细信息，请参阅[R 的资源调控](r/resource-governance-for-r-services.md)并[SQL Server 的 R 包管理](r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="version-history"></a>版本历史记录
-SQL Server 2017 机器学习服务是 SQL Server 2016 R 服务的下一代，增强后包含 Python。下表是所有产品版本的完整列表 - 从初始发布到当前发布。 
+
+SQL Server 2017 机器学习服务是 SQL Server 2016 R 服务的下一代，增强后包含 Python。 下表是所有产品版本的完整列表 - 从初始发布到当前发布。 
 
 | 产品名称 | 引擎版本 | 发布日期 |
 |--------------|---------|--------------|
