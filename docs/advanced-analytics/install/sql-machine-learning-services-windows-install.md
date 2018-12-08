@@ -27,9 +27,9 @@ ms.locfileid: "48878090"
 
 + 如果要使用R，Python或Java语言支持安装机器学习服务，则需要SQL Server 2017（或更高版本）安装程序。如果您拥有SQL Server 2016安装介质，则可以安装[SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)以获得R语言支持。
 
-+ 数据库引擎实例是必需的。 您不能安装 R 或 Python 功能，尽管将它们添加到现有实例的以增量方式。
++ 数据库引擎实例是必需的。您不能仅安装R或Python功能，可以将它们逐步添加到现有实例中。
 
-- 安装机器学习服务是*不支持*中 SQL Server 2017 故障转移群集上。 但是，它*支持*与 SQL Server 2019。 
+- SQL Server 2017中的故障转移群集*不支持*安装机器学习服务。但是，SQL Server 2019*支持*。
  
 + 不要在域控制器上安装机器学习服务。 安装程序的机器学习服务部分将会失败。
 
