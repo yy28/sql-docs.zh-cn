@@ -25,7 +25,7 @@ ms.locfileid: "48878090"
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 
-+ 如果你想要使用 R、 Python 或 Java 语言支持安装机器学习服务，则需要 SQL Server 2017 （或更高版本） 安装程序。 如果改为您具有 SQL Server 2016 安装介质，则可以安装[SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)获取 R 语言支持。
++ 如果要使用R，Python或Java语言支持安装机器学习服务，则需要SQL Server 2017（或更高版本）安装程序。如果您拥有SQL Server 2016安装介质，则可以安装[SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)以获得R语言支持。
 
 + 数据库引擎实例是必需的。 您不能安装 R 或 Python 功能，尽管将它们添加到现有实例的以增量方式。
 
