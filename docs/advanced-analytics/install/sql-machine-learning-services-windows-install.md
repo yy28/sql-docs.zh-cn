@@ -35,10 +35,9 @@ ms.locfileid: "48878090"
 
 + 不要在运行数据库内实例的同一台计算机上安装**共享功能** > **Machine Learning Server （独立版）**。独立服务器将竞争相同的资源，从而破坏两个安装的性能。
 
-+ 支持与其他版本的 R 和 Python 的并行安装，但不是建议这样做。 它支持，因为 SQL Server 实例使用其自己的开放源代码 R 和 Anaconda 分发版的副本。 但建议不要因为运行 SQL Server 外部的 SQL Server 计算机使用 R 和 Python 的代码可能会导致各种问题：
-    
-  + 使用不同的库和其他可执行文件，并获取不同的结果，比您在 SQL Server 中运行时。
-  + 不能由 SQL Server，从而导致资源争用管理外部库中运行的 R 和 Python 脚本。
++ 支持与其他版本的R和Python并行安装，但不建议这样做。它支持，因为SQL Server实例使用自己的开源R和Anaconda发行版的副本。但不建议这样做，因为在SQL Server外部的SQL Server计算机上运行使用R和Python的代码会导致各种问题：    
+  + 与在SQL Server中运行时相比，您使用不同的库和不同的可执行文件，并将获得不同的结果。 
+  + SQL Server无法管理在外部库中运行的R和Python脚本，从而导致资源争用。
   
 > [!IMPORTANT]
 > 安装程序完成后，请确保要完成本文中所述的配置后步骤。 这些步骤包括启用 SQL Server 以使用外部脚本，并添加所需的 SQL Server，你的名义运行 R 和 Python 的作业帐户。 配置更改通常需要重新启动实例或重新启动 Launchpad 服务。
