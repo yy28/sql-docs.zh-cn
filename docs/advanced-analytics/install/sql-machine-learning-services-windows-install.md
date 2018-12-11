@@ -40,7 +40,7 @@ ms.locfileid: "48878090"
   + SQL Server无法管理在外部库中运行的R和Python脚本，从而导致资源争用。
   
 > [!IMPORTANT]
-> 安装程序完成后，请确保要完成本文中所述的配置后步骤。 这些步骤包括启用 SQL Server 以使用外部脚本，并添加所需的 SQL Server，你的名义运行 R 和 Python 的作业帐户。 配置更改通常需要重新启动实例或重新启动 Launchpad 服务。
+> 安装程序完成后，请务必完成本文中描述的配置后步骤。这些步骤包括使SQL Server能够使用外部脚本，以及添加SQL Server代表您运行R和Python作业所需的帐户。配置更改通常需要重新启动实例，或重新启动Launchpad服务。
 
 ## <a name="get-the-installation-media"></a>获取安装介质
 
