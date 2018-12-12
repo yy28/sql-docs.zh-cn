@@ -20,7 +20,6 @@ ms.locfileid: "48878090"
 
 从SQL Server 2017开始，SQL Server机器学习服务提供了对数据库内分析的R和Python支持，SQL Server机器学习服务是SQL Server 2016中引入的[SQL Server R Services](../r/sql-server-r-services.md)的后续版本。函数库在R和Python中可用，并作为外部脚本运行在数据库引擎实例上。
 
-
 本文介绍如何通过运行SQL Server安装向导并按照屏幕上的提示安装机器学习组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
@@ -36,6 +35,7 @@ ms.locfileid: "48878090"
 + 不要在运行数据库内实例的同一台计算机上安装**共享功能** > **Machine Learning Server （独立版）**。独立服务器将竞争相同的资源，从而破坏两个安装的性能。
 
 + 支持与其他版本的R和Python并行安装，但不建议这样做。它支持，因为SQL Server实例使用自己的开源R和Anaconda发行版的副本。但不建议这样做，因为在SQL Server外部的SQL Server计算机上运行使用R和Python的代码会导致各种问题：    
+
   + 与在SQL Server中运行时相比，您使用不同的库和不同的可执行文件，并将获得不同的结果。 
   + SQL Server无法管理在外部库中运行的R和Python脚本，从而导致资源争用。
   
