@@ -24,7 +24,7 @@ ms.locfileid: "52503794"
 
   Stretch Database 可以既透明又安全地将冷数据迁移到 Microsoft Azure 云。  
   
- 如果你想立即开始使用 Stretch Database，请参阅 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)。  
+ 如果你想立即开始使用 Stretch Database，请参阅 [通过运行“启用数据库延伸向导”开始](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)。  
   
 ## <a name="what-are-the-benefits-of-stretch-database"></a>Stretch Database 的优点是什么？  
  Stretch Database 具有下列优点：  

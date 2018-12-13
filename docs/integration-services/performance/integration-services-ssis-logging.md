@@ -40,7 +40,7 @@ ms.locfileid: "52542914"
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
   
- 您可以配置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行包的过程中出现的日志记录范围。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](#server_logging)。  
+ 您可以配置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行包的过程中出现的日志记录范围。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](#server_logging)。  
   
  在使用 **dtexec** 命令提示实用工具运行包时，还可以包括日志记录。 有关支持日志记录的命令提示参数的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
