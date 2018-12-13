@@ -23,14 +23,14 @@ SQL Server 安装程序包含**共享的功能**选项用于安装非实例感�
 
 独立服务器安装的 SQL Server 安装程序在功能上等效于非 SQL 品牌版本的[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支持同一个用例和方案，其中包括：
 
-+ 远程执行，在同一个控制台中的本地和远程会话之间切换
-+ 包含 web 节点和计算节点的操作化
-+ Web 服务部署： 打包成 web 服务的 R 和 Python 脚本的功能
++ 远程执行，在同一控制台中切换本地和远程会话
++ Web节点和计算节点的操作
++ Web服务部署：将R和Python脚本打包到Web服务中的能力
 + R 和 Python 函数库的完整集合
 
-从 SQL Server 中分离的独立服务器，作为 R 和 Python 环境配置，保护安全和访问使用基础操作系统和独立服务器，非 SQL Server 中提供的工具。
+作为与SQL Server分离的独立服务器，使用独立服务器（而非SQL Server）中提供的基础操作系统和工具来配置、保护和访问R和Python环境。
 
-SQL Server 的附加补充，作为独立的服务器是开发高性能的机器学习可以使用支持的数据平台的完整范围的远程计算上下文的解决方案所需的情况下很有用。 你可以上移执行从本地服务器到远程的机器学习服务器在 Spark 群集上或另一个 SQL Server 实例上。
+作为SQL Server的附件，如果您需要开发可以将远程计算上下文用于所有支持的数据平台的高性能机器学习解决方案，则独立服务器非常有用。您可以将执行从本地服务器转移到Spark群集或另一个SQL Server实例上的远程计算机服务器。
 
 <a name="bkmk_prereqs"> </a>
 
