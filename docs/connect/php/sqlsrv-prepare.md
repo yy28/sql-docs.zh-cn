@@ -84,7 +84,7 @@ sqlsrv_prepare 和 sqlsrv_execute 的组合将语句准备和语句执行分成�
   
 有关写入和读取大量信息的备用策略，请参阅 [SQL 语句的批处理](../../odbc/reference/develop-app/batches-of-sql-statements.md) 和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-有关详细信息，请参阅 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
 以下示例将准备和执行语句。 语句执行后（请参阅 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)），将更新 AdventureWorks 数据库的 Sales.SalesOrderDetail 表格中的字段。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  

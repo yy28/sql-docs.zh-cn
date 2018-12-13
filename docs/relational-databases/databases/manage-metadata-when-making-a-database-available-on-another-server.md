@@ -148,7 +148,7 @@ ms.locfileid: "51559465"
  用户定义的错误消息位于 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目录视图中。 此目录视图存储在 **master**中。 如果数据库应用程序依赖于用户定义的错误消息并且此数据库在其他服务器实例上可用，则请使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) 在目标服务器实例上添加这些用户定义的消息。  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （在服务器级别）  
   
 ### <a name="server-level-event-notifications"></a>服务器级事件通知  
  服务器级事件通知存储在 **msdb**中。 因此，如果数据库应用程序依赖于服务器级事件通知，则必须在目标服务器实例上重新创建该事件通知。 若要查看服务器实例上的事件通知，请使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目录视图。 有关详细信息，请参阅 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
