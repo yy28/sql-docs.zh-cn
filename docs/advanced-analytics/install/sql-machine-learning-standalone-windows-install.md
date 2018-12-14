@@ -67,11 +67,11 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 
 3. 规则检查完成后，接受 SQL Server 许可条款，然后选择新的安装。
 
-4. 上**功能选择**页上，以下选项，应已选择：
+4. 在**功能选择**页上，以下选项，应已选择：
 
     - Microsoft Machine Learning Server （独立版）
 
-    - R 和 Python 被选择默认情况下。 您可以取消选择其中任一种语言，但我们建议你安装在至少一个支持的语言。
+    - 默认情况下，R和Python都被选中。您可以取消选择任一语言，但我们建议您至少安装一种受支持的语言。
 
      ![安装 Machine Learning Server 独立版](media/2017setup-features-page-mlsvr-rpy.png "启动 Machine Learning Server 独立安装")
     
