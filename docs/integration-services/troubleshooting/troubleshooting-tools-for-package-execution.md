@@ -51,7 +51,7 @@ ms.locfileid: "51639021"
   
 -   **使用错误输出捕获错误数据**。 将包含错误的行发送到单独的目标（如错误表或文本文件）。 错误输出自动添加两个数值列（包含导致该行被拒绝的错误的编号）以及发生该错误的列的 ID。  
   
--   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，你还可以添加错误消息和列名称以便更容易分析错误输出。 有关如何通过使用脚本添加这两个附加列的示例，请参阅 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+-   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，你还可以添加错误消息和列名称以便更容易分析错误输出。 有关如何通过使用脚本添加这两个附加列的示例，请参阅 [使用脚本组件增强错误输出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
 -   **或者，通过记录 DiagnosticEx 事件获取列名称**。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
