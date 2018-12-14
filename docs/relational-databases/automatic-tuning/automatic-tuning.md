@@ -15,29 +15,29 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db7fc8514fadbcf9be5b98c85457b4cddeac82cb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a196ef879c176fe731fe85b2de7962d70edff7b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559134"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541175"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。
+自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。
 
 中的自动优化[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]潜在性能问题检测到，并允许应用更正措施时发出通知，或让[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自动解决性能问题。
-中的自动优化[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]使您能够识别并修复性能问题所致**SQL 计划选择回归**。 中的自动优化[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]创建必要的索引，并删除未使用的索引。
+中的自动优化[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]使您能够识别并修复性能问题所致**查询执行计划选择回归**。 中的自动优化[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅[执行计划](../../relational-databases/performance/execution-plans.md)。
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 监视数据库上执行并自动改进的工作负荷性能的查询。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有内置智能机制，可以自动优化和提高查询性能的动态适应工作负荷的数据库。 有可用的两个自动优化功能：
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]监视器上，对数据库和自动执行的查询可以提高工作负荷的性能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有内置智能机制，可以自动优化和提高查询性能的动态适应工作负荷的数据库。 有可用的两个自动优化功能：
 
- -  **自动计划更正**(位于[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)])，用于标识有问题的查询执行计划并修复 SQL 计划性能问题。
- -  **自动索引管理**(仅适用于[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)])，用于标识应在数据库中，添加的索引以及应删除的索引。
+ -  **自动计划更正**标识有问题的查询执行计划并修复查询执行计划性能问题。 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (从开始[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **自动索引管理**标识应在数据库中，添加的索引以及应删除的索引。 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>为什么自动优化？
 
-三个经典数据库管理的主要任务监视工作负荷，识别关键[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询时，添加了以提高性能，并标识应为很少使用的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供的查询和索引需要监视的详细的见解。 但是，持续监视数据库是一个艰巨且乏味的任务，尤其是在处理多个数据库。 管理大量的数据库可能无法高效地完成。 而不是手动监视和优化你的数据库，可以考虑委派某些监视和优化操作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自动优化功能。
+三个经典数据库管理的主要任务监视工作负荷，识别关键[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询时，添加了以提高性能，并标识应为很少使用的索引。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]提供的查询和索引需要监视的详细的见解。 但是，持续监视数据库是一个艰巨且乏味的任务，尤其是在处理多个数据库。 管理大量的数据库可能无法高效地完成。 而不是手动监视和优化你的数据库，可以考虑委派某些监视和优化操作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自动优化功能。
 
 ### <a name="how-does-automatic-tuning-work"></a>自动优化工作原理？
 
@@ -49,13 +49,13 @@ ms.locfileid: "51559134"
 
 ## <a name="automatic-plan-correction"></a>自动计划更正
 
-自动计划更正是一种自动优化功能，用于标识**SQL 计划选择回归**自动强制将最后一个已知完好的计划，从而解决该问题。
+自动计划更正是一种自动优化功能，用于标识**执行计划选择回归**自动强制将最后一个已知完好的计划，从而解决该问题。 有关查询执行计划和查询优化器的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)。
 
-### <a name="what-is-sql-plan-choice-regression"></a>SQL 计划选择回归是什么？
+### <a name="what-is-execution-plan-choice-regression"></a>执行计划选择回归是什么？
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 可以使用不同的 SQL 计划其执行[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询。 查询计划取决于统计信息、 索引和其他因素。 应该用于执行某些的最优计划[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询可能会随着时间的推移发生更改。 在某些情况下，新的计划不能比以前更好，新的计划可能会导致性能回归。
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)]可能会使用不同的执行计划来执行[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询。 查询计划取决于统计信息、 索引和其他因素。 应该用于执行某些的最优计划[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询可能会随着时间的推移发生更改。 在某些情况下，新的计划不能比以前更好，新的计划可能会导致性能回归。
 
- ![SQL 计划选择回归](media/plan-choice-regression.png "SQL 计划选择回归") 
+ ![查询执行计划选择回归](media/plan-choice-regression.png "查询执行计划选择回归") 
 
 每当您注意到计划选择回归，您会发现一些以前的良好计划，并强制而不是当前的一个使用`sp_query_store_force_plan`过程。
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]提供有关回归计划和建议的纠正操作的信息。
@@ -65,12 +65,13 @@ ms.locfileid: "51559134"
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以自动切换到最后一个已知完好的计划，每当检测到计划选择回归。
 
-![SQL 计划选择更正](media/force-last-good-plan.png "SQL 计划选择更正") 
+![查询执行计划选择更正](media/force-last-good-plan.png "查询执行计划选择更正") 
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会自动检测任何潜在的计划选择回归，包括应使用而不是错误的计划的计划。
-当[!INCLUDE[ssde_md](../../includes/ssde_md.md)]应用最近一个其已知的良好计划，会自动监视强制计划的性能。 如果不强制的计划优于回归计划，新计划将取消强制和[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将编译新计划。 如果[!INCLUDE[ssde_md](../../includes/ssde_md.md)]验证强制的计划优于回归计划，强制执行的计划将保留之前 （例如，在下一次统计信息或架构更改） 重新编译，如果它是优于回归计划。
+当[!INCLUDE[ssde_md](../../includes/ssde_md.md)]应用最近一个其已知的良好计划，会自动监视强制计划的性能。 如果不强制的计划优于回归计划，新计划将取消强制和[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将编译新计划。 如果[!INCLUDE[ssde_md](../../includes/ssde_md.md)]验证强制的计划优于回归计划，将保留强制的计划，如果它是优于回归计划，直到重新编译发生 （例如，在下一次统计信息更新或架构更改）。
 
-注意： 强制任何计划自动执行不 persit 上重新启动 SQL Server 实例。
+> [!NOTE]
+> 不会强制任何执行计划自动保留的重启之间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>启用自动计划选择更正
 
@@ -80,28 +81,32 @@ ms.locfileid: "51559134"
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
+
 一旦启用此选项，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]将会自动强制执行任何建议估计的 CPU 性能提升超过 10 秒，或在新的计划中的错误数高于建议计划中的错误数，并验证强制的计划优于当前。
 
 ### <a name="alternative---manual-plan-choice-correction"></a>替代项-手动计划选择更正
 
 若不使用自动优化，用户必须定期监视系统并查找回归的查询。 如果任何计划回归，用户应找到某些以前的良好计划，并强制而不是当前的一个使用`sp_query_store_force_plan`过程。 最佳做法是强制实施最后一个已知完好的计划，因为较旧的计划也可能是由于统计信息或索引的更改无效。 强制最后一个已知完好的计划的用户应监视使用强制的计划执行的查询的性能，并验证该强制的计划按预期方式工作。 具体取决于监视和分析结果，应强制执行计划，或用户应找到通过其他方式来优化查询。
-手动强制执行的计划不应被强迫下去，因为[!INCLUDE[ssde_md](../../includes/ssde_md.md)]应该能够应用最佳计划。 用户或数据库管理员应最终取消强制执行计划使用`sp_query_store_unforce_plan`过程中，并让[!INCLUDE[ssde_md](../../includes/ssde_md.md)]找到最佳的计划。
+手动强制执行的计划不应被强迫下去，因为[!INCLUDE[ssde_md](../../includes/ssde_md.md)]应该能够应用最佳计划。 用户或数据库管理员应最终取消强制执行计划使用`sp_query_store_unforce_plan`过程中，并让[!INCLUDE[ssde_md](../../includes/ssde_md.md)]找到最佳的计划。 
+
+> [!TIP]
+> Alternativelly，使用**强制计划与查询**Query Store 视图来查找和取消强制执行计划。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供所有必要的视图和监视性能和查询存储中解决问题所需的过程。
 
 在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，可以找到计划选择回归使用查询存储系统视图。 在中[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，则[!INCLUDE[ssde_md](../../includes/ssde_md.md)]检测并显示潜在的计划选择回归并建议应在应用的操作[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)视图。 该视图显示有关问题、 问题和详细信息，例如确定查询回归计划的 ID，用作比较基准进行比较，计划的 ID 的重要性和[!INCLUDE[tsql_md](../../includes/tsql-md.md)]语句可以执行以修复出现问题。
 
-| type | description | DATETIME | score | 详细信息 | … |
+| type | description | DATETIME | score | 详细信息 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | 从 4 毫秒更改为 14 毫秒的 CPU 时间 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 从 37 ms 更改为 84 毫秒的 CPU 时间 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 
 以下列表中描述了此视图中的某些列：
- - 类型的建议的操作- `FORCE_LAST_GOOD_PLAN`。
- - 为什么要包含的信息的说明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]认为此计划更改是一个潜在的性能回归。
- - 检测到潜在回归时的日期时间。
- - 此建议的分数。 
- - 有关检测到的计划回归计划修复该问题，应强制计划的 ID 的 ID 的 ID 等问题的详细信息[!INCLUDE[tsql_md](../../includes/tsql-md.md)]脚本可能会应用若要修复的问题，等等。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)。
+ - 建议的操作的类型 `FORCE_LAST_GOOD_PLAN`
+ - 为什么要包含的信息的说明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]认为此计划更改是一个潜在的性能回归
+ - 检测到潜在回归时的日期时间
+ - 此建议的分数
+ - 有关检测到的计划回归计划修复该问题，应强制计划的 ID 的 ID 的 ID 等问题的详细信息[!INCLUDE[tsql_md](../../includes/tsql-md.md)]脚本可能会应用若要修复的问题，等等。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)
 
 使用以下查询以获取修复的问题和其他信息的估计脚本获得：
 
@@ -139,13 +144,14 @@ FROM sys.dm_db_tuning_recommendations
 
 尽管[!INCLUDE[ssde_md](../../includes/ssde_md.md)]提供标识计划选择回归; 持续监视和修复性能问题所需的所有信息可能都是一个乏味的过程。 自动优化让这一过程容易得多。
 
-注意： 此 DMV 中的数据后重新启动 SQL Server 实例不存在。
+> [!NOTE]
+> Sys.dm_db_tuning_recommendations DMV 中的数据不会保留的重启之间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。
 
 ## <a name="automatic-index-management"></a>自动索引管理
 
 在中[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]，索引管理很容易，因为[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]了解工作负荷，并确保你的数据始终以最佳方式编制索引。 正确的索引设计是工作负荷的最佳性能的关键在于，自动索引管理可帮助您优化索引。 自动索引管理可以修复未正确编制索引的数据库中的性能问题或维护并改进现有数据库架构的索引。 中的自动优化[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]将执行以下操作：
 
- - 标识可能会提高性能的 T-SQL 查询，从表中读取数据的索引。
+ - 标识可能会提高性能的索引在[!INCLUDE[tsql_md](../../includes/tsql-md.md)]从表中读取数据的查询。
  - 标识冗余的索引或未使用的可能删除的时间段内的索引。 删除不必要的索引可以提高性能的查询以便更新表中的数据。
 
 ### <a name="why-do-you-need-index-management"></a>为什么需要索引管理？
@@ -160,13 +166,13 @@ FROM sys.dm_db_tuning_recommendations
 
 除了检测，[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]可以自动应用标识的建议。 如果您发现该内置规则提高数据库性能，你可能会用[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]自动管理索引。
 
-若要启用自动优化 Azure SQL 数据库中并使自动优化功能完全管理你的工作负荷，请参阅[启用 Azure SQL 数据库使用 Azure 门户中的自动优化](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable)。
+若要启用中的自动优化[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]并允许自动优化功能完全管理你的工作负荷，请参阅[启用 Azure SQL 数据库使用 Azure 门户中的自动优化](/azure/sql-database/sql-database-automatic-tuning-enable)。
 
 当[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]应用创建索引或删除索引建议，会自动监视索引影响的查询的性能。 仅当受影响的查询的性能也得到了改进，将保留新的索引。 如果有一些查询，用于运行较慢，由于没有索引，将自动重新创建删除的索引。
 
 ### <a name="automatic-index-management-considerations"></a>自动索引管理注意事项
 
-若要创建必要索引中的所需的操作[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]可能会消耗资源并暂时影响工作负荷的性能。 索引创建对工作负荷性能的影响降至最低，Azure SQL 数据库的任何索引管理操作找到适当的时间窗口。 优化操作是推迟如果数据库需要资源来执行工作负荷，并启动时在数据库有足够可用于维护任务的未使用的资源。 自动索引管理中的一个重要功能是验证操作。 在 Azure SQL 数据库创建或删除索引，监视进程分析工作负荷，以验证操作性能提升了性能。 如果未显著提高将立即还原操作。 这样一来，Azure SQL 数据库可确保自动操作不会对工作负荷的性能产生负面影响。 创建的自动优化索引是透明的基础架构上执行维护操作。 架构更改，例如删除或重命名列不会阻止通过自动创建的索引存在。 时，立即将删除 Azure SQL 数据库会自动创建的索引相关的已删除表或列。
+若要创建必要索引中的所需的操作[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]可能会消耗资源并暂时影响工作负荷的性能。 索引创建对工作负荷性能的影响降至最低[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]为任何索引管理操作找到适当的时间窗口。 优化操作是推迟如果数据库需要资源来执行工作负荷，并启动时在数据库有足够可用于维护任务的未使用的资源。 自动索引管理中的一个重要功能是验证操作。 当[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]创建或删除索引，监视进程将分析工作负荷，以验证操作性能提升了性能。 如果它没有带来显著的改进-立即还原操作。 这样一来，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]可确保自动操作不会对工作负荷的性能产生负面影响。 创建的自动优化索引是透明的基础架构上执行维护操作。 架构更改，例如删除或重命名列不会阻止通过自动创建的索引存在。 会自动创建的索引[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]立即时是否删除相关的已删除表或列。
 
 ### <a name="alternative---manual-index-management"></a>替代项-手动索引管理
 
@@ -182,4 +188,9 @@ FROM sys.dm_db_tuning_recommendations
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON 函数](../../relational-databases/json/index.md)
+ [JSON 函数](../../relational-databases/json/index.md)    
+ [执行计划](../../relational-databases/performance/execution-plans.md)    
+ [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
+ [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [查询优化助手](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
