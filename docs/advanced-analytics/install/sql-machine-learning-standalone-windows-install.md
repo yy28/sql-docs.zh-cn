@@ -130,7 +130,6 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 
 ### <a name="default-installation-folders"></a>默认安装文件夹
 
-
 对于 R 和 Python开发，在同一台计算机上有多个版本是很常见的。通过SQL Server安装程序安装后，基础发行版将安装在与用于安装程序的SQL Server版本相关联的文件夹中。
 
 下表列出了由 Microsoft 安装程序创建的 R 和 Python 发行版的路径。 出于完整性的考虑，此表包括生成的 SQL Server 安装程序，以及 Microsoft Machine Learning Server 独立安装程序的路径。
@@ -148,7 +147,6 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 ## <a name="apply-updates"></a>应用更新
 
 我们建议将最新的累积更新应用到数据库引擎和机器学习组件。 通过安装程序安装累积更新。 
-
 
 在连接Internet的设备上，通常通过Windows Update应用累积更新，但您也可以使用以下步骤进行受控更新。应用数据库引擎的更新时，安装程序会为您在独立服务器上安装的任何R或Python功能提取累积更新。
 
