@@ -95,7 +95,7 @@ ms.locfileid: "51639021"
      可以对数据流任务设置 **DelayValidation** 属性，但不能对单个数据流组件设置该属性。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 **false**。 但是，当此属性的值为 **false**时，该组件不能识别外部数据源的元数据的更改。 设置为 **true**时， <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性可帮助避免数据库中由于锁定导致的阻塞问题，特别是在包使用事务时。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>运行时权限问题的故障排除  
- 如果您在尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行已部署的包时遇到错误，则代理所使用的帐户可能不具备必需的权限。 有关如何对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760)（从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行）。 有关如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行包的详细信息，请参阅 [包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
+ 如果您在尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行已部署的包时遇到错误，则代理所使用的帐户可能不具备必需的权限。 有关如何对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 [从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)。 有关如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行包的详细信息，请参阅 [包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   
  若要连接到 Excel 或 Access 数据源， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要求帐户具有在 TEMP 和 TMP 环境变量所指定的在文件夹中读取、写入、创建和删除临时文件的权限。  
   

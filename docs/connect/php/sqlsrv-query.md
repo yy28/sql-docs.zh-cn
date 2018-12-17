@@ -77,7 +77,7 @@ $options [可选]：关联阵列，用于设置查询属性。 支持的键如�
 ## <a name="remarks"></a>Remarks  
 sqlsrv_query 函数非常适合一次性查询，并且应该是执行查询的默认选项，除非出现特殊情况。 此函数提供了一个简化的方法，以便使用最少的代码来执行查询。 sqlsrv_query 函数可用于语句准备和语句执行，还可用于执行参数化查询。  
   
-有关详细信息，请参阅 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
 在下面的示例中，向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入单个行。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
