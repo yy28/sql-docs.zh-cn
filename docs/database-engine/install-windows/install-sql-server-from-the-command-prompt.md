@@ -872,7 +872,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 现在是独立于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序的独立安装程序。 有关详细信息，请参阅 [从命令行安装 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-LocalDB 是安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任何 SKU 时的一个选项。 有关详细信息，请参阅 [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 
+**LocalDB 是安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任何 SKU 时的一个选项。 有关详细信息，请参阅 [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 
   
 ### <a name="feature-parameter-examples"></a>功能参数示例：  
   
