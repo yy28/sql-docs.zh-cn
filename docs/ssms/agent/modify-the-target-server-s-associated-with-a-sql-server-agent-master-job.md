@@ -49,7 +49,7 @@ ms.locfileid: "52507884"
 ### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
-除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
