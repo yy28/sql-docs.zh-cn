@@ -31,7 +31,7 @@ ms.locfileid: "50020181"
   
  对于包含可变数据的不同报表，从一个报表运行到下一个报表时，报表大小会有很大变化。 在这种情况下，应监视数据源，以确定数据可变性对报表的影响，决定是否需要按照本主题中规定的步骤进行操作。  
   
- 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.com 上的文章 [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) （如何在报表服务器中运行报表时诊断问题）。  
+ 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.com 上的文章 [如何在报表服务器中运行报表时诊断问题](https://go.microsoft.com/fwlink/?LinkId=85634)。  
   
 ## <a name="configuration-recommendations"></a>配置建议  
  关于报表执行、报表呈现和报表访问方面的建议包括以下几点：  
