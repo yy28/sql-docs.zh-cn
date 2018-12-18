@@ -110,12 +110,12 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 |CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |对复制的 DROP TABLE 支持|DROP TABLE DDL 支持复制，以允许删除复制文章。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |文件流 RsFx 驱动程序签名|文件流 RsFx 驱动程序使用 Windows 硬件开发人员中心仪表板门户（开发门户）签名和认证，从而允许在 Windows Server 2016/Windows 10 上毫无问题地安装 SQL Server 2016 SP1 文件流 RsFx 驱动程序。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
-|SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)（开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权）|
+|SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |手动更改跟踪清除|新存储过程根据需要清除更改跟踪内部表。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |本地临时表的并行 INSERT...SELECT 更改|INSERT..SELECT 操作中的新并行插入。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)（SQL Server 客户咨询团队）|
 |Showplan XML|扩展诊断包括授予警告和针对查询启用的最大内存、启用的跟踪标志，并且还显示其他诊断信息。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |存储类内存|在 Windows Server 2016 中使用存储类内存推进事务处理，带来的结果是事务提交时间加快了几个数量级。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)（开发人员选择：USE HINT 查询提示）|
+|USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[开发人员选择：USE HINT 查询提示](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |XEvent 添加件|新 XEvent 和 Perfmon 诊断功能改进了延迟的故障排除。|[扩展事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 此外，请注意以下修补程序：
