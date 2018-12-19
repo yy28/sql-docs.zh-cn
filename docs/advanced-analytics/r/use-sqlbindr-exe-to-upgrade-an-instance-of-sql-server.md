@@ -18,7 +18,7 @@ ms.locfileid: "48078887"
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有包。 在标准 SQL Server 服务包更新根据 SQL Server 发布周期，与错误修复的最新版本，但没有主版本升级现有包中。 
+SQL Server中的R和Python集成包括开源代码和Microsoft专有包。在标准的SQL Server服务下，根据SQL Server发布周期更新包，并修复当前版本的现有包的错误，但没有主要版本升级。 
 
 但是，许多数据科学家习惯于使用较新的包可用。 有关 SQL Server 2017 机器学习服务 （数据库内） 和 SQL Server 2016 R Services （数据库内），可以获取[较新版本的 R 和 Python](#version-map)通过*绑定*到**Microsoft机器学习服务器**。 
 
