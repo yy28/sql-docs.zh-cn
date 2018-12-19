@@ -18,7 +18,6 @@ ms.locfileid: "48150539"
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-
 默认情况下，安装程序连接到Microsoft下载站点以获取SQL Server上的机器学习所需的和更新的组件。如果防火墙限制阻止安装程序访问这些站点，则可以使用连接Internet的设备下载文件，将文件传输到脱机服务器，然后运行安装程序。
 
 数据库内分析包括数据库引擎实例，以及用于R和Python集成的其他组件，具体取决于SQL Server的版本。
