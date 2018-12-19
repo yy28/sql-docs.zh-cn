@@ -29,14 +29,14 @@ ms.locfileid: "48150539"
 
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 脱机安装
 
-若要在独立服务器上安装 SQL Server 2017 机器学习服务 （R 和 Python），首先，下载 SQL Server 的初始版本和相应的 CAB 文件对 R 和 Python 支持。 即使您计划立即更新你的服务器以使用最新的累积更新，必须首先安装初始版本。
+要在独立服务器上安装SQL Server 2017机器学习服务（R和Python），首先要下载SQL Server的初始版本以及用于R和Python支持的相应CAB文件。即使您计划立即更新服务器以使用最新的累积更新，也必须首先安装初始版本。
 
 > [!Note]
-> SQL Server 2017 没有 service pack。 它是要用作唯一的基准线，与通过累积更新仅处理初始版本的 SQL Server 的第一个版本。 
+> SQL Server 2017没有Service Pack。这是SQL Server的第一个版本，它使用初始版本作为唯一的基线，仅通过累积更新进行服务。
 
 ### <a name="1---download-2017-cabs"></a>1-下载 2017 cab 文件
 
-在具有 internet 连接的计算机，下载 SQL Server 2017 初始版本和安装介质提供 R 和 Python 功能的 CAB 文件。 
+在具有Internet连接的计算机上，下载CAB文件，为初始发行版提供R和Python功能，并为SQL Server 2017提供安装介质。
 
 发行版本  |下载链接  |
 ---------|---------------|
@@ -55,9 +55,9 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
-是 SQL Server 2016 数据库内分析 R 限，只需两个 CAB 文件的产品包和 Microsoft 的开放源代码 R 分发分别。 首先安装这些版本之一： RTM，SP 1，SP 2。 基本安装到位后，可以为下一步应用累积更新。
+SQL Server 2016数据库内分析仅限R，仅包含两个用于产品包的CAB文件和Microsoft的开源R分发。首先安装以下任一版本：RTM，SP 1，SP 2.基础安装到位后，可以将累积更新作为下一步应用。
 
-在具有 internet 连接的计算机，下载安装程序用于在 SQL Server 2016 上安装的数据库内分析的 CAB 文件。 
+在具有Internet连接的计算机上，下载安装程序使用的CAB文件，以在SQL Server 2016上安装数据库内分析。
 
 ### <a name="1---download-2016-cabs"></a>1-下载 2016 cab 文件
 
@@ -69,9 +69,9 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ### <a name="2---get-sql-server-2016-installation-media"></a>2-获取 SQL Server 2016 安装媒体
 
-可以为您安装第一台目标计算机上安装 SQL Server 2016 RTM、 SP 1 或 SP 2。 任何这些版本可以接受的累积更新。
+您可以在目标计算机上安装SQL Server 2016 RTM，SP 1或SP 2作为首次安装。任何这些版本都可以接受累积更新。
 
-一种方法获取的.iso 文件包含安装介质是通过[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)。 在中，登录，然后使用**下载**链接，可以找到你想要安装的 SQL Server 2016 版本。 您可以将其复制到目标计算机进行脱机安装的.iso 文件的格式是下载。
+获取包含安装媒体的.iso文件的一种方法是通过[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)。登录，然后使用**下载**链接查找要安装的SQL Server 2016版本。下载采用.iso文件的形式，您可以将其复制到目标计算机以进行脱机安装。
 
 ## <a name="transfer-files"></a>传输文件
 
