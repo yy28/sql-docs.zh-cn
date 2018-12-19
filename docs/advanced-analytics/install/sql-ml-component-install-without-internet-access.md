@@ -18,14 +18,15 @@ ms.locfileid: "48150539"
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-默认情况下，连接到 Microsoft 下载站点以获取所需的安装程序和更新的组件的机器学习 SQL Server 上。 如果防火墙限制阻止访问这些站点安装程序，可以使用与 internet 连接的设备下载文件，请将文件传输到脱机的服务器，然后然后运行安装程序。
 
-数据库内分析中包含的数据库引擎实例和 R 和 Python 集成，具体取决于版本的 SQL Server 的其他组件。 
+默认情况下，安装程序连接到Microsoft下载站点以获取SQL Server上的机器学习所需的和更新的组件。如果防火墙限制阻止安装程序访问这些站点，则可以使用连接Internet的设备下载文件，将文件传输到脱机服务器，然后运行安装程序。
+
+数据库内分析包括数据库引擎实例，以及用于R和Python集成的其他组件，具体取决于SQL Server的版本。
 
 + SQL Server 2017 包括 R 和 Python。 
 + SQL Server 2016 的仅限 R 的。 
 
-在独立服务器上，机器学习和 R/Python 特定于语言的功能会添加通过 CAB 文件中。 
+在独立服务器上，通过CAB文件添加机器学习和R / Python语言特定功能。
 
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 脱机安装
 
