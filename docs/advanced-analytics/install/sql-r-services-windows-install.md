@@ -18,7 +18,7 @@ ms.locfileid: "48878120"
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此文章介绍了如何安装和配置**SQL Server 2016 R Services**。 如果您有 SQL Server 2016，安装此功能以启用 SQL Server 中 R 代码的执行。
+本文介绍如何安装和配置 SQL Server 2016 R Services。 如果你有 SQL Server 2016，请安装此功能以在 SQL Server 中执行 R 代码。
 
 在 SQL Server 2017 中，[机器学习服务](../r/r-server-standalone.md)中提供了 R 集成，体现出添加了 Python。 如果要集成 R 并拥有 SSQL Server 2017 安装介质，请参阅[安装 SQL Server 2017 机器学习服务](sql-machine-learning-services-windows-install.md)来添加该功能。 
 
@@ -32,9 +32,9 @@ ms.locfileid: "48878120"
 
 + 不要在域控制器上安装 R Services 。 安装程序的 R Services 部分将失败。
 
-+ 不安装**共享功能** > **R Server （独立版）** 同一台计算机上运行的数据库实例。 
++ + 不要在运行数据库内实例的同一台计算机上安装“共享功能” > “R Server（独立版）” 。 
 
-  因为 SQL Server 实例使用其自己的开放源代码 R 和 Anaconda 分发版副本可能会与其他版本的 R 和 Python 的并行安装。 但是，运行 SQL Server 外部的 SQL Server 计算机使用 R 和 Python 的代码可能会导致各种问题：
+  可以与其他版本的 R 和 Python 并行安装，因为 SQL Server 实例使用自己的开源 R 和 Anaconda 发行版的副本。 但是，在 SQL Server 外部的 SQL Server 计算机上运行使用 R 和 Python 的代码可能会导致各种问题：
     
   + 使用不同的库和其他可执行文件，并获取不同的结果，比您在 SQL Server 中运行时。
   + 不能由 SQL Server，从而导致资源争用管理外部库中运行的 R 和 Python 脚本。
@@ -62,27 +62,27 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 1. 启动 SQL Server 2016 安装向导。
 
-2. 上**安装**选项卡上，选择**新的 SQL Server 独立安装或向现有安装添加功能**。
+2. 在“安装”选项卡上，选择“新的 SQL Server 独立安装或向现有安装添加功能”。
     
    ![安装 R Services （数据库内）](media/2016-setup-installation-rsvcs.png "启动数据库引擎的安装与 R 服务")
    
-3. 上**功能选择**页上，选择以下选项：
+3. 在“功能选择”页面上，选择以下选项：
 
-   - 选择**数据库引擎服务**。 数据库引擎需要使用机器学习每个实例中。
-   - 选择**R Services （数据库内）**。 安装 R 的数据库中使用的支持
+   - 选择**数据库引擎服务**。 选择“数据库引擎服务”。每个使用机器学习的实例都需要数据库引擎。
+   - 选择“R Services (数据库内)” 。对在数据库内使用 R 的安装支持。 安装 R 的数据库中使用的支持
     
      ![R Services 功能选择](media/2016setup-rsvcs-features.png "选择这些功能的 R Services 中的数据库")
 
     > [!IMPORTANT]
     > 不要同时安装 R Server 和 R Services。 通常会安装 R Server（独立版）来创建数据科学家或开发人员用来连接 SQL Server 和部署 R 解决方案的环境。 因此，无需在同一台计算机上安装两者。
 
-4.  上**同意安装 Microsoft R Open**页上，单击**接受**。
+4.  在“同意安装 Microsoft R Open”页上，单击“接受”。
   
     下载 Microsoft R Open，其中包括开放源代码 R 基础包和工具，以及增强型的 R 包和 Microsoft R 开发团队的连接提供程序的分发时需要此许可协议。
   
-5. 已接受许可协议后，没有短暂暂停时准备好安装程序。 单击**下一步**按钮变为可用时。
+5. 接受许可协议后，安装程序准备就绪时会暂停一下。 按钮可用时单击“下一步”。
 
-6. 上**已准备好安装**页上，验证以下各项是包括在内，然后选择**安装**。
+6. 在“已准备好安装”页上，验证是否包含以下项，然后选择“安装”。
 
    + 数据库引擎服务
    + R Services（数据库内）
@@ -102,12 +102,12 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
     > 
     > 还可以试用 [Azure Data Studio](../../azure-data-studio/what-is.md) 的预览版，它支持针对 SQL Server 的管理任务和查询。
   
-2. 连接到安装机器学习服务的实例中，单击**新查询**打开查询窗口中，并运行以下命令：
+2. 连接到安装了机器学习服务的实例，单击“新建查询”以打开查询窗口，然后运行以下命令：
 
    ```SQL
    sp_configure
    ```
-    属性 `external scripts enabled` 的值目前应为 **0**。 这是因为默认情况下关闭功能。 在可以运行 R 或 Python 脚本之前，必须由管理员显式启用该功能。
+    `external scripts enabled` 的属性值目前应为 0。 这是因为该功能默认情况下处于关闭状态。 在运行 R 或 Python 脚本之前，必须由管理员显式启用该功能。
      
 3. 若要启用外部脚本编写功能，请运行以下语句：
   
@@ -122,7 +122,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 重新启动该服务还会自动重新启动相关[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服务。
 
-可以使用右键单击该服务重新启动**重新启动**命令，以在 SSMS 中，或使用的实例进行**Services**面板在控制面板中，或通过使用[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md).
+要想重启该服务，可以在 SSMS 中右键单击实例的“重启”命令、使用“控制面板”中的“服务”面板，或使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)。
 
 ## <a name="verify-installation"></a>验证安装
 
@@ -138,11 +138,11 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
     **run_value** 现在应已设置为 1。
 
-2. 打开**Services**面板或 SQL Server 配置管理器，并验证是否**SQL Server Launchpad 服务**正在运行。 应具有一项服务的每个数据库引擎实例具有 R 或 Python 安装。 有关服务的详细信息，请参阅[可扩展性框架](../concepts/extensibility-framework.md)。
+2. 打开“服务”面板或 SQL Server 配置管理器，验证“SQL Server Launchpad 服务”是否正在运行。 应具备针对安装了 R 或 Python 的每个数据库引擎实例的一项服务。 有关该服务的更多信息，请参阅[可扩展性框架](../concepts/extensibility-framework.md)。
 
 7. 如果 Launchpad 正在运行，应该能够运行简单的 R 来验证外部脚本运行时是否可以与 SQL Server 通信。 
 
-    打开一个新**查询**窗口中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然后运行如下所示的脚本：
+    在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开一个新的“查询”窗口，然后运行如下脚本：
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
@@ -168,7 +168,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 在连接 Internet 的设备上，通常通过 Windows Update 应用累积更新，但也可以使用以下步骤进行受控更新。 应用数据库引擎的更新时，安装程序会为在同一实例上安装的 R 库提取累积更新。 
 
-断开连接的服务器上执行额外的步骤是必需的。 有关详细信息，请参阅[在没有 internet 访问权限的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
+在断开连接的服务器上，需要执行额外步骤。 有关更多信息，请参阅[在没有 internet 访问权限的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
 1. 从已安装的基准实例开始：SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2。
 
@@ -227,7 +227,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
   
 - 若要更改可以通过 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 启动的 R 帐户数量，请参阅[修改机器学习的用户帐户池](../administration/modify-user-account-pool.md)。
 
-如果您使用的标准版，但没有资源调控器，则可以使用动态管理视图 (Dmv) 和扩展事件，以及 Windows 事件监视来帮助管理使用的服务器资源有关详细信息，请参阅[监视和管理 R Services](../r/managing-and-monitoring-r-solutions.md)。
+如果使用的是 Standard Edition 并且没有资源调控器，则可以使用动态管理视图 (DMV) 和扩展事件以及 Windows 事件监视来帮助管理 R 使用的服务器资源。有关详细信息，请参阅[监视和管理 R Services](../r/managing-and-monitoring-r-solutions.md)。
 
 ### <a name="install-additional-r-packages"></a>安装其他 R 包
 
