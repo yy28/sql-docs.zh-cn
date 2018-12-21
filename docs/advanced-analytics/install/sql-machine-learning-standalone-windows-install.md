@@ -11,7 +11,7 @@ manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 70fa652e876f1011bc2d74df56104671b33775b9
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187487"
@@ -100,7 +100,7 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 
 1. 启动安装向导。
 
-2. 在**安装**选项卡上，单击**新的 R Server （独立版） 安装**。
+2. 上**安装**选项卡上，单击**新的 R Server （独立版） 安装**。
     
      ![启动的 R Server 独立版的安装程序](media/2016-setup-installation-rsvr.png "启动的 R Server 独立版的安装程序")
 
@@ -130,9 +130,9 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 
 ### <a name="default-installation-folders"></a>默认安装文件夹
 
-对于 R 和 Python开发，在同一台计算机上有多个版本是很常见的。通过SQL Server安装程序安装后，基础发行版将安装在与用于安装程序的SQL Server版本相关联的文件夹中。
+对于 R 和 Python 开发，同一台计算机上装有多个版本是很常见的。 由 SQL Server 安装程序安装时，基础发行版安装在与用于安装的 SQL Server 版本相关联的文件夹中。
 
-下表列出了由 Microsoft 安装程序创建的 R 和 Python 发行版的路径。 出于完整性的考虑，此表包括生成的 SQL Server 安装程序，以及 Microsoft Machine Learning Server 独立安装程序的路径。
+下表列出了由 Microsoft 安装程序创建的 R 和 Python 发行版的路径。 出于完整性的考虑，该表包括 SQL Server 安装程序生成的路径以及 Microsoft Machine Learning Server 的独立安装程序。
 
 |版本| 安装方法 | 默认文件夹|
 |----|----|----|
@@ -148,9 +148,9 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 
 我们建议将最新的累积更新应用到数据库引擎和机器学习组件。 通过安装程序安装累积更新。 
 
-在连接Internet的设备上，通常通过Windows Update应用累积更新，但您也可以使用以下步骤进行受控更新。应用数据库引擎的更新时，安装程序会为您在独立服务器上安装的任何R或Python功能提取累积更新。
+在已连接 Internet 的设备上，累积更新通常通过 Windows 更新进行应用，但也可以使用以下步骤进行有控制的更新。 为数据库引擎应用更新时，安装程序会为你在独立服务器上安装的任何 R 或 Python 功能拉取累积更新。 
 
-断开连接的服务器上执行额外的步骤是必需的。 你必须获取针对数据库引擎的累积更新以及机器学习功能的 CAB 文件。 必须为所有文件传输到独立服务器并手动应用。
+在连接已断开的服务器上，需执行额外的步骤。 必须获取数据库引擎的累积更新以及机器学习功能的 CAB 文件。 所有文件必须传输到独立服务器，并手动应用。
 
 1. 使用基线实例启动。 只能应用于现有的安装累积更新：
 
