@@ -23,24 +23,24 @@ SQL Server 安装程序包含**共享的功能**选项用于安装非实例感�
 
 独立服务器安装的 SQL Server 安装程序在功能上等效于非 SQL 品牌版本的[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支持同一个用例和方案，其中包括：
 
-+ 远程执行，在同一个控制台中的本地和远程会话之间切换
-+ 包含 web 节点和计算节点的操作化
-+ Web 服务部署： 打包成 web 服务的 R 和 Python 脚本的功能
++ 远程执行，在同一控制台中切换本地和远程会话
++ Web 节点和计算节点的操作
++ Web 服务部署：将 R 和 Python 脚本打包到 Web 服务中的能力
 + R 和 Python 函数库的完整集合
 
-从 SQL Server 中分离的独立服务器，作为 R 和 Python 环境配置，保护安全和访问使用基础操作系统和独立服务器，非 SQL Server 中提供的工具。
+R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立服务器（而非 SQL Server）中提供的基础操作系统和工具对其进行配置、保护和访问。
 
-SQL Server 的附加补充，作为独立的服务器是开发高性能的机器学习可以使用支持的数据平台的完整范围的远程计算上下文的解决方案所需的情况下很有用。 你可以上移执行从本地服务器到远程的机器学习服务器在 Spark 群集上或另一个 SQL Server 实例上。
+独立服务器是 SQL Server 的附加补充，如果需要开发可以将远程计算上下文用于所有支持的数据平台的高性能机器学习解决方案，则独立服务器非常有用。 可以将执行从本地服务器转移到Spark群集或另一个 SQL Server 实例上的远程计算机服务器。
 
 <a name="bkmk_prereqs"> </a>
 
 ## <a name="pre-install-checklist"></a>预安装清单
 
-如果安装了以前的版本，如 SQL Server 2016 R Server （独立版） 或 Microsoft R Server，卸载现有的安装才能继续。
+如果安装了以前的版本，如 SQL Server 2016 R Server（独立版）或 Microsoft R Server，卸载现有的安装才能继续。
 
-作为一般规则，我们建议将独立服务器和数据库引擎识别实例的安装作为相互独占以避免资源争用，但如果您有足够的资源，没有针对安装这两个不禁止在同一台物理计算机。
+通常，我们建议你将独立服务器和数据库引擎实例识别安装视为互斥安装以避免资源争用，但如果你有足够的资源，则不禁止在同一台物理计算机上进行这两种安装。
 
-只能在计算机上有一台独立服务器： SQL Server 2017 机器学习服务器或 SQL Server 2016 R Server （独立版）。 您必须手动卸载然后再安装不同版本的一个版本。
+只能在计算机上安装一台独立服务器：SQL Server 2017 Machine Learning Server 或  SQL Server 2016 R Server（独立版）。 必须卸载一个版本才可添加新版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -71,7 +71,7 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 
     - Microsoft Machine Learning Server （独立版）
 
-    - R 和 Python 被选择默认情况下。 您可以取消选择其中任一种语言，但我们建议你安装在至少一个支持的语言。
+    - 默认情况下，R 和 Python 均已选定。 你可以取消选择任一语言，但我们建议你至少安装一种支持的语言。
 
      ![安装 Machine Learning Server 独立版](media/2017setup-features-page-mlsvr-rpy.png "启动 Machine Learning Server 独立安装")
     
@@ -82,7 +82,7 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
     > 
     > 此外，而 SQL Server 中运行的 R 或 Python 脚本由 SQL Server，以免与其他数据库引擎服务使用的内存发生冲突，则独立机器学习服务器将没有此类约束，并可能会干扰其他数据库操作. 最后，数据库管理员通常会阻止通过 RDP 会话中，它通常用于操作化，远程访问。
     > 
-    > 出于这些原因，我们通常建议您从 SQL Server 机器学习服务的单独计算机上安装机器学习服务器 （独立版）。
+    > 出于这些原因，我们通常建议你在独立于 SQL Server 机器学习服务的计算机上安装 Machine Learning Server（独立版）。
 
 5.  接受下载和安装基本语言发行版的许可条款。 当“接受”  按钮变为不可用时，可以单击“下一步” 。 
 

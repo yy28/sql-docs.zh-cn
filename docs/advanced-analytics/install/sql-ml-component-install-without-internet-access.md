@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48150539"
@@ -18,25 +18,25 @@ ms.locfileid: "48150539"
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-默认情况下，连接到 Microsoft 下载站点以获取所需的安装程序和更新的组件的机器学习 SQL Server 上。 如果防火墙限制阻止访问这些站点安装程序，可以使用与 internet 连接的设备下载文件，请将文件传输到脱机的服务器，然后然后运行安装程序。
+默认情况下，安装程序连接到 Microsoft 下载站点以获取所需的和更新的组件，以实现SQL Server 上的机器学习功能。 如果防火墙的限制会阻止安装程序访问这些站点，可以使用连接到 internet的设备下载文件，将文件传输到脱机的服务器，然后运行安装程序。
 
 数据库内分析中包含的数据库引擎实例和 R 和 Python 集成，具体取决于版本的 SQL Server 的其他组件。 
 
 + SQL Server 2017 包括 R 和 Python。 
 + SQL Server 2016 的仅限 R 的。 
 
-在独立服务器上，机器学习和 R/Python 特定于语言的功能会添加通过 CAB 文件中。 
+在独立服务器上，通过CAB文件添加机器学习和特定于R/Python语言的功能。 
 
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 脱机安装
 
-若要在独立服务器上安装 SQL Server 2017 机器学习服务 （R 和 Python），首先，下载 SQL Server 的初始版本和相应的 CAB 文件对 R 和 Python 支持。 即使您计划立即更新你的服务器以使用最新的累积更新，必须首先安装初始版本。
+要在独立服务器上安装SQL Server 2017机器学习服务（R和Python），首先要下载SQL Server的初始版本以及用于提供R和Python支持的相应CAB文件。 即使计划立即更新服务器以使用最新的累积更新，仍然需要先安装初始版本。
 
 > [!Note]
-> SQL Server 2017 没有 service pack。 它是要用作唯一的基准线，与通过累积更新仅处理初始版本的 SQL Server 的第一个版本。 
+> SQL Server 2017没有Service Pack。 这是SQL Server第一个将初始版本作为唯一基准的版本，且仅通过累积更新来进行维护。 
 
 ### <a name="1---download-2017-cabs"></a>1-下载 2017 cab 文件
 
-在具有 internet 连接的计算机，下载 SQL Server 2017 初始版本和安装介质提供 R 和 Python 功能的 CAB 文件。 
+在连接到Internet的计算机上，下载CAB文件，为初始版本和SQL Server 2017的安装媒体提供R和Python功能。 
 
 发行版本  |下载链接  |
 ---------|---------------|
@@ -55,9 +55,9 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
-是 SQL Server 2016 数据库内分析 R 限，只需两个 CAB 文件的产品包和 Microsoft 的开放源代码 R 分发分别。 首先安装这些版本之一： RTM，SP 1，SP 2。 基本安装到位后，可以为下一步应用累积更新。
+SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装以下任一版本：RTM，SP 1，SP 2。 基础安装到位后，便可应用累积更新。
 
-在具有 internet 连接的计算机，下载安装程序用于在 SQL Server 2016 上安装的数据库内分析的 CAB 文件。 
+在连接到Internet的计算机上，下载安装程序使用的CAB文件，用于在SQL Server 2016上安装数据库内分析。 
 
 ### <a name="1---download-2016-cabs"></a>1-下载 2016 cab 文件
 
@@ -69,9 +69,9 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ### <a name="2---get-sql-server-2016-installation-media"></a>2-获取 SQL Server 2016 安装媒体
 
-可以为您安装第一台目标计算机上安装 SQL Server 2016 RTM、 SP 1 或 SP 2。 任何这些版本可以接受的累积更新。
+首次安装时，可以在目标计算机上安装SQL Server 2016 RTM、SP 1或SP 2。 这些版本都可以接受累积更新。
 
-一种方法获取的.iso 文件包含安装介质是通过[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)。 在中，登录，然后使用**下载**链接，可以找到你想要安装的 SQL Server 2016 版本。 您可以将其复制到目标计算机进行脱机安装的.iso 文件的格式是下载。
+获取包含安装媒体的.iso文件的一种方式是通过[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)来实现。 登录，然后使用**下载**链接查找要安装的SQL Server 2016版本。 下载内容是一个.iso文件，可以将其复制到目标计算机进行脱机安装。
 
 ## <a name="transfer-files"></a>传输文件
 
