@@ -29,14 +29,14 @@ ms.locfileid: "48150539"
 
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 脱机安装
 
-要在独立服务器上安装SQL Server 2017机器学习服务（R和Python），首先要下载SQL Server的初始版本以及用于R和Python支持的相应CAB文件。即使您计划立即更新服务器以使用最新的累积更新，也必须首先安装初始版本。
+要在独立服务器上安装SQL Server 2017机器学习服务（R和Python），首先要下载SQL Server的初始版本以及用于提供R和Python支持的相应CAB文件。即使计划立即更新服务器以使用最新的累积更新，仍然需要先安装初始版本。
 
 > [!Note]
-> SQL Server 2017没有Service Pack。这是SQL Server的第一个版本，它使用初始版本作为唯一的基线，仅通过累积更新进行服务。
+> SQL Server 2017没有Service Pack。这是SQL Server第一个将初始版本作为唯一基准的版本，且仅通过累积更新来进行维护。
 
 ### <a name="1---download-2017-cabs"></a>1-下载 2017 cab 文件
 
-在具有Internet连接的计算机上，下载CAB文件，为初始发行版提供R和Python功能，并为SQL Server 2017提供安装介质。
+在连接到Internet的计算机上，下载CAB文件，为初始版本和SQL Server 2017的安装媒体提供R和Python功能。
 
 发行版本  |下载链接  |
 ---------|---------------|
@@ -55,9 +55,9 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
-SQL Server 2016数据库内分析仅限R，仅包含两个用于产品包的CAB文件和Microsoft的开源R分发。首先安装以下任一版本：RTM，SP 1，SP 2.基础安装到位后，可以将累积更新作为下一步应用。
+SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。首先安装以下任一版本：RTM，SP 1，SP 2。基础安装到位后，便可应用累积更新。
 
-在具有Internet连接的计算机上，下载安装程序使用的CAB文件，以在SQL Server 2016上安装数据库内分析。
+在连接到Internet的计算机上，下载安装程序使用的CAB文件，用于在SQL Server 2016上安装数据库内分析。
 
 ### <a name="1---download-2016-cabs"></a>1-下载 2016 cab 文件
 
@@ -69,9 +69,9 @@ SQL Server 2016数据库内分析仅限R，仅包含两个用于产品包的CAB�
 
 ### <a name="2---get-sql-server-2016-installation-media"></a>2-获取 SQL Server 2016 安装媒体
 
-您可以在目标计算机上安装SQL Server 2016 RTM，SP 1或SP 2作为首次安装。任何这些版本都可以接受累积更新。
+首次安装时，可以在目标计算机上安装SQL Server 2016 RTM、SP 1或SP 2。这些版本都可以接受累积更新。
 
-获取包含安装媒体的.iso文件的一种方法是通过[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)。登录，然后使用**下载**链接查找要安装的SQL Server 2016版本。下载采用.iso文件的形式，您可以将其复制到目标计算机以进行脱机安装。
+获取包含安装媒体的.iso文件的一种方式是通过[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)来实现。登录，然后使用 下载 链接查找要安装的SQL Server 2016版本。下载内容是一个.iso文件，可以将其复制到目标计算机进行脱机安装。
 
 ## <a name="transfer-files"></a>传输文件
 
