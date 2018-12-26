@@ -18,11 +18,11 @@ ms.locfileid: "51703148"
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>设置 SQL Server 上的 R 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R 集成是提供的 SQL Server 2016 或更高版本包括中的 R 语言选项时[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 机器学习服务 （数据库内）](../install/sql-machine-learning-services-windows-install.md)安装。 
+如果在[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 机器学习服务(数据库内)](../install/sql-machine-learning-services-windows-install.md)安装中含入了R语言选项，可以在SQL Server 2016或更高版本中使用R集成。
 
-若要创建和部署 SQL Server 上的 R 解决方案，安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)若要获取[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)以及在开发工作站上的其他 R 库。 RevoScaleR 库，也是远程的 SQL Server 实例上，可协调计算这两个系统之间的请求。 
+要开发和部署适用于SQL Server的R解决方案，请在开发工作站上安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)以获取[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他R库。RevoScaleR库用于协调两个系统之间的计算请求，同时也应用于远程SQL Server实例。
 
-在本文中，了解如何配置 R 客户端开发工作站，以便可以连接到远程 SQL Server 启用了机器学习和 R 集成。 完成这篇文章中的步骤后，将具有与 SQL Server 上的同一 R 库。 此外将了解如何将计算从本地 R 会话的远程 R 会话到推送 SQL Server 上。
+本文介绍如何配置R客户端开发工作站，以便能够与为实现机器学习和R集成而启用的远程SQL Server进行交互。完成本文中的步骤后，你将拥有与SQL Server上相同的R库。还会了解如何将计算从本地R会话推送到SQL Server上的远程R会话。
 
 ![客户端-服务器组件](media/sqlmls-r-client-revo.png "本地和远程 R 会话和库")
 
