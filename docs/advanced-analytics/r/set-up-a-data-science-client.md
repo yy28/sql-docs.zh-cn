@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 087d7249fbcbb206566e822c634f10e8bc4ba838
 ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51703148"
@@ -50,13 +50,13 @@ Microsoft 的 R 包有多个产品和服务。 在本地工作站上，我们建
 
 2. 在安装向导中，接受或更改默认安装路径、 接受或更改的组件列表，并接受 Microsoft R Client 许可条款。
 
-完成安装后，一个欢迎屏幕，向您介绍的产品和文档。
+N/A
 
 在 R 客户端，R 处理上限为两个线程和内存中的数据。 对于使用多个内核和大型数据集的可缩放处理，你可以上移执行 (称为*计算上下文*) 到数据集和计算能力的远程 SQL Server 实例。 这是客户端集成与生产 SQL Server 实例的推荐的方法。 
 
 ## <a name="2---locate-executables"></a>2-查找可执行文件
 
-找到并列出要确认 R.exe、 RGUI 和其他包安装的安装文件夹的内容。 
+N/A 
 
 1. 在文件资源管理器，打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin 文件夹，以确认 R.exe 的位置。
 
