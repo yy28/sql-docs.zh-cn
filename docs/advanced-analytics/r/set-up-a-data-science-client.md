@@ -36,11 +36,11 @@ R 集成是提供的 SQL Server 2016 或更高版本包括中的 R 语言选项�
 
 ## <a name="commonly-used-tools"></a>常用工具
 
-无论您是初学SQL的R开发人员，还是初学R和数据库内分析的SQL开发人员，您都需要R开发工具和T-SQL查询编辑器（如[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)）来全部练习数据库内分析的功能。
+无论是初学SQL的R开发人员，还是初学R和数据库内分析的SQL开发人员，都需要通过R开发工具和T-SQL查询编辑器（如[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)来使用数据库内分析的全部功能。
 
-对于简单的R开发方案，您可以使用捆绑在MRO和SQL Server中的基本R分发中的RGUI可执行文件。本文介绍如何将RGUI用于本地和远程R会话。为了提高工作效率，您应该使用功能齐全的IDE，例如[RStudio 或 Visual Studio](#install-ide)。
+对于简单的R开发方案，可以使用捆绑在MRO和SQL Server基本R分发中的RGUI可执行文件。本文介绍如何将RGUI同时用于本地和远程R会话。为了提高工作效率，应使用功能齐全的IDE，例如[RStudio 或 Visual Studio](#install-ide)。
 
-SSMS是单独下载的，对于在SQL Server上创建和运行存储过程很有用，包括那些包含R代码的存储过程。您在开发环境中编写的几乎任何R代码都可以嵌入到存储过程中。您可以逐步了解其他教程以了解SSMS和[嵌入式R](../tutorials/sqldev-in-database-r-for-sql-developers.md)。
+SSMS是独立的下载内容，对于在SQL Server上创建和运行存储过程很有用，包括那些包含R代码的存储过程。在开发环境中编写的几乎任何R代码都可以嵌入到存储过程中。可逐步学习更多教程来了解SSMS和[嵌入式R](../tutorials/sqldev-in-database-r-for-sql-developers.md)。
 
 ## <a name="1---install-r-packages"></a>1-安装 R 包
 
