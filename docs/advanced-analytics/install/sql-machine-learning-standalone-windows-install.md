@@ -1,4 +1,4 @@
----
+﻿---
 title: 安装 R Server 或 Machine Learning Server （独立版） 使用 SQL Server 安装程序 |Microsoft Docs
 description: 设置使用 RevoScaleR 和 revoscalepy、 MicrosoftML 和其他包的 R 和 Python 开发不识别实例的独立机器学习服务器。
 ms.prod: sql
