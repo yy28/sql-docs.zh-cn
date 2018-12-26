@@ -36,11 +36,11 @@ SQL Server 的附加补充，作为独立的服务器是开发高性能的机器
 
 ## <a name="pre-install-checklist"></a>预安装清单
 
-如果安装了以前的版本 如SQL Server 2016 R Server（独立）或Microsoft R Server，请在继续之前卸载现有安装。
+如果安装了以前的版本，如 SQL Server 2016 R Server（独立版）或 Microsoft R Server，卸载现有的安装才能继续。
 
-作为一般规则，我们建议将独立服务器和数据库引擎识别实例的安装作为相互独占以避免资源争用，但是如果您有足够的资源，可以在同一台物理计算机上同时安装它们。
+通常，我们建议你将独立服务器和数据库引擎实例识别安装视为互斥安装以避免资源争用，但如果你有足够的资源，则不禁止在同一台物理计算机上进行这两种安装。
 
-您只能在计算机上安装一个独立服务器：SQL Server 2017机器学习服务器或SQL Server 2016 R服务器（独立）。在安装其他版本之前，必须手动卸载一个版本。
+只能在计算机上安装一台独立服务器：SQL Server 2017 Machine Learning Server 或 SQL Server 2016 R Server（独立版）。必须卸载一个版本才可添加新版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
