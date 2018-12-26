@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
 ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/23/2018
 ms.locfileid: "39216828"
@@ -20,7 +20,7 @@ ms.locfileid: "39216828"
 
 此文章介绍了如何使用 Powershell 来添加免费预先训练的机器学习模型*情绪分析*并*图像特征化*到具有 R 或 Python 的 SQL Server 数据库引擎实例集成。 预先训练的模型构建由 Microsoft 和随时可用，添加到数据库引擎实例作为安装后任务。 有关这些模型的详细信息，请参阅[资源](#bkmk_resources)本文的部分。
 
-安装后，预先训练的模型被视为 power MicrosoftML (R) 和 microsoftml (Python) 库中的特定函数的实现细节。 您不应 （和无法） 查看、 自定义，或重新训练模型，也可以在将其视为独立的资源中的自定义代码或配对的其他函数。 
+安装后，预先训练的模型将被视为 MicrosoftML (R) 和 microsoftml (Python) 库中支持特定功能的实现细节。 不应（也不能） 查看、自定义或重新训练模型，也不能将其视为自定义代码中的独立资源或视为配对的其他函数。 
 
 若要使用预先训练的模型，请调用以下表中列出的函数。
 
@@ -29,9 +29,9 @@ ms.locfileid: "39216828"
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 生成对文本输入正数负数情绪分数。 [了解详细信息](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)。|
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 从图像文件输入中提取文本信息。 [了解详细信息](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)。 |
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
-机器学习算法是计算密集型操作。 我们建议使用 16 GB RAM 对于低到中等工作负荷，包括使用的所有示例数据的教程演练完成。
+机器学习算法是计算密集型的。 对于低到中等工作符合，建议使用 16 GB RAM，包括使用所有示例数据完成教程演练。
 
 必须具有计算机和 SQL Server 上的管理员权限才能添加预先训练的模型。
 
@@ -39,7 +39,7 @@ ms.locfileid: "39216828"
 
 [MicrosoftML R 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)或[microsoftml Python 包](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含预先训练的模型。
 
-+ [SQL Server 2017 机器学习服务](sql-machine-learning-services-windows-install.md)包括机器学习库，这两个语言版本，因此您采取任何进一步的操作与满足此先决条件。 由于存在这些库时，可以使用本文中所述的 PowerShell 脚本将预先训练的模型添加到这些库。
++ [SQL Server 2017 机器学习服务](sql-machine-learning-services-windows-install.md)包括机器学习库的两种语言版本，因此无需采取进一步操作即可满足此先决条件。 由于存在库，因此可以使用本文介绍的 PowerShell 脚本将预先训练的模型添加到这些库中。
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)，即 R，不包括[MicrosoftML 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)现成的。 若要添加 MicrosoftML，必须执行[组件升级](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 组件升级的一个优点是，您可以同时添加预先训练的模型，从而运行不必要的 PowerShell 脚本。 但是，如果你已升级，但缺少添加第一次的预先训练的模型，您可以运行 PowerShell 脚本，如这篇文章中所述。 它适用于这两个版本的 SQL Server。 执行之前，请确认 MicrosoftML 库位于 C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library。
 

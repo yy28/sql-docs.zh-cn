@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
 ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48878090"
@@ -24,23 +24,23 @@ ms.locfileid: "48878090"
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 
-+ 如果你想要使用 R、 Python 或 Java 语言支持安装机器学习服务，则需要 SQL Server 2017 （或更高版本） 安装程序。 如果改为您具有 SQL Server 2016 安装介质，则可以安装[SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)获取 R 语言支持。
++ 如果要安装具有 R、Python 或 Java 语言支持的机器学习服务，则需要SQL Server 2017（或更高版本）安装程序。 而如果你拥有 SQL Server 2016 安装介质，则可以安装 [SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)以获得 R 语言支持。
 
-+ 数据库引擎实例是必需的。 您不能安装 R 或 Python 功能，尽管将它们添加到现有实例的以增量方式。
++ 数据库引擎实例为必需项。 不能只安装 R 或 Python 功能，但可以将它们逐步添加到现有实例中。
 
-- 安装机器学习服务是*不支持*中 SQL Server 2017 故障转移群集上。 但是，它*支持*与 SQL Server 2019。 
+- SQL Server 2017 中的故障转移群集不支持安装机器学习服务。 但是，SQL Server 2019 支持此操作。 
  
 + 不要在域控制器上安装机器学习服务。 安装程序的机器学习服务部分将会失败。
 
-+ 不安装**共享功能** > **Machine Learning Server （独立版）** 同一台计算机上运行的数据库实例。 独立服务器将争夺相同的资源，从而破坏这两个安装的性能。
++ 请勿在运行数据库内实例的同一台计算机上安装“共享功能” > “Machine Learning Server”（独立版）。 独立服务器将争夺相同的资源，从而损害两种安装的性能。
 
-+ 支持与其他版本的 R 和 Python 的并行安装，但不是建议这样做。 它支持，因为 SQL Server 实例使用其自己的开放源代码 R 和 Anaconda 分发版的副本。 但建议不要因为运行 SQL Server 外部的 SQL Server 计算机使用 R 和 Python 的代码可能会导致各种问题：
++ 支持与其他版本的 R 和 Python 并行安装，但不建议这样做。 之所以支持并行安装，是因为 SQL Server 实例使用自己的开源 R 和 Anaconda 发行版副本。 但是不建议这样做，因为在 SQL Server外部的 SQL Server 计算机上运行使用 R 和 Python 的代码会导致各种问题：
     
-  + 使用不同的库和其他可执行文件，并获取不同的结果，比您在 SQL Server 中运行时。
-  + 不能由 SQL Server，从而导致资源争用管理外部库中运行的 R 和 Python 脚本。
+  + 与在 SQL Server 中运行相比，你使用不同的库和不同的可执行文件，并获得不同的结果。
+  + 外部库中运行的 R 和 Python 脚本不能由 SQL Server 管理，这会导致资源争用。
   
 > [!IMPORTANT]
-> 安装程序完成后，请确保要完成本文中所述的配置后步骤。 这些步骤包括启用 SQL Server 以使用外部脚本，并添加所需的 SQL Server，你的名义运行 R 和 Python 的作业帐户。 配置更改通常需要重新启动实例或重新启动 Launchpad 服务。
+> 安装完成后，请确保完成本文中所述的后期配置步骤。 这些步骤包括让 SQL Server 能够使用外部脚本，以及添加 SQL Server 代表你运行 R 和 Python 作业所需的帐户。 配置更改通常需要重启实例，或者重启 Launchpad 服务
 
 ## <a name="get-the-installation-media"></a>获取安装介质
 

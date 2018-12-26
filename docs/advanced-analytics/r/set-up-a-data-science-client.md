@@ -1,4 +1,4 @@
----
+﻿---
 title: 设置 SQL Server 上的 R 开发数据科学客户端 |Microsoft Docs
 description: 远程连接到 SQL Server 的开发工作站上安装本地 R 库和工具。
 ms.prod: sql
@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 087d7249fbcbb206566e822c634f10e8bc4ba838
 ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51703148"
@@ -18,29 +18,29 @@ ms.locfileid: "51703148"
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>设置 SQL Server 上的 R 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R 集成是提供的 SQL Server 2016 或更高版本包括中的 R 语言选项时[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 机器学习服务 （数据库内）](../install/sql-machine-learning-services-windows-install.md)安装。 
+如果在[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 机器学习服务(数据库内)](../install/sql-machine-learning-services-windows-install.md)安装中含入了R语言选项，可以在SQL Server 2016或更高版本中使用R集成。
 
-若要创建和部署 SQL Server 上的 R 解决方案，安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)若要获取[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)以及在开发工作站上的其他 R 库。 RevoScaleR 库，也是远程的 SQL Server 实例上，可协调计算这两个系统之间的请求。 
+要开发和部署适用于SQL Server的R解决方案，请在开发工作站上安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)以获取[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他R库。RevoScaleR库用于协调两个系统之间的计算请求，同时也应用于远程SQL Server实例。
 
-在本文中，了解如何配置 R 客户端开发工作站，以便可以连接到远程 SQL Server 启用了机器学习和 R 集成。 完成这篇文章中的步骤后，将具有与 SQL Server 上的同一 R 库。 此外将了解如何将计算从本地 R 会话的远程 R 会话到推送 SQL Server 上。
+本文介绍如何配置R客户端开发工作站，以便能够与为实现机器学习和R集成而启用的远程SQL Server进行交互。完成本文中的步骤后，你将拥有与SQL Server上相同的R库。还会了解如何将计算从本地R会话推送到SQL Server上的远程R会话。
 
 ![客户端-服务器组件](media/sqlmls-r-client-revo.png "本地和远程 R 会话和库")
 
-可以使用内置**RGUI**工具在本文中所述或[链接库](#install-ide)到 RStudio 或任何你通常使用的另一个 IDE。
+为验证此安装，可以使用本文中介绍的内置**RGUI**工具，或将[库链接到](#install-ide) RStudio或常用的任何其他IDE。
 
 > [!Tip]
 > 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
-> 使用客户端库安装的替代方法[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)为丰富客户端，有些客户更喜欢更深层次的方案中工作。 从 SQL Server 完全分离的独立服务器，但因其具有相同的 R 库，你可以使用它作为客户端的 SQL Server 数据库内分析。 您还可以使用它为非 SQL 相关的工作，包括导入和从其他数据平台的数据建模功能。 如果安装在独立服务器，可以找到 R 可执行文件位于以下位置： `C:\Program Files\Microsoft SQL Server\140\R_SERVER`。 若要验证你的安装，[打开 R 控制台应用](#R-tools)运行在该位置使用 R.exe 命令。
+>客户端库安装的替代方法是使用[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)作为富客户端，一些客户更喜欢使用它来完成更深入的方案工作。独立服务器与SQL Server完全分离，但由于它具有相同的R库，因此可以将其用作SQL Server数据库内分析的客户端。还可以将其用于与SQL无关的工作，包括从其他数据平台导入数据和对数据建模。如果安装独立服务器，则可以在此位置找到R可执行文件：`C:\Program Files\Microsoft SQL Server\140\R_SERVER`。要验证安装，请[打开 R 控制台应用](#R-tools)以使用该位置的R.exe运行命令。 
 
 ## <a name="commonly-used-tools"></a>常用工具
 
-无论您是熟悉 SQL，R 开发人员或 SQL 开发人员首次使用 R 和数据库内分析，您将需要 R 开发工具和 T-SQL 查询编辑器等[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)以实现所有数据库内分析功能。
+无论是初学SQL的R开发人员，还是初学R和数据库内分析的SQL开发人员，都需要通过R开发工具和T-SQL查询编辑器（如[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)来使用数据库内分析的全部功能。
 
-对于简单的 R 开发方案，使用可执行文件，RGUI 捆绑在一起在 MRO 和 SQL Server 基础 R 发行版中。 此文章介绍了如何对本地和远程 R 会话使用 RGUI。 为提高工作效率，您应使用全功能型 IDE 如[RStudio 或 Visual Studio](#install-ide)。
+对于简单的R开发方案，可以使用捆绑在MRO和SQL Server基本R分发中的RGUI可执行文件。本文介绍如何将RGUI同时用于本地和远程R会话。为了提高工作效率，应使用功能齐全的IDE，例如[RStudio 或 Visual Studio](#install-ide)。
 
-SSMS 是单独的下载，适用于创建和上 SQL Server，包括那些包含 R 代码运行存储的过程。 在开发环境中编写的几乎任何 R 代码可以嵌入在存储过程。 您可以单步执行其他教程，了解如何[SSMS 和嵌入的 R](../tutorials/sqldev-in-database-r-for-sql-developers.md)。
+SSMS是独立的下载内容，对于在SQL Server上创建和运行存储过程很有用，包括那些包含R代码的存储过程。在开发环境中编写的几乎任何R代码都可以嵌入到存储过程中。可逐步学习更多教程来了解SSMS和[嵌入式R](../tutorials/sqldev-in-database-r-for-sql-developers.md)。
 
 ## <a name="1---install-r-packages"></a>1-安装 R 包
 
@@ -50,13 +50,13 @@ Microsoft 的 R 包有多个产品和服务。 在本地工作站上，我们建
 
 2. 在安装向导中，接受或更改默认安装路径、 接受或更改的组件列表，并接受 Microsoft R Client 许可条款。
 
-完成安装后，一个欢迎屏幕，向您介绍的产品和文档。
+N/A
 
-在 R 客户端，R 处理上限为两个线程和内存中的数据。 对于使用多个内核和大型数据集的可缩放处理，你可以上移执行 (称为*计算上下文*) 到数据集和计算能力的远程 SQL Server 实例。 这是客户端集成与生产 SQL Server 实例的推荐的方法。 
+在R 客户端中，R处理的上限为两个线程和内存数据。对于使用多核和大型数据集的可伸缩处理，您可以将执行（称为*计算上下文*）转移到远程SQL Server实例的数据集和计算能力。这是客户端与生产SQL服务器实例集成的推荐方法。
 
 ## <a name="2---locate-executables"></a>2-查找可执行文件
 
-找到并列出要确认 R.exe、 RGUI 和其他包安装的安装文件夹的内容。 
+N/A 
 
 1. 在文件资源管理器，打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin 文件夹，以确认 R.exe 的位置。
 
@@ -69,7 +69,7 @@ Microsoft 的 R 包有多个产品和服务。 在本地工作站上，我们建
  
 ## <a name="3---start-rgui"></a>3-启动 RGUI
 
-使用 SQL Server 安装 R，可以获取相同的 R 工具的标准到 R，例如 RGui 和 Rterm，等任何基本安装。 这些工具是轻量，可用于检查包和库的信息、 运行临时命令或脚本，或逐步执行教程。 这些工具可用于获取 R 版本信息，并确认连接。
+当您使用SQL Server安装R时，您将获得与任何基本R安装(如RGui、Rterm等)标准相同的R工具。这些工具是轻量级的，适用于检查包和库信息、运行特定命令或脚本或逐步完成教程。您可以使用这些工具获取R版本信息并确认连接。
 
 1. 打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64，然后双击**RGui**若要使用 R 命令提示符启动 R 会话。
 
