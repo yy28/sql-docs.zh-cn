@@ -26,13 +26,13 @@ R 集成是提供的 SQL Server 2016 或更高版本包括中的 R 语言选项�
 
 ![客户端-服务器组件](media/sqlmls-r-client-revo.png "本地和远程 R 会话和库")
 
-您可以使用本文中所述的内置**RGUI**工具，或将[库](#install-ide)链接到RStudio或您通常使用的任何其他IDE。
+为验证此安装，可以使用本文中介绍的内置**RGUI**工具，或将[库链接到](#install-ide) RStudio或常用的任何其他IDE。
 
 > [!Tip]
 > 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
->客户端库安装的替代方法是使用[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)作为富客户端，一些客户更喜欢使用它来进行更深入的方案工作。独立服务器与SQL Server完全分离，但由于它具有相同的R库，因此您可以将其用作SQL Server数据库内分析的客户端。您还可以将其用于与SQL无关的工作，包括从其他数据平台导入和建模数据的功能。如果安装独立服务器，则可以在此位置找到R可执行文件：`C:\Program Files\Microsoft SQL Server\140\R_SERVER`。要验证安装，请[打开 R 控制台应用](#R-tools)以使用该位置的R.exe运行命令。 
+>客户端库安装的替代方法是使用[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)作为富客户端，一些客户更喜欢使用它来完成更深入的方案工作。独立服务器与SQL Server完全分离，但由于它具有相同的R库，因此可以将其用作SQL Server数据库内分析的客户端。还可以将其用于与SQL无关的工作，包括从其他数据平台导入数据和对数据建模。如果安装独立服务器，则可以在此位置找到R可执行文件：`C:\Program Files\Microsoft SQL Server\140\R_SERVER`。要验证安装，请[打开 R 控制台应用](#R-tools)以使用该位置的R.exe运行命令。 
 
 ## <a name="commonly-used-tools"></a>常用工具
 
