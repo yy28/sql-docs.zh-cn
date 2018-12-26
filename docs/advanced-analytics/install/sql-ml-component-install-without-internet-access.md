@@ -1,4 +1,4 @@
----
+﻿---
 title: 安装 SQL Server 机器学习而无需 internet 访问的 R 和 Python 组件 |Microsoft Docs
 description: 脱机或已断开连接机器学习 R 和 Python 安装程序独立 SQL Server 实例上。
 ms.prod: sql
