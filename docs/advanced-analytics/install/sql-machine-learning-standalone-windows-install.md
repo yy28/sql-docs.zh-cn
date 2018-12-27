@@ -67,7 +67,7 @@ SQL Server 2016: Microsoft 已发现的特定版本的 SQL server 安装的必�
 
 3. 规则检查完成后，接受 SQL Server 许可条款，然后选择新的安装。
 
-4. 上**功能选择**页上，以下选项，应已选择：
+4. 在“功能选择”页面上，应该已经选择了以下选项：
 
     - Microsoft Machine Learning Server （独立版）
 
