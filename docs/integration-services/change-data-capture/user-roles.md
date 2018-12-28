@@ -102,7 +102,7 @@ ms.locfileid: "52398000"
   
  应向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC 服务用户授予以下权限：  
   
--   针对服务器处理的所有 CDC 数据库的固定数据库角色 **db_dlladmin****db_datareader****db_datawriter** 的成员。  
+-   针对服务器处理的所有 CDC 数据库的固定数据库角色 **db_dlladmin** **db_datareader** **db_datawriter** 的成员。  
   
 -   MSXDBCDC 数据库的固定数据库角色 **db_datareader** 和 **db_datawriter** 的成员。  
   

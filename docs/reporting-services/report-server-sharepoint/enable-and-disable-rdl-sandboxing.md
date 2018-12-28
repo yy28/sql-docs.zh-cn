@@ -104,7 +104,7 @@ ms.locfileid: "52412744"
   
 -   某一类型的静态成员。  
   
--    [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 方法。  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 方法。  
   
 -   报表定义中的 \<Classes> 元素。  
   

@@ -337,7 +337,7 @@ RETURNS return_data_type
   
  在内联 TVF 中，TABLE 返回值是通过单个 SELECT 语句定义的。 内联函数没有关联的返回变量。  
   
- <a name="mstvf"></a>在 MSTVF 中，@return_variable 是 TABLE 变量，用于存储和汇总应作为函数值返回的行。只能将  @*return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
+ <a name="mstvf"></a>在 MSTVF 中，@return_variable 是 TABLE 变量，用于存储和汇总应作为函数值返回的行。只能将  @ *return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
   
  *select_stmt*  
  定义内联表值函数 (TVF) 返回值的单个 SELECT 语句。  

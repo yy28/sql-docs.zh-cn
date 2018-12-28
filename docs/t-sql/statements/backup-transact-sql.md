@@ -376,7 +376,7 @@ NAME **=** { backup_set_name | **@** backup\_set\_var }
 > 这些选项仅仅阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆盖文件。 用其他方法仍可擦除磁带，而通过操作系统也可以删除磁盘文件。 有关过期验证的详细信息，请参阅本主题中的 SKIP 和 FORMAT。  
   
 EXPIREDATE **=** { **'** date **'** | **@** date\_var }  
-指定备份集到期和允许被覆盖的日期。 如果作为变量 (@date\_var*) 提供，则该日期必须采用已配置系统日期/时间的格式，并指定为下列类型之一：  
+指定备份集到期和允许被覆盖的日期。 如果作为变量 (@date\_var) 提供，则该日期必须采用已配置系统日期/时间的格式，并指定为下列类型之一：  
   
 - 字符串常量 (@date\_var = date)  
 - 字符串数据类型（ntext 或 text 数据类型除外）的变量  
