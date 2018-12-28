@@ -27,8 +27,8 @@ ms.locfileid: "52541175"
 
 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。
 
-中的自动优化[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]潜在性能问题检测到，并允许应用更正措施时发出通知，或让[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自动解决性能问题。
-中的自动优化[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]使您能够识别并修复性能问题所致**查询执行计划选择回归**。 中的自动优化[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅[执行计划](../../relational-databases/performance/execution-plans.md)。
+[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]中的自动优化潜在性能问题检测到，并允许应用更正措施时发出通知，或让[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自动解决性能问题。
+[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]中的自动优化使您能够识别并修复性能问题所致**查询执行计划选择回归**。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]中的自动优化还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅[执行计划](../../relational-databases/performance/execution-plans.md)。
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]监视器上，对数据库和自动执行的查询可以提高工作负荷的性能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有内置智能机制，可以自动优化和提高查询性能的动态适应工作负荷的数据库。 有可用的两个自动优化功能：
 
