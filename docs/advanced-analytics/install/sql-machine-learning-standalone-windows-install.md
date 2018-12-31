@@ -19,9 +19,9 @@ ms.locfileid: "48187487"
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>安装 Machine Learning Server （独立版） 或使用 SQL Server 安装的 R Server （独立版）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server安装程序包含一个**共享的功能**选项，用于安装在SQL Server外部运行不支持实例的独立机器学习服务器。在SQL Server 2016中，此功能称为**R Server （独立版）**。在SQL Server 2017中，它被称为**Machine Learning Server （独立版）** ，包括R和Python。
+SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。在 SQL Server 2016 中，此功能称为“R Server（独立版）”。在 SQL Server 2017 中，它称为“Machine Learning Server（独立版）” ，包括 R 和 Python
 
-
+SQL Server 安装程序安装的独立服务器在功能上等同于非 SQL 品牌版本的 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支持相同的用例和方案，包括：
 SQL Server安装程序安装的独立服务器在功能上等同于[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)的非SQL品牌版本，支持相同的用例和方案，包括：
 
 + 远程执行，在同一个控制台中的本地和远程会话之间切换
