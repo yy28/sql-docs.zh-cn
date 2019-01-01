@@ -28,7 +28,7 @@ ms.locfileid: "52541175"
 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。
 
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 中的自动优化功能可在检测到潜在性能问题时发出通知，并允许你实施修正措施或使[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自动修复性能问题。
-[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 中的自动优化功能使你能够识别和修复“查询执行计划选择回归”所导致的性能问题。[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]中的自动优化功能还可以创建必要索引并删除未使用的索引。有关查询执行计划的详细信息，请参阅[执行计划](../../relational-databases/performance/execution-plans.md)。
+中的自动优化[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]使您能够识别并修复性能问题所致**查询执行计划选择回归**。 中的自动优化[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅[执行计划](../../relational-databases/performance/execution-plans.md)。
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]监视器上，对数据库和自动执行的查询可以提高工作负荷的性能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有内置智能机制，可以自动优化和提高查询性能的动态适应工作负荷的数据库。 有可用的两个自动优化功能：
 
@@ -156,7 +156,7 @@ FROM sys.dm_db_tuning_recommendations
 
 ### <a name="why-do-you-need-index-management"></a>为什么需要索引管理？
 
-索引能加速某些从表中读取数据的查询；但是，索引会减慢更新数据的查询。需要仔细分析何时创建索引，以及哪些列需要包含在索引中。某些索引可能在一段时间后便不再需要。因此，需要定期识别并删除没有任何益处的索引。如果忽略未使用的索引，用于更新数据的查询的性能将会降低，并且对用于读取数据的查询没有任何益处。未使用的索引还会影响系统的整体性能，因为其他更新需要不必要的日志记录。
+索引能加速某些从表中读取数据的查询；但是，索引会减慢更新数据的查询。 需要仔细分析何时创建索引，以及哪些列需要包含在索引中。 某些索引可能在一段时间后便不再需要。 因此，需要定期识别并删除没有任何益处的索引。 如果忽略未使用的索引，用于更新数据的查询的性能将会降低，并且对用于读取数据的查询没有任何益处。 未使用的索引还会影响系统的整体性能，因为其他更新需要不必要的日志记录。
 
 查找索引可提高性能的查询，从你的表中读取数据并对更新的最小影响的最佳集合可能需要持续进行复杂分析。
 
