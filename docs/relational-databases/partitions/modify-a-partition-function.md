@@ -20,7 +20,7 @@ ms.locfileid: "52391041"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在已分区的表或已分区的索引的分区函数中增加或减少指定的分区数（加 1 或减 1），可以更改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的表或索引的分区方式。增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。减少分区的方法是将两个分区的边界“合并”成一个。减少分区操作将重新填充一个分区而不对另一个分区进行分配。
+  通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在已分区的表或已分区的索引的分区函数中增加或减少指定的分区数（加 1 或减 1），可以更改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的表或索引的分区方式。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
   
 > [!CAUTION]  
 >  多个表或索引可以使用同一分区函数。 在修改分区函数时，将影响单个事务中的所有表或索引。 在修改分区函数之前，先检查其依赖关系。  
