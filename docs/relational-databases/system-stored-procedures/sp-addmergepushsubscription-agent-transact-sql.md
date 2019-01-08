@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e156b6912633e45ada9f1c26be40b85fd7db23d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e05be91125586b17dcd9fde84dbf6fa93ae9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758055"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823323"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -186,7 +185,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  停止安排合并代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
  [  **@enabled_for_syncmgr =** ] **'enabled_for_syncmgr**   
- 指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -197,11 +196,11 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepushsubscript_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addmergepushsubscription_agent**。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   

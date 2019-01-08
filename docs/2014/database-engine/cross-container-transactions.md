@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538586"
 ---
 # <a name="cross-container-transactions"></a>交叉容器事务
   交叉容器事务是隐式或显式用户事务，这些事务包含对本机编译存储过程的调用或对内存优化表的操作。  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  一组读取操作的事务一致性是指行版本读取是否都能保证包括来自完全相同的一组事务的更新。  
   
  系统提供给事务 T 的有关数据读取的稳定性保证。  
- 稳定性是指事务的读取操作是否可重复。 也就是，重复读取操作是否始终返回相同的行和行版本？  
+ 稳定性是指事务的读取是否可重复。 也就是，重复读取操作是否始终返回相同的行和行版本？  
   
  特定保证是指事务的逻辑结束时间。 一般情况下，逻辑结束时间是将事务提交到数据库的时间。 如果事务访问内存优化表，则从技术上看，逻辑结束时间就是验证阶段的开始时间。 (有关详细信息，请参阅中的事务生存期讨论[内存优化表中的事务](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   

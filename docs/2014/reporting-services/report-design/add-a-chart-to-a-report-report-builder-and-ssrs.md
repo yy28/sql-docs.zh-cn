@@ -11,19 +11,19 @@ ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11df5fadc7ca525f62ec0109ec1a7f6b199205af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349837"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>向报表添加图表（报表生成器和 SSRS）
-  如果要以可视化格式汇总数据，请使用图表数据区域。 为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将影响数据以图表形式呈现时对数据进行解释的好坏程度。 有关详细信息，请参阅[图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
+  如果要以可视化格式汇总数据，请使用图表数据区域。 为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将影响数据以图表形式呈现时对数据进行解释的好坏程度。 有关详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
  将图表数据区域添加到报表中的最简单方式是运行新建图表向导。 该向导提供柱形图、折线图、饼图、条形图和面积图。 对于这些图表类型和其他图表类型，还可以手动添加图表。  
   
- 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表可以显示“图表数据”窗格，并且它具有三个区域（类别组、序列组和值）。  
+ 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表以显示图表数据窗格并且它具有三个区域：序列组、 类别组和值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "48123487"
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [图表中的空点和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [教程：向报表添加条形图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教程：向报表添加条形图（报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [教程：向报表添加饼图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [教程：向报表添加饼图（报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [教程：将条形图添加到您的报表 （报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教程：将条形图添加到报表 （报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [教程：将饼图添加到您的报表 （报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [教程：将饼图添加到报表 （报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

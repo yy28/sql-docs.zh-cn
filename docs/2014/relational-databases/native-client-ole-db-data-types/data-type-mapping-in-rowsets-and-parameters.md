@@ -21,12 +21,12 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b79afdc8917e3a14055b8ada17cbd3d57a8c9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186407"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766039"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射
   在行集并作为参数值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序代表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用以下 OLE DB 数据定义数据类型，函数中报告**icolumnsinfo:: Getcolumninfo**和**Icommandwithparameters:: Getparameterinfo**。  
@@ -68,7 +68,7 @@ ms.locfileid: "48186407"
  sql_variant 对象可以保留除 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型以外的任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的数据。 另外，sql_variant 数据实例还不能将 sql_variant 作为其基础的基本数据类型。 例如，列中的某些行可能包含 smallint 值，而其他某些行可能包含 float 值，剩余的行则包含 char/nchar 值。  
   
 > [!NOTE]  
->  sql_variant 数据类型类似于 Microsoft Visual Basic® 中的 Variant 数据类型以及 OLEDB 中的 DBTYPE_VARIANT 和 DBTYPE_SQLVARIANT。  
+>  **Sql_variant**数据类型是类似于 Variant 数据类型在 Microsoft Visual Basic?? 和 DBTYPE_VARIANT、 DBTYPE_SQLVARIANT OLEDB 中。  
   
  当提取 sql_variant 数据作为 DBTYPE_VARIANT 时，该数据被放置到缓冲区的 VARIANT 结构中。 但 VARIANT 结构中的子类型可能无法映射为 sql_variant 数据类型中定义的子类型。 然后，必须提取 sql_variant 数据作为 DBTYPE_SQLVARIANT，以使所有子类型匹配。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48186407"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回，这种情况下缓冲区将保留 SSVARIANT 结构。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区将具有 VARIANT 结构。|  
+|SSPROP_ALLOWNATIVEVARIANT|键入：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:确定在提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：作为 dbtype_sqlvariant 时，在这种情况下缓冲区将保留 SSVARIANT 结构返回列类型。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，并将缓冲区将具有 VARIANT 结构。|  
   
 ## <a name="see-also"></a>请参阅  
  [数据类型&#40;OLE DB&#41;](data-types-ole-db.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - maximum file size for traces
@@ -17,12 +16,12 @@ ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a576f191cf02a7af186934fdd67204249f36ec78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754029"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制跟踪文件和表的大小
   SQL 跟踪结果的大小依赖于跟踪中包括的事件类和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的用法。 如果跟踪经常出现的事件类，则可以通过设置最大文件大小或最大行数来最小化跟踪收集的数据量。 通过指定最大文件大小或行数，可以确保跟踪文件或表不会增长到超出指定范围。  

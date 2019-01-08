@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - zoom [SQL Server]
@@ -20,12 +19,12 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bcdd937dcd0bde4359c03fa5735947668e88fceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 555ded0e34c0dc13ce794cc6f3119af7b2688910
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796889"
 ---
 # <a name="display-the-estimated-execution-plan"></a>显示估计的执行计划
   本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]生成图形化的估计的执行计划。 生成估计的执行计划时， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或批处理并不执行。 生成的执行计划显示的是如果实际执行查询 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 最有可能使用的查询执行计划。  

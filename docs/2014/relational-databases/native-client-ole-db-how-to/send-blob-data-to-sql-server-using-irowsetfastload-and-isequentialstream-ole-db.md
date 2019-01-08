@@ -10,12 +10,12 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 048dbd899f8c330e053ce9e97ee78d38b7f4e336
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177173"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349296"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER (OLE DB)
   此示例说明如何使用 IRowsetFastLoad 以流的形式发送每行的变长 BLOB 数据。  
@@ -24,7 +24,7 @@ ms.locfileid: "48177173"
   
  在源代码中，当您取消注释 #define USE_ISEQSTREAM 时，示例将使用 ISequentialStream。 流实现在示例中定义，只需更改 MAX_BLOB 即可发送任意大小的 BLOB 数据。 流数据不必容纳于内存中或以一个块的形式提供。 可以使用 IRowsetFastLoad::InsertRow 来调用此访问接口。 使用 IRowsetFastLoad::InsertRow 将一个指针连同可从流中读取的数据量传递到数据缓冲区（rgBinding.obValue 偏移量）中的流实现。 一些访问接口可能不必知道绑定时的数据长度。 在这种情况下，可以从绑定中忽略此长度。  
   
- 此示例不使用访问接口的流接口将数据写入访问接口， 而是将一个指针传递到访问接口将用来读取数据的流对象。 通常，Microsoft 访问接口（SQLOLEDB 和 SQLNCLI）将从该对象读取数据（以 1024 字节为一个块），直到所有数据都得到处理。 SQLOLEDB 和 SQLNCLI 都没有完整的实现来允许使用者将数据写入访问接口的流对象。 只有零长度的数据可以通过访问接口的流对象发送。  
+ 该示例不使用提供程序的流接口将数据写入到提供程序。 而是将一个指针传递到访问接口将用来读取数据的流对象。 通常，Microsoft 访问接口（SQLOLEDB 和 SQLNCLI）将从该对象读取数据（以 1024 字节为一个块），直到所有数据都得到处理。 SQLOLEDB 和 SQLNCLI 都没有完整的实现来允许使用者将数据写入访问接口的流对象。 只有零长度的数据可以通过访问接口的流对象发送。  
   
  通过将一个参数绑定为 DBTYPE_IUNKNOWN，可以将使用者实现的 ISequentialStream 对象与行集数据（IRowsetChange::InsertRow、IRowsetChange::SetData）以及参数一起使用。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48177173"
  有关详细信息，请参阅[Blob 和 OLE 对象](../native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  执行第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的表。  

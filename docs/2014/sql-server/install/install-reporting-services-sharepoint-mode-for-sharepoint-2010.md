@@ -11,12 +11,12 @@ ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc0fe3bef02ebd50558c298ef8d9b3d8565744ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159447"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350893"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式
   本主题中的过程将指导您完成以 SharePoint 模式在单台服务器上安装 Reporting Services 报表服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 2010 管理中心的其他配置任务。 本主题还可用于针对现有安装的单独过程，例如创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关添加其他信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务器到现有场，请参阅[向场中添加另一个报表服务器&#40;SSRS 横向扩展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)并[添加其他 Reporting Services Web场的前端](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)。  
@@ -91,11 +91,11 @@ ms.locfileid: "48159447"
   
 9. 在 **“功能选择”** 页中，选择以下选项：  
   
-    -   **Reporting Services – SharePoint**  
+    -   **Reporting Services - SharePoint**  
   
     -   **Reporting Services 外接程序用于 SharePoint 2010 产品**。 ![请注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")安装外接程序的安装向导选项是使用新[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]发布。  
   
-    -   如果你还没有 SQL Server 的实例[!INCLUDE[ssDE](../../includes/ssde-md.md)]，则还可以选择**数据库引擎服务**并**管理工具-完整**以提供完整的环境。  
+    -   如果您尚未安装 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可以选择 **“数据库引擎服务”** 和 **“管理工具 - 完整”** 以提供一个完整环境。  
   
      单击“下一步” 。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "48159447"
  ![与 PowerShell 相关的内容](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
   
 > [!NOTE]  
->  如果要安装到现有 SharePoint 场**不需要**完成本部分中的步骤。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务已安装并启动时在上一节中运行 SQL Server 安装向导。  
+>  如果要安装到现有 SharePoint 场**不需要**完成本部分中的步骤。 在上一节中运行 SQL Server 安装向导时，已安装并已启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务。  
   
- 在执行 SQL Server 安装向导的过程中已安装了必需的文件，但需要将服务注册到 SharePoint 场中。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本引入了对 PowerShell 支持[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 模式下。 以下步骤将指导您完成打开 SharePoint Management Shell 并运行 cmdlet 的过程：  
+ 在执行 SQL Server 安装向导的过程中已安装了必需的文件，但需要将服务注册到 SharePoint 场中。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本引入了对 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 PowerShell 支持。 以下步骤将指导您完成打开 SharePoint Management Shell 并运行 cmdlet 的过程：  
   
 1.  单击 **“开始”** 按钮  
   
@@ -230,7 +230,7 @@ ms.locfileid: "48159447"
 ##  <a name="bkmk_additional_config"></a> 附加配置  
  本部分介绍在大多数 SharePoint 部署中很重要的其他配置步骤。  
   
-###  <a name="bkmk_provision_agent"></a> “设置订阅和警报”  
+###  <a name="bkmk_provision_agent"></a> 设置订阅和警报  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报功能可能要求配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则应更新权限。 您可以在“创建服务应用程序成功”页上单击链接 **“设置订阅和警报”** ，以便转到其他页来设置 SQL Server 代理。 如果您的部署是跨计算机边界的部署（例如，当 SQL Server 数据库实例位于其他计算机上时），会需要此设置步骤。 有关详细信息，请参阅 [用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 
@@ -249,8 +249,8 @@ ms.locfileid: "48159447"
  如果用户经常直接将已发布的报表项上载到 SharePoint 文档库，则报表服务器文件同步功能将很有用。 文件同步功能将更频繁地将报表服务器目录与文档库中的项进行同步。 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [用于 Reporting Services SharePoint 模式 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [SQL server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
+ [SQL server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint 服务和服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   
   

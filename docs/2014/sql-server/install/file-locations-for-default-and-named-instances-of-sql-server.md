@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63e7f96905f6862b24867fb98ecff82a6c92ce30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9df655e00b1f2fd1919f30bb1bb166e2556b91
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143457"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208766"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 的默认实例和命名实例的文件位置
   安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将安装一个或多个单独的实例。 无论是默认实例还是命名实例都有自己的一组程序文件和数据文件，同时还有在计算机上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间共享的一组公共文件。  
@@ -28,9 +27,9 @@ ms.locfileid: "48143457"
 > [!IMPORTANT]  
 >  程序文件和数据文件不能安装在以下位置：可移动磁盘驱动器、使用压缩的文件系统、系统文件所在的目录以及故障转移群集实例上的共享驱动器。  
 >   
->  在安装系统数据库（master、model、MSDB 和 tempdb）和[!INCLUDE[ssDE](../../includes/ssde-md.md)]用户数据库时可以选择 Server Message Block (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。 有关详细信息，请参阅 [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
+>  在安装系统数据库（master、model、MSDB 和 tempdb）和[!INCLUDE[ssDE](../../includes/ssde-md.md)]用户数据库时可以选择 Server Message Block (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。 有关详细信息，请参阅 [安装 SQL Server，并使用 SMB 文件共享作为存储选项](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
 >   
->  请勿删除以下任何目录或其内容：Binn、Data、Ftdata、HTML 或 1033。 如有必要，可以删除其他目录；但是，如果不卸载并重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则可能无法检索失去的功能或数据。 不要删除或修改 HTML 目录中的任何 .htm 文件。 它们对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具的正常运行是必需的。  
+>  请勿删除任何以下目录或其内容：Binn、 数据、 Ftdata、 HTML 或 1033年。 如有必要，可以删除其他目录；但是，如果不卸载并重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则可能无法检索失去的功能或数据。 不要删除或修改 HTML 目录中的任何 .htm 文件。 它们对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具的正常运行是必需的。  
   
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  单个计算机上的所有实例使用的公共文件安装在文件夹 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] 中，其中 \<*drive*> 是安装组件的驱动器号。 默认值通常为驱动器 C。  
@@ -127,7 +126,7 @@ ms.locfileid: "48143457"
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导（安装程序用户界面模式）中选择使用 USESYSDB 升级功能的客户会很容易将产品安装到递归文件夹结构中。 例如， \< *SQLProgramFiles*> \MSSQL12\MSSQL\MSSQL10_50\MSSQL\Data\\。 这时，为了使用 USESYSDB 功能，请为 SQL 数据文件功能而非 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能设置安装路径。  
   
-> [!NOTE]  
+> [!NOTE]
 >  数据文件始终应位于名为 Data 的子目录中。 例如，指定 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<实例名 > \ 时数据文件位于 C:\Program Files 下，在升级过程中指定的系统数据库的数据目录的根路径\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<实例名 > \MSSQL\Data。  
   
 ## <a name="see-also"></a>请参阅  

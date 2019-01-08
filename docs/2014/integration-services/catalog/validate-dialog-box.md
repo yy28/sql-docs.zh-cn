@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackagevalidate.f1
@@ -14,12 +13,12 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42cb51940cbd534d2d085fab6fdb3b2ac8c6058f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaa7f88cda8c2c3cbda7ca38b2531de6354e83f5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819299"
 ---
 # <a name="validate-dialog-box"></a>“验证”对话框
   使用 **“验证”** 对话框检查 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目或包中的常见问题。  
@@ -36,7 +35,7 @@ ms.locfileid: "48172477"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
-     您在连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
+     正在连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
   
 2.  在对象资源管理器中，展开树以便显示 **“Integration Services 目录”** 节点。  
   

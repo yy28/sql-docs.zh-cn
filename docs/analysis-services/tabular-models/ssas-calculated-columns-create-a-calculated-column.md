@@ -1,5 +1,5 @@
 ---
-title: 创建计算的列 |Microsoft 文档
+title: 在 Analysis Services 中创建计算的列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 25121b53ce050da38a6d19d0c458585acf7a9abd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 705428d2c2a6671452a1d95e06e500f4860574e0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039637"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071934"
 ---
 # <a name="create-a-calculated-column"></a>创建计算列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  通过计算列，可以将新数据添加到您的模型。 您可以创建用于定义列的行级值的 DAX 公式，而不用在列中粘贴或导入值。 计算列中每行的值在您创建有效公式并单击 Enter 后会进行计算和填充。 然后可以将计算列添加到报告或分析应用程序中，就像添加任何其他数据列一样。 本文介绍如何通过在模型设计器中使用 DAX 公式栏创建新的计算的列。  
+  通过计算列，可以将新数据添加到您的模型。 而不是粘贴或导入到列的值，您可以创建用于定义列的行级值的 DAX 公式。 计算列中每行的值在您创建有效公式并单击 Enter 后会进行计算和填充。 然后可以将计算列添加到报告或分析应用程序中，就像添加任何其他数据列一样。 本文介绍如何在模型设计器中使用 DAX 公式栏创建新的计算的列。  
   
 #### <a name="to-create-a-new-calculated-column"></a>创建新的计算列  
   
@@ -43,8 +43,8 @@ ms.locfileid: "34039637"
 > [!TIP]  
 >  可以在具有嵌套函数的现有公式中使用 DAX 公式记忆式键入功能。 刚好在插入点之前的文本将用于显示下拉列表中的值，并且插入点之后的所有文本都保持不变。  
   
-## <a name="see-also"></a>另请参阅  
- [计算的列](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
+## <a name="see-also"></a>请参阅  
+ [计算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

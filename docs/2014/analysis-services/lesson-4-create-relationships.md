@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 创建关系 |Microsoft Docs
+title: 第 5 课：创建关系 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113237"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409054"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 课：创建关系
   在本课中，将验证导入数据时自动创建的关系并在不同表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，Product 表和 Product Subcategory 表基于每个产品属于某个子类别的事实具有某种关系。 有关详细信息，请参阅[关系（SSAS 表格）](tabular-models/relationships-ssas-tabular.md)  
   
- 学完本课的估计时间： **10 分钟**  
+ 学完本课的预计时间：**10 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行本课中的任务之前，应已完成上一课： [第 3 课：重命名列](rename-columns.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 3 课：重命名列](rename-columns.md)。  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>查看现有关系并添加新关系  
  当您使用“表导入向导”导入数据时，从 AdventureWorksDW 数据库导入了七个表。 通常，如果您从关系源中导入数据，则将自动导入现有关系以及数据。 但是，在继续创作模型之前，您应验证正确创建了表之间的这些关系。 对于本教程，您还会添加三个新关系。  
@@ -39,7 +39,7 @@ ms.locfileid: "48113237"
   
 2.  单击 **Customer** 表与 **Geography** 表之间的实线。 这两个表之间的实线表明此关系处于活动状态，也即，当计算 DAX 公式时，默认情况下将使用此关系。  
   
-     请注意， **Customer** 表中的 **Geography Id** 列和 **Geography** 表中的 **Geography Id** 列现在同时出现在一个框中。 这表明关系中使用的是这些列。 关系的属性现在也显示在“属性”窗口中。  
+     请注意， **Customer** 表中的 **Geography Id** 列和 **Geography** 表中的 **Geography Id** 列现在同时出现在一个框中。 这表明关系中使用的是这些列。 关系的属性现在也显示在**属性**窗口。  
   
     > [!TIP]  
     >  除了使用关系图视图中的模型设计器之外，还可以使用“管理关系”对话框以表格式显示所有表之间的关系。 单击“表”菜单，然后单击“管理关系”。 “管理关系”对话框显示导入数据时自动创建的关系。  
@@ -54,7 +54,7 @@ ms.locfileid: "48113237"
     |用户帐户控制|**Internet Sales [Customer Id]**|**客户 [Customer Id]**|  
     |用户帐户控制|**Internet Sales [产品 Id]**|**产品 [产品 Id]**|  
   
- 如果上述表中的任何关系缺失，请验证您的模型包括以下各表：Customer、Date、Geography、Product、Product Category、Product Subcategory 和 Internet Sales。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
+ 如果缺少任何上表中的关系，则验证您的模型包括以下各表：客户、 日期、 地理位置、 产品、 产品类别、 产品子类别和 Internet 销售。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
   
  在某些情况下，您可能需要在模型中的表之间创建其他关系，以支持某些业务逻辑。 对于本教程，您需要在 Internet Sales 表与 Date 表之间创建三个其他关系。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "48113237"
      将显示一条点划线，说明已在 **Internet Sales** 表的 **Ship Date** 列与 **Date** 表的 **Date** 列之间创建了非活动的关系。  
   
 ## <a name="next-step"></a>下一步  
- 若要继续学习本课程，请转到下一课： [第 6 课：创建计算列](lesson-5-create-calculated-columns.md)。  
+ 若要继续学习本课程，请转到下一课：[第 6 课：创建计算的列](lesson-5-create-calculated-columns.md)。  
   
   

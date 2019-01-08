@@ -15,18 +15,18 @@ ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d044b8f245d3c3ce2c092b7b5f2b094122f75f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 344d5706af4e7e963c0dbdd643efc3d0fb6b1b10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101197"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205706"
 ---
 # <a name="clickthrough-reports-ssrs"></a>点击链接型报表 (SSRS)
-  点击链接型报表是一种用于提供有关主报表数据的详细信息的报表。 当用户单击主报表中显示的交互式数据时，便会显示点击链接型报表。 这些报表是由报表服务器自动生成的。 作为模型设计器中，确定显示的内容在点击链接型报表中通过设置`DefaultDetailAttribute`和`DefaultAggregateAttribute`分配给报表模型中某实体的属性。  
+  点击链接型报表是一种用于提供有关主报表数据的详细信息的报表。 当用户单击主报表中显示的交互式数据时，便会显示点击链接型报表。 这些报表是由报表服务器自动生成的。 作为模型设计者，您可以通过在报表模型中设置分配给某实体的 `DefaultDetailAttribute` 和 `DefaultAggregateAttribute` 属性来确定点击链接型报表中显示的内容。  
   
-> [!NOTE]  
->  点击链接型报表中的每个版本不可[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
+> [!NOTE]
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本中均不提供点击链接型报表。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
   
 ## <a name="using-default-templates"></a>使用默认模板  
  默认情况下，报表服务器针对每个实体生成两种点击链接型模板类型：单个实例模板和多个实例模板。 使用哪类模板取决于您所单击的项。 如果读取报表的人员单击标量属性，则使用单个实例模板。 如果读取报表的人员单击聚合属性，则使用多个实例模板。  

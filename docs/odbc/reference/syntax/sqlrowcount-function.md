@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654916"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502552"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount Function（SQLRowCount 函数）
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLRowCount**返回受影响的行数**更新**，**插入**，或**删除**语句; SQL_ADD SQL_UPDATE_BY_BOOKMARK 或 SQL_中的 DELETE_BY_BOOKMARK 操作**SQLBulkOperations**; 或在 SQL_UPDATE 或 SQL_DELETE 操作**SQLSetPos**。  
@@ -48,7 +48,7 @@ SQLRETURN SQLRowCount(
  [输入]语句句柄。  
   
  *RowCountPtr*  
- [输出]指向用于返回行计数的缓冲区。 有关**更新**，**插入**，并**删除**语句中的 SQL_ADD、 SQL_UPDATE_BY_BOOKMARK 和 SQL_DELETE_BY_BOOKMARK 操作的**SQLBulkOperations**，以及在 SQL_UPDATE 或 SQL_DELETE 操作**SQLSetPos**中, 返回的值 **RowCountPtr*是受影响的行数请求或 – 1，如果受影响的行数不可用。  
+ [输出]指向用于返回行计数的缓冲区。 有关**更新**，**插入**，并**删除**语句中的 SQL_ADD、 SQL_UPDATE_BY_BOOKMARK 和 SQL_DELETE_BY_BOOKMARK 操作的**SQLBulkOperations**，以及在 SQL_UPDATE 或 SQL_DELETE 操作**SQLSetPos**中, 返回的值 **RowCountPtr*是受影响的行数请求或-1，如果受影响的行数不可用。  
   
  当**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**， **SQLSetPos 或 SQLMoreResults**调用 SQL_DIAG_ROW_COUNT诊断数据结构的字段设置为行计数和行计数进行缓存以依赖于实现的方式。 **SQLRowCount**返回缓存的行计数值。 缓存的行计数值是否有效，直到语句句柄重新设置为已准备好或已分配状态，并重新执行该语句，或**SQLCloseCursor**调用。 请注意，是否由于 SQL_DIAG_ROW_COUNT 字段已设置，已被调用的函数，返回的值**SQLRowCount**因为 SQL_DIAG_ROW_COUNT 字段重置为可能不同于 SQL_DIAG_ROW_COUNT 字段中的值由任何函数调用为 0。  
   

@@ -24,12 +24,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36065984f03980f54cbc6a75162bb007f8b5f772
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a80eb337bfc03d826ab0933ac235f76dd16bfde9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124437"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525651"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>大容量导入和导出数据 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表大容量导出数据（“大容量数据”）以及将大容量数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区的视图。 大容量导入和大容量导出对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和异类数据源之间有效传输数据是非常重要的。 “大容量导出” 是指将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表复制到数据文件。 “大容量导入” 是指将数据从数据文件加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 例如，您可以将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 应用程序导出到数据文件，然后将这些数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
@@ -66,7 +66,7 @@ ms.locfileid: "48124437"
   
  格式化文件提供了一种解释导入期间数据文件中数据的格式以及设置导出期间数据文件中数据格式的灵活方式。 这种灵活性使得解释数据时无需编写专用代码，也无需为满足 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或外部应用程序的特殊需要而重新设置数据的格式。 例如，如果将要加载的数据大容量导出到某个需要逗号分隔值的应用程序，则可以使用格式化文件将逗号作为字段终止符插入导出的数据中。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种格式化文件：XML 格式化文件和非 XML 格式化文件。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种类型的格式化文件：XML 格式化文件和非 XML 格式化文件。  
   
  **bcp** 实用工具是唯一能够生成格式化文件的工具。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)。 有关格式化文件的详细信息，请参阅[导入或导出数据的格式化文件 (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md)。  
   

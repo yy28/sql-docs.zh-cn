@@ -18,12 +18,12 @@ ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f0308f8d04ae3dfb8fbefc2c6e7c70991b3afb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7189499084c40d297f30514ba2f9bf5c01ada510
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397640"
 ---
 # <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47615585"
 ## <a name="syntax"></a>语法  
   
 ```sql  
-sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
+sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @handle_id = ] @handle_id]]  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -65,7 +65,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  您必须具有**VIEW DATABASE STATE**权限，以获取文件句柄从**sys.dm_FILESTREAM_non_transacted_handles**动态管理视图和运行**sp_kill_filestream_non_transacted_handles**。  
   
 ## <a name="examples"></a>示例  
@@ -76,10 +76,10 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 sp_kill_filestream_non_transacted_handles  
   
 -- Close all open handles in myFileTable.  
-sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’  
+sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable'  
   
 -- Close a specific handle in myFileTable.  
-sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @handle_id = 0xFFFAAADD  
+sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable', @handle_id = 0xFFFAAADD  
 ```  
   
  下面的示例演示如何使用脚本来获取*handle_id*并将其关闭。  

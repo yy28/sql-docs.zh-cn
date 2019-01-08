@@ -11,12 +11,12 @@ ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06e8e220f5ab51a3dbc2ca4248023918879956d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba5f339987c42c79c3d982d64d37879a7c3e2d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101338"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402572"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>处理 Targeted Mailing 结构中的模型（数据挖掘基础教程）
   必须先部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目并处理挖掘结构和挖掘模型，然后才能浏览或使用创建的挖掘模型。  
@@ -47,7 +47,7 @@ ms.locfileid: "48101338"
 4.  输入`12`有关**HoldoutSeed**。  
   
 ## <a name="deploying-and-processing-the-models"></a>部署并处理模型  
- 在数据挖掘设计器中，您可以决定要处理哪些对象，这取决于要对您的模型或基础数据所做更改的范围：  
+ 在数据挖掘设计器中，您可以决定哪些对象来处理，具体取决于您对您的模型或基础数据所做的更改的范围：  
   
  在本任务中，因为数据和模型是新的，我们将同时处理结构和所有模型。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48101338"
  [向 Targeted 的 Mailing 结构中添加新模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一课  
- [第 4 课： 浏览 Targeted 的 Mailing 模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [第 4 课：浏览 Targeted 的 Mailing 模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
@@ -14,12 +14,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807009"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 必须定期截断事务日志以避免它被填满。 但是，一些因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
@@ -31,7 +31,7 @@ ms.locfileid: "48072887"
   
  **本主题内容：**  
   
--   [支持的事务日志的优势： 操作](#Benefits)  
+-   [有以下好处：事务日志支持的操作](#Benefits)  
   
 -   [事务日志截断](#Truncation)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072887"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 支持的事务日志的优势： 操作  
+##  <a name="Benefits"></a> 有以下好处：事务日志支持的操作  
  事务日志支持以下操作：  
   
 -   恢复个别的事务。  
@@ -74,7 +74,7 @@ ms.locfileid: "48072887"
 > [!IMPORTANT]  
 >  有关如何响应已满事务日志的信息，请参阅[解决事务日志已满的问题（SQL Server 错误 9002）](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
- 日志截断会由于多种因素发生延迟。 可以查询 **sys.databases** 目录视图的 **log_reuse_wait** 和 [log_reuse_wait_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列来发现是哪些因素（如果有）阻止截断日志。 下表对这些列的值进行了说明。  
+ 日志截断会由于多种因素发生延迟。 您可以查询 **sys.databases** 目录视图的 **log_reuse_wait** 和 [log_reuse_wait_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列来发现是哪些因素（如果有）阻止截断日志。 下表对这些列的值进行了说明。  
   
 |log_reuse_wait 值|log_reuse_wait_desc 值|Description|  
 |----------------------------|----------------------------------|-----------------|  
@@ -88,12 +88,12 @@ ms.locfileid: "48072887"
 |7|DATABASE_SNAPSHOT_CREATION|正在创建数据库快照。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因，通常也是主要原因。|  
 |8|LOG_SCAN|发生日志扫描。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因，通常也是主要原因。|  
 |9|AVAILABILITY_REPLICA|可用性组的辅助副本正将此数据库的事务日志记录应用到相应的辅助数据库。 （完整恢复模式）<br /><br /> 有关详细信息，请参阅[AlwaysOn 可用性组的概述&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
-|10|—|仅供内部使用|  
-|11|—|仅供内部使用|  
-|12|—|仅供内部使用|  
+|10|-|仅供内部使用|  
+|11|-|仅供内部使用|  
+|12|-|仅供内部使用|  
 |13|OLDEST_PAGE|如果将数据库配置为使用间接检查点，数据库中最早的页可能比检查点 LSN 早。 在这种情况下，最早的页可以延迟日志截断。 （所有恢复模式）<br /><br /> 有关间接检查点的信息，请参阅[数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)。|  
 |14|OTHER_TRANSIENT|当前未使用此值。|  
-|16|XTP_CHECKPOINT|当数据库具有内存优化文件组时，事务日志可能不会截断之前自动[!INCLUDE[hek_2](../../includes/hek-2-md.md)]（这种情况发生在每个 512 MB 的日志增长） 触发检查点。<br /><br /> 注意： 512 MB 大小之前的事务日志截断，触发手动对所讨论数据库的检查点命令。|  
+|16|XTP_CHECKPOINT|当数据库具有内存优化的文件组时，可能不会截断事务日志，直至触发自动 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 检查点（每当发生 512 MB 的日志增长就会出现这种情况）。<br /><br /> 注意：若要在 512 MB 大小之前截断事务日志，请针对所讨论的数据库手动触发 Checkpoint 命令。|  
   
 ##  <a name="MinimallyLogged"></a> 可以按最小方式记录的操作  
  最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
@@ -135,7 +135,7 @@ ms.locfileid: "48072887"
     -   DROP INDEX 新堆重新生成（如果适用）。  
   
         > [!NOTE]  
-        >  索引页的释放期间[DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql)操作将始终完整记录。  
+        >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 操作期间将始终完整记录索引页的释放操作。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  `Managing the transaction log`  

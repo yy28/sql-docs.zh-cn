@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.policycategories.f1
@@ -12,12 +12,12 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb6b0d2ebf9f8e47a40318a8309e363560921dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050521"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817964"
 ---
 # <a name="manage-policy-categories"></a>管理策略类别
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将某类别的任意或所有可用策略应用到整个 [!INCLUDE[tsql](../../includes/tsql-md.md)]实例。  
@@ -28,7 +28,7 @@ ms.locfileid: "48050521"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **将类别策略应用到 SQL Server 实例，使用：**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48050521"
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>将类别策略应用到 SQL Server 实例  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

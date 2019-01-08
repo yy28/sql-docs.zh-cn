@@ -11,12 +11,12 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f234f4112cee70e3b62fc5076f9e04c05e9bf56f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d708c3ad151cf213f21715f6837c7669aa7baff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511678"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
   递归层次结构组可组织来自包含多个层次结构级别的单个报表数据集的数据。例如，表示组织层次结构中的经理－雇员关系的报告结构。  
@@ -57,16 +57,16 @@ ms.locfileid: "48154107"
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     “填充”属性需要 nnyy 格式的字符串，其中 nn 是一个数字，而 yy 是度量单位。 该示例表达式将生成一个字符串，使用`Level`增加填充大小的函数根据递归级别。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 璝惠`Level`函数中，请参阅[级别](report-builder-functions-level-function.md)。  
+     “填充”属性需要 nnyy 格式的字符串，其中 nn 是一个数字，而 yy 是度量单位。 该示例表达式将生成一个字符串，该字符串使用 `Level` 函数根据递归级别增加填充的大小。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 璝惠`Level`函数中，请参阅[级别](report-builder-functions-level-function.md)。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      运行报表。 该报表将显示分组数据的层次结构视图。  
   
 ## <a name="see-also"></a>请参阅  
- [创建递归层次结构组&#40;报表生成器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [聚合函数参考&#40;报表生成器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

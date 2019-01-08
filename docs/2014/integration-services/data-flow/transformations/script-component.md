@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
@@ -18,12 +17,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8907bc0df08010b49bdfcb2a7f4b77ea646fbcf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5db2b6e6467dec58f6a8aa6e6bfc9f105073fbfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084617"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818010"
 ---
 # <a name="script-component"></a>脚本组件
   脚本组件承载脚本，并使包能够包含和运行自定义的脚本代码。 可以将包中的脚本组件用于下列目的：  
@@ -91,13 +90,13 @@ ms.locfileid: "48084617"
 ### <a name="configuring-the-script-component-in-the-designer"></a>配置设计器中的脚本组件  
  有关可在 **“脚本转换编辑器”** 对话框中设置的属性的详细信息，请单击以下主题之一：  
   
--   [脚本转换编辑器&#40;输入列页&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [脚本转换编辑器（“输入列”页）](../../script-transformation-editor-input-columns-page.md)  
   
--   [脚本转换编辑器&#40;输入和输出页&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [脚本转换编辑器（“输入和输出”页）](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [脚本转换编辑器&#40;脚本页&#41;](../../script-transformation-editor-script-page.md)  
+-   [脚本转换编辑器（“脚本”页）](../../script-transformation-editor-script-page.md)  
   
--   [脚本转换编辑器&#40;连接管理器页&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [脚本转换编辑器（“连接管理器”页）](../../script-transformation-editor-connection-managers-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], YEAR
@@ -14,12 +13,12 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0276dd964bd0ed5a4ea2a703ffc6d32d1ed52bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f228aa02e5537ddd52a7acb0fe4c7d4fbb855d5b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767871"
 ---
 # <a name="year-ssis-expression"></a>YEAR（SSIS 表达式）
   返回一个表示日期中的“年份”日期部分的整数。  
@@ -44,7 +43,7 @@ YEAR(date)
  日期文字必须显式转换为日期数据类型之一。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
 > [!NOTE]  
->  在日期文本显式转换为以下日期数据类型之一时，表达式验证失败：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
+>  若要验证日期文本显式转换为这些日期数据类型之一时，表达式失败：将 DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
   
  使用 YEAR 函数更为简要，但其等价于使用 DATEPART("Year", date) 函数。  
   
@@ -68,11 +67,11 @@ YEAR(GETDATE())
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [DATEADD &#40;SSIS 表达式&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS 表达式&#41;](datediff-ssis-expression.md)   
+ [DATEADD（SSIS 表达式）](dateadd-ssis-expression.md)   
+ [DATEDIFF（SSIS 表达式）](datediff-ssis-expression.md)   
  [DATEPART（SSIS 表达式）](datepart-ssis-expression.md)   
  [DAY（SSIS 表达式）](day-ssis-expression.md)   
  [MONTH（SSIS 表达式）](month-ssis-expression.md)   
- [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   

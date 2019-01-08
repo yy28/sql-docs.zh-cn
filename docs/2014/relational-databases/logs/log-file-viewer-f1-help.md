@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configurelogs.errorlog.f1
@@ -15,12 +14,12 @@ ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f73e63e7e7d7d9f0a95b8b7d31b2ed7b995f0520
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ce118fb3234d45ae0606fb4bcc99777a945acda
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748749"
 ---
 # <a name="log-file-viewer-f1-help"></a>日志文件查看器 F1 帮助
   日志文件查看器显示来自许多不同组件的日志信息。 打开日志文件查看器后，请使用 **“选择日志”** 窗格选择要显示的日志。 每个日志显示适合于该类别日志的列。  
@@ -36,7 +35,7 @@ ms.locfileid: "48090897"
  **导出**  
  打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
   
- **“刷新”**  
+ **刷新**  
  刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
  **筛选**  
@@ -73,7 +72,7 @@ ms.locfileid: "48090897"
  **日志源**  
  显示在其中捕获事件的源日志的说明。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机实例的日志文件，你需要有 securityadmin 固定服务器角色的成员身份。  
   
  若要访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 脱机实例的日志文件，不仅必须具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取权限，还必须具有存储日志文件的文件夹的读取权限。 有关详细信息，请参阅 [查看脱机日志文件](view-offline-log-files.md)主题的“安全性”部分。  

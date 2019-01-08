@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, about Integration Services service
@@ -17,17 +16,17 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f2c1f5f17f55244787bf4f79949008be79088fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfbbf84cf084ae96e123c14e659ebeb30c12ac42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119417"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800769"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
   本节中的主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 此服务不是创建、保存和运行集成服务包所必需的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。  
   
- 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将对象、设置和运行数据存储在您使用项目部署模型部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目的 `SSISDB` 数据库中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的实例，它承载该数据库。 有关数据库的详细信息，请参阅 [SSIS 目录](../catalog/ssis-catalog.md)。 有关将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅 [将项目部署到 Integration Services 服务器](../deploy-projects-to-integration-services-server.md)。  
+ 在中启动[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]存储对象、 设置和操作数据中的`SSISDB`现已部署到的项目数据库[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用项目部署模型的服务器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的实例，它承载该数据库。 有关数据库的详细信息，请参阅 [SSIS 目录](../catalog/ssis-catalog.md)。 有关将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅 [将项目部署到 Integration Services 服务器](../deploy-projects-to-integration-services-server.md)。  
   
 ## <a name="management-capabilities"></a>管理功能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的 Windows 服务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务只在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中可用。  

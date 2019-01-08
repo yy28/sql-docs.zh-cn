@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
@@ -14,12 +13,12 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ff08dda7870c9f8596370c38c207350f51e6f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51618b0103a168ab72cab676fdf76ec1da8c3a7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788599"
 ---
 # <a name="secure-the-distributor"></a>保护分发服务器的安全
   下列复制代理连接到分发服务器：日志读取器代理、快照代理、队列读取器代理、分发代理以及合并代理。 在遵守授予必要的最低权限并保护所有密码的存储这一原则的同时，为每个代理提供适当的登录名非常重要。  

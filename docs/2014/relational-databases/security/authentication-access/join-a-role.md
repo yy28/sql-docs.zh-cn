@@ -15,12 +15,12 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 45138bfb48a675b4e99fe7050cbddd25119c2cbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815615f31e033eaee63f2c296ff5daf73349714c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514296"
 ---
 # <a name="join-a-role"></a>加入角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
@@ -43,7 +43,7 @@ ms.locfileid: "48061787"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要向登录名和数据库用户分配角色，请使用：**  
   
@@ -76,9 +76,9 @@ ms.locfileid: "48061787"
   
 4.  右键单击要编辑的角色，然后选择“属性”。  
   
-5.  在“服务器角色属性 - server_role_name”对话框的“成员”页中单击“添加”。  
+5.  在 **服务器角色属性-* * * server_role_name*对话框中，在**成员**页上，单击**添加**。  
   
-6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - server_role_name”对话框。  
+6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象。 单击**确定**返回到 **服务器角色属性-* * * server_role_name*对话框。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48061787"
   
 7.  右键单击要编辑的角色，然后选择“属性”。  
   
-8.  在“数据库角色属性 - database_role_name”对话框的“常规”页中，单击“添加”。  
+8.  在 **数据库角色属性-* * * database_role_name*对话框中**常规**页上，单击**添加**。  
   
-9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - database_role_name”对话框。  
+9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象。 单击**确定**返回到 **数据库角色属性-* * * database_role_name*对话框。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

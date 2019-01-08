@@ -15,12 +15,12 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 590cb6da26f0857c62b87542b7890732416aa486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d83edf8ee65b638525c0ddd5ee994a26cfcfbd70
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103987"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545801"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>传输错误消息任务编辑器（“消息”页）
   可以使用“传输错误消息任务编辑器”对话框的“消息”页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例。 有关此任务的详细信息，请参阅 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)。  
@@ -46,13 +46,13 @@ ms.locfileid: "48103987"
 |**False**|仅复制指定的用户定义消息。|  
   
  **ErrorMessagesList**  
- 单击浏览按钮 **(…)** 可选择要复制的错误消息。  
+ 单击浏览按钮 (...) 以选择要复制的错误消息。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  
   
  **ErrorMessageLanguagesList**  
- 单击浏览按钮 **(…)** 可选择要将哪些语言的用户定义错误消息复制到目标服务器。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
+ 单击浏览按钮 (...) 以选择将用户定义的错误消息发送到目标服务器所使用的语言。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  
@@ -60,9 +60,9 @@ ms.locfileid: "48103987"
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
- [传输错误消息任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
+ [传输错误消息任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
  [SMO 连接管理器](connection-manager/smo-connection-manager.md)   
- [传输错误消息任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
+ [传输错误消息任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
  [SMO 连接管理器](connection-manager/smo-connection-manager.md)  
   
   
