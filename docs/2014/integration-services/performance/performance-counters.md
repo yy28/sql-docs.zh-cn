@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
@@ -17,12 +16,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8edbd94ef143eeb4f8b029f8f8d567cc3c571a19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70694b2814ab23ad13e29a1348e7bfb73d884fbc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140737"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367669"
 ---
 # <a name="performance-counters"></a>性能计数器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  
@@ -72,11 +71,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>相关内容  
   
--   codeplex.com 上的工具 [Business Intelligence Development Studio 的 SSIS 性能可视化（CodePlex 项目）](http://go.microsoft.com/fwlink/?LinkId=146626)。  
+-   codeplex.com 上的工具 [Business Intelligence Development Studio 的 SSIS 性能可视化（CodePlex 项目）](https://go.microsoft.com/fwlink/?LinkId=146626)。  
   
--   msdn.microsoft.com 上的视频 [测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=150497)。  
+-   msdn.microsoft.com 上的视频[测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=150497)。  
   
--   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](http://go.microsoft.com/fwlink/?LinkId=235319)。  
+-   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](https://go.microsoft.com/fwlink/?LinkId=235319)。  
   
 ## <a name="see-also"></a>请参阅  
  [项目和包的执行](../packages/run-integration-services-ssis-packages.md)  

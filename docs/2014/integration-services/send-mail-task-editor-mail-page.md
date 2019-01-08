@@ -15,12 +15,12 @@ ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f8c4992477fa5bdbf533f3a1933c4092f1d162c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5608877b30f453502bd9c6f0da74a8c5a68c71a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089491"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510196"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
   使用 **“发送邮件任务编辑器”** 对话框中的 **“邮件”** 页，可以指定收件人、邮件类型和邮件的优先级。 您还可以在邮件中附加文件。 邮件正文可以是您提供的字符串，也可以是指向包含文本的文件连接，还可以是包含文本的变量的名称。  
@@ -29,12 +29,12 @@ ms.locfileid: "48089491"
   
 ## <a name="options"></a>选项  
  **SMTPConnection**  
- 从列表中选择一个 SMTP 连接管理器，或单击 \<“新建连接…”> 创建新的连接管理器。  
+ 从列表中选择一个 SMTP 连接管理器，或单击“\<新建连接…>”创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
- **相关主题：**[SMTP 连接管理器](connection-manager/smtp-connection-manager.md)  
+ **相关的主题：**[SMTP 连接管理器](connection-manager/smtp-connection-manager.md)  
   
  **From**  
  指定发件人的电子邮件地址。  
@@ -73,23 +73,23 @@ ms.locfileid: "48089491"
   
 ### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接输入  
  **MessageSource**  
- 键入邮件正文，或单击“浏览(…)”按钮，然后在“消息源”对话框中键入邮件内容。  
+ 键入邮件正文，或单击浏览按钮 (…)，然后在“消息源”对话框中键入邮件内容。  
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 文件连接  
  **MessageSource**  
- 从列表中选择一个文件连接管理器，或单击 **“新建连接…”\<**> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
- 从列表中选择一个变量，或单击 **“新建变量...”\<**> 创建新变量。  
+ 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [发送邮件任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
+ [发送邮件任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

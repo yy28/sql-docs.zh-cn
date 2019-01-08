@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, deleting
@@ -16,12 +16,12 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf0ba5a2ec689f152431af0495f7ee44d7ad5e10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e777fc76a49e7d4ec645133808787e25a702348f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367109"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
@@ -63,7 +63,7 @@ ms.locfileid: "48117577"
   
 #### <a name="to-delete-a-job"></a>删除作业  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48117577"
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **删除多个作业**  
   
- 使用`JobCollection`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobCollection` 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   
 
   

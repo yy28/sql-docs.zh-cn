@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_unregistercustomresolver_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c59cdbda9f5de8282f403fc760de0e407badff31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46de29c32442bb2c7672eb7043d10c185327963b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783259"
 ---
 # <a name="spunregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@article_resolver =** ] **'***article_resolver*****  
+ [  **@article_resolver =** ] **'***article_resolver***’**  
  指定要注销的自定义业务逻辑的名称。 *article_resolver*是**nvarchar(255)**，无默认值。 如果要删除的业务逻辑是 COM 组件，则该参数是此组件的友好名称。 如果业务逻辑是 .NET Framework 程序集，则该参数是此程序集的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -50,7 +49,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
   
  使用[sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)在复制拓扑的已注册的自定义业务逻辑模块或 COM 冲突解决程序可用列表返回到拓扑中任何服务器上。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_unregistercustomresolver**。  
   
 ## <a name="see-also"></a>请参阅  

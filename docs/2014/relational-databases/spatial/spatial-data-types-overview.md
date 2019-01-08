@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018202"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376419"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
   有两种类型的空间数据。 `geometry` 数据类型支持平面或欧几里得（平面球）数据。 `geometry` 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。  
@@ -27,7 +27,7 @@ ms.locfileid: "51018202"
  另外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持 `geography` 数据类型，该数据类型可存储诸如 GPS 纬度和经度坐标之类的椭圆体（圆球）数据。  
   
 > [!IMPORTANT]  
->  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [SQL Server Code-Named "Denali" 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [SQL Server Code-Named "Denali" 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ##  <a name="objects"></a> 空间数据对象  
  `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例由区分它们作为其父级数据类型派生的某些属性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或作为多个`geometry`或`geography`实例中`GeometryCollection`。 `Geography` 类型具有附加实例类型 `FullGlobe`。  
@@ -99,9 +99,9 @@ ms.locfileid: "51018202"
   
  有关 OGC 规范的详细信息，请参阅以下内容：  
   
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> 圆弧线段  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  下图显示了每种类型的存储方式 (红线显示`LineString``@g1`，蓝线显示`CircularString``@g2`):  
@@ -167,7 +167,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');  
 ```  
   
- 或多个  
+ 或  
   
  在上述示例中，`LineString` 实例或 `CompoundCurve` 实例都可以存储该图形。  下一个示例使用 `CompoundCurve` 存储饼图切片：  
   

@@ -18,12 +18,12 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e8d29c2a9b273425510342d87349091348c1c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806799"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588594"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@backup_file_name=** ] **'***backup_file_name***'**  
+ [  **@backup_file_name=** ] **'**_backup_file_name_  
  备份文件的名称。 *backup_file_name*是**nvarchar （128)**。  
   
- [ **@database_name=** ] **'***database_name***'**  
+ [  **@database_name=** ] **'**_database_name_  
  数据库的名称。 database_name 的数据类型为 sysname。  
   
- [  **@result=** ]*结果***输出**  
+ [  **@result=** ]_结果_**输出**  
  指示事务日志是否可应用于数据库。 *结果*是**位**。  
   
  1 = 日志可以应用  
@@ -58,7 +58,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_can_tlog_be_applied**。  
   
 ## <a name="examples"></a>示例  

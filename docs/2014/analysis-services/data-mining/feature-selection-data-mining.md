@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067917"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360139"
 ---
 # <a name="feature-selection-data-mining"></a>功能选择（数据挖掘）
   *功能选择*是一个术语，通常用于在数据挖掘中描述的工具和技术可用于输入减少到可控大小以便处理和分析。 功能选择意味着不仅*降低基数*，这意味着施加任意或预定义的截断，在生成模型，但还属性，这意味着的选择时可以考虑的属性的数目分析人员或建模工具主动选择或放弃属性基于对分析的可用性。  
@@ -43,9 +43,9 @@ ms.locfileid: "48067917"
  在数据源的这 500 列中，如果只有 50 列具有在生成模型时有用的信息，则您可以只将这些列保持在模型之外，或者可以使用功能选择技术自动发现最佳功能并且排除在统计上无用的值。 功能选择有助于解决两个问题：无价值的数据过多或有价值的数据过少。  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 数据挖掘中的功能选择  
- 通常情况下中自动, 执行功能选择[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和每个算法都有一套智能地应用功能的默认技术。 功能选择始终在对模型进行定型之前执行，以自动选择数据集中最有可能在该模型中使用的属性。 但是，您也可以手动设置参数以便影响功能选择行为。  
+ 通常，功能选择在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中自动执行，并且每个算法都具有用于智能地应用功能选择的一组默认技术。 功能选择始终在对模型进行定型之前执行，以自动选择数据集中最有可能在该模型中使用的属性。 但是，您也可以手动设置参数以便影响功能选择行为。  
   
- 通常，功能选择的工作方式是为每个属性计算一个分数，然后仅选择具有最高分数的属性。 您还可以调整最高分数的阈值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多种方法来计算这些分数和任何模型中应用的准确方法取决于以下因素：  
+ 通常，功能选择的工作方式是为每个属性计算一个分数，然后仅选择具有最高分数的属性。 您还可以调整最高分数的阈值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多种方法来计算这些分数，适用于任何模型的准确方法取决于以下因素：  
   
 -   在模型中使用的算法  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067917"
 #### <a name="bayesian-with-k2-prior"></a>Bayesian with K2 Prior  
  Analysis Services 提供了两种基于 Bayesian 网络的功能选择分数。 Bayesian 网络是状态的“定向  ”或“非循环  ”曲线图，也是状态间的转换，这意味着某些状态始终早于当前的状态，某些状态是较晚的，曲线图不会重复或循环。 根据定义，Bayesian 网络允许使用先前的知识。 但是，对于算法设计、性能和精确度而言，关于在以后状态的概率计算中要使用以前的哪一个状态的问题是很重要的。  
   
- 从 Bayesian 网络中了解的 K2 算法是由 Cooper 和 Herskovits 开发的，经常在数据挖掘中使用。 该算法是可伸缩的，并可以分析多个变量，但需要对用作输入的变量进行排序。 有关详细信息，请参阅由 Chickering、Geiger 和 Heckerman 编写的 [了解 Bayesian 网络](http://go.microsoft.com/fwlink/?LinkId=105885) 。  
+ 从 Bayesian 网络中了解的 K2 算法是由 Cooper 和 Herskovits 开发的，经常在数据挖掘中使用。 该算法是可伸缩的，并可以分析多个变量，但需要对用作输入的变量进行排序。 有关详细信息，请参阅由 Chickering、Geiger 和 Heckerman 编写的 [了解 Bayesian 网络](https://go.microsoft.com/fwlink/?LinkId=105885) 。  
   
  此计分方法适用于离散和离散化的属性。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48067917"
   
  Bayesian Dirichlet Equivalent with Uniform Prior (BDEU) 方法假定一个 Dirichlet 分布的特殊事例，在这个事例中使用一个数学常量创建一个以前状态的固定或均匀分布。 BDE 分数还假定可能性均等，这意味着数据不应当用来区分相等的结构。 也就是说，如果 If A Then B 的分数与 If B Then A 的分数相同，则无法基于数据区分这两种结构，也无法推断因果关系。  
   
- 有关 Bayesian 网络和这些计分方法实现的详细信息，请参阅 [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885)（了解 Bayesian 网络）。  
+ 有关 Bayesian 网络和这些计分方法实现的详细信息，请参阅 [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885)（了解 Bayesian 网络）。  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 算法使用的功能选择方法  
  下表列出了支持功能选择的算法、该算法所使用的功能选择方法以及设置用于控制功能选择行为的参数：  

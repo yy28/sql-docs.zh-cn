@@ -12,12 +12,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20adc991d3d9c497b4bab1f7c665f941bd98e7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365799"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   本主题讨论特定于 SQLSetDescRec 功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。  
@@ -27,7 +27,7 @@ ms.locfileid: "48088577"
   
  下表介绍了参数和描述符字段之间的映射。  
   
-|参数|非表值参数类型的相关属性，包括表值参数列|表值参数的相关属性|  
+|参数|对于非表值参数类型，包括表值参数列的相关的属性|表值参数的相关属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*类型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*子类型*|忽略|对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录，请将它设置为 SQL_DESC_DATETIME_INTERVAL_CODE。|  
@@ -58,7 +58,7 @@ ms.locfileid: "48088577"
  `SQLSetDescRec` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

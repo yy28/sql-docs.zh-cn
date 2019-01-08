@@ -18,12 +18,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6605840bc887f4869d1ed0c153de7ca4374053fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183157"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369559"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>生成内联 XSD 架构
   在 FOR XML 子句中，可以请求在查询返回查询结果的同时返回一个内联架构。 如果需要 XDR 架构，可以在 FOR XML 子句中使用 XMLDATA 关键字。 如果需要 XSD 架构，可以使用 XMLSCHEMA 关键字。  
@@ -32,15 +32,15 @@ ms.locfileid: "48183157"
   
 -   只能在 RAW 和 AUTO 模式中，而不能在 EXPLICIT 模式中指定 XMLSCHEMA。  
   
--   如果嵌套的 FOR XML 查询指定了 TYPE 指令，查询结果是`xml`类型，并且此结果将被视为非类型化 XML 数据的实例。 有关详细信息，请参阅 [XML 数据 (SQL Server)](xml-data-sql-server.md)。  
+-   如果嵌套的 FOR XML 查询指定了 TYPE 指令，查询结果则属于 `xml` 类型，并且此结果将被视为非类型化的 XML 数据的实例。 有关详细信息，请参阅 [XML 数据 (SQL Server)](xml-data-sql-server.md)。  
   
  在 FOR XML 查询中指定 XMLSCHEMA 后，查询结果中便同时包含架构和 XML 数据。 数据的每个顶级元素都通过使用默认命名空间声明来引用前一个架构，而默认命名空间又引用内联架构的目标命名空间。  
   
  例如：  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  
@@ -65,7 +65,7 @@ ms.locfileid: "48183157"
   
 -   另一个是说明 FOR XML 查询结果形状的架构文档。  
   
- 此外，如果任何类型化`xml`数据类型包括在查询结果中，与这些类型化相关联的架构`xml`数据类型。  
+ 而且，如果查询结果中包含了任何类型化的 `xml` 数据类型，则与这些类型化的 `xml` 数据类型相关联的架构也包含在查询结果中。  
   
  说明 FOR XML 结果形状的架构文档的目标命名空间包含一个固定部分和一个自动递增的数值部分。 此命名空间的格式如下所示，其中 *n* 是一个正整数。 例如，在前一个查询中，urn:schemas-microsoft-com:sql:SqlRowSet1 是目标命名空间。  
   
@@ -94,7 +94,7 @@ WHERE BusinessEntityID = 1
 FOR XML AUTO, ELEMENTS  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
  `<Person>`  
   
@@ -114,11 +114,11 @@ AND     SalesOrderHeader.SalesOrderID=5001
 FOR XML AUTO, ELEMENTS, XMLSCHEMA  
 ```  
   
- 由于该查询指定了 ELEMENTS 指令，所以产生的 XML 是以元素为中心的。 该查询还指定了 XMLSCHEMA 指令。 因此，将返回一个内联 XSD 架构。 结果如下：  
+ 由于该查询指定了 ELEMENTS 指令，所以产生的 XML 是以元素为中心的。 该查询还指定了 XMLSCHEMA 指令。 因此，将返回一个内联 XSD 架构。 下面是结果：  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="Sales.SalesOrderHeader">`  
   
@@ -194,9 +194,9 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  结果如下： 请注意，在内联 XSD 架构中，OrderID 元素被定义了两次。 一个声明将 minOccurs 设置为 0（对应于 CustOrderDetail 表的 OrderID）；另一个声明映射到 `CustOrder` 表的 OrderID 主键列，在这种情况下，minOccurs 默认设置为 1。  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="row">`  
   
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>元素名称冲突  
  在 FOR XML 中，同一个名称可以用来表示两个子元素。 例如，下面的查询将检索产品的 ListPrice 和 DealerPrice 值，但为这两列指定了同一别名 (Price)。 因此，产生的行集将具有名称相同的两列。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>情况 1：两个子元素是相同类型的非键列而且可以为 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>案例 1:两个子元素是相同类型的非键列，可以为 NULL  
  在下面的查询中，两个子元素是相同类型的非键列而且可以为 NULL。  
   
 ```  
@@ -239,11 +239,11 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  下面是生成的相应 XML。 仅显示了一部分内联 XSD：  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -277,11 +277,11 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   在结果中，由于表中的 `DealerPrice` 值为 NULL，所以只有 `ListPrice` 被作为一个 <`Price`> 元素返回。 如果将 `XSINIL` 参数添加到 ELEMENTS 指令，则假如将对应于 DealerPrice 的 <`Price`> 元素的 `xsi:nil` 值设置为 TRUE，返回的结果中将包括这两个元素。 如果将两个元素的 `nillable` 属性设置为 TRUE，还将收到内联 XSD 架构的 <`row`> 复杂类型定义中的两个 <`Price`> 子元素。 下面是部分结果：  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>情况 2：相同类型的一个键列和一个非键列  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>案例 2:一个键列和相同类型的一个非键列  
  下面的查询说明了相同类型的一个键列和一个非键列。  
   
 ```  
@@ -333,11 +333,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  结果如下： 仅显示了一部分内联 XSD 架构。  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  请注意，在内联 XSD 架构中，对应于 Col2 的 <`Col`> 元素的 minOccurs 被设置为 0。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>情况 3：两个不同类型的元素而且对应的列可以为 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>案例 3:这两个不同的类型和相应的列的元素可以为 NULL  
  对情况 2 中显示的示例表进行下面的查询：  
   
 ```  
@@ -402,11 +402,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  在下面的查询中，Col2 和 Col3 被给予相同的别名。 这将生成两个具有相同名称的同级元素，而且它们都是结果中 <`raw`> 元素的子元素。 这两列类型不同，而且都可以为 NULL。 结果如下： 仅显示了部分内联 XSD 架构。  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:simpleType name="Col1">`  
   

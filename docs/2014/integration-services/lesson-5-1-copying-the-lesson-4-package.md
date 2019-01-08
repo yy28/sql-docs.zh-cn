@@ -1,24 +1,23 @@
 ---
-title: 步骤 1：复制第 4 课包 | Microsoft Docs
+title: 步骤 1：复制第 4 课包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76017bf54455d702dbea060e4f966765ddb1e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070008"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360849"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>步骤 1：复制 Lesson 4 包
+# <a name="step-1-copying-the-lesson-4-package"></a>步骤 1：复制第 4 课包
   在本任务中，将为第 4 课中创建的 Lesson 4.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 4 包添加到项目中，然后再对其进行复制。 将使用这一新副本来完成第 5 课剩余部分。  
   
 ### <a name="to-copy-the-lesson-4-package"></a>复制 Lesson 4 包  
@@ -49,11 +48,11 @@ ms.locfileid: "48070008"
   
 3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-4.  单击浏览“(...)”按钮，导航到计算机上的“Lesson 4.dtsx”，然后单击“打开”。  
+4.  单击浏览按钮 (…)，导航到计算机上的“Lesson 4.dtsx”，然后单击“打开”。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48070008"
 5.  按先前过程中的步骤 3-8 中所述，复制并粘贴 Lesson 4 包。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2：启用和配置包配置](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [步骤 2:启用和配置包配置](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   

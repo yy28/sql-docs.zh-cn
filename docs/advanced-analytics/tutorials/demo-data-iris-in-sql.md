@@ -1,5 +1,5 @@
 ---
-title: 鸢尾花演示数据集的 SQL Server 中的 Python 和 R 教程 |Microsoft Docs
+title: 用于 Python 和 R 教程-SQL Server 机器学习的鸢尾花演示数据集
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216673"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046567"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>鸢尾花演示数据的 SQL Server 中的 Python 和 R 教程 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50216673"
 
 教程和快速入门使用此数据集包括：
 
-+  [使用 SQL Server 中的 Python 模型的训练和评分](train-score-using-python-in-tsql.md)
++  [快速入门：创建、 定型和 SQL Server 中使用存储过程中使用 Python 模型](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>创建数据库
 
@@ -58,7 +58,7 @@ ms.locfileid: "50216673"
     ```
 
     > [!TIP] 
-    > 如果您不熟悉 T-SQL，应该先记住`DROP...IF`语句。 SQL Server 后尝试创建一个表，其中一个已存在时返回错误:"没有已名为 iris_data' 在数据库中的对象。" 若要避免此类错误的一种方法是代码的作为你的一部分删除任何现有表或其他对象。
+    > 如果您不熟悉 T-SQL，应该先记住`DROP...IF`语句。 当你尝试创建一个表并已存在时，SQL Server 将返回错误："没有已名为 iris_data' 在数据库中的对象。" 若要避免此类错误的一种方法是代码的作为你的一部分删除任何现有表或其他对象。
 
 4. 运行以下代码以创建用于存储已训练的模型的表。 若要保存在 SQL Server 中的 Python （或 R） 模型，它们必须序列化和存储的列中的类型**varbinary （max)**。 
 
@@ -154,6 +154,6 @@ ms.locfileid: "50216673"
 
 ## <a name="next-steps"></a>后续步骤
 
-在下一课，将创建机器学习模型并将其保存到表中，然后使用该模型生成预测的结果。
+在以下快速入门中，将创建机器学习模型并将其保存到表中，然后使用该模型生成预测的结果。
 
-+ [使用 SQL Server 中的 Python 模型的训练和评分](train-score-using-python-in-tsql.md)
++ [快速入门：创建、 定型和 SQL Server 中使用存储过程中使用 Python 模型](quickstart-python-train-score-in-tsql.md)

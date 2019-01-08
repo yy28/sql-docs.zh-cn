@@ -19,12 +19,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4e8026d5611b2f48ff622dd0b45e21a5f2c9c13
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018902"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363849"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重命名承载 SQL Server 独立实例的计算机
   如果更改了运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称，则会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动期间识别新名称。 不必再次运行安装程序以重置计算机名称。 只需使用以下步骤对存储在 sys.servers 中并由系统函数 @@SERVERNAME 报告的系统元数据进行更新。 更新系统元数据，以反映出使用 @@SERVERNAME 或从 sys.servers 中查询服务器名称的远程连接或应用程序的计算机名称的变化。  
@@ -107,7 +107,7 @@ ms.locfileid: "51018902"
   
  **链接服务器配置** - 链接服务器配置将受到计算机重命名操作的影响。 使用 `sp_addlinkedserver` 或 `sp_setnetname` 可更新计算机名称引用。 有关详细信息，请参阅 [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 或 [sp_setnetname (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-setnetname-transact-sql)。  
   
- **客户端别名** - 采用命名管道的客户端别名将受到计算机重命名操作的影响。 例如，如果创建了指向 SRVR1 的别名“PROD_SRVR”，而且该别名采用 Named Pipes 协议，则相应的管道名称将类似于 `\\SRVR1\pipe\sql\query`。 计算机重命名后，named pipe 的路径将不再有效。 有关 Named Pipes 的详细信息，请参阅 [使用 Named Pipes 创建有效的连接字符串](http://go.microsoft.com/fwlink/?LinkId=111063)。  
+ **客户端别名** - 采用命名管道的客户端别名将受到计算机重命名操作的影响。 例如，如果创建了指向 SRVR1 的别名“PROD_SRVR”，而且该别名采用 Named Pipes 协议，则相应的管道名称将类似于 `\\SRVR1\pipe\sql\query`。 计算机重命名后，named pipe 的路径将不再有效。 有关 Named Pipes 的详细信息，请参阅 [使用 Named Pipes 创建有效的连接字符串](https://go.microsoft.com/fwlink/?LinkId=111063)。  
   
 ## <a name="see-also"></a>请参阅  
  [安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  

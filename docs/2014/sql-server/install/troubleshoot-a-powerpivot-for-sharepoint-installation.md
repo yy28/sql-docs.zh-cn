@@ -11,21 +11,21 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a80e3134fc734f962fa9b082374dc3f9c4a74ba2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 471bfe1a93e76630e6699a2ff07fcf5c6bddc913
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147247"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368599"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>排除 PowerPivot for SharePoint 安装故障
   如果看到错误而不是预期的页面和功能，请执行以下操作。  
   
 -   查阅 SharePoint 和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的发行说明以获取已知安装问题的解决办法。 发行说明随安装介质提供或在您下载软件的 Microsoft 网站上提供。  
   
-    -   [SQL Server 2014 发行说明](http://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx)。  
+    -   [SQL Server 2014 发行说明](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx)。  
   
--   请参阅 Technet wiki 主题[故障排除安装 PowerPivot （和其他加载项）](http://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)。  
+-   请参阅 Technet wiki 主题[故障排除安装 PowerPivot （和其他加载项）](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)。  
   
 ## <a name="issues"></a>问题  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48147247"
   
 4.  验证是否**PowerPivot 功能集成的站点集合**是**Active**。  
   
- 有关此问题的其他原因，请参阅[PowerPivot 库将显示红色 X 图标](http://support.microsoft.com/kb/2361559)(http://support.microsoft.com/kb/2361559)。  
+ 有关此问题的其他原因，请参阅[PowerPivot 库将显示红色 X 图标](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559)。  
   
   

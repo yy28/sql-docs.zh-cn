@@ -1,22 +1,22 @@
 ---
-title: 如何从 SQL 调用 Java |Microsoft Docs
+title: 如何从 SQL-SQL Server 机器学习服务调用 Java
 description: 了解如何使用 Java 编程语言扩展。 在 SQL Server 2019 中的 SQL Server 存储过程从调用的 Java 类。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714928"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644756"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>如何从 SQL Server 2019 调用 Java
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>如何从 SQL Server 2019 预览调用 Java
 
 使用时[Java 语言扩展](extension-java.md)，则[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储的过程是用来调用 Java 运行时的接口。 针对数据库的权限适用于 Java 的代码执行。
 
@@ -33,7 +33,7 @@ ms.locfileid: "46714928"
 * "params"用于将参数传递给一个 Java 类。 需要参数的方法不是支持调用，这使得将参数值传递给您的方法的唯一方法的参数。 
 
 > [!Note]
-> 本说明重述特定于在 CTP 2.0 中的 Java 支持和不支持操作。
+> 本说明重述特定于 CTP 中的 Java 支持和不支持操作 2.x。
 > * 针对存储过程支持的输入的参数。 不是输出参数。
 > * 使用 sp_execute_external_script 参数传送视频流**@r_rowsPerRead**不受支持。
 > * 使用分区**@input_data_1_partition_by_columns**不受支持。
@@ -41,7 +41,7 @@ ms.locfileid: "46714928"
 
 ## <a name="call-spexecuteexternalscript"></a>调用 sp_execute_external_script
 
-[Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储的过程是用来调用 Java 运行时的接口。 下面的示例演示使用 Java 扩展和参数用于指定路径、 脚本和自定义代码 sp_execute_external_script。
+适用于 Windows 和 Linux [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储的过程是用来调用 Java 运行时的接口。 下面的示例演示使用 Java 扩展和参数用于指定路径、 脚本和自定义代码 sp_execute_external_script。
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -65,14 +65,14 @@ EXEC sp_execute_external_script
 
 编译你的 Java 类并在 Java classpath 中放置.class 文件或.jar 文件后，必须提供 SQL Server Java 扩展到类路径中的两个选项：
 
-**选项 1： 将作为参数传递**
+**选项 1:作为参数传递**
 
 指定已编译的代码的路径所需的一种方法是通过将 CLASSPATH 设置为 sp_execute_external_script 过程的输入参数。 [Java 示例](java-first-sample.md#call-method)演示此技术。 如果您选择这种方法，并且有多个路径，请确保使用有效的基础操作系统的路径分隔符：
 
 * 在 Linux 上，用冒号分隔类路径中的路径":"。
 * Windows，在单独的类路径中的路径用分号";"
 
-**选项 2： 注册系统变量**
+**选项 2:注册系统变量**
 
 就像创建 JDK 可执行文件的系统变量，可以创建系统变量的代码路径。 若要此操作，创建名为"CLASSPATH"的系统环境变量
 
@@ -152,6 +152,8 @@ public static short numberofOutputCols = <expected number of output columns>;
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>后续步骤
 

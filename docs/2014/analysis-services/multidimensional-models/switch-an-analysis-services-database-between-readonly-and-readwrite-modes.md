@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147872"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362609"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
   通常情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 需要更改表格的读/写模式或多维数据库。 根据业务需要（如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器池中共享数据库以获得更好的用户体验），经常需要进行上述操作。  
@@ -44,15 +44,15 @@ ms.locfileid: "50147872"
     > [!IMPORTANT]  
     >  在将数据库分离之后， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 就不能再帮助您获取数据库位置。  
   
-3.  右键单击该数据库并选择 **“分离 ”**。  
+3.  右键单击数据库并选择**分离...**  
   
 4.  为要分离的数据库分配一个密码，然后单击 **“确定”** 执行分离命令。  
   
 5.  在 **的左窗格或右窗格中找到** “数据库” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]文件夹。  
   
-6.  右键单击 **“数据库”** 文件夹并选择 **“分离 ”**。  
+6.  右键单击**数据库**文件夹，然后选择**附加...**  
   
-7.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 也可以使用浏览按钮 (**…**) 查找数据库文件夹。  
+7.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，可以使用浏览按钮 (**...**) 以查找数据库文件夹。  
   
 8.  针对该数据库选择读写模式。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147872"
   
 4.  复制下面的 XMLA 脚本模板：  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147872"
   
 3.  在新的 XMLA 选项卡中复制下面的 XMLA 脚本模板  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   
@@ -167,7 +167,7 @@ ms.locfileid: "50147872"
   
 2.  执行 XMLA 命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)   

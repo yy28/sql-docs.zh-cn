@@ -28,15 +28,15 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6d91a6c21bc162ff1f6100e88101f34a0a275cd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084547"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371209"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
-  “主体” 是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。  
+  “主体” 是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围：Windows 服务器、 站点数据库。和主体是否不可分，或集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。  
   
  **Windows 级主体**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48084547"
  每个数据库用户都属于 public 数据库角色。 当尚未对某个用户授予或拒绝对安全对象的特定权限时，则该用户将继承授予该安全对象的 public 角色的权限。  
   
 ## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA 和 sys  
- 每个数据库都包含两个实体：INFORMATION_SCHEMA 和 sys，它们都作为用户出现在目录视图中。 这两个实体是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所必需的。 它们不是主体，不能修改或删除它们。  
+ 每个数据库包含作为用户出现在目录视图的两个实体：INFORMATION_SCHEMA 和 sys。 这两个实体是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所必需的。 它们不是主体，不能修改或删除它们。  
   
 ## <a name="certificate-based-sql-server-logins"></a>基于证书的 SQL Server 登录名  
  名称由双井号 (##) 括起来的服务器主体仅供内部系统使用。 下列主体是在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时从证书创建的，不应删除。  
@@ -88,14 +88,14 @@ ms.locfileid: "48084547"
  每个数据库包括一个 **guest**。 授予 **guest** 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 **来宾**不能删除用户，但可以通过撤消该禁用的`CONNECT`权限。 `CONNECT`可以通过执行撤消权限`REVOKE CONNECT FROM GUEST`master 或 tempdb 以外的任何数据库中。  
   
 ## <a name="client-and-database-server"></a>客户端和数据库服务器  
- 根据定义，客户端和数据库服务器是安全主体，可以得到保护。 在建立安全的网络连接前，这些实体之间可以互相进行身份验证。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758)身份验证协议，定义客户端与网络身份验证服务的交互。  
+ 根据定义，客户端和数据库服务器是安全主体，可以得到保护。 在建立安全的网络连接前，这些实体之间可以互相进行身份验证。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758)身份验证协议，定义客户端与网络身份验证服务的交互。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  下列主题包括在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书的本节中：  
   
 -   [管理登录名、用户和架构操作指南主题](managing-logins-users-and-schemas-how-to-topics.md)  
   
--   [服务器级角色](server-level-roles.md)  
+-   [服务器级别角色](server-level-roles.md)  
   
 -   [数据库级别的角色](database-level-roles.md)  
   

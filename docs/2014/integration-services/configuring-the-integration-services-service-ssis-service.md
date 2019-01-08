@@ -16,17 +16,17 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 532a9ae9b44b300cb8d75ea0ea45d24ad5827887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359679"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>配置 Integration Services 服务（SSIS 服务）
     
 > [!IMPORTANT]  
->  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
+>  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用某个配置文件中的设置。 默认情况下，此配置文件的名称为 MsDtsSrvr.ini.xml，并且该文件位于文件夹 %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn 中。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48114767"
   
   
 > [!CAUTION]  
->  如果注册表编辑不当，可能会导致严重问题并需要重新安装操作系统。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 不能保证可以解决因注册表编辑不当的问题。 编辑注册表之前，请备份所有重要数据。 有关如何备份、还原和编辑注册表的信息，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知识库文章 [Microsoft Windows 注册表说明](http://support.microsoft.com/kb/256986)。  
+>  如果注册表编辑不当，可能会导致严重问题并需要重新安装操作系统。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 不能保证可以解决因注册表编辑不当而导致的问题。 编辑注册表之前，请备份所有重要数据。 有关如何备份、还原和编辑注册表的信息，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知识库文章 [Microsoft Windows 注册表说明](https://support.microsoft.com/kb/256986)。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务在启动时加载配置文件。 对注册表项进行任何更改都需要重新启动服务。  
   

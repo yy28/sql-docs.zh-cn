@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 734c659186f749b740bbde5ef7caa59b6925fa9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150227"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761849"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务
   传输主存储过程任务在 **的实例上的** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库之间传输一个或多个用户定义的存储过程。 若要从 **master** 数据库传输存储过程，该过程的所有者必须是 dbo。  
@@ -46,7 +45,7 @@ ms.locfileid: "48150227"
  传输主存储过程任务并不报告存储过程传输的进度；它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 中定义的执行值`ExecutionValue`任务，属性返回传输的存储过程数。 通过将用户定义的变量分配`ExecValueVariable`传输主存储过程任务，有关存储的过程传输的信息的属性可提供给其他对象在包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 在该任务的 `ExecutionValue` 属性中定义的执行值返回已传输的存储过程数。 通过将用户定义的变量分配给传输主存储过程任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关存储过程传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输主存储过程任务包括下列自定义日志项：  
@@ -55,7 +54,7 @@ ms.locfileid: "48150227"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  此日志项报告传输已经完成。 日志项包括结束时间。  
   
- 此外，一个日志条目`OnInformation`事件报告已传输的存储的过程和一个日志条目的数目`OnWarning`每个存储过程将覆盖目标上写入事件。  
+ 此外，`OnInformation` 事件的日志项报告已传输的存储过程数，`OnWarning` 事件的日志项是为目标服务器上被覆盖的每个存储过程写入的。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  用户必须具有查看源服务器上 **master** 数据库中的存储过程列表的权限，而且必须是 sysadmin 服务器角色的成员，或者必须具有对目标服务器上 **master** 数据库中所创建的存储过程的权限。  
@@ -65,9 +64,9 @@ ms.locfileid: "48150227"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [传输主存储的过程任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输主存储过程任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输主存储的过程任务编辑器&#40;存储过程页&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [传输主存储过程任务编辑器（“存储过程”页）](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

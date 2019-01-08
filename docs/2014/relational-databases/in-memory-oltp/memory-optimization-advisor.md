@@ -13,19 +13,19 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d616312ffec682ad7c37da62c23c4ada1eb98f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140987"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359269"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
   事务性能报告工具（请参阅 [确定表或存储过程是否应移植到内存中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）在移植到使用内存中 OLTP 时通知您的数据库中的哪些表会给您带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用内存优化顾问帮助您将基于磁盘的数据库表迁移到内存中 OLTP。  
   
  开始时，连接至包含基于磁盘的数据库表的实例。 你可以连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 但是，如果您想要使用该顾问执行迁移操作，则必须连接到启用了内存中 OLTP 功能的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 有关内存中 OLTP 要求的详细信息，请参阅 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)。  
   
- 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用内存优化顾问进行演练  
  在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”**。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  

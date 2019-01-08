@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.login.f1
@@ -12,12 +12,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81bf42f1daae71e2b2730b611c62c195e73d9f75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 906bc6f3426913adfbff94b8f8b76d641c4a04a4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362219"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>连接到服务器（“登录”页）数据库引擎
   连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 时，使用此选项卡可查看或指定选项。  
@@ -31,7 +31,7 @@ ms.locfileid: "48207387"
   
  在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
- 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接到 **master**。 如果您指定一个用户数据库，在对象资源管理器中将只会看到该数据库及其对象。 如果连接到 **master**，可以看到所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
+ 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接到 **master**。 如果您指定一个用户数据库，在对象资源管理器中将只会看到该数据库及其对象。 如果连接到 **master**，可以看到所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](https://go.microsoft.com/fwlink/?LinkId=163948)。  
   
  **服务器名称**  
  选择要连接到的服务器实例。 默认情况下，显示上次连接到的服务器实例。  
@@ -41,7 +41,7 @@ ms.locfileid: "48207387"
   
  在通过 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
- 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接到 **master**。 如果您指定一个用户数据库，在对象资源管理器中将只会看到该数据库及其对象。 如果连接到 **master**，可以看到所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
+ 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接到 **master**。 如果您指定一个用户数据库，在对象资源管理器中将只会看到该数据库及其对象。 如果连接到 **master**，可以看到所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](https://go.microsoft.com/fwlink/?LinkId=163948)。  
   
  **Windows 身份验证模式（Windows 身份验证）**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证模式允许用户通过 Windows 用户帐户进行连接。  

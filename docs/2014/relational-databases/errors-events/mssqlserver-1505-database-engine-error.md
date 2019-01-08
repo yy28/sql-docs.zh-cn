@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb3b255e145c489968b0d62b73aaa526bec8446c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359309"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -59,7 +59,7 @@ ms.locfileid: "48134877"
   
 -   当为唯一索引或唯一约束选择列时，请选择那些定义为 NOT NULL 的列。 这样，当多行的键值包含 NULL 时，就消除了导致唯一性冲突的可能性。  
   
--   如果重复值是因数据输入错误而引起的，则可以先手动更正数据，然后创建索引或约束。 有关删除表中重复行的信息，请参阅知识库文章 139444：[How to remove duplicate rows from a table in SQL Server](http://support.microsoft.com/kb/139444)（如何删除 SQL Server 表中的重复行）。  
+-   如果重复值是因数据输入错误而引起的，则可以先手动更正数据，然后创建索引或约束。 有关在表中删除重复行的信息，请参阅知识库文章 139444:[如何从 SQL Server 中的表中删除重复行](https://support.microsoft.com/kb/139444)。  
   
 ## <a name="see-also"></a>请参阅  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   

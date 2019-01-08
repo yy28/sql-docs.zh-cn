@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom user interface [Integration Services], custom foreach enumerators
@@ -15,12 +13,12 @@ ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95223c47925b55edbe9357cd04387fd54185a9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b60b320b217a7e0c3520a28d56e06cb4622d7f2b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088867"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369369"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>为自定义 ForEach 枚举器开发用户界面
   重写基类的属性和方法的实现以提供自定义功能后，您可能需要为 Foreach 枚举器创建自定义用户界面。 如果未创建自定义用户界面，用户只能使用“属性”窗口来配置新的自定义 Foreach 枚举器。  
@@ -41,7 +39,7 @@ ms.locfileid: "48088867"
 ### <a name="saving-settings"></a>保存设置  
  可以重写 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.SaveSettings%2A> 方法，以在用户关闭编辑器时，将用户选择的值从控件复制到枚举器的属性。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [创建自定义 Foreach 枚举器](creating-a-custom-foreach-enumerator.md)   

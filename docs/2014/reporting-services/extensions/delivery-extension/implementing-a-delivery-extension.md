@@ -17,17 +17,17 @@ ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5e310dafaafabb55af520bc20ebea5cdceea8b82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e00ae48ff528f9d877debe89f0dd8ca69f117fd6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175913"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376709"
 ---
 # <a name="implementing-a-delivery-extension"></a>实现传递扩展插件
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
   
- 有关传递扩展插件的示例实现，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
+ 有关传递扩展插件的示例实现，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="in-this-section"></a>本节内容  
  [传递扩展插件概述] 传递的扩展-overview.md)  

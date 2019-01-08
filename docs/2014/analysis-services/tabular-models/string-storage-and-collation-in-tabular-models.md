@@ -11,19 +11,19 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072727"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353769"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
   字符串（文本值）以高度压缩的格式存储于表格模型中；由于这一压缩，您在检索整个或部分字符串时可能会得到意外结果。 此外，因为字符串区域设置和排序规则在层次结构上继承自最接近的父对象，所以，如果未显式定义字符串语言，父对象的区域设置和排序规则可能会影响存储各字符串的方式以及字符串是唯一的还是与父排序规则定义的相似字符串合并。  
   
  本主题介绍压缩和存储字符串的机制，并且提供一些示例，阐释排序规则和语言是如何影响表格模型中文本公式的结果的。  
   
-## <a name="storage"></a>存储器  
+## <a name="storage"></a>存储  
  在表格模型中，所有数据都是高度压缩的，以便更好地容纳于内存中。 因此，可认为在词法上等效的所有字符串仅存储一次。 该字符串的第一个实例用作规范表示形式，此后的每个等效字符串都作为与第一个匹配项相同的压缩值进行索引。  
   
  关键问题是：何谓词法等效的字符串？ 如果两个字符串可被视为相同的单词，则认为它们在词法上是等效的。 例如，在英语中，当您在字典中搜索 **violin** 一词时，根据字典的编辑策略，可能会找到词条 **Violin** 或 **violin**；但通常您会认为这两个词条是等效的，并且忽略大小写中的差异。 在表格模型中，确定两个字符串在词法上是否等效的因素不是编辑策略或用户偏好，而是分配给列的区域设置和排序规则顺序。  
@@ -55,7 +55,7 @@ ms.locfileid: "48072727"
 |trEE|  
 |PlAnT|  
   
- 如果您在模型中使用列 **Classification – English**，则只要您显示植物分类，就不仅会看到原始值及其在大小写上的不同用法，还会看到第一个实例。 其原因在于， **tree** 的所有大小写变体在此排序规则和区域设置中都被视为等效的；因此，只保存了一个字符串，并且系统遇到的该字符串的第一个实例就是保存的字符串。  
+ 如果使用的列， **Classification-English**，在您的模型，只要您显示植物分类你将看到不是原始值，用于其上的不同用法和大小写，但只有第一个实例。 其原因在于， **tree** 的所有大小写变体在此排序规则和区域设置中都被视为等效的；因此，只保存了一个字符串，并且系统遇到的该字符串的第一个实例就是保存的字符串。  
   
 > [!WARNING]  
 >  您可以决定根据自己的判断，决定要定义哪一字符串将作为第一个存储的字符串，但可能很难这样做。 因为没有简单的方法可以事先确定引擎应该首先处理哪一行，所以假定所有值都被视为相同的。 如果您需要设置标准值，则应在加载模型前清除您的所有字符串。  
@@ -71,7 +71,7 @@ ms.locfileid: "48072727"
   
 -   排序规则定义字符的顺序及其等效性。  
   
- 特别要注意的是，语言标识符不仅标识语言，还标识使用该语言的国家或地区。 每个语言标识符还具有默认的排序规则规范。 有关语言标识符的详细信息，请参阅 [Microsoft 分配的区域设置 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)。 您可以使用 LCID Dec 列在手动插入值时获取正确的 ID。 有关排序规则的 SQL 概念的详细信息，请参阅 [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)。 有关针对 Windows 排序规则名称的排序规则指示符和比较样式的信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 主题介绍了如何将 Windows 排序规则名称映射到用于 SQL 的名称。  
+ 特别要注意的是，语言标识符不仅标识语言，还标识使用该语言的国家或地区。 每个语言标识符还具有默认的排序规则规范。 有关语言标识符的详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 您可以使用 LCID Dec 列在手动插入值时获取正确的 ID。 有关排序规则的 SQL 概念的详细信息，请参阅 [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)。 有关针对 Windows 排序规则名称的排序规则指示符和比较样式的信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 主题介绍了如何将 Windows 排序规则名称映射到用于 SQL 的名称。  
   
  一旦创建了您的表格模型数据库后，该模型中的所有新对象都将从数据库属性继承语言和排序规则属性。 所有对象都是这样的。 继承路径将从该对象开始，查看父级中是否存在要继承的任何语言和排序规则属性，如果找不到，则继续向上查找到顶部，在数据库级别查找语言和排序规则属性。 换言之，如果您没有为某一对象指定语言和排序规则属性，则默认情况下，对象将继承其最接近的父级的属性。  
   

@@ -13,12 +13,12 @@ ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a483cf1df89da6f4b28de5e86986491e0ce05b1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 629b4f350ed001edbe36efaa990a716935d493ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125647"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366129"
 ---
 # <a name="schedule-properties-general-page"></a>计划属性（“常规”页）
   使用此页可查看或修改共享计划。 共享计划可以用于替代报表特定计划或订阅特定计划。 将在保存计划之后应用对计划进行的更改。 对计划进行编辑不会影响当前正在进行的作业。 如果要编辑正在使用的计划，则将允许完成从该计划触发的、当前正在处理的所有报表和订阅。  
@@ -30,7 +30,7 @@ ms.locfileid: "48125647"
  若要打开此页上，启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，打开**共享计划**文件夹中，右键单击共享的计划，然后选择**属性**。  
   
 > [!NOTE]  
->  并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本均提供此功能；并且在运行不具有此功能的版本时，此页将不会出现。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本均提供此功能；并且在运行不具有此功能的版本时，此页将不会出现。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ## <a name="options"></a>选项  
  **名称**  

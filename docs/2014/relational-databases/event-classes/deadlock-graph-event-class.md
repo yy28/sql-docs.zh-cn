@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d27707fc52c2620d6905cbd23e1b710f927bd58b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105737"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782549"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 事件类
   **Deadlock Graph** 事件类提供了有关死锁的 XML 描述。 该类与 **Lock:Deadlock** 事件类同时发生。  
@@ -35,7 +34,7 @@ ms.locfileid: "48105737"
 |**LoginName**|**nvarchar**|用户的登录名（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。 对于此事件，此值始终为系统用户。|11|用户帐户控制|  
 |**LoginSid**|**image**|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。 对于此事件，此值始终为系统用户的 SID。|41|用户帐户控制|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|检测到死锁的时间。|14|用户帐户控制|  
 |**TextData**|**ntext**|死锁的 XML 描述。|1|用户帐户控制|  

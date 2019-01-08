@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services packages, running
@@ -16,12 +14,12 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4baf6550273218cd8d560ef9ea3950924fab544
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0cefe1fa46cda13a177f07ebcbf19c02efa8337
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138727"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370389"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
   若要从未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包，请启动这些包，以便它们可在安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的远程计算机上运行。 为此，可在本地计算机上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、Web 服务或远程组件来启动远程计算机上的包。 如果尝试直接从本地计算机启动远程包，则这些包将加载到本地计算机上，并尝试在本地计算机上运行。 如果本地计算机未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，这些包将不会运行。  
@@ -38,7 +36,7 @@ ms.locfileid: "48138727"
   
 -   [使用 Web 服务或远程组件以编程方式运行远程包](#service)  
   
- 本主题中使用的几乎所有加载和保存包的方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 例外情况是用于执行本主题中演示的 ADO.NET 方法**sp_start_job**存储过程，只需引用`System.Data`。 在新项目中添加对 `Microsoft.SqlServer.ManagedDTS` 程序集的引用后，请使用 `using` 或 `Imports` 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
+ 本主题中使用的几乎所有加载和保存包的方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 例外情况是用于执行本主题中演示的 ADO.NET 方法**sp_start_job**存储过程，只需引用`System.Data`。 在新项目中添加对 `Microsoft.SqlServer.ManagedDTS` 程序集的引用后，请使用 <xref:Microsoft.SqlServer.Dts.Runtime> 或 `using` 语句导入 `Imports` 命名空间。  
   
 ###  <a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
  下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
@@ -46,7 +44,7 @@ ms.locfileid: "48138727"
 > [!NOTE]  
 >  sp_start_job 存储过程的返回值指示该存储过程是否已成功启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 此返回值不指示该包成功还是失败。  
   
- 有关对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 Microsoft 文章[从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](http://support.microsoft.com/kb/918760)。  
+ 有关对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 Microsoft 文章[从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)。  
   
 ### <a name="sample-code"></a>示例代码  
   
@@ -422,9 +420,9 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部资源  
   
--   technet.microsoft.com 上的视频：[如何使用 SQL Server 代理自动执行 SSIS 包（SQL Server 视频）](http://technet.microsoft.com/sqlserver/ff686764.aspx)  
+-   视频中，[如何：使用 SQL Server 代理 （SQL Server 视频） 自动执行 SSIS 包](https://technet.microsoft.com/sqlserver/ff686764.aspx)，technet.microsoft.com 上  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [了解本地和远程执行之间的区别](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

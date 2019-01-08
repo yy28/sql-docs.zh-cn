@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae726d90d71259715f9eb80619e74c7bfbf990dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 85e3268bcca9f4800bd59fa5be541dc6f9502ef5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810883"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368699"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
   导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个逻辑备份，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的数据库的本地副本。  
@@ -43,7 +43,7 @@ ms.locfileid: "43810883"
   
  导出过程将 DAC 版本设置为 1.0.0.0，并将导出文件中的 DAC 说明设置为空字符串。 如果从 DAC 部署数据库，则导出文件中的 DAC 定义包含为原始 DAC 指定的名称，否则，将把 DAC 名称设置为数据库名称。  
   
- 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实验室中有一个可用于测试导出和导入 DAC 和数据库的示例应用程序。 有关如何下载和使用此示例的说明，请参阅 [Microsoft Azure SQL Database 的数据库导入和导出](http://go.microsoft.com/fwlink/?LinkId=219404)。  
+ 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实验室中有一个可用于测试导出和导入 DAC 和数据库的示例应用程序。 有关如何下载和使用此示例的说明，请参阅 [Microsoft Azure SQL Database 的数据库导入和导出](https://go.microsoft.com/fwlink/?LinkId=219404)。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库导出 DAC 或数据库。  
@@ -62,7 +62,7 @@ ms.locfileid: "43810883"
   
 3.  右键单击数据库名称。  
   
-4.  单击“任务” ，然后选择“导出数据层应用程序…”  
+4.  单击“任务”，然后选择“导出数据层应用程序…”  
   
 5.  完成向导对话框：  
   
@@ -87,12 +87,12 @@ ms.locfileid: "43810883"
   
  **下一步** - 继续到“选择 DAC 包”页。  
   
- **取消** – 取消操作并关闭向导。  
+ **取消** - 取消操作并关闭向导。  
   
 ##  <a name="Export_settings"></a> “导出设置”页  
  使用此页可以指定要创建 BACPAC 文件的位置。  
   
--   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击 **“浏览…”** 以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
+-   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
 -   **保存到 Windows Azure** - 在 Windows Azure 容器中创建 BACPAC 文件。 若要验证此选项，则您必须连接到 Microsoft Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 请注意，将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "43810883"
 ##  <a name="NetApp"></a> 使用 .Net Framework 应用程序  
  **使用 .Net Framework 应用程序中的 Export() 方法导出 DAC。**  
   
- 若要查看代码示例，请下载有关 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)的 DAC 示例应用程序  
+ 若要查看代码示例，请下载有关 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)的 DAC 示例应用程序  
   
 1.  创建一个 SMO Server 对象，并且将该对象设置为包含要导出的 DAC 的实例。  
   
-2.  打开`ServerConnection`对象，并连接到同一实例。  
+2.  打开 `ServerConnection` 对象，并连接到同一实例。  
   
 3.  使用 `Export` 类型的 `Microsoft.SqlServer.Management.Dac.DacStore` 方法导出 DAC。 指定要导出的 DAC 的名称以及指向将用于放置导出文件的文件夹的路径。  
   

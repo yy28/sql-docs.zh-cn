@@ -11,17 +11,17 @@ ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c047f968e6fae34b7f4a02d57dbedad38b6d7465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b53e65270e618bace3753aefe2ce72397e37821
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082617"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365299"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
   报表参数为选择报表数据、连接相关报表以及更改报表显示提供了一种方法。 您可以提供一个默认值和一列可用值，用户可以更改所选值。  
   
- 报表发布后，您可以在报表服务器上更改报表参数的默认值、可用值以及其他属性。 通过创建链接报表，您可以提供多组默认参数值。 详细信息，请参阅"设置参数属性已发布报表的"中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的文档[SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)。  
+ 报表发布后，您可以在报表服务器上更改报表参数的默认值、可用值以及其他属性。 通过创建链接报表，您可以提供多组默认参数值。 有关详细信息，请参阅位于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [上的](https://go.microsoft.com/fwlink/?linkid=120955)文档中的“设置已发布报表的参数属性”。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,13 +59,13 @@ ms.locfileid: "48082617"
 2.  右键单击报表参数，然后单击 **“删除”**。  
   
 ## <a name="see-also"></a>请参阅  
- [添加、 更改或删除可用值为报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](add-change-or-delete-available-values-for-a-report-parameter.md)   
  [为报表参数添加、更改或删除默认值（报表生成器和 SSRS）](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [更改报表参数的顺序&#40;报表生成器和 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [更改报表参数的顺序（报表生成器和 SSRS）](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   
  [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [向报表添加级联参数&#40;报表生成器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [教程：向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [教程&#40;报表生成器&#41;](../report-builder-tutorials.md)   
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [参数集合引用（报表生成器和 SSRS）](built-in-collections-parameters-collection-references-report-builder.md)   

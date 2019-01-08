@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
@@ -16,12 +15,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a6e6fd3c6639abedc0324d2f8831e782270bc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229777"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363119"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 数据读取器任务
   WMI 数据读取器任务使用 Windows Management Instrumentation (WMI) 查询语言来运行查询，此查询语言从 WMI 返回有关计算机系统的信息。 可以将 WMI 数据读取器任务用于下列目的：  
@@ -49,7 +48,7 @@ ms.locfileid: "48229777"
  WMI 数据读取器任务使用 WMI 连接管理器连接到该任务从中读取 WMI 信息的服务器。 有关详细信息，请参阅 [WMI Connection Manager](../connection-manager/wmi-connection-manager.md)。  
   
 ## <a name="wql-query"></a>WQL 查询  
- WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文档。  
+ WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文档。  
   
 > [!NOTE]  
 >  WMI 类因 Windows 版本的不同而异。  
@@ -85,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [WMI 数据读取器任务编辑器&#40;WMI 选项页&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [WMI 数据读取器任务编辑器（“WMI 选项”页）](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

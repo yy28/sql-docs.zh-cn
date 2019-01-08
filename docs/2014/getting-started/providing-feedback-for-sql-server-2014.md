@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376739"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供有关 SQL Server 2014 的反馈
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 非常感谢您花费宝贵时间帮助我们改进 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 产品和文档。 您可以提供有关产品功能和用户界面的建议和错误报告，提交文档反馈，以及选择向 [!INCLUDE[msCoName](../includes/msconame-md.md)] 自动发送错误报告和使用情况数据以供分析。 此处分别介绍了以上三个反馈选项。  
@@ -37,7 +37,7 @@ ms.locfileid: "48109876"
   
  您可以通过多种方式找到“[!INCLUDE[msCoName](../includes/msconame-md.md)] 连接”上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 反馈页。  
   
--   转到“[!INCLUDE[msCoName](../includes/msconame-md.md)] 连接”上的“[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 反馈”[网页](http://go.microsoft.com/fwlink/?linkid=34178)。  
+-   转到“[!INCLUDE[msCoName](../includes/msconame-md.md)] 连接”上的“[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 反馈”[网页](https://go.microsoft.com/fwlink/?linkid=34178)。  
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“帮助”工具栏上，单击“发送反馈”按钮，或选择“社区/发送反馈”命令。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109876"
   
 -   从实用工具访问“帮助”。  
   
--   在“工具/自定义...”命令的“工具栏”选项卡上，选中“帮助”复选框 。  
+-   选择**帮助**上的复选框**工具栏**选项卡**工具/自定义...** 命令。  
   
 ## <a name="automatic-error-and-usage-reporting"></a>自动报告错误和使用情况  
  可以将各个功能自动设置为报告错误并发送有关您如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 软件和服务的数据。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 将使用这些信息来改进 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 所有数据均保密。  

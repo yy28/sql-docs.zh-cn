@@ -18,19 +18,19 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6dd33dab83157d9436184411f7af323e339030f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88cc24ed5a8165da839c12caebb1028d05e6afcd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363129"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化报表服务器（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，已初始化的服务器是指可以在报表服务器数据库中加密和解密数据的服务器。 初始化是一项必需的报表服务器操作。 初始化在报表服务器服务第一次启动时发生。 在将报表服务器联接到现有部署，或在恢复进程中手动重新创建密钥时也需要进行初始化。 有关使用加密密钥的方法和原因的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)和[存储加密的报表服务器数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
   
  加密密钥部分基于报表服务器服务的配置文件信息。 如果更改用于运行报表服务器服务的用户标识，则必须相应地更新密钥。 如果使用 Reporting Services 配置工具更改标识，将自动处理此步骤。  
   
- 如果由于某种原因初始化失败，则报表服务器返回`RSReportServerNotActivated`用户和服务请求的响应中出错。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅 Technet Wiki 中的 [SSRS：解决 Reporting Services 的问题和错误](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)。  
+ 如果由于某些原因导致初始化失败，则报表服务器在响应用户和服务请求时将返回 `RSReportServerNotActivated` 错误。 这种情况下，可能需要排除系统或服务器配置故障。 有关详细信息，请参阅[SSRS:使用 Reporting Services 中解决的问题和错误](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) Technet Wiki 中。  
   
 ## <a name="overview-of-the-initialization-process"></a>初始化过程概述  
  初始化过程将创建并存储一个用于加密的对称密钥。 对称密钥由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 加密服务创建，随后由报表服务器服务用来加密和解密数据。 对称密钥本身通过非对称密钥进行加密。  
@@ -56,7 +56,7 @@ ms.locfileid: "48181937"
   
 ## <a name="how-to-initialize-a-report-server"></a>如何初始化报表服务器  
   
--   若要初始化报表服务器，请使用 Reporting Services 配置工具。 在创建和配置报表服务器数据库时，将自动进行初始化。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+-   若要初始化报表服务器，请使用 Reporting Services 配置工具。 在创建和配置报表服务器数据库时，将自动进行初始化。 有关详细信息，请参阅 [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)中支持的版本。  
   
 -   若要针对扩展部署初始化报表服务器，可以使用 Reporting Services 配置工具中的“初始化”页或使用 **RSKeymgmt** 实用工具。 要按照分步说明操作，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "48181937"
  只有当安装标识符与公钥相匹配时，才会初始化报表服务器。 如果匹配成功，则创建允许可逆加密的对称密钥。 如果匹配失败，则将禁用报表服务器，在这种情况下，可能需要应用备份密钥；如果备份密钥不可用或无效，则可能需要删除加密数据。 有关报表服务器使用的加密密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)。  
   
 > [!NOTE]  
->  还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序以编程的方式初始化报表服务器。 有关详细信息，请参阅[访问 Reporting Services WMI 提供程序](../tools/access-the-reporting-services-wmi-provider.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+>  还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序以编程的方式初始化报表服务器。 有关详细信息，请参阅 [联机丛书中的](../tools/access-the-reporting-services-wmi-provider.md) 访问 Reporting Services WMI 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>如何确认报表服务器初始化  
  要确认报表服务器初始化，请通过在命令窗口中键入 http://\<servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令。 如果发生 `RSReportServerNotActivated` 错误，则表示初始化失败。  
   
 ## <a name="see-also"></a>请参阅  
- [存储加密的报表服务器数据&#40;SSRS 配置管理器&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

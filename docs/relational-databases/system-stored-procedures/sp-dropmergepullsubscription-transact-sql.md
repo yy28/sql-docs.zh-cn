@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergepullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47a07c9d0f58607f0e19bde81aa8e6ffbabf4877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 151e990e6a6f353b6b35eb669300f305fd562f2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764367"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812989"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或创建合并请求订阅的用户可以执行**sp_dropmergepullsubscription**。 **Db_owner**固定的数据库角色才可以执行**sp_dropmergepullsubscription**如果创建合并请求订阅的用户属于此角色。  
   
 ## <a name="see-also"></a>请参阅  

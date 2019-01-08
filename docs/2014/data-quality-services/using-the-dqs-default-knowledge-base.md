@@ -10,31 +10,31 @@ ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf7645cbe690898fc1bbad58112a2a61a042aeba
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ae4688108f7e0d2bf045581b7afe50235c7ff012
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032734"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368261"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 默认知识库
   本主题介绍随 **(DQS) 一起安装的默认知识库**DQS 数据 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 。 这是包含以下域的预先生成的默认知识库：  
   
--   **国家/地区**：对于每个地点，包含常规的长名称（国家/地区指定的官方名称）和短名称（列表、地图等使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区长名称。  
+-   **国家/地区**:包含常规长 （国家/地区指定的官方名称） 和短名称 （列表、 地图等使用的通用名称）、 两字母缩写形式、 三字母缩写形式和三位代码的每个位置。  将前导值设置为国家/地区长名称。  
   
--   **国家/地区（三字母前导）**：对于每个地点包含常规长名称（国家/地区指定的官方名称）和短名称（列表、地图等中使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区三字母缩写形式。  
+-   **国家/地区 （三字母前导）**:包含常规长 （国家/地区指定的官方名称） 和短名称 （列表、 地图等使用的通用名称）、 两字母缩写形式、 三字母缩写形式和三位代码的每个位置。  将前导值设置为国家/地区三字母缩写形式。  
   
--   **国家/地区（两字母前导）**：对于每个地点，包含常规的长名称（国家/地区指定的官方名称）和短名称（列表、地图等使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区两字母缩写形式。  
+-   **国家/地区 （两字母前导）**:包含常规长 （国家/地区指定的官方名称） 和短名称 （列表、 地图等使用的通用名称）、 两字母缩写形式、 三字母缩写形式和三位代码的每个位置。  将前导值设置为国家/地区两字母缩写形式。  
   
--   **美国 - 县**：包含美国县的列表。  
+-   **美国-县**:包含美国县的列表。  
   
--   **美国 - 姓氏**：包含 2000 年人口普查中出现 100 或更多次的姓氏列表。  
+-   **美国-姓氏**:包含最后一个名称 （年） 出现 100 或更多次的人口普查 2000年中的列表。  
   
--   **美国 - 地方**：包含2000 年人口普查中抽取的 50 个州、哥伦比亚特区和波多黎各的地方名称列表。  
+-   **美国-地方**:包含 50 个州、 哥伦比亚特区和波多黎各普查中提取的位置的列表。  
   
--   **美国 - 州**：包含美国每个州的常规长（官方）名称和两字母缩写形式。 将前导值设置为常规州名称。  
+-   **美国-州**:包含常规长 （官方） 名称和美国各州的两字母缩写形式。 将前导值设置为常规州名称。  
   
--   **美国 - 州（两字母标头）**：包含美国每个州的常规长（官方）名称和两字母缩写形式。 将前导值设置为两字母缩写形式的州名称。  
+-   **美国-州 （两字母标头）**:包含常规长 （官方） 名称和美国各州的两字母缩写形式。 将前导值设置为两字母缩写形式的州名称。  
   
 ## <a name="using-the-default-knowledge-base"></a>使用默认知识库  
  您可以通过以下方式使用默认 DQS 知识库（DQS 数据）。  
@@ -45,7 +45,7 @@ ms.locfileid: "51032734"
   
 -   使用默认知识库创建新知识库。 要从现有知识库创建知识库，请参阅 [Create a Knowledge Base](../../2014/data-quality-services/create-a-knowledge-base.md)。  
   
--   在 [Integration Services 中的 DQS 清理组件](http://go.microsoft.com/fwlink/?LinkId=238830) 和 [Master Data Services Excel 外接程序](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)中使用它。  
+-   在 [Integration Services 中的 DQS 清理组件](https://go.microsoft.com/fwlink/?LinkId=238830) 和 [Master Data Services Excel 外接程序](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)中使用它。  
   
 ## <a name="see-also"></a>请参阅  
  [DQS 知识库和域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  

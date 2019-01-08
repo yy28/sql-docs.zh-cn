@@ -21,12 +21,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 192300903c19913ff3762a744db9f999589e2c53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822177"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392630"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47822177"
 > [!TIP]  
 >  有关这些限制和服务层的更多上下文，请参阅主题[托管实例服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)。  
     
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图可供有权连接到的所有用户角色**主**数据库。  
   
 ## <a name="remarks"></a>备注  

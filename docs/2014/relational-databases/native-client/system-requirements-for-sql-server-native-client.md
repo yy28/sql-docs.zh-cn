@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SQL Server Native Client]
@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bba3322fdd55116cb872a8653a515ac449f5a112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150947"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365119"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据访问功能（如 MARS），必须安装以下软件：  
@@ -29,7 +29,7 @@ ms.locfileid: "48150947"
   
 -   服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 要求使用 Windows Installer 3.0。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上已经安装了 Windows Installer 3.0。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅[Windows Installer 3.0 Redistributable](http://go.microsoft.com/fwlink/?LinkId=46459)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 要求使用 Windows Installer 3.0。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统上已经安装了 Windows Installer 3.0。 您需要将其显式安装到所有其他平台上。 有关详细信息，请参阅[Windows Installer 3.0 Redistributable](https://go.microsoft.com/fwlink/?LinkId=46459)。  
   
 > [!NOTE]  
 >  确保以管理员权限进行登录，然后再安装此软件。  

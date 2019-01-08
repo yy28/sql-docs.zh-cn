@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -26,12 +24,12 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6de41e51b171e57b020309df80c84bdda77fe074
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e9266d7c5dbb97a4a3aed3d0e2654ad3eacbcd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376279"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>在自定义任务中引发和定义事件
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎提供了一组事件，这些事件提供验证和执行任务时任务进度的状态。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口用于定义这些事件，并且该接口可作为 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的参数提供给任务。  
@@ -191,7 +189,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 事件处理程序](../../integration-services-ssis-event-handlers.md)   

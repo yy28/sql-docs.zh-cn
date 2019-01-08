@@ -19,15 +19,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161757"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353915"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 联机丛书
-  欢迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 联机丛书。 联机丛书包含任务描述以及说明如何使用执行数据管理和商业智能工作的参考文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+  欢迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 联机丛书。 联机丛书包含任务说明和参考文档，此类信息旨在介绍如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]执行数据管理和商业智能工作。  
   
  **进行试用：**  
  ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转**[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 SQL Server 2014 (SP1) 的详细信息，请参阅[SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。 
@@ -50,17 +50,17 @@ ms.locfileid: "48161757"
   
  **SQL Server 网站**  
   
--   [Microsoft.com 上的 SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)  
+-   [Microsoft.com 上的 SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server 资源中心](http://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server 资源中心](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [SQL Server 技术中心](http://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server 技术中心](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [数据平台开发人员中心](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [数据平台开发人员中心](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [XML 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [XML 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 配置管理器帮助](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

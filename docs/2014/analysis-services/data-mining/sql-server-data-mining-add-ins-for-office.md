@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357238"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Office 数据挖掘外接程序
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 数据挖掘外接程序是用于预测分析的一组轻型工具，允许您使用 Excel 中的数据生成分析模型来用于预测、建议或浏览。  
@@ -43,11 +43,11 @@ ms.locfileid: "50099878"
   
      高级用户可通过拖放“高级查询编辑器”生成自定义 DMX 查询，或使用 Excel VBA 自动进行预测。  
   
--   **记载和管理。** 在您创建了某一数据集并且生成了一些模型后，通过生成数据和模型参数的统计摘要记录所做工作以及洞察到的情况。  
+-   **记载和管理。** 创建数据集并生成了一些模型后，通过生成的数据和模型参数的统计摘要记录你的工作和你的见解。  
   
--   **浏览和展现。** 数据挖掘不是可完全自动进行的活动 - 需要探索并理解结果才能采取有意义的措施。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
+-   **浏览和展现。** 数据挖掘不是完全自动执行的活动-需要探索并理解结果才能采取有意义的操作。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
   
--   **部署和集成。** 创建有用的模型后，通过使用管理工具将该模型从试验服务器导出到另一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，将该模型投入生产。  
+-   **部署和集成。** 创建有用的模型，将您的模型投入生产，通过使用管理工具以模型从试验服务器导出到另一个实例后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
      您还可以将模型保留在服务器上创建它时的位置，但使用 Integration Services 或 DMX 脚本刷新定型数据并运行预测。  
   
@@ -80,10 +80,10 @@ ms.locfileid: "50099878"
   
 -   Business Intelligence  
   
--   Standard  
+-   标准  
   
  根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅[SQL Server 2014 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。  
   
- 有关安装的其他帮助，请参见此下载中心提供的： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 有关安装的其他帮助，请参见此下载中心提供的： [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

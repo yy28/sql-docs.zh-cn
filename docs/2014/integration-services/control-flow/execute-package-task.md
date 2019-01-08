@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -17,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129129"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365769"
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -57,7 +56,7 @@ ms.locfileid: "48129129"
   
  而有时您则希望父包和子包作为一个单元一起失败，或者您可能不希望引发其他进程的额外开销。 例如，如果子进程失败，而包的父进程中的后续处理取决于子进程的成功，则子包应当在父包的进程中运行。  
   
- 默认情况下，执行包任务的 ExecuteOutOfProcess 属性设置为`False`，并在与父包相同的进程中运行子包。 如果将此属性设置为 `True`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将属性设置为`True`，则不能调试仅工具安装中的包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../install-windows/install-integration-services.md)  
+ 默认情况下，执行包任务的 ExecuteOutOfProcess 属性设置为`False`，并在与父包相同的进程中运行子包。 如果将此属性设置为 `True`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将属性设置为 `True`，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>扩展事务  
  父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](../inherited-transactions.md)。  
@@ -98,14 +97,14 @@ ms.locfileid: "48129129"
  有关详细信息，请参阅 [在子包中使用变量和参数的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ### <a name="accessing-parent-package-variables"></a>访问父包变量  
- 子包可以通过使用脚本任务访问父包变量。 在 **“脚本任务编辑器”** 的 **“脚本”** 页上输入父包变量的名称时，不要在变量名称中包括 **“用户:”** 。 否则，子包在您运行父包时找不到该变量。 有关使用脚本任务访问父包变量的详细信息，请参阅此博客文章[SSIS： 访问父包中的变量](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+ 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”。 否则，子包在运行父包时找不到该变量。 有关使用脚本任务访问父包变量的详细信息，请参阅此博客文章[SSIS:访问父包中的变量](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [执行包任务编辑器](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -117,8 +116,8 @@ ms.locfileid: "48129129"
   
 ## <a name="related-content"></a>相关内容  
   
--   博客文章[SSIS： 应该执行子包进程内或进程外？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   博客文章[SSIS:应执行子包进程内或进程外？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
--   博客文章[SSIS： 访问父包中的变量](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   博客文章[SSIS:访问父包中的变量](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
   

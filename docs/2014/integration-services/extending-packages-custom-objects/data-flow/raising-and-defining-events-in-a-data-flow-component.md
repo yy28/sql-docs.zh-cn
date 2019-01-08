@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,12 +20,12 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76ac62f1d67caa134439337a716bde17b5fa9a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 454d14e0ee0973b5bba7ca0357bbc890812ddbd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215997"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358599"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>在数据流组件中引发和定义事件
   组件开发人员可通过调用对 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 属性公开的方法，引发在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 接口中定义的一部分事件。 还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 集合定义自定义事件，并使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 方法在执行过程中引发这些事件。 本节介绍如何创建和引发事件，并提供在设计时应于何时引发事件的指南。  
@@ -58,7 +56,7 @@ public override void RegisterEvents()
     string [] parameterNames = new string[2]{"RowCount", "StartTime"};  
     ushort [] parameterTypes = new ushort[2]{ DtsConvert.VarTypeFromTypeCode(TypeCode.Int32), DtsConvert.VarTypeFromTypeCode(TypeCode.DateTime)};  
     string [] parameterDescriptions = new string[2]{"The number of rows to sort.", "The start time of the Sort operation."};  
-    EventInfos.Add("StartingSort","Fires when the component begins sorting the rows.",false,ref parameterNames, ref paramterTypes, ref parameterDescriptions);  
+    EventInfos.Add("StartingSort","Fires when the component begins sorting the rows.",false,ref parameterNames, ref parameterTypes, ref parameterDescriptions);  
 }  
 public override void ProcessInput(int inputID, PipelineBuffer buffer)  
 {  
@@ -78,7 +76,7 @@ Public  Overrides Sub RegisterEvents()
   Dim parameterNames As String() = New String(2) {"RowCount", "StartTime"}   
   Dim parameterTypes As System.UInt16() = New System.UInt16(2) {DtsConvert.VarTypeFromTypeCode(TypeCode.Int32), DtsConvert.VarTypeFromTypeCode(TypeCode.DateTime)}   
   Dim parameterDescriptions As String() = New String(2) {"The number of rows to sort.", "The start time of the Sort operation."}   
-  EventInfos.Add("StartingSort", "Fires when the component begins sorting the rows.", False, parameterNames, paramterTypes, parameterDescriptions)   
+  EventInfos.Add("StartingSort", "Fires when the component begins sorting the rows.", False, parameterNames, parameterTypes, parameterDescriptions)   
 End Sub   
   
 Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As PipelineBuffer)   
@@ -92,7 +90,7 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 事件处理程序](../../integration-services-ssis-event-handlers.md)   

@@ -17,12 +17,12 @@ ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167627"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366679"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>使用 Visual Basic 或 Visual C# 访问报表服务器 Web 服务（SSRS 教程）
   以下教程介绍如何从与创建的应用程序访问报表服务器 Web 服务[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]。  
@@ -47,12 +47,12 @@ ms.locfileid: "48167627"
   
 -   具有足够的权限，能够访问报表服务器所在计算机中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 报表服务器 Web 服务。  
   
--   报表服务器上已安装了报表。 本教程使用示例报表 Company Sales。 有关示例报表的详细信息，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+-   报表服务器上已安装了报表。 本教程使用示例报表 Company Sales。 有关示例报表的详细信息，请参阅[SQL Server Reporting Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 > [!NOTE]  
->  安装过程中不会自动安装示例，但是您可以随时安装这些示例。 有关示例的信息，请参阅[SQL Server 产品示例](http://go.microsoft.com/fwlink/?LinkId=182887)。  
+>  安装过程中不会自动安装示例，但是您可以随时安装这些示例。 有关示例的信息，请参阅[SQL Server 产品示例](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **估计的时间才能完成本教程：** 60 分钟  
+ **若要完成本教程的估计的时间：** 60 分钟  
   
 ## <a name="tasks"></a>“任务”  
  [第 1 课：创建 Web 服务客户端项目](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
@@ -61,6 +61,6 @@ ms.locfileid: "48167627"
   
  [第 3 课：访问 Web 服务](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [第 4 课： 运行应用程序&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [第 4 课：运行应用程序&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

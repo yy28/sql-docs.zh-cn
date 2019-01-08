@@ -15,12 +15,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5db99f475b1fc1a71d36f8643dea56f99d00d0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7688f3979f935b6d461c47fe2747eb7718835f01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504703"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目标编辑器（“连接管理器”页）
   使用 **“OLE DB 目标编辑器”** 对话框的 **“连接管理器”** 页可以为目标选择 OLE DB 连接。 使用此页还可以选择数据库中的表或视图。  
@@ -44,7 +44,7 @@ ms.locfileid: "48188337"
 |------------|-----------------|  
 |表或视图|将数据加载到 OLE DB 目标中的表或视图。|  
 |表或视图 - 快速加载|将数据加载到 OLE DB 目标中的表或视图，并使用快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](data-flow/ole-db-destination.md)。|  
-|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息**:[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |表名变量或视图名变量 - 快速加载|在变量中指定表或视图名称，并使用快速加载选项加载数据。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](data-flow/ole-db-destination.md)。|  
 |SQL 命令|使用 SQL 查询将数据加载到 OLE DB 目标中。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48188337"
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
-### <a name="data-access-mode--table-or-view--fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
+### <a name="data-access-mode--table-or-view---fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
  **表或视图的名称**  
  使用此列表从数据库中选择表或视图，或单击“新建”创建新表。  
   
@@ -75,19 +75,19 @@ ms.locfileid: "48188337"
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留标识**  
- 指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值是`false`。  
+ 指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 `false`。  
   
  **保留 Null**  
- 指定加载数据时是否复制 Null 值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值是`false`。  
+ 指定加载数据时是否复制 Null 值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 `false`。  
   
  **表锁**  
- 指定加载期间是否锁定表。 此属性的默认值是`true`。  
+ 指定加载期间是否锁定表。 此属性的默认值为 `true`。  
   
  **检查约束**  
- 指定目标在加载数据时是否检查约束。 此属性的默认值是`true`。  
+ 指定目标在加载数据时是否检查约束。 此属性的默认值为 `true`。  
   
  **每批行数**  
- 指定每批中的行数。 此属性的默认值为 **–1**，表示尚未分配值。  
+ 指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
 >  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  
@@ -107,7 +107,7 @@ ms.locfileid: "48188337"
  **变量名称**  
  选择包含表或视图名称的变量。  
   
-### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>数据访问模式 = 表名变量或视图名变量 – 快速加载  
+### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>数据访问模式 = 表名变量或视图名变量 – 快速加载）  
  **变量名称**  
  选择包含表或视图名称的变量。  
   
@@ -118,19 +118,19 @@ ms.locfileid: "48188337"
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留标识**  
- 指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值是`false`。  
+ 指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 `false`。  
   
  **保留 Null**  
- 指定加载数据时是否复制 Null 值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值是`false`。  
+ 指定加载数据时是否复制 Null 值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 `false`。  
   
  **表锁**  
- 指定加载期间是否锁定表。 此属性的默认值是`false`。  
+ 指定加载期间是否锁定表。 此属性的默认值为 `false`。  
   
  **检查约束**  
- 指定任务是否检查约束。 此属性的默认值是`false`。  
+ 指定任务是否检查约束。 此属性的默认值为 `false`。  
   
  **每批行数**  
- 指定每批中的行数。 此属性的默认值为 **–1**，表示尚未分配值。  
+ 指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
 >  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  
@@ -159,8 +159,8 @@ ms.locfileid: "48188337"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目标编辑器&#40;映射页&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [OLE DB 目标编辑器&#40;错误输出页&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [OLE DB 目标编辑器（“映射”页）](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 目标编辑器（“错误输出”页）](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [通过使用 OLE DB 目标来加载数据](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

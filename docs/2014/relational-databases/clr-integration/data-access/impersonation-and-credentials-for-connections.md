@@ -19,12 +19,12 @@ ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 05f3255dac93940439174c20b11769a022bcb7bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072697"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360303"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>模拟和连接凭据
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成中，使用 Windows 身份验证虽然比较复杂，但是比使用 SQL Server 身份验证更为安全。 使用 Windows 身份验证时，请谨记下列注意事项：  
@@ -73,7 +73,7 @@ catch
 > [!NOTE]  
 >  有关模拟中行为更改的信息，请参阅[SQL Server 2014 中数据库引擎功能的重大更改](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
- 另外，如果获得了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 标识实例，则默认情况下不能将该实例传播到其他计算机；默认情况下 Windows 安全基础结构会限制这种传播。 然而，存在一种称为“委托”的机制，通过该机制可在多个可信任的计算机之间启用 Windows 标识传播。 您可以了解有关 TechNet 文章中的委派的详细信息"[Kerberos 协议转换和约束委派](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
+ 另外，如果获得了 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 标识实例，则默认情况下不能将该实例传播到其他计算机；默认情况下 Windows 安全基础结构会限制这种传播。 然而，存在一种称为“委托”的机制，通过该机制可在多个可信任的计算机之间启用 Windows 标识传播。 您可以了解有关 TechNet 文章中的委派的详细信息"[Kerberos 协议转换和约束委派](https://go.microsoft.com/fwlink/?LinkId=50419)"。  
   
 ## <a name="see-also"></a>请参阅  
  [SqlContext 对象](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

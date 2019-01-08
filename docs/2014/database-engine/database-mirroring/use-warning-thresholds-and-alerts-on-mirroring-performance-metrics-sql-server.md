@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46f8591a7fe3e8a69ceb3df60011248db38da722
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132697"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354735"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
   本主题包含有关一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的信息，可以为这些事件配置和管理用于数据库镜像的警告阈值。 可以使用数据库镜像监视器或 **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**和 **sp_dbmmonitordropalert** 存储过程。 本主题还包含有关对数据库镜像事件配置警报的信息。  
@@ -73,7 +73,7 @@ ms.locfileid: "48132697"
     |[sp_dbmmonitordropalert (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|删除指定性能指标的警告。|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>发送到 Windows 事件日志的性能阈值事件  
- 如果为性能指标定义了警告阈值，则在更新状态表时，将针对阈值计算最新的值。 如果已达到阈值，则更新过程 **sp_dbmmonitorupdate** 会针对指标生成一个信息性事件（“性能阈值事件”），然后将此事件写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志。 下表列出性能阈值事件的 ID。  
+ 如果为性能指标定义了警告阈值，则在更新状态表时，将针对阈值计算最新的值。 如果已达到阈值，则更新过程“sp_dbmmonitorupdate”会针对指标生成一个信息性事件（“性能阈值事件”），然后将此事件写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志。 下表列出性能阈值事件的 ID。  
   
 |性能指标|事件 ID|  
 |------------------------|--------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "48132697"
   
  当针对数据库镜像事件定义警报时，我们建议在伙伴双方服务器实例上同时定义警告阈值和警报。 可以在主体服务器或镜像服务器上生成单独的事件，但是每个伙伴都可以随时执行其中任意一种角色。 为了确保警报在故障转移后继续有效，必须同时在伙伴双方上定义警报。  
   
- 有关详细信息，请参阅此 [SQL Server 网站](http://go.microsoft.com/fwlink/?linkid=62373)上有关数据库镜像事件警报的白皮书。 此白皮书包含有关如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、数据库镜像 WMI 事件以及示例脚本配置警报的信息。  
+ 有关详细信息，请参阅此 [SQL Server 网站](https://go.microsoft.com/fwlink/?linkid=62373)上有关数据库镜像事件警报的白皮书。 此白皮书包含有关如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、数据库镜像 WMI 事件以及示例脚本配置警报的信息。  
   
 > [!IMPORTANT]  
 >  对于所有镜像会话，我们极力建议您将数据库配置为针对任意状态更改事件发送警报。 除非专门通过手动配置更改来实现状态更改，否则会出现危及数据安全的情况。 为了帮助保护数据，请找出状态发生意外更改的原因并予以纠正。  

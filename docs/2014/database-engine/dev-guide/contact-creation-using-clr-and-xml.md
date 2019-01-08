@@ -12,22 +12,22 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 092bc63ac93c58d1a37f7fa52fde4fd9bf1d8486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20a59cf2ac94b060c917a4cea2bbbb69dd877120
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371349"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>使用 CLR 和 XML 创建联系信息
   SQL Server 的联系人示例提供了一些有用的实用工具，这些实用工具在基本的 AdventureWorks2012 示例数据库之上形成了一层额外的功能。 第一个实用工具为 AdventureWorks2012 数据库中所涉及的各种类型的人创建联系记录。 联系信息通过使用 XML 来指定，并传递到基于 C# 的存储过程或 VB 存储过程，以创建 XML 并将其放入该数据库中的正确表。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](http://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -1384,7 +1384,7 @@ End Class
   
 ```  
   
- 这是[!INCLUDE[tsql](../../includes/tsql-md.md)]安装脚本 (`Install.sql`)，它将程序集部署并在数据库中创建存储的过程。  
+ 这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 安装脚本 (`Install.sql`)，该脚本在数据库中部署程序集并创建存储过程。  
   
 ```tsql  
 use AdventureWorks  
@@ -1393,7 +1393,7 @@ GO
 DECLARE @contactID Int;  
 DECLARE @customerID Int;  
   
-EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
+EXEC dbo.usp_CreateContact N'<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
 <Title>Dr.</Title>  
 <FirstName>Kim</FirstName>  
 <LastName>Smith</LastName>  
@@ -1401,7 +1401,7 @@ EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlser
 <PasswordHash>F1AF7A6028F2FEA29292C09603F1C209BB84B518</PasswordHash>  
 <PasswordSalt>2Hdr7Jc=</PasswordSalt>  
 <Demographics>  
-<IndividualSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
+<IndividualSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
 <TotalChildren>2</TotalChildren>  
 <NumberChildrenAtHome>1</NumberChildrenAtHome>  
 </IndividualSurvey>  
@@ -1413,7 +1413,7 @@ PRINT 'Individual Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Individual Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
 <FirstName>Catherine</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>catherine@proseware.com</EmailAddress>  
@@ -1428,7 +1428,7 @@ PRINT 'Store Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Store Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
 <FirstName>Amy</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>amy@proseware.com</EmailAddress>  
@@ -1443,7 +1443,7 @@ PRINT 'Vendor Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Vendor Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
 <FirstName>Ramona</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>ramona@proseware.com</EmailAddress>  

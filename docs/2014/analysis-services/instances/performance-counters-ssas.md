@@ -11,21 +11,21 @@ ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9db2bfec3a189fcad99d72821e1415e935b1368c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365789"
 ---
 # <a name="performance-counters-ssas"></a>性能计数器 (SSAS)
   使用性能监视器，您可以通过性能计数器监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  
   
  性能监视器是用于跟踪资源使用情况的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制 (MMC) 管理单元。 您可以通过以下方式启动此 MMC 管理单元：在命令提示符下键入 **PerfMon** ，或从“控制面板”依次单击 **“管理工具”** 和 **“性能监视器”**。 性能监视器使您可以通过使用预定义对象和计数器来跟踪服务器和进程的性能和活动，以及通过使用用户定义的计数器来监视事件。 性能监视器收集有关事件的计数而非数据，例如，内存使用量、活动事务数或 CPU 活动。 您还可以对特定计数器设置阈值以生成通知操作员的警报。  
   
- 性能监视器可以监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程和本地实例。 有关详细信息，请参阅 [使用性能监视器](http://technet.microsoft.com/library/cc749115.aspx)。  
+ 性能监视器可以监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程和本地实例。 有关详细信息，请参阅 [使用性能监视器](https://technet.microsoft.com/library/cc749115.aspx)。  
   
- 若要查看可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的任何计数器的说明，请在性能监视器中打开 **“添加计数器”** 对话框，选择一个性能对象，然后单击 **“显示说明”**。 最重要的计数器是 CPU 使用率、内存使用量、磁盘 IO 率。 建议先从这些重要计数器开始，当您更了解监视其他哪些计数器对改善性能有所帮助时，再转至更具体的计数器。 有关要包含哪些计数器的详细信息，请参阅 [SQL Server 2008 R2 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 若要查看可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的任何计数器的说明，请在性能监视器中打开 **“添加计数器”** 对话框，选择一个性能对象，然后单击 **“显示说明”**。 最重要的计数器是 CPU 使用率、内存使用量、磁盘 IO 率。 建议先从这些重要计数器开始，当您更了解监视其他哪些计数器对改善性能有所帮助时，再转至更具体的计数器。 有关要包含哪些计数器的详细信息，请参阅 [SQL Server 2008 R2 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  计数器分为若干组，以便您可以更轻松地找到相关计数器。  
   

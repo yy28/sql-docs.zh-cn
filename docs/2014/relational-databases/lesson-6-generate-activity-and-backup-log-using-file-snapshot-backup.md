@@ -1,5 +1,5 @@
 ---
-title: 第 7 课： 将数据文件移到 Windows Azure 存储 |Microsoft Docs
+title: 第 7 课：数据文件移到 Windows Azure 存储 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b49907bb7cb9c2d33d7672570f161cbd98432d45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170069"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355333"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>第 7 课：将数据文件移动到 Windows Azure 存储
   在本课中，您将学习如何将数据文件移至 Windows Azure 存储（但不移至 SQL Server 实例）。 不需要学完第 4、5 和 6 课即可听懂本课。  
@@ -64,7 +64,7 @@ ms.locfileid: "48170069"
   
     ```  
   
-3.  运行此代码时，你将看到此消息：“已在系统目录中修改了文件‘TestDB1Alter’”。 新路径将在数据库下次启动时使用。”  
+3.  运行此代码时，你将看到此消息："已在系统目录中已修改文件"testdb1alter '"。 新路径将用作下一次数据库启动。"  
   
 4.  然后，将数据库设为脱机状态。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "48170069"
   
     ```  
   
-5.  现在，你需要使用以下方法之一将数据文件复制到 Windows Azure 存储： [AzCopy 工具](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [放置页](https://msdn.microsoft.com/library/azure/ee691975.aspx)、 [存储客户端库参考](https://msdn.microsoft.com/library/azure/dn261237.aspx)或第三方存储资源管理器工具。  
+5.  现在，你需要使用以下方法之一将数据文件复制到 Windows Azure 存储：[AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)，[放置页](https://msdn.microsoft.com/library/azure/ee691975.aspx)，[存储客户端库参考](https://msdn.microsoft.com/library/azure/dn261237.aspx)，或第三方存储资源管理器工具。  
   
-     **重要提示：** 使用此新增强功能时，请始终确保创建的是页 Blob 而非块 Blob。  
+     **重要提示：** 使用此新增强功能时，务必确保创建的是页 Blob 而非块 Blob。  
   
 6.  然后，将数据库设为联机状态。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461023"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360099"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
   在脚本组件中编写自定义代码之前，必须选择要创建的数据流组件的类型：源、转换或目标，然后在“脚本转换编辑器”中配置组件的元数据和属性。  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  当**脚本转换编辑器**创建第一个输出时，编辑器集`SynchronousInputID`输出到属性`ID`组件的输入。 但是，当编辑器创建后续输出时，它会将那些输出的 `SynchronousInputID` 属性设置为零。  
 >   
->  如果您创建的是具有同步输出的组件，则每个输出的 `SynchronousInputID` 属性必须设置为组件的输入 `ID`。 因此，编辑器在第一个输出之后创建的每个输出的 `SynchronousInputID` 值必须从零更改为组件的输入 `ID`。  
+>  如果创建具有同步输出的组件，每个输出必须具有其`SynchronousInputID`属性设置为`ID`组件的输入。 因此，编辑器在第一个输出之后创建的每个输出的 `SynchronousInputID` 值必须从零更改为组件的输入 `ID`。  
 >   
->  如果您创建的是具有异步输出的组件，则每个输出的 `SynchronousInputID` 属性必须设置为零。 因此，第一个输出的 `SynchronousInputID` 值必须从组件的输入 `ID` 更改为零。  
+>  如果您创建的是具有异步输出的组件，则每个输出的 `SynchronousInputID` 属性必须设置为零。 因此，第一个输出必须具有其`SynchronousInputID`值从更改`ID`的组件的输入为零。  
   
  有关将行定向到脚本组件中两个同步输出之一的示例，请参阅[使用脚本组件创建同步转换](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  有关详细信息，请参阅[在脚本组件中连接数据源](connecting-to-data-sources-in-the-script-component.md)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [脚本组件的编码和调试](coding-and-debugging-the-script-component.md)  

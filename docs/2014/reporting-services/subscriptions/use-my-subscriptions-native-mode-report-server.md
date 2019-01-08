@@ -14,12 +14,12 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a45edaedce83d741d24ee085ccf962854303a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63154af6d155dd05e1f07d38185830fefc30068a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129347"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371359"
 ---
 # <a name="use-my-subscriptions"></a>使用我的订阅
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表管理器包含**我的订阅**组织您的所有订阅在一个位置的页。 您可以使用“我的订阅”来查看、修改和删除现有订阅。 不过，您不能使用该页来创建订阅。  
@@ -40,7 +40,7 @@ ms.locfileid: "48129347"
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>使用 Windows PowerShell 列出 MySubscription  
  ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "PowerShell related content")  
   
- 以下 PowerShell 脚本将返回当前用户的订阅和订阅属性的列表。 有关详细信息，请参阅 [ReportingService2010.ListMySubscriptions 方法](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx)。  
+ 以下 PowerShell 脚本将返回当前用户的订阅和订阅属性的列表。 有关详细信息，请参阅 [ReportingService2010.ListMySubscriptions 方法](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx)。  
   
 ```  
 #server -  all subscriptions of the current user at the given server or site  
@@ -56,7 +56,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
   
 ## <a name="see-also"></a>请参阅  
  [数据驱动订阅](data-driven-subscriptions.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)  
   
   

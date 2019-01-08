@@ -10,20 +10,20 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfcac13965456203cbdea0fdad55fd83f8f5fae1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018152"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353217"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
   本主题的信息介绍如何将现有 Data Quality Services (DQS) 安装升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 在将 DQS 中的数据质量服务器升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，您还必须升级 DQS 数据库架构。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   您必须先备份 DQS 数据库，然后才能升级 DQS，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   通过使用当前或早期版本的数据质量客户端或 Integration Services 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DQS 清除转换 [，你可以连接](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) 版数据质量服务器，执行你的数据质量任务。  
-> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以从 [此处](http://go.microsoft.com/fwlink/?LinkId=328664)下载用于 Excel 的 Master Data Services 外接程序的  SP1 版本。  
+> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以从 [此处](https://go.microsoft.com/fwlink/?LinkId=328664)下载用于 Excel 的 Master Data Services 外接程序的  SP1 版本。  
   
 ##  <a name="Prerequisites"></a> 先决条件  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51018152"
     5.  在成功升级 DQS 数据库架构之后，将显示一条完成消息。  
   
 ##  <a name="Verify"></a> 验证 DQS 数据库架构升级  
- 要验证是否成功升级了 DQS 数据库架构，您可以查询每个数据库中的 A_DB_VERSION 表来检查 DQS_MAIN 和 DQS_PROJECTS 数据库中的当前版本。 为此：  
+ 要验证是否成功升级了 DQS 数据库架构，您可以查询每个数据库中的 A_DB_VERSION 表来检查 DQS_MAIN 和 DQS_PROJECTS 数据库中的当前版本。 为此，请执行以下操作：  
   
 1.  启动 SQL Server Management Studio 并连接到包含升级的 DQS 数据库架构的 SQL Server 实例。  
   

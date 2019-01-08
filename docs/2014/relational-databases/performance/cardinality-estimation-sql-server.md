@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,21 +14,21 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200607"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363789"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
-  称作基数估计器的基数估计逻辑已重新设计中[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以便改进查询计划质量，因此若要提高查询性能。 新的基数估计器纳入在新型 OLTP 和数据仓库工作负荷中表现优异的假设和算法。 它基于针对新型工作负荷的深入基数估计研究，以及我们在过去 15 年在改进 SQL Server 基数估计器方面的学习。 客户反馈表明，尽管大多数查询将会从更改或保持不更改中受益，但与以前的基数估计器相比，少数查询可能会显得退步。  
+  称作基数估计器的基数估计逻辑已在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中重新设计，以便改进查询计划的质量，并因此改进查询性能。 新的基数估计器纳入在新型 OLTP 和数据仓库工作负荷中表现优异的假设和算法。 它基于针对新型工作负荷的深入基数估计研究，以及我们在过去 15 年在改进 SQL Server 基数估计器方面的学习。 客户反馈表明，尽管大多数查询将会从更改或保持不更改中受益，但与以前的基数估计器相比，少数查询可能会显得退步。  
   
 > [!NOTE]  
 >  基数估计是对查询结果中行数的预测。 查询优化器使用这些估计选择查询执行计划。 查询计划的质量对于改进查询性能有着直接影响。  
   
 ## <a name="performance-testing-and-tuning-recommendations"></a>性能测试和优化建议  
- 对于在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中创建的所有新数据库，将启用新基数估计器。 但是，升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 并不会对现有数据库启用新基数估计器。  
+ 对于在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中创建的所有新数据库，将启用新基数估计器。 但是，升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 并不会对现有数据库启用新基数估计器。  
   
  若要确保最佳查询性能，请使用以下建议用新的基数估计器测试您的工作负荷，然后在您的生产系统中启用它。  
   
@@ -37,11 +36,11 @@ ms.locfileid: "48200607"
   
 2.  使用新基数估计器运行测试工作负荷，然后通过当前用来解决性能问题的相同方式解决任何新性能问题。  
   
-3.  使用新基数估计器 （数据库兼容性级别 120 (SQL Server 2014)），运行工作负荷并且特定查询已回归后，你可以运行具有跟踪标志 9481中使用的基数估计器的版本使用的查询[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更早版本。 若要运行具有跟踪标志的查询，请参阅知识库文章 [启用可通过特定查询级别上的不同跟踪标志控制的影响计划的 SQL Server 查询优化器行为](http://support.microsoft.com/kb/2801413)。  
+3.  在用新的基数估计器（数据库兼容级别 120 (SQL Server 2014)）运行工作负荷并且特定查询已回归后，你可以运行具有跟踪标志 9481 的查询，以便使用在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本中使用的基数估计器版本。 若要运行具有跟踪标志的查询，请参阅知识库文章 [启用可通过特定查询级别上的不同跟踪标志控制的影响计划的 SQL Server 查询优化器行为](https://support.microsoft.com/kb/2801413)。  
   
 4.  如果不能更改的所有数据库以便使用新基数估计器，您可以使用之前的基数估计器的所有数据库使用[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)到设置数据库兼容性级别为 110。  
   
-5.  如果使用数据库兼容级别 110 运行您的工作负荷并且您想要使用新的基数估计器测试或运行特定查询，则可以运行具有跟踪标志 2312 的查询，以便使用 SQL Server 2014 版基数估计器。  若要运行具有跟踪标志的查询，请参阅知识库文章 [启用可通过特定查询级别上的不同跟踪标志控制的影响计划的 SQL Server 查询优化器行为](http://support.microsoft.com/kb/2801413)。  
+5.  如果使用数据库兼容级别 110 运行您的工作负荷并且您想要使用新的基数估计器测试或运行特定查询，则可以运行具有跟踪标志 2312 的查询，以便使用 SQL Server 2014 版基数估计器。  若要运行具有跟踪标志的查询，请参阅知识库文章 [启用可通过特定查询级别上的不同跟踪标志控制的影响计划的 SQL Server 查询优化器行为](https://support.microsoft.com/kb/2801413)。  
   
 ## <a name="new-xevents"></a>新 XEvents  
  有两个新的 query_optimizer_estimate_cardinality XEvents 以便支持新查询计划。  

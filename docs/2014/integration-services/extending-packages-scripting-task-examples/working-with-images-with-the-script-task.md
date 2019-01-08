@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,24 +23,24 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4529ded6049327261ac92a76cc9861b7cec7dd61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354637"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
   除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 `System.Drawing` 命名空间提供用于操作图像的类。  
   
- [示例 1：将图像转换为 JPEG 格式](#example1)  
+ [示例 1:将图像转换为 JPEG 格式](#example1)  
   
- [示例 2：创建并保存缩略图图像](#example2)  
+ [示例 2:创建和保存缩略图图像](#example2)  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-##  <a name="example1"></a>示例 1 说明：将图像转换为 JPEG 格式  
+##  <a name="example1"></a> 示例 1 说明：将图像转换为 JPEG 格式  
  下面的示例打开一个由变量指定的图像文件，并使用编码器将其保存为压缩后的 JPEG 文件。 检索编码器信息的代码封装在一个私有函数中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>将此脚本任务示例配置为用于单个图像文件  
@@ -151,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>示例 2 说明：创建并保存缩略图图像  
+##  <a name="example2"></a> 示例 2 说明：创建和保存缩略图图像  
  下面的示例打开一个由变量指定的图像文件，在保持宽高比不变的情况下创建一个该图像的缩略图，并将此缩略图以修改后的名称保存。 在保持宽高比不变的情况下计算缩略图的高度和宽度的代码封装在一个私有子例程中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>将此脚本任务示例配置为用于单个图像文件  
@@ -291,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

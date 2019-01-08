@@ -14,19 +14,19 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cde0718a387fa197e7aeb7d157ecb9b0a0aa4ae6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135132"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359489"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   若要描述的任何 SQL 语句，参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序生成并执行[!INCLUDE[tsql](../../includes/tsql-md.md)]SQLDescribeParam 对准备的 ODBC 语句句柄调用时的 SELECT 语句。 结果集的元数据确定预定义语句中的参数的特征。 SQLDescribeParam 可以返回 SQLExecute 或 SQLExecDirect 可能会返回任何错误代码。  
   
  从数据库引擎中的改进[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 SQLDescribeParam 若要获取的预期的结果更准确描述。 这些更准确的结果可能不同于 SQLDescribeParam 的早期版本中返回的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
   
- 中的其他新增[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *ParameterSizePtr*现在返回一个值，如中所定义的大小，以字符为单位的列或表达式的相应参数标记的定义对齐[ODBC规范](http://go.microsoft.com/fwlink/?LinkId=207044)。 在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client *ParameterSizePtr*可能是对应的值`SQL_DESC_OCTET_LENGTH`类型，或对于类型，值提供给 SQLBindParameter 不相关列大小值应忽略的 (`SQL_INTEGER`，例如)。  
+ 中的其他新增[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *ParameterSizePtr*现在返回一个值，如中所定义的大小，以字符为单位的列或表达式的相应参数标记的定义对齐[ODBC规范](https://go.microsoft.com/fwlink/?LinkId=207044)。 在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client *ParameterSizePtr*可能是对应的值`SQL_DESC_OCTET_LENGTH`类型，或对于类型，值提供给 SQLBindParameter 不相关列大小值应忽略的 (`SQL_INTEGER`，例如)。  
   
  在以下情况下，该驱动程序不支持调用 SQLDescribeParam:  
   
@@ -88,7 +88,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  `SQLDescribeParam` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLDescribeParam 函数](http://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam 函数](https://go.microsoft.com/fwlink/?LinkId=59339)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

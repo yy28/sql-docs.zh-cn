@@ -17,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab52d307d914e1f3f4b1e808b59999dcae96cccb
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219599"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979793"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和服务器审核规范。 “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 “服务器审核规范”  对象属于审核。 您可以为每个审核创建一个服务器审核规范，因为它们都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例范围内创建的。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "48219599"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建服务器审核和服务器审核规范，请使用：**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48219599"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 选择 **“继续”** 选项可以允许未经审核的活动，这可能违反了您的安全策略。 在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的继续操作比维护完整审核更重要时，选择此选项。 这是默认选项。  
   
      **关闭服务器**  
-     在写入目标的服务器实例无法将数据写入审核目标时，强制关闭服务器。 发出此命令的登录名必须具有`SHUTDOWN`权限。 如果该登录名没有此权限，则该函数将失败并将引发错误消息。 将不会发生审核的事件。 在审核失败可能损害系统的安全或完整性时，选择此选项。  
+     在写入目标的服务器实例无法将数据写入审核目标时，强制关闭服务器。 发出此命令的登录名必须具有 `SHUTDOWN` 权限。 如果该登录名没有此权限，则该函数将失败并将引发错误消息。 将不会发生审核的事件。 在审核失败可能损害系统的安全或完整性时，选择此选项。  
   
      **失败操作**  
      在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 无法写入审核日志的情况下，如果数据库操作将导致审核的事件，则此选项将导致数据库操作失败。 将不会发生审核的事件。 不会导致审核的事件的操作可以继续。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 在维护完整审核比对 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的完全访问权限更重要时，选择此选项。  
@@ -94,8 +94,8 @@ ms.locfileid: "48219599"
      **文件路径**  
      指定当“审核目标”是文件时，要将审核数据写入的文件夹所在的位置。  
   
-     **省略号 (…)**  
-     打开“定位文件夹 - server_name”对话框，以指定文件路径或创建要写入审核文件的文件夹。  
+     **省略号 (...)**  
+     打开 **定位文件夹-* * * server_name*对话框来指定文件路径或创建写入审核文件的文件夹。  
   
      **审核文件最大限制：**  
      **最大滚动更新文件数**  
@@ -143,13 +143,13 @@ ms.locfileid: "48219599"
      **Object Name**  
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
   
-     **省略号 (…)**  
+     **省略号 (...)**  
      打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”** 浏览和选择可用对象。  
   
      **主体名称**  
      对于所审核的对象，要作为审核筛选依据的帐户。  
   
-     **省略号 (…)**  
+     **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
 3.  在完成后，单击 **“确定”**。  
@@ -165,7 +165,7 @@ ms.locfileid: "48219599"
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -179,11 +179,11 @@ ms.locfileid: "48219599"
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

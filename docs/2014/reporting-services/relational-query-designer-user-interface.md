@@ -11,12 +11,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccde5a1c4b79a5c67182789af7c54e2142156ad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7288661f0971f9251d7a8acf11f448eb2229975e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160457"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361936"
 ---
 # <a name="relational-query-designer-user-interface"></a>关系查询设计器用户界面
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助创建查询，以指定要从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 为报表数据集检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
@@ -86,7 +86,7 @@ ms.locfileid: "48160457"
   
  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 使用[!INCLUDE[tsql](../includes/tsql-md.md)]并[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
   
- 有关 [!INCLUDE[tsql](../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
+ 有关 [!INCLUDE[tsql](../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)。  
   
  下表列出各种聚合并提供其简要说明。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48160457"
 |Max|返回组中的最大值。 实现 SQL MAX 聚合。|  
 |StDev|返回组中所有值的统计标准偏差。 实现 SQL STDEV 聚合。|  
 |StDevP|返回指定组中所有值的总体标准偏差。 实现 SQL STDEVP 聚合。|  
-|SUM|返回组中所有值的总和。 实现 SQL SUM 聚合。|  
+|Sum|返回组中所有值的总和。 实现 SQL SUM 聚合。|  
 |Var|返回组中所有值的方差。 实现 SQL VAR 聚合。|  
 |VarP|返回组中所有值的总体方差。 实现 SQL VARP 聚合。|  
 |Avg Distinct|返回唯一项的均值。 实现 AVG 聚合和 DISTINCT 关键字的组合。|  
@@ -126,7 +126,7 @@ ms.locfileid: "48160457"
 -   **自动检测** ：切换可自动在表之间创建关系的自动检测功能。 如果启用自动检测，则查询设计器将根据表中的外键创建关系；否则，您必须手动创建关系。 当您在 **“数据库视图”** 窗格中选择表时，自动检测将尝试自动创建关系。 如果您在手动创建联接后启用自动检测，则这些联接将被丢弃。  
   
     > [!IMPORTANT]  
-    >  与一起使用时[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]未提供创建联接所需的元数据，而又不能自动检测到关系。 如果您的查询从 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 中检索数据，则必须手动创建所有表联接。  
+    >  与 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 一起使用时，由于不会提供创建联接所需的元数据，因此无法自动检测到关系。 如果您的查询从 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]中检索数据，则必须手动创建所有表联接。  
   
 -   **添加关系** ：向 **“关系”** 列表中添加关系。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48160457"
   
 -   **左表** ：显示联接关系中第一个表的名称。  
   
--   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 Join 的类型的详细信息，请参阅"JOIN 基础知识"中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)msdn.microsoft.com 上...  
+-   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 JOIN 的类型的详细信息，请参阅 msdn.microsoft.com 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687) 中的“JOIN Fundamentals”（JOIN 基础知识）。  
   
 -   **右表** ：显示联接关系中第二个表的名称。  
   

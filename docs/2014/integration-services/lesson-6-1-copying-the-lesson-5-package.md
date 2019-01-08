@@ -1,22 +1,21 @@
 ---
-title: 步骤 1：复制第 5 课包 | Microsoft Docs
+title: 步骤 1：复制第 5 课包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71d12e661036d2ccd227429903c19c273c3c9268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357855"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步骤 1：复制第 5 课包
   在本任务中，您将为第 5 课中创建的 Lesson 5.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 5 包添加到项目中，然后再对其进行复制。 您将使用这一新副本来完成第 6 课剩余部分。  
@@ -49,11 +48,11 @@ ms.locfileid: "48111467"
   
 3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-4.  依次单击浏览“(...)”按钮和计算机上的 Lesson 5.dtsx，然后单击“打开”。  
+4.  依次单击“浏览(...)”按钮和计算机上的 Lesson 5.dtsx，然后单击“打开”。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -64,6 +63,6 @@ ms.locfileid: "48111467"
      在复制 Lesson 5 包后，如果当前解决方案中有来自以前课程的包，请右键单击来自课程 1-5 的每个包并单击“从项目中排除”。 完成后，您的解决方案中应只有 Lesson 6.dtsx。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2：将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [步骤 2:将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 982c85e919af9ab660032416262a3c8ec607e795
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a45e9b7cb639b0588750fc9b2a9b70a25cd7f0f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132287"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356898"
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>保留锁配置选项默认值
   此规则检查锁配置选项的值。 此选项确定可用锁的最大数量。 这将限制 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 用于锁的内存量。 默认设置 0 使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以根据不断变化的系统要求动态地分配和解除分配锁结构。  
@@ -38,7 +38,7 @@ EXEC sp_configure 'locks', 0;
   
  [sys.dm_os_wait_stats (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)  
   
- [Microsoft 知识库文章 271509](http://go.microsoft.com/fwlink/?linkid=117788)  
+ [Microsoft 知识库文章 271509](https://go.microsoft.com/fwlink/?linkid=117788)  
   
 ## <a name="see-also"></a>请参阅  
  [使用基于策略的管理来监视和强制执行最佳实践](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

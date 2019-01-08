@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,12 +15,12 @@ ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d72541882ce8a084c5b96bd032a99c4ad36052b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d4a61a20dacbe24551459253f3721f9af9c96a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058737"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356702"
 ---
 # <a name="creating-a-custom-log-provider"></a>创建自定义日志提供程序
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时环境具有广泛的日志记录功能。 日志可使您捕获在包执行期间发生的事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各种日志提供程序，可用于创建日志并以诸如 XML、文本、数据库或 Windows 事件日志的格式存储这些日志。 如果这些提供程序或输出格式不能满足您的需要，您可以创建自定义日志提供程序。  
@@ -75,7 +73,7 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>生成、部署和调试自定义日志提供程序  
  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义日志提供程序的步骤与其他自定义对象类型所需的步骤非常相似。 有关详细信息，请参阅[生成、部署和调试自定义对象](../building-deploying-and-debugging-custom-objects.md)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [编写自定义日志提供程序代码](coding-a-custom-log-provider.md)   

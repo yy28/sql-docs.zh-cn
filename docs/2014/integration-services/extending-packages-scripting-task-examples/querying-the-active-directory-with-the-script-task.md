@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a22b2648d450bb5c50439aca02b65c39de65ea2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c60d7954d0ecd0c7201885e7128b75ddc46aa53b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226780"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368949"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
   企业数据处理应用程序（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包）通常需要根据 Active Directory 中存储的雇员的级别、职务或其他特征来以不同方式处理数据。 Active Directory 是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目录服务，它不仅提供集中存储有关用户的元数据，还可以提供集中存储有关其他组织资产（如计算机和打印机）的元数据。 Microsoft .NET Framework 中的 `System.DirectoryServices` 命名空间提供使用 Active Directory 的类，以帮助您根据 Active Directory 中存储的信息来定向数据处理工作流。  
@@ -110,8 +108,8 @@ public void Main()
   
 ## <a name="external-resources"></a>外部资源  
   
--   social.technet.microsoft.com 上的技术文章，[在 SSIS 中处理 Active Directory 信息](http://go.microsoft.com/fwlink/?LinkId=199588)。  
+-   social.technet.microsoft.com 上的技术文章，[在 SSIS 中处理 Active Directory 信息](https://go.microsoft.com/fwlink/?LinkId=199588)。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

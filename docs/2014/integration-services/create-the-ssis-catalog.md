@@ -11,15 +11,15 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860102dff3b20bd42da048dbd33960c8f936cea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8ee32faea8c8390c0ecb1540e6115a3baedfc92
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120249"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357717"
 ---
 # <a name="create-the-ssis-catalog"></a>创建 SSIS 目录
-  当您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 在可以部署到项目之前[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器，该服务器必须包含`SSISDB`目录。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安装程序并不会自动创建目录；您需要使用以下说明手动创建目录。  
+  当您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 在您可以将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器之前，该服务器必须包含 `SSISDB` 目录。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安装程序并不会自动创建目录；您需要使用以下说明手动创建目录。  
   
  您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中创建 SSISDB 目录。 还可以使用 Windows PowerShell 以编程方式创建目录。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48120249"
   
     ```  
   
-     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=254267)。  
   
 ## <a name="see-also"></a>请参阅  
  [SSIS 目录](catalog/ssis-catalog.md)   

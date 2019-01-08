@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209287"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368069"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用升级顾问来准备升级
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级顾问可以帮助您做好升级至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的准备。 升级顾问分析早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中已安装的组件，然后生成报告，指出在升级之前或之后应解决的问题。  
@@ -65,9 +65,9 @@ ms.locfileid: "48209287"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
--   Windows Installer（最低为 4.5 版）。 你可以安装 Windows 安装程序从[Windows Installer 网站](http://go.microsoft.com/fwlink/?LinkId=49112)。  
+-   Windows Installer（最低为 4.5 版）。 你可以安装 Windows 安装程序从[Windows Installer 网站](https://go.microsoft.com/fwlink/?LinkId=49112)。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 已接入[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]产品媒体中，并从[.NET Framework 4 下载页](http://go.microsoft.com/fwlink/?LinkId=209895)。  
+-   Microsoft .NET Framework 4。 .NET framework 4 已接入[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]产品媒体中，并从[.NET Framework 4 下载页](https://go.microsoft.com/fwlink/?LinkId=209895)。  
   
     -   若要从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 介质安装 .NET Framework 4，请找到磁盘驱动器的根目录。 然后双击 \redist 文件夹，再双击 DotNetFrameworks 文件夹，然后运行 dotNetFx40_Full_x86_x64.exe（对于 32 位操作系统或 64 位操作系统）。  
   
@@ -82,6 +82,6 @@ ms.locfileid: "48209287"
 ## <a name="see-also"></a>请参阅  
  [使用多个版本和 SQL Server 的实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [后向兼容性](../../../2014/getting-started/backward-compatibility.md)  
+ [向后兼容性](../../../2014/getting-started/backward-compatibility.md)  
   
   

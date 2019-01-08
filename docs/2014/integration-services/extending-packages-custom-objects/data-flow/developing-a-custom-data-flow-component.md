@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +18,12 @@ ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6dd64d4f10404ddc0a32e3f4745f639214b4b7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6121149433cd0f687c91663f7bb1b23ecb38aaff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186167"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369469"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>开发自定义数据流组件
   数据流任务由一些组件组成，这些组件用于连接各种数据源，然后快速转换和路由数据。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一个可扩展的对象模型，该模型允许开发人员创建可在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和已部署的包中使用的自定义源、转换和目标。 本节包含的主题将指导您开发自定义数据流组件。  
@@ -112,7 +110,7 @@ ms.locfileid: "48186167"
  [开发自定义 ForEach 枚举器](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  讨论如何对自定义枚举器进行编程。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [扩展使用脚本组件的数据流](../../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md   

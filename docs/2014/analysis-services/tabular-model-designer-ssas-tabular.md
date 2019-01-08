@@ -13,12 +13,12 @@ ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779236a22eee429f6574a202e07eeccffc6b8d1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074907"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364269"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>表格模型设计器（SSAS 表格）
   表格模型设计器属于[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]与 Microsoft 集成[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010年或更高版本，且专用于开发专业表格模型解决方案的附加项目类型模板。  
@@ -36,7 +36,7 @@ ms.locfileid: "48074907"
 ##  <a name="bkmk_benefits"></a> 优势  
  在您安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]时，用于创建表格模型的新项目模板将添加到可用项目类型中。 在使用这些模板之一创建了新的表格模型项目后，您可以通过使用表格模型设计器工具和向导开始创建模型。  
   
- 除了用于创建专业多维和表格模型解决方案的新模板和工具外， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 环境还提供调试和项目生命周期功能，确保您可以为组织创建功能最强大的 BI 解决方案。 有关 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的详细信息，请参阅 [Getting Started with Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389)（Visual Studio 入门）。  
+ 除了用于创建专业多维和表格模型解决方案的新模板和工具外， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 环境还提供调试和项目生命周期功能，确保您可以为组织创建功能最强大的 BI 解决方案。 有关 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的详细信息，请参阅 [Getting Started with Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389)（Visual Studio 入门）。  
   
 ##  <a name="bkmk_proj_temp"></a> 项目模板  
  在您安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]时，以下表格模型项目模板将添加到商业智能项目类型中：  
@@ -117,7 +117,7 @@ ms.locfileid: "48074907"
   
 ##  <a name="bkmk_vsint"></a> Visual Studio 集成  
  **源代码管理**  
- Analysis Services 项目与所选的源代码管理插件集成。 如果您将 Visual Studio 配置为使用源代码管理，可以使用解决方案资源管理器中的“签入”/“签出”。 若要配置为使用 Team Foundation Server，请参阅 [为 Visual Studio 配置 Team Foundation 版本控制](http://msdn.microsoft.com/library/ms253064.aspx)。 还支持很多第三方源代码管理插件。  
+ Analysis Services 项目与所选的源代码管理插件集成。 如果您将 Visual Studio 配置为使用源代码管理，可以使用解决方案资源管理器中的“签入”/“签出”。 若要配置为使用 Team Foundation Server，请参阅 [为 Visual Studio 配置 Team Foundation 版本控制](https://msdn.microsoft.com/library/ms253064.aspx)。 还支持很多第三方源代码管理插件。  
   
  **字体**  
  表格模型使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 环境字体来控制显示的字体。 如果默认 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 字体未能包含您语言所需的所有 Unicode 字符，可能需要更改此字体。 若要更改字体，请单击 **“工具”** 菜单，单击 **“选项”**，然后单击 **“字体和颜色”**。  
@@ -126,7 +126,7 @@ ms.locfileid: "48074907"
  Analysis Services 键盘快捷键可以通过“工具”->“选项”->“键盘”对话框进行配置/重新映射。 一些全局 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 快捷方式（如生成、保存、调试、新建项目等）在表格模型设计器上下文中受支持。 Analysis Services 上下文中支持其他表格模型设计器的特定快捷键。  
   
 ## <a name="see-also"></a>请参阅  
- [表格模型项目&#40;SSAS 表格&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [属性&#40;SSAS 表格&#41;](tabular-models/properties-ssas-tabular.md)  
+ [表格模型项目（SSAS 表格）](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [属性（SSAS 表格）](tabular-models/properties-ssas-tabular.md)  
   
   

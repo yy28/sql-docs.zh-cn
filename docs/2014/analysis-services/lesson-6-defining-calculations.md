@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 定义计算 |Microsoft Docs
+title: 第 6 课：定义计算 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de2a2286527dfa53124aeeb619ee5ab3c8f7753c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7437296543aa762ce51f5a31592a724cd0004419
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055457"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361380"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
   在此课程中，将了解如何定义计算（多维表达式 (MDX) 表达式或脚本）。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
@@ -42,7 +42,7 @@ ms.locfileid: "48055457"
  有关详细信息，请参阅 [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)和 [多维模型中的计算](multidimensional-models/calculations-in-multidimensional-models.md)。  
   
 > [!NOTE]  
->  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](http://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
+>  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
   
  本课程包含以下任务：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48055457"
  在此任务中，将了解定义命名集。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 7 课：定义关键绩效指标 (KPI)](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [第 7 课：定义关键绩效指标&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)   

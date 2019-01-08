@@ -14,12 +14,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357403"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables 可以对静态服务器游标执行。 尝试对可更新的 （动态或键集） 游标执行 SQLTables 将返回 sql_success_with_info 以指示游标类型已更改。  
@@ -28,7 +28,7 @@ ms.locfileid: "48111487"
   
  若要报告可用目录、 架构和表类型，SQLTables 能够特殊使用空字符串 （长度为零字节的指针）。 空字符串不是默认值（NULL 指针）。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数：*Linked_Server_Name.Catalog_Name*。  
   
  SQLTables 返回任何信息的表的名称匹配*TableName*和当前用户所拥有的。  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [SQLTables 函数](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 函数](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

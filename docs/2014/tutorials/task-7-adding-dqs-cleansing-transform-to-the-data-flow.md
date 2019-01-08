@@ -1,5 +1,5 @@
 ---
-title: 任务 7： 添加 DQS 清理转换这些数据对数据流 |Microsoft Docs
+title: 任务 7:将 DQS 清理转换向数据流添加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138185"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376869"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>任务 7：将 DQS 清理转换添加到数据流
-  在本任务中，您将向数据流添加 DQS 清理转换以使用 DQS 清理输入的供应商数据。 请参阅 **[DQS 清理转换](http://msdn.microsoft.com/library/ee677619.aspx)** 有关转换的详细信息。  
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>任务 7:将 DQS 清理转换添加到数据流
+  在本任务中，您将向数据流添加 DQS 清理转换以使用 DQS 清理输入的供应商数据。 请参阅 **[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)** 有关转换的详细信息。  
   
 1.  右键单击**DQS 清理**中**数据流**选项卡，然后单击**重命名**。 类型**清理供应商数据**，然后按**ENTER**。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138185"
 12. 单击**确定**以关闭**DQS 清理转换编辑器**对话框。  
   
 ## <a name="next-step"></a>下一步  
- [任务 8：添加有条件拆分转换以拆分清理输出](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [任务 8:添加有条件拆分转换以拆分清理输出](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

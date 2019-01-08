@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da29dbf3dae76490fc1a34867006ce82775cd2b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374339"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 事件类
   当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan XML 事件类。 包括 Showplan XML 事件类以标识 Showplan 运算符。 此事件类将每个事件存储为定义完善的 XML 文档。  
   
  当跟踪中包含 Showplan XML 事件类时，其开销将明显影响性能。 查询优化后，Showplan XML 将存储查询计划。 若要将引起的开销降到最低，请将此事件类的使用范围限制在监视主要时段内的特定问题的跟踪中。  
   
- Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=41740)上找到，也可作为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
+ Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkId=41740)上找到，也可作为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Showplan XML 事件类数据列  
   

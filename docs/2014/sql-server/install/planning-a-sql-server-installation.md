@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
@@ -13,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bf9656564422d76e8d18795fc72e48856eca7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161627"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367902"
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
   若要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请按下列步骤操作：  
@@ -31,7 +30,7 @@ ms.locfileid: "48161627"
   
  无论使用哪种安装方法，您都需要作为个人或代表实体确认接受软件许可条款，除非您对于软件的使用受单独的协议（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可协议或与 ISV 或 OEM 之间的第三方协议）管辖。  
   
- 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 使用 /Q 或 /QS 参数进行无人参与安装时，必须包含 /IAcceptSQLServerLicenseTerms 参数。 可以通过 [Microsoft Software License Terms](http://go.microsoft.com/fwlink/?LinkID=148209)（Microsoft 软件许可条款）单独查看许可条款。  
+ 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 使用 /Q 或 /QS 参数进行无人参与安装时，必须包含 /IAcceptSQLServerLicenseTerms 参数。 可以通过 [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkID=148209)（Microsoft 软件许可条款）单独查看许可条款。  
   
 > [!NOTE]  
 >  根据您接收软件的方式（例如，通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可），您对软件的使用可能受其他条款和条件约束。  

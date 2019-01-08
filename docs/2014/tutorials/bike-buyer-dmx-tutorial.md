@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366719"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>自行车购买者 DMX 教程
   在本教程中，您将学习如何使用数据挖掘扩展插件 (DMX) 查询语言来创建、定型和浏览挖掘模型。 然后，您将使用这些挖掘模型创建预测，确定客户是否将购买自行车。  
@@ -50,7 +50,7 @@ ms.locfileid: "49462013"
   
  数据挖掘扩展插件 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一种查询语言，可以使用它来创建和处理挖掘模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树算法创建的模型可用于预测某人是否将购买自行车。 生成的模型可以将单个客户或客户表作为一个输入。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析算法可以根据共享特征创建客户分组。 本教程的目的是提供将在自定义应用程序中使用的 DMX 脚本。  
   
- **有关详细信息：** [数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **详细信息：**[数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>挖掘结构和挖掘模型  
  开始创建 DMX 语句之前，了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的主要对象十分重要。 挖掘结构是一种数据结构，它定义生成挖掘模型的数据域。 单个挖掘结构可以包含多个共享相同域的挖掘模型。 挖掘模型可向挖掘结构所代表的数据应用挖掘模型算法。  
@@ -102,7 +102,7 @@ ms.locfileid: "49462013"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)][!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]， [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]，或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库。 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的正式示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请访问[Microsoft SQL 示例数据库](http://go.microsoft.com/fwlink/?LinkId=88417)页上，选择你想要安装的数据库...  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库。 为了增强安全性，默认情况下将不安装该示例数据库。 若要安装的正式示例数据库[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请访问[Microsoft SQL 示例数据库](https://go.microsoft.com/fwlink/?LinkId=88417)页上，选择你想要安装的数据库...  
   
 > [!NOTE]  
 >  在阅读教程时，我们建议您将添加**下一主题**并**上一个主题**到文档查看器工具栏按钮。  

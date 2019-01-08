@@ -11,17 +11,17 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64d690c11a76d40e851a23374c568727e3f47a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172777"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354482"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>备份、还原和移动 SSIS 目录
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
   
- **SSISDB** 目录存储您部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的包。 有关该目录的详细信息，请参阅 [SSIS 目录](catalog/ssis-catalog.md)。  
+ SSISDB 目录存储部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的包。 有关该目录的详细信息，请参阅 [SSIS 目录](catalog/ssis-catalog.md)。  
   
 ##  <a name="backup"></a> 备份 SSIS 数据库  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172777"
   
     ```  
   
-3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅 [如何备份数据库 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅[如何备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  通过执行以下操作，生成 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 脚本。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48172777"
   
 ### <a name="to-restore-the-ssis-database"></a>还原 SSIS 数据库  
   
-1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，请通过运行 sp_configure 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 和 [clr enabled 选项](http://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，请通过运行 sp_configure 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 和 [clr enabled 选项](https://go.microsoft.com/fwlink/?LinkId=231855)。  
   
     ```  
     use master   

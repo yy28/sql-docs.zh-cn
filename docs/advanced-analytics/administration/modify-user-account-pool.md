@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Server 机器学习服务中缩放并发执行的外部脚本的 |Microsoft Docs
-description: 如何修改用户帐户池缩放 SQL Server 机器学习服务。
+title: 缩放并发执行的外部脚本的 SQL Server 机器学习服务
+description: 在要扩展 SQL Server 机器学习服务的用户帐户池配置并行或并发 R 和 Python 脚本执行。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419432"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596808"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>缩放并发执行的 SQL Server 机器学习服务中的外部脚本的
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,8 +21,6 @@ ms.locfileid: "49419432"
 在安装 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 的过程中，将创建一个新的 Windows *用户帐户池*来支持 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服务的任务执行。 这些辅助角色帐户的目的是隔离的不同 SQL 用户的外部脚本并发执行。
 
 本文介绍的默认配置和容量的辅助角色帐户，以及如何更改默认配置，以在 SQL Server 机器学习服务中缩放的并发执行的外部脚本的数量。
-
-**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]， [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-account-group"></a>辅助角色帐户组
 
@@ -53,7 +51,7 @@ ms.locfileid: "49419432"
 2. 双击 SQL Server Launchpad 服务并停止该服务（如果正在运行）。
 3.  在“服务”选项卡上，确保“启动模式”设置为“自动”。 快速启动板未运行时，无法启动外部脚本。
 4.  单击“高级”选项卡，然后根据需要编辑“外部用户计数”的值。 此设置将控制多少不同的 SQL 用户可以运行外部脚本并发会话。 默认值为 20 个帐户。 用户的最大数目为 100。
-5. （可选）如果组织中的策略要求定期更改密码，可将选项“重置外部用户密码”设置为“是”。 这样，便会重新生成 Launchpad 为用户帐户维护的已加密密码。 有关详细信息，请参阅[实施密码策略](#bkmk_EnforcePolicy)。
+5. （可选）如果组织中的策略要求定期更改密码，可将选项“重置外部用户密码”设置为“是”。 这样，便会重新生成 Launchpad 为用户帐户维护的已加密密码。 有关详细信息，请参阅[实施密码策略](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)。
 6.  重新启动 Launchpad 服务。
 
 ## <a name="managing-workloads"></a>管理工作负荷
@@ -64,9 +62,11 @@ ms.locfileid: "49419432"
 
 您可以支持的辅助角色帐户数目和任何单个用户可运行的并发会话数仅受服务器资源。 通常，在使用 R 运行时时，内存是遇到的第一个瓶颈。
 
-可以使用 Python 或 R 脚本的资源受 SQL Server。 我们建议使用 SQL Server DMV 监视资源用量，或者查看关联 Windows 作业对象中的性能计数器，并相应地调整服务器内存用量。 如果有 SQL Server Enterprise Edition 时，你可以分配用于通过配置来运行外部脚本的资源[外部资源池](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)。
+可以使用 Python 或 R 脚本的资源受 SQL Server。 我们建议使用 SQL Server DMV 监视资源用量，或者查看关联 Windows 作业对象中的性能计数器，并相应地调整服务器内存用量。 如果有 SQL Server Enterprise Edition 时，你可以分配用于通过配置来运行外部脚本的资源[外部资源池](how-to-create-a-resource-pool.md)。
 
-有关管理计算机的其他信息学习任务的容量，请参阅以下文章：
+## <a name="see-also"></a>另请参阅
+
+有关配置容量的其他信息，请参阅以下文章：
 
 - [R Services 的 SQL Server 配置](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 - [R Services 的性能案例研究](../../advanced-analytics/r/performance-case-study-r-services.md)

@@ -11,12 +11,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113587"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416928"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 库
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种专用的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
@@ -50,7 +50,7 @@ ms.locfileid: "48113587"
 >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
 > 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档” 。    
 > 若要更改默认视图，请单击“库”  选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
->  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客 [推陈出新，第 2 部分：告别 ActiveX、VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客[推陈出新，第 2 部分：告别 ActiveX、 VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  有关先决条件的完整列表，请参阅[创建和自定义 PowerPivot 库](create-and-customize-power-pivot-gallery.md)。  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48113587"
   
 1.  保存该文件。  
   
-2.  1.  **Excel 2010：** 在“文件”菜单中，单击“保存并发送”。  
+2.  1.  **Excel 2010:** 在文件菜单中，单击**保存并发送**。  
   
     2.  单击 **“保存到 SharePoint”**。  
   
     3.  如果希望使用“Excel Services 选项”选择要发布的各个工作表或参数，请单击 **“发布选项”** 。 例如，使用“Excel Services 选项”中的“参数”选项卡，可以选择在所发布的工作簿中显示哪些切片器。  
   
-    1.  **Excel 2013：**  在“文件”菜单上，单击 **“保存”**。  
+    1.  **Excel 2013:** 在文件菜单中，单击**保存**。  
   
     2.  如果希望使用“Excel Services 选项”选择要发布的各个工作表或参数，请单击 **“浏览器查看选项”** 。 例如，使用“Excel Services 选项”中的“参数”选项卡，可以选择在所发布的工作簿中显示哪些切片器。  
   
@@ -148,16 +148,16 @@ ms.locfileid: "48113587"
   
 3.  单击右侧的向下箭头，然后选择 **“编辑属性”**。  
   
-4.  单击 **“保存”**。 保存文档将强制快照服务重新生成预览图像。  
+4.  单击“保存” 。 保存文档将强制快照服务重新生成预览图像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知问题  
   
 ### <a name="document-type-is-not-supported"></a>不支持文档类型  
  不支持 **“PowerPivot 库文档”** 内容类型。 如果您为文档库启用 **“PowerPivot 库文档”** 内容类型，并尝试为该类型创建新文档，您将会看到如下所示内容之一的错误消息：  
   
--   “新文档”要求 Microsoft Sharepoint Foundation 兼容应用程序和 Web 浏览器。 若要将文档添加到该文档库，请单击“上载文档”按钮。  
+-   新建文档要求 Microsoft Sharepoint Foundation 兼容应用程序和 web 浏览器。 若要将文档添加到此文档库中，单击上载文档按钮。  
   
--   “Internet 地址 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' 无效。”“Microsoft Excel 无法访问文件 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'。” 下面是几种可能的原因：  
+-   "Internet 地址 http://[server 名称] / testSite/Gallery/ReportGallery/Forms/Template.xlsx 无效。""Microsoft Excel 无法访问文件 ' http://[server 名称] / testSite/Gallery/ReportGallery/Forms/Template.xlsx。 下面是几种可能的原因：  
   
  **“PowerPivot 库文档”** 内容类型不是自动添加到文档库的。除非您启用不支持的内容类型，否则不会遇到此问题。  
   

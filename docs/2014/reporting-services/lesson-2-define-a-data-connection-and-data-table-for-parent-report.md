@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：定义用于父报表的数据连接和数据表 | Microsoft Docs
+title: 第 2 课：定义用于父报表的数据连接和数据表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13bb0c14b4458122ee94b4a674b86d20bf667d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5dba0a87f34c794e22fa52274591bbec0db63f86
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162647"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358539"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 课：定义用于父报表的数据连接和数据表
   使用 Visual C# 的 ASP.NET 网站模板创建新网站项目后，接下来要创建用于父报表的数据连接和数据表。 在本教程中，数据连接指向 AdventureWorks2008 数据库。 也可选择连接到 AdventureWorks2012 数据库。  
@@ -29,7 +29,7 @@ ms.locfileid: "48162647"
   
      此操作会将一个新的 XSD 文件 **DataSet1.xsd** 添加到项目，然后打开数据集设计器。  
   
-3.  从工具箱窗口中，拖动**[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** 至设计图面上的控件。 随后将启动 **TableAdapter** 配置向导。  
+3.  从“工具箱”窗口中，将一个 **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** 控件拖到设计图面上。 随后将启动 **TableAdapter** 配置向导。  
   
 4.  上**选择数据连接**页上，单击**新的连接**。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48162647"
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     此外可以通过单击创建查询**查询生成器**，然后通过单击验证查询**执行查询**。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关安装的详细信息**AdventureWorks2008**版本的 AdventureWorks，请参阅[演练： 安装 AdventureWorks 数据库](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
+     此外可以通过单击创建查询**查询生成器**，然后通过单击验证查询**执行查询**。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关安装的详细信息**AdventureWorks2008**版本的 AdventureWorks，请参阅[演练：安装 AdventureWorks 数据库](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
   
 11. 上**生成的选择方法**页上，确保取消选中**创建方法以将更新发送到数据库 (GenerateDBDirectMethods) 直接**，然后单击**完成**.  
   

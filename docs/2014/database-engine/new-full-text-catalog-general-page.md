@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d9fe261aefff3013f9a97b1a3f8d2b4ce0b1453e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374529"
 ---
 # <a name="new-full-text-catalog-general-page"></a>新建全文目录（“常规”页）
   使用此对话框可以创建新的全文目录。  
@@ -38,7 +38,7 @@ ms.locfileid: "48052467"
  选中此项，可以将此目录设置为新建全文目录的默认目录。  
   
  **区分重音**  
- 指示目录区分还是不区分标注字符，例如波形符 (**~**)、锐音符 (**´**) 或元音 (**¨**)。 如果您选择 **“不区分”**，则在与此全文目录相关联的全文索引中将忽略标注字符。 有关标注字符的信息，请参阅[变音标记](http://go.microsoft.com/fwlink/?LinkId=154091)MSN Encarta Encyclopedia 中。  
+ 指示目录区分还是不区分标注字符，例如波形符 (**~**)、锐音符 (**´**) 或元音 (**¨**)。 如果您选择 **“不区分”**，则在与此全文目录相关联的全文索引中将忽略标注字符。 有关标注字符的信息，请参阅[变音标记](https://go.microsoft.com/fwlink/?LinkId=154091)MSN Encarta Encyclopedia 中。  
   
 ## <a name="see-also"></a>请参阅  
  [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

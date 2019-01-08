@@ -18,12 +18,12 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 24482f0120f9d33fc4fe9442b770d7ca8656ac80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a4cd4b35fc0a788137d2a82c7082dfe26b0c45e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363999"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  
@@ -39,15 +39,15 @@ ms.locfileid: "48107357"
   
 1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表服务器上，导航到 bin 目录的默认位置。 报表服务器 bin 目录的默认位置为 \<驱动器>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
   
-2.  将程序集从临时位置复制到报表服务器的 bin 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](http://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
+2.  将程序集从临时位置复制到报表服务器的 bin 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](https://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-server"></a>在报表服务器上注册 .NET 数据访问接口  
   
 1.  在 bin 目录的 ReportServer 父目录中备份 RSReportServer.config 文件。  
   
-2.  打开 RSReportServer.config。您可以打开配置文件与[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或诸如记事本之类的简单文本编辑器。  
+2.  打开 RSReportServer.config。您可以使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或诸如记事本之类的简单文本编辑器打开该配置文件。  
   
-3.  找到`Data`RSReportServer.config 文件中的元素。 应当在以下位置为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口生成一个条目：  
+3.  在 RSReportServer.config 文件中找到 `Data` 元素。 应当在以下位置为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口生成一个条目：  
   
     ```  
     <Extensions>  
@@ -61,7 +61,7 @@ ms.locfileid: "48107357"
   
     |Attribute|Description|  
     |---------------|-----------------|  
-    |`Name`|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 `Name` 属性的最大长度是 255 个字符。 名称必须是唯一的而内的所有条目`Extension`配置文件元素。 创建新数据源时，此处包含的值显示在数据源类型下拉列表中。|  
+    |`Name`|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 创建新数据源时，此处包含的值显示在数据源类型下拉列表中。|  
     |`Type`|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
   
      例如，对于部署到报表服务器的 bin 目录中的 DLL，该条目应如下所示：  
@@ -84,7 +84,7 @@ ms.locfileid: "48107357"
   
 3.  在 rssrvpolicy.config 文件中找到 `CodeGroup` 元素。  
   
-4.  添加一个代码组的数据提供程序程序集的授予`FullTrust`权限。 该代码组应如下所示：  
+4.  为数据访问接口程序集添加授予 `FullTrust` 权限的代码组。 该代码组应如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -112,7 +112,7 @@ ms.locfileid: "48107357"
   
 1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表设计器客户端上，导航到 PrivateAssemblies 目录的默认位置。 PrivateAssemblies 目录的默认位置为 \<驱动器>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
-2.  将程序集从临时位置复制到报表设计器客户端的 PrivateAssemblies 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](http://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
+2.  将程序集从临时位置复制到报表设计器客户端的 PrivateAssemblies 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](https://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-designer-client"></a>在报表设计器客户端上注册 .NET 数据访问接口  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48107357"
   
     |Attribute|Description|  
     |---------------|-----------------|  
-    |`Name`|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 `Name` 属性的最大长度是 255 个字符。 名称必须是唯一的而内的所有条目`Extension`配置文件元素。 创建新数据源时，在此处包含的值显示在数据源类型下拉列表中。|  
+    |`Name`|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 创建新数据源时，在此处包含的值显示在数据源类型下拉列表中。|  
     |`Type`|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
   
      例如，对于部署到 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的 PrivateAssemblies 目录中的 DLL，该条目应如下所示：  
@@ -159,7 +159,7 @@ ms.locfileid: "48107357"
     </Extensions>  
     ```  
   
-6.  将以下条目添加到下的 RSReportDesigner.config 文件`Designer`元素。 你需要仅替换`Name`属性与在之前条目中提供的名称。  
+6.  将以下条目添加到 RSReportDesigner.config 文件中的 `Designer` 元素下。 您只需要使用在以前的条目中提供的名称替换 `Name` 属性。  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -169,11 +169,11 @@ ms.locfileid: "48107357"
   
 1.  在 PrivateAssemblies 目录中创建 RSPreviewPolicy.config 文件的备份副本。  
   
-2.  打开与 RSPreviewPolicy.config[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或诸如记事本之类的简单文本编辑器。  
+2.  使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或诸如记事本之类的简单的文本编辑器打开 RSPreviewPolicy.config。  
   
 3.  在 RSPreviewPolicy.config 文件中找到 `CodeGroup` 元素。  
   
-4.  添加的代码组[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据提供程序程序集授予`FullTrust`权限。 该代码组应如下所示：  
+4.  为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口程序集添加授予 `FullTrust` 权限的代码组。 该代码组应如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -192,12 +192,12 @@ ms.locfileid: "48107357"
  URL 成员身份仅是您可能为数据访问接口选择的多个成员身份条件之一。  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>在报表设计器客户端上验证部署和注册  
- 必须先关闭本地计算机上的所有 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 实例，然后才能验证部署。 结束所有当前会话之后，可以验证是否在数据提供程序已成功部署到报表设计器通过创建新的报表项目中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 为报表创建新的数据集时，该数据访问接口应当包含在可用数据源类型列表中。  
+ 必须先关闭本地计算机上的所有 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 实例，然后才能验证部署。 结束所有当前会话之后，可以在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中创建一个新报表项目，以验证数据访问接口是否已成功部署到报表设计器。 为报表创建新的数据集时，该数据访问接口应当包含在可用数据源类型列表中。  
   
 ## <a name="platform-considerations"></a>平台注意事项  
- 在 64 位 (x64) 平台上，[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 在 32 位 WOW 模式下运行。 在 x64 平台上创作报表时，需要在报表创作客户端上安装 32 位数据访问接口，以便预览报表。 如果在同一系统上发布报表，则需要 x64 数据访问接口，以便使用报表管理器查看报表。  
+ 在 64 位 (x64) 平台上， [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 在 32 位 WOW 模式下运行。 在 x64 平台上创作报表时，需要在报表创作客户端上安装 32 位数据访问接口，以便预览报表。 如果在同一系统上发布报表，则需要 x64 数据访问接口，以便使用报表管理器查看报表。  
   
- 对于基于 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的平台，不支持 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]。  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 不受基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的平台支持。  
   
  必须在每个平台上对随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的数据处理扩展插件进行本机编译，然后将其安装在正确位置。 如果注册自定义数据访问接口或标准 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口，则需要在对应平台上对其进行本机编译，然后将其安装在相应位置。 如果在 32 位平台上运行，则必须为此 32 位平台编译数据访问接口。 如果在 64 位平台上运行，则必须为此 64 位平台编译数据访问接口。 不能在 64 位平台上使用采用 64 位接口包装的 32 位数据访问接口。 有关数据访问接口是否可在所安装平台上工作的信息，请查看您的第三方软件。 有关数据提供程序和平台支持的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   

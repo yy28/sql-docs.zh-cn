@@ -1,5 +1,5 @@
 ---
-title: 任务 5： 设置基于字词的关系 |Microsoft Docs
+title: 任务 5：设置基于字词的关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 122bd2276705e2485afb296adb66accdaf1ccaaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: caf0cb1f3d22c41fdc551988556a49f12ee22f36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375249"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>任务 5：设置基于字词的关系
-  在本任务中，定义为值的几个基于字词的关系**Supplier Name**域。 基于字词的关系，可对域中值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如， **Inc.** 可以更正为**Incorporated**。 DQS 在知识发现、清理或匹配过程中使用这些关系。 请参阅[创建基于字词的关系](http://msdn.microsoft.com/library/hh510404.aspx)的更多详细信息。  
+  在本任务中，定义为值的几个基于字词的关系**Supplier Name**域。 基于字词的关系，可对域中值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如， **Inc.** 可以更正为**Incorporated**。 DQS 在知识发现、清理或匹配过程中使用这些关系。 请参阅[创建基于字词的关系](https://msdn.microsoft.com/library/hh510404.aspx)的更多详细信息。  
   
 1.  选择**Supplier Name**中**域列表**。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "48150077"
      ![基于字词的关系](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "基于字词的关系")  
   
 ## <a name="next-step"></a>下一步  
- [任务 6：设置同义词](../../2014/tutorials/task-6-setting-synonyms.md)  
+ [任务 6:设置同义词](../../2014/tutorials/task-6-setting-synonyms.md)  
   
   

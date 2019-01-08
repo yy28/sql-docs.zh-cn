@@ -20,21 +20,21 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dff8cfc38e71c2594ecbfb753d5e7b9b432f7263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aad8baf55dc8960c533e1694309083952dece3d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688195"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591241"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLSetConnectAttr**设置可以控制以下方面的连接的属性。  
   
-> [!NOTE]  
+> [!NOTE]
 >  详细了解驱动程序管理器映射的内容到此函数时 ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序，请参阅[用于向后映射替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>语法  
@@ -119,10 +119,10 @@ SQLRETURN SQLSetConnectAttr(
   
  在此部分; 更高版本中的表中显示当前定义的属性和 ODBC 介绍它们的版本应将定义更多属性以充分利用不同的数据源。 由 ODBC; 保留一系列属性驱动程序开发人员必须保留供从 Open Group 自己特定于驱动程序使用的值。  
   
-> [!NOTE]  
+> [!NOTE]
 >  设置在连接级别的语句属性通过调用的能力**SQLSetConnectAttr** ODBC 3 中已弃用 *.x*。 ODBC 3 *.x*应用程序应永远不会在连接级别设置语句属性。 ODBC 3 *.x*语句属性不能设置在连接级别，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句属性，可以是设置在连接级别或语句级别。  
->   
->  ODBC 3 *.x*驱动程序仅需要支持此功能，如果他们应适用于 ODBC 2 *.x*设置 ODBC 2 应用程序都 *.x*在连接级别的语句选项。 有关详细信息，请参阅[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中向后兼容性的附录 g： 驱动程序指南。  
+> 
+>  ODBC 3 *.x*驱动程序仅需要支持此功能，如果他们应适用于 ODBC 2 *.x*设置 ODBC 2 应用程序都 *.x*在连接级别的语句选项。 有关详细信息，请参阅[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中附录 g:为了向后兼容的驱动程序指南。  
   
  应用程序可以调用**SQLSetConnectAttr**分配和释放该连接的时间之间的任何时候。 已成功设置应用程序在连接的所有连接和语句属性都保存直到**SQLFreeHandle**连接上调用。 例如，如果应用程序调用**SQLSetConnectAttr**之前连接到数据源，该属性仍然存在即使**SQLSetConnectAttr**时应用程序连接到驱动程序中失败数据源;如果应用程序设置特定于驱动程序的属性，该属性仍然存在，即使应用程序连接到不同驱动程序在连接上。  
   
@@ -177,18 +177,18 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_ASYNC_DBC_PCONTEXT (ODBC 3.8)|指向上下文结构 SQLPOINTER 值。<br /><br /> 驱动程序管理器可以调用的驱动程序仅**SQLSetStmtAttr**具有此特性的函数。|  
 |SQL_ATTR_ASYNC_ENABLE (ODBC 3.0)|一个 sqlulen 生成值，该值指定是否以异步方式执行与指定连接上的语句时调用的函数：<br /><br /> SQL_ASYNC_ENABLE_OFF = 禁用连接级别的异步执行语句对操作的支持 （默认值）。<br /><br /> SQL_ASYNC_ENABLE_ON = 启用连接级别的异步执行语句对操作的支持。<br /><br /> 此属性可以设置是否**SQLGetInfo** SQL_ASYNC_MODE 信息类型返回 SQL_AM_CONNECTION 或 SQL_AM_STATEMENT。|  
 |SQL_ATTR_AUTO_IPD (ODBC 3.0)|一个只读的 SQLUINTEGER 值，该值指定是否对的调用后自动填充 IPD **SQLPrepare**支持：<br /><br /> SQL_TRUE = 到调用后的自动填充 IPD **SQLPrepare**驱动程序支持。<br /><br /> SQL_FALSE = 到调用后的自动填充 IPD **SQLPrepare**驱动程序不支持。 服务器不支持准备的语句不能以自动填充 IPD。<br /><br /> 如果为 SQL_ATTR_AUTO_IPD 连接属性返回 SQL_TRUE，则可以设置语句属性 SQL_ATTR_ENABLE_AUTO_IPD 若要打开或关闭自动填充 IPD。 如果 SQL_ATTR_AUTO_IPD，SQL_FALSE SQL_ATTR_ENABLE_AUTO_IPD 不能设置为 SQL_TRUE。 SQL_ATTR_ENABLE_AUTO_IPD 的默认值等于 SQL_ATTR_AUTO_IPD 的值。<br /><br /> 可以通过返回此连接属性**SQLGetConnectAttr**但不能通过设置**SQLSetConnectAttr**。|  
-|SQL_ATTR_AUTOCOMMIT (ODBC 1.0)|一个 SQLUINTEGER 值，该值指定是否使用自动提交或手动提交模式下：<br /><br /> SQL_AUTOCOMMIT_OFF = 驱动程序将使用手动提交模式和应用程序必须显式提交或回滚的事务**SQLEndTran**。<br /><br /> Sql_autocommit_on，否则 = 驱动程序使用自动提交模式。 每个语句都在提交后执行。 这是默认设置。 SQL_ATTR_AUTOCOMMIT 设置为 sql_autocommit_on，否则，若要从手动提交模式更改为自动提交模式时，在连接上任何打开的事务将提交。<br /><br /> 有关详细信息，请参阅[提交模式](../../../odbc/reference/develop-app/commit-mode.md)。 **重要说明：** 某些数据源删除访问计划和关闭每次在连接上的所有语句的游标语句会被提交; 自动提交模式下可能会导致这种情况发生在执行每个 nonquery 语句后或在光标位于时关闭查询。 有关详细信息，请参阅中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 信息类型[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)并[对游标和准备的语句影响的事务](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)。 <br /><br /> 在自动提交模式下执行批处理时，可能会出现两件事情。 Autocommitable 单元，可将其视为整个批处理或批处理中的每个语句视为 autocommitable 单元。 某些数据源可以支持这两个这些行为，并且可能会提供一种方法选择一个或另一个。 它是驱动程序定义批处理被视为 autocommitable 单元或在批处理中每个单独的语句是否 autocommitable。|  
+|SQL_ATTR_AUTOCOMMIT (ODBC 1.0)|一个 SQLUINTEGER 值，该值指定是否使用自动提交或手动提交模式下：<br /><br /> SQL_AUTOCOMMIT_OFF = 驱动程序将使用手动提交模式和应用程序必须显式提交或回滚的事务**SQLEndTran**。<br /><br /> Sql_autocommit_on，否则 = 驱动程序使用自动提交模式。 每个语句都在提交后执行。 这是默认设置。 SQL_ATTR_AUTOCOMMIT 设置为 sql_autocommit_on，否则，若要从手动提交模式更改为自动提交模式时，在连接上任何打开的事务将提交。<br /><br /> 有关详细信息，请参阅[提交模式](../../../odbc/reference/develop-app/commit-mode.md)。 **重要提示：** 某些数据源删除访问计划，并关闭的语句都在提交; 每次在连接上的所有语句的游标自动提交模式下可能会导致这种情况发生在执行每个 nonquery 语句后或游标关闭查询时。 有关详细信息，请参阅中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 信息类型[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)并[对游标和准备的语句影响的事务](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)。 <br /><br /> 在自动提交模式下执行批处理时，可能会出现两件事情。 Autocommitable 单元，可将其视为整个批处理或批处理中的每个语句视为 autocommitable 单元。 某些数据源可以支持这两个这些行为，并且可能会提供一种方法选择一个或另一个。 它是驱动程序定义批处理被视为 autocommitable 单元或在批处理中每个单独的语句是否 autocommitable。|  
 |SQL_ATTR_CONNECTION_DEAD<br /><br /> (ODBC 3.5)|只读 SQLUINTEGER 值，该值指示连接的状态。 如果 SQL_CD_TRUE，连接已丢失。 如果 SQL_CD_FALSE，连接仍处于活动状态。|  
 |SQL_ATTR_CONNECTION_TIMEOUT (ODBC 3.0)|一个 SQLUINTEGER 值对应的任何请求完成，然后返回到应用程序在连接上等待的秒数。 该驱动程序应返回 SQLSTATE HYT00 （超时已过期） 随时是可能的情况下，未与查询执行或登录名关联的超时。<br /><br /> 如果*ValuePtr*是等于 0 （默认值），没有任何超时。|  
-|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|包含要由数据源的目录的名称的字符串。 例如，在 SQL Server 中，目录是一个数据库，因此驱动程序发送**使用***数据库*语句与数据源，其中*数据库*中指定的数据库\* *ValuePtr*。 单层驱动程序的目录可能是一个目录，因此驱动程序更改其当前目录中指定的目录为 **ValuePtr*。|  
+|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|包含要由数据源的目录的名称的字符串。 例如，在 SQL Server 中，目录是一个数据库，因此驱动程序发送**使用**_数据库_语句与数据源，其中*数据库*中指定的数据库\* *ValuePtr*。 单层驱动程序的目录可能是一个目录，因此驱动程序更改其当前目录中指定的目录为 **ValuePtr*。|  
 |SQL_ATTR_DBC_INFO_TOKEN (ODBC 3.8|用来设置的 SQLPOINTER 值返回到 DBC 的连接信息令牌处理何时[SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)的 (\**pRating*) 参数不等于 100。<br /><br /> SQL_ATTR_DBC_INFO_TOKEN 是只设置的。 不能使用**SQLGetConnectAttr**或**SQLGetConnectOption**来检索此值。 驱动程序管理器**SQLSetConnectAttr** SQL_ATTR_DBC_INFO_TOKEN，因为应用程序不应设置此属性也不会接受。<br /><br /> 如果驱动程序设置 SQL_ATTR_DBC_INFO_TOKEN 后返回 SQL_ERROR，只需从池中获取的连接会被释放。 然后，驱动程序管理器将尝试从该池中获取另一个连接。 请参阅[ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)有关详细信息。|  
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|一个 SQLPOINTER 值，该值指定是否在由 Microsoft 组件服务进行协调的分布式事务中使用的 ODBC 驱动程序。<br /><br /> 传递一个 DTC OLE 事务对象，指定要将导出到 SQL Server 或 SQL_DTC_DONE 结束连接的 DTC 关联的事务。<br /><br /> 客户端调用 Microsoft 分布式事务处理协调器 (MS DTC) OLE itransactiondispenser:: Begintransaction 方法来开始执行 MS DTC 事务，并创建一个表示事务的 MS DTC 事务对象。 然后，应用程序使用 ODBC 连接相关联的事务对象的 SQL_ATTR_ENLIST_IN_DTC 选项调用 SQLSetConnectAttr。 将在 MS DTC 事务的保护下执行所有相关的数据库活动。 若要结束连接的 DTC 关联应用程序调用使用 SQL_DTC_DONE SQLSetConnectAttr。 有关详细信息，请参阅 MS DTC 文档。|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|一个 SQLUINTEGER 值对应于要等待的时间完成，然后返回到应用程序的登录请求的秒数。 默认值为驱动程序相关。 如果*ValuePtr*为 0，禁用超时且连接尝试将无限期等待。<br /><br /> 如果指定的超时时间超过了数据源中的最大登录超时值，该驱动程序替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。|  
 |SQL_ATTR_METADATA_ID (ODBC 3.0)|SQLUINTEGER 值，该值确定如何处理目录函数将字符串参数。<br /><br /> 如果 SQL_TRUE，目录函数的字符串自变量被视为标识符。 这种情况并不重要。 对于分隔字符串，该驱动程序中删除任何尾随空格和字符串折叠为大写。 对于带分隔符的字符串，该驱动程序中删除任何前导或尾随空格和按原义采用任何分隔符之间是。 如果其中一个参数设置为 null 指针，该函数返回 SQL_ERROR 并且 SQLSTATE HY009 （null 指针的使用无效）。<br /><br /> 如果 SQL_FALSE，目录函数将字符串参数不被视为标识符。 这种情况很重要。 它们可以包含字符串的搜索模式，取决于参数。<br /><br /> 默认值为 SQL_FALSE。<br /><br /> *TableType*的参数**SQLTables**，其将一系列值，不会影响此属性。<br /><br /> 此外可以在语句级别上设置 SQL_ATTR_METADATA_ID。 （它是唯一的连接属性，也是语句属性。）<br /><br /> 有关详细信息，请参阅[中目录函数的自变量](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。|  
-|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|Sqlulen 生成值，该值指定驱动程序管理器如何使用 ODBC 游标库：<br /><br /> SQL_CUR_USE_IF_NEEDED = 的驱动程序管理器中使用 ODBC 游标库，仅当需要它。 如果该驱动程序支持中的 SQL_FETCH_PRIOR 选项**SQLFetchScroll**，驱动程序管理器使用的驱动程序的滚动功能。 否则，它使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_ODBC = 的驱动程序管理器中使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_DRIVER = 的驱动程序管理器中使用的驱动程序的滚动功能。 这是默认设置。<br /><br /> 有关 ODBC 游标库的详细信息，请参阅[附录 f: ODBC 游标库](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。 **警告：** Windows 的未来版本中将删除游标库。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。|  
-|SQL_ATTR_PACKET_SIZE (ODBC 2.0)|SQLUINTEGER 值，该值以字节为单位指定的网络数据包大小。 **注意：** 或者多个数据源不支持此选项，或仅可以返回，但未设置网络数据包大小。 <br /><br /> 如果指定的大小超出了最大数据包大小或小于最小数据包大小，该驱动程序替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。<br /><br /> 如果已建立连接后，应用程序设置数据包大小，则驱动程序将返回 SQLSTATE HY011 （属性不能立即设置）。|  
+|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|Sqlulen 生成值，该值指定驱动程序管理器如何使用 ODBC 游标库：<br /><br /> SQL_CUR_USE_IF_NEEDED = 的驱动程序管理器中使用 ODBC 游标库，仅当需要它。 如果该驱动程序支持中的 SQL_FETCH_PRIOR 选项**SQLFetchScroll**，驱动程序管理器使用的驱动程序的滚动功能。 否则，它使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_ODBC = 的驱动程序管理器中使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_DRIVER = 的驱动程序管理器中使用的驱动程序的滚动功能。 这是默认设置。<br /><br /> 有关 ODBC 游标库的详细信息，请参阅[附录 f:ODBC 游标库](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。 **警告：** 将 Windows 的未来版本中删除该游标库。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。|  
+|SQL_ATTR_PACKET_SIZE (ODBC 2.0)|SQLUINTEGER 值，该值以字节为单位指定的网络数据包大小。 **注意：** 多个数据源也不支持此选项，或仅可以返回，但未设置网络数据包大小。 <br /><br /> 如果指定的大小超出了最大数据包大小或小于最小数据包大小，该驱动程序替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。<br /><br /> 如果已建立连接后，应用程序设置数据包大小，则驱动程序将返回 SQLSTATE HY011 （属性不能立即设置）。|  
 |SQL_ATTR_QUIET_MODE (ODBC 2.0)|窗口句柄 (HWND)。<br /><br /> 窗口句柄是否为 null 指针，该驱动程序不显示任何对话框。<br /><br /> 如果窗口句柄不是 null 指针，它应该是应用程序的父窗口句柄。 这是默认设置。 该驱动程序使用此句柄来显示对话框。 **注意：** SQL_ATTR_QUIET_MODE 连接属性不适用于显示的对话框**SQLDriverConnect**。|  
-|SQL_ATTR_TRACE (ODBC 1.0)|告知驱动程序管理器是否执行跟踪 SQLUINTEGER 值：<br /><br /> SQL_OPT_TRACE_OFF 跟踪 = off （默认）<br /><br /> SQL_OPT_TRACE_ON = on 的跟踪<br /><br /> 在跟踪时，驱动程序管理器将写入到跟踪文件的每个 ODBC 函数调用。 **注意：** 时跟踪时，驱动程序管理器可以返回 SQLSTATE IM013 （跟踪文件错误） 从任何函数。 <br /><br /> 应用程序使用 SQL_ATTR_TRACEFILE 选项指定跟踪文件。 如果该文件已存在，则驱动程序管理器将追加到文件。 否则，它将创建文件。 如果跟踪已打开，并指定不跟踪文件，驱动程序管理器将写入到 SQL 的文件。日志的根目录中。<br /><br /> 应用程序可以设置该变量**ODBCSharedTraceFlag**表示启用动态跟踪。 然后为当前正在运行的所有 ODBC 应用程序启用跟踪。 如果应用程序将关闭跟踪，它处于关闭状态仅对该应用程序。<br /><br /> 如果**跟踪**中的系统信息的关键字设置为 1，当应用程序调用**SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_ENV，为所有启用跟踪句柄。 仅对调用应用程序启用**SQLAllocHandle**。<br /><br /> 调用**SQLSetConnectAttr**与*特性*的 SQL_ATTR_TRACE 不要求*ConnectionHandle*参数是有效并且不会返回 SQL_ERROR，如果*ConnectionHandle*为 NULL。 此特性应用于所有连接。|  
+|SQL_ATTR_TRACE (ODBC 1.0)|告知驱动程序管理器是否执行跟踪 SQLUINTEGER 值：<br /><br /> SQL_OPT_TRACE_OFF 跟踪 = off （默认）<br /><br /> SQL_OPT_TRACE_ON = on 的跟踪<br /><br /> 在跟踪时，驱动程序管理器将写入到跟踪文件的每个 ODBC 函数调用。 **注意：** 当跟踪时，驱动程序管理器可返回 SQLSTATE IM013 （跟踪文件错误） 从任何函数。 <br /><br /> 应用程序使用 SQL_ATTR_TRACEFILE 选项指定跟踪文件。 如果该文件已存在，则驱动程序管理器将追加到文件。 否则，它将创建文件。 如果跟踪已打开，并指定不跟踪文件，驱动程序管理器将写入到 SQL 的文件。日志的根目录中。<br /><br /> 应用程序可以设置该变量**ODBCSharedTraceFlag**表示启用动态跟踪。 然后为当前正在运行的所有 ODBC 应用程序启用跟踪。 如果应用程序将关闭跟踪，它处于关闭状态仅对该应用程序。<br /><br /> 如果**跟踪**中的系统信息的关键字设置为 1，当应用程序调用**SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_ENV，为所有启用跟踪句柄。 仅对调用应用程序启用**SQLAllocHandle**。<br /><br /> 调用**SQLSetConnectAttr**与*特性*的 SQL_ATTR_TRACE 不要求*ConnectionHandle*参数是有效并且不会返回 SQL_ERROR，如果*ConnectionHandle*为 NULL。 此特性应用于所有连接。|  
 |SQL_ATTR_TRACEFILE (ODBC 1.0)|包含的跟踪文件的名称的以 null 结尾的字符字符串。<br /><br /> 使用指定 SQL_ATTR_TRACEFILE 属性的默认值**TraceFile**系统信息中的关键字。 有关详细信息，请参阅[ODBC 子项](../../../odbc/reference/install/odbc-subkey.md)。<br /><br /> 调用**SQLSetConnectAttr**与*特性*不需要的 SQL_ATTR_ TRACEFILE *ConnectionHandle*参数有效并且不会返回 SQL_ERROR，如果*ConnectionHandle*无效。 此特性应用于所有连接。|  
 |SQL_ATTR_TRANSLATE_LIB (ODBC 1.0)|包含一个库，包含函数的名称的以 null 结尾的字符字符串**SQLDriverToDataSource**并**SQLDataSourceToDriver**驱动程序访问以执行以下任务字符集转译。 此选项可能仅在指定是否驱动程序已连接到数据源。 在连接中，该属性的设置将保持原样。 有关将数据转换的详细信息，请参阅[转换 Dll](../../../odbc/reference/develop-app/translation-dlls.md)并[转换 DLL 函数引用](../../../odbc/reference/syntax/translation-dll-api-reference.md)。|  
 |SQL_ATTR_TRANSLATE_OPTION (ODBC 1.0)|一个 32 位标志值，该值传递给转换 DLL。 此属性可以是仅在指定是否驱动程序已连接到数据源。 有关将数据转换的信息，请参阅[转换 Dll](../../../odbc/reference/develop-app/translation-dlls.md)。|  

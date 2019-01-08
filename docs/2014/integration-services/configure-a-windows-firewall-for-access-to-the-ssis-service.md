@@ -19,24 +19,24 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 246441fba2e72c95004baa3cdb75320b32648e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154737"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369989"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>为访问 SSIS 服务配置 Windows 防火墙
     
 > [!IMPORTANT]  
->  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
+>  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
  Windows 防火墙系统可帮助防止通过网络连接对计算机资源进行未经授权的访问。 若要通过此防火墙访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，您必须将该防火墙配置为允许访问。  
   
 > [!IMPORTANT]  
->  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](configuring-the-integration-services-service-ssis-service.md)。  
+>  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](configuring-the-integration-services-service-ssis-service.md)的早期版本向后兼容。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何在防火墙下运作的详细信息，请参阅 MSDN Library 上的文章“[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)（与防火墙一起使用分布式 COM）”。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何在防火墙下运作的详细信息，请参阅 MSDN Library 上的文章“[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)（与防火墙一起使用分布式 COM）”。  
   
  有很多可用的防火墙系统。 如果您运行的防火墙不是 Windows 防火墙，请查阅您的防火墙文档来获取特定于您所使用的系统的信息。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48154737"
     >  为了配置 Windows 防火墙，此过程使用“控制面板”中的 **“Windows 防火墙”** 项。 **“Windows 防火墙”** 项仅可为当前网络位置配置文件配置防火墙。 但你也可使用 **netsh** 命令行工具或名为高级安全 Windows 防火墙的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (MMC) 管理单元来配置 Windows 防火墙。 有关这些工具的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [配置 Integration Services 服务&#40;SSIS 服务&#41;](service/integration-services-service-ssis-service.md)   
+ [配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)   
  [Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)  
   
   

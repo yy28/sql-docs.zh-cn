@@ -11,12 +11,12 @@ ms.assetid: fb86ca0a-518c-4c61-ae78-7680c57fae1f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5c405862dfb13bf8db1a619f052e6ca9206f1f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bff920677482fa8857024cfe6e993b3c84cf13f8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371416"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint 模式下的 Analysis Services 服务器的硬件和软件要求 (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支持 SharePoint 2010 和 SharePoint 2013。 尽管 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 可以在 SharePoint 服务器上安装，但是它在 SharePoint 场外部运行。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 在 SharePoint 2010 场中的应用程序服务器上运行，并且使用 SharePoint 功能和基础结构来支持服务器操作。 要安装用于任一版本的 SharePoint 的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，请使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 安装后完成以下操作：  
@@ -29,16 +29,16 @@ ms.locfileid: "48167739"
 ##  <a name="bkmk_sqleditions"></a> SQL Server 版本要求  
  并不是所有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)并[各版本和 SQL Server 2014 的组件](../editions-and-components-of-sql-server-2016.md)。  
   
- 可以在找到当前的发行说明[Microsoft SQL Server 2014 发行说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
+ 可以在找到当前的发行说明[Microsoft SQL Server 2014 发行说明](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   
 
   
 ##  <a name="bkmk_sqllicense"></a> SQL Server 许可  
  有关 SQL Server 许可的详细信息，请参阅以下内容：  
   
--   [SQL Server 2014 许可数据表](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)(http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)。  
+-   [SQL Server 2014 许可数据表](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)(https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)。  
   
--   [如何购买： SQL Server 的许可模型支持](http://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh)(http://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh)。  
+-   [如何购买：SQL Server 的许可模型支持](https://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh)(https://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh)。  
   
 
   
@@ -58,13 +58,13 @@ ms.locfileid: "48167739"
 |---------------|-------------|-----------------|  
 |处理器|64 位双核处理器，3 千兆赫 (GHz)。|16 内核|  
 |RAM|8 GB RAM|64 GB RAM|  
-|存储器|80 GB 存储空间|80 GB 或更大|  
+|存储|80 GB 存储空间|80 GB 或更大|  
   
  如果您在 SharePoint 场服务器上在 SharePoint 模式下安装 Analysis Services 服务器，则请查看以下链接中针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SharePoint Server 的最低系统要求：  
   
 -   [安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)  
   
--   [SharePoint 2013 的硬件和软件要求](http://technet.microsoft.com/library/cc262485\(office.15\).aspx)。  
+-   [SharePoint 2013 的硬件和软件要求](https://technet.microsoft.com/library/cc262485\(office.15\).aspx)。  
   
  标准 SharePoint 2013 硬件和软件建议针对的是用于工作组或团队的基于 Web 的文档管理解决方案。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 处理涉及大量数据，所以，仅当整个工作负荷较小（例如小于 100 个用户或工作簿）时该标准建议才足够。 更大的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署将要求更高的计算能力。  
   
@@ -76,16 +76,16 @@ ms.locfileid: "48167739"
 |组件|要求|  
 |---------------|-----------------|  
 |SharePoint 版本|在同一个服务器场中配置的 SharePoint 2010 Enterprise 以及 Excel Services、安全存储区服务和 Claims to Windows Token Service。<br /><br /> 必须使用 SharePoint 安装程序中的“服务器场”选项安装 SharePoint（不支持 SharePoint 的“独立安装”选项）。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 需要服务器场基础结构以便支持管理访问和数据访问。 独立安装不提供这些服务。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器安装不支持在 Windows 7 或 Windows Vista 上运行的 Developer Edition。|  
-|Service Pack|要求使用 SharePoint Server 2010 Service Pack 1 (SP1)。<br /><br /> SharePoint 2010 Service Pack 1 是必要条件[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]功能。<br /><br /> 从 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的以前版本升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 时，需要 SharePoint 2010 的 2010 年 8 月累积更新或更高版本。 在安装 SharePoint Service Pack 1 后，应安装 2010 年 8 月累积更新或更高版本。 新安装的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]不需要累积更新。 有关详细信息，请参阅[for SharePoint 的累积更新已发布 2010 年 8 月](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)。|  
+|Service Pack|要求使用 SharePoint Server 2010 Service Pack 1 (SP1)。<br /><br /> 必须有 SharePoint 2010 Service Pack 1 才能使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 功能。<br /><br /> 从 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的以前版本升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 时，需要 SharePoint 2010 的 2010 年 8 月累积更新或更高版本。 在安装 SharePoint Service Pack 1 后，应安装 2010 年 8 月累积更新或更高版本。 新安装的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]不需要累积更新。 有关详细信息，请参阅[for SharePoint 的累积更新已发布 2010 年 8 月](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)。|  
 |SharePoint Web 应用程序|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2010 仅支持为经典模式身份验证配置的 SharePoint Web 应用程序。 如果您在向现有场中添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则请确保您计划与其一起使用的 Web 应用程序是为经典模式身份验证配置的。 有关如何检查身份验证模式，请参阅部分中的说明中的"确认 Web 应用程序使用经典模式身份验证"[部署 PowerPivot 解决方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)。|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器端数据刷新所需的数据访问接口|服务器端数据刷新重复用于最初导入数据的相同数据检索步骤。 这意味着，用于导入客户端工作站上的数据的数据访问接口还必须在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器上存在。<br /><br /> 此外，使用 SharePoint 服务器上的数据馈送要求您具有 ADO.NET Data Services。 SharePoint Prerequisite Installer 程序不为您安装此软件。 必须手动安装以下软件。<br /><br /> ADO.NET Data Services 3.5 SP1 运行时程序集，用于将 SharePoint 列表导出为数据馈送。 下载并安装与您的操作系统匹配的版本：<br /><br /> 对于 Windows Server 2008 R2，请使用[适用于.NET Framework 3.5 SP1 的 Windows 7 和 windows Server 2008 R2 的 ADO.NET 数据服务更新 (http://go.microsoft.com/fwlink/?LinkId=182557)](http://go.microsoft.com/fwlink/?LinkId=182557)。 Windows Server 2008 R2 **SP1**已包含更新的提供程序。<br /><br /> 对于 Windows Server 2008 中，使用[的.NET Framework 3.5 SP1 的 Windows 2000、 Windows Server 2003、 Windows XP、 Windows Vista 和 Windows Server 2008 的 ADO.NET Data Services 更新 (http://go.microsoft.com/fwlink/?LinkId=158125)](http://go.microsoft.com/fwlink/?LinkId=158125)。|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器端数据刷新所需的数据访问接口|服务器端数据刷新重复用于最初导入数据的相同数据检索步骤。 这意味着，用于导入客户端工作站上的数据的数据访问接口还必须在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器上存在。<br /><br /> 此外，使用 SharePoint 服务器上的数据馈送要求您具有 ADO.NET Data Services。 SharePoint Prerequisite Installer 程序不为您安装此软件。 必须手动安装以下软件。<br /><br /> ADO.NET Data Services 3.5 SP1 运行时程序集，用于将 SharePoint 列表导出为数据馈送。 下载并安装与您的操作系统匹配的版本：<br /><br /> 对于 Windows Server 2008 R2，请使用[适用于.NET Framework 3.5 SP1 的 Windows 7 和 windows Server 2008 R2 的 ADO.NET 数据服务更新 (https://go.microsoft.com/fwlink/?LinkId=182557)](https://go.microsoft.com/fwlink/?LinkId=182557)。 Windows Server 2008 R2 **SP1**已包含更新的提供程序。<br /><br /> 对于 Windows Server 2008 中，使用[的.NET Framework 3.5 SP1 的 Windows 2000、 Windows Server 2003、 Windows XP、 Windows Vista 和 Windows Server 2008 的 ADO.NET Data Services 更新 (https://go.microsoft.com/fwlink/?LinkId=158125)](https://go.microsoft.com/fwlink/?LinkId=158125)。|  
   
- [确定硬件和软件要求 (SharePoint 2010) (http://go.microsoft.com/fwlink/?LinkId=169734)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+ [确定硬件和软件要求 (SharePoint 2010) (https://go.microsoft.com/fwlink/?LinkId=169734)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
  
   
 ## <a name="additional-information"></a>其他信息  
- 有关 SharePoint 更改的信息，请参阅[从 SharePoint 2010 更改为 SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/library/ff607742(office.15).aspx)。  
+ 有关 SharePoint 更改的信息，请参阅[从 SharePoint 2010 更改为 SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
   
 
   

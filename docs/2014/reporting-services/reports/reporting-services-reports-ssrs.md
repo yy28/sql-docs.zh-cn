@@ -13,12 +13,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077817"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362899"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表是包括报表数据和报表布局元素的基于 XML 的报表定义。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 报表是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的基于服务器的报表平台的一部分。  
@@ -64,11 +64,11 @@ ms.locfileid: "48077817"
 ## <a name="create-reports"></a>创建报表  
  创建报表：  
   
--   **确定报表的用途。** 为使用报表的用户标识报表的用途。 设计精良的报表提供的信息可为报表读者指引深层次情况和行动的方向。 在此阶段中所做的设计决策将影响您对报表参数、报表布局设计和报表查看体验的选择。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[规划报表（报表生成器）](../report-design/planning-a-report-report-builder.md)和[报表设计提示（报表生成器和 SSRS）](../report-design/report-design-tips-report-builder-and-ssrs.md)。  
+-   **确定报表的用途。** 为使用报表的用户标识报表的用途。 设计精良的报表提供的信息可为报表读者指引深层次情况和行动的方向。 在此阶段中所做的设计决策将影响您对报表参数、报表布局设计和报表查看体验的选择。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[规划报表（报表生成器）](../report-design/planning-a-report-report-builder.md)和[报表设计提示（报表生成器和 SSRS）](../report-design/report-design-tips-report-builder-and-ssrs.md)。  
   
 -   **选择查询的类型。** 确定是使用一般形式的共享数据集查询，还是使用特定于你的一组报表的数据集查询。 具有一般形式的查询的共享数据集易于维护以便多个报表使用，但每个报表设计者必须根据需要为其特定的报表组筛选数据。 有关详细信息，请参阅[报表数据 (SSRS)](../report-data/report-data-ssrs.md)。  
   
--   **计划相关数据的视图。** 计划报表读者的查看体验。 能够深化到详细数据的汇总报表是用于处理大量数据的很有用的方法。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+-   **计划相关数据的视图。** 计划报表读者的查看体验。 能够深化到详细数据的汇总报表是用于处理大量数据的很有用的方法。 有关详细信息，请参阅 [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 -   **配置权限。** 为授予正确的权限级别计划策略。 一个常见策略就是在报表服务器上创建文件夹结构，并且基于角色和文件夹安全性授予对报表和报表相关项的访问权限。 有关详细信息，请参阅 [保护报表](#bkmk_SecureReportsSummary)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48077817"
   
     -   **从每个数据源选择要使用的数据。** 对于每个数据源，定义报表数据集。 每个数据集都包含指定要使用的数据的查询。 如果您具有报表参数，则定义数据集以便为每个参数填充可用值列表。 有关详细信息，请参阅[向报表添加数据（报表生成器和 SSRS）](../report-data/report-datasets-ssrs.md)和[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
   
-    -   **选择数据可视化。** 对于每个数据集，选择要用于显示数据的数据区域。 从表、图表、仪表和地图的列表中进行选择。 有关详细信息，请参阅以下主题：  
+    -   **选择数据可视化。** 对于每个数据集，选择要用于显示数据的数据区域。 从表、图表、仪表和地图的列表中进行选择。 有关详细信息，请参阅下列主题：  
   
         -   [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48077817"
   
         -   [仪表（报表生成器和 SSRS）](../report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **自定义数据和布局。** 设计报表布局。 报表定义具有表体、数据源、数据集、数据区域、文本框、线条和图像。 矩形用作布局以及可视元素的容器。 通过撰写表达式以便控制对数据的筛选、分组、排序、格式设置和显示，对每个数据区域进行自定义。 添加报表名称、位置以及可帮助管理几十或数百个报表的其他标识信息。 添加可视元素和容器以便组织页面上的布局元素。 有关详细信息，请参阅以下主题：  
+    -   **自定义数据和布局。** 设计报表布局。 报表定义具有表体、数据源、数据集、数据区域、文本框、线条和图像。 矩形用作布局以及可视元素的容器。 通过撰写表达式以便控制对数据的筛选、分组、排序、格式设置和显示，对每个数据区域进行自定义。 添加报表名称、位置以及可帮助管理几十或数百个报表的其他标识信息。 添加可视元素和容器以便组织页面上的布局元素。 有关详细信息，请参阅下列主题：  
   
-        -   [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48077817"
   
         -   [图像、文本框、矩形和线条（报表生成器和 SSRS）](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [页面布局和呈现&#40;报表生成器和 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [页面布局和呈现方式（报表生成器和 SSRS）](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **配置交互功能。** 为你的报表访问者添加交互功能。 例如，添加排序按钮或切换项以便查看查询。 有关详细信息，请参阅[交互式排序、文档结构图和链接（报表生成器和 SSRS）](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
@@ -117,10 +117,10 @@ ms.locfileid: "48077817"
 -   **考虑可重复使用的组件。**  确定是否可共享任何数据源或数据集查询以便重复使用。 如果可共享，则在报表服务器或 SharePoint 站点上，创建共享数据源和共享数据集。 确定数据区域是否适合于重复作为报表部件使用。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md)。  
   
 ## <a name="preview-reports"></a>预览报表  
- 每种报表创作工具都支持预览报表。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[预览](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)、[报表生成器 (SSRS)](../tools/report-builder-authoring-environment-ssrs.md) 和[在报表生成器中预览报表](../report-builder/previewing-reports-in-report-builder.md)。  
+ 每种报表创作工具都支持预览报表。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[预览](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)、[报表生成器 (SSRS)](../tools/report-builder-authoring-environment-ssrs.md) 和[在报表生成器中预览报表](../report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="save-or-publish-reports"></a>保存或发布报表  
- 每种创作工具都支持在本地保存报表，或者支持将报表发布到报表服务器或 SharePoint 站点。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[保存和部署](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)、[报表生成器 (SSRS)](../tools/report-builder-authoring-environment-ssrs.md) 和[保存报表（报表生成器）](../report-builder/saving-reports-report-builder.md)。  
+ 每种创作工具都支持在本地保存报表，或者支持将报表发布到报表服务器或 SharePoint 站点。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[保存和部署](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)、[报表生成器 (SSRS)](../tools/report-builder-authoring-environment-ssrs.md) 和[保存报表（报表生成器）](../report-builder/saving-reports-report-builder.md)。  
   
 ## <a name="view-reports"></a>查看报表  
  除了预览在本地保存的报表或发布到报表服务器的报表之外，您还可为报表读者提供多种查看体验。 查看报表：  
@@ -133,7 +133,7 @@ ms.locfileid: "48077817"
   
 -   **打印。**  报表读者可根据查看报表的方式，打印报表或报表页。 有关详细信息，请参阅[打印报表（报表生成器和 SSRS）](../report-builder/print-reports-report-builder-and-ssrs.md)。  
   
--   **Web 或 Windows 窗体应用程序。**  使用 Visual Studio 可以开发承载报表查看器控件的 ASP.NET AJAX 应用程序或 Windows 窗体应用程序。 该控件可以指向报表服务器上已发布的报表。 有关详细信息，请参阅 [Microsoft 报表](http://go.microsoft.com/fwlink/?LinkID=205399)。  
+-   **Web 或 Windows 窗体应用程序。**  使用 Visual Studio 可以开发承载报表查看器控件的 ASP.NET AJAX 应用程序或 Windows 窗体应用程序。 该控件可以指向报表服务器上已发布的报表。 有关详细信息，请参阅 [Microsoft 报表](https://go.microsoft.com/fwlink/?LinkID=205399)。  
   
 ## <a name="manage-reports"></a>管理报表  
  管理已发布报表：  
@@ -157,7 +157,7 @@ ms.locfileid: "48077817"
 ##  <a name="bkmk_SecureReportsSummary"></a> 保护报表  
  保护报表：  
   
--   从报表服务器管理员，标识用于您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安装的授权和身份验证系统。 默认情况下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用 Windows 身份验证、 集成的安全性和角色分配来帮助控制对已发布的报表访问。 有关详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)。  
+-   从报表服务器管理员，标识用于您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安装的授权和身份验证系统。 默认情况下， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用 Windows 身份验证、集成的安全性和角色分配来帮助控制对已发布报表的访问。 有关详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)。  
   
 ## <a name="create-notifications-based-on-report-data"></a>基于报表数据创建通知  
  您可以为 SharePoint 站点上的已发布报表创建数据警报。 数据警报基于报表的数据区域中的数据馈送。 默认情况下，将自动对数据区域进行命名。 报表作者可以通过基于其业务用途命名数据区域，更轻松地在其报表中创建数据区域。 在您创建数据警报时，如果数据满足您指定的条件，您将收到以电子邮件形式发出的通知。 有关详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)、[在数据警报设计器中创建数据警报](../create-a-data-alert-in-data-alert-designer.md)和 [Reporting Services 数据警报](../reporting-services-data-alerts.md)。  

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676346"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589478"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "51676346"
 |**success_count**|**int**|成功连接数。|  
 |**total_failure_count**|**int**|失败连接的总数。 这是总和**connection_failure_count**， **terminated_connection_count**，并**throttled_connection_count**，并且不包括死锁事件。|  
 |**connection_failure_count**|**int**|登录失败数。|  
-|**terminated_connection_count**|**int**|***仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 终止连接数。|  
-|**throttled_connection_count**|**int**|***仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 中止的连接数。|  
+|**terminated_connection_count**|**int**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 终止连接数。|  
+|**throttled_connection_count**|**int**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 中止的连接数。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676346"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>间隔 start_time 和 end_time  
- 事件在事件发生时包含在某个聚合间隔*上*或*后 * * * start_time** 和*之前 * * * end_time** 该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
+ 事件在事件发生时包含在某个聚合间隔*上*或_后_**start_time**并_之前_**end_time**该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
   
 ```  
   
@@ -81,7 +81,7 @@ start_time                    end_time
   
 -   如果通过 DoSGuard 拦截了 IP 地址，则无法收集来自该 IP 地址的连接尝试事件，这些事件不会出现在此视图中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有访问权限的用户**主**数据库具有对此视图的只读访问。  
   
 ## <a name="example"></a>示例  

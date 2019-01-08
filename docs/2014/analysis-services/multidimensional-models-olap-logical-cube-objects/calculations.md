@@ -18,15 +18,15 @@ ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 587aad74e5a29810d645aad401243cceb9ca6193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be0252b31deb78762844711c7dda8779bb6e5c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367373"
 ---
 # <a name="calculations"></a>“新建命名集”
-  计算是多维表达式 (MDX) 表达式或脚本，用于定义中的多维数据集中的计算的成员、 命名的集或指定了作用域的分配[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用计算，您可以添加不是由多维数据集的数据而是由特定表达式（这些表达式可以引用多维数据集的其他部分、其他多维数据集，或者甚至引用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的信息）所定义的对象。 使用计算，您还可以扩展多维数据集的功能，提高商业智能应用程序的灵活性和能力。 有关编写计算脚本的详细信息，请参阅[Microsoft SQL Server 2005 中的 MDX 脚本简介](http://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)。  
+  计算是多维表达式 (MDX) 表达式或脚本，用于定义中的多维数据集中的计算的成员、 命名的集或指定了作用域的分配[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用计算，您可以添加不是由多维数据集的数据而是由特定表达式（这些表达式可以引用多维数据集的其他部分、其他多维数据集，或者甚至引用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的信息）所定义的对象。 使用计算，您还可以扩展多维数据集的功能，提高商业智能应用程序的灵活性和能力。 有关编写计算脚本的详细信息，请参阅[Microsoft SQL Server 2005 中的 MDX 脚本简介](https://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](https://go.microsoft.com/fwlink/?LinkId=81621)。  
   
 ## <a name="calculated-members"></a>计算的成员  
  计算成员是在运行时使用对其进行定义时所指定的多维表达式 (MDX) 表达式来计算其值的成员。 计算成员就像其他任何成员一样，可用于商业智能应用程序。 计算成员不会增加多维数据集的大小，因为多维数据集中只存储定义；值的计算则在需要回答查询时才在内存中执行。  
@@ -47,7 +47,7 @@ ms.locfileid: "48051317"
  若要创建计算的成员，请使用**计算**s 选项卡，多维数据集设计器中的。 有关详细信息，请参阅[创建计算成员](../multidimensional-models/create-calculated-members.md)  
   
 ## <a name="named-sets"></a>命名集  
- 命名集是返回集的 CREATE SET MDX 语句表达式。 MDX 表达式保存为在多维数据集定义的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 创建命名集的目的是为了重用多维表达式 (MDX) 查询。 使用命名集，业务用户可以简化查询，并针对复杂、常用的集表达式使用集名称而不是集表达式。 **相关的主题：** [创建命名集](../multidimensional-models/create-named-sets.md)  
+ 命名集是返回集的 CREATE SET MDX 语句表达式。 MDX 表达式保存为在多维数据集定义的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 创建命名集的目的是为了重用多维表达式 (MDX) 查询。 使用命名集，业务用户可以简化查询，并针对复杂、常用的集表达式使用集名称而不是集表达式。 **相关的主题：**[创建命名集](../multidimensional-models/create-named-sets.md)  
   
 ## <a name="script-commands"></a>脚本命令  
  脚本命令是一个 MDX 脚本，是多维数据集定义的一部分。 使用脚本命令，您可以执行几乎所有的受多维数据集的 MDX 支持的操作，例如，确定将计算仅应用于多维数据集的一部分的作用域。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，MDX 脚本可以应用到整个多维数据集或多维数据集的脚本执行中的特定点上的特定部分。 默认脚本命令（CALCULATE 语句）会基于默认作用域使用聚合数据来填充多维数据集中的单元。  

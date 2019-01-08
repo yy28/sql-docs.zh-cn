@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353986"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   `SSISDB`目录是用于处理的中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 项目的已部署到[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -27,7 +26,7 @@ ms.locfileid: "48201337"
   
  要维护 `SSISDB` 数据库，建议您应用管理用户数据库的标准企业策略。 有关创建维护计划的信息，请参阅 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)。  
   
- `SSISDB`目录和`SSISDB`数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+ `SSISDB`目录和`SSISDB`数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
  有关如何查看操作数据的详细信息，请参阅[监视包执行和其他操作](../performance/monitor-running-packages-and-other-operations.md)。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48201337"
  以下`SSISDB`目录属性定义如何将此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业的行为。 可以使用“目录属性”对话框或使用 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)和 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)查看和修改属性。  
   
  **定期清理日志**  
- 操作清除作业步骤运行时此属性设置为`True`。  
+ 当此属性设置为 `True` 时，操作清除作业步骤将会运行。  
   
  **保持期(天)**  
  定义可允许的操作数据的最长保存时间（以天为单位）。 将删除较旧的数据。  
@@ -106,7 +105,7 @@ ms.locfileid: "48201337"
  最小值为一天。 最大值仅受到的最大值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`int`数据。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)。  
   
  **定期删除旧版本**  
- 项目版本清除作业步骤运行时此属性设置为`True`。  
+ 当此属性设置为 `True` 时，项目版本清除作业步骤将会运行。  
   
  **每个项目的最大版本数**  
  定义在目录中存储项目的多少个版本。 将删除较旧版本的项目。  
@@ -128,7 +127,7 @@ ms.locfileid: "48201337"
   
 -   DES  
   
- 在向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]项目时，该目录会自动对包数据和敏感值加密。 该目录还会在检索数据时自动解密数据。 SSISDB 目录使用`ServerStorage`保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)。  
+ 在向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]项目时，该目录会自动对包数据和敏感值加密。 该目录还会在检索数据时自动解密数据。 SSISDB 目录使用 `ServerStorage` 保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)。  
   
  更改加密算法是一项很耗时的操作。 首先，服务器必须使用以前指定的算法来解密所有配置值。 然后，服务器必须使用新算法来重新对这些值进行加密。 此时，在服务器上不能有其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作。 因此，为使 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作继续运行而不会中断，加密算法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的对话框中是只读值。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48201337"
 |每个项目的最大版本数|MAX_PROJECT_VERSIONS|  
 |服务器范围的默认日志记录级别|SERVER_LOGGING_LEVEL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  文件夹中包含的项目、环境和包是安全对象。 您可以授予对文件夹的权限，包括 MANAGE_OBJECT_PERMISSIONS 权限。 利用 MANAGE_OBJECT_PERMISSIONS，您可以将文件夹内容的管理委托给用户，而无需为 ssis_admin 角色授予用户成员身份。 您还可以授予对项目、环境和操作的权限。 操作包括初始化[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 部署项目、 创建和启动执行、 验证项目和包和配置`SSISDB`目录。  
   
  有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
@@ -284,10 +283,10 @@ ms.locfileid: "48201337"
   
 ## <a name="related-content"></a>相关内容  
   
--   blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+-   blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
--   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](http://go.microsoft.com/fwlink/?LinkId=246669)。  
+-   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
   
--   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+-   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=254267)。  
   
   

@@ -1,22 +1,21 @@
 ---
-title: 步骤 3：添加包和其他文件 | Microsoft Docs
+title: 步骤 3：添加包和其他文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e7b1be922673978ee512fac105a89670a6764f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83902f57b758089235abafc9f8289b6f9fdb8653
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361599"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>步骤 3：添加包和其他文件
   在此任务中，将现有的包、支持单个包的辅助文件以及自述文件添加到您在上一任务中创建的 Deployment Tutorial 项目。 例如，您将添加一个包含包数据的 XML 数据文件和一个提供有关项目中所有包的自述文件信息的文本文件。  
@@ -31,7 +30,7 @@ ms.locfileid: "48140577"
   
  若要支持这些包的部署，请将下列辅助文件添加到 Deployment Tutorial 项目。  
   
-|“包”|文件|  
+|package|文件|  
 |-------------|----------|  
 |DataTransfer|NewCustomers.txt|  
 |LoadXMLData|orders.xml 和 orders.xsd|  
@@ -52,7 +51,7 @@ ms.locfileid: "48140577"
   
 4.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-5.  单击浏览 **(…)** 按钮，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，选择“DataTransfer.dtsx”，再单击“打开”。  
+5.  单击“浏览(…)”按钮，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，选择“DataTransfer.dtsx”，再单击“打开”。  
   
 6.  单击“确定” 。  
   
@@ -69,8 +68,8 @@ ms.locfileid: "48140577"
 4.  在“文件”菜单上，单击“全部保存”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 4：添加包配置](../integration-services/lesson-1-4-adding-package-configurations.md)  
+ [步骤 4:添加包配置](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

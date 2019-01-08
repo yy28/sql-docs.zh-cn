@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -24,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fb7bfa7d068d8ea83fab4c98e6e8f733af7985a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049507"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361469"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -73,15 +72,15 @@ ms.locfileid: "48049507"
  不要将缓冲区大小增加到开始对磁盘进行分页的点。 与未经过优化的缓冲区大小相比，对磁盘进行分页对性能的阻碍作用更大。 若要确定是否在进行分页，可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的性能管理单元中的“Buffers spooled”性能计数器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>将包配置为支持并行执行  
- 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 若要在包中，支持不同的任务的并行执行[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用两个属性：`MaxConcurrentExecutables`和`EngineThreads`。  
+ 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持在包中并行执行不同的任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两个属性：`MaxConcurrentExecutables` 和 `EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 属性  
- `MaxConcurrentExecutables`属性是包本身的属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
+ `MaxConcurrentExecutables` 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
   
- 若要了解此属性的工作原理，可参考一个包含三个数据流任务的示例包。 如果您设置`MaxConcurrentExecutables`为 3，可以同时运行所有三个数据流任务。 但是，假定每个数据流任务都具有 10 个源到目标执行树。 将 `MaxConcurrentExecutables` 设置为 3 不能确保每个数据流任务内的执行树都能并行运行。  
+ 若要了解此属性的工作原理，可参考一个包含三个数据流任务的示例包。 如果将 `MaxConcurrentExecutables` 设置为 3，则可以同时运行所有三个数据流任务。 但是，假定每个数据流任务都具有 10 个源到目标执行树。 将 `MaxConcurrentExecutables` 设置为 3 不能确保每个数据流任务内的执行树都能并行运行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 属性  
- `EngineThreads` 属性是每个数据流任务的属性。 此属性定义数据流引擎可以创建和并行运行的线程数。 `EngineThreads`属性同样适用于这两个源线程数据流引擎创建的源和该引擎为转换和目标创建的工作线程。 因此，将 `EngineThreads` 设置为 10 表示该引擎可以创建多达 10 个源线程和多达 10 个工作线程。  
+ `EngineThreads` 属性是每个数据流任务的属性。 此属性定义数据流引擎可以创建和并行运行的线程数。 `EngineThreads` 属性同样适用于数据流引擎为源创建的源线程和该引擎为转换和目标创建的工作线程。 因此，将 `EngineThreads` 设置为 10 表示该引擎可以创建多达 10 个源线程和多达 10 个工作线程。  
   
  若要理解此属性的工作原理，可参考包含三个数据流任务的示例包。 每个数据流任务都包含 10 个源到目标执行树。 如果将每个数据流任务的 EngineThreads 设置为 10，则可以同时运行所有 30 个执行树。  
   
@@ -100,14 +99,14 @@ ms.locfileid: "48049507"
  您可以键入查询或使用查询生成器来构造查询。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“进度”选项卡将列出警告信息。 其中包括当源向数据流提供了某个数据列但下游数据流组件却没有使用它时出现的警告信息。 可以使用`RunInOptimizedMode`属性来自动删除这些列。  
+>  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“进度”选项卡将列出警告信息。 其中包括当源向数据流提供了某个数据列但下游数据流组件却没有使用它时出现的警告信息。 您可以使用 `RunInOptimizedMode` 属性来自动删除这些列。  
   
 #### <a name="avoid-unnecessary-sorting"></a>避免不必要的排序  
  排序本身是非常缓慢的操作，因此避免不必要的排序可以提高包数据流的性能。  
   
  某些情况下，源数据在下游组件使用其之前已经进行了排序。 当 SELECT 查询使用 ORDER BY 子句或者数据按排序顺序插入源中时，即出现这种预排序。 对于这种预排序的源数据，您可以提供一个提示说明数据已排序，从而避免使用排序转换来满足特定下游转换的排序要求。 （例如，合并和合并联接转换要求使用已排序的输入。）若要提供一个提示说明数据已排序，必须执行下面的任务：  
   
--   设置`IsSorted`到上游数据流组件的输出属性`True`。  
+-   将上游数据流组件输出上的 `IsSorted` 属性设置为 `True`。  
   
 -   然后指定数据排序所依据的排序键列。  
   
@@ -131,20 +130,20 @@ ms.locfileid: "48049507"
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>模糊查找和模糊分组转换  
- 有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
+ 有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
   
 #### <a name="lookup-transformation"></a>查找转换  
  通过输入仅查找所需列的 SELECT 语句，最小化内存中引用数据的大小。 这种方法优于选择整个表或视图，因为后者将返回大量不必要的数据。  
   
-#### <a name="merge-join-transformation"></a>合并联接转换  
- 不再需要的值配置`MaxBuffersPerInput`属性因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多的内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+ 您不再必须配置 `MaxBuffersPerInput` 属性的值，因为 Microsoft 已进行了更改，减少了合并联接转换将占用过多内存的风险。 在合并联接的多个输入以不相等速率生成数据时，有时候可能会发生此问题。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>渐变维度转换  
  渐变维度向导和渐变维度转换是能满足大多数用户需要的通用工具。 但是，该向导生成的数据流未针对性能进行优化。  
   
  通常，渐变维度转换中最慢的组件是一次对单行执行 UPDATE 的 OLE DB 命令转换。 因此，改善渐变维度转换性能最有效的方法是替换 OLE DB 命令转换。 可以用目标组件来替换这些转换，目标组件将要更新的所有行保存到一个临时表中。 然后，可以添加执行 SQL 任务，该任务同时对所有行执行基于单集的 Transact-SQL UPDATE。  
   
- 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)（Project REAL：Business Intelligence ETL 设计实践）中的章节 "Unique dimension scenario"（唯一维度方案）。  
+ 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关的讨论和此方法的示例，请参阅部分、"唯一维度方案"白皮书中的[Project REAL:Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)。  
   
 ### <a name="destinations"></a>目标  
  若要改善目标的性能，请考虑使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标并测试目标的性能。  
@@ -167,38 +166,38 @@ ms.locfileid: "48049507"
 ## <a name="related-content"></a>相关内容  
  **文章和博客文章**  
   
--   technet.microsoft.com 上的技术文章 [SQL Server 2005 Integration Services：性能策略](http://go.microsoft.com/fwlink/?LinkId=98899)  
+-   技术文章[SQL Server 2005 Integration Services:性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)，technet.microsoft.com 上  
   
--   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](http://go.microsoft.com/fwlink/?LinkId=98900)  
+-   技术文章[Integration Services:性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)，technet.microsoft.com 上  
   
 -   sqlcat.com 上的技术文章 [通过将同步转换拆分为多个任务来增加管道的吞吐量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
--   msdn.microsoft.com 上的技术文章 [数据加载性能指南](http://go.microsoft.com/fwlink/?LinkId=220816)。  
+-   msdn.microsoft.com 上的技术文章 [数据加载性能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   
--   msdn.microsoft.com 上的技术文章 [我们使用 SSIS 加载 1TB 数据仅用了 30 分钟，因此您也行](http://go.microsoft.com/fwlink/?LinkId=220817)。  
+-   msdn.microsoft.com 上的技术文章 [我们使用 SSIS 加载 1TB 数据仅用了 30 分钟，因此您也行](https://go.microsoft.com/fwlink/?LinkId=220817)。  
   
--   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](http://go.microsoft.com/fwlink/?LinkId=220818)。  
+-   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](https://go.microsoft.com/fwlink/?LinkId=220818)。  
   
--   sqlcat.com 上的技术文章和示例 [针对 SSIS 的“平衡的数据分发服务器”](http://go.microsoft.com/fwlink/?LinkId=220822)。  
+-   sqlcat.com 上的技术文章和示例 [针对 SSIS 的“平衡的数据分发服务器”](https://go.microsoft.com/fwlink/?LinkId=220822)。  
   
--   blogs.msdn.com 上的博客文章 [解决 SSIS 包性能问题](http://go.microsoft.com/fwlink/?LinkId=238156)。  
+-   blogs.msdn.com 上的博客文章 [解决 SSIS 包性能问题](https://go.microsoft.com/fwlink/?LinkId=238156)。  
   
  **视频**  
   
--   视频系列 [设计和优化企业中 SSIS 包的性能（SQL 视频系列）](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   视频系列 [设计和优化企业中 SSIS 包的性能（SQL 视频系列）](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   technet.microsoft.com 上的视频 [优化企业中的 SSIS 包数据流（SQL Server 视频）](http://technet.microsoft.com/sqlserver/ff686901.aspx)  
+-   technet.microsoft.com 上的视频 [优化企业中的 SSIS 包数据流（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686901.aspx)  
   
--   technet.microsoft.com 上的视频 [理解 SSIS 数据流缓冲区（SQL Server 视频）](http://technet.microsoft.com/sqlserver/ff686905.aspx)  
+-   technet.microsoft.com 上的视频 [理解 SSIS 数据流缓冲区（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686905.aspx)  
   
--   channel9.msdn.com 上的视频 [Microsoft SQL Server Integration Services 性能设计模式](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
+-   channel9.msdn.com 上的视频 [Microsoft SQL Server Integration Services 性能设计模式](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
   
--   sqlcat.com 上的演示文稿 [Microsoft IT 如何利用 SQL Server 2008 SSIS 数据流引擎的增强功能](http://go.microsoft.com/fwlink/?LinkId=217660)。  
+-   sqlcat.com 上的演示文稿 [Microsoft IT 如何利用 SQL Server 2008 SSIS 数据流引擎的增强功能](https://go.microsoft.com/fwlink/?LinkId=217660)。  
   
--   technet.microsoft.com 上的视频 [平衡的数据分发服务器](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
+-   technet.microsoft.com 上的视频 [平衡的数据分发服务器](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
   
 ## <a name="see-also"></a>请参阅  
- [用于包开发故障排除工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [包开发的故障排除工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [对包执行进行故障排除的工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

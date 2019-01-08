@@ -12,17 +12,17 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eca92d02eac642f48e64c15217fd6b354790bb97
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 871c6acc823606a249f0886864a84300be7f9899
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030314"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396640"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
-  本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，你可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  
+  本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  
   
- 若要使用基于字词的关系，你可以生成一个“值/更正为”对的列表，例如“Inc.” 和“Incorporated”或“Senior”和“Sr.”。 通过使用基于字词的关系，您可以在整个域中更改某一字词，而不必手动将单独的域值设置为同义词。 您也可以指定更正某个值，即使知识发现以前尚未发现该值。 如果基于字词的关系转换导致两个值完全相同，则 DQS 将在它们之间创建一个同义词关系（在知识发现中）、更正关系（在数据更正中）或精确匹配（在匹配中）。  
+ 若要使用基于字词的关系，可以生成一个“值/更正为”对的列表，例如“Inc.” 和“Incorporated”或“Senior”和“Sr.”。 通过使用基于字词的关系，您可以在整个域中更改某一字词，而不必手动将单独的域值设置为同义词。 您也可以指定更正某个值，即使知识发现以前尚未发现该值。 如果基于字词的关系转换导致两个值完全相同，则 DQS 将在它们之间创建一个同义词关系（在知识发现中）、更正关系（在数据更正中）或精确匹配（在匹配中）。  
   
  基于字词的关系转换和符号转换（其中，特殊字符将被空格或 null 替换）都在分析前的预处理阶段中完成。 如果请求复合域分析，将在这两个转换前执行分析，因为分隔符分析要求符号。 其他操作（例如域规则和域值更改）将会在转换后执行。 对于匹配，在匹配活动前，将基于字词的关系应用于源数据，而与您是否运行清理无关。  
   
@@ -90,16 +90,16 @@ ms.locfileid: "51030314"
   
     6.  通过在 **“查找”** 文本框中输入一个或多个数字，可以在“关系”表中查找一个值。 该字符串的匹配项将会突出显示。 使用向上箭头和向下箭头可以移到表中该字符串的不同实例。  
   
-    7.  **拼写检查器**：如果 **“值”** 或 **“更正为”** 列中的值有红色的波浪下划线，则表示拼写检查器建议对该值加以更正。 右键单击带下划线的值，然后选择由拼写检查器提供的建议值之一。 或者，您可以单击快捷菜单中的 **“添加”** ，以继续使用原始值。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../../2014/data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../../2014/data-quality-services/set-domain-properties.md)。  
+    7.  **拼写检查器**:如果中的值**值**或**更正为**列有红色的波浪下划线，拼写检查器正在建议的更正的值。 右键单击带下划线的值，然后选择由拼写检查器提供的建议值之一。 或者，您可以单击快捷菜单中的 **“添加”** ，以继续使用原始值。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../../2014/data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../../2014/data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
         >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“基于字词的关系”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  
   
 6.  单击 **“应用更改”** 可将基于字词的关系应用于域。  
   
-7.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
+7.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
   
-##  <a name="FollowUp"></a> 跟进：在创建基于字词的关系后  
+##  <a name="FollowUp"></a> 跟进：创建基于字词的关系后  
  在创建基于字词的关系后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

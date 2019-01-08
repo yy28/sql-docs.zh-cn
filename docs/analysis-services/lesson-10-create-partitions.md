@@ -1,5 +1,5 @@
 ---
-title: 第 10 课： 创建分区 |Microsoft Docs
+title: 第 10 课：创建分区 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791928"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416391"
 ---
-# <a name="lesson-10-create-partitions"></a>第 10 课： 创建分区
+# <a name="lesson-10-create-partitions"></a>第 10 课：创建分区
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在本课程中，将创建独立于其他分区来将 FactInternetSales 表划分为较小的逻辑部分，可以处理 （刷新） 分区。 默认情况下，您包括在模型中的每个表都具有一个包含表的所有列和行的分区。 对于 FactInternetSales 表中，我们想要将数据划分按年份;为每个表的五年的一个分区。 然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区](../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+在本课程中，将创建独立于其他分区来将 FactInternetSales 表划分为较小的逻辑部分，可以处理 （刷新） 分区。 默认情况下，在模型中包括的每个表具有一个分区，其中包括所有表的列和行。 对于 FactInternetSales 表中，我们想要将数据划分按年份;为每个表的五年的一个分区。 然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区](../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
-学完本课的估计时间： **15 分钟**  
+学完本课的预计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在之前在本课程中执行的任务，您应已完成上一课：[第 9 课： 创建层次结构](../analysis-services/lesson-9-create-hierarchies.md)。  
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 9 课：创建层次结构](../analysis-services/lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>创建分区  
   
@@ -144,4 +144,4 @@ ms.locfileid: "42791928"
     ![作为表格-lesson10-过程-完成](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 11 课： 创建角色](../analysis-services/lesson-11-create-roles.md)。 
+请转到下一课：[第 11 课：创建角色](../analysis-services/lesson-11-create-roles.md)。 

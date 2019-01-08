@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -21,12 +19,12 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52ac84652bf5f1141ab40b2bcf1b3091a3dcf7de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204117"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371229"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>什么&#39;中 SQLXML 4.0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 包括各种更新和增强功能。 本主题简要总结这些更新，并提供一些介绍详细信息的链接供您查看。 SQLXML 4.0 SP1 提供附加的增强功能，以便支持 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的新数据类型。 本主题包括以下内容：  
@@ -50,7 +48,7 @@ ms.locfileid: "48204117"
 -   迁移问题  
   
 ## <a name="installing-sqlxml-40-sp1"></a>安装 SQLXML 4.0 SP1  
- 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前，SQLXML 4.0 随 SQL Server 一起发布，是所有 SQL Server 版本（SQL Server Express 除外）的默认安装的一部分。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，SQL Server 中不再包括 SQLXML 的最新版本 (SQLXML 4.0 SP1)。 若要安装 SQLXML 4.0 SP1，将其从下载[SQLXML 4.0 SP1 的安装位置](http://www.microsoft.com/download/details.aspx?id=30403)。  
+ 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前，SQLXML 4.0 随 SQL Server 一起发布，是所有 SQL Server 版本（SQL Server Express 除外）的默认安装的一部分。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，SQL Server 中不再包括 SQLXML 的最新版本 (SQLXML 4.0 SP1)。 若要安装 SQLXML 4.0 SP1，将其从下载[SQLXML 4.0 SP1 的安装位置](https://www.microsoft.com/download/details.aspx?id=30403)。  
   
  SQLXML 4.0 SP1 文件安装在以下位置：  
   
@@ -88,7 +86,7 @@ ms.locfileid: "48204117"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的一种数据访问技术。 它将 SQLOLEDB 访问接口和 SQLODBC 驱动程序合并到一个本机动态链接库 (DLL)，同时还提供一项从 Microsoft 数据访问组件 (MDAC) 分离出来并有所不同的新功能。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用于创建新的应用程序，也可以用于增强需要利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引入的新功能但 MDAC 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 中的 SQLOLEDB 和 SQLODBC 不支持的现有应用程序。 例如，对于使用 `xml` 数据类型的 FOR XML 之类的客户端 SQLXML 功能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是必需的。 有关详细信息，请参阅[客户端 XML 格式&#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)，[使用 ADO 执行 SQLXML 4.0 查询](using-ado-to-execute-sqlxml-4-0-queries.md)，并且[SQL Server Native Client 编程](../native-client/sql-server-native-client-programming.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用于创建新的应用程序，也可以用于增强需要利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引入的新功能但 MDAC 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 中的 SQLOLEDB 和 SQLODBC 不支持的现有应用程序。 例如，对于使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的 FOR XML 之类的客户端 SQLXML 功能，`xml` Native Client 是必需的。 有关详细信息，请参阅[客户端 XML 格式&#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)，[使用 ADO 执行 SQLXML 4.0 查询](using-ado-to-execute-sqlxml-4-0-queries.md)，并且[SQL Server Native Client 编程](../native-client/sql-server-native-client-programming.md).  
   
 > [!NOTE]  
 >  SQLXML 4.0 不完全向后兼容 SQLXML 3.0。 由于一些 bug 修复和其他功能更改，特别是删除了 SQLXML ISAPI 支持，您不能将 SQLXML 4.0 与 IIS 虚拟目录一起使用。 虽然大多数应用程序稍加修改即可运行，但将它们放到生产环境中随 SQLXML 4.0 一起运行之前，必须先进行测试。  
@@ -201,7 +199,7 @@ ms.locfileid: "48204117"
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>SQL Server 2005 中引入的 SQLXML 3.0 ISAPI 和数据类型的可支持性  
  由于 ISAPI 支持已从 SQLXML 4.0 中，如果解决方案需要增强的数据键入功能中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]如[xml 数据类型](/sql/t-sql/xml/xml-transact-sql)或[用户定义数据类型 (Udt)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)和基于 Web 的访问，你将需要使用另一种解决方案，例如[SQLXML 托管类](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)或其他类型的 HTTP 处理程序，如 SQL Server 2005 的本机 XML Web 服务。  
   
- 或者，如果不需要这些类型扩展，则可以继续使用 SQLXML 3.0 连接到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]安装。 SQLXML 3.0 ISAPI 支持将针对这些更高版本工作，但不支持或识别 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的 `xml` 数据类型或 UDT 类型支持。  
+ 或者，如果不需要这些类型扩展，则可以继续使用 SQLXML 3.0 连接到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]安装。 SQLXML 3.0 ISAPI 支持将针对这些更高版本工作，但不支持或识别 `xml` 中引入的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据类型或 UDT 类型支持。  
   
 ### <a name="xml-bulk-load-security-changes-for-temporary-files"></a>临时文件的 XML 大容量加载安全更改  
  对于 SQLXML 4.0 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，XML 大容量加载文件的权限授予执行大容量加载操作的用户。 读写权限都继承自文件系统。 在早期版本的 SQLXML 和 SQL Server 中，SQLXML 下的 XML 大容量加载将创建一些任何人都可读的不安全的临时文件。  

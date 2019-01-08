@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069633"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354517"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>配置磁盘空间使用情况 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署使用主机上的磁盘空间来缓存 PowerPivot 数据库以便更快地重新加载。 在内存中加载的每个 PowerPivot 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下，PowerPivot for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
@@ -51,11 +51,11 @@ ms.locfileid: "48069633"
   
  在系统级别，您可以创建电子邮件警报，在磁盘空间不足时通知您。 Microsoft 系统中心包括电子邮件警报功能。 您还可以使用文件服务器资源管理器、任务计划程序或 PowerShell 脚本来设置警报。 以下链接提供一些有用的信息，可帮助您设置在磁盘空间不足时发出的通知：  
   
--   [什么是文件服务器资源管理器的新增](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
+-   [什么是文件服务器资源管理器的新增](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx)。  
   
--   [适用于 Windows Server 2008 R2 文件服务器资源管理器分步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [适用于 Windows Server 2008 R2 文件服务器资源管理器分步指南](https://go.microsoft.com/fwlink/?LinkID=204875)(https://go.microsoft.com/fwlink/?LinkID=204875)。  
   
--   [Windows Server 2008 上设置磁盘空间不足警报](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 上设置磁盘空间不足警报](https://go.microsoft.com/fwlink/?LinkID=204870)( https://go.microsoft.com/fwlink/?LinkID=204870)。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制用于存储缓存文件的磁盘空间量  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069633"
   
 3.  在“磁盘使用情况”中，设置“总磁盘空间”的值 (GB) 以便设置用于缓存的空间量的上限。 默认值为 0，它允许 Analysis Services 使用所有可用磁盘空间。  
   
-4.  在“磁盘使用情况”的“删除最后‘n’小时缓存的数据库”设置中，指定用于在磁盘空间达到最大限制时清空缓存的上次使用的条件。  
+4.  磁盘使用情况，在**删除缓存的数据库中最后 'n' 小时**设置，指定磁盘空间达到最大限制时清空缓存的上次使用的条件。  
   
      默认值为 4 小时，这表示 4 小时或更长时间未处于活动状态的所有数据库都将从文件系统中删除。 处于非活动状态但仍在内存中的数据库将被卸载，然后从文件系统中删除。  
   

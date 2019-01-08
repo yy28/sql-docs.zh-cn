@@ -20,19 +20,19 @@ ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16d4b84c5d1dec2a09300fe23dab58774bf74cdb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3d4249f12e062659778eb9bcf3ce562f92465f01
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146244"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354065"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>创建和更改对象 (XMLA)
   可以单独创建、更改和删除主要对象。 主要对象包括以下对象：  
   
 -   服务器  
   
--   数据库  
+-   “数据库”  
   
 -   维度  
   
@@ -102,7 +102,7 @@ ms.locfileid: "50146244"
 ### <a name="code"></a>代码  
   
 ```  
-<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <ParentObject>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     </ParentObject>  
@@ -127,7 +127,7 @@ ms.locfileid: "50146244"
 ### <a name="code"></a>代码  
   
 ```  
-<Alter ObjectExpansion="ObjectProperties" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Alter ObjectExpansion="ObjectProperties" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <DataSourceID>AdventureWorksDW2012</DataSourceID>  
@@ -147,7 +147,7 @@ ms.locfileid: "50146244"
 ### <a name="comments"></a>注释  
  `ObjectExpansion`的属性`Alter`命令设置为*ObjectProperties*。 此设置允许[ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)元素中，次要对象，若要从数据源中定义排除`ObjectDefinition`。 因此，该数据源的模拟信息仍设置为在第一个示例中所指定的服务帐户。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行方法&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
  [使用 Analysis Services 脚本语言 (ASSL) 开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  

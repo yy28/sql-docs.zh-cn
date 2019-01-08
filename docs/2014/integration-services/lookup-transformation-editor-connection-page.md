@@ -15,12 +15,12 @@ ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ecacc7fa89256cf5efb42ee792a08251a9af013
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37d42dde548394599cec00020a91383fde97e034
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063707"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371539"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“连接”** 页选择连接管理器。 在选择 OLE DB 连接管理器时，会同时选择用来生成引用数据集的查询、表或视图。  
@@ -69,13 +69,13 @@ ms.locfileid: "48063707"
  使用“预览查询结果”对话框预览结果。 此选项最多可以显示 200 行。  
   
 ## <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [查找缓存模式](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>请参阅  
- [查找转换编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
+ [查找转换编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
  [查找转换编辑器（“列”页）](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [查找转换编辑器&#40;高级页&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [查找转换编辑器&#40;错误输出页&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [查找转换编辑器（“高级”页）](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [查找转换编辑器（“错误输出”页）](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [模糊查找转换](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

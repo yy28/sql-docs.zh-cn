@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: facea3ca200d2b4ecb6a7230e8b49f85772a27fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 398b24ddbb9d128446012d36f4b691596433054c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125157"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782899"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 事件类
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编译 SQL 语句时，会发生 Showplan All for Query Compile 事件类。 包括此事件类以标识 Showplan 运算符。 此事件类所包括的信息是 Showplan XML For Query Compile 事件类所包括信息的一部分。  

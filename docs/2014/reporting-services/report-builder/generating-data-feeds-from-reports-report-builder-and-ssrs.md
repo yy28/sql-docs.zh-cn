@@ -11,21 +11,21 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224207"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377589"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件生成 Atom 服务文档列出报表中可用的数据馈送，并从数据区域在报表中的数据馈送。 使用此扩展插件生成与 Atom 兼容的数据馈送，这些馈送是可读的，并可以与使用从报表生成的数据馈送的应用程序进行交换。 例如，可以使用 Atom 呈现扩展插件生成随后可用在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端中的数据馈送。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出报表中可用的数据馈送以及来自报表中的数据区域的数据馈送。 使用此扩展插件生成与 Atom 兼容的数据馈送，这些馈送是可读的，并可以与使用从报表生成的数据馈送的应用程序进行交换。 例如，可以使用 Atom 呈现扩展插件生成随后可用在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端中的数据馈送。  
   
- Atom 服务文档为报表中的每个数据区域至少列出一个数据馈送。 具体取决于数据区域和数据区域显示的数据类型[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]数据区域中可能会生成多个数据馈送。 例如，矩阵或图表可以提供多个数据馈送。 Atom 呈现扩展插件创建 Atom 服务文档时，将为每个数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以访问数据馈送的内容。  
+ Atom 服务文档为报表中的每个数据区域至少列出一个数据馈送。 根据数据区域的类型以及数据区域显示的数据， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以自数据区域生成多个数据馈送。 例如，矩阵或图表可以提供多个数据馈送。 Atom 呈现扩展插件创建 Atom 服务文档时，将为每个数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以访问数据馈送的内容。  
   
  Atom 呈现扩展插件为数据馈送生成数据的方式类似于逗号分隔值 (CSV) 呈现扩展插件将数据呈现到 CSV 文件的方式。 类似于 CSV 文件，数据馈送是报表数据的平展表示形式。 例如，表中有一个行组对某组中的销售额进行加总时，会对每个数据行重复加总，并没有单独的行仅包含总和。  
   
- 可以使用 Report Manager、Report Server 或与 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点来生成 Atom 服务文档和数据馈送。  
+ 可以使用 Report Manager、Report Server 或与 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点来生成 Atom 服务文档和数据馈送。  
   
  Atom 应用于一对相关标准。 Atom 服务文档符合 RFC 5023 Atom 发布协议规范，数据馈送符合 RFC 4287 Atom 联合格式协议规范。  
   
@@ -57,21 +57,21 @@ ms.locfileid: "48224207"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- 从此报表生成的 Atom 服务文档包括两个数据馈送：两个动态对等列（Territory 和 Year）各对应一个数据馈送。 下图显示了每个数据馈送的内容。  
+ 从此报表生成的 Atom 服务文档包括两个数据馈送，一个用于每个动态对等列：区域和年份。 下图显示了每个数据馈送的内容。  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
 ##  <a name="DataFeeds"></a> 数据馈送  
- 数据馈送是一个 XML 文件，它具有一致的不随时间变化的表格格式，以及在每次运行报表时都可能不同的可变数据。 生成的数据馈送[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中与通过 ADO.NET Data Services 生成的那些相同的格式。  
+ 数据馈送是一个 XML 文件，它具有一致的不随时间变化的表格格式，以及在每次运行报表时都可能不同的可变数据。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 生成的数据馈送采用与 ADO.NET Data Services 生成的数据馈送相同的格式。  
   
  数据馈送包含两部分：标题和数据。 Atom 规范中定义了各部分中的元素。 标题包括用于数据馈送的字符编码架构之类的信息。  
   
 ### <a name="header-section"></a>标题部分  
  以下 XML 代码显示数据馈送的标题部分。  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48224207"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下面的 XML 演示 <`entry`> 来自该报表数据源中的元素。 请注意，<`entry`> 元素包含销售和订单的组的总计的销售订单和订单的所有组的总计。 <`entry`> 元素包含报表中的所有值。  
+ 下面的 XML 在数据馈送中显示了来自该报表的 <`entry`> 元素。 请注意，<`entry`> 元素包含该组的销售和订单的总计以及所有组的销售和订单的总计。 <`entry`> 元素包含报表中的所有值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48224207"
   
  嵌套数据区域的数据行通常较宽，特别是在嵌套表和矩阵包括组和总计的情况下。 您可能会发现，将报表导出到数据馈送并且查看数据馈送以确定生成的数据就是所需数据，这会很有帮助。  
   
- 当 Atom 呈现扩展插件创建 Atom 服务文档时，将为数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以查看数据馈送的内容。 示例 Atom 服务文档，如上所示，包括 URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1 "。 该 URL 标识报表 (Product Sales Summary)、Atom 呈现格式 (ATOM) 以及数据馈送的名称 (xAx0x1)。  
+ 当 Atom 呈现扩展插件创建 Atom 服务文档时，将为数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以查看数据馈送的内容。 示例 Atom 服务文档，如上所示，包括 URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1> "。 该 URL 标识报表 (Product Sales Summary)、Atom 呈现格式 (ATOM) 以及数据馈送的名称 (xAx0x1)。  
   
  报表项名称默认为报表项的报表定义语言 (RDL) 元素名称，这些名称经常较为直观或容易记忆。 例如，放入报表的第一个矩阵的默认名称为 Tablix 1。 数据馈送使用这些名称。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48224207"
 
   
 ## <a name="see-also"></a>请参阅  
- [导出到 CSV 文件&#40;报表生成器和 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [导出到 CSV 文件（报表生成器和 SSRS）](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
  [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

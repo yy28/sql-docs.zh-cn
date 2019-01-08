@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -16,12 +15,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072021"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365389"
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
   如果计算机中当前安装了 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]，则可以升级到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -36,16 +35,16 @@ ms.locfileid: "49072021"
 ## <a name="before-upgrading-integration-services"></a>升级 Integration Services 前的准备工作  
  建议您在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前先运行升级顾问。 如果将现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所采用的新的包格式，则可能会遇到升级顾问报表问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  当前版本中，已不支持迁移或运行 Data Transformation Services (DTS) 包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 不再提供以下 DTS 功能：  
->   
+> 
 >  -   DTS 运行时  
 > -   DTS API  
 > -   用于将 DTS 包迁移到下一版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   中对 DTS 包维护的支持 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   执行 DTS 2000 包任务  
 > -   升级 DTS 包的顾问扫描。  
->   
+> 
 >  有关其他废弃的功能的信息，请参阅[SQL Server 2014 中废止的 Integration Services 功能](../discontinued-integration-services-functionality-in-sql-server-2014.md)。  
   
 ## <a name="upgrading-integration-services"></a>升级 Integration Services  
@@ -145,6 +144,6 @@ ms.locfileid: "49072021"
 -   不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 计算机上的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 代理作业来运行存储在升级后的[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]实例中的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包。  
   
 ## <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [使您的现有自定义 SSIS 扩展插件和应用程序在 Denali 下工作](http://go.microsoft.com/fwlink/?LinkId=238157)。  
+ blogs.msdn.com 上的博客文章： [使您的现有自定义 SSIS 扩展插件和应用程序在 Denali 下工作](https://go.microsoft.com/fwlink/?LinkId=238157)。  
   
   

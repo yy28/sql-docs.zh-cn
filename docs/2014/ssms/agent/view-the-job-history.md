@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -16,19 +16,19 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83c5cee010b95d18988b7139fc43b9e1214bd51e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec79de6769f8059819ebe4e6eacaa3aff6d2dbec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128727"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364279"
 ---
 # <a name="view-the-job-history"></a>View the Job History
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志。  
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看作业历史记录日志，请使用：**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48128727"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Security"></a> 安全性  
- 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)。  
+ 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48128727"
   
 #### <a name="to-view-the-job-history-log"></a>查看作业历史记录日志  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -82,6 +82,6 @@ ms.locfileid: "48128727"
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **查看作业历史记录日志**  
   
- 通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 `EnumHistory` 类的 `Job` 方法。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 `EnumHistory` 类的 `Job` 方法。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   
   

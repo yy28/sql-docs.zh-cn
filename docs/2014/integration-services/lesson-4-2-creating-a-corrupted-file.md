@@ -1,22 +1,21 @@
 ---
-title: 步骤 2：创建损坏的文件 | Microsoft Docs
+title: 步骤 2：创建损坏的文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226597"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366809"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>步骤 2：创建损坏的文件
   为阐释如何配置和处理转换错误，必须创建一个在处理时导致组件失败的示例平面文件。  
@@ -29,7 +28,7 @@ ms.locfileid: "48226597"
   
      示例数据与 SSIS 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=267527)。  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48226597"
     >  数字 27 为组件的 ID。 该值在生成数据流时进行分配，可能与包中的值不同。  
   
 ## <a name="next-steps"></a>后续步骤  
- [步骤 3：添加错误流重定向](lesson-4-3-adding-error-flow-redirection.md)  
+ [步骤 3:添加错误流重定向](lesson-4-3-adding-error-flow-redirection.md)  
   
   

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200897"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372149"
 ---
 # <a name="deployment-of-projects-and-packages"></a>项目和包的部署
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
- 有关将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅[将项目部署到 Integration Services 服务器](../deploy-projects-to-integration-services-server.md)。  
+ 有关将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅 [将项目部署到 Integration Services 服务器](../deploy-projects-to-integration-services-server.md)。  
   
  有关包部署模型的详细信息，请参阅[包部署&#40;SSIS&#41;](legacy-package-deployment-ssis.md)。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48200897"
 |数据库引擎需要 CLR 集成。|数据库引擎不需要 CLR 集成。|  
 |特定于环境的参数值存储于环境变量中。|特定于环境的配置值存储于配置文件中。|  
 |可在执行前在服务器上验证目录中的项目和包。 可以使用 SQL Server Management Studio、存储过程或托管代码执行该验证。|恰好在执行之前对包进行验证。 还可以使用 dtExec 或托管代码验证包。|  
-|通过对数据库引擎启动执行，来执行包。 在开始执行前，将项目标识符、显式参数值（可选）和环境引用（可选）分配给某一执行。<br /><br /> 还可以使用 `dtExec` 执行包。|使用执行包`dtExec`和`DTExecUI`执行实用程序。 适用配置是通过命令提示符参数（可选）来标识的。|  
+|通过对数据库引擎启动执行，来执行包。 在开始执行前，将项目标识符、显式参数值（可选）和环境引用（可选）分配给某一执行。<br /><br /> 还可以使用 `dtExec` 执行包。|使用 `dtExec` 和 `DTExecUI` 执行实用工具执行包。 适用配置是通过命令提示符参数（可选）来标识的。|  
 |在执行过程中，包生成的事件将自动捕获并保存到目录中。 您可以使用 TRANSACT-SQL 视图查询这些事件。|在执行过程中，包生成的事件不自动捕获。 日志提供程序必须添加到包以便捕获事件。|  
 |包在单独的 Windows 进程中运行。|包在单独的 Windows 进程中运行。|  
 |SQL Server 代理用于计划包执行。|SQL Server 代理用于计划包执行。|  
@@ -61,7 +60,7 @@ ms.locfileid: "48200897"
 -   [将项目部署到 Integration Services 服务器](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>相关内容  
- mattmasson.com 上的博客文章 [考虑一下针对 SSIS 项目的分支策略](http://go.microsoft.com/fwlink/?LinkId=245739)。  
+ mattmasson.com 上的博客文章 [考虑一下针对 SSIS 项目的分支策略](https://go.microsoft.com/fwlink/?LinkId=245739)。  
   
 ## <a name="see-also"></a>请参阅  
  [dtexec 实用工具](dtexec-utility.md)  

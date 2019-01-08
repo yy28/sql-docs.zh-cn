@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362839"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131937"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC3_CHECK_CATALOG|  
-|消息正文|请检查目录消息 ERROR，级别 LEVEL，状态 STATE: MESSAGE。|  
+|消息正文|检查目录消息错误级别 LEVEL，状态 STATE:消息。|  
   
 ## <a name="explanation"></a>解释  
  DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定对象的系统元数据表中发现了不一致。 这就是说，已记录的对象 ID 与错误消息中指定的对象之间存在不一致。  
@@ -75,6 +75,6 @@ ms.locfileid: "48131937"
  不对系统表进行手动更新。 SQL Server 不支持对系统数据库进行任何手动更改。 如果您更新 SQL Server 数据库中的系统表，则会记录两个事件（事件 ID 17659 和事件 ID 3859）。 有关详细信息，请参阅知识库文章 2688307：“当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859”。  
   
 ## <a name="see-also"></a>请参阅  
- [当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859](http://support.microsoft.com/kb/2688307/EN-US)  
+ [当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

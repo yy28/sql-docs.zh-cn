@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2f69398562a11c466d3772389c326b32cb6e6cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb1838890edb044ca3f1bbe5dfd5ebd3dad51c9d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220720"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328687"
 ---
 # <a name="call-stack-window"></a>“调用堆栈”窗口
   **“调用堆栈”** 窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  
@@ -72,5 +70,3 @@ ms.locfileid: "48220720"
  [Transact-SQL 调试器](transact-sql-debugger.md)   
  [Transact-SQL 调试器信息](transact-sql-debugger-information.md)   
  [逐句通过 Transact-SQL 代码](step-through-transact-sql-code.md)  
-  
-  

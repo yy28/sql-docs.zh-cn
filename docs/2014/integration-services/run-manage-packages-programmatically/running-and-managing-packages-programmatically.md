@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5322a21037fdbef79c3e1d6554128fcc10bff97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3c58f5c81ee876239fa3b5ed0a5cbd9b0164b27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051537"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370259"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以编程方式运行和管理包
   如果您需要在开发环境之外管理和运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，可以采用编程方式对包进行操作。 如果采用这种方法，则您有多种选择：  
@@ -37,7 +35,7 @@ ms.locfileid: "48051537"
 ## <a name="running-packages-on-the-integration-services-server"></a>在 Integration Services 服务器上运行包  
  将包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器时，可以使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间以编程方式运行包。 使用 .NET Framework 3.5 编译 Microsoft.SqlServer.Management.IntegrationServices 程序集。 如果您正在生成 .NET Framework 4.0 应用程序，可能需要将程序集引用直接添加到项目文件。  
   
- 您还可以使用该命名空间在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 有关命名空间和代码片段的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=253122)。  
+ 您还可以使用该命名空间在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 有关命名空间和代码片段的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=253122)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [了解本地执行与远程执行之间的差异](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -78,7 +76,7 @@ ms.locfileid: "48051537"
  [以编程方式生成包](../building-packages-programmatically/building-packages-programmatically.md)  
  讨论如何以编程方式创建、配置和保存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 有关最新的下载、 文章、 示例和视频[!INCLUDE[msCoName](../../includes/msconame-md.md)]，以及从社区获得所选的解决方案访问[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]MSDN 上的页面：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

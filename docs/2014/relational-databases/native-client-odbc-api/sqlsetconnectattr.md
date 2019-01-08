@@ -14,12 +14,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351676"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序忽略 SQL_ATTR_CONNECTION_TIMEOUT 的设置。  
@@ -75,9 +75,9 @@ ms.locfileid: "48070578"
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
-SQLDriverConnect(…);  
+SQLDriverConnect(...);  
 SQLExecDirect("SET QUOTED_IDENTIFIER OFF") // turn OFF via Transact-SQL  
-SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attribute value  
+SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attribute value  
 ```  
   
 ## <a name="sqlcoptssansinpw"></a>SQL_COPT_SS_ANSI_NPW  
@@ -356,7 +356,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [SQLSetConnectAttr 函数](http://go.microsoft.com/fwlink/?LinkId=59368)   
+ [SQLSetConnectAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API 实现的详细信息](odbc-api-implementation-details.md)   
  [大容量复制函数](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
  [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
@@ -364,7 +364,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
  [SET ANSI_WARNINGS (Transact-SQL)](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
- [SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)   
+ [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   
   

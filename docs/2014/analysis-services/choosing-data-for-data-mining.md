@@ -21,15 +21,15 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050a7e4b7b89eb52d9fcb8f9d7a6b8a911eaa825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134617"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355816"
 ---
 # <a name="choosing-data-for-data-mining"></a>为数据挖掘选择数据
-  开始数据挖掘时，你可能会问“我需要多少数据？” 或“在清理数据或设置数据格式时，我是否应了解一些特殊要求？”  
+  当你开始数据挖掘，您可能会问"多少我需要数据？" 或者"有在清理或设置数据格式时，应了解的任何特殊要求？"  
   
  具体而言，刚接触数据挖掘的人通常会遇到与 Excel 数据有关的问题，如需要在列中一致地设置数据格式、清除缺失值或对数字装箱。 本节还会列出特定模型类型的数据要求。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48134617"
 ### <a name="how-much-data-do-i-need"></a>我需要多少数据？  
  经验法则是，对于最简单的模型类型和方案，数据行数不小于 50-100 行。 例如，如果使用 Naïve Bayes 模型预测单个属性，并且数据集格式正确，使用 50-100 行数据就可能生成相当准确的预测。  
   
- 对于关联模型，需要的数据通常多得多 – 如果分析很多属性（如产品间的关联），千行数据都可能不够。 如果数据集太大或太小，通过将行合为类别有时可以获得更好的结果。 例如，可以对产品分类，而不是分析各个产品间的关联。  
+ 对于关联模型，您通常需要更多的数据-如果要分析多个属性，如产品间的关联，可能无法满足需要千行。 如果数据集太大或太小，通过将行合为类别有时可以获得更好的结果。 例如，可以对产品分类，而不是分析各个产品间的关联。  
   
  如果数据集大小合理，应更注重数据质量而不是添加越来越多的数据。 达到一定数据量后，会发现统计上有效的所有模式，添加更多数据不会提高其有效性。 相反，添加更多数据，有时可能引入意外关联。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48134617"
 ##  <a name="bkmk_CommonDataProblems"></a> 常见数据问题  
   
 ### <a name="excel-number-formats"></a>Excel 数字格式  
- Excel 是易于使用的工具，因为它具有包容性 – 您可以在任何地方放置几乎任何类型的数据！ 但是，在您开始查找模式和对相关性进行分析之前，需要对您的数据强制某种结构或某些约束。  
+ Excel 是一种简单的工具使用，因为它是严格-可以将几乎任何类型的数据放置任何地方 ！ 但是，在您开始查找模式和对相关性进行分析之前，需要对您的数据强制某种结构或某些约束。  
   
  默认情况下，在将数值数据导入 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 时，这些数字会存储为带两位小数的小数格式。 如果此数字格式不符合您的要求，您应该将其更改为其他数值格式，也可更改小数位数。  
   
@@ -178,9 +178,9 @@ ms.locfileid: "48134617"
 ### <a name="using-content-types-to-make-better-models"></a>使用内容类型生成更好的模型  
  一个*内容类型*是应用于列，指定列数据模型的使用方式的属性。 执行分析时，算法可以使用内容类型作为说明或提示。  
   
- 例如，如果列包含重复特定的间隔来指示一周中的天的数字，则可以指定作为该列的内容类型`Cyclical`。  
+ 例如，如果列中的数字以特定的间隔重复，来指示一周中的某几天，则可以将该列的内容类型指定为 `Cyclical`。  
   
- 如果您使用在此外接程序中提供的向导和工具，则不必担心内容类型。但是，如果您使用[将模型添加到结构&#40;数据挖掘的 Excel 外接程序&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)建模选项将一个新的模型添加到现有数据，您可能会遇到与内容类型相关的错误。  
+ 您无需担心内容类型，如果您使用的向导和工具提供此加载项中。但是，如果您使用[将模型添加到结构&#40;数据挖掘的 Excel 外接程序&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)建模选项将一个新的模型添加到现有数据，您可能会遇到与内容类型相关的错误。  
   
  得到错误的原因是，某些类型的模型要求某种类型的数据（例如时间戳）。 这些工具根据特定要求处理这些列，并且还添加内容类型属性。 因此，如果对完全不同的算法重复使用数据，则可能需要更改数据类型或内容类型。  
   
@@ -206,14 +206,14 @@ ms.locfileid: "48134617"
   
  通常，键列是数值或文本标识符，不应该用于分析，只应用于跟踪记录。 时序键和序列键是例外。  
   
- **嵌套表键**从外部数据源获取数据时已定义为仅使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源视图。 有关嵌套表的详细信息，请参阅[ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **嵌套表键**从外部数据源获取数据时已定义为仅使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源视图。 有关嵌套表的详细信息，请参阅[ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  此内容类型可用于以下数据类型：`Date`、`Double`、`Long` 和 `Text`。  
   
  **键序列**  
  该列包含表示事件序列的值。 这些值是有序值，但不必按等差排列。  
   
- 以下数据类型支持此内容类型： `Double`， `Long`， `Text`，和`Date`。  
+ 以下数据类型支持此内容类型：`Double`、`Long`、`Text` 和 `Date`。  
   
  **关键时间**  
  该列包含按顺序排列并表示时间刻度的值。 仅当模型为时序模型或顺序分析和聚类分析模型时才能使用键时间内容类型。  

@@ -11,12 +11,12 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116339"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358239"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
   若要在报表中包含来自 Microsoft SharePoint 列表的数据，您必须添加或创建一个基于 Microsoft SharePoint 列表类型的报表数据源的数据集。 此内置数据源类型是基于 Microsoft SQL Server Reporting Services SharePoint 列表数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 站点，并从中检索列表数据。  
@@ -42,18 +42,18 @@ ms.locfileid: "48116339"
 ||受支持的凭据|经典模式 Windows 身份验证|<sup>3</sup>声明身份验证|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|用户帐户控制|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|用户帐户控制|否|  
+||存储、提示、无（带有 Windows 凭据<sup>1</sup>）|用户帐户控制|否|  
 |远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|不<sup>2</sup>|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|用户帐户控制|不<sup>2</sup>|  
+||存储、提示、无（带有 Windows 凭据<sup>1</sup>）|用户帐户控制|不<sup>2</sup>|  
   
  **表 2**  
   
 ||受支持的凭据|经典模式 Windows 身份验证|<sup>3</sup>声明身份验证|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|用户帐户控制|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|否|否|  
+||存储、提示、无（带有 Windows 凭据<sup>1</sup>）|否|否|  
 |远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|不<sup>2</sup>|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|否|不<sup>2</sup>|  
+||存储、提示、无（带有 Windows 凭据<sup>1</sup>）|否|不<sup>2</sup>|  
   
  <sup>1</sup>不支持存储和使用非 Windows 凭据的提示凭据。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116339"
  **不需要凭据（不使用凭据）：**  
  若要使用此选项，必须为报表服务器配置无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
- 有关 Microsoft BI 堆栈中声明身份验证支持的信息，请参阅 [在 Microsoft BI 堆栈中使用声明身份验证](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
+ 有关 Microsoft BI 堆栈中声明身份验证支持的信息，请参阅 [在 Microsoft BI 堆栈中使用声明身份验证](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   
  有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)，[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)，和[支持的数据源Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116339"
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
   

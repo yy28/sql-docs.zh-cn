@@ -13,19 +13,19 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8a04fb5ec226f346e9fe5fa2259361c1a29230ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63a76234d4d3e394b838cb99b99e4607ea765de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182787"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363279"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
   在报表设计器中，在您创建了表、图表和项目中的其他报表项后，可以将它们作为“报表部件”  发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便您和他人可以在其他报表中重复使用它们。  
   
- 通常，报表部件在报表设计器中和报表生成器中以相同的方式工作。 若要了解基本功能，请参阅[报表部件&#40;报表生成器和 SSRS&#41; ](../report-parts-report-builder-and-ssrs.md)中[报表生成器文档](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 通常，报表部件在报表设计器中和报表生成器中以相同的方式工作。 若要了解基本功能，请参阅[报表部件&#40;报表生成器和 SSRS&#41; ](../report-parts-report-builder-and-ssrs.md)中[报表生成器文档](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
   
- 但在报表设计器中，报表部件在工作方式上还存在一些基本差异。 一个主要的差异就是工作流。 报表生成器支持协作创作：我创建了一个报表部件并发布它。 您可以重复使用、修改和重新发布该报表部件。 在报表设计器中，发布是单向的：我可以从报表设计器发布一个报表部件，而您可以重复使用该部件。 但是，我不能在报表设计器中在报表中重复使用现有的报表部件。 本主题首先快速介绍一下报表部件，然后详细阐述这些差异。  
+ 但在报表设计器中，报表部件在工作方式上还存在一些基本差异。 一个主要的差异就是工作流。 报表生成器支持协作创作：我创建的报表部件，并将其发布。 您可以重复使用、修改和重新发布该报表部件。 在报表设计器中，发布是单向的：我可以发布报表部件从报表设计器中，并可以重复使用它。 但是，我不能在报表设计器中在报表中重复使用现有的报表部件。 本主题首先快速介绍一下报表部件，然后详细阐述这些差异。  
   
 ##  <a name="ComponentWorkflow"></a> 报表部件发布的生命周期  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -67,7 +67,7 @@ ms.locfileid: "48182787"
   
 -   列表  
   
- 如果您要发布显示数据（例如表、矩阵或图表）的某一报表部件，则可以将该报表部件基于某一共享数据集；否则，在您发布该报表部件时，它所依赖的数据集将作为嵌入数据集保存。 嵌入数据集可以基于嵌入数据源，但凭据不存储于嵌入数据源中。 因此，如果您的报表部件依赖于使用某一嵌入数据源的嵌入数据集，则重复使用此报表部件的任何人都将需要为该嵌入数据源提供凭据。 若要避免这种情况，请将您的嵌入数据集和共享数据集基于具有存储的凭据的共享数据源。 有关详细信息，请参阅[报表部件和报表生成器中的数据集](../report-data/report-parts-and-datasets-in-report-builder.md)中[报表生成器文档](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 如果您要发布显示数据（例如表、矩阵或图表）的某一报表部件，则可以将该报表部件基于某一共享数据集；否则，在您发布该报表部件时，它所依赖的数据集将作为嵌入数据集保存。 嵌入数据集可以基于嵌入数据源，但凭据不存储于嵌入数据源中。 因此，如果您的报表部件依赖于使用某一嵌入数据源的嵌入数据集，则重复使用此报表部件的任何人都将需要为该嵌入数据源提供凭据。 若要避免这种情况，请将您的嵌入数据集和共享数据集基于具有存储的凭据的共享数据源。 有关详细信息，请参阅[报表部件和报表生成器中的数据集](../report-data/report-parts-and-datasets-in-report-builder.md)中[报表生成器文档](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
   
  在报表设计器中发布报表部件的过程分为以下两步：  
   

@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018332"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980043"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用户定义的事件 id 作为参数传递**sp_audit_write**。 **NULL**对于系统事件 （默认值），对于用户定义的事件显示的非零值。 有关详细信息，请参阅[sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
 |user_defined_information|**nvarchar(4000)**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用来记录用户想要在中记录任何附加信息 |通过使用审核日志**sp_audit_write**存储过程。|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **适用于**： 仅 SQL Server （从 2016年开始） |  
-|transaction_id |**bigint** | **适用于**： 仅 SQL Server （从 2016年开始） |  
-|client_ip |**nvarchar(128)** | **适用于**: Azure SQL DB + SQL Server （从 2017年开始） |  
-|application_name |**nvarchar(128)** | **适用于**: Azure SQL DB + SQL Server （从 2017年开始） |  
-|duration_milliseconds |**bigint** | **适用于**： 仅 Azure SQL DB |  
-|response_rows |**bigint** | **适用于**： 仅 Azure SQL DB |  
-|affected_rows |**bigint** | **适用于**： 仅 Azure SQL DB |  
-|connection_id |GUID | **适用于**： 仅 Azure SQL DB |
-|data_sensitivity_information |nvarchar(4000) | **适用于**： 仅 Azure SQL DB |
+|sequence_group_id |**varbinary** | **适用对象**：仅 SQL Server （从 2016年开始） |  
+|transaction_id |**bigint** | **适用对象**：仅 SQL Server （从 2016年开始） |  
+|client_ip |**nvarchar(128)** | **适用对象**：Azure SQL DB + SQL Server （从 2017年开始） |  
+|application_name |**nvarchar(128)** | **适用对象**：Azure SQL DB + SQL Server （从 2017年开始） |  
+|duration_milliseconds |**bigint** | **适用对象**：仅 azure SQL DB |  
+|response_rows |**bigint** | **适用对象**：仅 azure SQL DB |  
+|affected_rows |**bigint** | **适用对象**：仅 azure SQL DB |  
+|connection_id |GUID | **适用对象**：仅 azure SQL DB |
+|data_sensitivity_information |nvarchar(4000) | **适用对象**：仅 azure SQL DB |
   
 ## <a name="remarks"></a>备注  
  如果*file_pattern*自变量传递给**fn_get_audit_file**引用的路径或文件不存在，或如果文件不是审核文件， **MSG_INVALID_AUDIT_FILE**返回错误消息。  
   
-## <a name="permissions"></a>Permissions  
- - **SQL Server**： 需要**CONTROL SERVER**权限。  
- - **Azure SQL DB**： 需要**CONTROL DATABASE**权限。     
+## <a name="permissions"></a>权限  
+ - SQL Server：要求具有 **CONTROL SERVER** 权限。  
+ - **Azure SQL DB**:需要**控制数据库**权限。     
     - 服务器管理员可以访问服务器上的所有数据库的审核日志。
     - 非服务器管理员只能从当前数据库中访问审核日志。
     - 不符合上述条件的 blob 将被跳过 （跳过 blob 的列表将显示在查询输出消息中），并仅从其允许访问 blob，该函数将返回日志。  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  此示例从名为 `\\serverName\Audit\HIPPA_AUDIT.sqlaudit` 的文件读取。  
+  此示例从名为 `\\serverName\Audit\HIPAA_AUDIT.sqlaudit` 的文件读取。  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

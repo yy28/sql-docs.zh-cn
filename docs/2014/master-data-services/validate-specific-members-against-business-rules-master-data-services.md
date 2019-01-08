@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - applying business rules [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 66709a95b876f34cf7ee05de63caf6661a19197f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2cded1fccc1e6d6ee5229fbec0c786ab35170de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058847"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814630"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>针对业务规则验证特定成员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您想要根据业务规则更新或验证成员的子级时，可以有选择地应用业务规则。  
@@ -27,7 +26,7 @@ ms.locfileid: "48058847"
 > [!NOTE]  
 >  如果想要将业务规则应用于某个模型版本中的所有成员，请参阅[针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -47,7 +46,7 @@ ms.locfileid: "48058847"
 5.  单击“应用业务规则”。 业务规则仅应用于在网格中显示的成员。  
   
 ## <a name="see-also"></a>请参阅  
- [针对业务规则验证版本&#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
- [业务规则&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)   
+ [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

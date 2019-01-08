@@ -16,12 +16,12 @@ ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163537"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363639"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
   将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
@@ -126,7 +126,7 @@ ms.locfileid: "48163537"
 ## <a name="backup-and-imported-full-text-catalogs"></a>备份和导入全文目录  
  对于在升级期间重新生成或重置的全文目录（以及对于新的全文目录），全文目录只是一个逻辑概念，并不驻留在文件组中。 因此，若要备份 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的全文目录，必须逐个识别包含目录全文检索的每个文件组并将它们一一备份。 有关详细信息，请参阅 [备份和还原全文目录和索引](back-up-and-restore-full-text-catalogs-and-indexes.md)。  
   
- 对于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]导入的全文目录，该全文目录在其自己的文件组中仍然是数据库文件。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中除不存在 MSFTESQL 服务以外，全文目录的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份进程仍然适用。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 进程的信息，请参阅 SQL Server 2005 联机丛书中的 [备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkId=209154) 。  
+ 对于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]导入的全文目录，该全文目录在其自己的文件组中仍然是数据库文件。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中除不存在 MSFTESQL 服务以外，全文目录的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份进程仍然适用。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 进程的信息，请参阅 SQL Server 2005 联机丛书中的 [备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=209154) 。  
   
 ##  <a name="Upgrade_Db"></a> 升级到数据库时迁移全文索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  使用附加、还原或复制数据库向导可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中的数据库文件和全文目录升级到现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入、重置或重新生成全文检索（如果有）。 **upgrade_option** 服务器属性控制在升级这些数据库期间服务器实例使用哪个全文升级选项。  
@@ -135,9 +135,9 @@ ms.locfileid: "48163537"
   
  **更改服务器实例的全文升级行为**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]使用 [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) 的 **upgrade\_option** 操作  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：使用**升级\_选项**操作[sp\_fulltext\_服务](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用“服务器属性”对话框的“全文升级选项”。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** 使用**全文升级选项**的**服务器属性**对话框。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 有关将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录还原到 的注意事项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  将全文数据从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一种方法是将完整数据库备份还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -148,7 +148,7 @@ ms.locfileid: "48163537"
   
 -   如果全文目录处于脱机状态，备份将失败。  
   
- 有关备份和还原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录的详细信息，请参阅 联机丛书中的 [备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkId=121052) 和 [文件备份和还原和全文目录](http://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
+ 有关备份和还原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录的详细信息，请参阅 联机丛书中的 [备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=121052) 和 [文件备份和还原和全文目录](https://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上还原数据库时，将为全文目录创建新的数据库文件。 该文件的默认名称是 ftrow_*catalog-name*.ndf。 例如，如果 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库文件的默认名称则为 `ftrow_cat1.ndf`。 但是，如果目标目录中已使用该默认名称，新数据库文件则命名为 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`，其中 *GUID* 是新文件的全局唯一标识符。  
   

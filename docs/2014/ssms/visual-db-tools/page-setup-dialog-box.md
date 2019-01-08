@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
@@ -12,12 +12,12 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f28df5a3091ad54b8500bd29b9873277c33b690
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220942"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780469"
 ---
 # <a name="page-setup-dialog-box"></a>“页面设置”对话框
   可通过选择“页面设置”对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  

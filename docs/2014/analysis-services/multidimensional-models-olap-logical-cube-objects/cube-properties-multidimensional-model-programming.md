@@ -33,12 +33,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd7ff7f21bcf0dbd761e745fc1fcd42f7e2d3d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 315635739984bd76d79ff3a36b32f09783aecae3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084607"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371439"
 ---
 # <a name="cube-properties"></a>多维数据集属性
   可以在多维数据集中设置很多属性以影响整个多维数据集的行为。 下表总结了这些属性。  
@@ -48,7 +48,7 @@ ms.locfileid: "48084607"
   
  有关如何设置多维数据集属性的详细信息，请参阅[多维数据集设计器&#40;Analysis Services-多维数据&#41;](../cube-designer-analysis-services-multidimensional-data.md)。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |`AggregationPrefix`|指定用于聚合名称的通用前缀。|  
 |`Collation`|指定以下划线分隔的区域设置标识符 (LCID) 和比较标志，例如 Latin1_General_C1_AS。|  
@@ -70,7 +70,7 @@ ms.locfileid: "48084607"
 |`Visible`|确定多维数据集的可见性。|  
   
 > [!NOTE]  
->  有关处理 null 值和其他数据完整性问题时设置 ErrorConfiguration 属性的值的详细信息，请参阅[在 Analysis Services 2005 中处理数据完整性问题](http://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  有关处理 null 值和其他数据完整性问题时设置 ErrorConfiguration 属性的值的详细信息，请参阅[在 Analysis Services 2005 中处理数据完整性问题](https://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>请参阅  
  [主动缓存&#40;分区&#41;](partitions-proactive-caching.md)  

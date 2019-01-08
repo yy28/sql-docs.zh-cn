@@ -1,7 +1,7 @@
 ---
 title: SQL Server 迁移助手 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
+ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668394"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031713"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) 是旨在自动从 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 数据库迁移到 SQL Server 的工具。  
@@ -42,9 +42,10 @@ SSMA 支持以下目标版本。
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- 在 Windows 和 Linux 上的 SQL Server 2017
+- 在 Windows 和 Linux 上的 SQL Server 2019
 - Azure SQL Database
-- 在 Windows 和 Linux （预览版） 上的 SQL Server 2017
-- * * Azure SQL 数据仓库
+- Azure SQL 数据仓库 * *
 
 * * 仅适用于 Oracle 的 SSMA 支持此目标。
  
@@ -60,7 +61,7 @@ SSMA 支持以下目标版本。
   
 -   **产品帮助**-若要将访问产品支持、 启动 SSMA 并选择帮助菜单或按 F1 键。  
   
--   **SQL Server 社区论坛**– SQL Server 社区中提出问题  
+-   **SQL Server 社区论坛**-在 SQL Server 社区中提问  
   
     -   [SQL Server 社区](https://go.microsoft.com/fwlink/?LinkId=42455)的新闻组和 SQL Server 社区所监视的论坛。 此站点还列出了诸如博客和网站之类的社区信息源。  
   
@@ -70,7 +71,7 @@ SSMA 支持以下目标版本。
   
 -   顶级支持-如果拥有高级合同，您可以获取顶级支持[高级在线门户](https://premier.microsoft.com/)。  
   
--   咨询服务 – 合作伙伴辅助迁移，请转[合作伙伴门户](https://www.platformmodernization.org/Pages/default.aspx)。  
+-   咨询服务的合作伙伴辅助迁移，请转[合作伙伴门户](https://www.platformmodernization.org/Pages/default.aspx)。  
   
 ## <a name="legal-notice-ssma"></a>法律通告 (SSMA)  
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  
@@ -81,7 +82,7 @@ SSMA 支持以下目标版本。
   
 Microsoft 可能拥有本文档中内容的专利、专利申请、商标、版权或其他知识产权。 除非 Microsoft 提供了明确的书面许可协议，否则提供本文档并不意味着赋予您有关这些专利、商标、版权或其他知识产权的任何许可。  
   
-© 2017 Microsoft Corporation。 保留所有权利。  
+© 2019 Microsoft Corporation。 保留所有权利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 和 WinFX 是 Microsoft Corporation 在美国和/或其他国家/地区的注册商标或商标。  
   
@@ -90,7 +91,7 @@ SAP NetWeaver 是 SAP AG 在德国和其他几个国家/地区的注册商标。
 所有其他商标均为其各自所有者的财产。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支持和升级文档策略  
-SQL Server 文档中显示的内容仅在经过充分测试后才发布。 产品文档（SQL Server 联机丛书、自述文件、已知问题文档和知识库文章）包含与 SQL Server 的特性和功能相关的内容，对于所有客户的正常使用，该内容足够可靠并且安全。 本策略适用于所有 SQL Server 文档，包括版本和 Service Pack 的自述文件；自述文件被视为联机丛书的扩展。  
+SQL Server 文档中显示的内容仅在经过充分测试后才发布。 SQL Server 联机丛书、 自述文件、 已知的问题文档和知识库文章的产品文档包含有关 SQL Server 功能和功能非常强大，足以为安全起见，供所有客户的常规使用的内容。 本策略适用于所有 SQL Server 文档，包括版本和 Service Pack 的自述文件；自述文件被视为联机丛书的扩展。  
   
 在某些情况下，特定功能不是客户应直接使用的功能，因此，未将其记录其中。 除非某种功能还在 Microsoft 发布的 SQL Server 文档中进行讨论，否则来自第三方书籍或网站的内容不受 Microsoft 客户支持的支持，并不应在生产数据库或应用程序中使用。  
   

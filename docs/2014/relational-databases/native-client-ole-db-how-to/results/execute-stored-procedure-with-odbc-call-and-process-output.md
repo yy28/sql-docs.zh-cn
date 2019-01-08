@@ -13,18 +13,18 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04423fb562cd0990a5ae45c7952ee86545fff096
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160917"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365070"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>执行存储过程（使用 ODBC CALL 语法）以及处理返回代码和输出参数 (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 `IMultipleResults::GetResult` 返回 DB_S_NORESULT 时或 `IMultipleResults` 接口完全释放时（以二者中最先发生的为准）可用。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 对它们加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 对它们加密。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>处理返回代码和输出参数  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48160917"
 ## <a name="example"></a>示例  
  此示例说明了如何处理行集、返回代码和输出参数。 不处理结果集。 IA64 平台不支持此示例。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
  执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的存储过程。  
   

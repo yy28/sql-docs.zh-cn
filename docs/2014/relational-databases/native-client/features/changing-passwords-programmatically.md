@@ -21,33 +21,33 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229917"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370489"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，如果用户的密码过期，则只有管理员能对其进行重置。 开头[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持处理密码过期，以编程方式通过两[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序，并通过更改**SQL Server 登录名**对话框。  
   
 > [!NOTE]  
->  如果可能，请在运行时提示用户输入他们的凭据，并避免用持久化格式存储他们的凭据。 如果必须保留其凭据，应使用 [Win32 加密 API](http://go.microsoft.com/fwlink/?LinkId=64532) 来加密这些凭据。 有关密码使用的详细信息，请参阅[强密码](../../security/strong-passwords.md)。  
+>  如果可能，请在运行时提示用户输入他们的凭据，并避免用持久化格式存储他们的凭据。 如果必须保留其凭据，应使用 [Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532) 来加密这些凭据。 有关密码使用的详细信息，请参阅[强密码](../../security/strong-passwords.md)。  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server 登录错误代码  
  当由于身份验证问题而导致无法连接时，以下 SQL Server 错误代码之一可供应用程序使用，以帮助诊断和恢复。  
   
 |SQL Server 错误代码|错误消息|  
 |---------------------------|-------------------|  
-|15113|用户 '%.*ls' 登录失败。原因: 密码验证失败。 帐户已锁定。|  
-|18463|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 此时无法使用密码。|  
-|18464|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 该密码太短，不符合策略要求。|  
-|18465|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 密码太长，不符合策略要求。|  
-|18466|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 该密码不够复杂，不符合策略要求。|  
-|18467|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 该密码不符合密码筛选器 DLL 的要求。|  
-|18468|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 在密码验证过程中出错。|  
-|18487|用户 "%.*ls" 登录失败。 原因: 该帐户的密码已过期。|  
-|18488|用户 "%.*ls" 登录失败。 原因: 该帐户的密码必须更改。|  
+|15113|用户登录失败 %.* ls' 的原因：密码有效性验证失败。 帐户已锁定。|  
+|18463|用户 "%.*ls" 登录失败。 原因：密码更改失败。 此时无法使用密码。|  
+|18464|用户 "%.*ls" 登录失败。 原因：密码更改失败。 该密码太短，不符合策略要求。|  
+|18465|用户 "%.*ls" 登录失败。 原因：密码更改失败。 密码太长，不符合策略要求。|  
+|18466|用户 "%.*ls" 登录失败。 原因：密码更改失败。 该密码不够复杂，不符合策略要求。|  
+|18467|用户 "%.*ls" 登录失败。 原因：密码更改失败。 该密码不符合密码筛选器 DLL 的要求。|  
+|18468|用户 "%.*ls" 登录失败。 原因：密码更改失败。 在密码验证过程中出错。|  
+|18487|用户 "%.*ls" 登录失败。 原因：帐户的密码已过期。|  
+|18488|用户 "%.*ls" 登录失败。 原因：必须更改帐户的密码。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持密码过期，但用户界面和以编程方式。  

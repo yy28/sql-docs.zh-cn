@@ -11,12 +11,12 @@ ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219117"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363759"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>设置多维数据库的兼容级别 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别为`1100`具有不同的含义，具体取决于数据库是多维或表格。  
@@ -24,7 +24,7 @@ ms.locfileid: "48219117"
  本主题仅描述多维数据库的兼容级别。 有关表格解决方案的详细信息，请参阅[兼容性级别&#40;SSAS 表格 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
   
 > [!NOTE]  
->  表格模型具有其他一些不适用于多维模型的数据库兼容级别。 兼容性级别`1103`多维模型不存在。 请参阅[What's new for SQL Server 2012 SP1 和兼容性级别中表格模型](http://go.microsoft.com/fwlink/?LinkId=301727)有关详细信息`1103`针对表格解决方案。  
+>  表格模型具有其他一些不适用于多维模型的数据库兼容级别。 多维模型不具有兼容级别 `1103`。 请参阅[What's new for SQL Server 2012 SP1 和兼容性级别中表格模型](https://go.microsoft.com/fwlink/?LinkId=301727)有关详细信息`1103`针对表格解决方案。  
   
  **多维数据库的兼容级别**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48219117"
 > [!WARNING]  
 >  将数据库兼容级别设置为更高级别是不可逆的。 您将兼容性级别增加到后`1100`，你必须继续在较新的服务器上运行的数据库。 你无法回滚到`1050`。 不能附加或还原`1100`早于的服务器版本上的数据库[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入数据库兼容级别。 你必须具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更高版本才能查看或设置数据库兼容级别。  
   
  数据库不能为本地多维数据集。 本地多维数据集不支持 `CompatibilityLevel` 属性。  
@@ -50,7 +50,7 @@ ms.locfileid: "48219117"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>确定多维数据库的现有数据库兼容级别  
  查看或修改数据库兼容级别的唯一方法就是通过 XMLA。 您可以在 SQL Server Management Studio 中查看或修改指定您的数据库的 XMLA 脚本。  
   
- 如果搜索属性的数据库的 XMLA 定义`CompatibilityLevel`并不存在，则很可能已在数据库`1050`级别。  
+ 如果在数据库的 XMLA 定义中搜索属性 `CompatibilityLevel`，没有任何结果，则该数据库很可能已位于 `1050` 级别。  
   
  下一节中提供了有关查看和修改 XMLA 脚本的说明。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48219117"
 3.  仅对于共享相同版本和数据库兼容级别的服务器，才支持同步服务器。  
   
 ## <a name="next-steps"></a>后续步骤  
- 数据库兼容级别增加后，可以设置`StringStoresCompatibilityLevel`中的属性[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)。  
+ 在增加了数据库兼容级别之后，可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中设置 `StringStoresCompatibilityLevel` 属性。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [备份、 还原和同步数据库&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

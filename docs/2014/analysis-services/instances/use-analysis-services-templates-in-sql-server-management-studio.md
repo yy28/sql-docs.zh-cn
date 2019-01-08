@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358419"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
@@ -57,7 +57,7 @@ ms.locfileid: "50146743"
      切换到 **“消息”** 选项卡可以查看返回的记录数以及与查询执行相关联的错误、查询语句和任何其他消息。 例如，如果您对在直接查询模式下运行的模型执行 DAX 语句，则可以看到由 xVelocity 内存中分析引擎 (VertiPaq) 生成的 Transact-SQL 语句。  
   
 ##  <a name="BKMK_Building_Queries"></a> 使用模板对表格模型生成并运行 MDX 查询  
- 此实例说明如何在 SQL Server Management Studio 中创建 MDX 查询，并且使用表格模型数据库作为数据源。 若要在您的计算机上重复此示例，您可以 [下载 Adventureworks 表格模型示例项目](http://go.microsoft.com/fwlink/?LinkId=231183)。  
+ 此实例说明如何在 SQL Server Management Studio 中创建 MDX 查询，并且使用表格模型数据库作为数据源。 若要在您的计算机上重复此示例，您可以 [下载 Adventureworks 表格模型示例项目](https://go.microsoft.com/fwlink/?LinkId=231183)。  
   
 > [!WARNING]  
 >  不能对已在直接查询模式下部署的表格模型使用 MDX 查询。 但是，可以通过将 DAX 表查询用于 EVALUATE 命令来发送等效的查询。 有关详细信息，请参阅[DAX 查询的参数](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx)。  
@@ -223,9 +223,9 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||性能计数器|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_PERFORMANCE_COUNTERS 架构行集的内容。|  
 ||会话|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_SESSIONS 架构行集的内容。|  
 ||跟踪|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_TRACES 架构行集的内容。|  
-||中的|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
+||事务|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

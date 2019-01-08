@@ -1,5 +1,5 @@
 ---
-title: 角色 |Microsoft 文档
+title: Analysis Services 表格模型角色 |Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975686"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072164"
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "45975686"
   
  每个角色都可以定义下列权限之一：  
   
-|Permissions|Description|使用 DAX 进行行筛选|  
+|权限|Description|使用 DAX 进行行筛选|  
 |-----------------|-----------------|----------------------------|  
 |None|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
 |读取|允许成员查询数据（基于行筛选器），但是无法看到 SSMS 中的模型数据库，无法更改模型数据库架构，并且用户无法处理模型。|应用行筛选器。 用户仅能看见在行筛选器 DAX 公式中指定的数据。|  
@@ -63,15 +63,15 @@ ms.locfileid: "45975686"
   
  只能为具有“读取”和“读取和处理”权限的角色定义行筛选器。 默认情况下，如果没有为某一特定表定义行筛选器，则具有“读取”和“读取和处理”权限的角色的成员将能够查询表中的所有行，除非交叉筛选应用于其他表。  
   
- 一旦为特定表定义了行筛选器后，求值结果必须为 TRUE/FALSE 值的 DAX 公式将定义可供该特定角色的成员进行查询的行。 未包含在 DAX 公式中的行将不可查询。 例如，对于具有以下行筛选器表达式的 Customers 表，Sales 角色的成员将只能看到 USA 中的客户：=Customers [Country] = “USA”。  
+ 一旦为特定表定义了行筛选器后，求值结果必须为 TRUE/FALSE 值的 DAX 公式将定义可供该特定角色的成员进行查询的行。 未包含在 DAX 公式中的行将不可查询。 例如，对于 Sales 角色的成员，Customers 表的以下行筛选器表达式中， *= Customers [Country] ="USA"*，Sales 角色的成员将只能查看美国境内的客户。  
   
  行筛选器应用于指定的行以及相关行。 如果表具有多个关系，则筛选器将安全性应用于处于活动状态的关系。 行筛选器将与为相关表定义的其他行筛选器相交，例如：  
   
 |表|DAX 表达式|  
 |-----------|--------------------|  
-|地区|=Region[Country]=”USA”|  
-|ProductCategory|=ProductCategory[Name]=”Bicycles”|  
-|中的|=Transactions[Year]=2008|  
+|地区|= 区域 [Country] ="USA"|  
+|ProductCategory|= ProductCategory [名称] ="自行车"|  
+|事务|=Transactions[Year]=2008|  
   
  这些权限对于 Transactions 表的净效果是，将允许成员查询客户位于 USA、产品类别是自行车并且年份是 2008 的数据行。 用户将无法查询 USA 之外的任何事务、不是自行车的任何事务或者不在 2008 年发生的任何事务，除非用户是授予了这些权限的其他角色。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "45975686"
 |7|销售和营销|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- 在创作模型项目时，可以使用“在 Excel 中分析”功能来测试已定义的角色的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”** 时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户名、角色和一个用于连接作为数据源的工作区模型的透视。 若要了解详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
+ 在创作模型项目时，可以使用“在 Excel 中分析”功能来测试已定义的角色的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”** 时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户名、角色和一个用于连接作为数据源的工作区模型的透视。 若要了解详细信息，请参阅 [“在 Excel 中分析”](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)安装在同一台计算机上。  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
@@ -127,7 +127,7 @@ ms.locfileid: "45975686"
   
 ## <a name="see-also"></a>请参阅  
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [在 Excel 中分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [“在 Excel 中分析”](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
  [LOOKUPVALUE 函数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
  [CUSTOMDATA 函数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  

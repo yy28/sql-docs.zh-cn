@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergearticlecolumn
@@ -17,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 479ac5e7d9a1d451ea489a3a43c0ff481a6a121f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837015"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590071"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +44,32 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] **'***发布*****  
+ [  **@publication =**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article =**] **'***文章*****  
+ [  **@article =**] **'**_文章_  
  发布中的项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@column =**] **'***列*****  
+ [  **@column =**] **'**_列_  
  标识要在其中创建垂直分区的列。 *列*是**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 *列*不能为 NULL 时*操作*设置为**删除**。 若要从项目中排除列，请执行**sp_mergearticlecolumn**并指定*列*并`@operation = N'drop'`为每个要删除的列从指定*文章*.  
   
- [  **@operation =**] **'***操作*****  
+ [  **@operation =**] **'**_操作_  
  复制状态。 *操作*是**nvarchar(4)**，使用默认值为 ADD。 **添加**会标记列以进行复制。 **删除**清除该列。  
   
- [  **@schema_replication=**] **'***schema_replication*****  
+ [  **@schema_replication=**] **'**_schema_replication_  
  指定在合并代理运行时将传播架构更改。 *schema_replication*是**nvarchar(5)**，默认值为 FALSE。  
   
 > [!NOTE]  
 >  仅**FALSE**支持*schema_replication*。  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。  
   
  **1**指定对合并项目的更改可能导致快照无效，如果是这种情况的值**1**提供了新快照的权限。  
   
- [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
+ [  **@force_reinit_subscription =]**_force_reinit_subscription_  
  启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*为 bit，默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致重新初始化订阅。  
@@ -92,7 +91,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_mergearticlecolumn**。  
   
 ## <a name="see-also"></a>请参阅  

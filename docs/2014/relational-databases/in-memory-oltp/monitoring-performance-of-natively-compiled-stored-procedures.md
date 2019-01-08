@@ -10,18 +10,18 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad93f867eb10768806d3384c05596f7d4f008dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209147"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359749"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
   本主题论述如何监视本机编译的存储过程的性能  
   
 ## <a name="using-extended-events"></a>使用扩展事件  
- 使用`sp_statement_completed`扩展的事件可以跟踪查询的执行。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
+ 使用 `sp_statement_completed` 扩展事件可以跟踪查询的执行情况。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
   
  `line_number` 连同扩展事件中的 `object_id` 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48209147"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 有关详细信息`sp_statement_completed`扩展事件，请参阅[如何检索导致了事件的语句](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
+ 有关详细信息`sp_statement_completed`扩展事件，请参阅[如何检索导致了事件的语句](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
 ## <a name="using-data-management-views"></a>使用数据管理视图  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  

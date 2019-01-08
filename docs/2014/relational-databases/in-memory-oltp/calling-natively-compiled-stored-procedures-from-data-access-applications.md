@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143787"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367990"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
   本主题提供有关从数据访问应用程序中调用本机编译的存储过程的指导。  
@@ -36,7 +36,7 @@ ms.locfileid: "48143787"
   
  以下建议适用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序调用本机编译的存储过程。  
   
- 若要一次调用存储的过程的最有效方法是发出直接的 RPC 调用使用`SQLExecDirect`和 ODBC CALL 子句。 不要使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`语句。 如需多次调用存储过程，则准备好的执行最为高效。  
+ 只调用存储过程一次的最高效方式是使用 `SQLExecDirect` 和 ODBC CALL 子句发出直接的 RPC 调用。 不要使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`语句。 如需多次调用存储过程，则准备好的执行最为高效。  
   
  多次调用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程的最高效方式是通过准备好的 RPC 过程调用执行。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序执行准备好的 RPC 调用的步骤是：  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  使用内存优化的数据文件组创建示例数据库。 有关如何使用内存优化的数据文件组创建数据库的信息，请参阅 [创建内存优化表和本机编译的存储过程](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-2.  创建指向该数据库的名为 PrepExecSample 的 ODBC 数据源。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序。 您还可以修改该示例并使用 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)。  
+2.  创建指向该数据库的名为 PrepExecSample 的 ODBC 数据源。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序。 您还可以修改该示例并使用 [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)。  
   
 3.  在示例数据库上运行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本（下面）。  
   

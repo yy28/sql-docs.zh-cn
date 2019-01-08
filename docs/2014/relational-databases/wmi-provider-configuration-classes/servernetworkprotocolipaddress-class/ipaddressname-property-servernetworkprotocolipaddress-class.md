@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - IpAddressName Property (ServerNetworkProtocolIPAddress Class)
@@ -20,12 +18,12 @@ ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2168233715bcb096df10d1cdc322261301fab6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094867"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359469"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 属性（ServerNetworkProtocolIPAddress 类）
   获取 IP 地址的名称。  
@@ -39,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象，表示的实例上的网络协议 IP 地址[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 IP 地址名称的字符串值。  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

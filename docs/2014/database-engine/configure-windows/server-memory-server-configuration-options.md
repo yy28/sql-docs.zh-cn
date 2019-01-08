@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199403"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376679"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
   使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
@@ -35,7 +34,7 @@ ms.locfileid: "48199403"
  **min server memory** 的默认设置为 0， **max server memory** 的默认设置为 2147483647 MB。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
 > [!NOTE]  
->  将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请使用 **–f** 启动选项启动它，并将 **max server memory** 重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
+>  将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用“-f”启动选项启动它，并将“max server memory”重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
   
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态使用内存时，它会定期查询系统以确定可用内存量。 保持此可用内存可避免操作系统 (OS) 进行分页。 如果可用内存较少， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会释放内存以供操作系统使用。 如果有更多的内存可用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会分配更多的内存。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在其工作负荷需要更多内存时才增加内存；空闲的服务器不会增加其虚拟地址空间的大小。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48199403"
 ## <a name="lock-pages-in-memory"></a>锁定内存页  
  此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 SQL Server**锁定内存页**在 32 位和 64 位的实例选项设置为 ON [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition 和更高版本时，有权运行 sqlservr.exe 的帐户授予 Windows"已锁定页中内存"(LPIM) 用户权限。 在 SQL Server 的早期版本中，为 32 位的 SQL Server 实例设置“锁定页”选项时，需要有权运行 sqlservr.exe 的帐户具有 LPIM 用户权限并且将“awe_enabled”配置选项设置为 ON。  
   
- 若要对 **禁用** “锁定内存页” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项，请删除 SQL Server 启动帐户的“锁定内存页”用户权限。  
+ 若要禁用**锁定内存页**选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，删除"锁定内存页"用户权限的 SQL Server 启动帐户。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>禁用“锁定内存页”  
  **若要禁用锁定页中内存选项：**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199403"
 |-|-------------|-------------|  
 |常规内存|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 2 GB<br /><br /> 3 GB，带有**3gb**启动参数 *<br /><br /> Wow64 的 4 GB\*\*|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 8 TB，在 x64 体系结构上|  
   
- ***/3gb** 是一个操作系统的启动参数。 有关详细信息，请访问 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ ***/3gb** 是一个操作系统的启动参数。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
- * * WOW64 (Windows on Windows 64) 是一种模式中的 32 位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 64 位操作系统上运行。 有关详细信息，请访问 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ * * WOW64 (Windows on Windows 64) 是一种模式中的 32 位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 64 位操作系统上运行。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
 ## <a name="examples"></a>示例  
   

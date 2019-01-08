@@ -13,17 +13,17 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3309d3754d8d4842ed238a54f0120b54bba1d596
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361345"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>更改服务器实例的 HADR 群集上下文 (SQL Server)
   本主题介绍如何通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更高版本中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，切换 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的 HADR 群集上下文。 *HADR 群集上下文* 用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理服务器实例所承载的可用性副本的元数据。  
   
- 仅在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的过程中切换 HADR 群集上下文。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间将操作系统升级到 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 有关详细信息，请参阅[针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](http://msdn.microsoft.com/library/jj873730.aspx)。  
+ 仅在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的过程中切换 HADR 群集上下文。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间将操作系统升级到 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 有关详细信息，请参阅[针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
 
   
@@ -52,7 +52,7 @@ ms.locfileid: "48219177"
   
     |副本角色|操作|链接|  
     |------------------|------------|----------|  
-    |主|使可用性组脱机。|[使可用性组脱机 (SQL Server)](../../take-an-availability-group-offline-sql-server.md)|  
+    |基本|使可用性组脱机。|[使可用性组脱机 (SQL Server)](../../take-an-availability-group-offline-sql-server.md)|  
     |辅助副本|从其可用性组中删除副本|[将次要副本从可用性组删除 (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   在您可以从远程群集切换到本地群集之前，所有同步提交副本必须都处于 SYNCHRONIZED 状态。  
@@ -154,9 +154,9 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [SQL Server 2012 技术文章](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [SQL Server 2012 技术文章](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   

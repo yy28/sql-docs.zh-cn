@@ -15,12 +15,12 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ac59cddb24d5e08e3b620c178f40e206460eb7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 833e2740e54f07701fb66a894bb5e4798c4a42e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516402"
 ---
 # <a name="parameter-markers"></a>参数标记
 SQL-92 规范中，根据应用程序不能将参数标记放置在以下位置。 有关更全面的列表，请参阅 SQL-92 规范。  
@@ -37,7 +37,7 @@ SQL-92 规范中，根据应用程序不能将参数标记放置在以下位置�
   
 -   作为表达式的第一个值**IN**操作  
   
--   作为操作数的一元 + 或 – 操作  
+-   作为操作数的一元 + 或-操作  
   
 -   作为自变量的*集函数引用*  
   

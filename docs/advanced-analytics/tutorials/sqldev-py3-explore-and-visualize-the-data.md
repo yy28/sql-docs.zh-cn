@@ -1,5 +1,5 @@
 ---
-title: 课程 1 浏览和可视化数据使用 Python 和 T-SQL （SQL Server 机器学习） |Microsoft Docs
+title: 课程 1 浏览和可视化使用 Python 和 T-SQL 的 SQL Server 机器学习的数据
 description: 教程演示如何嵌入 Python 在 SQL Server 存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030974"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645336"
 ---
 # <a name="explore-and-visualize-the-data"></a>浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
     - Python 脚本是相当简单： **matplotlib** `figure`对象用于使直方图和散点图，这些对象随后会使用序列`pickle`库。
     - Python 图形对象序列化为**pandas**为输出数据帧。
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
 
 2. 现在运行存储的过程不带任何参数，若要从硬编码为输入查询的数据生成绘图。
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
-3. 结果应类似于此：
+3. 结果应如下所示：
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

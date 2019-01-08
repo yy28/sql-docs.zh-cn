@@ -1,5 +1,5 @@
 ---
-title: 任务 3： 清理数据对照 Suppliers 知识库 |Microsoft Docs
+title: 任务 3：对照 Suppliers 知识库清理数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dfcf89c2130426e0c1cfb3c86f88f5f9d74cead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aca49b5260fc68f899a012aadaac7609fdb7062
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106107"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360329"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>任务 3：对照 Suppliers 知识库清理数据
-  在本任务中，您将运行计算机辅助的清理过程。 DQS 基于指定的域值，使用高级算法和置信度来针对所选知识库分析数据，然后清理数据。 请参阅[清理数据使用 DQS （内部） 知识](http://msdn.microsoft.com/library/hh213061.aspx)的更多详细信息。  
+  在本任务中，您将运行计算机辅助的清理过程。 DQS 基于指定的域值，使用高级算法和置信度来针对所选知识库分析数据，然后清理数据。 请参阅[清理数据使用 DQS （内部） 知识](https://msdn.microsoft.com/library/hh213061.aspx)的更多详细信息。  
   
 1.  单击**启动**若要开始在计算机辅助清理过程。  
   
@@ -34,6 +34,6 @@ ms.locfileid: "48106107"
 3.  单击**下一步**若要切换到**管理和查看结果**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 4： 管理和查看报表](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
+ [任务 4:管理和查看报表](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
   
   

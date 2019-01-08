@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7ddb90a20b8d7d3c5aab323b803ca9fe3fcecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605235"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589572"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,18 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>参数  
  *progid*  
- 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串说明该 OLE 对象的类，采用以下格式： **'***OLEComponent***。***对象***’**  
+ 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串说明该 OLE 对象的类，采用以下格式：**'**_OLEComponent_**。**_对象_  
   
  *OLEComponent*是 OLE 自动化服务器的组件名称和*对象*是 OLE 对象的名称。 指定的 OLE 对象必须有效，并且必须支持**IDispatch**接口。  
   
  例如，SQLDMO。SQLServer 是 SQL DMO 的 ProgID **SQLServer**对象。 SQL-DMO 具有的组件名称为 SQLDMO， **SQLServer**对象是否有效，并且 （如所有 SQL-DMO 对象） **SQLServer**对象支持**IDispatch**。  
   
  *clsid*  
- 要创建的 OLE 对象的类标识符 (CLSID)。 此字符串说明该 OLE 对象的类，采用以下格式： **{***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}**。 指定的 OLE 对象必须有效，并且必须支持**IDispatch**接口。  
+ 要创建的 OLE 对象的类标识符 (CLSID)。 此字符串说明该 OLE 对象的类，采用以下格式： **{**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}**。 指定的 OLE 对象必须有效，并且必须支持**IDispatch**接口。  
   
  例如，{00026BA1-0000-0000-C000-000000000046} 是 SQL-DMO 的 CLSID **SQLServer**对象。  
   
- *objecttoken* **输出**  
+ _objecttoken_ **输出**  
  返回的对象令牌，并且必须是数据类型的局部变量**int**。该对象令牌用于标识所创建的 OLE 对象，并用于调用其他 OLE 自动化存储过程。  
   
  *context*  
@@ -83,7 +83,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  已创建的 OLE 对象在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句批处理结束时会自动破坏。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

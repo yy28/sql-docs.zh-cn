@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
@@ -13,12 +12,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8309a4d66fbcf36aca4e5e4d817c2bb34722bc08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6bc7964ee9ffaca02a81d52a50104089736e2ae
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072967"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376549"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
   在可以查看源数据的配置文件之前，第一步是设置和运行数据事件探查任务。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内创建此任务。 若要配置数据事件探查任务，可以使用数据事件探查任务编辑器。 使用此编辑器，可以选择输出配置文件的位置以及要计算哪些配置文件。 设置此任务后，可以运行包来计算数据配置文件。  
@@ -54,14 +53,14 @@ ms.locfileid: "48072967"
   
 |计算对象|帮助标识|使用此配置文件|  
 |----------------|-------------------------|----------------------|  
-|所选列中字符串值的所有不同长度和每个长度表示的行在表中的百分比。|**无效的字符串值—** 例如，如果对某列进行事件探查，假定该列使用两个字符来表示美国的州代码，但发现它的值长于两个字符。|**列长度分布 —** 使用其中一种数据类型的列有效：<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
-|一组正则表达式，涵盖字符串列中指定的百分比值。<br /><br /> 还可以查找将来可用于验证新值的正则表达式|**无效或格式不正确的字符串值** - 例如，邮政编码列的模式配置文件可能会生成正则表达式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果输出中包含其他正则表达式，则数据包含的值可能无效或者格式不正确。|**列模式配置文件 —** 使用其中一种数据类型的列有效：<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
-|所选列中 null 值的百分比。|**列中 null 值所占比率意外地高—** 例如，对某个应包含美国邮政编码的列进行事件探查时发现，该列中缺少邮政编码的行所占的比例超出允许的范围。|**列 Null 比率 —** 这些数据类型的列有效：<br /><br /> 任何数据类型。 包括 `image`、`text`、`xml`、用户定义类型和变量类型。|  
-|数值列的最小值、最大值、平均值和标准偏差等统计信息，以及 `datetime` 列的最小值和最大值。|**无效的数值和日期—** 例如，在对包含历史日期的列进行事件探查时发现，最大日期是一个将来的日期。|**列统计信息配置文件 —** 使用其中一种数据类型的列有效：<br /><br /> 数值数据类型：整数类型（`bit` 除外）、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`<br />请注意：对于具有日期和时间数据类型的列，配置文件仅计算最小值和最大值。|  
-|所选列中的所有非重复值以及每个值表示的行在表中的百分比。 或者表示大于表中指定百分比的值。|**列中非重复值的个数不正确**—例如，如果对包含美国各州的列进行事件探查，但发现非重复值大于 50 个。|**列值分布 —** 使用其中一种数据类型的列有效：<br /><br /> 数值数据类型：整数类型（`bit` 除外）、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
-|一列或者一组列是所选表的键或者近似键。|**在可能的键列中存在重复值—** 例如，在对 Customers 表中的 Name 和 Address 列进行事件探查时发现，应为唯一值的名称和地址组合中包含重复值。|**候选键—** 多列配置文件，它报告列或者一组列是否适合用作所选表的键。 具有以下数据类型的列有效：<br /><br /> 整数数据类型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
-|一个区，对于该区来说，一列（依赖列）中的值取决于其他列或另一组列（决定列）中的值。|**在依赖列中无效的值—** 例如，对包含美国邮政编码的列与包含美国各州的列之间的依赖关系进行事件探查。 相同的邮政编码对应的州应该总是相同的。 但是，在配置文件中发现依赖关系冲突。|**函数依赖关系 —** 对具有这些数据类型的列有效：<br /><br /> 整数数据类型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
-|列或者一组列适合用作所选表间的外键。<br /><br /> 即，此配置文件报告两列或两组列之间的重叠值。|**无效值—** 例如，对 Sales 表的 ProductID 列进行事件探查时， 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。|**值包含—** 对具有以下数据类型的列有效：<br /><br /> 整数数据类型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字符数据类型： `char`， `nchar`， `varchar`，和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|所选列中字符串值的所有不同长度和每个长度表示的行在表中的百分比。|**无效的字符串值 -** 例如，如果对某列进行事件探查，假定该列使用两个字符来表示美国的州代码，但发现它的值长于两个字符。|**列长度分布-** 使用其中一种数据类型的列有效：<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
+|一组正则表达式，涵盖字符串列中指定的百分比值。<br /><br /> 还可以查找将来可用于验证新值的正则表达式|**无效或格式不正确的字符串值 -** 例如，邮政编码列的模式配置文件可能会生成正则表达式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果输出中包含其他正则表达式，则数据包含的值可能无效或者格式不正确。|**列模式配置文件-** 使用其中一种数据类型的列有效：<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
+|所选列中 null 值的百分比。|**列中 null 值所占比率意外地高 -** 例如，对某个应包含美国邮政编码的列进行事件探查时发现，该列中缺少邮政编码的行所占的比例超出允许的范围。|**列 Null 比率-** 这些数据类型的列有效：<br /><br /> 任何数据类型。 包括 `image`、`text`、`xml`、用户定义类型和变量类型。|  
+|数值列的最小值、最大值、平均值和标准偏差等统计信息，以及 `datetime` 列的最小值和最大值。|**无效的数值和日期 -** 例如，在对包含历史日期的列进行事件探查时发现，最大日期是一个将来的日期。|**列统计信息配置文件-** 使用其中一种数据类型的列有效：<br /><br /> 数值数据类型：整数类型（`bit` 除外）、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`<br />注意：对于具有日期和时间数据类型的列，配置文件仅计算最小值和最大值。|  
+|所选列中的所有非重复值以及每个值表示的行在表中的百分比。 或者表示大于表中指定百分比的值。|**列中非重复值的个数不正确 -** 例如，如果对包含美国各州的列进行事件探查，但发现非重复值大于 50 个。|**列的值分布的**使用其中一种数据类型的列有效：<br /><br /> 数值数据类型：整数类型（`bit` 除外）、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|一列或者一组列是所选表的键或者近似键。|**在可能的键列中存在重复值 -** 例如，在对 Customers 表中的 Name 和 Address 列进行事件探查时发现，应为唯一值的名称和地址组合中包含重复值。|**候选键 -** 多列配置文件，它报告列或者一组列是否适合用作所选表的键。 具有以下数据类型的列有效：<br /><br /> 整数数据类型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|一个区，对于该区来说，一列（依赖列）中的值取决于其他列或另一组列（决定列）中的值。|**在依赖列中无效的值 -** 例如，对包含美国邮政编码的列与包含美国各州的列之间的依赖关系进行事件探查。 相同的邮政编码对应的州应该总是相同的。 但是，在配置文件中发现依赖关系冲突。|**功能依赖项-** 对具有这些数据类型的列有效：<br /><br /> 整数数据类型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字符数据类型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|列或者一组列适合用作所选表间的外键。<br /><br /> 即，此配置文件报告两列或两组列之间的重叠值。|**无效值 -** 例如，对 Sales 表的 ProductID 列进行事件探查。 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。|**值包含 -** 对具有以下数据类型的列有效：<br /><br /> 整数数据类型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字符数据类型： `char`， `nchar`， `varchar`，和 `nvarchar`<br /><br /> 日期和时间数据类型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
   
  若要选择要计算的配置文件，可使用数据事件探查任务编辑器的 **“配置文件请求”** 页。 有关详细信息，请参阅[数据分析任务编辑器（“配置文件请求”页）](data-profiling-task-editor-profile-requests-page.md)。  
   
@@ -75,21 +74,21 @@ ms.locfileid: "48072967"
   
  每个可用的数据配置文件都有自己的配置选项。 有关这些选项的详细信息，请参阅下面的主题：  
   
--   [候选键配置文件请求选项&#40;数据事件探查任务&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候选键配置文件请求选项（数据事件探查任务）](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [列长度分布配置文件请求选项&#40;数据事件探查任务&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [列长度分布配置文件请求选项（数据事件探查任务）](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列 Null 比率配置文件请求选项&#40;数据事件探查任务&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [列 Null 比率配置文件请求选项（数据事件探查任务）](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列模式配置文件请求选项&#40;数据事件探查任务&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [列模式配置文件请求选项（数据事件探查任务）](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [列统计信息配置文件请求选项&#40;数据事件探查任务&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列统计信息配置文件请求选项（数据事件探查任务）](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [列值分布配置文件请求选项&#40;数据事件探查任务&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [列值分布配置文件请求选项（数据事件探查任务）](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [函数依赖关系配置文件请求选项&#40;数据事件探查任务&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [函数依赖关系配置文件请求选项（数据事件探查任务）](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含配置文件请求选项&#40;数据事件探查任务&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含配置文件请求选项（数据事件探查任务）](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>执行包含数据事件探查任务的包  
  设置数据事件探查任务后，可以运行此任务。 此任务随后将计算数据配置文件并以 XML 格式将此信息输出到一个文件或包变量中。 此 XML 结构符合 DataProfile.xsd 架构。 可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他架构编辑器、XML 编辑器或记事本等文本编辑器中打开该架构。 此数据质量信息架构可用于以下目的：  
@@ -98,7 +97,7 @@ ms.locfileid: "48072967"
   
 -   生成处理数据质量信息的自定义工具。  
   
- 目标命名空间在架构中被标识为 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 目标命名空间在架构中被标识为 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="next-step"></a>下一步  
  [数据配置文件查看器](data-profile-viewer.md)。  

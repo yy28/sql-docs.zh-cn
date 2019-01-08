@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
@@ -14,12 +12,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7257973db070b0f06cc48d217f232be2f81efeb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159707"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362849"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>生成、部署和调试自定义对象
   在为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的自定义对象编写代码后，必须生成和部署程序集，将该程序集集成到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使其可在包中使用，然后对其进行测试和调试。  
@@ -61,7 +59,7 @@ ms.locfileid: "48159707"
 ##  <a name="building"></a> 生成程序集  
  为项目签名后，必须使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的“生成”菜单上可用的命令来生成或重新生成项目或解决方案。 您的解决方案可能包含单独的自定义用户界面项目，该项目也必须使用强名称签名，并且可以同时生成。  
   
- 下两个步骤是部署程序集并将其安装在全局程序集缓存中，执行这两个步骤最简便的方法是编写这些步骤的脚本，作为 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的生成后事件。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目的项目属性的“编译”页和 C# 项目的“生成事件”页都提供可用的生成事件。 命令提示实用工具（如 gacutil.exe）需要完整路径。 包含空格的路径和展开为包含空格的路径的宏（如 $(TargetPath)）的前后都需要引号。  
+ 执行下两个步骤（部署程序集并将其安装在全局程序集缓存中）的最简便方法是将这些步骤编写为 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的生成后事件。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目的项目属性的“编译”页和 C# 项目的“生成事件”页都提供可用的生成事件。 命令提示实用工具（如 gacutil.exe）需要完整路径。 包含空格的路径和展开为包含空格的路径的宏（如 $(TargetPath)）的前后都需要引号。  
   
  下面是自定义日志提供程序的生成后事件命令行的示例：  
   
@@ -153,7 +151,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  返回到暂停的包，并继续通过断点，或单击“确定”来关闭脚本任务引发的消息框，并继续包的执行和调试。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [开发 Integration Services 的自定义对象](developing-custom-objects-for-integration-services.md)   

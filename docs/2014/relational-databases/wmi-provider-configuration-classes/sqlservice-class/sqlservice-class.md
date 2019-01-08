@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - SqlService Class
@@ -20,12 +18,12 @@ ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8203137c7dc69f95ede955e7828c7808d6d5ad18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138618"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371619"
 ---
 # <a name="sqlservice-class"></a>SqlService 类
   [SqlService 类](sqlservice-class.md)表示的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。  
@@ -41,6 +39,6 @@ ms.locfileid: "48138618"
 -   检查服务的属性。  
   
 ## <a name="see-also"></a>请参阅  
- [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

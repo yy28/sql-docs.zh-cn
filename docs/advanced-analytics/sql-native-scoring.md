@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server 机器学习中的本机计分 |Microsoft Docs
+title: 使用预测 T-SQL 语句的 SQL Server 机器学习服务的本机计分
 description: 生成预测评分 dta 输入对写入 SQL 服务器上的 R 或 Python 中的预先训练模型的预测 T-SQL 函数。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713149"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645126"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用预测 T-SQL 函数的本机计分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "46713149"
 
 该函数返回输入数据以及你想要传递的源数据的任何列的预测。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 预测与可在所有版本的 SQL Server 2017 数据库引擎，并且默认情况下，包括 Windows、 SQL Server 2017 (Windows)、 SQL Server 2017 (Linux) 或 Azure SQL 数据库上的 SQL Server 2017 机器学习服务支持。 不需要安装 R、 Python、 或启用其他功能。
 
@@ -70,7 +70,7 @@ ms.locfileid: "46713149"
 + PMML 模型
 + 使用其他开放源代码或第三方库创建的模型
 
-## <a name="example-predict-t-sql"></a>示例： 预测 (T-SQL)
+## <a name="example-predict-t-sql"></a>例如：预测 (T-SQL)
 
 在此示例中，您创建模型，，，然后从 T-SQL 调用实时预测函数。
 
@@ -78,7 +78,7 @@ ms.locfileid: "46713149"
 
 运行以下代码以创建示例数据库和所需的表。
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 使用以下语句来填充数据的数据表格**鸢尾花**数据集。
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 现在，创建用于存储模型的表。
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 以下代码将创建一个基于模型**iris**数据集并将其保存到名为表**模型**。
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 可以运行以下命令以查看存储的模型以二进制格式之类的语句：
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 下面的简单预测语句从决策树模型使用获取分类**本机计分**函数。 它预测鸢尾花种类基于你提供的属性、 花瓣长度和宽度。
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models

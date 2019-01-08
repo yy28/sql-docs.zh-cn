@@ -13,12 +13,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7686f2db3e033fa6d38e0f7a7f9616d93c11a1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528940"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>维度设计器（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的维度设计器浏览维度包含的数据，以及修改现有维度的各种属性：特性、层次结构、级别、特性关系和翻译。  
@@ -29,11 +29,11 @@ ms.locfileid: "48048777"
   
     -   右键单击维度，然后单击“打开”或“视图设计器”。  
   
-         — 或 —  
+         -或-  
   
     -   双击维度。  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>Pages  
  维度设计器包含以下页：  
   
  [维度结构](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "48048777"
  [翻译](translations-dimension-designer-analysis-services-multidimensional-data.md)  
  使用此页可以查看和修改与维度及其属性、层次结构和级别关联的翻译。  
   
- [浏览器](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [浏览者](browser-dimension-designer-analysis-services-multidimensional-data.md)  
  使用此页可以浏览维度包含的层次结构的成员。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], hiding instances
@@ -14,12 +13,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 04bebf8440d039dd228006a252006b6f687fae08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 631d55e1f8921601f25f2b2d8a14f00d11bd0947
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356777"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中隐藏 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器服务来枚举安装在计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 这使客户端应用程序可以浏览服务器，并帮助客户端区别同一台计算机上的多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 您可以使用以下过程防止 SQL Server Browser 服务向尝试通过使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] “浏览” **按钮来查找实例的客户端计算机公开** 实例。  
@@ -37,15 +36,15 @@ ms.locfileid: "48093357"
   有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
 ### <a name="clustering"></a>群集  
- 如果你隐藏群集命名实例，则群集服务可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这将导致群集实例的 **IsAlive** 检查失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将进入离线状态。 我们建议在群集实例的所有节点中创建别名，以反映你为该实例配置的静态端口。  
+ 如果你隐藏群集命名实例，则群集服务可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这将导致群集实例的“IsAlive”检查失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将进入离线状态。 我们建议在群集实例的所有节点中创建别名，以反映你为该实例配置的静态端口。  
  有关详细信息，请参阅[创建或删除供客户端使用的服务器别名（SQL Server 配置管理器）](create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
  如果隐藏群集命名实例，当 **LastConnect** 注册表项 (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) 具有的端口与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听的端口不同时，群集服务可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果群集服务无法建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的连接，则你可能会看到类似于以下内容的错误：  
-**事件 ID：1001：事件名称：故障转移群集资源死锁。**  
+**事件 ID：1001:事件名称：故障转移群集资源死锁。**  
   
 ## <a name="see-also"></a>请参阅  
  [服务器网络配置](server-network-configuration.md)   
  [SQL 虚拟服务器客户端连接的说明](https://support.microsoft.com/kb/273673)   
- [如何将静态端口分配到 SQL Server 命名实例并避免常见缺陷](http://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
+ [如何将静态端口分配到 SQL Server 命名实例并避免常见缺陷](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
   
   

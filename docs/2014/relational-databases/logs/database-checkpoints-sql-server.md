@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -27,31 +26,31 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b0271c21b849ee754e0050ea461c86d1f773850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f9fec2db69f28f832aa8745cf54ea0ff635f491
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058528"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354453"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
   本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检查点的概述。  “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。  
   
   
 ##  <a name="Overview"></a> 检查点的概述  
- 出于性能方面的考虑， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反，[!INCLUDE[ssDE](../../includes/ssde-md.md)]定期发出对每个数据库的检查点命令。  “检查点”将当前内存中已修改的页（称为“脏页” ）和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。  
+ 出于性能方面的考虑，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期发出对每个数据库的检查点命令。  “检查点”将当前内存中已修改的页（称为“脏页” ）和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支持几种类型的检查点：自动、间接、手动和内部。 下表总结了检查点类型。  
   
 |“属性”|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|Description|  
 |----------|----------------------------------|-----------------|  
 |自动|EXEC sp_configure **'`recovery interval`'，'*`seconds`***|在后台以满足时间上限由建议自动发出`recovery interval`服务器配置选项。 运行自动检查点直到完成。  基于未完成的写操作数和[!INCLUDE[ssDE](../../includes/ssde-md.md)]是否检测到写入滞后时间超过 20 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
-|间接|更改数据库… SET TARGET_RECOVERY_TIME =target_recovery_time { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 默认目标恢复时间为 0，这将导致对数据库使用自动检查点试探方法。 如果您使用 ALTER DATABASE 并将 TARGET_RECOVERY_TIME 设置为 >0，则将使用此值替代为服务器实例指定的恢复间隔。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
+|间接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME =target_recovery_time { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 默认目标恢复时间为 0，这将导致对数据库使用自动检查点试探方法。 如果您使用 ALTER DATABASE 并将 TARGET_RECOVERY_TIME 设置为 >0，则将使用此值替代为服务器实例指定的恢复间隔。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql)。|  
 |内部|无。|由各种服务器操作（如备份和数据库快照创建）发出，以确保磁盘映像与日志的当前状态匹配。|  
   
 > [!NOTE]  
->  `-k` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]高级的设置选项允许数据库管理员来调控检查点 I/O 行为基于某些检查点类型 I/O 子系统的吞吐量。 `-k`设置选项适用于自动检查点和任何未调控的手动和内部检查点。  
+>  `-k`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高级设置选项允许数据库管理员基于某些检查点类型 I/O 子系统的吞吐量来调控检查点 I/O 行为。 `-k`设置选项适用于自动检查点和任何未调控的手动和内部检查点。  
   
  对于自动、手动和内部检查点，在数据库恢复期间只有在最新检查点后所做的修改需要前滚。 这将减少恢复数据库所需的时间。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48058528"
   
   
 ###  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME 和“recovery interval”选项的相互影响  
- 下表总结了服务器端之间的交互**sp_configure'`recovery interval`** 设置和特定于数据库的 ALTER DATABASE... TARGET_RECOVERY_TIME 设置之间的相互影响。  
+ 下表总结了服务器端之间的交互**sp_configure'`recovery interval`** 设置和特定于数据库的 ALTER DATABASE...TARGET_RECOVERY_TIME 设置之间的相互影响。  
   
 |target_recovery_time|'recovery interval'|使用的检查点类型|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -92,7 +91,7 @@ ms.locfileid: "48058528"
   
   
 ###  <a name="IndirectChkpt"></a> 间接检查点  
- 间接检查点是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的新检查点类型，它提供自动检查点的可配置数据库级替代方法。 在系统崩溃时，间接检查点与自动检查点相比，恢复时间可能更短更可预测。 间接检查点具有以下优点：  
+ 间接检查点是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的新检查点类型，它提供自动检查点的可配置数据库级替代方法。 在系统崩溃时，间接检查点与自动检查点相比，恢复时间可能更短更可预测。 间接检查点具有以下优点：  
   
 -   为间接检查点配置的数据库上的联机事务工作负荷可能导致性能下降。 间接检查点确保损坏页的数量低于特定阙值，以便在目标恢复时间内完成数据库恢复。 与利用损坏页数量的间接检查点相反，恢复间隔配置选项使用事务数量来确定恢复时间。 当在接收大量 DML 操作的数据库上启用了间接检查点时，后台写入线程可以开始积极刷新磁盘的脏缓冲区，以确保执行恢复所需的时间在数据库所设目标恢复时间范围内。 这可能造成某些系统上出现额外的 I/O 活动，如果磁盘子系统在 I/O 阙值之上或附近运行，则这会导致性能瓶颈。  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48058528"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [事务日志物理体系结构](http://technet.microsoft.com/library/ms179355.aspx)（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
+-   [事务日志物理体系结构](https://technet.microsoft.com/library/ms179355.aspx) （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
   
   
 ## <a name="see-also"></a>请参阅  

@@ -13,19 +13,19 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36a6a30ffbf5a0991e2b55ba655549454516e82d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147097"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358699"
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
   事务性能报告工具 (请参阅[确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 会通知你哪些解释型存储的过程在数据库中受益如果移植到使用本机编译。 在您标识要移植到使用本机编译的存储过程后，可以使用本机编译顾问来帮助您将已解释的存储过程迁移到本地编译。 有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)。  
   
  开始时，连接至包含已解释的存储过程的实例。 您可以连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 但是，如果您想要使用该顾问执行迁移操作，则必须连接到启用了内存中 OLTP 功能的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 有关内存中 OLTP 要求的详细信息，请参阅 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)。  
   
- 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用本机编译顾问的演练  
  在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”**。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击 **“下一步”** 继续。  

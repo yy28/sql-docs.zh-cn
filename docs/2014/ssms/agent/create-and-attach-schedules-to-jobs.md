@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
@@ -18,12 +18,12 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deef45ad1f173b4da056a203de198c4b2c40ce7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200157"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757531"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>创建计划并将计划附加到作业
   计划 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业就是定义使作业在没有用户交互的情况下开始运行的条件。 通过为作业创建新计划或将现有计划附加到作业可以将作业计划为自动运行。  
@@ -85,7 +85,7 @@ ms.locfileid: "48200157"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |介绍如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业创建计划。|[Create a Schedule](create-a-schedule.md)|  
 |介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。|[安排作业计划](schedule-a-job.md)|  
 |说明如何定义服务器的 CPU 空闲条件。|[设置 CPU 空闲时间和持续时间 (SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

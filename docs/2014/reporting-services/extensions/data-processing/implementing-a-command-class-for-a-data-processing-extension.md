@@ -16,12 +16,12 @@ ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 497844361f6b6cb47765448ea62022af237ed8c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed2080a83ff83b6a6b5a5f6739d9c8bf409cdcde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222333"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361059"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>为数据处理扩展插件实现 Command 类
   Command 对象表述请求并将其传递到数据源上。 命令文本可以采用多种不同的语法形式，包括文本和 XML。 如果返回结果，则 Command 对象将结果作为 DataReader 对象返回。  
@@ -33,7 +33,7 @@ ms.locfileid: "48222333"
 > [!NOTE]  
 >  如果您的自定义数据处理扩展插件不支持参数，则不应实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis>。  
   
- 有关 Command 类实现的示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
+ 有关 Command 类实现的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 扩展插件](../reporting-services-extensions.md)   

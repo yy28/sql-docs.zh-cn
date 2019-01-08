@@ -11,12 +11,12 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ddb62344608d0fbd44376c0d6180dc973d3202a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db11e53b9fb6efb50a7bb676798626f5886ff9e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362731"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>报表设计和报表部署的规划 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了创作和部署报表的多个方法。 使用本主题帮助计划协同工作的报表创作环境和报表服务器。 本主题概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件对报表定义的支持。 报表定义是用报表定义语言 (RDL) 或客户端报表定义语言 (RDLC) 编写的 XML 文件。 每个报表定义都符合位于该文件开头的特定架构版本的要求。  
@@ -38,33 +38,33 @@ ms.locfileid: "48209177"
   
 |缩写|架构版本|  
 |------------------|--------------------|  
-|2010 RDL|http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition|  
-|2008 RDL|http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition|  
-|2005 RDL<br /><br /> 2005 RDLC|http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition|  
-|2000 RDL|http://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition|  
+|2010 RDL|https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition|  
+|2008 RDL|https://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition|  
+|2005 RDL<br /><br /> 2005 RDLC|https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition|  
+|2000 RDL|https://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition|  
   
  有关 RDL 和 RDL 架构的详细信息，请参阅以下内容：  
   
--   [Microsoft SQL Server XML 架构](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Microsoft SQL Server XML 架构](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [报表定义语言规范](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [报表定义语言规范](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [报表定义语言 (SSRS)](reports/report-definition-language-ssrs.md)  
   
- 有关 ReportViewer 控件的详细信息，请参阅 [ReportViewer 控件 (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)。  
+ 有关 ReportViewer 控件的详细信息，请参阅 [ReportViewer 控件 (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)。  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> 报表服务器和 RDL 架构支持  
  可以使用以下方法将报表定义文件部署到 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 报表服务器：  
   
--   **报表设计器：** 通过 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]中的报表设计器部署报表。  
+-   **报表设计器：** 通过 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的报表设计器部署报表。  
   
 -   **报表生成器：** 通过报表生成器将报表保存到报表服务器。  
   
 -   **报表管理器：** 通过报表管理器将报表上载到本机模式报表服务器。  
   
--   **SharePoint：** 将报表上载到使用 SharePoint 模式报表服务器配置的 SharePoint 站点。  
+-   **SharePoint:** 将报表上载到使用 SharePoint 模式报表服务器配置的 SharePoint 站点。  
   
--   **以编程方式：** 使用报表服务器的 SOAP API 接口以编程方式发布报表。 有关详细信息，请参阅[报表服务器 Web 服务](report-server-web-service/report-server-web-service.md)。  
+-   **以编程方式：** 使用报表服务器的 SOAP API 接口以编程方式发布报表。 有关详细信息，请参阅 [Report Server Web Service](report-server-web-service/report-server-web-service.md)。  
   
  下表按报表服务器的版本列出了支持的 rdl 架构版本。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "48209177"
 |[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio 中的报表设计器|作者 2010 RDL。 在打开现有的 RDL 时：<br /><br /> 2000 RDL, 升级到 2010 RDL<br /><br /> 2005 RDL, 升级到 2010 RDL<br /><br /> 2008 RDL，升级到 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio 中的报表设计器|作者 2008 RDL。 在打开现有的 RDL 时：<br /><br /> 2000 RDL, 升级到 2008 RDL<br /><br /> 2005 RDL, 升级到 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器|作者 2010 RDL。 在打开现有的 RDL 时：<br /><br /> 2000 RDL, 升级到 2010 RDL<br /><br /> 2005 RDL, 升级到 2010 RDL<br /><br /> 2008 RDL，升级到 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
-|Visual Studio RDLC 报表设计器|2005 RDLC|N/A|N/A|  
+|Visual Studio RDLC 报表设计器|2005 RDLC|不可用|不可用|  
   
- 有关 [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)] 的详细信息，请参阅以下内容：  
+ 有关 [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)]的详细信息，请参阅以下内容：  
   
 -   [SQL Server Data Tools 中的部署和版本支持 (SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [Microsoft SQL Server Data Tools - Business Intelligence for Visual Studio 2012](http://www.microsoft.com/download/details.aspx?id=36843)。  
+-   [Microsoft SQL Server Data Tools - Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)。  
   
 ##  <a name="bkmk_reportviewer"></a> ReportViewer 控件  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer 控件可在本地预览模式或远程模式下显示 .rdlc 报表，该控件还可以显示在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上托管的 .rdl 文件。 下表提供 ReportViewer 控件为进行本地处理 (.rdlc) 支持的 RDL 版本的列表。 [报表服务器和 RDL 架构支持](#bkmk_report_server_rdl_schema_support)一节中总结了服务器端 RDL 支持。  
@@ -111,14 +111,14 @@ ms.locfileid: "48209177"
   
  有关详细信息，请参见以下内容：  
   
--   [将 RDLC 文件转换为 RDL 文件](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [将 RDLC 文件转换为 RDL 文件](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [ReportViewer 控件 (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer 控件 (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [添加并配置 ReportViewer 控件](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [添加并配置 ReportViewer 控件](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>请参阅  
- [报表、 报表部件和报表定义&#40;报表生成器和 SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [报表、报表部件和报表定义（报表生成器和 SSRS）](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services 工具](tools/reporting-services-tools.md)   
  [报表定义语言 (SSRS)](reports/report-definition-language-ssrs.md)  
   

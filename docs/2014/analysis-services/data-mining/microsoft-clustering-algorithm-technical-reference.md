@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089717"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371519"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 聚类分析算法技术参考
   本节说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的实现，包括可用来控制聚类分析模型的行为的参数。 还提供关于在创建和处理聚类分析模型时如何提高性能的指南。  
   
  有关如何使用聚类分析模型的其他信息，请参阅下列主题：  
   
--   [聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [聚类分析模型查询示例](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089717"
   
  Microsoft 实现提供两个选项：可缩放 EM 和不可缩放 EM。 默认情况下，在可缩放 EM 中，前 50,000 个记录用于为初始扫描设种子。 如果成功，则模型将仅仅使用这些数据。 如果使用 50,000 个记录时模型不适合，则会继续读取 50,000 个记录。 在不可缩放 EM 中，总是读取整个数据集，而不考虑数据集的大小。 此方法可能会创建更准确的分类，但内存需求非常高。 因为可缩放 EM 作用于本地缓冲区，所以循环访问数据要快得多，并且此算法对 CPU 内存缓存的利用率比不可缩放 EM 要高得多。 此外，可缩放 EM 比不可缩放 EM 快三倍，即使所有数据都可容纳于主内存中也是如此。 在大多数情况下，性能改进不会导致完成的模型的质量下降。  
   
- 有关介绍 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法中的 EM 的实现的技术报告，请参阅 [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)（针对大数据库对 EM (Expectation Maximization) 聚类分析进行扩展）。  
+ 有关介绍 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法中的 EM 的实现的技术报告，请参阅 [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)（针对大数据库对 EM (Expectation Maximization) 聚类分析进行扩展）。  
   
 ### <a name="k-means-clustering"></a>k-means 聚类分析  
  k-means 聚类分析是一种广为人知的方法，它通过尽量缩小一个分类中的项之间的差异，同时尽量拉大分类之间的距离，来分配分类成员身份。 k-means 中的 "means" 指的是分类的“中点”，它是任意选定的一个数据点，之后反复优化，直到真正代表该分类中的所有数据点的平均值。 "k" 指的是用于为聚类分析过程设种子的任意数目的点。 k-means 算法计算一个分类中的数据记录之间的欧几里得距离的平方，以及表示分类平均值的矢量，并在和达到最小值时在最后一组 k 分类上收敛。  
@@ -162,11 +162,11 @@ ms.locfileid: "48089717"
   
 |建模标志|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|该列将被视为具有两个可能状态：“缺失”和“现有”。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
+|MODEL_EXISTENCE_ONLY|该列将视为具有两个可能状态：Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
 |NOT NULL|此列中不能包含 Null 值。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
   
 ## <a name="requirements"></a>要求  
- 聚类分析模型必须包含一个键列和若干输入列。 还可以将输入列定义为可预测列。 列设置为`Predict Only`不用来生成分类。 在生成分类后，将计算这些值在分类中的分布。  
+ 聚类分析模型必须包含一个键列和若干输入列。 还可以将输入列定义为可预测列。 设置为 `Predict Only` 的列不用来生成分类。 在生成分类后，将计算这些值在分类中的分布。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)。  
@@ -182,6 +182,6 @@ ms.locfileid: "48089717"
 ## <a name="see-also"></a>请参阅  
  [Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)   
  [聚类分析模型查询示例](clustering-model-query-examples.md)   
- [聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 任务 2： 手动添加域值 |Microsoft Docs
+title: 任务 2:手动添加域值 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0383bc30f93afd893abcf86717df3a4e3a06d7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756f69f172c1c901ffdf15658a6fefdcee64df1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359949"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>任务 2：手动添加域值
-  在本任务中，添加的值**国家/地区**域手动。 请参阅[Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx)有关此页上的字段的更多详细信息的主题。  
+# <a name="task-2-adding-domain-values-manually"></a>任务 2:手动添加域值
+  在本任务中，添加的值**国家/地区**域手动。 请参阅[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)有关此页上的字段的更多详细信息的主题。  
   
 1.  单击**国家/地区**中的域**域列表**。  
   
@@ -36,6 +36,6 @@ ms.locfileid: "48138387"
      ![域值的美国](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "域值的美国")  
   
 ## <a name="next-step"></a>下一步  
- [任务 3：从 Excel 文件导入域值](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+ [任务 3:从 Excel 文件导入域值](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

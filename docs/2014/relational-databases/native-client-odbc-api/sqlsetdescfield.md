@@ -12,12 +12,12 @@ ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64eb7b3dc6f058d5f061f4c015105ba4fc44f183
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f65c26e1c6b9588b770acf1a66409dfde8ea1072
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206757"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362120"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField 可以用于设置表值参数和表值参数列的描述符字段。 有关可用字段的信息，请参阅[表值参数描述符字段](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)并[表值参数构成列的描述符字段](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "48206757"
  有关详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLSetDescField](http://go.microsoft.com/fwlink/?LinkId=80705)   
+ [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

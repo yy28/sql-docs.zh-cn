@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9594191e604d70ef71ad7db00ce840d010398b92
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 99ccf53ab36d68ab0b03fa042d08e00d65703228
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393420"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 开发
   XML for Analysis (XMLA) 是一种基于 SOAP 的 XML 协议，它专门设计用于可通过 HTTP 连接访问的任何标准多维数据源的通用数据访问。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 XMLA 作为与客户端应用程序通信的唯一协议。 从根本上说，Analysis Services 支持的所有客户端库都可以采用 XMLA 来表示请求和响应。  
@@ -52,7 +52,7 @@ ms.locfileid: "50147992"
 ## <a name="namespace-and-schema"></a>命名空间和架构  
   
 ### <a name="namespace"></a>命名空间  
- 此规范中定义的架构使用 XML 命名空间 `http://schemas.microsoft.com/AnalysisServices/2003/Engine` 和标准的缩写"DDL"  
+ 此规范中定义的架构使用 XML 命名空间`http://schemas.microsoft.com/AnalysisServices/2003/Engine`和标准的缩写"DDL"  
   
 ### <a name="schema"></a>架构  
  用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义语言的 XML 架构定义语言 (XSD) 架构的定义基于本节中架构元素和层次结构的定义。  
@@ -70,7 +70,7 @@ ms.locfileid: "50147992"
   
  会关闭对象定义语言架构，原因是服务器不允许替换架构中定义的元素的派生类型。 因此，服务器仅接受此处定义的元素集，不接受任何其他元素或属性。 未知的元素会导致 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎引发错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 Analysis Services 脚本语言 (ASSL) 开发](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [了解 Microsoft OLAP 体系结构](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   

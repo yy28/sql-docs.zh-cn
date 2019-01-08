@@ -22,15 +22,15 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44b923f98a5e54f8907953d38bf42c37ca0968b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200917"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369499"
 ---
 # <a name="package-configurations"></a>包配置
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用于更新属性的值在运行时的包配置。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用于在运行时更新属性值的包配置。  
   
 > [!NOTE]  
 >  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "48200917"
   
 -   配置可以使包更加灵活。 例如，配置可以更新在属性表达式中使用的变量的值。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持的存储包配置，例如 XML 文件的多种不同的方法中的表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库和环境变量和包变量。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持几种不同的存储包配置（例如 XML 文件、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表以及环境变量和包变量）的方法。  
   
  每个配置都是一个属性/值对。 XML 配置文件和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型可以包括多个配置。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48200917"
 ```  
   
 ### <a name="registry-entry"></a>注册表项  
- 如果要使用注册表项存储配置，可以使用已有项或在 HKEY_CURRENT_USER 中创建新项。 您使用的注册表项必须具有一个名为值`Value`。 该值可以是 DWORD 或一个字符串。  
+ 如果要使用注册表项存储配置，可以使用已有项或在 HKEY_CURRENT_USER 中创建新项。 使用的注册表项必须具有名为 `Value` 的值。 该值可以是 DWORD 或一个字符串。  
   
- 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。 例如，若要使用 SSISPackages 中的 MyPackage，请键入`SSISPackages\MyPackage`。  
+ 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。 例如，若要使用 SSISPackages 中的 MyPackage 项，请键入 `SSISPackages\MyPackage`。  
   
 ### <a name="sql-server"></a>SQL Server  
  如果选择 **SQL Server** 配置类型，则需指定到要存储这些配置的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的连接。 可以将配置保存到现有表，也可以在指定数据库中新建表。  
@@ -145,7 +145,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  您为配置提供的名称就是在 **ConfigurationFilter** 列中存储的值。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接配置和间接配置  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了直接和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了直接配置和间接配置。 如果直接指定配置， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会在配置项和包对象属性之间创建直接链接。 如果源的位置不更改，则直接配置是较好的选择。 例如，如果确定包中的所有部署都使用相同的文件路径，则可以指定一个 XML 配置文件。  
   
  间接配置使用环境变量。 配置不直接指定配置设置，而是指向环境变量，环境变量又包含配置值。 如果对于包的每个部署，配置的位置都可以更改，则使用间接配置是较好的选择。  
   
@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>相关内容  
   
--   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](http://go.microsoft.com/fwlink/?LinkId=165643)   
+-   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)   
   
--   www.sqlis.com 上的博客文章 [使用代码创建包 – 包配置](http://go.microsoft.com/fwlink/?LinkId=217663)。  
+-   博客文章[代码的包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上的。  
   
--   blogs.msdn.com 上的博客文章 [API 示例 - 以编程方式将配置文件添加到包](http://go.microsoft.com/fwlink/?LinkId=217664)。  
+-   博客文章[API 示例-以编程方式将配置文件添加到包](https://go.microsoft.com/fwlink/?LinkId=217664)，blogs.msdn.com 上的。  
   
   

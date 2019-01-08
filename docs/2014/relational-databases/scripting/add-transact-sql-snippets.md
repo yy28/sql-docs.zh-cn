@@ -11,18 +11,18 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b93171cad6896b32086604b54bce30c3fe396fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72e3d99672b17fcf6d7cafa3825d04f8989ecdea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373059"
 ---
 # <a name="add-transact-sql-snippets"></a>添加 Transact-SQL 代码段
   您可以将自己的 Transact-SQL 代码段添加到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包括的一组预定义的代码段中。  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>创建 Transact-SQL 代码段文件  
- 创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的第一步是创建具有您的代码段文本的 XML 文件。 该文件必须具有 .snippet 文件扩展名，并且必须满足 [代码段架构](http://go.microsoft.com/fwlink/?LinkId=207504)的要求。 将代码段语言设置为 SQL。  
+ 创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的第一步是创建具有您的代码段文本的 XML 文件。 该文件必须具有 .snippet 文件扩展名，并且必须满足 [代码段架构](https://go.microsoft.com/fwlink/?LinkId=207504)的要求。 将代码段语言设置为 SQL。  
   
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”菜单，然后单击“代码段管理器”。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48144317"
 4.  导航到包含您的代码段的文件夹，单击 .snippet 文件，然后单击 **“打开”** 按钮。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`TRY-CATCH`外侧代码段和导入到[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 下面的示例创建一个 `TRY-CATCH` 外侧代码段，然后将其导入到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。  
   
 1.  将以下代码粘贴到记事本，然后将其另存为名为 TryCatch.snippet 的文件。  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  
@@ -112,6 +112,6 @@ ms.locfileid: "48144317"
 5.  导航到包含 TryCatch.snippet 的文件夹，单击该 TryCatch.snippet 文件，然后单击 **“打开”** 按钮。 您不应在 **“我的代码段”** 文件夹中具有 TryCatch 代码段。  
   
 ## <a name="see-also"></a>请参阅  
- [插入外侧 Transact-SQL 代码片段](insert-surround-with-transact-sql-snippets.md)  
+ [插入外侧 Transact-SQL 代码段](insert-surround-with-transact-sql-snippets.md)  
   
   

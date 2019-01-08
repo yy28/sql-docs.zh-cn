@@ -1,12 +1,10 @@
 ---
-title: 示例： 通过使用 WMI Provider for Server Events 创建 SQL Server 代理警报 |Microsoft Docs
+title: 示例：通过使用 WMI Provider for Server Events 创建 SQL Server 代理警报 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
@@ -16,18 +14,18 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2623087a485070b442716c953501b2496679be9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823441"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>示例：使用 WMI Provider for Server Events 创建 SQL Server 代理警报
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>示例：通过使用 WMI Provider for Server Events 创建 SQL Server 代理警报
   WMI 事件提供程序的一个常见用法是创建响应特定事件的 SQL Server 代理警报。 以下示例提供一个在表中保存 XML 死锁图形事件以供以后分析的简单警报。 SQL Server 代理提交 WQL 请求、接收 WMI 事件并运行作业以响应该事件。 请注意，尽管在处理通知消息中涉及几个 Service Broker 对象，WMI 事件提供程序将处理创建和管理这些对象的详细信息。  
   
 ## <a name="example"></a>示例  
- 首先，在 `AdventureWorks` 数据库中创建一个表来存放死锁图形事件。 该表包含两列：`AlertTime` 列存放警报运行的时间，`DeadlockGraph` 列则存放包含死锁图形的 XML 文档。  
+ 首先，在 `AdventureWorks` 数据库中创建一个表来存放死锁图形事件。 该表包含两个列：`AlertTime`列包含警报所运行的时间和`DeadlockGraph`列包含的 XML 文档中包含的死锁图形。  
   
  然后，创建警报。 脚本首先创建将运行警报的作业，将作业步骤添加到作业，然后指定作业目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例。 然后，脚本创建警报。  
   

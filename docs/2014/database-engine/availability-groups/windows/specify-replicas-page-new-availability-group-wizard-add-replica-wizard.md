@@ -1,5 +1,5 @@
 ---
-title: “指定副本”页（新建可用性组向导：添加副本向导）| Microsoft Docs
+title: 指定副本页 (新建可用性组向导：添加副本向导） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,31 +14,31 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1928b48145367e2bdd1ed183ac16230c5b7374fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371569"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定副本页 (新建可用性组向导：添加副本向导）
   本主题介绍 **“指定副本”** 页的选项。 本页适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
   
 |Tab|简短说明|  
 |---------|-----------------------|  
-|[副本](#ReplicasTab)|使用此选项卡可以指定将承载或当前承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。<br /><br /> 提示：请首先在“副本”选项卡上完成对所有副本的指定，再开始其他选项卡。|  
+|[副本](#ReplicasTab)|使用此选项卡可以指定将承载或当前承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。<br /><br /> 提示：请首先在 **“副本”** 选项卡上完成对所有副本的指定，再开始其他选项卡。|  
 |[端点](#EndpointsTab)|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。|  
 |[备份首选项](#BackupPreferencesTab)|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
-|[侦听器](#Listener)|使用此选项卡（如果可用）可以创建可用性组侦听器。 默认情况下不创建侦听器。<br /><br /> 注意：仅当正在运行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 时，此选项卡才可用。|  
+|[侦听器](#Listener)|使用此选项卡（如果可用）可以创建可用性组侦听器。 默认情况下不创建侦听器。<br /><br /> 注意：仅当您正在运行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]时，此选项卡才可用。|  
   
 ##  <a name="ReplicasTab"></a> “副本”选项卡  
  **服务器实例**  
  显示将承载可用性副本的服务器实例的名称。  
   
- 如果 **“可用性副本”** 网格未列出要用于承载辅助副本的服务器实例，则单击 **“添加副本”** 按钮。 如果在混合 IT 环境中配置可用性组（请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)），则可单击“添加 Azure 副本”按钮以在 Windows Azure 中创建具有次要副本的虚拟机。  
+ 如果 **“可用性副本”** 网格未列出要用于承载辅助副本的服务器实例，则单击 **“添加副本”** 按钮。 如果在混合 IT 环境中配置可用性组（请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)），则可单击“添加 Azure 副本”按钮以在 Windows Azure 中创建具有次要副本的虚拟机。  
   
  **初始角色**  
- 指示新副本最初将执行的角色： **主** 或 **辅助**。  
+ 指示新副本将执行的初始角色：**主**或**辅助**。  
   
  **自动故障转移 （最多 2 个）**  
  仅当您希望此可用性副本成为自动故障转移伙伴时，才选中此复选框。 要配置自动故障转移，您必须为初始主副本和一个辅助副本选中此选项。 这两个副本将同时使用同步提交可用性模式。 只有两个副本才能支持自动故障转移。  
@@ -66,7 +66,7 @@ ms.locfileid: "48172357"
  单击此选项可将辅助副本添加到可用性组。  
   
  **添加 Azure 副本**  
- 单击此项以创建在可用性组中运行辅助副本的 Windows Azure 虚拟机。 此选项仅适用于混合 IT 中含有本地副本的可用性组。 有关详细信息，请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
+ 单击此项以创建在可用性组中运行辅助副本的 Windows Azure 虚拟机。 此选项仅适用于混合 IT 中含有本地副本的可用性组。 有关详细信息，请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
   
  **删除副本**  
  单击可从可用性组中删除选择的辅助副本。  
@@ -122,7 +122,7 @@ ms.locfileid: "48172357"
  指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
 > [!IMPORTANT]  
->  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动次要副本： 辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ### <a name="replica-backup-priorities-grid"></a>“副本备份优先级”网格  
  使用 **“副本备份优先级”** 网格可为可用性组的每个副本指定备份优先级。 该网格包含以下各列：  
@@ -188,9 +188,9 @@ ms.locfileid: "48172357"
  **子网**  
  如果你选择“DHCP”作为网络模式，则使用“子网”下拉列表为承载可用性组的可用性副本的子网选择地址。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在定义可用性组侦听器后，我们强烈建议您执行以下操作：  
->   
+> 
 >  -   请求您的网络管理员将该侦听器的 IP 地址保留为专用。 将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
 > -   将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
   

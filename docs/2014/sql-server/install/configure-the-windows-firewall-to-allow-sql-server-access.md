@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
@@ -24,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b254c1e7d814af64117343d98d3275e5ac66d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d0e1d1528d9ba2f85867aa09b7314f4030dfcd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128987"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357654"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -37,7 +36,7 @@ ms.locfileid: "48128987"
  若要通过防火墙访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙以允许访问。 防火墙是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的一个组件。 也可以安装其他公司的防火墙。 本主题讨论如何配置 Windows 防火墙，不过所述基本原理也适用于其他防火墙程序。  
   
 > [!NOTE]  
->  本主题概述了防火墙配置并汇总了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员所需的信息。 有关防火墙的详细信息以及权威防火墙信息，请参阅防火墙文档，例如[高级安全 Windows 防火墙和 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)。  
+>  本主题概述了防火墙配置并汇总了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员所需的信息。 有关防火墙的详细信息以及权威防火墙信息，请参阅防火墙文档，例如[高级安全 Windows 防火墙和 IPsec](https://go.microsoft.com/fwlink/?LinkID=116904)。  
   
  用户如果熟悉控制面板中的“Windows 防火墙”项，熟悉高级安全 Windows 防火墙的 Microsoft 管理控制台 (MMC) 管理单元，以及知道要配置哪些防火墙设置，可以直接转至以下列表中的主题：  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48128987"
   
  选择防火墙策略远较只是确定应打开还是关闭给定端口复杂。 当为企业设计防火墙策略时，请确保考虑所有可供使用的规则和配置选项。 本主题不讨论所有可能的防火墙选项。 建议您查看以下文档：  
   
- [Windows Firewall with Advanced Security Getting Started Guide（高级安全 Windows 防火墙入门指南）](http://go.microsoft.com/fwlink/?LinkId=116080)  
+ [Windows Firewall with Advanced Security Getting Started Guide（高级安全 Windows 防火墙入门指南）](https://go.microsoft.com/fwlink/?LinkId=116080)  
   
- [Windows Firewall with Advanced Security Design Guide（高级安全 Windows 防火墙设计指南）](http://go.microsoft.com/fwlink/?LinkId=116904)  
+ [Windows Firewall with Advanced Security Design Guide（高级安全 Windows 防火墙设计指南）](https://go.microsoft.com/fwlink/?LinkId=116904)  
   
- [Introduction to Server and Domain Isolation（服务器和域隔离简介）](http://go.microsoft.com/fwlink/?LinkId=116081)  
+ [Introduction to Server and Domain Isolation（服务器和域隔离简介）](https://go.microsoft.com/fwlink/?LinkId=116081)  
   
 ##  <a name="BKMK_default"></a> 默认防火墙设置  
  规划防火墙配置的第一步是确定操作系统的防火墙的当前状态。 如果操作系统是从早期版本升级而来，则可能已保留以前的防火墙设置。 此外，防火墙设置可能已由其他管理员或域中的组策略更改。  
@@ -80,7 +79,7 @@ ms.locfileid: "48128987"
      可以从“控制面板”打开 **“Windows 防火墙”** 项。  
   
     > [!IMPORTANT]  
-    >  在“控制面板”中的 **“Windows 防火墙”** 项中所做的更改只会影响当前配置文件。 诸如便携式计算机之类的移动设备不应使用“控制面板”中的 **“Windows 防火墙”** 项，因为当以其他配置连接设备时配置文件可能会更改。 这样以前配置的配置文件将失效。 有关配置文件的详细信息，请参阅 [高级安全 Windows 防火墙入门指南](http://go.microsoft.com/fwlink/?LinkId=116080)。  
+    >  在“控制面板”中的 **“Windows 防火墙”** 项中所做的更改只会影响当前配置文件。 诸如便携式计算机之类的移动设备不应使用“控制面板”中的 **“Windows 防火墙”** 项，因为当以其他配置连接设备时配置文件可能会更改。 这样以前配置的配置文件将失效。 有关配置文件的详细信息，请参阅 [高级安全 Windows 防火墙入门指南](https://go.microsoft.com/fwlink/?LinkId=116080)。  
   
      使用“控制面板”中的 **“Windows 防火墙”** 项可配置基本选项。 其中包括：  
   
@@ -120,11 +119,11 @@ ms.locfileid: "48128987"
   
      有关 **netsh**的详细信息，请参阅以下链接：  
   
-    -   [如何使用 Netsh.exe 工具和命令行开关](http://support.microsoft.com/kb/242468)  
+    -   [如何使用 Netsh.exe 工具和命令行开关](https://support.microsoft.com/kb/242468)  
   
-    -   [如何使用“netsh advfirewall firewall”上下文而非“netsh firewall”上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](http://support.microsoft.com/kb/947709)  
+    -   [如何使用“netsh advfirewall firewall”上下文而非“netsh firewall”上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](https://support.microsoft.com/kb/947709)  
   
-    -   [“netsh firewall”命令及“profile=all”参数不配置基于 Windows Vista 的计算机上的公共配置文件](http://support.microsoft.com/kb/947213)  
+    -   [“netsh firewall”命令及“profile=all”参数不配置基于 Windows Vista 的计算机上的公共配置文件](https://support.microsoft.com/kb/947213)  
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用的端口 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  下面几个表可有助于您确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的端口。  
@@ -173,8 +172,8 @@ ms.locfileid: "48128987"
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|对于默认实例，为 TCP 端口 2383。|默认 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的标准端口。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务|仅 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命名实例需要的 TCP 端口 2382|客户端向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命名实例发出不指定端口号的连接请求时，该连接请求将被转到端口 2382，即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 侦听的端口。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 将此请求重定向到该命名实例所使用的端口。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTP 使用<br /><br /> （PivotTable® Service 使用 HTTP 或 HTTPS）|TCP 端口 80|用于通过 URL 实现的 HTTP 连接。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTPS 使用<br /><br /> （PivotTable® Service 使用 HTTP 或 HTTPS）|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTP 使用<br /><br /> （该数据透视表？ 服务使用 HTTP 或 HTTPS）|TCP 端口 80|用于通过 URL 实现的 HTTP 连接。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTPS 使用<br /><br /> （该数据透视表？ 服务使用 HTTP 或 HTTPS）|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。|  
   
  如果用户通过 IIS 和 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则必须打开 IIS 侦听的端口，并在客户端连接字符串中指定该端口。 在这种情况下，不需要打开任何端口就能直接访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 默认端口 2389 和端口 2382 应当与所有其他并非必需的端口一起受到限制。  
   
@@ -206,24 +205,24 @@ ms.locfileid: "48128987"
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> 有关 WMI 的详细信息，请参阅 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)。|WMI 作为共享服务主机的一部分使用通过 DCOM 分配的端口运行。 WMI 可能使用 TCP 端口 135。<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器使用 WMI 列出和管理各个服务。 建议使用预配置规则组 **Windows 管理规范 (WMI)**。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC)|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|如果应用程序使用分布式事务处理，可能必须要将防火墙配置为允许 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 在不同的 MS DTC 实例之间以及在 MS DTC 和资源管理器（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间进行通信。 建议使用预配置的 **“分布式事务处理协调器”** 规则组。<br /><br /> 当在单独的资源组中为整个群集配置单个共享 MS DTC 时，应当将 sqlservr.exe 作为异常添加到防火墙。|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的浏览按钮使用 UDP 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关详细信息，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 端口 1434|UDP 是一种无连接协议。<br /><br /> 防火墙具有一个名为 [INetFwProfile 接口的 UnicastResponsesToMulticastBroadcastDisabled 属性](http://go.microsoft.com/fwlink/?LinkId=118371) 的设置，用于控制防火墙在对广播（或多播）UDP 请求的单播响应方面的行为。  它有以下两种行为：<br /><br /> 如果此设置为 TRUE，则根本不允许对广播进行任何单播响应。 枚举服务将失败。<br /><br /> 如果此设置为 FALSE（默认值），则允许单播响应 3 秒钟。 此时间长度不可配置。 在堵塞或长时间滞后的网络中，或者对于负载很重的服务器，尝试枚举 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能会返回部分列表，这可能会误导用户。|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的浏览按钮使用 UDP 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关详细信息，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 端口 1434|UDP 是一种无连接协议。<br /><br /> 防火墙具有一个名为 [INetFwProfile 接口的 UnicastResponsesToMulticastBroadcastDisabled 属性](https://go.microsoft.com/fwlink/?LinkId=118371) 的设置，用于控制防火墙在对广播（或多播）UDP 请求的单播响应方面的行为。  它有以下两种行为：<br /><br /> 如果此设置为 TRUE，则根本不允许对广播进行任何单播响应。 枚举服务将失败。<br /><br /> 如果此设置为 FALSE（默认值），则允许单播响应 3 秒钟。 此时间长度不可配置。 在堵塞或长时间滞后的网络中，或者对于负载很重的服务器，尝试枚举 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能会返回部分列表，这可能会误导用户。|  
 |IPsec 通信|UDP 端口 500 和 UDP 端口 4500|如果域策略要求通过 IPSec 进行网络通信，还必须将 UDP 端口 4500 和 UDP 端口 500 添加到例外列表。 使用 Windows 防火墙管理单元中的“新建入站规则向导”可以选择 IPsec。 有关详细信息，请参阅下面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。|  
-|将 Windows 身份验证用于可信域|必须将防火墙配置为允许身份验证请求。|有关详细信息，请参阅 [如何为域和信任关系配置防火墙](http://support.microsoft.com/kb/179442/)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 群集|群集需要与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接相关的其他端口。|有关详细信息，请参阅 [Enable a network for cluster use](http://go.microsoft.com/fwlink/?LinkId=118372)（启用网络以供群集使用）。|  
-|HTTP 服务器 API (HTTP.SYS) 中保留的 URL 命名空间|很可能为 TCP 端口 80，但可以配置为其他端口。 有关常规信息，请参阅 [配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373)。|有关使用 HttpCfg.exe 预留 HTTP.SYS 端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定信息，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
+|将 Windows 身份验证用于可信域|必须将防火墙配置为允许身份验证请求。|有关详细信息，请参阅 [如何为域和信任关系配置防火墙](https://support.microsoft.com/kb/179442/)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 群集|群集需要与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接相关的其他端口。|有关详细信息，请参阅 [Enable a network for cluster use](https://go.microsoft.com/fwlink/?LinkId=118372)（启用网络以供群集使用）。|  
+|HTTP 服务器 API (HTTP.SYS) 中保留的 URL 命名空间|很可能为 TCP 端口 80，但可以配置为其他端口。 有关常规信息，请参阅 [配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373)。|有关使用 HttpCfg.exe 预留 HTTP.SYS 端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定信息，请参阅[关于 URL 预留和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
   
 ##  <a name="BKMK_port_135"></a> 端口 135 的特殊注意事项  
  将 RPC 与 TCP/IP 或 UDP/IP 一起用作传输方式时，通常会根据需要为系统服务动态分配入站端口。将使用端口号大于 1024 的 TCP/IP 和 UDP/IP 端口。 这些端口通常被不正式地称为“随机 RPC 端口”。 在这些情况下，RPC 客户端依赖 RPC 端点映射程序来通知它们为服务器分配了哪些动态端口。 对于一些基于 RPC 的服务，可以配置特定端口，而非让 RPC 动态分配一个端口。 此外，还可以将 RPC 动态分配的端口范围限制为一个较小的范围，不管何种服务均可如此。 由于许多服务都使用端口 135，它经常受到恶意用户的攻击。 当打开端口 135 时，请考虑限制防火墙规则的作用范围。  
   
  有关端口 135 的详细信息，请参阅以下参考内容：  
   
--   [Windows Server 系统的服务概述和网络端口要求](http://support.microsoft.com/kb/832017)  
+-   [Windows Server 系统的服务概述和网络端口要求](https://support.microsoft.com/kb/832017)  
   
--   [如何排除 RPC 端点映射程序错误](http://support.microsoft.com/kb/839880)  
+-   [如何排除 RPC 端点映射程序错误](https://support.microsoft.com/kb/839880)  
   
--   [Remote procedure call (RPC)（远程过程调用 (RPC)）](http://go.microsoft.com/fwlink/?LinkId=118375)  
+-   [Remote procedure call (RPC)（远程过程调用 (RPC)）](https://go.microsoft.com/fwlink/?LinkId=118375)  
   
--   [如何配置与防火墙一起使用的 RPC 动态端口分配](http://support.microsoft.com/kb/154596/)  
+-   [如何配置与防火墙一起使用的 RPC 动态端口分配](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> 与其他防火墙规则的交互  
  Windows 防火墙使用规则和规则组建立其配置。 每个规则或规则组通常与特定程序或服务相关，并且该程序和服务可以在您不知道的情况下修改或删除相应规则。 例如，规则组“万维网服务 (HTTP)”和“万维网服务 (HTTPS)”与 IIS 相关。 启用这些规则将打开端口 80 和 443，并且如果启用这些规则，则依赖端口 80 和 443 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能将能正常工作。 不过，配置 IIS 的管理员可能会修改或禁用这些规则。 因此，如果您为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用端口 80 或端口 443，则应创建您自己的规则或规则组，这样可以独立于其他 IIS 规则之外维护您的所需端口配置。  
@@ -231,7 +230,7 @@ ms.locfileid: "48128987"
  高级安全 Windows 防火墙 MMC 管理单元允许符合任何适用允许规则的所有通信。 因此，如果有两个均应用于端口 80 的规则（具有不同的参数），则符合任一规则的通信都将得到允许。 因此，如果一个规则允许来自本地子网的通过端口 80 的通信而另一个规则允许来自任意地址的通信，则实际结果是不管通信来源是什么，所有通向端口 80 的通信都将得到允许。 若要有效地管理对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的访问，管理员应定期查看服务器上启用的所有防火墙规则。  
   
 ##  <a name="BKMK_profiles"></a> 防火墙配置文件概述  
- [高级安全 Windows 防火墙入门指南](http://go.microsoft.com/fwlink/?LinkId=116080) 中的 **识别网络位置的主机防火墙**部分介绍了防火墙配置文件。 总之，操作系统可按照连接性、连接数和类别来识别并记住与它们连接的每个网络。  
+ [高级安全 Windows 防火墙入门指南](https://go.microsoft.com/fwlink/?LinkId=116080) 中的 **识别网络位置的主机防火墙**部分介绍了防火墙配置文件。 总之，操作系统可按照连接性、连接数和类别来识别并记住与它们连接的每个网络。  
   
  在高级安全 Windows 防火墙中有三种网络位置类型：  
   
@@ -317,13 +316,13 @@ ms.locfileid: "48128987"
   
     1.  打开命令提示符窗口。  
   
-    2.  在命令提示符处，键入`netstat -n -a`。  
+    2.  在命令提示符下键入 `netstat -n -a`。  
   
          **-n** 开关指示 **netstat** 以数字方式显示活动 TCP 连接的地址和端口号。 **-a** 开关指示 **netstat** 显示计算机正在侦听的 TCP 和 UDP 端口。  
   
--   **PortQry** 实用工具可用于报告 TCP/IP 端口的状态（正在侦听、未在侦听或已筛选）。 （对于已筛选状态，端口可能正在侦听，也可能未在侦听；此状态指示实用工具没有收到端口的响应。）**PortQry** 实用工具可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=28590)下载。  
+-   **PortQry** 实用工具可用于报告 TCP/IP 端口的状态（正在侦听、未在侦听或已筛选）。 （对于已筛选状态，端口可能正在侦听，也可能未在侦听；此状态指示实用工具没有收到端口的响应。）**PortQry** 实用工具可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=28590)下载。  
   
 ## <a name="see-also"></a>请参阅  
- [Windows Server 系统的服务概述和网络端口要求](http://support.microsoft.com/kb/832017)  
+ [Windows Server 系统的服务概述和网络端口要求](https://support.microsoft.com/kb/832017)  
   
   

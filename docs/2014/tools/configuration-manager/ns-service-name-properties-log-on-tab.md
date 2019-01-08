@@ -1,22 +1,21 @@
 ---
-title: NS$&lt;服务名称&gt;属性 （日志上选项卡） |Microsoft Docs
+title: NS$&lt;服务名称&gt; 属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f723290336f69c3199c84264a8ad1885b71aadc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785319"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;服务名称&gt; 属性（“登录”选项卡）
   使用 **“Notification Services 属性”** 对话框中的 **“登录”** 选项卡可以指定 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服务使用的帐户，还可以启动和停止该服务。  

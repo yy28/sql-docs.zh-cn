@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.subscriber.f1
@@ -15,12 +14,12 @@ ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44047907e0e572eb19dcd5c886de363e7648ae78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9fa0e53e7bccdadf6d1aefdde9b716ad0a75c22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226779"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761665"
 ---
 # <a name="subscription-properties---subscriber"></a>订阅属性 - 订阅服务器
   使用订阅服务器上的 **“订阅属性”** 对话框可以查看和设置请求订阅的属性。  
@@ -59,7 +58,7 @@ ms.locfileid: "48226779"
  **使用 Windows 同步管理器**  
  确定是否可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步此订阅。  
   
- **Security**  
+ **安全性**  
  单击 **“代理进程帐户”** 行，再单击属性按钮 (**...**)，可以更改在订阅服务器上运行分发代理或合并代理时所使用的帐户。 与连接有关的安全选项取决于订阅类型：  
   
 -   对于对事务发布的订阅：若要更改分发代理在连接到分发服务器时所使用的帐户，请单击 **“分发服务器连接”**，再单击属性按钮 (**...**)。  
@@ -76,7 +75,7 @@ ms.locfileid: "48226779"
   
 ## <a name="options-for-merge-subscriptions"></a>用于合并订阅的选项  
  **分区定义(HOST_NAME)**  
- 对于使用参数化筛选器的发布，合并复制将在同步过程中对以下两个系统函数中的一个函数求值（如果筛选器同时引用了这两个函数，则对这两个函数求值），以确定订阅服务器应接收的数据： **SUSER_SNAME()** 或 **HOST_NAME()**。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
+ 对于使用参数化筛选器的发布，合并复制将在同步过程中对以下两个系统函数中的一个函数求值（如果筛选器同时引用了这两个函数，则对这两个函数求值），以确定订阅服务器应接收的数据：**Suser_sname （)** 或**host_name （)**。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **“订阅类型”** 和 **“优先级”**  
  显示订阅是客户端订阅还是服务器订阅（在创建订阅后不能更改）。 服务器订阅可以将数据重新发布到其他订阅服务器，并可以为服务器订阅分配冲突解决优先级。  

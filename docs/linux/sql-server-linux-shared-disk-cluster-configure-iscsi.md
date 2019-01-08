@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524911"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-Linux 上的 SQL Server
 
@@ -93,7 +93,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
 6.  检查 iSCSI 附加磁盘
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30 iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
    *    从现有的 SQL Server 数据目录中删除的文件。 如果成功，将不会收到任何确认。
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    验证已删除的文件。 下图显示了从 c 到 h 的整个序列示例。
@@ -337,7 +337,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
 14. 配置服务器，以便该唯一 Pacemaker 可以激活的卷组。
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. 生成服务器上的卷组的列表。 列出不的任何内容的 iSCSI 磁盘可供系统，如对 OS 磁盘。

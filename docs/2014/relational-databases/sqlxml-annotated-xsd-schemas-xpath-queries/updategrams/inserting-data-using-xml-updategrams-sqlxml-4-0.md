@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -35,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95989f956f01039cec5bbbc3ab61417981a094f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365849"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
   当记录实例出现在时，updategram 指示插入操作**\<后 >** 块中但不是在相应**\<之前 >** 块。 在这种情况下，updategram 中的记录插入**\<后 >** 到数据库中的块。  
@@ -213,7 +211,7 @@ ms.locfileid: "48053289"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，表名可以包括空格，例如 Northwind 数据库中的 Order Details 表。 但是，这不是有效的 XML 字符中的有效[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]标识符，但不是有效 XML 标识符可以使用编码 __xHHHH\_\_作为编码值，其中 HHHH 代表四位十六进制 ucs-2 代码按最高有效位优先顺序排序的字符。  
   
 > [!NOTE]  
->  此示例使用 Northwind 数据库。 可以从此下载并使用一个 SQL 脚本来安装 Northwind 数据库[Microsoft 网站上](http://go.microsoft.com/fwlink/?LinkId=30196)。  
+>  此示例使用 Northwind 数据库。 可以从此下载并使用一个 SQL 脚本来安装 Northwind 数据库[Microsoft 网站上](https://go.microsoft.com/fwlink/?LinkId=30196)。  
   
  此外，元素名称必须括在方括号 ([]) 内。 由于字符 [和] 在 XML 中无效，必须对它们编码为 _x005B\_和 _x005D\_分别。 （如果使用映射架构，可以提供不包含无效字符（如空格）的元素名。 映射架构会执行必要的映射；因此，无需对这些字符进行编码。）  
   
@@ -632,8 +630,8 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
               xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
@@ -688,7 +686,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

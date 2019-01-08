@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229847"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353806"
 ---
 # <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
@@ -130,15 +129,15 @@ ms.locfileid: "48229847"
   
 ## <a name="related-content"></a>相关内容  
   
--   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
+-   视频中，[如何：在完全缓存模式下实现查找转换](https://go.microsoft.com/fwlink/?LinkId=131031)，msdn.microsoft.com 上  
   
--   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
+-   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
--   blogs.msdn.com 上的博客项 [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782)（查找模式：不区分大小写）  
+-   博客文章[查找模式：不区分大小写](https://go.microsoft.com/fwlink/?LinkId=157782)，blogs.msdn.com 上的  
   
--   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
+-   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
   
-     有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
+     有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
   
 ## <a name="see-also"></a>请参阅  
  [模糊查找转换](fuzzy-lookup-transformation.md)   

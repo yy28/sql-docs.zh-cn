@@ -11,12 +11,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5a00f42527f081c2240e4f427bd9e690c67bf5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0b8526bf0a56f550659e613988b31c20f1ccde7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073447"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372619"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
   不能从一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式升级或转换到另一个服务器模式。 例如，不能将本机模式报表服务器升级或转换到 SharePoint 模式。 您不能在模式之间复制报表服务器数据库，因为它们使用不同的数据库架构。 可以将内容从一个报表服务器迁移到另一个服务器。 您使用的工具依赖于为源和目标服务器配置的报表服务器模式的类型。  
@@ -26,7 +26,7 @@ ms.locfileid: "48073447"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 迁移工具  
  此工具支持将内容从本机模式部署迁移到 SharePoint 模式部署。 此工具不支持从 SharePoint 模式迁移到 SharePoint 模式或从 SharePoint 模式迁移到本机模式。  
   
- 有关详细信息，请参阅 [Reporting Services 迁移工具](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560)。  
+ 有关详细信息，请参阅 [Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560)。  
   
 ## <a name="use-script-to-migrate-content"></a>使用脚本迁移内容  
  如果迁移工具不满足您的要求，您可以手动迁移报表服务器数据。 下面概述了要将报表项从一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署迁移到另一个时所需完成的步骤。 此方法支持将本机或 SharePoint 模式作为源或目标服务器。  
@@ -50,7 +50,7 @@ ms.locfileid: "48073447"
 |Models|用户帐户控制||  
 |数据集|用户帐户控制||  
 |报表部件||在迁移后，验证或更新指向报表部件的路径。|  
-|计划|用户帐户控制|请参阅 ListSchedules 方法[订阅和传递方法](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|“计划”|用户帐户控制|请参阅 ListSchedules 方法 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |订阅|是|请参阅列表订阅方法[订阅和传递方法](../report-server-web-service/methods/subscription-and-delivery-methods.md)和 ChangeSubscriptionOwner 方法 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |快照|||  
 ||||  

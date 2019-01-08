@@ -17,15 +17,15 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc448704ef0362c70a957a4e5a1574cd92df3578
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116453"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363879"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性组向导 (SQL Server Management Studio)
-  本主题介绍如何使用新建可用性组向导 (在[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) 来创建和配置 AlwaysOn 可用性组中的[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
+  本主题说明如何使用新建可用性组向导（位于 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中）在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中创建和配置 AlwaysOn 可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
   
 > [!NOTE]  
 >  有关可用性组的简介，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -34,9 +34,9 @@ ms.locfileid: "48116453"
   
      [先决条件、限制和建议](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **创建和配置可用性组，使用：**[新建可用性组向导 (SQL Server Management Studio)](#RunAGwiz)  
+-   **若要创建和配置可用性组，请使用：**[新的可用性组向导 (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  除了使用新建可用性组向导之外，您还可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlet。 有关详细信息，请参阅 [创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md) 或 [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)中创建和配置 AlwaysOn 可用性组。  
@@ -111,12 +111,12 @@ ms.locfileid: "48116453"
   
      如果数据库经过更改已经合格，请单击 **“刷新”** 以更新数据库网格。  
   
-7.  在 **“指定副本”** 页上，为新的可用性组指定和配置一个或多个副本。 此页包含四个选项卡。 下表介绍了这些选项卡。 有关详细信息，请参阅[“指定副本”页（新建可用性组向导：添加副本向导）](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)主题。  
+7.  在 **“指定副本”** 页上，为新的可用性组指定和配置一个或多个副本。 此页包含四个选项卡。 下表介绍了这些选项卡。 有关详细信息，请参阅[指定副本页&#40;新建可用性组向导：添加副本向导&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)主题。  
   
-    |选项卡|简短说明|  
+    |Tab|简短说明|  
     |---------|-----------------------|  
     |**副本**|使用此选项卡可以指定将承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。|  
-    |**端点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，需要执行操作之前可以在向导中继续对服务器实例进行手动更改。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
+    |**端点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例基于非域用户帐户运行，则您需要首先对您的服务器实例进行手动更改，然后才能在向导中继续执行。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
     |**侦听器**|使用此选项卡可以创建可用性组侦听器。 默认情况下，该向导不创建侦听器。|  
   
@@ -196,23 +196,23 @@ ms.locfileid: "48116453"
   
 -   **博客：**  
   
-     [AlwaysON-HADRON 学习系列： 启用了 HADRON 的工作线程池用法的数据库](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 学习系列：启用了 HADRON 的工作线程池用法的数据库](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第一部分： 介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 生成使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮书：**  
   
-     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   

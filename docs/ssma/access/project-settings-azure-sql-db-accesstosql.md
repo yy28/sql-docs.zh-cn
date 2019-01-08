@@ -13,12 +13,12 @@ ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d10af49e419827f9fbd70b7cbef45fdf0562dea3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749570"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402122"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>项目设置 (Azure SQL DB) (AccessToSQL)
 SQL Azure 项目设置可配置要在连接对话框中添加并允许在 SQL Azure 连接实施检测信号机制的 SQL Azure 数据库后缀。  

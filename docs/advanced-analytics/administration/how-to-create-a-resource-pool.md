@@ -1,5 +1,6 @@
 ---
-title: 如何为 SQL Server 机器学习创建资源池 |Microsoft Docs
+title: 如何创建适用于 R 和 Python-SQL Server 机器学习服务的资源池
+description: SQL Server 2016 或 SQL Server 2017 数据库引擎实例上定义 SQL Server 资源池的 R 或 Python 进程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 12b21a37e66351cb84b6de246f3b398a1d20bfd3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: c0fcc673e61f2ee188b169a2d46f1da6a4ffd2df
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100550"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596858"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中创建用于机器学习的资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +27,6 @@ ms.locfileid: "49100550"
 3.  创建新的资源池外部进程。
 4.  创建分类函数来标识外部脚本请求。
 5.  验证新的外部资源池捕获 R 或 Python 中的指定客户端或帐户的作业。
-
-适用范围：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> 查看现有资源池的状态
   
@@ -190,7 +189,7 @@ ms.locfileid: "49100550"
   
      在本例中，由于池是使用 AUTO 相关性创建的，因此未显示任何信息。 有关详细信息，请参阅 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 有关管理服务器资源的详细信息，请参阅：
 

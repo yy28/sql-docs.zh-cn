@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
@@ -16,12 +15,12 @@ ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 237b9b7ef70b2cc258d57507a7a7e0bd28ef26c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103469"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818202"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
   使用“重新生成索引任务”对话框可用利用新的填充因子对数据库中的表重新创建索引。 填充因子确定索引中每页上的空白空间量，以容纳将来的扩展内容。 随着向表中添加数据，由于没有维持填充因子，可用空间将逐渐填满。 重新组织数据页和索引页可以重新建立可用空间。  
@@ -91,7 +90,7 @@ ms.locfileid: "48103469"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **“刷新”**  
+ **刷新**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  

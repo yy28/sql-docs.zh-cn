@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906377"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374139"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
   数据分析表达式 (DAX) 是一种公式语言，用于在针对 Microsoft Excel 工作簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目中创建自定义计算。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
@@ -52,7 +52,7 @@ ms.locfileid: "48906377"
 ##  <a name="bkmk_DAXintm"></a> 表格模型中的 DAX  
  在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和表格模型中，就功能而言，DAX 公式通过各自数据集计算值时所采用的方式并无区别。 但是，DAX 公式在工作簿和模型创作工具中的创建是不同的，而且特定度量值中上下文的计算也是不同的。  
   
- 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中，计算公式通常由工作薄用户创建，用于自助式商业智能分析。 在 PowerPivot 窗口中为表创建计算列，在数据透视表或计算区域中创建度量值。 与表格模型项目不同，PowerPivot 工作簿不提供基于角色的安全性，这种安全性可以使用 DAX 公式来保护数据。  
+ 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中，计算公式通常由工作薄用户创建，用于自助式商业智能分析。 在 PowerPivot 窗口中为表创建计算列，在数据透视表或计算区域中创建度量值。 与表格模型项目不同，PowerPivot 工作簿不提供基于角色的安全性，这种安全性可以使用 DAX 公式来保护数据。  
   
  在表格模型项目中，计算公式由模型作者在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的模型设计器中创建。 尽管使用 DAX 公式计算的计算列值会立即显示在模型设计器的表中（度量值网格中的度量值预览功能除外），但只有用户在 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 等报告客户端或 Microsoft Excel 的数据透视表中指定筛选器后，系统才会计算度量值。  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48906377"
   
  您不能立即看到计算的（筛选）结果的原因是，在没有上下文的情况下无法确定度量值的结果。 若要计算度量值，需要一个可以提供上下文的报表客户端应用程序，在检索与每个单元相关的数据然后针对每个单元计算表达式时需要该应用程序提供的上下文。 该客户端可能是 Excel 数据透视表或数据透视图、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表或 MDX 查询。 无论报表客户端是什么，都会对结果中的每个单元运行单独的查询。 也就是说，数据透视表中行与列标题的每个组合或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表中切片器和筛选器的每种选择会生成依据其计算度量值的不同数据子集。 例如，在使用公式 `Total Sales:=SUM([Sales Amount])`的度量值中，当用户将 Total Sales 度量值放入数据透视表中的“值”窗口，然后将 Product 表中的 Product Category 列放入“筛选器”窗口时，将计算 Sales Amount 的总和并为每个产品类别显示该总和。  
   
- 与计算列和行筛选器不同，度量值的语法中在公式之前包括该度量值的名称。 在刚才提供的示例中，名称 **Total Sales:** 显示在公式之前。 创建一个度量值后，其名称和定义将显示在报表客户端应用程序的“字段”列表中，可供模型的所有用户使用（具体取决于透视和角色）。  
+ 与计算的列和行筛选器，不同的度量值的语法包括在公式之前的度量值的名称。 在刚才提供的示例中，名称 **Total Sales:** 显示在公式之前。 创建一个度量值后，其名称和定义将显示在报表客户端应用程序的“字段”列表中，可供模型的所有用户使用（具体取决于透视和角色）。  
   
  有关详细信息，请参阅[度量值（SSAS 表格）](measures-ssas-tabular.md)。  
   
 ### <a name="row-filters"></a>行筛选器  
  行筛选器定义表中对特定角色的成员可见的行。 通过使用 DAX 公式可为模型中的每个表创建行筛选器。 通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的角色管理器可以为特定角色创建行筛选器。 还可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的角色属性为已部署的模型定义行筛选器。  
   
- 在行筛选器中，DAX 公式（求值结果必须为 TRUE/FALSE 布尔值条件）定义该特定角色的成员执行查询的结果可返回的行。 不能返回未包含在 DAX 公式中的行。 例如，对于具有以下 DAX 公式 `=Customers[Country] = “USA”`的 Customers 表，Sales 角色的成员将只能查看美国境内客户的数据和聚合值，例如仅为美国客户返回 SUM。  
+ 在行筛选器中，DAX 公式（求值结果必须为 TRUE/FALSE 布尔值条件）定义该特定角色的成员执行查询的结果可返回的行。 不能返回未包含在 DAX 公式中的行。 例如，对于具有以下 DAX 公式 `=Customers[Country] = "USA"`的 Customers 表，Sales 角色的成员将只能查看美国境内客户的数据和聚合值，例如仅为美国客户返回 SUM。  
   
- 使用 DAX 公式定义行筛选器时，您将创建一个允许的行集。 这并不影响访问其他行；其他行只是不会作为允许的行集的一部分返回。 其他角色可允许访问 DAX 公式所排除的行。 如果某用户是其他角色的成员，并且该角色的行筛选器允许访问该特定行集，则该用户可以查看该行的数据。  
+ 使用 DAX 公式定义行筛选器时，您将创建一个允许的行集。 这并不影响访问其他行；其他行只是不会作为允许的行集的一部分返回。 其他角色可允许访问 DAX 公式所排除的行。 如果用户是另一个角色的成员，并且该角色的行筛选器允许访问该特定行集，用户可以查看该行的数据。  
   
  行筛选器应用于指定的行以及相关行。 如果表具有多个关系，则筛选器将安全性应用于处于活动状态的关系。 行筛选器将与为相关表定义的其他行筛选器相交。  
   
@@ -106,11 +106,11 @@ ms.locfileid: "48906377"
 |Text|String|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
 |date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
-|N/A|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
+|不可用|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
  表格模型还包括 Table 数据类型，作为许多 DAX 函数的输入或输出。 例如，FILTER 函数采用表作为输入，并输出仅包含满足筛选条件的行的另一个表。 通过组合表函数与聚合函数，您可以对动态定义的数据集执行复杂计算。  
   
- 尽管数据类型通常都是自动设置的，但还是需要了解数据类型，尤其是它们如何应用到 DAX 公式，这一点非常重要。 举例来说，公式中的错误或是意外结果通常都是因为对参数中指定的数据类型使用了不该使用的特定运算符而导致的。 例如，公式 `= 1 & 2`返回结果为 12 的字符串。 但是公式 `= “1” + “2”`返回的结果为整数 3。  
+ 尽管数据类型通常都是自动设置的，但还是需要了解数据类型，尤其是它们如何应用到 DAX 公式，这一点非常重要。 举例来说，公式中的错误或是意外结果通常都是因为对参数中指定的数据类型使用了不该使用的特定运算符而导致的。 例如，公式 `= 1 & 2`返回结果为 12 的字符串。 但是公式 `= "1" + "2"`返回的结果为整数 3。  
   
  有关表格模型的数据类型以及 DAX 中数据类型的显式和隐式转换的详细信息，请参阅[支持的数据类型（SSAS 表格）](data-types-supported-ssas-tabular.md)。  
   
@@ -265,7 +265,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  有许多类型的上下文：“行上下文” 、“查询上下文” 和“筛选上下文”。  
   
 ###  <a name="bkmk_row_context"></a> 行上下文  
-  “行上下文”可以被视作“当前行”。 如果您在计算列中创建某一公式，则该公式的“行上下文”将包括来自当前行中所有列的值。 如果该表与其他表相关，则上下文还包括来自另一个表中与当前行相关的所有值。  
+ *行上下文*可视为"当前行"。 如果您在计算列中创建某一公式，则该公式的“行上下文”将包括来自当前行中所有列的值。 如果该表与其他表相关，则上下文还包括来自另一个表中与当前行相关的所有值。  
   
  例如，假设创建将同一表中的两列（Freight 和 Tax）的值相加的计算列 `=[Freight] + [Tax]`。 此公式仅自动获取指定列中当前行的值。  
   
@@ -387,7 +387,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
   “重新计算”是对公式结果进行更新的过程，用于反映对公式本身的任何更改以及基础数据中的更改。 重新计算会以下列方式影响性能：  
   
--   对计算列中的值进行计算并存储在模型中。 若要更新计算列中的值，必须使用以下三个处理命令之一处理该模型 —“处理全部”、“处理数据”或“处理重新计算”。 每当您更改公式时，必须始终针对整个列重新计算公式的结果。  
+-   对计算列中的值进行计算并存储在模型中。 若要更新计算列中的值，必须处理在模型中使用一个三个处理命令的处理全部、 处理数据或处理重新计算。 每当您更改公式时，必须始终针对整个列重新计算公式的结果。  
   
 -   每当用户向数据透视表添加度量值或打开报告时，系统都会动态计算由该度量值计算的值；当用户修改上下文时，度量值所返回的值将发生变化。 度量值的结果将始终反映内存中缓存中的最新内容。  
   
@@ -417,9 +417,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> 其他资源  
  [表格建模（Adventure Works 教程）](../tabular-modeling-adventure-works-tutorial.md)提供关于如何创建在计算列、度量值和行筛选器中包含许多计算的表格模型的分步说明。 对于大多数公式，都提供关于该公式的用途的说明。  
   
- [Analysis Services 和 PowerPivot 团队博客](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供有关的信息、 提示、 新闻和公告[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]和 PowerPivot。  
+ [Analysis Services 和 PowerPivot 团队博客](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供有关的信息、 提示、 新闻和公告[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]和 PowerPivot。  
   
- [DAX 资源中心](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 同时提供关于 DAX 的内部和外部信息，包括由主要商业智能专业人员提交的大量 DAX 解决方案。  
+ [DAX 资源中心](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 同时提供关于 DAX 的内部和外部信息，包括由主要商业智能专业人员提交的大量 DAX 解决方案。  
   
 ## <a name="see-also"></a>请参阅  
  [数据分析表达式&#40;DAX&#41;引用](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   

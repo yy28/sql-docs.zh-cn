@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018262"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371049"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安装 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。 “安装中心”的“高级”页具有两个选项 -“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”和“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "51018262"
   
 -   [使用配置文件安装 SQL Server 2014](install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，请查阅 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。  
   
  有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本以及硬件和软件要求，请参阅[硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "51018262"
 -   [修改或卸载 SQL Server 的已完成实例。](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 群集支持  
- 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始，SysPrep 支持从命令行安装群集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [什么是 Sysprep？](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)。  
+ 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始，SysPrep 支持从命令行安装群集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [什么是 Sysprep？](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)。  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集（无人参与）  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51018262"
   
      所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
   
-     **安装的实例** - 该网格将显示运行安装程序的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+     **已安装的实例** — 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 12. **“磁盘空间要求”** 页计算指定的功能所需的磁盘空间， 然后将所需空间与可用磁盘空间进行比较。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51018262"
   
 7.  在 **“选择已准备实例”** 页上，从下拉框中选择您要完成的已准备实例。 从“实例 ID”列表中选择未配置的实例。  
   
-     **安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。  
+     **已安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。  
   
 8.  在 **“查看功能”** 页上，您将看到在安装的准备步骤中包括的所选功能和组件。 如果您要向未在已准备实例中包括的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加更多功能，则必须首先完成此步骤以完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后从 **“安装中心”** 的 **“添加功能”** 上添加功能。  
   
@@ -186,11 +186,11 @@ ms.locfileid: "51018262"
   
      所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
   
-     **已安装的实例** — 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+     **已安装的实例** - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 10. 本主题中的其余工作流取决于在准备步骤中已选择的功能。 您可能不会看到所有的页面，具体取决于进行的选择。  
   
-11. 在 **“服务器配置 - 服务帐户”** 页上指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。  
+11. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。  
   
      您可以为所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 您还可以指定是自动启动、手动启动还是禁用服务。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您逐个配置服务帐户，以便为每项服务提供最低权限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将被授予完成其任务所必须具备的最低权限。 有关详细信息，请参阅 [服务器配置 - 服务帐户](../../sql-server/install/server-configuration-service-accounts.md) 和 [配置 Windows 服务帐户和权限](../configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
@@ -200,15 +200,15 @@ ms.locfileid: "51018262"
   
      为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”**。  
   
-12. 使用“服务器配置 - 排序规则”选项卡为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](../../sql-server/install/server-configuration-collation.md)。  
+12. 使用“服务器配置 - 排序规则”选项卡为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](../../sql-server/install/server-configuration-collation.md)。  
   
 13. 使用“ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 - 帐户设置”页指定以下各项：  
   
-    -   安全模式 - 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例选择 Windows 身份验证或混合模式身份验证。 如果选择“混合模式身份验证”，则必须为内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户提供一个强密码。  
+    -   安全模式 - 为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例选择 Windows 身份验证或混合模式身份验证。 如果选择“混合模式身份验证”，则必须为内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户提供一个强密码。  
   
          在设备与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员 - 您必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员 - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
      完成对该列表的编辑后，请单击 **“确定”**。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "51018262"
   
 12. 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。  
   
-13. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](view-and-read-sql-server-setup-log-files.md)。  
+13. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md)。  
   
 ##  <a name="RemoveFeatures"></a> 从已准备实例删除功能  
   
@@ -316,14 +316,14 @@ ms.locfileid: "51018262"
 10. 重复步骤 1 到 9，直到删除所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件。  
   
 ##  <a name="bk_Modifying_Uninstalling"></a> 修改或卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已完成实例。  
- 添加或删除功能或者卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成实例的过程类似于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已安装实例的过程。 有关详细信息，请参阅以下主题：  
+ 添加或删除功能或者卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成实例的过程类似于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已安装实例的过程。 有关详细信息，请参阅下列主题：  
   
 -   [将功能添加到 SQL Server 2014 的实例&#40;安装程序&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   
 -   [卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>请参阅  
- [什么是 Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Windows SysPrep 工作原理](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [什么是 Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Windows SysPrep 工作原理](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

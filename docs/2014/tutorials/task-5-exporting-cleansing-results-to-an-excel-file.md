@@ -1,5 +1,5 @@
 ---
-title: 任务 5： 将导出清理结果保存到 Excel 文件 |Microsoft Docs
+title: 任务 5：导出清理结果保存到 Excel 文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138167"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368209"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>任务 5：将清理结果导出到 Excel 文件
-  在本任务中，您将清理活动的结果导出到 Excel 文件。 请参阅[导出阶段](http://msdn.microsoft.com/library/hh213061.aspx#Export)主题的更多详细信息。  
+  在本任务中，您将清理活动的结果导出到 Excel 文件。 请参阅[导出阶段](https://msdn.microsoft.com/library/hh213061.aspx#Export)主题的更多详细信息。  
   
 1.  在右窗格中，选择**Excel**有关**目标类型**。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138167"
   
 7.  打开**Cleansed Supplier List.xls**并执行以下操作：  
   
-    1.  通过在工作表中搜索 adventure-work.com，确保没有电子邮件地址以 adventure-work.com 结尾（没有字符“s”）。  
+    1.  确保没有电子邮件地址以 adventure-work.com 结尾 (没有字符的) 通过搜索 adventure-work.com 工作表中。  
   
     2.  查看任何**USA**中的值**国家/地区**列。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48138167"
     5.  删除**地址验证**列从电子表格并保存 excel 文件。 此额外列对应于“地址验证”复合域。  
   
 ## <a name="next-step"></a>下一步  
- [任务 6：从 Cleanse Supplier List 项目导入值](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [任务 6:导入值从 Cleanse Supplier List 项目](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

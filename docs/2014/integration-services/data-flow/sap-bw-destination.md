@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29998bdd95a24b66ff2aebf304cd6b36b7701d02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1eff0a59ad719f2f609bd96a7a11147204c7b8a3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102307"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367509"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
   SAP BW 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的目标组件。 因此，SAP BW 目标将来自 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流的数据加载到 SAP Netweaver BW 版本 7 系统。  
@@ -84,18 +83,18 @@ ms.locfileid: "48102307"
   
  如果您不知道配置目标所需的所有值，可能需要询问您的 SAP 管理员。  
   
- 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](http://go.microsoft.com/fwlink/?LinkID=137090)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
+ 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](https://go.microsoft.com/fwlink/?LinkID=137090)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>使用 SSIS 设计器配置目标  
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的 SAP BW 目标属性的详细信息，请单击以下主题之一进行了解：  
   
--   [SAP BW 目标编辑器&#40;连接管理器页&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目标编辑器（“连接管理器”页）](sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目标编辑器&#40;映射页&#41;](sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目标编辑器（“映射”页）](sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 目标编辑器&#40;错误输出页&#41;](sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 目标编辑器（“错误输出”页）](sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 目标编辑器&#40;高级页&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 目标编辑器（“高级”页）](sap-bw-destination-editor-advanced-page.md)  
   
  在配置 SAP BW 目标的同时，您还可使用各种对话框查找或创建 SAP Netweaver BW 对象。 有关这些对话框的详细信息，请单击以下主题之一进行了解：  
   

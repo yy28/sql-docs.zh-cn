@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872d886f8e38d408b39387329f13c120d1dc5744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9b405ee057e843f734310dbf134465d03575efc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152185"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364019"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>在完全缓存模式下使用缓存连接管理器实现查找转换
   可以将查找转换配置为使用完全缓存模式和缓存连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
@@ -50,7 +49,7 @@ ms.locfileid: "48152185"
   
 -   在不同的包中将缓存连接管理器配置为使用同一缓存文件。  
   
- 有关详细信息，请参阅以下主题：  
+ 有关详细信息，请参阅下列主题：  
   
 -   [缓存转换](../data-flow/transformations/cache-transform.md)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48152185"
   
 -   [序列容器](../control-flow/sequence-container.md)  
   
- 有关演示如何使用缓存连接管理器在完全缓存模式下实现查找转换的视频，请参阅 [如何在完全缓存模式下实现查找转换（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 有关演示如何在完全缓存模式下使用缓存连接管理器实现查找转换的视频，请参阅[如何：在完全缓存模式 （SQL Server 视频） 中实现查找转换](https://go.microsoft.com/fwlink/?LinkId=131031)。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>在完全缓存模式下使用缓存连接管理器和数据流中的数据源在单个包中实现查找转换  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48152185"
          如果为其键入路径的文件不存在，则运行包时系统会创建该文件。  
   
     > [!NOTE]  
-    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../access-to-files-used-by-packages.md)。  
+    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  
   
 7.  根据需要配置缓存转换。 有关详细信息，请参阅[缓存转换编辑器（“连接管理器”页）](../cache-transformation-editor-connection-manager-page.md)和[缓存转换编辑器（“映射”页）](../cache-transformation-editor-mappings-page.md)。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "48152185"
          如果为其键入路径的文件不存在，则运行包时系统会创建该文件。  
   
     > [!NOTE]  
-    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../access-to-files-used-by-packages.md)。  
+    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  
   
 6.  单击 **“列”** 选项卡，然后使用 **“索引位置”** 选项来指定哪些列是索引列。  
   
@@ -236,7 +235,7 @@ ms.locfileid: "48152185"
     -   对于 **“文件名”**，请键入文件路径，或者单击 **“浏览”** 选择文件。  
   
     > [!NOTE]  
-    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../access-to-files-used-by-packages.md)。  
+    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  
   
 6.  单击 **“列”** 选项卡，然后使用 **“索引位置”** 选项来指定哪些列是索引列。  
   
@@ -281,7 +280,7 @@ ms.locfileid: "48152185"
 9. 运行包。  
   
 ## <a name="see-also"></a>请参阅  
- [在完全缓存模式下使用 OLE DB 连接管理器实现查找转换](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [在不缓存模式或部分缓存模式下实现查找](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 转换](../data-flow/transformations/integration-services-transformations.md)  
   

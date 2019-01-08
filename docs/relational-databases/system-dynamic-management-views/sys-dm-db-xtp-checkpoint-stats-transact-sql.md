@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837795"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503193"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|最后一个已关闭检查点的时间戳。|  
 |hardened_recovery_lsn|**numeric(38)**|从此 LSN 开始将恢复。|  
 |hardened_root_file_guid|**uniqueidentifier**|强制写入的最后一个已完成检查点的结果的根文件的 GUID。|  
-|hardened_root_file_watermark|**bigint**|**内部仅**。 延伸的范围是有效的最多读取的根文件 （这是在内部相关类型仅 – 调用 BSN）。|  
+|hardened_root_file_watermark|**bigint**|**内部仅**。 延伸的范围是有效的最多读取的根文件 （这是在内部相关类型仅-调用 BSN）。|  
 |hardened_truncation_lsn|**numeric(38)**|截断点的 LSN。|  
 |log_bytes_since_last_close|**bigint**|从上一个字节接近当前日志的结尾。|  
 |time_since_last_close_in_ms|**bigint**|自最后关闭的检查点的时间。|  
@@ -104,7 +104,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |end_of_log_lsn|**numeric (38)**|日志结尾的 LSN。|  
 |task_address|**varbinary(8)**|SOS_Task 的地址。 联接到 sys.dm_os_tasks 以查找其他信息。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="see-also"></a>请参阅  

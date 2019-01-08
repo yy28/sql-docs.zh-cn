@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373399"
 ---
 # <a name="implementation-of-child-packages"></a>子包的实现
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]来实现负载平衡时，子包将安装在其他服务器上，以利用可用的 CPU 或服务器时间。 若要创建和运行子包，需要执行以下步骤：  
@@ -56,7 +56,7 @@ ms.locfileid: "48100170"
   
 -   通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]在远程计算机上运行单个 SQL Server 代理作业，以确保包运行。  
   
- 有关如何对从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 [支持知识库中的](http://support.microsoft.com/kb/918760) An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step [!INCLUDE[msCoName](../includes/msconame-md.md)] （从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行）。  
+ 有关如何对从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 [支持知识库中的](https://support.microsoft.com/kb/918760) An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step [!INCLUDE[msCoName](../includes/msconame-md.md)] （从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行）。  
   
  SQL Server 代理检查代理的子系统访问权，并在每次运行作业步骤时将访问权授予代理。  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100170"
   
 ## <a name="related-content"></a>相关内容  
   
--   博客文章[SSIS： 访问父包中的变量](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   博客文章[SSIS:访问父包中的变量](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
--   博客文章[SSIS： 应该执行子包进程内或进程外？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   博客文章[SSIS:应执行子包进程内或进程外？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
   

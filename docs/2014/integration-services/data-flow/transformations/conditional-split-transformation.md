@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073569"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814908"
 ---
 # <a name="conditional-split-transformation"></a>有条件拆分转换
   有条件拆分转换可以根据数据内容将数据行路由到不同的输出。 有条件拆分转换的实现类似于编程语言中的 CASE 决策结构。 此转换将计算表达式，并且根据结果将数据行定向到指定输出。 此转换还提供默认输出，因此如果某个行与任何表达式都不匹配，则它将被定向到默认输出。  
@@ -47,11 +46,11 @@ ms.locfileid: "48073569"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的函数和运算符可用于创建计算输入数据并定向输出数据的表达式。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../expressions/integration-services-ssis-expressions.md)。  
   
- 有条件拆分转换包括`FriendlyExpression`自定义属性。 加载包时，可以通过属性表达式更新此属性。 有关详细信息，请参阅 [在包中使用属性表达式](../../expressions/use-property-expressions-in-packages.md) 和 [转换自定义属性](transformation-custom-properties.md)。  
+ 有条件拆分转换包括 `FriendlyExpression` 自定义属性。 加载包时，可以通过属性表达式更新此属性。 有关详细信息，请参阅 [在包中使用属性表达式](../../expressions/use-property-expressions-in-packages.md) 和 [转换自定义属性](transformation-custom-properties.md)。  
   
  此转换具有一个输入、一个或多个输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“有条件拆分转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Conditional Split Transformation Editor](../../conditional-split-transformation-editor.md)。  
   

@@ -1,6 +1,6 @@
 ---
-title: Java 语言扩展。 在 SQL Server 2019 |Microsoft Docs
-description: 使用 Java 语言扩展的 SQL Server 2019 上运行 Java 代码。
+title: Java 示例，并适用于 SQL Server 2019-SQL Server 机器学习服务教程
+description: 若要了解有关使用 SQL Server 数据的 Java 语言扩展的步骤的 SQL Server 2019 上运行 Java 示例代码。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2018
@@ -9,18 +9,18 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf6fec32e28342e355b3393bb531ad1833d8af6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715066"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069051"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 示例演练
 
 此示例演示如何从 SQL Server 接收两个列 （ID 和文本），并返回到 SQL Server （ID 和 ngram） 返回两个列的 Java 类。 对于给定的 ID 和字符串组合，在代码中生成 ngrams （子字符串） 的排列返回这些排列以及原始 id。 Ngram 的长度由发送到 Java 类的参数定义。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 + SQL Server 2019 数据库引擎实例使用的可扩展性框架和 Java 编程扩展[在 Windows 上](../install/sql-machine-learning-services-windows-install.md)或[Linux 上](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)。 系统配置的详细信息，请参阅[Java 语言扩展。 在 SQL Server 2019](extension-java.md)。 有关编码要求的详细信息，请参阅[如何在 SQL Server 中调用 Java](howto-call-java-from-sql.md)。
 
@@ -226,7 +226,7 @@ Classpath 是代码的已编译的位置。 例如，在 Linux 上，如果类�
    + 单击**对象类型**，并确保*内置的安全原则*并*组*选择。
    + 单击**位置**选择本地计算机名称列表的顶部。
 5. 输入**SQLRUserGroup**，检查的名称，然后单击确定以添加组。
-6. 输入**应用程序的所有包**，请检查名称，并单击确定以添加。 如果名称不能解决，重新访问位置步骤。 SID 是计算机本地。
+6. 输入**所有应用程序包**，请检查名称，并单击确定以添加。 如果名称不能解决，重新访问位置步骤。 SID 是计算机本地。
 
 请确保这两个安全标识对文件夹和"pkg"子文件夹具有读取和执行权限。
 

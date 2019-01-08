@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], SQL pane
@@ -14,12 +14,12 @@ ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2377bd9368bd8d1e4eae59b1ffaaa5d8d6c9fc71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085687"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773559"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL 窗格 (Visual Database Tools)
   您可以使用 SQL 窗格创建自己的 SQL 语句，也可以使用“条件”窗格和“关系图”窗格创建语句，在后面这种情况下将在 SQL 窗格中相应地创建 SQL 语句。 生成查询时，SQL 窗格将自动更新并重新设置格式以便于阅读。  

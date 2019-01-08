@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020557 error
@@ -13,12 +12,12 @@ ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7701a709d9415c660ad63a70c8cfbb3bfafd0878
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc61a235cbfd96812e632dfd56f6ef1cbdabb4b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357331"
 ---
 # <a name="mssqleng020557"></a>MSSQL_ENG020557
     
@@ -50,7 +49,7 @@ ms.locfileid: "48193957"
   
 -   如果在创建或应用快照发生错误，请检查快照目录中的文件以查找错误。  
   
--   如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 根据错误的上下文，这可能提供导致该错误和其他错误消息的步骤。 有关如何配置复制日志记录的详细信息，请参阅 Microsoft 知识库文章 [312292](http://support.microsoft.com/kb/312292)。  
+-   如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 根据错误的上下文，这可能提供导致该错误和其他错误消息的步骤。 有关如何配置复制日志记录的详细信息，请参阅 Microsoft 知识库文章 [312292](https://support.microsoft.com/kb/312292)。  
   
 ## <a name="see-also"></a>请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  

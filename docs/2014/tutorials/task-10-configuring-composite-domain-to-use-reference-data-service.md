@@ -1,5 +1,5 @@
 ---
-title: 任务 10： 配置复合域以使用引用数据服务 |Microsoft Docs
+title: 任务 10:配置复合域以使用引用数据服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e4a8ef8c3b9d60040d6d9b5fcbff145a600cd88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167677"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370019"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>任务 10：配置复合域以使用引用数据服务
-  在此任务中，配置**地址验证**复合域以使用**Melissa Data – Address Check**服务。 在运行时，在清理活动期间，DQS 将“地址验证”域中各域的值传递给此服务以进行清理。 请参阅[映射到引用数据的域/复合域](http://msdn.microsoft.com/library/hh213030.aspx)的更多详细信息。  
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>任务 10:配置复合域以使用引用数据服务
+  在此任务中，配置**地址验证**复合域以使用**Melissa 数据-地址检查**服务。 在运行时，在清理活动期间，DQS 将“地址验证”域中各域的值传递给此服务以进行清理。 请参阅[映射到引用数据的域/复合域](https://msdn.microsoft.com/library/hh213030.aspx)的更多详细信息。  
   
 1.  在主页面中的**DQS 客户端**，单击**Suppliers （域管理）** 下**最近的知识库**以启动**域管理**页。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48167677"
   
 4.  单击**浏览**工具栏上的按钮。  
   
-5.  上**Online Reference Data Providers Catalog**对话框中，选择**复选框**旁边**Melissa Data – Address Check**。  
+5.  上**Online Reference Data Providers Catalog**对话框中，选择**复选框**旁边**Melissa 数据-地址检查**。  
   
      ![选择 Melissa 数据-地址检查](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "选择 Melissa 数据-地址检查")  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48167677"
 9. 单击 **“确定”** 关闭对话框。  
   
 ## <a name="next-step"></a>下一步  
- [任务 11：发布知识库](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
+ [任务 11:发布知识库](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

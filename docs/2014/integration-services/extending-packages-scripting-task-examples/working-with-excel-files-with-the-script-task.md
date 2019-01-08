@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,25 +16,25 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78dec0807ebcfc025d997b995c7b2c083a1baf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbd4f546a6e09d771577cd5d297e6f1a58175469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049542"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369909"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。 可以轻松修改这些示例以处理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 访问接口支持的所有其他基于文件的数据源。  
   
  [配置用于测试示例的包](#configuring)  
   
- [示例 1：检查 Excel 文件是否存在](#example1)  
+ [示例 1:检查 Excel 文件是否存在](#example1)  
   
- [示例 2：检查 Excel 表是否存在](#example2)  
+ [示例 2:检查 Excel 表是否存在](#example2)  
   
- [示例 3：获取文件夹中的 Excel 文件的列表](#example3)  
+ [示例 3:获取文件夹中的 Excel 文件的列表](#example3)  
   
- [示例 4：获取 Excel 文件中的表的列表](#example4)  
+ [示例 4:获取 Excel 文件中的表的列表](#example4)  
   
  [显示示例的结果](#testing)  
   
@@ -266,7 +264,7 @@ public class ScriptMain
   
          -或-  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFolder 变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFolder”变量。  
   
 3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
@@ -274,7 +272,7 @@ public class ScriptMain
   
          -或-  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFiles 变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
   
 4.  单击“编辑脚本”以打开脚本编辑器。  
   
@@ -341,7 +339,7 @@ public class ScriptMain
   
          -或-  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFile 变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
   
 3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
@@ -349,7 +347,7 @@ public class ScriptMain
   
          -或-  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelTablesvariable。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTables”变量。  
   
 4.  单击“编辑脚本”以打开脚本编辑器。  
   
@@ -454,7 +452,7 @@ public class ScriptMain
   
          -或-  
   
-    -   单击属性字段旁的省略号 (**…**) 按钮，然后在“”选择变量对话框中选择变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“”选择变量对话框中选择变量。  
   
 5.  单击“编辑脚本”以打开脚本编辑器。  
   
@@ -543,7 +541,7 @@ public class ScriptMain
 }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Excel 连接管理器](../connection-manager/excel-connection-manager.md)   

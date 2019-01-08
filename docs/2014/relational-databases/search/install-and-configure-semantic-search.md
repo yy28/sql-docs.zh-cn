@@ -13,19 +13,19 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29a243c24a36b2e370686c4c51a7ddefe993bd4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159656"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377539"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
   说明统计语义搜索的必备组件以及如何安装或检查它们。  
   
 ## <a name="installing-semantic-search"></a>安装语义搜索  
   
-###  <a name="HowToCheckInstalled"></a> 如何： 检查是否安装了语义搜索  
+###  <a name="HowToCheckInstalled"></a> 如何：检查是否安装了语义搜索  
  查询 [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql) 元数据函数的 **IsFullTextInstalled** 属性。  
   
  返回值 1 表示安装了全文搜索和语义搜索；返回值 0 表示未安装它们。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> 如何： 安装语义搜索  
+###  <a name="BasicsSemanticSearch"></a> 如何：安装语义搜索  
  若要安装语义搜索，在安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。  
   
  统计语义搜索依赖于全文搜索。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的这两个可选功能是一起安装的。  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>安装或删除语义语言统计数据库  
  语义搜索具有一个称为语义语言统计数据库的附加外部依赖项。 此数据库包含语义搜索所需的统计语言模型。 单个语义语言统计数据库包含语义索引支持的所有语言的语言模型。  
   
-###  <a name="HowToCheckDatabase"></a> 如何： 检查是否安装了语义语言统计数据库  
+###  <a name="HowToCheckDatabase"></a> 如何：检查是否安装了语义语言统计数据库  
  查询目录视图 [sys.fulltext_semantic_language_statistics_database (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)。  
   
  如果为该实例安装并注册了语义语言统计数据库，则查询结果将包含有关该数据库的单行信息。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> 如何： 安装、 附加和注册语义语言统计数据库  
+###  <a name="HowToInstallModel"></a> 如何：安装、 附加和注册语义语言统计数据库  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不安装语义语言统计数据库。 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下操作：  
   
  **1.安装语义语言统计数据库。**  
@@ -61,7 +61,7 @@ GO
   
     -   在 **安装介质上找到名为** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Windows 安装程序包。 根据目标系统，找到 32 位或 64 位版本的安装程序包。 包含文件夹的名称标识 32 位或 64 位版本文件；文件名本身对于这两个版本是相同的。  
   
-    -   从 [下载中心的](http://go.microsoft.com/fwlink/?LinkID=296743) Microsoft® SQL Server® 2014 语义语言统计 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 页上下载安装程序包。  
+    -   下载安装程序包[Microsoft??SQL Server??2014 语义语言统计](https://go.microsoft.com/fwlink/?LinkID=296743)页上[!INCLUDE[msCoName](../../../includes/msconame-md.md)]下载中心。  
   
 2.  运行 **SemanticLanguageDatabase.msi** Windows 安装程序包，以提取数据库和日志文件。  
   
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> 如何： 取消注册、 分离和删除语义语言统计数据库  
+###  <a name="HowToUnregister"></a> 如何：取消注册、 分离和删除语义语言统计数据库  
  **取消注册语义语言统计数据库。**  
  调用 [sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) 存储过程。 由于一个实例仅有一个语义语言统计数据库，因此您不必提供该数据库的名称。  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>为较新文档类型安装可选支持  
   
-###  <a name="office"></a> 如何： 为 Microsoft Office 和其他 Microsoft 文档类型安装最新的筛选器  
- 此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装最新的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 断字符和词干分析器，但是不为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 文档和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 文档类型安装最新的筛选器。 要为使用最新版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 应用程序创建的文档编制索引，必须安装这些筛选器。 若要下载最新的筛选器，请参阅 [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293)。  
+###  <a name="office"></a> 如何：为 Microsoft Office 和其他 Microsoft 文档类型安装最新的筛选器  
+ 此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装最新的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 断字符和词干分析器，但是不为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 文档和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 文档类型安装最新的筛选器。 要为使用最新版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 应用程序创建的文档编制索引，必须安装这些筛选器。 若要下载最新的筛选器，请参阅 [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Power View 多维模型 |Microsoft 文档
+title: Power View 的 Analysis Services 多维模型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57913e77c38daf0a236dc354aed379ae0aa5625e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 62fc1cc576191e54b6692e803970f78c12daabbc
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025574"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071904"
 ---
 # <a name="power-view-for-multidimensional-models"></a>用于多维模型的 Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Microsoft SQL Server 2016 Analysis Services 多维模型通过使用 Microsoft Power View 支持即席数据分析、探索和可视化。  
   
-## <a name="in-this-section"></a>在本节中  
+## <a name="in-this-section"></a>本节内容  
   
 -   [了解多维模型的 Power View](../../analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models.md)  
   

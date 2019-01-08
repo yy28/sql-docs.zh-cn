@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3bf28d011f1b1387bfbf04358d4575232c768d6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200327"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369869"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)
   本主题包含有关 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
@@ -47,7 +47,7 @@ ms.locfileid: "48200327"
  可用性组侦听器由以下各项定义：  
   
  唯一的 DNS 名称  
- 这也称为虚拟网络名称 (VNN)。 适用 DNS 主机名的 Active Directory 命名规则。 有关详细信息，请参阅知识库文章： [Active Directory 中计算机、域、站点和 OU 的命名约定](http://support.microsoft.com/kb/909264) 。  
+ 这也称为虚拟网络名称 (VNN)。 适用 DNS 主机名的 Active Directory 命名规则。 有关详细信息，请参阅知识库文章： [Active Directory 中计算机、域、站点和 OU 的命名约定](https://support.microsoft.com/kb/909264) 。  
   
  一个或多个虚拟 IP 地址 (VIP)  
  为可用性组可以故障转移到的一个或多个子网配置 VIP。  
@@ -124,7 +124,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  请注意，可以将应用程序意向从客户端驱动程序发送到 SQL Server 下级实例。  在此情况下，将忽略只读的应用程序意向，并且连接将照常继续。  
   
- 你可以跳过只读路由通过不将应用程序意向连接属性设置为`ReadOnly`(不指定时，默认值是`ReadWrite`在登录期间) 或通过直接连接到 SQL Server 的主要副本实例而不使用可用性组侦听器名称。  如果您直接连接到只读副本，也不会发生只读路由。  
+ 通过不将应用程序意向连接属性设置为 `ReadOnly`（不指定时，在登录过程中默认为 `ReadWrite`），或通过直接连接到 SQL Server 实例的主副本而不使用可用性组侦听器名称，可以跳过只读路由。  如果您直接连接到只读副本，也不会发生只读路由。  
   
 ####  <a name="RelatedTasksApps"></a> 相关任务  
   
@@ -152,12 +152,12 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  如果在客户端应用程序的连接尝试期间但在连接超时期限之前可用性组回到联机状态，则在其内部的其中一次重试期间，客户端驱动程序可能会成功连接，并且在此情况下应用程序不会出现任何错误。  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> 支持可用性组多子网故障转移  
- 如果您在使用支持连接字符串中的 MultiSubnetFailover 连接选项的客户端库，则可通过将 MultiSubnetFailover 设置为“True”或“Yes”（根据您在使用的访问接口的语法），优化到不同子网的可用性组故障转移。  
+ 如果使用支持连接字符串中 MultiSubnetFailover 连接选项的客户端库，则可通过将 MultiSubnetFailover 设置为“True”或“Yes”（根据使用的提供程序的语法），优化到不同子网的可用性组故障转移。  
   
 > [!NOTE]  
 >  对于到可用性组侦听器以及到 SQL Server 故障转移群集实例名称的单个和多子网连接，建议使用此设置。  启用此选项将添加额外的优化，即使对于单子网方案也不例外。  
   
- `MultiSubnetFailover`连接选项仅适用于 TCP 网络协议，仅当连接到可用性组侦听器时且针对任何虚拟网络名称连接到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+ `MultiSubnetFailover` 连接选项仅使用 TCP 网络协议，并且仅当连接到可用性组侦听器时且针对任何连接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟网络名称才支持此选项。  
   
  如下所示是针对实现多子网故障转移的 ADO.NET 访问接口 (System.Data.SqlClient) 连接字符串的一个示例：  
   
@@ -165,7 +165,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- `MultiSubnetFailover`连接选项应设置为`True`即使可用性组仅跨单子网。  这允许您预先配置新的客户端以支持进一步跨多个子网，而无需进一步更改客户端连接字符串，还可以优化单子网故障转移的故障转移性能。  虽然`MultiSubnetFailover`则不需要连接选项，它将提供更快的子网故障转移的优势。  这是因为，客户端驱动程序将尝试为每个与可用性组关联的 IP 地址并行打开 TCP 套接字。  客户端驱动程序将等待第一个 IP 响应成功，一旦成功，就将其用于连接。  
+ `MultiSubnetFailover` 连接选项应设置为 `True`，即使可用性组仅跨单子网也不例外。  这允许您预先配置新的客户端以支持进一步跨多个子网，而无需进一步更改客户端连接字符串，还可以优化单子网故障转移的故障转移性能。  在不需要 `MultiSubnetFailover` 连接选项时，它将提供更快进行子网故障转移的优势。  这是因为，客户端驱动程序将尝试为每个与可用性组关联的 IP 地址并行打开 TCP 套接字。  客户端驱动程序将等待第一个 IP 响应成功，一旦成功，就将其用于连接。  
   
 ##  <a name="SSLcertificates"></a> 可用性组侦听器和 SSL 证书  
  当连接到可用性组侦听器时，如果参与的 SQL Server 实例将 SSL 证书与会话加密结合使用，则正在连接的客户端驱动程序将需要支持 SSL 证书中的“主题备用名称”以便强制加密。  SQL Server 驱动程序对于证书“主题备用名称”的支持计划用于 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)。  
@@ -206,17 +206,17 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [可用性组侦听程序简介](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx)（SQL Server AlwaysOn 团队博客）  
+-   [可用性组侦听程序简介](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx)（SQL Server AlwaysOn 团队博客）  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 客户端连接&#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [活动辅助副本： 可读辅助副本&#40;AlwaysOn 可用性组&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动辅助副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [将客户端连接到数据库镜像会话 (SQL Server)](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
   
   

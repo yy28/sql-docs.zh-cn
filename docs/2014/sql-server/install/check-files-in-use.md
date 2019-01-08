@@ -11,12 +11,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065657"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367769"
 ---
 # <a name="check-files-in-use"></a>检查正在使用的文件
   若要避免在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新后重新启动 Windows，请使用“检查正在使用的文件”页来识别锁定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安装程序所需文件的进程。  
@@ -27,7 +27,7 @@ ms.locfileid: "48065657"
   
  为了使安装后无需重新启动计算机，安装程序将显示正在锁定文件的进程的列表。 停止或结束列表中的进程和应用程序。 然后，单击 **“刷新检查”** 重新运行相应检查。 单击 **“停职检查”** 结束正在运行的检查。 如果找不到锁定的文件，则该表为空。 关闭或停止所有锁定的进程以后，单击 **“下一步”** 继续。  
   
- 安装程序将信息记录在日志文件中。 有关如何查看日志文件的详细信息，请参阅[查看和读取 SQL Server 安装日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)和[如何读取 SQL Server 安装日志文件](http://go.microsoft.com/fwlink/?LinkID=134490)。  
+ 安装程序将信息记录在日志文件中。 有关如何查看日志文件的详细信息，请参阅[查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)和[如何：阅读 SQL Server 安装日志文件](https://go.microsoft.com/fwlink/?LinkID=134490)。  
   
  日志文件中包括下列信息：  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom user interface [Integration Services]
@@ -15,12 +13,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c291f88128442431c0a6e60250600d8866519fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cabe3abc2a6ce962a101f8dd2910bd37125f9eea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125607"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353184"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
   当随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的控制流和数据流对象不能完全满足你的要求时，可以自己开发各种类型的自定义对象，其中包括：  
@@ -64,7 +62,7 @@ ms.locfileid: "48125607"
 |自定义对象|基类|Attribute|重要方法|  
 |-------------------|----------------|---------------|-----------------------|  
 |任务|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
-|“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
+|“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>， <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
 |日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
 |枚举器|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|  
 |数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
@@ -93,7 +91,7 @@ ms.locfileid: "48125607"
 ## <a name="providing-a-custom-user-interface"></a>提供自定义用户界面  
  为了允许自定义对象的用户配置自定义对象的属性，您可能还需要开发一个自定义用户界面。 对于那些自定义用户界面要求不是很严格的情况，您可选择创建一个自定义用户界面，以提供比默认编辑器更加友好的用户界面。  
   
- 在自定义用户界面项目或程序集中，您通常有两个类：一个用于实现特定类型自定义对象的用户界面的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的类和用于显示以收集用户信息的 Windows 窗体。 您实现的接口只有少量方法，因此开发自定义用户界面并不困难。  
+ 在自定义用户界面项目或程序集中，通常有两个类：一个用于实现特定类型自定义对象的用户界面的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的类和用于显示以收集用户信息的 Windows 窗体。 您实现的接口只有少量方法，因此开发自定义用户界面并不困难。  
   
 > [!NOTE]  
 >  许多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并使用已筛选的可用连接管理器下拉列表替换“配置”文本框。 但是，此版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。 为 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性指定值不起作用。  
@@ -110,9 +108,9 @@ ms.locfileid: "48125607"
   
 ## <a name="external-resources"></a>外部资源  
   
--   blogs.msdn.com 上的博客文章：[Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](http://go.microsoft.com/fwlink/?LinkId=215662)（Visual Studio 解决方案生成流程由于 SSIS 引用而针对 .NET Framework 程序集上的间接依赖关系发出警告）。  
+-   blogs.msdn.com 上的博客文章：[Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662)（Visual Studio 解决方案生成流程由于 SSIS 引用而针对 .NET Framework 程序集上的间接依赖关系发出警告）。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [使自定义对象持久化](persisting-custom-objects.md)   

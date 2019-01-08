@@ -14,12 +14,12 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfa47e9df9d3d795df365249273732918878a1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184477"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353748"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性组未准备好进行自动故障转移
     
@@ -38,7 +38,7 @@ ms.locfileid: "48184477"
  当至少一个辅助副本的自动故障转移就绪时，此策略处于正常状态。  
   
 > [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性组未准备好进行自动故障转移](http://go.microsoft.com/fwlink/p/?LinkId=220851) 中。  
+>  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性组未准备好进行自动故障转移](https://go.microsoft.com/fwlink/p/?LinkId=220851) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
  可用性组未准备好进行自动故障转移。 将主副本配置为自动故障转移，但是辅助副本未准备好进行自动故障转移。 为自动故障转移配置的辅助副本可能不可用或其数据同步状态当前不是 SYNCHRONIZED。  

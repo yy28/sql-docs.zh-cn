@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363549"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   有关使用 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序和 cmdlet 的信息有多个来源， 这包括 Windows PowerShell 环境中提供的帮助。  
@@ -33,7 +33,7 @@ ms.locfileid: "48065317"
 ### <a name="help-in-the-windows-powershell-environment"></a>Windows PowerShell 环境中的帮助  
  使用 **Get-Help** cmdlet 可在 Windows PowerShell 环境中获得帮助。 **Get-Help** 为 Windows PowerShell 语言以及 Windows PowerShell 中的各种 cmdlet 和提供程序提供基本帮助。  
   
- 有关使用 **Get-Help**的方式的详细信息，请参阅 [Get-Help：获取帮助](http://go.microsoft.com/fwlink/?LinkId=102136)。  
+ 有关详细信息的方法可以使用**获取帮助**，请参阅[获取帮助：获取帮助](https://go.microsoft.com/fwlink/?LinkId=102136)。  
   
 ### <a name="sql-server-powershell-provider-help"></a>SQL Server PowerShell 提供程序帮助  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序实现 SQLSERVER 虚拟驱动器上的若干文件夹，例如 SQLSERVER:\SQL 和 SQLSERVER:\DAC 文件夹。 每个文件夹都与一个 SQL Server 可管理性对象模型相关联。 虽然您可以列出与 SQL Server 路径中的每个节点关联的方法和属性，便不能在 PowerShell 环境中获取它们的帮助。 有关带有指向关联的编程参考的文件夹的表，请参阅 [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)。  
@@ -62,16 +62,16 @@ ms.locfileid: "48065317"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>获取提供程序的列表  
@@ -79,9 +79,9 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  运行 Get-Help 并且指定提供程序类别。  
   
- 有关在 Windows PowerShell 中获得提供程序帮助的详细信息，请参阅 [驱动器和提供程序](http://go.microsoft.com/fwlink/?LinkId=102137)。  
+ 有关在 Windows PowerShell 中获得提供程序帮助的详细信息，请参阅 [驱动器和提供程序](https://go.microsoft.com/fwlink/?LinkId=102137)。  
   
-### <a name="example-get-a-list-of-providers"></a>示例：获取提供程序的列表  
+### <a name="example-get-a-list-of-providers"></a>例如：获取提供程序的列表  
  下面的代码返回当前在 Windows PowerShell 会话中启用的提供程序的列表：  
   
 ```  
@@ -93,7 +93,7 @@ Get-Help -Category provider
   
 1.  运行 Get-Help 并且指定名称 SQLServer  
   
-### <a name="example-get-sql-server-provider-help"></a>示例：获取 SQL Server 提供程序帮助  
+### <a name="example-get-sql-server-provider-help"></a>例如：获取 SQL Server 提供程序帮助  
  此示例将返回有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序的基本信息：  
   
 ```  
@@ -105,7 +105,7 @@ Get-Help SQLServer
   
 1.  使用 CD 命令转到 SQL Server 路径中的节点，或创建一个指向该位置的变量集。  
   
-2.  运行 –Type 参数设置为 Methods 或 Properties 的 **Get-Member** cmdlet  
+2.  运行**Get-member** cmdlet 与-Type 参数设置为 Methods 或 Properties  
   
 ### <a name="examples-listing-methods-and-properties"></a>示例：列出方法和属性  
  此示例列出 Databases 节点支持的方法：  

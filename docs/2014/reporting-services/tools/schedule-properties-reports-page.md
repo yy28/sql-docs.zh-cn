@@ -13,12 +13,12 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 635a5428685feff5887b0800388a41f95a108c1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 999f0b922705e210e6761d7b534490387c8fef74
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209227"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363229"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
   使用此页可以查看使用此共享计划的所有报表的列表。 计划可用于刷新报表快照、生成报表历史记录、触发订阅或使报表的缓存副本过期。 若要了解如何使用计划，请查看报表的属性和订阅信息。  
@@ -28,7 +28,7 @@ ms.locfileid: "48209227"
  若要打开此页上，启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，打开**共享计划**文件夹中，右键单击共享的计划，选择**属性**，然后单击**报表**.  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ## <a name="options"></a>选项  
  **文件夹**  
@@ -39,7 +39,7 @@ ms.locfileid: "48209227"
   
 ## <a name="see-also"></a>请参阅  
  [创建、修改和删除计划](../subscriptions/create-modify-and-delete-schedules.md)   
- [“计划”](../subscriptions/schedules.md)   
+ [计划](../subscriptions/schedules.md)   
  [Management Studio 中报表服务器的 F1 帮助](report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   
  [配置报表的常规属性&#40;报表管理器&#41;](../configure-general-properties-for-a-report-report-manager.md)  

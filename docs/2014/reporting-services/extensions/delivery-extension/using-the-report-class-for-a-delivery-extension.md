@@ -15,12 +15,12 @@ ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 693c0c18b4ffb2f3ab5209c0133588997c11d539
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23aaec0ff8130ec246bb99ea63ef16dc7a5b106b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159567"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361749"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>将 Report 类用于传递扩展插件
   <xref:Microsoft.ReportingServices.Interfaces.Report> 类表示报表服务器数据库中的报表。 任何订阅都与某一特定报表相关联。 该报表包含在通知中。 您的传递扩展插件可以使用作为该通知的一部分的 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象来呈现报表。 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象还包含特定于报表的属性，例如指向报表服务器上的报表的 URL 和报表名称。 这些属性全都可以用作您的传递提供程序的一部分。  
@@ -29,7 +29,7 @@ ms.locfileid: "48159567"
   
  包含报表流的 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 对象可作为传递的一部分。  
   
- 有关如何使用 <xref:Microsoft.ReportingServices.Interfaces.Report> 类的示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）  
+ 有关如何使用 <xref:Microsoft.ReportingServices.Interfaces.Report> 类的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）  
   
 ## <a name="see-also"></a>请参阅  
  [实现传递扩展插件](implementing-a-delivery-extension.md)   

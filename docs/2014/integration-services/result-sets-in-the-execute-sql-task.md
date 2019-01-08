@@ -14,12 +14,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ac0e67e4e1c48fd1ccdd8d8b4021541b0bf4c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053359"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366309"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>执行 SQL 任务中的结果集
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中，结果集是否返回到执行 SQL 任务取决于该任务使用的 SQL 命令的类型。 例如，SELECT 语句通常返回结果集，而 INSERT 语句通常不返回结果集。  
@@ -58,18 +58,18 @@ ms.locfileid: "48053359"
   
  当您将一个变量映射到结果集类型为“单行”  的结果集时，该变量的数据类型必须与该结果集包含的列的数据类型兼容。 例如，如果结果集包含 `String` 数据类型的列，则它不能映射到 numeric 数据类型的变量。 当您将设置**TypeConversionMode**属性设置为`Allowed`、 执行 SQL 任务将尝试将输出参数和查询结果的变量的类型的数据的结果分配给。  
   
- XML 结果集只能映射到数据类型为 `String` 或 `Object` 的变量。 如果该变量`String`执行 SQL 任务数据类型，返回一个字符串，并且 XML 源可以使用 XML 数据。 如果该变量`Object`数据类型，执行 SQL 任务返回的文档对象模型 (DOM) 对象。  
+ XML 结果集只能映射到数据类型为 `String` 或 `Object` 的变量。 如果该变量的数据类型为 `String`，则“执行 SQL 任务”返回一个字符串，并且 XML 源可以使用 XML 数据。 如果该变量的数据类型为 `Object`，则执行 SQL 任务返回一个文档对象模型 (DOM) 对象。  
   
- 一个**完整结果集**必须映射到的变量`Object`数据类型。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](http://go.microsoft.com/fwlink/?LinkId=157863)。  
+ 一个**完整结果集**必须映射到的变量`Object`数据类型。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](https://go.microsoft.com/fwlink/?LinkId=157863)。  
   
  下表总结了可以映射到结果集的变量数据类型。  
   
 |结果集类型|变量的数据类型|对象的类型|  
 |---------------------|---------------------------|--------------------|  
 |“单行”|与结果集中的类型列兼容的任意类型。|不适用|  
-|完整结果集|`Object`|如果任务使用本机连接管理器，包括 ADO、 OLE DB、 Excel 和 ODBC 连接管理器，返回的对象为 ADO `Recordset`。<br /><br /> 如果任务使用托管的连接管理器中，如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器，则返回的对象是`System.Data.DataSet`。<br /><br /> 可以使用脚本任务访问`System.Data.DataSet`对象，如以下示例所示。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|“完整结果集”|`Object`|如果任务使用本机连接管理器（包括 ADO、OLE DB、Excel 和 ODBC 连接管理器），则返回的对象为 ADO `Recordset`。<br /><br /> 如果任务使用托管连接管理器（如 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器），则返回的对象为 `System.Data.DataSet`。<br /><br /> 您可以使用脚本任务访问 `System.Data.DataSet` 对象，如下面的示例中所示。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|如果任务使用本机连接管理器，包括 ADO、 OLE DB、 Excel 和 ODBC 连接管理器，返回的对象是`MSXML6.IXMLDOMDocument`。<br /><br /> 如果任务使用托管的连接管理器中，如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器，返回的对象是`System.Xml.XmlDocument`。|  
+|XML|`Object`|如果任务使用本机连接管理器（包括 ADO、OLE DB、Excel 和 ODBC 连接管理器），则返回的对象为 `MSXML6.IXMLDOMDocument`。<br /><br /> 如果任务使用托管的连接管理器中，如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器，返回的对象是`System.Xml.XmlDocument`。|  
   
  您可在执行 SQL 任务作用域或包作用域内定义变量。 如果变量的作用域为包，则结果集可用于包中的其他任务和容器，并可用于执行包或执行 DTS 2000 包任务所运行的所有包。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48053359"
   
 -   转换不会导致数据截断。  
   
- 有关将结果集加载到变量的信息，请参阅[在执行 SQL 任务中将结果集映射到变量](control-flow/execute-sql-task.md)。  
+ 有关将结果集加载到变量的信息，请参阅 [在执行 SQL 任务中将结果集映射到变量](control-flow/execute-sql-task.md)。  
   
 ##  <a name="Configure_result_sets"></a> 中配置结果集执行 SQL 任务  
  有关可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置的结果集的属性的详细信息，请单击下列主题：  
@@ -95,6 +95,6 @@ ms.locfileid: "48053359"
   
 ## <a name="related-content"></a>相关内容  
   
--   msftisprodsamples.codeplex.com 上的 CodePlex 示例 [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)（执行 SQL 参数和结果集）  
+-   msftisprodsamples.codeplex.com 上的 CodePlex 示例 [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)（执行 SQL 参数和结果集）  
   
   

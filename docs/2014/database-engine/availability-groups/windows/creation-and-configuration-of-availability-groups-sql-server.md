@@ -14,12 +14,12 @@ ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60cff891ed49fcc97238d77a43a5155d2042b05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14dea0c618f754024a18ca24d64b98b08aa99f64
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149817"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368919"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>创建和配置可用性组 (SQL Server)
   本节中的主题介绍如何在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例（这些实例驻留在单个 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上）上部署 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 实现。  
@@ -91,23 +91,23 @@ ms.locfileid: "48149817"
   
 -   **博客：**  
   
-     [AlwaysON-HADRON 学习系列： 启用了 HADRON 的工作线程池用法的数据库](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 学习系列：启用了 HADRON 的工作线程池用法的数据库](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第一部分： 介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 生成使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮书：**  
   
-     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
@@ -116,6 +116,6 @@ ms.locfileid: "48149817"
  [管理可用性组 (SQL Server)](administration-of-an-availability-group-sql-server.md)   
  [针对运行问题的 AlwaysOn 可用性组 (SQL Server) 的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)   
  [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组： 互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)  
+ [AlwaysOn 可用性组：互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)  
   
   

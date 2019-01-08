@@ -15,15 +15,15 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94cf3cff73e98718db6e097f13dcab47cd676ed4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8356014a1b5406f2cd33d5166b5feea7339d782e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370049"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>在添加或修改可用性副本时指定端点 URL (SQL Server)
-  若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 “端点 URL”  标识数据库镜像端点的传输协议 — TCP、服务器实例的系统地址以及与端点关联的端口号。  
+  若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 “端点 URL”标识数据库镜像端点的传输协议 - TCP、服务器实例的系统地址以及与端点关联的端口号。  
   
 > [!NOTE]  
 >  “端点 URL”一词是“服务器网络地址”一词的同义词，由数据库镜像的用户界面和文档使用。  
@@ -148,7 +148,7 @@ ms.locfileid: "48097177"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>请参阅  
  [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   

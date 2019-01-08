@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47ef27112e91b98bcc907f429d728acda22146c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2da969eb707ad5b943773626940cbfde80c8a80
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806137"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588383"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>架构行集 - 分布式查询支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47806137"
 
   若要支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序**IDBSchemaRowset**接口返回链接服务器上的元数据。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 通过目录限制架构行集输出时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口识别包含链接的服务器和目录名称的两部分名称。 对于下表中的架构行集，将此由两部分组成的目录名称指定为 linked_server.catalog 可将输出限制为命名链接服务器的适用目录。  
+ 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 通过目录限制架构行集输出时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口识别包含链接的服务器和目录名称的两部分名称。 下表中的架构行集，由两部分目录名称指定为_linked_server_**。**_目录_将输出限制为命名链接服务器的适用目录。  
   
 |架构行集|目录限制|  
 |-------------------|-------------------------|  

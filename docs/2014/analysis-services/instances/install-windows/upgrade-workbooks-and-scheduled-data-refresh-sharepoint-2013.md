@@ -11,18 +11,18 @@ ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f321f4851a5257ebaacccbc05ecec46ba1baae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190257"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373937"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
-  本主题说明在以前的 PowerPivot 环境中创建的工作簿的用户体验，以及如何升级 PowerPivot 工作簿以便您可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [PowerPivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
+  本主题说明在以前的 PowerPivot 环境中创建的工作簿的用户体验，以及如何升级 PowerPivot 工作簿以便您可以利用此版本中引入的新功能。 若要了解有关新功能的详细信息，请参阅[What's New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917)。  
   
 > [!WARNING]  
->  对于在服务器上自动升级的工作簿，不能回滚升级。 一旦升级某一工作簿后，它就将保持升级状态。 若要使用以前的版本，可以将以前的工作簿重新发布到 SharePoint，还原以前的版本，或者回收工作簿。 有关在 SharePoint 中还原或回收文档的详细信息，请参阅 [通过使用回收站和版本控制计划保护内容](http://go.microsoft.com/fwlink/?LinkId=238669)。  
+>  对于在服务器上自动升级的工作簿，不能回滚升级。 一旦升级某一工作簿后，它就将保持升级状态。 若要使用以前的版本，可以将以前的工作簿重新发布到 SharePoint，还原以前的版本，或者回收工作簿。 有关在 SharePoint 中还原或回收文档的详细信息，请参阅 [通过使用回收站和版本控制计划保护内容](https://go.microsoft.com/fwlink/?LinkId=238669)。  
   
  本主题包含以下各节：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48190257"
 |创建于|\<|支持和行为|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot for SharePoint 2010**|**2012 PowerPivot for SharePoint 2010**|**2012 SP1 PowerPivot for SharePoint 2013**|  
-|**2008 R2 PowerPivot for Excel 2010**|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 如果为 SharePoint 场中的 PowerPivot 系统服务启用了“自动升级”，则工作簿将在文档库中自动升级。<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|**体验：** 用户可与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|  
+|**2008 R2 PowerPivot for Excel 2010**|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 如果为 SharePoint 场中的 PowerPivot 系统服务启用了“自动升级”，则工作簿将在文档库中自动升级。<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|**体验：** 用户可与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|  
 |**2012 PowerPivot for Excel**|不支持|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。 计划数据刷新可用。<br /><br /> **升级：** 不支持自动升级。 用户可以将其工作簿手动升级到 Office 2013 版本。<br /><br /> **计划数据刷新：** 支持。|  
 |**Excel 2013**|不支持|不支持|所有功能|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48190257"
   
  2008 R2 工作簿将在 PowerPivot for SharePoint 2013 中打开，但计划的数据刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：  
   
- “该工作簿包含不支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下：  
+ "工作簿包含不受支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下：  
   
 -   SQL Server 2012 PowerPivot for Excel 2010。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48190257"
   
  升级工作簿将解决在以前版本的工作簿上尝试计划的数据刷新时出现的以下错误：  
   
- “针对使用 PowerPivot 的以前版本创建的工作簿的刷新操作不可用。”  
+ "针对使用 PowerPivot 的以前版本创建的工作簿的刷新操作不可用。"  
   
  **如何升级工作簿**  
   
@@ -110,15 +110,15 @@ ms.locfileid: "48190257"
   
  升级工作簿将解决在以前版本的工作簿上尝试计划的数据刷新时出现的以下错误：  
   
- “针对使用 PowerPivot 的以前版本创建的工作簿的刷新操作不可用。”  
+ "针对使用 PowerPivot 的以前版本创建的工作簿的刷新操作不可用。"  
   
  **如何升级工作簿**  
   
  可以使用两种方法进行升级：  
   
-1.  通过在 Excel 中打开具有的计算机上手动升级每个工作簿[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本的 PowerPivot for Excel，然后将其重新发布到服务器。 当您在外接程序的较新版本中打开此工作簿时，将发生以下内部操作：工作簿数据连接字符串中的数据访问接口将更新为 MSOLAP.5，更新元数据，并重新创建关系以符合较新的实现。  
+1.  通过在安装有 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 版本的 PowerPivot for Excel 的计算机上在 Excel 中打开工作簿，然后将其重新发布到服务器，手动升级各工作簿。 当您在外接程序的较新版本中打开此工作簿时，将发生以下内部操作：工作簿数据连接字符串中的数据访问接口将更新为 MSOLAP.5，更新元数据，并重新创建关系以符合较新的实现。  
   
-2.  或者，SharePoint 管理员可以启用自动升级功能，以便在 SharePoint 场中 PowerPivot 系统服务，自动升级为[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]PowerPivot 工作簿计划数据刷新运行 （唯一的工作簿时配置计划的数据刷新升级）。  
+2.  或者，SharePoint 管理员可以在 SharePoint 场中启用针对 PowerPivot 系统服务的自动升级功能，以便在计划数据刷新运行时自动升级 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot 工作簿（仅升级为计划的数据刷新配置的工作簿）。  
   
     > [!NOTE]  
     >  自动升级是一种服务器配置功能；您不能为特定的工作簿、库或网站集启用或禁用该自动升级功能。  
@@ -133,22 +133,22 @@ ms.locfileid: "48190257"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- Get-PowerPivotSystemService 的输出是属性和相应值的列表。 应会看到`WorkbookUpgradeOnDataRefresh`属性列表中。 如果启用自动升级，该属性将设置为 **true** 。 如果该属性为 **false**，则继续执行下一步，启用自动工作簿升级。  
+ Get-PowerPivotSystemService 的输出是属性和相应值的列表。 您应该会在属性列表中看到 `WorkbookUpgradeOnDataRefresh`。 如果启用自动升级，该属性将设置为 **true** 。 如果该属性为 **false**，则继续执行下一步，启用自动工作簿升级。  
   
  若要启用自动工作簿升级，请运行以下命令：  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  升级工作簿后，可使用计划数据刷新和 PowerPivot for Excel 外接程序中的新功能。  
   
 ##  <a name="bkmk_runold"></a> 在较新版本的服务器上运行多个工作簿版本  
- 可以在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 的 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 实例上并行运行 PowerPivot 工作簿的较旧和较新版本。  
+ 可以在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 的 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]实例上并行运行 PowerPivot 工作簿的较旧和较新版本。  
   
  根据您安装服务器的方式， **可能需要** 安装以前版本的 Analysis Services OLE DB 访问接口，之后才能访问同一服务器上的较旧和较新工作簿。  
   
- 请注意，不支持在 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 的以前的 SQL Server 实例上发布更新版本的工作簿。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 实例将不加载在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 的 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 版本中创建的工作簿，而 SQL Server 2012 实例将不加载具有您在 Excel 中使用 PowerPivot 的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 版本创建的高级数据模型的 Office 2013 工作簿。  
+ 请注意，不支持在 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 的以前的 SQL Server 实例上发布更新版本的工作簿。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 实例将不加载在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 的 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]版本中创建的工作簿，而 SQL Server 2012 实例将不加载具有您在 Excel 中使用 PowerPivot 的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 版本创建的高级数据模型的 Office 2013 工作簿。  
   
 ###  <a name="bkmk_msolapxslx"></a> 如何检查 PowerPivot 工作簿中的 MSOLAP 数据提供程序信息  
  使用下面的说明检查 PowerPivot 工作簿中使用的是哪个 OLE DB 访问接口。 检查数据连接信息不需要安装 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 外接程序。  

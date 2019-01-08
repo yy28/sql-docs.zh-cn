@@ -24,21 +24,21 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091647"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362819"
 ---
 # <a name="memory-properties"></a>内存属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器内存属性。 有关设置这些属性的指南，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器内存属性。 有关设置这些属性的指南，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  介于 1 和 100 之间的值表示 **“物理总内存”** 或 **“虚拟地址空间”** 的百分比（以二者中少者计）。 超过 100 的值表示内存限制（以字节为单位）。  
   
- **适用于：** 多维和表格服务器模式，除非另外说明。  
+ **适用范围：** 多维和表格服务器模式（除非另有说明）。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  `LowMemoryLimit`  
  一个有符号的 64 位双精度浮点数属性，可定义服务器内存不足所在的点，以总物理内存的百分比表示。 达到此限制时，实例将通过关闭过期会话以及卸载未使用的计算从缓存中缓慢清除内存。 服务器不会在未超过此限制的情况下释放内存。 默认值为 65；这指示最低内存限制为物理内存或虚拟地址空间的 65%（以二者中少者计）。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48091647"
  请注意，`TotalMemoryLimit` 必须始终小于 `HardMemoryLimit`。  
   
  `HardMemoryLimit`  
- 指定一个内存阈值，达到该阈值后实例会主动终止活动用户会话以减少内存的使用量。 所有终止的会话都将收到关于因内存压力而被取消的错误。 默认值为零 (0)，这意味着`HardMemoryLimit`将设置为之间的中间值`TotalMemoryLimit`和系统; 如果系统的物理内存大于进程中，则虚拟地址的虚拟地址空间的总物理内存将改为使用的空间来计算`HardMemoryLimit`。  
+ 指定一个内存阈值，达到该阈值后实例会主动终止活动用户会话以减少内存的使用量。 所有终止的会话都将收到关于因内存压力而被取消的错误。 默认值为零 (0)，这意味着 `HardMemoryLimit` 将设置为 `TotalMemoryLimit` 和系统的物理总内存之间的中间值；如果系统的物理内存大于进程的虚拟地址空间，则改用虚拟地址空间来计算 `HardMemoryLimit`。  
   
  `VirtualMemoryLimit`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
@@ -60,9 +60,9 @@ ms.locfileid: "48091647"
   
  **1** 为默认值。 该属性支持使用操作系统页文件 (pagefile.sys) 分页到磁盘。  
   
- 当`VertiPaqPagingPolicy`设置为 1，处理不大可能由于内存限制而失败，因为服务器将尝试使用您指定的方法对磁盘页上。 设置 `VertiPaqPagingPolicy` 属性并不会确保内存错误永远不会发生。 在下列条件下仍然可能会发生内存不足错误：  
+ 在 `VertiPaqPagingPolicy` 设置为 1 时，处理不大可能由于内存限制而失败，因为服务器将尝试使用您指定的方法对磁盘进行分页。 设置 `VertiPaqPagingPolicy` 属性并不会确保内存错误永远不会发生。 在下列条件下仍然可能会发生内存不足错误：  
   
--   没有足够的内存来用于所有字典。 处理过程中，Analysis Services 中的锁的每个列的字典内存，并且所有这些不能为多个指定的值`VertiPaqMemoryLimit`。  
+-   没有足够的内存来用于所有字典。 在处理过程中，Analysis Services 会在内存中锁定每一列的字典，并且所有这些列所占用的内存不能超过为 `VertiPaqMemoryLimit` 指定的值。  
   
 -   没有足够的虚拟地址空间来容纳这个过程。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48091647"
  `VertiPaqMemoryLimit`  
  如果允许分页到磁盘，此属性指定内存占用达到何种程度（表示为内存总量的百分比）才开始分页。 默认值为 60。 如果内存占用不超过 60%，则服务器不会分页到磁盘。  
   
- 此属性依赖于`VertiPaqPagingPolicyProperty`，其必须设置为 1 才能进行分页。  
+ 此属性依赖于 `VertiPaqPagingPolicyProperty`，该属性必须设置为 1 才能进行分页。  
   
  仅适用于表格服务器模式。  
   

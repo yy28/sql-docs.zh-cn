@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - CmdExec jobs
@@ -12,12 +12,12 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0cd2c3e396b8dd77a9a2fb1cf29f20b6a477ee7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822251"
 ---
 # <a name="create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤
   本主题说明如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建和定义使用可执行程序或操作系统命令的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业步骤。  
@@ -26,7 +26,7 @@ ms.locfileid: "49119696"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建 CmdExec 作业步骤，可使用：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "49119696"
  默认情况下，只有 **sysadmin** 固定服务器角色的成员可以创建 CmdExec 作业步骤。 除非 **sysadmin** 用户创建一个代理帐户，否则这些作业步骤将在 SQL Server 代理服务帐户的上下文中运行。 如果不属于 **sysadmin** 角色成员的用户具有访问 CmdExec 代理帐户的权限，则也可以创建 CmdExec 作业步骤。  
   
 ####  <a name="Permissions"></a> Permissions  
- 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)。  
+ 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   

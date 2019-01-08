@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704365"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591777"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@objname=** ] **'***表*****  
+ [  **@objname=** ] **'**_表_  
  关于所返回的约束信息的表。 对于当前数据库而言，指定的表必须位于本地。 *表*是**nvarchar(776)**，无默认值。  
   
- [  **@nomsg=**] **'***no_message*****  
+ [  **@nomsg=**] **'**_no_message_  
  打印表名的可选参数。 *no_message*是**varchar(5)**，默认值为**msg**。**nomsg**取消打印。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -55,9 +55,9 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint**显示降序索引的列，如果参与主键。 降序索引列将在结果集中列出，在其名称后带有减号 (-)。 默认值（升序索引列）将仅按名称列出。  
   
 ## <a name="remarks"></a>备注  
- 执行 **sp_help * * * 表*报告有关指定表的所有信息。 若要仅查看约束信息，请使用**sp_helpconstraint**。  
+ 执行**sp_help**_表_报告有关指定表的所有信息。 若要仅查看约束信息，请使用**sp_helpconstraint**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

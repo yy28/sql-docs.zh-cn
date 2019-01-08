@@ -18,12 +18,12 @@ ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d480df54eeb0565ed685602870484deff6600d2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fbccf5cfd31e79252933a67b2e0c66a73ee6dc3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401571"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中生成子多维数据集 (MDX)
   子多维数据集是多维数据集的子集，用于表示基础数据的筛选视图。 通过将多维数据集限制为一个子多维数据集，可以改善查询的性能。  
@@ -50,11 +50,11 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   如果包含某个级别的每个成员，则包含该层次结构的所有成员。 如果其他层次结构的成员不与此级别的成员共存，它们将被排除（例如，不对称的层次结构，如不包含客户的城市）。  
   
--   子多维数据集将始终包含每个`(All)`从多维数据集的成员。  
+-   子多维数据集将始终包含多维数据集的每个 `(All)` 成员。  
   
  另外，子多维数据集中的聚合数据将进行可视求和。 例如，一个子多维数据集包含 `USA`、 `WA`和 `OR`。 `USA` 的聚合值将是 `{WA,OR}` 的和，因为该子多维数据集只定义了 `WA` 和 `OR` 这两个州。 所有其他州将被忽略。  
   
- 另外，显式引用子多维数据集外的单元将返回在整个多维数据集的上下文中计算的单元值。 例如，创建一个限制为本年度的子多维数据集。 然后使用 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 函数将本年度与去年相比较。 即使去年的值不在子多维数据集中，也会返回值的差异。  
+ 另外，显式引用子多维数据集外的单元将返回在整个多维数据集的上下文中计算的单元值。 例如，创建一个限制为本年度的子多维数据集。 然后使用 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 函数将本年度与去年相比较。 即使上一年的值之外的子多维数据集，将返回值之间的差异。  
   
  最后，如果原始上下文没有被覆盖，在嵌套 select 语句中计算的集函数将在嵌套 select 语句的上下文中计算。 如果上下文被覆盖，集函数将在整个多维数据集的上下文中计算。  
   
@@ -68,7 +68,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>请参阅  
- [在查询中建立多维数据集上下文&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

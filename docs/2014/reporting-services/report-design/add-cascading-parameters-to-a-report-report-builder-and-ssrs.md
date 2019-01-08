@@ -11,12 +11,12 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078342"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376439"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>向报表添加级联参数（报表生成器和 SSRS）
   级联参数提供了一种管理大量报表数据的方法。 您可以定义一组相关参数，使一个参数的值列表取决于其他参数选取的值。 例如，第一个参数是独立的，并且可能提供产品类别列表。 当用户选中某个类别后，第二个参数则取决于第一个参数的值。 第二个参数的值根据所选类别中的子类别列表进行更新。 用户查看报表时，类别和子类别参数的值用于筛选报表数据。  
@@ -28,7 +28,7 @@ ms.locfileid: "48078342"
   
  顺序对于级联参数来说很重要，因为对较晚出现在列表中的参数的数据集查询将包含对较早出现在列表中的每个参数的引用。 在运行时，参数在“报表数据”窗格中的顺序确定参数查询在报表中的显示顺序，并由此确定用户选择每个连续参数值的顺序。  
   
- 有关创建具有多个值的级联参数以及包括“全选”功能的信息，请参阅 [如何创建“全选”多值级联参数](http://go.microsoft.com/fwlink/?LinkId=184757)。  
+ 有关创建具有多个值的级联参数以及包括“全选”功能的信息，请参阅 [如何创建“全选”多值级联参数](https://go.microsoft.com/fwlink/?LinkId=184757)。  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>使用包含多个相关参数的查询创建主数据集  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48078342"
   
     1.  数据源字段列表。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中，SELECT 语句指定给定表或视图中数据库列名的列表。  
   
-    2.  每个级联参数的一个查询参数。 查询参数通过指定查询中要包含或排除的特定值来限制从数据源中检索的数据。 通常，查询参数出现在查询的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，查询参数出现在 WHERE 子句中。 有关详细信息，请参阅位于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [上的](http://go.microsoft.com/fwlink/?linkid=120955)文档中的“使用 WHERE 和 HAVING 筛选行”。  
+    2.  每个级联参数的一个查询参数。 查询参数通过指定查询中要包含或排除的特定值来限制从数据源中检索的数据。 通常，查询参数出现在查询的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，查询参数出现在 WHERE 子句中。 有关详细信息，请参阅位于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [上的](https://go.microsoft.com/fwlink/?linkid=120955)文档中的“使用 WHERE 和 HAVING 筛选行”。  
   
 6.  单击 **“运行”** (**“!”**)。 在包括查询参数并运行查询之后，将自动创建对应于查询参数的报表参数。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48078342"
 4.  单击 **“查看报表”**。 报表根据您选择的参数来更新显示内容。  
   
 ## <a name="see-also"></a>请参阅  
- [添加、 更改或删除报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   
- [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教程：向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [教程&#40;报表生成器&#41;](../report-builder-tutorials.md)   
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

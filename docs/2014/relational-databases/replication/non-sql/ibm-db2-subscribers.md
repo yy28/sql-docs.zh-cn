@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356663"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server 附带的 OLE DB 访问接口对 IBM DB2/AS 400、DB2/MVS 和 DB2/通用数据库进行的推送订阅。  
@@ -32,11 +31,11 @@ ms.locfileid: "48155357"
   
 1.  在分发服务器上安装最新版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2：  
   
-    -   如果使用的[!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，然后在[SQL Server 2008 下载](http://go.microsoft.com/fwlink/?LinkId=149256)中的 Web 页上，**相关下载**部分中，单击指向最新版本的 Microsoft SQL Server 2008 功能包的链接。 在 **Microsoft SQL Server 2008 Feature Pack** （Microsoft SQL Server 2008 功能包）网页中，搜索 **Microsoft OLE DB Provider for DB2**。  
+    -   如果使用的是 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，请在 [SQL Server 2008 下载](https://go.microsoft.com/fwlink/?LinkId=149256) 网页的 **Related Downloads** （相关下载）部分中，单击指向最新版本的 Microsoft SQL Server 2008 功能包的链接。 在 **Microsoft SQL Server 2008 Feature Pack** （Microsoft SQL Server 2008 功能包）网页中，搜索 **Microsoft OLE DB Provider for DB2**。  
   
     -   如果使用的是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard，则安装最新版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 服务器，其中包含了该访问接口。  
   
-     除了安装访问接口，我们建议你安装数据访问工具，在下一步中使用 (默认情况下，下载安装[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]企业)。 有关安装和使用数据访问工具的详细信息，请参阅访问接口文档或 HIS 文档。  
+     除了安装访问接口外，我们还建议您安装数据访问工具（默认情况下，它是下载 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 时安装的），下一步将使用该工具。 有关安装和使用数据访问工具的详细信息，请参阅访问接口文档或 HIS 文档。  
   
 2.  为订阅服务器创建连接字符串。 可以在任何文本编辑器中创建连接字符串，但是建议您使用数据访问工具来创建。 在数据访问工具中创建字符串：  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48155357"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|N/A|  
+|`sql_variant`|不可用|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  

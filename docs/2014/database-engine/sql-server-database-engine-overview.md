@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359229"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。 利用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 可控制访问权限并快速处理事务，从而满足企业内要求极高而且需要处理大量数据的应用需要。  
@@ -42,6 +41,6 @@ ms.locfileid: "48056487"
  ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标") [XQuery 参考](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 资源中心](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server 资源中心](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

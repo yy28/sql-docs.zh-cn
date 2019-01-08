@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170397"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354823"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
   若要查看已部署到报表服务器的报表或存在于本地文件系统上的报表，您可以使用 WinForms ReportViewer 控件在 Windows 应用程序中呈现这些报表。  
@@ -42,7 +42,7 @@ ms.locfileid: "48170397"
   
  此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表。  
   
- 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项。 选中“\<服务器报表>”选项后，将出现两个附加的属性：“报表服务器 URL”和“报表路径”。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径。  
+ 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项。 之后**\<服务器报表 >** 选择选项后，出现两个附加的属性：**报表服务器 Url**并**报表路径**。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径。  
   
  ![选择服务器报表](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Select server report")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  浏览到安装 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 报表示例项目的位置。  
   
-     请转到 [AdventureWorks 2012 报表示例](http://go.microsoft.com/fwlink/?LinkId=404153)以下载此报表示例  
+     请转到 [AdventureWorks 2012 报表示例](https://go.microsoft.com/fwlink/?LinkId=404153)以下载此报表示例  
   
 4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮。  
   

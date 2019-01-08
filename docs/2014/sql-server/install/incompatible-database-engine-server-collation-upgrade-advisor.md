@@ -11,12 +11,12 @@ ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d66e01079a0ab86a1456e53dd310614d3c291267
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356766"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>不兼容的数据库引擎服务器排序规则（升级顾问）
   升级顾问检测到[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]正在使用的实例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]配置为使用不兼容的服务器排序规则。  
@@ -44,8 +44,8 @@ ms.locfileid: "48173407"
 ## <a name="corrective-action"></a>纠正措施  
  不能更改 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务器排序规则属性。 您将不能完成 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的升级。 您将需要将您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装迁移到正在使用兼容的服务器排序规则的新服务器。 有关详细信息，请参见以下内容：  
   
--   [升级和迁移 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [选择 SQL Server 排序规则](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [选择 SQL Server 排序规则](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

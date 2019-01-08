@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 546b52e8e0cc944e279e976bc4709d9fcee076f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369959"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  
@@ -30,7 +29,7 @@ ms.locfileid: "48906407"
  可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用数据事件探查任务对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的数据进行事件探查并标识潜在的数据质量问题。  
   
 > [!NOTE]  
->  本主题仅介绍的功能和要求的数据事件探查任务。 有关如何使用数据事件探查任务的演练，请参阅 [数据事件探查任务和查看器](data-profiling-task-and-viewer.md)。  
+>  本主题只介绍数据事件探查任务的功能和要求。 有关如何使用数据事件探查任务的演练，请参阅 [数据事件探查任务和查看器](data-profiling-task-and-viewer.md)。  
   
 ## <a name="requirements-and-limitations"></a>要求和限制  
  数据事件探查任务仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的数据。 此任务不适用于第三方或基于文件的数据源。  
@@ -117,7 +116,7 @@ ms.locfileid: "48906407"
 |**DataProfilingTaskTrace**|提供有关任务状态的说明性信息。 日志记录消息包含以下信息：<br /><br /> 开始处理请求<br /><br /> 查询开始<br /><br /> 查询结束<br /><br /> 完成计算请求|  
   
 ## <a name="output-and-its-schema"></a>输出及其架构  
- 数据事件探查任务将所选的配置文件输出到根据 DataProfile.xsd 架构进行组织的 XML。 可以指定是将此 XML 输出保存到文件还是保存到包变量。 可以在 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/) 中在线查看此架构。 可以从网页上保存该架构的副本。 然后，可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他架构编辑器、在 XML 编辑器或在文本编辑器（如记事本）中查看该架构的本地副本。  
+ 数据事件探查任务将所选的配置文件输出到根据 DataProfile.xsd 架构进行组织的 XML。 可以指定是将此 XML 输出保存到文件还是保存到包变量。 可以在 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) 中在线查看此架构。 可以从网页上保存该架构的副本。 然后，可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他架构编辑器、在 XML 编辑器或在文本编辑器（如记事本）中查看该架构的本地副本。  
   
  此数据质量信息架构可能对以下操作有用：  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48906407"
   
 -   生成处理数据质量信息的自定义工具。  
   
- 目标命名空间在架构中被标识为 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 目标命名空间在架构中被标识为 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>在包的条件工作流中的输出  
  数据事件探查组件不包含内置功能，无法根据数据事件探查任务的输出在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的工作流中实现条件逻辑。 但是，您只要在脚本任务中进行少量的编程工作即可轻松地添加此逻辑。 此代码将对 XML 输出执行 XPath 查询，然后将结果保存在包变量中。 用于将脚本任务连接到后续任务的优先约束可以使用表达式来确定工作流。 例如，脚本任务检测某一列中 null 值超过阈值的百分比。 如果此条件为 true，则可能需要中断包并解决此问题，然后再继续执行。  

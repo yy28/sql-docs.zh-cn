@@ -18,12 +18,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354459"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，您可以向报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  
@@ -32,7 +32,7 @@ ms.locfileid: "48187957"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- 若要开始立即使用地图，请参阅[教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)或[报表示例（报表生成器和 SSRS）](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 若要开始立即使用地图，请参阅[教程：地图报表&#40;报表生成器&#41;](../tutorial-map-report-report-builder.md)或[报表示例 （报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  您可以将地图作为报表部件与报表分开保存。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -49,11 +49,11 @@ ms.locfileid: "48187957"
   
 -   收集您指定空间数据源、空间数据、分析数据源和分析数据所必须具有的信息。 这包括到空间数据源的连接字符串，指定您所需的空间数据类型，以及确保报表数据包含将空间数据与分析数据关联起来的匹配字段。  
   
--   运行地图向导以便向报表中添加地图。 这可以将第一个地图层添加到地图。 运行地图层向导以创建其他层或者修改现有层。 这些向导提供了简单的方法供您开始。 有关详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+-   运行地图向导以便向报表中添加地图。 这可以将第一个地图层添加到地图。 运行地图层向导以创建其他层或者修改现有层。 这些向导提供了简单的方法供您开始。 有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
 -   当您在报表中预览地图之后，您可能要调整地图视图，更改数据改变每层显示的方式，提供图例以帮助用户解释数据，以及调整分辨率来为用户提供良好的查看体验。  
   
- 有关详细信息，请参阅[规划地图报表（报表生成器和 SSRS）](plan-a-map-report-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [规划地图报表（报表生成器和 SSRS）](plan-a-map-report-report-builder-and-ssrs.md)。  
   
 
   
@@ -83,13 +83,13 @@ ms.locfileid: "48187957"
     > [!NOTE]  
     >  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
--   **ESRI 形状文件。** ESRI 形状文件包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式的数据。 ESRI 形状文件指一组文件。 .shp 文件中的数据指定地理或几何形状。 .dbf 文件中的数据提供形状的属性。 若要在设计视图中查看地图或从报表服务器运行地图，这两个文件必须位于同一个文件夹中。 当您从本地文件系统上的 .shp 文件添加空间数据时，空间数据将嵌入到报表中。 若要在运行时动态检索空间数据，请将形状文件上载到您的报表服务器中，然后将它们指定为空间数据源。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
+-   **ESRI 形状文件。** ESRI 形状文件包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式的数据。 ESRI 形状文件指一组文件。 .shp 文件中的数据指定地理或几何形状。 .dbf 文件中的数据提供形状的属性。 若要在设计视图中查看地图或从报表服务器运行地图，这两个文件必须位于同一个文件夹中。 当您从本地文件系统上的 .shp 文件添加空间数据时，空间数据将嵌入到报表中。 若要在运行时动态检索空间数据，请将形状文件上载到您的报表服务器中，然后将它们指定为空间数据源。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
   
--   **存储在数据库中的 SQL Server 空间数据。** 您可以使用一个查询，该查询从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中指定 `SQLGeometry` 或 `SQLGeography` 数据类型。 有关详细信息，请参阅 [SQL Server 联机丛书](../../relational-databases/spatial/spatial-data-types-overview.md) 中的 [空间数据类型概述](http://go.microsoft.com/fwlink/?linkid=98335)。  
+-   **存储在数据库中的 SQL Server 空间数据。** 您可以使用一个查询，该查询从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中指定 `SQLGeometry` 或 `SQLGeography` 数据类型。 有关详细信息，请参阅 [SQL Server 联机丛书](../../relational-databases/spatial/spatial-data-types-overview.md) 中的 [空间数据类型概述](https://go.microsoft.com/fwlink/?linkid=98335)。  
   
      在您从查询设计器中看到的结果集中，每行空间数据都被视为一个单位并存储在单个地图元素中。 例如，如果多个点是在结果集的一行中定义的，则显示属性将应用于该地图元素中的所有点。  
   
--   **您创建的自定义位置。** 可以手动将位置作为嵌入点添加到嵌入点层。 有关详细信息，请参阅[向地图添加自定义位置&#40;报表生成器和 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)。  
+-   **您创建的自定义位置。** 可以手动将位置作为嵌入点添加到嵌入点层。 有关详细信息，请参阅 [向地图添加自定义位置（报表生成器和 SSRS）](add-custom-locations-to-a-map-report-builder-and-ssrs.md)。  
   
 #### <a name="spatial-data-in-design-view"></a>设计视图中的空间数据  
  在设计视图中，报表处理器显示示例空间数据，以帮助您设计地图层。 您看到的数据取决于空间数据的可用性：  
@@ -121,7 +121,7 @@ ms.locfileid: "48187957"
   
 -   **地图元素的嵌入数据：** 在报表中嵌入多边形、线条或点之后，您可以针对单独的地图元素覆盖数据字段并设置自定义值。  
   
- 当为层指定规则并选择分析数据字段时，如果数据类型为数值，则报表处理器将自动使用默认函数 Sum 来计算地图元素的聚合值。 如果字段不是数值，则不指定聚合函数，而是使用隐式聚合函数 First。 若要更改默认表达式，请针对层的规则更改选项。 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+ 当为层指定规则并选择分析数据字段时，如果数据类型为数值，则报表处理器将自动使用默认函数 Sum 来计算地图元素的聚合值。 如果字段不是数值，则不指定聚合函数，而是使用隐式聚合函数 First。 若要更改默认表达式，请针对层的规则更改选项。 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="match-fields"></a>匹配字段  
  若要将分析数据与层上的地图元素相关，必须指定“匹配字段” 。 可以使用匹配字段在地图元素与分析数据之间建立关系。 可以使用一个或多个字段来进行匹配，只要它们能够为每个空间位置指定唯一的分析值。  
@@ -172,9 +172,9 @@ ms.locfileid: "48187957"
   
 -   是否使用安全连接从 Bing 地图 Web 服务检索图块。  
   
- 有关分步说明，请参阅[添加、 更改或删除地图或地图层&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
+ 有关分步说明，请参阅 [添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 有关图块的详细信息，请参阅 [Bing 地图图块系统](http://go.microsoft.com/fwlink/?linkid=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+ 有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?linkid=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
  
   
@@ -197,7 +197,7 @@ ms.locfileid: "48187957"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- 有关地图层的详细信息，请参阅[添加、 更改或删除地图或地图层&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
+ 有关地图层的详细信息，请参阅 [添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>改变点、线条和多边形的显示属性  
  可以在层级别通过对该层使用规则或对单独的元素设置地图元素的显示选项。 例如，您可以为层上的所有点设置显示属性；也可以设置规则来控制层上所有点的显示属性（无论它们是否为嵌入的点）；还可以覆盖特定嵌入点的显示属性设置。  
@@ -212,7 +212,7 @@ ms.locfileid: "48187957"
   
 4.  **覆盖嵌入多边形、线条或点属性：** 对于嵌入地图元素，可以选择覆盖选项并更改任何属性或数据值。 您所做的任何用于覆盖单独元素的规则的更改都是不可逆的。 例如，您可以使用图钉标记来突出显示特定的商店。  
   
- 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+ 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
  除了改变地图元素的外观之外，还可以通过以下方式向点、线条和多边形或层添加交互性：  
   
@@ -244,36 +244,36 @@ ms.locfileid: "48187957"
   
  如果您查看地图报表时看不到所需的结果，其根源可能是各种问题。 为了帮助您隔离和了解每个问题，一次处理一个层肯定会有所帮助。 使用“地图”窗格可以选择层并轻松地切换其可见性。  
   
- 有关地图报表问题的详细信息，请参阅[报表故障排除：地图报表（报表生成器和 SSRS）](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)。  
+ 有关地图报表问题的详细信息，请参阅[报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> 操作指南主题  
  本部分列出的过程分步向您介绍如何在报表中使用地图和地图层。  
   
--   [添加、 更改或删除地图或地图层&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [向地图添加自定义位置&#40;报表生成器和 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [向地图添加自定义位置（报表生成器和 SSRS）](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> 本节内容  
- [规划地图报表&#40;报表生成器和 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [规划地图报表（报表生成器和 SSRS）](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [自定义的数据和显示的地图或地图层&#40;报表生成器和 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [添加、 更改或删除地图或地图层&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [向地图添加自定义位置&#40;报表生成器和 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [向地图添加自定义位置（报表生成器和 SSRS）](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

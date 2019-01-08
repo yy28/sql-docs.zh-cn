@@ -16,15 +16,15 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3eb6bbc5a3c08ca8668219dd3a11354c2fed2ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056507"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367210"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>执行 SQL 任务中的参数和返回代码
-  SQL 语句和存储的过程常常使用`input`参数，`output`参数和返回代码。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 您使用`Input`类型用于输入参数`Output`输出参数和`ReturnValue`返回代码的。  
+  SQL 语句和存储过程常常使用 `input` 参数、`output` 参数和返回代码。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 应当将 `Input` 类型用于输入参数，将 `Output` 用于输出参数并将 `ReturnValue` 用于返回代码。  
   
 > [!NOTE]  
 >  只有数据访问接口支持这些参数时，才可在执行 SQL 任务中使用它们。  
@@ -76,29 +76,29 @@ ms.locfileid: "48056507"
  连接管理器使用的访问接口不同时，某些 OLE DB 数据类型可能不受支持。 例如，Excel 驱动程序只识别有限的一组数据类型。 有关带有 Excel 驱动程序的 Jet 访问接口的行为的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。  
   
 #### <a name="using-parameters-with-ole-db-connection-managers"></a>在 OLE DB 连接管理器中使用参数  
- 如果执行 SQL 任务使用 OLE DB 连接管理器，则该任务的 BypassPrepare 属性可用。 应将此属性设置为`true`如果执行 SQL 任务使用带有参数的 SQL 语句。  
+ 如果执行 SQL 任务使用 OLE DB 连接管理器，则该任务的 BypassPrepare 属性可用。 如果执行 SQL 任务使用带有参数的 SQL 语句，则应将此属性设置为 `true`。  
   
  使用 OLE DB 连接管理器时，不能使用参数化的子查询，这是因为执行 SQL 任务不能通过 OLE DB 访问接口得到参数信息。 但是，您可以使用表达式将参数值串联到查询字符串中，并设置该任务的 SqlStatementSource 属性。  
   
 ##  <a name="Date_and_time_data_types"></a> 日期和时间数据类型中使用参数  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>在 ADO.NET 和 ADO 连接管理器中使用日期和时间参数  
- 读取的数据时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]类型，`time`并`datetimeoffset`，使用一个执行 SQL 任务[!INCLUDE[vstecado](../includes/vstecado-md.md)]或 ADO 连接管理器具有以下附加要求：  
+ 读取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 类型 `time` 和 `datetimeoffset` 的数据时，使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 或 ADO 连接管理器的执行 SQL 任务有以下附加要求：  
   
 -   有关`time`数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器要求此数据存储在其参数类型的参数`Input`或`Output`，并且数据类型为`string`。  
   
--   有关`datetimeoffset`数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器要求此数据存储在以下参数之一：  
+-   对于 `datetimeoffset` 数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器要求此数据存储在下列参数之一中：  
   
     -   参数类型为 `Input` 并且数据类型为 `string` 的参数。  
   
-    -   参数类型的参数`Output`或`ReturnValue`，并且数据类型为`datetimeoffset`， `string`，或`datetime2`。 如果选择了其数据类型为一个参数`string`或`datetime2`，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]将数据转换为 string 或 datetime2。  
+    -   参数类型为 `Output` 或 `ReturnValue` 并且数据类型为 `datetimeoffset`、`string` 或 `datetime2` 的参数。 如果选择数据类型为 `string` 或 `datetime2` 的参数，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会将数据转换为 string 或 datetime2。  
   
 -   ADO 连接管理器要求 `time` 或 `datetimeoffset` 数据存储在参数类型为 `Input` 或 `Output` 并且数据类型为 `adVarWchar` 的参数中。  
   
  有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型和它们如何映射到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) 和 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>在 OLE DB 连接管理器中使用日期和时间参数  
- 执行 SQL 任务时使用的 OLE DB 连接管理器，具有数据的特定的存储要求[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据类型`date`， `time`， `datetime`， `datetime2`，并`datetimeoffset`。 您必须用下列参数类型之一来存储此数据：  
+ 使用 OLE DB 连接管理器时，执行 SQL 任务对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型为 `date`、`time`、`datetime`、`datetime2` 和 `datetimeoffset` 的数据有特定的存储要求。 您必须用下列参数类型之一来存储此数据：  
   
 -   NVARCHAR 数据类型的输入参数。  
   
@@ -108,23 +108,23 @@ ms.locfileid: "48056507"
     |-------------------------------|--------------------|  
     |DBDATE|`date`|  
     |DBTIME2|`time`|  
-    |DBTIMESTAMP|`datetime`, `datetime2`|  
+    |DBTIMESTAMP|`datetime`， `datetime2`|  
     |DBTIMESTAMPOFFSET|`datetimeoffset`|  
   
  如果数据未存储在相应的输入或输出参数中，包将失败。  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>在 ODBC 连接管理器中使用日期和时间参数  
- 执行 SQL 任务在使用 ODBC 连接管理器，具有含之一的数据的特定的存储要求[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据类型`date`， `time`， `datetime`， `datetime2`，或`datetimeoffset`。 您必须用下列参数类型之一来存储此数据：  
+ 使用 ODBC 连接管理器时，执行 SQL 任务对于带有以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型之一的数据具有特定的存储要求：`date`、`time`、`datetime`、`datetime2` 或 `datetimeoffset`。 您必须用下列参数类型之一来存储此数据：  
   
 -   SQL_WVARCHAR 数据类型的 `input` 参数  
   
--   `output`具有适当的数据类型下, 表中列出的参数。  
+-   具有适当数据类型的 `output` 参数，如下表中所示。  
   
     |`Output` 参数类型|Date 数据类型|  
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> -或-<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> -或-<br /><br /> SQL_TIMESTAMP|`datetime`， `datetime2`|  
     |SQL_SS_TIMESTAMPOFFSET|`datetimeoffset`|  
   
  如果数据未存储在相应的输入或输出参数中，包将失败。  
@@ -158,7 +158,7 @@ ms.locfileid: "48056507"
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
 |ADO|如果 IsQueryStoredProcedure 设置为`False`， `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 设置为`True`， `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 设置为`False`， `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 设置为`True`， `uspGetBillOfMaterials`|  
   
@@ -167,16 +167,16 @@ ms.locfileid: "48056507"
  有关在 Transact-SQL 存储过程中使用输入和输出参数的详细信息，请参阅 [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)。  
   
 ##  <a name="Return_codes"></a> 获取返回代码的值  
- 存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要执行 SQL 任务中实现返回代码，您使用的参数`ReturnValue`类型。  
+ 存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，需要使用 `ReturnValue` 类型的参数。  
   
- 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 `input` 参数。 有关如何使用参数标记和参数名称的规则是相同的所有参数类型 —`Input`， `Output`，和`ReturnValue`。  
+ 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 `input` 参数。 有关如何使用参数标记和参数名称的规则是相同的所有参数类型-`Input`， `Output`，和`ReturnValue`。  
   
  某些语法不支持参数文字。 在此情况下，必须通过使用变量来提供参数值。  
   
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
 |ADO|如果 IsQueryStoreProcedure 设置为`False`， `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 设置为`True`， `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|将 IsQueryStoreProcedure 设置为`True`。<br /><br /> `myStoredProcedure`|  
   
@@ -198,9 +198,9 @@ ms.locfileid: "48056507"
   
 ## <a name="related-content"></a>相关内容  
   
--   blogs.msdn.com 上的博客项 [Stored procedures with output parameters](http://go.microsoft.com/fwlink/?LinkId=157786)（无输出参数的存储过程）  
+-   blogs.msdn.com 上的博客项 [Stored procedures with output parameters](https://go.microsoft.com/fwlink/?LinkId=157786)（无输出参数的存储过程）  
   
--   msftisprodsamples.codeplex.com 上的 CodePlex 示例 [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)（执行 SQL 参数和结果集）  
+-   msftisprodsamples.codeplex.com 上的 CodePlex 示例 [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)（执行 SQL 参数和结果集）  
   
 ## <a name="see-also"></a>请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   

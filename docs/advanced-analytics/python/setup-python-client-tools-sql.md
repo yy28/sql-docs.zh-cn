@@ -1,5 +1,5 @@
 ---
-title: 设置 SQL Server 机器学习的 Python 开发数据科学客户端 |Microsoft Docs
+title: 设置 Python 开发的 SQL Server 机器学习数据科学客户端
 description: 设置远程连接到 SQL Server 机器学习服务与 Python 配合使用 Python 在本地环境 （Jupyter Notebook 或 PyCharm）。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,31 +8,31 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c3db7d215be8a43370969903adb9cf9518e9183c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 569b3d2fbd11cc978f1a810bab6b30ec1d33d2b5
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704095"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046527"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>设置 SQL Server 机器学习服务的 Python 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python 集成是可用时包括中的 Python 选项启动 SQL Server 2017 或更高版本[机器学习服务 （数据库） 安装](../install/sql-machine-learning-services-windows-install.md)。 
 
-若要创建和部署 SQL Server 上的 Python 解决方案，安装 Microsoft [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)以及客户端工作站上的其他 Python 库。 Revoscalepy 库，也是远程的 SQL Server 实例上，可协调计算这两个系统之间的请求。 
+若要开发和部署适用于 SQL Server Python 解决方案时，安装 Microsoft [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和其他 Python 库在开发工作站。 Revoscalepy 库，也是远程的 SQL Server 实例上，可协调计算这两个系统之间的请求。 
 
-在本文中，了解如何配置 Python 开发工作站，以便可以连接到远程 SQL Server 启用了机器学习和 Python 集成。 完成这篇文章中的步骤后，将具有与 SQL Server 上的相同 Python 库。 此外将了解如何在 SQL Server 上推送到远程的 Python 会话从本地 Python 会话计算。
+在本文中，了解如何配置 Python 开发工作站，以便您可以使用远程 SQL Server 启用了机器学习和 Python 集成进行交互。 完成这篇文章中的步骤后，将具有与 SQL Server 上的相同 Python 库。 此外将了解如何在 SQL Server 上推送到远程的 Python 会话从本地 Python 会话计算。
 
 ![客户端-服务器组件](media/sqlmls-python-client-revo.png "本地和远程 Python 会话和库")
 
-在本文中所述，可以使用内置的 Jupyter Notebook 或[链接库](#install-ide)PyCharm 或任何你通常使用的另一个 IDE。
+若要验证安装，可以使用内置的 Jupyter 笔记本，这篇文章中所述或[链接库](#install-ide)PyCharm 或任何你通常使用的另一个 IDE。
 
 > [!Tip]
 > 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
-> 使用客户端库安装的替代方法[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)为丰富客户端，有些客户更喜欢更深层次的方案中工作。 从 SQL Server 完全分离的独立服务器，但因其具有相同的 Python 库，你可以使用它作为客户端的 SQL Server 数据库内分析。 您还可以使用它为非 SQL 相关的工作，包括导入和从其他数据平台的数据建模功能。 如果安装在独立服务器，可以找到在此位置的 Python 可执行文件： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 若要验证你的安装，[打开 Jupyter notebook](#python-tools)以使用 Python.exe，在该位置运行命令。
+> 客户端库安装的替代方法是使用[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)作为富客户端，一些客户更喜欢使用它来完成更深入的方案工作。 从 SQL Server 完全分离的独立服务器，但因其具有相同的 Python 库，你可以使用它作为客户端的 SQL Server 数据库内分析。 还可以将其用于与SQL无关的工作，包括从其他数据平台导入数据和对数据建模。 如果安装在独立服务器，可以找到在此位置的 Python 可执行文件： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 若要验证你的安装，[打开 Jupyter notebook](#python-tools)以使用 Python.exe，在该位置运行命令。
 
 ## <a name="commonly-used-tools"></a>常用工具
 
@@ -40,7 +40,7 @@ Python 集成是可用时包括中的 Python 选项启动 SQL Server 2017 或更
 
 对于 Python 开发，可以使用 Jupyter 笔记本，这在 SQL Server 安装的 Anaconda 分发版捆绑。 本文介绍如何启动 Jupyter Notebook，以便您可以运行 Python 代码本地和远程 SQL 服务器上。
 
-SSMS 是单独的下载，适用于创建和运行 SQL Server，包括那些包含 Python 代码上的存储的过程。 可以在存储过程中嵌入几乎任何在 Jupyter 笔记本中编写的 Python 代码。 您可以单步执行其他教程，了解如何[SSMS 和嵌入式的 Python](../tutorials/train-score-using-python-in-tsql.md)。
+SSMS 是单独的下载，适用于创建和运行 SQL Server，包括那些包含 Python 代码上的存储的过程。 可以在存储过程中嵌入几乎任何在 Jupyter 笔记本中编写的 Python 代码。 你可以逐步浏览其他快速入门，了解如何[SSMS 和嵌入式的 Python](../tutorials/quickstart-python-verify.md)。
 
 ## <a name="1---install-python-packages"></a>1-安装 Python 包
 
@@ -85,7 +85,7 @@ SSMS 是单独的下载，适用于创建和运行 SQL Server，包括那些包�
 > [!Note] 
 > 安装脚本不会修改你在计算机上，这意味着新的 python 解释器和您刚刚安装的模块不自动提供给可能有其他工具的 PATH 环境变量。 将 Python 解释器和库链接到工具的帮助，请参阅[安装 IDE](#install-ide)。
 
-<a name="python-tool"></a>
+<a name="python-tools"></a>
 
 ## <a name="3---open-jupyter-notebooks"></a>3-打开 Jupyter Notebook
 
@@ -111,7 +111,7 @@ Anaconda 包含的 Jupyter 笔记本。 下一步，创建一个 notebook 并运
 
 4. 输入一系列更复杂的语句。 此示例生成汇总统计信息使用[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)对本地数据集。 其他函数获取示例数据的位置，并创建本地.xdf 文件的数据源对象。
 
-  ```Python
+  ```python
   import os
   from revoscalepy import rx_summary
   from revoscalepy import RxXdfData
@@ -152,7 +152,7 @@ Anaconda 包含的 Jupyter 笔记本。 下一步，创建一个 notebook 并运
 
 ### <a name="1---create-the-irissql-database-remotely"></a>1-远程创建 irissql 数据库
 
-```Python
+```python
 import pyodbc
 
 # creating a new db to load Iris sample in
@@ -169,7 +169,7 @@ print("Database created")
 
 ### <a name="2---import-iris-sample-from-sklearn"></a>2-从导入鸢尾花示例 SkLearn
 
-```Python
+```python
 from sklearn import datasets
 import pandas as pd
 
@@ -180,7 +180,7 @@ df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
 ### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 Revoscalepy Api 来创建表并将鸢尾花数据加载
 
-```Python
+```python
 from revoscalepy import RxSqlServerData, rx_data_step
 
 # Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
@@ -253,9 +253,20 @@ display.Image(data=image)
 
 <a name="install-ide"></a>
 
-## <a name="7---link-tools-to-pythonexe"></a>7-链接到 python.exe 的工具
+## <a name="7---start-python-from-tools"></a>7-从工具启动 Python
 
 因为开发人员经常使用多个版本的 Python，安装程序不向路径添加 Python。 若要使用的 Python 可执行文件和由安装程序安装的库，链接到你的 IDE **Python.exe**还提供的路径处**revoscalepy**并**microsoftml**。 
+
+### <a name="command-line"></a>命令行
+
+在运行时**Python.exe**从 C:\Program Files\Microsoft\PyForMLS （或 Python 客户端库安装指定的任何位置），您可以访问完整的 Anaconda 分发版加上 Microsoft Python模块， **revoscalepy**并**microsoftml**。
+
+1. 转到 C:\Program Files\Microsoft\PyForMLS 并双击**Python.exe**。
+2. 打开交互式帮助： `help()`
+3. 帮助提示符处键入的模块的名称： `help> revoscalepy`。 帮助返回名称、 包的内容、 版本和文件位置。
+4. 返回在版本和包信息**帮助 >** 提示符： `revoscalepy`。 按 Enter 几次以退出帮助。
+5. 导入模块： `import revoscalepy`
+
 
 ### <a name="jupyter-notebooks"></a>Jupyter 笔记本
 
@@ -291,7 +302,7 @@ display.Image(data=image)
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，有工具和有效的连接到 SQL Server，通过使用扩展你的技能[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)创建和执行存储的过程包含嵌入式的 Python 代码。
+现在，有工具和有效的连接到 SQL Server，通过运行通过 Python 快速入门使用扩展你的技能[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 > [!div class="nextstepaction"]
-> [创建、 定型和 SQL Server 中使用存储过程中使用 Python 模型](../tutorials//train-score-using-python-in-tsql.md)
+> [快速入门：验证存在 SQL Server 中的 Python ](../tutorials/quickstart-python-verify.md)

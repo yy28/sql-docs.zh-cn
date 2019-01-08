@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 定义数据源视图中 Analysis Services 项目 |Microsoft Docs
+title: 第 1 课：定义数据源视图中 Analysis Services 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9fe97795be77255412ecac2dbcda11214369c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218707"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365160"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 课：在 Analysis Services 项目中定义数据源视图
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 课：定义数据源视图中 Analysis Services 项目
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中设计商业智能应用程序，请先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中创建一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  
   
  本课程包含以下任务：  
@@ -35,16 +35,16 @@ ms.locfileid: "48218707"
  [修改默认表名](lesson-1-4-modifying-default-table-names.md)  
  在本任务中，将修改数据源视图中的表名，以使您将要定义的后续 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名更加用户友好。  
   
- 将您的结果与为本课程生成的示例项目文件进行比较。 有关下载本教程附随的示例项目的详细信息，请参阅 codeplex 上产品示例页上的 [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) （用于 SQL Server 2012 的 SSAS 多维模型项目）。  
+ 将您的结果与为本课程生成的示例项目文件进行比较。 有关下载本教程附随的示例项目的详细信息，请参阅 codeplex 上产品示例页上的 [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866)（用于 SQL Server 2012 的 SSAS 多维模型项目）。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：定义和部署多维数据集](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>请参阅  
- [创建 Analysis Services 项目&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
+ [创建 Analysis Services 项目 (SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [支持的数据源&#40;SSAS 多维&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
- [多维建模&#40;Adventure Works 教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

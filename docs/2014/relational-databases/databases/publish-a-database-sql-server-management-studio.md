@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9bb58b72cb4a4e785c4dc94b448e5e754ac0c80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129737"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353283"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>发布数据库 (SQL Server Management Studio)
   可以使用 **“生成和发布脚本向导”** 向 Web 宿主提供程序发布整个数据库或单独的数据库对象。  
@@ -25,7 +24,7 @@ ms.locfileid: "48129737"
 >  本主题中介绍的功能以前往往由“发布数据库向导”提供。 发布功能已添加到“生成和发布脚本向导”，“发布数据库向导”已停止使用。  
   
 ## <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”  
- “生成和发布脚本向导”可用于向 Web 宿主提供程序发布数据库或所选数据库对象。 SQL Server Web 宿主提供程序是与 Web 服务之间的连接接口。 Web 服务是通过使用来自 CodePlex 上的 SQL Server Hosting Toolkit 的 Database Publishing Services 项目生成的。 通过使用“生成和发布脚本向导”，此 Web 服务使 Web 宿主客户能够轻松地将其数据库发布到该服务。 有关下载 SQL Server Hosting Toolkit 的详细信息，请参阅 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)（SQL Server 数据库发布服务）。  
+ “生成和发布脚本向导”可用于向 Web 宿主提供程序发布数据库或所选数据库对象。 SQL Server Web 宿主提供程序是与 Web 服务之间的连接接口。 Web 服务是通过使用来自 CodePlex 上的 SQL Server Hosting Toolkit 的 Database Publishing Services 项目生成的。 通过使用“生成和发布脚本向导”，此 Web 服务使 Web 宿主客户能够轻松地将其数据库发布到该服务。 有关下载 SQL Server Hosting Toolkit 的详细信息，请参阅 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)（SQL Server 数据库发布服务）。  
   
  “生成和发布脚本向导”还可用于创建传输数据库的脚本。  
   

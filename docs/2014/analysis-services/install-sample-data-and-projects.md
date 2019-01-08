@@ -11,12 +11,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8171edaa6e2265191ae4611fea79dd018b43022c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355077"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安装 Analysis Services 多维建模教程的示例数据和项目
   可使用本主题中提供的说明和链接来安装 Analysis Services 教程中使用的所有数据和项目文件。  
@@ -28,9 +28,9 @@ ms.locfileid: "48117877"
   
 -   Analysis Services  
   
-     Analysis Services 仅在以下版本中提供：Evaluation、Enterprise、Business Intelligence、Standard。  
+     Analysis Services 是在仅限这些版本中可用：评估版，企业版、 商业智能，标准。  
   
-     请注意，SQL Server Express 版本不包括 Analysis Services。 如果要免费试用此软件，[请下载 Evaluation Edition](http://go.microsoft.com/fwlink/?LinkId=392824) 。  
+     请注意，SQL Server Express 版本不包括 Analysis Services。 如果要免费试用此软件，[请下载 Evaluation Edition](https://go.microsoft.com/fwlink/?LinkId=392824)。  
   
      默认情况下，Analysis Services 将作为多维实例安装，您可以通过在安装向导的“服务器配置”页中选择“表格服务器模式”来覆盖此实例。 如果要同时运行两种服务器模式，请在同一台计算机上重新运行 SQL Server 安装程序，以在另一模式中再安装一个 Analysis Services 实例。  
   
@@ -40,23 +40,23 @@ ms.locfileid: "48117877"
   
  或者，您可以使用在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中内置的内置 MDX 查询设计器来浏览数据。 查询设计器将返回相同的数据，除非数据以平面行集的形式表示。  
   
-## <a name="step-2-download-sql-server-data-tools--business-intelligence-for-visual-studio-2012"></a>步骤 2：下载 SQL Server Data Tools - Business Intelligence for Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>步骤 2：下载 SQL Server Data Tools-Business Intelligence for Visual Studio 2012  
  在此版本中，SQL Server Data Tools 和其他 SQL Server 功能将分开下载与安装。 用于创建 BI 模型和报表的设计器与项目模板现在作为免费 Web 下载提供。  
   
--   [下载 SQL Server Data Tools 的 Business Intelligence 版本](http://go.microsoft.com/fwlink/p/?LinkID=322038)。 文件将保存到 Downloads 文件夹。 运行安装程序以安装此工具。  
+-   [下载 SQL Server Data Tools 的 Business Intelligence 版本](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 文件将保存到 Downloads 文件夹。 运行安装程序以安装此工具。  
   
      重新启动计算机以完成安装。  
   
 ## <a name="step-3-install-databases"></a>步骤 3：安装数据库  
  Analysis Services 多维模型使用您从关系数据库管理系统导入的事务数据。 为了实现本教程教学目的，您将使用以下关系数据库作为数据源。  
   
--   **AdventureWorksDW2012** – 这是一个在数据库引擎实例上运行的关系数据仓库。 它提供了将由您在本教程中生成和部署的 Analysis Services 数据库和项目使用的原始数据。  
+-   **AdventureWorksDW2012** -这是一个数据库引擎实例运行的关系数据仓库。 它提供了将由您在本教程中生成和部署的 Analysis Services 数据库和项目使用的原始数据。  
   
      您可以将此示例数据库与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]一起使用。  
   
  若要安装此数据库，请执行以下操作：  
   
-1.  从 codeplex 上的产品示例页下载 [AdventureWorkDW2012](http://go.microsoft.com/fwlink/p/?LinkID=221770) 数据库。  
+1.  从 codeplex 上的产品示例页下载 [AdventureWorkDW2012](https://go.microsoft.com/fwlink/p/?LinkID=221770) 数据库。  
   
      数据库文件名称是 AdvntureWorksDW2012_Data.mdf。 该文件应位于您的计算机上的 Downloads 文件夹中。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48117877"
   
 7.  在数据库详细信息中，删除日志文件条目。 安装程序假设您具有日志文件，但在示例中没有日志文件。 附加数据库时将自动创建新日志文件。 选择日志文件并单击“删除”，然后单击“确定”以只附加主数据库文件。  
   
-## <a name="step-4-grant-database-permissions"></a>步骤 4：授予数据库权限  
+## <a name="step-4-grant-database-permissions"></a>步骤 4：Grant 数据库权限  
  示例项目使用数据源模拟设置，这些设置可指定导入或处理数据所用的安全上下文。 默认情况下，模拟设置指定用于访问数据的 Analysis Services 服务帐户。 若要使用此默认设置，必须确保 Analysis Services 运行时使用的服务帐户具有对 **AdventureWorksDW2012** 数据库的数据读取器权限。  
   
 > [!NOTE]  
@@ -95,13 +95,13 @@ ms.locfileid: "48117877"
   
  第 4 课的项目文件特别重要，因为它不仅为第 4 课而且还为所有后续课程提供了基础。 在之前的项目文件中，按照教程中的步骤操作可得到与完成的项目文件完全一样的副本，而第 4 课的示例项目与此有很大的不同，它包含了在第 1 课到第 3 课中生成的模型中没有的、新的模型信息。 第 4 课假定您是下面的下载链接提供的示例项目文件的初学者。  
   
-1.  在 codeplex 上的产品示例页中下载 [Analysis Services 教程 SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) 。  
+1.  在 codeplex 上的产品示例页中下载 [Analysis Services 教程 SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866)。  
   
      2012 教程对于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本有效。  
   
-     “Analysis Services Tutorial SQL Server 2012.zip”文件将保存到您的计算机上的 Downloads 文件夹中。  
+     "Analysis Services Tutorial SQL Server 2012.zip"文件将保存到 Downloads 文件夹中，您的计算机上中。  
   
-2.  将 .zip 文件移到根驱动器下一级的文件夹（例如 C:\Tutorial）。 如果您尝试在 Downloads 文件夹中解压缩这些文件，则此步骤将会缓解有时候会发生的“路径过长”错误。  
+2.  将 .zip 文件移到根驱动器下一级的文件夹（例如 C:\Tutorial）。 此步骤将会缓解有时如果您尝试解压缩的下载文件夹中的文件，则会发生的"路径过长"错误。  
   
 3.  解压缩示例项目：右键单击该文件，然后选择“全部提取”。 提取这些文件后，您应该已在计算机上安装以下项目：  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48117877"
   
 ## <a name="see-also"></a>请参阅  
  [从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [配置 Windows 防火墙以允许 Analysis Services 访问](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [配置 Windows 防火墙以允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

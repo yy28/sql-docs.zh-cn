@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c4a21f9ccbf1dd8bcb7918c67b98aa51a0956d41
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673526"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590951"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51673526"
 |severity|**int**|错误的严重性。 可能的值有：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
 |**event_count**|**int**|次数发生此事件的指定数据库中指定的时间间隔 (**start_time**并**end_time**)。|  
 |**description**|**nvarchar(max)**|对事件的详细说明。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
-|**additional_data**|**XML**|*注意： 此值始终为 NULL 的 Azure SQL 数据库 V12。请参阅[示例](#Deadlock)部分，了解如何检索有关 V12 的死锁事件。*<br /><br /> 有关**死锁**事件，此列包含死锁图形。 对于其他事件类型，该列为 NULL。 |  
+|**additional_data**|**XML**|*注意：此值始终为 NULL 的 Azure SQL 数据库 V12。请参阅[示例](#Deadlock)部分，了解如何检索有关 V12 的死锁事件。*<br /><br /> 有关**死锁**事件，此列包含死锁图形。 对于其他事件类型，该列为 NULL。 |  
   
 ##  <a name="EventTypes"></a> 事件类型  
  此视图中的每一行记录的事件由类别 (**event_category**)，事件类型 (**event_type**)，和子类型 (**event_subtype**)。 下表列出了此视图中收集的事件类型。  
@@ -69,21 +69,21 @@ ms.locfileid: "51673526"
 |**连接**|**connection_failed**|3|**change_password_not_supported**|2|用户已请求更改不受支持的用户登录密码。|  
 |**连接**|**connection_failed**|4|**login_failed_for_user**|2|用户登录失败。|  
 |**连接**|**connection_failed**|5|**login_disabled**|2|登录名已禁用。|  
-|**连接**|**connection_failed**|6|**failed_to_open_db**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 无法打开数据库。 原因可能是该数据库不存在，或缺少身份验证而无法打开数据库。|  
+|**连接**|**connection_failed**|6|**failed_to_open_db**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 无法打开数据库。 原因可能是该数据库不存在，或缺少身份验证而无法打开数据库。|  
 |**连接**|**connection_failed**|7|**blocked_by_firewall**|2|不允许客户端 IP 地址访问该服务器。|  
-|**连接**|**connection_failed**|8|**client_close**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 在建立连接时，客户端可能已超时。 尝试增加连接超时值。|  
-|**连接**|**connection_failed**|9|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
-|**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
-|**连接**|**connection_terminated**|1|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
-|**连接**|**限制**|*\<原因代码 >*|**reason_code**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >*。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
-|**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**connection_failed**|8|**client_close**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 在建立连接时，客户端可能已超时。 尝试增加连接超时值。|  
+|**连接**|**connection_failed**|9|**重新配置**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
+|**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
+|**连接**|**connection_terminated**|1|**重新配置**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
+|**连接**|**限制**|*\<原因代码 >*|**reason_code**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >*。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**引擎**|**死锁**|0|**死锁**|2|发生死锁。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有访问权限的用户**主**数据库具有对此视图的只读访问。  
   
 ## <a name="remarks"></a>备注  
@@ -101,7 +101,7 @@ ms.locfileid: "51673526"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>间隔 start_time 和 end_time  
- 事件在事件发生时包含在某个聚合间隔*上*或*后 * * * start_time** 和*之前 * * * end_time** 该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
+ 事件在事件发生时包含在某个聚合间隔*上*或_后_**start_time**并_之前_**end_time**该间隔。 例如，恰好在 `2012-10-30 19:25:00.0000000` 发生的事件将只包含在如下所示的第二个间隔内：  
   
 ```  
 start_time                    end_time  

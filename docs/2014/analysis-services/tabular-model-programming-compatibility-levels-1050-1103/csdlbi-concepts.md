@@ -12,19 +12,19 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376999"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   带 BI 注释的概念性架构定义语言 (CSDLBI) 基于实体数据框架。实体数据框架是一个抽象概念，用于以某种方式表示不同类型的数据，以便能够以编程方式访问、查询或导出不同的数据集。 CSDLBI 用于表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建的数据模型，因为它支持丰富的数据驱动的报告和应用程序。  
   
  这部分说明 CSDLBI 表示形式如何映射到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型（表格和多维）以及每种模型类型的示例。  
   
- 用于说明这些概念的示例取自 Codeplex 上提供的 AdventureWorks 示例数据库。 有关示例的详细信息，请参阅[SQL Server 的 Adventure Works 示例](http://go.microsoft.com/fwlink/?linkID=220093)。  
+ 用于说明这些概念的示例取自 Codeplex 上提供的 AdventureWorks 示例数据库。 有关示例的详细信息，请参阅[SQL Server 的 Adventure Works 示例](https://go.microsoft.com/fwlink/?linkID=220093)。  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI 中表格模型的结构  
  描述报表模型及其数据的 CSDLBI 文档以 xsd 语句开头，后跟模型的定义。  
@@ -133,21 +133,21 @@ ms.locfileid: "50146513"
   
  **透视：** 客户端可以请求 CSDL 以获得单独的透视。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)。  
   
- **层次结构：** 支持和 CSDLBI 中表示为一组级别的层次结构。  
+ **层次结构：** 层次结构是受支持，并且在 CSDLBI 中表示为一组级别。  
   
- **成员：** 对已添加的默认成员和默认值会自动添加到 CSDLBI 输出的支持。  
+ **成员：** 添加了支持的默认成员和默认值会自动添加到 CSDLBI 输出。  
   
- **计算成员：** 多维模型支持计算的成员的子级**所有**具有单个真实成员。  
+ **计算的成员：** 多维模型支持计算的成员的子级**所有**具有单个真实成员。  
   
- **维度属性：** 在 CSDLBI 输出中，维度属性均受支持，自动将标记为不可聚合。  
+ **维度属性：** 在 CSDLBI 输出中，维度属性都支持和自动标记为不可聚合。  
   
- **Kpi:** CSDLBI 版本 1.1 中支持 Kpi，但表示形式已发生变化。 以前，KPI 是度量值的属性。 在版本 1.1 中，可以将 KPI 元素添加到度量值  
+ **Kpi:** 在 CSDLBI 版本 1.1 中支持 Kpi，但表示形式已发生变化。 以前，KPI 是度量值的属性。 在版本 1.1 中，可以将 KPI 元素添加到度量值  
   
- **新属性：** 添加了其他属性以支持 DirectQuery 模型。  
+ **新属性：** 添加了其他属性，以支持 DirectQuery 模型。  
   
  **限制：** 不支持单元安全性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

@@ -14,17 +14,17 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fe868eb16b48afd83fdd5af7dcd146157338947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788465"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535776"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>确定目标 DBMS 和驱动程序
 要考虑的下一步问题是，什么是应用程序的目标 Dbms 和哪些驱动程序可支持这些 Dbms？ 泛型应用程序往往是高度可互操作，因为目标 Dbms 的问题是最适用于自定义和垂直应用程序。 但是，目标驱动程序的问题适用于所有应用程序，因为驱动程序差异很大在速度、 质量、 支持的功能和可用性。 此外，如果驱动程序来与应用程序一起重新发布，成本和可用性的许可计划需要考虑。  
   
- 目标 Dbms 的许多自定义应用程序，非常明显： 他们已有的应用程序设计为 Dbms 访问。 此外应考虑到以后的迁移计划内的 Dbms。 但是，这些应用程序的主要问题是哪些驱动程序或驱动程序，以使用它们。 对于其他自定义应用程序 — 那些并不用于访问现有 DBMS — 可以根据支持的功能、 并发用户支持、 驱动程序可用性和经济性选择目标 Dbms。  
+ 对于许多自定义应用程序目标 Dbms 非常明显：它们现有的应用程序设计为 Dbms 访问。 此外应考虑到以后的迁移计划内的 Dbms。 但是，这些应用程序的主要问题是哪些驱动程序或驱动程序，以使用它们。 对于其他自定义应用程序的那些并不用于访问现有的 DBMS 的目标 Dbms，可以选择根据支持的功能、 并发用户支持、 驱动程序可用性和经济性。  
   
  对于垂直应用程序，通常选择 Dbms 的目标基于支持的功能、 驱动程序可用性和市场。 例如，对于小型企业设计的垂直应用程序必须面向这些企业; 买得起的 Dbms向现有 Dbms 外的接程序必须面向广泛，设计一个垂直应用程序使用 Dbms。  
   

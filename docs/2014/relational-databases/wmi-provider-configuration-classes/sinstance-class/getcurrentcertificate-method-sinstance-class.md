@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GetCurrentCertificate Method (SInstance Class)
@@ -20,12 +18,12 @@ ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5a5a5bb76cc99d859a459745f3c1315c35acc815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31477a012135aba643e1d89b0890df242f568e16
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221688"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376009"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>GetCurrentCertificate 方法（SInstance 类）
   获取当前安全证书。  
@@ -42,7 +40,7 @@ SHA
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示 [实例上的服务器设置的](sinstance-class.md) SInstance 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
 #### <a name="parameters"></a>Parameters  
@@ -57,6 +55,6 @@ SHA
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

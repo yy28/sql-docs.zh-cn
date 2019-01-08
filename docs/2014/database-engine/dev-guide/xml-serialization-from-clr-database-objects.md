@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183167"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356569"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>从 CLR 数据库对象进行 XML 序列化
   XML 序列化是以下两种情况所必需的：  
@@ -37,7 +37,7 @@ ms.locfileid: "48183167"
   
 2.  使用 `CREATE ASSEMBLY` 语句在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册生成的程序集。  
   
- 有关错误的信息可能会收到时在执行 XML 序列化，请参阅以下 Microsoft 支持文章： ["无法加载动态生成的序列化程序集"](http://support.microsoft.com/kb/913668)。  
+ 有关执行 XML 序列化时，可能会收到的错误的信息，请参阅以下 Microsoft 支持文章：["无法加载动态生成的序列化程序集"](https://support.microsoft.com/kb/913668)。  
   
  有关 XML 序列化程序不支持的数据类型的信息，请参阅 .NET Framework 文档中的“.NET Framework 中 XML 架构的绑定支持”。  
   

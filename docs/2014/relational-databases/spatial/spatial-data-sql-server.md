@@ -17,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: fb30ce3e7115bad41d26dd126b6f8b9ae9e0b934
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018092"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373942"
 ---
 # <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
   空间数据表示有关几何对象的物理位置和形状的信息。 这些对象可以是点位置或更复杂的对象，例如国家/地区、公路或湖泊。  
@@ -36,7 +36,7 @@ ms.locfileid: "51018092"
  这两种数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中都是作为 .NET 公共语言运行时 (CLR) 数据类型实现的。  
   
 > [!IMPORTANT]  
->  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例，请下载白皮书 [SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例，请下载白皮书 [SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ##  <a name="reltasks"></a> 相关任务  
  [创建、构造和查询几何图形实例](create-construct-and-query-geometry-instances.md)  

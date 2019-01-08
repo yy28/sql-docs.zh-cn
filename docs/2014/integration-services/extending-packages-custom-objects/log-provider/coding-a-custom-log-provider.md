@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
@@ -14,12 +12,12 @@ ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb5e4945179edd557fc2a36913b92e182939ea6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05aa6d25d9f737ee9313508fee8f11b6122738f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358946"
 ---
 # <a name="coding-a-custom-log-provider"></a>编写自定义日志提供程序代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
@@ -190,7 +188,7 @@ Public Overrides  Sub CloseLog()
 End Sub  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [创建自定义日志提供程序](creating-a-custom-log-provider.md)   

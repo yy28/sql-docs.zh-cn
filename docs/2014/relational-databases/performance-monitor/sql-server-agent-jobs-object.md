@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLAgent:Jobs
@@ -13,12 +13,12 @@ ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c8a9d15ba885d9e20805112963cffbe708bae8fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223491"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747559"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理中的 Jobs 对象
   SQL Server 代理的 **Jobs** 性能对象包含的性能计数器可报告有关 SQL Server 代理作业的信息。 下表列出了此对象包含的计数器。  

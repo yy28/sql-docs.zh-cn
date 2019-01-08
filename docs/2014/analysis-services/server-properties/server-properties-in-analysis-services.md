@@ -19,15 +19,15 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201843"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369729"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中配置服务器属性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员可以修改的默认服务器配置属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
  若要设置服务器属性，请使用 SQL Server Management Studio 或编辑特定实例的 msmdsrv.ini 文件。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48201843"
  SQL Server Management Studio 中的属性页包含一部分可用的属性，仅显示可能要修改的那些属性。 msmdsrv.ini 文件中提供了一组完整的属性。  
   
 > [!NOTE]  
->  本主题未说明 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署配置属性。 有关部署配置的详细信息，请参阅[为解决方案部署指定配置设置](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
+>  本主题未说明 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署配置属性。 有关部署配置的详细信息，请参阅[为解决方案部署指定配置设置](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>在 Management Studio 中查看或设置配置属性  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48201843"
   
      只有表格模式服务器和多维模式服务器才支持修改服务器属性。 如果安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，请始终使用默认值，除非 Microsoft 产品支持工程师另有说明。  
   
-     对于如何通过属性解决操作或性能问题的指导，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+     对于如何通过属性解决操作或性能问题的指导，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
-     也可以在 Microsoft 白皮书 [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)（SQL Server 2005 Analysis Services (SSAS) 服务器属性）中查阅服务器属性（这些属性在最近几个版本中大多没有发生变化）的信息。  
+     也可以在 Microsoft 白皮书 [SQL Server 2005 Analysis Services (SSAS) Server Properties](https://go.microsoft.com/fwlink/?LinkID=199102)（SQL Server 2005 Analysis Services (SSAS) 服务器属性）中查阅服务器属性（这些属性在最近几个版本中大多没有发生变化）的信息。  
   
     > [!NOTE]  
     >  某些属性只能在 msmdrsrv.ini 文件中进行设置。 如果在显示高级属性后仍然看不见要设置的属性，则可能需要直接编辑 msmdsrv.ini 文件。  
@@ -76,7 +76,7 @@ ms.locfileid: "48201843"
 ##  <a name="bkmk_ref"></a> 服务器属性参考  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性对于微调系统非常重要。 例如，为了使查询日志行为与您的要求相一致，您可以设置相关的属性。  
   
- 以下主题介绍了各种[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置属性：  
+ 以下主题介绍了各种 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性：  
   
 |主题|Description|  
 |-----------|-----------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "48201843"
 |[数据挖掘属性](data-mining-properties.md)|数据挖掘属性控制着启用和禁用哪些数据挖掘算法。 默认情况下，启用所有算法。|  
 |DSO|不再支持 DSO。 忽略 DSO 属性。|  
 |[功能属性](feature-properties.md)|功能属性与产品功能有关，大多数是高级属性，包括控制服务器实例之间的链接的属性。|  
-|[文件存储属性](filestore-properties.md)|文件存储属性仅用于高级用途。 其中包括高级内存管理设置。|  
+|[Filestore 属性](filestore-properties.md)|文件存储属性仅用于高级用途。 其中包括高级内存管理设置。|  
 |[锁管理器属性](lock-manager-properties.md)|锁管理器属性定义与锁定和超时有关的服务器行为。 这些属性多数仅适用于高级用途。|  
 |[日志属性](log-properties.md)|日志属性控制是否在服务器上记录事件以及记录事件的位置和方式。 其中包括错误日志记录、异常日志记录、网络流量记录器、查询日志记录和跟踪。|  
 |[内存属性](memory-properties.md)|内存属性控制服务器如何使用内存。 这些属性主要用于高级用途。|  

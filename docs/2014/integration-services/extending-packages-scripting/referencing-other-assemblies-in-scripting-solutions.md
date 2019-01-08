@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -26,12 +24,12 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3b8f04d0df0a56a597c13bc4559c520b820d8de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4cb99bd25a6eb46d9060f9feba2f2f7d75b3b83a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050049"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354296"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>引用脚本解决方案中的其他程序集
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库为脚本开发人员提供了一组强大的工具，用于在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中实现自定义功能。 脚本任务和脚本组件还可以使用自定义托管程序集。  
@@ -84,7 +82,7 @@ ms.locfileid: "48050049"
   
  有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的详细信息，请参阅 MSDN Library。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [用脚本扩展包](extending-packages-with-scripting.md)  

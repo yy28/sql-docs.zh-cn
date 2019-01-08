@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
@@ -16,26 +15,26 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7034c52fa3f05032d6fc4585f1baf171421d0ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 149feca03a64839caffe0565cc46b683f265b77b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156707"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370129"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
   OLE DB 连接管理器使包能够用 OLE DB 访问接口连接到数据源。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 OLE DB 连接管理器可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供程序不支持用于多子网故障转移群集的新连接字符串关键字 (MultiSubnetFailover=True)。 有关详细信息，请参阅[SQL Server 发行说明](http://go.microsoft.com/fwlink/?LinkId=247824)和博客文章[AlwaysOn 多子网故障转移和 SSIS](http://go.microsoft.com/fwlink/?LinkId=247825)，www.mattmasson.com 上。  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供程序不支持用于多子网故障转移群集的新连接字符串关键字 (MultiSubnetFailover=True)。 有关详细信息，请参阅[SQL Server 发行说明](https://go.microsoft.com/fwlink/?LinkId=247824)和博客文章[AlwaysOn 多子网故障转移和 SSIS](https://go.microsoft.com/fwlink/?LinkId=247825)，www.mattmasson.com 上。  
   
  有若干 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务和数据流组件使用 OLE DB 连接管理器。 例如，OLE DB 源和 OLE DB 目标使用这种连接管理器来提取和加载数据，而执行 SQL 任务可以使用这种连接管理器来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以运行查询。  
   
  OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编写的自定义任务中访问 OLE DB 数据源。  
   
- 当将一个 OLE DB 连接管理器添加到包中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器将解析为在运行时的 OLE DB 连接，设置该连接管理器属性，并将对该连接管理器`Connections`集合包。  
+ 将 OLE DB 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 OLE DB 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包上的 `Connections` 集合。  
   
- `ConnectionManagerType`连接管理器属性设置为`OLEDB`。  
+ 该连接管理器的 `ConnectionManagerType` 属性设置为 `OLEDB`。  
   
  可以按下列方式配置 OLE DB 连接管理器：  
   
@@ -55,14 +54,14 @@ ms.locfileid: "48156707"
   
 ## <a name="related-content"></a>相关内容  
   
--   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 与 Oracle 连接器](http://go.microsoft.com/fwlink/?LinkId=220670) 。  
+-   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 与 Oracle 连接器](https://go.microsoft.com/fwlink/?LinkId=220670) 。  
   
--   carlprothman.net 上的技术文章 [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)（OLE DB 访问接口的连接字符串）。  
+-   carlprothman.net 上的技术文章 [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)（OLE DB 访问接口的连接字符串）。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 源](../data-flow/ole-db-source.md)   
  [OLE DB 目标](../data-flow/ole-db-destination.md)   
  [执行 SQL 任务](../control-flow/execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](integration-services-ssis-connections.md)  
   
   

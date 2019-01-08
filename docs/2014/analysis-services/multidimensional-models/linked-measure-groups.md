@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140347"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368450"
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
   链接度量值组基于同一数据库内不同多维数据集中的另一度量值组，或基于一个不同的 Analysis Services 数据库。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
@@ -47,7 +47,7 @@ ms.locfileid: "48140347"
   
 -   链接度量值组中不支持写回。  
   
--   链接度量值组无法在多个多对多关系中使用（尤其是在这些关系处于不同多维数据集中时）。 这样做可能导致不明确的聚合。 有关详细信息，请参阅 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)（包含多对多关系的多维数据集中链接度量值的不正确数量）。  
+-   链接度量值组无法在多个多对多关系中使用（尤其是在这些关系处于不同多维数据集中时）。 这样做可能导致不明确的聚合。 有关详细信息，请参阅 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)（包含多对多关系的多维数据集中链接度量值的不正确数量）。  
   
  链接度量值组中包含的度量值只能直接与从同一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中检索到的链接维度一起组织。 但是，您可以使用计算成员将来自链接度量值组的信息与多维数据集中的其他非链接维度进行关联。 您还可以使用间接关系（例如，引用关系或多对多关系）将非链接维度与链接度量值组进行关联。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48140347"
 ## <a name="secure-a-linked-measure"></a>保护链接度量值  
  定义了链接之后，在管理对链接度量值组中度量值的访问时，将采用与管理对其他度量值组的访问相同的方式。 链接对象与其非链接对等对象一起出现在角色设计器中。 有关管理度量值组安全性的详细信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
   
- 为了定义或使用链接度量值组，Windows 服务帐户中的为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例必须属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库角色具有`ReadDefinition`并`Read`访问源上的权限[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例源多维数据集和度量值组，或必须属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员角色的源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。  
+ 为了定义或使用链接度量值组，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的 Windows 服务帐户必须属于在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上对源多维数据集和度量值组具有 `ReadDefinition` 和 `Read` 访问权的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色，或必须属于源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrators 角色。  
   
 ## <a name="see-also"></a>请参阅  
  [定义链接维度](define-linked-dimensions.md)  

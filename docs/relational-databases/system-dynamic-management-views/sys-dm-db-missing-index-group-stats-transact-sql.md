@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7052eec4984d89bd9dfa4c0e94a6e35ed4f4222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794baaa127019eb13a77cb98bf90be71d33917b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605476"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407444"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回缺失索引组的摘要信息，不包括空间索引。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。  
     
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "47605476"
   >[!NOTE]
   >针对此 DMV 的结果集被限制为 600 的行。 每一行都包含一个缺失的索引。 如果有多个缺失索引的 600，应该解决现有的缺失索引，以便您然后可以查看较新的。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要查询此动态管理视图，必须授予用户 VIEW SERVER STATE 权限或隐含 VIEW SERVER STATE 权限的任何权限。  
   
 ## <a name="examples"></a>示例  

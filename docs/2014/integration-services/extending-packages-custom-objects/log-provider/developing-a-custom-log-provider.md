@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - SSIS packages, log providers
@@ -19,12 +17,12 @@ ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee5062d1a558407a4a40fcb48b629ba0b1590095
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a81f799308a62440b2aec53972db9c828b87e124
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185797"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353336"
 ---
 # <a name="developing-a-custom-log-provider"></a>开发自定义日志提供程序
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所具有的广泛的日志记录功能使其可捕获在包执行过程中发生的事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各种日志提供程序，可用于创建日志并以 XML、文本、数据库或 Windows 事件日志等格式存储这些日志。 如果提供的日志提供程序和输出格式不能完全满足您的需要，您可以创建自定义日志提供程序。  
@@ -72,6 +70,6 @@ ms.locfileid: "48185797"
  [开发自定义数据流组件](../data-flow/developing-a-custom-data-flow-component.md)  
  讨论如何对自定义数据流源、转换和目标进行编程。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752149"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [  **@profile_id=** ] *profile_id*  
  与新插入的配置文件关联的 ID。 *profile_id*是**int**并且是可选的 OUTPUT 参数。 如果指定该 ID，则值将设置为新的配置文件 ID。  
   
- [  **@profile_name=** ] **'***profile_name*****  
+ [  **@profile_name=** ] **'**_profile_name_  
  配置文件的名称。 *profile_name*是**sysname**，无默认值。  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'**_agent_type_  
  复制代理的类型。 *agent_type*是**int**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -66,7 +65,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0**指示系统配置文件。 **1**指示自定义配置文件。 可以使用此存储的过程; 创建只有自定义配置文件因此唯一有效的值是**1**。 仅[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建系统配置文件。  
   
- [  **@description=** ] **'***说明*****  
+ [  **@description=** ] **'**_说明_  
  是配置文件的说明。 *描述*是**nvarchar(3000)**，无默认值。  
   
  [  **@default=** ]*默认*  
@@ -82,7 +81,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  当**sp_add_agent_profile**是执行，在新的自定义配置文件添加一个行[MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表和关联的默认参数配置文件添加到[MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_agent_profile**。  
   
 ## <a name="see-also"></a>请参阅  

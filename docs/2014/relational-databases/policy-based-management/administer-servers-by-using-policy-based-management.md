@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -20,12 +20,12 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91483db92422a4510a6cefd2eca7d7f1f6f3f1e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067609"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377479"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
   基于策略的管理是一种用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的系统。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 策略管理员使用基于策略的管理时，他们使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建策略以管理服务器上的实体，例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、数据库或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象。  
@@ -53,7 +53,7 @@ ms.locfileid: "48067609"
  对于失败的策略，对象资源管理器以红色图标的形式指示严重运行状态警告，此图标位于该目标以及对象资源管理器树中此目标上面的节点旁边。  
   
 > [!NOTE]  
->  在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>基于策略的管理概念  
  基于策略的管理包含以下三个组件：  

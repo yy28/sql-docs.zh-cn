@@ -1,5 +1,5 @@
 ---
-title: 中的数据库 Python 分析面向 SQL 开发人员 |Microsoft Docs
+title: 面向 SQL 开发人员的 SQL Server 机器学习中的数据库 Python 分析的教程
 description: 了解如何在 SQL Server 存储过程和 T-SQL 函数中嵌入 Python 代码。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560374"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596678"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>教程： SQL 开发人员的数据库内 Python 分析
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>教程：SQL 开发人员的数据库内 Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本教程中的 SQL 编程人员，了解有关 Python 集成通过构建和部署基于 Python 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 
@@ -38,17 +38,17 @@ ms.locfileid: "51560374"
 
 无论您是 SQL 程序员熟悉 Python 或 Python 开发人员熟悉 SQL，此多部分教程介绍了执行使用 Python 和 SQL Server 数据库内分析的典型工作流。 
 
-+ [第 1 课： 浏览和可视化使用 Python 的数据](sqldev-py3-explore-and-visualize-the-data.md)
++ [第 1 课：浏览和可视化使用 Python 的数据](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [第 2 课： 创建数据功能使用自定义 SQL 函数](sqldev-py4-create-data-features-using-t-sql.md)
++ [第 2 课：使用自定义 SQL 函数创建数据功能](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [第 3 课： 训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [第 3 课：训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [第 4 课： 预测潜在的结果在存储过程中使用 Python 模型](sqldev-py6-operationalize-the-model.md)
++ [第 4 课：预测结果的存储过程中使用 Python 模型](sqldev-py6-operationalize-the-model.md)
 
 该模型保存到数据库后，您可以调用该模型用于预测[!INCLUDE[tsql](../../includes/tsql-md.md)]通过使用存储的过程。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 + [与 Python 配合使用的 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

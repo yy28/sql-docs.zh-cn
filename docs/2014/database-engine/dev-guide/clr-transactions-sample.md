@@ -12,22 +12,22 @@ ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149857"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361369"
 ---
 # <a name="clr-transactions-sample"></a>CLR 事务示例
   此示例说明如何使用 `System.Transactions` 命名空间中的托管 API 来控制事务。 特别需要指出的是，`System.Transactions.TransactionScope` 类用于建立事务边界，以确保只有在库存足以满足需求的情况下才调整库存数据，而且如果存在足够的库存，库存将以原子方式从一个位置传输到另一个位置。 通过将库存中的更改记录到存储在独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的审核数据库来说明如何在分步式事务中进行自动注册。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](http://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48149857"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48149857"
   
 8.  通过执行以下命令安装审核数据库：  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i installDB.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i installDB.sql`  
   
      （需为实例和服务器提供适当的值。）  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48149857"
   
 12. 使用以下命令执行该脚本  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i cleanup.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i cleanup.sql`  
   
          （需为实例和服务器提供适当的值。）  
   
@@ -357,7 +357,7 @@ End Class
   
 ```  
   
- 这是[!INCLUDE[tsql](../../includes/tsql-md.md)]安装脚本 (`Install.sql`)，它将程序集部署并在数据库中创建存储的过程。  
+ 这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 安装脚本 (`Install.sql`)，该脚本在数据库中部署程序集并创建存储过程。  
   
 ```  
 USE AdventureWorks  

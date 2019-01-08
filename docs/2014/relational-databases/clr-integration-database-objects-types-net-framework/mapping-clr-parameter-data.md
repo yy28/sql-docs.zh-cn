@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ba043e2c19a1fd835f04c5426c0518dec2831b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51e94f1cf42b8c40b4f0023371bc7a538bdba76f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148117"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357086"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
   下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 为中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空间，并在其本机 CLR 等效[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
@@ -50,9 +50,9 @@ ms.locfileid: "48148117"
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**Decimal、 可以为 Null\<十进制 >**|  
 |`float`|`SqlDouble`|**双精度，可以为 Null\<双精度 >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
 |`image`|None|None|  
 |`int`|`SqlInt32`|**Int32 类型，可以为 Null\<Int32 >**|  
 |`money`|`SqlMoney`|**Decimal、 可以为 Null\<十进制 >**|  
@@ -86,13 +86,13 @@ ms.locfileid: "48148117"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 <Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

@@ -14,12 +14,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204917"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361269"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   可以使用`SQLColAttribute`检索已准备或执行 ODBC 语句的结果集列的属性。 调用`SQLColAttribute`上准备语句会导致往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序接收结果集列数据作为语句执行，因此调用的一部分`SQLColAttribute`完成后**SQLExecute**或**SQLExecDirect** does不涉及服务器往返。  
@@ -107,7 +107,7 @@ ms.locfileid: "48204917"
  有关详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLColAttribute 函数](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute 函数](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC API 实现的详细信息](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

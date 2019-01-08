@@ -1,5 +1,5 @@
 ---
-title: 第 6 课：将 ReportViewer 控件添加到应用程序 | Microsoft Docs
+title: 第 6 课：将 ReportViewer 控件添加到应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afb73e5dc93efdadb0754072d652b7328aaa2151
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf11d44179dadbc3362c2fcf6f946c30d6856a56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103997"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361119"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：将 ReportViewer 控件添加到应用程序
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：向应用程序添加 ReportViewer 控件
   使用报表向导设计子报表后，接下来要向网站应用程序添加 ReportViewer 控件。  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>向应用程序添加 ReportViewer 控件  
@@ -33,7 +33,7 @@ ms.locfileid: "48103997"
   
 5.  在中**选择报表**框中，选择你创建的父报表。  
   
-     选择某个报表后，将自动创建在该报表中使用的数据源的实例。 生成代码以实例化每个 DataTable (及其[数据集](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx)容器)。 [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx)控件添加到设计图面上，对应于每个报表中使用的数据源。 此数据源控件为自动配置。  
+     选择某个报表后，将自动创建在该报表中使用的数据源的实例。 并将生成代码以使每个 DataTable（及其 [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) 容器）实例化。 向设计图面添加 [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) 控件，对应于报表中使用的每个数据源。 此数据源控件为自动配置。  
   
      如果您使用 Microsoft Visual Studio 2012，请确保如果中列出的完全限定的名称，与为项目命名空间，使用完全限定的 DataSet1 绑定 ObjectDataSource 控件**选择业务对象**下拉列表框 (例如 Projectnamespace.DataSet1TableAdapters.ProductTableAdapter)。 通过右键单击 ObjectDataSource，然后单击访问该列表框**配置数据源**。  
   

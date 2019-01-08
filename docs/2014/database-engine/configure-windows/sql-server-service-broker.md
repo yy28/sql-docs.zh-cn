@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SSBQUEUEPROPERTIES.GENERAL.F1
@@ -23,12 +22,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b6b873ce3bac898fd5e273bce7e8c28cebea0c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7e721ca02733b1602c2388657d52321f46fa9bc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214037"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375569"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中的消息和队列应用程序提供本机支持。 这使开发人员可以更轻松地创建使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在完全不同的数据库之间进行通信的复杂应用程序。 开发人员可以使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 轻松生成可靠的分布式应用程序。  
@@ -46,7 +45,7 @@ ms.locfileid: "48214037"
   
 -   [ssbdiagnose 实用工具 (Service Broker)](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- 有关 [概念以及开发和管理任务，请参阅](http://go.microsoft.com/fwlink/?LinkId=231312) 以前发布的文档 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 由于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 中的更改数量少，因此未在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]文档中重新生成该文档。  
+ 有关 [概念以及开发和管理任务，请参阅](https://go.microsoft.com/fwlink/?LinkId=231312) 以前发布的文档 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 由于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 中的更改数量少，因此未在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]文档中重新生成该文档。  
   
 ## <a name="whats-new-in-service-broker"></a>Service Broker 新增功能  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]未引入任何重大更改。  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入了以下更改。  

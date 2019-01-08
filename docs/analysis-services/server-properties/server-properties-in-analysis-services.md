@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975095"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785818"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的服务器属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
 > 
 > 其他影响服务器配置的属性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署配置属性。 有关这些属性的详细信息，请参阅 [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  
-##  <a name="bkmk_config"></a> 在 Management Studio 中配置属性 
+## <a name="configure-properties-in-management-studio"></a>在 Management Studio 中配置属性 
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
@@ -40,12 +40,11 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
   
      只有表格模式服务器和多维模式服务器才支持修改服务器属性。 如果安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，除非 Microsoft 支持另有说明，否则请始终使用默认值。  
   
-     对于如何通过属性解决操作或性能问题的指导，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
-     也可以在 Microsoft 白皮书 [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)（SQL Server 2005 Analysis Services (SSAS) 服务器属性）中查阅服务器属性（这些属性在最近几个版本中大多没有发生变化）的信息。    
+## <a name="configure-properties-in-msmdsrvini"></a>在 msmdsrv.ini 中配置属性
   
-##  <a name="bkmk_msmdsrvini"></a> 在 msmdsrv.ini 中配置属性
-  某些属性只能在 msmdrsrv.ini 文件中进行设置。 如果在显示高级属性后仍然看不见要设置的属性，则可能需要直接编辑 msmdsrv.ini 文件。
+某些属性只能在 msmdrsrv.ini 文件中进行设置。 Azure Analysis Services 不适用于这些属性。
+如果在显示高级属性后仍然看不见要设置的属性，则可能需要直接编辑 msmdsrv.ini 文件。 
   
 1.  请在 Management Studio 的“常规”属性页中检查 **DataDir** 属性以确认 Analysis Services 程序文件（包括 msmdsrv.ini 文件）的位置。
 
@@ -59,7 +58,7 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
   
 5.  保存文件并重启服务。  
   
-##  <a name="bkmk_ref"></a> 服务器属性参考  
+##  <a name="server-property-reference"></a>服务器属性参考  
   
  以下主题介绍了各种 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性：  
   

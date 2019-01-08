@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364179"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持针对行存储表和索引，row 和 page 压缩，并且支持针对列存储表和索引的列存储索引和列存储存档压缩。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持针对行存储表和索引的行和页压缩，并且支持针对列存储表和索引的列存储和列存储存档压缩。  
   
  对于行存储表和索引，使用数据压缩功能可帮助减小数据库的大小。 除了节省空间之外，数据压缩还可以帮助提高 I/O 密集型工作负荷的性能，因为数据存储在更少的页中，查询需要从磁盘读取的页更少。 但是，在与应用程序交换数据时，在数据库服务器上需要额外的 CPU 资源来压缩和解压缩数据。 您可以在以下数据库对象上配置行和页压缩：  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204937"
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
 ### <a name="basics"></a>基础知识  
  列存储表和索引始终使用列存储压缩进行存储。 您可以通过配置称作存档压缩的附加压缩，进一步减少列存储数据的大小。  为了执行存档压缩， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对数据运行 Microsoft XPRESS 压缩算法。 通过使用以下数据压缩类型添加或删除存档压缩：  
   
--   使用`COLUMNSTORE_ARCHIVE`数据压缩来压缩列存储存档压缩数据。  
+-   使用 `COLUMNSTORE_ARCHIVE` 数据压缩可使用存档压缩来压缩列存储数据。  
   
 -   使用 **COLUMNSTORE** 数据压缩可对存档压缩执行解压缩。 这样生成的数据将继续使用列存储压缩进行压缩。  
   
@@ -159,7 +159,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>“性能”  
+### <a name="performance"></a>性能  
  使用存档压缩对列存储索引进行压缩将导致索引执行速度慢于未进行存档压缩的列存储索引。  仅在您能够付出额外的时间和 CPU 资源来压缩和检索数据时，才使用存档压缩。  
   
  尽管执行速度放慢，但好处是用于不频繁访问的数据的存储缩小了。 例如，如果您对每个月的数据都具有一个分区，并且您的大多数活动是针对最近月份的，则可以将较早月份的数据存档以便降低存储要求。  
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`并`type_desc`列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) –`data_compression`并`data_compression_desc`列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+-   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -`data_compression`并`data_compression_desc`列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
   
  [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 过程不会应用在列存储索引中。  
   

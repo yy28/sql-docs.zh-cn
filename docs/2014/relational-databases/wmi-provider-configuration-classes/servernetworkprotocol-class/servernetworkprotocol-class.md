@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - ServerNetworkProtocol Class
@@ -20,12 +18,12 @@ ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fd3fa44f6aea34158e91d6541f003bc3cdf97b8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104517"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371149"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol 类
   [ServerNetworkProtocol 类] servernetworkprotocol class.md) 表示的实例上安装的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，使通过网络与客户端通信。  
@@ -39,6 +37,6 @@ ms.locfileid: "48104517"
 -   启用和禁用服务器网络协议。  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

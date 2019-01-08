@@ -1,5 +1,5 @@
 ---
-title: 教程：创建矩阵报表（报表生成器）| Microsoft Docs
+title: 教程：创建矩阵报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159497"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353396"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表 （报表生成器）
   本教程教您如何基于示例销售数据创建基本矩阵报表。 该矩阵具有嵌套行组和列组，以及相邻列组。 您将学习如何设置列的格式以及旋转文本。 下图显示与您将创建的报表类似的报表。  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- 您在本教程中将创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](http://go.microsoft.com/fwlink/?LinkId=184851)。  
+ 您在本教程中将创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](https://go.microsoft.com/fwlink/?LinkId=184851)。  
   
 ##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将学习如何执行以下操作：  
@@ -48,7 +48,7 @@ ms.locfileid: "48159497"
   
 1.  [旋转文本框 270 度](#RotateTextBox)  
   
- 完成本教程的预计学时：20 分钟。  
+ 本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "48159497"
   
 5.  单击“下一步” 。  
   
-6.  上**选择数据源的连接**页上，选择现有数据源或浏览到报表服务器，然后选择数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入的数据源的详细信息，请参阅[教程： 创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  上**选择数据源的连接**页上，选择现有数据源或浏览到报表服务器，然后选择数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入的数据源的详细信息，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步” 。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48159497"
   
 13. 单击 **“完成”**。  
   
-     矩阵将添加到设计图面中。 “行组”窗格显示两个行组：Territory 和 SalesDate。 “列组”窗格显示两个列组：Subcategory 和 Product。 详细信息数据是由数据集查询检索的所有数据。  
+     矩阵将添加到设计图面中。 行组窗格显示了两个行组：Territory 和 SalesDate。 列组窗格显示两个列组：子类别和产品。 详细信息数据是由数据集查询检索的所有数据。  
   
 14. 单击 **“运行”** 以预览报表。  
   
@@ -342,7 +342,7 @@ ms.locfileid: "48159497"
   
 4.  在“名称”中，用“SalesByTerritorySubcategory”替换默认名称。  
   
-5.  单击 **“保存”**。  
+5.  单击“保存” 。  
   
  报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -354,7 +354,7 @@ ms.locfileid: "48159497"
   
 3.  在“名称”中，用“SalesByTerritorySubcategory”替换默认名称。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
 ##  <a name="RotateTextBox"></a> 9。（可选）将文本框旋转 270 度  
  具有矩阵的报表在运行时可以垂直方式和水平方式展开。 通过垂直旋转文本框或者旋转 270 度，您可以节约水平空间。 呈现的报表然后将更窄，并且如果导出到 Microsoft Word 之类的格式，报表将更有可能适合打印页面。  

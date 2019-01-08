@@ -17,12 +17,12 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 704897c5da43f3f48479e155d1679a002b586866
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086567"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356204"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
   执行联机索引操作时，请按照下列指南进行：  
@@ -71,7 +71,7 @@ ms.locfileid: "48086567"
   
  由于索引操作的最后阶段持有 S 锁或 Sch-M 锁，因此当在显式用户事务（例如 BEGIN TRANSACTION...COMMIT 块）内运行联机索引操作时必须小心。 此操作会造成在事务结束之前一直持有锁，从而妨碍用户并发。  
   
- 若允许通过 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 选项运行联机索引重新生成，可能会增加碎片。 有关详细信息，请参阅 [工作方式：联机索引重新生成 - 可能造成碎片增加](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)。  
+ 若允许通过 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 选项运行联机索引重新生成，可能会增加碎片。 有关详细信息，请参阅[工作方式：联机索引重新生成-可能造成碎片增加的](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)。  
   
 ## <a name="transaction-log-considerations"></a>事务日志注意事项  
  脱机或联机执行大范围的索引操作，会生成大型数据负载，这些负载会造成事务日志快速填充。 为确保索引操作可以回滚，事务日志直到索引操作完成后才可以截断，但是，可以在索引操作过程中备份日志。 因此，事务日志必须具有足够的空间来存储索引操作事务和所有的并发用户事务，以满足索引操作过程的需要。 有关详细信息，请参阅 [Transaction Log Disk Space for Index Operations](transaction-log-disk-space-for-index-operations.md)。  

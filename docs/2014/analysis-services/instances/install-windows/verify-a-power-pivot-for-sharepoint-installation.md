@@ -11,12 +11,12 @@ ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214776"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355084"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>验证 PowerPivot for SharePoint 安装
   您在 SharePoint 场中安装的 PowerPivot for SharePoint 实例通过 SharePoint 管理中心进行管理。 至少，您可以检查管理中心和 SharePoint 网站上的页面以便确认 PowerPivot 服务器组件和功能可用。 但是，若要完全验证某一安装，您必须具有可发布到 SharePoint 并从库中访问的 PowerPivot 工作簿。 出于测试目的，您可以发布已包含 PowerPivot 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
@@ -41,7 +41,7 @@ ms.locfileid: "48214776"
     5.  单击 **“关闭”**，然后单击 **“确定”**。  
   
         > [!NOTE]  
-        >  SharePoint 安装文档包含有关解决代理服务器错误和禁用 Internet Explorer 安全增强配置的附加说明，以便您可以下载和安装更新。 有关详细信息，请参阅 Microsoft 网站上 **Deploy a single server with SQL Server** （部署单台带有 SQL Server 的服务器）中的 [Perform additional tasks](http://go.microsoft.com/fwlink/?LinkId=177754) “执行附加任务”部分。  
+        >  SharePoint 安装文档包含有关解决代理服务器错误和禁用 Internet Explorer 安全增强配置的附加说明，以便您可以下载和安装更新。 有关详细信息，请参阅 Microsoft 网站上 **Deploy a single server with SQL Server** （部署单台带有 SQL Server 的服务器）中的 [Perform additional tasks](https://go.microsoft.com/fwlink/?LinkId=177754) “执行附加任务”部分。  
   
 3.  在管理中心的“系统设置”中，单击 **“管理场功能”**。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48214776"
 ## <a name="verify-data-access-on-the-server"></a>验证服务器上的数据访问。  
  若要验证服务器上的 PowerPivot 数据访问，请执行以下操作：  
   
-1.  [下载](http://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教程附带的“野餐”数据示例。 您将使用此下载中的示例工作簿来验证 PowerPivot 数据访问。 提取文件。  
+1.  [下载](https://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教程附带的“野餐”数据示例。 您将使用此下载中的示例工作簿来验证 PowerPivot 数据访问。 提取文件。  
   
 2.  将 Excel 工作簿 (.xlsx) 上载到“共享文档”。 该工作簿包含嵌入的 PowerPivot 数据。  
   

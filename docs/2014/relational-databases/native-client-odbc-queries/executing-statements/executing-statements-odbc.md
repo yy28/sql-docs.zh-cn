@@ -15,12 +15,12 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d3d25e94926e3b87dab198c567c1f813732a2f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1517e17a7b0ecaf9137e3af21e076dacc2fd98f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180267"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376989"
 ---
 # <a name="executing-statements-odbc"></a>执行语句 (ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序提供了执行 SQL 语句中的多种方式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库：  
@@ -29,7 +29,7 @@ ms.locfileid: "48180267"
   
 -   准备好的执行  
   
- 直接执行即生成一个字符字符串，包含[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，然后提交以执行使用**SQLExecDirect**函数。 准备好的执行即生成一个包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的字符串，然后分两个阶段执行。 第一个阶段使用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)函数分析和编译中的语句的执行计划[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 第二个阶段，使用**SQLExecute**函数来执行之前准备好的执行计划。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
+ 直接执行即生成一个字符字符串，包含[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，然后提交以执行使用**SQLExecDirect**函数。 准备好的执行即生成一个包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的字符串，然后分两个阶段执行。 第一个阶段使用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)函数分析和编译中的语句的执行计划[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 第二个阶段，使用**SQLExecute**函数来执行之前准备好的执行计划。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
   
  直接执行和准备好的执行都可以执行单个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或批处理 SQL 语句，也可以调用存储过程。  
   

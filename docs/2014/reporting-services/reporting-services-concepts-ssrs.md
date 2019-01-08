@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094447"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357161"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本文概要介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
@@ -58,7 +58,7 @@ ms.locfileid: "48094447"
  在 SharePoint 站点上，使用 SharePoint 站点管理员页可以管理对报表以及与报表相关站点内容的访问权限。  
   
  **计划**  
- 在本机报表服务器上，您可以计划报表、共享数据集和订阅，以便在特定时间或非高峰时段检索数据并传递报表和数据集查询。 计划可以只运行一次，也可以按一定的时间间隔（小时、天、周或月）持续运行。 有关详细信息，请参阅[计划](subscriptions/schedules.md)。  
+ 在本机报表服务器上，您可以计划报表、共享数据集和订阅，以便在特定时间或非高峰时段检索数据并传递报表和数据集查询。 计划可以只运行一次，也可以按一定的时间间隔（小时、天、周或月）持续运行。 有关更多信息，请参见 [Schedules](subscriptions/schedules.md)。  
   
  **订阅和传递**  
  订阅是一种持续存在的请求，它在特定的时间或为响应某个事件以订阅中指定的应用程序文件格式传递报表。 订阅提供了一种可替代按需运行报表的方法。 按需运行报表要求您在每次要查看报表时主动选择报表。 相比之下，订阅可以用于对报表的传递进行计划并使其自动完成。 您可以将报表传递到电子邮件收件箱或文件共享位置。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48094447"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一种可用于自定义报表解决方案的可扩展体系结构。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。 有关详细信息，请参阅[扩展插件 (SSRS)](extensions-ssrs.md)。  
   
  **报表的访问权限**  
- 通过按需访问，用户可以从报表查看工具中选择报表。 根据您的报表服务器配置，可以使用报表管理器[!INCLUDE[msCoName](../includes/msconame-md.md)]SharePoint 2.0 Web 部件、 SharePoint 库时[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装在 SharePoint 集成模式下、 嵌入式的 ReportViewer 控件或使用 URL 的浏览器访问权限。 有关按需访问报表的详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 通过按需访问，用户可以从报表查看工具中选择报表。 根据您的报表服务器配置，您可以使用报表管理器、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 部件、SharePoint 库（在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装在 SharePoint 集成模式下时）、嵌入式 ReportViewer 控件或使用 URL 访问的浏览器。 有关按需访问报表的详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
  订阅提供了一种可替代按需运行报表的方法。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094447"
  **报表和报表定义**  
  **RDL。** 报表定义是符合一种称为报表定义语言 (RDL) 的 XML 语法的 XML 文件。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，您在报表生成器或报表设计器之类的工具中创建报表定义。 它包含用于定义数据源连接的元素、用来检索数据的查询、表达式、参数、图像、文本框、表以及任何其他设计时布局。 有关详细信息，请参阅[报表定义语言 (SSRS)](reports/report-definition-language-ssrs.md)。  
   
- **RDLX。** 采用 RDLX 格式的报表定义是一种 RDL 文件，它具有给您带来 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 可视化体验的内部扩展插件。 有关详细信息，请参阅 [Power View 概述](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)（英文）。  
+ **RDLX。** 采用 RDLX 格式的报表定义是一种 RDL 文件，它具有给您带来 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 可视化体验的内部扩展插件。 有关详细信息，请参阅 [Power View 概述](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)（英文）。  
   
  **RDLC。** Visual Studio 报表设计器生成 XML 格式的客户端报表定义 (.rdlc) 文件以供与 ReportViewer 控件结合使用。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48094447"
   
 -   **列表。** “列表”是一种数据区域，其中的数据以自由格式排列。 您可以排列这些报表项来创建一个窗体，其中的文本框、图像和其他数据区域可以位于列表中的任何位置。 有关详细信息，请参阅[列出了&#40;报表生成器和 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
--   **图表。** 图表以图形方式显示数据。 图表示例包括条形图、饼图和折线图等，并支持其他多种样式。 有关详细信息，请参阅[图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)。  
+-   **图表。** 图表以图形方式显示数据。 图表示例包括条形图、饼图和折线图等，并支持其他多种样式。 有关详细信息，请参阅 [图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)。  
   
 -   **仪表。** 仪表显示某个范围之内的数据，并且带有一个指向该范围内的某个特定值的指示器。 仪表用于显示关键绩效指标 (KPI) 和其他指标。 仪表包括线性仪表和圆形仪表等。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](report-design/gauges-report-builder-and-ssrs.md)。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "48094447"
  导出的报表是以特定文件格式保存的完全分页的报表。 导出格式取决于已安装的呈现扩展插件，并可以进行自定义。 默认情况下，导出格式包括 Excel、Word、XML、PDF、TIFF 和 CSV。 有关详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services 功能和任务&#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
+ [Reporting Services 功能和任务 (SSRS)](reporting-services-features-and-tasks-ssrs.md)   
  [技术参考 (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)   
  [Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

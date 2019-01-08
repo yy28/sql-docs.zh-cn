@@ -14,19 +14,19 @@ ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 348ee13872db0ae6e9900290404d8db88122b123
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194527"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354600"
 ---
 # <a name="about-the-sql-server-license-terms"></a>关于 SQL Server 许可条款
   安装 [!INCLUDE[msCoName](../includes/msconame-md.md)] 时，会将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 软件许可条款复制到本地计算机。 当在同一台计算机上安装具有相同版本类别和语言的多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例时，许可条款的单个副本将适用于该版本类别和语言的所有实例。 这些文件写入到: %programfiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ 或 %programfiles(x86)%\[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 条款\\。  
   
  在同一台计算机上安装相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和语言的多个实例时，许可条款的单个副本将应用于该版本和语言的所有实例。  
   
- 许可条款文件名指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本以及安装的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言版本。 许可条款文件名采用以下格式： SQLServer2014_License_Edition_\<类型 > _\<LCID >.rtf。 例如：  
+ 许可条款文件名指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本以及安装的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言版本。 许可条款文件名采用以下格式：SQLServer2014_License_Edition_\<类型 > _\<LCID >.rtf。 例如：  
   
 -   SQLServer2014_License_DEV_1033.rtf 适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer，英语版本。  
   
@@ -34,19 +34,19 @@ ms.locfileid: "48194527"
   
  TYPE 指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 以下文件名段用于标识 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本：  
   
--   ENT – Enterprise 版：服务器/客户端访问许可证 (CAL) 许可  
+-   ENT-企业版：服务器/客户端访问许可证 (CAL) 许可  
   
--   ENTCORE – Enterprise 版：基于内核的许可  
+-   ENTCORE-企业版：基于内核的许可  
   
--   BI – Business Intelligence  
+-   BI-商业智能  
   
--   DEV – Developer  
+-   DEV - Developer  
   
--   STD – Standard  
+-   STD - Standard  
   
--   WEB – Web  
+-   WEB - Web  
   
--   EXPR – Express  
+-   EXPR - Express  
   
  LCID 是一个数字，其指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言区域设置 ID。  以下文件名段用于标识对应的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48194527"
 |俄语|RUS|1049|  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 许可选项  
- 有关详细信息[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]定价和许可选项，请参阅[Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web 站点。  
+ 有关详细信息[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]定价和许可选项，请参阅[Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web 站点。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 的许可注意事项](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

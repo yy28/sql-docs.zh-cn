@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
@@ -15,17 +14,17 @@ ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 132d4acdbe47d3e790131834c6a71486dcd660d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbfd5a806badca4a8d24f57a9b3791a1fdf7ff68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136587"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782389"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>创建叶成员 (Master Data Services)
   在中[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，当你想要将主数据添加到您的系统和未使用临时表创建叶成员或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]导入数据。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -52,7 +51,7 @@ ms.locfileid: "48136587"
   
 ## <a name="see-also"></a>请参阅  
  [加载或使用临时过程更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
- [创建合并的成员&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
- [成员&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+ [创建合并成员 (Master Data Services)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
+ [成员 (Master Data Services)](../../2014/master-data-services/members-master-data-services.md)  
   
   

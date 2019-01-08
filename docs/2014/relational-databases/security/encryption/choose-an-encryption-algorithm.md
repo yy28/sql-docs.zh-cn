@@ -15,12 +15,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6d89cd1ee72b39c3441a4aea70f3e0ad622b4e49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365649"
 ---
 # <a name="choose-an-encryption-algorithm"></a>选择加密算法
   加密是希望保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例安全的管理员可以采用的多种深度防御方法之一。  
@@ -48,7 +48,7 @@ ms.locfileid: "48204487"
 >   
 >  对不同数据块重复使用相同的 RC4 或 RC4_128 KEY_GUID 将导致产生相同的 RC4 密钥，因为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不自动提供 salt。 重复使用相同的 RC4 密钥是已知错误，将导致加密非常不可靠。 因此，不推荐使用 RC4 和 RC4_128 关键字。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- 有关加密算法和加密技术的详细信息，请参阅 MSDN 的 .NET Framework 开发人员指南中的 [重要安全性概念](http://go.microsoft.com/fwlink/?LinkId=62082) 。  
+ 有关加密算法和加密技术的详细信息，请参阅 MSDN 的 .NET Framework 开发人员指南中的 [重要安全性概念](https://go.microsoft.com/fwlink/?LinkId=62082) 。  
   
  **关于 DES 算法的说明：**  
   

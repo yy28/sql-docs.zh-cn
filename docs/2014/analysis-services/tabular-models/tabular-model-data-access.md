@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148402"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364099"
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
   Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "50148402"
  以下 Microsoft 客户端应用程序支持本机连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型数据库。  
   
 ### <a name="excel"></a>“导出”  
- 您可以从 Excel 连接表格模型数据库，使用 Excel 中的数据可视化和分析功能来处理数据。 若要访问数据，您需要定义 Analysis Services 数据连接，指定以表格服务器模式运行的服务器，然后选择要使用的数据库。 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](http://go.microsoft.com/fwlink/?linkID=215150)。  
+ 您可以从 Excel 连接表格模型数据库，使用 Excel 中的数据可视化和分析功能来处理数据。 若要访问数据，您需要定义 Analysis Services 数据连接，指定以表格服务器模式运行的服务器，然后选择要使用的数据库。 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](https://go.microsoft.com/fwlink/?linkID=215150)。  
   
  Excel 也是推荐用于在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览表格模型的应用程序。 该工具包括一个 **“在 Excel 中分析”** 选项，可用来启动新的 Excel 实例，创建 Excel 工作簿并打开从该工作簿到模型工作区数据库的数据连接。 在 Excel 中浏览表格模型数据时，要注意 Excel 使用 Excel PivotTable 客户端对该模型发出查询。 相应地，Excel 工作簿中的操作会生成将发送到工作区数据库的 MDX 查询而非 DAX 查询。 如果您在使用 SQL Profiler 或其他监视工具来监视查询，则应能在事件探查器跟踪中看到 MDX 而不是 DAX。 有关“在 Excel 中分析”功能的详细信息，请参阅[在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50148402"
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 客户端向模型发送的查询会作为 DAX 语句发出，您可以在模型上设置跟踪来进行监视。  客户端还向服务器发出了有关初始架构定义的请求，该定义将根据概念性架构定义语言 (CSDL) 呈现。 有关详细信息，请参阅 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理承载表格模型的实例并查询这些实例中的元数据和数据。 可以处理模型或模型中的对象、创建和管理分区以及设置用于管理数据访问的安全性。 有关详细信息，请参阅以下主题：  
+ 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理承载表格模型的实例并查询这些实例中的元数据和数据。 可以处理模型或模型中的对象、创建和管理分区以及设置用于管理数据访问的安全性。 有关详细信息，请参阅下列主题：  
   
 -   [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "50148402"
 > [!WARNING]  
 >  您无法在已在 DirectQuery 模式下部署的数据库中使用 MDX 或 DMX 查询；因此，如果您需要对使用架构行集的 DirectQuery 模型执行查询，则您应使用 XMLA 而非关联的 DMV。 对于将服务器的结果作为一个整体返回的 DMV（例如，SELECT * from $system.DBSCHEMA_CATALOGS 或 DISCOVER_TRACES），您可以对在缓存模式下部署的数据库内容执行查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到表格模型数据库 (SSAS)](connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot 数据访问](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [连接到 Analysis Services](../instances/connect-to-analysis-services.md)  

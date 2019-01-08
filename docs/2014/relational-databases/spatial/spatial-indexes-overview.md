@@ -11,18 +11,18 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018672"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373219"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 `geometry` 或 `geography`）的数据的表列。  
   
 > [!IMPORTANT]  
->  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括影响空间索引的功能），请下载白皮书 [SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括影响空间索引的功能），请下载白皮书 [SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ##  <a name="about"></a> 关于空间索引  
   
@@ -106,7 +106,7 @@ ms.locfileid: "51018672"
 #### <a name="deepest-cell-rule"></a>最深单元规则  
  最深单元规则利用每个较低级别单元属于其上级单元这一事实：第 4 级单元属于第 3 级单元，第 3 级单元属于第 2 级单元，第 2 级单元属于第 1 级单元。 例如，属于单元 1.1.1.1 的对象也属于单元 1.1.1、1.1 和 1。 这种单元层次结构关系的知识内置到查询处理器。 因此，只有最深级别的单元需要记录在索引中，从而最大限度地减少了索引需要存储的信息。  
   
- 在下图中，相对较小的菱形多边形被分割。 索引使用默认的每对象单元数限制 16，此对象较小，未达到该限制。 因此，分割一直下至第 4 级。 此多边形驻留在以下的第 1 级到第 3 级的单元中：4、4.4 以及 4.4.10 和 4.4.14。 然而，使用最深单元规则，分割将仅对十二个位于第 4 级的单元进行计数：4.4.10.13-15 以及 4.4.14.1-3、4.4.14.5-7 和 4.4.14.9-11。  
+ 在下图中，相对较小的菱形多边形被分割。 索引使用默认的每对象单元数限制 16，此对象较小，未达到该限制。 因此，分割一直下至第 4 级。 此多边形驻留在以下第 1 级到第 3 级单元中：4、4.4 以及 4.4.10 和 4.4.14。 然而，使用最深单元规则，分割将仅对十二个位于第 4 级的单元进行计数：4.4.10.13-15 以及 4.4.14.1-3、4.4.14.5-7 和 4.4.14.9-11。  
   
  ![最深单元优化](../../database-engine/media/spndx-opt-deepest-cell.gif "最深单元优化")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018672"
 >  空间索引的 **tessellation_scheme** 设置显示在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目录视图中。  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>几何图形网格分割方案  
- GEOMETRY_AUTO_GRID 分割是 `geometry` 和更高版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的默认分割方案。  GEOMETRY_GRID 分割是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 geometry 数据类型的唯一可用分割方案。 本节讨论了与使用空间索引有关的几何图形网格分割的几个方面：支持的方法和边界框。  
+ GEOMETRY_AUTO_GRID 分割是 `geometry` 和更高版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的默认分割方案。  GEOMETRY_GRID 分割是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 geometry 数据类型的唯一可用分割方案。 本节讨论了与使用空间索引有关的几何图形网格分割的几个方面：支持的方法和边界框。  
   
 > [!NOTE]  
 >  可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句显式指定此分割方案。  
@@ -179,7 +179,7 @@ ms.locfileid: "51018672"
 ##  <a name="methods"></a> 空间索引支持的方法  
   
 ###  <a name="geometry"></a> 空间索引支持的几何图形方法  
- 空间索引在某些情况下支持以下面向集合的 geometry 方法：STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches() 和 STWithin()。 若要使空间索引支持这些方法，必须在查询的 WHERE 或 JOIN ON 子句中使用这些方法，并且必须在采用如下常规形式的谓词中执行这些方法：  
+ 空间索引支持以下面向集合的几何图形方法在某些情况下：Stcontains （）、 stdistance （）、 stequals （）、 stintersects （）、 stoverlaps （）、 sttouches （） 和 stwithin （）。 若要使空间索引支持这些方法，必须在查询的 WHERE 或 JOIN ON 子句中使用这些方法，并且必须在采用如下常规形式的谓词中执行这些方法：  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018672"
 -   *geometry1*[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*) = 1  
   
 ###  <a name="geography"></a> 空间索引支持的地域方法  
- 在某些条件下，空间索引支持以下面向集合的地理方法：STIntersects()、STEquals() 和 STDistance()。 若要使空间索引支持这些方法，必须在查询的 WHERE 子句中使用这些方法，并且必须在采用如下常规形式的谓词中执行这些方法。  
+ 某些情况下，空间索引支持以下面向集合的地理方法：STIntersects(),STEquals() 和 stdistance （）。 若要使空间索引支持这些方法，必须在查询的 WHERE 子句中使用这些方法，并且必须在采用如下常规形式的谓词中执行这些方法。  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

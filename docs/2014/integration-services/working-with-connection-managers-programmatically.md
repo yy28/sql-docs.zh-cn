@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
@@ -14,12 +12,12 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d532bf8e3cd47f430ccb60470cda996a8c8e6d77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd8b5934b8d38d867b7faa5715a4f87394b74ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206747"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362179"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以编程方式使用连接管理器
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，关联的连接管理器类的 AcquireConnection 方法是以托管代码方式使用连接管理器时最常调用的方法。 编写托管代码时，必须调用 AcquireConnection 方法以使用连接管理器的功能。 无论是在脚本任务、脚本组件、自定义对象还是自定义应用程序中编写托管代码，都必须调用此方法。  
@@ -67,7 +65,7 @@ ms.locfileid: "48206747"
 |WMI|WMI 连接管理器|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 连接管理器|`System.Data.SqlServerCe.SqlCeConnection`||  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [在脚本任务中连接数据源](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   

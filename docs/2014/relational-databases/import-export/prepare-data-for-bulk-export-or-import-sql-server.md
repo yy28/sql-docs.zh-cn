@@ -16,12 +16,12 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47c8b792158095693ea4223578ef811a2509b2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073477"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358129"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>准备用于大容量导出或导入的数据 (SQL Server)
   本部分讨论计划大容量导出操作时的相关注意事项以及大容量导入操作的要求。  
@@ -52,7 +52,7 @@ ms.locfileid: "48073477"
   
 -   若要使用 **bcp** 命令、BULK INSERT 语句或 INSERT...SELECT * FROM OPENROWSET(BULK...) 语句导入数据，目标表必须已经存在。  
   
--   数据文件中的每个字段都必须与目标表中的对应列兼容。 例如，`int`字段不能加载到`datetime`列。 有关详细信息，请参阅[用于批量导入或导出的数据格式 (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
+-   数据文件中的每个字段都必须与目标表中的对应列兼容。 例如，不能将 `int` 字段加载到 `datetime` 列。 有关详细信息，请参阅[用于批量导入或导出的数据格式 (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
   
     > [!NOTE]  
     >  若要指定从数据文件导入的行子集而并非整个文件，可以使用带有 **-F** *first_row* 开关和/或 **-L** *last_row* 开关的 **bcp** 命令。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48073477"
   
      若要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro、Visual FoxPro 表 (.dbf) 文件或 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作表 (.xls) 文件大容量导入数据，需要将数据转换为 CSV 文件以符合前面的限制条件。 文件扩展名通常将为 .csv。 然后便可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量导入操作中使用 .csv 文件作为数据文件。  
   
-     在 32 位系统上，通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [和 OLE DB Provider for Jet 可以将 CSV 数据导入](/sql/t-sql/functions/openrowset-transact-sql) 表，但是没有大容量导入优化。 通过由位于数据源所在目录的 schema.ini 文件定义的架构，Jet 将文本文件作为表处理。  对于 CSV 数据，schema.ini 文件内的其中一个参数将是“FORMAT=CSVDelimited”。 若要使用此解决方案，您需要了解 Jet Test IISAMm 如何工作，例如它的连接字符串语法、schema.ini 用法、注册表设置选项等等。  此信息的最佳来源是 Microsoft Access 帮助和知识库 (KB) 文章。 有关详细信息，请参阅 [初始化文本数据源驱动程序](http://go.microsoft.com/fwlink/?LinkId=128503)、 [如何通过链接服务器使用 SQL Server 7.0 分布式查询来查询安全的 Access 数据库](http://go.microsoft.com/fwlink/?LinkId=128504)、 [如何：使用 Jet OLE DB Provider 4.0 连接到 ISAM 数据库](http://go.microsoft.com/fwlink/?LinkId=128505)以及 [如何使用 Jet 提供程序的文本 IIsam 打开带分隔符的文本文件](http://go.microsoft.com/fwlink/?LinkId=128501)。  
+     在 32 位系统上，通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [和 OLE DB Provider for Jet 可以将 CSV 数据导入](/sql/t-sql/functions/openrowset-transact-sql) 表，但是没有大容量导入优化。 通过由位于数据源所在目录的 schema.ini 文件定义的架构，Jet 将文本文件作为表处理。  对于 CSV 数据，schema.ini 文件内的其中一个参数将是“FORMAT=CSVDelimited”。 若要使用此解决方案，需要了解 Jet Test IISAMm 如何工作，例如它的连接字符串语法、schema.ini 用法、注册表设置选项等等。  此信息的最佳来源是 Microsoft Access 帮助和知识库 (KB) 文章。 有关详细信息，请参阅[初始化文本数据源驱动程序](https://go.microsoft.com/fwlink/?LinkId=128503)，[如何使用链接服务器以安全的 Access 数据库的 SQL Server 7.0 分布式查询](https://go.microsoft.com/fwlink/?LinkId=128504)， [HOW TO:使用 Jet OLE DB Provider 4.0 连接到 ISAM 数据库](https://go.microsoft.com/fwlink/?LinkId=128505)，并[如何使用 Jet 提供程序的文本 IIsam 打开带分隔符的文本](https://go.microsoft.com/fwlink/?LinkId=128501)。  
   
  此外，将数据文件中的数据大容量导入表还有以下要求：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48073477"
 >  由于不支持大容量导入到分区视图，因此无法将数据大容量导入到分区视图。  
   
 ## <a name="external-resources"></a>外部资源  
- [如何将 Excel 数据导入 SQL Server](http://support.microsoft.com/kb/321686)  
+ [如何将 Excel 数据导入 SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>更改历史记录  
   

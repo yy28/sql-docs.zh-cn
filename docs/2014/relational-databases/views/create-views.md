@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214997"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541822"
 ---
 # <a name="create-views"></a>创建视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建视图。 可以将视图用于以下用途：  
@@ -34,7 +34,7 @@ ms.locfileid: "48214997"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建视图，使用：**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48214997"
   
 2.  右键单击“视图”文件夹，然后单击“新建视图...”。  
   
-3.  在 **“添加表”** 对话框中，从以下选项卡之一选择要在新视图中包含的元素：“表”、“视图”、“函数”和“同义词”。  
+3.  在中**添加表**对话框框中，选择你想要在您从以下选项卡之一的新视图中包含的元素:表、 视图、 函数和同义词。  
   
 4.  单击 **“添加”**，再单击 **“关闭”**。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48214997"
   
 #### <a name="to-create-a-view"></a>创建视图  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

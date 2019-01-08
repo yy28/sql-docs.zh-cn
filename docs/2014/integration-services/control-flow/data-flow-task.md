@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366859"
 ---
 # <a name="data-flow-task"></a>数据流任务
   数据流任务封装数据流引擎，该引擎在源和目标之间移动数据，使用户可以在移动数据时转换、清除和修改数据。 将数据流任务添加到包控制流使得包可以提取、转换和加载数据。  
@@ -45,14 +44,14 @@ ms.locfileid: "48069577"
  ![数据流](../media/mw-dts-09.gif "Data flows")  
   
 ## <a name="log-entries"></a>日志项  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 此外提供了多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。 数据流任务包括下列自定义日志项：  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。 数据流任务包括下列自定义日志项：  
   
 |日志项|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|指示数据流任务更改了缓冲区的大小。 日志条目描述了大小更改的原因，并列出了临时的新缓冲区大小。|  
-|`OnPipelinePostEndOfRowset`|表示组件已被授予其行集结束信号，设置的最后一次调用`ProcessInput`方法。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
-|`OnPipelinePostPrimeOutput`|指示组件已经完成其最后一次调用`PrimeOutput`方法。 取决于数据流，可能写入多个日志条目。 如果组件是源组件，此日志条目表示该组件已经完成对行的处理。|  
-|`OnPipelinePreEndOfRowset`|指示组件将要接收它的最后一次调用设置的行集结束信号`ProcessInput`方法。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
+|`OnPipelinePostEndOfRowset`|表示组件已经给出它的行集结束信号，该信号由对 `ProcessInput` 方法的最后调用设置。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
+|`OnPipelinePostPrimeOutput`|指示组件已经完成它对 `PrimeOutput` 方法的最后一次调用。 取决于数据流，可能写入多个日志条目。 如果组件是源组件，此日志条目表示该组件已经完成对行的处理。|  
+|`OnPipelinePreEndOfRowset`|指示组件将要接收它的行集结束信号，该信号由对 `ProcessInput` 方法的最后一次调用设置。 对于数据流中处理输入的每个组件，都会写入一项。 该项包括组件的名称。|  
 |`OnPipelinePrePrimeOutput`|指示组件将从 `PrimeOutput` 方法接收它的调用。 取决于数据流，可能写入多个日志条目。|  
 |`OnPipelineRowsSent`|报告对 `ProcessInput` 方法的调用为组件输入所提供的行数。 此日志条目包括组件名。|  
 |`PipelineBufferLeak`|提供在缓冲区管理器退出之后使缓冲区保持活动状态的任何组件的相关信息。 如果缓冲区仍保持活动状态，则没有释放缓冲区资源并且可能导致内存泄漏。 日志条目提供组件的名称和缓冲区的 ID。|  
@@ -87,12 +86,12 @@ ms.locfileid: "48069577"
   
  许多日志事件都写入多个项，并且多个日志条目的消息都包含复杂的数据。 为了便于理解和交流复杂消息的内容，可以对消息文本进行分析。 根据日志的位置，可以使用 Transact-SQL 语句或脚本组件用列或其他更有用的格式来分离复杂文本。  
   
- 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  : 1185 : OLE DB 源输出 : 1180 : 排序 : 1181 : 对输入进行排序 : 76”，并解析为列。 该消息由 `OnPipelineRowsSent` 事件在将行从 OLE DB 源发送到排序转换时写入。  
+ 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  :1185:OLE DB 源输出：1180:排序：1181:对输入进行排序：76"，并解析为列。 该消息由 `OnPipelineRowsSent` 事件在将行从 OLE DB 源发送到排序转换时写入。  
   
 |“列”|Description|ReplTest1|  
 |------------|-----------------|-----------|  
-|**PathID**|将值从`ID`属性的 OLE DB 源和排序转换之间的路径。|1185|  
-|**PathName**|将值从`Name`路径的属性。|OLE DB 源输出|  
+|**PathID**|OLE DB 源和排序转换之间的路径中的 `ID` 属性值。|1185|  
+|**PathName**|路径的 `Name` 属性值。|OLE DB 源输出|  
 |**ComponentID**|值`ID`排序转换的属性。|1180|  
 |**ComponentName**|排序转换的 `Name` 属性值。|排序|  
 |**InputID**|排序转换的输入的 `ID` 属性值。|1181|  
@@ -115,6 +114,6 @@ ms.locfileid: "48069577"
  [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>相关内容  
- technet.microsoft.com 上的视频 [平衡的数据分发服务器](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
+ technet.microsoft.com 上的视频 [平衡的数据分发服务器](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
   
   

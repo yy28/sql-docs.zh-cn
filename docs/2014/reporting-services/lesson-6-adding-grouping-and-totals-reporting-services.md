@@ -1,5 +1,5 @@
 ---
-title: 第 6 课：添加分组和总计 (Reporting Services) | Microsoft Docs
+title: 第 6 课：添加分组和总计 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356464"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 课：添加分组和总计 (Reporting Services)
   向报表中添加分组和总计以便组织和汇总数据。  
   
- 有关向报表添加运行总计的信息，请参阅此特选上的综合处理：[向 Reporting Services (SSRS) 报表添加总计](http://go.microsoft.com/fwlink/p/?LinkId=403698)。  
+ 有关向报表添加运行总计的详细信息，请参阅 curah.microsoft.com 上的综合处理：[向 Reporting Services (SSRS) 报表添加总计](https://go.microsoft.com/fwlink/p/?LinkId=403698)。  
   
  **本主题内容：**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48095289"
   
 6.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅灰色”** 和 **“确定”**。  
   
-     ![设计视图：带有订单总计的基本表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Design view: Basic table with order total")  
+     ![设计视图：带有订单总计的基本表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "设计视图：带有订单总计的基本表")  
   
 ##  <a name="bkmk_adddailytotal"></a> 若要向报表添加每日总计  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48095289"
   
 4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅蓝色”** 和 **“确定”**。  
   
-     ![设计视图：基本表中的总计](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Design view: Grand total in basic table")  
+     ![设计视图：基本表中的总计](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "设计视图：基本表中的总计")  
   
 5.  单击“预览”。  
   
      最后一页的外观应与下图相似：  
   
-     ![预览：带有总计的基本表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Preview: Basic table with grand total")  
+     ![预览：带有总计的基本表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "预览：带有总计的基本表")  
   
 ##  <a name="bkmk_publishreport"></a> 若要将报表发布到报表服务器 （可选）  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48095289"
   
      如果您在输出窗口中看到如下消息，则指示成功部署。  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. 项是最新。生成完成--0 个错误，0 个警告---启动的部署： 项目： 教程中，配置： 调试---部署到 http://\<服务器名称 > / reportserverDeploying 报告 / 教程/销售订单。部署完成--0 个错误，0 个警告 === 生成： 1 成功或最新，0 个失败，0 已跳过 === 部署： 1 个成功，0 失败，0 已跳过 ===  
+    > ------ Build started:项目： 教程中，配置：Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started:项目： 教程中，配置：调试---部署到 http://\<服务器名称 > / reportserverDeploying 报告 / 教程/销售订单。部署完成--0 个错误，0 个警告 === 生成：1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy:1 succeeded, 0 failed, 0 skipped ==========  
   
      如果您看到如下错误消息，则确认您对报表服务器的权限并且已使用管理员权限启动了 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48095289"
   
      浏览至报表管理器 URL，例如： `http://<server name>/reports`。  
   
-7.  浏览到包含该报表的文件夹，然后单击报表的名称`Sales Orders`浏览器中查看呈现的报表。  
+7.  浏览到包含该报表的文件夹，并单击报表 `Sales Orders` 的名称以在浏览器中查看呈现的报表。  
   
 ## <a name="next-steps"></a>后续步骤  
  这样，您就成功完成了对“创建基本表报表”教程的学习。  
   
 ## <a name="see-also"></a>请参阅  
- [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

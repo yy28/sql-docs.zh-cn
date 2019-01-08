@@ -1,5 +1,5 @@
 ---
-title: 第 4 课：定义用于子报表的数据连接和数据表 | Microsoft Docs
+title: 第 4 课：定义用于子报表的数据连接和数据表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3403d416ed7945d4f980ef4c15d89ff0e56c8720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184307"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365409"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 课：定义用于子报表的数据连接和数据表
   设计父报表后，接下来要创建用于子报表的数据连接和数据表。 在本教程中，数据连接指向 AdventureWorks2008 数据库。 也可选择连接到 AdventureWorks2012 数据库。  
@@ -57,11 +57,11 @@ ms.locfileid: "48184307"
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-     此外可以通过单击创建查询**查询生成器**，然后通过单击验证查询**执行查询**按钮。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关安装的详细信息**AdventureWorks2008**版本的 AdventureWorks，请参阅[演练： 安装 AdventureWorks 数据库](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
+     此外可以通过单击创建查询**查询生成器**，然后通过单击验证查询**执行查询**按钮。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关安装的详细信息**AdventureWorks2008**版本的 AdventureWorks，请参阅[演练：安装 AdventureWorks 数据库](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
   
 10. 上**生成的选择方法**页上，取消选中**创建方法以将更新发送到数据库 (GenerateDBDirectMethods) 直接**，然后单击**完成**。  
   
-     现在已完成配置 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx)作为报表的数据源。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 **DataTable** ，其中列出在查询中指定的列。 DataSet2 由根据查询从 PurhcaseOrderDetail 表获得的数据组成。  
+     现在已完成配置 ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx)作为报表的数据源。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 **DataTable** ，其中列出在查询中指定的列。 DataSet2 由根据查询从 PurhcaseOrderDetail 表获得的数据组成。  
   
 11. 保存该文件。  
   

@@ -14,18 +14,18 @@ ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 604c87ed33720114590d0ffc5027f3022a8fb87a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137859"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351049"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics**可以对静态游标执行。 尝试执行**SQLStatistics**可更新 （由键集驱动或动态） 返回 sql_success_with_info 以指示游标类型已更改。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLStatistics 函数](http://go.microsoft.com/fwlink/?LinkId=59372)   
+ [SQLStatistics 函数](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

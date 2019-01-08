@@ -1,6 +1,6 @@
 ---
-title: SQL Server 中的 R 扩展 |Microsoft Docs
-description: 了解有关 R 代码执行和 SQL Server 中的内置 R 库。
+title: R 编程语言扩展-SQL Server 机器学习
+description: 了解有关 R 代码执行和在 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务中的内置 R 库。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,23 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af71b03238a744702288f1f7411a5ebec3911f60
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: cb9b710ca5ec06e05a93dbee5f22ee0860f7f4ca
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892853"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432760"
 ---
-# <a name="r-extension-in-sql-server"></a>SQL Server 中的 R 扩展
+# <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 语言扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R 扩展是到关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 它将添加 R 执行环境、 使用标准库和工具，基础 R 发行版和 Microsoft R 库： [RevoScaleR](../r/revoscaler-overview.md)进行按规模、 分析[MicrosoftML](../using-the-microsoftml-package.md)为机器学习算法和其他用于访问数据或 SQL Server 中的 R 代码库。
+R 扩展是到关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 它将添加 R 执行环境、 使用标准库和工具，基础 R 发行版和 Microsoft R 库：[RevoScaleR](../r/ref-r-revoscaler.md)进行按规模、 分析[MicrosoftML](../r/ref-r-microsoftml.md)机器学习算法和其他用于访问数据或 SQL Server 中的 R 代码库。
 
 R 集成是从 SQL Server 2016 中的 SQL Server 中提供[R Services](../r/sql-server-r-services.md)，并继续向前作为的一部分[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)。
 
 ## <a name="r-components"></a>R 组件
 
-SQL Server 包含的开源和专有的包。 基本的 R 库安装通过 Microsoft 的分发的开放源代码: Microsoft R 打开 (MRO)。 R 的当前用户应该能够移植其 R 代码并将其作为 SQL Server 上具有少或没有修改的外部进程中执行。 MRO 安装独立于 SQL 工具和可扩展性框架中的核心引擎进程之外执行。 在安装期间，您必须同意的开源许可条款。 此后，可以运行标准 R 包，无需进一步修改，就像在任何其他开放源代码分发的。 
+SQL Server 包含的开源和专有的包。 基本的 R 库安装通过 Microsoft 的分发的开放源代码:Microsoft R Open (MRO)。 R 的当前用户应该能够移植其 R 代码并将其作为 SQL Server 上具有少或没有修改的外部进程中执行。 MRO 安装独立于 SQL 工具和可扩展性框架中的核心引擎进程之外执行。 在安装期间，您必须同意的开源许可条款。 此后，可以运行标准 R 包，无需进一步修改，就像在任何其他开放源代码分发的。 
 
 SQL Server 不会修改基本的 R 可执行文件，但必须使用的 R 安装安装程序，因为在该版本是专有的包生成，并可在测试版本。 MRO 不同之处可能会收到从 CRAN 的 R 基础分发的详细信息，请参阅[与 R 语言和 Microsoft R 产品和功能的互操作性](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)。
 
@@ -35,7 +35,7 @@ Microsoft 通过添加并行和分布式工作负荷的 R 包包括以下库。
 | 库 | Description |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 支持数据源对象和数据探索、 操作、 转换和可视化效果。 它支持远程计算上下文，以及各种可缩放的机器学习模型的创建，如**rxLinMod**。 这些 API 已经过优化，可以分析由于过大而无法装入内存的数据集，以及执行分布在多个核心或处理器之间的计算。 RevoScaleR 包还支持 XDF 文件格式来加速移动和数据分析时使用的存储。 XDF 格式使用纵栏表存储且可移植，可用于加载并处理来自各种来源（包括文本、SPSS 或 ODBC 连接）的数据。 |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含机器学习算法，经过优化的速度和准确性，以及行中使用文本和图像的转换。 有关详细信息，请参阅[将 MicrosoftML 包与 SQL Server 使用](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)。 | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含机器学习算法，经过优化的速度和准确性，以及行中使用文本和图像的转换。 有关详细信息，请参阅[SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
 
 ## <a name="using-r-in-sql-server"></a>在 SQL Server 中使用 R
 

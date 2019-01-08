@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontrans.f1
@@ -17,12 +16,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29a88369b1764a9cd4d11cc476affbebca79dabb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 344b9a24e78960b9eb9f4fece56924b2eb941c0f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358589"
 ---
 # <a name="data-conversion-transformation"></a>数据转换
   数据转换将输入列中的数据转换为其他数据类型，然后将其复制到新的输出列。 例如，包可从多个源中提取数据，然后用此转换将列转换为目标数据存储所需的数据类型。 可以对单个输入列应用多个转换。  
@@ -41,7 +40,7 @@ ms.locfileid: "48073487"
     > [!NOTE]  
     >  在包含字符串数据类型的列之间复制时，两列必须使用相同的代码页。  
   
- 如果字符串数据的输出列长度小于其对应的输入列长度，则输出数据将被截断。 有关详细信息，请参阅[数据中的错误处理](../error-handling-in-data.md)。  
+ 如果字符串数据的输出列长度小于其对应的输入列长度，则输出数据将被截断。 有关详细信息，请参阅 [数据中的错误处理](../error-handling-in-data.md)。  
   
  此转换有一个输入、一个输出和一个错误输出。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48073487"
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关在 SSIS 设计器中使用数据转换的信息，请参阅 [使用数据转换将数据转换为其他数据类型](data-conversion-transformation.md) 和 [数据转换编辑器](../../data-conversion-transformation-editor.md)。 有关如何以编程方式设置此转换的属性的信息，请参阅 [通用属性](../../common-properties.md) 和 [转换自定义属性](transformation-custom-properties.md)。  
   
 ## <a name="related-content"></a>相关内容  
- blogs.msdn.com 上的博客文章 [SSIS 2008 中数据类型转换技术之间的性能比较](http://go.microsoft.com/fwlink/?LinkId=220823)。  
+ blogs.msdn.com 上的博客文章 [SSIS 2008 中数据类型转换技术之间的性能比较](https://go.microsoft.com/fwlink/?LinkId=220823)。  
   
 ## <a name="see-also"></a>请参阅  
  [快速分析](../../fast-parse.md)   

@@ -12,15 +12,15 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ff6bcd9379e6e20351dacee75cb92e56b79d374
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056147"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362791"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名称指定为通配符的列
-  如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列为非`xml`类型列，则列内容将插入作为文本节点，如下面的示例中所示：  
+  如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列不是 `xml` 类型的列，则此列的内容将作为文本节点插入，如下例所示：  
   
 ```  
 USE AdventureWorks2012;  
@@ -36,9 +36,9 @@ WHERE E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
- `<row EmpID="1">KenJSánchez</row>`  
+ `<row EmpID="1">KenJS??nchez</row>`  
   
  如果此列的类型为 `xml`，则将插入相应的 XML 树。 例如，下面的查询将“*”指定为一个列的列名，该列包含由针对 Instructions 列的 XQuery 所返回的 XML。  
   
@@ -46,7 +46,7 @@ FOR XML PATH;
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
                 /MI:root/MI:Location   
               ') as "*"  
 FROM Production.ProductModel  

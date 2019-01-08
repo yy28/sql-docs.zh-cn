@@ -43,25 +43,25 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5ba07db49ac27ff5f36762abe6c1f1bcfac1d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192849"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373609"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
   你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
   
-1.  **开始之前：**  [发布到宿主服务](#PubHostSvc)， [权限](#Permissions)  
+1.  **开始之前：**[发布到某一托管服务](#PubHostSvc)，[权限](#Permissions)  
   
-2.  **要生成或发布脚本，请使用：**  [生成和发布脚本向导](#GenPubScriptWiz)  
+2.  **要生成或发布脚本，请使用：**[生成和发布脚本向导](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>开始之前  
  源和目标数据库可以位于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例上。  
   
 ###  <a name="PubHostSvc"></a> 发布到宿主服务  
- 除了创建脚本之外， **“生成和发布脚本向导”** 还可用于将数据库发布到特定类型的宿主 SQL Server Web 服务。 SQL Server Hosting Toolkit 将 Database Publishing Services 作为 CodePlex 上的共享源项目提供。 Database Publishing Services 项目可由 Web 宿主提供程序用来生成一组 Web 服务，使其客户可以轻松地将数据库部署到 Web 服务。 有关下载 SQL Server Hosting Toolkit 的详细信息，请参阅 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)（SQL Server 数据库发布服务）。  
+ 除了创建脚本之外， **“生成和发布脚本向导”** 还可用于将数据库发布到特定类型的宿主 SQL Server Web 服务。 SQL Server Hosting Toolkit 将 Database Publishing Services 作为 CodePlex 上的共享源项目提供。 Database Publishing Services 项目可由 Web 宿主提供程序用来生成一组 Web 服务，使其客户可以轻松地将数据库部署到 Web 服务。 有关下载 SQL Server Hosting Toolkit 的详细信息，请参阅 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)（SQL Server 数据库发布服务）。  
   
  若要将一个数据库发布到 Web 宿主服务，请在该向导的 **“设置脚本编写选项”** 页上选择 **“发布到 Web 服务”** 。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48192849"
  “取消” - 结束向导，而不从数据库中生成或发布脚本。  
   
 ###  <a name="ChooseObjects"></a> “选择对象”页  
- 使用此页可选择要包含在该向导生成的脚本中的对象。 在以下向导页中，您可以选择将这些脚本保存到您选择的位置，或者使用它们将数据库对象和数据发布到安装了 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)的远程 Web 宿主提供程序。  
+ 使用此页可选择要包含在该向导生成的脚本中的对象。 在以下向导页中，您可以选择将这些脚本保存到您选择的位置，或者使用它们将数据库对象和数据发布到安装了 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)的远程 Web 宿主提供程序。  
   
  **编写整个数据库的脚本选项** - 单击此项可为数据库中的所有对象生成脚本并且为数据库本身包括一个脚本。  
   
@@ -124,11 +124,11 @@ ms.locfileid: "48192849"
   
  **选项** - 如果您希望向导将脚本保存到您选择的位置，则选择 **“将脚本保存到特定位置”**。 您以后可以对数据库引擎的实例或者对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]运行这些脚本。 如果您希望向导将数据库对象发布到远程 Web 宿主提供程序，请选择 **“发布到 Web 服务”**。  
   
- **将脚本保存到特定位置** – 将一个或多个 Transact-SQL 脚本文件保存到指定位置。  
+ **将脚本保存到特定位置**保存一个或多个。Transact SQL 脚本文件复制到你指定的位置。  
   
 -   **高级** - 显示出 **“高级脚本编写选项”** 对话框，您可在其中选择用于生成脚本的高级选项。  
   
--   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击 **“浏览(…)”** 按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
+-   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击浏览 (…) 按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
   
 -   **保存到剪贴板** - 将 Transact-SQL 脚本保存到剪贴板。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48192849"
   
  **选项** - 通过从每个选项右侧的可用设置列表中选择一个值来指定高级选项。  
   
- **常规** – 以下选项将应用于整个脚本。  
+ **常规** - 以下选项将应用于整个脚本。  
   
 -   **ANSI Padding** -包括`ANSI PADDING ON`在脚本中。 默认值为 **True**。  
   
@@ -191,15 +191,15 @@ ms.locfileid: "48192849"
   
 -   **编写统计信息脚本**-当设置为**统计信息脚本**，此选项将包括`CREATE STATISTICS`语句以重新创建该对象的统计信息。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
--   **编写 USE DATABASE 脚本**-添加`USE DATABASE`语句的脚本。 若要确保正确的数据库中创建数据库对象，包含`USE DATABASE`语句。 如果预计脚本将使用不同的数据库中，选择**False**忽略`USE DATABASE`语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
+-   **编写 USE DATABASE 脚本**-添加`USE DATABASE`语句的脚本。 若要确保在正确的数据库中创建数据库对象，请包含 `USE DATABASE` 语句。 如果预计脚本将使用不同的数据库中，选择**False**忽略`USE DATABASE`语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
   
--   “要编写脚本的数据的类型” - 选择应对其编写脚本的目标：“仅限数据”、“仅限架构”或同时针对这两者。 默认值为 **“仅限架构”**。  
+-   **数据的脚本类型**-选择应编写的脚本：**仅限数据**，**仅限架构**，和 / 或。 默认值为 **“仅限架构”**。  
   
  **表/视图选项** - 下列选项仅应用于表或视图的脚本。  
   
 -   **编写更改跟踪的脚本** - 如果在源数据库或源数据库中的表上启用了“编写更改跟踪的脚本”选项，则编写更改跟踪的脚本。 默认值为 **False**。 有关详细信息，请参阅[关于更改跟踪 (SQL Server)](../track-changes/about-change-tracking-sql-server.md)。  
   
--   **编写 check 约束脚本**– Adds`CHECK`约束的脚本。 默认值为 **True**。 `CHECK` 约束要求输入表以满足某些指定的条件中的数据。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+-   **编写 check 约束脚本**-添加`CHECK`约束的脚本。 默认值为 **True**。 `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 -   “编写数据压缩选项的脚本” - 如果在源数据库或源数据库中的表上配置了编写数据压缩选项的脚本选项，则编写数据压缩选项的脚本。 有关详细信息，请参阅 [Data Compression](../data-compression/data-compression.md)。 默认值为 **False**。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48192849"
   
  **选项** - 通过从每个选项右侧的可用设置列表中选择一个值来指定高级选项。  
   
- **常规** – 以下选项将应用于整个发布。  
+ **常规** - 以下选项将应用于整个发布。  
   
 1.  **将 UDDT 转换为基类型** - 值为 **True**时，用户定义数据类型 (UDDT) 被转换为用于创建它们的基本数据类型。 将运行脚本的数据库中不存在 UDDT 时，请使用 **True** 。 值为 **False**时，使用 UDDT。 默认值为 **False**。  
   
@@ -261,15 +261,15 @@ ms.locfileid: "48192849"
   
 11. **脚本绑定** - 在发送到提供程序以供发布的脚本中包括默认值和规则对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact SQL)](/sql/t-sql/statements/create-default-transact-sql) 和 [CREATE RULE (Transact-SQL)](/sql/t-sql/statements/create-rule-transact-sql)。  
   
-12. “要发布的数据的类型” - 选择应对其编写脚本的目标：“仅限数据”、“仅限架构”或同时针对这两者。 默认值为 **“架构和数据”**。  
+12. **要发布的数据类型**-选择应编写的脚本：**仅限数据**，**仅限架构**，和 / 或。 默认值为 **“架构和数据”**。  
   
- **发布选项** – 指定是否在发布到 Web 主机提供商时使用事务。  
+ **发布选项** - 指定是否在发布到 Web 主机提供商时使用事务。  
   
 1.  **使用事务进行发布** - 在发布到远程 Web 宿主提供程序时使用事务。 如果目标数据库无法完成发布，则这些事务将被回滚。 默认值为 **True**。  
   
  **表/视图选项** - 以下选项仅应用于表或视图。  
   
-1.  **发布 check 约束**-包括创建`CHECK`发布过程中的约束。 默认值为 **True**。 `CHECK` 约束要求输入表以满足某些指定的条件中的数据。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+1.  **发布 check 约束**-包括创建`CHECK`发布过程中的约束。 默认值为 **True**。 `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 2.  **发布外键** - 在发布过程中包括创建外键。 默认值为 **True**。 外键可指示和强制保持表间的关系。 有关详细信息，请参阅 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
   

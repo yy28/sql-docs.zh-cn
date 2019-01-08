@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 创建 Windows Azure 存储帐户和容器 |Microsoft Docs
+title: 第 1 课：创建 Windows Azure 存储帐户和容器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143639"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367149"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>第 1 课：创建 Windows Azure 存储帐户和容器
   必须先创建 Windows Azure 存储帐户和 blob 容器以及共享访问签名，然后才能将 SQL Server 数据文件存储在 Windows Azure 存储中。 第 1 课指导您完成登录到 Windows Azure 管理门户以及创建存储帐户、Blob 容器和共享访问签名的步骤。  
@@ -29,7 +29,7 @@ ms.locfileid: "48143639"
   
 -   使用存储的访问策略管理容器或其 Blob 的共享访问签名。 存储的访问策略提供针对共享访问签名的另外一种控制措施，还提供一种撤消这些措施的简单方法。  
   
- 有关详细信息，请参阅[管理对 Windows Azure 存储资源的访问](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
+ 有关详细信息，请参阅[管理对 Windows Azure 存储资源的访问](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
   
 ## <a name="create-storage-account"></a>创建存储帐户  
  若要在 Windows Azure 管理门户上创建存储帐户，请执行以下步骤：  
@@ -58,7 +58,7 @@ ms.locfileid: "48143639"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  若要以编程方式创建容器，还可使用 REST API。 有关详细信息，请参阅[创建容器](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx)以及[Windows Azure 存储服务 REST API 参考](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
+>  若要以编程方式创建容器，还可使用 REST API。 有关详细信息，请参阅[创建容器](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)以及[Windows Azure 存储服务 REST API 参考](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
   
  **下一课：**  
   

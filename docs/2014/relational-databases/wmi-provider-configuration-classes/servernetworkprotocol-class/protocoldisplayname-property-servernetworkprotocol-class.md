@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolDisplayName Property (ServerNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 16f752ce666711840606dacd2898cf56a034bd33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 174691a92836a2548e1fa5776872801cd1225afc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368629"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>ProtocolDisplayName 属性（ServerNetworkProtocol 类）
   获取服务器网络协议的显示名称。  
@@ -39,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个[ServerNetworkProtocol 类](servernetworkprotocol-class.md)对象，表示使用的实例的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

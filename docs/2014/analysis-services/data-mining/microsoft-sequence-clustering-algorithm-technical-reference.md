@@ -17,12 +17,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060427"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367759"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
   Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Markov 链分析来识别有序序列，并会综合利用此分析结果和聚类分析技术基于模型中的序列和其他属性生成分类。 本主题介绍该算法的实现以及如何自定义算法，最后还对顺序分析和聚类分析模型的特殊要求进行了说明。  
@@ -113,7 +113,7 @@ ms.locfileid: "48060427"
  适用于挖掘结构列。  
   
  MODEL_EXISTENCE_ONLY  
- 表示列将被视为具有两个可能状态：`Missing`和`Existing`。 Null 视为`Missing`值。  
+ 表示列将被视为具有两个可能状态：`Missing` 和 `Existing`。 Null 视为 `Missing` 值。  
   
  适用于挖掘模型列。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48060427"
 ## <a name="requirements"></a>要求  
  事例表必须具有事例 ID 列。 此外，事例表还可以包含其他存储事例属性的列。  
   
- Microsoft 顺序分析和聚类分析算法要求序列信息以嵌套表的形式存储。 该嵌套表必须包含一个 Key Sequence 列。 一个`Key Sequence`列可以包含任何类型的数据进行排序，其中包括字符串数据类型，还必须包含每个事例的唯一值。 而且，在处理模型之前，您必须确保事例表和嵌套表要按与其相关的键的升序存储。  
+ Microsoft 顺序分析和聚类分析算法要求序列信息以嵌套表的形式存储。 该嵌套表必须包含一个 Key Sequence 列。 `Key Sequence` 列可包含可以存储的任何类型的数据（包括字符串数据类型），还必须包含每个事例的唯一值。 而且，在处理模型之前，您必须确保事例表和嵌套表要按与其相关的键的升序存储。  
   
 > [!NOTE]  
 >  如果创建使用 Microsoft 顺序分析算法、但却不使用序列的模型，则生成的模型将不包含任何序列，而仅会基于模型中包含的其他属性对事例进行分类。  
@@ -137,15 +137,15 @@ ms.locfileid: "48060427"
   
 ## <a name="remarks"></a>备注  
   
--   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持序列预测，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持序列预测，请参阅[SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持钻取，支持使用 OLAP 挖掘模型和数据挖掘维度。  
   
 ## <a name="see-also"></a>请参阅  
- [Microsoft 序列聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
- [顺序聚类分析模型查询示例](clustering-model-query-examples.md)   
- [序列聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)   
+ [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-sequence-clustering-models.md)  
   
   

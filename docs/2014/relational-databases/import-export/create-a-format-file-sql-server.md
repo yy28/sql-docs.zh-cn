@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe0eb799d7f3a78d46d38940805f203a91b7b6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9df741090bf896019c6d1c4ede5215982497cb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183267"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366989"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
@@ -163,20 +163,20 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
-|**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 请注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 **-t** 开关。|  
+|**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则 **-t**开关是不必要。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  
   
 ```  
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  生成的格式化文件 `Department-c.xml`包含以下 XML 元素：  
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -215,7 +215,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -234,7 +234,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  有关此格式化文件语法的详细信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。 有关如何使用本机数据的详细信息，请参阅[使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)。  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>将数据字段映射到表列  
- 如同使用 **bcp**创建一样，格式化文件按顺序说明所有的表列。 可以修改格式化文件以重新安排或忽略表列。 这便于您针对字段未直接映射到表列的数据文件来自定义格式化文件。 有关详细信息，请参阅以下主题：  
+ 如同使用 **bcp**创建一样，格式化文件按顺序说明所有的表列。 可以修改格式化文件以重新安排或忽略表列。 这便于您针对字段未直接映射到表列的数据文件来自定义格式化文件。 有关详细信息，请参阅下列主题：  
   
 -   [使用格式化文件跳过表列 (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

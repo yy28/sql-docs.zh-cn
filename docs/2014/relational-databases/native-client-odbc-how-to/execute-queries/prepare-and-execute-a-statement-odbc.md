@@ -13,20 +13,20 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d02a8e22c07c6dedcaae3cb50ad1c453c1273b16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcc1f6d1542928d534d31c6d64ef6130c0c7e04b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112860"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359909"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>准备和执行语句 (ODBC)
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>准备一次语句，然后多次执行它  
   
-1.  调用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)准备语句。  
+1.  调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)准备语句。  
   
-2.  （可选） 调用[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
+2.  （可选） 调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
   
 3.  （可选）对于预定义语句中的每个参数：  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48112860"
   
     -   如果语句有参数标记，请将数据值放到绑定参数缓冲区中。  
   
-    -   调用[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)执行已准备的语句。  
+    -   调用[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)执行已准备的语句。  
   
-    -   如果使用执行时数据输入的参数， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)返回 SQL_NEED_DATA。 通过使用分块区发送数据[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)并[SQLPutData](../../native-client-odbc-api/sqlputdata.md)。  
+    -   如果使用执行时数据输入的参数， [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)返回 SQL_NEED_DATA。 通过使用分块区发送数据[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)并[SQLPutData](../../native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>用按列参数绑定预定义语句  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48112860"
   
 2.  调用 SQLPrepare 准备语句。  
   
-3.  （可选） 调用[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
+3.  （可选） 调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定已准备的语句中的参数数量。  
   
 4.  （可选） 对于预定义语句中的每个参数，调用 SQLDescribeParam 以获得参数信息。  
   

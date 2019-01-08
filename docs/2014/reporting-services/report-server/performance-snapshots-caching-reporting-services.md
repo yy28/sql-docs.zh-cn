@@ -14,15 +14,15 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091677"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353153"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>性能、快照、缓存 (Reporting Services)
-  报表服务器性能受各种组合因素的影响，这些因素包括硬件、访问报表的并发用户的数量、报表中的数据量和输出格式。 若要了解影响您的安装的具体性能因素以及哪个补救办法将生成所需的结果，您将需要获得基准数据并运行测试。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Reporting Services 性能优化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 和 [使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](http://go.microsoft.com/fwlink/?LinkID=77519)。  
+  报表服务器性能受各种组合因素的影响，这些因素包括硬件、访问报表的并发用户的数量、报表中的数据量和输出格式。 若要了解影响您的安装的具体性能因素以及哪个补救办法将生成所需的结果，您将需要获得基准数据并运行测试。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容:[Reporting Services 性能优化](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx)并[使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](https://go.microsoft.com/fwlink/?LinkID=77519)。  
   
  下面是需要考虑的总原则：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48091677"
   
 -   若要确定处理报表所需的时间以及其他使用情况指标，请检查报表服务器的执行日志。 有关详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](report-server-executionlog-and-the-executionlog3-view.md)。  
   
--   有关如何通过优化内存管理配置设置来缓解性能问题的详细信息，请参阅[为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
+-   有关如何通过优化内存管理配置设置来缓解性能问题的详细信息，请参阅 [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [监视报表服务器性能](monitoring-report-server-performance.md)  
@@ -50,20 +50,20 @@ ms.locfileid: "48091677"
  [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)  
  说明如何覆盖默认内存管理行为。  
   
- [缓存报表&#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [缓存报表 (SSRS)](caching-reports-ssrs.md)  
  介绍报表服务器上的报表高速缓存行为。  
   
- [缓存共享数据集&#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
+ [缓存共享数据集 (SSRS)](cache-shared-datasets-ssrs.md)  
  介绍报表服务器上的共享数据集高速缓存行为。  
   
  [处理大型报表](process-large-reports.md)  
  为如何配置和分发大型报表提供建议。  
   
- [为报表和共享数据集处理设置超时值&#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [为报表和共享数据集处理设置超时值 (SSRS)](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  介绍如何针对查询和报表处理设置超时值。  
   
 ## <a name="see-also"></a>请参阅  
- [管理正在运行的进程](../subscriptions/manage-a-running-process.md)   
+ [管理运行中的进程](../subscriptions/manage-a-running-process.md)   
  [验证报表运行情况](verifying-a-report-run.md)  
   
   

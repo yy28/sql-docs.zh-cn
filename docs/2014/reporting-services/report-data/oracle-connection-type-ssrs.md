@@ -11,12 +11,12 @@ ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef55fa4a5715ba58ed1ecd426533ef161034dc7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3216db3e2e281448a0fd371d67b475fafd5af0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141771"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371970"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 连接类型 (SSRS)
   若要在报表中使用来自 Oracle 数据库的数据，您必须拥有一个基于 Oracle 类型的报表数据源的数据集。 此内置数据源类型基于 .NET Framework Managed Provider for Oracle，并且需要 Oracle 客户端软件组件。  
@@ -49,7 +49,7 @@ Data Source="Oracle9"; Unicode="True"
 ##  <a name="Parameters"></a> Parameters  
  如果查询包括查询变量，则将自动生成对应的报表参数。 此扩展插件支持命名参数。 对于 Oracle 版本 9 或更高版本而言，支持多值参数。  
   
- 报表参数是用可能需要修改的默认属性值创建的。 例如，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 报表参数是用可能需要修改的默认属性值创建的。 例如，每个报表参数的数据类型均为 **Text**。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 
   
@@ -58,11 +58,11 @@ Data Source="Oracle9"; Unicode="True"
   
  有关详细信息，请参见以下内容：  
   
--   msdn.microsoft.com 上的[Using the .NET Framework Data Provider for Oracle](http://go.microsoft.com/fwlink/?LinkId=112314) （使用用于 Oracle 的 .NET Framework 数据访问接口）。  
+-   msdn.microsoft.com 上的[Using the .NET Framework Data Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) （使用用于 Oracle 的 .NET Framework 数据访问接口）。  
   
--   [如何使用 Reporting Services 配置和访问 Oracle 数据源](http://support.microsoft.com/kb/834305)  
+-   [如何使用 Reporting Services 配置和访问 Oracle 数据源](https://support.microsoft.com/kb/834305)  
   
--   [如何为 NETWORK SERVICE 安全主体添加权限](http://support.microsoft.com/kb/870668)  
+-   [如何为 NETWORK SERVICE 安全主体添加权限](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>备用数据扩展插件  
  您还可以通过使用 OLE DB 数据源类型从 Oracle 数据库中检索数据。 有关详细信息，请参阅 [OLE DB 连接类型 (SSRS)](ole-db-connection-type-ssrs.md)。  
@@ -71,7 +71,7 @@ Data Source="Oracle9"; Unicode="True"
  您还可以创建基于 Oracle 数据库的模型。  
   
 ###### <a name="platform-and-version-information"></a>平台和版本信息  
- 有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
 
   
@@ -101,7 +101,7 @@ Data Source="Oracle9"; Unicode="True"
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
 

@@ -20,16 +20,16 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e376d10f21fa00c6bbe86fc692b0185f3c8d8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642845"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201456"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函数
 **符合性**  
- 版本引入了： ODBC 2.0  
+ 版本引入了：ODBC 2.0  
   
  **摘要**  
  **SQLValidDSN**检查长度和数据源名称的有效性，然后将名称添加到系统信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "47642845"
 ```  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>参数  

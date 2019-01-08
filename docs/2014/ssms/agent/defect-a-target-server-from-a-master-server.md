@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -16,12 +16,12 @@ ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c80098677d43eeb8fa5cf4a76a2c5f1ef0e49180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0b39605d4c1867d166ce3b6878de47273ad2072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198547"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795689"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象 (SMO) 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的主服务器脱离目标服务器。 从目标服务器运行此过程。  
@@ -30,7 +30,7 @@ ms.locfileid: "48198547"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要脱离目标服务器，请使用：**  
   

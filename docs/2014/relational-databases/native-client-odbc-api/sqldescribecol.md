@@ -14,12 +14,12 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054987"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369839"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   对于执行的语句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不需要查询服务器来描述结果集中的列。 在这种情况下，`SQLDescribeCol`不会导致服务器往返。 像[SQLColAttribute](sqlnumresultcols.md)，则调用`SQLDescribeCol`对准备但不是执行的语句产生服务器往返。  
@@ -50,7 +50,7 @@ ms.locfileid: "48054987"
  `SQLDescribeCol` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLDescribeCol 函数](http://go.microsoft.com/fwlink/?LinkID=59338)   
+ [SQLDescribeCol 函数](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

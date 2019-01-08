@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101507"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351652"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>实用工具面板（SQL Server 实用工具）
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具仪表板中查看数据，请在标有“Utility<UCP_Name>\\(ComputerName\UCP)”的实用工具资源管理器树中选择顶端节点。 该面板包括来自 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有托管实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具中所有数据层应用程序的摘要和详细信息数据。 若要刷新仪表板中的数据，请在实用工具资源管理器树中右键单击该顶端节点，然后选择“刷新”。  
@@ -83,7 +83,7 @@ ms.locfileid: "48101507"
  每个运行状况参数的详细状态在滑动指示器中列出。 滑动指示器右侧的部分显示有多少个数据层应用程序处于各状态类别中。 有关查看单独数据层应用程序运行状况的详细信息，或者有关查看或更改策略配置设置的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)。  
   
  实用工具存储使用率历史记录  
- 实用工具历史记录显示在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具面板底部的时间图中。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+ 实用工具历史记录显示在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具面板底部的时间图中。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
  使用显示区域左侧的单选按钮可以更改图形的报告期间。  
   

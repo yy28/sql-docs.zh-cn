@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04f473246f1cab305bdf57a4ec92f4f976b36e73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ea8b24eafe0005b3e316fd0c7972d4042747639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155217"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367159"
 ---
 # <a name="adding-tasks-programmatically"></a>以编程方式添加任务
   可在运行时引擎中将任务添加到下列对象类型中：  
@@ -412,9 +410,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章 [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI – 为 SQL Server 2012 更新）。  
+ blogs.msdn.com 上的博客文章 [EzAPI - 为 SQL Server 2012 更新](https://go.microsoft.com/fwlink/?LinkId=243223)。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [以编程方式连接任务](../building-packages-programmatically/connecting-tasks-programmatically.md)  

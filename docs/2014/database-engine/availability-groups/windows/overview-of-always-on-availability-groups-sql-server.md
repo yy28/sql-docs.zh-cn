@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559369"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363589"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
   本主题介绍用于在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中配置和管理一个或多个可用性组的核心 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]概念。 有关可用性组提供的优势的摘要和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 术语的概述，请参阅 [AlwaysOn 可用性组 (SQL Server)](always-on-availability-groups-sql-server.md)。  
@@ -29,9 +29,9 @@ ms.locfileid: "51559369"
  “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组主数据库以及一至八组对应的辅助数据库。 辅助数据库 *不是* 备份。 应继续定期备份您的数据库及其事务日志。  
   
 > [!TIP]  
->  您可以创建主数据库的任何类型的备份。 也可以创建辅助数据库的日志备份和仅复制完整备份。 有关详细信息，请参阅[活动次要副本：次要副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  您可以创建主数据库的任何类型的备份。 也可以创建辅助数据库的日志备份和仅复制完整备份。 有关详细信息，请参阅[活动次要副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
- 每组可用性数据库都由一个“可用性副本” 承载。 有两种类型的可用性副本：一个“主副本” 和一到四个“辅助副本”。 它承载主数据库和一至八个“辅助副本” ，其中每个副本承载一组辅助数据库，并用作可用性组的潜在故障转移目标。 可用性组在可用性副本级别进行故障转移。 可用性副本仅在数据库级别提供冗余 － 针对一个可用性组中的该组数据库。 故障转移不是由诸如因数据文件丢失或事务日志损坏而使数据库成为可疑数据库等数据库问题导致的。  
+ 每组可用性数据库都由一个“可用性副本” 承载。 有两种类型的可用性副本：一个“主副本” 和一到四个“辅助副本”。 它承载主数据库和一至八个“辅助副本” ，其中每个副本承载一组辅助数据库，并用作可用性组的潜在故障转移目标。 可用性组在可用性副本级别进行故障转移。 可用性副本仅在数据库级别提供冗余（针对一个可用性组中的该组数据库）。 故障转移不是由诸如因数据文件丢失或事务日志损坏而使数据库成为可疑数据库等数据库问题导致的。  
   
  主副本使主数据库可用于客户端的读写连接。 此外，它在称为“数据同步” 的过程中使用，在数据库级别进行同步。 主副本将每个主数据库的事务日志记录发送到每个辅助数据库。 每个次要副本缓存事务日志记录（“硬化”日志），然后将它们应用到相应的辅助数据库。 主数据库与每个连接的辅助数据库独立进行数据同步。 因此，一个辅助数据库可以挂起或失败而不会影响其他辅助数据库，一个主数据库可以挂起或失败而不会影响其他主数据库。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "51559369"
   
  对于每个可用性组，一个给定实例只能承载一个可用性副本。 但是，每个实例可用于多个可用性组。 给定的实例可以是独立实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI)。 如果您要求服务器级别的冗余，则使用故障转移群集实例。  
   
- 每个可用性副本都被分配一个初始角色（“主角色”  或“辅助角色” ），角色由该副本的可用性数据库继承。 给定副本的角色确定它承载的是读写数据库还是只读数据库。 其中一个副本（称为“主要副本”）被分配主角色，它承载读写数据库（称为“主数据库”）。 至少一个其他副本（称为“辅助副本” ）被分配辅助角色。 辅助副本承载只读数据库（称为辅助数据库）。  
+ 每个可用性副本都被分配一个初始角色（“主角色”或“辅助角色”），角色由该副本的可用性数据库继承。 给定副本的角色确定它承载的是读写数据库还是只读数据库。 其中一个副本（称为“主要副本”）被分配主角色，它承载读写数据库（称为“主数据库”）。 至少一个其他副本（称为“辅助副本” ）被分配辅助角色。 辅助副本承载只读数据库（称为辅助数据库）。  
   
 > [!NOTE]  
 >  如果可用性副本的角色是不确定的（如在故障转移过程中），则其数据库将临时处于 NOT SYNCHRONIZING 状态。 其角色设置为 RESOLVING，直至可用性副本的角色已解析。 如果可用性副本解析为主角色，则其数据库将成为主数据库。 如果可用性副本解析为辅助角色，则其数据库将成为辅助数据库。  
   
 ##  <a name="AvailabilityModes"></a> 可用性模式  
- 可用性模式是每个可用性副本的一个属性。 可用性模式确定主副本是否在给定的辅助副本将事务日志记录写入磁盘（强制写入日志）之前，等待提交数据库上的事务。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持两种可用性模式：异步提交模式和同步提交模式。  
+ 可用性模式是每个可用性副本的一个属性。 可用性模式确定主副本是否在给定的辅助副本将事务日志记录写入磁盘（强制写入日志）之前，等待提交数据库上的事务。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持两种可用性模式：“异步提交模式”和“同步提交模式”。  
   
 -   **异步提交模式**  
   
@@ -118,11 +118,11 @@ ms.locfileid: "51559369"
   
 -   **对辅助副本执行备份操作**  
   
-     次要副本支持对完整数据库、文件或文件组执行日志备份和 [仅复制](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 备份。 您可以配置可用性组，以便为备份指定一个首选位置。 理解 SQL Server 不强制使用首选备份位置十分重要，因为它对即席备份没有影响。 对此首选备份位置的解释取决于您为给定可用性组中的每个数据库撰写作业脚本的逻辑（如果有）。 对于单独的可用性副本，您可以指定对此副本（相对于同一可用性组中其他副本）执行备份的优先级。 有关详细信息，请参阅[活动次要副本：次要副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+     次要副本支持对完整数据库、文件或文件组执行日志备份和 [仅复制](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 备份。 您可以配置可用性组，以便为备份指定一个首选位置。 理解 SQL Server 不强制使用首选备份位置十分重要，因为它对即席备份没有影响。 对此首选备份位置的解释取决于您为给定可用性组中的每个数据库撰写作业脚本的逻辑（如果有）。 对于单独的可用性副本，您可以指定对此副本（相对于同一可用性组中其他副本）执行备份的优先级。 有关详细信息，请参阅[活动次要副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **对一个或多个辅助副本（可读辅助副本）的只读访问权限**  
   
-     可以对任何可用性副本进行配置，以便允许在其履行辅助角色时对其本地数据库进行只读访问，尽管不会完全支持某些操作。 此外，如果您想要禁止在主副本上产生只读工作负荷，则可以将副本配置为在以主角色运行时仅允许读写访问。 有关详细信息，请参阅[活动次要副本：可读次要副本（AlwaysOn 可用性组）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+     可以对任何可用性副本进行配置，以便允许在其履行辅助角色时对其本地数据库进行只读访问，尽管不会完全支持某些操作。 此外，如果您想要禁止在主副本上产生只读工作负荷，则可以将副本配置为在以主角色运行时仅允许读写访问。 有关详细信息，请参阅[活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
      如果某一可用性组当前拥有一个可用性组侦听程序以及一个或多个可读次要副本，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以将读意向连接请求路由到其中一个可读次要副本（*只读路由*）。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)概念。  
   
@@ -149,23 +149,23 @@ ms.locfileid: "51559369"
   
 -   **博客：**  
   
-     [AlwaysON-HADRON 学习系列： 启用了 HADRON 的工作线程池用法的数据库](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 学习系列：启用了 HADRON 的工作线程池用法的数据库](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第一部分： 介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 生成使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮书：**  
   
-     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
@@ -177,8 +177,8 @@ ms.locfileid: "51559369"
  [对内存中 OLTP 数据库的高可用性支持](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [活动辅助副本： 可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [活动辅助副本： 次要副本备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [活动辅助副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动辅助副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 故障排除和 SQL Server 中机器学习的常见问题 |Microsoft Docs
+title: 故障排除和机器学习-SQL Server 机器学习服务的常见问题
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dc04f74c4db5c05840795caea87efb9b0001171c
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 8cc89ee500e9240ef1fff085a34d9c1792c3e80c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877920"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432110"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>对 SQL Server 中的机器学习进行故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 使用此页作为起点来完成的已知问题。
 
-**适用于：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务 （R 和 Python）
+**适用范围：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务 （R 和 Python）
 
 ## <a name="known-issues"></a>已知问题
 

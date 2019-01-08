@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 定义维度和度量值组之间的关系 |Microsoft Docs
+title: 第 5 课：定义维度和度量值组之间的关系 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214b511a378e7e9ec21c4809e13ca9dbf7f654bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152827"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368729"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 课：定义维度和度量值组之间的关系
   在本教程前面的课程中，您已了解到可以将添加到多维数据集中的数据库维度作为一个或多个多维数据集维度的基础。 在本课中，您将了解如何定义多维数据集维度和度量值组之间的各种关系类型，以及如何指定这些关系的属性。  
@@ -24,12 +24,12 @@ ms.locfileid: "48152827"
  有关详细信息，请参阅 [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 > [!NOTE]  
->  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](http://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
+>  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
   
  本课程包含以下任务：  
   
  [定义引用关系](lesson-5-1-defining-a-referenced-relationship.md)  
- 在本任务中，您将了解如何通过维度（维度通过主键-外键关系直接链接）将维度间接链接到事实数据表。  
+ 在此任务中，了解如何将维度链接到事实数据表间接通过直接通过主键-外键关系链接的维度。  
   
  [定义事实关系](lesson-5-2-defining-a-fact-relationship.md)  
  在本任务中，您将了解如何基于事实数据表中的数据定义维度，以及如何将维度关系定义为事实关系。  

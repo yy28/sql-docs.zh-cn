@@ -11,12 +11,12 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cb940edad51f7d05effc7ba35534a25edddaf441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df19fffaec69eac9c3a80fe7fee1899994682a0b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180667"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354542"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>表（报表生成器和 SSRS）
   使用表可显示详细信息数据或分组数据或同时显示这两种数据。 可以按单个字段、多个字段或通过编写自己的表达式来对数据进行分组。 可以创建嵌套组或独立的相邻组。 若要显示分组数据的聚合值，可向这些组添加总计。 可设置行和列的格式以突出显示要强调的数据。 可以在开始时隐藏详细信息数据或分组数据，并包括明细切换以使用户能够交互选择要显示的数据量。  
@@ -24,9 +24,9 @@ ms.locfileid: "48180667"
 > [!NOTE]  
 >  您可以将表作为报表部件与报表分开发布。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速学会使用表，请参阅[教程：创建基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速开始使用表，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表&#40;SSRS 教程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括若干使用表的报表。 您可以通过以下方式了解有关表的信息：通过在报表生成器或报表设计器中浏览示例报表的报表定义，或通过在报表生成器或报表设计器中预览所呈现的报表。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](http://go.microsoft.com/fwlink/?LinkID=198283)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括若干使用表的报表。 您可以通过以下方式了解有关表的信息：通过在报表生成器或报表设计器中浏览示例报表的报表定义，或通过在报表生成器或报表设计器中预览所呈现的报表。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48180667"
   
  ![设计图面上的表模板，选中](../media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
   
- 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行句柄](../media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下面的关系图显示了具有以下字段的表数据区域：Date、Order、Product、Qty 和 Line Total。  
+ 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行句柄](../media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下图显示了表数据区域具有以下字段：日期、 订单、 产品、 Qty 和行总计。  
   
  ![设计，具有用粗体显示的列标题的表](../media/rs-basictabledetailsformatteddesign.gif "Design, Table with column headers in Bold")  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48180667"
   
  ![具有以粗体显示的列标题的表的预览](../../tutorials/media/rs-basictabledetailsformattedpreview.gif "Preview of table with bold column headers")  
   
- 您开始使用的表是基于 Tablix 数据区域的模板。 通过添加基础 Tablix 数据区域支持的功能，可以增强表的设计。 有关详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。 通过添加行组、列组以及添加或删除详细信息组，还可以继续开发表。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
+ 您开始使用的表是基于 Tablix 数据区域的模板。 通过添加基础 Tablix 数据区域支持的功能，可以增强表的设计。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。 通过添加行组、列组以及添加或删除详细信息组，还可以继续开发表。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ### <a name="adding-totals-for-detail-data"></a>为详细信息数据添加总计  
  若要添加总计，请选择具有数字数据的单元格，然后使用快捷菜单自动为数值字段的详细信息数据添加标签和总计。 还可以手动指定其他标签和总计。 下图显示了包括自动和手动指定的总计的典型总计行：  
@@ -114,7 +114,7 @@ ms.locfileid: "48180667"
   
  ![预览，带有展开的明细节点的表](../media/rs-basictablegroupsdrilldownpreview.gif "Preview, table with expanded drilldown node")  
   
- 有关详细信息，请参阅[为项添加展开或折叠操作（报表生成器和 SSRS）](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [为项添加展开或折叠操作（报表生成器和 SSRS）](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   

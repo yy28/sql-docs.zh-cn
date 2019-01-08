@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,12 +22,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cab26a21658c3573a3bdfab58a50500a7245397e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be5dd85d67eb2f28ced98ef91973ca1a08f5dcbd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184395"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365749"
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
   变量提供一种在包、容器、任务和事件处理程序中动态设置值和控制进程的方式。 优先约束还可使用变量来控制数据流流向不同任务的方向。 变量具有多种用途：  
@@ -228,12 +226,12 @@ End Module
  表达式必须是使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 表达式语法的有效表达式。 除了表达式语法提供的运算符和函数，变量表达式中还可以使用文字，但表达式不能引用其他变量或列。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
- 如果配置文件中包含自定义变量，则该变量可在运行时更新。 这意味着，当包运行时，配置文件中的新值会替换包中的原始变量值。 将包部署到需要不同变量值的多个服务器时，此替换技术将会很有用。 例如，变量可指定 Foreach 循环容器重复其工作流的次数、列出引发错误时接收事件处理程序发送的电子邮件的收件人、或者更改包失败前可能发生的错误的数量。 对于每种环境，这些变量都以编程方式在配置文件中动态提供。 因此，配置文件中只允许读/写变量。 有关详细信息，请参阅[创建包配置](../create-package-configurations.md)。  
+ 如果配置文件中包含自定义变量，则该变量可在运行时更新。 这意味着，当包运行时，配置文件中的新值会替换包中的原始变量值。 将包部署到需要不同变量值的多个服务器时，此替换技术将会很有用。 例如，变量可指定 Foreach 循环容器重复其工作流的次数、列出引发错误时接收事件处理程序发送的电子邮件的收件人、或者更改包失败前可能发生的错误的数量。 对于每种环境，这些变量都以编程方式在配置文件中动态提供。 因此，配置文件中只允许读/写变量。 有关详细信息，请参阅 [创建包配置](../create-package-configurations.md)。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;变量](../integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
  [在包中使用变量](../use-variables-in-packages.md)  
   
   

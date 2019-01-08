@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -16,12 +15,12 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f7e1927d1b35c1f4a8e7b7aef8d8c3cbfaa0b33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128807"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362619"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包括在故障转移群集中，则重命名虚拟服务器的过程不同于重命名独立实例的过程。 有关详细信息，请参阅 [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
@@ -45,7 +44,7 @@ ms.locfileid: "48128807"
 ## <a name="verify-the-renaming-operation"></a>验证重命名操作  
  虚拟服务器被重命名之后，任何使用旧名称的连接现在都必须使用新名称来连接。  
   
- 若要验证重命名操作已完成，请选择信息眖`@@servername`或`sys.servers`。 `@@servername` 函数将返回新的虚拟服务器名称，`sys.servers` 表将显示新的虚拟服务器名称。 若要验证故障转移过程是否能够使用新名称正常工作，用户还应尝试将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源故障转移到其他节点。  
+ 若要验证重命名操作是否已完成，请从 `@@servername` 或 `sys.servers` 中选择信息。 `@@servername` 函数将返回新的虚拟服务器名称，`sys.servers` 表将显示新的虚拟服务器名称。 若要验证故障转移过程是否能够使用新名称正常工作，用户还应尝试将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源故障转移到其他节点。  
   
  对于从群集中任何节点进行的连接，都可以立即使用新名称。 但是，对于从客户端计算机使用新名称进行的连接，则必须在新名称对该客户端计算机可见之后，才能使用新名称连接到服务器。 根据网络配置，通过网络传播新名称所需的时间长度可能为几秒钟，也可能长至 3 到 5 分钟；旧的虚拟服务器名称在网络上不再可见也可能会需要一些时间。  
   
@@ -58,25 +57,25 @@ ms.locfileid: "48128807"
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## <a name="additional-considerations-after-the-renaming-operation"></a>在重命名操作之后的其他注意事项  
  在重命名故障转移群集的网络名称后，需要按照下面的说明进行验证和操作，使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在所有情况下都正常工作。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：** 在您使用 Windows 群集管理器工具更改某一 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 故障转移群集实例的网络名称后，将来的升级或卸载操作可能会失败。 若要解决此问题更新**ClusterName**注册表项中的解决方法部分的说明[这](http://go.microsoft.com/fwlink/?LinkId=244002)(http://go.microsoft.com/fwlink/?LinkId=244002)。  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 更改的网络名称后[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]故障转移群集实例使用 Windows 群集管理器工具，将来的升级或卸载操作可能会失败。 若要解决此问题更新**ClusterName**注册表项中的解决方法部分的说明[这](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002)。  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务：** 验证和执行以下针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务的附加操作：  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务：** 验证并执行下面的其他操作[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务：  
   
 -   如果 SQL 代理配置为事件转发，请修复注册表设置。 有关详细信息，请参阅[指定事件转发服务器 (SQL Server Management Studio)](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)。  
   
--   在重命名计算机/群集网络名称后修复主服务器 (MSX) 和目标服务器 (TSX) 实例名称。 有关详细信息，请参阅以下主题：  
+-   在重命名计算机/群集网络名称后修复主服务器 (MSX) 和目标服务器 (TSX) 实例名称。 有关详细信息，请参阅下列主题：  
   
-    -   [将多台目标服务器从主服务器脱离](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [使多台目标服务器脱离主服务器](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [创建多服务器环境](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   重新配置日志传送以便更新的服务器名称用于备份和还原日志。 有关详细信息，请参阅以下主题：  
+-   重新配置日志传送以便更新的服务器名称用于备份和还原日志。 有关详细信息，请参阅下列主题：  
   
     -   [配置日志传送 (SQL Server)](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

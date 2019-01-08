@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], viewing
@@ -15,12 +15,12 @@ ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64646e3a462aa232f65cdc734cd9bfb0275b473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a732ccf71e0b52b83ae1fabdef88235595d4c194
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052042"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366429"
 ---
 # <a name="view-a-job"></a>View a Job
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
@@ -29,7 +29,7 @@ ms.locfileid: "48052042"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看作业，可使用：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48052042"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Security"></a> 安全性  
- 除非您是 **sysadmin** 固定服务器角色的成员，否则您只能查看自己拥有的作业。 此角色的成员可以查看所有作业。 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)。  
+ 除非您是 **sysadmin** 固定服务器角色的成员，否则您只能查看自己拥有的作业。 此角色的成员可以查看所有作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48052042"
   
 #### <a name="to-view-a-job"></a>查看作业  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48052042"
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **查看作业**  
   
- 使用`Job`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `Job` 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   
   

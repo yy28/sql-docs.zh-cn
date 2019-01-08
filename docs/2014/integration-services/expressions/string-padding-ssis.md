@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - padding strings [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27b200fd9f3d09fef0a94ea005add9bc7f1eca12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7141a102efe167c07147dce19ac2a88aa4606f3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156747"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359319"
 ---
 # <a name="string-padding-ssis"></a>字符串填充 (SSIS)
   表达式计算器不检查字符串是否包含前导空格和尾随空格，并且比较前不填充字符串来使其具有相同长度。 如果表达式需要字符串填充，可使用 + 运算符连接列值和空字符串。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](concatenate-ssis-expression.md)。  
@@ -31,6 +30,6 @@ ms.locfileid: "48156747"
 >  LEN 函数将前导空格和尾随空格包含在其计数中。  
   
 ## <a name="related-content"></a>相关内容  
- pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=217683)。  
+ pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=217683)。  
   
   

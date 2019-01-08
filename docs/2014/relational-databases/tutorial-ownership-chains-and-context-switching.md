@@ -1,11 +1,10 @@
 ---
-title: 教程：所有权链和上下文切换 | Microsoft Docs
+title: 教程：所有权链和上下文切换 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - context switching [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5e46d5f6f28a1d93df5cf92194164a4335501523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081997"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369760"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>教程：所有权链和上下文切换
   本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
 > [!NOTE]  
@@ -96,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- 有关 GRANT 语句的详细信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)。 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](stored-procedures/stored-procedures-database-engine.md)。 有关所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 权限的海报，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 有关 GRANT 语句的详细信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)。 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](stored-procedures/stored-procedures-database-engine.md)。 有关所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 权限的海报，请参阅 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.创建存储过程以访问数据  
  若要切换数据库内的上下文，请使用 EXECUTE AS 语句。 EXECUTE AS 需要 IMPERSONATE 权限。  

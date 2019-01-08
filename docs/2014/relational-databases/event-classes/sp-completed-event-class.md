@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1335fdd99afb81be5f67cda57fefc3241a032f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213607"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822601"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件类
   SP:Completed 事件类指明存储过程已执行完毕。  

@@ -15,12 +15,12 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092848"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267892"
 ---
 # <a name="event-file-target"></a>Event File Target
   事件文件目标是可将完整的缓冲区写入磁盘的目标。  
@@ -34,7 +34,7 @@ ms.locfileid: "48092848"
 |max_rollover_files|任何 32 位的整数。 该值是可选的。|文件系统中可保留的最多文件数。 默认值为 5。|  
 |increment|任何 32 位的整数。 该值是可选的。|文件的增量 (MB)。 如果未指定，则增量的默认值为会话缓冲区大小的两倍。|  
   
- 第一次创建事件文件目标时，会在指定的文件名后面附加 _0\_ 以及一个长整型值。 该整型值被计算为 1600 年 1 月 1 日与文件的创建时间之间的毫秒数。 后续的回滚文件也将使用此格式。 通过检查该长整型值，可以确定最新的文件。 以下示例演示了文件的命名方式。在该方案中，将文件名选项指定为 C:\OutputFiles\MyOutput.xel：  
+ 第一次创建事件文件目标时，会在指定的文件名后面附加 _0\_ 以及一个长整型值。 整数值的计算如下 1601 年 1 月 1 日之间的毫秒数的日期和时间创建文件。 后续的回滚文件也将使用此格式。 通过检查该长整型值，可以确定最新的文件。 以下示例演示了文件的命名方式。在该方案中，将文件名选项指定为 C:\OutputFiles\MyOutput.xel：  
   
 -   创建的第一个文件 - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   

@@ -12,12 +12,12 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fe75f73a8e332682ee9511f338813946f5e2a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055917"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355029"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -33,7 +33,7 @@ ms.locfileid: "48055917"
 |消息正文|用户 '%.*ls'.%.\*ls 登录失败|  
   
 ## <a name="explanation"></a>解释  
- 因密码或用户名错误而使身份验证失败并导致连接尝试被拒时，类似下面的消息将返回到客户端：“用户 '<user_name>' 登录失败”。 （Microsoft SQL Server，错误: 18456）”。  
+ 因密码或用户名错误而使身份验证失败并导致连接尝试被拒时，类似以下内容的消息将返回到客户端：“用户‘<user_name>’登录失败。 （Microsoft SQL Server，错误：18456）”。  
   
  返回到客户端的其他信息有：  
   
@@ -43,13 +43,13 @@ ms.locfileid: "48055917"
   
  “服务器名称：<computer_name>”  
   
- “错误号: 18456”  
+ “错误编号：18456”  
   
- “严重性: 14”  
+ “严重级别：14”  
   
- “状态: 1”  
+ “状态：1”  
   
- “行号: 65536”  
+ “行号：65536”  
   
  也可能返回以下消息：  
   
@@ -88,13 +88,13 @@ ms.locfileid: "48055917"
 ## <a name="examples"></a>示例  
  在此示例中，身份验证错误状态为 8。 这表示密码不正确。  
   
-|date|数据源|消息|  
+|date|源|消息|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|登录|错误: 18456，严重性: 14，状态: 8。|  
+|2007-12-05 20:12:56.34|登录|Error:18456，严重级别：14，状态：8.|  
 |2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端： \<ip 地址 >]|  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是使用 Windows 身份验证模式安装的，并随后更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式，则最初会禁用 **sa** 登录名。 这会导致状态 7 错误：“用户 'sa' 登录失败”。若要启用 **sa** 登录名，请参阅[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是使用 Windows 身份验证模式安装的，并随后更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式，则最初会禁用 **sa** 登录名。 这将导致状态 7 错误：“用户‘sa’登录失败。”若要启用 **sa** 登录名，请参阅[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="user-action"></a>用户操作  
  如果您尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请验证是否将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用混合身份验证模式。  
@@ -109,6 +109,6 @@ ms.locfileid: "48055917"
   
  如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]支持包含的数据库，请确认在迁移到包含的数据库用户后未删除登录名。  
   
- 在本地连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在 **NT AUTHORITY\NETWORK SERVICE** 下运行的服务的连接必须使用计算机完全限定域名进行身份验证。 有关详细信息，请参阅[如何在 ASP.NET 中使用 Network Service 帐户访问资源](http://msdn.microsoft.com/library/ff647402.aspx)  
+ 在本地连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在 **NT AUTHORITY\NETWORK SERVICE** 下运行的服务的连接必须使用计算机完全限定域名进行身份验证。 有关详细信息，请参阅[How To:在 ASP.NET 中使用网络服务帐户来访问资源](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

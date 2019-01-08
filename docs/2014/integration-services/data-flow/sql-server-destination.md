@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
@@ -19,21 +18,21 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad8750547ff9744b525d8d6d234f02f0bb78375
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c8e1d7c41e2caf1a3e3bc03e8278c21e4fe7b79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375719"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
   SQL Server 目标连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，并将数据大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表和视图中。 如果包访问远程服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则不能在包中使用 SQL Server 目标。 相反，包应使用 OLE DB 目标。 有关详细信息，请参阅 [OLE DB Destination](ole-db-destination.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如果用户所执行的包中包括 SQL Server 目标，则用户需要“创建全局对象”权限。 通过使用从 **“管理工具”** 菜单打开的本地安全策略工具，可以将此权限授予用户。 如果在执行使用 SQL Server 目标的包时收到错误消息，请确保运行包的帐户拥有“创建全局对象”权限。  
   
 ## <a name="bulk-inserts"></a>大容量插入  
- 如果尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，您将看到如下错误消息：已获得 OLE DB 记录。 源: “Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client” Hresult: 0x80040E14 说明:“由于无法打开 SSIS 文件映射对象 ‘Global\DTSQLIMPORT’，无法进行大容量加载。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
+ 如果你尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，可能会看到类似以下的错误消息："已获得 OLE DB 记录。 源:"Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端"Hresult:0x80040E14 说明："无法进行大容量加载由于无法打开 SSIS 文件映射对象 'Global\DTSQLIMPORT'。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
   
  此 SQL Server 目标将数据插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的速度与使用“大容量插入”任务时一样快；但使用 SQL Server 目标可以在数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之前，对列数据应用转换。  
   
@@ -92,11 +91,11 @@ ms.locfileid: "48159887"
   
  有关在 **“SQL Server 目标编辑器”** 对话框中可以设置的属性的详细信息，请单击下列主题之一：  
   
--   [SQL 目标编辑器&#40;连接管理器页&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [SQL 目标编辑器（“连接管理器”页）](../sql-destination-editor-connection-manager-page.md)  
   
--   [SQL 目标编辑器&#40;映射页&#41;](../sql-destination-editor-mappings-page.md)  
+-   [SQL 目标编辑器（“映射”页）](../sql-destination-editor-mappings-page.md)  
   
--   [SQL 目标编辑器&#40;高级页&#41;](../sql-destination-editor-advanced-page.md)  
+-   [SQL 目标编辑器（“高级”页）](../sql-destination-editor-advanced-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -118,11 +117,11 @@ ms.locfileid: "48159887"
   
 ## <a name="related-content"></a>相关内容  
   
--   support.microsoft.com 上的技术文章 [您可能会在支持 UAC 的系统上看到“无法准备 SSIS 大容量插入以插入数据”错误](http://go.microsoft.com/fwlink/?LinkId=199482)。  
+-   support.microsoft.com 上的技术文章 [您可能会在支持 UAC 的系统上看到“无法准备 SSIS 大容量插入以插入数据”错误](https://go.microsoft.com/fwlink/?LinkId=199482)。  
   
--   msdn.microsoft.com 上的技术文章 [数据加载性能指南](http://go.microsoft.com/fwlink/?LinkId=233700)。  
+-   msdn.microsoft.com 上的技术文章 [数据加载性能指南](https://go.microsoft.com/fwlink/?LinkId=233700)。  
   
--   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](http://go.microsoft.com/fwlink/?LinkId=233701)。  
+-   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](https://go.microsoft.com/fwlink/?LinkId=233701)。  
   
 ## <a name="see-also"></a>请参阅  
  [数据流](data-flow.md)  

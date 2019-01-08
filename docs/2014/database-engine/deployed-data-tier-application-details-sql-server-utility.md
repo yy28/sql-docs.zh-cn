@@ -18,12 +18,12 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354927"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>已部署的数据层应用程序详细信息（SQL Server 实用工具）
   实用工具资源管理器的“已部署的数据层应用程序”视图中的信息为单独的数据层应用程序提供使用率数据、CPU 使用率历史数据、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 可以在数据层应用程序级别为 CPU 使用率以及数据库数据文件和日志文件控制策略阈值。 您还可以查看各数据层应用程序的属性详细信息。  
@@ -76,17 +76,17 @@ ms.locfileid: "48073289"
   
 -   部署日期  
   
--   可信：（True 或 False）  
+-   高信度：（true 或 False）  
   
 -   排序规则  
   
 -   兼容级别：（例如 Version100）  
   
--   启用加密：（True 或 False）  
+-   启用加密：（true 或 False）  
   
--   恢复模式：（简单、完全或大容量日志记录）  
+-   恢复模式：（简单、 完整或大容量日志）  
   
--   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+-   上次报告的时间：此列显示 UCP 本地日期和时间使用 datetime 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
  “CPU 使用率”选项卡  
  “CPU 使用率”选项卡为数据层应用程序和计算机 CPU 使用率显示历史数据的并排图形。  
@@ -104,7 +104,7 @@ ms.locfileid: "48073289"
 -   1 年，以 1 个月间隔显示。  
   
  “存储使用率”选项卡  
- “存储使用率”选项卡具有一个树视图，它显示属于列表视图中选定数据层应用程序的数据库文件和日志文件的存储使用率详细信息。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+ “存储使用率”选项卡具有一个树视图，它显示属于列表视图中选定数据层应用程序的数据库文件和日志文件的存储使用率详细信息。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
  显示可按文件组或按卷分组。 若要使用文件组树视图，请在 **“文件分组依据:”** 选择中选择 **“文件组”** 单选按钮。  
   
@@ -153,17 +153,17 @@ ms.locfileid: "48073289"
   
 -   部署日期  
   
--   可信：（True 或 False）  
+-   高信度：（true 或 False）  
   
 -   排序规则  
   
 -   兼容级别：（例如 Version100）  
   
--   启用加密：（True 或 False）  
+-   启用加密：（true 或 False）  
   
--   恢复模式：（简单、完全或大容量日志记录）  
+-   恢复模式：（简单、 完整或大容量日志）  
   
--   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+-   上次报告的时间：此列显示 UCP 本地日期和时间使用 datetime 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
 ## <a name="see-also"></a>请参阅  
  [托管实例详细信息（SQL Server 实用工具）](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

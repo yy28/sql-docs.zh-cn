@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.validateandresynch.f1
@@ -15,12 +14,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f561cba91981d1b435fab07dcf746f55e30b44d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85eb91717bba1642270d0851a4a11917d8c40051
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131087"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770739"
 ---
 # <a name="validate-subscription"></a>验证单个订阅
   可以使用 **“验证单个订阅”** 对话框，指定在下次运行订阅的合并代理时应对针对合并发布的订阅进行验证。 验证的结果显示在复制监视器中。 有关详细信息，请参阅 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  

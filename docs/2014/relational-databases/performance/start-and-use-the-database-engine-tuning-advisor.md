@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -20,18 +19,18 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097817"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356385"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](database-engine-tuning-advisor.md)。  
   
 ##  <a name="Initialize"></a> 初始化数据库引擎优化顾问  
- 第一次使用时，作为 **sysadmin** 固定服务器角色成员的用户必须初始化数据库引擎优化顾问。 这是因为必须在创建多个系统表`msdb`数据库才能支持优化操作。 如果用户是 **db_owner** 固定数据库角色的成员，初始化还可以使他们能够优化数据库（他们拥有的数据库）中的表的工作负荷。  
+ 第一次使用时，作为 **sysadmin** 固定服务器角色成员的用户必须初始化数据库引擎优化顾问。 这是因为必须在 `msdb` 数据库中创建多个系统表才能支持优化操作。 如果用户是 **db_owner** 固定数据库角色的成员，初始化还可以使他们能够优化数据库（他们拥有的数据库）中的表的工作负荷。  
   
  具有系统管理员权限的用户必须执行下列操作之一：  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48097817"
 >  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。  
   
 ###  <a name="dta"></a> 使用 dta 实用工具  
- [dta 实用工具](../../tools/dta/dta-utility.md) 提供了一个命令提示符可执行文件，可以用来优化数据库。 该实用工具使您能够在批处理文件和脚本中使用数据库引擎优化顾问的功能。 **dta** 实用工具使用计划缓存项、跟踪文件、跟踪表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本作为工作负荷。 它还将使用符合数据库引擎优化顾问 XML 架构的 XML 输入，有关该架构的详细信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?linkid=43100)。  
+ [dta 实用工具](../../tools/dta/dta-utility.md) 提供了一个命令提示符可执行文件，可以用来优化数据库。 该实用工具使您能够在批处理文件和脚本中使用数据库引擎优化顾问的功能。 **dta** 实用工具使用计划缓存项、跟踪文件、跟踪表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本作为工作负荷。 它还将使用符合数据库引擎优化顾问 XML 架构的 XML 输入，有关该架构的详细信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100)。  
   
  在使用 **dta** 实用工具开始优化工作负荷之前，请考虑下列事项：  
   
@@ -235,16 +234,16 @@ ms.locfileid: "48097817"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  若要修改用于分析的事件数，指定 **–n** 选项。 以下示例将缓存项数提高到 2,000。  
+2.  若要修改用于分析的事件数，请指定“–n”选项。 以下示例将缓存项数提高到 2,000。  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  若要分析实例中的所有数据库的事件，请指定 **-ipf** 选项。  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>使用工作负荷和 dta 实用工具的默认设置优化数据库  
@@ -303,7 +302,7 @@ ms.locfileid: "48097817"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- 此 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 网站 [上也在线提供了](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)优化顾问 XML 架构。  
+ 此 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 网站 [上也在线提供了](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)优化顾问 XML 架构。  
   
  单击此 URL 可打开一个包含许多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 架构的页面。 向下滚动页面，直至找到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问所在的行。  
   
@@ -444,7 +443,7 @@ database_name.owner_name.table_name
  只包括添加索引视图建议。 不会为聚集和非聚集索引提供建议。  
   
  **包括筛选的索引**  
- 包括用来添加筛选索引的建议。 只有在选择了下列物理设计结构之一时，此选项才可用： **“索引和索引视图”**、 **“索引”** 或 **“非聚集索引”**。  
+ 包括用来添加筛选索引的建议。 此选项才可用，如果你选择下列物理设计结构之一：**索引和索引的视图**，**索引**，或**非聚集索引**。  
   
  **“索引”**  
  只包括添加聚集和非聚集索引建议。 不会为索引视图提供建议。  

@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac31a6f55e365a208bd2a4d3d8f6690693775a0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 603eb8682b69a5f2abc3cd0f46adbd735de05170
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780230"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591371"
 ---
 # <a name="diagnostic-records-and-fields"></a>诊断记录和字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47780230"
   
  状态记录中的字段包含关于 ODBC 驱动程序管理器、驱动程序或数据源返回的特定错误或警告的信息，包括 SQLSTATE、本机错误号、诊断消息、列号和行号。 仅当函数返回 SQL_ERROR, SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA 或 SQL_STILL_EXECUTING 时，才会创建状态记录。 状态记录中字段的完整列表，请参阅**SQLGetDiagField**。  
   
- **SQLGetDiagRec**检索一条诊断记录及其 ODBC SQLSTATE、 本机错误号和诊断消息字段。 此功能是类似于 ODBC 2。*x * * * SQLError** 函数。 在 ODBC 3 最简单的错误处理函数。*x*是反复调用**SQLGetDiagRec**开头*RecNumber*参数设置为 1 和递增*RecNumber*直到 1**SQLGetDiagRec**返回 sql_no_data 为止。 这相当于 ODBC 2。*x*应用程序调用**SQLError**直到其返回 SQL_NO_DATA_FOUND。  
+ **SQLGetDiagRec**检索一条诊断记录及其 ODBC SQLSTATE、 本机错误号和诊断消息字段。 此功能是类似于 ODBC 2。_x_**SQLError**函数。 在 ODBC 3 最简单的错误处理函数。*x*是反复调用**SQLGetDiagRec**开头*RecNumber*参数设置为 1 和递增*RecNumber*直到 1**SQLGetDiagRec**返回 sql_no_data 为止。 这相当于 ODBC 2。*x*应用程序调用**SQLError**直到其返回 SQL_NO_DATA_FOUND。  
   
  ODBC 3。*x*支持更多诊断信息比 ODBC 2。*x*。 此信息存储在其他字段中使用检索到的诊断记录**SQLGetDiagField**。  
   

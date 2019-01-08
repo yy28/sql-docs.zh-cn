@@ -1,5 +1,5 @@
 ---
-title: 任务 6： 将 Excel 源添加到数据流 |Microsoft Docs
+title: 任务 6：将 Excel 源添加到数据流 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071753"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356542"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>任务 6：将 Excel 源添加到数据流
   在本任务中，您向数据流添加 Excel 源，以便从源 Excel 文件读取供应商数据。 Excel 源从 Microsoft Excel 工作簿的工作表或范围中提取数据。 请参阅[Excel 源](../integration-services/data-flow/excel-source.md)主题的更多详细信息。  
@@ -45,9 +45,9 @@ ms.locfileid: "48071753"
   
 9. 单击 **“确定”** 关闭对话框。  
   
-10. 拖放**DQS 清理**转换中**其他转换**上**SSIS 工具箱**到**数据流**选项卡上的**从 Excel 文件读取供应商数据**。 DQS 清理转换将通过 Data Quality Services (DQS) 应用知识库中已批准的规则来更正数据。 此转换在运行时会在 DQS 服务器上创建一个 DQS 清理项目。 请参阅[DQS 清除转换](http://msdn.microsoft.com/library/ee677619.aspx)主题的更多详细信息。  
+10. 拖放**DQS 清理**转换中**其他转换**上**SSIS 工具箱**到**数据流**选项卡上的**从 Excel 文件读取供应商数据**。 DQS 清理转换将通过 Data Quality Services (DQS) 应用知识库中已批准的规则来更正数据。 此转换在运行时会在 DQS 服务器上创建一个 DQS 清理项目。 请参阅[DQS 清除转换](https://msdn.microsoft.com/library/ee677619.aspx)主题的更多详细信息。  
   
 ## <a name="next-step"></a>下一步  
- [任务 7：将 DQS 清理转换添加到数据流](../integration-services/data-flow/data-flow.md)  
+ [任务 7:添加 DQS 清理转换添加到数据流](../integration-services/data-flow/data-flow.md)  
   
   

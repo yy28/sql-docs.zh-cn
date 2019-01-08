@@ -17,12 +17,12 @@ ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 204e5828442182065c8f31c96b2af15eafa31788
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4715b7b0b1cf810a2874e41d1f3ad0bed1a2f59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095953"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356583"
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自定义程序集
   为了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自定义程序集，请将程序集同时放到报表设计器和报表服务器的应用程序文件夹中。 默认情况下，将在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中向自定义程序集授予 `Execution` 权限。 若要向自定义程序集授予超过执行权限的特权，需要对报表服务器编辑 rssrvpolicy.config 配置文件，并对报表设计器预览窗口编辑 rspreviewpolicy.config 配置文件。 也可以选择将自定义程序集安装到全局程序集缓存 (GAC) 中。  
@@ -65,6 +65,6 @@ ms.locfileid: "48095953"
   
 ## <a name="see-also"></a>请参阅  
  [将自定义程序集用于报表](using-custom-assemblies-with-reports.md)   
- [使用程序集和全局程序集缓存](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [使用程序集和全局程序集缓存](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

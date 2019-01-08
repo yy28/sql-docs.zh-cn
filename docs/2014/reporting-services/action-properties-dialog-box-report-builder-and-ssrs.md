@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093627"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370649"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>“操作属性”对话框（报表生成器和 SSRS）
   使用 **“操作”** 对话框可以为支持链接的图表、仪表和地图元素启用超链接选项。 定义一项操作，以便用户单击报表并链接到 URL、同一报表服务器或与报表服务器集成的 SharePoint 站点上的其他报表，或链接到同一报表中的其他位置。  
@@ -61,7 +61,7 @@ ms.locfileid: "48093627"
   
  对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用带有文件扩展名 (.rdl) 的完全限定 URL。 例如， http://*\<SharePointservername > /\<站点 >*/Documents/Report1.rdl。 不支持相对路径。  
   
- 有关详细信息，请参阅 msdn.microsoft.com 上[报表生成器文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[指定外部项的路径（报表生成器和 SSRS）](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 msdn.microsoft.com 上[报表生成器文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[指定外部项的路径（报表生成器和 SSRS）](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
  **使用这些参数运行报表**  
  添加要传递给钻取报表的参数列表。 参数名称必须与为目标报表定义的参数相匹配。 使用 **“添加”** 和 **“删除”** 按钮可添加和删除参数，使用向上键和向下键可对参数列表进行排序。  
@@ -106,6 +106,6 @@ ms.locfileid: "48093627"
  [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)   
  [添加子报表和参数（报表生成器和 SSRS）](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [交互式排序、 文档结构图和链接&#40;报表生成器和 SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [交互式排序、文档结构图和链接（报表生成器和 SSRS）](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

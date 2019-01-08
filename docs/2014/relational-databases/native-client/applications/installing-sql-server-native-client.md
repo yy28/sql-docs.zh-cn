@@ -21,15 +21,15 @@ ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d2d63945b2dd2268f6c8f9447a4e1c2a641f451
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 71438a61dcaec201d0b3ae21eb7e27d979029204
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071771"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363019"
 ---
 # <a name="installing-sql-server-native-client"></a>安装 SQL Server Native Client
-  在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时，将同时安装 Microsoft [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0。 没有 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client。 有关详细信息，请参阅[What's New in SQL Server Native Client](../sql-server-native-client.md)。 你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载 SQL Server Native Client 的最新版本，请转到[Microsoft® SQL Server® 2012 SP2 功能包](http://www.microsoft.com/en-us/download/details.aspx?id=43339)。 如果计算机上还安装了早于 SQL Server 2012 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的以前版本，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 将与早期版本并行安装。  
+  在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时，将同时安装 Microsoft [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0。 没有 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client。 有关详细信息，请参阅[What's New in SQL Server Native Client](../sql-server-native-client.md)。 你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载 SQL Server Native Client 的最新版本，请转到[Microsoft??SQL Server??2012 SP2 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=43339)。 如果计算机上还安装了早于 SQL Server 2012 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的以前版本，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 将与早期版本并行安装。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 文件（sqlncli11.dll、sqlnclir11.rll 和 s11ch_sqlncli.chm）将安装到以下位置：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "49071771"
   
  除了作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程的一部分安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以外，还可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装磁盘的以下位置找到名为 sqlncli.msi 的可再发行安装程序：`%CD%\Setup\`。  
   
- 您可以通过 sqlncli.msi 分发 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 在您部署某一应用程序时，可能需要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 安装多个包（对于用户而言就像是一次安装）的一种方法就是使用链接器和引导程序技术。 有关详细信息，请参阅[为 Visual Studio 2005 创作自定义引导程序包](http://go.microsoft.com/fwlink/?LinkId=115667)和[添加自定义系统必备](http://go.microsoft.com/fwlink/?LinkId=115668)。  
+ 您可以通过 sqlncli.msi 分发 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 在您部署某一应用程序时，可能需要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 安装多个包（对于用户而言就像是一次安装）的一种方法就是使用链接器和引导程序技术。 有关详细信息，请参阅[为 Visual Studio 2005 创作自定义引导程序包](https://go.microsoft.com/fwlink/?LinkId=115667)和[添加自定义系统必备](https://go.microsoft.com/fwlink/?LinkId=115668)。  
   
  sqlncli.msi 的 x64 和 Itanium 版本也会安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 32 位版。 如果您的应用程序所针对的目标平台并非其开发时所使用的平台，则可以从 Microsoft 下载中心下载针对 x64、Itanium 和 x86 的 sqlncli.msi 版本。  
   

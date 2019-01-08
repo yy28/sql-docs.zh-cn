@@ -12,12 +12,12 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0def160bcbff26bb41d6041a244e7be6b25461b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359669"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切换后登录名和作业的管理 (SQL Server)
   在为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署高可用性或灾难恢复解决方案时，重新生成为 **master** 或 **msdb** 数据库中的数据库存储的相关信息十分重要。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  
@@ -30,12 +30,12 @@ ms.locfileid: "48071077"
 ###  <a name="SSauthentication"></a> 使用 SQL Server 身份验证或本地 Windows 登录名的应用程序的登录名  
  如果某一应用程序使用 SQL Server 身份验证或本地 Windows 登录名，则不匹配的 SID 可能会阻止该应用程序的登录名在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例上解析。 不匹配的 SID 将导致该登录名成为远程服务器实例上的孤立用户。 当应用程序连接到发生故障转移后的镜像数据库或日志传送数据库，或是连接到从备份初始化的复制订阅服务器数据库时，就可能会发生此问题。  
   
- 为了避免此问题，我们建议您在设置此类应用程序时采取预防措施，以便使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例承载的数据库。 预防措施包括将登录名和密码从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例传输到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例。 有关如何避免此问题的详细信息，请参阅知识库文章 918992 —[如何在 SQL Server 实例间传输登录名和密码](http://support.microsoft.com/kb/918992/)。  
+ 为了避免此问题，我们建议您在设置此类应用程序时采取预防措施，以便使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例承载的数据库。 预防措施包括将登录名和密码从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例传输到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程实例。 有关如何避免此问题的详细信息，请参阅知识库文章 918992 —[如何在 SQL Server 实例间传输登录名和密码](https://support.microsoft.com/kb/918992/)。  
   
 > [!NOTE]  
 >  这个问题会影响不同计算机上的 Windows 本地帐户。 但是，这个问题不会在域帐户上发生，因为 SID 在每台计算机上都是相同的。  
   
- 有关详细信息，请参阅 [与数据库镜像和日志传送有关的孤立用户](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) （数据库引擎博客）。  
+ 有关详细信息，请参阅 [与数据库镜像和日志传送有关的孤立用户](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) （数据库引擎博客）。  
   
 ## <a name="jobs"></a>中执行计划的管理任务，即“作业”  
  作业（如备份作业）需要特殊考虑。 通常，在角色切换后，数据库所有者或系统管理员必须为新的主/主体数据库重新创建作业。  

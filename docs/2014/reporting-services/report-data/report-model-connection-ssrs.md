@@ -11,12 +11,12 @@ ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 121f1265e567636fb979a84c609861bc0e558dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b1355893e9134723e9f073327b3da1d4803cf9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359019"
 ---
 # <a name="report-model-connection-ssrs"></a>报表模型连接 (SSRS)
   若要包含来自报表模型的数据，必须拥有一个基于作为数据源的报表模型的数据集。 与其他报表数据源不同，报表模型没有数据扩展插件。 在报表生成器中，您可以浏览到该模型或者从报表服务器直接选择该模型。 在报表设计器中，您指定指向报表模型的 URL。  
@@ -49,7 +49,7 @@ ms.locfileid: "48119767"
   
  报表参数是用可能需要修改的默认属性值创建的。 默认情况下，每个报表参数的数据类型均为 **Text**。 如果基础数据属于其他数据类型，则必须更改参数的数据类型。  
   
- 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
   
@@ -84,7 +84,7 @@ ms.locfileid: "48119767"
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
   

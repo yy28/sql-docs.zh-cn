@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cc28e7645732d46bd9cf62eba049fbc7dd48ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a84154aa1ea11ea432db46ad5b2a04c76dd6230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215267"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372901"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
   在“脚本任务编辑器”中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
@@ -212,7 +210,7 @@ To open Help, press F1.
   
  下表列出了 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的主要公共成员，该类通过全局 `Dts` 对象向脚本任务代码公开。 本节中的主题详细讨论这些成员的使用。  
   
-|成员|用途|  
+|成员|目标|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|提供对包中定义的连接管理器的访问。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|提供事件接口，使脚本任务能够引发错误、警告和信息性消息。|  
@@ -245,9 +243,9 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>外部资源  
   
--   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](http://go.microsoft.com/fwlink/?LinkId=215661)。  
+-   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](https://go.microsoft.com/fwlink/?LinkId=215661)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 有关最新的下载、 文章、 示例和视频[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及从社区获得所选的解决方案访问[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的页面：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)   

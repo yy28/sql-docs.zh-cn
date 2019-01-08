@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c793124ad2bf503a231d46335aa06be0fa2a872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49f6b4ae3ec88339927f083b58e016dbc38639b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370419"
 ---
 # <a name="building-packages-programmatically"></a>以编程方式生成包
   如果您需要动态创建包，或需要在开发环境之外管理和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，则可以采用编程方式对包进行操作。 如果采用这种方法，则有一系列选择：  
@@ -93,11 +91,11 @@ ms.locfileid: "48162077"
   
 ## <a name="external-resources"></a>外部资源  
   
--   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=131204)  
+-   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
--   blogs.msdn.com 上的博客文章[自定义扩展插件性能探查](http://go.microsoft.com/fwlink/?LinkId=238831)  
+-   blogs.msdn.com 上的博客文章[自定义扩展插件性能探查](https://go.microsoft.com/fwlink/?LinkId=238831)  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

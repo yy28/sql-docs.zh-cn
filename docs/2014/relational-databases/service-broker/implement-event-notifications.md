@@ -14,12 +14,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d46a1874c530020f815d2854b4524dfb201d598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124427"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353763"
 ---
 # <a name="implement-event-notifications"></a>实现事件通知
   若要实现事件通知，必须先创建目标服务以接收事件通知，然后再创建事件通知。  
@@ -31,7 +31,7 @@ ms.locfileid: "48124427"
  无需创建 [!INCLUDE[ssSB](../../includes/sssb-md.md)]启动服务，因为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包含以下特定的事件通知消息类型和约定：  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  接收事件通知的目标服务必须使用此预先存在的约定。  
@@ -41,7 +41,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  创建队列以接收消息。  
   
     > [!NOTE]  
-    >  队列接收下列消息类型： `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
+    >  队列接收下列消息类型： `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
   
 2.  在引用事件通知约定的队列上创建服务。  
   
@@ -58,7 +58,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  在此情况下，事件通知会引发两次：一次是在 CREATE_SCHEMA 事件发生时，另一次是在 CREATE_TABLE 事件发生时。 建议您避免针对 CREATE_SCHEMA 事件和任何相应 CREATE SCHEMA 定义的 <schema_element> 文本创建事件通知，也不要将逻辑置入应用程序中以免捕获不需要的事件数据。  
+>  在这种情况下，事件通知将引发两次：CREATE_SCHEMA 事件发生时，一次和 CREATE_TABLE 事件发生时再次。 建议您避免针对 CREATE_SCHEMA 事件和任何相应 CREATE SCHEMA 定义的 <schema_element> 文本创建事件通知，也不要将逻辑置入应用程序中以免捕获不需要的事件数据。  
   
  **创建事件通知**  
   

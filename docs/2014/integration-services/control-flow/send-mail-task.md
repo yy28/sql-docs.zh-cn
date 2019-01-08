@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
@@ -19,12 +18,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 799fe96b22881af08f1c94b10b44bd0038fa78a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1bcb08da6b28555502bb39658fb2f1fcbacb3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064817"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354284"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -70,9 +69,9 @@ ms.locfileid: "48064817"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [发送邮件任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [发送邮件任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [发送邮件任务编辑器&#40;邮件页&#41;](../send-mail-task-editor-mail-page.md)  
+-   [发送邮件任务编辑器（“邮件”页）](../send-mail-task-editor-mail-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48064817"
   
 ## <a name="related-content"></a>相关内容  
   
--   shareourideas.com 上的技术文章 [如何在 C# 中发送具有传递通知的电子邮件](http://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
+-   shareourideas.com 上的技术文章 [如何在 C# 中发送具有传递通知的电子邮件](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 任务](integration-services-tasks.md)   

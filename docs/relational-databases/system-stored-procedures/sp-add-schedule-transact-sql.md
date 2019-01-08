@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837755"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591481"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'**_schedule_name_  
  计划的名称。 *schedule_name*是**sysname**，无默认值。  
   
  [  **@enabled =** ]*启用*  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@active_end_time =** ] *active_end_time*  
  之间的任何日期时间*active_start_date*并*active_end_date*结束执行作业。 *active_end_time*是**int**，默认值为**235959**，指示 11:59:59 PM 并且必须使用 HHMMSS 格式输入。  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_  
  拥有该计划的服务器主体的名称。 *owner_login_name*是**sysname**，默认值为 NULL，指示计划是否归创建者。  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _schedule_uid_**输出**  
  计划的唯一标识符。 *schedule_uid*类型的变量**uniqueidentifier**。  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**=] _schedule_id_**输出**  
  计划的标识符。 *schedule_id*类型的变量**int**。  
   
  [ **@originating_server**= ] *server_name*  
@@ -151,7 +151,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

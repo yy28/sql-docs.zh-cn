@@ -12,15 +12,15 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fbca94db76fb0b3df636f3681dc01b0ef51571cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183667"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364299"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
-  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户。  
   
  审核由零个或多个审核操作项组成，这些操作项会记录到审核“ 目标”。 审核目标可以是二进制文件、Windows 应用程序事件日志或 Windows 安全事件日志。 发送到目标的记录可以包含下表中介绍的元素。  
   
@@ -28,10 +28,10 @@ ms.locfileid: "48183667"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|触发可审核操作的日期/时间。|`datetime2`|用户帐户控制|  
 |**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|`int`|用户帐户控制|  
-|**action_id**|操作的 ID<br /><br /> 提示：若要将 **action_id** 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|`varchar(4)`|用户帐户控制|  
-|**succeeded**|指示触发事件的操作是否成功|`bit` – 1 = success,0 = Fail|用户帐户控制|  
+|**action_id**|操作的 ID<br /><br /> 提示：若要使用**action_id**作为谓词，它必须将字符串转换，为数字值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|`varchar(4)`|用户帐户控制|  
+|**succeeded**|指示触发事件的操作是否成功|`bit` -1 = success,0 = Fail|用户帐户控制|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|`bigint`|否|  
-|**is_column_permission**|指示列级别权限的标志|`bit` – 1 = true，0 = False|否|  
+|**is_column_permission**|指示列级别权限的标志|`bit` -1 = true，0 = False|否|  
 |**session_id**|发生该事件的会话的 ID。|`int`|用户帐户控制|  
 |**server_principal_id**|在其中执行操作的登录上下文 ID。|`int`|用户帐户控制|  
 |**database_principal_id**|在其中执行操作的数据库用户上下文 ID。|`int`|否|  

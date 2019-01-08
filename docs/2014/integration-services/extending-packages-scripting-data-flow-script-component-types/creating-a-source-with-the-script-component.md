@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce31c50c613809ba865e4ec28b5712cd8b67ac88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 688c62101d7831966b8c4c7a96d232272c3329de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197287"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375209"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的源组件用于从数据源加载数据以传递到下游转换和目标。 通常通过现有连接管理器连接数据源。  
@@ -104,7 +102,7 @@ ms.locfileid: "48197287"
   
 1.  重写 `AcquireConnections` 方法以连接外部数据源。 从连接管理器中提取连接对象或者需要的连接信息。  
   
-2.  如果可同时加载所有源数据，请重写 `PreExecute` 方法以加载数据。 例如，可以对连接到 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接执行 `SqlCommand`，然后同时将所有源数据加载到 `SqlDataReader` 中。 如果必须每次加载一行源数据（例如，读取文本文件时），则可在 `CreateNewOutputRows` 中遍历行时加载数据。  
+2.  如果可同时加载所有源数据，请重写 `PreExecute` 方法以加载数据。 例如，可以对连接到 `SqlCommand` 数据库的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后同时将所有源数据加载到 `SqlDataReader` 中。 如果必须每次加载一行源数据（例如，读取文本文件时），则可在 `CreateNewOutputRows` 中遍历行时加载数据。  
   
 3.  使用重写的 `CreateNewOutputRows` 方法将新行添加到空的输出缓冲区中，然后在新输出行的每列中填充值。 使用每个输出缓冲区的 `AddRow` 方法来添加空的新行，然后设置每列的值。 通常，从外部源所加载的列复制值。  
   
@@ -136,7 +134,7 @@ ms.locfileid: "48197287"
   
 5.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”。  
   
-6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列。 然后将源组件连接到目标。 （可以将源直接连接到目标，而不经任何转换。）在 `AdventureWorks` 数据库中运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以创建目标表：  
+6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列。 然后将源组件连接到目标。 （可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -269,7 +267,7 @@ ms.locfileid: "48197287"
   
 6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”。  
   
-7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （可以将源直接连接到目标，而不经任何转换。）在 `AdventureWorks` 数据库中运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以创建目标表：  
+7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -388,7 +386,7 @@ ms.locfileid: "48197287"
     }  
     ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   

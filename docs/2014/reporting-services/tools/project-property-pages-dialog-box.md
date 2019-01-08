@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122367"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589621"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
-  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“*\<报表项目名称>*属性”。  
+  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“\<报表项目名称>属性”。  
   
  定义配置属性后，可以从位于工具栏上的“解决方案配置”下拉列表中选择配置。  
   
 ## <a name="options"></a>选项  
  **Configuration**  
- 选择要编辑的配置。 最初，可使用以下配置： **Debug**、 **DebugLocal**和 **Release**。 首先显示活动配置，例如 **Active(Debug)**。  
+ 选择要编辑的配置。 最初，并提供以下配置：**调试**， **DebugLocal**，和**发行**。 首先显示活动配置，例如 **Active(Debug)**。  
   
  若要同时查看多个配置的属性，请选择 **“所有配置”** 或 **“多个配置”**。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48122367"
 ## <a name="see-also"></a>请参阅  
  [发布报表](../publish-reports.md)   
  [将报表发布到 SharePoint 库](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [设置部署属性&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [设置部署属性 (Reporting Services)](set-deployment-properties-reporting-services.md)   
  [报表设计器的 F1 帮助](report-designer-f1-help.md)  
   
   

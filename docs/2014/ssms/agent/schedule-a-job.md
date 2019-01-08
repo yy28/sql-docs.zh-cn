@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - scheduling jobs [SQL Server]
@@ -14,19 +14,19 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9aa4184094b29fdd69e875665df06e6d2f11d141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abb84377c48778d0c7244c13620fe192b5421ad6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098557"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369329"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   本主题介绍如何安排 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划。  
   
 -   **开始之前：**   
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要安排作业计划，可使用：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48098557"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Security"></a> 安全性  
- 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)。  
+ 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48098557"
   
 #### <a name="to-schedule-a-job"></a>安排作业计划  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -112,6 +112,6 @@ ms.locfileid: "48098557"
  有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)并[sp_attach_schedule &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)。  
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
- 使用`JobSchedule`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。 有关详细信息，请参阅[SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobSchedule` 类。 有关详细信息，请参阅[SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   
   

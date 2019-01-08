@@ -11,15 +11,15 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358149"
 ---
 # <a name="report-builder-ssrs"></a>报表生成器 (SSRS)
-  报表生成器是一种报表创作环境的业务用户更愿意[!INCLUDE[msCoName](../../includes/msconame-md.md)]Office 环境。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。  
+  Report Builder 是一种报表创作环境，适用于喜欢在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 环境下工作的业务用户。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。  
   
 ## <a name="benefits-of-report-builder"></a>报表生成器的优点  
  通过报表生成器，您可以：  
@@ -42,7 +42,7 @@ ms.locfileid: "48117487"
   
 -   将您的报表和相关项导出到 SharePoint 库、报表服务器或您的本地计算机。  
   
- 报表生成器和报表设计器共享许多功能。 有关报表生成器的详细信息，请参阅[报表生成器文档](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 报表生成器和报表设计器共享许多功能。 有关报表生成器的详细信息，请参阅[报表生成器文档](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
   
 ## <a name="see-also"></a>请参阅  
  [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)   

@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145215"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368507"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用于 Analysis Services 连接的数据提供程序
   Analysis Services 为服务器和数据访问提供了三个数据访问接口。 连接到 Analysis Services 的所有应用程序均使用以下访问接口之一来进行数据访问操作。 ADOMD.NET 和 Analysis Services 管理对象 (AMO) 这两个访问接口为托管数据访问接口。 Analysis Services OLE DB 访问接口 (MSOLAP DLL) 为本地数据访问接口。  
@@ -44,7 +44,7 @@ ms.locfileid: "50145215"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 初始版本的主工作版本号为 12.0.2000.9。  
   
- 有关如何获取版本和构建信息的详细信息，请参阅 [如何确定 SQL Server 及其组件的版本和版本类别](http://support.microsoft.com/kb/321185)。  
+ 有关如何获取版本和构建信息的详细信息，请参阅 [如何确定 SQL Server 及其组件的版本和版本类别](https://support.microsoft.com/kb/321185)。  
   
 ##  <a name="bkmk_LibUpdate"></a> 如何确定 Analysis Services 数据访问接口的版本  
  数据访问接口随 Analysis Services 安装，还可以由例行连接到 Analysis Services 数据库的客户端应用程序（如 Excel）安装。  
@@ -74,7 +74,7 @@ ms.locfileid: "50145215"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>在下载站点上查找数据访问接口  
   
-1.  转到 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?LinkID=296473)。  
+1.  转到 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkID=296473)。  
   
 2.  展开 **“安装说明”**。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50145215"
   
  MSOLAP130.dll 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中附带的 Analysis Services OLE DB 提供程序版本。 其他最近早期版本有 MSOLAP10.dll（对于 SQL Server 2008 和 2008 R2）和 MSOLAP90.dll（对于 SQL Server 2005）。  
   
- OLE DB 访问接口经常在连接字符串上指定。 Analysis Services 连接字符串使用不同的命名法来指代 OLE DB 提供程序： MSOLAP。\<版本 >.dll  
+ OLE DB 访问接口经常在连接字符串上指定。 Analysis Services 连接字符串使用不同的命名法来指代 OLE DB 访问接口：MSOLAP。\<版本 >.dll  
   
  MSOLAP.5.dll 是随 Excel 2013 安装的当前 Analysis Services OLE DB 访问接口。 以前的版本（如 MSOLAP.4.dll 或 MSOLAP.3.dll）经常可在运行早期 Excel 版本的工作站上找到。 一些 Analysis Services 功能（如 PowerPivot 外接程序）需要特定版本的 OLE DB 访问接口。 有关详细信息，请参阅[连接字符串属性 (Analysis Services)](connection-string-properties-analysis-services.md)。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50145215"
   
  有关以编程方式连接的详细信息，请参阅 [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到 Analysis Services](connect-to-analysis-services.md)  
   
   

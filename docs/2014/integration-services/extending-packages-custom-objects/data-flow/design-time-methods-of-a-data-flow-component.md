@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,12 +19,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b39095b87737fa8d13e665bf19a38e90861576d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24debd25c95242ae78142e1de597b2b5b632c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185587"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354771"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>数据流组件的设计时方法
   在执行前，称数据流任务处于设计时状态，因为它将接受增量更改。 这些更改可以包括添加或删除组件、添加或删除连接组件的路径对象以及更改组件的元数据。 出现元数据更改时，组件可监视这些更改并对这些更改作出响应。 例如，组件可以禁止某些更改或为响应某一更改而进行其他更改。 在设计时，设计器通过设计时 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 接口与组件进行交互。  
@@ -102,7 +100,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- 有关详细信息，请参阅 [MSDN 库](http://go.microsoft.com/fwlink/?LinkId=7022)中的“通用类型转换”和“实现类型转换器”。  
+ 有关详细信息，请参阅 [MSDN 库](https://go.microsoft.com/fwlink/?LinkId=7022)中的“通用类型转换”和“实现类型转换器”。  
   
  可使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 属性指定自定义属性的值的自定义编辑器对话框，如下列示例中所示。 首先，如果无法找到能够满足您需要的现有 UI 类型编辑器，则必须创建从 `System.Drawing.Design.UITypeEditor` 继承的自定义属性编辑器。  
   
@@ -136,9 +134,9 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- 有关详细信息，请参阅 [MSDN 库](http://go.microsoft.com/fwlink/?LinkId=7022)中的“实现 UI 类型编辑器”。  
+ 有关详细信息，请参阅 [MSDN 库](https://go.microsoft.com/fwlink/?LinkId=7022)中的“实现 UI 类型编辑器”。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [数据流组件的运行时方法](run-time-methods-of-a-data-flow-component.md)  

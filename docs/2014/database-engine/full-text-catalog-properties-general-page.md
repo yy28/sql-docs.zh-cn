@@ -12,22 +12,22 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353585"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
   本节介绍在 **“全文目录属性”** 对话框的 **“常规”** 页上可用的选项和功能。  
   
 > [!NOTE]  
->  有关[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]数据库，全文目录是指一组全文索引的逻辑概念。 全文目录是虚拟对象，不属于任何文件组。  
+>  对于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库，全文目录是表示一组全文索引的逻辑概念。 全文目录是虚拟对象，不属于任何文件组。  
   
 ## <a name="options"></a>选项  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>Properties  
  **默认目录**  
  显示目录是否为数据库的默认目录。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48182767"
   
 -   **正在生成索引**  
   
--   **磁盘已满，已暂停**  
+-   **磁盘已满暂停**  
   
 -   **Change tracking**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48182767"
   
 -   **是**  
   
--   有关标注字符的信息，请参阅[变音标记](http://go.microsoft.com/fwlink/?LinkId=154091)MSN Encarta Encyclopedia 中。  
+-   有关标注字符的信息，请参阅[变音标记](https://go.microsoft.com/fwlink/?LinkId=154091)MSN Encarta Encyclopedia 中。  
   
  **上次填充日期**  
  显示上次填充目录的日期。  

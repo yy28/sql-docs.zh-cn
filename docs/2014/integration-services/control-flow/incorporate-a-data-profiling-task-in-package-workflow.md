@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
@@ -13,12 +12,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 54b106ab3f6609ab40acd8fd054d5f3369711665
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368689"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
   数据事件探查和清除在其早期阶段不适合作为自动过程。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，通常需要对数据事件探查任务的输出进行直观的分析和人为判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  
@@ -161,7 +160,7 @@ ms.locfileid: "49085513"
     Public Class ScriptMain  
   
       Private FILENAME As String = "C:\ TEMP\DataProfile1.xml"  
-      Private PROFILE_NAMESPACE_URI As String = "http://schemas.microsoft.com/DataDebugger/"  
+      Private PROFILE_NAMESPACE_URI As String = "https://schemas.microsoft.com/DataDebugger/"  
       Private NULLCOUNT_XPATH As String = _  
         "/default:DataProfile/default:DataProfileOutput/default:Profiles" & _  
         "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()"  
@@ -216,7 +215,7 @@ ms.locfileid: "49085513"
     {  
   
       private string FILENAME = "C:\\ TEMP\\DataProfile1.xml";  
-      private string PROFILE_NAMESPACE_URI = "http://schemas.microsoft.com/DataDebugger/";  
+      private string PROFILE_NAMESPACE_URI = "https://schemas.microsoft.com/DataDebugger/";  
       private string NULLCOUNT_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()";  
       private string TABLE_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:Table";  
   
@@ -264,8 +263,8 @@ ms.locfileid: "49085513"
   
 8.  关闭脚本开发环境，然后关闭脚本任务编辑器。  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>替代代码 - 从变量读取配置文件输出  
- 上一个过程演示如何从文件加载数据事件探查任务的输出。 不过，还有一种方法是从包变量加载此输出。 若要从变量加载输出，必须对示例代码进行以下更改：  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>替代代码 - 从变量读取配置文件输出  
+ 前面的过程显示如何从文件加载数据事件探查任务的输出。 不过，还有一种方法是从包变量加载此输出。 若要从变量加载输出，必须对示例代码进行以下更改：  
   
 -   调用 `LoadXml` 类的 `XmlDocument` 方法而不是 `Load` 方法。  
   

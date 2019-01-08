@@ -1,29 +1,28 @@
 ---
-title: 步骤 4：添加包配置 | Microsoft Docs
+title: 步骤 4：添加包配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20d4e13b765e58ef5bfd7464bbf46b6106e4f525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364009"
 ---
 # <a name="step-4-adding-package-configurations"></a>步骤 4：添加包配置
   在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了各种配置类型。 您可以将配置存储在环境变量、注册表项、用户定义变量、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表和 XML 文件中。 为了提供更大的灵活性， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持使用间接配置。 这意味着可使用环境变量指定配置的位置，而配置又指定实际值。 Deployment Tutorial 项目中的包使用 XML 配置文件和间接配置的组合。 一个 XML 配置文件可以包括多个属性的配置，并且在适当的时候还可以被多个包引用。 在本教程中，对于每个包都将使用单独的配置文件。  
   
- 配置文件通常包含敏感信息，如连接字符串。 因此，您应该使用访问控制列表 (ACL) 限制对存储这些文件的位置或文件夹的访问，并仅向被允许运行包的用户或帐户授予访问权限。 有关详细信息，请参阅[访问包使用的文件](../../2014/integration-services/access-to-files-used-by-packages.md)。  
+ 配置文件通常包含敏感信息，如连接字符串。 因此，您应该使用访问控制列表 (ACL) 限制对存储这些文件的位置或文件夹的访问，并仅向被允许运行包的用户或帐户授予访问权限。 有关详细信息，请参阅 [访问包使用的文件](../../2014/integration-services/access-to-files-used-by-packages.md)。  
   
  这些包（即 DataTransfer 和 LoadXMLData，在上一任务中已添加到 Deployment Tutorial 项目）需要有配置，才能在部署到目标服务器后成功运行。 若要实现配置，请首先为 XML 配置文件创建间接配置，再创建 XML 配置文件。  
   
@@ -130,12 +129,12 @@ ms.locfileid: "48085387"
 12. 在“包配置管理器”对话框中，验证是否第一个列出“LoadXMLData EV 配置”，第二个列出“LoadXMLData 配置”，然后单击“关闭”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 5：测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [步骤 5:测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
- [包配置](../../2014/integration-services/package-configurations.md)   
+ [“包配置”](../../2014/integration-services/package-configurations.md)   
  [创建包配置](../../2014/integration-services/create-package-configurations.md)   
  [访问包使用的文件](../../2014/integration-services/access-to-files-used-by-packages.md)  
   

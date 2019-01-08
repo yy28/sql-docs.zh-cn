@@ -10,12 +10,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f26049671f6276b125e06355d7fa15bb5b3febea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205277"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369999"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
   本主题讨论的优势和限制`xml`中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并帮助您选择如何存储 XML 数据。  
@@ -33,7 +33,7 @@ ms.locfileid: "48205277"
   
 -   您希望基于数据的结构查询数据或更新部分数据。  
   
- 如果上述条件均不满足，则应使用关系数据模型。 例如，如果你的数据采用 XML 格式，但你的应用程序只使用数据库来存储和检索数据，`[n]varchar(max)`列为所有需要。 将数据存储在 XML 列中还有其他好处， 包括让引擎确定数据格式是否正确或有效，以及支持对 XML 数据进行精细查询和更新。  
+ 如果上述条件均不满足，则应使用关系数据模型。 例如，如果数据的格式为 XML，但是应用程序只使用数据库存储和检索数据，则必须使用 `[n]varchar(max)` 列。 将数据存储在 XML 列中还有其他好处， 包括让引擎确定数据格式是否正确或有效，以及支持对 XML 数据进行精细查询和更新。  
   
 ## <a name="reasons-for-storing-xml-data-in-sql-server"></a>在 SQL Server 中存储 XML 数据的理由  
  下面是一些使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的本机 XML 功能而不是在文件系统中管理 XML 数据的理由：  
@@ -59,9 +59,9 @@ ms.locfileid: "48205277"
   
 -   本机存储，数据类型为 `xml`  
   
-     数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关信息集的详细信息，请访问 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
+     数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关信息集的详细信息，请访问 [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
   
-     对于类型化`xml`数据类型，`xml`数据类型绑定到 XML 架构后, 架构验证信息集 (PSVI) 将类型信息添加到信息集，并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅位于 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) 的 W3C XML 架构规范。  
+     对于类型化`xml`数据类型，`xml`数据类型绑定到 XML 架构后, 架构验证信息集 (PSVI) 将类型信息添加到信息集，并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅位于 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) 的 W3C XML 架构规范。  
   
 -   在 XML 和关系存储之间映射  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48205277"
   
      存储数据的精确副本。 这对于特殊用途的应用（如法律文档）很有用。 大多数应用不需要完全相同的副本，且 XML 内容（InfoSet 保真度）即可满足需要。  
   
- 通常，您必须结合使用这些方法。 例如，你可能想要将 XML 数据存储在`xml`数据类型列，并将属性从其提升到关系列。 或者，可能想要使用映射技术将非递归部分存储中的非 XML 列，仅在将递归部分存储`xml`数据类型列。  
+ 通常，您必须结合使用这些方法。 例如，您可能想要在 `xml` 数据类型列中存储 XML 数据，并将属性从此列提升到关系列。 或者，可能想要使用映射技术将非递归部分存储中的非 XML 列，仅在将递归部分存储`xml`数据类型列。  
   
 ### <a name="choice-of-xml-technology"></a>XML 技术的选择  
  XML 技术（本机 XML 与 XML 视图）的选择通常取决于下列因素：  
@@ -99,7 +99,7 @@ ms.locfileid: "48205277"
  此外，不同的选择具有不同的性能特征。  
   
 ### <a name="native-xml-storage"></a>本机 XML 存储  
- 您可以将 XML 数据存储在`xml`在服务器上的数据类型列。 下列情况下，适于做此选择：  
+ 您可以将 XML 数据存储在服务器中的 `xml` 数据类型列中。 下列情况下，适于做此选择：  
   
 -   您希望使用一种简单的方法将 XML 数据存储在服务器上，同时保留文档顺序和文档结构。  
   
@@ -113,17 +113,17 @@ ms.locfileid: "48205277"
   
  如果您的 XML 文档具有多种结构，或您的 XML 文档符合不同的或复杂的架构，而这些架构很难映射到关系结构，本机 XML 存储很有用。  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>示例：使用 xml 数据类型对 XML 数据进行建模  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>例如：XML 数据使用 xml 数据类型建模  
  例如有一个 XML 格式的产品手册，其中每个主题对应单独的一章，而每章中又包含多节。 一节可以包含多个小节。 因此，\<section> 是一个递归元素。 产品手册包含大量混合内容、关系图和技术材料；数据是半结构化的。 用户可能希望对感兴趣的主题执行上下文搜索，例如，在有关“索引”的章中搜索有关“聚集索引”的节，并查询技术数量。  
   
  适合 XML 文档的存储模型为 `xml` 数据类型列。 这可保留 XML 数据的 InfoSet 内容。 对 XML 列创建索引有利于提高查询性能。  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>示例：保留 XML 数据的精确副本  
- 为了进行说明，假定政府条例要求您保留 XML 文档的精确文本副本。 例如，这些文档可能为签署的文档、法律文档或股票交易单。 你可能想要将文档存储在`[n]varchar(max)`列。  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>例如：保留 XML 数据的精确副本  
+ 为了进行说明，假定政府条例要求您保留 XML 文档的精确文本副本。 例如，这些文档可能为签署的文档、法律文档或股票交易单。 您可能需要将文档存储在 `[n]varchar(max)` 列中。  
   
  对于查询，可以在运行时将数据转换为 `xml` 数据类型并针对此数据执行 Xquery。 运行时转换开销可能很高，尤其是在文档较大的情况下更是如此。 如果要频繁查询，则可以另外将文档存储在 `xml` 数据类型列中，并在从 `[n]varchar(max)` 列返回精确的文档副本时对文档创建索引。  
   
- XML 列可能是计算的列，基于`[n]varchar(max)`列。 但是，不能对计算得出的 XML 列创建 XML 索引，也可以生成 XML 索引`[n]varchar(max)`或`varbinary(max)`列。  
+ XML 列可能为基于 `[n]varchar(max)` 列的计算列。 但是，不能对计算得出的 XML 列创建 XML 索引，也可以生成 XML 索引`[n]varchar(max)`或`varbinary(max)`列。  
   
 ### <a name="xml-view-technology"></a>XML 视图技术  
  通过定义 XML 架构和数据库中的表之间的映射，可以创建持久性数据的“XML 视图”。 通过 XML 视图，可使用 XML 大容量加载来填充基础表。 您可以使用 XPath 1.0 版来查询 XML 视图；这种查询将被转换为针对表的 SQL 查询。 与此类似，更新也会被传播到那些表。  
@@ -140,9 +140,9 @@ ms.locfileid: "48205277"
   
 -   您希望通过 XML 视图来大容量加载 XML 数据，并将其分解到基础表。  
   
- 这方面的例子有，作为用于数据交换和 Web 服务的 XML 公开的关系数据，以及具有固定架构的 XML 数据。 有关详细信息，请参阅 [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174)。  
+ 这方面的例子有，作为用于数据交换和 Web 服务的 XML 公开的关系数据，以及具有固定架构的 XML 数据。 有关详细信息，请参阅 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)。  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>示例：使用带批注的 XML 架构 (AXSD) 对数据进行建模  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>例如：使用带批注的 XML 架构 (AXSD) 的数据建模  
  为了进行说明，假定您具有希望将其作为 XML 处理的关系数据（如客户、订单和行项）。 请使用 AXSD 在关系数据上定义 XML 视图。 通过使用 XML 视图可以将 XML 数据大容量加载到表，以及使用 XML 视图查询和更新关系数据。 如果必须在 SQL 应用程序不间断工作时与其他应用程序交换包含 XML 标记的数据，该模型很有用。  
   
 ### <a name="hybrid-model"></a>混合模型  
@@ -162,11 +162,11 @@ ms.locfileid: "48205277"
 ## <a name="limitations-of-the-xml-data-type"></a>xml 数据类型的限制  
  请注意以下适用于 `xml` 数据类型的一般限制：  
   
--   存储的表示形式`xml`数据类型实例不能超过 2 GB。  
+-   `xml` 数据类型实例所占据的存储空间大小不能超过 2 GB。  
   
 -   不能用作 **sql_variant** 实例的子类型。  
   
--   不支持转换或转换为 `text` 或 `ntext`。 使用`varchar(max)`或`nvarchar(max)`相反。  
+-   不支持转换或转换为 `text` 或 `ntext`。 请改用 `varchar(max)` 或 `nvarchar(max)`。  
   
 -   不能进行比较或排序。 这意味着 `xml` 数据类型不能用在 GROUP BY 语句中。  
   

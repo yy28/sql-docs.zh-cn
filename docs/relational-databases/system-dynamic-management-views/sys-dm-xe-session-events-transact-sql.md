@@ -20,12 +20,12 @@ ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ada8092471c107766881d1cd8b8700b612207ee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2b42eacb645f27ba44b467c842df98e8ca6944a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665506"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785888"
 ---
 # <a name="sysdmxesessionevents-transact-sql"></a>sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,19 +35,19 @@ ms.locfileid: "47665506"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 不可为 null。|  
-|event_name|**nvarchar(60)**|操作绑定到的事件的名称。 不可为 null。|  
+|event_name|**nvarchar(256)**|操作绑定到的事件的名称。 不可为 null。|  
 |event_package_guid|**uniqueidentifier**|包含事件的包的 GUID。 不可为 null。|  
-|event_predicate|**nvarchar(2048)**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
+|event_predicate|**nvarchar(3072)**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|多对一|  
-|sys.dm_xe_session_events.event_package_guid，sys.dm_xe_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
+|sys.dm_xe_session_events.event_package_guid，<br /><br /> sys.dm_xe_session_events.event_name|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多对一|  
   
 ## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

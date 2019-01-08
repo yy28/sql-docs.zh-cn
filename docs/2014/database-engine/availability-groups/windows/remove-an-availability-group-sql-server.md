@@ -15,15 +15,15 @@ ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c815ff9b1c5bb4fb13f622aab2624be9db9f8b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d3ed68462736058ae386d8b5b6ad874f6fde8c0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219747"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362679"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>删除可用性组 (SQL Server)
-  本主题介绍如何使用删除 （删除） AlwaysOn 可用性组[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或在 PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 如果在删除某一可用性组时承载可用性副本之一的服务器实例处于脱机状态，则在联机后，该服务器实例将删除本地可用性副本。 删除可用性组时，将删除任何关联的可用性组侦听器。  
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中删除 AlwaysOn 可用性组。 如果在删除某一可用性组时承载可用性副本之一的服务器实例处于脱机状态，则在联机后，该服务器实例将删除本地可用性副本。 删除可用性组时，将删除任何关联的可用性组侦听器。  
   
  请注意，如果需要，您可以从拥有某一可用性组的正确安全凭据的任何 Windows Server 故障转移群集 (WSFC) 节点删除该可用性组。 因此，在某一可用性组未保留任何可用性副本时，您可以删除该可用性组。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48219747"
   
      [限制和建议](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **删除可用性组，使用：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48219747"
   
 -   如果 Windows Server 故障转移群集 (WSFC) 群集没有仲裁，则避免删除可用性组。 如果在群集缺少仲裁时必须删除可用性组，则不删除群集中存储的元数据可用性组。 在群集重新获得仲裁后，将需要再次删除此可用性组以便将其从 WSFC 群集中删除。  
   
--   在辅助副本上，DROP AVAILABILITY GROUP 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果您从辅助副本中删除该可用性组，则主副本无法确定出现 OFFLINE 状态是因为仲裁丢失、强制故障转移还是 DROP AVAILABILITY GROUP 命令。 主副本将转换为 RESTORING 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）。  
+-   在辅助副本上，DROP AVAILABILITY GROUP 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果您从辅助副本中删除该可用性组，则主副本无法确定出现 OFFLINE 状态是因为仲裁丢失、强制故障转移还是 DROP AVAILABILITY GROUP 命令。 主副本将转换为 RESTORING 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅[工作方式：DROP AVAILABILITY GROUP 行为](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程师博客）。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48219747"
     ```  
   
     > [!NOTE]  
-    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48219747"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）  
+-   [它的工作原理：DROP AVAILABILITY GROUP 行为](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程师博客）  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

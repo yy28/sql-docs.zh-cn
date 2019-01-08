@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 862d07d3a27549f8bb0b45a807d1a04c7b13e364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8ecfff92b5865ebe9bf255f4bcc1b02150cffb31
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659626"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588376"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为当前数据库中当前用户可访问的表值函数所返回的每一列返回一行。  
   
- 若要从此视图中检索信息，请指定完全限定的名称 **INFORMATION_SCHEMA。 * * * view_name*。  
+ 若要从此视图中检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。**_view_name_。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|表值函数的目录或数据库名称。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含表值函数的架构的名称。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含表值函数的架构的名称。<br /><br /> <strong>\*\* 重要\* \*</strong> 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|表值函数的名称。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|列名称。|  
 |**ORDINAL_POSITION**|**int**|列标识号。|  
@@ -57,7 +57,7 @@ ms.locfileid: "51659626"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|始终返回 NULL。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|如果列为字符数据，则返回的排序顺序的唯一名称或**文本**数据类型。 否则，返回 NULL。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|如果此列是别名数据类型，则此列是在其中创建用户定义数据类型的数据库的名称。 否则，返回 NULL。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果列是架构的用户定义数据类型，此列是架构的包含用户定义数据类型的名称。 否则，返回 NULL。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果列是架构的用户定义数据类型，此列是架构的包含用户定义数据类型的名称。 否则，返回 NULL。<br /><br /> <strong>\*\* 重要\* \*</strong> 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**DOMAIN_NAME**|**nvarchar(** 128 **)**|如果列是用户定义数据类型，则此列是该用户定义数据类型的名称。 否则，返回 NULL。|  
   
 ## <a name="see-also"></a>请参阅  

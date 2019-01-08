@@ -20,12 +20,12 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738855"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785918"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "47738855"
  
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|包的名称。 包自身便可显示说明。 不可为 null。|  
+|NAME|**nvarchar(256)**|包的名称。 包自身便可显示说明。 不可为 null。|  
 |guid|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
-|description|**nvarchar(256)**|包说明。 descriptionis 由包的作者设置，不可为 null。|  
+|description|**nvarchar(3072)**|包说明。 descriptionis 由包的作者设置，不可为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此包可能具有的所有功能的列表。 可以为 Null。|  
-|module_guid|**uniqueidentifier**|公开此包的模块的 GUID。 不可为 null。|  
+|module_guid|**nvarchar(60)**|公开此包的模块的 GUID。 不可为 null。|  
 |module_address|**varbinary(8)**|用于加载包含此包的模块的基址。 单个模块可以公开多个包。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="remarks"></a>备注  
@@ -55,7 +55,7 @@ ms.locfileid: "47738855"
   
 ||||  
 |-|-|-|  
-|从|若要|关系|  
+|From|若要|关系|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多对一|  
   
 ## <a name="see-also"></a>另请参阅  

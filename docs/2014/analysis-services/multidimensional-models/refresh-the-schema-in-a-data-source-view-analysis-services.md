@@ -15,12 +15,12 @@ ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ec2b3a48dc76e4dd1d56128933841cdb7699996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530516"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>刷新数据源视图中的架构 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 项目或数据库中定义数据源视图 (DSV) 后，基础数据源中的架构可能会更改。 无法在开发项目中自动检测或更新这些更改。 此外，如果您已将项目部署到服务器，当 Analysis Services 不再连接到外部数据源时，现在会遇到处理错误。  
@@ -42,7 +42,7 @@ ms.locfileid: "48048797"
   
 -   添加新的唯一约束。 如果 DSV 中的表存在逻辑主键，那么，在数据源的表中添加物理键时，逻辑键将被删除并由物理键替换。  
   
- 刷新永远不会将新表添加到 DSV 中。 如果要添加新表，必须手动添加。 有关详细信息，请参阅[在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)。  
+ 刷新永远不会将新表添加到 DSV 中。 如果要添加新表，必须手动添加。 有关详细信息，请参阅 [在数据源视图中添加或删除表或视图 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)中的解决方案资源管理器运行数据源视图向导。  
   
 ##  <a name="bkmk_DSVrefresh"></a> 在 SQL Server Data Tools 中刷新 DSV  
  若要刷新 DSV，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中双击该 DSV，然后单击“刷新数据源视图”按钮或从“数据源视图”菜单选择“刷新”。  
@@ -53,7 +53,7 @@ ms.locfileid: "48048797"
   
  该对话框将列出要在 DSV 中删除或添加的表、列、约束和关系。 该报表还将列出无法准备好的任意命名查询或计算。 受影响的对象将列在树视图中，其中的列和关系嵌套在表下面，并且指示出每个对象的更改类型（删除或添加）。 标准数据源视图对象图标指示受影响的对象类型。  
   
- 刷新操作完全基于基础对象的名称进行。 因此，如果在数据源中重命名了一个基础对象，则数据源视图设计器将把重命名对象视为两个单独的操作 - 删除和添加。 在这种情况下，必须手动将重命名后的对象重新添加到数据源视图中。 您还可能必须重新创建关系或逻辑主键。  
+ 刷新操作完全基于基础对象的名称进行。 因此，如果数据源中重命名的基础对象，数据源视图设计器将重命名的对象视为两个单独操作的删除和添加。 在这种情况下，必须手动将重命名后的对象重新添加到数据源视图中。 您还可能必须重新创建关系或逻辑主键。  
   
 > [!IMPORTANT]  
 >  如果已经知道已在数据源中重命名了表，则可以在刷新数据源视图之前，使用 **“替换表”** 命令将表替换为重命名后的表。 有关详细信息，请参阅[在数据源视图中替换表或命名查询 (Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)。  

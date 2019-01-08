@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905977"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374319"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 预留。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
@@ -32,7 +32,7 @@ ms.locfileid: "48905977"
  安装程序和此工具都还会为报表服务器服务分配对 URL 的权限、检查有无重复实例并向 HTTP.SYS 添加 URL 预留。 切勿使用 HttpCfg.exe 或其他工具直接创建或修改 Reporting Services URL 预留。 如果您跳过了某一步骤或设置了无效的值，您将会遇到可能难以诊断或修复的问题。  
   
 > [!NOTE]  
->  HTTP.SYS 是一个操作系统组件，用于侦听网络请求并将它们路由至请求队列。 在此版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，HTTP.SYS 为报表服务器 Web 服务和报表管理器建立和维护请求队列。 Internet Information Services (IIS) 不再用于承载或访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有关 HTTP.SYS 功能的详细信息，请参阅 MSDN 上的 [HTTP Server API](http://go.microsoft.com/fwlink/?LinkId=92652) （HTTP 服务器 API）。  
+>  HTTP.SYS 是一个操作系统组件，用于侦听网络请求并将它们路由至请求队列。 在此版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，HTTP.SYS 为报表服务器 Web 服务和报表管理器建立和维护请求队列。 Internet Information Services (IIS) 不再用于承载或访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有关 HTTP.SYS 功能的详细信息，请参阅 MSDN 上的 [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) （HTTP 服务器 API）。  
   
 ##  <a name="ReportingServicesURLs"></a> Reporting Services 中的 URL  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中，可以通过 URL 访问以下工具、应用程序和项：  
@@ -51,7 +51,7 @@ ms.locfileid: "48905977"
 >  本主题不讨论对报表生成器或存储在报表服务器上的特定报表的 URL 访问。 有关通过 URL 对这些项进行访问的详细信息，请参阅 [联机丛书中的](../access-report-server-items-using-url-access.md) 使用 URL 访问报表服务器项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLreservation"></a> URL 预留和注册  
- URL 预留定义了可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在 HTTP.SYS 中为报表服务器 Web 服务和报表管理器保留一个或多个 URL，然后在服务启动时注册它们。 指向报表生成器和报表的 URL 基于报表服务器 Web 服务 URL 预留。 通过向 URL 追加参数，可以通过 Web 服务打开报表生成器或报表。 预留和注册由 HTTP.SYS 实现。 有关详细信息，请参阅 MSDN 上的 [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653)（命名空间预留、注册和路由）。  
+ URL 预留定义了可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在 HTTP.SYS 中为报表服务器 Web 服务和报表管理器保留一个或多个 URL，然后在服务启动时注册它们。 指向报表生成器和报表的 URL 基于报表服务器 Web 服务 URL 预留。 通过向 URL 追加参数，可以通过 Web 服务打开报表生成器或报表。 预留和注册由 HTTP.SYS 实现。 有关详细信息，请参阅 MSDN 上的 [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653)（命名空间预留、注册和路由）。  
   
  *URL 预留*是指创建指向 Web 应用程序的 URL 端点并将其存储在 HTTP.SYS 中的过程。 HTTP.SYS 是计算机上定义的所有 URL 预留的公共存储库，它定义了一组保证 URL 预留唯一的公共规则。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48905977"
   
  如果停止服务或回收 Web 服务或报表管理器应用程序域，则会撤消注册 URL。 如果在服务正在运行时修改 URL 预留，报表服务器将会立即回收应用程序域，以便可以撤消注册旧的 URL，开始注册新的 URL。  
   
- 下面几个简单的示例说明了 URL 预留的概念以及它与用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL 地址之间的关联。 需要注意的一个关键点是 URL 保留项具有不同的语法比用于访问该应用程序的 URL:  
+ 下面几个简单的示例说明了 URL 预留的概念以及它与用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL 地址之间的关联。 需要注意一个关键点，即 URL 预留与用于访问应用程序的 URL 具有不同的语法：  
   
 |HTTP.SYS 中的 URL 预留|URL|解释|  
 |---------------------------------|---------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 选择用于测试挖掘模型列 |Microsoft 文档
+title: 选择用于测试挖掘模型的列 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bb77d40ee2635d210346e459dcfbd9aed619ed4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bcfe927f3b58787ab316a637d0c1d493f73c104a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511425"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>选择用于测试挖掘模型的列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34016614"
   
  下表介绍了选择在测试中使用的可预测属性时应注意的一些其他事项：  
   
--   某些类型的数据挖掘模型（如神经网络，它能浏览很多属性之间的关系）可以预测多个属性。  
+-   某些类型的数据挖掘模型可以预测多个属性，如神经网络，可以浏览很多属性之间的关系。  
   
--   其他类型的挖掘模型（如聚类分析模型）不必具有可预测属性。 除非聚类分析模型具有可预测属性，否则无法测试它们。  
+-   其他类型的挖掘模型，如聚类分析模型执行操作并不一定具有可预测属性。 除非聚类分析模型具有可预测属性，否则无法测试它们。  
   
 -   若要创建散点图或度量回归模型的准确性，则需选择连续可预测属性作为结果。 在这种情况下，您不能指定目标值。 如果要创建散点图之外的任何内容，则基础挖掘结构列的内容类型还必须为 **“离散”** 或 **“离散化”**。  
   
--   如果选择离散属性作为可预测结果，则还可以指定一个目标值，或者可以将 **“预测值”** 字段留空。 如果包括 **“预测值”**，则图表将只度量模型预测目标值的有效性。 如果不指定目标结果，则会度量模型预测所有结果的准确性。  
+-   如果选择离散属性作为可预测结果，则还可以指定一个目标值，或者可以将 **“预测值”** 字段留空。 如果包括**预测值**，图表将只度量模型的有效性在预测目标值。 如果不指定目标结果，则会度量模型预测所有结果的准确性。  
   
 -   如果要在一个准确性图表中包含多个模型并对它们进行比较，则所有模型都必须使用相同的可预测列。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34016614"
   
 5.  如果希望确定模型的提升情况，则必须从 **“预测值”** 列表为该模型选择要度量的特定结果值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择和映射模型测试数据](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [选择准确性图表类型和设置图表选项](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

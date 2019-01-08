@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8fc6356b4a4325f394324f91e2e7f8e76e30f367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8abad1f3dbeb8a8667999e90de63d80c2328d90c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359459"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>检查包含可疑页的数据库的完整性
   此规则检查数据库状态设置为可疑的用户数据库。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 读取包含 824 错误的数据库页时，该页将被视为可疑，其页 ID 将记录在 msdb 的 suspect_pages 表中，并且包含该页的数据库将设置为可疑。  
@@ -30,7 +30,7 @@ ms.locfileid: "48170577"
   
 -   完成完整的数据库一致性检查 ([DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql))。  
   
--   实现在 [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397)中定义的用户操作。  
+-   实现在 [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397)中定义的用户操作。  
   
 ## <a name="for-more-information"></a>有关详细信息  
  [管理 suspect_pages 表 (SQL Server)](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  
