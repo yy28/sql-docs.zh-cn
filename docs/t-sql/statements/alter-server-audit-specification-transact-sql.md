@@ -20,12 +20,12 @@ ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f8ec3babd503117e70affa28ccd1a123d0f09894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01490d9fe252d17c6d4b25eebd5e160ebe79a33a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752285"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980233"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,11 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  创建服务器审核规范后，具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 权限的主体、sysadmin 帐户或具有对审核的明确访问权的主体即可查看该规范。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个称为 `HIPPA_Audit_Specification` 的服务器审核规范。 它删除了失败登录的审核操作组，为称作 `HIPPA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的数据库对象访问添加了一个审核操作组。  
+ 下面的示例创建一个称为 `HIPAA_Audit_Specification` 的服务器审核规范。 它删除了失败登录的审核操作组，为称作 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 的数据库对象访问添加了一个审核操作组。  
   
 ```  
-ALTER SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     DROP (FAILED_LOGIN_GROUP)  
     ADD (DATABASE_OBJECT_ACCESS_GROUP);  
 GO  
