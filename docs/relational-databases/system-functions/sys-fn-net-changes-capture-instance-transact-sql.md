@@ -21,12 +21,12 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681745"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416318"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  然后将位的标记追加到的结果对于每个参数中标识的列集@update_flag_list。 有关**净更改**包装器，则位标志将始终为 NULL，如果@row_filter_option，它是对包装函数调用中使用是 'all' all with merge'。 如果@row_filter_option设置为全部且具有屏蔽，请，并且 __CDC_OPERATION 是 ' 或 'I'，标志的值也将为 NULL。 如果\__CDC_OPERATION 是 ' UN '，该标志将设置为 1 或 0，具体取决于是否**net**更新操作导致对列的更改。  
   
- 变更数据捕获配置模板“实例化架构的 CDC 包装 TVF”显示如何使用 sp_cdc_generate_wrapper_function 存储过程以获取某个架构的已定义查询函数的所有包装函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](../../ssms/template/template-explorer.md)。  
+ 变更数据捕获配置模板实例化 CDC 架构包装 Tvf 显示了如何使用 sp_cdc_generate_wrapper_function 存储过程来获取所有架构的已定义的查询函数的包装器函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](../../ssms/template/template-explorer.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

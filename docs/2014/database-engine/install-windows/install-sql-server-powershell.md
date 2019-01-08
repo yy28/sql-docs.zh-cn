@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8cd37ca4058fb79eddfa296896c3da230b98789
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018793"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360929"
 ---
 # <a name="install-sql-server-powershell"></a>安装 SQL Server PowerShell
   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序检测到您已选择了包含 PowerShell 组件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，但未安装 Windows PowerShell 2.0，则该安装程序将停止运行。 您必须通过使用 Windows Management Framework 安装 PowerShell，然后重新运行安装程序。  
@@ -35,7 +35,7 @@ ms.locfileid: "51018793"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持从对象资源管理器树启动 Windows PowerShell 会话。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理支持 Windows PowerShell 作业步骤。  
   
- 如果 Windows PowerShell 2.0 尚未安装，或已被卸载，则必须通过以下上的说明安装它[Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214)页。  
+ 如果 Windows PowerShell 2.0 尚未安装，或已被卸载，则必须通过以下上的说明安装它[Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214)页。  
   
  如果在安装程序完成后卸载了 Windows PowerShell，用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能将无法使用。 Windows PowerShell 可由 Windows 用户卸载，某些 Windows 操作系统升级可能会要求卸载 Windows PowerShell。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 功能，您必须通过使用 Windows Management Framework 重新安装 PowerShell 2.0。  
   

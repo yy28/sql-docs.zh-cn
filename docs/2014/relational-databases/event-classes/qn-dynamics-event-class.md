@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a401a38c94df565d2d4369ee6941eaf217e8f0f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214909"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365869"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 事件类
   QN:Dynamics 事件类报告有关 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行以支持查询通知的后台活动的信息。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]中，后台线程监视订阅超时、要激发的挂起订阅和参数表析构。  
@@ -35,7 +34,7 @@ ms.locfileid: "48214909"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|用户帐户控制|  
 |EventClass|`int`|事件类型 = 202。|27|否|  
 |EventSequence|`int`|此事件的序列号。|51|否|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 时钟运行已启动： 指示的后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清理已启动。<br /><br /> 时钟运行已完成： 指示的后台线程[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划过期参数表，清理已完成。<br /><br /> 主清除任务已启动： 指示清除 （垃圾收集） 删除过期的查询通知订阅数据的开始。<br /><br /> 主清除任务已完成： 指示清除 （垃圾收集） 删除过期的查询通知订阅数据的完成时间。<br /><br /> 主清除任务已跳过： 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]未执行清除 （垃圾收集） 删除过期的查询通知订阅数据。|21|用户帐户控制|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 时钟运行已启动：指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]中计划清除过期参数表的后台线程已启动。<br /><br /> 时钟运行已完成：指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]中计划清除过期参数表的后台线程已完成。<br /><br /> 主清除任务已开始：指示清除（垃圾收集）删除过期查询通知订阅数据的开始时间。<br /><br /> 主清除任务已完成：指示清除（垃圾收集）删除过期查询通知订阅数据的完成时间。<br /><br /> 主清除任务已跳过：指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]未执行清除（垃圾收集）以删除过期的查询通知订阅数据。|21|用户帐户控制|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|用户帐户控制|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|用户帐户控制|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|否|  
@@ -48,6 +47,6 @@ ms.locfileid: "48214909"
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果应用程序使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并以 Login2 的身份执行语句，则 SessionLoginName 将显示“Login1”，而 LoginName 将显示“Login2”。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|`int`|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|`ntext`|返回包含特定于此事件的信息的 XML 文档。 此文档符合 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) 页上提供的 XML 架构。|1|用户帐户控制|  
+|TextData|`ntext`|返回包含特定于此事件的信息的 XML 文档。 此文档符合 [SQL Server Query Notification Profiler Event Schema](https://go.microsoft.com/fwlink/?LinkId=63331) 页上提供的 XML 架构。|1|用户帐户控制|  
   
   

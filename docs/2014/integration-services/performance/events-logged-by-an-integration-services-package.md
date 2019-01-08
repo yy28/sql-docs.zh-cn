@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package [Integration Services], events
@@ -14,12 +13,12 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ecc2c837001d5a05339ebe9b7eb3bdc9e6a7055
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38a9660c94f4fc340ab00e1fb0dc83efa0482e0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814299"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包将各种事件消息记入 Windows 应用程序事件日志。 包会在包启动时、包停止时和特定问题出现时记录这些消息。  
@@ -28,7 +27,7 @@ ms.locfileid: "48188027"
   
  有关如何运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的常规信息，请参阅[项目和包的执行](../packages/run-integration-services-ssis-packages.md)。  
   
- 有关如何对运行的包进行故障排除的信息，请参阅[对包执行进行故障排除的工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 有关如何对运行的包进行故障排除的信息，请参阅 [对包执行进行故障排除的工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="messages-about-the-status-of-the-package"></a>有关包状态的消息  
  运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，包会通常会记录有关包的进度和状态的各种消息。 下表列出了这些消息。  
@@ -80,6 +79,6 @@ ms.locfileid: "48188027"
  有关如何实时查看日志项的信息，请参阅[在“日志事件”窗口中查看日志项](../view-log-entries-in-the-log-events-window.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services 服务记录的事件](../service/events-logged-by-the-integration-services-service.md)  
+ [由 Integration Services 服务记录的事件](../service/events-logged-by-the-integration-services-service.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361280"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持混合（键集/动态）游标模型。 如果将该值设置为非 0 值，尝试使用 SQL_ATTR_KEYSET_SIZE 设置键集大小将失败。  
@@ -64,7 +64,7 @@ ms.locfileid: "48208510"
   
 |*ValuePtr*值|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|默认值。 在调用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)，将延迟语句准备，直到**SQLExecute**称为或元属性操作 (**SQLDescribeCol**或**SQLDescribeParam**) 执行。|  
+|SQL_DP_ON|默认值。 在调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)，将延迟语句准备，直到**SQLExecute**称为或元属性操作 (**SQLDescribeCol**或**SQLDescribeParam**) 执行。|  
 |SQL_DP_OFF|准备的语句就立即**SQLPrepare**执行。|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -122,7 +122,7 @@ ms.locfileid: "48208510"
   
  SQL_SOPT_SS_PARAM_FOCUS 的类型为 SQLULEN。  
   
- 默认值为 0，表示这些调用将对与 SQL 语句中的参数标记相对应的参数进行寻址。 当设置为表值参数的参数编号时，这些调用将对该表值参数的列进行寻址。 当设置的值不是表值参数的参数编号时，这些调用将返回错误 IM020：“参数焦点未引用表值参数”。  
+ 默认值为 0，表示这些调用将对与 SQL 语句中的参数标记相对应的参数进行寻址。 当设置为表值参数的参数编号时，这些调用将对该表值参数的列进行寻址。 设置为一个值，不是表值参数的参数编号时，这些调用将返回错误 IM020:"参数焦点不是指表值参数"。  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 属性指定后续目录函数调用的名称范围。 SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。  
@@ -146,7 +146,7 @@ ms.locfileid: "48208510"
  如果的目录函数则当 SQL_SOPT_SS_NAME_SCOPE 具有值而不调用 SQLTables、 SQLColumns 或 SQLPrimaryKeys SQL_SS_NAME_SCOPE_TABLE，将返回 SQL_ERROR。 生成具有 SQLSTATE HY010 和消息“函数序列错误(SQL_SOPT_SS_NAME_SCOPE 未设置为 SQL_SS_NAME_SCOPE_TABLE)”的诊断记录。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLGetStmtAttr 函数](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

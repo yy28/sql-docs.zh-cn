@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673986"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617869"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|表或视图的索引位于对象 ID。|  
 |index_id|**int**|索引的索引 ID。<br /><br /> 0 = 堆。|  
 |partition_number|**int**|所属对象内从 1 开始的分区号；表、视图或索引。<br /><br /> 1 = 未分区的索引或堆。|  
-|index_type_desc|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> 列存储映射索引 （内部）<br /><br /> 列存储 deletebuffer 会完全索引 （内部）<br /><br /> 列存储 DELETEBITMAP 索引 （内部）|  
+|index_type_desc|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列存储映射索引 （内部）<br /><br /> 列存储 deletebuffer 会完全索引 （内部）<br /><br /> 列存储 DELETEBITMAP 索引 （内部）|  
 |hobt_id|**bigint**|堆或 B 树索引或分区的 ID。<br /><br /> 除了返回用户定义的索引的 hobt_id，这还将返回内部的列存储索引的 hobt_id。|  
 |alloc_unit_type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 分配单元包含类型的列中存储的数据**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，并**xml**。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 分配单元包含类型的列中存储的数据**varchar （n)**， **nvarchar(n)**， **varbinary （n)**，和**sql_变体**已推送到行外。|  
 |index_depth|**tinyint**|索引级别数。<br /><br /> 1 = 堆，或 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。|  
@@ -113,7 +113,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|压缩页的数目。<br /><br /> 对于堆，新分配的页未进行 PAGE 压缩。 堆在以下两种特殊情况下进行 PAGE 压缩：大量导入数据时和重新生成堆时。 导致页分配的典型 DML 操作不会进行 PAGE 压缩。 当 compressed_page_count 值增长到超过您所需的阈值时，将重新生成堆。<br /><br /> 对于具有聚集索引的表，compressed_page_count 值表示 PAGE 压缩的效率。|  
 |hobt_id|BIGINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 对于仅限列存储索引，这是跟踪分区内部的列存储数据的行集的 ID。 行集是存储为堆数据或二进制树。 它们具有相同父列存储索引的索引 ID。 有关详细信息，请参阅[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 则为 NULL|  
 |column_store_delete_buffer_state|TINYINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 正在刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
-|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 无效 – 父索引不是列存储索引。<br /><br /> 打开 – deleters 并扫描程序使用此。<br /><br /> 排出 – deleters 排出，但扫描程序仍使用它。<br /><br /> 正在刷新 – 关闭缓冲区和缓冲区中的行是否正写入删除位图。<br /><br /> RETIRING – 中的已关闭的删除缓冲区的行已写入删除位图，但缓冲区已不被截断，因为扫描程序仍在使用它。 新的扫描程序无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 已准备就绪-此删除缓冲区可供使用。|  
+|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 不是有效的父级索引不是列存储索引。<br /><br /> 打开-deleters 并扫描程序使用此。<br /><br /> 排出-deleters 排出，但扫描程序仍使用它。<br /><br /> 正在刷新的缓冲区已关闭，并且缓冲区中的行是否正写入删除位图。<br /><br /> RETIRING-中的已关闭的删除缓冲区的行已写入删除位图，但缓冲区已不被截断，因为扫描程序仍在使用它。 新的扫描程序无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 准备就绪-此删除缓冲区可供使用。|  
   
 ## <a name="remarks"></a>备注  
  sys.dm_db_index_physical_stats 动态管理函数将替换 DBCC SHOWCONTIG 语句。  
@@ -222,7 +222,7 @@ GO
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不返回聚集列存储索引的数据。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要下列权限：  
   
 -   对数据库中的指定对象具有 CONTROL 权限。  

@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe9d1338e3b64bf829eec0be1cf33bee3d8591e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364389"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)
   本主题介绍将日志传送主数据库与其一个或多个辅助数据库一起转换为 AlwaysOn 主数据库和辅助数据库的先决条件。  
@@ -39,7 +39,7 @@ ms.locfileid: "48161937"
 ##  <a name="AGPrereqsRealAddress"></a> 可用性组先决条件  
  若要允许备份作业在可用性组的主副本上运行，请使用下列 AlwaysOn 可用性组备份设置：  
   
-|“属性”|设置|  
+|属性|设置|  
 |--------------|-------------|  
 |可用性组的自动备份首选项|仅在主副本上|  
 |主副本的备份优先级。|>0|  
@@ -66,7 +66,7 @@ ms.locfileid: "48161937"
   
  **详细信息：**  
   
- [将日志传送配置转换为可用性组](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) （SQL Server 博客）  
+ [将日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) （SQL Server 博客）  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **日志传送**  
@@ -93,19 +93,19 @@ ms.locfileid: "48161937"
   
 -   **博客：**  
   
-     [将日志传送配置转换为可用性组](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [将日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [将日志传送主数据库和辅助数据库添加到现有可用性组](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [将日志传送主数据库和辅助数据库添加到现有可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮书：**  
   
-     [迁移指南： 迁移到 AlwaysOn 可用性组从之前组合数据库镜像和部署日志传送](http://msdn.microsoft.com/library/jj635217)  
+     [迁移指南：迁移到 AlwaysOn 可用性组从之前组合数据库镜像和部署日志传送](https://msdn.microsoft.com/library/jj635217)  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   

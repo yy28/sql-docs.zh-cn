@@ -19,12 +19,12 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8429c02d84520524906fb0fbd411ee0a49169815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dcfda333d3381b1a35313c00e6c95173b869c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352491"
 ---
 # <a name="write-enabled-partitions"></a>可写入的分区
   多维数据集中的数据通常为只读数据。 但在某些情况下，可能需要为分区启用写入。 使用可写入的分区，业务用户可以通过更改单元值并分析更改对多维数据集数据所产生的影响来研究方案。 向分区中写入时，客户端应用程序可以记录对分区中的数据所做的更改。 这些更改（称为写回数据）存储在单独的表中，并且不会覆盖度量值组中的任何现有数据。 但是，它们被作为多维数据集数据的一部分合并到了查询结果中。  
@@ -32,7 +32,7 @@ ms.locfileid: "48194637"
  可以对整个多维数据集或仅对多维数据集中的某些分区启用写操作。 启用写操作的维度各不相同但可以互补。 使用可写入的分区，用户可以更新分区单元，而启用写操作的维度则允许用户更新维度成员。 还可以组合使用这两个功能。 例如，启用写操作的多维数据集或可写入的分区可以不必包括任何启用写操作的维度。 **相关的主题：**[Write-Enabled 维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   
 > [!NOTE]  
->  如果要对数据源为 Microsoft Access 数据库的多维数据集启用写操作，则不要在多维数据集及其分区或维度的数据源定义中使用用于 ODBC 驱动程序的 Microsoft OLE DB 访问接口。 但可以使用 Microsoft Jet 4.0 OLE DB 访问接口或包括 Jet 4.0 OLE 的任何 Jet Service Pack 版本。 有关详细信息，请参阅 Microsoft 知识库文章[如何获取 Microsoft Jet 4.0 数据库引擎的最新 service pack](http://support.microsoft.com/?kbid=239114)。  
+>  如果要对数据源为 Microsoft Access 数据库的多维数据集启用写操作，则不要在多维数据集及其分区或维度的数据源定义中使用用于 ODBC 驱动程序的 Microsoft OLE DB 访问接口。 但可以使用 Microsoft Jet 4.0 OLE DB 访问接口或包括 Jet 4.0 OLE 的任何 Jet Service Pack 版本。 有关详细信息，请参阅 Microsoft 知识库文章[如何获取 Microsoft Jet 4.0 数据库引擎的最新 service pack](https://support.microsoft.com/?kbid=239114)。  
   
  只有其所有度量值均使用 `Sum` 聚合函数时，才能对该多维数据集启用写操作。 不能对链接度量值组和本地多维数据集启用写操作。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48194637"
 ## <a name="see-also"></a>请参阅  
  [启用写操作的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [聚合和聚合设计](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [分区&#40;Analysis Services-多维数据&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [分区（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [启用写操作的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

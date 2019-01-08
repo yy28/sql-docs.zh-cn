@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364229"
 ---
 # <a name="set-partition-writeback"></a>设置分区写回
   如果对度量值组执行写启用操作，则最终用户可在浏览多维数据集数据时对其进行更改，所做的更改保存在一个称为“写回表”的单独表中，而不是多维数据集数据或源数据中。 浏览已启用写操作的分区的最终用户将看到对该分区在这个写回表中所做的全部更改的实际结果。  
   
  可以浏览或删除写回数据。 还可以将写回数据转换为分区。 在已启用写操作的分区上，可使用多维数据集角色授予用户和用户组读/写权限，并限制对分区中特定单元或单元组的访问。  
   
- 有关写回的一个简短视频简介，请参阅 [向 Analysis Services 的 Excel 2010 写回](http://go.microsoft.com/fwlink/p/?LinkId=394951)。 关于此功能的更详细探讨，请参阅博客文章系列 [使用 Analysis Services 生成写回应用程序（博客）](http://go.microsoft.com/fwlink/?LinkId=394977)。  
+ 有关写回的一个简短视频简介，请参阅 [向 Analysis Services 的 Excel 2010 写回](https://go.microsoft.com/fwlink/p/?LinkId=394951)。 关于此功能的更详细探讨，请参阅博客文章系列 [使用 Analysis Services 生成写回应用程序（博客）](https://go.microsoft.com/fwlink/?LinkId=394977)。  
   
 > [!NOTE]  
 >  仅对 SQL Server 关系数据库和数据市场支持写回，并且写回仅适用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维模型。  
@@ -54,15 +54,15 @@ ms.locfileid: "48157387"
  可以将分区写回表中的数据转换为分区。 此过程使得写回表成为新分区的事实数据表。  
   
 > [!CAUTION]  
->  不正确地使用分区可导致多维数据集数据不准确。 有关详细信息，请参阅[创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)。  
+>  不正确地使用分区可导致多维数据集数据不准确。 有关详细信息，请参阅 [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)。  
   
  将写回数据表转换为分区还会对分区禁用写功能。 分区单元的所有无限制读/写策略和读/写权限都将禁用，而且最终用户将无法更改显示的多维数据集数据。 （被禁用无限制读/写策略或读/写权限的最终用户仍然能够浏览多维数据集。）读取权限和有条件读取权限不受影响。  
   
  若要将写回数据转换为分区，请使用“转换到分区”对话框，可以通过右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可写入的分区的写回表来访问该对话框。 您将指定分区的名称，并指定是在以后为分区设计聚合，还是在创建分区时为其设计聚合。 若要在选择分区时创建聚合，则必须选择复制现有分区中的聚合设计。 这通常（但不必须）是当前的写回分区。 还可以选择在创建分区时对其进行处理。  
   
 ## <a name="see-also"></a>请参阅  
- [启用写操作的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [启用写回到 OLAP 多维数据集在 Excel 2010 中的单元格级别](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [启用并保护使用 Analysis Services 写回数据输入](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [可写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [在 Excel 2010 中启用以单元级别写回到 OLAP 多维数据集](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [启用 Analysis Services 写回并使用它保护数据项](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

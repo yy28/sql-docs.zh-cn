@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857025"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802498"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [  **@independent_agent=**] **'***independent_agent*****  
  指定是否有用于该发布的独立分发代理。 *independent_agent*是**nvarchar(5)**，默认值为 TRUE。 如果 **，则返回 true**，没有用于此发布的独立分发代理。 如果**false**，每个发布服务器数据库/订阅服务器数据库对一个分发代理。 *independent_agent*是发布的属性，必须具有相同的值，因为它具有发布服务器上。  
   
- [  **@subscription_type=**] **'***subscription_type*****  
- 是订阅的类型。 *subscription_type*是**nvarchar(9)**，默认值为**匿名**。 必须指定的值**拉取**有关*subscription_type*，除非你想要创建订阅，而无需在发布服务器注册此订阅。 在这种情况下，必须指定的值**匿名**。 这是必要的情况下则不能建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在订阅配置期间连接到发布服务器。  
+ [ **@subscription_type=**] **'***subscription_type*****  
+ 是订阅的类型。 *subscription_type*是**nvarchar(9)**，默认值为**匿名**。 必须指定的值**拉取**有关*subscription_type*，除非你想要创建订阅，而无需在发布服务器注册此订阅。 在这种情况下，必须指定的值**匿名**。 如果在订阅配置期间无法建立与发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，则匿名订阅是必需的。  
   
- [  **@description=**] **'***说明*****  
+ [ **@description=**] **'***说明*****  
  是发布的说明。 *描述*是**nvarchar(100)**，默认值为 NULL。  
   
  [  **@update_mode=**] **'***update_mode*****  
@@ -92,7 +91,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addpullsubscription**。  
   
 ## <a name="see-also"></a>请参阅  

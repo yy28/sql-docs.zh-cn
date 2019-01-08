@@ -14,12 +14,12 @@ ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e81a2099cb06be63b6684f223277dcc127eab75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8481b0f19566ed0e55f31480f9ab8be0c9441c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145537"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360439"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过外键约束机制支持级联更新和删除操作。 如果在 FOREIGN KEY 约束的 ON UPDATE 和/或 ON DELETE 子句中指定 CASCADE 选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为 UPDATE_RULE 和/或 DELETE_RULE 列返回 SQL_CASCADE。 如果未在 FOREIGN KEY 约束的 ON UPDATE 和/或 ON DELETE 子句中指定 NO ACTION 选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则为 UPDATE_RULE 和/或 DELETE_RULE 列返回 SQL_NO_ACTION。  
@@ -28,10 +28,10 @@ ms.locfileid: "48145537"
   
  **SQLForeignKeys**可以对静态服务器游标执行。 尝试执行**SQLForeignKeys**对可更新的 （动态或键集） 游标将返回 sql_success_with_info 以指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*FKCatalogName*并*PKCatalogName*参数： *Linked_Server_Name.Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*FKCatalogName*并*PKCatalogName*参数：*Linked_Server_Name.Catalog_Name*。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLForeignKeys 函数](http://go.microsoft.com/fwlink/?LinkId=59344)   
+ [SQLForeignKeys 函数](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

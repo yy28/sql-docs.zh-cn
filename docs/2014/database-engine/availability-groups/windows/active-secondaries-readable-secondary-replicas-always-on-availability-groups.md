@@ -1,5 +1,5 @@
 ---
-title: 活动辅助副本： 可读辅助副本 (Always On 可用性组） |Microsoft Docs
+title: 活动辅助副本：可读次要副本 (Alwayson 可用性组） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169607"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358579"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本（AlwaysOn 可用性组）
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动辅助副本：可读次要副本 (Alwayson 可用性组）
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本）。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
   
  在主数据库中进行的安全设置会对辅助数据库永久保留。 这包括用户、数据库角色和应用程序角色及其各自的权限；如果对主数据库启用了透明数据加密 (TDE)，还将包括 TDE。  
@@ -32,7 +32,7 @@ ms.locfileid: "48169607"
 > [!NOTE]  
 >  尽管您无法将数据写入辅助数据库，但可以在承载辅助副本的服务器实例上写入读写数据库，包括用户数据库和 **tempdb**之类的系统数据库。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的信息，请参阅 [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](../../listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的详细信息，请参阅 [使用侦听程序连接到只读次要副本（只读路由）](../../listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
   
  
   
@@ -201,7 +201,7 @@ GO
   
 -   因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
   
--   后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 在主数据库上创建统计信息时不能使用此后缀。 有关更多信息，请参见 [Statistics](../../../relational-databases/statistics/statistics.md)。  
+-   后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 在主数据库上创建统计信息时不能使用此后缀。 有关详细信息，请参阅[统计信息](../../../relational-databases/statistics/statistics.md)。  
   
 ##  <a name="bkmk_AccessInMemTables"></a> 访问辅助副本上的内存优化表  
  辅助副本上的读取工作负荷隔离级别只是主副本上允许的隔离级别。 辅助副本上没有隔离级别映射。 这确保可在主副本上运行的所有报表工作负荷都无需任何更改就可以在辅助副本上运行。 这样，您可以轻松地将报表工作负荷从主副本迁移到辅助副本，或者从辅助副本迁移到主副本（当辅助副本不可用时）。  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   对于跨容器事务，不支持会话隔离级别为“快照”的访问内存优化表的事务。 例如，  
+-   对于跨容器事务，具有会话隔离级别的事务"快照"的访问不支持内存优化表。 例如，  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -276,7 +276,7 @@ GO
     |用户帐户控制|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
     |用户帐户控制|用户帐户控制|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
   
-##  <a name="bkmk_RelatedTasks"></a>相关任务  
+##  <a name="bkmk_RelatedTasks"></a> 相关任务  
   
 -   [配置对可用性副本的只读访问 (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

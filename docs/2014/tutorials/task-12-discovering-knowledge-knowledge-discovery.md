@@ -1,5 +1,5 @@
 ---
-title: 任务 12： 发现知识 （知识发现） |Microsoft Docs
+title: 任务 12:发现知识 （知识发现） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167697"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367179"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>任务 12：发现知识（知识发现）
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>任务 12:发现知识（知识发现）
   在本任务中，您将执行**知识发现**上的活动**Supplier ID**并**Supplier Name**域。 在此方案中，知识发现过程主要导入这两个域的值。  
   
- 在本教程中，您是从头开始构建知识库的。 还可以通过执行知识发现活动来创建知识库。 当您单击**创建的知识库**主页上，在 DQS 客户端将您带入一个页面与**域管理**选择活动的活动。 您可以更改**活动**到**知识发现**，然后在下一步页可以创建域知识发现过程的一部分。 请参阅[执行知识发现](http://msdn.microsoft.com/library/hh510398.aspx)的更多详细信息。  
+ 在本教程中，您是从头开始构建知识库的。 还可以通过执行知识发现活动来创建知识库。 当您单击**创建的知识库**主页上，在 DQS 客户端将您带入一个页面与**域管理**选择活动的活动。 您可以更改**活动**到**知识发现**，然后在下一步页可以创建域知识发现过程的一部分。 请参阅[执行知识发现](https://msdn.microsoft.com/library/hh510398.aspx)的更多详细信息。  
   
 1.  在 DQS 客户端的主页中**最近的知识库**部分中，单击**右箭头**旁边**供应商**知识库和单击**知识发现**。 或者，你可以单击**打开知识库**，选择**供应商**从**知识库列表**，选择**知识发现**作为**活动**然后单击**下一步**。  
   

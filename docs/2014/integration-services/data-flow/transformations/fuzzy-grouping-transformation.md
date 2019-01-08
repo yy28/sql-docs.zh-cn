@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -26,22 +25,22 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122998"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357348"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
   
 > [!NOTE]  
->  有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [SQL Server Integration Services 2005 中的模糊查找和模糊分组](http://go.microsoft.com/fwlink/?LinkId=96604)。  
+>  有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [SQL Server Integration Services 2005 中的模糊查找和模糊分组](https://go.microsoft.com/fwlink/?LinkId=96604)。  
   
  模糊分组转换要求与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例建立连接，以创建该转换算法完成工作所需的临时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 该连接必须解析为有权在数据库中创建表的用户。  
   
- 若要配置该转换，您必须选择要在确定重复项时使用的输入列，而且必须为每列选择匹配类型（模糊匹配或完全匹配）。 完全匹配保证只对该列中具有相同值的行进行分组。 完全匹配可以应用到除 DT_TEXT、DT_NTEXT 和 DT_IMAGE 之外的任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的列。 模糊匹配对具有相似值的行进行分组。 近似匹配数据的方法基于用户指定的相似性得分。 在模糊匹配中，只能使用具有 DT_WSTR 和 DT_STR 数据类型的列。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。  
+ 若要配置该转换，必须选择要在确定重复项时使用的输入列，而且必须为每列选择匹配类型（模糊匹配或完全匹配）。 完全匹配保证只对该列中具有相同值的行进行分组。 完全匹配可以应用到除 DT_TEXT、DT_NTEXT 和 DT_IMAGE 之外的任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的列。 模糊匹配对具有相似值的行进行分组。 近似匹配数据的方法基于用户指定的相似性得分。 在模糊匹配中，只能使用具有 DT_WSTR 和 DT_STR 数据类型的列。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。  
   
  该转换输出包括所有输入列、一个或多个具有标准化数据的列以及一个包含相似性得分的列。 该得分是一个介于 0 和 1 之间的小数值。 规范行的得分为 1。 模糊组中其他行具有的得分指明该行与规范行的匹配程度。 得分越接近 1，行与规范行的匹配程度越高。 如果模糊组包括与规范行完全匹配的行，则这些行的得分也为 1。 该转换不删除这些重复的行；它通过创建一个将规范行与相似行关联的键对重复行进行分组。  
   
@@ -80,15 +79,15 @@ ms.locfileid: "48122998"
  如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。  
   
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>配置模糊分组转换  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“模糊分组转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [模糊分组转换编辑器&#40;连接管理器选项卡&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [模糊分组转换编辑器（“连接管理器”选项卡）](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [模糊分组转换编辑器&#40;列选项卡&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [模糊分组转换编辑器（“列”选项卡）](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [模糊分组转换编辑器&#40;高级选项卡&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [模糊分组转换编辑器（“高级”选项卡）](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

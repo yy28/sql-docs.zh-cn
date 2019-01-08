@@ -10,19 +10,19 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fea49e73ad3a29606f8642ca144ffd71033e490c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186437"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359610"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
   HealthCheckTimeout 设置用于指定的时间，以毫秒为单位，SQL Server 资源 DLL 应等待返回的信息[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)报告之前存储过程AlwaysOn 故障转移群集实例 (FCI) 为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
--   **准备工作：**[限制和局限](#Limits)、[安全性](#Security)  
+-   **开始之前：**[限制和局限](#Limits)，[安全](#Security)  
   
--   **要配置 HeathCheckTimeout 设置，请使用：**[PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **若要配置 HeathCheckTimeout 设置，请使用：**[PowerShell](#PowerShellProcedure)，[故障转移群集管理器](#WSFC)， [Transact SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48186437"
 3.  使用`Get-ClusterResource`cmdlet 查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源，然后使用`Set-ClusterParameter`cmdlet，以设置**HealthCheckTimeout**故障转移群集实例的属性。  
   
 > [!TIP]  
->  每次打开新的 PowerShell 窗口，需要导入`FailoverClusters`模块。  
+>  每次您打开新的 PowerShell 窗口时，都需要导入 `FailoverClusters` 模块。  
   
 ### <a name="example-powershell"></a>示例 (PowerShell)  
  下面的示例将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源“`SQL Server (INST1)`”上的 HealthCheckTimeout 设置更改为 60000 毫秒。  
@@ -60,11 +60,11 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
   
--   [故障转移群集上的 Windows PowerShell 入门](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [故障转移群集上的 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [群集资源命令和等效的 Windows PowerShell cmdlet](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [群集资源命令和等效的 Windows PowerShell cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> 使用故障转移群集管理器管理单元  
  **配置 HealthCheckTimeout 设置**  

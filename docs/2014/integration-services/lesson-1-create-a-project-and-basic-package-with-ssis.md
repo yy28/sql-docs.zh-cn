@@ -1,28 +1,27 @@
 ---
-title: 第 1 课： 创建项目和基本包 |Microsoft Docs
+title: 第 1 课：创建项目和基本包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229478"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359366"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 课：创建项目和基本包
   在本课中，将创建一个简单 ETL 包，该包可以从单个平面文件源中提取数据，使用两个查找转换组件转换该数据，然后将该数据写入 **AdventureWorksDW2012** 的 **FactCurrency**事实数据表中。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
   
 > [!IMPORTANT]  
->  本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](http://go.microsoft.com/fwlink/p/?LinkID=52691)。  
+>  本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](https://go.microsoft.com/fwlink/p/?LinkID=52691)。  
   
 ## <a name="understanding-the-package-requirements"></a>了解包要求  
  本教程需要 Microsoft SQL Server Data Tools。  
@@ -81,25 +80,25 @@ ms.locfileid: "48229478"
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  
   
--   [步骤 1：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [第 1 步：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [步骤 2：添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [步骤 2:添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [步骤 3：添加并配置 OLE DB 连接管理器](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [步骤 3:添加和配置 OLE DB 连接管理器](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [步骤 4：将数据流任务添加到包](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [步骤 4:向包添加数据流任务](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [步骤 5：添加并配置平面文件源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [步骤 5:添加并配置平面文件源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [步骤 6：添加并配置查找转换](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [步骤 6:添加并配置查找转换](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [步骤 7：添加并配置 OLE DB 目标](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [步骤 7:添加和配置 OLE DB 目标](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [步骤 8：使第 1 课包更易理解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [步骤 8:使 Lesson 1 包更易理解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [步骤 9：测试第 1 课教程包](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [步骤 9:测试第 1 课教程包](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [步骤 1：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [第 1 步：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

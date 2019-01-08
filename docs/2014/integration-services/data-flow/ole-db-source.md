@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120574"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357604"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -91,11 +90,11 @@ ms.locfileid: "48120574"
   
  有关可以在 **“OLE DB 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [OLE DB 源编辑器&#40;连接管理器页&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB 源编辑器（“连接管理器”页）](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 源编辑器&#40;列页&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 源编辑器（“列”页）](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB 源编辑器&#40;错误输出页&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB 源编辑器（“错误输出”页）](../ole-db-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120574"
 -   [为合并转换和合并联接转换排序数据](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>相关内容  
- social.technet.microsoft.com 上的 Wiki 文章 [SSIS 与 Oracle 连接器](http://go.microsoft.com/fwlink/?LinkId=220670)。  
+ social.technet.microsoft.com 上的 Wiki 文章 [SSIS 与 Oracle 连接器](https://go.microsoft.com/fwlink/?LinkId=220670)。  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 目标](ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41;变量](../integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
  [数据流](data-flow.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178249"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360409"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
   索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 SQL Server 索引设计指南包含帮助您设计高效索引以满足应用程序需要的信息和最佳实践。  
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   将列的为空性从 NOT NULL 改为 NULL。  
   
-    -   增加的长度`varchar`， `nvarchar`，或`varbinary`列。  
+    -   增加 `varchar`、`nvarchar` 或 `varbinary` 列的长度。  
   
         > [!NOTE]  
         >  这些列修改限制也适用于索引键列。  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
 ##  <a name="Additional_Reading"></a> 其他阅读主题  
- [使用 SQL Server 2008 索引视图提高性能](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [使用 SQL Server 2008 索引视图提高性能](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

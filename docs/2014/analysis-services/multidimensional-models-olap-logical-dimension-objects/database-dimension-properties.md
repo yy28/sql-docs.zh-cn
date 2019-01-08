@@ -16,17 +16,17 @@ ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4dd5b6f8a241d3173cdca8b03cce4fb9a373b8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34de23fca71f4dc7949a04a36323d19d35826fa9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196037"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359819"
 ---
 # <a name="database-dimension-properties"></a>数据库维度属性
   在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度特征基于各种维度属性的设置和属性或层次结构所包含的维度的维度的元数据由定义。 下表说明了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|指定维度中属性的“全部”成员的名称。|  
 |`Collation`|确定维度使用的排序规则。|  
@@ -40,7 +40,7 @@ ms.locfileid: "48196037"
 |`MiningModelID`|包含数据挖掘维度所关联的挖掘模型的 ID。 此属性仅适用于挖掘模型维度。|  
 |`Name`|指定维度的名称。|  
 |`ProactiveCaching`|定义维度的主动缓存设置。|  
-|`ProcessingGroup`|指定处理组。 值为 ByAttribute 或 ByTable。 默认值是`ByAttribute`。|  
+|`ProcessingGroup`|指定处理组。 值为 ByAttribute 或 ByTable。 默认值为 `ByAttribute`。|  
 |`ProcessingMode`|指示是否应该在处理期间或处理之后对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行聚合以及为其建立索引。|  
 |`ProcessingPriority`|确定在后台操作期间（例如惰性聚合、索引或群集）维度的处理优先级。|  
 |`Source`|标识维度绑定到的数据源视图。|  
@@ -51,12 +51,12 @@ ms.locfileid: "48196037"
 |`WriteEnabled`|指示维度写回是否可用（视安全权限而定）。|  
   
 > [!NOTE]  
->  有关处理 null 值和其他数据完整性问题时设置 ErrorConfiguration 和 UnknownMember 属性的值的详细信息，请参阅[在 Analysis Services 2005 中处理数据完整性问题](http://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  有关处理 null 值和其他数据完整性问题时设置 ErrorConfiguration 和 UnknownMember 属性的值的详细信息，请参阅[在 Analysis Services 2005 中处理数据完整性问题](https://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](attributes-and-attribute-hierarchies.md)   
  [用户层次结构](user-hierarchies.md)   
  [维度关系](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [维度&#40;Analysis Services-多维数据&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](dimensions-analysis-services-multidimensional-data.md)  
   
   

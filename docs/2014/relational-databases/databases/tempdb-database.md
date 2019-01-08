@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -16,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81d2bf84e758ccfd8664408a760e77700a323e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141057"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357836"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
   **tempdb** 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有用户使用，并可用于保存下列各项：  
@@ -129,7 +128,7 @@ ms.locfileid: "48141057"
   
 -   将数据库或主文件组设置为 READ_ONLY。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以在 tempdb 中创建临时对象。 用户只能访问自己的对象，除非他们获得更多的权限。 可以撤消对 tempdb 的连接权限以阻止用户使用 tempdb，但是不建议这样做，因为一些例行操作需要使用 tempdb。  
   
 ## <a name="related-content"></a>相关内容  
@@ -144,6 +143,6 @@ ms.locfileid: "48141057"
  [移动数据库文件](move-database-files.md)  
   
 ## <a name="see-also"></a>请参阅  
- [在 SQL Server 2005 中使用 tempdb](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [在 SQL Server 2005 中使用 tempdb](https://go.microsoft.com/fwlink/?LinkId=81216)  
   
   
