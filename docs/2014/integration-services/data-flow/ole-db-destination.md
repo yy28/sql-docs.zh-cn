@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
@@ -21,12 +20,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39f15609f326699c77688cfef599eed9c01adab6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058127"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790769"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
@@ -46,7 +45,7 @@ ms.locfileid: "48058127"
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)。  
   
- 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任意一种快速加载访问模式：“表或视图”–“快速加载”或“表名称或视图名称变量”–“快速加载”。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程时[!INCLUDE[ssIS](../../includes/ssis-md.md)]对象模型中，应将 AccessMode 属性设置为`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
+ 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性应配置要使用的 OLE DB 连接管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端或使用快速加载访问模式之一：**表或视图-快速加载**或**表名变量或视图名变量-快速加载**。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程时[!INCLUDE[ssIS](../../includes/ssis-md.md)]对象模型中，应将 AccessMode 属性设置为`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
   
 > [!NOTE]  
 >  如果用 **设计器中的** “OLE DB 目标编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对话框创建 OLE DB 目标要向其插入数据的目标表，可能需要手动选择新创建的表。 当 OLE DB 访问接口（如 OLE DB Provider for DB2）自动将架构标识符添加到表名称时，需要进行手动选择。  
@@ -102,11 +101,11 @@ ms.locfileid: "48058127"
   
  有关可在 **“OLE DB 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [OLE DB 目标编辑器&#40;连接管理器页&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [OLE DB 目标编辑器（“连接管理器”页）](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB 目标编辑器&#40;映射页&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [OLE DB 目标编辑器（“映射”页）](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB 目标编辑器&#40;错误输出页&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [OLE DB 目标编辑器（“错误输出”页）](../ole-db-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48058127"
 ## <a name="related-content"></a>相关内容  
  [OLE DB 源](ole-db-source.md)  
   
- [Integration Services &#40;SSIS&#41;变量](../integration-services-ssis-variables.md)  
+ [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)  
   
  [数据流](data-flow.md)  
   

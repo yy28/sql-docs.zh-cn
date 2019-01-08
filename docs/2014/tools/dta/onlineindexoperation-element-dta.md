@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2b9c19b0c8851fac47eaeef5d677a68b137abe4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051037"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800381"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 元素 (DTA)
   指定是否可联机创建数据库引擎优化顾问建议的索引、索引视图或分区。  
@@ -42,13 +41,13 @@ ms.locfileid: "48051037"
 |**数据类型和长度**|`string`，无最大长度。|  
 |**允许的值**|**OFF**<br /> 建议的物理设计结构都无法联机创建。<br /><br /> **ON**<br /> 所有建议的物理设计结构都可以联机创建。<br /><br /> **MIXED**<br /> 数据库引擎优化顾问会尝试建议可以联机创建的物理设计结构。<br /><br /> 将这些值中的一个值用于此元素。 如果联机创建索引，则将向其对象定义中追加 **ONLINE = ON** 关键字。|  
 |**默认值**|无。|  
-|**出现次数**|可选。 如果使用，可仅用于一次`TuningOptions`元素。|  
+|**出现次数**|可选。 如果使用 `TuningOptions` 元素，则只能使用一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 (DTA)](tuningoptions-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

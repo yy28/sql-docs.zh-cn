@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350431"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用数字证书对包签名
   本主题介绍如何使用数字证书对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包进行签名。 可以使用数字签名以及其他设置来防止加载和运行无效的包。  
@@ -33,11 +33,11 @@ ms.locfileid: "48177467"
   
     -   从颁发证书的公共商业证书颁发机构获取证书。  
   
-    -   从允许组织在内部颁发证书的证书服务器获取证书。 必须将用于对证书进行签名的根证书添加到 **“受信任的根证书颁发机构”** 存储区中。 若要添加根证书，可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (MMC) 的证书管理单元。 有关详细信息，请参阅 MSDN 库中的主题“[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)（证书服务）”。  
+    -   从允许组织在内部颁发证书的证书服务器获取证书。 必须将用于对证书进行签名的根证书添加到 **“受信任的根证书颁发机构”** 存储区中。 若要添加根证书，可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (MMC) 的证书管理单元。 有关详细信息，请参阅 MSDN 库中的主题“[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)（证书服务）”。  
   
-    -   创建自己的证书（仅用于测试目的）。 证书创建工具 (Makecert.exe) 会生成仅用于测试目的的 X.509 证书。 有关详细信息，请参阅 MSDN Library 中的主题“[证书创建工具 (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)”。  
+    -   创建自己的证书（仅用于测试目的）。 证书创建工具 (Makecert.exe) 会生成仅用于测试目的的 X.509 证书。 有关详细信息，请参阅 MSDN Library 中的主题“[证书创建工具 (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)”。  
   
-     有关证书的详细信息，请参阅证书管理单元的联机帮助。 有关如何对数字资产进行签名的详细信息，请参阅 MSDN 库中的主题“[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)（使用 Authenticode 签名和检查代码）”。  
+     有关证书的详细信息，请参阅证书管理单元的联机帮助。 有关如何对数字资产进行签名的详细信息，请参阅 MSDN 库中的主题“[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)（使用 Authenticode 签名和检查代码）”。  
   
 -   确保已为代码签名启用证书。 若要确定证书是否是为代码签名而启用的，请在“证书”管理单元中检查证书的属性。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48177467"
   
 9. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-     虽然已对包进行了签名，您现在必须配置 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便在加载该包之前检查或验证数字签名。 有关详细信息，请参阅[使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
+     虽然已对包进行了签名，您现在必须配置 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便在加载该包之前检查或验证数字签名。 有关详细信息，请参阅 [使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)  
+ [安全性概述 (Integration Services)](security/security-overview-integration-services.md)  
   
   

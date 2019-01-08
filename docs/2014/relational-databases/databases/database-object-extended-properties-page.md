@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.extendedproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1f3f9518a6d104801b6d81d68def64facbd589a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119087"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799349"
 ---
 # <a name="database-object-extended-properties-page"></a>数据库对象（“扩展属性”页）
   使用扩展属性，您可以向数据库对象添加自定义属性。 使用此页可以查看或修改所选对象的扩展属性。 **“扩展属性”** 页对于所有类型的数据库对象都是相同的。  
@@ -34,7 +33,7 @@ ms.locfileid: "48119087"
  查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
   
  **“浏览”按钮**  
- 单击“值”后面的“浏览(…)”按钮可打开“扩展属性对话框的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。  
+ 单击“值”后面的浏览 (…) 按钮可打开“扩展属性对话框的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。  
   
  **删除**  
  删除所选扩展属性。  

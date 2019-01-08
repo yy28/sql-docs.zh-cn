@@ -1,7 +1,8 @@
 ---
-title: 教程： 为 Azure Data Studio 创建扩展 |Microsoft Docs
-description: 本教程演示如何创建 Azure Data Studio 扩展。
-ms.custom: tools|sos
+title: 教程：创建一个扩展
+titleSuffix: Azure Data Studio
+description: 本教程演示如何创建要将自定义功能添加到 Azure Data Studio 的扩展。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,16 +11,16 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356548"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030601"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>教程： 创建 Azure Data Studio 扩展
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>教程：创建 Azure Data Studio 扩展
 
-本教程演示如何创建一个新的 Azure Data Studio 扩展。 该扩展会在 Azure Data Studio 熟悉 SSMS 键绑定。
+本教程演示如何创建一个新的 Azure Data Studio 扩展。 该扩展会在 Azure Data Studio 熟悉 SSMS 的键绑定。
 
 本教程期间，你学习如何：
 > [!div class="checklist"]
@@ -30,14 +31,14 @@ ms.locfileid: "49356548"
 > * 打包你的扩展
 > * 将你的扩展发布到 marketplace
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使用 Visual Studio Code 构建 Azure Data Studio 的扩展。 若要开始，需要以下组件：
 
 - [Node.js](https://nodejs.org)已安装，不可用于你`$PATH`。 Node.js 包含[npm](https://www.npmjs.com/)，Node.js 程序包管理器，用于安装的扩展生成器。
 - [Visual Studio Code](https://code.visualstudio.com)调试扩展。
 - Azure Data Studio[调试扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)。
-- 请确保 sqlops 是在你的路径。 对于 Windows，请确保你选择`Add to Path`setup.exe 中的选项。 适用于 Mac 或 Linux，运行*安装路径中的 sqlops 命令*选项。
+- 确保`sqlops`是在你的路径。 对于 Windows，请确保你选择`Add to Path`setup.exe 中的选项。 适用于 Mac 或 Linux，运行*安装路径中的 sqlops 命令*选项。
 - SQL Operations Studio 调试扩展 （可选）。 这使您无需打包并将其安装到 Azure Data Studio 测试您的扩展插件。
 
 
@@ -66,26 +67,26 @@ Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使
 
 ### <a name="add-a-keyboard-shortcut"></a>添加键盘快捷方式
 
-**步骤 1： 查找要替换的快捷方式**
+**第 1 步：找到要替换的快捷方式**
 
 现在，我们已准备就绪我们扩展，添加一些 SSMS 键盘快捷方式 （或键绑定） 到 Azure Data Studio。 我使用了[Andy Mallon 备忘单](https://am2.co/2018/02/updated-cheat-sheet/)和灵感 RedGate 的键盘快捷方式列表。
 
 我看到缺少顶级工作项是：
 
 - 与已启用的实际执行计划中运行查询。 这是**Ctrl + M**在 SSMS 中和不具有 Azure Data Studio 中的绑定。
-- 无**CTRL + SHIFT + E**作为运行查询的第二个方法。 用户反馈表明，这是缺失。
+- 无**CTRL + SHIFT + E**作为运行查询的第二种方法。 用户反馈表明，这是缺失。
 - 无**ALT + F1**运行`sp_help`。 我们在 Azure Data Studio 中添加这但因为该绑定已使用，我们将映射到**ALT + F2**相反。
 - 切换全屏显示 (**SHIFT + ALT + ENTER**)。
 - **F8**以显示**对象资源管理器** / **服务器视图**。
 
-很容易地查找和替换这些键绑定。 运行*打开键盘快捷方式*以显示**键盘快捷方式**选项卡中 Azure Data Studio，搜索*查询*，然后选择**更改键绑定**. 完成后更改键绑定您所见 keybindings.json 文件中已更新的映射 (运行*打开键盘快捷方式*以查看它)。
+很容易地查找和替换这些键绑定。 运行*打开键盘快捷方式*以显示**键盘快捷方式**选项卡中 Azure Data Studio，搜索*查询*，然后选择**更改密钥绑定**. 完成后更改键绑定，可以看到 keybindings.json 文件中已更新的映射 (运行*打开键盘快捷方式*以查看它)。
 
 ![键盘快捷键](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
 ![keybindings.json 扩展](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**步骤 2： 将快捷方式添加到扩展**
+**步骤 2:将快捷方式添加到扩展**
 
 若要将快捷方式添加到扩展中，打开*package.json*文件 （扩展名），并替换`contributes`节替换为以下：
 
@@ -132,11 +133,11 @@ Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使
 
 ![测试扩展](./media/tutorial-create-extension/test-extension.png)
 
-Keymaps 是最快扩展插件之一来创建，因此新的扩展名现在应该成功地工作并准备好共享。
+键映射是一种最快的扩展，若要创建，因此，新的扩展名现在应成功地工作并准备好共享。
 
 ## <a name="package-your-extension"></a>打包你的扩展
 
-若要与他人共享需要扩展打包到单个文件。 这可以是发布到 Azure Data Studio 扩展应用商店，或只是在你的团队或社区间共享。 若要执行此操作，需要从命令行安装另一个 npm 包：
+若要与他人共享需要扩展打包到单个文件。 这可以是发布到 Azure Data Studio 扩展应用商店，或在你的团队或社区间共享。 若要执行此操作，需要从命令行安装另一个 npm 包：
 
 `npm install -g vsce`
 
@@ -164,7 +165,7 @@ Azure Data Studio 扩展应用商店未完全实现，但当前进程是托管�
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，您学习了如何：
+在本教程中，你将了解：
 > [!div class="checklist"]
 > * 创建一个扩展项目
 > * 安装扩展生成器

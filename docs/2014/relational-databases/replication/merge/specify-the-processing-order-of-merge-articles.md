@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
@@ -14,19 +13,19 @@ ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 569767e74c6666a68b41b5af9914a5a028522bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb5506a4279ecd11c31d860f68d4c3736425298b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174047"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788529"
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>指定合并项目的处理顺序
   从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，可以覆盖合并发布的项目默认处理顺序。 例如，如果通过触发器定义引用完整性而这些触发器又必须按某顺序激发，以上操作就会很有用。  
   
  **指定项目的处理顺序**  
   
--   复制 Transact-SQL 编程：[指定合并表项目的处理顺序（复制 Transact-SQL 编程）](../publish/specify-the-processing-order-of-merge-table-articles.md)  
+-   复制 TRANSACT-SQL 编程：[指定合并表项目的处理顺序（复制 Transact-SQL 编程）](../publish/specify-the-processing-order-of-merge-table-articles.md)  
   
 ## <a name="how-processing-order-is-determined"></a>如何确定处理顺序  
  合并同步过程中，项目在默认情况下按照对象间相关性要求的顺序处理，包括基表中定义的声明性引用完整性 (DRI) 约束。 处理涉及将更改枚举到表，然后应用这些更改。 若不存在 DRI，但在表项目之间存在联接筛选器或逻辑记录，则就以筛选器和逻辑记录要求的顺序处理项目。 未通过 DRI、联接筛选器、逻辑记录或其他依赖关系与任何其他项目相关的项目，根据 [sysmergearticles (Transact-SQL)](/sql/relational-databases/system-tables/sysmergearticles-transact-sql) 系统表中的项目别名进行处理。  

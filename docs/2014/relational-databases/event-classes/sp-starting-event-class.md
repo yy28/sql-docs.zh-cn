@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d16976b78013cf373f8fa7e1895a225b13ff0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa44fe3a5b6e7009057f351d06258b5ab809aa5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223907"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801279"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting 事件类
   SP:Starting 事件类指示存储过程将要开始执行。  

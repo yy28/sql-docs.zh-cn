@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
@@ -16,12 +15,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b4ee585d23cceaf15acc6c904ce783f21e9f08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788668"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步计划。 在创建订阅时，可以定义同步计划以控制何时运行订阅的复制代理。 如果没有指定计划参数，则订阅将使用默认计划。  
@@ -65,7 +64,7 @@ ms.locfileid: "48087527"
   
     -   **仅按需运行**  
   
-    -   **\<定义计划...>**  
+    -   \<定义计划...>  
   
 2.  如果选择“\<定义计划...>”，请在“作业计划属性”对话框中指定一个计划，然后单击“确定”。  
   

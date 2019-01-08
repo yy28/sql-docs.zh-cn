@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adbb39c32f09898e6d521b0ecff3c06c1a6494f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e037842d6be6ae08bc35ac9827ebd6931503f89e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639975"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802019"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +109,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="remarks"></a>备注  
  **sp_helpmergepullsubscription**合并复制中使用。 在结果集中，在返回的日期**last_updated**的格式设置为*YYYYMMDD hh:mm:ss.fff*。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergepullsubscription**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792829"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](replay-option-distributed-replay-administration-tool.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "48181327"
 ## <a name="event-class-column-mapping"></a>事件类列映射  
  下图列出了哪些结果跟踪列可用于在重播期间捕获的每种事件类。  
   
- ![事件类列映射](../../database-engine/media/eventclassmappings.gif "事件类列映射")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>跟踪结果的列说明  
  下表说明了结果跟踪数据的各列。  
@@ -77,9 +77,9 @@ ms.locfileid: "48181327"
 |ApplicationName|`nvarchar`|在捕获期间创建了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接的客户端应用程序的名称。|17|  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 分布式的重播](sql-server-distributed-replay.md)   
- [Distributed 的 Replay 要求](distributed-replay-requirements.md)   
- [管理工具命令行选项&#40;分布式重播实用工具&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置 Distributed Replay](configure-distributed-replay.md)  
+ [SQL Server 分布式重播](sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理工具命令行选项（Distributed Replay 实用工具）](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置分布式重播](configure-distributed-replay.md)  
   
   

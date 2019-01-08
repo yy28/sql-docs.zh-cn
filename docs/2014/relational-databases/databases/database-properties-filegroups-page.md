@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.filegroups.f1
@@ -13,12 +12,12 @@ ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67e1de3aaa877b666d43f39faa92f3cfe89bd4c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143827"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799409"
 ---
 # <a name="database-properties-filegroups-page"></a>数据库属性（“文件组”页）
   使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  
@@ -41,7 +40,7 @@ ms.locfileid: "48143827"
  **只读**  
  选中此项可以将文件组设为只读状态。  
   
- **Default**  
+ **默认**  
  选中此项可以将此文件组设为默认文件组。 您可以有一个用于行的默认文件组和一个用于 FILESTREAM 数据的默认文件组。  
   
  **“添加”**  

@@ -1,5 +1,5 @@
 ---
-title: DirectQuery 模式下 |Microsoft Docs
+title: 在 Analysis Services 中的 DirectQuery 模式下 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a51b38dacf5a1ebaf67a19bf8b3761800425a347
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982479"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072464"
 ---
 # <a name="directquery-mode"></a>DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,11 +45,11 @@ DirectQuery 模式下的表格模型存在许多限制。 在切换模式前，�
 |||  
 |-|-|  
 |**功能区**|**限制**|  
-|**数据源**|DirectQuery 模型只能使用以下类型的单个关系数据库中的数据：SQL Server、Azure SQL 数据库、Oracle 和 Teradata。  有关版本和提供程序信息，请参阅本文后面的“DirectQuery 支持的数据源”。| 
+|**数据源**|DirectQuery 模型只能使用以下类型的单个关系数据库中的数据：SQL Server、 Azure SQL 数据库、 Oracle 和 Teradata。  有关版本和提供程序信息，请参阅本文后面的“DirectQuery 支持的数据源”。| 
 |**SQL 存储过程**|对于 DirectQuery 模型，在使用数据导入向导时，不能在 SQL 语句中指定存储过程来定义表。 |   
 |**计算表**|DirectQuery 模型不支持计算表，但支持计算列。 如果你尝试转换一个包含计算表的表格模型，则将发生错误，指出该模型不能包含粘贴数据。|  
 |**查询限制**|默认行数限制为 100 万行，可以通过指定 msmdsrv.ini 文件中的 **MaxIntermediateRowSize** 增加此值。 有关详细信息，请参阅 [DAX 属性](../../analysis-services/server-properties/dax-properties.md) 。
-|**DAX 公式**|在 DirectQuery 模式下查询表格模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将 DAX 公式和度量值定义转换为 SQL 语句。 所含元素不能转换为 SQL 语法的 DAX 公式将在模型上返回验证错误。<br /><br /> 此限制主要限于特定的 DAX 函数。 对于度量值，DAX 公式将针对关系数据存储转换为基于集的操作。 这意味着将支持所有隐式创建的度量值。 <br /><br /> 发生验证错误时，必须重写公式，替换为其他函数，或通过使用数据源中的派生列来解决该问题。  如果表格模型所含的公式包含不兼容的函数，则在设计器中切换到 DirectQuery 模式时将报告这一问题。 <br /><br />**注意：**  在将模型切换到 DirectQuery 模式时，模型中的某些公式可能会进行验证，但在对缓存和关系数据存储执行验证时将返回不同的结果。 这是因为对缓存的计算使用内存中分析引擎（包含用于模拟 Excel 行为的功能）的语义，而针对关系数据源中存储的数据的查询使用 SQL Server 的语义。<br /><br /> SQL 存储  <br /><br /> 若要了解详细信息，请参阅[在 DirectQuery 模式下的 DAX 公式兼容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)。|  
+|**DAX 公式**|在 DirectQuery 模式下查询表格模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将 DAX 公式和度量值定义转换为 SQL 语句。 所含元素不能转换为 SQL 语法的 DAX 公式将在模型上返回验证错误。<br /><br /> 此限制主要限于特定的 DAX 函数。 对于度量值，DAX 公式将针对关系数据存储转换为基于集的操作。 这意味着将支持所有隐式创建的度量值。 <br /><br /> 发生验证错误时，必须重写公式，替换为其他函数，或通过使用数据源中的派生列来解决该问题。  如果表格模型所含的公式包含不兼容的函数，则在设计器中切换到 DirectQuery 模式时将报告这一问题。 <br /><br />**注意：** 在你将模型切换到 DirectQuery 模式时，模型中的某些公式可能会进行验证，但在对缓存和关系数据存储执行验证时将返回不同的结果。 这是因为对缓存的计算使用内存中分析引擎（包含用于模拟 Excel 行为的功能）的语义，而针对关系数据源中存储的数据的查询使用 SQL Server 的语义。<br /><br />若要了解详细信息，请参阅[在 DirectQuery 模式下的 DAX 公式兼容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)。|  
 |**公式一致性**|在某些情况下，与仅使用关系数据存储的 DirectQuery 模型相比，相同的公式可能在缓存模型中返回不同的结果。 这些差异是由内存中分析引擎和 SQL Server 之间的语义差异造成的。<br /><br /> 有关兼容性问题，包括实时可能返回不同的结果时部署模型时，函数的完整列表，请参阅[在 DirectQuery 模式 (SQL Server Analysis Services) 中的 DAX 公式兼容性](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e)。|  
 |**MDX 限制**|没有相对对象名称。 所有对象名称都必须是完全限定的。<br /><br /> 没有会话范围 MDX 语句（命名集、计算成员、计算单元格、直观合计、默认成员等），但你可以使用查询范围构造，例如“WITH”子句。<br /><br /> MDX 再选择子句中没有包含不同级别成员的元组。<br /><br /> 不要使用用户定义的层次结构。<br /><br /> 没有本机 SQL 查询（通常，Analysis Services 支持 T-SQL 子集，但不适用于 DirectQuery 模型）。|  
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBStartInstance
@@ -18,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 99bec66e77a8ac5fd742ffb85b6f87dfefe88510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159557"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799639"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函数
   启动指定的 SQL Server Express LocalDB 实例。  
@@ -111,10 +109,10 @@ HRESULT LocalDBStartInstance(
   
 |缓冲区|缓冲区大小|理由|操作|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|用户想要启动实例，但不需要管道名称。|启动实例（不返回管道且不要求返回缓冲区大小）。|  
+|NULL|NULL|用户想要启动实例，并且不需要管道名称。|启动实例（不返回管道且不要求返回缓冲区大小）。|  
 |NULL|现值|用户要求提供输出缓冲区大小。 （在下一次调用中，用户将可能要求实际启动。)|返回所需的缓冲区大小（不启动且不返回管道）。 结果为 S_OK。|  
 |现值|NULL|不允许；输入不正确。|返回结果为 LOCALDB_ERROR_INVALID_PARAMETER。|  
-|现值|现值|用户想要启动实例，并且在启动后需要管道名称以便连接到此实例。|检查缓冲区大小，启动实例，并在缓冲区中返回管道名称。 <br />缓冲区大小参数返回“server=”字符串的长度，不包括终止 null 值。|  
+|现值|现值|用户想要启动实例，并且在启动后需要管道名称以便连接到此实例。|检查缓冲区大小，启动实例，并在缓冲区中返回管道名称。 <br />缓冲区大小参数返回的长度"server ="不包括终止 null 值的字符串。|  
   
  有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../sql-server-express-localdb-reference.md)。  
   

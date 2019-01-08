@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -16,12 +14,12 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec5dab60311e06f09e1d1d5b4a9d1258a32565
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787179"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship 和键排序规则 (SQLXML 4.0)
   由于 XML 大容量加载在其节点进入作用域时会生成记录，并在其节点退出作用域时会将这些记录发送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，因此，有关记录的数据必须存在于节点的作用域中。  
@@ -117,7 +115,7 @@ ms.locfileid: "48121817"
     set objBL=Nothing  
     ```  
   
-     结果是 XML 大容量加载在 CustOrder 表的 CustomerID 外键列中插入一个 NULL 值。 如果要修改的 XML 示例数据，以便 **\<CustomerID >** 子元素出现之前**\<顺序 >** 子元素，您将得到预期的结果： XML 大容量加载将指定的外键值插入到列。  
+     结果是 XML 大容量加载在 CustOrder 表的 CustomerID 外键列中插入一个 NULL 值。 如果要修改的 XML 示例数据，以便 **\<CustomerID >** 子元素出现之前**\<顺序 >** 子元素，您将得到预期的结果：XML 大容量加载将指定的外键值插入到列。  
   
  以下是等效的 XDR 架构：  
   

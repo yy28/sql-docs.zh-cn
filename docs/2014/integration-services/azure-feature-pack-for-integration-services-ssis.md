@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
@@ -14,12 +13,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c815b6d3dd2a70e484575fc49f90186f1273ba7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 771b7425ca166a05eb5290f576a7fa2cad3f19be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106687"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787039"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能包
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
@@ -74,7 +73,7 @@ ms.locfileid: "48106687"
   
 -   [Microsoft SQL Server 2014 Integration Services 功能用于 Azure 的包](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 必须在安装此功能包之前安装以下系统必备组件。  
   
 -   SQL Server Integration Services  

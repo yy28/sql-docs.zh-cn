@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145902"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545591"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50145902"
  在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 您还可以更改参数以编程方式通过使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合在 AMO 中，或使用[MiningModels 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA 中。 下表对各参数进行了说明：  
   
 > [!NOTE]  
->  不能使用 DMX 语句更改现有模型中的参数；在创建模型时必须指定 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中的参数。  
+>  不能使用 DMX 语句; 来更改现有模型中的参数你必须指定参数在 DMX CREATE MODEL 或 ALTER STRUCTURE...ADD MODEL 中的参数。  
   
  *MAXIMUM_ITEMSET_COUNT*  
  指定要生成的最大项集数。 如果不指定任何数目，则使用默认值。  
@@ -133,7 +133,7 @@ ms.locfileid: "50145902"
  适用于挖掘结构列。  
   
  MODEL_EXISTENCE_ONLY  
- 表示列将被视为具有两个可能状态： **Missing** 和 **Existing**。 Null 表示缺失值。  
+ 表示该列将被视为具有两个可能状态:**缺少**并**现有**。 Null 表示缺失值。  
   
  适用于挖掘模型列。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "50145902"
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)   
  [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

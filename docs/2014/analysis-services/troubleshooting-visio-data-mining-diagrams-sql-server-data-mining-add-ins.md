@@ -15,12 +15,12 @@ ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6b20fd2659fc68e6745c5ccef08aaac177207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51afb2516da54ce63d170619edd4c5429fd85144
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410944"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>解决 Visio 数据挖掘关系图问题（SQL Server 数据挖掘外接程序）
   本主题包含在您解决 Visio 数据挖掘关系图问题时可以使用的一些附加信息。  
@@ -33,7 +33,7 @@ ms.locfileid: "48089937"
 ## <a name="common-issues"></a>常见的问题  
  无法连接到模型  
   不显示内容  
-  无法查看详细信息  
+  不能查看的详细信息  
   
 ## <a name="see-also"></a>请参阅  
  [在 Visio 中查看数据挖掘模型&#40;数据挖掘外接程序&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   

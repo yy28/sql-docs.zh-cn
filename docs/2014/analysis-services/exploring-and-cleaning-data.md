@@ -11,12 +11,12 @@ ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541245"
 ---
 # <a name="exploring-and-cleaning-data"></a>浏览和清除数据
   数据准备不仅在于清理数据。 请牢记，准备数据的方式还会影响最终解释结果的方式。 数据准备涉及以下任务：  
@@ -69,7 +69,7 @@ ms.locfileid: "48080467"
   
 -   箱数据，通过创建组来表示数字范围。  
   
-     例如，你可能想要替换的数字收入列的标签，如**收入 – 中等**并**收入 – 高**。  
+     例如，你可能想要替换的数字收入列的标签，如**收入-中等**并**收入 – 高**。  
   
 -   将离散值折叠为类别。  
   

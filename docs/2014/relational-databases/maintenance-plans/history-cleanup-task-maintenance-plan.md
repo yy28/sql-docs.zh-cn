@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability"
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.historycleanup.f1
@@ -15,12 +14,12 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a08c655b60feced8c3a116d2b5934647ec4e53b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0629aa0787b535f0a577c60751665d7a2dd760e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806799"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>“清除历史记录”任务（维护计划）
   使用 **“清除历史记录”** 对话框，可以放弃 msdb 数据库表中旧的历史信息。 此任务支持删除备份和还原历史记录、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录和维护计划历史记录。  
@@ -59,7 +58,7 @@ ms.locfileid: "48137279"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **“刷新”**  
+ **刷新**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  

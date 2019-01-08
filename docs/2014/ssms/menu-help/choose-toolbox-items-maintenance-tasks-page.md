@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
@@ -15,12 +15,12 @@ ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54952d2e72de22efe1f3b9eb34183464339fbd51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764579"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>选择工具箱项（“维护任务”页）
   “自定义工具箱”对话框的此选项卡可显示已经在你的计算机上注册的所有维护任务组件的列表，可以通过此选项卡更改工具箱中所显示的组件。 可以从“工具”菜单中打开“自定义工具箱”对话框。 若要对组件列表排序，请选择相应的列标题。  

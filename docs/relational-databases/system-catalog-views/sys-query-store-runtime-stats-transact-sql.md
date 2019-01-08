@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710845"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712428"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含有关查询的运行时执行统计信息的信息。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "47710845"
 |**runtime_stats_id**|**bigint**|表示运行时执行统计信息的行的标识符**plan_id**， **execution_type**并**runtime_stats_interval_id**。 它是唯一的仅为过去的运行时统计信息时间间隔。 当前处于活动状态的间隔内可能有多个行表示引用的计划的运行时统计信息**plan_id**，与表示的执行类型**execution_type**。 通常情况下，一行表示运行时统计信息将被刷新到磁盘，而其他 (s) 表示内存中状态。 因此，若要获取的每个时间间隔的实际状态需要聚合指标，通过对分组**plan_id**， **execution_type**并**runtime_stats_interval_id**。 |  
 |**plan_id**|**bigint**|外键。 加入[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
 |**runtime_stats_interval_id**|**bigint**|外键。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
-|**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0 – 常规执行 （成功完成）<br /><br /> 3 – 客户端启动已中止执行<br /><br /> 4-异常已中止执行|  
-|**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0 – 常规<br /><br /> 3 – 已中止<br /><br /> 4-异常|  
+|**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0-常规执行 （成功完成）<br /><br /> 3-客户端启动已中止执行<br /><br /> 4-异常已中止执行|  
+|**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3-已中止<br /><br /> 4-异常|  
 |**first_execution_time**|**datetimeoffset**|第一个聚合间隔内的查询计划的执行时间。|  
 |**last_execution_time**|**datetimeoffset**|上次执行时间的查询计划的聚合间隔内。|  
 |**count_executions**|**bigint**|聚合间隔内的查询计划执行数的总计数。|  
@@ -95,7 +95,7 @@ ms.locfileid: "47710845"
 |**max_log_bytes_used**|**bigint**|查询计划，聚合间隔内所使用的数据库日志中的字节的最大数目。  适用**到 Azure SQL 数据库仅**。| 
 |**stdev_log_bytes_used**|**float**|查询计划，聚合间隔内所使用的数据库日志中的字节数的标准偏差。  适用**到 Azure SQL 数据库仅**。|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW DATABASE STATE**权限。  
   
 ## <a name="see-also"></a>请参阅  

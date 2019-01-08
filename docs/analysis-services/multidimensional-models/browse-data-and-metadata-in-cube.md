@@ -1,5 +1,5 @@
 ---
-title: 浏览数据和多维数据集中的元数据 |Microsoft 文档
+title: 浏览数据和多维数据集中的元数据 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022604"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537281"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>浏览多维数据集中的数据和元数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022604"
   
  在浏览多维数据集之前，必须对其进行处理并且重新连接到该多维数据集。 处理后，打开多维数据集设计器的 **“浏览器”** 选项卡。 单击工具栏上的“重新连接”按钮以便刷新连接。  
   
- **“浏览器”** 选项卡有三个窗格：“元数据”窗格、“筛选器”窗格和“数据”窗格。 使用“元数据”窗格查看多维数据集的树型结构。 使用 **“浏览器”** 选项卡顶部的“筛选器”窗格定义要浏览的任意子多维数据集。 使用“数据”窗格查看结果集并深化维度层次结构。  
+ **浏览器**选项卡有三个窗格的元数据窗格、 筛选器窗格和数据窗格。 使用“元数据”窗格查看多维数据集的树型结构。 使用 **“浏览器”** 选项卡顶部的“筛选器”窗格定义要浏览的任意子多维数据集。 使用“数据”窗格查看结果集并深化维度层次结构。  
   
 ## <a name="setting-up-the-browser"></a>设置浏览器  
  若要准备浏览多维数据集，可以指定要使用的透视或翻译。 将度量值和维度添加到“数据”窗格并在“筛选器”窗格中指定任意筛选器。  
@@ -57,7 +57,7 @@ ms.locfileid: "34022604"
   
      \- 或 -  
   
--   在**维度**列**筛选器**窗格中，单击**\<选择维度 >** 并从列表中，选择维度，然后单击**\<选择层次结构 >** 中**层次结构**列并选择从列表中的层次结构。  
+-   在中**维度**的列**筛选器**窗格中，单击**\<选择维度 >** 从列表中，选择维度，然后单击**\<选择层次结构 >** 中**层次结构**列并选择从列表中的层次结构。  
   
  指定层次结构后，指定运算符和筛选表达式。 下表介绍了各个运算符和筛选表达式。  
   

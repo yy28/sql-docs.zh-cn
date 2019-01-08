@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f230705afab21f6e2b4090d5576dd786714a8d0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d790a9308ab185a8beadfc1af9bbb4c9583148e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785839"
 ---
 # <a name="database-requirements-master-data-services"></a>数据库要求 (Master Data Services)
   所有主数据都存储于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中。 承载此数据库的计算机必须运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
@@ -40,7 +39,7 @@ ms.locfileid: "48201807"
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Business Intelligence（64 位）x64  
   
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise（64 位）x64 – 仅可从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Enterprise 升级  
+-   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise（64 位）x64 - 仅可从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Enterprise 升级  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Developer（64 位）x64  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48201807"
 |类型|Description|  
 |----------|-----------------|  
 |用户帐户|在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中，可以使用 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以承载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 用户帐户必须属于  实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 有关 **sysadmin** 角色的详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
-|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 管理员帐户|创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库时，必须指定要作为 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系统管理员的域用户帐户。 对于与此数据库关联的所有 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序，此用户可以更新所有模型以及所有功能区域中的所有数据。 有关详细信息，请参阅[管理员 (Master Data Services)](../administrators-master-data-services.md)。|  
+|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 管理员帐户|创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库时，必须指定要作为 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系统管理员的域用户帐户。 对于与此数据库关联的所有 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序，此用户可以更新所有模型以及所有功能区域中的所有数据。 有关详细信息，请参阅 [管理员 (Master Data Services)](../administrators-master-data-services.md)。|  
   
 ### <a name="database-backup"></a>数据库备份  
  最佳做法是每天在活动较少时进行完整数据库备份，并根据环境需要更频繁地备份事务日志。 有关数据库备份的详细信息，请参阅[备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
@@ -67,7 +66,7 @@ ms.locfileid: "48201807"
  [安装 Master Data Services](install-master-data-services.md)   
  [创建 Master Data Services 数据库](create-a-master-data-services-database.md)   
  [Master Data Services 数据库](../master-data-services-database.md)   
- [连接到“Master Data Services 数据库”对话框](../connect-to-a-master-data-services-database-dialog-box.md)   
+ [“连接到 Master Data Services 数据库”对话框](../connect-to-a-master-data-services-database-dialog-box.md)   
  [创建数据库向导（Master Data Services 配置管理器）](../create-database-wizard-master-data-services-configuration-manager.md)  
   
   

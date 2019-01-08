@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -20,12 +19,12 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 568773a255c6a1d264544ef540d88fa6afa0d277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d082c78aeaff76d314d90351851f745a3cddd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163247"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786699"
 ---
 # <a name="view-package-objects"></a>查看包对象
   在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中， **“包资源管理器”** 选项卡提供包的资源管理器视图。 该视图反映了 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 体系结构的容器层次结构。 包容器位于层次结构的顶层，您可以展开包来查看连接、可执行文件、事件处理程序、日志提供程序、优先约束和包中的变量。  
@@ -48,7 +47,7 @@ ms.locfileid: "48163247"
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
  [Integration Services 容器](control-flow/integration-services-containers.md)   
  [优先约束](control-flow/precedence-constraints.md)   
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [Integration Services (SSIS) 事件处理程序](integration-services-ssis-event-handlers.md)   
  [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)  
   

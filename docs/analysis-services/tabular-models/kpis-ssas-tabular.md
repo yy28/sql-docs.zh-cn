@@ -1,5 +1,5 @@
 ---
-title: Kpi |Microsoft Docs
+title: Analysis Services 表格模型中的 Kpi |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906427"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072314"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "48906427"
 ##  <a name="bkmk_example"></a> 示例  
  Adventure Works 的销售经理想要创建一个数据透视表，她可以使用该数据透视表快速显示销售人员是否满足针对给定期间（年）的销售定额。 为每位销售人员，她希望显示中以美元为单位的实际销售额、 销售配额量中以美元为单位和显示状态的每个销售人员是下面、 等于还是高于其销售定额的简单图形形式显示该数据透视表。 她希望能够按年对数据进行切片。  
   
- 为此，该销售经理登记请求其组织的 BI 解决方案开发人员的帮助，以便将一个 Sales KPI 添加到 AdventureWorks 表格模型。 该销售经理然后将使用 Excel 连接到 Adventure Works 表格模型作为数据源并创建一个数据透视表字段 （度量值和 KPI） 和切片器以便分析销售人员满足其定额。  
+ 若要执行此操作，该销售经理登记其组织的 BI 解决方案开发人员若要将一个 Sales KPI 添加到 AdventureWorks 表格模型的帮助。 该销售经理然后将使用 Excel 连接到 Adventure Works 表格模型作为数据源并创建一个数据透视表字段 （度量值和 KPI） 和切片器以便分析销售人员满足其定额。  
   
  在模型中，将在 FactResellerSales 表中的 SalesAmount 列上创建一个度量值，该度量值提供以美元为单位的实际销售额。 该度量值定义该 KPI 的基础值。  
   
@@ -60,7 +60,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  在创建了度量值以便充当 KPI 的基础值和目标值后，对该 Sales 度量值进行扩展以便成为新的 Sales KPI。 在 Sales KPI 中，Target SalesAmountQuota 度量值定义为目标值。 “状态”阈值定义为某一百分比的范围，100% 的目标意味着 Sales 度量值定义的实际销售额满足在 Target SalesAmoutnQuota 度量值中定义的定额。 在状态栏上定义下限和上限百分比，并且选择图形类型。  
   
- 该销售经理现在可以创建一个数据透视表，并且将该 KPI 的基础值、目标值和状态添加到“值”字段。 Employees 列将添加到 RowLabel 字段，而 CalendarYear 列作为切片器添加。  
+ 该销售经理现在可以创建数据透视表将该 KPI 的基础值、 目标值和状态添加到值字段。 Employees 列将添加到 RowLabel 字段，而 CalendarYear 列作为切片器添加。  
   
  该销售经理可以按年对实际销售额、销售定额和每位销售员工的状态执行切片操作。 她可以分析多年中的销售趋势，以便确定是否需要调整某位销售人员的销售定额。  
   

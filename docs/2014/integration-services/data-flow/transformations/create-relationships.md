@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095777"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804915"
 ---
 # <a name="create-relationships"></a>创建关系
   可以使用 **“创建关系”** 对话框，编辑源列与在模糊查找转换编辑器、查找转换编辑器或字词查找转换编辑器中配置的查找表列之间的映射。  
@@ -53,6 +52,6 @@ ms.locfileid: "48095777"
  [Integration Services 错误和消息引用](../../integration-services-error-and-message-reference.md)   
  [模糊查找转换编辑器（“列”选项卡）](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [查找转换编辑器（“列”页）](../../lookup-transformation-editor-columns-page.md)   
- [字词查找转换编辑器&#40;字词查找选项卡&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [字词查找转换编辑器（“字词查找”选项卡）](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

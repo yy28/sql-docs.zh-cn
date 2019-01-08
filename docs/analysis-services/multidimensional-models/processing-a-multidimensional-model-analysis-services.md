@@ -1,5 +1,5 @@
 ---
-title: 处理多维模型 (Analysis Services) |Microsoft 文档
+title: 处理 Analysis Services 多维模型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a09e1c4118576535371e16aa5e1a39a169b406fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a6116019898e61cc414a14a05273a3f2839267a0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024204"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072484"
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>处理多维模型 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,8 +67,8 @@ ms.locfileid: "34024204"
   
  处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的对象时，可以选择处理选项，也可以由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 确定处理的适当类型。 可用的处理方法随对象的类型不同而有差异。 此外，可用的方法取决于对象在上一次处理后又发生了什么变化。 如果允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。 有关详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑体系结构（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [数据库对象（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

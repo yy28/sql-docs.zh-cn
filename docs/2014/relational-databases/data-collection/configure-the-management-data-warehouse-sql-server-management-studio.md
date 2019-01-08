@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollection.wizard_finish.f1
@@ -23,12 +23,12 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6935fa7a5cb18f1a870e5a099fb000ea55e2eba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789809"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
   本主题介绍如何配置管理数据仓库以支持使用数据收集器的单个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据存储。 这些实例可能位于相同或不同的服务器上。 本主题还提供针对 [配置管理数据仓库向导](#Wizard) 对话框的用户界面的说明。 有关配置数据收集器的信息，请参阅 [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)。  
@@ -126,7 +126,7 @@ ms.locfileid: "48192507"
   
 -   将报告保存到文件  
   
--   将报告复制到剪贴板  
+-   “将报告复制到剪贴板”  
   
 -   将报告作为电子邮件发送  
   

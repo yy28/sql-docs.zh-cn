@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544177"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 接口
@@ -34,7 +34,7 @@ ms.locfileid: "51350521"
 ## <a name="binding-entries"></a>绑定条目
  ADO 的 Visual c + + 扩展的字段映射[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到 C/c + + 变量的对象。 调用字段和变量之间的映射的定义*绑定条目*。 宏提供数值、 固定长度和可变长度数据绑定项。 在 Visual c + + 扩展类，派生类中声明绑定项和 C/c + + 变量**CADORecordBinding**。 **CADORecordBinding**类在内部由绑定项宏。
 
- ADO 在内部将这些宏中的参数映射到 OLE DB **DBBINDING**结构，并创建 OLE DB**访问器**对象来管理移动和数据字段和变量之间的转换。 OLE DB 数据定义为包含三个部分： 一个*缓冲区*数据存储;*状态*，该值指示是否字段已成功存储在缓冲区中或如何将变量应还原到字段;并*长度*的数据。 (请参阅[获取文件和设置数据 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)中的 OLE DB 程序员参考，有关详细信息。)
+ ADO 在内部将这些宏中的参数映射到 OLE DB **DBBINDING**结构，并创建 OLE DB**访问器**对象来管理移动和数据字段和变量之间的转换。 OLE DB 数据定义为包含三个部分：一个*缓冲区*数据存储;*状态*，该值指示是否字段已成功存储在缓冲区中还是变量应如何还原到的字段; 和*长度*的数据。 (请参阅[获取文件和设置数据 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)中的 OLE DB 程序员参考，有关详细信息。)
 
 ## <a name="header-file"></a>标头文件
  若要使用 ADO 的 Visual c + + 扩展应用程序中包括以下文件：
@@ -58,7 +58,7 @@ ms.locfileid: "51350521"
  有关详细信息，请参阅[Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)。
 
 ## <a name="interface-methods"></a>接口方法
- **IADORecordBinding**接口有三个方法： **BindToRecordset**， **AddNew**，以及**更新**。 每个方法的唯一参数是指向派生自的类的实例的指针**CADORecordBinding**。 因此， **AddNew**并**更新**方法不能指定任何其 ADO 方法 namesakes 的参数。
+ **IADORecordBinding**接口有三个方法：**BindToRecordset**， **AddNew**，和**更新**。 每个方法的唯一参数是指向派生自的类的实例的指针**CADORecordBinding**。 因此， **AddNew**并**更新**方法不能指定任何其 ADO 方法 namesakes 的参数。
 
 ## <a name="syntax"></a>语法
  **BindToRecordset**方法相关联**记录集**与 C/c + + 变量字段。
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  为固定长度的数据，如提供系列宏**adDate**或**adBoolean**; 数值数据，如**adTinyInt**， **adInteger**，或**adDouble**; 和可变长度数据，如**每**，**以便您可以排除**或**adVarBinary**。 所有数值类型，除了**adVarNumeric**，也是固定长度类型。 每个系列具有不同的参数集，以便您可以排除不感兴趣的绑定信息。
 
- 有关详细信息，请参阅[附录 a： 数据类型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程序员参考。
+ 有关详细信息，请参阅[附录 a:数据类型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程序员参考。
 
 ### <a name="begin-binding-entries"></a>开始绑定项
  **BEGIN_ADO_BINDING**(*类*)
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|签名值和变量数据类型是无符号。|
 |**adFldDataOverFlow**|6|值为大于可能存储在变量数据类型。|
 |**adFldCantCreate**|7|未知的列类型和字段已打开。|
-|**adFldUnavailable**|8|无法确定字段值-例如，在新的、 未分配的字段，没有默认值。|
+|**adFldUnavailable**|8|字段值不能确定的示例中，在一个新的未分配字段，无默认值上。|
 |**adFldPermissionDenied**|9|在更新时，没有写入数据的权限。|
 |**adFldIntegrityViolation**|10|在更新时，字段值与列的完整性冲突。|
 |**adFldSchemaViolation**|11|在更新时，字段值与列架构冲突。|

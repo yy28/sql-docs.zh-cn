@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
@@ -18,19 +17,19 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9c9bd0573a3a6fa8211324066e86446b85ec0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 575bf85a81557e7a0a974dd1fc2210e58f34bde0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790529"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
   
  在将多个平面文件连接管理器添加到包中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建连接将解析为在运行时，集多平面文件连接管理器，属性的多个平面文件连接管理器和将多个平面文件连接管理器为`Connections`包的集合。  
   
- `ConnectionManagerType`连接管理器属性设置为`MULTIFLATFILE`。  
+ 该连接管理器的 `ConnectionManagerType` 属性设置为 `MULTIFLATFILE`。  
   
  可以按下列方式配置多平面文件连接管理器：  
   
@@ -63,19 +62,19 @@ ms.locfileid: "48185657"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [多平面文件连接管理器编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [多平面文件连接管理器编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [多平面文件连接管理器编辑器&#40;列页&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [多平面文件连接管理器编辑器（“列”页）](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [多平面文件连接管理器编辑器&#40;高级页&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [多平面文件连接管理器编辑器（“高级”页）](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [多平面文件连接管理器编辑器&#40;预览页&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [多平面文件连接管理器编辑器（“预览”页）](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
 ## <a name="see-also"></a>请参阅  
- [平面文件源](../data-flow/flat-file-source.md)   
+ [“平面文件源”](../data-flow/flat-file-source.md)   
  [平面文件目标](../data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](integration-services-ssis-connections.md)  
   
   

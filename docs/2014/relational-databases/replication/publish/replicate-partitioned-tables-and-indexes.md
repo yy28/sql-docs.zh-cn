@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/10/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
@@ -17,12 +16,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b55612e8143a8ec207902ff7c802d518382820b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793619"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
   由于使用分区可以快速而有效地管理和访问数据子集，并同时保持数据集合的完整性，因而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)。 复制支持分区，提供了一组属性来指定如何处理已分区表和索引。  
@@ -42,7 +41,7 @@ ms.locfileid: "48214818"
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   
-    -   用于事务复制的[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)  
+    -   用于事务复制的[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) f或 transactional replication  
   
     -   用于合并复制的[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) f或 merge replication  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48214818"
   
  在初始同步阶段，复制会将这些对象复制到订阅服务器。 如果分区方案使用的文件组不是 PRIMARY 文件组，则在进行初步同步之前，这些文件组必须位于订阅服务器上。  
   
- 在初始化订阅服务器后，数据更改传播到订阅服务器上，并应用于相应的分区。 不过，不支持对分区方案的更改。 事务复制和合并复制不支持复制下列命令：ALTER INDEX 的 ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或 REBUILD WITH PARTITION 语句。  与之关联的更改将不会自动复制到订阅服务器。 由用户负责在订阅服务器上手动进行类似的更改。  
+ 在初始化订阅服务器后，数据更改传播到订阅服务器上，并应用于相应的分区。 不过，不支持对分区方案的更改。 事务复制和合并复制不支持复制以下命令：ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或 ALTER INDEX 的 REBUILD WITH PARTITION 语句。  与之关联的更改将不会自动复制到订阅服务器。 由用户负责在订阅服务器上手动进行类似的更改。  
   
 ## <a name="replication-support-for-partition-switching"></a>复制支持分区切换  
  表分区的主要优点之一是能快速而有效地在分区之间移动数据的子集。 数据是使用 SWITCH PARTITION 命令移动的。 默认情况下，当某个表启用为进行复制时，由于下列原因而阻止 SWITCH PARTITION 操作：  

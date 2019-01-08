@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - replaying cursors
@@ -15,19 +14,19 @@ ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e076ffe977423e8068759aca0a3624c03eb6e44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c4c4b9d2e2e07c53f850fe545d803fa411dbbc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795819"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重播至光标处 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播到光标处即暂停的跟踪文件或表。 在光标处暂停跟踪可支持调试，因为您可以将长跟踪脚本的重播分成较短的段，以便逐步进行分析。  
   
 ### <a name="to-replay-to-the-cursor"></a>重播至光标处  
   
-1.  打开要重播的跟踪文件或跟踪表。 有关详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md) 或[打开跟踪表 (SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)。  
+1.  打开要重播的跟踪文件或跟踪表。 有关详细信息，请参阅 [打开跟踪文件 (SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md) 或 [打开跟踪表 (SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)一起提供的预定义优化模板。  
   
      请确保打开的跟踪文件或跟踪表包含重播所需的事件类。 有关详细信息，请参阅 [Replay Requirements](replay-requirements.md)。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48211897"
 6.  重复步骤 5 到跟踪的末尾。  
   
 ## <a name="see-also"></a>请参阅  
- [重播到断点&#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
+ [重播到断点 (SQL Server Profiler)](replay-to-a-breakpoint-sql-server-profiler.md)   
  [重播跟踪](replay-traces.md)   
  [SQL Server 事件探查器](sql-server-profiler.md)  
   

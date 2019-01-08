@@ -1,5 +1,5 @@
 ---
-title: 修改产品维度 |Microsoft 文档
+title: 修改产品维度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525842"
 ---
-# <a name="lesson-3-3---modifying-the-product-dimension"></a>Lesson 3-3-修改产品维度
+# <a name="lesson-3-3---modifying-the-product-dimension"></a>课程 3-3-修改产品维度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 在本主题下的任务中，将使用命名计算为产品系列提供更具说明性的名称，在“产品”维度中定义一个层次结构，并为该层次结构指定“(全部)”成员名称。 还可以按显示文件夹组合各个属性。  
@@ -58,7 +58,7 @@ ms.locfileid: "34019564"
   
 2.  在“维度结构”选项卡的“属性”窗格中，选择“产品系列”。  
   
-3.  在屏幕右侧的“属性”窗口中，单击窗口底部的“NameColumn”属性字段，然后单击浏览 (**…**) 按钮以打开“名称列”对话框。 （可能需要单击屏幕右侧的“属性”选项卡以打开“属性”窗口。）  
+3.  在屏幕右侧的属性窗口中，单击**NameColumn**属性字段在窗口的底部，然后单击浏览 (**...**) 按钮以打开**名称列**对话框。 （可能需要单击屏幕右侧的“属性”选项卡以打开“属性”窗口。）  
   
 4.  选择位于“源列”列表底部的“ProductLineName”，然后单击“确定”。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019564"
   
 5.  在“维度结构”选项卡的“属性”窗格中，选择“产品密钥”。  
   
-6.  在“属性”窗口中，单击“NameColumn”属性字段，然后单击省略号浏览 (**…**) 按钮以打开“名称列”对话框。  
+6.  在属性窗口中，单击**NameColumn**属性字段，，然后单击省略号浏览 (**...**) 按钮以打开**名称列**对话框。  
   
 7.  选择“源列”列表中的“EnglishProductName”，然后单击“确定”。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34019564"
   
     -   **Safety Stock Level**  
   
-    -   **Size**  
+    -   **大小**  
   
     -   **Size Range**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "34019564"
   
     -   **开始日期**  
   
-    -   **状态**  
+    -   **“状态”**  
   
 6.  在“属性”窗口的“AttributeHierarchyDisplayFolder”属性单元中，键入 **History**。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34019564"
   
     因为各成员之间的关系会随时间变化，所以在“关系类型”列表中，将关系类型设置保留为“柔性”。 例如，产品型号可能会最终移动到另一个产品系列中。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 5.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -182,8 +182,8 @@ ms.locfileid: "34019564"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [修改“日期”维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>另请参阅  
-[在数据源视图 & #40; 中定义命名的计算Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+[在数据源视图中定义命名计算 (Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [创建用户定义层次结构](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [配置属性层次结构的“(全部)”级别](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

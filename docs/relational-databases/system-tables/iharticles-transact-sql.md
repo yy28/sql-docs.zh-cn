@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHarticles
@@ -19,12 +18,12 @@ ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ae16b2b0a7f38f9d70e77acf7dfb045d50b1042
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802609"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47738485"
 |**status**|**tinyint**|项目选项和状态的位掩码，可以是对以下一个或多个值执行逻辑位或运算的结果：<br /><br /> **0** = 没有附加属性。<br /><br /> **1** = 活动。<br /><br /> **8** = 包括 INSERT 语句中的列名称。<br /><br /> **16** = 使用参数化语句。<br /><br /> 例如，使用参数化语句的活动项目在此列中的值为 17。 如果值为 0，则表示项目处于非活动状态，而且未定义其他属性。|  
 |**类型**|**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的项目。|  
 |**upd_cmd**|**nvarchar(255)**|复制对表项目的更新操作时所使用的复制命令类型。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**schema_option**|**binary(8)**|给定项目的架构生成选项的位图，它可以是下面的一个或多个值的位逻辑或结果：<br /><br /> **0x00** = 禁用快照代理编写脚本，并使用提供的 CreationScript。<br /><br /> **0x01** = 生成对象创建 （CREATE TABLE、 CREATE PROCEDURE 等）。<br /><br /> **0x10** = 生成相应的聚集索引。<br /><br /> **0x40** = 生成相应的非聚集索引。<br /><br /> **0x80** = 包括声明引用完整性在主键上。<br /><br /> **0x1000** = 复制列级排序规则。 注意： 此选项设置默认情况下，对于 Oracle 发布服务器以启用区分大小写的比较。<br /><br /> **0x4000** = 复制唯一键，如果对表项目定义。<br /><br /> **0x8000** = 的复制 primary key 和上一个表的唯一键作为约束使用 ALTER TABLE 语句的文章。|  
+|**schema_option**|**binary(8)**|给定项目的架构生成选项的位图，它可以是下面的一个或多个值的位逻辑或结果：<br /><br /> **0x00** = 禁用快照代理编写脚本，并使用提供的 CreationScript。<br /><br /> **0x01** = 生成对象创建 （CREATE TABLE、 CREATE PROCEDURE 等）。<br /><br /> **0x10** = 生成相应的聚集索引。<br /><br /> **0x40** = 生成相应的非聚集索引。<br /><br /> **0x80** = 包括声明引用完整性在主键上。<br /><br /> **0x1000** = 复制列级排序规则。 注意：默认情况下，将为 Oracle 发布服务器设置该选项，以启用区分大小写的比较。<br /><br /> **0x4000** = 复制唯一键，如果对表项目定义。<br /><br /> **0x8000** = 的复制 primary key 和上一个表的唯一键作为约束使用 ALTER TABLE 语句的文章。|  
 |**dest_owner**|**sysname**|目标数据库中表的所有者。|  
 |**dest_table**|**sysname**|目标表的名称。|  
 |**tablespace_name**|**nvarchar(255)**|标识项目的日志记录表使用的表空间。|  

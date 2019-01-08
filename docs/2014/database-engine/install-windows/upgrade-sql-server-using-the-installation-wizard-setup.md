@@ -13,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018312"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536925"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安装向导升级到 SQL Server 2014（安装程序）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树。 也可以将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与早期版本并行安装，或从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移已有的数据库和配置设置，然后将它们应用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例。  
@@ -38,7 +38,7 @@ ms.locfileid: "51018312"
 > [!NOTE]  
 >  在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 的计算机上，不支持将早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]。 在服务器核心安装的详细信息，请参阅[Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  您必须以管理员身份运行安装程序。 如果从远程共享位置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用对该远程共享位置具有读取和执行权限的域帐户且是本地管理员。  
   
  升级[!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下主题：  
@@ -91,9 +91,9 @@ ms.locfileid: "51018312"
   
      **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例的默认方式都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请为“实例 ID”文本框提供一个值。  
   
-     所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的每个组件。  
+     所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
   
-     **已安装的实例**  - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的命名实例。  
+     **已安装的实例** - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的命名实例。  
   
 13. 本主题中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "51018312"
 ## <a name="next-steps"></a>后续步骤  
  升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，请完成下列任务：  
   
--   **注册服务器** - 升级会删除早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的注册表设置。 升级之后，必须重新注册服务器。  
+-   **注册服务器** - 升级会删除早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的注册表设置。 升级之后，必须重新注册服务器。  
   
--   **更新统计信息** - 为了帮助优化查询性能，建议您在升级之后更新所有数据库的统计信息。 使用 `sp_updatestats` 存储过程可以更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中用户定义的表中的统计信息。  
+-   **更新统计信息** - 为了帮助优化查询性能，建议在升级之后更新所有数据库的统计信息。 使用 `sp_updatestats` 存储过程可以更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中用户定义的表中的统计信息。  
   
 -   **配置新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** - 为了减少系统的可攻击外围应用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将有选择地安装和启用一些关键服务和功能。 有关外围应用配置器工具的详细信息，请参阅此版本的自述文件。  
   

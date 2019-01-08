@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server, configuring
@@ -15,12 +13,12 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0d54fd966594fc8219623e566f68edf65023546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7fc07b0b38a9612159ea8f88c00724340f7b494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804667"
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中配置 SQL Server
   在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Information>对象，<xref:Microsoft.SqlServer.Management.Smo.Settings>对象，<xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象，和<xref:Microsoft.SqlServer.Management.Smo.Configuration>对象包含的实例的设置和信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -28,37 +26,37 @@ ms.locfileid: "48052177"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有许多描述已安装的实例的行为的属性。 这些属性描述了启动选项、服务器默认值、文件和目录、系统和处理器信息、产品和版本、连接信息、内存选项、语言和排序规则选择以及身份验证模式。  
   
 ## <a name="sql-server-configuration"></a>SQL Server 配置  
- <xref:Microsoft.SqlServer.Management.Smo.Information>对象属性包含的实例的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，例如处理器和平台。  
+ <xref:Microsoft.SqlServer.Management.Smo.Information> 对象属性包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的相关信息，例如处理器和平台。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Settings>对象属性包含的实例的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 除邮件配置文件和服务器帐户之外，还可以修改默认的数据库文件和目录。 这些属性在连接持续时间内一直保留。  
+ <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象属性包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的相关信息。 除邮件配置文件和服务器帐户之外，还可以修改默认的数据库文件和目录。 这些属性在连接持续时间内一直保留。  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象属性包含与算术、ANSI 标准和事务相关的当前连接行为的相关信息。  
   
- 有一组由表示的配置选项的<xref:Microsoft.SqlServer.Management.Smo.Configuration>对象。 它包含表示可通过 `sp_configure` 存储过程进行修改的选项的一组属性。 选项，例如**Priority Boost**， **Recovery Interval**并**网络数据包大小**控制的实例的性能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 其中的许多选项可以进行动态更改，但在某些情况下，其值需要先配置，在重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后才发生更改。  
+ 还存在由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象表示的一组配置选项。 它包含表示可通过 `sp_configure` 存储过程进行修改的选项的一组属性。 选项，例如**Priority Boost**， **Recovery Interval**并**网络数据包大小**控制的实例的性能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 其中的许多选项可以进行动态更改，但在某些情况下，其值需要先配置，在重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后才发生更改。  
   
- 没有<xref:Microsoft.SqlServer.Management.Smo.Configuration>对象每个配置选项的属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 对象，可以修改全局配置设置。 许多属性都有最大值和最小值，这些值也存储为 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 属性。 这些属性需要<xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A>方法以将更改提交到的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 每个配置选项都对应一个 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 对象，可以修改全局配置设置。 许多属性都有最大值和最小值，这些值也存储为 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 属性。 这些属性需要<xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A>方法以将更改提交到的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 中的配置选项的所有<xref:Microsoft.SqlServer.Management.Smo.Configuration>对象必须由系统管理员进行更改。  
+ <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象中的所有配置选项都必须由系统管理员进行更改。  
   
 ## <a name="examples"></a>示例  
  对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)并[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>在 Visual Basic 中修改 SQL Server 配置选项  
- 此代码示例说明如何在 Visual Basic .NET 中更新配置选项。 它还检索并显示指定配置选项的最大值和最小值的相关信息。 最后，程序会通知用户更改已进行了动态，则存储的实例前一直[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]重新启动。  
+ 此代码示例说明如何在 Visual Basic .NET 中更新配置选项。 它还检索并显示指定配置选项的最大值和最小值的相关信息。 最后，程序会通知用户是否已进行了动态更改，或者是否存储了更改直到重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后再予以应用。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure2](SMO How to#SMO_VBConfigure2)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-basic"></a>在 Visual Basic 中修改 SQL Server 设置  
  此代码示例显示有关实例的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中<xref:Microsoft.SqlServer.Management.Smo.Information>并<xref:Microsoft.SqlServer.Management.Smo.Settings>，并修改中的设置<xref:Microsoft.SqlServer.Management.Smo.Settings>和<xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象属性。  
   
- 在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 你可以运行<xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>方法单独。  
+ 在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以分别运行这两个对象的 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure1](SMO How to#SMO_VBConfigure1)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-c"></a>在 Visual C# 中修改 SQL Server 设置  
  此代码示例显示有关实例的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中<xref:Microsoft.SqlServer.Management.Smo.Information>并<xref:Microsoft.SqlServer.Management.Smo.Settings>，并修改中的设置<xref:Microsoft.SqlServer.Management.Smo.Settings>和<xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象属性。  
   
- 在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 你可以运行<xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>方法单独。  
+ 在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以分别运行这两个对象的 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   
  `//Connect to the local, default instance of SQL Server.`  
   
@@ -96,7 +94,7 @@ ms.locfileid: "48052177"
 ## <a name="modifying-sql-server-settings-in-powershell"></a>在 PowerShell 中修改 SQL Server 设置  
  此代码示例显示有关实例的信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中<xref:Microsoft.SqlServer.Management.Smo.Information>并<xref:Microsoft.SqlServer.Management.Smo.Settings>，并修改中的设置<xref:Microsoft.SqlServer.Management.Smo.Settings>和<xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象属性。  
   
- 在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 你可以运行<xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>方法单独。  
+ 在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以分别运行这两个对象的 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server.  
@@ -121,7 +119,7 @@ $srv.Alter()
 ```  
   
 ## <a name="modifying-sql-server-configuration-options-in-powershell"></a>在 PowerShell 中修改 SQL Server 配置选项  
- 此代码示例说明如何在 Visual Basic .NET 中更新配置选项。 它还检索并显示指定配置选项的最大值和最小值的相关信息。 最后，程序会通知用户更改已进行了动态，则存储的实例前一直[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]重新启动。  
+ 此代码示例说明如何在 Visual Basic .NET 中更新配置选项。 它还检索并显示指定配置选项的最大值和最小值的相关信息。 最后，程序会通知用户是否已进行了动态更改，或者是否存储了更改直到重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后再予以应用。  
   
 ```  
 #Get a server object which corresponds to the default instance replace LocalMachine with the physical server  

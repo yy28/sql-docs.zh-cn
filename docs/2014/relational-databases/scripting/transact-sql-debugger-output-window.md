@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.output
 helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
@@ -16,12 +14,12 @@ ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3b5ec44bf875701a029423bd19aa1467a9a7f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30c92ad13360d6c675ba95d45c9684cf25e7eba8
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204197"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328577"
 ---
 # <a name="output-window"></a>输出窗口
   此窗口显示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各种功能的状态消息。 输出是从 **调试器、外部工具功能或调试器** “命令窗口” [!INCLUDE[tsql](../../includes/tsql-md.md)] 中运行的命令发送到 **“输出”** 窗口的特殊窗格中。 此外，来自外部工具（例如 .bat 或 .com 文件）且通常在“命令提示符”窗口中显示的输出也在此窗口中显示。  
@@ -39,5 +37,3 @@ ms.locfileid: "48204197"
   
 ## <a name="see-also"></a>请参阅  
  [Transact-SQL 调试器](transact-sql-debugger.md)  
-  
-  

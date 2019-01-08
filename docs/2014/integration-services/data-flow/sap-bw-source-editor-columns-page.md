@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48eb606a0b575c9ebcc023abea9f491dc7d32445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59cda8289032f3d3156c49d3a450cf919981d0b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052457"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791169"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
   使用“SAP BW 源编辑器”的“列”页将输出列映射到每个外部（源）列。  
@@ -56,7 +55,7 @@ ms.locfileid: "48052457"
  为每个输出列提供唯一的名称。 默认值是所选外部（源）列的名称。 但是，您可以输入任何唯一的描述性名称。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器将显示列的 **输出列** 名称。  
   
 ## <a name="see-also"></a>请参阅  
- [SAP BW 源编辑器&#40;连接管理器页&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW 源编辑器（“错误输出”页）](sap-bw-source-editor-error-output-page.md)   
  [SAP BW 源编辑器（“高级”页）](sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  

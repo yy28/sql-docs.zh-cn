@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086837"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800370"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
   文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 `varbinary`、`varbinary(max)`（包括 `FILESTREAM`）或 `image` 二进制数据列中支持的文档类型，您可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  
@@ -61,7 +61,7 @@ ms.locfileid: "48086837"
 ##  <a name="impact"></a> 启用属性搜索的影响  
  根据您在搜索属性列表中指定的属性的数目以及每个属性的内容，配置全文索引以便支持搜索一个或多个属性将在某种程度上增加索引的大小。  
   
- 在测试中的 Microsoft Word 的典型资料<sup>®</sup>，Excel<sup>®</sup>，和 PowerPoint<sup>®</sup>文档，我们配置了全文索引到索引典型的搜索属性。 对这些属性建立索引将全文索引的大小增加了大约 5%。 我们预计这一大小上的增量对于大多数文档资料而言大致相近。 不过，这个大小上的增量最终将取决于相对于整个数据量，给定文档资料中的属性数据量的比例。  
+ 在测试中的 Microsoft Word 的典型资料<sup>??</sup>，Excel<sup>??</sup>，和 PowerPoint<sup>??</sup> 文档中，我们配置了全文索引到索引典型的搜索属性。 对这些属性建立索引将全文索引的大小增加了大约 5%。 我们预计这一大小上的增量对于大多数文档资料而言大致相近。 不过，这个大小上的增量最终将取决于相对于整个数据量，给定文档资料中的属性数据量的比例。  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "48086837"
   
      属性名称可以是以下任何项：  
   
-    -   Windows 规范名称的属性，如`System.Author`或`System.Contact.HomeAddress`。  
+    -   属性的 Windows 规范名称，例如 `System.Author` 或 `System.Contact.HomeAddress`。  
   
     -   便于您的用户记住的用户友好名称。 某些属性与已知的用户友好名称（例如“Author”或“Home Address”）相关联，但您可以指定最适合您的用户的任何名称。  
   

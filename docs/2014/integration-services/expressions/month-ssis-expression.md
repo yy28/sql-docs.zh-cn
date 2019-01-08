@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
@@ -14,12 +13,12 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4106fed90fd370ee30a6bb3a5ad2be5324caddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83175d463c8b6fa54e88d17945def36a76b6fcfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800029"
 ---
 # <a name="month-ssis-expression"></a>MONTH（SSIS 表达式）
   返回一个表示日期中的“月份”日期部分的整数。  
@@ -44,7 +43,7 @@ MONTH(date)
  日期文字必须显式转换为日期数据类型之一。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
 > [!NOTE]  
->  在日期文本显式转换为以下日期数据类型之一时，表达式验证失败：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
+>  若要验证日期文本显式转换为这些日期数据类型之一时，表达式失败：将 DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
   
  使用 MONTH 函数更为简要，但等价于使用 DATEPART("Month", date)。  
   
@@ -68,11 +67,11 @@ MONTH(GETDATE())
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [DATEADD &#40;SSIS 表达式&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS 表达式&#41;](datediff-ssis-expression.md)   
+ [DATEADD（SSIS 表达式）](dateadd-ssis-expression.md)   
+ [DATEDIFF（SSIS 表达式）](datediff-ssis-expression.md)   
  [DATEPART（SSIS 表达式）](datepart-ssis-expression.md)   
  [DAY（SSIS 表达式）](day-ssis-expression.md)   
  [YEAR（SSIS 表达式）](year-ssis-expression.md)   
- [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   

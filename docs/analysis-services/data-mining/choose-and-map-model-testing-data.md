@@ -1,5 +1,5 @@
 ---
-title: 选择和映射模型测试数据 |Microsoft 文档
+title: 选择和映射模型测试数据 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c731f1a439a817abd133e14815b85a8f6d0077b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e1b4751d21b9aea4f80561909910d81abbc3756
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015304"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545322"
 ---
 # <a name="choose-and-map-model-testing-data"></a>选择和映射模型测试数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "34015304"
   
 3.  在 **“输入选择”** 选项卡中的 **“选择要用于准确性图表的数据集”** 下，选择 **“指定其他数据集”**。  
   
-4.  单击浏览按钮 **(…)** 以打开一个对话框，并生成外部数据集的定义。  
+4.  单击浏览按钮 **（...）** 打开一个对话框并生成外部数据集的定义。  
   
 5.  在 **“选择挖掘结构”** 对话框中，选择包含您要使用的模型的挖掘结构，然后单击 **“确定”**。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34015304"
   
 4.  在 **“选择要用于准确性图表的数据集”** 中，选择 **“指定其他数据集”** 选项。  
   
-5.  单击浏览按钮 **(…)** 打开一个对话框并生成外部数据源的定义。  
+5.  单击浏览按钮 **（...）** 打开一个对话框并生成外部数据源的定义。  
   
 6.  在 **“指定列映射”** 对话框中，单击 **“选择事例表”**。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34015304"
   
      **“指定列映射”** 对话框中将显示新的列映射。 通过选择列之间的连线，然后按 Delete 键，可以删除映射。 通过在“挖掘结构”表中选择列，然后将其拖到“选择输入表”表中的对应列，可以创建一个新连接。  
   
-## <a name="see-also"></a>另请参阅  
- [测试和验证任务和操作指南 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

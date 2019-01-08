@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
@@ -12,12 +12,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d0b162e8eb232f605e837a42fa55d3d39dcccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100077"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792269"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>“XML 索引”对话框 (Visual Database Tools)
   使用“XML 索引”对话框可为 XML 数据类型的列创建索引，这些列不能使用“索引/键”对话框创建索引。 每个 XML 列都可以有多个 XML 索引，但最先创建的索引（主索引）将成为其他索引（二级索引）的基础。 删除主 XML 索引后，二级索引也会随之删除。  
@@ -56,8 +56,8 @@ ms.locfileid: "48100077"
  **名称**  
  显示 XML 索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
- **Description**  
- 描述该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (**…**)。 这可以提供一个更大的文本编写区域。  
+ **说明**  
+ 描述该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)。 这可以提供一个更大的文本编写区域。  
   
  **表设计器类别**  
  展开此项可显示有关此 XML 索引的属性的信息。  

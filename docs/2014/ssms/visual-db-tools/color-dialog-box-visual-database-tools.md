@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
@@ -12,12 +12,12 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc0e52371d63ce8ce5789c6407259c269f5bf70f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800279"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>“颜色”对话框（可视化数据库工具）
   “颜色对话框”返回用户选定的颜色的 RGB 值。 用户可以从显示器驱动程序确定的一组基本颜色或者从一组自定义颜色中进行选择。 从基本颜色中进行选择，或创建自定义颜色。 单击颜色矩阵或在“色调”、“饱和度”、“亮度”、“红色”、“绿色”以及“蓝色”框中执行键入操作可定义颜色。  

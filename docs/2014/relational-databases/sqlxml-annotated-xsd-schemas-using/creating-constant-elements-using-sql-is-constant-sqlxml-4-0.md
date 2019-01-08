@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -20,15 +18,15 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28c95cabd8b2c47aa3d05f51526b3eb0921e4701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137297"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793469"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
-  若要指定常量元素，即 XSD 架构中不映射到任何数据库表或列的元素，可以使用 `sql:is-constant` 批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 可以在不具有任何属性的元素中指定 `sql:is-constant` 批注。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
+  若要指定常量元素的 XSD 架构中未映射到任何数据库表或列的元素-可以使用`sql:is-constant`批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 可以在不具有任何属性的元素中指定 `sql:is-constant` 批注。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
   
  `sql:is-constant` 批注可以用于以下操作：  
   

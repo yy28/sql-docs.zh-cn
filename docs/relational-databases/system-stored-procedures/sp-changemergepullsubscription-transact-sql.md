@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43397c243985fac65e14be8af3acadf129fd8114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714935"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784679"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [ **@value=**] **'***值*****  
  是指定的属性的新值。 *值*是**nvarchar(255)**，可以是表中的值之一。  
   
-|“属性”|ReplTest1|Description|  
+|属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||快照文件夹的存储位置（如果该位置不同于默认位置或是默认位置之外的位置）。|  
 |**description**||对该合并请求订阅的说明。|  
@@ -108,7 +107,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergepullsubscription**。  
   
 ## <a name="see-also"></a>请参阅  

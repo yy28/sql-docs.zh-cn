@@ -1,5 +1,5 @@
 ---
-title: 兼容级别 1200年的表格模型编程 |Microsoft Docs
+title: Analysis Services 表格模型编程兼容级别 1200年的 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f1ab3b825ad85d490493c1ffa05d7e066ec0cce
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: eba8822f7fe21e089d9c02b8f6df6cf5ec0e5294
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144752"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072104"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>表格模型编程兼容级别 1200 及更高
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50144752"
 > [!NOTE]  
 >  Analysis Services 管理对象 (AMO)、 ADOMD.NET 和表格对象模型 (TOM) 客户端库现在面向.NET 4.0 运行时。   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 开发人员文档](../../analysis-services/analysis-services-developer-documentation.md)   
  [表格模型编程兼容级别 1050年到 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [技术参考](../../analysis-services/powershell/technical-reference-ssas.md)[升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  

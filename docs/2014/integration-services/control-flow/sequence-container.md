@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
@@ -18,12 +17,12 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daaec371cae5f224201c7e4660574ec5734c90fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7c66b78b6e6e8af245b71994c92d505b3f85ef9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772969"
 ---
 # <a name="sequence-container"></a>序列容器
   序列容器可定义作为包控制流子集的控制流。 序列容器将包分组到多个单独的控制流中，每个控制流包含一个或多个在整体包控制流中运行的任务和容器。  
@@ -57,7 +56,7 @@ ms.locfileid: "48183277"
  有关如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设置组件属性的信息，请参阅 [设置任务或容器的属性](../set-the-properties-of-a-task-or-container.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [添加或删除任务或容器控制流中](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [在控制流中添加或删除任务或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [使用默认优先约束来连接任务和容器](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Integration Services 容器](integration-services-containers.md)  
   

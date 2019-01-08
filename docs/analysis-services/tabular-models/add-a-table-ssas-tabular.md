@@ -1,5 +1,5 @@
 ---
-title: 将表添加 |Microsoft 文档
+title: 将表添加到 Analysis Services 表格模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0e54c5dfa244c28eaba765c70bf827ce66c5e02
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 224df75c15acf560c7eadc70fe91fbbc2b0396d9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040301"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072284"
 ---
 # <a name="add-a-table"></a>添加表
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文介绍如何从从中你以前将数据导入您的模型的数据源添加表。 若要添加来自同一数据源的表，您可以使用现有的数据源连接。 建议您在从单个数据源导入任意数量的表时始终使用单个连接。  
+  本文介绍如何从数据源从其以前的数据导入您的模型中添加表。 若要添加来自同一数据源的表，您可以使用现有的数据源连接。 建议您在从单个数据源导入任意数量的表时始终使用单个连接。  
   
 ### <a name="to-add-a-table-from-an-existing-data-source"></a>从现有数据源添加表  
   

@@ -1,11 +1,10 @@
 ---
-title: 'TM: Rollback Tran Starting 事件类 | Microsoft Docs'
+title: 'TM: Rollback Tran Starting 事件类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,15 +14,15 @@ ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 565f1d58b8043b2d7d4007fba29e699cbf36be11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145927"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785999"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting 事件类
-  TM: Rollback Tran Starting 事件类表示正在启动 ROLLBACK TRANSACTION 请求。 客户端通过事务管理界面发送请求。 EventSubClass 列指示在当前事务回滚后是否启动新事务。  
+  TM:Rollback Tran Starting 事件类表示正在启动 ROLLBACK TRANSACTION 请求。 客户端通过事务管理界面发送请求。 EventSubClass 列指示在当前事务回滚后是否启动新事务。  
   
 ## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM: Rollback Tran Starting 事件类的数据列  
   

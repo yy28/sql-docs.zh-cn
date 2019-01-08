@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
@@ -13,12 +12,12 @@ ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e331169f7477bfcb4a5ae926290664da50897b38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184957"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640659"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
   此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。  
@@ -42,7 +41,7 @@ ms.locfileid: "48184957"
   
 5.  在该窗格中，双击“锁定内存页”。  
   
-6.  在 **“本地安全设置 – 锁定内存中的页”** 对话框中，单击 **“添加用户或组”**。  
+6.  在“本地安全设置 - 锁定内存中的页”对话框中，单击“添加用户或组”。  
   
 7.  在 **“选择用户、服务帐户或组”** 对话框中，添加有权运行 sqlservr.exe 的帐户。  
   

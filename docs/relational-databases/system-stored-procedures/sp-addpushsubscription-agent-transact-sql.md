@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832315"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209797"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -71,10 +70,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] **'***发布*****  
+ [  **@publication =**] **'发布**   
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber =**] **'***订阅服务器*****  
+ [ **@subscriber =**] **'***订阅服务器*****  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
  [  **@subscriber_db =**] **'***subscriber_db*****  
@@ -95,10 +94,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [  **@job_login =** ] **'***job_login*****  
+ [  **@job_login =** ] **'job_login**   
  是用于运行代理的帐户的登录名。 在 Azure SQL 数据库托管实例上使用 SQL Server 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。 使用 Windows 集成身份验证时，此 Windows 帐户始终用于代理与分发服务器的连接，以及与订阅服务器的连接。  
   
- [  **@job_password =** ] **'***job_password*****  
+ [  **@job_password =** ] **'job_password**   
  是用于运行代理的帐户的密码。 *job_password*是**sysname**，无默认值。  
   
 > [!IMPORTANT]  
@@ -178,17 +177,17 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@dts_package_location =** ] **'***dts_package_location*****  
  指定包位置。 *dts_package_location*是**nvarchar(12)**，默认值为分发服务器。 包的位置可以是**分发服务器上**或**订阅服务器**。  
   
- [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr*****  
- 是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]同步管理器。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ [  **@enabled_for_syncmgr =** ] **'enabled_for_syncmgr**   
+ 是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  [  **@distribution_job_name =** ] **'***distribution_job_name*****  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@publisher =** ] **'***发布服务器*****  
+ [  **@publisher =** ] **'发布服务器**   
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
  [  **@subscriber_provider=** ] **'***subscriber_provider*****  
- 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的 OLE DB 访问接口注册时使用的唯一编程标识符 (PROGID)。 *subscriber_provider*是**sysname**，默认值为 NULL。 *subscriber_provider*必须是唯一的分发服务器上安装的 OLE DB 访问接口。 *subscriber_provider*仅支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。  
+ 与的唯一编程标识符 (PROGID) 的 OLE DB 访问接口的非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册数据源。 *subscriber_provider*是**sysname**，默认值为 NULL。 *subscriber_provider*必须是唯一的分发服务器上安装的 OLE DB 访问接口。 *subscriber_provider*仅支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc*****  
  OLE DB 访问接口所了解，请为数据源的名称。 *subscriber_datasrc*是**nvarchar(4000)**，默认值为 NULL。 *subscriber_datasrc*作为以初始化 OLE DB 访问接口的 DBPROP_INIT_DATASOURCE 属性传递。 *subscriber_datasrc*仅支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。  
@@ -211,11 +210,11 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addpushsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addpushsubscription_agent**。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

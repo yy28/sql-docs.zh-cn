@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b48a22e440889012dd16c8e60142f5b984cb4e7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38a7eb08d65717b20891225e6f4ff61e4fbcb99b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540714"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>处理字符转换时 ODBC 驱动程序行为的变化
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
  查询：  `select convert(varchar(36), '123')`  
   
 ```  
-SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
+SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|Description|  
@@ -68,11 +68,11 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
    SQLNumCols(...iTotalCols...)  
    for(int iCol = 1; iCol < iTotalCols; iCol++) {  
       WCHAR* pBufOrig, pBuffer = new WCHAR[100];  
-      SQLGetData(.... iCol … pBuffer, 100, &iSize);   // Get original chunk  
+      SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get original chunk  
       while(NOT ALL DATA RETREIVED (SQL_NO_TOTAL, ...) ) {  
          pBuffer += 50;   // Advance buffer for data retrieved  
          // May need to realloc the buffer when you reach current size  
-         SQLGetData(.... iCol … pBuffer, 100, &iSize);   // Get next chunk  
+         SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get next chunk  
       }  
    }  
 }  
@@ -82,7 +82,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
  查询：  `select convert(varchar(36), '1234567890')`  
   
 ```  
-SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecting String Data Right Truncation behavior  
+SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|Description|  
@@ -96,7 +96,7 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
  `select @p1 = replicate('B', 1234)`  
   
 ```  
-SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters  
+SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|Description|  
@@ -105,7 +105,7 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|**SQLFetch**返回没有更多的数据。<br /><br /> **SQLMoreResults**返回没有更多的数据。<br /><br /> 长度指示 (-4) SQL_NO_TOTAL，因为数据的其余部分未转换。<br /><br /> 原始缓冲区包含 63 个字节和 NULL 结束符。 缓冲区被保证为以 NULL 结束。|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>执行 CHAR 和 WCHAR 转换  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序提供几种执行 CHAR 和 WCHAR 转换的方式。 逻辑类似于处理 blob（varchar(max)、nvarchar(max)、…）：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序提供几种执行 CHAR 和 WCHAR 转换的方式。 逻辑是类似于处理 blob （varchar （max)、 nvarchar （max），...）：  
   
 -   数据保存到或使用绑定时截断到指定的缓冲区**SQLBindCol**或**SQLBindParameter**。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multicasttrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0587daef403b80ce42781f2a9a4c5677842eca2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99a0cdc035b14f24107397b67ffafecfe90fd8a2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182977"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804939"
 ---
 # <a name="multicast-transformation"></a>多播转换
   多播转换将其输入分发到一个或多个输出。 此转换与有条件拆分转换类似。 这两种转换都将一个输入定向到多个输出。 这两者之间的区别在于多播转换将每行定向到每个输出，而有条件拆分则将一行定向到单个输出。 有关详细信息，请参阅 [Conditional Split Transformation](conditional-split-transformation.md)。  
@@ -35,7 +34,7 @@ ms.locfileid: "48182977"
  此转换具有一个输入和多个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-multicast-transformation"></a>多播转换的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 **“多播转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Multicast Transformation Editor](../../multicast-transformation-editor.md)。  
   

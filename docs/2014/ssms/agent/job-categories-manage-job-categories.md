@@ -1,10 +1,10 @@
 ---
-title: 作业类别： 管理作业类别 |Microsoft Docs
+title: 作业类别：管理作业类别 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.categories.f1
@@ -14,12 +14,12 @@ ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2dfe4bd76f54854a9b1b79d23340b65af15b068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147687"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785479"
 ---
 # <a name="job-categories-manage-job-categories"></a>作业类别：管理作业类别
   使用“作业类别”对话框可以添加或删除作业类别。 但不能删除内置作业类别。  
@@ -40,7 +40,7 @@ ms.locfileid: "48147687"
  **删除**  
  删除所选作业类别。 只用于用户定义的作业类别。  
   
- **“刷新”**  
+ **刷新**  
  查询该服务器的当前信息。  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>访问“作业类别”对话框  

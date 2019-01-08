@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subscribers.f1
@@ -15,12 +14,12 @@ ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f222569b5c134d46165d012850a8a2374d4ad8df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129057"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806199"
 ---
 # <a name="subscribers"></a>订阅服务器
   指定接收对所选发布的订阅的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
@@ -51,7 +50,7 @@ ms.locfileid: "48129057"
   
 -   所选发布的发布服务器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本。  
   
- 单击 **“添加订阅服务器”** 将显示一个菜单，其中包含两个选项： **“添加 SQL Server 订阅服务器”** 和 **“添加非 SQL Server 订阅服务器”**。 单击 **“添加非 SQL Server 订阅服务器”** 可以添加 Oracle 或 IBM DB2 订阅服务器。  
+ 单击**添加订阅服务器**显示一个菜单，其中包含两个选项：**添加 SQL Server 订阅服务器**并**添加非 SQL Server 订阅服务器**。 单击 **“添加非 SQL Server 订阅服务器”** 可以添加 Oracle 或 IBM DB2 订阅服务器。  
   
  **“添加 SQL Server 订阅服务器”**  
  向可以启用为订阅服务器的服务器列表中添加服务器。 如果以下一个或多个条件为真，则显示此按钮：  
@@ -70,7 +69,7 @@ ms.locfileid: "48129057"
   
 ## <a name="see-also"></a>请参阅  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [订阅发布](subscribe-to-publications.md)  
   

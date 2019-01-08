@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 28dc70c0bb2edaa54109c0ea1fc6485c1b00ab52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae1f1a8e593b8e4e7233609c6c9ed64e846b589
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212737"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803489"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>实现 Data Quality Services 与 Master Data Services 的集成
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，匹配功能由 Data Quality Services (DQS) 提供。 此功能必须启用后才能使用。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
   
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序和数据库必须存在。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48212737"
 5.  在确认对话框中，单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [数据质量匹配中的 MDS 外接程序 excel](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [用于 Excel 的 MDS 外接程序中的数据质量匹配](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [用于 Microsoft Excel 的 Master Data Services 外接程序](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [安装 Master Data Services](install-master-data-services.md)  
   

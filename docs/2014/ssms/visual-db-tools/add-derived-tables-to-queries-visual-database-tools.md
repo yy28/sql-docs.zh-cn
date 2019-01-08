@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -15,12 +15,12 @@ ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fb82a8fc7064d2dc8c90c9d65a8d0bdcfe4db59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064867"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801579"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>向查询中添加派生表 (Visual Database Tools)
   派生表是结果集，在查询中用作表源。 可以在“关系图”窗格中将派生表添加到查询。  

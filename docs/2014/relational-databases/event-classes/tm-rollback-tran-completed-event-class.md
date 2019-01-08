@@ -1,11 +1,10 @@
 ---
-title: 'TM: Rollback Tran Completed 事件类 | Microsoft Docs'
+title: 'TM: Rollback Tran Completed 事件类 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,15 +14,15 @@ ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0872d301bbd4d03c0e51e26efd76c9221609bd38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786919"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed 事件类
-  TM: Rollback Tran Completed 事件类指示 ROLLBACK TRANSACTION 请求已完成。 该请求是通过事务管理界面从客户端发送的。 EventSubClass 列指示在当前事务回滚后是否启动新事务。  
+  TM:Rollback Tran Completed 事件类指明 ROLLBACK TRANSACTION 请求已完成。 该请求是通过事务管理界面从客户端发送的。 EventSubClass 列指示在当前事务回滚后是否启动新事务。  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed 事件类的数据列  
   

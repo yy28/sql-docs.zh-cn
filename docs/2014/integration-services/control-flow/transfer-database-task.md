@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203357"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805549"
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
   传输数据库任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两个实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 与只通过复制方式传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的其他任务相比，传输数据库任务既可以复制也可以移动数据库。 此任务还可以用来复制同一个服务器上的数据库。  
@@ -39,7 +38,7 @@ ms.locfileid: "48203357"
 ## <a name="execution-value"></a>执行值  
  在该任务的 `ExecutionValue` 属性中定义的执行值返回值 1，因为与其他传输任务相比，传输数据库任务只能传输一个数据库。  
   
- 通过将用户定义的变量分配`ExecValueVariable`传输数据库任务，有关错误消息传输的信息的属性可提供给其他对象在包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 通过将用户定义变量分配给传输数据库任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关错误消息传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输数据库任务包括下列自定义日志项：  
@@ -50,7 +49,7 @@ ms.locfileid: "48203357"
   
 -   SourceDB   此日志项列出已传输的数据库的名称。  
   
- 此外，一个日志条目`OnInformation`覆盖目标数据库时会写入事件。  
+ 此外，在覆盖目标数据库时会写入 `OnInformation` 事件的日志项。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  若要使用脱机模式传输数据库，运行包的用户必须是 sysadmin 服务器角色的成员。  
@@ -72,9 +71,9 @@ ms.locfileid: "48203357"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输数据库任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输数据库任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输数据库任务编辑器&#40;数据库页&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [传输数据库任务编辑器（“数据库”页）](../transfer-database-task-editor-databases-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

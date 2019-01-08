@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: daf6011e57279d9142fe5ff0828872d80c197954
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a30880a6fd4acc62f13954c18f0ca8883f90754
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105567"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537370"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](differential-backups-sql-server.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48105567"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要备份文件和文件组，使用：**  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48105567"
   
      BACKUP DATABASE *database*  
   
-     { FILE =logical_file_name | FILEGROUP =logical_filegroup_name } [ ,...f ]****  
+     { FILE **=** logical_file_name | FILEGROUP **=** logical_filegroup_name } [ **,**...f ]  
   
      TO backup_device [ **,**...*n* ]  
   
@@ -160,10 +160,10 @@ ms.locfileid: "48105567"
     |选项|“说明”|  
     |------------|-----------------|  
     |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
-    |FILE **=***logical_file_name*|指定要包含在文件备份中的文件的逻辑名称。|  
-    |FILEGROUP =logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
+    |FILE **=** logical_file_name|指定要包含在文件备份中的文件的逻辑名称。|  
+    |FILEGROUP **=** logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
     |[ **,**...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
-    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } =physical_backup_device_name<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
+    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
     |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项，如 DIFFERENTIAL。<br /><br /> 注意：差异文件备份需要以完整文件备份为基础。 有关详细信息，请参阅[创建差异数据库备份 (SQL Server)](create-a-differential-database-backup-sql-server.md)。|  
   
 2.  在完整恢复模式下，还必须备份事务日志。 若要使用一整套文件的完整备份来还原数据库，您还必须拥有足够的日志备份，以便涵盖从第一个文件备份开始的所有文件备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)中准备镜像数据库。  

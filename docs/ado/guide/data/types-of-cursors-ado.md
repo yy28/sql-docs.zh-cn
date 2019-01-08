@@ -13,15 +13,15 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecf079c86362aeae78b7c9ceaad640b0ad1519c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543565"
 ---
 # <a name="types-of-cursors-ado"></a>游标类型 (ADO)
-作为一般规则，你的应用程序应使用的最简单的游标的提供所需的数据访问。 每个 （只进、 只读、 静态的滚动、 未缓冲） 的基础知识以外的其他游标特征都有一个价格-在客户端内存、 网络负载或性能。 在许多情况下，默认游标选项生成更复杂的游标不是应用程序实际需要。  
+作为一般规则，你的应用程序应使用的最简单的游标的提供所需的数据访问。 每个只进、 只读、 静态、 滚动 （无缓冲） 的基础知识以外的其他游标特征具有价格-在客户端内存、 网络负载或性能。 在许多情况下，默认游标选项生成更复杂的游标不是应用程序实际需要。  
   
  所选的游标类型取决于你的应用程序如何使用结果集和也几个设计注意事项，包括大小的结果集，可能会使用的数据的百分比、 数据更改和应用程序性能的敏感度系统要求。  
   

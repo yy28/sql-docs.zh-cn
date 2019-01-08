@@ -16,12 +16,12 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97f04239e2596ba1319b62ab3d6c06ccf1487752
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fae6e3ba4f861fa7d75ae3ee4e8825350d80c39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145547"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797119"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
   设置大容量复制操作的选项。  
@@ -47,11 +47,11 @@ void *iValue);
 |BCP_OPTION_ABORT|停止正在进行的大容量复制操作。 可以从其他线程调用 eOption 参数为 BCP_OPTION_ABORT 的 BCPControl 方法，以停止正在运行的大容量复制操作。 *IValue*忽略参数。|  
 |BCP_OPTION_BATCH|每批的行数。 默认值为 0，在提取数据时，该默认值表示表中的所有行；在将数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，该默认值表示用户数据文件中的所有行。 值小于 1 则将 BCP_OPTION_BATCH 重置为默认值。|  
 |BCP_OPTION_DELAYREADFMT|一个布尔值，如果设置为 true，将导致 [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) 在执行时读取该值。 如果为 false （默认值），ibcpsession:: Bcpreadfmt 将立即读取格式化文件。 如果将发生序列错误`BCP_OPTION_DELAYREADFMT`是 true，并且您调用 ibcpsession:: Bcpcolumns 或 ibcpsession:: Bcpcolfmt。<br /><br /> 如果您调用也会发生序列错误`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`后调用`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`和 ibcpsession:: Bcpwritefmt。<br /><br /> 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。|  
-|BCP_OPTION_FILECP|iValue 参数包含数据文件的代码页的编号。 可以指定代码页的编号，例如 1252 或 850，或者采用以下值之一：<br /><br /> -BCP_FILECP_ACP： 文件中的数据是在客户端的 Microsoft Windows® 代码页。<br />-BCP_FILECP_OEMCP： 文件中的数据是在客户端 （默认值） 的 OEM 代码页。<br />-BCP_FILECP_RAW： 文件中的数据是中的代码页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|BCP_OPTION_FILECP|iValue 参数包含数据文件的代码页的编号。 可以指定代码页的编号，例如 1252 或 850，或者采用以下值之一：<br /><br /> -BCP_FILECP_ACP： 文件中的数据是在 Microsoft Windows 中?? 客户端的代码页。<br />-BCP_FILECP_OEMCP： 文件中的数据是在客户端 （默认值） 的 OEM 代码页。<br />-BCP_FILECP_RAW： 文件中的数据是中的代码页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |BCP_OPTION_FILEFMT|数据文件格式的版本号。 该版本号可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]）、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。  例如，若要将从 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 服务器中的文本列获取的数据导入到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本服务器中的 varchar(max) 列，则应该指定为 80。 同样，如果从 varchar(max) 列导出数据时指定为 80，数据的保存方式就与按照 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 格式保存的文本列类似，并且可以将这些数据导入到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 服务器的文本列中。|  
 |BCP_OPTION_FIRST|要复制的文件或表的第一行数据。 默认值为 1；值小于 1 则将此选项重置为其默认值。|  
 |BCP_OPTION_FIRSTEX|对于 BCP out 操作，指定要复制到数据文件的数据库表的第一行。<br /><br /> 对于 BCP in 操作，指定要复制到数据库表的数据文件的第一行。<br /><br /> iValue 参数应为包含值的带符号的 64 位整数的地址。 可以传递到 BCPFIRSTEX 的最大值为 2^63-1。|  
-|BCP_OPTION_FMTXML|用于指定生成的格式化文件应采用 XML 格式。 默认情况下关闭此选项，此时将格式化文件作为文本文件保存。 XML 格式化文件提供更大的灵活性，但具有某些额外约束。 例如，不能同时为字段指定前缀和终止符，而在较早的格式化文件中则可以执行此操作。 **注意：** XML 格式化文件，才支持时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起安装工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。|  
+|BCP_OPTION_FMTXML|用于指定生成的格式化文件应采用 XML 格式。 默认情况下关闭此选项，此时将格式化文件作为文本文件保存。 XML 格式化文件提供更大的灵活性，但具有某些额外约束。 例如，不能同时为字段指定前缀和终止符，而在较早的格式化文件中则可以执行此操作。 **注意：** XML 格式化文件才支持何时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起安装工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。|  
 |BCP_OPTION_HINTS|iValue 参数包含宽字符串指针。 寻址的字符串指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制处理提示或返回结果集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 如果指定返回多个结果集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，则忽略第一个结果集之后的所有结果集。|  
 |BCP_OPTION_KEEPIDENTITY|将 iValue 参数设置为 TRUE 时，此选项指定大容量复制方法插入为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列（使用标识约束定义）提供的数据值。 输入文件必须提供标识列的值。 如果未进行设置，则为插入的行生成新标识值。 忽略文件的标识列中所存在的任何数据。|  
 |BCP_OPTION_KEEPNULLS|指定是否会将文件中的空数据值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的 NULL 值。 将 iValue 参数设置为 TRUE 时，会将空值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的 NULL。 默认情况下会将空值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的列的默认值（如果存在默认值）。|  

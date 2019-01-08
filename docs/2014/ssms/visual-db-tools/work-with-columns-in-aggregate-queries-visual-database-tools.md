@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -15,12 +15,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671fb9fe3de95d4480f7f293668dd124d2cc3a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127917"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795939"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
   创建聚合查询时， [查询和视图设计器](visual-database-tools.md) 将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  
@@ -55,7 +55,7 @@ ms.locfileid: "48127917"
     WHERE price > 10  
     ```  
   
--   如果创建的搜索条件所涉及的列同时也用于 GROUP BY 子句或聚合函数中，则该搜索条件既可以作为 WHERE 子句出现也可以作为 HAVING 子句出现，您可以在创建条件时决定以哪一种形式出现。 例如，下面的语句创建每个出版商的书籍的平均价格，然后显示平均价格超过 10.00 美元的出版商的平均值：  
+-   如果创建的搜索条件所涉及的列同时也用于 GROUP BY 子句或聚合函数中，则该搜索条件既可以作为 WHERE 子句出现也可以作为 HAVING 子句出现，你可以在创建条件时决定以哪一种形式出现。 例如，下面的语句创建每个出版商的书籍的平均价格，然后显示平均价格超过 10.00 美元的出版商的平均值：  
   
     ```  
     SELECT pub_id, AVG(price)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
@@ -21,12 +20,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 37a5d31f4b4f7bf2ba21489fe917e3b6f4ad27d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100597"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640510"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所有网络协议都是由  安装程序安装的，可以启用也可以禁用这些网络协议。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或 PowerShell，在  中启用或禁用服务器网络协议。 必须停止并重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，更改才能生效。  
@@ -67,7 +66,7 @@ ms.locfileid: "48100597"
   
 2.  可以从任务栏启动 Windows PowerShell 2.0，也可以通过依次单击“开始”、“所有程序”、“附件”、“Windows PowerShell”、“Windows PowerShell”来启动。  
   
-3.  导入**sqlps**通过输入模块 `Import-Module “sqlps”`  
+3.  导入**sqlps**通过输入模块 `Import-Module "sqlps"`  
   
 4.  执行以下语句以启用 TCP 和 Named Pipes 协议。 `<computer_name>` 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替换为运行  的计算机的名称。 `MSSQLSERVER` 如果您在配置命名实例，请将  替换为该实例的名称。  
   

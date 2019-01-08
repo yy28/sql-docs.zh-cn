@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
@@ -15,22 +14,22 @@ ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40eb14cb2cc0b09a461ba621d29d636e2a2b9c91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96e5ef33776e1b8d7e78bec22b6cc46dee6055d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108190"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797680"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用向导创建模型部署包
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导可创建只包含模型对象的包。 如果需要在包中包含数据，请参阅 [使用 MDSModelDeploy 创建模型部署包](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 -   模型对于您要创建的包必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)。  
   
@@ -57,6 +56,6 @@ ms.locfileid: "48108190"
 -   [使用向导部署模型部署包](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
 ## <a name="see-also"></a>请参阅  
- [部署模型&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 (Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

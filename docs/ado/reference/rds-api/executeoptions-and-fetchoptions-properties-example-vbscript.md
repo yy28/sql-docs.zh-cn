@@ -16,18 +16,18 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 136e42463049a557098224f0ce7be19da0399ae0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7450e2e64d7054749aa4b980e1e36b7cf09ff022
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542991"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 属性示例 (VBScript)
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的代码演示如何设置[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)并[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)在设计时属性。 如果未设置，保留**ExecuteOptions**默认值为**adcExecSync**。 此设置指示，当**rds。刷新**方法调用时，它将在当前调用线程上执行 — 也就是说，以同步方式。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为**ExecuteOptionsDesignVBS.asp**。  
+ 下面的代码演示如何设置[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)并[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)在设计时属性。 如果未设置，保留**ExecuteOptions**默认值为**adcExecSync**。 此设置指示，当**rds。刷新**方法调用时，它将在当前调用线程上执行-也就是说，以同步方式。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为**ExecuteOptionsDesignVBS.asp**。  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
