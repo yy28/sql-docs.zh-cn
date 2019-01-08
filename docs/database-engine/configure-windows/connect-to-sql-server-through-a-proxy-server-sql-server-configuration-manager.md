@@ -19,12 +19,12 @@ ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 187004d1ff87fdc1b22ab62537cbe06f5d56c706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a1abe3ff72d0782b3c0393ca9599c8b57879cc2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631025"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204596"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>通过代理服务器连接到 SQL Server（SQL Server 配置管理器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47631025"
   
 2.  在代理服务器中定义代理服务器的本地地址表 (LAT)，以使侦听节点地址不在 LAT 条目范围内。 有关详细信息，请参阅代理服务器文档。  
   
->  [!NOTE]
+> [!NOTE]
 >  本主题适用于本地 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 有关与 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]相关的连接问题，请参阅 [Troubleshoot connection issues to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues)（排查 Azure SQL 数据库的连接问题）。  
 
 

@@ -11,20 +11,20 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6e4ef356d56029f94789dd462e0578161d6668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ad5132b4fe6750c2e2dd66786b5a4dceb4577e5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693406"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211766"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>连接到 Azure Blob 存储（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Azure Blob 存储数据源。
 
->   [!NOTE]
+> [!NOTE]
 > 要使用 Azure Blob 源或目标，必须安装用于 SQL Server Integration Services 的 Azure 功能包。
 > - 要下载功能包，请参阅[用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)。
->
+> 
 > - 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。
 
 以下屏幕截图显示了配置与 Azure Blob 存储的连接的选项。
