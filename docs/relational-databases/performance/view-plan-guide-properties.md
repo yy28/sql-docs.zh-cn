@@ -12,15 +12,15 @@ helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0dfbacb908d70a76dede70e167670af753c0101b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ab702bca4de25313b84836a308496379e3ffd285
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401090"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355208"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52401090"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **查看计划指南的属性，使用：**  
   
