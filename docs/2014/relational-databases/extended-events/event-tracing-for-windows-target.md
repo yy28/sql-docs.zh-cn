@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
@@ -15,19 +14,19 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175157"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355989"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
   
--   [Windows 事件](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows 事件](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [使用 ETW 改善调试和性能优化](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [使用 ETW 改善调试和性能优化](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  ETW 目标是单独目标，尽管该目标可以被添加到多个会话中。 如果某事件在多个会话中被引发，则该事件在每次发生事件时仅被传播给 ETW 目标一次。 每个进程仅限一个扩展事件引擎实例。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48175157"
  ETW 目标不支持来自外部 ETW 控制器（例如 Logman.exe）的控制。 若要生成 ETW 跟踪，必须使用 ETW 目标创建事件会话。 有关详细信息，请参阅 [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)。  
   
 > [!NOTE]  
->  启用 ETW 目标将创建一个名为 XE_DEFAULT_ETW_SESSION 的 ETW 会话。 如果名为 XE_DEFAULT_ETW_SESSION 的会话已经存在，则使用该会话而不修改现有会话的任何属性。 XE_DEFAULT_ETW_SESSION 由所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例共享。 启动了 XE_DEFAULT_ETW_SESSION 后，必须使用 ETW 控制器（如 Logman 工具）停止它。 例如，可以在命令提示符处运行以下命令： `logman stop XE_DEFAULT_ETW_SESSION -ets`。  
+>  启用 ETW 目标将创建一个名为 XE_DEFAULT_ETW_SESSION 的 ETW 会话。 如果名为 XE_DEFAULT_ETW_SESSION 的会话已经存在，则使用该会话而不修改现有会话的任何属性。 XE_DEFAULT_ETW_SESSION 由所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例共享。 启动了 XE_DEFAULT_ETW_SESSION 后，必须使用 ETW 控制器（如 Logman 工具）停止它。 例如，可在命令提示符下运行以下命令：`logman stop XE_DEFAULT_ETW_SESSION -ets`。  
   
  下表介绍了配置 ETW 目标时可用的选项。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48175157"
     > [!IMPORTANT]  
     >  当第一个会话启动后不能再更改该文件路径。  
   
--   托管对象格式 (MOF) 文件位于 *\<安装路径>* \Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](http://go.microsoft.com/fwlink/?LinkId=92851) 。  
+-   托管对象格式 (MOF) 文件位于 *\<安装路径>* \Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](https://go.microsoft.com/fwlink/?LinkId=92851) 。  
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将 ETW 目标添加到扩展事件会话中，您必须在创建或更改事件会话时包括下面的语句：  

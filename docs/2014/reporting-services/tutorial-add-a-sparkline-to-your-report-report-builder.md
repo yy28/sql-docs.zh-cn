@@ -1,5 +1,5 @@
 ---
-title: 教程：向报表添加迷你图（报表生成器）| Microsoft Docs
+title: 教程：将迷你图添加到您的报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091477"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376669"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
   在本教程中，您将基于示例销售数据创建一个基本的表报表，然后向该表的单元中添加迷你图。  
   
- 您在本教程中创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](http://go.microsoft.com/fwlink/?LinkId=184851)。 下图显示与您将创建的报表类似的示例报表。  
+ 您在本教程中创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](https://go.microsoft.com/fwlink/?LinkId=184851)。 下图显示与您将创建的报表类似的示例报表。  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- 视频[如何： 为表 （报表生成器视频） 中创建迷你图](http://technet.microsoft.com/bi/ff871942.aspx)说明了如何使用迷你图创建相似的报表。  
+ 视频[如何：表 （报表生成器视频） 中创建迷你图](https://technet.microsoft.com/bi/ff871942.aspx)说明了如何使用迷你图创建相似的报表。  
   
 ##  <a name="BackToTop"></a> 您将学习  
  在本教程中，您将了解如何执行下列操作：  
@@ -183,7 +183,7 @@ ms.locfileid: "48091477"
   
 14. 表将添加到设计图面中。 此表有三列和三行。  
   
-     在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组： **Product**。 “列组”窗格显示一个列组： **SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
+     在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组：**产品**。 “列组”窗格显示一个列组：**SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
   
 15. 单击 **“运行”** 以预览报表。  
   
@@ -213,12 +213,12 @@ ms.locfileid: "48091477"
   
      请注意，在表的每一行中都有迷你图，但这些迷你图不正确。 迷你图中的各条形不互连。 在第二行数据中只有四个条形，因此，这些条比第一行中的条宽，因为第一行中有六个条形。 您不能比较每天每个产品的值。 它们之间需要相互对齐。  
   
-     还要注意的是，对于每一行，该行的最高的条形是行高。 这也会有误导作用，因为每一行的最大值不相等：Budget Movie-Maker 的最大值是 $10,400，但 Slim Digital 的最大值是 $26,576 — 是前者的两倍还多。 并且，这两行的最大的条形大约为相同高度。 此外，它还需要与其他迷你图相一致。  
+     还要注意的是，对于每一行，该行的最高的条形是行高。 这会产生误导，因为每个行的最大值是否不相等： 为 Budget Movie-maker 的最大值是 $10400，但 Slim Digital 的最大值是 $26,576 多个大小的两倍。 并且，这两行的最大的条形大约为相同高度。 此外，它还需要与其他迷你图相一致。  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4.沿水平方向和垂直方向对齐迷你图  
- 当迷你图都不使用相同度量值时，则很难阅读。 每个迷你图的水平轴和垂直轴都需要与其他部分匹配。  
+ 迷你图很难读取时它们不使用相同的度量。 每个迷你图的水平轴和垂直轴都需要与其他部分匹配。  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>设置表中迷你图的对齐方式  
   
@@ -345,7 +345,7 @@ ms.locfileid: "48091477"
   
 3.  在“名称”中，用“Product Sales”替换默认名称。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
 ## <a name="next-steps"></a>后续步骤  
  用于创建具有迷你图的表报表的教程到此结束。 有关迷你图的详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  

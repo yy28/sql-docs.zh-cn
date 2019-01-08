@@ -1,22 +1,21 @@
 ---
-title: 第 1 课：连接到数据库引擎 | Microsoft Docs
+title: 第 1 课：连接到数据库引擎 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132388"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375299"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
   安装 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]时，安装哪些工具取决于版本和您的安装选择。 本课将介绍主要的工具以及如何连接并执行一项基本功能（授权多个用户）。  
@@ -28,7 +27,7 @@ ms.locfileid: "48132388"
   
 ### <a name="basic-tools"></a>基本工具  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理[!INCLUDE[ssDE](../includes/ssde-md.md)]和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 它不包含在[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，但可作为从单独的下载[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理[!INCLUDE[ssDE](../includes/ssde-md.md)]和编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码的主要工具。 它驻留在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外壳中。 它不包含在[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，但可作为从单独的下载[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和客户端工具一起安装。 使用它，您可以启用服务器协议，配置协议选项（例如 TCP 端口），将服务器服务配置为自动启动，以及将客户端计算机配置为以所需的方式连接。 此工具会配置更高级的连接元素，但不会启用功能。  
   
@@ -102,6 +101,6 @@ ms.locfileid: "48132388"
 >  这是基本的入门信息。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了丰富的安全环境，而安全显然是数据库操作的一个重要方面。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 2 课：从其他计算机进行连接](lesson-2-connecting-from-another-computer.md)  
+ [第 2 课：从另一台计算机进行连接](lesson-2-connecting-from-another-computer.md)  
   
   

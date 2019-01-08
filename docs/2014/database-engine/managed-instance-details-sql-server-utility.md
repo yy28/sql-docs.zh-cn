@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185447"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374569"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>托管实例详细信息（SQL Server 实用工具）
   实用工具资源管理器的“托管实例”视图中的信息为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的单独实例提供使用率数据、CPU 使用率历史记录、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 对于计算机，可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例级别控制策略阈值；对于数据库文件和日志文件，可以在存储卷的级别控制策略阈值。 您还可以查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个托管实例的属性详细信息。  
@@ -68,17 +68,17 @@ ms.locfileid: "48185447"
   
 -   SQL Server 发行版：  
   
--   群集：（True 或 False）  
+-   群集：（true 或 False）  
   
 -   备份目录：  
   
 -   排序规则：  
   
--   区分大小写：（True 或 False）  
+-   区分大小写：（true 或 False）  
   
 -   语言:  
   
--   上次报告的时间：此列使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+-   上次报告的时间：此列显示 UCP 本地日期和时间使用 datetime 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
  “CPU 使用率”选项卡  
  “CPU 使用率”选项卡为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和计算机 CPU 使用率显示历史数据的并排图形。  
@@ -96,7 +96,7 @@ ms.locfileid: "48185447"
 -   1 年，以 1 个月间隔显示。  
   
  “存储使用率”选项卡  
- “存储使用率”选项卡具有显示存储使用率详细信息的树视图。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
+ “存储使用率”选项卡具有显示存储使用率详细信息的树视图。 请注意，时间数据使用 datetime 数据类型显示 UCP 本地日期和时间。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主题。 在使用实用工具对象模型时，请注意 SSMS 使用 datetimeoffset 数据类型。 有关详细信息，请参阅 SQL Server 联机丛书中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主题。  
   
  显示可按数据库或按卷分组。 若要使用数据库树视图，请在 **“文件分组依据:”** 选择中选择 **“数据库”** 单选按钮。 若要查看单独数据库文件的存储使用率状态，请单击树视图中数据库名称旁的加号。 列出的数据库文件包括属于列表视图中所选 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例的所有系统数据库和用户数据库。  
   
@@ -165,13 +165,13 @@ ms.locfileid: "48185447"
   
 -   SQL Server 发行版：  
   
--   群集：（True 或 False）  
+-   群集：（true 或 False）  
   
 -   备份目录：  
   
 -   排序规则：  
   
--   区分大小写：（True 或 False）  
+-   区分大小写：（true 或 False）  
   
 -   语言:  
   

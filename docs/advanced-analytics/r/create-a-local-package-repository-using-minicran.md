@@ -1,5 +1,6 @@
 ---
-title: 创建本地 R 包存储库使用 miniCRAN （SQL Server 机器学习） |Microsoft Docs
+title: 创建本地 R 包存储库使用 miniCRAN-SQL Server 机器学习服务
+description: 使用 miniCran 检测、 汇编和到一个统一包中安装 R 包依赖项。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ef84cc3c08f461745e30fa2ce65e468263ded18d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699395"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431750"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>创建本地 R 包存储库使用 miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,13 +33,13 @@ ms.locfileid: "51699395"
 
 包存储库可在这些情况下：
 
-- **安全**： 许多 R 用户习惯于下载和安装在将新的 R 包从 CRAN 或某个及其镜像站点。 但是，出于安全原因，生产服务器运行[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]通常未建立 internet 连接。
+- **安全**:许多 R 用户习惯于下载和安装在将新的 R 包从 CRAN 或某个及其镜像站点。 但是，出于安全原因，生产服务器运行[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]通常未建立 internet 连接。
 
-- **更轻松地脱机安装**： 若要将程序包安装到脱机的服务器，需要，您还可以下载所有包依赖项，通过使用 miniCRAN 可以更轻松地获取正确格式的所有依赖项。
+- **更轻松地脱机安装**:若要将程序包安装到脱机的服务器需要，您还可以下载所有包依赖项，通过使用 miniCRAN 可以更轻松地获取正确格式的所有依赖项。
 
     通过使用 miniCRAN，您可以避免包依赖项错误，准备要使用安装包时[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句。
 
-- **改进的版本管理**： 在多用户环境中，有充分的理由，为了避免不受限制的安装在服务器上的多个包版本。 使用本地存储库以供分析师提供一组一致的包。 
+- **改进的版本管理**:在多用户环境中，有充分的理由，为了避免不受限制的安装在服务器上的多个包版本。 使用本地存储库以供分析师提供一组一致的包。 
 
 > [!TIP]
 > MiniCRAN 还可用于准备在 Azure 机器学习中使用的包。 有关详细信息，请参阅此博客：[在 Azure ML 中，通过 Michele Usuelli 使用 miniCRAN](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
@@ -99,9 +100,9 @@ local_repo <- "C:/mylocalrepo"
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   MiniCRAN 包中的信息，创建您需要将包复制到的文件夹结构[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]更高版本。
+   MiniCRAN 包中的信息，创建您需要将包复制到的文件夹结构[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]更高版本。
 
-此时应具有一个包含你需要的包的文件夹和所需的任何其他包了。 路径应类似于以下示例： C:\mylocalrepo\bin\windows\contrib\3.3 和它应包含压缩包的集合。 不要将解压缩包或重命名的任何文件。
+此时应具有一个包含你需要的包的文件夹和所需的任何其他包了。 路径应类似于以下示例：C:\mylocalrepo\bin\windows\contrib\3.3 和它应包含压缩包的集合。 不要将解压缩包或重命名的任何文件。
 
 （可选） 运行以下代码，以列出本地 miniCRAN 存储库中包含的包。
 
@@ -156,7 +157,7 @@ pdb[, c("Package", "Version", "License")]
     installed.packages()
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [获取包信息](determine-which-packages-are-installed-on-sql-server.md)
 + [R 教程](../tutorials/sql-server-r-tutorials.md)

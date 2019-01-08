@@ -11,17 +11,17 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc01da68aeaa393631aca6146a41e6eb88ecb14e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376629"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
   文档结构图提供了一组指向所呈现报表中的报表项的导航链接。 当您查看包含文档结构图的报表时，将在报表旁显示一个单独的侧窗格。 用户通过单击文档结构图中的链接，可跳至显示报表项的报表页。 报表的各区域和组将按一定层次结构的链接形式排列。 单击文档结构图中的项会刷新报表，并显示与文档结构图中所单击项对应的报表区域。  
   
- 若要向文档结构图添加链接，请设置`DocumentMapLabel`为你创建的文本或表达式的计算结果为文本所需在文档结构图中的显示的报表项的属性。 还可以向文档结构图添加表或矩阵组的唯一值。 例如，对于基于颜色的组，每个唯一颜色都是指向显示该颜色组实例的报表页的一个链接。  
+ 若要向文档结构图添加链接，则需要将报表项的 `DocumentMapLabel` 属性设置为您所创建的文本，或者设置为计算结果为您要在文档结构图中显示的文本的表达式。 还可以向文档结构图添加表或矩阵组的唯一值。 例如，对于基于颜色的组，每个唯一颜色都是指向显示该颜色组实例的报表页的一个链接。  
   
  您还可以创建指向报表的 URL 来覆盖文档结构图，这样在运行报表时可以不显示文档结构图，然后通过单击报表查看器工具栏中的 **“显示/隐藏文档结构图”** 按钮，可切换到显示文档结构图。  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48073467"
 4.  将此 URL 粘贴到报表管理器中，然后按 Enter。 将运行报表，并隐藏文档结构图。  
   
 > [!NOTE]  
->  有关下载示例报表的详细信息，请参阅 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+>  有关下载示例报表的详细信息，请参阅 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
->  有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
+>  有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
   
  
   

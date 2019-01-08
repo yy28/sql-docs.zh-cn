@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662125"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588971"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLSetCursorName**游标名称相关联的活动语句。 如果应用程序不会调用**SQLSetCursorName**，驱动程序将所需的 SQL 语句处理生成游标名称。  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- 游标名称仅用于相关的定位更新和删除语句 (例如，**更新***表名*...**WHERE CURRENT OF** *游标名称*)。 有关详细信息，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果应用程序不会调用**SQLSetCursorName**来定义游标名称，在执行的查询语句，该驱动程序生成的名称以字母 SQL_CUR 开头且不超过 18 个字符的长度。  
+ 游标名称仅用于相关的定位更新和删除语句 (例如，**更新**_表名_...**WHERE CURRENT OF** _游标名称_)。 有关详细信息，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果应用程序不会调用**SQLSetCursorName**来定义游标名称，在执行的查询语句，该驱动程序生成的名称以字母 SQL_CUR 开头且不超过 18 个字符的长度。  
   
  在连接中的所有游标名称必须都是唯一的。 游标名称的最大长度是由驱动程序定义的。 最大互操作性，建议应用程序限制为不超过 18 个字符的游标名称。 在 ODBC 3 *.x*，如果游标名称是带引号的标识符、 区分大小写的方式处理和它可以包含字符的 SQL 语法不允许或将专门，处理如空格或保留关键字。 如果游标名称必须以区分大小写的方式处理，它必须作为带引号的标识符传递。  
   

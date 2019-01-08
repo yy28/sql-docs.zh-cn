@@ -12,12 +12,12 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66f36164c6199d51d8a01916d84f1085d479235a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051677"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373169"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用“新建可用性组”对话框 (SQL Server Management Studio)
   本主题包含有关如何使用 **的** “新建可用性组” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 对话框在为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实例上创建 AlwaysOn 可用性组的信息。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
@@ -50,7 +50,7 @@ ms.locfileid: "48051677"
   
 -   执行初始数据同步。  
   
- 有关这些配置任务的信息，请参阅本主题后面的 [跟进：创建可用性组之后](#FollowUp)。  
+ 有关这些配置任务的信息，请参阅[跟进工作：创建可用性组之后](#FollowUp)，本主题中更高版本。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -77,17 +77,17 @@ ms.locfileid: "48051677"
     > [!TIP]  
     >  如果添加了副本但是无法连接到主机服务器实例，可以删除该副本并添加新副本。 有关详细信息，请参阅[将辅助副本从可用性组删除 (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md) 和[将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-8.  在对话框的 **“选择页”** 窗格中，单击 **“备份首选项”**。 然后，在 **“备份首选项”** 页上，指定应基于副本角色执行备份的位置并将备份优先级分配给将承载此可用性组的可用性副本的每个服务器实例。 有关详细信息，请参阅[可用性组属性：新建可用性组（“备份首选项”页）](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+8.  在对话框的 **“选择页”** 窗格中，单击 **“备份首选项”**。 然后，在 **“备份首选项”** 页上，指定应基于副本角色执行备份的位置并将备份优先级分配给将承载此可用性组的可用性副本的每个服务器实例。 有关详细信息，请参阅[可用性组属性：新的可用性组&#40;备份首选项页&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
 9. 若要创建可用性组，请单击 **“确定”**。 这将导致对话框验证指定的数据库是否满足先决条件的要求。  
   
      要退出对话框而不创建可用性组，请单击 **“取消”**。  
   
-##  <a name="FollowUp"></a> 跟进：在使用“新建可用性组”对话框创建可用性组之后  
+##  <a name="FollowUp"></a> 跟进：使用新建可用性组对话框创建可用性组后  
   
 -   您将需要依次连接到承载可用性组的辅助副本的每个服务器实例并完成以下步骤：  
   
-    1.  将辅助副本联接到该可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
+    1.  将辅助副本联接到该可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
     2.  还原每个主数据库及其事务日志的当前副本（使用 RESTORE WITH NORECOVERY）。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48051677"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

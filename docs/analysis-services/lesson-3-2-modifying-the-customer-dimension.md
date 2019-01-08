@@ -1,5 +1,5 @@
 ---
-title: 修改客户维度 |Microsoft 文档
+title: 修改客户维度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514713"
 ---
-# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lesson 3-2-修改客户维度
+# <a name="lesson-3-2---modifying-the-customer-dimension"></a>课程 3-2-修改客户维度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 可以使用许多不同的方式提高多维数据集中的维度的可用性和功能。 在本主题的各任务中，您将修改“客户”维度。  
@@ -32,11 +32,11 @@ ms.locfileid: "34019044"
   
 3.  以相同方法更改以下属性的名称：  
   
-    -   “英语教育”属性 - 更改为“教育”  
+    -   **英语教育**特性-将更改为**教育版**  
   
-    -   “英语职业”属性 - 更改为“职业”  
+    -   **英语职业**特性-将更改为**职业**  
   
-    -   “省/自治区/直辖市名”属性 - 更改为“省/自治区/直辖市”  
+    -   **自治区/直辖市名**特性-将更改为**州-省**  
   
 4.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34019044"
   
 4.  在“名称”属性字段中，键入“全名”。  
   
-5.  在底部的 **NameColumn** 属性字段中单击，然后单击浏览 (**…**) 按钮以打开“名称列”对话框。  
+5.  在单击**NameColumn**属性字段的底部，然后单击浏览 (**...**) 按钮以打开**名称列**对话框。  
   
 6.  选择位于“源列”列表底部的 **FullName**，然后单击“确定”。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "34019044"
   
     现在，**City** 和 **StateProvinceName** 列会显示在“键列”列表中。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  若要设置“市县”特性的 **NameColumn** 属性，请在“属性”窗口的 **NameColumn** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "34019044"
   
     现在，**EnglishCountryRegionName** 和 **StateProvinceName** 列会显示在“键列”列表中。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  若要设置“省/自治区/直辖市”特性的 **NameColumn** 属性，请在“属性”窗口的 **NameColumn** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "34019044"
   
 8.  在“关系类型”列表中，将关系类型设置为“刚性”。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 10. 在“文件”  菜单上，单击“全部保存” 。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "34019044"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [修改“产品”维度](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [维度特性属性参考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [从维度中删除属性](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [重命名属性](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608675"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591401"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] *** * * 发布*  
+ [**@publication=**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -51,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意： 当项目进行水平筛选时，行计数计算执行而不是校验和操作。|  
+|**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意：水平筛选项目时，将执行行计数操作，而不是校验和操作。|  
 |**1** （默认值）|仅执行行计数检查。|  
-|**2**|执行行计数和二进制校验和。<br /><br /> 注意： 对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行版本 7.0 订阅服务器，仅行计数验证。|  
+|**2**|执行行计数和二进制校验和。<br /><br /> 注意：对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版订阅服务器，只执行行计数验证。|  
   
  [**@full_or_fast=**] *full_or_fast*  
  用于计算行计数的方法。 *full_or_fast*是**tinyint**可以是下列值之一。  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  指示分发代理是否应在完成验证后立即关闭。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，复制代理不会关闭。 如果**1**，验证最后一篇文章后关闭复制代理。  
   
- [ **@publisher** = ] **'***publisher***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+ [ **@publisher** =] **'**_发布服务器上_  
+ 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*上请求验证时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -83,7 +82,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
  如果你的应用程序有即时更新订阅服务器， **sp_publication_validation**可能检测到假错误。 **sp_publication_validation**首先计算行计数或校验和，然后在发布服务器和订阅服务器。 由于在发布服务器中完成行计数或校验和之后，但在订阅服务器中完成行计数或校验和之前，即时更新触发器可以将更新从订阅服务器传播到发布服务器，因此值可能会更改。 若要确保在验证发布时，在订阅服务器和发布服务器中的值不发生更改，请在验证期间在发布服务器中停止 Microsoft 分布式事务处理协调器 (MS DTC) 服务。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_publication_validation**。  
   
 ## <a name="see-also"></a>请参阅  

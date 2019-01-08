@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371549"
 ---
 # <a name="what39s-new-database-engine"></a>什么&#39;s 新 （数据库引擎）
   这一最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]引入了一些新功能和增强功能，这些功能可以提高设计、开发和维护数据存储系统的架构师、开发人员和管理员的能力和工作效率。 以下是[!INCLUDE[ssDE](../includes/ssde-md.md)]已增强的方面。  
@@ -35,7 +34,7 @@ ms.locfileid: "48067020"
   
   
 ###  <a name="AzureVM"></a> 承载 SQL Server 数据库，在 Windows Azure 虚拟机  
- 使用[将 SQL Server 数据库部署到 Windows Azure 虚拟机](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)向导来承载数据库的实例从[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows Azure 虚拟机中。  
+ 使用[将 SQL Server 数据库部署到 Windows Azure 虚拟机](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)向导来承载数据库的实例从[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows Azure 虚拟机中。  
   
   
 ###  <a name="Backup"></a> 备份和还原增强功能  
@@ -51,11 +50,11 @@ ms.locfileid: "48067020"
   
 -   **备份加密**  
   
-     您现在可以选择在备份过程中对备份文件进行加密。  目前支持的加密算法包括 AES 128、AES 192、AES 256 和 Triple DES。 要在备份过程中执行加密，您必须使用证书或非对称密钥。 有关详细信息，请参阅[备份加密](../relational-databases/backup-restore/backup-encryption.md)。  
+     您现在可以选择在备份过程中对备份文件进行加密。  目前支持的加密算法包括 AES 128、AES 192、AES 256 和 Triple DES。 要在备份过程中执行加密，您必须使用证书或非对称密钥。 有关详细信息，请参阅 [备份加密](../relational-databases/backup-restore/backup-encryption.md)。  
   
   
 ###  <a name="CE"></a> 新基数估计过程的设计  
- 称作基数估计器的基数估计逻辑已重新设计中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]以便改进查询计划质量，因此若要提高查询性能。 新的基数估计器纳入在新型 OLTP 和数据仓库工作负荷中表现优异的假设和算法。 它基于针对新型工作负荷的深入基数估计研究，以及我们在过去 15 年在改进 SQL Server 基数估计器方面的学习。 客户反馈表明，尽管大多数查询将会从更改或保持不更改中受益，但与以前的基数估计器相比，少数查询可能会显得退步。 性能优化和测试建议，请参阅[基数估计&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)。  
+ 称作基数估计器的基数估计逻辑已在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中重新设计，以便改进查询计划的质量，并因此改进查询性能。 新的基数估计器纳入在新型 OLTP 和数据仓库工作负荷中表现优异的假设和算法。 它基于针对新型工作负荷的深入基数估计研究，以及我们在过去 15 年在改进 SQL Server 基数估计器方面的学习。 客户反馈表明，尽管大多数查询将会从更改或保持不更改中受益，但与以前的基数估计器相比，少数查询可能会显得退步。 性能优化和测试建议，请参阅[基数估计&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)。  
    
   
 ###  <a name="Durability"></a> 延迟持续性  
@@ -97,11 +96,11 @@ ms.locfileid: "48067020"
   
 -   **显示计划**  
   
-     SHOWPLAN 显示有关列存储索引的信息。 **EstimatedExecutionMode**并**ActualExecutionMode**属性具有两个可能值：**批处理**或者**行**。  **存储**属性具有两个可能值：**行存储**并**列存储**。  
+     SHOWPLAN 显示有关列存储索引的信息。 **EstimatedExecutionMode**并**ActualExecutionMode**属性具有两个可能值：**批处理**或**行**。  **存储**属性具有两个可能值：**行存储**并**列存储**。  
   
 -   **存档的数据压缩**  
   
-     ALTER INDEX … REBUILD 提供新的 COLUMNSTORE_ARCHIVE 数据压缩选项，可进一步压缩列存储索引的指定分区。 这可用于存档，或者用于要求更小数据存储大小并且可以付出更多时间来进行存储和检索的其他情形。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
+     ALTER INDEX ...REBUILD 提供新的 COLUMNSTORE_ARCHIVE 数据压缩选项，可进一步压缩列存储索引的指定分区。 这可用于存档，或者用于要求更小数据存储大小并且可以付出更多时间来进行存储和检索的其他情形。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
    
   
 ###  <a name="Buffer"></a> 缓冲池扩展  
@@ -119,7 +118,7 @@ ms.locfileid: "48067020"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation 事件类  
- 针对联机索引操作事件类的进度报告现在具有两个新的数据列： **PartitionId**并**PartitionNumber**。 有关详细信息，请参阅[Progress Report: Online Index Operation 事件类](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)。  
+ 针对联机索引操作事件类的进度报告现在具有两个新数据列：**PartitionId**并**PartitionNumber**。 有关详细信息，请参阅[进度报表：Online Index Operation 事件类](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)。  
   
   
 ###  <a name="Compat"></a> 数据库兼容性级别  
@@ -130,8 +129,8 @@ ms.locfileid: "48067020"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED 和 NONCLUSTERED 的内联规范  
  对于基于磁盘的表，现在允许 `CLUSTERED` 和 `NONCLUSTERED` 索引的内联规范。 创建具有内联索引的表等效于发布一个 create table 命令，后随 `CREATE INDEX` 语句。 内联索引不支持包含列和筛选条件。  
   
-### <a name="select--into"></a>SELECT … INTO  
- `SELECT … INTO` 语句得到了改进，现在可以并行操作。 数据库的兼容性级别必须至少为 110。  
+### <a name="select--into"></a>选择...INTO  
+ `SELECT ... INTO` 语句得到了改进，现在可以并行操作。 数据库的兼容性级别必须至少为 110。  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>针对内存中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增强功能  
  璝惠[!INCLUDE[tsql](../includes/tsql-md.md)]更改为支持内存中 OLTP，请参阅[内存中 OLTP 的 TRANSACT-SQL 支持](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)。  

@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855075"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591811"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetCursorName**返回与指定语句相关联的游标名称。  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- 游标名称仅用于相关的定位更新和删除语句 (例如，**更新***表名*...**WHERE CURRENT OF** *游标名称*)。 有关详细信息，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果应用程序不会调用**SQLSetCursorName**来定义游标名称，该驱动程序生成的名称。 此名称以字母 SQL_CUR 开头。  
+ 游标名称仅用于相关的定位更新和删除语句 (例如，**更新**_表名_...**WHERE CURRENT OF** _游标名称_)。 有关详细信息，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果应用程序不会调用**SQLSetCursorName**来定义游标名称，该驱动程序生成的名称。 此名称以字母 SQL_CUR 开头。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 ODBC 2 *.x*，没有任何打开的游标和通过调用设置没有名称时**SQLSetCursorName**，调用**SQLGetCursorName**返回 SQLSTATE HY015 （没有游标名称可用）。 在 ODBC 3 *.x*，这不再为 true; 无论何时**SQLGetCursorName**是调用，该驱动程序返回的游标名称。  
   
  **SQLGetCursorName**返回该值指示是否显式或隐式创建的名称的游标的名称。 如果，则会隐式生成的游标名称**SQLSetCursorName**不调用。 **SQLSetCursorName**可以调用以进行重命名一个语句中的游标，只要将光标处于已分配或已准备状态。  

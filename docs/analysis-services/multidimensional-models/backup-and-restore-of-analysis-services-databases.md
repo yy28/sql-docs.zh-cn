@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 数据库的备份和还原 |Microsoft 文档
+title: Analysis Services 数据库的备份和还原 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e43357e843f28133f7bb2f5cd9db078ee4bace27
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa0e023b32418cd5eabee04819213955c517e0ee
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024444"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983998"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>备份和还原 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34024444"
   
  若要进行包括源数据在内的完整备份，则必须备份包含详细数据的数据库。 具体而言，如果使用的是 ROLAP 或 DirectQuery 数据库存储，则详细信息数据存储在与 Analysis Services 数据库分开的外部 SQL Server 关系数据库中。 否则，如果所有对象都是表格或多维对象，Analysis Services 备份将既包含元数据又包含源数据。  
   
- 自动备份的一个显著优点是：数据快照将按照自动备份频率所规定的时间或间隔始终保持最新状态。 自动计划程序可确保备份不会被忘记。 此外，还原数据库也可以自动进行，并且是一种复制数据的好方法，但务必要备份所复制实例的加密密钥文件。 同步功能专门用于复制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，但仅限过期数据。 此处提及的所有功能都可以通过用户界面、XML/A 命令实现或通过 AMO 以编程方式运行。 有关备份策略的详细信息，请参阅 [Backup Strategies with SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888)（SQL Server 2005 Analysis Services 的备份策略）。  
+ 自动备份的一个显著优点是：数据快照将按照自动备份频率所规定的时间或间隔始终保持最新状态。 自动计划程序可确保备份不会被忘记。 此外，还原数据库也可以自动进行，并且是一种复制数据的好方法，但务必要备份所复制实例的加密密钥文件。 同步功能专门用于复制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，但仅限过期数据。 此处提及的所有功能都可以通过用户界面、XML/A 命令实现或通过 AMO 以编程方式运行。
   
  本主题包含以下各节：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34024444"
  管理员可以将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库备份到单个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件 (.abf)，这与数据库的大小无关。 有关分步说明，请参阅 [如何备份 Analysis Services 数据库 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自动备份 Analysis Services 数据库 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]用于加载和查询[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据模型在 SharePoint 环境中，从 SharePoint 内容数据库加载其模型。 这些内容数据库是相关的且运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库引擎上。 同样，没有针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 备份和还原策略。 如果你有针对 SharePoint 内容的灾难恢复计划，则该计划包含存储在内容数据库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]（用于在 SharePoint 环境中加载和查询 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型）从 SharePoint 内容数据库加载其模型。 这些内容数据库是相关的且运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库引擎上。 同样，没有针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 备份和还原策略。 如果你有针对 SharePoint 内容的灾难恢复计划，则该计划包含存储在内容数据库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型。  
   
  **远程分区**  
   
@@ -112,7 +112,7 @@ ms.locfileid: "34024444"
   
  有关还原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的详细信息，请参阅 [还原选项](../../analysis-services/multidimensional-models/restore-options.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [备份、还原和同步数据库 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
 
   

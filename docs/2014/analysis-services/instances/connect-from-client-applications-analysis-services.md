@@ -11,12 +11,12 @@ ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f12f91e51383607d9bbcb8dc8ce2807c71ee289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149827"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370159"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
   如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
@@ -35,7 +35,7 @@ ms.locfileid: "48149827"
   
 -   [配置 Windows 防火墙以允许 Analysis Services 访问](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授予对对象和操作的访问权限&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授予对对象和操作的访问权限 (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 进行连接  
  在 SSMS 中连接到 Analysis Services 时，能够以交互方式管理服务器实例和数据库。 还可以运行 XMLA 或 MDX 查询以便执行管理任务或检索数据。 与只在发出查询时才加载数据库的其他工具和应用程序相比，SSMS 会在您连接服务器时加载所有数据库，前提是您拥有查看数据库的权限。 这意味着，如果您在服务器上保存有大量的表格数据库，所有这些数据库都会在您使用 SSMS 连接时加载至系统内存。  
@@ -50,7 +50,7 @@ ms.locfileid: "48149827"
   
      对于命名实例，必须以 servername\instance name 格式指定服务器名称。 此命名约定的示例可以是网络名称为 ADV-SRV062 的服务器的 ADV-SRV062\Finance，其中，已将 Analysis Services 作为标题为 Finance 的命名实例安装。  
   
-     对于部署在故障转移群集中的服务器，请使用 SSAS 群集的网络名称建立连接。 此名称在 SQL Server 安装期间指定，名为 **“SQL Server 网络名称”**。 请注意，如果您将 SSAS 以命名实例形式安装到 Windows Server 故障转移群集 (WSFC) 上，则绝不要在连接上添加实例名称。 这一做法仅适用于 SSAS；相比之下，群集关系数据库引擎的命名实例包含实例名称。 例如，如果您将 SSAS 和数据库引擎均安装为命名实例 (Contoso-Accounting)，SQL Server 网络名称为 SQL-CLU，则需使用“SQL-CLU”连接 SSAS，而使用“SQL-CLU\Contoso-Accounting”来连接数据库引擎。 有关更多信息和示例，请参阅 [如何安装群集 SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) 。  
+     对于部署在故障转移群集中的服务器，请使用 SSAS 群集的网络名称建立连接。 此名称在 SQL Server 安装期间指定，名为 **“SQL Server 网络名称”**。 请注意，如果您将 SSAS 以命名实例形式安装到 Windows Server 故障转移群集 (WSFC) 上，则绝不要在连接上添加实例名称。 这一做法仅适用于 SSAS；相比之下，群集关系数据库引擎的命名实例包含实例名称。 例如，如果您将 SSAS 和数据库引擎均安装为命名实例 (Contoso-Accounting)，SQL Server 网络名称为 SQL-CLU，则需使用“SQL-CLU”连接 SSAS，而使用“SQL-CLU\Contoso-Accounting”来连接数据库引擎。 有关更多信息和示例，请参阅 [如何安装群集 SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548) 。  
   
      对于部署在网络负载平衡群集中的服务器，请使用 NLB 的虚拟服务器名称建立连接。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48149827"
   
      避免使用 **“无”**。 除非您连接到已配置 HTTP 访问的服务器，否则，Analysis Services 将不允许您在连接字符串上指定用户名和密码。 同样，除非您知道 SSS 目标应用程序 ID 将映射到一组拥有对 Analysis Services 数据库的用户访问权限的 Windows 用户凭据，否则不要使用 SSS。 在大多数方案中，对于来自 Excel 的 Analysis Services 连接，最佳选择是使用 Windows 身份验证的默认选项。  
   
- 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](http://go.microsoft.com/fwlink/?linkID=215150)。  
+ 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](https://go.microsoft.com/fwlink/?linkID=215150)。  
   
 ##  <a name="bkmk_SSDT"></a> 使用 SQL Server Data Tools 进行连接  
  SQL Server Data Tools 用于生成 BI 解决方案，包括 Analysis Services 模型、Reporting Services 报表和 SSIS 包。 在生成报表或包时，您可能需要指定与 Analysis Services 的连接。  
@@ -106,7 +106,7 @@ ms.locfileid: "48149827"
   
 1.  在 Analysis Services 实例上启动 **SQL Server Profiler** ，然后开始一个新跟踪。  
   
-2.  在事件选择确认`Audit Login`和`Audit Logout`安全审核部分中选中了。  
+2.  在“事件选择”中，确认在“安全审核”部分中选中了 `Audit Login` 和 `Audit Logout`。  
   
 3.  通过某一应用程序服务（例如 SharePoint 或 Reporting Services）从远程客户端计算机连接到 Analysis Services。 Audit Login 事件将显示连接到 Analysis Services 的用户的标识。  
   
@@ -120,18 +120,18 @@ ms.locfileid: "48149827"
   
      若要进行测试，请在远程计算机上使用 Excel 或 SSMS，并且指定 Analysis Services 实例使用的 IP 地址和端口。 如果您可以连接，则防火墙规则对实例是有效的并且实例允许远程连接。  
   
-     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 -   某些工具可以连接，而其他工具却不能？ 该问题可能是客户端库的版本错误导致的。 您可以从 SQL Server 功能包下载页获取客户端库。  
   
  可帮助您解决连接失败的资源包括以下资源：  
   
- [解决 SQL Server 2005 Analysis Services 连接方案中的常见连接问题](http://technet.microsoft.com/library/cc917670.aspx)。 本文档是几年前撰写的，但文中提及的信息和方法现在仍然适用。  
+ [解决 SQL Server 2005 Analysis Services 连接方案中的常见连接问题](https://technet.microsoft.com/library/cc917670.aspx)。 本文档是几年前撰写的，但文中提及的信息和方法现在仍然适用。  
   
 ## <a name="see-also"></a>请参阅  
  [连接到 Analysis Services](connect-to-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](authentication-methodologies-supported-by-analysis-services.md)   
- [模拟&#40;SSAS 表格&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [创建数据源&#40;SSAS 多维&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [模拟（SSAS 表格）](../tabular-models/impersonation-ssas-tabular.md)   
+ [创建数据源（SSAS 多维）](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

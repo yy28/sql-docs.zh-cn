@@ -20,19 +20,19 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183697"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532513"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
   
--   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
+-   **若要升级 DAC，使用：**[注册数据层应用程序向导](#UsingDeleteDACWizard)， [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
  在删除某一数据层应用程序 (DAC) 实例时，您可以选择三个选项之一，这三个选项指定要对与该数据层应用程序相关联的数据库执行何种操作。 所有这三个选项都删除 DAC 定义元数据。 这些选项在如何处理与数据层应用程序相关联的数据库上有所不同。 向导并不删除与 DAC 或数据库相关联的任何实例级别的对象，例如登录名。  
@@ -65,7 +65,7 @@ ms.locfileid: "48183697"
   
 2.  展开 **“管理”** 节点。  
   
-3.  展开“数据层应用程序”节点。  
+3.  展开 **数据层应用程序** 节点。  
   
 4.  右键单击要删除的 DAC，然后选择“删除数据层应用程序…”  
   
@@ -132,22 +132,22 @@ ms.locfileid: "48183697"
   
 1.  创建一个 SMO Server 对象，并且将该对象设置为包含要删除的 DAC 的实例。  
   
-2.  打开`ServerConnection`对象，并连接到同一实例。  
+2.  打开 `ServerConnection` 对象，并连接到同一实例。  
   
-3.  使用`add_DacActionStarted`和`add_DacActionFinished`订阅 DAC 升级事件。  
+3.  使用 `add_DacActionStarted` 和 `add_DacActionFinished` 订阅 DAC 升级事件。  
   
 4.  指定要删除的 DAC。  
   
 5.  根据适合的删除选项，使用以下三个代码集之一：  
   
-    -   若要删除 DAC 注册但保持数据库不变，请使用`Unmanage()`方法。  
+    -   若要删除 DAC 注册但保持数据库不变，请使用 `Unmanage()` 方法。  
   
     -   若要删除 DAC 注册并分离数据库，请使用 `Uninstall()` 方法并指定 `DetachDatabase`。  
   
-    -   若要删除 DAC 注册并删除数据库，请使用`Uninstall()`方法并指定`DropDatabase`。  
+    -   若要删除 DAC 注册并删除数据库，请使用 `Uninstall()` 方法并指定 `DropDatabase`。  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>删除 DAC 但保留数据库的示例 (PowerShell)  
- 以下示例删除名为 MyApplication 使用的 DAC`Unmanage()`方法删除 DAC 但保持数据库不变。  
+ 下面的示例通过使用 `Unmanage()` 方法删除 DAC 但保持数据库不变来删除名为 MyApplication 的 DAC。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -171,7 +171,7 @@ $dacstore.Unmanage($dacName)
 ```  
   
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>删除 DAC 并且分离数据库的示例 (PowerShell)  
- 以下示例删除名为 MyApplication 使用的 DAC`Uninstall()`方法删除 DAC 并分离数据库。  
+ 下面的示例通过使用 `Uninstall()` 方法删除 DAC 且分离数据库来删除名为 MyApplication 的 DAC。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

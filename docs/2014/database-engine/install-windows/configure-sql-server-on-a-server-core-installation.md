@@ -13,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: b9cea2592b0e1c65fd23ccbad6b8235077ed1f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018432"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376214"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
   本主题详细介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 的 Server Core 安装上配置 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 。 请参阅以下各节：  
@@ -48,19 +48,19 @@ ms.locfileid: "51018432"
   
  有关远程配置和管理 Server Core 安装的详细信息，请参阅以下主题：  
   
--   [Windows Server 2008 R2: Server Core 部署的最佳实践](http://go.microsoft.com/fwlink/?LinkID=245957)(http://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2:Server Core 部署的最佳实践](https://go.microsoft.com/fwlink/?LinkID=245957)(https://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [配置 Server Core 安装： 概述](http://go.microsoft.com/fwlink/?LinkId=245958)(http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [配置 Server Core 安装：概述](https://go.microsoft.com/fwlink/?LinkId=245958)(https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [使用 Sconfig.cmd 配置 Windows Server 2008 R2 的服务器核心安装](http://go.microsoft.com/fwlink/?LinkId=245959)(http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [使用 Sconfig.cmd 配置 Windows Server 2008 R2 的服务器核心安装](https://go.microsoft.com/fwlink/?LinkId=245959)(https://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [运行 Windows Server 2008 R2 的服务器核心安装的服务器上安装服务器角色： 概述](http://go.microsoft.com/fwlink/?LinkId=245960)(http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [运行 Windows Server 2008 R2 的服务器核心安装的服务器上安装服务器角色：概述](https://go.microsoft.com/fwlink/?LinkId=245960)(https://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [运行 Windows Server 2008 R2 的服务器核心安装的服务器上安装 Windows 功能： 概述](http://go.microsoft.com/fwlink/?LinkId=245961)(http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [运行 Windows Server 2008 R2 的服务器核心安装的服务器上安装 Windows 功能：概述](https://go.microsoft.com/fwlink/?LinkId=245961)(https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [管理 Server Core 安装： 概述](http://go.microsoft.com/fwlink/?LinkId=245962)(http://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [管理 Server Core 安装：概述](https://go.microsoft.com/fwlink/?LinkId=245962)(https://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [管理服务器核心安装](http://go.microsoft.com/fwlink/?LinkId=245963)(http://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [管理服务器核心安装](https://go.microsoft.com/fwlink/?LinkId=245963)(https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新  
  本节提供有关在 Windows Server Core 计算机上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新的信息。 我们建议客户及时评估和安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便确保系统是最新的并且具有最近的安全更新。 有关安装的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Windows Server Core 计算机上，请参阅[Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
@@ -81,7 +81,7 @@ ms.locfileid: "51018432"
  指定 UpdateEnabled 和 UpdateSource 参数可以在主产品安装中包含最新的产品更新。 参考以下示例以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间允许产品更新：  
   
 ```tsql  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ###  <a name="bkmk_alreadyInstall"></a> 在已安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后为其安装更新  
@@ -150,7 +150,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器保存您的更改。 然后，必须手动重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 这使您可以选择最适合您的业务要求的重新启动时间。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务重新启动后，AlwaysOn 将启用，而且 IsHadrEnabled 服务器属性将设置为 1。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   您在目标计算机上必须具有相应的用户权限或被委托了相应的授权才能连接到该计算机。  
 > -   您正在管理的计算机名称显示在控制台树中的“计算机管理”旁边的括号中。  
   
@@ -240,7 +240,7 @@ $Tcp
 ##  <a name="BKMK_CMD"></a> 命令提示实用工具  
  可以使用以下命令提示实用工具，它们允许您在 Server Core 计算机上为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作编写脚本。 下表包含了随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的用于 Server Core 的命令提示实用工具列表：  
   
-|**实用工具**|**Description**|**安装位置**|  
+|**实用工具**|**说明**|**安装位置**|  
 |-----------------|---------------------|----------------------|  
 |[bcp 实用工具](../../tools/bcp-utility.md)|用于在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件之间复制数据。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)|用于配置和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
@@ -256,7 +256,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  
   
- 您可以在 Server Core 上使用以下主题中指定的语法在管理员命令提示符下启动该实用工具： [SQLdiag Utility](../../tools/sqldiag-utility.md)。  
+ 你可以在 Server Core 上使用以下主题中指定的语法在管理员命令提示符下启动该实用工具:[SQLdiag 实用工具](../../tools/sqldiag-utility.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)   

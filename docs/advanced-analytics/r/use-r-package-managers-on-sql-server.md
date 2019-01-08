@@ -1,6 +1,6 @@
 ---
-title: SQL Server 机器学习服务上安装新 R 包 |Microsoft Docs
-description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）
+title: 使用 R 包管理器-SQL Server 机器学习服务
+description: 使用标准 R 命令，如 install.packages 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864345"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432880"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 R 包管理器在 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47864345"
 
 1. 右键单击 RGui.exe，然后选择**以管理员身份运行**。 如果您没有所需的权限，请与数据库管理员联系并提供所需的包的列表。
 
-1. 从命令行中，如果您知道包名称，则可以键入：`install.packages("the_package-name")`双引号内所需的包名称。
+1. 从命令行中，如果您知道包名称，则可以键入：`install.packages("the_package-name")` 两个双引号所需的包名称。
 
 1. 当要求提供镜像站点，请选择的任何站点，便于在你的位置。
 

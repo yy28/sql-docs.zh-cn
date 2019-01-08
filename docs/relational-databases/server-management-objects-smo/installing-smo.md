@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15f862ceff618fb3c0f20d6e2bdf8d9d5b276801
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c7159682e421005385fd830ceed4380086089c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806831"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432260"
 ---
-#<a name="installing-smo"></a>安装 SMO
+# <a name="installing-smo"></a>安装 SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -38,11 +38,11 @@ ms.locfileid: "47806831"
 >>[!Important]
 >>在所述[文件和版本号](files-and-version-numbers.md)页上，不应 SMO 程序集安装到 GAC 中。 执行此操作可能会与其他应用程序也使用这些版本的 SMO 造成问题 (如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio)。
 
-##<a name="installing-the-package"></a>安装包
+## <a name="installing-the-package"></a>安装包
 
 请参阅[NuGet 快速入门-使用包](https://docs.microsoft.com/nuget/quickstart/use-a-package)有关说明和示例的安装和使用 NuGet 包。 
   
 ## <a name="system-requirements"></a>系统要求
   
- SMO 需要[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4.0 运行，因此使用它的任何应用程序必须确保客户端计算机具有该版本或更高版本。
+ SMO 需要[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4.0 运行，因此使用它的任何应用程序必须确保客户端计算机具有该版本或更高版本。 一些本机二进制文件安装的 NetFx SMO 库还需要安装; VC 2013 运行时该运行时未包含在包中。 您可以下载 redist 适用于从目标体系结构 https://www.microsoft.com/download/details.aspx?id=40784
   

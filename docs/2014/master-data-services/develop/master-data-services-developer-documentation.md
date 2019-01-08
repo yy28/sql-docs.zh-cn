@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1bf998c44b554647097e84b77079b3e5eb8ebdd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062437"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758899"
 ---
 # <a name="developer39s-guide-master-data-services"></a>开发人员&#39;s 指南 (Master Data Services)
   查找有关如何编写用于自定义您和您的用户如何与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 交互的代码的信息。 了解如何操作：  

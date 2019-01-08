@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services 性能优化 | Microsoft Docs
+title: SQL Server R Services 性能优化-SQL Server 机器学习服务
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8f70f4f2436d30ad4a4c5083f7a6ad5a06777af
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217552"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432290"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中的 R 的性能优化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47217552"
 + 第三篇文章介绍了中的操作化 R 代码和资源优化。
 + 第四个本文介绍在详细信息，并报告结果和结论的测试方法。
 
-**适用于：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
+**适用范围：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>性能目标和目标的方案
 
@@ -83,11 +83,11 @@ SQL server 来支持 R 脚本执行的 SQL Server 2016 中引入了 R Services �
 
 ## <a name="articles-in-this-series"></a>本系列文章
 
-+ [SQL Server 的硬件中的 R 的性能优化](..\r\sql-server-configuration-r-services.md)
++ [SQL Server 的硬件中的 R 的性能优化](../r/sql-server-configuration-r-services.md)
 
-    为配置硬件提供指导， [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] ，以及配置要更好地支持外部脚本的 SQL Server 实例安装。 它是特别适合**数据库管理员**。
+    为配置硬件提供指导的[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，以及配置要更好地支持外部脚本的 SQL Server 实例安装。 它是特别适合**数据库管理员**。
 
-+ [SQL Server 的代码和数据中的 R 的性能优化优化](..\r\r-and-data-optimization-r-services.md)
++ [SQL Server 的代码和数据中的 R 的性能优化优化](../r/r-and-data-optimization-r-services.md)
 
     提供有关如何优化以避免出现已知的问题的外部脚本的特定提示。 它是最适用于**数据科学家**。
 
@@ -95,6 +95,6 @@ SQL server 来支持 R 脚本执行的 SQL Server 2016 中引入了 R Services �
     > 在本部分中的大部分一般情况下适用于 R，而某些信息是信息的特定于 RevoScaleR 分析函数。 没有可用于详细的性能指南**revoscalepy**和其他受支持的 Python 库。
     >
 
-+ [SQL Server-方法和结果中的 R 的性能优化](..\r\performance-case-study-r-services.md)
++ [SQL Server-方法和结果中的 R 的性能优化](../r/performance-case-study-r-services.md)
 
     总结了哪些数据是使用两个案例研究、 如何性能进行了测试，并优化如何影响结果。

@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206067"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368669"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
@@ -35,9 +35,9 @@ ms.locfileid: "48206067"
  本主题介绍了说明这些方法的示例。  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>用 ADO 和 XML 数据岛检索 FOR XML 数据  
- ADO`Stream`对象或其他支持 COM 的对象`IStream`接口，如 Active Server Pages (ASP)`Request`和`Response`对象，可用于包含结果时你正在使用 FOR XML 查询。  
+ 使用 FOR XML 查询时，支持 COM `Stream` 接口的 ADO `IStream` 对象或其他对象 [例如，Active Server Page (ASP) `Request` 和 `Response` 对象] 可用于包含结果。  
   
- 例如，以下 ASP 代码显示了查询的结果`xml`数据类型列 Demographics 的 AdventureWorks 示例数据库的 Sales.Store 表中。 确切地说，该查询在 CustomerID 等于 3 的行中查找此列的实例值。  
+ 例如，以下 ASP 代码显示在 AdventureWorks 示例数据库的 Sales.Store 表中查询 `xml` 数据类型列 Demographics 的结果。 确切地说，该查询在 CustomerID 等于 3 的行中查找此列的实例值。  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -153,25 +153,25 @@ ms.locfileid: "48206067"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文档 MyDataIsle 的客户端处理  
   
--   **AnnualSales：** 1500000  
+-   **AnnualSales:** 1500000  
   
--   **AnnualRevenue：** 150000  
+-   **AnnualRevenue:** 150000  
   
--   **BankName：** Primary International  
+-   **BankName:** Primary International  
   
--   **BusinessType：** OS  
+-   **BusinessType:** 操作系统  
   
--   **YearOpened：** 1974  
+-   **YearOpened:** 1974  
   
--   **Specialty：** Road  
+-   **Specialty:** Road  
   
--   **SquareFeet：** 38000  
+-   **SquareFeet:** 38000  
   
--   **Brands：** 3  
+-   **品牌：** 3  
   
--   **Internet：** DSL  
+-   **Internet:** DSL  
   
--   **NumberEmployees：** 40  
+-   **NumberEmployees:** 40  
   
  然后，VBScript 消息框将显示以下由 FOR XML 查询结果返回的原始、未筛选的 XML 数据岛内容。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206067"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206067"
   
  在此示例中，以下 Microsoft .NET Framework 托管 API 用于完成返回并呈现 FOR XML 查询结果：  
   
-1.  `SqlConnection` 用于打开连接到 SQL Server，基于指定的连接字符串变量 strConn 的内容。  
+1.  `SqlConnection` 用于根据指定的连接字符串变量 strConn 的内容连接到 SQL Server。  
   
 2.  然后，将 `SqlDataAdapter` 用作数据适配器，它将使用 SQL 连接和指定的 SQL 查询字符串执行 FOR XML 查询。  
   
-3.  执行查询后，`SqlDataAdapter.Fill`方法然后调用并传递的一个实例`DataSet,`MyDataSet，为了用 FOR XML 查询的输出填充数据集。  
+3.  执行查询后，为了用 FOR XML 查询的输出填充数据集，将调用 `SqlDataAdapter.Fill` 方法并传递一个 `DataSet,` (MyDataSet) 实例。  
   
-4.  `DataSet.GetXml`然后调用方法来将查询结果作为可以在服务器生成 HTML 页面中显示的字符串返回。  
+4.  然后，调用 `DataSet.GetXml` 方法将查询结果作为可以在服务器生成的 HTML 页中显示的字符串返回。  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

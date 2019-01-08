@@ -18,12 +18,12 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d800eed984c6371ed689e9d8ec2748cb6b9886c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0993299edffce3139b468bf3ca27d49f88e8638b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752747"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591331"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_server =** ] **'***table_server***’**  
+ [  **@table_server =** ] **'**_table_server_  
  要返回信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
   
- [  **@table_name =** ] **'***table_name***’**]  
+ [  **@table_name =** ] **'**_table_name_]  
  将为其提供表特权信息的表的名称。 *table_name*是**sysname**，默认值为 NULL。  
   
- [  **@table_schema =** ] **'***table_schema***’**  
+ [  **@table_schema =** ] **'**_table_schema_  
  表架构。 在某些 DBMS 环境中是表所有者。 *table_schema*是**sysname**，默认值为 NULL。  
   
- [  **@table_catalog =** ] **'***table_catalog***’**  
+ [  **@table_catalog =** ] **'**_table_catalog_  
  是在其中的数据库名称指定*table_name*驻留。 *table_catalog*是**sysname**，默认值为 NULL。  
   
- [  **@fUsePattern =**] **'***fUsePattern***’**  
+ [  **@fUsePattern =**] **'**_fUsePattern_  
  确定字符 "_"、"%"、"[" 和 "]" 是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,7 +66,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表限定符名称。 多种 DBMS 产品支持表的三部分命名 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表限定符名称。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**按 TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**授权者**|**sysname**|已授予此权限的数据库用户名**TABLE_NAME**向列出**被授权者**。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列始终是相同**TABLE_OWNER**。 此字段始终返回值。 同样，GRANTOR 列可能是数据库所有者 (**TABLE_OWNER**) 或向其数据库所有者授予权限的 GRANT 语句中使用 WITH GRANT OPTION 子句的用户。|  
@@ -77,11 +77,11 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="remarks"></a>备注  
  返回的结果按排序**TABLE_QUALIFIER**， **TABLE_OWNER**， **TABLE_NAME**，以及**特权**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例从指定的链接数据库 `Product` 返回有关 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中名称以 `Seattle1` 开头的表的特权信息。 （[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定为链接服务器）。  
+ 以下示例从指定的链接数据库 `Product` 返回有关 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中名称以 `Seattle1` 开头的表的特权信息。 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]假定为链接服务器)。  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

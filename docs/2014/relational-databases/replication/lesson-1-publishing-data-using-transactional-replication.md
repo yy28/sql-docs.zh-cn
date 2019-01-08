@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：使用事务复制发布数据 | Microsoft Docs
+title: 第 1 课：使用事务复制发布数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a4e638ddacc5b112ef819826c3eae7f42c5078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226587"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590561"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 课：使用事务复制发布数据
   在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 **示例数据库中发布** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "48226587"
   
 10. 在“代理安全性”页上，清除“使用快照代理的安全设置”复选框。  
   
-11. 单击快照代理的“安全设置”，在“进程帐户”框中输入 \<Machine_Name>\repl_snapshot，为此帐户提供密码，然后单击“确定”。  
+11. 单击快照代理的“安全设置”，在“进程帐户”框中输入 \<_Machine_Name>_**\repl_snapshot**，为此帐户提供密码，然后单击“确定”。  
   
 12. 重复上一步，将 repl_logreader 设置为日志读取器代理的进程帐户，然后单击“完成”。  
   
@@ -77,10 +77,10 @@ ms.locfileid: "48226587"
   
 3.  选择“发布访问列表”页，单击“添加”。  
   
-4.  在“添加发布访问项”对话框中，选择“<Machine_Name>\repl_distribution”，再单击“确定”。 单击“确定” 。  
+4.  \在“添加发布访问项”对话框中，选择 _<Machine_Name>_**\repl_distribution**，再单击“确定”。 单击“确定” 。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已成功创建了事务发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建事务发布的订阅](lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
+ 您已成功创建了事务发布。 接下来，您将订阅此发布。 请参阅[第 2 课：创建事务发布的订阅](lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [筛选已发布数据](publish/filter-published-data.md)   

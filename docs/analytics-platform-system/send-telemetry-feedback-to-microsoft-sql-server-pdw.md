@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701725"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591134"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform system 向 Microsoft 发送遥测反馈
 分析平台系统具有一个可选的遥测功能，将管理控制台数据发送到 Microsoft。 
@@ -26,14 +26,14 @@ ms.locfileid: "51701725"
 若要提供最大的隐私保护，AP 提供而不启用遥测。 启用此功能前，首先请查看[Microsoft 分析平台系统隐私声明](https://go.microsoft.com/fwlink/?LinkId=400902)。 若要选择加入，请运行如下所述的 PowerShell 脚本。  
   
 ## <a name="enable"></a>启用遥测  
-**DNS 转发：** 将遥测数据发送到 Microsoft 需要 Analytics Platform System 能够连接到 DNS 转发器通过 internet 进行访问。 若要启用此功能，必须启用 DNS 转发所有主机和工作负荷 Vm 上。 调用`Enable-RemoteMonitoring`命令与`SetupDnsForwarder`选项来正确配置 DNS 转发并启用遥测。 调用`Enable-RemoteMonitoring`命令而无需`SetupDnsForwarder`选项已配置 DNS 转发并且只想要启用检测信号监视时。  
+**DNS 转发：** 向 Microsoft 发送遥测数据需要 Analytics Platform System 能够连接到 DNS 转发器通过 internet 进行访问。 若要启用此功能，必须启用 DNS 转发所有主机和工作负荷 Vm 上。 调用`Enable-RemoteMonitoring`命令与`SetupDnsForwarder`选项来正确配置 DNS 转发并启用遥测。 调用`Enable-RemoteMonitoring`命令而无需`SetupDnsForwarder`选项已配置 DNS 转发并且只想要启用检测信号监视时。  
   
 > [!IMPORTANT]  
 > 启用 DNS 转发打开所有主机和工作负荷 Vm 的 internet 的连接。  
   
 #### <a name="to-enable-feedback"></a>若要启用的反馈  
   
-1.  使用设备的域管理员帐户，连接到控制节点 (***appliance_domain *-CTL01**)，然后打开命令提示符下使用你的 Windows 管理员凭据。  
+1.  使用设备的域管理员帐户，连接到控制节点 (<strong>*appliance_domain*-CTL01</strong>)，然后打开命令提示符下使用你的 Windows 管理员凭据。  
   
 2.  导航到以下目录： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "51701725"
   
 #### <a name="to-disable-telemetry"></a>若要禁用遥测  
   
-1.  使用设备的域管理员帐户，连接到控制节点 (***appliance_domain *-CTL01**)，并使用管理员权限打开 PowerShell 窗口。  
+1.  使用设备的域管理员帐户，连接到控制节点 (<strong>*appliance_domain*-CTL01</strong>)，并使用管理员权限打开 PowerShell 窗口。  
   
 2.  导航到以下目录： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   

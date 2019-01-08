@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544108"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>确定适当的 Azure SQL 数据库 SKU 的本地数据库
 
@@ -36,7 +36,7 @@ ms.locfileid: "49643995"
 
 以下说明可帮助您确定 Azure SQL 数据库 SKU 的建议和使用数据迁移助手预配到 Azure，关联的数据库。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 下载数据库迁移助手 v4.0 或更高版本，然后将其安装。 如果已有该工具安装，请关闭并重新打开它，并将提示您升级该工具。
 
@@ -54,11 +54,11 @@ ms.locfileid: "49643995"
     ![DMA 文件夹中所示的 PowerShell 文件](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. 使用以下参数运行 PowerShell 脚本：
-    - **ComputerName**： 承载数据库的计算机的名称。
-    - **OutputFilePath**： 输出文件路径，以保存所收集的计数器。
-    - **CollectionTimeInSeconds**： 在此期间你想要收集性能计数器数据的时间量。
+    - **ComputerName**:计算机承载数据库的名称。
+    - **OutputFilePath**:要保存所收集的计数器的输出文件路径。
+    - **CollectionTimeInSeconds**:在此期间你想要收集性能计数器数据的时间量。
       捕获性能计数器至少 40 分钟，以便获取有意义的建议。 捕获，期越长越准确建议将。
-    - **DbConnectionString**： 指向要从中收集性能计数器数据的计算机上托管的主数据库的连接字符串。
+    - **DbConnectionString**:指向要从中收集性能计数器数据的计算机上承载的 master 数据库连接字符串。
      
     下面是示例调用：
 
@@ -78,30 +78,30 @@ ms.locfileid: "49643995"
 
 使用以下参数运行 dmacmd.exe:
 
-- **/ 操作 = SkuRecommendation**： 输入此参数，以执行 SKU 评估。
-- **/ SkuRecommendationInputDataFilePath**： 上一节中收集计数器文件的路径。
-- **/ SkuRecommendationTsvOutputResultsFilePath**： 要以 TSV 格式写入输出结果的路径。
-- **/ SkuRecommendationJsonOutputResultsFilePath**： 要以 JSON 格式写入输出结果的路径。
-- **/ SkuRecommendationHtmlResultsFilePath**： 若要以 HTML 格式写入输出结果的路径。
+- **/ 操作 = SkuRecommendation**:输入此参数，以执行 SKU 评估。
+- **/ SkuRecommendationInputDataFilePath**:在上一节中收集计数器文件的路径。
+- **/ SkuRecommendationTsvOutputResultsFilePath**:要写入的输出结果以 TSV 格式的路径。
+- **/ SkuRecommendationJsonOutputResultsFilePath**:要以 JSON 格式写入输出结果的路径。
+- **/ SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式写入输出结果的路径。
 
 此外，您需要选择以下参数之一：
 - 防止价格刷新
-    - **/ SkuRecommendationPreventPriceRefresh**： 价格刷新可防止发生。 如果在脱机模式下运行，请使用此选项。
+    - **/ SkuRecommendationPreventPriceRefresh**:防止发生价格刷新。 如果在脱机模式下运行，请使用此选项。
 - 获取最新的价格 
-    - **/ SkuRecommendationCurrencyCode**： 要在其中显示的价格 （例如货币"美元"）。
-    - **/ SkuRecommendationOfferName**： 产品/服务命名 （例如"MS-条-0003 P")。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细信息](https://azure.microsoft.com/support/legal/offer-details/)页。
-    - **/ SkuRecommendationRegionName**: 区域命名 （例如"WestUS")。
-    - **/ SkuRecommendationSubscriptionId**： 订阅 id。
-    - **/ AzureAuthenticationTenantId**： 身份验证租户。
-    - **/ AzureAuthenticationClientId**: AAD 应用程序用于进行身份验证的客户端 ID。
+    - **/ SkuRecommendationCurrencyCode**:要在其中显示的价格 （例如货币"美元"）。
+    - **/ SkuRecommendationOfferName**:产品/服务命名 （例如"MS-条-0003 P")。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细信息](https://azure.microsoft.com/support/legal/offer-details/)页。
+    - **/ SkuRecommendationRegionName**:区域名称 （例如"WestUS")。
+    - **/ SkuRecommendationSubscriptionId**:订阅的 ID。
+    - **/ AzureAuthenticationTenantId**:身份验证租户中。
+    - **/ AzureAuthenticationClientId**:用于身份验证的 AAD 应用客户端 ID。
     - 以下身份验证选项之一：
         - 交互
-            - **AzureAuthenticationInteractiveAuthentication**： 设置为 true 的身份验证弹出窗口。
+            - **AzureAuthenticationInteractiveAuthentication**:设置为 true 的身份验证弹出窗口。
         - 基于证书
-            - **AzureAuthenticationCertificateStoreLocation**： 设置为证书存储位置 （例如"CurrentUser")。
-            - **AzureAuthenticationCertificateThumbprint**： 设置为证书指纹。
+            - **AzureAuthenticationCertificateStoreLocation**:设置为证书存储位置 （例如"CurrentUser")。
+            - **AzureAuthenticationCertificateThumbprint**:将设置为证书指纹。
         - 基于令牌
-            - **AzureAuthenticationToken**： 设置为证书令牌。
+            - **AzureAuthenticationToken**:将设置为证书令牌。
 
 下面是一些示例调用：
 
@@ -135,8 +135,8 @@ TSV 输出文件将包含下图中显示的列：
 
 后面的每个列说明。
 
-- **DatabaseName** – 你数据库的名称。
-- **MetricName** – 是否已执行某个度量值。
+- **DatabaseName** -数据库的名称。
+- **MetricName** -是否执行某个度量值。
 - **MetricType** -建议使用 Azure SQL 数据库层。
 - **MetricValue** -建议使用 Azure SQL 数据库 SKU。
 - **SQLMiEquivalentCores** -如果你选择只用于 Azure SQL 数据库托管实例，您可以使用此值为核心计数。
@@ -152,11 +152,11 @@ HTML 文件包含此信息以图形格式。 HTML 文件可用于输入 Azure �
 只需几次单击，可以在你可以将数据库迁移到 Azure 中使用前一步骤中预配目标数据库的建议。 您还可以通过按如下所示更新 HTML 文件的建议进行更改。
 
 1. 打开 HTML 文件并输入以下信息：
-    - **订阅 ID** – 你想要预配数据库的 Azure 订阅的订阅 ID。
-    - **区域**– 在其中设置数据库的区域。 请确保你的订阅支持选择的区域。
-    - **资源组**– 你想要将数据库部署的资源组。 输入存在的资源组。
-    - **服务器名称**– 要部署的数据库的 Azure SQL 数据库服务器。 如果输入不存在的服务器名称，将创建它。
-    - **管理员用户名 \ 密码**– 服务器管理员用户名和密码。
+    - **订阅 ID** -你想要预配数据库的 Azure 订阅的订阅 ID。
+    - **区域**-在其中设置数据库的区域。 请确保你的订阅支持选择的区域。
+    - **资源组**-你想要将数据库部署的资源组。 输入存在的资源组。
+    - **服务器名称**-要部署的数据库的 Azure SQL 数据库服务器。 如果输入不存在的服务器名称，将创建它。
+    - **管理员用户名 \ 密码**-服务器管理员用户名和密码。
 
 2. 查看每个数据库的建议和修改的定价层、 计算级别，并根据需要的最大数据大小。 请务必取消选中当前不预配到希望的任何数据库。
 

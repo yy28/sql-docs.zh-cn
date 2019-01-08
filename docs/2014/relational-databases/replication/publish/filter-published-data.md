@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222622"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810639"
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
   通过筛选表项目，可以为要发布的数据创建分区。 通过筛选已发布数据，可以：  
@@ -73,7 +72,7 @@ ms.locfileid: "48222622"
     > [!NOTE]  
     >  在事务发布中使用行筛选器会显著增加开销，因为对于为已发布表写入的每个日志行，都需要计算项目筛选器子句以确定是否要复制该行。 如果每个复制节点都能支持全部数据负载，而且总体数据集相当小，则应避免在事务发布中使用行筛选器。  
   
--   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
+-   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
   
  若要定义或修改静态行筛选器，请参阅 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48222622"
   
 -   事务复制允许您将索引视图按视图或表来复制。 如果将视图按表复制，则无法从表中筛选列。  
   
- 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将限制执行`sp_replcmds`（执行筛选器） 到数据库所有者 (`dbo`)。 `dbo`不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]限制此逻辑的执行，以便恶意`dbo`无法劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
+ 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 `sp_replcmds` 的执行（执行筛选器）限制为数据库所有者 (`dbo`)。 `dbo` 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]限制此逻辑的执行，以便恶意`dbo`无法劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
   
 ## <a name="see-also"></a>请参阅  
  [发布数据和数据库对象](publish-data-and-database-objects.md)  

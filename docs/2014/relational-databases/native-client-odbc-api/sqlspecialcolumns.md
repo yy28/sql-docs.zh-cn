@@ -14,12 +14,12 @@ ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e2637e9588404926d8d0e73016765cd54c56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107527"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376089"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   请求行标识符 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**返回空结果集 （没有任何数据行） 的任何请求的除 sql_scope_currow 之外的作用域。 生成的结果集指示仅在此作用域内这些列有效。  
@@ -37,7 +37,7 @@ ms.locfileid: "48107527"
  **SQLSpecialColumns**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLSpecialColumns 函数](http://go.microsoft.com/fwlink/?LinkId=59371)   
+ [SQLSpecialColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59371)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

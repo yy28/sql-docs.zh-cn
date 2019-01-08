@@ -18,12 +18,12 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594826"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588551"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@parameter_name** = ] **'***parameter_name***'**  
+ [**@parameter_name** =] **'**_parameter_name_  
  要更改的参数的名称。  
   
- [**@parameter_value** = ] **'***parameter_value***'**  
+ [**@parameter_value** =] **'**_parameter_value_  
  参数的新值。  
   
- [**@description** =] **'***说明*****  
+ [**@description** =] **'**_说明_  
  参数的说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -73,7 +73,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
  存储的过程**sysmail_configure_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

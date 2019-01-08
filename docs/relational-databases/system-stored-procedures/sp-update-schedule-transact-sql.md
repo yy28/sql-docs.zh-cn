@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa647aabd7e2048c6f56e5518dde8a2edc12dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661225"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591801"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_schedule
  [ **@schedule_id =** ] *schedule_id*  
  要修改的计划的标识符。 *schedule_id*是**int**，无默认值。 任一*schedule_id*或*schedule_name*必须指定。  
   
- [ **@name =** ]  **'***schedule_name***'**  
+ [  **@name =** ] **'**_schedule_name_  
  要修改的计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*必须指定。  
   
  [ **@new_name**= ] *new_name*  
@@ -135,7 +135,7 @@ sp_update_schedule
  [ **@active_end_time =** ] *active_end_time*  
  之间的任何日期时间*active_start_date*并*active_end_date*结束执行作业。 *active_end_time*是**int**，默认值为**235959**，指示 11:59:59 PM 并且必须使用 HHMMSS 格式输入。  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**]  
+ [ **@owner_login_name**=] **'**_owner_login_name_]  
  拥有该计划的服务器主体的名称。 *owner_login_name*是**sysname**，默认值为 NULL，指示计划是否归创建者。  
   
  [ **@automatic_post =**] *automatic_post*  
@@ -147,7 +147,7 @@ sp_update_schedule
 ## <a name="remarks"></a>备注  
  所有使用该计划的作业将立即使用新设置。 但是，更改计划不会停止当前正在运行的作业。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

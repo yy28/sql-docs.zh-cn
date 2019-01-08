@@ -12,26 +12,26 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 843bf7c05fad886e42ce4d1241715e21fd95918a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d89447c98f8f74e68cd8ef563cbf049b4dcea7d4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086287"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358989"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
   此示例显示如何使用枚举器对象列出可用数据源。  
   
- 若要列出对 SQLOLEDB 枚举器可见的数据源，使用者调用[isourcesrowset:: Getsourcesrowset](http://go.microsoft.com/fwlink/?LinkId=120312)方法。 此方法返回与当前可见数据源有关的信息的行集。  
+ 若要列出对 SQLOLEDB 枚举器可见的数据源，使用者调用[isourcesrowset:: Getsourcesrowset](https://go.microsoft.com/fwlink/?LinkId=120312)方法。 此方法返回与当前可见数据源有关的信息的行集。  
   
  根据所使用的网络库，将搜索相应的域以找到数据源。 对于命名管道，将搜索客户端登录到的域。 对于 AppleTalk，将搜索默认区域。 对于 SPX/IPX，将搜索在平构数据库中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的列表。 对于 Banyan VINES，将搜索在本地网络中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装。 不支持多协议和 TCP/IP 套接字。  
   
  在开关服务器时，可能需要几分钟来更新这些域中的信息。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>枚举 OLE DB 数据源  
   

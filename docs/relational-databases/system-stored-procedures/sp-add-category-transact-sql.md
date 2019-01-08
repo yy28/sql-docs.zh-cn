@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792060"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591011"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class =** ] **'***类*****  
+ [  **@class =** ] **'**_类_  
  要添加的类别的类。 *类*是**varchar(8)** 的作业，默认值可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -52,7 +52,7 @@ sp_add_category
 |ALERT|添加警报类别。|  
 |OPERATOR|添加操作员类别。|  
   
- [ **@type =** ] **'***type***'**  
+ [  **@type =** ] **'**_类型_  
  要添加的类别的类型。 *类型*是**varchar(12)**，默认值为**本地**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -61,7 +61,7 @@ sp_add_category
 |多服务器|多服务器作业类别。|  
 |无|非 JOB 类类别 **。**|  
   
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'**_名称_  
  要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -73,7 +73,7 @@ sp_add_category
 ## <a name="remarks"></a>备注  
  **sp_add_category**必须从运行**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_category**。  
   
 ## <a name="examples"></a>示例  

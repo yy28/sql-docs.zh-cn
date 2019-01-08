@@ -11,12 +11,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f48846f1cb78a8ea8a21be5a7114bf11017f5ca5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be3f95c1a0c395c412479d3a8836e9126fb0373f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147917"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374649"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
   数据类型表示不同种类的数据，以便能够有效地进行存储和处理。 典型的数据类型包括文本（也称为字符串）、带有小数位和不带小数位的数字、日期和时间以及图像。 报表中的值必须是报表定义语言 (RDL) 数据类型。 在报表中显示某个值时，您可以根据您的喜好设置该值的格式。 例如，表示货币的字段将以浮点数的形式存储在报表定义中，但是可以根据您所选择的格式属性以不同的格式显示该字段。  
@@ -35,7 +35,7 @@ ms.locfileid: "48147917"
 |Boolean|默认值：Boolean|  
 |Integer|默认值：Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
 |DateTime|默认值：DateTime<br /><br /> DateTimeOffset|  
-|Float|默认值：Double<br /><br /> Single、Decimal|  
+|float|默认值：双精度<br /><br /> Single、Decimal|  
 |二进制|默认值：Byte[]|  
 |Variant|除了 Byte[] 之外的上述任何值|  
 |VariantArray|Variant 的数组|  
@@ -57,7 +57,7 @@ ms.locfileid: "48147917"
 -   将从数据源检索的值从一种数据类型转换为另一种数据类型。  
   
 ## <a name="determining-the-data-type-of-report-data"></a>确定报表数据的数据类型  
- 若要确定报表项的数据类型，可以编写一个返回报表项数据类型的表达式。 例如，若要显示字段 `MyField`的数据类型，可在表单元中添加以下表达式： `=Fields!MyField.Value.GetType().ToString()`。 结果将显示用于表示的 CLR 数据类型`MyField`，例如`System.String`或`System.DateTime`。  
+ 若要确定报表项的数据类型，可以编写一个返回报表项数据类型的表达式。 例如，若要显示字段 `MyField`的数据类型，可在表单元中添加以下表达式： `=Fields!MyField.Value.GetType().ToString()`。 结果将显示用于表示 `MyField` 的 CLR 数据类型，例如 `System.String` 或 `System.DateTime`。  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>将数据集字段转换为其他数据类型  
  在报表中使用数据集字段之前，还可以对这些字段进行转换。 下面列出可用于转换现有数据集字段的方法：  
@@ -69,7 +69,7 @@ ms.locfileid: "48147917"
 -   检查所使用的数据处理扩展插件是否包括用于检索预先设定格式的数据的元数据。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询包括 FORMATTED_VALUE 扩展属性，用于已在处理多维数据集时设置了格式的多维数据集值。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解参数数据类型  
- 报表参数必须是下列五种数据类型之一：Boolean、DateTime、Integer、Float 或 Text（也称为 String）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值。  
+ 报表参数必须是五个数据类型之一：一个布尔值、 DateTime、 Integer、 Float、 或文本 （也称为字符串）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值。  
   
 > [!NOTE]  
 >  DateTime 数据类型的报表参数不支持毫秒。 尽管可以创建基于包含毫秒值的参数，但是不能从包含具有毫秒的 Date 或 Time 值的可用值下拉列表中选择值。  
@@ -90,7 +90,7 @@ ms.locfileid: "48147917"
 |只需 DateTimeOffset 值的 DateTime 部分|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |只需 DateTimeOffset 值的 Offset 部分|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- 还可以使用 Format 函数控制值的显示格式。 有关详细信息，请参阅 [函数 (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)。  
+ 还可以使用 Format 函数控制值的显示格式。 有关详细信息，请参阅 [函数 (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483)。  
   
 ## <a name="advanced-examples"></a>高级示例  
  使用不对数据源中所有数据类型提供转换支持的数据访问接口连接到数据源时，不支持的数据源类型的默认数据类型为 String。 下面的示例提供针对作为字符串返回的特定数据类型的解决方案。  
@@ -105,7 +105,7 @@ ms.locfileid: "48147917"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例中，此值已放在`String`名为字段`MyDateTime.Value`。  
+ 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例，此值已放入名为 `MyDateTime.Value` 的 `String` 字段中。  
   
  可以使用下列策略之一将此数据转换为一个或多个 CLR 值：  
   
@@ -117,9 +117,9 @@ ms.locfileid: "48147917"
   
     -   下面的表达式将该字符串转换为日期和时间值： `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下 `DateTime` 值：`2007-07-06 04:07:07 PM`（2007 年 7 月 6 日下午 4:07)。  
+         如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下`DateTime`值：`2007-07-06 04:07:07 PM` (2007 年 7 月 6 日下午 4:07)。  
   
- 有关将字符串转换为详细信息`DateTime`数据类型，请参阅[分析日期和时间字符串](http://go.microsoft.com/fwlink/?LinkId=89703)，[特定区域性的格式设置日期和时间](http://go.microsoft.com/fwlink/?LinkId=89704)，并[选择DateTime、 DateTimeOffset 和 TimeZoneInfo 之间](http://go.microsoft.com/fwlink/?linkid=110652)MSDN 上。  
+ 有关将字符串转换为详细信息`DateTime`数据类型，请参阅[分析日期和时间字符串](https://go.microsoft.com/fwlink/?LinkId=89703)，[特定区域性的格式设置日期和时间](https://go.microsoft.com/fwlink/?LinkId=89704)，并[选择DateTime、 DateTimeOffset 和 TimeZoneInfo 之间](https://go.microsoft.com/fwlink/?linkid=110652)MSDN 上。  
   
 -   向报表数据集添加使用表达式提取部分字符串的新计算字段。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48147917"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) 和 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)中的[日期和时间数据类型及函数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) 和 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?linkid=120955)中的[日期和时间数据类型及函数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据类型的详细信息，请参阅 [SQL Server 联机丛书](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 中的 [SQL Server Books Onl中的e](http://go.microsoft.com/fwlink/?linkid=120955)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据类型的详细信息，请参阅 [SQL Server 联机丛书](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 中的 [SQL Server Books Onl中的e](https://go.microsoft.com/fwlink/?linkid=120955)。  
   
 ## <a name="see-also"></a>请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](formatting-report-items-report-builder-and-ssrs.md)  

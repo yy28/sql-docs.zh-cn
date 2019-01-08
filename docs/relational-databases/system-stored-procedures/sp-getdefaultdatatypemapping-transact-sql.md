@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_getdefaultdatatypemapping_TSQL
@@ -17,12 +16,12 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ddeb1370044c0218d0ef85c1d7e61bad78c646
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2559c69e5857bbc5796d68d19b7d760476594b87
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700605"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589191"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@source_dbms**=] **'***source_dbms*****  
+ [ **@source_dbms**=] **'**_source_dbms_  
  从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一：  
   
 |ReplTest1|Description|  
@@ -63,10 +62,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  必须指定此参数。  
   
- [  **@source_version=** ] **'***source_version*****  
+ [  **@source_version=** ] **'**_source_version_  
  源 DBMS 的版本号。 *source_version*是**varchar(10)**，默认值为 NULL。  
   
- [ **@source_type**=] **'***source_type*****  
+ [ **@source_type**=] **'**_source_type_  
  源 DBMS 中的数据类型。 *source_type*是**sysname**，无默认值。  
   
  [  **@source_length=** ] *source_length*  
@@ -81,7 +80,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@source_nullable=** ] *source_nullable*  
  源 DBMS 中的数据类型是否支持 NULL 值。 *source_nullable*是**位**，默认值为**1**，这意味着支持 NULL 值。  
   
- [ **@destination_dbms** =] **'***destination_dbms*****  
+ [ **@destination_dbms** =] **'**_destination_dbms_  
  目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一：  
   
 |ReplTest1|Description|  
@@ -93,10 +92,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  必须指定此参数。  
   
- [ **@destination_version**=] **'***destination_version*****  
+ [ **@destination_version**=] **'**_destination_version_  
  目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，默认值为 NULL。  
   
- [ **@destination_type**=] **'***destination_type***** 输出  
+ [ **@destination_type**=] **'**_destination_type_输出  
  目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，默认值为 NULL。  
   
  [  **@destination_length=** ] *destination_length*输出  
@@ -105,13 +104,13 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@destination_precision=** ] *destination_precision*输出  
  目标 DBMS 中的数据类型的精度。 *destination_precision*是**bigint**，默认值为 NULL。  
   
- [  **@destination_scale=** ] *destination_scale * * * 输出**  
+ [  **@destination_scale=** ] _destination_scale_**输出**  
  目标 DBMS 中的数据类型的小数位数。 *destination_scale*是**int**，默认值为 NULL。  
   
- [  **@destination_nullable=** ] *destination_nullable * * * 输出**  
+ [  **@destination_nullable=** ] _destination_nullable_**输出**  
  目标 DBMS 中的数据类型是否支持 NULL 值。 *destination_nullable*是**位**，默认值为 NULL。 **1**意味着支持 NULL 值。  
   
- [  **@dataloss=** ]*数据丢失 * * * 输出**  
+ [  **@dataloss=** ]_数据丢失_**输出**  
  映射是否有数据丢失的可能。 *数据丢失*是**位**，默认值为 NULL。 **1**意味着就可能出现数据丢失。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -122,7 +121,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  **sp_getdefaultdatatypemapping**返回类型与指定的源数据类型最匹配的默认目标数据。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_getdefaultdatatypemapping**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,49 +1,49 @@
 ---
-title: 创建新的 SQL Server 表使用 rxDataStep （SQL 和 R 深入） |Microsoft 文档
+title: 创建使用 RevoScaleR rxDataStep-SQL Server 机器学习的新 SQL Server 表
+description: 有关如何创建 SQL Server 表中的 SQL Server 上使用 R 语言的教程演练。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2fe521908e34afc1ae3ec23d56cb9d5cea801f1b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d0eea1921a089141819c49ac78c59e57e01291a
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202319"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644726"
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep-sql-and-r-deep-dive"></a>创建新的 SQL Server 表使用 rxDataStep （SQL 和 R 深入）
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>新 SQL Server 使用 rxDataStep 创建表 （SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+本课程中属于[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-在本课程中，你学习如何内存中数据帧之间移动数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上下文和本地文件。
+在本课中，了解如何在内存中数据帧、 之间移动数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上下文和本地文件。
 
 > [!NOTE]
-> 本课程中使用不同的数据集。 航班延迟数据集是广泛用于机器学习试验的公共数据集。 此示例中使用的数据文件与其他产品示例相同的目录中可用。
+> 本课程中使用不同的数据集。 航班延迟数据集是广泛用于机器学习试验的公用数据集。 在此示例中使用的数据文件位于与其他产品示例相同的目录。
 
-## <a name="create-sql-server-table-from-local-data"></a>从本地数据创建 SQL Server 表
+## <a name="load-data-from-a-local-xdf-file"></a>从本地 XDF 文件加载数据
 
-在本教程的第一个部分，您使用**RxTextData**函数以将数据导入从一个文本文件，R，然后使用**RxDataStep**函数将数据插入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+在本教程的第一个部分，使用**RxTextData**函数将数据导入 R 中来自一个文本文件，然后使用**RxDataStep**函数将数据插入移动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-本课程采用不同的方法，并使用文件中的数据保存在[XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)。 在执行某些轻型转换使用 XDF 文件的数据之后, 你将保存的已转换的数据到一个新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。
+本课程中采用不同的方法，并使用文件中的数据保存在[XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)。 执行一些轻型转换使用 XDF 文件的数据之后, 您转换的数据保存到新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。
 
-**什么是 XDF？**
+**XDF 是什么？**
 
-XDF 格式是一 XML 标准开发高维数据并通过使用本机文件格式[机器学习服务器](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)。 其为二进制文件格式，具有用于优化行和列的处理与分析的 R 接口。  可将其用于移动数据和存储对分析有用的数据子集。
+XDF 格式是为高维数据开发的 XML 标准，通过使用本机文件格式[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)。 其为二进制文件格式，具有用于优化行和列的处理与分析的 R 接口。  可将其用于移动数据和存储对分析有用的数据子集。
 
 1. 将计算上下文设置为本地工作站。 **此步骤需要 DDL 权限。**
 
-  
     ```R
     rxSetComputeContext("local")
     ```
   
-2. 使用 RxXdfData 函数定义新数据源对象。 若要定义 XDF 数据源，指定数据文件的路径。  
+2. 使用 RxXdfData 函数定义新数据源对象。 若要定义 XDF 数据源，请指定数据文件的路径。  
 
-    你可以指定使用的文本变量的文件的路径。 但是，在这种情况下，没有方便快捷方式，就是使用**rxGetOption**函数，并从示例数据目录获取文件 (AirlineDemoSmall.xdf)。
+    可以指定使用文本变量文件的路径。 但是，在这种情况下，没有方便的快捷方式，就是使用**rxGetOption**函数，并从示例数据目录获取文件 (AirlineDemoSmall.xdf)。
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
@@ -57,67 +57,64 @@ XDF 格式是一 XML 标准开发高维数据并通过使用本机文件格式[�
 
 **结果**
 
-*Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)*
-
-*Var 2: CRSDepTime, Type: numeric, Storage: float32, Low/High: (0.0167, 23.9833)*
-
-*Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Saturday Sunday*
+```R
+Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)
+Var 2: CRSDepTime, Type: numeric, Storage: float32, Low/High: (0.0167, 23.9833)
+Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Saturday Sunday
+```
 
 > [!NOTE]
 > 
-> 你是否注意将数据加载到 XDF 文件时不需要调用任何其他函数，并可立即对该数据调用 rxGetVarInfo？ 这是因为 XDF 是针对 RevoScaleR 的默认临时存储方法。 除了 XDF 文件**rxGetVarInfo**函数现在支持多个源类型。
-  
-4. 将此数据插入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，存储_DayOfWeek_作为值从 1 到 7 之间的整数。
-  
-    为此，请首先定义 SQL Server 数据源。
+> 你是否注意将数据加载到 XDF 文件时不需要调用任何其他函数，并可立即对该数据调用 rxGetVarInfo？ 这是因为 XDF 是针对的默认临时存储方法**RevoScaleR**。 除了 XDF 文件**rxGetVarInfo**函数现在支持多个源类型。
+
+## <a name="move-contents-to-sql-server"></a>将内容移动到 SQL Server
+
+与在本地 R 会话中创建 XDF 数据源，您可以现在将这些数据移到数据库表中，存储*DayOfWeek*作为一个整数，其值从 1 到 7。
+
+1. 定义 SQL Server 数据源对象，指定要包含数据和远程服务器连接的表。
   
     ```R
     sqlServerAirDemo <- RxSqlServerData(table = "AirDemoSmallTest", connectionString = sqlConnString)
     ```
   
-5. 检查是否已存在具有相同名称的表并删除该表（如果存在）。
+2. 作为预防措施，包括检查是否具有相同名称的表已经存在，并且如果它存在，则删除表的步骤。 相同的名称的现有表，可防止一个新创建。
   
     ```R
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-6. 使用 **rxDataStep** 创建表并加载数据。 此函数将两个之间的数据已定义数据源，并可以根据需要转换数据路由。
+3. 将数据加载到表使用**rxDataStep**。 此函数将两个数据已定义数据源，并可以根据需要转换途中的数据。
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
-            transforms = list( DayOfWeek = as.integer(DayOfWeek),
-            rowNum = .rxStartRow : (.rxStartRow + .rxNumRows - 1) ),
-            overwrite = TRUE )
+        transforms = list( DayOfWeek = as.integer(DayOfWeek),
+        rowNum = .rxStartRow : (.rxStartRow + .rxNumRows - 1) ),
+        overwrite = TRUE )
     ```
   
-    这是相当大型表，因此等待，直到你看到如下所示的最终状态消息：*行读取： 200000，总行处理： 600000*。
+    这是相当大的表，因此等待，直到您看到与此类似的最终状态消息：*读取的行：处理 200000，总行数：600000*。
      
-7. 将计算上下文重新设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机。
+## <a name="load-data-from-a-sql-table"></a>从 SQL 表加载数据
 
-    ```R
-    rxSetComputeContext(sqlCompute)
-    ```
-  
-8. 对新表使用简单的 SQL 查询创建新的 SQL Server 数据源。 此定义添加了因素级别*DayOfWeek*列中，使用*colInfo*参数**RxSqlServerData**。
+后表中存在数据，可以使用简单的 SQL 查询来加载它。 
+
+1. 创建新的 SQL Server 数据源。 输入是对新表您刚刚创建并加载数据的查询。 此定义添加了因素级别*DayOfWeek*列中，使用*colInfo*参数**RxSqlServerData**。
   
     ```R
-    SqlServerAirDemo <- RxSqlServerData(
+    sqlServerAirDemo2 <- RxSqlServerData(
         sqlQuery = "SELECT * FROM AirDemoSmallTest",
         connectionString = sqlConnString,
         rowsPerRead = 50000,
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-9. 调用**rxSummary**以查看你的查询中的数据的摘要。
+2. 调用**rxSummary**一次以查看你的查询中的数据的摘要。
   
     ```R
-    rxSummary(~., data = sqlServerAirDemo)
+    rxSummary(~., data = sqlServerAirDemo2)
     ```
 
-## <a name="next-step"></a>下一步
+## <a name="next-steps"></a>后续步骤
 
-[使用 rxDataStep 执行区块分析](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-## <a name="previous-step"></a>上一步
-
-[使用 rxImport 将数据加载到内存中](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
+> [!div class="nextstepaction"]
+> [使用 rxDataStep 执行区块分析](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

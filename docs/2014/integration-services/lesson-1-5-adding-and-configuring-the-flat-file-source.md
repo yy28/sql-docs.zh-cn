@@ -1,22 +1,21 @@
 ---
-title: 步骤 5：添加并配置平面文件源 | Microsoft Docs
+title: 步骤 5：添加并配置平面文件源 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4037b33f1668333d54f160eade5f5ad24c4dffe6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfca1c78bdc0c11b3aac18bf6e6b0b2b0344b109
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134793"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815209"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>步骤 5：添加并配置平面文件源
   在此任务中，将向包中添加一个平面文件源并对其进行配置。 平面文件源是一个数据流组件，它使用平面文件连接管理器定义的元数据来指定转换过程要从此平面文件中提取的数据的格式和结构。 可以通过使用平面文件连接管理器提供的文件格式定义将平面文件源配置为从单个平面文件提取数据。  
@@ -44,7 +43,7 @@ ms.locfileid: "48134793"
 9. 在属性窗口中，验证是否`LocaleID`属性设置为**英语 （美国）**。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 6：添加并配置查找转换](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+ [步骤 6:添加并配置查找转换](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>请参阅  
  [平面文件源](data-flow/flat-file-source.md)   

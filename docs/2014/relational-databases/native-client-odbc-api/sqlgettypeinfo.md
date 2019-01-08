@@ -14,12 +14,12 @@ ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2287678e7fd3e481c3eaf1d33af64e9ea7dad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373669"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序报告新增列 USERTYPE 结果中的设置的`SQLGetTypeInfo`。 USERTYPE 报告 DB-Library 数据类型定义，这对需要将现有 DB-Library 应用程序移植到 ODBC 的开发人员很有用。  
@@ -31,7 +31,7 @@ ms.locfileid: "48186077"
  有关**xml**数据类型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序对 COLUMN_SIZE 报告 SQL_SS_LENGTH_UNLIMITED 来表示大小不受限制。  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo 和表值参数  
- 表值参数的表类型实际上是元类型，即用于定义其他类型的类型。 因此，它无需通过 SQLGetTypeInfo 公开。 应用程序必须使用 SQLTables，而不是 SQLGetTypeInfo，以检索与表值参数一起使用的表类型的元数据。  
+ 表值参数的表类型实际上是元类型-这是，用于定义其他类型的类型。 因此，它无需通过 SQLGetTypeInfo 公开。 应用程序必须使用 SQLTables，而不是 SQLGetTypeInfo，以检索与表值参数一起使用的表类型的元数据。  
   
  检索的元数据的表值参数，有关详细信息，请参阅[语句属性该 Affect Table-Valued 参数](../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48186077"
  `SQLGetTypeInfo` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLGetTypeInfo 函数](http://go.microsoft.com/fwlink/?LinkId=59356)   
+ [SQLGetTypeInfo 函数](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

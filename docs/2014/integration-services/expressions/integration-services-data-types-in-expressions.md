@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
@@ -14,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80110c29ec1c576684c4ccd67bc0c3408e6250b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194870"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363340"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
   表达式计算器使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 当数据首次进入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的数据流中时，数据流引擎将所有列数据转换为 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，因此，表达式使用的列数据已具有 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 有条件拆分和派生列转换中使用的表达式可以引用列，因为它们是包含列数据的数据流的一部分。  
@@ -33,7 +32,7 @@ ms.locfileid: "48194870"
  此外，表达式还可以包含字符串、布尔值和数值。 有关将数值转换为数值 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[文字 (SSIS)](numeric-string-and-boolean-literals.md)。  
   
 ## <a name="implicit-data-conversion"></a>隐式数据转换  
- 当表达式计算器自动将数据从一种数据类型转换为另一种数据类型时，将会发生数据类型的隐式转换。 例如，如果`smallint`相比`int`，则`smallint`隐式转换为`int`执行比较前。  
+ 当表达式计算器自动将数据从一种数据类型转换为另一种数据类型时，将会发生数据类型的隐式转换。 例如，如果将 `smallint` 与 `int` 比较，则 `smallint` 便会在执行比较前被隐式转换为 `int`。  
   
  当参数和操作数具有不兼容的数据类型时，表达式计算器无法执行隐式数据转换。 此外，表达式计算器无法将任何值隐式转换为布尔值。 相反，参数和操作数必须借助于转换运算符显式转换。 有关详细信息，请参阅[转换（SSIS 表达式）](cast-ssis-expression.md)。  
   
@@ -48,23 +47,23 @@ ms.locfileid: "48194870"
 > [!NOTE]  
 >  布尔值是逻辑值而非数字。 虽然布尔值在某些环境中可能显示为数字，但它们并非以数字形式存储，而且不同的编程语言以不同的数值表示布尔值，.NET Framework 方法也是如此。  
 >   
->  例如，Visual Basic 中可用的转换函数将 `True` 转换为 -1；但是 .NET Framework 中的 `System.Convert.ToInt32` 方法将 `True` 转换为 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]表达式语言将转换`True`为-1。  
+>  例如，Visual Basic 中可用的转换函数将 `True` 转换为 -1；但是 .NET Framework 中的 `System.Convert.ToInt32` 方法将 `True` 转换为 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 表达式语言将 `True` 转换为 -1。  
 >   
 >  若要避免错误或意外结果，不应编写依赖 `True` 和 `False` 为特定数值的代码。 如果可能，应将布尔变量的使用限制为与其设计意图对应的逻辑值。  
   
- 有关详细信息，请参阅以下主题：  
+ 有关详细信息，请参阅下列主题：  
   
--   [= =&#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)  
+-   [== &#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)  
   
--   [\!=（不等于）（SSIS 表达式）](unequal-ssis-expression.md)  
+-   [!= &#40;不等于&#41; &#40;SSIS 表达式&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;大于&#41; &#40;SSIS 表达式&#41;](greater-than-ssis-expression.md)  
+-   [>（大于）（SSIS 表达式）](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;小于&#41; &#40;SSIS 表达式&#41;](less-than-ssis-expression.md)  
+-   [>（小于）（SSIS 表达式）](less-than-ssis-expression.md)  
   
--   [&#62;=&#40;大于或等于&#41; &#40;SSIS 表达式&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [>=（大于或等于）（SSIS 表达式）](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;=&#40;小于或等于&#41; &#40;SSIS 表达式&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;小于或等于&#41; &#40;SSIS 表达式&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  使用单个参数的函数将返回与参数具有相同数据类型的结果，但下列情况除外：  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48194870"
   
 -   传递给数学函数的参数的取值必须为数值数据类型。 根据函数或运算的不同，可能需要特定的数值数据类型。 例如，HEX 函数需要有符号或无符号整数。  
   
--   传递给字符串函数的参数的取值必须为字符数据类型：DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字符串函数（如 SUBSTRING）需要其他整数参数来作为字符串的起始位置和长度。  
+-   传递给字符串函数的参数的计算结果必须为字符数据类型：DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字符串函数（如 SUBSTRING）需要其他整数参数来作为字符串的起始位置和长度。  
   
 -   传递给日期和时间函数的参数的取值必须为有效日期。 例如，DAY(GETDATE())。 某些函数（如 DATEADD）需要其他整数参数来作为函数加到某个日期的天数。  
   
@@ -106,8 +105,8 @@ ms.locfileid: "48194870"
   
 ## <a name="related-content"></a>相关内容  
   
--   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=217683)。  
+-   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=217683)。  
   
--   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+-   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
   

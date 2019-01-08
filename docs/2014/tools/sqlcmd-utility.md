@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -27,12 +26,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641534"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591921"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`实用工具，可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件在命令提示符下，在**查询编辑器**在 SQLCMD 模式下，Windows 脚本文件或的操作系统 (Cmd.exe) 作业步骤[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理作业。 此实用工具使用 ODBC 执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批处理。  
@@ -81,10 +80,10 @@ ms.locfileid: "51641534"
  **-C**  
  该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  问题`USE` *db_name*语句启动时`sqlcmd`。 此选项设置 `sqlcmd` 脚本变量 SQLCMDDBNAME。 它指定初始数据库。 默认为您的登录名的默认数据库属性。 如果数据库不存在，则生成错误消息且 `sqlcmd` 退出。  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  指定在您尝试连接到服务器时 ODBC 驱动程序的 `sqlcmd` 登录超时时间（以秒计）。 此选项设置 `sqlcmd` 脚本变量 SQLCMDLOGINTIMEOUT。 登录到 `sqlcmd` 的默认超时时间为 8 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `sqlcmd` 将生成错误消息。 该值为 0 时，则允许无限制等待。  
   
  **-E**  
@@ -92,19 +91,19 @@ ms.locfileid: "51641534"
   
  **-E** 选项会忽略可能的用户名和密码环境变量设置，例如 SQLCMDPASSWORD。 如果将 **-E** 选项与 **-U** 选项或 **-P** 选项一起使用，将生成错误消息。  
   
- **-H** *workstation_name*  
+ **-H** _workstation_name_  
  工作站的名称。 此选项设置 `sqlcmd` 脚本变量 SQLCMDWORKSTATION。 工作站名称列出在“sys.processes”目录视图的“hostname”列中，并且可使用存储过程“sp_who”返回。 如果不指定此选项，则默认为当前计算机名称。 此名称可用来标识不同的 `sqlcmd` 会话。  
   
- **-K** *application_intent*  
- 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K**，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ **-K** _application_intent_  
+ 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K**，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  `-M` *multisubnet_failover*  
- 在连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性组侦听器或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听器时，应始终指定 `-M`。 `-M` 将为（当前）活动服务器提供更快的检测和连接。 如果未指定 `–M`，则 `-M` 将关闭。 有关详细信息[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ 在连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性组侦听器或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听器时，应始终指定 `-M`。 `-M` 将为（当前）活动服务器提供更快的检测和连接。 如果未指定 `-M`，则 `-M` 将关闭。 有关详细信息[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本：可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **-N**  
  此开关供客户端用于请求加密连接。  
   
- **-P** *password*  
+ **-P** _password_  
  用户指定的密码。 密码是区分大小写的。 如果使用-U 选项和 **-P**不使用选项，并且尚未设置 SQLCMDPASSWORD 环境变量，`sqlcmd`会提示用户输入密码。 如果 **-P**命令提示符处，但不提供密码的末尾使用选项`sqlcmd`使用默认密码 (NULL)。  
   
 > [!IMPORTANT]  
@@ -136,19 +135,19 @@ ms.locfileid: "51641534"
   
  如果 **-P** 选项后有多个参数，将生成错误消息并退出程序。  
   
- **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
+ **-S** [*protocol*:]*server*[**\\**_instance_name_][**,**_port_]  
  指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 它设置 `sqlcmd` 脚本变量 SQLCMDSERVER。  
   
- 指定 *server_name* 可连接到该服务器计算机上的默认实例 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*server_name* [**\\* * * instance_name* ] 若要连接到命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]该服务器计算机上。 如果不指定服务器，`sqlcmd` 将连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 在执行时，此选项是必需`sqlcmd`从网络上的远程计算机。  
+ 指定 *server_name* 可连接到该服务器计算机上的默认实例 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定要连接到该服务器计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 命名实例的 *server_name* [ **\\**_instance_name_ ]。 如果不指定服务器，`sqlcmd` 将连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 在执行时，此选项是必需`sqlcmd`从网络上的远程计算机。  
   
  *协议*可以是`tcp`(TCP/IP) `lpc` （共享内存） 或`np`（命名管道）。  
   
- 如果未指定*server_name* [**\\* * * instance_name* ] 何时开始`sqlcmd`，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]检查并使用 SQLCMDSERVER 环境变量。  
+ 如果未指定*server_name* [ **\\** _instance_name_ ] 何时开始`sqlcmd`，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]检查并使用SQLCMDSERVER 环境变量。  
   
 > [!NOTE]  
 >  为实现向后兼容性而保留了 OSQLSERVER 环境变量。 SQLCMDSERVER 环境变量优先于 OSQLSERVER 环境变量，例如：这意味着`sqlcmd`并**osql**可以是使用彼此而不会相互干扰，并且旧脚本将继续工作。  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  用户登录 ID。  
   
 > [!NOTE]  
@@ -156,20 +155,20 @@ ms.locfileid: "51641534"
   
  如果既没有 **-U**选项也不 **-P**指定选项，则`sqlcmd`尝试通过连接[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 身份验证模式。 身份验证基于运行 `sqlcmd` 的用户的 Windows 帐户。  
   
- 如果 **-U** 选项与 **-E** 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 **–U** 选项后有多个参数，将生成错误消息并退出程序。  
+ 如果 **-U** 选项与 **-E** 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 -U 选项后跟多个参数，便会生成错误消息并退出程序。  
   
- **-z** *new_password*  
+ **-z** _new_password_  
  更改密码：  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *new_password*  
+ **-Z** _new_password_  
  更改密码并退出：  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **输入/输出选项**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:*** codepage*]  
+  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  指定输入和输出代码页。 代码页页码是指定已安装的 Windows 代码页的数值。  
   
  代码页转换规则：  
@@ -184,7 +183,7 @@ ms.locfileid: "51641534"
   
  在命令提示符处输入 `chcp` 以验证 Cmd.exe 的代码页。  
   
- **-i** *input_file*[**,***input_file2*...]  
+ **-i** _input_file_[**、**_input_file2_...]  
  标识包含一批 SQL 语句或存储过程的文件。 可以指定要按顺序读取和处理的多个文件。 文件名之间不要使用任何空格。 `sqlcmd` 将首先检查所有指定的文件是否都存在。 如果有一个或多个文件不存在，`sqlcmd` 将退出。 -i 和 -Q/-q 选项是互斥的。  
   
  路径示例：  
@@ -197,9 +196,9 @@ ms.locfileid: "51641534"
   
  包含空格的文件路径必须用引号引起来。  
   
- 此选项可以多次使用：**-i***input_file* **-I***I input_file.*  
+ 此选项可以使用多次：**-i**_input_file_ **-I**_I input_file._  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  标识从 `sqlcmd` 接收输出的文件。  
   
  如果指定了 **-u** ，则 *output_file* 以 Unicode 格式存储。 如果文件名无效，将生成一个错误消息，并且 `sqlcmd` 将退出。 `sqlcmd` 不支持向同一文件并发写入多个 `sqlcmd` 进程。 文件输出将损坏或不正确。 有关文件格式的详细信息，请参阅 **-f** 开关。 如果此文件不存在，将创建此文件。 前一个 `sqlcmd` 会话中的同名文件将被覆盖。 此处指定的文件不是 **stdout** 文件。 如果指定了 **stdout** 文件，将不使用此文件。  
@@ -218,7 +217,7 @@ ms.locfileid: "51641534"
  将错误消息输出重定向到屏幕 (**stderr**)。 如果未指定参数或指定参数为 **0**，则仅重定向严重级别为 11 或更高的错误消息。 如果指定参数为 **1**，则将重定向所有消息输出（包括 PRINT）。 如果使用 -o，将不起任何作用。 默认情况下，消息将发送到 **stdout**。  
   
  **-R**  
- 促使 `sqlcmd` 根据客户端的区域设置本地化从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中检索到的数字、货币、日期和时间列。 默认情况下，将使用服务器的区域设置显示这些列。  
+ 将导致`sqlcmd`本地化数字、 货币、 日期和时间列从检索[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]根据客户端的区域设置。 默认情况下，这些列使用服务器的区域设置进行显示。  
   
  **-u**  
  指定无论 *input_file* 为何种格式，都以 Unicode 格式存储 *output_file*。  
@@ -230,7 +229,7 @@ ms.locfileid: "51641534"
  **-I**  
  将 SET QUOTED_IDENTIFIER 连接选项设置为 ON。 默认情况下，此选项设置为 OFF。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。  
   
- **-q"** *cmdline query* **"**  
+ **-q"** _cmdline query_ **"**  
  启动 `sqlcmd` 时执行查询，但是在查询结束运行时不退出 `sqlcmd`。 可以执行多个以分号分隔的查询。 将查询用引号引起来，如下例所示。  
   
  在命令提示符下，键入：  
@@ -244,7 +243,7 @@ ms.locfileid: "51641534"
   
  如果在指定此选项的同时还指定了 `-b`，`sqlcmd` 在遇到错误时将退出。 本主题的后面将介绍 `-b`。  
   
- **-Q"** *cmdline query* **"**  
+ **-Q"** _cmdline query_ **"**  
  在 `sqlcmd` 启动时执行查询，随后立即退出 `sqlcmd`。 可以执行多个以分号分隔的查询。  
   
  将查询用引号引起来，如下例所示。  
@@ -260,14 +259,14 @@ ms.locfileid: "51641534"
   
  如果在指定此选项的同时还指定了 `-b`，`sqlcmd` 在遇到错误时将退出。 本主题的后面将介绍 `-b`。  
   
- **-t** *query_timeout*  
+ **-t** _query_timeout_  
  指定命令（或 SQL 语句）超时的时间。此选项设置 `sqlcmd` 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。querytime_out 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `sqlcmd` 将生成错误消息。  
   
 > [!NOTE]  
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  
   
- **-vvar =**  *value*[ **var =** *value*...]  
- 创建`sqlcmd`可以使用中的脚本变量`sqlcmd`脚本。 如果该值包含空格，则将其用引号引起来。 可以指定多个***var***=**"*`values`*"** 值。 如果指定的任何值中有错误，`sqlcmd` 会生成错误消息，然后退出。  
+ **-vvar =** _值_[ **var =** _值_...]  
+ 创建`sqlcmd`可以使用中的脚本变量`sqlcmd`脚本。 如果该值包含空格，则将其用引号引起来。 可以指定多个 **_var_**=**"*`values`*"** 值。 如果指定的任何值中有错误，`sqlcmd` 会生成错误消息，然后退出。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -277,22 +276,22 @@ ms.locfileid: "51641534"
  导致 `sqlcmd` 忽略脚本变量。 当脚本中包含多个 INSERT 语句，并且这些语句可能包含格式与常规变量（例如 $(*variable_name*)）相同的字符串时，这一选项很有用。  
   
  **格式设置选项**  
-  **-h** *headers*  
+  **-h** _headers_  
  指定要在列标题之间输出的行数。 默认为每一组查询结果输出一次标题。 此选项设置 `sqlcmd` 脚本变量 SQLCMDHEADERS。 使用 **-1** 指定不可输出标题。 任何无效的值都将导致 `sqlcmd` 生成错误消息并随后退出。  
   
  **-k** [**1** | **2**]  
  删除输出中的所有控制字符，例如制表符和换行符。 这会在返回数据时保留列格式。 如果指定了 1，则控制字符被一个空格替代。 如果指定了 2，则连续的控制字符被一个空格替代。 **-k** 与 **-k1**相同。  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  指定列分隔符字符。 默认为空格。 此选项设置 `sqlcmd` 脚本变量 SQLCMDCOLSEP。 若要使用对操作系统有特殊含义的字符，如“与”符号 (&) 或分号 (;)，请将该字符用双引号 (") 引起来。 列分隔符可以是任意 8 位字符。  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  指定用于输出的屏幕宽度。 此选项设置 `sqlcmd` 脚本变量 SQLCMDCOLWIDTH。 该列宽必须是介于 8 和 65536 之间的数字。 如果指定的列宽不在此范围内，则 `sqlcmd` 将生成错误消息。 默认宽度为 80 个字符。 在输出行超出指定的列宽时，将转到下一行。  
   
  **-W**  
  此选项删除列的尾随空格。 在准备要导出到另一应用程序的数据时，请将此选项和 **-s** 选项一起使用。 不能与 **-y** 或 **-Y** 选项一起使用。  
   
- **-y** *variable_length_type_display_width*  
+ **-y** _variable_length_type_display_width_  
  设置 `sqlcmd` 脚本变量 SQLCMDMAXVARTYPEWIDTH。 默认值为 256。 它限制为下列大型可变长度数据类型返回的字符的数目：  
   
 -   `varchar(max)`  
@@ -318,7 +317,7 @@ ms.locfileid: "51641534"
 > [!IMPORTANT]  
 >  使用 **-y 0** 选项时要特别注意，因为根据返回的数据量大小，此选项可能导致服务器和网络上出现严重性能问题。  
   
- **-Y** *fixed_length_type_display_width*  
+ **-Y** _fixed_length_type_display_width_  
  设置 `sqlcmd` 脚本变量 SQLCMDMAXFIXEDTYPEWIDTH。 默认值为 0（无限制）。 它限制为以下数据类型返回的字符数：  
   
 -   `char(` *n* `)`，其中 1 < = n < = 8000  
@@ -339,7 +338,7 @@ ms.locfileid: "51641534"
   
  如果 `sqlcmd` 脚本包含错误的注释、语法错误或缺少脚本变量，则返回的 ERRORLEVEL 为 1。  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  控制发送到 **stdout**的错误消息类型。 将发送严重级别大于或等于此级别的消息。 如果此值设置为 **-1**，将发送所有消息（包括信息性消息）。 **-m** 和 **-1**之间不允许有空格。 例如， **-m-1** 有效，而 **-m-1** 无效。  
   
  此选项还设置 `sqlcmd` 脚本变量 SQLCMDERRORLEVEL。 此变量的默认值为 0。  
@@ -348,10 +347,10 @@ ms.locfileid: "51641534"
  控制用于设置 ERRORLEVEL 变量的严重级别。 严重级别大于或等于此值的错误消息将设置 ERRORLEVEL。 小于 0 的值将报告为 0。 可以使用批处理文件和 CMD 文件来测试 ERRORLEVEL 变量的值。  
   
  **其他选项**  
-  **-a** *packet_size*  
+  **-a** _packet_size_  
  需要不同大小的数据包。 此选项设置 `sqlcmd` 脚本变量 SQLCMDPACKETSIZE。 *packet_size* 必须是介于 512 和 32767 之间的值。 默认值为 4096。 如果脚本的两个 GO 命令之间包含大量 SQL 语句，则使用较大的数据包可以提高脚本执行的性能。 您可以请求更大的包大小。 但是，如果请求遭拒绝，`sqlcmd` 将对包大小使用服务器默认值。  
   
- **-c** *batch_terminator*  
+ **-c** _batch_terminator_  
  指定批处理终止符。 默认情况下，通过单独在一行中键入“GO”来终止命令并将其发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 重置批处理终止符时，不要使用对操作系统具有特殊意义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 保留关键字或字符，即便它们前面有反斜杠也是如此。  
   
  **-L**[**c**]  
@@ -392,7 +391,7 @@ ms.locfileid: "51641534"
   
 -   **ED**  
   
--   **!!** *command*  
+-   **!!** _command_  
   
  如果指定 `-X` 选项，它会阻止将环境变量传递给 `sqlcmd`。 同时该选项还会阻止执行通过使用 SQLCMDINI 脚本变量指定的启动脚本。 有关详细信息`sqlcmd`脚本变量，请参阅[将 sqlcmd 与脚本变量](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
@@ -428,11 +427,11 @@ ms.locfileid: "51641534"
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
   
-|变量|相关开关|R/W|，则“默认”|  
+|变量|相关开关|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
-|SQLCMDSERVER|-S|R|"DefaultLocalInstance"|  
+|SQLCMDSERVER|sqlcmd|R|"DefaultLocalInstance"|  
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8"（秒）|  
@@ -532,7 +531,7 @@ ms.locfileid: "51641534"
   
  **输出命令**  
   **:Error**   
- ***\<***  *filename*  ***>|* STDERR|STDOUT**  
+ **_\<_** _文件名_**_>|_ STDERR |STDOUT**  
  将所有错误输出重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 **Error** 命令可以在一个脚本中多次出现。 默认情况下，错误输出将发送到 **stderr**。  
   
  *file name*  
@@ -544,10 +543,10 @@ ms.locfileid: "51641534"
  **STDOUT**  
  将错误输出切换到 **stdout** 流。 如果已经重定向，流的重定向目标将会收到错误输出。  
   
- **:Out \<** *filename* **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
  创建所有查询结果并将它们重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 默认情况下，输出将发送到 **stdout**。 若该文件已经存在，则将其截断为零字节。 **Out** 命令可以在一个脚本中多次出现。  
   
- **:Perftrace \<** *filename* **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
  创建所有性能跟踪信息并将它们重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 默认情况下，性能跟踪输出将发送到 **stdout**。 若该文件已经存在，则将其截断为零字节。 **Perftrace** 命令可以在一个脚本中多次出现。  
   
  **执行控制命令**  
@@ -610,13 +609,13 @@ ms.locfileid: "51641534"
  GO 在批处理和执行任何缓存 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句结尾时会发出信号。 在为 *count*指定一个值时，缓存的语句会被作为单个批处理执行 *count* 次。  
   
  **其他命令**  
-  **:r \<** *filename* **>**  
+  **:r \<** _filename_ **>**  
  分析其他[!INCLUDE[tsql](../includes/tsql-md.md)]语句和`sqlcmd`中指定的文件的命令 **< *`filename`* >** 到语句缓存。  
   
  如果文件包含的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句后面没有跟随 **GO**，则必须在 **:r** 的后一行中输入 **GO**。  
   
 > [!NOTE]  
->  **\<** *文件名* **>** 相对于在其中启动目录读取`sqlcmd`已运行。  
+>  **\<** _文件名_ **>** 相对于在其中启动目录读取`sqlcmd`已运行。  
   
  当遇到批处理终止符之后，将读取并执行该文件。 可以发出多个 **:r** 命令。 该文件可以包含任何 `sqlcmd` 命令， 包括批处理终止符 **GO**。  
   
@@ -626,7 +625,7 @@ ms.locfileid: "51641534"
  **:Serverlist**  
  列出在本地配置的服务器和在网络上广播的服务器的名称。  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **: Connect** _server_name_[**\\**_instance_name_] [-l*超时*] [-U *user_名称*[-P*密码*]]  
  连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个实例。 同时关闭当前的连接。  
   
  超时选项：  
@@ -673,7 +672,7 @@ ms.locfileid: "51641534"
   
 -   如果从本地计算机的 `sqlcmd` 调用远程服务器上的输入文件，并且该文件包含驱动器文件路径（如 :out c:\OutputFile.txt）， 将在本地计算机而不是远程服务器上创建输出文件。  
   
--   有效的文件路径包括： c:\\**<*`filename`*>**， \\ \\< 服务器\>\\< 共享 $>\\ **< *`filename`* >** 和"C:\Some 文件夹\\ **< *`file name`*>**". 如果路径中包含空格，请使用引号。  
+-   有效的文件路径包括：C:\\**<*`filename`*>**， \\ \\< 服务器\>\\< 共享 $>\\**< *`filename`* >** 和"C:\Some 文件夹\\ **<  *`file name`*>**". 如果路径中包含空格，请使用引号。  
   
 -   每个新的 `sqlcmd` 会话都将覆盖现有的同名文件。  
   
@@ -690,7 +689,7 @@ ms.locfileid: "51641534"
   
  `GO`  
   
- 按下 Enter 时，会输出以下信息性消息：“已将数据库上下文改为 'AdventureWorks2012'。”  
+ 当您按 ENTER 时，会输出以下信息性消息："数据库上下文更改为 'AdventureWorks2012'。"  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 查询的输出格式  
  `sqlcmd` 首先输出列标题，其中包含在选择列表中指定的列名。 列名使用 SQLCMDCOLSEP 字符分隔。 默认情况下，将使用空格。 如果列名短于列宽，则使用空格填充输出，直到下一列。  
@@ -707,7 +706,7 @@ ms.locfileid: "51641534"
   
  `GO`  
   
- 当您按 ENTER 时，返回以下结果集。  
+ 当你按下 Enter 后，系统便会返回以下结果集。  
   
  `BusinessEntityID FirstName    LastName`  
   

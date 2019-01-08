@@ -14,12 +14,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7983b5ef294fadbad7fe5fdbfafc1170f1ac485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083197"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376350"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>分配句柄并连接到 SQL Server (ODBC)
     
@@ -29,13 +29,13 @@ ms.locfileid: "48083197"
   
 2.  包含特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驱动程序的头文件 Odbcss.h。  
   
-3.  调用[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)与`HandleType`设为 SQL_HANDLE_ENV 来初始化 ODBC 并分配环境句柄。  
+3.  调用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)与`HandleType`设为 SQL_HANDLE_ENV 来初始化 ODBC 并分配环境句柄。  
   
 4.  调用[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)与`Attribute`设置为 SQL_ATTR_ODBC_VERSION 和`ValuePtr`设置为 SQL_OV_ODBC3，以指示应用程序将使用 ODBC 3.x 格式的函数调用。  
   
-5.  （可选） 调用[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)来设置其他环境选项或调用[SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403)来获取环境选项。  
+5.  （可选） 调用[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)来设置其他环境选项或调用[SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)来获取环境选项。  
   
-6.  调用[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)与`HandleType`设为 SQL_HANDLE_DBC 以分配连接句柄。  
+6.  调用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)与`HandleType`设为 SQL_HANDLE_DBC 以分配连接句柄。  
   
 7.  （可选） 调用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)到设置连接选项或调用[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)来获取连接选项。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48083197"
 13. 调用 `SQLFreeHandle` 并在调用时将 `HandleType` 设为 SQL_HANDLE_ENV 以释放环境句柄。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  本示例说明了如何调用 `SQLDriverConnect` 以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而无需使用现有 ODBC 数据源。 通过将不完整的连接字符串传递给 `SQLDriverConnect`，它使 ODBC 驱动程序提示用户输入所缺的信息。  

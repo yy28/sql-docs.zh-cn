@@ -11,12 +11,12 @@ ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154097"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372119"
 ---
 # <a name="specify-credentials-in-report-builder"></a>在报表生成器中指定凭据
   凭据对试图从数据源中检索数据的用户进行身份验证。 数据源所有者确定必须使用的凭据类型。 例如，数据库管理员可能指定用户必须提供 Windows 用户名和密码。  
@@ -49,7 +49,7 @@ ms.locfileid: "48154097"
  有关详细信息，请参阅[“数据源属性”对话框 ->“常规”（报表生成器）](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)和[在报表生成器中预览报表](report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="types-of-credentials"></a>凭据类型  
- 数据源支持的凭据类型由数据源所有者指定。 例如，若要访问[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库中，您可能需要提供[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录用户名和密码。 若要访问其他数据源，可能需要提供 Windows 用户名和密码。 某些数据源可能不需要凭据。  
+ 数据源支持的凭据类型由数据源所有者指定。 例如，若要访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库，可能需要提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录用户名和密码。 若要访问其他数据源，可能需要提供 Windows 用户名和密码。 某些数据源可能不需要凭据。  
   
 ### <a name="options-for-specifying-credentials"></a>用于指定凭据的选项  
  下列选项可用于为数据源指定凭据：  
@@ -72,13 +72,13 @@ ms.locfileid: "48154097"
  指定提示的凭据时，访问该报表的每个用户都必须输入用户名和密码才能检索数据。 建议将此选项用于包含机密数据的报表。 提示的凭据可以对应于 Windows 帐户或数据库登录。 如果数据库服务器未识别出您提供的凭据，或者指定的用户未被授予检索数据的权限，连接将失败。  
   
 ### <a name="no-credentials"></a>无凭据  
- 相应数据源不需要提供凭据。 若要在报表服务器上运行此报表，必须配置无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户&#40;SSRS 配置管理器&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)。  
+ 相应数据源不需要提供凭据。 若要在报表服务器上运行此报表，必须配置无人参与的执行帐户。 有关详细信息，请参阅[配置无人参与的执行帐户&#40;SSRS 配置管理器&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)。  
   
 ## <a name="see-also"></a>请参阅  
  [安装、 卸载和报表生成器支持](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [嵌入和共享的数据连接或数据源&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [报表生成器选项对话框中，设置&#40;报表生成器&#41;](report-builder/set-default-options-for-report-builder.md)   
- [数据连接、 数据源和报表生成器中的连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [报表生成器中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

@@ -11,19 +11,19 @@ ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2ef4879ae4c29c43bfa07c0ccf314eae51ff39
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100208"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369059"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服务安装概述
   您可以利用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务更新将更新应用到任何已安装的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件。 如果现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件的版本级别高于更新版本的级别，则安装程序会将其从更新中排除。 更新应用服务的详细信息，请参阅[安装 SQL Server 2014 服务更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)。  
   
  安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新时需要注意以下注意事项：  
   
--   必须同时更新属于一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有功能。 例如，更新[!INCLUDE[ssDE](../../includes/ssde-md.md)]时，如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件作为同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一部分安装，则也必须对其进行更新。 必须始终将诸如管理工具、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 等共享功能更新到最新状态。 如果未在功能树中选定某个组件或实例，则不会更新该组件或实例。  
+-   必须同时更新属于一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有功能。 例如，更新 [!INCLUDE[ssDE](../../includes/ssde-md.md)]时，如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件作为同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的一部分安装，则也必须对其进行更新。 必须始终将诸如管理工具、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 等共享功能更新到最新状态。 如果未在功能树中选定某个组件或实例，则不会更新该组件或实例。  
   
 -   默认情况下[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新日志文件保存到 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50100208"
 ## <a name="requirements-and-known-issues"></a>要求和已知问题  
  推荐的磁盘空间要求约为软件包的 2.5 倍，以便安装、下载和解压缩该软件包。 安装完 Service Pack 后，可以删除下载的软件包。 所有临时文件将会自动删除。  
   
- **查看已知问题：** 有关当前版本的已知问题的详细信息，请参阅此处相应的发行说明主题： [SQL Server 发行说明](http://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)。  
+ **查看已知的问题：** 有关当前版本的已知问题的详细信息，请参阅此处相应的发行说明主题：[SQL Server 发行说明](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)。  
   
 ## <a name="installation-overview"></a>安装概述  
  本节讨论如何安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累积更新和 Service Pack，包括如何执行以下操作：  
@@ -57,7 +57,7 @@ ms.locfileid: "50100208"
     > [!IMPORTANT]  
     >  将更新应用于参与复制拓扑的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，必须在应用更新之前，将复制的数据库与系统数据库一起备份。  
   
--   **备份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、配置文件和存储库** - 更新 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之前，应备份以下内容：  
+-   **备份你[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库、 配置文件和存储库**-更新的实例前[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，应备份以下：  
   
     -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 默认情况下，这些安装在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID > \OLAP\Data\\。 对于 WOW 安装，默认路径为 C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<InstanceID > \OLAP\Data\\。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "50100208"
     > [!NOTE]  
     >  如果备份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、配置文件和存储库失败，则无法将更新后的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例恢复到早期版本。  
   
--   **验证系统数据库有足够的可用空间**— 如果没有选择自动增长选项`master`和`msdb`系统数据库，每个数据库必须至少具有 500 KB 的可用空间。 若要验证数据库是否有足够的空间，请对 `sp_spaceused` 和 `master` 数据库运行 `msdb` 系统存储过程。 如果其中任一数据库的未分配空间少于 500 KB，则应增加该数据库的大小。  
+-   **验证系统数据库有足够的可用空间**-如果没有选择自动增长选项`master`和`msdb`系统数据库，每个数据库必须至少具有 500 KB 的可用空间。 若要验证数据库是否有足够的空间，请对 `sp_spaceused` 和 `master` 数据库运行 `msdb` 系统存储过程。 如果其中任一数据库的未分配空间少于 500 KB，则应增加该数据库的大小。  
   
--   **停止服务和应用程序** — 为避免系统可能重启，请在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新前，停止与要升级的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例连接的所有应用程序和服务。 其中包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+-   **停止服务和应用程序**-若要避免系统可能重启，停止所有应用程序和服务，使连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与正在升级，然后再安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新。 其中包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
     > [!NOTE]  
     >  不能停止故障转移群集环境中的服务。 有关详细信息，请参阅本主题后面的故障转移群集安装一节。  
@@ -88,9 +88,9 @@ ms.locfileid: "50100208"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  若要安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新，请运行自解压缩包文件。  
   
- 累积更新包 (CU): \<SQLServer2014 >-KBxxxxxx-*PPP*.exe  
+ 累积更新包 (CU):\<SQLServer2014 >-KBxxxxxx-*PPP*.exe  
   
- Service pack 包 (PCU): \<SQLServer2014 >\<SPx >-KBxxxxxx-PPP LLL.exe  
+ Service pack 包 (PCU):\<SQLServer2014 >\<SPx >-KBxxxxxx-PPP LLL.exe  
   
 -   x 表示 Service Pack 编号  
   
@@ -117,7 +117,7 @@ ms.locfileid: "50100208"
  如果要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备映像，则需要指定 InstanceID 参数。 有关详细信息和语法示例，请参阅 [Installing Updates from the Command Prompt](../../database-engine/install-windows/installing-updates-from-the-command-prompt.md)。  
   
 ## <a name="updating-a-completed-image-of-includessnoversionincludesssnoversion-mdmd"></a>更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成映像  
- 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成和已配置实例的过程与更新任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已安装实例的过程相同。  
+ 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成和已配置实例的过程与更新任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安装实例的过程相同。  
   
 ## <a name="rebuilding-a-includesscurrentincludessscurrent-mdmd-failover-cluster-node"></a>重新生成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 故障转移群集节点  
  应用更新之后，如果必须重新生成故障转移群集中的某个节点，请执行以下步骤：  
@@ -142,7 +142,7 @@ ms.locfileid: "50100208"
   
 -   对于安装有累积更新 1、SP1 和累积更新 2 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，先卸载累积更新 2，然后卸载 SP1。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [安装 SQL Server 2014 服务更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)   
  [验证 SQL Server 安装](../../database-engine/install-windows/validate-a-sql-server-installation.md)   

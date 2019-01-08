@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
@@ -15,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176067"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372749"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何配置订阅以使用 Web 同步 \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[如何：配置订阅以使用 Web 同步\(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程： [如何配置订阅以使用 Web 同步（复制 Transact-SQL 编程）](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程：[如何：配置订阅以使用 Web 同步 （复制 TRANSACT-SQL 编程）](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO： [如何配置订阅以使用 Web 同步（RMO 编程）](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO：[如何：配置订阅以使用 Web 同步 （RMO 编程）](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同步使用运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的计算机，使请求订阅与合并发布同步。 支持 IIS 5.0、6.0 和 7.0 版。 IIS 版本 7.0 不支持配置 Web 同步向导。  
   
 > [!IMPORTANT]  
->  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 较早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能导致错误。 这些错误包括以下内容：“Web 同步期间出现的消息的格式无效。 请确保在 Web 服务器上正确配置了复制组件”。  
+>  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 较早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能导致错误。 其中包括：“Web 同步期间的消息格式无效。 请确保在 Web 服务器上正确配置了复制组件”。  
   
 > [!CAUTION]  
 >  不要同时使用 WebSync 和备用快照文件夹位置。  
@@ -83,7 +82,7 @@ ms.locfileid: "48176067"
   
 4.  单击“确定” 。  
   
- 如果无法从 CA 获得服务器证书，则可指定进行测试所需的证书。 若要为测试配置 IIS 6.0，请使用 SelfSSL 实用工具安装证书。 可从 IIS 6.0 资源工具包中获得该实用工具。 您可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=30958)下载这些工具。 对于 IIS 5.0，请转到 [Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?LinkId=46229)。  
+ 如果无法从 CA 获得服务器证书，则可指定进行测试所需的证书。 若要为测试配置 IIS 6.0，请使用 SelfSSL 实用工具安装证书。 可从 IIS 6.0 资源工具包中获得该实用工具。 您可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=30958)下载这些工具。 对于 IIS 5.0，请转到 [Microsoft 帮助和支持](https://go.microsoft.com/fwlink/?LinkId=46229)。  
   
 > [!NOTE]  
 >  证书必须与网站相关联，该网站才能使用 SSL。 SelfSSL 自动使证书与默认网站相关联。 如果已有证书或以后从 CA 安装证书，则必须明确地使该证书与 Web 同步所使用的网站相关联。 确保只有一个与用于同步订阅的网站相关联的证书。 如果存在多个证书，订阅服务器将使用第一个可用网站。  
@@ -218,7 +217,7 @@ ms.locfileid: "48176067"
   
 #### <a name="to-configure-iis-authentication"></a>配置 IIS 身份验证  
   
--   当订阅方连接到 IIS 时，IIS 必须对其进行身份验证，订阅方才能访问资源和过程。 IIS 提供了三种类型的身份验证：匿名、基本和集成。 身份验证可以应用于整个网站或您创建的虚拟目录。  
+-   当订阅方连接到 IIS 时，IIS 必须对其进行身份验证，订阅方才能访问资源和过程。 IIS 提供了三种身份验证类型：匿名、基本和集成。 身份验证可以应用于整个网站或您创建的虚拟目录。  
   
      建议您使用带有 SSL 的基本身份验证。 无论使用何种类型的身份验证，都需要 SSL。 有关如何配置身份验证的详细信息，请参阅 IIS 文档。  
   

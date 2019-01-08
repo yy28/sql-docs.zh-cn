@@ -18,12 +18,12 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd212f45e02ddce4c64a8b4a7d664ddaedf8090a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666825"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591541"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>声明应用程序&#39;s ODBC 版本
 应用程序分配连接之前，它必须设置 SQL_ATTR_ODBC_VERSION 环境属性。 此属性规定应用程序，如下所示 ODBC 2。*x*或 ODBC 3。*x*规范时使用以下各项：  
@@ -43,7 +43,7 @@ ms.locfileid: "47666825"
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***SQLTables 中的参数**。   在 ODBC 2。*x*中的通配符字符 （"%"和"_"） *CatalogName*参数按原义处理。 在 ODBC 3。*x*，它们被视为通配符字符。 因此，应用程序的 ODBC 2。*x*规范不能用作这些通配符字符，并且未转义它们时将其用作文本。 遵循 ODBC 3 应用程序。*x*规范可以将这些密钥用作通配符字符或转义它们并将它们用作原义字符。 有关详细信息，请参阅[中目录函数的自变量](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
+-   _CatalogName_  **SQLTables 中的参数**。 在 ODBC 2。*x*中的通配符字符 （"%"和"_"） *CatalogName*参数按原义处理。 在 ODBC 3。*x*，它们被视为通配符字符。 因此，应用程序的 ODBC 2。*x*规范不能用作这些通配符字符，并且未转义它们时将其用作文本。 遵循 ODBC 3 应用程序。*x*规范可以将这些密钥用作通配符字符或转义它们并将它们用作原义字符。 有关详细信息，请参阅[中目录函数的自变量](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
   
  ODBC 3 *.x*驱动程序管理器和 ODBC 3 *.x*驱动程序检查应用程序写入到的 ODBC 规范的版本，并相应地做出响应。 例如，如果应用程序遵循 ODBC 2。*x*规范并调用**SQLExecute**之前调用**SQLPrepare**，ODBC 3 *.x*驱动程序管理器返回 SQLSTATE S1010 （函数序列错误）。 如果应用程序遵循 ODBC 3 *.x*规范，驱动程序管理器返回 SQLSTATE HY010 （函数序列错误）。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
   

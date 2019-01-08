@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepublication
@@ -17,12 +16,12 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da75521685e31c60c238af9903a763de836075fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75390bbbc490046af6db4e47a7ca10cefac2546c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816105"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591871"
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,10 +76,10 @@ sp_addmergepublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'**_发布_  
  是要创建的合并发布的名称。 *发布*是**sysname**，无默认值，并且不能为关键字所有。 发布的名称在数据库内必须唯一。  
   
- [ **@description =** ] **'***description***'**  
+ [  **@description =** ] **'**_说明_  
  是发布说明。 *描述*是**nvarchar(255)**，默认值为 NULL。  
   
  [  **@retention =** ]*保留期*  
@@ -89,7 +88,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。 例如，如果将保持期设置为 1 天，则实际的保持期为 48 小时。  
   
- [  **@sync_mode =** ] **'***sync_mode*****  
+ [  **@sync_mode =** ] **'**_sync_mode_  
  是订阅服务器对发布进行初始同步时采用的模式。 *sync_mode*是**nvarchar(10)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -97,49 +96,49 @@ sp_addmergepublication [ @publication = ] 'publication'
 |**本机**（默认值）|生成所有表的本机模式大容量复制程序输出。|  
 |**character**|生成所有表的字符模式大容量复制程序输出。 支持所需[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]和非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。|  
   
- [  **@allow_push =** ] **'***allow_push*****  
+ [  **@allow_push =** ] **'**_allow_push_  
  指定是否可为给定发布创建推入订阅。 *allow_push*是**nvarchar(5)**，其默认值为 TRUE，表示允许推送订阅发布。  
   
- [  **@allow_pull =** ] **'***allow_pull*****  
+ [  **@allow_pull =** ] **'**_allow_pull_  
  指定是否可为给定发布创建拉出订阅。 *allow_pull*是**nvarchar(5)**，其默认值为 TRUE，表示允许为请求订阅此发布。 必须指定为 true，则支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
   
- [  **@allow_anonymous =** ] **'***allow_anonymous*****  
+ [  **@allow_anonymous =** ] **'**_allow_anonymous_  
  指定是否可为给定发布创建匿名订阅。 *allow_anonymous*是**nvarchar(5)**，其默认值为 TRUE，表示允许匿名订阅发布。 若要支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，必须指定**true**。  
   
- [  **@enabled_for_internet =** ] **'***enabled_for_internet*****  
+ [  **@enabled_for_internet =** ] **'**_enabled_for_internet_  
  指定是否为 Internet 启用此发布，并确定是否可以使用文件传输协议 (FTP) 将快照文件传输到订阅服务器。 *enabled_for_internet*是**nvarchar(5)**，默认值为 FALSE。 如果 **，则返回 true**，发布的同步文件将放入 C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp 目录。 用户必须创建 Ftp 目录。 如果**false**，该发布无法进行 Internet 访问权限。  
   
- [  **@centralized_conflicts =**] **'***centralized_conflicts*****  
+ [  **@centralized_conflicts =**] **'**_centralized_conflicts_  
  已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 使用*conflict_logging*指定存储冲突记录的位置的位置。  
   
- [  **@dynamic_filters =**] **'***dynamic_filters*****  
+ [  **@dynamic_filters =**] **'**_dynamic_filters_  
  允许合并发布使用参数化行筛选器。 *dynamic_filters*是**nvarchar(5)**，默认值为 FALSE。  
   
 > [!NOTE]  
 >  如果正在使用参数化行筛选器，请勿指定此参数，而应由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自行确定。 如果指定的值 **，则返回 true**有关*dynamic_filters*，必须定义项目的参数化的行筛选器。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
- [  **@snapshot_in_defaultfolder =** ] **'***snapshot_in_default_folder*****  
+ [  **@snapshot_in_defaultfolder =** ] **'**_snapshot_in_default_folder_  
  指定快照文件是否存储在默认文件夹中。 *snapshot_in_default_folder*是**nvarchar(5)**，默认值为 TRUE。 如果 **，则返回 true**，可以在默认文件夹中找到快照文件。 如果**false**，快照文件将存储在指定的备用位置*alternate_snapshot_folder*。 备用位置可以是另一台服务器、 网络驱动器或可移动媒体 （如 CD-ROM 或可移动磁盘）。 也可以将快照文件保存到文件传输协议 (FTP) 站点以供订阅方以后检索。 请注意，此参数可以为 true，仍然可以通过指定的位置*alt_snapshot_folder*。 该组合指定将快照文件同时存储在默认位置和备用位置。  
   
- [  **@alt_snapshot_folder =** ] **'***alternate_snapshot_folder*****  
+ [  **@alt_snapshot_folder =** ] **'**_alternate_snapshot_folder_  
  指定快照的备用文件夹的位置。 *alternate_snapshot_folder*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@pre_snapshot_script =** ] **'***pre_snapshot_script*****  
+ [  **@pre_snapshot_script =** ] **'**_pre_snapshot_script_  
  指定一个指向 **.sql**文件位置。 *pre_snapshot_script*是**nvarchar(255)**，默认值为 NULL。 在订阅服务器上应用快照时，合并代理将在运行任何复制的对象脚本之前运行快照前脚本。 该脚本将在合并代理连接到订阅数据库时使用的安全上下文中执行。 快照前脚本不会运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
   
- [  **@post_snapshot_script =** ] **'***post_snapshot_script*****  
+ [  **@post_snapshot_script =** ] **'**_post_snapshot_script_  
  指定一个指向 **.sql**文件位置。 *post_snapshot_script*是**nvarchar(255)**，默认值为 NULL。 当所有其他复制的对象脚本和数据均已在初始同步过程中应用之后，合并代理将运行快照后脚本。 该脚本将在合并代理连接到订阅数据库时使用的安全上下文中执行。 快照后脚本不会运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
   
- [  **@compress_snapshot =** ] **'***compress_snapshot*****  
+ [  **@compress_snapshot =** ] **'**_compress_snapshot_  
  指定的写入到的快照**@alt_snapshot_folder**位置是将压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar(5)**，默认值为 FALSE。 **false**指定，将不压缩快照;**，则返回 true**指定快照将进行压缩。 无法压缩大于 2GB 的快照文件。 压缩的快照文件被解压缩到合并代理所在的位置；一般对压缩的快照使用请求订阅，以便在订阅服务器上解压缩文件。 不能压缩默认文件夹中的快照。 若要支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，必须指定**false**。  
   
- [  **@ftp_address =** ] **'***ftp_address*****  
+ [  **@ftp_address =** ] **'**_ftp_address_  
  分发服务器的 FTP 服务网络地址。 *ftp_address*是**sysname**，默认值为 NULL。 指定供合并代理拾取的订阅服务器的发布快照文件的位置。 由于为每个发布都存储此属性，因此每个发布可以具有不同*ftp_address*。 该发布必须支持使用 FTP 来传播快照。  
   
  [  **@ftp_port=** ] *ftp_port*  
  分发服务器 FTP 服务的端口号。 *ftp_port*是**int**，默认值为 21。 指定发布快照文件所在的位置以供订阅服务器的合并代理挑选。 由于此属性存储每个发布，每个发布可以具有其自己*ftp_port*。  
   
- [  **@ftp_subdirectory =** ] **'***ftp_subdirectory*****  
+ [  **@ftp_subdirectory =** ] **'**_ftp_subdirectory_  
  指定在发布支持使用 FTP 传播快照时，快照文件将位于何处以供订阅服务器的合并代理挑选。 *ftp_subdirectory*是**nvarchar(255)**，默认值为 NULL。 由于此属性存储每个发布，每个发布可以具有其自己*ftp_subdirctory*或选择允许使用 NULL 值指示没有子目录。  
   
  在使用参数化筛选器为发布预先生成快照时，需要将每个订阅服务器分区的数据快照置于自己的文件夹中。 使用 FTP 的预先生成快照的目录结构必须为以下结构：  
@@ -149,10 +148,10 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  上面以斜体显示的值取决于发布和订阅服务器分区的具体情况。  
   
- [  **@ftp_login =** ] **'***ftp_login*****  
+ [  **@ftp_login =** ] **'**_ftp_login_  
  用于连接到 FTP 服务用户名。 *ftp_login*是**sysname**，默认值为 'anonymous'。  
   
- [  **@ftp_password =** ] **'***ftp_password*****  
+ [  **@ftp_password =** ] **'**_ftp_password_  
  用于连接到 FTP 服务的用户密码。 *ftp_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
@@ -161,7 +160,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@conflict_retention =** ] *conflict_retention*  
  指定保留冲突的保持期（天）。 *conflict_retention*是**int**，行从冲突表清除默认值为 14 天前此冲突。  
   
- [  **@keep_partition_changes =** ] **'***keep_partition_changes*****  
+ [  **@keep_partition_changes =** ] **'**_keep_partition_changes_  
  指定在无法使用预计算分区时是否启用分区更改优化。 *keep_partition_changes*是**nvarchar(5)**，默认值为 TRUE。 **false**对更改进行分区的方式不进行优化，并且发送到所有订阅服务器分区时不使用预计算的分区，将一个分区中的数据更改时验证。 **true**对更改进行分区的方式进行优化，并且订阅者，已更改的分区内具有行受影响。 如果使用预计算的分区，设置*use_partition_groups*到**true**并设置*keep_partition_changes*到**false**。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
 > [!NOTE]  
@@ -169,19 +168,19 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  与[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器， *keep_partition_changes*必须设置为 true 以确保正确传播删除操作。 设置为 false 时，订阅服务器可能有比预期更多的行。  
   
- [  **@allow_subscription_copy=** ] **'***allow_subscription_copy*****  
+ [  **@allow_subscription_copy=** ] **'**_allow_subscription_copy_  
  启用或禁用对订阅此发布的订阅数据库的复制功能。 *allow_subscription_copy*是**nvarchar(5)**，默认值为 FALSE。 要复制的订阅数据库的大小必须小于 2 GB。  
   
- [  **@allow_synctoalternate =** ] **'***allow_synctoalternate*****  
+ [  **@allow_synctoalternate =** ] **'**_allow_synctoalternate_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@validate_subscriber_info =** ] **'***validate_subscriber_info*****  
+ [  **@validate_subscriber_info =** ] **'**_validate_subscriber_info_  
  列出在使用参数化行筛选器时用于定义已发布数据的订阅服务器分区的函数。 *validate_subscriber_info*是**nvarchar(500)**，默认值为 NULL。 合并代理利用该信息来验证订阅服务器分区。 例如，如果[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)使用参数化的行筛选器中的参数应`@validate_subscriber_info=N'SUSER_SNAME()'`。  
   
 > [!NOTE]  
 >  该参数不应由用户指定，而应由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来自动确定筛选准则。  
   
- [  **@add_to_active_directory =** ] **'***add_to_active_directory*****  
+ [  **@add_to_active_directory =** ] **'**_add_to_active_directory_  
  已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 不能再向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中添加发布信息。  
   
  [  **@max_concurrent_merge =** ] *maximum_concurrent_merge*  
@@ -190,7 +189,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@max_concurrent_dynamic_snapshots =**] *max_concurrent_dynamic_snapshots*  
  为生成订阅服务器分区的筛选数据快照而可以并发运行的最大快照代理会话数目。 *maximum_concurrent_dynamic_snapshots*是**int**默认值为 0。 如果**0**，对快照会话数目没有限制。 如果同时调度的快照进程数比允许运行的数多，则多出的作业将放置在队列中等待，直到当前正在运行的快照进程完成。  
   
- [  **@use_partition_groups =** ] **'***use_partition_groups*****  
+ [  **@use_partition_groups =** ] **'**_use_partition_groups_  
  指定应使用预计算分区来优化同步进程。 *use_partition_groups*是**nvarchar(5)**，可以是下列值之一：  
   
 |ReplTest1|Description|  
@@ -220,22 +219,22 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 -   DDL 语句添加新列时, sysarticlecolumns 不包括新列。 DML 语句将不尝试复制新列的数据。 采用该参数，因为复制或不复制 DDL 均可接受。  
   
- [  **@allow_subscriber_initiated_snapshot =** ] **'***allow_subscriber_initiated_snapshot*****  
+ [  **@allow_subscriber_initiated_snapshot =** ] **'**_allow_subscriber_initiated_snapshot_  
  指示此发布的订阅服务器是否可以启动快照进程来为它们的数据分区生成筛选快照。 *allow_subscriber_initiated_snapshot*是**nvarchar(5)**，默认值为 FALSE。 **true**指示订阅服务器可以启动快照进程。  
   
- [  **@allow_web_synchronization =** ] **'***allow_web_synchronization*****  
+ [  **@allow_web_synchronization =** ] **'**_allow_web_synchronization_  
  指定是否为 Web 同步启用此发布。 *allow_web_synchronization*是**nvarchar(5)**，默认值为 FALSE。 **true**指定对此发布的订阅可以通过 HTTPS 进行同步。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。 若要支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，必须指定**true**。  
   
- [  **@web_synchronization_url=** ] **'***web_synchronization_url*****  
+ [  **@web_synchronization_url=** ] **'**_web_synchronization_url_  
  指定用于 Web 同步的 Internet URL 的默认值。 *web_synchronization_url 我*s **nvarchar(500)**，默认值为 NULL。 如果未显式设置时定义默认的 Internet URL [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)执行。  
   
- [  **@allow_partition_realignment =** ] **'***allow_partition_realignment*****  
+ [  **@allow_partition_realignment =** ] **'**_allow_partition_realignment_  
  确定在发布服务器上对行所做的修改导致该行更改其分区时是否要将删除内容发送到订阅服务器。 *allow_partition_realignment*是**nvarchar(5)**，默认值为 TRUE。 **true**将删除发送到订阅服务器以通过删除不再属于订阅服务器的分区的数据来反映分区更改的结果。 **false**旧分区中的数据留在订阅服务器，其中对此发布服务器上的数据所做的更改不会复制到此订阅服务器，但在订阅服务器上所做的更改将复制到发布服务器上。 设置*allow_partition_realignment*到**false**用于保留旧分区中的订阅中的数据时的数据必须可用于历史查询。  
   
 > [!NOTE]  
 >  在由于设置订阅服务器上保留的数据*allow_partition_realignment*到**false**应视为如同它是只读的; 但是，不强制这一点由复制系统。  
   
- [  **@retention_period_unit =** ] **'***retention_period_unit*****  
+ [  **@retention_period_unit =** ] **'**_retention_period_unit_  
  指定的设置的保持期单位*保留*。 *retention_period_unit*是**nvarchar(10)**，可以是下列值之一。  
   
 |ReplTest1|版本|  
@@ -254,7 +253,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!IMPORTANT]  
 >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
   
- [  **@conflict_logging =** ] **'***conflict_logging*****  
+ [  **@conflict_logging =** ] **'**_conflict_logging_  
  指定存储冲突记录的位置。 *conflict_logging*是**nvarchar(15)**，可以是下列值之一：  
   
 |ReplTest1|Description|  
@@ -276,12 +275,12 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  有关[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器的值*alternate_snapshot_folder*时，才使用的值*snapshot_in_default_folder*是**false**。  
   
- 启用 DDL 复制 (* replicate_ddl ***= 1**) 对于发布，为了进行非复制 DDL 更改对该发布[sp_changemergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)必须首先执行设置*replicate_ddl*到**0**。 在发出非复制 DDL 语句后， **sp_changemergepublication**可以再次运行以再次打开 DDL 复制。  
+ 启用 DDL 复制 (_replicate_ddl_**= 1**) 对于发布，为了进行非复制 DDL 更改对该发布[sp_changemergepublication &#40;Transact SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)必须首先执行设置*replicate_ddl*到**0**。 在发出非复制 DDL 语句后， **sp_changemergepublication**可以再次运行以再次打开 DDL 复制。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addmergepublication**。  
   
 ## <a name="see-also"></a>请参阅  

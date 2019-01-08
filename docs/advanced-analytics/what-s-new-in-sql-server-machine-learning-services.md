@@ -1,20 +1,20 @@
 ---
-title: 什么&#39;s SQL Server 机器学习服务中的新增功能 |Microsoft Docs
+title: 什么&#39;s 新的 SQL Server 机器学习服务
 description: 新的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 机器学习服务的每个版本的功能公告。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269651"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432490"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 机器学习服务中的新增功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,10 @@ ms.locfileid: "51269651"
 
 | 发行版本 | 功能更新 |
 |---------|----------------|
-| CTP 2.0 | R 和 Python 机器学习和新的 Java 扩展的 Linux 平台支持。 有关如何入门的帮助，请参阅[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。 |
-| CTP 2.0 | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)包括使你能够轻松地从已分区数据中生成多个模型的两个新参数。 在本教程中，了解详细信息[在 R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
-| CTP 2.0 | 故障转移群集支持现在支持 Windows 和 Linux，假定所有节点上启动 SQL Server Launchpad 服务。 有关详细信息，请参阅[SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
+| CTP 2.0 | R 和 Python 机器学习的 Linux 平台支持。 开始使用[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。 |
+|   | [Java 语言扩展](java/extension-java.md)Windows 和 Linux 上为 SQL Server 2019 预览版中的新增功能。 您可以提供编译的 Java 代码到 SQL Server 通过将权限分配并将路径设置。 使用 SQL Server 的访问权限的客户端应用程序可以使用数据并运行你的代码通过调用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，相同的过程用于 SQL Server 上的 R 和 Python 集成。 | 
+|  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)引入了使你能够轻松地从已分区数据中生成多个模型的两个新参数。 在本教程中，了解详细信息[在 R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
+|   | 故障转移群集支持现在支持 Windows 和 Linux，假定所有节点上启动 SQL Server Launchpad 服务。 有关详细信息，请参阅[SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -52,9 +53,9 @@ SQL Server 2017 机器学习服务的 R 组件是 SQL Server 2016 R Services 下
 
 ### <a name="r-libraries"></a>R 库
 
-| “包” | Description |
+| package | Description |
 |---------|-------------|
-| [**MicrosoftML**](using-the-microsoftml-package.md) | 在此版本中，MicrosoftML 包含在默认 R 安装中，消除了以前的 SQL Server 2016 R Services 中所需的升级步骤。 MicrosoftML 提供最先进的机器学习算法和数据转换，可进行缩放或在远程计算上下文中运行。 算法包括可自定义的深度神经网络、 快速决策树和决策林、 线性回归和逻辑回归。  |
+| [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中，MicrosoftML 包含在默认 R 安装中，消除了以前的 SQL Server 2016 R Services 中所需的升级步骤。 MicrosoftML 提供最先进的机器学习算法和数据转换，可进行缩放或在远程计算上下文中运行。 算法包括可自定义的深度神经网络、 快速决策树和决策林、 线性回归和逻辑回归。  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>数据库内分析的 Python 集成
 
@@ -68,10 +69,10 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 ### <a name="python-libraries"></a>Python 库
 
-| “包” | Description |
+| package | Description |
 |---------|-------------|
-[**revoscalepy**](python/what-is-revoscalepy.md)| Python 等效于 RevoScaleR。 可以创建用于线性回归和逻辑回归、 决策树、 提升的树和随机林，所有可并行化，并能够在远程计算上下文中正在运行的 Python 模型。 此包支持使用多个数据源和远程计算上下文。 在远程 SQL 服务器上，若要浏览数据或生成模型，而无需移动数据，数据科学家或开发人员可以执行 Python 代码。 |
-|[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |MicrosoftML R 包的 Python 等效。 |
+[**revoscalepy**](python/ref-py-revoscalepy.md)| Python 等效于 RevoScaleR。 可以创建用于线性回归和逻辑回归、 决策树、 提升的树和随机林，所有可并行化，并能够在远程计算上下文中正在运行的 Python 模型。 此包支持使用多个数据源和远程计算上下文。 在远程 SQL 服务器上，若要浏览数据或生成模型，而无需移动数据，数据科学家或开发人员可以执行 Python 代码。 |
+|[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 包的 Python 等效。 |
 
 ### <a name="pre-trained-models"></a>预定型模型
 
@@ -99,13 +100,13 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 安装机器学习使用数据库引擎实例的包时，SQL Server 2019 CTP 2.0 添加 R、 Python 和 Java 的 Linux 支持。 有关详细信息，请参阅[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。
 
-在 Linux 上，SQL Server 2017 没有 R 或 Python 集成，但可以使用[本机计分](sql-native-scoring.md)Linux 上因为该功能是可通过 T-SQL [PREDICT]()，在 Linux 上运行。 本机计分，从预先训练的模型，评分而无需调用或甚至要求 R 运行时的高性能。
+在 Linux 上，SQL Server 2017 没有 R 或 Python 集成，但可以使用[本机计分](sql-native-scoring.md)Linux 上因为该功能是可通过 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)，在 Linux 上运行。 本机计分，从预先训练的模型，评分而无需调用或甚至要求 R 运行时的高性能。
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL 数据库中机器学习服务
 
-机器学习服务 （使用 R) Azure SQL 数据库中处于公共预览状态。 有关详细信息，请参阅[快速入门： 使用机器学习服务 （使用 R) Azure SQL 数据库 （预览版） 中](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)。
+机器学习服务 （使用 R) Azure SQL 数据库中处于公共预览状态。 有关详细信息，请参阅[快速入门：在 Azure SQL 数据库 （预览版） 中使用机器学习服务 （使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)。
 
 ## <a name="next-steps"></a>后续步骤
 

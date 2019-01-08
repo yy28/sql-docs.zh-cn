@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101987"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589891"
 ---
 # <a name="set-source-control-options"></a>设置源代码管理选项
   在利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中内置的源代码管理功能之前，应针对您工作中所处的各种环境对源代码管理选项进行配置。  
@@ -83,7 +83,7 @@ ms.locfileid: "48101987"
      选择这些角色之一，将自动选择相应的源代码管理选项。  
   
      **保留签入时签出项**  
-     指定在签入项以更新源代码管理存储区时，这些项将对您保持签出状态。 如果你想要为特定签入更改此选项，请单击**选项**中的箭头**签入**对话框中，，然后清除**保留 * * * 签出**复选框。  
+     指定在签入项以更新源代码管理存储区时，这些项将对您保持签出状态。 如果你想要为特定签入更改此选项，请单击**选项**中的箭头**签入**对话框中，，然后清除**保持签出**复选框。  
   
      **签入的项**  
      显示一个选项列表，用于指定在您尝试编辑未签出项时，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将采取何种操作。下表列出了可用的选项。  

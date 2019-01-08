@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357076"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
   将服务器实例从 SQL Server 2012 更新或升级到 Service Pack 或更高版本时，您可以通过执行顺序更新或升级将可用性组的停机时间降低到一个手动故障转移所需的时间。 对于升级 SQL Server 版本，它称为“滚动升级”；对于使用修复程序或 Service Pack 更新当前 SQL Server 版本，它称为“滚动更新”。  
   
- 此主题仅讨论 SQL Server 升级/更新。 与操作系统相关升级/更新的高度可用的 SQL Server 实例上运行，请参阅[跨群集迁移的 AlwaysOn 可用性组以进行操作系统升级](http://msdn.microsoft.com/library/jj873730.aspx)  
+ 此主题仅讨论 SQL Server 升级/更新。 与操作系统相关升级/更新的高度可用的 SQL Server 实例上运行，请参阅[跨群集迁移的 AlwaysOn 可用性组以进行操作系统升级](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 可用性组的滚动升级/更新最佳做法  
  在执行服务器升级/更新时应遵循以下最佳做法以尽量减小可用性组的停机时间和数据丢失量：  
@@ -35,7 +35,7 @@ ms.locfileid: "48155957"
   
 -   始终首先升级/更新远程辅助副本节点，然后升级/更新本地辅助副本节点，最后升级/更新主副本节点。  
   
--   无法对正在升级的数据库进行备份。  在升级辅助副本之前，配置自动备份首选项以仅对主副本运行备份。  在升级主副本之前，修改此设置以仅对辅助副本运行备份。  
+-   无法在正在升级的数据库中执行备份。  在升级辅助副本之前，请将自动备份首选项配置为仅在主副本上运行备份。  在升级主副本之前，修改此设置以仅对辅助副本运行备份。  
   
 -   要防止可用性组在升级/更新过程中执行意外的故障转移，请在开始前从所有同步提交副本中删除可用性故障转移。  
   
@@ -115,9 +115,9 @@ ms.locfileid: "48155957"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|主|||  
-|AG2||主||  
-|AG3|||主|  
+|AG1|基本|||  
+|AG2||基本||  
+|AG3|||基本|  
   
  按以下顺序执行负载平衡的滚动升级/更新可能在您的情况下是合适的：  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48155957"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||主||  
-|AG2|主|||  
-|AG3|||主|  
+|AG1||基本||  
+|AG2|基本|||  
+|AG3|||基本|  
   
  根据您的特定实现，您的升级/更新路径可能不同，客户端应用程序经历的停机时间也可能不同。  
   

@@ -14,12 +14,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360949"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 指示是否存在值都返回 SQL_SUCCESS *CatalogName*， *TableName*，或*ColumnName*参数。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  
@@ -29,7 +29,7 @@ ms.locfileid: "48181317"
   
  可以对静态服务器游标执行 `SQLColumns`。 尝试对可更新的（动态或键集）游标执行 `SQLColumns` 时，将返回 SQL_SUCCESS_WITH_INFO 以指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数：*Linked_Server_Name.Catalog_Name*。  
   
  适用于 ODBC 2。*x*应用程序不使用中的通配符*TableName*，`SQLColumns`返回任何信息的表的名称匹配*TableName*且归当前用户。 如果当前用户拥有其名称与匹配任何表*TableName*参数，`SQLColumns`返回有关其他用户拥有的任何表的信息的表名称与相匹配*TableName*参数。 适用于 ODBC 2。*x*使用通配符，应用程序`SQLColumns`返回其名称匹配的所有表*TableName*。 适用于 ODBC 3。*x*应用程序`SQLColumns`返回其名称匹配的所有表*TableName*而不考虑所有者或是否使用了通配符。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48181317"
  有关在 ODBC 中的稀疏列的详细信息，请参阅[稀疏列支持&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLColumns 函数](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 中机器学习的资源调控 |Microsoft Docs
+title: R 和 Python 脚本执行的 SQL Server 机器学习的资源调控
 description: 为 SQL Server 数据库引擎实例上的 R 和 Python 工作负荷分配 RAM 内存、 CPU 和 IO。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76b6af9ccf6fc3c5a54f4cb8be3fe7068eb578b5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 72883c8e5bc42ca7f149d17cff530bcf639bdf25
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100549"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431380"
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server 中机器学习的资源调控
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49100549"
 > [!NOTE]
 > 不支持通过使用资源调控器快速启动板服务的直接管理。 快速启动板是一种受信任的服务，可以仅由 Microsoft 提供的宿主启动器。 受信任的启动器显式配置为避免消耗过多的资源。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [管理机器学习集成](../r/managing-and-monitoring-r-solutions.md)
 + [为机器学习创建资源池](../r/how-to-create-a-resource-pool-for-r.md)

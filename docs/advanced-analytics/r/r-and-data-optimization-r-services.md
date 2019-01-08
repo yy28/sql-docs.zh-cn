@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services-数据优化的性能 |Microsoft Docs
+title: 性能优化的数据优化-SQL Server 机器学习服务
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699505"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432400"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-数据优化性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51699505"
 
 ## <a name="factors"></a>因子
 
-R 语言提供的概念*因素*，这是为分类数据的特殊变量。 数据科学家通常在公式中使用因子变量，因为处理分类变量作为因素可确保数据由机器学习函数中正确处理。 有关详细信息，请参阅[R for Dummies： 因子变量](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
+R 语言提供的概念*因素*，这是为分类数据的特殊变量。 数据科学家通常在公式中使用因子变量，因为处理分类变量作为因素可确保数据由机器学习函数中正确处理。 有关详细信息，请参阅[for Dummies R:因子变量](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
 
 根据设计，因子变量可以从字符串转换为整数和后再次进行存储或处理。 R`data.frame`函数作为因子变量，除非可处理的所有字符串自变量*stringsasfactors 设*设置为**False**。 这意味着字符串是自动转换为整数进行处理，并随后映射回原始字符串。
 
@@ -149,11 +149,11 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 RevoScaleR 优化的其他指南，请参阅以下文章：
 
-+ 支持文章： [rxDForest 和 rxDTree 用于性能调整选项](https://support.microsoft.com/kb/3104235)
++ 支持文章：[RxDForest 和 rxDTree 用于性能调整选项](https://support.microsoft.com/kb/3104235)
 
-+ 方法用于控制模型的提升的树模型中容纳不下：[估计模型使用随机梯度提升](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ 用于控制提升的树模型中容纳不下的模型的方法：[估计使用随机渐进提升模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ RevoScaleR 如何移动并处理数据的概述： [scaler 编写块区的自定义算法](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ RevoScaleR 如何移动并处理数据的概述：[ScaleR 中编写块区的自定义算法](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
 + RevoScaleR 的编程模型：[管理 RevoScaleR 中的线程](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
@@ -173,13 +173,13 @@ RevoScaleR 优化的其他指南，请参阅以下文章：
 
 如果你的方案涉及使用存储的模型的快速预测，或者将机器学习集成到应用程序，您可以使用[操作化](https://docs.microsoft.com/r-server/what-is-operationalization)（以前称为 DeployR） 的 Microsoft R Server 中的功能。
 
-+ 作为**数据科学家**，使用[mrsdeploy 包](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)可以与其他计算机共享 R 代码中集成 R 分析 web、 桌面、 移动和仪表板应用程序内部：[如何发布和管理 R R Server 中的 web 服务](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ 作为**数据科学家**，使用[mrsdeploy 包](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)可以与其他计算机共享 R 代码中集成 R 分析 web、 桌面、 移动和仪表板应用程序内：[如何发布和管理 R R Server 中的 web 服务](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ 作为**管理员**，了解如何管理包、 监视 web 节点和计算节点，以及控制 R 作业的安全性：[如何与之交互，并使用 R 中的 web 服务](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ 作为**管理员**，了解如何管理包、 监视 web 节点和计算节点，以及控制 R 作业的安全性：[在 R 中如何与之交互，并使用 web services](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>本系列文章
 
-[性能优化适用于 R – 简介](sql-server-r-services-performance-tuning.md)
+[性能优化适用于 R 的简介](sql-server-r-services-performance-tuning.md)
 
 [R 的 SQL Server 配置的性能优化](sql-server-configuration-r-services.md)
 

@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Server 机器学习上安装新的 Python 包 |Microsoft Docs
-description: 将新的 Python 包添加到 SQL Server 2017 机器学习服务 （数据库内） 和机器学习服务器 （独立版）
+title: 安装新的 Python 语言包-SQL Server 机器学习
+description: 将新的 Python 包添加到 SQL Server 2017 机器学习服务 （数据库内） 和机器学习服务器 （独立版）。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697636"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432310"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安装新的 Python 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "51697636"
 
 有关包的位置和安装路径的详细信息，请参阅[获取 R 或 Python 包信息](../r/determine-which-packages-are-installed-on-sql-server.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 + [SQL Server 2017 机器学习服务 （数据库内）](../install/sql-machine-learning-services-windows-install.md)使用 Python 语言选项。 
 
-+ 包必须在 Windows 上的 Python 3.5 符合要求和运行。 
++ 包必须是 Windows 上的 Python 3.5 符合和运行。 
 
 + 安装包需要到服务器的管理访问权限。
 
@@ -46,13 +46,6 @@ ms.locfileid: "51697636"
 
 在此示例中安装的包是[CNTK](https://docs.microsoft.com/cognitive-toolkit/)，一个用于从 Microsoft 支持自定义项，培训和共享的不同类型的神经网络的深度学习框架。
 
-> [!TIP]
-> 需要配置你的 Python 工具的帮助？ 请参阅以下博客：
-> 
-> [开始使用 Python Web 服务使用机器学习服务器](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David Crook: Microsoft 认知工具包 + VS Code](https://dacrook.com/cntk-vs-code-awesome/)
-
 ### <a name="step-1-download-the-windows-version-of-the-python-package"></a>步骤 1. 下载 Windows 版本的 Python 包
 
 + 如果没有 internet 访问的服务器上安装 Python 包，必须 WHL 文件下载到另一台计算机，然后将其复制到服务器。
@@ -64,7 +57,7 @@ ms.locfileid: "51697636"
 > [!IMPORTANT]
 > 请确保获取包的 Windows 版本。 如果该文件中.gz 结束，则可能不是正确的版本。
 
-此页包含多个平台和多个 Python 版本的下载：[设置 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+此页包含下载为多个平台和多个 Python 版本：[设置 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>步骤 2. 打开 Python 命令提示符
 
@@ -116,7 +109,7 @@ Successfully installed cntk-2.1
 
 安装完成后，您可以立即开始下一步中所述，使用包。
 
-有关使用 CNTK，深度学习的例子，请参阅以下教程： [cntk Python API](https://cntk.ai/pythondocs/tutorials.html)
+使用 CNTK 的深度学习的示例，请参阅以下教程：[Cntk Python API](https://cntk.ai/pythondocs/tutorials.html)
 
 若要在脚本中使用包中的函数，插入标准`import <package_name>`语句中的脚本的初始行：
 

@@ -11,21 +11,21 @@ ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 133a21d00442859738ac6114847f68ab7bfb1564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093427"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512081"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的状态栏可进行颜色编码，以便指示每个窗口连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
-1.  **开始之前：**  [状态栏颜色](#StatusBarColors)  
+1.  **开始之前：**[状态栏颜色](#StatusBarColors)  
   
-2.  **在以下项中设置服务器状态颜色：**  [对象资源管理器](#SetOEServerColor)、 [已注册服务器](#SetRegServerColor)  
+2.  **若要设置服务器状态颜色：**[对象资源管理器](#SetOEServerColor)，[注册服务器](#SetRegServerColor)  
   
-3.  **使用状态颜色：**  [使用服务器颜色打开查询编辑器](#OpenServerColor)、 [打开查询编辑器并且指定状态颜色](#OpenSpecColor)  
+3.  **若要使用状态颜色：**[打开查询编辑器中使用服务器颜色](#OpenServerColor)，[打开查询编辑器并且指定状态颜色](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> 状态栏颜色  
  您可以在 **“对象资源管理器”** 或 **“已注册服务器”** 中将状态栏颜色与特定的服务器节点相关联。 只能为连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器节点指定颜色，不能为针对其他 SQL Server 技术的服务器节点指定颜色。 您还可以在每次将新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，指定自定义状态栏颜色。 然后，您可以使用为服务器节点定义的状态颜色打开查询编辑器窗口，或者为该编辑器窗口指定唯一颜色。  
@@ -35,13 +35,13 @@ ms.locfileid: "48093427"
 ##  <a name="SetOEServerColor"></a> 在对象资源管理器中为服务器设置状态颜色  
  **在对象资源管理器中设置服务器状态颜色**  
   
-1.  在 **“对象资源管理器”** 中，选择 **“连接”** 按钮，然后选择 **“数据库引擎…”**。  
+1.  在“对象资源管理器”中，选择“连接”按钮，然后选择“数据库引擎…”。  
   
 2.  在“连接到服务器”对话框上，选择“选项 >>”。  
   
 3.  选中 **“使用自定义颜色”** 复选框。  
   
-4.  若要选择颜色，请选择 **“选择…”** 按钮。  
+4.  若要选择颜色，请选择“选择...”按钮。  
   
 5.  选择基础颜色或自定义颜色，然后选择“确定”。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "48093427"
 ##  <a name="SetRegServerColor"></a> 为已注册服务器设置状态颜色  
  **为已注册服务器设置服务器颜色**  
   
-1.  在 **“已注册服务器”** 中，右键单击服务器节点，然后选择 **“属性…”**。  
+1.  在“已注册服务器”中，右键单击服务器节点，然后选择“属性…”。  
   
 2.  在 **“编辑服务器注册属性”** 对话框中，选择 **“连接属性”** 选项卡。  
   
 3.  选中 **“使用自定义颜色”** 复选框。  
   
-4.  若要选择颜色，请选择 **“选择…”** 按钮。  
+4.  若要选择颜色，请选择“选择...”按钮。  
   
 5.  选择基础颜色或自定义颜色，然后选择“确定”。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093427"
   
 -   选中 **“使用自定义颜色”** 复选框。  
   
--   若要选择颜色，请选择 **“选择…”** 按钮。  
+-   若要选择颜色，请选择“选择...”按钮。  
   
 -   选择基础颜色或自定义颜色，然后选择“确定”。  
   

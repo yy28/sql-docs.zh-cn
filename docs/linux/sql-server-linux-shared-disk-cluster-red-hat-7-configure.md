@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677676"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979913"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
@@ -39,7 +39,7 @@ ms.locfileid: "51677676"
 
 以下各部分介绍了设置故障转移群集解决方案的步骤。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 若要完成以下端到端方案，需要两台计算机部署两个节点群集和另一台服务器，若要配置 NFS 服务器。 以下步骤概述了如何配置这些服务器。
 
@@ -62,7 +62,7 @@ ms.locfileid: "51677676"
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> 为 SQL Server 实例生成并放置在一个服务器主密钥在安装时`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
+> 为 SQL Server 实例生成并放置在一个服务器主密钥在安装时`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，其标识不是在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
 1. 在主节点上为 Pacemaker 创建 SQL server 登录名并授予登录权限以运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪个节点正在运行 SQL Server。 
 
@@ -274,10 +274,10 @@ NFS 服务器上执行以下步骤：
    sudo firewall-cmd --reload
    ```
 
-   > 如果使用的是没有内置高可用性配置的其他防火墙，则需要打开以下端口，Pacemaker 才能与群集中的其他节点通信
+   > 如果正在使用不具有内置的高可用性配置的另一个防火墙，则需要为 Pacemaker 将无法与群集中的其他节点通信打开以下端口
    >
-   > * TCP：端口 2224、3121、21064
-   > * UDP：端口 5405
+   > * TCP：端口 2224、 3121、 21064
+   > * UDP:端口 5405
 
 1. 在每个节点上安装 Pacemaker 包。
 
@@ -285,7 +285,7 @@ NFS 服务器上执行以下步骤：
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. 为安装 Pacemaker 和 Corosync 包时创建的默认用户设置密码。 在两个节点上使用相同的密码。 
 
@@ -293,7 +293,7 @@ NFS 服务器上执行以下步骤：
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. 启用并启动 `pcsd` 服务和 Pacemaker。 这样，节点将可以在重新启动后重新加入群集。 在两个节点上运行以下命令。
 
@@ -314,8 +314,8 @@ NFS 服务器上执行以下步骤：
 1. 在其中一个节点上创建群集。
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ NFS 服务器上执行以下步骤：
 
 2. 为 SQL Server、文件系统和虚拟 IP 资源配置群集资源，并将配置推送到群集。 您需要以下信息：
 
-   - **SQL Server 资源名称**： 群集的 SQL Server 资源的名称。 
-   - **浮动 IP 资源名称**： 虚拟 IP 地址资源的名称。
-   - **IP 地址**： 客户端将用于连接到 SQL Server 的群集实例的 IP 地址。 
-   - **文件系统资源名称**： 文件系统资源的名称。
-   - **设备**: NFS 共享路径
-   - **设备**： 装载到共享的本地路径
-   - **fstype**： 文件共享类型 (例如 nfs)
+   - **SQL Server 资源名称**:群集 SQL Server 资源的名称。 
+   - **浮动 IP 资源名称**:虚拟 IP 地址资源的名称。
+   - **IP 地址**:客户端将用于连接到 SQL Server 的群集实例 IP 地址。 
+   - **文件系统资源名称**:文件系统资源的名称。
+   - **设备**:在 NFS 共享路径
+   - **设备**:本地路径装载到共享
+   - **fstype**:文件共享类型 (例如 nfs)
 
    更新以下脚本为您的环境中的值。 在一个节点上运行，以配置并启动群集服务。  
 
@@ -370,7 +370,7 @@ NFS 服务器上执行以下步骤：
    sudo pcs status 
    ```
 
-   以下示例展示了 Pacemaker 已成功启动 SQL Server 的群集实例时的结果。 
+   下面的示例显示时 Pacemaker 已成功启动 SQL Server 的群集的实例的结果。 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5124a091b59ec1669f5d77cbe989f780fee46c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738115"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589121"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  通过使用先前创建的 OLE 对象的对象令牌**sp_OACreate**或，则为 NULL。 如果*objecttoken*是指定，则返回该对象的错误信息。 如果指定为 NULL，则返回整个批处理的错误信息。  
   
- *源* **输出**  
+ _源_ **输出**  
  错误信息的源。 如果指定，它必须是本地**char**， **nchar**， **varchar**，或者**nvarchar**变量。 必要时将截断返回值以适合局部变量的要求。  
   
- *描述* **输出**  
+ _描述_ **输出**  
  是错误的说明。 如果指定，它必须是本地**char**， **nchar**， **varchar**，或者**nvarchar**变量。 必要时将截断返回值以适合局部变量的要求。  
   
- *helpfile* **输出**  
+ _helpfile_ **输出**  
  OLE 对象的帮助文件。 如果指定，它必须是本地**char**， **nchar**， **varchar**，或者**nvarchar**变量。 必要时将截断返回值以适合局部变量的要求。  
   
- *helpid* **输出**  
+ _helpid_ **输出**  
  帮助文件的上下文 ID。 如果指定，它必须是本地**int**变量。  
   
 > [!NOTE]  
@@ -74,7 +74,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |------------------|---------------|-----------------|  
 |**错误**|**binary(4)**|错误号的二进制表示形式。|  
 |**数据源**|**nvarchar(nn)**|错误的源。|  
-|**Description**|**nvarchar(nn)**|错误的说明。|  
+|**说明**|**nvarchar(nn)**|错误的说明。|  
 |**帮助文件**|**nvarchar(nn)**|错误源的帮助文件。|  
 |**HelpID**|**int**|错误源帮助文件中的帮助上下文 ID。|  
   
@@ -91,11 +91,11 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**服务器执行失败 (0x80080005)**|指定的 OLE 对象已注册为本地 OLE 服务器（.exe 文件），但无法找到或启动该 .exe 文件。|  
 |**无法找到指定的模块 (0x8007007e)**|指定的 OLE 对象已注册为进程内 OLE 服务器（.dll 文件），但无法找到或半截该 .dll 文件。|  
 |**类型不匹配 (0x80020005)**|用于存储返回的属性值或者方法返回值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量的数据类型与属性或方法返回值的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型不匹配。 或者，要求属性或方法返回值，但该属性或方法未返回值。|  
-|**sp_OACreate 的“context”参数的数据类型或值无效。(0x8004275B)**|上下文参数值应为下列值之一：1、4 或 5。|  
+|**sp_OACreate 的“context”参数的数据类型或值无效。(0x8004275B)**|上下文参数的值应为之一：1、 4 或 5。|  
   
  有关处理 HRESULT 返回代码的详细信息，请参阅[OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

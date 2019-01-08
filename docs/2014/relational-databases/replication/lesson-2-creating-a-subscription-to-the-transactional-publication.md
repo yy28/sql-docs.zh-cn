@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：创建事务发布的订阅 | Microsoft Docs
+title: 第 2 课：创建事务发布的订阅 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ace792a76e1bcdbcc7aa6b372d96de1f92c570f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de13dc6bcae1dbca26edec889a988b3085de9195
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072247"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590851"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 课：创建事务发布的订阅
-  在本课程中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建一个订阅。 本课程要求已完成上一课， [第 1 课：使用事务复制发布数据](lesson-1-publishing-data-using-transactional-replication.md)。  
+  在本课程中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建一个订阅。 本课程要求已完成上一课，[第 1 课：使用事务复制发布数据](lesson-1-publishing-data-using-transactional-replication.md)。  
   
 ### <a name="to-create-the-subscription"></a>创建订阅  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072247"
   
 7.  在“新建数据库”对话框的“数据库名称”框中输入“ProductReplica”，然后依次单击“确定”和“下一步”。  
   
-8.  在“分发代理安全性”对话框中，单击省略号（“…”按钮，在“进程帐户”框中输入 \<Machine_Name>\repl_distribution，输入此帐户的密码，然后依次单击“确定”和“下一步”。  
+8.  在中**分发代理安全性**对话框框中，单击省略号 (**...**) 按钮，输入\< _m a c h >_**\repl_distribution**中**进程帐户**框中，输入此密码帐户中，单击**确定**，然后单击**下一步**。  
   
 9. 单击“完成”以接受其余页中的默认值并完成向导。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48072247"
   
 2.  在“常规”页的“用户类型”列表中选择“Windows 用户”。  
   
-3.  选择“用户名”框，单击省略号 (…) 按钮，在“输入要选择的对象名称”框中键入 <Machine_Name>**\repl_distribution**，然后依次单击“检查名称”和“确定”。  
+3.  选择**用户名**框，单击省略号 （...） 按钮，在**输入要选择的对象名称**框中，键入 < m a c h >**\repl_distribution**，单击**检查名称**，然后单击**确定**。  
   
 4.  在“成员资格”页的“数据库角色成员资格”区域中，选择“db_owner”，然后单击“确定”以创建用户。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48072247"
 3.  如果订阅未在“AdvWorksProductTrans”下出现，请按 F5 刷新列表。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已经成功创建了对事务发布的订阅。 因为此订阅的分发代理持续运行，所以订阅一经创建就进行了初始化。 接下来，您将用跟踪令牌来验证更改是否已复制到订阅服务器并确定滞后时间。 请参阅 [第 3 课：验证订阅和测量滞后时间](lesson-3-validating-the-subscription-and-measuring-latency.md)。  
+ 您已经成功创建了对事务发布的订阅。 因为此订阅的分发代理持续运行，所以订阅一经创建就进行了初始化。 接下来，您将用跟踪令牌来验证更改是否已复制到订阅服务器并确定滞后时间。 请参阅[第 3 课：验证订阅和测量滞后时间](lesson-3-validating-the-subscription-and-measuring-latency.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用快照初始化订阅](initialize-a-subscription-with-a-snapshot.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
  [订阅发布](subscribe-to-publications.md)  
   
   

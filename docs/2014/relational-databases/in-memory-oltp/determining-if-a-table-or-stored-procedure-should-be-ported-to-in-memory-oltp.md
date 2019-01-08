@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194137"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377489"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
-  通过 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的事务性能收集器，可帮助您评估内存中 OLTP 是否将改进您的数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  
+  中的事务性能收集器[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]可帮助您评估内存中 OLTP 是否将改进数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  
   
  本主题讨论如何：  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194137"
   
 -   生成事务性能分析报告以便标识性能至关重要的表和存储过程。  
   
- 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  事务性能收集器和事务性能分析报告可帮助您完成下列任务：  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48194137"
   
  可以在 SQL Server 2012 或更高版本上配置数据收集器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 需要使用用于数据收集器的正确凭据建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，以便将数据上载到其他实例（非待探查事务所在实例）上的管理数据仓库数据库。 若要启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，必须首先使用启用域的登录建立凭据。 该启用域的登录必须是管理数据仓库数据库的 `mdw_admin` 组的成员。 请参阅[如何： 创建凭据 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)有关如何创建凭据的信息。  
+ 需要使用用于数据收集器的正确凭据建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，以便将数据上载到其他实例（非待探查事务所在实例）上的管理数据仓库数据库。 若要启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，必须首先使用启用域的登录建立凭据。 该启用域的登录必须是管理数据仓库数据库的 `mdw_admin` 组的成员。 请参阅[如何：创建凭据 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)有关如何创建凭据的信息。  
   
  若要配置数据收集以便上载到不同实例上的管理数据仓库数据库，请执行以下步骤：  
   
@@ -186,13 +186,13 @@ ms.locfileid: "48194137"
   
 -   争用统计数据部分  
   
-     本部分包含一个表，其中显示数据库表的争用。 有关数据库闩锁和锁的详细信息，请参阅[锁定体系结构](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)。 这些列如下所示：  
+     本部分包含一个表，其中显示数据库表的争用。 有关数据库闩锁和锁的详细信息，请参阅[锁定体系结构](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)。 这些列如下所示：  
   
     -   总等待百分比。 此数据库表上闩锁和锁等待数占数据库活动的百分比。 这个比例越高，使用此表的频率相对于数据库中的其他表就越大。  
   
-    -   闩锁统计信息。 这些列记录涉及此表的查询的闩锁等待数。 闩锁的信息，请参阅[闩锁](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)。 此数值越高，表的闩锁争用就越多。  
+    -   闩锁统计信息。 这些列记录涉及此表的查询的闩锁等待数。 闩锁的信息，请参阅[闩锁](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)。 此数值越高，表的闩锁争用就越多。  
   
-    -   锁定统计信息。 这组列记录对此表的查询的页锁定获取和等待次数。 有关锁的详细信息，请参阅[了解 SQL Server 中的锁定](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)。 等待越多，对表的锁定争用就越多。  
+    -   锁定统计信息。 这组列记录对此表的查询的页锁定获取和等待次数。 有关锁的详细信息，请参阅[了解 SQL Server 中的锁定](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)。 等待越多，对表的锁定争用就越多。  
   
 -   迁移难度部分  
   

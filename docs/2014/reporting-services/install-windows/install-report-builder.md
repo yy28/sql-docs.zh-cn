@@ -11,17 +11,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148857"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353918"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>安装报表生成器的独立版本（报表生成器）
-  你可以安装报表生成器[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在功能包[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472)或如 ReportBuilder3_x86.msi，报表生成器中，Windows Installer 程序包有公用文件夹的位置已下载。  
+  你可以安装报表生成器[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在功能包[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472)或如 ReportBuilder3_x86.msi，报表生成器中，Windows Installer 程序包有公用文件夹的位置已下载。  
   
- 还可以执行报表生成器的命令行安装，并提供参数以自定义安装。 除了标准的 MSI 内部参数以外，还可以使用报表生成器提供的自定义参数：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 指定报表生成器的根安装文件夹。 REPORTSERVERURL 指定报表生成器用于在服务器上保存报表的默认报表服务器。  
+ 还可以执行报表生成器的命令行安装，并提供参数以自定义安装。 除了标准的 MSI 内部参数，可以使用报表生成器提供的自定义参数：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 指定报表生成器的根安装文件夹。 REPORTSERVERURL 指定报表生成器用于在服务器上保存报表的默认报表服务器。  
   
  如果要进行根本没有用户界面交互的完全静默安装，请指定 **/quiet** 选项。 根据设计，quiet 选项标志会隐藏安装错误。 因此，建议在使用 quiet 选项时包括 **/l** 选项，该选项指定进行日志记录。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48148857"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>从下载站点安装报表生成器  
   
-1.  转到[Microsoft SQL Server 2012 报表生成器](http://go.microsoft.com/fwlink/?LinkID=219138)并找到网页上的报表生成器部分。  
+1.  转到[Microsoft SQL Server 2012 报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138)并找到网页上的报表生成器部分。  
   
 2.  单击**X86 包**。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48148857"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>从命令行安装报表生成器  
   
-1.  转到[Microsoft SQL Server 2012 报表生成器](http://go.microsoft.com/fwlink/?LinkID=219138)并找到报表生成器部分。  
+1.  转到[Microsoft SQL Server 2012 报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138)并找到报表生成器部分。  
   
 2.  单击**X86 包**。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48148857"
   
 5.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
-6.  在打开的文本框中，键入 `cmd.`  
+6.  在“打开”文本框中，键入 `cmd.`  
   
 7.  在命令提示符窗口中，导航到要保存 ReportBuilder3_x86.msi 的文件夹。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48148857"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     安装报表生成器的两个特定选项为：RBINSTALLDIR 和 REPORTSERVERURL。 不需要在命令行中包含这些参数。 以下为基准命令：  
+     安装报表生成器的两个特定选项是：RBINSTALLDIR 和 REPORTSERVERURL。 不需要在命令行中包含这些参数。 以下为基准命令：  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

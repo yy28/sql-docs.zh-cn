@@ -1,5 +1,5 @@
 ---
-title: 课程 2 创建数据功能，使用 T-SQL 函数 (SQL Server 机器学习中的 R) |Microsoft Docs
+title: 使用 R 和 T-SQL 的函数-SQL Server 机器学习的第 2 课创建数据功能
 description: 本教程演示如何将计算添加到在 R 机器学习模型中使用的存储过程。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 43086b8d3898e4d9096e82289ce6e6f196542997
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031494"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645396"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 课： 创建使用 R 和 T-SQL 的数据功能
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 课：使用 R 和 T-SQL 创建数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
@@ -46,7 +46,7 @@ ms.locfileid: "51031494"
 
 2. 右键单击“fnCalculateDistance”，然后选择“修改”，以在新查询窗口中打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
     -- User-defined function that calculates the direct distance between two geographical coordinates.  
     RETURNS float  
@@ -80,7 +80,7 @@ ms.locfileid: "51031494"
 
 1. 花时间检查自定义 T-SQL 函数 _fnEngineerFeatures_的代码，该函数应已作为本演练准备工作的一部分进行了创建。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
     @passenger_count int = 0,  
     @trip_distance float = 0,  
@@ -110,7 +110,7 @@ ms.locfileid: "51031494"
 
 2.  若要验证此函数正常工作，使用它来计算行程计量的距离为 0，但上车与下车位置是不同的地理距离。
   
-    ```SQL
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
@@ -123,8 +123,8 @@ ms.locfileid: "51031494"
 
 ## <a name="next-lesson"></a>下一课
 
-[第 3 课： 训练和保存使用 T-SQL 的模型](sqldev-train-and-save-a-model-using-t-sql.md)
+[第 3 课：训练和保存使用 T-SQL 的模型](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一课
 
-[第 1 课： 浏览和可视化数据使用 R 和存储的过程](sqldev-explore-and-visualize-the-data.md)
+[第 1 课：浏览和可视化数据使用 R 和存储的过程](sqldev-explore-and-visualize-the-data.md)

@@ -1,5 +1,6 @@
 ---
-title: 操作 SQL Server 机器学习服务中的 R 代码 |Microsoft Docs
+title: 操作 R 代码使用存储的过程的 SQL Server 机器学习服务
+description: 在 SQL Server 存储过程，以使其可供有权访问 SQL Server 数据库的任何客户端应用程序中嵌入 R 语言代码。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
-ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
+ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952460"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432180"
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>操作 R 代码 （机器学习服务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "38952460"
 
 + [转换 R 代码以便在 R Services 中使用](converting-r-code-for-use-in-sql-server.md)
 
-+ [使用 sqlrutils 生成 R 存储过程](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [使用 sqlrutils helper 函数](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>与应用程序中集成 R 和 Python
 

@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128167"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376449"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>创建数据源（数据挖掘基础教程）
   一个*数据源*是保存和管理在项目中并部署到的数据连接应用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。 除了其他所有必需的连接属性外，数据源还包含源数据所在的服务器和数据库的名称。  
   
 > [!IMPORTANT]  
->  数据库的名称为 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果尚未安装此数据库，请参阅[Microsoft SQL 示例数据库](http://go.microsoft.com/fwlink/?LinkId=88417)页。  
+>  数据库的名称为 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果尚未安装此数据库，请参阅[Microsoft SQL 示例数据库](https://go.microsoft.com/fwlink/?LinkId=88417)页。  
   
 ### <a name="to-create-a-data-source"></a>创建数据源  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48128167"
 ## <a name="see-also"></a>请参阅  
  [创建数据源（SSAS 多维）](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [定义数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [设置模拟选项&#40;SSAS-多维&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [设置模拟选项（SSAS - 多维）](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

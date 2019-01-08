@@ -12,12 +12,12 @@ ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f064e36a5412612e73f3c6d60f0461a02d417f92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 913be11caa9a76ee012571e5ee4b275826668330
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138397"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370119"
 ---
 # <a name="mssqlserver33081"></a>MSSQLSERVER_33081
     
@@ -41,7 +41,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## <a name="user-action"></a>用户操作  
- 若要调查问题，请在 MSDN (http://msdn.microsoft.com/) 中搜索该 Windows 错误代码。 解决该问题，或联系 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门以获得详细信息。 如果需要与客户支持服务部门联系，请为我们的支持人员收集以下信息。  
+ 若要调查问题，请在 MSDN (https://msdn.microsoft.com/) 中搜索该 Windows 错误代码。 解决该问题，或联系 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门以获得详细信息。 如果需要与客户支持服务部门联系，请为我们的支持人员收集以下信息。  
   
 -   错误日志显示无法加载加密提供程序错误。  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799715"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588282"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@sub_table=**] **'***sub_table*****  
+ [  **@sub_table=**] **'**_sub_table_  
  订阅服务器表的名称。 *sub_table*是**sysname**，无默认值。  
   
- [  **@sub_table_owner=**] **'***sub_table_owner*****  
+ [  **@sub_table_owner=**] **'**_sub_table_owner_  
  订阅服务器表的所有者名称。 *sub_table_owner*是**sysname**，无默认值。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 如果为 NULL，则使用当前数据库。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@ins_proc=**] **'***ins_proc*****  
+ [  **@ins_proc=**] **'**_ins_proc_  
  在发布服务器上支持同步事务插入的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
   
- [  **@upd_proc=**] **'***upd_proc*****  
+ [  **@upd_proc=**] **'**_upd_proc_  
  在发布服务器上支持同步事务更新的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
   
- [  **@del_proc=**] **'***del_proc*****  
+ [  **@del_proc=**] **'**_del_proc_  
  在发布服务器上支持同步事务删除的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
   
- [  **@cftproc =** ] **'***cftproc*****  
+ [  **@cftproc =** ] **'**_cftproc_  
  允许排队更新的发布使用的自动生成过程的名称。 *cftproc*是**sysname**，无默认值。 对于允许立即更新的发布，该值为 NULL。 此参数应用于允许排队更新（排队更新和将排队更新作为故障转移的立即更新）的发布。  
   
- [  **@proc_owner =** ] **'***proc_owner*****  
+ [  **@proc_owner =** ] **'**_proc_owner_  
  指定发布服务器中的用户帐户，在该帐户下创建了用于更新发布（排队和/或立即）的所有自动生成存储过程。 *proc_owner*是**sysname** ，无默认值。  
   
- [  **@identity_col=**] **'***identity_col*****  
+ [  **@identity_col=**] **'**_identity_col_  
  发布服务器上标识列的名称。 *identity_col*是**sysname**，默认值为 NULL。  
   
- [  **@ts_col=**] **'***timestamp_col*****  
+ [  **@ts_col=**] **'**_timestamp_col_  
  是的名称**时间戳**发布服务器上的列。 *timestamp_col*是**sysname**，默认值为 NULL。  
   
- [  **@filter_clause=**] **'***filter_clause*****  
+ [  **@filter_clause=**] **'**_filter_clause_  
  是定义水平筛选器的限制 (WHERE) 子句。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。  
   
- [  **@primary_key_bitmap =**] **'***primary_key_bitmap*****  
+ [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_  
  表内主键列的位图。 *primary_key_bitmap*是**varbinary(4000)**，无默认值。  
   
  [  **@identity_support =** ] *identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *independent_agent*  
  指示只有一个用于该发布的分发代理（独立代理），还是每个发布数据库和订阅数据库对都有一个分发代理（共享代理）。 该值反映了发布服务器上所定义发布的 independent_agent 属性值。 *independent_agent*为 bit，默认值为**0**。 如果**0**，则代理为共享代理。 如果**1**，代理是一个独立的代理。  
   
- [  **@distributor =** ] **'***分发服务器*****  
+ [  **@distributor =** ] **'**_分发服务器上_  
  是分发服务器的名称。 *分发服务器*是**sysname**，无默认值。  
   
  [ **@pubversion**=] *pubversion*  
@@ -119,7 +118,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="remarks"></a>备注  
  **sp_addsynctriggers**由分发代理作为订阅初始化的一部分。 此存储过程通常不能由用户运行，但如果用户需要手动设置非同步订阅，则此过程很有用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addsynctriggers**。  
   
 ## <a name="see-also"></a>请参阅  
