@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
@@ -15,12 +14,12 @@ ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1f24801a33520baa7efcedc350c6ca1219d47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a49361846ffcb309c39e816d5f7a62418db87d6e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794829"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 数据库
 
@@ -50,7 +49,7 @@ ms.locfileid: "47786577"
   
 ## <a name="see-also"></a>另请参阅  
  [创建 Master Data Services 数据库](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [数据库对象安全性 &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)   
+ [数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)   
  [数据库登录名、用户和角色 &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   
