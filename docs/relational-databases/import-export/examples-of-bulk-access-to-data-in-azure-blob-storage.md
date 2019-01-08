@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 190a9a07ad293253ee9a2005a6b5981db129465f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560404"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214096"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>批量访问 Azure Blob 存储中数据的示例
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,16 +31,16 @@ ms.locfileid: "51560404"
 
 从 SQL Server 批量访问 Azure Blob 存储至少需要 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 版本 1.1。
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  blob 上容器和文件的所有路径都是 `CASE SENSITIVE`。 如果不正确，它可能会返回错误，如“无法进行大容量加载。 文件 "file.csv" 不存在或你没有文件访问权限。”
-"
+> "
 
 
 ## <a name="create-the-credential"></a>创建凭据   
    
 下面的所有示例都需要一个引用共享访问签名的数据库范围凭据。   
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  必须借助一个使用 `SHARED ACCESS SIGNATURE` 标识的数据库范围凭据创建外部数据源。 若要为存储帐户创建共享访问签名，请查看 Azure 门户中存储帐户属性页上的“共享访问签名”属性。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 有关凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
  
 使用必须属于 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 创建数据库范围凭据。 使用 Azure 门户中的机密。 例如：  
