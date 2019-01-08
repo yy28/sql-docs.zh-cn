@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8519b2e1a54854fc90ffbcf9253a9f4007538cea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823519"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   与默认解决机制相比，自定义冲突解决程序提供了更大的灵活性，可以实现使用复制数据的应用程序所需的业务逻辑。 基于 COM 的自定义冲突解决程序是一个动态链接库 (DLL)，它实现了 **ICustomResolver** COM 接口、方法、属性以及其他专为解决冲突设计的支持接口和类型定义。  

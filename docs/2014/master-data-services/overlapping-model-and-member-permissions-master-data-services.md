@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
@@ -15,12 +14,12 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 964fdfbb739d03ca20c55b3d1009fcb762aa54b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201837"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814559"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
   分配给成员的权限可与分配给模型对象的权限重叠。 出现重叠时，限制性更强的权限将生效。  
@@ -42,7 +41,7 @@ ms.locfileid: "48201837"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点分配有 **“更新”** 权限。  
   
- 结果：在 **“资源管理器”** 中，用户对“山地车”节点中所有成员的所有属性值都具有 **“更新”** 权限。 所有其他成员和属性均隐藏。  
+ 结果：在中**资源管理器**，用户拥有**更新**所有属性值中的山地车节点的所有成员的权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48201837"
   
  上**层次结构成员**选项卡上，派生层次结构中的山地车子类别节点显式分配**只读**权限。  
   
- 结果： 在**资源管理器**，用户拥有**只读**所有 Subcategory 属性值的山地车节点中的成员的权限。 所有其他成员和属性均隐藏。  
+ 结果：在**资源管理器**，用户拥有**只读**所有 Subcategory 属性值的山地车节点中的成员的权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -64,12 +63,12 @@ ms.locfileid: "48201837"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别显式分配有 **“更新”** 权限。  
   
- 结果： 在**资源管理器**，用户拥有**只读**对属性值的权限。 所有其他成员和属性均隐藏。  
+ 结果：在**资源管理器**，用户拥有**只读**对属性值的权限。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="see-also"></a>请参阅  
- [如何确定权限&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)   
  [重叠的用户和组权限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

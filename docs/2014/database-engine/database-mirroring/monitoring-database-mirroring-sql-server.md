@@ -13,12 +13,12 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c74d39a74529845cc5eaaf0d47536c4a3c39f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542903"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
   本节介绍数据库镜像监视器和 **sp_dbmmonitor** 系统存储过程，说明数据库镜像监视的工作方式（包括“数据库镜像监视器作业”），并概括介绍可以监视的有关数据库镜像会话的信息。 此外，本节还介绍如何为一组预定义数据库镜像事件定义警告阈值，以及如何设置有关任意数据库镜像事件的警报。  
@@ -132,7 +132,7 @@ ms.locfileid: "48136777"
 #### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>监视数据库镜像状态（由 dbm_monitor 成员执行）  
  如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”页上的“主体日志 (\<时间>)”**** 和“镜像日志 (\<时间>)”**** 标签上查看时间。  
   
- **dbm_monitor** 固定数据库角色成员使用“数据库镜像监视器作业”定期更新状态表。 如果作业不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，则状态便会迅速变旧，并且不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能分享相同的角色 - 主体或镜像。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
+ **dbm_monitor** 固定数据库角色成员使用“数据库镜像监视器作业”定期更新状态表。 如果作业不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，则状态便会迅速变旧，并且不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能会分享相同的角色（主体或镜像）。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>删除数据库镜像监视器作业  
  数据库镜像监视器作业（ **“数据库镜像监视器作业”**）在删除之前将一直保留。 必须由系统管理员对监视作业进行管理。 若要删除“数据库镜像监视器作业”，请使用 **sp_dbmmonitordropmonitoring**。 有关详细信息，请参阅 [sp_dbmmonitordropmonitoring (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)。  

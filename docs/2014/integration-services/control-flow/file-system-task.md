@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.f1
@@ -15,12 +14,12 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45b0323ffea075bc914de54b58e922eb6bcbb4b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd924464331b144040f33797d0333b1ddb5a4032
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790939"
 ---
 # <a name="file-system-task"></a>文件系统任务
   文件系统任务对文件系统中的文件和目录执行操作。 例如，通过使用文件系统任务，包可以创建、移动或删除目录和文件。 您还可以使用文件系统任务设置文件和目录的属性。 例如，文件系统任务可以让文件隐藏或只读。  
@@ -32,7 +31,7 @@ ms.locfileid: "48226027"
 ## <a name="predefined-file-system-operations"></a>预定义的文件系统操作  
  文件系统任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|运算|Description|  
+|操作|Description|  
 |---------------|-----------------|  
 |复制目录|将文件夹从一个位置复制到另一个位置。|  
 |复制文件|将文件从一个位置复制到另一个位置。|  
@@ -63,7 +62,7 @@ ms.locfileid: "48226027"
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
   
--   [文件系统任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [文件系统任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

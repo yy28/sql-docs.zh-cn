@@ -14,12 +14,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d99c70928dfc1d3de2ff02499c0b33a173cf888a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195137"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797739"
 ---
 # <a name="dml-triggers"></a>DML 触发器
   DML 触发器为特殊类型的存储过程，可在发生数据操作语言 (DML) 事件时自动生效，以便影响触发器中定义的表或视图。 DML 事件包括 INSERT、UPDATE 或 DELETE 语句。 DML 触发器可用于强制业务规则和数据完整性、查询其他表并包括复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 将触发器和触发它的语句作为可在触发器内回滚的单个事务对待。 如果检测到错误（例如，磁盘空间不足），则整个事务即自动回滚。  
@@ -59,7 +59,7 @@ ms.locfileid: "48195137"
 |适用范围|表|表和视图|  
 |每个表或视图包含触发器的数量|每个触发操作（UPDATE、DELETE 和 INSERT）包含多个触发器|每个触发操作（UPDATE、DELETE 和 INSERT）包含一个触发器|  
 |级联引用|无任何限制条件|不允许在作为级联引用完整性约束目标的表上使用 INSTEAD OF UPDATE 和 DELETE 触发器。|  
-|执行|晚于：<br /><br /> 约束处理<br />声明性引用操作<br />创建**插入的** 和 **删除的** 表<br />触发操作|之前：约束处理<br /><br /> 代替：触发操作<br /><br /> 之后：创建  **插入的** 和 **删除的** 表|  
+|执行|晚于：<br /><br /> 约束处理<br />声明性引用操作<br />创建**插入的** 和 **删除的** 表<br />触发操作|早于:约束处理<br /><br /> 来代替：触发操作<br /><br /> 之后：创建  **插入的** 和 **删除的** 表|  
 |执行顺序|可指定第一个和最后一个执行|不适用|  
 |`varchar(max)``nvarchar(max)`，并`varbinary(max)`列中引用**插入**并**删除**表|Allowed|Allowed|  
 |`text``ntext`，并`image`列中引用**插入**并**删除**表|不允许|Allowed|  

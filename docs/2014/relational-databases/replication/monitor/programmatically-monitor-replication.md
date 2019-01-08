@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813909"
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
   复制监视器是一种可用于监视复制拓扑的图形化工具。 可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 复制存储过程或复制管理对象 (RMO) 以编程方式访问相同的监视数据。 您可以利用这些对象对以下任务进行编程：  
@@ -173,7 +172,7 @@ ms.locfileid: "48137278"
   
 2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 类的实例。 为发布服务器设置 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，发布者名称定义不正确或不存在发布。  
+    -   创建 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 类的实例。 为发布服务器设置 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 `false`，则表示发布服务器名称定义不正确或表示该发布不存在。  
   
     -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 中获取。  
   
@@ -269,13 +268,13 @@ ms.locfileid: "48137278"
   
         |ReplTest1|Description|  
         |-----------|-----------------|  
-        |1|`expiration` -监视对事务发布的订阅是否即将过期。|  
-        |2|`latency` -监视对事务发布的订阅的性能。|  
-        |4|`mergeexpiration` -合并发布的订阅是否即将过期的监视器。|  
+        |1|`expiration` - 监视对事务发布的订阅是否即将过期。|  
+        |2|`latency` - 监视对事务发布的订阅的性能。|  
+        |4|`mergeexpiration` - 监视对合并发布的订阅是否即将过期。|  
         |5|`mergeslowrunduration` -监视通过低带宽 （拨号） 连接的合并同步的持续时间。|  
-        |6|`mergefastrunduration` -监视通过高带宽 (LAN) 连接的合并同步的持续时间。|  
+        |6|`mergefastrunduration` - 监视通过高带宽 (LAN) 连接进行的合并同步的持续时间。|  
         |7|`mergefastrunspeed` - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
-        |8|`mergeslowrunspeed` -监视通过低带宽 （拨号） 连接的合并同步的同步速率。|  
+        |8|`mergeslowrunspeed` - 监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
   
     -   *enable* - <xref:System.Boolean> 值。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fac5ef320a62317cd7b05a6848251a7e944ed562
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131600"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814782"
 ---
 # <a name="attention-event-class"></a>Attention 事件类
   **Attention** 事件类指示发生了需要注意的事件（例如取消、客户端中断请求或客户端连接中断）。 取消操作可视为实现数据访问驱动程序超时的一部分。  
@@ -45,7 +44,7 @@ ms.locfileid: "48131600"
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|用户帐户控制|  
 |**RequestID**|**int**|包含该语句的请求的 ID。|49|用户帐户控制|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  

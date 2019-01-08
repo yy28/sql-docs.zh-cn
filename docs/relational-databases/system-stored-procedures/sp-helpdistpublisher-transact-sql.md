@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistpublisher_TSQL
@@ -17,12 +16,12 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a909154d1d8f8c5d4a260199b3738d7526338350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85a6eaf76497b1fa763047a255cdb7784316541e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802739"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
  **sp_helpdistpublisher**将不会显示发布服务器登录名或结果中的密码设置为非**sysadmin**登录名。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  成员**sysadmin**固定的服务器角色可以执行**sp_helpdistpublisher**的任何发布服务器使用本地服务器作为分发服务器。 成员**db_owner**固定的数据库角色或**replmonitor**分发数据库中的角色可以执行**sp_helpdistpublisher**的使用的任何发布服务器分发数据库。 位于指定为发布中的用户发布访问列表*发布服务器*可能会执行**sp_helpdistpublisher**。 如果*发布服务器*未指定，则返回信息的所有发布服务器的用户具有访问权限。  
   
 ## <a name="see-also"></a>请参阅  

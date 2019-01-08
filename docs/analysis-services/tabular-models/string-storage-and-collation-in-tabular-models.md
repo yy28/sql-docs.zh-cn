@@ -1,5 +1,5 @@
 ---
-title: 字符串存储和表格模型中的排序规则 |Microsoft 文档
+title: 字符串存储和 Analysis Services 表格模型中的排序规则 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 38a79073648bdab889913050118d7318ca3f536b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044942"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071804"
 ---
-# <a name="string-storage-and-collation-in-tabular-models"></a>字符串存储空间和表格模型中的排序规则
+# <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   字符串（文本值）以高度压缩的格式存储于表格模型中；由于这一压缩，您在检索整个或部分字符串时可能会得到意外结果。 此外，因为字符串区域设置和排序规则在层次结构上继承自最接近的父对象，所以，如果未显式定义字符串语言，父对象的区域设置和排序规则可能会影响存储各字符串的方式以及字符串是唯一的还是与父排序规则定义的相似字符串合并。  
   
- 本文介绍字符串被压缩并存储，所依据的机制，并提供了排序规则和语言如何影响表格模型中的文本公式的计算结果的示例。  
+ 本文介绍字符串压缩和存储，所依据的机制，并提供示例的排序规则和语言如何影响表格模型中的文本公式的结果。  
   
-## <a name="storage"></a>存储器  
+## <a name="storage"></a>存储  
  在表格模型中，所有数据都是高度压缩的，以便更好地容纳于内存中。 因此，可认为在词法上等效的所有字符串仅存储一次。 该字符串的第一个实例用作规范表示形式，此后的每个等效字符串都作为与第一个匹配项相同的压缩值进行索引。  
   
  关键问题是：何谓词法等效的字符串？ 如果两个字符串可被视为相同的单词，则认为它们在词法上是等效的。 例如，在英语中，当您在字典中搜索 **violin** 一词时，根据字典的编辑策略，可能会找到词条 **Violin** 或 **violin**；但通常您会认为这两个词条是等效的，并且忽略大小写中的差异。 在表格模型中，确定两个字符串在词法上是否等效的因素不是编辑策略或用户偏好，而是分配给列的区域设置和排序规则顺序。  
@@ -54,7 +54,7 @@ ms.locfileid: "34044942"
 |trEE|  
 |PlAnT|  
   
- 如果您在模型中使用列 **Classification – English**，则只要您显示植物分类，就不仅会看到原始值及其在大小写上的不同用法，还会看到第一个实例。 其原因在于， **tree** 的所有大小写变体在此排序规则和区域设置中都被视为等效的；因此，只保存了一个字符串，并且系统遇到的该字符串的第一个实例就是保存的字符串。  
+ 如果使用的列， **Classification-English**，在您的模型，只要您显示植物分类你将看到不是原始值，用于其上的不同用法和大小写，但只有第一个实例。 其原因在于， **tree** 的所有大小写变体在此排序规则和区域设置中都被视为等效的；因此，只保存了一个字符串，并且系统遇到的该字符串的第一个实例就是保存的字符串。  
   
 > [!WARNING]  
 >  您可以决定根据自己的判断，决定要定义哪一字符串将作为第一个存储的字符串，但可能很难这样做。 因为没有简单的方法可以事先确定引擎应该首先处理哪一行，所以假定所有值都被视为相同的。 如果您需要设置标准值，则应在加载模型前清除您的所有字符串。  

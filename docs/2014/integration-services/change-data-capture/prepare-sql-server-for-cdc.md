@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
@@ -13,12 +12,12 @@ ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72af5f06486a4158b60949a6f299f79766a795ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e52f15a66c858aa1a04826f69342ba6a9dcd687e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804840"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>为 CDC 准备 SQL Server
   Oracle CDC 服务要求所有目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都包含 MSXDBCDC 数据库。 您可以在 CDC 服务配置控制台中使用“准备 SQL Server”操作创建此数据库。 这将创建一个特殊的脚本，运行此脚本可创建所需的表、存储过程以及此数据库的其他所需项目。 只能为每个目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例执行一次此任务。  
@@ -37,20 +36,20 @@ ms.locfileid: "48169580"
   
 -   **Windows 身份验证**  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“用户名”和“密码”。  
+-   **SQL Server 身份验证**:如果选择此选项，则必须键入**用户名**并**密码**中的用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到。  
   
  若要为 Oracle CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，该登录名必须对 MSXDBCDC 数据库具有写入权限。 输入对 MSXDBCDC 数据库具有写入权限的登录名的凭据，例如 `sysasmin` 角色的成员。  
   
 ### <a name="options"></a>选项  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
--   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
+-   **连接超时**:键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
   
--   **执行超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
+-   **执行超时值**:键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
--   **加密连接**：选择 **“加密连接”** 将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间的通信。  
+-   **对连接进行加密**:选择**加密连接**Oracle CDC 服务和目标之间的通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的加密的连接。  
   
--   **高级**：根据需要键入任何其他连接属性。  
+-   **高级**：如有必要，请键入任何其他连接属性。  
   
 ### <a name="view-script"></a>查看脚本  
  单击“查看脚本”可查看安装脚本的只读版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员可以将此脚本复制到 SQL Server 管理控制台，以便根据需要进行编辑。 有关准备 SQL Server 脚本的详细信息，请参阅 [为 Oracle CDC 视图脚本准备 SQL Server](prepare-sql-server-for-oracle-cdc-view-script.md)。  

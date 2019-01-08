@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -19,12 +17,12 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d07153f80cc1b6dfdc8383e33a8668b63364ad8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0398092e4565b6b02e6b83e8c892ff91e6611f66
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793589"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 检索未用完的数据 (SQLXML 4.0)
   使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 使用带批注的架构从数据库检索数据时，可指定 `sql:overflow-field` 属性以标识表中存储溢出数据的列。 `sql:overflow-field`可以对指定属性**\<元素 >**。  
@@ -62,7 +60,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- 此外，必须为 tempdb 数据库创建一个虚拟目录，以及具有名为“template”的 `template` 类型的模板虚拟名称。  
+ 此外，必须创建 tempdb 数据库的虚拟目录-和模板虚拟名称的`template`名为"模板"的类型。  
   
  在以下示例中，映射架构检索 Customers2 表的 AddressOverflow 列中存储的未用完数据：  
   
