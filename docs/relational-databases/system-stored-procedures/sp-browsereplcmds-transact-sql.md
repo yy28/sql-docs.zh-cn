@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e3884ba1d35a488319ee9ba32e584450b300eda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670475"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802379"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@xact_seqno_start =**] **'***xact_seqno_start*****  
+ [  **@xact_seqno_start =**] **'**_xact_seqno_start_  
  指定要返回的取值最低的精确序列号。 *xact_seqno_start*是**nchar(22)**，默认值为 0x00000000000000000000。  
   
- [  **@xact_seqno_end =**] **'***xact_seqno_end*****  
+ [  **@xact_seqno_end =**] **'**_xact_seqno_end_  
  指定要返回的取值最高的精确序列号。 *xact_seqno_end*是**nchar(22)**，默认值为 0xFFFFFFFFFFFFFFFFFFFF。  
   
- [  **@originator_id =**] **'***originator_id*****  
+ [  **@originator_id =**] **'**_originator_id_  
  指定如果具有指定的命令*originator_id*返回。 *originator_id*是**int**，默认值为 NULL。  
   
- [  **@publisher_database_id =**] **'***publisher_database_id*****  
+ [  **@publisher_database_id =**] **'**_publisher_database_id_  
  指定如果具有指定的命令*publisher_database_id*返回。 *publisher_database_id*是**int**，默认值为 NULL。  
   
- [  **@article_id =**] **'***article_id*****  
+ [  **@article_id =**] **'**_article_id_  
  指定如果具有指定的命令*article_id*返回。 *article_id*是**int**，默认值为 NULL。  
   
  [  **@command_id =**] *command_id*  
@@ -95,7 +94,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="remarks"></a>备注  
  **sp_browsereplcmds**事务复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色或成员**db_owner**或**replmonitor**上分发数据库的固定的数据库角色可以执行**sp_browsereplcmds**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 创建和管理 Kpi |Microsoft 文档
+title: 创建和管理 Analysis Services 表格模型中的 Kpi |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042111"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072084"
 ---
 # <a name="create-and-manage-kpis"></a>创建和管理 Kpi 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文介绍如何创建、 编辑或删除 KPI （关键绩效指标） 表格模型中。 若要创建一个 KPI，请选择计算结果为该 KPI 的基础值的度量值。 然后使用“关键绩效指标”对话框选择计算结果为某一目标值的第二个度量值或绝对值。 之后可以定义状态阈值，这些状态阈值度量基础度量值和目标度量值之间的性能。  
+  本文介绍如何创建、 编辑或删除的表格模型中的 KPI （关键绩效指标）。 若要创建 KPI，您选择的计算结果为该 KPI 的基础值的度量值。 然后使用“关键绩效指标”对话框选择计算结果为某一目标值的第二个度量值或绝对值。 之后可以定义状态阈值，这些状态阈值度量基础度量值和目标度量值之间的性能。  
   
 ## <a name="tasks"></a>“任务”  
   
 > [!IMPORTANT]  
->  在创建 KPI 前，您必须首先创建一个求值的基础度量值。 然后，您将该基础度量值扩展到 KPI。 如何创建度量值另一个主题中所述[创建和管理度量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)。 KPI 也要求目标值。 该值可来自另一个预定义的度量值或绝对值。 一旦您将基础度量值扩展到 KPI 后，可以选择目标值并且在“关键绩效指标”对话框中定义状态阈值。  
+>  在创建 KPI 前，您必须首先创建一个求值的基础度量值。 然后，您将该基础度量值扩展到 KPI。 在另一个主题中，介绍如何创建度量值[创建和管理度量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)。 KPI 也要求目标值。 该值可来自另一个预定义的度量值或绝对值。 一旦您将基础度量值扩展到 KPI 后，可以选择目标值并且在“关键绩效指标”对话框中定义状态阈值。  
   
 ###  <a name="bkmk_create_KPI"></a> 创建 KPI  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34042111"
   
 ## <a name="see-also"></a>另请参阅  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [度量值组](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [创建和 managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

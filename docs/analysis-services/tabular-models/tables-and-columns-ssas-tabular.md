@@ -1,5 +1,5 @@
 ---
-title: 表和列 |Microsoft 文档
+title: Analysis Services 表格模型表和列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10133b2843c01f16134c028140394247c2669236
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043421"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072154"
 ---
 # <a name="tables-and-columns"></a>表和列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34043421"
  **表元数据**  
  关系、度量值、角色、透视和粘贴的数据全都是在表的上下文内定义对象的元数据。  
   
- **数据**  
+ **Data**  
  在您通过使用表导入向导或通过在计算列中创建新数据来首次导入表时，将数据填充到表列中。 当源中的数据发生更改时，或者在从内存中删除某一模型时，必须运行某一处理操作以便将数据重新填充到表中。  
   
 ##  <a name="bkmk_working"></a> 使用表和列  
@@ -67,8 +67,8 @@ ms.locfileid: "34043421"
 |[删除表](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|介绍如何删除不再需要的模型工作区数据库中的表。|  
 |[重命名表或列](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|介绍如何重命名表或列以使其在您的模型中更易于标识。|  
 |[设置列的数据类型](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|介绍如何更改列的数据类型。 数据类型定义列中的数据是如何存储和展示的。|  
-|[隐藏或冻结列](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|介绍如何隐藏您不想显示的列，以及如何通过冻结（锁定）一个区域中的特定列，在滚动到模型的其他区域时使模型的某一区域可见。|  
+|[隐藏或冻结列](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|介绍如何隐藏不想要显示的列，以及如何通过冻结 （锁定） 一个区域中的特定列的模型的另一个区域到滚动时保持模型的一个区域可见。|  
 |[计算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)|本节中的主题介绍了如何使用计算列向您的模型添加聚合数据。|  
-|[筛选器和对数据进行排序](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本节中的主题介绍了如何使用模型设计器中的控件对数据进行筛选或排序。|  
+|[对数据进行筛选和排序](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本节中的主题介绍了如何使用模型设计器中的控件对数据进行筛选或排序。|  
   
   

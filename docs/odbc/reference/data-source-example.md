@@ -13,17 +13,17 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69cc3a0d32c12c71b3909bda23dea93417475f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f427074f7cd7153f448aaef43bc4ac5dca84c01
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847625"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215716"
 ---
 # <a name="data-source-example"></a>数据源示例
 运行 Microsoft® Windows NT® Server/Windows 2000 Server、 Microsoft Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98 计算机数据的计算机上源信息存储在注册表中。 具体取决于的注册表密钥信息存储在下，数据源名为*用户数据源*或*系统数据源*。 用户数据源存储在 HKEY_CURRENT_USER 项下，仅供当前用户。 系统数据源存储在 HKEY_LOCAL_MACHINE 项下，并可由一台计算机上的多个用户。 它们还可以使用系统级服务，即使没有用户登录到计算机，然后可以获得对数据源的访问。 有关用户和系统数据源的详细信息，请参阅[SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)。  
   
- 假设用户具有三个用户数据源： 人员和清单，使用 Oracle DBMS;和工资单、 使用 Microsoft SQL Server DBMS。 数据源的注册表值可能是：  
+ 假设用户具有三个用户数据源：人员和清单，使用 Oracle DBMS;和工资单、 使用 Microsoft SQL Server DBMS。 数据源的注册表值可能是：  
   
 ```  
 HKEY_CURRENT_USER  
@@ -47,7 +47,7 @@ HKEY_CURRENT_USER
                          Driver : REG_SZ : C:\WINDOWS\SYSTEM\Sqlsrvr.dll  
                          Description : REG_SZ : Payroll database  
                          Server : REG_SZ : PYRLL1  
-                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
+                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
                          OEMTOANSI : REG_SZ : No  
                          LastUser : REG_SZ : smithjo  
                          Database : REG_SZ : Payroll  

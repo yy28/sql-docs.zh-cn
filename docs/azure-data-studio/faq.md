@@ -1,7 +1,8 @@
 ---
-title: Azure 数据 Studio 常见问题 |Microsoft Docs
-description: 常见问题 (FAQ) 的 Azure Data Studio。
-ms.custom: tools|sos
+title: 常见问题解答
+titleSuffix: Azure Data Studio
+description: 有关 Azure Data Studio 常见问题常见问题 (FAQ)。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356348"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030326"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常见问题
 
 ## <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
-Azure Data Studio 是新的开放源跨平台桌面环境，用于数据专业人员使用 Azure 数据系列的本地和云平台 Windows、 MacOS 和 Linux 上的数据。 此前已发布预览版名称 SQL Operations Studio 下，Azure Data Studio 产品/服务的现代编辑器体验的既快速 IntelliSense、 代码段、 源代码管理集成和集成的终端。 它设计，与数据平台用户的需求，提供内置的查询结果集和可自定义仪表板的图表。
+Azure Data Studio 是新的开放源跨平台桌面环境，用于数据专业人员使用 Azure 数据系列的本地和云平台 Windows、 MacOS 和 Linux 上的数据。 此前已发布预览版名称 SQL Operations Studio 下，Azure Data Studio 产品/服务的现代编辑器体验的既快速 IntelliSense、 代码段、 源代码管理集成和集成的终端。 它在设计时考虑了数据平台用户，内置了查询结果集和可自定义的仪表板。
 
 研究表明，用户会更多的时间用在查询编辑比使用 SQL Server Management Studio 的任何其他任务上花费的数量级。 为此，Azure Data Studio 旨在深入地专注于最多用于可作为可选扩展到产品的其他体验的功能。 这允许以自定义其环境的工作流的他们最常使用的每个用户。
 
@@ -48,7 +49,7 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>我们是否打算开放源代码 SSMS？
 
-否。 但是下, 一代多操作系统 CLI 和 GUI 工具是开放源代码。 例如，适用于 VS Code、 mssql 脚本编写者和 msql CLI 的 mssql 扩展是 GitHub 上的所有开放源代码。 Azure 数据 Studo 的源代码是 GitHub 上提供。  
+否。 但是下, 一代多操作系统 CLI 和 GUI 工具是开放源代码。 例如，适用于 VS Code、 mssql 脚本编写者和 msql CLI 的 mssql 扩展是 GitHub 上的所有开放源代码。 Azure Data Studio 的源代码是 GitHub 上提供。  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>现在，没有 Azure Data Studio，的确 Microsoft 计划不推荐使用的 SSMS 和 SSDT？ 
 
@@ -84,7 +85,7 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 |:---|:---|:---|
 |Azure 登录|用户帐户控制|用户帐户控制|
 |面板|用户帐户控制| |
-|扩展项|用户帐户控制| |
+|Extensions|用户帐户控制| |
 |集成的终端|用户帐户控制||
 |“对象资源管理器”|用户帐户控制|用户帐户控制|
 |对象脚本|用户帐户控制|用户帐户控制|

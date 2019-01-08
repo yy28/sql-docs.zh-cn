@@ -20,16 +20,16 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90c1c31e6b4b33d662636d34fcebbd17393f69a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608245"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201766"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 函数
 **符合性**  
- 版本引入了： ODBC 2.5  
+ 版本引入了：ODBC 2.5  
   
  **摘要**  
  **SQLConfigDriver**加载相应的驱动程序安装程序 DLL 并调用**ConfigDriver**函数。  
@@ -57,11 +57,11 @@ BOOL SQLConfigDriver(
  *fRequest*  
  [输入]请求的类型。 *fRequest*必须包含以下值之一：  
   
- ODBC_CONFIG_DRIVER： 更改连接池超时驱动程序使用。  
+ ODBC_CONFIG_DRIVER:更改连接池超时驱动程序使用。  
   
- ODBC_INSTALL_DRIVER： 安装新的驱动程序。  
+ ODBC_INSTALL_DRIVER:安装新的驱动程序。  
   
- ODBC_REMOVE_DRIVER： 删除现有的驱动程序。  
+ ODBC_REMOVE_DRIVER:删除现有的驱动程序。  
   
  此选项也可以是特定于驱动程序，在这种情况下*fRequest*的第一个选项必须从 ODBC_CONFIG_DRIVER_MAX + 1 开始。 *FRequest*的任何其他选项也必须从大于 ODBC_CONFIG_DRIVER_MAX + 1 的值启动。  
   

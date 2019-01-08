@@ -10,12 +10,12 @@ ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0880f2c8591c1b0bd75bf2d11fe99321bb294e4a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164867"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351939"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 事务日志体系结构和管理
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "48164867"
 ## <a name="additional-reading"></a>其他阅读主题  
  有关事务日志的其他信息，我们建议阅读以下文章和书籍。  
   
- [了解 SQL Server 中的日志记录和恢复（作者：Paul Randall）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [了解 SQL Server 中的日志记录和恢复（作者：Paul Randall）](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

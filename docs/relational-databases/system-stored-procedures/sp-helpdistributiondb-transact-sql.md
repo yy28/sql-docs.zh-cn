@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e6bfddf7a8faa6d19e674b1b73a401b15975c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df84387d42a0f4d2f5cd74ac6b821f8b01ddb06b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729355"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818909"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="remarks"></a>备注  
  **sp_helpdistributiondb**用于所有类型的复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  成员**db_owner**固定的数据库角色或**replmonitor**分发数据库中的角色和使用分发数据库的发布的发布访问列表中的用户可以执行**sp_helpdistributiondb**以返回与文件相关的信息。 成员**公共**角色可以执行**sp_helpdistributiondb**返回非文件相关的有权访问的分发数据库的信息。  
   
 ## <a name="see-also"></a>请参阅  

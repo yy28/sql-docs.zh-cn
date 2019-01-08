@@ -20,16 +20,16 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1148ab38f7d389c3fe78a09a646a9cbdec0bb723
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c8dbed5599952778ca7651acbdb55a21b8f876
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206576"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 函数
 **符合性**  
- 版本引入了： ODBC 3.0  
+ 版本引入了：ODBC 3.0  
   
  **摘要**  
  **SQLGetConfigMode**检索指示列出 DSN 的值的 Odbc.ini 项所在的系统信息中的配置模式。  
@@ -39,7 +39,7 @@ ms.locfileid: "47755785"
 ```  
   
 BOOL SQLGetConfigMode(  
-     UWORD *   pwConfigMode);  
+     UWORD *   pwConfigMode);  
 ```  
   
 ## <a name="arguments"></a>参数  

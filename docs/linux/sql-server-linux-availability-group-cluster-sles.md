@@ -1,21 +1,22 @@
 ---
-title: 为 SQL Server 可用性组配置 SLES 群集 |Microsoft Docs
-description: ''
+title: 为 SQL Server 可用性组配置 SLES 群集
+titleSuffix: SQL Server
+description: 了解如何创建适用于 SQL Server 上 SUSE Linux Enterprise Server (SLES) 可用性组群集
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670616"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160625"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
@@ -48,7 +49,7 @@ Linux 服务器和 Windows Server 故障转移群集之间不同，创建可用�
 
 5. [将可用性组添加为群集中的资源](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 若要完成以下端到端方案，需要三个计算机来部署三个节点群集。 以下步骤概述如何配置这些服务器。
 
@@ -118,9 +119,9 @@ Linux 服务器和 Windows Server 故障转移群集之间不同，创建可用�
 
 3. 配置群集通信层 (Corosync)： 
 
-   A. 输入要绑定到的网络地址。 默认情况下，该脚本推荐 eth0 网络地址。 或者，输入一个不同的网络地址，例如 bond0 地址。 
+   a. 输入要绑定到的网络地址。 默认情况下，该脚本推荐 eth0 网络地址。 或者，输入一个不同的网络地址，例如 bond0 地址。 
 
-   B. 输入一个多播地址。 该脚本推荐一个随机地址，可将其用作默认地址。 
+   b. 输入一个多播地址。 该脚本推荐一个随机地址，可将其用作默认地址。 
 
    c. 输入一个多播端口。 该脚本推荐将 5405 用作默认端口。 
 
@@ -220,7 +221,7 @@ Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程�
 
 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，如服务器不间断电源供应或管理接口卡。
 
-有关详细信息，请参阅[Pacemaker 从头开始群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔离和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)并[SUSE HA 文档： 隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
+有关详细信息，请参阅[Pacemaker 从头开始群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔离和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)和[SUSE HA 文档：隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
 
 在群集初始化时，如果检测不到任何配置，则将禁用 STONITH。 它可以稍后启用通过运行以下命令：
 

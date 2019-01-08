@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -24,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808869"
 ---
 # <a name="osql-utility"></a>osql 实用工具
   使用 **osql** 实用工具可以输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
@@ -46,7 +45,7 @@ ms.locfileid: "48123697"
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -110,7 +109,7 @@ C:\>osql
  指定命令超时之前的秒数。如果未指定 *time_out* 值，则命令将不会超时。  
   
  **-h** *headers*  
- 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用 -1，则在参数和设置之间一定不能有空格（可以是 **-h-1**，不能是 **-h -1**）。  
+ 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用的是 -1，参数和设置之间就不得有空格（可以是 -h-1，但不能是 -h -1）。  
   
  **-s** *col_separator*  
  指定列分隔符字符，默认值为空格。 若要使用对操作系统有特殊含义的字符 (例如 |; & \< >)，将该字符放在双引号 （"）。  
@@ -209,7 +208,7 @@ osql -E -q "select name, object_id from %table%"
   
 |Command|Description|  
 |-------------|-----------------|  
-|GO|执行上一个 GO 命令之后输入的所有语句。|  
+|前往|执行上一个 GO 命令之后输入的所有语句。|  
 |RESET|清除已输入的所有语句。|  
 |QUIT 或 EXIT( )|退出 **osql**。|  
 |Ctrl+C|结束查询但不退出 **osql**。|  
@@ -336,7 +335,7 @@ GO
  此语句的结果为 `10.3496`，说明该值是原样按完整的小数位存储的。  
   
 ## <a name="see-also"></a>请参阅  
- [注释&#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [注释 (MDX)](/sql/mdx/comment-mdx)   
  [--（注释）(MDX)](/sql/mdx/comment-mdx)   
  [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)  

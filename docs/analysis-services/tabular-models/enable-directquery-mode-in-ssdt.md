@@ -1,5 +1,5 @@
 ---
-title: 启用 DirectQuery 模式下在 SSDT |Microsoft 文档
+title: 在 SSDT 中的 Analysis Services DirectQuery 模式中启用 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d2a1ced9638a48dc02729c0f224b883974a7dde
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040731"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206296"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>在 SSDT 中启用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "34040731"
 
 可以为每个表创建示例分区，并添加示例数据，以便在生成模型时验证模型行为。 你添加的任何示例数据将会用在 **Analyze for Excel** 或其他可以连接到工作区数据库的客户端工具中。 有关详细信息，请参阅 [在设计模式下将示例数据添加到 DirectQuery 模型中](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 。  
   
-> [!TIP]  
-    >  即使在空模型的 DirectQuery 模式下，也始终都能查看每个表的小型内置行集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，请单击“表” > “表属性”来查看 50 行的数据集。  
+> [!TIP]
+>  即使在空模型的 DirectQuery 模式下，也始终都能查看每个表的小型内置行集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，请单击“表” > “表属性”来查看 50 行的数据集。  
   
   
 ## <a name="see-also"></a>另请参阅  

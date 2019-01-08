@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '&& (logical AND)'
@@ -15,12 +14,12 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59545c26427afa1677eca78e4c00263e663dded
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0482db6754777c2501e776a166f4d385e86900a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780189"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;（逻辑与）（SSIS 表达式）
   执行“逻辑与”运算。 如果所有条件都为 TRUE，则表达式计算结果为 TRUE。  
@@ -65,8 +64,8 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [（& a)&#40;按位 AND&#41; &#40;SSIS 表达式&#41;](bitwise-and-ssis-expression.md)   
+ [&（位与）（SSIS 表达式）](bitwise-and-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

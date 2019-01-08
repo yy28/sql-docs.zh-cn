@@ -18,12 +18,12 @@ ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08a073099616898ebd4f2a5161b0fe26f4bdb688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 877fa31954cb0bf7255d831475c875fb43d002b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826606"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210006"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_start_sp
  None  
   
 ## <a name="remarks"></a>备注  
- 数据库邮件未启用或未随[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。 使用数据库邮件配置向导可以启用并安装数据库邮件对象。  
+ 数据库邮件未启用或未随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装。 使用数据库邮件配置向导可以启用并安装数据库邮件对象。  
   
  此存储的过程是在**msdb**数据库。 该存储过程将启动保存待发消息请求的数据库邮件队列，并对外部程序启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活。  
   
@@ -58,7 +58,7 @@ sysmail_start_sp
 > [!NOTE]  
 >  此存储过程只启动数据库邮件的队列。 它不会激活数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递功能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

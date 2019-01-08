@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
@@ -13,12 +12,12 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f850c2420b4dbc28b4559e3d03ab36dbaafd08c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ac3714dbbd96150aa9d670e370e8a475f6a57e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127467"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817949"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>设置数据流组件的属性
   若要设置数据流组件（包括源、目标和转换）的属性，请使用下列功能之一：  
@@ -27,7 +26,7 @@ ms.locfileid: "48127467"
   
 -   “属性”窗口列出每个元素的组件级自定义属性以及所有数据流元素通用的属性。  
   
--   通过 **“高级编辑器”** 对话框可以访问每个组件的自定义属性。 通过 **“高级编辑器”** 对话框，还可以访问所有数据流组件通用的属性，包括输入属性、输出属性、错误输出属性、列属性和外部列属性。  
+-   通过 **“高级编辑器”** 对话框可以访问每个组件的自定义属性。 通过“高级编辑器”对话框，还可以访问所有数据流组件通用的属性，包括输入属性、输出属性、错误输出属性、列属性和外部列属性。  
   
 ### <a name="to-set-the-properties-of-a-data-flow-component-by-using-a-component-editor"></a>使用组件编辑器设置数据流组件的属性  
   

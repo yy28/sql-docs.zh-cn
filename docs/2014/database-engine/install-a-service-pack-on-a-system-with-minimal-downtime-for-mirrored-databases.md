@@ -17,12 +17,12 @@ ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053007"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520376"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
   本主题介绍了如何在安装 Service Pack 和修补程序时尽量减少镜像服务器的停机时间。 此过程包括按顺序升级参与数据库镜像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例。 这种形式的更新，这被称为*滚动更新*，停机时间减少为仅一次故障转移。 请注意，对于高性能模式会话中的镜像服务器与主体服务器从地理上遥远，滚动更新可能不合适。  
@@ -34,7 +34,7 @@ ms.locfileid: "48053007"
 -   如果会话包括见证服务器，建议您删除见证服务器。 否则，在更新镜像服务器实例时，数据库的可用性将取决于仍然连接至主体服务器实例的见证服务器。 删除见证服务器之后，可以在滚动更新过程中随时对其进行更新，而不会有数据库停机的风险。  
   
     > [!NOTE]  
-    >  有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 -   如果会话在高性能模式下运行，则将运行模式更改为高安全模式。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "48053007"
   
 1.  如果镜像会话在高性能模式下运行，则在执行滚动更新之前，将运行模式更改为不带自动故障转移功能的高安全模式。 使用下列方法之一：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”对话框中的[镜像页](../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”选项更改为“不带自动故障转移功能的高安全(同步)”。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：更改**操作模式**选项设为**不带自动故障转移 （同步） 的高安全性**通过[镜像页](../relational-databases/databases/database-properties-mirroring-page.md)的**数据库属性**对话框。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中：将事务安全设置为 FULL。 有关详细信息，请参阅[更改数据库镜像会话中的事务安全 (Transact-SQL)](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
   
 ### <a name="to-perform-the-rolling-update"></a>执行滚动更新  
   
-1.  为了最大限度地减少停机时间，我们建议：通过更新任何当前在其所有镜像会话中均为镜像服务器的镜像伙伴开始滚动更新。 此时，可能需要更新多个服务器实例。  
+1.  若要尽量减少停机时间，我们建议：通过更新任何镜像服务器目前在其所有镜像会话的镜像伙伴开始滚动更新。 此时，可能需要更新多个服务器实例。  
   
     > [!NOTE]  
     >  在滚动更新过程中可以随时更新见证服务器。 例如，如果某个服务器实例在会话 1 中为镜像服务器，在会话 2 中为见证服务器，则可以立即更新此服务器实例。  
@@ -110,7 +110,7 @@ ms.locfileid: "48053007"
 4.  对于在其作为伙伴的所有镜像会话中目前为镜像服务器的每个服务器实例，在该服务器实例上安装 Service Pack 或修补程序。 此时，可能需要更新多个服务器。  
   
     > [!IMPORTANT]  
-    >  在复杂的镜像配置中，某个服务器实例在一个或多个镜像会话中可能仍作为原始主体服务器。 对这些服务器实例重复步骤 2-4，直至涉及的所有实例均已更新。  
+    >  在复杂的镜像配置中，某个服务器实例在一个或多个镜像会话中可能仍作为原始主体服务器。 对于这些服务器实例重复步骤 2-4，直至涉及的所有实例都已都更新。  
   
 5.  继续镜像会话。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48053007"
   
 1.  可以选择使用下列方法之一返回高性能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”对话框中的 [镜像页](../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”选项更改为“高性能(同步)”。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：更改**操作模式**选项设为**高性能 （异步）** 通过[镜像页](../relational-databases/databases/database-properties-mirroring-page.md)的**数据库属性**对话框。  
   
-    -   在中[!INCLUDE[tsql](../includes/tsql-md.md)]： 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
+    -   在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>将见证服务器返回镜像会话  
   

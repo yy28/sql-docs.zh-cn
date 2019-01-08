@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739905"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266098"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -208,18 +208,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|创建、更改或删除了服务器主体时发生。|  
 |178|Audit Database Operation Event|发生数据库操作（如检查或订阅查询通知）时发生。|  
 |180|Audit Database Object Access Event|访问数据库对象（如架构）时发生。|  
-|181|TM: Begin Tran starting|BEGIN TRANSACTION 请求开始时发生。|  
-|182|TM: Begin Tran completed|BEGIN TRANSACTION 请求完成时发生。|  
-|183|TM: Promote Tran starting|PROMOTE TRANSACTION 请求开始时发生。|  
-|184|TM: Promote Tran completed|PROMOTE TRANSACTION 请求完成时发生。|  
+|181|TM: 正在启动 Begin Tran|BEGIN TRANSACTION 请求开始时发生。|  
+|182|TM: 已完成 Begin Tran|BEGIN TRANSACTION 请求完成时发生。|  
+|183|TM: 将提升 Tran starting|PROMOTE TRANSACTION 请求开始时发生。|  
+|184|TM: Promote Tran 完成|PROMOTE TRANSACTION 请求完成时发生。|  
 |185|TM: Commit Tran starting|COMMIT TRANSACTION 请求开始时发生。|  
-|186|TM: Commit Tran completed|COMMIT TRANSACTION 请求完成时发生。|  
-|187|TM: Rollback Tran starting|ROLLBACK TRANSACTION 请求开始时发生。|  
-|188|TM: Rollback Tran completed|ROLLBACK TRANSACTION 请求完成时发生。|  
+|186|TM: Commit Tran 完成|COMMIT TRANSACTION 请求完成时发生。|  
+|187|TM: 正在启动 rollback Tran|ROLLBACK TRANSACTION 请求开始时发生。|  
+|188|TM: 已完成 rollback Tran|ROLLBACK TRANSACTION 请求完成时发生。|  
 |189|Lock: Timeout (timeout > 0)|对资源（如页）的锁请求超时时发生。|  
-|190|Progress Report: Online Index Operation|报告生成进程正在运行时，联机索引生成操作的进度。|  
-|191|TM: Save Tran starting|SAVE TRANSACTION 请求开始时发生。|  
-|192|TM: Save Tran completed|SAVE TRANSACTION 请求完成时发生。|  
+|190|Progress Report: 联机索引操作|报告生成进程正在运行时，联机索引生成操作的进度。|  
+|191|TM: 保存 Tran starting|SAVE TRANSACTION 请求开始时发生。|  
+|192|TM: Save Tran 完成|SAVE TRANSACTION 请求完成时发生。|  
 |193|Background Job Error|后台作业不正常终止时发生。|  
 |194|OLEDB Provider Information|分布式查询运行并收集对应于提供程序连接的信息时发生。|  
 |195|Mount Tape|收到磁带装入请求时发生。|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|位图警告|指示何时在查询中禁用了位图筛选器。|  
 |213|Database Suspect Data Page|指示何时将某页添加到**suspect_pages**表中**msdb**。|  
 |214|CPU threshold exceeded|指示资源调控器检测到查询超过 CPU 阈值 (REQUEST_MAX_CPU_TIME_SEC) 的时间。|  
-|215|指示 LOGON 触发器或资源调控器分类器函数开始执行的时间。|指示 LOGON 触发器或资源调控器分类器函数开始执行的时间。|  
+|215|PreConnect:Starting|指示 LOGON 触发器或资源调控器分类器函数开始执行的时间。|  
 |216|PreConnect:Completed|指示 LOGON 触发器或资源调控器分类器函数完成执行的时间。|  
 |217|Plan Guide Successful|指示 SQL Server 已成功为计划指南中包含的查询或批处理生成执行计划。|  
 |218|Plan Guide Unsuccessful|指示 SQL Server 无法为包含计划指南的查询或批处理生成执行计划。 SQL Server 已尝试在不应用计划指南的情况下为此查询或批生成执行计划。 导致此问题的原因可能是计划指南无效。 您可以通过使用 sys.fn_validate_plan_guide 系统函数验证该计划指南。|  
@@ -275,7 +275,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|被记录的事件类的类型。|  
 |28|**ObjectType**|对象（如表、函数或存储过程）的类型。|  
 |29|**NestLevel**|执行此存储过程所处的嵌套级。 请参阅[@@NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
-|30|**State**|发生错误时的服务器状态。|  
+|30|**状态**|发生错误时的服务器状态。|  
 |31|**错误**|错误号。|  
 |32|**模式**|获取的锁的锁模式。 不填充此列**锁定： 释放**事件。|  
 |33|**Handle**|事件中引用的对象的句柄。|  
@@ -357,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  有关使用跟踪存储过程的示例，请参阅[创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="see-also"></a>请参阅  

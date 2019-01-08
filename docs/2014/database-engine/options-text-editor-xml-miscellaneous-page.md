@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126667"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328427"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>选项（“文本编辑器”-“XML”-“杂项”页）
-  使用“选项”对话框，可以更改 XML 编辑器的自动完成设置和架构设置。 若要使用这些设置，请在“工具”菜单上单击“选项”，展开“文本编辑器”文件夹，单击“XML”，再单击“杂项”。  
+
+使用“选项”对话框，可以更改 XML 编辑器的自动完成设置和架构设置。 若要使用这些设置，请在“工具”菜单上单击“选项”，展开“文本编辑器”文件夹，单击“XML”，再单击“杂项”。  
   
 ## <a name="auto-insert"></a>自动插入  
  **关闭标记**  
@@ -47,5 +46,3 @@ ms.locfileid: "48126667"
 ## <a name="caching"></a>Caching  
  **架构**  
  指定架构缓存的位置。 单击“浏览(...)”按钮在新窗口中打开当前的架构缓存。 默认位置是 *\<Management Studio 安装目录 >* \Xml\Schemas。  
-  
-  

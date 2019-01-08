@@ -1,5 +1,5 @@
 ---
-title: 对表中的数据进行排序 |Microsoft 文档
+title: 对 Analysis Services 表格模型表中的数据进行排序 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ef0a5de0958fbea806063c17dd5f9f1912449be4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4ab79de3551f1ef4613bb3c6f14b44ca660e2dfc
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039618"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072064"
 ---
 # <a name="sort-data-in-a-table"></a>对表数据进行排序 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "34039618"
     > [!NOTE]  
     >  如果得到的并不是期望的结果，列中可能包含存储为文本而不是数字的数字。 例如，从某些会计系统导入的负数或是以 '（撇号）开头的数字均存储为文本。  
   
-## <a name="see-also"></a>另请参阅  
- [筛选器和对数据进行排序](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
+## <a name="see-also"></a>请参阅  
+ [筛选器和数据进行排序](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   

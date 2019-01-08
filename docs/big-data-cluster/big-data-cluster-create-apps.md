@@ -1,26 +1,28 @@
 ---
-title: 如何部署 SQL Server 大数据群集上的应用程序 |Microsoft Docs
+title: 如何将应用部署
+titleSuffix: SQL Server 2019 big data clusters
 description: 将 Python 或 R 脚本部署为 SQL Server 2019 大数据群集 （预览版） 上的应用程序。
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272555"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246400"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 大数据群集 （预览版） 上的应用程序
 
 本文介绍如何部署和管理 R 和 Python 脚本为 SQL Server 2019 大数据群集 （预览版） 内的应用程序。
 
-R 和 Python 应用程序部署和管理与**mssqlctl-pre** CTP 2.1 中包含的命令行实用程序。 本文提供有关如何将这些 R 和 Python 脚本部署为从命令行应用程序的示例。
+R 和 Python 应用程序部署和管理与**mssqlctl-pre** CTP 2.2 中的命令行实用程序。 本文提供有关如何将这些 R 和 Python 脚本部署为从命令行应用程序的示例。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 您必须具有配置的 SQL Server 2019 大数据群集。 有关详细信息，请参阅[如何部署大数据群集在 Kubernetes 的 SQL Server](deployment-guidance.md)。 
 
@@ -29,12 +31,12 @@ R 和 Python 应用程序部署和管理与**mssqlctl-pre** CTP 2.1 中包含的
 **Mssqlctl-pre**命令行实用工具提供预览的 Python 和 R 的应用程序部署功能。 使用以下命令安装实用程序：
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>功能
 
-CTP 2.1 中可以创建、 删除、 列出和运行 R 或 Python 应用程序。 下表描述了可用于应用程序部署命令**mssqlctl-pre**。
+CTP 2.2 中可以创建、 删除、 列出和运行 R 或 Python 应用程序。 下表描述了可用于应用程序部署命令**mssqlctl-pre**。
 
 | Command | Description |
 |---|---|
@@ -54,15 +56,16 @@ mssqlctl-pre app create --help
 
 ## <a name="log-in"></a>登录
 
-在配置之前 R 和 Python 应用程序，首先登录到 SQL Server 使用的大数据群集`mssqlctl-pre login`命令。 指定的 IP 地址 （外部） `service-proxy-lb` (例如： `https://ip-address:30777`) 以及用户名和密码向群集。
+在配置之前 R 和 Python 应用程序，首先登录到 SQL Server 使用的大数据群集`mssqlctl-pre login`命令。 指定的外部 IP 地址`service-proxy-lb`或`service-proxy-nodeport`服务 (例如： `https://ip-address:30777`) 以及用户名和密码向群集。
 
-可以通过在 bash 或 cmd 窗口中运行此命令获取服务代理 lb 服务的 IP 地址：
+可以获取的 IP 地址**服务代理 lb**或**服务代理 nodeport**服务通过在 bash 或 cmd 窗口中运行以下命令：
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>创建应用

@@ -1,5 +1,5 @@
 ---
-title: 删除列 |Microsoft 文档
+title: 删除 Analysis Services 表格模型中的列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e850740754fea16aa82c60b3abda9f86bafeaff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f61aea9e4751094dafd37fe3b9ca8ed8d6ef0fe
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039332"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072074"
 ---
 # <a name="delete-a-column"></a>删除列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文介绍如何从表格模型表中删除某一列。  
+  本文介绍如何从表格模型表中删除列。  
   
 ## <a name="delete-a-model-table-column"></a>删除模型表列  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34039332"
   
 3.  在 **“编辑表属性”** 对话框的表预览窗口中，取消选中要删除的列，然后单击 **“确定”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [向表中添加列](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
  [分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   

@@ -1,18 +1,20 @@
 ---
-title: 使用 PROSE 代码 Accelerator 数据 Wrangling |Microsoft Docs
-description: ''
+title: 生成数据整理任务的代码
+titleSuffix: Azure Data Studio
+description: 本文介绍如何使用 Azure 数据 Studio 中的 PROSE 代码加速器来自动生成的常见数据整理任务代码。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a247cd33a4fdf2df35359db953e8d14444ace88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.custom: seodec18
+ms.openlocfilehash: a42820199c2a481e490b510e3fd00f9dc765cb27
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795928"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030517"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码 Accelerator 数据 Wrangling
 
@@ -41,7 +43,7 @@ import prose.codeaccelerator as cx
 
 PROSE 代码 Accelerator 解决此问题： 分析数据文件的结构，并自动生成代码以加载该文件。 在大多数情况下，生成的代码将正确分析数据。 在少数情况下，可能需要调整代码来满足你的需求。
 
-请参考如下示例：
+请看下面的示例：
 
  ```python
 import prose.codeaccelerator as cx

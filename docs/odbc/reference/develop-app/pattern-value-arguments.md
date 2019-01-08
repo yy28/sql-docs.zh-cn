@@ -15,12 +15,12 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792395"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208327"
 ---
 # <a name="pattern-value-arguments"></a>模式值自变量
 在目录中的某些参数函数，如*TableName*中的参数**SQLTables**，接受搜索模式。 这些参数接受搜索模式如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;它们是如果此属性设置为 SQL_TRUE 不接受的搜索模式的标识符参数。  
@@ -44,7 +44,7 @@ ms.locfileid: "47792395"
   
  必须格外谨慎处理接受搜索模式的参数中的搜索模式字符进行转义。 这是对下划线字符，在标识符中通常使用而言尤其如此。 在应用程序中的一个常见错误是从一个目录函数中检索值并将该值传递到另一个目录函数中的搜索模式参数。 例如，假设应用程序中检索 MY_TABLE 从结果集的表名**SQLTables** ，并将传递到**SQLColumns**检索 MY_TABLE 中列的列表。 而不是获得 MY_TABLE 列，应用程序将获取与搜索模式 MY_TABLE MY_TABLE、 MY1TABLE、 MY2TABLE，等匹配的所有表的列。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2。*x*驱动程序不支持中的搜索模式*CatalogName*中的参数**SQLTables**。 ODBC 3 *.x*驱动程序接受此参数中的搜索模式，如果 SQL_ATTR_ ODBC_VERSION 环境属性设置为 SQL_OV_ODBC3; 如果设置为 SQL_OV_ODBC2 不接受此参数中的搜索模式。  
   
- Null 指针传递给一个搜索模式参数将该自变量; 搜索不限制它是空指针，并且搜索模式 %（任何字符） 是等效的。 但是，长度为零的搜索模式 — 即，指向长度为零的字符串的有效指针 — 与空的字符串匹配 ("")。
+ Null 指针传递给一个搜索模式参数将该自变量; 搜索不限制它是空指针，并且搜索模式 %（任何字符） 是等效的。 但是，长度为零的搜索模式-即，指向长度为零的字符串的有效指针的匹配只有空字符串 ("")。

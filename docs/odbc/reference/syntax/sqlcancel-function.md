@@ -20,16 +20,16 @@ ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1c0c178fd1a448a86c5b5ce61fd12530eb4263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d0c756db7f84e6bcec46a61ef805f885f39d28
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646375"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214648"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLCancel**取消上一个语句的处理。  
@@ -41,7 +41,7 @@ ms.locfileid: "47646375"
 ```  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -82,7 +82,7 @@ SQLRETURN SQLCancel(
 ## <a name="canceling-asynchronous-processing"></a>取消异步处理  
  应用程序以异步方式调用一个函数后，它会调用重复用于确定它是否已完成处理的函数。 如果该函数仍在处理，它将返回 SQL_STILL_EXECUTING。 如果该函数已完成处理，则会返回不同的代码。  
   
- 任何返回 SQL_STILL_EXECUTING 函数调用后，应用程序可以调用**SQLCancel**取消函数。 如果取消请求成功，驱动程序返回 SQL_SUCCESS。 此消息并不表示，该函数已实际取消;它指示已处理取消请求。 时或如果该函数将实际被取消，并且依赖于驱动程序的数据源而定。 应用程序必须继续调用原始函数，直到返回代码不是 SQL_STILL_EXECUTING。 如果已成功取消该函数，返回代码是 SQL_ERROR 并且 SQLSTATE HY008 （已取消的操作）。 如果该函数完成其正常处理，返回代码是 SQL_SUCCESS 或如果该函数成功，则 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 并且以外 HY008 SQLSTATE （已取消的操作） 如果失败的函数。  
+ 任何返回 SQL_STILL_EXECUTING 函数调用后，应用程序可以调用**SQLCancel**取消函数。 如果取消请求成功，驱动程序返回 SQL_SUCCESS。 此消息并不表示，该函数已实际取消;它指示已处理取消请求。 时，或如果实际取消该函数是依赖于驱动程序的代码和数据源决定。 应用程序必须继续调用原始函数，直到返回代码不是 SQL_STILL_EXECUTING。 如果已成功取消该函数，返回代码是 SQL_ERROR 并且 SQLSTATE HY008 （已取消的操作）。 如果该函数完成其正常处理，返回代码是 SQL_SUCCESS 或如果该函数成功，则 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 并且以外 HY008 SQLSTATE （已取消的操作） 如果失败的函数。  
   
 > [!NOTE]  
 >  在 ODBC 3.5 中，调用**SQLCancel**不会进行处理的语句上完成的时不会视为**SQLFreeStmt**使用 SQL_CLOSE 选项，但具有根本不起作用。 若要关闭游标，应用程序应调用**SQLCloseCursor**，而非**SQLCancel**。  

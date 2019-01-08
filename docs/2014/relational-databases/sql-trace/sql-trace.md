@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823481"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
   在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
@@ -74,8 +73,8 @@ ms.locfileid: "48193187"
 |数据列|列号|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
-|**BigintData1**|52|值 (`bigint`数据类型)，这取决于跟踪中指定的事件类。|  
-|**BigintData2**|53|值 (`bigint`数据类型)，这取决于跟踪中指定的事件类。|  
+|**BigintData1**|52|值 (`bigint` 数据类型)，取决于跟踪中指定的事件类。|  
+|**BigintData2**|53|值 (`bigint` 数据类型)，取决于跟踪中指定的事件类。|  
 |**Binary Data**|2|依赖于跟踪中捕获的事件类的二进制值。|  
 |**ClientProcessID** <sup>1</sup>|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
 |**ColumnPermissions**|44|表示是否已设置了列权限。 可以分析语句文本来确定各列所应用权限的情况。|  
@@ -127,7 +126,7 @@ ms.locfileid: "48193187"
 |**SPID**|12|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 为客户端的相关进程分配的服务器进程 ID (SPID)。|  
 |**SqlHandle**|63|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 **sys.dm_exec_sql_text()** 以检索关联的 SQL 文本。|  
 |**StartTime** <sup>1</sup>|14|事件（如果有）的开始时间。|  
-|**State**|30|错误状态代码。|  
+|**状态**|30|错误状态代码。|  
 |**成功**|23|表示事件是否成功。 值包括：<br /><br /> **1** = Success.<br /><br /> **0** = Failure<br /><br /> 例如， **1** 表示权限检查成功，而 **0** 表示权限检查失败。|  
 |**TargetLoginName**|42|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的名称。|  
 |**TargetLoginSid**|43|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的 SID。|  

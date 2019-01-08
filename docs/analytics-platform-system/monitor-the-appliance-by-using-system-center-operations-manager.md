@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909717"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417558"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>使用 System Center Operations Manager 的分析平台系统监视器
 使用 System Center Operations Manager (SCOM) 以监视 Analytics Platform System (APS) 设备。
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先决条件  
   
 1.  System Center Operations Manager 2007 R2、 2012年或 2012 SP1 必须安装并正在运行。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "37909717"
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>监视 SQL Server PDW scom  
-配置 SCOM 管理包之后, 监视 SCOM 窗格中单击，然后向下钻取**SQL Server 装置**，然后**Microsoft SQL Server 并行数据仓库**。 Microsoft SQL Server 并行数据仓库的下方，有四个选项： 警报、 设备、 设备图和节点。  
+配置 SCOM 管理包之后, 监视 SCOM 窗格中单击，然后向下钻取**SQL Server 装置**，然后**Microsoft SQL Server 并行数据仓库**。 Microsoft SQL Server 并行数据仓库，下方有四个选项：警报、 设备、 设备图和节点。  
   
-### <a name="alerts"></a>Alerts  
+### <a name="alerts"></a>警报  
 警报是在哪里可以找到要管理的当前警报。  
   
 ![警报](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  

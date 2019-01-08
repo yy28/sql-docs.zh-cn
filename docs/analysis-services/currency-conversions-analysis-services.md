@@ -1,5 +1,5 @@
 ---
-title: 货币换算 (Analysis Services) |Microsoft 文档
+title: 货币换算 (Analysis Services) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebcce8d042b7a87771f99bac53b78bb59af6f7e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3e9934345856e3af3c10be5bf2cea38b259ec09d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015764"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207206"
 ---
-# <a name="currency-conversions-analysis-services"></a>货币换算 （Analysis Services）
+# <a name="currency-conversions-analysis-services"></a>货币换算 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   [!INCLUDE[applies](../includes/applies-md.md)] 多维  
@@ -177,7 +177,7 @@ ms.locfileid: "34015764"
   
  若有必要，您可以更改包含在货币换算中的脚本命令。 如果您覆盖了该货币换算，则您的更改将丢失。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 的全球化方案](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

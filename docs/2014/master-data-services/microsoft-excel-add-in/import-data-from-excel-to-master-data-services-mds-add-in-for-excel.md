@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02bd2846f4425a4849ab16170c76a55af16c2b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b24c20d468cadbe4f4c7268ac6696b366b792e4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130848"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214276"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>将数据从 Excel 发布到 MDS（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果你在 Excel 中完成处理后想要保存更改以便于其他用户访问，可以将数据发布到 MDS 存储库。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   发布更改时，将删除 MDS 管理的单元上的注释。  
 > -   在 MDS 托管单元中不支持公式。 MDS 托管单元中的公式作为文本值处理。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -48,7 +47,7 @@ ms.locfileid: "48130848"
 >  如果要向工作表添加新成员（行）但无法将其成功添加至 MDS 存储库，则你可能并非对工作表中的所有属性都具有“更新”权限。 在 **“检查”** 选项卡上的 **“更改”** 组中，单击 **“取消工作表保护”** ，然后再次尝试发布。  
   
 ## <a name="next-steps"></a>后续步骤  
- [应用业务规则&#40;MDS add-in for Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [应用业务规则（用于 Excel 的 MDS 外接程序）](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>请参阅  
  [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   

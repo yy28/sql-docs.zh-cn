@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51f65bc99f5fa4ac3840c283c110594eeb48800c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814549"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定义 XML 数据的序列化
   将 xml 数据类型显式或隐式转换为 SQL 字符串或二进制类型时，将根据本主题中所述的规则对 xml 数据类型的内容进行序列化。  
@@ -34,10 +34,10 @@ ms.locfileid: "48156107"
  例如：  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -48,13 +48,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
  例如：  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
  如果 SQL 目标类型是 VARCHAR 或 NCHAR，则使用与数据库的排序规则代码页对应的编码（既没有字节顺序标记，也没有 XML 声明）对结果进行序列化。 如果目标类型太小或无法将值映射到目标排序规则代码页，将产生错误。  
@@ -62,10 +62,10 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
  例如：  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 如果当前排序规则的代码页无法表示 Unicode 字符  ，这可能导致错误，或者，它将用特定编码来表示该字符。  
+ 这可能会导致出现错误，如果当前的排序规则代码页无法表示 Unicode 字符??，也将在特定的编码表示它。  
   
  将 XML 结果返回到客户端时，将用 UTF-16 编码发送数据。 然后，客户端提供程序将根据 API 规则显示该数据。  
   
@@ -96,11 +96,11 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   
@@ -118,7 +118,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 This example contains an entitized char: <.  
@@ -130,7 +130,7 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 This example contains an entitized char: <.  

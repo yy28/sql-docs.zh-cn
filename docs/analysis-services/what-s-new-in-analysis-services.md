@@ -1,5 +1,5 @@
 ---
-title: 什么&#39;Analysis Services 中的 s |Microsoft Docs
+title: 什么是 SQL Server 2016 Analysis Services 中的新增功能 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145992"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210186"
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么&#39;Analysis Services 中
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services 基于 **Intel 线程构建模块*
 
 SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进：
 
--   **NUMA 感知** - 为改善 NUMA 支持，现在 Analysis Services 内的内存中 (VertiPaq) 引擎在每个 NUMA 节点上维护单独的作业队列。 这可确保段扫描作业运行于在其中为段数据分配内存的相同节点上。 请注意，仅在至少具有四个 NUMA 节点的系统上默认启用 NUMA 感知。 在两节点系统中，访问远程分配内存的成本通常不保证管理 NUMA 细节的开销。
+-   **NUMA 感知** - 为改善 NUMA 支持，现在 Analysis Services 内的内存中 (VertiPaq) 引擎在每个 NUMA 节点上维护单独的作业队列。 这可确保段扫描作业运行于在其中为段数据分配内存的相同节点上。 请注意，仅在至少具有四个 NUMA 节点的系统上默认启用 NUMA 感知。 在两个节点的系统上的成本的访问远程分配的内存通常不保证管理 NUMA 细节的开销。
 -   **内存分配** - Analysis Services 已通过 Intel 线程构建模块（一种为每个内核提供单独内存池的可扩展分配器）加速。 随着内核数量的增加，系统几乎可实现线性扩展。
 -   **堆碎片** - 基于 Intel TBB 的可扩展分配器还有助于缓解由于堆碎片（已证实由 Windows 堆所产生）导致的性能问题。
 
@@ -49,10 +49,6 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
 - [下载 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 如果你有依赖于 AMO 的自定义应用程序，可能需要安装更新版本的 AMO。 有关说明，请参阅[安装 Analysis Services 数据提供程序（AMO、ADOMD.NET、MSOLAP）](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)。    
-
- #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>TechNet 虚拟实验室：SQL Server 2016 Analysis Services
-实践得真知？ 按照 [What's New in SQL Server 2016 Analysis Services Virtual Lab](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true)（SQL Server 2016 Analysis Services 虚拟实验室中的新增功能）逐步操作。
-在此实验室中，你将创建和监视扩展事件 (xEvents)、将表格项目升级到兼容级别 1200、使用 Visual Studio 配置、实现新的计算功能、实现新的表关系功能、配置显示文件夹、管理模型翻译、使用新表格模型脚本语言 (TMSL)、使用 PowerShell 以及试用新的 DirectQuery 模式功能。
 
 ## <a name="modeling"></a>建模    
 ### <a name="improved-modeling-performance-for-tabular-1200-models"></a>改进了表格 1200 模型的建模性能    
@@ -92,7 +88,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
 
 ## <a name="scripting"></a>脚本编写
  ### <a name="powershell-for-tabular-models"></a>面向表格模型的 PowerShell    
- 此版本包含面向兼容级别 1200 的表格模型的 PowerShell 增强功能。 你可以使用所有适用的 cmdlet，以及特定于表格模式的 cmdlet： [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) 和 [Invoke-ProcessTable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)。    
+ 此版本包含面向兼容级别 1200 的表格模型的 PowerShell 增强功能。 您可以使用所有适用的 cmdlet，以及特定于表格模式下的 cmdlet:[Invoke-processasdatabase](../analysis-services/powershell/invoke-processasdatabase.md)并[Invoke-processtable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)。    
  ### <a name="ssms-scripting-database-operations"></a>SSMS 脚本数据库操作    
  在 [最新的 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)中，现在为数据库命令（包括 Create、Alter、Delete、Backup、Restore、Attach、Detach）启用了脚本。 输出是采用 JSON 格式的表格模型脚本语言 (TMSL)。 有关详细信息，请参阅[表格模型脚本语言 (TMSL) 参考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务    
@@ -101,7 +97,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
  SSAS PowerShell cmdlet **Invoke-ASCmd** 现在接受表格模型脚本语言 (TMSL) 命令。 将来的版本可能会更新其他 SSAS PowerShell cmdlet，可让你使用新的表格元数据（发行说明中将标出例外情况）。    
 有关详细信息，请参阅 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 。    
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS 支持表格模型脚本语言 (TMSL)    
-  使用 [最新版本的 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)，你现在可以创建脚本来自动执行表格 1200 模型的大多数管理任务。 目前，可以编写以下任务的脚本：任何级别的处理任务，以及数据库级别的 CREATE、ALTER 和 DELETE。    
+  使用 [最新版本的 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)，你现在可以创建脚本来自动执行表格 1200 模型的大多数管理任务。 目前，可以编写脚本的以下任务：进程在任何级别，以及创建、 更改数据库级别的删除。    
     
  在功能上，TMSL 相当于提供多维对象定义的 XMLA ASSL 扩展，不过，TMSL 使用 **model**、 **table**和 **relationship** 等本机描述符来描述表格元数据。 有关架构的详细信息，请参阅[表格模型脚本语言 (TMSL) 参考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
     
@@ -125,7 +121,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
 
 在数据库级别，CREATE、 ALTER 和 DELETE 命令将在你熟悉的 XMLA 窗口中输出 TMSL 脚本。  还可以在此版本中编写其他命令（例如 Process）的脚本。 将来的版本可能会添加对其他许多操作的脚本支持。    
 
-**可编写脚本的命令** | **Description**
+**可编写脚本的命令** | **说明**
 --------------- | ----------------
 创建|添加数据库、连接或分区。 ASSL 等效项为 CREATE。
 createOrReplace|通过覆盖以前的版本来更新现有的对象定义（数据库、连接或分区）。 ASSL 等效于 AllowOverwrite 设置为 true 并且 ObjectDefinition 设置为 ExpandFull 时的 ALTER。
@@ -134,7 +130,7 @@ refresh|处理对象。 ASSL 等效项为 PROCESS。
 
 ## <a name="dax"></a>DAX
 ### <a name="improved-dax-formula-editing"></a>改进了 DAX 公式编辑
-公式栏的更新可帮助你使用语法颜色设置来区分函数、字段和度量值，以便更轻松地编写公式，它提供智能函数和字段建议，当你的 DAX 表达式组成部分有错误时，它将使用错误 *波形曲线*来告诉你。 它还允许你换行 (Alt + Enter) 和缩进 (Tab)。 公式栏现在还允许你在度量值中编写注释，只需键入“//”，同一行上这些字符后面的所有内容将被视为注释。
+公式栏的更新可帮助你使用语法颜色设置来区分函数、字段和度量值，以便更轻松地编写公式，它提供智能函数和字段建议，当你的 DAX 表达式组成部分有错误时，它将使用错误 *波形曲线*来告诉你。 它还允许你换行 (Alt + Enter) 和缩进 (Tab)。 在编辑栏现在还允许你为你的度量值的一部分编写注释，只需键入"/ /"并在同一行上的这些字符将被视为注释后面的所有内容。
 
 ### <a name="dax-variables"></a>DAX 变量    
 此版本现在包含对 DAX 中变量的支持。 现在，变量可将表达式的结果存储为命名变量，然后，可以将该变量作为参数传递给其他度量值表达式。 为变量表达式计算结果值后，这些值不会更改，即使在其他表达式中引用该变量。 有关详细信息，请参阅 [VAR 函数](http://msdn.microsoft.com/library/mt243785.aspx)。    
@@ -177,10 +173,10 @@ Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模�
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > 避免直接编辑 JSON。 这样做可能会损坏模型。    
- ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 架构中的新元素    
- 以下元素已添加到 [MS-CSDLBI] 2.0 架构中定义的 **TProperty** 复杂类型：    
+>  ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 架构中的新元素    
+>  以下元素已添加到 [MS-CSDLBI] 2.0 架构中定义的 **TProperty** 复杂类型：    
     
 |元素|定义|    
 |-------------|----------------|    
@@ -189,7 +185,7 @@ Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模�
     
 ## <a name="directquery"></a>DirectQuery    
 ### <a name="new-directquery-implementation"></a>新的 DirectQuery 实现    
-此版本对表格 1200 模型的 DirectQuery 进行了重大改进。 总结如下：    
+此版本对表格 1200 模型的 DirectQuery 进行了重大改进。 下面是摘要：    
 -   DirectQuery 现在会生成更简单的查询，从而提供更好的性能。    
 -   能够以更大的力度控制对用于模型设计和测试的示例数据集的定义。    
 -   DirectQuery 模式下的表格 1200 模型现在支持行级别安全性 (RLS)。 以前，RLS 会阻止在 DirectQuery 模式下部署表格模型。    
@@ -201,7 +197,7 @@ Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模�
     
 若要了解详细信息，请参阅[DirectQuery 模式下](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Analysis Services 团队博客](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)    
      

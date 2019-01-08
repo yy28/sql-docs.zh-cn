@@ -20,16 +20,16 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d59e4d93b082312b6ae33fc3c2e2ca1e4177c771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815169"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212707"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ODBC  
+ 版本引入了：ODBC 3.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLBulkOperations**执行大容量插入和大容量书签操作，包括更新、 删除和提取按书签。  
@@ -89,7 +89,7 @@ SQLRETURN SQLBulkOperations(
 |HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLBulkOperations**调用函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 调用函数时没有首先调用**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> (DM) 驱动程序是 ODBC 2。*x*驱动程序，并**SQLBulkOperations**曾为*StatementHandle*之前**SQLFetchScroll**或**SQLFetch**调用。<br /><br /> （数据挖掘） **SQLBulkOperations**后调用**SQLExtendedFetch**上调用了*StatementHandle*。|  
 |HY011 并显示|现在无法设置属性|(DM) 驱动程序是 ODBC 2。*x*驱动程序和 SQL_ATTR_ROW_STATUS_PTR 语句属性设置为调用之间**SQLFetch**或**SQLFetchScroll**和**SQLBulkOperations**.|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|*操作*参数为 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK; 数据值不是空指针; C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR; 和列长度值是小于 0，但不是等于 SQL_DATA_AT_EXECSQL_COLUMN_IGNORE、 sql_nts; 或 SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 长度/指示器缓冲区中的值为 SQL_DATA_AT_EXEC;SQL 类型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源特定于数据类型;和中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**是"Y"。<br /><br /> *操作*参数为 SQL_ADD、 SQL_ATTR_USE_BOOKMARK 语句属性设置为 SQL_UB_VARIABLE，并且第 0 列绑定到其的长度不等于此结果集的书签的最大长度的缓冲区。 (此长度可在 IRD 的 SQL_DESC_OCTET_LENGTH 字段中，并且可以通过调用来获取**SQLDescribeCol**， **SQLColAttribute**，或**SQLGetDescField**。)|  
+|HY090|字符串或缓冲区长度无效|*操作*参数为 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK; 数据值不是空指针; C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR; 和列长度值是小于 0，但不是等于 SQL_DATA_AT_EXECSQL_COLUMN_IGNORE、 sql_nts; 或 SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 长度/指示器缓冲区中的值为 SQL_DATA_AT_EXEC;SQL 类型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源特定的数据类型;和中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**是"Y"。<br /><br /> *操作*参数为 SQL_ADD、 SQL_ATTR_USE_BOOKMARK 语句属性设置为 SQL_UB_VARIABLE，并且第 0 列绑定到其的长度不等于此结果集的书签的最大长度的缓冲区。 (此长度可在 IRD 的 SQL_DESC_OCTET_LENGTH 字段中，并且可以通过调用来获取**SQLDescribeCol**， **SQLColAttribute**，或**SQLGetDescField**。)|  
 |HY092|无效的属性标识符|(DM) 为指定的值*操作*参数无效。<br /><br /> *操作*参数为 SQL_ADD、 SQL_UPDATE_BY_BOOKMARK 或 SQL_DELETE_BY_BOOKMARK，和 sql_attr_concurrency 设置语句属性设置为 SQL_CONCUR_READ_ONLY。<br /><br /> *操作*参数为 SQL_DELETE_BY_BOOKMARK、 SQL_FETCH_BY_BOOKMARK 或 SQL_UPDATE_BY_BOOKMARK，并且未绑定的书签列或 SQL_ATTR_USE_BOOKMARKS 语句属性已设置为 SQL_UB_OFF。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未实现的可选功能|驱动程序或数据源不支持请求中的操作*操作*参数。|  
@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>注释  
   
 > [!CAUTION]  
->  有关哪些语句指出**SQLBulkOperations**可以调用它必须与 ODBC 2 的兼容性所执行的操作。*x*应用程序，请参阅[块游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中向后兼容性的附录 g： 驱动程序指南部分。  
+>  有关哪些语句指出**SQLBulkOperations**可以调用它必须与 ODBC 2 的兼容性所执行的操作。*x*应用程序，请参阅[块游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)附录 g： 中的部分为了向后兼容的驱动程序指南。  
   
  应用程序使用**SQLBulkOperations**执行对基表或视图对应于当前查询执行以下操作：  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBulkOperations(
   
 1.  当将数据绑定通过使用**SQLBindCol**，应用程序中放入应用程序定义的值，例如的列号，  *\*TargetValuePtr*执行时数据的缓冲区列。 可以稍后使用值标识的列。  
   
-     SQL_LEN_DATA_AT_EXEC 将结果放置于该应用程序 (*长度*) 中的宏 *\*StrLen_or_IndPtr*缓冲区。 如果 SQL 数据类型的列是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 数据源特定于数据类型和驱动程序将返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是数个字节的数据要发送的参数; 否则为它必须为非负的值并将被忽略。  
+     SQL_LEN_DATA_AT_EXEC 将结果放置于该应用程序 (*长度*) 中的宏 *\*StrLen_or_IndPtr*缓冲区。 如果 SQL 数据类型的列是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 数据源特定的数据类型和驱动程序将返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是数个字节的数据要发送的参数; 否则为它必须为非负的值并将被忽略。  
   
 2.  当**SQLBulkOperations**调用时，如果有执行时数据列，函数将返回 SQL_NEED_DATA，继续到步骤 3 中，该过程。 （如果不有任何执行时数据列，该过程已完成。）  
   
@@ -243,7 +243,7 @@ SQLRETURN SQLBulkOperations(
   
      执行时数据列是包含在行集数据将发送具有**SQLPutData**更新或插入行时**SQLBulkOperations**。 它们被绑定与**SQLBindCol**。 返回的值**SQLParamData**是中的行的地址 **TargetValuePtr*正在处理的缓冲区。  
   
-4.  应用程序调用**SQLPutData**一个或多个次多次以发送列数据。 如果不能在中返回所有数据值，则需要多次调用 *\*TargetValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**只有在将字符 C 数据发送到字符、 二进制或数据源特定于数据类型的列或二进制 C 数据发送到具有二进制文件，一个字符的列时允许同一列或数据源特定于数据类型。  
+4.  应用程序调用**SQLPutData**一个或多个次多次以发送列数据。 如果不能在中返回所有数据值，则需要多次调用 *\*TargetValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**只有在将字符 C 数据发送到包含的字符、 二进制或数据源特定的数据类型的列或二进制 C 数据发送到具有二进制文件，一个字符的列时允许同一列或数据源特定的数据类型。  
   
 5.  应用程序调用**SQLParamData**再次以指示已将列的所有数据。  
   

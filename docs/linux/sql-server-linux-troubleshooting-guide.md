@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677908"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215453"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -94,18 +94,18 @@ ms.locfileid: "51677908"
 
 ## <a name="access-the-log-files"></a>访问日志文件
    
-SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文件中进行记录。 需要启用“超级用户”模式才能浏览此目录。
+SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文件中进行记录。 您需要在超级用户模式下，若要浏览此目录。
 
-安装程序在此处记录：/var/opt/mssql/setup-< time stamp representing time of install>。可使用任何 UTF-16 兼容工具（如“vim”或“cat”）浏览错误日志文件，如下所示： 
+安装程序在此处记录: / var/opt/mssql/安装程序-< representing time of 时间戳 > 您可以浏览错误日志文件使用任何 utf-16 兼容工具如 vim 或 cat 如下所示： 
 
    ```bash
    sudo cat errorlog
    ```
 
-如果愿意，还可将文件转换为 UTF-8，以使用以下命令通过“more”或“less”读取它们：
+如果您愿意，您可以还将文件转换为 UTF-8，读取它们与详细或 less 使用以下命令：
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>扩展事件
 
@@ -118,9 +118,9 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 对于 Core 转储 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-For SQL dumps 
+对于 SQL 转储 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -205,7 +205,7 @@ For SQL dumps
 
    请参阅本文中，故障排除部分[连接到 Linux 上的 SQL Server](#connection)。
 
-2. 错误：主机名称必须不超过 15 个字符。
+2. 错误：主机名必须是 15 个字符或更少。
 
    这是一个已知问题，在尝试安装 SQL Server Debian 包的计算机名超过 15 个字符时则会出现此问题。 除了更改计算机名外，目前尚无其他的解决方法。 可以编辑主机名文件并重启计算机以更改此名称。 以下[网站指南](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)详细说明了此。
 

@@ -1,5 +1,5 @@
 ---
-title: 设置列的数据类型 |Microsoft 文档
+title: Analysis Services 表格模型中的列数据类型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045801"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071954"
 ---
 # <a name="set-the-data-type-of-a-column"></a>设置列的数据类型 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34045801"
   
 -   **TRUE/FALSE**  
   
--   **日期**  
+-   **Date**  
   
  如果发现数据的数据类型错误或至少与期望的数据类型不同，可以选择以下处理方法：  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34045801"
   
  如果支持该数据类型，但是模型设计器在新数据类型中发现不支持的值，将遇到另一个错误，在继续操作前您需要更正数据值。  
   
- 有关在商业智能语义模型中使用的数据类型的详细信息，它们隐式转换和不同数据类型如何将它用公式中，请参阅[数据类型支持](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
+ 有关使用商业智能语义模型中的数据类型的详细信息，它们是隐式转换后，以及如何将不同数据类型的方式是在公式中使用，请参阅[支持的数据类型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持的数据类型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

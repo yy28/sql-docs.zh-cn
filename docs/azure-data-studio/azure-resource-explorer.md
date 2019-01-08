@@ -1,6 +1,8 @@
 ---
-title: 浏览使用 Azure 资源浏览器的 Azure SQL 资源 |Microsoft Docs
-description: 了解如何浏览和管理 Azure SQL Server、 Azure SQL DB 和通过 Azure 资源浏览器的 Azure SQL 托管实例。
+title: 浏览使用 Azure 资源浏览器的 Azure SQL 资源
+titleSuffix: Azure Data Studio
+description: 了解如何浏览和管理 Azure SQL Server、 Azure SQL 数据库和通过 Azure 资源浏览器的 Azure SQL 托管实例。
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356058"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030111"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>浏览使用 Azure 资源浏览器的 Azure SQL 资源
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>浏览和管理 Azure SQL 资源与 Azure 资源浏览器
 
 在本文档中，您学习如何浏览和管理 Azure SQL Server、 Azure SQL 数据库和通过 Azure 资源浏览器中的 Azure SQL 托管实例资源[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]。
 

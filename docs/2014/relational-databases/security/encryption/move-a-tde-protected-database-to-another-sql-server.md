@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544638"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
-  本主题介绍如何使用透明数据加密 (TDE) 保护数据库，然后将数据库移动到另一个实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
+  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
   
  **本主题内容**  
   
@@ -29,7 +29,7 @@ ms.locfileid: "49072271"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建由透明数据加密保护的数据库，可使用：**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "49072271"
   
 4.  在 **“新建数据库”** 对话框的 **“数据库名称”** 框中，输入新数据库的名称。  
   
-5.  在 **“所有者”** 框中，输入新数据库的所有者的名称。 或者，单击省略号 **(…)** 以打开 **“选择数据库所有者”** 对话框。 有关创建新的数据库的详细信息，请参阅 [Create a Database](../../databases/create-a-database.md)。  
+5.  在 **“所有者”** 框中，输入新数据库的所有者的名称。 或者，单击省略号 (…) 以打开“选择数据库所有者”对话框。 有关创建新的数据库的详细信息，请参阅 [Create a Database](../../databases/create-a-database.md)。  
   
 6.  在对象资源管理器中，右键单击加号以展开 **“数据库”** 文件夹。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "49072271"
   
 ###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
-1.  在对象资源管理器中，右键单击您在前面已进行加密的数据库，指向 **“任务”** ，然后选择 **“分离…”**。  
+1.  在对象资源管理器中，右键单击在前面已进行加密的数据库，指向“任务”，然后选择“分离…”。  
   
      在 **“分离数据库”** 对话框中提供了以下选项。  
   
@@ -184,14 +184,14 @@ ms.locfileid: "49072271"
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
      **“状态”**  
-     显示以下状态之一： **“就绪”** 或 **“未就绪”**。  
+     显示以下状态之一：**准备好**或**未就绪**。  
   
-     **消息**  
+     **Message**  
      **“消息”** 列可显示关于数据库的如下信息：  
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“<number_of_active_connections> 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 *< number_of_active_connections> * * * 个活动连接**-例如：**1 个活动连接**。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
@@ -203,13 +203,13 @@ ms.locfileid: "49072271"
   
 5.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的目标实例上创建数据库主密钥。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
-6.  通过使用原始服务器证书备份文件重新创建服务器证书。 有关详细信息，请参阅下面的 **“使用 Transact-SQL”** 。  
+6.  通过使用原始服务器证书备份文件重新创建服务器证书。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
-7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的对象资源管理器中，右键单击 **“数据库”** 文件夹，然后选择 **“分离…”**。  
+7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，右键单击“数据库”文件夹，然后选择“分离…”。  
   
 8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”** 下，单击 **“添加”**。  
   
-9. 在“定位数据库文件 - server_name”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”。  
+9. 在 **定位数据库文件-* * * server_name*对话框中，选择要附加到新服务器，并单击的数据库文件**确定**。  
   
      在 **“附加数据库”** 对话框中提供了以下选项。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "49072271"
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
      **"** *<database_name>* **”数据库详细信息**  
-     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击 **“浏览”** 按钮 (**…**)。  
+     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)。  
   
     > [!NOTE]  
     >  如果文件不存在，则 **“消息”** 列显示“找不到”。 如果找不到日志文件，则说明它位于其他目录中或者已被删除。 您需要更新 **“数据库详细信息”** 网格中该文件的路径使其指向正确的位置，或者从网格中删除该日志文件。 如果找不到 .ndf 数据文件，则需要更新网格中该文件的路径使其指向正确的位置。  

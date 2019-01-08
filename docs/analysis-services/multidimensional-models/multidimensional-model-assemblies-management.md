@@ -1,5 +1,5 @@
 ---
-title: 多维模型程序集管理 |Microsoft 文档
+title: 多维模型程序集管理 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025664"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215786"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供大量用于的多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 的语言，旨在完成从到遍历层次结构中的成员的标准统计计算的所有内容的内部函数。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一些可用于多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 语言的内部函数，这些内部函数经过专门设计，可用于完成从标准统计计算到遍历层次结构中的成员的所有任务。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
   
  因此，通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以将程序集添加到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或数据库。 使用程序集，您可以使用任何公共语言运行时 (CLR) 语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）来创建用户定义的外部函数。 还可以使用组件对象模型 (COM) 自动化语言，如 Microsoft Visual Basic 或 Microsoft Visual C++。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34025664"
   
  可向服务器添加具有新过程和新功能的程序集。 您可以使用程序集增强或添加服务器未提供的自定义功能。 您还可以通过使用程序集，向多维表达式 (MDX)、数据挖掘扩展 (DMX) 或存储过程添加新功能。 可从运行自定义应用程序处加载程序集，并且程序集二进制文件的副本将和数据库数据一起保存到服务器中。 删除程序集时，程序集副本也会从服务器中删除。  
   
- 程序集可为两种不同的类型：COM 和 CLR。 CLR 程序集是使用 .NET Framework 编程语言（如 C#、Visual Basic .NET 和托管 C++）开发的程序集。 COM 程序集是必须在服务器中注册的 COM 库。  
+ 程序集可为两种不同类型：COM 和 CLR。 CLR 程序集是使用 .NET Framework 编程语言（如 C#、Visual Basic .NET 和托管 C++）开发的程序集。 COM 程序集是必须在服务器中注册的 COM 库。  
   
  可以将程序集添加到 <xref:Microsoft.AnalysisServices.Server> 或 <xref:Microsoft.AnalysisServices.Database> 对象。 连接到服务器的任何用户或服务器中任何对象均可以调用服务器程序集。 但数据库程序集却只能由连接到 <xref:Microsoft.AnalysisServices.Database> 的数据库对象或用户调用。  
   
@@ -68,12 +68,12 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  程序集的安全性基于 .NET Framework 安全模式，这是一个代码访问安全模式。 .NET Framework 支持代码访问安全机制，此机制假设：运行时可承载完全可信和部分可信的代码。 .NET Framework 代码访问安全性所保护的资源通常由要求具有相应权限才能访问资源的托管代码所包装。 仅当调用堆栈中的所有调用方（在程序集层）均具有相应资源权限时，此权限要求才得到满足。  
   
- 对于程序集，执行权限随 **PermissionSet** 对象的 **Assembly** 属性传递。 托管代码接收的权限由有效的安全策略确定。 非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主环境中已有三个有效的策略级别：企业、计算机和用户。 代码接收的有效权限列表由这三个级别获得的权限交集所确定。  
+ 对于程序集，执行权限随 **PermissionSet** 对象的 **Assembly** 属性传递。 托管代码接收的权限由有效的安全策略确定。 已有三个级别的策略中的有效非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]托管环境： 企业、 计算机和用户。 代码接收的有效权限列表由这三个级别获得的权限交集所确定。  
   
- 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是 CLR 的宿主，它将为其提供宿主级别的安全策略级别，此策略是低于始终有效的三个策略级别的附加策略级别。 会为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建的每个应用程序域设置此策略。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果是 CLR 的宿主，它将为其提供宿主级别的安全策略级别，此策略是低于始终有效的三个策略级别的附加策略级别。 会为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建的每个应用程序域设置此策略。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主级别策略组合了用于系统程序集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定策略和用于用户程序集的用户指定策略。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主策略的用户指定部分基于程序集所有者，此所有者将为每个程序集指定三个权限存储桶中的一个：  
   
@@ -87,7 +87,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  COM（或非托管）程序集例程不支持 CLR 安全模式。  
   
-### <a name="impersonation"></a>模拟  
+### <a name="impersonation"></a>Impersonation  
  无论托管代码何时访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外的任何资源， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都将遵守与 **ImpersonationMode** 程序集属性设置相关的规则，以确保访问在适当的 Windows 安全性上下文中进行。 由于使用 **Safe** 权限设置的程序集不能访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]外的资源，所以这些规则仅适用于使用 **ExternalAccess** 和 **Unsafe** 权限设置的程序集。  
   
 -   如果当前执行的上下文对应于通过 Windows 身份验证的登录，并且和原始调用方的上下文相同（即中间没有 EXECUTE AS），则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在访问资源之前模拟通过 Windows 身份验证的登录。  
@@ -101,8 +101,8 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  不应依赖于在同一应用程序域中查找程序集，因为应用程序域边界和每个域中的程序集都是由此实现而定义的。  
   
-## <a name="see-also"></a>另请参阅  
- [安全设置的存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
- [定义存储的过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+## <a name="see-also"></a>请参阅  
+ [设置存储过程的安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [定义存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

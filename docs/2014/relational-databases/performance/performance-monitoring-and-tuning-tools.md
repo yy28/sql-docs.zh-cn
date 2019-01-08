@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -20,12 +19,12 @@ ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b3139aa4fab106e048e21847acadafc6bc90b8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817967"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一套综合的工具，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件和优化物理数据库的设计。 工具的选择取决于要执行的监视或优化类型和要监视的具体事件。  
@@ -40,7 +39,7 @@ ms.locfileid: "48204727"
 |[打开活动监视器 (SQL Server Management Studio)](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的活动监视器对于当前活动的特别视图很有用，并以图形方式显示有关信息︰<br /><br /> 在某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上运行的进程。<br /><br /> 被阻塞的进程。<br /><br /> 锁。<br /><br /> 用户活动。|  
 |[SQL 跟踪](../sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程：<br /><br /> [sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)<br /><br /> [sp_trace_generateevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)<br /><br /> [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)<br /><br /> [sp_trace_setfilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)<br /><br /> [sp_trace_setstatus (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)|  
 |错误日志|Windows 应用程序事件日志全面描述了 Windows Server 和 Windows 操作系统上发生的事件，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和全文搜索中的事件。 它包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中独有的事件的信息。 您可以利用错误日志中的信息来解决与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关的问题。|  
-|[系统存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统存储过程可以作为许多监视任务的一种功能强大的备选方法：<br /><br /> [sp_who (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)： <br />                    报告有关当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户和进程的快照信息，包括当前正在执行的语句以及该语句是否被阻塞。<br /><br /> [sp_lock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)： 报告有关锁，其中包括对象 ID、 索引 ID、 锁的类型和类型或资源锁应用于的快照信息。<br /><br /> [sp_spaceused &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)： 显示当前使用的表 （或整个数据库） 的磁盘空间量的估计。<br /><br /> [sp_monitor &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql)： 显示统计信息，包括 CPU 使用率、 I/O 使用率以及以来的空闲时间量**sp_monitor**上次执行。|  
+|[系统存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统存储过程可以作为许多监视任务的一种功能强大的备选方法：<br /><br /> [sp_who (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)： <br />                    报告有关当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户和进程的快照信息，包括当前正在执行的语句以及该语句是否被阻塞。<br /><br /> [sp_lock (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)：报告有关锁的快照信息，包括对象 ID、索引 ID、锁的类型以及锁应用于的类型或资源。<br /><br /> [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)：显示对表（或整个数据库）所用的当前磁盘空间量的估计。<br /><br /> [sp_monitor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql)：显示统计信息，包括 CPU 使用率、I/O 使用率以及自上次执行 **sp_monitor** 以来的空闲时间。|  
 |[DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)|DBCC（数据库控制台命令）语句使您能够检查性能统计信息以及数据库的逻辑与物理一致性。|  
 |[内置函数 (Transact-SQL)](/sql/t-sql/functions/functions)|内置函数可显示自启动服务器以来有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动的快照统计信息，这些统计信息存储在预定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器中。 例如，**@@CPU_BUSY** 包含 CPU 执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码所持续的时间；**@@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接或尝试连接的次数；**@@PACKET_ERRORS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接上出现的网络数据包数。|  
 |[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|跟踪标志可显示有关服务器内的特定活动的信息，用于诊断问题或性能问题（例如死锁链）。|  

@@ -1,7 +1,8 @@
 ---
-title: Azure 数据 Studio SQL Server 代理扩展 |Microsoft Docs
-description: Azure Data Studio 的 SQL Server 代理扩展 （预览版）
-ms.custom: tools|sos
+title: SQL Server 代理扩展
+titleSuffix: Azure Data Studio
+description: 安装和使用适用于 Azure Data Studio SQL Server 代理扩展 （预览版）
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 1ad136bb5bda8534d722b3b89d6731db5b704cb6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 077a3ae072c8a9f680162de5eb1813c15b1e7199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356208"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030391"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server 代理扩展 （预览版）
 

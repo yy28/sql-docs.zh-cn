@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 定义高级属性和维度属性 |Microsoft 文档
+title: 第 4 课：定义高级属性和维度属性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8a3f2d9a45233eba795e8f252723850bd9710f43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015844"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951579"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级属性和维度属性
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级的属性和维度属性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 在本课中，将了解如何使用特性、特性层次结构和维度属性的某些高级属性。  
@@ -41,7 +41,7 @@ ms.locfileid: "34015844"
 [根据辅助属性对属性成员进行排序](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 在该任务中，将了解如何基于辅助属性对维度成员排序，以获得所需的排序顺序。  
   
-[指定用户定义层次结构中属性之间的属性关系](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[指定用户定义层次结构中属性之间的属性关系](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 在该任务中，将了解如何定义属性的成员属性和指定它们之间的聚合关系。 有关详细信息，请参阅 [定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md) 和 [用户层次结构属性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
 [定义未知成员和 Null 处理属性](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
@@ -50,9 +50,9 @@ ms.locfileid: "34015844"
 ## <a name="next-lesson"></a>下一课  
 [第 5 课：定义维度和度量值组之间的关系](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模 & #40;Adventure Works 教程 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

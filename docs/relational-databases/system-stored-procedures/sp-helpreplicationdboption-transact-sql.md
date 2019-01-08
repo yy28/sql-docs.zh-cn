@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpreplicationdboption_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b035e07f7536ce84e298b9c87c25915e004938bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812029"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**合并发布**|允许合并复制。|  
 |**复制允许**（默认值）|允许事务复制或合并复制。|  
   
- [  **@reserved=** ]*保留*  
+ [ **@reserved=** ]*保留*  
  指定是否返回有关现有发布和订阅的信息。 *保留*是**位**，默认值为 0。 如果**1**，则结果集包含有关指定的数据库具有任何现有发布或订阅的信息。  
   
 ## <a name="result-sets"></a>结果集  
@@ -75,7 +74,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="remarks"></a>备注  
  **sp_helpreplicationdboption**快照、 事务和合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  成员**sysadmin**固定的服务器角色可以执行**sp_helpreplicationdboption**的任何数据库。 成员**db_owner**固定的数据库角色可以执行**sp_helpreplicationdboption**该数据库。  
   
 ## <a name="see-also"></a>请参阅  

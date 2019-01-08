@@ -1,20 +1,22 @@
 ---
-title: 监视使用群集管理门户的 SQL Server 大数据群集 （预览版） |Microsoft Docs
+title: 群集管理门户
+titleSuffix: SQL Server 2019 big data clusters
 description: 了解如何使用群集管理门户监视 SQL Server 2019 大数据群集 （预览版）。
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221463"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215533"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>群集管理门户简介
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用群集管理门户监视 SQL Server 大数据群集
 
 如果你想要监视或进行故障排除 SQL Server 2019 大数据群集 （预览版），使用群集管理门户。
 
@@ -29,10 +31,10 @@ ms.locfileid: "51221463"
 
 请按照[快速入门部署大数据群集](quickstart-big-data-cluster-deploy.md)直至到达**群集管理门户**部分。 运行时与 mssqlctl 的大数据群集后，请遵循以下说明：
 
-控制器 pod 运行后，可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`service-proxy-lb`(例如： **https://\<ip 地址\>: 30777**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
+控制器 pod 运行后，可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`service-proxy-lb`(例如： **https://\<ip 地址\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
 
 > [!NOTE]
-> 对于 CTP 2.1，没有一条安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
+> 对于 CTP 2.2 没有安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
 
 ## <a name="overview"></a>概述
 

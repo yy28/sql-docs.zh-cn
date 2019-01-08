@@ -1,5 +1,5 @@
 ---
-title: 在 DirectQuery 模式下的 DAX 公式兼容性 |Microsoft Docs
+title: 在 Analysis Services 的 DirectQuery 模式下的 DAX 公式兼容性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985379"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072714"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式下的 DAX 公式兼容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38985379"
 
 ## <a name="dax-functions-in-directquery-mode"></a>DirectQuery 模式下的 DAX 函数
 
-简单地说，DirectQuery 模型支持所有 DAX 函数。 但是，并非所有的函数支持所有公式类型，并且已针对 DirectQuery 模型优化所有函数。 基本上，我们可以将 DAX 函数分为两大阵营：已优化和未优化。 我们先仔细了解一下已优化的函数。
+简单地说，DirectQuery 模型支持所有 DAX 函数。 但是，并非所有的函数支持所有公式类型，并且已针对 DirectQuery 模型优化所有函数。 在最基本的级别，我们可以将 DAX 函数分为两大阵营：优化和非优化。 我们先仔细了解一下已优化的函数。
 
 
 ### <a name="optimized-for-directquery"></a>针对 DirectQuery 进行了优化
@@ -78,16 +78,16 @@ ms.locfileid: "38985379"
 通常，DAX 在内存中模型内更能容忍数据类型不匹配，并最多尝试两次对值进行隐式转换，如本节中所述。 但是，将根据关系引擎的规则，对在 DirectQuery 模式下发送到关系数据存储区的公式进行计算，且这些公式失败的可能性更高。  
   
 **字符串和数字的比较**  
-示例： `“2” < 3`  
+示例： `"2" < 3`  
   
 此公式比较文本字符串与数字。 对于 DirectQuery 模式和内存中模型，此表达式均为 **true** 。  
   
 在内存中模型中，结果为 **true** ，因为作为字符串的数字将隐式转换为数值数据类型，以便与其他数字进行比较。 SQL 还隐式将作为比较所用数字的文本数字转换为数值数据类型。  
   
-请注意，这表示在行为方面与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]的第一个版本发生了变化，此时将返回 **false**，因为文本“2”始终被视为大于任何数字。  
+请注意，这表示从第一个版本的行为更改[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，这将返回**false**，这是因为文本"2"始终被视为大于任何数字。  
   
 **文本与布尔值的比较**  
-示例： `“VERDADERO” = TRUE`  
+示例： `"VERDADERO" = TRUE`  
   
 此表达式比较文本字符串与布尔值。 通常，对于 DirectQuery 或内存中模型，将字符串值与布尔值进行比较将导致错误。 此规则的唯一例外是当字符串包含字词 **true** 或 **false**时；如果字符串包含 true 或 false 值之一，则将执行到布尔值的转换，此时将发生比较，并给出逻辑结果。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "38985379"
 -   在比较中以及在与 EXACT、AND、OR、 &amp;&amp;或 || 结合使用时，布尔值始终被当作逻辑值。  
   
 **从字符串转换为布尔值**  
-在内存中模型和 DirectQuery 模型中，只允许从以下这些字符串转换为布尔值： **“”** （空字符串）、 **“true”**、 **“false”**；其中，空字符串转换为 false 值。  
+在内存中和 DirectQuery 模型中，只允许转换为布尔值从以下这些字符串： **""** （空字符串）， **"true"**， **"false"**; 其中一个空字符串强制转换为 false 值。  
   
 将任何其他字符串转换为布尔数据类型会导致错误。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "38985379"
 当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允许从数字转换为字符串**  
-示例： `CONCATENATE(102,”,345”)`  
+示例： `CONCATENATE(102,",345")`  
   
 在 SQL Server 中，不允许从数字转换为字符串。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "38985379"
 **在 DirectQuery 中不支持两次尝试转换**  
 当第一次转换失败时，内存中模型常常尝试第二次转换。 这在 DirectQuery 模式下绝不会发生。  
   
-示例： `TODAY() + “13:14:15”`  
+示例： `TODAY() + "13:14:15"`  
   
 在此表达式中，第一个参数具有类型 **datetime** ；第二个参数具有类型 **string**。 但是，将以不同方式处理组合操作数时的转换。 DAX 将执行从 **string** 到 **double**的隐式转换。 在内存中模型内，公式引擎尝试直接转换为 **double**；如果失败，它将尝试将字符串转换为 **datetime**。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "38985379"
 但是，同一公式在内存中模型内使用时会返回一个 8 字节整数。 这是因为公式引擎不检查是否出现了数值溢出。  
   
 **具有空白的 LOG 函数返回不同的结果**  
-SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此，以下公式在 DirectQuery 模式下返回错误，但在内存中模式下返回无穷大 (–inf)。  
+SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此，下面的公式在 DirectQuery 模式下，但返回无穷大返回错误 (-inf) 在内存中模式下。  
   
 `EXAMPLE: LOG(blank())`  
   
-同样的限制应用于其他对数函数：LOG10 和 LN。  
+同样的限制适用于其他对数函数：LOG10 和 LN。  
   
 有关 DAX 中的 **blank** 数据类型的详细信息，请参阅 [DAX 语法参考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -284,7 +284,7 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
 此外，在 SQL Server 中，一些文本函数支持 Excel 中未提供的其他参数。 如果公式需要缺少的参数，则在内存中模型内可能获得不同的结果或错误。  
   
 **使用 LEFT、RIGHT 等返回字符的运算可能返回正确的字符但大小写不同，或者不返回结果。**  
-示例： `LEFT([“text”], 2)`  
+示例： `LEFT(["text"], 2)`  
   
 在 DirectQuery 模式下，所返回的字符的大小写始终与数据库中存储的字母完全相同。 但是，xVelocity 引擎针对值的压缩和编制索引使用不同的算法以提高性能。  
   
@@ -293,7 +293,7 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
 这种行为也适用于其他文本函数，包括 RIGHT、MID 等。  
   
 **字符串长度影响结果**  
-示例： `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+示例： `SEARCH("within string", "sample target  text", 1, 1)`  
   
 如果您使用 SEARCH 函数某个搜索字符串，并且目标字符串大于此内部包含的字符串，DirectQuery 模式将引发错误。  
   
@@ -306,21 +306,21 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
 在内存中模型内，公式遵循 Excel 的行为，它将源字符串和替换字符串串联起来，返回 CACalifornia。  
   
 **字符串中间的隐式 TRIM**  
-示例： `TRIM(“ A sample sentence with leading white space”)`  
+示例： `TRIM(" A sample sentence with leading white space")`  
   
 DirectQuery 模式将 DAX TRIM 函数转换为 SQL 语句 `LTRIM(RTRIM(<column>))`。 因此，将只删除前导和尾随空格。  
   
 相比较而言，内存中模型内的相同公式将遵循 Excel 的行为，删除字符串内的空格。  
   
 **隐式 RTRIM 并使用 LEN 函数**  
-示例： `LEN(‘string_column’)`  
+示例： `LEN('string_column')`  
   
 与 SQL Server 类似，DirectQuery 模式自动从字符串列的末尾删除空格；也即，它执行隐式 RTRIM。 因此，如果字符串具有尾随空格，则使用 LEN 函数的公式可能返回不同的值。  
   
 **内存中模式支持 SUBSTITUTE 的其他参数**  
-示例： `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+示例： `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-示例： `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+示例： `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 在 DirectQuery 模式下，只能使用此函数具有三 (3) 个参数的版本：对列的引用、旧文本和新文本。 如果您使用第二个公式，将引发错误。  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 2 课： 添加数据 |Microsoft Docs
+title: 第 2 课：将数据添加 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034676"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401632"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课程中，你将在 SSDT 中使用表导入向导来连接到 AdventureWorksDW SQL 示例数据库，选择数据、 预览和筛选的数据，然后将数据导入到模型工作区。  
   
-通过使用“表导入向导”，可以导入来自多种关系数据源的数据：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 等。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外可以使用存储的过程选择数据。 若要了解有关导入数据以及你可以从导入的数据源的不同类型的详细信息，请参阅[数据源](../analysis-services/tabular-models/data-sources-ssas-tabular.md)。  
+通过使用表导入向导，你可以从各种关系源导入数据：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 等。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外可以使用存储的过程选择数据。 若要了解有关导入数据以及你可以从导入的数据源的不同类型的详细信息，请参阅[数据源](../analysis-services/tabular-models/data-sources-ssas-tabular.md)。  
   
-学完本课的估计时间： **20 分钟**  
+学完本课的预计时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课： [第 1 课：创建新的表格模型项目](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 1 课：创建新的表格模型项目](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>创建连接  
   
@@ -38,7 +38,7 @@ ms.locfileid: "38034676"
     
     ![作为-表格-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
-    注意： 如果要在 1400年兼容级别创建您的模型，你将看到新的获取数据体验，而不是表导入向导。 对话框将会显示以下，步骤稍有不同，但您将仍将能够跟着介绍一起操作。 
+    注意：如果要在 1400年兼容级别创建您的模型，您将看到新的获取数据体验，而不是表导入向导。 对话框将会显示以下，步骤稍有不同，但您将仍将能够跟着介绍一起操作。 
   
 2.  在表导入向导中下,**关系数据库**，单击**Microsoft SQL Server** > **下一步**。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "38034676"
   
 7.  在“选择如何导入数据”页中，确认已选中“从表和视图的列表中进行选择，以便选择要导入的数据”。 需要从表和视图的列表中进行选择，因此，单击“下一步”以便显示源数据库内所有源表的列表。  
   
-8.  在“选择表和视图”页中，选中以下各表的复选框：“DimCustomer”、“DimDate”、“DimGeography”、“DimProduct”、“DimProductCategory”、“DimProductSubcategory”和“FactInternetSales”。  
+8.  在中**选择表和视图**页上，选择以下表的复选框：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，并**FactInternetSales**。  
   
     **请不要**单击“完成”。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "38034676"
   
 1.  选择的行**DimCustomer**表，并单击**预览并筛选**。 “预览所选表”窗口将打开，其中显示“DimCustomer”源表中的所有列。  
   
-2.  清除以下各列顶部的复选框： **SpanishEducation**， **FrenchEducation**， **SpanishOccupation**， **FrenchOccupation**. 
+2.  清除位于以下各列顶部的复选框：**SpanishEducation**， **FrenchEducation**， **SpanishOccupation**， **FrenchOccupation**。 
 
     ![作为-表格-lesson2-tiw-清除](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
@@ -164,7 +164,7 @@ ms.locfileid: "38034676"
 -   单击**文件** > **保存所有**。  
   
 ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 3 课： 标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)。
+请转到下一课：[第 3 课：标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)。
 
   
   

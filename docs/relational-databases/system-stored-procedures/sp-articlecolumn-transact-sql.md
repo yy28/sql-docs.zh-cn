@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlecolumn
@@ -17,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d9238e5b0f8ad5480e05ded3a0154eb5510904
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640715"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210116"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  包含此项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'**_文章_  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@column=**] **'***列*****  
+ [  **@column=**] **'**_列_  
  要添加或删除的列的名称。 *列*是**sysname**，默认值为 NULL。 如果为 NULL，则发布所有列。  
   
- [  **@operation=**] **'***操作*****  
+ [  **@operation=**] **'**_操作_  
  指定在项目中添加还是删除列。 *操作*是**nvarchar(5)**，使用默认值为 add。 **添加**会标记列以进行复制。 **删除**会取消列的标记。  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -70,7 +69,7 @@ sp_articlecolumn [ @publication = ] 'publication'
  [  **@change_active =** ] *change_active*  
  允许修改具有订阅的发布中的列。 *change_active*是**int**默认值为**0**。 如果**0**，则不修改列。 如果**1**，可以添加或从具有订阅的活动项目中删除列。  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定对项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
@@ -82,13 +81,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0**指定对项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化订阅，则会发生错误，并且不进行任何更改。 **1**指定对项目的更改会导致现有订阅重新初始化，并授予重新初始化订阅发生的权限。  
   
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'**_发布服务器上_  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不能与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
- [  **@internal=** ] **'***内部*****  
+ [  **@internal=** ] **'**_内部_  
  仅限内部使用。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -102,7 +101,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_articlecolumn**。  
   
 ## <a name="see-also"></a>请参阅  

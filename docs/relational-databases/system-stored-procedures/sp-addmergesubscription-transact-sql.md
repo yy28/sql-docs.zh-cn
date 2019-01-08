@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b319f6065c31a33f30469a73286491c1d641dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822571"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  建议的值不指定**none**。  
   
- [  **@frequency_type=**] *frequency_type*  
+ [ **@frequency_type=**] *frequency_type*  
  指示合并代理将在何时运行的值。 *frequency_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -110,7 +109,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**40**|当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时|  
 |NULL（默认值）||  
   
- [  **@frequency_interval=**] *frequency_interval*  
+ [ **@frequency_interval=**] *frequency_interval*  
  合并代理在星期几运行。 *frequency_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -127,7 +126,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**10**|周末|  
 |NULL（默认值）||  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
+ [ **@frequency_relative_interval=**] *frequency_relative_interval*  
  每月计划的合并频率间隔。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -139,10 +138,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**16**|上一次|  
 |NULL（默认值）||  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+ [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
  使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 NULL。  
   
- [  **@frequency_subday=**] *frequency_subday*  
+ [ **@frequency_subday=**] *frequency_subday*  
  是的单位*frequency_subday_interval*。 *frequency_subday*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -153,19 +152,19 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**8**|Hour|  
 |NULL（默认值）||  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
+ [ **@frequency_subday_interval=**] *frequency_subday_interval*  
  频率*frequency_subday*每次合并之间发生。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
+ [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  第一次安排合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
+ [ **@active_end_time_of_day=**] *active_end_time_of_day*  
  停止安排合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@active_start_date=**] *active_start_date*  
+ [ **@active_start_date=**] *active_start_date*  
  第一次安排合并代理的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 NULL。  
   
- [  **@active_end_date=**] *active_end_date*  
+ [ **@active_end_date=**] *active_end_date*  
  停止安排合并代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
  [ **@optional_command_line=**] **'***optional_command_line*****  
@@ -196,7 +195,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  返回的值将覆盖[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)参数化筛选器的 WHERE 子句中使用此函数时。 *主机名*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  出于性能方面的考虑，我们建议您不要将这些函数应用于参数化行筛选器子句（如 `LEFT([MyColumn]) = SUSER_SNAME()`）中的列名。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)中的筛选器子句和覆盖 HOST_NAME 值中，可能有必要将使用的数据类型转换[转换](../../t-sql/functions/cast-and-convert-transact-sql.md)。 有关此情况的最佳实践的详细信息，请参阅主题 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)表。  
+>  出于性能方面的考虑，我们建议您不要将这些函数应用于参数化行筛选器子句（如 `LEFT([MyColumn]) = SUSER_SNAME()`）中的列名。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)中的筛选器子句和覆盖 HOST_NAME 值中，可能有必要将使用的数据类型转换[转换](../../t-sql/functions/cast-and-convert-transact-sql.md)。 有关此情况的最佳实践的详细信息，请参阅主题 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“覆盖 HOST_NAME() 值”一节。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -209,11 +208,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addmergesubscription**。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [交互式冲突解决方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

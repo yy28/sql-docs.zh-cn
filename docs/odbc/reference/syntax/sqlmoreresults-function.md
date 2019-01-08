@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205356"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLMoreResults**确定是否可在上一个语句，其中包含更多结果**选择**，**更新**，**插入**，或**删除**语句而如果是这样，初始化处理这些结果。  
@@ -39,7 +39,7 @@ ms.locfileid: "47849935"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -73,7 +73,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>注释  
  **选择**语句返回结果集。 **更新**，**插入**，和**删除**语句返回受影响的行计数。 如果任何这些语句进行批处理，提交的包含数组的参数 （编号参数按，它们在批处理中出现的顺序升序排列），或在过程中，它们可以返回多个结果集或行计数。 有关语句的批处理和参数的数组的信息，请参阅[SQL 语句的批处理](../../../odbc/reference/develop-app/batches-of-sql-statements.md)并[参数值数组](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)。  
   
- 执行批处理后, 应用程序位于第一个结果集。 应用程序可以调用**SQLBindCol**， **SQLBulkOperations**， **SQLFetch**， **SQLGetData**， **SQLFetchScroll**， **SQLSetPos**，和上的第一个或任何后续结果集，就像没有只是单个结果集的所有元数据函数。 一旦完成了第一个结果集，应用程序调用**SQLMoreResults**将移到下一个结果集。 如果可用，另一个结果集或计数**SQLMoreResults**返回 SQL_SUCCESS 和初始化的结果集或进行其他处理的计数。 如果任何行计数 – 生成语句之间显示会生成 – 生成集的语句，它们可以转移调用递阶**SQLMoreResults**。在调用**SQLMoreResults**有关**更新**，**插入**，或者**删除**语句，应用程序可以调用**SQLRowCount**。  
+ 执行批处理后, 应用程序位于第一个结果集。 应用程序可以调用**SQLBindCol**， **SQLBulkOperations**， **SQLFetch**， **SQLGetData**， **SQLFetchScroll**， **SQLSetPos**，和上的第一个或任何后续结果集，就像没有只是单个结果集的所有元数据函数。 一旦完成了第一个结果集，应用程序调用**SQLMoreResults**将移到下一个结果集。 如果可用，另一个结果集或计数**SQLMoreResults**返回 SQL_SUCCESS 和初始化的结果集或进行其他处理的计数。 如果任何行计数生成语句之间显示结果集生成语句，请在可以转移调用踩**SQLMoreResults**。在调用**SQLMoreResults**有关**更新**，**插入**，或者**删除**语句，应用程序可以调用**SQLRowCount**。  
   
  如果有一个当前结果集的行会，其中**SQLMoreResults**将放弃该结果集，并使下一个结果集或计数可用。 如果已处理了所有结果，则**SQLMoreResults**返回 sql_no_data 为止。 对于某些驱动程序，输出参数和返回值之前将不可用在处理所有结果集和行计数。 对于此类驱动程序，输出参数和返回值时可用**SQLMoreResults**返回 sql_no_data 为止。  
   
@@ -89,14 +89,14 @@ SQLRETURN SQLMoreResults(
   
  如果搜索更新、 插入或删除语句在批语句不会影响任何行在数据源**SQLMoreResults**返回 SQL_SUCCESS。 这与不同的搜索更新的大小写、 insert 或 delete 语句，通过执行**SQLExecDirect**， **SQLExecute**，或**SQLParamData**、 哪些如果它不会影响任何行在数据源，返回 sql_no_data 为止。 如果应用程序调用**SQLRowCount**之后的调用中检索行计数**SQLMoreResults**不影响任何行**SQLRowCount**将返回 sql_no_data 为止。  
   
- 有关有效的序列化结果处理功能的其他信息，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 有关有效的序列化结果处理功能的其他信息，请参阅[附录 b:状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  有关 SQL_PARAM_DATA_AVAILABLE 和流式处理的输出参数的详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
 ## <a name="availability-of-row-counts"></a>行计数的可用性  
- 当批处理包含多个连续的行计数 – 生成语句时，就可以，这些行计数都会计入一个行计数。 例如，如果批含有五个 insert 语句，则某些数据源是能够返回五个单独的行计数。 某些其他数据源返回表示五个单独行计数之和的只有一个行计数。  
+ 当批处理包含多个连续的行计数生成语句时，就可以，这些行计数都会计入一个行计数。 例如，如果批含有五个 insert 语句，则某些数据源是能够返回五个单独的行计数。 某些其他数据源返回表示五个单独行计数之和的只有一个行计数。  
   
- 当一批中包含的结果集-生成和行计数 – 生成语句组合时，行计数，可能会或可能根本不可用。 行计数的可用性方面的驱动程序的行为 SQL_BATCH_ROW_COUNT 信息类型可通过调用中枚举**SQLGetInfo**。 例如，假设批处理包含**选择**后, 跟两个**插入**s，另一个**选择**。 然后则可能发生以下情况：  
+ 当一批中包含的结果集生成和行计数生成语句组合时，行计数，可能会或可能根本不可用。 行计数的可用性方面的驱动程序的行为 SQL_BATCH_ROW_COUNT 信息类型可通过调用中枚举**SQLGetInfo**。 例如，假设批处理包含**选择**后, 跟两个**插入**s，另一个**选择**。 然后则可能发生以下情况：  
   
 -   与这两个相对应的行计数**插入**根本不语句。 首次调用**SQLMoreResults**将在第二个结果集上进行定位**选择**语句。  
   

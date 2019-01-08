@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- vs.customize.toolbars
 - sql12.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b4435288069cbd465995d555de8653b39226b68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328477"
 ---
 # <a name="customize-toolbars-page"></a>自定义（“工具栏”页）
   使用“工具栏”选项卡可以创建、重命名、删除和重置工具栏。 通过在“工具”菜单上单击“自定义”，再单击“工具栏”，可以访问此选项卡。  
@@ -53,5 +52,3 @@ ms.locfileid: "48115073"
   
  **键盘**  
  显示“选项”对话框的“键盘”窗格，使用该窗格，可以更改和定义命令的快捷键组合。  
-  
-  

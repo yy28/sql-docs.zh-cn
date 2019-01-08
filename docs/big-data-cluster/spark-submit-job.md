@@ -1,27 +1,31 @@
 ---
-title: 在 Azure Data Studio 中的 SQL Server 大数据群集上提交 Spark 作业
-description: 在 Azure Data Studio 中的 SQL Server 大数据群集上提交 Spark 作业
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: 在 Azure Data Studio 中运行 Spark 作业
+titleSuffix: SQL Server 2019 big data clusters
+description: 将在 Azure Data Studio 中的 SQL Server 大数据群集上的 Spark 作业提交。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221603"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246496"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>在 Azure Data Studio 中的 SQL Server 大数据群集上提交 Spark 作业
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>提交 Azure Data Studio 中的 SQL Server 大数据群集上的 Spark 作业
 
-重要方案之一是能够为 SQL Server 2019 CTP 2.1 提交 Spark 作业。 Spark 作业提交功能，可提交本地 Jar 或上一年度文件与对 SQL Server 2019 大数据群集的引用。 它还可以执行 Jar 或上一年度文件，其中已存在于 HDFS 文件系统中。 
+大数据群集的重要方案之一是将提交 Spark 作业的 SQL Server 2019 预览版的功能。 Spark 作业提交功能，可提交本地 Jar 或上一年度文件与对 SQL Server 2019 大数据群集的引用。 它还可以执行 Jar 或上一年度文件，其中已存在于 HDFS 文件系统中。 
 
-## <a name="prerequisite"></a>先决条件 
-安装 SQL Server 用于大数据工具并连接到的大数据群集，然后才能提交 Spark 作业。 有关安装的详细信息，请将链接[部署大数据工具](deploy-big-data-tools.md)。
+## <a name="prerequisites"></a>先决条件
+
+- [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 扩展**
+   - **Kubectl**
+
+- [连接到你的大数据群集的 HDFS/Spark 网关的 Azure Data Studio](connect-to-big-data-cluster.md)。
 
 ## <a name="open-spark-job-submission-dialog"></a>打开 Spark 作业提交对话框
 有几种方法来打开 Spark 作业提交对话框。 方法包括仪表板中，在对象资源管理器和命令用于处理的上下文菜单。

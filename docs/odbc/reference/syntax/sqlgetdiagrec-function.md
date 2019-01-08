@@ -20,16 +20,16 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683018"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207506"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetDiagRec**返回多个字段包含错误、 警告和状态信息的诊断记录的当前值。 与不同**SQLGetDiagField**，这会返回调用时，每个诊断字段**SQLGetDiagRec**返回多个常用的字段的诊断记录，包括 SQLSTATE、 本机错误代码，并诊断消息文本中。  
@@ -94,13 +94,13 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>诊断  
  **SQLGetDiagRec**不会为其自身发送诊断记录。 它使用了以下返回值来报告其自身执行的结果：  
   
--   SQL_SUCCESS： 该函数成功地返回诊断信息。  
+-   SQL_SUCCESS:该函数成功地返回诊断信息。  
   
--   SQL_SUCCESS_WITH_INFO: \* *MessageText*缓冲区是否太小而无法保存请求的诊断消息。 未不生成任何诊断记录。 若要确定发生了截断，应用程序必须进行比较*BufferLength*可用的字节，这写入的实际数目 **StringLengthPtr*。  
+-   SQL_SUCCESS_WITH_INFO:\* *MessageText*缓冲区是否太小而无法保存请求的诊断消息。 未不生成任何诊断记录。 若要确定发生了截断，应用程序必须进行比较*BufferLength*可用的字节，这写入的实际数目 **StringLengthPtr*。  
   
--   SQL_INVALID_HANDLE： 句柄为由*HandleType*并*处理*不是有效的句柄。  
+-   SQL_INVALID_HANDLE:指示句柄*HandleType*并*处理*不是有效的句柄。  
   
--   以下项之一出现 SQL_ERROR::  
+-   SQL_ERROR:出现下列情况之一：  
   
     -   *RecNumber*是负数或 0。  
   
@@ -108,7 +108,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   使用异步通知时，句柄上的异步操作是不完整。  
   
--   SQL_NO_DATA: *RecNumber*中指定的句柄已存在的诊断记录数大于*处理。* 函数还将为任何正返回 SQL_NO_DATA *RecNumber*如果有没有可供诊断记录*处理*。  
+-   SQL_NO_DATA:*RecNumber*存在的句柄中指定的诊断记录数大于*处理。* 函数还将为任何正返回 SQL_NO_DATA *RecNumber*如果有没有可供诊断记录*处理*。  
   
 ## <a name="comments"></a>注释  
  应用程序通常会调用**SQLGetDiagRec** SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时返回上次调用 ODBC 函数。 但是，因为任何 ODBC 函数可以发布零个或多个诊断记录每次调用它，应用程序可以调用**SQLGetDiagRec**任何 ODBC 函数调用之后。 应用程序可以调用**SQLGetDiagRec**多次诊断数据结构中返回的部分或所有记录。 ODBC 规定可以存放在任何一次的诊断记录数没有限制。  

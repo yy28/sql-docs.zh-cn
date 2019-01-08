@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -23,12 +21,12 @@ ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d988713949f29671294f3897f62d2e0a2fb8677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807069"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>带批注的 XSD 架构简介 (SQLXML 4.0)
   您可以通过使用 XML 架构定义 (XSD) 语言创建关系数据的 XML 视图。 然后可通过使用 XML Path 语言 (XPath) 查询对这些视图进行查询。 这是类似于通过使用 CREATE VIEW 语句，然后指定 SQL 查询对视图创建视图。  
@@ -120,9 +118,9 @@ ms.locfileid: "48189509"
 ## <a name="other-resources"></a>其他资源  
  有关 XML 架构定义语言 (XSD)、XML Path 语言 (XPath) 和可扩展样式表语言转换 (XSLT) 的详细信息，请访问以下网站：  
   
--   XML 架构第 0 部分： 入门，W3C 建议 (http://www.w3.org/TR/xmlschema-0/)  
+-   XML 架构第 0 部分：入门，W3C 建议 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 架构第 1 部分： 结构、 W3C 建议 (http://www.w3.org/TR/xmlschema-1/)  
+-   XML 架构第 1 部分：结构、 W3C 建议 (http://www.w3.org/TR/xmlschema-1/)  
   
 -   XML 架构第 2: datatypes，W3C 建议 (http://www.w3.org/TR/xmlschema-2/)  
   

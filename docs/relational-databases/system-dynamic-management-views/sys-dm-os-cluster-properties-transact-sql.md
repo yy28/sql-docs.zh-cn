@@ -20,12 +20,12 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a8aa88e4a7eaea25a7c7114599d9b9cac601ab1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff0854e1252b4adc38c2c3d5f2022762fb3bd0f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544125"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +35,16 @@ ms.locfileid: "47613845"
  使用这些属性设置的值将影响故障检测、故障响应时间以及用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的运行状况的日志记录。  
   
 
-|列名|“属性”|Description|  
+|列名|属性|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|BIGINT|SQL Server 故障转移群集的日志记录级别。 可以通过启用详细日志记录在错误日志中提供更多详细信息以排除故障。 可以是以下值之一：<br /><br /> 0 – 禁用日志记录（默认值）<br /><br /> 1 - 仅限错误<br /><br /> 2 – 错误和警告<br /><br /> 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。|  
+|VerboseLogging|BIGINT|SQL Server 故障转移群集的日志记录级别。 可以通过启用详细日志记录在错误日志中提供更多详细信息以排除故障。 可以是以下值之一：<br /><br /> 0 - 关闭日志记录（默认值）<br /><br /> 1 - 仅限错误<br /><br /> 2 - 错误和警告<br /><br /> 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。|  
 |SqlDumperDumpFlags|BIGINT|SQLDumper 转储标志确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的转储文件的类型。 默认设置为 0。|  
 |SqlDumperDumpPath|nvarchar(260)|SQLDumper 实用工具生成转储文件的位置。|  
 |SqlDumperDumpTimeOut|BIGINT|超时值（毫秒），一旦 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 失败，SQLDumper 实用工具即在该超时值后生成转储。 默认值为 0。|  
 |FailureConditionLevel|BIGINT|设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集应在哪些状况下失败或重新启动。 默认值为 3。 有关详细说明或要更改的属性设置，请参阅[Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)。|  
 |HealthCheckTimeout|BIGINT|超时值，即 SQL Server 数据库引擎资源 DLL 在认定 SQL Server 实例不响应之前应等待服务器运行状况信息的时间。 该超时值用毫秒表示。 默认值为 60000。 有关详细信息或要更改此属性设置，请参阅[Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

@@ -20,16 +20,16 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70ee26274d101d1b18b00c83a89bd0c946da6742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855807"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212446"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetData**检索结果集中的单个列或之后的单个参数数据**SQLParamData**返回 SQL_PARAM_DATA_AVAILABLE。 它可以多次调用来检索部分中的可变长度数据。  
@@ -57,7 +57,7 @@ SQLRETURN SQLGetData(
  用于检索参数数据，它是从 1 开始的参数的序号。  
   
  *TargetType*  
- [输入]C 数据类型的类型标识符 **TargetValuePtr*缓冲区。 有关有效的 C 数据类型和类型标识符的列表，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型中的部分。  
+ [输入]C 数据类型的类型标识符 **TargetValuePtr*缓冲区。 有关有效的 C 数据类型和类型标识符的列表，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 中的部分数据类型。  
   
  如果*TargetType*是 SQL_ARD_TYPE，驱动程序使用 ARD SQL_DESC_CONCISE_TYPE 字段中指定的类型标识符。 如果*TargetType*是 SQL_APD_TYPE， **SQLGetData**将使用相同的 C 数据类型中指定**SQLBindParameter**。 C 数据类型中的指定，否则**SQLGetData**重写中指定的 C 数据类型**SQLBindParameter**。 如果它为 SQL_C_DEFAULT，驱动程序将选择基于源的 SQL 数据类型的默认 C 数据类型。  
   
@@ -105,8 +105,8 @@ SQLRETURN SQLGetData(
 |07009|描述符索引无效|为参数指定的值*Col_or_Param_Num*为 0，并将 SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_OFF。<br /><br /> 为参数指定的值*Col_or_Param_Num*大于结果集中的列数。<br /><br /> *Col_or_Param_Num*值不是等于提供的参数的序号。<br /><br /> (DM) 指定的列被绑定。 此说明不适用于返回 SQL_GD_BOUND 位掩码中的 SQL_GETDATA_EXTENSIONS 选项的驱动程序**SQLGetInfo**。<br /><br /> (DM) 指定的列数为小于或等于最大的绑定列数。 此说明不适用于返回 SQL_GD_ANY_COLUMN 位掩码中的 SQL_GETDATA_EXTENSIONS 选项的驱动程序**SQLGetInfo**。<br /><br /> (DM) 已调用应用程序**SQLGetData**当前行; 在当前调用中指定的列数已在前面的调用; 中指定的列数小于和驱动程序不会返回 SQL_GD_ANY_ORDER SQL_GETDATA_EXTENSIONS 选项中的位掩码**SQLGetInfo**。<br /><br /> （数据挖掘） *TargetType*参数为 SQL_ARD_TYPE，并*Col_or_Param_Num* ARD 中的描述符记录未通过一致性检查。<br /><br /> （数据挖掘） *TargetType*参数为 SQL_ARD_TYPE，和 ARD SQL_DESC_COUNT 字段中的值是小于*Col_or_Param_Num*参数。|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
 |22002|需要指示器变量，但未提供|*StrLen_or_IndPtr*是空指针，而 NULL 的数据检索。|  
-|22003|数值超出范围|为列 （为数字或字符串） 返回的数字值将导致要截断的数字的整个 （而不是小数） 部分。<br /><br /> 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
-|22007|日期时间格式无效|在结果集中的字符列已绑定到 C 日期、 时间或时间戳结构和列中的值分别是无效的日期、 时间戳。 有关详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22003|数值超出范围|为列 （为数字或字符串） 返回的数字值将导致要截断的数字的整个 （而不是小数） 部分。<br /><br /> 有关详细信息，请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22007|日期时间格式无效|在结果集中的字符列已绑定到 C 日期、 时间或时间戳结构和列中的值分别是无效的日期、 时间戳。 有关详细信息，请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
 |22012|被零除|返回导致被零除的算术表达式中的值。|  
 |22015|间隔字段溢出|将分配从精确数字或时间间隔 SQL 类型到 C 间隔类型前导字段中时导致重要数字丢失。<br /><br /> 当数据返回到 C 间隔类型，时没有 C 间隔类型中的 SQL 类型的值的表示形式。|  
 |22018|转换指定的字符值无效|结果集中的字符列已返回到 C 字符缓冲区，并且该列包含出现没有缓冲区的字符集中的表示形式的字符。<br /><br /> C 类型为精确或近似数值、 日期时间或间隔数据类型;列的 SQL 类型是字符数据类型;和列中的值不是有效的绑定 C 类型的文本。|  
@@ -121,7 +121,7 @@ SQLRETURN SQLGetData(
 |HY090|字符串或缓冲区长度无效|(DM) 为参数指定的值*BufferLength*小于 0。<br /><br /> 为参数指定的值*BufferLength*为小于 4， *Col_or_Param_Num*参数设置为 0，并且司机的 ODBC 2 *.x*驱动程序。|  
 |HY109|无效的游标位置|游标被置于 (通过**SQLSetPos**， **SQLFetch**， **SQLFetchScroll**，或者**SQLBulkOperations**) 已删除的行无法提取或。<br /><br /> 游标的只进游标，并且行集大小大于 1。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持使用**SQLGetData**与中的多个行**SQLFetchScroll**。 此说明不适用于返回 SQL_GD_BLOCK 位掩码中的 SQL_GETDATA_EXTENSIONS 选项的驱动程序**SQLGetInfo**。<br /><br /> 驱动程序或数据源不支持指定的组合来转换*TargetType*参数和相应的列的 SQL 数据类型。 此错误仅适用于 SQL 数据类型的列映射到特定于驱动程序的 SQL 数据类型。<br /><br /> 该驱动程序支持 ODBC 2 仅 *.x*，并将参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的 C 间隔数据类型的任何[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持使用**SQLGetData**与中的多个行**SQLFetchScroll**。 此说明不适用于返回 SQL_GD_BLOCK 位掩码中的 SQL_GETDATA_EXTENSIONS 选项的驱动程序**SQLGetInfo**。<br /><br /> 驱动程序或数据源不支持指定的组合来转换*TargetType*参数和相应的列的 SQL 数据类型。 此错误仅适用于 SQL 数据类型的列映射到特定于驱动程序的 SQL 数据类型。<br /><br /> 该驱动程序支持 ODBC 2 仅 *.x*，并将参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的 C 间隔数据类型的任何[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中附录 d:数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
 |HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此函数|(DM) 对应的驱动程序*StatementHandle*不支持该函数。|  
 |IM017|轮询异步通知模式中禁用|只要使用通知模型，将禁用轮询。|  
@@ -153,11 +153,11 @@ SQLRETURN SQLGetData(
   
  如果*TargetType*参数中的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段设置为间隔数据类型，默认时间间隔的前导精度 (2) 和默认时间间隔的秒精度 (6)，ARD，分别用于数据。 如果*TargetType*参数为 SQL_C_NUMERIC 数据类型，默认的精度 （驱动程序定义） 和 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置默认小数位数 (0)，用于数据。 如果任何默认精度或小数位数不适当，应用程序显式应通过调用设置适当的描述符字段**SQLSetDescField**或**SQLSetDescRec**。 它可以将 SQL_DESC_CONCISE_TYPE 字段设置为 SQL_C_NUMERIC 并调用**SQLGetData**与*TargetType* SQL_ARD_TYPE，这将导致在描述符字段的精度和小数位数的值的参数若要使用。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 ODBC 2 *.x*，应用程序设置*TargetType* SQL_C_DATE、 SQL_C_TIME，或指示 SQL_C_TIMESTAMP \* *TargetValuePtr*是日期、 time、 或时间戳结构。 在 ODBC 3 *.x*，应用程序设置*TargetType* SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，或 SQL_C_TYPE_TIMESTAMP。 驱动程序管理器，可相应映射必要时，基于上的应用程序和驱动程序版本。  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>检索在部件中的可变长度数据  
- **SQLGetData**可用于从包含在部分中的可变长度数据的列中检索数据，也就是说，SQL 数据类型的列的标识符时 SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_WCHAR、 SQL_WVARCHAR、 SQL_WLONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY 或可变长度类型的特定于驱动程序的标识符。  
+ **SQLGetData**可用于从 SQL 数据类型的列的标识符是 SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_WCHAR、 SQL_WVARCHAR、 SQL_ 时，即包含部分的长度可变的数据的列中检索数据WLONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY 或可变长度类型的特定于驱动程序的标识符。  
   
  若要从部件中的列检索数据，应用程序调用**SQLGetData**中同一列连续多次。 在每次调用**SQLGetData**返回数据的下一步的一部分。 它是由应用程序以重新组装的部分，注意，要移除的字符数据的中间部分的 null 终止字符。 如果没有更多数据，以返回或不为终止字符分配足够的缓冲区**SQLGetData**返回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004 （数据被截断）。 当它返回的最后一部分数据， **SQLGetData**返回 SQL_SUCCESS。 因为应用程序然后会有没有办法知道多少应用程序缓冲区中的数据有效，可从某一列，检索数据的最后一个有效调用上返回 SQL_NO_TOTAL 既不为零。 如果**SQLGetData**调用在此之后，其返回 sql_no_data 为止。 有关详细信息，请参阅下一部分中，"使用 SQLGetData 检索数据"。  
   
@@ -194,7 +194,7 @@ SQLRETURN SQLGetData(
   
 7.  将放置在数据的长度\* *StrLen_or_IndPtr*。 如果*StrLen_or_IndPtr*是空指针**SQLGetData**不返回长度。  
   
-    -   对于字符或二进制数据，这是数据的长度转换之后和之前由于截断*BufferLength*。 如果驱动程序无法转换后，确定数据的长度，因为有时是带有长数据的用例，它将返回 SQL_SUCCESS_WITH_INFO 和长度设置为 SQL_NO_TOTAL。 (上次调用**SQLGetData**必须始终返回数据、 不为零或 SQL_NO_TOTAL 的长度。)如果数据已被截断 SQL_ATTR_MAX_LENGTH 语句由于属性，此属性的值，而不是实际长度 — 中放置\* *StrLen_or_IndPtr*。 这是因为此属性设计使该驱动程序不有任何办法来找出实际长度截断的转换之前, 在服务器上的数据。 当**SQLGetData**是连续的多次调用同一列中，这是当前的调用开始处的可用数据的长度; 也就是说，长度还减少了每个后续调用。  
+    -   对于字符或二进制数据，这是数据的长度转换之后和之前由于截断*BufferLength*。 如果驱动程序无法转换后，确定数据的长度，因为有时是带有长数据的用例，它将返回 SQL_SUCCESS_WITH_INFO 和长度设置为 SQL_NO_TOTAL。 (上次调用**SQLGetData**必须始终返回数据、 不为零或 SQL_NO_TOTAL 的长度。)如果由于 SQL_ATTR_MAX_LENGTH 语句属性情况下，数据已被截断，而不是实际的长度-此特性的值将放入\* *StrLen_or_IndPtr*。 这是因为此属性设计使该驱动程序不有任何办法来找出实际长度截断的转换之前, 在服务器上的数据。 当**SQLGetData**是连续的多次调用同一列中，这是当前的调用开始处的可用数据的长度; 也就是说，长度还减少了每个后续调用。  
   
     -   对于所有其他数据类型，这是数据的长度后转换，则也就是说，它是类型的到转换数据的大小。  
   

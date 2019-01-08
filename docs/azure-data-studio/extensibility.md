@@ -1,7 +1,8 @@
 ---
-title: 扩展的 Azure Data Studio 功能 |Microsoft Docs
-description: 了解如何扩展 Azure Data Studio
-ms.custom: tools|sos
+title: 通过扩展性添加其他功能
+titleSuffix: Azure Data Studio
+description: 了解如何扩展模型和用于扩展的 Azure Data Studio 功能的重要扩展功能区域
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460242"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030011"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>开始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]扩展性
 
@@ -68,7 +69,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
     "when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
     "alwaysShow": true,
     "container": {
-        …
+        ...
     }
 }
 ]
@@ -83,13 +84,13 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 {
     "id": "innerTab1",
     "container": {
-        …
+        ...
     }
 },
 {
     "id": "innerTab2",
     "container": {
-       …
+       ...
     }
 }
 ]
@@ -112,7 +113,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 `dashboard.insights`
 
-你可以注册使用 dashboard.insights 的见解。 它类似于[教程： 生成自定义见解小组件](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+你可以注册使用 dashboard.insights 的见解。 它类似于[教程：生成自定义见解小组件](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -241,7 +242,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
                     "dark": "./icons/tab1Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             },
             {
@@ -252,7 +253,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
                     "dark": "./icons/tab2Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             }
         ]

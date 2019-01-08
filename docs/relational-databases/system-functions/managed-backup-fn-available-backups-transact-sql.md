@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769420"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409795"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|备份文件的 URL。|  
-|backup_type|NVARCHAR(6)|“DB”代表数据库备份，“LOG”代表日志备份|  
+|backup_type|NVARCHAR(6)|'DB' 数据库的备份 LOG 代表日志备份|  
 |expiration_date|DATETIME|预期删除此文件的日期。 这是基于将数据库恢复到指定保持期内某一时间点的能力设置的。|  
 |database_guid|UNIQUEIDENTIFIER|指定数据库的 GUID 值。  GUID 唯一地标识一个数据库。|  
 |first_lsn|NUMERIC(25, 0)|备份集中第一条或最早的日志记录的日志序列号。 可以为 NULL。|  
@@ -71,11 +71,11 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要**选择**对此函数的权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例列出了通过 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 为数据库“MyDB”备份的所有可用备份  
+ 以下示例列出了通过备份的所有可用备份[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]为数据库 MyDB  
   
 ```  
 SELECT *   

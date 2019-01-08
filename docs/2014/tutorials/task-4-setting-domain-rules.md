@@ -1,5 +1,5 @@
 ---
-title: 任务 4： 设置域规则 |Microsoft Docs
+title: 任务 4:设置域规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c8bbc2bb88747aee84be9eeff18fcae59df54d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c3b51408258b93f6585b46171793eb885a6d0d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138728"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349570"
 ---
-# <a name="task-4-setting-domain-rules"></a>任务 4：设置域规则
-  在此任务中，创建的规则**联系人电子邮件**域，以确认电子邮件地址是否以结尾**@adventure-works.com**。 请参阅[创建域规则](http://msdn.microsoft.com/library/hh510397.aspx)更多详细信息页上的主题。  
+# <a name="task-4-setting-domain-rules"></a>任务 4:设置域规则
+  在此任务中，创建的规则**联系人电子邮件**域，以确认电子邮件地址是否以结尾**@adventure-works.com**。 请参阅[创建域规则](https://msdn.microsoft.com/library/hh510397.aspx)更多详细信息页上的主题。  
   
 1.  单击**联系人电子邮件**中**域列表**。  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48138728"
 13. 单击**关闭**以关闭**测试域规则**对话框。  
   
 ## <a name="next-step"></a>下一步  
- [任务 5：设置基于字词的关系](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [任务 5:设置基于字词的关系](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   
