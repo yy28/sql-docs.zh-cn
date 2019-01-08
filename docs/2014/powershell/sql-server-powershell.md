@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8a161aeef437e04a3d6e7300a79af5fa0671568
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 481e31b23dde3f1fd37ac1af513cf7790dc31250
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068737"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349652"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 支持 Windows PowerShell，Windows PowerShell 是一个功能强大的脚本 shell，管理员和开发人员可以通过它自动执行服务器管理和应用程序部署。 与 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本相比，Windows PowerShell 语言能够支持更复杂的逻辑，这使得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理员能够生成强大的管理脚本。 Windows PowerShell 脚本还可用来管理其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 服务器产品， 这为管理员提供一个跨服务器的公用脚本语言。  
@@ -28,7 +27,7 @@ ms.locfileid: "48068737"
   
 -   一组 cmdlet（它们在 Windows PowerShell 脚本中用于指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 操作）。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet 支持各种操作，如运行包含 **或 XQuery 语句的** sqlcmd [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。  
   
- 若要了解有关 Windows PowerShell 的信息，请参阅 [Windows PowerShell 入门指南](http://msdn.microsoft.com/library/hh857337.aspx)。  
+ 若要了解有关 Windows PowerShell 的信息，请参阅 [Windows PowerShell 入门指南](https://msdn.microsoft.com/library/hh857337.aspx)。  
   
 ## <a name="sql-server-versions"></a>SQL Server 版本  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell 组件可用于管理 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 或更高版本的实例。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 的实例必须运行 SP2 或更高版本。 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 的实例必须运行 SP4 或更高版本。 将 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell 组件与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本一起使用时，这些组件的功能将限制为在那些版本中提供的功能。  
@@ -37,7 +36,7 @@ ms.locfileid: "48068737"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|描述正在运行的首选的机制[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 组件、 打开 PowerShell 会话，加载`sqlps`模块。 `sqlps` 模块在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet 以及该提供程序和 cmdlet 使用的 SQL Server 管理对象 (SMO) 程序集中加载。|[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)|  
+|介绍用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件、打开 PowerShell 会话和加载 `sqlps` 模块的首选机制。 `sqlps` 模块在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet 以及该提供程序和 cmdlet 使用的 SQL Server 管理对象 (SMO) 程序集中加载。|[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)|  
 |介绍如何仅加载 SMO 程序集而不加载提供程序或 cmdlet。|[在 Windows PowerShell 中加载 SMO 程序集](load-the-smo-assemblies-in-windows-powershell.md)|  
 |介绍如何通过右键单击“对象资源管理器”中的节点来运行 Windows PowerShell 会话。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 启动 Windows PowerShell 会话，加载 `sqlps` 模块，并将 SQL Server 提供程序路径设置为选定的对象。|[从 SQL Server Management Studio 中运行 Windows PowerShell](run-windows-powershell-from-sql-server-management-studio.md)|  
 |介绍如何创建运行 Windows PowerShell 脚本的 SQL Server 代理作业步骤。 然后，可以将作业安排在特定时间或响应事件时运行。|[SQL Server 代理中运行 Windows PowerShell 步骤](run-windows-powershell-steps-in-sql-server-agent.md
@@ -47,6 +46,6 @@ ms.locfileid: "48068737"
 |介绍如何指定包含 Windows PowerShell 不支持的字符的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 分隔标识符。|[PowerShell 中的 SQL Server 标识符](sql-server-identifiers-in-powershell.md)|  
 |介绍如何建立 SQL Server 身份验证连接。 默认情况下，SQL Server PowerShell 组件使用 Windows 身份验证连接，该连接使用运行 Windows PowerShell 的进程的 Windows 凭据。|[在数据库引擎 PowerShell 中管理身份验证](manage-authentication-in-database-engine-powershell.md)|  
 |介绍如何使用由 SQL Server PowerShell 提供程序实现的变量来控制使用 Windows PowerShell Tab 填写功能时列出的对象数。 当处理包含大量对象的数据库时，这一点特别有用。|[管理 Tab 自动补全 (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)|  
-|介绍如何使用 Get-Help 以获取有关 Windows PowerShell 环境中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件的信息。|[Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
+|介绍如何使用 Get-Help 以获取有关 Windows PowerShell 环境中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件的信息。|[获取 SQL Server PowerShell 帮助](../database-engine/get-help-sql-server-powershell.md)|  
   
   

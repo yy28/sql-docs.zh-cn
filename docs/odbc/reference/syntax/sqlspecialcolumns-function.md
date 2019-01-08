@@ -20,16 +20,16 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849355"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204366"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： 打开组  
+ 版本引入了：ODBC 1.0 标准符合性：打开组  
   
  **摘要**  
  **SQLSpecialColumns**检索有关指定表中的列的以下信息：  
@@ -62,9 +62,9 @@ SQLRETURN SQLSpecialColumns(
  *IdentifierType*  
  [输入]要返回列的类型。 必须是以下值之一：  
   
- SQL_BEST_ROWID： 返回最优列集，通过检索的列或列，允许的任意行中指定的表可以唯一标识。 列可以是专为此目的 （如 Oracle ROWID 或 Ingres TID） 或列或表的任何唯一索引的列是伪列。  
+ SQL_BEST_ROWID:返回最优列集，通过检索的列或列，允许的任意行中指定的表可以唯一标识。 列可以是专为此目的 （如 Oracle ROWID 或 Ingres TID） 或列或表的任何唯一索引的列是伪列。  
   
- SQL_ROWVER： 返回的列中指定的表中，如果有任何事务 （如 SQLBase ROWID 或 Sybase 时间戳） 更新的行中的任何值时自动更新数据源。  
+ SQL_ROWVER:如果有任何事务 （如 SQLBase ROWID 或 Sybase 时间戳） 更新的行中的任何值时自动更新数据源，返回指定表中的列。  
   
  *CatalogName*  
  [输入]表的目录名称。 如果驱动程序支持目录有关的某些表而不是其他人，例如当驱动程序检索数据从不同 Dbms，空字符串 ("") 表示没有目录的那些表。 *CatalogName*不能包含字符串的搜索模式。  
@@ -90,21 +90,21 @@ SQLRETURN SQLSpecialColumns(
  *NameLength3*  
  [输入]以字符为单位的长度 **TableName*。  
   
- *作用域*  
+ *范围*  
  [输入]最小所需 rowid 作用的域。 返回的 rowid 可能会更大范围。 必须是下列选项之一：  
   
- Sql_scope_currow 之外： 保证 rowid 只有位于该行上时才有效。 如果行已更新或删除由另一个事务，请使用 rowid 中更高版本重新选择可能不返回行。  
+ SQL_SCOPE_CURROW 之外：保证 rowid 只有位于该行上时才有效。 如果行已更新或删除由另一个事务，请使用 rowid 中更高版本重新选择可能不返回行。  
   
- SQL_SCOPE_TRANSACTION: rowid 保证可为当前事务的持续时间内有效。  
+ SQL_SCOPE_TRANSACTION:Rowid 保证可为当前事务的持续时间内有效。  
   
- SQL_SCOPE_SESSION: rowid 被保证有效会话的持续时间 （跨事务边界）。  
+ SQL_SCOPE_SESSION:Rowid 保证在有效的会话的持续时间 （跨事务边界）。  
   
  *可以为 Null*  
  [输入]确定是否返回可以具有 NULL 值的特殊列。 必须是下列选项之一：  
   
- SQL_NO_NULLS： 排除可以具有 NULL 值的特殊列。 某些驱动程序不能支持 SQL_NO_NULLS，并且这些驱动程序将返回空结果集如果 SQL_NO_NULLS 已指定。 仅当绝对必要时，应为此用例和请求 SQL_NO_NULLS 准备应用程序。  
+ SQL_NO_NULLS:排除可以具有 NULL 值的特殊列。 某些驱动程序不能支持 SQL_NO_NULLS，并且这些驱动程序将返回空结果集如果 SQL_NO_NULLS 已指定。 仅当绝对必要时，应为此用例和请求 SQL_NO_NULLS 准备应用程序。  
   
- SQL_NULLABLE： 返回特殊列，即使它们可以具有 NULL 值。  
+ SQL_NULLABLE:返回特殊列，即使它们可以具有 NULL 值。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -125,7 +125,7 @@ SQLRETURN SQLSpecialColumns(
 |HY009|使用空指针无效|*TableName*参数是空指针。<br /><br /> SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE， *CatalogName*参数为 null 指针和 SQL_CATALOG_NAME*信息类型*支持目录名称返回。<br /><br /> (DM) SQL_ATTR_METADATA_ID 语句属性设置为 SQL_TRUE，并*SchemaName*参数是空指针。|  
 |HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此函数仍在执行时**SQLSpecialColumns**调用。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) 之一的长度参数值小于 0 但不是等于 SQL_NTS。<br /><br /> 长度参数之一的值超出相应名称的最大长度值。 可以通过调用获取每个名称的最大长度**SQLGetInfo**与*信息类型*值： SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN 或 SQL_MAX_TABLE_NAME_LEN。|  
+|HY090|字符串或缓冲区长度无效|(DM) 之一的长度参数值小于 0 但不是等于 SQL_NTS。<br /><br /> 长度参数之一的值超出相应名称的最大长度值。 可以通过调用获取每个名称的最大长度**SQLGetInfo**与*信息类型*值：SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN 或 SQL_MAX_TABLE_NAME_LEN。|  
 |HY097|列类型超出了范围|(DM) 无效*IdentifierType*指定的值。|  
 |HY098|作用域类型超出了范围|(DM) 无效*作用域*指定的值。|  
 |HY099|可以为 null 类型超出了范围|(DM) 无效*Nullable*指定的值。|  
@@ -168,11 +168,11 @@ SQLRETURN SQLSpecialColumns(
 |作用域 (ODBC 1.0)|1|Smallint|Rowid 的实际作用域。 包含以下值之一：<br /><br /> SQL_SCOPE_CURROW 之外 SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> 则返回 NULL *IdentifierType*是 SQL_ROWVER。 有关每个值的说明，请参阅的说明*作用域*"语法"，前面在本部分中。|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar 不为 NULL|列名称。 该驱动程序返回空字符串不具有名称的列。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。|  
-|TYPE_NAME (ODBC 1.0)|4|Varchar 不为 NULL|数据源而定的数据类型名称;"例如，CHAR"、"VARCHAR"、"MONEY"、"长 VARBINARY"或者"CHAR FOR BIT DATA （）"。|  
+|TYPE_NAME (ODBC 1.0)|4|Varchar 不为 NULL|数据源相关的数据类型名称;"例如，CHAR"、"VARCHAR"、"MONEY"、"长 VARBINARY"或者"CHAR FOR BIT DATA （）"。|  
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|数据源中的列的大小。 有关列大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Integer|上传输的数据的字节长度**SQLGetData**或**SQLFetch**如果 SQL_C_DEFAULT 指定的操作。 对于数值数据，此大小可能不同于数据源上存储的数据量。 此值是为字符或二进制数据的 COLUMN_SIZE 列相同。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|数据源中的列小数位数。 不适用小数位数为数据类型则返回 NULL。 有关十进制数字的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指示列是否为伪列，如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**注意：** 的最大互操作性，伪列不应引用与返回的引号字符的标识符**SQLGetInfo**。|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指示列是否为伪列，如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**注意：** 最大互操作性，伪列不应引用与返回的引号字符的标识符**SQLGetInfo**。|  
   
  应用程序的 SQL_BEST_ROWID 检索值后，应用程序可以使用这些值来重新选择该定义的作用域内的行。 **选择**保证语句返回任何行或一行。  
   

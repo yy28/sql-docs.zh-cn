@@ -1,5 +1,5 @@
 ---
-title: 重命名表或列 |Microsoft 文档
+title: 重命名 Analysis Services 表格模型表或列 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040101"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072634"
 ---
 # <a name="rename-a-table-or-column"></a>重命名表或列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,16 +44,16 @@ ms.locfileid: "34040101"
   
 -   控制字符  
   
--   以下字符 （这不是有效的 Analysis Services 对象的名称中的）:。，;': /\\*|?& %$！ + = （) []{}<>  
+-   （这不是有效的 Analysis Services 对象名称中的） 的以下字符:。，;': /\\*|?& %$！ + = （) []{}<>  
   
 -   Analysis Services 保留关键字，包括多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 函数名称和运算符。  
   
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>重命名对现有表、列和计算的影响  
- 只要您更改某一表的名称，就会更改可能包含多个列或度量值的基础表对象的名称。 若要在其定义中使用新名称，必须更新任何列都在表中和使用表中，任何关系。 在大多数情况下，此更新自动发生。
+ 只要您更改某一表的名称，就会更改可能包含多个列或度量值的基础表对象的名称。 若要在其定义中使用新名称，必须更新任何列都在表中，并使用表的所有关系。 在大多数情况下，此更新会自动发生。
   
- 此外必须更新使用重命名的表，或使用列重命名的表中，从任何计算，并从这些计算派生的数据必须刷新和重新计算。 根据受到影响的表和计算的数目，上述刷新和重新计算可能需要一些时间才能完成。 因此，重命名表的最佳时机是在导入过程中，或者是在开始生成复杂的关系和计算之前。  
+ 此外必须更新使用已重命名的表，或使用来自重命名表的列的任何计算，并从这些计算派生的数据刷新和重新计算。 根据受到影响的表和计算的数目，上述刷新和重新计算可能需要一些时间才能完成。 因此，重命名表的最佳时机是在导入过程中，或者是在开始生成复杂的关系和计算之前。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表和列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [从 Power Pivot 导入](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
  [从 Analysis Services 导入](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  

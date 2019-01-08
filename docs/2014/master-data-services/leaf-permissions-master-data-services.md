@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -17,12 +16,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: acb8ea24effbb07d5ecad1f7efec491acb6fb55d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812099"
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
   叶权限应用到实体的所有叶成员的属性值。  
@@ -48,7 +47,7 @@ ms.locfileid: "48103244"
 |----------------|-----------------|  
 |**只读**|显示属性，但是用户不能更改属性值。|  
 |**Update**|显示属性，用户可以更改属性值。|  
-|**拒绝**|不显示属性。<br /><br /> 注意：不能明确拒绝对 Name 和 Code 属性的访问权限。|  
+|**拒绝**|不显示属性。<br /><br /> 注意：不能明确拒绝访问 Name 和 Code 属性。|  
   
 ### <a name="example"></a>示例  
  对于 Product 实体，将 **“更新”** 权限分配给 Subcategory 属性。 向所有其他属性分配“拒绝”权限。  
@@ -64,10 +63,10 @@ ms.locfileid: "48103244"
 >  在本示例中，Subcategory 是基于域的属性，基于 SubcategoryList 实体。 可以为 Mountain-100 选择不同子类别，但是不能向 SubcategoryList 实体添加成员或从中删除成员。  
   
 ## <a name="see-also"></a>请参阅  
- [分配模型对象权限&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [分配模型对象权限 (Master Data Services)](assign-model-object-permissions-master-data-services.md)   
  [合并的权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
- [模型对象权限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [模型对象权限 (Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

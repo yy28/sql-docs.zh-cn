@@ -14,12 +14,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532438"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建应用程序角色。 应用程序角色可限制用户通过除特定应用程序之外的其他方式访问数据库。 应用程序角色不包含任何用户，因此，在选择 **“应用程序角色”** 时不会显示 **“角色成员”** 列表。  
@@ -31,7 +31,7 @@ ms.locfileid: "48076257"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建应用程序角色，请使用：**  
   
@@ -58,9 +58,9 @@ ms.locfileid: "48076257"
   
 4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”。  
   
-5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”** 页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
+5.  在“常规”页的“应用程序角色 - 新建”对话框中，在“角色名称”框中输入新的应用程序角色的新名称。  
   
-6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号 **(…)** 以打开 **“定位架构”** 对话框。  
+6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号“(…)”以打开“定位架构”对话框。  
   
 7.  在 **“密码”** 框中，输入新角色的密码。 在 **“确认密码”** 框中再次输入该密码。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48076257"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“应用程序– 新建”** 对话框还在两个其他页上提供了选项： **“安全对象”** 和 **“扩展属性”**。  
+ **应用程序角色的新**对话框还提供了两个其他页上的选项：**安全对象**并**扩展属性**。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   

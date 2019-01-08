@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807379"
 ---
 # <a name="add-or-change-a-property-expression"></a>添加或更改属性表达式
   可以为包、任务、Foreach 循环容器、For 循环容器、序列容器、事件处理程序、包和项目级别连接管理器以及日志提供程序创建属性表达式。  
@@ -44,7 +43,7 @@ ms.locfileid: "48178497"
   
     -   在 **“表达式”** 列中直接键入或更改属性表达式，然后单击 **“确定”**。  
   
-         — 或 —  
+         -或-  
   
     -   单击属性的表达式行中的省略号 (...) 以打开“表达式生成器”。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48178497"
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 表达式](integration-services-ssis-expressions.md)   
  [在包中使用属性表达式](use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41;包](../integration-services-ssis-packages.md)   
+ [Integration Services (SSIS) 包](../integration-services-ssis-packages.md)   
  [Integration Services 容器](../control-flow/integration-services-containers.md)   
  [Integration Services 任务](../control-flow/integration-services-tasks.md)   
  [Integration Services (SSIS) 事件处理程序](../integration-services-ssis-event-handlers.md)   

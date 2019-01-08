@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
@@ -15,12 +14,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ba03c8bcfad515fbe7a651822177ffa349dff25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cce297bd0a894a432cd05ae10c7b4a0689321bbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805449"
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
@@ -49,7 +48,7 @@ ms.locfileid: "48079169"
 ## <a name="predefined-ftp-operations"></a>预定义的 FTP 操作  
  FTP 任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|运算|Description|  
+|操作|Description|  
 |---------------|-----------------|  
 |发送文件|将文件从本地计算机发送到 FTP 服务器。|  
 |接收文件|将文件从 FTP 服务器保存到本地计算机。|  
@@ -76,8 +75,8 @@ ms.locfileid: "48079169"
  有关如何以编程方式设置这些属性的详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
 ## <a name="see-also"></a>请参阅  
- [FTP 任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)   
- [FTP 任务编辑器&#40;文件传输页面&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [FTP 任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
+ [FTP 任务编辑器（“文件传输”页）](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services 任务](integration-services-tasks.md)   
  [控制流](control-flow.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a834d6752145d290ef2b73ed22f90b405c428f28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808069"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件类
   Sort Warnings 事件类指示排序操作的内存不足。 这不包括与创建索引有关的排序操作，只包括某查询内的排序操作（如 SELECT 语句中使用的 ORDER BY 子句）。  

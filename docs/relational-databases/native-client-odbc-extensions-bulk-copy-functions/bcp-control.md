@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c15063ef190c3858007e7d64bc0e4d7ebf0d5b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761747"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210456"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETCODE bcp_control (
  BCPFILE_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的代码页中。  
   
  BCPFILEFMT  
- 数据文件格式的版本号。 这可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若要获取的从文本列中的导入数据[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]到服务器**varchar （max)** 中的列[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的服务器，则应该指定 80。 同样，如果将数据从导出时指定 80 **varchar （max)** 列中，将保存就像文本列保存在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式化，并可以导入到的文本列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器。  
+ 数据文件格式的版本号。 这可以是 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，或 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若要获取的从文本列中的导入数据[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]到服务器**varchar （max)** 中的列[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的服务器，则应该指定 80。 同样，如果将数据从导出时指定 80 **varchar （max)** 列中，将保存就像文本列保存在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式化，并可以导入到的文本列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器。  
   
  BCPFIRST  
  要复制的文件或表的第一行数据。 默认值为 1；值小于 1 则将此选项重置为其默认值。  
@@ -117,7 +117,7 @@ RETCODE bcp_control (
  BCPODBC  
  如果为 TRUE，则指定的**datetime**并**smalldatetime**以字符格式保存的值将使用 ODBC 时间戳转义序列前缀和后缀。 BCPODBC 选项仅适用于 DB_OUT。  
   
- 为 FALSE 时， **datetime**表示 1997 年 1 月 1 日的值转换为字符字符串： 1997年-01-01 00:00:00.000。 如果为 TRUE，相同**datetime**值表示为: {ts ' 1997年-01-01 00:00:00.000'}。  
+ 为 FALSE 时， **datetime**表示 1997 年 1 月 1 日的值转换为字符字符串：1997-01-01 00:00:00.000。 如果为 TRUE，相同**datetime**值表示为: {ts ' 1997年-01-01 00:00:00.000'}。  
   
  BCPROWCOUNT  
  返回当前（或上一次）BCP 操作所影响的行数。  

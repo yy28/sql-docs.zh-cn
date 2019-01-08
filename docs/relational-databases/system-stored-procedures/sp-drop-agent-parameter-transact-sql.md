@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_drop_agent_parameter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e700b5a6075a225eebf4d8a03bb52c62c536885
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd8c367f3fecd0c9951b577fdcdf31cf77ac589e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835455"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821941"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  [  **@profile_id=**] *profile_id*  
  要删除其参数的配置文件的 ID。 *profile_id*是**int**，无默认值。  
   
- [  **@parameter_name=**] **'***parameter_name*****  
+ [  **@parameter_name=**] **'parameter_name**   
  要删除的参数的名称。 *parameter_name*是**sysname**，默认值为**%**。 如果**%**，指定配置文件的所有参数将被都删除。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -52,7 +51,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="remarks"></a>备注  
  **sp_drop_agent_parameter**用于所有类型的复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_drop_agent_parameter**。  
   
 ## <a name="see-also"></a>请参阅  

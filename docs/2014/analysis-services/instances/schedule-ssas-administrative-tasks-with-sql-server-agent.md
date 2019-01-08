@@ -11,12 +11,12 @@ ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080347"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350873"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
   使用 SQL Server 代理服务，你可以根据所需顺序和时间来计划要运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理任务。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
@@ -25,14 +25,14 @@ ms.locfileid: "48080347"
   
  本主题是一个演练，演示了如何使用 SQL Server 代理通过两种方式运行 XMLA 脚本。 第一个示例演示如何计划对单个维度的处理。 第二个示例演示如何将处理任务并入按计划运行的单个脚本。 若要完成此演练，您需要满足下列先决条件。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  必须安装 SQL Server 代理服务。  
   
  默认情况下，作业在服务帐户下运行。 在中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQL Server 代理的默认帐户是 NT Service\SQLAgent$\<实例名 >。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅[授予服务器管理员权限&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
  您还应拥有要使用的测试数据库。 可以部署 AdventureWorks 多维示例数据库或 Analysis Services 多维教程中的项目以在本演练中使用。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../install-sample-data-and-projects.md)。  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>示例 1：处理计划任务中的维度  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>示例 1：处理计划的任务中的维度  
  此示例演示如何创建和计划处理维度的作业。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计划任务是嵌入在 SQL Server 代理作业中的 XMLA 脚本。 该作业经过计划，按照所需时间和频率运行。 由于 SQL Server 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一部分，因此要同时使用数据库引擎和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来创建和计划管理任务。  
@@ -54,7 +54,7 @@ ms.locfileid: "48080347"
      此步骤会将 XMLA 脚本复制到 Windows 剪贴板中。 可以将 XMLA 脚本保留在剪贴板中，也可以将其粘贴到记事本或其他文本编辑器中。 以下是 XMLA 脚本的一个示例。  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -106,7 +106,7 @@ ms.locfileid: "48080347"
   
 15. 在作业完成后，请单击 **“关闭”**。  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>示例 2：批处理计划任务中的维度和分区  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>示例 2：批处理操作的维度和计划任务中的一个分区  
  此示例中的过程演示如何创建和计划一个作业，该作业将批处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库维度并处理依赖于聚合维度的多维数据集分区。 有关批处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的详细信息，请参阅[批处理 (Analysis Services)](../multidimensional-models/batch-processing-analysis-services.md)。  
   
 ###  <a name="bkmk_BatchProcess"></a> 创建用于批处理 SQL Server 代理作业中的维度和分区的脚本  
@@ -156,7 +156,7 @@ ms.locfileid: "48080347"
      下面的示例显示了修改后的 XMLA 脚本。  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -223,7 +223,7 @@ ms.locfileid: "48080347"
 16. 在作业完成后，请单击 **“关闭”**。  
   
 ## <a name="see-also"></a>请参阅  
- [处理选项和设置&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [处理选项和设置 (Analysis Services)](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)  
   
   

@@ -18,23 +18,23 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163167"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205696"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
   *透明数据加密* (TDE) 加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 数据文件，称为加密空闲数据。 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，如果遇到物理介质（如驱动器或备份磁带）被盗的情况，恶意破坏方只需还原或附加数据库即可浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
   
  TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 master 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。 TDE 保护“处于休眠状态”的数据，即数据和日志文件。 它提供了遵从许多法律、法规和各个行业建立的准则的能力。 软件开发人员籍此可以使用 AES 和 3DES 加密算法来加密数据，且无需更改现有的应用程序。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  TDE 不提供跨通信信道加密。 有关如何跨通信信道加密数据，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
->   
+> 
 >  **相关主题：**  
->   
+> 
 >  -   [借助 Azure SQL 数据库实现透明数据加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [将受 TDE 保护的数据库移到其他 SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [使用 EKM 启用 TDE](enable-tde-on-sql-server-using-ekm.md)  
@@ -118,13 +118,13 @@ GO
 ## <a name="catalog-views-and-dynamic-management-views"></a>目录视图和动态管理视图  
  下表显示了 TDE 目录视图和动态管理视图。  
   
-|目录视图或动态管理视图|用途|  
+|目录视图或动态管理视图|目标|  
 |---------------------------------------------|-------------|  
 |[sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|显示数据库信息的目录视图。|  
 |[sys.certificates (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|显示数据库中的证书的目录视图。|  
 |[sys.dm_database_encryption_keys (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|提供有关数据库中使用的加密密钥的信息以及数据库加密状态的动态管理视图。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如上表中所述，TDE 的每项功能和每个命令都有各自的权限要求。  
   
  查看 TDE 所涉及的元数据要求拥有对证书的 VIEW DEFINITION 权限。  

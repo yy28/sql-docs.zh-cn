@@ -1,5 +1,5 @@
 ---
-title: 第 11 课： 创建分区 |Microsoft Docs
+title: 第 11 课：创建分区 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089639"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391710"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 课：创建分区
-  在本课中，您将创建分区，以便将 Internet Sales 表划分为可独立于其他分区进行处理（刷新）的更小逻辑部分。 默认情况下，您包括在模型中的每个表都具有一个包含表的所有列和行的分区。 对于 Internet Sales 表，我们希望按年份划分数据；一个分区对应于表中的每个五年。  然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)。  
+  在本课中，您将创建分区，以便将 Internet Sales 表划分为可独立于其他分区进行处理（刷新）的更小逻辑部分。 默认情况下，在模型中包括的每个表具有一个分区，其中包括所有表的列和行。 对于 Internet Sales 表中，我们想要将数据划分按年份;为每个表的五年的一个分区。  然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)。  
   
- 学完本课的估计时间： **15 分钟**  
+ 学完本课的预计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课：[第 10 课：创建层次结构](lesson-9-create-hierarchies.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 10 课：创建层次结构](lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>创建分区  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48089639"
   
 6.  单击 **“验证”**。  
   
-     请注意，此时将显示一条警告，指出某些列在源中不存在。 这是因为在[第 3 课： 重命名列](rename-columns.md)，重命名这些列的 Internet Sales 表中的模型，使其不同于在源中这些相同列。  
+     请注意，此时将显示一条警告，指出某些列在源中不存在。 这是因为在[第 3 课：重命名列](rename-columns.md)，重命名这些列的 Internet Sales 表中的模型，使其不同于在源中这些相同列。  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>若要为 Internet Sales 表中的 2006 年创建分区  
   
@@ -154,6 +154,6 @@ ms.locfileid: "48089639"
      **数据过程**对话框然后随即出现并显示每个分区的处理详细信息。 您将注意到对于每个分区转移了不同的行数。 这是因为，每个分区值包含您在 SQL 语句的 WHERE 子句中指定的年份的那些行。 对于 2010 年份没有数据。  
   
 ## <a name="next-steps"></a>后续步骤  
- 若要继续学习本教程，请转到下一课：[第 12 课：创建角色](lesson-11-create-roles.md)。  
+ 若要继续学习本教程，请转到下一课：课程：[第 12 课：创建角色](lesson-11-create-roles.md)。  
   
   

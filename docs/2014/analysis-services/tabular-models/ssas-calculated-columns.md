@@ -11,15 +11,15 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e2c54ec3c724e9fb43eff956e0bf96fd406d6bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091107"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395520"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>计算列（SSAS 表格）
-  在表格模型中，通过计算列可以将新数据添加到您的模型。 您可以创建用于定义列的行级值的 DAX 公式，而不用在列中粘贴或导入值。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
+  在表格模型中，通过计算列可以将新数据添加到您的模型。 而不是粘贴或导入到列的值，您可以创建用于定义列的行级值的 DAX 公式。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
   
 > [!NOTE]  
 >  在 DirectQuery 模式下，表格模型不支持计算列。 有关详细信息，请参阅 [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48091107"
   
 -   [相关任务](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a> 优点  
+##  <a name="bkmk_understanding"></a> 优势  
  计算列中的公式非常类似于 Excel 中的公式。 但与 Excel 不同，您不能为表中的不同行创建不同的公式；而是 DAX 公式自动应用于整个列。  
   
  在某个列包含公式时，将为每一行都计算值。 在您输入有效公式时，将立即为列计算结果。 在需要时（例如，在刷新基础数据时），将重新计算列值。  
@@ -82,11 +82,11 @@ ms.locfileid: "48091107"
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建计算的列&#40;SSAS 表格&#41;](ssas-calculated-columns-create-a-calculated-column.md)|本主题中的任务描述了如何向表中添加新的计算列。|  
+|[创建计算列（SSAS 表格）](ssas-calculated-columns-create-a-calculated-column.md)|本主题中的任务描述了如何向表中添加新的计算列。|  
   
 ## <a name="see-also"></a>请参阅  
- [表和列&#40;SSAS 表格&#41;](tables-and-columns-ssas-tabular.md)   
- [度量值&#40;SSAS 表格&#41;](measures-ssas-tabular.md)   
- [计算&#40;SSAS 表格&#41;](calculations-ssas-tabular.md)  
+ [表和列（SSAS 表格）](tables-and-columns-ssas-tabular.md)   
+ [度量值（SSAS 表格）](measures-ssas-tabular.md)   
+ [计算（SSAS 表格）](calculations-ssas-tabular.md)  
   
   

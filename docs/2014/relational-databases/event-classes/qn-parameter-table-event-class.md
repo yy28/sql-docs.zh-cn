@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae4921f764819ca0210fcd4c71cf57ebcb588f57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162307"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349639"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 事件类
   QN:Parameter table 事件报告有关创建、删除存储参数信息的内部表和为其保留引用计数所需操作的信息。 另外，此事件还报告重置参数表的使用计数的内部活动。  
@@ -35,7 +34,7 @@ ms.locfileid: "48162307"
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|35|用户帐户控制|  
 |EventClass|`Int`|事件类型 = 200。|27|否|  
 |EventSequence|`int`|此事件的序列号。|51|否|  
-|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 创建表： 指示已在数据库中创建参数表。<br /><br /> 表删除尝试： 指示数据库已尝试自动删除未使用的参数表以释放资源。<br /><br /> 表删除尝试失败： 指示数据库已尝试删除未使用的参数表但失败。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除参数表以释放资源。<br /><br /> 表已删除： 指示数据库已成功删除参数表。<br /><br /> 表已驻留： 指示参数表标记为当前供内部处理。<br /><br /> 取消固定的表： 指示参数表已被解除固定。 内部处理已使用表完成。<br /><br /> 递增的用户数： 指示引用参数表的查询通知订阅数已增加。<br /><br /> 递减的用户数： 指示引用参数表的查询通知订阅数已减少。<br /><br /> LRU 计数器已重置： 指示参数表的使用计数已重置。<br /><br /> 清除任务已启动： 指示清除此参数表中的所有订阅的启动。 启动数据库或删除此参数表订阅下的表时执行此操作。<br /><br /> 清除任务已完成： 指示清除此参数表中的所有订阅的已完成时。|21|用户帐户控制|  
+|EventSubClass|`nvarchar`|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> 创建表：指示已在数据库中创建参数表。<br /><br /> 表删除尝试：指示数据库已尝试自动删除未使用的参数表以释放资源。<br /><br /> 表删除尝试失败：指示数据库已尝试删除未使用的参数表并且失败。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将自动重新计划删除参数表以释放资源。<br /><br /> 删除表：指示数据库已成功删除参数表。<br /><br /> 表已驻留：指示参数表标记为当前供内部处理使用。<br /><br /> 取消固定的表：指示参数表不驻留。 内部处理已使用表完成。<br /><br /> 递增的用户数：指示引用参数表的查询通知订阅数已增加。<br /><br /> 递减的用户数：指示引用参数表的查询通知订阅数已减小。<br /><br /> LRU 计数器已重置：指示参数表的使用计数已重置。<br /><br /> 清除任务已开始：指示清除此参数表中的所有订阅的启动时间。 启动数据库或删除此参数表订阅下的表时执行此操作。<br /><br /> 清除任务已完成：指示清除此参数表中的所有订阅的完成时间。|21|用户帐户控制|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|用户帐户控制|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|用户帐户控制|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|否|  
@@ -48,6 +47,6 @@ ms.locfileid: "48162307"
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果应用程序使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并以 Login2 的身份执行语句，则 SessionLoginName 将显示“Login1”，而 LoginName 将显示“Login2”。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|`int`|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|`ntext`|返回包含特定于此事件的信息的 XML 文档。 此文档符合 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) 页上提供的 XML 架构。|1|用户帐户控制|  
+|TextData|`ntext`|返回包含特定于此事件的信息的 XML 文档。 此文档符合 [SQL Server Query Notification Profiler Event Schema](https://go.microsoft.com/fwlink/?LinkId=63331) 页上提供的 XML 架构。|1|用户帐户控制|  
   
   

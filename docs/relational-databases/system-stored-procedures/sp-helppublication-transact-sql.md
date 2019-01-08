@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helppublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1293084c422c73bba83ee66e2242b9416368db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624215"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205206"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +91,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 均存储的冲突记录的发布服务器和订阅服务器导致冲突。<br /><br /> **1** = 的冲突记录存储在发布服务器。|  
 |conflict_retention|**int**|指定冲突保持期（天）。|  
 |conflict_policy|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
-|queue_type||指定所使用的队列类型。 可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 注意： 已停止消息队列的支持。|  
+|queue_type||指定所使用的队列类型。 可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 注意：已经不再支持消息队列。|  
 |backward_comp_level||数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_AD|**bit**|指定发布是否已发布在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory™ 中。 值为**1**指示它已发布，并将值**0**指示未发布。|  
+|publish_to_AD|**bit**|指定是否在发布该发布[!INCLUDE[msCoName](../../includes/msconame-md.md)]Active Directory 批处理。 值为**1**指示它已发布，并将值**0**指示未发布。|  
 |allow_initialize_from_backup|**bit**|指示订阅服务器是否能够从备份而不是从初始快照来初始化对此发布的订阅。 **1**意味着可以从备份初始化订阅并**0**表示不能。 有关详细信息，请参阅[初始化事务订阅不使用快照](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)不使用快照的事务订阅服务器。|  
 |replicate_ddl|**int**|指示发布是否支持架构复制。 **1**指示复制在发布服务器上执行数据定义语言 (DDL) 语句是的并**0**指示不复制 DDL 语句。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
 |enabled_for_p2p|**int**|表示发布是否可用于对等复制拓扑。 **1**指示发布支持对等复制。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
@@ -103,8 +102,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_p2p_conflictdetection|**int**|指定分发代理是否为针对对等复制启用的发布检测冲突。 值为**1**意味着在检测到冲突。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |originator_id|**int**|指定对等拓扑中某个节点的 ID。 此 ID 用于进行冲突检测，如果**enabled_for_p2p_conflictdetection**设置为**1**。 有关已经使用过的 ID 的列表，请查询 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系统表。|  
 |p2p_continue_onconflict|**int**|指定检测到冲突时分发代理是否继续处理更改。 值为**1**意味着代理继续处理更改。<br /><br /> **\*\* 谨慎\* \*** 我们建议你使用的默认值**0**。 如果此选项设置为**1**，分发代理尝试应用来自具有最高的原始发件人 ID 的节点的冲突行收敛拓扑中的数据 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。|  
-|allow_partition_switch|**int**|指定是否对已发布的数据库执行 ALTER TABLE…SWITCH 语句。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-|replicate_partition_switch|**int**|指定是否应将对已发布的数据库执行的 ALTER TABLE…SWITCH 语句复制到订阅服务器。 此选项才有效才*allow_partition_switch*设置为**1**。|  
+|allow_partition_switch|**int**|指定是否更改表...可以对已发布数据库执行 SWITCH 语句。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+|replicate_partition_switch|**int**|指定是否更改表...对已发布数据库执行的 SWITCH 语句应复制到订阅服务器。 此选项才有效才*allow_partition_switch*设置为**1**。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -117,10 +116,10 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_helppublication](../../relational-databases/replication/codesnippet/tsql/sp-helppublication-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有发布服务器上的 sysadmin 固定服务器角色成员或发布数据库上的 db_owner 固定数据库角色成员，或者发布访问列表 (PAL) 中的用户才能执行 sp_helppublication。  
   
- 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，只有分发服务器上的 sysadmin 固定服务器角色成员或分发数据库上的 db_owner 固定数据库角色成员，或者 PAL 中的用户才能执行 sp_helppublication。  
+ 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上，唯一的 sysadmin 固定服务器角色成员在分发服务器或 db_owner 固定的数据库角色的成员的分发数据库或者 PAL 中的用户才能执行 sp_helppublication。  
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

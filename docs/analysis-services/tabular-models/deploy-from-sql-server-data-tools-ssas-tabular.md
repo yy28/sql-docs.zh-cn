@@ -1,5 +1,5 @@
 ---
-title: 从 SQL Server Data Tools 部署 |Microsoft 文档
+title: 部署 Analysis Services 表格模型从 SQL Server Data Tools |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 009c286c105f8088897343f3694c7b3106ca493a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042331"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072134"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>从 SQL Server Data Tools 进行部署
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34042331"
   
 1.  在 SSDT 中，在**解决方案资源管理器**，右键单击项目名称，然后单击**属性**。  
   
-2.  在**\<项目名称 > 属性**对话框，请在**部署选项**，指定属性设置，如果不同于默认设置。  
+2.  在中**\<项目名称 > 属性**对话框中**部署选项**，如果不同于默认设置指定属性设置。  
   
     > [!NOTE]  
     >  对于缓存模式下的模型，“查询模式”始终为“内存中”。  
@@ -44,14 +44,14 @@ ms.locfileid: "34042331"
   
 #### <a name="to-deploy-a-tabular-model"></a>部署表格模型
   
--   在 SSDT 中，在**生成**菜单上，单击**部署\<项目名称 >**。  
+-   在 SSDT 中，在**构建**菜单上，单击**部署\<项目名称 >**。  
   
-     “部署”对话框将出现，并且指示在模型中包括的每个表的元数据部署和处理的状态（除非将“处理选项”属性设置为“不处理”）。 在部署过程完成后，使用 SSMS 连接到 Analysis Services 实例并确定已创建新的模型数据库对象，或使用客户端报告应用程序连接到已部署的模型。  
+     “部署”对话框将出现，并且指示在模型中包括的每个表的元数据部署和处理的状态（除非将“处理选项”属性设置为“不处理”）。 部署过程完成后，使用 SSMS 连接到 Analysis Services 实例，并验证已创建新的模型数据库对象，或使用客户端报告应用程序连接到已部署的模型。  
   
 ##  <a name="bkmk_deploy_status"></a> 部署状态  
  通过 **“部署”** 对话框，您可以监视“部署”操作的进度。 也可以停止部署操作。  
   
- **状态**  
+ **“状态”**  
  指示部署操作成功与否。  
   
  **详细信息**  

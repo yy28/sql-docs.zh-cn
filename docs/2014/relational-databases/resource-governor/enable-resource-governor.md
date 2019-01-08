@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
@@ -13,19 +12,19 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3d6ee852f6631014a4407e09f7b41646e9f9cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214545"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806179"
 ---
 # <a name="enable-resource-governor"></a>启用资源调控器
   默认情况下，资源调控器处于关闭状态。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 启用资源调控器。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
   
--   **若要启用资源调控器，请使用：**[对象资源管理器](#RGOnObjEx)、[资源调控器属性](#RGOnProp)和 [Transact-SQL](#RGOnTSQL)  
+-   **若要启用资源调控器，请使用：**[对象资源管理器](#RGOnObjEx)，[资源调控器属性](#RGOnProp)， [Transact SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  启用资源调控器会产生下列结果：  

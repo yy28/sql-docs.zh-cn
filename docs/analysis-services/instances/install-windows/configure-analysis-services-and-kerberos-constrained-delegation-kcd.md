@@ -1,5 +1,5 @@
 ---
-title: 配置 Analysis Services 和 Kerberos 约束委派 (KCD) |Microsoft 文档
+title: 配置 Analysis Services 和 Kerberos 约束委派 (KCD) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811149"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>配置 Analysis Services 和 Kerberos 约束委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ ms.locfileid: "34019244"
   
  本主题中的各部分考察需要使用 KCD 的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的常见方案，并提供了一个服务器部署示例，该示例中高度概述了需要安装和配置的项。 请参阅 [更多信息和社区内容](#bkmk_moreinfo) 部分，了解有关所涉及技术（例如域控制器和 KCD）的更多详细信息。  
   
-## <a name="scenario-1-workbook-as-data-source-wds"></a>方案 1：工作簿作数据源 (WDS)。  
- ![请参阅 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "请参阅 1") Office Online Server 打开一个 Excel 工作簿和![请参阅 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "请参阅 2")检测到另一个工作簿的数据连接。 Office Online Server 将请求发送到[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]重定向程序服务![请参阅 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "请参阅 3")若要打开第二个工作簿和数据![，请参阅 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "，请参阅 4").  
+## <a name="scenario-1-workbook-as-data-source-wds"></a>应用场景 1：工作簿用作数据源 (WDS)。  
+ ![请参阅 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "请参阅 1") Office Online Server 打开一个 Excel 工作簿和![，请参阅 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "，请参阅 2")检测与另一个工作簿的数据连接。 Office Online Server 将发送到的请求[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]重定向程序服务![，请参阅 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "，请参阅 3")以打开第二个工作簿和数据![，请参阅 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "，请参阅 4").  
   
  在此方案中，需要将用户凭据从 Office Online Server 委派给 SharePoint 中的 SharePoint [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 重定向程序服务。  
   
- ![作为数据源的工作簿](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "作为数据源的工作簿")  
+ ![工作簿用作数据源](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "工作簿用作数据源")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>方案 2：Analysis Services 表格模型链接到 Excel 工作簿  
- Analysis Services 表格模型![请参阅 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "请参阅 1")链接到 Excel 工作簿，其中包含 Power Pivot 模型。 在此方案中，当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 加载表格模型时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将检测指向该工作簿的链接。 在处理模型时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 会将查询请求发送到 SharePoint，以加载工作簿。 在此方案中， **无需** 将客户端凭据从 Analysis Services 委派到 SharePoint，但是客户端应用程序可以覆盖外部绑定中的数据源信息。 如果外部绑定请求指定模拟当前用户，则必须委派用户凭据，这需要在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 SharePoint 之间配置 KCD。  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>方案 2:Analysis Services 表格模型链接到 Excel 工作簿  
+ Analysis Services 表格模型![请参阅 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "请参阅 1")链接到 Excel 工作簿包含 Powerpivot 模型。 在此方案中，当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 加载表格模型时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将检测指向该工作簿的链接。 在处理模型时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 会将查询请求发送到 SharePoint，以加载工作簿。 在此方案中， **无需** 将客户端凭据从 Analysis Services 委派到 SharePoint，但是客户端应用程序可以覆盖外部绑定中的数据源信息。 如果外部绑定请求指定模拟当前用户，则必须委派用户凭据，这需要在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 SharePoint 之间配置 KCD。  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
   
@@ -55,11 +55,11 @@ ms.locfileid: "34019244"
   
 -   **角色：** Active Directory 域服务。 有关概述，请参阅 [在 Windows Server 2012 中配置 Active Directory (AD DS)](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)。  
   
--   **角色：** DNS 服务器  
+-   **角色：** DNS Server  
   
 -   **功能：** .NET Framework 3.5 功能/.NET Framework 3.5  
   
--   **功能：** 远程服务器管理工具/角色管理工具  
+-   **功能：** 远程服务器管理工具 / 角色管理工具  
   
 -   配置 Active Directory 以创建新的林并将计算机加入域。 在尝试将其他计算机添加到专用域之前，需要将客户端计算机 DNS 配置为 DC 的 IP 地址。 在 DC 计算机上，运行 `ipconfig /all` 获取 IPv4 和 IPv6 地址以便进行下一步。  
   
@@ -87,20 +87,20 @@ ms.locfileid: "34019244"
   
 -   **注意：** 可通过系统设置从 Windows 控制面板将计算机加入域。 有关详细信息，请参阅 [How To Join Windows Server 2012 to a Domain（如何将 Windows Server 2012 加入域）](http://social.technet.microsoft.com/wiki/contents/articles/20260.how-to-join-windows-server-2012-to-a-domain.aspx)。  
   
- ![在 powerpivot 模式下的 ssas 服务器](../../../analysis-services/instances/install-windows/media/ssas-kcd-powerpivotserver-icon.png "正在 powerpivot 模式下的 ssas 服务器")  
+ ![在 powerpivot 模式下的 ssas 服务器](../../../analysis-services/instances/install-windows/media/ssas-kcd-powerpivotserver-icon.png "ssas powerpivot 模式下的服务器")  
   
 ### <a name="2016-sql-server-database-engine-and-analysis-services-in-power-pivot-mode"></a>2016 SQL Server 数据库引擎和处于 Power Pivot 模式的 Analysis Services  
  下面是要关安装在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机上的内容的摘要。  
   
- ![请注意](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安装向导中，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在 Power Pivot 模式下安装作为功能选择工作流的一部分。  
+ ![请注意](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安装向导中，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]处于 Power Pivot 模式下安装作为功能选择工作流的一部分。  
   
 1.  运行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装向导，然后从功能选择页单击数据库引擎、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和管理工具。 稍后通过安装向导进行安装时，可以为 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]模式。  
   
-2.  对于实例配置，请配置名为“POWERPIVOT”的实例。  
+2.  对于实例配置的"POWERPIVOT"命名的实例的配置。  
   
 3.  在 Analysis Services 配置页上，配置处于 **Power Pivot** 模式的 Analysis Services 服务器，并将 Office Online Server 的 **计算机名** 添加到 Analysis Services 服务器管理员列表中。 有关详细信息，请参阅 [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
-4.  请注意，默认情况下，搜索中不包括“计算机”对象类型。 单击![单击要添加计算机帐户对象](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "单击要添加计算机帐户对象")以添加计算机对象。  
+4.  请注意，默认情况下搜索中不包括"计算机"对象类型。 单击![单击要添加计算机帐户对象](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "单击要添加计算机帐户对象")来添加计算机对象。  
   
      ![将计算机帐户添加为 ssas 管理员](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "将计算机帐户添加为 ssas 管理员")  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019244"
   
 7.  在 Analysis Services 服务帐户中为你将从其中刷新的任何外部源（例如 SQL Server 或 Excel 文件）**配置约束委派** 设置。 在 Analysis Services 服务帐户中，确保设置以下内容：  
   
-     **注意：** 如果在“Active Directory 用户和计算机”中看不到该帐户的委派选项卡，这是由于该帐户上没有任何 SPN 而导致的。  你可以添加一个虚设的 SPN 使其显示出来，例如 `my/spn`。  
+     **注意：** 如果您看不到该帐户，在 Active Directory 用户和计算机，在委派选项卡，它是因为该帐户上没有任何 SPN。  你可以添加一个虚设的 SPN 使其显示出来，例如 `my/spn`。  
   
      “仅信任此用户作为指定服务的委派” 和“使用任何身份验证协议” 。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "34019244"
   
     1.  在 Office Online Server 上，使用管理员权限打开 PowerShell 窗口并运行以下命令  
   
-    2.  `New-OfficeWebAppsExcelBIServer –ServerId <AS instance name>`  
+    2.  `New-OfficeWebAppsExcelBIServer -ServerId <AS instance name>`  
   
-    3.  示例： `New-OfficeWebAppsExcelBIServer –ServerId "MTGQLSERVER-13\POWERPIVOT"`  
+    3.  示例： `New-OfficeWebAppsExcelBIServer -ServerId "MTGQLSERVER-13\POWERPIVOT"`  
   
-3.  **配置 Active Directory** 以便允许Office Online Server 计算机帐户模拟用户的 SharePoint 服务帐户。 在运行 SharePoint Web Services 的应用程序池的主体上，在 Office Online Server 上设置委派属性：本部分中的 PowerShell 命令需要 Active Directory (AD) PowerShell 对象。  
+3.  **配置 Active Directory** 以便允许Office Online Server 计算机帐户模拟用户的 SharePoint 服务帐户。 因此，在主体运行 Office Online Server 上的 SharePoint Web 服务的应用程序池上设置委派属性：在本部分中的 PowerShell 命令需要 Active Directory (AD) PowerShell 对象。  
   
     1.  获取 Office Online Server 的 Active Directory 标识  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019244"
         $computer1 = Get-ADComputer -Identity [ComputerName]  
         ```  
   
-         查看“任务管理器”/“详细信息”/“w3wp.exe 的用户名”即可找到此主体名称。 例如“svcSharePoint”  
+         查看“任务管理器”/“详细信息”/“w3wp.exe 的用户名”即可找到此主体名称。 例如"svcSharePoint"  
   
         ```  
         Set-ADUser svcSharePoint -PrincipalsAllowedToDelegateToAccount $computer1  
@@ -171,12 +171,12 @@ ms.locfileid: "34019244"
     2.  验证属性是否设置正确  
   
     3.  ```  
-        Get-ADUser svcSharePoint –Properties PrincipalsAllowedToDelegateToAccount  
+        Get-ADUser svcSharePoint -Properties PrincipalsAllowedToDelegateToAccount  
         ```  
   
 4.  将 Office Online Server 帐户的**约束委派** 设置配置为 Analysis Services Power Pivot 实例。 此实例应为 Office Online Server 运行于的计算机帐户。 在 Office Online Service 帐户中，确保设置以下内容。  
   
-     **注意：** 如果在“Active Directory 用户和计算机”中看不到该帐户的委派选项卡，这是由于该帐户上没有任何 SPN 而导致的。  你可以添加一个虚设的 SPN 使其显示出来，例如 `my/spn`。  
+     **注意：** 如果您看不到该帐户，在 Active Directory 用户和计算机，在委派选项卡，它是因为该帐户上没有任何 SPN。  你可以添加一个虚设的 SPN 使其显示出来，例如 `my/spn`。  
   
      “仅信任此用户作为指定服务的委派” 和“使用任何身份验证协议” 。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "34019244"
   
 4.  运行 PowerPivot 配置向导。 请参阅 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
-5.  将 SharePoint 连接到 Office Online Server。    ??Configure_xlwac_on_SPO.ps1 ??  
+5. 将 SharePoint 连接到 Office Online Server。 (Configure_xlwac_on_SPO.ps1)
   
 6.  为 Kerberos 配置 SharePoint 身份验证提供程序。 **这是方案 1 的必需操作**。 有关详细信息，请参阅 [在 SharePoint 2013 中规划 Kerberos 身份验证](https://technet.microsoft.com/library/ee806870.aspx)。  
   

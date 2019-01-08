@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetCurrentCertificate Method (SecurityCertificate Class)
@@ -20,12 +18,12 @@ ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0d4d25a52dd835364fbfd363cfe7d24008235ad9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348673"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法（SecurityCertificate 类）
   设置当前安全证书。  
@@ -42,7 +40,7 @@ SHA , SQLInstance
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  [SecurityCertificate 类] securitycertificate-class.md) 对象，表示安全证书。  
   
 #### <a name="parameters"></a>Parameters  
@@ -58,6 +56,6 @@ SHA , SQLInstance
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

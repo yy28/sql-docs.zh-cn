@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 中的翻译支持 |Microsoft 文档
+title: Analysis Services 中的翻译支持 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041831"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213626"
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻译支持
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34041831"
  一个翻译包括一个区域设置标识符 (LCID)、一个该对象的已翻译标题（例如，维度或属性名称），还可以选择包括以目标语言提供数据值的一个列。 你可以拥有多个翻译，但只能对任意给定连接使用一个翻译。 理论上可以将任意数量的翻译嵌入到模型中，但每个翻译都会增加测试的复杂性，并且所有翻译必须共享同一排序规则，所以设计解决方案时，应考虑到这些自然约束。  
   
 > [!TIP]  
->  可以使用客户端应用程序（如 Excel、Management Studio 和 SQL Server Profiler ）来返回已翻译的字符串。 有关详细信息，请参阅 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 。  
+>  可以使用客户端应用程序（如 Excel、Management Studio 和 SQL Server Profiler ）来返回已翻译的字符串。 有关详细信息，请参阅 [全球化提示和最佳实践 (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 。  
   
 ## <a name="how-to-add-translated-metadata-to-model-in-analysis-services"></a>如何在 Analysis Services 中向模型添加已翻译的元数据  
  有关分步说明，请访问以下链接：  
@@ -37,10 +37,10 @@ ms.locfileid: "34041831"
   
 -   [多维模型中的翻译 (Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 的全球化方案](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [语言和排序规则 & #40;Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [语言和排序规则 (Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md)   
  [设置或更改列排序规则](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [全球化提示和最佳实践和 #40;Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [全球化提示和最佳实践 (Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

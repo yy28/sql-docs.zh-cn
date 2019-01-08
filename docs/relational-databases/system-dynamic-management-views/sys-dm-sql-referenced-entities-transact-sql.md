@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756235"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213456"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47756235"
   
 -   分区函数  
   
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -91,15 +91,15 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|被引用的实体的类。<br /><br /> 1 = 对象或列<br /><br /> 6 = 类型<br /><br /> 10 = XML 架构集合<br /><br /> 21 = 分区函数|  
 |referenced_class_desc|**nvarchar(60)**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指示被引用的实体的架构绑定发生于运行时，因此实体 ID 的解析依赖于调用方的架构。 当被引用的实体为存储过程、扩展存储过程或在 EXECUTE 语句中调用的用户定义函数时，将会出现这种情况。<br /><br /> 1 = 被引用的实体依赖调用方并在运行时解析。 在这种情况下，referenced_id 为 NULL。<br /><br /> 0 = 被引用的实体 ID 不依赖调用方。 对于绑定到架构的引用、显式指定架构名称的跨数据库和跨服务器的引用，始终为 0。 例如，对格式为 `EXEC MyDatabase.MySchema.MyProc` 的实体的引用不依赖于调用方。 但是，格式为 `EXEC MyDatabase..MyProc` 的引用依赖调用方。|  
-|is_ambiguous|**bit**|指示引用不明确，可以在运行时对用户定义函数、 用户定义类型 (UDT) 或类型的列的 xquery 引用解析**xml**。 例如，假定语句`SELECT Sales.GetOrder() FROM Sales.MySales`存储过程中定义。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
+|is_ambiguous|**bit**|指示引用不明确，可以在运行时对用户定义函数、 用户定义类型 (UDT) 或类型的列的 xquery 引用解析**xml**。 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
 |is_selected|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 选中了对象或列。|  
 |is_updated|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 修改了对象或列。|  
 |is_select_all|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象用于 SELECT * 子句中（仅限对象级）。|  
 |is_all_columns_found|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 可以找到对象的所有列依赖关系。<br /><br /> 0 = 找不到对象的列依赖关系。|
 |is_insert_all|**bit**|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 在 INSERT 语句没有列列表 （仅限对象级） 中使用的对象。|  
-|is_incomplete|**bit**|**适用范围**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象或列已绑定错误并不完整。|
+|is_incomplete|**bit**|**适用对象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象或列已绑定错误并不完整。|
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>Exceptions  
  在满足以下任一条件时将返回空的结果集：  
   
 -   指定了系统对象。  
@@ -142,7 +142,7 @@ sys.dm_sql_referenced_entities (
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对 sys.dm_sql_referenced_entities 拥有 SELECT 权限并对引用实体拥有 VIEW DEFINITION 权限。 默认情况下，SELECT 权限授予 public。 要求对数据库拥有 VIEW DEFINITION 权限或 ALTER DATABASE DDL TRIGGER 权限（当引用实体为数据库级 DDL 触发器时）。 当引用实体为服务器级 DDL 触发器时，要求对服务器拥有 VIEW ANY DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 返回对象或列的用法  
- 下面的示例返回存储过程 `HumanResources.uspUpdateEmployeePersonalInfo` 的对象和列依赖关系。 此过程更新的列`NationalIDNumber`， `BirthDate,``MaritalStatus`，并`Gender`的`Employee`表基于指定`BusinessEntityID`值。 另一个存储过程 `upsLogError` 在 TRY…CATCH 块中定义，以便捕获任何执行错误。 `is_selected`、`is_updated` 和 `is_select_all` 列返回与如何在引用对象中使用这些对象和列有关的信息。 进行了修改的表和列由 is_updated 列中的 1 指示。 仅选择 `BusinessEntityID` 列，既不选择、也不修改存储过程 `uspLogError`。  
+ 下面的示例返回存储过程 `HumanResources.uspUpdateEmployeePersonalInfo` 的对象和列依赖关系。 此过程更新的列`NationalIDNumber`， `BirthDate,``MaritalStatus`，并`Gender`的`Employee`表基于指定`BusinessEntityID`值。 另一个存储的过程，`upsLogError`中试一试定义...CATCH 块来捕获任何执行错误。 `is_selected`、`is_updated` 和 `is_select_all` 列返回与如何在引用对象中使用这些对象和列有关的信息。 进行了修改的表和列由 is_updated 列中的 1 指示。 仅选择 `BusinessEntityID` 列，既不选择、也不修改存储过程 `uspLogError`。  
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   

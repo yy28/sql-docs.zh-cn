@@ -20,16 +20,16 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d254fce8d7765c6248c6e060f2a225f595f804f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597172"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212386"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLDriverConnect**是一种替代方法**SQLConnect**。 它支持需要比在三个参数的更多连接信息的数据源**SQLConnect**，对话框以提示用户输入的所有连接信息和不在系统中定义的数据源信息。  
@@ -112,8 +112,8 @@ SQLRETURN SQLDriverConnect(
 |08S01|通讯链接失败|该驱动程序和驱动程序已尝试连接到的数据源之间的通信链接失败之前**SQLDriverConnect**函数已完成处理。|  
 |28000|无效的授权说明|用户标识符或授权字符串，或同时在连接字符串中指定 (*InConnectionString*)，违反定义的数据源的限制。|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*szMessageText*缓冲区描述错误以及其原因。|  
-|HY000|常规错误： 无效的文件 dsn|(DM) 中的字符串 **InConnectionString*包含 FILEDSN 关键字，但找不到.dsn 文件的名称。|  
-|HY000|常规错误： 无法创建文件缓冲区|(DM) 中的字符串 **InConnectionString*包含 FILEDSN 关键字，但.dsn 文件不可读。|  
+|HY000|常规错误：无效的文件 dsn|(DM) 中的字符串 **InConnectionString*包含 FILEDSN 关键字，但找不到.dsn 文件的名称。|  
+|HY000|常规错误：无法创建文件缓冲区|(DM) 中的字符串 **InConnectionString*包含 FILEDSN 关键字，但.dsn 文件不可读。|  
 |HY001|内存分配错误|驱动程序管理器无法分配内存支持执行或完成所需**SQLDriverConnect**函数。<br /><br /> 该驱动程序无法分配支持执行或完成该函数所需的内存。|  
 |HY008|操作已取消|异步处理的已启用*ConnectionHandle*。 调用该函数，和之前执行完毕[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上调用了*ConnectionHandle*，然后**SQLDriverConnect**在再次调用函数*ConnectionHandle*。<br /><br /> 或者， **SQLDriverConnect**调用函数，和之前执行完毕**SQLCancelHandle**上调用了*ConnectionHandle*来自不同线程中多线程应用程序。|  
 |HY010|函数序列错误|(DM) 另一个以异步方式执行的函数 (不**SQLDriverConnect**) 的调用*ConnectionHandle*和仍在执行时**SQLDriverConnect**调用函数。|  
@@ -194,11 +194,11 @@ SQLRETURN SQLDriverConnect(
   
  操作的驱动程序管理器基于的值*DriverCompletion*参数：  
   
--   SQL_DRIVER_PROMPT： 如果连接字符串不包含**驱动程序**， **DSN**，或**FILEDSN**关键字，驱动程序管理器将显示数据源对话框。 它构造连接字符串对话框的返回的数据源名称和传递给它的应用程序的其他任何关键字。 驱动程序管理器对话框的返回的数据源名称为空，如果指定的关键字值对，DSN = 默认值。 （此对话框将显示数据源命名为"Default"）。  
+-   SQL_DRIVER_PROMPT:如果连接字符串不包含**驱动程序**， **DSN**，或**FILEDSN**关键字，驱动程序管理器将显示数据源对话框。 它构造连接字符串对话框的返回的数据源名称和传递给它的应用程序的其他任何关键字。 驱动程序管理器对话框的返回的数据源名称为空，如果指定的关键字值对，DSN = 默认值。 （此对话框将显示数据源命名为"Default"）。  
   
--   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED： 如果应用程序指定的连接字符串包含**DSN**关键字，驱动程序管理器将复制的应用程序指定的连接字符串。 否则将采用相同的操作方式与其何时*DriverCompletion*是 SQL_DRIVER_PROMPT。  
+-   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED:如果应用程序指定的连接字符串包含**DSN**关键字，驱动程序管理器将复制的应用程序指定的连接字符串。 否则将采用相同的操作方式与其何时*DriverCompletion*是 SQL_DRIVER_PROMPT。  
   
--   SQL_DRIVER_NOPROMPT： 驱动程序管理器将复制的应用程序指定的连接字符串。  
+-   SQL_DRIVER_NOPROMPT:驱动程序管理器将复制该应用程序指定的连接字符串。  
   
  如果应用程序指定的连接字符串包含**驱动程序**关键字，驱动程序管理器将复制的应用程序指定的连接字符串。  
   
@@ -257,11 +257,11 @@ SQLRETURN SQLDriverConnect(
   
  值的基础*DriverCompletion*，驱动程序提示用户输入连接信息，如用户 ID 和密码，并连接到数据源：  
   
--   SQL_DRIVER_PROMPT： 驱动程序显示一个对话框，作为初始值 （如果有） 使用的连接字符串和系统信息中的值。 当在用户退出对话框中时，驱动程序连接到数据源。 并且还构建了中的值的连接字符串**DSN**或**驱动程序**中的关键字\* *InConnectionString*以及从返回的信息对话框。 它会将此连接字符串中的放置 **OutConnectionString*缓冲区。  
+-   SQL_DRIVER_PROMPT:该驱动程序显示一个对话框，作为初始值 （如果有） 使用的连接字符串和系统信息中的值。 当在用户退出对话框中时，驱动程序连接到数据源。 并且还构建了中的值的连接字符串**DSN**或**驱动程序**中的关键字\* *InConnectionString*以及从返回的信息对话框。 它会将此连接字符串中的放置 **OutConnectionString*缓冲区。  
   
--   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED： 如果连接字符串包含足够的信息，并且该信息正确无误，驱动程序连接到数据源和副本\* *InConnectionString*到\* *OutConnectionString*。 如果信息缺失或不正确，该驱动程序采用相同的操作方式与其何时*DriverCompletion*除外，如果是 SQL_DRIVER_PROMPT *DriverCompletion*是 SQL_DRIVER_COMPLETE_必需的该驱动程序禁用不需要连接到数据源的任何信息的控件。  
+-   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED:如果连接字符串包含足够的信息，并且该信息正确无误，驱动程序连接到数据源和副本\* *InConnectionString*到\* *OutConnectionString*. 如果信息缺失或不正确，该驱动程序采用相同的操作方式与其何时*DriverCompletion*除外，如果是 SQL_DRIVER_PROMPT *DriverCompletion*是 SQL_DRIVER_COMPLETE_必需的该驱动程序禁用不需要连接到数据源的任何信息的控件。  
   
--   SQL_DRIVER_NOPROMPT： 如果连接字符串包含足够的信息，该驱动程序连接到数据源和副本\* *InConnectionString*到\* *OutConnectionString*. 否则，该驱动程序返回的 SQL_ERROR **SQLDriverConnect**。  
+-   SQL_DRIVER_NOPROMPT:如果连接字符串包含足够的信息，该驱动程序连接到数据源和副本\* *InConnectionString*到\* *OutConnectionString*。 否则，该驱动程序返回的 SQL_ERROR **SQLDriverConnect**。  
   
  成功连接到数据源，驱动程序还设置\* *StringLength2Ptr*可用于在返回的输出连接字符串的长度 **OutConnectionString*。  
   

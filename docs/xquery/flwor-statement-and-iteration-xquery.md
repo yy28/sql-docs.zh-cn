@@ -24,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662877"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858662"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 语句和迭代 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "51662877"
   
  例如，以下查询将在第一个生产位置对 <`Step`> 元素进行迭代，并返回 <`Step`> 节点的字符串值：  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -74,7 +74,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
@@ -82,7 +82,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  以下查询与上一个查询相似，只不过它是针对 ProductModel 表中的 Instructions 列（类型化的 xml 列）指定的。 此查询将在指定产品的第一个生产车间对所有生产步骤（<`step`> 元素）进行迭代。  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +115,7 @@ the aluminum sheet. ....
   
  以下是其他允许使用的输入序列的示例：  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +146,7 @@ SELECT @x.query('
   
  在 AdventureWorks 示例数据库中，生产说明存储在**说明**的列**Production.ProductModel**表具有以下形式：  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +158,11 @@ SELECT @x.query('
   
  以下查询将构造新的 XML，其中将 <`Location`> 元素与生产车间属性一起作为子元素返回。  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +170,7 @@ SELECT @x.query('
   
  以下是查询语句：  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +196,7 @@ where ProductModelID=7
   
  这是部分结果：  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +214,7 @@ where ProductModelID=7
   
  在 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中，生产说明包含有关所需的工具以及在何处使用这些工具的信息。 以下查询使用 `let` 子句列出构建生产模型所需的工具以及各工具的使用位置。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +227,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>使用 where 子句  
- 可以使用 `where` 子句来筛选迭代结果。 下面的示例说明了这一点。  
+ 可以使用`where`子句来筛选迭代结果。 下面的示例说明了这一点。  
   
  在生产自行车时，生产过程经过了一系列生产车间。 每个生产车间定义一个生产步骤序列。 以下查询仅检索那些生产某个自行车型号并且生产步骤少于三步的生产车间。 即，它们包含的 <`step`> 元素少于三个。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -251,7 +251,7 @@ where ProductModelID=7
   
 -   `return` 表达式将构造您希望从迭代结果生成的 XML。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Location LocationID="30"/>   
@@ -270,7 +270,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>FLWOR 中的多个变量绑定  
  可以用单个 FLWOR 表达式将多个变量绑定到输入序列。 在下面的示例中，查询针对非类型化的 xml 变量指定。 FLOWR 表达式将返回每个 <`Location`> 元素中的第一个 <`Step`> 子元素。  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -302,7 +302,7 @@ SELECT @x.query('
   
 -   `$Loc` 在与 `$FirstStep` 变量相关联的表达式中指定。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 Manu step 1 at Loc 1   
@@ -311,7 +311,7 @@ Manu step 1 at Loc 2
   
  下面的查询是类似，只不过它针对类型化的 Instructions 列指定**xml**列的**ProductModel**表。 [XML 构造 (XQuery)](../xquery/xml-construction-xquery.md)用于生成所需的 XML。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +335,7 @@ WHERE ProductModelID=7
   
  下面是部分结果：  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +360,7 @@ WHERE ProductModelID=7
   
  以下查询将从 AdditionalContactInfo 列检索有关特定客户的所有电话号码。 结果按电话号码进行排序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -380,9 +380,9 @@ WHERE BusinessEntityID=291;
 order by data($a/act:number[1]) descending  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +393,7 @@ order by data($a/act:number[1]) descending
   
  可以使用 WITH XMLNAMESPACES 声明命名空间，而不是在查询 prolog 中声明。  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +409,7 @@ WHERE BusinessEntityID=291;
   
  还可以按属性值进行排序。 例如，以下查询将检索新创建的 <`Location`> 元素，其中包含按 LaborHours 属性以降序顺序排序的 LocationID 和 LaborHours 属性。 结果，将首先返回工时最长的生产车间。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -424,7 +424,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -437,7 +437,7 @@ WHERE ProductModelID=7;
   
  在以下查询中，将按元素名称对结果进行排序。 此查询将从产品目录中检索特定产品的规范。 这些规范是 <`Specifications`> 元素的子元素。  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -455,9 +455,9 @@ where ProductModelID=19;
   
 -   `order by (local-name($a))` 表达式将按元素名称的本地部分对序列进行排序。  
   
- 结果如下：  
+ 下面是结果：  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +467,7 @@ where ProductModelID=19;
   
  其排序表达式返回空值的节点将被列在序列的开头，如以下示例中所示：  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -482,9 +482,9 @@ select @x.query('
 ')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +492,7 @@ select @x.query('
   
  您可以指定多个排序条件，如以下示例中所示。 此示例中的查询将先按 Title 属性值再按 Administrator 属性值对 <`Employee`> 元素进行排序。  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -511,9 +511,9 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  

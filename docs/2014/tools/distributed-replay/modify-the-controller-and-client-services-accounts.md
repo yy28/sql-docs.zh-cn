@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dbd6a425222c0e3f31d55a590294e9d3554f96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822111"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器和客户端服务帐户
   在本主题中，您将了解如何修改 Distributed Replay 控制器和客户端服务帐户，然后重新应用访问控制列表 (ACL)。  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>使用“计算机管理”启动或停止 Distributed Replay 服务  
   
-1.  安装的计算机上的 Distributed Replay 服务是，从命令提示符处，键入`dcomcnfg`。  
+1.  在安装有 Distributed Replay 服务的计算机上，在命令提示符下键入 `dcomcnfg`。  
   
 2.  双击“服务”，向下滚动并右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服务名称>”，然后单击“开始”或“停止”。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48181107"
   
 3.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器属性”** 窗口中的 **“登录”** 选项卡上，选择 **“本帐户”**，键入或单击 **“浏览”** 以输入新的登录帐户，然后单击 **“确定”**。  
   
-     **重要**：在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：  
+     **重要**:在配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
     -   域用户帐户  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48181107"
   
     1.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器服务。  
   
-    2.  在其安装有控制器服务，从命令提示符下，在控制器计算机上键入`dcomcnfg`。  
+    2.  在安装有控制器服务的控制器计算机上，在命令提示符下键入 `dcomcnfg`。  
   
     3.  在“组件服务”窗口中，导航到“控制台根节点 -> 组件服务 -> 计算机 -> 我的电脑 -> DCOM Config ->DReplayController”。  
   

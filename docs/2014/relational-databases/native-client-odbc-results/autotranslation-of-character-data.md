@@ -22,17 +22,17 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806589"
 ---
 # <a name="autotranslation-of-character-data"></a>字符数据的自动转换
   字符数据，例如 ANSI 字符 SQL_C_CHAR 用声明的变量或数据存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**char**， **varchar**，或**文本**数据类型，可以表示只有有限的数量的字符。 对于每个字符使用一个字节进行存储的字符数据，它只能表示 256 个字符。 使用客户端计算机的 ANSI 代码页 (ACP) 解释存储在 SQL_C_CHAR 变量中的值。 使用存储的值**char**， **varchar**，或**文本**服务器上的数据类型使用服务器的 ACP 进行评估。  
   
- 如果在服务器和客户端使用相同的 ACP，则它们不会出现问题在解释存储在 SQL_C_CHAR、 的值**char**， **varchar**，或**文本**对象。 如果服务器和客户端具有不同的 Acp，则可能会从客户端 SQL_C_CHAR 数据解释为在服务器上不同的字符，如果在使用**char**， **varchar**，或**文本**列、 变量或参数。 例如，包含值 0xA5 字符字节被解释为字符 Ñ 使用代码页 437 则在计算机上，运行代码页 1252年的计算机上解释为日元签名 （リ）。  
+ 如果在服务器和客户端使用相同的 ACP，则它们不会出现问题在解释存储在 SQL_C_CHAR、 的值**char**， **varchar**，或**文本**对象。 如果服务器和客户端具有不同的 Acp，则可能会从客户端 SQL_C_CHAR 数据解释为在服务器上不同的字符，如果在使用**char**， **varchar**，或**文本**列、 变量或参数。 例如，包含值 0xA5 字符字节被解释为字符?? 在计算机使用代码页 437 上并被解释为日元运行代码页 1252年的计算机上注册 （？）。  
   
  Unicode 数据在存储时每个字符使用两个字节。 Unicode 规范涵盖所有扩展字符，因此每一 Unicode 字符都会在所有计算机上解释为相同的字符。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48076696"
   
  因为所有这些转换由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序执行客户端，服务器 ACP 必须是一个客户端计算机上安装的代码页。  
   
- 通过 Unicode 对字符进行转换可确保存在于两个代码页中的所有字符都能得到正确的转换。 但是，如果存在于其中一个代码页的某个字符在另一个代码页中不存在，则该字符在目标代码页中将无法表示。 例如，代码页 1252 包含注册商标符号 (®)，而代码页 437 则不包含此符号。  
+ 通过 Unicode 对字符进行转换可确保存在于两个代码页中的所有字符都能得到正确的转换。 但是，如果存在于其中一个代码页的某个字符在另一个代码页中不存在，则该字符在目标代码页中将无法表示。 例如，代码页 1252年具有的注册的商标符号 （？），而代码页 437 则不。  
   
  AutoTranslate 设置对以下转换没有任何影响：  
   

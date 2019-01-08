@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643815"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419248"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>为数据迁移助手配置设置
 
@@ -40,7 +40,7 @@ ms.locfileid: "49643815"
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>评估并行中的数据库数量
 
-数据迁移助手来评估并行的多个数据库。 在评估期间数据迁移助手中提取数据层应用程序 (dacpac) 以了解数据库架构。 如果在同一服务器上的多个数据库评估并行，则此操作可能超时。 
+数据迁移助手来评估并行的多个数据库。 在评估期间数据迁移助手中提取数据层应用程序 (dacpac) 以了解数据库架构。 如果在同一服务器上的多个数据库评估并行，则此操作可能超时。 
 
 从数据迁移助手的 2.0 版开始，你可以控制这通过设置 parallelDatabases 配置值。 默认值为 8。
 
@@ -70,7 +70,7 @@ ms.locfileid: "49643815"
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ ms.locfileid: "49643815"
 
 - commandTimeout
 
-   此参数设置 IDbCommand.CommandTimeout 属性中*秒*。 (默认值 = 60)
+   此参数设置 IDbCommand.CommandTimeout 属性中*秒*。 (默认值 = 60)
 
 - databaseLockTimeout
 
-   此参数等效于[设置锁\_超时超时\_段](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (默认值 = 5000)
+   此参数等效于[设置锁\_超时超时\_段](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (默认值 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  此参数设置使用 SQL 连接池连接的数量。 (默认值 = 8)
+  此参数设置使用 SQL 连接池连接的数量。 (默认值 = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -110,7 +110,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database： 建议阈值
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:建议的阈值
 
 与[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)，可以动态拉伸冷暖事务数据从 Microsoft SQL Server 2016 到 Azure。 Stretch Database 针对包含大量冷数据的事务数据库。 Stretch Database 建议，在存储功能建议，首先标识的表，它认为将受益于此功能，和它然后确定不需要进行若要启用此功能的表的更改。
 
@@ -121,7 +121,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,12 +136,12 @@ maxDataReaderDegreeOfParallelism="8"/>
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据迁移助手下载](https://www.microsoft.com/download/details.aspx?id=53595)

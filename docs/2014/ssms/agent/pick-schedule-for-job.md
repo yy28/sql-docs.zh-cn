@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.pickscheduleforjob.f1
@@ -14,12 +14,12 @@ ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9da20c25e0b116c1c91f5eb9015d5c5625d7514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185087"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809579"
 ---
 # <a name="pick-schedule-for-job"></a>为作业选取计划
   使用此对话框可以为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业选取现有的计划。  
@@ -34,7 +34,7 @@ ms.locfileid: "48185087"
  **已启用**  
  如果计划处于启用状态，则选中该选项。  
   
- **Description**  
+ **说明**  
  描述计划运行作业的条件。  
   
  **计划中的作业**  

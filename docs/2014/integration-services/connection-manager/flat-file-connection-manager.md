@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -18,12 +17,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65cebbe74b1be5cc0d625a70c8c5b87e8f515150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147159"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815289"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
   平面文件连接管理器使包可以访问平面文件中的数据。 例如，平面文件源和目标可以使用平面文件连接管理器提取和加载数据。  
@@ -38,7 +37,7 @@ ms.locfileid: "48147159"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>平面文件连接管理器的配置  
  在将平面文件连接管理器添加到包中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器将解析为平面文件连接在运行时，设置平面文件连接属性，并将添加到的平面文件连接管理器`Connections`包的集合。  
   
- `ConnectionManagerType`连接管理器属性设置为`FLATFILE`。  
+ 该连接管理器的 `ConnectionManagerType` 属性设置为 `FLATFILE`。  
   
  默认情况下，平面文件连接管理器始终检查未被引号引起的数据中的行分隔符，在找到行分隔符时开始一个新行。 这使连接管理器可以正确地分析具有缺少列字段的行的文件。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48147159"
   
 -   指定文本限定符。 可以将每一列配置为识别文本限定符。  
   
-     现在支持将限定符嵌入限定的字符串。 文本限定符的双实例将被解释为文字，即该字符串的单个实例。 例如，如果文本限定符是单引号并且输入数据为‘abc’, ‘def’, ‘g’hi’，则输出数据为 abc, def, g’hi。  
+     现在支持将限定符嵌入限定的字符串。 文本限定符的双实例将被解释为文字，即该字符串的单个实例。 例如，如果文本限定符是单引号并且输入数据为 'abc'、'def'、'g'hi'，则输出数据为 abc、def、g'hi。  
   
 -   对各列设置诸如名称、数据类型和最大宽度等属性。  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48147159"
   
 -   [平面文件连接管理器编辑器（“预览”页）](../flat-file-connection-manager-editor-preview-page.md)  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
   

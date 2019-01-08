@@ -8,12 +8,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.date: 10/24/2018
-ms.openlocfilehash: a1d8d4c96ec6008b66e8b1be65767e413b0a4db7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.technology: install
+ms.openlocfilehash: 44805d6fd7512a5180a2b62e2c8808b890901705
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808349"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>安装 SQL Server 2014 BI 功能
 
@@ -41,7 +42,7 @@ ms.locfileid: "50051139"
 |[升级到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [升级 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|使用本节中的指导可以将服务器和内容从以前的版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |[卸载 SQL Server 2014](uninstall-sql-server.md)<br /><br /> [卸载 PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [卸载 Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)|使用本节中的说明可卸载 BI 功能。|  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [新增功能&#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
 

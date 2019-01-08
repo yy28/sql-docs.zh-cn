@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
@@ -15,12 +14,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05ecf02c8fcc706e2f3823fd52538e375a091019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124307"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768769"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向表添加新列。  
@@ -31,7 +30,7 @@ ms.locfileid: "48124307"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要插入列，请使用：**  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48124307"
     > [!NOTE]  
     >  列属性的默认值在你创建新列时添加，但你可以在“列属性”选项卡中更改这些值。  
   
-6.  在你添加完列，从**文件**菜单中，选择 **保存 ** * 表名*。  
+6.  在你添加完列后，从“文件”  菜单中，选择“保存” _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

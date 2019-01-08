@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapped annotation
@@ -19,15 +17,15 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d6d22d2bd37d6f826878a5abd0bc235c3de83a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109097"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807269"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML 大容量加载进程`sql:mapped`按预期的 XSD 架构中批注 — 也就是说，如果映射架构指定`sql:mapped="false"`任何元素或属性，XML 大容量加载不会尝试在相应列中存储相关联的数据。  
+  XML 大容量加载进程`sql:mapped`批注，预期的 XSD 架构，则如果映射架构指定`sql:mapped="false"`任何元素或属性，XML 大容量加载不会尝试在相应列中存储相关联的数据。  
   
  XML 大容量加载忽略未映射的元素和属性（这可能因为该架构未对它们进行描述，也可能因为它们在 XSD 架构中批注有 `sql:mapped="false"`）。 所有未映射的数据将转到溢出列（如果已使用 `sql:overflow-field` 指定了这样的列）。  
   

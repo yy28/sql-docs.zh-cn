@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692135"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205746"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>创建和配置 Linux 上的 SQL Server 可用性组
 
@@ -353,9 +353,9 @@ sudo systemctl restart mssql-server
 
 11. 如果可读的情况下创建一个侦听器，则 SSMS 17.3 或更高版本允许在只读路由向导中的创建。 它还可以添加更高版本通过 SSMS 或 TRANSACT-SQL。 若要添加只读路由现在：
 
-    A.  选择只读路由选项卡。
+    a.  选择只读路由选项卡。
 
-    B.  输入只读副本的 Url。 这些 Url 是实例的终结点，类似，只不过它们使用，不终结点的端口。
+    b.  输入只读副本的 Url。 这些 Url 是实例的终结点，类似，只不过它们使用，不终结点的端口。
 
     c.  选择每个 URL，然后从底部，选择可读副本。 进行多选，按住 shift 键或单击拖动。
 
@@ -378,7 +378,7 @@ sudo systemctl restart mssql-server
 -   [配置只读路由的可用性组 (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [创建或配置可用性组侦听器 (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>示例 1 – 2 个副本与仅配置副本 （外部群集类型）
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>与仅配置副本 （外部群集类型） 的示例一两个副本
 
 此示例演示如何创建使用仅配置副本的两个副本 AG。
 
@@ -424,7 +424,7 @@ sudo systemctl restart mssql-server
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>示例 2 – 3 个副本的只读路由 （外部群集类型）
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>示例 2-3 个副本的只读路由 （外部群集类型）
 
 此示例显示三个完整副本和如何只读路由可配置为在初始的可用性组创建的过程。
 
@@ -482,7 +482,7 @@ sudo systemctl restart mssql-server
     
 3.  重复步骤 2 的第三个副本。
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>示例 3 – 两个副本的只读路由 （无群集类型）
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>示例三两个副本的只读路由 （无群集类型）
 
 此示例演示如何创建一个使用群集类型为 None 的两个副本配置。 它用于读取的缩放方案的地方不会故障转移。 这将创建的侦听器是实际的主副本，以及只读路由，使用轮循机制功能。
 

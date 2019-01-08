@@ -1,5 +1,5 @@
 ---
-title: 创建和管理层次结构 |Microsoft 文档
+title: 创建和管理 Analysis Services 表格模型中的层次结构 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c9282c3b28ca5998cc21d2906f06d50f862e49a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044831"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072594"
 ---
 # <a name="create-and-manage-hierarchies"></a>创建和管理层次结构 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34044831"
   
 2.  键入层次结构的名称。  
   
- 您可以将其他列拖到层次结构的父级别中，这将复制这些列。 将子级别放到层次结构中您希望其出现的位置。  
+ 可以将其他列拖到层次结构的父级别，这将复制这些列。 将子级别放到层次结构中您希望其出现的位置。  
   
 > [!NOTE]  
 >  如果您多选度量值以及一个或多个列，或者如果您从多个表中选择列，则在上下文菜单中将禁用“创建层次结构”命令。  
@@ -93,7 +93,7 @@ ms.locfileid: "34044831"
   
 -   或者，单击父层次结构级别，然后按 Delete 键。 这也会删除其所有子级别。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表格模型设计器 ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [层次结构](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)  

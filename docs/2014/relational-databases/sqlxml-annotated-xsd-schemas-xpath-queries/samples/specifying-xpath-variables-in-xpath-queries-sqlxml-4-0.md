@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], XPath variables
@@ -15,12 +13,12 @@ ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bab72b2b390e4eace12bc8559347784d5be54e3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 780368a3b3c4b61c404f18289a7085a5f70c3d89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807126"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定 XPath 变量 (SQLXML 4.0)
   以下示例说明如何在 XPath 查询中传递 XPath 变量。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  

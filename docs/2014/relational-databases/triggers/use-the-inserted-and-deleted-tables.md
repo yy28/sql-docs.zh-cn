@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220937"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811159"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
   DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
@@ -55,7 +55,7 @@ ms.locfileid: "48220937"
   
  由于 CHECK 约束只能引用定义了列级或表级约束的列，表间的任何约束（在本例中是业务规则）都必须定义为触发器。  
   
- 以下示例将创建一个 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器将进行检查以确保供应商具有良好的信用等级。 若要获取与刚插入的采购订单对应的供应商信用等级，必须引用 `Vendor` 表并将其与插入的表联接。 如果信用等级太低，则显示信息，并且不执行该插入操作。 请注意，此示例不允许进行多行数据修改。 有关详细信息，请参阅 [Create DML Triggers to Handle Multiple Rows of Data](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
+ 以下示例将创建一个 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器将进行检查以确保供应商具有良好的信用等级。 若要获取与刚插入的采购订单对应的供应商信用等级，必须引用 `Vendor` 表并将其与插入的表联接。 如果信用等级太低，则显示信息，并且不执行该插入操作。 请注意，此示例不允许进行多行数据修改。 有关详细信息，请参阅 [创建 DML 触发器以处理多行数据](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#createtrigger3)]  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48220937"
   
 -   INSERT 语句必须为所有无 DEFAULT 约束的 NOT NULL 列提供值。  
   
--   对于除计算，identity 之外的任何列或`timestamp`列值都是可选的任何允许空值的列或列具有 DEFAULT 定义的 NOT NULL。  
+-   对于除计算列、标识列或 `timestamp` 列以外的任何列，任何允许空值的列或具有 DEFAULT 定义的 NOT NULL 列的值都是可选的。  
   
  当 INSERT、UPDATE 或 DELETE 语句引用具有 INSTEAD OF 触发器的视图时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将调用该触发器，而不是对任何表采取任何直接操作。 即使插入的和删除的表中为该视图生成的信息格式不同于基表中的数据格式，触发器也必须使用插入的和删除的表中的信息来生成实现基表中请求的操作所需的任何语句。  
   

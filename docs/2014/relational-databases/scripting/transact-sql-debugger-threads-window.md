@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.threads
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5de9e718d68accf108a24474926c0c67c1d4ef2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 713fa85a342613f261bb53aa393b8ff1504d256b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092147"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328727"
 ---
 # <a name="threads-window"></a>“线程”窗口
   “线程”  窗口显示有关正在调试的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器会话使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 线程的信息。 只有在调试模式下才可以显示此线程信息。  
@@ -62,5 +60,3 @@ ms.locfileid: "48092147"
  [Transact-SQL 调试器信息](transact-sql-debugger-information.md)   
  [sys.dm_os_threads (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql)   
  [sys.sysprocesses (Transact-SQL)](/sql/relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql)  
-  
-  

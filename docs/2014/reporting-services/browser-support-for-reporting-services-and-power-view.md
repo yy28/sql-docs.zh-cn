@@ -20,15 +20,15 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1f1b4d74d7ad7f34254a5c56c6dafc5fd2fb829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157037"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350496"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)
-  在中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，使用 web 浏览器查看报表和运行报表管理器。 并非所有浏览器都支持所有的报表功能。 本主题将说明对于报表管理器管理功能、查看报表、Visual Studio 中的报表查看器控件的支持和要求。 本主题还将概述对于支持的浏览器的功能可用性、身份验证要求和脚本要求。  
+  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，可以使用 Web 浏览器查看报表和运行报表管理器。 并非所有浏览器都支持所有的报表功能。 本主题将说明对于报表管理器管理功能、查看报表、Visual Studio 中的报表查看器控件的支持和要求。 本主题还将概述对于支持的浏览器的功能可用性、身份验证要求和脚本要求。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式  
   
@@ -45,11 +45,11 @@ ms.locfileid: "48157037"
 -   [在 Visual Studio 中 ReportViewer Web 服务器控件的浏览器支持](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Power View 浏览器方案  
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支持的受支持浏览器和浏览器版本的列表取决于打开的文档类型。 Excel 2013 工作簿和“**.rdlx**”文件使用的组件不同。  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支持的受支持的浏览器和浏览器版本的列表取决于打开的文档类型。 Excel 2013 工作簿和"**.rdlx**"文件使用的不同组件。  
   
 |文档类型|环境|浏览器支持|  
 |-------------------|-----------------|---------------------|  
-|Power View 报表 (.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]上[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 集成模式和 Power View web 应用程序。|请参阅[的 Power View 在 SharePoint 服务器和 Reporting Services SharePoint 集成的模式上](#bkmk_powerview_on_SSRS)。|  
+|Power View 报表 (.RDLX)|**SharePoint Server：** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] SharePoint 集成模式上的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 Power View Web 应用程序。|请参阅[的 Power View 在 SharePoint 服务器和 Reporting Services SharePoint 集成的模式上](#bkmk_powerview_on_SSRS)。|  
 |使用 Power View 工作表的 Excel 2013 工作簿|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Services 中。<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Web app。|请参阅[联机 Power 视图上 Excel Services 或 SharePoint 上的 Excel Web App](#bkmk_powerview_on_ExcelServices)。|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> SharePoint 服务器和 Reporting Services SharePoint 集成的模式上的 power View  
@@ -57,11 +57,11 @@ ms.locfileid: "48157037"
   
 -   此表适用于 SharePoint 2010 和 SharePoint 2013。  
   
--   有关 SharePoint 2013 浏览器支持的详细信息，请参阅[计划在 SharePoint 2013 中的浏览器支持](http://technet.microsoft.com//library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+-   有关 SharePoint 2013 浏览器支持的详细信息，请参阅[计划在 SharePoint 2013 中的浏览器支持](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
   
--   有关 SharePoint 2010 浏览器支持的详细信息，请参阅[计划浏览器支持 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx)。  
+-   有关 SharePoint 2010 浏览器支持的详细信息，请参阅[计划浏览器支持 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx)。  
   
-|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
 |**Internet Explorer 10 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
@@ -77,11 +77,11 @@ ms.locfileid: "48157037"
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 不支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 和 Internet Explorer 9 中的 InPrivate 浏览功能。 有关 InPrivate 浏览的详细信息，请参阅[什么是 InPrivate 浏览？](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> 在 Excel Services 或 SharePoint Online 上的 Excel Web App 的 power View  
- 下表总结了有关支持的浏览器版本[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]当用户在使用运行 Excel Services 的 SharePoint 服务器上的 Power View 工作表打开 Excel 2013 工作簿：  
+ 下表汇总了当用户在运行 Excel Services 的 SharePoint Server 上使用 Power View 工作表打开 Excel 2013 工作簿时支持的 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 的浏览器版本：  
   
--   有关 SharePoint 2013 浏览器支持的详细信息，请参阅[计划在 SharePoint 2013 中的浏览器支持](http://technet.microsoft.com/library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+-   有关 SharePoint 2013 浏览器支持的详细信息，请参阅[计划在 SharePoint 2013 中的浏览器支持](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
   
-|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
 |**Internet Explorer 10 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
@@ -94,19 +94,19 @@ ms.locfileid: "48157037"
  **(\*)** Chrome 将停止支持 Netscape 插件 API (NPAPI)，由 Silverlight。 Power View 依赖于 Silverlight。  有关详细信息，请参阅 [“NPAPI 最终倒计时”](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html)。  
   
 ##  <a name="bkmk_reportmanager"></a> 报表管理器浏览器要求 （本机模式）  
- 以下是支持的浏览器可用于运行的当前列表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式报表管理器来管理报表和报表服务器。  
+ 下面是可以用于运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式报表管理器以便管理报表和报表服务器的支持的浏览器的当前列表。  
   
 |浏览者|  
 |-------------|  
 |Internet Explorer 7 或更新版本且必须启用了脚本撰写功能。|  
-|Mozilla Firefox（最新公开发布的版本）|  
-|Apple Safari（最新公开发布的版本）|  
-|Google Chrome（最新公开发布的版本）|  
+|Mozilla FireFox (最新公开发布的版本)|  
+|Apple Safari (最新公开发布的版本)|  
+|Google Chrome (最新公开发布的版本)|  
   
 ##  <a name="bkmk_reportviewer"></a> 查看报表的浏览器要求  
- 以下是报表查看器支持的浏览器和功能的当前列表。 报表查看器支持从查看报表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表管理器和 SharePoint 库。  
+ 以下是报表查看器支持的浏览器和功能的当前列表。 报表查看器支持从 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器和 SharePoint 库查看报表。  
   
-|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**适用于 iPad 的 iOS 6-7**|  
+|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|**适用于 iPad 的 iOS 6-7**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|不支持|不支持|  
 |**Internet Explorer 10 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|不支持|不支持|  
@@ -117,7 +117,7 @@ ms.locfileid: "48157037"
 |**Apple Safari (最新公开发布的版本)**|不支持|不支持|不支持|不支持|不支持|32 位、64 位|支持但具有受限功能<sup>(1)</sup>|  
 |**Google Chrome (最新公开发布的版本)**|32 位|32 位|32 位|32 位|32 位|不支持|不支持|  
   
- **<sup>(1)</sup>** 支持以下功能：  
+ **<sup>(1)</sup>**  支持以下功能：  
   
 -   导出为 PDF 和 TIFF 格式。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48157037"
   
 -   有关详细信息，请参阅[Microsoft Surface 设备和 Apple iOS 设备上查看 Reporting Services 报表](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)。  
   
- **注意** 如果从 Macintosh 计算机访问报表服务器，则建议使用 Safari。 如果在使用 SharePoint 产品与集成[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，请参阅[计划浏览器支持 (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583)。  
+ **注意** 如果从 Macintosh 计算机访问报表服务器，则建议使用 Safari。 如果在使用 SharePoint 产品与集成[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，请参阅[计划浏览器支持 (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583)。  
   
 ### <a name="url-access-for-viewing-reports"></a>查看报表的 URL 访问  
  若要直接查看报表而不是通过报表管理器查看报表，可以使用 URL 访问链接到报表和报表查看器。 URL 访问支持多种浏览器。  
@@ -141,7 +141,7 @@ ms.locfileid: "48157037"
 |----------------------|------------------|-------------------------|------------------------|  
 |**Internet 资源管理器**|协商、Kerberos、NTLM、基本|Negotiate|是。 默认身份验证设置使用 Internet Explorer。|  
 |**Firefox**|NTLM、基本|NTLM|是。 默认身份验证设置使用 Firefox。|  
-|**Safari**|“基本”|“基本”|是。 默认身份验证设置使用 Safari。|  
+|**Safari**|基本|基本|是。 默认身份验证设置使用 Safari。|  
 |**Chrome**|协商、NTLM、基本|协商|是。 默认身份验证设置使用 Chrome。|  
   
 ### <a name="script-requirements"></a>脚本要求  
@@ -169,7 +169,7 @@ ms.locfileid: "48157037"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**浏览者**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**说明**|  
+|**浏览者**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 10.9**|**说明**|  
 |**（适用于台式机的 Internet Explorer 11**|用户帐户控制|是|用户帐户控制|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
 |**Internet Explorer 10 （适用于台式机）**|用户帐户控制|是|用户帐户控制|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
 |**Internet Explorer 9**|不支持|用户帐户控制|不支持|用户帐户控制|是|用户帐户控制|Internet Explorer 支持全部 ReportViewer 功能。|  
@@ -191,13 +191,13 @@ ms.locfileid: "48157037"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- 在 Internet Explorer 中的兼容性模式的详细信息，请参阅[定义文档兼容性](http://go.microsoft.com/fwlink/?LinkId=180380)(http://go.microsoft.com/fwlink/?LinkId=180380)。  
+ 在 Internet Explorer 中的兼容性模式的详细信息，请参阅[定义文档兼容性](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)。  
   
- 使用 ReportViewer 控件的详细信息，请参阅[部署报表和 ReportViewer 控件](http://msdn.microsoft.com/library/ms251723.aspx)(http://msdn.microsoft.com/library/ms251723.aspx)。  
+ 使用 ReportViewer 控件的详细信息，请参阅[部署报表和 ReportViewer 控件](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 工具](tools/reporting-services-tools.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [HTML 查看器和报表工具栏](html-viewer-and-the-report-toolbar.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   

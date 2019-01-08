@@ -1,5 +1,5 @@
 ---
-title: 如何： 运行升级顾问分析向导 |Microsoft Docs
+title: 如何：运行升级顾问分析向导 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0896639f1c088b3ead255758075075f3e397b47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065277"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207646"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>如何运行升级顾问分析向导
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>如何：运行升级顾问分析向导
   可以从升级顾问起始页启动升级顾问分析向导。 本主题介绍了如何运行升级顾问分析向导。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  运行升级顾问分析向导时，升级顾问会将报表保存在默认报表文件夹中。 但是，报表查看器只显示最近保存的五个报表。 报表的默认位置为 My Documents\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports。  
   
 ### <a name="to-run-the-upgrade-advisor-analysis-wizard"></a>若要运行升级顾问分析向导  
@@ -58,7 +58,7 @@ ms.locfileid: "48065277"
 8.  完成分析后，单击**启动报表**若要查看检测到的升级问题。  
   
 ## <a name="see-also"></a>请参阅  
- [如何： 启动升级顾问](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [如何：启动升级顾问](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [运行升级顾问&#40;用户界面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

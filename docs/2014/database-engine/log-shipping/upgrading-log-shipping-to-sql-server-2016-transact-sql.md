@@ -12,15 +12,15 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61e58bef0e4face7aac45563350e4f1047de359d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204967"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518105"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>将日志传送升级到 SQL Server 2014 (Transact-SQL)
-  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，有可能保留日志传送配置。 本主题介绍升级日志传送配置的备用方案和最佳做法。  
+  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，有可能保留日志传送配置。 本主题介绍升级日志传送配置的备用方案和最佳做法。  
   
 > [!NOTE]  
 >  [中引入了](../../relational-databases/backup-restore/backup-compression-sql-server.md) 备份压缩 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]。 升级后的日志传送配置使用“备份压缩默认值”服务器级配置选项控制是否对事务日志备份文件使用备份压缩。 可以为每个日志传送配置指定日志备份的备份压缩行为。 有关详细信息，请参阅[配置日志传送 (SQL Server)](configure-log-shipping-sql-server.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "48204967"
  
   
 ###  <a name="UpgradeSecondary"></a> 升级辅助服务器实例  
- 升级辅助服务器实例的升级过程涉及[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的日志传送配置到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]然后再升级主服务器实例。 辅助服务器实例必须总是先于主服务器实例升级。 如果在辅助服务器之前升级主服务器，日志传送会失败，因为的较新版本创建一个备份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不能在旧版本的还原[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 升级主服务器实例之前的升级过程包括将辅助服务器实例的日志传送配置从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 辅助服务器实例必须总是先于主服务器实例升级。 由于在较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的备份无法在较旧版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中还原，所以如果主服务器先于辅助服务器升级，将导致日志传送失败。  
   
  由于升级后的辅助服务器继续还原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本主服务器的日志备份，因此日志传送在整个升级过程中都不间断。 升级辅助服务器实例的过程部分取决于日志传送配置是否具有多个辅助服务器。 有关详细信息，请参阅本主题后面的 [升级多个辅助服务器实例](#MultipleSecondaries)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48204967"
  辅助服务器升级完毕后，日志传送代理作业即开始继续复制和还原主服务器实例（服务器 A）的日志备份。辅助服务器使辅助数据库达到最新所需的时间会有所不同，具体情况取决于升级辅助服务器占用的时间和主服务器上进行备份的频率。  
   
 > [!NOTE]  
->  在服务器升级期间，辅助数据库不会升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。 只有联机时它才会升级。  
+>  服务器升级期间，辅助数据库不会升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库。 只有联机时它才会升级。  
   
 > [!IMPORTANT]  
 >  对于要求升级的数据库，不支持 RESTORE WITH STANDBY 选项。 如果已使用 RESTORE WITH STANDBY 配置了升级的辅助数据库，则在升级后可能不再能够还原事务日志。 要对该辅助数据库恢复日志传送，您需要再次对该备用服务器设置日志传送。 有关 STANDBY 选项的详细信息，请参阅[RESTORE 参数&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。  
@@ -68,18 +68,18 @@ ms.locfileid: "48204967"
 ###  <a name="UpgradePrimary"></a> 升级主服务器实例  
  计划升级时，需要考虑的一个重要事项是数据库将处于不可用状态的时间。 最简单的升级方案（下文的方案 1）将使得数据库在主服务器升级期间不可用。  
   
- 但代价是更复杂的升级过程中，你可以最大限度地提高数据库的可用性故障转移[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本主服务器到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级原始主服务器之前的辅助服务器 (方案 2 下文)。 故障转移方案有两种不同的形式。 一种是切换回原始主服务器并保持原始日志传送配置。 另一种是在升级原始主服务器之前删除原始日志传送配置，随后使用新的主服务器创建新配置。 本节介绍这两种方案。  
+ 如果能在升级原始主服务器之前，将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本主服务器故障转移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 辅助服务器（下文的方案 2），则可以最大限度地提高数据库的可用性，但这样做会加大升级过程的复杂程度。 故障转移方案有两种不同的形式。 一种是切换回原始主服务器并保持原始日志传送配置。 另一种是在升级原始主服务器之前删除原始日志传送配置，随后使用新的主服务器创建新配置。 本节介绍这两种方案。  
   
 > [!IMPORTANT]  
 >  一定要先升级辅助服务器实例，然后再升级主服务器实例。 有关详细信息，请参阅本主题前面的 [升级辅助服务器实例](#UpgradeSecondary)。  
   
   
-####  <a name="Scenario1"></a> 方案 1： 不带故障转移升级主服务器实例  
+####  <a name="Scenario1"></a> 方案 1:不带故障转移升级主服务器实例  
  这个方案比较简单，但导致的停机时间要比使用故障转移时间长。 主服务器实例进行简单的升级，数据库在升级期间不可用。  
   
  服务器升级完毕后，数据库即自动回到联机状态，随即进行升级。 数据库升级完毕后，日志传送作业将继续进行。  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>方案 2：借助故障转移升级主服务器实例  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>方案 2:使用故障转移升级主服务器实例  
  此方案最大限度地提高了可用性，同时使停机时间降低到最短。 此方案采取向辅助服务器实例实行受控故障转移的方式，使数据库在原始主服务器实例升级期间保持可用状态。 停机时间限于故障转移所需的相对短的时间，而不是升级主服务器实例所需的时间。  
   
  借助故障转移升级主服务器实例一般需要三个过程：执行到辅助服务器的受控故障转移，将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 主服务器实例上设置日志传送。 本节后面将对这三个过程进行介绍。  
@@ -88,7 +88,7 @@ ms.locfileid: "48204967"
 >  如果计划使辅助服务器实例成为新的主服务器实例，则需要删除日志传送配置。 原始主服务器实例升级完毕后，需要重新配置从新的主服务器实例到新的辅助服务器实例的日志传送。 有关详细信息，请参阅[删除日志传送&#40;SQL Server&#41;](remove-log-shipping-sql-server.md)。  
   
   
-#####  <a name="Procedure1"></a> 步骤 1： 执行到辅助服务器的受控故障转移  
+#####  <a name="Procedure1"></a> 步骤 1:执行到辅助服务器的受控故障转移  
  到辅助服务器的受控故障转移：  
   
 1.  手动执行[结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)指定 WITH NORECOVERY 的主数据库上的事务日志。 此日志备份捕获任何尚未备份的日志记录并使数据库脱机。 请注意：数据库脱机期间，日志传送备份作业将失败。  
@@ -108,7 +108,7 @@ ms.locfileid: "48204967"
   
     1.  确保日志传送备份作业自动进行的所有备份都已应用。 若要检查哪些备份作业已应用，请使用[sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql)系统存储过程，在监视服务器上或在主要和辅助服务器上。 同一文件应列入**last_backup_file**， **last_copied_file**，并**last_restored_file 这三**列。 如果尚未复制和还原任何备份文件，则请手动调用代理复制和还原作业以进行日志传送配置。  
   
-         有关启动作业的信息，请参阅[启动作业](../../ssms/agent/start-a-job.md)。  
+         有关启动作业的信息，请参阅 [Start a Job](../../ssms/agent/start-a-job.md)。  
   
     2.  将您在第一步中创建的最后一个日志备份文件从文件共享复制到辅助服务器上的日志传送使用的本地位置。  
   
@@ -130,13 +130,13 @@ ms.locfileid: "48204967"
   
     5.  请注意：辅助数据库在处于联机状态时，它的事务日志并未填满。 若要阻止事务日志填满，可能需要备份此日志。 如果是这样，建议您将它备份到共享位置，即备份到“备份共享” ，以便在其他服务器实例上可以还原这些备份。  
   
-#####  <a name="Procedure2 "></a> 步骤 2: 原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- 将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，数据库仍将处于脱机状态且仍采用该格式。  
+#####  <a name="Procedure2 "></a> 步骤 2:将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ 将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，数据库仍将处于脱机状态且仍采用该格式。  
   
-#####  <a name="Procedure3"></a> 过程 3： 设置日志传送 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure3"></a> 步骤 3:设置日志传送 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  剩余的升级过程取决于是否仍配置日志传送，如下所述：  
   
--   如果保留了 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本日志传送配置，则请切换回原始主服务器实例。 有关详细信息，请参阅本节后面的 [切换回原始主服务器实例](#SwitchToOrigPrimary)。  
+-   如果保留了 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本日志传送配置，则请切换回原始主服务器实例。 有关详细信息，请参阅本节后面的 [切换回原始主服务器实例](#SwitchToOrigPrimary)。  
   
 -   如果在进行故障转移之前删除了日志传送配置，则请创建一个新的日志传送配置，其中原始辅助服务器实例是新的主服务器实例。 有关详细信息，请参阅本节后面的 [将原来的辅助服务器实例作为新的主服务器实例](#KeepOldSecondaryAsNewPrimary)。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48204967"
     GO  
     ```  
   
-2.  如果任何事务日志备份都是在临时主数据库上进行的，则将那些使用 WITH NORECOVERY 的日志备份（不包括在第一步中创建的结尾备份）还原到原始主服务器（服务器 A）上的脱机数据库。 该数据库升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]设置格式时第一个日志备份还原。  
+2.  如果任何事务日志备份都是在临时主数据库上进行的，则将那些使用 WITH NORECOVERY 的日志备份（不包括在第一步中创建的结尾备份）还原到原始主服务器（服务器 A）上的脱机数据库。 第一个日志备份还原后，数据库即升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。  
   
 3.  在原始主数据库上（即在服务器 A 上）使用 WITH RECOVERY 还原结尾日志备份 `Switchback_AW_20080315.trn`，从而使数据库联机。  
   
@@ -169,12 +169,12 @@ ms.locfileid: "48204967"
   
 2.  备份新的主数据库（位于服务器 B 上）的日志。  
   
-3.  使用 WITH NORECOVERY 将日志备份还原到新的辅助服务器实例（服务器 A）。 第一次还原操作将数据库升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+3.  使用 WITH NORECOVERY 将日志备份还原到新的辅助服务器实例（服务器 A）。 第一个还原操作将数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 4.  配置日志传送，使原来的辅助服务器（服务器 B）作为主服务器实例。  
   
     > [!IMPORTANT]  
-    >  如果使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，指定辅助数据库已初始化。  
+    >  如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，请指定辅助数据库已初始化。  
   
      有关详细信息，请参阅[配置日志传送 (SQL Server)](configure-log-shipping-sql-server.md)。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48204967"
   
 6.  升级原始主服务器（服务器 A）。  
   
-7.  在已故障转移到的数据库（即服务器 B 上的临时主数据库）上，使用 WITH NORECOVERY 手动备份事务日志。 这将使该数据库脱机。  
+7.  向其进行了故障转移的临时主数据库 （服务器 B 上），手动备份事务日志在数据库上使用 WITH NORECOVERY。 这将使该数据库脱机。  
   
 8.  将使用 WITH NORECOVERY 在临时主数据库（位于服务器 B 上）上创建的所有事务日志备份还原到所有其他辅助数据库（位于服务器 C 上）。 从而在原始主数据库升级后，可以继续从其进行日志传送，而无需对每个辅助数据库进行完全的数据库还原。  
   

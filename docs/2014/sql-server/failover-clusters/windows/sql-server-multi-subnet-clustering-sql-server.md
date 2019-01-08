@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f71635386de926bcf74b108f6bbebaacd3b10282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349211"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集是一种配置，其中，每个故障转移群集节点都连接到其他子网或其他子网组。 这些子网可位于同一位置或在地理上分散的地点中。 跨地理上分散的站点进行群集有时称为拉伸群集。 因为没有所有节点都可以访问的共享存储，所以在多个子网上的数据存储之间应该复制数据。 对于数据复制，有多个可用数据的副本。 因此，多子网故障转移群集除了具备高可用性之外，还提供了灾难恢复解决方案。  
@@ -69,7 +69,7 @@ ms.locfileid: "48133357"
 ##  <a name="DNS"></a> 故障转移期间的客户端恢复延迟  
  默认情况下，多子网 FCI 会针对其网络名称启用 RegisterAllProvidersIP 群集资源。 在多子网配置中，将在 DNS 服务器上注册网络名称的联机和脱机 IP 地址。 之后，客户端应用程序会从 DNS 服务器检索所有已注册的 IP 地址，并尝试按顺序或并行连接到这些地址。 这意味着，多子网故障转移中的客户端恢复时间不再依赖 DNS 更新延迟。 默认情况下，客户端会按顺序尝试 IP 地址。 当客户端在其连接字符串中使用新的可选 `MultiSubnetFailover=True` 参数时，它将改为同时尝试 IP 地址并连接到第一台响应的服务器。 这有助于在发生故障转移时最大程度地减少客户端恢复延迟。 有关详细信息，请参阅[AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)并[创建或配置可用性组侦听器&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- 使用旧客户端库或第三方数据提供程序，不能使用`MultiSubnetFailover`在连接字符串中的参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在其能够循环访问您的多子网 FCI 中的所有 IP 地址之前不会超时。  
+ 对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 `MultiSubnetFailover` 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在它能够循环访问多子网 FCI 中的所有 IP 地址之前不会超时。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的默认客户端连接超时期限为 15 秒。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "48133357"
 |安装 SQL Server 故障转移群集|[创建新的 SQL Server 故障转移群集（安装程序）](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |您的现有 SQL Server 故障转移群集的就地升级|[升级 SQL Server 故障转移群集实例（安装程序）](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |维护您的现有 SQL Server 故障转移群集|[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Windows 故障转移群集|[Windows 2008 R2 故障转移多站点群集](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
-|使用“故障转移群集管理”管理单元来查看 WSFC 事件和日志|[查看故障转移群集的事件和日志](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|使用 Windows PowerShell 为 WSFC 故障转移群集中的所有节点（或特定节点）创建日志文件|[Get-ClusterLog 故障转移群集 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)|  
+|Windows 故障转移群集|[Windows 2008 R2 故障转移多站点群集](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
+|使用“故障转移群集管理”管理单元来查看 WSFC 事件和日志|[查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|使用 Windows PowerShell 为 WSFC 故障转移群集中的所有节点（或特定节点）创建日志文件|[Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   
  
   

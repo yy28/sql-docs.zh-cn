@@ -20,16 +20,16 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02bc4c6d30fc6f8fa9d77e3da5f10664fd5a2704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693894"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207546"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLStatistics**检索有关单个表和索引与表关联的统计信息的列表。 驱动程序返回的信息作为结果集。  
@@ -79,7 +79,7 @@ SQLRETURN SQLStatistics(
  [输入]以字符为单位的长度 **TableName*。  
   
  *唯一*  
- [输入]索引类型： SQL_INDEX_UNIQUE 或 SQL_INDEX_ALL。  
+ [输入]索引的类型：SQL_INDEX_UNIQUE 或 SQL_INDEX_ALL。  
   
  Reserved  
  [输入]指示基数和页中的列的结果集的重要性。 以下选项会影响返回的基数和页仅限于列;如果即使基数和页不会返回，则返回索引的信息。  
@@ -148,7 +148,7 @@ SQLRETURN SQLStatistics(
 |类型 (ODBC 1.0)|7|Smallint（非 NULL）|要返回的信息类型：<br /><br /> SQL_TABLE_STAT 指示 （中的基数或页面列中） 的表的统计信息。<br /><br /> SQL_INDEX_BTREE 指示 B 树索引。<br /><br /> SQL_INDEX_CLUSTERED 指示聚集的索引。<br /><br /> SQL_INDEX_CONTENT 指示内容索引。<br /><br /> SQL_INDEX_HASHED 指示哈希的索引。<br /><br /> SQL_INDEX_OTHER 指示索引的另一种类型。|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|列序列号的索引 （从 1 开始）;如果类型为 SQL_TABLE_STAT，则返回 NULL。|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|列名称。 如果列基于一个表达式，如薪金 + 优势，返回的表达式;如果无法确定该表达式，则返回空字符串。 如果类型为 SQL_TABLE_STAT，则返回 NULL。|  
-|ASC_OR_DESC (ODBC 1.0)|10|char （1)|对列的序列进行排序:"A"升序;"D"表示降序;如果数据源不支持列排序顺序或类型是否为 SQL_TABLE_STAT，则返回 NULL。|  
+|ASC_OR_DESC (ODBC 1.0)|10|char （1)|列的排序顺序："A"升序;"D"表示降序;如果数据源不支持列排序顺序或类型是否为 SQL_TABLE_STAT，则返回 NULL。|  
 |基数 (ODBC 1.0)|11|Integer|基数的表或索引;如果类型是 SQL_TABLE_STAT; 在表中的行数如果类型不是 SQL_TABLE_STAT; 在索引中的唯一值的数量如果值从数据源不可用，则返回 NULL。|  
 |页 (ODBC 1.0)|12|Integer|用于存储索引或表; 的页面数表类型是否为 SQL_TABLE_STAT; 的页面数如果类型不是 SQL_TABLE_STAT; 索引的页面数如果值从数据源不可用或不可能适用于数据源，则返回 NULL。|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|如果索引是筛选的索引，这是筛选条件，如薪金 > 30000;如果不能确定筛选条件，，则为空字符串。<br /><br /> 如果索引不是筛选的索引，则为 NULL，不能确定是否索引为筛选的索引，或类型是 SQL_TABLE_STAT。|  

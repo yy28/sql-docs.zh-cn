@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,15 +12,15 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788639"
 ---
 # <a name="full-text-search"></a>全文搜索
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。 在可以对某一表运行全文查询之前，数据库管理员必须对该表创建全文索引。 全文索引包括表中一个或多个基于字符的列。 这些列可以具有任何以下数据类型： `char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`，或`varbinary(max)`和 FILESTREAM。 每个全文索引都对表中的一个或多个列创建索引，并且每个列都可以使用特定语言。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。 在可以对某一表运行全文查询之前，数据库管理员必须对该表创建全文索引。 全文索引包括表中一个或多个基于字符的列。 这些列可以具有下列任何一种数据类型：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml` 或 `varbinary(max)` 和 FILESTREAM。 每个全文索引都对表中的一个或多个列创建索引，并且每个列都可以使用特定语言。  
   
  全文查询根据特定语言（例如，英语或日语）的规则对词和短语进行操作，从而对全文索引中的文本数据执行语言搜索。 全文查询可以包括简单的词和短语，或者词或短语的多种形式。 全文查询返回包含至少一个匹配项（也称为“命中”）的所有文档。 当目标文档包含在全文查询中指定的所有字词，并符合任何其他搜索条件（如匹配的字词之间的距离）时，即发生匹配。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48144187"
 >  全文搜索是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个可选组件。 有关详细信息，请参阅[安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)。  
   
 ##  <a name="benefits"></a> 使用全文搜索可以做什么？  
- 全文搜索适用于多种商业应用场景：例如，电子商务（在网站上搜索项目）、律师事务所（在法律数据库中搜索案件记录）或人力资源部门（从所存储的个人简历中找到符合职位描述的简历）。 不管是什么样的商业应用场景，全文搜索的基本管理任务和开发任务是相同的。 然而，在给定的商业应用场景中，可以对全文索引和查询进行优化以使其满足业务目标。 例如，对于电子商务来说，最大限度地提高性能可能比对结果进行排序、检索的准确性（实际上有多少个现有匹配项是由全文查询返回的）或支持多种语言更重要。 对于律师事务所来说，首先需要考虑的可能是返回所有可能存在的匹配项（“返回全部”信息）。  
+ 全文搜索是适用于各种业务情况，如电子-企业-上搜索项目网站法律公司搜索法律数据存储库; 中的用例历史记录或人力资源部门匹配作业存储描述的简历。 不管是什么样的商业应用场景，全文搜索的基本管理任务和开发任务是相同的。 然而，在给定的商业应用场景中，可以对全文索引和查询进行优化以使其满足业务目标。 例如，对于电子商务来说，最大限度地提高性能可能比对结果进行排序、检索的准确性（实际上有多少个现有匹配项是由全文查询返回的）或支持多种语言更重要。 对于律师事务所来说，首先需要考虑的可能是返回所有可能存在的匹配项（“返回全部”信息）。  
   
  [本主题内容](#top)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48144187"
     AND product_cost < 200 ;  
     ```  
   
--   招聘员工（搜索具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用经验的职位候选人）：  
+-   招聘员工（搜索具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用经验的职位候选人）：  
   
     ```  
     SELECT candidate_name,SSN   
@@ -122,7 +122,7 @@ ms.locfileid: "48144187"
   
 -   **协议处理程序。** 此组件从内存中取出数据，以进行进一步的处理，并访问指定数据库的用户表中的数据。 其职责之一是从全文索引列中收集数据，并将所收集的数据传递给筛选器后台程序宿主，从而由该宿主根据需要应用筛选和断字符。  
   
--   **筛选器。** 某些数据类型需要筛选，然后才能为文档中的数据（包括 `varbinary`、`varbinary(max)`、`image` 或 `xml` 列中的数据）创建全文索引。 给定文档采用何种筛选器取决于文档类型。 例如，Microsoft Word (.doc) 文档、Microsoft Excel (.xls) 文档和 XML (.xml) 文档分别使用不同的筛选器。 然后，筛选器从文档中提取文本块区，删除嵌入的格式并保留文本，如有可能的话也会保留有关文本位置的信息。 结果将以文本化信息流的形式出现。 有关详细信息，请参阅 [配置和管理搜索筛选器](configure-and-manage-filters-for-search.md)。  
+-   **筛选器。** `varbinary`某些数据类型需要筛选，然后才能为文档中的数据（包括 `varbinary(max)`、`image`、`xml` 或  列中的数据）创建全文索引。 给定文档采用何种筛选器取决于文档类型。 例如，Microsoft Word (.doc) 文档、Microsoft Excel (.xls) 文档和 XML (.xml) 文档分别使用不同的筛选器。 然后，筛选器从文档中提取文本块区，删除嵌入的格式并保留文本，如有可能的话也会保留有关文本位置的信息。 结果将以文本化信息流的形式出现。 有关详细信息，请参阅 [配置和管理搜索筛选器](configure-and-manage-filters-for-search.md)。  
   
 -   **断字符和词干分析器。** 断字符是特定于语言的组件，它根据给定语言的词汇规则查找词边界（“断字”）。 每个断字符都与用于组合动词及执行变形扩展的特定于语言的词干分析器组件相关联。 在创建索引时，筛选器后台程序宿主使用断字符和词干分析器来对给定表列中的文本数据执行语言分析。 与全文索引中的表列相关的语言将决定为列创建索引时要使用的断字符和词干分析器。 有关详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   

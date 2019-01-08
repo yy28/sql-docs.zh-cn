@@ -1,23 +1,23 @@
 ---
-title: 选项 (环境： 字体和颜色页) |Microsoft Docs
+title: 选项 (环境：字体和颜色页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2a73bd30ab72cc293f8cbd0dcebc2b123d6538e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818749"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>选项（“环境”:“字体和颜色”页）
+# <a name="options-environment-fonts-and-colors-page"></a>选项 (环境：字体和颜色页面）
   使用“选项”对话框可以为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各种用户界面元素建立自定义的字体和配色方案。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，然后选择“字体和颜色”。  
   
  在更改配色方案的会话期间，更改不会生效。 您可以通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的另一个实例，并将其设置为您的更改要应用的环境，来评估颜色更改效果。  
@@ -29,8 +29,8 @@ ms.locfileid: "51031805"
 |术语|定义|  
 |----------|----------------|  
 |文本编辑器|更改文本编辑器的字形、字号和颜色显示设置，会影响默认文本编辑器中文本的外观。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 之外的文本编辑器中打开的文档将不会受到这些设置的影响。|  
-|打印机|更改打印机的字形、字号和颜色显示设置，会影响打印文档中文本的外观。<br /><br /> 提示： 根据需要您可以选择不同的默认字体打印用于在文本编辑器中显示。 在打印代码同时包含单字节字符和双字节字符时，这可能非常有用。|  
-|[全部文本工具窗口 **]**|更改此项的字形、字号和颜色显示设置，会影响那些有输出窗格的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]工具窗口中文本的外观。 例如，“输出”窗口、“文本结果”窗口等。<br /><br /> 注意：在更改 [全部文本工具窗口] 项的文本的会话期间，更改不会生效。 通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的另一个实例，可以评估这些更改的效果。|  
+|打印机|更改打印机的字形、字号和颜色显示设置，会影响打印文档中文本的外观。<br /><br /> 提示：根据需要，您选择的默认打印字体可以不同于文本编辑器中的默认显示字体。 在打印代码同时包含单字节字符和双字节字符时，这可能非常有用。|  
+|[全部文本工具窗口 **]**|更改此项的字形、字号和颜色显示设置，会影响那些有输出窗格的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]工具窗口中文本的外观。 例如，“输出”窗口、“文本结果”窗口等。<br /><br /> 注意：对 [所有文本工具 Windows] 项的文本的更改使其在会话期间未生效。 通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的另一个实例，可以评估这些更改的效果。|  
 |“查找结果”窗口|更改此项的字形、字号和颜色显示设置，会影响“查找结果”窗口中文本的外观。|  
 |输出窗口|更改此项的字形、字号和颜色显示设置，会影响“输出”窗口中文本的外观。|  
 |网格结果|更改此项的字形、字号和颜色显示设置，会影响“查询”窗口的“网格结果”区域中文本的外观。|  
@@ -55,9 +55,9 @@ ms.locfileid: "51031805"
   
  一些显示项包括：  
   
--   指示器边距：显示断点和书签图标的代码编辑器的左边距。  
+-   指示器边距：在左侧显示断点和书签图标的代码编辑器中边距。  
   
--   可折叠的文本：可以在代码编辑器（仅 XML）内显示或隐藏的文本块或代码块。  
+-   可折叠的文本：文本或可转换到和编辑器 (仅 XML) 内显示的代码块。  
   
  **项前景色**  
  列出可以为“显示项”中选定项的前景选择的可用颜色。 因为某些项是相关的，所以应该始终使用一致的显示方案；例如，更改文本的前景色也会更改“字符串”等元素的前景色。  
@@ -82,6 +82,6 @@ ms.locfileid: "51031805"
   
 ## <a name="see-also"></a>请参阅  
  [中的查询编辑器的颜色编码](../../relational-databases/scripting/color-coding-in-query-editors.md)   
- [选项&#40;文本编辑器： 编辑器选项卡和状态栏页&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
+ [选项&#40;文本编辑器：编辑器选项卡和状态栏页&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

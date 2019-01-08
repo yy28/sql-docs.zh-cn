@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222237"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412204"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>测试提升图的准确性（数据挖掘基础教程）
   上**挖掘准确性图表**选项卡上的数据挖掘设计器中，可以计算以及每个模型进行预测，并直接对其他模型的结果的每个模型的结果进行比较。 这种比较方法称为*提升图*。 通常，用提升图或分类准确性对挖掘模型的预测准确性进行度量。 在本教程中，我们将只使用提升图。  
@@ -47,7 +47,7 @@ ms.locfileid: "48222237"
   
      若要将某个列作为**可预测列名称**准确性图表中的列必须具有的使用情况类型`Predict`或`Predict Only`。 此外，目标列的内容类型必须为 `Discrete` 或 `Discretized`。 换言之，您无法使用提升图针对连续数值输出测量准确性。  
   
--   是要测量模型的一般准确性还是预测某一特殊值（例如 [Bike Buyer] = ‘是’）时的准确性  
+-   您要测量模型的一般准确性还是预测特定值 (例如 [Bike Buyer] = 'Yes')  
   
 #### <a name="to-generate-the-lift-chart"></a>生成提升图  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48222237"
  [测试筛选后的模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [提升图&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [提升图（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [提升图表选项卡&#40;挖掘准确性图表视图&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
@@ -17,12 +17,12 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c837864701814ce0a1a9a45735cd8524bda1a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121867"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818669"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中编辑行 (Visual Database Tools)
   在许多情况下，都可以在 [“结果”](visual-database-tools.md)窗格中编辑数据。 有关更改数据的详细信息，请参阅 [更新结果的规则 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md) 和 [使用“结果”窗格中的数据 (Visual Database Tools)](work-with-data-in-the-results-pane-visual-database-tools.md)窗格中编辑数据。  

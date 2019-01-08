@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512766"
 ---
 # <a name="dimension-relationships"></a>维度关系
   维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 在将数据库维度或度量值组添加到多维数据集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尝试确定维度用法，通过检查维度表和多维数据集的数据源视图中的事实数据表之间的关系，并检查在维度中属性之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
@@ -35,7 +35,7 @@ ms.locfileid: "48164517"
  维度与度量值组之间的关系包括参与该关系的维度和事实数据表以及一个指定特定度量值组中维度粒度的粒度属性。  
   
 ## <a name="regular-dimension-relationships"></a>常规维度关系  
- 当维度的键列与事实数据表直接联接时，多维数据集维度与度量值组之间便会存在常规维度关系。 这种直接关系基于基础关系数据库中的主键-外键关系，但是也可以基于数据源视图中定义的逻辑关系。 常规维度关系表示传统星型架构设计中维度表与事实数据表之间的关系。 有关常规关系的详细信息，请参阅[定义常规关系和常规关系属性](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)。  
+ 当维度的键列与事实数据表直接联接时，多维数据集维度与度量值组之间便会存在常规维度关系。 这种直接关系基于在基础关系数据库中，主键-外键关系，但也可能基于数据源视图中定义的逻辑关系。 常规维度关系表示传统星型架构设计中维度表与事实数据表之间的关系。 有关常规关系的详细信息，请参阅[定义常规关系和常规关系属性](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)。  
   
 ## <a name="reference-dimension-relationships"></a>引用维度关系  
  当多维数据集维度的键列通过其他维度表中的键与事实数据表间接联接时，该维度与度量值组之间便会存在引用维度关系，如下图所示。  
@@ -61,7 +61,7 @@ ms.locfileid: "48164517"
   
  ![列实际上表可以支持维度](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "列实际上表可以支持维度")  
   
- 该表不仅包含分销商所发出订单的每一行的属性信息，而且还包含有关订单本身的属性信息。 在上图中的属性标识中的信息**FactResellerSales**无法用作维度中的属性的表。 在本例中，CarrierTrackingNumber 和 CustomerPONumber 属性列表示两条附加信息，即承运人跟踪号以及分销商发出的采购订单号。 该信息很有用，例如，用户很有可能希望看到聚合信息，如单个跟踪号下将要发货的所有订单的产品总成本。 但是，如果没有维度，则无法组织或聚合这两个属性的数据。  
+ 该表不仅包含分销商所发出订单的每一行的属性信息，而且还包含有关订单本身的属性信息。 在上图中的属性标识中的信息**FactResellerSales**无法用作维度中的属性的表。 在本例中，CarrierTrackingNumber 和 CustomerPONumber 属性列表示两条附加信息，即承运人跟踪号以及分销商发出的采购订单号。 该信息很有用-例如，用户很有可能希望看到聚合的信息，例如总产品成本，单个跟踪号下将要发货的所有订单。 但是，如果没有维度，则无法组织或聚合这两个属性的数据。  
   
  理论上，您可以创建与 FactResellerSales 表使用相同密钥信息的维度表，并将另外两个属性列 CarrierTrackingNumber 和 CustomerPONumber 移到该维度表。 但是，为了只将这两个属性作为单独的维度表示，您可能会复制大部分数据并为数据仓库增加不必要的复杂性。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48164517"
  有关多对多关系的详细信息，请参阅[定义多对多关系和多对多关系属性](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [维度&#40;Analysis Services-多维数据&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

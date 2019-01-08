@@ -11,12 +11,12 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904977"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394248"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多个页中显示行标题和列标题（报表生成器和 SSRS）
   您可以控制在跨越多个页的 Tablix 数据区域的每个页上是否重复行标题和列标题。 Tablix 数据区域可以是一个表、矩阵或列表。  
@@ -25,7 +25,7 @@ ms.locfileid: "48904977"
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- 使用新建表或矩阵向导或者新建图表向导、 将字段添加到分组窗格中，或使用上下文菜单添加组时，将自动创建行和列组标题。 如果 Tablix 数据区域只包含 Tablix 正文区域，而没有组头，则行和列为 Tablix 成员。  
+ 通过使用新建表或矩阵向导或者新建图表向导，向“分组”窗格添加字段或使用上下文菜单添加组时，将自动创建行组标头和列组标头。 如果 Tablix 数据区域只包含 Tablix 正文区域，而没有组头，则行和列为 Tablix 成员。  
   
  对于静态成员，您可以在多个页面上显示顶部相邻的行或侧面相邻的列。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48904977"
   
 3.  单击与在滚动时要使其保持可见的静态成员（行或列）相对应的静态成员。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   
-     如果未显示“属性”窗格，请单击报表生成器窗口顶部的 **“视图”** 选项卡，然后单击 **“属性”**。  
+     如果未显示“属性”窗格，请单击报表生成器窗口顶部的“视图”选项卡，然后单击“属性”。  
   
 4.  在“属性”窗格中，将 **RepeatOnNewPage** 设置为 True。  
   

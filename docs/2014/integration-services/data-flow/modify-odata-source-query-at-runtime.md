@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804841"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在运行时修改 OData 源查询
   可以通过向数据流任务的“[OData 源].[查询]”属性添加表达式，在运行时修改 OData 源查询。  
@@ -28,7 +27,7 @@ ms.locfileid: "48093897"
 ## <a name="exposing-the-query-as-a-parameter"></a>将查询公开为参数  
  以下过程包含的步骤可将 OData 源组件使用的查询公开为包的参数。  
   
-1.  右键单击 **“数据流任务”** 并选择 **“参数化…”** 选项。  
+1.  右键单击“数据流任务”并选择“参数化…”选项。  
   
 2.  在“参数化”对话框中，针对“属性”选择“[\<OData 源组件的名称>].[查询]”。  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48093897"
   
 2.  在 **“属性”** 窗口中，突出显示 **“表达式”** 属性。  
   
-3.  单击 ... （省略号）按钮以显示“属性表达式编辑器”。  
+3.  单击...（省略号） 按钮以显示**属性表达式编辑器**。  
   
 4.  选择“[OData 源].[查询]”属性。  
   
-5.  单击 ... （省略号）按钮（针对“表达式”）。  
+5.  单击...（省略号） 按钮**表达式**。  
   
 6.  输入 **“表达式”**。  
   

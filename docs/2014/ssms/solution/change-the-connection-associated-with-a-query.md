@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -15,12 +15,12 @@ ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 635149ed13f94dfb4326654bda9f368a774a04f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806549"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>更改与查询关联的连接
   通过更改查询所用的连接，可以对多个不同的服务器或数据库执行该查询。  

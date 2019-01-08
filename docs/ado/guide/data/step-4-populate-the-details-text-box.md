@@ -1,5 +1,5 @@
 ---
-title: 步骤 4： 填充详细信息文本框 |Microsoft Docs
+title: 步骤 4：详细信息文本框中填充 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706831"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206646"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>步骤 4：填充详细信息文本框
+# <a name="step-4-populate-the-details-text-box"></a>步骤 4：填充详细信息文本框中
 若要填充详细信息文本框中，创建名为一个新的子例程**recFields**并插入以下代码：  
   
 ```  
@@ -49,4 +49,4 @@ End Sub
   
 ## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   
- [步骤 3：填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [步骤 3:填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176057"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321633"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他数据库引擎升级问题
   升级顾问的当前版本无法检测到以下升级问题。 请检查以下列出的问题来评估它们对系统的潜在影响。  
@@ -64,7 +64,7 @@ ms.locfileid: "48176057"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>OUTPUT INTO 子句的目标表不能包含任何定义的触发器  
- 不支持在 OUPUT INTO 子句中使用包含任何已启用触发器的目标表。  
+ 不支持 OUTPUT INTO 表具有任何启用的触发器的目标表。  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>当 OUTPUT INTO 子句的目标是表时发生 UDF 编译时错误  
  用户定义函数 (UDF) 不能用于执行修改数据库状态的操作。 例如，UDF 无法对任何对象（表变量除外）执行任何 DDL (CREATE/ALTER/DROP) 或 DML (INSERT/UPDATE/DELETE) 操作。  

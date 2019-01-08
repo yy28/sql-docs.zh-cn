@@ -18,12 +18,12 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 252e3c5f2738b5f3e87632be86ba9f4b6c1cfbc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782795"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211516"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell**可以启用和禁用通过使用基于策略的管理或通过执行**sp_configure**。 有关详细信息，请参阅[外围应用配置器](../../relational-databases/security/surface-area-configuration.md)并[xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  如果**xp_cmdshell**批处理中执行，并返回错误，批处理将失败。 这是行为的更改。 在早期版本的[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批处理将会继续执行。  
   
 ## <a name="xpcmdshell-proxy-account"></a>xp_cmdshell 代理帐户  
@@ -84,7 +84,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  有关详细信息，请参阅[sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  因为恶意用户有时试图通过使用其特权提升**xp_cmdshell**， **xp_cmdshell**默认处于禁用状态。 使用**sp_configure**或**基于策略的管理**来启用它。 有关详细信息，请参阅 [xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
  首次启用时， **xp_cmdshell**需要 CONTROL SERVER 权限才能执行和创建的 Windows 进程**xp_cmdshell**具有相同的安全上下文为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务帐户通常具有更多执行创建的进程的工作所需权限**xp_cmdshell**。 为了增强安全性，访问**xp_cmdshell**应被限制为高特权的用户。  

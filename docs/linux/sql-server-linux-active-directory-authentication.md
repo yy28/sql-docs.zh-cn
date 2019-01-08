@@ -1,5 +1,6 @@
 ---
-title: Linux 上的 SQL Server 的 active Directory 身份验证教程 |Microsoft Docs
+title: 教程：Linux 上的 SQL Server 的 active Directory 身份验证
+titleSuffix: SQL Server
 description: 本教程提供了 Linux 上的 SQL Server 的 AAD 身份验证的配置步骤。
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160594"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程： 使用 Linux 上的 SQL Server 使用 Active Directory 进行身份验证
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程：Linux 上的 SQL Server 使用 Active Directory 身份验证
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -37,7 +38,7 @@ ms.locfileid: "51658488"
 >
 > 如果你想要配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Linux 上使用第三方 AD 提供程序，请参阅[Linux 上的 SQL Server 中使用第三方 Active Directory 提供程序](./sql-server-linux-active-directory-third-party-providers.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 配置 AD 身份验证之前，需要：
 
@@ -230,7 +231,7 @@ ms.locfileid: "51658488"
    ```
 
    > [!NOTE]
-   > Spn 可能需要几分钟时间才能传播到你的域，尤其是域较大。 如果收到错误，"kvno： 服务器时，未找到 Kerberos 数据库中获取凭据的 MSSQLSvc /\*\*\<主机计算机的完全限定的域名\>\*\*:\* \* \<tcp 端口\>\*\*\@CONTOSO.COM"，请等待几分钟然后重试。
+   > Spn 可能需要几分钟时间才能传播到你的域，尤其是域较大。 如果收到错误，"kvno:找不到服务器 Kerberos 数据库中时获取凭据的 MSSQLSvc /\*\*\<主机计算机的完全限定的域名\>\*\*:\* \* \<tcp 端口\>\*\*\@CONTOSO.COM"，请等待几分钟然后重试。
 
 2. 创建具有的 keytab 文件**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** AD 用户在上一步中创建的。 出现提示时，输入密码的 AD 帐户。
 
@@ -292,7 +293,7 @@ ms.locfileid: "51658488"
    sudo systemctl restart mssql-server
    ```
 
-6. 可选： 禁用 UDP 连接到域控制器，以提高性能。 在许多情况下，UDP 连接将始终失败连接到域控制器，因此你可以设置配置选项时`/etc/krb5.conf`要跳过 UDP 调用。 编辑`/etc/krb5.conf`并设置以下选项：
+6. 可选:禁用 UDP 连接到域控制器，以提高性能。 在许多情况下，UDP 连接将始终失败连接到域控制器，因此你可以设置配置选项时`/etc/krb5.conf`要跳过 UDP 调用。 编辑`/etc/krb5.conf`并设置以下选项：
 
    ```/etc/krb5.conf
    [libdefaults]
@@ -339,8 +340,8 @@ ms.locfileid: "51658488"
 
 * 使用其他客户端驱动程序的 AD 身份验证
 
-  * JDBC:[使用 Kerberos 集成身份验证连接 SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC:[使用集成身份验证](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * JDBC:[使用 Kerberos 集成身份验证的 SQL Server 连接](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC：[使用集成身份验证](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[连接字符串语法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>性能改进

@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798199"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server 代理中运行 Windows PowerShell 步骤
   使用 SQL Server 代理可以在计划时间运行 SQL Server PowerShell 脚本。  
   
-1.  **开始之前：**  [限制和局限](#LimitationsRestrictions)  
+1.  **开始之前：**[限制和局限](#LimitationsRestrictions)  
   
-2.  **若要从 SQL Server 代理运行 PowerShell，请使用：**  [PowerShell 作业步骤](#PShellJob)， [命令提示作业步骤](#CmdExecJob)  
+2.  **若要从 SQL Server 代理，使用运行 PowerShell:**[PowerShell 作业步骤](#PShellJob)，[命令提示作业步骤](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>开始之前  
  共有多种类型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤。 每种类型都与用来实现特定环境（如复制代理或命令提示环境）的子系统关联。 您可以对 Windows PowerShell 脚本进行编码，然后使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理将这些脚本包括在按计划时间运行或者为了响应 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件而运行的作业中。 可以使用命令提示作业步骤或 PowerShell 作业步骤运行 Windows PowerShell 脚本。  
   
 1.  使用 PowerShell 作业步骤以便让 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理子系统运行 `sqlps` 实用工具，该实用工具将启动 PowerShell 2.0 并导入 `sqlps` 模块。  
   
-2.  使用命令提示作业步骤以便运行 PowerShell.exe，并且指定导入的脚本`sqlps`模块。  
+2.  使用命令提示作业步骤以便运行 PowerShell.exe，并且指定导入 `sqlps` 模块的脚本。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
   

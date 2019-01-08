@@ -1,20 +1,22 @@
 ---
-title: SQL Server 大数据群集的安全性概念 |Microsoft Docs
-description: 本文介绍了 SQL Server 2019 大数据群集的安全概念。
+title: 安全性概念
+titleSuffix: SQL Server 2019 big data clusters
+description: 本文介绍了 SQL Server 2019 大数据群集 （预览版） 的安全概念。 这包括描述群集终结点和群集身份验证。
 author: nelgson
 ms.author: negust
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: d4da38df828b2859de07a7676fc5070bcecf6329
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050879"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030571"
 ---
-# <a name="security-concepts-for-sql-server-big-data-cluster"></a>SQL Server 大数据群集的安全性概念
+# <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的安全性概念
 
 安全的大数据群集在 SQL Server 和 HDFS/Spark 意味着统一且一致的身份验证和授权方案的支持。 身份验证是验证用户或服务的身份并确保它们它们声称自己谁的过程。 授权是指授予或拒绝对基于请求用户的标识的特定资源的访问。 用户标识通过身份验证后，执行此步骤。
 
@@ -26,9 +28,9 @@ ms.locfileid: "50050879"
 
 有三个入口点到大数据群集
 
-* HDFS/Spark (Knox) 网关 – 这是一个基于 HTTPS 的终结点。 其他终结点是通过此代理。 HDFS/Spark 网关用于访问服务，如 webHDFS 和 Livy。 当你看到对 Knox 的引用，这是终结点。
+* 网关 HDFS/Spark (Knox)-这是一个基于 HTTPS 的终结点。 其他终结点是通过此代理。 HDFS/Spark 网关用于访问服务，如 webHDFS 和 Livy。 当你看到对 Knox 的引用，这是终结点。
 
-* 控制器终结点，用于管理群集会公开 REST Api 的大数据群集管理服务。 一些工具，如管理门户中，还可以通过此终结点访问。
+* 控制器终结点-用于管理群集会公开 REST Api 的大数据群集管理服务。 一些工具，如管理门户中，还可以通过此终结点访问。
 
 * 主实例的数据库工具和应用程序连接到 SQL Server 主实例在群集中的 TDS 端点。
 
@@ -40,13 +42,13 @@ ms.locfileid: "50050879"
 
 完成保护大数据群集中的终结点使用密码可以是/更新集或者使用环境变量或 CLI 命令。 所有群集内部密码都存储为 Kubernetes 机密。  
 
-# <a name="authentication"></a>身份验证
+## <a name="authentication"></a>身份验证
 
 预配群集时将创建的登录名数。
 
 这些登录名的一些服务相互通信，而有些则是为最终用户用于访问群集。
 
-## <a name="end-user-authentication"></a>最终用户身份验证
+### <a name="end-user-authentication"></a>最终用户身份验证
 在预配群集时需要使用环境变量进行设置的最终用户密码数。 以下是 SQL 管理员和群集管理员使用来访问服务的密码：
 
 控制器用户名：
@@ -61,16 +63,16 @@ SQL 主控形状 SA 密码：
 用于访问 HDFS/Spark 终结点的密码：
  + KNOX_PASSWORD = < knox_password >
 
-## <a name="intra-cluster-authentication"></a>内部群集身份验证
+### <a name="intra-cluster-authentication"></a>群集内身份验证
 
- 时群集的部署，将创建的 SQL 登录名数：
+时群集的部署，将创建的 SQL 登录名数：
 
 * 由系统管理具有 sysadmin 角色的控制器 SQL 实例中创建的特殊 SQL 登录名。 此登录名的密码被捕获为 K8s 机密。
 
 * 在群集中，控制器拥有并管理的所有 SQL 实例中创建的系统管理员登录名。 它是必需的控制器来执行管理任务，例如高可用性安装或升级，这些实例上。 这些登录名还用于 SQL 实例，如与数据池进行通信的 SQL 主控实例之间的群集内部通信。
 
 > [!NOTE]
-> 在 CTP2.0，支持仅基本身份验证。 精细的访问控制对 HDFS 对象和 SQL 大数据群集计算和数据池，尚不可用。
+> 在当前版本中，支持仅基本身份验证。 精细的访问控制对 HDFS 对象和 SQL 大数据群集计算和数据池，尚不可用。
 
 ## <a name="intra-cluster-communication"></a>群集内部通信
 
@@ -81,4 +83,4 @@ SQL 主控形状 SA 密码：
 若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下文章：
 
 - [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
-- [快速入门： 将 SQL Server 大数据群集在 Kubernetes 上部署](quickstart-big-data-cluster-deploy.md)
+- [快速入门：部署 SQL Server 大数据群集在 Kubernetes 上](quickstart-big-data-cluster-deploy.md)

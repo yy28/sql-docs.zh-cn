@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,12 +17,12 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11726b01926ef5a7dff7157c901c7cbd73607564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803749"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 跟踪事件列
   ObjectType 跟踪事件列用在各种跟踪事件中。 本主题说明此列的可能值以及其相关定义。  
@@ -89,7 +88,7 @@ ms.locfileid: "48214749"
 |21318|CLR 标量函数|  
 |21321|内联标量 SQL 函数|  
 |21328|分区方案|  
-|21333|用户|  
+|21333|“用户”|  
 |21571|Service Broker 服务约定|  
 |21572|数据库上的触发器|  
 |21574|CLR 表值函数|  
@@ -97,7 +96,7 @@ ms.locfileid: "48214749"
 |21581|Service Broker 消息类型|  
 |21586|Service Broker 路由|  
 |21587|统计信息|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|用户|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|“用户”|  
 |22099|Service Broker 服务|  
 |22601|索引|  
 |22604|证书登录|  

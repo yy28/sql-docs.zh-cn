@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_monitordata_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffb47b123059f6329554026308fb204b48c8295f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 898990152a86380ae9ba28e9766ae47675a39706
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806205"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775529"
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47806205"
 |**job_id**|**uniqueidentifier**|复制代理作业的 GUID 名称。|  
 |**status**|**int**|复制代理的状态，可以是下列值之一：<br /><br /> **1** = 开始<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 正在重试<br /><br /> **6** = 失败|  
 |**isagentrunningnow**|**bit**|一个标志，指示是否代理作业当前正在运行，则值**1**作业正在运行的方式。|  
-|**警告**|**int**|由订阅生成的阈值警告，可以是以下值中一个或多个值的逻辑或结果。<br /><br /> **1** = expiration – 对事务发布的订阅超出保留期允许的阈值，超过保留期的百分比。<br /><br /> **2** = latency-将数据从事务发布服务器复制到订阅服务器所用的时间超过阈值，以秒为单位。<br /><br /> **4** = mergeexpiration – 对合并发布的订阅超出保留期允许的阈值，超过保留期的百分比。 8 = mergefastrunduration - 通过快速网络连接完成合并订阅同步所用的时间超出阈值（以秒为单位）。<br /><br /> **16** = mergeslowrunduration-完成的合并订阅同步所花费的时间超过阈值，以秒为单位，通过慢速或拨号网络连接。<br /><br /> **32** = mergefastrunspeed – 传送速率的行合并订阅的同步过程未能保持阈值速率，单位为每秒，行通过快速网络连接。<br /><br /> **64** = mergeslowrunspeed – 传送速率的行合并订阅的同步过程未能保持阈值速率，单位为每秒，行通过慢速或拨号网络连接。|  
+|**警告**|**int**|由订阅生成的阈值警告，可以是以下值中一个或多个值的逻辑或结果。<br /><br /> **1** = 到期-对事务发布的订阅超出保留期允许的阈值，超过保留期的百分比。<br /><br /> **2** = latency-将数据从事务发布服务器复制到订阅服务器所用的时间超过阈值，以秒为单位。<br /><br /> **4** = mergeexpiration – 对合并发布的订阅超出保留期允许的阈值，超过保留期的百分比。 8 = mergefastrunduration - 通过快速网络连接完成合并订阅同步所用的时间超出阈值（以秒为单位）。<br /><br /> **16** = mergeslowrunduration-完成的合并订阅同步所花费的时间超过阈值，以秒为单位，通过慢速或拨号网络连接。<br /><br /> **32** = mergefastrunspeed-传送速率的行合并订阅的同步过程未能保持阈值速率，单位为每秒，行通过快速网络连接。<br /><br /> **64** = mergeslowrunspeed-传送速率的行合并订阅的同步过程未能保持阈值速率，单位为每秒，行通过慢速或拨号网络连接。|  
 |**last_distsync**|**datetime**|最后一个日期和分发代理运行的时间。|  
 |**agentstoptime**|**datetime**|代理停止的日期和时间。|  
 |**distdb**|**sysname**|用于订阅的分发数据库的名称。|  

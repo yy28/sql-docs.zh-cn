@@ -10,14 +10,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.custom: sql-linux
 ms.technology: linux
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c2a9d64b0ef55afb02022b7be27c096ea1221e6b
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ccba701efd1b74076c0eccb083a66382e8ac74b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805469"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux 上的 SQL Server 复制
 
@@ -67,4 +66,4 @@ Linux 上的 SQL Server 实例可以参与任何类型的复制。
 
 [在 Linux 上配置 SQL Server 复制](sql-server-linux-replication-tutorial-tsql.md)
 
-[示例： 在 Linux 上配置 SQL Server 复制](sql-server-linux-replication-configure.md)
+[示例：在 Linux 上配置 SQL Server 复制](sql-server-linux-replication-configure.md)

@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675096"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819099"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|使用部分统计信息的 Showplan XML。 可以为 NULL。|
 
 ## <a name="remarks"></a>备注
-此系统函数是从开始提供[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。
+此系统函数是从开始提供[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。 请参阅知识库[3190871](https://support.microsoft.com/en-us/help/3190871)
 
 此系统函数下都适用**标准**并**轻型**查询执行统计信息分析基础结构。  
   
@@ -64,7 +64,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   -  [集上的统计信息配置文件](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  `query_post_execution_showplan`扩展的事件。  
   
-**轻型**统计信息分析基础结构现已推出[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，可以启用：
+**轻型**统计信息分析基础结构现已推出[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，可以启用：
   -  全局使用跟踪标志 7412。
   -  使用[ *query_thread_profile* ](https://support.microsoft.com/kb/3170113)扩展的事件。
   
@@ -75,7 +75,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 > [!IMPORTANT]
 > TPC C 与工作负荷测试一样，在启用轻型统计信息分析基础结构添加 1.5 到 2%的开销。 与此相反，标准统计信息分析基础结构可以添加多达 90%开销的相同工作负荷方案。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
 
 ## <a name="examples"></a>示例  

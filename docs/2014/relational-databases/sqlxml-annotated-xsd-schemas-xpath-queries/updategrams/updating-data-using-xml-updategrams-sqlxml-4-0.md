@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -28,12 +26,12 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222829"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808169"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新数据 (SQLXML 4.0)
   更新现有数据时，必须指定**\<之前 >** 并**\<后 >** 块。 中指定的元素**\<之前 >** 并**\<后 >** 块描述所需的更改。 Updategram 使用在中指定的元素**\<之前 >** 块来标识数据库中的现有记录。 中的相应元素**\<后 >** 块指示执行更新操作后应如何查找记录的。 中的信息，updategram 创建与匹配的 SQL 语句**\<后 >** 块。 然后，Updategram 使用该语句更新数据库。  

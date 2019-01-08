@@ -15,12 +15,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a84857925cd4f9db7088ec922a3cceccb0d64895
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538896"
 ---
 # <a name="drillthrough-queries-data-mining"></a>钻取查询（数据挖掘）
   “钻取查询”  让您通过将查询发送到挖掘模型，检索基础事例或结构数据中的详细信息。 如果您希望查看用来为模型定型的事例以及用来测试模型的事例，或者如果您希望查看事例数据的详细信息，则钻取会非常有用。  
@@ -29,7 +29,7 @@ ms.locfileid: "50147613"
   
 -   钻取到 **模型事例**  
   
-     如果您希望从模型中的某个特定模式（如群集或决策树的分支）钻取，则使用钻取到“模型事例”，并查看有关单个事例的详细信息。  
+     当你想要转化为群集或决策树的分支中模型如的特定模式时使用钻取到模型事例-并查看有关单个事例的详细信息。  
   
 -   钻取到 **结构事例**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "50147613"
 |使用 DMX WITH DRILLTHROUGH 子句对挖掘模型启用钻取。|[CREATE MINING STRUCTURE (DMX)](/sql/dmx/create-mining-structure-dmx)|  
 |有关分配适用于对挖掘结构和挖掘模型进行钻取的权限的信息|[授予数据挖掘结构和模型的权限 (Analysis Services)](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘模型查看器](data-mining-model-viewers.md)   
  [数据挖掘查询](data-mining-queries.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063087"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349815"
 ---
 # <a name="cdc-source"></a>CDC 源
   CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
@@ -29,7 +28,7 @@ ms.locfileid: "48063087"
   
  CDC 源使用以下配置：  
   
--   用于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 连接管理器。 有关配置 CDC 源连接的详细信息，请参阅[CDC 源编辑器&#40;连接管理器页&#41;](../cdc-source-editor-connection-manager-page.md)。  
+-   用于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 连接管理器。 有关配置 CDC 源连接的详细信息，请参阅 [CDC 源编辑器（“连接管理器”页）](../cdc-source-editor-connection-manager-page.md)。  
   
 -   为 CDC 启用的表。  
   
@@ -46,13 +45,13 @@ ms.locfileid: "48063087"
 ## <a name="error-handling"></a>错误处理  
  CDC 源有一个错误输出。 组件的错误输出包括以下输出列：  
   
--   **错误代码**：值始终为 -1。  
+-   **错误代码**:值始终为-1。  
   
--   **错误列**：导致错误（针对转换错误）的源列。  
+-   **错误列**:导致错误 （针对转换错误） 的源列。  
   
--   **错误行列**：导致了错误的记录数据。  
+-   **错误行列**:导致错误的记录数据。  
   
- 根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅[CDC 源编辑器&#40;错误输出页&#41;](../cdc-source-editor-error-output-page.md)。  
+ 根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [CDC 源编辑器（“错误输出”页）](../cdc-source-editor-error-output-page.md)。  
   
 ## <a name="data-type-support"></a>数据类型支持  
  Microsoft 的 CDC 源组件支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，这些数据类型映射到正确的 SSIS 数据类型。  
@@ -98,11 +97,11 @@ use <cdc-enabled-database-name>
   
  有关详细信息，请参阅下列主题之一：  
   
--   [CDC 源编辑器&#40;连接管理器页&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 源编辑器（“连接管理器”页）](../cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 源编辑器&#40;列页&#41;](../cdc-source-editor-columns-page.md)  
+-   [CDC 源编辑器（“列”页）](../cdc-source-editor-columns-page.md)  
   
--   [CDC 源编辑器&#40;错误输出页&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC 源编辑器（“错误输出”页）](../cdc-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -114,18 +113,18 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [CDC 源编辑器&#40;连接管理器页&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 源编辑器（“连接管理器”页）](../cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 源编辑器&#40;列页&#41;](../cdc-source-editor-columns-page.md)  
+-   [CDC 源编辑器（“列”页）](../cdc-source-editor-columns-page.md)  
   
--   [CDC 源编辑器&#40;错误输出页&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC 源编辑器（“错误输出”页）](../cdc-source-editor-error-output-page.md)  
   
--   [CDC 源自定义属性](cdc-source-custom-properties.md)  
+-   [CDC Source Custom Properties](cdc-source-custom-properties.md)  
   
 -   [使用 CDC 源提取更改数据](cdc-source.md)  
   
 ## <a name="related-content"></a>相关内容  
   
--   mattmasson.com 上的博客文章 [CDC 源的处理模式](http://go.microsoft.com/fwlink/?LinkId=242541)。  
+-   mattmasson.com 上的博客文章 [CDC 源的处理模式](https://go.microsoft.com/fwlink/?LinkId=242541)。  
   
   

@@ -11,17 +11,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 768d35d4cc2763ee055fc2bebfee3e954a64dc65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350196"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
   需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
   
- 有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
+ 有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
   
 ## <a name="why-upgrade"></a>升级理由  
   
@@ -33,13 +33,13 @@ ms.locfileid: "50099658"
  ![有关从 SQL Server 2005 升级的数据表](../../../2014/sql-server/install/media/sqlserver2005eos.png "有关从 SQL Server 2005 升级的数据表")  
   
 ## <a name="choose-your-upgrade-option"></a>选择升级选项  
- 如果你要从 SQL Server 2005 升级关系数据库，下面是用于 Microsoft 平台上的关系存储的选项。  
+ 如果您要从 SQL Server 2005 升级关系数据库，以下是您执行关系存储在 Microsoft 平台上的选项。  
   
  若要查看有关这些选项的更全面分析，请 [单击此处](http://sql05upgrade.azurewebsites.net/)。  
   
 |关系存储选项|优势|要考虑的其他因素|  
 |-------------------------------|--------------|-------------------------------|  
-|**本地 SQL Server**<br /><br /> 对于任何类型的数据库应用程序（从交易系统到数据仓库），请考虑此选项。<br /><br /> 有关详细信息，请参阅[SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)。|因为你管理硬件和软件，因此你对功能和可伸缩性具有最大控制权。<br /><br /> 如果你要从 SQL Server 2005 升级，这将是最相似的环境。|你必须做出最大的前期投资并进行日常管理，因为你需要购买、维护和管理你自己的硬件和软件。|  
+|**本地 SQL Server**<br /><br /> 对于任何类型的数据库应用程序（从交易系统到数据仓库），请考虑此选项。<br /><br /> 有关详细信息，请参阅[SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)。|因为你管理硬件和软件，因此你对功能和可伸缩性具有最大控制权。<br /><br /> 如果要从 SQL Server 2005 进行升级，这是最相似的环境。|你必须做出最大的前期投资并进行日常管理，因为你需要购买、维护和管理你自己的硬件和软件。|  
 |**Azure 虚拟机上托管的 SQL Server**<br /><br /> 如果你需要以下内容，请考虑此选项。<br />-迁移到托管环境的好处。<br />-对操作环境的控制。<br />的 SQL server 熟悉功能集。<br /><br /> 有关详细信息，请参阅[SQL Server Azure 虚拟机概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。<br /><br /> 有关迁移的详细信息，请参阅 [将数据库迁移到 Azure VM 上的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)。|可以从虚拟机映像库快速进行部署。<br /><br /> 获得完整的 SQL Server 功能集。<br /><br /> 节约硬件和服务器软件的成本。 只需支付每小时的使用费用。|必须配置并管理 SQL Server 和操作系统软件。|  
 |**Azure SQL Database 托管的数据库服务**<br /><br /> 如果想要实现较少维护的低成本解决方案，请考虑此选项。<br /><br /> 此选项非常适用于不要求一直需要相同容量的应用，或必须提供外部访问的应用。<br /><br /> 有关详细信息，请参阅[SQL 数据库](https://azure.microsoft.com/services/sql-database/)。<br /><br /> 有关迁移的信息，请参阅[SQL Server 数据库迁移到 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|可以快速部署并轻松纵向扩展。<br /><br /> 只需支付每小时的使用费用。<br /><br /> 该服务的成本不仅包括存储，还包括高可用性和自动执行的备份。|Azure SQL Database 缺少某些在托管的云环境中不适用的 SQL Server 功能。 有关详细信息，请参阅 [Azure SQL 数据库 Transact-SQL 信息](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相较于 SQL Server 的 524 PB，Azure SQL Database 还具有 500 GB 的最大数据库大小。|  
   
@@ -58,11 +58,11 @@ ms.locfileid: "50099658"
   
 -   阅读以下 SQL Server 团队博客文章系列中有关如何规划升级的内容。  
   
-    -   [规划有效地从 SQL Server 2005 升级：步骤 1/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [规划有效地从 SQL Server 2005 升级：步骤 1，共 3 步](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [规划有效地从 SQL Server 2005 升级：步骤 2/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [规划有效地从 SQL Server 2005 升级：步骤 2，共 3 步](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [规划有效地从 SQL Server 2005 升级：步骤 3/3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [规划有效地从 SQL Server 2005 升级：步骤 3，共 3 步](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   查看要求和注意事项[计划 SQL Server 安装](../../../2014/sql-server/install/planning-a-sql-server-installation.md)，其中包括[硬件和软件要求安装 SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
   
@@ -73,16 +73,16 @@ ms.locfileid: "50099658"
         > [!IMPORTANT]  
         >  你不能就地将 SQL Server 2005 服务器升级到 SQL Server 2014。 你必须安装 Server 2014，然后将 SQL Server 2005 数据库迁移到新安装。  
   
-    -   若要获取 PDF 格式的更详细的“技术升级指南”，请 [单击此处](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)。  
+    -   若要获取 PDF 格式的更详细的“技术升级指南”，请 [单击此处](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)。  
   
--   有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
+-   有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
   
 ## <a name="get-sql-server-2014"></a>获取 SQL Server 2014  
  若要下载测评版 SQL Server 2014[单击此处](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2014)。  
   
-## <a name="see-also"></a>另请参阅  
- [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
+## <a name="see-also"></a>请参阅  
+ [SQL Server 2014](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
+ [SQL Server 2005 终止支持](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
  [从 SQL Server 2005 升级到 SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

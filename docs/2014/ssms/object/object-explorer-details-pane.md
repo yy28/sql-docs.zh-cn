@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
@@ -18,12 +18,12 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89d1e8032d52e49e85cca13d945fe76d341e18f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086877"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779019"
 ---
 # <a name="object-explorer-details-pane"></a>对象资源管理器详细信息窗格
   对象资源管理器详细信息是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的一个组件，它提供服务器中所有对象的表格视图，并显示一个用于管理这些对象的用户界面。 对象资源管理器的功能根据服务器的类型稍有不同，但一般都包括用于数据库的开发功能和用于所有服务器类型的管理功能。  
@@ -45,7 +45,7 @@ ms.locfileid: "48086877"
 |**向上**|转到父对象或父文件夹。|  
 |**同步**|将对象资源管理器的焦点设置为对象资源管理器详细信息中的选定对象。|  
 |**Filter**|如果有，显示对象的可配置子集。|  
-|**“刷新”**|刷新对象资源管理器详细信息中的显示内容。|  
+|**刷新**|刷新对象资源管理器详细信息中的显示内容。|  
 |**搜索**|提供一个区域，用于输入某些数据库对象的搜索词。|  
   
 ### <a name="column-header-selections"></a>列标题选择  

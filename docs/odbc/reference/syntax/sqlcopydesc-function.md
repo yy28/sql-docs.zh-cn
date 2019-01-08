@@ -20,16 +20,16 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e165ca48af3b634f1dcbe80c05c83f2c872d1b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642775"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202436"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLCopyDesc**将描述符信息从一个描述符句柄复制到另一个。  
@@ -39,8 +39,8 @@ ms.locfileid: "47642775"
 ```  
   
 SQLRETURN SQLCopyDesc(  
-     SQLHDESC     SourceDescHandle,  
-     SQLHDESC     TargetDescHandle);  
+     SQLHDESC     SourceDescHandle,  
+     SQLHDESC     TargetDescHandle);  
 ```  
   
 ## <a name="arguments"></a>参数  

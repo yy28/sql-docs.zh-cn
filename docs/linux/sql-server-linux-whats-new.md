@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659201"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160525"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>什么是 Linux 上的 SQL Server 的新增功能
 
@@ -34,7 +34,7 @@ SQL Server 2019 预览版已发布。 本文不涉及 SQL Server 2019 预览版�
 - 对本机 Linux 路径支持。
 - IPV6 支持。
 - 在 NFS 上数据库文件的支持。
-- 已启用[透明层安全性](sql-server-linux-encrypted-connections.md)(TLS) 加密。
+- 已启用[传输层安全性](sql-server-linux-encrypted-connections.md)(TLS) 加密。
 - 已启用[Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)。
 - [可用性组功能](sql-server-linux-availability-group-overview.md)以实现高可用性。
 - [全文搜索](sql-server-linux-setup-full-text-search.md)支持。

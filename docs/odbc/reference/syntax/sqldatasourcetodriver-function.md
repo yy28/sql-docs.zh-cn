@@ -20,12 +20,12 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631dcb0f76346de88a2a48e8dfb00060626d58f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813575"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206256"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 函数
 **SQLDataSourceToDriver** supportstranslations ODBC 驱动程序。 不支持 ODBC 的应用程序; 通过调用此函数应用程序请求通过翻译**SQLSetConnectAttr**。 与关联的驱动程序*ConnectionHandle*中指定**SQLSetConnectAttr**调用指定的 DLL 执行从数据源流动到驱动程序的所有数据的转换。 可以在 ODBC 初始化文件中指定默认转换 DLL。  
@@ -52,7 +52,7 @@ BOOL SQLDataSourceToDriver(
  [输入]选项值。  
   
  *fSqlType*  
- [输入]SQL 数据类型。 此参数指示驱动程序如何将转换*rgbValueIn*到窗体应用程序可接受。 有关有效的 SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 数据类型中的部分。  
+ [输入]SQL 数据类型。 此参数指示驱动程序如何将转换*rgbValueIn*到窗体应用程序可接受。 有关有效的 SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 中的部分数据类型。  
   
  *rgbValueIn*  
  [输入]要转换的值。  

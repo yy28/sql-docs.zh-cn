@@ -1,5 +1,6 @@
 ---
-title: 在 Ubuntu 上的 SQL Server 入门 |Microsoft Docs
+title: 在 Ubuntu 上的 SQL Server 入门
+titleSuffix: SQL Server
 description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 或 SQL Server 2019 然后创建和查询使用 sqlcmd 数据库。
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677938"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160545"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门： 安装 SQL Server 并在 Ubuntu 上创建数据库
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server，在 Ubuntu 上创建数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -37,7 +38,7 @@ ms.locfileid: "51677938"
 > [!TIP]
 > 本教程需要用户输入和 Internet 连接。 如果您对[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 您必须具有的 Ubuntu 16.04 计算机**至少 2 GB**的内存。
 
@@ -88,7 +89,7 @@ ms.locfileid: "51677938"
    ```
 
    > [!TIP]
-   > 自由授权以下 SQL Server 2017 版本： Evaluation、 Developer 和 Express。
+   > 以下 SQL Server 2017 版本自由地授予使用许可：评估、 开发人员版和 Express。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -183,7 +184,7 @@ ms.locfileid: "51677938"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **可选**： 添加`/opt/mssql-tools/bin/`到你**路径**bash shell 中的环境变量。
+1. **可选**:添加`/opt/mssql-tools/bin/`为你**路径**bash shell 中的环境变量。
 
    若要使**sqlcmd/bcp**可从登录会话的 bash shell 访问修改你**路径**中 **~/.bash_profile**文件使用以下命令：
 

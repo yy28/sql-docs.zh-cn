@@ -14,12 +14,12 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660585"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530244"
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -27,7 +27,7 @@ ms.locfileid: "47660585"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|创建可更新的新记录**记录集**对象。|  
 |[追加](../../../ado/reference/ado-api/append-method-ado.md)|将对象追加到集合。 如果集合是**字段**，一个新**字段**追加到集合之前，可能会创建对象。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|将数据追加到大文本或二进制数据**字段**，或设置为**参数**对象。|  
-|[BeginTrans、 CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理事务中处理**连接**对象，如下所示：<br /><br /> **BeginTrans** — 开始新事务。<br /><br /> **CommitTrans** — 保存任何更改并结束当前事务。 它还可能会启动新事务。<br /><br /> **RollbackTrans** -取消任何更改并结束当前事务。 它还可能会启动新事务。|  
+|[BeginTrans、 CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理事务中处理**连接**对象，如下所示：<br /><br /> **BeginTrans** -开始新事务。<br /><br /> **CommitTrans** -保存任何更改并结束当前事务。 它还可能会启动新事务。<br /><br /> **RollbackTrans** -取消任何更改并结束当前事务。 它还可能会启动新事务。|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消执行的挂起异步方法调用。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消挂起的批更新。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|取消对当前或新行所做的任何更改**记录集**对象，或**字段**的集合**记录**对象，然后才能调用**更新**方法。|  
@@ -65,7 +65,7 @@ ms.locfileid: "47660585"
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|此方法会执行任何操作-它始终返回 S_OK。|  
 |[读取](../../../ado/reference/ado-api/read-method.md)|读取指定的数量的字节从**Stream**对象。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|从文本读取指定的数目的字符**Stream**对象。|  
-|[“刷新”](../../../ado/reference/ado-api/refresh-method-ado.md)|更新以反映，从可用对象的集合和特定于中的对象，提供程序。|  
+|[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)|更新以反映，从可用对象的集合和特定于中的对象，提供程序。|  
 |[再次查询](../../../ado/reference/ado-api/requery-method.md)|更新中的数据**记录集**通过重新执行的查询该对象所基于的对象。|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|刷新在当前数据**记录集**对象，或**字段**的集合**记录**对象，从基础数据库。|  
 |[保存](../../../ado/reference/ado-api/save-method.md)|将保存**记录集**文件中或**Stream**对象。|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660585"
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 枚举常量](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附录 B:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附录 B：ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 对象和接口](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

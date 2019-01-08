@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350641"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535556"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调用到数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源是尚未公开这种方式。 但是，可以通过 ODBC 访问大多数系统 （DBMS） 目前所用。
@@ -93,7 +93,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>特定于提供程序的连接属性
  用于 ODBC 的 OLE DB 访问接口将添加到多个属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)系列**连接**对象。 下表列出了这些属性与在括号中相应的 OLE DB 属性名称。
 
-|属性名称|Description|
+|属性名|Description|
 |-------------------|-----------------|
 |可访问的过程 (KAGPROP_ACCESSIBLEPROCEDURES)|指示用户是否有权访问的存储过程。|
 |可访问的表 (KAGPROP_ACCESSIBLETABLES)|指示用户是否具有执行针对数据库表的 SELECT 语句的权限。|
@@ -107,20 +107,20 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |在排序依据 (KAGPROP_MAXCOLUMNSINORDERBY) 最大列数|指示可以在 SELECT 语句的 ORDER BY 子句中列出的列的最大数目。|
 |在中，选择 (KAGPROP_MAXCOLUMNSINSELECT) 最大列数|指示可以在 SELECT 语句的 SELECT 部分中列出的列的最大数目。|
 |表 (KAGPROP_MAXCOLUMNSINTABLE) 中最大列数|指示列在表中允许的最大数目。|
-|数值函数 (KAGPROP_NUMERICFUNCTIONS)|指示 ODBC 驱动程序支持的数值的函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e： 标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
+|数值函数 (KAGPROP_NUMERICFUNCTIONS)|指示 ODBC 驱动程序支持的数值的函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
 |外部联接功能 (KAGPROP_OJCAPABILITY)|指示提供程序支持外部联接的类型。|
 |外部联接 (KAGPROP_OUTERJOINS)|指示提供程序是否支持外部联接。|
 |特殊字符 (KAGPROP_SPECIALCHARACTERS)|指示哪些字符具有特殊含义的 ODBC 驱动程序。|
 |存储的过程 (KAGPROP_PROCEDURES)|指示存储的过程是否可与此 ODBC 驱动程序一起使用。|
-|字符串函数 (KAGPROP_STRINGFUNCTIONS)|指示 ODBC 驱动程序支持的字符串函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e： 标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
-|系统函数 (KAGPROP_SYSTEMFUNCTIONS)|指示 ODBC 驱动程序支持的系统函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e： 标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
-|时间/日期函数 (KAGPROP_TIMEDATEFUNCTIONS)|指示 ODBC 驱动程序支持的日期和时间函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e： 标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
+|字符串函数 (KAGPROP_STRINGFUNCTIONS)|指示 ODBC 驱动程序支持的字符串函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
+|系统函数 (KAGPROP_SYSTEMFUNCTIONS)|指示 ODBC 驱动程序支持的系统函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
+|时间/日期函数 (KAGPROP_TIMEDATEFUNCTIONS)|指示 ODBC 驱动程序支持的日期和时间函数。 函数名称和此位掩码中使用的关联的值的列表，请参阅[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文档中。|
 |SQL 语法支持 (KAGPROP_ODBCSQLCONFORMANCE)|指示 ODBC 驱动程序支持的 SQL 语法。|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>特定于提供程序的记录集和命令属性
  用于 ODBC 的 OLE DB 访问接口将添加到多个属性**属性**系列**记录集**并**命令**对象。 下表列出了这些属性与在括号中相应的 OLE DB 属性名称。
 
-|属性名称|Description|
+|属性名|Description|
 |-------------------|-----------------|
 |基于查询的更新/删除/插入 (KAGPROP_QUERYBASEDUPDATES)|指示是否可以通过使用 SQL 查询执行更新、 删除和插入操作。|
 |ODBC 并发类型 (KAGPROP_CONCURRENCY)|指示用于减少可能导致两个用户尝试从数据源同时访问同一数据的问题的方法。|
@@ -137,7 +137,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  ODBC 提供了用于调用存储的过程的特定语法。 有关[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)的属性**命令**对象， *CommandText*参数**Execute**方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，或*源*自变量**打开**方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，此语法将字符串中传递：
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  每个 **？** 引用中的对象[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 第一个 **？** 引用**参数**(0)，下一步 **？** 引用**参数**(1)，依此类推。
@@ -173,7 +173,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  可用性标准 ADO**记录集**属性：
 
-|“属性”|ForwardOnly|Dynamic|Keyset|静态|
+|属性|ForwardOnly|动态|Keyset|Static|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
@@ -192,14 +192,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|读/写|读/写|读/写|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
 |[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
+|[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
 |[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
 
  [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)并[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性是只写 ADO 用于 ODBC 的 1.0 版的 Microsoft OLE DB 访问接口时。
 
  可用性标准 ADO**记录集**方法：
 
-|方法|ForwardOnly|Dynamic|Keyset|静态|
+|方法|ForwardOnly|动态|Keyset|Static|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>动态属性
  Microsoft OLE DB Provider for ODBC 将插入到多个动态属性**属性**的未打开集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，以及[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。
 
- 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考指 ADO 属性名称，术语"Description"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称或请参阅[附录 c: OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考指 ADO 属性名称，术语"Description"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称，或参阅[附录 c:OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>连接的动态属性
  以下属性添加到**连接**对象的**属性**集合。
@@ -261,7 +261,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |最大的表中选择|DBPROP_MAXTABLESINSELECT|
-|“模式”|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|
 |多个结果|DBPROP_MULTIPLERESULTS|
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|

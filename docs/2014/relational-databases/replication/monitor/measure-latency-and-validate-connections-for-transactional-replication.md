@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
@@ -17,12 +16,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e87c43039294526a253f514be250bf89a6428d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180677"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813899"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
   本主题说明如何使用复制监视器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务复制测量滞后时间和验证连接。 事务复制提供了跟踪令牌功能，可以方便地测量事务复制拓扑中的滞后时间和验证发布服务器、分发服务器及订阅服务器之间的连接。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
@@ -89,7 +88,7 @@ ms.locfileid: "48180677"
   
 3.  单击 **“插入跟踪器”**。  
   
-4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”**、 **“分发服务器到订阅服务器”**、 **“总滞后时间”**。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  在以下各列中查看跟踪令牌的占用时间：**发布服务器到分发服务器**，**分发服务器到订阅服务器**，**总滞后时间**。 值为 **“挂起”** 表示令牌尚未到达指定点。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>查看有关以前插入的跟踪令牌的信息  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48180677"
   
 3.  从 **“插入时间”** 下拉列表中选择时间。  
   
-4.  在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”**、 **“分发服务器到订阅服务器”**、 **“总滞后时间”**。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  在以下各列中查看跟踪令牌的占用时间：**发布服务器到分发服务器**，**分发服务器到订阅服务器**，**总滞后时间**。 值为 **“挂起”** 表示令牌尚未到达指定点。  
   
     > [!NOTE]  
     >  跟踪令牌信息的保留时间与其他历史数据的保留时间一样长，该时间由分发数据库的历史记录保持期来控制。 若要了解如何更改分发数据库属性，请参阅[查看和修改分发服务器和发布服务器属性](../view-and-modify-distributor-and-publisher-properties.md)。  
@@ -143,7 +142,7 @@ ms.locfileid: "48180677"
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回`false`，步骤 3 中的发布属性定义不正确或不存在发布。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 `false`，则说明步骤 3 中的发布属性定义不正确，或者此发布不存在。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> 方法。 此方法将跟踪令牌插入到发布的事务日志中。  
   

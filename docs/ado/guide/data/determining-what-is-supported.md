@@ -14,12 +14,12 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 835584da4c51f5e65306d0609b4e69f78a7d58b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9b8bcf01f348679fc16230c021166d4d9dc786
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514335"
 ---
 # <a name="determining-what-is-supported"></a>确定支持的功能
 **支持**方法用于确定是否指定**记录集**对象支持特定类型的功能。 它具有以下语法：  
@@ -34,4 +34,4 @@ boolean = recordset.Supports(CursorOptions )
   
  使用**支持**方法，您可以检查的能力**记录集**对象添加新记录、 使用书签，请使用**查找**方法中，使用滚动时，使用**索引**属性，以及执行批处理更新。 常量及其含义的完整列表，请参阅[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)。  
   
- 尽管**支持**方法可能会返回**True**对于给定的功能，它不保证，提供程序可以使该功能可在所有情况下。 **支持**方法仅返回满足某些条件的下提供程序是否支持指定的功能。 例如，**支持**方法可能指示**记录集**对象支持更新，即使游标基于多个表联接，其中某些列不是可更新。
+ 尽管**支持**方法可能会返回**True**对于给定的功能，它不保证，提供程序可以使该功能可在所有情况下。 **支持**方法仅返回满足某些条件的下提供程序是否支持指定的功能。 例如，**支持**方法可能指示**记录集**对象支持更新，即使游标基于多个表联接-其中某些列不是可更新。

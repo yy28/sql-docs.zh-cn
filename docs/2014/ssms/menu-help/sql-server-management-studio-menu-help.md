@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
@@ -13,12 +13,12 @@ ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b31d3614610a70b577c9b5afa97fec295b9162e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221930"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818739"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 菜单帮助
   本节介绍了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]菜单栏中提供的对话框和页的 F1 帮助。  

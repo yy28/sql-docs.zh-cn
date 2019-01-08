@@ -1,18 +1,20 @@
 ---
-title: 什么是 SQL Server 2019 大数据群集？ | Microsoft Docs
+title: 什么是大数据群集？
+titleSuffix: SQL Server 2019 big data clusters
 description: 了解有关 SQL Server 2019 大数据群集 （预览版），在 Kubernetes 上运行并提供 HDFS 数据以及关系的向外缩放选项。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221703"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030041"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什么是 SQL Server 2019 大数据群集？
 
@@ -75,13 +77,13 @@ Kubernetes 是开放源代码容器业务流程协调程序，可以缩放容器
 |--|--|
 | **Cluster** | Kubernetes 群集是一组计算机，称为节点。 一个节点控制群集，并指定主节点;剩余的节点是辅助角色节点。 Kubernetes 主机是负责分发在辅助角色之间的工作，并监视群集的运行状况。 |
 | **Node** | 节点运行容器化应用程序。 它可以是物理机或虚拟机。 Kubernetes 群集可以包含的物理机和虚拟机节点的组合。 |
-| **Pod** | Pod 是 Kubernetes 的原子部署单位。 Pod 是一个或多个容器的逻辑组 — 和关联的资源，需要运行应用程序。 每个 pod 的节点; 上运行节点可以运行一个或多个 pod。 Kubernetes 主机会自动分配到群集中节点的 pod。 |
+| **Pod** | Pod 是 Kubernetes 的原子部署单位。 Pod 是一个或多个容器的逻辑组-和关联的资源需要运行应用程序。 每个 pod 的节点; 上运行节点可以运行一个或多个 pod。 Kubernetes 主机会自动分配到群集中节点的 pod。 |
 
 在 SQL Server 大数据群集中，Kubernetes 负责 SQL Server 大数据群集; 的状态Kubernetes 构建和配置群集节点，将 pod 分配给节点，并监视群集的运行状况。
 
 ### <a name="big-data-clusters-architecture"></a>大数据群集体系结构
 
-在群集中的节点分为三个逻辑平面： 控制平面、 计算窗格和数据平面。 每个平面群集中具有不同的职责。 在 SQL Server 大数据群集中的每个 Kubernetes 节点托管组件的至少一个平面的 pod。
+在群集中的节点分为三个逻辑平面： 控制平面、 计算平面和数据平面。 每个平面群集中具有不同的职责。 在 SQL Server 大数据群集中的每个 Kubernetes 节点托管组件的至少一个平面的 pod。
 
 ![体系结构概述](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ Kubernetes 是开放源代码容器业务流程协调程序，可以缩放容器
 
 ### <a id="computeplane"></a> 计算平面
 
-计算平面提供到群集的计算资源。 它包含在 Linux pod 上运行 SQL Server 的节点。 计算平面中的 pod 分为*计算池*特定处理任务。 计算池可以充当[PolyBase](../relational-databases/polybase/polybase-guide.md)横向扩展组中通过不同的数据源的分布式查询 — 例如 HDFS、 Oracle、 MongoDB 或 Teradata。
+计算平面提供到群集的计算资源。 它包含在 Linux pod 上运行 SQL Server 的节点。 计算平面中的 pod 分为*计算池*特定处理任务。 计算池可以充当[PolyBase](../relational-databases/polybase/polybase-guide.md)横向扩展组中通过不同数据源如作为 HDFS、 Oracle、 MongoDB 或 Teradata 的分布式查询。
 
 ### <a id="dataplane"></a> 数据平面
 

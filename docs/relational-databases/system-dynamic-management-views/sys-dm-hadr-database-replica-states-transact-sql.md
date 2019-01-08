@@ -20,12 +20,12 @@ ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 534134ddd778c500622af210301826c83863480f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94c9258ff71454134c5ff2023e174a0811d7afe6
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637767"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159085"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47637767"
 |**group_database_id**|**uniqueidentifier**|可用性组内数据库的标识符。 在此数据库联接到的每个副本上，该标识符都是相同的。|  
 |**is_local**|**bit**|可用性数据库是否是本地的，可以是下列值之一：<br /><br /> 0 = 数据库对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例而言不是本地的。<br /><br /> 1 = 数据库对于服务器实例而言是本地的。|  
 |**is_primary_replica**|**bit**|如果副本是主要副本则返回 1；如果副本是辅助副本则返回 0。<br /><br />适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**synchronization_state**|**tinyint**|数据移动状态，以下值之一。<br /><br /> 0 = 未同步。 对于某一主数据库，指示该数据库未做好将其事务日志与相应的辅助数据库同步的准备。 对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。<br /><br /> 1 = 正在同步。 对于主数据库，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。 对于辅助数据库，指示对于该数据库正在发生活动数据移动。<br /><br /> 2 = 已同步。 主数据库显示 SYNCHRONIZED 来代替 SYNCHRONIZING。 同步提交辅助数据库在以下情况下将显示已同步：本地缓存指示数据库副本可供故障转移并且数据库正在同步。<br /><br /> 3 = 恢复。 指示撤消进程中辅助数据库主动从主数据库获取页时的阶段。<br />**注意：** 当辅助副本上的数据库处于 REVERTING 状态时，强制故障转移到辅助副本将使数据库处于在其中它不能启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。<br /><br /> 4 = 正在初始化。 指示在正在辅助副本上传送和强制写入辅助数据库跟上撤消 LSN 所需的事务日志时的撤消阶段。<br />**注意：** 辅助副本上的数据库处于 INITIALIZING 状态时，强制故障转移到辅助副本使数据库保持状态它可作为主数据库启动时。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。|  
+|**synchronization_state**|**tinyint**|数据移动状态，以下值之一。<br /><br /> 0 = 未同步。 对于某一主数据库，指示该数据库未做好将其事务日志与相应的辅助数据库同步的准备。 对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。<br /><br /> 1 = 正在同步。 对于主数据库，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。 对于辅助数据库，指示对于该数据库正在发生活动数据移动。<br /><br /> 2 = 已同步。 主数据库显示 SYNCHRONIZED 来代替 SYNCHRONIZING。 同步提交辅助数据库在以下情况下将显示已同步：本地缓存指示数据库副本可供故障转移并且数据库正在同步。<br /><br /> 3 = 恢复。 指示撤消进程中辅助数据库主动从主数据库获取页时的阶段。<br />**注意：** 当辅助副本上的数据库处于 REVERTING 状态时，强制故障转移到辅助副本将使数据库处于该数据库不能作为主数据库启动的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。<br /><br /> 4 = 正在初始化。 指示在正在辅助副本上传送和强制写入辅助数据库跟上撤消 LSN 所需的事务日志时的撤消阶段。<br />**注意：** 当辅助副本上的数据库处于 INITIALIZING 状态时，强制故障转移到辅助副本将使数据库处于在其中它不能启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。|  
 |**synchronization_state_desc**|**nvarchar(60)**|数据移动状态的说明，可以是下列值之一：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 就此数据库而言，事务提交未同步。<br /><br /> 1 = 就此数据库而言，事务提交同步。<br /><br /> 对于异步提交可用性副本上的数据库，该值始终为 0。<br /><br /> 对于同步提交可用性副本上的数据库，该值仅在主数据库上是准确的。|  
 |**synchronization_health**|**tinyint**|反映联接到可用性副本上的可用性组的数据库的同步状态和可用性副本 （同步提交或异步提交模式） 之一的可用性模式的交集以下值。<br /><br /> 0 = 不正常。 **Synchronization_state**数据库是 0 (NOT SYNCHRONIZING)。<br /><br /> 1 = 不完全正常。 同步提交可用性副本上的数据库被视为完全正常如果**synchronization_state**为 1 (SYNCHRONIZING)。<br /><br /> 2 = 正常。 同步提交可用性副本上的数据库被视为正常如果**synchronization_state**为 2 (SYNCHRONIZED) 和异步提交可用性副本上的数据库被视为正常如果**synchronization_state**为 1 (SYNCHRONIZING)。|  
@@ -83,7 +83,7 @@ ms.locfileid: "47637767"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 表属性 |Microsoft 文档
+title: Analysis Services 表格模型表属性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c479fd46f5303d95e5c0390eb97246f8eeb08890
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e5104eacafe60ab3fd1ea1ff29cc64b8453e4ff7
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040441"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072004"
 ---
-# <a name="table-properties"></a>Table Properties 
+# <a name="table-properties"></a>表的属性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   本文介绍表格模型表属性。 此处所述的属性不同于“编辑表属性”对话框中的那些属性，后者可以定义从源导入哪些列。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34040441"
   
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
-|**连接名称**|\<连接名称 >|与表的数据源的连接名称。<br /><br /> 若要编辑连接，请单击该按钮。|  
+|**连接名称**|\<连接名称 >|与表的数据源连接的名称。<br /><br /> 若要编辑连接，请单击该按钮。|  
 |**Hidden**|False|指定是否在报表客户端字段列表中隐藏表。|  
 |**分区**||表的分区不能显示在 **“属性”** 窗口中。 若要查看、创建或编辑分区，请单击该按钮以打开分区管理器。|  
 |**源数据**||表的源数据不能显示在 **“属性”** 窗口中。 若要查看或编辑源数据，请单击该按钮以打开“编辑表属性”对话框。|  
@@ -40,7 +40,7 @@ ms.locfileid: "34040441"
   
  **报表属性**  
   
- 有关详细的说明和用于报告的属性的配置信息，请参阅[Power View 报表属性](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)。  
+ 有关详细的说明和报表属性的配置信息，请参阅[Power View 报表属性](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)。  
   
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  

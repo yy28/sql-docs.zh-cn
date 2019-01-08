@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -17,12 +15,12 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d70223df27f8f75c6e3a4d354d8f57f9ee8f150a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124977"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805999"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
   节点测试指定根据位置步骤选择的节点类型。 每个轴（`child`、`parent`、`attribute` 或 `self`）都具有主要节点类型。 有关`attribute`轴，主要节点类型是**\<属性 >**。 有关`parent`， `child`，并`self`轴，主要节点类型是**\<元素 >**。  
@@ -30,7 +28,7 @@ ms.locfileid: "48124977"
 > [!NOTE]  
 >  不支持通配符节点测试 *（例如 `child::*`）。  
   
-## <a name="node-test-example-1"></a>节点测试： 示例 1  
+## <a name="node-test-example-1"></a>节点测试：示例 1  
  位置路径`child::Customer`中选择**\<客户 >** 上下文节点的子元素。  
   
  在本示例中，`child` 是轴，`Customer` 是节点测试。 主要节点类型`child`轴是**\<元素 >**。 因此，如果节点测试为 TRUE **\<客户 >** 节点是**\<元素 >** 节点。 如果上下文节点没有**\<客户 >** 子级，则返回空节点集。  

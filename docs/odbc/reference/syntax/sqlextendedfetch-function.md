@@ -20,22 +20,22 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1896ec473caf1af8a3fa2bdaa4156ddca3c0a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697046"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204035"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： 不推荐使用  
+ 版本引入了：ODBC 1.0 标准符合性：不推荐使用  
   
  **摘要**  
  **SQLExtendedFetch**从结果集中提取数据的指定行集，并返回所有绑定列的数据。 绝对或相对位置或书签，可以指定行集。  
   
-> [!NOTE]  
->  在 ODBC 3 *.x*， **SQLExtendedFetch**已由**SQLFetchScroll**。 ODBC 3 *.x*应用程序不应调用**SQLExtendedFetch**; 它们应改为调用**SQLFetchScroll**。 驱动程序管理器映射**SQLFetchScroll**到**SQLExtendedFetch**时使用的 ODBC 2 *.x*驱动程序。 ODBC 3 *.x*驱动程序应支持**SQLExtendedFetch**如果用户想要使用 ODBC 2 *.x*调用它的应用程序。 有关详细信息，请参阅"注释"和[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中向后兼容性的附录 g： 驱动程序指南。  
+> [!NOTE]
+>  在 ODBC 3 *.x*， **SQLExtendedFetch**已由**SQLFetchScroll**。 ODBC 3 *.x*应用程序不应调用**SQLExtendedFetch**; 它们应改为调用**SQLFetchScroll**。 驱动程序管理器映射**SQLFetchScroll**到**SQLExtendedFetch**时使用的 ODBC 2 *.x*驱动程序。 ODBC 3 *.x*驱动程序应支持**SQLExtendedFetch**如果用户想要使用 ODBC 2 *.x*调用它的应用程序。 有关详细信息，请参阅"注释"和[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中附录 g:为了向后兼容的驱动程序指南。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,7 +65,7 @@ SQLRETURN SQLExtendedFetch(
  *RowStatusArray*  
  [输出]指向用于返回每个行状态的数组的指针。 与数组 SQL_ATTR_ROW_STATUS_PTR 语句属性指定相同的方式使用此数组。  
   
- 但是，此数组的地址不存储在 IRD 中的 SQL_DESC_STATUS_ARRAY_PTR 字段。 此外，此数组仅供**SQLExtendedFetch**并通过**SQLBulkOperations**与*操作*的 SQL_ADD 或**SQLSetPos**后调用时**SQLExtendedFetch**。 它不由**SQLFetch**或**SQLFetchScroll**，并且它不由**SQLBulkOperations**或**SQLSetPos**时后调用**SQLFetch**或**SQLFetchScroll**。 它还不是时，使用**SQLBulkOperations**与*操作*SQL_ADD 的调用之前提取的任何函数调用。 换而言之，它使用仅在语句的状态 S7 中。 在 S5 或 S6 语句状态中不使用它。 有关详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)附录 b: ODBC 状态转换表中。  
+ 但是，此数组的地址不存储在 IRD 中的 SQL_DESC_STATUS_ARRAY_PTR 字段。 此外，此数组仅供**SQLExtendedFetch**并通过**SQLBulkOperations**与*操作*的 SQL_ADD 或**SQLSetPos**后调用时**SQLExtendedFetch**。 它不由**SQLFetch**或**SQLFetchScroll**，并且它不由**SQLBulkOperations**或**SQLSetPos**时后调用**SQLFetch**或**SQLFetchScroll**。 它还不是时，使用**SQLBulkOperations**与*操作*SQL_ADD 的调用之前提取的任何函数调用。 换而言之，它使用仅在语句的状态 S7 中。 在 S5 或 S6 语句状态中不使用它。 有关详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)在附录 b:状态转换表。  
   
  应用程序应提供中的有效指针*RowStatusArray*自变量; 如果没有的行为**SQLExtendedFetch**的调用的行为和**SQLBulkOperations**或**SQLSetPos**通过定位游标完后**SQLExtendedFetch**是不确定。  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLExtendedFetch(
 |07009|描述符索引无效|第 0 列已绑定与**SQLBindCol**，SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_OFF。|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
 |22002|需要指示器变量，但未提供|NULL 已提取数据的列中其*StrLen_or_IndPtr*设置**SQLBindCol**是空指针。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|22003|数值超出范围|返回一个或多个列 （为数字或字符串） 的数字值将导致数字被截断的整个 （而不是小数） 部分。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> 有关详细信息，请参阅[间隔和数值数据类型的准则](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)附录 d： 数据类型。|  
+|22003|数值超出范围|返回一个或多个列 （为数字或字符串） 的数字值将导致数字被截断的整个 （而不是小数） 部分。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> 有关详细信息，请参阅[间隔和数值数据类型的准则](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)中附录 d:数据类型。|  
 |22007|日期时间格式无效|在结果集中的字符列已绑定到日期、 时间或时间戳 C 结构和列中的值时，分别，无效的日期、 时间戳。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |22012|被零除|算术表达式中的值返回，这导致除零。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |22015|间隔字段溢出|将分配从精确数字或时间间隔 SQL 类型到 C 间隔类型前导字段中时导致重要数字丢失。<br /><br /> 提取数据到 C 间隔类型时，出现没有 C 间隔类型中的 SQL 类型的值的表示形式。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -121,7 +121,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   **SQLExtendedFetch**不支持绑定的偏移量 （SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性）。  
   
--   调用**SQLExtendedFetch**不能在其中调用**SQLFetch**或**SQLFetchScroll**，并且如果**SQLBulkOperations**称为提取的任何函数调用之前， **SQLExtendedFetch**不能调用，直到关闭并重新打开游标。 即**SQLExtendedFetch**可仅在语句的状态 S7 中调用。 有关详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)附录 b: ODBC 状态转换表中。  
+-   调用**SQLExtendedFetch**不能在其中调用**SQLFetch**或**SQLFetchScroll**，并且如果**SQLBulkOperations**称为提取的任何函数调用之前， **SQLExtendedFetch**不能调用，直到关闭并重新打开游标。 即**SQLExtendedFetch**可仅在语句的状态 S7 中调用。 有关详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)在附录 b:状态转换表。  
   
  当应用程序调用**SQLFetchScroll**时使用的 ODBC 2 *.x*驱动程序，驱动程序管理器将映射到此调用**SQLExtendedFetch**。 有关详细信息，请参阅"SQLFetchScroll 和 ODBC 2 *.x*驱动程序"中[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)。  
   

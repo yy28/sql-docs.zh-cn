@@ -1,5 +1,5 @@
 ---
-title: 定义赋值和其他脚本命令 |Microsoft 文档
+title: 定义赋值和其他脚本命令 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2459286493fd43fdf161d27bf4ad8961cfc4663b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4a96f96319c76c9c4d5a9b22a6e613ed8bf90cee
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023294"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983968"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>定义赋值和其他脚本命令
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在多维数据集设计器的“计算”选项卡上，单击工具栏中的“新建脚本命令”图标以创建空脚本。 创建新脚本时，该脚本最初以空白标题显示在“计算”选项卡的 **“脚本组织程序”** 窗格中。您在“计算表达式”窗格中键入的字符将在 **“脚本组织程序”** 中显示为项的名称。 因此，您可能要在第一行中键入被注释的名称，以更方便地标识 **“脚本组织程序”** 窗格中的脚本。 有关详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](http://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅 [SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)中的“编写有效的 MDX”。  
+  在多维数据集设计器的“计算”选项卡上，单击工具栏中的“新建脚本命令”图标以创建空脚本。 创建新脚本时，该脚本最初以空白标题显示在“计算”选项卡的 **“脚本组织程序”** 窗格中。您在“计算表达式”窗格中键入的字符将在 **“脚本组织程序”** 中显示为项的名称。 因此，您可能要在第一行中键入被注释的名称，以更方便地标识 **“脚本组织程序”** 窗格中的脚本。 有关详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](http://go.microsoft.com/fwlink/?LinkId=81892)。  
   
 > [!IMPORTANT]  
 >  当您最初切换到多维数据集设计器的 **“计算”** 选项卡时， **“脚本组织程序”** 窗格将包含具有 CALCULATE 命令的单个脚本。 CALCULATE 命令控制多维数据集中单元的聚合，仅当您要手动指定多维数据集的聚合方式时，才应编辑该命令。  
@@ -28,7 +28,7 @@ ms.locfileid: "34023294"
 > [!IMPORTANT]  
 >  当使用“计算表达式”窗格编写包含多个语句的表达式时，请确保 MDX 脚本中除最后一行外的所有行都以分号 (;) 结尾。 将计算串联为单个 MDX 脚本并且每个脚本后都追加一个分号，以确保 MDX 脚本可以正确编译。 如果您在“计算表达式”窗格中为脚本的最后一行添加分号，多维数据集将会正确生成和部署，但不能对其运行查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
@@ -15,12 +14,12 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63c829e1865213b29aca6e75d1de52021b4d5ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0945d9e749014648b257499374fc9dc41bb511b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805169"
 ---
 # <a name="-logical-or-ssis-expression"></a>||（逻辑或）（SSIS 表达式）
   执行“逻辑或”运算。 如果条件之一或两个条件都为 TRUE，则表达式计算结果为 TRUE。  
@@ -65,9 +64,9 @@ StandardCost < @SPrice || ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [&#124;&#40;按位异或&#41; &#40;SSIS 表达式&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [|（位异或）（SSIS 表达式）](bitwise-inclusive-or-ssis-expression.md)   
  [^（位异或）（SSIS 表达式）](bitwise-exclusive-or-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

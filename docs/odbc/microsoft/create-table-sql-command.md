@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1451ddc8ec43b1960ed6073fb836b05e8384bb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683005"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213496"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 创建某个表具有指定的字段。  
@@ -111,12 +111,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  主键*eExpression2*标记*TagName2*  
- 指定要创建主索引。 *eExpression2*指定表中的任何字段的组合。 标记*TagName2 的*指定创建的主索引标记的名称。 索引的标记名称可包含最多 10 个字符。  
+ 指定要创建主索引。 *eExpression2*指定表中的任何字段的组合。 标记*TagName2*指定创建的主索引标记的名称。 索引的标记名称可包含最多 10 个字符。  
   
  因为一个表可以包含一个主索引，不能包含此子句，如果你已创建主索引的字段。 Visual FoxPro 生成错误，如果在 CREATE TABLE 中包括多个 PRIMARY KEY 子句。  
   
  唯一*eExpression3*标记*TagName3*  
- 创建一个候选项的索引。 *eExpression3*指定表中的任何字段的组合。 但是，如果您使用 PRIMARY KEY 选项之一创建了主索引，不能包含指定的主索引的字段。 标记*TagName3 的*指定创建的候选索引标记的标记名称。 索引的标记名称可包含最多 10 个字符。  
+ 创建一个候选项的索引。 *eExpression3*指定表中的任何字段的组合。 但是，如果您使用 PRIMARY KEY 选项之一创建了主索引，不能包含指定的主索引的字段。 标记*TagName3*指定创建的候选索引标记的标记名称。 索引的标记名称可包含最多 10 个字符。  
   
  一个表可以有多个候选项索引。  
   

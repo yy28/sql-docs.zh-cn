@@ -16,18 +16,18 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a988044b258eb114a0a58ed7902e58c41d340e3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144244"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351438"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>监视 Analysis Services 实例
   可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或性能监视器（此应用程序有时称为 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **）监视**的性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于创建和管理跟踪并分析和重播跟踪结果。 性能监视器报告服务器状态（通过某些计数器进行索引），下一节中将对此进行讨论。  
   
 > [!NOTE]  
->  有关监视的详细信息，请参阅 [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)（SQL Server 2008 R2 操作指南）。  
+>  有关监视的详细信息，请参阅 [SQL Server 2008 R2 Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)（SQL Server 2008 R2 操作指南）。  
   
 ## <a name="in-this-section"></a>本节内容  
  单击这些链接以了解有关监视的更多信息。  

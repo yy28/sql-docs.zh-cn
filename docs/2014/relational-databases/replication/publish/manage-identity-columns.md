@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05cbb061c2f0df716458de35b3a1bad9fbae7e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12233854049cf83f809a434b0e28dd4fb06d8d65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198257"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816639"
 ---
 # <a name="manage-identity-columns"></a>管理标识列
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理标识列。 在将订阅服务器插入操作复制回发布服务器时，必须对标识列进行管理，以免在订阅服务器和发布服务器上分配相同的标识值。 复制可自动管理标识范围，或者您可以选择手动处理标识范围管理。  有关由复制提供的标识范围管理选项的信息，请参阅[复制标识列](replicate-identity-columns.md)。  
@@ -61,7 +60,7 @@ ms.locfileid: "48198257"
     |------------|-----------|-----------------|  
     |**发布服务器范围大小**|表示范围大小的整数值（例如 20000）。|请参阅[复制标识列](replicate-identity-columns.md)中的“指定标识范围”部分。|  
     |**订阅服务器范围大小**|表示范围大小的整数值（例如 10000）。|请参阅[复制标识列](replicate-identity-columns.md)中的“指定标识范围”部分。|  
-    |**范围阈值百分比**|表示百分比阈值的整数值（例如，90 相当于 90%）。|指定新标识范围之前在节点上使用的总标识值的百分比。<br /><br /> 注意：必须指定此值，但此值只用于：使用排队更新订阅的订阅服务器以及运行 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 或以前版本的其他 SQL Server 版本的合并发布的订阅服务器。 有关详细信息，请参阅[复制标识列](replicate-identity-columns.md)中的“指定标识范围”部分。|  
+    |**范围阈值百分比**|表示百分比阈值的整数值（例如，90 相当于 90%）。|指定新标识范围之前在节点上使用的总标识值的百分比。<br /><br /> 注意：必须指定此值，但它仅由：订阅服务器使用排队更新订阅和订阅服务器合并发布运行[!INCLUDE[ssEW](../../../includes/ssew-md.md)]或早期版本的其他 SQL Server 版本。 有关详细信息，请参阅[复制标识列](replicate-identity-columns.md)中的“指定标识范围”部分。|  
     |**下一个范围的起始值**|整数值。 只读。|下一个范围的起始值。 例如，如果当前范围是 5001-6000，此起始值就是 6001。|  
     |**最大标识值**|整数值。 只读。|标识列的最大值。 由列的基本数据类型决定。|  
     |**增量**|整数值。 只读。|对于每个插入操作，标识列中的数字应增加或减少的量：通常设置为 1。|  
@@ -74,7 +73,7 @@ ms.locfileid: "48198257"
   
 2.  单击 **“项目属性”**，再单击 **“设置突出显示的表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“标识范围管理”部分中，输入一个或多个以下属性的值：“发布服务器范围大小”、“订阅服务器范围大小”和“范围阈值百分比”。  
+3.  上**属性**选项卡**项目属性-\<文章 >** 对话框在**标识范围管理**部分中，输入的一个或多个值以下属性：**发布服务器范围大小**，**订阅服务器范围大小**，和**范围阈值百分比**。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

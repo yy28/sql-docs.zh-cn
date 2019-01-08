@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.BookmarkWindow
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f79c1074d829697b996de532bff777ea0df0733
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208257"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328667"
 ---
 # <a name="manage-bookmarks"></a>管理书签
   在代码编辑器中工作时，使用 **“书签”** 窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
@@ -95,5 +93,3 @@ ms.locfileid: "48208257"
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

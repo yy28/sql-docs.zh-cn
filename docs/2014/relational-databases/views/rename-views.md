@@ -13,12 +13,12 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fa559d0aaf1f805f7885b931bcce7f78b012701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063827"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393701"
 ---
 # <a name="rename-views"></a>重命名视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名视图。  
@@ -32,7 +32,7 @@ ms.locfileid: "48063827"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **重命名视图，使用：**  
   

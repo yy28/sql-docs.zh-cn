@@ -20,16 +20,16 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e041c4152a2f2b02a57164dbe43d62ae54d09d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205255"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLPrimaryKeys**返回表的键构成了主数据库的列名称。 驱动程序返回的信息作为结果集。 此函数不支持从单个调用中的多个表返回主键。  

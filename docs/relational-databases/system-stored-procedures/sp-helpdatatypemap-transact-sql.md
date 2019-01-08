@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdatatypemap
@@ -17,12 +16,12 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1eab8424e2ff5eb81e8d89a6ed897b7d19b5b72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210846"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@source_dbms**=] **'***source_dbms*****  
+ [ **@source_dbms**=] **'***source_dbms***’**  
  从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -56,10 +55,10 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@source_version**=] **'***source_version*****  
  源 DBMS 的产品版本。 *source_version*是**varchar(10)**，并且如果未指定的数据类型将返回的源 DBMS 的所有版本的映射。 启用结果集按 DBMS 源版本进行筛选。  
   
- [ **@source_type**=] **'***source_type*****  
+ [ **@source_type**=] **'***source_type***’**  
  源 DBMS 中列出的数据类型。 *source_type*是**sysname**，如果未指定，将返回源 DBMS 中的所有数据类型映射。 启用结果集按源 DBMS 中的数据类型进行筛选。  
   
- [ **@destination_dbms** =] **'***destination_dbms*****  
+ [ **@destination_dbms** =] **'***destination_dbms***’**  
  目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -69,10 +68,10 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|目标为 IBM DB2 数据库。|  
 |**SYBASE**|目标为 Sybase 数据库。|  
   
- [ **@destination_version**=] **'***destination_version*****  
+ [ **@destination_version**=] **'***destination_version***’**  
  目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，如果未指定，将返回目标 DBMS 的所有版本的映射。 启用结果集按 DBMS 的目标版本进行筛选。  
   
- [ **@destination_type**=] **'***destination_type*****  
+ [ **@destination_type**=] **'***destination_type***’**  
  目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，如果未指定，将返回目标 DBMS 中的所有数据类型映射。 启用结果集按目标 DBMS 中的数据类型进行筛选。  
   
  [ **@defaults_only**=] *defaults_only*  
@@ -97,7 +96,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
  不支持指定的源和目标 DBMS 组合，则当**sp_helpdatatypemap**返回空结果集。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色的成员的分发服务器**db_owner**上的分发数据库的固定的数据库角色可以执行**sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>请参阅  

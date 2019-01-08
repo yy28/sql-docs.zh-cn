@@ -13,12 +13,12 @@ ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc75b9a7ab93e3157d6594be15c0b2cc36456415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726155"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516537"
 ---
 # <a name="the-field-object"></a>字段对象
 每个**字段**对象通常对应于数据库表中的列。 但是，**字段**还表示到另一个指针**记录集**，名为一章。 将在本指南的后面介绍异常，如章节列。  
@@ -44,7 +44,7 @@ ms.locfileid: "47726155"
  解决使用批更新过程中的字段值中的差异**OriginalValue**并**UnderlyingValue**属性，如果提供程序支持批更新。  
   
 ## <a name="describing-a-field"></a>描述字段  
- 按照将的主题讨论的属性[字段](../../../ado/reference/ado-api/field-object.md)对象，它表示描述的信息**字段**对象本身 — 即，有关该字段的元数据。 此信息可以用于确定许多有关的架构**记录集**。 这些属性包括**类型**， **DefinedSize**并**ActualSize**，**名称**，和**NumericScale**并**精度**。  
+ 按照将的主题讨论的属性[字段](../../../ado/reference/ado-api/field-object.md)对象，它表示描述的信息**字段**对象本身-即，有关该字段的元数据。 此信息可以用于确定许多有关的架构**记录集**。 这些属性包括**类型**， **DefinedSize**并**ActualSize**，**名称**，和**NumericScale**并**精度**。  
   
 ### <a name="discovering-the-data-type"></a>发现的数据类型  
  **类型**属性指示该字段的数据类型。 中介绍了支持的 ADO 枚举的常量的数据类型[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)中*ADO 程序员参考*。  

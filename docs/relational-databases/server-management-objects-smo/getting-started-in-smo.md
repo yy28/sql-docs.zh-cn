@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da9dc2db66bd61bc89796d85cd7c83bb4fd035d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89f43904c528c37963a397de450271d1e581e507
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715987"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209916"
 ---
 # <a name="getting-started-in-smo"></a>SMO 入门
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 此页提供指向主题旨在帮助你开始使用 SQL Server 管理对象 (SMO)。 列出的主题涵盖 SMO 对象层次结构，在 SMO 中，SMO 和不同的编程语言和特定的编程任务中编写程序。  
  
-##<a name="installing-smo"></a>安装 SMO
+## <a name="installing-smo"></a>安装 SMO
 [安装 SMO](installing-smo.md)提供有关安装和引用 SMO 程序集的说明。
 
 ## <a name="object-model"></a>对象模型  

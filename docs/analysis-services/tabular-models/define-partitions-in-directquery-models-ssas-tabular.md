@@ -1,5 +1,5 @@
 ---
-title: 在 DirectQuery 模型中定义分区 |Microsoft 文档
+title: 在 Analysis Services 的 DirectQuery 模型中定义分区 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044611"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072274"
 ---
 # <a name="define-partitions-in-directquery-models"></a>在 DirectQuery 模型中定义分区
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本节介绍了如何在 DirectQuery 模型中使用分区。 有关在表格模型中的分区的更多常规信息，请参阅[分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+  本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中的分区的更多常规信息，请参阅[分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  虽然表在 DirectQuery 模式下可以有多个分区，但只能指定其中一个分区在查询执行中使用。 一个分区要求可适用于所有兼容性级别的 DirectQuery 模型。  
@@ -72,7 +72,7 @@ ms.locfileid: "34044611"
 |**连接字符串** 属性|**“处理选项”** 属性|说明|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|绝不要处理此分区|模型使用仅限 DirectQuery 时，没必要进行处理。<br /><br /> 在混合模型中，您可以将 DirectQuery 分区配置为永远不会被处理。 例如，如果您正在对一个非常大的数据集进行操作，并且不想将完整结果添加到缓存中，则可以指定 DirectQuery 分区包含表中所有其他分区结果的并集，然后永远不处理该并集。 转到关系数据源的查询将不会受到影响，并且对缓存数据进行的查询将合并来自其他分区的数据|  
-|DataView=Sample<br /><br /> 适用于使用示例数据视图的表格模型|允许处理分区|如果模型正在使用示例数据，则你可以处理要返回已筛选的数据集的表，该数据集将在模型设计过程中提供视觉提示。|  
+|DataView=Sample<br /><br /> 适用于表格模型使用示例数据视图|允许处理分区|如果模型正在使用示例数据，则你可以处理要返回已筛选的数据集的表，该数据集将在模型设计过程中提供视觉提示。|  
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> 适用于在内存中与 DirectQuery 组合模式下运行的表格 1100 或 1103 模型|允许处理分区|如果模型使用混合模式，则你应将相同的分区用于针对内存中和 DirectQuery 数据源的查询。|  
   
 ## <a name="see-also"></a>另请参阅  

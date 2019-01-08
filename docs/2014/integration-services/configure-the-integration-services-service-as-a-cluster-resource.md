@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185814"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408956"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>将 Integration Services 服务配置为群集资源
   对于那些认为将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源所带来的优点大于缺点的客户，本节包含必要的配置说明。 但是， [!INCLUDE[msCoName](../includes/msconame-md.md)] 不建议将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源。  
@@ -79,7 +79,7 @@ ms.locfileid: "48185814"
   
 4.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“资源”**。  
   
-5.  在“资源向导”的 **“新资源”** 页上，键入名称并选择 **“一般服务”** 作为 **“服务类型”**。 不要更改 **“组”** 的值。 单击“下一步” 。  
+5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”。 不要更改 **“组”** 的值。 单击“下一步” 。  
   
 6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步” 。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48185814"
   
 2.  在共享磁盘上，创建一个名为 **Packages** 的新文件夹来充当包存储区。 为适当的用户和组授予对这个新文件夹的“列出文件夹”和“写入”权限。  
   
-3.  在共享磁盘上，用文本编辑器或 XML 编辑器打开配置文件。 更改的值`ServerName`的虚拟名称的元素[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中相同的资源组。  
+3.  在共享磁盘上，用文本编辑器或 XML 编辑器打开配置文件。 将 `ServerName` 元素的值更改为同一资源组中虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的名称。  
   
 4.  更改的值`StorePath`元素的完全限定路径**包**在上一步中在共享磁盘上创建文件夹。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - ASP applications [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbd46fb0ae16b3332f787ce99fc1f653b4ee0e8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a68a6f66af2f74544f800d7c3786caf4a577d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165879"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806149"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在示例 ASP 应用程序中使用 Updategram (SQLXML 4.0)
   使用此 Active Server Pages (ASP) 应用程序，您可以更新 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 AdventureWorks 示例数据库的 Person.Contact 表中的客户信息。 应用程序执行以下操作：  

@@ -15,25 +15,25 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099027"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203353"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服务 URL（SSRS 本机模式）
   使用“Web 服务 URL”页可配置或修改用于访问报表服务器的 URL。 将基于指定的 URL 创建“URL 预留”。 URL 预留定义适用于所有 URL 的语法和规则，随后可使用这些 URL 来访问报表服务器 Web 服务。 它指定报表服务器 Web 服务的前缀、主机、端口和虚拟目录。 根据指定主机的方式不同，一个预留可能会对应多个 URL。 主机的默认值指定强通配符。 使用强通配符，可在 URL 中指定可解析为承载报表服务器的计算机的任何主机名。 有关 URL 配置和保留的详细信息，请参阅[配置 URL &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)并[配置报表服务器 Url &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
- 若要打开此页上，启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器并单击**Web 服务 URL**在导航窗格中。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，并在导航窗格中单击 **“Web 服务 URL”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
  此页提供报表服务器 URL 中常用的值。 如果要创建其他 URL，请使用主机标头，或指定特殊格式的 IP 地址，然后单击 **“高级”**。  
   
  单击 **“应用”** 后，此页上将显示一个指向 Web 服务的链接。 如果在创建报表服务器数据库之前单击此链接，则可能会看到“Page Not Found”（找不到页）错误。 配置数据库后，就不会再显示此错误。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
- 如果你重新安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和发现尝试使用所有已分配和端口 80 的默认 IP 地址值时遇到错误，通常可以通过重新启动该服务后重新创建该 URL 来解决该错误。  
+ 如果重新安装了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，但在试图使用“所有已分配的”的默认 IP 地址值和端口 80 时收到错误，则通常情况下，重新启动服务后重新创建该 URL 即可纠正此错误。  
   
 ## <a name="options"></a>选项  
  **虚拟目录**  
@@ -58,7 +58,7 @@ ms.locfileid: "48099027"
  **SSL 证书**  
  将证书绑定到指定的 IP 地址。 必须在计算机上安装和配置此证书。 Reporting Services 不提供管理证书的功能。 证书必须颁发给解析为 IP 地址的主机名或计算机名。 例如，若要使用的证书已颁发给 http://salesreports ，您指定的 IP 地址必须解析到名为"salesreports"的服务器。  
   
- 如果使用的证书，则必须修改`UrlRoot`在 RSReportServer.config 中的配置设置文件，以便指定要为其注册证书的计算机的完全限定的名称。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 如果使用证书，则必须修改 RSReportServer.config 文件中的 `UrlRoot` 配置设置，以便指定要为其注册证书的计算机的完全限定名称。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **SSL 端口**  
  为 SSL 连接指定端口。  
@@ -69,17 +69,17 @@ ms.locfileid: "48099027"
  **高级**  
  单击此选项可为当前应用程序实例创建其他 URL。  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果你已有 SSL 绑定和 URL 预留且要更改 SSL 绑定，例如使用不同的证书或主机标头，则建议按顺序完成以下步骤：  
->   
+> 
 >  1.  首先删除所有 URL 预留。  
 > 2.  然后删除所有 SSL 绑定。  
 > 3.  接着重新创建 URL 和 SSL 绑定。  
->   
+> 
 >  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器完成上述步骤。  
->   
+> 
 >  Microsoft Windows 对于每个 IP 地址到端口的组合支持一个绑定。 如果您配置报表服务器以使用特定主机标头值并且还将端口到 IP 地址组合上的证书签发给不同的主机标头值，在浏览器中将看到一个警告，指示证书与使用的 URL 不匹配。  
->   
+> 
 >  为了解决此问题，请删除所有绑定，然后使用唯一设置创建新的绑定，或使用通配符配置 Reporting Services URL 注册。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6c205ece4af38512525e3b89abd69298484516
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089679"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812179"
 ---
 # <a name="model-database"></a>model 数据库
   **model** 数据库用作在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建的所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
@@ -36,7 +35,7 @@ ms.locfileid: "48089679"
  如果修改 **model** 数据库，之后创建的所有数据库都将继承这些修改。 例如，可以设置权限或数据库选项或者添加对象，例如，表、函数或存储过程。 **model** 数据库的文件属性是一个例外且会被忽略（数据文件的初始大小除外）。  
   
 ## <a name="physical-properties-of-model"></a>model 的物理属性  
- 下表列出了 **model** 数据和日志文件的初始配置值。 这些文件的大小可以为不同版本的略有不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 下表列出了 **model** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|文件增长|  
 |----------|------------------|-------------------|-----------------|  

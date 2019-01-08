@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DAY function
@@ -14,12 +13,12 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 919b6f92cda6a533ac4918e3f7cc4496fdb23e52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d530819e235efd233df3247d2e85d7da8c2cf1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805129"
 ---
 # <a name="day-ssis-expression"></a>DAY（SSIS 表达式）
   返回一个整数，表示日期的“日”日期部分。  
@@ -44,7 +43,7 @@ DAY(date)
  日期文字必须显式转换为日期数据类型之一。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
 > [!NOTE]  
->  在日期文本显式转换为以下日期数据类型之一时，表达式验证失败：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
+>  若要验证日期文本显式转换为这些日期数据类型之一时，表达式失败：将 DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
   
  与 DATEPART("Day", date) 相比，DAY 函数效果相同，但更简洁。  
   
@@ -68,11 +67,11 @@ DAY(GETDATE())
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [DATEADD &#40;SSIS 表达式&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS 表达式&#41;](datediff-ssis-expression.md)   
+ [DATEADD（SSIS 表达式）](dateadd-ssis-expression.md)   
+ [DATEDIFF（SSIS 表达式）](datediff-ssis-expression.md)   
  [DATEPART（SSIS 表达式）](datepart-ssis-expression.md)   
  [MONTH（SSIS 表达式）](month-ssis-expression.md)   
  [YEAR（SSIS 表达式）](year-ssis-expression.md)   
- [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   

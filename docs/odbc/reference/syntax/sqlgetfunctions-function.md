@@ -20,16 +20,16 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206966"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetFunctions**返回有关驱动程序是否支持特定的 ODBC 函数的信息。 执行此函数在驱动程序管理器中;它还可以实现在驱动程序中。 如果驱动程序实现**SQLGetFunctions**，驱动程序管理器驱动程序中调用函数。 否则，它将执行该函数本身。  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>注释  
  **SQLGetFunctions**始终返回该**SQLGetFunctions**， **SQLDataSources**，并且**SQLDrivers**支持。 这是因为这些函数的实现是驱动程序管理器中。 驱动程序管理器将映射到相应的 Unicode 函数的 ANSI 函数，如果 Unicode 函数存在，并且如果 ANSI 函数存在，则将映射到相应的 ANSI 函数的 Unicode 函数。 有关如何使用应用程序信息**SQLGetFunctions**，请参阅[接口一致性级别](../../../odbc/reference/develop-app/interface-conformance-levels.md)。  
   
- 以下是一系列的有效值*FunctionId*符合 ISO 92 标准-符合性级别的函数：  
+ 以下是一系列的有效值*FunctionId*符合 ISO 92 标准符合性级别的函数：  
   
 |FunctionId 值|FunctionId 值|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- 以下是一系列的有效值*FunctionId*符合 Open Group 标准-符合性级别的函数：  
+ 以下是一系列的有效值*FunctionId*符合 Open Group 标准符合性级别的函数：  
   
 |FunctionId 值|FunctionId 值|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- 以下是一系列的有效值*FunctionId*符合 ODBC 标准-符合性级别的函数。  
+ 以下是一系列的有效值*FunctionId*符合 ODBC 标准符合性级别的函数。  
   
 |FunctionId 值|FunctionId 值|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 宏  
  SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 宏用于确定是否支持 ODBC 3 *.x*早期函数后的或**SQLGetFunctions**已使用调用*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 参数。 在应用程序调用与 SQL_FUNC_EXISTS *SupportedPtr*参数设置为*SupportedPtr*传入*SQLGetFunctions*，并使用*FunctionID*参数设置为 **#define**函数。 SQL_FUNC_EXISTS 否则返回支持的函数，如果 SQL_TRUE 和 SQL_FALSE。  
   
-> [!NOTE]  
+> [!NOTE]
 >  使用 ODBC 2 时 *.x*驱动程序，ODBC 3 *.x*驱动程序管理器将返回为 SQL_TRUE **SQLAllocHandle**和**SQLFreeHandle**因为**SQLAllocHandle**映射到**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**，和因为**SQLFreeHandle**映射到**SQLFreeEnv**， **SQLFreeConnect**，或者**SQLFreeStmt**。 **SQLAllocHandle**或**SQLFreeHandle**与*HandleType* SQL_HANDLE_DESC 参数不支持，但是，即使对于函数，返回 SQL_TRUE，因为没有任何ODBC 2 *.x*用于这种情况下将映射函数。  
   
 ## <a name="code-example"></a>代码示例  

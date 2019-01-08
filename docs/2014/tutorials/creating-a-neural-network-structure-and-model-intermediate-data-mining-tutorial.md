@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195557"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395799"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>创建神经网络结构和模型（数据挖掘中级教程）
   若要创建数据挖掘模型，必须先使用数据挖掘向导基于新数据源视图创建一个新的挖掘结构。 在本任务中，您将使用该向导创建一个挖掘结构，同时创建一个基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法的关联挖掘模型。  
@@ -88,7 +88,7 @@ ms.locfileid: "48195557"
     |TotalOperators|请勿使用|  
     |WageType|输入|  
   
-     请注意已选定多个可预测列。 神经网络算法的优点之一是：它可以分析输入和输出属性的所有可能组合。 对于大型数据集，您可能不希望执行此操作，因为这会成倍增加处理时间。  
+     请注意已选定多个可预测列。 神经网络算法的优点之一是：它可以分析输入和输出属性的所有可能组合。 您不希望执行此操作对于大型数据集，因为这会成倍增加处理时间...  
   
 12. 上**指定列内容和数据类型**页上，验证网格包含的列、 内容类型和下表中所示的数据类型，然后单击**下一步**。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48195557"
   
  ![服务级别值的分发](../../2014/tutorials/media/skt-service-grade-valuesc.gif "服务级别值的分布")  
   
- 因此，处理模型时，输出的分组方式可能会与预期的不同。 例如，如果使用聚类分析来确定最佳值组，该算法将 ServiceGrade 中的值为诸如： 0.0748051948-0.09716216215。 尽管此分组在数学上很准确，但此类范围可能对业务用户并没有太大意义。  
+ 因此，处理模型时，输出的分组方式可能会与预期的不同。 例如，如果使用聚类分析来确定最佳值组，该算法将 ServiceGrade 中的值为这样一个：0.0748051948-0.09716216215。 尽管此分组在数学上很准确，但此类范围可能对业务用户并没有太大意义。  
   
- 在此步骤中，要使结果更直观，您需以不同方式分组数值，创建数值数据列的副本。  
+ 在此步骤中，要使结果更直观，您将组数字值以不同的方式，创建数值数据列的副本。  
   
 ### <a name="how-discretization-works"></a>如何使用离散化  
  Analysis Services 提供了各种装箱或处理数值数据的方法。 下表说明了以三种不同方式处理输出属性 ServiceGrade 所得到的结果的差异：  
@@ -211,7 +211,7 @@ ms.locfileid: "48195557"
   
      以下属性现在可用。 按下表所示更改属性值：  
   
-    |“属性”|默认值|新值|  
+    |属性|默认值|新值|  
     |--------------|-------------------|---------------|  
     |`DiscretizationMethod`|`Continuous`|`EqualAreas`|  
     |`DiscretizationBucketCount`|无值|4|  
@@ -263,9 +263,9 @@ ms.locfileid: "48195557"
   
      **属性**窗口应包含以下信息：  
   
-    |“属性”|ReplTest1|  
+    |属性|ReplTest1|  
     |--------------|-----------|  
-    |**Description**|Temporary column alias|  
+    |**说明**|Temporary column alias|  
     |**ID**|ServiceGrade Binned|  
     |**建模标志**||  
     |**名称**|Service Grade|  
@@ -321,6 +321,6 @@ ms.locfileid: "48195557"
  [探索呼叫中心模型&#40;数据挖掘中级教程&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘结构&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [挖掘结构（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

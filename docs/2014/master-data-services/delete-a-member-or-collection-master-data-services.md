@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], deleting
@@ -17,12 +16,12 @@ ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04177b96f74efba2b7e856ddb5fddd235758397e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9efe4245fd10e8fc0c5dbd0d114ba429ad13d1dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048957"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758669"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>删除成员或集合 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，当您不再需要某个成员或集合时，可以将其删除。 若要大批量删除成员，可以改用临时过程。 有关详细信息，请参阅[停用或通过使用临时过程删除成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "48048957"
 > [!NOTE]  
 >  如果某一成员用作另一个成员的基于域的属性值，则不能删除该成员。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -62,8 +61,8 @@ ms.locfileid: "48048957"
 7.  在确认对话框中，单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [重新激活成员或集合&#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [重新激活成员或集合 (Master Data Services)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

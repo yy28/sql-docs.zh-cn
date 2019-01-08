@@ -1,29 +1,34 @@
 ---
-title: 如何管理 Azure Data Studio 中的笔记本 |Microsoft Docs
-description: ''
+title: 管理 Azure Data Studio 中的笔记本
+titleSuffix: SQL Server 2019 big data clusters
+description: 了解如何管理 Azure Data Studio 中的笔记本。 这包括打开笔记本，保存它们，并更改你的大数据群集连接。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796005"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246586"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的笔记本
 
 本文介绍如何打开和保存在 Azure 数据工作室中具有 SQL Server 2019 预览 notebook 文件。 它还演示了如何更改你的连接到 SQL Server 大数据群集。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 本文假定你已有想要在 Azure Data Studio 中使用的笔记本。 如果你想要创建的 notebook，请参阅[如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)。 若要在 Azure Data Studio 中使用 notebook，必须满足以下先决条件：
 
-- [安装最新的大数据 tools for SQL Server 2019 预览](deploy-big-data-tools.md)。
 - [部署大数据群集](quickstart-big-data-cluster-deploy.md)。
+- [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 扩展**
+   - **Kubectl**
 
 ## <a name="open-a-notebook"></a>打开笔记本
 
@@ -43,7 +48,7 @@ ms.locfileid: "48796005"
 
 ### <a name="command-palette"></a>命令面板
 
-使用命令**文件： 打开**从命令面板中通过键入 Ctrl + Shift + P （在 Windows) 和 Cmd + Shift + P （在 Mac)。
+使用命令**文件：打开**从命令面板中通过键入 Ctrl + Shift + P （在 Windows) 和 Cmd + Shift + P （在 Mac)。
 
 ![通过在命令面板中输入 File:Open 打开打开文件对话框](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -57,7 +62,7 @@ ms.locfileid: "48796005"
 > 以下方法当前不保存更改为笔记本:
 >
 > - **文件另存**，**文件另存为...** 并**文件将保存所有**从文件菜单命令。
-> - **文件： 保存**在命令面板中输入的命令。
+> - **文件：保存**在命令面板中输入的命令。
 
 ## <a name="change-the-big-data-cluster"></a>更改大数据群集
 

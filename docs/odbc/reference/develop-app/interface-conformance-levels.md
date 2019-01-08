@@ -16,12 +16,12 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812097"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206203"
 ---
 # <a name="interface-conformance-levels"></a>接口一致性级别
 调配的目的是通知应用程序提供的功能的内容从驱动程序。 基于函数的均衡方案无法充分实现此目标。 在 ODBC 3。*x*，驱动程序的分类基于它们所拥有的功能。 支持该功能可包括支持函数;它还包括由返回的信息类型的支持的描述符字段、 语句属性、"Y"值**SQLGetInfo**，依次类推。  
@@ -34,9 +34,9 @@ ms.locfileid: "47812097"
   
  驱动程序可以随意实施超过声称到完整的一致性级别的功能。 应用程序发现任何此类附加功能，通过调用**SQLGetFunctions** （用于确定哪些 ODBC 函数都存在） 和**SQLGetInfo** （用于查询各种其他 ODBC 功能）。  
   
- 有三种 ODBC 接口一致性级别： 核心、 级别 1 和级别 2。  
+ 有三个 ODBC 接口一致性级别：核心、 级别 1 和级别 2。  
   
-> [!NOTE]  
+> [!NOTE]
 >  这些一致性级别有不同的要求比 ODBC 2 中的相同名称的 ODBC API 一致性级别 *.x*。 具体而言，所有功能权限都隐含的 ODBC 2 *.x* API 一致性级别 1 现在是核心接口一致性级别的一部分。 因此，很多 ODBC 驱动程序可能会报告核心级别接口一致性。  
   
  本部分包含以下主题。  

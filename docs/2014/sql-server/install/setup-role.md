@@ -11,12 +11,12 @@ ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130557"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352846"
 ---
 # <a name="setup-role"></a>安装角色
   使用此页可以指定是使用“功能选择”页来分别选择各项功能，还是使用安装角色来进行安装。  
@@ -32,7 +32,7 @@ ms.locfileid: "48130557"
   
  如果需要使用关系数据库引擎实例在 SharePoint 场中承载数据库，可以选择在安装中添加关系数据库引擎实例。 如果已配置场，则不必选择。  
   
- 安装完成后，必须使用以下方法之一配置软件：PowerPivot 配置工具、PowerShell cmdlet 或 SharePoint 2010 管理中心。 与以往的版本相比，安装程序不再执行 PowerPivot 安装的任何配置任务。  
+ 安装完成后，你必须配置软件使用以下方法之一：PowerPivot 配置工具、 PowerShell cmdlet 或 SharePoint 2010 管理中心。 与以往的版本相比，安装程序不再执行 PowerPivot 安装的任何配置任务。  
   
  基于角色的安装不包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot for Excel 客户端应用程序。 将单独安装此客户端应用程序。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48130557"
  当操作系统不是域控制器时，默认情况下，数据库引擎和 Reporting Services 将使用 NTAUTHORITY\NETWORK SERVICE 帐户，Integration Services 将使用 NTAUTHORITY\NETWORK SERVICE 帐户，而 SQL 全文筛选器后台程序启动器将使用 NTAUTHORITY\LOCAL SERVICE 帐户。  
   
 ## <a name="see-also"></a>请参阅  
- [安装 PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [硬件和软件要求 (PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [安装 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [硬件和软件要求 (PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [功能选择](../../../2014/sql-server/install/feature-selection.md)  
   
   

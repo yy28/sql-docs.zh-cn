@@ -11,12 +11,12 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6a0318d041a43e96246931015ef35edaf7fd74a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162867"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528246"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>通过添加条带线突出显示图表数据（报表生成器和 SSRS）
   条带线（或条带）是按固定或自定义间隔使图表背景带有阴影的水平或垂直区域。 可以使用条带线执行以下操作：  
@@ -50,7 +50,7 @@ ms.locfileid: "48162867"
   
      轴属性将显示在“属性”窗口中。  
   
-2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合 (…)”按钮打开“ChartStripLine 集合编辑器”。  
+2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合(…)”按钮打开“ChartStripLine 集合编辑器”。  
   
 3.  单击 **“添加”** 向集合中添加一个新条带线。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48162867"
 ## <a name="see-also"></a>请参阅  
  [设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [向图表添加移动平均线&#40;报表生成器和 SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [向图表添加移动平均线（报表生成器和 SSRS）](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

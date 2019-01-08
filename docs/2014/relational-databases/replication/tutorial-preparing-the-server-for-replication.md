@@ -1,11 +1,10 @@
 ---
-title: 教程：准备用于复制的服务器 | Microsoft Docs
+title: 教程：准备用于复制的服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813989"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>教程：准备用于复制的服务器
   在配置复制拓扑之前，制定安全计划是非常重要的。 本教程向您介绍如何更好地保护复制拓扑以及如何配置分发，这是复制数据的第一步。 开始其他教程之前，必须先完成本教程。  
@@ -36,7 +35,7 @@ ms.locfileid: "48228237"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。 为了增强安全性，默认情况下不会安装示例数据库。  
   
- **本教程的预计学时：30 分钟。**  
+ **估计的时间才能完成本教程中：30 分钟。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
   

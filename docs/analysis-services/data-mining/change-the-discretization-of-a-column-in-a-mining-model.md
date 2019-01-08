@@ -1,5 +1,5 @@
 ---
-title: 更改挖掘模型中列的离散化 |Microsoft 文档
+title: 更改挖掘模型中的列的离散化 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e9d6b2c75becad147e196534bb4d366dff01a13d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8a85b645562ce39f19c15191b6b1d3ba4a7fb332
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538812"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>更改挖掘模型中列的离散化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在某些情况下会自动离散化值，也就是说，它会在数字列中保存值。 例如，如果数据包含连续数值数据，并且创建了决策树模型，则将依据数据的分布，自动将连续数据的所有列都存入 bin 目录中。 如果要控制数据的离散化方式，则必须更改挖掘结构列的属性，这些属性可控制数据在模型中的使用方式。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动离散化值-也就是说，它会在数字列在某些情况。 例如，如果数据包含连续数值数据，并且创建了决策树模型，则将依据数据的分布，自动将连续数据的所有列都存入 bin 目录中。 如果要控制数据的离散化方式，则必须更改挖掘结构列的属性，这些属性可控制数据在模型中的使用方式。  
   
  有关如何在挖掘模型中设置属性的常规信息，请参阅 [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "34015614"
   
      <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 属性均处于启用状态。  
   
-2.  在**属性**窗口中，单击文本框旁边<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>，然后选择以下值之一：**自动**， **EqualAreas**，或**群集**。  
+2.  在中**属性**窗口中，单击文本框旁边的<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>，然后选择以下值之一：**自动**， **EqualAreas**，或**群集**。  
   
     > [!NOTE]  
     >  如果列的用法设置为 **Ignore**，则列的“属性”窗口将为空白。  
   
      在设计器中选择一个不同的元素后，新值即生效。  
   
-3.  在**属性**窗口中，单击文本框旁边<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>并键入一个数字值。  
+3.  在中**属性**窗口中，单击文本框旁边的<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>并键入一个数字值。  
   
     > [!NOTE]  
     >  如果更改这些属性，则必须重新处理该结构以及要对其使用新设置的所有模型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

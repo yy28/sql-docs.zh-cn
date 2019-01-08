@@ -20,19 +20,19 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814070"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761447"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
   可以使用两种**注册数据层应用程序向导**或 Windows PowerShell 脚本可以生成描述现有数据库中的对象的数据层应用程序 (DAC) 定义并注册中的DAC定义`msdb`系统数据库 (**主**中[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
   
--   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingRegisterDACWizard)、[PowerShell](#RegisterDACPowerShell)  
+-   **若要升级 DAC，使用：**[注册数据层应用程序向导](#UsingRegisterDACWizard)， [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
  注册过程将创建用于定义数据库中的对象的 DAC 定义。 DAC 定义与数据库的组合构成一个 DAC 实例。 如果在数据库引擎的托管实例上将数据库注册为 DAC，则在下次将实用工具收集组从该实例发送到实用工具控制点时，已注册的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
@@ -52,7 +52,7 @@ ms.locfileid: "51814070"
   
 2.  展开 **“数据库”** 节点。  
   
-3.  右键单击要注册的数据库，指向 “任务”，然后选择   
+3.  右键单击要注册的数据库，指向“任务”，然后选择“注册为数据层应用程序...”  
   
 4.  完成向导对话框：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51814070"
 ##  <a name="Set_properties"></a> “设置属性”页  
  使用此页可指定 DAC 级别的属性，如应用程序名称和版本。  
   
- **应用程序名称。** 的用数据库名称进行填充一个字符串，指定用于标识 DAC 定义，该字段的名称。  
+ **应用程序名称。** - 指定用于标识 DAC 定义的名称的字符串，该字段用数据库名称进行填充。  
   
  **版本。** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 在部署 DAC 时，该版本存储中`msdb`数据库和更高版本可以在查看**数据层应用程序**中的节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

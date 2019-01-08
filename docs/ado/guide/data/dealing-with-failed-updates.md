@@ -13,12 +13,12 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba4b4189691bf907b3ad67db91a8534268a8ec0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616425"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202216"
 ---
 # <a name="dealing-with-failed-updates"></a>处理失败的更新
 如果更新由于错误而停止，如何解决这些错误依赖于的性质和错误的严重性和你的应用程序的逻辑。 但是，如果与其他用户共享的数据库，典型的错误是其他人在执行操作之前来修改字段。 这种类型的错误称为冲突。 ADO 检测到这种情况下，会报告错误。  
@@ -29,10 +29,10 @@ ms.locfileid: "47616425"
  更新冲突向用户发出警报的代码如下所示：  
   
 ```  
-objRs.Filter = adFilterConflictingRecords  
+objRs.Filter = adFilterConflictingRecords  
 objRs.MoveFirst  
-Do While Not objRst.EOF  
-   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
+Do While Not objRst.EOF  
+   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
    objRs.MoveNext  
 Loop  
 ```  

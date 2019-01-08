@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -18,12 +17,12 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a0b353cfb1aef011d6fc63a3bea252685b38a42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125407"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771329"
 ---
 # <a name="flat-file-source"></a>平面文件源
   平面文件源从文本文件中读取数据。 文本文件可以为带分隔符格式、固定宽度格式或混合格式。  
@@ -56,11 +55,11 @@ ms.locfileid: "48125407"
   
  有关可在 **“平面文件源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [平面文件源编辑器&#40;连接管理器页&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [平面文件源编辑器（“连接管理器”页）](../flat-file-source-editor-connection-manager-page.md)  
   
--   [平面文件源编辑器&#40;列页&#41;](../flat-file-source-editor-columns-page.md)  
+-   [平面文件源编辑器（“列”页）](../flat-file-source-editor-columns-page.md)  
   
--   [平面文件源编辑器&#40;错误输出页&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [平面文件源编辑器（“错误输出”页）](../flat-file-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

@@ -13,12 +13,12 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a366f9ff19099ba640a02aecfe00a944e0fa6299
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e5c4c996a7dea9da3eccb24da2b6021a13d2590
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681265"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400200"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据迁移到 SQL Server-Azure SQL DB (MySQLToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，你可以将数据从迁移到 MySQL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -92,10 +92,10 @@ ms.locfileid: "51681265"
   
     -   用于执行**服务器端数据迁移**，选择**服务器端数据迁移引擎**选项**项目设置**对话框。  
   
-4.  右键单击**架构**在 MySQL 的元数据资源管理器，然后单击**迁移数据**。 此外可以将迁移为单个对象或类别的对象的数据： 右键单击该对象或其父文件夹;选择**迁移数据**选项。  
+4.  右键单击**架构**在 MySQL 的元数据资源管理器，然后单击**迁移数据**。 此外可以将迁移为单个对象或类别的对象的数据：右键单击该对象或其父文件夹;选择**迁移数据**选项。  
   
     > [!NOTE]  
-    > 如果 SQL Server 实例上未安装 SSMA for MySQL 的扩展包，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，时遇到以下错误: SSMASQL Server 上找不到数据的迁移组件，无法在服务器端数据迁移。 请检查是否正确安装的扩展包。 单击**取消**终止数据迁移。  
+    > 如果 SQL Server 实例上未安装 SSMA for MySQL 的扩展包，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，时遇到以下错误：SQL Server 上找不到 SSMA 数据迁移组件，无法在服务器端数据迁移。 请检查是否正确安装的扩展包。 单击**取消**终止数据迁移。  
   
 5.  在中**连接到 MySQL**对话框中，输入连接凭据，然后单击**Connect**。 连接到 MySQL 的详细信息，请参阅[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   

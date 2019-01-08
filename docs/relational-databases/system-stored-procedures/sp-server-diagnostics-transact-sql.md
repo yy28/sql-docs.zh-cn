@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644687"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213766"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 捕获有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的诊断数据和运行状况信息，以检测潜在故障。 该过程以重复模式运行，并定期发送结果。 可通过常规连接或 DAC 连接调用该过程。  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,22 +64,22 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**component_type**|**sysname**|指示行是否包含信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例级别组件或 Always On 可用性组：<br /><br /> instance<br /><br /> Alwayson： 可用性组|  
 |**组件**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性组的名称 >*|  
 |State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0： 未知<br /><br /> 1： 清理<br /><br /> 2： 警告<br /><br /> 3： 错误|  
+|**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0:Unknown<br /><br /> 1： 清理<br /><br /> 2： 警告<br /><br /> 3： 错误|  
 |**data**|**varchar (max)**|指定特定于组件的数据。|  
   
  下面是对五个组件的说明：  
   
--   **系统**： 从系统角度收集有关自旋锁、 严重的处理情况、 非生成任务、 页面错误和 CPU 使用情况数据。 此信息会产生总体运行状态建议。  
+-   **系统**:从系统角度收集有关自旋锁、 严重的处理情况、 非生成任务、 页面错误和 CPU 使用情况数据。 此信息会产生总体运行状态建议。  
   
--   **资源**： 从资源的角度收集有关物理和虚拟内存、 缓存池、 页面、 缓存和其他内存对象数据。 此信息会提供总体运行状态建议。  
+-   **资源**:从资源的角度收集有关物理和虚拟内存、 缓存池、 页面、 缓存和其他内存对象数据。 此信息会提供总体运行状态建议。  
   
--   **query_processing**： 从工作线程、 任务，在查询处理的角度收集数据，请等待类型、 CPU 密集型会话和正在阻塞的任务。 此信息会提供总体运行状态建议。  
+-   **query_processing**:从查询处理的角度收集有关工作线程、 任务、 等待类型、 CPU 密集型会话和正在阻塞的任务数据。 此信息会提供总体运行状态建议。  
   
--   **io_subsystem**： 针对 IO 中收集数据。 除了诊断数据外，此组件还可生成仅适用于 IO 子系统的干净运行状况或警告运行状态。  
+-   **io_subsystem**:针对 IO 收集数据。 除了诊断数据外，此组件还可生成仅适用于 IO 子系统的干净运行状况或警告运行状态。  
   
--   **事件**： 收集数据并通过存储过程的图面上的错误和记录的服务器，包括有关环形缓冲区异常的详细信息感兴趣的事件的环形缓冲区事件有关内存 broker，内存不足，请计划程序监视器缓冲池、 spinlock、 安全性和连接。 事件将始终显示 0 作为状态。  
+-   **事件**:收集数据和存储过程图面上的错误和记录的服务器，包括有关环形缓冲区异常、 有关内存 broker，超出内存、 计划程序监视器、 缓冲池、 自旋锁，环形缓冲区事件的详细信息感兴趣的事件安全性和连接。 事件将始终显示 0 作为状态。  
   
--   **\<可用性组的名称 >**： 收集指定的可用性组的数据 (如果 component_type ="始终在： AvailabilityGroup")。  
+-   **\<可用性组的名称 >**:收集指定的可用性组的数据 (如果 component_type ="始终在： AvailabilityGroup")。  
   
 ## <a name="remarks"></a>备注  
 从故障角度而言，系统、资源和 query_processing 组件可用于故障检测，而 io_subsystem 和事件组件只能用于诊断用途。  
@@ -99,7 +99,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 > [!NOTE]
 > Sp_server_diagnostics 内部过程的执行是在以高优先级抢先的线程上实现的。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

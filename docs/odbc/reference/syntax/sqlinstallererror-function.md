@@ -20,16 +20,16 @@ ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76b65b1382db3954094d0a22913edf2f8b912be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d5e05e62350d916e9c5fcf680af05717b39aa58
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677105"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208275"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 函数
 **符合性**  
- 版本引入了： ODBC 3.0  
+ 版本引入了：ODBC 3.0  
   
  **摘要**  
  **SQLInstallerError**返回 ODBC 安装程序函数的错误或状态信息。  

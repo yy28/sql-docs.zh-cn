@@ -1,5 +1,5 @@
 ---
-title: 父子维度中的一元运算符 |Microsoft 文档
+title: 父子维度中的一元运算符 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b7f38bb378650fbd243441086df043295376581
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539742"
 ---
-# <a name="parent-child-dimension-attributes---unary-operators"></a>父-子维度属性的一元运算符
+# <a name="parent-child-dimension-attributes---unary-operators"></a>父子维度特性 - 一元运算符
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包含父子关系的维度中，可以为父属性的所有非计算成员指定将确定其自定义汇总的一元（或自定义汇总）运算符列。 计算出父成员的值后，一元运算符就将应用于成员。 父属性中的 **UnaryOperatorColumn** (**Usage**=Parent) 指定了数据源视图中包含一元运算符的表列。 存储在此列中的自定义汇总运算符的值将应用于属性的每个成员。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中包含父子关系的维度中，可以为父属性的所有非计算成员指定将确定其自定义汇总的一元（或自定义汇总）运算符列。 计算出父成员的值后，一元运算符就将应用于成员。 父属性中的 **UnaryOperatorColumn** (**Usage**=Parent) 指定了数据源视图中包含一元运算符的表列。 存储在此列中的自定义汇总运算符的值将应用于属性的每个成员。  
   
  可以在数据源视图的维度表中创建和指定作为一元运算符列的命名计算。 最简单的表达式（如“+”）对所有成员都将返回相同的运算符。 但是，可以使用任何表达式，只要它为每个成员都返回运算符。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34023124"
 |一元运算符|Description|  
 |--------------------|-----------------|  
 |+（加号）|成员的值将添加到在该成员之前发生的同级成员的聚合值中。 如果没有为属性定义一元运算符列，那么，这是默认运算符。|  
-|-（减号）|从成员之前发生的同级成员的聚合值中减去该成员的值。|  
+|-（负号）|从成员之前发生的同级成员的聚合值中减去该成员的值。|  
 |*（星号）|成员的值乘以在该成员之前发生的同级成员的聚合值。|  
 |/（斜杠）|成员的值除以在该成员之前发生的同级成员的聚合值。|  
 |~（代字号）|忽略成员的值。|  
@@ -40,7 +40,7 @@ ms.locfileid: "34023124"
   
  在维度设计器的 **“浏览器”** 选项卡中，可以查看层次结构中每个成员旁边的一元运算符。 还可以在处理启用写入的维度时更改一元运算符。 如果维度没有启用写入，则必须使用工具直接修改数据源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [父子维度中的自定义汇总运算符](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
  [在维度设计器中启动商业智能向导](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  

@@ -13,18 +13,18 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194907"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396361"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 项目转换向导
   **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。  
   
 > [!NOTE]  
->  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
+>  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
  **您希望做什么？**  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48194907"
  **应用于所选内容**  
  单击以将“密码”文本框中的密码应用于一个或多个所选包。  
   
- **“刷新”**  
+ **刷新**  
  刷新包的列表。  
   
 ##  <a name="destination"></a> 设置“选择目标”页上的选项  
@@ -181,13 +181,13 @@ ms.locfileid: "48194907"
  **添加配置**  
  将在其他项目中包含的包配置添加到要用参数替换的可用配置的列表中。 您可以选择存储在文件系统或 SQL Server 中的配置。  
   
- **“刷新”**  
+ **刷新**  
  单击以刷新配置列表。  
   
  **在转换后删除所有包的配置**  
  建议通过选择此选项从项目中删除所有配置。  
   
- 如果您没有选择此选项，将只删除您已选择用参数替换的配置。  
+ 如果没有选择此选项，将只删除已选择用参数替换的配置。  
   
 ##  <a name="createParameters"></a> 设置“创建参数”页上的选项  
  选择每个配置属性的参数名称和作用域。  
@@ -220,9 +220,9 @@ ms.locfileid: "48194907"
  **“设置参数详细信息”** 对话框还列出参数值的数据类型和参数的来源。  
   
 ##  <a name="review"></a> 设置“检查”页上的选项  
- 使用 **“检查”** 页可以确认您为项目转换选择的选项。  
+ 使用“检查”页可以确认为项目转换选择的选项。  
   
- **Previous**  
+ **上一篇**  
  单击以更改选项。  
   
  **转换**  
@@ -243,6 +243,6 @@ ms.locfileid: "48194907"
  单击以在 .xml 文件中保存项目转换的摘要。  
   
 ## <a name="see-also"></a>请参阅  
- [将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

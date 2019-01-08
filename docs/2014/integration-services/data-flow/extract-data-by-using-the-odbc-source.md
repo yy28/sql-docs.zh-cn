@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f702490cd4137e2a791c796e6b126da247648813
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 850d5b6472fda4b12ad9be2018575ea7d0d97770
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784859"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
   本过程说明如何通过使用 ODBC 源来提取数据。 若要添加和配置 ODBC 源，包中必须已经包含至少一个数据流任务。  
@@ -33,11 +32,11 @@ ms.locfileid: "48069317"
   
 5.  选择数据访问方法。  
   
-    -   **表名**：在数据库中选择某个表或视图，或者键入一个正则表达式以便标识 ODBC 连接管理器连接到的表。  
+    -   **表名**:在数据库中选择表或视图，或键入正则表达式以便标识 ODBC 连接管理器连接到的表。  
   
          该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。  
   
-    -   **SQL 命令**：键入 SQL 命令，或单击 **“浏览”** 从文本文件中加载 SQL 查询。  
+    -   **SQL 命令**:键入 SQL 命令，或单击**浏览**从文本文件加载 SQL 查询。  
   
 6.  可以单击 **“预览”** ，查看最多 200 行 ODBC 源所提取的数据。  
   
@@ -52,8 +51,8 @@ ms.locfileid: "48069317"
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [ODBC 源编辑器&#40;连接管理器页&#41;](../odbc-source-editor-connection-manager-page.md)   
+ [ODBC 源编辑器（“连接管理器”页）](../odbc-source-editor-connection-manager-page.md)   
  [ODBC 源编辑器（“列”页）](../odbc-source-editor-columns-page.md)   
- [ODBC 源编辑器&#40;错误输出页&#41;](../odbc-source-editor-error-output-page.md)  
+ [ODBC 源编辑器（“错误输出”页）](../odbc-source-editor-error-output-page.md)  
   
   

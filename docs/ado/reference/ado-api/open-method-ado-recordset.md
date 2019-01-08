@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606669"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206316"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法（ADO 记录集）
 在打开一个游标[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  使用**开放**方法**记录集**对象打开一个游标，从基础表、 一个查询，或以前保存的结果表示记录**记录集**。  
   
- 使用可选*源*参数，以指定数据源使用以下值之一：**命令**对象变量、 SQL 语句、 存储的过程、 表名称、 一个 URL 或完整文件路径名称。 如果*源*是文件路径名称，它可以是完整路径 ("c:\dir\file.rst") 的相对路径 ("...\file.rst")，或 URL ("https://files/file.rst")。  
+ 使用可选*源*参数，以指定数据源使用以下值之一：**命令**对象变量、 SQL 语句、 存储的过程、 表名称、 一个 URL 或完整文件路径名称。 如果*源*是文件路径名称，它可以是完整路径 ("c:\dir\file.rst") 的相对路径 ("...\file.rst")，或 URL ("<https://files/file.rst>")。  
   
  它不是使用一个好办法*源*的参数**打开**方法以执行动作查询不返回记录，因为没有简单方法来确定调用是否成功。 **记录集**返回的此类查询将被关闭。 若要执行的查询不返回记录，如 SQL INSERT 语句中，调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法**命令**对象或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   

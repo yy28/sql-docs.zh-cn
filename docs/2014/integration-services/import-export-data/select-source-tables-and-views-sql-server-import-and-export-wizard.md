@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f99b94c133ba2a8bfd8bbe6d7b78bd455061409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074fb9aff14a2d173658c0a8ed8e31740e957a37
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050129"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760309"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>选择源表和源视图（SQL Server 导入和导出向导）
   使用**选择源表和视图**页后，可以指定的表和视图以从数据源复制到目标。  
@@ -40,7 +39,7 @@ ms.locfileid: "48050129"
  从列表中为每个源表选择一个目标表。  
   
 > [!NOTE]  
->  如果此时在向导中创建目标表中的暂停[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或另一种工具，新表不是立即出现在可用目标表的列表。 若要刷新目标表的列表，请倒退两页回到**选择目标**页上，重新选择目标数据库，然后再次前进到**选择源表和视图**。  
+>  如果此时在向导中暂停操作，并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他工具在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中创建目标表，新表不会立即出现在可用目标表的列表中。 若要刷新目标表的列表，请倒退两页回到**选择目标**页上，重新选择目标数据库，然后再次前进到**选择源表和视图**。  
   
 ### <a name="other-options"></a>其他选项  
  **编辑映射**  

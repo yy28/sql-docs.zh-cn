@@ -1,5 +1,5 @@
 ---
-title: 创建和管理度量值 |Microsoft 文档
+title: 创建和管理 Analysis Services 表格模型中的度量值 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6547cca48cbb846901e12cd1ab38822de9133d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1c3794d9ed2927cf86b9aada08588f71b3a55b8a
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040611"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072604"
 ---
 # <a name="create-and-manage-measures"></a>创建和管理度量值 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  度量值是为用于报表或 Excel 数据透视表（或数据透视图）而创建的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何使用表的度量值网格创建和管理度量值。  
+  度量值是为用于报表或 Excel 数据透视表（或数据透视图）而创建的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何创建和管理通过使用表的度量值网格中的度量值。  
   
 ## <a name="tasks"></a>“任务”  
- 为了创建和管理度量值，您将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
+ 若要创建和管理度量值，将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
   
 ###  <a name="bkmk_create_stand"></a> 使用标准聚合公式创建度量值  
   
@@ -47,8 +47,8 @@ ms.locfileid: "34040611"
   
 -   在度量值网格中，右键单击某一度量值，然后单击“删除”。  
   
-## <a name="see-also"></a>另请参阅  
- [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+## <a name="see-also"></a>请参阅  
+ [度量值组](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [计算的列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   

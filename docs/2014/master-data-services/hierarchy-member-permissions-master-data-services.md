@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4310f16b19fa85012844cc6e0fb71b2dce3ce6f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111962"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797037"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
   层次结构成员权限是可选的，仅当您希望某个用户对特定成员具有受限的访问权限时才应使用。 如果您未在 **“层次结构成员”** 选项卡上分配权限，则用户的权限仅基于在 **“模型”** 选项卡上分配的权限。  
@@ -37,7 +36,7 @@ ms.locfileid: "48111962"
   
 |权限|Description|  
 |----------------|-----------------|  
-|**只读**|显示成员，但是用户不能更改它们。 用户也无法在成员所属的任何显式层次结构或集合中移动成员。<br /><br /> 注意： 如果将分配**只读**权**根**下的成员**根**是只读的; 但是，在显式层次结构和集合中，用户可以移动到成员**根**，并可以添加到新成员**根**。|  
+|**只读**|显示成员，但是用户不能更改它们。 用户也无法在成员所属的任何显式层次结构或集合中移动成员。<br /><br /> 注意：如果将分配**只读**权**根**下的成员**根**是只读的; 但是，在显式层次结构和集合中，用户可以将成员移到**根**，并可以添加到新成员**根**。|  
 |**Update**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
 |**拒绝**|不显示成员。|  
   
@@ -57,10 +56,10 @@ ms.locfileid: "48111962"
 -   如果给一个层次结构节点分配**更新**或**只读**分配权限，另一个节点**拒绝**，则不显示节点中的成员。  
   
 ## <a name="see-also"></a>请参阅  
- [分配层次结构成员权限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [如何确定权限&#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [分配层次结构成员权限 (Master Data Services)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [如何确定权限 (Master Data Services)](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [层次结构 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [立即应用成员权限&#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [层次结构 (Master Data Services)](../../2014/master-data-services/hierarchies-master-data-services.md)   
+ [立即应用成员权限 (Master Data Services)](immediately-apply-member-permissions-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -16,12 +15,12 @@ ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4c2bbf0d59cce86debc955d8cf4cefade5ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809969"
 ---
 # <a name="replay-options-sql-server-profiler"></a>重播选项 (SQL Server Profiler)
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播捕获的跟踪之前，请在 **“重播配置”** 对话框中指定重播选项。 若要启动此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中打开重播跟踪文件或表，然后在 **“重播”** 菜单上单击 **“开始”**。 有关重播跟踪需要哪些权限的信息，请参阅 [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)。  
@@ -80,7 +79,7 @@ ms.locfileid: "48150117"
   
 ## <a name="see-also"></a>请参阅  
  [重播跟踪](replay-traces.md)   
- [重播要求](replay-requirements.md)   
- [重播跟踪的注意事项&#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Replay Requirements](replay-requirements.md)   
+ [重播跟踪的注意事项 (SQL Server Profiler)](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

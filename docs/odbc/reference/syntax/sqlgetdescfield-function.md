@@ -20,16 +20,16 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c89da6f3b5b531b311d81c9d89aacb8c52320d01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840668"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204083"
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetDescField**返回当前设置或描述符记录的单个字段的值。  

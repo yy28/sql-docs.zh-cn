@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], making changes
@@ -22,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea125f631c277724abd99f31c9c3d2e5f478e6df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffde1cb7b803c82896b894aa05cb0679459297c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811519"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
   使用更改跟踪的应用程序必须能够获取跟踪的更改，将这些更改应用到其他数据存储区并更新源数据库。 本主题介绍了如何执行这些任务，以及在发生故障转移且必须从备份还原数据库时，角色更改跟踪如何进行。  
@@ -74,7 +73,7 @@ ms.locfileid: "48111317"
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>使用更改跟踪函数获取更改  
- 若要获取表中更改的行以及有关这些更改的信息，请使用 CHANGETABLE(CHANGES…)。 例如，下面的查询获取 `SalesLT.Product` 表的更改。  
+ 若要获取表中更改的行以及有关这些更改的信息，请使用 CHANGETABLE(CHANGES…)。例如，下面的查询获取 `SalesLT.Product` 表的更改。  
   
 ```tsql  
 SELECT  
@@ -131,7 +130,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>验证上次同步版本  
  更改的相关信息将保留有限的一段时间。 时间长度是由 CHANGE_RETENTION 参数控制的，可以将该参数指定为 ALTER DATABASE 的一部分。  
   
- 请注意，为 CHANGE_RETENTION 指定的时间决定了所有应用程序必须每隔多长时间从数据库中请求一次更改。 如果应用程序使用的 *last_synchronization_version* 值早于表的最低有效同步版本，该应用程序将无法执行有效的更改枚举。 这是因为，可能已清除了某些更改信息。 在应用程序使用 CHANGETABLE(CHANGES …) 获取更改之前，该应用程序必须验证计划传递给 CHANGETABLE(CHANGES …) 的 *last_synchronization_version* 值。 如果 *last_synchronization_version* 的值无效，则该应用程序必须重新初始化所有数据。  
+ 请注意，为 CHANGE_RETENTION 指定的时间决定了所有应用程序必须每隔多长时间从数据库中请求一次更改。 如果应用程序使用的 *last_synchronization_version* 值早于表的最低有效同步版本，该应用程序将无法执行有效的更改枚举。 这是因为，可能已清除了某些更改信息。 在应用程序使用 CHANGETABLE(CHANGES …) 获取更改之前，该应用程序必须验证计划传递给 CHANGETABLE(CHANGES …) 的 last_synchronization_version 值。如果 *last_synchronization_version* 的值无效，则该应用程序必须重新初始化所有数据。  
   
  下面的示例说明了如何验证每个表的 `last_synchronization_version` 值的有效性。  
   
@@ -231,9 +230,9 @@ ON
   
 3.  使用 CHANGE_TRACKING_CURRENT_VERSION() 获取下次要使用的版本。  
   
-4.  使用 CHANGETABLE(CHANGES …) 获取对 Sales 表所做的更改。  
+4.  使用 CHANGETABLE(CHANGES …) 获取对 Sales 表所做的更改  
   
-5.  使用 CHANGETABLE(CHANGES …) 获取对 SalesOrders 表所做的更改。  
+5.  使用 CHANGETABLE(CHANGES …) 获取对 Salesorders 表所做的更改  
   
 6.  提交事务。  
   
@@ -301,7 +300,7 @@ COMMIT TRAN
   
  若要执行上述操作，同步应用程序可使用下列函数：  
   
--   CHANGETABLE(VERSION )  
+-   CHANGETABLE(VERSION...)  
   
      当应用程序进行更改时，它可以使用该函数来检查冲突。 对于启用了更改跟踪的表，该函数可获取该表中指定行的最新更改跟踪信息。 更改跟踪信息包括上次更改的行的版本。 应用程序可以使用此信息来确定自上次应用程序同步后该行是否进行了更改。  
   
@@ -312,7 +311,7 @@ COMMIT TRAN
 ### <a name="checking-for-conflicts"></a>检查冲突  
  在双向同步方案中，客户端应用程序必须确定在应用程序上次获取更改后某一行是否有更新。  
   
- 下面的示例说明了如何使用 CHANGETABLE(VERSION …) 函数以最有效的方式检查冲突，而不是使用单独的查询。 在该示例中， `CHANGETABLE(VERSION …)` 确定 `SYS_CHANGE_VERSION` 所指定的行的 `@product id`。 `CHANGETABLE(CHANGES …)` 可以获取相同的信息，但效率较低。 如果该行的 `SYS_CHANGE_VERSION` 值大于 `@last_sync_version`值，则说明有冲突。 如果有冲突，则不会更新该行。 `ISNULL()` 检查是必需的，因为该行可能没有可用的更改信息。 如果在启用更改跟踪或清除更改信息后没有更新该行，则不存在任何更改信息。  
+ 下面的示例说明了如何使用 CHANGETABLE(VERSION …) 函数以最有效的方式检查冲突，而不是使用单独的查询。 在该示例中， `CHANGETABLE(VERSION ...)` 确定 `SYS_CHANGE_VERSION` 所指定的行的 `@product id`。 `CHANGETABLE(CHANGES ...)` 可以获取相同的信息，但效率较低。 如果该行的 `SYS_CHANGE_VERSION` 值大于 `@last_sync_version`值，则说明有冲突。 如果有冲突，则不会更新该行。 `ISNULL()` 检查是必需的，因为该行可能没有可用的更改信息。 如果在启用更改跟踪或清除更改信息后没有更新该行，则不存在任何更改信息。  
   
 ```tsql  
 -- Assumption: @last_sync_version has been validated.  
@@ -356,7 +355,7 @@ END
 ```  
   
 ### <a name="setting-context-information"></a>设置上下文信息  
- 通过使用 WITH CHANGE_TRACKING_CONTEXT 子句，应用程序可以将上下文信息与更改信息存储在一起。 可随后从 CHANGETABLE(CHANGES  ) 返回的 SYS_CHANGE_CONTEXT 列中获取此信息。  
+ 通过使用 WITH CHANGE_TRACKING_CONTEXT 子句，应用程序可以将上下文信息与更改信息存储在一起。 可随后从 CHANGETABLE(CHANGES ...) 返回的 SYS_CHANGE_CONTEXT 列中获取此信息。  
   
  上下文信息通常用于确定更改源。 如果可以确定更改源，数据存储区在重新同步时可使用该信息来避免获取更改。  
   
@@ -390,9 +389,9 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

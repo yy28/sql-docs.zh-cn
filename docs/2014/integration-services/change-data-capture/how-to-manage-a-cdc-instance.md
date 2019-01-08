@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17911fd8b2c4fbc310ec87950cdb5ed10164a05b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 058010d0e32fb26cf4c12e720342af04bd784768
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202447"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804779"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   本过程介绍如何使用 CDC 设计器控制台在运行时管理 CDC 实例操作。  
@@ -35,19 +34,19 @@ ms.locfileid: "48202447"
   
      您可以执行以下任务：  
   
-    -   **开始**：开始捕获更改。  
+    -   **启动**:若要开始捕获更改。  
   
-    -   **停止**：停止捕获更改。  
+    -   **停止**:若要停止捕获更改  
   
-    -   **重置**：单击“重置”可将 CDC 实例重置为其初始（空）状态。 此选项在 CDC 实例停止后可用。 更改表中的所有更改以及 CDC 实例内部状态将被删除。 当 CDC 实例在以后启动时，变更捕获将从该时间点开始，并且仅包含在 CDC 实例启动后开始的事务。  
+    -   **重置**:单击“重置”可将 CDC 实例重置为其初始（空）状态。 此选项在 CDC 实例停止后可用。 更改表中的所有更改以及 CDC 实例内部状态将被删除。 当 CDC 实例在以后启动时，变更捕获将从该时间点开始，并且仅包含在 CDC 实例启动后开始的事务。  
   
-    -   **删除**：删除 CDC 实例。  
+    -   **删除**:若要删除 CDC 实例。  
   
-    -   **Oracle 日志记录脚本**：单击“Oracle 日志记录脚本”将显示具有 Oracle 补充日志记录脚本的“Oracle 日志记录脚本”对话框。 有关可以在此对话框中执行的操作的信息，请参阅 [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md)。  
+    -   **Oracle 日志记录脚本**:单击**Oracle 日志记录脚本**以显示 Oracle 日志记录脚本对话框中具有 Oracle 补充日志记录脚本。 有关可以在此对话框中执行的操作的信息，请参阅 [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md)。  
   
          **注意**：在您运行补充日志记录脚本时，“用于运行脚本的 Oracle 凭据”对话框将打开，您可以在其中提供有效的 Oracle 用户名和密码。 有关如何提供适当的 Oracle 凭据的信息，请参阅 [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)。  
   
-    -   **CDC 实例部署**：为 CDC 实例生成部署脚本。 有关此对话框的信息，请参阅 [CDC Instance Deployment Script](cdc-instance-deployment-script.md)。  
+    -   **CDC 实例部署**:若要为 CDC 实例生成部署脚本。 有关此对话框的信息，请参阅 [CDC Instance Deployment Script](cdc-instance-deployment-script.md)。  
   
      有关这些任务的详细信息，请参阅 [Manage a CDC Instance](manage-a-cdc-instance.md)。  
   

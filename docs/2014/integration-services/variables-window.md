@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
@@ -15,22 +14,22 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2be1625093dfd89e59cef4731e61411f2c7e4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b8541b0e590fe0fa6de9d577e69b7068fb2843d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158177"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206196"
 ---
 # <a name="variables-window"></a>“变量”窗口
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。  
   
- 默认情况下， **“变量”** 窗口位于 **中 SSIS 设计器的** “连接管理器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]区域之下。 如果看不到 **“变量”** 窗口，请单击 **SSIS** 菜单上的 **“变量”** 以显示该窗口。  
+ 默认情况下， **“变量”** 窗口位于 **中 SSIS 设计器的** “连接管理器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]区域之下。 如果看不到“变量”窗口，请单击 SSIS 菜单上的“变量”以显示该窗口。  
   
  您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
-> [!NOTE]  
->  值`Name`和`Namespace`属性必须以字母字符开头，如 Unicode 标准 2.0 中或下划线 (_) 所定义。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
+> [!NOTE]
+>  `Name` 和 `Namespace` 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
 ## <a name="options"></a>选项  
  **添加变量**  
@@ -39,13 +38,13 @@ ms.locfileid: "48158177"
  **移动变量**  
  单击列表中的变量，然后单击“移动变量”更改变量作用域。 在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
   
- 有关变量作用域的详细信息，请参阅[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)。  
+ 有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)区域之下。  
   
  **删除变量**  
  从列表中选择变量，然后单击“删除变量”。  
   
  **网格选项**  
- 单击此项可打开“变量网格选项”对话框，从中可以更改列选择并对“变量”窗口应用筛选器。 有关详细信息，请参阅[变量网格选项](../../2014/integration-services/variable-grid-options.md)。  
+ 单击此项可打开“变量网格选项”对话框，从中可以更改列选择并对“变量”窗口应用筛选器。 有关详细信息，请参阅 [变量网格选项](../../2014/integration-services/variable-grid-options.md)。  
   
  `Name`  
  查看变量名称。 您可以更新用户定义变量的名称。  
@@ -70,7 +69,7 @@ ms.locfileid: "48158177"
  **引发更改事件**  
  指示在值发生更改时是否引发 `OnVariableValueChanged` 事件。 您可以更新用户定义变量和系统变量的值。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”**。  
   
- **Description**  
+ **说明**  
  查看变量说明。 您可以更改用户定义变量的说明。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”**。  
   
  **“变量”**  
@@ -79,7 +78,7 @@ ms.locfileid: "48158177"
  如果为变量指定了表达式，该变量旁边将显示特殊的图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)   
  [生成包执行的转储文件](troubleshooting/generating-dump-files-for-package-execution.md)  

@@ -14,15 +14,15 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01f456527d7be8a954fecdace730bd1f8e47936b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524494"
 ---
 # <a name="field-related-error-information"></a>字段相关错误信息
-如果字段直接与错误 — 例如，如果缺少数据或它的类型有误的字段 — 可以通过检查来检索有关原因的问题的详细信息**字段**对象的**状态**属性。 此属性已得到增强，提供有关该问题的特定信息。 因此，举例来说，在调用**UpdateBatch**可以通过查看来确定失败，问题的原因**状态**属性**字段**中每个受影响记录。 该属性将包含中的值之一**FieldStatusEnum**常量。 下表包含发生错误时特定的感兴趣的是这些值。  
+如果字段的直接与错误例如，如果缺少数据或它的类型有误的字段-您可以检索原因有关的问题的详细信息通过检查**字段**对象的**状态**属性。 此属性已得到增强，提供有关该问题的特定信息。 因此，举例来说，在调用**UpdateBatch**可以通过查看来确定失败，问题的原因**状态**属性**字段**中每个受影响记录。 该属性将包含中的值之一**FieldStatusEnum**常量。 下表包含发生错误时特定的感兴趣的是这些值。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  

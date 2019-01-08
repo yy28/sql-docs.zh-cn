@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 将数据库从一个源计算机的本地到 Windows Azure 中的目标计算机 |Microsoft Docs
+title: 第 6 课：将数据库从一个源计算机的本地到 Windows Azure 中的目标计算机 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215127"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404266"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>第 6 课：将数据库从本地源计算机迁移至 Windows Azure 中的目标计算机
   本课假定您已有另一个 SQL Server，它可能位于另一个本地计算机中或位于 Windows Azure 的虚拟机中。 有关如何在 Windows Azure 中创建 SQL Server 虚拟机的信息，请参阅[预配 Windows Azure 上的 SQL Server 虚拟机](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Windows Azure 中设置 SQL Server 虚拟机后，确保可在另一计算机中通过 SQL Server Management Studio 连接到此虚拟机中的 SQL Server 实例。  
@@ -51,7 +51,7 @@ ms.locfileid: "48215127"
   
         2.  在标准工具栏上单击**新查询**。  
   
-        3.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。 以下语句创建 SQL Server 凭据以存储您的存储容器的共享访问证书。  
+        3.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。 以下语句创建 SQL Server 凭据以存储你的存储容器的共享访问证书。  
   
             ```tsql  
   
@@ -147,6 +147,6 @@ ms.locfileid: "48215127"
   
  **下一课：**  
   
- [第 7 课：将数据文件移动到 Microsoft Azure 存储](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [第 7 课：数据文件移到 Windows Azure 存储](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

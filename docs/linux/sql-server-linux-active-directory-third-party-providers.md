@@ -1,5 +1,6 @@
 ---
-title: Linux 上的 SQL Server 中使用第三方 Active Directory 提供程序 |Microsoft Docs
+title: Linux 上的 SQL Server 中使用第三方 Active Directory 提供程序
+titleSuffix: SQL Server
 description: 本教程提供了 Active Directory 身份验证与第三方提供商的配置步骤
 author: dylan-MSFT
 ms.date: 07/25/2018
@@ -7,16 +8,16 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: 0ffe146de3a842f9c273b4dbba2a9fe4d9ff7ff5
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: de28696efd16a2be61864a810b3fd713b1066258
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757992"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160565"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>Linux 上的 SQL Server 中使用第三方 Active Directory 提供程序
 
@@ -24,7 +25,7 @@ ms.locfileid: "50757992"
 
 本文介绍如何配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]具有 Active Directory 身份验证时使用第三方 Active Directory 提供程序的 Linux 主机计算机上。 示例包括[PowerBroker 标识服务 (PBI)](https://www.beyondtrust.com/)，[一个标识](https://www.oneidentity.com/products/authentication-services/)，并[Centrify](https://www.centrify.com/)。 本指南包括检查 Active Directory 配置的步骤。 它不具有应指示如何将计算机加入到域。 有关详细说明加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过使用 realmd 和 SSSD 托管到域，请参阅[使用 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 配置 Active Directory 身份验证之前，需要设置 Active Directory 域控制器，Windows，在网络上。 然后，加入你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到 Active Directory 域的 Linux 主机上。 可以使用[PBI](https://www.beyondtrust.com/)， [VAS](https://www.oneidentity.com/products/authentication-services/)，或[Centrify](https://www.centrify.com/)。
 

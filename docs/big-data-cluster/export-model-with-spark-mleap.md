@@ -1,22 +1,24 @@
 ---
-title: 导出 MLeap 使用 Spark 机器学习模型 |SQL Server
-description: 导出 Spark 机器学习模型与 MLeap
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: 导出具有 MLeap 的 Spark 机器学习模型
+titleSuffix: SQL Server 2019 big data clusters
+description: 了解如何导出 Spark 机器学习具有 MLeap 的模型。
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: 546e46c6e9c5b2875f817fbf9a5fc3107afeb8a2
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: db6e980441c2037311cf2dc35a8f9de01acb045b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411841"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211166"
 ---
-# <a name="export-models-using-mleap"></a>使用 Mleap 导出模型
+# <a name="export-spark-machine-learning-models-with-mleap"></a>导出 Spark 机器学习模型与 MLeap
+
 典型的机器学习方案涉及在 Spark 中的模型训练和评分外部 Spark。 导出可移植格式中的模型，以便它可以使用外部 Spark。 [MLeap](https://github.com/combust/mleap)是一个此类模型交换格式。 它允许 Spark 机器学习管道和模型能够被导出为可移植格式并在任何基于 JVM 的系统中使用`Mleap`运行时。
 
 本指南演示如何将导出使用 Mleap spark 模型。 步骤总结如下，并详细的下列部分中的代码。
@@ -27,8 +29,7 @@ ms.locfileid: "50411841"
 4. 若要验证，我们将导入`Mleap`捆绑后再次并使用它来在 Spark 中评分。
 
 ## <a name="step-1---start-by-creating-a-spark-model"></a>步骤 1-通过创建 Spark 模型开始
-运行 [Spark 的培训和创建机器学习模型] (train-and-create-machinelearning-models-with-spark.md) 创建训练/测试集和模型，并将保存到 HDFS 存储。 该模型应导出作为`AdultCensus.mml`下`spark_ml`目录。
-
+运行[定型集和创建机器学习模型与 Spark](train-and-create-machinelearning-models-with-spark.md)创建训练/测试集和模型，并将保存到 HDFS 存储。 该模型应导出作为`AdultCensus.mml`下`spark_ml`目录。
 
 ## <a name="step-2---import-the-trainingtest-data-and-the-model"></a>步骤 2-导入 training\test 数据和模型
 
@@ -49,7 +50,6 @@ model = PipelineModel.load(model_fs)
 print("Model is " , model)
 print("Model stages", model.stages)
 ```
-
 
 ## <a name="step-3---export-the-model-as-mleap-bundle"></a>步骤 3-导出该模型作为`Mleap`捆绑包
 

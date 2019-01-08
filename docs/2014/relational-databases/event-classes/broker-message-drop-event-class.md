@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03885ddd91a5c0c99516ee692f50626c1f0b5b3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810429"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable 事件类
   当 Service Broker 无法保留收到的消息，而这个消息本应该送达到此实例中的服务时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 Broker:Message Undeliverable 事件。 对于应转发的消息，请参阅 [Broker:Forwarded Message Dropped 事件类](broker-forwarded-message-dropped-event-class.md)。  
@@ -54,7 +53,7 @@ ms.locfileid: "48132667"
 |**Severity**|`int`|事件中文本的严重级别号。|29|否|  
 |**SPID**|`int`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|用户帐户控制|  
 |**StartTime**|`datetime`|事件（如果有）的开始时间。|14|用户帐户控制|  
-|**State**|`int`|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可以使用此状态代码查找生成事件的位置。|30|否|  
+|**状态**|`int`|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可以使用此状态代码查找生成事件的位置。|30|否|  
 |**TextData**|`ntext`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法送达消息的原因。|1|用户帐户控制|  
 |**TransactionID**|`bigint`|系统为事务分配的 ID。|4|否|  
   

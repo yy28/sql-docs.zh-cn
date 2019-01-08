@@ -19,12 +19,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13a011ab9545b9e5b9f02daf46654b0f8253a66d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142506"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776179"
 ---
 # <a name="mapping-data-types-odbc"></a>映射数据类型 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL 数据类型为 ODBC SQL 数据类型。 以下部分讨论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 数据类型以及它们映射到的 ODBC SQL 数据类型。 此外，还讨论 ODBC SQL 数据类型和它们对应的 ODBC C 数据类型，以及支持的和默认的转换。  
@@ -35,7 +35,7 @@ ms.locfileid: "48142506"
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>在 ODBC 中处理 sql_variant 数据类型  
  **Sql_variant**数据类型列可以包含任何中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除大型对象 (Lob)，如**文本**， **ntext**，和**映像**。 例如，列可能包含**smallint**某些行的值**float**其他行的值并**char/nchar**的其余部分中的值。  
   
- **Sql_variant**数据类型是类似于**变体**Microsoft Visual Basic® 中的数据类型。  
+ **Sql_variant**数据类型是类似于**变体**数据类型在 Microsoft Visual Basic 确定。  
   
 ### <a name="retrieving-data-from-the-server"></a>从服务器检索数据  
  ODBC 没有变量类型的一个概念限制的使用**sql_variant** ODBC 驱动程序中使用的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果指定了绑定， **sql_variant**数据类型必须绑定到有案可稽的 ODBC 数据类型之一。 **SQL_CA_SS_VARIANT_TYPE**，新的属性特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序返回的实例中的数据类型**sql_variant**给用户的列。  

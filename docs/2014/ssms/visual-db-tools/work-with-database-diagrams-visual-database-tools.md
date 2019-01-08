@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.workingwithsql2000diagrams
@@ -17,12 +17,12 @@ ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bccafb6aab4fe27e85567f4bc8c37e39d7dcc09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efbdd231bb7785eda6bca4771579916b7e3cc7a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155737"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801549"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>使用数据库关系图 (Visual Database Tools)
   可以使用数据库设计器创建数据库的可视化关系图。 下面的主题介绍了使用设计器处理数据库关系图的基本知识。  

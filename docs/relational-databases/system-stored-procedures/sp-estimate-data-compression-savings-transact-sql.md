@@ -19,19 +19,19 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213687"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。 可对所有表或部分表评估压缩。 这包括堆、 聚集索引、 非聚集的索引、 列存储索引、 索引视图，以及表和索引分区。 可以使用行、 页、 列存储或列存储存档压缩来压缩对象。 如果表、索引或分区已经过压缩，则可使用该过程来估计在重新压缩的情况下该表、索引或分区的大小。  
   
-> [!NOTE]  
+> [!NOTE]
 >  压缩并**sp_estimate_data_compression_savings**中的每个版本均不提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  若要对使用请求的压缩设置的对象进行大小估算，该存储过程将对源对象进行采样并且将此数据加载到在 tempdb 中创建的等效表和索引中。 然后，将按照所请求的设置压缩在 tempdb 中创建的表和索引，并计算出估计的压缩节省量。  
@@ -72,7 +72,7 @@ sp_estimate_data_compression_savings
  若要指定分区，您可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函数。 若要返回所属对象的所有分区的信息，请指定 NULL。  
   
  [ @data_compression=] '*data_compression*  
- 要评估的压缩的类型。 *data_compression*可以是下列值之一： NONE、 行、 页、 列存储中或 COLUMNSTORE_ARCHIVE。  
+ 要评估的压缩的类型。 *data_compression*可以是下列值之一：NONE、 行、 页、 列存储中或 COLUMNSTORE_ARCHIVE。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -104,7 +104,7 @@ sp_estimate_data_compression_savings
   
  如果索引或分区 ID 不存在，将不返回任何结果。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对该表具有 SELECT 权限。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905731"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804999"
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
   数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](data-profiling-task.md)。  
@@ -61,7 +60,7 @@ ms.locfileid: "48905731"
 > [!IMPORTANT]  
 >  数据配置文件查看器中提供的明细功能会将实时查询发送到原始数据源。 这些查询可能会对服务器的性能产生负面影响。  
 >   
->  如果您向下钻取不最近创建的输出文件中，向下钻取查询可能会返回一组不同的比计算原始输出的行。  
+>  如果从并非最近创建的输出文件中深化，则明细查询所返回的行集可能会与计算原始输出时所使用的行集不同。  
   
  有关数据配置文件查看器的用户界面的详细信息，请参阅 [Data Profile Viewer F1 Help](../data-profile-viewer-f1-help.md)。  
   

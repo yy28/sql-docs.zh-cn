@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a2ef095189ca4505248865a6b9a8a99c86243d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200859"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808059"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel 事件类
   **Lock:Cancel** 事件类指示已取消获取某个资源的锁；例如，由于查询被取消。  
@@ -52,7 +51,7 @@ ms.locfileid: "48200859"
 |**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|用户帐户控制|  
 |**RequestID**|`int`|包含该语句的请求的 ID。|49|用户帐户控制|  
 |**ServerName**|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**SessionLoginName**|`nvarchar`|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|**SessionLoginName**|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |**SPID**|`int`|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|`datetime`|事件开始的时间（如果可用）。|14|用户帐户控制|  
 |**TextData**|`ntext`|文本值取决于获取的锁类型。 该值与 **sys.dm_tran_locks** 中 **resource_description**列的值相同。|1|用户帐户控制|  

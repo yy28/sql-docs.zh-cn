@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089847"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810949"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
   为列分配 IDENTITY 属性后， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将为在包含标识列的表中插入的新行自动生成顺序编号。 有关详细信息，请参阅 [IDENTITY（属性）&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 因为包含的标识列可能是主键的一部分，所以请务必避免在标识列中出现重复值。 若要在多个节点上都有更新的复制拓扑中使用标识列，复制拓扑中的每个节点都必须使用不同范围的标识值，以避免出现重复。  
@@ -57,7 +56,7 @@ ms.locfileid: "48089847"
  如果发布服务器在插入后用尽了其标识范围，并且若此插入是由 **db_owner** 固定服务器角色的某个成员来执行的，那么该发布服务器将会自动分配一个新范围。 如果插入是由不属于该角色的用户执行的，则日志读取器代理、合并代理或属于 **db_owner** 角色的成员的用户必须运行 [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)。 对于事务发布，必须运行日志读取器代理，以便自动分配新范围（默认设置是使代理连续运行）。  
   
 > [!WARNING]  
->  在大型批插入过程中，复制触发器只激发一次，不是对每个插入行都激发。 这会导致 insert 语句失败如果如大型插入期间用尽标识范围，是`INSERT INTO`语句。  
+>  在大型批插入过程中，复制触发器只激发一次，不是对每个插入行都激发。 如果标识范围在大型插入期间用尽，则会导致 insert 语句（如 `INSERT INTO` 语句）失败。  
   
 |数据类型|范围|  
 |---------------|-----------|  
@@ -99,7 +98,7 @@ ms.locfileid: "48089847"
  例如，可以将 **@pub_identity_range**指定为 10000，将 **@identity_range** 指定为 1000（假定订阅服务器上的更新较少），将 **@threshold**。 在订阅服务器上进行 800 次插入后（即 1000 的 80%），将为订阅服务器分配一个新范围。 在发布服务器上进行 8000 次插入后，将为发布服务器分配一个新范围。 分配新范围后，表中的标识范围值之间将有一定的间隔。 指定较高的阈值会产生较小的间隔，但这会降低系统的容错能力：如果分发代理由于某种原因无法运行，订阅服务器就更容易用完标识。  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>为手动标识范围管理分配范围  
- 如果指定手动标识范围管理，则必须确保发布服务器和每个订阅服务器使用不同的标识范围。 例如，假设发布服务器上具有标识列定义为 `IDENTITY(1,1)`的表：标识列从 1 开始，在每次插入行时递增 1。 如果发布服务器上的表有 5,000 行，并预计表中的行数在应用程序生存期间会有增长，则发布服务器可使用范围 1-10,000。 假定有两个订阅服务器，订阅服务器 A 可以使用 10,001–20,000，订阅服务器 B 可使用 20,001-30,000。  
+ 如果指定手动标识范围管理，则必须确保发布服务器和每个订阅服务器使用不同的标识范围。 例如，假设发布服务器上具有标识列定义为 `IDENTITY(1,1)`的表：标识列从 1 开始，在每次插入行时递增 1。 如果发布服务器上的表有 5,000 行，并预计表中的行数在应用程序生存期间会有增长，则发布服务器可使用范围 1-10,000。 假定有两个订阅服务器，订阅服务器 A 可以使用 10,001-20,000，订阅服务器 B 可使用 20,001-30,000。  
   
  使用快照或其他方式初始化订阅服务器后，执行 DBCC CHECKIDENT，为订阅服务器分配其标识范围的起点。 例如，在订阅服务器 A 上，将执行 `DBCC CHECKIDENT('<TableName>','reseed',10001)`。 在订阅服务器 B 上，将执行 `CHECKIDENT('<TableName>','reseed',20001)`。  
   

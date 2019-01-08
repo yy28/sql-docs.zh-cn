@@ -1,21 +1,22 @@
 ---
-title: 为 SQL Server 可用性组配置 RHEL 群集 |Microsoft Docs
-description: ''
+title: 对 SQL Server 可用性组配置 RHEL 群集
+titleSuffix: SQL Server
+description: 了解可用性组群集时运行 Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670816"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160592"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>对 SQL Server 可用性组配置 RHEL 群集
 
@@ -112,7 +113,7 @@ Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程�
 
 * [从零开始的 pacemaker 群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [隔离和 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat 与 Pacemaker 的高可用性外接程序： 隔离](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Red Hat Pacemaker 高可用性加载项：隔离](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 由于节点级别隔离配置很大程度取决于你的环境，则在本教程中 （它可以配置更高版本） 的情况下禁用它。 以下脚本可以禁用节点级别隔离：
 

@@ -1,5 +1,5 @@
 ---
-title: 连接到表格模型数据库 |Microsoft 文档
+title: 连接到 Analysis Services 表格模型数据库 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce70f8ac3e22e31f0420762019c94fc629951a4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045291"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072414"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>连接到表格模型数据库  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34045291"
   
 1.  在“管理中心”中，打开“配置服务帐户”页。  
   
-2.  选择 Excel Services 使用的服务应用程序池。 该应用程序池可以是 **“服务应用程序池 - SharePoint Web 服务系统”** 或自定义的应用程序池。 由 Excel Services 使用的托管帐户将出现在该页上。  
+2.  选择 Excel Services 使用的服务应用程序池。 它可能**服务应用程序池-SharePoint Web 服务系统**或自定义应用程序池。 由 Excel Services 使用的托管帐户将出现在该页上。  
   
      对于包括 SharePoint 模式下 Reporting Services 的 SharePoint 场，还要获取 Reporting Services 服务应用程序的帐户信息。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34045291"
   
 2.  选择 **“从 Analysis Services”**。  
   
-3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器作为命名实例安装，你必须按以下格式指定名称： \<servername >\\< instancename\>。  
+3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器已作为命名实例安装，则必须按以下格式指定名称：\<服务器名称 >\\< 实例名\>。  
   
      必须为独立的表格部署配置服务器实例，并且该服务器实例必须具有允许访问的入站规则。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "34045291"
   
  **数据连接向导不能从指定的数据源获取数据库列表。**  
   
- 在导入数据，此 Microsoft Excel 错误发生在尝试使用向导连接到表格模型数据库在远程 Analysis Services 服务器上，并且你没有足够的权限。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
+ 在导入数据，此 Microsoft Excel 错误发生时尝试使用向导连接到远程 Analysis Services 服务器上的表格模型数据库并且没有足够的权限。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   
- **在尝试建立与外部数据源的连接的过程中出现错误。以下连接刷新失败：\<模型名称 > 沙盒**  
+ **在尝试建立与外部数据源的连接的过程中出现错误。以下连接无法刷新：\<模型名称 > Sandbox**  
   
  在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是您对远程 Analysis Services 服务器没有足够的权限。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   

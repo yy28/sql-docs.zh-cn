@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167278"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398870"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>为部署和管理任务编写脚本
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持使用脚本来自动执行日常安装、部署任务和管理任务。 部署报表服务器的过程包括多个步骤。 必须使用多个工具和过程来配置部署；没有任何单个程序或方法可用于自动执行所有任务。  
@@ -70,7 +70,7 @@ ms.locfileid: "48167278"
   
 -   报表服务器脚本主机工具 (rs.exe) 可以运行为了重新创建现有内容或将现有内容从一个报表服务器移至另一个报表服务器而编写的自定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 代码。 使用此方法，可以在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中编写脚本，将其另存为 .rss 文件，并使用 rs.exe 在目标报表服务器上运行该脚本。 所编写的脚本可以调用 SOAP 接口，以访问报表服务器 Web 服务。 应使用此方法编写部署脚本，因为通过此方法可以重新创建报表服务器文件夹命名空间和内容，以及重新创建基于角色的安全性。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本引入了用于 SharePoint 集成模式的 PowerShell cmdlet。 您可以使用 PowerShell 配置和管理 SharePoint 集成。  有关详细信息，请参阅[Reporting Services SharePoint 模式的 PowerShell cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本引入了用于 SharePoint 集成模式的 PowerShell cmdlet。 您可以使用 PowerShell 配置和管理 SharePoint 集成。  有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>使用脚本迁移报表服务器内容和文件夹  
  可以编写用于在其他报表服务器实例中复制报表服务器环境的脚本。 通常会使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写部署脚本，然后使用报表服务器脚本主机实用工具处理这些脚本。  
@@ -94,10 +94,10 @@ ms.locfileid: "48167278"
 > [!NOTE]  
 >  除非已显示设置凭据，否则脚本将使用运行脚本的用户的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据运行。  
   
- 有关如何设置格式并运行脚本文件的详细信息，请参阅[使用 rs.exe 实用工具和 Web 服务编写脚本](script-with-the-rs-exe-utility-and-the-web-service.md)。  
+ 有关如何设置格式并运行脚本文件的详细信息，请参阅 [使用 rs.exe 实用工具和 Web 服务编写脚本](script-with-the-rs-exe-utility-and-the-web-service.md)。  
   
 ## <a name="using-scripts-to-set-server-properties"></a>使用脚本设置服务器属性  
- 可以编写脚本以针对报表服务器设置系统属性。 下面的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本显示了一种设置属性的方法。 该示例禁用了 RSClientPrint ActiveX 控件，但可以替换`EnableClientPrinting`和`False`用任意有效的属性名称和值。 若要查看服务器属性的完整列表，请参阅[报表服务器系统属性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。  
+ 可以编写脚本以针对报表服务器设置系统属性。 下面的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本显示了一种设置属性的方法。 该示例禁用了 RSClientPrint ActiveX 控件，但可以用任意有效的属性名称和值来替换 `EnableClientPrinting` 和 `False`。 若要查看服务器属性的完整列表，请参阅 [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。  
   
  若要使用该脚本，则将其保存至扩展名为 .rss 的文件，然后使用 rs.exe 命令提示实用工具在报表服务器上运行该文件。 由于没有编译该脚本，因此不需要安装 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 该示例假定您对承载报表服务器的本地计算机拥有权限。 如果未使用拥有权限的帐户进行登录，则必须通过其他命令行参数来指定帐户信息。 有关详细信息，请参阅 [RS.exe 实用工具 (SSRS)](rs-exe-utility-ssrs.md)。  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -122,13 +122,13 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [GenerateDatabaseCreationScript 方法&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [GenerateDatabaseRightsScript 方法&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [GenerateDatabaseUpgradeScript 方法&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [GenerateDatabaseUpgradeScript 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)   
- [报表服务器命令提示实用工具&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)   
  [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services 工具](reporting-services-tools.md)  
   

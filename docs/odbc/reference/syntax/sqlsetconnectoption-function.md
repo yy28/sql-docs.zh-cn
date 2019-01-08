@@ -20,21 +20,21 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a4965fedc7da47751742e863119b818a9fcba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d22d1bf5fc3d01bf62afd2da6b3ebbc2bb0289
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646355"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204347"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： 不推荐使用  
+ 版本引入了：ODBC 1.0 标准符合性：不推荐使用  
   
  **摘要**  
  在 ODBC 3 *.x*，ODBC 2.0 函数**SQLSetConnectOption**已由**SQLSetConnectAttr**。 有关详细信息，请参阅 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  有关哪些驱动程序管理器时，将映射此函数可对 ODBC 2 详细信息 *.x*应用程序使用 ODBC 3 *.x*驱动程序，请参阅[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
   
 ## <a name="remarks"></a>备注  

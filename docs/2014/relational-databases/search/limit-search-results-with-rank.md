@@ -18,12 +18,12 @@ ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66714f9f401c8a5061b1cff2d316555d5e9a71bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093337"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807249"
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 函数返回名为 RANK 的列，该列包含从 0 到 1000 的序数值（排名值）。 这些值用来根据返回的行与选择条件的匹配程度对这些行进行排名。 排名值仅表示结果集中各行相关性的相对顺序，值越小，表示相关性越低。 实际的值并不重要，并且每次运行查询时实际值通常都不同。  
@@ -37,7 +37,7 @@ ms.locfileid: "48093337"
   
 ##  <a name="examples"></a> 使用 RANK 限制搜索结果的示例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>示例 A：仅搜索前三个匹配项  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>示例 A：搜索只前的三个匹配项  
  下面的示例使用 CONTAINSTABLE 仅返回前三个匹配项。  
   
 ```  
@@ -104,7 +104,7 @@ GO
   
  下表包含了对计算排名非常重要的一些常用术语和统计值。  
   
- “属性”  
+ 属性  
  行的全文索引列。  
   
  Document  
@@ -141,7 +141,7 @@ GO
 ### <a name="rank-computation-issues"></a>排名计算问题  
  计算排名的过程，取决于一系列因素。  不同语言的断字符对文本进行的词汇切分也不同。 例如，字符串“dog-house”可以被一种断字符断为“dog”和“house”而被另一种断字符断为“dog-house”。 这意味着匹配和排名将根据所指定语言而有所不同，因为不仅词不同，而且文档长度也不同。 文档长度的差异可能会影响所有查询的排名。  
   
- 统计信息，如`IndexRowCount`差异很大。 例如，如果一个目录的主索引有二十亿行，那么对一个新文档的索引将被编制为内存中的中间索引，而基于该内存中索引内的文档数对该文档的排名可能与主索引中的文档排名不同。 因此，建议在完成产生大量要创建索引或重新创建索引的行的任意填充后，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这些索引合并为一个主索引。 全文引擎也会根据参数（例如中间索引的数目和大小）自动合并索引。  
+ 诸如 `IndexRowCount` 之类的统计信息可能会大不相同。 例如，如果一个目录的主索引有二十亿行，那么对一个新文档的索引将被编制为内存中的中间索引，而基于该内存中索引内的文档数对该文档的排名可能与主索引中的文档排名不同。 因此，建议在完成产生大量要创建索引或重新创建索引的行的任意填充后，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这些索引合并为一个主索引。 全文引擎也会根据参数（例如中间索引的数目和大小）自动合并索引。  
   
  `MaxOccurrence` 值被规范化到 32 个范围的其中一个内。 举例来说，这意味着 50 个字长的文档与 100 个字长的文档的处理方式相同。 下面是用于规范化的表。 由于这两个文档的长度位于相邻表值 32 与 128 之间的范围内，因此将认为它们具有相同的有效长度 128 (32 < `docLength` <= 128)。  
   
@@ -176,9 +176,9 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
 ```  
 ContainsRank = same formula used for CONTAINSTABLE ranking of a single term (above).  
 Weight = the weight specified in the query for each term. Default weight is 1.  
-WeightedSum = Σ[key=1 to n] ContainsRankKey * WeightKey  
-Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )   
-      + ( Σ[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
+WeightedSum = ??[key=1 to n] ContainsRankKey * WeightKey  
+Rank =  ( MaxQueryRank * WeightedSum ) / ( ( ??[key=1 to n] ContainsRankKey^2 )   
+      + ( ??[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
   
 ```  
   
@@ -187,14 +187,14 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
  [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 排名基于 OKAPI BM25 排名公式计算。 FREETEXTTABLE 查询将通过派生词（原始查询词的变形）向查询中添加词，这些词将被作为单独的、与派生出它们的词没有特殊联系的词来处理。 同义词库功能派生出的同义词将被当作单独的、具有同等加权值的词来处理。 查询中的每个词都会对排名产生影响。  
   
 ```  
-Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
+Rank = ??[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SQL Server Management Studio
@@ -15,23 +15,23 @@ ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a71d817710c76d0825aa360a62d17e16e82bc023
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 342624645e9bd88d0a7afd08b3c18225fc2c14ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808529"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>从 SQL Server Management Studio 连接到任何 SQL Server 组件
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了管理每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件的功能。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以连接到：  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]组件的功能。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]组件的功能。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件的功能。  
   
  虽然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您在使用查询时无需先建立与数据源的连接，但其他多数任务需要一个连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了“连接到服务器”对话框，可用于配置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的连接属性。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 启动时，将打开“连接到服务器”对话框，并提示你连接到服务器。 “连接到服务器”对话框会保留上次使用的连接设置。  
   

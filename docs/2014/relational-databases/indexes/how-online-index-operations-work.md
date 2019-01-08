@@ -17,12 +17,12 @@ ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d9a0eb261f40773df48d01a3e6e32214174a5b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102637"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818041"
 ---
 # <a name="how-online-index-operations-work"></a>联机索引操作的工作方式
   本主题将定义联机索引操作中存在的结构，并显示与这些结构相关联的活动。  
@@ -75,7 +75,7 @@ ms.locfileid: "48102637"
 |-----------|---------------------|------------------|  
 |准备|创建新索引并将其设置为只写。|IS|  
 |生成|从源插入数据。<br /><br /> 应用已应用到源的用户修改（插入、更新、删除）。<br /><br /> 此活动对用户是透明的。|IS|  
-|最后|将更新索引元数据。<br /><br /> 索引将被设置为读/写状态。|S<br /><br /> 或多个<br /><br /> SCH-M|  
+|最后|将更新索引元数据。<br /><br /> 索引将被设置为读/写状态。|S<br /><br /> 或<br /><br /> SCH-M|  
   
  在完成索引操作之前，不能通过用户发出的 SELECT 语句来访问目标。  
   

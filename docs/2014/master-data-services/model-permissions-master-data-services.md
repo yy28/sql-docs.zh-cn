@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], permissions
@@ -14,18 +13,18 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 29269184b63f32c02d2386d0e75757b748c5bd2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1d5b43b83102f822b64fdd5e4ebdc416f1de593
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809618"
 ---
 # <a name="model-permissions-master-data-services"></a>模型权限 (Master Data Services)
   模型权限应用到模型中存在的所有实体、派生层次结构、显式层次结构和集合。 对于任何单个对象，可以覆盖分配给模型的权限。  
   
 > [!NOTE]  
->  如果用户是模型管理员，则在用户界面的所有功能区域显示该模型。 否则，仅在 **“资源管理器”** 功能区域显示该模型。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+>  如果用户是模型管理员，则在用户界面的所有功能区域显示该模型。 否则，仅在 **“资源管理器”** 功能区域显示该模型。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 |权限|Description|  
 |----------------|-----------------|  
@@ -36,9 +35,9 @@ ms.locfileid: "48112713"
  将权限分配给模型时，用户将获得对模型的所有版本的访问权限。 无法将权限分配给单独的版本。  
   
 ## <a name="see-also"></a>请参阅  
- [分配模型对象权限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [模型对象权限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [实体权限 &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md)   
+ [分配模型对象权限 (Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [模型对象权限 (Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [实体权限 (Master Data Services)](../../2014/master-data-services/entity-permissions-master-data-services.md)   
  [集合权限 &#40;Master Data Services&#41;](../../2014/master-data-services/collection-permissions-master-data-services.md)  
   
   

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
-- vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f197c90dc20c3c3cff031e58af2e1cac19bcb706
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070849"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328597"
 ---
 # <a name="open-file-dialog-box"></a>“打开文件”对话框
   使用“打开文件”对话框打开磁盘中的现有文件。 还可以使用此对话框打开已通过其他语言编码选项打开的文件。  
@@ -68,7 +67,7 @@ ms.locfileid: "48070849"
  **新建文件夹**  
  显示“新建文件夹”对话框。 使用此选项可以在“查找范围”下拉列表框中选定文件夹下创建新的子文件夹。  
   
-## <a name="views"></a>视图  
+## <a name="views"></a>Views  
  提供的选项可用于排列和查看“视图”下拉列表框中选定的项的内容。  
   
  **缩略图**  
@@ -97,5 +96,3 @@ ms.locfileid: "48070849"
   
  **映射网络驱动器**  
  打开“映射网络驱动器”对话框。  
-  
-  

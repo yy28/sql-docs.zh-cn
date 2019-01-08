@@ -12,12 +12,12 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d994b13d063c3a72e6273b95d47e320285cd2d16
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 96e2bee47c97e85421b074e870c9dab1dd46220a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667016"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212456"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>将转换数据库对象加载到 SQL Server (SybaseToSQL)
 转换 Sybase Adaptive Server Enterprise (ASE) 的数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以加载到生成的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 SSMA 此外，还允许使用的实际内容更新目标元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库。  
@@ -100,7 +100,7 @@ ms.locfileid: "51667016"
   
 4.  若要运行一组语句，在查询编辑器窗口中，选择语句，然后按**F5**密钥。  
   
-有关如何使用查询编辑器中运行脚本的详细信息，请参阅"[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查询"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+有关如何使用查询编辑器中运行脚本的详细信息，请参阅" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查询"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 你可以也运行脚本从命令行使用**sqlcmd**实用程序，并从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 有关详细信息**sqlcmd**，请参阅中的"sqlcmd 实用工具"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。 有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理，请参阅"自动执行管理任务 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理)"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   

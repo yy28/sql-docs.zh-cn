@@ -11,17 +11,17 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095367"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350025"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了多个 Web 部件，可用于特定版本的报表服务器，特别是部署模式。  
   
--   **本机模式：** 如果希望从本机模式报表服务器访问 SharePoint 站点上的报表服务器内容，请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]附带的 SharePoint 2.0 Web 部件报表资源管理器和报表查看器。 本主题提供了有关安装和使用 2.0 Web 部件的说明。  
+-   **本机模式：** 如果希望从本机模式报表服务器访问 SharePoint 站点上的报表服务器内容，请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的 SharePoint 2.0 Web 部件报表资源管理器和报表查看器。 本主题提供了有关安装和使用 2.0 Web 部件的说明。  
   
 -   **SharePoint 模式：** 如果希望访问在 SharePoint 模式下运行的报表服务器，请使用用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件。 有关外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48095367"
     Install-SPWebPartPack -LiteralPath "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -GlobalInstall  
     ```  
   
-4.  您应该看到如下消息，指示 Web 部件已部署。  
+4.  应看到如下消息，指示 Web 部件已部署。  
   
     > Name               SolutionId                                             Deployed  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48095367"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     有关使用 PowerShell 的详细信息，请参阅[Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
+     有关使用 PowerShell 的详细信息，请参阅[Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx)。  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安装 Web 部件  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48095367"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  您应该看到“操作已成功完成”的消息。  
+4.  应看到“操作已成功完成”的消息。  
   
      指定 `-globalinstall` 会将 Web 部件添加到全局程序集缓存 (GAC) 中。 如果希望连接 Web 部件，则此步骤是必需的。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48095367"
   
 7.  在 **“报表管理器 URL”** 中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法： http://\<servername>/reports。  
   
-8.  在 **“报表路径”** 中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products**中。  
+8.  在 **“报表路径”** 中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 /Adventure Works/Company Sales。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 /Products 中。  
   
 9. 单击“确定” 。  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48095367"
     3.  单击 **“报表查看器”**。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services 报表服务器&#40;SharePoint 模式&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
+ [Reporting Services 报表服务器（SharePoint 模式）](../reporting-services-report-server-sharepoint-mode.md)   
  [Reporting Services 报表服务器（本机模式）](../report-server/reporting-services-report-server-native-mode.md)  
   
   

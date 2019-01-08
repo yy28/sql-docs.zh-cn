@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML]
@@ -20,12 +18,12 @@ ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc55c5122c0d7d2405ed732c84ce55b6f4c09905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27b24a6e7686c136cf79fa882136a362c7560e42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121757"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807549"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>对 XML 数据执行大容量加载 (SQLXML 4.0)
   XML 大容量加载是使您可以将半结构化 XML 数据加载到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表的独立 COM 对象。  

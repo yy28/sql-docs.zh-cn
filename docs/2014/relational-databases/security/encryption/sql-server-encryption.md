@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f5838d497808e9a251522536a00d590403674eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352193"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
   加密是指通过使用密钥或密码对数据进行模糊处理的过程。 这会使数据变得毫无用处，除非使用对应的解密密钥或密码。 加密并不解决访问控制问题。 不过，它可以通过限制数据丢失来增强安全性，即使在访问控制失效的情况下。 例如，如果数据库主机配置有误且黑客获取了敏感数据，则如果数据已加密，那么被盗信息可能会毫无用处。  
@@ -62,7 +62,7 @@ ms.locfileid: "48053767"
  说明如何使用证书来加密数据。  
   
 ## <a name="external-resources"></a>外部资源  
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 – 安全和保护](http://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [Microsoft TechNet:SQL Server 技术中心：SQL Server 2005 安全和保护](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
  包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>请参阅  

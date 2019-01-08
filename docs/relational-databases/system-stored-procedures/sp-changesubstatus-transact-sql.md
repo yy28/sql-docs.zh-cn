@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changesubstatus
@@ -17,12 +16,12 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 029b946f3729208300a48f97766146fa7da42ece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa9452d7dc2e611b1b581c12cf33e88950eacc2a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723175"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212336"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,10 +68,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为**%**。 如果*发布*未指定，则将影响所有发布。  
   
- [  **@article=**] **'***文章*****  
+ [ **@article=**] **'***文章*****  
  项目的名称。 该名称对发布必须是唯一的。 *文章*是**sysname**，默认值为**%**。 如果*一文*未指定，则将影响所有项目。  
   
- [  **@subscriber=**] **'***订阅服务器*****  
+ [ **@subscriber=**] **'***订阅服务器*****  
  要更改其状态的订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**。 如果*订阅服务器*未指定，则状态将用于所有订阅服务器更改为指定的项目。  
   
  [  **@status =**] **'***状态*****  
@@ -87,16 +86,16 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@previous_status=**] **'***previous_status*****  
  订阅的以前的状态。 *previous_status*是**sysname**，默认值为 NULL。 此参数，可更改当前具有该状态，从而允许一组特定的订阅上的组函数的任何订阅 (例如，设置所有活动订阅回**订阅**)。  
   
- [  **@destination_db=**] **'***destination_db*****  
+ [  **@destination_db=**] **'***destination_db***’**  
  目标数据库的名称。 *destination_db*是**sysname**，默认值为**%**。  
   
- [  **@frequency_type=**] *frequency_type*  
+ [ **@frequency_type=**] *frequency_type*  
  安排分发任务所使用的频率。 *frequency_type*是**int**，默认值为 NULL。  
   
- [  **@frequency_interval=**] *frequency_interval*  
+ [ **@frequency_interval=**] *frequency_interval*  
  是要将应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为 NULL。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
+ [ **@frequency_relative_interval=**] *frequency_relative_interval*  
  分发任务的日期。 使用此参数时*frequency_type*设置为 32 （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -108,10 +107,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**16**|上一次|  
 |NULL（默认值）||  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+ [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
  使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 NULL。  
   
- [  **@frequency_subday=**] *frequency_subday*  
+ [ **@frequency_subday=**] *frequency_subday*  
  在定义周期内重新调度的频率（分钟）。 *frequency_subday*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -122,22 +121,22 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**8**|Hour|  
 |NULL（默认值）||  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
+ [ **@frequency_subday_interval=**] *frequency_subday_interval*  
  间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
+ [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  第一次安排分发任务的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
+ [ **@active_end_time_of_day=**] *active_end_time_of_day*  
  停止安排分发任务的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@active_start_date=**] *active_start_date*  
+ [ **@active_start_date=**] *active_start_date*  
  第一次安排分发任务的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 NULL。  
   
- [  **@active_end_date=**] *active_end_date*  
+ [ **@active_end_date=**] *active_end_date*  
  停止安排分发任务的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [  **@optional_command_line=**] **'***optional_command_line*****  
+ [ **@optional_command_line=**] **'***optional_command_line*****  
  可选的命令提示符。 *optional_command_line*是**nvarchar(4000)**，默认值为 NULL。  
   
  [  **@distribution_jobid=**] *distribution_jobid*  
@@ -146,19 +145,19 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@from_auto_sync=**] *from_auto_sync*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
+ [ **@ignore_distributor=**] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 设置*remote_agent_activation*以外的值为**0**生成一个错误。  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name*****  
+ [ **@offloadserver=** ] **'***remote_agent_server_name*****  
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 设置*remote_agent_server_name*为任何非 NULL 值生成一个错误。  
   
  [ **@dts_package_name**=] **'***dts_package_name*****  
- 指定 Data Transformation Services (DTS) 包的名称。 *dts_package_name*是**sysname**，默认值为 NULL。 例如，对于名为的包**DTSPub_Package**会指定`@dts_package_name = N'DTSPub_Package'`。  
+ 指定 Data Transformation Services (DTS) 包的名称。 *dts_package_name* 是 **sysname** ，默认值为 NULL。 例如，对于名为的包**DTSPub_Package**会指定`@dts_package_name = N'DTSPub_Package'`。  
   
  [ **@dts_package_password**=] **'***dts_package_password*****  
  指定包上的密码。 *dts_package_password*是**sysname**默认值为 NULL，这指定密码属性保持不变。  
@@ -175,7 +174,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@distribution_job_name=** ] **'***distribution_job_name*****  
  分发作业的名称。 *distribution_job_name*是**sysname**，默认值为 NULL。  
   
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher** =] **'***发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -189,7 +188,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  **sp_changesubstatus**中的订阅服务器的状态更改**syssubscriptions**表中且已更改的状态。 如果需要，它会更新中的项目状态**sysarticles**表，以指示活动或非活动。 如果需要，它的复制标志设置打开或关闭**sysobjects**复制的表的表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色**db_owner**固定的数据库角色或订阅创建者才能执行**sp_changesubstatus**。  
   
 ## <a name="see-also"></a>请参阅  

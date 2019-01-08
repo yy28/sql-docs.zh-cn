@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209836"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +49,25 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布*****  
+ [ **@publication**=] **'**_发布_  
  要更改的发布的名称。 *发布*是**sysname**，无默认值  
   
- [ **@article** =] **'***文章*****  
+ [ **@article** =] **'**_文章_  
  要更改的项目的名称。 *文章*是**sysname**，无默认值。  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+ [ **@subscriber** =] **'**_订阅服务器上_  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [ **@destination_db** =] **'***destination_db*****  
+ [ **@destination_db** =] **'**_destination_db_  
  是订阅数据库的名称。 *destination_db*是**sysname**，无默认值。  
   
- [  **@property=**] **'***属性*****  
+ [  **@property=**] **'**_属性_  
  要更改的给定订阅的属性。 *属性*是**nvarchar(30)**，可以是表中的值之一。  
   
- [  **@value=**] **'***值*****  
+ [  **@value=**] **'**_值_  
  为指定的新值*属性*。 *值*是**nvarchar(4000)**，可以是表中的值之一。  
   
-|“属性”|ReplTest1|Description|  
+|属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理的 Windows 帐户的密码。|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB 访问接口|  
 |**memory_optimized**|**bit**|指示订阅支持内存优化表。 *memory_optimized*是**位**，1 为 true （订阅支持内存优化表）。|  
   
- [  **@publisher =** ] **'***发布服务器*****  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+ [  **@publisher =** ] **'**_发布服务器上_  
+ 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不能为指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -102,7 +101,7 @@ sp_changesubscription [ @publication = ] 'publication'
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changesubscription**。  
   
 ## <a name="see-also"></a>请参阅  

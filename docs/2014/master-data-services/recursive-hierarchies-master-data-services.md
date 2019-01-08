@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b18ec687743d035e56ac3111f894add26f2b8f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62c04ccbfa6e4143277f09950f79e8b59a01f97
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810919"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>递归层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，递归层次结构是包括递归关系的派生层次结构。 在实体具有基于域的属性，且该属性基于实体本身时，存在递归关系。  
@@ -55,14 +54,14 @@ ms.locfileid: "48198507"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建派生层次结构。|[创建派生层次结构&#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
-|更改现有派生层次结构的名称。|[更改派生层次结构名称&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|删除现有派生层次结构。|[删除派生层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|创建派生层次结构。|[创建派生层次结构 (Master Data Services)](create-a-derived-hierarchy-master-data-services.md)|  
+|更改现有派生层次结构的名称。|[更改派生层次结构名称 (Master Data Services)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|删除现有派生层次结构。|[删除派生层次结构 (Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [基于域的属性&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [派生层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

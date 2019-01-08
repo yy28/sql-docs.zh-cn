@@ -20,21 +20,21 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203906"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLFreeHandle**释放与特定的环境、 连接、 语句或描述符句柄关联的资源。  
   
-> [!NOTE]  
+> [!NOTE]
 >  此函数是泛型函数释放句柄。 它取代了 ODBC 2.0 函数**SQLFreeConnect** （适用于释放连接句柄） 和**SQLFreeEnv** （适用于释放环境句柄）。 **SQLFreeConnect**并**SQLFreeEnv**已弃用在 ODBC 3 *.x*。 **SQLFreeHandle**还会替换 ODBC 2.0 函数**SQLFreeStmt** (使用 SQL_DROP*选项*) 释放语句句柄。 有关详细信息，请参阅"注释"。 详细了解驱动程序管理器映射的内容到此函数时 ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序，请参阅[用于向后映射替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>语法  
@@ -109,7 +109,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="freeing-a-descriptor-handle"></a>释放描述符句柄  
  调用**SQLFreeHandle**与*HandleType* SQL_HANDLE_DESC 的释放描述符句柄*处理*。 在调用**SQLFreeHandle**不会释放分配的应用程序可能会由指针字段 （包括 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 引用的所有任何的内存描述符记录*处理*。 释放该句柄时，会释放不是指针字段的字段的驱动程序分配的内存。 时释放用户分配的描述符句柄，已释放句柄相关联的所有语句都还原为其各自自动分配的描述符句柄。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x*驱动程序不支持释放描述符句柄，就像它们不支持分配的描述符句柄。  
   
  请注意， **SQLDisconnect**连接上，将自动删除任何语句和描述符打开。 当应用程序释放语句句柄时，该驱动程序将释放与该句柄相关联的所有自动生成的描述符。  

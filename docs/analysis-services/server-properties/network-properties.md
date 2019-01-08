@@ -1,5 +1,5 @@
 ---
-title: 网络属性 |Microsoft Docs
+title: Analysis Services 网络属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991599"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072354"
 ---
 # <a name="network-properties"></a>网络属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **适用于：** 多维和表格服务器模式  
+ **适用范围：** 多维和表格服务器模式  
   
 ## <a name="general"></a>常规  
  **ListenOnlyOnLocalConnections**  

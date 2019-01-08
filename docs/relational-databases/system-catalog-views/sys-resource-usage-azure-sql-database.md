@@ -22,22 +22,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afab607b547302d3f24f3bb64060757bfa76495a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604615"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209906"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  此功能处于预览状态。 请不要依赖于此功能的特定实现，因为此功能在将来的版本中可能更改或删除。  
->   
+> 
 >  当处于预览状态时，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 运营团队可能针对此 DMV 打开和关闭数据集合：  
->   
+> 
 >  -   如果打开，DMV 在聚合时将返回当前数据。  
 > -   如果关闭，则 DMV 返回历史数据，这些数据可能是旧数据。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "47604615"
 |-------------|---------------|-----------------|  
 |time|**datetime**|时间 (UTC)（以小时增量表示）。|  
 |database_name|**nvarchar**|用户数据库的名称。|  
-|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> “基本”<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意： 此列的 V11 已弃用并且不适用于 V12。 **值始终设置为 0。**|  
+|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> 基本<br /><br /> 标准<br /><br /> Premium|  
+|usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意：此列的 V11 已弃用，不适用于 V12。 **值始终设置为 0。**|  
 |storage_in_megabytes|**decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图可供所有用户角色有权连接到虚拟**主**数据库。  
   
   

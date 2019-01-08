@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773469"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
   使用“空间索引”对话框可为“几何”或“地理”数据类型的列（空间列）创建索引，不能使用“索引/键”对话框为这些列创建索引。 每个空间列可以有多个空间索引，但一次只能创建一个索引。  
@@ -87,8 +87,8 @@ ms.locfileid: "48113353"
  **(名称)**  
  显示空间索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定一个默认名称。 您可以随时更改该名称。  
   
- **Description**  
- 说明该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (**…**)。 这可以提供一个更大的文本编写区域。  
+ **说明**  
+ 说明该索引。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)。 这可以提供一个更大的文本编写区域。  
   
  **表设计器类别**  
  展开此项可显示有关此空间索引的属性的信息。  
@@ -109,7 +109,7 @@ ms.locfileid: "48113353"
  **允许页锁定**  
  指定对此索引是否允许页级锁定。 允许或禁用页级锁定会影响数据库性能。  
   
- **重新计算****统计信息**   
+ **重新计算****统计信息**  
  指定在创建索引后是否计算新的统计数据。 重新计算统计数据会降低索引的生成速度，但通常会提高查询性能。  
   
  **允许行锁定**  

@@ -20,12 +20,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227907"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351326"
 ---
 # <a name="binding-parameters"></a>绑定参数
   在执行 SQL 语句前，该语句中的每个参数标记都必须与应用程序中的某个变量关联或绑定到某个变量。 这是通过调用[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)函数。 **SQLBindParameter**描述程序变量 （地址、 C 数据类型等） 向驱动程序。 它还通过指示其序数值来标识参数标记，然后描述它所表示的 SQL 对象的特点（SQL 数据类型、精度等）。  
@@ -56,7 +56,7 @@ ms.locfileid: "48227907"
   
  使用时才支持命名的参数[!INCLUDE[tsql](../../includes/tsql-md.md)]`EXECUTE`语句或 ODBC CALL 转义序列执行存储的过程。  
   
- 如果为某一存储过程参数设置 `SQL_DESC_NAME`，则查询中的所有存储过程参数也应设置 `SQL_DESC_NAME`。  如果使用文字在存储的过程调用中，其中参数具有`SQL_DESC_NAME`设置，则这些文字应该使用格式*名称*=*值*，其中*名称*是存储的过程的参数名称 (例如， @p1)。 有关详细信息，请参阅[按名称 （命名参数） 绑定参数](http://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果为某一存储过程参数设置 `SQL_DESC_NAME`，则查询中的所有存储过程参数也应设置 `SQL_DESC_NAME`。  如果使用文字在存储的过程调用中，其中参数具有`SQL_DESC_NAME`设置，则这些文字应该使用格式*名称*=*值*，其中*名称*是存储的过程的参数名称 (例如， @p1)。 有关详细信息，请参阅[按名称 （命名参数） 绑定参数](https://go.microsoft.com/fwlink/?LinkId=167215)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用语句参数](using-statement-parameters.md)  

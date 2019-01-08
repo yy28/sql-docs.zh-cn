@@ -1,5 +1,5 @@
 ---
-title: 对属性成员进行排序基于辅助属性 |Microsoft 文档
+title: 根据辅助属性对属性成员进行排序 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720920da4dbd935bca493e3a2e76ab9a683fff21
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 010e416115e793c46f8744c7724dc164ca01ec87
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019344"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951689"
 ---
-# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lesson 4-5-基于辅助属性排序属性成员
+# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lesson 4-5-根据辅助属性对进行排序的属性成员
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 在第 3 课中，您已了解了如何根据属性成员的名称或键值对属性成员进行排序。 您还了解了如何使用组合成员键影响属性成员和排序顺序。 有关详细信息，请参阅 [修改日期维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 但是，如果属性的名称或键都无法提供所需的排序顺序时，您可以使用辅助属性来获取所需的排序顺序。 通过定义属性之间的关系，您可以使用第二个属性来对第一个属性的成员进行排序。  
   
 属性关系定义属性之间的关系或依赖关系。 在基于单个关系表的维度中，通常所有属性都通过键属性彼此相关。 这是因为维度的所有属性均提供有关成员的信息，这些成员通过键属性链接到每个相关度量值组的事实数据表中的事实数据。 在基于多个表的维度中，属性通常根据表之间的联接键进行链接。 如果基础数据支持，则可以使用相关属性来指定排序顺序。 例如，您可以创建为相关属性提供排序逻辑的新属性。  
   
-通过维度设计器，您可以定义属性之间的其他关系，也可以更改默认关系以提高性能。 创建属性关系时的主要约束是，确保引用的属性对于与其相关的属性中的任何成员均只包含一个值。 定义两个属性之间的关系时，可以根据成员之间的关系是否会随时间更改而将关系定义为刚性关系或灵活关系。 例如，雇员可能移动到不同的销售区域，而市县不会移动到不同的州/省/自治区。 如果将关系定义为刚性关系，则每次增量处理维度时不会重新计算属性聚合。 但如果成员之间的关系确实发生更改，则必须对维度进行完全处理。 有关详细信息，请参阅[属性关系](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、[定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md)、[配置特性关系属性](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)和[指定用户定义层次结构中属性之间的属性关系](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)。  
+通过维度设计器，您可以定义属性之间的其他关系，也可以更改默认关系以提高性能。 创建属性关系时的主要约束是，确保引用的属性对于与其相关的属性中的任何成员均只包含一个值。 定义两个属性之间的关系时，可以根据成员之间的关系是否会随时间更改而将关系定义为刚性关系或灵活关系。 例如，雇员可能移动到不同的销售区域，而市县不会移动到不同的州/省/自治区。 如果将关系定义为刚性关系，则每次增量处理维度时不会重新计算属性聚合。 但如果成员之间的关系确实发生更改，则必须对维度进行完全处理。 有关详细信息，请参阅[属性关系](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、[定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md)、[配置特性关系属性](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)和[指定用户定义层次结构中属性之间的属性关系](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)。  
   
 在本主题的任务中，将根据基础维度表中的现有列在“日期”维度中定义一个新属性。 您将使用这一新属性按时间顺序而不是字母顺序对日历月份成员进行排序。 还将根据命名计算在“客户”维度中定义一个新属性，该新属性用于对“上下班路程”属性成员进行排序。 在下一个主题的任务中，您将了解如何使用属性关系提高查询性能。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "34019344"
   
     注意，月份现在按时间顺序排序，如下图所示。  
   
-    ![修改用户层次结构按时间顺序](../analysis-services/media/l4-memberproperties-3.gif "修改用户层次结构按时间顺序")  
+    ![修改用户层次结构中按时间顺序](../analysis-services/media/l4-memberproperties-3.gif "修改用户层次结构中按时间顺序")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>在“客户”维度中定义属性关系和排序顺序  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34019344"
   
     下图显示了“上下班路程”属性层次结构的成员，这些成员按成员键的 ASCII 值进行排序。  
   
-    ![上下班距离属性层次结构](../analysis-services/media/l4-memberproperties-4.gif "单位的距离属性层次结构")  
+    ![Commute Distance 属性层次结构](../analysis-services/media/l4-memberproperties-4.gif "Commute Distance 属性层次结构")  
   
 2.  在“客户”维度的维度设计器中，切换到“维度结构”选项卡，右键单击“数据源视图”窗格的 **Customer** 表中的“CommuteDistanceSort”，然后单击“从列新建属性”。  
   
@@ -115,10 +115,10 @@ ms.locfileid: "34019344"
   
     注意，属性层次结构成员现在根据不断增加的距离按逻辑顺序进行排序，如下图所示。  
   
-    ![重新排序单位的距离属性层次结构](../analysis-services/media/l4-memberproperties-5.gif "Re-sorted 上下班距离属性层次结构")  
+    ![重新排序的 Commute Distance 属性层次结构](../analysis-services/media/l4-memberproperties-5.gif "Re-sorted Commute Distance 属性层次结构")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[指定用户定义层次结构中属性之间的属性关系](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[指定用户定义层次结构中属性之间的属性关系](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

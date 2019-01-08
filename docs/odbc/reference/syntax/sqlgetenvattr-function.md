@@ -20,16 +20,16 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a41829e9cb1f905c82e7cd5f8b179e5e1f777741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771675"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203806"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetEnvAttr**返回环境属性的当前设置。  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr**可以随时之间分配和释放环境句柄的调用。 已成功设置环境的应用程序的所有环境属性都保存直到**SQLFreeHandle**上调用*EnvironmentHandle*与*HandleType*设为 SQL_HANDLE_ENV。 可以在 ODBC 3 同时分配多个环境句柄 *.x*。 已分配另一个环境时，不会影响环境的环境属性。  
   
-> [!NOTE]  
+> [!NOTE]
 >  符合标准的应用程序都支持 SQL_ATTR_OUTPUT_NTS 环境属性。 当**SQLGetEnvAttr**调用时，ODBC 3 *.x*驱动程序管理器为此属性始终返回 SQL_TRUE。 SQL_ATTR_OUTPUT_NTS 可以仅通过调用设置为 SQL_TRUE **SQLSetEnvAttr**。  
   
 ## <a name="related-functions"></a>相关函数  

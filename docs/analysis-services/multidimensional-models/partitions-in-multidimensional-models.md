@@ -1,5 +1,5 @@
 ---
-title: 多维模型中的分区 |Microsoft 文档
+title: 分区中 Analysis Services 多维模型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8efdd2dcf936270a93ffd9cac694fd2aaccbe6e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c5a2aeb3dac59c356ae10e72df88f01a75dd1d1d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026904"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072494"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多维模型中的分区
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,26 +31,26 @@ ms.locfileid: "34026904"
  分区可以合并；您可以在总体存储和数据更新策略中使用此功能。 仅当分区具有相同的存储模式和聚合设计时，才能合并它们。 为了创建已备以后合并的候选分区，在创建分区时可以复制另一个分区的聚合设计。 在创建分区以复制另一个分区的聚合设计后，还可以编辑该分区。 在进行分区合并时还必须小心，以避免最终分区中的数据重复，这可能导致多维数据集数据不准确。  
   
 ## <a name="local-partitions"></a>本地分区  
- 本地分区是在一个服务器上定义、处理和存储的分区。 如果多维数据集中有大型度量值组，则可能要对其分区，以便可以进行跨分区并行处理。 其优点在于并行处理的执行速度更快。 因为单分区处理作业不必等到一个作业结束之后才能启动另一个作业，所以可以并行运行。 有关详细信息，请参阅[创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
+ 本地分区是在一个服务器上定义、处理和存储的分区。 如果多维数据集中有大型度量值组，则可能要对其分区，以便可以进行跨分区并行处理。 其优点在于并行处理的执行速度更快。 因为单分区处理作业不必等到一个作业结束之后才能启动另一个作业，所以可以并行运行。 有关详细信息，请参阅 [创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
   
 ## <a name="remote-partitions"></a>远程分区  
- 远程分区是指在一个服务器上定义，但在其他服务器上处理和存储的分区。 如果要将数据和元数据的存储分布到多个服务器上，则可使用远程分区。 通常，从开发转换到生产时，分析中的数据规模会增大好几倍。 在数据块区如此大的情况下，一个可能的选择就是将该数据分布到多个计算机上。 这不仅是因为数据超过了一台计算机的容量，还因为您可以使用多台计算机来并行处理数据。 有关详细信息，请参阅 [Create and Manage a Remote Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)。  
+ 远程分区是指在一个服务器上定义，但在其他服务器上处理和存储的分区。 如果要将数据和元数据的存储分布到多个服务器上，则可使用远程分区。 通常，从开发转换到生产时，分析中的数据规模会增大好几倍。 在数据块区如此大的情况下，一个可能的选择就是将该数据分布到多个计算机上。 这不仅是因为数据超过了一台计算机的容量，还因为您可以使用多台计算机来并行处理数据。 有关详细信息，请参阅 [创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)。  
   
 ## <a name="aggregations"></a>Aggregations  
  聚合是预先计算的多维数据集数据的汇总，可帮助启用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速的查询响应。 您可以通过设置存储限制、性能提升，或在聚合生成进程运行一段时间之后随意停止该进程来控制为度量值组创建的聚合数。 聚合并不一定越多越好。 每增加一个聚合都会带来一定成本，包括硬盘空间和处理时间方面的成本。 我们建议以提升 30% 的性能为标准来创建聚合，然后仅当有测试或体验保证时才增加聚合数量。有关详细信息，请参阅[设计聚合（Analysis Services - 多维）](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)。  
   
 ## <a name="partition-merging-and-editing"></a>分区合并和编辑  
- 如果两个分区使用同样的聚合设计，则可以将两个分区合并为一个。 例如，如果有一个按月分区的库存维度，则在每个日历月月末，可以将该月分区与现有的年初至今分区合并。 这样一来，就可对当前月分区进行快速处理和分析，而该年剩下的月只需要在合并时重新处理。 此类重新处理需要较长的处理时间，运行效率也可能较低。 有关管理分区合并过程的详细信息，请参阅[中 Analysis Services & #40; 合并分区SSAS-多维 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md). 使用编辑多维数据集分区**分区**在多维数据集设计器选项卡上，请参阅[编辑或删除分区 & #40;Analyisis Services-多维 & #41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md).  
+ 如果两个分区使用同样的聚合设计，则可以将两个分区合并为一个。 例如，如果有一个按月分区的库存维度，则在每个日历月月末，可以将该月分区与现有的年初至今分区合并。 这样一来，就可对当前月分区进行快速处理和分析，而该年剩下的月只需要在合并时重新处理。 此类重新处理需要较长的处理时间，运行效率也可能较低。 有关管理分区合并过程的详细信息，请参阅 [在 Analysis Services 中合并分区（SSAS - 多维）](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)。 若要通过编辑多维数据集分区**分区**选项卡中多维数据集设计器，请参阅[编辑或删除分区&#40;Analyisis Services-多维&#41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建和管理本地分区 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|包含有关如何使用筛选器或不含重复数据的不同事实表对数据分区的信息。|  
-|[设置分区存储 & #40;Analysis Services-多维 & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|说明如何为分区配置存储。|  
-|[编辑或删除分区 & #40;Analyisis Services-多维 & #41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|说明如何查看和编辑分区。|  
-|[在 Analysis Services & #40; 中合并分区SSAS-多维 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含有关如何合并分区的信息，这些分区具有不同的事实表或数据切片而不含重复数据。|  
+|[创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|包含有关如何使用筛选器或不含重复数据的不同事实表对数据分区的信息。|  
+|[设置分区存储（Analysis Services - 多维）](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|说明如何为分区配置存储。|  
+|[编辑或删除分区（Analysis Services - 多维）](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|说明如何查看和编辑分区。|  
+|[在 Analysis Services 中合并分区（SSAS - 多维）](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含有关如何合并分区的信息，这些分区具有不同的事实表或数据切片而不含重复数据。|  
 |[设置分区写回](../../analysis-services/multidimensional-models/set-partition-writeback.md)|提供有关对分区启用写操作的说明。|  
-|[创建和管理远程分区 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|说明如何创建和管理远程分区。|  
+|[创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|说明如何创建和管理远程分区。|  
   
   

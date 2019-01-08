@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_droppullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35b050798f9be9255b9ee35fdc0a8d378f03ecf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d796c5e7b309ef33bf30eba851b3aedb6c1e6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733759"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823931"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
  [ **@publisher_db=** ] **'***publisher_db*****  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 **所有**表示所有发布服务器数据库。  
   
- [  **@publication=** ] **'***发布*****  
+ [ **@publication=** ] **'***发布*****  
  为发布名称。 *发布*是**sysname**，无默认值。 如果**所有**，针对所有发布删除的订阅。  
   
- [  **@reserved=** ]*保留*  
+ [ **@reserved=** ]*保留*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,7 +64,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或创建请求订阅的用户才能执行**sp_droppullsubscription**。 **Db_owner**固定的数据库角色才可以执行**sp_droppullsubscription**如果创建请求订阅的用户属于此角色。  
   
 ## <a name="see-also"></a>请参阅  

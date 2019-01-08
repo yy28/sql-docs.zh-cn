@@ -1,7 +1,8 @@
 ---
-title: 教程： 启用表空间使用情况示例见解小组件，在 Azure Data Studio |Microsoft Docs
+title: 教程：启用表空间使用情况示例见解小组件
+titleSuffix: Azure Data Studio
 description: 本教程演示如何启用表空间使用情况示例见解小组件，在 Azure Data Studio 数据库仪表板。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355988"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030351"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教程： 启用表空间使用情况示例见解小组件使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教程：启用表空间使用情况示例见解小组件使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 本教程演示如何能够在数据库仪表板，提供数据库中的所有表有关的空间使用情况的一眼视图见解小组件。 在本教程中，你了解如何：
 
@@ -38,7 +39,7 @@ ms.locfileid: "49355988"
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 具有内置的示例小组件来监视数据库的表中使用的空间。
 
 1. 打开*用户设置*通过按**Ctrl + Shift + P**以打开*命令面板*。
-2. 类型*设置*在搜索框中，选择**首选项： 打开用户设置**。
+2. 类型*设置*在搜索框中，选择**首选项：打开用户设置**。
 2. 类型*仪表板*中设置搜索输入框，找到**dashboard.database.widgets**。
 
 3. 若要自定义**dashboard.database.widgets**设置，需要编辑**dashboard.database.widgets**中的条目**用户设置**部分 (中的列右侧）。 如果没有任何**dashboard.database.widgets**中**用户设置**部分中，将鼠标悬停**dashboard.database.widgets**中默认设置列并单击文本显示的文本并单击左侧的铅笔图标**复制到设置**。 如果弹出窗口中显示**替换为在设置**，不要单击它 ！ 转到**用户设置**右侧的列并找到**dashboard.database.widgets**部分并转到下一步。
@@ -82,7 +83,7 @@ ms.locfileid: "49355988"
 
 
 ## <a name="next-steps"></a>后续步骤
-在本教程中，您学习了如何：
+在本教程中，你将了解：
 > [!div class="checklist"]
 > * 快速启用使用内置的见解小组件示例见解小组件。
 > * 查看表空间使用情况的详细信息。

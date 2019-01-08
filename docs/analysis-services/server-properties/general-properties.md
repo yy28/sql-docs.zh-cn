@@ -1,5 +1,5 @@
 ---
-title: 常规属性 |Microsoft Docs
+title: Analysis Services 常规属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906207"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072384"
 ---
 # <a name="general-properties"></a>常规属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **适用于：** 多维和表格服务器模式，除非另外说明。  
+ **适用范围：** 多维和表格服务器模式下，除非另有说明  
   
 ## <a name="non-specific-category"></a>非特定类别  
  **AdminTimeout**  
@@ -64,7 +64,7 @@ ms.locfileid: "48906207"
  字符串属性，用于标识存储数据的目录的名称。  
   
  **DeploymentMode**  
- 确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为服务器模式。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
+ 确定 Analysis Services 服务器实例的操作上下文。 此属性称为服务器模式对话框、 消息和文档中。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
   
  此属性的有效值包括以下项：  
   

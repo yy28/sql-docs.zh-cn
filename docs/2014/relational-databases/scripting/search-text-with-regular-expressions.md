@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,19 +17,19 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077627"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328308"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
   正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
   
 #### <a name="to-find-using-regular-expressions"></a>使用正则表达式进行查找  
   
-1.  若要在“快速查找”、“在文件中查找”、“快速替换”或“在文件中替换”操作过程中，在“查找内容”字段中启用正则表达式，请选中“查找选项”下的“使用”，然后选择“正则表达式”。  
+1.  若要启用的正则表达式中使用**查找内容**字段期间**快速查找**， **FindinFiles**，**快速替换**，或**在文件中替换**操作中，选择**使用**选项下**查找选项**，然后选择**正则表达式**。  
   
 2.  **“查找内容”** 字段旁边的 **“引用列表”** 三角形按钮将变为可用状态。 单击此按钮可显示一组最常用的正则表达式。 如果选择了表达式生成器中的某个项，则可将该项插入 **“查找内容”** 字符串。  
   
@@ -66,7 +64,7 @@ ms.locfileid: "48077627"
 |----------------|------------|-----------------|  
 |最少 - 零个或更多|@|匹配零个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
 |最少 - 一个或更多|#|匹配一个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
-|重复 n 次|^n|匹配前导表达式的 n 个匹配项。 例如，[0-9]^4 匹配所有四位数序列。|  
+|重复 n 次|^n|匹配前导表达式的 n 个匹配项。 例如，[0-9] ^4 匹配所有四个数字的序列。|  
 |分组|()|将子表达式分组|  
 |第 n 个标记文本|\n|在 **“查找或替换”** 表达式中，指示匹配第 n 个标记表达式的文本，其中 n 为 1 到 9 之间的数字。<br /><br /> 在“替换”表达式中，\0 将插入完整的匹配文本。|  
 |右对齐字段|\\(w,n)|在“替换”表达式中，在宽度至少为 *w* 个字符的字段中，右对齐第 n 个标记表达式。|  
@@ -136,5 +134,3 @@ ms.locfileid: "48077627"
 ## <a name="see-also"></a>请参阅  
  [搜索和替换](search-and-replace.md)   
  [使用通配符搜索文本](search-text-with-wildcards.md)  
-  
-  

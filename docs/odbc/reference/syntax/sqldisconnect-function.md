@@ -20,16 +20,16 @@ ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d211fff7cdc008988dd9f984e64838c8903c6dc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61e32c11aafeaf693188a96b48ddd60728ba5bc4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813945"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203946"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLDisconnect**关闭与特定的连接句柄关联的连接。  
@@ -39,7 +39,7 @@ ms.locfileid: "47813945"
 ```  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## <a name="arguments"></a>参数  

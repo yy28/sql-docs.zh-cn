@@ -1,5 +1,5 @@
 ---
-title: 从 Power Pivot 还原 |Microsoft 文档
+title: 从 Analysis Services 中的 Power Pivot 还原 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f95c1e891a218af73eb7c5bacbd1ea5a48e3a830
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041921"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072766"
 ---
 # <a name="restore-from-power-pivot"></a>从 Power Pivot 还原
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34041921"
   
 5.  在 **“选项”** 中，选中 **“包括安全信息”** 。 在从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿还原时，此设置不适用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表格模型数据库](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
  [从 Power Pivot 导入](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   

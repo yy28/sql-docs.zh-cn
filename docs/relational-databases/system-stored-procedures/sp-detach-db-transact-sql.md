@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825665"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201906"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*是**nvarchar(10)** 值，该值具有默认值为**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据被删除，除非数据库是只读的。 如果为 NULL 或 **，则返回 true**，全文索引相关的元数据保留。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **@keepfulltextindexfile**中的未来版本将删除参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -114,12 +114,12 @@ GO
 ```  
   
 > [!NOTE]  
->  若要强制当前用户移出数据库立即或在指定的秒数内还使用 ROLLBACK 选项： ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+>  若要立即强制当前用户在数据库之外或在指定的秒数，还使用 ROLLBACK 选项：ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="reattaching-a-database"></a>重新附加数据库  
  可以使用 CREATE DATABASE（带有 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 选项）保留并重新附加分离文件。 这些文件可以移动并附加到其他服务器上。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定服务器角色或成员身份**db_owner**数据库的角色。  
   
 ## <a name="examples"></a>示例  

@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_scriptpublicationcustomprocs
@@ -17,12 +16,12 @@ ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c6a24a03e1ac8b4fff3fe4af878f051cf2e35a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b57ae49875c07607e153b793c76db31d5dd347b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815447"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808639"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
   
  **sp_scriptxupdproc**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限授予**公共**; 若要限制对成员的访问此存储过程内执行过程安全性检查**sysadmin**固定的服务器角色和**db_所有者**当前数据库中的固定的数据库角色。  
   
 ## <a name="see-also"></a>请参阅  

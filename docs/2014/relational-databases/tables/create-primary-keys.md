@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - primary keys [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34d597264fe9eba8299ee4619293220a67928db5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1203872d92c1b9d424cfe457437cbde16b8e2120
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794539"
 ---
 # <a name="create-primary-keys"></a>创建主键
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义主键。 创建主键将自动创建相应的唯一索引、聚集索引或非聚集索引。  
@@ -29,7 +28,7 @@ ms.locfileid: "48106697"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建主键，使用：**  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48106697"
   
 #### <a name="to-create-a-primary-key-in-an-existing-table"></a>在现有表中创建主键  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48106697"
   
 #### <a name="to-create-a-primary-key-in-a-new-table"></a>在新表中创建主键  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

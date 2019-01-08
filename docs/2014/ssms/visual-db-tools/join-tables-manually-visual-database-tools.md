@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - manual joins [SQL Server]
@@ -14,15 +14,15 @@ ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16d371fda3a18a748714db88aa345aa739cbed9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812759"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手动联接表 (Visual Database Tools)
-  向查询中添加两个或多个表时，[查询和视图设计器](visual-database-tools.md)将尝试根据公共数据或数据库中存储的关于这些表如何相关的信息来联接这些表。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md)。 但是，如果查询和视图设计器未自动联接这些表，或者您希望在这些表之间创建其他联接条件，则可手动联接这些表。  
+  向查询中添加两个或多个表时， [查询和视图设计器](visual-database-tools.md) 将尝试根据公共数据或数据库中存储的关于这些表如何相关的信息来联接这些表。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md)。 但是，如果查询和视图设计器未自动联接这些表，或者您希望在这些表之间创建其他联接条件，则可手动联接这些表。  
   
  除基于包含相同信息的列之外，还可以基于任意两列之间的比较创建联接。 例如，如果数据库包含 `titles` 和 `roysched`两个表，则可将 `ytd_sales` 表的 `titles` 列中的值与 `lorange` 表的 `hirange` 和 `roysched` 列中的值相比较。 创建此联接将允许您查找特定的书名，这些书籍截止到目前为止的年销售额介于版税的最高和最低范围之内。  
   

@@ -14,12 +14,12 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 961ff9fe552fa30eaad4667fdd1911a44f3a35f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793035"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208776"
 ---
 # <a name="installation-components"></a>安装组件
 > [!NOTE]  
@@ -29,7 +29,7 @@ ms.locfileid: "47793035"
   
  ![安装组件之间的关系](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在 ODBC 2 中使用 Odbc.inf 文件。*x*来描述所需的每个 ODBC 文件组件中不使用 ODBC 3 *.x*。 ODBC 3 附带驱动程序 *.x*组件不需要创建一个 Odbc.inf 文件。 删除**SQLInstallDriver**并**SQLInstallODBC**，并不推荐使用的**SQLInstallTranslator**，呈现 Odbc.inf 不必要。 中现在提供 Odbc.inf Driver 关键字部分中要使用的驱动程序信息*lpszDriver*中的参数**SQLInstallDriverEx**。 转换器信息的使用 [ODBC 转换器] 是和中现在提供转换器规范部分 Odbc.inf *lpszTranslator*的参数**SQLInstallTranslatorEx**。 这些更改允许 ODBC 安装程序可以跨平台可移植性。  
   
  有关这些组件的详细信息，请参阅本部分末尾的以下主题。  

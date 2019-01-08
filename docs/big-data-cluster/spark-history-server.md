@@ -1,20 +1,21 @@
 ---
-title: 调试和诊断的 Spark 应用程序在 Spark History Server 中的 SQL Server 大数据群集上
-description: 调试和诊断的 Spark 应用程序在 Spark History Server 中的 SQL Server 大数据群集上
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: 调试/诊断的 Spark 应用程序
+titleSuffix: SQL Server 2019 big data clusters
+description: 使用 Spark History Server 来调试和诊断 SQL Server 2019 大数据群集上运行的 Spark 应用程序。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460862"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029741"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>调试和诊断的 Spark 应用程序在 Spark History Server 中的 SQL Server 大数据群集上
 
@@ -41,31 +42,31 @@ Spark History Server web UI 如下所示：
 
 + 检查**输入**，**输出**，并**表操作**通过单独选择这些选项卡。
 
-    ![数据选项卡](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Spark History Server 数据选项卡](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + 通过单击按钮来复制所有行**都复制**。
 
-    ![数据复制](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![复制所有行](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + 通过单击按钮将所有数据都保存为 CSV 文件**csv**。
 
-    ![保存数据](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![将数据保存为 CSV 文件](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + 通过在字段中输入关键字搜索**搜索**，将立即显示搜索结果。
 
-    ![数据搜索](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![使用关键字进行搜索](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + 单击列标题以对表进行排序，单击加号以展开的行以显示更多详细信息，或单击减号可折叠行。
 
-    ![数据表](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![数据的表功能](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + 通过单击按钮下载单个文件**部分下载**，将在右侧，那么所选的文件下载到本地位置。 如果文件不存在任何更多的情况下，它将打开新选项卡以显示错误消息。
 
-    ![数据下载行](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![下载数据行](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + 通过选择复制完整路径或相对路径**复制完整路径**，**复制相对路径**这从下载菜单会展开。 有关 azure 数据湖存储文件中，**在 Azure 存储资源管理器中打开**将启动 Azure 存储资源管理器。 并在登录时找到到确切的文件夹。
 
-    ![数据复制路径](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![复制完整或相对路径](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + 单击在表下面的编号，以导航页时过许多行以在一页上显示。 
 
@@ -99,11 +100,11 @@ Spark History Server web UI 如下所示：
 
 + 通过单击播放作业**播放**按钮，然后通过单击停止按钮随时停止。 颜色以在播放时显示不同状态中的任务显示：
 
-    + 绿色表示成功： 作业已成功完成。
-    + 橙色试： 任务已失败但不是会影响作业最终结果的实例。 这些任务必须复制或重试实例可能稍后会成功。
-    + 蓝色表示运行： 在任务运行。
-    + 白色等待或已跳过： 该任务正在等待运行，或已跳过阶段。
-    + 红色失败： 该任务失败。
+    + 绿色表示成功：作业已成功完成。
+    + 为橙色重试：任务已失败但不是会影响作业最终结果的实例。 这些任务必须复制或重试实例可能稍后会成功。
+    + 蓝色用于正在运行：运行任务。
+    + 白色等待或已跳过：该任务正在等待运行，或已跳过阶段。
+    + 红色表示失败：任务失败。
 
     ![关系图颜色样本运行](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,13 +162,13 @@ Spark History Server web UI 如下所示：
 ### <a name="data-skew"></a>数据偏斜
 单击**的数据偏斜**选项卡上，相应显示偏斜的任务基于指定的参数。 
 
-+ **指定参数**-第一部分显示的参数，用于检测数据偏斜。 内置的规则是： 大于三次平均任务读取的数据，读取的任务数据，读取的任务数据是超过 10 MB。 如果你想要定义自己的规则的偏斜的任务，则可以选择你的参数，**偏斜阶段**，并**倾斜 Char**部分将进行相应地刷新。 
++ **指定参数**-第一部分显示的参数，用于检测数据偏斜。 内置的规则是：任务数据读取大于平均任务读取的数据，三次，并且任务数据读取超过 10 MB。 如果你想要定义自己的规则的偏斜的任务，则可以选择你的参数，**偏斜阶段**，并**倾斜 Char**部分将进行相应地刷新。 
 
 + **倾斜阶段**-第二部分显示阶段，已倾斜符合上面指定的条件的任务。 如果阶段中有多个偏斜的任务，偏斜的阶段表仅显示最偏斜的任务 （例如，数据偏斜的最大数据）。 
 
     ![数据倾斜 section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **倾斜图**– 选中偏斜阶段表中的行后，偏斜的图表显示多个任务分布区的详细信息基于读取的数据和执行时间。 倾斜的任务标记为红色和蓝色标记的常规任务。 出于性能考虑，图表仅显示最多 100 个示例任务。 任务详细信息将显示在右下面板。
++ **倾斜图**-选中偏斜阶段表中的行后，偏斜的图表显示多个任务分布区的详细信息基于读取的数据和执行时间。 倾斜的任务标记为红色和蓝色标记的常规任务。 出于性能考虑，图表仅显示最多 100 个示例任务。 任务详细信息将显示在右下面板。
 
     ![数据倾斜 section3](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 

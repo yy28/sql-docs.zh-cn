@@ -23,19 +23,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661183"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532788"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存当前或最近活动在 PolyBase 查询中的所有请求有关的信息。 它列出了每个请求/查询对应一行。  
   
- 基于会话和请求 ID，用户可以然后检索生成要执行 – 通过 sys.dm_exec_distributed_requests 的实际分布式的请求。 例如，涉及常规 SQL 和外部的 SQL 表的查询将分解为跨各种计算节点执行的各种语句/请求。 若要在所有计算节点跟踪分布式的步骤，我们介绍可以用于跟踪分别与一个特定的请求和运算符，相关联的计算节点上的所有操作的 global 的执行 ID。  
+ 基于会话和请求 ID，用户可以然后检索生成要执行的通过 sys.dm_exec_distributed_requests 的实际分布式的请求。 例如，涉及常规 SQL 和外部的 SQL 表的查询将分解为跨各种计算节点执行的各种语句/请求。 若要在所有计算节点跟踪分布式的步骤，我们介绍可以用于跟踪分别与一个特定的请求和运算符，相关联的计算节点上的所有操作的 global 的执行 ID。  
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
