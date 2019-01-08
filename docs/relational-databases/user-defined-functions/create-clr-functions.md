@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 51f7f52e3237d6fbbf5bd6b9224d1434a129e3e5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663286"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202198"
 ---
 # <a name="create-clr-functions"></a>创建 CLR 函数
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "51663286"
   
 -   通过使用 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 语句创建引用注册程序集的函数。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中部署 SQL Server 项目将在为该项目指定的数据库中注册程序集。 部署项目时，还会在数据库中为使用 **SqlFunction** 属性注释的所有方法创建 CLR 函数。 有关详细信息，请参阅 [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md)。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  默认情况下，关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 CLR 代码的功能。 你可以创建、更改和删除引用托管代码模块的数据库对象，但是除非通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [启用了](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled 选项 [，否则这些引用将不会在](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)中执行。  
   
 ## <a name="accessing-external-resources"></a>访问外部资源  

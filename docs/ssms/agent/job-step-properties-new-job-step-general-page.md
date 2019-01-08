@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0afcc9e97bf2518dc0e3fc400842f17c9442543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92f106346e9e1e3d292c1d1a0f40b41da6067fae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744815"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215706"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作业步骤属性 - 新建作业步骤（“常规”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47744815"
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 脚本作业步骤的选项  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，将从 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
   
 **VBScript**  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4fdb8995798b408e0418e2170631f3b331acff0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824215"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596688"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47824215"
   
  **权限**。 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在表上启用 Stretch Database 还需具有表的 ALTER 权限。  
 
- >   [!NOTE]
+ > [!NOTE]
  > 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。
  
 ##  <a name="EnableWizardTable"></a> 使用向导在表上启用 Stretch Database  
@@ -71,7 +71,7 @@ ms.locfileid: "47824215"
 -   根据需要，如果表中同时包含热数据和冷数据，则使用 `FILTER_PREDICATE = <function>` 子句指定一个函数来选择要迁移的行。 该谓词必须调用内联表值函数。 有关详细信息，请参阅 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 如果未指定筛选器函数，则将迁移整个表。  
   
     > [!IMPORTANT]  
-    >  如果提供的筛选器函数性能不佳，则数据迁移性能也不佳。 Stretch Database 通过使用 CROSS APPLY 运算符将筛选器函数应用到表。  
+    > 如果提供的筛选器函数性能不佳，则数据迁移性能也不佳。 Stretch Database 通过使用 CROSS APPLY 运算符将筛选器函数应用到表。  
   
 -   指定 `MIGRATION_STATE = OUTBOUND` 以立即开始数据迁移，或指定  `MIGRATION_STATE = PAUSED` 以推迟数据迁移的开始时间。  
   

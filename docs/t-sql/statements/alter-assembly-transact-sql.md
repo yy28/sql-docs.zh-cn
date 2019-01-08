@@ -24,19 +24,19 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c405884f8ff87cb0b37991dc5639bf69068a6ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503088"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203966"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   通过修改程序集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录属性更改程序集。 ALTER ASSEMBLY 将程序集刷新为保存其实现的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本，并添加或删除与之关联的文件。 可以使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 创建程序集。  
 
->  [!WARNING]
+> [!WARNING]
 >  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 有关详细信息，请参阅 [CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,11 +85,11 @@ ALTER ASSEMBLY assembly_name
  必须为需要更新的任何相关程序集发出单独的 ALTER ASSEMBLY 语句。  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }   
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  `PERMISSION_SET` 选项受 `clr strict security` 选项的影响，首次警告中给予了相关说明。 如果启用 `clr strict security`，所有程序集被视为 `UNSAFE`。  
- 指定程序集的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 代码访问权限集属性。 有关此属性的详细信息，请参阅 [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)。  
-  
-> [!NOTE]  
+>  指定程序集的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 代码访问权限集属性。 有关此属性的详细信息，请参阅 [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)。  
+> 
+> [!NOTE]
 >  EXTERNAL_ACCESS 和 UNSAFE 选项在包含的数据库中不可用。  
   
  VISIBILITY = { ON | OFF }  

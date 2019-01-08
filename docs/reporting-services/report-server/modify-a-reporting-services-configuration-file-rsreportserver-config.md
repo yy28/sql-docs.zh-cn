@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758651"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202136"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 配置文件 (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将应用程序设置存储在一组配置文件中。 安装程序会为您安装的每个报表服务器实例创建配置文件。 每个文件中的值要么在安装过程中设置，要么在您使用工具和应用程序将服务器配置为执行某个操作时设置。 在某些情况下，必须直接修改文件来添加或配置高级设置。 将配置设置指定为 XML 元素或属性。 如果您了解 XML 和配置文件，则可以使用文本编辑器或代码编辑器来修改可以由用户定义的设置。  
   
  某些配置设置只能通过工具来设置。 包含加密值的设置必须通过 Reporting Services 配置工具、安装程序或 **rsconfig** 命令行实用工具来修改。 若要运行这些工具，您必须是本地 Administrators 组的成员。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在修改配置文件时一定要格外小心。 如果要修改供内部使用而保留的设置，则可能会禁用您的安装。 通常，除非试图解决的是特定问题，否则建议您不要修改配置设置。 有关可安全更改的设置的详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 或 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。 有关配置文件的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 产品文档。  
   
  本主题内容：  

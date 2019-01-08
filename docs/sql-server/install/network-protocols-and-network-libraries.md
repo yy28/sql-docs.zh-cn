@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696635"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201866"
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696635"
 ## <a name="server-message-block-protocol"></a>服务器消息块协议  
  周边网络中的服务器应该禁用所有不必要的协议，其中包括服务器消息块 (SMB)。 Web 服务器和域名系统 (DNS) 服务器不需要 SMB。 应该禁用此协议，以防来自用户枚举的威胁。  
   
-> [!WARNING]  
+> [!WARNING]
 >  禁用服务器消息块将阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 群集服务访问远程文件共享。 如果您执行或计划执行以下操作之一，请不要禁用 SMB：  
->   
+> 
 >  -   使用 Windows 群集节点和文件共享多数仲裁模式  
 > -   在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的过程中将 SMB 文件共享指定为数据目录  
 > -   在 SMB 文件共享上创建数据库文件  
