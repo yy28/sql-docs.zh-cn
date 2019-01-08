@@ -7,18 +7,16 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e8d7fac329ef0c12566c2479459749dd74a5934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a799ff3a36ebf3c2381bdaf17c697f190ebf2fe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835655"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328627"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>“选择搜索文件夹”对话框 (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,4 +56,3 @@ ms.locfileid: "47835655"
   
 **应用**  
 将在“选择的文件夹”列表中列出的搜索文件夹集另存为命名文件夹集。 然后，可以在“查找和替换”窗口的所有选项卡上的“查找范围”字段中选择此文件夹集。 关闭“选择搜索文件夹”对话框。  
-  
