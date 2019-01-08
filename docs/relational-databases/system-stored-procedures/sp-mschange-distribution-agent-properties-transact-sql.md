@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_distribution_agent_properties
@@ -17,12 +16,12 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0b7e2f51be55c9d955cd60ea500808f4b8b8250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b7ebae98b83c743fa2ea111a2809b3d1a043005
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629396"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774129"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  下表说明了可以更改的分发服务器代理作业的属性，以及对这些属性值的限制。  
   
-|“属性”|ReplTest1|Description|  
+|属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理作业的 Windows 帐户的密码。|  
@@ -97,7 +96,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  发布服务器实例上的运行时[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本，应使用[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)更改运行于分发服务器的推送订阅进行同步的合并代理作业的属性。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**分发服务器上的固定的服务器角色可以执行**sp_MSchange_distribution_agent_properties**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097567"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767219"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列模式信息配置文件请求”** 设置选项。 列模式配置文件报告一组涵盖指定字符串列中值的百分比的正则表达式。 此配置文件可以帮助您识别数据中的问题（如无效字符串），还可以建议可用于以后验证新值的正则表达式。 例如，美国邮政编码列的模式配置文件可能会生成正则表达式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他的正则表达式，则数据有可能包含无效或格式不正确的值。  
@@ -40,7 +39,7 @@ ms.locfileid: "48097567"
  作为标记化过程的一部分，所有分隔符都将规范为一个空格，但字符被保留。  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>了解标记表的使用  
- 根据需要，通过对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中创建的特殊表中的标记和关联项进行排序，可以使用一个标记 (tag) 对关联标记 (token) 进行分组。 标记表必须有两个字符串列，一个命名为“标记”，另一个命名为“术语”。 这些列可以为类型`char`， `nchar`， `varchar`，或`nvarchar`，但不是`text`或`ntext`。 可以将多个标记和相应的术语组合到一个表中。 一个列模式配置文件请求仅可以使用一个标记表。 可以使用单独的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器来连接到标记表。 因此，标记表可以与源数据位于不同的数据库或不同的服务器。  
+ 根据需要，通过对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中创建的特殊表中的标记和关联项进行排序，可以使用一个标记 (tag) 对关联标记 (token) 进行分组。 标记表必须有两个字符串列，一个命名为“标记”，另一个命名为“术语”。 这些列可以为 `char`、`nchar`、`varchar` 或 `nvarchar` 类型，但不可以为 `text` 或 `ntext`。 可以将多个标记和相应的术语组合到一个表中。 一个列模式配置文件请求仅可以使用一个标记表。 可以使用单独的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器来连接到标记表。 因此，标记表可以与源数据位于不同的数据库或不同的服务器。  
   
  例如，可以使用一个标记“方向”将可能出现在街道地址中的“东部”、“西部”、“北部”和“南部”值分为一组。 下表就是这样一个标记表的示例。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48097567"
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   
 ## <a name="see-also"></a>请参阅  
- [数据事件探查任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)   
+ [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   
   

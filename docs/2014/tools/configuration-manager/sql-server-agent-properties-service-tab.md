@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e85edf0da738b51aabaef66d9e52954ffcb44591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6eb2a23761dc24243a7a10b0e4cdbeb5b9ffe58d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211087"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775431"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server 代理属性（“服务”选项卡）
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
@@ -50,9 +49,9 @@ ms.locfileid: "48211087"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：此服务无法启动。  
+-   禁用：此服务无法启动。  
   
- **State**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
+ **状态**  
+ 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
   
   

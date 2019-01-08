@@ -18,15 +18,15 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2647d65f91fff3c21a63a7b2e21dcd0d144e00c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525751"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>为可用性组手动准备辅助数据库 (SQL Server)
-  本主题介绍如何为中的 AlwaysOn 可用性组准备辅助数据库[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或 PowerShell。 准备辅助数据库需要两个步骤：(1) 使用 RESTORE WITH NORECOVERY 将主数据库的最近数据库备份和后续的日志备份还原到承载辅助副本的每个服务器实例；(2) 将还原的数据库联接到可用性组。  
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为 AlwaysOn 可用性组准备辅助数据库。 准备辅助数据库需要两个步骤：（1） 还原主数据库的最近数据库备份和后续日志备份应用到每个承载辅助副本的服务器实例、 使用 RESTORE WITH NORECOVERY，和 （2） 将还原的数据库联接到可用性组。  
   
 > [!TIP]  
 >  如果您具有现有的日志传送配置，则可能能够将日志传送主数据库与其一个或多个辅助数据库一起转换为 AlwaysOn 主数据库和一个或多个 AlwaysOn 辅助数据库。 有关详细信息，请参阅[到 AlwaysOn 可用性组从日志传送先决条件迁移&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "48189673"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要准备辅助数据库，请使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48189673"
   
 -   [相关备份和还原任务](#RelatedTasks)  
   
--   **跟进：** [准备辅助数据库之后](#FollowUp)  
+-   **跟进：**[准备辅助数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48189673"
 ####  <a name="Permissions"></a> Permissions  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。  
   
- 如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)备份。  
+ 如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -245,16 +245,16 @@ ms.locfileid: "48189673"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **准备辅助数据库**  
   
-1.  如果需要创建主数据库的最新备份，将目录更改 (`cd`) 到承载主副本的服务器实例。  
+1.  如果您需要创建主数据库的最近备份，请将目录 (`cd`) 改为承载主副本的服务器实例。  
   
 2.  使用 `Backup-SqlDatabase` cmdlet 创建每个备份。  
   
-3.  将目录更改 (`cd`) 到承载辅助副本的服务器实例。  
+3.  切换目录 (`cd`) 到承载辅助副本的服务器实例。  
   
 4.  若要还原数据库以及每个主数据库的日志备份，请使用 `restore-SqlDatabase` cmdlet 并指定 `NoRecovery` 还原参数。 如果文件路径在承载主副本和目标辅助副本的计算机之间存在差异，还要使用 `RelocateFile` 还原参数。  
   
     > [!NOTE]  
-    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 5.  若要完成辅助数据库的配置，您需要将其联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
@@ -273,7 +273,7 @@ Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\ba
 # Restore database backup   
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
 # Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery –ServerInstance "DestinationMachine\Instance"  
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
   

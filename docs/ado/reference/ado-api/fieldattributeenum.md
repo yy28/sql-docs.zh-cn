@@ -16,12 +16,12 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507162"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定的一个或多个特性[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -38,7 +38,7 @@ ms.locfileid: "47632315"
 |**adFldIsRowURL**|0x10000|指示该字段包含的 URL 的名称将记录表示的数据存储区的资源。|  
 |**adFldLong**|0x80|指示该字段的长度的二进制字段。 此外表示可以使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)并[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法。|  
 |**adFldMayBeNull**|0x40|指示可以从该字段读取 null 值。|  
-|**adFldMayDefer**|0x2|指示字段延迟 — 也就是说，字段值不会检索从数据源与整个记录，但仅当您显式访问它们。|  
+|**adFldMayDefer**|0x2|指示该字段是，延迟的是，从数据源与整个记录，但仅在显式访问时不检索字段值。|  
 |**adFldNegativeScale**|0x4000|指示该字段从支持负的小数位数值的列表示的数字值。 指定刻度[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)属性。|  
 |**adFldRowID**|0x100|指示该字段包含的永久行标识符，无法写入到除若要标识 （例如记录号、 唯一标识符等） 的行没有有意义的值。|  
 |**adFldRowVersion**|0x200|指示该字段包含某种类型的用来跟踪更新的时间或日期戳。|  

@@ -23,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538076"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "47734595"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<继承列 >**|—|继承中的列**sys.endpoints** (有关详细信息，请参阅[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
-|**角色**|**tinyint**|镜像角色，为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = partner<br /><br /> **2** = 见证服务器<br /><br /> **3** = all<br /><br /> 注意： 此值是仅针对数据库镜像相关。|  
-|**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **合作伙伴**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> 注意： 此值是仅针对数据库镜像相关。|  
+|**\<继承列 >**|-|继承中的列**sys.endpoints** (有关详细信息，请参阅[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
+|**角色**|**tinyint**|镜像角色，为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = partner<br /><br /> **2** = 见证服务器<br /><br /> **3** = all<br /><br /> 注意：该值只适用于数据库镜像。|  
+|**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **合作伙伴**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> 注意：该值只适用于数据库镜像。|  
 |**is_encryption_enabled**|**bit**|**1**表示启用加密。<br /><br /> **0**表示禁用加密。|  
 |**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|连接到此端点所需的身份验证类型的说明，为以下值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|身份验证所用证书的 ID（如果有）。<br /><br /> 0 = 使用 Windows 身份验证。|  
-|**encryption_algorithm**|**tinyint**|加密算法，为以下值之一：<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – 无 RC4<br /><br /> **4** – 无、 AES<br /><br /> **5** – RC4、 AES<br /><br /> **6** – AES、 RC4<br /><br /> **7** – 无 RC4 AES<br /><br /> **8** – 无、 AES RC4|  
+|**encryption_algorithm**|**tinyint**|加密算法，为以下值之一：<br /><br /> **0** -无<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -无、 RC4<br /><br /> **4** -无、 AES<br /><br /> **5** -RC4、 AES<br /><br /> **6** -AES、 RC4<br /><br /> **7** -无、 RC4 AES<br /><br /> **8** -无、 AES RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的说明，为以下值之一：<br /><br /> 无<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>备注  
@@ -55,7 +55,7 @@ ms.locfileid: "47734595"
 > [!NOTE]  
 >  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本，可以对使用 RC4 或 RC4_128 加密的材料解密在任何兼容性级别中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

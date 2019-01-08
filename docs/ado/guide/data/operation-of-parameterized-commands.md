@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516995"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
 如果你正在使用较大的子**记录集**，尤其是相对于父级的大小**记录集**，但需要访问仅在几个子级的章节中，你可能会发现使用更加高效参数化的命令。  
@@ -53,7 +53,7 @@ SHAPE {SELECT * FROM customer}
   
 5.  对检索到的子行的引用 (即，子的一章**记录集**) 放置在父级的当前行的章节列**记录集**。  
   
-6.  访问另一行的章节列时，将重复步骤 3 – 5。  
+6.  访问另一行的章节列时，将重复步骤 3-5。  
   
  **缓存子行**动态属性设置为**True**默认情况下。 根据查询的参数值而不同的缓存行为。 在使用单个参数，子查询中**记录集**为给定的参数值将缓存之间具有该值的子项的请求。 下面的代码演示此：  
   

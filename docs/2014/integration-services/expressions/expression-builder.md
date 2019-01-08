@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
@@ -15,12 +14,12 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0560d4cc4b5aeaa0b96269e5ee1bbfe9c61e83c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c3daace92f033cb96428226b51294f5a372b7c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118457"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764069"
 ---
 # <a name="expression-builder"></a>表达式生成器
   可以使用“表达式生成器”对话框创建和编辑属性表达式，或者编写使用图形用户界面设置变量值的表达式，此类表达式列出不同的变量并提供对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言包含的函数、类型转换和运算符的内置引用。  
@@ -48,9 +47,9 @@ ms.locfileid: "48118457"
 |**计算表达式**|单击 **“计算表达式”** 可以查看表达式的计算结果。|  
   
 ## <a name="see-also"></a>请参阅  
- [表达式页](expressions-page.md)   
+ [“表达式”页](expressions-page.md)   
  [属性表达式编辑器](property-expressions-editor.md)   
- [Integration Services &#40;SSIS&#41;变量](../integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
  [系统变量](../system-variables.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113433"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411674"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>确定 Analysis Services 实例的服务器模式
   Analysis Services 可以安装在以下三种服务器模式之一下：多维和数据挖掘（默认模式）、PowerPivot for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
@@ -34,10 +34,10 @@ ms.locfileid: "48113433"
  或者，您可以在包含在每个 Analysis Services 实例中的 msmdsrv.ini 文件中查看 `DeploymentMode` 属性。 该属性的值标识服务器模式。 有效值为 0（多维）、1 (SharePoint) 或 2（表格）。 你必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员（即，服务器角色的成员）才可以打开 msmdsrv.ini 文件。 此文件包含结构化的 XML。 可以使用记事本或其他文本编辑器查看该文件。  
   
 > [!CAUTION]  
->  值不更改`DeploymentMode`属性。 不支持在安装服务器后手动更改该属性。  
+>  不要更改 `DeploymentMode` 属性的值。 不支持在安装服务器后手动更改该属性。  
   
 ## <a name="about-the-deploymentmode-property"></a>关于 DeploymentMode 属性  
- `DeploymentMode` 属性确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为服务器模式。 此属性基于您安装 Analysis Services 的方式由安装程序启动。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
+ `DeploymentMode` 属性确定 Analysis Services 服务器实例的操作上下文。 此属性称为服务器模式对话框、 消息和文档中。 此属性基于您安装 Analysis Services 的方式由安装程序启动。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
   
  此属性的有效值包括以下项：  
   
@@ -54,8 +54,8 @@ ms.locfileid: "48113433"
  [在多维和数据挖掘模式下安装 Analysis Services](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 安装](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [连接到 Analysis Services](connect-to-analysis-services.md)   
- [表格模型解决方案&#40;SSAS 表格&#41;](../tabular-model-solutions-ssas-tabular.md)   
- [多维模型解决方案&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [挖掘模型&#40;Analysis Services-数据挖掘&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [表格模型解决方案（SSAS 表格）](../tabular-model-solutions-ssas-tabular.md)   
+ [多维模型解决方案 (SSAS)](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [挖掘模型（Analysis Services - 数据挖掘）](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

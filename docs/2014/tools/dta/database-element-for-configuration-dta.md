@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,15 +14,15 @@ ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a3547d10f325e047174f7106267b480084e88df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062021"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747279"
 ---
 # <a name="database-element-for-configuration-dta"></a>用于配置的数据库元素 (DTA)
-  指定要对其数据库引擎优化顾问评估其假设配置的数据库 (由指定`Configuration`元素)。  
+  指定要用数据库引擎优化顾问进行假设配置（由 `Configuration` 元素指定）评估的数据库。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,14 +39,14 @@ ms.locfileid: "48062021"
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**出现次数**|需要一个或多个每次`Server`元素。|  
+|**出现次数**|对于每个 `Server` 元素需要使用一次或多次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[用于配置的服务器元素&#40;DTA&#41;](server-element-for-configuration-dta.md)|  
-|**子元素**|[数据库的名称元素&#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [数据库的架构元素&#40;DTA&#41;](schema-element-for-database-dta.md)<br /><br /> [建议元素&#40;DTA&#41;](recommendation-element-dta.md)|  
+|**父元素**|[用于配置的服务器元素 (DTA)](server-element-for-configuration-dta.md)|  
+|**子元素**|[数据库的名称元素 (DTA)](name-element-for-database-dta.md)<br /><br /> [数据库的架构元素 (DTA)](schema-element-for-database-dta.md)<br /><br /> [建议元素 (DTA)](recommendation-element-dta.md)|  
   
 ## <a name="remarks"></a>备注  
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseTypecomplexType** 。 不要将此 `Database` 元素与其根父为 `Server` 元素的元素（出现在 XML 输入文件的顶部）混淆。 有关详细信息，请参阅[服务器的数据库元素 (DTA)](database-element-for-server-dta.md)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - global trace options [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f46ddc342a3b10a757215882b08032eaee1f0f44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775379"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
   本主题介绍了如何设置应用于随特定的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例创建的所有跟踪的选项。  
@@ -68,7 +67,7 @@ ms.locfileid: "48219623"
         |**86400**|最大值。 每 **86400** 秒（一天）针对阻塞进程轮询一次。|  
   
 ## <a name="see-also"></a>请参阅  
- [设置跟踪显示默认值&#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
+ [设置跟踪显示默认值 (SQL Server Profiler)](sql-server-profiler.md)   
  [SQL Server 事件探查器](sql-server-profiler.md)  
   
   

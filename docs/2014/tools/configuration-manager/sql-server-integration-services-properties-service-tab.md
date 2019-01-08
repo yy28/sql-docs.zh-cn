@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dff47b3ebd6277a34a782b898f73dbec8a7ed3b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755869"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 属性（“服务”选项卡）
   使用“ **属性”对话框中的“服务”选项卡可以查看或指定下列选项** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  。  
@@ -50,9 +49,9 @@ ms.locfileid: "48905697"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：此服务无法启动。  
+-   禁用：此服务无法启动。  
   
- **State**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
+ **状态**  
+ 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
   
   

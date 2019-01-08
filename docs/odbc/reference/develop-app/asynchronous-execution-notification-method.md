@@ -11,12 +11,12 @@ ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec4b197c6c9588194531c2cc29ee1ba79d51fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543400"
 ---
 # <a name="asynchronous-execution-notification-method"></a>异步执行（通知方法）
 ODBC 允许连接和语句操作的异步的执行。 应用程序线程可以在异步模式下调用 ODBC 函数和函数可返回在操作完成后，允许应用程序线程执行其他任务之前。 在 Windows 7 SDK 中，为异步语句或连接操作，将异步操作已完成使用轮询方法确定应用程序。 有关详细信息，请参阅[异步执行 （轮询方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 从 Windows 8 SDK 开始，您可以确定异步操作已完成使用的通知方法。  
@@ -35,7 +35,7 @@ ODBC 允许连接和语句操作的异步的执行。 应用程序线程可以�
   
  只要使用通知模型，将禁用轮询模型。 应用程序不应再次调用原始函数。 调用[SQLCompleteAsync 函数](../../../odbc/reference/syntax/sqlcompleteasync-function.md)以完成异步操作。 如果异步操作完成之前，应用程序会再次调用原始函数，则调用将返回 SQL_ERROR 具有 SQLSTATE IM017 （在异步通知模式下禁用轮询）。  
   
- 使用通知模型时，应用程序可以调用**SQLCancel**或**SQLCancelHandle**取消语句或连接的操作。 如果取消请求成功，ODBC 将返回 SQL_SUCCESS。 此消息并不表示，该函数已实际取消;它指示已处理取消请求。 是否实际取消该函数是依赖于驱动程序的代码和数据源而定。 取消操作时，驱动程序管理器仍将发信号通知事件。 驱动程序管理器返回 SQL_ERROR 返回代码缓冲区中并处于 SQLSTATE HY008 （已取消的操作） 以指示取消成功。 如果该函数完成其正常处理，驱动程序管理器将返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO。  
+ 使用通知模型时，应用程序可以调用**SQLCancel**或**SQLCancelHandle**取消语句或连接的操作。 如果取消请求成功，ODBC 将返回 SQL_SUCCESS。 此消息并不表示，该函数已实际取消;它指示已处理取消请求。 是否实际取消该函数是依赖于驱动程序的代码和数据源决定。 取消操作时，驱动程序管理器仍将发信号通知事件。 驱动程序管理器返回 SQL_ERROR 返回代码缓冲区中并处于 SQLSTATE HY008 （已取消的操作） 以指示取消成功。 如果该函数完成其正常处理，驱动程序管理器将返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO。  
   
 ### <a name="downlevel-behavior"></a>下层行为  
  在完成支持此通知的 ODBC 驱动程序管理器版本是 ODBC 3.81。  
@@ -327,7 +327,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  连接属性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 和 SQL_ATTR_ASYNC_DBC_EVENT 确定 ODBC 是否在异步模式下执行以及 ODBC 是否启用连接句柄的通知模式。 Sql_attr_async_enable 设置和 SQL_ATTR_ASYNC_STMT_EVENT 语句属性确定 ODBC 是否在异步模式下执行以及 ODBC 是否启用通知模式为语句句柄。  
   
-|Sql_attr_async_enable 设置或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|“模式”|  
+|Sql_attr_async_enable 设置或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|模式|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |启用|非 null|异步通知|  
 |启用|null|异步轮询|  

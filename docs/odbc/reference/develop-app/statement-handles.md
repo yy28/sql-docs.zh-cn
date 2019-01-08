@@ -14,15 +14,15 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be194c8e730f1ef797d0db30ff9942735f51617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523693"
 ---
 # <a name="statement-handles"></a>语句句柄
-一个*语句*非常方便地看作是一个 SQL 语句，如**选择\*从员工**。 但是，一个语句是不止是一个 SQL 语句，它包含所有与该 SQL 语句，如所有创建语句的结果集和执行语句中使用参数相关联的信息。 语句不甚至不需要将应用程序定义 SQL 语句。 例如，当目录函数如**SQLTables**执行上一条语句，它将执行返回一系列表名称的预定义的 SQL 语句。  
+一个*语句*非常方便地看作是一个 SQL 语句，如**选择\*从员工**。 但是，一个语句是不止是一个 SQL 语句-它包含所有与该 SQL 语句，如所有创建语句的结果集和执行语句中使用参数相关联的信息。 语句不甚至不需要将应用程序定义 SQL 语句。 例如，当目录函数如**SQLTables**执行上一条语句，它将执行返回一系列表名称的预定义的 SQL 语句。  
   
  语句句柄由标识每个语句。 语句为单个连接，与相关联，可以在该连接上的多个语句。 某些驱动程序限制它们支持; 活动语句数在选项 SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo**指定多少驱动程序支持在单个连接的活动语句。 语句定义要*active*如果它具有挂起的结果，具有结果的结果集或受影响的行的计数**插入**，**更新**，或者**删除**语句或数据发送到多个调用**SQLPutData**。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78fb82daf907173befd246799686433a6eab3b43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64975d3e249db13a956f6300d340ac77dfc29db8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767149"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“候选键配置文件请求”** 设置选项。 候选键配置文件报告某个列或列集对于选定的表是键还是近似键。 此配置文件还有助于标识数据中的问题，如潜在键列中存在重复值。  
@@ -129,7 +128,7 @@ ms.locfileid: "48190817"
  指定要在输出中报告的候选键冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **KeyStrengthThresholdSetting**时，才会禁用该选项。  
   
 ## <a name="see-also"></a>请参阅  
- [数据事件探查任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)   
+ [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   
   

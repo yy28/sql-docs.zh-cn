@@ -16,15 +16,15 @@ ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e47248ac5719b2303c71f2e7b93161112ca7f870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507631"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>选择数据源或驱动程序
-数据源或驱动程序使用的应用程序有时是硬编码应用程序中。 例如，编写由 MIS 部门将传输到另一个数据源中的数据将包含这些数据源的名称的自定义应用程序 — 应用程序只需将不起作用的任何其他数据源。 另一个示例是垂直的应用程序，例如一个用于订单条目。 此类应用程序始终使用相同数据源，该源具有已知的应用程序的预定义的架构。  
+数据源或驱动程序使用的应用程序有时是硬编码应用程序中。 例如，编写由 MIS 部门将传输到另一个数据源中的数据将包含名称的自定义应用程序的这些数据源的应用程序只需将不起作用的任何其他数据源。 另一个示例是垂直的应用程序，例如一个用于订单条目。 此类应用程序始终使用相同数据源，该源具有已知的应用程序的预定义的架构。  
   
  其他应用程序在运行时选择的数据源或驱动程序。 通常情况下，它们是执行即席查询，如使用 ODBC 将数据导入电子表格的泛型应用程序。 通常，此类应用程序列出可用的数据源或驱动程序，并使用户可以选择他们的想要使用。 是否通用应用程序列出数据源、 驱动程序，或两者通常取决于应用程序是否使用基于 DBMS 的或基于文件的驱动程序。  
   

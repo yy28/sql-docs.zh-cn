@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e45532fc19a4fa3cc45857213b75474fc34cd82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b6c7ff7a5ac2539bc6732d68522bb361d6b1b0a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751599"
 ---
 # <a name="uninstall-reporting-services"></a>卸载 Reporting Services
   卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会删除您已创建的内容或已修改的配置。 但是，如果存在在卸载完成后您需要的内容，建议您首先生成内容的副本，再开始卸载过程。  

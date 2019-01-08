@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
@@ -14,17 +13,17 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d12b1cc5b4626ab9093639d69a7ee724f2cc745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147427"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782789"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅（Windows 同步管理器）
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
   
-1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”对话框中，启用使用 Windows 同步管理器对请求订阅进行同步的选项。 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
+1.  启用同步请求订阅与 Windows 同步管理器中的**订阅属性-\<订阅服务器 >:\<订阅数据库 >** 对话框。 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)。  
   
 2.  通过 Windows 的 **“开始”** 菜单访问同步管理器。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48147427"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>启用使用 Windows 同步管理器对请求订阅进行同步的选项  
   
-1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”对话框的“常规”页上，针对“使用 Windows 同步管理器”选项选择值“启用”。  
+1.  上**常规**页**订阅属性-\<订阅服务器 >:\<订阅数据库 >** 对话框中，选择值**启用**有关**使用 Windows 同步管理器**选项。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

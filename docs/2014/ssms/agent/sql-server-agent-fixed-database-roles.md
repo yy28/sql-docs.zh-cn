@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a94f0a88442051597a845623c26e4cc9fe782d31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168757"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773769"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 代理固定数据库角色
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有下列 **msdb** 数据库固定数据库角色，使管理员可以更好地控制对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的访问。 下面按从低到高的访问权限列出了角色：  
@@ -71,7 +71,7 @@ ms.locfileid: "48168757"
  **SQLAgentReaderRole** 包括所有的 **SQLAgentUserRole** 权限，以及查看可用的多服务器作业及其属性和历史记录的列表的权限。 此角色的成员还可以查看所有可用作业和作业计划以及它们的属性的列表，而不只是它们所拥有的那些作业和作业计划。 **SQLAgentReaderRole** 成员不能通过更改作业所有权来获得对它们还没有拥有的作业的访问权限。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，**SQLAgentReaderRole** 的成员只能看到“作业”节点。  
   
 > [!IMPORTANT]  
->  在授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **代理数据库角色**成员代理访问权限之前，请考虑此设置的安全含义。 **SQLAgentReaderRole** 的成员将自动成为 **SQLAgentUserRole**的成员。 这意味着 **SQLAgentReaderRole** 成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的所有** 代理，并且可以使用这些代理。  
+>  在授予  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**代理数据库角色**成员代理访问权限之前，请考虑此设置的安全含义。 **SQLAgentReaderRole** 的成员将自动成为 **SQLAgentUserRole**的成员。 这意味着 **SQLAgentReaderRole** 成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的所有** 代理，并且可以使用这些代理。  
   
  下表汇总了 **SQLAgentReaderRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "48168757"
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，**SQLAgentOperatorRole** 的成员可以看到“作业”、“警报”、“操作员”和“代理”节点。 但此角色的成员看不到“错误日志”节点。  
   
 > [!IMPORTANT]  
->  在授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **代理数据库角色**成员代理访问权限之前，请考虑此设置的安全含义。 **SQLAgentOperatorRole** 的成员将自动成为 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的成员。 这意味着 **SQLAgentOperatorRole** 的成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **或** SQLAgentReaderRole **的所有** 代理，并且可以使用这些代理。  
+>  在授予  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**代理数据库角色**成员代理访问权限之前，请考虑此设置的安全含义。 **SQLAgentOperatorRole** 的成员将自动成为 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的成员。 这意味着 **SQLAgentOperatorRole** 的成员可以访问已被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **或** SQLAgentReaderRole **的所有** 代理，并且可以使用这些代理。  
   
  下表汇总了 **SQLAgentOperatorRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
-|操作|Alerts|运算符|本地作业|多服务器作业|作业计划|代理|  
+|操作|警报|运算符|本地作业|多服务器作业|作业计划|代理|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
 |创建/修改/删除|否|否|是<sup>2</sup> （仅拥有的作业）|否|是（仅拥有的计划）|否|  
 |视图列表（枚举）|用户帐户控制|是 <sup>1</sup>|用户帐户控制|是|是|用户帐户控制|  

@@ -1,5 +1,5 @@
 ---
-title: 应用筛选器以测试数据创建模型 |Microsoft 文档
+title: 应用筛选器来测试数据建模 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03eb6a8b8a459f0d5d0769d1f7af16f06b81f560
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539955"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>将筛选器应用于模型测试数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34020034"
   
  为了确定某一模型是否包含可能会影响结果的预定义筛选器，您可以在 **“属性”** 窗格中查找 **Filter** 属性，或者可以通过使用数据挖掘架构行集对模型进行查询。 例如，下面的查询将返回指定模型的筛选器文本：  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  如果您想要从现有挖掘模型中删除筛选器或更改筛选条件，则必须重新处理该挖掘模型。  
@@ -57,7 +57,7 @@ ms.locfileid: "34020034"
   
 3.  在“输入选择”  选项卡的“选择要用于准确性图表的数据集” 下，选择“指定其他数据集” 选项。  
   
-4.  单击浏览按钮“(…)”以打开一个对话框，并选择外部数据集。  
+4.  单击浏览按钮 **（...）** 以打开一个对话框并选择外部数据集。  
   
 5.  选择事例表，并根据需要添加嵌套表。 根据需要将模型中的列映射到外部数据集中的列。 关闭 **“指定列映射”** 对话框以便保存源表定义。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34020034"
   
 9. 单击“和/或”文本框并选择逻辑运算符来定义多个条件的组合方式。  
   
-10. 还可以根据需要单击“值”文本框右侧的浏览按钮“(…)”，以打开“筛选器”对话框，并对嵌套表或单个事例表列设置条件。  
+10. （可选） 单击浏览按钮 **（...）** 右侧的**值**文本框中，打开**筛选器**对话框框和嵌套表或单个事例表列设置条件。  
   
 11. 查看 **“表达式”** 窗格中的文本以验证整个筛选器条件是否正确。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "34020034"
   
      筛选器条件将在创建准确性图表时应用到数据源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择和映射模型测试数据](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [使用嵌套表数据作为输入准确性图表](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [使用嵌套表数据作为准确性图表的输入](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [选择准确性图表类型和设置图表选项](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

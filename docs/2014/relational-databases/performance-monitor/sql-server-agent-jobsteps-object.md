@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - JobSteps object
@@ -13,12 +13,12 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f268b9e0c90179e73395ad24500bcef0a4ebac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193947"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753609"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 代理中的 JobSteps 对象
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中的 **JobSteps** 性能对象包含用于报告有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的信息的性能计数器。 下表列出了此对象包含的计数器。  

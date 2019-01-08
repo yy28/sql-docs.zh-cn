@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], about merge replication
@@ -14,12 +13,12 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c734af98b906be974a92e2c4286e7b91b6e1d25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752350"
 ---
 # <a name="merge-replication"></a>合并复制
   与事务复制相同，合并复制通常也是从发布数据库对象和数据的快照开始， 并且用触发器跟踪在发布服务器和订阅服务器上所做的后续数据更改和架构修改。 订阅服务器在连接到网络时将与发布服务器进行同步，并交换自上次同步以来发布服务器和订阅服务器之间发生更改的所有行。  
@@ -40,7 +39,7 @@ ms.locfileid: "48148237"
   
  合并复制是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照代理和合并代理实现的。 如果发布未经筛选或使用静态筛选器，快照代理将创建单个快照。 如果发布使用参数化筛选器，则快照代理将为每个数据分区创建一个快照。 合并代理将初始快照应用于订阅服务器。 它还将合并自初始快照创建后发布服务器或订阅服务器上所发生的增量数据更改，并根据所配置的规则检测和解决任何冲突。  
   
- 若要跟踪更改，合并复制（和带有排队更新订阅的事务复制）必须能够唯一地标识每个已发布表中的每一行。 为了完成这一合并复制，需要向每个表添加列 `rowguid`，除非表中已包含一个数据类型为 `uniqueidentifier` 且设置了 `ROWGUIDCOL` 属性的列（这种情况下将使用此列）。 如果从发布中，删除表`rowguid`删除列; 如果现有列用于跟踪，则不会删除该列。 筛选器不能包含复制所用的 `rowguidcol` 来标识行。 提供 `newid()` 函数，为 `rowguid` 列提供默认值，但用户可以按需为每行提供 GUID。 不过，请不要提供值 00000000-0000-0000-0000-000000000000。  
+ 若要跟踪更改，合并复制（和带有排队更新订阅的事务复制）必须能够唯一地标识每个已发布表中的每一行。 为了完成这一合并复制，需要向每个表添加列 `rowguid`，除非表中已包含一个数据类型为 `uniqueidentifier` 且设置了 `ROWGUIDCOL` 属性的列（这种情况下将使用此列）。 如果从发布中删除表，则删除 `rowguid` 列；如果将现有列用于跟踪，则不删除该列。 筛选器不能包含复制所用的 `rowguidcol` 来标识行。 提供 `newid()` 函数，为 `rowguid` 列提供默认值，但用户可以按需为每行提供 GUID。 不过，请不要提供值 00000000-0000-0000-0000-000000000000。  
   
  下面的关系图显示了合并复制中使用的组件。  
   

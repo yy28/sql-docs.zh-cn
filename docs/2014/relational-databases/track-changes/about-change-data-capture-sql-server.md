@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
@@ -15,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bf820b7662b411189d7fd67a2c942be6525c293a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162067"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748523"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
   变更数据捕获可记录应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动。 这样，就可以按易于使用的关系格式提供这些更改的详细信息。 将为修改的行捕获列信息以及将更改应用于目标环境所需的元数据，并将其存储在镜像所跟踪源表的列结构的更改表中。 系统提供了一些表值函数，以便使用者可以系统地访问更改数据。  
@@ -35,23 +34,23 @@ ms.locfileid: "48162067"
  变更数据捕获的更改数据源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志。 在将插入、更新和删除应用于跟踪的源表时，将会在日志中添加说明这些更改的项。 日志用作捕获进程的输入来源。 它会读取日志，并在跟踪的表的关联更改表中添加有关更改的信息。 系统将提供一些函数，以枚举在更改表中指定范围内发生的更改，并以筛选的结果集的形式返回该值。 通常，应用程序进程使用筛选的结果集在某种外部环境中更新源表示形式。  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>了解变更数据捕获和捕获实例  
- 在跟踪对数据库中任何单个表进行的更改之前，必须为数据库显式启用变更数据捕获。 这是使用 [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)存储过程完成的。 为数据库启用变更数据捕获后，可以使用 [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)存储过程将源表标识为跟踪的表。 为表启用变更数据捕获后，将创建一个关联的捕获实例以支持传播源表中的更改数据。 捕获实例由一个更改表和最多两个查询函数组成。 说明捕获实例的配置详细信息的元数据保留在变更数据捕获元数据表`cdc.change_tables`， `cdc.index_columns`，和`cdc.captured_columns`。 可以使用 [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)存储过程来检索此信息。  
+ 在跟踪对数据库中任何单个表进行的更改之前，必须为数据库显式启用变更数据捕获。 这是使用 [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)存储过程完成的。 为数据库启用变更数据捕获后，可以使用 [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)存储过程将源表标识为跟踪的表。 为表启用变更数据捕获后，将创建一个关联的捕获实例以支持传播源表中的更改数据。 捕获实例由一个更改表和最多两个查询函数组成。 说明捕获实例配置详细信息的元数据保留在变更数据捕获元数据表 `cdc.change_tables`、`cdc.index_columns` 和 `cdc.captured_columns` 中。 可以使用 [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)存储过程来检索此信息。  
   
- 与捕获实例关联的所有对象都是在启用变更数据捕获的数据库的变更数据捕获架构中创建的。 捕获实例名称的要求是：必须是有效的对象名，并且在数据库捕获实例中是唯一的。 默认情况下，该名称是源表的 \<*架构名称*_*表名*>。 通过追加名为其关联的更改表`_CT`为捕获实例名称。 函数用于查询所有更改名为通过预先计算`fn_cdc_get_all_changes_`为捕获实例名称。 如果捕获实例配置为支持`net changes`，则`net_changes`查询函数还创建和名为通过预先计算**fn_cdc_get_net_changes\_** 为捕获实例名称。  
+ 与捕获实例关联的所有对象都是在启用变更数据捕获的数据库的变更数据捕获架构中创建的。 捕获实例名称的要求是：必须是有效的对象名，并且在数据库捕获实例中是唯一的。 默认情况下，该名称是源表的 \<*架构名称*_*表名*>。 它的关联更改表的命名方式为：在捕获实例名称后面追加 `_CT`。 用于查询所有更改的函数的命名方式为：在捕获实例名称后面追加 `fn_cdc_get_all_changes_`。 如果捕获实例配置为支持`net changes`，则`net_changes`查询函数还创建和名为通过预先计算**fn_cdc_get_net_changes\_** 为捕获实例名称。  
   
 ## <a name="change-table"></a>更改表  
  变更数据捕获更改表的前五列是元数据列。 这些列提供与记录的更改有关的附加信息。 其余列镜像源表中按名称标识的捕获列（通常还会按类型进行标识）。 这些列保存从源表中收集的捕获列数据。  
   
  应用于源表的每个插入或删除操作在更改表中各占一行。 插入操作生成的行的数据列包含插入后的列值。 删除操作生成的行的数据列包含删除前的列值。 更新操作需要两行数据：一行用于标识更新前的列值，另一行用于标识更新后的列值。  
   
- 更改表中的每一行还包含其他元数据，用于解释更改操作的情况。 __$start_lsn 列标识为更改指定的提交日志序列号 (LSN)。 提交 LSN 不仅标识在同一事务中提交的更改，而且还对这些事务进行排序。 可以使用 \_\_$seqval 列对同一事务中进行的其他更改进行排序。 \_\_$operation 列记录与更改关联的操作：1 = 删除，2 = 插入，3 = 更新（前像），4 = 更新（后像）。 \_\_$update_mask 列是一个可变的位掩码，每个捕获列都有一个对应的定义位。 对于插入和删除项，更新掩码始终设定所有位。 但是，更新行仅设定与更改列对应的那些位。  
+ 更改表中的每一行还包含其他元数据，用于解释更改操作的情况。 __$start_lsn 列标识为更改指定的提交日志序列号 (LSN)。 提交 LSN 不仅标识在同一事务中提交的更改，而且还对这些事务进行排序。 可以使用 \_\_$seqval 列对同一事务中进行的其他更改进行排序。 该列\_ \_$operation 记录与更改关联的操作：1 = 删除，2 = 插入，3 = 更新 （前像），4 = 更新 （后像）。 \_\_$update_mask 列是一个可变的位掩码，每个捕获列都有一个对应的定义位。 对于插入和删除项，更新掩码始终设定所有位。 但是，更新行仅设定与更改列对应的那些位。  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>数据库的变更数据捕获有效性间隔  
  数据库的变更数据捕获有效性间隔是指更改数据可供捕获实例使用的时段。 有效性间隔从为数据库表创建第一个捕获实例时开始，并一直持续到当前时间。  
   
  如果没有定期系统地清除数据，更改表中存储的数据将会变得非常大。 变更数据捕获清除进程负责实施基于保持期的清除策略。 首先，它移动有效性间隔的低端点以满足时间限制。 然后，它删除过期的更改表项。 默认情况下，数据保持期为三天。  
   
- 在高端，当捕获进程提交每批新的更改数据时，新条目添加到`cdc.lsn_time_mapping`为具有更改表项的每个事务。 在映射表中，将保留提交日志序列号 (LSN) 和事务提交时间（分别为 start_lsn 和 tran_end_time 列）。 在中找到的最大 LSN 值`cdc.lsn_time_mapping`表示数据库有效性窗口的高水印。 其相应提交时间将作为基于保持期的清除操作计算新的低水印的基础。  
+ 在高端，当捕获进程提交每批新的更改数据时，将在 `cdc.lsn_time_mapping` 中为每个具有更改表项的事务添加新的项。 在映射表中，将保留提交日志序列号 (LSN) 和事务提交时间（分别为 start_lsn 和 tran_end_time 列）。 位于 `cdc.lsn_time_mapping` 中的最大 LSN 值表示数据库有效性窗口的高水印。 其相应提交时间将作为基于保持期的清除操作计算新的低水印的基础。  
   
  由于捕获进程从事务日志中提取更改数据，因此，向源表提交更改的时间与更改出现在其关联更改表中的时间之间存在内在的延迟。 虽然这种延迟通常很小，但务必记住，在捕获进程处理相关日志项之前无法使用更改数据。  
   

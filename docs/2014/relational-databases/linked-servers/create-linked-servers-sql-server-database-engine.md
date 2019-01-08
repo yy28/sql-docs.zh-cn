@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120204"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766609"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
@@ -35,7 +34,7 @@ ms.locfileid: "49120204"
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  使用时[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，要求`ALTER ANY LINKED SERVER`中的成员身份的服务器上的权限**setupadmin**固定的服务器角色。 使用时[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`权限或成员身份**sysadmin**固定的服务器角色。  
   
 ##  <a name="Procedures"></a> 如何创建链接服务器  
@@ -82,9 +81,9 @@ ms.locfileid: "49120204"
     > [!NOTE]  
     >  如果该 **SQL Server** 实例是默认实例，则输入承载 **SQL Server**实例的计算机的名称。 如果该 **SQL Server** 是命名实例，则输入计算机名称和实例名称，例如 **Accounting\SQLExpress**。  
   
-3.  在中**服务器类型**区域中，选择**SQL Server**以指示该链接的服务器的另一个实例**SQL Server**。  
+3.  在“服务器类型”区域中，选择 SQL Server 以便指示该链接服务器是 SQL Server的另一个实例。  
   
-4.  在 **“安全性”** 页上，指定在原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到链接服务器时将使用的安全上下文。 在通过使用其域登录名连接用户的域环境中，选择 **“使用登录名的当前安全上下文建立连接”** 通常是最佳选择。 在用户通过使用 **SQL Server** 登录名连接到原始 **SQL Server** 时，最佳选择通常是选择 **“通过使用此安全上下文”**，然后提供在链接服务器上进行身份验证时所必需的凭据。  
+4.  在 **“安全性”** 页上，指定在原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到链接服务器时将使用的安全上下文。 在通过使用其域登录名连接用户的域环境中，选择“使用登录名的当前安全上下文建立连接”通常是最佳选择。 在用户通过使用 **SQL Server** 登录名连接到原始 **SQL Server** 时，最佳选择通常是选择 **“通过使用此安全上下文”**，然后提供在链接服务器上进行身份验证时所必需的凭据。  
   
      **本地登录**  
      指定可连接到链接服务器的本地登录。 本地登录可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录，也可以是使用 Windows 身份验证的登录。 使用此列表可以将连接限定为特定的登录，也可以允许某些登录使用其他登录名进行连接。  

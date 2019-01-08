@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507645"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,15 +79,15 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|在结果集中的行的 id。|  
 |**parameter_name**|**sysname**|其中一个参数中指定的名称 *\@params*参数。|  
-|**column_encryption_algorithm**|**tinyint**|指示为列，该参数配置的加密算法代码对应于。 当前支持的值为： 2 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
-|**column_encryption_type**|**tinyint**|代码，用于指示为列，该参数配置的加密类型对应于。 支持的值为：<br /><br /> 0 – （未加密列） 的纯文本<br /><br /> 1 – 随机加密<br /><br /> 2 – 确定性加密。|  
+|**column_encryption_algorithm**|**tinyint**|指示为列，该参数配置的加密算法代码对应于。 当前支持的值为：2 表示**AEAD_AES_256_CBC_HMAC_SHA_256**。|  
+|**column_encryption_type**|**tinyint**|代码，用于指示为列，该参数配置的加密类型对应于。 支持的值为：<br /><br /> 0-纯文本 （不加密列）<br /><br /> 1-随机加密<br /><br /> 2-确定性加密。|  
 |**column_encryption_key_ordinal**|**int**|设置中的第一个结果行的代码。 被引用的行描述为列配置的列加密密钥，该参数对应于。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|类型规范化算法的版本号。|  
   
 ## <a name="remarks"></a>备注  
  一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端驱动程序，支持始终加密，会自动调用**sp_describe_parameter_encryption**检索加密的参数化查询，应用程序发出的元数据。 随后，驱动程序使用的加密元数据与使用 Always Encrypted 保护的数据库列相对应的参数的值进行加密，并将替换为具有加密的应用程序提交的纯文本参数值之前将查询发送到数据库引擎的参数值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**查看任意列加密密钥定义**并**查看任意列主密钥定义**数据库中的权限。  
   
 ## <a name="examples"></a>示例  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.newperfprofile.f1
@@ -15,12 +14,12 @@ ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f817afb2364728b93718f9dc5831b501f681d9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070607"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780289"
 ---
 # <a name="new-agent-profile"></a>新建代理配置文件
   使用 **“新建代理配置文件”** 对话框可以创建新的配置文件。 新的配置文件始终基于现有配置文件，但可以进行修改以满足应用程序的要求。 创建配置文件之后，可以在 **“代理配置文件”** 对话框中将其应用于现有的和将来的代理作业。 可以在“\<代理配置文件名> 属性”对话框中编辑代理参数值。  
@@ -29,7 +28,7 @@ ms.locfileid: "48070607"
  **名称**  
  输入配置文件的名称。  
   
- **Description**  
+ **说明**  
  输入配置文件的说明。  
   
  **参数**  

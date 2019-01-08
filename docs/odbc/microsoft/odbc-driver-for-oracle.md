@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515101"
 ---
 # <a name="odbc-driver-for-oracle"></a>Oracle ODBC 驱动程序
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806725"
   
  ![Oracle 应用程序的 ODBC 驱动程序&#47;驱动程序体系结构](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Oracle ODBC 驱动程序符合 API 一致性级别 1 和 SQL 一致性级别核心。 它还支持 API 的一致性级别 2 和大部分核心应用程序和扩展 SQL 一致性级别中的语法中的某些函数。 驱动程序符合 ODBC 2.5，支持 32 位系统。 Oracle 7.3 x 支持完全;Oracle8 受到有限的支持。 Oracle ODBC 驱动程序不支持的任何新 Oracle8 数据类型，Unicode 数据类型，Blob、 Clob、，等等 — 也不支持 Oracle 的新的关系对象模型。 有关支持的数据类型的详细信息，请参阅[支持的数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
+ Oracle ODBC 驱动程序符合 API 一致性级别 1 和 SQL 一致性级别核心。 它还支持 API 的一致性级别 2 和大部分核心应用程序和扩展 SQL 一致性级别中的语法中的某些函数。 驱动程序符合 ODBC 2.5，支持 32 位系统。 Oracle 7.3 x 支持完全;Oracle8 受到有限的支持。 Oracle ODBC 驱动程序不支持的任何新 Oracle8 数据类型的 Unicode 数据类型、 Blob、 Clob 和等等的也不支持 Oracle 的新的关系对象模型。 有关支持的数据类型的详细信息，请参阅[支持的数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
   
  若要访问 Oracle 数据，都需要以下组件：  
   

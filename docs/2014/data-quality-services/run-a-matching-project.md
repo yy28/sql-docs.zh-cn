@@ -14,12 +14,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031504"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512054"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中执行数据匹配。 该匹配过程基于匹配策略中的匹配规则标识匹配记录的群集，基于存活规则将每个群集中的一个记录指定为存活，并且导出结果。 DQS 还在计算机辅助过程中执行匹配过程（也称作消除重复），但您以交互方式创建匹配规则，并且从若干选择中选择存活规则，以便控制匹配过程。  
@@ -41,7 +41,7 @@ ms.locfileid: "51031504"
 ####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能运行匹配项目。  
   
-##  <a name="StartingaMatchingProject"></a> 第一步：启动匹配项目  
+##  <a name="StartingaMatchingProject"></a> 第一步：开始匹配项目  
  您在 DQS 客户端应用程序中创建的数据质量项目中执行匹配活动。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "51031504"
     > [!NOTE]  
     >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域。 有关 DQS 中支持的数据类型的信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
-4.  单击 **加号 (+)** 控件可向映射表中添加行，单击 **减号 (–)** 控件可删除行。  
+4.  单击“加号 (+)”控件可向映射表中添加行，单击“减号 (-)”控件可删除行。  
   
 5.  单击 **“预览数据源”** 可查看您选择的 SQL Server 表或视图中的数据，或查看您所选 Excel 工作表中的数据。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51031504"
   
  存活是可选的。 您可以不运行存活便导出结果，在此情况下，DQS 将使用在匹配分析中指定的透视记录。 如果群集中两个或更多的记录符合存活规则，则存活过程将选择冲突记录中最低的记录 ID 作为存活记录。 您可以使用不同的存活规则将存活记录导出到不同的文件或表。  
   
-1.  在 **“导出”** 页上，在 **“目标类型”** 中选择您要将匹配数据导出到的目标： **“SQL Server”**、 **“CSV 文件”** 或 **“Excel 文件”**。  
+1.  上**导出**页上，选择你想要将匹配数据导出到在目标**目标类型**:**SQL Server**， **CSV 文件**，或**Excel 文件**。  
   
     > [!IMPORTANT]  
     >  如果您使用的是 64 位版本的 Excel，则无法将匹配数据导出到 Excel 文件；只能导出到 SQL Server 数据库或 .csv 文件。  
@@ -175,27 +175,27 @@ ms.locfileid: "51031504"
   
  源数据库统计信息包括：  
   
--   **记录**：数据库中的记录总数  
+-   **记录**:数据库中的记录总数  
   
--   **值总计**：各字段中的值的总数  
+-   **值总计**:字段中值的总数  
   
--   **新值**：自上次运行后的新值总数及其占总体的百分比  
+-   **新值**:自上次运行和及其占总体的百分比后新的值的总数  
   
--   **唯一值**：字段中唯一值的总数及其占总体的百分比  
+-   **唯一值**:中的字段和及其占总体的唯一值的总数  
   
--   **新的唯一值**：字段中新唯一值的总数及其占总体的百分比  
+-   **新的唯一值**:在字段和及其占总体的百分比中新的唯一值的总数  
   
  字段统计信息包括：  
   
--   **字段**：映射中包含的字段的名称。  
+-   **字段**:在映射中包含的字段名称。  
   
--   **域**：已映射到字段的域的名称。  
+-   **域**:映射到字段的域的名称。  
   
--   **新**：新找到的匹配项的数量及其占总数的百分比  
+-   **新**:找到的新匹配项的数目和及其占总数的百分比  
   
--   **唯一**：字段中唯一记录的数目及其占总数的百分比  
+-   **唯一**:中的字段和及其占总数的百分比的唯一记录的数目  
   
--   **完整性**：规则运行完毕所占的百分比。  
+-   **完整性**:规则运行完毕所占百分比。  
   
 ### <a name="matching-policy-notifications"></a>匹配策略通知  
  对于匹配策略活动，以下条件会导致发送通知：  

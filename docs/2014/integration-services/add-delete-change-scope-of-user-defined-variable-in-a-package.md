@@ -13,19 +13,19 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e19b832bc3d7ebf1f883633491b309971cf2938e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398300"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>添加、删除、更改包中用户定义变量的作用域
   这些过程介绍如何使用“变量”窗口来添加、删除和更改包中用户定义变量的作用域。  
   
- 有关变量作用域的详细信息，请参阅[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)。  
+ 有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)区域之下。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 此外提供了系统变量在运行时提供系统信息可用，可使用包和事件处理程序等容器中。 您无法删除系统变量。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了可在运行时提供系统信息的系统变量，这些系统变量可在包和事件处理程序等容器中使用。 您无法删除系统变量。  
   
 ### <a name="to-add-a-variable"></a>添加变量  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48125697"
   
 4.  选择要删除的变量，然后单击 **“删除变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击 **“网格选项”** ，然后选择 **“显示所有作用域的变量”**。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”。  
   
 5.  如果 **“确认删除变量”** 对话框打开，请单击 **“是”** 确认删除。  
   
@@ -77,14 +77,14 @@ ms.locfileid: "48125697"
   
 4.  选择该变量，然后单击 **“移动变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击 **“网格选项”** ，然后选择 **“显示所有作用域的变量”**。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”。  
   
 5.  在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
  [设置用户定义变量的属性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [在子包中使用变量和参数的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

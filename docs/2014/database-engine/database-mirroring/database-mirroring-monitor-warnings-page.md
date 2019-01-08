@@ -12,12 +12,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 56720ad795fb6df4de3c4cca72b9634d6fb6cf96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: deee5ba0d402dce6c2c0c5779c676ac7b42a926a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213207"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520317"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
   显示数据库镜像事件所支持警告的只读列表和指定的警告阈值（如果有）。  
@@ -48,7 +48,7 @@ ms.locfileid: "48213207"
  有关详细信息，请参阅本主题后面的“备注”。  
   
 ## <a name="remarks"></a>备注  
- 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”**。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
+ 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”**。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示“等待数据...”。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48213207"
  在给定的伙伴上，记录的事件取决于它当前的角色，即主体或镜像。 但是，我们建议您在两个伙伴中都为给定的事件设置警告阈值，以确保数据库进行故障转移时警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。  
   
 > [!NOTE]  
->  也可以使用 **sp_dbmmonitorchangealertt** 系统存储过程来为等价的事件（如未发送日志、未恢复日志、最早的未发送事务和镜像提交开销）配置阈值。 有关详细信息，请参阅 [sp_dbmmonitorchangealert & #40;Transact SQL & #41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)。  
+>  也可以使用“sp_dbmmonitorchangealertt”系统存储过程来为等价的事件（如未发送日志、未恢复日志、最早的未发送事务和镜像提交开销）配置阈值。 有关详细信息，请参阅 [sp_dbmmonitorchangealert & #40;Transact SQL & #41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)。  
   
  下表显示与每个警告关联的事件 ID。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48213207"
 |**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|最早的未发送事务|32044|  
 |**如果镜像提交开销超过了阈值则发出警告**|镜像提交开销|32045|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要拥有完全访问权限，需要具有 **sysadmin** 固定服务器角色的成员身份。 只有 **sysadmin** 的成员才可以配置和查看关键绩效指标的警告阈值。  
   
  如果是 **dbm_monitor** 角色中的成员，则只能查看“警告”页上最新的状态行。  

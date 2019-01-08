@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d2c920a2b7341b75f85c2c9cf46bc381d607e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128857"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776479"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 **Audit Database Mirroring Login** 事件来报告与数据库镜像传输安全性相关的审核消息。  

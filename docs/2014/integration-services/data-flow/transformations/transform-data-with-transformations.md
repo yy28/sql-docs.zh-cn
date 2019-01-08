@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], transformations
@@ -15,19 +14,19 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b98f377a24604abb1657a8e3a8c2b57024d84c38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1243f3cc6e7c8d7cd3ea2078e96e0f3844a8596
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767529"
 ---
 # <a name="transform-data-with-transformations"></a>使用转换对数据进行转换
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括三种类型的数据流组件：源、转换和目标。  
   
  下列关系图显示具有一个源、两个转换和一个目标的简单数据流。  
   
- ![数据流](../../media/mw-dts-08.gif "数据流")  
+ ![Data flow](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换提供下列功能：  
   

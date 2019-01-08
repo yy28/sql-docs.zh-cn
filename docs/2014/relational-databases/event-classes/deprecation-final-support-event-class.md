@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3187c30d3c39bfc488baf260f4b6061de5acb942
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145855"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785929"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 事件类
   当使用将从 **的下一个主版本中删除的功能时，将发生** Deprecation Final Support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件类。 为了使您的应用程序能够尽可能地长久使用，请不要使用会导致 **Deprecation Final Support** 事件类或 **Deprecation Announcement** 事件类的功能。 请尽快修改使用最终不推荐使用的功能的应用程序。  
@@ -32,7 +31,7 @@ ms.locfileid: "48145855"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|用户帐户控制|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|用户帐户控制|  
-|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示数据库的名称，如果`ServerName`在跟踪中捕获的数据列并且服务器可用。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
+|DatabaseID|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 如果在跟踪中捕获 `ServerName` 数据列而且服务器可用，则 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
 |DatabaseName|`nvarchar`|正在其中运行用户语句的数据库的名称。|35|用户帐户控制|  
 |EventClass|`int`|事件类型 = 126。|27|否|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
@@ -48,7 +47,7 @@ ms.locfileid: "48145855"
 |ObjectName|`nvarchar`|不推荐使用的功能的名称。|34|用户帐户控制|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|用户帐户控制|  
 |ssSqlProfiler|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 并以 login2 的身份，执行语句`SessionLoginName`显示 Login1 和`LoginName`显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并以 Login2 身份执行语句，则 `SessionLoginName` 将显示 Login1，而 `LoginName` 则显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|`int`|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|`image`|可用于标识 SQL 批处理或存储过程的二进制句柄。|63|用户帐户控制|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|用户帐户控制|  

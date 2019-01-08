@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802455"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504593"
 ---
 # <a name="core-interface-conformance"></a>核心接口一致性
-所有 ODBC 驱动程序必须都有至少核心级别接口一致性。 由于核心级别中的功能所需的最通用的可互操作应用程序，该驱动程序可以使用此类应用程序。 核心级别中的功能也对应到 ISO CLI 规范中定义的功能和打开组 CLI 规范中定义的必需功能。 核心级别接口 – 符合的 ODBC 驱动程序允许应用程序执行所有以下操作：  
+所有 ODBC 驱动程序必须都有至少核心级别接口一致性。 由于核心级别中的功能所需的最通用的可互操作应用程序，该驱动程序可以使用此类应用程序。 核心级别中的功能也对应到 ISO CLI 规范中定义的功能和打开组 CLI 规范中定义的必需功能。 核心级别接口符合的 ODBC 驱动程序允许应用程序执行所有以下操作：  
   
 -   分配和释放所有类型的句柄，通过调用**SQLAllocHandle**并**SQLFreeHandle**。  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -16,12 +16,12 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7bb9ec006ee49a7b446fd2700df81debea1012d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693c36cf0c23004f0538595ac75e1aa5d5039a33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167587"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768469"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的信息。  
@@ -30,7 +30,7 @@ ms.locfileid: "48167587"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看有关警报的信息，可使用：**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48167587"
   
     -   [警报属性-新建警报&#40;响应页&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [警报属性： 新建警报&#40;选项页&#41;](alert-properties-new-alert-options-page.md)  
+    -   [警报属性：新的警报&#40;选项页&#41;](alert-properties-new-alert-options-page.md)  
   
     -   [警报属性（“历史记录”页）](alert-properties-history-page.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48167587"
   
 #### <a name="to-view-information-about-an-alert"></a>查看有关警报的信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
@@ -16,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82578b6270bdcb73126c8891f47c41e8ebf1aacf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184037"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768819"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
@@ -32,7 +31,7 @@ ms.locfileid: "48184037"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建用户定义的数据类型别名，使用：**  
   
@@ -88,10 +87,10 @@ ms.locfileid: "48184037"
   
     |||  
     |-|-|  
-    |1 – 9|5|  
-    |10 – 19|9|  
-    |20 – 28|13|  
-    |29 – 38|17|  
+    |1 - 9|5|  
+    |10 - 19|9|  
+    |20 - 28|13|  
+    |29 - 38|17|  
   
      有关`nchar`并`nvarchar`数据类型的存储值始终是两次中的值**长度**。  
   

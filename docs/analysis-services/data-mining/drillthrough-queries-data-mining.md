@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516667"
 ---
 # <a name="drillthrough-queries-data-mining"></a>钻取查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50148012"
   
 -   钻取到 **模型事例**  
   
-     如果您希望从模型中的某个特定模式（如群集或决策树的分支）钻取，则使用钻取到“模型事例”，并查看有关单个事例的详细信息。  
+     当你想要转化为群集或决策树的分支中模型如的特定模式时使用钻取到模型事例-并查看有关单个事例的详细信息。  
   
 -   钻取到 **结构事例**  
   
@@ -94,7 +94,7 @@ ms.locfileid: "50148012"
 |使用 DMX WITH DRILLTHROUGH 子句对挖掘模型启用钻取。|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
 |有关分配适用于对挖掘结构和挖掘模型进行钻取的权限的信息|[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

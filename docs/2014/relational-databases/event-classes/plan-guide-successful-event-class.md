@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d55e6bc30ec2634fd2b782fbb8986ab99c1fc91a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174947"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752969"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful 事件类
   Plan Guide Successful 事件类指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已成功为包含计划指南的查询或批处理生成执行计划。 当满足下列条件时，事件将激发：  
@@ -42,7 +41,7 @@ ms.locfileid: "48174947"
 |EventClass|`int`|事件类型 = 214。|27|否|  
 |EventSequence|`int`|特定事件在请求中的顺序。|51|否|  
 |HostName|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|用户帐户控制|  
-|IsSystem|`int`|指示事件是发生在系统进程还是发生在用户进程：1 = 系统，0 = 用户。|60|用户帐户控制|  
+|IsSystem|`int`|指示该事件发生在系统进程还是用户进程上：1 = 系统，0 = 用户。|60|用户帐户控制|  
 |LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为 DOMAIN\\*username*）。|11|用户帐户控制|  
 |LoginSid|`image`|登录用户的安全标识号 (SID)。 你可以在 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) 或 [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|用户帐户控制|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|用户帐户控制|  

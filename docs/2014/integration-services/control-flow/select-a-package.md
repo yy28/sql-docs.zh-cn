@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectapackage.f1
@@ -15,12 +14,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f40a4729e0d4a76eae340fdc964f28283908bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78e8c773792e762c39f65fc10a12c4e3a6b5eec2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779249"
 ---
 # <a name="select-a-package"></a>选择包
   可以使用 **“选择包”** 对话框，指定消息队列任务可从中接收消息的包。  
@@ -56,8 +55,8 @@ ms.locfileid: "48092748"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 文件  
- **File name**  
- 提供包的路径，或单击浏览按钮 **(…)** 并查找包。  
+ **文件名**  
+ 提供包的路径，或单击浏览按钮“(…)”并查找包。  
   
 ## <a name="see-also"></a>请参阅  
  [消息队列任务](message-queue-task.md)  

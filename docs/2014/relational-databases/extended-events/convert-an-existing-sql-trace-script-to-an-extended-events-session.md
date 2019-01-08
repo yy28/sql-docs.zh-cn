@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
@@ -14,12 +13,12 @@ ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1affac058c5df7ba5c8329cc6435be6a1f0681a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766929"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>将现有 SQL 跟踪脚本转换为扩展事件会话
   如果您具有想要转换为扩展事件会话的现有 SQL 跟踪脚本，则可以使用本主题中的过程创建等效的扩展事件会话。 通过使用 trace_xe_action_map 和 trace_xe_event_map 系统表中的信息，你可以收集进行转换所必需的信息。  
@@ -40,7 +39,7 @@ ms.locfileid: "48062517"
   
 2.  获取跟踪的 ID。 为此，请使用以下查询：  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -55,7 +54,7 @@ ms.locfileid: "48062517"
     > [!NOTE]  
     >  在这个示例中，使用默认跟踪 (1) 的跟踪 ID。  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -82,7 +81,7 @@ ms.locfileid: "48062517"
   
     3.  使用下面的查询可以标识要用于您在前一步骤中标识的事件的正确的数据字段。 该查询将在“事件字段”列中显示扩展事件数据字段。 在该查询中，用前一步骤中指定的事件名称替换 *<event_name>*。  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -103,7 +102,7 @@ ms.locfileid: "48062517"
   
 1.  添加语句以创建事件会话，并且使用要用于扩展事件会话的名称替换*session_name* 。  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -130,7 +129,7 @@ ms.locfileid: "48062517"
   
      为了将其转换为等效的扩展事件，添加了 sqlserver.sp_statement_starting 和 sqlserver.sp_statement_completed 事件以及操作列表。 谓词语句作为 WHERE 子句包括。  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -156,9 +155,9 @@ ms.locfileid: "48062517"
        )  
     ```  
   
-3.  添加异步文件目标，并且使用您要用来保存输出的位置替换文件路径。 在指定文件目标时，必须包括日志文件和元数据文件路径文件。  
+3.  添加异步文件目标，并且使用要用来保存输出的位置替换文件路径。 在指定文件目标时，必须包括日志文件和元数据文件路径文件。  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -167,7 +166,7 @@ ms.locfileid: "48062517"
   
 1.  可使用 sys.fn_xe_file_target_read_file 函数查看输出。 为此，运行以下查询，并且使用您指定的路径替换文件路径：  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -178,7 +177,7 @@ ms.locfileid: "48062517"
   
      有关 sys.fn_xe_file_target_read_file 函数的详细信息，请参阅 [sys.fn_xe_file_target_read_file (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)。  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -214,7 +213,7 @@ ms.locfileid: "48062517"
   
 ## <a name="example"></a>示例  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

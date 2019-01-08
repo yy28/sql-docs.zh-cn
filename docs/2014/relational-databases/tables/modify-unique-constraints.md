@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying constraints
@@ -16,12 +15,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3d2e706da1dc3ddc6e1de5a7aa495aee60334a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb997c180d614169600ad32e3206332aaa7deb10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142537"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782079"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改唯一约束。  
@@ -30,7 +29,7 @@ ms.locfileid: "48142537"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具修改唯一约束：**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48142537"
   
 1.  在“对象资源管理器”中，右键单击包含唯一约束的表，然后选择“设计”。  
   
-2.  在“表设计器”菜单上，单击“索引/键”。  
+2.  在“表设计器”菜单上，单击“索引/键...”。  
   
 3.  在“索引/键”对话框中的“选定的主/唯一键或索引”下，选择要编辑的约束。  
   

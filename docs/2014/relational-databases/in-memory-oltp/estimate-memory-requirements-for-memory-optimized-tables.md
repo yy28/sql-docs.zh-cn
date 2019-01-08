@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061265"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509231"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
   是否要创建一个新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]内存优化的表或将现有的基于磁盘的表迁移到内存优化表，务必要有的合理估计的每个表的内存需求，因此你可以设置与具有足够的服务器内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
@@ -77,7 +77,7 @@ GO
   
  **表的行的内存**  
   
- 根据上述计算，内存优化表中每行的大小为 24 + 32 + 200，即 256 个字节。  总共有 5 百万行，则表将占用 5,000,000 * 256 字节，共 1,280,000,000 字节 – 大约 1.28 GB。  
+ 根据上述计算，内存优化表中每行的大小为 24 + 32 + 200，即 256 个字节。  总共有 5 百万行，则表将占用 5,000,000 * 256 字节，共 1,280,000,000 字节 - 大约 1.28 GB。  
   
 ##  <a name="bkmk_IndexMeemory"></a> 索引占用的内存  
  **对于每个哈希索引的内存**  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  关于 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存优化表中哈希索引的工作原理，请参阅 [哈希索引](../../database-engine/hash-indexes.md)。  
   
- **注意：** 无法更改动态哈希索引数组的大小。 要更改哈希索引数组的大小，必须删除表，更改 bucket_count 值，然后重新创建表。  
+ **注意：** 哈希索引数组的大小不能实时更改。 要更改哈希索引数组的大小，必须删除表，更改 bucket_count 值，然后重新创建表。  
   
  **设置哈希索引数组的大小**  
   

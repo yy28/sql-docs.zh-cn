@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072061"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400630"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -155,7 +155,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**不支持间接递归。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有执行权限\@tsql 自变量。  
   
 ## <a name="examples"></a>示例  
@@ -259,7 +259,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- 结果： 错误，类型不匹配 (**int**与**smallint**)。  
+ 结果：错误，类型不匹配 (**int**与**smallint**)。  
   
 #### <a name="column-name-cannot-be-determined"></a>无法确定列名称  
  对于同一个变量长度类型、为 Null 性以及列名称，可能的第一个结果集的列因长度不同而不同：  
@@ -301,7 +301,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 结果： 错误，类型不匹配 (**varchar(10)** 与**nvarchar(10)**)。  
+ 结果：错误，类型不匹配 (**varchar(10)** 与**nvarchar(10)**)。  
   
 #### <a name="result-set-can-return-an-error"></a>结果集可以返回一个错误  
  第一次结果集是错误或结果集。  
@@ -373,7 +373,7 @@ EXEC(@SQL)
     ); '  
 ```  
   
- 结果： Column1 **bigint NOT NULL**  
+ 结果：Column1 **bigint NOT NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>不明确的结果集导致的错误  
  此示例假定名为 user1 的另一个用户具有名为 t1 包含列的默认架构 s1 中的表 ( **int NOT NULL**)。  

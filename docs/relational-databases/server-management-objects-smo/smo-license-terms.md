@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f8a5dc68eed10ea6afce1a1aa0f75c2c2e9e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764665"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502291"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共享管理对象 (SMO) 许可条款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47764665"
 &nbsp;&nbsp;**a.  可分发代码。**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i.  使用和分发权。如果你遵守以下条款：**
-*   您可以在您开发的程序中复制和分发该软件的对象代码形式（“可分发代码”）；
+*   您可以复制和分发对象代码形式的软件 （"可分发代码"） 中开发; 的程序和
 *   您可以允许您的程序分销商将可分发代码作为这些程序的一部分进行复制和分发。
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii. 分发要求。对于你分发的任何可分发代码，你必须**
@@ -55,11 +55,11 @@ ms.locfileid: "47764665"
 * 对于.dll 文件扩展名的任何可分发代码，分发仅通过使用你的程序; 链接器运行此类可分发代码的结果
 * 要求分销商及外部最终用户同意至少能够像本协议一样保护“可分发代码”的条款； 
 * 在您的程序上显示有效的版权声明；以及
-* 对于与分发或使用您的程序有关的任何索赔，为 Microsoft 提供辩护、赔偿，包括支付律师费，并使 Microsoft 免受损失。
+* 赔偿、 维护和保护 microsoft 免受任何索赔，包括律师费，与分发或使用您的程序。
 
 &nbsp;&nbsp;&nbsp;&nbsp;**iii.分发限制。你不得**
 * 更改可分发代码中的任何版权、商标或专利声明；
-* 在您的程序名称中使用 Microsoft 的商标，或者以其他方式暗示您的程序来自 Microsoft 或经 Microsoft 认可；
+* 在您的程序名称或其他方式暗示您的程序来自或认可的 Microsoft; 使用 Microsoft 的商标
 * 在恶意的、欺骗性的或非法的程序中包括可分发代码；或者
 * 修改或分发任何可分发代码的源代码，致使其任何部分受到“排除许可”的制约。 “排除许可”指符合以下使用、修改或分发条件的许可：
   * 以源代码形式公布或分发代码；或
@@ -81,7 +81,7 @@ ms.locfileid: "47764665"
 
 **7.  出口限制。** 该软件受美国出口法律和法规的约束。 您必须遵守适用于该软件的所有国内和国际出口法律和法规。 这些法律包括对目的地、最终用户和最终用途的各种限制。 有关其他信息，请访问 www.microsoft.com/exporting。
 
-**8.  支持服务。** 该软件是按“现状”提供的，所以我们可能不为其提供支持服务。
+**8.  支持服务。** 由于该软件"按原样"，我们可能不提供对它的支持服务。
 
 **9.  完整协议**。 本协议以及您使用的补充、更新、基于 Internet 的服务和支持服务的有关条款，共同构成了该软件和支持服务的完整协议。
 
@@ -95,7 +95,7 @@ ms.locfileid: "47764665"
 
 **12. 免责条款。本软件按“现状”授予许可。你应承担使用本软件所带来的风险。Microsoft 不提供任何明示的担保、保证或条件。根据你当地的法律，你可能享有本协议无法改变的其他消费者权利或法定保障。在你当地法律允许的范围内，Microsoft 排除有关适销性、针对特定目的的适用性和不侵权的默示保证。**
 
-**澳大利亚 – 您享有澳大利亚消费者法的法定保障，这些条款中的任何规定均不会影响这些权利。**
+**澳大利亚-你具有澳大利亚消费者法的法定担保的这些条款中的内容无意冒犯这些权利。**
 
 **13. 损害补偿责任的限制和排除条款。您只能因直接损害从 Microsoft 及其供应商处获得退款，且退款金额上限为 5.00 美元。你不能因其他任何损害获得退款，包括后果性损害、利润损失、特别的损害、间接损害或附带性损害。**
 该限制适用于

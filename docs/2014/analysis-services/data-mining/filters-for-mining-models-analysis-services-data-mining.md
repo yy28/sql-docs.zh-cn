@@ -17,12 +17,12 @@ ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb95e8bf7237fcf7ebae4321d14de690ebd0b2c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 213768938a4fb9497fcbebad15f1dc4b84e1dba9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142707"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395940"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
   基于数据的模型筛选有助于创建利用挖掘结构中的数据子集的挖掘模型。 使用筛选功能，可以基于全面的数据源视图来创建单个挖掘结构，因此可以灵活地设计挖掘结构和数据源。 随后即可以创建筛选器，以便仅将该数据的一部分用于对各种模型进行定型和测试，而不是为数据的每个子集均生成不同的结构和相关模型。  
@@ -51,24 +51,24 @@ ms.locfileid: "48142707"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用数据挖掘设计器创建模型筛选器  
  可以通过更改挖掘模型的 `Filter` 属性在数据挖掘设计器中筛选模型。 可以在 **“属性”** 窗格中直接键入筛选表达式，也可以打开一个筛选器对话框来生成条件。  
   
- 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可以将多个条件链接使用`AND` / `OR`运算符。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用`greater than`和`less than`运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
+ 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可以将多个条件链接使用`AND` / `OR`运算符。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 `greater than` 和 `less than` 运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
   
 > [!NOTE]  
->  `LIKE`关键字不受支持。 如果您希望包括多个离散属性，则必须创建不同条件并使用 `OR` 运算符来链接它们。  
+>  不支持使用 `LIKE` 关键字。 如果您希望包括多个离散属性，则必须创建不同条件并使用 `OR` 运算符来链接它们。  
   
  如果条件非常复杂，则可以使用第二个筛选器对话框，一次处理一个表。 当您关闭第二个筛选器对话框时，系统会对筛选表达式进行求值，并将值与对事例表中其他列设置的筛选条件合并。  
   
 ### <a name="creating-filters-on-nested-tables"></a>针对嵌套表创建筛选器  
  如果数据源视图中包含嵌套表，则可以使用第二个筛选器对话框来针对嵌套表中的行生成条件。  
   
- 例如，如果您的事例表与客户相关，而且嵌套表中显示客户已经购买的产品，则可以通过在嵌套表的筛选器中使用下面的语法来为已经购买了特定商品的客户创建一个筛选器： `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`。  
+ 例如，如果您的事例表与客户相关，而且嵌套表中显示客户已经购买的产品，则可以通过在嵌套表的筛选器中使用下面的语法来为已经购买了特定商品的客户创建一个筛选器： `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`。  
   
- 此外可以通过使用筛选的嵌套表中的特定值存在`EXISTS`或`NOT EXISTS`关键字和子查询。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `Water Bottle` 将返回 `true`。  
+ 还可以使用 `EXISTS` 或 `NOT EXISTS` 关键字和子查询在嵌套表中筛选特定值，以查看其是否存在。 这允许您创建诸如 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`之类的条件。 如果嵌套表中至少有一行包括 `EXISTS SELECT(<subquery>)` 值，则 `Water Bottle` 将返回 `true`。  
   
- 可以将事例表中的条件与嵌套表中的条件组合起来。 例如，下面的语法包括事例表中的一个条件 (`Age > 30` )、嵌套表中的一个子查询 (`EXISTS (SELECT * FROM Products)`) 以及嵌套表中的多个条件 (`WHERE ProductName=’Milk’  AND Quantity>2`)。  
+ 可以将事例表中的条件与嵌套表中的条件组合起来。 例如，下面的语法包括事例表中的一个条件 (`Age > 30` )、嵌套表中的一个子查询 (`EXISTS (SELECT * FROM Products)`) 以及嵌套表中的多个条件 (`WHERE ProductName='Milk'  AND Quantity>2`)。  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  在完成筛选器的生成之后，筛选器文本将由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]进行求值，转换为 DMX 表达式，之后将随模型一起保存。  
@@ -100,7 +100,7 @@ ms.locfileid: "48142707"
 ### <a name="how-can-i-save-a-filter"></a>如何保存筛选器？  
  筛选表达式将保存为脚本，并随其关联挖掘模型或嵌套表一起存储。 如果删除了筛选器文本，则只能通过手动重新创建筛选表达式的方式来将其还原。 因此，如果创建了复杂的筛选表达式，还应当创建筛选器文本的备份副本。  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>为什么从筛选器中看不到任何效果？  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>为何看不到筛选器造成任何影响？  
  无论何时更改或添加筛选表达式，都必须重新处理挖掘结构和挖掘模型，然后才能查看筛选器的效果。  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>为什么我在预测查询结果中会看到已筛选的属性？  
@@ -117,12 +117,12 @@ ms.locfileid: "48142707"
 -   将已排除的值作为挖掘结构定义的一部分折叠到某个类别中。  
   
 ## <a name="related-resources"></a>相关资源  
- 有关筛选器语法和示例的筛选器表达式的详细信息，请参阅[模型筛选器语法和示例&#40;Analysis Services-数据挖掘&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)。  
+ 有关筛选器语法和筛选器表达式示例的详细信息，请参阅 [模型筛选器语法和示例（Analysis Services – 数据挖掘）](model-filter-syntax-and-examples-analysis-services-data-mining.md)。  
   
  有关在测试挖掘模型时如何使用模型筛选器的信息，请参阅 [选择准确性图表类型和设置图表选项](choose-an-accuracy-chart-type-and-set-chart-options.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [模型筛选器语法和示例&#40;Analysis Services-数据挖掘&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [测试和验证&#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
+ [模型筛选器语法和示例（Analysis Services – 数据挖掘）](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
   
   

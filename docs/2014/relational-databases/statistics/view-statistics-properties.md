@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92641d34920b0ef7ea7a9e7ad929e6976d644ffe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064188"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415634"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)]中表或索引视图的当前查询优化统计信息。 统计信息对象包含一个带有统计信息的相关元数据的标题、一个带有统计信息对象第一个键列中的值的分布的直方图，以及一个用于度量各列之间的相关性的密度向量。 有关直方图和密度向量的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL) ](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
@@ -29,7 +29,7 @@ ms.locfileid: "48064188"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看统计信息属性，请使用：**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48064188"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  单击加号以展开您要查看统计信息的属性的表。  
+3.  单击加号以展开要查看统计信息的属性的表。  
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48064188"
      显示存储统计信息的数据库对象的名称。  
   
      **INDEX 统计信息 statistics_name**  
-     此文本框显示从统计信息对象返回的属性。 此属性分为三个部分：统计信息头、密度向量和直方图。  
+     此文本框显示从统计信息对象返回的属性。 此属性被划分为三个部分：统计信息头、 密度向量和直方图。  
   
      下面的信息介绍结果集中为统计信息头返回的列。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48064188"
      下面的信息介绍结果集中为密度向量返回的列。  
   
      **All Density**  
-     密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：（3，5，6），（4，4，6），（4，5，6），（4，5，7）。 使用前缀 (A, B)，相同列值具有以下非重复值列表：（3，5），（4，4） 和 （4，5）。  
   
      **Average Length**  
      存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。  

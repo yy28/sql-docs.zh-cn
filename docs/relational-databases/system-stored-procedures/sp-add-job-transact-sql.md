@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537873"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +55,25 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_  
  作业的名称。 名称必须唯一且不能含有百分比 (**%**) 字符。 *job_name*是**nvarchar （128)**，无默认值。  
   
  [  **@enabled =** ]*启用*  
  指示添加的作业的状态。 *已启用*是**tinyint**，默认值为 1 （启用）。 如果**0**，不启用的作业并不会根据其计划运行; 但是，它可以手动运行。  
   
- [ **@description =** ] **'***description***'**  
+ [  **@description =** ] **'**_说明_  
  作业的说明。 *描述*是**nvarchar(512)**，默认值为 NULL。 如果*说明*是省略，使用"无说明"。  
   
  [ **@start_step_id =** ] *step_id*  
  作业中要执行的第一个步骤的标识号。 *step_id*是**int**，默认值为 1。  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'**_类别_  
  作业的类别。 *类别*是**sysname**，默认值为 NULL。  
   
  [ **@category_id =** ] *category_id*  
  一种与语言无关的机制，用于指定作业类别。 *category_id*是**int**，默认值为 NULL。  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **'**_登录_  
  拥有该作业的登录的名称。 *登录名*是**sysname**，默认值为 NULL，它解释为当前的登录名。 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值**@owner_login_name**。 如果用户不是成员的**sysadmin**角色设置或更改的值**@owner_login_name**，此存储过程的执行会失败并返回错误。  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@notify_level_page =** ] *page_level*  
  一个值，用于指示完成该作业后何时发送寻呼。 *page_level*是**int**，默认值为**0**，指示从不。 *page_level*使用相同的值作为*eventlog_level*。  
   
- [ **@notify_email_operator_name =** ] **'***email_name***'**  
+ [  **@notify_email_operator_name =** ] **'**_email_name_  
  向时发送电子邮件的人的电子邮件名称*email_level*为止。 *email_name*是**sysname**，默认值为 NULL。  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_netsend_name_  
  完成该作业后接收到网络消息的操作员的名称。 *netsend_name*是**sysname**，默认值为 NULL。  
   
- [ **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'**_page_name_  
  完成该作业后收到寻呼的接收人的名称。 *page_name*是**sysname**，默认值为 NULL。  
   
  [ **@delete_level =** ] *delete_level*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  当*delete_level*是**3**、 一次执行作业，而不考虑任何计划为作业定义。 而且，如果作业将自身删除，则将同时删除该作业的历史记录。  
   
- [ **@job_id =** ] *job_id***OUTPUT**  
+ [  **@job_id =** ] _job_id_**输出**  
  成功创建作业后分配给作业的作业标识号。 *job_id*是类型的输出变量**uniqueidentifier**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -128,7 +128,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要运行此存储的过程，用户必须属于**sysadmin**固定服务器角色，或授予下列任一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理固定数据库角色，二者位于**msdb**数据库：  
   
 -   **SQLAgentUserRole**  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bce8f42d9296d63947fb2e43e589ba9fc100a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174867"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776329"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为分布式查询和远程存储过程调用 OLE DB 访问接口时，会发生 OLEDB DataRead 事件类。 请在监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 何时向 OLE DB 访问接口发出数据请求调用的跟踪中包括此事件类。  

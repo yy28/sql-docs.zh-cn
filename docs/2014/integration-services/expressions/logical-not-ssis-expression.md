@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logical Not (!)
@@ -14,12 +13,12 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30d3e56f69335b4dc90f7af31790c3c1e02242de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9856f1ecb67a00f73782de1a23c361ca35ea83f4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779079"
 ---
 # <a name="-logical-not-ssis-expression"></a>! （逻辑非）（SSIS 表达式）
   对布尔操作数求反。  
@@ -66,6 +65,6 @@ ms.locfileid: "48169109"
   
 ## <a name="see-also"></a>请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

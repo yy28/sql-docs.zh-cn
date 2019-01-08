@@ -13,12 +13,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0532f2b9ab931eccda5403501a6fe74b3603525c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165837"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398950"
 ---
 # <a name="modify-statistics"></a>修改统计信息
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的现有统计信息。  
@@ -27,7 +27,7 @@ ms.locfileid: "48165837"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要修改统计信息，请使用：**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48165837"
   
 5.  右键单击要修改的统计信息对象，然后选择“属性”。  
   
-6.  在“统计信息属性 -”*statistics_name* 对话框中的“常规页”上，单击“添加”“删除”“上移”“下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在 **“统计信息列”** 网格内的位置可能会显著影响统计信息的有用性。  
+6.  在“统计信息属性 -”*statistics_name* 对话框中的“常规页”上，单击“添加”“删除”“上移”“下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性。  
   
 7.  单击“确定” 。  
   

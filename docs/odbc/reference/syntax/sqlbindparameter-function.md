@@ -20,16 +20,16 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e46b6102f71e4ffcc00c4dd1367ab3beaa68732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d318b73feaec0cfb48548b05ba6d7c06a697c6ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818561"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503518"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函数
 **符合性**  
- 版本引入了： ODBC 2.0 标准符合性： ODBC  
+ 版本引入了：ODBC 2.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLBindParameter**将缓冲区绑定到的 SQL 语句中的参数标记。 **SQLBindParameter**支持绑定到 Unicode 的 C 数据类型，即使基础驱动程序不支持 Unicode 数据。  
@@ -112,14 +112,14 @@ SQLRETURN SQLBindParameter(
 |HY104|无效的精度或小数位数值|为参数指定的值*ColumnSize*或*DecimalDigits*超出了指定的 SQL 数据类型的列的数据源支持的值的范围*ParameterType*参数。|  
 |HY105|无效的参数类型|(DM) 的参数指定的值*InputOutputType*无效。 （请参阅"注释"。）|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持指定的参数指定的值的组合来转换*ValueType*和特定于驱动程序的值的参数指定的*ParameterType*.<br /><br /> 为参数指定的值*ParameterType*版本的 ODBC 驱动程序支持，但不受驱动程序或数据源是一个有效的 ODBC SQL 数据类型标识符。<br /><br /> 该驱动程序支持仅 ODBC 2。*x*和参数*ValueType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的所有间隔 C 数据类型[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*ValueType*已 SQL_C_GUID。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持指定的参数指定的值的组合来转换*ValueType*和特定于驱动程序的值的参数指定的*ParameterType*.<br /><br /> 为参数指定的值*ParameterType*版本的 ODBC 驱动程序支持，但不受驱动程序或数据源是一个有效的 ODBC SQL 数据类型标识符。<br /><br /> 该驱动程序支持仅 ODBC 2。*x*和参数*ValueType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的所有间隔 C 数据类型[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中附录 d:数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*ValueType*已 SQL_C_GUID。|  
 |HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
   
 ## <a name="comments"></a>注释  
  应用程序调用**SQLBindParameter**绑定 SQL 语句中的每个参数标记。 绑定的应用程序调用之前仍然有效**SQLBindParameter**再次调用**SQLFreeStmt** SQL_RESET_PARAMS 选项，或调用**SQLSetDescField**到APD SQL_DESC_COUNT 标头字段设置为 0。  
   
- 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。 有关参数数据类型和参数标记的详细信息，请参阅[参数的数据类型](../../../odbc/reference/appendixes/parameter-data-types.md)并[参数标记](../../../odbc/reference/appendixes/parameter-markers.md)附录 c: SQL 语法中。  
+ 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。 有关参数数据类型和参数标记的详细信息，请参阅[参数的数据类型](../../../odbc/reference/appendixes/parameter-data-types.md)并[参数标记](../../../odbc/reference/appendixes/parameter-markers.md)附录 c： 驱动器中SQL 语法。  
   
 ## <a name="parameternumber-argument"></a>ParameterNumber 参数  
  如果*ParameterNumber*调用中**SQLBindParameter** SQL_DESC_COUNT，值大于**SQLSetDescField**调用以增加 SQL_DESC_ 值到计数*ParameterNumber*。  
@@ -166,11 +166,11 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
 >  该驱动程序必须确定应用程序绑定的输出或输入输出参数，如流式传输时，允许哪些 SQL 类型。 驱动程序管理器不会生成无效的 SQL 类型的错误。  
   
 ## <a name="valuetype-argument"></a>ValueType 参数  
- *ValueType*参数指定的参数的 C 数据类型。 此参数设置 APD 的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段。 这必须是中的值之一[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分的附录 d： 数据类型。  
+ *ValueType*参数指定的参数的 C 数据类型。 此参数设置 APD 的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段。 这必须是中的值之一[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分的附录 d:数据类型。  
   
- 如果*ValueType*参数是一个时间间隔数据类型的 SQL_DESC_TYPE 字段*ParameterNumber* APD 记录设置为 SQL_INTERVAL，APD SQL_DESC_CONCISE_TYPE 字段设置为简洁的时间间隔数据类型和的 SQL_DESC_DATETIME_INTERVAL_CODE 字段*ParameterNumber*记录设置为特定的时间间隔数据类型的子代码。 (请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)数据使用领先的精度 (2) 和默认时间间隔的秒精度 (6)，按照中的 APD SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段分别的默认时间间隔。 如果任一默认的精度不适当，应用程序显式应通过调用设置描述符字段**SQLSetDescField**或**SQLSetDescRec**。  
+ 如果*ValueType*参数是一个时间间隔数据类型的 SQL_DESC_TYPE 字段*ParameterNumber* APD 记录设置为 SQL_INTERVAL，APD SQL_DESC_CONCISE_TYPE 字段设置为简洁的时间间隔数据类型和的 SQL_DESC_DATETIME_INTERVAL_CODE 字段*ParameterNumber*记录设置为特定的时间间隔数据类型的子代码。 (请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)数据使用领先的精度 (2) 和默认时间间隔的秒精度 (6)，按照中的 APD SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段分别的默认时间间隔。 如果任一默认的精度不适当，应用程序显式应通过调用设置描述符字段**SQLSetDescField**或**SQLSetDescRec**。  
   
- 如果*ValueType*参数是日期时间数据类型的 SQL_DESC_TYPE 字段之一*ParameterNumber* APD 记录设置为 SQL_DATETIME， SQL_DESC_CONCISE_TYPE字段*ParameterNumber* APD 记录设置为简明 datetime C 数据类型和的 SQL_DESC_DATETIME_INTERVAL_CODE 字段*ParameterNumber*记录设置为特定的日期/时间子代码数据类型。 (请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
+ 如果*ValueType*参数是日期时间数据类型的 SQL_DESC_TYPE 字段之一*ParameterNumber* APD 记录设置为 SQL_DATETIME， SQL_DESC_CONCISE_TYPE字段*ParameterNumber* APD 记录设置为简明 datetime C 数据类型和的 SQL_DESC_DATETIME_INTERVAL_CODE 字段*ParameterNumber*记录设置为特定的日期/时间子代码数据类型。 (请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
   
  如果*ValueType*参数为 SQL_C_NUMERIC 数据类型，默认的精度 （这是驱动程序定义），并且默认小数位数 (0)，按照 APD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中使用的数据。 如果默认精度或小数位数不适当，应用程序显式应通过调用设置描述符字段**SQLSetDescField**或**SQLSetDescRec**。  
   
@@ -178,10 +178,10 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
   
  此外可以指定扩展的 C 数据类型。 有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
- 有关详细信息，请参阅[默认 C 数据类型](../../../odbc/reference/appendixes/default-c-data-types.md)，[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)，并[转换将数据从 SQL 到 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附录 d： 数据类型。  
+ 有关详细信息，请参阅[默认 C 数据类型](../../../odbc/reference/appendixes/default-c-data-types.md)，[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)，并[转换将数据从 SQL 到 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)中附录 d:数据类型。  
   
 ## <a name="parametertype-argument"></a>ParameterType 参数  
- 这必须是所列的值之一[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)部分的附录 d： 数据类型，或它必须是特定于驱动程序的值。 此参数设置 IPD 的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段。  
+ 这必须是所列的值之一[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)部分的附录 d:数据类型，或它必须是特定于驱动程序的值。 此参数设置 IPD 的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段。  
   
  如果*ParameterType*参数是一个日期时间的标识符、 IPD 的 SQL_DESC_TYPE 字段设置为 SQL_DATETIME、 IPD SQL_DESC_CONCISE_TYPE 字段设置为简明 datetime SQL 数据类型和 SQL_DESC_DATETIME_INTERVAL_CODE 字段设置为适当的日期时间子代码值。  
   
@@ -189,12 +189,12 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
   
  如果*ValueType*参数为 SQL_NUMERIC 数据类型，默认的精度 （这是驱动程序定义），并且默认小数位数 (0)，在 IPD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置使用的数据。 如果默认精度或小数位数不适当，应用程序显式应通过调用设置描述符字段**SQLSetDescField**或**SQLSetDescRec**。  
   
- 有关如何转换数据的信息，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)并[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附录 d： 数据类型。  
+ 有关如何转换数据的信息，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)并[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)中附录 d:数据类型。  
   
 ## <a name="columnsize-argument"></a>ColumnSize 参数  
  *ColumnSize*参数指定的列或参数标记，该数据，或两者的长度与对应的表达式的大小。 此参数设置 IPD，具体取决于 SQL 数据类型的不同字段 ( *ParameterType*参数)。 以下规则适用于此映射：  
   
--   如果*ParameterType* SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY 和 SQL_LONGVARBINARY、 或一个简明 SQL 日期时间间隔数据类型，IPD 的 SQL_DESC_LENGTH 字段设置为的值*ColumnSize*。 (有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型中的部分。)  
+-   如果*ParameterType* SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY 和 SQL_LONGVARBINARY、 或一个简明 SQL 日期时间间隔数据类型，IPD 的 SQL_DESC_LENGTH 字段设置为的值*ColumnSize*。 (有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 中的部分数据类型。）  
   
 -   如果*ParameterType* SQL_DECIMAL、 SQL_NUMERIC、 SQL_FLOAT、 SQL_REAL，或 SQL_DOUBLE，IPD 的 SQL_DESC_PRECISION 字段设置为值*ColumnSize*。  
   
@@ -242,7 +242,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
   
 -   SQL_DEFAULT_PARAM。 一个过程是使用一个参数，默认值而不是从应用程序检索的值。 此值是仅在 ODBC 规范语法中，被调用的过程中有效，然后才*InputOutputType*参数为 SQL_PARAM_INPUT、 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT_STREAM。 当\* *StrLen_or_IndPtr*是 SQL_DEFAULT_PARAM， *ValueType*， *ParameterType*， *ColumnSize*， *DecimalDigits*， *BufferLength*，和*ParameterValuePtr*参数对于输入参数，将忽略和仅用于定义输入输出参数值 /输出参数。  
   
--   结果 SQL_LEN_DATA_AT_EXEC (*长度*) 宏。 参数的数据将发送具有**SQLPutData**。 如果*ParameterType*参数为 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或长时间，数据源特定于数据类型，并且驱动程序将返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是要为参数; 发送数据的字节数，否则为*长度*必须是一个非负值，并且将被忽略。 有关详细信息，请参阅"传递参数值，稍后在本部分中。  
+-   结果 SQL_LEN_DATA_AT_EXEC (*长度*) 宏。 参数的数据将发送具有**SQLPutData**。 如果*ParameterType*参数为 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或长时间，数据源特定的数据类型，并且驱动程序将返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是要为参数; 发送数据的字节数，否则为*长度*必须是一个非负值，并且将被忽略。 有关详细信息，请参阅"传递参数值，稍后在本部分中。  
   
      例如，若要指定将与发送的数据的 10,000 个字节**SQLPutData**在一个或多个调用时，SQL_LONGVARCHAR 参数，应用程序设置 **StrLen_or_IndPtr*为 SQL_LEN_DATA_AT_EXEC （10000)。  
   
@@ -281,7 +281,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
     > [!NOTE]  
     >  返回的值执行时数据参数类似于执行时数据列，尽管**SQLParamData**是为每个不同。 执行时数据参数是数据将发送与 SQL 语句中的参数**SQLPutData**时执行语句**SQLExecDirect**或**SQLExecute**. 它们被绑定与**SQLBindParameter**。 返回的值**SQLParamData**一个指针值传递给**SQLBindParameter**中*ParameterValuePtr*参数。 执行时数据列是包含在行集数据将发送具有**SQLPutData**更新或添加的行时**SQLBulkOperations**的或更新与**SQLSetPos**. 它们被绑定与**SQLBindCol**。 返回的值**SQLParamData**是中的行的地址 **TargetValuePtr*缓冲区 (通过调用设置**SQLBindCol**) 正在处理。  
   
-5.  调用**SQLPutData**一个或多个次多次以发送参数数据。 如果数据值大于，则需要多次调用\* *ParameterValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**只有在将字符 C 数据发送到字符、 二进制或数据源特定于数据类型的列或二进制 C 数据发送到具有二进制文件，一个字符的列时允许相同的参数或数据源特定于数据类型。  
+5.  调用**SQLPutData**一个或多个次多次以发送参数数据。 如果数据值大于，则需要多次调用\* *ParameterValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**只有在将字符 C 数据发送到包含的字符、 二进制或数据源特定的数据类型的列或二进制 C 数据发送到具有二进制文件，一个字符的列时允许相同的参数或数据源特定的数据类型。  
   
 6.  调用**SQLParamData**再次以指示已将该参数的所有数据。  
   
@@ -296,7 +296,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
  如果应用程序调用**SQLCancel**驱动程序时驱动程序仍需要执行时数据参数的数据时，取消语句执行; 然后，应用程序可以调用**SQLExecute**或**SQLExecDirect**试。  
   
 ## <a name="retrieving-streamed-output-parameters"></a>检索流的输出参数  
- 当应用程序设置*InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_PARAM_OUTPUT_STREAM，必须通过一个或多个调用检索输出参数值**SQLGetData**。 当驱动程序具有流式处理的输出参数值以返回到应用程序时，它将在响应对以下函数调用返回 SQL_PARAM_DATA_AVAILABLE: **SQLMoreResults**， **SQLExecute**，并**SQLExecDirect**。 应用程序调用**SQLParamData**来确定哪些参数值为可用。  
+ 当应用程序设置*InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_PARAM_OUTPUT_STREAM，必须通过一个或多个调用检索输出参数值**SQLGetData**。 当驱动程序具有流式处理的输出参数值以返回到应用程序时，它将在响应对以下函数调用返回 SQL_PARAM_DATA_AVAILABLE:**SQLMoreResults**， **SQLExecute**，和**SQLExecDirect**。 应用程序调用**SQLParamData**来确定哪些参数值为可用。  
   
  有关 SQL_PARAM_DATA_AVAILABLE 和流式处理的输出参数的详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
@@ -305,7 +305,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
   
  当处理数组参数时，可以提供单个结果集/行计数 （一个用于每个参数集） 或结果集/行计数可以汇总成一个。 在选项 SQL_PARAM_ARRAY_ROW_COUNTS **SQLGetInfo**指示行计数是可用于每组参数 (SQL_PARC_BATCH) 还是只有一个行计数是可用 (SQL_PARC_NO_BATCH)。  
   
- 在选项 SQL_PARAM_ARRAY_SELECTS **SQLGetInfo**指示结果集是可用于每组参数 (SQL_PAS_BATCH) 还是只有一个结果集是可用 (SQL_PAS_NO_BATCH)。 如果该驱动程序不允许结果集 – 生成语句以使用参数数组执行，SQL_PARAM_ARRAY_SELECTS 返回 SQL_PAS_NO_SELECT。  
+ 在选项 SQL_PARAM_ARRAY_SELECTS **SQLGetInfo**指示结果集是可用于每组参数 (SQL_PAS_BATCH) 还是只有一个结果集是可用 (SQL_PAS_NO_BATCH)。 如果该驱动程序不允许一个结果集生成的语句使用的参数数组执行，SQL_PARAM_ARRAY_SELECTS 返回 SQL_PAS_NO_SELECT。  
   
  有关详细信息，请参阅[SQLGetInfo 函数](../../../odbc/reference/syntax/sqlgetinfo-function.md)。  
   
@@ -411,7 +411,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 sql_data_at_exec，
   
 -   SQL_PARAM_PROCEED 被定义为标头文件中为 0。  
   
- 应用程序可以将 SQL_DESC_ARRAY_STATUS_PTR 字段设置为指向所在的同一阵列 APD 中指向的 SQL_DESC_ARRAY_STATUS_PTR 字段在 IRD 中。 参数绑定到行数据时，这很有用。 根据行数据的状态，然后可以忽略参数。 除了 SQL_PARAM_IGNORE，以下代码导致参数中要忽略的 SQL 语句： SQL_ROW_DELETED、 SQL_ROW_UPDATED 和 SQL_ROW_ERROR。 除了 SQL_PARAM_PROCEED，以下代码会导致 SQL 语句以继续： SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 和 SQL_ROW_ADDED。  
+ 应用程序可以将 SQL_DESC_ARRAY_STATUS_PTR 字段设置为指向所在的同一阵列 APD 中指向的 SQL_DESC_ARRAY_STATUS_PTR 字段在 IRD 中。 参数绑定到行数据时，这很有用。 根据行数据的状态，然后可以忽略参数。 除了 SQL_PARAM_IGNORE，以下代码中要忽略的 SQL 语句导致参数：SQL_ROW_DELETED、 SQL_ROW_UPDATED 和 SQL_ROW_ERROR。 除了 SQL_PARAM_PROCEED，以下代码会导致 SQL 语句以继续：SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 和 SQL_ROW_ADDED。  
   
 ## <a name="rebinding-parameters"></a>重新绑定参数  
  应用程序可以执行两项操作才能更改绑定之一：  

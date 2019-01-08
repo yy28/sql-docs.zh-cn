@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50cb0d8de78b85a3fc6531c3eb5fb63c450205a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe88db4809b69abf292ae0888786bc4606785c3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142827"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773039"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本地 CDC 服务
   本过程介绍如何使用 CDC 服务配置控制台来管理特定的 CDC 服务。  
@@ -45,7 +44,7 @@ ms.locfileid: "48142827"
   
          也可以右键单击要删除的 CDC 服务，然后选择“删除”。  
   
-         **注意**：如果在删除服务时该服务正在运行，则该服务将在被删除前停止。  
+         **注意**：如果该服务正在删除服务时，在删除前停止服务。  
   
          若要删除 Oracle CDC Windows 服务定义，程序需要对关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 MSXDBCDC 数据库具有更新访问权限。 在您单击 **“确定”** 删除该服务后，程序将尝试在 MSXDBCDC 数据库中删除 Oracle CDC 服务注册。 如果由于权限不足而失败，将显示一个对话框，提示用户输入具有对 MSXDBCDC 数据库的更新访问权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
@@ -58,6 +57,6 @@ ms.locfileid: "48142827"
          也可以右键单击要编辑其属性的 CDC 服务，然后选择“属性”。  
   
 ## <a name="see-also"></a>请参阅  
- [管理 Oracle CDC 服务](manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](manage-an-oracle-cdc-service.md)  
   
   

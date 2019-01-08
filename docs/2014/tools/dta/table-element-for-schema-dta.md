@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7d85b45ff292d4262393542909566b233de882d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781809"
 ---
 # <a name="table-element-for-schema-dta"></a>架构的表元素 (DTA)
   指定用于优化的表。  
@@ -52,8 +51,8 @@ ms.locfileid: "48074409"
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[数据库的架构元素&#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**子元素**|[表的名称元素&#40;DTA&#41;](name-element-for-table-dta.md)|  
+|**父元素**|[数据库的架构元素 (DTA)](schema-element-for-database-dta.md)|  
+|**子元素**|[表的名称元素 (DTA)](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>备注  
  如果不指定 `Table` 元素，则数据库引擎优化顾问将假定指定数据库中的所有表都可优化。  

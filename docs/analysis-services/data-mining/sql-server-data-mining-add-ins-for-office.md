@@ -1,5 +1,5 @@
 ---
-title: SQL Server Office 数据挖掘外接程序 |Microsoft 文档
+title: SQL Server Office 数据挖掘外接程序 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2220bb48704fb29aa00236ebf1ec4ad46ecb4007
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014734"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504753"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Office 数据挖掘外接程序
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 数据挖掘外接程序是用于预测分析的一组轻型工具，允许您使用 Excel 中的数据生成分析模型来用于预测、建议或浏览。  
   
 > [!IMPORTANT]
-> 数据挖掘外接程序 Office 不支持 Office 2016 或更高版本。
+> 数据挖掘外接程序适用于 Office 不支持 Office 2016 或更高版本。
   
  该外接程序中的向导和数据管理工具为以下这些常用的数据挖掘任务提供了分步说明：  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34014734"
   
      高级用户可通过拖放“高级查询编辑器”生成自定义 DMX 查询，或使用 Excel VBA 自动进行预测。  
   
--   **记载和管理。** 在您创建了某一数据集并且生成了一些模型后，通过生成数据和模型参数的统计摘要记录所做工作以及洞察到的情况。  
+-   **记载和管理。** 创建数据集并生成了一些模型后，通过生成的数据和模型参数的统计摘要记录你的工作和你的见解。  
   
--   **浏览和展现。** 数据挖掘不是可完全自动进行的活动 - 需要探索并理解结果才能采取有意义的措施。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
+-   **浏览和展现。** 数据挖掘不是完全自动执行的活动-需要探索并理解结果才能采取有意义的操作。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
   
--   **部署和集成。** 创建有用的模型后，通过使用管理工具将该模型从试验服务器导出到另一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，将该模型投入生产。  
+-   **部署和集成。** 创建有用的模型，将您的模型投入生产，通过使用管理工具以模型从试验服务器导出到另一个实例后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
      您还可以将模型保留在服务器上创建它时的位置，但使用 Integration Services 或 DMX 脚本刷新定型数据并运行预测。  
   
@@ -74,10 +74,10 @@ ms.locfileid: "34014734"
   
 -   Business Intelligence  
   
--   Standard  
+-   标准  
   
  根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅 [SQL Server 2016 各个版本支持的功能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
   
- 有关安装的其他帮助，请参阅下载中心上此页面： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 有关安装的其他帮助，请参见此下载中心提供的： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

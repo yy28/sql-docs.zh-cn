@@ -16,12 +16,12 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d76840f084f40b77b6b6539d41d2c9f8a1e1ff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077567"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401442"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
   您可以重命名的现有实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过使用**重命名实例**对话框。  
@@ -58,7 +58,7 @@ ms.locfileid: "48077567"
   
      如果您使用虚拟帐户来设置服务，则需要更新数据库登录名或文件权限。 虚拟帐户基于实例名称，所以如果您将该实例重命名，虚拟帐户也会同时更新。 这意味着您为之前实例创建的所有以前的登录名或权限都不再有效。  
   
-     下例对此进行了说明。 假定您使用默认虚拟帐户将表格模式服务器安装为名为“Tabular”的实例，这将生成以下配置：  
+     下例对此进行了说明。 假设作为名为"Tabular"使用默认虚拟帐户，从而导致以下配置的实例安装在表格模式服务器：  
   
     1.  实例名称 =\<服务器 > \TABULAR  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48077567"
   
     3.  虚拟帐户 = NT Service\ MSOLAP$TABULAR  
   
-     现在假定您将该实例重命名为“TAB2”。 更改名称后将生成如下配置：  
+     现在假设您重命名为"TAB2"的实例。 更改名称后将生成如下配置：  
   
     1.  实例名称 =\<服务器 > \TAB2  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48077567"
   
     3.  虚拟帐户 = NT Service\ MSOLAP$TAB2  
   
-     正如您所看到的，以前授予“NT Service\ MSOLAP$TABULAR”的数据库和文件权限都不再有效。 为了确保该服务执行的任务和操作还照常运行，您现在需要向“NT Service\ MSOLAP$TAB2”授予新的数据库和文件权限。  
+     正如您所看到的以前授予"NT Service\ MSOLAP$ TABULAR"的数据库和文件权限都不再有效。 若要确保任务和服务执行的操作运行之前，就像现在需要向"NT Service\ MSOLAP$ TAB2"授予新的数据库和文件权限。  
   
   

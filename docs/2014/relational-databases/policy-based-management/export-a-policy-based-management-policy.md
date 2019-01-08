@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, export policy
@@ -12,12 +12,12 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3ed88397b17838958e9f843984a2998282d216c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc7067432c46e1d03323ed2a32dab84ebdf72755
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200469"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786929"
 ---
 # <a name="export-a-policy-based-management-policy"></a>导出基于策略的管理策略
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中导出基于策略的管理策略。  
@@ -26,7 +26,7 @@ ms.locfileid: "48200469"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要导出策略，请使用：**  
   

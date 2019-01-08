@@ -13,15 +13,15 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c28b74a271fc2da7c99aeb1ab7b990b11e90fd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118708"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399771"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
-  如果您具有一个要用于预测的模型，但不希望将该模型映射到外部输入数据集或生成大容量预测，则单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  
+  当具有想要用于预测，但不想要将其映射到外部输入数据集或生成大容量预测的模型时，单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  
   
  例如，以下 DMX 查询表示对目标邮件模型 TM_Decision_Tree 的单独查询。  
   
@@ -89,11 +89,11 @@ AS [t]
   
 10. 在查询文本窗格中，查找指示语法错误的逗号和省略号下的红色波形曲线。 删除省略号，并添加任何其他想要的查询条件。 如果不需要添加任何其他条件，请删除逗号。  
   
-     在本主题开头所示的示例代码，对于其他查询条件设置为`'45' as [Age]`。  
+     对于本主题开头部分显示的示例代码，其他查询条件设置为 `'45' as [Age]`。  
   
 11. 单击 **“执行”**。  
   
 ## <a name="see-also"></a>请参阅  
- [创建预测&#40;数据挖掘基础教程&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [创建预测（数据挖掘基础教程）](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

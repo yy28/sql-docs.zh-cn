@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], column
@@ -16,12 +15,12 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd764670dfb5df51dee40593fd911aade0171a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e0c26e32425f204f7dab29aa65c66f3a11f09d7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130437"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753709"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定义和修改列筛选器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改列筛选器。  
@@ -71,7 +70,7 @@ ms.locfileid: "48130437"
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布中发布的项目定义列筛选器  
   
-1.  定义要筛选的项目。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
+1.  定义要筛选的项目。 有关详细信息，请参阅 [Define an Article](define-an-article.md)。  
   
 2.  在发布服务器的发布数据库中，执行 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)。 这将定义要包括在项目中或要从项目中删除的列。  
   

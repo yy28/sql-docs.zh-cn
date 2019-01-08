@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4d8da5c0b352964fe9017be902557e29e1e2ed3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125491"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781419"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
   使用 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页，选择 SAP BW 目标要使用的 SAP BW 连接管理器。 在该页中，您还可选择用于向 SAP Netweaver BW 系统加载数据的参数。  
@@ -80,7 +79,7 @@ ms.locfileid: "48125491"
  输入服务器名称或网关主机的 IP 地址。 通常，名称或 IP 地址与 SAP 应用程序服务器相同。  
   
  **网关服务**  
- 输入网关服务的名称采用格式`sapgwNN`，其中`NN`是系统编号。  
+ 输入网关服务的名称，格式为 `sapgwNN`，其中 `NN` 是系统编号。  
   
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
@@ -111,7 +110,7 @@ ms.locfileid: "48125491"
 |**InfoPackage**|使用 **“创建 InfoPackage”** 对话框创建新的 InfoPackage。 有关此对话框的详细信息，请参阅 [Create InfoPackage](create-infopackage.md)。|  
   
 ## <a name="see-also"></a>请参阅  
- [SAP BW 目标编辑器&#40;映射页&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目标编辑器（“映射”页）](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 目标编辑器（“错误输出”页）](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 目标编辑器（“高级”页）](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  

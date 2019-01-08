@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL job step
@@ -14,12 +14,12 @@ ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d510d1181e845dfc92a7fa970f970f83a3cd3e6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764479"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
   本主题介绍了如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中定义 [!INCLUDE[tsql](../../includes/tsql-md.md)]  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 代理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 作业步骤的选项。  
@@ -28,7 +28,7 @@ ms.locfileid: "48141627"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要定义 Transact-SQL 作业步骤选项，请使用：** ，  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48141627"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Security"></a> 安全性  
- 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)。  
+ 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
@@ -72,6 +72,6 @@ ms.locfileid: "48141627"
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **定义 Transact-SQL 作业步骤选项**  
   
- 使用`JobStep`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。  
+ 通过使用所选的编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `JobStep` 类。  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601737"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502833"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,9 +97,9 @@ NATURAL PREDICTION JOIN
   
 |“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
+|Sport-100|4334|0.29...|0.25...|  
+|Water Bottle|2866|0.19...|0.17...|  
+|Patch kit|2113|0.14...|0.13...|  
   
  但是，此查询类型可能会影响生产设置的性能。 这是因为此查询返回算法的所有预测集，对这些预测进行排序并返回前 3 个产品。  
   

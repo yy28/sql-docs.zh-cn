@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 重命名列 |Microsoft Docs
+title: 第 3 课：重命名列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0037d13dd84f3db8243252717fad1d59fd380bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152949"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416688"
 ---
-# <a name="lesson-3-rename-columns"></a>第 3 课：重命名列
+# <a name="lesson-3-rename-columns"></a>第 3 课：对列重命名
   在本课中，您将重命名您导入的每个表中的很多列。 通过重命名，您可以更易于识别列，且更易于在模型设计器中以及通过用户在客户端应用程序中选择字段来进行导航列。 若要了解详细信息，请参阅[重命名表或列（SSAS 表格）](tabular-models/rename-a-table-or-column-ssas-tabular.md)。  
   
 > [!IMPORTANT]  
 >  重命名列对于完成本教程不是必需的；但剩下的课程（尤其是包含使用 DAX 公式来创建关系、创建计算列和度量值的课程）将引用在本课中介绍的列友好名称。 如果您选择不重命名列，则必须编辑第 5、6 和 7 课中的 DAX 公式，以便使用本课中提供的原始源列名称。  
   
- 学完本课的估计时间： **20 分钟**  
+ 学完本课的预计时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行本课中的任务之前，须已完成上一课： [第 2 课：添加数据](lesson-2-add-data.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 2 课：将数据添加](lesson-2-add-data.md)。  
   
 ## <a name="rename-columns"></a>对列重命名  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48152949"
 2.  双击**CustomerKey**列的名称，然后键入`Customer  Id`，然后按 ENTER。  
   
     > [!TIP]  
-    >  还可以在列的“属性”窗口的“列名”属性中或在“关系图视图”中对列重命名。  
+    >  此外可以重命名中的列**列名**属性中的列**属性**窗口中，或在关系图视图中。  
   
 3.  重命名 **Customer** 表中的其余列以及其余表中的列，用友好名称替换源名称：  
   
@@ -172,6 +172,6 @@ ms.locfileid: "48152949"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>下一步  
- 若要继续学习本教程，请转到下一课： [第 4 课：标记为日期表](lesson-3-mark-as-date-table.md)。  
+ 若要继续学习本教程，请转到下一课：[第 4 课：标记为日期表](lesson-3-mark-as-date-table.md)。  
   
   

@@ -13,15 +13,15 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501783"
 ---
 # <a name="binding-parameters-odbc"></a>绑定参数 ODBC
-SQL 语句中的每个参数必须为关联，或*绑定，* 到应用程序之前执行该语句中的变量。 当应用程序将变量绑定到参数时，它描述了该变量-地址、 C 数据类型等 — 向驱动程序。 它还介绍了参数本身 — SQL 数据类型、 精度和等等。 驱动程序将此信息存储在它维护适用于该语句，并使用的信息来检索该变量值时执行该语句的结构。  
+SQL 语句中的每个参数必须为关联，或*绑定，* 到应用程序之前执行该语句中的变量。 当应用程序将变量绑定到参数时，它描述了该驱动程序到该变量的地址、 C 数据类型等的。 它还介绍了参数本身的 SQL 数据类型、 精度和等等。 驱动程序将此信息存储在它维护适用于该语句，并使用的信息来检索该变量值时执行该语句的结构。  
   
  可绑定参数，或将其重新绑定的任意时间之前执行的语句。 如果执行语句后会重新绑定参数，直到再次执行该语句不适用于绑定。 若要将参数绑定到一个不同的变量，应用程序只需重新绑定与新的变量; 参数自动释放以前的绑定。  
   

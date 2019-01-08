@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021797 error
@@ -13,12 +12,12 @@ ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03ebaa70dbb9fb7e774d48b59e06a6d4dc03b11b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753779"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -31,7 +30,7 @@ ms.locfileid: "48097277"
 |事件源|MSSQLSERVER|  
 |组件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符号名称||  
-|消息正文|'%s' 必须是有效的 Windows 登录名，且格式为: '计算机\登录名' 或 '域\登录名'。 请参阅 '%s' 的文档。|  
+|消息正文|%s 必须是有效的 Windows 登录名的形式：'\' 或者 '域。 请参阅 '%s' 的文档。|  
   
 ## <a name="explanation"></a>解释  
  如果为 **@job_login** 参数指定的值为空或无效，下列复制存储过程将引发此错误。 如果 **db_owner** 固定数据库角色的成员从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中运行脚本时，将发生此错误。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的安全模式已更改，因此必须更新这些脚本。  

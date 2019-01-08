@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6843e2f2d818789a791ba12c78e5aa42a086a15d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 847de27624db305e8fc47c81de69a8e77dbf84cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224773"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754759"
 ---
 # <a name="xml-source-custom-properties"></a>XML 源自定义属性
   XML 源具有自定义属性和所有数据流组件通用的属性。  
@@ -26,7 +25,7 @@ ms.locfileid: "48224773"
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用来访问 XML 数据的模式。|  
-|UseInlineSchema|Boolean|该值指示是否要在 XML 源中使用内联架构定义。 此属性的默认值是`False`。|  
+|UseInlineSchema|Boolean|该值指示是否要在 XML 源中使用内联架构定义。 此属性的默认值为 `False`。|  
 |XMLData|String|要从中检索 XML 数据的文件或变量。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
 |XMLSchemaDefinition|String|架构定义文件 (.xsd) 的路径和文件名。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   

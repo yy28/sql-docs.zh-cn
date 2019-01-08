@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 定义维度和度量值组之间的关系 |Microsoft 文档
+title: 第 5 课：定义维度和度量值组之间的关系 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 551959168ab52b0806876ce1a6b6a1fbdd11bfaa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9aa0ca58517dd8eb069024fb6a9acf9080481b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016104"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524792"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 课：定义维度和度量值组之间的关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "34016104"
   
 本课程包含以下任务：  
   
-[定义被引用的关系](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
-在本任务中，您将了解如何通过维度（维度通过主键-外键关系直接链接）将维度间接链接到事实数据表。  
+[定义引用关系](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
+在此任务中，了解如何将维度链接到事实数据表间接通过直接通过主键-外键关系链接的维度。  
   
 [定义事实关系](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
 在本任务中，您将了解如何基于事实数据表中的数据定义维度，以及如何将维度关系定义为事实关系。  
@@ -41,11 +41,11 @@ ms.locfileid: "34016104"
 在本任务中，您将了解如何修改特定度量值组的维度粒度。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 6 课： 定义计算](../analysis-services/lesson-6-defining-calculations.md)  
+[第 6 课：定义计算](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模 & #40;Adventure Works 教程 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

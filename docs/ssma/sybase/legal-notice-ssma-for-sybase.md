@@ -10,12 +10,12 @@ ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95377d761aa46073d7650a274f9ddbe6ccd44cc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6857a18ca740c399feb5e8fd65dae4ec9a7d7dd6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531461"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>法律声明（SSMA for Sybase）
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  
@@ -35,7 +35,7 @@ SAP NetWeaver 是 SAP AG 在德国和其他几个国家/地区的注册商标。
 所有其他商标均为其各自所有者的财产。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支持和升级文档策略  
-SQL Server 文档中显示的内容仅在经过充分测试后才发布。 产品文档（SQL Server 联机丛书、自述文件、已知问题文档和知识库文章）包含与 SQL Server 的特性和功能相关的内容，对于所有客户的正常使用，该内容足够可靠并且安全。 本策略适用于所有 SQL Server 文档，包括版本和 Service Pack 的自述文件；自述文件被视为联机丛书的扩展。  
+SQL Server 文档中显示的内容仅在经过充分测试后才发布。 SQL Server 联机丛书、 自述文件、 已知的问题文档和知识库文章的产品文档包含有关 SQL Server 功能和功能非常强大，足以为安全起见，供所有客户的常规使用的内容。 本策略适用于所有 SQL Server 文档，包括版本和 Service Pack 的自述文件；自述文件被视为联机丛书的扩展。  
   
 在某些情况下，特定功能不是客户应直接使用的功能，因此，未将其记录其中。 除非某种功能还在 Microsoft 发布的 SQL Server 文档中进行讨论，否则来自第三方书籍或网站的内容不受 Microsoft 客户支持的支持，并不应在生产数据库或应用程序中使用。  
   

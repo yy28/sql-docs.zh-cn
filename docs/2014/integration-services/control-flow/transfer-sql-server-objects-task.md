@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
@@ -15,12 +14,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b45c0c3d20b3b7f6405e44a456cd5ebbce6472c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 163418048c50b35bd831174d6cd516d301dfa53f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175467"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761869"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
   传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中一种或多种类型的对象。 例如，该任务可以复制表和存储过程。 可以复制的对象的类型会因用作源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而异。 例如，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库包括架构和用户定义聚合。  
@@ -33,7 +32,7 @@ ms.locfileid: "48175467"
 |Object|  
 |------------|  
 |表|  
-|视图|  
+|Views|  
 |存储过程|  
 |用户定义函数|  
 |默认值|  
@@ -53,7 +52,7 @@ ms.locfileid: "48175467"
   
 -   索引  
   
--   触发器  
+-   Triggers  
   
 -   全文索引  
   
@@ -80,7 +79,7 @@ ms.locfileid: "48175467"
  传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务并不报告对象传输的进度；它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 中存储的执行值`ExecutionValue`该任务的属性将返回传输的对象数。 通过将用户定义的变量分配给传输 SQL Server 对象任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关对象传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 在任务的 `ExecutionValue` 属性中存储的执行值返回已传输的对象数。 通过将用户定义的变量分配给传输 SQL Server 对象任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关对象传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输 SQL Server 对象任务包括下列自定义日志项：  
@@ -89,7 +88,7 @@ ms.locfileid: "48175467"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects    此日志项报告传输已经完成。 日志项包括结束时间。  
   
- 此外，`OnInformation` 事件的日志项报告属于为传输所选的对象类型的对象数、已经传输的对象数以及随表传输数据时截断表这样的操作。 日志项`OnWarning`事件是每个对象写入会覆盖目标上。  
+ 此外，`OnInformation` 事件的日志项报告属于为传输所选的对象类型的对象数、已经传输的对象数以及随表传输数据时截断表这样的操作。 当覆盖目标上的每个对象时，都会写入 `OnWarning` 事件的日志项。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  用户必须具有浏览源服务器上的对象的权限，同时必须具有在目标服务器上删除和创建对象的权限，此外用户还必须具有访问指定数据库和数据库对象的权限。  
@@ -107,9 +106,9 @@ ms.locfileid: "48175467"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输 SQL Server 对象任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输 SQL Server 对象任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输 SQL Server 对象任务编辑器&#40;对象页面&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [传输 SQL Server 对象任务编辑器（“对象”页）](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

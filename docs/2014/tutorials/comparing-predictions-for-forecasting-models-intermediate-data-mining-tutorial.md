@@ -11,12 +11,12 @@ ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35883a1cb34a7d3ff6bd4e37f15ef0125aea7951
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206477"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395370"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>比较预测模型的预测（数据挖掘中级教程）
   在本教程前面的步骤中，您已经创建了多个时序模型：  
@@ -36,7 +36,7 @@ ms.locfileid: "48206477"
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> 添加数据后比较原始结果和结果  
- 让我们看一下太平洋地区 M200 产品系列的数据，查看使用新数据更新模型如何影响结果。 请记住原始数据序列在 2004 年 6 月结束，我们获取了 7 月、8 月和 9 月的新数据。  
+ 让我们看一下只是 M200 产品系列，太平洋地区，若要查看使用新数据更新模型如何影响结果的数据。 请记住原始数据序列在 2004 年 6 月结束，我们获取了 7 月、8 月和 9 月的新数据。  
   
 -   第一列显示添加的新数据。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48206477"
  通常，算法给予新数据中的更改的权重比模型开始就有的数据更改的权重大。 但是，在这种情况下，新销售额数字表示仅相对前一阶段增长了 20-30％，因此仅对预测的销售额稍有增加，在销售预测再次向下后，与新数据之前的月份的趋势更为一致。  
   
 ##  <a name="bkmk_REPLACE"></a> 比较原始和交叉预测结果  
- 请记住，原始挖掘模型揭示在区域之间以及产品系列之间存在较大的差异。 例如，M200 型号的销售很强，而 T1000 型号的销售在所有区域中都比较弱。 而且，一些序列的数据不多。 序列不规则，这表示它们没有相同的起点。  
+ 请记住，原始挖掘模型揭示在区域之间以及产品系列之间存在较大的差异。 例如，M200 型号的销售很强，而 T1000 型号的销售在所有区域中都比较弱。 此外，某些系列没有太多数据。 序列不规则，这表示它们没有相同的起始点。  
   
  ![时序预测 M200 和 T1000 数量](../../2014/tutorials/media/6series-defaultforecasting.gif "时序预测 M200 和 T1000 数量")  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48206477"
   
  从此关系图中，您可以看到聚合挖掘模型在使得各个数据序列中的波动尽量最小的同时保持整体范围和值的趋势。  
   
-## <a name="conclusion"></a>结语  
+## <a name="conclusion"></a>结束语  
  您学习了如何创建和自定义可用于预测的时序模型。  
   
  您学习了通过使用 EXTEND_MODEL_CASES 参数添加新数据和创建预测来更新时序模型，而不必重新处理它们。  

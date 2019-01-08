@@ -1,22 +1,21 @@
 ---
-title: 报表服务器属性 （在选项卡上的日志） |Microsoft Docs
+title: 报表服务器属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e6ccc5aa992553345f8f1c89ab603be2f32c609
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f56d5ea637adc2ce8fc5490c44408bdd1de7f3f6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751629"
 ---
 # <a name="report-server-properties-log-on-tab"></a>报表服务器属性（“登录”选项卡）
   使用 **“报表服务器属性”** 对话框中的 **“登录”** 选项卡可以指定报表服务器服务使用的帐户，还可以启动和停止该服务。  

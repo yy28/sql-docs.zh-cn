@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - SMO [SQL Server]
@@ -16,12 +14,12 @@ ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6170d01dbdfd54cabf52328c874a89216cc02341
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762089"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server 管理对象 (SMO) 编程指南
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 是专为编程管理的所有方面的对象的集合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制管理对象 (RMO) 是一个用于封装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制管理功能的对象集合。  

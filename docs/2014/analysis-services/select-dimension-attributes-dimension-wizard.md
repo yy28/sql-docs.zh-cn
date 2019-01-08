@@ -13,12 +13,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508012"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>选择维度属性（维度向导）
   可以使用 **“选择维度属性”** 页选择和修改要创建的维度的属性。  
@@ -49,13 +49,13 @@ ms.locfileid: "48218943"
  **启用浏览**  
  选中此项可使最终用户能够浏览并筛选属性。 对于键属性，必须选中 **“启用浏览”** 。 对于非键属性，默认未选中“启用浏览”，这将导致非键属性只显示为成员属性。  
   
- 在大多数情况下，该属性由可用或不可用的浏览通过设置`AttributeHierarchyEnabled`属性设置为`True`或`False`分别。 但是，在下列三种情况中，向导使用不同的设置。  
+ 在大多数情况下，将 `AttributeHierarchyEnabled` 属性设置为 `True` 或 `False` 可以使浏览分别为可用或不可用。 但是，在下列三种情况中，向导使用不同的设置。  
   
-|情况|“设置”|  
+|情况|设置|  
 |----------|--------------|  
-|维度包含父子层次结构并且没有选中“启用浏览”|向导将保持`AttributeHierarchyEnabled`属性设置为`True`，并设置`AttributeHierarchyVisible`属性为`False`的键属性。|  
+|维度包含父子层次结构并且没有选中“启用浏览”|向导将键特性的 `AttributeHierarchyEnabled` 属性设置保留为 `True`，并将 `AttributeHierarchyVisible` 属性设置为 `False`。|  
 |维度中的表包含指向维度中没有的表的外键|向导选择该外键作为要包含的属性，但不选中 **“启用浏览”**。 如果保留这些设置，则特性的 `AttributeHiearchyEnabled` 属性将设置为 `True`，而 `AttributeHieararchyVisible` 属性将设置为 `False`。|  
-|维度包含通过可为空值的外键列访问的雪花型表<br /><br /> —并且—<br /><br /> 对于基于雪花型表键的属性，不选中“启用浏览”|该向导将创建新属性，其`AttributeHiearchyEnabled`属性设置为`True`，并`AttributeHieararchyVisible`属性设置为`False`。|  
+|维度包含通过可为空值的外键列访问的雪花型表<br /><br /> -和-<br /><br /> 对于基于雪花型表键的属性，不选中“启用浏览”|向导将创建 `AttributeHiearchyEnabled` 属性设置为 `True`，`AttributeHieararchyVisible` 属性设置为 `False` 的新特性。|  
   
  **属性类型**  
  （可选）设置属性的类型。 默认值为 **Regular**。 属性类型向客户端应用程序提供属性中可能包含的信息类型的指南。  

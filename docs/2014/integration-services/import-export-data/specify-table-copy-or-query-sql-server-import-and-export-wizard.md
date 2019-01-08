@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
@@ -13,12 +12,12 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 69135b95383c8a00bbde4475717e68d2bbdaf770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53d97adb5252594bb38f85989e87742a557331ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150757"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750399"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定表复制或查询（SQL Server 导入和导出向导）
   使用**指定表复制或查询**页后，可以指定如何将数据复制。 您可以使用图形界面选择所希望复制的现有数据库对象，或使用 Transact-SQL 创建更复杂的查询。  
@@ -31,7 +30,7 @@ ms.locfileid: "48150757"
  **复制一个或多个表或视图的数据**  
  将字段从所选的源表和视图复制到指定的目标或目标，通过使用**选择源表和视图**对话框。 如果希望在不对记录进行筛选或排序的情况下复制源中的所有数据，请使用此选项。  
   
- 当你使用[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据访问接口连接到数据源**将数据从一个或多个表或视图复制**选项可能不可用。 此选项仅对在 ProviderDescriptors.xml 文件中有 ProviderDescription 部分的信息的那些访问接口可用。 每个 ProviderDescription 部分都包含从相应访问接口检索元数据所需的信息。 默认情况下，ProviderDescriptors.xml 文件仅包含以下访问接口的 ProviderDescription 部分：  
+ 使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口连接到数据源时， **“复制一个或多个表或视图的数据”** 选项可能不可用。 此选项仅对在 ProviderDescriptors.xml 文件中有 ProviderDescription 部分的信息的那些访问接口可用。 每个 ProviderDescription 部分都包含从相应访问接口检索元数据所需的信息。 默认情况下，ProviderDescriptors.xml 文件仅包含以下访问接口的 ProviderDescription 部分：  
   
 -   System.Data.SqlClient  
   

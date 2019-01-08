@@ -48,12 +48,12 @@ ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92ff53ae795fa4d0565ca9b1537a7d12bc8f0b5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147607"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409174"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>算法参数（SQL Server 数据挖掘外接程序）
   使用 Excel 表分析工具执行数据挖掘时，无需配置数据挖掘算法或参数；每一种工具都将对数据进行分析并自动选择最佳参数。 但是，如果您要修改模型，或要从头开始创建挖掘模型，可以使用 Excel 数据挖掘客户端提供的多种选项进行自定义。  
@@ -77,15 +77,15 @@ ms.locfileid: "48147607"
 |CLUSTER_COUNT|Microsoft Clustering Algorithm<br /><br /> Microsoft 顺序分析和聚类分析算法|指定将由算法生成的大致分类数。 如果无法基于相应的数据生成该大致数目的分类，则算法将生成尽可能多的分类。 如果将 CLUSTER_COUNT 设置为 0，则算法将使用试探性方法最准确地确定要生成的分类数。<br /><br /> 默认值为 10。|  
 |CLUSTER_SEED|Microsoft Clustering Algorithm|指定在为建模初始阶段随机生成分类时所要使用的种子数量。<br /><br /> 默认值为 0。|  
 |CLUSTERING_METHOD|Microsoft Clustering Algorithm|指定算法要使用的聚类分析方法。 可用的聚类分析方法有：scalable EM (1)、non-scalable EM (2)、scalable K-Means (3) 和 non-scalable K-Means (4)。<br /><br /> 默认值为 1。|  
-|COMPLEXITY_PENALTY|Microsoft 决策树算法<br /><br /> Microsoft 时序算法|控制决策树的增长。 该值较低时，会增加拆分数；该值较高时，会减少拆分数。 默认值基于特定模型的属性数，详见以下列表：<br /><br /> 对于 1 到 9 个属性，默认值为 0.5。<br /><br /> 对于 10 到 99 个属性，默认值为 0.9。<br /><br /> 对于 100 或更多个属性，默认值为 0.99。<br /><br /> 注意： 在时序模型中，此参数仅适用于使用 ARTxp 算法生成的模型或混合模型。|  
-|FORCED_REGRESSOR|Microsoft 决策树算法<br /><br /> Microsoft 线性回归算法|强制算法将指示的列用作回归量，而不考虑算法为这些列计算出的重要性。<br /><br /> 注意： 此参数仅用于预测连续属性的决策树。 根据定义，线性回归模型是一种特殊的决策树，可对连续属性进行预测。 但是，任何决策树模型都可包含表示线性回归公式的节点。|  
+|COMPLEXITY_PENALTY|Microsoft 决策树算法<br /><br /> Microsoft 时序算法|控制决策树的增长。 该值较低时，会增加拆分数；该值较高时，会减少拆分数。 默认值基于特定模型的属性数，详见以下列表：<br /><br /> 对于 1 到 9 个属性，默认值为 0.5。<br /><br /> 对于 10 到 99 个属性，默认值为 0.9。<br /><br /> 对于 100 或更多个属性，默认值为 0.99。<br /><br /> 注意：在时序模型中，此参数仅适用于使用 ARTxp 算法生成的模型或混合模型。|  
+|FORCED_REGRESSOR|Microsoft 决策树算法<br /><br /> Microsoft 线性回归算法|强制算法将指示的列用作回归量，而不考虑算法为这些列计算出的重要性。<br /><br /> 注意：此参数只用于预测连续属性的决策树。 根据定义，线性回归模型是一种特殊的决策树，可对连续属性进行预测。 但是，任何决策树模型都可包含表示线性回归公式的节点。|  
 |FORECAST_METHOD|Microsoft 时序算法|指示是否应使用 ARTxp 算法、ARIMA 算法或二者的组合来生成预测。<br /><br /> 默认值为 MIXED。|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|指定隐藏神经元相对于输入和输出神经元的比率。 以下公式可确定隐藏层中神经元的初始数目：<br /><br /> HIDDEN_NODE_RATIO * SQRT（总输入神经元 \* 总输出神经元）<br /><br /> 默认值为 4.0。|  
 |HISTORIC_MODEL_COUNT|Microsoft 时序算法|指定将要生成的历史模型的数量。<br /><br /> 默认值为 1。|  
 |HISTORICAL_MODEL_GAP|Microsoft 时序算法|指定两个连续的历史模型之间的时间间隔。 例如，如果将此值设置为 g，则将以 g、2*g、3\*g（依此类推）的时间间隔为被时间段截断的数据生成历史模型。<br /><br /> 默认值为 10。|  
 |HOLDOUT_PERCENTAGE|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定定型数据中用于计算维持错误的事例的百分比，定型挖掘模型时的停止条件中将用到此百分比。<br /><br /> 默认值为 30。<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持百分比值。|  
 |HOLDOUT_SEED|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定一个数字，用作在算法随机确定维持数据时伪随机生成器的种子。 如果此参数设置为 0，算法将基于挖掘模型的名称生成种子，以保证重新处理期间模型内容的一致性。<br /><br /> 默认值为 0。<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持种子值。|  
-|INSTABILITY_SENSITIVITY|Microsoft 时序算法|控制预测方差超过特定阈值的点，以及取消预测的 ARTxp 算法。 默认值为 1。<br /><br /> 注意： 此参数仅适用于混合的模型或使用 ARTxp 算法的模型。|  
+|INSTABILITY_SENSITIVITY|Microsoft 时序算法|控制预测方差超过特定阈值的点，以及取消预测的 ARTxp 算法。 默认值为 1。<br /><br /> 注意：此参数仅适用于混合模型或使用 ARTxp 算法的模型。|  
 |MAXIMUM_INPUT_ATTRIBUTES|Microsoft Clustering Algorithm<br /><br /> Microsoft 决策树算法<br /><br /> Microsoft 线性回归算法<br /><br /> Microsoft Naive Bayes 算法<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft 逻辑回归算法|定义算法在调用功能选择之前可以处理的输入属性数。 如果将此值设置为 0，则表示关闭功能选择。<br /><br /> 默认值为 255。|  
 |MAXIMUM_ITEMSET_COUNT|Microsoft 关联算法|指定要生成的最大项集数。 如果未指定数目，则该算法将生成所有可能的项集。<br /><br /> 默认值为 200000。|  
 |MAXIMUM_ITEMSET_SIZE|Microsoft 关联算法|指定一个项集中允许的最大项数。 将该值设置为 0 将指定对项集的大小没有限制。<br /><br /> 默认值为 3。|  
@@ -110,8 +110,8 @@ ms.locfileid: "48147607"
 |PREDICTION_SMOOTHING|Microsoft 时序算法|控制 ARTXP 和 ARIMA 时序的混合算法。 仅当 FORECAST_METHOD 参数设置为 MIXED 时，该指定值才有效。 值必须介于 0 到 1 之间。 如果值为 0，则模型仅使用 ARTXP。 如果值为 1，则模型仅使用 ARIMA。 值越接近 0，则 ARTXP 的重要性就越高。 值越接近 1，则 ARIMA 的重要性就越高。|  
 |SAMPLE_SIZE|Microsoft Clustering Algorithm|如果 CLUSTERING_METHOD 参数设置为其中一个可缩放聚类分析方法，请指定算法在每个传递中使用的事例数。 如果将 SAMPLE_SIZE 参数设置为 0，则会在单个传递中对整个数据集进行聚类分析操作， 从而导致内存和性能发生问题。<br /><br /> 默认值为 50000。|  
 |SAMPLE_SIZE|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定用来给模型定型的事例数。 算法提供程序将使用该数字或不包含在 HOLDOUT_PERCENTAGE 参数指定的维持百分比中的总的事例百分比，取两者中较小值。<br /><br /> 换言之，如果将 HOLDOUT_PERCENTAGE 设置为 30，则算法将使用该参数的值或等于事例总数百分之七十的值，取两者中较小值。<br /><br /> 默认值为 10000。|  
-|SCORE_METHOD|Microsoft 决策树算法|确定用于计算拆分分数的方法。 可用选项有：(1) Entropy、(K2) Bayesian with K2 Prior 或 (3) Bayesian Dirichlet Equivalent (BDE) Prior。<br /><br /> 默认值为 3。|  
-|SPLIT_METHOD|Microsoft 决策树算法|确定用于拆分节点的方法。 可用选项有：Binary (1)、Complete (2) 或 Both (3)。<br /><br /> 默认值为 3。|  
+|SCORE_METHOD|Microsoft 决策树算法|确定用于计算拆分分数的方法。 可用选项包括：（1） 平均信息量，（2) Bayesian with K2 Prior 或 （3) Bayesian Dirichlet 等价 (BDE) Prior。<br /><br /> 默认值为 3。|  
+|SPLIT_METHOD|Microsoft 决策树算法|确定用于拆分节点的方法。 可用选项包括：(1) 的二进制文件、 完整 (2) 或 Both (3)。<br /><br /> 默认值为 3。|  
 |STOPPING_TOLERANCE|Microsoft 聚类分析算法技术参考|指定一个值，它可确定何时达到收敛而且算法完成建模。 当分类概率中的整体变化小于 STOPPING_TOLERANCE 参数与模型大小之比时，即达到收敛。<br /><br /> 默认值为 10。|  
   
 ### <a name="comments"></a>注释  

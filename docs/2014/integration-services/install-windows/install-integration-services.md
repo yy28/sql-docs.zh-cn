@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -19,12 +18,12 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6ded31664a8eaf6b11bc630754752677d46d7ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204797"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750329"
 ---
 # <a name="install-integration-services"></a>安装集成服务
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了单个安装程序来安装其包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在内的任一组件或所有组件。 通过安装程序，可在单台计算机上将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件一起安装，也可以单独安装。  
@@ -125,6 +124,6 @@ ms.locfileid: "48204797"
  64 位功能安装在 **Program Files** 目录下，而 32 位功能单独安装在 **Program Files (x86)** 目录下。 （这种行为并不特定于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 64 位操作系统不支持 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]（即 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 包的 32 位开发环境），因此不能将其安装在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 服务器上。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 64 位操作系统上不支持 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 包的 32 位开发环境，因此不能将其安装在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 服务器上。  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1a0d8e895189e3fe71d9d99178beff7cd603208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf59655f907b048d08166e8cb7ef1e0f4bc63503
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103967"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771239"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
   本过程说明如何使用 ODBC 目标加载数据。 若要添加和配置 ODBC 目标，包中必须已包含至少一个数据流任务和源。  
@@ -35,9 +34,9 @@ ms.locfileid: "48103967"
   
 6.  选择数据访问方法。  
   
-    -   **表名 - 批处理**：选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”**。  
+    -   **表名-批处理**:选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”**。  
   
-    -   **表名 - 逐行**：选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项时，数据将一次一行加载到表中。  
+    -   **表名-逐行**:选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项时，数据将一次一行加载到表中。  
   
 7.  在 **“表或视图的名称”** 字段中，从列表的数据库中选择某一可用表或视图，或者键入正则表达式以便标识表。该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。  
   
@@ -52,8 +51,8 @@ ms.locfileid: "48103967"
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [ODBC 目标编辑器&#40;连接管理器页&#41;](../odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目标编辑器（“连接管理器”页）](../odbc-destination-editor-connection-manager-page.md)   
  [ODBC 目标编辑器（“映射”页）](../odbc-destination-editor-mappings-page.md)   
- [ODBC 源编辑器&#40;错误输出页&#41;](../odbc-source-editor-error-output-page.md)  
+ [ODBC 源编辑器（“错误输出”页）](../odbc-source-editor-error-output-page.md)  
   
   

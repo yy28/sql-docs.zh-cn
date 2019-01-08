@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdynamicsnapshot_TSQL
@@ -23,12 +22,12 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc4d181bf560abc83dd3ea818abe228ed54bf76f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e31562dcec495013b96dd772db2ae85c7702796
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830285"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783279"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
  如果使用所有默认参数值，则将返回用于整个发布数据库的所有已分区数据快照作业的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色**db_owner**固定数据库角色和发布访问列表才能执行**sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>请参阅  

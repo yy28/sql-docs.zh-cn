@@ -11,17 +11,17 @@ ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e351f08a5e72966c92a7452872532b90e4127964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837465"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390440"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC 服务提供程序接口摘要
 下表介绍 ODBC 服务提供程序接口函数。 有关语法和语义为每个函数的详细信息，请参阅[ODBC 服务提供程序接口 (SPI) 参考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)。  
   
-|函数名称|用途|  
+|函数名称|目标|  
 |-------------------|-------------|  
 |[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|与相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，但它的连接信息令牌而不是连接句柄上设置的属性。|  
 |[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|为应用程序的连接信息令牌设置的连接字符串[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)调用。|  

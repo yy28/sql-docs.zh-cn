@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508755"
 ---
 # <a name="working-with-recordsets"></a>使用记录集
-**记录集**对象有内置功能，可用于重新排列结果集中的数据的顺序，根据你提供的条件的特定记录中搜索并且甚至优化那些使用索引的搜索操作。 是否可使用这些功能取决于提供程序以及在某些情况下，例如[索引](../../../ado/reference/ado-api/index-property.md)属性 — 本身的数据源的结构。  
+**记录集**对象有内置功能，可用于重新排列结果集中的数据的顺序，根据你提供的条件的特定记录中搜索并且甚至优化那些使用索引的搜索操作。 可使用这些功能是否取决于提供程序以及在某些情况下-例如[索引](../../../ado/reference/ado-api/index-property.md)属性的数据源本身的结构。  
   
 ## <a name="arranging-data"></a>排列数据  
  通常情况下，最有效的方法中的对数据进行排序你**记录集**是用于将结果返回到其 SQL 命令中指定 ORDER BY 子句。 但是，您可能需要更改中的数据的顺序**记录集**已创建。 可以使用**排序**属性来建立的顺序中的哪些行**记录集**遍历。 此外，**筛选器**属性确定哪些行是遍历行时可以访问。  
@@ -43,7 +43,7 @@ ms.locfileid: "47762425"
 ## <a name="finding-a-specific-record"></a>查找特定记录  
  ADO 提供[查找](../../../ado/reference/ado-api/find-method-ado.md)并[Seek](../../../ado/reference/ado-api/seek-method.md)方法，用于查找中的特定记录**记录集**。 **查找**方法支持的各种提供程序，但仅限于单个搜索条件。 **Seek**方法支持多个条件进行搜索，但很多提供程序不支持。  
   
- 字段的索引可以极大地提高的性能**查找**方法并**排序**并**筛选器**属性的**记录集**对象。 可以创建的内部索引**字段**对象通过设置其动态[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性。 此动态属性添加到**属性**系列**字段**对象设置时[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**. 请记住，此索引是 ADO 的内部，不能对其进行访问，或将其用于任何其他用途。 此外，此索引是不同于[索引](../../../ado/reference/ado-api/index-property.md)的属性**记录集**对象。  
+ 字段的索引可以极大地提高的性能**查找**方法并**排序**并**筛选器**属性的**记录集**对象。 可以创建的内部索引**字段**对象通过设置其动态[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性。 此动态属性添加到**属性**系列**字段**对象设置时[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**. 请记住，此索引是 ADO 的内部-不能对其进行访问，或将其用于任何其他用途。 此外，此索引是不同于[索引](../../../ado/reference/ado-api/index-property.md)的属性**记录集**对象。  
   
  **查找**方法可快速查找的列 （字段） 中的值**记录集**。 通常可以提高的速度**查找**使用的列方法**优化**属性以在其上创建索引。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47762425"
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|用于查看仅受影响的最后一个的记录的筛选器**删除**，**重新同步**， **UpdateBatch**，或者**CancelBatch**调用。|  
 |**adFilterConflictingRecords**|用于查看失败的最后的批处理更新的记录的筛选器。|  
-|**adFilterFetchedRecords**|用于查看当前缓存中的记录的筛选器，也就是说，要从数据库中检索记录的最后一个调用的结果。|  
+|**adFilterFetchedRecords**|筛选器用于查看当前的缓存-中的记录，即要从数据库中检索记录的最后一个调用的结果。|  
 |**adFilterNone**|删除当前筛选器并还原所有记录以进行查看。|  
 |**adFilterPendingRecords**|查看仅记录的筛选器的已更改但尚未发送到服务器。 仅适用于批更新模式。|  
   

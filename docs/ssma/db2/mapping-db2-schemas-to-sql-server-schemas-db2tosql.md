@@ -10,12 +10,12 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4fe903d81bc698ff324b504034ed92025570254c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e9ccc7648be4915a68b798f314689d961113639a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656626"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409497"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>将 DB2 架构映射到 SQL Server 架构 (DB2ToSQL)
 在 DB2，每个数据库都有一个或多个架构。 默认情况下，SSMA 将迁移到一个 DB2 架构中的所有对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]命名的架构的数据库。 但是，自定义 DB2 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
@@ -50,7 +50,7 @@ DB2 数据库包含的架构。 实例[!INCLUDE[ssNoVersion](../../includes/ssno
   
 -   映射到 SQL Server  
   
-您可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库与目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与之有连接使用 SSMA 数据库。 是否要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将会有一条消息提示 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。在同步过程中将创建它。是否要继续？"** 单击是。 同样，您可以映射到目标下不存在架构的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将在同步过程中创建的数据库。  
+您可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库与目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与之有连接使用 SSMA 数据库。 是否要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将会有一条消息提示 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。在同步过程中将创建它。是否想要继续？"** 单击是。 同样，您可以映射到目标下不存在架构的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将在同步过程中创建的数据库。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>还原为默认数据库和架构  
 如果自定义 DB2 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构，可以还原为默认值的映射。  

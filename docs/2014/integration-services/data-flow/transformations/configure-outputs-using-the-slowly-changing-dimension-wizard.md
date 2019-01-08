@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
@@ -15,12 +14,12 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79ae2c560bfc5e5e38d46e72bad0b1a734421ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6665b08662834226feac1c99df3e8a63e7026c7b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085417"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750074"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
   渐变维度向导所起作用相当于渐变维度转换的编辑器。 为渐变维度数据生成和配置数据流可能是一项复杂的任务。 渐变维度向导提供了为渐变维度转换输出生成数据流的最简便方法，指导您逐步完成映射列、选择业务键列、设置列更改属性以及配置对推断维度成员的支持。  
@@ -81,6 +80,6 @@ ms.locfileid: "48085417"
  更新渐变维度转换输出配置的最简单方法就是重新运行渐变维度向导并从向导页修改属性。 也可以使用 **“高级编辑器”** 对话框或以编程方式更新渐变维度转换。  
   
 ## <a name="see-also"></a>请参阅  
- [渐变维度转换](slowly-changing-dimension-transformation.md)  
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

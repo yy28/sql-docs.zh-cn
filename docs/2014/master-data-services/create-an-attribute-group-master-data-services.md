@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
@@ -14,27 +13,27 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a1aa0fdc536a4f0b80e5f855fb9d04dda264c5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 055c02ae541ec62d0ea556a20aab5d12d9c0a001
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163449"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760909"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>创建属性组 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要在 **“资源管理器”** 网格中的单独选项卡上显示属性时，创建属性组。  
   
 > [!NOTE]  
->  创建属性组时，对除创建者之外的所有用户自动隐藏它。 有关使组可见的详细信息，请参阅[对用户进行属性组可见&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)。  
+>  创建属性组时，对除创建者之外的所有用户自动隐藏它。 有关使组可见的详细信息，请参阅 [使属性组对用户可见 (Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md)选项卡上。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)。  
   
--   必须至少存在一个属性。 有关详细信息，请参阅[创建文本属性 (Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)。  
+-   必须至少存在一个属性。 有关详细信息，请参阅 [创建文本属性 (Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)。  
   
 ### <a name="to-create-an-attribute-group"></a>创建属性组  
   
@@ -67,16 +66,16 @@ ms.locfileid: "48163449"
   
 13. （可选） 单击**向上**并**向下**箭头可以更改属性的从左到右顺序。  
   
-14. 单击 **“保存”**。  
+14. 单击“保存” 。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [使属性组对用户可见&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [使属性组对用户可见 (Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>请参阅  
- [属性组&#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [更改属性组名称 &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)   
+ [更改属性组名称 (Master Data Services)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [删除属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
  [叶权限&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [合并的权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  

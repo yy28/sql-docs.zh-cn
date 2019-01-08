@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c3fa39cde45e568ad713a3238c98e96d40f8495
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd5bc058acf58a62c07fd5bdc65a33a43a6a7d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155037"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749789"
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
   使用 **“查找 InfoObject”** 对话框查找在 SAP Netweaver BW 系统中定义的 InfoObject。 当可用 InfoObject 列表显示时，选择您需要的 InfoObject，然后 SAP BW 目标将使用需要的值填充关联的选项。  
@@ -62,7 +61,7 @@ ms.locfileid: "48155037"
  **名称**  
  输入您要查找的 InfoObject 的名称，或输入部分名称加上星号通配符 (*)。 或者，仅使用星号通配符以包括所有 InfoObject。  
   
- **Description**  
+ **说明**  
  输入说明，或输入部分说明加上星号通配符 (*)。 或者，仅使用星号通配符以包括所有 InfoObject（而无论说明是什么）。  
   
  **查找**  
@@ -80,12 +79,12 @@ ms.locfileid: "48155037"
  当可用 InfoObject 列表显示时，选择您需要的 InfoObject，然后目标将使用需要的值填充关联的选项。  
   
 ## <a name="see-also"></a>请参阅  
- [创建事务数据的 InfoCube](create-infocube-for-transaction-data.md)   
- [创建 InfoSource](create-infosource.md)   
- [创建事务数据的 InfoSource](create-infosource-for-transaction-data.md)   
+ [“创建事务数据的 InfoCube”](create-infocube-for-transaction-data.md)   
+ [“创建 InfoSource”](create-infosource.md)   
+ [“创建事务数据的 InfoSource”](create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](create-infosource-for-master-data.md)   
- [新建 InfoObject](create-new-infoobject.md)   
- [SAP BW 目标编辑器&#40;连接管理器页&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [“查找 InfoObject”](create-new-infoobject.md)   
+ [SAP BW 目标编辑器（“连接管理器”页）](sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

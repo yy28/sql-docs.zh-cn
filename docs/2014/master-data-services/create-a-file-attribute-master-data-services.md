@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
@@ -14,22 +13,22 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0269a67a1ba7e55c959f1336b9b3fec700c992e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 435f68e67080bf006b0c0f121f565ced2339a705
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765339"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>创建文件属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建文件属性以便使用文件填充属性值。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -68,9 +67,9 @@ ms.locfileid: "48172584"
 13. 在 **“实体维护”** 页上，单击 **“保存实体”**。  
   
 ## <a name="see-also"></a>请参阅  
- [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)   
  [更改属性名称&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [创建基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [创建文本属性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+ [创建文本属性 (Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

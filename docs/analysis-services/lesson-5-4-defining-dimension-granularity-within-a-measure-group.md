@@ -1,5 +1,5 @@
 ---
-title: 定义度量值组中的维度粒度 |Microsoft 文档
+title: 定义度量值组中的维度粒度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018814"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542243"
 ---
-# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>第 5-4-定义度量值组中的维度粒度课
+# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>第 5 4-定义度量值组中的维度粒度课
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 用户可能需要针对不同目的定义不同粒度或专一性的事实数据表维度。 例如，分销商或 Internet 销售的销售额数据可以每天记录一次，而销售配额信息则可能按月或按季度级别来记录。 在这些情况下，用户可能需要时间维度针对这些不同的事实数据表具有不同的粒度或详细程度。 尽管可以将新的数据库维度定义为具有这种不同粒度的时间维度，但 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供了更简单的方法。  
@@ -61,7 +61,7 @@ ms.locfileid: "34018814"
   
 12. 从“销售配额”度量值组中删除“日历季度”度量值组。  
   
-    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 检测出，“日历季度”度量值下的列是包含度量值的列。 但是，在本主题后面部分，您将使用该列和 CalendarYear 列包含的值将“销售配额”度量值组链接到“日期”维度。  
+    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 检测出“日历季度”度量值下的列是包含度量值的列。 但是，在本主题后面部分，您将使用该列和 CalendarYear 列包含的值将“销售配额”度量值组链接到“日期”维度。  
   
 13. 在“度量值”窗格中，右键单击“销售配额”度量值组，然后单击“新建度量值”。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34018814"
   
     注意，“销售区域”多维数据集维度没有与 Fact Sales Quota 表直接或间接相关，如下图所示。  
   
-    ![销售区域多维数据集维度](../analysis-services/media/l5-granularity-2.gif "销售区域多维数据集维度")  
+    ![销售区域所属多维数据集维度](../analysis-services/media/l5-granularity-2.gif "Sales Territory 多维数据集维度")  
   
     在本主题的下一系列步骤中，您将在该维度和该事实数据表之间定义引用维度关系。  
   
@@ -95,11 +95,11 @@ ms.locfileid: "34018814"
   
 7.  在数据透视表字段列表中，选择“销售区域”用户层次结构，然后单击右侧的向下箭头。  
   
-    ![字段列表中的销售区域层次结构](../analysis-services/media/l5-granularity-1a.png "字段列表中的销售区域层次结构")  
+    ![在字段列表中的销售区域层次结构](../analysis-services/media/l5-granularity-1a.png "字段列表中的销售区域层次结构")  
   
 8.  在筛选器中，单击“全选”复选框以取消选中所有选择，然后仅选择 **North America**。  
   
-    ![筛选器窗格中选择北美](../analysis-services/media/l5-granularity-1b.png "用于选择北美的筛选器窗格")  
+    ![筛选器窗格中的选择北美](../analysis-services/media/l5-granularity-1b.png "用于选择北美地区的筛选器窗格")  
   
 9. 在数据透视表字段列表中，展开“日期”。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34018814"
   
     下图显示了“销售额配额”的值。  
   
-    ![值的销售金额配额](../analysis-services/media/l5-granularity-3.png "值的销售金额配额")  
+    ![值为销售金额配额](../analysis-services/media/l5-granularity-3.png "值 Sales Amount 配额")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>定义“销售配额”度量值组的维度用法属性  
   
@@ -127,7 +127,7 @@ ms.locfileid: "34018814"
   
     注意，“雇员”和“日期”多维数据集维度通过常规关系链接到“销售配额”和“销售配额 1”度量值组。 另外注意，“销售区域”多维数据集维度未链接到这些度量值组中的任何一组。  
   
-4.  单击“销售区域”维度和“销售配额”度量值组相交处的单元，然后单击浏览按钮 (**…**)。 将打开“定义关系”对话框。  
+4.  单击的交叉处的单元格**Sales Territory**维度和**销售配额**度量值组，然后单击浏览按钮 (**...**).将打开“定义关系”对话框。  
   
 5.  在“选择关系类型”列表中，选择“被引用的”。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "34018814"
   
 9. 验证是否选中了“具体化”复选框。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
-11. 单击“销售区域”维度和“销售配额 1”度量值组相交处的单元，然后单击浏览按钮 (**…**)。 将打开“定义关系”对话框。  
+11. 单击的交叉处的单元格**Sales Territory**维度和**销售配额 1**度量值组，然后单击浏览按钮 (**...**).将打开“定义关系”对话框。  
   
 12. 在“选择关系类型”列表中，选择“被引用的”。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "34018814"
   
 16. 验证是否选中了“具体化”复选框。  
   
-17. 单击 **“确定”**。  
+17. 单击“确定” 。  
   
 18. 删除“日期”多维数据集维度。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34018814"
   
     将“订购日期”多维数据集维度重命名为“日期”，使用户能够更加轻松地理解该日期在此多维数据集中作为主日期维度的作用。  
   
-20. 单击“销售配额”度量值组和“日期”维度相交处的单元中的浏览按钮 (**…**)。  
+20. 单击浏览按钮 (**...**) 中的交集处的单元格**销售配额**度量值组和**日期**维度。  
   
 21. 在“定义关系”对话框中，选择“选择关系类型”列表中的“常规”。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "34018814"
   
 3.  在“创建属性关系”对话框中，“源属性”是“日历季度”。 将“相关属性”设置为“会计季度”。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
     注意此时会出现一条警告消息，指出“日期”维度包含一个或多个冗余属性关系，在将非键属性用作粒度属性时，这些冗余属性关系可能会导致数据无法聚合。  
   
@@ -218,12 +218,12 @@ ms.locfileid: "34018814"
   
     请注意，会计季度级别的每个成员都具有与季度级别相同的值。 以 **Q1 FY 2008** 为例， **Q1 FY 2008** 的 $9,180,000.00 的配额也是其每个成员的值。 出现此行为是因为事实数据表中数据的粒度属于季度级别，“日期”维度的粒度也属于季度级别。 在第 6 课中，你将了解如何按比例将季度量分配到每个月。  
   
-    ![销售配额度量值组维度正确](../analysis-services/media/l5-granularity-7.gif "正确进行维度化的销售配额度量值组")  
+    ![销售配额度量值组正确划分维度](../analysis-services/media/l5-granularity-7.gif "正确划分维度的 Sales Quota 度量值组")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 6 课： 定义计算](../analysis-services/lesson-6-defining-calculations.md)  
+[第 6 课：定义计算](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定义常规关系和常规关系属性](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [使用数据源视图设计器中的关系图 (Analysis Services)](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

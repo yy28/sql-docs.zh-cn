@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent]
@@ -15,12 +15,12 @@ ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 589f185de69848f78586ac4a942acacaa229aa9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179057"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771709"
 ---
 # <a name="implement-jobs"></a>执行作业
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业来自动执行日常管理任务并反复运行它们，从而提高管理效率。  
@@ -33,7 +33,7 @@ ms.locfileid: "48179057"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |包含有关创建作业和分配所有权的信息。|[创建作业](create-jobs.md)|  
 |包含有关将作业组织到目录的信息。|[组织作业](organize-jobs.md)|  
 |说明可以创建的各种作业步骤以及如何管理它们。|[管理作业步骤](manage-job-steps.md)|  

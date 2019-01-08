@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778309"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
@@ -41,7 +41,7 @@ ms.locfileid: "49991250"
 
 如果没有安装 Excel 的连接组件，首先需要下载这些组件，然后才能从 Excel 导出数据或将数据导入 Excel。 默认情况下，没有安装 Excel 的连接组件。
 
-在此处下载用于 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
+此处下载用于 Excel 的连接组件的最新版本：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
 最新版组件可以打开 Excel 早期版本创建的文件。
 
@@ -53,7 +53,7 @@ ms.locfileid: "49991250"
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
+如果遇到安装 2016 可再发行组件，从此处改为安装 2010 可再发行组件：[Microsoft Access 数据库引擎 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
 
 ## <a name="specify-excel"></a> 指定 Excel
 
@@ -161,17 +161,17 @@ ms.locfileid: "49991250"
 
 Excel 驱动程序只识别有限的一组数据类型。 例如，所有数值列均解释为双精度 (DT_R8)，并且所有字符串列（除了 memo 列）均解释为 255 个字符的 Unicode 字符串 (DT_WSTR)。 SSIS 按如下所示方式映射 Excel 数据类型：
 
--   数值 – 双精度浮点 (DT_R8)
+-   数值 - 双精度浮点 (DT_R8)
 
--   货币 – 货币 (DT_CY)
+-   货币 - 货币 (DT_CY)
 
--   布尔 – 布尔 (DT_BOOL)
+-   布尔 - 布尔 (DT_BOOL)
 
--   日期/时间 – 日期 (DT_DATE)
+-   日期/时间 - 日期 (DT_DATE)
 
--   字符串 – Unicode 字符串，长度为 255 (DT_WSTR)
+-   字符串 - Unicode 字符串，长度为 255 (DT_WSTR)
 
--   Memo – Unicode 文本流 (DT_NTEXT)
+-   Memo - Unicode 文本流 (DT_NTEXT)
 
 ### <a name="data-type-and-length-conversions"></a>数据类型和长度转换
 

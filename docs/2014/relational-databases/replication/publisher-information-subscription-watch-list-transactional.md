@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.subscriptionssummary.tran.f1
@@ -13,26 +12,26 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25f46e54f29642116c5b131a4b58574c0eaf4925
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53a19b1de1c8aa0be89d0a743007b141bdb169b2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056797"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766909"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional-publication-sql-server-2005-and-later"></a>发布服务器信息，订阅监视列表（事务发布，SQL Server 2005 和更高版本）
-  **“订阅监视列表”** 选项卡可用于运行 SQL Server 2005 及更高版本的分发服务器；用来显示所选发布服务器上所有可用发布中的订阅的有关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡为管理员提供了监视发布服务器上所有复制活动的单一位置：复制监视器根据所选复制类型和在 **“显示”** 下拉列表框中选择的选项，显示所有需要注意的订阅。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
+  **“订阅监视列表”** 选项卡可用于运行 SQL Server 2005 及更高版本的分发服务器；用来显示所选发布服务器上所有可用发布中的订阅的有关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡提供了一个位置以便管理员可以监视发布服务器上的所有复制活动：复制监视器显示需要注意，根据所选的复制类型和在中选择的选项的所有订阅**显示**下拉列表框。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
   
 ## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
+-   **排序**:中的一个或多个列的排序**排**对话框。  
   
--   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
+-   **选择显示的列**:选择哪些列显示以及用来显示它们中的顺序**选择列**对话框。  
   
--   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
+-   **筛选器**:筛选列中的值为基础的网格中的行**筛选器设置**对话框。  
   
--   **清除筛选器**：清除网格的任何筛选设置。  
+-   **清除筛选器**:清除网格的任何筛选器设置。  
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
@@ -68,10 +67,10 @@ ms.locfileid: "48056797"
  只有在设置了阈值时，才会显示状态值 **“‘严重’状态下的性能”** 和 **“即将过期/已过期”** 。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **订阅**  
- 每个订阅的名称，格式为： *SubscriberName: SubscriptionDatabaseName*。  
+ 每个订阅，请在窗体的名称：*SubscriberName:SubscriptionDatabaseName*。  
   
  **发布**  
- 与订阅同步的发布的名称，格式为： *PublicationDatabaseName: PublicationName*。  
+ 与订阅同步，在窗体中的发布的名称：*PublicationDatabaseName:PublicationName*。  
   
  **“性能”**  
  每个订阅的性能等级都是基于复制监视器的最新度量值，并不反映历史性能。 对于为发布定义了性能阈值的订阅，均会度量其性能；如果没有为发布定义性能阈值，此列将显示 **“未启用”**。 性能等级可以为以下值之一：  

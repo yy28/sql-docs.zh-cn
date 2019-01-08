@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763669"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
-  通过通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在已分区的表或已分区的索引的分区函数中增加或减少指定的分区数（加 1 或减 1），可以更改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表或索引的分区方式。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
+  通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在已分区的表或已分区的索引的分区函数中增加或减少指定的分区数（加 1 或减 1），可以更改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的表或索引的分区方式。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
   
 > [!CAUTION]  
 >  多个表或索引可以使用同一分区函数。 在修改分区函数时，将影响单个事务中的所有表或索引。 在修改分区函数之前，先检查其依赖关系。  
@@ -29,7 +29,7 @@ ms.locfileid: "51640754"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要修改分区函数，可使用：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51640754"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不对修改分区函数提供复制支持。 如果要对发布数据库中的分区函数进行更改，必须在订阅数据库中手动执行此操作。  
   
--   受 ALTER PARTITION FUNCTION 的所有文件组必须处于联机状态。  
+-   ALTER PARTITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -95,12 +95,12 @@ ms.locfileid: "51640754"
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
@@ -120,12 +120,12 @@ ms.locfileid: "51640754"
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  

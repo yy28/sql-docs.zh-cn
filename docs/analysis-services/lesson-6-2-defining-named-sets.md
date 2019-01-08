@@ -1,5 +1,5 @@
 ---
-title: 定义命名集 |Microsoft 文档
+title: 定义命名集 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018224"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507665"
 ---
-# <a name="lesson-6-2---defining-named-sets"></a>课程 6-2-定义命名集
+# <a name="lesson-6-2---defining-named-sets"></a>Lesson 6-2-定义命名集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 命名集是一个返回一组维度成员的多维表达式 (MDX)。 可以定义命名集，并将它们另存为多维数据集定义的一部分；还可以在客户端应用程序中创建命名集。 通过合并多维数据集数据、算术运算符、数字和函数，可以创建命名集。 命名集可以由用户在客户端应用程序的 MDX 查询中使用，还可以用来定义子多维数据集中的集合。 子多维数据集是交叉联接集的集合，它将多维数据集空间限制为随后语句的定义的子空间。 定义受限的多维数据集空间是 MDX 脚本的一个基本概念。  
@@ -68,7 +68,7 @@ ms.locfileid: "34018224"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    现在已经为 Exists 集表达式定义了第一个集合，便可以开始添加第二个集合，即包含最大雇员数的“分销商”维度的成员集合。  
+    现在，已经定义第一组的 Exists 集表达式，可以添加包含最大雇员数的分销商维度成员的第二个集的集合。  
   
 7.  在“计算工具”窗格中的“元数据”选项卡上，依次展开“分销商”维度中的“雇员数目”、“成员”和“所有分销商”。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34018224"
   
     下图显示“[大型分销商]”命名集的“计算表达式”窗格。  
   
-    ![计算表达式窗格中的 [大型经销商]](../analysis-services/media/l6-named-set-02.gif "[大型经销商] 的计算表达式窗格")  
+    ![[大型分销商] 计算表达式窗格](../analysis-services/media/l6-named-set-02.gif "[大型分销商] 的计算表达式窗格")  
   
 14. 在“计算”选项卡的工具栏上，单击“脚本视图”，然后检查刚才添加到计算脚本中的两个命名集。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "34018224"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>使用新的命名集浏览多维数据集  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单中，单击“部署 Analysis Services 教程”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
 2.  已成功完成部署后，单击“浏览器”选项卡，再单击“重新连接”。  
   
@@ -130,12 +130,12 @@ ms.locfileid: "34018224"
   
     请注意，“数据”窗格中的“分销商销售额”度量值只显示大型自行车分销商的销售额。 还要注意，“筛选器”窗格现在显示用来定义此特定子多维数据集的两个命名集，如下图所示。  
   
-    ![包含两个名为的筛选器窗格中设置](../analysis-services/media/l6-named-set-05.gif "包含两个名为的筛选器窗格中设置")  
+    ![设置筛选器窗格，其中包含两个命名](../analysis-services/media/l6-named-set-05.gif "设置筛选器窗格，其中包含两个名为")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 7 课： 定义关键绩效指标 & #40;Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 课：定义关键绩效指标&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [“新建命名集”](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [创建命名集](../analysis-services/multidimensional-models/create-named-sets.md)  
   

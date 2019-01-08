@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668325"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524111"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@severity =** ]*严重性*  
  是错误的严重级别。 *严重性*是**smallint**默认值为 NULL。 有效级别的范围为 1 到 25。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
- [ **@msgtext =** ] **'***msg***'**  
+ [  **@msgtext =** ] **'**_msg_  
  错误消息的文本。 *msg*是**nvarchar(255)** 默认值为 NULL。  
   
- [  **@lang =** ] **'***语言*****  
+ [  **@lang =** ] **'**_语言_  
  消息所用的语言。 *语言*是**sysname**默认值为 NULL。 因为可以在同一服务器上安装多个语言*语言*指定编写每个消息所用的语言。 当*语言*是省略，语言为该会话是默认语言。  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
@@ -61,7 +61,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
- [ **@replace** *=* ] **'***替换*****  
+ [ **@replace** *=* ] **'**_替换_  
  如果指定为字符串*替换为*，用新的消息文本和严重级别覆盖现有错误消息。 *替换*是**varchar(7)** 默认值为 NULL。 必须指定此选项，如果*msg_id*已存在。 如果替换美国英语消息，为具有相同的所有其他语言中的所有消息替换英语消息，严重性级别*msg_id*。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -81,7 +81,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  由于语言语法不同，因此，本地化消息中的参数可能不会以原始消息中相同的顺序出现。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求的成员身份**sysadmin**或**serveradmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  

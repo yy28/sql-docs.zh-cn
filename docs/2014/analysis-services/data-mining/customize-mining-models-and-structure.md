@@ -18,12 +18,12 @@ ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198828"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407862"
 ---
 # <a name="customize-mining-models-and-structure"></a>自定义挖掘模型和结构
   在选择满足业务需要的算法后，可以按照以下方式自定义挖掘模型，从而有可能使结果得到改善。  
@@ -57,12 +57,12 @@ ms.locfileid: "48198828"
   
 -   删除具有很多唯一值的列，或删除实际是参考数据、对分析没有用（如地址或中间名）的列。  
   
- 不必实际从挖掘结构删除列；您可以仅将列标记为 **“忽略”**。 将列从此挖掘模型中删除，但它仍可用于结构内的其他挖掘模型或在钻取查询中引用。  
+ 您不必实际从挖掘结构中; 删除列您可以只将列标记为**忽略**。 将列从此挖掘模型中删除，但它仍可用于结构内的其他挖掘模型或在钻取查询中引用。  
   
 ### <a name="creating-aliases-for-model-columns"></a>为模型列创建别名  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建挖掘模型时，它将使用挖掘结构中的列名称。 您可以为挖掘模型中的任何列添加别名。 这样可以使列内容或用法更易于理解，还可以缩短名称从而便于创建查询。 当您要创建列的副本并使用描述性名称时，别名也很有帮助。  
   
- 通过编辑创建别名`Name`挖掘模型列的属性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 继续使用原始名称键入列和新值的 ID 作为`Name`成为列别名，并显示在网格中的列用法旁边的括号。  
+ 通过编辑挖掘模型列的 `Name` 属性来创建别名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 继续使用原始名称键入列和新值的 ID 作为`Name`成为列别名，并显示在网格中的列用法旁边的括号。  
   
  ![别名在挖掘模型列](../media/modelcolumnalias-income.gif "别名在挖掘模型列")  
   
@@ -95,14 +95,14 @@ ms.locfileid: "48198828"
   
  每个算法类型的主题还将列出可以与基于该算法的模型一起使用的预测函数。  
   
-|属性名称|适用于|  
+|属性名称|适用对象|  
 |-------------------|----------------|  
 |AUTO_DETECT_PERIODICITY|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志&#40;数据挖掘&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志（数据挖掘）](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
@@ -134,7 +134,7 @@ ms.locfileid: "48198828"
 |STOPPING_TOLERANCE|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [物理体系结构&#40;Analysis Services-数据挖掘&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
@@ -25,12 +24,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbe4a733479e23e8630e3bbc043ba5dcbf30c1bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: beee5a99f345a4f70f31bfec78b4fb6d9280ab0a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091487"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761280"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
   包的管理涉及的任务包括以下任务：  
@@ -45,7 +44,7 @@ ms.locfileid: "48091487"
 >  本主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
 ## <a name="package-store"></a>包存储区  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用于访问两个顶级文件夹[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包：**正在运行的包**并**存储的包**。 **“正在运行的包”** 文件夹列出当前正在服务器上运行的包。 **“已存储的包”** 文件夹列出包存储区中保存的包。 这些只是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所管理的包。 包存储区可以同时包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置文件中列出的 msdb 数据库和文件系统文件夹或只包含其中的一项。 配置文件指定要管理的 msdb 数据库和文件系统文件夹。 您也可以将包存储在文件系统中不受 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理的其他位置。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用于访问两个顶级文件夹[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包：**正在运行的包**并**包存储**。 **“正在运行的包”** 文件夹列出当前正在服务器上运行的包。 **“已存储的包”** 文件夹列出包存储区中保存的包。 这些只是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所管理的包。 包存储区可以同时包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置文件中列出的 msdb 数据库和文件系统文件夹或只包含其中的一项。 配置文件指定要管理的 msdb 数据库和文件系统文件夹。 您也可以将包存储在文件系统中不受 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理的其他位置。  
   
  保存到 msdb 的包存储在名为 sysssispackages 的表中。 将包保存到 msdb 时，也可以按逻辑文件夹对包分组。 使用逻辑文件夹可以帮助你按目的组织包，或者筛选 sysssispackages 表中的包。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来创建新的逻辑文件夹。 默认情况下，任何添加到 msdb 的逻辑文件夹将自动包括在包存储区中。  
   
@@ -57,9 +56,9 @@ ms.locfileid: "48091487"
   
  **“正在运行的包”** 文件夹不包含子文件夹，也不可扩展。  
   
- 默认情况下， **“已存储的包”** 文件夹包含两个文件夹： **“文件系统”** 和 **MSDB**。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
+ 默认情况下**存储的包**文件夹包含两个文件夹：**文件系统**并**MSDB**。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
   
- 若要查看包存储区中的包列表，必须打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅[SQL Server Management Studio 中查看 Integration Services 包&#40;SSIS 服务&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)。  
+ 若要查看包存储区中的包列表，必须打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [在 SQL Server Management Studio 中查看 Integration Services 包（SSIS 服务）](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)的早期版本向后兼容。  
   
 ## <a name="monitoring-running-packages"></a>监视正在运行的包  
  **“正在运行的包”** 文件夹列出当前正在运行的包。 若要在 **的** “摘要” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页上查看当前包的信息，请单击 **“正在运行的包”** 文件夹。 **“摘要”** 页上列有正在运行的包的执行持续时间等信息。 您可以选择刷新该文件夹，以显示最新的信息。  
@@ -71,7 +70,7 @@ ms.locfileid: "48091487"
 ## <a name="managing-package-storage"></a>管理包存储  
  若要组织包，可以向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在其配置文件中所列出的包存储区根文件夹内添加自定义文件夹。 默认情况下，根文件夹是 **“文件系统”** 和 **MSDB** 文件夹。 例如，您可能希望在 **“文件系统”** 文件夹中添加一个 **“数据清理”** 文件夹，该文件夹将包含用于清理数据的所有包。 可以将自定义文件夹添加到自定义文件夹中，从而创建适合您需要的嵌套式文件夹层次结构。 可以删除和重命名自定义文件夹，但是，不能删除或重命名配置文件所指定的根文件夹。 若要更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 列出的根文件夹，必须更新配置文件。  
   
- 有关详细信息，请参阅[配置 Integration Services 服务（SSIS 服务）](../configuring-the-integration-services-service-ssis-service.md)。  
+ 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](../configuring-the-integration-services-service-ssis-service.md)的早期版本向后兼容。  
   
 ## <a name="importing-and-exporting-packages"></a>导入和导出包  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包可以保存到 msdb 数据库中，也可以保存到文件系统中。 使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的导入或导出功能，可以将包从一种存储类型复制到其他存储类型。 还可以将包导入相同的存储类型，然后将该包命名为不同的名称，从而创建包的副本。 **dtutil** 命令提示实用工具 (dtutil.exe) 也可以用于导入和导出包。  
@@ -80,9 +79,9 @@ ms.locfileid: "48091487"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [导入和导出包&#40;SSIS 服务&#41;](../import-and-export-packages-ssis-service.md)  
+-   [导入和导出包（SSIS 服务）](../import-and-export-packages-ssis-service.md)  
   
--   [查看 Integration Services 包在 SQL Server Management Studio &#40;SSIS 服务&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [在 SQL Server Management Studio 中查看 Integration Services 包（SSIS 服务）](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 服务（SSIS 服务）](integration-services-service-ssis-service.md)  

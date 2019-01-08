@@ -17,17 +17,17 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113278"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400510"
 ---
 # <a name="choosing-a-model"></a>选择模型
   **挖掘算法：** 数据挖掘*算法*是从数据创建模式的机制。 此算法可定义如何对数据进行计数、如何推断出关系以及如何存储模式。 算法的选择部分取决于要分析的数据的类型。 例如，一些算法仅适用于连续数字，而其他算法则适用于有限数目的非重复值。  
   
- **挖掘模型：** 的数据分析算法的结果保存在*挖掘模型*。 挖掘模型是规则、统计信息和模式的集合。 *内容*的挖掘模型取决于您用来处理数据，但可以包括以下算法：  
+ **挖掘模型：** 数据分析的一种算法的结果保存在*挖掘模型*。 挖掘模型是规则、统计信息和模式的集合。 *内容*的挖掘模型取决于您用来处理数据，但可以包括以下算法：  
   
 -   说明在事务中如何将产品分组到一起的 If-then 规则。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48113278"
   
 -   *节点*在网络中，通过连接*边缘*。 节点表示项或项组。 根据节点间的关系强度赋予边缘分数。  
   
- **使用模型：** 后创建了模型，可以使用提供的查看器浏览，也可以创建针对模型的查询。 查询可用于：  
+ **使用模型：** 创建了模型后，可以使用提供的查看器浏览，或可以创建针对模型的查询。 查询可用于：  
   
 -   预测将来值。  
   

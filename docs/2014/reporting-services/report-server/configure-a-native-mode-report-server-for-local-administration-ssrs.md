@@ -18,12 +18,12 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189067"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400540"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
   如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果您尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)并[管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "48189067"
 2.  单击主页上角的 **“站点设置”** 。  
   
     > [!TIP]  
-    >  注意： 如果没有看到“站点设置”选项，请关闭后再重新打开浏览器，然后使用管理权限浏览到报表管理器。  
+    >  **注意：** 如果没有看到**站点设置**选项，请关闭并重新打开你的浏览器并浏览到报表管理器中使用管理权限。  
   
 3.  单击 **“安全性”**。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "48189067"
   
  **配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色属性和角色分配，以便您无需每次都使用提升的权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   在“开始”菜单，依次单击“所有程序”和“SQL Server 2014”，右键单击 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，然后单击“以管理员身份运行”。  
+-   从 **“开始”** 菜单上，依次单击 **“所有程序”** 和 **SQL Server 2014**，右键单击 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**，然后单击 **“以管理员的身份运行”**。  
   
 -   连接到您的本地 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48189067"
   
 -   在您尝试将报表项部署到本地报表服务器时，您将在 **“错误列表”** 窗口中看到如下错误消息：  
   
-    -   为用户“域\\<用户名\>”授予的权限不足，无法执行此操作。  
+    -   为用户“域\\<user name\>”授予的权限不足，无法执行此操作。  
   
  **在每次打开 SSDT 时使用提升的权限运行：**  
   
@@ -184,7 +184,7 @@ ms.locfileid: "48189067"
 -   请参阅本主题中前面的 [报表管理器文件夹设置](#bkmk_configure_folder_settings) 和 [报表管理器站点设置](#bkmk_configure_site_settings) 部分。  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> 其他信息  
- 与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相关的一个附加的常见配置步骤是在 Windows 防火墙中打开端口 80，以便允许访问报表服务器计算机。 有关说明，请参阅[为报表服务器访问配置防火墙](configure-a-firewall-for-report-server-access.md)。  
+ 与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相关的一个附加的常见配置步骤是在 Windows 防火墙中打开端口 80，以便允许访问报表服务器计算机。 有关说明，请参阅 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)  

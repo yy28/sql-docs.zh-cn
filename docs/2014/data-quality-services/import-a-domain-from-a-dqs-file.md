@@ -10,12 +10,12 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3153f923cae3a8935dad5e260af5cf5af310de26
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5a6ef09783b69f6920d5421a52fbe8dbd13ed0e4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030154"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409994"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
   本主题说明如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将域从 .dqs 文件导入到现有知识库。 通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序导出域或知识库可创建 .dqs 数据文件。 .dqs 数据文件已加密，因此无法查看。  
@@ -51,7 +51,7 @@ ms.locfileid: "51030154"
   
 6.  确认您导入的域显示在 **“域”** 列表中。 如果您导入复合域，请验证此复合域以及复合域中包含的单一域均出现在 **“域”** 列表中。  
   
-##  <a name="FollowUp"></a> 跟进：从 .dqs 文件导入域后  
+##  <a name="FollowUp"></a> 跟进：从.dqs 文件导入域后  
  在从 .dqs 文件导入域之后，可以将知识添加到域中或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)、[管理复合域](../../2014/data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)、[数据清理](../../2014/data-quality-services/data-cleansing.md)或[数据匹配](../../2014/data-quality-services/data-matching.md)。  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_enumdsn
@@ -17,12 +16,12 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0efa131401cddf568d3cf92842387d5cdd8f09ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f58a16b3d4d393a94dc5e42413ddfeb2a8eb5d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657896"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773889"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_enumdsn
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**数据源名称**|**sysname**|数据源的名称。|  
-|**Description**|**varchar(255)**|对数据源的说明。|  
+|**说明**|**varchar(255)**|对数据源的说明。|  
 |**类型**|**int**|数据源类型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 数据源|  
 |**提供程序名称**|**varchar(255)**|OLE DB 访问接口的名称。 ODBC DSN 的值为 NULL。|  
   
@@ -55,7 +54,7 @@ sp_enumdsn
   
  例如，如果服务器运行于系统帐户用户上下文中，则返回的数据源名称 (DSN) 将全部是与系统帐户关联的系统 DSN。 如果服务器在专用用户帐户下运行，则只返回为该用户的专用帐户定义的 DSN。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_enumdsn**。  
   
 ## <a name="see-also"></a>请参阅  

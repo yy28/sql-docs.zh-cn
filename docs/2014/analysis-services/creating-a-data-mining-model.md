@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134787"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394460"
 ---
 # <a name="creating-a-data-mining-model"></a>创建数据挖掘模型
   数据建模是数据挖掘的步骤在其中通过应用中创建的模式和趋势*算法*数据。 之后，可以使用这些模式进行分析或预测。  
@@ -72,7 +72,7 @@ ms.locfileid: "48134787"
  [群集向导&#40;Excel 数据挖掘外接程序&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)。  
   
 ## <a name="detect-categories-analyze"></a>检测类别（分析）  
- **检测类别**工具，可以添加任何数据集和应用聚类分析来找到数据分组。 它用于找到相似之处和创建组以便进一步分析。  
+ **检测类别**工具，可以添加任何数据集和应用聚类分析来找到数据分组。 它可用于找到相似之处和创建组来进一步分析。  
   
  **检测类别**工具使用 Microsoft 聚类分析算法。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48134787"
   
  [预测计算器&#40;Excel 表分析工具&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-goal-seek-analyze"></a>应用场景：目标查找（分析）  
+## <a name="scenario-goal-seek-analyze"></a>方案：目标查找 （分析）  
  在中**目标查找**工具，您指定一个目标值，并且该工具标识必须更改才能满足该目标的潜在因素。 例如，如果您知道必须将电话满意度增加 20%，则可以要求模型预测应进行变化以便实现该目标的因素。  
   
  **目标查找**工具使用 Microsoft 逻辑回归算法。  
@@ -125,7 +125,7 @@ ms.locfileid: "48134787"
   
  [目标查找应用场景&#40;Excel 表分析工具&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>应用场景：“假设”应用场景（分析）  
+## <a name="scenario-what-if-scenario-analyze"></a>方案：假设方案 （分析）  
  **模拟分析**工具补充**目标查找**工具。 使用此工具，您输入要更改的值，并且模型将预测该更改是否足以实现预期结果。 例如，您可以要求该模型推断再增加一名电话接线员是否可以将客户满意度增加一个百分点。  
   
  **假设**工具使用 Microsoft 逻辑回归算法。  

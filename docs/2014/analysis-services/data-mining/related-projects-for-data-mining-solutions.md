@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106867"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400651"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
   数据挖掘解决方案中至少要包含数据挖掘项目，该项目定义了数据源、数据源视图、挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  
@@ -162,7 +162,7 @@ ms.locfileid: "48106867"
   
  有关详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
- 全文检索后存储的词的版本是一个压缩格式的标记。 对全文检索进行的后续查询将基于相应的语言规则生成特定词的多种变形形式，以确保生成所有可能的匹配项。 例如，即使存储的标记可能为“run”，查询引擎也会查询词“running”、“ran”和“runner”，因为这些词都是根词“run”正常派生的语形学变体。  
+ 全文检索后存储的词的版本是一个压缩格式的标记。 对全文检索进行的后续查询将基于相应的语言规则生成特定词的多种变形形式，以确保生成所有可能的匹配项。 例如，尽管存储的标记可能为"run"，查询引擎还会查询词"运行"、"ran"和"runner，"因为这些是根词"run"的定期派生词的变体。  
   
  还可以创建和生成用户同义词库以存储同义词并获得更佳搜索结果，或对字词进行分类。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 有关详细信息，请参阅 [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "48106867"
 -   不是所有的全文语言都支持语义索引。 有关支持的语言的列表，请参阅 [sys.fulltext_semantic_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)。  
   
 ## <a name="see-also"></a>请参阅  
- [多维模型解决方案&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [表格模型解决方案&#40;SSAS 表格&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [多维模型解决方案 (SSAS)](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [表格模型解决方案（SSAS 表格）](../tabular-model-solutions-ssas-tabular.md)  
   
   

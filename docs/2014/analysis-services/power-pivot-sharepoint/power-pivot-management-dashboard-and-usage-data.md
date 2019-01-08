@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069707"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419868"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理面板和使用情况数据
   PowerPivot 管理面板是 SharePoint 管理中心中预定义报表和 Web 部件的集合，可以帮助您管理 SQL Server PowerPivot for SharePoint 部署。 管理面板提供了与服务器运行状况、工作簿活动以及数据刷新相关的信息。 该面板使用的数据来自于 SharePoint 使用情况数据集合。  
@@ -93,7 +93,7 @@ ms.locfileid: "48069707"
  为帮助开始进行自定义报表制作，PowerPivot 管理面板提供了一个 Office 数据连接 (.odc) 文件连接到源工作簿。 例如，您可以在 Excel 中使用 .odc 文件来创建其他报表。  
   
 > [!NOTE]  
->  编辑此文件以避免当尝试在 Excel 中使用 .odc 文件时出现以下错误：“数据源初始化失败”。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
+>  编辑文件，以避免当尝试在 Excel 中使用 .odc 文件时出现以下错误：“数据源初始化失败”。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
   
  您必须是场或服务管理员，才能生成基于管理中心内的 PowerPivot 工作簿的报表。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48069707"
   
     7.  单击键入连接的名称，然后单击 **“下一步”**。  
   
-    8.  在“指定 MDX 查询”中，单击 **“设计”** 打开 MDX 查询设计器以组合您要使用的数据。 **如果您看到错误消息** “属性名称‘编辑模式’格式不正确”，请验证编辑了 .ODC 文件。  
+    8.  在指定 MDX 查询中，单击**设计**以打开 MDX 查询设计器以组合您要使用的数据**如果你看到错误消息**"编辑模式的属性名称格式不正确。"，验证你的编辑。ODC 文件。  
   
     9. 单击 **“确定”** ，然后单击 **“完成”**。  
   

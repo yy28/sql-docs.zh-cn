@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173247"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756989"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第三个任务（即最后一个任务）是准备查询变更数据和添加数据流任务。  
@@ -125,7 +124,7 @@ ms.locfileid: "48173247"
   
         ```  
   
-5.  保留默认行代码来返回`DtsExecResult.Success`从执行脚本。  
+5.  保留从脚本执行过程返回 `DtsExecResult.Success` 的默认代码行。  
   
 6.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173247"
         ```  
   
         > [!NOTE]  
-        >  `else`在此示例中的子句通过为开始日期和时间传递 null 值生成查询，用于更改数据的初始加载。 此示例没有涉及到一种情况：必须将启用变更数据捕获功能之前所做的变更上传到数据仓库。  
+        >  上述示例中的 `else` 子句通过为开始日期和时间传递 null 值来生成查询，用于变更数据的首次加载。 此示例没有涉及到一种情况：必须将启用变更数据捕获功能之前所做的变更上传到数据仓库。  
   
 3.  在 **“执行 SQL 任务编辑器”** 的 **“参数映射”** 页上，进行以下映射：  
   
@@ -199,6 +198,6 @@ ms.locfileid: "48173247"
 ## <a name="next-step"></a>下一步  
  在准备查询字符串和配置数据流任务之后，下一步就是创建用于从数据库检索变更数据的表值函数。  
   
- **下一个主题：**[创建函数以检索变更数据](create-the-function-to-retrieve-the-change-data.md)  
+ **下一主题：**[创建函数以检索变更数据](create-the-function-to-retrieve-the-change-data.md)  
   
   

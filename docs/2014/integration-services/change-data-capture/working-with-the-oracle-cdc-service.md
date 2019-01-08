@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac741a4f3c5ea5b4aecbe7943a55ec1f6bef145f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae456229482288e2fcf5e27f822e4f6f11540930
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110557"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749979"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服务
   本节介绍 Oracle CDC 服务的一些重要概念。 本节中包含的概念是：  
@@ -95,7 +94,7 @@ ms.locfileid: "48110557"
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中 Oracle 数据库的名称。|  
 |config_version|相应 CDC 数据库 **xdbcdc_config** 表中上次更改的时间戳 (UTC) 或者此表中当前行的时间戳 (UTC)。<br /><br /> UPDATE 触发器将此项的值强制为 GETUTCDATE()。 **config_version** 使 CDC 服务可以标识需要检查是否有配置更改或启用/禁用的 CDC 实例。|  
 |cdc_service_name|此项确定哪一 Oracle CDC 服务处理所选 Oracle 数据库。|  
-|enabled|指示 Oracle CDC 实例是处于活动状态 (1) 还是被禁用 (0)。 在 Oracle CDC 服务启动时，只启动标记有启用 (1) 的实例。<br /><br /> **注意**：Oracle CDC 实例可能会由于无法重试的错误而成为禁用的实例。 在此情况下，必须在解决错误后手动重新启动该实例。|  
+|enabled|指示 Oracle CDC 实例是处于活动状态 (1) 还是被禁用 (0)。 在 Oracle CDC 服务启动时，只启动标记有启用 (1) 的实例。<br /><br /> **注意**：可以由于不是可重试的错误而成为禁用某一 Oracle CDC 实例。 在此情况下，必须在解决错误后手动重新启动该实例。|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  此表列出了与主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联的 CDC 服务。 此表由 CDC 设计器控制台用来确定为本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例配置的 CDC 服务的列表。 CDC 服务还使用该表确保只有一个正在运行的 Windows 服务处理给定的 Oracle CDC 服务名称。  
@@ -115,7 +114,7 @@ ms.locfileid: "48110557"
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 数据库存储过程  
  本节介绍 MSXDBCDC 数据库中的以下存储过程。  
   
--   [dbo.xcbcdc_reset_db （数据库名称）](#BKMK_dboxcbcdc_reset_db)  
+-   [dbo.xcbcdc_reset_db（数据库名称）](#BKMK_dboxcbcdc_reset_db)  
   
 -   [dbo.xdbcdc_disable_db(dbname)](#BKMK_dboxdbcdc_disable_db)  
   
@@ -187,7 +186,7 @@ ms.locfileid: "48110557"
 ### <a name="service-program-commands"></a>服务程序命令  
  本节介绍用于配置 CDC 服务的以下命令。  
   
--   [配置](#BKMK_config)  
+-   [Config](#BKMK_config)  
   
 -   [创建](#BKMK_create)  
   
@@ -218,7 +217,7 @@ ms.locfileid: "48110557"
   
  **sql-username**、 **sql-password** 是要更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证凭据。 如果 sqlacct 具有空的用户名和空的密码，则 Oracle CDC 服务将使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
+ **注意**：必须使用双引号 （"） 封装任何参数，其中包含空格或双引号引起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
   
 ###  <a name="BKMK_create"></a> 创建  
  使用 `Create` 可从脚本创建 Oracle CDC 服务配置。 该命令必须由计算机管理员运行。 以下是 `Create` 命令的一个示例：  
@@ -244,7 +243,7 @@ ms.locfileid: "48110557"
   
  **sql-username**、 **sql-password** 是用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户名称和密码。 如果上述这些参数是空的，则 Oracle CDC 服务将使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
+ **注意**：必须使用双引号 （"） 封装任何参数，其中包含空格或双引号引起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
   
 ###  <a name="BKMK_delete"></a> 删除  
  使用 `Delete` 可从脚本完全删除 Oracle CDC 服务。 此命令必须由计算机管理员运行。 以下是 `Delete` 命令的一个示例。  
@@ -259,7 +258,7 @@ ms.locfileid: "48110557"
   
  **cdc-service-name** 是要删除的 CDC 服务的名称。  
   
- **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
+ **注意**：必须使用双引号 （"） 封装任何参数，其中包含空格或双引号引起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
   
 ## <a name="see-also"></a>请参阅  
  [如何使用 CDC 服务命令行界面](how-to-use-the-cdc-service-command-line-interface.md)   

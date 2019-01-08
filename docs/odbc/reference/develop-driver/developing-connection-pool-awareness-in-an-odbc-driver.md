@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661746"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417368"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>在 ODBC 驱动程序中开发连接池感知
 本主题讨论开发包含有关该驱动程序应如何提供连接池的服务的信息的 ODBC 驱动程序的详细信息。  
@@ -44,8 +44,8 @@ ms.locfileid: "51661746"
   
 |函数|添加了的功能|  
 |--------------|-------------------------|  
-|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|支持新的句柄类型： SQL_HANDLE_DBC_INFO_TOKEN （请参阅下面的说明）。|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|支持新的仅限集的连接属性： 用于重置连接 SQL_ATTR_DBC_INFO_TOKEN （请参阅下面的说明）。|  
+|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|支持新的句柄类型：SQL_HANDLE_DBC_INFO_TOKEN （请参阅下面的说明）。|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|支持新的仅限集的连接属性：用于重置连接 SQL_ATTR_DBC_INFO_TOKEN （请参阅下面的说明）。|  
   
 > [!NOTE]  
 >  已弃用的函数，如**SQLError**并**SQLSetConnectOption**不支持识别驱动程序的连接池。  
@@ -87,7 +87,7 @@ ms.locfileid: "51661746"
   
  由于连接信息可能来自多个源 （连接字符串、 连接属性和 DSN），该驱动程序可能需要分析连接字符串和解析这些源中每个以上的函数调用之间的冲突。  
   
- 因此，引入新的 ODBC 句柄： SQL_HANDLE_DBC_INFO_TOKEN。 使用 SQL_HANDLE_DBC_INFO_TOKEN，驱动程序不需要以分析连接字符串并不止一次解决连接信息中的冲突。 由于这是一种特定于驱动程序的数据结构，该驱动程序可以存储数据，例如连接信息或池 id。  
+ 因此，引入新的 ODBC 句柄：SQL_HANDLE_DBC_INFO_TOKEN。 使用 SQL_HANDLE_DBC_INFO_TOKEN，驱动程序不需要以分析连接字符串并不止一次解决连接信息中的冲突。 由于这是一种特定于驱动程序的数据结构，该驱动程序可以存储数据，例如连接信息或池 id。  
   
  此句柄仅用作驱动程序管理器和驱动程序之间的接口。 应用程序不能直接分配此句柄。  
   

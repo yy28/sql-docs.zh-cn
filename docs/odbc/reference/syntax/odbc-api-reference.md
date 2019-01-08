@@ -12,17 +12,17 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680825"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525059"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 参考
 在本部分中的主题介绍每个 ODBC 函数按字母顺序。 每个函数被定义为 C 编程语言的函数。 说明如下：  
   
--   用途  
+-   目标  
   
 -   ODBC 版本  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47680825"
   
 -   对相关函数的引用  
   
- 标准的 CLI 的一致性级别可以是以下之一： ISO 92、 Open Group、 ODBC 或已弃用。 标记为符合的 ISO 92-也将出现在 Open Group 版本 1，因为 Open Group 是纯超集的 ISO 92 函数。 标记为打开组符合标准的函数也会出现在 ODBC 3。*x*，因为 ODBC 3。*x*是纯 Open Group 版本 1 的超集。 标记为符合 ODBC 函数既不标准中出现。 标记为已弃用的函数已弃用在 ODBC 3。*x*。  
+ 标准的 CLI 的一致性级别可以是以下值之一：ISO 92 打开组，ODBC，或已弃用。 标记为 ISO 92 符合的也将出现在 Open Group 版本 1，因为 Open Group 是纯超集的 ISO 92 函数。 标记为打开组符合标准的函数也会出现在 ODBC 3。*x*，因为 ODBC 3。*x*是纯 Open Group 版本 1 的超集。 标记为符合 ODBC 函数既不标准中出现。 标记为已弃用的函数已弃用在 ODBC 3。*x*。  
   
  诊断信息的处理中所述[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。 SQLSTATE 值与关联的文本是包括在内，以提供条件的说明，但不是应规定特定的文本。  
   

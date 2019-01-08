@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 645e2603af6d0447aae22bc7c29b5413501b722f
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168884"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509321"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 转发器分析平台系统中解析非设备 DNS 名称
 可以在 Active Directory 域服务节点上配置 DNS 转发器 (**_装置\_域_-AD01**并**_设备\_域_-AD02**) 的分析平台系统的设备，可允许脚本和访问外部服务器的软件应用程序。  
@@ -36,7 +36,7 @@ ms.locfileid: "49168884"
   
 6.  输入将提供的名称解析的外部 DNS 服务器的 IP 地址。 Vm 和设备中的服务器 （主机） 将连接到外部服务器使用完全限定的域名。  
   
-7.  上重复步骤 1 至 6 **_装置\_域_-AD02**节点  
+7.  上重复步骤 1-6 **_装置\_域_-AD02**节点  
   
 **若要使用 Windows PowerShell 创建 DNS 转发器**  
   

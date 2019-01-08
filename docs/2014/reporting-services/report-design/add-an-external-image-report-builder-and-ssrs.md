@@ -11,12 +11,12 @@ ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 24186d0caa92b983f17b12c2f317d450af8be2bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbe37d01a3e503d5ffb9aa9dc326d19bb9360d63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081867"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506935"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>添加外部图像（报表生成器和 SSRS）
   外部图像可在本机模式或 SharePoint 集成模式下处于报表服务器上，或者可处于任何其他网站上。 当您在报表中包括外部图像时，必须验证图像是否存在以及报表读取器是否拥有访问图像的权限。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)。  
@@ -38,7 +38,7 @@ ms.locfileid: "48081867"
   
      对于在本机模式下的报表服务器上的图像，在“使用此图像”框中键入图像的相对路径，例如 ../images/image1.jpg。  
   
-     对于 SharePoint 集成模式下报表服务器上的图像，或者任何其他网站上的图像，在“使用此图像”框中键入图像的完整 URL，例如 http://\<SharePointservername>/\<site>/Documents/images/image1.jpg。  
+     对于 SharePoint 集成模式下或任何其他网站中的报表服务器上，键入完整的 URL 中的图像**使用此映像**框-例如， http://\<SharePointservername > /\<站点 > /Documents/images/image1.jpg。  
   
      有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48081867"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中嵌入图像&#40;报表生成器和 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [在报表中嵌入图像（报表生成器和 SSRS）](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [添加背景图像（报表生成器和 SSRS）](add-a-background-image-report-builder-and-ssrs.md)   
  [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

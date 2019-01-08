@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541389"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库在默认情况下支持全文索引。 不过，若要对表使用全文索引，必须对要使用全文引擎访问的表列设置全文索引功能。  
@@ -51,7 +51,7 @@ ms.locfileid: "48125037"
   
 2.  对表或索引视图创建全文索引。  
   
-     全文索引是一种特殊类型的基于标记的功能性索引，由全文引擎生成和维护。 若要对表或视图创建全文搜索，则该表或视图必须具有唯一的、不可为 Null 的单列索引。 全文引擎需要使用此唯一索引将表中的每一行映射到一个唯一的可压缩键。 全文索引可以包括`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，和`varbinary(max)`列。 有关详细信息，请参阅 [创建和管理全文索引](create-and-manage-full-text-indexes.md)。  
+     全文索引是一种特殊类型的基于标记的功能性索引，由全文引擎生成和维护。 若要对表或视图创建全文搜索，则该表或视图必须具有唯一的、不可为 Null 的单列索引。 全文引擎需要使用此唯一索引将表中的每一行映射到一个唯一的可压缩键。 全文索引可以包括 `char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 列。 有关详细信息，请参阅 [创建和管理全文索引](create-and-manage-full-text-indexes.md)。  
   
  在了解如何创建全文索引之前，请务必考虑它们与普通 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引的不同之处。 下表列出了这些差异。  
   
@@ -108,7 +108,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- 以下[ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句可更改名为 myStoplist，首先为西班牙语，然后为法语添加单词 en，非索引字表：  
+ 下面的 [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句可更改名为 myStoplist 的非索引字表，首先为西班牙语添加词“en”，再为法语添加词“en”：  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  通常，如果正在进行完全填充，则返回的结果为 1。  
   
   
-##  <a name="example"></a> 示例： 设置全文搜索  
+##  <a name="example"></a> 示例：设置全文搜索  
  下面的示例由两部分组成，首先对 AdventureWorks 数据库创建名为 `AdvWksDocFTCat` 的全文目录，然后对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的 `Document` 表创建全文索引。 此语句将在安装过程中指定的默认位置创建全文目录。 将在默认目录下创建名为 `AdvWksDocFTCat` 的文件夹。  
   
 1.  为了创建名为 `AdvWksDocFTCat` 的全文目录，此示例使用了 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) 语句：  
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     此示例中定义的 TYPE COLUMN 指定表中的类型列，该列包含“Document”列（为二进制类型）的每一行中文档的类型。 此类型列存储给定行中文档的、由用户提供的文件扩展名 —“.doc”、“.xls”等等。 全文引擎使用给定行中的文件扩展名调用正确的筛选器，以用于分析该行中的数据。 在该筛选器对该行的二进制数据进行分析后，指定的断字符将分析其内容（在此示例中，使用的是英国英语的断字符）。 请注意，仅在进行索引时，或者在对全文索引启用了自动更改跟踪的情况下用户在基表中插入或更新列时，才会执行筛选过程。 有关详细信息，请参阅 [配置和管理搜索筛选器](configure-and-manage-filters-for-search.md)。  
+     此示例中定义的 TYPE COLUMN 指定表中的类型列，该列包含“Document”列（为二进制类型）的每一行中文档的类型。 此类型列存储给定行中的用户提供的文件扩展名-".doc"、".xls"和等的文档。 全文引擎使用给定行中的文件扩展名调用正确的筛选器，以用于分析该行中的数据。 在该筛选器对该行的二进制数据进行分析后，指定的断字符将分析其内容（在此示例中，使用的是英国英语的断字符）。 请注意，仅在进行索引时，或者在对全文索引启用了自动更改跟踪的情况下用户在基表中插入或更新列时，才会执行筛选过程。 有关详细信息，请参阅 [配置和管理搜索筛选器](configure-and-manage-filters-for-search.md)。  
   
   
 ##  <a name="tasks"></a> 常见任务  

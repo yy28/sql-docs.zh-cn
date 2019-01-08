@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 146d197345851ccf854b478b3ebc220aa6854a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f49a3d44a3e13b6a95b78b695f39519ceea401f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748859"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 的向后兼容性
   本节介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的不同版本之间的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.general.f1
@@ -12,12 +12,12 @@ ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 924357bed156755c3d9b36931f707d2c7fae2c1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760879"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>作业属性和新建作业（“常规”页）
   使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的常规属性。  
@@ -35,7 +35,7 @@ ms.locfileid: "48119727"
  **...**  
  查看所选类别的作业。  
   
- **Description**  
+ **说明**  
  更改作业的说明。  
   
  **已启用**  
@@ -58,6 +58,6 @@ ms.locfileid: "48119727"
   
 ## <a name="see-also"></a>请参阅  
  [执行作业](implement-jobs.md)   
- [作业类别: 管理作业类别](job-categories-manage-job-categories.md)  
+ [作业类别：管理作业类别](job-categories-manage-job-categories.md)  
   
   

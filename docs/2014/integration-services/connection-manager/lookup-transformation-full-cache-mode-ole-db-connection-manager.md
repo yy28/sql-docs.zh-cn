@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab881af80386badae624b1d5910ba99ba67a4a43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147008"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767819"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换
   可以将查找转换配置为使用完全缓存模式和 OLE DB 连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
@@ -52,11 +51,11 @@ ms.locfileid: "48147008"
   
     -   单击 **“使用表或视图”**，然后选择一个表或视图，或单击 **“新建”** 创建表或视图。  
   
-         — 或 —  
+         -或-  
   
     -   单击 **“使用 SQL 查询的结果”**，然后在 **“SQL 命令”** 窗口中生成查询，或者单击 **“生成查询”** ，使用 **查询生成器** 提供的图形工具生成查询。  
   
-         — 或 —  
+         -或-  
   
     -   或者，单击 **“浏览”** ，从文件中导入 SQL 语句。  
   

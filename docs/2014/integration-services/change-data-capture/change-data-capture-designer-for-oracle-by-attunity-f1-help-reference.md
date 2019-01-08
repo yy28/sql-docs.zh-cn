@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - f1Help
@@ -13,12 +12,12 @@ ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57bc85e4afa17a6b26068d89e88485a2d8706210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63aafb542a92667935998b6479a460ed9cd00f8a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164798"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770839"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer for Oracle by Attunity F1 帮助参考
   Change Data Capture Designer for Oracle by Attunity 用于创建和管理 Oracle CDC 实例。 本节中的主题介绍如何在 CDC 设计器控制台中执行可用任务。  
@@ -49,7 +48,7 @@ ms.locfileid: "48164798"
   
     -   [生成镜像表和 CDC 捕获实例](generate-mirror-tables-and-cdc-capture-instances.md)  
   
-    -   [“完成”](finish.md)  
+    -   [完成](finish.md)  
   
 -   [编辑实例属性](edit-instance-properties.md)（或直接转到以下任务之一）  
   

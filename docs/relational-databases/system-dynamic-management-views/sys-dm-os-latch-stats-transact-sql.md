@@ -19,15 +19,15 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734026"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407144"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回有关按类组织的所有闩锁等待的信息。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "47734026"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|闩锁类的名称。|  
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
-|wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 更新此列在闩锁等待和闩锁等待结束每隔五分钟。|  
+|wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 此列在闩锁等待期间每五分钟更新一次，在闩锁等待结束时也会更新。|  
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|仅限内部使用。|  
 |SERVICE_BROKER_HOST_NAME|仅限内部使用。|  
 |SERVICE_BROKER_READ_CACHE|仅限内部使用。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步等待应用程序队列的实例级别映射。 每个数据库 ID、 数据库版本和队列 ID 元组不存在一个队列。 在许多建立连接时，则会发生此类的闩锁争用： 在 WAITFOR(RECEIVE) 等待状态;调用 WAITFOR(RECEIVE);WAITFOR 超时;接收一条消息;提交或回滚事务，其中包含 WAITFOR(RECEIVE);可以通过减少 WAITFOR(RECEIVE) 等待状态中的线程数来减少争用。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步等待应用程序队列的实例级别映射。 每个数据库 ID、 数据库版本和队列 ID 元组不存在一个队列。 在许多建立连接时，则会发生此类的闩锁争用：在 WAITFOR(RECEIVE) 等待状态;调用 WAITFOR(RECEIVE);WAITFOR 超时;接收一条消息;提交或回滚事务，其中包含 WAITFOR(RECEIVE);可以通过减少 WAITFOR(RECEIVE) 等待状态中的线程数来减少争用。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSPORT|仅限内部使用。|  
 |SERVICE_BROKER_MIRROR_ROUTE|仅限内部使用。|  
 |TRACE_ID|仅限内部使用。|  
 |TRACE_AUDIT_ID|仅限内部使用。|  
-|TRACE|仅限内部使用。|  
+|跟踪|仅限内部使用。|  
 |TRACE_CONTROLLER|仅限内部使用。|  
 |TRACE_EVENT_QUEUE|仅限内部使用。|  
 |TRANSACTION_DISTRIBUTED_MARK|仅限内部使用。|  

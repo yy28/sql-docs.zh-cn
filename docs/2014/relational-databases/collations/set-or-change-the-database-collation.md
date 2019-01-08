@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
@@ -14,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c554ec2d49e9e03c3381a54b8c834514bd16e34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071907"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772559"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置和更改数据库排序规则。 如果未指定排序规则，则使用服务器排序规则。  
@@ -32,7 +31,7 @@ ms.locfileid: "48071907"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要设置或更改数据库排序规则，请使用：**  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48071907"
   
     -   将存储过程和用户定义函数的所有现有 `char`、`varchar`、`text`、`nchar`、`nvarchar` 或 `ntext` 参数和标量返回值更改为使用新的排序规则。  
   
-    -   `char`， `varchar`， `text`， `nchar`， `nvarchar`，或`ntext`系统数据类型，并基于这些系统数据类型的所有用户定义数据类型更改为新的默认排序规则。  
+    -   将 `char`、`varchar`、`text`、`nchar`、`nvarchar` 或 `ntext` 系统数据类型和基于这些系统数据类型的所有用户定义的数据类型更改为使用新的默认排序规则。  
   
 -   可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句的 COLLATE 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则。 使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句可以更改这些列的排序规则。  
   

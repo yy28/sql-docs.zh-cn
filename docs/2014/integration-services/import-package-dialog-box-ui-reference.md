@@ -15,12 +15,12 @@ ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7bb152f19bd2ed5e482cff2e57806c1653ef415
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1536c2fbb40fa44140cb7470db310ef633f67ede
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506788"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>“导入包”对话框 UI 参考
   可以使用 **中的** “导入包” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，导入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及设置或修改包的保护级别。  
@@ -54,18 +54,18 @@ ms.locfileid: "48227727"
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包的路径，或单击浏览按钮 **(…)** 并查找包。  
+ 键入包的路径，或单击浏览按钮 (…) 并查找包。  
   
  **包名称**  
  可以根据需要对包进行重命名。 默认名称是要导入的包的名称。  
   
  **保护级别**  
- 单击浏览按钮 **(…)**，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅[“包和项目保护级别”对话框](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
+ 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [保存包的副本](../../2014/integration-services/save-copy-of-package.md)   
- [导出包对话框 UI 参考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [“导出包”对话框 UI 参考](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [保存包](save-packages.md)   
- [导入和导出包&#40;SSIS 服务&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [导入和导出包（SSIS 服务）](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

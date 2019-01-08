@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176098"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760240"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -30,7 +29,7 @@ ms.locfileid: "48176098"
 |事件 ID|2601|  
 |事件源|MSSQLSERVER|  
 |组件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|符号名称|N/A|  
+|符号名称|不可用|  
 |消息正文|不能在具有唯一索引 '%.\*ls' 的对象 '%.*ls' 中插入重复键的行。|  
   
 ## <a name="explanation"></a>解释  
@@ -42,7 +41,7 @@ ms.locfileid: "48176098"
   
 -   使用了具有标识列的表，但是没有对该列进行适当的管理。  
   
--   在合并复制过程中，插入系统表 **MSmerge_contents**时也可发生该错误；所引起的错误类似于：不能在具有唯一索引“ucl1SycContents”的对象“MSmerge_contents”中插入重复键的行。  
+-   在合并复制中，此错误也可发生在插入期间系统表**MSmerge_contents**; 所引发的错误是类似于：不能具有唯一索引 ucl1SycContents。 对象 MSmerge_contents 中插入重复键的行  
   
 ## <a name="user-action"></a>用户操作  
  所需操作取决于引发错误的原因：  

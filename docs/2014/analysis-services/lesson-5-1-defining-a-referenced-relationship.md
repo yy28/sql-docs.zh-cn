@@ -11,12 +11,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141887"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519901"
 ---
 # <a name="defining-a-referenced-relationship"></a>定义引用关系
   在本教程中到目前为止，您定义的每个多维数据集维度都基于一个按主键到外键的关系直接链接到度量值组事实数据表的表。 在本主题的各任务中，你会将“地域”维度通过一个称为“引用维度”的“分销商”维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "48141887"
   
      注意，“地域”多维数据集维度当前与“Internet 销售”度量值组或“分销商销售”度量值组都没有关系。  
   
-8.  单击“客户”维度和“Internet 销售”度量值组相交处的“全名”单元中的省略号按钮 (**…**)。  
+8.  单击省略号按钮 (**...**) 中**全名**相交处的单元格**客户**维度和**Internet Sales**度量值组。  
   
      在“定义关系”对话框中，注意，在 **DimCustomer** 维度表和 **FactInternetSales** 度量值组表之间，根据每个表中的 **CustomerKey** 列定义了“常规”关系。 到目前为止，您在本教程中定义的所有关系都是常规关系。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48141887"
   
 9. 单击“取消”。  
   
-10. 单击“地域”维度和“分销商销售”度量值组相交处的未命名单元中的省略号按钮 (**…**)。  
+10. 单击省略号按钮 (**...**) 中的相交处的未命名单元**Geography**维度和**分销商销售**度量值组。  
   
      在“定义关系”对话框中，可查看当前未定义“地域”多维数据集维度和“分销商销售”度量值组之间的关系。 无法定义常规关系，因为“地域”维度的维度表和“分销商销售”度量值组的事实数据表之间没有直接关系。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48141887"
   
      “分销商”维度中的“地域关键字”属性只能用于将“地域”维度链接到 Reseller Sales 事实数据表。 因为它不能用于浏览，所以不存在将该属性层次结构定义为可见的值。 而且，对该属性层次结构进行排序和优化只能为处理性能带来负面影响。 但是，必须启用该属性，使其作为两个维度之间的链接。  
   
-4.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，单击“维度用法”选项卡，然后单击“分销商销售”度量值组和“地域”多维数据集维度相交处的省略号按钮 (**…**)。  
+4.  切换到多维数据集设计器[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Tutorial 多维数据集，单击**维度用法**选项卡，然后单击省略号按钮 (**...**) 的交叉处**分销商销售**度量值组和**Geography**多维数据集维度。  
   
 5.  在“选择关系类型”列表中，选择“被引用的”。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48141887"
  [定义事实关系](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>请参阅  
- [属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [的维度设计器中，可以在“维度结构”视图的](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [定义被引用关系和被引用关系属性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], changing default location
@@ -14,12 +13,12 @@ ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6446f6aaaa08ea8cd4b8375791ecb6cd93187fee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092749"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639315"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>查看或更改数据文件和日志文件的默认位置 (SQL Server Management Studio)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看和更改新的数据文件和日志文件的默认位置。 默认路径从注册表中获得。 在更改位置后，如果未指定其他位置，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建的所有新数据库将使用该位置。  
@@ -34,7 +33,7 @@ ms.locfileid: "48092749"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **跟进：**  [更改默认位置](#FollowUp)  
+-   **跟进：**[更改默认位置](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48092749"
   
 3.  在 **“数据库默认位置”** 中，查看新的数据文件和日志文件的当前默认位置。 若要更改默认位置，请在 **“数据”** 或 **“日志”** 字段中输入新的默认路径名，或者单击浏览按钮找到并选择路径名。  
   
-##  <a name="FollowUp"></a> 跟进： 在更改后的默认位置  
+##  <a name="FollowUp"></a> 跟进：更改默认位置之后  
  必须停止并重新启动 SQL Server 服务以完成更改。  
   
 ## <a name="see-also"></a>请参阅  

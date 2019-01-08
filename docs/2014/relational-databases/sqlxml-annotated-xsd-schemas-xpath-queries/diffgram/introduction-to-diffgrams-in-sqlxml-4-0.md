@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotations [SQLXML]
@@ -15,12 +13,12 @@ ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7f94ac060cc4f76472c56c284636c09349261de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777085"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 中的 DiffGrams 简介
   本主题提供对 DiffGrams 的简要介绍。  
@@ -73,7 +71,7 @@ ms.locfileid: "48160767"
 ## <a name="understanding-the-diffgram-processing-logic"></a>了解 DiffGram 处理逻辑  
  DiffGram 处理逻辑使用某些规则来确定操作是否是插入、更新或删除操作。 下表描述了这些规则。  
   
-|运算|Description|  
+|操作|Description|  
 |---------------|-----------------|  
 |Insert|DiffGram 指示插入操作，当元素出现在 **\<DataInstance >** 块中但不是在相应**\<之前 >** 块，以及**diffgr: haschanges**指定属性 (**diffgr: haschanges = 插入**) 在元素上。 在这种情况下，DiffGram 插入中指定的记录实例 **\<DataInstance >** 到数据库中的块。<br /><br /> 如果**diffgr: haschanges**未指定属性、 处理逻辑将忽略该元素和不执行任何插入。 有关工作示例，请参阅[DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。|  
 |Update|中的某个元素时，DiffGram 指示更新操作\<之前 > 没有相应的元素中的块 **\<DataInstance >** 块 （即，两个元素具有**diffgr: id**具有相同的值属性) 和**diffgr: haschanges**属性指定值**修改**中的元素上**\<DataInstance >** 块。<br /><br /> 如果**diffgr: haschanges**中的元素上未指定特性 **\<DataInstance >** 块中，处理逻辑返回错误。 有关工作示例，请参阅[DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果**diffgr: parentid**中指定**\<之前 >** 阻止，请通过指定的元素的父-子关系**parentID**中使用确定更新记录的顺序。|  

@@ -1,5 +1,5 @@
 ---
-title: 指定查询轴 (MDX) 的内容 |Microsoft 文档
+title: 指定查询轴 (MDX) 的内容 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38a48fd99ae9a03599914a1dfdac0bf204301c4c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026804"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399570"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX 查询轴和切片器轴-指定查询轴的内容
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX 查询和切片器轴 - 指定查询轴的内容
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   查询轴用于指定多维表达式 (MDX) SELECT 语句返回的单元集的范围。 通过指定单元集的范围可以限定客户端可以看到的返回数据。  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
 ```  
   
- 在集定义前面使用的 NON EMPTY 关键字提供了一种简便方法，从轴中删除所有空元组。 例如，在这些示例中，到目前为止，我们还没有在多维数据集中看到 2004 年 8 月以后的数据。 要从单元集中删除列中没有数据的所有行，只需在 Rows 轴定义中的集前面添加 NON EMPTY 即可，如下所示：  
+ 在集定义前面使用的 NON EMPTY 关键字提供了一种简便方法，从轴中删除所有空元组。 例如，到目前为止我们已看到的示例中没有任何数据中多维数据集的 2004 年 8 月及更高版本。 要从单元集中删除列中没有数据的所有行，只需在 Rows 轴定义中的集前面添加 NON EMPTY 即可，如下所示：  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -111,7 +111,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [指定切片器轴 & #40; 的内容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+## <a name="see-also"></a>请参阅  
+ [指定切片器轴的内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

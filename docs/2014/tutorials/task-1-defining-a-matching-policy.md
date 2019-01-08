@@ -1,5 +1,5 @@
 ---
-title: 任务 1： 定义匹配策略 |Microsoft Docs
+title: 任务 1:定义匹配策略 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107437"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394190"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>任务 1：定义匹配策略
-  在本任务中，您将创建含有一个规则的匹配策略。 该规则具有一个先决条件：**供应商 ID**，这意味着在使用在规则中的其他域之前 Supplier Id 必须匹配。 该规则使用其他两个域： **Supplier Name**与**相似性**值设置为**70%** 并**联系人电子邮件**与**相似性**值设置为**30%**。  
+# <a name="task-1-defining-a-matching-policy"></a>任务 1:定义匹配策略
+  在本任务中，您将创建含有一个规则的匹配策略。 该规则具有一个先决条件：**供应商 ID**，这意味着在使用在规则中的其他域之前 Supplier Id 必须匹配。 该规则使用其他两个域：**供应商名称**与**相似性**值设置为**70%** 并**联系人电子邮件**与**相似性**值设置为**30%**。  
   
 1.  在主页面中的**DQS 客户端**，单击**右箭头**旁边**供应商**知识，然后选择**匹配策略**。  
   
@@ -69,6 +69,6 @@ ms.locfileid: "48107437"
 16. 单击**下一步**若要切换到**匹配结果**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 2：测试和发布匹配策略](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [任务 2:测试和发布匹配策略](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

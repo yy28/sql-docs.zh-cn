@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596156"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402843"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47596156"
 |**last_media_number**|**smallint**|备份集从此处结束的介质的编号。 可以为 NULL。|  
 |**catalog_family_number**|**tinyint**|包含备份集目录开始部分的介质簇的编号。 可以为 NULL。|  
 |**catalog_media_number**|**smallint**|包含备份集目录开始部分介质的介质编号。 可以为 NULL。|  
-|**位置**|**int**|还原操作中用来定位相应的备份集和文件的备份集位置。 可以为 NULL。 有关详细信息，请参阅中的文件[备份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
+|**position**|**int**|还原操作中用来定位相应的备份集和文件的备份集位置。 可以为 NULL。 有关详细信息，请参阅中的文件[备份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**expiration_date**|**datetime**|备份集过期的日期和时间。 可以为 NULL。|  
 |**software_vendor_id**|**int**|写入备份介质标头的软件供应商标识号。 可以为 NULL。|  
 |**名称**|**nvarchar(128)**|备份集的名称。 可以为 NULL。|  

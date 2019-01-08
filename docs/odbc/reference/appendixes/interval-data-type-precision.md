@@ -19,17 +19,17 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532122"
 ---
 # <a name="interval-data-type-precision"></a>间隔数据类型精度
 间隔数据类型精度包括间隔起始精度、 时间间隔精度和秒的精度。  
   
- 时间间隔的前导字段是有符号的数字。 前导字段的最大位数由名为 quantity*间隔起始精度，* 这是数据类型声明的一部分。 例如，声明： 间隔 HOUR(5) 到分钟具有间隔起始精度为 5;小时字段接受的值从 –99999 至 99999。 间隔起始精度的描述符记录 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段中包含。  
+ 时间间隔的前导字段是有符号的数字。 前导字段的最大位数由名为 quantity*间隔起始精度，* 这是数据类型声明的一部分。 例如，以下声明中：间隔 HOUR(5) 到分钟的时间间隔前导精度为 5; 的小时字段接受的值从-99999 至 99999。 间隔起始精度的描述符记录 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段中包含。  
   
  间隔数据类型组成的字段的列表称为*时间间隔精度*。 它不是数值，因为术语"精度"可能暗示。 例如，时间间隔精度类型 INTERVAL DAY TO 的第二个是列表天、 小时、 分钟、 秒。 保存此值; 没有描述符字段时间间隔精度始终可通过间隔数据类型确定。  
   

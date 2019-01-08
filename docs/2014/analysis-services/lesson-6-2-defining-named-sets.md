@@ -11,12 +11,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189127"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507860"
 ---
 # <a name="defining-named-sets"></a>定义命名集
   命名集是一个返回一组维度成员的多维表达式 (MDX)。 可以定义命名集，并将它们另存为多维数据集定义的一部分；还可以在客户端应用程序中创建命名集。 通过合并多维数据集数据、算术运算符、数字和函数，可以创建命名集。 命名集可以由用户在客户端应用程序的 MDX 查询中使用，还可以用来定义子多维数据集中的集合。 子多维数据集是交叉联接集的集合，它将多维数据集空间限制为随后语句的定义的子空间。 定义受限的多维数据集空间是 MDX 脚本的一个基本概念。  
@@ -68,7 +68,7 @@ ms.locfileid: "48189127"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     现在已经为 Exists 集表达式定义了第一个集合，便可以开始添加第二个集合，即包含最大雇员数的“分销商”维度的成员集合。  
+     现在，已经定义第一组的 Exists 集表达式，可以添加包含最大雇员数的分销商维度成员的第二个集的集合。  
   
 7.  上**元数据**选项卡**计算工具**窗格中，展开**雇员数目**中的分销商维度中，展开`Members`，然后展开**所有分销商**。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48189127"
      ![设置筛选器窗格，其中包含两个命名](../../2014/tutorials/media/l6-named-set-05.gif "设置筛选器窗格，其中包含两个名为")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [第 7 课：定义关键绩效指标 (KPI)](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [第 7 课：定义关键绩效指标&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>请参阅  
  [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)   

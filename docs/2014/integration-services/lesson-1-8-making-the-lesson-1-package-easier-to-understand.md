@@ -1,22 +1,21 @@
 ---
-title: 步骤 8：使第 1 课包更易于理解 | Microsoft Docs
+title: 步骤 8：使 Lesson 1 包更易理解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e549018c7f0654ba40ddd486149059b37ddd46e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750610"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步骤 8：使 Lesson 1 包更易理解
   因为您已完成了 Lesson 1 包的配置，所以整理包布局是很必要的。 如果控制流和数据流布局中的形状大小不一，或者如果形状未对齐或未进行分组，则可能很难理解包功能。  
@@ -52,6 +51,6 @@ ms.locfileid: "48072527"
      如果未将文本添加到批注框，则当您在批注框外部单击时，该文本便会消失。  
   
 ## <a name="next-steps"></a>后续步骤  
- [步骤 9：测试第 1 课教程包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [步骤 9:测试第 1 课教程包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

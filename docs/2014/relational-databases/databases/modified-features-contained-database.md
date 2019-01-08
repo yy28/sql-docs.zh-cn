@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
@@ -13,12 +12,12 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d08eb0368840a6f2850467d13cbe42c5519c7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083647"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751079"
 ---
 # <a name="modified-features-contained-database"></a>经过修改的功能（包含数据库）
   为了获得部分包含的数据库的支持，已对以下功能进行了修改。 经常会对功能进行修改，以便它们不会超出数据库范围。  
@@ -46,7 +45,7 @@ ms.locfileid: "48083647"
  临时表可能不引用用户定义类型、XML 架构集合或用户定义函数。  
   
 ## <a name="collation"></a>排序规则  
- 非包含的数据库模型中有三种不同的排序规则：数据库排序规则、实例排序规则和 tempdb 排序规则。 包含数据库只使用两种排序规则：数据库排序规则和新目录排序规则。 有关包含数据库排序规则的详细信息，请参阅 [Contained Database Collations](contained-database-collations.md) 。  
+ 在非包含数据库模型中，有三种不同的排序规则：数据库排序规则、 实例排序规则和 tempdb 排序规则。 包含数据库只使用两种排序规则：数据库排序规则和新目录排序规则。 有关包含数据库排序规则的详细信息，请参阅 [Contained Database Collations](contained-database-collations.md) 。  
   
 ## <a name="user-options"></a>用户选项  
  启用包含数据库时，对于 [的实例而言，](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options Option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须设置为 0。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2aecd264eac2a6beada1009ae070f1858dd6822c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752879"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件类
   **Blocked Process Report** 事件类指明某个任务已被阻塞，导致超过指定的时间。 此事件类不包括系统任务和正在等待未发现死锁的资源的任务。  

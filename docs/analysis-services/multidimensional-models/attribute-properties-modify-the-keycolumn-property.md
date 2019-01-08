@@ -1,5 +1,5 @@
 ---
-title: 修改特性的 KeyColumn 属性 |Microsoft 文档
+title: 修改特性的 KeyColumn 属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 278780dd8457a90a6ee2fba632216bd1697ec0f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539026"
 ---
-# <a name="attribute-properties---modify-the-keycolumn-property"></a>特性属性-修改 KeyColumn 属性
+# <a name="attribute-properties---modify-the-keycolumn-property"></a>特性属性 - 修改 KeyColumn 属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   可以修改特性的 **KeyColumns** 属性。 例如，您可能需要指定组合键以作为该特性的键，而不是指定单个键。  
   
@@ -28,9 +28,9 @@ ms.locfileid: "34021484"
   
     -   在**解决方案资源管理器**中，右键单击“维度”文件夹中的维度，然后单击“打开”或“视图设计器”。  
   
-         — 或 —  
+         -或-  
   
-    -   在多维数据集设计器上**多维数据集结构**选项卡上，展开中的多维数据集维度**维度**窗格中，然后单击**编辑\<维度 >**。  
+    -   在多维数据集设计器上**多维数据集结构**选项卡上，展开中的多维数据集维度**维度**窗格，然后单击**编辑\<维度 >**。  
   
 3.  在 **“维度结构”** 选项卡的 **“属性”** 窗格中，单击要修改其 **KeyColumns** 属性的特性。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34021484"
   
 8.  若要更改键列的顺序，请选择一列，然后单击 **“向上”** 或 **“向下”** 按钮。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

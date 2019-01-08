@@ -10,12 +10,12 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737305"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394870"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 SSMA for MySQL 可以运行在不同的 SQL 模式，并可以应用这些模式以不同的方式为不同的客户端。  
@@ -24,11 +24,11 @@ SSMA for MySQL 可以运行在不同的 SQL 模式，并可以应用这些模式
   
 ## <a name="sql-modes-grid"></a>SQL 模式网格：  
   
--   根级别上的 SQL 模式网格包含以下列： **SQL 模式名称**，**加载 SQL 模式**，并**有效 SQL 模式**。  
+-   根级别上的 SQL 模式网格包含以下列：**SQL 模式名称**，**加载 SQL 模式**，和**有效 SQL 模式**。  
   
--   在数据库类别、 数据库、 表类别、 语句类别、 视图类别、 表、 视图、 函数、 过程、 UDF 和事件对象级别的 SQL 模式网格包含以下列： **SQL 模式名称**， **继承 SQL 模式**，并**有效 SQL 模式**。  
+-   在数据库类别、 数据库、 表类别、 语句类别、 视图类别、 表、 视图、 函数、 过程、 UDF 和事件对象级别的 SQL 模式网格包含以下列：**SQL 模式名称**，**继承 SQL 模式**，和**有效 SQL 模式**。  
   
--   在存储过程、 存储函数和触发器的级别的 SQL 模式网格包含以下列： **SQL 模式名称**，**原始 SQL 模式**，并**有效 SQL 模式**。  
+-   在存储过程、 存储函数和触发器的级别的 SQL 模式网格包含以下列：**SQL 模式名称**，**原始 SQL 模式**，和**有效 SQL 模式**。  
   
 > [!NOTE]  
 > 组模式中将显示列下，粗体 SQL 模式 Name。  

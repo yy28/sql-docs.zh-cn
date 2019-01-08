@@ -18,12 +18,12 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545504"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|为后续提取中的某些文本或图像列返回实际数据，而非文本指针（也即，此操作撤消了 TEXTPTR_ONLY 的效果）。<br /><br /> 如果为某特定列启用了 TEXTDATA，则将重新提取或刷新此行，然后将它发送回 TEXTPTR_ONLY。 借助于 TEXTPTR_ONLY，值参数是一个整数，它指定列编号，并且零值返回所有文本或图像列。|  
 |0x0004|SCROLLOPT|滚动选项。 有关其他信息，请参阅本主题后面的“返回代码值”。|  
 |0x0005|CCOPT|并发控制选项。 有关其他信息，请参阅本主题后面的“返回代码值”。|  
-|0x0006|ROWCOUNT|结果集中的当前行数。<br /><br /> 注意： ROWCOUNT 可能已更改自如果正在使用异步填充 sp_cursoropen 返回的值。 如果行数未知，则返回值 –1。|  
+|0x0006|ROWCOUNT|结果集中的当前行数。<br /><br /> 注意：如果正在使用异步填充，则 ROWCOUNT 可能已由于 sp_cursoropen 返回的值而发生了变化。 如果行数未知，则返回值为-1。|  
   
  *value*  
  指定返回的值*代码*。 *值*是一个必需的参数，0x0001，0x0002，或 0x0003*代码*输入值。  

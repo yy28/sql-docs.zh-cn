@@ -10,15 +10,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71ad9b87f701a1f1de4f13a7788bba13543056e8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7ab482a9c2a4bce9da7dc2b0a68cae6391759b92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030014"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754449"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上配置 SQL Server 复制
 
@@ -36,7 +34,7 @@ ms.locfileid: "51030014"
   
 * 有关使用存储过程示例，请按照[Linux 上的配置 SQL Server 复制](sql-server-linux-replication-tutorial-tsql.md)教程。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 配置发布服务器、 分发服务器和订阅服务器之前, 需要完成 SQL Server 实例的几个配置步骤。
 
@@ -98,6 +96,6 @@ ms.locfileid: "51030014"
 
 ## <a name="next-steps"></a>后续步骤
 
-[Linux 上的概念： SQL Server 复制](sql-server-linux-replication.md)
+[概念：Linux 上的 SQL Server 复制](sql-server-linux-replication.md)
 
 [复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。

@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: b139ff48d818ad586c029103f8d86e6ff2721af0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414794"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本文简要概括知识管理、数据质量项目和数据质量管理中的 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念。  
@@ -25,7 +25,7 @@ ms.locfileid: "51032116"
   
  **知识发现**  
   
- 知识发现是分析您组织的数据样本以建立有关数据的知识的计算机辅助过程。 一旦得到了分析结果，您就可以验证并改进知识，然后应用知识来执行数据清理、数据匹配和事件探查。 有关详细信息，请参阅 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
+ 知识发现是分析组织的数据样本以建立有关数据的知识的计算机辅助过程。 一旦得到了分析结果，您就可以验证并改进知识，然后应用知识来执行数据清理、数据匹配和事件探查。 有关详细信息，请参阅 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
  **域管理**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "51032116"
   
  DQS 中的数据清理需要根据 DQS 知识库中的知识来执行。 DQS 中的数据清理是一个两步过程：  
   
--   **计算机辅助清理**：DQS 对清理项目使用所选知识库中的知识，用来对数据源中的值提出更正/建议。  
+-   **计算机辅助的清理**:DQS 对清理项目在所选知识库中使用的知识来提出更正/建议为数据源中的值。  
   
--   **交互式清理**：数据专员可以执行交互式清理过程，以更改或增强由计算机辅助数据清理过程提出的数据更正。 为此，数据专员将使用由数据清理过程确定的置信度和统计信息，或在项目中手动输入自己的更改。  
+-   **交互式清理**:数据专员可以执行交互式清理过程，以更改或增强由计算机辅助数据清理过程提出的数据更正。 为此，数据专员将使用由数据清理过程确定的置信度和统计信息，或在项目中手动输入自己的更改。  
   
  完成数据清理后，数据专员可以将已处理的数据导出到 SQL Server 数据库、.csv 文件或 Excel 文件。 有关详细信息，请参阅 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
@@ -14,12 +13,12 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1e4c2932102892326ad159d5db1901873d1f22d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c635c6083c42be3d1e3eb84afc8f188b0bdf94a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761399"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求属性值 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您想要确保主数据完整时要求属性值。  
@@ -27,12 +26,12 @@ ms.locfileid: "48072817"
 > [!NOTE]  
 >  缺少基于域的属性值的成员不显示在基于那些关系的派生层次结构中。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-require-attribute-values"></a>要求属性值  
   
@@ -72,12 +71,12 @@ ms.locfileid: "48072817"
   
 -   通过以下过程之一将业务规则应用到数据：  
   
-    -   [针对业务规则验证特定成员&#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [针对业务规则验证特定成员 (Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [针对业务规则验证版本&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [针对业务规则验证版本 (Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>请参阅  
- [业务规则&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [派生层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+ [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

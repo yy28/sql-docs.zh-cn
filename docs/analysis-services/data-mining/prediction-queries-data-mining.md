@@ -1,5 +1,5 @@
 ---
-title: 预测查询 （数据挖掘） |Microsoft 文档
+title: 预测查询 （数据挖掘） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a8bc3dac0b76adc326b5beab8444475fb76af8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506044"
 ---
 # <a name="prediction-queries-data-mining"></a>预测查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34017844"
 ###  <a name="bkmk_PredFunc"></a> 添加预测函数  
  除了预测值，您还可以自定义预测查询，以返回与预测有关的各种类型的信息。 例如，如果预测创建向客户推荐的产品的列表，则您还可能要返回每项预测的概率，以便可以对预测进行排名并且仅向用户展示最有价值的建议。  
   
- 为此，您将向添加查询“预测函数”  。 每个模型或查询类型都支持特定的函数。 例如，聚类分析模型支持特殊预测函数，这些函数提供有关模型创建的分类的额外详细信息，而时序模型具有计算随时间的变化的函数。 还有可处理几乎所有模型类型的通用预测函数。 有关不同查询类型支持的预测函数的列表，请参阅主题 DMX 引用：[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。  
+ 为此，您将向添加查询“预测函数”  。 每个模型或查询类型都支持特定的函数。 例如，聚类分析模型支持特殊预测函数，这些函数提供有关模型创建的分类的额外详细信息，而时序模型具有计算随时间的变化的函数。 还有可处理几乎所有模型类型的通用预测函数。 在不同类型的查询中受支持的预测函数的列表，请参阅主题 DMX 引用：[通用预测函数&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。  
   
 ###  <a name="bkmk_SingletonQuery"></a> 创建单独预测查询  
  如果要实时创建快速预测，则单独预测查询很有用。 一种常见情形可能是，您也许已通过使用网站上的窗体从客户获取了信息，希望提交这些数据作为单独预测查询的输入。 例如，当客户从列表中选择产品时，您可以使用所选内容作为预测最佳建议产品的查询的输入。  
@@ -68,7 +68,7 @@ ms.locfileid: "34017844"
  单独预测查询不需要包含输入的单独表。 而应将一行或多行值作为对模型的输入提供，并且将实时返回一个或多个预测。  
   
 > [!WARNING]  
->  不管名称如何，单独预测查询并不只是生成单个预测 — 您可以为每组输入生成多个预测， 并且可以通过为每个输入事例创建一个 SELECT 语句并将它们与 UNION 操作符相结合，提供多个输入事例。  
+>  不管名称如何，单独预测查询并不只是生成单个预测 — 您可以生成为每个输入集的多个预测。 并且可以通过为每个输入事例创建一个 SELECT 语句并将它们与 UNION 操作符相结合，提供多个输入事例。  
   
  创建单独预测查询时，必须以 PREDICTION JOIN 的形式向模型提供新数据。 这意味着即使不映射到实际表，也必须确保新数据与挖掘模型中的现有列匹配。 如果新数据列与新数据完全匹配，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动映射列。 这称为“NATURAL PREDICTION JOIN” 。 但是，如果列不匹配，或者新数据在类型和量上与模型所包含的数据并不相同，则必须指定模型中的哪些列映射到新数据，或者指定缺少的值。  
   
@@ -137,18 +137,18 @@ FROM
   
  **PredictedQty**  
   
-|$TIME|数量|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |201101|77|  
   
-|$TIME|数量|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |201102|260|  
   
  如果提供程序无法处理分层的行集，则可以通过在预测查询中使用 FLATTEN 关键字来对结果进行平展处理。 有关详细信息，包括平展行集的示例，请参阅 [SELECT (DMX)](../../dmx/select-dmx.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [内容查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [数据定义查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [内容查询（数据挖掘）](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [数据定义查询（数据挖掘）](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

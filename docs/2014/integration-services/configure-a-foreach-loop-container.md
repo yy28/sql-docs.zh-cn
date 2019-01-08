@@ -14,12 +14,12 @@ ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d63a4f168c4a426c06bb00c634f89e328735332
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb1e3ca9e8576bf340560c45582c9b01bd453c14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159757"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529045"
 ---
 # <a name="configure-a-foreach-loop-container"></a>配置 Foreach 循环容器
   此过程介绍如何配置 Foreach 循环容器，包括如何在枚举器级和容器级上配置属性表达式。  
@@ -66,7 +66,7 @@ ms.locfileid: "48159757"
   
     -   若要使用 Foreach SMO 枚举器，请选择一个现有的 ADO.NET 连接，或在 **“连接”** 列表中，单击 **“新建连接”** ，然后键入需要的字符串或单击 **“浏览”**。 如果选择单击 **“浏览”**，则请在 **“选择 SMO 枚举”** 对话框中，选择要枚举的对象类型和枚举类型，然后单击 **“确定”**。  
   
-6.  也可单击“集合”页上的“表达式”文本框中的浏览按钮 **(…)** 来创建可用于更新属性值的表达式。 有关详细信息，请参阅[添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
+6.  也可单击“集合”页上的“表达式”文本框中的浏览按钮 (…) 来创建可用于更新属性值的表达式。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
     > [!NOTE]  
     >  在“属性”列表中列出的属性因枚举器而异。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15a70999431af9969589a8d4ca771f0d92463d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f81b196ee1b686fbe2dd3563f694411a0e00d962
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062247"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761409"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件类
   **Database Mirroring State Change** 事件类指明镜像数据库的状态改变时间。 此事件类包括在监视镜像数据库条件的跟踪中。  
@@ -42,7 +41,7 @@ ms.locfileid: "48062247"
 |**LoginSid**|**image**|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|用户帐户控制|  
 |**RequestID**|**int**|包含该语句的请求的 ID。|49|用户帐户控制|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |**State**|**int**|新的镜像状态 ID：<br /><br /> 0 = 空值通知<br /><br /> 1 = 已通过见证服务器同步了主体服务器<br /><br /> 2 = 未通过见证服务器同步了主体服务器<br /><br /> 3 = 已通过见证服务器同步了镜像服务器<br /><br /> 4 = 未通过见证服务器同步了镜像服务器<br /><br /> 5 = 丢失了与主体服务器的连接<br /><br /> 6 = 丢失了与镜像服务器的连接<br /><br /> 7 = 手动故障转移<br /><br /> 8 = 自动故障转移<br /><br /> 9 = 镜像已挂起<br /><br /> 10 = 无仲裁<br /><br /> 11 = 正在同步镜像服务器<br /><br /> 12 = 主体服务器运行已公开|30|用户帐户控制|  

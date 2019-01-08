@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741855"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407294"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* |为 NULL
 
- 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
+ **适用对象：** SQL Server （从 2008年开始）、 Azure SQL 数据库
 
  数据库 ID。 *database_id*数据类型为 int，无默认值。 有效的输入包括数据库的 ID 号或 NULL。 如果指定 NULL，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有数据库。  
   
@@ -66,7 +66,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* |为 NULL
 
-适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
+**适用对象：** SQL Server （从 2008年开始）、 Azure SQL 数据库
  
 文件的 ID。 *file_id*数据类型为 int，无默认值。 有效输入为文件 ID 号或为 NULL。 如果指定 NULL，则返回数据库中的所有文件。  
   
@@ -94,14 +94,14 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**pdw_node_id**|**int**|适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分发节点的标识符。
  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。 有关详细信息，请参阅[动态管理视图和函数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. 返回一个日志文件的统计信息
 
-**适用于：** SQL Server （从 2008年开始）、 Azure SQL 数据库
+**适用范围：** SQL Server （从 2008年开始）、 Azure SQL 数据库
 
  以下示例将返回有关 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的日志文件的统计信息。  
   
@@ -112,11 +112,11 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. 在 tempdb 中返回文件统计的信息
 
-**适用于：** Azure SQL 数据仓库
+**适用范围：** Azure SQL 数据仓库
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

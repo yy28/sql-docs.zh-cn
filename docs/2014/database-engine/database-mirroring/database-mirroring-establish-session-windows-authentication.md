@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5b14f73b3691bb194a0cc5b77401cb7a3fdde70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072977"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508411"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)
     
@@ -42,7 +42,7 @@ ms.locfileid: "48072977"
      数据库镜像会话中的每个服务器实例都需要一个数据库镜像端点。 如果端点不存在，则必须先创建。  
   
     > [!NOTE]  
-    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 数据库镜像可以使用两种类型的传输安全功能：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组的传输安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 两种类型的传输安全性是可用于数据库镜像：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组的传输安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
   
      在每台主体服务器和镜像服务器上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的伙伴，你可以为终结点分配伙伴角色 (ROLE**=** PARTNER)。 如果还要将该服务器用于其他数据库镜像会话中的见证服务器，则请将端点的角色分配为 ALL。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48072977"
     ```  
   
     > [!IMPORTANT]  
-    >  请勿重新配置正在使用的数据库镜像端点。 如果数据库镜像端点已存在并处于使用状态，则我们建议您将此端点用于服务器实例中的每一个会话。 删除正在使用的端点可导致端点重新启动，中断现有会话的连接，从而导致其他服务器实例出现错误。 这在具有自动故障转移功能的高安全性模式下尤为重要，在此模式下，在伙伴上重新配置端点可能会导致故障转移。 此外，如果已经为会话设置了见证服务器，则删除数据库镜像端点会造成该会话的主体服务器失去仲裁；如果发生这种情况，数据库会进入脱机状态，其用户也会断开连接。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  请勿重新配置正在使用的数据库镜像端点。 如果数据库镜像端点已存在并处于使用状态，则我们建议您将此端点用于服务器实例中的每一个会话。 删除正在使用的端点可导致端点重新启动，中断现有会话的连接，从而导致其他服务器实例出现错误。 这在具有自动故障转移功能的高安全性模式下尤为重要，在此模式下，在伙伴上重新配置端点可能会导致故障转移。 此外，如果已经为会话设置了见证服务器，则删除数据库镜像端点会造成该会话的主体服务器失去仲裁；如果发生这种情况，数据库会进入脱机状态，其用户也会断开连接。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
      如果任一伙伴缺少终结点，请参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48072977"
   
      其中，\<system-address> 是明确标识目标计算机系统的字符串，\<port> 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为 **AdventureWorks**，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像端点使用的端口为 7022：  
+     例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7022：  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -88,7 +88,7 @@ ms.locfileid: "48072977"
   
      有关详细信息，请参阅步骤 4。  
   
-     例如，在主体服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始镜像服务器实例。 数据库名称为 **AdventureWorks**，系统地址为 DBSERVER2（伙伴系统的名称），伙伴数据库镜像端点使用的端口为 7025：  
+     例如，在主体服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始镜像服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER2（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7025：  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -107,7 +107,7 @@ ms.locfileid: "48072977"
          另外，如果您不想进行自动故障转移，并且您对性能的追求超过了可用性，则请关闭事务安全。 有关详细信息，请参阅[更改数据库镜像会话中的事务安全 (Transact-SQL)](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
   
         > [!NOTE]  
-        >  在高性能模式下，WITNESS 应设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+        >  在高性能模式下，WITNESS 应设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ## <a name="example"></a>示例  
   

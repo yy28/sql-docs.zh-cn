@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
@@ -13,22 +12,22 @@ ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: baff749af3e0cc745342787b5d5ab73d7f7f6e1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cc706bb7e4852e37f473378d519c813001a96d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139481"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768119"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>更改属性组名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改属性组的名称。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-change-an-attribute-group-name"></a>更改属性组名称  
   
@@ -51,8 +50,8 @@ ms.locfileid: "48139481"
 9. 单击 **“保存组”**。  
   
 ## <a name="see-also"></a>请参阅  
- [属性组&#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [创建属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
- [删除属性组&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  
+ [属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [创建属性组 (Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
+ [删除属性组 (Master Data Services)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
@@ -13,12 +12,12 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de6560f7bc91a76652be5ca198a91c4ab9c1f1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc075a50f3b57cf4856dbcd2ee36c13b83d968d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773369"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>保存并执行包（SQL Server 导入和导出向导）
   使用**保存并执行包**对话框可以保存和 / 或其运行更高版本，立即运行包。  
@@ -38,7 +37,7 @@ ms.locfileid: "48104499"
  保存包以便日后运行，也可以根据需要立即运行包。  
   
 > [!NOTE]  
->  在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，用于保存由向导创建的包的选项不可用。  
+>  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，未提供用来保存该向导所创建的包的选项。  
   
  **SQL Server**  
  选择此选项可将包保存到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`数据库。  

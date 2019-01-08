@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
@@ -14,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105157"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748719"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
   下列问题和解答就复制数据库管理员所面临的多种任务提供指导。  
@@ -122,7 +121,7 @@ ms.locfileid: "48105157"
   
 -   对象的定义，如 CREATE TABLE 语句。 默认情况下，复制把所有已复制对象的定义都复制到订阅服务器。  
   
--   在其中创建对象的命名空间：\<数据库>.\<架构>.\<对象>。 架构使用 CREATE SCHEMA 语句定义。  
+-   在其中创建对象的命名空间：\<数据库 >。\<架构 >。\<对象 >。 架构使用 CREATE SCHEMA 语句定义。  
   
 -   在新建发布向导中，复制在架构和对象所有权方面具有以下默认行为：  
   
@@ -134,7 +133,7 @@ ms.locfileid: "48105157"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过“项目属性 - \<项目>”**** 对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)、[定义项目](../publish/define-an-article.md)和[查看和修改项目属性](../publish/view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)、[定义项目](../publish/define-an-article.md)和[查看和修改项目属性](../publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何配置订阅数据库上的授权，以使其与发布数据库上的授权相匹配？  
  默认情况下，复制不在订阅数据库上执行 GRANT 语句。 如果希望订阅数据库上的权限与发布数据库上的权限相匹配，请使用下列方法之一：  
@@ -185,7 +184,7 @@ ms.locfileid: "48105157"
  首先使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或“发布属性 - \<发布>”对话框从发布中删除项目，然后使用 `DROP <Object>` 将其从数据库中删除。 在添加订阅后，就不能从快照发布或事务发布中删除项目，而必须先删除订阅。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已发布的表中添加或删除列？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持对已发布对象进行各种架构更改，包括添加和删除列。 例如，执行 ALTER TABLE... 在发布服务器上执行 DROP COLUMN，该语句将复制到订阅服务器，然后执行以删除列。 运行早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的订阅服务器支持通过存储过程 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)添加和删除列。 有关详细信息，请参阅[对发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持对已发布对象进行各种架构更改，包括添加和删除列。 例如，在发布服务器上执行 ALTER TABLE ...在发布服务器上执行 DROP COLUMN，该语句将复制到订阅服务器，然后执行以删除列。 运行早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的订阅服务器支持通过存储过程 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)添加和删除列。 有关详细信息，请参阅[对发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="replication-maintenance"></a>复制维护  
   

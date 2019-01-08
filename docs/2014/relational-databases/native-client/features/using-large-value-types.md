@@ -17,12 +17,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136187"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414594"
 ---
 # <a name="using-large-value-types"></a>使用大值类型
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大值数据类型是那些超过 8 KB 的最大行大小。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入**最大**说明符**varchar**， **nvarchar**并**varbinary**数据类型，以允许存储值的最大为 2 ^31-1字节数。 表的列和[!INCLUDE[tsql](../../../includes/tsql-md.md)]变量可以指定**varchar （max)**， **nvarchar （max)** 或**varbinary （max)** 数据类型。  
@@ -43,7 +43,7 @@ ms.locfileid: "48136187"
   
  如果列中的 varchar(max)、varbinary(max) 和 nvarchar(max) 数据类型的 max 大小设置为不受限制，则这些数据类型会通过返回列数据类型的核心 OLE DB 架构行集和接口表示为 ISLONG。  
   
- 命令对象的 IAccessor 实现已更改为允许绑定为 DBTYPE_IUNKNOWN。 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 设置为 Null，则提供程序将向使用者返回 ISequentialStream 接口，以便使用者可以对输出变量之外的 varchar(max)、nvarchar(max) 或 varbinary(max) 数据进行流式处理。  
+ 命令对象的**IAccessor**实现已更改为允许绑定为 DBTYPE_IUNKNOWN。 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 设置为 Null，则提供程序将向使用者返回 ISequentialStream 接口，以便使用者可以对输出变量之外的 varchar(max)、nvarchar(max) 或 varbinary(max) 数据进行流式处理。  
   
  将在所有结果行之后返回经过流式处理的输出参数值。 如果应用程序尝试通过调用 IMultipleResults::GetResult 移动到下一个结果集并且没有使用返回的所有输出参数值，则将返回 DB_E_OBJECTOPEN。  
   

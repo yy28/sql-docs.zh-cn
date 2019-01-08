@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofileagentname.f1
@@ -15,12 +14,12 @@ ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c95d4a8d47c65493fcb2e618a194f37fec9125e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6d6c421e976290f17a3e49848a1600445a7da1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780899"
 ---
 # <a name="agent-profiles-single-agent"></a>代理配置文件（单个代理）
   可以使用 **“代理配置文件”** 对话框管理代理的配置文件。 代理配置文件为每个代理提供了一种便于管理运行时参数的方法。 每个代理均有一个默认配置文件，某些代理还有附加的预定义配置文件。 例如，合并代理有一个为低带宽连接设计的“慢速链接”配置文件。 预定义配置文件对于大多数应用程序已经足够，不过，您仍然可以创建用户定义的配置文件，以便自定义代理行为。  
@@ -33,7 +32,7 @@ ms.locfileid: "48070920"
  配置文件的名称。  
   
  **类型**  
- 配置文件类型： **“用户”** （用户定义）或 **“系统”** （预定义）。  
+ 配置文件的类型：**用户**（用户定义的） 或**系统**（预定义）。  
   
  **属性(...)**  
  单击此项可查看用于代理配置文件中每个参数的值。  

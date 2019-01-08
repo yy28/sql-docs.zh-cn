@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150976"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750110"
 ---
 # <a name="general-page"></a>“常规”页
   使用 **“选项”** 对话框中 **“Integration Services 设计器”** 页的 **“常规”** 页，可以指定用于加载、显示和升级包的选项。  
@@ -37,7 +36,7 @@ ms.locfileid: "48150976"
  选择此项将在加载未经签名的包时显示警告。  
   
  **显示优先约束标签**  
- 选择在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中查看包时，显示哪种优先约束标签（“成功”、“失败”或“完成”）。  
+ 选择在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中查看包时，显示哪种优先约束标签（“成功”、“失败”或“完成”）。  
   
  **脚本语言**  
  选择新脚本任务和脚本组件的默认脚本语言。  
@@ -55,7 +54,7 @@ ms.locfileid: "48150976"
  升级 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 包时，为包的升级版本创建新的包 ID。  
   
 ## <a name="see-also"></a>请参阅  
- [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)   
+ [安全性概述 (Integration Services)](security/security-overview-integration-services.md)   
  [用脚本扩展包](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

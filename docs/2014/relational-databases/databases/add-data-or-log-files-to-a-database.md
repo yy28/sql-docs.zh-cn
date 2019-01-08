@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
@@ -19,12 +18,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11e70904aa8a67a1290cd466aeabcd33d2e7e651
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213457"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778319"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向数据库添加数据文件或日志文件。  
@@ -35,7 +34,7 @@ ms.locfileid: "48213457"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **向数据库中添加数据文件或日志文件，使用：**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48213457"
   
 8.  指定文件的初始大小。 根据数据库中您希望的最大数据量，使数据文件尽可能大。  
   
-9. 若要指定文件的增长方式，请在“自动增长”列中单击 (**…**)。 从下列选项中进行选择：  
+9. 若要指定文件的增长方式，请在“自动增长”列中单击 (…)。 从下列选项中进行选择：  
   
     1.  若要允许当前选中的文件根据数据空间量的需求增加而增长，请选中 **“启用自动增长”** 复选框，然后从下列选项中进行选择：  
   

@@ -1,5 +1,5 @@
 ---
-title: 添加或删除用户定义的层次结构 |Microsoft 文档
+title: 添加或删除用户定义层次结构 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d7ae6e851f9da6f85966e8eb9b208d82c4641000
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 36763d7c466ccc1b3f41fda5d361a85322e0b308
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534300"
 ---
-# <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>用户定义的层次结构-添加或删除用户定义的层次结构
+# <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>用户定义的层次结构 - 添加或删除用户定义层次结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”选项卡上的维度中添加或删除用户定义的层次结构。  
   
- 在添加用户定义的层次结构后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中实例化此层次结构并且处理维度之前，用户无法使用此层次结构。 有关详细信息，请参阅[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)和[处理多维模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
+ 在添加用户定义的层次结构后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中实例化此层次结构并且处理维度之前，用户无法使用此层次结构。 有关详细信息，请参阅[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)并[处理多维模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>向维度添加用户定义层次结构  
   
@@ -47,16 +47,16 @@ ms.locfileid: "34026475"
   
 -   在“维度结构” 选项卡上的“层次结构”窗格中，单击要删除的用户定义的层次结构。 在工具栏上，单击 **“删除”**。  
   
-     — 或者 —  
+     - 或 -  
   
 -   在“层次结构”窗格中右键单击要删除的用户定义的层次结构，然后单击“删除”。  
   
-     — 或者 —  
+     - 或 -  
   
 -   将该用户定义的层次结构拖出设计图面。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [创建用户定义的层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [创建用户定义层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
   
   

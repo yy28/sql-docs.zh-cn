@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergefilter
@@ -17,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3dcbbf0e9eae077d84ccfceea76aca09659777d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752965"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779359"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章***’**  
+ [ **@article=**] **'***文章*****  
  项目的名称。 *文章*是**sysname**，默认值为**%**，这会返回所有项目的名称。  
   
  [  **@filtername=**] **'***filtername***’**  
@@ -72,7 +71,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_helpmergefilter**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergefilter**。  
   
 ## <a name="see-also"></a>请参阅  

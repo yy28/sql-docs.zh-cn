@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning member permissions
@@ -14,24 +13,24 @@ ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b81b9f7fcf01e713c1a996dadb5a858a23a1fecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b454a152eac9a61edafeaf02e30fd18f351c9daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199034"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755449"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>分配层次结构成员权限 (Master Data Services)
   向层次结构成员分配权限，以便使用户或组具有在 **的** “资源管理器” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中查看数据的权限。  
   
  层次结构成员权限是可选的。 它们增加了模型对象权限所需的粒度。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>分配层次结构成员权限  
   
@@ -55,14 +54,14 @@ ms.locfileid: "48199034"
   
 10. 从菜单中选择**只读**，**更新**，或**拒绝**。  
   
-11. 单击 **“保存”**。  
+11. 单击“保存” 。  
   
     > [!NOTE]  
     >  层次结构成员权限不立即生效。 有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [删除层次结构成员权限&#40;Master Data Services&#41;](../../2014/master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
- [分配模型对象权限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [层次结构成员权限&#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [删除层次结构成员权限 (Master Data Services)](../../2014/master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
+ [分配模型对象权限 (Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [层次结构成员权限 (Master Data Services)](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Showplan XML events
@@ -15,12 +14,12 @@ ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 443af7fa03c17e5ba8d0dba1210c5564cc7d51e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754189"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>分别保存 Showplan XML 事件 (SQL Server Profiler)
   本主题介绍了如何使用 **将在跟踪中捕获到的** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件分别保存到单独的 .SQLPlan 文件中。 您可以在 **中打开** Showplan XML [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件文件，从中可以查看每个事件的以图形表示的执行计划。  

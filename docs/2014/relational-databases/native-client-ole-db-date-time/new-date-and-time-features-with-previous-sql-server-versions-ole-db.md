@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
@@ -12,18 +12,18 @@ ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125488"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774679"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
   本主题介绍预期的行为时使用增强的日期和时间功能的客户端应用程序的版本与通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，并在客户端使用的版本进行编译时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]发送到服务器的命令支持增强的日期和时间功能。  
   
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
- 客户端应用程序使用的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]请参阅新的日期/时间类型作为`nvarchar`列。 这些列内容是文字表示。 有关详细信息，请参阅的"数据格式： 字符串和文字"部分[OLE DB 日期和时间改进的数据类型支持](data-type-support-for-ole-db-date-and-time-improvements.md)。 列大小是为列指定的精度的最大文字长度。  
+ 客户端应用程序使用的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]请参阅新的日期/时间类型作为`nvarchar`列。 这些列内容是文字表示。 有关详细信息，请参阅"数据格式：字符串和文字"一节[OLE DB 日期和时间改进的数据类型支持](data-type-support-for-ole-db-date-and-time-improvements.md)。 列大小是为列指定的精度的最大文字长度。  
   
  目录 API 将返回与返回给客户端的下级数据类型代码（例如 `nvarchar`）和关联的下级表示形式（例如相应的文字格式）一致的元数据。 不过，返回的数据类型名称将为 real [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 类型名称。  
   
@@ -35,8 +35,8 @@ ms.locfileid: "48125488"
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零值，则由于字符串截断将失败 IRowsetChange。|  
 |DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零值，则由于字符串截断将失败 IRowsetChange。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIME||Time(7)|失败 – 无效的时间文字。|“确定”|  
-|DBTYPE_DBTIMESTAMP|||失败 – 无效的时间文字。|“确定”|  
+|DBTYPE_DBTIME||Time(7)|失败的无效的时间文字。|“确定”|  
+|DBTYPE_DBTIMESTAMP|||失败的无效的时间文字。|“确定”|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|“确定”|“确定”|  
 |DBTYPE_DBDATE|Smalldatetime|date|“确定”|“确定”|  
@@ -133,8 +133,8 @@ ms.locfileid: "48125488"
 |TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
+|LITERAL_SUFFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

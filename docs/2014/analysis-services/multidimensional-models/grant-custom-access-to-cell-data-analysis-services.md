@@ -20,12 +20,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105167"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510903"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授予单元数据的自定义访问权限 (Analysis Services)
   单元安全性用于允许或拒绝对多维数据集中度量值数据的访问。 下图显示了作为其角色仅允许访问特定度量值的用户进行连接时，数据透视表中允许和拒绝的度量值的组合。 此示例中， **分销商销售额** 和 **分销商总产品成本** 是通过此角色仅可访问的度量值。 所有其他度量值均被隐式拒绝（以下的下一节“允许访问特定度量值”中提供了用于获得此结果的步骤。）  
@@ -34,7 +34,7 @@ ms.locfileid: "48105167"
   
  单元权限适用于单元内的数据，而不适用于其元数据。 请注意单元如何在查询结果中仍然可见，其值显示为 `#N/A`，而非实际单元值。 `#N/A`单元中出现的值，除非客户端应用程序将转换的值，或者通过设置连接字符串中的 Secured Cell Value 属性指定另一个值。  
   
- 要完全隐藏单元，则必须对限制可查看的成员：维度、维度属性和维度属性成员。 有关详细信息，请参阅[授予对维度数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)。  
+ 若要完全隐藏单元格，则必须对限制成员维度、 维度属性和维度属性成员的可查看。 有关详细信息，请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)。  
   
  作为管理员，你可以指定角色成员是否具有对多维数据集内单元的读取、有条件读取或读/写权限。 授予对单元的权限是允许的最低级别的安全性，因此在开始应用此级别的权限之前，请谨记以下几点：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48105167"
 ## <a name="allow-access-to-specific-measures"></a>允许对特定度量值的访问  
  你可以使用单元安全性显式地选择哪些度量值可访问。 一旦专门标识了允许访问哪些成员，则所有其他度量值均变为不可访问。 这可能是通过 MDX 脚本实施的最简单的方案，如以下步骤所示。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，选择一个数据库，打开“角色”文件夹，然后单击一个数据库角色（或创建一个新数据库角色）。 应该已指定成员身份，且该角色应具有`Read`访问多维数据集。 如果需要此步骤的帮助信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，选择一个数据库，打开“角色”文件夹，然后单击一个数据库角色（或创建一个新数据库角色）。 应该已指定成员身份，且该角色应具有对多维数据集的`Read`权限。 有关详细信息，请参阅 [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md) 。  
   
 2.  在“单元数据” 中，检查多维数据集选择，确保选择正确，然后选择“启用读取权限” 。  
   
@@ -98,11 +98,11 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  对单元的“读/写”权限用于启用回写（假设成员具有对多维数据集本身的“读/写”权限）。 授予的单元级权限不能大于授予的多维数据集级权限。 有关详细信息，请参阅 [Set Partition Writeback](set-partition-writeback.md) 。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 生成器&#40;Analysis Services-多维数据&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
- [基本 MDX 脚本&#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [授予处理权限&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
- [授予维度的权限&#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
- [授予对维度数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [MDX 生成器（Analysis Services -多维数据）](../mdx-builder-analysis-services-multidimensional-data.md)   
+ [基本 MDX 脚本 (MDX)](mdx/the-basic-mdx-script-mdx.md)   
+ [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)   
+ [授予维度的权限 (Analysis Services)](grant-permissions-on-a-dimension-analysis-services.md)   
+ [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)  
   
   

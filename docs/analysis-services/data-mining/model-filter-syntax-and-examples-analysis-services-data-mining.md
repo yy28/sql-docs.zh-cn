@@ -1,5 +1,5 @@
 ---
-title: 模型筛选器语法和示例 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 模型筛选器语法和示例 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 467d3efbe979bf2ea58c700409913ef0767457ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018674"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393543"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "34018674"
  *avPredicate*  
  只能应用到标量挖掘结构列的筛选表达式。 *avPredicate* 表达式既可用于模型筛选器中，也可用于嵌套表筛选器中。  
   
- 使用以下任何运算符的表达式只能应用到连续列中。 设置用户帐户 ：  
+ 使用以下任何运算符的表达式只能应用到连续列中。 解码的字符：  
   
 -   **\<** （小于）  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34018674"
   
  如果 *avPredicate*参数应用到离散化列中，则筛选器中所用的值可以是特定的存储桶中的任何值。  
   
- 换句话说，你没有将条件定义为 `AgeDisc = ’25-35’`，而是计算并使用该区间的值。  
+ 换句话说，你没有将条件定义为 `AgeDisc = '25-35'`，而是计算并使用该区间的值。  
   
  例如，  `AgeDisc = 27`  表示与 27 位于同一区间的任何值，在本例中为 25-35。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "34018674"
 ## <a name="examples-of-filters"></a>筛选器示例  
  下面的示例演示应用到挖掘模型中的筛选器的用法。 如果使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在筛选器对话框的 **“属性”** 窗口和 **“表达式”** 窗格创建筛选表达式，您将只能看到显示在 WITH FILTER 关键字之后的字符串。 此处包括挖掘结构的定义，从而更易于理解列类型和用法。  
   
-###  <a name="bkmk_Ex1"></a> 示例 1：典型的事例级筛选  
+###  <a name="bkmk_Ex1"></a> 示例 1:典型的事例级筛选  
  以下示例显示一个简单的筛选器，它将模型中使用的事例限制为其职业为建筑师并且年龄在 30 岁以上的客户。  
   
 ```  
@@ -133,11 +133,11 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
   
-###  <a name="bkmk_Ex2"></a> 示例 2：使用嵌套表属性的事例级筛选  
+###  <a name="bkmk_Ex2"></a> 示例 2:使用嵌套表属性的事例级筛选  
  如果您的挖掘结构包含嵌套表，则您可以对嵌套表中某个值的存在性进行筛选，还可以对包含特定值的嵌套表行进行筛选。 下面的示例将模型所用的事例限制为年龄在 30 岁以上并且至少购买过一次包含牛奶在内的产品的客户。  
   
  如下面的示例所示，不要求筛选器仅使用模型中包含的列。 嵌套表 **产品** 是挖掘结构的一部分，但没有包含在挖掘模型内。 但是，您仍然可以对嵌套表中的值和属性进行筛选。 若要查看这些事例的详细信息，必须启用钻取功能。  
@@ -151,17 +151,17 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
   
-###  <a name="bkmk_Ex3"></a> 示例 3：对多个嵌套表属性的事例级筛选  
+###  <a name="bkmk_Ex3"></a> 示例 3:对多个嵌套的表属性的事例级筛选  
  下面的示例显示一个由三个条件构成的筛选器：第一个条件应用到事例表，第二个条件应用到嵌套表中的一个属性，第三个条件应用到嵌套表列中某一列的特定值。  
   
  筛选器中的第一个条件 `Age > 30`应用到事例表中的某一列。 其他条件都应用到嵌套表。  
   
- 第二个条件 `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`检查嵌套表中是否至少存在一次包含牛奶在内的产品购买活动。 第三个条件 `Quantity>=2`意味着客户在单次交易中至少购买了两单位的牛奶。  
+ 第二个条件 `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`检查嵌套表中是否至少存在一次包含牛奶在内的产品购买活动。 第三个条件 `Quantity>=2`意味着客户在单次交易中至少购买了两单位的牛奶。  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -176,12 +176,12 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
   
-###  <a name="bkmk_Ex4"></a> 示例 4：对嵌套表属性缺失的事例级筛选  
+###  <a name="bkmk_Ex4"></a> 示例 4:对嵌套的表属性缺失的事例级筛选  
  下面的示例显示如何通过对嵌套表中属性的缺失进行筛选将事例限制为没有购买过特定物品的客户。 在下面的示例中，使用年龄在 30 岁以上并且从未购买过牛奶的客户对模型进行定型。  
   
 ```  
@@ -196,11 +196,11 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
   
-###  <a name="bkmk_Ex5"></a> 示例 5：对多个嵌套表值进行筛选  
+###  <a name="bkmk_Ex5"></a> 示例 5:对多个嵌套的表值进行筛选  
  下面的示例的目的旨在显示嵌套表筛选。 嵌套表筛选器是在事例筛选器之后应用的，并且仅用于限制嵌套表行。  
   
  由于没有指定 EXISTS，因此该模型包含多个嵌套表为空的事例。  
@@ -216,13 +216,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
   
-###  <a name="bkmk_Ex6"></a> 示例 6：对嵌套表属性和 EXISTS 的筛选  
+###  <a name="bkmk_Ex6"></a> 示例 6:对嵌套的表属性和 EXISTS 的筛选  
  在下面的示例中，嵌套表上的筛选器将行限制为包含牛奶或瓶装水的行。 然后，使用 **EXISTS** 语句对模型中的事例进行限制。 这样即可保证嵌套表不为空。  
   
 ```  
@@ -236,13 +236,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
   
   
-###  <a name="bkmk_Ex7"></a> 示例 7：复杂的筛选器组合  
+###  <a name="bkmk_Ex7"></a> 示例 7:复杂的筛选器组合  
  此模型的应用场景类似于示例 4，但比示例 4 要复杂得多。 嵌套表 **ProductsOnSale**的筛选器条件 `(OnSale)` 意味着对于 **ProductName** 中列出的产品， **OnSale** 的值必须为 **true**。 此处 **OnSale** 是一个结构列。  
   
  **ProductsNotOnSale**的筛选器的第二部分具有相同的语法，但是它是针对其 **OnSale** 的值为 **not true**`(!OnSale)`的产品进行筛选的。  
@@ -284,7 +284,7 @@ FILTER (EXISTS (Products))
  `FILTER (EXISTS (ProductsOnSale) AND EXISTS(ProductsNotOnSale) AND Age > 25)`  
   
   
-###  <a name="bkmk_Ex8"></a> 示例 8：对日期进行筛选  
+###  <a name="bkmk_Ex8"></a> 示例 8:对日期进行筛选  
  您可以像对任何其他数据一样，按日期筛选输入列。 在日期/时间类型的列中包含的日期是连续值；因此，您可以通过使用大于号 (>) 或小于号 (<) 之类的运算符指定日期范围。 如果您的数据源不是按连续数据类型表示日期的，而是将日期表示为离散值或文本值，则不能对日期范围进行筛选，而必须指定单独的离散值。  
   
  但是，如果用于筛选器的日期列也是用于模型的键列，则不能对时序模型中的日期列创建筛选器。 其原因在于，在时序模型以及顺序分析和聚类分析模型中，日期列可作为 **KeyTime** 或 **KeySequence**类型处理。  
@@ -306,8 +306,8 @@ FILTER (EXISTS (Products))
  例如，如果要筛选呼叫中心结果以便只显示周末，则可以在数据源视图中创建一个表达式，该表达式提取每个日期的工作日名称，然后将该工作日名称值用作输入或者在筛选中用作离散值。 只需记住的是，重复值可能会影响模型，因此，您应该只使用某一列，而不是日期列加上派生值。  
   
   
-## <a name="see-also"></a>另请参阅  
- [为挖掘模型 & #40; 筛选器Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [测试和验证 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

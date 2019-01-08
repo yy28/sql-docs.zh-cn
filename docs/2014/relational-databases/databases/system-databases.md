@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07a40ea61c38792b9809f1bc0cf7a64e3077aa78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750809"
 ---
 # <a name="system-databases"></a>系统数据库
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含以下系统数据库。  
@@ -71,6 +70,6 @@ ms.locfileid: "48092497"
 ## <a name="related-content"></a>相关内容  
  [目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)  
   
- [数据库](databases.md)  
+ [“数据库”](databases.md)  
   
   

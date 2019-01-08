@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - loading data
@@ -15,12 +14,12 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b1c32cfebdfb1ca3237764d88eedfd70803652d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865ff640cb64fe212afa5ece8bbdaa7f0be4a14c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072732"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749501"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>通过使用 OLE DB 目标来加载数据
   若要添加和配置 OLE DB 目标，包中必须已包含至少一个数据流任务和一个源。  
@@ -43,7 +42,7 @@ ms.locfileid: "48072732"
   
     -   **“表或视图”** 在包含该数据的数据库中选择一个表或视图。  
   
-    -   **表或视图 - 快速加载** 选择数据库中包含该数据的表或视图，然后设置快速加载选项：“保留标识”、“保留空值”、“表锁”、“检查约束”、“每批行数”或“最大插入提交大小”。  
+    -   **表或视图-快速加载**选择表或视图中包含的数据的数据库，然后设置快速加载选项：**保留标识**，**保留空值**，**表锁**， **Check 约束**，**每批行数**，或**最大插入提交大小**。  
   
     -   **表名变量或视图名变量** 在数据库中选择包含表名称或视图名称的用户定义变量。  
   

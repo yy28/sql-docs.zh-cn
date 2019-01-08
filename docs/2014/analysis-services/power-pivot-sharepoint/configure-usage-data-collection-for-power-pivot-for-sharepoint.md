@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083813"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411274"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>配置使用情况数据收集 (PowerPivot for SharePoint)
   使用情况数据收集是场级 SharePoint 功能。 PowerPivot for SharePoint 使用并扩展此系统以便在 PowerPivot 管理面板中提供显示 PowerPivot 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 PowerPivot 管理面板中的使用情况数据。  
   
- 有关 PowerPivot 管理面板中的使用情况数据的信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)。  
+ 有关 PowerPivot 管理面板中使用情况数据的信息，请参阅 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
  **本主题内容：**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48083813"
     |**PowerPivot 连接**|PowerPivot 连接事件用于监视代表用户进行的 PowerPivot 服务器连接。|  
     |**PowerPivot 加载数据使用情况**|PowerPivot 加载数据使用情况用于监视将 PowerPivot 数据加载到服务器内存中的请求。 将为从内容数据库或从缓存加载的 PowerPivot 数据文件生成加载事件。|  
     |**PowerPivot 卸载数据使用情况**|PowerPivot 卸载数据使用情况用于监视在一段非活动期后卸载 PowerPivot 数据源的请求。 将 PowerPivot 数据源缓存到磁盘将报告为卸载事件。|  
-    |**PowerPivot 查询使用情况**|PowerPivot 查询使用情况用于监视的数据的查询处理时间，在其中加载[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]实例。|  
+    |**PowerPivot 查询使用情况**|PowerPivot 查询使用情况用于监视在 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例中加载的数据的查询处理时间。|  
   
     > [!NOTE]  
     >  服务器运行状况和数据刷新操作也生成使用情况数据，但没有与这些进程相关联的事件。  
@@ -87,9 +87,9 @@ ms.locfileid: "48083813"
 ##  <a name="jobs"></a> 配置使用情况数据收集中使用的计时器作业  
  PowerPivot 服务器运行状况和使用情况数据通过两个计时器作业移到使用情况数据收集系统中的不同位置。  
   
--   “Microsoft SharePoint Foundation 使用情况数据导入”计时器作业将 PowerPivot 使用情况数据移到 PowerPivot 服务应用程序数据库。  
+-   "Microsoft SharePoint Foundation 使用情况数据导入"计时器作业将 PowerPivot 使用情况移到 PowerPivot 服务应用程序数据库。  
   
--   “PowerPivot 管理面板处理计时器作业”将数据移到向内置管理报告提供数据的 PowerPivot 工作簿中。  
+-   "PowerPivot 管理面板处理计时器作业"将 PowerPivot 工作簿的内置管理报告的数据源的数据。  
   
  如果您需要更频繁地刷新出现在 PowerPivot 管理面板中的管理报告，则按照以下步骤执行。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48083813"
   
 6.  单击 **“立即运行”**。  
   
-7.  检查报告以查看刷新数据。 有关详细信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)。  
+7.  检查报告以查看刷新数据。 有关详细信息，请参阅 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
 ##  <a name="confighist"></a> 限制存储使用情况数据历史记录的时间长度  
  为事件（连接、加载、卸载和按需查询处理）和数据刷新（计划的数据处理）存储使用情况数据历史记录。 尽管使用情况数据是通过 SharePoint 使用情况数据收集系统收集的，但报告的数据将移到 PowerPivot 应用程序数据库和报表数据库以便更长期地存储。 使用情况数据历史设置控制使用情况数据在 PowerPivot 应用程序数据库中应保留多长的时间。 相同的限制同样适用于同一 PowerPivot 服务应用程序数据库中存储的所有类型的使用情况数据。  
@@ -187,7 +187,7 @@ ms.locfileid: "48083813"
 |**Usage data history**|365（以天为单位）|Integer|0 指定无限制，但您也可以设置使历史数据过期并将自动删除它的上限。 有限保留期的有效值为 1 到 5000（单位为天）。|  
 |一般响应上限|500（以毫秒为单位）|Integer|设置定义一般请求-响应交换的上限。 在 0 到 500 毫秒之间完成的任何请求都是一般请求，并且出于报告目的将被忽略。|  
 |快速响应上限|1000（以毫秒为单位）|Integer|设置定义快速请求-响应交换的上限。|  
-|预期响应上限|3000（以毫秒为单位）|Integer|设置定义预期请求-响应交换的上限。|  
+|“预期响应上限”|3000（以毫秒为单位）|Integer|设置定义预期请求-响应交换的上限。|  
 |长时间运行响应上限|10000（以毫秒为单位）|Integer|设置定义长时间运行的请求-响应交换的上限。 超出此上限的任何请求都属于“超出”类别，因此没有上限。|  
   
 ## <a name="see-also"></a>请参阅  

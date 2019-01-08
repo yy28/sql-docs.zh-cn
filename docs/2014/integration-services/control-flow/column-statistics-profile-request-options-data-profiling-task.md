@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16e1e0d68cf8f5253d03fc6a8d2f36daaafca08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 046e1c9d97cf7f508fa69e67bfe7369e7186e137
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768459"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>列统计信息配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选择的 **“列统计信息配置文件请求”** 设置选项。 列统计信息配置文件报告以下统计信息：数值列的最小值、最大值、平均值和标准偏差以及 `datetime` 列的最小值和最大值。 此配置文件可以帮助您识别数据中的问题，如无效日期。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。  
@@ -71,7 +70,7 @@ ms.locfileid: "48110117"
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
 ## <a name="see-also"></a>请参阅  
- [数据事件探查任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)   
+ [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   
   

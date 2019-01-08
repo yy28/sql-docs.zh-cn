@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - adding components
@@ -14,12 +13,12 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1a94a9d0dfddde667d2e52d3f612cda41e00a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38dd3903bdd5f6db52d949a6e3472845b89b5157
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761909"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在数据流中添加或删除组件
   数据流组件是数据流中的源、目标和转换。 包中的控制流必须包含数据流任务，然后才能向数据流添加组件。  
@@ -53,7 +52,7 @@ ms.locfileid: "48150278"
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [连接数据流中的数据的组件](data-flow.md)   
+ [连接数据流中的组件](data-flow.md)   
  [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)   
  [数据流](data-flow.md)  
   

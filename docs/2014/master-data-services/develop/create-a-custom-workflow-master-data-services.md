@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaa5a06916b0956a93fb1c473667bbb80b55bd15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750939"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>创建自定义工作流 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则创建基本工作流解决方案，如自动更新和验证数据，并根据指定的条件发送电子邮件通知。 当您需要的处理比内置工作流操作提供的处理更复杂时，请使用自定义工作流。 自定义工作流是您创建的 .NET 程序集。 在调用您的工作流程序集时，您的代码可以执行您的情况所需要的任何操作。 例如，如果您的工作流要求复杂的事件处理（如多层审批或复杂的决策树），您可以配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 来启动自定义工作流，以便分析数据和确定将其发送到何处以待审批。  
@@ -58,9 +58,9 @@ ms.locfileid: "48229897"
   
 2.  将引用添加到 Microsoft.MasterDataServices.WorkflowTypeExtender.dll。 此程序集位于 \<安装文件夹>\Master Data Services\WebApplication\bin。  
   
-3.  将“using Microsoft.MasterDataServices.Core.Workflow;”添加到您的 C# 代码文件。  
+3.  将“using Microsoft.MasterDataServices.Core.Workflow;”添加到 C# 代码文件。  
   
-4.  从类声明中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 继承。 该类声明应类似于：“public class WorkflowTester : IWorkflowTypeExtender”。  
+4.  从类声明中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 继承。 类声明应类似于: public class WorkflowTester:IWorkflowTypeExtender。  
   
 5.  实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口。 SQL Server MDS Workflow Integration Service 调用 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法来启动您的工作流。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48229897"
     </setting>  
     ```  
   
-3.  在“ConnectionString”设置下，添加“WorkflowTypeExtenders”设置以将标记名称与您的工作流处理程序程序集关联。 例如：  
+3.  在“ConnectionString”设置下，添加“WorkflowTypeExtenders”设置以将标记名称与工作流处理程序程序集关联。 例如：  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -90,7 +90,7 @@ ms.locfileid: "48229897"
      \<值> 标记的内部文本的格式为 \<工作流标记>=\<程序集限定工作流类型名称>。 \<工作流标记> 是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中创建业务规则时，用于定义工作流处理程序程序集的名称。 \<程序集限定工作流类型名称> 是工作流类的命名空间限定名称、后跟一个逗号，然后是程序集的显示名称。 如果您的程序集采用强名称，则还必须包括版本信息及其 PublicKeyToken。 如果已为不同类型的工作流创建了多个工作流处理程序，则可以包含多个 \<setting> 标记。  
   
 > [!NOTE]  
->  根据您的服务器的配置，在尝试保存 Microsoft.MasterDataServices.Workflow.exe.config 文件时，可能会显示一条“拒绝访问”错误。 如果发生这种情况，则暂时禁用服务器上的用户帐户控制 (UAC)。 为此，打开“控制面板”，单击“系统与安全”。 在“操作中心”下，单击“更改用户帐户控制设置”。 在“用户帐户控制设置”对话框中，将滑动条移动到底部以不再接收通知。 重新启动您的计算机，然后重复前面的步骤以编辑您的配置文件。 保存该文件之后，将您的 UAC 设置重置为默认级别。  
+>  根据服务器的配置，在尝试保存 Microsoft.MasterDataServices.Workflow.exe.config 文件时，可能会显示一条“拒绝访问”错误。 如果发生这种情况，则暂时禁用服务器上的用户帐户控制 (UAC)。 为此，打开“控制面板”，单击“系统与安全”。 在“操作中心”下，单击“更改用户帐户控制设置”。 在“用户帐户控制设置”对话框中，将滑动条移动到底部以不再接收通知。 重新启动您的计算机，然后重复前面的步骤以编辑您的配置文件。 保存该文件之后，将您的 UAC 设置重置为默认级别。  
   
 ### <a name="start-sql-server-mds-workflow-integration-service"></a>启动 SQL Server MDS Workflow Integration Service  
  默认情况下，不安装 SQL Server MDS Workflow Integration Service。 您必须先安装此服务，才能使用它。 为获得最大安全性，为该服务创建一个本地用户，并仅为该用户授予执行工作流操作所需的权限。 若要创建用户，请按照以下步骤安装此服务，然后启动该服务：  
@@ -114,11 +114,11 @@ ms.locfileid: "48229897"
 6.  通过使用“服务”管理单元来启动 SQL Server MDS Workflow Integration Service。 为此，在服务管理单元中找到 SQL Server MDS Workflow Integration Service，然后单击“开始”链接。  
   
 ### <a name="create-a-workflow-business-rule"></a>创建工作流业务规则  
- 在应用时，使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 来创建和发布将启动工作流的业务规则。 应确保业务规则包含更改属性值的操作，以便该规则应用一次后，其计算结果为 False。 例如，当 Price 属性值大于 500 且 Approved 属性值为空时，您的业务规则可能计算为 True。 该规则可能包含两个操作：一个操作是将 Approved 属性值设置为“挂起”，另一个操作是启动工作流。 或者，您可能要创建一个使用“已更改”条件的规则，并将您的属性添加到更改跟踪组。 有关业务规则的详细信息，请参阅[业务规则 &#40;Master Data Services&#41;](../business-rules-master-data-services.md)。  
+ 在应用时，使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 来创建和发布将启动工作流的业务规则。 应确保业务规则包含更改属性值的操作，以便该规则应用一次后，其计算结果为 False。 例如，当 Price 属性值大于 500 且 Approved 属性值为空时，您的业务规则可能计算为 True。 该规则可能包含两个操作：一个操作是将 Approved 属性值设置为“挂起”，另一个操作是启动工作流。 或者，建议创建一个使用“已更改”条件的规则，并将属性添加到更改跟踪组。 有关业务规则的详细信息，请参阅[业务规则 &#40;Master Data Services&#41;](../business-rules-master-data-services.md)。  
   
  按照以下步骤在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中创建用于启动自定义工作流的业务规则：  
   
-1.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的业务规则编辑器中，在指定业务规则条后，将“启动工作流”操作从“外部操作”列表拖动到“THEN”窗格的“操作”标签 。  
+1.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的业务规则编辑器中，指定了业务规则条后，将“启动工作流”操作从“外部操作”列表拖动到“THEN”窗格的“操作”标签。  
   
 2.  在“编辑操作”窗格中的“工作流类型”框中，键入标识工作流处理程序程序集的标记。 这是您在您的程序集的配置文件中指定的标记，例如 TEST。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48229897"
   
 1.  使用“服务”管理单元以停止服务。  
   
-2.  打开命令提示符，导航到此服务的位置，通过输入 Microsoft.MasterDataServices.Workflow.exe -console 在控制台中运行此服务。  
+2.  打开命令提示符，导航到服务的位置并在控制台模式下运行服务，通过输入：Microsoft.MasterDataServices.Workflow.exe-控制台。  
   
 3.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，更新您的成员，并再次应用业务规则。 控制台窗口中将显示详细日志。  
   

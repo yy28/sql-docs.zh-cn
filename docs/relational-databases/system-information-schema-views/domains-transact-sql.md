@@ -20,19 +20,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4cc9715d3b4fc6874b992201a1913838ff7f86cf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9e80fcce9d3ecd1e39131da807805691eb59721c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517625"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为当前数据库中可由当前用户访问的每个别名数据类型返回一行。  
   
- 若要从这些视图检索信息，请指定完全限定的名称 **INFORMATION_SCHEMA。 * * * view_name*。  
+ 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。**_view_name_。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

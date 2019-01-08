@@ -10,12 +10,12 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b9dbaf1a3cc15373097a1aea996c36f895d45172
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c64b1ea3ecc283cdea92a5722c7a1dad120ecb50
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395180"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>将 DB2 数据迁移到 SQL Server (DB2ToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以将数据从 DB2 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -84,10 +84,10 @@ ms.locfileid: "51670386"
   
     -   用于执行**服务器端数据迁移**，选择**服务器端数据迁移引擎**选项**项目设置**对话框。  
   
-4.  右键单击**架构**在 DB2 元数据资源管理器，然后单击**迁移数据**。 此外可以将迁移为单个对象或类别的对象的数据： 右键单击该对象或其父文件夹;选择**迁移数据**选项。  
+4.  右键单击**架构**在 DB2 元数据资源管理器，然后单击**迁移数据**。 此外可以将迁移为单个对象或类别的对象的数据：右键单击该对象或其父文件夹;选择**迁移数据**选项。  
   
     > [!NOTE]  
-    > SSMA for DB2 的扩展包，如果未安装的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，时遇到以下错误:SQL Server 上找不到 SSMA 数据迁移组件，无法在服务器端数据迁移。 请检查是否正确安装的扩展包。 单击**取消**终止数据迁移。  
+    > SSMA for DB2 的扩展包，如果未安装的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，时遇到以下错误：SQL Server 上找不到 SSMA 数据迁移组件，无法在服务器端数据迁移。 请检查是否正确安装的扩展包。 单击**取消**终止数据迁移。  
   
 5.  在中**连接到 DB2**对话框中，输入连接凭据，然后单击**Connect**。 连接到 DB2 的详细信息，请参阅[连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   

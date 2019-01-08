@@ -18,12 +18,12 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9f86f83637cbf71dd128dd262ad1621b2d58270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79fbbd504f7294835e92401a2210e6acac3c440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658639"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514025"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_server =** ] **'***table_server*****  
+ [  **@table_server =** ] **'**_table_server_  
  要返回信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
   
- [  **@table_name =** ] **'***table_name*****  
+ [  **@table_name =** ] **'**_table_name_  
  包含指定列的表的名称。 *table_name*是**sysname**，默认值为 NULL。  
   
- [  **@table_schema =** ] **'***table_schema*****  
+ [  **@table_schema =** ] **'**_table_schema_  
  表架构。 *table_schema*是**sysname**，默认值为 NULL。  
   
- [  **@table_catalog =** ] **'***table_catalog*****  
+ [  **@table_catalog =** ] **'**_table_catalog_  
  是在其中的数据库名称指定*table_name*驻留。 *table_catalog*是**sysname**，默认值为 NULL。  
   
- [  **@column_name =** ] **'***column_name*****  
+ [  **@column_name =** ] **'**_column_name_  
  为其提供特权信息的列的名称。 *column_name*是**sysname**，默认值为 NULL （均相同）。  
   
 ## <a name="result-sets"></a>结果集  
@@ -64,7 +64,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表限定符名称。 多种 DBMS 产品支持表的三部分命名 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表限定符名称。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**按 TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**COLUMN_NAME**|**sysname**|每个列的列名**TABLE_NAME**返回。 此字段始终返回值。|  
@@ -73,7 +73,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**特权**|**varchar(** 32 **)**|可用列权限中的一个。 列权限可以是下列值中的一个（或定义实现时数据源支持的其他值）：<br /><br /> 选择 =**被授权者**可以检索列的数据。<br /><br /> INSERT =**被授权者**可以插入新行时为此列提供数据 (由**被授权者**) 到表。<br /><br /> UPDATE =**被授权者**可以修改列中的现有数据。<br /><br /> 引用 =**被授权者**可以引用外部表中主键/外键关系中的列。 主键/外键关系是使用表约束定义的。|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|指示是否**被授权者**允许向其他用户 （通常称为"授予再授予"权限） 授予权限。 可以是 YES、NO 或 NULL。 未知值或 NULL 值表示不能使用“授予再授予”(grant with grant) 的数据源。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

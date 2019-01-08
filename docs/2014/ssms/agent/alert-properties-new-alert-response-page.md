@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.response.f1
@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906217"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773789"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警报属性-新建警报 （响应页）
   使用此页可以指定要运行的某项作业，并可获取为响应 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报而接收相关通知的操作员列表。  
@@ -51,7 +51,7 @@ ms.locfileid: "48906217"
  显示可用于创建新操作员的“新建操作员”对话框。  
   
  **查看操作员**  
- 显示当前所选操作员的“属性”对话框。 您可以查看和修改操作员属性上**操作员属性**对话框。  
+ 显示当前所选操作员的“属性”对话框。 可以在“操作员属性”对话框上查看和修改操作员属性。  
   
 ## <a name="see-also"></a>请参阅  
  [Alerts](alerts.md)   

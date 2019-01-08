@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662115"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391700"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 函数
 **符合性**  
- 版本引入了： ODBC 3.8  
+ 版本引入了：ODBC 3.8  
   
- 标准符合性： 无  
+ 标准符合性：None  
   
  应大多数 ODBC 3.8 （及更高版本） 驱动程序将实现此函数。 如果驱动程序不是，请调用**SQLCancelHandle**具有连接以处理*处理*参数将返回 SQL_ERROR SQLSTATE IM001 和消息驱动程序不支持此函数调用向**SQLCancelHandle**与语句一起处理作为*处理*参数将映射到调用**SQLCancel**由驱动程序管理器，并且如果可以处理该驱动程序实现**SQLCancel**。 应用程序可以使用**SQLGetFunctions**若要确定驱动程序是否支持**SQLCancelHandle**。  
   

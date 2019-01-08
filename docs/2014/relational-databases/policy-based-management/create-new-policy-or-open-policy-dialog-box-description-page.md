@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a8b84210372484ba8128c188b9f741063083d6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100987"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747711"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>“创建新策略”或“打开策略”对话框，“说明”页
   此对话框用于为基于策略的管理策略添加说明和补充信息。  
@@ -24,16 +24,16 @@ ms.locfileid: "48100987"
  **类别**  
  用于在创建新策略时选择策略类别。  
   
- **Description**  
+ **说明**  
  键入策略说明。  
   
- **更多帮助超链接: 要显示的文本**  
+ **更多帮助超链接：要显示的文本**  
  在执行策略时，将在“结果详细视图”页中显示更多帮助超链接。 键入要显示为超链接的文本。  
   
- **更多帮助超链接: 地址**  
+ **更多帮助超链接：地址**  
  键入在用户单击“结果详细视图”页中显示的超链接文本时打开的网页的超链接。  
   
- **更多帮助超链接: 测试链接**  
+ **更多帮助超链接：测试链接**  
  单击可打开超链接以测试链接的有效性。  
   
  **创建日期**  

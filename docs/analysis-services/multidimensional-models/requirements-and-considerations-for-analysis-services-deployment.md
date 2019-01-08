@@ -1,5 +1,5 @@
 ---
-title: 要求和注意事项 Analysis Services 部署 |Microsoft 文档
+title: 要求和注意事项 Analysis Services 部署 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8fc21b64be49a74359dcde41e10be5524bc1d9ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 991fdab41b7e14e88e621927371d7cc2da3ed3c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530419"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的要求和注意事项
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   解决方案的性能和可用性取决于许多因素，包括基础硬件的性能、服务器部署的拓扑结构、您的解决方案特性（例如，具有跨多个服务器分布的分区或者使用要求对关系引擎的直接访问权限的 ROLAP 存储区）、服务级别协议和您的数据模型的复杂程度。  
   
 ## <a name="memory-and-processor-requirements"></a>内存和处理器要求  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]需要在以下情况下的更多内存和处理器资源：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在以下情况下需要更多的内存和处理器资源：  
   
 -   处理大型或复杂多维数据集时。 与小型或简单的多维数据集相比，它们需要更多的内存和处理器资源。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34026524"
  与有小事实数据表的多维数据集相比，有大型事实数据表的多维数据集需要更多的磁盘空间。 同样，尽管是在更小的程度内，与有较少维度成员的多维数据集相比，有很多大型维度的多维数据集需要更多的磁盘空间。 通常，可以预计 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库所需的空间量是存储在基础关系数据库中的相同数据所需空间量的大约 20%。  
   
  Aggregations  
- 聚合需要与所增加的聚合成比例的额外空间，即聚合越多，需要的空间越多。 如果避免创建不必要的聚合，则聚合所需要的额外磁盘空间通常不应超过存储在基础关系数据库中的数据大小的大约 10%。  
+ 聚合需要额外添加的聚合成比例的空间有多个聚合，则需要更多空间。 如果避免创建不必要的聚合，则聚合所需要的额外磁盘空间通常不应超过存储在基础关系数据库中的数据大小的大约 10%。  
   
  数据挖掘  
  默认情况下，挖掘结构将把用它们定型的数据集缓存到磁盘。 若要从磁盘删除此缓存数据，可以对挖掘结构对象使用 **“处理清除结构”** 处理选项。 有关详细信息，请参阅[处理要求和注意事项（数据挖掘）](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "34026524"
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>一旦硬件或软件发生故障时提供可用性  
  硬件或软件可能由于各种原因而发生故障。 但是，维护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装的可用性不仅涉及排除这些故障源，而且涉及提供替代资源，以使用户能够在发生故障时继续使用系统。 通常，使用群集和负载平衡服务器来提供当硬件或软件故障发生时维护可用性所需的替代资源。  
   
- 若要在发生硬件或软件故障时提供可用性，请考虑将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署到故障转移群集中。 在故障转移群集中，如果主节点由于任何原因发生故障或必须重新启动，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 群集将故障转移到辅助节点。 发生故障转移的速度非常快，在此之后，当用户运行查询时，他们将访问运行在辅助节点上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 有关故障转移群集的详细信息，请参阅 [Windows Server 技术：故障转移群集](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)。  
+ 若要在发生硬件或软件故障时提供可用性，请考虑将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署到故障转移群集中。 在故障转移群集中，如果主节点由于任何原因发生故障或必须重新启动，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 群集将故障转移到辅助节点。 发生故障转移的速度非常快，在此之后，当用户运行查询时，他们将访问运行在辅助节点上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 有关故障转移群集的详细信息，请参阅[Windows Server 技术：故障转移群集](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)。  
   
  可用性问题的另一个解决方案是将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到两个或更多个生产服务器上。 然后，可以使用 Windows 服务器的网络负载平衡 (NLB) 功能，将生产服务器组合成单个群集。 在 NLB 群集中，如果群集中的服务器由于硬件或软件问题而不可用，NLB 服务会将用户查询引向那些仍然可用的服务器。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34026524"
   
 -   如果一个或多个关系数据库为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库提供数据，则可以将这些数据库移动到单独的计算机上。 在移动数据库之前，请考虑在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库和它的基础数据库之间实际的网络速度和带宽。 如果网络缓慢或堵塞，那么，将基础数据库移到单独的计算机上将会影响处理性能。  
   
--   如果处理会影响查询性能，但在多次减少查询负载后也无法进行处理，请考虑将处理任务移动到临时服务器上，然后对生产服务器和临时服务器执行联机同步。 有关详细信息，请参阅 [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)。 还可以使用远程分区将处理分散到多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中。 处理远程分区时，将使用远程服务器上的处理器和内存资源，而不是本地计算机上的资源。 有关远程分区管理的信息，请参阅[创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)。  
+-   如果处理会影响查询性能，但不能减少的查询负载的时段内处理，请考虑将处理任务移动到暂存服务器，然后再执行联机同步生产服务器和临时服务器。 有关详细信息，请参阅 [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)。 还可以使用远程分区将处理分散到多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中。 处理远程分区时，将使用远程服务器上的处理器和内存资源，而不是本地计算机上的资源。 有关远程分区管理的信息，请参阅[创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)。  
   
 -   如果查询性能不足，但无法增加本地服务器的处理器和内存资源，请考虑将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到两个或更多个生产服务器上。 然后，可以使用网络负载平衡 (NLB) 将服务器组合成单个群集。 在 NLB 群集中，查询将自动分散在 NLB 群集中的所有服务器上。  
   

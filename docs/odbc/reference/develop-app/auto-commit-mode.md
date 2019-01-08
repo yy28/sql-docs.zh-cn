@@ -18,12 +18,12 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87a5bababd2129ffb7e0aad36a2ceb3362d4acd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 491fb8db9e37cfb3bfa07881958fe7828e6bb911
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514589"
 ---
 # <a name="auto-commit-mode"></a>自动提交模式
 *在自动提交模式下，* 每个数据库操作是在执行时已提交的事务。 此模式适合用于包含单个 SQL 语句的许多实际的事务。 不需要分隔，或者指定的这些事务完成。 在数据库中不支持事务的情况下，自动提交模式是唯一支持的模式。 在此类数据库语句仅在提交后可以执行它们并没有方法回滚它们;它们因此始终处于自动提交模式。  

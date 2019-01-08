@@ -1,5 +1,5 @@
 ---
-title: 或者 (MDX) |Microsoft 文档
+title: 或者 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 668e8f1955290c31ee63ca5b81fc5e9c286d54c4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418390"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -36,10 +36,10 @@ Expression1 OR Expression2
  返回数值的有效 MDX 表达式。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个布尔值**true**如果其中一种或两个自变量的计算结果为**true**; 否则为**false**。  
+ 一个布尔值，返回 **，则返回 true**如果一个或两个参数的计算结果为**true**; 否则为**false**。  
   
-## <a name="remarks"></a>Remarks  
- **或者**运算符将两个参数视为布尔值 (0，0，作为**false**; 否则为**true**) 运算符执行逻辑或运算之前。 下表说明了如何**或**运算符执行逻辑或运算。  
+## <a name="remarks"></a>备注  
+ **或者**运算符将这两个参数视为布尔值 (0 被作为**false**; 否则为**true**) 运算符执行逻辑或运算之前。 下表说明了如何**或**运算符执行逻辑或运算。  
   
 |*Expression1*|*Expression2*|返回值|  
 |-------------------|-------------------|------------------|  
@@ -49,7 +49,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>示例  
- 下面的查询包含一个计算度量值，该度量值在 Customer 维度的 Gender 层次结构上的当前对象为 Male 时或者在 Customer 维度的 Marital Status 层次结构上的当前对象为 Married 时返回字符串“MARRIED OR MALE”，否则，它将返回字符串“UNMARRIED OR FEMALE”。  
+ 下面的查询包含返回的字符串"MARRIED OR MALE"如果客户维度的 Gender 层次结构上的当前成员为 Male 时或者在客户维度的 Marital Status 层次上的当前成员已婚; 一个计算度量值否则它将返回字符串"UNMARRIED 或 FEMALE"。  
   
 ```  
 WITH  

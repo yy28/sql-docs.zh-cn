@@ -16,12 +16,12 @@ ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b79e568f6dd8a3f0aac8e6f226f2b1719a41ff5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148242"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417748"
 ---
 # <a name="using-cell-properties-mdx"></a>使用单元属性 (MDX)
   多维表达式 (MDX) 中的单元属性包含有关多维数据源（如多维数据集）中的单元的内容和格式的信息。  
@@ -48,7 +48,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>支持的内部单元属性  
  下表列出了 `<property>` 值中使用的、支持的内部单元属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |`ACTION_TYPE`|指示单元中存在何种操作的位掩码。 此属性可以具有下列值之一：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：对于在 where 子句中包含集的查询来说，不包含钻取操作。|  
 |**BACK_COLOR**|用于显示 `VALUE` 或 `FORMATTED_VALUE` 属性的背景色。 有关详细信息，请参阅 [FORE_COLOR 和 BACK_COLOR 内容 (MDX)](mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
@@ -95,7 +95,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

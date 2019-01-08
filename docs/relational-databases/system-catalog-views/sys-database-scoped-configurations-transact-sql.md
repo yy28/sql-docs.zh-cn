@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 350f3af1bfd6e2765f74d074727577541378d2e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733828"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947651"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47733828"
 |**名称**|**nvarchar(60)**|配置选项的名称。 有关可能的配置信息，请参阅[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|  
 |**value**|**sqlvariant**|对于主副本此配置选项设置的值。|  
 |**value_for_secondary**|**sqlvariant**|设置次要副本的此配置选项的值。|  
-|**elevate_online**|**nvarchar(60)** |数据库范围的联机索引操作的选项的默认集 |
+|**is_value_default**|**bit** |指定设置的值是否为默认值。|
 |**elevate_resumable**|nvarchar(60)|数据库范围的可恢复索引操作的选项的默认集| 
   
 ##  <a name="Permissions"></a> Permissions  

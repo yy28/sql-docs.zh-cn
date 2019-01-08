@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148142"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420648"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 上配置对 Analysis Services 的 HTTP 访问
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,12 +91,12 @@ ms.locfileid: "50148142"
 > [!NOTE]  
 >  请记住，为了允许与远程 Analysis Services 服务器的客户端连接，需取消阻止 Windows 防火墙中的端口。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a> 第 1 步：将 MSMDPUMP 文件复制到 Web 服务器上的某个文件夹  
+##  <a name="bkmk_copy"></a> 步骤 1:将 MSMDPUMP 文件复制到 Web 服务器上的某个文件夹  
  所创建的每个 HTTP 端点均必须有其自身的一组 MSMDPUMP 文件。 在此步骤中，从 Analysis Services 程序文件夹中将 MSMDPUMP 可执行文件、配置文件和资源文件复制到新的虚拟目录文件夹，你将在运行 IIS 的计算机的文件系统上创建此虚拟目录文件夹。  
   
  必须为 NTFS 文件系统格式化该驱动器。 指向您创建的文件夹的路径不得包含任何空格。  
   
-1.  复制以下文件，请参阅\<驱动器 >: SQL Server \Program Files\Microsoft\\< 实例\>\OLAP\bin\isapi: MSMDPUMP。DLL，MSMDPUMP。INI 和 Resources 文件夹。  
+1.  复制以下文件，请参阅\<驱动器 >: SQL Server \Program Files\Microsoft\\< 实例\>\OLAP\bin\isapi:MSMDPUMP.DLL、MSMDPUMP.INI 和 Resources 文件夹。  
   
      ![MSMDPUMP 文件的文件夹结构](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "MSMDPUMP 文件的文件夹结构")  
   
@@ -112,7 +112,7 @@ ms.locfileid: "50148142"
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> 第 2 步：在 IIS 中创建应用程序池和虚拟目录  
+##  <a name="bkmk_appPool"></a> 步骤 2:在 IIS 中创建应用程序池和虚拟目录  
  接下来，创建应用程序池和抽取端点。  
   
 #### <a name="create-an-application-pool"></a>创建应用程序池  
@@ -148,7 +148,7 @@ ms.locfileid: "50148142"
 > [!NOTE]  
 >  这些说明的先前版本包括用于创建虚拟目录的步骤。 这些步骤已不需要。  
   
-##  <a name="bkmk_auth"></a> 第 3 步：配置 IIS 身份验证和添加扩展  
+##  <a name="bkmk_auth"></a> 步骤 3:配置 IIS 身份验证和添加扩展插件  
  在这一步中，进一步配置刚刚创建的 SSAS 虚拟目录。 您将指定一个身份验证方法，然后添加脚本映射。 Analysis Services 在 HTTP 上支持的身份验证方法包括：  
   
 -   Windows 身份验证（Kerberos 或 NTLM）  
@@ -165,9 +165,9 @@ ms.locfileid: "50148142"
   
  初始测试期间经常使用**匿名身份验证** ，因为其易于配置，有助于快速验证与 Analysis Services 的 HTTP 连接。 只需几步，即可分配唯一用户帐户作为标识，向该帐户授予 Analysis Services 中的权限，使用该帐户验证客户端应用程序中的数据访问，然后在测试完毕后禁用匿名身份验证。  
   
- 如果用户没有 Windows 用户帐户，也可在生产环境中使用匿名身份验证，但要遵守在主机系统上锁定权限的最佳做法，如本文中所注： [启用匿名身份验证 (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 务必对虚拟目录（而不要对父级网站）设置身份验证以进一步降低帐户访问权限的级别。  
+ 如果用户没有 Windows 用户帐户，也可在生产环境中使用匿名身份验证，但要遵守在主机系统上锁定权限的最佳做法，如本文中所注：[启用匿名身份验证 (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 务必对虚拟目录（而不要对父级网站）设置身份验证以进一步降低帐户访问权限的级别。  
   
- 启用匿名后，将允许任何连接到该 HTTP 端点的用户以匿名用户的身份进行连接。 您将无法审核单个用户连接，也无法根据用户标识从模型中选择数据。 如您所见，使用匿名会影响从模型设计到数据刷新和访问权限的所有情况。 但是，如果用户没有 Windows 用户登录名可用，则也许只能使用匿名帐户。  
+ 启用匿名后，将允许任何连接到该 HTTP 端点的用户以匿名用户的身份进行连接。 你将无法审核单个用户连接，也不使用用户标识来从模型中选择数据。 如您所见，使用匿名会影响从模型设计到数据刷新和访问权限的所有情况。 但是，如果用户没有 Windows 用户登录名可用，则也许只能使用匿名帐户。  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>设置身份验证类型并添加脚本映射  
   
@@ -188,7 +188,7 @@ ms.locfileid: "50148142"
   
 5.  如果使用的是 Windows 或基本身份验证，则禁用 **“匿名身份验证”** 。 启用匿名身份验证后，IIS 将始终首先使用该方法，即使启用了其他身份验证方法也是如此。  
   
-     在匿名身份验证下，抽取操作 (msmdpump.dll) 以您为匿名用户建立的用户帐户身份运行。 连接到 IIS 的用户与连接到 Analysis Services 的用户之间没有区别。 默认情况下，IIS 使用 IUSR 帐户，但可将其改为某个具有网络权限的域用户帐户。 如果 IIS 和 Analysis Services 在不同的计算机上，则需要用到此功能。  
+     在匿名身份验证下，抽取操作 (msmdpump.dll) 以您为匿名用户建立的用户帐户身份运行。 连接到 IIS 的用户与连接到 Analysis Services 的用户之间没有区别。 默认情况下，IIS 使用 IUSR 帐户，但可将其改为某个具有网络权限的域用户帐户。 如果 IIS 和 Analysis Services 位于不同计算机上，你将需要此功能。  
   
      有关如何为匿名身份验证配置凭据的说明，请参阅 [匿名身份验证](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "50148142"
   
      ![添加 ISAPI 扩展插件的确认的屏幕截图](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "添加 ISAPI 扩展插件的确认的屏幕截图")  
   
-##  <a name="bkmk_edit"></a> 第 4 步：编辑 MSMDPUMP.INI 文件以设置目标服务器  
+##  <a name="bkmk_edit"></a> 步骤 4:编辑 MSMDPUMP.INI 文件以便设置目标服务器  
  MSMDPUMP.INI 文件指定 MSMDPUMP.DLL 所连接的 Analysis Services 实例。 此实例可以是本地或远程实例，并可作为默认实例或命名实例安装。  
   
  打开位于 C:\inetpub\wwwroot\OLAP 文件夹中的 msmdpump.ini 文件，查看该文件的内容。 该文件应该如下所示：  
@@ -227,7 +227,7 @@ ms.locfileid: "50148142"
   
  如果你的命名实例或默认配置为侦听固定端口上的 Analysis Services 实例，必须将端口号添加到的服务器名称 (例如，\<服务器名 > AW-01: 55555<\</ServerName >)，您必须允许入站在 Windows 防火墙中与该端口的连接。  
   
-## <a name="step-5-grant-data-access-permissions"></a>第 5 步：授予数据访问权限  
+## <a name="step-5-grant-data-access-permissions"></a>步骤 5：授予数据访问权限  
  如上所述，你需要向 Analysis Services 实例授权。 每个数据库对象都将具有提供给定级别权限（读或读/写）的角色，而每个角色都将具有由 Windows 用户标识组成的成员。  
   
  若要设置权限，可使用 SQL Server Management Studio。 在“**数据库**” | “**角色**”文件夹下，可创建角色、指定数据库权限、向 Windows 用户或组帐户分配成员身份，然后授予对特定对象的读或写权限。 通常，使用但不更新模型数据的客户端连接只需对多维数据集的 **“读取”** 权限即可。  
@@ -242,7 +242,7 @@ ms.locfileid: "50148142"
   
  有关设置权限的详细信息，请参阅 [授予对对象和操作的访问权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
   
-##  <a name="bkmk_test"></a> 第 6 步：测试您的配置  
+##  <a name="bkmk_test"></a> 步骤 6:测试您的配置  
  针对 MSMDPUMP 的连接字符串语法是指向 MSMDPUMP.dll 文件的 URL。  
   
  如果 web 应用程序正在侦听固定端口，将端口号追加到的服务器名称或 IP 地址 (例如，`http://my-web-srv01:8080/OLAP/msmdpump.dll`或`http://123.456.789.012:8080/OLAP/msmdpump.dll`。  
@@ -251,7 +251,7 @@ ms.locfileid: "50148142"
   
  **对使用 Internet Explorer 连接进行故障排除**  
   
- 此错误终止的连接请求可能无法让您继续:"的连接，或者不能对\<服务器名称 >，或者不在服务器上运行 Analysis Service"。  
+ 此错误终止的连接请求可能无法让您继续："的连接，或者不能对\<服务器名称 >，或者不在服务器上运行 Analysis Service"。  
   
  若要获取更详细的错误，请执行以下操作：  
   
@@ -293,7 +293,7 @@ ms.locfileid: "50148142"
   
  作为最后一步，务必通过使用在将从其发起连接的网络环境中运行的客户端计算机，继续进行更严格的测试。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [论坛帖子（使用 msmdpump 和基本身份验证进行 http 访问）](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [授予对对象和操作的访问权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   

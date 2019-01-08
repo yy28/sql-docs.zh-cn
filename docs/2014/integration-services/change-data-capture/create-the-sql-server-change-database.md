@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraIns
@@ -13,12 +12,12 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6381c494f1f5ecc95eb2e06d34959e43a9133726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770969"
 ---
 # <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
   当您启动新建实例向导时，“创建 CDC 数据库”页将打开。 使用“创建 CDC 数据库”页可提供与新的 CDC 实例有关的信息并且创建新的更改数据库。  
@@ -38,14 +37,14 @@ ms.locfileid: "48139609"
   
 -   **名称**：键入新服务的名称。 该名称将是新的更改数据库的名称。  
   
--   **说明**：为新实例键入用于帮助标识它的说明。 此为可选项。  
+-   **说明**:键入新的实例，以帮助你识别它的说明。 此为可选项。  
   
  **SQL Server 更改数据库**  
  此部分用于创建数据库。  
   
-1.  **更改数据库**：新的更改数据库的名称。 该数据库的名称就是您向实例提供的名称。 此只读字段显示数据库的完整路径。  
+1.  **更改数据库**:新的更改数据库的名称。 该数据库的名称就是您向实例提供的名称。 此只读字段显示数据库的完整路径。  
   
-2.  **创建数据库**：单击 **“创建数据库”** 可创建数据库。  
+2.  **创建数据库**:单击**Create Database**创建数据库。  
   
      若要创建数据库，该登录名必须具有 `sysasmin` 服务器角色。 有关详细信息，请参阅上面的安全说明。  
   

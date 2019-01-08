@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af8f20f14ed02a351101580566ab7b6393c24c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01542ee3219a7fda68330d19b88161de25f14329
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059737"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783889"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL ServerPowerShell 路径
   在您导航到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供程序路径中的某一节点后，可通过使用与该节点相关联的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 管理对象中的方法和属性，执行工作或检索信息。  
   
 1.  [开始之前](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **若要运行路径节点：**[列出方法和属性](#ListPropMeth)，[使用方法和属性](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在导航到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供程序路径中的节点之后，可以执行两种类型的操作：  
@@ -44,7 +43,7 @@ ms.locfileid: "48059737"
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
-$MyDBVar | Get-Member –Type Methods  
+$MyDBVar | Get-Member -Type Methods  
 $MyDBVar | Get-Member -Type Properties  
 ```  
   
@@ -97,7 +96,7 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [导航 SQL ServerPowerShell 路径](navigate-sql-server-powershell-paths.md)   
  [将 URN 转换为 SQL Server 提供程序路径](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

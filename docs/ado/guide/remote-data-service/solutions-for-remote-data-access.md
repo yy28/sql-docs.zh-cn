@@ -13,12 +13,12 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535801"
 ---
 # <a name="solutions-for-remote-data-access"></a>远程数据访问的解决方案
 ## <a name="the-issue"></a>此问题  
@@ -34,14 +34,14 @@ ms.locfileid: "51558614"
  在此示例中，你的应用程序永远不会直接连接到数据源;IIS 未。 和 IIS 通过 ADO 来访问这些数据。  
   
 > [!NOTE]
->  客户端/服务器应用程序不需要 Internet 或 intranet 上基于 (即，基于 Web 的)，它可能仅包含本地网络上的已编译程序。 但是，典型的情况是基于 Web 的应用程序。  
+>  不需要 Internet 或 intranet 上基于客户端/服务器应用程序 (即，基于 Web 的)-它可能仅包含本地网络上的已编译程序。 但是，典型的情况是基于 Web 的应用程序。  
   
  某些可视控件，如网格、 复选框或列表中，可能会使用返回的信息，因此必须按可视控件易于使用返回的信息。  
   
  您希望的简单和高效的应用程序编程界面支持三层系统，并返回信息作为轻松像它已被检索到的两层系统上。 远程数据服务 (RDS) 是此接口。  
   
 ## <a name="the-solution"></a>解决方案  
- RDS 定义了一个编程模型 — 的访问和更新数据源所需的活动序列，以获取通过中介，例如 Internet 信息服务 (IIS) 对数据的访问权限。 编程模型中囊括了整个 rds.的功能  
+ RDS 定义编程模型的访问和更新数据源-若要获取对通过中介，例如 Internet 信息服务 (IIS) 的数据访问所需的活动序列。 编程模型中囊括了整个 rds.的功能  
   
 ## <a name="see-also"></a>请参阅  
  [基本 RDS 编程模型](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

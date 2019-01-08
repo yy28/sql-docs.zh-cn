@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
@@ -16,12 +14,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce2054924f26ab5b8d94814c3ad716b00f425064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 499edc588b4253b3ae37c2be0bcde1cbbd79dea6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777819"
 ---
 # <a name="developer39s-guide-replication"></a>开发人员&#39;指南 （复制）
   如果能够以编程方式配置、维护和监视复制拓扑，则不仅可以简化重复性的复制任务，而且还可以改善基于复制的应用程序的用户体验。 通过复制编程，最终用户可以获得自定义的复制功能，既无须熟悉复制存储过程和复制代理可执行文件，也无须使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 实现的复制用户界面。  
@@ -57,7 +55,7 @@ ms.locfileid: "48212517"
  [复制代理可执行文件概念](replication-agent-executables-concepts.md)  
  介绍如何使用复制代理可执行文件。  
   
- [开发人员指南：操作指南主题（复制）](../developer-s-guide-how-to-topics-replication.md)  
+ [开发人员指南：操作指南主题&#40;复制&#41;](../developer-s-guide-how-to-topics-replication.md)  
  提供与复制相关的操作指南主题的列表。  
   
   

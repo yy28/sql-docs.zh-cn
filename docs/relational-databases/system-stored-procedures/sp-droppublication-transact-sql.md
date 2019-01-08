@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_droppublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66bb9fbb43647b6566ef641f63b047b84e37c1bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31958069ae54e1b94291cfb220f669f25100afe3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669465"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759869"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_droppublication [ @publication= ] 'publication'
  [ **@publication=** ] **'***发布*****  
  要删除的发布的名称。 *发布*是**sysname**，无默认值。 如果**所有**指定，则将从发布数据库，除了那些具有订阅中删除所有发布。  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
+ [ **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -56,7 +55,7 @@ sp_droppublication [ @publication= ] 'publication'
   
  执行**sp_droppublication**将删除发布不会删除已发布的对象从发布数据库或订阅数据库中的相应对象。 使用 DROP\<对象 > 手动删除这些对象，如有必要。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_droppublication**。  
   
 ## <a name="examples"></a>示例  

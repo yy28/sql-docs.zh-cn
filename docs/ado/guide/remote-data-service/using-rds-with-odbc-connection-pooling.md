@@ -13,12 +13,12 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506354"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>使用 RDS 与 ODBC 连接池
 如果使用 ODBC 数据源，可以使用连接池选项在 Internet 信息服务 (IIS) 以实现高性能的客户端负载的处理。 连接池是资源管理器的连接，维护经常使用的连接的打开状态。  
@@ -49,7 +49,7 @@ ms.locfileid: "51559594"
   
 2.  两次单击继续。  
   
-3.  Microsoft SQL Server 中，选项对话框中，选择更改网络支持，然后单击继续。  
+3.  Microsoft SQL Server 中的选项对话框，选择更改网络支持，然后单击继续。  
   
 4.  请确保选择 TCP/IP 套接字复选框，然后单击确定。  
   

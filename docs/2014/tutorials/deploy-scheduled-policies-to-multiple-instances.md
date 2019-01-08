@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128267"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518625"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>将计划的策略部署到多个实例
   通过使用已注册的服务器，可以从一个集中位置将计划的策略部署到多个托管服务器。 您可以从本地服务器组或中央管理服务器部署计划的策略。  
@@ -29,14 +29,14 @@ ms.locfileid: "48128267"
   
  您将在完成本课程先前任务的计算机上执行这些任务。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  此任务具有以下必备条件：  
   
 -   您必须完成了本课程中的先前任务。  
   
 -   您要在其中部署计划策略的实例必须运行于 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 或更高版本上。 自动过程要求在本地存储策略，但早于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版本不支持此功能。  
   
--   你想要部署计划的策略的服务器必须在已注册的服务器中注册中任意一种**本地服务器组**或**中央管理服务器**节点。 有关详细信息，请参阅以下主题：  
+-   你想要部署计划的策略的服务器必须在已注册的服务器中注册中任意一种**本地服务器组**或**中央管理服务器**节点。 有关详细信息，请参阅下列主题：  
   
     -   [创建或编辑服务器组 (SQL Server Management Studio)](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48128267"
  本教程介绍了如何针对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例执行最佳实践策略的按需和计划评估。  
   
 ## <a name="next"></a>Next  
- 现已学完了本教程。 若要返回到开始位置，请参阅[教程： 评估基于策略的管理的最佳实践](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)。  
+ 现已学完了本教程。 若要返回到开始位置，请参阅[教程：使用基于策略的管理来评估最佳实践](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)。  
   
  若要查看一系列[!INCLUDE[ssDE](../includes/ssde-md.md)]教程中，单击[数据库引擎教程](../relational-databases/database-engine-tutorials.md)。  
   

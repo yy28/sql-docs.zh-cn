@@ -18,12 +18,12 @@ ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d999de2caaf75334271ca3c4886c4424d6151f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37426d47f2385e02b5469e9c2572aef12a0f6963
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681155"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510511"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ] **' * * * 登录名*   
- 是 Windows 用户或组的名称。 *登录名*是**sysname**，无默认值。  
+ [  **@loginame =** ] **'**_登录_   
+ 是 Windows 用户或组的名称。 *登录名* 是 **sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -54,7 +54,7 @@ sp_denylogin [ @loginame = ] 'login'
   
  **sp_denylogin**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

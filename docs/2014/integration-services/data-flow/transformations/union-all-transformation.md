@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67c20bbe5841f7db1a0260550643279ae16a05f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 127af76434b3c2d32b9bfd5d7ba69b80b69a4b84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070567"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754859"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
   Union All 转换将多个输入组合到一个输出中。 例如，可将来自五个不同平面文件源的输出输入到 Union All 转换并将其组合到一个输出中。  
@@ -40,7 +39,7 @@ ms.locfileid: "48070567"
  此转换具有多个输入和一个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-union-all-transformation"></a>Union All 转换的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“Union All 转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Union All Transformation Editor](../../union-all-transformation-editor.md)。  
   
@@ -51,6 +50,6 @@ ms.locfileid: "48070567"
 -   [设置数据流组件的属性](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [使用 Union All 转换来合并数据](union-all-transformation.md)  
+ [通过使用 Union All 转换来合并数据](union-all-transformation.md)  
   
   

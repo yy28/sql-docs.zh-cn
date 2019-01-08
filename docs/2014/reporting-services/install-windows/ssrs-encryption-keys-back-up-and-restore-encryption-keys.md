@@ -16,12 +16,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85bf679fe5ab9f9224a4d8b09aa8fa64643ce80b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054310"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530365"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>备份和还原 Reporting Services 加密密钥
   报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。  
@@ -47,7 +47,7 @@ ms.locfileid: "48054310"
 ## <a name="backing-up-the-encryption-keys"></a>备份加密密钥  
  备份对称密钥是将密钥写入所指定的文件，然后使用所提供的密码对密钥进行加密的过程。 对称密钥绝对不能在未加密状态下存储，所以在将它保存到磁盘时，必须提供密码对密钥进行加密。 创建文件后，必须将其存储在安全的位置， **并记住文件的解锁密码** 。 若要备份对称密钥，可以使用以下工具：  
   
- **本机模式：** Reporting Services 配置管理器或 **rskeymgmt** 实用工具。  
+ **本机模式：** 任一 Reporting Services 配置管理器或**rskeymgmt**实用程序。  
   
  **SharePoint 模式：** SharePoint 管理中心页或 PowerShell。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48054310"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a> 备份加密密钥 – rskeymgmt（本机模式）  
+####  <a name="bkmk_backup_rskeymgmt"></a> 备份加密密钥 - rskeymgmt（本机模式）  
   
 1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 必须使用 `-e` 提取参数复制密钥，提供文件名并指定密码。 下面的示例演示必须指定的参数：  
   
@@ -99,15 +99,15 @@ ms.locfileid: "48054310"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a> 还原加密密钥 – rskeymgmt（本机模式）  
+####  <a name="bkmk_restore_rskeymgmt"></a> 还原加密密钥 - rskeymgmt（本机模式）  
   
-1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 使用`-a`参数还原密钥。 必须提供完全限定的文件名，并指定密码。 下面的示例演示必须指定的参数：  
+1.  在承载报表服务器的计算机上本地运行 **rskeymgmt.exe** 。 使用 `-a` 参数还原密钥。 必须提供完全限定的文件名，并指定密码。 下面的示例演示必须指定的参数：  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [配置和管理加密密钥&#40;SSRS 配置管理器&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

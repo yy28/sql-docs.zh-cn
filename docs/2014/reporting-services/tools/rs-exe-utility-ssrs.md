@@ -19,12 +19,12 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141837"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505644"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
@@ -75,7 +75,7 @@ ms.locfileid: "48141837"
  （可选）指定用于连接到报表服务器的用户帐户。 如果省略 `-u` 和 `-p`，则使用当前的 Windows 用户帐户。  
   
  `-p` *密码*  
- (需要`-u`指定) 指定要使用的密码`-u`参数。 此值区分大小写。  
+ （指定了 `-u` 时为必需）指定与 `-u` 参数一起使用的密码。 此值区分大小写。  
   
  `-e`  
  （可选）指定应对其运行脚本的 SOAP 端点。 有效值如下：  
@@ -88,16 +88,16 @@ ms.locfileid: "48141837"
   
 -   Exec2005  
   
- 如果未指定值，则使用 Mgmt2005 端点。 有关 SOAP 终结点的详细信息，请参阅[报表服务器 Web 服务终结点](../report-server-web-service/methods/report-server-web-service-endpoints.md)。  
+ 如果未指定值，则使用 Mgmt2005 端点。 有关 SOAP 端点的详细信息，请参阅 [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md)。  
   
  `-l` *time_out*  
  （可选）指定与服务器的连接超时之前等待的时间，以秒为单位。默认值为 60 秒。 如果未指定超时值，则使用默认值。 `0` 值指定连接从不超时。  
   
  **-b**  
- （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理异常，并从正常返回`Main`，将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅[Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
+ （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理了异常，并从 `Main` 正常返回，则将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
  `-v` *globalvar*  
- （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 **–v** 参数指定一个全局变量。  
+ （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 –v 参数指定一个全局变量。  
   
  `-v` 参数在命令行上指定，可用来为运行时在脚本中定义的全局变量设置值。 例如，如果脚本中包含一个名为 *parentFolder*的变量，则可以在命令行上为该文件夹指定一个名称：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48141837"
  下面的示例说明如何指定包含 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 脚本的脚本文件以及要执行的 Web 服务方法。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
  有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
@@ -125,7 +125,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  有关其他示例，请参阅 [运行 Reporting Services 脚本文件](run-a-reporting-services-script-file.md)  
   
 ## <a name="remarks"></a>备注  
- 可以定义脚本来设置系统属性，发布报表，等等。 所创建的脚本可以包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 的任何方法。 有关方法和属性可供你的详细信息，请参阅[报表服务器 Web 服务](../report-server-web-service/report-server-web-service.md)。  
+ 可以定义脚本来设置系统属性，发布报表，等等。 所创建的脚本可以包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 的任何方法。 有关可以使用的方法和属性的详细信息，请参阅 [Report Server Web Service](../report-server-web-service/report-server-web-service.md)。  
   
  必须用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 代码编写脚本，并存储在文件扩展名为 .rss 的 Unicode 或 UTF-8 文本文件中。 不能使用 **rs** 实用工具调试脚本。 若要调试脚本，请在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中运行代码。  
   
@@ -135,7 +135,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 ## <a name="see-also"></a>请参阅  
  [运行 Reporting Services 脚本文件](run-a-reporting-services-script-file.md)   
  [为部署和管理任务编写脚本](script-deployment-and-administrative-tasks.md)   
- [使用 rs.exe 实用工具和 Web 服务脚本](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [报表服务器命令提示实用工具&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [使用 rs.exe 实用工具和 Web 服务编写脚本](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [报表服务器命令提示实用工具 (SSRS)](report-server-command-prompt-utilities-ssrs.md)  
   
   

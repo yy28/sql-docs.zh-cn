@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 168fced99d74cb2d3716929b4b47fda1c03b92ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532388"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用测试存储库 (OracleToSQL)
 SSMA 测试存储库存储 SSMA 测试人员的测试用例和测试结果以供将来使用。 存储库数据保存在 SQL Server 表**TestCaseRepository**并**RunTestCaseResultRepository**架构中**ssma_oracle_utilities** 的**ssmatesterdb**数据库。  
@@ -34,13 +34,13 @@ SSMA 测试存储库存储 SSMA 测试人员的测试用例和测试结果以供
   
 该网格将显示有关每个测试用例的以下信息：  
   
--   名称： 测试用例名称。  
+-   名称：测试用例的名称。  
   
--   创建： 测试用例的创建日期。  
+-   创建：测试用例创建日期。  
   
--   已修改： 测试用例的上次修改日期。  
+-   修订日期：测试用例的上次修改日期。  
   
--   说明： 测试用例描述。  
+-   说明:测试用例说明中。  
   
 测试用例页上提供了以下按钮：  
   
@@ -57,17 +57,17 @@ SSMA 测试存储库存储 SSMA 测试人员的测试用例和测试结果以供
   
 可以使用两个筛选器**测试结果**页：  
   
--   测试用例名称筛选器： 允许选择测试结果的测试用例的名称。 此筛选器**所有测试用例**值，则允许显示所有测试用例的测试结果。  
+-   测试用例名称筛选器：允许选择测试结果的测试用例的名称。 此筛选器**所有测试用例**值，则允许显示所有测试用例的测试结果。  
   
--   测试用例执行日期筛选器： 筛选器的日期保存测试结果。此筛选器**所有段**值，则允许任何日期保存显示测试结果。  
+-   测试用例执行日期筛选器：筛选器的日期保存测试结果。此筛选器**所有段**值，则允许任何日期保存显示测试结果。  
   
 有关测试结果的以下信息显示在网格中。  
   
--   名称： 测试用例的名称。  
+-   名称：测试用例的名称。  
   
--   保存： 测试案例的保存的日期。  
+-   保存：保存测试用例日期。  
   
--   结果: （此单元格的工具提示显示测试执行的完整摘要） 的测试执行的简短摘要。  
+-   结果：（此单元格的工具提示显示测试执行的完整摘要） 的测试执行的简短摘要。  
   
 测试结果页上提供了以下按钮：  
   

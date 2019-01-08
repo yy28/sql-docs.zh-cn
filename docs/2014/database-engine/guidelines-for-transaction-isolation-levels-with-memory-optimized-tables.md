@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510022"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>内存优化表事务隔离级别准则
   在许多情况下，必须指定事务隔离级别。 内存优化表的事务隔离不同于基于磁盘的表。  
@@ -56,7 +56,7 @@ ms.locfileid: "48050027"
   
  SNAPSHOT 隔离级别提供的保障（内存优化表支持的最低隔离级别）包括 READ COMMITTED 保障。 事务中的每条语句都读取相同、一致的数据库版本。 不仅该事务读取的所有行都提交到数据库，而且所有读取操作都会看到由同一组事务所作更改的集合。  
   
- **指导原则**： 如果只有 READ committed 隔离是必需的使用快照隔离与本机编译存储过程和用于访问内存优化表通过解释[!INCLUDE[tsql](../includes/tsql-md.md)]。  
+ **准则**:如果只有 READ committed 隔离是必需的使用快照隔离与本机编译存储过程和用于访问内存优化表通过解释[!INCLUDE[tsql](../includes/tsql-md.md)]。  
   
  对于自动提交事务，隔离级别 READ COMMITTED 会隐式映射到内存优化表的 SNAPSHOT。 因此，如果 TRANSACTION ISOLATION LEVEL 会话设置设为 READ COMMITTED，则在访问内存优化表时无需通过表提示指定隔离级别。  
   
@@ -80,7 +80,7 @@ BEGIN TRAN
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   
@@ -97,7 +97,7 @@ COMMIT
   
      采用这一假设的应用程序模式的一个示例：使用 WHILE 循环轮询表，直至发现新行为止。 该循环每次迭代时，查询将看到数据库中的最新更新。  
   
-     **指导原则：** 如果应用程序需要轮询内存优化的表，以获取最新的行写入到表中，将轮询循环移动事务范围之外。  
+     **指导原则：** 如果应用程序需要轮询内存优化的表，以获取最新的行写入到表中，将轮询循环移事务的作用域之外。  
   
      下面的示例介绍采用这一假设的应用程序模式。 使用 WHILE 循环轮询表，直至发现新行。 在每次循环迭代中，查询将访问数据库中的最新更新。  
   

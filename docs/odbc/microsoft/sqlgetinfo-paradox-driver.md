@@ -14,12 +14,12 @@ ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76517ac2ded567877d542be688aa47abeca21c1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752887"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528928"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo（Paradox 驱动程序）
 > [!NOTE]  
@@ -29,9 +29,9 @@ ms.locfileid: "47752887"
   
 -   SQL_FILE_NOT_SUPPORTED-驱动程序不是单个层驱动程序。  
   
--   SQL_FILE_TABLE — 单层驱动程序将视为表中的数据源的文件。  
+-   SQL_FILE_TABLE-单层驱动程序将视为表中的数据源的文件。  
   
--   SQL_FILE_QUALIFIER — 单层驱动程序将视为一个限定符的数据源中的文件。  
+-   SQL_FILE_QUALIFIER-单层驱动程序将视为一个限定符的数据源中的文件。  
   
  ODBC 驱动程序返回 SQL_FILE_TABLE，因为每个文件是一个表。  
   

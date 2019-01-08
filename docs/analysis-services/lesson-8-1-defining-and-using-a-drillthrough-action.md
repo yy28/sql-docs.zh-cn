@@ -1,5 +1,5 @@
 ---
-title: 定义和使用钻取操作 |Microsoft 文档
+title: 定义和使用钻取操作 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507961"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>课程 8-1-定义和使用钻取操作
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>第 8-1 课-定义和使用钻取操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 如果按事实维度来维度化事实数据，而不正确筛选查询返回的数据，则可能导致查询速度变慢。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
@@ -37,7 +37,7 @@ ms.locfileid: "34018044"
   
     “显示”窗格中将出现空白操作模板。  
   
-    ![在显示窗格中的空白操作模板](../analysis-services/media/l8-action2.gif "空的操作在显示窗格中的模板")  
+    ![在显示窗格中的空白操作模板](../analysis-services/media/l8-action2.gif "显示窗格中的空白操作模板")  
   
 3.  在“名称”框中，将此操作的名称更改为 **Internet Sales Details Drillthrough Action**。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "34018044"
   
 6.  在“返回列”列表中，选中“项说明”和“订单编号”复选框，再单击“确定”。 下图显示至此在该操作过程中操作模板的应有外观。  
   
-    ![钻取列框](../analysis-services/media/l8-action3.gif "钻取列中")  
+    ![钻取列框](../analysis-services/media/l8-action3.gif "钻取列框")  
   
 7.  展开“附加属性”框，如下图所示。  
   
-    ![其他属性框](../analysis-services/media/l8-action4.gif "其他属性框")  
+    ![其他属性框](../analysis-services/media/l8-action4.gif "附加属性框")  
   
 8.  在“最大行数”框中键入 **10**。  
   
-9. 在“标题”框中，键入 **Drillthrough to Order Details…**。  
+9. 在中**标题**框中，键入**钻取订单详细信息...**.  
   
     这些设置将限制返回的行数，并指定在客户端应用程序菜单中将出现的标题。 下图显示了“附加属性”框中的这些设置。  
   
-    ![其他属性框](../analysis-services/media/l8-action5.gif "其他属性框")  
+    ![其他属性框](../analysis-services/media/l8-action5.gif "附加属性框")  
   
 ## <a name="using-the-drillthrough-action"></a>使用钻取操作  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018044"
   
     交付给 Adam Powell 的订单的详细信息将显示在“数据示例查看器”中，如下图所示。 但是，某些其他详细信息也会是有用的，如订单日期、截止日期和发运日期。 在下一个过程中，您将添加这些其他详细信息。  
   
-    ![Adam Powell 发往订单](../analysis-services/media/l8-action6.gif "到 Adam Powell 已发货的订单")  
+    ![交付给 Adam Powell 的订单](../analysis-services/media/l8-action6.gif "交付给 Adam Powell 的订单")  
   
 8.  关闭 Excel/  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34018044"
   
     下图显示了这些所选列。  
   
-    ![钻取列框](../analysis-services/media/l8-action7.gif "钻取列中")  
+    ![钻取列框](../analysis-services/media/l8-action7.gif "钻取列框")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>检查修改后的钻取操作  
   
@@ -141,12 +141,12 @@ ms.locfileid: "34018044"
   
     在临时电子表格中将显示交付给 Adam Powell 的这些订单的详细信息。 这包括项说明、订单号、订单日期、截止日期和发运日期信息，如下图所示。  
   
-    ![Adam Powell 发往订单](../analysis-services/media/l8-action8.gif "到 Adam Powell 已发货的订单")  
+    ![交付给 Adam Powell 的订单](../analysis-services/media/l8-action8.gif "交付给 Adam Powell 的订单")  
   
 ## <a name="next-lesson"></a>下一课  
-[Lesson 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [操作（Analysis Services - 多维数据）](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [多维模型中的操作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

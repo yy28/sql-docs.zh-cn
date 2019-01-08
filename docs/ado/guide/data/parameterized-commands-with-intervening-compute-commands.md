@@ -16,12 +16,12 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1675e80522feb0c0b2a46a89dfa6e3bba182198
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851635"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527657"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>参数化命令与中间 COMPUTE 命令
 典型的参数化的形状 APPEND 命令具有创建父级的子句**记录集**使用一个查询命令和创建子级的另一个子句**记录集**使用参数化的查询命令-即，包含参数占位符的命令 (一个问号"？")。 生成形状**记录集**有两个级别，在其中父占用较高级别，且子占用更低的级别。  

@@ -15,15 +15,15 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532597"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 属性示例 (VC++)
-此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象 — 一个准备好，另一个未准备好。  
+此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象-一个准备好，另一个未准备好。  
   
 ## <a name="example"></a>示例  
   
@@ -142,8 +142,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **性能结果：**  
-**未准备好： 0.016 秒**  
-**准备好： 0.016 秒**   
+**未准备好：0.016 秒**  
+**准备好：    0.016 秒**   
 ## <a name="see-also"></a>请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

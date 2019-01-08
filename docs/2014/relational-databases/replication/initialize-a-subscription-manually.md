@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - manual subscription initialization [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aaa09ef5afcd5bf889d0685631734a69624b8c09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148777"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777919"
 ---
 # <a name="initialize-a-subscription-manually"></a>手动初始化订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中手动初始化订阅。 虽然初始快照通常用于初始化订阅，但如果架构和初始数据已经在订阅服务器上存在，则可以在不使用快照的情况下初始化对发布的订阅。  
@@ -47,7 +46,7 @@ ms.locfileid: "48148777"
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>手动初始化对事务发布的请求订阅  
   
-1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**和 **@subscriber**，为 **@destination_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48148777"
   
 #### <a name="to-manually-initialize-a-push-subscription-to-a-transactional-publication"></a>手动初始化对事务发布的推送订阅  
   
-1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 为 **@destination_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。 有关更新订阅的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   

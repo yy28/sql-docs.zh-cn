@@ -1,11 +1,10 @@
 ---
-title: 教程：使用基于策略的管理来管理服务器 | Microsoft Docs
+title: 教程：使用基于策略的管理来管理服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Policy-Based Management]
@@ -14,12 +13,12 @@ ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ebb21829c573af1f47c1f9134ba14c9c50963bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126351"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754199"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教程：使用基于策略的管理来管理服务器
   欢迎使用“使用基于策略的管理策略来管理服务器”教程。 本教程适用于熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不熟悉基于策略的管理的用户。  

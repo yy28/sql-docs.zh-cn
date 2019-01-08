@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155127"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762431"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
   字词提取转换从转换输入列的文本中提取字词，然后将这些字词写入转换输出列。 该转换仅处理英文文本，并使用它自身的英语字典和有关英语的语言信息。  
@@ -139,7 +138,7 @@ ms.locfileid: "48155127"
   
 -   ASCII 换行字符 0x0d（回车符）和 0x0a（换行符）。 若要使用此字符作为句子的边界，则每行中必须有两个或更多的换行字符。  
   
--   连字符 (–)。 若要将此字符用作句子边界，连字符左侧和右侧的字符均不能为字母。  
+-   连字符 (-)。 若要将此字符用作句子边界，连字符左侧和右侧的字符均不能为字母。  
   
 -   下划线 (_)。 若要将此字符用作句子边界，连字符左侧和右侧的字符均不能为字母。  
   
@@ -147,7 +146,7 @@ ms.locfileid: "48155127"
   
 -   数字、标点符号和字母字符的组合。 例如， *A23B#99* 返回字词 *A23B*。  
   
--   字符 %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 ‘。  
+-   字符：%、@，&、$、#、\*、;、。、！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包括一个或多个句点 (.) 的首字母缩略词不分隔为多个句子。  
@@ -170,15 +169,15 @@ ms.locfileid: "48155127"
   
  字词提取转换有一个常规输入、一个输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 **“字词提取转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [字词提取转换编辑器&#40;字词提取选项卡&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [字词提取转换编辑器（“字词提取”选项卡）](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [字词提取转换编辑器&#40;排除选项卡&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [字词提取转换编辑器（“排除”选项卡）](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [字词提取转换编辑器&#40;高级选项卡&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [字词提取转换编辑器（“高级”选项卡）](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

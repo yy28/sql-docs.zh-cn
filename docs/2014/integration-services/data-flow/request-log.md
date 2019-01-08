@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ac9eaaaa2313536c27df4c96723e96b70fada5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 958a2990fe3bde49898451c9fefaee74b1b335f8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060844"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750209"
 ---
 # <a name="request-log"></a>请求日志
   使用 **“请求日志”** 对话框查看向 SAP Netweaver BW 系统提出样本数据请求的过程中记录的事件。 此信息可用于排除 SAP BW 源配置的故障。  
@@ -61,7 +60,7 @@ ms.locfileid: "48060844"
  显示与记录事件相关联的消息文本。  
   
 ## <a name="see-also"></a>请参阅  
- [SAP BW 源编辑器&#40;连接管理器页&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 043f431287f4cc60c32e81ea9abe2d1076713c60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152130"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770549"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 事件类
   当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 关闭并释放游标时，便会发生游标关闭事件。 **CursorClose** 事件类描述发生在应用程序编程接口 (API) 游标中的游标关闭事件。 此事件类发生在由 ODBC、OLE DB 或 DB-Library 打开的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标语句关闭时。  

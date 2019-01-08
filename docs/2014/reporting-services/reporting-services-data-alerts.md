@@ -11,12 +11,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc5b6d6738523d359c72b2e294fe1225004ca388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf7824140a6072e58a9f84bc47943d7025aed7a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505464"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报是一种数据驱动的警报解决方案，用于在恰当的时间向您通知令您感兴趣或对您重要的报表数据。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。  
@@ -30,11 +30,11 @@ ms.locfileid: "48059827"
 ##  <a name="AlertingWF"></a> 数据警报体系结构和工作流  
  下面概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报的主要方面：  
   
--   **定义和保存数据警报定义**：您运行一个报表，创建标识感兴趣的数据值的规则，定义用于发送数据警报消息的重复执行模式，并且指定警报消息的收件人。  
+-   定义和保存数据警报定义 - 运行一个报表、创建标识感兴趣的数据值的规则、定义用于发送数据警报消息的重复执行模式，并且指定警报消息的收件人。  
   
--   **运行数据警报定义**：警报服务在计划的时间处理警报定义，检索报表数据，基于警报定义中的规则创建数据警报实例。  
+-   运行数据警报定义 - 警报服务在计划的时间处理警报定义，检索报表数据，基于警报定义中的规则创建数据警报实例。  
   
--   **向收件人递送数据警报消息**：警报服务创建警报实例，并通过电子邮件将警报消息发送给收件人。  
+-   向收件人递送数据警报消息 - 警报服务创建警报实例，并通过电子邮件将警报消息发送给收件人。  
   
  此外，作为数据警报所有者，您可以查看有关数据警报的信息，删除和编辑您的数据警报定义。 每个警报只有一个所有者，即创建该警报的人员。  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48059827"
 ##  <a name="InstallAlerting"></a> 安装数据警报  
  数据警报功能仅当在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时才可用。 在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，安装程序会自动创建警报数据库（用于存储数据警报定义和警报元数据）和两个 SharePoint 页（用于管理警报和向 SharePoint 站点添加数据警报设计器）。 没有要执行的特殊步骤或在安装过程中为警报设置的选项。  
   
- 若要详细了解如何在 SharePoint 模式中安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中新增的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务和使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能前必须先创建和配置的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序，请参阅 MSDN 库中的[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
+ 如果要了解有关在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的详细信息（包括 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中新增的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共享服务和在可使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前必须创建和配置的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序），请参阅 MSDN 库中的 [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) 。  
   
- 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅[配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md)和[启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅 [配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md) 和 [启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
  可以使用 SharePoint 管理中心中的 **“设置订阅和警报”** 页来查看 SQL Server 代理是否正在运行，并创建和下载之后要运行以向 SQL Server 代理授予权限的自定义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 通过使用 PowerShell 还可以生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48059827"
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   
@@ -196,9 +196,9 @@ ms.locfileid: "48059827"
 ##  <a name="Permissions"></a> 数据警报的权限  
  在可以针对报表创建数据警报前，必须有权在 SharePoint 站点上运行该报表和创建警报。 若要了解有关报表权限的详细信息，请参见以下内容。  
   
--   [从报表生成数据馈送&#40;报表生成器和 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [基于报表生成数据馈送（报表生成器和 SSRS）](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [SharePoint 站点上为报表服务器项设置权限&#40;Reporting Services SharePoint 集成模式下&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报支持两个权限级别：信息工作者和警报管理员。 下表列出了相关的 SharePoint 权限和用户任务。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48059827"
 ### <a name="logs"></a>日志  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供若干日志，有助于您了解在处理数据警报定义、创建的数据警报实例等时运行的报表的详细信息。 三个日志特别有用：警报执行日志、报表服务器执行日志和报表服务器跟踪日志。  
   
- 有关其他信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]日志，请参阅[Reporting Services 日志文件和源](report-server/reporting-services-log-files-and-sources.md)。  
+ 有关其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 日志的信息，请参阅 [Reporting Services 日志文件和源](report-server/reporting-services-log-files-and-sources.md)。  
   
 #### <a name="alerting-execution-log"></a>警报执行日志  
  警报运行时服务在警报数据库的 ExecutionLogView 表中写入条目。 您可以查询表或运行以下存储过程，获取与保存到警报数据库的数据警报有关的更丰富的诊断信息。  
@@ -277,13 +277,13 @@ ms.locfileid: "48059827"
 ##  <a name="UserInterface"></a> 数据警报用户界面  
  数据警报提供用于管理警报的 SharePoint 页以及用于创建和编辑数据警报定义的设计器。  
   
--   **数据警报设计器** ，在其中创建或编辑数据警报定义。 有关详细信息，请参阅[数据警报设计器](../../2014/reporting-services/data-alert-designer.md)，[在数据警报设计器中创建数据警报](create-a-data-alert-in-data-alert-designer.md)并[编辑数据警报在警报设计器中](edit-a-data-alert-in-alert-designer.md)。  
+-   **数据警报设计器** ，在其中创建或编辑数据警报定义。 有关详细信息，请参阅 [数据警报设计器](../../2014/reporting-services/data-alert-designer.md)、 [在数据警报设计器中创建数据警报](create-a-data-alert-in-data-alert-designer.md) 和 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。  
   
 -   **数据警报管理器** ，在其中查看数据警报列表、删除警报以及打开警报以进行编辑。 数据警报管理器有两个版本：一个可供用户管理他们创建的警报，另一个可供管理员管理属于站点用户的警报。  
   
-     有关管理您创建的数据警报的详细信息，请参阅[SharePoint 用户的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)并[在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
+     有关管理所创建的数据警报的详细信息，请参阅 [SharePoint 用户的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) 和 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
   
-     有关管理站点上的所有数据警报的详细信息，请参阅[向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)并[数据警报管理器中的 SharePoint 站点上管理所有数据警报](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
+     有关管理站点上所有数据警报的详细信息，请参阅 [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在数据警报管理器中管理 SharePoint 站点上的所有数据警报](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
 -   **设置订阅和数据警报** ，在其中查看 Reporting Services 是否可以针对数据警报使用 SQL Server 代理，是否可以下载允许访问 SQL Server 代理的脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -300,7 +300,7 @@ ms.locfileid: "48059827"
   
 ##  <a name="HowTo"></a> 相关任务  
   
--   [将报表保存到 SharePoint 库&#40;报表生成器&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
+-   [将报表保存到 SharePoint 库（报表生成器）](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
 -   [在数据警报设计器中创建数据警报](create-a-data-alert-in-data-alert-designer.md)  
   
@@ -314,7 +314,7 @@ ms.locfileid: "48059827"
   
 ## <a name="see-also"></a>请参阅  
  [数据警报设计器](../../2014/reporting-services/data-alert-designer.md)   
- [管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [SharePoint 用户的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
   

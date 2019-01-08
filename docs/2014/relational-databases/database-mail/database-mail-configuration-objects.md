@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772630"
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
-  数据库邮件具有两种配置对象：数据库配置对象提供了一种方法，您可以使用此方法配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
+  数据库邮件具有两个配置对象：数据库配置对象提供一种方法可用于配置设置的数据库邮件应使用从数据库应用程序发送一封电子邮件时或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。  
   
 -   数据库邮件帐户  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48089667"
   
  数据库邮件与 SMTP 服务器进行通信时支持三种身份验证方法：  
   
--   Windows 身份验证：数据库邮件使用 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows 服务帐户的凭据在 SMTP 服务器中进行身份验证。  
+-   Windows 身份验证：数据库邮件使用的凭据[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]Windows 服务帐户进行身份验证的 SMTP 服务器上。  
   
--   基本身份验证：数据库邮件使用指定的用户名和密码在 SMTP 服务器上进行身份验证。  
+-   基本身份验证：数据库邮件使用的用户名和密码指定 SMTP 服务器上进行身份验证。  
   
--   匿名身份验证：SMTP 服务器不要求进行任何身份验证。  数据库邮件将不使用任何凭据在 SMTP 服务器上进行身份验证。  
+-   匿名身份验证：SMTP 服务器不需要任何身份验证。  数据库邮件将不使用任何凭据在 SMTP 服务器上进行身份验证。  
   
  帐户信息存储在 **msdb** 数据库中。 每个帐户包含以下信息：  
   

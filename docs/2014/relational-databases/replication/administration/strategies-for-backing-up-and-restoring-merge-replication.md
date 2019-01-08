@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], merge replication
@@ -16,12 +15,12 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e0d1d3214d9502d3c4a8db91cd16617dd9472a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757475"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
   对于合并复制，请定期备份下列数据库：  
@@ -55,14 +54,14 @@ ms.locfileid: "48220887"
   
 -   如果发布未经筛选，则应能通过与最新订阅服务器同步来更新发布数据库。  
   
--   如果发布经过筛选，则可能无法更新发布数据库。 假设有一个按如下方式分区的表：每个订阅仅收到一个区域（北部、东部、南部和西部）的客户数据。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。  
+-   如果发布经过筛选，则可能无法更新发布数据库。 请考虑一个表，该表的分区使每个订阅只接收一个区域的客户数据：北、东、南和西。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。  
   
 > [!IMPORTANT]  
 >  使发布数据库与订阅数据库同步可使已发布的表还原到一个时间点，该时间点比从备份还原的其他未发布表的时间点更近。  
   
  如果要与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 早期版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]的订阅服务器同步，则订阅不可匿名；它必须是客户端订阅或服务器订阅（在早期版本中分别称为本地订阅和全局订阅）。  
   
- 若要同步订阅，请参阅 [同步推送订阅](../synchronize-a-push-subscription.md) 和 [同步请求订阅](../synchronize-a-pull-subscription.md)。  
+ 若要同步订阅，请参阅 [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)。  
   
 ### <a name="reinitializing-all-subscriptions"></a>重新初始化所有订阅  
  重新初始化所有订阅可确保所有订阅服务器都处于与已还原发布数据库一致的状态。 若要将完整的拓扑返回到给定发布数据库备份表示的先前状态，应使用此方法。 例如，如果作为从错误执行的批处理操作中还原的一种机制将发布数据库还原到某个较早的时间点，就可能需要重新初始化所有订阅。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], filtering published data
@@ -14,12 +13,12 @@ ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60fe7e6fd2b818c653c3f5fd713de5b1945fb714
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463a9385f4622f85cd1cbd5666517464be3cffd4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780839"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>为合并复制筛选已发布数据
   除了可使用其他类型的复制定义的静态行筛选器和列筛选器之外，合并复制还提供参数化行筛选器和联接筛选器。 有关静态行筛选器和列筛选器的详细信息，请参阅[筛选已发布数据](../publish/filter-published-data.md)。  

@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157987"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518261"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server 的云适配器
   创建云适配器服务是 Windows Azure 虚拟机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 设置的一部分。 云适配器服务在首次运行时生成自签名的 SSL 证书，然后作为“本地系统”帐户运行。 它生成用于配置自身的配置文件。 云适配器还创建一个 Windows 防火墙规则以允许默认端口 11435 上的传入 TCP 连接。  
@@ -44,7 +44,7 @@ ms.locfileid: "48157987"
 ## <a name="cloud-adapter-configuration-settings"></a>云适配器配置设置  
  使用以下云适配器配置详细信息来修改云适配器的设置。  
   
--   **配置文件的默认路径**– C:\Program Files\Microsoft SQL server\120\tools\cloudadapter \  
+-   **配置文件的默认路径**-C:\Program Files\Microsoft SQL server\120\tools\cloudadapter \  
   
 -   **配置文件参数** -  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48157987"
   
     -   \</configuration >  
   
--   **证书详细信息** – 证书具有以下值：  
+-   **证书详细信息**-证书具有以下值：  
   
-    -   主题 –"CN = CloudAdapter\<VMName >，DC = SQL Server，DC = Microsoft"  
+    -   使用者的"CN = CloudAdapter\<VMName >，DC = SQL Server，DC = Microsoft"  
   
     -   证书应仅启用服务器身份验证 EKU。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48157987"
   
  **配置文件值**：  
   
-|设置|值|，则“默认”|注释|  
+|设置|值|默认|注释|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|如果未指定，请使用 11435。|  
 |WebServiceCertificate|Thumbprint|Empty|如果为空，则生成新的自签名证书。|  
@@ -81,11 +81,11 @@ ms.locfileid: "48157987"
 ## <a name="cloud-adapter-troubleshooting"></a>云适配器故障排除  
  使用以下信息排除 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的云适配器的故障：  
   
--   **错误处理和日志记录** – 将错误和状态消息写入应用程序事件日志。  
+-   **错误处理和日志记录**-错误和状态消息写入到应用程序事件日志中。  
   
--   **跟踪，事件** – 将所有事件写入应用程序事件日志。  
+-   **跟踪，事件**-所有事件都写入到应用程序事件日志中。  
   
--   **控制，配置**– 使用配置文件位于： C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\。  
+-   **控制，配置**-使用中的配置文件：C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\。  
   
 |错误|错误 ID|原因|解决方法|  
 |-----------|--------------|-----------|----------------|  

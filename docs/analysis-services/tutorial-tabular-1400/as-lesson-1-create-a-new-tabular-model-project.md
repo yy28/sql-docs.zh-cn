@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教程第 1 课： 创建新的表格模型项目 |Microsoft Docs
+title: Analysis Services 教程第 1 课：创建新的表格模型项目 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108666"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417228"
 ---
 # <a name="create-a-tabular-model-project"></a>创建表格模型项目
 
@@ -22,9 +22,9 @@ ms.locfileid: "43108666"
 
 在本课中，您使用 Visual Studio 使用 SQL Server Data Tools (SSDT) 或与 Microsoft Analysis Services 项目 VSIX 的 Visual Studio 2017 在 1400年兼容级别创建新的表格模型项目。 创建新项目后，可以开始添加数据和创作模型。 本课程还提供了创作环境，在 Visual Studio 中的表格模型的简要介绍。  
   
-学完本课的估计时间： **10 分钟**  
+学完本课的预计时间：**10 分钟**  
   
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 本文是表格模型创作教程的第一课。 若要完成本课程中，有多个所需满足的先决条件。 若要了解详细信息，请参阅[Analysis Services-Adventure Works 教程](../tutorial-tabular-1400/as-adventure-works-tutorial.md)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "43108666"
 
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 2 课： 获取数据](../tutorial-tabular-1400/as-lesson-2-get-data.md)。
+[第 2 课：获取数据](../tutorial-tabular-1400/as-lesson-2-get-data.md)。
 
   
   

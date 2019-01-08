@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f290d76a6c7b352e438e836bfd48eedeb28e4db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764199"
 ---
 # <a name="edit-an-operator"></a>编辑运算符
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对操作员能否接收通知进行编辑，并编辑他们的电子邮件地址、寻呼地址和 net send 地址。  
@@ -31,7 +31,7 @@ ms.locfileid: "48093327"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要编辑操作员，可使用：**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48093327"
   
     -   [操作员属性和新运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [运算符属性： 新建操作员&#40;通知页&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [运算符属性：New 运算符&#40;通知页&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [操作员属性（“历史记录”页）](operator-properties-history-page.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093327"
   
 #### <a name="to-edit-an-operator"></a>编辑操作员  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "48093327"
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 1,  
-        @email_address = N'françoisa',  
+        @email_address = N'fran??oisa',  
         @pager_address = N'5551290AW@pager.Adventure-Works.com',  
         @weekday_pager_start_time = 080000,  
         @weekday_pager_end_time = 170000,  

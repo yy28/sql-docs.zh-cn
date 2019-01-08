@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating cache files for Lookup transformation
@@ -15,19 +14,19 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c26b79cde6f6b3e8bce96f765fec03f1a2d7c5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33efec852a748552e56db76a4af023809a531f5c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118639"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757339"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
   可以为查找转换创建和部署缓存文件 (.caw)。 引用数据集存储在缓存文件中。  
   
  查找转换通过将所连接数据源输入列中的数据和引用数据集中的列进行联接来执行查找。  
   
- 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [缓存连接管理器](../../connection-manager/cache-connection-manager.md) 和 [缓存转换](cache-transform.md)。  
+ 可以使用缓存连接管理器和“缓存转换”转换来创建缓存文件。 有关详细信息，请参阅 [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) 和 [Cache Transform](cache-transform.md)。  
   
  若要了解查找转换和缓存文件的更多信息，请参阅 [Lookup Transformation](lookup-transformation.md)。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48118639"
      运行包时，系统会创建该文件。  
   
     > [!NOTE]  
-    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../../access-to-files-used-by-packages.md)。  
+    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../../access-to-files-used-by-packages.md)。  
   
 6.  单击 **“列”** 选项卡，然后使用 **“索引位置”** 选项来指定哪些列是索引列。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48118639"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目，再打开该包。  
   
-2.  创建包配置（可选）。 有关详细信息，请参阅[创建包配置](../../create-package-configurations.md)。  
+2.  创建包配置（可选）。 有关详细信息，请参阅 [创建包配置](../../create-package-configurations.md)。  
   
 3.  执行以下操作将缓存文件添加到项目：  
   

@@ -11,15 +11,15 @@ ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc49813893a296ac5342452a286f39284a8901d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3b50c9284610cfa8c35eba21de7723c18729401
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126341"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404994"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>创建和管理度量值（SSAS 表格）
-  度量值是为用于报表或 Excel 数据透视表（或数据透视图）而创建的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何使用表的度量值网格创建和管理度量值。  
+  度量值是为用于报表或 Excel 数据透视表（或数据透视图）而创建的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何创建和管理通过使用表的度量值网格中的度量值。  
   
  本主题包括以下任务：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48126341"
 -   [删除度量值](#bkmk_delete)  
   
 ## <a name="tasks"></a>“任务”  
- 为了创建和管理度量值，您将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
+ 若要创建和管理度量值，将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
   
 ###  <a name="bkmk_create_stand"></a> 使用标准聚合公式创建度量值  
   
@@ -61,8 +61,8 @@ ms.locfileid: "48126341"
 -   在度量值网格中，右键单击某一度量值，然后单击“删除”。  
   
 ## <a name="see-also"></a>请参阅  
- [度量值&#40;SSAS 表格&#41;](measures-ssas-tabular.md)   
- [Kpi &#40;SSAS 表格&#41;](kpis-ssas-tabular.md)   
- [计算列&#40;SSAS 表格&#41;](ssas-calculated-columns.md)  
+ [度量值（SSAS 表格）](measures-ssas-tabular.md)   
+ [KPI（SSAS 表格）](kpis-ssas-tabular.md)   
+ [计算列（SSAS 表格）](ssas-calculated-columns.md)  
   
   

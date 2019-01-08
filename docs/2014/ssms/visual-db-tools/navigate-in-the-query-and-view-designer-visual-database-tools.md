@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769159"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查询和视图设计器中导航 (Visual Database Tools)
   可以使用键盘或鼠标在查询和视图设计器中工作。 具体使用方法，请参考以下各表：  
@@ -42,7 +42,7 @@ ms.locfileid: "48123177"
 |在表或表结构对象中的列之间移动|箭头键|要移动到的列|  
 |选择要输出的选定数据列|空格键或加号键|列名旁的复选框|  
 |从查询输出中移除选定的数据列|空格键或减号键|列名旁的复选框|  
-|从查询中移除选定的表、表结构对象或联接线|删除|右键单击，再选择“删除”|  
+|从查询中移除选定的表、表结构对象或联接线|DELETE|右键单击，再选择“删除”|  
   
 > [!NOTE]  
 >  如果选择了多个项，则按此键将影响所有选定的项。 按住 Ctrl 键并单击要选择的项，可以选择多个项。  
@@ -66,8 +66,8 @@ ms.locfileid: "48123177"
 |从剪贴板中粘贴文本（在编辑模式下）|Ctrl+V||  
 |在单元格中进行编辑时，在插入和替换模式间切换|Ins||  
 |切换输出列中的复选框|空格键|复选框|  
-|清除单元格中的选定内容|删除||  
-|清除选定网格列的所有值|删除||  
+|清除单元格中的选定内容|DELETE||  
+|清除选定网格列的所有值|DELETE||  
 |在现有行之间插入行|在选择网格行后按 Ins||  
 |添加“或...”列|在选择任意“或...”列后按 Ins||  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48123177"
 |选择到单元格中的最后一个字符|Shift+End||  
 |在编辑模式和单元格选择模式间切换|F2||  
 |在单元格中进行编辑时，在插入和替换模式间切换|Ins||  
-|从表中删除行|删除||  
+|从表中删除行|DELETE||  
 |撤消对当前单元格的更改|在更改的单元格中按 Esc||  
 |撤消对当前行的更改|在尚未更改的单元格中按 Esc||  
 |向单元格中输入空值|Ctrl+0||  

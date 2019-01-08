@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - manSer
@@ -13,12 +12,12 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e38da453edf4aeddc81ea4bcaa3498f69318b715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b4990635d9246489c3b74fa966312db4a884e5b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064777"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764159"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服务
   您可以使用 CDC 设计器控制台查看通过 CDC 服务配置控制台创建的服务并且管理 Oracle CDC 服务中的所有实例。  
@@ -46,6 +45,6 @@ ms.locfileid: "48064777"
 ## <a name="see-also"></a>请参阅  
  [如何创建 SQL Server 更改数据库实例](how-to-create-the-sql-server-change-database-instance.md)   
  [如何从 CDC 设计器控制台管理 CDC 服务](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [使用新建实例向导](use-the-new-instance-wizard.md)  
+ [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
   
   

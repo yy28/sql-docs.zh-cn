@@ -1,5 +1,5 @@
 ---
-title: 教程：表达式简介 | Microsoft Docs
+title: 教程：表达式简介 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399330"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
   表达式帮助您创建功能强大、灵活的报表。 本教程指导您创建和实现使用常用函数和运算符的表达式。 将使用**表达式**对话框可以编写表达式的连接名称值、 查找中单独的数据集中的值显示不同的图片基于字段值，等等。  
@@ -66,7 +66,7 @@ ms.locfileid: "48075847"
 >  在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，选择数据源，并创建数据集，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 #### <a name="to-create-a-new-table-report"></a>创建新的表报表  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48075847"
   
      该查询指定列名称，这些名称包括出生日期、名字、姓氏、省/市/自治区、国家/地区标识符、性别和年初至今的采购信息。  
   
-10. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集显示 20 行的数据并包括以下列：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
+10. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集显示 20 行的数据，包括以下列：FirstName、 LastName、 StateProvince、 CountryRegionID、 Gender、 YTDPurchase 和 LastPurchase。  
   
 11. 单击“下一步” 。  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075847"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>查找 CountryRegion 数据集中的值  
   
-1.  单击“Country Region ID”列标题，删除文本：ID。  
+1.  单击**Country Region ID**列标题，删除文本：ID。  
   
 2.  右键单击“Country Region”列的数据单元，然后单击“表达式”。  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075847"
 11. 单击 **“运行”** 以预览报表。  
   
 ##  <a name="Count"></a> 6.计算自上次采购后的天数  
- 添加一列，然后使用 **Now** 函数或 `ExecutionTime` 内置全局变量计算某人自上次采购至今的天数。  
+ 添加一列，然后使用**现在**函数或`ExecutionTime`购买了内置全局变量计算某人的最后一个至今的天数。  
   
 #### <a name="to-add-the-days-ago-column"></a>添加 Days Ago 列  
   
@@ -418,9 +418,9 @@ ms.locfileid: "48075847"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7.使用指示器显示销售情况对比  
- 添加一个新列，使用指示器显示某个人的年初至今 (YTD) 采购量是高于还是低于平均 YTD 采购量。 **Round** 函数从值中去掉小数部分。  
+ 添加新列并使用指示器显示某个人的年度截止到现在 (YTD) 采购量是高于还是低于平均 YTD 采购量。 **Round** 函数从值中去掉小数部分。  
   
- 该指示器及其状态的配置需要许多步骤。 如果需要，可以跳过“配置指示器”过程，将已完成的表达式从本教程复制/粘贴到“表达式”对话框。  
+ 该指示器及其状态的配置需要许多步骤。 如果需要，在"配置指示器"过程中，可以跳过一些步骤，并复制/粘贴到本教程中已完成的表达式**表达式**对话框。  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>添加 + or - AVG Sales 列  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075847"
   
 38. 单击 **“运行”** 以预览报表。  
   
-##  <a name="GreenBar"></a> 8。使报表成为“绿色图条”报表  
+##  <a name="GreenBar"></a> 8。使"绿色图条"报表的报表  
  使用参数指定要应用于报表的交替行的颜色，使报表成为条纹形式的报表。  
   
 #### <a name="to-add-a-parameter"></a>添加参数  
@@ -543,7 +543,7 @@ ms.locfileid: "48075847"
   
 7.  单击 **“添加”**。  
   
-8.  在“标签”框中，键入 **Yellow**  
+8.  在中**标签**框中，键入：**黄色**  
   
 9. 在“值”框中，键入 **Yellow**  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075847"
   
 15. 如果鼠标光标不是紧接 `Count(` 之后，请将光标置于其后。  
   
-16. 删除左括号，然后键入 **,“Expressions”)**  
+16. 删除左的括号，然后键入 **，"Expressions")**  
   
     > [!NOTE]  
     >  Expressions 是要对其数据行进行计数的数据集的名称。  
@@ -621,7 +621,7 @@ ms.locfileid: "48075847"
   
 22. 如果鼠标光标不是紧接 `Parameters!RowColor.Value` 之后，请将光标置于其后。  
   
-23. 键入 **, “White”)**  
+23. 键入 **，"White")**  
   
      完成的表达式： `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -690,7 +690,7 @@ ms.locfileid: "48075847"
   
 4.  在“名称”中，用“Sales Comparison Summary”替换默认名称。  
   
-5.  单击 **“保存”**。  
+5.  单击“保存” 。  
   
  报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -702,13 +702,13 @@ ms.locfileid: "48075847"
   
 3.  在“名称”中，用“Sales Comparison Summary”替换默认名称。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
 ## <a name="see-also"></a>请参阅  
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
  [指标&#40;报表生成器和 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [图像、 文本框、 矩形和线条&#40;报表生成器和 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [图像、文本框、矩形和线条（报表生成器和 SSRS）](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](report-design/tables-report-builder-and-ssrs.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

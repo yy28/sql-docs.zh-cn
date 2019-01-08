@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -16,12 +15,12 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763769"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器程序以 Windows 服务的形式运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器可用于执行下列操作：  
@@ -126,7 +125,7 @@ ms.locfileid: "48204807"
  隐藏的实例是仅支持共享内存连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，设置 `HideInstance` 标记来指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不应对此服务器实例的相关信息做出响应。  
   
 ### <a name="using-a-firewall"></a>使用防火墙  
- 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关如何使用防火墙的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何将防火墙配置为允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问”。  
+ 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关使用防火墙的信息，请参见“如何：为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access 配置防火墙”（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
   
 ## <a name="see-also"></a>请参阅  
  [网络协议和网络库](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  

@@ -14,15 +14,15 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695026"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541226"
 ---
 # <a name="executing-batches"></a>执行批处理
-应用程序执行一批语句之前，应首先检查是否支持它们。 为此，应用程序调用**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 第一个选项返回是否行计数 – 生成和结果集 – 生成语句中显式批处理和过程，行计数和结果的返回信息可用性设置中的后一种两个选项时支持参数化执行。  
+应用程序执行一批语句之前，应首先检查是否支持它们。 为此，应用程序调用**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 第一个选项返回是否行计数生成和结果集生成语句中显式批处理和过程，行计数和结果的返回信息可用性设置中的后一种两个选项时支持参数化执行。  
   
  通过执行语句的批处理**SQLExecute**或**SQLExecDirect**。 例如，以下调用执行语句，以打开新的销售订单的显式批次。  
   

@@ -11,12 +11,12 @@ ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 49cdcd60c01bdbad2258d5098ac4db7483ba665e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7816944c854f7c7482902d4f681d54e295b05fff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539996"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>设置文本框中文本的格式（报表生成器和 SSRS）
   可以单独设置文本框中任何一部分文本的格式，并在一个文本框中混合使用占位符文本和静态文本。 这种混合格式并添加占位符文本的功能可使您能够为报表中的文本创建邮件合并或模板。 使用占位符可以单独定义任何表达式并设置其格式。  
@@ -52,7 +52,7 @@ ms.locfileid: "48149917"
   
 2.  在 **“插入”** 选项卡上，单击 **“文本框”**。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
   
-3.  在文本框中键入一个标签，如 **My Field**:。  
+3.  在文本框中键入一个标签，如 My Field:。  
   
 4.  将字段从数据集拖到文本框中。 此时将为您的字段创建一个占位符。  
   
@@ -67,13 +67,13 @@ ms.locfileid: "48149917"
  列表会将字段中的每个值重复一次，每次重复时， *FieldName* 占位符都会由数据集中该字段的值替换。  
   
 ## <a name="see-also"></a>请参阅  
- [文本框中&#40;报表生成器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [文本框（报表生成器和 SSRS）](text-boxes-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式（报表生成器和 SSRS）](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [向报表添加 HTML（报表生成器和 SSRS）](add-html-into-a-report-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [设置数字和日期格式&#40;报表生成器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [“占位符属性”对话框 ->“常规”（报表生成器和 SSRS）](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
+ [设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

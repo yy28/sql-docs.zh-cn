@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169312"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518275"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>配置分析平台系统的 InfiniBand 网络适配器
 介绍如何在要连接到控制节点上并行数据仓库 (PDW) 的非设备客户端服务器上配置无线带宽技术网络适配器。 使用这些指令的基本连接并以实现高可用性，以便加载、 备份以及其他进程会自动连接到活动的 InfiniBand 网络。  
@@ -42,9 +42,9 @@ ms.locfileid: "49169312"
   
 例如，如果你的 PDW 区域名称是 MyPDW，设备名称是 MyAPS dwloader 服务器规范，用于将数据加载是以下值之一：  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>开始之前  
   
@@ -53,7 +53,7 @@ ms.locfileid: "49169312"
   
 需要有权配置网络适配器的客户端服务器上的 Windows 帐户。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先决条件  
 这些说明假定已装入机架并连接到设备 InfiniBand 网络客户端服务器。 有关安装和布线说明，请参阅[获取和配置加载服务器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般备注  
@@ -61,7 +61,7 @@ ms.locfileid: "49169312"
   
 要满足业务需求，还可以加入到你自己的非设备工作组或 Windows 域的客户端服务器。  
   
-## <a name="Sec1"></a>步骤 1： 获取设备 InfiniBand 网络设置  
+## <a name="Sec1"></a>步骤 1:获取装置 InfiniBand 网络设置  
 *若要获取 InfiniBand 网络设置的设备*  
   
 1.  登录到该设备 AD01 节点使用 appliance_domain\Administrator 帐户。  
@@ -96,7 +96,7 @@ ms.locfileid: "49169312"
   
     若要查找未使用的 IP 地址，请打开命令窗口并尝试执行 ping 操作的设备的地址范围内的 IP 地址。 在此示例中，TeamIB2 网络的 IP 地址是 172.16.18.30。 查找开头 172.16.18 未使用的 IP 地址。 例如，从命令行中输入"ping 172.16.18.254"。 如果 ping 请求失败，是可用的 IP 地址。  
   
-## <a name="Sec2"></a>步骤 2： 配置客户端服务器上的 InfiniBand 网络适配器设置  
+## <a name="Sec2"></a>步骤 2:在客户端服务器上配置的 InfiniBand 网络适配器设置  
 
 ### <a name="notes"></a>说明  
   
@@ -161,9 +161,9 @@ ms.locfileid: "49169312"
   
 1.  在网络连接窗口中，右键单击其中一个网络插槽 Mellanox 适配器并选择属性。  
   
-2.  单击高级... 按钮。  
+2.  单击高级...按钮。  
   
-3.  在高级 TCP/IP 设置窗口中，如果追加这些 DNS 后缀 （按顺序） 选项并不灰显，复选框称作附加这些 DNS 后缀 （按顺序）:，选择设备域后缀，然后单击添加... 设备域后缀是 `appliance_domain.local`  
+3.  在高级 TCP/IP 设置窗口中，如果追加这些 DNS 后缀 （按顺序） 选项并不灰显，复选框称作附加这些 DNS 后缀 （按顺序）:，选择设备域后缀，然后单击添加...设备域后缀是 `appliance_domain.local`  
   
 4.  如果附加这些 DNS 后缀 （按顺序）： 选项灰显，您可以通过修改注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient APS 域添加到此服务器。  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -18,12 +18,12 @@ ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aebc7d167d03868a05d3b39d57b0af948237459a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051997"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763969"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
   本主题介绍了如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除操作员，使他们不会再收到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报通知。  
@@ -34,7 +34,7 @@ ms.locfileid: "48051997"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除操作员，请使用：**  
   
@@ -70,19 +70,19 @@ ms.locfileid: "48051997"
   
 #### <a name="to-delete-an-operator"></a>删除操作员  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    -- deletes operator 'Test Operator' and reassigns all alerts and jobs sent to that operator to 'François Ajenstat'  
+    -- deletes operator 'Test Operator' and reassigns all alerts and jobs sent to that operator to 'Fran??ois Ajenstat'  
     USE msdb ;  
     GO  
   
     EXEC sp_delete_operator @name = 'Test Operator',  
-        @reassign_to_operator = 'François Ajenstat';  
+        @reassign_to_operator = 'Fran??ois Ajenstat';  
     GO  
     ```  
   

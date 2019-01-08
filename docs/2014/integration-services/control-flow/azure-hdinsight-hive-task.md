@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afphivetask.f1
@@ -14,12 +13,12 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4729cdb4bfb9e2bdef3a8915d808b82453cf87d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef43e6539840e6c5eec68ad4911f72930d28591d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057707"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749489"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive 任务
 使用“Azure HDInsight Hive 任务”  在 Azure HDInsight 群集上运行 Hive 脚本。
@@ -38,8 +37,8 @@ ms.locfileid: "48057707"
   
 5.  可通过两种方法指定要执行的 Hive 脚本：
   
-    1.  **内联脚本**：通过在“输入脚本”对话框中键入要执行的内联脚本来指定“脚本”字段。
+    1.  **嵌入式脚本**:指定**脚本**字段键入内联脚本中执行**输入脚本**对话框。
   
-    2.  **脚本文件**：将脚本文件上传到 Azure Blob 存储，并指定 BlobName 字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
+    2.  **脚本文件**:将脚本文件上传到 Azure Blob 存储，并指定**BlobName**字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
   
      如果同时指定两者，则使用脚本文件并忽略内联脚本。

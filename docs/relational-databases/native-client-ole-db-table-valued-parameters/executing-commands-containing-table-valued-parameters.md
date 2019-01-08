@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d59663690748801432d310f40e751084b6ad3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cce77c4aa7755d7b61830642d337b484e2a92488
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610165"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397510"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>执行包含表值参数的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47610165"
 ## <a name="table-valued-parameter-specification"></a>指定表值参数  
  使用者可以指定表值参数的类型。 此信息包括表值参数的类型名称。 如果连接的当前默认架构中不存在该表值参数的用户定义表类型，则它还包括架构名称。 根据服务器的支持情况，使用者还可以指定可选的元数据信息（如列的排序），以及指定特定列的所有行都具有默认值。  
   
- 若要指定表值参数，使用者调用 ISSCommandWithParamter::SetParameterInfo，并可以选择调用 isscommandwithparameters:: Setparameterproperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE。 ulParamSize 字段设为 ~0 以指示长度是未知的。 可以通过 isscommandwithparameters:: Setparameterproperties 设置特定属性对于表值参数，如架构名称、 类型名称、 列顺序和默认列。  
+ 若要指定表值参数，使用者调用 ISSCommandWithParameter::SetParameterInfo，并可以选择调用 isscommandwithparameters:: Setparameterproperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE。 ulParamSize 字段设为 ~0 以指示长度是未知的。 可以通过 isscommandwithparameters:: Setparameterproperties 设置特定属性对于表值参数，如架构名称、 类型名称、 列顺序和默认列。  
   
 ## <a name="table-valued-parameter-binding"></a>绑定表值参数  
  表值参数可以是任意行集对象。 访问接口在执行期间从该对象中读取数据并将表值参数发送到服务器。  
@@ -47,7 +47,7 @@ ms.locfileid: "47610165"
   
 -   可以使用状态 DBSTATUS_S_DEFAULT 标记表值参数。 有效值只有 DBSTATUS_S_DEFAULT 和 DBSTATUS_S_OK。 当状态设置为 DBSTATUS_S_DEFAULT 时，表值参数的值将对应一个空表。  
   
--   必须使用 SSPROP_PARAM_TABLE_DEFAULT_COLUMNS 属性将表值参数中的只读列（标识列或计算列）标记为采用默认值。 此外，还必须通过 SSPROP_PARAM_TABLE_DEFAULT_COLUMNS 属性将具有默认值的列标记为采用默认值，以允许针对特定表值参数为相应列的数据值使用默认值。 访问接口将忽略为标记为采用默认值的列绑定的数据值。  
+-   必须使用 SSPROP_PARAM_TABLE_DEFAULT_COLUMNS 属性将表值参数中的只读列（标识列或计算列）标记为采用默认值。 此外必须通过 SSPROP_PARAM_TABLE_DEFAULT_COLUMNS 属性以允许要用于为特定的表值参数列的数据值的默认值的默认值为标记为具有默认值的列。 访问接口将忽略为标记为采用默认值的列绑定的数据值。  
   
 -   对于具有 DBPROP_COL_AUTOINCREMENT 或 SSPROP_COL_COMPUTED 的列，数据将发送到服务器，除非还设置了 SSPROP_PARAM_TABLE_DEFAULT。  
   

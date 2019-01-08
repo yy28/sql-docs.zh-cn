@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, modify policies
@@ -13,12 +13,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c91f26c029b9ade0b6f69e18220de458d0c708ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a61e48294d39c955e806b8dd4f127bf8bfec2027
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758149"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>查看或修改基于策略的管理策略的属性
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或修改基于策略的管理策略的属性。  
@@ -27,7 +27,7 @@ ms.locfileid: "48093657"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看或修改策略的属性，请使用：**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48093657"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
-1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 若要深入了解“查看策略 – object_name”对话框中的可用选项息，请参阅[“查看策略”对话框](view-policies-dialog-box.md)。  
+1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[“查看策略”对话框](view-policies-dialog-box.md)。  
   
 2.  完成后，单击“关闭”。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48093657"
   
 #### <a name="to-view-a-policys-properties"></a>查看策略属性  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

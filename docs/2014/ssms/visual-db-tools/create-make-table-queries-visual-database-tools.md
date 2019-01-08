@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -16,12 +16,12 @@ ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b965aa05819d38a5243385da12c081128dec6bf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101167"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771749"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>创建“生成表”查询 (Visual Database Tools)
   可以使用“生成表”查询将行复制到一个新表中，“生成表”查询对创建要使用的数据子集或在数据库之间复制表的内容非常有用。 “生成表”查询与“插入结果”查询类似，但它会创建要向其中复制行的新表。  

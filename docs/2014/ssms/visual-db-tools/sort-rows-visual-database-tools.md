@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2183b8cb96895dc2bbb1308bccd818fb5a04dba5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156097"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768591"
 ---
 # <a name="sort-rows-visual-database-tools"></a>对行进行排序 (Visual Database Tools)
   您可以对查询结果中的行进行排序。 也就是说，可以对特定的列或一组列进行命名，该列或这些列的值决定结果集中行的顺序。  
@@ -89,7 +89,7 @@ ms.locfileid: "48156097"
   
      请注意，该查询将 `state` 用作次要排序列。 因此，如果两个州的作者数相同，则这两个州将按字母顺序显示。  
   
--   **可使用国际数据进行排序** 也就是说，可以使用与该列的默认约定不同的排序约定对列进行排序。 例如，可以编写一个查询，检索 Jaime Patiño 编写的所有书籍名称。 若要按字母顺序显示书籍名称，请对 title 列使用 Spanish 排序顺序。 生成的 SQL 结果可能类似以下形式：  
+-   **可使用国际数据进行排序** 也就是说，可以使用与该列的默认约定不同的排序约定对列进行排序。 例如，可以编写查询检索所有书名的 Jaime Pati??o。 若要按字母顺序显示书籍名称，请对 title 列使用 Spanish 排序顺序。 生成的 SQL 结果可能类似以下形式：  
   
     ```  
     SELECT title  
@@ -105,7 +105,7 @@ ms.locfileid: "48156097"
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

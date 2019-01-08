@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], Queue Reader Agent
@@ -16,12 +15,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f63676830d79bc8ec9c3ffd462e9d836364df159
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9f8db8ba77e913d1ae07b4dc0008650afe311565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236964"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762589"
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
   复制队列读取器代理是一个可执行文件，该文件读取存储在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 队列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 消息队列中的消息，然后将这些消息应用于发布服务器。 队列读取器代理与允许排队更新的快照发布和事务发布一起使用。  
@@ -88,7 +87,7 @@ ms.locfileid: "50236964"
 |**2**|指定使用 SSL，并验证证书。|  
 
  > [!NOTE]  
- >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了使代理才能成功连接时将-EncryptionLevel 设置为 2，本地的 SQL Server 上创建一个别名。 别名参数应为服务器名称和 Server 参数应设置为 SQL Server 的完全限定名称。
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，”Server”参数应设置为 SQL Server 的完全限定名称。
   
  有关详细信息，请参阅[安全性概述（复制）](../security/security-overview-replication.md)。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "50236964"
 ## <a name="remarks"></a>备注  
  若要启动队列读取器代理，请从命令提示符下执行 **qrdrsvc.exe** 。 有关信息，请参阅 [复制代理可执行文件](../concepts/replication-agent-executables-concepts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制代理管理](replication-agent-administration.md)  
   
   

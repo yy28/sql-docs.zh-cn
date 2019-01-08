@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539867"
 ---
 # <a name="general-xquery-use-cases"></a>XQuery 常规使用情况
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51659376"
  下面的查询将从产品目录说明中返回产品型号 ID 和权重（如果它们存在的话）。 该查询将构造如下形式的 XML 内容：  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -61,7 +61,7 @@ WHERE CatalogDescription is not null
   
 -   在 WHERE 子句中， **exist （)** 方法用于查找包含产品目录说明的行。 即，包含 <`ProductDescription`> 元素的 XML。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Product ProductModelID="19"/>  
@@ -95,7 +95,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  对于其目录说明包含前角和小幅图片的产品型号，查询将构造具有以下形式的 XML：  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  
@@ -306,7 +306,7 @@ WHERE CatalogDescription.value('
   
 -   **Value （)** 方法**xml**数据类型将返回的值进行比较**contains （)** 为 1。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 ProductModelID Result        

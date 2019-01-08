@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afppigtask.f1
@@ -14,12 +13,12 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b5f0fb11e7dc5395ddb64d1b68dd8ee96083d16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30340a873846e20911a7f14694f9602c17d960e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152967"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749409"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 任务
 使用 **“Azure HDInsight Pig 任务”** 在 Azure HDInsight 群集上运行 Pig 脚本。
@@ -38,8 +37,8 @@ ms.locfileid: "48152967"
   
 5.  有两种方法可指定要执行的 Pig 脚本：
   
-    1.  **内联脚本**：通过在内联键入要在“输入脚本”对话框中执行的脚本来指定脚本字段。
+    1.  **嵌入式脚本**:指定**脚本**字段键入内联脚本中执行**输入脚本**对话框。
   
-    2.  **脚本文件**：将脚本文件上传到 Azure Blob 存储，并指定 BlobName 字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
+    2.  **脚本文件**:将脚本文件上传到 Azure Blob 存储，并指定**BlobName**字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
   
      如果同时指定两者，则使用脚本文件并忽略内联脚本。

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], reactivating
@@ -18,12 +17,12 @@ ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fb16b3d7cb01f955d8be8de2483807b3f9dc98f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 208f801522e53eb8d8075cced223d2d0360f257b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140397"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762449"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以重新激活以下成员：  
@@ -40,12 +39,12 @@ ms.locfileid: "48140397"
   
  重新激活集合或成员时，将还原以前的所有事务。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您必须具有对 **“版本管理”** 功能区域的权限。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>重新激活成员或集合  
   
@@ -65,8 +64,8 @@ ms.locfileid: "48140397"
   
 ## <a name="see-also"></a>请参阅  
  [停用或通过使用临时过程删除成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
- [删除成员或集合&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [删除成员或集合 (Master Data Services)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

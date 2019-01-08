@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ADO
@@ -15,24 +14,24 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d5f03c184e8df929b29f1e79970024af59ac096
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a3de88bb97246d896df2d30cfd5879baad38893
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757979"
 ---
 # <a name="ado-connection-manager"></a>ADO 连接管理器
   ADO 连接管理器使包可以连接到 ActiveX 数据对象 (ADO) 对象（如记录集）。 此连接管理器通常用于以 Microsoft Visual Basic 6.0 等语言的早期版本编写的自定义任务，或用于从属于使用 ADO 连接到数据源的现有应用程序的自定义任务。  
   
- 当将 ADO 连接管理器添加到包中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器将解析为 ADO 连接在运行时，设置该连接管理器属性，并将该连接管理器添加到`Connections`包的集合。 `ConnectionManagerType`连接管理器属性设置为`ADO`。  
+ 当将 ADO 连接管理器添加到包中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器将解析为 ADO 连接在运行时，设置该连接管理器属性，并将该连接管理器添加到`Connections`包的集合。 该连接管理器的 `ConnectionManagerType` 属性设置为 `ADO`。  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>ADO 连接管理器故障排除  
  ADO 连接管理器在读取数据时，某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期数据类型将生成下表中显示的结果。  
   
 |SQL Server 数据类型|结果|  
 |--------------------------|------------|  
-|`time`, `datetimeoffset`|除非包使用参数化 SQL 命令，否则，包将失败。 若要使用参数化 SQL 命令，请在包中使用执行 SQL 任务。 有关详细信息，请参阅 [执行 SQL 任务](../control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../parameters-and-return-codes-in-the-execute-sql-task.md)。|  
+|`time`， `datetimeoffset`|除非包使用参数化 SQL 命令，否则，包将失败。 若要使用参数化 SQL 命令，请在包中使用执行 SQL 任务。 有关详细信息，请参阅 [执行 SQL 任务](../control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../parameters-and-return-codes-in-the-execute-sql-task.md)。|  
 |`datetime2`|ADO 连接管理器截断毫秒值。|  
   
 > [!NOTE]  
@@ -49,15 +48,15 @@ ms.locfileid: "48054548"
   
 -   指示是否在运行时保留从连接管理器中创建的连接。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
 -   [配置 OLE DB 连接管理器](ole-db-connection-manager.md)  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](integration-services-ssis-connections.md)  
   
   

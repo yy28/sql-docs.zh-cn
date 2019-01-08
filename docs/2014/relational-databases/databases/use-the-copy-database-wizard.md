@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108687"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759109"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
-  通过复制数据库向导，可以方便地将数据库及其对象从一台服务器移动或复制到另一台服务器，而服务器无需停机。 此外可以从以前升级的数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此向导可执行以下操作：  
+  通过复制数据库向导，可以方便地将数据库及其对象从一台服务器移动或复制到另一台服务器，而服务器无需停机。 还可以将数据库从以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此向导可执行以下操作：  
   
 -   选取源服务器和目标服务器。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48108687"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用复制数据库向导：**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48108687"
   
 -   **升级后，请按照，操作：**  
   
-     [在升级 SQL Server 数据库之后](#FollowUp)  
+     [升级 SQL Server 数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -119,10 +118,10 @@ ms.locfileid: "48108687"
      允许用户通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户进行连接。  
   
      **Use SQL Server Authentication**  
-     允许用户通过提供连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证用户名和密码。  
+     允许用户通过提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证用户名和密码进行连接。  
   
      **用户名**  
-     输入连接所使用的用户名。 此选项才可用，如果您已选择使用连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+     输入连接所使用的用户名。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接时，此选项才可用。  
   
      **密码**  
      输入登录名的密码。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接时，此选项才可用。  
@@ -142,13 +141,13 @@ ms.locfileid: "48108687"
      允许用户通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户进行连接。  
   
      **Use SQL Server Authentication**  
-     允许用户通过提供连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证用户名和密码。  
+     允许用户通过提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证用户名和密码进行连接。  
   
      **用户名**  
-     输入连接所使用的用户名。 此选项才可用，如果选择了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+     输入连接所使用的用户名。 只有选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，此选项才可用。  
   
      **密码**  
-     输入登录名的密码。 此选项才可用，如果选择了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+     输入登录名的密码。 只有选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，此选项才可用。  
   
      **Next**  
      连接到服务器并验证用户。 此过程检查用户是否对所选计算机拥有上述权限。  
@@ -184,7 +183,7 @@ ms.locfileid: "48108687"
      **“状态”**  
      显示**确定**如果可以移动该数据库。 否则将显示无法移动该数据库的原因。  
   
-     **“刷新”**  
+     **刷新**  
      刷新数据库列表。  
   
      **Next**  
@@ -218,7 +217,7 @@ ms.locfileid: "48108687"
      **SSIS 包**  
      包括源数据库中定义的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包。  
   
-     **Description**  
+     **说明**  
      对象的说明。  
   
 8.  从 **“源数据库文件的位置”** 页，指定源服务器上包含数据库文件的文件系统共享。 如果源服务器实例和目标服务器实例位于不同的计算机上，这是必需的。  
@@ -229,20 +228,20 @@ ms.locfileid: "48108687"
      **文件夹位置**  
      指定文件系统上源数据库文件所在的位置。  
   
-     例如：C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
+     例如：C:\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\DATA  
   
      **源服务器上的文件共享**  
      指定源数据库文件的位置作为文件共享的路径。  
   
      例如:"\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\Data  
   
-9. 复制数据库向导将创建[!INCLUDE[ssIS](../../includes/ssis-md.md)]包以传输中的数据库**将包配置**页上，如果相应自定义的包。  
+9. 复制数据库向导将创建一个要传输数据库的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包。从 **“配置包”** 页，对包进行自定义（如果适用）。  
   
      **包位置**  
-     显示 where[!INCLUDE[ssIS](../../includes/ssis-md.md)]包的写入。  
+     显示 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的写入位置。  
   
      **包名称**  
-     输入的名称[!INCLUDE[ssIS](../../includes/ssis-md.md)]包。  
+     输入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的名称。  
   
      **日志记录选项**  
      选择是将日志记录信息存储在 Windows 事件日志中还是文本文件中。  
@@ -250,7 +249,7 @@ ms.locfileid: "48108687"
      **错误日志文件路径**  
      提供日志文件位置的路径。 只有在选择了文本文件日志记录选项后，才能使用此选项。  
   
-10. 从 **“安排运行包”** 页，指定希望何时启动移动操作或复制操作。 如果你不是系统管理员，你必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有权访问的代理的代理帐户[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 包执行子系统。  
+10. 从 **“安排运行包”** 页，指定希望何时启动移动操作或复制操作。 如果您不是系统管理员，必须指定有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSIS) 包执行子系统的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理的代理帐户。  
   
      **Run immediately**  
      启动移动或复制操作，在单击后**下一步**。  

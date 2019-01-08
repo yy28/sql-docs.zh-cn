@@ -10,12 +10,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a80190c7a10ade3994fb9e12690b64b2e0e1b4df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 493f0b885f25cfba956fc8e03505b705c731cf2b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124067"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413854"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>设置 SQL Server 托管备份到 Windows Azure
   本主题包括两个教程：  
@@ -28,7 +28,7 @@ ms.locfileid: "48124067"
   
 ## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-a-database"></a>启用并配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]数据库  
+### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-a-database"></a>为数据库启用和配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  本教程首先介绍为数据库 (TestDB) 启用和配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所需的步骤，然后介绍允许监视 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]运行状况的步骤。  
   
  **权限：**  
@@ -46,13 +46,13 @@ ms.locfileid: "48124067"
     - SQL Server 2014 将页 blob，这不同于块 blob 和追加 blob。 因此必须创建常规用途帐户，而非 blob 帐户。 有关详细信息，请参阅[关于 Azure 存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。
     - 请记录存储帐户名称和访问密钥。 存储帐户名称和访问密钥用于创建 SQL 凭据。 SQL 凭据用于对存储帐户进行身份验证。  
  
-2.  **创建 SQL 凭据：** 创建 SQL 凭据使用的存储帐户的名称作为标识和存储访问密钥作为密码。  
+2.  **创建 SQL 凭据：** 使用存储帐户的名称作为标识并使用存储访问密码作为密码创建 SQL 凭据。  
   
-3.  **请确保 SQL Server 代理服务已启动且正在运行：** 启动 SQL Server 代理如果当前未运行。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
+3.  **确保 SQL Server 代理服务已启动且正在运行：** 如果当前未运行，请启动 SQL Server 代理。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
   
-4.  **确定保持期：** 确定备份文件的保持期。 以天为单位指定保持期，范围可为 1 到 30。  
+4.  **确定保持期：** 确定备份文件的保留期。 以天为单位指定保持期，范围可为 1 到 30。  
   
-5.  **启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** 启动 SQL Server Management Studio 并连接到安装了数据库的实例。 在根据要求修改数据库名称、SQL 凭据、保持期和加密选项的值后，从查询窗口中运行以下语句：  
+5.  **启用并配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** 启动 SQL Server Management Studio 并连接到安装了数据库的实例。 在根据要求修改数据库名称、SQL 凭据、保持期和加密选项的值后，从查询窗口中运行以下语句：  
   
      创建用于加密的证书的详细信息，请参阅**创建备份证书**中的步骤[Create an Encrypted Backup](create-an-encrypted-backup.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48124067"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 数据库上的备份操作最多可能需要 15 分钟才能运行。  
   
-6.  **检查扩展事件默认配置：** 通过运行以下 transact-SQL 语句，检查扩展事件配置。  
+6.  **检查扩展的事件默认配置：** 通过运行以下 transact-SQL 语句，检查扩展事件设置。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -87,7 +87,7 @@ ms.locfileid: "48124067"
   
     2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 Transact-SQL 语句：  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 在查询窗口中，运行以下 Transact-SQL 语句：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -98,9 +98,9 @@ ms.locfileid: "48124067"
   
          有关详细信息和完整的示例脚本请参阅[监视器 SQL Server 托管备份到 Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
   
-8.  **在 Microsoft Azure 存储帐户中查看备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户中连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库。 您也会在为数据库启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 15 分钟内，看到数据库和日志备份。  
+8.  **查看 Microsoft Azure 存储帐户中的备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库。 您也会在为数据库启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 15 分钟内，看到数据库和日志备份。  
   
-9. **监视运行状态：**  你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+9. **监视运行状况状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
     ```  
     --  view all admin events  
@@ -165,13 +165,13 @@ ms.locfileid: "48124067"
     - SQL Server 2014 将页 blob，这不同于块 blob 和追加 blob。 因此必须创建常规用途帐户，而非 blob 帐户。 有关详细信息，请参阅[关于 Azure 存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。
     - 请记录存储帐户名称和访问密钥。 存储帐户名称和访问密钥用于创建 SQL 凭据。 SQL 凭据用于对存储帐户进行身份验证。  
   
-2.  **创建 SQL 凭据：** 创建 SQL 凭据使用的存储帐户的名称作为标识和存储访问密钥作为密码。  
+2.  **创建 SQL 凭据：** 使用存储帐户的名称作为标识并使用存储访问密码作为密码创建 SQL 凭据。  
   
-3.  **确保 SQL Server 代理服务启动且正在运行：** 如果当前未运行 SQL Server 代理，则启动它。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
+3.  **确保 SQL Server 代理服务已启动且正在运行：** 如果当前未运行，请启动 SQL Server 代理。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
   
-4.  **确定保持期：** 确定备份文件的保持期。 以天为单位指定保持期，范围可为 1 到 30。 在实例级别使用默认值启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 后，此后创建的所有新数据库将继承这些设置。 只会支持和自动配置设置为完整或大容量日志恢复模式的数据库。 如果您不想配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，您可以随时为特定数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 还可通过在数据库级别配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，更改特定数据库的配置。  
+4.  **确定保持期：** 确定备份文件的保留期。 以天为单位指定保持期，范围可为 1 到 30。 在实例级别使用默认值启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 后，此后创建的所有新数据库将继承这些设置。 只会支持和自动配置设置为完整或大容量日志恢复模式的数据库。 如果您不想配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，您可以随时为特定数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 还可通过在数据库级别配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，更改特定数据库的配置。  
   
-5.  **启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** 启动 SQL Server Management Studio 并连接到 SQL Server 的实例。 在根据要求修改数据库名称、 SQL 凭据、 保持期和加密选项的值后，请从查询窗口运行以下语句：  
+5.  **启用并配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** 启动 SQL Server Management Studio 并连接到 SQL Server 实例。 在根据要求修改数据库名称、 SQL 凭据、 保持期和加密选项的值后，请从查询窗口运行以下语句：  
   
      创建用于加密的证书的详细信息，请参阅**创建备份证书**中的步骤[Create an Encrypted Backup](create-an-encrypted-backup.md)。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "48124067"
   
     2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 Transact-SQL 语句：  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 在查询窗口中，运行以下 Transact-SQL 语句：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -227,9 +227,9 @@ ms.locfileid: "48124067"
   
          有关如何监视，以及完整的示例脚本的详细信息请参阅[监视器 SQL Server 托管备份到 Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
   
-9. **在 Microsoft Azure 存储帐户中查看备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户中连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库。 您也会在创建新数据库 15 分钟内，看到数据库和日志备份。  
+9. **查看 Microsoft Azure 存储帐户中的备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库。 您也会在创建新数据库 15 分钟内，看到数据库和日志备份。  
   
-10. **监视运行状态：**  你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+10. **监视运行状况状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
     ```  
     --  view all admin events  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [SQL Server], queries
@@ -16,12 +15,12 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4d215a40cce00c3cb5d1ea8293506961520fa1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 185ad6db579052c127c73c1770283e877174ab31
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072437"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640069"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>配置每次查询占用的最小内存服务器配置选项
   本主题介绍如何配置`min memory per query`中的服务器配置选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `min memory per query`选项指定的最小内存 （以千字节为单位），将分配给查询的执行量。 例如，如果`min memory per query`设置为 2048 KB，则查询保证将至少获取那么多的总内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
@@ -34,7 +33,7 @@ ms.locfileid: "48072437"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要配置每次查询占用的最小内存选项，请使用：**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48072437"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置每次查询占用的最小内存选项之后](#FollowUp)  
+-   **跟进：**[配置 min memory per query 选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -95,7 +94,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在配置每次查询占用的最小内存选项之后  
+##  <a name="FollowUp"></a> 跟进：配置 min memory per query 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>请参阅  

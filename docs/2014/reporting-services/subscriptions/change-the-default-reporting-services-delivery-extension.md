@@ -13,19 +13,19 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 054d67de8b05d7f3b913ade660902c764cab9b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f80f6a86e8a73241ee681719c684bf2ba39e02
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206827"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394711"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>更改默认 Reporting Services 传递扩展插件
   你可以通过修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置设置，来更改显示在订阅定义页的“传递方式”  列表中的默认传递扩展插件。 例如，你可以修改该配置，以便在用户创建新订阅时，文件共享传递（而非电子邮件传递）默认处于选中状态。 你还可以更改传递扩展插件在用户界面中的排列顺序。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括电子邮件和 Windows 文件共享传递扩展插件。 如果您部署了自定义扩展插件或第三方扩展插件来支持自定义传递，则报表服务器可能具有其他传递扩展插件。 传递扩展插件的可用性取决于它是否在报表服务器上进行了部署。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 同时包含“电子邮件”和“Windows 文件共享”这两种传递扩展插件。 如果您部署了自定义扩展插件或第三方扩展插件来支持自定义传递，则报表服务器可能具有其他传递扩展插件。 传递扩展插件的可用性取决于它是否在报表服务器上进行了部署。  
   
 ## <a name="default-native-mode-report-server-configuration"></a>默认的本机模式报表服务器配置  
  报表管理器的“传递方式”  列表中传递扩展插件的显示顺序取决于 **RSReportServer.config** 文件中传递扩展插件项的顺序。 例如，下图显示列表中最先显示的是“电子邮件”，并且它默认处于选中状态。  
@@ -52,7 +52,7 @@ ms.locfileid: "48206827"
   
 1.  此过程中的步骤可用于修改该配置，以便“文件共享传递”可作为第一个选项列在 UI 中，并默认处于选中状态。  
   
-     在文本编辑器中打开 RSReportServer.config 文件。 有关配置文件的详细信息，请参阅[RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)。 更改该配置后，UI 的外观将类似于下图：  
+     在文本编辑器中打开 RSReportServer.config 文件。 有关配置文件的详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。 更改该配置后，UI 的外观将类似于下图：  
   
      ![修改后的传递扩展插件的列表](../media/ssrs-modified-delivery.png "modified list of delivery extensions")  
   
@@ -86,26 +86,26 @@ ms.locfileid: "48206827"
   
      读取配置文件时，以下事件将被写入 Windows 事件日志中。  
   
-     **事件 ID：** 109  
+     **事件 ID:** 109  
   
      **源：** 报表服务器 Windows 服务（实例名称）  
   
      已修改 RSReportServer.config 文件  
   
 ## <a name="sharepoint-mode-report-servers"></a>SharePoint 模式报表服务器  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式下在 SharePoint 服务应用程序数据库并不是非 RsrReportServer.config 文件中存储扩展信息。 在 SharePoint 模式下，传递扩展插件配置将使用 PowerShell 进行修改。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式会将扩展插件信息存储在 SharePoint 服务应用程序数据库中，而非 RsrReportServer.config 文件中。 在 SharePoint 模式下，传递扩展插件配置将使用 PowerShell 进行修改。  
   
 #### <a name="configure-the-default-delivery-extension"></a>配置默认传递扩展插件  
   
 1.  打开“SharePoint Management Shell” 。  
   
-2.  如果您已经知道的名称，可以跳过此步骤中你[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]服务应用程序。 使用以下列表对 PowerShell[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]服务在 SharePoint 场中的应用程序。  
+2.  如果你已经知道 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序的名称，则可以跳过此步骤。 使用以下 PowerShell，将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序列在 SharePoint 场中。  
   
     ```  
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  运行以下 PowerShell，若要验证的当前默认传递扩展插件[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]服务应用程序"ssrsapp"。  
+3.  运行以下 PowerShell，验证 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序“ssrsapp”的当前默认传递扩展插件。  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  

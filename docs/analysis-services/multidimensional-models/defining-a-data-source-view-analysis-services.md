@@ -1,5 +1,5 @@
 ---
-title: 定义数据源视图 (Analysis Services) |Microsoft 文档
+title: 定义数据源视图 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025844"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523105"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  数据源视图包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据库对象（即多维数据集、维度和挖掘结构）使用的架构的逻辑模型。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  
+  数据源视图包含使用的架构的逻辑模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据库对象即多维数据集、 维度和挖掘结构。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  
   
 -   包含表示一个或多个基础数据源中选定对象的元数据，或者包含在您按照自上而下方法生成架构时将用于生成基础关系数据存储的元数据。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34025844"
   
 4.  **筛选可用对象**  
   
-     如果可用对象列表包含大量对象，您可以通过应用一个简单的筛选器（指定字符串作为选择条件）减小列表。 例如，如果键入 **dbo** 并单击 **“筛选器”** 按钮，则 **“可用对象”** 列表中只显示以“dbo”开头的那些项。 该筛选器可以为部分字符串（例如，“sal”返回销售额和薪金），但它不能包含多个字符串或运算符。  
+     如果可用对象列表包含大量对象，您可以通过应用一个简单的筛选器（指定字符串作为选择条件）减小列表。 例如，如果键入 **dbo** 并单击 **“筛选器”** 按钮，则 **“可用对象”** 列表中只显示以“dbo”开头的那些项。 筛选器可以是部分字符串 （例如，"sal"返回销售额和薪金），但它不能包含多个字符串或运算符。  
   
 5.  对于未定义表关系的关系数据源，将显示 **“名称匹配”** 页，以便您可以选择相应的名称匹配方法。 有关详细信息，参阅本主题中的 [指定关系的名称匹配条件](#bkmk_NameMatch) 部分。  
   
@@ -125,15 +125,15 @@ ms.locfileid: "34025844"
 > [!NOTE]  
 >  完成数据源视图向导后，可以在数据源视图设计器的架构窗格中添加或删除关系。 有关详细信息，请参阅[在数据源视图中定义逻辑关系 (Analysis Services)](../../analysis-services/multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在数据源视图中添加或删除表或视图 (Analysis Services)](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [在数据源视图中定义逻辑主键&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [在数据源视图中定义命名的计算&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [数据源视图中定义命名的查询&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [替换表或数据源视图中的命名的查询&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [使用数据源视图设计器 & #40; 中的关系图Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [浏览数据源视图中的数据&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [删除数据源视图&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [在数据源视图中定义逻辑主键 (Analysis Services)](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [在数据源视图中定义命名计算 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [在数据源视图中定义命名查询 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [在数据源视图中替换表或命名查询 (Analysis Services)](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [使用数据源视图设计器中的关系图 (Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [在数据源视图中浏览数据 (Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [删除数据源视图 (Analysis Services)](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [刷新数据源视图中的架构 (Analysis Services)](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

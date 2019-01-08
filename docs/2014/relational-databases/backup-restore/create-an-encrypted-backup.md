@@ -10,12 +10,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7fcfdf8a6d25d950970952d9f5dec93a523dc37f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531851"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
   本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  
@@ -29,7 +29,7 @@ ms.locfileid: "48205627"
   
  按照以下步骤向本地磁盘创建数据库的加密备份。 本例使用一个名为 MyTestDB 的用户数据库。  
   
-1.  **创建 master 数据库的数据库主密钥：** 选择一个密码，用于加密将存储在数据库中的主密钥的副本。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+1.  **创建 master 数据库的数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
   
     ```  
     -- Creates a database master key.   
@@ -76,19 +76,19 @@ ms.locfileid: "48205627"
   
  **先决条件：**  
   
--   Windows 存储帐户和容器。 有关详细信息，请参阅 [Lesson 1: Create Windows Azure Storage Objects](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)列中的一个值匹配。  
+-   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Windows Azure 存储对象](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)。  
   
 -   master 数据库的数据库主密钥以及 SQL Server 实例上的证书或非对称密钥。 有关加密要求和权限，请参阅 [Backup Encryption](backup-encryption.md)。  
   
-1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，请连接到数据库引擎，打开新查询窗口并复制和粘贴到下例，然后单击 **“执行”**。  
+1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，连接到数据库引擎、 打开新查询窗口中，并复制并粘贴下面的示例然后单击**Execute**。  
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account    
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account    
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **创建数据库主密钥：** 选择一个密码，用于加密将存储在数据库中的主密钥的副本。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+2.  **创建数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
   
     ```  
     -- Creates a database master key.  
@@ -117,7 +117,7 @@ ms.locfileid: "48205627"
     BACKUP DATABASE [MyTestDB]  
     TO URL = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
-      CREDENTIAL 'mycredential' – this is the name of the credential created in the first step.  
+      CREDENTIAL 'mycredential' - this is the name of the credential created in the first step.  
       ,COMPRESSION  
       ,ENCRYPTION   
        (  

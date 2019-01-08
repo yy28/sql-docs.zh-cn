@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.generatechangescript
@@ -13,12 +13,12 @@ ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fab36387f9eac719190186d3257dc3426677bf96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b04ab7f3327d8be4764b47c91fdc88d7a92f00b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773579"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>“保存更改脚本”对话框 (Visual Database Tools)
   此对话框可显示您在上次保存表以后所做更改的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 使用该对话框还可以将脚本保存到位于所选位置的文本文件中。  

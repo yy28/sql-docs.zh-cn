@@ -15,12 +15,12 @@ ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4f4831bb8ab288e2dcdf2770936084d0492a91e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbee38fc49361f8a4350467a0813ffcb9c483533
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085329"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506459"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>维度处理目标编辑器（“高级”页）
   可以使用 **“维度处理目标编辑器”** 对话框中的 **“高级”** 页配置错误处理方式。  
@@ -93,14 +93,14 @@ ms.locfileid: "48085329"
 |**ReportAndStop**|报告错误并停止处理。|  
   
  **错误日志路径**  
- 键入错误日志的路径，或单击“浏览 (...)”按钮以选择目标。  
+ 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标。  
   
  **浏览(...)**  
  选择错误日志的路径。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [维度处理目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [维度处理目标编辑器&#40;映射页&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
+ [维度处理目标编辑器（“连接管理器”页）](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
+ [维度处理目标编辑器（“映射”页）](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43c1286077b940516ca849fb3ad7ec847ba04ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50063c63ce7e541e997f23a4995620dc6d003823
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153655"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517124"
 ---
 # <a name="load-xml-data"></a>加载 XML 数据
   您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。 例如：  
@@ -27,12 +27,12 @@ ms.locfileid: "48153655"
   
 -   您可以使用 bcp out 将数据从其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中大容量复制出来，然后再使用 bcp in 将数据大容量插入到更高版本的数据库中。  
   
--   如果您的数据在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的关系列中，则可以创建一个包含 [n]text 列的表，也可选择包含一个主键列来放置行标识符。 使用客户端编程检索在服务器中使用 FOR XML 生成的 XML，并将其写入`[n]text`列。 然后，使用上面提到的方法将数据传输到更高版本的数据库中。 您可以选择将 XML 直接写入更高版本数据库中的 XML 列。  
+-   如果您的数据在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的关系列中，则可以创建一个包含 [n]text 列的表，也可选择包含一个主键列来放置行标识符。 使用客户端编程检索在服务器中使用 FOR XML 生成的 XML，并将其写入 `[n]text` 列。 然后，使用上面提到的方法将数据传输到更高版本的数据库中。 您可以选择将 XML 直接写入更高版本数据库中的 XML 列。  
   
 ## <a name="bulk-loading-xml-data"></a>大容量加载 XML 数据  
  可以通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的大容量加载功能（如 bcp）将 XML 数据大容量加载到服务器中。 通过使用 OPENROWSET 可以将文件中的数据加载到 XML 列中。 以下示例说明了这一点。  
   
-##### <a name="example-loading-xml-from-files"></a>示例：从文件中加载 XML  
+##### <a name="example-loading-xml-from-files"></a>例如：从文件加载 XML  
  此示例显示了如何在表 T 中插入行。从文件 C:\MyFile\xmlfile.xml 中将 XML 列的值作为 CLOB 加载，并为整数列提供了值 10。  
   
 ```  
@@ -50,10 +50,10 @@ FROM    (SELECT *
   
 -   如果由于源代码页的原因，编码不是 Unicode 而是隐式的，则数据库中的字符串代码页应与要加载的码位相同或与其兼容。 如果需要，请使用 COLLATE。 如果不存在这样的服务器代码页，则必须添加使用正确编码的显式 XML 声明。  
   
--   若要使用显式编码，请使用`varbinary()`类型，它具有不与代码页交互或使用相应的代码页的字符串类型。 然后，将数据赋给 XML 列、变量或参数。  
+-   若要使用显式编码，请使用不与代码页交互的 `varbinary()` 类型，或使用相应代码页的字符串类型。 然后，将数据赋给 XML 列、变量或参数。  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>示例：显式指定编码  
- 假定您的 XML 文档和 vcdoc 存储为不具有显式 XML 声明的 `varchar(max)`。 以下语句添加了带有编码"iso8859-1"的 XML 声明，连接了 XML 文档，将结果转换为`varbinary(max)`以便字节表示形式被保留，然后最终将它转换为 XML。 这样，XML 处理器就可以根据指定的编码“iso8859-1”分析数据，并为字符串值生成相应的 UTF-16 表示形式。  
+### <a name="example-explicitly-specifying-an-encoding"></a>例如：显式指定编码  
+ 假定您的 XML 文档和 vcdoc 存储为不具有显式 XML 声明的 `varchar(max)`。 下面的语句添加了带有编码“iso8859-1”的 XML 声明，连接了 XML 文档，然后将结果转换为 `varbinary(max)`，以便保留字节表示形式并最终将它转换为 XML。 这样，XML 处理器就可以根据指定的编码“iso8859-1”分析数据，并为字符串值生成相应的 UTF-16 表示形式。  
   
 ```  
 SELECT CAST(   
@@ -66,7 +66,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
-  <xsd:schema …  
+  <xsd:schema ...  
 ```  
   
  然后，应包含 N 以使 XML 实例成为 Unicode 实例。 例如：  
@@ -74,11 +74,11 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
 -- Assign XML instance to a variable.  
 DECLARE @X XML  
-SET @X = N'…'  
+SET @X = N'...'  
 -- Insert XML instance into an xml type column.  
-INSERT INTO T VALUES (N'…')  
+INSERT INTO T VALUES (N'...')  
 -- Create an XML schema collection  
-CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
+CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
 ## <a name="see-also"></a>请参阅  

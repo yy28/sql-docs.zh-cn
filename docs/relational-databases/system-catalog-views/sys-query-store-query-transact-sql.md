@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_query (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7fc3462eae5ca53d1c1b0b2ef4ad65c9579569e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726785"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711848"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含有关查询和其关联的整体聚合运行时执行统计信息的信息。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47726785"
 |**batch_sql_handle**|**varbinary(64)**|查询变量的语句批处理的 ID 是的一部分。 仅当查询引用临时表或表变量时，才填充。|  
 |**query_hash**|**binary(8)**|MD5 哈希值的单个查询，基于逻辑查询树。 包含优化器提示。|  
 |**is_internal_query**|**bit**|查询是在内部生成的。|  
-|**query_parameterization_type**|**tinyint**|参数化的类型：<br /><br /> 0 – 无<br /><br /> 1 – 用户<br /><br /> 2 – 简单<br /><br /> 3 – 强制|  
+|**query_parameterization_type**|**tinyint**|参数化的类型：<br /><br /> 0-无<br /><br /> 1-用户<br /><br /> 2-简单<br /><br /> 3-强制|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|参数化类型的文本说明。|  
 |**initial_compile_start_time**|**datetimeoffset**|编译开始时间。|  
 |**last_compile_start_time**|**datetimeoffset**|编译开始时间。|  
@@ -67,7 +67,7 @@ ms.locfileid: "47726785"
 |**max_compile_memory_kb**|**bigint**|编译内存统计信息。|  
 |**is_clouddb_internal_query**|**bit**|始终为 0 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在本地。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW DATABASE STATE**权限。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -15,12 +14,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077687"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774909"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为非 SQL Server 订阅服务器创建订阅。 事务复制和快照复制支持向非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器发布数据。 有关支持的订阅服务器平台的信息，请参阅 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)中为非 SQL Server 订阅服务器创建订阅。  
@@ -97,7 +96,7 @@ ms.locfileid: "48077687"
   
     -   对于 IBM DB2，该数据库是在 DB2 连接字符串的“初始目录”  属性中指定的，DB2 连接字符串可以在此过程后面介绍的 **“其他连接选项”** 字段中输入。  
   
-8.  在 **“分发代理安全性”** 页上，单击订阅服务器旁边的属性按钮 (**...**) 来打开 **“分发代理安全性”** 对话框。  
+8.  在“分发代理安全性”页上，单击订阅服务器旁边的属性按钮 (...) 来打开“分发代理安全性”对话框。  
   
 9. 在 **“分发代理安全性”** 对话框中：  
   
@@ -154,12 +153,12 @@ ms.locfileid: "48077687"
   
 2.  在发布服务器的发布数据库中，通过执行 [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) 验证发布是否支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
   
-    -   如果的值`enabled_for_het_sub`为 1，非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持订阅服务器。  
+    -   如果 `enabled_for_het_sub` 的值为 1，则支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
   
     -   如果的值`enabled_for_het_sub`为 0，执行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，并指定`enabled_for_het_sub`有关**@property**并`true`为**@value**.  
   
         > [!NOTE]  
-        >  在更改之前`enabled_for_het_sub`到`true`，必须删除对发布的任何现有订阅。 当发布还支持更新订阅时，无法将 `enabled_for_het_sub` 设置为 `true`。 更改 `enabled_for_het_sub` 将影响其他发布属性。 有关详细信息，请参阅 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
+        >  在将 `enabled_for_het_sub` 更改为 `true` 之前，必须删除发布的任何现有订阅。 当发布还支持更新订阅时，无法将 `enabled_for_het_sub` 设置为 `true`。 更改 `enabled_for_het_sub` 将影响其他发布属性。 有关详细信息，请参阅 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**、 **@subscriber**、 **“订阅数据库”** @property **@destination_db**、 **@subscription_type** @property **@subscription_type**和 **@subscriber_type** 的值 3（指定 OLE DB 访问接口）。  
   

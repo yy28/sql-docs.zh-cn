@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
@@ -14,15 +13,15 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bd5b0c92a1f4b089d86660af0766686708c1a06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 991b65c5a0b9ef78811bd1dbc543ffb9c4ad0e31
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183837"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774139"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
-  Azure HDInsight 连接管理器使一个 SSIS 包来使用你指定的值的属性连接到 Azure 订阅： Azure 订阅 ID 和管理证书。  
+  Azure HDInsight 连接管理器使一个 SSIS 包来使用你指定的值的属性连接到 Azure 订阅：Azure 订阅 ID 和管理证书。  
   
 1.  在如上所示的“添加 SSIS 连接管理器”  对话框中，选择“Azure 订阅” ，然后单击“添加” 。  你应该会看到  “Azure 订阅连接管理器编辑器”对话框。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "48183837"
   
 3.  从下拉列表中选择“管理证书存储位置”和“管理证书存储名称”。  
   
-4.  输入**管理证书指纹**或单击“浏览...” “浏览…”，从所选存储中选择一个证书。 必须将证书作为订阅的管理证书上载。 为此，请在以下 Azure 门户页上单击“上传”（请参阅这篇 [MSDN 帖子](https://msdn.microsoft.com/library/azure/gg551722.aspx)以了解详细信息）。  
+4.  输入“管理证书指纹”或单击“浏览…”，从所选存储中选择一个证书。 必须将证书作为订阅的管理证书上载。 为此，请在以下 Azure 门户页上单击“上传”（请参阅这篇 [MSDN 帖子](https://msdn.microsoft.com/library/azure/gg551722.aspx)以了解详细信息）。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

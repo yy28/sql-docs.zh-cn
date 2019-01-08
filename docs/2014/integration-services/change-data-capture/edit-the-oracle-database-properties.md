@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraProp
@@ -13,12 +12,12 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88cd66ceeacaec3a3e3d167c9ca073cbe1007b64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfc119c031f0eeb84317cd1bcd8250f8ab803b6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770859"
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
   使用属性编辑器中的“Oracle”选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
@@ -28,7 +27,7 @@ ms.locfileid: "48079497"
  **名称**  
  在新建实例向导的“创建 CDC 数据库”页中输入的 CDC 实例的名称。 此字段是只读的，不能编辑此信息。  
   
- **Description**  
+ **说明**  
  您可以编辑新实例的说明或者添加说明（如果您在创建 CDC 实例时未添加说明）。  
   
  **Oracle 连接字符串**  
@@ -37,9 +36,9 @@ ms.locfileid: "48079497"
  **Oracle 日志挖掘身份验证**  
  若要为包含日志挖掘器的 Oracle 数据库输入身份验证凭据，请在“身份验证”下选择以下选项之一：  
   
--   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
+-   **Windows 身份验证**:选择此选项可将当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在您连接到的 Oracle 数据库中为用户键入 **“用户名”** 和 **“密码”** 。  
+-   **Oracle 身份验证**:如果选择此选项，则必须键入**用户名**并**密码**为要连接到 Oracle 数据库中的用户。  
   
  您可以在查看器中查看 Oracle 数据库属性。 在使用查看器时，信息是只读的。 查看器还在表中包括捕获列的列表。 有关如何访问查看器的信息，请参阅 [How to Manage a CDC Instance](manage-a-cdc-instance.md)。  
   

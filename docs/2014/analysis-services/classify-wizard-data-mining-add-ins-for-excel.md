@@ -14,12 +14,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419678"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>分类向导（Excel 数据挖掘外接程序）
   ![数据挖掘功能区中的分类向导](media/dmc-classify.gif "数据挖掘功能区中的分类向导")  
@@ -34,7 +34,7 @@ ms.locfileid: "48094117"
   
 2.  在中**选择源数据**页上，选择要分析的数据。  
   
-     此向导支持多种数据：Excel 表、Excel 区域和外部数据源。 对于外部数据，可以将其添加到 Excel 中，也可以在 Analysis Services 数据源中选择一组表或视图。 还可以添加表并更改列以创建临时数据源。  
+     此向导支持多个类型的数据：Excel 表、 Excel 区域和外部数据源。 对于外部数据，可以将其添加到 Excel 中，也可以在 Analysis Services 数据源中选择一组表或视图。 还可以添加表并更改列以创建临时数据源。  
   
 3.  上**分类**页上，选择你想要分类的列。  
   

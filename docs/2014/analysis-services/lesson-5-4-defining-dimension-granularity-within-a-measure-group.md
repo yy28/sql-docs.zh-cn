@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512293"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>定义度量值组中的维度粒度
   用户可能需要针对不同目的定义不同粒度或专一性的事实数据表维度。 例如，分销商或 Internet 销售的销售额数据可以每天记录一次，而销售配额信息则可能按月或按季度级别来记录。 在这些情况下，用户可能需要时间维度针对这些不同的事实数据表具有不同的粒度或详细程度。 尽管可以将新的数据库维度定义为具有这种不同粒度的时间维度，但 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供了更简单的方法。  
@@ -127,7 +127,7 @@ ms.locfileid: "49460922"
   
      请注意，**员工**并`Date`多维数据集维度链接到**销售 Quotasand 销售配额 1**度量值组通过常规关系。 另外注意，“销售区域”多维数据集维度未链接到这些度量值组中的任何一组。  
   
-4.  单击的交叉处的单元格**Sales Territory**维度和`Sales Quotas`度量值组，然后单击浏览按钮 (**...**). 将打开“定义关系”对话框。  
+4.  单击的交叉处的单元格**Sales Territory**维度和`Sales Quotas`度量值组，然后单击浏览按钮 (**...**).将打开“定义关系”对话框。  
   
 5.  在“选择关系类型”列表中，选择“被引用的”。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "49460922"
   
 10. 单击“确定” 。  
   
-11. 单击“销售区域”维度和“销售配额 1”度量值组相交处的单元，然后单击浏览按钮 (**…**)。 将打开“定义关系”对话框。  
+11. 单击的交叉处的单元格**Sales Territory**维度和**销售配额 1**度量值组，然后单击浏览按钮 (**...**).将打开“定义关系”对话框。  
   
 12. 在“选择关系类型”列表中，选择“被引用的”。  
   

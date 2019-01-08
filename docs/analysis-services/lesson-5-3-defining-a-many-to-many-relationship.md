@@ -1,5 +1,5 @@
 ---
-title: 定义多对多关系 |Microsoft 文档
+title: 定义多对多关系 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019624"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518024"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lesson 5-3-定义多对多关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34019624"
 利用多对多维度，可通过不同方式对值进行合计，这意味着这些值不能对“所有”成员多次聚合。  
   
 > [!NOTE]  
-> 为支持多对多维度关系，必须在数据源视图中在所涉及的所有表之间定义主键–外键关系。 否则，在“多维数据集设计器”的“维度用法”选项卡中建立关系时，无法选择正确的中间度量值组。  
+> 为了支持多对多维度关系，必须在所涉及的所有表之间的数据源视图中定义主键-外键关系。 否则，在“多维数据集设计器”的“维度用法”选项卡中建立关系时，无法选择正确的中间度量值组。  
   
 有关详细信息，请参阅[维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定义多对多关系和多对多关系属性](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34019624"
   
 5.  在“添加/删除表”对话框中，将 **DimSalesReason** 表和 **FactInternetSalesReason** 表添加到“包含的对象”列表中，然后单击“确定”。  
   
-    注意，由于在基础关系数据库中定义了所涉及的这些表之间的主键–外键关系，因此这里将自动建立这些关系。 如果未在基础关系数据库中定义这些关系，则必须在数据源视图中对其进行定义。  
+    请注意，自动建立所涉及的表之间的主键-外键关系因为基础关系数据库中定义这些关系。 如果未在基础关系数据库中定义这些关系，则必须在数据源视图中对其进行定义。  
   
 6.  在“格式”菜单上，指向“自动布局”，再单击“关系图”。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019624"
   
     您会看到对于每个订单内的每个行号，均有一个键值标识采购该行中项的销售原因，如下图所示。  
   
-    ![密钥值来标识为购买的销售原因](../analysis-services/media/l5-many-to-many-1.gif "密钥值来标识为购买的销售原因")  
+    ![密钥值来标识购买的销售原因](../analysis-services/media/l5-many-to-many-1.gif "密钥值来标识购买的销售原因")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>定义中间度量值组  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34019624"
   
 5.  选择“Internet 销售原因记数”，然后在“属性”窗口中查看此度量值的属性。  
   
-    请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选择**计数**因为基础数据类型为 string 数据类型。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)。  
+    请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择了**计数**因为基础数据类型为字符串数据类型。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)。  
   
 6.  在“属性”窗口中，将“Internet Sales Reason Count”度量值的“Visible”属性更改为“False”。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "34019624"
   
     下图显示了“Internet 销售原因计数”度量值的属性。  
   
-    ![Internet 销售原因计数度量值的属性](../analysis-services/media/l5-many-to-many-2.gif "Internet 销售原因计数度量值的属性")  
+    ![为 Internet 销售原因计数度量值的属性](../analysis-services/media/l5-many-to-many-2.gif "Internet 销售原因计数度量值的属性")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>定义多对多维度  
   
@@ -144,9 +144,9 @@ ms.locfileid: "34019624"
   
     下图显示了“定义关系”对话框中的更改。  
   
-    ![定义关系对话框](../analysis-services/media/l5-many-to-many-3.gif "定义关系对话框中")  
+    ![定义关系对话框](../analysis-services/media/l5-many-to-many-3.gif "定义关系对话框")  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
     您将看到表示“销售原因”维度和“Internet 销售”度量值组之间关系的多对多图标。  
   
@@ -173,8 +173,8 @@ ms.locfileid: "34019624"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [定义度量值组中的维度粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>另请参阅  
-[使用数据源视图设计器 & #40; 中的关系图Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+[使用数据源视图设计器中的关系图 (Analysis Services)](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定义多对多关系和多对多关系属性](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

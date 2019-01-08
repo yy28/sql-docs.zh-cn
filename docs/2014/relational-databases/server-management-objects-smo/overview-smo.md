@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788159"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 是用于以编程方式管理的对象[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以使用 SMO 生成自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理应用程序。 尽管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用广泛的强大应用程序，但有时 SMO 应用程序可能对您更为适用。  
@@ -68,7 +66,7 @@ ms.locfileid: "48164497"
   
 -   用于在出现 DDL 事件时增强功能的 DDL 触发器。 有关详细信息，请参阅 [DDL Triggers](../triggers/ddl-triggers.md)。  
   
- SMO 命名空间为 <xref:Microsoft.SqlServer.Management.Smo>。 作为实现 SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集。 这意味着，公共语言运行时从[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]使用 SMO 对象之前，必须在安装版本 2.0。 SMO 程序集随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 选件默认安装到全局程序集缓存 (GAC) 中。 这些程序集位于 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 中。 有关详细信息，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文档。  
+ SMO 命名空间为 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 作为 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集实现。 这意味着在使用 SMO 对象之前，必须先安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 版本 2.0 中的公共语言运行时。 SMO 程序集随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 选件默认安装到全局程序集缓存 (GAC) 中。 这些程序集位于 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 中。 有关详细信息，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文档。  
   
 ## <a name="smo-classes"></a>SMO 类  
  SMO 类包括两个类别：实例类和实用工具类。  

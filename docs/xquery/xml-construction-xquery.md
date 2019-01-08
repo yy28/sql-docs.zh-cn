@@ -22,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515371"
 ---
 # <a name="xml-construction-xquery"></a>XML 构造 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询构造了一个 <`NewRoot`> 元素，该元素有一个子元素 <`e`>。 元素的值 <`e`> 计算通过指定路径表达式在大括号 （"{... }").  
+ 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询构造了一个 <`NewRoot`> 元素，该元素有一个子元素 <`e`>。 元素的值 <`e`> 通过指定在大括号 （"{...}"） 内的路径表达式计算。  
   
 ```sql
 DECLARE @x xml;  
@@ -89,7 +89,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  大括号充当上下文切换标记，并将查询从 XML 构造切换到查询计算。 在本例中，将对大括号中的 XQuery 路径表达式 `/root` 进行计算，并用结果替换该表达式。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 <NewRoot>  
@@ -112,7 +112,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 <NewRoot>  
@@ -131,7 +131,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
@@ -150,7 +150,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 <FirstLocation>  
@@ -253,7 +253,7 @@ SET @y = (SELECT @x.query('<NewRoot attr="{ data(/root) }" ></NewRoot>'));
 SELECT @y;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 <NewRoot attr="5" />  
@@ -278,7 +278,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  
@@ -309,7 +309,7 @@ where ProductModelID=7;
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
-         结果如下：  
+         下面是结果：  
   
         ```xml
         <a attr="Item 5" />  
@@ -323,7 +323,7 @@ where ProductModelID=7;
   
          本例中，两个字符串值之间没有添加空格。 如果希望两个值之间有空格，必须显式提供空格。  
   
-         结果如下：  
+         下面是结果：  
   
         ```xml
         <a attr="Item5" />  
@@ -351,7 +351,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
-     结果如下：  
+     下面是结果：  
   
     ```xml
     <a attr="Item 5" />  
@@ -393,7 +393,7 @@ select @x.query( '
   </a>' )   
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 <a xmlns="a">  
@@ -412,7 +412,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 <x:a xmlns:x="a">  
@@ -474,7 +474,7 @@ select @x.query( '
  注意，在元素 <`b`> 的构造中，已指定空字符串作为命名空间声明属性的值。 这将取消声明父级中所声明的默认命名空间。  
   
 
-结果如下：  
+下面是结果：  
 
 ```xml
 <a xmlns="a">  
@@ -524,7 +524,7 @@ test
   
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```xml
 -- result  

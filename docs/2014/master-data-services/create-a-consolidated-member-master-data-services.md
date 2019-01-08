@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating consolidated members [Master Data Services]
@@ -15,19 +14,19 @@ ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 352e545c834b0b4e94b19bcfcd014a4e363b0b75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bef17d900fe9a823439a88b8e94eb78810e6627
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766939"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在中，在您想要显式层次结构的父节点时创建合并成员。 合并成员可以具有其自己的属性。 它们用于分组。 如以下示例中所示，合并成员可用于其下具有帐户的帐户组。  
   
  ![MDS 合并成员](../../2014/master-data-services/media/mds-consolidated-members.png "MDS 合并成员")  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -59,10 +58,10 @@ ms.locfileid: "48058629"
 -   [层次结构中移动成员&#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
   
 ## <a name="see-also"></a>请参阅  
- [创建显式层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [创建显式层次结构 (Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [创建叶成员 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
  [加载或使用临时过程更新 Master Data Services 中的成员](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [显式层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+ [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

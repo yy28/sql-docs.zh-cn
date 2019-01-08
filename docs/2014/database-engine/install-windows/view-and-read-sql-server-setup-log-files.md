@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6017cadea0039613f7e97dc6e78665e47c9e2575
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018502"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858652"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
   每次执行安装程序中创建的日志文件与新的时间戳的日志文件夹位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下运行安装程序时，将在 % temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
@@ -141,11 +141,11 @@ ms.locfileid: "51018502"
   
  MSI 日志文件的类型：  
   
--   \<Feature>_\<Architecture>\_\<Interation>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   \<Feature>_\<Architecture>\_\<Language>\_\<Interation>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   \<Feature>_\<Architecture>\_\<Interation>\_\<workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>位置  
  MSI 日志文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\< 名称\>。 日志。  

@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1778d2615c64d9d1bf19b53fb694e2f7f050be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f366e091cccad7dbc317093f090bf2547f95b1df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659945"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411524"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为了加快查询执行而缓存的每个查询计划返回一行。 可以用此动态管理视图来查找缓存的查询计划、缓存的查询文本、缓存计划占用的内存量，以及重新使用缓存计划的计数。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。此外，列中的值**memory_object_address**并**pool_id**进行筛选; 该列的值设置为 NULL。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。此外，列中的值**memory_object_address**并**pool_id**进行筛选; 该列的值设置为 NULL。  
   
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_cached_plans**。  
@@ -46,14 +46,14 @@ ms.locfileid: "47659945"
 |size_in_bytes|**int**|缓存对象占用的字节数。|  
 |memory_object_address|**varbinary(8)**|缓存条目的内存地址。 此值可用于[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)若要获取的缓存的计划和使用的内存明细[sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)_entries 获取缓存条目的成本。|  
 |cacheobjtype|**nvarchar(34)**|缓存中的对象类型。 该值可以是下列值之一：<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
-|objtype|**nvarchar(16)**|对象的类型。 下面是可能的值和其相应的说明。<br /><br /> 进程： 存储的过程<br />准备好： 预定义的语句<br />即席： 即席查询。 是指[!INCLUDE[tsql](../../includes/tsql-md.md)]通过使用作为语言事件提交**osql**或**sqlcmd**而不是作为远程过程调用。<br />ReplProc： 复制筛选过程<br />触发器： 触发器<br />视图： 视图<br />默认值： Default<br />UsrTab： 用户表<br />SysTab： 系统表<br />检查： 检查约束<br />规则： 规则|  
+|objtype|**nvarchar(16)**|对象的类型。 下面是可能的值和其相应的说明。<br /><br /> 进程：存储过程<br />准备好：预定义语句<br />即席：即席查询。 是指[!INCLUDE[tsql](../../includes/tsql-md.md)]通过使用作为语言事件提交**osql**或**sqlcmd**而不是作为远程过程调用。<br />ReplProc:复制筛选过程<br />触发器：触发器<br />视图：“查看”<br />默认值：默认<br />UsrTab:用户表<br />SysTab:系统表<br />检查：CHECK 约束<br />规则：规则|  
 |plan_handle|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可以和以下动态管理函数一起使用：<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|特定资源池的 ID，此计划内存使用量就是针对该资源池而言的。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
  <sup>1</sup>  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

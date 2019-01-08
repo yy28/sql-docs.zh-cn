@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c396e1faf5084eb7e9e465aff5a6f2d098ca7dec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115782"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770689"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 事件类
   Object:Altered 事件类指示一个对象已更改，例如通过 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 语句更改对象。 此事件类可用来确定是否正在更改对象；例如通常用来创建临时存储过程的 ODBC 应用程序正在更改对象。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,17 +15,17 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762199"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
-  WMI 提供程序是一个已发布的接口，可供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]管理控制台 (MMC) 管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务和网络协议。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象表示 WMI 提供程序。  
+  WMI 提供程序是可供 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 管理控制台 (MMC) 用来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务和网络协议的已发布接口。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象表示 WMI 提供程序。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象的运行与建立的连接<xref:Microsoft.SqlServer.Management.Smo.Server>对象的实例与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并使用 Windows 凭据连接到 WMI 服务。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象的运行与通过 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象建立的与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接无关，而是使用 Windows 凭据连接到 WMI 服务。  
   
 ## <a name="example"></a>示例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

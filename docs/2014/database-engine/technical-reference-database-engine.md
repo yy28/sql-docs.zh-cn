@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052507"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533305"
 ---
 # <a name="technical-reference-database-engine"></a>技术参考（数据库引擎）
   查找有关 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的工具、语言和管理编程参考文档。  
@@ -32,7 +32,7 @@ ms.locfileid: "48052507"
  [Visual Database Tools F1 帮助](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
   
  ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标")**命令提示实用工具参考**  
- [bcp 实用工具](../tools/bcp-utility.md)  
+ [bcp Utility](../tools/bcp-utility.md)  
   
  [dta 实用工具](../tools/dta/dta-utility.md)  
   

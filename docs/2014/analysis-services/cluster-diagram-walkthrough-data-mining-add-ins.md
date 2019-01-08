@@ -17,12 +17,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057087"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419998"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>分类关系图演练（数据挖掘外接程序）
   创建聚类分析模型后，可以将其导入使用 Visio**群集**形状，然后再继续进行自定义和增强布局。 **Visio 数据挖掘形状**包括以下适用于数据挖掘关系图的自定义控件：  
@@ -73,9 +73,9 @@ ms.locfileid: "48057087"
   
 7.  保留选项**图表中的行数**，为 5。  
   
-     此选项不会更改模型中的分类数；它只是限制可作为每种分类特征显示的属性数。  
+     此选项不会更改模型; 中的分类的数它只是限制可以为每个分类的特征显示的属性的数目。  
   
-     不过此选项用作图表数据筛选器，因此之后不能增加项目数。  
+     但是，此选项用作图表数据筛选器使您不能增加项目数。  
   
 8.  单击 **“高级”**。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48057087"
   
      ![单击高级以选择形状颜色](media/dm13-visio-clusteroptions-advanced.gif "单击高级以选择形状颜色")  
   
-     **提示：** 可通过使用 Visio 主题和形状编辑控件更高版本修改某些颜色。 但是，Visio 主题还会覆盖这些颜色选择中的一部分，因此我们建议您从默认颜色开始，逐步应用更改。  
+     **提示：** 可以使用 Visio 主题和形状编辑控件更高版本更改某些颜色。 但是，Visio 主题还会覆盖这些颜色选择中的一部分，因此我们建议您从默认颜色开始，逐步应用更改。  
   
 9. 单击**完成**创建关系图。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48057087"
      **调整页大小**  
      此控件适用于早期 HTML 版本。 请改用 Visio 页面大小调整控件。  
   
-     **Description**  
+     **说明**  
      选择一个分类后，单击此选项可显示有关该分类的详细信息。  
   
      ![单击说明以获取有关群集的详细信息](media/dm13-visio-cluster-description-control.gif "单击说明以获取有关群集的详细信息")  

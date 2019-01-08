@@ -19,19 +19,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844665"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409734"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   返回聚合缓存的函数的性能统计信息。 视图将返回为每个缓存的函数计划，一个行和行的生存期只要函数保持缓存。 从缓存删除函数后，相应的行也将从此视图。 此时，Performance Statistics SQL 跟踪事件将引发类似于**sys.dm_exec_query_stats**。 返回有关标量函数，包括内存中的函数以及 CLR 标量函数的信息。 不返回有关表值函数的信息。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。  
   
 > [!NOTE]
 > 初始查询**sys.dm_exec_function_stats**可能会产生不准确的结果，如果没有在服务器上当前正在执行的工作负荷。 可以通过重新运行查询来确定更准确的结果。  
@@ -42,7 +42,7 @@ ms.locfileid: "47844665"
 |**database_id**|**int**|该函数所在的数据库 ID。|  
 |**object_id**|**int**|函数的对象标识号。|  
 |**类型**|**char(2)**|对象的类型： FN = 标量值的函数|  
-|**type_desc**|**nvarchar(60)**|对象类型的说明： SQL_SCALAR_FUNCTION|  
+|**type_desc**|**nvarchar(60)**|对对象类型的说明：SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|这可用于将与中的查询相关联**sys.dm_exec_query_stats**中此函数执行的。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可能与使用**sys.dm_exec_cached_plans**动态管理视图。<br /><br /> 将始终为 0x000 时本机编译的函数查询内存优化表。|  
 |**cached_time**|**datetime**|向缓存添加函数的时间。|  
@@ -69,7 +69,7 @@ ms.locfileid: "47844665"
 |**min_elapsed_time**|**bigint**|最小运行时间，以微秒为单位，任何已完成此函数的执行。|  
 |**max_elapsed_time**|**bigint**|最大运行时间，以微秒为单位，任何已完成此函数的执行。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

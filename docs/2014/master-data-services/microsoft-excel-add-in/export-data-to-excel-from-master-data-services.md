@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 143746cb73100a28fa6ebd2fc85809bc2cfb9d41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e15b0a4d2cb4e6aef865cd01c81568e6762db3ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079957"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784289"
 ---
 # <a name="load-data-from-mds-into-excel"></a>将数据从 MDS 加载到 Excel
   在中[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，您必须从 MDS 存储库加载数据，才能使用它。  
   
  如果你想要筛选数据集加载前的，请参阅[加载前筛选数据&#40;MDS 外接程序 excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)相反。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  

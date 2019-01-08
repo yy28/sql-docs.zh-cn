@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -16,12 +16,12 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68197c2fa00cd6853e719a1304be5863144ec9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068549"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763109"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>创建插入结果查询 (Visual Database Tools)
   您可以使用“插入结果”查询将行从一个表复制到另一个表或在同一个表内复制行。 例如，在 `titles` 表中，您可使用“插入结果”查询将某个出版商的所有书名信息复制到另一个可用于该出版商的表中。 “插入结果”查询与“生成表”查询类似，但前者是将行复制到现有表中。  

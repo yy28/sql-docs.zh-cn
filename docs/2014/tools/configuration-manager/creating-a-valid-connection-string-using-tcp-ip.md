@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine]
@@ -17,12 +16,12 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e46748234c0cf9a8cb810bb8ff2613b8b45794d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764249"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 创建有效的连接字符串
   若要使用 TCP/IP 来创建有效的连接字符串，必须执行以下操作：  
@@ -38,7 +37,7 @@ ms.locfileid: "48211817"
  连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 组件将从指定别名的注册表中读取服务器、协议和端口的值，然后创建一个格式为 `tcp:<servername>[\<instancename>],<port>` 或 `tcp:<IPAddress>[\<instancename>],<port>`的连接字符串。  
   
 > [!NOTE]  
->  默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火墙关闭端口 1433。 由于 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过端口 1433 进行通信，因此，如果你将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 TCP/IP 侦听传入客户端连接，则必须重新打开该端口。 有关配置防火墙的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何将防火墙配置为允许 SQL Server 访问”，或者查阅防火墙文档。  
+>  默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火墙关闭端口 1433。 由于 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过端口 1433 进行通信，因此，如果你将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 TCP/IP 侦听传入客户端连接，则必须重新打开该端口。 有关配置防火墙的信息，请参阅“如何为 SQL Server Access 配置防火墙”（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）或查看你的防火墙文档。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完全支持 Internet 协议版本 4 (IPv4) 和 Internet 协议版本 6 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器接受 IPv4 和 IPv6 格式的 IP 地址。 有关 IPv6 的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“使用 IPv6 进行连接”。  
   
@@ -167,11 +166,11 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  若要了解如何将网络协议指定为 **sqlcmd** 参数，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何使用 sqlcmd.exe 连接到数据库引擎”。  
+>  有关指定网络协议的详细信息**sqlcmd**参数，请参阅"如何：使用 sqlcmd.exe 连接到数据库引擎”（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
   
 ## <a name="see-also"></a>请参阅  
- [创建有效的连接字符串使用 Shared 的 Memory 协议](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
- [使用命名管道创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)   
+ [使用 Shared Memory 协议创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [使用 Named Pipes 创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)   
  [选择网络协议](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

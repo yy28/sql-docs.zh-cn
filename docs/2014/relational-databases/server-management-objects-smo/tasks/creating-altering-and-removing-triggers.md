@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - triggers [SMO]
@@ -14,12 +12,12 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ae7ab9d88a407f298156ebeafdb6ec5d70198b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4f6cf3b1e988d12a39096d46275058d080a23c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220637"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762329"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>创建、更改和删除触发器
   在 SMO 中，触发器由 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象表示。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]通过设置触发器被激发时运行的代码<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>触发器对象的属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象的其他属性（如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 属性）可以设置触发器的类型。 这是一个布尔属性，它指定触发器是否由对父表上的记录所执行的 `UPDATE` 操作激发。  

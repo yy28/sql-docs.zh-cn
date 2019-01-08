@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
@@ -13,12 +12,12 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079137"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770959"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
@@ -30,16 +29,16 @@ ms.locfileid: "48079137"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 加载选项  
  ODBC 目标可以使用两个访问加载模块之一。 在 [ODBC 源编辑器（“连接管理器”页）](../odbc-source-editor-connection-manager-page.md)中设置模式。 这两种模式是：  
   
--   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
+-   **批处理**:在此模式下 ODBC 目标将尝试使用最高效的插入方法基于发现的 ODBC 访问接口功能。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
   
--   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并且使用“SQL 执行”来一次一行地插入行。  
+-   **按行**:在此模式下，ODBC 目标准备具有参数，并使用的 INSERT 语句**SQL 执行**来一次插入行。  
   
 ## <a name="error-handling"></a>错误处理  
  ODBC 目标有一个错误输出。 组件的错误输出包括以下输出列：  
   
--   **错误代码**：与当前错误相对应的编号。 有关错误的列表，请参阅源数据库的文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
+-   **错误代码**:与当前错误相对应的编号。 有关错误的列表，请参阅源数据库的文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
   
--   **错误列**：导致错误（针对转换错误）的源列。  
+-   **错误列**:导致错误 （针对转换错误） 的源列。  
   
 -   标准的输出数据列。  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48079137"
   
  有关详细信息，请参阅下列主题之一：  
   
--   [ODBC 目标编辑器&#40;连接管理器页&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目标编辑器（“连接管理器”页）](../odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 目标编辑器&#40;映射页&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目标编辑器（“映射”页）](../odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目标编辑器&#40;错误输出页&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目标编辑器（“错误输出”页）](../odbc-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -76,14 +75,14 @@ ms.locfileid: "48079137"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [ODBC 目标编辑器&#40;错误输出页&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目标编辑器（“错误输出”页）](../odbc-destination-editor-error-output-page.md)  
   
--   [ODBC 目标编辑器&#40;映射页&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目标编辑器（“映射”页）](../odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目标编辑器&#40;连接管理器页&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目标编辑器（“连接管理器”页）](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [通过使用 ODBC 目标来加载数据](odbc-destination.md)  
   
--   [ODBC 目标自定义属性](odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
   
   

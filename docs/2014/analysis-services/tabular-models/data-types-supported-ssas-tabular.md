@@ -11,12 +11,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086897"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405472"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支持的数据类型（SSAS 表格）
   本文说明可在表格模型中使用的数据类型，并且论述在数据分析表达式 (DAX) 公式中计算或使用数据时数据类型的隐式转换。  
@@ -45,7 +45,7 @@ ms.locfileid: "48086897"
 |Text|String|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
 |date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
-|N/A|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
+|不可用|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
  <sup>1</sup> DAX 公式不支持比表中列出的较小的数据类型。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48086897"
   
  如果列中您指定为参数的数据与函数所要求的数据类型不兼容，则在许多情况下 DAX 都会返回错误。 但是，只要可能，DAX 都会尝试隐式将数据转换为所需的数据类型。 例如：  
   
--   您可以将数字（例如“123”）作为字符串键入。 DAX 将对字符串进行分析并且尝试将其指定为数字数据类型。  
+-   作为一个字符串，可以键入一个数字，例如"123，"。 DAX 将对字符串进行分析并且尝试将其指定为数字数据类型。  
   
 -   您可以将 TRUE + 1 并且获取结果 2，因为 TRUE 隐式转换为数字 1 并且将执行运算 1+1。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "48086897"
   
  下面的 DAX 表达式说明此行为：  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`返回 `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")`，返回 `"Expression is true"`  
   
- `=IF("12">12,"Expression is true", "Expression is false")`返回 `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")`，返回 `"Expression is true"`  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`返回 `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")`，返回 `"Expression is false"`  
   
  如下表所述，为数字或日期/时间类型执行隐式转换：  
   
@@ -187,12 +187,12 @@ ms.locfileid: "48086897"
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|空白|错误|  
-|BLANK AND BLANK|BLANK|错误|  
+|BLANK AND BLANK|空白|错误|  
   
  有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](https://msdn.microsoft.com/library/ee634396.aspx)一节中关于各 DAX 函数的单独主题。  
   
 ## <a name="see-also"></a>请参阅  
- [数据源&#40;SSAS 表格&#41;](../data-sources-ssas-tabular.md)   
- [导入数据&#40;SSAS 表格&#41;](../import-data-ssas-tabular.md)  
+ [数据源（SSAS 表格）](../data-sources-ssas-tabular.md)   
+ [导入数据（SSAS 表格）](../import-data-ssas-tabular.md)  
   
   

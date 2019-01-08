@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
@@ -15,18 +15,18 @@ ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cc5cca6090d7a7069b294620e25229ccd14445e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065827"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778939"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>向查询中添加列 (Visual Database Tools)
   若要在查询中使用列，必须将其添加到查询中。 您可以添加某个列，以在查询输出中显示该列，使用该列进行排序，搜索该列的内容或对其内容进行汇总。 您可以决定在运行查询时，“结果”窗格中将包括查询中使用的哪些列。 有关详细信息，请参阅[从查询结果中删除列 (Visual Database Tools)](visual-database-tools.md)  
   
 > [!NOTE]  
->  若要在查询和视图设计器中查看列的数据类型，请在“关系图”窗格中选择表或表值对象，然后在“属性”窗口中单击“列列表”。 再单击省略号 **(…)** 以打开“列列表”对话框。  
+>  若要在查询和视图设计器中查看列的数据类型，请在“关系图”窗格中选择表或表值对象，然后在“属性”窗口中单击“列列表”。 再单击省略号“(…)”以打开“列列表”对话框。  
   
  无论在查询中的任何位置使用列，都还可使用由列、文本、运算符和函数的任意组合组成的表达式。  
   

@@ -10,12 +10,12 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e109713ce9f6ec29a31d19d873c319d47c76fdab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675495"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394926"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用示例控制台脚本文件 (DB2ToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -41,7 +41,7 @@ ms.locfileid: "47675495"
   
     -   连接到源和目标服务器的详细信息，请参阅[创建服务器连接文件&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) 。  
   
-2.  **VariableValueFileSample.xml:** 已使用示例控制台中的所有变量的都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需替换为示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行参数传递。  
+2.  **VariableValueFileSample.xml:** 所有变量已使用在示例控制台都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需替换为示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行参数传递。  
   
     变量值文件的详细信息，请参阅[创建的变量值文件&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)。  
   
@@ -72,8 +72,8 @@ ms.locfileid: "47675495"
   
     |命令名|Description|Attribute|  
     |----------------|---------------|-------------|  
-    |`map-schema`|源数据库到目标架构的架构映射。|`source-schema:` 指定转换所需的源数据库。<br /><br />`sql-server-schema`： 指定是要迁移到目标数据库|  
-    |`convert-schema`|执行架构转换从源到目标架构。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。|`object-name`： 指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
+    |`map-schema`|源数据库到目标架构的架构映射。|`source-schema:` 指定转换所需的源数据库。<br /><br />`sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库|  
+    |`convert-schema`|执行架构转换从源到目标架构。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。|`object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
     |`synchronize-target`|将目标对象与目标数据库同步。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。|`object-name:` 指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
     |`migrate-data`|将源数据迁移到目标。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`命令的示例 2 的示例控制台脚本文件。|`object-name:` 指定源数据库/表迁移所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
   

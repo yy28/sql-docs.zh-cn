@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
@@ -15,12 +14,12 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b5f1089c48d4a3ebc844bf01644407b138ce265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321b5ef94cd25651e8f9ff03c6977d3639b5be2f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098407"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754359"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
   传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
@@ -47,7 +46,7 @@ ms.locfileid: "48098407"
  传输错误消息任务并不报告错误消息传输的进度，它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在该任务的 `ExecutionValue` 属性中定义的执行值返回已传输的错误消息数。 通过将用户定义的变量分配`ExecValueVariable`传输错误消息任务，有关错误消息传输的信息的属性可提供给其他对象在包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 在该任务的 `ExecutionValue` 属性中定义的执行值返回已传输的错误消息数。 通过将用户定义的变量分配给传输错误消息任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关错误消息传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输错误消息任务包括下列自定义日志项：  
@@ -56,7 +55,7 @@ ms.locfileid: "48098407"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects   此日志项报告传输已经完成。 日志项包括结束时间。  
   
- 此外，一个日志条目`OnInformation`事件报告已传输的错误消息和日志项的数量`OnWarning event`为每个错误消息将被覆盖目标上编写的。  
+ 此外，`OnInformation` 事件的日志项报告已传输的错误消息数，`OnWarning event`的日志项是为目标服务器上被覆盖的每个错误消息写入的。  
   
 ## <a name="security-and-permissions"></a>安全性和权限  
  若要新建错误消息，运行该包的用户必须是目标服务器上 sysadmin 的成员或 serveradmin 服务器角色。  
@@ -66,9 +65,9 @@ ms.locfileid: "48098407"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [传输错误消息任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输错误消息任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输错误消息任务编辑器&#40;消息页&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [传输错误消息任务编辑器（“消息”页）](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

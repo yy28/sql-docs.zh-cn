@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120299"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757579"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
   有两种列属性集：可在表设计器的“列属性”选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  
@@ -111,7 +111,7 @@ ms.locfileid: "48120299"
  展开此项可显示剩余的属性。  
   
  **排序规则**  
- 显示所选列的排序规则设置。 若要更改此设置，请单击“排序规则”，再单击值右侧的省略号 **(…)**。  
+ 显示所选列的排序规则设置。 若要更改此设置，请单击“排序规则”，再单击值右侧的省略号“(…)”。  
   
  **计算列规范类别**  
  展开此项可显示“公式”和“是持久的”属性。 如果该列是计算列，则还会显示公式。 若要编辑公式，请展开此类别，然后在“公式”属性中对其进行编辑。  
@@ -125,8 +125,8 @@ ms.locfileid: "48120299"
  **简洁数据类型**  
  按与 SQL CREATE TABLE 语句同样的格式显示有关字段的数据类型的信息。 例如，一个包含可变长度字符串（最大长度为 20 个字符）的字段将表示为“varchar(20)”。 若要更改此属性，请直接键入值。  
   
- **Description**  
- 显示列的说明。 若要查看或编辑完整说明，请单击“说明”，再单击属性右侧的省略号 **(…)** 。  
+ **说明**  
+ 显示列的说明。 若要查看或编辑完整说明，请单击“说明”，再单击属性右侧的省略号“(…)”。  
   
  **全文本规范类别**  
  展开此项可显示专用于全文本列的属性。  

@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765799"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**]*数据库*  
  要创建的分发数据库的名称。 *数据库*是**sysname**，无默认值。 如果指定的数据库已经存在并且尚未标记为分发数据库，那么将安装启用分发所需的对象并将数据库标记为分发数据库。 如果指定的数据库已经作为分发数据库启用，则返回错误。  
   
- [  **@data_folder=**] *** * * data_folder*  
+ [  **@data_folder=**] **'**_data_folder_  
  用于存储分发数据库数据文件的目录的名称。 *data_folder*是**nvarchar(255)**，默认值为 NULL。 如果为 NULL，则使用该 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据目录，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
   
- [  **@data_file=**] **'***data_file*****  
+ [  **@data_file=**] **'**_data_file_  
  数据库文件的名称。 *data_file*是**nvarchar(255)**，默认值为**数据库**。 如果为 NULL，存储过程将使用数据库名称来构造文件名。  
   
  [  **@data_file_size=**] *data_file_size*  
  初始数据文件大小，以兆字节 (MB) 为单位。 *data_file_size 我*s **int**，默认值为 5 MB。  
   
- [  **@log_folder=**] **'***log_folder*****  
+ [  **@log_folder=**] **'**_log_folder_  
  数据库日志文件所在目录的名称。 *log_folder*是**nvarchar(255)**，默认值为 NULL。 如果为 NULL，则使用该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据目录，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
   
- [  **@log_file=**] **'***log_file*****  
+ [  **@log_file=**] **'**_log_file_  
  日志文件的名称。 *log_file*是**nvarchar(255)**，默认值为 NULL。 如果为 NULL，存储过程将使用数据库名称来构造文件名。  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -85,13 +84,13 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@history_retention=**] *history_retention*  
  历史记录的保留时间，以小时为单位。 *history_retention*是**int**，默认值为 48 小时。  
   
- [  **@security_mode=**] *security_mode*  
+ [ **@security_mode=**] *security_mode*  
  同步时连接到分发服务器所使用的安全模式。 *security_mode*是**int**，默认值为 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证;**1**指定 Windows 集成身份验证。  
   
- [  **@login=**] **'***登录*****  
+ [  **@login=**] **'**_登录_  
  连接到分发服务器以创建分发数据库时使用的登录名。 这是必需的如果*security_mode*设置为**0**。 login 的数据类型为 sysname，默认值为 NULL。  
   
- [  **@password=**] **'***密码*****  
+ [  **@password=**] **'**_密码_  
  连接到分发服务器时使用的密码。 这是必需的如果*security_mode*设置为**0**。 *密码*是**sysname**，默认值为 NULL。  
   
  [  **@createmode=**] *createmode*  
@@ -179,7 +178,7 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_adddistributiondb**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -10,19 +10,19 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502704"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用聚集列存储索引
   用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用聚集列存储索引的任务。  
   
- 有关列存储索引的概述，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)。  
+ 有关列存储索引的概述，请参阅 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
- 有关聚集列存储索引的信息，请参阅[使用聚集列存储索引](../relational-databases/indexes/indexes.md)。  
+ 有关聚集列存储索引的信息，请参阅 [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)。  
   
 ## <a name="contents"></a>目录  
   
@@ -60,7 +60,7 @@ GO
  使用[DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)语句删除聚集列存储索引。 此操作将删除该索引并将列存储表转换为行存储堆。  
   
 ##  <a name="load"></a> 将数据加载到聚集列存储索引  
- 您可以使用任何标准加载方法，将数据添加到现有聚集列存储索引。  例如，bcp 大容量加载工具、Integration Services 和 INSERT... SELECT 可以将所有将数据都加载到聚集列存储索引中。  
+ 您可以使用任何标准加载方法，将数据添加到现有聚集列存储索引。  例如，bcp 大容量加载工具、 Integration Services 和 INSERT...SELECT 可以将所有将数据都加载到聚集列存储索引中。  
   
  聚集列存储索引利用增量存储以便防止在列存储的列段中出现碎片。  
   
@@ -68,7 +68,7 @@ GO
  对于已分区数据， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 首先将每一行分配给一个分区，然后对该分区内的数据执行列存储操作。 每个分区都具有自己的行组以及至少一个增量存储。  
   
 ### <a name="deltastore-loading-scenarios"></a>增量存储加载方案  
- 行在增量存储中累积，直到行数达到行组允许的最大行数。 增量存储中包含每个行组的最大行数时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将行组标记为“关闭”。 名为“tuple-mover”的后台进程查找已关闭行组并移到列存储中，其中，该行组压缩成列段并且这些列段存储于列存储中。  
+ 行在增量存储中累积，直到行数达到行组允许的最大行数。 增量存储中包含的每个行组，行的最大数[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]将标记为"关闭"行组。 后台进程，名为"tuple-mover"，查找已关闭行组并且移动到列存储行组压缩到列段，其中列段存储在列存储中。  
   
  每个聚集列存储索引可以有多个增量存储。  
   
@@ -115,7 +115,7 @@ SELECT * FROM sys.column_store_row_groups
 -   如果该行在增量存储中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在增量存储中更新它。  
   
 ##  <a name="rebuild"></a> 重新生成聚集列存储索引  
- 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;-&#41; ](/sql/t-sql/statements/alter-index-transact-sql)执行完全重新生成现有聚集列存储索引。 此外，你也可以使用 ALTER INDEX... REBUILD，用于重新生成特定分区。  
+ 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;-&#41; ](/sql/t-sql/statements/alter-index-transact-sql)执行完全重新生成现有聚集列存储索引。 此外，也可以使用 ALTER INDEX ...REBUILD，用于重新生成特定分区。  
   
 ### <a name="rebuild-process"></a>重新生成过程  
  若要重新生成聚集列存储索引，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将：  

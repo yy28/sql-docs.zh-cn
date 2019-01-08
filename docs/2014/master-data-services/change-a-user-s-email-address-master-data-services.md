@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
@@ -13,17 +12,17 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3bf1021262a4cf972a93b04f9f2f9f8905df7dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 209462ef2a49a29e5c5216ba1ce89887079bd824
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782359"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>更改用户的电子邮件地址 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以更改通知将发送到的电子邮件地址以及通知电子邮件的默认格式。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组”** 功能区域。  
@@ -40,11 +39,11 @@ ms.locfileid: "48215787"
   
 5.  更新电子邮件地址或电子邮件格式。  
   
-6.  单击 **“保存”**。  
+6.  单击“保存” 。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [分配功能区域权限&#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [分配功能区域权限 (Master Data Services)](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>请参阅  
  [安全性 (Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  

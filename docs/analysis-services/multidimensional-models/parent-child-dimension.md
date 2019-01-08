@@ -1,5 +1,5 @@
 ---
-title: 父子维度 |Microsoft 文档
+title: 父子维度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9f9cda883822d093db624a4580a94093120ba41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f9990103da1de5107ceaf3432f4da2a9a4486c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021424"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510215"
 ---
-# <a name="parent-child-dimension"></a>父-子维度
+# <a name="parent-child-dimension"></a>父子维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   父子层次结构是标准维度中包含父属性的层次结构。 父属性用于说明维度主表内部的自引用关系或自联接。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构内成员的位置由父特性的 **KeyColumns** 和 **RootMemberIf** 属性确定，而级别内成员的位置则由父特性的 **OrderBy** 属性确定。 有关特性属性的详细信息，请参阅 [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
@@ -34,15 +34,15 @@ ms.locfileid: "34021424"
   
  但是，父子维度通过检查维度主表中包含的数据，然后评估该表中记录之间的父子关系来构造父子层次结构。 有关父子层次结构的详细信息，请参阅 [用户层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)。  
   
- 父子层次结构不会从用于创建层次结构的属性中派生父子层次结构中级别的名称。 通过使用命名模板（一种字符串表达式，可以在用于控制属性如何生成属性层次结构的父属性级别指定），这些维度将自动创建级别名称。 有关如何设置父属性的命名模板的详细信息，请参阅 [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+ 父子层次结构不会从用于创建层次结构的属性中派生父子层次结构中级别的名称。 相反，这些维度创建级别名称会自动使用的命名模板的字符串表达式可以指定控制属性如何生成属性层次结构的父属性的级别。 有关如何设置父属性的命名模板的详细信息，请参阅 [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
 ## <a name="data-members"></a>数据成员  
  通常，维度中的叶成员包含直接派生自基础数据源的数据，而非叶成员包含派生自对子成员所执行的聚合的数据。  
   
  但是在父子层次结构中，一些非叶成员除了包含基于子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可为其创建包含基础事实数据表数据的特殊的系统生成子成员。 这些特殊子成员称为“数据成员 ”，它们包含一个与非叶成员直接相关、且与通过该非叶成员后代计算出来的汇总值无关的值。 有关数据成员的详细信息，请参阅[父子层次结构中的属性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [父-子层次结构中的属性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
+## <a name="see-also"></a>请参阅  
+ [父子层次结构中的属性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
  [数据库维度属性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46d480683a2d10f760a02049ab28bc590353fcbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537501"
 ---
 # <a name="connection-transitions"></a>连接转换
 ODBC 连接具有以下状态。  
@@ -266,7 +266,7 @@ ODBC 连接具有以下状态。
   
  [1] 的连接已在自动提交模式下，或数据源未开始事务。  
   
- [2] 的连接已在手动 – 提交模式下，数据源开始事务。  
+ [2] 的连接已在手动提交模式下，数据源开始事务。  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   

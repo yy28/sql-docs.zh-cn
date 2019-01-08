@@ -13,12 +13,12 @@ ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 364c86c5b908408dc3212593612467abade93735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507886"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定义本地货币引用（商业智能向导）
   可以使用“定义本地货币引用”页，为涉及“选择换算类型”页中指定的多对多或多对一换算类型的货币换算功能定义本地货币。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。  
@@ -30,7 +30,7 @@ ms.locfileid: "48048619"
  **事实数据表中的标识符**  
  对于包含“选择度量值”页中所选度量值的事实数据表所引用的货币维度，选择此选项可指定为该货币维度中的本地货币提供货币标识符的属性。 (的货币维度中一个其`Type`属性设置为*货币*。)  
   
- 在由事务本身确定事务的本地货币时使用此选项。 例如，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 示例数据库[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]中，“互联网销售”度量值组有一个到“货币”维度的常规维度关系。 该度量值组的事实数据表包含一个外键列，该外键列引用该维度的维度表中的货币标识符。  
+ 在由事务本身确定事务的本地货币时使用此选项。 例如，在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]示例数据库-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，Internet 销售度量值组具有一个到 Currency 维度的常规维度关系。 该度量值组的事实数据表包含一个外键列，该外键列引用该维度的维度表中的货币标识符。  
   
  **货币维度和事实数据引用的属性**  
  在成员表示本地货币的货币标识符的货币维度中选择货币属性。 (货币属性是其`Type`属性设置为*货币*。)  
@@ -41,7 +41,7 @@ ms.locfileid: "48048619"
  **维度表中的属性**  
  选择此选项可从与包含本地货币货币标识符的度量值组相关的维度中指定属性。  
   
- 在由事务和另一个业务实体（如位置）之间的关系确定该事务的本地货币时使用此选项。 例如，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 示例数据库[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]中，“财务报表”度量值组与“货币”维度之间通过“单位”维度建立了引用维度关系。 也就是说，“财务报表”度量值组的事实数据表包含一个外键列，该外键列引用了“单位”维度的维度表中的成员。 反过来，“单位”维度的维度表也包含一个外键列，该外键列引用“货币”维度的维度表中的货币标识符。  
+ 在由事务和另一个业务实体（如位置）之间的关系确定该事务的本地货币时使用此选项。 例如，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]示例数据库-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，财务报表度量值组已通过单位维度的货币维度的引用的维度关系。 也就是说，“财务报表”度量值组的事实数据表包含一个外键列，该外键列引用了“单位”维度的维度表中的成员。 反过来，“单位”维度的维度表也包含一个外键列，该外键列引用“货币”维度的维度表中的货币标识符。  
   
  **引用货币的维度属性**  
  在成员引用本地货币的货币标识符的维度中选择属性。  

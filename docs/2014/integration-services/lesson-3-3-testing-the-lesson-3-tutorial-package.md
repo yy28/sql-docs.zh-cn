@@ -1,22 +1,21 @@
 ---
-title: 步骤 3：测试第 3 课教程包 | Microsoft Docs
+title: 步骤 3：测试第 3 课教程包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c89d07cd3361d8bbb6648a57bbc2c05c167cf38e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac6cb097990c33564c29dad6918c0b8cc883530d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751299"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>步骤 3：测试第 3 课教程包
   在该任务中，将运行 Lesson 3.dtsx 包。 在包运行时，“日志事件”窗口将列出写入日志文件中的日志条目。 执行完包之后，将验证日志提供程序所生成的日志文件的内容。  

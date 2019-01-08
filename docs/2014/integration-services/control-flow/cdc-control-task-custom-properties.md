@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196357"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771099"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制任务自定义属性
   下表描述了 CDC 控制任务的自定义属性。 所有属性均可读/写。  
@@ -34,7 +33,7 @@ ms.locfileid: "48196357"
 |CommandTimeout|integer|该值指定在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库通信时要使用的超时值（秒）。 在来自数据库的响应时间非常慢并且默认值（30 秒）不足够时使用该值。|  
   
 ## <a name="see-also"></a>请参阅  
- [CDC 控制任务](cdc-control-task.md)   
- [CDC 控制任务编辑器](../cdc-control-task-editor.md)  
+ [CDC Control Task](cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

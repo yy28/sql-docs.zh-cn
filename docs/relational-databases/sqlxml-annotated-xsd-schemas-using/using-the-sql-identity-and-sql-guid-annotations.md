@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d67e223ffe0a68c9f5bd92d1a4a3ef169edc9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611e202007fb9a5b9438e3432984c3722e264bd7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522863"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 批注
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47855895"
  **Sql: identity**并**sql: guid**注释可以定义复杂内容元素上。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 批注  
- 您可以指定**sql: identity**中映射到 IDENTITY 类型数据库列的任何节点上的 XSD 架构的批注。 为该批注指定的值定义如何更新 IDENTITY 类型的列（通过使用 updategram 中提供的值来修改列，或者通过忽略该值而针对该列采用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的值）。  
+ 您可以指定**sql: identity**中映射到 IDENTITY 类型数据库列的任何节点上的 XSD 架构的批注。 为此批注指定的值定义如何更新 IDENTITY 类型的列 (通过使用在 updategram 中提供的值来修改列或通过在这种情况下忽略该值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-生成的值用于此列)。  
   
  **Sql: identity**批注可以分配两个值：  
   

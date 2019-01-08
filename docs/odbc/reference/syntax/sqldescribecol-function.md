@@ -20,19 +20,19 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523813"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
- **SQLDescribeCol**返回结果的描述符，列名称、 类型、 列的大小、 十进制数和为 null 性 — 对于结果中的一列设置。 此信息也是可用的 IRD 字段中。  
+ **SQLDescribeCol**为结果集中的一列返回的结果描述符的列名称、 类型、 列大小、 十进制数和为 null 性的。 此信息也是可用的 IRD 字段中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [输入]结果数据的列数在不断增加的列顺序，从 1 开始按顺序排序。 *ColumnNumber*参数还可以将设置为 0 来描述书签列。  
   
- *列名称*  
+ *ColumnName*  
  [输出]指向以 null 结尾的缓冲区中要返回的列名称。 从 IRD 的 SQL_DESC_NAME 字段读取此值。 如果列是未命名或不能确定列名称，该驱动程序将返回空字符串。  
   
  如果*ColumnName*为 NULL， *NameLengthPtr*仍将返回的字符 （不包括字符数据的 null 终止字符） 总数可用于返回通过指向的缓冲区中*ColumnName*。  
@@ -75,22 +75,22 @@ SQLRETURN SQLDescribeCol(
   
  当*ColumnNumber*等于 SQL_BINARY 中为 0 （表示书签列），则返回 *\*DataTypePtr*长度可变的书签。 （如果书签由 ODBC 3，则返回 SQL_INTEGER。*x*应用程序使用 ODBC 2。*x*驱动程序或通过 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序。)  
   
- 这些数据类型的详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
+ 这些数据类型的详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)中附录 d:数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
   
  *ColumnSizePtr*  
- [输出]指向在其上数据源返回的列的大小 （以字符为单位） 的缓冲区的指针。 如果无法确定列大小，该驱动程序将返回 0。 列大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。  
+ [输出]指向在其上数据源返回的列的大小 （以字符为单位） 的缓冲区的指针。 如果无法确定列大小，该驱动程序将返回 0。 列大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。  
   
  *DecimalDigitsPtr*  
- [输出]指向在其上数据源返回的列的小数位数的缓冲区的指针。 如果小数位数不能确定或不适用，则驱动程序将返回 0。 十进制数字的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。  
+ [输出]指向在其上数据源返回的列的小数位数的缓冲区的指针。 如果小数位数不能确定或不适用，则驱动程序将返回 0。 十进制数字的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。  
   
  *NullablePtr*  
  [输出]指向用于返回一个值，指示列是否允许 NULL 值的缓冲区。 从 IRD 的 SQL_DESC_NULLABLE 字段读取此值。 值为以下值之一：  
   
- SQL_NO_NULLS: 列不允许 NULL 值。  
+ SQL_NO_NULLS:此列不允许 NULL 值。  
   
- SQL_NULLABLE： 列允许 NULL 值。  
+ SQL_NULLABLE:列允许 NULL 值。  
   
- SQL_NULLABLE_UNKNOWN： 驱动程序无法确定列是否允许 NULL 值。  
+ SQL_NULLABLE_UNKNOWN:该驱动程序无法确定列是否允许 NULL 值。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  

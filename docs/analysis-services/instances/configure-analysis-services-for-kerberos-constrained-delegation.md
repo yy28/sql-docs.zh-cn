@@ -1,5 +1,5 @@
 ---
-title: 为 Kerberos 约束委派配置 Analysis Services |Microsoft 文档
+title: 针对 Kerberos 约束委派配置 Analysis Services |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c906ef040504e2fec094ae0935a374e27cbf984
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d39a5c97a4bcbf05c364e0a3d638c0232aab65e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019614"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408474"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 约束委派配置 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019614"
 > [!NOTE]  
 >  如果与 Analysis Services 的连接是单跃点，或者您的解决方案使用 SharePoint Secure Store Service 或 Reporting Services 提供的存储的凭据，则委托不是必需的。 如果所有连接都是从 Excel 到 Analysis Services 数据库的直接连接或是以存储的凭据为基础，则可以直接使用 Kerberos（或 NTLM）而无需配置约束委托。  
 >   
->  如果用户标识必须流经多个计算机连接（称为“双跃点”），则需要使用 Kerberos 约束委托。 在 Analysis Services 数据访问针对用户标识是有条件的，并且连接请求来自某一委托服务，则使用下一节中的核对清单确保 Analysis Services 能够模拟原始调用方。 有关 Analysis Services 身份验证流的详细信息，请参阅 [Microsoft BI 身份验证和身份委托](http://go.microsoft.com/fwlink/?LinkID=286576)。  
+>  如果用户标识必须流经多个计算机连接 （称为"双跃点"），则需要使用 Kerberos 约束委派。 在 Analysis Services 数据访问针对用户标识是有条件的，并且连接请求来自某一委托服务，则使用下一节中的核对清单确保 Analysis Services 能够模拟原始调用方。 有关 Analysis Services 身份验证流的详细信息，请参阅 [Microsoft BI 身份验证和身份委托](http://go.microsoft.com/fwlink/?LinkID=286576)。  
 >   
 >  作为一项最佳安全配置，Microsoft 始终建议约束委派而不是非约束委派。 由于非约束委托允许服务标识在 *任何* 下游计算机、服务或应用程序上模拟另一个用户（正好与那些经由约束委托明确定义的服务相反），因此是一个主要的安全风险。  
   
@@ -107,15 +107,15 @@ ms.locfileid: "34019614"
   
 3.  通过某一应用程序服务（例如 SharePoint 或 Reporting Services）从远程客户端计算机连接到 Analysis Services。 Audit Login 事件将显示连接到 Analysis Services 的用户的标识。  
   
- 彻底的测试将要求使用可捕获网络上的 Kerberos 请求和响应的网络监视工具。 针对 Kerberos 筛选的网络监视器实用工具 (netmon.exe) 可用于此任务。 有关使用 Netmon 3.4 和测试 Kerberos 身份验证所用的其他工具的详细信息，请参阅 [配置 Kerberos 身份验证：核心配置 (SharePoint Server 2010)](http://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)。  
+ 彻底的测试将要求使用可捕获网络上的 Kerberos 请求和响应的网络监视工具。 针对 Kerberos 筛选的网络监视器实用工具 (netmon.exe) 可用于此任务。 有关使用 Netmon 3.4 和其他工具进行测试 Kerberos 身份验证的详细信息，请参阅[配置 Kerberos 身份验证：核心配置 (SharePoint Server 2010)](http://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)。  
   
  另外，请参阅 [Active Directory 中最易令人混淆的对话框](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) ，查看对 Active Directory 对象的属性对话框的“委托”选项卡中对每个选项的详尽描述。 这篇文章也说明了如何使用 LDP 测试和解释测试结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft BI 身份验证和身份委托](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [使用 Kerberos 进行相互身份验证](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [使用 Kerberos 的相互身份验证](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [针对 Analysis Services 实例的 SPN 注册](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [连接字符串属性 & #40;Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [连接字符串属性 (Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

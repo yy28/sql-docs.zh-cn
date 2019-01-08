@@ -22,17 +22,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529888"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了断字符的每种语言在此目录视图中均存在对应的一行。 每行显示的 LCID 和语言的名称。 注册了某种语言的断字符后，可在全文索引/查询操作中使用它的其他语言资源：词干分析器、干扰词（非索引字）和同义词库文件。 值**名称**或**lcid**可以对全文查询和全文索引中指定[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了断字符的每种语言在此目录视图中均存在对应的一行。 每行显示的 LCID 和语言的名称。 断字符的一种语言、 其他语言的资源词干分析器、 干扰词 （非索引字） 和同义词库文件变得的注册时提供给全文索引/查询操作。 值**名称**或**lcid**可以对全文查询和全文索引中指定[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
    
 |“列”|数据类型|Description|  
 |------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "47779685"
 ## <a name="values-returned-for-default-languages"></a>针对默认语言返回的值  
  下表显示在默认情况下为其注册了断字符的语言的值。  
   
-|“报表”|LCID|  
+|语言|LCID|  
 |--------------|----------|  
 |阿拉伯语|1025|  
 |孟加拉语（印度）|1093|  
@@ -101,7 +101,7 @@ ms.locfileid: "47779685"
 ## <a name="remarks"></a>备注  
  若要更新的全文搜索中注册的语言列表，请使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>请参阅  

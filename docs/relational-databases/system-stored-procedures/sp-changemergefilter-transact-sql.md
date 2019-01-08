@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d43af8f9ffc64eb7fcfaba5aff7434696376321
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704845"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748219"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  [ **@filtername=** ] **'***filtername*****  
  筛选器的当前名称。 *filtername*是**sysname**，无默认值。  
   
- [  **@property=** ] **'***属性*****  
+ [ **@property=** ] **'***属性*****  
  要更改的属性的名称。 *属性*是**sysname**，无默认值。  
   
  [ **@value=**] **'***值*****  
@@ -62,7 +61,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  下表说明项目的属性和这些属性的值。  
   
-|“属性”|ReplTest1|Description|  
+|属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|联接筛选器。<br /><br /> 若要支持 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器，此选项是必需的。|  
 ||**2**|逻辑记录关系。|  
@@ -97,7 +96,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  若要使用逻辑记录，发布和项目必须满足许多要求。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergefilter**。  
   
 ## <a name="see-also"></a>请参阅  

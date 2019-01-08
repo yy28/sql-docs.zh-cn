@@ -12,12 +12,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92569bd943801a5a8c45947a7fdee65192b398ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152753"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398130"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
@@ -118,13 +118,13 @@ ms.locfileid: "48152753"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|N/A|支持 (5)|N/A|  
-|DBTYPE_WSTR|支持 (2)、(5)|N/A|支持 (3)、(5)、(6)|N/A|  
-|DBTYPE_BSTR|支持 (2)、(5)|N/A|支持 (3)、(5)|N/A|  
-|DBTYPE_STR|支持 (2)、(5)|N/A|支持 (3)、(5)|N/A|  
-|DBTYPE_IUNKNOWN|支持 (6)|N/A|支持 (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|N/A|支持 (3)、(5)|N/A|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|N/A|N/A|N/A|  
+|DBTYPE_BYTES|支持 (5)|不可用|支持 (5)|不可用|  
+|DBTYPE_WSTR|支持 (2)、(5)|不可用|支持 (3)、(5)、(6)|不可用|  
+|DBTYPE_BSTR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_STR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_IUNKNOWN|支持 (6)|不可用|支持 (6)|不可用|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不可用|不可用|不可用|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b115edd3e8addbedc60c0c37b4ea014a3123909
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38acf6fd70bebf5033fde5dcf33fe5b2a6ac6722
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098217"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754819"
 ---
 # <a name="raw-file-custom-properties"></a>原始文件自定义属性
   **源自定义属性**  
@@ -44,7 +43,7 @@ ms.locfileid: "48098217"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为 `File name` (0) 和 `File name from variable` (1)。|  
 |FileName|String|原始文件目标要写入的文件的名称。|  
-|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项包括`Create Always`(0)， `Create Once` (1)， `Truncate and Append` (3) 和`Append`(2)。 此属性的默认值是`Create Always`(0)。|  
+|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项为 `Create Always` (0)、`Create Once` (1)、`Truncate and Append` (3) 和 `Append` (2)。 此属性的默认值为 `Create Always` (0)。|  
   
 > [!NOTE]  
 >  追加操作要求追加数据的元数据与文件中已有数据的元数据匹配。  

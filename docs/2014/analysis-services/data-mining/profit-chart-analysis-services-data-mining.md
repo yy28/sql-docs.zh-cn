@@ -17,15 +17,15 @@ ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d19bba4a48e47e7fc0f7fff1cc5765b7cfac9bc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171707"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407314"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
-  利润图显示与使用挖掘模型相关联的估计利润。 例如，假定您的模型预测在一个业务方案中一个公司应该联系哪些客户。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
+  利润图显示与使用挖掘模型相关联的估计利润。 例如，假设您的模型预测哪些客户公司应在业务方案中联系。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
   
 ## <a name="build-a-profit-chart"></a>构建利润图  
  利润图类似于提升图。 您从创建一个提升图开始，然后加入成本和利润信息。  
@@ -34,7 +34,7 @@ ms.locfileid: "48171707"
   
  对于此示例，我们使用了 Targeted Mailing 决策树模型。 该模型标识可能要购买自行车的客户。 您可以应用 **“利润图”** 来确定您的目标用户有多少，以便将您的利润最大化。  
   
- 如果您没有示例模型，则可以使用 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)创建它。  
+ 如果您没有示例模型，您可以创建使用其[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)。  
   
 1.  打开挖掘准确性图表生成器。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48171707"
     |**人口数**|20,000|设置总目标人数的值<br /><br /> 您的数据库可能包含很多客户，但是为了节省邮递开支，您可能选择仅对最有可能回复的前 20,000 个客户发邮件。 您可以通过运行预测查询并且由预测模型按概率输出排序，获得此列表。|  
     |**固定成本**|500|输入为 20,000 人设置目标邮递活动的一次性成本。 这可能包括印刷成本或者设置电子邮件活动的成本。|  
     |**单项成本**|3|输入目标邮递活动的单位成本。<br /><br /> 该金额将乘以一个等于或小于 20,000 的数，具体数字取决于模型预测的客户中有多少个是合适的潜在客户。|  
-    |**单项收入**|400|输入一个值，该值表示可以从成功结果获得利润或收入的金额。 在这个例子中，我们将假定邮寄目录导致平均购买 $400 的附件或自行车。<br /><br /> 该金额将用于预计与高概率事例关联的总利润。|  
+    |**单项收入**|400|输入一个值，该值表示可以从成功结果获得利润或收入的金额。 在这种情况下，我们将假定邮寄目录导致平均的附件或自行车 $400 购买。<br /><br /> 该金额将用于预计与高概率事例关联的总利润。|  
   
 7.  在您设置了所需参数后，单击 **“确定”**。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48171707"
   
 |主题|链接|  
 |------------|-----------|  
-|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试提升图的准确性&#40;数据挖掘基础教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|说明相关的图表类型。|[提升图&#40;Analysis Services-数据挖掘&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分类矩阵&#40;Analysis Services-数据挖掘&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散点图&#40;Analysis Services-数据挖掘&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|说明挖掘模型和挖掘结构的交叉验证。|[交叉验证&#40;Analysis Services-数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
-|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南&#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [测试提升图的准确性（数据挖掘基础教程）](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|说明相关的图表类型。|[提升图（Analysis Services - 数据挖掘）](lift-chart-analysis-services-data-mining.md)<br /><br /> [分类矩阵（Analysis Services - 数据挖掘）](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](scatter-plot-analysis-services-data-mining.md)|  
+|说明挖掘模型和挖掘结构的交叉验证。|[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)|  
+|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [测试和验证&#40;数据挖掘&#41;](testing-and-validation-data-mining.md)   
- [测试提升图的准确性&#40;数据挖掘基础教程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)   
+ [测试提升图的准确性（数据挖掘基础教程）](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

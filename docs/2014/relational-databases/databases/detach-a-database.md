@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.detachdatabase.f1
@@ -16,12 +15,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b6f227a9ece5133917f435a79895092294df616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20dce5a584d7ae990b25dd10312c9474bd08c873
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175847"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749059"
 ---
 # <a name="detach-a-database"></a>分离数据库
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中分离数据库。 分离的文件将会予以保留，并且可以使用带有 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 选项的 CREATE DATABASE 重新附加它们。 这些文件可以移动并附加到其他服务器上。  
@@ -32,7 +31,7 @@ ms.locfileid: "48175847"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要分离数据库，可使用：**  
   
@@ -79,21 +78,21 @@ ms.locfileid: "48175847"
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
      **“状态”**  
-     显示以下状态之一： **“就绪”** 或 **“未就绪”**。  
+     显示以下状态之一：**准备好**或**未就绪**。  
   
-     **消息**  
+     **Message**  
      **“消息”** 列可显示关于数据库的如下信息：  
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“<number_of_active_connections> 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 *< number_of_active_connections> * * * 个活动连接**-例如：**1 个活动连接**。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
 4.  分离数据库准备就绪后，请单击 **“确定”**。  
   
 > [!NOTE]  
->  新分离的数据库将一直显示在对象资源管理器的 **“数据库”** 节点中，直到刷新该视图。 可以随时刷新视图：单击对象资源管理器窗格，然后从菜单栏依次选择 **“视图”** 和 **“刷新”**。  
+>  新分离的数据库将一直显示在对象资源管理器的 **“数据库”** 节点中，直到刷新该视图。 你可以刷新在任何时间视图：单击对象资源管理器窗格中，然后从菜单栏中选择**视图**，然后**刷新**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

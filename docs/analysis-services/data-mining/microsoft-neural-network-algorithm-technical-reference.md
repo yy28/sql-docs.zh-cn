@@ -1,5 +1,5 @@
 ---
-title: Microsoft 神经网络算法技术参考 |Microsoft 文档
+title: Microsoft 神经网络算法技术参考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525488"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "34018240"
   
  **离散值**  
   
- `μ = p` –（状态的先验概率）  
+ `μ = p` -一种状态的先验概率  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34018240"
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持下表中列出的特定输入列和可预测列。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Table 和 Ordered|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized 和 Ordered|  
@@ -182,9 +182,9 @@ ms.locfileid: "34018240"
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 神经网络算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [神经网络模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

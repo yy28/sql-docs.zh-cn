@@ -15,15 +15,15 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c7ddfeda7538027c56af17664e5962d09903b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512086"
 ---
 # <a name="diagnostics"></a>诊断
-在 ODBC 中的函数返回以下两种方式的诊断信息。 返回代码指示总体成功或失败的函数，而诊断记录提供有关该函数的详细的信息。 至少一个诊断记录，标头记录 — 即使如果函数成功，则返回。  
+在 ODBC 中的函数返回以下两种方式的诊断信息。 返回代码指示总体成功或失败的函数，而诊断记录提供有关该函数的详细的信息。 即使该函数成功，则返回至少一个诊断记录的标头记录。  
   
  在开发时使用的诊断信息来捕获中硬编码的 SQL 语句的编程错误，如无效句柄和语法错误。 它用于在运行时捕获用户输入的 SQL 语句中的运行时错误和警告，例如数据截断，访问冲突和语法错误。  
   

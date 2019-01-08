@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,12 +12,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756959"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些端点是 `datetime` 值，将存储在包变量中以供以后在包中使用。  
@@ -101,12 +100,12 @@ ms.locfileid: "49119835"
 3.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”** 页上，将 ExtractStartTime 结果映射到 ExtractStartTime 包变量，并将 ExtractEndTime 结果映射到 ExtractEndTime 包变量。  
   
     > [!NOTE]  
-    >  当您使用表达式的值设置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]变量，计算该表达式，每次访问该变量的值。  
+    >  如果使用表达式设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 变量的值，则每次访问该变量的值时都会计算表达式。  
   
 ## <a name="next-step"></a>下一步  
  计算变更范围的起始点和结束点之后，下一步就是确定变更数据是否已准备就绪。  
   
- **下一个主题：**[确定变更数据是否已准备就绪](determine-whether-the-change-data-is-ready.md)  
+ **下一主题：**[确定变更数据是否已准备就绪](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>请参阅  
  [在包中使用变量](../use-variables-in-packages.md)   

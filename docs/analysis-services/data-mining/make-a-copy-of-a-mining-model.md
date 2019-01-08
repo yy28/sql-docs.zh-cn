@@ -1,5 +1,5 @@
 ---
-title: 创建挖掘模型的副本 |Microsoft 文档
+title: 创建挖掘模型的副本 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014584"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502163"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34014584"
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     - 或 -  
+     -或-  
   
      选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”**。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014584"
   
 1.  选择挖掘模型。  
   
-2.  在“属性”窗口中，单击“筛选器”属性文本框，再单击 **(...)** 生成按钮。  
+2.  在中**属性**窗口中，单击文本框**筛选器**属性，然后单击生成 **（...）** 按钮。  
   
 3.  更改筛选条件。  
   
@@ -52,8 +52,8 @@ ms.locfileid: "34014584"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [为挖掘模型 & #40; 筛选器Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

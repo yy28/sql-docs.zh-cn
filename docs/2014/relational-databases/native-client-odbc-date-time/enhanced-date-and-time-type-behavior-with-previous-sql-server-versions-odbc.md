@@ -12,18 +12,18 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543711"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
   本主题说明当使用增强的日期和时间功能的客户端应用程序与早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本通信时的预期行为，以及使用 Microsoft 数据访问组件、Windows 数据访问组件或早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的客户端应用程序向支持增强的日期和时间功能的服务器发送命令时的预期行为。  
   
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
- 使用早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本编译的客户端应用程序将新的日期/时间类型看作 nvarchar 列。 这些列内容用文字表示，"数据格式： 字符串和文字"部分中所述[ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)。 列大小是为列指定的秒小数精度的最大文字长度。  
+ 使用早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本编译的客户端应用程序将新的日期/时间类型看作 nvarchar 列。 如中所述，这些列内容用文字表示，"数据格式：字符串和文字"一节[ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)。 列大小是为列指定的秒小数精度的最大文字长度。  
   
  目录 API 将返回与返回给客户端的下级数据类型代码（例如 nvarchar）和相关的下级表示法（例如相应的文字格式）一致的元数据。 不过，返回的数据类型名称将为 real [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 类型名称。  
   
@@ -37,8 +37,8 @@ ms.locfileid: "48184187"
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|“确定”|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分为非零值将失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(7)|SQL_C_TIME|失败 – 无效的时间文字。|确定 (1)|  
-|||SQL_C_TYPE_TIMESTAMP|失败 – 无效的时间文字。|确定 (1)|  
+||Time(7)|SQL_C_TIME|失败的无效的时间文字。|确定 (1)|  
+|||SQL_C_TYPE_TIMESTAMP|失败的无效的时间文字。|确定 (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|“确定”|确定 (1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|“确定”|由客户端转换将值舍入到 1/300 秒。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|“确定”|“确定”|  
@@ -87,8 +87,8 @@ ms.locfileid: "48184187"
 |TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
+|LITERAL_SUFFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

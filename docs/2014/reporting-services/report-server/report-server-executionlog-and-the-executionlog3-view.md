@@ -14,17 +14,17 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095877"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404997"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>报告服务器执行日志和 ExecutionLog3 视图
   报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
   
- 配置为 SharePoint 模式的报表服务器也可以利用 SharePoint ULS 日志。 有关详细信息，请参阅[为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ 配置为 SharePoint 模式的报表服务器也可以利用 SharePoint ULS 日志。 有关详细信息，请参阅 [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> 查看日志信息  
  报表服务器执行日志将报表执行情况的有关数据记录在内部数据库表中。 表中的信息可从 SQL Server 视图获得。  
@@ -116,7 +116,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |UserName|用户标识符。|  
 |ExecutionID|与请求关联的内部标识符。 同一用户会话的请求共享相同的执行 ID。|  
 |RequestType|可能的值：<br />**交互式**<br />**订阅**<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
-|“格式”|呈现格式。|  
+|格式|呈现格式。|  
 |Parameters|用于执行报表的参数值。|  
 |ItemAction|可能的值：<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **执行**<br /><br /> **RenderEdit**|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|用于检索数据的毫秒数。|  
 |TimeProcessing|用于处理报表的毫秒数。|  
 |TimeRendering|用于呈现报表的毫秒数。|  
-|数据源|报表执行的源。 可能的值：<br /><br /> **实时**<br /><br /> **缓存**： 指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **历史记录**<br /><br /> **即席**： 指示动态生成的报表基于的模型的钻取报表或使用报表服务器进行处理和呈现在客户端上预览的报表生成器报表。<br /><br /> **会话**： 指示请求已建立的会话内的跟进。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**： 指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
+|源|报表执行的源。 可能的值：<br /><br /> **实时**<br /><br /> **缓存**:指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **历史记录**<br /><br /> **即席**:指示基于动态生成的报表模型的钻取报表，或在客户端上预览的报表生成器报表（使用报表服务器进行处理和呈现）。<br /><br /> **会话**:指示已建立的会话内的跟进请求。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**:指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
 |“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
@@ -225,11 +225,11 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  下面介绍的某些属性将在 AdditionalInfo 字段中看到：  
   
--   **ProcessingEngine**: 1 = SQL Server 2005，2 = 新的按需处理引擎。 如果您的大多数报表仍在显示值 1，则可以研究如何对它们进行重新设计，以便利用更新且效率更高的按需处理引擎。  
+-   **ProcessingEngine**:1=SQL Server 2005，2=新的按需处理引擎。 如果您的大多数报表仍在显示值 1，则可以研究如何对它们进行重新设计，以便利用更新且效率更高的按需处理引擎。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**： 执行所用的毫秒数在处理引擎中缩放相关的操作。 值为 0 指示没有额外的时间用于进制运算，值为 0 还指示请求没有处于内存不足的状态。  
+-   **ScalabilityTime**:在处理引擎中执行与进制相关的运算所用的毫秒数。 值为 0 指示没有额外的时间用于进制运算，值为 0 还指示请求没有处于内存不足的状态。  
   
     ```  
     <ScalabilityTime>  
@@ -237,7 +237,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: 峰值的内存量，以千字节为单位，在特定的请求消耗的每个组件的估计值。  
+-   **EstimatedMemoryUsageKB**:每个组件在特定请求过程中使用的内存峰值的估计值，以 KB 为单位。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -245,7 +245,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**： 数据扩展插件或数据源报表中使用的类型。 该数目是特定数据源出现的次数。  
+-   **DataExtension**:在报表中使用的数据扩展插件或数据源的类型。 该数目是特定数据源出现的次数。  
   
     ```  
     <DataExtension>  
@@ -263,7 +263,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **连接**： 多级别结构。 在添加了[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **连接**:多级别的结构。 在添加了[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
     ```  
     <Connections>  
@@ -311,11 +311,11 @@ select * from ExecutionLog2 order by TimeStart DESC
 |“列”|Description|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
-|ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath。|  
+|ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath|  
 |UserName|用户标识符。|  
 |ExecutionID||  
 |RequestType|请求类型（用户或系统）。|  
-|“格式”|呈现格式。|  
+|格式|呈现格式。|  
 |Parameters|用于执行报表的参数值。|  
 |ReportAction|可能的值：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
@@ -323,7 +323,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|检索数据、处理报表以及呈现报表所用的毫秒数。|  
 |TimeProcessing||  
 |TimeRendering||  
-|数据源|报表执行源（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录）。|  
+|源|报表执行源（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录）。|  
 |“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
@@ -346,21 +346,21 @@ select * from ExecutionLog order by TimeStart DESC
 |ReportID|报表标识符。|  
 |UserName|用户标识符。|  
 |RequestType|可能的值：<br /><br /> True = 订阅请求<br /><br /> False = 交互请求|  
-|“格式”|呈现格式。|  
+|格式|呈现格式。|  
 |Parameters|用于执行报表的参数值。|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
 |TimeDataRetrieval|检索数据、处理报表以及呈现报表所用的毫秒数。|  
 |TimeProcessing||  
 |TimeRendering||  
-|数据源|报表执行的源。 可能的值：（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录，5 = 特别，6 = 会话，7 = RDCE）。|  
+|源|报表执行的源。 可能的值：（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录，5 = 特别，6 = 会话，7 = RDCE）。|  
 |“登录属性”|可能的值：rsSuccess、rsProcessingAborted 或错误代码。 如果出现多个错误，则只记录第一个错误。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
   
 ## <a name="see-also"></a>请参阅  
- [启用为 SharePoint 跟踪日志的 Reporting Services 事件&#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
- [错误和事件参考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [错误和事件参考 (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

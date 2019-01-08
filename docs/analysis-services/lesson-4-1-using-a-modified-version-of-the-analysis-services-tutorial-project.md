@@ -1,5 +1,5 @@
 ---
-title: 使用修改后的版本的 Analysis Services Tutorial 项目 |Microsoft 文档
+title: 使用修改后的版本的 Analysis Services 教程项目 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017694"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401110"
 ---
-# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lesson 4-1-使用 Analysis Services 教程项目的修改的版本
+# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>课程 4-1-使用 Analysis Services Tutorial 项目的修改的版本
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 本教程中的其余几节课基于您已在前三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到**  Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
@@ -25,15 +25,15 @@ ms.locfileid: "34017694"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>下载并解压缩项目文件  
   
-1.  [单击此处](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)可以转到下载页，此页提供本教程随附的示例项目。 教程的项目都将纳入**adventure 的工作原理的多维-教程-projects.zip**下载。  
+1.  [单击此处](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) 可以转到下载页，此页提供本教程随附的示例项目。 教程项目包括在**adventure-工作原理的多维-教程-projects.zip**下载。  
   
-2.  单击**adventure 的工作原理的多维-教程-projects.zip**若要下载本教程包含项目的包。  
+2.  单击**adventure-工作原理的多维-教程-projects.zip**可下载包含本教程项目的包。  
   
     默认情况下，.zip 文件将保存到 Downloads 文件夹。 您必须将该 .zip 文件移到具有更短路径的位置（例如，创建一个 C:\Tutorials 文件夹以便存储这些文件）。  然后，您可以解压缩在该 .zip 文件中包含的文件。 如果您尝试从具有较长路径的 Downloads 文件夹解压缩这些文件，将只会获得课程 1。  
   
 3.  在根驱动器处或附近创建一个子文件夹，例如 C:\Tutorial。  
   
-4.  移动**adventure 的工作原理的多维-教程-projects.zip**到的子文件夹的文件。  
+4.  移动**adventure-工作原理的多维-教程-projects.zip**的子文件夹中的文件。  
   
 5.  右键单击该文件，然后选择“全部提取”。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34017694"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>加载和处理增强的项目  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“文件”菜单上，单击“关闭解决方案”以便关闭不使用的文件。  
+1.  在中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，然后在**文件**菜单中，单击**关闭解决方案**关闭您不会使用的文件。  
   
 2.  在“文件”菜单中，指向“打开”，然后单击“项目”/“解决方案”。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34017694"
 ## <a name="understanding-the-enhancements-to-the-project"></a>了解该项目的增强功能  
 该项目的增强版本与前三节课程中所完成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的版本不同。 下面几节说明了具体的差异。 在继续学习本教程的其余课程之前，请查看此信息。  
   
-### <a name="data-source-view"></a>数据源视图  
+### <a name="data-source-view"></a>“数据源视图”  
 该增强的项目的数据源视图中新增了来自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库的一个事实数据表和四个维度表。  
   
 可以看到该数据源视图包含十个表， <All Tables> 关系图变得很拥挤， 因此很难轻松理解各表之间的关系并找到特定表。 为了解决这一问题，将这些表组织为两个逻辑关系图：“Internet 销售”关系图和“分销商销售”关系图。 这两个关系图均围绕一个事实数据表进行组织。 通过创建逻辑关系图，您可以在数据源视图中查看和使用表的特定子集，而无需始终在一个关系图中查看所有表及其关系。  
@@ -62,11 +62,11 @@ ms.locfileid: "34017694"
 #### <a name="internet-sales-diagram"></a>“Internet 销售”关系图  
 “Internet 销售”关系图包含与直接通过 Internet 向客户销售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 产品相关的表。 该关系图包含四个维度表和一个事实表，在第 1 课中已经将这些表添加到 **Adventure Works DW 2012** 数据源视图。 这些表包括：  
   
--   **Geography**  
+-   **地域**  
   
 -   **Customer**  
   
--   **日期**  
+-   **Date**  
   
 -   **Product**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34017694"
   
 -   **Geography**  
   
--   **日期**  
+-   **Date**  
   
 -   **Product**  
   
@@ -117,6 +117,6 @@ ms.locfileid: "34017694"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [定义父子层次结构中的父特性属性](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [部署 Analysis Services 项目](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

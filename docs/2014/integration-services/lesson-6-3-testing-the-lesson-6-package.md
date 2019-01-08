@@ -1,24 +1,23 @@
 ---
-title: 步骤 3：测试第 6 课包 | Microsoft Docs
+title: 步骤 3：测试第 6 课包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ddacdc7ede5d65132912783464250ff5f0db6bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 027cea0f06d9a673c7c5216c548e907b6326544d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767450"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>步骤 3：测试 Lesson 6 包
+# <a name="step-3-testing-the-lesson-6-package"></a>步骤 3：测试第 6 课包
   在运行时，包从 VarFolderName 参数获取 Directory 属性的值。  
   
  若要验证该包在运行时是否使用新值更新了 Directory 属性，只需执行该包。 由于只向新目录中复制了三个示例数据文件，因此该数据流将只运行三次，而不遍历原始文件夹中的 14 个文件。  
@@ -41,6 +40,6 @@ ms.locfileid: "48122027"
 2.  该包运行完成后，请在“调试”菜单上单击“停止调试”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 4：部署第 6 课包](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [步骤 4:部署第 6 课包](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

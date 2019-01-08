@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.post.f1
@@ -12,12 +12,12 @@ ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81170542124095177103888bd44d8c11c6430ece
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763009"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
   使用此页可以指定目标服务器的下载指令。  
@@ -26,7 +26,7 @@ ms.locfileid: "48146897"
  **指令类型**  
  指定要发布的下载指令的类型。  
   
- **Description**  
+ **说明**  
  查看下载指令的说明。  
   
  **轮询间隔**  

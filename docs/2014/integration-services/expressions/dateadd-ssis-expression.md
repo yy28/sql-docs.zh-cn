@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
@@ -15,12 +14,12 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8f49e6ebab115dd4d0363fd19ae477902389bd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c202f5d990d707de4aa4a3077d055e7cd72e7bac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140587"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781179"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD（SSIS 表达式）
   将表示日期或时间间隔的数值与日期中指定的日期部分相加后，返回一个新的 DT_DBTIMESTAMP 值。 number 参数的值必须为整数，而 date 参数的取值必须为有效日期。  
@@ -92,11 +91,11 @@ DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [DATEDIFF &#40;SSIS 表达式&#41;](datediff-ssis-expression.md)   
+ [DATEDIFF（SSIS 表达式）](datediff-ssis-expression.md)   
  [DATEPART（SSIS 表达式）](datepart-ssis-expression.md)   
  [DAY（SSIS 表达式）](day-ssis-expression.md)   
  [MONTH（SSIS 表达式）](month-ssis-expression.md)   
  [YEAR（SSIS 表达式）](year-ssis-expression.md)   
- [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   

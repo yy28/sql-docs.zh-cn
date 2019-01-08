@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114427"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510751"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>将筛选器应用于模型测试数据
   在指定测试模型时使用的外部数据源时，可以选择应用筛选器以限制输入数据。 例如，您可能想要专门针对有关某一收入范围的客户的预测来测试模型。  
@@ -47,7 +47,7 @@ ms.locfileid: "48114427"
   
  为了确定某一模型是否包含可能会影响结果的预定义筛选器，您可以在 **“属性”** 窗格中查找 **Filter** 属性，或者可以通过使用数据挖掘架构行集对模型进行查询。 例如，下面的查询将返回指定模型的筛选器文本：  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  如果您想要从现有挖掘模型中删除筛选器或更改筛选条件，则必须重新处理该挖掘模型。  
@@ -62,7 +62,7 @@ ms.locfileid: "48114427"
   
 3.  在“输入选择”  选项卡的“选择要用于准确性图表的数据集” 下，选择“指定其他数据集” 选项。  
   
-4.  单击浏览按钮“(…)”以打开一个对话框，并选择外部数据集。  
+4.  单击浏览按钮 **（...）** 以打开一个对话框并选择外部数据集。  
   
 5.  选择事例表，并根据需要添加嵌套表。 根据需要将模型中的列映射到外部数据集中的列。 关闭 **“指定列映射”** 对话框以便保存源表定义。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114427"
   
 9. 单击“和/或”文本框并选择逻辑运算符来定义多个条件的组合方式。  
   
-10. 还可以根据需要单击“值”文本框右侧的浏览按钮“(…)”，以打开“筛选器”对话框，并对嵌套表或单个事例表列设置条件。  
+10. （可选） 单击浏览按钮 **（...）** 右侧的**值**文本框中，打开**筛选器**对话框框和嵌套表或单个事例表列设置条件。  
   
 11. 查看 **“表达式”** 窗格中的文本以验证整个筛选器条件是否正确。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48114427"
   
 ## <a name="see-also"></a>请参阅  
  [选择和映射模型测试数据](choose-and-map-model-testing-data.md)   
- [使用嵌套表数据作为输入准确性图表](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [使用嵌套表数据作为准确性图表的输入](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [选择准确性图表类型和设置图表选项](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

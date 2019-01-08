@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148424"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525787"
 ---
 # <a name="understanding-the-tabular-object-model"></a>了解表格对象模型
   表格模型是表、关系、层次结构、透视、度量值和关键绩效的逻辑表示形式。 本节介绍使用 AMO 的内部实现。 请参阅[使用分析管理对象开发&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)如果你未使用过 AMO 之前。  
@@ -57,7 +57,7 @@ ms.locfileid: "50148424"
   
  请参阅[层次结构表示形式&#40;表格&#41;](tables-hierarchy-representation.md)有关的详细说明如何创建和操作层次结构表示形式。  
   
-### <a name="key-performance-indicator-kpi--representation"></a>关键绩效指标 (KPI) 表示形式  
+### <a name="key-performance-indicator--kpi--representation"></a>关键绩效指标表示形式的 KPI  
  KPI 用于根据目标值度量基础度量值定义的值的性能。 就 AMO 对象而言，KPI 表示形式具有一对多映射关系。 通过使用以下 AMO 对象来表示 KPI：<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 和 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 是主要的必需对象。  请注意，这并不意味着前面提到的 AMO 对象中的所有包含对象可在建模时使用。  
   
 > [!NOTE]  

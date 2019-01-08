@@ -20,12 +20,12 @@ ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a892581ff245559d08ac0a37eca5e4a7db3db1dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d522f0da9bbaad8233bf0e1d1d3f18d6db56c4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529184"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>聚合和聚合设计
   <xref:Microsoft.AnalysisServices.AggregationDesign> 对象定义一组可在多个分区间共享的聚合定义。  
@@ -40,7 +40,7 @@ ms.locfileid: "48051237"
   
  其他问题可能返回多个值。 例如，“1998 年硬件产品按季度按区域的销售额是多少？” 这类查询会从满足所指定条件的坐标处返回很多单元集。 查询返回的单元数目取决于“产品”维度“硬件”级别中的项目数、1998 年的四个季度和“地域”维度中的地区数目。 如果所有的汇总数据都已经预先计算到聚合中，则这种查询的响应时间仅取决于提取指定单元所需的时间。 无需从事实数据表中计算或读取数据。  
   
- 虽然对多维数据集中所有可能的聚合进行预先计算可以使所有查询以最短的时间做出响应，但 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以通过其他预先计算好的聚合轻松地计算某些聚合值。 另外，计算所有可能的聚合需要大量的处理时间和存储空间。 因此，应该综合考虑存储要求和预先计算的可能聚合百分比两方面因素，采纳一个折中方案。 如果没有预先计算任何聚合（即 0%），则多维数据集所需要的处理时间和存储空间量达到最低，但由于必须从叶单元检索回答每个查询所需的数据，然后在查询时聚合数据以回答每个查询，因而查询响应时间可能会很长。 例如，为了回答前面提出的问题（“1998 年产品 X 在西北地区的销售额是多少”）而返回单一数值可能需要读取数千行数据，再从每一行提取用于提供“销售额”度量值的列的值，然后再计算总和。 此外，检索这些数据所需的时间主要取决于为数据选定的存储模式（MOLAP、HOLAP 或 ROLAP）。  
+ 虽然对多维数据集中所有可能的聚合进行预先计算可以使所有查询以最短的时间做出响应，但 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以通过其他预先计算好的聚合轻松地计算某些聚合值。 另外，计算所有可能的聚合需要大量的处理时间和存储空间。 因此，应该综合考虑存储要求和预先计算的可能聚合百分比两方面因素，采纳一个折中方案。 如果没有预先计算任何聚合（即 0%），则多维数据集所需要的处理时间和存储空间量达到最低，但由于必须从叶单元检索回答每个查询所需的数据，然后在查询时聚合数据以回答每个查询，因而查询响应时间可能会很长。 例如，为了回答前面提出的问题（“1998 年产品 X 在西北地区的销售额是多少”）而返回单一数值可能需要读取数千行数据，再从每一行提取用于提供“销售额”度量值的列的值，然后再计算总和。 此外，检索该数据所需的时间长度将因具体取决于选定的数据的存储模式的 MOLAP、 HOLAP 或 ROLAP。  
   
 ## <a name="designing-aggregations"></a>设计聚合  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 集成了复杂的算法来选择预先聚合，以便从预先计算的值可以快速计算其他聚合。 例如，如果“时间”层次结构中“月份”级别的聚合已经预先计算好，则某个“季度”级别的计算只要求对三个数字进行汇总，就可以根据需要很快地计算出结果。 这种技术可节省处理时间并降低存储要求，同时对查询响应时间的影响也最小。  

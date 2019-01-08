@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,12 +17,12 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62479a884be565fd58bc931f821cb049ea0bf8a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762849"
 ---
 # <a name="assign-alerts-to-an-operator"></a>向操作员分配警报
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中向操作员分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报，以便他们可以接收有关作业的通知。  
@@ -33,7 +33,7 @@ ms.locfileid: "48102920"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要向操作员分配警报，可使用：**  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48102920"
   
 4.  右键单击要为其分配警报的操作员，再选择“属性”，然后选择“通知”页。  
   
-5.  在“operator_name属性”对话框的“选择页”下，选择“通知”。  
+5.  在“operator_name 属性”对话框的“选择页”下，选择“通知”。  
   
-6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”、“寻呼程序”或“Net send”。  
+6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选择一个或多个以下的复选框来根据需要定义每个通知的通知方法：**电子邮件**，**寻呼**，或**Net send**。  
   
 7.  完成后，单击 **“确定”**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48102920"
   
 #### <a name="to-assign-alerts-to-an-operator"></a>为操作员分配警报  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -86,13 +86,13 @@ ms.locfileid: "48102920"
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_add_notification  
      @alert_name = N'Test Alert',  
-     @operator_name = N'François Ajenstat',  
+     @operator_name = N'Fran??ois Ajenstat',  
      @notification_method = 1 ;  
     GO  
     ```  

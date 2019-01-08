@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d8e24883fe71463b4c03e4caefc1735cf794bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167267"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760719"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
   本主题介绍了如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定接收转发事件的服务器。 请注意，事件转发适用于在服务器之间转发的事件，而不适用于在单个计算机上承载的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间转发的事件。 此外，还请注意，为了接收转发的事件，警报管理服务器必须是 SQL Server 的默认实例。  
@@ -28,7 +28,7 @@ ms.locfileid: "48167267"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要指定事件转发服务器，请使用：**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "48167267"
 1.  在 **“对象资源管理器”** 中，单击加号以展开要将其事件转发到其他服务器的服务器。  
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”。  
-  
-3.  在“SQL Server 代理属性 – server_name”对话框的“选择页”下，选择“高级”。  
-  
+
+3.  在“SQL Server 代理属性” –_server_name_ 对话框的“选择页”下，选择“高级”。  
+
 4.  在 **“SQL Server 事件转发”** 下，选中 **“将事件转发到其他服务器”** 复选框。  
   
 5.  在 **“服务器”** 列表中，选择一台服务器，然后在 **“事件”** 选择下列操作之一：  

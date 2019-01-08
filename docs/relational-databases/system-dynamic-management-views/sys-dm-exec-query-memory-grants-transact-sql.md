@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 247b89dcacc30417d01160c490010909cfbf5cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839075"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413405"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回有关所有已请求并等待内存授予或已被授予的内存授予的查询的信息。 不需要的内存授予的查询不会出现在此视图。 例如，排序和哈希联接操作都具有以执行查询，而无需查询时的内存授予**ORDER BY**子句将没有内存授予。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。此外，列中的值**scheduler_id**， **wait_order**， **pool_id**， **group_id**进行筛选; 设置列的值为 NULL。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。此外，列中的值**scheduler_id**， **wait_order**， **pool_id**， **group_id**进行筛选; 设置列的值为 NULL。  
   
 > [!NOTE]  
 > 若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_query_memory_grants**。  
@@ -53,7 +53,7 @@ ms.locfileid: "47839075"
 |**max_used_memory_kb**|**bigint**|到此刻为止所用的最大物理内存 (KB)。|  
 |**query_cost**|**float**|估计查询开销。|  
 |**timeout_sec**|**int**|查询放弃内存授予请求前的超时时间（秒）。|  
-|**resource_semaphore_id**|**smallint**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：** 此 ID 是唯一的版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题后面的"备注"部分。|  
+|**resource_semaphore_id**|**smallint**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：** 此 ID 在早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本中是唯一的。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题后面的"备注"部分。|  
 |**queue_id**|**smallint**|查询等待内存授予时所在等待队列的 ID。 如果已授予内存，则为 NULL。|  
 |**wait_order**|**int**|正在等待的查询中指定的连续顺序**queue_id**。 如果其他查询获得内存授予或超时，则给定查询的该值可以更改。如果已授予内存，则为 NULL。|  
 |**is_next_candidate**|**bit**|下一个内存授予的候选对象。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已授予内存。|  
@@ -66,7 +66,7 @@ ms.locfileid: "47839075"
 |**ideal_memory_kb**|**bigint**|将所有内容存放在物理内存中所需的内存授予的大小（以 KB 为单位）。 这基于基数估计。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

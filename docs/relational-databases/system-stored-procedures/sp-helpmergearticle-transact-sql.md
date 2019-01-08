@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98c2d4b7c60ff3229e683d45a6b88ccebaa40c85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700775"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779749"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|定义发布项目的视图所有者的名称。|  
 |**sync_object**|**sysname**|用于建立分区初始数据的自定义对象的名称。|  
 |**description**|**nvarchar(255)**|对项目的说明。|  
-|**status**|**tinyint**|项目的状态，可以为以下值之一：<br /><br /> **1** = 非活动状态<br /><br /> **2** = 活动<br /><br /> **5** = 数据定义语言 (DDL) 操作挂起<br /><br /> **6** = 使用新生成快照的 DDL 操作<br /><br /> 注意： 当项目重新初始化订阅时，值的**5**并**6**更改为**2**。|  
+|**status**|**tinyint**|项目的状态，可以为以下值之一：<br /><br /> **1** = 非活动状态<br /><br /> **2** = 活动<br /><br /> **5** = 数据定义语言 (DDL) 操作挂起<br /><br /> **6** = 使用新生成快照的 DDL 操作<br /><br /> 注意：当项目重新初始化订阅时，值的**5**并**6**更改为**2**。|  
 |**creation_script**|**nvarchar(255)**|用于在订阅数据库中创建项目的可选项目架构脚本的路径和名称。|  
 |**conflict_table**|**nvarchar(270)**|存储插入或更新冲突的表的名称。|  
 |**article_resolver**|**nvarchar(255)**|项目的自定义冲突解决程序。|  
@@ -94,7 +93,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>备注  
  **sp_helpmergearticle**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**db_owner**发布数据库中固定数据库角色**replmonitor**分发数据库或发布的发布访问列表中的角色才能执行**sp_helpmergearticle**。  
   
 ## <a name="example"></a>示例  

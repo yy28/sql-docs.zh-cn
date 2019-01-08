@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130330"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771389"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新初始化订阅。 可以将各个订阅标记为重新初始化，以便在下次同步期间应用新快照。  
@@ -174,7 +173,7 @@ ms.locfileid: "48130330"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确或请求订阅不存在。  
+    >  如果此方法返回 `false`，则步骤 2 中对订阅属性的定义不正确，或者请求订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> 方法。 此方法将订阅标记为要重新初始化。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "48130330"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确，或者推送订阅不存在。  
+    >  如果此方法返回 `false`，则步骤 2 中对订阅属性的定义不正确，或者推送订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 方法。 此方法将订阅标记为要重新初始化。  
   
@@ -204,7 +203,7 @@ ms.locfileid: "48130330"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确或请求订阅不存在。  
+    >  如果此方法返回 `false`，则步骤 2 中对订阅属性的定义不正确，或者请求订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> 方法。 传递 `true` 值以在重新初始化之前上载订阅服务器上的更改，或者传递 `false` 值以重新初始化并丢失订阅服务器上任何挂起的更改。 此方法将订阅标记为要重新初始化。  
   
@@ -222,14 +221,14 @@ ms.locfileid: "48130330"
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
-    >  如果此方法返回`false`，步骤 2 中的订阅属性定义不正确，或者推送订阅不存在。  
+    >  如果此方法返回 `false`，则步骤 2 中对订阅属性的定义不正确，或者推送订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> 方法。 传递 `true` 值以在重新初始化之前上载订阅服务器上的更改，或者传递 `false` 值以重新初始化并丢失订阅服务器上任何挂起的更改。 此方法将订阅标记为要重新初始化。  
   
     > [!NOTE]  
     >  如果订阅过期，则无法上载更改。 有关详细信息，请参阅 [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md)。  
   
-5.  同步推送订阅。 有关详细信息，请参阅 [同步推送订阅](synchronize-a-push-subscription.md)。  
+5.  同步推送订阅。 有关详细信息，请参阅 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  此示例将重新初始化事务发布的请求订阅。  
