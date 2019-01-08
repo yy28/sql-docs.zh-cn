@@ -24,7 +24,7 @@ ms.locfileid: "51677938"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入门，SQL Server 2017 或 SQL Server 2019 preview 上安装 Ubuntu 16.04。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
+在本快速入门，在 Ubuntu 16.04 上安装 SQL Server 2017 或 SQL Server 2019 preview。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
