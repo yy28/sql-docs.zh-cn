@@ -1,5 +1,5 @@
 ---
-title: 报表疑难解答：地图报表（报表生成器和 SSRS）| Microsoft Docs
+title: 报表故障排除：地图报表 （报表生成器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375339"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当您向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时，报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
@@ -170,10 +170,10 @@ ms.locfileid: "48197407"
   
 -   匹配字段问题。 通过匹配字段，可以在地图元素与分析数据之间实现数据绑定。 与匹配字段对应的空间数据字段和分析数据字段必须具有相同的数据类型和相同的格式。 如果匹配字段与空间数据以及分析数据并不完全匹配，则规则不起任何作用。 例如，如果空间数据的匹配字段与分析数据的匹配字段相比，前者具有多余空格或多余标点符号，则不会发生匹配。  
   
--   有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+-   有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>对于色阶，值 NaN 是什么含义？  
- `NaN` 代表不是数字。 色阶值应为数字值。 对于与色阶关联的规则，检查分布设置和图例文本值。 如果您创建了自定义分布范围，请验证您对第一个范围指定了下限，而对最后范围指定了上限。  
+ `NaN` 表示“非数字”。 色阶值应为数字值。 对于与色阶关联的规则，检查分布设置和图例文本值。 如果您创建了自定义分布范围，请验证您对第一个范围指定了下限，而对最后范围指定了上限。  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>当我运行报表时，不显示色阶。  
  当地图层为整个层的多边形、线条或点或嵌入地图元素指定颜色规则时，色阶向用户显示信息。 如果没有地图元素指定颜色规则，或者如果地图规则是使用图例而非颜色地图指定的，则呈现的报表中不显示颜色地图。  
@@ -194,7 +194,7 @@ ms.locfileid: "48197407"
   
 -   地图投影必须为 **Mercator**。  
   
--   对于本地预览，您必须能够访问 Internet。 对于从报表服务器运行的报表，必须将报表服务器配置为支持图块背景。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“规划地图支持”。  
+-   对于本地预览，您必须能够访问 Internet。 对于从报表服务器运行的报表，必须将报表服务器配置为支持图块背景。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“规划地图支持”。  
   
  有关添加图块层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217617"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371179"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
   本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
@@ -79,11 +78,11 @@ ms.locfileid: "48217617"
 ###  <a name="Welcome"></a> “欢迎”页  
  此页说明配置数据库邮件的步骤。  
   
- **不再显示此页** – 选中它可以在将来跳过显示此“欢迎”页。  
+ **不再显示此页** - 选中它，可在以后的显示中跳过此“欢迎”页。  
   
  **下一步** - 继续到“选择配置任务”页。  
   
- **取消** - 终止向导而不配置数据库邮件  
+ **取消** - 终止向导而无需配置数据库邮件  
   
  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48217617"
  使用 **“选择配置任务”** 页可以指示每次使用此向导时要完成的任务。 如果您在完成向导前改变了主意，请使用 **“上一步”** 按钮返回此页并选择其他任务。  
   
 > [!NOTE]  
->  如果数据库邮件尚未启用，您将收到以下消息：**“数据库邮件功能不可用。是否要启用此功能？** 回答“是”相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
+>  如果尚未启用数据库邮件，您将收到消息：**数据库邮件功能不可用。是否要启用此功能？** 回答“是”相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
   
  **通过执行以下任务来设置数据库邮件**  
  执行第一次设置数据库邮件所需的所有任务。 此选项包含所有其他三个选项。  
@@ -117,7 +116,7 @@ ms.locfileid: "48217617"
  **帐户名**  
  键入新帐户的名称。  
   
- **Description**  
+ **说明**  
  键入帐户的说明。 该说明为可选项。  
   
  **电子邮件地址**  
@@ -167,7 +166,7 @@ ms.locfileid: "48217617"
  **删除**  
  删除选定的帐户。 必须从关联的配置文件中删除此帐户，或者删除此类配置文件，才能够删除所选帐户。  
   
- **Description**  
+ **说明**  
  查看或更新帐户的说明。 该说明为可选项。  
   
  **电子邮件地址**  
@@ -216,7 +215,7 @@ ms.locfileid: "48217617"
  **配置文件名称**  
  键入新配置文件的名称。 将使用此名称创建配置文件。 不要使用现有配置文件的名称。  
   
- **Description**  
+ **说明**  
  键入配置文件的说明。 该说明为可选项。  
   
  **SMTP 帐户**  
@@ -247,7 +246,7 @@ ms.locfileid: "48217617"
  **删除**  
  删除所选配置文件。 系统将提示您选择 **“是”** 以删除所选配置文件并舍弃任何未发送的邮件，或者选择 **“否”** 以仅在没有未发送邮件时删除所选配置文件。  
   
- **Description**  
+ **说明**  
  查看或更改所选配置文件的说明。 该说明为可选项。  
   
  **SMTP 帐户**  
@@ -415,7 +414,7 @@ ms.locfileid: "48217617"
  测试电子邮件的 **mailitem_id** 。  
   
  **故障排除**  
- 单击可打开联机丛书的 [对数据库邮件进行故障排除](http://msdn.microsoft.com/library/ms188663.aspx)主题。  
+ 单击可打开联机丛书的 [对数据库邮件进行故障排除](https://msdn.microsoft.com/library/ms188663.aspx)主题。  
   
 
   

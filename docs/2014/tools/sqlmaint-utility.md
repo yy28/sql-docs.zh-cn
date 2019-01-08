@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -19,12 +18,12 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8da941588b466aeaf690214dfee836718569a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110057"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591672"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
   如果成功运行，则**sqlmaint** 实用工具可以对一个或多个数据库执行一组指定的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
@@ -80,31 +79,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  指定返回 **sqlmaint** 的语法关系图。 此参数必须单独使用。  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 命名实例的 server_name\\instance_name**。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
+ **-S** _server_name_[ **\\**_instance_name_]  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定要连接到该服务器上 *命名实例的**_\\_** server_name* instance_name [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  指定连接服务器时使用的登录 ID。 如果未提供， **sqlmaint** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。 如果 *login_ID* 包含特殊字符，则必须用双引号 (") 引起来；否则，双引号为可选。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。  
   
- **-P** *password*  
+ **-P** _password_  
  指定登录 ID 的密码。 仅在同时提供 **-U** 参数时有效。 如果 *password* 包含特殊字符，则必须用双引号引起来；否则，双引号为可选。  
   
 > [!IMPORTANT]  
 >  密码不屏蔽。 请尽可能使用 Windows 身份验证。  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  指定要在其中执行维护操作的数据库的名称。 如果 *database_name* 包含特殊字符，则必须用双引号引起来；否则，双引号为可选。  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  指定使用数据库维护计划向导定义的数据库维护计划的名称。 **sqlmaint** 仅使用该计划中的数据库列表信息。 在其他 **sqlmaint** 参数中指定的任何维护活动都会应用到此数据库列表。  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  指定使用数据库维护计划向导定义的数据库维护计划的全局唯一标识符 (GUID)。 **sqlmaint** 仅使用该计划中的数据库列表信息。 在其他 **sqlmaint** 参数中指定的任何维护活动都会应用到此数据库列表。 这必须与 msdb.dbo.sysdbmaintplans 中的 plan_id 值匹配。  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  指定包含要生成的报表的文件的完整路径和名称。 报表也可在屏幕上生成。 报表通过在文件名中添加日期来维护版本信息。 日期是按以下格式生成的：在文件名末尾句点之前使用 _*yyyyMMddhhmm*格式。 *yyyy* = 年， *MM* = 月， *dd* = 日， *hh* = 小时， *mm* = 分钟。  
   
  如果您在 1996 年 12 月 1 日上午 10:23 运行过该实用工具， 在 1996 年 12 月 1 日， *text_file* 的值为：  
@@ -121,10 +120,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  *sqlmaint* 访问远程服务器时， **text_file** 需要完整的通用命名约定 (UNC) 文件名。  
   
- **-To**  *operator_name*  
+ **-To** _operator_name_  
  指定通过 SQL 邮件接收生成的报表的操作员。  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  指定 HTML 报表将生成到其中的文件的完整路径和名称。 **sqlmaint** 生成文件名的方式是在文件名中追加格式为 _*yyyyMMddhhmm* 的字符串，这与针对 **-Rpt** 参数的文件命名方式相同。  
   
  *sqlmaint* 访问远程服务器时， **html_file** 需要完整的 UNC 文件名。  
@@ -132,7 +131,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  指定报表文件创建后的时间间隔超出 \<time_period> 时，删除报表目录中的所有 HTML 报表。 **-DelHtmlRpt** 将查找名称符合由 *html_file* 参数生成的模式的文件。 如果 html_file 为 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，则 -DelHtmlRpt 将导致 sqlmaint 删除任何名称与 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式匹配的文件，以及早于指定 \<time_period> 的文件。  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  指定从 **-D**. 指定的数据库中删除未使用的空间。 该选项仅适用于定义为自动增长的数据库。 *Threshold_percent* 指定在 **sqlmaint** 可以尝试删除未使用数据空间之前数据库必须达到的大小 (MB)。 如果数据库小于 *threshold_percent*，则不采取任何操作。 *Free_percent* 指定数据库中必须保留的未使用空间的大小，以数据库最终大小的百分比表示。 例如，如果一个 200 MB 的数据库包含 100 MB 数据，则将 *free_percent* 指定为 10 将使数据库最终大小变为 110 MB。 请注意，如果数据库小于 *free_percent* 加上数据库中数据量的大小，则数据库不会扩展。 例如，如果 108 MB 的数据库有 100 MB 数据，则将 *free_percent* 指定为 10 不会将数据库扩展为 110 MB，而是仍保持为 108 MB。  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -146,7 +145,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  指定在 **-D** 指定的数据库中运行 DBCC CHECKCATALOG (Transact-SQL) 语句。 有关详细信息，请参阅 [DBCC CHECKCATALOG (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkcatalog-transact-sql)。  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  指定对数据库中的每个表运行下列语句：  
   
 ```  
@@ -155,9 +154,9 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  如果表包含计算列，则在使用 **-UpdOptiStats** 时，还必须指定 **-SupportedComputedColumn**参数。  
   
- 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)。  
+ 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)创建的数据库维护计划。  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  指定应使用 *free_space* 百分比值作为填充因子的反数，重新生成目标数据库的表索引。 例如，如果 *free_space* 百分比是 30，则使用的填充因子为 70。 如果指定 *free_space* 百分比值为 100，则使用原始填充因子值重新生成索引。  
   
  如果索引位于计算列，则在使用 **-RebldIdx** 时，还必须指定 **-SupportComputedColumn**参数。  
@@ -239,7 +238,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   发生常规错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对 **具有** 读取和执行 **权限的任何 Windows 用户都可以执行** sqlmaint `sqlmaint.exe`实用工具，默认情况下，该工具存储在 `x:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER1\MSSQL\Binn` 文件夹中。 此外，使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **指定的** 登录名必须具有执行指定的操作所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 如果使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，则映射到经过身份验证的 Windows 用户的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名必须具有执行指定操作所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。  
   
  例如，使用 **-BkUpDB** 需要执行 BACKUP 语句的权限。 使用 **-UpdOptiStats** 参数需要执行 UPDATE STATISTICS 语句的权限。 有关详细信息，请参阅联机丛书中相应主题的“权限”部分。  

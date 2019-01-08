@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -18,19 +17,19 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd7508b806d3dbfc488dd8e1358d3bab4d624b06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089649"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359789"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
-  如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置`LoggingMode`属性，则必须使用数值 2 而不是友好名称已禁用。  
+  如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置 `LoggingMode` 属性，则必须使用数值 2 而不是友好名称“Disabled”。  
   
  此主题只列出通常会在属性表达式中使用其成员的枚举器的友好名称的等价数值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型包括很多其他枚举器，在编写对象模型以便以编程方式生成包时，或为任务和数据流组件等自定义包元素编写代码时，需要使用这些枚举器。  
   
- 除了包和包对象的自定义属性外， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“属性”窗口还包括一组可用于包、任务以及 Foreach 循环、For 循环和序列容器的属性。 由枚举器中的值所设置的通用属性（`ForceExecutionResult`、`LoggingMode`、`IsolationLevel` 和 `Transaction Option`）将在“通用属性”部分中列出。  
+ 除了包和包对象的自定义属性外， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“属性”窗口还包括一组可用于包、任务以及 Foreach 循环、For 循环和序列容器的属性。 从枚举器的设置的值的常见属性`ForceExecutionResult`， `LoggingMode`， `IsolationLevel`，和`Transaction Option`的通用属性部分中列出。  
   
  以下部分提供了有关枚举常量的信息：  
   
@@ -47,18 +46,18 @@ ms.locfileid: "48089649"
 ##  <a name="Package"></a> “包”  
  下表列出了通过使用枚举器中的值所设置的包的属性的友好名称和等价数值。  
   
- `PackageType` 属性-通过使用中的值设置`DTSPackageType`枚举。  
+ `PackageType` 通过使用中的值的属性集`DTSPackageType`枚举。  
   
 |DTSPackageType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
-|，则“默认”|0|  
+|默认|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage` 属性-通过使用中的值设置`DTSCheckpointUsage`枚举。  
+ `CheckpointUsage` 通过使用中的值的属性集`DTSCheckpointUsage`枚举。  
   
 |DTSCheckpointUsage 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
@@ -66,17 +65,17 @@ ms.locfileid: "48089649"
 |IfExists|1|  
 |始终|2|  
   
- `PackagePriorityClass` 属性-通过使用中的值设置`DTSPriorityClass`枚举。  
+ `PackagePriorityClass` 通过使用中的值的属性集`DTSPriorityClass`枚举。  
   
 |DTSPriorityClass 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
-|，则“默认”|0|  
+|默认|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
 |Idle|4|  
   
- `ProtectionLevel` 属性-通过使用中的值设置`DTSProtectionLevel`枚举。  
+ `ProtectionLevel` 通过使用中的值的属性集`DTSProtectionLevel`枚举。  
   
 |DTSProtectionLevel 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "48089649"
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> 优先约束  
- `EvalOp` 属性-通过使用中的值设置`DTSPrecedenceEvalOp`枚举。  
+ `EvalOp` 通过使用中的值的属性集`DTSPrecedenceEvalOp`枚举。  
   
 |DTSPrecedenceEvalOp 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
@@ -97,7 +96,7 @@ ms.locfileid: "48089649"
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value` 属性-通过使用中的值设置`DTSExecResult`枚举。  
+ `Value` 通过使用中的值的属性集`DTSExecResult`枚举。  
   
 |友好名称|数值|  
 |-------------------|-------------------|  
@@ -110,7 +109,7 @@ ms.locfileid: "48089649"
  Foreach 循环包括一组其属性可以由属性表达式设置的枚举器。  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 枚举器  
- `Type` 属性-通过使用中的值设置`ADOEnumerationType`枚举。  
+ `Type` 通过使用中的值的属性集`ADOEnumerationType`枚举。  
   
 |ADOEnumerationType 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
@@ -119,7 +118,7 @@ ms.locfileid: "48089649"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 枚举器  
- `SourceDocumentType``InnerXPathStringSourceType`，并**OuterXPathStringSourceType**属性-通过使用中的值设置`SourceType`枚举。  
+ `SourceDocumentType``InnerXPathStringSourceType`，并**OuterXPathStringSourceType**通过使用中的值的属性集`SourceType`枚举。  
   
 |SourceType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
@@ -127,7 +126,7 @@ ms.locfileid: "48089649"
 |变量|1|  
 |DirectInput|2|  
   
- `EnumerationType` 属性-通过使用中的值设置`EnumerationType`枚举。  
+ `EnumerationType` 通过使用中的值的属性集`EnumerationType`枚举。  
   
 |EnumerationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
@@ -136,7 +135,7 @@ ms.locfileid: "48089649"
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType` 属性-通过使用中的值设置`InnerElementType`枚举。  
+ `InnerElementType` 通过使用中的值的属性集`InnerElementType`枚举。  
   
 |InnerElementType 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
@@ -148,7 +147,7 @@ ms.locfileid: "48089649"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括许多其属性可以由属性表达式设置的任务。  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务  
- `SourceType` 属性-通过使用中的值设置`DDLSourceType`枚举。  
+ `SourceType` 通过使用中的值的属性集`DDLSourceType`枚举。  
   
 |DDLSourceType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
@@ -157,7 +156,7 @@ ms.locfileid: "48089649"
 |变量|2|  
   
 ### <a name="bulk-insert-task"></a>大容量插入任务  
- `DataFileType` 属性-通过使用中的值设置`DTSBulkInsert_DataFileType`枚举。  
+ `DataFileType` 通过使用中的值的属性集`DTSBulkInsert_DataFileType`枚举。  
   
 |DTSBulkInsert_DataFileType 中的友好名称|数值|  
 |--------------------------------------------------|-------------------|  
@@ -167,7 +166,7 @@ ms.locfileid: "48089649"
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### <a name="execute-sql-task"></a>执行 SQL 任务  
- `ResultSetType` 属性-通过使用中的值设置`ResultSetType`枚举。  
+ `ResultSetType` 通过使用中的值的属性集`ResultSetType`枚举。  
   
 |ResultSetType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
@@ -176,7 +175,7 @@ ms.locfileid: "48089649"
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType` 属性-通过使用中的值设置`SqlStatementSourceType`枚举。  
+ `SqlStatementSourceType` 通过使用中的值的属性集`SqlStatementSourceType`枚举。  
   
 |SqlStatementSourceType 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
@@ -185,7 +184,7 @@ ms.locfileid: "48089649"
 |变量|3|  
   
 ### <a name="file-system-task"></a>文件系统任务  
- `Operation` 属性-通过使用中的值设置`DTSFileSystemOperation`枚举。  
+ `Operation` 通过使用中的值的属性集`DTSFileSystemOperation`枚举。  
   
 |DTSFileSystemOperation 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
@@ -200,7 +199,7 @@ ms.locfileid: "48089649"
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes` 属性-通过使用中的值设置`DTSFileSystemAttributes`枚举。  
+ `Attributes` 通过使用中的值的属性集`DTSFileSystemAttributes`枚举。  
   
 |DTSFileSystemAttributes 中的友好名称|数值|  
 |----------------------------------------------|-------------------|  
@@ -211,7 +210,7 @@ ms.locfileid: "48089649"
 |系统|8|  
   
 ### <a name="ftp-task"></a>FTP 任务  
- `Operation` 属性-通过使用中的值设置`DTSFTPOp`枚举。  
+ `Operation` 通过使用中的值的属性集`DTSFTPOp`枚举。  
   
 |DTSFTPOp 中的友好名称|数值|  
 |-------------------------------|-------------------|  
@@ -225,7 +224,7 @@ ms.locfileid: "48089649"
 |RemoveDirRemote|7|  
   
 ### <a name="message-queue-task"></a>Message Queue Task  
- `MessageType` 属性-通过使用中的值设置`MQMessageType`枚举。  
+ `MessageType` 通过使用中的值的属性集`MQMessageType`枚举。  
   
 |MQMessageType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
@@ -234,7 +233,7 @@ ms.locfileid: "48089649"
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType` 属性-通过使用中的值设置`MQStringMessageCompare`枚举。  
+ `StringCompareType` 通过使用中的值的属性集`MQStringMessageCompare`枚举。  
   
 |MQStringMessageCompare 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
@@ -243,7 +242,7 @@ ms.locfileid: "48089649"
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType` 属性-通过使用中的值设置`MQType`枚举。  
+ `TaskType` 通过使用中的值的属性集`MQType`枚举。  
   
 |MQType 中的友好名称|数值|  
 |-----------------------------|-------------------|  
@@ -251,7 +250,7 @@ ms.locfileid: "48089649"
 |DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>发送邮件任务  
- `MessageSourceType` 属性-通过使用中的值设置`SendMailMessageSourceType`枚举。  
+ `MessageSourceType` 通过使用中的值的属性集`SendMailMessageSourceType`枚举。  
   
 |SendMailMessageSourceType 中的友好名称|数值|  
 |------------------------------------------------|-------------------|  
@@ -259,7 +258,7 @@ ms.locfileid: "48089649"
 |文件连接|1|  
 |变量|2|  
   
- `Priority` 属性-通过使用中的值设置`MailPriority`枚举。  
+ `Priority` 通过使用中的值的属性集`MailPriority`枚举。  
   
 |MailPriority 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
@@ -268,14 +267,14 @@ ms.locfileid: "48089649"
 |Low|5|  
   
 ### <a name="transfer-database-task"></a>传输数据库任务  
- `Action` 属性-通过使用中的值设置`TransferAction`枚举。  
+ `Action` 通过使用中的值的属性集`TransferAction`枚举。  
   
 |TransferAction 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |复制|0|  
 |“移动”|1|  
   
- `Method` 属性-通过使用中的值设置`TransferMethod`枚举。  
+ `Method` 通过使用中的值的属性集`TransferMethod`枚举。  
   
 |TransferMethod 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
@@ -283,7 +282,7 @@ ms.locfileid: "48089649"
 |DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>传输错误消息任务  
- `IfObjectExists` 属性-通过使用中的值设置`IfObjectExists`枚举。  
+ `IfObjectExists` 通过使用中的值的属性集`IfObjectExists`枚举。  
   
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
@@ -292,7 +291,7 @@ ms.locfileid: "48089649"
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>传输作业任务  
- `IfObjectExists` 属性-通过使用中的值设置`IfObjectExists`枚举。  
+ `IfObjectExists` 通过使用中的值的属性集`IfObjectExists`枚举。  
   
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
@@ -301,7 +300,7 @@ ms.locfileid: "48089649"
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>传输登录名任务  
- `IfObjectExists` 属性-通过使用中的值设置`IfObjectExists`枚举。  
+ `IfObjectExists` 通过使用中的值的属性集`IfObjectExists`枚举。  
   
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
@@ -309,7 +308,7 @@ ms.locfileid: "48089649"
 |Overwrite|1|  
 |Skip|2|  
   
- `LoginsToTransfer` 属性-通过使用中的值设置`LoginsToTransfer`枚举。  
+ `LoginsToTransfer` 通过使用中的值的属性集`LoginsToTransfer`枚举。  
   
 |LoginsToTransfer 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
@@ -318,7 +317,7 @@ ms.locfileid: "48089649"
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务  
- `IfObjectExists` 属性-通过使用中的值设置`IfObjectExists`枚举。  
+ `IfObjectExists` 通过使用中的值的属性集`IfObjectExists`枚举。  
   
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
@@ -327,7 +326,7 @@ ms.locfileid: "48089649"
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务  
- `ExistingData` 属性-通过使用中的值设置`ExistingData`枚举。  
+ `ExistingData` 通过使用中的值的属性集`ExistingData`枚举。  
   
 |ExistingData 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
@@ -335,7 +334,7 @@ ms.locfileid: "48089649"
 |追加|1|  
   
 ### <a name="web-service-task"></a>Web 服务任务  
- `OutputType` 属性-通过使用中的值设置`DTSOutputType`枚举。  
+ `OutputType` 通过使用中的值的属性集`DTSOutputType`枚举。  
   
 |DTSOutputType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
@@ -343,7 +342,7 @@ ms.locfileid: "48089649"
 |变量|1|  
   
 ### <a name="wmi-data-reader-task"></a>WMI 数据读取器任务  
- `OverwriteDestination` 属性-通过使用中的值设置`OverwriteDestination`枚举。  
+ `OverwriteDestination` 通过使用中的值的属性集`OverwriteDestination`枚举。  
   
 |OverwriteDestination 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
@@ -351,7 +350,7 @@ ms.locfileid: "48089649"
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType` 属性-通过使用中的值设置`OutputType`枚举。  
+ `OutputType` 通过使用中的值的属性集`OutputType`枚举。  
   
 |OutputType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
@@ -359,14 +358,14 @@ ms.locfileid: "48089649"
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType` 属性-通过使用中的值设置`DestinationType`枚举。  
+ `DestinationType` 通过使用中的值的属性集`DestinationType`枚举。  
   
 |DestinationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |文件连接|0|  
 |变量|1|  
   
- `WqlQuerySourceType` 属性-通过使用中的值设置`QuerySourceType`枚举。  
+ `WqlQuerySourceType` 通过使用中的值的属性集`QuerySourceType`枚举。  
   
 |QuerySourceType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
@@ -374,21 +373,21 @@ ms.locfileid: "48089649"
 |DirectInput|1|  
 |变量|2|  
   
- WMI 事件观察器 `ActionAtEvent` 属性 - 通过使用 `ActionAtEvent` 枚举中的值设置。  
+ WMI 事件观察器`ActionAtEvent`通过使用中的值的属性集`ActionAtEvent`枚举。  
   
 |ActionAtEvent 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout` 属性-通过使用中的值设置`ActionAtTimeout`枚举。  
+ `ActionAtTimeout` 通过使用中的值的属性集`ActionAtTimeout`枚举。  
   
 |ActionAtTimeout 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent` 属性-通过使用中的值设置`AfterEvent`枚举。  
+ `AfterEvent` 通过使用中的值的属性集`AfterEvent`枚举。  
   
 |AfterEvent 中的友好名称|数值|  
 |---------------------------------|-------------------|  
@@ -396,7 +395,7 @@ ms.locfileid: "48089649"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout` 属性-通过使用中的值设置`AfterTimeout`枚举。  
+ `AfterTimeout` 通过使用中的值的属性集`AfterTimeout`枚举。  
   
 |AfterTimeout 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
@@ -404,7 +403,7 @@ ms.locfileid: "48089649"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType` 属性-通过使用中的值设置`QuerySourceType`枚举。  
+ `WqlQuerySourceType` 通过使用中的值的属性集`QuerySourceType`枚举。  
   
 |QuerySourceType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
@@ -413,7 +412,7 @@ ms.locfileid: "48089649"
 |变量|2|  
   
 ### <a name="xml-task"></a>XML 任务  
- `OperationType` 属性-通过使用中的值设置`DTSXMLOperation`枚举。  
+ `OperationType` 通过使用中的值的属性集`DTSXMLOperation`枚举。  
   
 |DTSXMLOperation 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
@@ -424,7 +423,7 @@ ms.locfileid: "48089649"
 |差异|4|  
 |Patch|5|  
   
- `SourceType`、`SecondOperandType` 和 `XPathSourceType` 属性 - 通过使用 `DTSXMLSourceType` 枚举中的值设置。  
+ `SourceType``SecondOperandType`，并`XPathSourceType`通过使用中的值的属性集`DTSXMLSourceType`枚举。  
   
 |DTSXMLSourceType 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
@@ -432,21 +431,21 @@ ms.locfileid: "48089649"
 |变量|1|  
 |DirectInput|2|  
   
- `DestinationType` 并**DiffGramDestinationType**属性-通过使用中的值设置`DTSXMLSaveResultTo`枚举。  
+ `DestinationType` 并**DiffGramDestinationType**通过使用中的值的属性集`DTSXMLSaveResultTo`枚举。  
   
 |DTSXMLSaveResultTo 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |文件连接|0|  
 |变量|1|  
   
- `ValidationType` 属性-通过使用中的值设置`DTSXMLValidationType`枚举。  
+ `ValidationType` 通过使用中的值的属性集`DTSXMLValidationType`枚举。  
   
 |DTSXMLValidationType 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- `XPathOperation` 属性-通过使用中的值设置`DTSXMLXPathOperation`枚举。  
+ `XPathOperation` 通过使用中的值的属性集`DTSXMLXPathOperation`枚举。  
   
 |DTSXMLXPathOperation 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
@@ -454,7 +453,7 @@ ms.locfileid: "48089649"
 |值|1|  
 |NodeList|2|  
   
- `DiffOptions` 属性-通过使用中的值设置`DTSXMLDiffOptions`枚举。 此枚举器中的选项不相互排斥。 若要使用多个选项，请将要应用的选项作为逗号分隔的列表提供。  
+ `DiffOptions` 通过使用中的值的属性集`DTSXMLDiffOptions`枚举。 此枚举器中的选项不相互排斥。 若要使用多个选项，请将要应用的选项作为逗号分隔的列表提供。  
   
 |DTSXMLDiffOptions 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
@@ -468,7 +467,7 @@ ms.locfileid: "48089649"
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm` 属性-通过使用中的值设置`DTSXMLDiffAlgorithm`枚举。  
+ `DiffAlgorithm` 通过使用中的值的属性集`DTSXMLDiffAlgorithm`枚举。  
   
 |DTSXMLDiffAlgorithm 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
@@ -484,17 +483,17 @@ ms.locfileid: "48089649"
 ### <a name="all-maintenance-tasks"></a>所有维护任务  
  所有维护任务均使用以下枚举来设置指定的属性。  
   
- `DatabaseSelectionType` 属性-通过使用中的值设置`DatabaseSelection`枚举。  
+ `DatabaseSelectionType` 通过使用中的值的属性集`DatabaseSelection`枚举。  
   
 |DatabaseSelection 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
 |None|0|  
 |All|1|  
 |系统|2|  
-|用户|3|  
+|“用户”|3|  
 |Specific|4|  
   
- `TableSelectionType` 属性-通过使用中的值设置`TableSelection`枚举。  
+ `TableSelectionType` 通过使用中的值的属性集`TableSelection`枚举。  
   
 |TableSelection 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
@@ -502,7 +501,7 @@ ms.locfileid: "48089649"
 |All|1|  
 |Specific|2|  
   
- `ObjectTypeSelection` 属性-通过使用中的值设置`ObjectType`枚举。  
+ `ObjectTypeSelection` 通过使用中的值的属性集`ObjectType`枚举。  
   
 |ObjectType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
@@ -511,29 +510,29 @@ ms.locfileid: "48089649"
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>“备份数据库”任务  
- `DestinationCreationType` 属性-通过使用中的值设置`DestinationType`枚举。  
+ `DestinationCreationType` 通过使用中的值的属性集`DestinationType`枚举。  
   
 |DestinationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |Manual|1|  
   
- `ExistingBackupsAction` 属性-通过使用中的值设置`ActionForExistingBackups`枚举。  
+ `ExistingBackupsAction` 通过使用中的值的属性集`ActionForExistingBackups`枚举。  
   
 |ActionForExistingBackups 中的友好名称|数值|  
 |-----------------------------------------------|-------------------|  
 |追加|0|  
 |Overwrite|1|  
   
- `BackupAction` 属性-通过使用中的值设置`BackupTaskType`枚举。 此属性适用于`BackupIsIncremental`属性来定义该任务执行的备份类型。  
+ `BackupAction` 通过使用中的值的属性集`BackupTaskType`枚举。 此属性与 `BackupIsIncremental` 属性一起使用以定义该任务所执行的备份的类型。  
   
 |BackupTaskType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |“数据库”|0|  
-|“文件”|1|  
+|文件|1|  
 |日志|2|  
   
- `BackupDevice` 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) `DeviceType` 枚举中的值设置。  
+ `BackupDevice` 通过使用中的值的属性集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO)`DeviceType`枚举。  
   
 |DeviceType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
@@ -544,14 +543,14 @@ ms.locfileid: "48089649"
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>“清除维护”任务  
- `FileTypeSelected` 属性-通过使用中的值设置`FileType`枚举。  
+ `FileTypeSelected` 通过使用中的值的属性集`FileType`枚举。  
   
 |FileType 中的友好名称|数值|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType` 属性-通过使用中的值设置`TimeUnitType`枚举。  
+ `OlderThanTimeUnitType` 通过使用中的值的属性集`TimeUnitType`枚举。  
   
 |TimeUnitType 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
@@ -561,7 +560,7 @@ ms.locfileid: "48089649"
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>“更新统计信息”任务  
- `UpdateType` 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) `StatisticsTarget` 枚举中的值设置。  
+ `UpdateType` 通过使用中的值的属性集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO)`StatisticsTarget`枚举。  
   
 |StatisticsTarget 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
@@ -572,7 +571,7 @@ ms.locfileid: "48089649"
 ##  <a name="CommonProperties"></a> 通用属性  
  包、任务和 Foreach 循环、For 循环和序列容器可以使用以下枚举来设置指定的属性。  
   
- `ForceExecutionResult` 属性-通过使用中的值设置`DTSForcedExecResult`枚举。  
+ `ForceExecutionResult` 通过使用中的值的属性集`DTSForcedExecResult`枚举。  
   
 |DTSForcedExecResult 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
@@ -581,9 +580,9 @@ ms.locfileid: "48089649"
 |失败|1|  
 |Completion|2|  
   
- `IsolationLevel` 属性 - 由 .NET Framework `IsolationLevel` 枚举设置。 详细信息，请参阅位于 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的 .NET Framework 类库。  
+ `IsolationLevel` 由.NET Framework 的属性集`IsolationLevel`枚举。 详细信息，请参阅位于 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)中的 .NET Framework 类库。  
   
- `LoggingMode` 属性-通过使用中的值设置`DTSLoggingMode`枚举。  
+ `LoggingMode` 通过使用中的值的属性集`DTSLoggingMode`枚举。  
   
 |DTSLoggingMode 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
@@ -591,7 +590,7 @@ ms.locfileid: "48089649"
 |已启用|1|  
 |禁用|2|  
   
- `TransactionOption` 属性-通过使用中的值设置`DTSTransactionOption`枚举。  
+ `TransactionOption` 通过使用中的值的属性集`DTSTransactionOption`枚举。  
   
 |DTSTransactionOption 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
@@ -604,7 +603,7 @@ ms.locfileid: "48089649"
   
 ## <a name="see-also"></a>请参阅  
  [在包中使用属性表达式](use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41;包](../integration-services-ssis-packages.md)   
+ [Integration Services (SSIS) 包](../integration-services-ssis-packages.md)   
  [Integration Services 容器](../control-flow/integration-services-containers.md)   
  [Integration Services 任务](../control-flow/integration-services-tasks.md)   
  [优先约束](../control-flow/precedence-constraints.md)  

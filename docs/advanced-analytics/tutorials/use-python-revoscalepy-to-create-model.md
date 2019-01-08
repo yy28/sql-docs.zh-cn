@@ -1,5 +1,5 @@
 ---
-title: 将 Python 与 revoscalepy 使用在 SQL Server 中创建模型 |Microsoft Docs
+title: 将 Python 与使用 revoscalepy 创建模型的 SQL Server 机器学习
 description: 编写使用 revoscalepy 函数来创建在 SQL Server 中远程运行的数据科学模型的 Python 脚本。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100158"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596828"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>将 Python 与使用 revoscalepy 创建模型的 SQL Server 上远程运行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "50100158"
 > * 使用**revoscalepy**若要创建一个线性模型
 > * 将操作从本地切换到远程计算上下文
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 在此练习中使用的示例数据[ **flightdata** ](demo-data-airlinedemo-in-sql.md)数据库。
 
@@ -72,7 +72,7 @@ ms.locfileid: "50100158"
 使用 SQL Server 的实例作为计算上下文执行所有操作。
 
 > [!NOTE]
-> 从命令行运行此示例的演示，请参阅此视频：[与 Python 配合使用 SQL Server 2017 高级分析](https://www.youtube.com/watch?v=FcoY795jTcc)
+> 从命令行运行此示例的演示，请参阅此视频：[与 Python 配合使用的 SQL Server 2017 高级的分析](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### <a name="sample-code"></a>示例代码
 
@@ -130,7 +130,7 @@ def test_linmod_sql():
 
     将对这些变量传递[RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)构造函数来实现**数据源对象**名为`data_source`。
 
-+ 您创建**计算上下文对象**通过使用[RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata)构造函数。 得到**计算上下文对象**名为`sql_cc`。
++ 您创建**计算上下文对象**通过使用[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)构造函数。 得到**计算上下文对象**名为`sql_cc`。
 
     此示例在数据源中，假定您将使用作为计算上下文的同一 SQL Server 实例上的数据重新使用所用的相同连接字符串。 
     

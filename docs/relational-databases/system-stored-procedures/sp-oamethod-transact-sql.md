@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704435"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591461"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *方法名称*  
  要调用的 OLE 对象的方法名。  
   
- *returnvalue* **输出**  
+ _returnvalue_ **输出**  
  OLE 对象的方法的返回值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
  如果该方法返回单个值，指定的局部变量*returnvalue*，这会返回该方法在本地变量中，返回值或不指定*returnvalue*，它将返回方法作为单列、 单行结果集返回到客户端的值。  
@@ -65,17 +65,17 @@ sp_OAMethod objecttoken , methodname
   
 -   方法返回一个数组作为输出参数。  
   
- [  *@parametername* * * =**]*参数*[**输出**]  
+ [ _@parametername_ **=** ]*参数*[**输出**]  
  一个方法参数。 如果指定，*参数*必须是相应的数据类型的值。  
   
  若要获取输出参数，返回值*参数*必须是相应的数据类型的本地变量和**输出**必须指定。 如果指定常数参数，或如果**输出**未指定，则任何返回输出参数的值将被忽略。  
   
- 如果指定， *parametername*必须是名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意， **@***parametername*不是[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。At 符号 (**@ * *) 中删除，并*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定， *parametername*必须是名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意， **@**_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。 At 符号 (**@**) 中删除，并且*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* 可以是一个命名的参数，因为它是指定方法的一部分，并且将传递给该对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="remarks"></a>备注  
  此外可以使用**sp_OAMethod**获取属性值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

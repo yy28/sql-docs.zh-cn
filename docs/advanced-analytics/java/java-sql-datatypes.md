@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server 2019 中受支持的 Java 数据类型 |Microsoft Docs
+title: 在 SQL Server 2019-SQL Server 机器学习服务中受支持的 Java 数据类型
 description: 将数据类型从 Java 到 SQL Server 对于输入和输出数据结构，并为 sp_execute_external_script 的输入参数。
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3510b53510514daa125382fc10ea33285fe44a80
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 6921a40efc9af3ef94c0a53f8409891fee16127e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714930"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432530"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 和 SQL Server 支持的数据类型
 

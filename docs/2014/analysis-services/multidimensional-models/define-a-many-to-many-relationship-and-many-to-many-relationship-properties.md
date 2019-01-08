@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091868"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354014"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
   本主题介绍 Analysis Services 中的多对多维度，包括何时使用它们以及如何创建它们。  
@@ -175,21 +175,21 @@ ms.locfileid: "48091868"
   
 3.  务必要在更改模型后进行部署和重新连接。 在 Excel 中，使用“数据透视表分析”功能区上的“刷新”按钮。  
   
-4.  避免在多个多对多关系中使用链接度量值组（尤其是在这些关系处于不同多维数据集中时）。 这样做可能导致不明确的聚合。 有关详细信息，请参阅 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)（包含多对多关系的多维数据集中链接度量值的不正确数量）。  
+4.  避免在多个多对多关系中使用链接度量值组（尤其是在这些关系处于不同多维数据集中时）。 这样做可能导致不明确的聚合。 有关详细信息，请参阅 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)（包含多对多关系的多维数据集中链接度量值的不正确数量）。  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  使用以下链接可获取帮助您掌握这些概念的其他信息。  
   
- [如何在 Analysis Services 中定义多对多维度](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [如何在 Analysis Services 中定义多对多维度](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [多对多变革 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [多对多变革 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [教程：针对 SQL Server Analysis Services 的多对多维度示例](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [教程：SQL Server Analysis Services 的多对多维度示例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>请参阅  
  [维度关系](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [安装 Analysis Services 多维建模教程示例数据和项目](../install-sample-data-and-projects.md)   
- [部署 Analysis Services 项目&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [安装 Analysis Services 多维建模教程的示例数据和项目](../install-sample-data-and-projects.md)   
+ [部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)   
  [多维模型中的透视](perspectives-in-multidimensional-models.md)  
   
   

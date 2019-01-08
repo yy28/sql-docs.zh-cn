@@ -1,5 +1,5 @@
 ---
-title: SQL Server 机器学习服务中的可扩展性体系结构 |Microsoft Docs
+title: R 语言和 Python 脚本的 SQL Server 机器学习的可扩展性体系结构
 description: 外部代码支持的 SQL Server 数据库引擎，使用双体系结构的关系数据上运行 R 和 Python 脚本。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4e48d51e45cdc9f1cd56f22228d95370b8f75711
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419215"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432740"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的可扩展性体系结构 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

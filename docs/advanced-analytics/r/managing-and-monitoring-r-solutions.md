@@ -1,5 +1,5 @@
 ---
-title: 管理和集成在 SQL Server 中的机器学习工作负荷 |Microsoft Docs
+title: 管理和集成机器学习工作负荷的 SQL Server 机器学习服务
 description: 为 SQL Server DBA，查看用于部署机器学习 R 和 Python 的子系统，数据库引擎实例上的管理任务。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 63739faaa9cf254e754c9020502ee6b589435c1d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743202"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431824"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理和集成 SQL Server 上的机器学习工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

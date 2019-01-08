@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169217"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590859"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 文件（文本文件驱动程序）
 使用文本驱动程序时，使用架构信息文件来确定文本文件的格式。 架构信息文件是始终命名为 Schema.ini，始终放置在文本数据源所在的同一目录中。 架构信息文件提供了有关的信息的一般格式的文件、 列名称和数据类型信息和几个其他数据特征 IISAM。 Schema.ini 文件始终都需要访问固定长度的数据。 当文本表包含日期时间、 货币或小数数据或只要您希望更好地控制的表中的数据处理时，应使用 Schema.ini 文件。  
@@ -95,7 +95,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>备注  
- 下表描述了每个部分的 **Col * * * n*条目。  
+ 下表描述的每个部分**Col**_n_条目。  
   
 |参数|Description|  
 |---------------|-----------------|  
@@ -105,7 +105,7 @@ n=ColumnNametype [#]
 |*#*|指定列的宽度的整数值 (需要**宽度**指定)。|  
   
 ## <a name="selecting-a-character-set"></a>选择的字符集  
- 可以选择从两个字符集： ANSI 和 OEM。 **CharacterSet** Schema.ini 中的设置将替代在 Windows 注册表中，文件的文件的设置。 下面的示例显示了设置设置为 ANSI 字符的 Schema.ini 条目：  
+ 您可以选择从两个字符集：ANSI 和 OEM。 **CharacterSet** Schema.ini 中的设置将替代在 Windows 注册表中，文件的文件的设置。 下面的示例显示了设置设置为 ANSI 字符的 Schema.ini 条目：  
   
 ```  
 CharacterSet=ANSI  
@@ -119,11 +119,11 @@ CharacterSet=ANSI
 |**DateTimeFormat**|可以设置为一个格式字符串，表示日期和时间。 如果使用相同的格式处理中导入/导出的所有日期/时间字段，则应指定此项。 所有 Microsoft Jet 格式，除了上午 和下午 支持。 如果没有任何格式字符串，使用 Windows 控制面板短日期图片和时间选项。|  
 |**DecimalSymbol**|可以设置为任何单个字符，用于分隔和数字的小数部分的整数。|  
 |**NumberDigits**|指示一个数字的小数部分的十进制数字的数字。|  
-|**NumberLeadingZeros**|指定十进制值小于 1，将多个 – 1 是否应包含前导零。此值可以是任一 False （无前导零） 或 True。|  
+|**NumberLeadingZeros**|指定十进制值小于 1 和多个为-1 是否应包含前导零。此值可以是任一 False （无前导零） 或 True。|  
 |**CurrencySymbol**|指示可以用于在文本文件中的货币值的货币符号。 示例包括美元符号 （$） 和数据挖掘。|  
 |**CurrencyPosFormat**|可以设置为以下值之一：<br /><br /> 货币符号前缀，并且没有分隔 ($1)<br />具有任何单独的货币符号后缀 (1$)<br />用一个字符分隔 ($ 1) 的货币符号前缀<br />用一个字符分隔的货币符号后缀 (1 $)|  
 |**CurrencyDigits**|指定用于货币金额的小数部分的位数。|  
-|**CurrencyNegFormat**|可以是下列值之一：<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> 此示例演示美元符号，但应将其替换适当**CurrencySymbol**实际程序中的值。|  
+|**CurrencyNegFormat**|可以是以下值之一：<br /><br /> -   ($1)<br />--美元 1<br />-$1<br />-美元 1-<br />-   (1$)<br />--1$<br />-$ 1<br />-1-<br />--1 $<br />--美元 1<br />-1-<br />-美元 1-<br />-$ 为-1<br />-$ 1<br />-   ($ 1)<br />-   (1 $)<br /><br /> 此示例演示美元符号，但应将其替换适当**CurrencySymbol**实际程序中的值。|  
 |**CurrencyThousandSymbol**|指示可以由数以千计的分隔文本文件中的货币值的单字符符号。|  
 |**CurrencyDecimalSymbol**|可以设置为任何单个字符，用于整个分开货币金额的小数部分。|  
   

@@ -16,15 +16,15 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 65eed443f671f18944ce381a011498e3ca23af4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c8a1a3b41bd30702a04ce6cbb49b70bc561e508
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369889"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的 XML 查询语法 (SSRS)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，创建数据集查询包括 XML`Query`或元素路径。 XML`Query`开头**\<查询 >** 标记并包括命名空间和 XML 元素的数据源而异。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](report-data-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML `Query` 或元素路径来创建数据集查询。 XML`Query`开头**\<查询 >** 标记并包括命名空间和 XML 元素的数据源而异。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](report-data-ssrs.md)。  
   
  可以为以下类型的 XML 数据创建 XML 数据源：  
   
@@ -36,44 +36,44 @@ ms.locfileid: "48102887"
   
  指定 XML `Query` 或元素路径的方式取决于 XML 数据的类型。  
   
- 对于 XML 文档，XML`Query`是可选的。 如果包括它，则它可以包含可选的 XML `ElementPath`。 XML `ElementPath` 的值使用元素路径语法。 您可以包含 XML`Query`和 XML`ElementPath`以便正确处理命名空间，需要从数据源的 XML 数据时。  
+ 对于 XML 文档，XML `Query` 是可选的。 如果包括它，则它可以包含可选的 XML `ElementPath`。 XML `ElementPath` 的值使用元素路径语法。 您可以包含 XML `Query` 和 XML `ElementPath`，以便当数据源中的 XML 数据需要命名空间时能正确处理该命名空间。  
   
  对于连接字符串 URL 指向的 Web 服务端点，XML `Query` 定义 Web 服务方法和/或 SOAP 操作。 XML 数据提供程序将创建 Web 服务请求，以检索要用于报表的 XML 数据。  
   
 > [!NOTE]  
 >  当 Web 服务命名空间包括正斜杠 (`/)` 字符时，应同时包括 Web 服务方法和 SOAP 操作，以使 XML 数据处理扩展插件可以正确派生命名空间。  
   
- 对于嵌入的 XML 文档，XML`Query`定义要使用的嵌入的 XML 数据、 包括可选命名空间，并包含可选的 XML `ElementPath`...  
+ 对于嵌入的 XML 文档，XML `Query` 定义要使用的嵌入 XML 数据、包括可选命名空间并包含可选的 XML `ElementPath`。  
   
 ## <a name="specifying-query-parameters-for-xml-data"></a>指定 XML 数据的查询参数  
  可以为 XML 文档指定查询参数。  
   
 -   对于 URL 请求，查询参数以标准 URL 参数的形式包含在查询中。  
   
--   对于 Web 服务请求，需要将查询参数传递给 Web 服务方法。 若要定义查询参数，请使用 **“数据集属性”** 对话框的 **“参数”** 页。 有关详细信息，请参阅[数据集属性对话框中，参数](dataset-properties-dialog-box-parameters.md)。  
+-   对于 Web 服务请求，需要将查询参数传递给 Web 服务方法。 若要定义查询参数，请使用 **“数据集属性”** 对话框的 **“参数”** 页。 有关详细信息，请参阅 [“数据集属性”对话框 - 参数](dataset-properties-dialog-box-parameters.md)。  
   
 ### <a name="example"></a>示例  
  下表中的示例说明如何从报表服务器 Web 服务、XML 文档和嵌入的 XML 数据中检索数据。  
   
 |XML 数据源|查询示例|  
 |---------------------|-------------------|  
-|ListChildren 方法 web 服务 XML 数据。|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|ListChildren 方法 web 服务 XML 数据。|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |使用 SoapAction 获得的 Web 服务 XML 数据。|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
-|使用命名空间的 XML 文档或嵌入的 XML 数据。<br /><br /> 为元素路径指定命名空间的查询元素。|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
+|使用命名空间的 XML 文档或嵌入的 XML 数据。<br /><br /> 为元素路径指定命名空间的查询元素。|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |嵌入的 XML 文档。|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |使用默认值的 XML 文档。|*No query*。<br /><br /> 元素路径是从 XML 文档本身派生而来的，并且与命名空间无关。|  
   
 > [!NOTE]  
->  第一个 Web 服务示例列出了使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法获得的 Web 服务 XML 数据。 若要运行此查询，必须创建新的数据源并将连接字符串设置为 http://localhost/reportserver/reportservice2006.asmx。 <xref:ReportService2006.ReportingService2006.ListChildren%2A>方法采用两个参数：`Item`和`Recursive`。 设置的默认值为`Item`到`/`并`Recursive`到`1`。  
+>  第一个 Web 服务示例列出了使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法获得的 Web 服务 XML 数据。 若要运行此查询，必须创建新的数据源并将连接字符串设置为 http://localhost/reportserver/reportservice2006.asmx。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法有两个参数：`Item` 和 `Recursive`。 将 `Item` 的默认值设置为 `/` 并将 `Recursive` 设置为 `1`。  
   
 ## <a name="specifying-namespaces"></a>指定命名空间  
- 使用 XML`Query`元素来指定使用的命名空间中的数据源的 XML 数据。 下面的 XML 查询使用命名空间 `sales`。 `sales:LineItems` 和 `sales:LineItem` 的 XML `ElementPath` 节点使用命名空间 `sales`。  
+ 使用 XML `Query` 元素可以指定在数据源的 XML 数据中使用的命名空间。 下面的 XML 查询使用命名空间 `sales`。 `sales:LineItems` 和 `sales:LineItem` 的 XML `ElementPath` 节点使用命名空间 `sales`。  
   
 ```  
 <Query xmlns:sales=  
-"http://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
+"https://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
    <SoapAction>  
-      http://schemas.microsoft.com/SalesWebService/ListOrders   
+      https://schemas.microsoft.com/SalesWebService/ListOrders   
    </SoapAction>  
    <ElementPath>  
       Customers/Customer/Orders/Order/sales:LineItems/sales:LineItem  
@@ -81,21 +81,21 @@ ms.locfileid: "48102887"
 </Query>  
 ```  
   
- 若要指定数据提供程序命名空间，使默认的命名空间保持为空，请使用`xmldp`。 下面的示例说明了这一点。  
+ 若要指定数据提供程序命名空间以使默认的命名空间保持为空，请使用 `xmldp`。 下面的示例说明了这一点。  
   
 ### <a name="example"></a>示例  
  以下示例使用 XML 文档 DPNamespace.xml，该表之后提供了该文档以进行说明。 此表显示了包括命名空间前缀的 XML ElementPath 语法的两个示例。  
   
 |XML 查询元素|数据集中的结果字段|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|值 a: http://schemas.microsoft.com/..。<br /><br /> 值 b: http://schemas.microsoft.com/..。<br /><br /> 值 c: http://schemas.microsoft.com/..。|  
-|\<xmldp:Query xmlns:xmldp ="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"xmlns:ns ="http://schemas.microsoft.com/..。"><br /><br /> \<xmldp:ElementPath > 根{}/ns:Element2 / 节点\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|值 D<br /><br /> 值 E<br /><br /> 值 F|  
+|\<Query/>|值 a: https://schemas.microsoft.com/..。<br /><br /> 值 b: https://schemas.microsoft.com/..。<br /><br /> 值 c: https://schemas.microsoft.com/..。|  
+|\<xmldp:Query xmlns:xmldp ="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"xmlns:ns ="https://schemas.microsoft.com/..。"><br /><br /> \<xmldp:ElementPath > 根{}/ns:Element2 / 节点\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|值 D<br /><br /> 值 E<br /><br /> 值 F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文档：DPNamespace.xml  
  可以复制此 XML 并将其保存到报表设计器可访问的 URL 以用作 XML 数据源：例如 http://localhost/DPNamespace.xml。  
   
 ```  
-<Root xmlns:ns="http://schemas.microsoft.com/...">  
+<Root xmlns:ns="https://schemas.microsoft.com/...">  
    <ns:Element1>  
       <Node>Value A</Node>  
       <Node>Value B</Node>  

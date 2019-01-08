@@ -17,12 +17,12 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a1098d5b12a491cc5f2976c76575ce0e91d11e51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f4904cf11ac1cb84acf9b6c0362d453d7b0fc0b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065647"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371139"
 ---
 # <a name="technical-reference-ssrs"></a>技术参考 (SSRS)
   查找用于在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中使用或管理 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的工具和 PowerShell 参考文档。  
@@ -54,7 +54,7 @@ ms.locfileid: "48065647"
  [Reporting Services WMI 提供程序库引用 (SSRS)](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## <a name="see-also"></a>请参阅  
- [有关 Reporting Services 故障排除的 TechNet wiki 文章](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [有关 Reporting Services SharePoint 模式故障排除的 TechNet wiki 文章](http://go.microsoft.com/fwlink/?LinkID=209158)  
+ [有关 Reporting Services 故障排除的 TechNet wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209153)   
+ [有关 Reporting Services SharePoint 模式故障排除的 TechNet wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

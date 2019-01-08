@@ -11,15 +11,15 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083277"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373679"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格建模（Adventure Works 教程）
-  本教程提供的课程介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 表格模型。  
+  本教程提供的课程介绍如何通过使用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 创建 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services 表格模型。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  在本教程的课程中，您将掌握以下内容：  
@@ -52,14 +52,14 @@ ms.locfileid: "48083277"
 > [!NOTE]  
 >  本教程并未提供有关以下内容的课程或信息：通过使用 SQL Server Management Studio 管理已部署的表格模型数据库，或者使用报表客户端应用程序连接到已部署的模型以浏览模型数据。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  为了完成本教程，您必须安装了以下必备组件：  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 实例（在表格模式下运行）。  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的用户。  
   
--   AdventureWorksDW 示例数据库。 此示例数据库包括完成本教程所需的数据。 若要下载示例数据库，请参阅[ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807)。  
+-   AdventureWorksDW 示例数据库。 此示例数据库包括完成本教程所需的数据。 若要下载示例数据库，请参阅[ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807)。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 或更高版本（与课程 11 中的“在 Excel 中分析”功能结合使用）  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48083277"
 |[第 3 课：重命名列](rename-columns.md)|20 分钟|  
 |[第 4 课：标记为日期表](lesson-3-mark-as-date-table.md)|3 分钟|  
 |[第 5 课：创建关系](lesson-4-create-relationships.md)|10 分钟。|  
-|[第 6 课：创建计算列](lesson-5-create-calculated-columns.md)|15 分钟|  
+|[第 6 课：创建计算的列](lesson-5-create-calculated-columns.md)|15 分钟|  
 |[第 7 课：创建度量值](lesson-6-create-measures.md)|30 分钟|  
 |[第 8 课：创建关键绩效指标](lesson-7-create-key-performance-indicators.md)|15 分钟|  
 |[第 9 课：创建透视](lesson-8-create-perspectives.md)|5 分钟|  
@@ -84,7 +84,7 @@ ms.locfileid: "48083277"
 |[第 14 课：部署](lesson-13-deploy.md)|5 分钟|  
   
 ## <a name="supplemental-lessons"></a>补充课程  
- 本教程还包括[补充课程](../tutorials/supplemental-lessons.md)。 这一节中的主题不是完成本教程所必需的，但对于更好地了解高级表格模型创作功能会很有帮助。  
+ 本教程还包括 [补充课程](../tutorials/supplemental-lessons.md)。 这一节中的主题不是完成本教程所必需的，但对于更好地了解高级表格模型创作功能会很有帮助。  
   
  本教程包括以下补充课程：  
   
@@ -94,6 +94,6 @@ ms.locfileid: "48083277"
 |[为 Power View 报表配置报表属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)为 Power View 报表配置报表属性|30 分钟|  
   
 ## <a name="next-step"></a>下一步  
- 若要开始学习本教程，请继续第一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
+ 要开始学习本教程，请转到第一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
   

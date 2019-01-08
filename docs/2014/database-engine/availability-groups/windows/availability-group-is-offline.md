@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148717"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359709"
 ---
 # <a name="availability-group-is-offline"></a>可用性组处于脱机状态
     
@@ -38,7 +38,7 @@ ms.locfileid: "48148717"
  当可用性组的群集资源处于联机状态并且可用性组具有主副本时，此策略处于正常状态。  
   
 > [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性组处于脱机状态](http://go.microsoft.com/fwlink/p/?LinkId=220850) 中。  
+>  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性组处于脱机状态](https://go.microsoft.com/fwlink/p/?LinkId=220850) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
  此问题可能由承载主副本的服务器实例中的失败或 Windows Server 故障转移群集 (WSFC) 可用性组资源脱机引起。 可用性组脱机可能有以下原因：  

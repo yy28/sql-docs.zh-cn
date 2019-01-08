@@ -1,5 +1,5 @@
 ---
-title: 任务 1： 创建知识库和域 |Microsoft Docs
+title: 任务 1:创建知识库和域 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1222d6d217c004790336a6a234d7f52154e148ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53b67f363f076108a3b3add6950b14e37e0bd1ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132429"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373199"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>任务 1：创建知识库和域
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>任务 1:创建知识库和域
   在本任务中，您将创建**供应商**知识库，并创建用于清理数据和匹配数据以便删除重复项的域。  
   
 1.  启动**数据质量客户端**。 单击**启动**，依次指向**所有程序**，单击**Microsoft SQL Server 2012**，单击**Data Quality Services**，然后单击**数据质量客户端**。  
@@ -49,7 +49,7 @@ ms.locfileid: "48132429"
   
      ![创建域对话框](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "创建域对话框")  
   
-9. 重复执行前一步以便创建具有所有默认设置的以下域。 若要简化本教程，请设置**数据类型**的所有域作为**字符串**。 其他允许的数据类型是：Integer、Decimal 和 Date。 当**使用前导值**选项是所选 （默认值），所有同义词将都替换为输出中同义词组的前导值。 设置**规范化字符串**选项 （默认值） 在域值中删除任何特殊字符。 **输出格式设置为**选项允许您选择的域中的数据值输出时采用的格式设置。 选择**启用拼写检查器**（默认值） 可填充域时对所有的字符串值运行拼写检查器。 **语言**设置指定的语言版本**拼写检查器**你想要应用。 选择**禁用语法错误算法**可填充域而不检查是否存在语法错误的字符串值。 请参阅[创建一个域](http://msdn.microsoft.com/library/hh510401.aspx)更多详细信息的 MSDN library 中的主题。  
+9. 重复执行前一步以便创建具有所有默认设置的以下域。 若要简化本教程，请设置**数据类型**的所有域作为**字符串**。 其他允许的数据类型是：Integer、Decimal 和 Date。 当**使用前导值**选项是所选 （默认值），所有同义词将都替换为输出中同义词组的前导值。 设置**规范化字符串**选项 （默认值） 在域值中删除任何特殊字符。 **输出格式设置为**选项允许您选择的域中的数据值输出时采用的格式设置。 选择**启用拼写检查器**（默认值） 可填充域时对所有的字符串值运行拼写检查器。 **语言**设置指定的语言版本**拼写检查器**你想要应用。 选择**禁用语法错误算法**可填充域而不检查是否存在语法错误的字符串值。 请参阅[创建一个域](https://msdn.microsoft.com/library/hh510401.aspx)更多详细信息的 MSDN library 中的主题。  
   
     -   Supplier Name  
   
@@ -66,6 +66,6 @@ ms.locfileid: "48132429"
     -   Zip  
   
 ## <a name="next-step"></a>下一步  
- [任务 2：手动添加域值](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [任务 2:手动添加域值](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 机器学习和 R Services 中的 R 脚本错误 |Microsoft Docs
+title: R 脚本错误和故障排除-SQL Server 机器学习服务
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 941a8bbc5e7326d87dcdba8c822fb2c3f2190900
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695435"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644886"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server 中的 R 脚本错误
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 SQL Server 中运行 R 代码时，本文将介绍几个 scriptin gerrors。 列表并不全面。 有很多程序包，并且错误可以同一个包的版本而异。 我们建议在发布脚本错误[Machine Learning Server 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)，它支持机器学习 R Services （数据库内）、 Microsoft R Client 和 Microsoft R Server 中使用的组件。
 
-**适用于：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
+**适用范围：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
 
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>在 T-SQL 或存储过程中将有效的脚本失败
@@ -39,7 +39,7 @@ ms.locfileid: "51695435"
 我们还建议您查看并稍有重写脚本，更正 R 和数据库引擎之间移动数据时可能出现的数据类型的任何问题。 有关详细信息，请参阅[R 库和数据类型](r/r-libraries-and-data-types.md)。
 
 此外，可以使用 sqlrutils 包捆绑在 R 脚本中作为存储过程更易于使用的格式。 有关详细信息，请参阅：
-* [使用 sqlrutils 包生成 R 代码的存储的过程](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+* [sqlrutils 包](r/ref-r-sqlrutils.md)
 * [使用 sqlrutils 创建存储的过程](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>脚本返回不一致的结果
@@ -68,7 +68,7 @@ R 脚本可以返回不同的值在 SQL Server 环境中，有几个原因：
 
 2. 运行以下脚本。 请务必编辑用户组名称，如果更改了默认值，以及计算机和实例名称。
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     

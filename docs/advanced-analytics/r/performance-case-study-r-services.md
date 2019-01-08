@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services 的结果和资源的性能 |Microsoft Docs
+title: SQL Server R Services 的结果和资源的 SQL Server 机器学习服务的性能
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697495"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645466"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能： 结果和资源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51697495"
 
 本主题列出了第一个案例研究的详细的结果。 对于第二个案例研究，摘要描述整体结果。 本主题末尾处是所有脚本和示例数据和所使用的原始作者资源的链接。
 
-## <a name="performance-case-study-airline-dataset"></a>性能案例研究： 航班数据集
+## <a name="performance-case-study-airline-dataset"></a>性能案例研究：航班数据集
 
 本案例研究由 SQL Server R Services 开发团队进行测试各种优化的效果。 创建单个 rxLogit 模型和评分航班数据集上执行。 在训练和评分来评估单个影响的进程中应用了优化。
 
@@ -62,7 +62,7 @@ ms.locfileid: "51697495"
 
 **示例计时**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ metric time pct
 
 第一个测试与比较使用压缩和纵栏表来减小数据大小。
 
-| 表名            | “行”     | 保留   | data       | index_size | 未使用  | 节省率（保留） |
+| 表名            | “行”     | 保留   | 数据       | index_size | 未使用  | 节省率（保留） |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -273,7 +273,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 从表加载训练的模型是清楚地更快地执行预测。 我们建议避免创建模型，并执行评分全部放在同一个脚本。
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究： 优化用于 resume 匹配任务
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究：优化用于 resume 匹配任务
 
 继续匹配模型开发的 Microsoft 数据科学家 Ke Huang 来测试 SQL Server 中 R 代码的性能，通过执行操作，帮助数据科学家创建可缩放的企业级解决方案。
 
@@ -343,15 +343,15 @@ CPU 关联已强制执行在 resume 匹配方案中，若要评估对 R 作业�
 + [早期的客户体验与 R 服务](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [使用 R 检测欺诈行为在 1 百万个事务 / 秒](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>资源
 
 以下是信息、 工具和脚本在这些测试的开发中使用的链接。
 
-+ 性能测试脚本和数据的链接：[示例数据和脚本的 SQL Server 优化研究](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ 性能测试脚本和数据的链接：[示例数据和 SQL Server 优化研究的脚本](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ 文章，其中描述的简历匹配的解决方案：[优化提示和技巧的 SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ 描述恢复匹配解决方案的文章：[优化提示和技巧的 SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ 在 SQL 优化用于 resume 匹配解决方案的脚本： [GitHub 存储库](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ 在 SQL 优化用于 resume 匹配解决方案脚本：[GitHub 存储库](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>了解 Windows server 管理
 
@@ -365,11 +365,11 @@ CPU 关联已强制执行在 resume 匹配方案中，若要评估对 R 作业�
 
 ### <a name="learn-about-sql-server-optimizations"></a>了解有关 SQL Server 优化
 
-+ [重新组织和重新生成索引](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [内存优化表简介](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [演示： 内存中 OLTP 的性能改进](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [演示：内存中 OLTP 的性能改进](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [数据压缩](../../relational-databases/data-compression/data-compression.md)
 
@@ -400,7 +400,7 @@ CPU 关联已强制执行在 resume 匹配方案中，若要评估对 R 作业�
 
 ## <a name="other-articles-in-this-series"></a>本系列中的其他文章
 
-[性能优化适用于 R – 简介](sql-server-r-services-performance-tuning.md)
+[性能优化适用于 R 的简介](sql-server-r-services-performance-tuning.md)
 
 [R 的 SQL Server 配置的性能优化](sql-server-configuration-r-services.md)
 

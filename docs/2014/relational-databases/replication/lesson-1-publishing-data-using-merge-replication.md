@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：使用合并复制发布数据 | Microsoft Docs
+title: 第 1 课：使用合并复制发布数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 65debc2ad15045984f43e05d0afcf3011c50f2b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112907"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589261"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 课：使用合并复制发布数据
   在本课中，你将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建合并复制以在 **示例数据库中发布**Employee **、** SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。 本教程要求你完成上一个教程， [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)的学习。  
@@ -84,7 +84,7 @@ ms.locfileid: "48112907"
   
 21. 选中“立即创建快照”，清除“计划在以下时间运行快照代理”，然后单击“下一步”。  
   
-22. 在“代理安全性”页上，单击“安全设置”，在“进程帐户”框中键入 \<Machine_Name>\repl_snapshot，为此帐户提供密码，然后单击“确定”。 单击 **“完成”**。  
+22. 在“代理安全性”页上，单击“安全设置”，在“进程帐户”框中键入 \<_Machine_Name>_**\repl_snapshot**，为此帐户提供密码，然后单击“确定”。 单击 **“完成”**。  
   
 23. 在“完成该向导”页的“发布名称”框中，输入 **AdvWorksSalesOrdersMerge**，然后单击“完成”。  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48112907"
   
 3.  选择“发布访问列表”页，单击“添加”。  
   
-4.  在“添加发布访问项”对话框中，选择“<Machine_Name>\repl_merge”，然后单击“确定”。 单击“确定” 。  
+4.  在“添加发布访问项”对话框中，选择 Machine_Name**\repl_merge**，然后单击“确定”。 单击“确定” 。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已成功创建了合并发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建合并发布订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
+ 您已成功创建了合并发布。 接下来，您将订阅此发布。 请参阅[第 2 课：创建对合并发布的订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [筛选已发布数据](publish/filter-published-data.md)   

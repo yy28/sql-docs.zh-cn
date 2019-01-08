@@ -1,5 +1,5 @@
 ---
-title: SQL Server 机器学习服务上安装新 R 包 |Microsoft Docs
+title: 安装新的 R 语言包-SQL Server 机器学习服务
 description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f345dc0649c5b7b9665e095207ad7a5a12d16871
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 590dbcc08d433147b61678c2b865ba205a0e547d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697045"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432791"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何将新的 R 包安装到其中启用机器学习的 SQL Server 实例。 有多种方法来安装新的 R 包，具体取决于你拥有的 SQL Server 的版本，以及服务器是否具有 internet 连接。 可使用以下方法来安装新包。
 
-| 方法                           | Permissions               | 远程/本地 |
+| 方法                           | 权限               | 远程/本地 |
 |------------------------------------|---------------------------|--------------|
 | [使用传统的 R 包管理器](use-r-package-managers-on-sql-server.md)  | 管理员 | Local |
 | [使用 RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  之后管理员启用数据库角色 | both|
@@ -30,7 +30,7 @@ ms.locfileid: "51697045"
 
 R 包库物理上位于您的 SQL Server 实例，在具有受限访问权限的安全文件夹中的 Program Files 文件夹。 写入到此位置需要管理员权限。
 
-非管理员可以安装包，但执行此操作需要 addititional 配置和功能在初始安装中不可用。 对于非管理员包安装两种方法： RevoScaleR 使用 9.0.1 版和更高版本，或使用 CREATE EXTERNAL LIBRARY (仅 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或具有 CREATE EXTERNAL LIBRARY 权限的另一个用户可以将 R 包安装到当前数据库。
+非管理员可以安装包，但执行此操作需要 addititional 配置和功能在初始安装中不可用。 有两种方法对于非管理员包安装：RevoScaleR 使用 9.0.1 版和更高版本，或使用 CREATE EXTERNAL LIBRARY (仅 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或具有 CREATE EXTERNAL LIBRARY 权限的另一个用户可以将 R 包安装到当前数据库。
 
 R 开发人员习惯于创建所需位于中心位置的库是否仍受限的包的用户库。 这种做法是为 SQL Server 数据库引擎实例中执行 R 代码有问题。 SQL Server 无法从外部库加载包，即使该库是同一台计算机上。 SQL Server 中运行 R 代码中，可以使用仅实例库中的包。
 
@@ -92,7 +92,7 @@ R 和 Python 功能包括在多个 Microsoft 产品，所有这些无法同时�
 安装到 r_server LIBRARY 库的包仅由独立服务器和 SQL Server （数据库内） 实例无法访问。 始终使用`R_SERVICES`库安装你想要使用 SQL Server 上数据库中的包时。 有关路径的详细信息，请参阅[包库位置](installing-and-managing-r-packages.md#package-library-location)。
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)
 + [教程、示例、解决方案](../tutorials/machine-learning-services-tutorials.md)

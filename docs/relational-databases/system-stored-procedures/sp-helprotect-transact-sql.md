@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595647"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591181"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name =** ] **'***object_statement***’**  
- 当前数据库或语句中具有报告权限的对象的名称。 *object_statement*是**nvarchar(776)**，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符*所有者 ***。*** 对象*。  
+ [  **@name =** ] **'**_object_statement_  
+ 当前数据库或语句中具有报告权限的对象的名称。 *object_statement*是**nvarchar(776)**，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符_所有者_**。**_对象_。  
   
  如果*object_statement*是一条语句，它可以是 CREATE 语句。  
   
- [  **@username =** ] **'***security_account***’**  
+ [  **@username =** ] **'**_security_account_  
  为其返回权限的主体的名称。 *security_account*是**sysname**，默认值为 NULL，表示将返回所有主体在当前数据库中。 *security_account*必须存在于当前数据库。  
   
- [  **@grantorname =** ] **'***grantor***’**  
+ [  **@grantorname =** ] **'**_grantor_  
  是授予权限的名称。 *grantor*是**sysname**，默认值为 NULL，表示将返回数据库中任意主体授予权限的所有信息。  
   
- [ **@permissionarea =** ] **'***type***'**  
+ [  **@permissionarea =** ] **'**_类型_  
  是一个字符串，该值指示是否显示对象权限 (字符串**o**)，语句权限 (字符串**s**)，和 / 或 (**os**)。 *类型*是**varchar(10)**，默认值为**os**。 *类型*可以是任何组合**o**并**s**用或者不用逗号或空格之间**o**并**s**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -70,7 +70,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**“所有者”**|**sysname**|对象所有者的名称。|  
-|**对象**|**sysname**|对象的名称。|  
+|**Object**|**sysname**|对象的名称。|  
 |**被授权者**|**sysname**|被授予权限的主体的名称。|  
 |**授权者**|**sysname**|向指定的被授权者进行授权的主体的名称。|  
 |**ProtectType**|**nvarchar(10)**|保护类型的名称：<br /><br /> GRANT REVOKE|  
@@ -94,7 +94,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
  输出报表按权限类别、所有者、对象、被授权者、授权者、保护类型类别、保护类型、操作以及列连续 ID 进行排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
  返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834485"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591581"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  添加计划的作业的作业标识号。 *job_id*是**uniqueidentifier**，无默认值。  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_  
  向其中添加计划的作业的名称。 *job_name*是**nvarchar （128)**，无默认值。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **'**_名称_  
  计划名称。 *名称*是**nvarchar （128)**，无默认值。  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  之间的任何日期时间*active_start_date*并*active_end_date*开始执行作业。 *active_start_time*是**int**，无默认值。 时间是 24 小时制格式为 HHMMSS。  
   
- [ **@active_end_time=***active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  之间的任何日期时间*active_start_date*并*active_end_date*停止执行作业。 *active_end_time*是**int**，无默认值。 时间是 24 小时制格式为 HHMMSS。  
   
- [  **@schedule_id=***schedule_id***输出**  
+ [  **@schedule_id=**_schedule_id_**输出**  
  成功创建计划时分配给计划的计划标识号。 *schedule_id*是类型的输出变量**int**，无默认值。  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _schedule_uid_**输出**  
  计划的唯一标识符。 *schedule_uid*类型的变量**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -152,7 +152,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="remarks"></a>备注  
  作业计划现在可以独立于作业进行管理。 若要添加到作业的计划，请使用**sp_add_schedule**以创建的计划和**sp_attach_schedule**将计划附加到作业。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

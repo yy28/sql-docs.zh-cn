@@ -1,20 +1,21 @@
 ---
-title: 如何从 SQL Server 大数据群集查询 Oracle |Microsoft Docs
+title: 在 Oracle 中的查询外部数据
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教程演示如何查询从 SQL Server 2019 大数据群集 （预览版） 的 Oracle 数据。 你对 Oracle 中的数据创建外部表，然后运行查询。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644119"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432150"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教程： 从 SQL Server 大数据群集查询 Oracle
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集查询 Oracle
 
 本教程演示如何查询 SQL Server 2019 大数据群集中的 Oracle 数据。 若要运行本教程中，您需要有权访问 Oracle 服务器。 如果你没有访问权限，本教程可使您的数据虚拟化的 SQL Server 大数据群集中的外部数据源的工作方式。
 
@@ -29,11 +30,11 @@ ms.locfileid: "49644119"
 
 ## <a id="prereqs"></a> 先决条件
 
-* [部署 Kubernetes 上的大数据群集](deployment-guidance.md)。
-* [安装 Azure Data Studio 和 SQL Server 2019 扩展](deploy-big-data-tools.md)。
-* [将示例数据加载到群集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [大数据工具](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 扩展**
+- [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>创建 Oracle 表
 
@@ -61,7 +62,7 @@ ms.locfileid: "49644119"
 
 第一步是创建可以访问你的 Oracle 服务器的外部数据源。
 
-1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](deploy-big-data-tools.md#master)。
+1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
 1. 在该连接上双击**服务器**窗口以显示 SQL Server 主实例的服务器仪表板。 选择**新查询**。
 

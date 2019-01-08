@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085473"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590181"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>浏览顺序分析和聚类分析模型（数据挖掘中级教程）
-  现在，您构建**Sequence Clustering with Region**模型，您可以浏览该模型使用[!INCLUDE[msCoName](../includes/msconame-md.md)]序列聚类分析查看器**挖掘模型查看器**数据挖掘设计器选项卡。 [!INCLUDE[msCoName](../includes/msconame-md.md)]序列分类查看器包含五个选项卡：**分类关系图**，**分类剖面图**，**分类特征**， **ClusterDiscrimination**，并**的状态转换**。 有关如何使用此查看器的详细信息，请参阅[使用 Microsoft 序列分类查看器浏览模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
+  现在，您构建**Sequence Clustering with Region**模型，您可以浏览该模型使用[!INCLUDE[msCoName](../includes/msconame-md.md)]序列聚类分析查看器**挖掘模型查看器**数据挖掘设计器选项卡。 [!INCLUDE[msCoName](../includes/msconame-md.md)]序列分类查看器包含五个选项卡：**分类关系图**，**分类剖面图**，**分类特征**， **ClusterDiscrimination**，和**的状态转换**. 有关如何使用此查看器的详细信息，请参阅[使用 Microsoft 序列分类查看器浏览模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
 -   [群集关系图选项卡](#bkmk_CDiagram)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "49085473"
  [返回页首](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> 群集对比选项卡  
- **分类对比**选项卡可以帮助你比较两个群集，以确定哪些属性将特定分类与另一个群集区分开来。 该选项卡包含以下四个列：**变量**，**值**，**群集 1**，以及**分类 2**。  可以选择要用作任何分类**分类 1**并**分类 2**。  
+ **分类对比**选项卡可以帮助你比较两个群集，以确定哪些属性将特定分类与另一个群集区分开来。 该选项卡包含以下四个列：**变量**，**值**，**聚类 1**，并且**分类 2**。  可以选择要用作任何分类**分类 1**并**分类 2**。  
   
  **变量**列指示的属性，可为列名称或列名称和该单词的组合的名称**过渡**。 **值**列显示属性或转换的精确值。 中的列的阴影的条**分类 1**并**分类 2**指示进行比较的分类中属性的强度。 阴影条越长，分类包括具有该属性的事例的可能性越大。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085473"
   
 1.  在中**分类对比**选项卡上，对于**分类 1**，选择`Pacific Cluster`。  
   
-     默认情况下，为所选内容**分类 2**更改为**Pacific 补数 * * * 群集**。  
+     默认情况下，为所选内容**分类 2**更改为**Pacific Cluster 求补**。  
   
      最重要的属性，用于区分`Pacific Cluster`从所有其他情况下是区域。 Region 是聚类分析的一个强属性，以至于它掩盖了其他属性。 为了避免这种效果，请尝试相互比较几个较小的分类。 在进行比较时，属性列表会发生变化，可能包括模型之间的更多转换。  
   
