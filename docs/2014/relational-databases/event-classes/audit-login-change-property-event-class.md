@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b08d999cabc5fbe8e0db29241d70180b49dd9a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 890a61f8532d34b24676fae842676ff613d09c70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804009"
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property 事件类
   当使用 **sp_defaultdb** 存储过程、 **sp_defaultlanguage** 存储过程或 ALTER LOGIN 语句修改某个登录名的属性时，将发生 **Audit Login Change Property** 事件类。  
@@ -47,7 +46,7 @@ ms.locfileid: "48188317"
 |**OwnerName**|**nvarchar**|对象所有者的数据库用户名。|37|用户帐户控制|  
 |**RequestID**|**int**|包含该语句的请求的 ID。|49|用户帐户控制|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |**成功**|**int**|1 = 成功。 0 = 失败。 例如，值为 1 时表示权限检查成功；值为 0 时表示权限检查失败。|23|用户帐户控制|  

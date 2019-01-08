@@ -1,5 +1,5 @@
 ---
-title: 透视 |Microsoft 文档
+title: Analysis Services 表格模型中的透视 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e687116fa1f388da3b59884c29526cb9e7dd629
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: dc6b574702f71a70de842c3a3b51110e8eed9814
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040518"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983888"
 ---
-# <a name="perspectives"></a>透视
+# <a name="perspectives-in-tabular-models"></a>表格模型中的透视
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   在表格模型中，透视定义模型的可查看子集，借此您可以将注意力集中在该模型中的特定业务或特定应用上。  
   
-##  <a name="bkmk_understanding"></a> 优点  
+##  <a name="bkmk_understanding"></a> 优势  
  表格模型可为非常复杂的对象，以使用户进行浏览。 单个模型可以表示完整的数据仓库内容，可具有多个表、度量值和维度。 用户可能只需要与模型的一小部分进行交互即可满足其商业智能和报表要求，因此，这样的复杂性会令用户感到过于复杂。  
   
  在透视中，表、列和度量值（包括 KPI）定义为字段对象。 可为每个透视选择可查看字段。 例如，单个模型可以包含产品、销售、财务、员工和地理数据。 在销售部要求产品、销售、促销和地理数据时，他们可能不需要员工和财务数据。 同样，人力资源部门不需要与销售促销和地理有关的数据。  
@@ -38,7 +38,7 @@ ms.locfileid: "34040518"
 |-----------|-----------------|  
 |[创建和管理透视](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|描述如何使用模型设计器中的“透视”对话框创建和管理透视。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [层次结构](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   

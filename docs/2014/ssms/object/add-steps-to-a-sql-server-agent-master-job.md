@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17a217c59478061bada89d8875f696b8166cdee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177547"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822681"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向 SQL Server 代理主作业添加步骤。  
@@ -26,7 +26,7 @@ ms.locfileid: "48177547"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要向 SQL Server 代理主作业添加步骤，请使用：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48177547"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅 [Implement SQL Server Agent Security](../agent/implement-sql-server-agent-security.md)。  
+ 除非您是 **sysadmin** 固定服务器角色的成员，否则您只能修改自己拥有的作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](../agent/implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -56,15 +56,15 @@ ms.locfileid: "48177547"
   
 4.  右键单击要向其添加步骤的作业，然后选择“属性”。  
   
-5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“步骤”。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
-  
+5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
+
 6.  完成后，单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-add-steps-to-a-sql-server-agent-master-job"></a>向 SQL Server 代理主作业添加步骤  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

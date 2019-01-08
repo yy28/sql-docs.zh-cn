@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a97dc3f074a1302f852f710f05eb51e1ba1350c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d43074e9cdffa27e971d32278259001ae86c005f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681225"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209446"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
 
 将备份设备添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中。  
   
@@ -94,7 +94,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  若要删除某个设备，请使用[sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)或[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **diskadmin** 固定服务器角色中的成员身份。  
   
  要求拥有写入磁盘的权限。  

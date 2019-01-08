@@ -15,12 +15,12 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797867"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201786"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape COMPUTE 子句生成父级**记录集**，其列包含的引用的子**记录集**; 可选列是其内容的一章，新的或计算的列，或子级上执行聚合函数的结果**记录集**或以前成型**记录集**; 以及从子级的所有列**记录集**中列出可选的 BY 子句。  
@@ -65,12 +65,12 @@ SHAPE child-command [AS] child-alias
  例如：  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
  无论采用哪种方式父级**记录集**构成 （使用计算或使用追加），它将包含用于相关的一个子级的章节列**记录集**。 如果您愿意，父级**记录集**还可能包含聚合 （SUM、 MIN、 MAX 等） 的列包含的子行。 父级和子级**记录集**可能包含在中的行的表达式中包含的列**记录集**，以及列新与最初为空。  
   
-## <a name="operation"></a>运算  
+## <a name="operation"></a>操作  
  *子命令*颁发给提供程序，则返回一个子级**记录集**。  
   
  COMPUTE 子句指定的父列**记录集**，这可能是到子引用**记录集**，一个或多个聚合、 计算的表达式或新列。 如果没有 BY 子句，它定义的列还追加到父级**记录集**。 BY 子句用于指定如何的子行**记录集**进行分组。  

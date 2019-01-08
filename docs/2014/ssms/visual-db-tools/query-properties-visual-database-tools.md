@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69636
@@ -13,12 +13,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ba37a19f072292178ab96d01561004c55383cc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052389"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759950"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
   当您在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  
@@ -60,10 +60,10 @@ ms.locfileid: "48052389"
  指定当前查询中所有表的全部列都将包含在结果集中。 选择此选项等效于在 SQL 语句的 SELECT 关键字后指定星号 (*) 代替单个列名。  
   
  **查询参数列表**  
- 显示查询参数。 若要编辑这些参数，请单击相应属性，再单击该属性右侧的省略号 **(…)** 。 （仅适用于一般性的 OLE DB。）  
+ 显示查询参数。 若要编辑这些参数，请单击相应属性，再单击该属性右侧的省略号 (…)。 （仅适用于一般性的 OLE DB。）  
   
  **SQL 注释**  
- 显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本的数据库。）  
+ 显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本的数据库。）  
   
  **Top 规范类别**  
  展开此项可显示“Top”、“百分比”、“表达式”和“With Ties”属性的属性。  

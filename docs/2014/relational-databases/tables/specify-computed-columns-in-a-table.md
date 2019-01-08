@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
@@ -13,15 +12,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 50067da1853795279216b16f7c12119bc03f38c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072181"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789089"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
-  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以指定的表达式中的计算列[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为计算列指定一个表达式。  
   
  **本主题内容**  
   
@@ -29,7 +28,7 @@ ms.locfileid: "49072181"
   
      [限制和局限](#Limitations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具指定计算列：**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "49072181"
   
 1.  在 **“对象资源管理器”** 中，展开要添加新计算列的表。 右键单击“列”，再选择“新建列”。  
   
-2.  输入列名并接受默认数据类型 (`nchar`(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 `money` 的列和一个类型为 `int` 的列，则计算列的类型将为 `money`，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](/sql/t-sql/data-types/data-type-precedence-transact-sql)。  
+2.  输入列名并接受默认数据类型 (`nchar`(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 `money` 的列和一个类型为 `int` 的列，则计算列的类型将为 `money`，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](/sql/t-sql/data-types/data-type-precedence-transact-sql)。  
   
 3.  在 **“列属性”** 选项卡中，展开 **“计算所得的列规范”** 属性。  
   

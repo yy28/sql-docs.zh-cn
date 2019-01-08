@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148423"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544550"
 ---
 # <a name="move-an-analysis-services-database"></a>移动 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148423"
   
 1.  在 SSMS 的左窗格或右窗格中找到要移动的数据库。  
   
-2.  右键单击该数据库并选择“分离…”  
+2.  右键单击数据库并选择**分离...**  
   
 3.  为要分离的数据库分配一个密码，然后单击 **“确定”** 执行分离命令。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148423"
   
 5.  在 SSMS 的左窗格或右窗格中找到 **“数据库”** 文件夹。  
   
-6.  右键单击“数据库”文件夹并选择“分离…”  
+6.  右键单击**数据库**文件夹，然后选择**附加...**  
   
-7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 也可以使用浏览按钮 (**…**) 查找数据库文件夹。  
+7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 或者，可以使用浏览按钮 (**...**) 以查找数据库文件夹。  
   
 8.  针对该数据库选择 **ReadWrite** 模式。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "50148423"
   
 2.  执行 XMLA 命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
