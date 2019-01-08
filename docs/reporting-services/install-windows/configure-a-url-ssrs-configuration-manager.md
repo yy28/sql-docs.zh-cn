@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202486"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
@@ -92,17 +92,17 @@ ms.locfileid: "52509518"
   
 10. 通过单击页面 **URL** 部分中的链接来测试该 URL。 请注意，必须先创建并配置报表服务器数据库，然后才能测试 URL。 有关指导，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
-> [!NOTE]  
+> [!NOTE]
 >  如果你已有 SSL 绑定和 URL 预留且要更改 SSL 绑定，例如使用不同的证书或主机标头，则建议按顺序完成以下步骤：  
->   
+> 
 >  1.  首先删除所有 URL 预留。  
 > 2.  然后删除所有 SSL 绑定。  
 > 3.  接着重新创建 URL 和 SSL 绑定。  
->   
+> 
 >  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器完成上述步骤。  
->   
+> 
 >  Microsoft Windows 对于每个 IP 地址到端口的组合支持一个绑定。 如果您配置报表服务器以使用特定主机标头值并且还将端口到 IP 地址组合上的证书签发给不同的主机标头值，在浏览器中将看到一个警告，指示证书与使用的 URL 不匹配。  
->   
+> 
 >  为了解决此问题，请删除所有绑定，然后使用唯一设置创建新的绑定，或使用通配符配置 Reporting Services URL 注册。
   
 ### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>为 Web 门户创建 URL 预留 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  

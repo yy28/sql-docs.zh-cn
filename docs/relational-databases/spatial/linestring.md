@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c7765138f3ff4fd1ef31b6d3a606d427020c376d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018632"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979823"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018632"
   
  ![几何 LineString 实例的示例](../../relational-databases/spatial/media/linestring.gif "几何 LineString 实例的示例")  
   
- 如图中所示：  
+如图中所示：  
   
 -   图 1 显示的是一个简单、非闭合的 **LineString** 实例。  
   
@@ -41,69 +41,69 @@ ms.locfileid: "51018632"
 -   图 4 显示的是一个闭合、不简单的 **LineString** 实例，因此不是一个环。  
   
 ### <a name="accepted-instances"></a>已接受的实例  
- 可以将已接受的 **LineString** 实例输入到一个几何图形变量中，但它们可能不是有效的 **LineString** 实例。 必须满足以下条件， **LineString** 实例才能被接受。 该实例必须由至少两个点组成，或者该实例必须为空。 下面是一些已接受的 LineString 实例。  
+可以将已接受的 **LineString** 实例输入到一个几何图形变量中，但它们可能不是有效的 **LineString** 实例。 必须满足以下条件， **LineString** 实例才能被接受。 该实例必须由至少两个点组成，或者该实例必须为空。 下面是一些已接受的 LineString 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` 显示 **LineString** 实例可被接受，但无效。  
+`@g3` 显示 **LineString** 实例可被接受，但无效。  
   
- 下面的 **LineString** 实例不可接受。 它将引发 `System.FormatException`。  
+下面的 **LineString** 实例不可接受。 它将引发 `System.FormatException`。  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- 必须满足以下条件， **LineString** 实例才是有效的。  
+必须满足以下条件， **LineString** 实例才是有效的。  
   
 1.  **LineString** 实例必须是已接受的实例。  
-  
 2.  如果 **LineString** 实例不为空，则它必须包含至少两个非重复点。  
-  
 3.  在两个或更多连续点的间隔范围内， **LineString** 实例不能自身重叠。  
   
- 以下是有效的 **LineString** 实例。  
+以下是有效的 **LineString** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- 以下是无效的 **LineString** 实例。  
+以下是无效的 **LineString** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  **LineString** 重叠的检测基于不精确的浮点计算。  
+> **LineString** 重叠的检测基于不精确的浮点计算。  
   
 ## <a name="examples"></a>示例  
- 下面的示例说明如何创建一个包含三个点且 SRID 为 0 的 `geometry``LineString` 实例：  
+### <a name="example-a"></a>示例 A。    
+下面的示例说明如何创建一个包含三个点且 SRID 为 0 的 `geometry``LineString` 实例：  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- 此 `LineString` 实例中的每个点都可以包含 Z（仰角）和 M（度量）值。 下面这个示例向上例中创建的 `LineString` 实例添加了 M 值。 M 和 Z 可以为 Null 值。  
+### <a name="example-b"></a>示例 B。   
+此 `LineString` 实例中的每个点都可以包含 Z（仰角）和 M（度量）值。 下面这个示例向上例中创建的 `LineString` 实例添加了 M 值。 M 和 Z 可以为 Null 值。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- 下面的示例说明如何创建一个包含两个相同点的 `geometry LineString` 实例。 对 `IsValid` 的调用指示 **LineString** 实例无效，并且对 `MakeValid` 的调用会将 **LineString** 实例转换为 **Point**。  
+### <a name="example-c"></a>示例 C.   
+下面的示例说明如何创建一个包含两个相同点的 `geometry LineString` 实例。 对 `IsValid` 的调用指示 **LineString** 实例无效，并且对 `MakeValid` 的调用会将 **LineString** 实例转换为 **Point**。  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +118,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- 上面的代码段将返回以下结果：  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  

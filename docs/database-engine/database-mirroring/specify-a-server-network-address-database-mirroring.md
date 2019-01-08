@@ -16,12 +16,12 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7217be66fa41328d2483bc42fa66f2f71fcc1beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cbc26b45f5845cf563bb1cc8855ecf6b600b999
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789035"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588701"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定服务器网络地址（数据库镜像）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47789035"
 ##  <a name="Syntax"></a> 服务器网络地址的语法  
  服务器网络地址的语法格式如下：  
   
- TCP*://\<system-address>:\<port>**  
+ TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
   
  其中  
   
@@ -41,15 +41,15 @@ ms.locfileid: "47789035"
   
     -   如果各系统都在同一个域中，则可以使用计算机系统的名称；例如， `SYSTEM46`。  
   
-    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：[<IPv6_address>]****。  
+    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：**[**_<IPv6_address>_**]**。  
   
          若要了解系统的 IP 地址，则在 Windows 命令提示符处，输入 **ipconfig** 命令。  
   
     -   保证完全限定域名的有效性。 它是在不同位置具有不同形式的本地定义的地址字符串。 通常（但并不总是），完全限定域名是一个复合名称，包含计算机名称和一系列句点分隔的域段，其格式为：  
   
-         *computer_name* **。** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **。** _domain_segment_[...**.**_domain_segment_]  
   
-         其中， computer_name 是运行服务器实例的计算机的网络名称，domain_segment[....domain_segment] 是服务器的其余域信息；例如：`localinfo.corp.Adventure-Works.com`。  
+         其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[...**.**_domain_segment_] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
   
          在公司或组织内确定域段的内容和数量。 如果您不知道服务器的完全限定域名，请与系统管理员联系。  
   
@@ -88,7 +88,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### <a name="c-using-ipv4"></a>C. 使用 IPv4   
+#### <a name="c-using-ipv4"></a>C. 使用 IPv4  
  以下服务器网络地址指定 IPv4 地址 `10.193.9.134`和端口 `7023`。  
   
 ```  
@@ -109,7 +109,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  若要形成完全限定的域名，请将 *<host_name>* 和 *<Primary_Dns_Suffix>* 的值连接一起，如下所示：  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  例如，IP 配置  
   

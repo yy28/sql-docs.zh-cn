@@ -18,20 +18,20 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ac4984fca803cbcf5d18fa4b34fdd8629dfe8c9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bbc07306f0079adbe90f22eb25a73f750258ebd4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210090"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
   OLE DB 连接管理器使包能够用 OLE DB 访问接口连接到数据源。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 OLE DB 连接管理器可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。    
     
-> [!NOTE]    
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供程序不支持用于多子网故障转移群集的新连接字符串关键字 (MultiSubnetFailover=True)。 有关详细信息，请参阅 [SQL Server 发行说明](https://go.microsoft.com/fwlink/?LinkId=247824) 以及 www.mattmasson.com 上博客文章 [AlwaysOn 多子网故障转移和 SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)。    
-    
-> [!NOTE]    
+> 
+> [!NOTE]
 >  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007，则数据源需要不同于早期版本 Excel 或 Access 的数据访问接口。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) 和 [连接到 Access 数据库](../../integration-services/connection-manager/connect-to-an-access-database.md)。    
     
  有若干 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务和数据流组件使用 OLE DB 连接管理器。 例如，OLE DB 源和 OLE DB 目标使用这种连接管理器来提取和加载数据，而执行 SQL 任务可以使用这种连接管理器来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以运行查询。    

@@ -18,12 +18,12 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706295"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590272"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM 服务 - 防止自动启动实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "47706295"
   
 3.  在“详细信息”窗格中，右键单击“” ，再单击“属性”   
   
-4.  在“SQL Server \<instancename> 属性”  对话框中，在“服务”选项卡上的“常规”框中，将“启动模式”的值设置为“手动”。 ****  
+4.  在“SQL Server \<实例名> 属性”对话框中，在“服务”选项卡上的“常规”框中，将“启动模式”的值设置为“手动”。  
   
-5.  单击“确定”关闭“SQL Server \<instancename> 属性”  对话框，然后再关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。 ****  
+5.  单击“确定”关闭“SQL Server \<实例名> 属性”对话框，然后再关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

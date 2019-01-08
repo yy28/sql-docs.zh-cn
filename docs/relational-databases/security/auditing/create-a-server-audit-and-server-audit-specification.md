@@ -18,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 650c5bd55365fbf1729fe3514bd31b6af73f6981
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523032"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978813"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52523032"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建服务器审核和服务器审核规范，请使用：**  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52523032"
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -181,11 +181,11 @@ ms.locfileid: "52523032"
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7544e79400c2b85b11330825866909a05acdfd09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762415"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213756"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ WITH IDENTITY = 'identity_name'
   
  SECRET = 'secret'  
  指定发送身份验证所需的机密内容。 需要 `SECRET` 才可从 Azure Blob 存储导入文件。 若要从 Azure Blob 存储加载到 SQL DW 或并行数据仓库，Secret 必须是 Azure 存储密钥。  
->  [!WARNING]
+> [!WARNING]
 >  SAS 密钥值可以“?”（问号）开头。 使用 SAS 密钥时，必须删除前导“?”。 否则会阻止操作。  
   
 ## <a name="remarks"></a>Remarks  

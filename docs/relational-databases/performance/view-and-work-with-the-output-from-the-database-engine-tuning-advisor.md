@@ -23,15 +23,15 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662256"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369289"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "51662256"
 ##  <a name="Analysis"></a> 执行探索性分析  
  数据库管理员可以通过用户指定的数据库引擎优化顾问配置功能执行探索性分析。 使用此功能，数据库管理员将所需物理数据库设计指定给数据库引擎优化顾问，然后就可以评估该设计的性能效果，而无需实施该设计。 数据库引擎优化顾问图形用户界面 (GUI) 和命令行实用工具都支持用户指定的配置。 但是，命令行实用工具提供的灵活性最大。  
   
- 如果您使用的是数据库引擎优化顾问 GUI，则可以评估实施部分数据库引擎优化顾问优化建议的效果，但无法向数据库引擎优化顾问添加假设物理设计结构来进行评估。   
+ 如果您使用的是数据库引擎优化顾问 GUI，则可以评估实施部分数据库引擎优化顾问优化建议的效果，但无法向数据库引擎优化顾问添加假设物理设计结构来进行评估。  
   
  以下过程说明如何在两个工具界面上使用用户指定的配置功能。  
   

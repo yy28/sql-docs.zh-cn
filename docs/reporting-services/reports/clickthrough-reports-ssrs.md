@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2273d2c0108d96478aa5f5645abcb0034f6c89e5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: dbdfeb334b3089ac8028952eae5444b4c211e27d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710778"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212166"
 ---
 # <a name="clickthrough-reports-ssrs"></a>点击链接型报表 (SSRS)
   点击链接型报表是一种用于提供有关主报表数据的详细信息的报表。 当用户单击主报表中显示的交互式数据时，便会显示点击链接型报表。 这些报表是由报表服务器自动生成的。 作为模型设计者，您可以通过在报表模型中设置分配给某实体的 **DefaultDetailAttribute** 和 **DefaultAggregateAttribute** 属性来确定点击链接型报表中显示的内容。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均不提供点击链接型报表。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 各个版本支持的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
   
 ## <a name="using-default-templates"></a>使用默认模板  

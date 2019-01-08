@@ -1,6 +1,6 @@
 ---
 title: 启用和禁用变更数据捕获 (SQL Server) | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01dd23b4c7143280c54137b0e1474eb59fdcd0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 61ca34394e2cab5cf16862f6ddae20573c4e17a0
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558777"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991830"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   本主题说明如何对数据库和表启用和禁用变更数据捕获。  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>对数据库启用变更数据捕获  
@@ -142,7 +142,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果对具有现有主键的表启用变更数据捕获，且未使用 *@index_name* 参数来标识备用的唯一索引，则变更数据捕获功能将使用主键。 只有先对表禁用变更数据捕获，才能对主键进行后续更改。 无论配置变更数据捕获时是否要求支持净更改查询均是如此。 如果对表启用变更数据捕获时该表中没有主键，则变更数据捕获将忽略后来添加的主键。 由于变更数据捕获不会使用在启用表之后创建的主键，因此可以不受限制地将该键及键列删除。  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>对表禁用变更数据捕获  

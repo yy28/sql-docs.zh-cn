@@ -17,15 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 736ce0ea9cc700d9064a3fa5fc87a27f9b38e71a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 606778f5505e6ba7e22ade1394a0169fce4a918b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765755"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375239"
 ---
 # <a name="plan-guides"></a>计划指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47765755"
   
  可创建的计划指南总数仅受可用系统资源的限制。 尽管如此，计划指南还是应当限于针对提高或稳定性能的关键查询。 计划指南不应用来影响已部署应用程序的大部分查询负荷。  
   
-> [!NOTE]  
+> [!NOTE]
 >  计划指南不适用于每个 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 计划指南在任何版本中可见。 包含计划指南的数据库可以附加到任何版本。 将数据库还原或附加到升级版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，计划指南保持不变。  
   
 ## <a name="types-of-plan-guides"></a>计划指南的类型  

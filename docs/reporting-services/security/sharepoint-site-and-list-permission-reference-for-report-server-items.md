@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b164b167de39a8a465e19b1f751ab22c9295c6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a51a863a36562d7be1ef242ca9ad680e9149c73b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725945"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213046"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>报表服务器项的 SharePoint 站点和列表权限参考
   本主题提供了 SharePoint 中的权限参考，对于在 SharePoint 集成模式下运行的报表服务器，可使用这些权限来授予对报表服务器操作的访问权限。 如果要创建自定义权限级别，本主题可帮助您选择要使用何种权限。  
@@ -37,7 +37,7 @@ ms.locfileid: "47725945"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | SharePoint 2010 和 SharePoint 2013。|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | SharePoint 2010 和 SharePoint 2013。|  
   
 ## <a name="list-permissions"></a>列表权限  
  对包含报表服务器项的库设置的权限将确定用户如何访问这些项。  

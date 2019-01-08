@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835916"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991790"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+（字符串串联）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  在二进制字符串之间串联二进制字符串和任何字符串时，必须显式转换字符数据。 以下示例显示了对于二进制串联，何时必须使用 `CONVERT` 或 `CAST`，何时不需要使用 `CONVERT` 或 `CAST`。  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. 使用字符串串联  
  以下示例在列标头 `Name` 下使用多个字符列创建一个列，人员的姓氏后跟随逗号、一个空格，然后是人员的名字。 结果集是按照姓氏，然后按照名字以字母顺序升序排列的。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -89,7 +89,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. 组合数值和日期数据类型  
  以下示例使用 `CONVERT` 函数串联 numeric 和 date 数据类型。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>C. 使用多个字符串串联  
  以下示例串联多个字符串，形成一个长字符串，显示 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的副总裁的姓氏和名字的首字母。 逗号加在姓氏后，句点加在名字首字母后。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>D. 在串联中使用大型字符串
 以下示例将多个字符串串联成一个长字符串，然后尝试计算最终字符串的长度。 结果集的最后长度为 16000，因为表达式计算从左开始，即 @x + @z + @y => (@x + @z) + @y。 在本例中，(@x + @z) 的结果在 8000 字节处截断，然后将 @y 添加到结果集中，这使得最终的字符串长度为 16000。 由于 @y 为大型值类型字符串时，所以不会发生截断。
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>E. 使用多个字符串串联  
  以下示例串联多个字符串，形成一个长字符串，显示一个示例数据库中的副总裁的姓氏和名字的首字母。 逗号加在姓氏后，句点加在名字首字母后。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  

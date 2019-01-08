@@ -16,12 +16,12 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9c34a12bf9532d87c599ea02ee7be068facda93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420508"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205946"
 ---
 # <a name="variables-window"></a>“变量”窗口
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。  
@@ -30,7 +30,7 @@ ms.locfileid: "52420508"
   
  您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
-> [!NOTE]  
+> [!NOTE]
 >  **Name** 和 **Namespace** 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
 ## <a name="options"></a>选项  

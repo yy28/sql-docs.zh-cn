@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0aa0261ebd896f8f7c8291d24f79a51b99e80bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eaf2a4e5deb782533b945e85209c6ed7f2200db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760545"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202606"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -194,7 +194,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  创建、重新生成或删除 XML 索引的脱机索引操作将获取表的架构修改 (Sch-M) 锁。 这样可以防止所有用户在操作期间访问基础表。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ALLOW_ROW_LOCKS = { ON | OFF }  
@@ -234,7 +234,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 ## <a name="remarks"></a>Remarks  

@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5190e1b6fdcd83719b84142bee49dff55c824c55
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018232"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979525"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ ms.locfileid: "51018232"
 ### <a name="accepted-instances"></a>接受的实例  
  为使 **MultiLineString** 实例可接受，它必须或者为空，或者仅由接受的 **LineString** 实例组成。 有关接受的 **LineString** 实例的详细信息，请参阅 [LineString](../../relational-databases/spatial/linestring.md)。 下面的示例显示接受的 **MultiLineString** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 下面的示例引发 `System.FormatException` ，因为第二个 **LineString** 实例无效。  
+下面的示例引发 `System.FormatException` ，因为第二个 **LineString** 实例无效。  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- 必须满足以下条件， **MultiLineString** 实例才是有效的：  
+必须满足以下条件， **MultiLineString** 实例才是有效的：  
   
 1.  组成 **MultiLineString** 实例的所有实例必须是有效的 **LineString** 实例。  
   
 2.  组成 **LineString** 实例的任何两个 **MultiLineString** 实例在某个间隔内都不会重叠。 **LineString** 实例只能与其自身或其他 **LineString** 实例在有限数量的点相交或接触。  
   
- 以下示例显示三个有效的 **MultiLineString** 实例和一个无效的 **MultiLineString** 实例。  
+以下示例显示三个有效的 **MultiLineString** 实例和一个无效的 **MultiLineString** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
@@ -77,19 +77,19 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` 无效，因为第二个 **LineString** 实例与第一个 **LineString** 实例在某个间隔重叠。 它们在无限数量的点处接触。  
+`@g4` 无效，因为第二个 **LineString** 实例与第一个 **LineString** 实例在某个间隔重叠。 它们在无限数量的点处接触。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建了一个包含两个 `geometry``MultiLineString` 元素且 SRID 为 0 的简单 `LineString` 实例。  
+下面的示例创建了一个包含两个 `geometry``MultiLineString` 元素且 SRID 为 0 的简单 `LineString` 实例。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- 若要使用不同的 SRID 实例化此实例，请使用 `STGeomFromText()` 或 `STMLineStringFromText()`。 也可以使用 `Parse()` ，然后修改 SRID，如下例所示。  
+若要使用不同的 SRID 实例化此实例，请使用 `STGeomFromText()` 或 `STMLineStringFromText()`。 也可以使用 `Parse()` ，然后修改 SRID，如下例所示。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 SET @g.STSrid = 13;  

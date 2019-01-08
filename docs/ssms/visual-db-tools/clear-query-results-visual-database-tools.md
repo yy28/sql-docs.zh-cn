@@ -17,16 +17,16 @@ ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d743652fa35a5f3cb6a8438d0ad6dffd66e7a01d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7367a3f3ce663966b583f6946923e3c312a5eb41
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736005"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213606"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查询结果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在“查询和视图设计器”中运行查询后，可以清除“结果”窗格。 此过程适用于通过使用对象资源管理器中的“打开视图”或“打开表”选项创建的查询。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，在查询编辑器中运行查询后，除非关闭查询编辑器窗口或运行其他查询，否则不能清除“结果”窗格。  
+在“查询和视图设计器”中运行查询后，可以清除“结果”窗格。 此过程适用于通过使用对象资源管理器中的“打开视图”或“打开表”选项创建的查询。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，当在查询编辑器中运行查询之后，除非关闭查询编辑器窗口或运行其他查询，否则不能清除“结果”窗格。  
   
 > [!NOTE]  
 > 这不会撤消您对数据库所做的更改。 有关“结果”窗格工作方式的详细信息，请参阅 [使用“结果”窗格中的数据 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)。  

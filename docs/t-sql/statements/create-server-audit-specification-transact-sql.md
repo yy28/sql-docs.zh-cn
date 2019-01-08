@@ -18,12 +18,12 @@ ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 144bc0915836fadf0965a305d8d10014106a85b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf66db2279aa6400f96564d0b364fb998009e1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598446"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979271"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ FOR SERVER AUDIT audit_name
  创建服务器审核规范后，具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 权限的主体、sysadmin 帐户或具有对审核的明确访问权的主体即可查看该规范。  
   
 ## <a name="examples"></a>示例  
- 下面的示例针对称为 `HIPPA_Audit_Specification` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 创建称为 `HIPPA_Audit` 的服务器审核规范，该规范可对失败的登录进行审核。  
+ 下面的示例针对称为 `HIPAA_Audit_Specification` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 创建称为 `HIPAA_Audit` 的服务器审核规范，该规范可对失败的登录进行审核。  
   
 ```  
-CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP);  
 GO  
 ```  

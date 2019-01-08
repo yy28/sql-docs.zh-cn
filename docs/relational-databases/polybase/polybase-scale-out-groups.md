@@ -14,12 +14,12 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412634"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205416"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 
@@ -46,7 +46,7 @@ ms.locfileid: "52412634"
 例如，假设你有包含 12 个每月分区和一个 3 节点 PolyBase 横向扩展组的外部 SQL Server 表，每个节点将使用 4 个 PolyBase 读取器来处理这 12 个分区中的每一个。 如下图所示。 
 
 > [!NOTE]
- 这不同于通过 Hadoop 的横向扩展读取。 
+>  这不同于通过 Hadoop 的横向扩展读取。 
 
 ![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 横向扩展组")
   

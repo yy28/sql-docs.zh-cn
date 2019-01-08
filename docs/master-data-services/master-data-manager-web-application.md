@@ -5,19 +5,18 @@ ms.date: 12/20/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2fec17446829d39deae233c205360d768aec313c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212376"
 ---
 # <a name="master-data-manager-web-application"></a>主数据管理器 Web 应用程序
 
@@ -25,12 +24,12 @@ ms.locfileid: "47682455"
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序主要由管理员用于执行管理任务。 例如，只有管理员才能创建模型、业务规则或数据版本。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
-
+> 
 > **无法创建 MDS 网站？**
->>请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。
-[无法在 SQL Server 2016 中通过使用低特权帐户创建 MDS 网站](https://aka.ms/mdssupport) 
+> >请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。
+> [无法在 SQL Server 2016 中通过使用低特权帐户创建 MDS 网站](https://aka.ms/mdssupport) 
   
  该 Web 应用程序的资源管理器功能区域是不由管理员使用的唯一区域。 资源管理器面向频繁更新主数据的人士。 这些用户对执行其作业所需的数据具有权限。  
   
