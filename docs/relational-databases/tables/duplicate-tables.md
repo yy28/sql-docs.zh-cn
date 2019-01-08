@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df05fc03563c88a10a7c56b71536e41068ffb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845475"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589521"
 ---
 # <a name="duplicate-tables"></a>复制表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47845475"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具复制表：**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47845475"
   
 6.  在 **“编辑”** 菜单上，单击 **“粘贴”**。  
   
-7.  在“文件”菜单上，单击“保存table name”。  
+7.  从“文件”菜单上，单击“保存”表格名称。  
   
 8.  在 **“选择名称”** 对话框中，键入新表的名称，然后单击 **“确定”**。  
   

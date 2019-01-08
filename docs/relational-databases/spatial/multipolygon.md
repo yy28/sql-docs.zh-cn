@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6314ac1c24aa545e3f5c44749b755bf7e7174b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a40bf0e7f3758ca048f78f59177b7fc80a5e94ca
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018952"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979283"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ ms.locfileid: "51018952"
   
 -   组成 **MultiPolygon** 实例的所有实例是接受的 **Polygon** 实例。 有关接受的 **Polygon** 实例的详细信息，请参阅 [Polygon](../../relational-databases/spatial/polygon.md)。  
   
- 下面的示例显示接受的 **MultiPolygon** 实例。  
+下面的示例显示接受的 **MultiPolygon** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 ```  
   
- 下面的示例显示一个将引发 `System.FormatException`的 MultiPolygon 实例。  
+下面的示例显示一个将引发 `System.FormatException`的 MultiPolygon 实例。  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
 ```  
   
- MultiPolygon 中的第二个实例是 LineString 实例，而不是接受的 Polygon 实例。  
+MultiPolygon 中的第二个实例是 LineString 实例，而不是接受的 Polygon 实例。  
   
 ### <a name="valid-instances"></a>有效实例  
  如果 **MultiPolygon** 实例是空的 **MultiPolygon** 实例或者它满足以下条件，则前者有效。  
@@ -66,29 +66,31 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
 2.  组成 **Polygon** 实例的所有 **MultiPolygon** 实例都不会重叠。  
   
- 以下示例显示两个有效的 **MultiPolygon** 实例和一个无效的 **MultiPolygon** 实例。  
+以下示例显示两个有效的 **MultiPolygon** 实例和一个无效的 **MultiPolygon** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` 之所以有效，原因在于两个 **Polygon** 实例仅在切点接触。 `@g3` 之所以无效，原因在于这两个 **Polygon** 实例的内部相互重叠。  
+`@g2` 之所以有效，原因在于两个 **Polygon** 实例仅在切点接触。 `@g3` 之所以无效，原因在于这两个 **Polygon** 实例的内部相互重叠。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何创建 `geometry``MultiPolygon` 实例，并返回第二个组件的熟知文本 (WKT)。  
+### <a name="example-a"></a>示例 A。
+下面的示例演示如何创建 `geometry``MultiPolygon` 实例，并返回第二个组件的熟知文本 (WKT)。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- 该示例实例化一个空的 `MultiPolygon` 实例。  
+## <a name="example-b"></a>示例 B。
+该示例实例化一个空的 `MultiPolygon` 实例。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
