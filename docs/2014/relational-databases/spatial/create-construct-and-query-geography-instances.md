@@ -14,12 +14,12 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018742"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369489"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
   地理空间数据类型 `geography` 表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体 （圆形地球） 数据。  
@@ -105,7 +105,7 @@ ms.locfileid: "51018742"
 ###  <a name="gml"></a> 用 GML 文本输入构造地域实例  
  `geography`数据类型提供了生成的方法`geography`gml 的 XML 表示形式的实例`geography`实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
- 有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
+ 有关地理标记语言的详细信息，请参阅 OGC 规范：[OGC 规范，地理标记语言。](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **用 GML 输入构造任意类型的地域实例**  
  [GeomFromGML（geography 数据类型）](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

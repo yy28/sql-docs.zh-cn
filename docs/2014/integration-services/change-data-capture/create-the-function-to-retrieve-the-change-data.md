@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,12 +12,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088597"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761889"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
   在完成用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流之后，接下来的任务是创建用于检索变更数据的表值函数。 只需在第一次增量加载之前创建一次此函数。  
@@ -133,7 +132,7 @@ deallocate #hfunctions
   
 -   请求的所有变更数据列。  
   
--   名为 __CDC_OPERATION 的列，该列使用单字符或双字符字段来标识与该行关联的操作。 此字段的有效值如下：“I”表示插入，“D”表示删除，“UO”表示更新旧值，“UN”表示更新新值。  
+-   名为 __CDC_OPERATION 的列，该列使用单字符或双字符字段来标识与该行关联的操作。 此字段的有效值如下所示：I 表示插入的表示删除，UO 表示更新旧值和取消表示更新新值。  
   
 -   更新标志，当你请求这些标志时，它们作为位列显示在操作代码后，并以在 *@update_flag_list* 参数中指定的顺序显示。 这些列的命名方式是在关联的列名后追加“_uflag”。  
   
@@ -142,7 +141,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>编写自己的表值函数  
  还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编写自己的可调用变更数据捕获查询函数的表值包装函数，并将该表值包装函数存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 有关如何创建 Transact-SQL 函数的详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)。  
   
- 下面的示例定义一个表值函数，该表值函数将检索 Customer 表在指定的变更间隔发生的变更。 此函数使用变更数据捕获函数将映射`datetime`值与二进制日志序列号 (LSN) 值的更改表在内部使用。 此函数还可以处理以下几种特殊情况：  
+ 下面的示例定义一个表值函数，该表值函数将检索 Customer 表在指定的变更间隔发生的变更。 此函数使用变更数据捕获函数将 `datetime` 值映射到变更表内部使用的二进制日志序列号 (LSN) 值。 此函数还可以处理以下几种特殊情况：  
   
 -   将 null 值传递到开始时间时，函数将采用最早的可用值。  
   
@@ -220,6 +219,6 @@ go
 ## <a name="next-step"></a>下一步  
  在创建了用于查询变更数据的表值函数之后，下一步就是开始设计包中的数据流。  
   
- **下一个主题：** [检索和了解变更数据](retrieve-and-understand-the-change-data.md)  
+ **下一主题：**[检索和了解变更数据](retrieve-and-understand-the-change-data.md)  
   
   

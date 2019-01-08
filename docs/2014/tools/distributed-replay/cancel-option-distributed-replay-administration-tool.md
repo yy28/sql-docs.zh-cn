@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b69c21123f76517243805b3d5d3391fd3c5d5149
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d9aa28d4a6879f3077b137880aae54b9a0c434
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822281"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Cancel 选项（分布式重播管理工具）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是一个命令行工具，可用来与分布式的重播控制器进行通信。 本主题介绍 **cancel** 命令行选项和相应的语法。  
@@ -46,10 +46,10 @@ dreplay cancel [-mcontroller] [-q]
  在下面的示例中，在静默模式下提交一个取消请求。 值 `localhost` 表示控制器服务与管理工具在同一计算机上运行。  
   
 ```  
-dreplay cancel –m localhost -q  
+dreplay cancel -m localhost -q  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须作为交互用户、本地用户或域用户帐户运行管理工具。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。  
   
  有关详细信息，请参阅 [Distributed Replay Security](distributed-replay-security.md)。  

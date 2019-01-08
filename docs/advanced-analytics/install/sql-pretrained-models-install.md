@@ -1,5 +1,5 @@
 ---
-title: SQL Server 上安装预先定型的机器学习模型 |Microsoft Docs
+title: 安装预先定型的机器学习模型的 SQL Server 机器学习
 description: 将预先训练的情绪分析和图像特征化的模型添加到 SQL Server 2017 机器学习服务 （R 或 Python） 或 SQL Server 2016 R Services。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
-ms.translationtype: HT
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216828"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645436"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安装预先定型的机器学习模型的 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +104,7 @@ R 和 Python 模型的安装路径如下所示：
 
 2. 在下面的 R 脚本的命令提示符处粘贴。
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ R 和 Python 模型的安装路径如下所示：
 
 3. 按 Enter 以查看情绪分数。 输出应如下所示：
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ R 和 Python 模型的安装路径如下所示：
 
 3. 按 Enter 可以打印评分。 输出应如下所示：
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH
@@ -190,7 +190,7 @@ R 和 Python 模型的安装路径如下所示：
 
   对于映像预先训练的模型支持您提供的映像的特征化。 若要使用的模型，请调用**featurizeImage**转换。 加载图像时，调整大小，并具有以下特征的训练模型。 然后使用 DNN 特征化器的输出是训练图像分类的线性模型。 若要使用此模型中，所有映像必须调整都大小以满足已训练模型的要求。 例如，如果您使用 AlexNet 模型，映像应调整为 227 x 227 像素。
 
-+ [代码示例： 使用文本特征化器进行情绪分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [代码示例：使用文本特征化器进行情绪分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 

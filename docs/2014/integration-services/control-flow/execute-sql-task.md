@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204817"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367309"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -63,7 +62,7 @@ ms.locfileid: "48204817"
 >  执行 SQL 任务可能无法成功分析在执行 SQL 任务外编写的有效 SQL 语句。  
   
 > [!NOTE]  
->  执行 SQL 任务将使用 `RecognizeAll` ParseMode 枚举值。 有关详细信息，请参阅 [ManagedBatchParser 命名空间](http://go.microsoft.com/fwlink/?LinkId=223617)。  
+>  执行 SQL 任务将使用 `RecognizeAll` ParseMode 枚举值。 有关详细信息，请参阅 [ManagedBatchParser 命名空间](https://go.microsoft.com/fwlink/?LinkId=223617)。  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>按批发送多个语句  
  如果在执行 SQL 任务中包含了多个语句，则可以将这些语句进行分组，并将它们作为一批来运行。 若要标明批的结束，请使用 GO 命令。 在两个 GO 命令间的所有 SQL 语句都作为一批发送到 OLE DB 访问接口来运行。 SQL 命令可以包含多个由 GO 命令分隔的批。  
@@ -81,7 +80,7 @@ ms.locfileid: "48204817"
 -   如果任务使用参数绑定，则批中的所有查询都必须具有相同数量和类型的参数。  
   
 ## <a name="running-parameterized-sql-commands"></a>运行参数化 SQL 命令  
- SQL 语句和存储过程常常使用输入参数、输出参数和返回代码。 执行 SQL 任务支持`Input`， `Output`，和`ReturnValue`参数类型。 您使用`Input`类型用于输入参数`Output`输出参数和`ReturnValue`返回代码的。  
+ SQL 语句和存储过程常常使用输入参数、输出参数和返回代码。 执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 应当将 `Input` 类型用于输入参数，将 `Output` 用于输出参数并将 `ReturnValue` 用于返回代码。  
   
 > [!NOTE]  
 >  只有数据访问接口支持这些参数时，才可在执行 SQL 任务中使用它们。  
@@ -96,7 +95,7 @@ ms.locfileid: "48204817"
 ## <a name="troubleshooting-the-execute-sql-task"></a>执行 SQL 任务故障排除  
  可以记录执行 SQL 任务对外部数据访问接口的调用。 您可以使用这项日志记录功能对执行 SQL 任务运行的 SQL 命令进行故障排除。 若要记录执行 SQL 任务对外部数据访问接口的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅[包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
- 有时，SQL 命令或存储过程会返回多个结果集。 这些结果集包含不只是结果的行集`SELECT`查询，但错误的结果的单个值`RAISERROR`或`PRINT`语句。 该任务是否忽略第一个结果集之后出现的结果集中的错误，取决于所用的连接管理器类型：  
+ 有时，SQL 命令或存储过程会返回多个结果集。 这些结果集不仅包含 `SELECT` 查询结果的行集，还包含 `RAISERROR` 或 `PRINT` 语句的错误结果的单个值。 该任务是否忽略第一个结果集之后出现的结果集中的错误，取决于所用的连接管理器类型：  
   
 -   在您使用 OLE DB 和 ADO 连接管理器时，该任务会忽略在第一个结果集之后出现的结果集。 因此，使用这些连接管理器，当错误不属于第一个结果集时，该任务会忽略 SQL 命令或存储过程返回的错误。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204817"
   
 -   指明任务是否跳过 SQL 语句的准备阶段。  
   
--   如果使用 ADO 连接类型，则必须指明 SQL 语句是否为存储过程。 对于其他的连接类型，此属性是只读的其值始终为`false`。  
+-   如果使用 ADO 连接类型，则必须指明 SQL 语句是否为存储过程。 对于其他的连接类型，该属性为只读且其值始终为 `false`。  
   
  可以采用编程方式或通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器来设置属性。  
   
@@ -159,6 +158,6 @@ ms.locfileid: "48204817"
   
 -   [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)  
   
--   mssqltips.com 上的博客文章： [SQL Server 2012 中新的日期和时间函数](http://go.microsoft.com/fwlink/?LinkId=239783)  
+-   mssqltips.com 上的博客文章： [SQL Server 2012 中新的日期和时间函数](https://go.microsoft.com/fwlink/?LinkId=239783)  
   
   

@@ -12,20 +12,20 @@ ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c019b7735b70247d0646cccc9f8de277725eec8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ea6619eede506326cdbb1442f86dc76c44e1765
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122787"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376269"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>从结果集中提取行 (OLE DB)
   此示例显示如何从结果集中提取行。 IA64 平台不支持此示例。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
   

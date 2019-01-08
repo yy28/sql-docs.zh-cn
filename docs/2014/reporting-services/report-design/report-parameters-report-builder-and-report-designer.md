@@ -18,19 +18,19 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107328"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366259"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
   本主题介绍 SSRS 报表参数、可设置的属性以及更多有关参数的常规用法。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。  
   
 [!INCLUDE[applies](../../includes/applies-md.md)] SharePoint 模式和本机模式
   
- 有关如何向报表添加参数的演示，请参阅 [教程：向报表添加参数 (SSRS)](http://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
+ 有关如何向报表添加参数的演示，请参阅[教程：将参数添加到报表 (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
   
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> 参数的常规用法  
@@ -75,7 +75,7 @@ ms.locfileid: "48107328"
   
 3.  **@Subcategory 参数**参数@Subcategory数据类型是`Text`。 因为@Subcategory具有可用值列表，有效的值显示在下拉列表中。 您必须从此列表中选择值。 因为@Subcategory多个值， **Select All** ，可用于清除或选择列表中的所有值将显示选项。  
   
-4.  **@ShowAllRows 参数**参数@ShowAllRows数据类型是`Boolean`。 使用单选按钮指定`True`或`False`。  
+4.  **@ShowAllRows 参数**参数@ShowAllRows数据类型是`Boolean`。 使用单选按钮指定 `True` 或 `False`。  
   
 5.  **“显示或隐藏参数区域”控点** 在报表查看器工具栏上，单击此箭头可显示或隐藏参数窗格。  
   
@@ -120,27 +120,27 @@ ms.locfileid: "48107328"
   
 -   从下拉列表中为参数选择一个值，该值决定可在下拉列表中为其他参数选择的值。 这些是级联参数。 级联参数使你能够持续筛选数以千计的值，最终将值的数量限定在易于管理的范围内。  
   
-     有关详细信息，请参阅[向报表添加级联参数&#40;报表生成器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)。  
+     有关详细信息，请参阅 [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)中所创建的移动报表中使用。  
   
 -   无需先选择参数值即可运行报表，因为已经为该参数设置了默认值。  
   
 ##  <a name="bkmk_Report_Parameters"></a> 报表参数属性  
  可用使用“报表属性”对话框来更改报表属性参数。 下表总结了可以为各个参数设置的属性：  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |“属性”|键入区分大小写的参数名称。 名称必须以字母开头，可以包含字母、数字、下划线 (_)。 名称中不能包含空格。 对于自动生成的参数，其名称会与数据集查询中的参数相匹配。 默认情况下，手动创建的参数与 ReportParameter1 相类似。|  
 |提示|在报表查看器工具栏上的参数旁边显示的文本。|  
-|数据类型|即使数据类型是时为参数定义可用值，用户可从下拉列表中选择值`DateTime`。 报表参数必须为以下数据类型之一：<br /><br /> `Boolean`。 用户通过单选按钮选择 True 或 False。<br /><br /> `DateTime`。 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> `Text`。 用户在文本框中键入值。<br /><br /> 有关报表的数据类型的详细信息，请参阅[RDL 数据类型](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
+|数据类型|即使数据类型是时为参数定义可用值，用户可从下拉列表中选择值`DateTime`。 报表参数必须为以下数据类型之一：<br /><br /> `Boolean` 的用户。 用户通过单选按钮选择 True 或 False。<br /><br /> `DateTime` 的用户。 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> `Text` 的用户。 用户在文本框中键入值。<br /><br /> 有关报表数据类型的详细信息，请参阅 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
 |允许空值|如果参数的值可为空字符串或为空白，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将空白值作为有效值之一，则必须在指定的值中包含空白值。 选择此选项并不会自动在可用值中包含空白值。|  
 |允许 Null 值|如果参数的值可为 Null，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将 Null 作为有效值之一，则必须在指定的值中包含 Null。 选择此选项并不会自动在可用值中包含 Null。|  
 |允许多个值|提供可用值以创建下拉列表，供用户从中选择。 这是确保只在数据集查询中提交有效值的好方法。<br /><br /> 如果参数值可为下拉列表中显示的多个值，请选择此选项。 不允许为 Null 值。 选择此选项后，将向参数下拉列表中的可用值列表添加复选框。 列表的顶部包括 **“全选”** 复选框。 用户可以选中所需的值。<br /><br /> 如果用于提供值的数据快速更改，则用户看到的列表可能不是最新列表。|  
 |Visible|选择此选项可在报表运行时在其顶部显示报表参数。 此选项允许用户在运行时选择参数值。|  
 |Hidden|选择此选项可隐藏已发布报表中的报表参数。 报表参数值仍可在报表 URL、订阅定义或报表服务器中进行设置。|  
 |内部|选择此选项可以隐藏报表参数。 在已发布报表中，只能在报表定义中查看报表参数。|  
-|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果你提供可用值`DateTime`参数，而不是日历控件在参数窗格中显示日期下拉列表。 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **\*\* 安全说明\* \*** 包含的数据类型的参数的任何报表中`Text`请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户仅具有查看报表中的数据所需的权限。 有关详细信息，请参阅[安全性（报表生成器）](../report-builder/security-report-builder.md)。|  
+|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果为 `DateTime` 参数提供了可用值，则在参数窗格中将显示日期下拉列表而不是显示日历控件。 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **\*\* 安全说明\* \*** 包含的数据类型的参数的任何报表中`Text`请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户仅具有查看报表中的数据所需的权限。 有关详细信息，请参阅 [安全性（报表生成器）](../report-builder/security-report-builder.md)中所创建的移动报表中使用。|  
 |默认值|设置来自查询或静态列表的默认值。<br /><br /> 如果每个参数均具有默认值，则报表将在第一次查看时自动运行。|  
-|高级|设置报表定义属性 `UsedInQuery`，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 `True`。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 `UsedInQuery` 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项设置`UsedInQuery`为 False。<br /><br /> **\*\* 谨慎\* \*** 使用**永远不会刷新**谨慎使用。 在报表服务器上，`UsedInQuery`用于帮助控制缓存选项为报表数据和呈现的报表，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../reports/report-definition-language-ssrs.md)。|  
+|高级|设置报表定义属性 `UsedInQuery`，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 `True`。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 `UsedInQuery` 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 `UsedInQuery` 设置为 False。<br /><br /> **\*\* 谨慎\* \*** 使用**永远不会刷新**谨慎使用。 在报表服务器上，`UsedInQuery` 用于帮助控制报表数据和所呈现报表的高速缓存选项，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../reports/report-definition-language-ssrs.md)。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> 数据集查询  
  若要筛选数据集查询中的数据，可以通过指定结果集中要包含或排除的值，来包含一个限制检索到的数据的限制子句。  
@@ -196,7 +196,7 @@ ms.locfileid: "48107328"
  另一种将参数用于雇员或个人数据的安全方法是：基于包含 Users 集合中的 **UserID** 字段的表达式选择数据。 Users 集合提供了获取报表运行用户的标识的方法，并使用该标识检索用户特定的数据。  
   
 > [!IMPORTANT]  
->  包含类型参数的任何报表中`String`请务必使用可用值列表 （也称为有效值列表），并确保任何运行该报表的用户具有查看报表中的数据所需的权限。 定义类型的参数时`String`，则用户会看到与可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与数据集参数关联，并但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
+>  在任何包括 `String` 类型参数的报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所必需的权限。 定义 `String` 类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 可用值列表限制可以输入的值。 如果报表参数与数据集参数关联，并但您没有使用可用值列表，则报表用户可能会在文本框中键入 SQL 语法，从而导致报表和服务器容易受到 SQL 注入攻击。 如果用户有足够的权限执行新的 SQL 语句，则可能在服务器上产生意外结果。  
 >   
 >  如果报表参数与数据集参数无关联，并且参数值包含在报表中，则报表用户可能会在参数值中键入表达式语法或 URL，并将报表呈现为 Excel 或 HTML 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
 >   
@@ -205,44 +205,44 @@ ms.locfileid: "48107328"
 ##  <a name="bkmk_How_To_Topics"></a> 操作指南主题  
  本节列出的过程分步向您介绍如何使用参数和筛选器。  
   
--   [添加、 更改或删除报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [添加、 更改或删除可用值为报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
+-   [为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
--   [添加、 更改或删除报表参数的默认值&#40;报表生成器和 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
+-   [为报表参数添加、更改或删除默认值（报表生成器和 SSRS）](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
--   [更改报表参数的顺序&#40;报表生成器和 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+-   [更改报表参数的顺序（报表生成器和 SSRS）](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [向报表添加级联参数&#40;报表生成器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
+-   [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
 -   [向数据集添加筛选器（报表生成器和 SSRS）](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [添加子报表和参数&#40;报表生成器和 SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [添加子报表和参数（报表生成器和 SSRS）](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [如何使用存储过程的 SSRS 参数](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [如何使用存储过程的 SSRS 参数](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
   
 ## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
- 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的意见提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
+ 你正在查找哪些信息，是否已经找到？ 我们会听取你的反馈，改进内容。 请将你的意见提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> 相关内容  
- [配置 SSRS 报表参数（测验）](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [配置 SSRS 报表参数（测验）](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [教程： 向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教程：向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [爆发宇宙的 InvalidReportParameterException 报告服务中](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [爆发宇宙的 InvalidReportParameterException 报告服务中](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
- [报表示例（报表生成器和 SSRS）](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   
- [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
- [安全&#40;报表生成器&#41;](../report-builder/security-report-builder.md)  
+ [安全性（报表生成器）](../report-builder/security-report-builder.md)  
   
- [交互式排序、 文档结构图和链接&#40;报表生成器和 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
- [钻取、 深化、 子报表和嵌套的数据区域&#40;报表生成器和 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

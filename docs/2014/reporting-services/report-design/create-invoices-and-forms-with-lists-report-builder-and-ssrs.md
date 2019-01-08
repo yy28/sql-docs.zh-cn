@@ -11,12 +11,12 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161517"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375219"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>列表（报表生成器和 SSRS）
   列表数据区域重复报表数据集中的每一个组或行。 可以使用列表创建自由格式的报表或表单（如发票），或与其他数据区域结合使用。 可以定义包含任意数量的报表项的列表。 列表可以嵌套在其他列表中，以提供多组数据。  
@@ -24,9 +24,9 @@ ms.locfileid: "48161517"
 > [!NOTE]  
 >  您可以将列表作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速开始使用列表，请参阅[教程：创建自由格式的报表（报表生成器）](../tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速开始使用列表，请参阅[教程：创建自由格式的报表&#40;报表生成器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括使用列表的报表。 您可以通过在报表生成器或报表设计器中浏览示例报表的报表定义，或者通过在报表生成器或报表设计器中预览呈现的报表，了解列表的有关情况。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](http://go.microsoft.com/fwlink/?LinkID=198283)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括使用列表的报表。 您可以通过在报表生成器或报表设计器中浏览示例报表的报表定义，或者通过在报表生成器或报表设计器中预览呈现的报表，了解列表的有关情况。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -40,14 +40,14 @@ ms.locfileid: "48161517"
   
  ![从工具箱添加的新列表，选中](../media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
   
- 最开始使用的列表是一个基于 Tablix 数据区域的模板。 添加一个列表后，可以继续增强设计，具体的方法是通过指定筛选器、排序或组表达式来更改此列表的内容或外观，或者更改此列表跨多个报表页显示的方式。 有关详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。 尽管列表起初只具有一行、一列，但您可以通过添加嵌套或相邻的行组或列组或者添加额外的详细信息行，来进一步改进列表的设计。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
+ 最开始使用的列表是一个基于 Tablix 数据区域的模板。 添加一个列表后，可以继续增强设计，具体的方法是通过指定筛选器、排序或组表达式来更改此列表的内容或外观，或者更改此列表跨多个报表页显示的方式。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。 尽管列表起初只具有一行、一列，但您可以通过添加嵌套或相邻的行组或列组或者添加额外的详细信息行，来进一步改进列表的设计。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
 
   
 ##  <a name="DisplayingLayout"></a> 以自由格式布局显示数据  
  若要以自由格式布局而非网格形式组织报表数据，可以向设计图面添加一个列表。 从“报表数据”窗格向单元拖动字段。 默认情况下，单元包含一个用作容器的矩形。 移动此容器内的各个字段，直到产生所需的设计效果为止。 使用在此矩形容器内拖动文本框时显示的对齐线来帮助垂直和水平对齐边缘。 通过调整单元的大小，删除不需要的空白区域。 有关详细信息，请参阅[更改行高或列宽（报表生成器和 SSRS）](change-row-height-or-column-width-report-builder-and-ssrs.md)。  
   
- 下图显示了一个列表，该列表显示有关一个订单的信息，其中包括这些字段：Date、Order、Qty、Product、LineTotal 和一张图像。  
+ 下图显示了一个列表，其中显示有关订单，其中包括这些字段的信息：日期，顺序、 Qty、 Product、 LineTotal 和一个图像。  
   
  ![设计视图中的列表，有 4 个字段和一个图像](../media/rs-basiclistformdesign.gif "设计视图中的列表，有 4 个字段和一个图像")  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48161517"
 
   
 ## <a name="see-also"></a>请参阅  
- [聚合函数参考&#40;报表生成器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  
   
   

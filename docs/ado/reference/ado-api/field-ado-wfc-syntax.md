@@ -14,12 +14,12 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613835"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537155"
 ---
 # <a name="field-ado---wfc-syntax"></a>字段（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
@@ -35,7 +35,7 @@ public char[] getCharChunk(int len)
 public String getStringChunk(int len)  
 ```  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getActualSize()  
@@ -69,9 +69,9 @@ public AdoProperties getProperties()
   
  ADO/WFC 实现**值**具有属性**getValue**方法，该返回变体的对象; 方法并**setValue**方法，它使用作为参数的变体。 变体是在某些语言中，如 Microsoft Visual Basic 高效率。  
   
- 除了**值**属性，提供了 ADO/WFC*访问器*方法使用 Java 数据类型来获取和设置的内容**字段**对象。 这些方法中的大多数其名称分别为窗体 **获取 * * * 数据类型*或 **设置 * * * 数据类型*。  
+ 除了**值**属性，提供了 ADO/WFC*访问器*方法使用 Java 数据类型来获取和设置的内容**字段**对象。 这些方法中的大多数其名称分别为窗体**获取**_数据类型_或**设置**_数据类型_。  
   
- 有两个值得注意的例外情况： 之一**getObject**方法会返回强制转换为指定类的对象。 没有任何**getNull**属性; 而是有**isNull**返回一个布尔值，该值指示字段是否为 null 的属性。  
+ 有两个值得注意的例外情况：之一**getObject**方法会返回强制转换为指定类的对象。 没有任何**getNull**属性; 而是有**isNull**返回一个布尔值，该值指示字段是否为 null 的属性。  
   
 ```  
 public native boolean getBoolean();  

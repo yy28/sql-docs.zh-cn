@@ -12,22 +12,22 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add630c98373a9b49cbb2469ab3eccfbe41b4f05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355986"
 ---
 # <a name="set-large-data-ole-db"></a>设置大型数据 (OLE DB)
   此示例显示如何设置 BLOB 数据、创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值。 IA64 平台不支持此示例。  
   
  为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 `IRowsetChange::SetData` 或 `IRowsetChange::InsertRow` 方法。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="procedures"></a>过程  
   

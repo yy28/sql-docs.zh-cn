@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24c2184d01c52222dae0bad6bb05ddd7979dbac5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209379"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361909"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
   数据层应用程序 (DAC) 支持最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对象。  
@@ -38,20 +38,20 @@ ms.locfileid: "48209379"
   
 |||  
 |-|-|  
-|DATABASE ROLE|FUNCTION：内联表值|  
-|FUNCTION：多语句表值|FUNCTION：标量|  
-|INDEX：聚集|INDEX：非聚集|  
-|INDEX：特殊|INDEX：唯一|  
-|LOGIN|Permissions|  
+|DATABASE ROLE|函数：内联表值|  
+|函数：多语句表值|函数：Scalar|  
+|索引：群集|索引：非聚集|  
+|索引：特殊|索引：唯一|  
+|Login|权限|  
 |角色成员资格|SCHEMA|  
-|统计信息|STORED PROCEDURE：Transact-SQL|  
-|同义词|TABLE：检查约束|  
-|TABLE：排序规则|TABLE：列，包括计算列|  
-|TABLE：约束，默认值|TABLE：约束，外键|  
-|TABLE：约束，索引|TABLE：约束，主键|  
-|TABLE：约束，唯一|TRIGGER：DML|  
-|类型：HIERARCHYID、GEOMETRY、GEOGRAPHY|TYPE：用户定义数据类型|  
-|TYPE：用户定义表类型|USER|  
+|统计信息|存储的过程：Transact-SQL|  
+|同义词|表：检查约束|  
+|表：排序规则|表：列中，包括计算的列|  
+|表：约束，默认值|表：约束外, 键|  
+|表：约束索引|表：约束主键|  
+|表：约束唯一|触发器：DML|  
+|类型：HIERARCHYID、 GEOMETRY、 GEOGRAPHY|类型：用户定义数据类型|  
+|类型：用户定义表类型|User|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> 各 SQL Server 版本的数据层应用程序支持  
@@ -82,38 +82,38 @@ ms.locfileid: "48209379"
 ##  <a name="DeploymentLimitations"></a> 数据部署限制  
  请注意 SQL Server 2012 SP1 中 DAC Framework 数据部署引擎的以下这些保真度限制。 这些限制适用于以下 DAC Framework 操作：部署或发布 .dacpac 文件，以及导入 .bacpac 文件。  
   
-1.  sql_variant 列中特定条件和基类型的元数据丢失。 在受影响的情况下，你将会看到一条包含以下消息的警告：  **由 DAC Framework 部署时不保留 sql_variant 列中使用的特定数据类型的特定属性。**  
+1.  sql_variant 列中特定条件和基类型的元数据丢失。 在受影响的情况下，您将看到一个警告并显示以下消息：**当 DAC Framework 部署时不保留 sql_variant 列中使用的特定数据类型的特定属性。**  
   
-    -   MONEY、SMALLMONEY、NUMERIC、DECIMAL 基类型：不保留精度。  
+    -   MONEY、 SMALLMONEY、 NUMERIC、 DECIMAL 基类型：不保留精度。  
   
         -   精度为 38 的 DECIMAL/NUMERIC 基类型：“TotalBytes”sql_variant 元数据始终设置为 21。  
   
-    -   所有文本基类型：对所有文本应用数据库的默认排序规则。  
+    -   所有文本基类型：数据库默认排序规则应用于所有文本。  
   
     -   BINARY 基类型：不保留最大长度属性。  
   
-    -   TIME、DATETIMEOFFSET 基类型：精度始终设置为 7。  
+    -   TIME、 DATETIMEOFFSET 基类型：精度始终设置为 7。  
   
-2.  sql_variant 列中的数据丢失。 在受影响的情况下，您将会看到一条包含以下消息的警告：**当 DAC Framework 部署小数位数超过 3 的 sql_variant DATETIME2 中的值时，将会发生数据丢失。部署期间，将 DATETIME2 值限定为等于 3 的小数位数。**  
+2.  sql_variant 列中的数据丢失。 在受影响的情况下，您将看到一个警告并显示以下消息：**当 DAC framework 部署小数位数超过 3 的 sql_variant DATETIME2 列中的值时，将会发生数据丢失。部署期间，将 DATETIME2 值限定为等于 3 的小数位数。**  
   
     -   小数位数大于 3 的 DATETIME2 基类型：小数位数限定为等于 3。  
   
-3.  针对 sql_variant 列中以下条件的部署操作失败。 在受影响的情况下，您将会看到一条包含以下消息的对话框：  **由于 DAC Framework 中的数据限制，操作失败。**  
+3.  针对 sql_variant 列中以下条件的部署操作失败。 在受影响的情况下，您将看到一个对话框并显示以下消息：**由于 DAC Framework 中的数据限制，操作失败。**  
   
-    -   DATETIME2、SMALLDATETIME 和 DATE 基类型：值超出 DATETIME 范围 – 例如，年份小于 1753。  
+    -   DATETIME2 和 DATE 基类型：如果值超出 DATETIME 范围-例如，年份是小于 1753年。  
   
     -   DECIMAL、NUMERIC 基类型：值的精度大于 28。  
   
 ##  <a name="Considerations"></a> 有关部署操作的其他注意事项  
  请注意以下有关 DAC Framework 数据部署操作的注意事项：  
   
--   **提取/导出** - 对于使用 DAC Framework 从数据库创建包的操作（例如，提取 .dacpac 文件，导出 .bacpac 文件），这些限制不适用。 该包中的数据是源数据库中数据的完全保真表示形式。 如果该包中存在其中任意条件，则提取/导出日志将包含通过上述消息所提供问题的摘要。 这将向用户警告他们所创建的包存在潜在数据部署问题。 用户也将会在日志中看到以下摘要消息：**这些限制不影响 DAC Framework 创建的 DAC 包中存储的数据类型和值的保真度; 它们只适用于因将 DAC 包部署到数据库而产生的数据类型和值。有关受影响的数据以及如何解决此限制的详细信息，请参阅**[此主题](http://go.microsoft.com/fwlink/?LinkId=267086)。  
+-   **提取/导出** - 对于使用 DAC Framework 从数据库创建包的操作（例如，提取 .dacpac 文件，导出 .bacpac 文件），这些限制不适用。 该包中的数据是源数据库中数据的完全保真表示形式。 如果该包中存在其中任意条件，则提取/导出日志将包含通过上述消息所提供问题的摘要。 这将向用户警告他们所创建的包存在潜在数据部署问题。 用户还将看到以下摘要消息日志中：**这些限制不会影响的数据类型和存储在由 DAC Framework; 创建的 DAC 包中值的保真度它们只适用于的数据类型和值因将 DAC 包部署到数据库。有关受影响的数据以及如何解决此限制的详细信息，请参阅**[此主题](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
--   **部署/发布/导入** - 对于使用 DAC Framework 将包部署到数据库的操作（例如，部署或发布 .dacpac 文件，以及导入 .bacpac 文件），这些限制适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 – 请参阅上述类别 3 - 但将继续显示其他警告。  
+-   **部署/发布/导入** - 对于使用 DAC Framework 将包部署到数据库的操作（例如，部署或发布 .dacpac 文件，以及导入 .bacpac 文件），这些限制适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 - 请参阅上述类别 3 - 但将继续显示其他警告。  
   
-     有关此情况下受影响的数据以及如何在部署/发布/导入操作中绕开此限制的详细信息，请参阅 [此主题](http://go.microsoft.com/fwlink/?LinkId=267087)。  
+     有关此情况下受影响的数据以及如何在部署/发布/导入操作中绕开此限制的详细信息，请参阅 [此主题](https://go.microsoft.com/fwlink/?LinkId=267087)。  
   
--   **解决方法** – 提取和导出操作将完全保真的 BCP 数据文件写入 .dacpac 或 .bacpac 文件。 若要避免限制，请使用 SQL Server BCP.exe 命令行实用工具将完全保真数据从 DAC 包部署到目标数据库。  
+-   **解决方法** - 提取和导出操作将完全保真的 BCP 数据文件写入 .dacpac 或 .bacpac 文件。 若要避免限制，请使用 SQL Server BCP.exe 命令行实用工具将完全保真数据从 DAC 包部署到目标数据库。  
   
 ## <a name="see-also"></a>请参阅  
  [数据层应用程序](data-tier-applications.md)  

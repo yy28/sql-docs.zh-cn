@@ -21,12 +21,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13352451c31822acdc9fea70965b22c6269577f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152002"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375939"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中引入了查询通知。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。  
@@ -58,11 +58,11 @@ ms.locfileid: "48152002"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  服务必须使用预定义约定 `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`，如上所示。  
+>  服务必须使用预定义约定 `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`，如上所示。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持基于行集修改的使用者通知。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。  
@@ -113,7 +113,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 不为 NULL，每次执行命令时，则不会向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果上述两个属性中的任一属性为 Null，则不会发送标头，并返回 SQL_SUCCESS_WITH_INFO。 上进行的验证[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)， **SqlExecDirect**，并**SqlExecute**，则所有的失败，如果属性不是有效。 类似地，当针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本设置这些查询通知属性时，执行将失败，并返回 SQL_SUCCESS_WITH_INFO。  
+ 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 不为 NULL，每次执行命令时，则不会向服务器发送包含上面定义的三个属性的查询通知 TDS 头。 如果上述两个属性中的任一属性为 Null，则不会发送标头，并返回 SQL_SUCCESS_WITH_INFO。 上进行的验证[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)， **SqlExecDirect**，并**SqlExecute**，则所有的失败，如果属性不是有效。 类似地，当针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本设置这些查询通知属性时，执行将失败，并返回 SQL_SUCCESS_WITH_INFO。  
   
 > [!NOTE]  
 >  准备语句永远不会启动订阅；可以通过执行语句启动订阅。  

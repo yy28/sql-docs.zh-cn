@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - current date
@@ -15,12 +14,12 @@ ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4cd01af1b69fb4cbcfb2493edbac2626553f19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e264b2075badb4f1d6afb3f2d961eca2c69dcd4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100537"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751509"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE（SSIS 表达式）
   以 DT_DBTIMESTAMP 格式返回系统的当前日期。 GETDATE 函数不使用参数。  
@@ -61,7 +60,7 @@ DATEADD("Month",3,GETDATE())
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [GETUTCDATE &#40;SSIS 表达式&#41;](getutcdate-ssis-expression.md)   
- [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
+ [GETUTCDATE（SSIS 表达式）](getutcdate-ssis-expression.md)   
+ [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   

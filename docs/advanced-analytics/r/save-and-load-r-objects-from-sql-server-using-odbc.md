@@ -1,5 +1,5 @@
 ---
-title: 保存和加载使用 ODBC 的 SQL Server 中的 R 对象 |Microsoft 文档
+title: 保存和加载 SQL Server 使用 ODBC 的 SQL Server 机器学习服务中的 R 对象
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,33 +7,33 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 17f9ebc151e7112b04766ea1c644aad0a32bc580
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7b874adc53d217c341a5dce689c7c5b4eb70bfe
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201899"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431950"
 ---
-# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>保存和加载使用 ODBC 的 SQL Server 中的 R 对象
+# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>保存并从 SQL Server 使用 ODBC 加载 R 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server R Services 可将序列化的 R 对象存储在表中，然后根据需要从表中加载对象，无需重新运行 R 代码或重新定型模型。 对于一些情况来说（例如，定型并保存模型，稍后用于评分或分析），将 R 对象保存到数据库这一功能十分关键。
 
-为了提高此关键步骤的性能， **RevoScaleR** 包现在包括新的序列化和反序列化函数，可极大地改善性能，并且更简洁地存储对象。 本文介绍了这些函数以及如何使用它们。
+为了提高此关键步骤的性能， **RevoScaleR** 包现在包括新的序列化和反序列化函数，可极大地改善性能，并且更简洁地存储对象。 本主题介绍这些函数和如何使用它们。
 
 ## <a name="overview"></a>概述
 
-**RevoScaleR** 包现在包括新函数，让它可更加轻松地将 R 对象保存到 SQL Server，然后从 SQL Server 表中读取对象。 通常情况下，每个函数调用使用简单的键值存储区，其中键是对象的名称，而与键关联的值是要移入或移出表的 varbinary R 对象。
+**RevoScaleR** 包现在包括新函数，让它可更加轻松地将 R 对象保存到 SQL Server，然后从 SQL Server 表中读取对象。 一般情况下，每个函数调用使用简单的键值存储，其中键是对象的名称，并与键关联的值是要将移入或移出表的 varbinary R 对象。
 
-若要直接从 R 环境将 R 对象保存到 SQL Server，你必须：
+若要直接从 R 环境将 R 对象保存到 SQL Server，必须：
 
 + 建立与 SQL Server 使用的连接*RxOdbcData*数据源。
-+ 新的函数调用通过 ODBC 连接
-+ 或者，你可以指定不序列对象。 然后，选择新的压缩算法来代替默认的压缩算法。
++ 通过 ODBC 连接调用新的函数
++ 或者，您可以指定不序列对象。 然后，选择新的压缩算法使用而不是默认的压缩算法。
 
 默认情况下，从 R 调用以移动到 SQL Server 的任何对象都将进行序列化和压缩。 相反，从 SQL Server 表加载某对象以便在 R 代码中使用时，该对象将进行反序列化和解压。
 
-## <a name="list-of-new-functions"></a>新的函数的列表
+## <a name="list-of-new-functions"></a>新函数的列表
 
 - `rxWriteObject` 使用 ODBC 数据源将 R 对象写入 SQL Server。
 

@@ -10,18 +10,18 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75845ceafbf776eb15a30b3289de97573109c4d8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 001c489d9abf887495ea83cee00cede1463514ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018184"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376659"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` 是零个或多个连续圆弧线段的集合。 圆弧线段是二维平面中由三个点定义的曲线段；第一个点不能与第三个点相同。 如果圆弧线段的所有三个点共线，则将该圆弧线段视为一条直线段。  
   
 > [!IMPORTANT]  
->  有关详细的说明和中引入的新空间功能的示例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，其中包括`CircularString`子类型，请下载白皮书[SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关详细的说明和中引入的新空间功能的示例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，其中包括`CircularString`子类型，请下载白皮书[SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ## <a name="circularstring-instances"></a>CircularString 实例  
  下面的图形显示了有效的 `CircularString` 实例：  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- 请注意，`CircularString` 示例的值接近 2∏，这是圆的实际周长。  
+ 请注意，对于值`CircularString`示例是接近 2???，这是圆的实际周长。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在同一语句中使用 CircularString 声明和实例化一个几何图形实例  
  此代码段说明了如何在同一语句中使用 `geometry` 声明和实例化 `CircularString` 实例：  

@@ -17,12 +17,12 @@ ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e8c8867b932d291415f584f93a09478bbd05725
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152717"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749421"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文查询使用全文谓词（CONTAINS 和 FREETEXT）以及全文函数（CONTAINSTABLE 和 FREETEXTTABLE）来定义全文搜索。 它们支持复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，这种语法支持各种形式的查询词。 若要编写全文查询，必须了解何时以及如何使用这些谓词和函数。  
@@ -39,7 +39,7 @@ ms.locfileid: "48152717"
   
 -   使用 CONTAINS（或 CONTAINSTABLE）可搜索单个词和短语的精确或模糊（不太精确的）匹配项、在一定差别范围内的相近词或加权匹配项。 当使用 CONTAINS 时，必须指定至少一个搜索条件，该搜索条件须指定要搜索的文本以及确定匹配项的条件。  
   
-     可以在搜索条件之间使用逻辑运算。 有关详细信息，请参阅本主题后面的[使用布尔运算符 — AND、OR、AND NOT（在 CONTAINS 和 CONTAINSTABLE 中）](#Using_Boolean_Operators)。  
+     可以在搜索条件之间使用逻辑运算。 有关详细信息，请参阅[使用布尔运算符的 AND、 OR、 AND NOT （在 CONTAINS 和 CONTAINSTABLE 中）](#Using_Boolean_Operators)，本主题中更高版本。  
   
 -   使用 FREETEXT（或 FREETEXTTABLE）可搜索与指定词、短语或句子（Freetext 字符串）的含义相符但措辞不完全相同的匹配项。 只要在指定列的全文索引中找到任何搜索词或任何搜索词的任何形式，就会生成匹配项。  
   
@@ -165,8 +165,8 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> 使用布尔运算符 – AND、 OR 和 NOT – 在 CONTAINS 和 CONTAINSTABLE 中  
- CONTAINS 谓词和 CONTAINSTABLE 函数使用相同的搜索条件。 它们都支持使用布尔运算符（AND、OR、AND NOT）将多个搜索词组合起来，以执行逻辑运算。 例如，可以使用 AND 查找既包含“latte”又包含“New York-style bagel”的行。 例如，可以使用 AND NOT 查找包含“bagel”但不包含“cream cheese”的行。  
+##  <a name="Using_Boolean_Operators"></a> 使用布尔运算符的和，OR 和-在 CONTAINS 和 CONTAINSTABLE 中  
+ CONTAINS 谓词和 CONTAINSTABLE 函数使用相同的搜索条件。 两者都支持多个使用布尔运算符搜索词的组合-AND、 OR、 而不-以执行逻辑运算。 例如，可以使用 AND 查找既包含“latte”又包含“New York-style bagel”的行。 例如，可以使用 AND NOT 查找包含“bagel”但不包含“cream cheese”的行。  
   
 > [!NOTE]  
 >  相反，FREETEXT 和 FREETEXTTABLE 将布尔值项视为词来搜索。  
@@ -214,10 +214,10 @@ GO
  如果 `varbinary(max)`、`varbinary` 或 `xml` 列是全文索引列，则与任何其他全文索引列一样，可以使用全文谓词（CONTAINS 和 FREETEXT）以及函数（CONTAINSTABLE 和 FREETEXTTABLE）来查询该列。  
   
 > [!IMPORTANT]  
->  全文搜索还可以用于图像列。 但是，`image`的未来版本中将删除数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用此数据类型，并计划修改当前使用此数据类型的应用程序。 使用`varbinary(max)`数据类型。  
+>  全文搜索还可以用于图像列。 然而，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将来的版本中将删除 `image` 数据类型。 请避免在新的开发工作中使用此数据类型，并计划修改当前使用此数据类型的应用程序。 请改用 `varbinary(max)` 数据类型。  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>varbinary(max) 或 varbinary 数据  
- 将单个`varbinary(max)`或`varbinary`列可以存储多种类型的文档。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持安装了相应筛选器并且在操作系统中可用的任何文档类型。 每个文档的文档类型由该文档的文件扩展名标识。 例如，对于 .doc 文件扩展名，全文搜索将使用支持 Microsoft Word 文档的筛选器。 有关可用文档类型的列表，请查询 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目录视图。  
+ 单个 `varbinary(max)` 或 `varbinary` 列可以存储多种类型的文档。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持安装了相应筛选器并且在操作系统中可用的任何文档类型。 每个文档的文档类型由该文档的文件扩展名标识。 例如，对于 .doc 文件扩展名，全文搜索将使用支持 Microsoft Word 文档的筛选器。 有关可用文档类型的列表，请查询 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目录视图。  
   
  请注意，全文引擎可以利用操作系统中安装的现有筛选器。 在您可以使用操作系统筛选器、断字符和词干分析器之前，您必须将它们加载到服务器实例中，如下所示：  
   
@@ -230,7 +230,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml 数据  
- `xml`数据类型列仅存储 XML 文档和片段，并且只有 XML 筛选器用于文档。 因此，无需类型列。 在`xml`列，全文索引的 XML 元素中，内容创建索引，但忽略 XML 标记。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。  
+ `xml` 数据类型列仅存储 XML 文档和片段，并且只有 XML 筛选器用于此类文档。 因此，无需类型列。 在 `xml` 列上，全文索引会为 XML 元素的内容创建索引，但会忽略 XML 标记。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。  
   
  有关查询的详细信息`xml`列中，请参阅[使用全文搜索和 XML 列](../xml/use-full-text-search-with-xml-columns.md)。  
   
@@ -244,17 +244,17 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 |查询词形式|Description|支持的语句|  
 |----------------------|-----------------|------------------|  
-|一个或多个特定的词或短语（“简单词”）|在全文搜索中，词（或“标记”）是其边界由相应的断字符标识、遵循指定语言的语言规则的字符串。 有效的短语由多个词组成，词之间可以有标点符号也可以没有标点符号。<br /><br /> 例如，“croissant”是一个词，“café au lait”是一个短语。 这样的词和短语称为“简单词”。<br /><br /> 有关详细信息，请参阅本主题后面的 [搜索特定的词或短语（简单词）](#Simple_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查找短语的完全匹配项。<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 将短语拆分为几个词。|  
+|一个或多个特定的词或短语（“简单词”）|在全文搜索中，词（或“标记”）是其边界由相应的断字符标识、遵循指定语言的语言规则的字符串。 有效的短语由多个词组成，词之间可以有标点符号也可以没有标点符号。<br /><br /> 例如，"新月形面包"是 word 和"自助餐厅?? 澳大利亚 lait"是一个短语。 这样的词和短语称为“简单词”。<br /><br /> 有关详细信息，请参阅本主题后面的 [搜索特定的词或短语（简单词）](#Simple_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查找短语的完全匹配项。<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 将短语拆分为几个词。|  
 |以指定文本开头的词或短语（“前缀词”）|前缀词指附加到一个词的前面以生成一个派生词或变形的字符串。<br /><br /> 对于单个前缀词，以指定词开头的任何词将是结果集的一部分。 例如，词“auto*”与“automatic”、“automobile”等匹配。<br /><br /> 如果是短语，则该短语内的每个词都被看作是一个前缀。 例如，词“auto tran\*”与“automatic transmission”和“automobile transducer”匹配，但与“automatic motor transmission”不匹配。<br /><br /> 有关详细信息，请参阅本主题后面的 [执行前缀搜索（前缀词）](#Prefix_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|特定词的变形（“派生词 - 变形”）|变形是动词的不同时态和语态形式，或是名词的单数和复数形式。 例如，搜索词“drive”的变形。 如果表中不同的行包含词“drive”、“drives”、“drove”、“driving”和“driven”，则这些词都会出现在结果集中，原因是它们每一个都可以从词 drive 变形而来。<br /><br /> 有关详细信息，请参阅本主题后面的 [搜索特定词的变形（派生词）](#Inflectional_Generation_Term)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 默认情况下查找所有指定词的变形。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支持可选的 INFLECTIONAL 参数。|  
-|特定词的同义词形式（“派生词 - 同义词库”）|同义词库为词定义用户指定的同义词。 例如，如果将项“{car, automobile, truck, van}”添加到同义词库，则可以搜索单词“car”的同义词库形式。 由于这些单词中的每一个都属于包含单词“car”的同义词扩展集，因此在所查询的表中所有包括单词“automobile”、“truck”、“van”或“car”的行都会出现在结果集中。<br /><br /> 有关同义词库文件的结构的信息，请参阅 [配置和管理全文搜索同义词库文件](configure-and-manage-thesaurus-files-for-full-text-search.md)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 默认情况下使用同义词库。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支持可选的 THESAURUS 参数。|  
+|特定词的变形形式 (*术语变形生成*)|变形是动词的不同时态和语态形式，或是名词的单数和复数形式。 例如，搜索词“drive”的变形。 如果表中不同的行包含词“drive”、“drives”、“drove”、“driving”和“driven”，则这些词都会出现在结果集中，原因是它们每一个都可以从词 drive 变形而来。<br /><br /> 有关详细信息，请参阅本主题后面的 [搜索特定词的变形（派生词）](#Inflectional_Generation_Term)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 默认情况下查找所有指定词的变形。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支持可选的 INFLECTIONAL 参数。|  
+|特定词的同义词形式 (*生成一词的同义词库*)|同义词库为词定义用户指定的同义词。 例如，如果将项“{car, automobile, truck, van}”添加到同义词库，则可以搜索单词“car”的同义词库形式。 由于这些单词中的每一个都属于包含单词“car”的同义词扩展集，因此在所查询的表中所有包括单词“automobile”、“truck”、“van”或“car”的行都会出现在结果集中。<br /><br /> 有关同义词库文件的结构的信息，请参阅 [配置和管理全文搜索同义词库文件](configure-and-manage-thesaurus-files-for-full-text-search.md)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 默认情况下使用同义词库。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支持可选的 THESAURUS 参数。|  
 |与另一个词或短语邻近的词或短语（“邻近词”）|邻近词表示相邻的词或短语。还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以以任意顺序或您指定的顺序搜索词或短语。<br /><br /> 例如，查找词“ice”与“hockey”邻近或短语“ice skating”与“ice hockey”邻近的行。<br /><br /> 有关详细信息，请参阅 [使用 NEAR 搜索与另一个词邻近的词](search-for-words-close-to-another-word-with-near.md)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |使用加权值的词或短语（“加权词”）|加权值指示一组词和短语中的每个词和短语的重要程度。 加权值的最低值是 0.0，最高值是 1.0。<br /><br /> 例如，在某个搜索多个词条的查询中，可以为每个搜索单词指定一个加权值，用于指示它相对于搜索条件中其他单词的重要性。 此查询类型的结果将按指定给搜索单词的相对权重首先返回最相关的行。 结果集由包含任何指定词（或它们之间的内容）的文档或行组成；但是，由于与不同搜索词关联的加权值的不同，某些结果将被视为比其他结果更相关。<br /><br /> 有关详细信息，请参阅本主题后面的 [使用加权值搜索词或短语（加权词）](#Weighted_Term)。|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
 ###  <a name="Simple_Term"></a> 搜索特定单词或短语 （简单词）  
- 可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 在表中搜索特定短语。 例如，如果你想要搜索`ProductReview`表中[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]数据库，以查找所有注释关于产品的包含"learning curve"短语，您可以使用 CONTAINS 谓词，如下所示：  
+ 可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 在表中搜索特定短语。 例如，如果要在 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 数据库的 `ProductReview` 表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
   
 ```  
 USE AdventureWorks2012  

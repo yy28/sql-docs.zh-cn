@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
@@ -14,12 +12,12 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2943855784fccd869124a3dad1bc2dc72f6a8cf6
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4af1e5e1aedcd9916c1d4f6a13d0c4f63922b8b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460642"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375459"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>在脚本组件中连接数据源
   连接管理器是一个封装和存储连接特定类型数据源所需信息的便利单元。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../connection-manager/integration-services-ssis-connections.md)。  
@@ -56,7 +54,7 @@ ms.locfileid: "49460642"
   
  有关如何在脚本组件中使用连接管理器的详细信息，请参阅[通过脚本组件创建源](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)和[通过脚本组件创建目标](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 连接](../../connection-manager/integration-services-ssis-connections.md)   

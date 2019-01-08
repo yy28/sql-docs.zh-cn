@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - group collapsing [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f6b11b045e729e0f567bb4714b9a551706f7057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788119"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>折叠行组 (Visual Database Tools)
   您可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。 在拆叠行时应谨记以下几点：  

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a37e1a0bcf0232b2e29520adde986b32542f7539
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17eb193f76c0b89cec505133c96d8636b39af55f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376699"
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>SQL Server 资源运行状况故障排除（SQL Server 实用工具）
   排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 标识的资源运行状况问题可能包括缓解计算机上或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上使用过度的 CPU，或者缓解数据层应用程序的使用过度的 CPU。 其他问题可能包括解决数据库文件的使用过度的文件空间或者解决存储卷上分配的磁盘空间的使用过度问题。  
@@ -26,8 +26,8 @@ ms.locfileid: "48186337"
   
  有关缓解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 标识的特定资源运行状况问题的详细信息，请参阅以下主题：  
   
--   [如何识别 SQL Server 的版本](http://go.microsoft.com/fwlink/?LinkID=178504)  
+-   [如何识别 SQL Server 的版本](https://go.microsoft.com/fwlink/?LinkID=178504)  
   
--   [排除 SQL Server 2008 中的性能问题](http://go.microsoft.com/fwlink/?LinkId=151354)  
+-   [排除 SQL Server 2008 中的性能问题](https://go.microsoft.com/fwlink/?LinkId=151354)  
   
   

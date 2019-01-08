@@ -1,5 +1,5 @@
 ---
-title: 升级 SQL Server 实例 （机器学习服务） 中的 R 和 Python 组件 |Microsoft Docs
+title: 升级 R 和 Python 组件的 SQL Server 机器学习服务
 description: 升级 R 和 Python 在 SQL Server 2016 Services 或 SQL Server 2017 机器学习服务使用 sqlbindr.exe 绑定到机器学习服务器中。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078887"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645446"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ SQL Server中的R和Python集成包括开源代码和Microsoft专有包。 在�
 
 与更新的组件是为模型中的交换机。 而不是[SQL Server 产品生命周期](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017)，使用[SQL Server 累积更新](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions)，你的服务更新现在符合[Microsoft R Server （& a） 计算机的支持时间线学习 Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)上[现代生命周期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 
-组件版本和服务更新，除了绑定不会更改您的安装的基础知识： R 和 Python 集成仍然是数据库引擎实例的一部分许可不变的 （无额外成本与绑定相关联），和 SQL数据库引擎仍保留服务器支持策略。 本文的其余部分介绍的绑定机制及其使用方式的每个版本的 SQL Server。
+组件版本和服务更新，除了绑定不会更改您的安装的基础知识：R 和 Python 集成仍然是数据库引擎实例的一部分许可不变的 （无额外成本与绑定相关联），和 SQL Server 支持策略仍保留为数据库引擎。 本文的其余部分介绍的绑定机制及其使用方式的每个版本的 SQL Server。
 
 > [!NOTE]
 > 绑定适用于仅它们被绑定到 SQL Server 实例 （数据库内） 实例。 绑定不相关 （独立版） 安装。
@@ -109,7 +109,7 @@ Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本�
 
 1. 检查 R 基和 RevoScaleR 包以确认现有版本比你打算将其替换为较低的版本。 SQL Server 2016 R Services 的 R 基础包 3.2.2，RevoScaleR 8.0.3。
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本�
 
    在右侧，选择实例名称旁边的复选框。 如果未不列出任何实例，必须组合不兼容。 如果不选择实例，创建新的独立安装的机器学习服务器时，和 SQL Server 库保持不变。 如果您不能选择实例，它可能不是在[SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 
 
-    ![Microsoft 机器学习服务器安装向导](media/mls-931-installer-mssql13.png)
+    ![配置安装步骤](media/mls-931-installer-mssql13.png)
 
 1. 上**许可协议**页上，选择**我接受这些条款**的机器学习服务器接受许可条款。 
 
@@ -151,7 +151,7 @@ Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本�
 
 在安装过程中，替换为 SQL Server 使用的任何 R 或 Python 库和快速启动板更新为使用较新的组件。 因此，如果该实例之前使用默认 R_SERVICES 文件夹中的库，升级后删除这些库和快速启动板服务的属性更改为在新位置中使用的库。
 
-绑定会影响这些文件夹的内容： C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library 替换 C:\Program Files\Microsoft\ML Server\R_SERVER 的内容。 Microsoft 机器学习服务器安装程序创建第二个文件夹及其内容。 
+绑定会影响这些文件夹的内容：C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library 替换 C:\Program Files\Microsoft\ML Server\R_SERVER 的内容。 Microsoft 机器学习服务器安装程序创建第二个文件夹及其内容。 
 
 如果升级失败，请[SqlBindR 错误代码](#sqlbindr-error-codes)有关详细信息。
 
@@ -159,7 +159,7 @@ Microsoft 机器学习安装程序检测到的现有功能和 SQL Server 版本�
 
 重新检查以确认你拥有较新版本的 R 和 RevoScaleR 的版本。 使用 R 控制台与你的数据库引擎实例中的 R 包分发获取包信息：
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -226,13 +226,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 可以还原到初始安装的 R 和 Python 组件建立 SQL Server 安装程序的绑定的实例。 有三个部分恢复到 SQL Server 服务。
 
-+ [步骤 1： 从 Microsoft Machine Learning Server 取消绑定](#step-1-unbind)
-+ [步骤 2： 将实例还原到原始状态](#step-2-restore)
-+ [步骤 3： 重新安装任何添加到安装的包](#step-3-reinstall-packages)
++ [第 1 步：从 Microsoft Machine Learning Server 取消绑定](#step-1-unbind)
++ [步骤 2:将实例还原到原始状态](#step-2-restore)
++ [步骤 3:重新安装任何添加到安装的包](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>步骤 1： 取消绑定
+### <a name="step-1-unbind"></a>步骤 1：取消绑定
 
 有两个用于回滚绑定选项： 重新重新运行安装程序或使用 SqlBindR 命令行实用程序。
 
@@ -257,7 +257,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>步骤 2： 修复 SQL Server 实例
+###  <a name="step-2-repair-the-sql-server-instance"></a>步骤 2：修复 SQL Server 实例
 
 运行 SQL Server 安装程序修复 R 和 Python 功能的数据库引擎实例。 会保留现有的更新，但如果你错过了任何 SQL Server 服务对 R 和 Python 包的更新，此步骤适用于这些修补程序。
 
@@ -265,7 +265,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>步骤 3： 添加任何第三方包
+### <a name="step-3-add-any-third-party-packages"></a>步骤 3：添加任何第三方程序包
 
 您可能添加了其他开放源代码或第三方包到包库。 反转绑定切换时的默认包库的位置，因为必须重新安装到的库，现在使用 R 和 Python 包。 有关详细信息，请参阅[默认包](installing-and-managing-r-packages.md)，[安装新 R 包](install-additional-r-packages-on-sql-server.md)，并[安装新的 Python 包](../python/install-additional-python-packages-on-sql-server.md)。
 
@@ -283,7 +283,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 |*bind*| 将指定的 SQL 数据库实例升级至 R Server 最新版本，并确保实例会自动获取 R Server 的未来升级|
 |*unbind*|从指定的 SQL 数据库实例中卸载 R Server 最新版本，并防止未来 R Server 升级影响该实例|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>绑定错误
 
@@ -328,7 +328,7 @@ Microsoft Machine Learning Server 9.2.1 和 9.3，不具有此问题。
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>绑定或取消绑定会使多个临时文件夹
 
 有时无法清理临时文件夹的绑定和取消绑定操作。
-如果您发现具有类似下面的名称的文件夹，则可以删除它安装完成后： R_SERVICES_<guid>
+如果找到具有类似下面的名称的文件夹，可以在安装完成后删除它：R_SERVICES_<guid>
 
 > [!NOTE]
 > 请务必等待，直到安装已完成。 它可能需要很长时间才能删除与版本相关联的 R 库，然后添加新的 R 库。 操作完成后，会删除临时文件夹。

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
@@ -14,12 +13,12 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5e33eca3c4be7d766d85862ccb66a4ab76a9d17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58f946f89691a6e26ba4402166b8ad725e7a977c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761779"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，包是包含可部署模型结构以及来自模型的数据（可选）的 XML 文件。 使用模型包可以将模型的副本从一个 MDS 环境移到另一个环境，或者在现有的 MDS 环境中创建新模型。  
@@ -30,11 +29,11 @@ ms.locfileid: "48066327"
 ## <a name="tools-for-deploying-models"></a>用于部署模型的工具  
  若要使用模型包，您可以根据需要使用以下三个工具之一。  
   
--   **MDSModelDeploy 工具**：若要创建和部署模型对象和数据，请使用 MDSModelDeploy.exe 工具。 如果您在安装 MDS 时选择默认路径，此工具位于*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration。  
+-   **MDSModelDeploy 工具**:若要创建和部署模型对象和数据，请使用 MDSModelDeploy.exe 工具。 如果您在安装 MDS 时选择默认路径，此工具位于*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration。  
   
--   **模型部署向导**：若要创建和部署仅包含模型结构的包，请使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中的向导。 您不能使用此向导来部署数据。  
+-   **模型部署向导**:若要创建和部署仅包含模型结构的包，请使用中的向导[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]web 应用程序。 您不能使用此向导来部署数据。  
   
--   **模型包编辑器**：若要编辑模型包，请使用启动模型包编辑器向导的 ModelPackageEditor.exe。 您可以使用此向导来编辑由 MDSModelDeploy 工具或模型部署向导创建的包。 如果您在安装 MDS 时选择默认路径，此工具位于*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration。  
+-   **模型包编辑器**:若要编辑模型包，请使用启动模型包编辑器向导的 ModelPackageEditor.exe。 您可以使用此向导来编辑由 MDSModelDeploy 工具或模型部署向导创建的包。 如果您在安装 MDS 时选择默认路径，此工具位于*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration。  
   
 > [!IMPORTANT]  
 >  可以使用 MDSDeployModel 创建新模型、创建模型的克隆或更新现有模型及其数据。 如果使用 MDSModelDeploy 工具更新现有模型及其数据，并且该包不包含目标模型中存在的实体、属性或成员，则 MDSModelDeploy 不会从模型中删除此实体、属性或成员。  
@@ -46,7 +45,7 @@ ms.locfileid: "48066327"
   
 -   实体  
   
--   属性  
+-   特性  
   
 -   属性组  
   
@@ -77,6 +76,6 @@ ms.locfileid: "48066327"
   
 ## <a name="related-content"></a>相关内容  
   
--   [模型部署选项&#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
+-   [模型部署选项 (Master Data Services)](model-deployment-options-master-data-services.md)  
   
   

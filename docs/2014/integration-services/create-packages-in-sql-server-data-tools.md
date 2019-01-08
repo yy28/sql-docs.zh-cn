@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, creating
@@ -16,12 +15,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 24f73925210f51cfa942bc6b8228b5371aea33aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2748cf548a6a5c60ceab764afb27fff111f3ea1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372359"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建包
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 设计器在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中创建的包被保存到文件系统。 若要将包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或保存到包存储区，则需要保存包的副本。 有关详细信息，请参阅[保存一个包副本](../../2014/integration-services/save-a-copy-of-a-package.md)。  
@@ -38,7 +37,7 @@ ms.locfileid: "48192887"
   
      如果现有包中包括了您希望重用的功能，则可以通过复制并粘贴其他包中的对象，在新包中更快地生成控制流和数据流。 有关在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中使用复制和粘贴的详细信息，请参阅 [重用包对象](reuse-of-package-objects.md)。  
   
-     如果通过复制现有包或使用自定义包作为模板来创建新包，则现有包的名称和 GUID 也会被复制。 应当更新新包的名称和 GUID，以便将它与原始包区分开来。 例如，如果包有相同的 GUID，则难以识别日志数据属于哪个包。 您可以重新生成中的 GUID`ID`属性并更新的值`Name`通过使用属性窗口中的属性[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅 [设置包属性](set-package-properties.md) 和 [dtutil 实用工具](dtutil-utility.md)。  
+     如果通过复制现有包或使用自定义包作为模板来创建新包，则现有包的名称和 GUID 也会被复制。 应当更新新包的名称和 GUID，以便将它与原始包区分开来。 例如，如果包有相同的 GUID，则难以识别日志数据属于哪个包。 您可以通过使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“属性”窗口，重新生成 `ID` 属性中的 GUID 以及更新 `Name` 属性的值。 有关详细信息，请参阅 [设置包属性](set-package-properties.md) 和 [dtutil 实用工具](dtutil-utility.md)。  
   
 -   使用已指定为模板的自定义包。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48192887"
   
  下列过程说明如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建或删除包。  
   
- 有关演示如何使用默认的包模板创建基本包的视频，请参阅[创建基本包（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=131023)。  
+ 有关演示如何使用默认的包模板创建基本包的视频，请参阅[创建基本包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131023)。  
   
 ### <a name="to-create-a-package-in-sql-server-data-tools-using-the-package-template"></a>在 SQL Server Data Tools 中使用报模板创建包  
   

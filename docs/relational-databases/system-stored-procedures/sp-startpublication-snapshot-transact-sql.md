@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_startpublication_snapshot
@@ -17,12 +16,12 @@ ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f44d4edac88887d8869aa4a3885218733acd6fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50657e6a14f68ef297871001bc611f1d7cf9337b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660055"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211606"
 ---
 # <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布***’**  
+ [ **@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@publisher=** ] **'***发布服务器***’**  
+ [ **@publisher=** ] **'***发布服务器*****  
  是的一个非名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -52,9 +51,9 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_startpublication_snapshot**用于所有类型的复制。  
   
- 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，该存储过程在分发服务器的分发数据库中执行。  
+ 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上，在分发服务器的分发数据库上执行此存储的过程。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_startpublication_snapshot**。  
   
 ## <a name="see-also"></a>请参阅  

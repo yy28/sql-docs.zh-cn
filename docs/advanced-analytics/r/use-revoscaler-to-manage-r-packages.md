@@ -1,5 +1,5 @@
 ---
-title: 如何使用 RevoScaleR 函数来查找或安装 R 包上 SQL Server |Microsoft Docs
+title: 如何使用 RevoScaleR 函数来查找或安装 R 包的 SQL Server 机器学习服务
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563973"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645356"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函数来查找或 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ SQL Server 2017 机器学习服务已包括 RevoScaleR 的较新版本。 SQL Se
 | [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 复制包库之间的文件系统和数据库，为指定的计算上下文有关的信息。 |
 | [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 从指定的计算上下文中删除包。 它还计算依赖项，并确保不再由 SQL Server 上的其他包的包将删除，以释放资源。 |
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 + [启用 SQL Server 上的远程 R 包管理](r-package-how-to-enable-or-disable.md)
 
@@ -181,7 +181,7 @@ rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 
 从 Management Studio 或另一个工具，它支持 T-SQL，若要获取的已安装的包列表的当前实例上运行此命令使用`rxInstalledPackages`存储过程中。
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 
 `rxSqlLibPaths`函数可用于确定使用 SQL Server 机器学习服务的活动库。 此脚本可以返回仅为当前的服务器的库路径。 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',

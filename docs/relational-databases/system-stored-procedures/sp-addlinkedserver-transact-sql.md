@@ -18,12 +18,12 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26a4fa63ea41e2e8933a0d7d11cc6b2100e85f54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be80ed76713788f81704609c4828e0a871ffdc7d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795045"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590101"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,30 +45,30 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@server=** ] **'***server***'**  
+ [  **@server=** ] **'**_server_  
  要创建的链接服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
- [  **@srvproduct=** ] **'***product_name*****  
+ [  **@srvproduct=** ] **'**_product_name_  
  要添加为链接服务器的 OLE DB 数据源的产品名称。 *product_name*是**nvarchar (** 128 **)**，默认值为 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，和*目录*无需指定。  
   
- [  **@provider=** ] **'***provider_name*****  
+ [  **@provider=** ] **'**_provider_name_  
  与此数据源对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 *provider_name*必须是唯一的当前计算机上安装的指定 OLE DB 访问接口。 *provider_name*是**nvarchar (** 128 **)**，默认值为 NULL; 但是，如果*provider_name*是省略，则使用 SQLNCLI。 （使用 SQLNCLI 并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将重定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的最新版本。）OLE DB 访问接口应以指定的 PROGID 在注册表中注册。  
   
- [  **@datasrc=** ] **'***data_source*****  
+ [  **@datasrc=** ] **'**_data_source_  
  由 OLE DB 访问接口解释的数据源的名称。 *data_source*是**nvarchar (** 4000 **)**。 *data_source*作为以初始化 OLE DB 访问接口的 DBPROP_INIT_DATASOURCE 属性传递。  
   
- [  **@location=** ] **'***位置*****  
+ [  **@location=** ] **'**_位置_  
  由 OLE DB 访问接口解释的数据库的位置。 *位置*是**nvarchar (** 4000 **)**，默认值为 NULL。 *位置*作为 DBPROP_INIT_LOCATION 属性传递以初始化 OLE DB 访问接口。  
   
- [  **@provstr=** ] **'***provider_string*****  
+ [  **@provstr=** ] **'**_provider_string_  
  OLE DB 访问接口特定的连接字符串，它可标识唯一的数据源。 *provider_string*是**nvarchar (** 4000 **)**，默认值为 NULL。 *provstr*传递给 IDataInitialize，或者设置为 DBPROP_INIT_PROVIDERSTRING 属性以初始化 OLE DB 访问接口。  
   
  当针对创建链接的服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序实例可以通过为服务器使用 SERVER 关键字指定 =*servername*\\*instancename*指定的特定实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*所在的计算机的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行，并*instancename*的特定实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户将连接到。  
   
-> [!NOTE]  
+> [!NOTE]
 >  若要访问镜像数据库，则连接字符串必须包含数据库名称。 该名称是数据访问接口启用故障转移尝试所必需的。 可以在指定的数据库**@provstr**或**@catalog**参数。 此外，连接字符串还可以提供故障转移伙伴名称。  
   
- [  **@catalog=** ] **'***目录*****  
+ [  **@catalog=** ] **'**_目录_  
  与 OLE DB 访问接口建立连接时所使用的目录。 *目录*是**sysname**，默认值为 NULL。 *目录*作为 DBPROP_INIT_CATALOG 属性传入以初始化 OLE DB 访问接口进行传递。 在针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例定义链接服务器时，目录指向链接服务器映射到的默认数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -105,10 +105,10 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
  **sp_addlinkedserver**不能在用户定义的事务内执行。  
   
-> [!IMPORTANT]  
->  通过创建链接的服务器时**sp_addlinkedserver**，为所有本地登录名添加默认自映射。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问接口，通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 验证的登录名也许能够以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户身份访问该访问接口。 管理员应考虑使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 删除全局映射。  
+> [!IMPORTANT]
+>  通过创建链接的服务器时**sp_addlinkedserver**，为所有本地登录名添加默认自映射。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供程序，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已经过身份验证登录名可能会无法访问的提供程序下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务帐户。 管理员应考虑使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 删除全局映射。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  `sp_addlinkedserver`语句需要`ALTER ANY LINKED SERVER`权限。 (SSMS**新建链接服务器**要求的成员身份的方式实现对话框`sysadmin`固定的服务器角色。)  
   
 ## <a name="examples"></a>示例  
@@ -270,11 +270,11 @@ EXEC sp_addlinkedserver
 ### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>G. 添加一个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 作为链接服务器以用于云数据库和本地数据库上的分布式查询  
  您可以添加一个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 作为链接服务器，然后将它用于跨本地数据库和云数据库的分布式查询。 这是用于跨本地公司网络和 Windows Azure 云的数据库混合解决方案的组件。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 现成产品包含分布式查询功能，这允许您编写查询来合并定义为链接服务器的本地数据源的数据和远程数据源的数据（包括来自非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的数据）。 每个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（虚拟 master 除外）可以添加为单个链接服务器，然后在您的数据库应用程序中像任何其他数据库一样直接使用它。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现成产品包含分布式的查询功能，以便您可以编写查询来合并来自本地数据源的数据和远程数据源 (包括数据从非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源) 定义为链接服务器。 每个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（虚拟 master 除外）可以添加为单个链接服务器，然后在您的数据库应用程序中像任何其他数据库一样直接使用它。  
   
  使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的好处包括便于管理、高可用性和可伸缩性、使用熟悉的开发模型以及采用关系数据模型。 您的数据库应用程序要求决定了它将在云中如何使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 您可以立即将所有数据移到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，或逐渐迁移一部分数据而将其余数据保留在本地。 对于这类混合数据库应用程序，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 现在可以作为链接服务器添加且数据库应用程序可以发布分布式查询命令来合并 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和本地数据源上的数据。  
   
- 以下的简单示例说明了如何使用分布式查询连接到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]：  
+ 下面是简单的示例说明了如何连接到[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]使用分布式的查询：  
   
 ```  
 ------ Configure the linked server  

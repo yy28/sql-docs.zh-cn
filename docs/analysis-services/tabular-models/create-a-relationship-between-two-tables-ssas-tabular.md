@@ -1,5 +1,5 @@
 ---
-title: 创建关系 |Microsoft 文档
+title: 在 Analysis Services 表格模型中创建关系 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d985f9985691005eaa84365dacd2a4072542c05b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041071"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072094"
 ---
 # <a name="create-a-relationship"></a>创建关系 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用的关系的信息，请参阅[关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的信息，请参阅[关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>创建两个表之间的关系  
   

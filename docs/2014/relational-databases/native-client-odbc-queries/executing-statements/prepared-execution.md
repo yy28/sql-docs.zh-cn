@@ -17,15 +17,15 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 508d4083549cf1c6db6209be08d23b3fad054845
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354218"
 ---
 # <a name="prepared-execution"></a>准备好的执行
-  ODBC API 会定义准备好的执行，以此来减少反复执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句时所需的分析和编译开销。 该应用程序生成一个包含 SQL 语句的字符串，然后分两个阶段执行该语句。 它将调用[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)一次将该语句分析并编译为执行的执行计划[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 然后，它调用**SQLExecute**准备好的执行计划的每次执行。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
+  ODBC API 会定义准备好的执行，以此来减少反复执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句时所需的分析和编译开销。 该应用程序生成一个包含 SQL 语句的字符串，然后分两个阶段执行该语句。 它将调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)一次将该语句分析并编译为执行的执行计划[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 然后，它调用**SQLExecute**准备好的执行计划的每次执行。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
   
  对于多数数据库中的需要执行三次或四次以上的语句，准备好的执行要比直接执行更快速。这主要是因为准备好的执行仅需编译一次语句，而直接执行的语句在每次执行时都需要编译。 准备好的执行还可以减少网络流量，因为驱动程序在每次执行语句时都可以向数据源发送执行计划标识符及参数值，而不是整个 SQL 语句。  
   

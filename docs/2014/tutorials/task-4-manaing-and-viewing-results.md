@@ -1,5 +1,5 @@
 ---
-title: 任务 4： 管理和查看报表 |Microsoft Docs
+title: 任务 4:管理和查看报表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119865"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377529"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看报表
-  在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 请参阅[交互式清理阶段](http://msdn.microsoft.com/library/hh213061.aspx#Interactive)的更多详细信息。  
+# <a name="task-4-manaing-and-viewing-results"></a>任务 4:管理和查看报表
+  在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 请参阅[交互式清理阶段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)的更多详细信息。  
   
 1.  选择**Contact Email**从域列表的域。  
   
-2.  切换到**无效**右窗格中的选项卡。 注意末尾缺少字符“s”的两个电子邮件地址。 这些被认为是无效的要求所有电子邮件地址结尾的域规则的两个电子邮件**@adventure-works.com** (使用的)。 在清理时，DQS 使用此域规则来确定电子邮件是否有效。 此选项卡显示在知识库中被标记为无效的域值或不符合域规则要求的值。 在这种情况下，这些值不符合域规则的要求（电子邮件验证）。  
+2.  切换到**无效**右窗格中的选项卡。 请注意，两个电子邮件地址缺少字符的结尾。 这些被认为是无效的要求所有电子邮件地址结尾的域规则的两个电子邮件**@adventure-works.com** (使用的)。 在清理时，DQS 使用此域规则来确定电子邮件是否有效。 此选项卡显示在知识库中被标记为无效的域值或不符合域规则要求的值。 在这种情况下，这些值不符合域规则的要求（电子邮件验证）。  
   
 3.  在中**更正为**列中，键入正确的电子邮件地址结尾**@adventure-works.com** (使用的)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "49119865"
   
 18. 选择**地址验证**从域列表的复合域。  
   
-19. 在右窗格中，切换到**更正**选项卡。应会看到找到是正确的地址**Melissa Data – Address Check**上的 DQS 服务**Azure Marketplace**。  
+19. 在右窗格中，切换到**更正**选项卡。应会看到找到是正确的地址**Melissa 数据-地址检查**上的 DQS 服务**Azure Marketplace**。  
   
 20. 切换到**已更正**选项卡。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "49119865"
   
 22. 请注意，**批准**已为该项目在列表中选择单选按钮。 这是上项的默认行为**已更正**选项卡。  
   
-23. 切换到**建议**选项卡。查看建议的更改**Melissa Data – Address Check**服务。  
+23. 切换到**建议**选项卡。查看建议的更改**Melissa 数据-地址检查**服务。  
   
 24. **单击批准所有字词**工具栏按钮，然后都单击**确定**上**确认**消息框。  
   
@@ -90,6 +90,6 @@ ms.locfileid: "49119865"
 25. 单击**下一步**若要切换到**导出**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 5：将清理结果导出到 Excel 文件](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [任务 5:将清理结果保存到 Excel 文件导出](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

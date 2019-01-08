@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111167"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823681"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
   **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
@@ -92,7 +91,7 @@ ms.locfileid: "48111167"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -157,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  请求检查是否为对话正确配置了指定的加密级别：  
   
- **ON**：默认设置。 配置了完全对话安全设置。 已为对话双方部署了证书，存在远程服务绑定，且针对目标服务的 GRANT SEND 语句指定了发起方用户。  
+ **ON**:默认设置。 配置了完全对话安全设置。 已为对话双方部署了证书，存在远程服务绑定，且针对目标服务的 GRANT SEND 语句指定了发起方用户。  
   
- **OFF**：未配置任何对话安全设置。 未部署证书，没有创建任何远程服务绑定，且针对发起方服务的 GRANT SEND 指定了 **公共** 角色。  
+ **关闭**:不配置任何对话安全。 未部署证书，没有创建任何远程服务绑定，且针对发起方服务的 GRANT SEND 指定了 **公共** 角色。  
   
- **ANONYMOUS**：配置了匿名对话安全设置。 已部署了一个证书，远程服务绑定指定了匿名子句，且针对目标服务的 GRANT SEND 指定了 **公共** 角色。  
+ **匿名**:配置了匿名对话安全。 已部署了一个证书，远程服务绑定指定了匿名子句，且针对目标服务的 GRANT SEND 指定了 **公共** 角色。  
   
  **RUNTIME**  
  请求导致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话运行时错误的问题的报告。 如果 **-NEW** 和 **-ID** 都未指定，则 **ssbdiagnose** 将监视连接选项中指定的所有数据库中的所有会话。 如果指定了 **-NEW** 或 **-ID** ， **ssbdiagnose** 将生成参数中指定的 ID 列表。  
@@ -206,7 +205,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions>**  
  指定数据库的连接信息，该数据库包含与受监视的会话元素关联的服务。 如果所有服务都位于同一数据库中，则只需指定一个 **CONNECT TO** 子句。 如果各服务位于不同的数据库中，必须为每个数据库提供一个 **CONNECT TO** 子句。 如果未指定 **runtimeconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions**中的连接信息。  
   
- **–E**  
+ **-E**  
  将当前 Windows 帐户用作登录 ID 来打开指向 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 Windows 身份验证连接。 登录名必须是 **sysadmin** 固定服务器角色的成员。  
   
  使用 -E 选项将忽略 SQLCMDUSER 和 SQLCMDPASSWORD 环境变量的用户和密码设置。  
@@ -220,7 +219,7 @@ WHERE database_id = DB_ID();
   
  如果 **-E** 和 **-U** 都未指定，则 **ssbdiagnose** 将使用 SQLCMDUSER 环境变量的值。 如果 SQLCMDUSER 也未设置，则 **ssbdiagnose** 会尝试使用 Windows 身份验证模式，基于运行 **ssbdiagnose**的用户的 Windows 帐户进行连接。  
   
- 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 **–U** 选项后有多个参数，将生成错误消息并退出程序。  
+ 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 -U 选项后跟多个参数，便会生成错误消息并退出程序。  
   
  **-P** *password*  
  指定 **-U** 登录 ID 的密码。 密码是区分大小写的。 如果使用了 **-U** 选项而未使用 **-P** 选项，则 **ssbdiagnose** 将使用 SQLCMDPASSWORD 环境变量的值。 如果 SQLCMDPASSWORD 也未设置，则 **ssbdiagnose** 会提示用户输入密码。  
@@ -231,7 +230,7 @@ WHERE database_id = DB_ID();
  如果指定了 **-P** 选项而未指定密码，则 **ssbdiagnose** 将使用默认密码 (NULL)。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
  通过向控制台输出密码提示，可以显示密码提示，如下所示： `Password:`  
   
@@ -309,7 +308,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 环境变量  
  **ssbdiagnose** 实用工具支持 **sqlcmd** 实用工具也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 环境变量。 设置环境变量可以使用命令提示 SET 命令，也可以使用通过 **sqlcmd** 运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中的 **setvar**命令。 有关如何在 **sqlcmd** 中使用 **setvar**的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  在每个 **connectionoptions** 子句中，通过 **-E** 或 **-U** 指定的登录名必须是 **-S** 所指定实例中 **sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -459,7 +458,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](/sql/t-sql/statements/create-remote-service-binding-transact-sql)   
  [CREATE ROUTE (Transact SQL)](/sql/t-sql/statements/create-route-transact-sql)   
  [CREATE SERVICE (Transact SQL)](/sql/t-sql/statements/create-service-transact-sql)   
- [RECEIVE (Transact-SQL)](/sql/t-sql/statements/receive-transact-sql)   
+ [RECEIVE (Transact SQL)](/sql/t-sql/statements/receive-transact-sql)   
  [sys.transmission_queue (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-transmission-queue-transact-sql)   
  [sys.conversation_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql)   
  [sys.conversation_groups (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-conversation-groups-transact-sql)  

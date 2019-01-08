@@ -1,6 +1,6 @@
-﻿---
-title: 安装 SQL Server 机器学习而无需 internet 访问的 R 和 Python 组件 |Microsoft Docs
-description: 脱机或已断开连接机器学习 R 和 Python 安装程序独立 SQL Server 实例上。
+---
+title: 安装 R 语言和没有 internet 访问权限的 SQL Server 机器学习的 Python 组件
+description: 脱机或已断开连接机器学习 R 和 Python 安装程序在网络防火墙后面的独立 SQL Server 实例上。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150539"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596988"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-默认情况下，安装程序连接到 Microsoft 下载站点以获取所需的和更新的组件，以实现SQL Server 上的机器学习功能。 如果防火墙的限制会阻止安装程序访问这些站点，可以使用连接到 internet的设备下载文件，将文件传输到脱机的服务器，然后运行安装程序。
+默认情况下，安装程序连接到 Microsoft 下载站点以获取所需的和更新的组件，用于实现SQL Server 上的机器学习功能。 如果防火墙的限制会阻止安装程序访问这些站点，可以使用连接到 internet的设备下载文件，将文件传输到脱机的服务器，然后运行安装程序。
 
-默认情况下，安装程序连接到 Microsoft 下载站点以获取所需的和更新的组件，用于实现SQL Server 上的机器学习功能。如果防火墙的限制会阻止安装程序访问这些站点，可以使用连接到 internet的设备下载文件，将文件传输到脱机的服务器，然后运行安装程序。
+数据库内分析包括数据库引擎实例，以及用于R和Python集成的其他组件，具体取决于SQL Server的版本。 
 
 + SQL Server 2017 包括 R 和 Python。 
 + SQL Server 2016 的仅限 R 的。 
@@ -55,7 +55,7 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
-SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装以下任一版本：RTM，SP 1，SP 2。 基础安装到位后，便可应用累积更新。
+SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装这些版本之一：RTM，SP 1，SP 2。 基础安装到位后，便可应用累积更新。
 
 在连接到Internet的计算机上，下载安装程序使用的CAB文件，用于在SQL Server 2016上安装数据库内分析。 
 
@@ -119,11 +119,24 @@ SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用�
 
 5. 传输所有文件、 可执行文件和 CAB 文件，在脱机计算机上的同一文件夹。
 
-6. 运行安装程序。 接受许可条款，然后在功能选择页上，查看为其应用累积更新的功能。 应会看到每一项功能为当前实例，包括机器学习功能安装。
+6. 运行安装程序。 接受许可条款，然后在功能选择页面上，查看应用累积更新的功能。 应会看到每一项功能为当前实例，包括机器学习功能安装。
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![从功能树选择功能](media/cumulative-update-feature-selection.png "功能列表")
 
 5. 继续完成向导，接受 R 和 Python 分发版的许可条款。 在安装期间，系统会提示选择包含已更新的 CAB 文件的文件夹位置。
+
+## <a name="set-environment-variables"></a>设置环境变量
+
+对于仅 R 功能集成，应设置**MKL_CBWR**环境变量[确保一致的输出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel Math Kernel Library (MKL) 的计算。
+
+1. 在控制面板中，单击**系统和安全** > **系统** > **高级系统设置** >  **环境变量**。
+
+2. 创建一个新的用户或系统变量。 
+
+  + 到组变量名称 `MKL_CBWR`
+  + 将变量的值设置为 `AUTO`
+
+此步骤需要重新启动服务器。 如果你是要启用脚本执行，您可以在重启保持，直到完成所有配置工作。
 
 ## <a name="post-install-configuration"></a>安装后配置
 

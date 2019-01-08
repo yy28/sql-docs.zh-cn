@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba255f88c0938fab80c12e3f520ba418b996f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5575991201f48c48fee1b27ad95b6d07de6251ba
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204047"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373889"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
   派生列转换通过对转换输入列应用表达式来创建新列值。 表达式可以包含来自转换输入的变量、函数、运算符和列的任意组合。 结果可作为新列添加，也可作为替换值插入到现有列。 派生列转换可定义多个派生列，任何变量或输入列都可以出现在多个表达式中。  
@@ -57,7 +56,7 @@ ms.locfileid: "48204047"
   
  此转换有一个输入、一个常规输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“派生列转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Derived Column Transformation Editor](../../derived-column-transformation-editor.md)。  
   
@@ -76,8 +75,8 @@ ms.locfileid: "48204047"
 -   [使用派生列转换派生列值](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>相关内容  
- social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+ social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
- curatedviews.cloudapp.net 上的专业回答： [如何使用 SSIS 拆分列数据](http://go.microsoft.com/fwlink/?LinkId=321995)。  
+ curatedviews.cloudapp.net 上的专业回答： [如何使用 SSIS 拆分列数据](https://go.microsoft.com/fwlink/?LinkId=321995)。  
   
   

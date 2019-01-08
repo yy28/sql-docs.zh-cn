@@ -20,19 +20,19 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23a81ceda914bb43d4361e9c6fb8a2409bf2556e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809065"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517414"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
- **SQLPutData** ，应用程序可以将参数或列的数据发送到在语句执行时驱动程序。 此函数可用于将部分中的字符或二进制数据值发送到字符、 二进制或数据源特定于数据类型 （例如，SQL_LONGVARBINARY 或 SQL_LONGVARCHAR 类型参数） 的列。 **SQLPutData**支持绑定到 Unicode 的 C 数据类型，即使基础驱动程序不支持 Unicode 数据。  
+ **SQLPutData** ，应用程序可以将参数或列的数据发送到在语句执行时驱动程序。 此函数可用于将部分中的字符或二进制数据值发送到字符、 二进制或数据源特定的数据类型 （例如，SQL_LONGVARBINARY 或 SQL_LONGVARCHAR 类型参数） 的列。 **SQLPutData**支持绑定到 Unicode 的 C 数据类型，即使基础驱动程序不支持 Unicode 数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   C 数据类型为 SQL_C_DEFAULT，并且指定 SQL 数据类型的默认 C 数据类型为 SQL_C_CHAR 或 SQL_C_BINARY。  
   
- 对于所有其他类型的 C 数据，如果*StrLen_or_Ind*不是 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM，驱动程序假定的大小\* *DataPtr*缓冲区是指定的 C 数据类型的大小与*ValueType*或*TargetType* ，并将发送整个数据值。 有关详细信息，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附录 d： 数据类型。  
+ 对于所有其他类型的 C 数据，如果*StrLen_or_Ind*不是 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM，驱动程序假定的大小\* *DataPtr*缓冲区是指定的 C 数据类型的大小与*ValueType*或*TargetType* ，并将发送整个数据值。 有关详细信息，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)中附录 d:数据类型。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -75,7 +75,7 @@ SQLRETURN SQLPutData(
 |07006|受限制的数据类型属性冲突|标识的数据值*ValueType*中的参数**SQLBindParameter**无法为数据类型由标识转换绑定的参数为*ParameterType*中的参数**SQLBindParameter**。|  
 |07S01|默认参数的使用无效|参数值，设置**SQLBindParameter**、 是 SQL_DEFAULT_PARAM，并且相应参数没有默认值。|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|22001|字符串数据，右截断|字符或二进制值的列分配导致非空白 （字符） 或非 null （二进制） 字符或字节数的截断。<br /><br /> 中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**为"Y"，而且更多的数据已发送 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定于数据类型） 的长参数不是指定了与*StrLen_or_IndPtr*中的参数**SQLBindParameter**。<br /><br /> 中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**为"Y"，而且比中指定了更多的数据已发送长列 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定于数据类型）对应于已添加或使用更新的数据行中的列长度的缓冲区**SQLBulkOperations**或更新，它**SQLSetPos**。|  
+|22001|字符串数据，右截断|字符或二进制值的列分配导致非空白 （字符） 或非 null （二进制） 字符或字节数的截断。<br /><br /> 中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**为"Y"，而且更多的数据已发送 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定的数据类型） 的长参数不是指定了与*StrLen_or_IndPtr*中的参数**SQLBindParameter**。<br /><br /> 中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**为"Y"，而且比中指定了更多的数据已发送长列 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定的数据类型）对应于已添加或使用更新的数据行中的列长度的缓冲区**SQLBulkOperations**或更新，它**SQLSetPos**。|  
 |22003|数值超出范围|数据将发送有关绑定的数值参数或列导致数字被截断时分配给关联的表的列的整个 （而不是小数） 部分。<br /><br /> 返回一个数字值 （数值或字符串） 的一个或多个输入/输出参数或输出参数将导致要截断的数字的整个 （而不是小数） 部分。|  
 |22007|日期时间格式无效|发送参数或已绑定到日期、 时间或时间戳结构的列的数据时，分别，无效的日期、 时间戳。<br /><br /> 输入/输出或输出参数绑定到日期、 时间或时间戳 C 结构，返回的参数中的值时，分别，无效的日期、 时间戳。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |22008|日期时间字段溢出|日期时间表达式计算的输入/输出或输出参数导致了日期、 时间或时间戳 C 结构无效。|  
@@ -88,7 +88,7 @@ SQLRETURN SQLPutData(
 |HY009|使用空指针无效|(DM) 参数*DataPtr*是空指针和参数*StrLen_or_Ind*不是 0，SQL_DEFAULT_PARAM 或 SQL_NULL_DATA。|  
 |HY010|函数序列错误|(DM) 以前的函数调用不是调用**SQLPutData**或**SQLParamData**。<br /><br /> (DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行调用 SQLPutData 函数时。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY019 分段|分段发送非字符和非二进制数据|**SQLPutData**已被调用超过一次参数或列中，并且从未被使用它将字符 C 数据发送到字符、 二进制或数据源特定于数据类型的列，或将二进制 C 数据发送到具有一个字符的列二进制文件或数据源特定于数据类型。|  
+|HY019 分段|分段发送非字符和非二进制数据|**SQLPutData**已被调用超过一次参数或列中，并且从未被使用它将字符 C 数据发送到包含的字符、 二进制或数据源特定的数据类型的列，或将二进制 C 数据发送到具有一个字符的列二进制文件或数据源特定的数据类型。|  
 |HY020|尝试连接 null 值|**SQLPutData**以来的调用返回 SQL_NEED_DATA，和一个这些调用中多次调用*StrLen_or_Ind*参数包含 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM。|  
 |HY090|字符串或缓冲区长度无效|自变量*DataPtr*不是 null 指针和参数*StrLen_or_Ind*小于 0，但不是等于 SQL_NTS 或 SQL_NULL_DATA。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
@@ -109,7 +109,7 @@ SQLRETURN SQLPutData(
  在语句执行时传递的数据在执行参数数据的详细信息，请参阅"传递参数值"中[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)并[发送长数据](../../../odbc/reference/develop-app/sending-long-data.md)。 有关如何执行时的数据列数据的详细信息更新或添加，请参阅"使用 SQLSetPos"一节中[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)，"执行大容量更新使用中的书签" [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，和[Long 数据和 SQLSetPos 及 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   
 > [!NOTE]  
->  应用程序可以使用**SQLPutData**发送部分仅当将字符 C 数据发送到字符、 二进制或数据源特定于数据类型的列或将二进制 C 数据发送到具有二进制文件，一个字符的列中的数据特定于源的数据类型。 如果**SQLPutData**调用一次以上任何其他情况下，它将返回 SQL_ERROR 和 SQLSTATE hy019 分段 （分段发送非字符和非二进制数据）。  
+>  应用程序可以使用**SQLPutData**发送部分仅当将字符 C 数据发送到特定于源的数据类型为字符、 二进制文件或数据列，或将二进制 C 数据发送到具有二进制文件，一个字符的列中的数据特定于源的数据类型。 如果**SQLPutData**调用一次以上任何其他情况下，它将返回 SQL_ERROR 和 SQLSTATE hy019 分段 （分段发送非字符和非二进制数据）。  
   
 ## <a name="example"></a>示例  
  下面的示例假定名为 Test 的数据源名称。 关联的数据库应具有您可以创建，按如下所示的表：  

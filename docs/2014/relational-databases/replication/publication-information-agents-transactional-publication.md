@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.downlevelagents.tran.f1
@@ -13,12 +12,12 @@ ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c1b13c0dcffd8e4763aeaa57a0b836d69f547ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68996f64bd61d96b4a2938a9711519207861fcd3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780359"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>发布信息，代理（事务发布）
   **“代理”** 选项卡显示所选发布的代理的摘要信息。 为所有事务发布显示有关快照代理和日志读取器代理的信息。 对于那些为排队更新订阅启用的事务发布，将显示有关队列读取器代理的信息。  
@@ -26,13 +25,13 @@ ms.locfileid: "48167477"
 ## <a name="options"></a>选项  
  有关代理的详细信息及相关任务，请右键单击相应代理所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
+-   **排序**:中的一个或多个列的排序**排**对话框。  
   
--   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
+-   **选择显示的列**:选择哪些列显示以及用来显示它们中的顺序**选择列**对话框。  
   
--   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
+-   **筛选器**:筛选列中的值为基础的网格中的行**筛选器设置**对话框。  
   
--   **清除筛选器**：清除网格的任何筛选设置。  
+-   **清除筛选器**:清除网格的任何筛选器设置。  
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   

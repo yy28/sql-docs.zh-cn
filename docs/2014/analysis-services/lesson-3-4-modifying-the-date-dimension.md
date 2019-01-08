@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753574"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526110"
 ---
 # <a name="modifying-the-date-dimension"></a>修改“日期”维度
   在本主题的各任务中，将创建用户定义的层次结构，并更改为“日期”、“月份”、“日历季度”以及“日历半期”等属性显示的成员名称。 还将为属性定义组合键，控制维度成员的排序顺序以及定义属性关系。  
@@ -65,7 +65,7 @@ ms.locfileid: "50753574"
   
 3.  如果未打开“属性”窗口，则打开“属性”窗口，然后单击标题栏上的“自动隐藏”按钮，以便该窗口保持打开状态。  
   
-4.  单击此窗口底部附近的 **NameColumn** 属性字段，然后单击省略号浏览 (**…**) 按钮以打开“名称列”对话框。  
+4.  单击**NameColumn**属性字段在窗口底部附近，然后单击省略号浏览 (**...**) 按钮以打开**名称列**对话框。  
   
 5.  选择`SimpleDate`底部**源列**列表，，然后单击**确定**。  
   
@@ -300,7 +300,7 @@ ms.locfileid: "50753574"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [浏览已部署的多维数据集](lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

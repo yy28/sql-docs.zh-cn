@@ -14,12 +14,12 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aa0875017c4b7a099af8da1c6f8eca105006aca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527735"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs 提供原因有关的警告或错误的详细的信息。 本手册中的 SQLSTATEs 基于 ISO/IEF CLI 规范中的那些虽然使用 IM 启动这些 SQLSTATEs 是特定于 ODBC。  
@@ -28,7 +28,7 @@ SQLSTATEs 提供原因有关的警告或错误的详细的信息。 本手册中
   
 -   **不完整**; 虽然本手册列出了大量的错误和警告和可能的原因，这些错误和警告，但它并不完整并且可能不会是驱动程序实现，只需改变太多。 任何给定的驱动程序可能不会返回所有 SQLSTATEs 本手册中列出，并且可能会返回 SQLSTATEs 本手册中未列出。  
   
--   **复杂性**的某些数据库引擎 — 尤其是关系数据库引擎-返回数千个错误和警告。 此类引擎的驱动程序不太可能所有这些错误和警告记录到 SQLSTATEs 由于工作涉及的映射的 inexactness、 生成的代码，大型大小和生成的代码，通常返回编程的低值在运行时应永远不会遇到的错误。 因此，驱动程序应尽可能多的错误和警告似乎是合理并确保将这些错误和警告的应用程序逻辑上映射可能为基础，如 SQLSTATE 01004 （数据被截断）。  
+-   **复杂性**某些数据库引擎-尤其是关系数据库引擎-返回数千个错误和警告。 此类引擎的驱动程序不太可能所有这些错误和警告记录到 SQLSTATEs 由于工作涉及的映射的 inexactness、 生成的代码，大型大小和生成的代码，通常返回编程的低值在运行时应永远不会遇到的错误。 因此，驱动程序应尽可能多的错误和警告似乎是合理并确保将这些错误和警告的应用程序逻辑上映射可能为基础，如 SQLSTATE 01004 （数据被截断）。  
   
  因为 SQLSTATEs 不可靠地返回，因此大多数应用程序只需为其关联的诊断消息，通常适用于特定错误或发生的警告，以及用户和本机错误代码显示它们。 因为应用程序不能基于编程逻辑大多数 SQLSTATEs 仍没有丢失很少任何在执行此操作，此功能。 例如，假设**SQLExecDirect**返回 SQLSTATE 42000 （语法错误或访问冲突）。 如果导致此错误的 SQL 语句是硬编码或生成的应用程序，这是一种编程错误，代码需要修复。 如果用户输入的 SQL 语句，则这是用户错误，应用程序已完成的所有可通过通知问题的用户。  
   
@@ -48,4 +48,4 @@ SQLSTATEs 提供原因有关的警告或错误的详细的信息。 本手册中
   
  SQLSTATE HYC00 （未实现的可选功能） 是一点非常重要，因为它是在其中应用程序可以确定驱动程序是否支持特定的语句或连接属性的唯一方法。  
   
- SQLSTATEs 和哪些函数返回它们的完整列表，请参阅[附录 a: ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。 在其下的每个函数可能会返回特定 SQLSTATE 的条件的详细说明，请参阅该函数。
+ SQLSTATEs 和哪些函数返回它们的完整列表，请参阅[附录 a:ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。 在其下的每个函数可能会返回特定 SQLSTATE 的条件的详细说明，请参阅该函数。

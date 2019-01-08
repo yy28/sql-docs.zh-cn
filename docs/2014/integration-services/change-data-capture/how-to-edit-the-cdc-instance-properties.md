@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9a6df6cd1c4f96c241260be29b77560146f7f85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d15f17b867cd02d700ce6c749edddaa2c65083
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772939"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台编辑 CDC 实例的配置属性。  
@@ -35,15 +34,15 @@ ms.locfileid: "48184329"
   
 5.  在属性编辑器中，在以下选项卡中编辑属性：  
   
-    -   **Oracle**：使用属性编辑器中的 **“Oracle”** 选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
+    -   **Oracle**:使用**Oracle**在属性编辑器中对在新建实例向导创建 CDC 数据库页中提供的说明进行更改以及对 Oracle 日志挖掘数据库连接信息进行更改的选项卡。  
   
          有关可在此选项卡中编辑的内容的信息，请参阅 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)。  
   
-    -   **表**：使用 **“表”** 选项卡可对您从 Oracle 源数据库中选择的表和列进行更改。  
+    -   **表**:使用 **“表”** 选项卡可对您从 Oracle 源数据库中选择的表和列进行更改。  
   
          有关可在此选项卡中编辑的内容的信息，请参阅 [Edit Tables](edit-tables.md)。  
   
-    -   **脚本**：使用“脚本”选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
+    -   **脚本**:使用**脚本**选项卡以运行或重新运行脚本将设置补充日志记录对 Oracle 源数据库。  
   
          有关可在此选项卡中执行的操作的信息，请参阅 [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)。  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
@@ -13,12 +13,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 498bf394cb896f12a4b246edf42b9b741a0a99b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756019"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 压缩的实现
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Unicode 标准压缩方案 (SCSU) 算法实现来压缩在行或页压缩对象中存储的 Unicode 值。 对于这些压缩对象，Unicode 压缩对于 `nchar(n)` 和 `nvarchar(n)` 列而言是自动的。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 Unicode 数据存储为 2 个字节，无论区域设置如何。 这称为 UCS-2 编码。 对于某些区域设置而言，在 SQL Server 中实现 SCSU 压缩可节省高达 50% 的存储空间。  
@@ -27,10 +27,10 @@ ms.locfileid: "48084703"
  Unicode 压缩支持固定长度 `nchar(n)` 和 `nvarchar(n)` 数据类型。 存储于行外或 `nvarchar(max)` 列中的数据值不压缩。  
   
 > [!NOTE]  
->  不支持 Unicode 压缩`nvarchar(max)`即使行中存储数据。 但是，此数据类型仍可以从页压缩中受益。  
+>  `nvarchar(max)` 不支持 Unicode 压缩，即使数据存储于行内。 但是，此数据类型仍可以从页压缩中受益。  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>从 SQL Server 的早期版本升级  
- 在某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，将不会对任何数据库对象（无论是压缩的还是未压缩的）进行与 Unicode 压缩相关的更改。 在数据库升级后，对象会受到影响，如下所示：  
+ 在某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，将不会对任何数据库对象（无论是压缩的还是未压缩的）进行与 Unicode 压缩相关的更改。 在数据库升级后，对象会受到影响，如下所示：  
   
 -   如果该对象未压缩，则不会进行更改，并且对象继续像以前一样工作。  
   

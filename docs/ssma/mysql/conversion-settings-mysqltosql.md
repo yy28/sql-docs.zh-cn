@@ -10,12 +10,12 @@ ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7026828bff099b131556dbffd3d990c695bd5ff2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662476"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400041"
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **设置**选项卡允许用户设置节点级别设置。 选项卡将出现在以下元数据库节点：  

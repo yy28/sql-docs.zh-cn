@@ -11,12 +11,12 @@ ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054367"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371309"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>支持的数据源（SSAS 表格）
   本主题介绍可用于表格模型的数据源的类型。  
@@ -34,7 +34,7 @@ ms.locfileid: "48054367"
   
 |||||  
 |-|-|-|-|  
-|数据源|版本|文件类型|提供程序<sup>1</sup>|  
+|源|版本|文件类型|提供程序<sup>1</sup>|  
 |Access 数据库|Microsoft Access 2003、2007、2010。|.accdb 或 .mdb|ACE 14 OLE DB 访问接口|  
 |SQL Server 关系数据库|Microsoft SQL Server2005，2008、 2008 R2;SQL Server 2012 中，Microsoft SQL Azure 数据库<sup>2</sup>|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 10.0 Client OLE DB 提供程序<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
 |SQL Server 并行数据仓库 (PDW) <sup>3</sup>|2008 R2|（不适用）|OLE DB provider for SQL Server PDW|  
@@ -53,9 +53,9 @@ ms.locfileid: "48054367"
   
  <sup>1</sup>可以还使用用于 ODBC 的 OLE DB 访问接口。  
   
- <sup>2</sup>有关 SQL Azure 的详细信息，请参阅 web 站点[SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)。  
+ <sup>2</sup>有关 SQL Azure 的详细信息，请参阅 web 站点[SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856)。  
   
- <sup>3</sup>有关 SQL Server PDW 的详细信息，请参阅 web 站点[SQL Server 2008 R2 并行数据仓库](http://go.microsoft.com/fwlink/?LinkId=150895)。  
+ <sup>3</sup>有关 SQL Server PDW 的详细信息，请参阅 web 站点[SQL Server 2008 R2 并行数据仓库](https://go.microsoft.com/fwlink/?LinkId=150895)。  
   
  <sup>4</sup>在某些情况下，使用 MSDAORA OLE DB 提供程序可能导致连接错误，特别是对于 Oracle 的较新版本。 如果您遇到任何错误，我们建议您使用为 Oracle 列出的其他访问接口之一。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48054367"
 4.  {0}OLE DB 访问接口有时可为大型数据提供更快的性能。{0} 在为同一数据源选择不同访问接口时，应首先尝试 OLE DB 访问接口。  
   
 ## <a name="see-also"></a>请参阅  
- [数据源&#40;SSAS 表格&#41;](../data-sources-ssas-tabular.md)   
- [导入数据&#40;SSAS 表格&#41;](../import-data-ssas-tabular.md)  
+ [数据源（SSAS 表格）](../data-sources-ssas-tabular.md)   
+ [导入数据（SSAS 表格）](../import-data-ssas-tabular.md)  
   
   

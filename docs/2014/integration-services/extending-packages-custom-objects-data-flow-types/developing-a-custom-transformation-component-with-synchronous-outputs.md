@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cbdafae607bc9308bae20d7ffbef84ab7d9106f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbf072b21411e89147863a790d6c5578b53182ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225298"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367599"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>开发具有同步输出的自定义转换组件
   具有同步输出的转换组件接收来自上游组件的行，并在将行传递到下游组件时读取或修改这些行的列中的值。 这些转换组件还定义从上游组件提供的列派生的其他输出列，但是它们不会向数据流添加行。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -323,7 +321,7 @@ Namespace Uppercase
 End Namespace  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [开发具有异步输出的自定义转换组件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   

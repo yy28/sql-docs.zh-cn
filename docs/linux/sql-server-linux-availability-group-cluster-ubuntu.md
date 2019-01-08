@@ -1,21 +1,22 @@
 ---
-title: 配置 Ubuntu 群集 SQL Server 可用性组 |Microsoft 文档
-description: ''
+title: 配置 Ubuntu 群集 SQL Server 可用性组
+titleSuffix: SQL Server
+description: 了解如何创建可用性组群集的 Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658373"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160615"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -97,7 +98,7 @@ sudo systemctl enable pacemaker
 
 1. 从所有节点中删除任何现有的群集配置。 
 
-   运行“sudo apt-get install pcs”将同时安装 pacemaker、corosync 和 pcs，并开始运行这 3 个服务。  启动 corosync 将生成“/etc/cluster/corosync.conf”模板文件。  若要成功完成此文件的下一个步骤，不应存在解决办法是停止 pacemaker / corosync 并删除 / etc/cluster/corosync.conf，然后下一步骤已成功完成。 pcs cluster destroy 执行相同操作，并可以将其用作一个一次性初始群集安装步骤。
+   运行“sudo apt-get install pcs”将同时安装 pacemaker、corosync 和 pcs，并开始运行这 3 个服务。  启动 corosync 将生成“/etc/cluster/corosync.conf”模板文件。  若要成功完成此文件的下一个步骤，不应存在的解决办法是停止 pacemaker / corosync 并删除 / etc/cluster/corosync.conf，然后下一步骤已成功完成。 pcs cluster destroy 执行相同操作，并可以将其用作一个一次性初始群集安装步骤。
    
    以下命令将删除所有现存群集配置文件并停止所有群集服务。 这会永久性销毁群集。 请在预生产环境中将其作为第一个步骤运行。 请注意，“pcs cluster destroy”已禁用 Pacemaker 服务，需重新启用。 在所有节点上运行以下命令。
    
@@ -123,7 +124,7 @@ sudo systemctl enable pacemaker
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

@@ -1,6 +1,6 @@
 ---
-title: 课程 1 浏览和可视化数据使用 R 和 T-SQL （SQL Server 机器学习） |Microsoft Docs
-description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
+title: 课程 1 浏览和可视化数据使用 R 和 T-SQL 的 SQL Server 机器学习
+description: 本教程演示如何浏览和可视化 SQL Server 数据使用 R 函数。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032214"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645496"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课： 浏览和可视化数据
+# <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
@@ -38,7 +38,7 @@ ms.locfileid: "51032214"
 
 **出租车标识符**
   
--   Medallion 列表示出租车的唯一 ID 号。
+-   _Medallion_列表示出租车的唯一 id 号。
   
 -   _Hack\_许可证_列包含出租车司机的驾驶证编号 （匿名）。
   
@@ -67,7 +67,7 @@ ms.locfileid: "51032214"
 
 2. 粘贴以下脚本来创建一个存储的过程，绘制直方图。 此示例中名为 **RPlotRxHistogram*。
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ ms.locfileid: "51032214"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，运行以下语句：
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ ms.locfileid: "51032214"
   
 2.  打开 PowerShell 命令提示符并运行以下命令，提供相应的实例名称、 数据库名称、 用户名和凭据作为参数。 对于使用 Windows 标识，您可以替换 **-U**并 **-P**与 **-T**。
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ ms.locfileid: "51032214"
   
     -   如果想要保存输出参数供以后重复使用，则键入 **Y** 。
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ ms.locfileid: "51032214"
   
     **结果**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ ms.locfileid: "51032214"
 
 2. 粘贴以下脚本来创建一个存储的过程，绘制直方图。 此示例中名为**RPlotHist** 。
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ ms.locfileid: "51032214"
 
 运行以下语句将二进制绘图数据导出到 JPEG 和 PDF 文件格式。
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **结果**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 
@@ -279,7 +279,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>下一课
 
-[第 2 课： 创建数据功能使用 T-SQL](sqldev-create-data-features-using-t-sql.md)
+[第 2 课：使用 T-SQL 创建数据功能](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一课
 

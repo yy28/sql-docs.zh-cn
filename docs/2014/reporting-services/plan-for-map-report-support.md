@@ -11,12 +11,12 @@ ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366595"
 ---
 # <a name="plan-for-map-report-support"></a>计划地图报表支持
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支持使用空间数据源的地图报表。 空间数据可来自 SQL Server 数据库或 ESRI 形状文件，或者来自随 Reporting Services 或报表生成器一起安装的地图库。 地图还可以显示 Bing 地图图块的背景。 报表作者可以创建空间数据或 Bing 地图图块指定为动态和在运行时检索到或为静态的嵌入报表定义中的报表。  
@@ -27,7 +27,7 @@ ms.locfileid: "48105877"
  在各报表中，报表作者可以指定是否使用安全套接字层 (SSL) 连接从图块服务器中检索图块。 为此，请在图块层属性窗格中，它们必须设置的布尔属性 usesecureconnection 设置到`true`。  
   
 > [!NOTE]  
->  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+>  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
 ## <a name="report-design-recommendations"></a>报表设计建议  
  地图报表的优秀报表设计要求报表作者在静态和动态空间数据之间权衡利弊，找出满足报表用户需要的平衡点。 嵌入的地图元素可能会显著增加报表定义的大小，但会减少查看地图报表所需的时间。 动态地图元素会减少报表定义大小，但会增加处理和查看地图所需的时间。 报表作者必须在这些对立的问题之间找到恰当的平衡点。  
@@ -51,6 +51,6 @@ ms.locfileid: "48105877"
  有关详细信息[映射&#40;报表生成器和 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

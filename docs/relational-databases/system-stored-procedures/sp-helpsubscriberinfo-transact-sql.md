@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriberinfo
@@ -17,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2836ff3e649d48db12ad6ed0b644a6ba73eedf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763275"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589801"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber =** ] **'***订阅服务器***’**  
+ [  **@subscriber =** ] **'**_订阅服务器上_  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**，表示返回所有信息。  
   
- [  **@publisher =** ] **'***发布服务器***’**  
+ [  **@publisher =** ] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为当前服务器的名称。  
   
 > [!NOTE]  
@@ -92,7 +91,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="remarks"></a>备注  
  **sp_helpsubscriberinfo**快照复制、 事务复制和合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色**db_owner**固定的数据库角色或发布的发布访问列表才能执行**sp_helpsubscriberinfo**.  
   
 ## <a name="see-also"></a>请参阅  

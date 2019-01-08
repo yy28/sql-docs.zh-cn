@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541866"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 动态游标
 动态游标只是： 动态。 它可以检测到的成员身份、 顺序和结果集打开游标后的值所做的任何更改。 例如，假设动态游标提取两个行，另一个应用程序，然后更新这些行之一并删除其他。 如果动态游标然后尝试重新提取这些行，它将找不到已删除的行，但将返回已更新的行的新值。  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- 此语句创建第二个结果集，其中第一个行集是原始结果集中的下一个行集 — 在本例中为客户表中的行集。 将光标返回到应用程序如下行集。  
+ 此语句在客户表中创建第二个结果集，第一个行集的原始结果集中的下一步的行集在这种情况下，行集。 将光标返回到应用程序如下行集。  
   
  有趣的是要注意这种方式实现的动态游标实际创建多个结果集，这使得它能够检测到原始的结果集的更改。 应用程序永远不会发现这些辅助结果集; 存在只需将显示如如果光标位于能够检测到对原始结果集进行更改。

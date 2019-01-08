@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700525"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502983"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  删除指定的计划指南*plan_guide_name*。 删除计划指南后，以后再执行以前与该计划指南匹配的查询时将不受该计划指南的影响。  
   
  DROP ALL  
- 删除当前数据库中的所有计划指南。 **N' * * * plan_guide_name*不能指定 DROP ALL 时指定。  
+ 删除当前数据库中的所有计划指南。 **N'**_plan_guide_name_不能指定 DROP ALL 时指定。  
   
  DISABLE  
  禁用由指定的计划指南*plan_guide_name*。 禁用计划指南后，以后再执行以前与该计划指南匹配的查询时将不受该计划指南的影响。  
   
  DISABLE ALL  
- 禁用当前数据库中的所有计划指南。 **N' * * * plan_guide_name*不能指定 ALL 禁用时指定。  
+ 禁用当前数据库中的所有计划指南。 **N'**_plan_guide_name_不能指定 ALL 禁用时指定。  
   
  ENABLE  
  可以通过指定的计划指南*plan_guide_name*。 启用计划指南后，可以使其与合格查询匹配。 默认情况下，计划指南在创建时启用。  
   
  ENABLE ALL  
- 启用当前数据库中的所有计划指南。 **N'***plan_guide_name***** 不能指定当指定 ENABLE ALL。  
+ 启用当前数据库中的所有计划指南。 **N'**_plan_guide_name_不能指定当指定 ENABLE ALL。  
   
 ## <a name="remarks"></a>备注  
  如果尝试删除或修改的函数、存储过程或 DML 触发器由某个计划指南引用，则不管该指南为启用状态还是禁用状态，都会导致错误。  
@@ -79,7 +79,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  计划指南中的每个版本不可[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 但是，可以执行**sp_control_plan_guide**使用中的任何版本的 DROP 或 DROP ALL 选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行**sp_control_plan_guide**上类型为 OBJECT 的计划指南 (创建指定 **@type ='** 对象 ) 需要具有对对象的 ALTER 权限的被引用的计划指南。 其他所有计划指南都需要 ALTER DATABASE 权限。  
   
 ## <a name="examples"></a>示例  

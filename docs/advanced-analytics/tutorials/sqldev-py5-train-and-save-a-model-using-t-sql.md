@@ -1,5 +1,6 @@
 ---
-title: 训练和保存使用 T-SQL 的 Python 模型 |Microsoft Docs
+title: 训练和保存使用 T-SQL 的 SQL Server 机器学习的 Python 模型
+description: Python 教程显示如何训练和保存使用 TRANSACT-SQL 在 SQL Server 上的模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
@@ -7,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032714"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645167"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>训练和保存使用 T-SQL 的 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "51032714"
 
     此存储的过程应已创建，但你可以运行下面的代码来创建它：
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -48,20 +49,10 @@ ms.locfileid: "51032714"
 
 2. 若要将使用自定义拆分数据，运行存储的过程，并键入一个整数来表示百分比的数据分配到训练集。 例如，以下语句会分配到训练集的数据的 60%。
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## <a name="add-a-name-column-in-nyctaximodels"></a>添加名称列在 nyc_taxi_models
-
-在本教程中的脚本将模型名称存储为用于生成模型的标签。 在查询中使用模型名称来选择 revoscalepy 或 SciKit 模型。
-
-1. 在 Management Studio 中，打开**nyc_taxi_models**表。
-
-2. 右键单击**列**然后单击**新列**。 将列名称设置为*名称*，类型**nchar(250)**，并允许使用空值。
-
-    ![用于存储模型名称的名称列](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>生成逻辑回归模型
 
@@ -78,7 +69,7 @@ ms.locfileid: "51032714"
 
 1.  在中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，打开一个新**查询**窗口，并运行以下语句以创建存储的过程**PyTrainScikit**。  存储的过程包含输入数据的定义，因此无需提供输入的查询。
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -117,7 +108,7 @@ ms.locfileid: "51032714"
 
 2. 运行以下 SQL 语句插入到训练的模型表 nyc\_taxi_models。
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
@@ -136,11 +127,11 @@ ms.locfileid: "51032714"
 
 此存储的过程使用的新**revoscalepy**包，这是新 Python 包。 它包含的对象、 转换和类似于针对 R 语言提供的算法**RevoScaleR**包。 
 
-通过使用**revoscalepy**，可以创建远程计算上下文、 之间移动数据计算上下文、 转换数据和使用逻辑和线性回归、 决策树之类的常用算法训练预测模型和更多。 有关详细信息，请参阅[revoscalepy 是什么？](../python/what-is-revoscalepy.md)
+通过使用**revoscalepy**，可以创建远程计算上下文、 之间移动数据计算上下文、 转换数据和使用逻辑和线性回归、 决策树之类的常用算法训练预测模型和更多。 有关详细信息，请参阅[SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)并[revoscalepy 函数引用](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)。
 
 1. 在中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，打开一个新**查询**窗口，并运行以下语句以创建存储的过程_TrainTipPredictionModelRxPy_。  由于存储的过程已包含输入数据的定义，因此不需要提供输入的查询。
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -181,7 +172,7 @@ ms.locfileid: "51032714"
 
 2. 运行存储的过程，如下所示，若要插入训练**revoscalepy**插入表模型*nyc_taxi_models*。
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);

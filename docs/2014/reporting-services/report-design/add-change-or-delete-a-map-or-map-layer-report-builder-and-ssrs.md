@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137618"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364769"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当您向报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -57,7 +57,7 @@ ms.locfileid: "48137618"
   
  “地图”窗格的底部是“地图”视图区域。 若要更改地图的中心或缩放选项，请使用箭头键来调整视图中心和使用滑块来调整缩放级别。  
   
- 有关层的详细信息，请参阅[映射&#40;报表生成器和 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
+ 有关层的详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48137618"
   
 -   从“功能区”的 **“插入”** 菜单上，单击 **“地图”**，然后单击 **“地图” Wizard.** 。通过该向导可以向现有地图添加层。 地图向导和地图层向导的大多数向导页是相同的。  
   
-     有关详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+     有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48137618"
   
 -   运行地图层向导。 此向导允许您更改使用地图层向导创建的层的选项。 在“地图”窗格中，右键单击该层，然后在工具栏上单击层向导按钮 (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
-     有关详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+     有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48137618"
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  在工具栏上单击“添加层”按钮，从下拉列表中单击要添加的层类型：“点”、“线条”或“多边形”。  
+2.  在工具栏上，单击**添加层**按钮，然后从下拉列表中，单击你想要添加的层类型：**点**，**行**，或**多边形**。  
   
     > [!NOTE]  
     >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -125,9 +125,9 @@ ms.locfileid: "48137618"
   
 1.  选择 **“地图点属性”** 对话框中的 **“常规”** 可以更改以下地图元素的标签、工具提示和标记类型选项：  
   
-    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定嵌入点选项，请使用[地图嵌入点属性对话框中，标记](../map-embedded-point-properties-dialog-box-marker.md)页。  
+    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定嵌入点的选项，请使用 [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) 页。  
   
-    -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](../map-embedded-point-properties-dialog-box-marker.md)页。  
+    -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](../map-embedded-point-properties-dialog-box-marker.md) 页。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137618"
 4.  在 **“文件名”** 中，键入 ESRI 形状文件的位置，或单击 **“浏览”** 以选择 ESRI 形状文件。  
   
     > [!NOTE]  
-    >  如果该形状文件位于本地计算机上，则将空间数据嵌入报表定义中。 若要在处理报表时动态检索数据，必须将 ESRI .shp 文件及其 .dbf 支持文件上载到报表服务器。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“如何上传文件或报表（报表管理器）”。  
+    >  如果该形状文件位于本地计算机上，则将空间数据嵌入报表定义中。 若要在处理报表时动态检索数据，必须将 ESRI .shp 文件及其 .dbf 支持文件上载到报表服务器。 有关详细信息，请参阅"如何：上传文件或报表 （报表管理器）"中[Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137618"
 2.  在工具栏上单击“添加层”按钮，然后从下拉列表中单击“图块层”。  
   
     > [!NOTE]  
-    >  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+    >  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
 3.  右键单击“地图”窗格中的该图块层，然后单击“图块属性”。  
   
@@ -283,6 +283,6 @@ ms.locfileid: "48137618"
   
 ## <a name="see-also"></a>请参阅  
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
- [报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

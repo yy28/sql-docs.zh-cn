@@ -1,22 +1,21 @@
 ---
-title: 步骤 2：验证部署捆绑 | Microsoft Docs
+title: 步骤 2：验证部署捆绑 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a9f5ef250617b445ce30624537f715be73b3d2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 163df99c54ed323d1039d50c69e812cb4c1d2286
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102117"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368779"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>步骤 2：验证部署捆绑
   在第 1 课中，创建了 Deployment Tutorial 项目，并向该项目添加了包和辅助文件；在上一任务中，您为项目生成了部署实用工具。  
@@ -58,6 +57,6 @@ ms.locfileid: "48102117"
 ## <a name="next-lesson"></a>下一课  
  [第 3 课：安装包](../integration-services/lesson-3-install-ssis-package.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

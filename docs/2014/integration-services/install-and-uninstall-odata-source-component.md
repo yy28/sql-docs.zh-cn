@@ -11,12 +11,12 @@ ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67bb3b093d63564c4eaae0144add029e569281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86aa25f148c44343a57e0e55831663155d288830
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068107"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374439"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>安装和卸载 OData 源组件
   本主题提供有关在计算机上安装或删除 OData 源组件的说明。  
@@ -28,7 +28,7 @@ ms.locfileid: "48068107"
   
 -   SQL Server Integration Services（用于在 Visual Studio 外部运行包）  
   
- 若要安装 OData 源组件，请下载[SQL Server 2014 功能包](http://go.microsoft.com/fwlink/p/?LinkId=391999)并运行以下 MSI 文件之一。  
+ 若要安装 OData 源组件，请下载[SQL Server 2014 功能包](https://go.microsoft.com/fwlink/p/?LinkId=391999)并运行以下 MSI 文件之一。  
   
 -   用于 64 位平台的 ODataSourceForSQLServer2014-amd64.msi  
   

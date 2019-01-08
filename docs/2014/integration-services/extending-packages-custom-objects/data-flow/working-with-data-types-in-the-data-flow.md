@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom data flow components [Integration Services], mapping data types
@@ -16,12 +14,12 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d018f8a82aeaabd0a0a3e325daf9fea771cb7c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41414b5a1bdfea717ddf2c22ce145596129d5234
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122509"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373029"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>在数据流中使用数据类型
   在 Integration Services 中开发自定义数据流组件时，将数据复制到数据流缓冲区和从数据流缓冲区复制数据以及转换值的过程中，需要经常使用数据类型。 本主题中的信息有助于您选择正确的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，以及在使用这些数据类型时选择正确的方法。  
@@ -157,7 +155,7 @@ ms.locfileid: "48122509"
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 方法不返回 DT_DBTIMESTAMPOFFSET 数据类型的值，并发生 <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException>。 必须将 DT_DBTIMESTAMPOFFSET 数据类型转换为可映射到托管数据类型的一种 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日期/时间数据类型。 有关可映射到托管数据类型的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日期/时间数据类型的列表，请参阅前述“Integration Services 与托管数据类型之间的映射”中的表。 有关转换数据类型的信息，请参阅 [Integration Services 数据类型](../../data-flow/integration-services-data-types.md)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   

@@ -11,24 +11,24 @@ ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b86ef40b0a796c1d340a1d7ccadcc68fcdbed74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b44064191e56dc16e212fb79794918b3023e3dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370589"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
   轴间隔用于定义坐标轴上的标签和附带的刻度线的数目。 在值轴上，轴间隔提供图表上数据点的一致度量。 但是，在类别轴上，此功能会导致显示不带轴标签的类别。 可以在轴 Interval 属性中指定所需间隔数。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 根据结果集中的数据在运行时计算间隔数。 有关轴间隔的计算方式的详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
- 本主题不适用于类别轴上的日期或时间值。 默认情况下，`DateTime`值显示为天数。 若要指定不同的日期或时间间隔，如月份或时间间隔，必须设置轴标签的格式并将该轴设置为显示 `DateTime` 类型而不是 `String` 类型的实例。 此外，必须设置 Interval 属性。 有关详细信息，请参阅[将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)。  
+ 本主题不适用于类别轴上的日期或时间值。 默认情况下，`DateTime` 值显示为天数。 若要指定不同的日期或时间间隔，如月份或时间间隔，必须设置轴标签的格式并将该轴设置为显示 `DateTime` 类型而不是 `String` 类型的实例。 此外，必须设置 Interval 属性。 有关详细信息，请参阅[将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)。  
   
  本主题不适用于饼图、圆环图、漏斗图或棱锥图，因为这些图表没有轴。  
   
 > [!NOTE]  
 >  类别轴通常是水平轴（或 x 轴）。 但对于条形图来说，类别轴是指垂直轴（或 y 轴）。  
   
- 指定不同轴间隔的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 指定不同轴间隔的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,7 +54,7 @@ ms.locfileid: "48151937"
   
 ## <a name="see-also"></a>请参阅  
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [对数据区域中的数据进行排序（报表生成器和 SSRS）](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [指定对数刻度（报表生成器和 SSRS）](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

@@ -15,12 +15,12 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d02a551826912f69755e50c7dde039482595b54a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123597"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366199"
 ---
 # <a name="about-ole-db-properties"></a>关于 OLE DB 属性
   使用者设置属性值以请求特定的对象行为。 例如，使用者使用属性以指定要由行集公开的接口。 使用者获得属性值，以确定对象（比如行集、会话或数据源对象）的功能。  
@@ -47,6 +47,6 @@ ms.locfileid: "48123597"
   
 ## <a name="see-also"></a>请参阅  
  [创建 SQL Server Native Client OLE DB 提供程序应用程序](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [属性 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [属性 (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

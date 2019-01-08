@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
@@ -21,12 +20,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7497a48d8bfd4c7af0174a51869211a266800150
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33757a58353f962bf82a57a16039f92d64a8686d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186227"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356189"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -52,7 +51,7 @@ ms.locfileid: "48186227"
  为了创建这些连接， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用了连接管理器，如下一部分所述。  
   
 ## <a name="connection-managers"></a>连接管理器  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包括`ConnectionString`在设计时; 在运行时设置的属性，创建物理连接使用连接字符串属性中的值。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用连接管理器作为连接的逻辑表示形式。 在设计时，可设置连接管理器的属性，以描述当包运行时 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的物理连接。 例如，连接管理器包含在设计时设置的 `ConnectionString` 属性；在运行时，使用该连接字符串属性中的值创建物理连接。  
   
  包可以使用一种连接管理器类型的多个实例，您可以在每个实例上设置这些属性。 在运行时，一种连接管理器类型的每个实例创建具有不同属性的连接。  
   
@@ -97,9 +96,9 @@ ms.locfileid: "48186227"
   
 |类型|Description|主题|  
 |----------|-----------------|-----------|  
-|ORACLE|连接到 Oracle\<版本信息 > 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
-|SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](http://go.microsoft.com/fwlink/?LinkId=262016)。|  
-|TERADATA|连接到 Teradata\<版本信息 > 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|连接到 Oracle\<版本信息 > 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://go.microsoft.com/fwlink/?LinkId=262016)。|  
+|TERADATA|连接到 Teradata\<版本信息 > 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自定义连接管理器  
  您还可以编写自定义连接管理器。 有关详细信息，请参阅 [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)。  
@@ -111,14 +110,14 @@ ms.locfileid: "48186227"
   
 ## <a name="related-content"></a>相关内容  
   
--   technet.microsoft.com 上的视频 [利用 Microsoft Attunity Connector for Oracle 来增强包性能](http://technet.microsoft.com/sqlserver/gg598963.aspx)  
+-   technet.microsoft.com 上的视频 [利用 Microsoft Attunity Connector for Oracle 来增强包性能](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 连接](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
+-   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 连接](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
   
--   blogs.msdn.com 上的博客文章 [从 SSIS 连接到 MySQL](http://go.microsoft.com/fwlink/?LinkId=217669)。  
+-   blogs.msdn.com 上的博客文章 [从 SSIS 连接到 MySQL](https://go.microsoft.com/fwlink/?LinkId=217669)。  
   
--   msdn.microsoft.com 上的技术文章 [在 SQL Server Integration Services 中提取和加载 SharePoint 数据](http://go.microsoft.com/fwlink/?LinkId=247826)。  
+-   msdn.microsoft.com 上的技术文章 [在 SQL Server Integration Services 中提取和加载 SharePoint 数据](https://go.microsoft.com/fwlink/?LinkId=247826)。  
   
--   support.microsoft.com 上的技术文章 [在 SSIS 中使用 Oracle 连接管理器时收到“DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER”错误消息](http://go.microsoft.com/fwlink/?LinkId=233696)。  
+-   support.microsoft.com 上的技术文章[在 SSIS 中使用 Oracle 连接管理器时收到“DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER”错误消息](https://go.microsoft.com/fwlink/?LinkId=233696)。  
   
   

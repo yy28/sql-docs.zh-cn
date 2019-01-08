@@ -19,12 +19,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8990539dcee3be8eb8101050a9f9f11d880fcd7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138667"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350393"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 驱动程序性能事件探查
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序可以对两种类型的性能数据进行事件探查：  
@@ -81,8 +81,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|SQL_PERF_START 之后 INSERT、DELETE 或 UPDATE 语句的数量。|  
 |SQLSelects|在 SQL_PERF_START 之后处理的 SELECT 语句的数量。|  
 |SQLSelectRows|在 SQL_PERF_START 之后选择的行数。|  
-|中的|SQL_PERF_START 之后用户事务的数量（包括回滚的数量）。 如果使用 SQL_AUTOCOMMIT_ON 运行 ODBC 应用程序，则每个命令都视为一个事务。|  
-|SQLPrepares|数[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之后调用。|  
+|事务|SQL_PERF_START 之后用户事务的数量（包括回滚的数量）。 如果使用 SQL_AUTOCOMMIT_ON 运行 ODBC 应用程序，则每个命令都视为一个事务。|  
+|SQLPrepares|数[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之后调用。|  
 |ExecDirects|数**SQLExecDirect** SQL_PERF_START 之后调用。|  
 |SQLExecutes|数**SQLExecute** SQL_PERF_START 之后调用。|  
 |CursorOpens|SQL_PERF_START 之后驱动程序打开服务器游标的次数。|  

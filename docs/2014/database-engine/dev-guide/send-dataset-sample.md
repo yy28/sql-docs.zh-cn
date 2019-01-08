@@ -12,22 +12,22 @@ ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c736cbf5a5c6fd98f3635224c21c785468ce932d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f617c7a69925f4ddb4bf6a2c0ef34c2e43f03a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105697"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372789"
 ---
 # <a name="send-dataset-sample"></a>发送数据集示例
   发送 `DataSet` 示例说明如何在服务器端基于公共语言运行时 (CLR) 的存储过程中将基于 ADO.NET 的 `DataSet` 作为结果集返回到客户端。 例如，当此类存储过程使用查询结果填充 `DataSet`，然后操作该 `DataSet` 中包含的数据时，此操作很有用。 另外，在存储过程从头创建并填充 `DataSet` 时，此操作也很有用。该示例由 `DataSetUtilities` 和 `TestSendDataSet` 这两个类构成。 针对 `SendDataSet` 类的方法 `DataSetUtilities` 实现了将 `DataSet` 实例的内容传输到客户端的通用方式。 对 `DoTest` 类定义的 `TestSendDataSet` 方法通过创建 `SendDataSet` 并用 `DataSet` Transact-SQL 存储过程中的数据进行填充来验证 `uspGetTwoBOMTestData` 方法是否起作用。 `uspGetTwoBOMTestData` 两次运行 Transact-SQL 存储过程 `uspGetBillOfMaterials`，以通过递归方式查询两种产品的物料清单，这两种产品已被指定为 `usp_GetTwoBOMTestData` 存储过程的参数。 通常在填充数据集后，在调用 `SendDataSet` 前会对数据进行修改，然后才将数据集中的数据作为结果集传输到客户端。 简单地说，此示例返回的数据未经修改。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](http://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48105697"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   

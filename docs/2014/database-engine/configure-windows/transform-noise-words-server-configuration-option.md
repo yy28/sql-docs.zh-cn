@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
@@ -17,12 +16,12 @@ ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b79ebeaddb028b901b7f59397c29b18c6b3dbeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068867"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639458"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words 服务器配置选项
   使用`transform noise words`服务器配置选项来禁止显示错误消息如果干扰词，即[非索引字](../../relational-databases/search/full-text-search.md)，导致全文查询返回零行的布尔操作。 此选项对于使用其布尔操作或 NEAR 操作包括干扰词的 CONTAINS 谓词的全文查询非常有用。 下表中列出了该选项的可能值。  
@@ -33,7 +32,7 @@ ms.locfileid: "48068867"
 |1|转换干扰词（或非索引字）。 它们将被忽略，并且将对其余查询进行计算。<br /><br /> 如果用邻近词指定了干扰词，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除它们。 例如，干扰词 `is` 将从 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`删除，并且将搜索查询转换为 `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`。 请注意， `CONTAINS(<column_name>, 'NEAR(hello,is)')` 将转换为简单 `CONTAINS(<column_name>, hello)` ，因为仅存在一个有效搜索词。|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>转换干扰词设置的影响  
- 本部分演示了查询包含干扰词的行为"`the`"，在替代设置下`transform noise words`。  假定示例全文查询字符串将对包含以下数据的表行运行： `[1, "The black cat"]`。  
+ 本节将基于 `transform noise words` 的替代设置，说明包含干扰词“`the`”的查询的行为。  假定示例全文查询字符串将对包含以下数据的表行运行： `[1, "The black cat"]`。  
   
 > [!NOTE]  
 >  所有此类应用场景都可以生成干扰词警告。  

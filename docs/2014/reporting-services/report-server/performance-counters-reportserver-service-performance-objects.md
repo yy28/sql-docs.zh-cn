@@ -13,12 +13,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d7acb87440377516e287e8ba077242953f13adc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366699"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器
   本主题介绍以下 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 性能对象的性能计数器：  
@@ -30,7 +30,7 @@ ms.locfileid: "48141703"
 > [!NOTE]  
 >  性能对象用于监视本地报表服务器上的事件。 如果是在扩展部署中运行报表服务器，则只对当前服务器（而不是整个扩展部署）进行计数。  
   
- Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档。 [运行时分析](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档。 [运行时分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
  本主题内容：  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48141703"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式 |本机模式。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service 性能计数器（本机模式报表服务器）  
- `ReportServer:Service` 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象会出现一次为每个[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]实例上，该计算机，并且可以添加或删除每个实例的性能对象中的计数器。 默认实例的计数器以 `ReportServer:Service` 格式显示。 计数器以命名的实例显示为采用格式`ReportServer$<` *instance_name*`>:Service`。  
+ `ReportServer:Service` 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象对计算机上的每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 实例显示一次，可以在每个实例的性能对象中添加或删除计数器。 默认实例的计数器以 `ReportServer:Service` 格式显示。 计数器以命名的实例显示为采用格式`ReportServer$<` *instance_name*`>:Service`。  
   
  `ReportServer:Service`性能对象是中的新增功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，并提供了与 Internet 信息服务 (IIS) 中包含的计数器的子集和[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在以前版本的[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 这些新计数器是特定于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，用于跟踪报表服务器中与 HTTP 相关的事件，例如请求、连接和登录尝试。 此外，此性能对象还包括用于跟踪内存管理事件的计数器。  
   
- 下表列出了中包含的计数器`ReportServer:Service`性能对象。  
+ 下表列出了 `ReportServer:Service` 性能对象中包含的计数器。  
   
  ![与 PowerShell 相关的内容](../media/rs-powershellicon.jpg "PowerShell related content") 下面的 Windows PowerShell 脚本将返回 CounterSetName 的性能计数器列表  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48141703"
 |`Logon Attempts/sec`|登录尝试的频率。|  
 |`Logon Successes Total`|RSWindows 身份验证类型的成功登录次数。 RSWindows 身份验证类型包括 RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos 和 RSWindowsB asic。 值为零 (0) 表示自定义身份验证。|  
 |`Logon Successes/sec`|登录成功率。|  
-|`Memory Pressure State`|以下从 1-5 的数字，指示服务器的当前内存状态：<br /><br /> 1：没有压力<br /><br /> 2：低压力<br /><br /> 3：中等压力<br /><br /> 4：高压力<br /><br /> 5：过度压力|  
+|`Memory Pressure State`|以下从 1-5 的数字，指示服务器的当前内存状态：<br /><br /> 1：无压力<br /><br /> 2：低压力<br /><br /> 3：中等压力<br /><br /> 4：高压力<br /><br /> 5：过度压力|  
 |`Memory Shrink Amount`|服务器请求缩小使用中内存的字节数。|  
 |`Memory Shrink Notifications/sec`|服务器上一秒内发出的缩小使用中内存的通知数。 该值表示服务器经历内存压力的频率。|  
 |`Requests Disconnected`|由于通信故障而断开连接的请求数。|  

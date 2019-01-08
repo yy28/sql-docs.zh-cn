@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169137"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521255"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
 
@@ -40,8 +40,8 @@ ms.locfileid: "49169137"
 |**runtime_stats_interval_id**|**bigint**|外键。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
 |**wait_category**|**tinyint**|等待类型进行分类使用下表，然后等待时间汇总跨这些等待类别。 不同的等待类别需要不同的后续分析，以解决此问题，但等待类型从同一类别潜在顾客到类似的故障排除体验，并等待除了提供受影响的查询是缺少的信息以完成此类调查的大部分成功。|
 |**wait_category_desc**|**nvarchar(128)**|有关的等待类别字段的文本说明，请查看下表。|
-|**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0 – 常规执行 （成功完成）<br /><br /> 3 – 客户端启动已中止执行<br /><br /> 4-异常已中止执行|  
-|**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0 – 常规<br /><br /> 3 – 已中止<br /><br /> 4-异常|  
+|**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0-常规执行 （成功完成）<br /><br /> 3-客户端启动已中止执行<br /><br /> 4-异常已中止执行|  
+|**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3-已中止<br /><br /> 4-异常|  
 |**total_query_wait_time_ms**|**bigint**|总`CPU wait`聚合间隔内的查询计划的时间，并等待类别 （以毫秒为单位报告）。|
 |**avg_query_wait_time_ms**|**float**|平均等待每次执行 （以毫秒为单位报告） 在聚合时间间隔和等待类别中的查询计划的持续时间。|
 |**last_query_wait_time_ms**|**bigint**|上次等待持续时间内聚合间隔的查询计划，然后等待类别 （以毫秒为单位报告）。|
@@ -82,7 +82,7 @@ ms.locfileid: "49169137"
 
 **编译**目前不支持等待类别。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
  需要**VIEW DATABASE STATE**权限。  
   

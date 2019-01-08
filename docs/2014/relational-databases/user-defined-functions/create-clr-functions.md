@@ -13,12 +13,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33aaebe7172ac637354527bb9777afe5eb9a0a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173409"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370809"
 ---
 # <a name="create-clr-functions"></a>创建 CLR 函数
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建的程序集中进行编程的数据库对象。 可以充分利用公共语言运行时所提供的丰富的编程模式的数据库对象包括聚合函数、函数、存储过程、触发器以及类型。  
@@ -53,7 +53,7 @@ ms.locfileid: "48173409"
 -   [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)  
   
 ## <a name="accessing-native-code"></a>访问本机代码  
- 通过使用托管代码中的 PInvoke，可以使用 CLR 函数来访问本机（非托管）代码，如用 C 或 C++ 编写的代码（有关详细信息，请参阅 [从托管代码调用本机函数](http://go.microsoft.com/fwlink/?LinkID=181929) ）。 这样，您就可以重新将旧代码用作 CLR UDF，或在本机代码中使用性能关键的 UDF。 这要求使用 UNSAFE（非安全）程序集。 有关使用 UNSAFE 程序集的注意事项，请参阅 [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) 。  
+ 通过使用托管代码中的 PInvoke，可以使用 CLR 函数来访问本机（非托管）代码，如用 C 或 C++ 编写的代码（有关详细信息，请参阅 [从托管代码调用本机函数](https://go.microsoft.com/fwlink/?LinkID=181929) ）。 这样，您就可以重新将旧代码用作 CLR UDF，或在本机代码中使用性能关键的 UDF。 这要求使用 UNSAFE（非安全）程序集。 有关使用 UNSAFE 程序集的注意事项，请参阅 [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) 。  
   
 ## <a name="see-also"></a>请参阅  
  [创建用户定义函数（数据库引擎）](create-user-defined-functions-database-engine.md)   

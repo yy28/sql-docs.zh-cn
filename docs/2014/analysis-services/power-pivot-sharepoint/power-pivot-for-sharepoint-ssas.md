@@ -11,12 +11,12 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1028dc0f73c6acb9832ce83bc5fad82e11322a13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209856"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365819"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint 是一个在 SharePoint 模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 PowerPivot for SharePoint 对 SharePoint 场中的 PowerPivot 数据提供服务器托管。 PowerPivot 数据是使用以下值之一生成的分析数据模型：  
@@ -89,7 +89,7 @@ ms.locfileid: "48209856"
  [许可证拓扑和成本示例针对 SQL Server 2014 自助商业智能](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>请参阅  
- [PowerPivot 规划和部署](http://go.microsoft.com/fwlink/?linkID=220972)   
- [用于 PowerPivot for SharePoint 灾难恢复](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [PowerPivot 规划和部署](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [用于 PowerPivot for SharePoint 灾难恢复](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c451111875b2e1a638f49ad710b7456d3ba5eb17
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4b188554ddbfba6d70ba1d869987aa96efd42f83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148433"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361580"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>断开 Analysis Services 服务器上用户和会话的连接
   作为工作负荷管理的一部分， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可能需要结束用户活动。 可以通过取消会话和连接来完成这一任务。 会话可以在运行查询时隐式自动形成，也可以在创建会话时由管理员显式命名。 连接是开放的管道，可以通过连接运行查询。 会话和连接均可在处于活动状态时结束。 例如，如果会话处理时间过长，或者对正在执行的命令是否被正确写入产生了怀疑，管理员可能要结束对会话的处理。  
@@ -49,7 +49,7 @@ ms.locfileid: "50148433"
 1.  将以下语法粘贴到 MDX 查询窗口中，用从上一步中复制的有效值替换 ConnectionID、SessionID 或 SPID 占位符。  
   
     ```  
-    <Cancel xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Cancel xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   
        <ConnectionID>111</ConnectionID>  
        <SessionID>222</SessionID>  
@@ -72,7 +72,7 @@ ms.locfileid: "50148433"
   
  有关本主题中引用的 XMLA 的详细信息，请参阅[执行方法 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 和[取消元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理连接和会话 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [BeginSession 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
  [EndSession 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   

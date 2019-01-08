@@ -15,12 +15,12 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220897"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590611"
 ---
 # <a name="expression-dialog-box-report-builder"></a>“表达式”对话框（报表生成器）
   使用**表达式**对话框可以编写[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]表达式的报表项属性。 您可以使用表达式来设置多个属性，包括颜色、字体和边框。 在运行时，报表处理器对表达式进行计算，然后用结果替代属性的值。  
@@ -30,11 +30,11 @@ ms.locfileid: "48220897"
 ## <a name="expression-constructs"></a>表达式构造  
  表达式以等号 (=) 开头，可以包含常量、文字、运算符以及对内置字段、内置集合、内置函数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 运行库函数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 公共语言运行时类和自定义函数的引用。 以下列表介绍了可添加到表达式中的类别和值。  
   
- **设置表达式：***\<属性名称 >*   
+ **设置表达式：**_\<属性名称 >_  
  要为其定义表达式的属性的名称。 此外，还可以在“属性”窗格中按名称设置此属性。  
   
  **常量**  
- 为基于常量的属性提供了对该属性有效的预定义值列表。 例如，基于颜色的属性会显示有效的颜色名称。 对于布尔数据类型的属性，值为`True`和`False`。  
+ 为基于常量的属性提供了对该属性有效的预定义值列表。 例如，基于颜色的属性会显示有效的颜色名称。 对于一个数据类型是布尔型的属性来说，值为 `True` 和 `False`。  
   
  并不是所有支持表达式的项都可设置为常量。 如果某属性不能设置为常量值，说明窗格将会提供此信息。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48220897"
  **Parameters**  
  提供报表参数的列表。  
   
- **字段 (** *\<所选数据集 >* **)**  
+ **字段 (** _\<所选数据集 >_ **)**  
  显示在数据集类别中选择的数据集的字段列表。 双击某字段可将该字段复制到“表达式”框。  
   
  **数据集**  
@@ -83,12 +83,12 @@ ms.locfileid: "48220897"
 ## <a name="see-also"></a>请参阅  
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [设置数字和日期格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [设置数字和日期格式（报表生成器和 SSRS）](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [参数集合引用（报表生成器和 SSRS）](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [组表达式示例（报表生成器和 SSRS）](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [筛选器公式示例&#40;报表生成器和 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [筛选器公式示例（报表生成器和 SSRS）](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [数据集字段集合引用&#40;报表生成器和 SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [聚合函数参考&#40;报表生成器和 SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [聚合函数引用（报表生成器和 SSRS）](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [选择颜色对话框&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b27c1b9d9086f36387afb5686ebc1a945b8d7b56
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51017694"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370562"
 ---
 # <a name="about-the-sql-server-database-engine"></a>关于 SQL Server 数据库引擎
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件是用于存储、处理数据和保证数据安全的核心服务。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供受控的访问和快速事务处理，以满足企业中要求极高、大量使用数据的应用程序的要求。  
@@ -34,7 +34,7 @@ ms.locfileid: "51017694"
   
 -   全文搜索 - 是一个可选组件  
   
--   Data Quality Services — 一个可选组件  
+-   Data Quality Services - 一个可选组件  
   
     > [!NOTE]  
     >  在此版本中，在安装程序中选中“Data Quality Services”复选框不会安装 Data Quality Services (DQS) 服务器。 您必须执行其他安装后步骤以安装 DQS 服务器。 有关详细信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
@@ -56,7 +56,7 @@ ms.locfileid: "51017694"
 -   文档组件  
   
 > [!NOTE]  
->  默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 若要安装示例数据库和示例代码，请参阅 [CodePlex 网站](http://go.microsoft.com/fwlink/?LinkId=87843)。  
+>  默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 若要安装示例数据库和示例代码，请参阅 [CodePlex 网站](https://go.microsoft.com/fwlink/?LinkId=87843)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

@@ -11,12 +11,12 @@ ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077827"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365041"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支持的身份验证方法
   从客户端应用程序到 Analysis Services 实例的连接需要 Windows 身份验证（集成）。 您可以使用以下任意方法提供 Windows 用户标识：  
@@ -33,7 +33,7 @@ ms.locfileid: "48077827"
   
  请注意，不支持声明身份验证。 不能使用 Windows 声明令牌访问 Analysis Services。 Analysis Services 客户端库仅使用 Windows 安全原则。 如果您的 BI 解决方案包括声明标识，您需要为每个用户提供 Windows 标识影子帐户，或者使用存储凭据访问 Analysis Services 数据。  
   
- 有关 BI 和 Analysis Services 身份验证流的详细信息，请参阅 [Microsoft BI 身份验证和标识委托](http://go.microsoft.com/fwlink/?LinkID=286576)。  
+ 有关 BI 和 Analysis Services 身份验证流的详细信息，请参阅 [Microsoft BI 身份验证和标识委托](https://go.microsoft.com/fwlink/?LinkID=286576)。  
   
 ##  <a name="bkmk_auth"></a> 了解您的身份验证选择  
  连接到 Analysis Services 数据库需要 Windows 用户或组标识和关联的权限。 该标识可能是需要查看报表的任何人使用的常规用途登录名，但是更可能包含单个用户的标识。  
@@ -63,7 +63,7 @@ ms.locfileid: "48077827"
   
  EffectiveUserName 是用于将标识信息传递给 Analysis Services 的连接字符串属性。 PowerPivot for SharePoint 使用它在使用日志中记录用户活动。 Excel Services 和 PerformancePoint Services 可使用它检索 SharePoint 中的工作簿或仪表板使用的数据。 还可以在对 Analysis Services 实例执行操作的自定义应用程序或脚本中使用它。  
   
- 有关在 SharePoint 中使用 EffectiveUserName 的详细信息，请参阅 [在 SharePoint Server 2010 中使用 Analysis Services EffectiveUserName](http://go.microsoft.com/fwlink/?LinkId=311905)。  
+ 有关在 SharePoint 中使用 EffectiveUserName 的详细信息，请参阅 [在 SharePoint Server 2010 中使用 Analysis Services EffectiveUserName](https://go.microsoft.com/fwlink/?LinkId=311905)。  
   
  **基本身份验证和匿名用户**  
   
@@ -71,18 +71,18 @@ ms.locfileid: "48077827"
   
  对于匿名身份验证，您可以将匿名用户标识设置为某一特定的 Windows 用户帐户（默认为 IUSR_GUEST）或者某一应用程序池标识。 该匿名用户帐户将用于 Analysis Services 连接，并且必须对 Analysis Services 实例具有数据访问权限。 使用此方法时，在连接上只使用与匿名帐户关联的用户标识。 如果您的应用程序要求额外标识管理，您需要选择其他方法或使用您提供的标识管理解决方案进行补充。  
   
- 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+ 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
  **Stored Credentials**  
   
  大多数中间层应用程序服务包括存储用户名和密码的功能以便以后从下级数据存储区检索数据，例如 Analysis Services 或 SQL Server 关系引擎。 这样，存储的凭据就提供了检索数据的第五种方法。 此方法的不足之处在于引入了与保持用户名和密码最新关联的维护开销以及在连接上使用单个标识。 如果您的解决方案需要原始调用方的标识，存储的凭据将无法满足要求。  
   
- 有关存储的凭据的详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和[将 Excel Services 与 SharePoint Server 2013 中的 Secure Store Service 一起使用](http://go.microsoft.com/fwlink/?LinkID=309869)。  
+ 有关存储的凭据的详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和[将 Excel Services 与 SharePoint Server 2013 中的 Secure Store Service 一起使用](https://go.microsoft.com/fwlink/?LinkID=309869)。  
   
 ## <a name="see-also"></a>请参阅  
- [将模拟用于传输安全](http://go.microsoft.com/fwlink/?LinkId=311727)   
+ [将模拟用于传输安全](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [针对 Kerberos 约束委派对 Analysis Services 进行配置](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Kerberos 约束委派配置 Analysis Services](configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [针对 Analysis Services 实例的 SPN 注册](spn-registration-for-an-analysis-services-instance.md)   
  [连接到 Analysis Services](connect-to-analysis-services.md)  
   

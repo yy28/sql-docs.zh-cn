@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55feda84f7c64b4d33229ac6fe58b6b2d782b7a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 728e404c5f64b137b8260da82846d97c8647a430
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671138"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215443"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 列 - 使用执行时数据参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "51671138"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建该示例使用的表。  
+ 执行第一个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以创建该示例使用的表。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 执行第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以删除该示例使用的表。  
+ 执行第三个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以删除该示例使用的表。  
   
 ```  
 use AdventureWorks  

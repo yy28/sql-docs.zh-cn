@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,19 +12,19 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116999"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360881"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>选择目标（SQL Server 导入和导出向导）
   使用**选择目标**页后，可以指定你想要复制的数据的目标。  
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关用于启动向导，以及若要成功运行该向导所需的权限选项，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
- 用途[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导，将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="static-options"></a>静态选项  
  **目标**  
@@ -47,10 +46,10 @@ ms.locfileid: "48116999"
  指定包是否应使用 Microsoft Windows 身份验证登录数据库。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
  **Use SQL Server Authentication**  
- 指定包是否应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证来登录到数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
+ 指定包是否应使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
  **用户名**  
- 指定数据库连接的用户名称，在使用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，指定数据库连接的用户名。  
   
  **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
@@ -58,7 +57,7 @@ ms.locfileid: "48116999"
  **“数据库”**  
  从指定的实例上的数据库列表中选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或单击创建新的数据库**新建**。  
   
- **“刷新”**  
+ **刷新**  
  通过单击“刷新”，还原可用数据库的列表。  
   
  **新建**  
@@ -110,7 +109,7 @@ ms.locfileid: "48116999"
  选择目标工作簿使用的 Excel 版本。  
   
 > [!NOTE]  
->  当你将数据导出到[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]目标，则向导将使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Excel 目标组件。 有关使用注意事项和已知的问题的信息，请参阅[Excel 目标](../data-flow/excel-destination.md)。  
+>  将数据导出到 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 目标时，向导将使用“ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 目标”组件。 有关使用注意事项和已知的问题的信息，请参阅[Excel 目标](../data-flow/excel-destination.md)。  
   
 ### <a name="destination--microsoft-access"></a>目标 = Microsoft Access  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48116999"
  当工作组信息文件与数据库关联时，为数据库连接提供相应的用户密码。 但是，如果对于所有用户都使用一个密码保护数据库，则必须在 **“数据链接属性”** 对话框（可通过 **“高级”** 按钮访问）中提供此值。  
   
  **高级**  
- 通过使用“数据链接属性”对话框指定高级选项，例如数据库密码或非默认工作组信息文件。 有关 OLE DB 访问接口属性的详细信息，请在 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)的“Data Access”（数据访问）部分中进行搜索。  
+ 通过使用“数据链接属性”对话框指定高级选项，例如数据库密码或非默认工作组信息文件。 有关 OLE DB 访问接口属性的详细信息，请在 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)的“Data Access”（数据访问）部分中进行搜索。  
   
   

@@ -20,16 +20,16 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d64f536b88d3b6fd8f10fc36b75cd3395c818af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814975"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590278"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLPrepare**做好执行 SQL 字符串。  
@@ -63,13 +63,13 @@ SQLRETURN SQLPrepare(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02|选项值已更改|指定的语句属性实现运行情况，由于无效，因此已暂时替换一个相近的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值是否为有效*StatementHandle*直到关闭游标。 可以更改的语句属性有： sql_attr_concurrency 设置 SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|指定的语句属性实现运行情况，由于无效，因此已暂时替换一个相近的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值是否为有效*StatementHandle*直到关闭游标。 可以更改的语句属性有：SQL_ATTR_CONCURRENCY 设置 SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
 |21S01|插入值列表与列列表不匹配|\**StatementText*包含**插入**语句和要插入的值的数目不匹配的派生表的程度。|  
 |21S02|派生表等级与列列表不匹配|\**StatementText*包含**CREATE VIEW**语句，并指定名称的数量不是作为查询规范所定义的派生表的相同程度。|  
 |22018|转换指定的字符值无效|**StatementText*包含 SQL 语句包含的文字或参数，而与关联的表的列的数据类型不兼容的值。|  
 |22019|无效的转义字符|自变量*StatementText*包含**等**谓词以及**转义**中**其中**子句和转义符的长度之后的字符**转义**不是等于 1。|  
-|22025|无效的转义序列|自变量*StatementText*包含"**等***模式值***转义***转义符*"中**其中**子句和后面的模式值中的转义字符的字符是"%"既不"_"。|  
+|22025|无效的转义序列|自变量*StatementText*包含"**等**_模式值_**转义**_转义符_"中**其中**子句和后面的模式值中的转义字符的字符是"%"既不"_"。|  
 |24000|游标状态无效|(DM) 上打开了游标*StatementHandle*，并**SQLFetch**或**SQLFetchScroll**已调用一样。<br /><br /> 在打开游标的*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**尚未调用。|  
 |34000|无效的游标名称|\**StatementText*包含定位**删除**或定位**更新**，且正在准备的语句所引用的游标未打开。|  
 |3D000|目录名称无效|中指定的目录名称*StatementText*无效。|  
@@ -102,7 +102,7 @@ SQLRETURN SQLPrepare(
 > [!NOTE]  
 >  如果应用程序使用**SQLPrepare**准备并**SQLExecute**提交**提交**或**回滚**语句，它不是DBMS 产品之间互操作。 若要提交或回滚事务，调用**SQLEndTran**。  
   
- 该驱动程序可以修改该语句使用的 SQL 数据源使用的窗体，然后将它提交到准备的数据源。 具体而言，该驱动程序将修改用于定义某些功能的 SQL 语法的转义序列。 (有关 SQL 语句语法的说明，请参阅[ODBC 中的转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)并[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。)驱动程序语句句柄是类似于语句标识符中的嵌入式 SQL 代码。 如果数据源支持语句标识符，该驱动程序可以向数据源发送语句标识符和参数值。  
+ 该驱动程序可以修改该语句使用的 SQL 数据源使用的窗体，然后将它提交到准备的数据源。 具体而言，该驱动程序将修改用于定义某些功能的 SQL 语法的转义序列。 (有关 SQL 语句语法的说明，请参阅[ODBC 中的转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)和[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。)驱动程序语句句柄是类似于语句标识符中的嵌入式 SQL 代码。 如果数据源支持语句标识符，该驱动程序可以向数据源发送语句标识符和参数值。  
   
  语句已准备就绪后，应用程序使用的语句句柄来指代中更高版本的函数调用的语句。 可以通过调用重新执行已准备的语句与语句句柄相关联**SQLExecute**直到应用程序释放通过调用语句**SQLFreeStmt** SQL_DROP 选项或直到调用中使用的语句句柄**SQLPrepare**， **SQLExecDirect**，或一个目录函数 (**SQLColumns**， **SQLTables**，依此类推)。 一旦应用程序准备某个语句，它可以请求结果集的格式的信息。 对于某些实现，调用**SQLDescribeCol**或**SQLDescribeParam**后**SQLPrepare**可能不如之后调用该函数**SQLExecute**或**SQLExecDirect**。  
   

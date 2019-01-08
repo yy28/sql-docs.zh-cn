@@ -1,5 +1,5 @@
 ---
-title: 启用或禁用远程的 SQL Server 机器学习的 R 包管理 |Microsoft Docs
+title: 启用或禁用远程 R 包管理的 SQL Server 机器学习服务
 description: 启用 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内） 上的远程 R 包管理
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a38bd844e56dca4c5096156bde3b544a44038d49
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 5528fc63dd7b7d7382eb9aa7931dcf5f8942da19
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753505"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645417"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>启用或禁用 SQL Server 的远程包管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "50753505"
 
     此外可以在如下所示的 sys.database_principals 上运行的查询：
 
-    ```SQL
+    ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
         pr.authentication_type_desc, pe.state_desc,   
         pe.permission_name, s.name + '.' + o.name AS ObjectName  

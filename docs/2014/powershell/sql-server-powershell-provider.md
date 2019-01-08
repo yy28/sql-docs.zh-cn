@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
@@ -18,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 482353df1cde22d11cb44d53611353ceb347e102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153547"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752375"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序用类似于文件系统路径的路径公开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。 可以使用路径来查找对象，然后使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型中的方法来针对对象执行操作。  

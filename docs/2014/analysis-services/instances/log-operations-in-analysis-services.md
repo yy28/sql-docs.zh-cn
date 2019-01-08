@@ -11,17 +11,17 @@ ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198427"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363749"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
-  Analysis Services 实例将会把服务器通知、错误和警告记录到 msmdsrv.log 文件中 – 你安装的每个实例都有该文件。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](http://support.microsoft.com/kb/2965035)中查看整个更改列表。  
+  Analysis Services 实例中，到 msmdsrv.log 文件-一个用于在安装每个实例都将记录服务器通知、 错误和警告。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](https://support.microsoft.com/kb/2965035)中查看整个更改列表。  
   
- 除了内置日志记录功能，许多管理员和开发人员还使用 Analysis Services 社区提供的工具来收集有关服务器操作（例如 **ASTrace**）的数据。 查看 [Microsoft SQL Server 社区示例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) ，获得下载链接。  
+ 除了内置日志记录功能，许多管理员和开发人员还使用 Analysis Services 社区提供的工具来收集有关服务器操作（例如 **ASTrace**）的数据。 请参阅[Microsoft SQL Server 社区示例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)有关下载链接。  
   
  本主题包含以下各节：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48198427"
 |关系数据库中的 OlapQueryLog 表|查询日志|为使用情况优化向导收集输入|否|  
 |SQLDmp\<guid >.mdmp 文件|崩溃和异常|深度故障排除|否|  
   
- 我们强烈建议使用以下链接查看此主题中未涉及的其他信息资源： [来自 Microsoft 支持的初始数据集合提示](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
+ 我们强烈建议使用以下链接查看此主题中未涉及的其他信息资源：[初始数据集合提示从 Microsoft 支持部门](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
 ##  <a name="bkmk_general"></a> 日志文件配置设置的一般信息  
  你可在 msmdsrv.ini 服务器配置文件中找到每个日志的部分，此文件位于 \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config 文件夹。 请参阅[Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)有关编辑文件的说明。  
@@ -63,9 +63,9 @@ ms.locfileid: "48198427"
   
  此日志文件会在每次重启服务时被清空。 在以前版本中，管理员有时会重启服务，其唯一目的是在其变得过大不能使用前清空日志文件。 现在已没有必要。 SQL Server 2012 SP2 和更高版本中引入的配置设置使你可控制日志文件及其历史记录的大小：  
   
--   `MaxFileSizeMB` 指定最大日志文件大小 (MB)。 默认值为 256。 有效替换值必须是正整数。 当`MaxFileSizeMB`是达到，Analysis Services 将重命名为 msmdsrv {current timestamp}.log 文件，当前文件并启动新的 msmdsrv.log 文件。  
+-   `MaxFileSizeMB` 指定最大日志文件大小 (MB)。 默认值为 256。 有效替换值必须是正整数。 达到 `MaxFileSizeMB` 时，Analysis Services 将当前文件重命名为 msmdsrv{current timestamp}.log 文件，然后启动新的 msmdsrv.log 文件。  
   
--   `MaxNumberFiles` 指定较旧的日志文件保留的期。 默认值为 0（禁用）。 你可将其更改为正整数以保持日志文件的版本。 当`MaxNumberFiles`是达到，Analysis Services 删除具有名称中最旧时间戳的文件。  
+-   `MaxNumberFiles` 指定较旧的日志文件保留的期。 默认值为 0（禁用）。 你可将其更改为正整数以保持日志文件的版本。 达到 `MaxNumberFiles` 时，Analysis Services 删除名称具有最旧时间戳的文件。  
   
  要使用这些设置，请进行以下操作：  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48198427"
   
  允许查询日志为基于使用情况的优化向导积累足够数据。 如果查询量是周期性的，则捕获足够流量以包括具有代表性的一组数据。 有关如何运行向导的说明，请参见 [基于使用情况的优化向导](https://msdn.microsoft.com/library/ms189706.aspx) 。  
   
- 有关查询日志配置的详细信息，请参见 [配置 Analysis Services 查询日志](http://technet.microsoft.com/library/Cc917676) 。 虽然文件很旧，但最新版本中的查询日志配置并未改变，其包含的信息仍适用。  
+ 有关查询日志配置的详细信息，请参见 [配置 Analysis Services 查询日志](https://technet.microsoft.com/library/Cc917676) 。 虽然文件很旧，但最新版本中的查询日志配置并未改变，其包含的信息仍适用。  
   
 ##  <a name="bkmk_mdmp"></a> Mini dump (.mdmp) 文件  
  转储文件捕获数据用于分析异常事件。 Analysis Services 自动生成迷你转储 (.mdmp) 以应对服务器崩溃、异常和一些配置错误。 已启用此功能，但不能自动发送崩溃报告。  
@@ -149,11 +149,11 @@ ms.locfileid: "48198427"
   
  **配置崩溃报告**  
   
- 除非 Microsoft 支持另有指示，否则大多数管理员使用默认设置。 这篇较旧的知识库文章仍用于提供有关如何配置转储文件的说明： [如何配置 Analysis Services 以生成内存转储文件](http://support.microsoft.com/kb/919711)。  
+ 除非 Microsoft 支持另有指示，否则大多数管理员使用默认设置。 此较旧的知识库文章仍用于提供如何配置转储文件的说明：[如何配置 Analysis Services 以生成内存转储文件](https://support.microsoft.com/kb/919711)。  
   
- 最可能要修改的配置设置是`CreateAndSendCrashReports`设置用于确定是否生成内存转储文件。  
+ 最可能修改的配置设置是用于确定是否生成内存转储文件的 `CreateAndSendCrashReports` 设置。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|关闭内存转储文件。 忽略在“例外”部分下的所有其他设置。|  
 |1|（默认）启用，但不发送内存转储文件。|  
@@ -161,24 +161,24 @@ ms.locfileid: "48198427"
   
  `CrashReportsFolder` 是转储文件的位置。 默认情况下，可在 \Olap\Log 文件夹找到 .mdmp 文件和相关日志记录。  
   
- `SQLDumperFlagsOn` 用于生成完全转储。 默认情况下，未启用完全转储。 可以将此属性设置为`0x34`。  
+ `SQLDumperFlagsOn` 用于生成完全转储。 默认情况下，未启用完全转储。 你可将此属性设置为 `0x34`。  
   
  以下链接提供了更多背景信息：  
   
--   [深入了解使用 Minidumps 的 SQL Server](http://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [深入了解使用 Minidumps 的 SQL Server](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [如何创建用户模式转储文件](http://support.microsoft.com/kb/931673)  
+-   [如何创建用户模式转储文件](https://support.microsoft.com/kb/931673)  
   
--   [如何使用 Sqldumper.exe 实用工具在 SQL Server 中生成转储文件](http://support.microsoft.com/kb/917825)  
+-   [如何使用 Sqldumper.exe 实用工具在 SQL Server 中生成转储文件](https://support.microsoft.com/kb/917825)  
   
 ##  <a name="bkmk_tips"></a> 提示和最佳实践  
  此部分是此文章中提到的提示回顾。  
   
 -   配置 msmdsrv.log 文件以控制 msmdsrv 日志文件的大小和数量。 默认情况下不启用这些设置，请确保将其添加为安装后步骤。 请参阅本主题中的 [MSMDSRV 服务日志文件](#bkmk_msmdsrv) 。  
   
--   查看来自 Microsoft 客户支持的这篇博文，了解其使用什么资源来获取有关服务器操作的信息： [初始数据集合](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   查看来自 Microsoft 客户支持的这篇博文，了解其使用什么资源来获取有关服务器操作的信息：[初始数据收集](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
--   使用 ASTrace2012（而非查询日志）查找谁正在查询多维数据集。 查询日志通常用于提供输入到基于使用情况的优化向导，其捕获的数据不易读取或解释。 ASTrace2012 是一种广泛使用的用于捕获查询操作的社区工具。 请参阅 [Microsoft SQL Server 社区示例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
+-   使用 ASTrace2012（而非查询日志）查找谁正在查询多维数据集。 查询日志通常用于提供输入到基于使用情况的优化向导，其捕获的数据不易读取或解释。 ASTrace2012 是一种广泛使用的用于捕获查询操作的社区工具。 请参阅[Microsoft SQL Server 社区示例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 实例管理](analysis-services-instance-management.md)   

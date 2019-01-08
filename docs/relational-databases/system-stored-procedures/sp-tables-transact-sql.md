@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da1a73aebef6637b97d400de19379f37a60315a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27c6e8b8a1eca70a9f6d7753c2c0c943444f65d7
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688505"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589773"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,24 +49,24 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@table_name=** ] **'***name***'**  
+ [  **@table_name=** ] **'**_名称_  
  用来返回目录信息的表。 *名称*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。  
   
- [  **@table_owner=** ] **'***所有者***’**  
+ [  **@table_owner=** ] **'**_所有者_  
  是用来返回目录信息的表所有者。 *所有者*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定所有者，且当前用户未拥有指定名称的表，则该过程查找由数据库所有者拥有的具有指定名称的表。 如果存在，则返回该表的列。  
   
- [  **@table_qualifier=** ] **'***限定符***’**  
- 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ [  **@table_qualifier=** ] **'**_限定符_  
+ 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
- [ **，** [  **@table_type=** ] **"'***类型***'**， **'** 类型 **"** ]  
+ [ **，** [  **@table_type=** ] **"'**_类型_**'**， 类型 **'"** ]  
  由逗号分隔的值列表，该列表提供有关所有指定的表类型的表的信息。 其中包括**表**， **SYSTEMTABLE**，并**视图**。 *类型*是**varchar(100)**，默认值为 NULL。  
   
 > [!NOTE]  
 >  每个表类型都必须用单引号引起来，整个参数必须用双引号引起来。 表类型必须大写。 如果 SET QUOTED_IDENTIFIER 为 ON，则每个单引号必须换成双引号，整个参数必须用单引号引起来。  
   
- [  **@fUsePattern =** ] **'***fUsePattern***’**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_  
  确定下划线 (_)、 百分号 （%） 和方括号 （[或]） 字符被解释为通配符字符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -89,7 +89,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  **sp_tables**等效于**SQLTables** ODBC 中。 返回的结果按排序**TABLE_TYPE**， **TABLE_QUALIFIER**， **TABLE_OWNER**，以及**TABLE_NAME**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

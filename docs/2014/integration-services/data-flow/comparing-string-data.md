@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100947"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359539"
 ---
 # <a name="comparing-string-data"></a>比较字符串数据
   字符串比较是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]执行的许多转换中的重要组成部分，字符串比较也用在变量表达式和属性表达式的求值中。 例如，排序转换比较数据集中的值，从而以升序或降序对数据进行排序。  
@@ -34,7 +33,7 @@ ms.locfileid: "48100947"
   
 -   有条件拆分转换可以在表达式中使用字符串比较，以确定将数据行发送到哪个输出。 有关详细信息，请参阅 [Conditional Split Transformation](transformations/conditional-split-transformation.md)。  
   
--   派生列转换可以在表达式中使用字符串比较，以生成新的列值。 有关详细信息，请参阅 [派生列转换](transformations/derived-column-transformation.md)。  
+-   派生列转换可以在表达式中使用字符串比较，以生成新的列值。 有关详细信息，请参阅 [Derived Column Transformation](transformations/derived-column-transformation.md)。  
   
  变量、变量映射和优先约束也使用可以包含字符串比较的表达式。 有关表达式的详细信息，请参阅 [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48100947"
  还可以为平面文件连接管理器和多平面文件连接管理器指定区域设置。  
   
 ## <a name="setting-comparison-options"></a>设置比较选项  
- 区域设置提供了比较字符串数据的基本规则。 例如，区域设置指定了字母表中每个字母的排序位置。 但是，当执行某些转换的比较时，这些规则可能还不够，不过， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持一组比区域设置比较规则更详尽的高级比较选项。 这些比较选项在列级设置。 例如，利用这些比较选项之一，您可以忽略非空格字符。 此选项的作用是忽略标注字符，如重音符号，对比较来说， "a" 和 "á" 相同。  
+ 区域设置提供了比较字符串数据的基本规则。 例如，区域设置指定了字母表中每个字母的排序位置。 但是，当执行某些转换的比较时，这些规则可能还不够，不过， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持一组比区域设置比较规则更详尽的高级比较选项。 这些比较选项在列级设置。 例如，利用这些比较选项之一，您可以忽略非空格字符。 此选项的作用是忽略标注字符，例如，不区分重音，这样可使"å"相同"a"和进行对比。  
   
  下表介绍比较选项和排序样式。  
   

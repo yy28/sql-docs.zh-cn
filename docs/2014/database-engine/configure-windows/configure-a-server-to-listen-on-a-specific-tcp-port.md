@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - fixed port
@@ -18,12 +17,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d408c25216139a173dced0ae19f9ddea7d1ba4d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16249e9b9a1af56793d30cef48a9e1573f883c57
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088067"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371189"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）
   本主题说明如何使用 SQL Server 配置管理器配置 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例以便侦听特定的固定端口。 如果启用， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的默认实例将侦听 TCP 端口 1433。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的命名实例配置为使用动态端口。 这意味着启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时，它们将选择可用的端口。 在通过防火墙连接到命名实例时，请配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以侦听特定端口，以便能够在防火墙中打开相应的端口。  
@@ -31,7 +30,7 @@ ms.locfileid: "48088067"
  有关默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!TIP]  
->  选择端口号时，请查看 [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) 以了解分配给特定应用程序的端口号列表。 请选择一个未分配的端口号。 更多详细信息，请参阅 [TCP/IP 的默认动态端口范围在 Windows Vista 和 Windows Server 2008 中已更改](http://support.microsoft.com/kb/929851)。  
+>  选择端口号时，请查看 [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) 以了解分配给特定应用程序的端口号列表。 请选择一个未分配的端口号。 更多详细信息，请参阅 [TCP/IP 的默认动态端口范围在 Windows Vista 和 Windows Server 2008 中已更改](https://support.microsoft.com/kb/929851)。  
   
 > [!WARNING]  
 >  重新启动时，数据库引擎开始侦听新端口。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务监视注册表并在配置更改时报告新端口号，即使数据库引擎可能未使用该端口。 重新启动数据库引擎可确保一致性并避免连接失败。  

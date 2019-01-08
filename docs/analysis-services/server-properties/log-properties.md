@@ -1,4 +1,5 @@
 ---
+title: Analysis Services 日志属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999339"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071924"
 ---
 # <a name="log-properties"></a>日志属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -156,9 +157,6 @@ ms.locfileid: "37999339"
  一个布尔值属性，它指定是否创建查询日志表。  
   
  此属性的默认值为 false，指示服务器不会自动创建日志表，并且不记录查询事件。  
-  
-> [!NOTE]  
->  有关配置查询日志的详细信息，请参阅 [配置 Analysis Services 查询日志](http://go.microsoft.com/fwlink/?LinkId=81890)。  
   
 ## <a name="trace"></a>跟踪  
  **Trace\TraceBackgroundDistributionPeriod**  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent alerts, event types
@@ -22,14 +22,14 @@ ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4b40106834927506b84959da54aed959c8993ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067007"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797049"
 ---
-# <a name="alerts"></a>Alerts
+# <a name="alerts"></a>警报
   事件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成并被输入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理读取应用程序日志，并将写入的事件与定义的警报比较。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理找到匹配项时，它将发出自动响应事件的警报。 除了监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理还监视性能条件和 Windows Management Instrumentation (WMI) 事件。  
   
  若要定义警报，需要指定：  
@@ -76,7 +76,7 @@ ms.locfileid: "48067007"
 ## <a name="selecting-a-performance-condition"></a>选择性能条件  
  可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列项：  
   
--   **对象**  
+-   **Object**  
   
      对象是要监视的性能区域。  
   

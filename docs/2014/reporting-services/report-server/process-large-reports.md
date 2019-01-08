@@ -17,12 +17,12 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084657"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372499"
 ---
 # <a name="process-large-reports"></a>处理大型报表
   大型报表将给系统的处理能力带来一定的挑战。若要正确运行大型报表，需要进行特定配置。 除非将大型报表配置为支持分页，否则不应按需运行这些报表。  
@@ -34,12 +34,12 @@ ms.locfileid: "48084657"
   
  对于包含可变数据的不同报表，从一个报表运行到下一个报表时，报表大小会有很大变化。 在这种情况下，应监视数据源，以确定数据可变性对报表的影响，决定是否需要按照本主题中规定的步骤进行操作。  
   
- 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.com 上的文章 [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) （如何在报表服务器中运行报表时诊断问题）。  
+ 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.com 上的文章 [如何在报表服务器中运行报表时诊断问题](https://go.microsoft.com/fwlink/?LinkId=85634)。  
   
 ## <a name="configuration-recommendations"></a>配置建议  
  关于报表执行、报表呈现和报表访问方面的建议包括以下几点：  
   
--   将报表设计为支持分页。 设置报表服务器每次发送一页报表。 这样，如果报表支持分页，您就可以控制流向浏览器的数据量。 有关详细信息，请参阅[预加载缓存&#40;报表管理器&#41;](preload-the-cache-report-manager.md)。  
+-   将报表设计为支持分页。 设置报表服务器每次发送一页报表。 这样，如果报表支持分页，您就可以控制流向浏览器的数据量。 有关详细信息，请参阅 [预加载缓存（报表管理器）](preload-the-cache-report-manager.md)。  
   
 -   将报表配置为以计划报表快照的形式运行，以避免按需运行。 不要为报表执行设置超时值。 在非高峰期运行报表。  
   
@@ -70,10 +70,10 @@ ms.locfileid: "48084657"
  如果希望使用电子邮件形式传递报表，请配置订阅以包含相应的链接。 避免以附件形式发送报表。  
   
 ## <a name="see-also"></a>请参阅  
- [订阅和传递&#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [设置报表处理属性](set-report-processing-properties.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](report-server-content-management-ssrs-native-mode.md)   
  [预加载缓存（报表管理器）](preload-the-cache-report-manager.md)  
   
   

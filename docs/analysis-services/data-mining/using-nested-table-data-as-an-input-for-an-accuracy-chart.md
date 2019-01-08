@@ -1,5 +1,5 @@
 ---
-title: 嵌套的表数据作为输入用于准确性图表 |Microsoft 文档
+title: 嵌套的表数据作为输入用于准确性图表 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505314"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用嵌套表数据作为准确性图表的输入
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
  使用嵌套表时，请记住以下技巧：  
   
--   如果选择 **“使用挖掘模型测试事例”** 或 **“使用挖掘结构测试事例”**选项，则无需指定事例表或嵌套表。 使用这些选项可将测试数据的定义存储在挖掘结构中，且可实现在您创建准确性图表时自动选择测试数据。  
+-   如果选择 **“使用挖掘模型测试事例”** 或 **“使用挖掘结构测试事例”** 选项，则无需指定事例表或嵌套表。 使用这些选项可将测试数据的定义存储在挖掘结构中，且可实现在您创建准确性图表时自动选择测试数据。  
   
 -   如果数据源中事例表和嵌套表之间的关系已存在，则挖掘结构中的列将自动映射到输入表中的同名列。  
   
@@ -35,9 +36,9 @@ ms.lasthandoff: 05/10/2018
   
 2.  选择“挖掘准确性图表”  选项卡，然后选择“输入选择”  选项卡。  
   
-3.  在 **“选择要用于准确性图表的数据集”**中，选择 **“指定其他数据集”**选项。  
+3.  在 **“选择要用于准确性图表的数据集”** 中，选择 **“指定其他数据集”** 选项。  
   
-4.  单击浏览按钮 **(…)**，从当前服务器上的数据源视图列表中选择外部数据集。  
+4.  单击浏览按钮 **（...）** 若要从当前服务器上的数据源视图的列表中选择外部数据集。  
   
 5.  单击“选择事例表” 。 在 **“选择表”** 对话框中，从包含事例数据的数据源视图中选择事例表，然后单击 **“确定”**。  
   
@@ -47,8 +48,8 @@ ms.lasthandoff: 05/10/2018
   
      如果需要修改嵌套表与事例表之间的关系，请单击 **“修改联接”** 以打开 **“创建关系”** 对话框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择和映射模型测试数据](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [应用筛选器以测试数据创建模型](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+ [将筛选器应用于模型测试数据](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
   

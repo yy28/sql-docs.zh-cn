@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 7568e9deb0462dec9e9527d9876aeefd9ed9c543
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767659"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
   复制分发代理是一个可执行文件，它能将快照（对于快照复制和事务复制）和保存在分发数据库表中的事务（对于事务复制）移动到订阅服务器上的目标表中。  
@@ -142,7 +141,7 @@ ms.locfileid: "50226329"
 |**2**|指定使用 SSL，并验证证书。|  
  
  > [!NOTE]  
- >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了使代理才能成功连接时将-EncryptionLevel 设置为 2，本地的 SQL Server 上创建一个别名。 别名参数应为服务器名称和 Server 参数应设置为 SQL Server 的完全限定名称。
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，”Server”参数应设置为 SQL Server 的完全限定名称。
 
  有关详细信息，请参阅[安全性概述（复制）](../security/security-overview-replication.md)。  
   
@@ -205,7 +204,7 @@ ms.locfileid: "50226329"
  如果源上没有可用的已复制事务，代理将向分发服务器报告无事务消息。 此选项可指定代理在报告另一条无事务消息前将等待多长时间。 在上次处理已复制事务后，如果代理在源上没有检测到任何可用的事务，则总是会报告一条无事务消息。 默认值为 60 秒。  
   
  **-OledbStreamThreshold** *oledb_stream_threshold*  
- 指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 **–UseOledbStreaming** 指定为使用此参数。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  
+ 指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 -UseOledbStreaming 指定为使用此参数。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  
   
  **-Output** *output_path_and_file_name*  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
@@ -274,7 +273,7 @@ ms.locfileid: "50226329"
  指定分发的订阅类型。  值为 **0** ，表示推送订阅，值为 **1** ，表示请求订阅，值为 2，表示匿名订阅。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
+ 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 请参见前面的 -MessageInterval 参数。  
   
  **-UseDTS**  
  必须指定为允许数据转换的发布的参数。  
@@ -298,7 +297,7 @@ ms.locfileid: "50226329"
 |---------------------|  
 | 添加了 -ExtendedEventConfigFile 参数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制代理管理](replication-agent-administration.md)  
   
   

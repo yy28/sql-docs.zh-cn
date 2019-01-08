@@ -1,5 +1,5 @@
 ---
-title: SQL Server 机器学习的升级和安装常见问题解答 |Microsoft Docs
+title: 升级和安装常见问题解答 (FAQ) 的 SQL Server 机器学习服务
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712299"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432850"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "46712299"
 + 某些问题只是出现升级预发行版中。 因此，我们建议您确定你的版本和版本首次在阅读这些说明之前。 若要获取版本信息，请运行`@@VERSION`在从 SQL Server Management Studio 查询中。
 + 升级到最新版本或 service 版本尽可能快地解决最新版本中已修复任何问题。
 
-**适用于：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务 （数据库内）
+**适用范围：** SQL Server 2016 R Services，SQL Server 2017 机器学习服务 （数据库内）
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>要求和限制的较旧版本的 SQL Server 2016 
 
@@ -131,7 +131,7 @@ SQL Server 2016 的早期发行版本无法在没有 internet 连接的脱机安
 
 如果你安装 Microsoft R 客户端，并使用它的远程 SQL Server 计算上下文中运行 R，可能会收到如下错误：
 
-*您您与 Microsoft R Server 8.0.3 版不兼容的计算机上运行 Microsoft R client 9.0.0 的版。请下载并安装兼容版本。
+*您您与 Microsoft R Server 8.0.3 版不兼容的计算机上运行 Microsoft R client 9.0.0 的版。请下载并安装兼容版本。*
 
 在 SQL Server 2016 中，它是必需的 SQL Server R Services 中运行的 R 版本完全是与 Microsoft R Client 中的库相同。 更高版本中已经删除了这一要求。 但是，我们建议您始终获取最新版本的机器学习组件，并安装所有 service pack。 
 

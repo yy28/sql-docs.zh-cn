@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
@@ -16,12 +15,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84b8655494daca0f3c9203775304710591a4081e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90eb7b166316533b68fdc128fb6ecc65e1820efb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069709"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361329"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改分发服务器和发布服务器属性。  
@@ -32,7 +31,7 @@ ms.locfileid: "48069709"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **查看和修改分发服务器和发布服务器属性，使用：**  
   
@@ -174,7 +173,7 @@ ms.locfileid: "48069709"
 5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 方法。 为 *password* 参数传递新的密码值。  
   
     > [!IMPORTANT]  
-    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
+    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
   
 6.  （可选）执行下列步骤以更改每个使用该分发服务器的远程发布服务器上的密码：  
   

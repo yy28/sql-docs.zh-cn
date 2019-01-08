@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,15 +13,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823302"
 ---
 # <a name="best-practices-for-replication-administration"></a>复制管理最佳实践
-  在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除了遵循本主题中介绍的最佳做法指导原则之外，还请仔细阅读常见问题解答主题，以了解常见的问题：[复制管理员常见问题解答](frequently-asked-questions-for-replication-administrators.md)。  
+  在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除了遵循本主题中介绍的最佳实践指导原则之外，还请仔细阅读常见问题解答主题，以了解常见的问题：[复制管理员常见问题解答](frequently-asked-questions-for-replication-administrators.md)。  
   
  将最佳实践指导原则分成两个部分很有用：  
   

@@ -1,5 +1,5 @@
 ---
-title: 有关创建、 定型和计分 R （SQL Server 机器学习服务） 功能基于分区的模型的教程 |Microsoft Docs
+title: 创建、 定型和评分基于分区的模型在 R 中的 SQL Server 机器学习服务教程
 description: 了解如何建模、 定型和使用分区时使用的 SQL Server 机器学习基于分区的建模功能动态创建的数据。
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462003"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596458"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程： 在 SQL Server 上的 R 中创建基于分区的模型
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 上的 R 中创建基于分区的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 在 SQL Server 2019 基于分区的建模是创建并定型模型对已分区数据的能力。 分层数据的自然段到给定的分类方案-例如地理区域、 日期和时间、 年龄或性别的可执行脚本对整个数据集，能够建模、 定型和评分对保持不变的分区通过所有这些操作。 
@@ -34,7 +34,7 @@ ms.locfileid: "49462003"
 > * 创建和训练每个分区上的模型和数据库中存储的对象。
 > * 对每个分区模型，使用保留的实现此目的的示例数据预测小费的结果的概率。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
  
 若要完成本教程中，您必须具有：
 

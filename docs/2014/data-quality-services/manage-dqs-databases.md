@@ -10,12 +10,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92f0094262f2f53dfcdc51fcbd77b08fa079d3be
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6dda82b297b04f21fe1b4d2b7255c65b5b8a4aef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032844"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366229"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   本节提供了有关可在 DQS 数据库上执行的数据库管理活动（例如备份/还原或分离/附加）的信息。  
@@ -38,8 +38,8 @@ ms.locfileid: "51032844"
   
 -   DQS 数据库的默认恢复模式设置为“简单” 。 在“简单”恢复模式下，会尽量少地记录事务日志，而且在完成事务后会自动截断日志以释放事务日志（.ldf 文件）中的空间。 有关简单恢复模式的详细信息，请参阅[完整数据库备份 (SQL Server)](../relational-databases/backup-restore/full-database-backups-sql-server.md)。  
   
-> [!IMPORTANT]  
->  -   在“简单”恢复模式中，日志记录长时间处于活动状态时（例如，占用时间很长的事务），日志截断可能被延迟，因此可能填满事务日志。 此外，日志截断并不减小物理日志文件（.ldf 文件）的大小。 若要减少物理日志文件的大小，需要收缩日志文件。 有关如何解决涉及事务日志的问题的信息，请参阅[事务日志 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 或 [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446) 上的 Microsoft 技术支持文章。  
+> [!IMPORTANT]
+>  -   在“简单”恢复模式中，日志记录长时间处于活动状态时（例如，占用时间很长的事务），日志截断可能被延迟，因此可能填满事务日志。 此外，日志截断并不减小物理日志文件（.ldf 文件）的大小。 若要减少物理日志文件的大小，需要收缩日志文件。 有关如何解决涉及事务日志的问题的信息，请参阅[事务日志 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 或 [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446) 上的 Microsoft 技术支持文章。  
 > -   必须定期执行 DQS 数据库的完整或差异备份，同时备份事务日志以执行时间点数据恢复。 有关详细信息，请参阅[完整数据库备份 (SQL Server)](../relational-databases/backup-restore/full-database-backups-sql-server.md) 和 [备份事务日志 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。  
   
 ##  <a name="DetachAttach"></a> 分离/附加 DQS 数据库  

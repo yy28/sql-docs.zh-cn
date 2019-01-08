@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_REPL027183 error
@@ -13,12 +12,12 @@ ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd3c0f4af8cf29d2da68009b036b8119f2557dd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87adf79d9420f70e132fd9a6c41a9ddacf298fa7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776969"
 ---
 # <a name="mssqlrepl027183"></a>MSSQL_REPL027183
     
@@ -59,7 +58,7 @@ ms.locfileid: "48197580"
   
 -   指定发布保持期可能的最低设置，因为只有在达到保持期时，复制才会清除发布数据库和订阅数据库中的元数据。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
--   在合并复制维护过程中，应不定期检查以下与合并复制相关联的系统表的增长情况： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、 **MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
+-   合并复制维护的一部分，应不定期检查与合并复制系统表的增长情况：**MSmerge_contents**， **MSmerge_genhistory**，和**MSmerge_tombstone**， **MSmerge_current_partition_mappings**，和**MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
   
 -   请确保用于筛选的列已建立了适当的索引，并根据需要重新生成这些索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
   

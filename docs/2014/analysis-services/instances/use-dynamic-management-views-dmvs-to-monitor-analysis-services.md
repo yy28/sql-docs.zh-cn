@@ -11,12 +11,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9047458e09e5dd24fa255122d06d211d2c315877
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148113"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376609"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
   Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
@@ -47,9 +47,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV 查询可用来代替运行 XML/A 发现命令。 对于大多数管理员，编写 DMV 查询很简单，因为查询语法基于 SQL。 此外，结果集以易于读取和复制的表格格式返回。  
   
 ##  <a name="bkmk_ex"></a> 示例和应用场景  
- DMV 查询可帮助您回答与活动会话和连接有关的问题，以及在特定时间点哪些对象最占用 CPU 或内存。 本节提供了最常使用 DMV 查询的应用场景示例。 您也可以查看 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ，了解使用 DMV 查询监视服务器实例的其他内情。  
+ DMV 查询可帮助您回答与活动会话和连接有关的问题，以及在特定时间点哪些对象最占用 CPU 或内存。 本节提供了最常使用 DMV 查询的应用场景示例。 您也可以查看 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ，了解使用 DMV 查询监视服务器实例的其他内情。  
   
- `Select * from $System.discover_object_activity` /** 此查询报告自上次启动该服务后的对象活动。 有关基于此 DMV 的查询的示例，请参阅 [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
+ `Select * from $System.discover_object_activity` /** 此查询报告自上次启动该服务后的对象活动。 有关基于此 DMV 的查询的示例，请参阅 [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)。  
   
  `Select * from $System.discover_object_memory_usage` /** 此查询按对象报告内存使用情况。  
   
@@ -99,7 +99,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不可用于给定行集，则服务器返回以下错误:" \<schemarowset > 服务器无法识别请求类型"。 所有其他错误均与语法问题有关。  
+>  如果 DMV 不可用于给定行集，则服务器将返回以下错误：" \<Schemarowset > 服务器无法识别请求类型"。 所有其他错误均与语法问题有关。  
   
 |行集|Description|  
 |------------|-----------------|  
@@ -163,9 +163,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|返回每个属性的完全限定名，以及属性类型、数据类型和其他元数据。|  
 |[MDSCHEMA_SETS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|返回当前连接中定义的集合的列表。|  
   
-## <a name="see-also"></a>另请参阅  
- [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [新的 SYSTEMRESTRICTEDSCHEMA 函数，适用于受限行集和 DMV](http://go.microsoft.com/fwlink/?LinkId=231885)  
+## <a name="see-also"></a>请参阅  
+ [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [新的 SYSTEMRESTRICTEDSCHEMA 函数，适用于受限行集和 DMV](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

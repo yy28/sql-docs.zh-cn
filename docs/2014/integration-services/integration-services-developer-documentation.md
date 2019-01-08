@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +18,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc639a9e6df068d4f3ed446a66dc05b7d5e0b59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e18e1d1e2219dd33fe6eea241d50ff6b077fe62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108547"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361399"
 ---
 # <a name="developer39s-guide-integration-services"></a>开发人员&#39;s 指南 (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含一个完全重写的对象模型，已使用使用功能改善了该模型，以使包扩展和编程更加方便、灵活和强大。 开发人员几乎可以对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包进行全方位的扩展和编程。  
@@ -84,7 +82,7 @@ ms.locfileid: "48108547"
   
 ## <a name="external-resources"></a>外部资源  
   
--   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=131204)  
+-   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Integration Services](sql-server-integration-services.md)  

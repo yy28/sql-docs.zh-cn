@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - users [SQL Server], multiuser environments
@@ -18,12 +18,12 @@ ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d64fc5039cfb6f8d46bb3f245163d17c7b2beb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 382aca19452d5cf21a4b1112d872b12afe38782d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767399"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>多用户环境 (Visual Database Tools)
   多用户环境是指如下环境：在该环境中，其他用户可以连接到您正在使用的同一数据库，并对其进行修改。 因此，多个用户可能同时对同一数据库对象进行操作。 这样，在多用户环境中，在您进行更改时，数据库可能会受到其他用户所做更改的影响；反之亦然。  

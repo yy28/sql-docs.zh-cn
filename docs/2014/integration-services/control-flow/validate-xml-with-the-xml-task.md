@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
@@ -14,21 +13,21 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77ddc157323e7134c9e34ad79de459948635de19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c095e939472c4c0bea37ff27da10dd47c9ca3de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062087"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360449"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  验证 XML 文档并获取丰富的错误输出，从而`ValidationDetails`XML 任务的属性。  
+  通过启用 XML 任务的 `ValidationDetails` 属性，验证 XML 文档并获取丰富的错误输出。  
   
  下面的屏幕快照显示 **XML 任务编辑器** ，其中包含具有丰富错误输出的 XML 验证所需的设置。  
   
  ![XML 任务编辑器中的 XML 任务属性](../media/xmltaskproperties.jpg "XML 任务编辑器中的 XML 任务属性")  
   
- 之前`ValidationDetails`属性，XML 任务的 XML 验证仅返回 true 或 false 结果，使用有关错误或其位置的信息。 现在，设置`ValidationDetails`为 true 时，输出文件将包含关于每个错误，包括行号和位置的详细的信息。 此信息可用于了解、查找和修复 XML 文档中的错误。  
+ 在可以使用 `ValidationDetails` 属性之前，XML 任务的 XML 验证仅返回 true 或 false 结果，而不包含关于错误或其位置的详细信息。 现在，当你将 `ValidationDetails` 设置为 true 时，输出文件将包含关于每个错误的详细信息，包括行号和位置。 此信息可用于了解、查找和修复 XML 文档中的错误。  
   
  XML 验证功能可轻松扩展以适应大型 XML 文档和大量错误。 由于输出文件本身采用 XML 格式，你可以查询和分析输出。 例如，如果输出中包含大量错误，你可以按本主题中所述，使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询对错误分组。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48062087"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>true</result>  
         <errors>0</errors>  
@@ -59,7 +58,7 @@ ms.locfileid: "48062087"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>false</result>  
         <errors>2</errors>  
@@ -89,7 +88,7 @@ FROM OPENROWSET (BULK N'C:\Temp\XMLValidation_2016-02-212T10-41-00.xml', SINGLE_
   
 -- Query # 1, flat list of errors  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -97,11 +96,11 @@ SELECT col.value('@line','INT') AS line
 FROM @XML.nodes('/root/messages/error') AS tab(col)  
 )  
 SELECT * FROM rs;  
--- WHERE error LIKE ‘%whatever_string%’  
+-- WHERE error LIKE '%whatever_string%'  
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -121,6 +120,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>请参阅  
  [XML 任务](xml-task.md)   
- [XML 任务编辑器&#40;常规页&#41;](../xml-task-editor-general-page.md)  
+ [XML 任务编辑器（“常规”页）](../xml-task-editor-general-page.md)  
   
   

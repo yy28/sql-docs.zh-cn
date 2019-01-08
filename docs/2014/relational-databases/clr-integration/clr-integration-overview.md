@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 762c644690cb556ba316705f1e22e3673e811bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077707"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363399"
 ---
 # <a name="overview-of-clr-integration"></a>CLR 集成的概述
   公共语言运行时 (CLR) 是 Microsoft .NET Framework 的核心，它为所有 .NET Framework 代码提供执行环境。 在 CLR 中运行的代码称为托管代码。 CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全、异常处理、线程管理和安全性。  有关详细信息，请参阅 .NET Framework SDK。  
@@ -56,7 +56,7 @@ ms.locfileid: "48077707"
  可以生成扩展存储过程来执行使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程无法实现的功能。 但是，扩展存储过程可能有损于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程的完整性，而经过验证确定为类型安全的托管代码则不会。 进一步来说，在 CLR 的托管代码与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间更深入地集成了内存管理、线程及纤程的调度以及同步服务。 如果所编写的存储过程需要执行在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中不可能完成的任务，则 CLR 集成有比扩展存储过程更安全的方式来实现它。 有关 CLR 集成和扩展存储的过程的详细信息，请参阅[CLR 集成性能](clr-integration-architecture-performance.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [安装.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [安装.NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 集成体系结构](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [从 CLR 数据库对象的数据访问](data-access/data-access-from-clr-database-objects.md)   
  [CLR 集成入门](database-objects/getting-started-with-clr-integration.md)  

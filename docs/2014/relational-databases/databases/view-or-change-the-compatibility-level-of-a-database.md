@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility levels [SQL Server], viewing
@@ -15,12 +14,12 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad51d4c8467e72275ac66301b5757cf4ca456204
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 320b2e33ed1f36ab2e67625047897a5e8710b2c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783749"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>查看或更改数据库的兼容级别
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或更改数据库的兼容级别。 在更改数据库的兼容级别之前，应先了解此更改对应用程序的影响。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
@@ -29,7 +28,7 @@ ms.locfileid: "48203577"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **查看或更改数据库的兼容级别，使用：**  
   

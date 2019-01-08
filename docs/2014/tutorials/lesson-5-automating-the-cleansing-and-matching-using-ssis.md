@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 自动执行清理和匹配使用 SSIS |Microsoft Docs
+title: 第 5 课：自动执行清理和匹配使用 SSIS |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b1747b4ee9ac77ee265d3aff7c9589d87520a82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7406f0f39afb0323ff6564b4b0ea427515f0f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375809"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>第 5 课：使用 SSIS 自动执行清理和匹配
-  第 1 课中生成 Suppliers 知识库和用它来清理第 2 课中的数据和匹配数据中使用该工具第 3 课**DQS 客户端**。 在实际方案中，您可能需要从 DQS 不支持或你想要自动执行清理的源和匹配过程中提取数据，而无需使用**DQS 客户端**工具。 SQL Server Integration Services (SSIS) 具有可用于将来自各种异构源的数据集成的组件和一个 **[DQS 清理转换](http://msdn.microsoft.com/library/ee677619.aspx)** 组件，可调用清理dqs 公开的功能。 目前，DQS 不会公开匹配功能供 SSIS 使用，但你可以使用**[模糊分组转换](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 来确定数据中的重复项。  
+  第 1 课中生成 Suppliers 知识库和用它来清理第 2 课中的数据和匹配数据中使用该工具第 3 课**DQS 客户端**。 在实际方案中，您可能需要从 DQS 不支持或你想要自动执行清理的源和匹配过程中提取数据，而无需使用**DQS 客户端**工具。 SQL Server Integration Services (SSIS) 具有可用于将来自各种异构源的数据集成的组件和一个 **[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)** 组件，可调用清理dqs 公开的功能。 目前，DQS 不会公开匹配功能供 SSIS 使用，但你可以使用**[模糊分组转换](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 来确定数据中的重复项。  
   
  您可以使用将数据上载到 MDS**基于实体的临时处理功能**。 在 MDS 中创建实体时，将自动创建相应的临时表和存储过程。 例如，您创建 Supplier 实体时， **stg.supplier_Leaf**表和**stg.udp_Supplier_Leaf**自动创建存储的过程。 您可以使用临时表和过程来创建、更新和删除实体成员。 在本课中，您将为 Supplier 实体创建新实体成员。 要将数据加载到 MDS 服务器中，SSIS 包首先将数据加载到临时表 stg.supplier_Leaf 中，然后触发关联的存储过程 stg.udp_Supplier_Leaf。 请参阅[导入数据](../master-data-services/overview-importing-data-from-tables-master-data-services.md)的更多详细信息。  
   
@@ -38,6 +38,6 @@ ms.locfileid: "48195077"
 5.  查看由 SSIS 包创建的 DQS 清理项目的结果，并可选执行交互式清理以进一步生成知识库。  
   
 ## <a name="next-step"></a>下一步  
- [任务 1&#40;先决条件&#41;： 删除 MDS 中的供应商数据](../../2014/tutorials/task-1-prerequisite-removing-supplier-data-in-mds.md)  
+ [任务 1&#40;先决条件&#41;:删除 MDS 中的供应商数据](../../2014/tutorials/task-1-prerequisite-removing-supplier-data-in-mds.md)  
   
   

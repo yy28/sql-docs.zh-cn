@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetDefaults Method (CInstance Class)
@@ -20,12 +18,12 @@ ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b242e76bb714088895048cb869473c23d2e4cb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080857"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357036"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>SetDefaults 方法（CInstance 类）
   设置实例的所有默认值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择覆盖现有数据的客户端。  
@@ -42,7 +40,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示 [客户端实例的](cinstance-class.md) CInstance 类 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>Parameters  
@@ -57,6 +55,6 @@ OverwriteAll
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)  
+ [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

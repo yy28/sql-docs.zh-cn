@@ -1,6 +1,6 @@
 ---
-title: SQL Server 机器学习服务中的 Python 扩展 |Microsoft Docs
-description: 了解有关 Python 代码执行和 SQL Server 中内置的 Python 库。
+title: Python 编程语言扩展-SQL Server 机器学习
+description: 了解有关 Python 代码执行和 SQL Server 2017 机器学习服务中内置的 Python 库。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24d34ee2ca9220ca1569ea83bcb092030d1ef692
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 6bbce3d58f016b26618413ef0647995d0914a237
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892852"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432320"
 ---
-# <a name="python-extension-in-sql-server"></a>SQL Server 中的 Python 扩展
+# <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 语言扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python 扩展是到关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 添加 Python 执行环境，使用 Python 3.5 运行时和解释器，标准库和工具以及 Microsoft 产品库适用于 Python 的 Anaconda 分发版： [revoscalepy](../python/what-is-revoscalepy.md)用于分析在规模和[microsoftml](../using-the-microsoftml-package.md)完成机器学习算法。 
+Python 扩展是到关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 添加 Python 执行环境，使用 Python 3.5 运行时和解释器，标准库和工具以及 Microsoft 产品库适用于 Python 的 Anaconda 分发版： [revoscalepy](../python/ref-py-revoscalepy.md)用于分析在规模和[microsoftml](../python/ref-py-microsoftml.md)完成机器学习算法。 
 
 作为安装 Python 集成[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)。
 
@@ -28,7 +28,7 @@ Python 扩展是到关系数据库引擎的 SQL Server 机器学习服务外接�
 
 SQL Server 包含的开源和专有的包。 安装程序安装的 Python 运行时是 Anaconda 4.2 使用 Python 3.5。 Python 运行时安装独立于 SQL 工具和可扩展性框架中的核心引擎进程之外执行。 作为与 Python 配合使用的机器学习服务安装的一部分，您必须同意 GNU 公共许可证的条款。 
 
-SQL Server 不会修改 Python 可执行文件，但必须使用安装由安装程序，因为在该版本是专有的包，生成并测试上的 Python 版本。 Anaconda 分发版支持包的列表，请参阅 Continuum analytics 站点： [Anaconda 包列表](https://docs.continuum.io/anaconda/pkg-docs)。
+SQL Server 不会修改 Python 可执行文件，但必须使用安装由安装程序，因为在该版本是专有的包，生成并测试上的 Python 版本。 Anaconda 分发版支持包的列表，请参阅 Continuum analytics 站点：[Anaconda 包列表](https://docs.continuum.io/anaconda/packages/pkg-docs)。
 
 可以与实例关联的文件夹中找到与特定的数据库引擎实例相关联的 Anaconda 分发版。 如果默认实例上，可以使用机器学习服务和 Python 安装 SQL Server 2017 数据库引擎，例如下, 查找`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`。
 
@@ -36,8 +36,8 @@ Microsoft 通过添加并行和分布式工作负荷的 Python 包包括以下�
 
 | 库 | Description |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象和数据探索、 操作、 转换和可视化效果。 它支持远程计算上下文，以及各种可缩放的机器学习模型的创建，如**rxLinMod**。 它等效于[ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)为 Microsoft R 包 |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含机器学习算法，经过优化的速度和准确性，以及行中使用文本和图像的转换。 有关详细信息，请参阅[将 MicrosoftML 包与 SQL Server 使用](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)。 |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象和数据探索、 操作、 转换和可视化效果。 它支持远程计算上下文，以及各种可缩放的机器学习模型的创建，如**rxLinMod**。 有关详细信息，请参阅[revoscalepy 模块与 SQL Server](../python/ref-py-revoscalepy.md)。  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含机器学习算法，经过优化的速度和准确性，以及行中使用文本和图像的转换。 有关详细信息，请参阅[microsoftml 模块与 SQL Server](../python/ref-py-microsoftml.md)。 |
 
 紧密耦合 Microsoftml 并 revoscalepy;microsoftml 中使用数据源定义为 revoscalepy 对象中。 计算上下文到 microsoftml revoscalepy 传输中的限制。 也就是说，所有功能都都可用于本地操作，但切换到远程计算上下文需要 RxInSqlServer。
 
@@ -76,7 +76,7 @@ Microsoft 通过添加并行和分布式工作负荷的 Python 包包括以下�
 您可以从远程计算机，如便携式计算机，运行 Python 脚本并将它们在 SQl Server 计算机的上下文中执行，如果满足这些条件：
 
 + 相应地设计脚本
-+ 远程计算机安装了由机器学习服务的可扩展性库。 [Revoscalepy](../python/what-is-revoscalepy.md)包所需使用远程计算上下文。
++ 远程计算机安装了由机器学习服务的可扩展性库。 [Revoscalepy](../python/ref-py-revoscalepy.md)包所需使用远程计算上下文。
 
 下图总结了整个工作流，脚本会从远程计算机时。
 
@@ -94,6 +94,7 @@ Microsoft 通过添加并行和分布式工作负荷的 Python 包包括以下�
 
 ## <a name="see-also"></a>另请参阅
 
-+ [Revoscalepy 是什么](../python/what-is-revoscalepy.md) 
++ [SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)
++ [revoscalepy 函数参考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server 中的可扩展性框架](extensibility-framework.md)
 + [R 和机器学习中 SQL Server 的扩展](extension-r.md)

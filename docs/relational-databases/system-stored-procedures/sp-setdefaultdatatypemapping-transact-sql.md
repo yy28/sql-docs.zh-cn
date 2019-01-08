@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_setdefaultdatatypemapping
@@ -17,12 +16,12 @@ ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1141ee71da9a16b50a9362e7c96272bdb12ebe4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c229fe6355e4fe463038dd7ef44d89217b0de77
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644335"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202226"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +133,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  默认数据类型映射适用于所有包含指定 DBMS 的复制拓扑。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_setdefaultdatatypemapping**。  
   
 ## <a name="see-also"></a>请参阅  

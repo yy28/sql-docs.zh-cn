@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204647"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591431"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>“填充”对话框（报表生成器和 SSRS）
   在 **“填充”** 选项卡上，您可以为数据区域或文本框中的单个或多个单元的背景指定颜色选项。  
   
 ## <a name="options"></a>选项  
  **填充颜色**  
- 单击此颜色按钮可为矩形选择填充颜色。 单击 **Expression***(fx)* 按钮可编辑表达式，可以是 RGB 颜色或中提供的预定义的颜色名称之一的十六进制值**表达式**对话框。 若要查看预定义的颜色的列表，请在 **“项”** 窗格中选择 **Web**。 可在表达式文本窗格中键入 **“标题”** 窗格中列出的颜色名称。 键入颜色名称时请勿使用等号 (=) 或引号 ("")。  
+ 单击此颜色按钮可为矩形选择填充颜色。 单击“表达式”_(fx)_ 按钮可编辑表达式，此表达式可以是 RGB 颜色的十六进制值，也可以是“表达式”对话框中提供的预定义的颜色名称之一。 若要查看预定义的颜色的列表，请在 **“项”** 窗格中选择 **Web**。 可在表达式文本窗格中键入 **“标题”** 窗格中列出的颜色名称。 键入颜色名称时请勿使用等号 (=) 或引号 ("")。  
   
  **选择图像源**  
  指示图像的存储位置，以便在呈现报表时报表处理器能够显示它。  
@@ -61,7 +61,7 @@ ms.locfileid: "48204647"
   
 ## <a name="see-also"></a>请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [映像&#40;报表生成器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式（报表生成器和 SSRS）](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)  
   
   

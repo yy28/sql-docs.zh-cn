@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b20e44acf3decd8ff8daf83ce8b1f9607977e3c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8e785b02ad8121f7d2e292dee7375b3be104aeb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179097"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363930"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的目标组件用于将从上游源和转换接收的数据保存到数据源。 目标组件通常通过现有连接管理器连接数据源。  
@@ -102,7 +100,7 @@ ms.locfileid: "48179097"
 ## <a name="examples"></a>示例  
  下面的示例演示在 `ScriptMain` 类中创建目标组件所需的代码。  
   
-> [!NOTE]  
+> [!NOTE]
 >  这些示例使用**Person.Address**表中`AdventureWorks`示例数据库和传递它的第一个和第四个列**int * AddressID*** 和**nvarchar (30) 市/县**列，在数据通过数据流。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目标示例  
@@ -351,7 +349,7 @@ public class ScriptMain:
 }  
 ```  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [使用脚本组件创建源](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   

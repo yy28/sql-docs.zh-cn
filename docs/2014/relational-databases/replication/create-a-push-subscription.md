@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - push subscriptions [SQL Server replication], creating
@@ -17,12 +16,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 993ef680dd4009b70dbcfc2ab193254e4bd47d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e723c42dd41c21abb2c11059b8706a098f7fcfd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110595"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353345"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建推送订阅。 有关为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器创建推送订阅的信息，请参阅[为非 SQL Server 订阅服务器创建订阅](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
@@ -161,7 +160,7 @@ ms.locfileid: "48110595"
  可以使用复制管理对象 (RMO) 以编程方式创建推送订阅。 用于创建推送订阅的 RMO 类取决于对其创建订阅的发布的类型。  
   
 > [!IMPORTANT]  
->  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
+>  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>创建快照或事务发布的推送订阅  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48110595"
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，步骤 2 中指定的属性不正确或服务器上不存在发布。  
   
-4.  执行按位逻辑 AND (`&`在 Visual C# 和`And`在 Visual Basic 中) 之间<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>属性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
+4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间执行逻辑位与（在 Visual C# 中为 `&`，在 Visual Basic 中为 `And`）运算。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -211,7 +210,7 @@ ms.locfileid: "48110595"
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，步骤 2 中指定的属性不正确或服务器上不存在发布。  
   
-4.  执行按位逻辑 AND (`&`在 Visual C# 和`And`在 Visual Basic 中) 之间<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>属性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
+4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间执行逻辑位与（在 Visual C# 中为 `&`，在 Visual Basic 中为 `And`）运算。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -229,7 +228,7 @@ ms.locfileid: "48110595"
   
     -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>的发布的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>并<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>的字段<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>提供的凭据[!INCLUDE[msCoName](../../includes/msconame-md.md)]用于合并代理在分发服务器上运行的 Windows 帐户。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 字段，用于提供合并代理在分发服务器中运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
         > [!NOTE]  
         >  当 `sysadmin` 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](security/replication-agent-security-model.md)。  

@@ -14,23 +14,23 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 526eb1e020a7e2a2e1228b55062013088355bcb2
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542164"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>向 SQL Server 2014 的实例添加功能（安装程序）
-  本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  若要将功能添加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从命令提示符下，请参阅[从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  继续之前，请查阅 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。  
   
 > [!NOTE]  
->  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须使用对远程共享具有读取权限的域帐户。  
+>  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
   
 > [!NOTE]  
 >  在向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例中添加功能时，现有的使用情况报告设置将应用于新添加的功能。 若要更改这些设置，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“配置工具”菜单上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和使用情况报告”工具。  
@@ -81,7 +81,7 @@ ms.locfileid: "51018342"
   
          在设备与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员 - 您必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员 - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
      完成对该列表的编辑后，请单击 **“确定”**。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "51018342"
   
 15. 使用“ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 - FILESTREAM”页对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。 有关 FILESTREAM 的详细信息，请参阅 [数据库引擎配置 - 文件流](../../sql-server/install/database-engine-configuration-filestream.md)。 若要继续，请单击“下一步”。  
   
-16. 使用“ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置 – 帐户设置”页指定服务器模式以及将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员权限的用户或帐户。 服务器模式决定哪些内存和存储子系统用于服务器。 不同的解决方案类型在不同的服务器模式下运行。 如果您计划在服务器上运行多维数据集数据库，则选择默认选项“多维”和“数据挖掘”服务器模式。 对于管理员权限，您必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定至少一个系统管理员。 若要添加当前正在运行 SQL Server 安装程序的帐户，请单击 **“添加当前用户”** 按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关服务器模式和管理员权限的详细信息，请参阅 [Analysis Services 配置-帐户设置](../../sql-server/install/analysis-services-configuration-account-provisioning.md)。  
+16. 使用“[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置 - 帐户设置”页指定服务器模式以及将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的管理员权限的用户或帐户。 服务器模式决定哪些内存和存储子系统用于服务器。 不同的解决方案类型在不同的服务器模式下运行。 如果您计划在服务器上运行多维数据集数据库，则选择默认选项“多维”和“数据挖掘”服务器模式。 对于管理员权限，您必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定至少一个系统管理员。 若要添加当前正在运行 SQL Server 安装程序的帐户，请单击 **“添加当前用户”** 按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关服务器模式和管理员权限的详细信息，请参阅 [Analysis Services 配置-帐户设置](../../sql-server/install/analysis-services-configuration-account-provisioning.md)。  
   
      完成对该列表的编辑后，请单击 **“确定”**。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
   

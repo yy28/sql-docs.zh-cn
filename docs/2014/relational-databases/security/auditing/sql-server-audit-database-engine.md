@@ -15,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175347"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373519"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
   “审核”[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
@@ -61,7 +61,7 @@ ms.locfileid: "48175347"
 > [!IMPORTANT]  
 >  任何经过身份验证的用户可以读取和写入到 Windows 应用程序事件日志。 应用程序事件日志要求的权限比 Windows 安全事件日志低，安全性低于 Windows 安全事件日志。  
   
- 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在中[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]或 Windows Server 2008 中，可以设置更精细**生成应用程序**策略从命令行通过使用审核策略程序 (`AuditPol.exe)`。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](http://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](http://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
+ 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在中[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]或 Windows Server 2008 中，可以设置更精细**生成应用程序**策略从命令行通过使用审核策略程序 (`AuditPol.exe)`。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](https://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
   
  在您将审核信息保存到某一文件时，为了帮助避免被篡改，可以通过以下方式限制对文件位置的访问：  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48175347"
   
  如果审核管理员将文件复制到其他位置（用于存档等），新位置的 ACL 应降至以下权限：  
   
--   审核管理员 – 读/写  
+-   审核管理员 - 读/写  
   
--   审核读取者 – 读  
+-   审核读取者 - 读  
   
  建议您从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的单独实例（例如， [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]的单独实例）生成审核报告（如果只有审核管理员或审核读取者可以访问此实例）。 通过使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的单独实例进行报告，可以帮助防止未获授权的用户访问审核记录。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48175347"
  有关详细信息，请参阅 [创建服务器审核和服务器审核规范](create-a-server-audit-and-server-audit-specification.md) 和 [创建服务器审核和数据库审核规范](create-a-server-audit-and-database-audit-specification.md)。  
   
 ## <a name="considerations"></a>注意事项  
- 如果在启动审核期间出现问题，则服务器将不会启动。 在这种情况下，可以在命令行中使用 **–f** 选项来启动服务器。  
+ 如果在启动审核期间出现问题，则服务器将不会启动。 在这种情况下，可以在命令行中使用 -f 选项来启动服务器。  
   
- 如果由于为审核指定了 ON_FAILURE=SHUTDOWN 而使得审核失败导致服务器关闭或不启动，则 MSG_AUDIT_FORCED_SHUTDOWN 事件将写入日志。 由于在第一次遇到此设置时将出现关机，此事件将写入一次。 在出现有关审核导致关闭的失败消息后，将写入此事件。 管理员可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **标志以单用户模式启动** ，从而绕过审核引起的关闭。 如果在单用户模式下启动，则会将指定了 ON_FAILURE=SHUTDOWN 的任何审核降级为在相应会话中以 ON_FAILURE=CONTINUE 运行。 当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **标志启动** 时，MSG_AUDIT_SHUTDOWN_BYPASSED 消息将写入错误日志。  
+ 如果由于为审核指定了 ON_FAILURE=SHUTDOWN 而使得审核失败导致服务器关闭或不启动，则 MSG_AUDIT_FORCED_SHUTDOWN 事件将写入日志。 由于在第一次遇到此设置时将出现关机，此事件将写入一次。 在出现有关审核导致关闭的失败消息后，将写入此事件。 管理员可以使用 -m 标志以单用户模式启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，从而绕过审核引起的关闭。 如果在单用户模式下启动，则会将指定了 ON_FAILURE=SHUTDOWN 的任何审核降级为在相应会话中以 ON_FAILURE=CONTINUE 运行。 使用 -m 标志启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，MSG_AUDIT_SHUTDOWN_BYPASSED 消息将写入错误日志。  
   
  有关服务启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48175347"
 |[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|包含有关服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的文件审核类型的存储扩展信息。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一个功能和命令都有其独特的权限需求。  
   
  若要创建、更改或删除服务器审核或服务器审核规范，服务器主体要求具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。 若要创建、更改或删除数据库审核规范，数据库主体必须具有 ALTER ANY DATABASE AUDIT 权限或针对该数据库的 ALTER 或 CONTROL 权限。 此外，主题还必须具有连接到数据库的权限或者具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
@@ -213,7 +213,7 @@ ms.locfileid: "48175347"
  [DDL 触发器](../../triggers/ddl-triggers.md)  
  介绍如何使用数据定义语言 (DDL) 触发器来跟踪对数据库的更改。  
   
- [Microsoft TechNet：SQL Server 技术中心：SQL Server 2005 安全和保护](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet:SQL Server 技术中心：SQL Server 2005 安全和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>请参阅  

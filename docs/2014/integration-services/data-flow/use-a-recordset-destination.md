@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,17 +12,17 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102457"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791099"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
   记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 `Object` 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
   
- 可以在很多不同情况下使用记录集目标。 下面是一些示例：  
+ 可以在很多不同情况下使用记录集目标。 下面是一些可能的恶意活动：  
   
 -   可以使用发送邮件任务和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言来为记录集中的每一行发送一封自定义电子邮件。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48102457"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，创建或打开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  创建一个变量，将包含记录集保存到内存中的记录集目标，并将该变量的类型设置为`Object`。  
+2.  创建一个用来包含由记录集目标保存到内存中的记录集的变量，然后将该变量的类型设置为 `Object`。  
   
 3.  创建适当类型的其他变量，用来包含您要使用的记录集的每列的值。  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102457"
   
 3.  在 **“变量”** 窗口中，创建用来保存记录集和当前行的列值的变量：  
   
-    1.  创建一个名为，变量`BonusRecordset`，并将其类型设置为`Object`。  
+    1.  创建名为 `BonusRecordset` 的变量，然后将其类型设置为 `Object`。  
   
-         `BonusRecordset`变量保存记录集。  
+         `BonusRecordset` 变量保存记录集。  
   
-    2.  创建一个名为，变量`EmailAddress`，并将其类型设置为`String`。  
+    2.  创建名为 `EmailAddress` 的变量，然后将其类型设置为 `String`。  
   
-         `EmailAddress`变量保存销售人员的电子邮件地址。  
+         `EmailAddress` 变量保存销售人员的电子邮件地址。  
   
-    3.  创建一个名为，变量`FirstName`，并将其类型设置为`String`。  
+    3.  创建名为 `FirstName` 的变量，然后将其类型设置为 `String`。  
   
-         `FirstName`变量保存销售人员的名字。  
+         `FirstName` 变量保存销售人员的名字。  
   
-    4.  创建一个名为，变量`Bonus`，并将其类型设置为`Double`。  
+    4.  创建名为 `Bonus` 的变量，然后将其类型设置为 `Double`。  
   
-         `Bonus`变量保存销售人员的奖金额。  
+         `Bonus` 变量保存销售人员的奖金额。  
   
 #### <a name="to-configure-the-connection-managers"></a>配置连接管理器  
   

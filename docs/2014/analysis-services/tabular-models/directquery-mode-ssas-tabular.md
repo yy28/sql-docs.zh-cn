@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 183719983a6ea95ab545888d009d5226fe24b7dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106497"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511523"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式（SSAS 表格）
   Analysis Services 能让你检索数据并从表格模型创建报表，通过直接从关系数据库系统检索数据和聚合使用*DirectQuery 模式下*。 本主题介绍仅驻留在内存中的标准表格模型和可查询关系数据源的表格模型之间的差异，并且说明如何创建和部署要在 DirectQuery 模式下使用的模型。  
@@ -75,13 +75,13 @@ ms.locfileid: "48106497"
   
 -   **对计算列的支持：** DirectQuery 模型不支持计算列。 但是，您可以创建度量值和 KPI，它们都对数据集进行操作。 请参阅章节[验证](#bkmk_Validation)有关详细信息。  
   
--   **DAX 函数的受限使用：** 某些 DAX 函数不能在 DirectQuery 模式下使用，因此你必须使用其他函数代替它们，或创建数据源中使用派生的列的值。 模型设计器为您在创建与 DirectQuery 模式不兼容的公式时引发的任何错误提供设计时验证。 请参阅以下各节，有关详细信息：[验证](#bkmk_Validation)。  
+-   **DAX 函数的受限的使用：** 不能在 DirectQuery 模式下，使用某些 DAX 函数，因此你必须使用其他函数代替它们，或创建数据源中使用派生的列的值。 模型设计器为您在创建与 DirectQuery 模式不兼容的公式时引发的任何错误提供设计时验证。 请参阅以下各节，有关详细信息：[验证](#bkmk_Validation)。  
   
--   **公式兼容性：** 某些已知情况下，在同一个公式可返回不同的结果，在缓存或混合模型的 DirectQuery 模型相比，仅使用关系数据存储。 这些差异是由 xVelocity 内存中分析 (VertiPaq) 引擎和 SQL Server 之间的语义差异造成的。 有关这些差异的详细信息，请参阅本部分中：[公式兼容性](#bkmk_FormulaCompat)。  
+-   **公式兼容性：** 在某些已知情况下，与仅使用关系数据存储的 DirectQuery 模型相比，相同的公式可能在缓存模型或混合模型下返回不同的结果。 这些差异是由 xVelocity 内存中分析 (VertiPaq) 引擎和 SQL Server 之间的语义差异造成的。 有关这些差异的详细信息，请参阅此部分：[公式兼容性](#bkmk_FormulaCompat)。  
   
 -   **安全性：** 可以使用不同的方法来保护模型根据部署方式。 通过使用 Analysis Services 实例的安全模型，确保缓存的表格模型数据的安全。 可使用角色确保 DirectQuery 模型的安全，但是，您也可以使用在关系数据存储区中定义的安全性。 可以配置模型，以便基于仅限 DirectQuery 模型打开报表的用户只能看到基于其在 SQL Server 中的权限允许该用户看到的数据。 请参阅此部分，了解详细信息：[安全](#bkmk_Security)。  
   
--   **客户端限制：** 当模型处于 DirectQuery 模式下时，它只能查询通过使用 DAX。 不能使用 MDX 来创建查询。 这意味着您不能使用 Excel 数据透视客户端，因为 Excel 使用 MDX。  
+-   **客户端限制：** 当模型处于 DirectQuery 模式下时，只能通过使用 DAX 查询。 不能使用 MDX 来创建查询。 这意味着您不能使用 Excel 数据透视客户端，因为 Excel 使用 MDX。  
   
      但是，可以创建针对 DirectQuery 模型中的查询[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]如果将 DAX 表查询用作 XMLA Execute 语句的一部分有关详细信息，请参阅[DAX 查询语法参考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48106497"
   
 -   您还可以配置缓存上的分区，以便永远不处理用于 DirectQuery 模式的主分区，并且主分区必须始终引用关系数据源。 有许多方法可以使用分区来优化模型设计和报表体验。 有关详细信息，请参阅[分区和 DirectQuery 模式&#40;SSAS 表格&#41;](define-partitions-in-directquery-models-ssas-tabular.md)。  
   
--   在部署了模型后，您可以更改首选连接方法。 例如，您可以使用混合模式来进行测试，并且仅在全面测试了使用该模型的所有报表或查询后，才将模型切换到“仅限 DirectQuery”  模式。 有关详细信息，请参阅[设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。  
+-   在部署了模型后，您可以更改首选连接方法。 例如，您可以使用混合模式来进行测试，并且仅在全面测试了使用该模型的所有报表或查询后，才将模型切换到“仅限 DirectQuery”  模式。 有关详细信息，请参阅 [设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。  
   
 ###  <a name="bkmk_DataSources"></a> 用于 DirectQuery 模型的数据源  
  在您更改设计环境以便启用 DirectQuery 模式后，应立即对用于工作区数据库的数据源进行验证，以便确保它们来自单个 SQL Server 数据源。 DirectQuery 模型中不允许来自其他数据源的数据，包括复制-粘贴的数据。  
@@ -106,7 +106,7 @@ ms.locfileid: "48106497"
 > [!WARNING]  
 >  因为 DirectQuery 模式不支持使用计算列，所以，如果存在您想要对其进行合并或执行其他操作的列，则应该提前计划并且将列定义作为您的数据导入查询或脚本的一部分创建。  
   
- 若要查看和解决验证错误，请打开**错误列表**中[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。 导致无法使用 DirectQuery 模式的错误将会显示在 **“错误”** 选项卡中。在切换到 DirectQuery 模式之前必须修复这些错误。 比较难解决的验证错误通常与 DirectQuery 模式下不支持的公式相关。 请参阅的部分[公式兼容性](#bkmk_FormulaCompat)，有关与公式和计算的列相关的错误的概述。  
+ 若要查看和解决验证错误，请在 **中打开** “错误列表” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。 导致无法使用 DirectQuery 模式的错误将会显示在 **“错误”** 选项卡中。在切换到 DirectQuery 模式之前必须修复这些错误。 比较难解决的验证错误通常与 DirectQuery 模式下不支持的公式相关。 请参阅的部分[公式兼容性](#bkmk_FormulaCompat)，有关与公式和计算的列相关的错误的概述。  
   
  下表介绍了为 DirectQuery 访问创建模型时应注意的其他事项：  
   
@@ -135,7 +135,7 @@ ms.locfileid: "48106497"
   
 -   考虑用户是否具有访问关系数据存储区中数据的所需访问级别。  
   
--   查看同一个模型或报表的用户可能会看到不同数据，具体是哪些数据取决于该用户的安全上下文。  
+-   查看相同的模型或报表的用户可能会看到不同的数据，具体取决于用户的安全上下文。  
   
 -   如果模型缓存已被预留，则使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安全模型（角色）保护缓存安全。 缓存可能包含模型设计人员有权看到、但用户无权看到的数据。 模型和报表设计人员应或者清除缓存，或者通过用角色控制访问权限来保护这些数据。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48106497"
   
  模拟设置属性指定使用 DirectQuery 连接到模型时使用的凭据，要么用于仅限 DirectQuery 模型，要么用于使用 DirectQuery 响应查询的混合模型。 该属性具有以下值：  
   
- **Default**  
+ **默认**  
  使用在导入向导中指定的凭据连接到数据源。 这可能是特定的 Windows 用户或服务帐户。  
   
  `ImpersonateCurrentUser`  
@@ -159,8 +159,8 @@ ms.locfileid: "48106497"
 |属性名称|Description|  
 |-------------------|-----------------|  
 |**DirectQueryMode 属性**|此属性在模型设计器中启用 DirectQuery 模式。 您必须将此属性设置为 `On`，才能更改任何其他 DirectQuery 属性。<br /><br /> 有关详细信息，请参阅[启用 DirectQuery 设计模式&#40;SSAS 表格&#41;](enable-directquery-mode-in-ssdt.md)。|  
-|**QueryMode 属性**|此属性指定针对 DirectQuery 模型的默认查询方法。当您部署模型时，在模型设计器中设置此属性；不过，您可以在以后覆盖它。 该属性具有以下值：<br /><br /> **DirectQuery** – 此设置指定模型的所有查询都应该仅使用关系数据源。<br /><br /> **DirectQuery 以及内存中** - 此设置指定默认情况下应通过使用关系数据源响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> **内存中** - 此设置指定应仅通过使用缓存响应查询。<br /><br /> **内存中以及 DirectQuery** - 此设置指定默认情况下 应该通过使用缓存来响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> <br /><br /> 有关详细信息，请参阅[设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
-|**DirectQueryMode 属性**|在部署了模型后，您可以通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中更改此属性，更改 DirectQuery 模型的首选查询数据源。<br /><br /> 与以前的属性相似，此属性也指定模型的默认数据源并且具有以下值：<br /><br /> **InMemory**： 查询可以使用仅缓存。<br /><br /> **DirectQuerywithInMemory**： 查询默认情况下，使用关系数据源，除非客户端的连接字符串中指定。<br /><br /> **InMemorywithDirectQuery**： 查询默认情况下使用缓存，除非客户端的连接字符串中指定。<br /><br /> (**DirectQuery**： 查询使用的关系数据源。<br /><br /> <br /><br /> 有关详细信息，请参阅[设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
+|**QueryMode 属性**|此属性指定针对 DirectQuery 模型的默认查询方法。当您部署模型时，在模型设计器中设置此属性；不过，您可以在以后覆盖它。 该属性具有以下值：<br /><br /> **DirectQuery** -此设置指定模型的所有查询都应都使用的关系数据源。<br /><br /> **DirectQuery 以及内存中** - 此设置指定默认情况下应通过使用关系数据源响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> **内存中** - 此设置指定应仅通过使用缓存响应查询。<br /><br /> **内存中以及 DirectQuery** - 此设置指定默认情况下 应该通过使用缓存来响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> <br /><br /> 有关详细信息，请参阅 [设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
+|**DirectQueryMode 属性**|在部署了模型后，您可以通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中更改此属性，更改 DirectQuery 模型的首选查询数据源。<br /><br /> 与以前的属性相似，此属性也指定模型的默认数据源并且具有以下值：<br /><br /> **InMemory**:查询可以使用仅缓存。<br /><br /> **DirectQuerywithInMemory**:查询默认使用关系数据源，除非在客户端的连接字符串中指定了其他项。<br /><br /> **InMemorywithDirectQuery**:查询默认使用缓存，除非在客户端的连接字符串中指定了其他项。<br /><br /> (**DirectQuery**:查询仅使用关系数据源。<br /><br /> <br /><br /> 有关详细信息，请参阅 [设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
 |**模拟设置属性**|此属性定义用于在查询时连接到 SQL Server 数据源的凭据。 您可以在模型设计器中设置此属性，并且可以在部署了模型后，在以后更改该属性值。<br /><br /> 请注意，这些凭据仅用于响应针对关系数据存储区的查询；它们与用于处理混合模型的缓存的凭据不同。<br /><br /> 当模型仅用于内存中时，不能使用模拟。 `ImpersonateCurrentUser` 设置无效，除非模型正在使用 DirectQuery 模式。|  
   
  此外，如果您的模型包含分区，则您必须选择一个分区来用作 DirectQuery 模式中查询的源。 有关详细信息，请参阅[分区和 DirectQuery 模式&#40;SSAS 表格&#41;](define-partitions-in-directquery-models-ssas-tabular.md)。  
@@ -170,7 +170,7 @@ ms.locfileid: "48106497"
 |主题|Description|  
 |-----------|-----------------|  
 |[分区和 DirectQuery 模式下&#40;SSAS 表格&#41;](define-partitions-in-directquery-models-ssas-tabular.md)|说明如何在配置为 DirectQuery 模式的模型中使用分区。|  
-|[在 DirectQuery 模式下的 DAX 公式兼容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|说明可在配置为 DirectQuery 模式的模型中使用的公式的限制和兼容性要求。|  
+|[DirectQuery 模式下的 DAX 公式兼容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|说明可在配置为 DirectQuery 模式的模型中使用的公式的限制和兼容性要求。|  
 |[启用 DirectQuery 设计模式&#40;SSAS 表格&#41;](enable-directquery-mode-in-ssdt.md)|说明如何更改设计时环境以便它支持使用 DirectQuery 模式|  
 |[更改 DirectQuery 分区&#40;SSAS 表格&#41;](../change-the-directquery-partition-ssas-tabular.md)|说明如何更改 DirectQuery 分区。|  
 |[设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)|说明如何设置或更改配置为 DirectQuery 的模型的连接方法。|  
@@ -179,8 +179,8 @@ ms.locfileid: "48106497"
 |[清除 Analysis Services 缓存](../instances/clear-the-analysis-services-caches.md)|清除表格模型的缓存|  
   
 ## <a name="see-also"></a>请参阅  
- [分区&#40;SSAS 表格&#41;](partitions-ssas-tabular.md)   
- [表格模型项目&#40;SSAS 表格&#41;](tabular-model-projects-ssas-tabular.md)   
- [在 Excel 中分析&#40;SSAS 表格&#41;](analyze-in-excel-ssas-tabular.md)  
+ [分区（SSAS 表格）](partitions-ssas-tabular.md)   
+ [表格模型项目（SSAS 表格）](tabular-model-projects-ssas-tabular.md)   
+ [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)  
   
   

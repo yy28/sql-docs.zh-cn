@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6609cda18e6fc0f2942bb37e6939af6123b213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3fd2e357d58d77bc82a551ab88f01db2c1c693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771269"
 ---
 # <a name="audit-transformation"></a>审核转换
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
@@ -46,7 +45,7 @@ ms.locfileid: "48156897"
   
  此转换有一个输入和一个输出。 它不支持错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 **“审核转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Audit Transformation Editor](../../audit-transformation-editor.md)。  
   

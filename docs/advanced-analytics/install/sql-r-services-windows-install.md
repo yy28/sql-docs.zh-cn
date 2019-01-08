@@ -1,6 +1,6 @@
 ---
-title: 安装 SQL Server 2016 R Services （数据库） |Microsoft Docs
-description: 当在 Windows 上安装 SQL Server 2016 R Services，SQL Server 中的 R 才可用。
+title: 安装 SQL Server 2016 R Services （数据库内） 的 SQL Server 机器学习
+description: 添加 R 编程语言支持添加到 Windows 上的 SQL Server 2016 R Services 上的数据库引擎。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
-ms.translationtype: HT
+ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878120"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645316"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "48878120"
 
   可以与其他版本的 R 和 Python 并行安装，因为 SQL Server 实例使用自己的开源 R 和 Anaconda 发行版的副本。 但是，在 SQL Server 外部的 SQL Server 计算机上运行使用 R 和 Python 的代码可能会导致各种问题：
     
-  + 使用不同的库和其他可执行文件，并获取不同的结果，比您在 SQL Server 中运行时。
-  + 不能由 SQL Server，从而导致资源争用管理外部库中运行的 R 和 Python 脚本。
+  + 与在 SQL Server 中运行相比，你使用不同的库和不同的可执行文件，并获得不同的结果。
+  + 外部库中运行的 R 和 Python 脚本不能由 SQL Server 管理，这会导致资源争用。
   
-如果使用任何早期版本的 Revolution Analytics 开发环境或 RevoScaleR 软件包，或者安装了 SQL Server 2016 的任何预发行版本，则必须将其卸载。 不支持运行较旧和较新版本的 RevoScaleR 和其他专有包。 有关删除以前版本的帮助，请参阅 [SQL Server机器学习服务的升级和安装常见问题解答](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
+如果使用任何早期版本的 Revolution Analytics 开发环境或 RevoScaleR 软件包，或者安装了 SQL Server 2016 的任何预发行版本，则必须将其卸载。 不支持运行较旧和较新版本的 RevoScaleR 和其他专有包。 删除以前版本的帮助，请参阅[升级和安装常见问题解答的 SQL Server 机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 
 > [!IMPORTANT]
 > 安装完成后，请确保完成本文中描述的其他配置后步骤。 这些步骤包括使 SQL Server 能够使用外部脚本，以及为 SQL Server 添加代表你运行R作业所需的帐户。 配置更改通常需要重新启动实例，或者重新启动 Launchpad 服务。
@@ -89,7 +89,20 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
     请注意路径 `..\Setup Bootstrap\Log` 下的文件夹位置，配置文件存储在此位置。 安装完成后，可以在摘要文件中查看已安装的组件。
 
-7. 安装完成后，如果系统指示重启计算机，请立即重启。 安装完成后，阅读安装向导中的消息非常重要。 有关更多信息，请参阅[查看和阅读 SQL Server 安装日志文件](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+7. 安装完成后，如果系统指示重启计算机，请立即重启。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
+
+## <a name="set-environment-variables"></a>设置环境变量
+
+对于仅 R 功能集成，应设置**MKL_CBWR**环境变量[确保一致的输出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel Math Kernel Library (MKL) 的计算。
+
+1. 在控制面板中，单击**系统和安全** > **系统** > **高级系统设置** >  **环境变量**。
+
+2. 创建一个新的用户或系统变量。 
+
+  + 到组变量名称 `MKL_CBWR`
+  + 将变量的值设置为 `AUTO`
+
+此步骤需要重新启动服务器。 如果你是要启用脚本执行，您可以在重启保持，直到完成所有配置工作。
 
 <a name="bkmk_enableFeature"></a>
 
@@ -98,20 +111,20 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
     > [!TIP]
-    > 可以从此页面下载并安装相应的版本：[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+    > 可以下载并安装适当版本，在此页：[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
     > 
     > 还可以试用 [Azure Data Studio](../../azure-data-studio/what-is.md) 的预览版，它支持针对 SQL Server 的管理任务和查询。
   
 2. 连接到安装了机器学习服务的实例，单击“新建查询”以打开查询窗口，然后运行以下命令：
 
-   ```SQL
+   ```sql
    sp_configure
    ```
-    `external scripts enabled` 的属性值目前应为 0。 这是因为该功能默认情况下处于关闭状态。 在运行 R 或 Python 脚本之前，必须由管理员显式启用该功能。
+    属性 `external scripts enabled` 的值目前应为 **0**。 这是因为该功能默认情况下处于关闭状态。 在运行 R 或 Python 脚本之前，必须由管理员显式启用该功能。
      
 3. 若要启用外部脚本编写功能，请运行以下语句：
   
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -132,7 +145,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 1. 在 SQL Server Management Studio，打开新查询窗口中，并运行以下命令：
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -144,7 +157,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开一个新的“查询”窗口，然后运行如下脚本：
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -170,9 +183,9 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 在断开连接的服务器上，需要执行额外步骤。 有关更多信息，请参阅[在没有 internet 访问权限的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
-1. 从已安装的基准实例开始：SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2。
+1. 使用已安装的基线实例启动：SQL Server 2016 初始版本、 SQL Server 2016 SP 1 或 SQL Server 2016 SP 2。
 
-2. 转到累积更新列表： [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+2. 请转到累积更新列表：[SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 3. 选择最新的累积更新。 可执行文件将自动下载和提取。
 
@@ -203,7 +216,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 * [将 SQLRUserGroup 添加为数据库用户](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> 并非所有列出的更改都是必需的，可能不需要任何更改。 要求取决于安全架构、安装 SQL Server 的位置以及希望用户如何连接到数据库并运行外部脚本。 可在此处找到其他疑难解答提示：[升级和安装常见问题解答](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> 并非所有列出的更改都是必需的，可能不需要任何更改。 要求取决于安全架构、安装 SQL Server 的位置以及希望用户如何连接到数据库并运行外部脚本。 其他故障排除提示可在此处找到：[升级和安装常见问题解答](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ## <a name="suggested-optimizations"></a>建议的优化
 
@@ -241,7 +254,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 配合工作的基础知识。 下一步，请参阅以下链接：
 
-+ [教程： 在 T-SQL 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [教程： 在数据库内分析 R 开发人员](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教程：在 T-SQL 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教程：R 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 若要查看基于实际场景的机器学习示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。

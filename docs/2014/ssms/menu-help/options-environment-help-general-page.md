@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.General
@@ -12,12 +12,12 @@ ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14dca3e7fa9aa02a71a1920ad2443d4ae0d74cd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179207"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774985"
 ---
 # <a name="options-environment-help-general-page"></a>选项 （环境-帮助-常规页）
   使用“选项”对话框可以选择文档集，并确定是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中以内部方式显示主题还是在单独窗口中以外部方式显示主题。 若要访问此对话框，请单击“工具”菜单上的“选项”，展开“环境”节点中的“帮助”，再单击“常规”。  
@@ -25,7 +25,7 @@ ms.locfileid: "48179207"
 > [!NOTE]  
 >  重新启动环境之后，在此页上对选项进行的更改才会生效。  
   
-## <a name="settings"></a>“设置”  
+## <a name="settings"></a>设置  
  **使用下列选项显示帮助**  
  指定如何显示帮助。 从该下拉列表中选择“外部帮助查看器”，可以在外部浮动窗口中显示主题。 选择“集成帮助查看器”，可以在停靠于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内的 Web 浏览器窗口中显示帮助主题。  
   

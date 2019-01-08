@@ -12,12 +12,12 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc2ba0e196fa2440152fe1bd7415feeeb6f4e079
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbbb50000f88e35b03f5a006c4a50708f10b05b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366869"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 示例
   Hello World Ready 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单且全球通用存储过程所涉及的基本操作。 不用更改全球通用组件的源代码就可以将它轻松地本地化为全世界各个市场的各种语言。 此示例还说明了如何通过输出参数和记录返回由存储过程动态构建并返回到客户端的数据。此示例与 Hello World 示例基本相同，只不过在对此应用程序进行本地化时，此示例更容易且更安全。 更改已本地化的文本需要执行下列操作：  
@@ -32,14 +32,14 @@ ms.locfileid: "48079637"
   
  CLR 存储过程本身的源代码和程序集并不更改。 提供了 `build.cmd` 脚本，用来说明如何编译和链接资源程序集。尽管应用程序的源代码基于当前执行的程序集创建了资源管理器，但是您不必在包含存储过程的 DLL 中嵌入独立于区域性的资源。 `System.Resources.NeutralResourcesLanguage attribute` 允许附属 DLL 中存在独立于区域性的资源。 因此，最好使用单独的 DLL，以便在需要添加或更改本地化文本时，不必更改包含 CLR 存储过程的主 DLL。 这对于可能含有列和其他相关性，造成类型难以删除和重新添加的 CLR 用户定义类型而言，尤为有用。通常，附属 DLL 版本必须与主程序集版本相同。 但是，使用 `SatelliteContractVersion` 属性可以允许仅更新主程序集，而不更新附属程序集。 有关详细信息，请参阅 Microsoft .NET 文档中的 `ResourceManager` 类。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  此示例仅适用于 SQL Server 2005 和更高版本。  
   
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](http://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48079637"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48079637"
   
     -   更改为   
   
-    -   `<value xml:space="preserve">` `ã“ã‚“ã«ã¡ã¯</value>`  
+    -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   
 11. 在 c:\MySample 中，创建文件 `build.com` 并将示例代码复制到该文件中。  
   

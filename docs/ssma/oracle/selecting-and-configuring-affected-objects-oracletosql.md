@@ -13,12 +13,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688295"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405914"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>选择并配置受影响的对象 (OracleToSQL)
 在此页可以选择表和外键，在其中更改应进行比较时 SSMA 验证在上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
@@ -41,7 +41,7 @@ SSMA 测试人员无法验证任何这些对象，如果你将看到标记为链
   
 -   规则  
   
--   ，则“默认”  
+-   默认  
   
 -   标识  
   
@@ -50,10 +50,10 @@ SSMA 测试人员无法验证任何这些对象，如果你将看到标记为链
 ## <a name="sql"></a>Sql  
 SQL 选项卡包含"创建表"选定的表的 SQL。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>数据  
 数据选项卡显示所选择的表中的数据。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
 属性选项卡显示所选表的属性。 以下字段是属性选项卡下存在：  
   
 -   创建或上次修改时间  

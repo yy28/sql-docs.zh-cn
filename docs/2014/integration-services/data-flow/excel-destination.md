@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
@@ -16,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905241"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375599"
 ---
 # <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
@@ -41,13 +40,13 @@ ms.locfileid: "48905241"
 ## <a name="usage-considerations"></a>使用注意事项  
  Excel 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支持的 Excel ISAM（索引顺序存取方法）驱动程序来连接 Excel 数据源，并在 Excel 数据源中进行数据读写操作。  
   
- 许多现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章都记录了该访问接口和驱动程序的行为。虽然这些文章并非专门介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前身 Data Transformation Services，但您仍可了解到一些可能导致意外结果的行为。 有关 Excel 驱动程序的使用及行为的一般信息，请参阅 [如何将 ADO 与来自 Visual Basic 或 VBA 的 Excel 数据一起使用](http://support.microsoft.com/kb/257819)。  
+ 许多现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章都记录了该访问接口和驱动程序的行为。虽然这些文章并非专门介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前身 Data Transformation Services，但您仍可了解到一些可能导致意外结果的行为。 有关使用及行为的 Excel 驱动程序的常规信息，请参阅[操作方法：使用 ADO 与来自 Visual Basic 或 VBA 的 Excel 数据](https://support.microsoft.com/kb/257819)。  
   
  在将数据保存到 Excel 目标时，Excel 驱动程序所附带的 Jet 访问接口的以下行为可以导致意外的结果。  
   
 -   **保存文本数据**。 Excel 驱动程序将文本数据值保存到 Excel 目标时，驱动程序将在每个单元内的文本之前添加单引号字符 (') 以确保所保存的值将被解释为文本值。 如果拥有或要开发将读取或处理所保存的数据的其他应用程序，则可能需要包括特殊的措施，以处理位于每个文本值前面的单引号字符。  
   
-     有关如何避免包括单引号的信息，请参阅 msdn.com 上的博客文章： [在 SSIS 包中使用 Excel 目标数据流组件时，单引号会在数据转换成 Excel 时追加到所有字符串](http://go.microsoft.com/fwlink/?LinkId=400876)。  
+     有关如何避免包括单引号的信息，请参阅 msdn.com 上的博客文章： [在 SSIS 包中使用 Excel 目标数据流组件时，单引号会在数据转换成 Excel 时追加到所有字符串](https://go.microsoft.com/fwlink/?LinkId=400876)。  
   
 -   **保存 memo (ntext) 数据**。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。 如果目标表中已存在数据行，则由驱动程序抽样的前几行的 memo 列中必须至少包含一个长度大于 255 个字符的值的实例。 如果在包设计或运行时创建目标表，然后在 CREATE TABLE 语句必须使用 LONGTEXT （或其同义词之一） 作为备注列的数据类型。  
   
@@ -106,11 +105,11 @@ ms.locfileid: "48905241"
   
 ## <a name="related-content"></a>相关内容  
   
--   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 1 部分（共 3 部分）：连接和组件](http://go.microsoft.com/fwlink/?LinkId=217674)。  
+-   博客文章[Integration Services 中的 Excel、 3 的第 1 部分：连接和组件](https://go.microsoft.com/fwlink/?LinkId=217674)，dougbert.com 上的  
   
--   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 2 部分（共 3 部分）：表和数据类型](http://go.microsoft.com/fwlink/?LinkId=217675)。  
+-   博客文章[Integration Services 中的 Excel、 3 的第 2 部分：表和数据类型](https://go.microsoft.com/fwlink/?LinkId=217675)，dougbert.com 上的。  
   
--   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 3 部分（共 3 部分）：问题和替代方案](http://go.microsoft.com/fwlink/?LinkId=217676)。  
+-   博客文章[Integration Services 中的 Excel、 3 的第 3 部分：问题和替代方案](https://go.microsoft.com/fwlink/?LinkId=217676)，dougbert.com 上的。  
   
 ## <a name="see-also"></a>请参阅  
  [Excel 源](excel-source.md)   

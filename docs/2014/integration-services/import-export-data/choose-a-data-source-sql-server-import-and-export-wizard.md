@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,19 +12,19 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370269"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
   使用**选择数据源**页可指定要复制的数据源。  
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解有关用于启动向导，选项以及已成功运行该向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   
- 用途[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导，将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="options"></a>选项  
  **数据源**  
@@ -44,10 +43,10 @@ ms.locfileid: "48216337"
  指定包是否应使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证登录数据库。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
  **Use SQL Server Authentication**  
- 指定包是否应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证来登录到数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
+ 指定包是否应使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录数据库。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
  **用户名**  
- 指定数据库连接的用户名称，在使用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，指定数据库连接的用户名。  
   
  **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
@@ -55,11 +54,11 @@ ms.locfileid: "48216337"
  **“数据库”**  
  从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库列表中选择。  
   
- **“刷新”**  
+ **刷新**  
  通过单击“刷新”，还原可用数据库的列表。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>数据源 = .NET Framework Data Provider for SQL Server  
- 此页显示用于 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据访问接口的选项列表，按字母顺序排列。 下表列出了最重要的选项。  
+ 此页显示用于 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据访问接口的选项列表，按字母顺序排列。 下表列出了最重要的选项。  
   
  **数据源**  
  键入包含相应数据的服务器的名称，或者从列表中选择服务器。  
@@ -68,15 +67,15 @@ ms.locfileid: "48216337"
  键入源数据库的名称。  
   
  **Integrated Security**  
- 指定`True`若要使用 Windows 集成身份验证连接，建议这样做，或`False`若要使用连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值是 `False`。  
+ 若要使用 Windows 集成身份验证进行连接，请指定 `True`（建议）；若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定 `False`。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值是 `False`。  
   
  **用户 ID**  
- 指定数据库连接的用户名称，在使用时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，指定数据库连接的用户名。  
   
  **密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
   
- 选择此访问接口时所列出的其他选项并不是成功连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源数据库所必需。 这些附加选项的说明，请参阅的文档[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的数据提供程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]软件开发工具包。  
+ 选择此访问接口时所列出的其他选项并不是成功连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源数据库所必需。 有关这些附加选项的说明，请参阅 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 软件开发包中有关用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的文档。  
   
 ### <a name="data-source--microsoft-excel"></a>数据源 = Microsoft Excel  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48216337"
  当工作组信息文件与数据库关联时，为数据库连接提供相应的用户密码。 但是，如果对于所有用户都使用一个密码保护数据库，则必须在 **“数据链接属性”** 对话框（可通过单击 **“高级”** 访问）中提供此值。  
   
  **高级**  
- 您可能想要指定高级的选项，例如数据库密码或非默认工作组信息文件，通过使用**数据链接属性**对话框。 有关 OLE DB 访问接口属性的详细信息，搜索中的数据访问部分[MSDN 库](http://go.microsoft.com/fwlink/?linkid=62553)。  
+ 您可能想要指定高级的选项，例如数据库密码或非默认工作组信息文件，通过使用**数据链接属性**对话框。 有关 OLE DB 访问接口属性的详细信息，搜索中的数据访问部分[MSDN 库](https://go.microsoft.com/fwlink/?linkid=62553)。  
   
 ### <a name="data-source--flat-file-source"></a>数据源 = 平面文件源  
  有关平面文件数据源的选项的信息，请参阅以下主题：  

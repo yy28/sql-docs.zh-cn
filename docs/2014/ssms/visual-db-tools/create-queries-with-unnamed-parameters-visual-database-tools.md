@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - unnamed parameters
@@ -13,12 +13,12 @@ ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3da2a547ac409ea04a7a0a07603fd1adb3a345d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9eebede28d257083b55ffd4b14943b7ebc1a95b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075877"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768849"
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>使用未命名参数创建查询 (Visual Database Tools)
   可通过将问号 (?) 指定为文字值的占位符来使用未命名参数创建查询。 查询和视图设计器将为未命名参数指定临时名称。 可根据需要在查询中指定任意数目的未命名参数。  

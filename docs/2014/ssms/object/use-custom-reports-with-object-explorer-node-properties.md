@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,18 +12,18 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7198118f9eadbf58bab83727ed45899f5fd2a0df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167667"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374399"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
   如果自定义报表引用所选对象资源管理器节点的报表参数，则将在此节点的上下文中执行自定义报表。 这样，自定义报表可以使用当前上下文（如当前数据库）或者数据库或服务器对象。  
   
 ## <a name="report-samples"></a>报表示例  
- 可下载[报表示例](http://go.microsoft.com/fwlink/?LinkId=81792)（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)]创建的标准报表）。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
+ 可下载[报表示例](https://go.microsoft.com/fwlink/?LinkId=81792)（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)]创建的标准报表）。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
   
 ## <a name="object-explorer-node-report-parameters"></a>对象资源管理器节点的报表参数  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48167667"
   
  `<?xml version="1.0" encoding="utf-8"?>`  
   
- `<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
+ `<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
   
  `<ReportParameters>`  
   

@@ -1,19 +1,19 @@
 ---
-title: SQL Server 中的独立的 R Server 或 Machine Learning Server 安装 |Microsoft Docs
+title: 独立的 R Server 或机器学习服务器安装的 SQL Server 机器学习服务
 description: 为独立版 R Server 概述简介和机器学习服务器在 SQL Server 安装程序
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 12/18/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cb0cecaef28d512cf36e694344e62b01df88ebf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: f1cbc4a7c02597c6c8bece8c47976fabdb4959e7
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657496"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731974"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （独立版） 和 SQL Server 中的机器学习服务器 （独立版）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,15 +27,15 @@ SQL Server 为独立于 SQL Server 运行的独立 R Server 或 Machine Learning
 
 ## <a name="components"></a>组件
 
-SQL Server 2016 仅为 R。 SQL Server 2017 支持 R 和 Python。 下表介绍每个版本中的功能。
+SQL Server 2016 仅适用于 R。 SQL Server 2017 支持 R 和 Python。 下表介绍每个版本中的功能。
 
 | 组件 | Description |
 |-----------|-------------|
-| R 包 | [**RevoScaleR** ](revoscaler-overview.md) 是可扩展 R 的主要库，包含数据操作、转换、可视化和分析功能。  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 可添加机器学习算法，以创建用于文本分析、图像分析和情感分析的自定义模型。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) 可提供帮助程序函数，从而将 R 脚本放入 T-SQL 存储过程，向数据库注册存储过程，以及从 R 开发环境运行存储过程。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) 可提供 Web 服务部署（仅在 SQL Server 2017 中）。 <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) 可用于在 R 中指定 MDX 查询。|
+| R 包 | [**RevoScaleR** ](ref-r-revoscaler.md) 是可扩展 R 的主要库，包含数据操作、转换、可视化和分析功能。  <br/>[**MicrosoftML** ](ref-r-microsoftml.md) 可添加机器学习算法，以创建用于文本分析、图像分析和情感分析的自定义模型。 <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) 可提供帮助程序函数，从而将 R 脚本放入 T-SQL 存储过程，向数据库注册存储过程，以及从 R 开发环境运行存储过程。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) 可提供 Web 服务部署（仅在 SQL Server 2017 中）。 <br/>[**olapR** ](ref-r-olapr.md) 可用于在 R 中指定 MDX 查询。|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版，内含包和解释器。 始终使用安装程序中附带的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。 可在  \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 中找到它们。 |
 | R 示例和脚本 |  开源 R 和 RevoScaleR 包中包含内置数据集，你可以使用预安装的数据创建和运行脚本。 可在 Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR 中找到它们。 |
-| Python 包 | [**revoscalepy** ](../python/what-is-revoscalepy.md) 是可缩放 Python 的主要库，具有数据操作、转换、可视化和分析功能。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 添加了机器学习算法，以创建用于文本分析、图像分析和情绪分析的自定义模型。  |
+| Python 包 | [**revoscalepy** ](../python/ref-py-revoscalepy.md) 是可缩放 Python 的主要库，具有数据操作、转换、可视化和分析功能。 <br/>[**microsoftml** ](../python/ref-py-microsoftml.md) 添加了机器学习算法，以创建用于文本分析、图像分析和情绪分析的自定义模型。  |
 | Python 工具 | 内置的 Python 命令行工具可用于临时测试和任务。 在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe 中找到该工具。 |
 | Anaconda | Anaconda 是 Python 和必备包的开源分发版。 |
 | Python 示例和脚本 | 与 R 一样，Python 包含内置数据集和脚本。 请在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data 中查找 revoscalepy 数据。 |
@@ -51,37 +51,45 @@ R 和 Python 开发人员通常选择要移动的开源 R 和 Python 的内存�
 
 ## <a name="how-to-get-started"></a>如何开始
 
-开始安装程序，将二进制文件附加到您最喜欢的开发工具，编写第一个脚本。
+从安装开始，将二进制文件附加到您最喜欢的开发工具上，并编写第一个脚本。
 
-### <a name="step-1-install-the-software"></a>步骤 1： 安装软件
+### <a name="step-1-install-the-software"></a>步骤 1：安装软件
 
 安装这些版本的之一：
 
 + [SQL Server 2017 机器学习服务器 （独立版）](../install/sql-machine-learning-standalone-windows-install.md)
 + [SQL Server 2016 R Server （独立版）-仅 R](../install/sql-r-standalone-windows-install.md)
 
-### <a name="step-2-configure-a-development-tool"></a>步骤 2： 配置开发工具
+### <a name="step-2-configure-a-development-tool"></a>步骤 2：配置开发工具
 
 在独立服务器上，很常见，若要运行使用本地安装在同一台计算机上的开发。
 
 + [设置 R 工具](set-up-a-data-science-client.md)
 + [设置 Python 工具](../python/setup-python-client-tools-sql.md)
 
-### <a name="step-3-write-your-first-script"></a>第 3 步： 编写第一个脚本
+### <a name="step-3-write-your-first-script"></a>步骤 3：编写第一个脚本
 
 编写使用 RevoScaleR 和 revoscalepy，机器学习算法中的函数的 R 或 Python 脚本。
   
-  + [探索 R 和 25 个函数的 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)： 开始使用 R 的基本命令，然后提供高性能的 RevoScaleR 可分发分析函数的进度和缩放 R 解决方案。 包括许多最流行的 R 建模包的可并行化版本，例如 K-均值聚类、决策树和决策林以及用于数据操作的工具。
+  + [探索 R 和 25 个函数的 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler):开始基本 R 命令，然后转到提供高性能和缩放 R 解决方案的 RevoScaleR 可分发分析函数。 包括许多最流行的 R 建模包的可并行化版本，例如 K-均值聚类、决策树和决策林以及用于数据操作的工具。
 
-  + [快速入门： 使用 microsoftml Python 包的二进制分类的示例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)： 创建使用从 microsoftml 和已知乳腺癌癌症数据集的函数的二元分类模型。
+  + [快速入门：Microsoftml Python 包与二进制分类的示例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml):创建使用从 microsoftml 和已知乳腺癌癌症数据集的函数的二元分类模型。
 
-选择该任务的最佳语言。 使用 SQL 难以实现统计计算，但适合使用 R 来实现。 对于基于集的操作数据，充分利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为了实现最佳性能。 对列进行快速计算时，可使用内存数据库引擎。
+选择最适合任务的语言。 使用 SQL 难以实现统计计算，但适合使用 R 来实现。 对于基于集的操作数据，充分利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为了实现最佳性能。 对列进行快速计算时，可使用内存数据库引擎。
 
-### <a name="step-4-operationalize-your-solution"></a>步骤 4： 操作你的解决方案
+### <a name="step-4-operationalize-your-solution"></a>步骤 4：实施你的解决方案
 
 可以使用独立的服务器[实施](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)功能的非 SQL 品牌[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)。 可以配置独立的服务器的操作化，可以为您提供这些优点： 部署和托管你的代码，因为 web 服务，运行诊断程序，测试 web 服务容量。
 
-## <a name="see-also"></a>请参阅
+### <a name="step-5-maintain-your-server"></a>步骤 5：维护你的服务器
+
+SQL Server 版本定期的累积更新。 应用累积更新将安全性和功能的增强功能添加到现有安装。 
+
+新的或已更改功能的说明可在[CAB 下载](../install/sql-ml-cab-downloads.md)一文和 web 页上[SQL Server 2016 累积更新](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions)和[SQL Server 2017 累积更新](https://support.microsoft.com/help/4047329). 
+
+有关如何将更新应用于现有实例的详细信息，请参阅[应用更新](../install/sql-machine-learning-standalone-windows-install.md#apply-cu)安装说明中。
+
+## <a name="see-also"></a>另请参阅
 
  [安装 R Server （独立版） 或机器学习服务器 （独立版）](../install/sql-machine-learning-standalone-windows-install.md)
 

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebbd0461bf5efd410b710ae04ae93fe349a8bed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da9b788e69decf1c209eec846fbeccc811e70374
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689372"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589761"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ sp_pkeys [ @table_name = ] 'name'
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*名称*归数据库所有者。 如果存在，则返回该表的列。  
   
  [ @table_qualifier=] '*限定符*  
- 表限定符。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ 表限定符。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  
@@ -74,7 +74,7 @@ sp_pkeys [ @table_name = ] 'name'
   
  等效于 ODBC 中的 SQLPrimaryKeys sp_pkeys 存储过程。 返回的结果按 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 KEY_SEQ 排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

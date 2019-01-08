@@ -12,12 +12,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194727"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375139"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency 类型和转换函数
   此示例使用 C# 定义 Currency 用户定义数据类型。 此用户定义数据类型封装了金额和区域，区域有助于确定一种正确的方式，以便将金额以该区域的货币值呈现。 此示例还提供了返回 Currency 用户定义数据类型实例的货币转换函数。 如果 AdventureWorks 数据库包含从美元 (USD) 到与指定区域关联的货币的换算比率，那么转换函数返回的 Currency 用户定义数据类型中包含换算的比率以及与请求的区域相匹配的区域。 否则，返回的 Currency 用户定义数据类型包含原始金额（应是 USD）及 `en-us` 区域。 该示例还说明如何使用 Transact-SQL 注册和注销公共语言运行时 (CLR) 方法和程序集。  
@@ -25,12 +25,12 @@ ms.locfileid: "48194727"
 > [!CAUTION]  
 >  此示例中使用的汇率是虚构的，不能用于实际金融交易。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](http://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48194727"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -401,7 +401,7 @@ if (w == null) throw new ArgumentNullException("w");
     }  
 ```  
   
- 这是[!INCLUDE[tsql](../../includes/tsql-md.md)]安装脚本 (`Install.sql`)，它将程序集部署并在数据库中创建存储的过程。  
+ 这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 安装脚本 (`Install.sql`)，该脚本在数据库中部署程序集并创建存储过程。  
   
 ```  
 USE AdventureWorks  

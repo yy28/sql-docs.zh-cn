@@ -4,25 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7e1459462b057dee39502805cc7746d7e0afa618
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019022"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366119"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升级 PowerPivot for SharePoint
   本主题概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步骤。 具体步骤取决于你的环境当前正在运行的 SharePoint 版本，并包括 PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**)。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- 发行说明，请参阅[SQL Server 2014 发行说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
+ 发行说明，请参阅[SQL Server 2014 发行说明](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "51019022"
   
  **SharePoint 2010：**  
   
--   如果现有安装运行的是 SharePoint 2010，则必须安装 SharePoint 2010 Service Pack 2 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 有关详细信息，请参阅 [Service Pack 2 for Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672)。 使用 PowerShell 命令 `(Get-SPfarm).BuildVersion.ToString()` 验证版本。 若要引用发布日期之前的内部版本，请参阅 [SharePoint 2010 内部版本号](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)。  
+-   如果现有安装运行的是 SharePoint 2010，则必须安装 SharePoint 2010 Service Pack 2 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 有关详细信息，请参阅 [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672)。 使用 PowerShell 命令 `(Get-SPfarm).BuildVersion.ToString()` 验证版本。 若要引用发布日期之前的内部版本，请参阅 [SharePoint 2010 内部版本号](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)。  
   
  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51019022"
   
     1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中单击 **“安装”**。  
   
-    2.  单击 **“从 SQL Server 升级...”**。  
+    2.  单击“从 SQL Server 升级...”。  
   
     3.  在 **“选择实例”** 页上，选择 **POWERPIVOT** 实例名，然后单击 **“下一步”**。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51019022"
   
 2.  重新启动服务器。  
   
-3.  在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 以安装数据访问接口。 您从中运行 SQL Server 安装向导的服务器除外，安装向导也将升级数据访问接口。 有关详细信息，请参阅[下载 Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013](http://www.microsoft.com/download/details.aspx?id=40737)并[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 以安装数据访问接口。 您从中运行 SQL Server 安装向导的服务器除外，安装向导也将升级数据访问接口。 有关详细信息，请参阅[下载 Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=40737)并[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **运行 PowerPivot for SharePoint 2013 配置**上某个 SharePoint 应用程序服务器以使用外接程序安装的更新的解决方案文件配置 SharePoint 场的工具。 不能使用 SharePoint 管理中心执行此步骤。 有关详细信息，请参见以下内容：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "51019022"
   
          上**启动**菜单，依次指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot for SharePoint 2013配置过**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
-    2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，您会看到此消息 **“已检测到 PowerPivot 解决方案文件的较新版本。请选择升级选项以升级你的场**。” 单击“确定”  关闭系统验证消息。  
+    2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，你将看到消息"**已检测到较新版本的 PowerPivot 解决方案文件。请选择升级选项以升级场**。” 单击“确定”  关闭系统验证消息。  
   
     3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”**。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "51019022"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“**在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。是否继续？**”。  
+    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当您单击**运行**，出现以下警告，提醒你在批处理模式下处理操作："**所有标记为有效工具中的配置设置将应用于 SharePoint 场。是否继续?**”。  
   
     8.  单击 **“是”** 继续操作。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "51019022"
   
  ![powerpivot for sharepoint 2010 升级](../../../2014/sql-server/install/media/as-powepivot-upgrade-flow-sharepoint2010.png "powerpivot for sharepoint 2010 upgrade")  
   
-1.  下载 [Service Pack 2 for Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672) 并将其应用于场中的所有服务器。 验证 SharePoint SP2 安装是否成功。 在管理中心中的“升级和迁移”页上，打开“检查产品和修补程序安装状态”页，以查看与 SP2 相关的状态消息。  
+1.  下载 [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) 并将其应用于场中的所有服务器。 验证 SharePoint SP2 安装是否成功。 在管理中心中的“升级和迁移”页上，打开“检查产品和修补程序安装状态”页，以查看与 SP2 相关的状态消息。  
   
 2.  验证“SharePoint 2010 管理”Windows 服务是否正在运行。  
   
@@ -156,17 +156,17 @@ ms.locfileid: "51019022"
   
     1.  在 **“开始”** 菜单中，指向 **“所有程序”**，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 和 **“PowerPivot 配置工具”**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
-    2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，您会看到此消息“已检测到 Powerpivot 解决方案文件的较新版本。 请选择升级选项以升级你的场。” 单击“确定”  关闭消息框。  
+    2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，你将看到消息"较新版本的 PowerPivot 解决方案文件具有已检测到。 请选择升级选项以升级场。” 单击“确定”  关闭消息框。  
   
     3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”** 继续操作。  
   
-    4.  出现以下警告：“PowerPivot 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
+    4.  将出现以下警告："PowerPivot 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
   
          此警告指的是报告数据刷新活动的 PowerPivot 管理面板中的工作簿。 如果您已经自定义了这些工作簿，当使用新版本替换现有文件时，对这些工作簿的所有修改都将丢失。  
   
          单击 **“是”** 可使用较新版本覆盖这些工作簿。 否则，单击 **“否”** 可返回主页。 将工作簿保存到不同位置，以便留有副本，然后在准备好继续操作后返回到此步骤。  
   
-         有关自定义仪表板中使用工作簿的详细信息，请参阅[自定义 PowerPivot 管理面板](http://go.microsoft.com/fwlink/?linkID=229639)。  
+         有关自定义仪表板中使用工作簿的详细信息，请参阅[自定义 PowerPivot 管理面板](https://go.microsoft.com/fwlink/?linkID=229639)。  
   
     5.  查看任务列表中的操作，并排除您不希望该工具来执行的所有操作。 默认情况下包括所有操作。 若要删除某个操作，请在任务列表中选择它，然后清除“参数”页上的 **“在任务列表中包括此操作”** 复选框。  
   
@@ -181,13 +181,13 @@ ms.locfileid: "51019022"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击 **“运行”** 后，出现以下警告，提醒您将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
+    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当您单击**运行**，出现以下警告，提醒你在批处理模式下处理操作："所有标记为在该工具中有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
     9. 单击 **“是”** 继续操作。  
   
-    10. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，针对 PowerPivot 数据的连接请求将失败，并显示“无法刷新数据”或“试图执行请求操作期间出错。 请重试。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
+    10. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，针对 PowerPivot 数据的连接请求将失败并显示"无法刷新数据"或者"出现错误。 已尝试执行请求的操作。 请重试。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
-8.  **重复该过程**为场中每个 SQL Server Analysis Services (PowerPivot) 服务： 1） 运行 SQL Server 安装程序 2） 运行 PowerPivot 配置工具。  
+8.  **重复该过程**为场中每个 SQL Server Analysis Services (PowerPivot) 服务：1) 运行 SQL Server 安装程序 2) 运行 PowerPivot 配置工具。  
   
 9. 请通过执行升级后步骤以及通过检查场中 PowerPivot 服务器的版本，确认升级成功。 有关详细信息，请参阅本主题中的 [升级后的验证任务](#verify) 以及下面的部分。  
   
@@ -200,15 +200,15 @@ ms.locfileid: "51019022"
     1.  以管理员身份启动 SharePoint 2010 Management Shell，然后运行以下命令查看队列中的作业：  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
-    2.  检查现有部署的以下信息： **“类型”** 是“收回”或“部署”， **“文件”** 为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  检查现有部署的以下信息：**类型**是收回或部署，**文件**为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  对于部署或收回与 PowerPivot 解决方案，将复制的 GUID 值**JobId**然后将其粘贴到以下命令 （使用的标记、 复制和粘贴命令外壳的编辑菜单上复制该 GUID）：  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  通过依次单击 **“验证”** 和 **“运行”**，在该配置工具中重试该任务。  

@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374759"
 ---
 # <a name="create-a-login"></a>创建一个登录名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
@@ -38,7 +38,7 @@ ms.locfileid: "48190487"
   
      [背景](#Background)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建登录名，使用：**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48190487"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**  [在创建登录名后采取的步骤](#FollowUp)  
+-   **跟进：**[在创建登录名后采取的步骤](#FollowUp)  
   
 ##  <a name="Background"></a> 背景  
  登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  
@@ -54,11 +54,11 @@ ms.locfileid: "48190487"
 > [!NOTE]  
 >  若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]必须使用混合模式身份验证。 有关详细信息，请参阅[选择身份验证模式](../choose-an-authentication-mode.md)。  
   
- 可以向作为安全主体的登录名授予权限。 登录名的作用域是整个 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。 将作用域的整个实例的权限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](例如，`CREATE ENDPOINT`权限) 可以授予一个登录名。  
+ 可以向作为安全主体的登录名授予权限。 登录名的作用域是整个 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。 可将作用域为整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的权限（例如 `CREATE ENDPOINT` 权限）授予一个登录名。  
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要拥有服务器上的 `ALTER ANY LOGIN` 或 `ALTER LOGIN` 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,17 +69,17 @@ ms.locfileid: "48190487"
   
 2.  右键单击“安全性”文件夹，指向“新建”，然后选择“登录名…”。  
   
-3.  在 **“登录名 - 新建”** 对话框的 **“常规”** 页中，在 **“登录名”** 框中输入用户的名称。 或者，单击 **“搜索…”** 以打开 **“选择用户或组”** 对话框。  
+3.  在“登录名 - 新建”对话框的“常规”页中，在“登录名”框中输入用户的名称。 或者，单击“搜索…”以打开“选择用户或组”对话框。  
   
-     如果您单击 **“搜索…”**：  
+     如果单击“搜索…”：  
   
-    1.  在 **“选择此对象类型”** 下，单击 **“对象类型…”** 打开“对象类型”对话框，并选择以下的任意或全部选项：“内置安全主体”、“组”和“用户”。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
+    1.  下**选择此对象类型**，单击**对象类型...** 以打开**对象类型**对话框中，然后选择以下的任意或全部：**内置安全主体**，**组**，和**用户**。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
   
-    2.  在 **“从此位置”** 下，单击 **“位置…”** 以打开 **“位置”** 对话框，并选择一个可用的服务器位置。 完成后，单击 **“确定”**。  
+    2.  在“从此位置”下，单击“位置…”以打开“位置”对话框，并选择一个可用的服务器位置。 完成后，单击 **“确定”**。  
   
-    3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](http://technet.microsoft.com/library/cc771712.aspx)。  
+    3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](https://technet.microsoft.com/library/cc771712.aspx)。  
   
-    4.  单击 **“高级…”** 以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](http://technet.microsoft.com/library/cc733110.aspx)。  
+    4.  单击“高级…”以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](https://technet.microsoft.com/library/cc733110.aspx)。  
   
     5.  单击 **“确定”** 中创建登录名。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48190487"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **“登录名 – 新建”** 对话框还在四个其他页面上提供了选项： **“服务器角色”**、“用户映射” 、 **“安全对象”** 和“状态” 。  
+ **登录名-新建**对话框还提供了四个其他页面上的选项：**服务器角色**，**用户映射**，**安全对象**，并且**状态**。  
   
 ### <a name="server-roles"></a>“服务器角色”  
  **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项包括：  
@@ -176,24 +176,24 @@ ms.locfileid: "48190487"
   
 1.  单击 **“搜索”**。  
   
-2.  在“添加对象”对话框中，选择以下选项之一：“特定对象…”、“特定类型的所有对象…”或“服务器 server_name”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在中**添加对象**对话框中，选择以下选项之一：**特定对象...**，**类型的所有对象...**，或 **服务器 * * * server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  选择 **服务器 * * * server_name*使用所有该服务器的安全对象自动填充上部网格。  
   
-3.  如果您选择 **“特定对象…”**：  
+3.  如果选择“特定对象…”：  
   
-    1.  在 **“选择对象”** 对话框中的 **“选择这些对象类型”** 下，单击 **“对象类型…”**。  
+    1.  在“选择对象”对话框中的“选择这些对象类型”下，单击“对象类型…”。  
   
-    2.  在 **“选择对象类型”** 对话框中，选择以下的任意或全部对象类型： **“端点”**、 **“登录名”**、 **“服务器”**、 **“可用组”** 和 **“服务器角色”**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  在中**选择对象类型**对话框框中，选择任意或全部以下对象类型：**终结点**，**登录名**，**服务器**，**可用性组**，并且**服务器角色**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  在“输入要选择的对象名称（示例）”下，单击“浏览…”。  
+    3.  在“输入要选择的对象名称(示例)”下，单击“浏览…”。  
   
     4.  在 **“查找对象”** 对话框中，选择您在 **“选择对象类型”** 对话框中选择的类型的任何可用对象，然后单击 **“确定”**。  
   
     5.  在 **“选择对象”** 对话框中，单击 **“确定”**。  
   
-4.  如果您选择 **“特定类型的所有对象…”**，则在 **“选择对象类型”** 对话框中，选择以下的任意或全部对象类型： **“端点”**、 **“登录名”**、 **“服务器”**、 **“可用性组”** 和 **“服务器角色”**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  如果您选择**类型的所有对象...**，请在**选择对象类型**对话框框中，选择任意或全部以下对象类型：**终结点**，**登录名**，**服务器**，**可用性组**，并且**服务器角色**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  

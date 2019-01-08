@@ -19,12 +19,12 @@ ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5640fb6ab982b924d4669663da5f82da91b1601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05cc0d47053d8ddef0962c4aceee75e61b8b4b64
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056978"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372449"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>权限层次结构（数据库引擎）
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 管理着可以通过权限进行保护的实体的分层集合。 这些实体称为“安全对象” 。 最主要的安全对象是服务器和数据库，但可以在更细化的级别设置各种权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过验证主体是否已被授予适当权限来控制主体对安全对象的操作。  
@@ -34,7 +34,7 @@ ms.locfileid: "48056978"
  ![数据库引擎权限层次结构的关系图](../../database-engine/media/wj-security-layers.gif "数据库引擎权限层次结构的关系图")  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
   
 ## <a name="working-with-permissions"></a>使用权限  
  可以使用常见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询 GRANT、DENY 和 REVOKE 来操作权限。 有关权限的信息，可以在 [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) 和 [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) 目录视图中看到。 也可以使用内置函数来查询权限信息。  

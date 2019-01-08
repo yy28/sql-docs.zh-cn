@@ -1,43 +1,34 @@
 ---
-title: 查看和汇总数据使用 R （演练） |Microsoft Docs
+title: 查看和汇总 SQL Server 数据使用 R 函数的 SQL Server 机器学习
+description: 本教程说明如何可视化和生成的 SQL Server 上的数据库内分析中使用 R 函数的统计摘要。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/02/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1d6c225b3ec6b2a7a80dea155b564b94ecab60fb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 368caa21545e534c393aca29ce8fd3a59f9d9837
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032884"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644556"
 ---
-# <a name="view-and-summarize-data-using-r"></a>查看和使用 R 汇总数据
+# <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>查看和汇总 SQL Server 数据使用 R （演练）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-现在让我们使用相同的数据使用 R 代码。 在本课程中，了解如何使用中的函数**RevoScaleR**包。
+本课程向您介绍中的函数**RevoScaleR**打包并指导你完成以下任务：
 
-本演练提供的 R 脚本包括创建数据对象、生成摘要和生成模型所需的所有代码。 R 脚本文件 **RSQL_RWalkthrough.R**位于脚本文件的安装位置。
-
-+ 如果熟悉 R，则可同时运行所有脚本。
-+ 对于 revoscaler 初学者的读者，本教程会通过脚本行的行。
-+ 若要运行此脚本中的各个行，可突出显示文件中的行，然后按 Ctrl + Enter。
-
-> [!TIP]
-> 保存 R 工作区，以防你想要稍后完成本演练的剩余部分。  通过这种方式的数据对象和其他变量是供重新使用。
+> [!div class="checklist"]
+> * 连接到 SQL Server
+> * 定义具有所需数据的查询或指定表或视图
+> * 定义当运行 R 代码时要使用的一个或多个计算上下文
+> * （可选） 定义了从源读取时应用于数据源的转换
 
 ## <a name="define-a-sql-server-compute-context"></a>定义 SQL Server 计算上下文
 
-Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 R 代码中使用。 该过程如下所示：
-  
-- 创建与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接
-- 定义具有所需数据的查询或指定表或视图
-- 定义当运行 R 代码时要使用的一个或多个计算上下文
-- （可选） 定义了从源读取时应用于数据源的转换
-
-以下步骤是所有的 R 代码的一部分，并且应在 R 环境中运行。 我们使用 Microsoft R Client，因为它包括所有 RevoScaleR 包，以及一套基本、 轻量的 R 工具。
+客户端工作站上的 R 环境中运行以下 R 语句。 本部分假设[使用 Microsoft R 客户端数据科学工作站](../r/set-up-a-data-science-client.md)，因为它包括所有 RevoScaleR 包，以及一套基本、 轻量的 R 工具。 例如，可以使用 Rgui.exe 在本部分中运行 R 脚本。
 
 1. 如果**RevoScaleR**包已加载，则运行此 R 代码行：
 
@@ -49,13 +40,15 @@ Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/
      
      如果遇到错误，请确保你的 R 开发环境正在使用的库中包含的 RevoScaleR 包。 使用命令如`.libPaths()`若要查看当前的库路径。
 
-2. 为 SQL Server 创建连接字符串并将其保存在一个 R 变量_connStr_。
+2. 为 SQL Server 创建连接字符串并将其保存在一个 R 变量*connStr*。
+
+   必须将占位符"your_server_name"更改为有效的 SQL Server 实例名称。 对于服务器名称中，您可能能够使用只是实例名称，或可能需要完全限定的名称，具体取决于你的网络。
     
+   SQL Server 身份验证的连接语法如下所示：
+
     ```R
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
-
-    对于服务器名称中，您可能能够使用只是实例名称，或可能需要完全限定的名称，具体取决于你的网络。
 
     对于 Windows 身份验证的语法是稍有不同：
     
@@ -63,7 +56,7 @@ Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
-    供下载的 R 脚本仅使用 SQL 登录名。 通常情况下，我们建议在可能的情况，以避免将密码保存在 R 代码中使用 Windows 身份验证。 但是，若要确保在本教程中的代码匹配从 Github 下载的代码，我们将为本演练的其余部分使用 SQL 登录名。
+    通常情况下，我们建议在可能的情况，以避免将密码保存在 R 代码中使用 Windows 身份验证。
 
 3. 定义要用于创建一个新的变量*计算上下文*。 创建计算上下文对象后，可用于 SQL Server 实例上运行 R 代码。
 
@@ -75,10 +68,9 @@ Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/
 
     - 在工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机之间来回序列化 R 对象时，R 会使用临时目录。 可指定用作 sqlShareDir 的本地目录，或者接受默认目录。
   
-    - 使用*sqlWait*以指示您是否要 R 等待来自服务器的结果。  等待作业与非等待作业的讨论，请参阅[分布式计算和使用 Microsoft R 中的 ScaleR 的并行计算](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)。
+    - 使用*sqlWait*以指示您是否要 R 等待来自服务器的结果。  与非等待作业正在等待的讨论，请参阅[分布式计算和使用 Microsoft R 中的 RevoScaleR 的并行计算](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)。
   
     - 使用参数*sqlConsoleOutput*以指示您不想要查看从 R 控制台的输出。
-
 
 4. 在调用[RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)构造函数来创建计算上下文对象的变量和连接字符串已定义，并将新对象保存在 R 变量*sqlcc*。
   
@@ -92,14 +84,14 @@ Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/
     rxSetComputeContext(sqlcc)
     ```
 
-    + `rxSetComputeContext` 会无形返回先前活动的计算上下文，使其可供使用
-    + `rxGetComputeContext` 返回活动的计算上下文
+    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)不可见的方式返回之前处于活动状态的计算上下文，以便您可以使用它
+    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)返回活动的计算上下文
     
-    请注意，设置计算上下文仅影响使用 **RevoScaleR** 包中的函数的操作；该计算上下文不会影响开源代码 R 操作的执行方式。
+    请注意，设置计算上下文仅影响使用中的函数的操作**RevoScaleR**包; 该计算上下文不会影响执行开源 R 运算的方式。
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>创建使用 RxSqlServer 数据源
 
-在 Microsoft R*数据源*是使用 RevoScaleR 函数创建的对象。 数据源对象指定某些想要使用的一个任务，例如模型训练或特征提取的数据的集。 你可以从各种源; 获取数据当前支持的源的列表，请参阅[RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)。
+使用 RevoScaleR 和 MicrosoftML，等的 Microsoft R 库时*数据源*是使用 RevoScaleR 函数创建的对象。 数据源对象指定某些想要使用的一个任务，例如模型训练或特征提取的数据的集。 您可以从各种来源包括 SQL Server 获取数据。 当前支持的源的列表，请参阅[RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)。
 
 前面定义连接字符串，并在一个 R 变量中保存该信息。 您可以重新使用该连接信息以指定的数据要获取。
 
@@ -125,7 +117,7 @@ Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/
     
     + colClasses   参数指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 R 间移动数据时要使用的列类型。这一点非常主要，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的数据类型不同于 R，且使用的数据类型更多。 有关详细信息，请参阅[R 库和数据类型](../r/r-libraries-and-data-types.md)。
   
-    + 自变量*rowsPerRead*对于管理内存使用率和高效计算非常重要。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中大多数增强的分析函数都可以处理区块中的数据并累积中间结果，并在读取所有的数据后返回最终的计算。  通过添加*rowsPerRead*参数，可以控制数据的行数读入每个区块中进行处理。  如果此参数的值太大，则数据访问可能很慢，因为没有足够的内存来有效地处理如此大型的数据区块。  在某些系统中，设置*rowsPerRead*为过小的值还可以提供性能下降。
+    + 自变量*rowsPerRead*对于管理内存使用率和高效计算非常重要。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中大多数增强的分析函数都可以处理区块中的数据并累积中间结果，并在读取所有的数据后返回最终的计算。  通过添加*rowsPerRead*参数，可以控制数据的行数读入每个区块中进行处理。  如果此参数的值太大，数据访问可能很慢，因为你没有足够的内存来有效地处理此类较大的数据块。  在某些系统中，设置*rowsPerRead*为过小的值还可以提供性能下降。
 
 3. 此时，已创建*inDataSource*对象，但它不包含任何数据。 数据才会被提取的 SQL 查询从本地环境到如运行函数之后，才能[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep)或[rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary)。
 
@@ -147,7 +139,7 @@ Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/
 
     **结果**
     
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: integer
@@ -182,7 +174,7 @@ Microsoft R 可以轻松从中获取数据[!INCLUDE[ssNoVersion](../../includes/
 
     如果 rxSummary 函数成功运行，应看到如下，结果按类别后跟的统计信息列表。 
 
-    ```
+    ```R
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
@@ -216,10 +208,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > 
 > 另一个选项是监视使用这些 SQL Server 上运行的 R 作业[自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
-## <a name="next-lesson"></a>下一课
+## <a name="next-steps"></a>后续步骤
 
-[使用 R 创建图形和绘图](walkthrough-create-graphs-and-plots-using-r.md)
-
-## <a name="previous-lesson"></a>上一课
-
-[使用 SQL 探索数据](walkthrough-view-and-explore-the-data.md)
+> [!div class="nextstepaction"]
+> [使用 R 创建图形和绘图](walkthrough-create-graphs-and-plots-using-r.md)

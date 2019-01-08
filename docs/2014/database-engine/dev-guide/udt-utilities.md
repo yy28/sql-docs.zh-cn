@@ -12,22 +12,22 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84fcd5451bae28f1817d7cf9b874938436f3d2f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372389"
 ---
 # <a name="udt-utilities"></a>UDT 实用工具
   UDT 实用工具示例包括很多实用工具函数。 其中包括向 Transact-SQL 公开程序集元数据的函数、以表的形式返回程序集中的类型的示例流式表值函数，以及返回用户定义数据类型的字段、方法和属性的函数。 演示的技术包括流式表值函数、.NET Framework 反射 API 以及从 Transact-SQL 中调用表值函数。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库，可在 Codeplex[网站](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库，可在 Codeplex[网站](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48210177"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 实例上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   

@@ -1,32 +1,32 @@
 ---
-title: 设置 SQL Server 上的 R 开发数据科学客户端 |Microsoft Docs
+title: 设置 R 开发的 SQL Server 机器学习服务的数据科学客户端
 description: 远程连接到 SQL Server 的开发工作站上安装本地 R 库和工具。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/12/2018
+ms.date: 12/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 087d7249fbcbb206566e822c634f10e8bc4ba838
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.openlocfilehash: 86b2ba305263b4699a3fe85328e854ba3105e4ab
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703148"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645506"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>设置 SQL Server 上的 R 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 如果在[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 机器学习服务(数据库内)](../install/sql-machine-learning-services-windows-install.md)安装中含入了R语言选项，可以在SQL Server 2016或更高版本中使用R集成。 
 
-要开发和部署适用于SQL Server的R解决方案，请在开发工作站上安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)以获取[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他R库。 RevoScaleR库用于协调两个系统之间的计算请求，同时也应用于远程SQL Server实例。 
+若要开发和部署适用于 SQL Server 的 R 解决方案时，安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)若要获取在开发工作站上[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他 R 库。 RevoScaleR 库，还会需要在远程 SQL Server 实例，可协调计算这两个系统之间的请求。 
 
-本文介绍如何配置R客户端开发工作站，以便能够与为实现机器学习和R集成而启用的远程SQL Server进行交互。 完成本文中的步骤后，你将拥有与SQL Server上相同的R库。 还会了解如何将计算从本地R会话推送到SQL Server上的远程R会话。
+在本文中，了解如何配置 R 客户端开发工作站，以便您可以使用远程 SQL Server 启用了机器学习和 R 集成进行交互。 完成本文中的步骤后，你将拥有与SQL Server上相同的R库。 还会了解如何将计算从本地R会话推送到SQL Server上的远程R会话。
 
 ![客户端-服务器组件](media/sqlmls-r-client-revo.png "本地和远程 R 会话和库")
 
-为验证此安装，可以使用本文中介绍的内置**RGUI**工具，或将[库链接到](#install-ide) RStudio或常用的任何其他IDE。
+若要验证安装，可以使用内置**RGUI**工具在本文中所述或[链接库](#install-ide)到 RStudio 或任何你通常使用的另一个 IDE。
 
 > [!Tip]
 > 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
@@ -50,9 +50,12 @@ Microsoft 的 R 包有多个产品和服务。 在本地工作站上，我们建
 
 2. 在安装向导中，接受或更改默认安装路径、 接受或更改的组件列表，并接受 Microsoft R Client 许可条款。
 
-N/A
+  N/A
 
-在R 客户端中，R处理的上限为两个线程和内存数据。 对于使用多核和大型数据集的可伸缩处理，您可以将执行（称为*计算上下文*）转移到远程SQL Server实例的数据集和计算能力。 这是客户端与生产SQL服务器实例集成的推荐方法。 
+3. 创建用于确保在 Intel Math Kernel Library (MKL) 的计算输出的一致性的 MKL_CBWR 系统环境变量。
+
+  + 在控制面板中，单击**系统和安全** > **系统** > **高级系统设置** >  **环境变量**。
+  + 创建一个名为的新系统变量**MKL_CBWR**，值设置为**自动**。
 
 ## <a name="2---locate-executables"></a>2-查找可执行文件
 
@@ -60,12 +63,12 @@ N/A
 
 1. 在文件资源管理器，打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin 文件夹，以确认 R.exe 的位置。
 
-2. 打开 x64 子文件夹，用于确认**RGUI**。
+2. 打开 x64 子文件夹，用于确认**RGUI**。 下一步中，将使用此工具。
 
 3. 打开 C:\Program Files\Microsoft\R Client\R_SERVER\library，若要查看使用 R 客户端，包括 RevoScaleR、 MicrosoftML，和其他安装的包的列表。
 
 
-<a name="r-tool"></a>
+<a name="R-tools"></a>
  
 ## <a name="3---start-rgui"></a>3-启动 RGUI
 
@@ -84,6 +87,8 @@ N/A
 
 ## <a name="4---get-sql-permissions"></a>4-获取 SQL 权限
 
+在R 客户端中，R处理的上限为两个线程和内存数据。 对于使用多核和大型数据集的可伸缩处理，您可以将执行（称为*计算上下文*）转移到远程SQL Server实例的数据集和计算能力。 这是推荐用于生产 SQL Server 实例，与客户端集成的方法，您将需要的权限和连接信息，使其工作。
+
 若要连接到要运行脚本和上传数据的 SQL Server 实例，必须在数据库服务器上具有有效的登录名。 可以使用 SQL 登录凭据或集成 Windows 身份验证信息。 我们通常建议使用 Windows 集成身份验证，但使用 SQL 登录名是在某些情况下，更简单，尤其是在脚本中包含对外部数据连接字符串时。
 
 最小值，用来运行代码的帐户必须具有你正在使用，加上特殊权限执行任意外部脚本从数据库中读取的权限。 大多数开发人员还需要权限才能创建存储的过程，并将数据写入到包含训练数据的表或评分的数据。 
@@ -100,7 +105,7 @@ N/A
 
 ## <a name="5---test-connections"></a>5-测试连接
 
- 作为验证步骤，使用**RGUI**和 RevoScaleR 以确认连接到远程服务器。 必须启用 SQL Server[远程连接](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)并且必须具有的权限，包括用户登录名和要连接到数据库。 
+ 作为验证步骤，使用**RGUI**和 RevoScaleR 以确认连接到远程服务器。 必须启用 SQL Server[远程连接](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)并且必须具有的权限，包括用户登录名和要连接到数据库。 
 
 下面的步骤假定演示数据库[NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)，和 Windows 身份验证。
 
@@ -110,7 +115,7 @@ N/A
 
 3. 输入远程服务器执行的演示脚本。 必须修改下面的示例脚本，包括远程 SQL Server 实例的有效名称。 此会话开始作为本地会话，但**rxSummary**函数执行的远程 SQL Server 实例上。
 
-  ```r
+  ```R
   # Define a connection. Replace server with a valid server name.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
@@ -128,7 +133,7 @@ N/A
 
   此脚本连接到远程服务器上的数据库，提供查询、 创建计算上下文`cc`指令的远程执行代码，然后提供的 RevoScaleR 函数**rxSummary**返回统计查询结果的摘要。
 
-  ```r
+  ```R
     Call:
   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
       connectionString = connStr), computeContext = cc)
@@ -143,7 +148,7 @@ N/A
 
 4. 获取和设置计算上下文。 一旦设置计算上下文，它将保持有效的会话的持续时间。 如果不确定计算是本地还是远程，运行以下命令以找出。指定连接字符串的结果指示远程计算上下文。
 
-  ```r
+  ```R
   # Return the current compute context.
   rxGetComputeContext()
 
@@ -160,7 +165,7 @@ N/A
 
 5. 数据源，包括名称和类型中返回变量的信息。
 
-  ```r
+  ```R
   rxGetVarInfo(data = inDataSource)
   ```
   结果包含 23 变量。
@@ -168,7 +173,7 @@ N/A
 
 6. 生成散点图以了解是否有两个变量之间的依赖项。 
 
-  ```r
+  ```R
   # Set the connection string. Substitute a valid server name for the placeholder.
   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
@@ -242,5 +247,5 @@ N/A
 
 两个不同教程包括练习，以便您可以练习切换到远程 SQL Server 实例从本地计算上下文。
 
-+ [教程： 使用 RevoScaleR R 函数与 SQL Server 数据](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [教程：SQL Server 数据使用 RevoScaleR R 函数](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [数据科学端到端演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

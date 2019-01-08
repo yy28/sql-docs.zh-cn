@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -19,17 +18,17 @@ ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef51e4b20fb96f76bbcfa8e9f5a2d4dccaa75d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116375"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771659"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改参数化行筛选器。  
   
- 在创建表项目时，可以使用参数化行筛选器。 这些筛选器使用 [WHERE](/sql/t-sql/queries/where-transact-sql) 子句来选择要发布的相应数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数： [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) 和 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
+ 在创建表项目时，可以使用参数化行筛选器。 这些筛选器使用 [WHERE](/sql/t-sql/queries/where-transact-sql) 子句来选择要发布的相应数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数：[SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql)并[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
   
  
   

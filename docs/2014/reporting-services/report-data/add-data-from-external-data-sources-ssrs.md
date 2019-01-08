@@ -11,12 +11,12 @@ ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f1dff5b37bdf608478105e684a09dab8cae9280
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 527c089b1fd1dc49330ea3ee3c9b3576f7c969ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161947"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369659"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>从外部数据源中添加数据 (SSRS)
   若要从外部数据源中检索数据，您需要使用数据连接。 数据连接信息通常由外部数据源的所有者提供，该所有者负责授予权限并指定要使用的凭据类型。 数据连接信息另存为报表数据源。 数据源类型指定要用于检索数据的数据扩展插件。  
@@ -107,8 +107,8 @@ ms.locfileid: "48161947"
 |[报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|提供有关数据连接和数据源的信息。|  
 |[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|提供有关嵌入数据集和共享数据集的信息。|  
 |[数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)|提供有关查询生成的数据集字段集合的信息。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。|提供有关每个数据扩展插件的平台和版本支持的详细信息。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的[数据处理扩展插件概述](../extensions/data-processing/data-processing-extensions-overview.md)。|为高级用户提供有关数据扩展插件的详细信息。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。|提供有关每个数据扩展插件的平台和版本支持的详细信息。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的[数据处理扩展插件概述](../extensions/data-processing/data-processing-extensions-overview.md)。|为高级用户提供有关数据扩展插件的详细信息。|  
   
 
   

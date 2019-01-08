@@ -1,32 +1,32 @@
 ---
-title: Java 语言扩展。 在 SQL Server 2019 |Microsoft Docs
-description: 使用 Java 语言扩展的 SQL Server 2019 上运行 Java 代码。
+title: 在 SQL Server 2019-SQL Server 机器学习服务的 Java 语言扩展
+description: 安装、 配置和验证 Linux 和 Windows 系统上 SQL Server 2019 的 Java 语言扩展。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/12/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b11025a69a0e72bb7cea1c478350da0f6ede85bf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a258573ff7506f2533c2f91edb5751cfd1121dc8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696410"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431710"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 Java 语言扩展 
 
-从 SQL Server 2019 开始，你可以运行自定义 Java 代码[可扩展性框架](../concepts/extensibility-framework.md)作为数据库引擎实例的附加项。 
+从 Windows 和 Linux 上的 SQL Server 2019 预览版中开始，你可以运行自定义 Java 代码[可扩展性框架](../concepts/extensibility-framework.md)作为数据库引擎实例的附加项。 
 
-可扩展性框架是用于执行外部代码的体系结构： Java （从 SQL Server 2019）， [（从 SQL Server 2017） 的 Python](../concepts/extension-python.md)，并[R （从 SQL Server 2016 开始）](../concepts/extension-r.md)。 执行代码是独立于核心引擎进程，但与 SQL Server 的查询执行完全集成。 这意味着您可以将数据从任何 SQL Server 查询推送到外部运行时，并使用或持久保存回 SQL Server 中的结果。
+可扩展性框架是用于执行外部代码的体系结构：（从 SQL Server 2019），Java [（从 SQL Server 2017） 的 Python](../concepts/extension-python.md)，并[R （从 SQL Server 2016 开始）](../concepts/extension-r.md)。 执行代码是独立于核心引擎进程，但与 SQL Server 的查询执行完全集成。 这意味着您可以将数据从任何 SQL Server 查询推送到外部运行时，并使用或持久保存回 SQL Server 中的结果。
 
 使用任何编程语言扩展，如系统存储过程[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)是用于执行预编译的 Java 代码的接口。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
-SQL Server 2019 是必需的。 早期版本不具有 Java 集成。 
+SQL Server 2019 预览实例是必需的。 早期版本不具有 Java 集成。 
 
 Java 版本要求在 Windows 和 Linux 上可能有所不同。 Java Runtime Environment (JRE) 的最低要求，但 Jdk 非常有用，如果您需要 Java 编译器或开发包。 JDK 是全包含所有，如果安装了 JDK，因为不需要 JRE。
 
@@ -46,7 +46,7 @@ Java 版本要求在 Windows 和 Linux 上可能有所不同。 Java Runtime Env
 
 ## <a name="install-on-linux"></a>在 Linux 上安装
 
-你可以安装[数据库引擎和 Java 扩展一起](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation)，或向现有实例中添加的 Java 支持。 下面的示例将 Java 扩展添加到现有安装。  
+你可以安装[数据库引擎和 Java 扩展一起](../../linux/sql-server-linux-setup-machine-learning.md#install-all)，或向现有实例中添加的 Java 支持。 下面的示例将 Java 扩展添加到现有安装。  
 
 ```bash
 # RedHat install commands
@@ -65,6 +65,29 @@ sudo zypper install mssql-server-extensibility-java
 
 > [!Note]
 > 与 internet 连接的设备，在包的依赖项下载和安装作为主包安装的一部分。 有关详细信息，包括脱机安装程序，请参阅[安装在 Linux 上 SQL Server 机器学习](../../linux/sql-server-linux-setup-machine-learning.md)。
+
+### <a name="grant-permissions-on-linux"></a>Linux 上的授予权限
+
+若要向 SQL Server 提供有权执行的 Java 类，需要设置权限。
+
+若要授予读取和执行 jar 文件或类文件的访问权限，请运行以下**chmod**命令上每个类或 jar 文件。 我们建议将类文件放在一个 jar，当您使用 SQL Server 时。 创建一个 jar 的帮助，请参阅[如何创建一个 jar 文件](#create-jar)。
+
+```cmd
+chmod ug+rx <MyJarFile.jar>
+```
+您还需要为 mssql_satellite 权限授予读取/执行的目录或 jar 文件。
+
+* 如果你正在从 SQL Server 调用的类文件，mssql_satellite 将需要读取/执行权限*每个*在文件夹层次结构中，从根下的直接父目录。
+
+* 如果你正在从 SQL Server 调用 jar 文件，它就足以 jar 文件本身上运行命令。
+
+```cmd
+chown mssql_satellite:mssql_satellite <directory>
+```
+
+```cmd
+chown mssql_satellite:mssql_satellite <MyJarFile.jar>
+```
 
 <a name="install-on-windows"></a>
 
@@ -86,7 +109,7 @@ JAVA_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤
 
   在 CTP 2.0 中，将 JAVA_HOME 设置为基的 jdk 文件夹仅适用于 Java 1.10。 
 
-  Java 1.8 中，将扩展路径才能到达 JDK (例如，"C:\Program Files\Java\jdk1.8.0_181\bin\server"在 Windows 上的 jvm.dll。 或者，你可以指向 JRE 基本文件夹:"C:\Program Files\Java\jre1.8.0_181"。
+  Java 1.8 中，将扩展路径才能到达 JDK (例如，"C:\Program Files\Java\jdk1.8.0_181\bin\server"在 Windows 上的 jvm.dll。 或者，你可以指向 JRE 基本文件夹："C:\Program Files\Java\jre1.8.0_181"。
 
 2. 在控制面板中，打开**系统和安全**，打开**系统**，然后单击**高级系统属性**。
 
@@ -98,38 +121,32 @@ JAVA_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤
 
 <a name="perms-nonwindows"></a>
 
-### <a name="grant-permissions-to-java-executables"></a>授予对 Java 可执行文件的权限
+### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>授予对非默认 JDK 文件夹 (仅 Windows) 访问权限
 
-默认情况下，外部进程在其下运行的帐户没有访问到 JRE 或 JDK 文件。 在本部分中，运行以下 PowerShell 脚本授予权限以允许访问。
+如果在默认文件夹中安装 JDK/JRE，可以跳过此步骤。 
 
-1. 找到并复制的 JDK 或 JRE 安装位置。 例如，它可能是 C:\Program Files\Java\jdk-10.0.2。
+对于非默认文件夹安装，运行**icacls**命令从*提升*行，以授予访问权限**SQLRUsergroup**和 SQL Server 服务帐户 （在**ALL_APPLICATION_PACKAGES**) 用于访问 JVM 和 Java classpath。 命令将以递归方式授予对所有文件和给定的目录路径下的文件夹的访问权限。
 
-2. 使用管理员权限打开 PowerShell。 如果您不熟悉此任务，请参阅[这篇文章](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/)提示和技巧。
+#### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup 的权限
 
-3. 运行以下脚本，授予**SQLRUserGroup** Java 可执行文件的权限。 
+对于命名实例，将实例名追加到 SQLRUsergroup (例如， `SQLRUsergroupINSTANCENAME`)。
 
-  **SQLRUserGroup**指定的权限下运行的外部进程。 默认情况下，此组的成员有权 R 和 Python 程序安装的 SQL Server，但不是 Java 文件。 若要运行 Java 可执行文件，您必须授予**SQLRUserGroup**权限执行此操作。
+```cmd
+icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("SQLRUsergroup","FullControl","Allow")
-   $Acl.SetAccessRule($Ar)
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
-4. 运行以下脚本，授予**所有应用程序包**以及权限。 
+#### <a name="appcontainer-permissions"></a>AppContainer 权限
 
-  在 SQL Server 2019 容器辅助角色帐户作为隔离机制中，将替换为下快速启动板服务帐户，这是成员的标识的容器中运行的进程**SQLRUserGroup**。 有关详细信息，请参阅[安装 SQL Server 2019 之间的差异](../install/sql-machine-learning-services-ver15.md)。
+```cmd
+icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("ALL APPLICATION PACKAGES","FullControl","Allow") 
-   $Acl.SetAccessRule($Ar) 
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
+### <a name="add-the-jre-path-to-javahome"></a>将 JRE 路径添加到 JAVA_HOME
+此外需要将该路径添加到 JRE JAVA_HOME 系统环境变量中。 如果您只需安装的 JRE，可以提供 JRE 文件夹路径。 但是，如果已安装 JDK，您需要 jvm，此类下 JDK、 JRE 文件夹中提供的完整路径："C:\Program Files\Java\jdk1.8.0_191\jre\bin\server"。
 
-5. 重复前面的两个步骤包含你想要在 SQL Server 上运行的.class 或.jar 文件的任何 Java 类路径文件夹上。 例如，如果您将保留路径，如 C:\JavaPrograms\my-app 编译的程序，请授予**SQLRUserGroup**并**ALL APPLICATION PACKAGES**文件夹的权限，以便可以加载程序。
+若要创建系统变量，请使用控制面板 > 系统和安全 > 系统访问**高级系统属性**。 单击**环境变量**然后针对 JAVA_HOME 创建新的系统变量。
 
-  请务必授予权限的完整路径，在根文件夹开始。 只需包含文件夹的权限不会足以满足加载你的代码。
+![Java 主页中的环境变量](../media/java/env-variable-java-home.png "设置适用于 Java")
 
 <a name="configure-script-execution"></a>
 
@@ -162,6 +179,18 @@ JAVA_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤
 * 使用 sp_execute_external_script 参数传送视频流@r_rowsPerRead此 CTP 中不受支持。
 
 * 分区使用 sp_execute_external_script 参数@input_data_1_partition_by_columns此 CTP 中不受支持。
+
+<a name="create-jar"></a>
+
+## <a name="how-to-create-a-jar-file-from-class-files"></a>如何从类文件中创建的 jar 文件
+
+导航到包含您的类文件的文件夹并运行以下命令：
+
+```cmd
+jar -cf <MyJar.jar> *.class
+```
+
+请确保路径**jar.exe**是系统 path 变量的一部分。 或者，指定 jar，其中可以下 /bin JDK 文件夹中找到的完整路径： `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
 
 ## <a name="next-steps"></a>后续步骤
 

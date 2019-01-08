@@ -16,12 +16,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce5f68df0b543fb4c461fb34921ce2ee32a3357
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529096"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
   在要快速创建基于相同数据的多个挖掘模型时，创建挖掘模型的副本将很有用。 在您复制模型后，可以通过更改参数或添加筛选器，编辑新副本。  
@@ -38,7 +38,7 @@ ms.locfileid: "48116237"
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     - 或 -  
+     -或-  
   
      选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”**。  
   
@@ -48,18 +48,18 @@ ms.locfileid: "48116237"
   
 1.  选择挖掘模型。  
   
-2.  在“属性”窗口中，单击“筛选器”属性文本框，再单击 **(...)** 生成按钮。  
+2.  在中**属性**窗口中，单击文本框**筛选器**属性，然后单击生成 **（...）** 按钮。  
   
 3.  更改筛选条件。  
   
-     有关如何使用筛选器编辑器对话框的详细信息，请参阅[对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
+     有关如何使用筛选器编辑器对话框的详细信息，请参阅 [对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
   
 4.  在中**属性**窗口，请在`AlgorithmParameters`文本框中，单击**设置参数**，并根据需要更改算法参数。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)   
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](delete-a-filter-from-a-mining-model.md)  
   

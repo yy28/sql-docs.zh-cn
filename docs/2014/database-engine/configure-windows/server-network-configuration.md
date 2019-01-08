@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -19,12 +18,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab0d7678ec07f3819bf7dd6b9b949f4c2d11229d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111687"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372409"
 ---
 # <a name="server-network-configuration"></a>服务器网络配置
   服务器网络配置任务包括启用协议、修改协议使用的端口或管道、配置加密、配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务、在网络上显示或隐藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及注册服务器主体名称。 大多数情况下，无须更改服务器网络配置。 只在有特殊的网络要求时才需要重新配置服务器网络协议。  
@@ -49,7 +48,7 @@ ms.locfileid: "48111687"
  对于支持扩展保护的操作系统，提供通过使用渠道绑定和服务绑定对针对验证的扩展保护的支持。 有关详细信息，请参阅 [使用扩展保护连接到数据库引擎](connect-to-the-database-engine-using-extended-protection.md)。  
   
 ## <a name="authenticating-by-using-kerberos"></a>使用 Kerberos 进行身份验证  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Kerberos 身份验证。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](register-a-service-principal-name-for-kerberos-connections.md) 和 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Kerberos 身份验证。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](register-a-service-principal-name-for-kerberos-connections.md) 和 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)  
   
 ### <a name="registering-a-server-principal-name-spn"></a>注册服务器主体名称 (SPN)  
  Kerberos 身份验证服务使用 SPN 对服务进行身份验证。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](register-a-service-principal-name-for-kerberos-connections.md)。  

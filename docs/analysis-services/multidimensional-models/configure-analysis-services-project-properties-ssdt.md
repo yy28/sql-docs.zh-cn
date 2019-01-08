@@ -1,5 +1,5 @@
 ---
-title: 配置 Analysis Services 项目属性 (SSDT) |Microsoft 文档
+title: 配置 Analysis Services 项目属性 (SSDT) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51e5c2ebb72cce6b7a02fb9be226620f2d4cb06f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 90fd3a238d7b4ab3e573c4ecef76bdbdd3bde7f1
+ms.sourcegitcommit: 3f19c843b38d3835d07921612f0143620eb9a0e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023214"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709800"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>配置 Analysis Services 项目属性 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "34023214"
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |生成/部署服务器版本|用于部署项目的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|指定最终要将项目部署到其中的服务器的版本。 当多个开发人员共同处理项目时，这些开发人员需要了解服务器版本，以便知道要将哪些功能合并到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。|  
-|生成/部署服务器版本|用于开发项目的版本|指定最终要将项目部署到其中的服务器的版本。|  
+|生成 / 部署服务器版本|用于开发项目的版本|指定最终要将项目部署到其中的服务器的版本。|  
 |生成/输出|/bin|项目生成过程输出的相对路径|  
 |生成/删除密码|True|指定是否从在生成过程中写入到输出目录的连接字符串中删除已知密码。 删除密码可提高安全性。 如果删除密码，则在处理已部署项目时需要提供密码，以便 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以访问源数据。|  
-|调试/启动对象|\<当前处于活动状态的对象 >|确定启动调试时将要启动的对象。|  
+|调试/启动对象|\<当前活动对象 >|确定启动调试时将要启动的对象。|  
 |部署/部署模式|仅部署更改|默认情况下，仅部署对项目对象所做的更改（条件是/前提是没有直接在项目外部对对象进行其他更改）。 您还可以选择在每个部署过程中部署所有项目对象。 为了获得最佳性能，请使用“仅部署更改”。|  
 |部署/处理选项|默认|默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在部署对对象所做的更改时确定所需的处理类型。 这通常会使部署时间最短。 但是，您还可以选择在每个部署过程执行完全处理或不执行处理。|  
 |部署/事务性部署|False|默认情况下，在处理这些已部署的对象时，已更改对象或所有对象的部署并不是事务性部署。 即使在处理失败时，部署也会成功并且一直保留。 您可以将此默认设置更改为在单个事务中合并部署和处理。|  
@@ -43,10 +43,10 @@ ms.locfileid: "34023214"
   
  项目最初使用单个配置进行创建，此过程称为“开发”。 您可以创建其他配置，并使用配置管理器在配置之间进行切换。  
   
- 在创建其他配置之前，所有开发人员均使用此常用配置。 但是，在不同的项目开发阶段（例如在项目的初始开发和测试过程中），不同的开发人员可能会使用不同的数据源并将项目部署到不同的服务器以实现不同目的。 使用配置，您可以将这些不同的设置保留在不同的配置文件中。  
+ 在创建其他配置之前，所有开发人员均使用此常用配置。 但是，在各个阶段在初始开发期间，如项目开发-和测试的项目的不同的开发人员将可能使用不同的数据源并将项目部署到不同的服务器，用于不同目的。 使用配置，您可以将这些不同的设置保留在不同的配置文件中。  
   
-## <a name="see-also"></a>另请参阅  
- [生成 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [部署 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>请参阅  
+ [生成 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

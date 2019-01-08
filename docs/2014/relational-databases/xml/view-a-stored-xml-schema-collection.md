@@ -18,15 +18,15 @@ ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 708aed70836bfc5fdccb9dd8ba3afc2545e093f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e43af2841de0f2e5a00bf4e7871f71092e6bc87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373779"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>查看存储 XML 架构集合
-  使用 [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)导入 XML 架构集合之后，架构组件便存储在元数据中。 你可以使用 [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)内部函数重新构造 XML 架构集合。 此函数将返回`xml`数据类型实例。  
+  使用 [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)导入 XML 架构集合之后，架构组件便存储在元数据中。 你可以使用 [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)内部函数重新构造 XML 架构集合。 此函数返回 `xml` 数据类型实例。  
   
  例如，以下查询从`ProductDescriptionSchemaCollection`数据库中的产品关系架构中检索 XML 架构集合 ( [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] )。  
   
@@ -35,7 +35,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- 如果你想要查看 XML 架构集合中的只有一个架构，则可以指定 XQuery`xml`类型返回的结果`xml_schema_namespace`。  
+ 如果只需要查看 XML 架构集合中的一个架构，则可以针对由 `xml_schema_namespace` 返回的 `xml` 类型结果指定 XQuery。  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  
@@ -48,7 +48,7 @@ GO
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection').query('  
-/xs:schema[@targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
+/xs:schema[@targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
 ')  
 GO  
 ```  
@@ -56,7 +56,7 @@ GO
  也可以将可选的目标命名空间作为第三个参数传递到 `xml_schema_namespace` 函数，以便从集合中检索特定的架构，如以下查询所示：  
   
 ```  
-SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
+SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
 GO  
 ```  
   

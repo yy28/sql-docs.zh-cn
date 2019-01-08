@@ -1,20 +1,22 @@
 ---
-title: 在 SQL Server 2019 大数据群集上运行的示例笔记本 |Microsoft Docs
+title: 运行示例 notebook |Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教程演示如何可以加载 SQL Server 2019 大数据群集 （预览版） 上的示例 Spark 笔记本将运行。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644111"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432550"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>教程： SQL Server 2019 大数据群集上运行的示例笔记本
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>教程：在 SQL Server 2019 大数据群集上运行的示例笔记本
 
 本教程演示如何加载和笔记本在 Azure 数据 Studio 中运行 SQL Server 2019 大数据群集 （预览版） 上。 这允许数据科学家和数据工程师针对群集中运行 Python、 R 或 Scala 代码。
 
@@ -23,11 +25,11 @@ ms.locfileid: "49644111"
 
 ## <a id="prereqs"></a> 先决条件
 
-* [部署 Kubernetes 上的大数据群集](deployment-guidance.md)。
-* [安装 Azure Data Studio 和 SQL Server 2019 扩展](deploy-big-data-tools.md)。
-* [将示例数据加载到群集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [大数据工具](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 扩展**
+- [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>下载示例 notebook 文件
 
@@ -47,7 +49,7 @@ ms.locfileid: "49644111"
 
 以下步骤演示如何在 Azure Data Studio 中打开笔记本文件：
 
-1. 在 Azure Data Studio，连接到你的大数据群集的 HDFS/Spark 网关。 有关详细信息，请参阅[连接到 HDFS/Spark 网关](deploy-big-data-tools.md#hdfs)。
+1. 在 Azure Data Studio，连接到你的大数据群集的 HDFS/Spark 网关。 有关详细信息，请参阅[连接到 HDFS/Spark 网关](connect-to-big-data-cluster.md#hdfs)。
 
 1. 中的 HDFS/Spark 网关连接上双击**服务器**窗口。 然后选择**打开 Notebook**。
 

@@ -1,5 +1,5 @@
 ---
-title: 预测潜在结果使用 Python 模型 （SQL Server 机器学习） |Microsoft Docs
+title: 预测潜在结果使用 Python 模型-SQL Server 机器学习
 description: 本教程显示如何将 SQL Server 中的嵌入式的 PYthon 脚本进行操作的存储过程带有 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033674"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644766"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>运行使用 Python 在存储过程中嵌入的预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ ms.locfileid: "51033674"
 
 本课演示如何创建基于 Python 模型的预测的两个方法： 批处理评分和评分行的行。
 
-- **批处理计分：** 若要提供的输入数据的多个行，SELECT 查询作为参数传递给存储过程。 结果是与输入事例对应的观测值的表。
-- **单个评分：** 传递一组单独的参数值作为输入。  存储过程将返回单个行或值。
+- **批处理评分：** 若要提供的输入数据的多个行，将 SELECT 查询作为参数传递给存储过程。 结果是与输入事例对应的观测值的表。
+- **单个评分：** 将一组单独的参数值传递作为输入。  存储过程将返回单个行或值。
 
 作为存储过程的一部分提供了进行评分所需的所有 Python 代码。
 
@@ -48,7 +48,7 @@ ms.locfileid: "51033674"
 
 + 包含输入的数据框架传递给`predict_proba`函数的逻辑回归模型`mod`。 `predict_proba`函数 (`probArray = mod.predict_proba(X)`) 返回**float**表示 （的任意数量） 会支付小费的概率。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 此存储的过程使用相同的输入和创建相同的类型的评分为上一存储过程，但使用函数从**revoscalepy**随 SQL Server 机器学习提供的包。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ GO
 
 1. 若要使用**scikit-了解**用于评分的模型，请调用存储的过程**PredictTipSciKitPy**、 传递模型名称和查询字符串作为输入。
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ GO
 
 2. 若要使用**revoscalepy**用于评分的模型，请调用存储的过程**PredictTipRxPy**、 传递模型名称和查询字符串作为输入。
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ GO
 
 花点时间查看代码执行评分使用的存储过程**scikit-了解**模型。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 以下存储的过程执行使用评分**revoscalepy**模型。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ GO
 
 1. 若要使用生成预测**revoscalepy**模型中，运行此语句：
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. 若要通过使用生成的评分**scikit-了解**模型中，运行此语句：
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 这两个过程的输出是正在使用指定的参数或功能出租车行程支付小费的概率。
@@ -355,6 +355,6 @@ GO
 
 [训练和保存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [SQL Server 中的 Python 扩展](../concepts/extension-python.md)

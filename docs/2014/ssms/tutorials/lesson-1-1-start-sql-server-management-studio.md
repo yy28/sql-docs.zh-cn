@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b962fd3691aff2986db40f187557f54247b897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159697"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373629"
 ---
 # <a name="start-sql-server-management-studio"></a>启动 SQL Server Management Studio
   开始本教程之前，让我们先来了解一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -27,7 +27,7 @@ ms.locfileid: "48159697"
 1.  上**启动**菜单，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然后单击**SQL Server Management Studio**。  
   
     > [!NOTE]  
-    >  默认情况下不会安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用，则运行安装程序安装此程序。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express 是可作为从免费下载[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)，但具有不同的用户界面不是在本教程中所述。  
+    >  默认情况下不会安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用，则运行安装程序安装此程序。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express 是可作为从免费下载[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)，但具有不同的用户界面不是在本教程中所述。  
   
 2.  在“连接到服务器”对话框中，确认默认设置，再单击“连接”。 若要连接，**服务器名称**框必须包含计算机的名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]是命名的实例，**服务器名称**框还应包含实例名称，格式\< *computer_name* > \\ <*instance_name*>。  
   

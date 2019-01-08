@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database configuration [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c862639952e9d77c5de85f77c090b9fdd019d451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05dc6188a46e0e2d43b7a4bc3275fae7d4cd8da6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822821"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>更改数据库的配置设置
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改服务器级别选项。 这些选项仅针对各自的数据库，而不会影响其他数据库。  
@@ -31,7 +30,7 @@ ms.locfileid: "48071897"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要更改数据库的选项设置，请使用：**  
   

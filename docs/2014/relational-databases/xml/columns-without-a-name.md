@@ -12,15 +12,15 @@ ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d36934be00b7d4be6b28a6ed1748f99ded2d310e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e7687e310f0a1d9abf12eb6101f4e78e5a7b68
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226982"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357272"
 ---
 # <a name="columns-without-a-name"></a>没有名称的列
-  任何没有名称的列都将成为内联列。 例如，未指定列别名的计算列或嵌套标量查询将生成没有名称的列。 如果该列属于`xml`类型，该数据类型实例的内容插入。 否则，列内容将作为文本节点插入。  
+  任何没有名称的列都将成为内联列。 例如，未指定列别名的计算列或嵌套标量查询将生成没有名称的列。 如果该列属于 `xml` 类型，则将插入该数据类型实例的内容。 否则，列内容将作为文本节点插入。  
   
 ```  
 SELECT 2+2  
@@ -38,7 +38,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ')   
 FROM Production.ProductModel  

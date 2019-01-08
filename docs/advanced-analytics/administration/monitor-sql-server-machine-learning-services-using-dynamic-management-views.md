@@ -1,6 +1,6 @@
 ---
-title: 监视 SQL Server 机器学习服务使用动态管理视图 (Dmv) |Microsoft Docs
-description: 使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务。
+title: 监视使用动态管理视图 (Dmv)-SQL Server 机器学习的 R 和 Python 脚本执行
+description: 使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务中的 R 和 Python 外部脚本执行。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aa05c78f8bac4af5187b815126e0ec9e4b6fff4e
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743450"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645546"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "50743450"
 
 运行查询以获得此输出。 有关的视图和函数使用的详细信息，请参阅[sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)， [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)，并[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)。
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -93,7 +93,7 @@ WHERE name = 'external scripts enabled';
 
 运行查询以获得此输出。 使用的动态管理视图的详细信息，请参阅[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)， [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)，并[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)。
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -133,7 +133,7 @@ ON s.session_id = r.session_id;
 
 运行查询以获得此输出。 使用的动态管理视图的详细信息，请参阅[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 该查询仅返回已超过一次执行的函数。
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -156,7 +156,7 @@ ORDER BY language, counter_name;
 
 运行查询以获得此输出。 使用的动态管理视图的详细信息，请参阅[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)。
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -182,7 +182,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 运行查询以获得此输出。 使用的动态管理视图的详细信息，请参阅[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)并[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -200,13 +200,13 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>内存配置
 
-查看以百分比表示的 SQL Server 和外部资源池的最大内存配置有关的信息。 如果默认值为运行 SQL Sever `max server memory (MB)`，它被视为 100%的 OS 的内存。
+查看以百分比表示的 SQL Server 和外部资源池的最大内存配置有关的信息。 如果默认值为运行 SQL Server `max server memory (MB)`，它被视为 100%的 OS 的内存。
 
 ![内存配置查询的输出](media/dmv-memory-configuration.png "输出从内存配置查询")
 
 运行查询以获得此输出。 使用的视图的详细信息，请参阅[sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)并[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -234,7 +234,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 运行查询以获得此输出。 使用的动态管理视图的详细信息，请参阅[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)并[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -265,7 +265,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 运行查询以获得此输出。 该查询使用 R 脚本来确定 R 包与 SQL Server 安装。
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -277,7 +277,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 | “列” | Description |
 |--------|-------------|
-| “包” | 已安装包的名称。 |
+| package | 已安装包的名称。 |
 | 版本 | 包的版本。 |
 | 依赖的对象 | 列出已安装的包依赖的包。 |
 | 许可证 | 已安装的程序包的许可证。 |
@@ -291,7 +291,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 运行查询以获得此输出。 查询使用 Python 脚本来确定 SQL Server 一起安装的 Python 包。
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip
@@ -303,7 +303,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 | “列” | Description |
 |--------|-------------|
-| “包” | 已安装包的名称。 |
+| package | 已安装包的名称。 |
 | 版本 | 包的版本。 |
 | 位置 | 在哪里可以找到包的目录。 |
 

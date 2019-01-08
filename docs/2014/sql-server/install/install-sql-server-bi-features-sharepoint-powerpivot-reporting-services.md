@@ -11,15 +11,15 @@ ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5088c22fed14e099f77f1ddcc1b7158f9e6f04f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202777"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362689"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>使用 SharePoint 安装 SQL Server BI 功能（PowerPivot 和 Reporting Services）
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可以与 Microsoft SharePoint 场以实现 SharePoint 中的商业智能 (BI) 功能集成。 这些功能包括[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]， [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 用于 SharePoint 场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是用于在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中创建的工作簿以及从 SharePoint 库访问的工作簿的数据引擎。 一旦保存[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]到 SharePoint 的工作簿，您可以将其用作数据源[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]报表。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可与 Microsoft SharePoint 场相集成，以便实现 SharePoint 中的商业智能 (BI) 功能。 这些功能包括 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 用于 SharePoint 场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是用于在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中创建的工作簿以及从 SharePoint 库访问的工作簿的数据引擎。 在您将某一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿保存到 SharePoint 后，就可以将该工作簿用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表的数据源。  
   
  SharePoint 2010 所需的某些安装和配置步骤与 SharePoint 2013 所需步骤不同。 本节中的某些主题适用于这两个版本的 SharePoint。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "48202777"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- ![请注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")最新的发行说明，请参阅[SQL server 2014 发行说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
+ ![请注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")最新的发行说明，请参阅[SQL server 2014 发行说明](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   
 ##  <a name="bkmk_top"></a> 本主题内容  
   
@@ -53,21 +53,21 @@ ms.locfileid: "48202777"
 ##  <a name="bkmk_bi_scenarios"></a> SQL Server BI 方案和 SharePoint 2013  
  本部分概述了您可以选择安装和配置的不同级别的 BI 功能。  
   
- SharePoint 2013 中的 Excel Services 包括数据模型功能，用于在浏览器中实现与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的交互。 对于基本数据模型功能，不需要部署[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013年外接程序到场中。 您只需在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，并且在 Excel Services 的 **“数据模型”** 设置中注册该服务器。  
+ SharePoint 2013 中的 Excel Services 包括数据模型功能，用于在浏览器中实现与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的交互。 对于基本数据模型功能，您无需将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 外接程序部署到场中。 您只需在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，并且在 Excel Services 的 **“数据模型”** 设置中注册该服务器。  
   
- 部署[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013年外接程序启用附加功能和您的 SharePoint 场中的功能。 这些附加功能包括[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库、 计划数据刷新和 PowerPivot 管理面板。 有关其他信息，请参阅表。  
+ 通过部署 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 外接程序，可以在 SharePoint 场中实现附加功能。 这些附加功能包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库、计划数据刷新和 PowerPivot 管理面板。 有关其他信息，请参阅表。  
   
 ||级别|功能|安装或配置|  
 |-|-----------|--------------|--------------------------|  
 |1|仅限 SharePoint|本机 Excel Services 功能|SharePoint Server 2013 随附的 Excel Services 和其他服务。|  
 |**2**|SharePoint 以及 SharePoint 模式下的 Analysis Services|浏览器中的交互式 PowerPivot 工作簿|在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。<br /><br /> 在 Excel Services 中注册 Analysis Services 服务器。|  
 |**3**|SharePoint 以及 SharePoint 模式下的 Reporting Services|Power View|在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。<br /><br /> 安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序 **(程序 rsSharePoint.msi)** for SharePoint。 有关详细信息，请参阅[安装或卸载 Reporting Services 外接 for SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|所有 PowerPivot 功能|从场外作为数据源访问工作簿。<br /><br /> 计划数据刷新。<br /><br /> PowerPivot 库。<br /><br /> 管理面板。<br /><br /> BISM 链接文件内容类型。|部署 PowerPivot for SharePoint 2013 外接程序 **(spPowerPivot.msi)**。 有关详细信息，请参见以下内容：<br /><br /> [安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> 有关如何下载 **spPowerPivot.msi**的信息，请参阅 [下载 SQL Server 2014 PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkID=296473)。|  
+|**4**|所有 PowerPivot 功能|从场外作为数据源访问工作簿。<br /><br /> 计划数据刷新。<br /><br /> PowerPivot 库。<br /><br /> 管理面板。<br /><br /> BISM 链接文件内容类型。|部署 PowerPivot for SharePoint 2013 外接程序 **(spPowerPivot.msi)**。 有关详细信息，请参见以下内容：<br /><br /> [安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> 有关如何下载 **spPowerPivot.msi**的信息，请参阅 [下载 SQL Server 2014 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473)。|  
   
- 有关启用的其他信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]功能，请参阅[适用于 SharePoint 2013 的 SQL Server BI 启动故事](http://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)(http://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)。  
+ 有关启用的其他信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]功能，请参阅[适用于 SharePoint 2013 的 SQL Server BI 启动故事](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)(https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)。  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a> 安装概述  
- 如果你想要同时使用这两者[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，运行 SQL Server 安装向导两次。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 并[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]位于两个单独选择**安装程序角色**SQL Server 安装向导页。  
+ 如果要同时使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请运行 SQL Server 安装向导两次。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 并[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]位于两个单独选择**安装程序角色**SQL Server 安装向导页。  
   
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支持 SharePoint 2010 和 SharePoint 2013；但根据 SharePoint 的版本，会使用不同的体系结构和安装过程。  
   
@@ -75,55 +75,55 @@ ms.locfileid: "48202777"
   
  **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013**  
   
- 有关**SharePoint 2013**，则[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安装可以运行未安装 SharePoint 产品的服务器上。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 2013 中使用的体系结构在运行**外部**SharePoint 场和可以是安装在也包含 SharePoint 安装的服务器上，也可以是安装了不包含一个服务器SharePoint 安装。  
+ 对于 **SharePoint 2013**， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装可在未安装 SharePoint 产品的服务器上运行。 用于 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 体系结构在 SharePoint 场 **外** 运行，可以安装在也包含 SharePoint 安装的服务器上，或者安装在不包含 SharePoint 安装的服务器上。  
   
 1.  安装 SharePoint Server 2013 并启用 Excel Services。  
   
-2.  在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，并在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中向 SharePoint 场和服务帐户授予服务器管理员权限。  
+2.  在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，并在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中向 SharePoint 场和服务帐户授予服务器管理员权限。  
   
-     对于这两个版本的 SharePoint，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]通过选择安装角色安装过程开始**SQL Server PowerPivot for SharePoint**中的 SQL Server 安装向导或使用 SQL Server 命令提示符安装。  
+     对于这两个版本的 SharePoint，可通过在 SQL Server 安装向导中选择 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] “SQL Server PowerPivot for SharePoint” **安装角色或使用 SQL Server 命令提示符安装，开始** 安装过程。  
   
      ![安装程序角色](../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "设置角色")  
   
-3.  对于 SharePoint 2013，你可以扩展[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]功能和体验。 下载并运行**spPowerPivot.msi**若要添加的服务器端数据刷新处理、 协作和管理支持[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿。 有关详细信息，请参阅 [Microsoft SQL Server 2014 PowerPivot for Microsoft® SharePoint](http://go.microsoft.com/fwlink/?LinkID=324854)。  
+3.  对于 SharePoint 2013，可以扩展 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能和体验。 下载并运行 **spPowerPivot.msi** 以添加针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的服务器端数据刷新处理、协作和管理支持。 有关详细信息，请参阅 [Microsoft SQL Server 2014 PowerPivot for Microsoft® SharePoint](https://go.microsoft.com/fwlink/?LinkID=324854)。  
   
-     运行[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013年安装包**spPowerPivot.msi**以确保数据的正确版本在 SharePoint 场中每个服务器上安装了提供程序。  
+     在 SharePoint 场中的每台服务器上运行 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 安装包 **spPowerPivot.msi** ，以确保安装正确版本的数据访问接口。  
   
-4.  若要配置[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 2013，请使用**PowerPivot for SharePoint 2013 配置**工具。  
+4.  若要配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，请使用 **PowerPivot for SharePoint 2013 配置** 工具。  
   
-     SQL Server 安装向导会安装两个[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]配置工具。 其中一个配置工具支持 SharePoint 2013，另一个工具支持 SharePoint 2010。  
+     SQL Server 安装向导会安装两个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 其中一个配置工具支持 SharePoint 2013，另一个工具支持 SharePoint 2010。  
   
      ![两个 powerpivot 配置工具](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
-5.  在 SharePoint Server 2013 中配置 Excel Services 以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 详细信息，请参阅"配置基本 Analysis Services SharePoint 集成"部分中[PowerPivot for SharePoint 2013 安装](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)然后单击[管理 Excel Services 数据模型设置 (SharePoint Server2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)。  
+5.  在 SharePoint Server 2013 中配置 Excel Services 以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 详细信息，请参阅"配置基本 Analysis Services SharePoint 集成"部分中[PowerPivot for SharePoint 2013 安装](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)然后单击[管理 Excel Services 数据模型设置 (SharePoint Server2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)。  
   
-6.  有关详细信息，请参阅[PowerPivot for SharePoint 2013 安装](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
+6.  有关详细信息，请参阅 [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
  **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010**  
   
- 对于 SharePoint 2010，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装需要在已安装或将要安装 SharePoint 2010 的服务器上运行。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]用于 SharePoint 2010 的体系结构在运行**内**场和服务器上需要有 SharePoint 的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]安装 SharePoint。  
+ 对于 SharePoint 2010， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装需要在已安装或将要安装 SharePoint 2010 的服务器上运行。 用于 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 体系结构在场 **内** 运行，并且在安装了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器上需要有 SharePoint。  
   
-1.  在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，并在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中向 SharePoint 场和服务帐户授予服务器管理员权限。  
+1.  在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，并在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中向 SharePoint 场和服务帐户授予服务器管理员权限。  
   
      SharePoint 2010 部署不支持 spPowerPivot.msi，并且该 .msi **不是** SharePoint 2010 所必需的。  
   
-     对于这两个版本的 SharePoint，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]通过选择安装角色安装过程开始**SQL Server PowerPivot for SharePoint**中的 SQL Server 安装向导或使用 SQL Server 命令提示符安装。  
+     对于这两个版本的 SharePoint，可通过在 SQL Server 安装向导中选择 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] “SQL Server PowerPivot for SharePoint” **安装角色或使用 SQL Server 命令提示符安装，开始** 安装过程。  
   
-2.  SQL Server 安装向导会安装两个[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]配置工具。 其中一个配置工具支持 SharePoint 2013，另一个工具支持 SharePoint 2010。  
+2.  SQL Server 安装向导会安装两个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 其中一个配置工具支持 SharePoint 2013，另一个工具支持 SharePoint 2010。  
   
-     若要配置[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 2010，请使用**PowerPivot 配置工具**。  
+     若要为 SharePoint 2010 配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ，请使用 **PowerPivot 配置工具** 。  
   
 3.  有关详细信息，请参阅 [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)。  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  对于 SharePoint 2010 和 2013  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  for SharePoint 2010 和 2013  
   
-1.  有关安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 模式下是与以前的版本相比没有变化。  
+1.  在 SharePoint 模式下针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的安装与以前版本相比没有变化。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]针对 SharePoint 2010 和 SharePoint 2013 的安装步骤都非常相似。 下面是有关 SharePoint 版本的重要说明：  
+     针对 SharePoint 2010 和 SharePoint 2013 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装步骤非常相似。 下面是有关 SharePoint 版本的重要说明：  
   
     -   请参见以下支持的组合：  
   
-        -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的版本。  
+        -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的版本。  
   
         -   用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48202777"
   
     2.  安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序 (rsSharePoint.msi)。 请参阅[安装或卸载 Reporting Services 外接程序的 sharepoint ' &#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 有关最新版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用于 SharePoint 外接程序，请参阅[在哪里可以找到 Reporting Services 外接程序用于 SharePoint 产品](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
-    3.  配置[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 服务和至少一个[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序。 详细信息，请参阅"创建 Reporting Services Service Application"一节中[安装 Reporting Services SharePoint 模式适用于 SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
+    3.  配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务和至少一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 详细信息，请参阅"创建 Reporting Services Service Application"一节中[安装 Reporting Services SharePoint 模式适用于 SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
   
 ##  <a name="bkm_database_attach"></a> 概述将数据库附加升级和 SharePoint 2013  
  SharePoint 2013 不支持就地升级。 但是 **支持数据库附加升级**。  
@@ -148,7 +148,7 @@ ms.locfileid: "48202777"
   
 2.  完成 SharePoint 数据库附加升级，并且将您的 PowerPivot 相关内容数据库迁移到 SharePoint 2013 场。  
   
-3.  在 SharePoint 模式下安装的 SQL Server Analysis Services 实例，并授予 SharePoint 服务器场和服务帐户、 服务器管理员权限在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+3.  在 SharePoint 模式下安装 SQL Server Analysis Services 实例，并且在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中向 SharePoint 场和服务帐户授予服务器管理员权限。  
   
 4.  在 SharePoint 场中的每个服务器上都安装 PowerPivot for SharePoint 2013 安装包 **spPowerPivot.msi** 。  
   
@@ -161,11 +161,11 @@ ms.locfileid: "48202777"
   
 -   [将 PowerPivot 迁移到 SharePoint 2013](../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)  
   
--   [升级到 SharePoint 2013 的过程概述](http://go.microsoft.com/fwlink/p/?LinkId=256688)。  
+-   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)。  
   
--   [升级到 SharePoint 2013 之前的清除准备](http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [升级到 SharePoint 2013 之前的清除准备](https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
   
--   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
   
 ## <a name="see-also"></a>请参阅  
  [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   

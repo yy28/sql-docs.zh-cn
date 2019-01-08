@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34270698b6035f7646d9482a82746c4ccff09d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca170bbae969db8610e1e0ec6e61e3e68fa905f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377629"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用于在包完成和部署以后的执行过程中进行故障排除的功能和工具。  
@@ -49,13 +48,13 @@ ms.locfileid: "48132407"
 ## <a name="troubleshoot-bad-data-by-using-error-outputs"></a>使用错误输出对错误数据进行故障排除  
  您可以使用对许多数据流组件可用的错误输出将包含错误的行定向到单独的目标中，供以后分析。  
   
--   **使用错误输出捕获错误数据**。 将包含错误的行发送到单独的目标（如错误表或文本文件）。 错误输出自动添加两个数值列（包含导致该行被拒绝的错误的编号）以及发生该错误的列的 ID。 有关详细信息，请参阅[数据中的错误处理](../data-flow/error-handling-in-data.md)。  
+-   **使用错误输出捕获错误数据**。 将包含错误的行发送到单独的目标（如错误表或文本文件）。 错误输出自动添加两个数值列（包含导致该行被拒绝的错误的编号）以及发生该错误的列的 ID。 有关详细信息，请参阅 [数据中的错误处理](../data-flow/error-handling-in-data.md)。  
   
 -   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，您还可以添加说明性信息以便更容易分析错误输出。  
   
      **添加错误说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[脚本组件增强错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
-     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 有关如何使用此方法的示例，请参阅[到错误输出中添加错误列名](http://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上的。  
+     **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 有关如何使用此方法的示例，请参阅[到错误输出中添加错误列名](https://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上的。  
   
     1.  **创建查找表的列名称的**。 创建另一个应用程序，该应用程序使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 对每个已保存的包、包中的每个数据流、数据流中的每个对象以及数据流对象中的每个输入和输出进行迭代。 应用程序应当将每一列的列 ID 和名称以及父数据流任务的 ID 和包的 ID 持久化到查找表。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48132407"
   
     3.  **考虑捕获行计数数据**。 考虑另行创建一个表，用于存储行计数信息。其中，每个包执行实例均由其 ExecutionID 标识。 使用行计数转换在数据流的关键点将行计数保存到一系列变量中。 数据流结束后，请使用执行 SQL 任务将该系列值插入到表的行中，供以后分析和报告。  
   
-     有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)（Project REAL：Business Intelligence ETL 设计实践）中的 "ETL Auditing and Logging"（ETL 审核和日志记录）一节。  
+     有关此方法的详细信息，请参阅部分中，"ETL 审核和日志记录，"中[!INCLUDE[msCoName](../../includes/msconame-md.md)]白皮书， [Project REAL:Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用调试转储文件对包执行进行故障排除  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 有关详细信息，请参阅 [生成包执行的转储文件](generating-dump-files-for-package-execution.md)。  
@@ -94,12 +93,12 @@ ms.locfileid: "48132407"
 ## <a name="troubleshoot-run-time-validation-issues"></a>针对运行时验证问题进行故障排除  
  有时在包中前一个任务执行完成之前，您也许不能连接到数据源，或者无法验证包的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括以下功能，可帮助您避免由这些情况导致的验证错误：  
   
--   **配置加载包时无效包元素的 DelayValidation 属性**。 可以设置`DelayValidation`到`True`其配置不是有效的以防止验证错误时加载包的包元素。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 `DelayValidation`属性可以在包级别或级别的各个任务和容器的包中包含的启用。  
+-   **配置加载包时无效包元素的 DelayValidation 属性**。 您可以将具有无效配置的包元素的 `DelayValidation` 设置为 `True`，以防止包加载时的验证错误。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 可以在包级或包中的各个任务和容器级启用 `DelayValidation` 属性。  
   
-     `DelayValidation`属性可以设置对数据流任务，但不能对单个数据流组件。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值是`false`，该组件不能识别外部数据源的元数据更改。 如果设置为`true`，则<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>属性可帮助避免由于包使用事务时，尤其是在数据库中，锁定导致的阻塞问题。  
+     可以对数据流任务设置 `DelayValidation` 属性，但不能对单个数据流组件设置该属性。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值为 `false` 时，该组件不能识别外部数据源的元数据的更改。 设置为 `true` 时，<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性可帮助避免数据库中由于锁定导致的阻塞问题，特别是在包使用事务时。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>运行时权限问题的故障排除  
- 如果您在尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行已部署的包时遇到错误，则代理所使用的帐户可能不具备必需的权限。 有关如何对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760)（从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行）。 有关如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行包的详细信息，请参阅[包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。  
+ 如果您在尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行已部署的包时遇到错误，则代理所使用的帐户可能不具备必需的权限。 有关如何对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 [从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)。 有关如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行包的详细信息，请参阅 [包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。  
   
  若要连接到 Excel 或 Access 数据源， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要求帐户具有在 TEMP 和 TMP 环境变量所指定的在文件夹中读取、写入、创建和删除临时文件的权限。  
   
@@ -114,6 +113,6 @@ ms.locfileid: "48132407"
  [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相关内容  
- dougbert.com 上的博客文章： [向错误输出中添加错误列名](http://go.microsoft.com/fwlink/?LinkId=261546)。  
+ dougbert.com 上的博客文章： [向错误输出中添加错误列名](https://go.microsoft.com/fwlink/?LinkId=261546)。  
   
   

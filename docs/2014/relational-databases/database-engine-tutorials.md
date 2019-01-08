@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c68b00c636d338fdcf507d300c4f6f272da58004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069907"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360699"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
   本节包含针对 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]的教程。  
@@ -27,7 +26,7 @@ ms.locfileid: "48069907"
  [教程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
  本教程向您介绍用于管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的图形界面。 此外，它还允许您部署、监视和升级应用程序使用的数据层组件，如数据库和数据仓库。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 还提供用于编辑和调试脚本的 [!INCLUDE[tsql](../includes/tsql-md.md)]、MDX、DMX 和 XML 语言编辑器。  
   
- [教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教程：编写 TRANSACT-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
  该教程讲授撰写 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句以便在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中创建和管理对象的基础技能。  
   
  [教程：数据库引擎优化顾问](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
@@ -36,10 +35,10 @@ ms.locfileid: "48069907"
  [教程：使用 hierarchyid 数据类型](tables/tutorial-using-the-hierarchyid-data-type.md)  
  该教程讲授如何将一个表转换为层次结构，然后管理该表中的数据。  
   
- [教程：使用证书为存储过程签名](tutorial-signing-stored-procedures-with-a-certificate.md)  
+ [教程：使用证书为存储的过程签名](tutorial-signing-stored-procedures-with-a-certificate.md)  
  本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  
   
- [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
+ [教程：所有权链和上下文切换](tutorial-ownership-chains-and-context-switching.md)  
  本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
  [教程：使用基于策略的管理来管理服务器](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
@@ -51,11 +50,11 @@ ms.locfileid: "48069907"
  [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  本教程说明如何将 SQL Server 备份和还原到 Windows Azure Blob 存储服务。  
   
- [教程：Microsoft Azure 存储服务中的 SQL Server 数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [教程：在 Windows Azure 存储服务的 SQL Server 数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 教程](../tutorials/tutorials-for-sql-server-2014.md)   
- [TechNet WIKI：SQL Server 2012 示例](http://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet WIKI:SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.importcolumntrans.f1
@@ -18,12 +17,12 @@ ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81cb335d5054bac76f9bfa43b54a522dc5c593c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96996f6aa7d3b16a696f0147570fed91a9323e69
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755019"
 ---
 # <a name="import-column-transformation"></a>导入列转换
   导入列转换从文件中读取数据并将数据添加到数据流中的列中。 通过此转换，包可将存储于各个单独文件中的文本和图像添加到数据流中。 例如，如果某个数据流将数据加载到存储产品信息的表中，则它可包含导入列转换以便从文件中导入每个产品的客户评论并将评论添加到数据流中。  
@@ -42,7 +41,7 @@ ms.locfileid: "48217589"
  此转换有一个输入、一个输出和一个错误输出。  
   
 ## <a name="configuration-of-the-import-column-transformation"></a>导入列转换的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

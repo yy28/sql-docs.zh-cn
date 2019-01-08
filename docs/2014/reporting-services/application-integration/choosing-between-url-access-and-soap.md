@@ -17,12 +17,12 @@ ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f14a643842bb3cb8029cbd4ac1c0e53c9b0ab334
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081680"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363889"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>在 URL 访问与 SOAP 之间选择
   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到自定义应用程序的过程可能充满挑战。 然而，这样的挑战并不在于编程模型或 API 有多么复杂，而在于如何从众多可能的集成方法中选择一种合适的方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 最初的设计就是一个开发平台，因此在构建时考虑了编程的灵活性。 在满足灵活性要求后，接下来需要决定如何将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表导航和管理功能集成到现有业务应用程序中。  
@@ -30,7 +30,7 @@ ms.locfileid: "48081680"
  ![Reporting Services 编程方案](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services 编程方案")  
 Reporting Services 编程支持多种方案。  
   
- 可以通过两种方法将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到自定义应用程序中：URL 访问和 Reporting Services SOAP API。 具体使用哪种方法取决于若干因素。 在某些情况下，将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到自定义业务应用程序要求您同时使用 URL 访问和 SOAP。 您应提出以下问题：  
+ 有两种方法来将集成[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到自定义应用程序：URL 访问和 Reporting Services SOAP API。 具体使用哪种方法取决于若干因素。 在某些情况下，将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到自定义业务应用程序要求您同时使用 URL 访问和 SOAP。 您应提出以下问题：  
   
 -   您或您的最终用户需要哪种企业报表功能？ 您是需要一种简单的方法来启动和导航报表，还是需要由自定义业务解决方案提供更高级的报表服务器管理功能？  
   
@@ -51,7 +51,7 @@ Reporting Services 编程支持多种方案。
   
  在绝大多数情况下，要求同时使用 URL 访问和 SOAP 调用以满足您的报表需要。 最初连接到报表服务器数据库并在用户界面中提供可用的报表列表时，将使用 SOAP；而 URL 访问用于实际访问和导航单独的报表。  
   
- 有关组合 URL 访问和 Web 服务来提供集成报表功能的示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
+ 有关组合 URL 访问和 Web 服务来提供集成报表功能的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="see-also"></a>请参阅  
  [将 Reporting Services 集成到应用程序中](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

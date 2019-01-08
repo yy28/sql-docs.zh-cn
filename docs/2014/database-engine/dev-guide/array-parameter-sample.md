@@ -12,12 +12,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115647"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375379"
 ---
 # <a name="array-parameter-sample"></a>数组参数示例
   有时需要创建、更新或删除数据库中的一组行。 实现的方法有多种。 其中一种是使用 CLR 集成用户定义数据类型将客户端上的数组信息传递到服务器上的公共语言运行时 (CLR) 集成存储过程。 这类用户定义数据类型的特性将提供给服务器的数据大小限制在 8000 个字节。 因此，此方法不适于大型数据或复杂数据。 如果操作的数据量小且简单，则此方法比为每行调用存储过程有效得多。 通过传递数组可以保留数据顺序，数据顺序对一些应用程序而言非常重要。此示例包含以下内容：  
@@ -28,12 +28,12 @@ ms.locfileid: "48115647"
   
 3.  `TestArrayParameter` 控制台应用程序。 它基于传入的命令行参数创建 `ContactTypeNames` 用户定义数据类型的实例，然后通过将用户定义数据类型实例作为参数进行传递来调用 `usp_EnsureContactTypeNames` 存储过程。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](http://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48115647"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48115647"
   
 5.  在 c:\MySample 中，创建 `Program.vb`（用于 Visual Basic 示例）或 `Program.cs`（用于 C# 示例），并将相应的 Visual Basic 或 C# 示例代码（如下所示）复制到该文件中。  
   
-6.  找到文件 Program （在第 24 行附近） 中相应的行和替换`XXX`实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  找到文件 Program 中的相应行（在第 24 行附近），然后将 `XXX` 替换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48115647"
 ## <a name="sample-code"></a>示例代码  
  下面是此示例的代码列表。  
   
- 此代码用于库 `ContactTypeNames.`  
+ `ContactTypeNames.`此代码用于库   
   
  C#  
   

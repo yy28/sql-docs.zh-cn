@@ -11,12 +11,12 @@ ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 30af34c41cbea7d28e78d2684ce2aa316b116b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0776274cfdae3e4f891ad2dc60e123f0bf9d1e64
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196977"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352262"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 连接类型 (SSRS)
   若要在报表中包括来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的数据，您必须具有一个基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的当前版本和早期版本并从中检索数据。  
@@ -49,7 +49,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   提示用户输入凭据。 此选项仅支持 Windows 集成安全性。  
   
--   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+-   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
   
@@ -113,7 +113,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
  如果某个存储过程带有具有默认值的参数，则您可以访问该值，方法是使用 DEFAULT 关键字作为该参数的值。 如果该查询参数链接到某个报表参数，用户可以在报表参数的输入框中键入或选择单词 DEFAULT。  
   
- 有关详细信息，请参阅 msdn.microsoft.com 上 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=98335) 中的“存储过程（数据库引擎）”。  
+ 有关详细信息，请参阅 msdn.microsoft.com 上 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?linkid=98335) 中的“存储过程（数据库引擎）”。  
   
   
 ##  <a name="Parameters"></a> Parameters  
@@ -131,16 +131,16 @@ WHERE EmployeeID = (@EmpID)
   
 -   默认情况下，每个报表参数的数据类型均为 **Text**。 如果基础数据属于其他数据类型，则必须更改参数的数据类型。  
   
--   如果选择多值参数选项，则必须手动更改查询以测试值是否属于集的使用`IN`运算符，例如， `WHERE EmployeeID IN (@EmpID)`。  
+-   如果选择多值参数选项，您必须手动更改查询，使用 `IN` 运算符（如 `WHERE EmployeeID IN (@EmpID)`）测试这些值是否属于集的一部分。  
   
- 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
 ##  <a name="Remarks"></a> 注释  
  您还可以通过使用 OLE DB 或 ODBC 数据源类型从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索数据。 有关详细信息，请参阅 [OLE DB 连接类型 (SSRS)](ole-db-connection-type-ssrs.md) 或 [ODBC 连接类型 (SSRS)](odbc-connection-type-ssrs.md)。  
   
 ###### <a name="platform-and-version-information"></a>平台和版本信息  
- 有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
   
 ##  <a name="HowTo"></a> 操作指南主题  
@@ -168,7 +168,7 @@ WHERE EmployeeID = (@EmpID)
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
   

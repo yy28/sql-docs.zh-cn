@@ -12,12 +12,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c63ff8eada8123e3bb7dfab5f8761f66ba2d2ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227127"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374089"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>如用执行时数据列 (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48227127"
   
     -   对于第四个参数，请放入程序定义的列标识符。  
   
-2.  调用 [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) 将返回 SQL_NEED_DATA，该值指示执行时数据列已经可供处理。  
+2.  调用 [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) 将返回 SQL_NEED_DATA，该值指示执行时数据列已经可供处理。  
   
 3.  对于每个执行时数据列：  
   
-    -   调用 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 以获得列数组指针。 如果存在另一个执行时数据列，它将返回 SQL_NEED_DATA。  
+    -   调用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以获得列数组指针。 如果存在另一个执行时数据列，它将返回 SQL_NEED_DATA。  
   
     -   调用 [SQLPutData](../native-client-odbc-api/sqlputdata.md) 一次或多次以发送列数据，直到 length 已发送。  
   
-4.  调用 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 以指示最后一个执行时数据列的所有数据已发送。 它不会返回 SQL_NEED_DATA。  
+4.  调用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以指示最后一个执行时数据列的所有数据已发送。 它不会返回 SQL_NEED_DATA。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用 SQLGetData 读取 SQL_LONG 变量字符数据。 IA64 平台不支持此示例。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)（Microsoft SQL Server 示例和社区项目）主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（该驱动程序的名称为“SQL Server”）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   

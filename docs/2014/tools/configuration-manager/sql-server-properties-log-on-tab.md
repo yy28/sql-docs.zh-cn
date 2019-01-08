@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48746f150d12342b8ab0c5b95ab6a1164d7b2500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364969"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 属性（“登录”选项卡）
   使用 **“SQL Server 属性”** 对话框中的 **“登录”** 选项卡，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务使用的帐户，更改帐户密码，还可以启动和停止该服务。 对帐户密码的更改立即生效。  
@@ -62,7 +61,7 @@ ms.locfileid: "48062877"
  恢复暂停的服务。  
   
 > [!IMPORTANT]  
->  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅 [如何授予用户管理 Windows Server 2003 中的服务的权限](http://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
+>  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅 [如何授予用户管理 Windows Server 2003 中的服务的权限](https://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
   
 > [!NOTE]  
 >  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，如果出现包含短语“未实现 [0x80004001]”的 WMI 错误，则可能指示目标计算机上未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

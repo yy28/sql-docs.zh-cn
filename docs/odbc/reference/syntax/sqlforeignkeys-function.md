@@ -20,16 +20,16 @@ ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5901a2c3e126674b1157177a6c7937c58058764
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601045"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206476"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLForeignKeys**可以返回：  
@@ -180,8 +180,8 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_NAME (ODBC 1.0)|7|Varchar 不为 NULL|外键表名。|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|Varchar 不为 NULL|外键列名称。 该驱动程序返回空字符串不具有名称的列。|  
 |KEY_SEQ (ODBC 1.0)|9|Smallint（非 NULL）|密钥 （从 1 开始） 中的列序号。|  
-|UPDATE_RULE (ODBC 1.0)|10|Smallint|当 SQL 操作时要应用于外键的操作**更新**。 可以具有以下值之一。 （引用的表是具有主键的表; 引用表具有外键的表。）<br /><br /> SQL_CASCADE： 当更新所引用的表的主键时，引用表的外键也会更新。<br /><br /> SQL_NO_ACTION： 如果主键的更新所引用的表将导致"无关联引用"中引用的表 （即，引用表中的行必须没有对等引用表中），更新将被拒绝。 如果引用表的外键的更新中引入一个值，为被引用表的主键的值不存在，更新将被拒绝。 (此操作等同于 ODBC 2 中的 SQL_RESTRICT 操作 *.x*。)<br /><br /> SQL_SET_NULL： 时，更改一个或多个组件的主键值的方式更新引用表中的一个或多个行，对应于已更改的组件的主键值的引用表中的外键的组件设置为 NULL 的引用表的所有匹配行中。<br /><br /> SQL_SET_DEFAULT： 时，更改一个或多个组件的主键值的方式更新引用表中的一个或多个行，引用表中的外键对应的主键已更改的组件的组件是将设置为在引用表的所有匹配行中的适用的默认值。<br /><br /> 如果不适用于数据源为 NULL。|  
-|DELETE_RULE (ODBC 1.0)|11|Smallint|当 SQL 操作时要应用于外键的操作**删除**。 可以具有以下值之一。 （引用的表是具有主键的表; 引用表具有外键的表。）<br /><br /> SQL_CASCADE： 删除所引用的表中的行时，引用表中的所有匹配行也会删除。<br /><br /> SQL_NO_ACTION： 如果删除行中引用的表将导致"无关联引用"中引用的表 （即，引用表中的行必须没有对等引用表中），更新将被拒绝。 (此操作等同于 ODBC 2 中的 SQL_RESTRICT 操作 *.x*。)<br /><br /> SQL_SET_NULL： 被引用表中的一个或多个行中删除时外, 键引用表的每个组件设置为 NULL 的引用表的所有匹配行中。<br /><br /> SQL_SET_DEFAULT： 时删除引用表中的一个或多个行时外, 键引用表的每个组件设置为在引用表的所有匹配行中适用的默认值。<br /><br /> 如果不适用于数据源为 NULL。|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|当 SQL 操作时要应用于外键的操作**更新**。 可以具有以下值之一。 （引用的表是具有主键的表; 引用表具有外键的表。）<br /><br /> SQL_CASCADE:当更新所引用的表的主键时，也会更新引用表的外键。<br /><br /> SQL_NO_ACTION:如果被引用表的主键的更新将导致引用表中的"无关联引用"（即，引用表中的行必须没有对等引用表中），更新将被拒绝。 如果引用表的外键的更新中引入一个值，为被引用表的主键的值不存在，更新将被拒绝。 (此操作等同于 ODBC 2 中的 SQL_RESTRICT 操作 *.x*。)<br /><br /> SQL_SET_NULL:当被引用表中的一个或多个行中，更改一个或多个组件的主键值的方式更新时，对应的主键已更改的组件的组件的引用表中的外键设置为 NULL 在所有匹配的引用表的行。<br /><br /> SQL_SET_DEFAULT:在引用表中的一个或多个行中，更改一个或多个组件的主键值的方式更新，对应于已更改的组件的主键值的引用表中的外键的组件将设置为 applicable 中所有匹配行的引用表的默认值。<br /><br /> 如果不适用于数据源为 NULL。|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|当 SQL 操作时要应用于外键的操作**删除**。 可以具有以下值之一。 （引用的表是具有主键的表; 引用表具有外键的表。）<br /><br /> SQL_CASCADE:删除引用表中的行时，也会删除引用表中的所有匹配行。<br /><br /> SQL_NO_ACTION:如果被引用表中的行的删除将导致引用表中的"无关联引用"（即，引用表中的行必须没有对等引用表中），更新将被拒绝。 (此操作等同于 ODBC 2 中的 SQL_RESTRICT 操作 *.x*。)<br /><br /> SQL_SET_NULL:被引用表中的一个或多个行中删除时外, 键引用表的每个组件设置为 NULL 的引用表的所有匹配行中。<br /><br /> SQL_SET_DEFAULT:被引用表中的一个或多个行中删除时外, 键引用表的每个组件设置为所有匹配行的引用表中的适用默认值。<br /><br /> 如果不适用于数据源为 NULL。|  
 |FK_NAME (ODBC 2.0)|12|Varchar|外键的名称。 如果不适用于数据源为 NULL。|  
 |PK_NAME (ODBC 2.0)|13|Varchar|主键名称。 如果不适用于数据源为 NULL。|  
 |延迟 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED，SQL_INITIALLY_IMMEDIATE，SQL_NOT_DEFERRABLE。|  

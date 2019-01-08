@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergeconflictrows_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26bf2e89462c0096c9a6fd2a081cb72c68e9a32a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746575"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589161"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +42,16 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表包含有关冲突行**WA**并**CA**发布，传入发布名称**CA**检索属于冲突**CA**发布。  
   
- [  **@conflict_table=**] **'***conflict_table*****  
- 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本中，冲突表的命名格式名称与 **MSmerge_conflict_* 发布 *_* 文章 * * *，使用一个表为每个已发布一文。  
+ [  **@conflict_table=**] **'**_conflict_table_  
+ 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表与格式名称**MSmerge_conflict\__发布\_文章_**，使用每个已发布项目的一个表。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_  
  是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
@@ -64,7 +63,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|冲突的起源。|  
-|**conflict_type**|**int**|表示冲突类型的代码：<br /><br /> **1** = 更新冲突： 在行级别检测到冲突。<br /><br /> **2** = 列更新冲突： 在列级检测到冲突。<br /><br /> **3** = 更新删除入选冲突： 删除在冲突中获胜。<br /><br /> **4** = 更新入选删除冲突： 冲突中落选的已删除的 rowguid 将记录在此表。<br /><br /> **5** = 上载插入失败： 无法在发布服务器上应用来自订阅服务器上的插入。<br /><br /> **6** = 下载插入失败： 无法在订阅服务器上应用来自发布服务器的插入。<br /><br /> **7** = 上载删除失败： 无法上载到发布服务器在订阅服务器上删除。<br /><br /> **8** = 下载删除失败： 无法为发布服务器上的删除下载到订阅服务器。<br /><br /> **9** = 上载更新失败： 无法在发布服务器上应用在订阅服务器的更新。<br /><br /> **10** = 下载更新失败： 在发布服务器的更新无法应用于订阅服务器。<br /><br /> **12** = 逻辑记录更新入选删除： 在此表中记录冲突中落选的已删除逻辑记录。<br /><br /> **13** = 逻辑记录冲突插入更新： 指向逻辑记录的插入与更新冲突。<br /><br /> **14** = 逻辑记录删除入选更新冲突： 该表中记录的已更新的逻辑记录冲突中落选。|  
+|**conflict_type**|**int**|表示冲突类型的代码：<br /><br /> **1** = 更新冲突：在行级别检测到冲突。<br /><br /> **2** = 列更新冲突：在列级检测到冲突。<br /><br /> **3** = 更新删除入选冲突：删除在冲突中获胜。<br /><br /> **4** = 更新入选删除冲突：冲突中落选的已删除的 rowguid 将记录在此表。<br /><br /> **5** = 上载插入失败：无法在发布服务器上应用来自订阅服务器上的插入。<br /><br /> **6** = 下载插入失败：无法在订阅服务器上应用来自发布服务器的插入。<br /><br /> **7** = 上载删除失败：到发布服务器，无法上载在订阅服务器上删除。<br /><br /> **8** = 下载删除失败：在发布服务器上删除无法下载到订阅服务器。<br /><br /> **9** = 上载更新失败：无法在发布服务器上应用在订阅服务器的更新。<br /><br /> **10** = 下载更新失败：在发布服务器的更新无法应用于订阅服务器。<br /><br /> **12** = 逻辑记录更新 Wins 删除：此表中记录冲突中落选的已删除逻辑记录。<br /><br /> **13** = 逻辑记录冲突插入更新：插入到与更新逻辑记录冲突。<br /><br /> **14** = 逻辑记录删除入选更新冲突：此表中记录冲突中落选的已更新逻辑记录。|  
 |**reason_code**|**int**|与上下文相关的错误代码。|  
 |**reason_text**|**varchar(720)**|与上下文相关的错误说明。|  
 |**pubid**|**uniqueidentifier**|发布标识符。|  
@@ -76,7 +75,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>备注  
  **sp_helpmergeconflictrows**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色**db_owner**固定数据库角色，并且**replmonitor**分发数据库中的角色才能执行**sp_helpmergeconflictrows**。  
   
 ## <a name="see-also"></a>请参阅  

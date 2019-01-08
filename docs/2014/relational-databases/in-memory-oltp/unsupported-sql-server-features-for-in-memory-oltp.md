@@ -10,17 +10,17 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216660"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375029"
 ---
 # <a name="supported-sql-server-features"></a>支持的 SQL Server 功能
   本主题讨论内存优化表支持或不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存中 OLTP 支持的功能  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>内存中 OLTP 支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能  
  具有内存优化对象（包括内存优化文件组）的数据库支持以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
  有关支持的数据类型的信息，请参阅 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)。  
@@ -39,9 +39,9 @@ ms.locfileid: "48216660"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server 管理对象支持](sql-server-management-objects-support-for-in-memory-oltp.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的用户。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 有关详细信息，请参阅 [SQL Server PowerShell 概述](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 有关详细信息，请参阅 [SQL Server PowerShell 概述](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)。  
   
 -   使用 bcp 实用工具导入和导出大容量数据。 有关详细信息，请参阅[使用 bcp 实用工具导入和导出大容量数据 (SQL Server)](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48216660"
   
 -   Service broker，存在限制。 无法访问本机编译存储过程中的队列。 无法在访问内存优化表的事务中访问远程数据库中的队列。  
   
--   故障转移群集：作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 产品/服务的一部分，AlwaysOn 故障转移群集实例利用 Windows Server 故障转移群集 (WSFC) 功能通过冗余在实例级别（故障转移群集实例 (FCI)）提供了本地高可用性。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   故障转移群集：作为的一部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AlwaysOn 产品/服务，AlwaysOn 故障转移群集实例利用 Windows Server 故障转移群集 (WSFC) 功能来提供本地高可用性通过冗余在实例级别的故障转移群集实例 (FCI)。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   与 AlwaysOn 集成： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了几个为服务器或数据库打造高可用性的可选方案，包括 AlwaysOn。 有关详细信息，请参阅[高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。  
   
--   日志传送：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送，你可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 有关详细信息，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+-   日志传送：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送，您可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 有关详细信息，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
 -   支持对订阅服务器上的内存优化表进行事务复制，不过有一些限制。 有关详细信息，请参阅 [复制到内存优化表订阅服务器](../replication/replication-to-memory-optimized-table-subscribers.md)。  
   
--   资源调控器： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 您可使用资源调控器指定传入应用程序请求可以使用的 CPU、物理 IO 和内存的数量限制。 有关详细信息，请参阅 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 和 [Resource Governor](../resource-governor/resource-governor.md)。  
+-   资源调控器：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器是一项功能，可用于管理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工作负荷和系统资源使用情况。 您可使用资源调控器指定传入应用程序请求可以使用的 CPU、物理 IO 和内存的数量限制。 有关详细信息，请参阅 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 和 [Resource Governor](../resource-governor/resource-governor.md)。  
   
 -   内存中 OLTP 对于内存优化表中的 (var)char 列的支持代码页，以及在索引和本机编译存储过程中使用的支持的排序规则方面存在限制。 有关详细信息，请参阅 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48216660"
 |对内存优化表进行数据压缩。|您可以使用数据压缩功能帮助压缩数据库中的数据并帮助减小数据库的大小。 有关详细信息，请参阅 [Data Compression](../data-compression/data-compression.md)。|  
 |对内存优化表和 HASH 索引进行分区。|已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。|  
 |数据库的内存优化数据文件组上的透明数据加密 (TDE)。|“透明数据加密”(TDE) 可对数据和日志文件执行实时 I/O 加密和解密。 有关详细信息，请参阅[透明数据加密 (TDE)](../security/encryption/transparent-data-encryption.md)。<br /><br /> 可在拥有内存中 OLTP 对象的数据库上启用 TDE。 如果启用 TDE，则内存中 OLTP 日志记录会被加密。 即使在数据库上启用了 TDE，也不会对耐久性表的检查点文件加密。|  
-|复制|对订阅服务器上内存优化表进行的事务复制之外的其他复制配置与引用内存优化表的表或视图不兼容。 如果存在内存优化文件组，则不支持使用 sync_mode=’database snapshot’ 的复制。 有关详细信息，请参阅 [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md)。|  
+|复制|对订阅服务器上内存优化表进行的事务复制之外的其他复制配置与引用内存优化表的表或视图不兼容。 复制使用 sync_mode = 'database snapshot' 不支持如果内存优化文件组。 有关详细信息，请参阅 [复制到内存优化表订阅服务器](../replication/replication-to-memory-optimized-table-subscribers.md)。|  
 |多个活动的结果集 (MARS)|内存优化表不支持多个活动结果集 (MARS)。 此错误还可能指示使用了链接服务器。 链接服务器可以使用 MARS。 内存优化表不支持链接服务器。 请直接连接到内存优化的表所在的服务器和数据库。|  
 |镜像|“数据库镜像”是一种提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库可用性的解决方案。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |重新生成日志|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持通过附加或 ALTER DATABASE 重新生成日志。|  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -20,12 +20,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189267"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377659"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
   一个企业可以具有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，并且每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具可以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例和多个数据层应用程序。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具都具有一个且仅有一个实用工具控制点 (UCP)。 必须为每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具分别创建一个新的 UCP。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个托管实例以及每个数据层应用程序都是一个且只能是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的成员，并且由单个 UCP 管理。  
@@ -76,7 +76,7 @@ ms.locfileid: "48189267"
   
 -   该过程必须由具有 sysadmin 权限的用户运行，创建 UCP 要求同样的权限。  
   
--   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅 [如何从 SQL Server 实用工具中删除 SQL Server 的实例](http://go.microsoft.com/fwlink/?LinkId=169392)。  
+-   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅[如何从 SQL Server 实用工具中删除的 SQL Server 实例](https://go.microsoft.com/fwlink/?LinkId=169392)。  
   
  使用此过程可以从 SQL Server 实用工具中删除 SQL Server UCP。 在完成该操作后，可以再次在 SQL Server 的实例上创建 UCP。  
   
@@ -131,7 +131,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> 指定实例  
  指定与您正创建的 UCP 有关的以下信息：  
   
--   **实例名称** - 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击 **“连接…”**。 以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。  
+-   **实例名称** - 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。  
   
 -   **实用程序名称** - 指定将用于在网络上标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的名称。  
   
@@ -143,7 +143,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  如果连接是加密的，将使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
   
- 若要继续，请单击 **“连接…”**。  
+ 若要继续，请单击“连接...”。  
   
 ##  <a name="Agent_configuration"></a> 实用工具收集组帐户  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 Windows 域帐户。 此帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 此外，也可以使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 若要满足验证要求，请使用以下准则来指定帐户。  
@@ -220,7 +220,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  使用以下示例创建一个新的实用工具控制点：  
   
 ```  
-> $UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
 > $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  

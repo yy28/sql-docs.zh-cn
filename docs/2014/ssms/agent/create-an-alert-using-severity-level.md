@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
@@ -15,12 +15,12 @@ ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4cf2107124cea187ffb04941a7730f371f5a80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106537"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795719"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建一个将在发生特定严重级别的事件时引发的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报。  
@@ -80,7 +80,7 @@ ms.locfileid: "48106537"
   
 #### <a name="to-create-an-alert-using-severity-level"></a>使用严重级别创建警报  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

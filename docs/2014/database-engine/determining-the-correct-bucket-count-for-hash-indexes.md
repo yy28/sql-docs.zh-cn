@@ -10,28 +10,28 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147417"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377897"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
-  必须指定的值`BUCKET_COUNT`参数创建内存优化表时。 本主题将提出一些建议，帮助您为 `BUCKET_COUNT` 参数确定适当的值。 如果您无法确定实际 Bucket 计数，则改用非聚集索引。  不正确的 `BUCKET_COUNT` 值（特别是过低的值）可能会显著影响工作负荷性能以及数据库的恢复时间。 最好将 Bucket 计数估计得高一些。  
+  在您创建内存优化表时，必须为 `BUCKET_COUNT` 参数指定值。 本主题将提出一些建议，帮助您为 `BUCKET_COUNT` 参数确定适当的值。 如果您无法确定实际 Bucket 计数，则改用非聚集索引。  不正确的 `BUCKET_COUNT` 值（特别是过低的值）可能会显著影响工作负荷性能以及数据库的恢复时间。 最好将 Bucket 计数估计得高一些。  
   
  重复的索引键会降低哈希索引性能，因为键已哈希处理至同一个 Bucket，导致该 Bucket 的链增加。  
   
- 有关非聚集哈希索引的详细信息，请参阅[哈希索引](hash-indexes.md)并[Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 有关非聚集哈希索引的详细信息，请参阅 [Hash Indexes](hash-indexes.md) 和 [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  将为内存优化表上的每个哈希索引分配一个哈希表。 为指定的索引分配的哈希表的大小`BUCKET_COUNT`中的参数[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). Bucket 数将在内部舍入到 2 的下一次幂。 例如，指定 300,000 的 Bucket 计数将导致 524,288 的实际 Bucket 计数。  
   
- 有关 Bucket 计数的文章和视频链接，请参阅 [如何确定哈希索引（内存 OLTP）的正确 Bucket 计数](http://go.microsoft.com/fwlink/p/?LinkId=525853)。  
+ 有关 Bucket 计数的文章和视频链接，请参阅 [如何确定哈希索引（内存 OLTP）的正确 Bucket 计数](https://go.microsoft.com/fwlink/p/?LinkId=525853)。  
   
 ## <a name="recommendations"></a>建议  
  在大多数情况下，Bucket 计数应该介于索引键中非重复值数目的 1 到 2 倍之间。 如果索引键包含许多重复值，且平均而言对于每个索引键值超过 10 行，则改用非聚集索引  
   
- 您不见得始终都能够预测到某个特定索引键可能具有或将具有多少个值。 性能就应该是可接受如果`BUCKET_COUNT`值处于 5 倍之内的键值的实际数目。  
+ 您不见得始终都能够预测到某个特定索引键可能具有或将具有多少个值。 如果 `BUCKET_COUNT` 值处于实际键值数目的 5 倍之内，性能就应该是可接受的。  
   
  若要确定现有数据中唯一索引键的数目，请使用与下面的示例相似的查询：  
   
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  用于评估哈希索引运行状况的两个关键指标是：  
   
  *empty_bucket_percent*  
- *empty_bucket_percent*指示哈希索引中的空存储桶的数量。  
+ *empty_bucket_percent* 指示哈希索引中空 Bucket 的数目。  
   
  如果 *empty_bucket_percent* 小于 10%，则该 Bucket 计数可能过低。 理想状态下， *empty_bucket_percent* 应该为 33% 或更高。 如果 Bucket 计数与索引键值的数目匹配，则由于哈希分布，大约 1/3 的 Bucket 是空的。  
   
  *avg_chain_length*  
- *avg_chain_length*指示哈希桶中行链的平均长度。  
+ *avg_chain_length* 指示哈希桶中行链的平均长度。  
   
  如果 *avg_chain_length* 大于 10 并且 *empty_bucket_percent* 大于 10%，则可能有许多重复索引键值并且非聚集索引可能更适合。 理想的平均链长度应该是 1。  
   
@@ -141,9 +141,9 @@ GO
   
 -   IX_OrderSequence：0% 的 Bucket 是空的，这太低了。 此外，平均链长度是 8。 因为此索引中的值是唯一的，所以，这意味着平均而言 8 个值映射到每个 Bucket。 应增加 Bucket 计数。 因为索引键具有 262,144 个唯一值，所以，Bucket 计数应至少为 262,144。 如果预期将来会出现增长，则该数目还应该更高。  
   
--   主键索引 (PK__SalesOrder…)：36% 的 Bucket 是空的，这很好。 此外，平均链长度为 1，这也不错。 无需进行更改。  
+-   主键索引 (PK__SalesOrder...):36% 的 Bucket 是空的，这很好。 此外，平均链长度为 1，这也不错。 无需进行更改。  
   
- 对具有内存优化哈希索引的问题进行疑难解答的详细信息，请参阅[与内存优化哈希索引 Troubleshooting Common Performance Problems](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)。  
+ 有关排除与内存优化哈希索引有关的问题的详细信息，请参阅 [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)。  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>为进一步优化需要周全考虑的方面  
  本节概述为优化 Bucket 计数而需要进一步考虑的方面。  
@@ -152,7 +152,7 @@ GO
   
 -   Bucket 计数值越大，索引中存在的空 Bucket 就越多。 这会影响内存使用情况（每个 Bucket 8 个字节）和表扫描的性能，因为将在表扫描期间对每个 Bucket 进行扫描。  
   
--   Bucket 计数越低，分配给单个 Bucket 的值就越多。 这会降低点查找和插入的性能，因为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可能需要遍历单个 bucket，若要查找的搜索谓词指定的值中的多个值。  
+-   Bucket 计数越低，分配给单个 Bucket 的值就越多。 这会降低点查找和插入的性能，因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能需要遍历单个 Bucket 中的多个值才能找到搜索谓词指定的值。  
   
  如果 Bucket 计数显著低于唯一索引键数，则许多值将映射到每个 Bucket。 这会减少大部分 DML 操作（尤其是查找个别索引键的点查找操作）和插入操作的性能。 例如，包含相等谓词（与 WHERE 子句中的索引键列匹配）的 SELECT 查询、UPDATE 和 DELETE 操作的性能可能较差。 较低的 Bucket 计数还将影响数据库的恢复时间，因为在数据库启动时会重新创建这些索引。  
   

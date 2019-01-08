@@ -15,15 +15,15 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fd9604fb38d20e03f33623bacb606d1a9d114ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2272cffe68db5c4ad417bfdbf81ed45a8d309a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092478"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376909"
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
-  呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
+  呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、 Excel、 Word、 CSV 或文本、 XML、 图像和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
   
 > [!NOTE]  
 >  若要确定哪些呈现扩展插件可用，您可以在 RSReportServer.config 文件中查看已安装的扩展插件列表。  
@@ -58,7 +58,7 @@ ms.locfileid: "48092478"
   
  编写自定义呈现扩展插件的过程困难重重。 呈现扩展插件通常必须支持报表元素的所有可能组合，并要求您实现许许多多的类、接口、方法和属性。 如果您必须以未随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的格式呈现报表，并且决定为呈现扩展插件编写自己的托管代码实现，则呈现扩展插件代码必须实现报表服务器要求的 `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension` 接口。  
   
- 有关 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的补充文档和白皮书，请参阅 [Reporting Services 网站](http://go.microsoft.com/fwlink/?LinkId=19951)上的最新技术资源。  
+ 有关 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的补充文档和白皮书，请参阅 [Reporting Services 网站](https://go.microsoft.com/fwlink/?LinkId=19951)上的最新技术资源。  
   
 ## <a name="see-also"></a>请参阅  
  [实现呈现扩展插件](implementing-a-rendering-extension.md)   

@@ -12,12 +12,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b19f0a7e8bbc3724ddea364055c8023f327faa6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170157"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355365"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>管理可用性组 (SQL Server)
   在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理现有 AlwaysOn 可用性组涉及以下一个或多个任务：  
@@ -117,19 +117,19 @@ ms.locfileid: "48170157"
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第一部分： 介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 生成使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮书：**  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48170157"
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [为 AlwaysOn 可用性组配置服务器实例&#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
  [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [活动辅助副本： 可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [活动辅助副本： 次要副本备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [活动辅助副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动辅助副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组： 互操作性&#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性组：互操作性&#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
  [为 AlwaysOn 可用性组的 TRANSACT-SQL 语句概述&#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [用于 AlwaysOn 可用性组的 PowerShell Cmdlet 概述&#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

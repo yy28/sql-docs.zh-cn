@@ -16,15 +16,15 @@ ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5d62d42eca06775c289e4b81485e0ee7046afbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d69ba0371f77692f53464cc889ae8204f87d4cd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077297"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542350"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>更改挖掘模型中列的离散化
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在某些情况下会自动离散化值，也就是说，它会在数字列中保存值。 例如，如果数据包含连续数值数据，并且创建了决策树模型，则将依据数据的分布，自动将连续数据的所有列都存入 bin 目录中。 如果要控制数据的离散化方式，则必须更改挖掘结构列的属性，这些属性可控制数据在模型中的使用方式。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动离散化值-也就是说，它会在数字列在某些情况。 例如，如果数据包含连续数值数据，并且创建了决策树模型，则将依据数据的分布，自动将连续数据的所有列都存入 bin 目录中。 如果要控制数据的离散化方式，则必须更改挖掘结构列的属性，这些属性可控制数据在模型中的使用方式。  
   
  有关如何在挖掘模型中设置属性的常规信息，请参阅 [挖掘模型列](mining-model-columns.md)。  
   

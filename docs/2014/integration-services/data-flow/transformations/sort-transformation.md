@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttrans.f1
@@ -20,12 +19,12 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 177255d30cb0a667475108fb8e28a8100d3aceae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50a8d1a0242b1317bcefd387d68cf3e0a958d0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130587"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371299"
 ---
 # <a name="sort-transformation"></a>排序转换
   排序转换按升序或降序对输入数据进行排序，并将排序后的数据复制到转换输出。 您可以对一个输入应用多个排序；每个排序都由确定排序顺序的一个数字来标识。 首先对具有最小数字的列进行排序，然后对具有第二小数字的排序列进行排序，依此类推。 例如，如果名为 **CountryRegion** 的列的排序顺序为 1，而名为 **City** 的列的排序顺序为 2，则输出先按照 country/region（国家/地区）排序，然后按照 city（城市）排序。 正数表示排序为升序排序，负数表示排序为降序排序。 不进行排序的列的排序顺序为 0。 没有选择进行排序的列将与被排序列一起自动被复制到转换输出。  
@@ -37,7 +36,7 @@ ms.locfileid: "48130587"
   
  作为排序操作的一部分，排序转换还可删除重复行。 重复行是具有相同排序键值的行。 排序键值是根据所用的字符串比较选项生成的，这意味着不同文字字符串可能具有相同的排序键值。 转换将输入列中具有不同值但具有相同排序键的行标识为重复行。  
   
- 排序转换包括`MaximumThreads`可以加载包时通过属性表达式更新的自定义属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../expressions/integration-services-ssis-expressions.md)、[在包中使用属性表达式](../../expressions/use-property-expressions-in-packages.md)和[转换自定义属性](transformation-custom-properties.md)。  
+ 排序转换包括了可以在加载包时通过属性表达式进行更新的 `MaximumThreads` 自定义属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../expressions/integration-services-ssis-expressions.md)、[在包中使用属性表达式](../../expressions/use-property-expressions-in-packages.md)和[转换自定义属性](transformation-custom-properties.md)。  
   
  此转换有一个输入和一个输出。 它不支持错误输出。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48130587"
  有关如何设置组件属性的详细信息，请参阅 [设置数据流组件属性](../set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-content"></a>相关内容  
- codeplex.com 上的示例 [SortDeDuplicateDelimitedString 自定义 SSIS 组件](http://go.microsoft.com/fwlink/?LinkId=220821)。  
+ codeplex.com 上的示例 [SortDeDuplicateDelimitedString 自定义 SSIS 组件](https://go.microsoft.com/fwlink/?LinkId=220821)。  
   
 ## <a name="see-also"></a>请参阅  
  [数据流](../data-flow.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], viewing errors
@@ -13,12 +12,12 @@ ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f8d6563514aec7c4e75893facb0caa8850798c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b58108b374f2a7ba1c1c4f8e82c8538e0ebb5bd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204087"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361679"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>查看临时过程中出现的错误 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以查看在临时过程中出现的错误。 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中，有两个视图显示错误：  
@@ -27,12 +26,12 @@ ms.locfileid: "48204087"
   
 -   stg.viw_name_RelationshipErrorDetails 用于层次结构关系更新。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中，必须具有对 stg.viw_name_MemberErrorDetails 或 stg.viw_name_RelationshipErrorDetails 视图的 SELECT 权限。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-view-staging-errors"></a>查看临时错误  
   
@@ -51,6 +50,6 @@ ms.locfileid: "48204087"
   
 ## <a name="see-also"></a>请参阅  
  [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [临时过程故障排除 (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [临时过程故障排除 (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

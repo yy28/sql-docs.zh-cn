@@ -12,12 +12,12 @@ ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: baf815460951a91daad76df814cd32298d49a9fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad5619983fbbaf390c756bb21a66f80487f1c076
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370249"
 ---
 # <a name="mssqlserver824"></a>MSSQLSERVER_824
     
@@ -33,7 +33,7 @@ ms.locfileid: "48208317"
 |消息正文|SQL Server 检测到基于一致性的逻辑 I/O 错误: %ls。 在文件 '%ls' 中、偏移量为 %#016I64x 的位置对数据库 ID %d 中的页 %S_PGID 执行 %S_MSG 期间，发生了该错误。  SQL Server 错误日志或系统事件日志中的其他消息可能提供了更详细信息。|  
   
 ## <a name="explanation"></a>解释  
- 此错误表明 Windows 报告已从磁盘成功读取页，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到页中存在错误。 此错误与错误 823 类似，只是 Windows 不检测这一错误。 这通常表明 I/O 子系统中存在问题，例如磁盘驱动器存在故障、磁盘固件存在问题、设备驱动程序不正确等等。 有关 I/O 错误的详细信息，请参阅 [Microsoft SQL Server I/O 基础知识，第 2 章](http://go.microsoft.com/fwlink/?LinkId=69370)。  
+ 此错误表明 Windows 报告已从磁盘成功读取页，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到页中存在错误。 此错误与错误 823 类似，只是 Windows 不检测这一错误。 这通常表明 I/O 子系统中存在问题，例如磁盘驱动器存在故障、磁盘固件存在问题、设备驱动程序不正确等等。 有关 I/O 错误的详细信息，请参阅 [Microsoft SQL Server I/O 基础知识，第 2 章](https://go.microsoft.com/fwlink/?LinkId=69370)。  
   
 ## <a name="user-action"></a>用户操作  
   

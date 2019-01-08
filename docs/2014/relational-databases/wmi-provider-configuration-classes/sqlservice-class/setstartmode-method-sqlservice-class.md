@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetStartMode Method (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 289317a56c1a48b69b500758fbbb47e57b8a49e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b3689c843fbbe7ad845a45aca6bb962f8f0c75e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112089"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371669"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法（SqlService 类）
   修改服务实例的启动模式。  
@@ -42,7 +40,7 @@ StartMode
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务的 [SqlService 类](sqlservice-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
@@ -67,6 +65,6 @@ StartMode
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
