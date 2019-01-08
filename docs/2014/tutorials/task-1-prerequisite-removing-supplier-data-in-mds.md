@@ -1,5 +1,5 @@
 ---
-title: 任务 1 （先决条件）： 删除 MDS 中的供应商数据 |Microsoft Docs
+title: 任务 1（先决条件）：删除 MDS 中的供应商数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394238"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>任务 1（先决条件）：删除 MDS 中的供应商数据
   在本任务中，您将删除在 MDS 中存储的供应商数据。 使用手动将数据上载**MDS Excel 外接程序**上一课中。 您在本课中创建的 SSIS 包将自动为您将数据上载到 MDS。 因此，在测试该 SSIS 包之前，您需要从 MDS 删除供应商数据，删除派生的层次结构，删除供应商和状态实体，并且创建不含数据的供应商实体。  
@@ -43,7 +43,7 @@ ms.locfileid: "48227697"
   
 10. 切换到 Excel 窗口具有**Cleansed and Matched Suppliers.xls**文件打开。 切换到**Sheet1**底部选项卡。  
   
-11. 仅选择**第一行使用标头**。 不要选择任何其他行。 您要基于 Excel 列创建实体，但不想上载任何数据。 因此，您仅选择第一行和标题。  
+11. 仅选择**第一行使用标头**。 不要选择任何其他行。 你想要创建基于 Excel 列的实体，但不想将任何数据上传。 因此，您仅选择第一行和标题。  
   
 12. 单击**主数据**菜单栏上。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227697"
 22. 单击 **“资源管理器”**。 请注意，**供应商**实体的所有属性创建具有**没有值**。  
   
 ## <a name="next-step"></a>下一步  
- [任务 2&#40;可选&#41;： 创建 MDS 订阅视图使用主数据管理器](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [任务 2&#40;可选&#41;:创建 MDS 订阅视图使用主数据管理器](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

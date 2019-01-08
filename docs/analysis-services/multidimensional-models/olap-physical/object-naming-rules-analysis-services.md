@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147952"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509475"
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "50147952"
   
  以下规则适用于**名称**并**ID**属性。  
   
--   名称不区分大小写。 同一数据库中不可同时拥有名为“sales”和“Sales”的两个多维数据集。  
+-   名称不区分大小写。 不能具有名为"sales"的多维数据集和另一个名为"Sales"同一数据库中。  
   
 -   对象名称中不允许使用前导空格或尾随空格，但可以在名称中嵌入空格。 前导空格和尾随空格将会被隐式删除。 这同时适用于**名称**并**ID**的对象。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "50147952"
 |**维度**或**层次结构**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
 |所有其他对象|. , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} < >|  
   
- **异常： 当允许保留字符的**  
+ **异常：如果允许使用保留字符**  
   
  如上所述，特定模式和兼容级别的数据库可具有包含保留字符的对象名称。 对于允许使用以下扩展字符的表格数据库（1103 或更高版本），维度属性、层次结构、级别、度量值和 KPI 对象名称可包含保留字符：  
   
@@ -81,11 +81,11 @@ ms.locfileid: "50147952"
 |MOLAP（所有版本）|否|  
 |表格 - 1050|否|  
 |表格 - 1100|否|  
-|表格 – 1130 和更高版本|用户帐户控制|  
+|表格-1130年和更高版本|用户帐户控制|  
   
  数据库的默认值可为 ModelType。 默认值与多维等效，因此不支持在列名中使用保留字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 保留字](../../../mdx/mdx-reserved-words.md)   
  [Analysis Services 中的翻译支持](../../../analysis-services/translation-support-in-analysis-services.md)   
  [XML for Analysis 遵从性&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  

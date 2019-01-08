@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replicationdboption_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be7d8869c2f1b1453eab4efcf3c6145b6dafea9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3228fc41c571aae60d6609131680162400a310f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781677"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747799"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**订阅**|数据库为订阅数据库。|  
 |**与备份同步**|启用数据库以进行协调备份。 有关详细信息，请参阅[为事务复制启用协调备份&#40;复制 TRANSACT-SQL 编程&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  指示是启用还是禁用给定的复制数据库选项。 *值*是**sysname**，并且可以**true**或**false**。 当此值是**false**并*optname*是**合并发布**，还将删除对合并发布数据库的订阅。  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
@@ -75,7 +74,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
  若要禁用发布，发布数据库必须联机。 如果发布数据库存在数据库快照，则必须在禁用发布前将快照删除。 数据库快照的数据库的只读脱机副本，并与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_replicationdboption**。  
   
 ## <a name="see-also"></a>请参阅  

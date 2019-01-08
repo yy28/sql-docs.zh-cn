@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -17,15 +16,15 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e1ff31c03e3de20d680544f7f432350151f33e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761799"
 ---
 # <a name="for-loop-container"></a>For 循环容器
-  For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 在每次重复循环时，For 循环容器计算表达式，并重复运行其工作流，直到表达式计算结果为`False`。  
+  For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 循环每次重复时，For 循环容器都计算一个表达式并重复运行其工作流，直到表达式计算结果为 `False`。  
   
  For 循环容器使用下列元素定义循环：  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48203727"
  可以为 For 循环容器设置一个事务属性，为包控制流的子集定义一个事务。 采用这种方法，可以更详细地管理事务。 例如，如果 For 循环容器多次重复一个更新表中数据的控制流，则可以配置 For 循环及其控制流，让它们使用一个事务来确保数据只有在全部数据都成功更新后才更新。 有关详细信息，请参阅 [Integration Services 事务](../integration-services-transactions.md)。  
   
 ## <a name="configuration-of-the-for-loop-container"></a>For 循环容器的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

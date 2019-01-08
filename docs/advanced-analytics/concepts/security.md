@@ -1,5 +1,5 @@
 ---
-title: SQL Server 机器学习的安全 |Microsoft Docs
+title: R 和 Python 扩展-SQL Server 机器学习的安全概述
 description: SQL Server 机器学习服务中的可扩展性框架的安全性概述。 登录名和用户帐户、 SQL Server 快速启动板服务、 辅助角色帐户，运行多个脚本和文件权限的安全性。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419372"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596568"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的可扩展性框架的安全性概述
 
@@ -31,7 +31,7 @@ ms.locfileid: "49419372"
 
 <a name="permissions"></a>
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 SQL Server 的数据的数据库登录名和角色的安全模式扩展到 R 和 Python 脚本。 SQL Server 登录名或 Windows 用户帐户需要运行外部脚本，使用 SQL Server 数据或使用 SQL Server 作为计算上下文的运行。 具有权限才能执行即席查询的数据库用户可以从 R 或 Python 脚本中访问相同的数据。
 
@@ -71,7 +71,7 @@ SQL Server 的数据的数据库登录名和角色的安全模式扩展到 R 和
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部处理 （快速启动板） 中使用的服务
 
-可扩展性框架添加到一个新的 NT 服务[的服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)SQL Server 安装中： [ **SQL Server 快速启动板 (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
+可扩展性框架添加到一个新的 NT 服务[的服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)在 SQL Server 安装中：[**SQL Server 快速启动板 (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
 
 数据库引擎使用 SQL Server Launchpad 服务来实例化的 R 或 Python 会话作为单独的进程。 低特权帐户; 下运行的进程不同于 SQL Server、 快速启动板本身，以及其下执行存储的过程或主机查询的用户标识。 在低特权帐户下的单独进程中运行脚本是对 R 和 Python 在 SQL Server 中的安全性和隔离模型的基础。
 

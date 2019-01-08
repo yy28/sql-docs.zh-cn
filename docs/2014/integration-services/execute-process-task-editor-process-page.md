@@ -15,12 +15,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530635"
 ---
 # <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
   可以使用 **“执行进程任务编辑器”** 对话框的 **“进程”** 页配置执行进程的选项。 这些选项包括要运行的可执行文件、该可执行文件的位置、命令提示符参数以及提供输入及捕获输出的变量。  
@@ -38,12 +38,12 @@ ms.locfileid: "48100619"
  提供命令提示符参数。  
   
  **WorkingDirectory**  
- 键入包含可执行文件的文件夹的路径，或单击浏览 **(…)** 按钮定位到该文件夹。  
+ 键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹。  
   
  **StandardInputVariable**  
  选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量：  
   
- **相关主题：**[添加变量  ](../../2014/integration-services/add-variable.md)  
+ **相关的主题：**[添加变量](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量。  

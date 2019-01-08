@@ -1,5 +1,5 @@
 ---
-title: 教程：创建钻取报表和主报表（报表生成器）| Microsoft Docs
+title: 教程：创建钻取和主报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512555"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
   本教程教您如何创建两种报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 下图显示了将创建的报表。  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- 下图显示了主报表中的字段值“游戏和玩具”如何在钻取报表的标题中显示。 钻取报表中的数据与“游戏和玩具”产品类别有关。  
+ 下图显示了如何在字段中的值，游戏和玩具，钻取报表的标题中显示的主报表。 钻取报表中的数据与“游戏和玩具”产品类别有关。  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48093817"
 10. 单击“凭据类型”。  
   
     > [!NOTE]  
-    >  您可能需要更改默认身份验证选项，具体取决于在数据源上配置权限的方式。 有关详细信息，请参阅[安全性（报表生成器）](report-builder/security-report-builder.md)。  
+    >  您可能需要更改默认身份验证选项，具体取决于在数据源上配置权限的方式。 有关详细信息，请参阅 [安全性（报表生成器）](report-builder/security-report-builder.md)中所创建的移动报表中使用。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48093817"
   
 5.  在筛选表达式列表中，展开“所有渠道”，依次单击“在线”、“分销商”和“确定”。  
   
-     查询现在包含一个筛选器以只包括这些渠道：“在线”和“分销商”。  
+     查询现在随附一个筛选器，该筛选器只包含以下两个渠道：在线和分销商。  
   
 6.  展开“Sales Territory”维度，然后将“Sales Territory Group”拖到“层次结构”列（在“Channel Name”下面）。  
   
@@ -377,7 +377,7 @@ ms.locfileid: "48093817"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
      “最近使用的站点和服务器”列出 SharePoint 站点上的库。  
   
@@ -388,7 +388,7 @@ ms.locfileid: "48093817"
     > [!NOTE]  
     >  您将主报表保存到同一位置。 如果要将主报表和钻取报表保存到不同的站点或库，必须在主报表中更新“转到报表”操作的路径。  
   
-7.  单击 **“保存”**。  
+7.  单击“保存” 。  
   
 ##  <a name="MMatrixAndDataset"></a> 1.使用表或矩阵向导创建新报表  
  使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表。  
@@ -462,7 +462,7 @@ ms.locfileid: "48093817"
   
 5.  在筛选表达式列表中，展开“所有渠道”，依次单击“在线”、“分销商”和“确定”。  
   
-     查询现在包含一个筛选器以只包括这些渠道：“在线”和“分销商”。  
+     查询现在随附一个筛选器，该筛选器只包含以下两个渠道：在线和分销商。  
   
 6.  展开“Sales Territory”维度，然后将“Sales Territory Group”拖到“层次结构”列（在“Channel Name”下面）。  
   
@@ -562,7 +562,7 @@ ms.locfileid: "48093817"
   
 1.  在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
-     向导的“预览”窗格将显示包含四行的矩阵。  运行报表时，将通过以下方式显示每个行：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），第四行包含总计。  
+     向导的“预览”窗格将显示包含四行的矩阵。  当您运行报表时，每行将按以下方式显示：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），而第四行包含总计。  
   
 2.  单击“下一步” 。  
   
@@ -685,7 +685,7 @@ ms.locfileid: "48093817"
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **2009 Product Category Sales: Online and Reseller Category:**。  
+2.  类型**2009 Product Category Sales:Online and Reseller Category:**。  
   
 3.  选择键入的文本。  
   
@@ -717,7 +717,7 @@ ms.locfileid: "48093817"
     > [!IMPORTANT]  
     >  将主报表保存到保存钻取报表的同一位置。 若要将主报表和钻取报表保存到不同的站点或库，请确保主报表中的“转到报表”操作指向正确的钻取报表位置。  
   
-7.  单击 **“保存”**。  
+7.  单击“保存” 。  
   
 ##  <a name="MRunReports"></a> 8。运行主报表和钻取报表  
  运行主报表，然后单击产品类别列中的值以运行钻取报表。  

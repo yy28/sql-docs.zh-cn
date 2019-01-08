@@ -16,12 +16,12 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207559"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410184"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   数据驱动订阅是一种基于查询的订阅，可以在运行时获取用于处理该订阅的数据值。 当触发订阅时，会处理一个查询以获取有关收件人、报表传递选项、呈现格式和参数设置的最新信息。 将查询结果与订阅定义相结合，以创建动态订阅，该订阅使用了已在雇员数据库、客户数据库或任何其他数据库（包含可用作订阅服务器数据的信息）中维护的数据。  
@@ -65,7 +65,7 @@ ms.locfileid: "48207559"
   
 2.  单击 **“订阅”** 选项卡。也可以单击报表管理器顶部的“我的订阅”链接  
   
-3.  选择要修改的订阅。 以下图标表示数据驱动订阅：![数据驱动订阅图标](../media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
+3.  选择要修改的订阅。 以下图标表示数据驱动订阅：![数据驱动订阅图标](../media/hlp-16subscriptiondd.gif "数据驱动订阅图标")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>修改现有的数据驱动订阅（SharePoint 模式）  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48207559"
   
 -   **数据要求**。 必须具有包含订阅服务器数据的可访问外部数据源。  
   
--   **用户要求**。 订阅的作者必须具有“管理报表”和“管理所有订阅”的权限。 有关项级任务权限的详细信息，请参阅[任务和权限](../security/tasks-and-permissions.md)。 作者还须具有访问包含订阅服务器数据的外部数据源所需的凭据。  
+-   **用户要求**。 订阅的作者必须具有“管理报表”和“管理所有订阅”的权限。 有关项级任务权限的详细信息，请参阅 [任务和权限](../security/tasks-and-permissions.md)。 作者还须具有访问包含订阅服务器数据的外部数据源所需的凭据。  
   
 ##  <a name="bkmk_define_query"></a> 定义检索订阅信息的查询  
  数据驱动订阅必须指定一个用于检索订阅服务器数据的查询或命令。 查询应为每个订阅服务器生成一行。 如果使用的是电子邮件传递扩展插件，则查询应为每个订阅服务器返回一个有效的电子邮件别名。 所执行的传递的数量取决于查询所返回的行数。 如果行集中包含 10,000 行，则该订阅将传递 10,000 个报表。  
@@ -98,21 +98,21 @@ ms.locfileid: "48207559"
 ##  <a name="bkmk_run_subscription"></a> 运行订阅  
  配置订阅处理的条件。 你可以配置一个计划，也可以触发订阅以便与报表执行快照的更新保持一致。  
   
- ![请注意](../media/rs-fyinote.png "注意")虽然可用于立即运行订阅的用户界面中没有的功能，可以使用一个简单的 Windows PowerShell 脚本来触发订阅运行。 有关详细信息，请参阅"脚本： 运行 （触发） 单个订阅"部分[使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](manage-subscription-owners-and-run-subscription-powershell.md)。  
+ ![请注意](../media/rs-fyinote.png "注意")虽然可用于立即运行订阅的用户界面中没有的功能，可以使用一个简单的 Windows PowerShell 脚本来触发订阅运行。 有关详细信息，请参阅"脚本：运行 （触发） 单个订阅"部分[使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](manage-subscription-owners-and-run-subscription-powershell.md)。  
   
  运行数据驱动订阅的计划和条件与处理标准订阅相同。  
   
 ##  <a name="bkmk_manage_and_delete"></a> 管理和删除数据驱动订阅  
- 不能通过报表管理器的“管理作业”页来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅[创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)。  
+ 不能通过报表管理器的“管理作业”页来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)。  
   
  若要删除数据驱动订阅，请从“我的订阅”页或报表的“订阅”页中选定该订阅，再单击 **“删除”**。  
   
- 有关如何取消数据驱动订阅的说明，请参阅[管理运行中的进程](manage-a-running-process.md)。  
+ 有关如何取消数据驱动订阅的说明，请参阅 [管理运行中的进程](manage-a-running-process.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建、 修改和删除标准订阅&#40;Reporting Services 本机模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
+ [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
  [创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)   
  [“订阅”页（报表管理器）](../subscriptions-page-report-manager.md)   
  [“我的订阅”页（报表管理器）](../my-subscriptions-page-report-manager.md)  

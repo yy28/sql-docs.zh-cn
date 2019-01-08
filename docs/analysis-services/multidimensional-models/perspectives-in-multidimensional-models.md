@@ -1,5 +1,5 @@
 ---
-title: 多维模型中的透视 |Microsoft 文档
+title: 透视中 Analysis Services 多维模型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5427142f682d4fb76011c0514539267d05c3097b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae14c0e76564ebcaffecb7591d14c283fffd2906
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023674"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072584"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多维模型中的透视
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34023674"
   
  若要查看任意对象，请展开“多维数据集对象”下任意对象类型的类别（“度量值组”、“维度”、“KPI”、“计算”或“操作”）。 若要查看维度中的层次结构或属性，请首先展开维度，然后展开 **“层次结构”** 或 **“属性”** 行。 若要查看度量值组中的度量值，请展开度量值组。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的多维数据集](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

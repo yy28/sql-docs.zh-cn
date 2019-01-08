@@ -11,15 +11,15 @@ ms.assetid: e61297fc-a418-4553-b85e-40a3062606f1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43b1da709f57c59cf0d0d2c7640738db8f0b66da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49b1ae81997127b4c2b66b131c18c2bc07763c2c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520386"
 ---
 # <a name="instance-selection-uninstall"></a>实例选择（卸载）
-  在“实例选择 – 卸载”页上，使用下拉框指定要卸载的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+  在所选实例的上卸载页，请使用下拉列表框中指定的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]卸载。  
   
 ## <a name="options"></a>选项  
  可以指定卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的整个实例，也可以指定仅卸载共享功能和管理工具。  

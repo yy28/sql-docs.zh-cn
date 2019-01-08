@@ -16,12 +16,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e59fe6624c84c9918e659063d4d46ca0d7337b4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135907"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356595"
 ---
 # <a name="performing-distributed-transactions"></a>执行分布式事务
   Microsoft 分布式事务处理协调器 (MS DTC) 允许应用程序跨两个或多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例扩展事务。 此外，该协调器还允许应用程序参与由符合 Open Group DTP XA 标准的事务管理器管理的事务。  
@@ -30,7 +30,7 @@ ms.locfileid: "48135907"
   
  当使用 MS DTC，但是，MS DTC 将成为事务管理器和应用程序不能再使用**SQLEndTran**。  
   
- 在分布式事务中登记，然后在第二个分布式事务中登记时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序脱离原始分布式事务并在新事务中登记。 有关详细信息，请参阅[DTC 程序员参考](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)。  
+ 在分布式事务中登记，然后在第二个分布式事务中登记时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序脱离原始分布式事务并在新事务中登记。 有关详细信息，请参阅[DTC 程序员参考](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)。  
   
 ## <a name="see-also"></a>请参阅  
  [执行事务&#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  

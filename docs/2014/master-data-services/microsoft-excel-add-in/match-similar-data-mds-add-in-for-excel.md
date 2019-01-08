@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 70ec67afde5651054078223d4286b8b6a3efcc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 998588401c477d1a2022bdd7d19965c9c74ea2fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158677"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760399"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>匹配相似数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用 Data Quality Services (DQS) 功能查找数据中的相似性。  
@@ -27,11 +26,11 @@ ms.locfileid: "48158677"
   
 -   创建您自己的自定义 DQS 知识库和匹配策略。 有关详细信息，请参阅 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
   
 -   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅[将数据加载到 Excel 的 mds](export-data-to-excel-from-master-data-services.md)。  
   
--   可选。 您可以在检查是否存在相似性之前将其他数据和 MDS 管理的数据合并在一起。 有关详细信息，请参阅[合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)。  
+-   可选。 您可以在检查是否存在相似性之前将其他数据和 MDS 管理的数据合并在一起。 有关详细信息，请参阅 [合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)。  
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>使用默认知识库查找相似性  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48158677"
 -   查看其他信息以便确定哪些数据是类似的。 有关详细信息，请参阅[数据质量匹配列（用于 Excel 的 MDS 外接程序）](data-quality-matching-columns-mds-add-in-for-excel.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据质量匹配中的 MDS 外接程序 excel](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [用于 Excel 的 MDS 外接程序中的数据质量匹配](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [数据匹配](../../data-quality-services/data-matching.md)  
   
   

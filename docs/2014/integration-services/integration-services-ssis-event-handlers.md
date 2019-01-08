@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122837"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751119"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
   在运行时，可执行文件（包以及 Foreach 循环容器、For 循环容器、序列容器和任务宿主容器）会引发事件。 例如，错误发生时会引发 OnError 事件。 可以为这些事件创建自定义事件处理程序，以扩展包的功能并使包在运行时更容易管理。 事件处理程序可以执行诸如下列任务：  
@@ -46,7 +45,7 @@ ms.locfileid: "48122837"
   
  ![包、For 循环、任务主机和执行 SQL 任务](media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
- 只有包具有事件处理程序，用于处理其 `OnError` 事件。 如果执行 SQL 任务运行时，发生错误`OnError`包事件处理程序运行。 下图显示了将导致的调用序列`OnError`要执行的包的事件处理程序。  
+ 只有包具有事件处理程序，用于处理其 `OnError` 事件。 如果执行 SQL 任务运行时发生错误，包的 `OnError` 事件处理程序就会运行。 以下关系图显示导致包的 `OnError` 事件处理程序执行的调用序列。  
   
  ![事件处理程序流](media/mw-dts-eventhandlers.gif "Event handler flow")  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48122837"
 ## <a name="configuration-of-an-event-handler"></a>事件处理程序的配置  
  可以在 **的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 窗口中设置属性，或以编程方式设置属性。  
   
- 有关如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中设置这些属性的信息，请参阅[设置任务或容器的属性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)。  
+ 有关如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中设置这些属性的信息，请参阅 [设置任务或容器的属性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)。  
   
  有关如何以编程方式设置这些属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   

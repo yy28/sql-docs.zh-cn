@@ -25,26 +25,26 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c1e77011b43887518b6a452d9bbe1091e651008
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9d40c7624cff181d9955dae461e4d0e534dbb02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098237"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355496"
 ---
 # <a name="use-xml-data-in-applications"></a>使用 XML 数据应用程序
-  本主题介绍可供您使用的选项`xml`在应用程序中的数据类型。 本主题包括有关下列操作的信息：  
+  本主题介绍在应用程序中使用 `xml` 数据类型时可用的选项。 本主题包括有关下列操作的信息：  
   
 -   使用 ADO 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 处理 `xml` 类型列中的 XML  
   
--   处理 XML 从`xml`使用 ADO.NET 的类型列  
+-   使用 ADO.NET 处理 `xml` 类型列中的 XML  
   
 -   使用 ADO.NET 处理参数中的 `xml` 类型  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>使用 ADO 和 SQL Server Native Client 处理 xml 类型列中的 XML  
  若要使用 MDAC 组件访问 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的类型和功能，必须在 ADO 连接字符串中设置 DataTypeCompatibility 初始化属性。  
   
- 例如，下面的 Visual Basic Scripting Edition (VBScript) 示例显示了查询的结果`xml`数据类型列`Demographics`，在`Sales.Store`表的`AdventureWorks2012`示例数据库。 具体来讲，查询将为 `CustomerID` 等于 `3`的行查找此列的实例值。  
+ 例如，下面的 Visual Basic Scripting Edition (VBScript) 示例显示了在 `Demographics` 示例数据库的 `Sales.Store` 表中查询 `xml` 数据类型列 `AdventureWorks2012` 的结果。 具体来讲，查询将为 `CustomerID` 等于 `3`的行查找此列的实例值。  
   
 ```  
 Const DS = "MyServer"  
@@ -88,7 +88,7 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- 此示例显示了如何设置数据类型兼容性属性。 默认情况下，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 时它设置为 0。 如果将值设置为 80， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口将使`xml`和用户定义类型列显示为[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]数据类型。 结果将分别是 DBTYPE_WSTR 和 DBTYPE_BYTES。  
+ 此示例显示了如何设置数据类型兼容性属性。 默认情况下，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 时它设置为 0。 如果将该值设置为 80，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口将使 `xml` 和用户定义类型列显示为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 数据类型。 结果将分别是 DBTYPE_WSTR 和 DBTYPE_BYTES。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，并且连接字符串必须通过“`Provider=SQLNCLI11;...`”指定将它用作数据访问接口。  
   
@@ -115,7 +115,7 @@ Set objConn = Nothing
 ```  
 Row 1  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>1500000</AnnualSales>  
   <AnnualRevenue>150000</AnnualRevenue>  
   <BankName>Primary International</BankName>  
@@ -130,7 +130,7 @@ Row 1
   
 Row 2  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
   <BankName>United Security</BankName>  
@@ -145,12 +145,12 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 处理 xml 类型列中的 XML  
- 用于处理 XML 从`xml`通过使用 ADO.NET 的数据类型列和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]可以使用的标准行为`SqlCommand`类。 例如，`xml`数据类型列和列值可以检索这样，对于任何 SQL 列检索使用的相同`SqlDataReader`。但是，如果你想要使用的内容`xml`数据类型列作为 XML 使用，首先需要将对这些内容指派`XmlReader`类型。  
+ 用于处理 XML 从`xml`通过使用 ADO.NET 的数据类型列和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]可以使用的标准行为`SqlCommand`类。 例如，可以按照使用 `xml` 检索任何 SQL 列的相同方法检索 `SqlDataReader` 数据类型列及其值。但是，如果要将 `xml` 数据类型列的内容作为 XML 使用，必须先将这些内容指派给 `XmlReader` 类型。  
   
  有关详细信息和示例代码，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文档中的“数据读取器中的 XML 列值”。  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>使用 ADO.NET 处理参数中的 xml 类型列  
- 若要处理 ADO.NET 和 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中作为参数传递的 xml 数据类型，可以将参数值作为 `SqlXml` 数据类型的实例来提供。 不涉及任何特殊的处理，因为`xml`数据类型中的列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以接受参数值中的相同方式与其他列和数据类型，如`string`或`integer`。  
+ 若要处理 ADO.NET 和 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中作为参数传递的 xml 数据类型，可以将参数值作为 `SqlXml` 数据类型的实例来提供。 这里不涉及任何特殊的处理，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `xml` 数据类型列可按照与其他列和数据类型（如 `string` 或 `integer`）相同的方式接受参数值。  
   
  有关详细信息和示例代码，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文档中的“作为命令参数的 XML 值”。  
   

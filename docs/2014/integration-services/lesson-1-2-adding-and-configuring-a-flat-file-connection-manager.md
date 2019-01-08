@@ -1,22 +1,21 @@
 ---
-title: 步骤 2：添加和配置平面文件连接管理器 | Microsoft Docs
+title: 步骤 2：添加和配置平面文件连接管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2d22c652ce63bfc3069756251ff554a5d13c186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88ee64782479e0ffed967485372dea8eae775430
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197347"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362659"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步骤 2：添加和配置平面文件连接管理器
   在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -25,9 +24,9 @@ ms.locfileid: "48197347"
   
  在本教程中，将在平面文件连接管理器中配置以下属性：  
   
--   **列名：** 因为平面文件没有列名，因此平面文件连接管理器将创建默认的列名。 这些默认名称不能用于标识每个列代表的内容。 若要使这些默认名称更有用，需要将默认名称改为要加载平面文件数据的事实数据表匹配的名称。  
+-   **列名称：** 因为平面文件没有列名，平面文件连接管理器创建默认的列名称。 这些默认名称不能用于标识每个列代表的内容。 若要使这些默认名称更有用，需要将默认名称改为要加载平面文件数据的事实数据表匹配的名称。  
   
--   **数据映射：** 为平面文件连接管理器指定的数据类型映射，将由所有引用该连接管理器的平面文件数据源组件使用。 可以使用平面文件连接管理器，或者使用“提供列类型建议”对话框来手动映射数据类型。 在本教程中，将查看“提供列类型建议”对话框中建议的映射，然后在“平面文件连接管理器编辑器”对话框中手动设置必要的映射。  
+-   **数据映射：** 将由所有引用的连接管理器的平面文件数据源组件使用平面文件连接管理器指定的数据类型映射。 可以使用平面文件连接管理器，或者使用“提供列类型建议”对话框来手动映射数据类型。  在本教程中，将查看“提供列类型建议”对话框中建议的映射，然后在“平面文件连接管理器编辑器”对话框中手动设置必要的映射。  
   
  平面文件连接管理器提供了有关数据文件的区域设置信息。 如果未将计算机配置为使用区域设置选项“英语(美国)”，则必须在“平面文件连接管理器编辑器”对话框中设置其他属性。   
   
@@ -43,7 +42,7 @@ ms.locfileid: "48197347"
   
      示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "48197347"
 4.  单击“确定” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 3：添加并配置 OLE DB 连接管理器](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [步骤 3:添加和配置 OLE DB 连接管理器](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>请参阅  
  [平面文件连接管理器](connection-manager/file-connection-manager.md)   

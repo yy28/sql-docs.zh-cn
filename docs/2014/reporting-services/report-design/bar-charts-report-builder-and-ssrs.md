@@ -11,17 +11,17 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc40f29ec61c1818a4cdb1186a4ceccf3553a107
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106097"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365909"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>条形图（报表生成器和 SSRS）
   条形图将序列显示为若干组水平图条。 平面条形图与柱形图密切相关，柱形图将序列显示为多组垂直图条，而范围条形图将序列显示为多组具有不同起点和终点的水平图条。  
   
- 条形图是水平显示数据的唯一图表类型。 因此，该图常用于表示随时间变化的数据，并带有限定的开始和结束日期。 另外，由于类别可以水平显示，因此它还常用于显示分类信息。 有关如何将数据添加到条形图的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+ 条形图是水平显示数据的唯一图表类型。 因此，该图常用于表示随时间变化的数据，并带有限定的开始和结束日期。 另外，由于类别可以水平显示，因此它还常用于显示分类信息。 有关如何向条形图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
  下图显示了一个条形图。 条形图非常适用于此数据，因为所有这三个序列都共享一个公共时间段，允许进行有效比较。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48106097"
   
 -   如果希望在报表内的表或矩阵中添加图条，请考虑使用线性仪表来代替条形图。 线性仪表专用于显示一个值，而不是多个组，因此在列表或表数据区域内的用法更加灵活。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)。  
   
--   您可以在条形图中为单个图条添加特殊的绘制样式以增加其视觉效果。 绘制样式包括楔形、阳文、柱形和由浅到深渐变。 设计这些效果的目的是为了改进二维图表的外观。 即使使用的是三维图表，您仍可应用绘制样式，但效果可能不会相同。 有关如何向条形图添加绘制样式的详细信息，请参阅[添加凹凸效果、 阳文和纹理样式应用于图表&#40;报表生成器和 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
+-   您可以在条形图中为单个图条添加特殊的绘制样式以增加其视觉效果。 绘制样式包括楔形、阳文、柱形和由浅到深渐变。 设计这些效果的目的是为了改进二维图表的外观。 即使使用的是三维图表，您仍可应用绘制样式，但效果可能不会相同。 有关如何向条形图添加绘制样式的详细信息，请参阅 [向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 -   堆积条形图重叠放置各个序列以创建一个条形堆栈。 您可以选择将每个类别的堆积条形图分隔为多组堆栈。 分组堆积图将并排显示。 一个图表中可以有任意多个分组堆积序列。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "48106097"
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
- [图表中的空点和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [图表中的空白和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [柱形图（报表生成器和 SSRS）](column-charts-report-builder-and-ssrs.md)   
- [全距图&#40;报表生成器和 SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [范围图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)   
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [设置图表上的图例的格式&#40;报表生成器和 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)   
  [向图表添加凹凸效果、浮雕和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [教程：向报表添加条形图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教程：向报表添加条形图](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [教程：将条形图添加到报表 （报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教程：向报表添加条形图](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

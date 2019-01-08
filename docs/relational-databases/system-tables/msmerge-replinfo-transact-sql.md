@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_replinfo_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7257ce7d12fe4797c09836de2de45829500afd6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790654"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775419"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47790654"
 |**repid**|**uniqueidentifier**|副本的唯一 ID。|  
 |**use_interactive_resolver**|**bit**|指定调解期间是否使用交互式冲突解决程序。<br /><br /> **0** = 使用交互式冲突解决程序。<br /><br /> **1** = 使用交互式冲突解决程序。|  
 |**validation_level**|**int**|对订阅执行的验证类型。 指定的验证级别可以是以下值之一：<br /><br /> **0** = 不验证。<br /><br /> **1** = 仅限行计数验证。<br /><br /> **2** = 验证行计数和校验和。<br /><br /> **3** = 行计数和二进制校验和验证。|  
-|**resync_gen**|**bigint**|用于重新同步订阅的生成数。 值为 **– 1**指示订阅未标记为重新同步。|  
+|**resync_gen**|**bigint**|用于重新同步订阅的生成数。 值为**为-1**指示订阅未标记为重新同步。|  
 |**login_name**|**sysname**|创建订阅的用户名。|  
 |**主机名**|**sysname**|为订阅生成分区时由参数化行筛选器使用的值。|  
 |**merge_jobid**|**binary(16)**|此订阅的合并作业 ID。|  

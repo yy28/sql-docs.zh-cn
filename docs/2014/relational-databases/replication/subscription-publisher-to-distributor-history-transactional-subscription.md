@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.pubtodist.tran.f1
@@ -13,12 +12,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb3abbdd11cf671203b0a9ebb6e146038b69970f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7514af7f2b9d76772dd56060c98a4d195afe763
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111961"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781999"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>订阅，发布服务器到分发服务器的历史记录（事务订阅）
   **“发布服务器到分发服务器的历史记录”** 选项卡显示日志读取器代理的相关详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
@@ -26,7 +25,7 @@ ms.locfileid: "48111961"
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看的日志读取器代理会话，然后在标记为 **“日志读取器代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **“视图”**  
+ **视图**  
  选择要查看的日志读取器代理会话。 日志读取器代理通常连续运行，因此可能只有一个可供查看的会话。  
   
  **“状态”**  

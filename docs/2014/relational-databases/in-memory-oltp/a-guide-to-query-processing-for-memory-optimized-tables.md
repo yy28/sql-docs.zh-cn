@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c0372c07edc32be23034a4c221e2480bd2047be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374819"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 为构造本文中所示的查询计划，这两个表是用来自 Northwind 示例数据库的示例数据填充的，你可以从 [SQL Server 2000 的 Northwind 和 pubs 示例数据库](http://www.microsoft.com/download/details.aspx?id=23654)下载相关数据库。  
+ 为构造本文中所示的查询计划，这两个表是用来自 Northwind 示例数据库的示例数据填充的，你可以从 [SQL Server 2000 的 Northwind 和 pubs 示例数据库](https://www.microsoft.com/download/details.aspx?id=23654)下载相关数据库。  
   
  考虑以下查询，这些查询联接 Customer 和 Order 表，并返回订单 ID 和相关客户信息：  
   
@@ -79,7 +79,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order 表的数据是使用 CustomerID 列的非聚集索引检索的。 此索引包含 CustomerID 列（用于联接）和主键列 OrderID（返回给用户）。 返回 Order 表的其他列需要查找 Order 表的聚集索引。  
   
--   逻辑运算符 `Inner Join` 是通过物理运算符 `Merge Join` 实现的。 其他物理联接类型为 `Nested Loops` 和 `Hash Join`。 `Merge Join`运算符利用两个索引都按联接列 CustomerID 排序这一事实。  
+-   逻辑运算符 `Inner Join` 是通过物理运算符 `Merge Join` 实现的。 其他物理联接类型为 `Nested Loops` 和 `Hash Join`。 `Merge Join` 运算符利用两个索引都按联接列 CustomerID 排序这一事实。  
   
  考虑一个与此查询稍有不同的查询，它返回 Order 表的所有行，而不仅是 OrderID：  
   
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![哈希联接基于磁盘的表的查询计划。](../../database-engine/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
 哈希联接基于磁盘的表的查询计划。  
   
- 在此查询中，Order 表的行是使用聚集索引检索的。 `Hash Match`物理运算符现在用于`Inner Join`。 Order 的聚集的索引不按 CustomerID，排序，因此`Merge Join`需要一个排序运算符，这会影响性能。 请注意 `Hash Match` 运算符的相对开销 (75%) 和上一示例中 `Merge Join` 运算符的开销 (46%)。 优化器考虑`Hash Match`运算符还在上一示例中，但结论`Merge Join`运算符可以提供更好的性能。  
+ 在此查询中，Order 表的行是使用聚集索引检索的。 `Hash Match` 物理运算符现在用于 `Inner Join`。 Order 的聚集索引不是按 CustomerID 排序的，因此 `Merge Join` 需要一个排序运算符，这会影响性能。 请注意 `Hash Match` 运算符的相对开销 (75%) 和上一示例中 `Merge Join` 运算符的开销 (46%)。 优化器在上一示例中也考虑了 `Hash Match` 运算符，但结论是 `Merge Join` 运算符可以提供更好的性能。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
  下图显示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中针对即席查询的查询处理流程：  
@@ -170,7 +170,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   内存优化表不支持聚集索引。 相反，每个内存优化表必须至少有一个非聚集索引，因此内存优化表上的所有索引可高效访问表中的所有列，而不必将其存储在索引中或引用聚集索引。  
   
--   此计划包含 `Hash Match` 而不是 `Merge Join`。 Order 和 Customer 表的索引均为哈希索引，因此没有顺序。 一个`Merge Join`会要求排序运算符，这会降低性能。  
+-   此计划包含 `Hash Match` 而不是 `Merge Join`。 Order 和 Customer 表的索引均为哈希索引，因此没有顺序。 `Merge Join` 会要求排序运算符，这会降低性能。  
   
 ## <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程  
  本机编译存储过程是编译为机器代码的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程，而不是由查询执行引擎解释。 以下脚本创建一个本机编译存储过程来运行示例查询（来自“示例查询”部分）。  
@@ -205,7 +205,7 @@ END
   
  该过程如下，  
   
-1.  用户发出`CREATE PROCEDURE`语句[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+1.  用户向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发出一条 `CREATE PROCEDURE` 语句。  
   
 2.  分析器和 algebrizer 为该过程创建处理流程，并为存储过程中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询创建查询树。  
   
@@ -226,7 +226,7 @@ END
   
 2.  分析器提取名称和存储过程参数。  
   
-     如果准备的语句，例如使用`sp_prep_exec`，分析器不需要提取过程名称和在执行时的参数。  
+     如果语句已准备就绪（例如使用 `sp_prep_exec`），则分析器执行时不需要提取过程名称和参数。  
   
 3.  内存中 OLTP 运行时查找存储过程的 DLL 入口点。  
   
@@ -236,7 +236,7 @@ END
   
  解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程在首次执行时编译，而本机编译存储过程在创建时编译。 由于调用编译解释型存储过程时，优化器使用为此调用提供的参数值生成执行计划。 这种编译期间的参数用法称为参数截取。  
   
- 参数截取不适用于编译本机编译存储过程。 此类存储过程的所有参数都视为具有 UNKNOWN 值。 与解释型存储的过程，本机编译存储的过程还支持`OPTIMIZE FOR`提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)。  
+ 参数截取不适用于编译本机编译存储过程。 此类存储过程的所有参数都视为具有 UNKNOWN 值。 与解释型存储过程不同，本机编译存储过程还支持 `OPTIMIZE FOR` 提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>为本机编译存储过程检索查询执行计划  
  可使用 **中的** 估计的执行计划 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，或使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 SHOWPLAN_XML 选项，检索本机编译的存储过程的查询执行计划。 例如：  
@@ -260,7 +260,7 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|删除|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|此运算符用于内部函数和类型转换。 不是所有函数和类型转换在本机编译存储过程中都受支持。<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Nested Loops Join|Nested Loops 是本机编译存储过程内唯一支持的联接运算符。 所有包含联接的计划都将使用 Nested Loops 运算符，即使以解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 执行的同一查询计划包含哈希或合并联接也是如此。<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |排序|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|请注意，聚合不支持 Hash Match 运算符。 因此，本机编译存储过程中的所有聚合都使用 Stream Aggregate 运算符，即使解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中针对同一查询计划使用 Hash Match 运算符也是如此。<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>列统计信息和联接  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在索引键列值中维护统计信息，以帮助估计特定操作的开销，如索引扫描和索引查找。 （如果显式创建非索引键列，或者查询优化器在对于带谓词的查询提供的响应中创建非索引键列，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也会对这些列创建统计信息。）开销估计的主要度量是一个运算符处理的行数。 请注意，对于基于磁盘的表，某一特定运算符处理的页数对于开销估计非常重要。 但是，由于页数对于内存优化表并不重要（始终为零），因此本次讨论重点在于行数。 从计划中的索引查找和扫描运算符开始估计，然后扩展到包含其他运算符，如联接运算符。 对联接运算符要处理的行数的估计基于对基础索引、搜索和扫描运算符的估计。 对于内存优化表的解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问，您可以通过实际执行计划查看计划中运算符的估计行数和实际行计数之差。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在索引键列值中维护统计信息，以帮助估计特定操作的开销，如索引扫描和索引查找。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]如果显式创建，或在通过谓词查询响应中的查询优化器创建它们，也非索引键列上创建统计信息。)开销估计的主要度量是一个运算符处理的行数。 请注意，对于基于磁盘的表，某一特定运算符处理的页数对于开销估计非常重要。 但是，由于页数对于内存优化表并不重要（始终为零），因此本次讨论重点在于行数。 从计划中的索引查找和扫描运算符开始估计，然后扩展到包含其他运算符，如联接运算符。 对联接运算符要处理的行数的估计基于对基础索引、搜索和扫描运算符的估计。 对于内存优化表的解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问，您可以通过实际执行计划查看计划中运算符的估计行数和实际行计数之差。  
   
  对于图 1 中的示例，  
   
@@ -300,7 +300,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   用索引查找替换了对 IX_CustomerID 的全文检索扫描。 这样只需扫描 5 行，而全文检索扫描需要扫描 830 行。  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>内存优化表的统计信息和基数  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 维护内存优化表的列级统计信息。 此外，它还保留表的实际行数。 但是，与基于磁盘的表相比，它并不自动更新内存优化表的统计信息。 因此，在表中进行重大更改之后需要手动更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 保留内存优化表的列级统计信息。 此外，它还保留表的实际行数。 但是，与基于磁盘的表相比，它并不自动更新内存优化表的统计信息。 因此，在表中进行重大更改之后需要手动更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [内存优化表](memory-optimized-tables.md)  

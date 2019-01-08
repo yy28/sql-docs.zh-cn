@@ -42,12 +42,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 416540095fe08c5777b453db5875212fbea80989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355115"
 ---
 # <a name="getting-sql-server-assistance"></a>获取 SQL Server 帮助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 有以下三个关于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要信息来源：  
@@ -80,19 +80,19 @@ ms.locfileid: "48064877"
   
 |资源|读者|  
 |--------------|--------------|  
-|[SQL Server 开发人员中心](http://msdn.microsoft.com/sqlserver/)|生成 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、报告系统和商业智能解决方案以及启用其应用程序和网站以使用这些系统的开发人员。|  
-|[XML 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=42458)|其站点和应用程序使用 XML 进行数据存储和操作的网站制作者和应用程序开发人员。|  
-|[SQL Server TechNet 站点](http://technet.microsoft.com/sqlserver/dn135309)|使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 规划、部署、管理和支持系统的管理员和操作员。|  
+|[SQL Server 开发人员中心](https://msdn.microsoft.com/sqlserver/)|生成 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、报告系统和商业智能解决方案以及启用其应用程序和网站以使用这些系统的开发人员。|  
+|[XML 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=42458)|其站点和应用程序使用 XML 进行数据存储和操作的网站制作者和应用程序开发人员。|  
+|[SQL Server TechNet 站点](https://technet.microsoft.com/sqlserver/dn135309)|使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 规划、部署、管理和支持系统的管理员和操作员。|  
   
 ## <a name="additional-online-information"></a>其他联机信息  
  这些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 网站还提供其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 信息。  
   
 |资源|Description|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|提供有关将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作为数据存储和商业智能工具进行评估的售前信息。|  
-|[Microsoft 知识库文章](http://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持人员编写的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文章的可搜索存储库。|    
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|提供有关将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作为数据存储和商业智能工具进行评估的售前信息。|  
+|[Microsoft 知识库文章](https://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持人员编写的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文章的可搜索存储库。|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品具有支持生命周期，该生命周期定义了每个版本的支持期限。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持部门维护了一个定义 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持生命周期的页面。 该页面包含的链接指向指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品支持服务可用性的其他页面。 有关详细信息，请参阅[Microsoft 支持生命周期](http://go.microsoft.com/fwlink/?LinkId=98306)。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品具有支持生命周期，该生命周期定义了每个版本的支持期限。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持部门维护了一个定义 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持生命周期的页面。 该页面包含的链接指向指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品支持服务可用性的其他页面。 有关详细信息，请参阅[Microsoft 支持生命周期](https://go.microsoft.com/fwlink/?LinkId=98306)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 SQL Server 产品文档](../2014-toc/books-online-for-sql-server-2014.md)  

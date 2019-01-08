@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -33,12 +32,12 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 780bfc2f1a9c1654f913995a84460f85e19d386a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205459"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790109"
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库至少具有两个操作系统文件：一个数据文件和一个日志文件。 数据文件包含数据和对象，例如表、索引、存储过程和视图。 日志文件包含恢复数据库中的所有事务所需的信息。 为了便于分配和管理，可以将数据文件集合起来，放到文件组中。  
@@ -48,7 +47,7 @@ ms.locfileid: "48205459"
   
 |文件|Description|  
 |----------|-----------------|  
-|主|主要数据文件包含数据库的启动信息，并指向数据库中的其他文件。 用户数据和对象可存储在此文件中，也可以存储在次要数据文件中。 每个数据库有一个主要数据文件。 主要数据文件的建议文件扩展名是 .mdf。|  
+|基本|主要数据文件包含数据库的启动信息，并指向数据库中的其他文件。 用户数据和对象可存储在此文件中，也可以存储在次要数据文件中。 每个数据库有一个主要数据文件。 主要数据文件的建议文件扩展名是 .mdf。|  
 |辅助副本|次要数据文件是可选的，由用户定义并存储用户数据。 通过将每个文件放在不同的磁盘驱动器上，次要文件可用于将数据分散到多个磁盘上。 另外，如果数据库超过了单个 Windows 文件的最大大小，可以使用次要数据文件，这样数据库就能继续增长。<br /><br /> 次要数据文件的建议文件扩展名是 .ndf。|  
 |事务日志|事务日志文件保存用于恢复数据库的日志信息。 每个数据库必须至少有一个日志文件。 事务日志的建议文件扩展名是 .ldf。|  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48205459"
   
 |文件组|Description|  
 |---------------|-----------------|  
-|主|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
+|基本|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
 |用户定义|用户首次创建数据库或以后修改数据库时明确创建的任何文件组。|  
   
 ### <a name="default-filegroup"></a>默认文件组  

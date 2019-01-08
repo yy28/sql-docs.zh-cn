@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8e20d46bb3efbf64d5c8c176c451652e1c870a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362829"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
   产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
@@ -37,7 +37,7 @@ ms.locfileid: "48077337"
  附加配置步骤（此处无文档介绍）是指为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例和服务账户注册一个服务主体名称 (SPN)。 此步骤在双跃点方案中将传递身份验证从客户端应用程序启用到后端数据源。 此步骤仅应用于配置给 Kerberos 约束委派的服务。 有关更多说明，请参阅 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 。  
   
 ## <a name="logon-account-recommendations"></a>登录帐户推荐  
- 在故障转移群集中，Analysis Services 的所有实例应配置为使用 Windows 域用户帐户。 将相同帐户分配给所有实例。 有关详情，请参见 [如何群集 Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) 。  
+ 在故障转移群集中，Analysis Services 的所有实例应配置为使用 Windows 域用户帐户。 将相同帐户分配给所有实例。 有关详情，请参见 [如何群集 Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) 。  
   
  独立实例应使用默认虚拟帐户， **NT Service\MSSQLServerOLAPService**对于默认实例中，或 **NT Service\MSOLAP$ * * * 实例名称*对于命名实例。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48077337"
   
  对于内部操作，Analysis Services 中的权限持有者不是登录帐户，而是安装程序创建的包含 Per-service SID 的本地 Windows 安全组。 向安全组分配权限与以前版本的 Analysis Services 一致。 此外，登录帐户可能随时间而变化，但是 Per-service SID 和本地安全组在服务器安装的生存期内保持不变。 对于 Analysis Services，这使得安全组（而不是登录帐户）成为持有权限的更好选择。 只要手动向服务实例授予权限（无论是文件系统权限还是 Windows 特权），请务必将权限授予为服务器实例创建的本地安全组。  
   
- 安全组的名称遵循某种模式。 前缀始终是`SQLServerMSASUser$`后, 跟计算机名称，实例名结尾。 默认实例是`MSSQLSERVER`。 命名实例是在设置过程中提供的名称。  
+ 安全组的名称遵循某种模式。 前缀始终是 `SQLServerMSASUser$`，后跟计算机名，以实例名结尾。 默认实例是 `MSSQLSERVER`。 命名实例是在设置过程中提供的名称。  
   
  可以在本地安全设置中查看此安全组：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077337"
  组的唯一成员是 Per-service SID。 它右侧是登录帐户。 登录帐户名是 cosmetic，要向 Per-service SID 提供上下文。 如果随后更改登录帐户，然后返回此页面，则会注意到，安全组和 Per-service SID 不会更改，但是登录帐户标签会有所不同。  
   
 ##  <a name="bkmk_winpriv"></a> 分配给 Analysis Services 服务帐户的 Windows 特权  
- Analysis Services 需要操作系统的的权限，来启动服务和请求系统资源。 请求因服务器模式以及实例是否群集而异。 如果你不熟悉 Windows 权限，请参阅 [特权](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [特权常量 (Windows)](/windows/desktop/SecAuthZ/privilege-constants) 了解详细信息。  
+ Analysis Services 需要操作系统的的权限，来启动服务和请求系统资源。 请求因服务器模式以及实例是否群集而异。 如果你不熟悉 Windows 权限，请参阅 [特权](https://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [特权常量 (Windows)](/windows/desktop/SecAuthZ/privilege-constants) 了解详细信息。  
   
  Analysis Services 的所有实例都请求 **作为服务登录** (SeServiceLogonRight) 特权。 SQL Server 安装程序在安装期间给你在指定的服务账户上分配特权。 对于在多维和数据挖掘模式中运行的服务器，这是 Analysis Services 服务帐户为独立服务器安装要求的唯一 Windows 特权，也是安装程序为 Analysis Services 配置的唯一特权。 对于群集和表格实例，必须手动添加附加 Windows 特权。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48077337"
 |-|-|  
 |**增加进程工作集** (SeIncreaseWorkingSetPrivilege)|默认情况下，此特权通过 **用户** 安全组对所有用户可用。 如果你通过移除此组的特权来锁定服务器，Analysis Services 可能无法启动，并且将记录此错误：“客户端没有所需的特权。” 此错误发生后，通过将特权授予正确的 Analysis Services 安全组，将特权还原到 Analysis Services。|  
 |**调整进程的内存配额** (SeIncreaseQuotaSizePrivilege)|此特权用于当进程因受制于为实例建立的内存阀值而没有足够资源来完成其执行时请求更多内存。|  
-|**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但您可以通过设置使用 Windows 分页阻止它`VertiPaqPagingPolicy`为 0。<br /><br /> `VertiPaqPagingPolicy` 为 1 （默认值），指示表格服务器实例使用 Windows 分页文件。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置 (其中`VertiPaqPagingPolicy`= 1)，不需要授予**锁定内存页**特权仅授予对表格实例。<br /><br /> `VertiPaqPagingPolicy` 为 0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 Analysis Services 依赖**锁定内存页**后的强制执行权限`VertiPaqPagingPolicy`= 0。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 请参阅[Memory Properties](../server-properties/memory-properties.md)有关详细信息`VertiPaqPagingPolicy`。|  
+|**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但你通过将 `VertiPaqPagingPolicy` 设置时为 0 来阻止其使用 Windows 分页。<br /><br /> 将 `VertiPaqPagingPolicy` 设置为 1 （默认情况下），指示表格服务器实例使用 Windows 分页文件。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置 (其中`VertiPaqPagingPolicy`= 1)，不需要授予**锁定内存页**特权仅授予对表格实例。<br /><br /> `VertiPaqPagingPolicy` 为 0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 Analysis Services 依赖**锁定内存页**后的强制执行权限`VertiPaqPagingPolicy`= 0。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 请参阅[Memory Properties](../server-properties/memory-properties.md)有关详细信息`VertiPaqPagingPolicy`。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>若要在服务账户上查看或添加 Windows 特权  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48077337"
 3.  使用“计算机管理器”  |  |  |“MSASxx.MSSQLServer”|“”  |  验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
   
 > [!NOTE]  
->  切勿删除或修改 SID。 若要还原无意删除的每个服务 SID，请参阅[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
+>  切勿删除或修改 SID。 若要还原无意删除的每个服务 SID，请参阅[ https://support.microsoft.com/kb/2620201 ](https://support.microsoft.com/kb/2620201)。  
   
  **了解关于 per-service SID 的详细信息**  
   
@@ -151,8 +151,8 @@ ms.locfileid: "48077337"
   
 ## <a name="see-also"></a>请参阅  
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 服务帐户和每个服务 SID （博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 使用服务 SID 来提供服务隔离 （知识库文章）](http://support.microsoft.com/kb/2620201)   
+ [SQL Server 服务帐户和 Per-Service SID（博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server 使用服务 SID 来提供服务隔离（知识库文章）](https://support.microsoft.com/kb/2620201)   
  [访问令牌 (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
  [安全标识符 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [访问令牌 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

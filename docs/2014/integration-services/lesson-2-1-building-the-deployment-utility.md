@@ -1,22 +1,21 @@
 ---
-title: 步骤 1：生成部署实用工具 | Microsoft Docs
+title: 步骤 1：生成部署实用工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2bbae058a0e3ecacaa4be9204a822451e1a0602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215999"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356338"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步骤 1：生成部署实用工具
   在此任务中，将为 Deployment Tutorial 项目配置和生成部署实用工具。  
@@ -49,7 +48,7 @@ ms.locfileid: "48215999"
   
 4.  在“输出”窗口中，验证以下信息：  
   
-     已启动生成: SQL Integration Services 项目: 增量 ...  
+     生成已启动：SQL Integration Services 项目：增量...  
   
      正在创建部署实用工具...  
   
@@ -57,14 +56,14 @@ ms.locfileid: "48215999"
   
      生成完成 -- 0 个错误，0 个警告  
   
-     ========== 生成: 0 已成功，0 已失败，1 最新，0 已跳过 ==========  
+     === 生成中：成功的 0，0 失败，1 最新，0 已跳过 ===  
   
 5.  在 **“文件”** 菜单中，单击 **“退出”**。 如果提示保存对 Deployment Tutorial 的各项所做的更改，请单击“是”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2：验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [步骤 2:验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [创建部署实用工具](../../2014/integration-services/create-a-deployment-utility.md)  

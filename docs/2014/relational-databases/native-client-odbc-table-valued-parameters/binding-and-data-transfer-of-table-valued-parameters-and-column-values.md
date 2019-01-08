@@ -12,12 +12,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131601"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533984"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>表值参数和列值的绑定及数据传输
   与其他参数类似，表值参数在传递到服务器之前必须进行绑定。 应用程序绑定表值参数绑定其他参数的相同方式： 通过使用 SQLBindParameter 或 SQLSetDescField 或 SQLSetDescRec 等效调用。 表值参数的服务器数据类型为 SQL_SS_TABLE。 C 类型可以指定为 SQL_C_DEFAULT 或 SQL_C_BINARY。  
@@ -26,11 +26,11 @@ ms.locfileid: "48131601"
   
  可使用属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 为整个表值参数列分配默认值。 单个表值参数列的值，但是，不能分配默认值通过使用在 SQL_DEFAULT_PARAM *StrLen_or_IndPtr* SQLBindParameter 使用。 通过使用 SQL_DEFAULT_PARAM 中的，不能作为一个整体的表值参数设置为默认值*StrLen_or_IndPtr* SQLBindParameter 使用。 如果未遵循这些规则，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 诊断记录将生成具有 SQLSTATE = 07S01 和消息"的默认参数的参数使用无效\<p >"，其中\<p > 为 TVP 在查询语句中的序号。  
   
- 绑定表值参数之后，应用程序随后必须绑定每个表值参数列。 若要执行此操作，该应用程序首先调用 SQLSetStmtAttr 将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号。 然后该应用程序将通过调用以下例程绑定表值参数的列： SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField。 将 SQL_SOPT_SS_PARAM_FOCUS 设置为 0 可还原的常见效果 SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField 对常规顶级参数中。  
+ 绑定表值参数之后，应用程序随后必须绑定每个表值参数列。 若要执行此操作，该应用程序首先调用 SQLSetStmtAttr 将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号。 然后该应用程序将表值参数的列绑定通过调用以下例程：SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField。 将 SQL_SOPT_SS_PARAM_FOCUS 设置为 0 可还原的常见效果 SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField 对常规顶级参数中。  
   
  对于表值参数本身而言，并未发送或接收实际数据，但对于表值参数的每个构成列而言，发送和接收了数据。 由于表值参数是伪列，因此将使用 SQLBindParameter 的参数，如下所示为不同的属性比其他数据类型，请参阅：  
   
-|参数|非表值参数类型的相关属性，包括列|表值参数的相关属性|  
+|参数|对于非表值参数类型，包括列的相关的属性|表值参数的相关属性|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 对于表值参数列，此属性设置必须与表值参数自身的设置相同。|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 此属性必须为 SQL_PARAM_INPUT。|  
 |*ValueType*|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> 此属性必须为 SQL_C_DEFAULT 或 SQL_C_BINARY。|  

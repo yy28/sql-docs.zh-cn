@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a58590fe431fa898c617f9d1fd552aa131678b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57117e531714e93000fef6beefefffc2ef210c80
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217267"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823171"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为在其错误日志中包含执行跟踪消息。  
@@ -32,7 +32,7 @@ ms.locfileid: "48217267"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   [若要执行跟踪消息写入到使用 SQL Server Management Studio 在 SQL Server 代理错误日志](#SSMSProcedure)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48217267"
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 – server_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框。  
+3.  在 **SQL Server 代理属性-* * * server_name*对话框中的**错误日志**上**常规**页上，选择**包含执行跟踪消息**复选框。  
   
 4.  单击“确定” 。  
   

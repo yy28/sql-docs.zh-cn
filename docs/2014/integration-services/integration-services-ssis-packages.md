@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -21,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377619"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 包
   包是一个有组织的集合，其中可包括连接、控制流元素、数据流元素、事件处理程序、变量、参数和配置，您可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形设计工具将这些对象组合到包中，或以编程方式生成包含这些对象的包。  然后将完成的包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区或文件系统中，还可以将 ssISnoversion 项目部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器。 包是可被检索、执行和保存的工作单元。  
@@ -51,9 +50,9 @@ ms.locfileid: "48058877"
 ## <a name="package-templates"></a>包模板  
  包经常用作模板，以便通过它生成可共享基本功能的包。 可以生成基本包然后复制它，也可以将包指定为模板。 例如，一个下载并复制文件然后提取数据的包可能会在枚举文件夹内文件的 Foreach 循环中包括 FTP 和文件系统任务。 它还可能包括平面文件连接管理器以访问数据，并包括平面文件源以提取数据。 数据的目标会发生变化，在从基本包复制之后，目标会添加到每个新包中。 还可以创建包，然后使用它们作为添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的新包的模板。 有关详细信息，请参阅 [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)。  
   
- 当首次创建包，以编程方式或使用 SSIS 设计器中，将 GUID 添加到其`ID`属性，将名称传递给其`Name`属性。 如果通过复制现有包或使用模板包来创建新包，那么也会复制名称和 GUID。 如果使用日志记录，则这可能是个问题，因为包的 GUID 和名称将写入日志，以标识被记录的信息所属的包。 因此，应当更新新包的名称和 GUID，以便帮助将它们与源包区分开来，并且能够在日志数据中的区分彼此。  
+ 通过编程或使用 SSIS 设计器第一次创建包时，会将 GUID 添加到它的 `ID` 属性中，并在它的 `Name` 属性中添加名称。 如果通过复制现有包或使用模板包来创建新包，那么也会复制名称和 GUID。 如果使用日志记录，则这可能是个问题，因为包的 GUID 和名称将写入日志，以标识被记录的信息所属的包。 因此，应当更新新包的名称和 GUID，以便帮助将它们与源包区分开来，并且能够在日志数据中的区分彼此。  
   
- 若要更改包 GUID，需要在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“属性”窗口中的 `ID` 属性内重新生成 GUID。 若要更改包名称，则可以更新的值`Name`属性窗口中的属性。 还可以使用 **dtutil** 命令提示符，或通过编程更新 GUID 和名称。 有关详细信息，请参阅[设置包属性](set-package-properties.md)和 [dtutil 实用工具](dtutil-utility.md)。  
+ 若要更改包 GUID，需要在 `ID` 的“属性”窗口中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 属性内重新生成 GUID。 若要更改包名称，可以在“属性”窗口中更新 `Name` 属性的值。 还可以使用 **dtutil** 命令提示符，或通过编程更新 GUID 和名称。 有关详细信息，请参阅[设置包属性](set-package-properties.md)和 [dtutil 实用工具](dtutil-utility.md)。  
   
 ## <a name="objects-that-extend-package-functionality"></a>扩展包功能的对象  
  包中还可包含其他提供高级功能或扩展现有功能的对象，如事件处理程序、配置、日志记录和变量。  
@@ -64,7 +63,7 @@ ms.locfileid: "48058877"
 ### <a name="configurations"></a>配置  
  配置是一组属性值对，它定义当包运行时包及其任务、容器、变量、连接和事件处理程序的属性。 使用配置，不必对包进行修改即可更新属性。 包运行时，将加载配置信息并更新属性值。 例如，配置可更新连接的连接字符串。  
   
- 将包安装到另一台不同的计算机时，系统会先保存配置，然后将配置与包一起进行部署。 当安装包时可更新配置中的值以支持不同环境中的该包。 有关详细信息，请参阅[创建包配置](../../2014/integration-services/create-package-configurations.md)。  
+ 将包安装到另一台不同的计算机时，系统会先保存配置，然后将配置与包一起进行部署。 当安装包时可更新配置中的值以支持不同环境中的该包。 有关详细信息，请参阅 [创建包配置](../../2014/integration-services/create-package-configurations.md)。  
   
 ### <a name="logging-and-log-providers"></a>日志记录和日志提供程序  
  日志是在包运行时所收集的有关包的信息集合。 例如，日志可提供包运行的起始时间和结束时间。 日志提供程序定义了包及其容器和任务在记录运行时信息时可使用的目标类型和格式。 日志与包相关联，但包中的任务和容器可将信息记录到任何包日志中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含了多种用于日志记录的内置日志提供程序。 例如， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中包含了用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和文本文件的日志提供程序。 您还可以创建自定义日志提供程序并将其用于日志记录。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)。  
@@ -81,7 +80,7 @@ ms.locfileid: "48058877"
  可对包对象进行配置以支持更多功能（如在检查点重新启动包、使用数字证书对包进行签名、设置包保护级别和通过使用事务确保数据完整性）。  
   
 ### <a name="restarting-packages"></a>重新启动包  
- 包中包含检查点属性，在包的一个或多个任务失败时，您可以使用该属性来重新启动包。 例如，如果包中有两个用于更新两个不同的表的数据流任务，若第二个任务失败了，则您可重新运行包且不重复第一个数据流任务。 重新启动包可为长时间运行的包节省时间。 重新启动意味着可从失败的任务启动包，而无需重新运行整个包。 有关详细信息，请参阅 [通过使用检查点重新启动包](packages/restart-packages-by-using-checkpoints.md)。  
+ 包中包含检查点属性，在包的一个或多个任务失败时，您可以使用该属性来重新启动包。 例如，如果包中有两个用于更新两个不同的表的数据流任务，若第二个任务失败了，则您可重新运行包且不重复第一个数据流任务。 重新启动包可为长时间运行的包节省时间。 重新启动意味着可从失败的任务启动包，而无需重新运行整个包。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md)。  
   
 ### <a name="securing-packages"></a>保护包的安全  
  可使用数字签名对包进行签名，并使用密码或用户密钥对包进行加密。 数字签名可以验证包源的身份。 但是，还必须将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 配置为在加载包时检查数字签名。 有关详细信息，请参阅[使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md)和[对包中敏感数据的访问控制](security/access-control-for-sensitive-data-in-packages.md)。  
@@ -101,7 +100,7 @@ ms.locfileid: "48058877"
 ## <a name="configuration-of-packages"></a>包的配置  
  可以在 **的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 窗口中设置属性，或以编程方式设置属性。  
   
- 有关如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 设置这些属性的信息，请参阅[设置包属性](set-package-properties.md)。  
+ 有关如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]设置这些属性的信息，请参阅 [设置包属性](set-package-properties.md)。  
   
  有关如何以编程方式设置这些属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
@@ -116,8 +115,8 @@ ms.locfileid: "48058877"
   
 ## <a name="related-content"></a>相关内容  
   
--   [实现 SQL Server Integration Services 与 Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [实现 SQL Server Integration Services 与 Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [如何： 为 Microsoft Dynamics AX 配置 SQL Server Integration Services 包](http://msdn.microsoft.com/library/bb986852)  
+-   [如何：适用于 Microsoft Dynamics AX 配置 SQL Server Integration Services 包](https://msdn.microsoft.com/library/bb986852)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 2 课： 添加数据 |Microsoft Docs
+title: 第 2 课：将数据添加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2ffda70d3af46434886a7f2878ce238d3190905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049347"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416348"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
   在本课程中，您将使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“表导入向导”连接到 AdventureWorksDW SQL 数据库，选择数据，预览并筛选数据，然后将数据导入到模型工作区中。  
   
- 通过使用“表导入向导”，可以导入来自多种关系数据源的数据：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 等。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外，还可以使用存储过程选择数据。  
+ 通过使用表导入向导，你可以从各种关系源导入数据：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 等。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外，还可以使用存储过程选择数据。  
   
  若要了解有关导入数据以及可从中导入的不同数据源类型的详细信息，请参阅[数据源（SSAS 表格）](data-sources-ssas-tabular.md)。  
   
- 学完本课的估计时间： **20 分钟**  
+ 学完本课的预计时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课： [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>创建连接  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48049347"
   
 7.  在“选择如何导入数据”页中，确认已选中“从表和视图的列表中进行选择，以便选择要导入的数据”。 需要从表和视图的列表中进行选择，因此，单击“下一步”以便显示源数据库内所有源表的列表。  
   
-8.  在“选择表和视图”页中，选中以下各表的复选框：“DimCustomer”、“DimDate”、“DimGeography”、“DimProduct”、“DimProductCategory”、“DimProductSubcategory”和“FactInternetSales”。  
+8.  在中**选择表和视图**页上，选择以下表的复选框：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，并**FactInternetSales**。  
   
-9. 我们希望为模型中的表提供更易理解的名称。 单击“友好名称”列中对应于“DimCustomer”的单元格。 通过从 DimCustomer 中删除“Dim”重命名此表。  
+9. 我们希望为模型中的表提供更易理解的名称。 单击“友好名称”列中对应于“DimCustomer”的单元格。 通过从 DimCustomer 中删除"Dim"重命名表。  
   
 10. 重命名其他表：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48049347"
     |-----------------|-------------------|  
     |DimDate|date|  
     |DimGeography|Geography|  
-    |DimProduct|Product|  
+    |DimProduct|产品|  
     |DimProductCategory|Product Category|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
@@ -73,7 +73,7 @@ ms.locfileid: "48049347"
  现在已连接到数据库，选择了要导入的表，并向表提供了友好名称，请转到下一部分：[导入之前对表数据进行筛选](#FilterData)。  
   
 ##  <a name="FilterData"></a> 表数据进行筛选  
- 您正在从数据库中导入的 DimCustomer 表包含来自原始 SQL Server Adventure Works 数据库的数据子集。 您将从 DimCustomer 表中筛选掉一些不必要的列。 如果可能，您希望筛选掉将不使用的数据，以便节省模型使用的内存中空间。  
+ 您正在从数据库中导入的 DimCustomer 表包含来自原始 SQL Server Adventure Works 数据库的数据子集。 将筛选掉一些不需要从 DimCustomer 表的列。 如果可能，您希望筛选掉将不使用的数据，以便节省模型使用的内存中空间。  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>导入之前对表数据进行筛选  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48049347"
   
 3.  确认已选中所有其他列，然后单击“确定”。  
   
-     请注意，“Customer”行的“筛选器详细信息”列中现将显示“应用的筛选器”文字；如果单击该链接，将会看到刚才应用的筛选器的文字说明。  
+     请注意，单词**应用的筛选器**此时将显示在**筛选器详细信息**中的列**客户**行; 如果单击该链接将会看到的文本说明您刚刚应用的筛选器。  
   
 4.  通过针对每个表中的以下各列清除复选框，筛选其余的表：  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48049347"
     |**FrenchCountryRegionName**|  
     |**IpAddressLocator**|  
   
-    |Product|  
+    |产品|  
     |-------------|  
     |**SpanishProductName**|  
     |**FrenchProductName**|  
@@ -165,6 +165,6 @@ ms.locfileid: "48049347"
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“文件”菜单，然后单击“全部保存”。  
   
 ## <a name="next-step"></a>下一步  
- 若要继续学习本教程，请转到下一课： [第 3 课：重命名列](rename-columns.md)。  
+ 若要继续学习本教程，请转到下一课：[第 3 课：重命名列](rename-columns.md)。  
   
   

@@ -20,16 +20,16 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 359805d311252a6ce141b5e3654ba058b74a7d2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791755"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207736"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： 打开组  
+ 版本引入了：ODBC 1.0 标准符合性：打开组  
   
  **摘要**  
  **SQLColumns**返回指定表中的列名称的列表。 驱动程序将返回作为结果集上指定此信息*StatementHandle*。  
@@ -81,7 +81,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  [输入]以字符为单位的长度 **TableName*。  
   
- *列名称*  
+ *ColumnName*  
  [输入]列名称的字符串搜索模式。  
   
 > [!NOTE]  
@@ -164,20 +164,20 @@ SQLRETURN SQLColumns(
 |按 TABLE_SCHEM (ODBC 1.0)|2|Varchar|架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构有关的某些表而不是其他人，如当驱动程序检索数据时从不同 Dbms，它返回空字符串 ("") 不具有架构的这些表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|表名。|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar 不为 NULL|列名称。 该驱动程序返回空字符串不具有名称的列。|  
-|DATA_TYPE (ODBC 1.0)|5|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 对于日期时间和间隔数据类型，此列返回的简洁数据类型 （如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH，而不是如 SQL_DATETIME 或 SQL_INTERVAL nonconcise 数据类型）。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 对于 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能会有所不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
-|TYPE_NAME (ODBC 1.0)|6|Varchar 不为 NULL|数据源而定的数据类型名称;"例如，CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR"或者"CHAR FOR BIT DATA （）"。|  
-|COLUMN_SIZE (ODBC 1.0)|7|Integer|如果 DATA_TYPE 为 SQL_CHAR 或 SQL_VARCHAR，此列包含的列的字符的最大长度。 对于 datetime 数据类型，这是所需的值转换为字符时显示的字符总数。 对于数值数据类型，这是总位数，或者允许在列中，总位数是根据 NUM_PREC_RADIX 列。 间隔数据类型，这是文本的时间间隔的字符表示形式中的字符数 (根据间隔起始精度的定义，请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)附录 d： 数据类型)。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
-|BUFFER_LENGTH (ODBC 1.0)|8|Integer|如果指定 SQL_C_DEFAULT，数据的长度以字节为单位传输的 SQLGetData、 SQLFetch 或 SQLFetchScroll 操作。 对于数值数据，此大小可能不同于数据源上存储的数据量。 此值可能不同于字符数据的 COLUMN_SIZE 列中。 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
-|DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|小数点右侧的有效位数的总数。 有关 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，此列包含秒的小数部分组件中的位数。 对于其他数据类型，这是列的十进制数字的数据源中。 对于包含时间部分的时间间隔数据类型，此列包含小数点 （秒的小数部分） 右侧的位数。 对于不包含时间部分的时间间隔数据类型，此列是 0。 十进制数字的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。 DECIMAL_DIGITS 不适用的数据类型则返回 NULL。|  
+|DATA_TYPE (ODBC 1.0)|5|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 对于日期时间和间隔数据类型，此列返回的简洁数据类型 （如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH，而不是如 SQL_DATETIME 或 SQL_INTERVAL nonconcise 数据类型）。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)中附录 d:数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 对于 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能会有所不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
+|TYPE_NAME (ODBC 1.0)|6|Varchar 不为 NULL|数据源相关的数据类型名称;"例如，CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR"或者"CHAR FOR BIT DATA （）"。|  
+|COLUMN_SIZE (ODBC 1.0)|7|Integer|如果 DATA_TYPE 为 SQL_CHAR 或 SQL_VARCHAR，此列包含的列的字符的最大长度。 对于 datetime 数据类型，这是所需的值转换为字符时显示的字符总数。 对于数值数据类型，这是总位数，或者允许在列中，总位数是根据 NUM_PREC_RADIX 列。 间隔数据类型，这是文本的时间间隔的字符表示形式中的字符数 (根据间隔起始精度的定义，请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)中附录 d:数据类型）。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
+|BUFFER_LENGTH (ODBC 1.0)|8|Integer|如果指定 SQL_C_DEFAULT，数据的长度以字节为单位传输的 SQLGetData、 SQLFetch 或 SQLFetchScroll 操作。 对于数值数据，此大小可能不同于数据源上存储的数据量。 此值可能不同于字符数据的 COLUMN_SIZE 列中。 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
+|DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|小数点右侧的有效位数的总数。 有关 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，此列包含秒的小数部分组件中的位数。 对于其他数据类型，这是列的十进制数字的数据源中。 对于包含时间部分的时间间隔数据类型，此列包含小数点 （秒的小数部分） 右侧的位数。 对于不包含时间部分的时间间隔数据类型，此列是 0。 十进制数字的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。 DECIMAL_DIGITS 不适用的数据类型则返回 NULL。|  
 |NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|对于数值数据类型，为 10 或 2。 如果它是 10，COLUMN_SIZE 和 DECIMAL_DIGITS 中的值为提供允许为列的小数位数编号。 例如，DECIMAL(12,5) 列将返回为 10，12，COLUMN_SIZE 和 5; DECIMAL_DIGITS NUM_PREC_RADIXFLOAT 列可能会返回 10 月 15 日，COLUMN_SIZE 和 DECIMAL_DIGITS 的 NULL NUM_PREC_RADIX。<br /><br /> 如果它是 2，COLUMN_SIZE 和 DECIMAL_DIGITS 中的值为指定的列中允许的位数。 例如，FLOAT 列可能返回 2，53，COLUMN_SIZE 和 DECIMAL_DIGITS 的为 NULL 的基数。<br /><br /> 不适用 NUM_PREC_RADIX 对于数据类型则返回 NULL。|  
 |可以为 NULL (ODBC 1.0)|11|Smallint（非 NULL）|SQL_NO_NULLS 如果列可以包含 NULL 值。<br /><br /> SQL_NULLABLE 如果列接受 NULL 值。<br /><br /> 如果不知道列是否接受 NULL 值，SQL_NULLABLE_UNKNOWN。<br /><br /> 此列返回的值不同于为 IS_NULLABLE 列返回的值。 列可以接受 null 值，但不能确定列不接受 null 值指示明确地指示可以为 NULL 的列。 列不能接受 null 值，但不能确定列接受 null 值指示明确地指示 IS_NULLABLE 列。|  
 |备注 (ODBC 1.0)|12|Varchar|列的说明。|  
 |COLUMN_DEF (ODBC 3.0)|13|Varchar|列的默认值。 如果它用引号引起来，应将此列中的值解释为字符串。<br /><br /> 如果指定为默认值为 NULL，此列是词 NULL，不能用引号括起来。 如果默认值不能表示而无需截断，此列将包含没有封闭单引号会被截断。 如果未指定默认值时，此列将为 NULL。<br /><br /> 可在除生成的新列定义，它包含的值被截断时 COLUMN_DEF 的值。|  
-|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint（非 NULL）|SQL 数据类型，显示在 IRD 中的 SQL_DESC_TYPE 记录字段中。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 此列是日期时间和间隔数据类型除外 DATA_TYPE 列相同。 此列返回的 nonconcise 数据类型 （如 SQL_DATETIME 或 SQL_INTERVAL），而不是简洁数据类型 （如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH） 对于 datetime 和 interval 数据类型。 如果此列返回 SQL_DATETIME 或 SQL_INTERVAL，则可从 SQL_DATETIME_SUB 列确定特定的数据类型。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 对于 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能会有所不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
+|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint（非 NULL）|SQL 数据类型，显示在 IRD 中的 SQL_DESC_TYPE 记录字段中。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 此列是日期时间和间隔数据类型除外 DATA_TYPE 列相同。 此列返回的 nonconcise 数据类型 （如 SQL_DATETIME 或 SQL_INTERVAL），而不是简洁数据类型 （如 SQL_TYPE_DATE 或 SQL_INTERVAL_YEAR_TO_MONTH） 对于 datetime 和 interval 数据类型。 如果此列返回 SQL_DATETIME 或 SQL_INTERVAL，则可从 SQL_DATETIME_SUB 列确定特定的数据类型。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)中附录 d:数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。<br /><br /> 对于 ODBC 3 返回的数据类型。*x*和 ODBC 2。*x*应用程序可能会有所不同。 有关详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。|  
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|日期时间和间隔数据类型的子类型代码。 对于其他数据类型，此列返回 NULL。 有关日期时间和间隔子代码的详细信息，请参阅"SQL_DESC_DATETIME_INTERVAL_CODE"中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|以字节为单位的最大长度的字符或二进制数据类型列。 对于所有其他数据类型，此列返回 NULL。|  
 |ORDINAL_POSITION (ODBC 3.0)|17|Integer（非 NULL）|表中列的序号位置。 表中的第一列是数字 1。|  
-|IS_NULLABLE (ODBC 3.0)|18|Varchar|"否"如果列不包含 null 值。<br /><br /> "是"如果列可以包含 Null。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 根据 ISO 规则确定为 Null 性。 ISO SQL 兼容的 DBMS 不能返回空字符串。<br /><br /> 此列返回的值不同于返回为 NULL 的列的值。 （请参阅可以为 NULL 的列的说明。）|  
+|IS_NULLABLE (ODBC 3.0)|18|Varchar|"否"如果列不包含 null 值。<br /><br /> "是"如果列可以包含 Null。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 根据 ISO 规则确定为 Null 性。 遵从 ISO SQL 标准的 DBMS 不能返回空字符串。<br /><br /> 此列返回的值不同于返回为 NULL 的列的值。 （请参阅可以为 NULL 的列的说明。）|  
   
 ## <a name="code-example"></a>代码示例  
  在以下示例中，应用程序声明为返回的结果集的缓冲区**SQLColumns**。 它将调用**SQLColumns**以返回 EMPLOYEE 表中的每个列的说明结果集。 然后，它调用**SQLBindCol**将列绑定结果集中的缓冲区。 最后，应用程序读取的数据与每一行**SQLFetch**和对其进行处理。  

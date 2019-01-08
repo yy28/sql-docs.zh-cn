@@ -23,12 +23,12 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 275503157f0bfbc004463f3bc567cfbef4a3fc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117041"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370139"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>针对电子邮件传递配置报表服务器（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括电子邮件传递扩展插件，以便可以通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。  
@@ -43,7 +43,7 @@ ms.locfileid: "48117041"
   
 ##  <a name="bkmk_configuration_requirements"></a> 配置要求  
   
--   报表服务器电子邮件传递在协作数据对象 (CDO) 上实现，且需要本地或远程的简单邮件传输协议 (SMTP) 服务器或 SMTP 转发器。 所有 Windows 操作系统都不支持 SMTP。 如果使用的是基于 Itanium 的 Windows Server 2008 版本，则也不支持 SMTP。 有关通过 CDO 提供的配置选项的详细信息，请参阅 MSDN 上的 [Configuration CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) （配置 CoClass）。  
+-   报表服务器电子邮件传递在协作数据对象 (CDO) 上实现，且需要本地或远程的简单邮件传输协议 (SMTP) 服务器或 SMTP 转发器。 所有 Windows 操作系统都不支持 SMTP。 如果使用的是基于 Itanium 的 Windows Server 2008 版本，则也不支持 SMTP。 有关通过 CDO 提供的配置选项的详细信息，请参阅 MSDN 上的 [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) （配置 CoClass）。  
   
 -   报表服务器服务帐户必须对 SMTP 服务器拥有权限才能发送邮件。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48117041"
 
   
 ##  <a name="bkmk_example_config_file"></a> 示例报表服务器电子邮件配置  
- 下面的示例说明了远程 SMTP 服务器的 RSreportserver.config 文件中的设置： 若要了解设置说明及有效值，请参阅[RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书或 CDO 产品文档。  
+ 下面的示例说明了远程 SMTP 服务器的 RSreportserver.config 文件中的设置： 若要了解设置说明及有效值，请参阅 [ssNoVersion](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 联机丛书中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl联机丛书中的e or the CDO product documentation.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -106,7 +106,7 @@ ms.locfileid: "48117041"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 配置选项设置为： 在消息中的字段  
+##  <a name="bkmk_setting_TO_field"></a> 配置选项设置为：消息中的“收件人：”字段的配置选项  
  根据“管理单独的订阅”  任务授予的权限而创建的用户定义订阅包含基于域用户帐户的预设用户名。 用户创建订阅时，“收件人:”  字段中的收件人姓名会使用创建该订阅的人员的域用户帐户自行转换为地址。  
   
  如果您所用的 SMTP 服务器或转发器使用了不同于域用户帐户的电子邮件帐户，则 SMTP 服务器尝试将报表传递给该用户时，报表传递会失败。  
@@ -115,9 +115,9 @@ ms.locfileid: "48117041"
   
 1.  使用文本编辑器打开 RSReportServer.config。  
   
-2.  设置`SendEmailToUserAlias`到`False`。  
+2.  将 `SendEmailToUserAlias` 设置为 `False`。  
   
-3.  设置`DefaultHostName`到域名系统 (DNS) 名称或 IP 地址的 SMTP 服务器或转发器。  
+3.  将 `DefaultHostName` 设置为 SMTP 服务器或转发器的域名系统 (DNS) 名称或 IP 地址。  
   
 4.  保存该文件。  
   
@@ -178,19 +178,19 @@ ms.locfileid: "48117041"
   
 2.  在文本编辑器中打开 RSReportServer.config 文件。  
   
-3.  验证 <`UrlRoot`> 设置为报表服务器 URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
+3.  验证 <`UrlRoot`> 已设置为报表服务器 URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
   
 4.  在“传递”部分中，查找 <`ReportServerEmail`>。  
   
 5.  在 <`SMTPServer`> 中，键入 SMTP 服务器的名称。 此值可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。  
   
-6.  请验证 <`SendUsing`> 设置为 2。 如果将其设置为其他值，则报表服务器无法配置为使用远程 SMTP 服务。  
+6.  验证 <`SendUsing`> 已设置为 2。 如果将其设置为其他值，则报表服务器无法配置为使用远程 SMTP 服务。  
   
-7.  在 <`From`>，键入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
+7.  在 <`From`> 中，键入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
   
 8.  保存该文件。  
   
-     报表服务器将自动使用新的设置；不需要重新启动该服务。 您可以指定其他 SMTP 设置，以进一步配置如何将 SMTP 服务器用于报表服务器电子邮件传递。 有关详细信息，请参阅[报表服务器配置为电子邮件传递](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)并[RSReportServer 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+     报表服务器将自动使用新的设置；不需要重新启动该服务。 您可以指定其他 SMTP 设置，以进一步配置如何将 SMTP 服务器用于报表服务器电子邮件传递。 有关详细信息，请参阅 [ssNoVersion](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 和 [ssNoVersion](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 联机丛书中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl联机丛书中的e.  
   
 
   

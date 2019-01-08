@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: c77871ec-c2f4-4e4a-9a10-5aeb4ae70507
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 685911d9efb0b43b9b0d111e5d45a341c5436a13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e881f0087bb3f4a6ae6e29d20b0f9103c4576be1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757379"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server 浏览器属性（“登录”选项卡）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
@@ -45,7 +44,7 @@ ms.locfileid: "48210507"
  确认安全主体的密码。  
   
  **服务状态**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
   
  **开始**  
  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。  

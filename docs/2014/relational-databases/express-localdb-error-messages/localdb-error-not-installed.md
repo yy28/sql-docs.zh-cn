@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63e33fead75cf7c9e8f9e7a38393bed2d6b8273a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2077b7b5f8ac84d95903a80a0a567cff119231e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185989"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775949"
 ---
 # <a name="localdberrornotinstalled"></a>LOCALDB_ERROR_NOT_INSTALLED
     
@@ -27,7 +27,7 @@ ms.locfileid: "48185989"
 |事件 ID|278|  
 |事件源|SQL Server 本地数据库运行时 12.0|  
 |组件|本地数据库运行时 API|  
-|消息正文|**注意：** 消息文本为空，因为此消息表示整个 LocalDB API （包括将 HRESULTS 映射到消息文本的 FormatMessage 函数） 不可用。|  
+|消息正文|**注意：** 此消息中没有任何内容，因为此消息表示整个 LocalDB API (包括将 HRESULTS 映射到消息文本中的 FormatMessage 函数)不可用。|  
   
 ## <a name="explanation"></a>解释  
  计算机上没有安装本地数据库运行时。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
@@ -13,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75fa2640cae19ce441c467672c1b66e85bd3c169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213608"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747742"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能
   本主题说明下列功能如何与变更数据捕获交互：  
@@ -64,7 +63,7 @@ ms.locfileid: "48213608"
   
 -   如果数据库还原到其他服务器，默认情况下将禁用变更数据捕获，并删除所有相关的元数据。  
   
-     若要保留变更数据捕获，请使用`KEEP_CDC`选项还原数据库时。 有关此选项的详细信息，请参阅 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)。  
+     若要保留变更数据捕获，还原数据库时请使用 `KEEP_CDC` 选项。 有关此选项的详细信息，请参阅 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)。  
   
 -   如果数据库在分离后附加到同一服务器或其他服务器，变更数据捕获将保持启用状态。  
   

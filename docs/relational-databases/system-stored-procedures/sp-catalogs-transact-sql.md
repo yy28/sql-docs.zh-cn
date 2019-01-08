@@ -18,12 +18,12 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33fadfcf8230ab4f60f783c3d0d6172518b8c7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25aae75151ada9ac38b35324f7c82d98f77d580b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535789"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@server_name =**] **'***linked_svr*****  
+ [  **@server_name =**] **'**_linked_svr_  
  链接服务器的名称。 *linked_svr*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
@@ -48,9 +48,9 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**Catalog_name**|**nvarchar(** 128 **)**|目录的名称|  
-|**Description**|**nvarchar (** 4000 **)**|目录的说明|  
+|**说明**|**nvarchar (** 4000 **)**|目录的说明|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

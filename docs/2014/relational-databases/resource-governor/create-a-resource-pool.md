@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - resource pools [SQL Server], create
@@ -14,19 +13,19 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b62c0f104eb5e1d4afd8c495027544252cd180fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753959"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建资源池。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
   
--   **若要创建资源池，请使用：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **若要创建资源池，请使用：**[SQL Server Management Studio](#CreRPProp)， [Transact SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -74,7 +73,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [资源调控器](resource-governor.md)   
  [启用资源调控器](enable-resource-governor.md)   
- [资源调控器资源池](resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [更改资源池设置](change-resource-pool-settings.md)   
  [删除资源池](delete-a-resource-pool.md)   
  [使用模板配置资源调控器](configure-resource-governor-using-a-template.md)   

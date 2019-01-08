@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529537"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
   您可使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的现有实例。 该部署过程通过在 **msdb** 系统数据库（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
   
--   **开始之前：**  [SQL Server 实用工具](#SQLUtility)、 [数据库选项和设置](#DBOptSettings)、 [限制和局限](#LimitationsRestrictions)、 [先决条件](#Prerequisites)、 [安全性](#Security)、 [权限](#Permissions)  
+-   **开始之前：**[SQL Server 实用工具](#SQLUtility)，[数据库选项和设置](#DBOptSettings)，[限制和局限](#LimitationsRestrictions)，[先决条件](#Prerequisites)，[安全](#Security)，[权限](#Permissions)  
   
--   **若要部署 DAC，使用：**[部署数据层应用程序向导](#UsingDeployDACWizard)， [PowerShell  ](#DeployDACPowerShell)  
+-   **若要部署 DAC，使用：**[部署数据层应用程序向导](#UsingDeployDACWizard)， [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> 开始之前  
  同一 DAC 包可以多次部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的单个实例上，但必须一次一个执行这些部署。 为每个部署指定的 DAC 实例名称在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中必须唯一。  
@@ -189,9 +189,9 @@ ms.locfileid: "48104927"
   
 1.  创建一个 SMO Server 对象，并将该对象设置为要将 DAC 部署到的实例。  
   
-2.  打开`ServerConnection`对象，并连接到同一实例。  
+2.  打开 `ServerConnection` 对象，并连接到同一实例。  
   
-3.  使用`System.IO.File`加载 DAC 包文件。  
+3.  使用 `System.IO.File` 加载 DAC 包文件。  
   
 4.  使用 `add_DacActionStarted` 和 `add_DacActionFinished` 订阅 DAC 部署事件。  
   

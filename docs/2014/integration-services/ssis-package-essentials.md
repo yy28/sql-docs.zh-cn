@@ -13,12 +13,12 @@ ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91aa24a11c7d4587500ab7154f582bb47b8f8c4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f767bf80d2271b88eca526be3a47a2033f56d5bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193229"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360859"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 包基本要素
   包是用于实现 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以提取、转换和加载数据的对象。 可以通过使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中的 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]设计器来创建包。 也可以通过运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 连接项目向导来创建包。 有关详细信息[在 SQL Server Data Tools 中创建包](create-packages-in-sql-server-data-tools.md)在 SSIS 设计器和[导入项目向导](../../2014/integration-services/import-project-wizard.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48193229"
   
  有关详细信息，请参阅 [Data Flow](data-flow/data-flow.md)。  
   
- 有关如何创建基本包的示例，请参阅[第 1 课： 创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)。  
+ 有关如何创建基本包的示例，请参阅[第 1 课：创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -49,10 +49,10 @@ ms.locfileid: "48193229"
   
 ## <a name="related-content"></a>相关内容  
   
-1.  MSDN.Microsoft.com 上的视频 [创建基本包（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=131023)  
+1.  MSDN.Microsoft.com 上的视频[创建基本包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131023)  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;包](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)   
  [优先约束](control-flow/precedence-constraints.md)  
   
   

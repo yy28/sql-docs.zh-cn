@@ -1,10 +1,10 @@
 ---
-title: 新建作业计划： 作业计划属性 |Microsoft Docs
+title: 新建作业计划：作业计划属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.editrecurringjobsched.f1
@@ -13,12 +13,12 @@ ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d220cf42df242b0cf7ff436d7ad711adf4a89fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822401"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>新建作业计划：作业计划属性
   使用此页可以查看和更改计划的属性。  

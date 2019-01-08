@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074456"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363139"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
   可以将参数添加到报表，以允许用户为参数选择多个值。  
   
- 您可以在报表 URL 中将多个参数值传递给报表。 有关 URL 示例包含一个多值参数，请参阅[报表参数在 URL 内传递](../pass-a-report-parameter-within-a-url.md)。  
+ 您可以在报表 URL 中将多个参数值传递给报表。 有关包含多值参数的 URL 示例，请参阅 [在 URL 内传递报表参数](../pass-a-report-parameter-within-a-url.md)。  
   
- 有关如何将多个参数值传递给存储过程的信息，请参阅 mssqltips.com 上的 [使用 SSRS 报表的多选参数](http://go.microsoft.com/fwlink/?LinkId=321529) 。  
+ 有关如何将多个参数值传递给存储过程的信息，请参阅 mssqltips.com 上的 [使用 SSRS 报表的多选参数](https://go.microsoft.com/fwlink/?LinkId=321529) 。  
   
 ### <a name="to-add-a-multi-value-parameter"></a>添加多值参数  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074456"
     ```  
   
     > [!IMPORTANT]  
-    >  如果您没有如上所示将变量用括号括起，报表将无法呈现并会显示“必须声明标量变量”错误。  
+    >  如果不包含在变量两侧括号，如上所示，报表将无法呈现并会显示"必须声明标量变量"错误。  
   
      自动为查询变量创建嵌入数据集或共享数据集的数据集参数。 自动为数据集参数创建报表参数。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074456"
     ```  
   
     > [!IMPORTANT]  
-    >  如果您没有如上所示将变量用括号括起，报表将无法呈现并会显示“必须声明标量变量”错误。  
+    >  如果不包含在变量两侧括号，如上所示，报表将无法呈现并会显示"必须声明标量变量"错误。  
   
      自动为查询变量创建嵌入数据集或共享数据集的数据集参数。 自动为数据集参数创建报表参数。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48074456"
      有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [向报表添加级联参数&#40;报表生成器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [添加、 更改或删除报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

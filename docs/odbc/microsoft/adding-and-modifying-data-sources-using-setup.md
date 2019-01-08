@@ -18,18 +18,18 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526852"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>使用安装程序添加和修改数据源
 > [!IMPORTANT]  
 >  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
   
- 数据源标识可以包含网络库、 服务器、 数据库和其他属性的数据的路径，在这种情况下，数据源是 Oracle 数据库的路径。 若要连接到数据源，驱动程序管理器，请检查 Windows 注册表中为特定的连接信息。  
+ 数据源标识可以包含网络库、 服务器、 数据库和其他属性的数据的路径-在这种情况下，数据源是 Oracle 数据库的路径。 若要连接到数据源，驱动程序管理器，请检查 Windows 注册表中为特定的连接信息。  
   
  创建 ODBC 数据源管理器的注册表条目使用的 ODBC 驱动程序管理器和 ODBC 驱动程序。 此条目包含有关每个数据源和其关联的驱动程序的信息。 可以连接到数据源之前，必须向注册表添加其连接信息。  
   

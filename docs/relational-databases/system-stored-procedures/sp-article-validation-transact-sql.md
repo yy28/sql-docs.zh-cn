@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_article_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 921ddeb18eff52731b78a56c0a2c056575572b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f0d205f22e00916c53f5557458694d939bf1766
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648695"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210906"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  包含该项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'**_文章_  
  要验证的项目的名称。 *文章*是**sysname**，无默认值。  
   
  [  **@rowcount_only=**] *type_of_check_requested*  
@@ -64,7 +63,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@full_or_fast=**] *full_or_fast*  
  用于计算行计数的方法。 *full_or_fast*是**tinyint**，可以是下列值之一。  
   
-|**ReplTest1**|**Description**|  
+|**ReplTest1**|**说明**|  
 |---------------|---------------------|  
 |**0**|用 COUNT(*) 执行完整计数。|  
 |**1**|执行快速计数从**sysindexes.rows**。 对行进行计数**sysindexes**比实际表中对行计数要快。 但是， **sysindexes**为惰性更新，因此行计数可能不准确。|  
@@ -79,7 +78,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@reserved=**]*保留*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher**=] **'**_发布服务器上_  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -93,7 +92,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  **sp_article_validation**导致指定的项目上聚集验证信息和发布验证请求到事务日志。 分发代理接收到该请求后，将该请求中的验证信息与订阅服务器表进行比较。 验证的结果显示在复制监视器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  仅具有用户选择的源表的所有权限才能执行所验证项目**sp_article_validation**。  
   
 ## <a name="see-also"></a>请参阅  

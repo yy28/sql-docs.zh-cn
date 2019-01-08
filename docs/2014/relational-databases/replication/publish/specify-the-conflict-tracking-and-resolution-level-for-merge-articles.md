@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], levels
@@ -15,12 +14,12 @@ ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11eed64a7acefb0202553c4e3e99d18333b47910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff61c601be83ac27c4febb7f31598bdb8fce037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228417"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810269"
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>指定合并项目的冲突跟踪和解决方法级别
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合并项目的冲突跟踪和解决方法级别。  
@@ -56,7 +55,7 @@ ms.locfileid: "48228417"
   
 2.  单击 **“项目属性”**，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。  
   
-3.  在“项目属性 \<项目>”对话框的“属性”选项卡上，为“跟踪级别”属性选择以下值之一：“行级跟踪”或“列级跟踪”。  
+3.  上**属性**选项卡**项目属性\<文章 >** 对话框中，选择下列任一值**跟踪级别**属性：**行级跟踪**或**列级跟踪**。  
   
 4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqueued_artinfo
@@ -17,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2e596ecc5e6470bbcc1a62684c1fd1a6533711d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770155"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590892"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +50,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@artid=** ] **'***artid*****  
+ [  **@artid=** ] **'**_artid_  
  项目 ID 的名称。 *artid*是**int**，无默认值  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'**_文章_  
  要写入脚本的项目的名称。 *文章*是**sysname**，无默认值  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  要写入脚本的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@dest_table=** ] *' dest_table * * ***  
+ [  **@dest_table=** ] _' dest_table_  
  目标表的名称。 *dest_table*是**sysname**，无默认值。  
   
- [ **@owner =** ] **'***所有者*****  
+ [ **@owner =** ] **'**_所有者_  
  是订阅的所有者。 *所有者*是**sysname**，无默认值。  
   
- [  **@cft_table=** ] **'***cft_table*****  
+ [  **@cft_table=** ] **'**_cft_table_  
  针对该项目的已排队的更新冲突表的名称。 *cft_table*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -83,7 +82,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)而不是**sp_addqueued_artinfo**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addqueued_artinfo**。  
   
 ## <a name="see-also"></a>请参阅  

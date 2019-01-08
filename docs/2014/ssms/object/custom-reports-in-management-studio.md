@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208888"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354679"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的自定义报表。  
@@ -60,7 +60,7 @@ ms.locfileid: "48208888"
 ## <a name="managing-custom-reports"></a>管理自定义报表  
  如果用户具有很多自定义报表，建议他们使用具有相应 NTFS 文件系统权限的文件系统文件夹来组织这些报表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  自定义报表是使用当前用户的权限运行的。 若要防止恶意用户更改报表运行的查询，应将包含报表文件的文件系统文件夹的权限设置为“限制访问”。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务所使用的用户和帐户都要求对包含报表文件的文件系统文件夹具有读取权限。  
@@ -71,7 +71,7 @@ ms.locfileid: "48208888"
 >  可以在报表中嵌入任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，并可从报表执行此语句。 如果使用具有较高特权的用户帐户运行报表，则可以不受约束地执行所有这些嵌入的指令。  
   
 ## <a name="report-samples"></a>报表示例  
- [报表示例](http://go.microsoft.com/fwlink/?LinkId=81792)，包括由创建的标准报表[!INCLUDE[msCoName](../../includes/msconame-md.md)]，可供下载。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
+ [报表示例](https://go.microsoft.com/fwlink/?LinkId=81792)，包括由创建的标准报表[!INCLUDE[msCoName](../../includes/msconame-md.md)]，可供下载。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
   
 ## <a name="see-also"></a>请参阅  
  [向 Management Studio 添加自定义报表](add-a-custom-report-to-management-studio.md)   

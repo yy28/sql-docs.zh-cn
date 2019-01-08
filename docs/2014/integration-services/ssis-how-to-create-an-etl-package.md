@@ -1,11 +1,10 @@
 ---
-title: SSIS 教程： 创建简单的 ETL 包 |Microsoft Docs
+title: SSIS 教程：创建简单的 ETL 包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
@@ -18,12 +17,12 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b246e9d0badb30027d2971437ebdde5f0d1effde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a99169168eb21f0a7d42f133e7e882141c776e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066597"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357917"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教程：创建简单的 ETL 包
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是一个平台，用于生成高性能数据集成解决方案，包括提取、 转换和加载 (ETL) 包针对数据仓库。 SSIS 包括生成并调试包的图形工具和向导；执行如 FTP 操作、执行 SQL 语句和发送电子邮件等工作流功能的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；管理服务，即用于管理包执行和存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型编程的应用程序编程接口 (API)。  
@@ -40,7 +39,7 @@ ms.locfileid: "48066597"
   
  若要使用本教程，系统中必须安装下列组件：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 **数据库的** 。 为了增强安全性，默认情况下不会安装示例数据库。 要下载 **AdventureWorksDW2012** 数据库，请参阅 [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026)。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 **数据库的** 。 为了增强安全性，默认情况下不会安装示例数据库。 要下载 **AdventureWorksDW2012** 数据库，请参阅 [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026)。  
   
     > [!IMPORTANT]  
     >  附加数据库 (\*.mdf file) 时，默认情况下 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将搜索 .ldf 文件。 在 **“附加数据库”** 对话框中单击“确定”前，您必须手动删除 .ldf 文件。  
@@ -49,7 +48,7 @@ ms.locfileid: "48066597"
   
 -   示例数据。 示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48066597"
  [第 5 课：添加包部署模型的包配置](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  在本课中，将扩展第 4 课中创建的包，利用新增的包配置选项。  
   
- [第 6 课：对项目部署模型使用参数](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [第 6 课：使用项目部署模型使用参数](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
  在本课中，将扩展第 5 课中创建的包，以将新参数用于项目部署模型。  
   
   

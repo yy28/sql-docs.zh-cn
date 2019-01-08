@@ -16,15 +16,15 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531585"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>创建用户定义函数（数据库引擎）
-  本主题介绍如何创建中的用户定义函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+  本主题介绍了如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建用户定义函数。  
   
  **本主题内容**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48124897"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建的用户定义函数：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48124897"
   
 -   用户定义函数不能返回多个结果集。 如果您需要返回多个结果集，请使用存储过程。  
   
--   在用户定义函数中，错误处理受限制。 UDF 不支持 TRY…CATCH、@ERROR 或 RAISERROR。  
+-   在用户定义函数中，错误处理受限制。 UDF 不支持重试...捕获，@ERROR或 RAISERROR。  
   
 -   用户定义函数不能调用存储过程，但是可调用扩展存储过程。  
   

@@ -15,19 +15,19 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798729"
 ---
 # <a name="unpack-a-dac-package"></a>解压缩 DAC 包
   使用“解压缩数据层应用程序”对话框可以从数据层应用程序 (DAC) 包解压缩脚本和文件。 这些脚本和文件放置在一个文件夹中，您可以在使用该 DAC 包将 DAC 部署到生产系统中之前查看该文件夹。 一个 DAC 的内容也可与解压缩到其他文件夹中的其他包的内容进行比较。  
   
-1.  **开始之前：**  [安全性](#Security)  
+1.  **开始之前：**[安全](#Security)  
   
-2.  **若要解压缩 DAC，请使用：**[“解压缩数据层应用程序”对话框](#UnpackDACDial)、[检查 DAC 包的内容](#ExamDACPack)  
+2.  **若要解压缩 DAC，使用：**[解压缩数据层应用程序对话框](#UnpackDACDial)，[检查 DAC 包的内容](#ExamDACPack)  
   
 ##  <a name="Security"></a> 安全性  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的 DAC 之前，请将其部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的一个独立的测试实例中，解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。  

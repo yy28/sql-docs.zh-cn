@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 18277b6db2a59c502c4aafbec98974385a4a053d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168782"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538573"
 ---
 # <a name="create-an-aps-domain-administrator"></a>创建 APS 域管理员
 某些操作需要分析平台系统域管理员权限。 这解释了如何创建其他设备域管理员。  
@@ -30,7 +30,7 @@ ms.locfileid: "49168782"
   
 3.  在中**Active Directory 用户和计算机**程序中，右键单击**用户**，指向**新建**，然后单击**用户**。  
   
-4.  在中**新建对象 – 用户**对话框中，填写新用户的说明，再单击**下一步**。  
+4.  在中**新建对象-用户**对话框中，填写新用户的说明，再单击**下一步**。  
   
     填写密码对话框，再单击**下一步**。  
   

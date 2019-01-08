@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 357e3030657933c20715cb334ec66026b3a97adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e3e842eab648e865c7db4e64a522e08d666dccb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154437"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350830"
 ---
 # <a name="validating-a-data-flow-component"></a>验证数据流组件
   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法用于防止执行未正确配置的组件。 使用此方法可验证组件是否具有预期数量的输入和输出对象，组件的自定义属性是否具有可接受的值，以及所需的任何连接是否都已指定。 使用此方法还可以验证输入和输出集合中的列是否具有正确的数据类型，以及是否为组件正确设置了每列的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>。 基类实现通过检查组件的输入列集合并确保该集合中的每一列都引用上游组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> 中的一列来支持验证过程。  
@@ -191,6 +189,6 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

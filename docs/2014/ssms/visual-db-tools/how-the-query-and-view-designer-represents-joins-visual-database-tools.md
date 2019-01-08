@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL pane [Visual Database Tools]
@@ -14,15 +14,15 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e03e7ef3899b4f01b0844d5d721fa3a86eb6d4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812769"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查询和视图设计器如何表示联接 (Visual Database Tools)
-  如果对表进行了联接，[查询和视图设计器](visual-database-tools.md)将在[“关系图”](diagram-pane-visual-database-tools.md)窗格中以图形方式表示联接，并在 [SQL 窗格](sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
+  如果对表进行了联接， [查询和视图设计器](visual-database-tools.md) 将在[“关系图”](diagram-pane-visual-database-tools.md) 窗格中以图形方式表示联接，并在 [SQL 窗格](sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
   
 ## <a name="diagram-pane"></a>“关系图”窗格  
  在“关系图”窗格中，查询和视图设计器在联接所涉及的数据列之间显示一条联接线。 查询和视图设计器为每个联接条件显示一条联接线。 例如，下图阐释两个联接的表之间的联接线：  
@@ -37,7 +37,7 @@ ms.locfileid: "48100099"
   
  联接线中间的图标形状指示表或表结构对象的联接方式。 如果联接子句使用等号 (=) 以外的运算符，则该运算符将出现在联接线图标中。 下表列出了在联接线上显示的图标。  
   
-|**联接线图标**|**Description**|  
+|**联接线图标**|**说明**|  
 |------------------------|---------------------|  
 |![Visual Database Tools 图标](../../database-engine/media//dv3wbih.gif "Visual Database Tools 图标")|内部联接（用等号创建）。|  
 |![Visual Database Tools 图标](../../database-engine/media//dv3wbii.gif "Visual Database Tools 图标")|基于“大于”运算符的内部联接。|  

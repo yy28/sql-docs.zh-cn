@@ -1,30 +1,30 @@
 ---
-title: 课程 4 预测潜在结果使用 R 模型 （SQL Server 机器学习） |Microsoft Docs
+title: 使用 R 模型的 SQL Server 机器学习第 4 课预测潜在结果
 description: 本教程显示如何将 SQL Server 中嵌入的 R 脚本进行操作的存储过程带有 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/30/2018
+ms.date: 11/16/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032534"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644777"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>第 4 课： 使用 R 运行预测嵌入在存储过程
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>第 4 课：运行使用存储过程中嵌入的 R 的预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
 
 在此步骤中，您了解如何使用针对新观测值的模型来预测潜在的结果。 模型包装在可由其他应用程序直接调用的存储过程。 本演练演示了几种方法进行评分：
 
-- **批处理计分模式**： 为存储过程的输入使用 SELECT 查询。 存储过程将返回与输入事例对应的观测表。
+- **批处理计分模式**:使用 SELECT 查询作为存储过程的输入。 存储过程将返回与输入事例对应的观测表。
 
-- **单个评分模式**：传递一组单独的参数值作为输出。  存储过程将返回单个行或值。
+- **单个评分模式**:将一组单独的参数值传递作为输入。  存储过程将返回单个行或值。
 
 首先，让我们看看一般情况下评分的工作原理。
 
@@ -32,12 +32,12 @@ ms.locfileid: "51032534"
 
 存储的过程**RxPredict**说明了在存储过程中包装的 RevoScaleR rxPredict 调用的基本语法。
 
-```SQL
-CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
+```sql
+CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
-  
-DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);  
+
+DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
     mod <- unserialize(as.raw(model)); 
@@ -70,7 +70,7 @@ GO
 
 1.  先获取较小的要使用的输入数据集。 此查询创建了“排名前 10”的行程列表，其中需要预测乘客计数和其他功能。
   
-    ```SQL
+    ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
     
     FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
@@ -86,7 +86,7 @@ GO
 
     **示例结果**
     
-    ```
+    ```sql
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
     1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
     1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
@@ -95,12 +95,11 @@ GO
 
 2. 创建名为存储的过程**RxPredictBatchOutput**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
-    ```SQL
-    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
-    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
     AS
     BEGIN
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script 
       @language = N'R',
       @script = N'
@@ -119,13 +118,13 @@ GO
 
 3.  提供的变量中的查询文本并将其作为参数传递给存储过程：
 
-    ```SQL
+    ```sql
     -- Define the input data
     DECLARE @query_string nvarchar(max)
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
-
+    
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
 存储的过程返回一的系列表示前 10 个行程的每个预测的值。 但是，顶部行程也是使用相对较短的行程距离，为其驱动程序不太可能中获得小费的单乘客行程。
@@ -145,12 +144,12 @@ GO
 
 1. 创建一个存储的过程**RxPredictSingleRow**。
   
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script  
       @language = N'R',
       @script = N'  
@@ -170,20 +169,21 @@ GO
   
     打开一个新**查询**窗口中，并调用存储过程，为每个参数提供值。 参数表示模型使用的特征列，并且需要。
 
-    ```
-    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+    @passenger_count = 1,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
     @pickup_longitude = -73.973373,
     @dropoff_latitude =  40.782139,
-    @dropoff_longitude = 73.977303
+    @dropoff_longitude = -73.977303
     ```
 
     或者，使用支持此短格式[存储过程的参数](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
-    ```SQL
-    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. 结果表明获得小费的可能性较低 （零） 在前 10 个不得不来回往返，因为所有通过相对较短的距离都是单乘客行程。
@@ -194,4 +194,4 @@ GO
 
 ## <a name="previous-lesson"></a>上一课
 
-[第 3 课： 训练和保存使用 T-SQL 的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)
+[第 3 课：训练和保存使用 T-SQL 的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ee44b0524dffb85892f016581f9c6a7f480a5e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cffe029abd6774262e7aad12ad7aade07717bc80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075827"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359279"
 ---
 # <a name="merge-in-integration-services-packages"></a>在 Integration Services 包中执行 MERGE
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，执行 SQL 任务中的 SQL 语句可以包含 MERGE 语句。 使用此 MERGE 语句可以在一个语句中完成多个 INSERT、UPDATE 和 DELETE 操作。  
@@ -36,7 +35,7 @@ ms.locfileid: "48075827"
   
  本主题的其余部分将讨论 MERGE 语句的一些其他用法。  
   
- 有关支持使用 MERGE 语句的示例目标组件，请参阅 CodePlex 社区示例 [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215)（MERGE 目标）。  
+ 有关支持使用 MERGE 语句的示例目标组件，请参阅 CodePlex 社区示例 [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)（MERGE 目标）。  
   
 ## <a name="using-merge"></a>使用 MERGE  
  通常，当需要应用包括从一个表到另一个表的插入、更新和删除等更改时，可使用 MERGE 语句。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前，此过程需要一个查找转换和多个 OLE DB 命令转换。 查找转换执行逐行查找，以确定每一行是新行还是经过更改的行。 OLE DB 命令转换然后会执行必要的 INSERT、UPDATE 和 DELETE 操作。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，一个 MERGE 语句即可替代查找转换和相应的 OLE DB 命令转换。  
@@ -53,12 +52,12 @@ ms.locfileid: "48075827"
  数据仓库中的 FactBuyingHabits 表会跟踪客户购买指定产品的最后日期。 该表由 ProductID、CustomerID 和 PurchaseDate 列组成。 事务性数据库每周都会生成一个包括该周采购情况的 PurchaseRecords 表。 目标是使用一个 MERGE 语句将 PurchaseRecords 表中的信息合并到 FactBuyingHabits 表中。 对于不存在的产品-客户对，MERGE 语句将插入新行。 对于已存在的产品-客户对，MERGE 语句会更新最近的购买日期。  
   
 ###### <a name="track-price-history"></a>跟踪价格历史记录  
- DimBook 表表示某书商库存中的图书列表，并标识每本书的价格历史记录。 此表包括以下列：ISBN、ProductID、Price、Shelf 和 IsCurrent。 此表还将书的每个价格显示为一行。 其中一行显示的是当前价格。 为了指示哪一行包含当前价格，该行的 IsCurrent 列的值设置为 1。  
+ DimBook 表表示某书商库存中的图书列表，并标识每本书的价格历史记录。 此表包含以下列：ISBN、 ProductID、 Price、 Shelf 和 IsCurrent。 此表还将书的每个价格显示为一行。 其中一行显示的是当前价格。 为了指示哪一行包含当前价格，该行的 IsCurrent 列的值设置为 1。  
   
  该数据库每周会生成一个 WeeklyChanges 表，其中包含该周的价格更改以及该周添加的新书。 使用一个 MERGE 语句可以将 WeeklyChanges 表中的更改应用到 DimBook 表中。 MERGE 语句会为新添加的书插入新行，对于价格已更改的现有书的行，MERGE 语句会将这些行的 IsCurrent 列更新为 0。 MERGE 语句还会为价格已更改的书插入新行，并会将这些新行的 IsCurrent 列的值设置为 1。  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>将具有新数据的表与旧表合并  
- 该数据库使用“开放式架构”（即，包含各属性的名称-值对的表）对对象的属性进行建模。 Properties 表具有三列：EntityID、PropertyID 和 Value。 NewProperties 表是 Properties 表的更新版本，应与 Properties 表保持同步。 若要同步这两个表，可以使用一个 MERGE 语句执行以下操作：  
+ 该数据库使用“开放式架构”（即，包含各属性的名称-值对的表）对对象的属性进行建模。 属性表具有三列：EntityID、 PropertyID 和 Value。 NewProperties 表是 Properties 表的更新版本，应与 Properties 表保持同步。 若要同步这两个表，可以使用一个 MERGE 语句执行以下操作：  
   
 -   从 Properties 表中删除 NewProperties 表中不存在的属性。  
   

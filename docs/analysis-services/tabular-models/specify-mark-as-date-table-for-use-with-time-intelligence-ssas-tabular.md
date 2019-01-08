@@ -1,5 +1,5 @@
 ---
-title: 指定标记为日期表 |Microsoft Docs
+title: 指定标记为日期表中 Analysis Services 表格模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099330"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072434"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定标记为日期表，以便用于时间智能
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "50099330"
   
 4.  根据需要在事实数据表和日期表之间创建任何关系。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [计算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
  [时间智能函数 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
   

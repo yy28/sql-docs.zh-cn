@@ -11,12 +11,12 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac80f4187bc57c86736f09a19200d408e83eb57d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213788"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354975"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>在 Analysis Services 中使用的工具和应用程序
   找到您将需要用于生成 Analysis Services 模型以及用于在 Analysis Services 实例上管理关联数据库的工具和应用程序。  
@@ -27,14 +27,14 @@ ms.locfileid: "48213788"
 ### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>下载 SQL Server Data Tools for Business Intelligence (SSDT-BI)  
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI)（以前称为 Business Intelligence Development Studio (BIDS)）用于创建 Analysis Services 模型、Reporting Services 报表和 Integration Services 包。 您可以从以下位置下载 SSDT-BI：  
   
--   [下载 SSDT-BI for Visual Studio 2013](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [下载 SSDT-BI for Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [下载 SSDT-BI for Visual Studio 2012](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [下载 SSDT-BI for Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  如果计算机上装有旧版 SSDT-BI 或 BIDS，则新版与旧版并行安装。 在一个工作站上同时运行新版和旧版的设计工具是很常见的，这样可以修改与特定服务器版本关联的项目和解决方案。  
   
 > [!NOTE]  
->  有多个下载站点可下载 SSDT 的 Visual Studio 2012 和 Visual Studio 2013 版本。 大多不含 BI 项目模板。 使用上面的链接可获得正确的版本。 如果看到 Business Intelligence 项目模板文件夹，即说明 SSDT-BI 的版本正确无误。 此文件夹包含 Analysis Services、Reporting Services 和 Integration Services 的项目模板。 根据安装 SSDT-BI 的方式，可能还会看到一个 SQL Server 数据库项目模板。  
+>  有多个下载站点可下载 SSDT 的 Visual Studio 2012 和 Visual Studio 2013 版本。 大多不含 BI 项目模板。 使用上面的链接可获得正确的版本。 就会知道没有正确版本的 SSDT BI，是否看到 Business Intelligence 项目模板文件夹。 此文件夹包含 Analysis Services、Reporting Services 和 Integration Services 的项目模板。 根据安装 SSDT-BI 的方式，可能还会看到一个 SQL Server 数据库项目模板。  
   
  ![SSDT 中新的项目模板](media/ssdt-biprojects.png "New Project templates in SSDT")  
   

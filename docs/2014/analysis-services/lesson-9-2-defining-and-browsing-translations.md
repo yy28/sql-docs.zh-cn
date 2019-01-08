@@ -11,12 +11,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a955d01840995c269f94de4d83a038c0b26cc725
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39db8cb33e2adbf24ff03b6ad84dfefe0e8bfb81
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142982"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504641"
 ---
 # <a name="defining-and-browsing-translations"></a>定义和浏览翻译
   翻译是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的名称在特定语言中的表示形式。 对象包括度量值组、度量值、维度、属性、层次结构、KPI、操作和计算成员。 翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通过使用这样的客户端，客户端就可以将区域设置标识符 (LCID) 传递给 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，该实例则使用 LCID 来确定在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象提供元数据时要使用哪一组翻译。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象不包含该语言的翻译或不包含指定对象的翻译，则在将该对象元数据返回给客户端时使用默认语言。 例如，如果一个法国的业务用户从使用法语区域设置的工作站访问多维数据集，则存在法语翻译时，此业务用户将看到法语的成员标题和成员属性值。 但是，如果一个德国的业务用户从使用德语区域设置的工作站上访问同一个多维数据集，则此业务用户将看到德语的成员标题和成员属性值。 有关详细信息，请参阅[维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)，[多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md)，[翻译&#40;Analysis Services&#41;](translations-analysis-services.md)。  
@@ -45,9 +45,9 @@ ms.locfileid: "48142982"
   
 6.  中的行**标题**对象**月份名称**属性中，键入`Mes del Año`中**西班牙语 （西班牙）** 翻译列和`Mois d'Année`中**法语 （法国）** 翻译列。  
   
-     请注意，输入这些翻译时，会出现省略号 (**…**)。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
+     请注意，当你输入这些翻译，省略号 (**...**) 显示。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
   
-7.  在“月份名称”属性的“西班牙语(西班牙)”翻译中单击省略号 (**…**)。  
+7.  单击省略号 (**...**) 用于**西班牙语 （西班牙）** 翻译**月份名称**属性。  
   
      “翻译属性数据”对话框将出现。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142982"
   
      ![数据翻译属性对话框](../../2014/tutorials/media/l9-translations-4.gif "翻译属性数据对话框")  
   
-9. 单击“确定”，然后在“月份名称”属性的“法语(法国)”翻译中单击省略号 (**…**)。  
+9. 单击**确定**，然后单击省略号 (**...**) 用于**法语 （法国）** 翻译**月份名称**属性。  
   
 10. 在“翻译列”列表中，选择“FrenchMonthName”，然后单击“确定”。  
   

@@ -13,12 +13,12 @@ ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e55050d8ed845f4255c6eebbdada9930f4d140c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074517"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390602"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>从 PowerPivot 导入（SSAS 表格）
   本主题介绍如何通过使用导入元数据和数据从 PowerPivot 工作簿中 PowerPivot 项目模板中的导入来创建新的表格模型项目[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
@@ -29,11 +29,11 @@ ms.locfileid: "48074517"
 > [!NOTE]  
 >  表格模型不支持链接表。 在从包含链接表的 PowerPivot 工作簿中导入时，链接表数据将作为复制\粘贴的数据处理并且存储于 Model.bim 文件中。 在查看复制\粘贴的表的属性时，“源数据”属性将被禁用，并且“表”菜单上的“表属性”对话框将被禁用。  
 >   
->  对于可添加到在模型中嵌入的数据中的行数，有最多 10,000 行的限制。 如果您在从 PowerPivot 导入模型时看到错误“数据已被截断。 粘贴的表不能包含超过 10000 行”，则应通过将嵌入的数据移到其他数据源（例如 SQL Server 中的表），然后重新导入，对该 PowerPivot 模型进行修订。  
+>  对于可添加到在模型中嵌入的数据中的行数，有最多 10,000 行的限制。 如果您从 PowerPivot 导入模型并查看错误，"数据已被截断。 粘贴的表不能包含超过 10000 行"应通过将嵌入的数据移动到另一个数据源，例如 SQL Server 中的表来修改 PowerPivot 模型，然后重新导入。  
   
  有一些特别注意事项，这取决于工作区数据库是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 所处的计算机（本地）上的 Analysis Services 实例中还是在远程 Analysis Services 实例中。  
   
- 如果工作区数据库在本地 Analysis Services 实例中，则可以从 PowerPivot 工作簿导入元数据和数据。 从工作簿复制元数据并使用该元数据创建表格模型项目。 然后，从工作簿复制数据并将其存储到项目的工作区数据库中（复制/粘贴的数据除外，该数据存储在 Model.bim 文件中）。  
+ 如果工作区数据库在本地 Analysis Services 实例中，则可以从 PowerPivot 工作簿导入元数据和数据。 从工作簿复制元数据并使用该元数据创建表格模型项目。 然后从工作簿复制和 （复制/粘贴的数据除外，它存储在 Model.bim 文件） 的项目的工作区数据库中存储数据。  
   
  如果工作区数据库在远程 Analysis Services 实例中，则无法从 PowerPivot for Excel 工作簿导入数据。 您仍可以导入工作薄元数据；不过，这将导致脚本在远程 Analysis Services 实例中运行。 您应只从受信任的 PowerPivot 工作薄导入元数据。 必须从数据源连接所定义的源中导入数据。 必须将 PowerPivot 工作簿中的复制/粘贴的数据和链接表数据复制并粘贴到表格模型项目中。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48074517"
 4.  在 **“打开”** 对话框中，选择包含您要导入的模型元数据和数据的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 文件，然后单击 **“打开”**。  
   
 ## <a name="see-also"></a>请参阅  
- [工作区数据库&#40;SSAS 表格&#41;](workspace-database-ssas-tabular.md)   
- [复制和粘贴数据&#40;SSAS 表格&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [工作区数据库（SSAS 表格）](workspace-database-ssas-tabular.md)   
+ [复制并粘贴数据（SSAS 表格）](../copy-and-paste-data-ssas-tabular.md)  
   
   

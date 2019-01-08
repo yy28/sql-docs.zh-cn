@@ -11,12 +11,12 @@ ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ab1c8c07ed176632f98ed19251d616633480436
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ca96d67a219ff106d2eb3388c129f9b8af306f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179027"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356656"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用“我的报表”（报表生成器和 SSRS）
   在配置为本机模式的报表服务器上，“我的报表”文件夹是一个个人工作区，您可以用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 相反，“我的报表”文件夹则是用户管理的工作区。 您可以添加或删除报表和文件夹，保存带有个性化设置的链接报表。  
@@ -25,7 +25,7 @@ ms.locfileid: "48179027"
   
  “我的报表”功能是可选的，报表服务器管理员可以禁用此功能。 如果启用此功能，您就会在主文件夹中看到“我的报表”文件夹，可以使用报表管理器或 Web 浏览器访问该文件夹。 有关详细信息，请参阅[在报表管理器中查找和查看报表（报表生成器和 SSRS）](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)。  
   
- 在配置为 SharePoint 集成模式的报表服务器上，没有与“我的报表”文件夹等同的项。 有关详细信息，请参阅[查找、 查看和管理报表&#40;报表生成器和 SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 在配置为 SharePoint 集成模式的报表服务器上，没有与“我的报表”文件夹等同的项。 有关详细信息，请参阅 [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "48179027"
   
 -   创建个人的链接报表，并将其存储在“我的报表”文件夹中。 并非所有的报表都适合链接。 有关详细信息，请参阅 [创建链接报表](../reports/create-a-linked-report.md)。  
   
--   上载报表定义 (.rdl) 文件、报表模型 (.smdl) 文件或文件系统中的其他文件。 您可以上载任何文件，但报表服务器只处理扩展名为 .rdl 或 .smdl 的报表文件。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的“报表定义”和[上传文件或报表（报表管理器）](../reports/upload-a-file-or-report-report-manager.md)。  
+-   上载报表定义 (.rdl) 文件、报表模型 (.smdl) 文件或文件系统中的其他文件。 您可以上载任何文件，但报表服务器只处理扩展名为 .rdl 或 .smdl 的报表文件。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的“报表定义”和[上传文件或报表（报表管理器）](../reports/upload-a-file-or-report-report-manager.md)。  
   
 -   创建您自己的报表并将其发布到“我的报表”文件夹。 有关详细信息，请参阅[报表设计视图（报表生成器）](report-design-view-report-builder.md)。  
   

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878190"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886882"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "48878190"
 |signal_wait_time_ms|**bigint**|正在等待的线程从收到信号通知到其开始运行之间的时差。|  
 |pdw_node_id|**int**|对于此分布的节点标识符。 <br/> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -168,8 +168,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |COUNTRECOVERYMGR |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |CREATE_DATINISERVICE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|CXCONSUMER |当使用者线程等待制造者线程，以将行发送时出现并行查询计划。 这是并行查询执行的常见现象。 <br /> **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cu3 开始)， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |当同步查询处理器交换迭代器，并生成和使用行时出现并行查询计划。 如果等待太久，无法通过优化查询（如添加索引）来减少等待时间，请考虑调整并行度的开销阈值或降低并行度。<br /> **注意：** 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 仅是指同步查询处理器交换迭代器，以及生成行的使用者线程的。 使用者线程将被单独跟踪在 CXCONSUMER 等待类型中。| 
+|CXCONSUMER |当使用者线程等待制造者线程，以将行发送时出现并行查询计划。 这是并行查询执行的常见现象。 <br /> **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cu3 开始)， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |当同步查询处理器交换迭代器，并生成和使用行时出现并行查询计划。 如果等待太久，无法通过优化查询（如添加索引）来减少等待时间，请考虑调整并行度的开销阈值或降低并行度。<br /> **注意：** 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cu3 开始，和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 仅是指同步查询处理器交换迭代器，以及的生成使用者线程的行。 使用者线程将被单独跟踪在 CXCONSUMER 等待类型中。| 
 |CXROWSET_SYNC |在并行范围扫描期间出现。| 
 |DAC_INIT |当正在初始化专用管理员连接时出现。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |后台任务正在等待处理 Windows Server 故障转移群集通知的后台任务完成启动。 仅限内部使用。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |后台任务正在等待处理 Windows Server 故障转移群集通知的后台任务终止。 仅限内部使用。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_PARTNER_SYNC |对伙伴列表的并发控制等待。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HADR_READ_ALL_NETWORKS |等待获取对 WSFC 网络列表的读取或写入访问。 仅限内部使用。 请注意： 引擎保存动态管理视图 （如 sys.dm_hadr_cluster_networks) 中使用的 WSFC 网络列表，或若要验证始终在 TRANSACT-SQL 语句引用 WSFC 网络信息。 此列表会更新在引擎启动时，WSFC 相关通知和内部 Alwayson 重新启动 （例如，丢失和重新获取 WSFC 仲裁）。 在该列表中的更新正在进行时，任务通常会被阻止。 、 <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HADR_READ_ALL_NETWORKS |等待获取对 WSFC 网络列表的读取或写入访问。 仅限内部使用。 注意：引擎保存动态管理视图 （如 sys.dm_hadr_cluster_networks) 中使用的 WSFC 网络列表，或若要验证始终在 TRANSACT-SQL 语句引用 WSFC 网络信息。 此列表会更新在引擎启动时，WSFC 相关通知和内部 Alwayson 重新启动 （例如，丢失和重新获取 WSFC 仲裁）。 在该列表中的更新正在进行时，任务通常会被阻止。 、 <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |正在等待辅助数据库在运行恢复之前连接到主数据库。 这是建立速度比较慢连接到主副本是否可以延长的预期的等待。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |数据库恢复正在等待辅助数据库完成恢复和初始化阶段以便恢复到主数据库的公共日志点。 故障转移后的预期的等待。撤消可以通过 Windows 系统监视器 (perfmon.exe) 和动态管理视图中跟踪进度。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_REPLICAINFO_SYNC |等待并发控制更新当前副本状态。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -931,6 +931,7 @@ GO
 |VIA_ACCEPT |当在启动过程中完成虚拟接口适配器 (VIA) 提供程序连接时出现。| 
 |VIEW_DEFINITION_MUTEX |在同步访问已缓存的视图定义期间出现。| 
 |WAIT_FOR_RESULTS |在等待查询通知触发时出现。| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |当等待用于同步统计信息更新完成，然后查询编译和执行可以恢复时出现。<br /> **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -1020,7 +1021,7 @@ GO
   
  有关锁兼容性矩阵，请参阅[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
     
  [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

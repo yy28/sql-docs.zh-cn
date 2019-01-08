@@ -22,12 +22,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7f71384b89be479d8388e4af8e897f384f2b141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a132395bbd95997832e2a1df6948179cb2ffe8aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198697"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353634"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多维模型中的计算
   可以使用多维数据集设计器的“计算”选项卡创建计算成员、命名集和其他多维表达式 (MDX) 计算。  
@@ -41,7 +41,7 @@ ms.locfileid: "48198697"
 -   “计算表达式”窗格支持窗体视图和脚本视图。  
   
 > [!NOTE]  
->  有关 MDX 脚本编写的详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](http://go.microsoft.com/fwlink/?LinkId=81892)，并请参阅 Microsoft TechNet 网站的 [SQL Server 2005 – Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) 页上的“其他资源”部分。 有关与多维数据集设计相关的性能问题的详细信息，请参阅 [SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)。  
+>  有关 MDX 脚本编写的详细信息，请参阅[Microsoft SQL Server 2005 中的 MDX 脚本简介](https://go.microsoft.com/fwlink/?LinkId=81892)，并请参阅有关其他资源部分[SQL Server 2005-Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853)页上Microsoft TechNet 网站。 有关与多维数据集设计相关的性能问题的详细信息，请参阅 [SQL Server 2005 Analysis Services 性能指南](https://go.microsoft.com/fwlink/?LinkId=81621)。  
   
 ## <a name="creating-a-new-calculation"></a>创建新计算  
  若要创建新计算，请在多维数据集设计器的 **“计算”** 选项卡的 **“多维数据集”** 菜单中，单击 **“新建计算成员”**、 **“新建命名集”** 或 **“新建脚本命令”**，具体取决于希望创建的计算的类型。 还可以在工具栏上单击任何相应的按钮，或在“脚本组织程序”窗格中右键单击任何位置，再在快捷菜单中单击一个命令。 此操作会在 **“脚本组织程序”** 窗格中添加新的计算，并在“计算表达式”窗格内的计算窗体中显示它的字段。 如果创建新脚本，则此操作将在“计算表达式”窗格中打开“脚本”视图。 有关生成这三种计算类型的详细信息，请参阅 [创建计算成员](create-calculated-members.md)、 [创建命名集](create-named-sets.md)和 [定义赋值和其他脚本命令](define-assignments-and-other-script-commands.md)。  

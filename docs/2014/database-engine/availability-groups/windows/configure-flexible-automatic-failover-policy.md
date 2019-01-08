@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2f3c3da8228924a7d4b697865ee729e9b84aff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515401"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>配置灵活的故障转移策略以控制自动故障转移的条件（Always On 可用性组）
   本主题介绍如何在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 为 AlwaysOn 可用性组配置灵活故障转移策略。 灵活的故障转移策略提供了对导致可用性组自动执行故障转移的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
@@ -45,7 +45,7 @@ ms.locfileid: "48131187"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|任务|Permissions|  
+|任务|权限|  
 |----------|-----------------|  
 |为新的可用性组配置灵活故障转移策略|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改现有可用性组的策略|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
@@ -90,13 +90,13 @@ ms.locfileid: "48131187"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **配置灵活故障转移策略**  
   
-1.  设置默认值 (`cd`) 到承载主副本的服务器实例。  
+1.  将默认的 (`cd`) 设置为承载主副本的服务器实例。  
   
 2.  在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityGroup` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityGroup` cmdlet。  
   
     -   若要设置故障转移条件级别，请使用`FailureConditionLevel`*级别*参数，其中，*级别*是以下值之一：  
   
-        |ReplTest1|Level|当出现以下情况时，自动启动故障转移…|  
+        |ReplTest1|级别|当出现以下情况时，自动启动故障转移…|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
         |`OnServerUnresponsive`|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
@@ -125,7 +125,7 @@ ms.locfileid: "48131187"
         ```  
   
 > [!NOTE]  
->  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

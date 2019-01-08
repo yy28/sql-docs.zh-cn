@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164857"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372219"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 个性化设置扩展
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展是概念的实现插件体系结构的基础。 在插件体系结构中，您可以动态地开发新的多维数据集对象和功能，并可以与其他开发人员方便地共享。 在这种情况下，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展提供可实现以下功能：  
@@ -43,7 +43,7 @@ ms.locfileid: "48164857"
  当启动服务时，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]加载所需的程序集，并确定哪个类具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自定义属性。  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将定义自定义属性作为描述代码及影响运行时行为的方式。 有关详细信息，请参阅本主题中，"[的特性概述](http://go.microsoft.com/fwlink/?LinkId=82929)，"在[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]MSDN 上的开发人员指南。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将定义自定义属性作为描述代码及影响运行时行为的方式。 有关详细信息，请参阅本主题中，"[的特性概述](https://go.microsoft.com/fwlink/?LinkId=82929)，"在[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]MSDN 上的开发人员指南。  
   
  与所有类<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自定义特性，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]调用其默认构造函数。 调用在启动时的所有构造函数提供一个用来创建新对象的公共位置和不受任何用户活动。  
   
@@ -117,13 +117,13 @@ ms.locfileid: "48164857"
 #### <a name="adomdcommand-class"></a>AdomdCommand 类  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 类现在支持以下 MDX 命令：  
   
--   [CREATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [UPDATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET 语句 (MDX)](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [DROP SET 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164857"
  在 MDX 语法中增加了 CREATE KPI 和 DROP KPI 命令。 可以从任意 MDX 脚本动态创建 KPI。  
   
 ### <a name="schema-rowsets-extensions"></a>架构行集扩展  
- 在 MDSCHEMA_MEMBERS 上*作用域*添加列。 作用域值如下：MDMEMBER_SCOPE_GLOBAL=1、MDMEMBER_SCOPE_SESSION=2。  
+ 在 MDSCHEMA_MEMBERS 上*作用域*添加列。 作用域值如下所示：MDMEMBER_SCOPE_GLOBAL = 1、 MDMEMBER_SCOPE_SESSION = 2。  
   
- 在 MDSCHEMA_SETS 上*set_evaluation_context*添加列。 将计算上下文值设置为：MDSET_RESOLUTION_STATIC = 1、MDSET_RESOLUTION_DYNAMIC = 2。  
+ 在 MDSCHEMA_SETS 上*set_evaluation_context*添加列。 将计算上下文值如下所示：MDSET_RESOLUTION_STATIC = 1、MDSET_RESOLUTION_DYNAMIC = 2。  
   
- 在 MDSCHEMA_KPIS 上，增加了作用域列。 作用域值如下：MDKPI_SCOPE_GLOBAL=1、MDKPI_SCOPE_SESSION=2。  
+ 在 MDSCHEMA_KPIS 上，增加了作用域列。 作用域值如下所示：MDKPI_SCOPE_GLOBAL = 1、 MDKPI_SCOPE_SESSION = 2。  
   
   

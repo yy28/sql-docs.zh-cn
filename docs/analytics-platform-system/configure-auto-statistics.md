@@ -10,18 +10,18 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400910"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617957"
 ---
 # <a name="configure-auto-statistics"></a>配置自动统计信息
 
 了解如何配置并行数据仓库以用于创建和自动更新统计信息的自动统计信息。  使用此功能以改进查询计划，并因此提高查询性能。
 
-**适用于：** APS （从 2016 AU7 开始）
+**适用范围：** APS （从 2016 AU7 开始）
 
 ## <a name="what-are-statistics"></a>统计信息有哪些？
 查询优化统计信息是包含一个或多个表的列中值的分布有关的统计信息的对象。 查询优化器使用这些统计信息来估计基数，或在查询中的行数。 这些基数估计值，允许查询优化器可以创建高质量查询计划。 例如，在 AP，MPP 查询优化器使用基数估计来选择无序播放或复制的两个表和执行此操作对 join 子句中使用较小者提高查询性能。  有关详细信息，请参阅[统计信息](../relational-databases/statistics/statistics.md)和[DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)

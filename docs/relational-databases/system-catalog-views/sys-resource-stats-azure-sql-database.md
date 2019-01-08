@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723485"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392690"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47723485"
 |start_time|**datetime**|指示 5 分钟报告间隔的起始的 UTC 时间。|  
 |end_time|**datetime**|指示五分钟报告间隔结束的 UTC 时间。|  
 |database_name|**varchar**|用户数据库的名称。|  
-|sku|**varchar**|数据库的服务层。 下面是可能的值：<br /><br /> “基本”<br /><br /> Standard<br /><br /> Premium<br /><br />常规用途<br /><br />业务关键型|  
+|sku|**varchar**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> 标准<br /><br /> Premium<br /><br />常规用途<br /><br />业务关键型|  
 |storage_in_megabytes|**float**|最大存储大小以兆字节为单位的时间段，包括数据库数据、 索引、 存储的过程和元数据。|  
 |avg_cpu_percent|**numeric**|平均计算使用率（以服务层限制的百分比表示）。|  
 |avg_data_io_percent|**numeric**|平均 I/O 使用率（以基于服务层限制的百分比表示）。|  
@@ -51,12 +51,12 @@ ms.locfileid: "47723485"
 |max_worker_percent|**decimal(5,2)**|最大并发辅助进程 （请求） 以基于数据库的服务层限制的百分比表示。<br /><br /> 基于并发工作线程计数的 15 秒样本的五分钟间隔当前计算最大值。|  
 |max_session_percent|**decimal(5,2)**|基于数据库的服务层限制百分比形式表示的最大并发会话。<br /><br /> 基于并发会话计数的 15 秒样本的五分钟间隔当前计算最大值。|  
 |dtu_limit|**int**|当前最大数据库 DTU 设置为此数据库的在此时间间隔内。 |  
-|allocated_storage_in_megabytes|**float**|格式的文件空间 （mb） 可用于存储数据库数据。 格式的文件空间也称为数据分配的空间。  有关详细信息，请参阅： [SQL DB 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|格式的文件空间 （mb） 可用于存储数据库数据。 格式的文件空间也称为数据分配的空间。  有关详细信息，请参阅：[SQL DB 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  有关这些限制和服务层的更多上下文，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)。  
     
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图可供所有用户角色有权连接到虚拟**主**数据库。  
   
 ## <a name="remarks"></a>备注  

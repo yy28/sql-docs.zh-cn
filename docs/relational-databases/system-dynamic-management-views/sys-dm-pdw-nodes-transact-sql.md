@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533575"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47769365"
 |type|**nvarchar(32)**|节点的类型。|计算、 控制，管理|  
 |NAME|**nvarchar(32)**|节点的逻辑名称。|适当的长度的任何字符串。|  
 |address|**nvarchar(32)**|此节点的 IP 地址。|在 [0-255] 的格式。[0-255]。[0-255]。[0-255]。|  
-|is_passive|**int**|指示运行该节点的虚拟机分配的服务器上运行还是已故障转移至备用服务器。|0 – 节点 VM 原始服务器上运行。<br /><br /> 1 – 节点 VM 备用服务器上运行。|  
+|is_passive|**int**|指示运行该节点的虚拟机分配的服务器上运行还是已故障转移至备用服务器。|0-节点 VM 原始服务器上运行。<br /><br /> 1-节点 VM 备用服务器上运行。|  
 |区域 (region)|**nvarchar(32)**|节点运行的区域。|PDW，HDINSIGHT|  
   
 ## <a name="see-also"></a>请参阅  

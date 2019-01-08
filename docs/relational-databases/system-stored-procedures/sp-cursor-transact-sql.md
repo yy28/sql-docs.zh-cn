@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662516"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210516"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51662516"
   
 ||  
 |-|  
-|**适用于**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
+|**适用对象**：SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,12 +54,12 @@ sp_cursor  cursor, optype, rownum, table
 |ReplTest1|“属性”|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|用于更新提取缓冲区中的一行或多行。  中指定的行*rownum*重新访问和更新。|  
-|0x0002|删除|用于删除提取缓冲区中的一行或多个行。 中指定的行*rownum*重新访问并删除。|  
+|0x0002|DELETE|用于删除提取缓冲区中的一行或多个行。 中指定的行*rownum*重新访问并删除。|  
 |0X0004|Insert|将数据插入而不生成 SQL**插入**语句。|  
 |0X0008|REFRESH|用于从基础表中重新填充缓冲区，并且可用于刷新行（如果由于乐观并发控制导致更新或删除失败或在某个 UPDATE 之后）。|  
 |0X10|LOCK|会导致 SQL Server U 锁将会获取包含指定的行的页上。 此锁与 S 锁兼容，但不与 X 锁或其他 U 锁兼容。 可用于实现短期锁定。|  
 |0X20|SETPOSITION|仅当程序将要发布后续的 SQL Server 定位 DELETE 或 UPDATE 语句使用。|  
-|0X40|ABSOLUTE|仅能与 UPDATE 或 DELETE 结合使用。  ABSOLUTE 仅与 KEYSET 游标结合使用（对于 DYNAMIC 游标将忽略，并且无法更新 STATIC 游标）。<br /><br /> 注意： 如果在尚未提取键集中的行上指定 ABSOLUTE，则该操作可能会失败的并发检查，并且无法保证返回的结果。|  
+|0X40|ABSOLUTE|仅能与 UPDATE 或 DELETE 结合使用。  ABSOLUTE 仅与 KEYSET 游标结合使用（对于 DYNAMIC 游标将忽略，并且无法更新 STATIC 游标）。<br /><br /> 注意：如果在尚未提取的键集中的某行上指定 ABSOLUTE，则此操作可能会导致并发检查失败且无法保证返回结果。|  
   
  *rownum*  
  指定提取缓冲区中游标将对其执行操作、更新或删除的行。  
@@ -137,7 +137,7 @@ sp_cursor  cursor, optype, rownum, table
   
  当使用单个参数时，可以使用以下语法提交 UPDATE 语句：  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  如果更新\<表名称 > 指定，则为指定任何值*表*参数将被忽略。  
@@ -169,7 +169,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 除了指定 VALUES 之外，在此情况下，在最后一个表达式后面必须带一个尾随“)”。 在这种情况下， *\<表名称 >* 中构造的 UDPATE 语句是一个指定或默认设置为通过*表*参数。  
+ 除了指定 VALUES 之外，在此情况下，在最后一个表达式后面必须带一个尾随“)”。 在这种情况下， *\<表名称 >* 中构造的更新语句是一个指定或默认设置为通过*表*参数。  
   
 > [!NOTE]  
 >  可以提交一个参数作为命名参数，也即“`@VALUES`”。 在此情况下，不能使用其他命名参数。  

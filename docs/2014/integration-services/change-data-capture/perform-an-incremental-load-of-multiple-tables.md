@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
@@ -13,12 +12,12 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cab69f68fe040600722d22c31ea8a356610e61c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef1b57d9c772618bb302baa50fd7f5deb793f1cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204677"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772999"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>执行多个表的增量加载
   在主题 [通过变更数据捕获改善增量加载](change-data-capture-ssis.md)中，关系图演示的是仅对一个表执行增量加载的基本包。 但是，加载一个表并不像执行多个表的增量加载那样常见。  

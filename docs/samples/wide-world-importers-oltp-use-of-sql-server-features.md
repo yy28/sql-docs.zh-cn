@@ -11,12 +11,12 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 629494b298f9eacee0b7217522698897be401e04
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 866b32abbc7f7e754b11fd286dd0c35eeeb92165
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669888"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400690"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>使用 SQL Server 功能和功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ WideWorldImporters 旨在展示的许多关键功能的 SQL Server，包括 SQL 
 |SQL Server 功能或功能|在 WideWorldImporters 中的使用|
 |-----------------------------|---------------------|
 |临时表|有多个临时表，其中包括所有查找样式引用表和主实体，例如 StockItems、 客户和供应商。 使用临时表，以方便地跟踪这些实体的历史记录。|
-|为 JSON 的 AJAX 调用|应用程序经常使用的 AJAX 调用来查询这些表： 人员、 客户、 供应商和 StockItems。 调用返回 JSON 有效负载 （即返回的数据的格式为 JSON 数据）。 请参见，例如，存储的过程`Website.SearchForCustomers`。|
+|为 JSON 的 AJAX 调用|应用程序经常使用的 AJAX 调用来查询这些表：人员、 客户、 供应商和 StockItems。 调用返回 JSON 有效负载 （即返回的数据的格式为 JSON 数据）。 请参见，例如，存储的过程`Website.SearchForCustomers`。|
 |JSON 属性/值包|多个表包含保存要扩展表中的关系数据的 JSON 数据的列。 例如，`Application.SystemParameters`有一列用于应用程序设置和`Application.People`有一列对记录用户首选项。 这些表使用`nvarchar(max)`记录的 JSON 数据，以及使用内置函数的 CHECK 约束的列`ISJSON`以确保列的值为有效的 JSON。|
 |行级别安全性 (RLS)|行级别安全性 (RLS) 用于限制对 Customers 表中，基于角色的成员身份的访问。 每个销售区域均包含一个角色和用户。 若要了解此操作，请使用相应的脚本示例-script.zip，这是部分中的[版本的示例](https://go.microsoft.com/fwlink/?LinkID=800630)。|
 |实时运行分析|（完整版本的数据库）核心事务表`Sales.InvoiceLines`和`Sales.OrderLines`都具有可用于支持在对操作工作负荷的影响最小的事务数据库中高效执行分析查询的非聚集列存储索引。 在同一数据库中运行的事务和分析也称为[混合事务/分析处理 (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP))。 若要了解此操作，请使用相应的脚本示例-script.zip，这是部分中的[版本的示例](https://go.microsoft.com/fwlink/?LinkID=800630)。|

@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: c760bd4c149a63de0335c6d6651036bba56533a0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246756"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531152"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "53246756"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>先决条件
 
 本快速入门教程要求您已具有的最低版本为 v1.10 中配置了 AKS 群集。 有关详细信息，请参阅[部署在 AKS 上](deploy-on-aks.md)指南。
 
@@ -56,7 +56,6 @@ kubectl config view
 - 在中[命令窗口](https://docs.microsoft.com/visualstudio/ide/reference/command-window)，引号包含环境变量中。 如果使用引号来包装一个密码，密码中包含引号。
 - 在 bash 中，该变量中不包括引号。 我们的示例使用双引号`"`。
 - 您可以将密码设置环境变量为您希望的任何内容，但请确保它们是足够复杂并且不使用`!`， `&`，或`'`字符。
-- 对于 CTP 2.2 版本中，不要更改默认端口。
 - `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器后，通过在容器中运行 `echo $MSSQL_SA_PASSWORD`，可发现指定的 `MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，更改你`sa`密码根据最佳实践[此处](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
 
 初始化以下环境变量。  它们所需的部署大数据群集：

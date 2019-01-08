@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141967"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355017"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 本主题提供了下列信息：  
@@ -92,25 +92,25 @@ ms.locfileid: "48141967"
      对象的 REFERENCES 权限是使用引用该对象的 `WITH SCHEMABINDING` 子句创建 FUNCTION 或 VIEW 时所必需的。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
   
 ##  <a name="_securables"></a> 适用于特定安全对象的权限  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  
   
-|权限|适用于|  
+|权限|适用对象|  
 |----------------|----------------|  
-|SELECT|同义词<br /><br /> 表和列<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和公共语言运行时 (CLR)）和列<br /><br /> 视图和列|  
+|SELECT|同义词<br /><br /> 表和列<br /><br /> 表值函数（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 和公共语言运行时 (CLR)）和列<br /><br /> 视图和列|  
 |VIEW CHANGE TRACKING|表<br /><br /> 架构|  
 |UPDATE|同义词<br /><br /> 表和列<br /><br /> 视图和列<br /><br /> 序列对象|  
-|REFERENCES|标量和聚合函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表和列<br /><br /> 表值函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)，和列<br /><br /> 类型<br /><br /> 视图和列<br /><br /> 序列对象|  
+|REFERENCES|标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表和列<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）和列<br /><br /> 类型<br /><br /> 视图和列<br /><br /> 序列对象|  
 |Insert|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
-|删除|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
-|在运行 CREATE 语句前执行|过程 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 标量和聚合函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 同义词<br /><br /> CLR 类型|  
+|DELETE|同义词<br /><br /> 表和列<br /><br /> 视图和列|  
+|在运行 CREATE 语句前执行|过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 同义词<br /><br /> CLR 类型|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列|  
-|VIEW DEFINITION|可用性组<br /><br /> 过程 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 标量和聚合函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 登录名、用户和角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 视图<br /><br /> 序列对象|  
-|ALTER|可用性组<br /><br /> 过程 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 标量和聚合函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 序列对象<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表<br /><br /> 表值函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 视图|  
-|TAKE OWNERSHIP|可用性组<br /><br /> 角色<br /><br /> 过程 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 标量和聚合函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 服务器角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 视图<br /><br /> 序列对象|  
-|CONTROL|可用性组<br /><br /> 过程 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 标量和聚合函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数 ([!INCLUDE[tsql](../../includes/tsql-md.md)]和 CLR)<br /><br /> 视图<br /><br /> 序列对象|  
+|VIEW DEFINITION|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 登录名、用户和角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views<br /><br /> 序列对象|  
+|ALTER|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 序列对象<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views|  
+|TAKE OWNERSHIP|可用性组<br /><br /> 角色<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 服务器角色<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views<br /><br /> 序列对象|  
+|CONTROL|可用性组<br /><br /> 过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 标量函数和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> 登录名、用户和角色<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列<br /><br /> 同义词<br /><br /> 表<br /><br /> 表值函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）<br /><br /> Views<br /><br /> 序列对象|  
 |IMPERSONATE|登录名和用户|  
   
 > [!CAUTION]  
@@ -157,7 +157,7 @@ ms.locfileid: "48141967"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意： 仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "48141967"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|更改任何安全策略|ALSP<br /><br /> 注意： 仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|更改任何安全策略|ALSP<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -201,10 +201,10 @@ ms.locfileid: "48141967"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|删除|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|在运行 CREATE 语句前执行|EX|SERVER|CONTROL SERVER|  
 |DATABASE|Insert|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意： 仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -239,9 +239,9 @@ ms.locfileid: "48141967"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|删除|  
+|OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
-|OBJECT|Insert|IN|SCHEMA|INSERT|  
+|OBJECT|Insert|IN|SCHEMA|Insert|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
@@ -269,7 +269,7 @@ ms.locfileid: "48141967"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|删除|DL|DATABASE|删除|  
+|SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|在运行 CREATE 语句前执行|EX|DATABASE|在运行 CREATE 语句前执行|  
 |SCHEMA|Insert|IN|DATABASE|Insert|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  

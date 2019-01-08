@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - max-depth annotation
@@ -23,12 +21,12 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a815a5d5213d4069df6ceda490ee9f4b7e92b279
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189147"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800829"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 指定递归关系中的深度
   在关系数据库中，当表涉及与其自身的关系时，将它称为递归关系。 例如，在监督者和被监督者关系中，存储雇员记录的表涉及与其自身的关系。 在这种情况下，雇员表在关系的一端扮演监督者的角色，而在另一端则扮演被监督者的角色。  
@@ -148,7 +146,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  创建并使用 SQLXML 4.0 测试脚本 (Sqlxml4test.vbs) 执行该模板。 有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -231,7 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 批注  
  在由递归关系组成的架构中，必须在架构中显式指定递归的深度。 若要成功生成可返回所请求的结果的相应 FOR XML EXPLICIT 查询，则必须这样做。  
   
- 使用该架构中的 `sql:max-depth` 批注可以指定此架构中所描述的递归关系中的递归深度。 `sql:max-depth` 批注的值是指示递归数的正整数（1 到 50）：值为 1 将使递归停止于指定了 `sql:max-depth` 批注的元素；值为 2 则使递归停止于指定了 `sql:max-depth` 的元素的下一级；以此类推。  
+ 使用该架构中的 `sql:max-depth` 批注可以指定此架构中所描述的递归关系中的递归深度。 值`sql:max-depth`批注是一个正整数 （1 到 50 个），该值指示递归数：如果值为 1 使递归停止于该元素为其`sql:max-depth`批注指定; 值为 2 使递归停止于的元素的下一级`sql:max-depth`指定，则为，依此类推。  
   
 > [!NOTE]  
 >  在基础实现中，根据映射架构指定的 XPath 查询将转换为 SELECT ...FOR XML EXPLICIT 查询。 该查询需要您指定一个有限的递归深度。 为 `sql:max-depth` 指定的值越高，所生成的 FOR XML EXPLICIT 查询越大。 这可能会使检索时间变长。  

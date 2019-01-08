@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098987"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366369"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
   表、矩阵、图表和图像等报表项可以作为“报表部件”发布。 报表部件是单独发布到报表服务器上并且可以在其他报表中重复使用的报表项。 报表部件具有 .rsc 文件扩展名。  
@@ -27,7 +27,7 @@ ms.locfileid: "48098987"
   
  您添加到报表中的报表部件将按唯一 ID 维持与站点或服务器上报表部件实例的关系。 在您将报表部件从站点或服务器添加到报表后，可以对这些报表部件进行修改，而与站点或服务器上的原始报表部件无关。 您可以接受他人对站点或服务器上报表部件的更新，并且可以将修改后的报表部件保存回站点或服务器，以及添加新报表部件或改写原始报表部件（如果您具有足够的权限）。  
   
- 若要快速开始使用报表部件，请观看视频[SQL Server 2008 R2 中的报表生成器 3 报表部件](http://technet.microsoft.com/edge/Video/ff711300)并[如何实现： 创建可重用报表部件使用 SQL Server 报表生成器](http://technet.microsoft.com/sqlserver/ff634166.aspx)。  
+ 若要快速开始使用报表部件，请观看视频[SQL Server 2008 R2 中的报表生成器 3 报表部件](https://technet.microsoft.com/edge/Video/ff711300)和[我如何：使用 SQL Server 报表生成器创建可重用的报表部件](https://technet.microsoft.com/sqlserver/ff634166.aspx)。  
   
 ##  <a name="ComponentWorkflow"></a> 报表部件的生命周期  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -75,7 +75,7 @@ ms.locfileid: "48098987"
   
  某些报表部件可以包含其他报表项。 例如，表可以包含图表，并且矩形可以包含矩阵和图表。 当您发布包含其他报表项的报表项时，它们将作为一个单位保存。 所保存的其他报表项将嵌入在容器报表部件中。 您不能单独更新它们，并且不能将容器中的项作为单独的报表部件保存。  
   
- 有关发布报表部件的详细信息，请参阅[发布和重新发布报表部件&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)。  
+ 有关发布报表部件的详细信息，请参阅 [发布和重新发布报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)。  
   
 ### <a name="modifying-report-part-metadata"></a>修改报表部件元数据  
  您可以使用默认设置将报表部件发布到默认位置，或者可以将各报表部件保存到不同的位置，并且修改元数据，例如标题和说明。  
@@ -92,9 +92,9 @@ ms.locfileid: "48098987"
  创建报表的最简单方式是从报表部件库将现有报表部件（如表或图表）添加到您的报表。 将报表部件添加到您的报表后，可以根据需要进行修改，或者接受来自服务器的更新。 更改您的报表中的报表项将不会对站点或服务器上发布的报表部件的实例产生影响，并且不会破坏报表中的实例与站点或服务器上的实例之间的关系 如果您具有足够的权限，则可以将更新的副本保存回站点或服务器。 如果其他人修改站点或服务器上的副本，您可以决定是将您的副本保持原样，还是更新该副本以便与站点或服务器上的副本相符。  
   
 ### <a name="searching-for-report-parts"></a>搜索报表部件  
- 您可以在报表部件库中查找要添加到您的报表中的报表部件。 您可以按照报表部件的全名或部分名称、创建者、最后修改者、最后修改时间、存储位置以及报表部件的类型，对报表部件进行筛选。 例如，您可以搜索由您的同事之一在上周创建的所有图表。  
+ 您可以在报表部件库中查找要添加到您的报表中的报表部件。 可以按照报表部件的全名或部分名称、创建者、最后修改者、最后修改时间、存储位置以及报表部件的类型，对报表部件进行筛选。 例如，您可以搜索由您的同事之一在上周创建的所有图表。  
   
- 您可以采用缩略图或列表的形式查看搜索结果，并且可以按名称、创建日期和修改日期以及创建者对搜索结果进行排序。 有关详细信息，请参阅[浏览查找报表部件和设置默认文件夹&#40;报表生成器和 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)。  
+ 您可以采用缩略图或列表的形式查看搜索结果，并且可以按名称、创建日期和修改日期以及创建者对搜索结果进行排序。 有关详细信息，请参阅 [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)。  
   
 ### <a name="what-comes-with-a-report-part"></a>报表部件所附带的内容  
  将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何对象依赖于一个数据集，即对某数据源的查询和连接。 它可能还具有一个或多个参数。 它所依赖的所有项是其“依赖项”，并且在您将某一报表部件添加到报表时，所有这些依赖项或者指向它们的指针都将与该报表部件一起包括。 数据集和参数将在您的报表的“报表数据”窗格中列出。  
@@ -142,17 +142,17 @@ ms.locfileid: "48098987"
  报表部件的工作方式与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器稍有不同。 在报表设计器中，发布是单向的：您可以从报表设计器发布报表部件，但不能在报表设计器中重复使用现有报表部件。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](report-design/report-parts-in-report-designer-ssrs.md)。  
   
 ##  <a name="HowTo"></a> 操作指南主题  
- [发布和重新发布报表部件&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [发布和重新发布报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)  
   
- [浏览查找报表部件和设置默认文件夹&#40;报表生成器和 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
  [检查更新或关闭更新&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>请参阅  
- [报表部件和报表生成器中的数据集](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [报表生成器中的报表部件和数据集](report-data/report-parts-and-datasets-in-report-builder.md)   
  [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [管理报表部件](report-design/managing-report-parts.md)   
- [Report Builder 3 报表部件在 SQL Server 2008 R2 （视频）](http://technet.microsoft.com/edge/Video/ff711300)   
- [使用 SQL Server 报表生成器 （视频） 如何实现： 创建可重用的报表部件](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Report Builder 3 报表部件在 SQL Server 2008 R2 （视频）](https://technet.microsoft.com/edge/Video/ff711300)   
+ [如何实现:使用 SQL Server 报表生成器 （视频） 创建可重复使用报表部件](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

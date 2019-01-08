@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031899"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202246"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化方案
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38031899"
   
 -   假定你已经在运行 Analysis Services 的 Windows 服务器上安装了语言包，日志文件将包含英语消息和本地化消息的混合消息。  
   
--   文档和工具（如 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]）已翻译为以下语言：简体中文、繁体中文、法语、德语、意大利语、日语、韩语、葡萄牙语（巴西）、俄语和西班牙语。 区域性是在安装期间指定的。  
+-   文档和工具（如 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]）被翻译为这些语言：简体中文、 繁体中文、 法语、 德语、 意大利语、 日语、 朝鲜语、 葡萄牙语 （巴西）、 俄语和西班牙语。 区域性是在安装期间指定的。  
   
  对于多维模型，Analysis Services 能让你在整个对象层次结构中单独设置语言、排序规则和翻译。  对于表格模型，只能添加翻译：语言和排序规则由主机操作系统继承。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "38031899"
 |**功能**|**表格**|**多维**|  
 |[语言和排序规则 (Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md)|从操作系统继承。|继承，但能够改写模型层次结构中主要对象的语言和排序规则。|  
 |翻译支持范围|标题和说明。|可以为对象名、标题、标识符和说明创建翻译，也可以翻译任何 Unicode 语言和脚本。 即使工具和环境使用的是另一种语言仍是如此。 例如，在整个堆栈中使用英语和拉丁语排序规则的开发环境中，你可以在你的模型中包含一个名称中使用了西里尔语字符的对象。|  
-|实现翻译支持|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，生成你填充并导回模型中的翻译文件。<br /><br /> 有关详细信息，请参阅[表格模型 (Analysis Services) 中的翻译](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，为多维数据集、度量值、维度和属性的标题、说明和帐户类型定义翻译。<br /><br /> 有关详细信息，请参阅[多维模型中的翻译 (Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 有关如何使用此功能的课程，请参阅 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程的[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)。|  
+|实现翻译支持|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，生成你填充并导回模型中的翻译文件。<br /><br /> 有关详细信息，请参阅[表格模型 (Analysis Services) 中的翻译](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，为多维数据集、度量值、维度和属性的标题、说明和帐户类型定义翻译。<br /><br /> 有关详细信息，请参阅[多维模型中的翻译 (Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 有关如何使用此功能可在[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程。|  
 |货币换算|不可用。|货币换算通过专用 MDX 脚本进行，这些脚本可以转换包含货币数据的度量值。 你可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的商业智能向导生成一个 MDX 脚本，它使用来自维度、属性和度量值组的组合数据与元数据来转换包含货币数据的度量值。 请参阅[货币换算 (Analysis Services)](../analysis-services/currency-conversions-analysis-services.md)。|  
   
 ## <a name="see-also"></a>请参阅  
@@ -65,6 +65,6 @@ ms.locfileid: "38031899"
  [Windows 应用程序的国际化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [转到全球开发人员中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [使用基于区域设置的自适应设计编写 Windows 应用商店应用](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [开发使用 C# 和 XAML 的通用 Windows 应用程序](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [使用 C# 和 XAML 开发通用 Windows 应用](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

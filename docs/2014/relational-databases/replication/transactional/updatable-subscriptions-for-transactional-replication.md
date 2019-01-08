@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -18,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42af9ddf36f60980ae1bdf2b6152e91159178467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137067"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813979"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "48137067"
   
  若要启用事务发布的可更新订阅，请参阅 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)。  
   
- 若要创建事务发布的可更新订阅，请参阅[创建事务发布的可更新订阅](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ 若要创建事务发布的可更新订阅，请参阅 [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
   
 ## <a name="switching-between-update-modes"></a>在更新模式之间切换  
  使用可更新订阅时，可以指定订阅使用一种更新模式，然后在应用程序需要时再切换到另一种更新模式。 例如，可以指定订阅使用立即更新，但如果因系统故障而导致网络连接断开，则切换到排队更新。  
@@ -65,7 +64,7 @@ ms.locfileid: "48137067"
   
 -   不支持重新发布数据。  
   
--   出于跟踪的目的，复制将在已发布的表中添加 **msrepl_tran_version** 列。 由于此附加列，所有`INSERT`语句都应包括一个列的列表。  
+-   出于跟踪的目的，复制将在已发布的表中添加 **msrepl_tran_version** 列。 由于添加的这个列，所有 `INSERT` 语句都应包括一个列列表。  
   
 -   若要在支持更新订阅的发布中的表上进行架构更改，必须在发布服务器和订阅服务器中停止该表上的所有活动，还必须将挂起的数据更改传播到所有节点，然后才能进行架构更改。 这可以确保未完成的事务不会与挂起的架构更改发生冲突。 架构更改传播到所有节点后，可以在已发布的表上恢复活动。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48137067"
   
 -   即使订阅过期或处于不活动状态，订阅服务器中的更新仍会传播到发布服务器中。 请确保删除或重新初始化此类订阅。  
   
--   如果`TIMESTAMP`或`IDENTITY`使用了列，并且它们按其基本数据类型进行复制，不应在订阅服务器上更新这些列中的值。  
+-   如果使用 `TIMESTAMP` 或 `IDENTITY` 列，且将这些列按其基本数据类型进行复制，则不应在订阅服务器中更新这些列中的值。  
   
--   订阅服务器不能更新或插入`text`，`ntext`或`image`值，因为不能从复制更改跟踪触发器内部插入或删除表中读取。 同样，订阅服务器不能更新或插入`text`或`image`使用值`WRITETEXT`或`UPDATETEXT`因为数据会被发布服务器覆盖。 相反，可以划分`text`和`image`到单独的列的表和修改在事务中的两个表。  
+-   订阅服务器不能更新或插入 `text`、`ntext` 或 `image` 值，因为不能在复制更改跟踪触发器中从插入或删除的表中读取数据。 同样，订阅服务器不能使用 `WRITETEXT` 或 `UPDATETEXT` 更新或插入 `text` 或 `image` 值，因为这些数据会被发布服务器覆盖。 但可以将 `text` 和 `image` 列分区到单独的表中，并在一个事务中修改这两个表。  
   
-     若要更新订阅服务器上的大型对象，使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`而不是`text`， `ntext`，并`image`分别数据类型。  
+     若要更新订阅服务器上的大型对象，请分别使用数据类型 `varchar(max)`、`nvarchar(max)`、`varbinary(max)`，而不要使用 `text`、`ntext` 和 `image` 数据类型。  
   
--   不允许对唯一键（包括主键）进行生成重复项的更新（例如，格式为 `UPDATE <column> SET <column> =<column>+1` 的更新），这些更新将因为违反唯一性而被拒绝。 这是因为在订阅服务器上所做的设置更新作为单独的复制进行传播`UPDATE`语句为每个受影响的行。  
+-   不允许对唯一键（包括主键）进行生成重复项的更新（例如，格式为 `UPDATE <column> SET <column> =<column>+1` 的更新），这些更新将因为违反唯一性而被拒绝。 这是因为复制会将订阅服务器中所做的设置更新作为单独的 `UPDATE` 语句为每个受影响的行进行传播。  
   
 -   如果订阅服务器数据库进行了水平分区，且分区中有在订阅服务器上存在而在发布服务器中不存在的行，那么订阅服务器将无法更新这些预先存在的行。 试图更新这些行将返回错误。 应当先从表中删除这些行，然后再插入这些行。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48137067"
   
 -   如果应用程序需要在订阅服务器中使用触发器，则应在发布服务器和订阅服务器中使用 `NOT FOR REPLICATION` 选项来定义触发器。 这可以确保触发器只在原始数据更改时激发，而在复制更改时不激发。  
   
-     确保复制触发器更新表时不会激发用户定义的触发器。 这通过调用该过程实现`sp_check_for_sync_trigger`用户定义的触发器的正文中。 有关详细信息，请参阅 [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)。  
+     确保复制触发器更新表时不会激发用户定义的触发器。 这可以通过在用户定义的触发器的正文中调用 `sp_check_for_sync_trigger` 过程来实现。 有关详细信息，请参阅 [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)。  
   
 ### <a name="immediate-updating"></a>立即更新  
   
@@ -107,11 +106,11 @@ ms.locfileid: "48137067"
   
 -   使用排队更新时，建议不要对主键列进行更新，因为主键被用作所有查询的记录定位器。 当冲突解决策略设置为“订阅服务器入选”时，更新主键时应小心。 如果同时在发布服务器和订阅服务器中更新主键，将获得具有不同主键的两行。  
   
--   对于数据类型的列`SQL_VARIANT`： 插入或更新订阅服务器上的数据后，它映射如下所示由队列读取器代理从订阅服务器复制到队列时：  
+-   对于 `SQL_VARIANT` 数据类型的列：在订阅服务器中插入或更新数据时，队列读取器代理在将数据从订阅服务器复制到队列时，将按下列方式映射数据：  
   
-    -   `BIGINT``DECIMAL`， `NUMERIC`， `MONEY`，和`SMALLMONEY`映射到`NUMERIC`。  
+    -   将 `BIGINT`、`DECIMAL`、`NUMERIC`、`MONEY` 和 `SMALLMONEY` 映射到 `NUMERIC`。  
   
-    -   `BINARY` 并`VARBINARY`映射到`VARBINARY`数据。  
+    -   将 `BINARY` 和 `VARBINARY` 映射到 `VARBINARY` 数据。  
   
 ### <a name="conflict-detection-and-resolution"></a>冲突检测和解决  
   

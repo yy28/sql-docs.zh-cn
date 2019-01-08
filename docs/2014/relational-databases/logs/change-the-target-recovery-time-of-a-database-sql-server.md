@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbf203ad7928de8b9d6e4919f9b1d44b5f5cd45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36be65b9e359d4fe115e2b410db181f049c1eccd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766819"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>更改数据库的目标恢复时间 (SQL Server)
   本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置和更改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库的目标恢复时间。 默认情况下，目标恢复时间为 0，数据库使用“自动检查点”  （由 **recovery interval** 服务器选项控制）。 如果将目标恢复时间设置为大于 0，数据库将使用“间接检查点”  并为此数据库建立恢复时间上限。  
@@ -24,9 +23,9 @@ ms.locfileid: "48141099"
 > [!NOTE]  
 >  如果长时间运行的事务导致过多 UNDO 时间，则可能超过给定数据库的目标恢复时间设置为该数据库指定的上限。  
   
--   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：**[限制和局限](#Restrictions)，[安全](#Security)  
   
--   **若要更改目标恢复时间，请使用：**[SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
+-   **若要更改目标恢复时间，请使用：**[SQL Server Management Studio](#SSMSProcedure)或[Transact SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

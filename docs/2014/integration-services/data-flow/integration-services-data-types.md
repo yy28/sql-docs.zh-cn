@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -19,12 +18,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fc0a802cc3d266cc96d8deaaeeda39056508062
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129457"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377837"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
@@ -113,11 +112,11 @@ ms.locfileid: "48129457"
 |DT_FILETIME|没有变化。|  
 |DT_DATE|转换该数据类型。|  
 |DT_DBDATE|删除时间值。|  
-|DT_DBTIME|删除日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIME2|删除 DT_FILETIME 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME|删除日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME2|删除 DT_FILETIME 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
 |DT_DBTIMESTAMP|转换该数据类型。|  
-|DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
   
 #### <a name="converting-from-dtdate"></a>从 DT_DATE 转换  
   
@@ -162,53 +161,53 @@ ms.locfileid: "48129457"
   
 |将 DT_DBTIME2 转换为|结果|  
 |----------------------------|------------|  
-|DT_FILETIME|将 DT_FILETIME 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_FILETIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DATE|将 DT_DATE 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_DATE 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_FILETIME|将 DT_FILETIME 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_FILETIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DATE|将 DT_DATE 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_DATE 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
 |DT_DBDATE|将 DT_DBDATE 数据类型的日期字段设置为当前日期。|  
-|DT_DBTIME|当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIME2|当小数秒值的小数位数超过目标 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP|将 DT_DBTIMESTAMP 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP2|将 DT_DBTIMESTAMP2 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的日期字段和时区字段分别设置为当前日期和零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME|当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME2|当小数秒值的小数位数超过目标 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMP|将 DT_DBTIMESTAMP 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMP2|将 DT_DBTIMESTAMP2 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的日期字段和时区字段分别设置为当前日期和零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
   
 #### <a name="converting-from-dtdbtimestamp"></a>从 DT_DBTIMESTAMP 转换  
   
 |将 DT_DBTIMESTAMP 转换为|结果|  
 |--------------------------------|------------|  
 |DT_FILETIME|转换该数据类型。|  
-|DT_DATE|如果 DT_DBTIMESTAMP 数据类型表示的值溢出 DT_DATE 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DATE|如果 DT_DBTIMESTAMP 数据类型表示的值溢出 DT_DATE 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
 |DT_DBDATE|删除 DT_DBTIMESTAMP 数据类型表示的时间值。|  
-|DT_DBTIME|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIME2|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME2|删除 DT_DBTIMESTAMP 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
 |DT_DBTIMESTAMP|没有变化。|  
-|DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
   
 #### <a name="converting-from-dtdbtimestamp2"></a>从 DT_DBTIMESTAMP2 转换  
   
 |将 DT_DBTIMESTAMP2 转换为|结果|  
 |---------------------------------|------------|  
-|DT_FILETIME|当小数秒值的小数位数超过 DT_FILETIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DATE|如果 DT_DBTIMESTAMP2 数据类型表示的值溢出 DT_DATE 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。<br /><br /> 当小数秒值的小数位数超过 DT_DATE 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_FILETIME|当小数秒值的小数位数超过 DT_FILETIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DATE|如果 DT_DBTIMESTAMP2 数据类型表示的值溢出 DT_DATE 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。<br /><br /> 当小数秒值的小数位数超过 DT_DATE 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
 |DT_DBDATE|删除 DT_DBTIMESTAMP2 数据类型表示的时间值。|  
-|DT_DBTIME|删除 DT_DBTIMESTAMP2 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIME2|删除 DT_DBTIMESTAMP2 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME|删除 DT_DBTIMESTAMP2 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME2|删除 DT_DBTIMESTAMP2 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
 |DT_DBTIMESTAMP|如果 DT_DBTIMESTAMP2 数据类型表示的值溢出 DT_DBTIMESTAMP 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。<br /><br /> DT_DBTIMESTAMP2 映射到 SQL Server 数据类型 datetime2，范围是公元元年 1 月 1 日 到公元 9999 年 12 月 31 日。 DT_DBTIMESTAMP 映射到 SQL Server 数据类型 datetime，具有较小的范围：从 1753 年 1 月 1 日到 9999 年 12 月 31 日。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。<br /><br /> 有关错误的详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP2|当小数秒值的小数位数超过目标 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMP2|当小数秒值的小数位数超过目标 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
   
 #### <a name="converting-from-dtdbtimestampoffset"></a>从 DT_DBTIMESTAMPOFFSET 转换  
   
 |将 DT_DBTIMESTAMPOFFSET 转换为|结果|  
 |--------------------------------------|------------|  
-|DT_FILETIME|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为协调世界时 (UTC)。<br /><br /> 当小数秒值的小数位数超过 DT_FILETIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DATE|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 如果 DT_DBTIMESTAMPOFFSET 数据类型表示的值溢出 DT_DATE 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。<br /><br /> 当小数秒值的小数位数超过 DT_DATE 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。<br /><br /> 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_FILETIME|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为协调世界时 (UTC)。<br /><br /> 当小数秒值的小数位数超过 DT_FILETIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DATE|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 如果 DT_DBTIMESTAMPOFFSET 数据类型表示的值溢出 DT_DATE 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。<br /><br /> 当小数秒值的小数位数超过 DT_DATE 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。<br /><br /> 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
 |DT_DBDATE|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC，这可能影响日期值。 随后将删除该时间值。|  
-|DT_DBTIME|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 删除 DT_DBTIMESTAMPEOFFSET 数据类型表示的数据值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIME2|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 删除 DT_DBTIMESTAMPOFFSET 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 如果 DT_DBTIMESTAMPOFFSET 数据类型表示的值溢出 DT_DBTIMESTAMP 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。<br /><br /> 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMP2|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
-|DT_DBTIMESTAMPOFFSET|当小数秒值的小数位数超过目标 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅[数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 删除 DT_DBTIMESTAMPEOFFSET 数据类型表示的数据值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIME2|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 删除 DT_DBTIMESTAMPOFFSET 数据类型表示的日期值。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIME2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMP|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 如果 DT_DBTIMESTAMPOFFSET 数据类型表示的值溢出 DT_DBTIMESTAMP 数据类型的范围，则返回 DB_E_DATAOVERFLOW 错误。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。<br /><br /> 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMP2|将 DT_DBTIMESTAMPOFFSET 数据类型表示的时间值更改为 UTC。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
+|DT_DBTIMESTAMPOFFSET|当小数秒值的小数位数超过目标 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。|  
   
 ## <a name="mapping-of-integration-services-data-types-to-database-data-types"></a>Integration Services 数据类型到数据库数据类型的映射  
  下表提供了将特定数据库使用的数据类型映射为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的原则。 这些映射是从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导在从这些源中导入数据时使用的映射文件中汇总而来的。 有关这些映射文件的详细信息，请参阅 [SQL Server 导入和导出向导](../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
@@ -225,11 +224,11 @@ ms.locfileid: "48129457"
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
 |DT_CY|smallmoney、money|smallmoney、money|货币||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[日期&#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期&#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
+|DT_DBDATE|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql) (p)|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
 |DT_DBTIMESTAMP|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
+|DT_DBTIMESTAMP2|[datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset (Transact-SQL)](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)|[datetimeoffset (Transact-SQL)](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
@@ -237,10 +236,10 @@ ms.locfileid: "48129457"
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
 |DT_I4|ssNoversion|ssNoversion|Long||整数|整数|  
-|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
 |DT_R4|REAL|REAL|Single||real|real|  
-|DT_R8|float|FLOAT|双精度|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
+|DT_R8|FLOAT|FLOAT|双精度|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
@@ -254,7 +253,7 @@ ms.locfileid: "48129457"
  有关在数据流中映射数据类型的信息，请参阅 [在数据流中使用数据类型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
 ## <a name="related-content"></a>相关内容  
- blogs.msdn.com 上的博客文章 [SSIS 2008 中数据类型转换技术之间的性能比较](http://go.microsoft.com/fwlink/?LinkId=220823)。  
+ blogs.msdn.com 上的博客文章 [SSIS 2008 中数据类型转换技术之间的性能比较](https://go.microsoft.com/fwlink/?LinkId=220823)。  
   
 ## <a name="see-also"></a>请参阅  
  [数据流中的数据](data-in-data-flows.md)  

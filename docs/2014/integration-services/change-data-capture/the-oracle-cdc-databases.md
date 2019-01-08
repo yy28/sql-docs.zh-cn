@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba180417eb3a426d24ffa6ee8dc985c89fb8e0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e35293fb7f59475ebdcfea70c1b27d4798e3b93
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205888"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370169"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
@@ -31,7 +30,7 @@ ms.locfileid: "48205888"
   
 -   一组由 SQL Server CDC 机制生成并且与在非 Oracle 的常规 SQL Server CDC 中使用的完全相同的一组更改表和更改访问函数。  
   
- `cdc` 架构最初只能由 **dbowner** 固定数据库角色的成员访问。 对更改表和更改函数的访问权限由与 SQL Server CDC 相同的安全模式确定。 有关安全模式的详细信息，请参阅 [安全模式](http://go.microsoft.com/fwlink/?LinkId=231151)。  
+ `cdc` 架构最初只能由 **dbowner** 固定数据库角色的成员访问。 对更改表和更改函数的访问权限由与 SQL Server CDC 相同的安全模式确定。 有关安全模式的详细信息，请参阅 [安全模式](https://go.microsoft.com/fwlink/?LinkId=231151)。  
   
 ## <a name="creating-the-cdc-database"></a>创建 CDC 数据库  
  在大多数情况下，CDC 数据库是使用 CDC 设计器控制台创建的，但也可以使用通过 CDC 设计器控制台生成的 CDC 部署脚本创建 CDC 数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员可根据需要更改数据库设置（对于用于存储、安全性或可用性之类的项）。  
@@ -51,11 +50,11 @@ ms.locfileid: "48205888"
  镜像表是空的；在其中不存储任何数据。 它们用于启用 Oracle CDC 实例使用的标准 SQL Server CDC 基础结构。 为了防止数据插入或更新到镜像表中，对于 PUBLIC 将拒绝所有 UPDATE、DELETE 和 INSERT 操作。 这将确保不能修改镜像表。  
   
 ## <a name="access-to-change-data"></a>访问更改数据  
- 由于用于获取对与某一捕获实例相关联的更改数据库的访问权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，必须向用户授予对关联镜像表的所有捕获列的 `select` 访问权限（对原始 Oracle 表的访问权限不提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中更改表的访问权限）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式的信息，请参阅 [安全模式](http://go.microsoft.com/fwlink/?LinkId=231151)。  
+ 由于用于获取对与某一捕获实例相关联的更改数据库的访问权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，必须向用户授予对关联镜像表的所有捕获列的 `select` 访问权限（对原始 Oracle 表的访问权限不提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中更改表的访问权限）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式的信息，请参阅 [安全模式](https://go.microsoft.com/fwlink/?LinkId=231151)。  
   
  此外，如果在创建捕获实例时指定了访问控制角色，调用者还必须是指定访问控制角色的成员。 所有数据库用户可通过 PUBLIC 角色访问用于访问元数据的其他常规变更数据捕获功能，但返回的元数据访问通常是使用基础源表的选择访问权限以及任何定义的访问控制角色成员身份控制的。  
   
- 可通过调用在创建捕获实例时 SQL Server CDC 组件生成的特殊的基于表的函数，读取更改数据。 有关此函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)。  
+ 可通过调用在创建捕获实例时 SQL Server CDC 组件生成的特殊的基于表的函数，读取更改数据。 有关此函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
   
  通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC 源组件访问 CDC 数据受到相同规则的约束。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48205888"
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
- 捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如， `fn_cdc_get_all_changes_HR_EMPLOYEES`。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)。  
+ 捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如， `fn_cdc_get_all_changes_HR_EMPLOYEES`。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 表由 SQL Server CDC 组件生成。 它在 Oracle CDC 情况下的用法与其常规用法不同。  
@@ -98,8 +97,8 @@ ms.locfileid: "48205888"
 |项|Description|  
 |----------|-----------------|  
 |version|它跟踪 CDC 实例配置的版本。 在每次更新表时，以及在每次添加新的捕获实例或删除现有捕获实例时，将更新该项。|  
-|connect_string|Oracle 连接字符串。 下面是一个基本示例：<br /><br /> `<server>:<port>/<instance>` （例如 `erp.contoso.com:1521/orcl`）。<br /><br /> 连接字符串还可以指定 Oracle Net 连接描述符，例如 `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目录服务器或 tnsnames，则连接字符串可以是连接的名称。<br /><br /> 有关 Oracle 连接字符串的详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153)，其中介绍了针对 Oracle CDC 服务使用的 Oracle Instant Client 的 Oracle 数据库连接字符串的详细信息。|  
-|use_windows_authentication|可以取以下值的布尔值：<br /><br /> **0**：提供 Oracle 用户名和密码进行身份验证（默认值）<br /><br /> **1**：使用 Windows 身份验证连接到 Oracle 数据库。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。|  
+|connect_string|Oracle 连接字符串。 下面是一个基本示例：<br /><br /> `<server>:<port>/<instance>` （例如 `erp.contoso.com:1521/orcl`）。<br /><br /> 连接字符串还可以指定 Oracle Net 连接描述符，例如 `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目录服务器或 tnsnames，则连接字符串可以是连接的名称。<br /><br /> 有关 Oracle 连接字符串的详细信息，请参阅 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)，其中介绍了针对 Oracle CDC 服务使用的 Oracle Instant Client 的 Oracle 数据库连接字符串的详细信息。|  
+|use_windows_authentication|可以取以下值的布尔值：<br /><br /> **0**：身份验证 （默认值） 提供的 Oracle 用户名和密码<br /><br /> **1**：使用 Windows 身份验证连接到 Oracle 数据库。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。|  
 |username|日志挖掘 Oracle 数据库用户的名称。 **仅当 use_windows_authentication = 0**时，该值才是必填的。|  
 |password|日志挖掘 Oracle 数据库用户的密码。 **仅当 use_windows_authentication = 0**时，该值才是必填的。|  
 |transaction_staging_timeout|未提交的 Oracle 事务保留在内存中的时间（秒），超过该时间后，这些事务将写入 **cdc.xdbcdc_staged_transactions** 表。 默认值为 120 秒。|  
@@ -108,7 +107,7 @@ ms.locfileid: "48205888"
   
  下表介绍了可用的选项。  
   
-|“属性”|，则“默认”|Min|Max|静态|Description|  
+|“属性”|默认|Min|Max|静态|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |跟踪|False|-|-|False|可用值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 表中的 memory_limit 列。|  
@@ -142,8 +141,8 @@ ms.locfileid: "48205888"
 |----------|-----------------|  
 |status|用于当前 Oracle CDC 实例的当前状态代码。 该状态描述 CDC 的当前状态。|  
 |sub_status|提供有关当前状态的其他信息的第二级状态。|  
-|active|可以取以下值的布尔值：<br /><br /> **0**：Oracle CDC 实例进程处于不活动状态。<br /><br /> **1**：Oracle CDC 实例进程处于活动状态。|  
-|error|可以取以下值的布尔值：<br /><br /> **0**：Oracle CDC 实例进程未处于错误状态。<br /><br /> **1**：Oracle CDC 实例处于错误状态。|  
+|active|可以取以下值的布尔值：<br /><br /> **0**：Oracle CDC 实例进程未处于活动状态。<br /><br /> **1**：Oracle CDC 实例进程处于活动状态。|  
+|error|可以取以下值的布尔值：<br /><br /> **0**：Oracle CDC 实例进程处于错误状态。<br /><br /> **1**：Oracle CDC 实例处于错误状态。|  
 |status_message|提供错误或状态的说明的字符串。|  
 |TIMESTAMP|具有上次更新捕获状态的时间 (UTC) 的时间戳。|  
 |active_capture_node|当前正运行 Oracle CDC 服务和 Oracle CDC 实例（正在处理 Oracle 事务日志）的主机（该主机可以是群集上的节点）的名称。|  

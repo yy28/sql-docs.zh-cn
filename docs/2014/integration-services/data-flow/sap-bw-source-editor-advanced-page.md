@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e45ef54da3d79d877882c94ee34fcaf0814514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7729e4762b5289c4ed63b9cf204eac87381a232b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100707"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823641"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 源编辑器（“高级”页）
   使用“SAP BW 源编辑器”的“高级”页指定字符串转换规则和超时时间，还可重置特定请求 ID 的状态。  
@@ -47,7 +46,7 @@ ms.locfileid: "48100707"
   
 |选项|Description|  
 |------------|-----------------|  
-|**自动字符串转换**|所有将字符串转换为`nvarchar`当 SAP Netweaver BW 系统为 Unicode 系统时。 否则，将转换所有字符串转换为`varchar`。|  
+|**自动字符串转换**|当 SAP Netweaver BW 系统为 Unicode 系统时，将所有字符串转换为 `nvarchar`。 否则，将所有字符串转换为 `varchar`。|  
 |**将字符串转换为 varchar**|将所有字符串转换为 `varchar`。|  
 |**将字符串转换为 nvarchar**|将所有字符串转换为 `nvarchar`。|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48100707"
  指定源应等待的最大秒数。  
   
 > [!NOTE]  
->  只有在编辑器的“连接管理器”页中选中“W - 等待通知”作为“执行模式”的值时，此选项才有效。 有关详细信息，请参阅[SAP BW 源编辑器&#40;连接管理器页&#41;](sap-bw-source-editor-connection-manager-page.md)。  
+>  只有在编辑器的“连接管理器”页中选中“W - 等待通知”作为“执行模式”的值时，此选项才有效。 有关详细信息，请参阅 [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)。  
   
  **请求 ID**  
  指定单击“重置”时要将哪个请求 ID 的状态重置为“G - Green”。  
@@ -64,8 +63,8 @@ ms.locfileid: "48100707"
  在提示您进行确认后，可将指定请求 ID 的状态重置为“G - Green”。 当发生问题时，SAP Netweaver BW 系统将请求的状态标记为黄色或红色状态，此时此功能十分有用。  
   
 ## <a name="see-also"></a>请参阅  
- [SAP BW 源编辑器&#40;连接管理器页&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 源编辑器&#40;列页&#41;](sap-bw-source-editor-columns-page.md)   
+ [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 源编辑器（“列”页）](sap-bw-source-editor-columns-page.md)   
  [SAP BW 源编辑器（“错误输出”页）](sap-bw-source-editor-error-output-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   

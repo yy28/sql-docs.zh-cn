@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53f514e83e980e0a91184581d186bcb4046727c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355766"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 客户端连接 (SQL Server)
   本主题介绍与 AlwaysOn 可用性组进行客户端连接时的注意事项，包括针对客户端配置和设置的先决条件、限制和建议。  
@@ -41,9 +41,9 @@ ms.locfileid: "48192739"
 |ADO.NET 与.NET Framework 3.5 SP1 和连接性修补程序 **<sup>**</sup>**|用户帐户控制|是|是|是|用户帐户控制|  
 |Microsoft JDBC driver 4.0 for SQL Server|用户帐户控制|是|是|是|用户帐户控制|  
   
- **<sup>*</sup>**  下载.NET Framework 4.0 的 ADO.NET 连接性修补程序： [ http://support.microsoft.com/kb/2600211 ](http://support.microsoft.com/kb/2600211)。  
+ **<sup>*</sup>**  下载.NET Framework 4.0 的 ADO.NET 连接性修补程序： [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211)。  
   
- **<sup>**</sup>* * 下载连接性修补程序适用于使用.NET Framework 3.5 SP1: [ http://support.microsoft.com/kb/2654347 ](http://support.microsoft.com/kb/2654347)。  
+ **<sup>**</sup>* * 下载连接性修补程序适用于使用.NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)。  
   
 > [!IMPORTANT]  
 >  要连接到一个可用性组侦听器，客户端必须使用 TCP 连接字符串。  
@@ -62,10 +62,10 @@ ms.locfileid: "48192739"
  [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)   
- [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)   
- [从运行 Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7 或 Windows Server 2008 R2 的计算机重新建立 IPSec 连接时出现长时间延迟](http://support.microsoft.com/kb/980915)   
- [群集服务需要大约 30 秒对 Windows Server 2008 R2 中的 IPv6 IP 地址进行故障转移](http://support.microsoft.com/kb/2578113)   
- [如果群集与应用程序服务器之间不存在路由器，则故障转移操作的速度会很慢](http://support.microsoft.com/kb/2582281)  
+ [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)   
+ [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)   
+ [从运行 Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7 或 Windows Server 2008 R2 的计算机重新建立 IPSec 连接时出现长时间延迟](https://support.microsoft.com/kb/980915)   
+ [群集服务需要大约 30 秒对 Windows Server 2008 R2 中的 IPv6 IP 地址进行故障转移](https://support.microsoft.com/kb/2578113)   
+ [如果群集与应用程序服务器之间不存在路由器，则故障转移操作的速度会很慢](https://support.microsoft.com/kb/2582281)  
   
   

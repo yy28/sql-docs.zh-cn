@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.snapshotagent.f1
@@ -15,12 +14,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed47e42e4aeb3fbca4c659047ab9f57e62d548cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5f9f869c076365a4c1f10a9ffacbf4a3cbae009
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108587"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777549"
 ---
 # <a name="snapshot-agent"></a>快照代理
   **“快照代理”** 对话框显示有关快照代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
@@ -28,7 +27,7 @@ ms.locfileid: "48108587"
 ## <a name="options"></a>选项  
  选择要从 **“视图”** 菜单中查看的快照代理会话，然后在标记为 **“快照代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **“视图”**  
+ **视图**  
  选择要查看的快照代理会话。  
   
  **“状态”**  

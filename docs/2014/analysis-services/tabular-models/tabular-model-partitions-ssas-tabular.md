@@ -13,12 +13,12 @@ ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7551cd654fbecf48e4d5bb101531ff412365ee02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8cfe346c56b767b2986ea929271a1ee0e601953
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089227"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417568"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>表格模型分区 (SSAS 表格）
   分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 在已部署的模型中将重复在模型创作过程中为模型定义的分区。 部署完成后，您可以通过使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框或使用脚本来管理这些分区和创建新分区。 本主题提供的信息描述已部署的表格模型数据库中的分区。 有关模型创作期间创建和管理分区的详细信息，请参阅[分区（SSAS 表格）](partitions-ssas-tabular.md)。  
@@ -48,9 +48,9 @@ ms.locfileid: "48089227"
   
  无需每晚处理 Sales2010-2001 分区中的数据；但是，因为之前十个会计年度的销售数据仍偶尔会因为产品退货和其他调整而发生更改，所以还必须定期进行处理，这样，将每月处理 Sales2010-2001 分区中的数据。 SalesOld 分区中的数据从不会发生变化，因此只是每年处理一次。  
   
- 当进入 2012 会计年度时，新的 Sales2012 分区添加到模型的 Sales 表。 然后，Sales2011 分区可以与 Sales2010-2001 分区合并，并重命名为 Sales2011-2002。 从新的 Sales2011-2002 分区中删除 2001 会计年度中的数据，并移入到 SalesOld 分区。 然后，处理所有分区以反映数据更改。  
+ 当进入 2012年会计年度，新的 Sales2012 分区添加到模型的 Sales 表。 然后，Sales2011 分区可以与 Sales2010-2001 分区合并，并重命名为 Sales2011-2002。 从新的 Sales2011-2002 分区中删除 2001 会计年度中的数据，并移入到 SalesOld 分区。 然后，处理所有分区以反映数据更改。  
   
- 如何实现组织的表格模型的分区策略在很大程度上取决于特定模型数据处理需求和可用的资源。  
+ 如何实现组织的表格模型的分区策略很大程度上将取决于特定模型的数据处理需求和可用资源。  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
  为了在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建、管理和处理分区，您必须具有在安全角色中定义的适当的 Analysis Services 权限。 每个安全角色都具有以下权限之一：  
@@ -66,7 +66,7 @@ ms.locfileid: "48089227"
 ##  <a name="bkmk_process_partitions"></a> 处理分区  
  可以通过使用 **中的** “分区” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 对话框或使用脚本独立于其他分区处理（刷新）分区。 处理具有以下选项：  
   
-|“模式”|Description|  
+|模式|Description|  
 |----------|-----------------|  
 |处理默认值|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成层次结构、计算列和关系。|  
 |处理全部|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  
@@ -78,7 +78,7 @@ ms.locfileid: "48089227"
   
 |任务|Description|  
 |----------|-----------------|  
-|[创建和管理表格模型分区&#40;SSAS 表格&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中创建和管理分区。|  
-|[处理表格模型分区&#40;SSAS 表格&#41;](process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中处理分区。|  
+|[创建和管理表格模型分区（SSAS 表格）](create-and-manage-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中创建和管理分区。|  
+|[处理表格模型分区（SSAS 表格）](process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中处理分区。|  
   
   

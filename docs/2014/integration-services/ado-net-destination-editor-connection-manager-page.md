@@ -13,12 +13,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 887f881ad6a4cefec80620ebedb2ac210692ce5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090089"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357267"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目标编辑器（“连接管理器”页）
   可以使用 **“ADO NET 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接。 使用此页还可以选择数据库中的表或视图。  
@@ -57,21 +57,21 @@ ms.locfileid: "48090089"
   
  只有可返回 <xref:System.Data.SqlClient.SqlConnection> 对象的 ADO.NET 提供程序才支持使用 <xref:System.Data.SqlClient.SqlBulkCopy> 接口。 SQL Server 的 .NET 数据提供程序 (SqlClient) 可以返回 <xref:System.Data.SqlClient.SqlConnection> 对象，而自定义提供程序可以返回 <xref:System.Data.SqlClient.SqlConnection> 对象。  
   
- 可以使用适用于 SQL Server (SqlClient) 的.NET 数据提供程序连接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。  
+ 可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。  
   
  如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](data-flow/error-handling-in-data.md)。 有关“错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标前后使用执行 SQL 任务来运行 SET IDENTITY_INSERT 语句。 标识列属性为列指定一个增量值。 SET IDENTITY_INSERT 语句启用要插入到标识列的显式值。 若要在同一个数据库连接运行 CREATE TABLE 和 SET IDENTITY 语句，设置`RetainSameConnection`的属性[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器`True`。 此外，还要对执行 SQL 任务和 ADO NET 目标使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器。  
+>  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标前后使用执行 SQL 任务来运行 SET IDENTITY_INSERT 语句。 标识列属性为列指定一个增量值。 SET IDENTITY_INSERT 语句启用要插入到标识列的显式值。 若要基于同一个数据库连接运行 CREATE TABLE 和 SET IDENTITY 语句，请将 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器的 `RetainSameConnection` 属性设置为 `True`。 此外，还要对执行 SQL 任务和 ADO NET 目标使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器。  
 >   
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](/sql/t-sql/statements/set-identity-insert-transact-sql) 和 [IDENTITY（属性）(Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property)。  
   
 ## <a name="external-resources"></a>外部资源  
- sqlcat.com 上的技术文章 [快速将数据加载到 Windows Azure SQL Database 中](http://go.microsoft.com/fwlink/?LinkId=244333)。  
+ sqlcat.com 上的技术文章 [快速将数据加载到 Windows Azure SQL Database 中](https://go.microsoft.com/fwlink/?LinkId=244333)。  
   
 ## <a name="see-also"></a>请参阅  
- [ADO NET 目标编辑器&#40;映射页&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [ADO NET 目标编辑器&#40;错误输出页&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [ADO NET 目标编辑器（“映射”页）](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [ADO NET 目标编辑器（“错误输出”页）](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)   
  [执行 SQL 任务](control-flow/execute-sql-task.md)  
   

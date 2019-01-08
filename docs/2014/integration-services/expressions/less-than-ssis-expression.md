@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
@@ -14,12 +13,12 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 877c8f762b8f70c68ae3549417e0eeb3e3410473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bf00ad5c0fa4478b308ec3feb38a7896e186e81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156927"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799760"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;（小于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -56,7 +55,7 @@ expression1 < expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **Date、Time 或 Date/Time** *expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、 时间或日期/时间**两者*expression1*并*expression2*计算结果必须为以下数据类型之一：将 DT_DBDATE、 DT_DATE、 DT_DBTIME、 DT_DBTIME2、 DT_DBTIMESTAMP、 DT_DBTIMESTAMP2、 DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -101,10 +100,10 @@ ListPrice < 500
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [&#62;&#40;大于&#41; &#40;SSIS 表达式&#41;](greater-than-ssis-expression.md)   
+ [>（大于）（SSIS 表达式）](greater-than-ssis-expression.md)   
  [>=（大于或等于）（SSIS 表达式）](greater-than-or-equal-to-ssis-expression.md)   
  [<=（小于或等于）（SSIS 表达式）](less-than-or-equal-to-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

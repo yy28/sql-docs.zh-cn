@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
@@ -16,12 +15,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9eb39e06198881ac5c51a9fc78e623b010485a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175307"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785109"
 ---
 # <a name="delete-a-pull-subscription"></a>删除请求订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除请求订阅。  
@@ -98,7 +97,7 @@ ms.locfileid: "48175307"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的一个实例，并设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>以及 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。 使用步骤 1 中的订阅服务器连接来设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性。  
   
-3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以确保该订阅存在。 如果此属性的值为`false`，步骤 2 中的订阅属性定义不正确或订阅不存在。  
+3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以确保该订阅存在。 如果此属性的值为 `false`，则步骤 2 中所定义的订阅属性不正确或者该订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> 方法。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48175307"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的一个实例，并设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>以及 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。 使用步骤 1 中的连接来设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性。  
   
-3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以确保该订阅存在。 如果此属性的值为`false`，步骤 2 中的订阅属性定义不正确或订阅不存在。  
+3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以确保该订阅存在。 如果此属性的值为 `false`，则步骤 2 中所定义的订阅属性不正确或者该订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> 方法。  
   

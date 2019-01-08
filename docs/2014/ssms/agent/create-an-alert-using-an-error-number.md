@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
@@ -14,12 +14,12 @@ ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a14ae81bd733f447943dd7f8a7388e32b44a893
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195057"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762610"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用错误号创建警报
   本主题介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建在出现特定编号的错误时在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中引发的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报。  
@@ -30,7 +30,7 @@ ms.locfileid: "48195057"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用错误号创建警报，请使用：**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48195057"
   
 #### <a name="to-create-an-alert-using-an-error-number"></a>使用错误号创建警报  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 在 MDS 中存储供应商数据 |Microsoft Docs
+title: 第 4 课：在 MDS 中存储供应商数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 363b92c975bd80f4d3298a2082b6cedfee9b1263
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f36949f8df0d2c54826795bbec9507986fc23a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358439"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 课：在 MDS 中存储供应商数据
   Master Data Services (MDS) 是用于主数据管理的 SQL Server 解决方案。 主数据管理 (MDM) 描述组织为发现和定义数据的非事务性列表而付出的努力。  
   
- 模型是 Master Data Services 中最高的组织级别，负责整理主数据的结构。 您的 MDS 实现可以具有一个或多个模型，其中每个模型对相似的数据进行分组。 通常，可通过以下四种方式之一划分主数据：人员、地点、事件或概念。 例如，可以创建 Product 模型来包含与产品有关的数据，或创建 Customer 模型来包含与客户有关的数据。 请参阅[模型 (Master Data Services)](http://msdn.microsoft.com/library/ee633746.aspx)的更多详细信息。  
+ 模型是 Master Data Services 中最高的组织级别，负责整理主数据的结构。 您的 MDS 实现可以具有一个或多个模型，其中每个模型对相似的数据进行分组。 通常，可通过以下四种方式之一划分主数据：人员、地点、事件或概念。 例如，可以创建 Product 模型来包含与产品有关的数据，或创建 Customer 模型来包含与客户有关的数据。 请参阅[模型 (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx)的更多详细信息。  
   
- 模型可以包含一个或多个实体。 每个实体具有属性（列）和成员（行）。 每行都包含主数据。 在本课中，您将创建一个 Suppliers 模型，其中具有两个实体，名称分别为 Supplier 和 State。 Supplier 实体将具有以下属性：Code、Name、Contact First Name、Contact Last Name、Contact Email Address、Address Line、City、State、Zip 和 Country。 请参阅[属性 (Master Data Services)](http://msdn.microsoft.com/library/ee633745.aspx)的详细信息有关的详细信息属性一般情况下。 Code 和 Name 属性分别对应于 Excel 文件 (Cleansed and Matched Suppliers) 中的 SupplierID 和 Supplier Name 列。  
+ 模型可以包含一个或多个实体。 每个实体具有属性（列）和成员（行）。 每行都包含主数据。 在本课中，您将创建一个 Suppliers 模型，其中具有两个实体，名称分别为 Supplier 和 State。 Supplier 实体将具有以下属性：Code、Name、Contact First Name、Contact Last Name、Contact Email Address、Address Line、City、State、Zip 和 Country。 请参阅[属性 (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx)的详细信息有关的详细信息属性一般情况下。 Code 和 Name 属性分别对应于 Excel 文件 (Cleansed and Matched Suppliers) 中的 SupplierID 和 Supplier Name 列。  
   
  基于域的属性是指其值由另一个实体的成员填充的属性。 基于域的属性可防止用户输入无效的属性值。 只能从由另一个实体填充的下拉列表中选择属性值。 在本教程中，Supplier 实体的 State 属性是一个基于域的属性，其值来自 State 实体。 您只可将 Supplier 实体的 State 属性的值更改为 State 实体中的一个值。 请参阅[基于域的属性](../master-data-services/domain-based-attributes-master-data-services.md)的更多详细信息。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48048818"
 8.  创建和使用派生层次结构使用之间的基于域的属性关系**供应商**实体以及**状态**（Supplier 实体的 State 属性属于 State 实体类型的实体) 通过使用**主数据管理器**。  
   
 ## <a name="next-step"></a>下一步  
- [任务 1：使用主数据管理器创建供应商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [任务 1:创建使用主数据管理器的供应商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

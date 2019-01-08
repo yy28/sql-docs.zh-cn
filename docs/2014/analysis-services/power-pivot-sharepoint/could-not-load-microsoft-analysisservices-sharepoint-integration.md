@@ -11,12 +11,12 @@ ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca2e1ae13b001277d50be3bee5dbe782a8c23786
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49e2ce59b8662a8deaf47099c967355150dca201
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371509"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>无法加载文件或程序集&#39;Microsoft.Data.Services，版本 = 3.5.0.0，区域性 = 中性，PublicKeyToken = b77a5c561934e089&#39;或其某个依赖项。 系统找不到指定的文件。
   在具有 PowerPivot for SharePoint 的 SharePoint 2010 环境中，如果您尝试执行数据馈送导出并且系统缺少 Microsoft ADO.NET Data Services 的必需版本，则会出现此错误。  
@@ -25,7 +25,7 @@ ms.locfileid: "48227887"
   
 |||  
 |-|-|  
-|适用于|PowerPivot for SharePoint|  
+|适用对象|PowerPivot for SharePoint|  
 |产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|找不到 ADO.NET Data Services 3.5 SP1。|  
 |消息正文|无法加载文件或程序集“Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”或其依赖项之一。 系统找不到指定的文件。|  
@@ -37,7 +37,7 @@ ms.locfileid: "48227887"
   
 ## <a name="user-action"></a>用户操作  
   
-1.  转到针对 SharePoint 2010 的硬件和软件要求文档[确定硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)。  
+1.  转到针对 SharePoint 2010 的硬件和软件要求文档[确定硬件和软件要求 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734)。  
   
 2.  在 **“安装必备软件”** 中，找到用于与您正在使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
   

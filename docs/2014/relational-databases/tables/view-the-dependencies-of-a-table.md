@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
@@ -16,23 +15,23 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 111a0664a61a586558dd4792525c7adf2d68646d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772299"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看表的依赖关系。  
+  可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看表的依赖关系。  
   
  **本主题内容**  
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **使用以下工具查看表的依赖关系：**  
+-   使用以下工具查看表的依赖关系：  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

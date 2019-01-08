@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167179"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768449"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
   作业步骤是作业对数据库或服务器执行的操作。 每个作业必须至少有一个作业步骤。 作业步骤可以为：  
@@ -57,7 +57,7 @@ ms.locfileid: "48167179"
   
 -   可执行程序和操作系统命令。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不支持将数据大容量导入到分区视图。  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 任务。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48167179"
   
 -   命令成功完成时返回的进程退出代码。  
   
--   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是该程序的名称和用于该程序的参数，例如： **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这是该程序和程序的参数的名称，例如：**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe-e-q"sp_who"**  
   
     > [!NOTE]  
     >  如果系统路径或执行作业步骤的用户的路径指定的目录中不包含此可执行程序，则必须提供可执行程序的完整路径。  
@@ -199,7 +199,7 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |描述如何创建带有可执行程序的作业步骤。|[创建 CmdExec 作业步骤](create-a-cmdexec-job-step.md)|  
 |介绍如何重置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理权限。|[配置帐户以创建和管理 SQL Server 代理作业](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |介绍如何创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  

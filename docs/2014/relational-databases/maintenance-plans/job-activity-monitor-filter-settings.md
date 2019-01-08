@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.jobactivitymon.filter.f1
@@ -13,12 +12,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801249"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作业活动监视器（筛选设置）
   使用此页可以减少作业活动监视器中可见的行数。 在一个或多个可用框中输入条件，以便仅显示符合指定值的行。 其中某些框（如“状态”或“阻塞类型”）通过下拉列表提供有限数量的可能值。 其他框（如 **“应用程序”** ）则允许以逗号分隔的列表形式输入不限数量的任意值。 使用工具栏图标，可以按类别或按字母顺序对可用的框进行排序。 单击各个条件可以显示该条件的简短说明。  

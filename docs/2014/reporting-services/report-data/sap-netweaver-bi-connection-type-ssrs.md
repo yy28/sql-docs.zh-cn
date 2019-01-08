@@ -11,12 +11,12 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084757"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363659"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 连接类型 (SSRS)
   若要在报表中包含来自 SAP NetWeaver® Business Intelligence 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].NET Framework Data Provider 1.0 的数据扩展插件。  
@@ -72,17 +72,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> 扩展字段属性  
- [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据源支持扩展字段属性。 扩展的字段属性是除了`Value`和`IsMissing`通过数据处理扩展插件定义的数据集字段。 扩展属性包括预定义属性和自定义属性。 预定义属性是对多个数据源通用的属性。 自定义属性对于每个数据源都是唯一的。  
+ [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 数据源支持扩展字段属性。 扩展字段属性是除了通过数据处理扩展插件为数据集字段定义的 `Value` 和 `IsMissing` 之外的其他属性。 扩展属性包括预定义属性和自定义属性。 预定义属性是对多个数据源通用的属性。 自定义属性对于每个数据源都是唯一的。  
   
 ### <a name="working-with-field-properties"></a>使用字段属性  
- 扩展字段属性不作为可拖至报表布局的项出现在“报表数据”窗格中。 相反，您将属性的父字段拖至报表，然后更改默认属性由`Value`到你想要使用的属性。 例如，如果在 MDX 查询设计器中通过将一个级别从“元数据”窗格放至“查询”窗格创建了字段名“日历年/月级别 01”，则需要在表达式中使用以下语法来引用自定义扩展属性“长名称”：  
+ 扩展字段属性不作为可拖至报表布局的项出现在“报表数据”窗格中。 不过，您可以将该属性的父字段拖至报表中，然后将默认属性由 `Value` 更改为要使用的属性。 例如，如果在 MDX 查询设计器中通过将一个级别从“元数据”窗格放至“查询”窗格创建了字段名“日历年/月级别 01”，则需要在表达式中使用以下语法来引用自定义扩展属性“长名称”：  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- 当您将光标悬停在“元数据”窗格中的某个字段上时，扩展字段属性的名称便会显示在工具提示中。 有关可用于浏览基础数据的查询设计器的详细信息，请参阅[SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)。  
+ 当您将光标悬停在“元数据”窗格中的某个字段上时，扩展字段属性的名称便会显示在工具提示中。 有关可用于浏览基础数据的查询设计器的详细信息，请参阅 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)。  
   
 > [!NOTE]  
->  仅当数据源在报表运行和为其数据集检索数据的情况下提供扩展字段属性的值时，这些值才存在。 你可以然后引用这些`Field`使用如下所述的语法从任意表达式的属性值。 但是，由于这些字段特定于此数据访问接口，而不是报表定义语言的一部分，因此，对这些值所做的更改不会随报表定义一同保存。  
+>  仅当数据源在报表运行和为其数据集检索数据的情况下提供扩展字段属性的值时，这些值才存在。 然后，您可以使用下面所述的语法引用任意表达式中的这些 `Field` 属性值。 但是，由于这些字段特定于此数据访问接口，而不是报表定义语言的一部分，因此，对这些值所做的更改不会随报表定义一同保存。  
   
  使用以下两种语法中的一种可以在表达式中引用预定义扩展属性：  
   
@@ -118,7 +118,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> 注释  
  不是所有的报表传递模式都受到此数据访问接口的支持。 此数据处理扩展插件不支持通过数据驱动订阅传递报表。 有关详细信息，请参阅[使用外部数据源提供订阅方数据（数据驱动订阅）](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
- 有关详细信息，请参阅 [Using SQL Server 2008 Reporting Services with SAP NetWeaver Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=167352)（使用具有 SAP NetWeaver Business Intelligence 的 SQL Server 2008 Reporting Services）。  
+ 有关详细信息，请参阅 [Using SQL Server 2008 Reporting Services with SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352)（使用具有 SAP NetWeaver Business Intelligence 的 SQL Server 2008 Reporting Services）。  
   
   
   
@@ -148,7 +148,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [Reporting Services 支持的数据源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
  

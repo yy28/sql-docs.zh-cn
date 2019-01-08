@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147997"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372969"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>为呼叫中心模型创建预测（数据挖掘中级教程）
   现在您已经了解了关于班次、操作员人数、呼叫和服务等级之间的交互，您将准备创建一些可用于业务分析和规划的预测查询。 首先您将在探索模型上创建一些预测来测试某些假设。 接下来，您将通过使用逻辑回归模型创建大容量预测。  
@@ -184,11 +184,11 @@ ms.locfileid: "48147997"
 ## <a name="remarks"></a>备注  
  数据挖掘外接 Excel 2007 提供了逻辑回归向导很轻松地回答一些复杂问题，例如多少名二级操作员所需服务等级提高到一个特定班次的目标级别。 数据挖掘外接程序是免费下载的，并包含基于神经网络或逻辑回归算法的向导。 有关更多信息，请参见下列链接：  
   
--   [SQL Server 2005 数据挖掘外接适用于 Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx)： 目标查找和假设应用场景分析  
+-   [SQL Server 2005 数据挖掘外接适用于 Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx):“目标查找”和“假设”情境分析  
   
--   [SQL Server 2008 数据挖掘外接适用于 Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790)： 目标查找应用场景分析，假设应用场景分析和预测计算器  
+-   [SQL Server 2008 数据挖掘外接适用于 Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790):“目标查找”情境分析、“假设”情境分析和预测计算器  
   
-## <a name="conclusion"></a>结语  
+## <a name="conclusion"></a>结束语  
  您已经学习了创建、自定义和解释基于 Microsoft 神经网络算法和 Microsoft 逻辑回归算法的挖掘模型。 这些模型类型很精细，允许在分析中使用几乎无限种变化，因此会很复杂并难于掌握。  
   
  但是，如果提供模式的统计支持（很难使用 Transact-SQL 或甚至 PowerPivot 通过手动浏览数据来发现），这些算法可以通过因素的很多组合来迭代并自动标识最强的相关性。  
@@ -196,7 +196,7 @@ ms.locfileid: "48147997"
 ## <a name="see-also"></a>请参阅  
  [逻辑回归模型查询示例](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft 逻辑回归算法](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Microsoft 神经网络算法](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [神经网络模型查询示例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

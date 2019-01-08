@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdbf8626ec1eb50218d01b0eefd96cea2cba9dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00ada7a047d323f143403b56632b8863d75e6ac2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108447"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792119"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器包含可用于解决 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流问题的功能和工具。  
@@ -62,7 +61,7 @@ ms.locfileid: "48108447"
   
  下表介绍颜色编码。  
   
-|Color|Description|  
+|颜色|Description|  
 |-----------|-----------------|  
 |无色|等待被数据流引擎调用。|  
 |Yellow|正在执行转换、提取数据或加载数据。|  
@@ -70,6 +69,6 @@ ms.locfileid: "48108447"
 |红色|运行中出现错误。|  
   
 ## <a name="see-also"></a>请参阅  
- [包开发的疑难解答工具](troubleshooting-tools-for-package-development.md)  
+ [包开发的故障排除工具](troubleshooting-tools-for-package-development.md)  
   
   

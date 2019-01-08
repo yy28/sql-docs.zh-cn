@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.planeditor.f1
@@ -15,12 +14,12 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b50ff05de00f342c8a53bdb7286314014d54f6b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763739"
 ---
 # <a name="maintenance-plan-design-tab"></a>维护计划（“设计”选项卡）
   使用 **维护计划（“设计”选项卡）** 可以指定维护计划及其子计划的属性。 将任务从工具箱拖到计划设计器中。 右键单击任务组以创建分支执行路径。 维护计划将另存为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业执行。  
@@ -53,7 +52,7 @@ ms.locfileid: "48073563"
  **名称**  
  显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  
   
- **Description**  
+ **说明**  
  查看或指定维护计划的说明。 说明的最大长度为 512 个字符。  
   
  **设计器图面**  

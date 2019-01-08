@@ -11,17 +11,17 @@ ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c6e49e9c5c5306ba5d1986c7fd8e09ea463c8b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361309"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 升级顾问
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问分析的配置已安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件，然后生成一个要确保升级成功必须解决的问题的报告。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问可对已安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的配置进行分析，然后生成一个报表，其中指出要使升级成功必须解决的问题。  
   
- 在安装媒体的 redist 文件夹中，或作为 [SQL 2014 功能包下载](http://www.microsoft.com/download/details.aspx?id=42295)的一部分来获取升级顾问安装文件 (sqlua.msi)。  
+ 在安装媒体的 redist 文件夹中，或作为 [SQL 2014 功能包下载](https://www.microsoft.com/download/details.aspx?id=42295)的一部分来获取升级顾问安装文件 (sqlua.msi)。  
   
 |主题|Description|  
 |-----------|-----------------|  

@@ -12,12 +12,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff3112e552eb037f0f4c000cd0e62bbdfa952150
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 114dcb05567fc58cb58ce46cae064f2514c1331e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032395"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396496"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建链接域。 链接域可以从先前存在的另一个域创建，并且继承它所链接到的域的所有值、规则和属性，但名称和说明除外。 您可以将一组链接域作为一个链接域进行管理。 通过将一个域链接到另一个域，您可以创建从另一个域继承其内容的域。  
@@ -31,7 +31,7 @@ ms.locfileid: "51032395"
 ### <a name="controlling-data-flow-to-composite-domains"></a>控制到复合域的数据流  
  链接域使您能够控制字段与复合域之间的数据流。 您可以区分一个字段中的数据何时流向复合域，而另一个非常相似的域中的数据何时不流向复合域。 这是通过指定以下内容来实现的：在两个链接域中，一个域是复合域的一部分，而另一个域则不是。 从域角度来看，链接域是完全相同的。 它们包含同样的知识。 然而，从复合域的角度来看，链接域是不同的。 一个参与复合域；另一个则不参与。  
   
- 例如，一条包含以下字段的记录：Customer First Name、Customer Last Name 和 Father’s First Name。 假设您同时将客户的名字和父亲的名字映射到 First Name 域，并使 First Name 域和 Last Name 域成为 Full Name 复合域的组成部分。 问题是父亲的名字将添加到复合域，但没有姓氏。 但是，如果您将这两个名字字段链接到一个域并链接这两个域，则您可以将 Customer First Name 域链接到 Full Name 复合域，但不将 Father’s First Name 字段添加到复合域；从而防止将 Father’s First Name 添加到复合域。  
+ 一个示例是一个包含以下字段的记录：Customer First Name、 Customer Last Name 和父亲的名字。 假设同时将客户的名字和父亲的名字映射到 First Name 域，并使 First Name 域和 Last Name 域成为 Full Name 复合域的组成部分。 问题是父亲的名字将添加到复合域，但没有姓氏。 但是，如果将这两个名字字段链接到一个域并链接这两个域，则可以将 Customer First Name 域链接到 Full Name 复合域，但不将 Father’s First Name 字段添加到复合域；从而防止将 Father’s First Name 添加到复合域。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -72,7 +72,7 @@ ms.locfileid: "51032395"
   
 4.  在“创建域”对话框中，输入名称和说明，然后单击“确定”。  
   
-##  <a name="FollowUp"></a> 跟进：创建链接域后  
+##  <a name="FollowUp"></a> 跟进：创建链接的域后  
  在创建链接域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Behavior"></a> 链接域的行为  

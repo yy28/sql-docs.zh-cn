@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], copying
@@ -16,12 +15,12 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 023ffdb16c16c54093190a370c3d8a52c068104b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe21560f7cf765c6e4af10353535576dca3b5df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754769"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中复制包
   此主题介绍如何通过复制现有包来创建新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包，以及如何更新新包的 `Name` 和 `GUID` 属性。  
@@ -43,7 +42,7 @@ ms.locfileid: "48229317"
   
 6.  更新包文件的名称。 确保保留 .dtsx 文件扩展名。  
   
-7.  单击 **“保存”**。  
+7.  单击“保存” 。  
   
 8.  在出现提示时，选择是否更新包对象的名称，使其与文件名匹配。 如果单击**是**，则`Name`更新包的属性。 新的包将添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，并在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48229317"
 11. 在 **“文件”** 菜单上，单击 **“保存选定项”** ，以保存新建的包。  
   
 ## <a name="see-also"></a>请参阅  
- [保存包的副本](../../2014/integration-services/save-a-copy-of-a-package.md)   
+ [保存一个包副本](../../2014/integration-services/save-a-copy-of-a-package.md)   
  [在 SQL Server Data Tools 中创建包](create-packages-in-sql-server-data-tools.md)   
  [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)  
   

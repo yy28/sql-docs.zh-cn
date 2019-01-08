@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82b3e432321260a5efa1d25537202d351b89a380
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537887"
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "47603425"
 |index_id|**int**|对表定义的列存储索引的索引 ID。<br /><br /> 1 = 聚集列存储索引<br /><br /> 2 = 非聚集列存储索引|  
 |partition_number|**int**|分区数。<br /><br /> 1 = 已分区表的第一个分区或未分区表的单个分区。<br /><br /> 2 = 第二个分区中，依次类推。|  
 |internal_object_type|**tinyint**|跟踪列存储索引的内部数据的行集对象。<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP – 此位图索引跟踪标记为删除从列存储中的行。 由于分区可以具有多个行组中的行，位图是为每个行组。 行是仍以物理方式存在并已满空间位于在列存储中。<br /><br /> COLUMN_STORE_DELTA_STORE – 存储组的行，调用的尚未压缩成列存储行组。 每个表分区可以包含零个或多个增量存储行组。<br /><br /> COLUMN_STORE_DELETE_BUFFER – 用于维护到可更新非聚集列存储索引删除。 查询从基础的行存储表中删除行，删除缓冲区将跟踪从列存储中删除。 当已删除的行数超过 1048576 时，它们合并成删除位图背景元组发动机线程或显式的 Reorganize 命令。  在任何给定时间点，删除位图的删除缓冲区的并集表示所有已删除的行。<br /><br /> COLUMN_STORE_MAPPING_INDEX – 使用仅当聚集列存储索引具有辅助非聚集的索引。 这将非聚集索引键映射到正确的行组和列存储中的行 ID。 它只存储密钥的行，然后迁移到不同的行组;增量行组压缩到列存储中，以及合并操作将两个不同的行组中的行时，将发生这种情况。|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP-此位图索引跟踪标记为删除从列存储中的行。 由于分区可以具有多个行组中的行，位图是为每个行组。 行是仍以物理方式存在并已满空间位于在列存储中。<br /><br /> COLUMN_STORE_DELTA_STORE-存储组的行，调用的尚未压缩成列存储行组。 每个表分区可以包含零个或多个增量存储行组。<br /><br /> COLUMN_STORE_DELETE_BUFFER-用于维护到可更新非聚集列存储索引删除。 查询从基础的行存储表中删除行，删除缓冲区将跟踪从列存储中删除。 当已删除的行数超过 1048576 时，它们合并成删除位图背景元组发动机线程或显式的 Reorganize 命令。  在任何给定时间点，删除位图的删除缓冲区的并集表示所有已删除的行。<br /><br /> COLUMN_STORE_MAPPING_INDEX-只有在聚集列存储索引具有辅助的非聚集的索引时使用。 这将非聚集索引键映射到正确的行组和列存储中的行 ID。 它只存储密钥的行，然后迁移到不同的行组;增量行组压缩到列存储中，以及合并操作将两个不同的行组中的行时，将发生这种情况。|  
 |Row_group_id|**int**|增量存储行组 ID。 每个表分区可以包含零个或多个增量存储行组。|  
 |hobt_id|**bigint**|内部行集对象的 ID。 这是一个很好密钥来加入其他 Dmv 来获取有关内部行集的物理特征的详细信息。|  
 |rows|**bigint**|此分区中的大约行数。|  
 |data_compression|**tinyint**|压缩的行集的状态：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|为每个分区的压缩状态。 行存储表的可能值为 NONE、ROW 和 PAGE。 列存储表的可能值为 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="general-remarks"></a>一般备注  

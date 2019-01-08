@@ -17,12 +17,12 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61effe29811cc7a8f6e23cbea127b2f757cc7b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527333"
 ---
 # <a name="errors-and-batches"></a>错误和批处理
 执行一批 SQL 语句时出现错误时，以下四个结果中的一个可能会出现。 （每个可能结果是数据源特定于和甚至可能取决于包括在批中的语句。）  

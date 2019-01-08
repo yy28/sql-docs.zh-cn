@@ -16,17 +16,17 @@ ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f429edc79227c815142dd0800363fcde8f20c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d030d4fb12ce9217bbdb88f501a0b0674c5a5828
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360351"
 ---
 # <a name="procedures"></a>过程
   存储过程是包含一个或多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的预先编译的可执行对象。 存储过程可具有输入和输出参数，并且还可以生成整数返回代码。 应用程序可以通过使用目录函数枚举可用的存储过程。  
   
- 以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 为目标的 ODBC 应用程序只应使用直接执行以调用某一存储过程。 当连接到早期版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，则[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序实现[SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)通过创建临时存储的过程，然后调用上**SQLExecute**. 它会增加开销能够**SQLPrepare**创建临时存储的过程，只有在调用目标存储过程，而非直接执行目标存储过程。 即使在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的某一实例时，准备调用都要求额外的网络上的往返，并且生成只调用存储过程执行计划的执行计划。  
+ 以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 为目标的 ODBC 应用程序只应使用直接执行以调用某一存储过程。 当连接到早期版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，则[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序实现[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)通过创建临时存储的过程，然后调用上**SQLExecute**. 它会增加开销能够**SQLPrepare**创建临时存储的过程，只有在调用目标存储过程，而非直接执行目标存储过程。 即使在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的某一实例时，准备调用都要求额外的网络上的往返，并且生成只调用存储过程执行计划的执行计划。  
   
  在执行某一存储过程时，ODBC 应用程序应使用 ODBC CALL 语法。 驱动程序将优化，以便在使用 ODBC CALL 语法时，使用远程过程调用机制来调用该过程。 这比用于将 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 语句发送到服务器的机制效率更高。  
   

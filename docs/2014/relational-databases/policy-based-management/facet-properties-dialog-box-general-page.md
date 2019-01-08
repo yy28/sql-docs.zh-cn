@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.facet.f1
@@ -12,18 +12,18 @@ ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7bbee8686194fcf410afef28c309773f887c2ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758649"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>“方面属性”对话框，“常规”页
   此对话框用于查看基于策略的管理方面的属性。 每个方面可应用于一个或多个目标类型，例如，服务器、数据库或表。 可以使用此页来查看与此方面有关的目标类型。 方面属性是在创建方面时定义的，无法使用此页来更改这些属性。  
   
 ## <a name="options"></a>选项  
- **Description**  
+ **说明**  
  提供方面的常规说明。  
   
  **适用的目标类型**  

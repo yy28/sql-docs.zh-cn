@@ -20,12 +20,12 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199443"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505844"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
   断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析将涉及到查找词边界（断字）和组合动词（词干分析）。 断字符和词干分析器是特定于语言的，并且各语言的语言分析规则也各不相同。 对于给定语言，“断字符”  通过根据语言的词法规则确定词的边界位置来标识各个词。 每个词（也称为标记）使用压缩表示形式插入全文索引以减少其大小。 词干分析器根据该语言的规则生成特定词的变形形式（例如，“running”、“ran”和“runner”是单词“run”的不同形式）。  
@@ -33,14 +33,14 @@ ms.locfileid: "48199443"
  使用特定于语言的断字符，能够使得为该语言生成的词更加准确。 如果断字符用于整个语系而不是特定的子语言，将使用该语系中的主要语言。 例如，使用法语断字符来处理加拿大法语文本。 如果某一特定语言没有可用的断字符，将使用非特定语言断字符。 使用非特定语言断字符时，词将在非特定语言字符（如空格和标点符号）处断开。  
   
 ##  <a name="register"></a> 注册断字符  
- 要想使用某种语言的断字符，就必须为其进行注册。 对于已注册的断字符，关联的语言资源（词干分析器、干扰词（非索引字）和同义词库文件）也将可用于全文索引和查询操作。 若要查看当前在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中注册了断字符的语言列表，请使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
+ 要想使用某种语言的断字符，就必须为其进行注册。 对于已注册的断字符关联的语言资源的词干分析器、 干扰词 （非索引字） 和同义词库文件-也将可用于全文索引和查询操作。 若要查看当前在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中注册了断字符的语言列表，请使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
  SELECT * FROM sys.fulltext_languages  
   
  如果您添加、删除或更改了断字符，则需要刷新为全文索引和查询而支持的 Microsoft Windows 区域设置标识符 (LCID) 列表。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="default"></a> 设置默认全文语言选项  
- 本地化版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序集`default full-text language`选项为服务器的语言，如果存在合适的匹配项。 有关非本地化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则`default full-text language`选项是英语。  
+ 本地化版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序集`default full-text language`选项为服务器的语言，如果存在合适的匹配项。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非本地化版本，`default full-text language` 选项为“英语”。  
   
  创建或修改全文索引时，可以为每个全文索引列指定不同的语言。 如果未指定列的语言，默认值是配置选项 `default full-text language` 的值。  
   

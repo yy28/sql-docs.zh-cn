@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984059"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400011"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "38984059"
  有关安装信息[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 配置工具，请参阅[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 运行 Power Pivot for SharePoint 2016 配置  
- **注意：** 若要完成下列步骤，您必须是场管理员。 如果您看到与以下内容类似的错误消息：  
+ **注意：** 若要完成以下步骤，必须是场管理员。 如果您看到与以下内容类似的错误消息：  
   
--   “该用户不是场管理员。 请解决验证问题并重试。”  
+-   "用户不是场管理员。 请解决验证问题并重试。”  
   
  以安装了 SharePoint 的帐户登录或将安装帐户配置为 SharePoint 管理中心网站的主管理员。  
   
@@ -43,15 +43,15 @@ ms.locfileid: "38984059"
   
 4.  在 **“参数”** 选项卡上：  
   
-    1.  **默认帐户用户名**：输入默认帐户的域用户帐户。 此帐户将用于设置服务，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
+    1.  **默认帐户用户名**:输入默认帐户的域用户帐户。 此帐户将用于设置服务，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
   
-    2.  **数据库服务器**：您可以使用 SharePoint 场支持的 SQL Server 数据库引擎。  
+    2.  **数据库服务器**:可以使用 SQL Server 数据库引擎支持的 SharePoint 场。  
   
-    3.  **通行短语**：输入密码。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
+    3.  **通行短语**:输入通行短语。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
   
-    4.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改这些默认设置，请在左窗口中查看以下页： **“创建默认的 Web 应用程序”** 和 **“部署 Web 应用程序解决方案”**。  
+    4.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改这些默认设置，请查看在左窗口中的以下页面：**创建默认的 Web 应用程序**和**部署 Web 应用程序解决方案**  
   
-5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 中的“用于配置服务器的输入值”部分。  
+5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个详细信息，请参阅部分"输入值用于配置中的服务器[配置或修复 Power Pivot for SharePoint 2010 （Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)本主题中。  
   
 6.  您还可以删除不想在此时处理的任何操作。 例如，如果你想要在以后配置 Secure Store Service，请选择“配置 Secure Store Service” ，然后取消选中“在任务列表中包括此操作” 复选框。  
   

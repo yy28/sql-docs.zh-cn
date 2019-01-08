@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145302"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418698"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX 单元属性-使用单元属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>支持的内部单元属性  
  下表列出了 `<property>` 值中使用的、支持的内部单元属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|指示单元中存在何种操作的位掩码。 此属性可以具有下列值之一：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：对于在 where 子句中包含集的查询来说，不包含钻取操作。|  
 |**BACK_COLOR**|用于显示 **VALUE** 或 **FORMATTED_VALUE** 属性的背景色。 有关详细信息，请参阅 [FORE_COLOR 和 BACK_COLOR 内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   可使用 update 语句更新单元。 如果更新的叶单元未启用写操作，更新可能会失败。|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   不能更新单元，因为该单元有一个计算成员在其坐标中；将使用 where 子句中的集检索该单元。 即使公式影响单元值或单元值上存在计算单元（在沿聚合路径的某个位置），仍可以更新单元。 在这种情况下，单元的最终值可能不是更新后的值，因为计算将影响结果。|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   不能更新单元，因为不能更新非和度量值（计数、最小值、最大值、非重复计数、半累加性）。|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   不能更新单元，因为该单元不是位于度量值和与该度量值的度量值组无关的维度成员的交点处。|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) 不能更新单元，因为该单元格不存在的度量值的交集处是和与该度量值的度量值组无关的维度成员。|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)    不能更新单元，因为该单元受保护。|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006) 保留供将来使用。|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   由于内部原因不能更新单元。|  
@@ -100,7 +100,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

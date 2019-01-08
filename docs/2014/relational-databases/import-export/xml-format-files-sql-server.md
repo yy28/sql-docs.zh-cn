@@ -14,12 +14,12 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201037"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373869"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”（用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
@@ -176,7 +176,7 @@ ms.locfileid: "48201037"
 |ID **="*`fieldID`*"**|指定数据文件中的字段的逻辑名称。 字段的 ID 是用于引用字段的键。<br /><br /> < 字段 ID **="*`fieldID`*"**/ > 将映射到 < 列源 **="*`fieldID`*"**/>|Required|  
 |xsi: type **="*`fieldType`*"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的类型。 *fieldType* 的值决定了给定实例中需要下面哪个可选属性。|必需（取决于数据类型）|  
 |LENGTH =""***`n`***|此属性定义固定长度的数据类型实例的长度。<br /><br /> *n* 值必须是正整数。|除非是 xsi:type 值所必需，否则可选。|  
-|PREFIX_LENGTH **="*`p`*"**|此属性定义二进制数据表示形式的前缀的长度。 PREFIX_LENGTH 值、 *p*必须是下列值之一：1、2、4 或 8。|除非是 xsi:type 值所必需，否则可选。|  
+|PREFIX_LENGTH **="*`p`*"**|此属性定义二进制数据表示形式的前缀的长度。 PREFIX_LENGTH 值*p*，必须是以下值之一：1、 2、 4 或 8。|除非是 xsi:type 值所必需，否则可选。|  
 |MAX_LENGTH **="*`m`*"**|此属性为给定字段中可以存储的最大字节数。 如果没有目标表，列的最大长度就是未知的。 MAX_LENGTH 属性限定输出字符列的最大长度，从而限制为列值分配的存储空间。 当在 SELECT FROM 子句中使用了 OPENROWSET 函数的 BULK 选项时，使用该属性将带来极大的方便。<br /><br /> *m* 值必须是正整数。 默认情况下， **char** 列的最大长度为 8000 个字符， **nchar** 列的最大长度为 4000 个字符。|可选|  
 |排序规则 **="*`collationName`*"**|COLLATION 仅适用于字符字段。 有关 SQL 排序规则名称的列表，请参阅 [SQL Server 排序规则名称 (Transact SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。|可选|  
 |终止符 **="*`terminator`*"**|此属性指定数据字段的终止符。 该终止符可以是任意字符。 该字符必须是数据中没有的唯一字符。<br /><br /> 默认情况下，该字段的终止符为制表符（用 \t 表示）。 若要表示段落标记，请使用 \r\n。|仅和需要该属性的字符数据 xsi:type 一起使用。|  
@@ -228,7 +228,7 @@ ms.locfileid: "48201037"
 |----------------------|-----------------|------------------------------|  
 |源 **="*`fieldID`*"**|指定映射到列的字段 ID。<br /><br /> < COLUMN SOURCE **="*`fieldID`*"**/ > 将映射到 < 字段 ID **="*`fieldID`*"**/>|Required|  
 |NAME = "*columnName*"|指定格式化文件所表示的行集中的列名。 此列名用于标识结果集中的列，并且该列不需要与目标表中使用的列名相对应。|Required|  
-|xsi **:** 类型 **="*`ColumnType`*"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的数据类型。 *ColumnType* 的值决定了给定实例中需要下面哪个可选属性。<br /><br /> 注意： 可能的值的*ColumnType*和下一个表中列出其关联的属性。|可选|  
+|xsi **:** 类型 **="*`ColumnType`*"**|这是一个 XML 构造，用法类似于属性。它定义元素实例的数据类型。 *ColumnType* 的值决定了给定实例中需要下面哪个可选属性。<br /><br /> 注意：可能值*ColumnType*和下一个表中列出其关联的属性。|可选|  
 |LENGTH =""***`n`***|定义固定长度的数据类型实例的长度。 仅当 xsi:type 为字符串数据类型时，才使用 LENGTH。<br /><br /> *n* 值必须是正整数。|可选（仅当 xsi:type 是字符串数据类型时才可用）|  
 |PRECISION =""***`n`***|指示数字的位数。 例如，数 123.45 精度为 5。<br /><br /> 该值必须是正整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
 |规模 **="*`int`*"**|指示数字中小数点右边的位数。 例如，数字 123.45 的小数位数为 2。<br /><br /> 该值必须为整数。|可选（仅在 xsi:type 是变量数字数据类型时才可用）|  
@@ -241,7 +241,7 @@ ms.locfileid: "48201037"
   
 |类型类别|\<COLUMN> 数据类型|数据类型<br /><br /> 的可选 XML 属性|数据类型<br /><br /> 的可选 XML 属性|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|固定|`SQLBIT``SQLTINYINT`， `SQLSMALLINT`， `SQLINT`， `SQLBIGINT`， `SQLFLT4`， `SQLFLT8`， `SQLDATETIME`， `SQLDATETIM4`， `SQLDATETIM8`， `SQLMONEY`， `SQLMONEY4`， `SQLVARIANT`，和 `SQLUNIQUEID`|无。|NULLABLE|  
+|固定|`SQLBIT`、`SQLTINYINT`、`SQLSMALLINT`、`SQLINT`、`SQLBIGINT`、`SQLFLT4`、`SQLFLT8`、`SQLDATETIME`、`SQLDATETIM4`、`SQLDATETIM8`、`SQLMONEY`、`SQLMONEY4`、`SQLVARIANT` 和 `SQLUNIQUEID`|无。|NULLABLE|  
 |变量号|`SQLDECIMAL` 和 `SQLNUMERIC`|无。|NULLABLE、PRECISION、SCALE|  
 |LOB|`SQLIMAGE`、`CharLOB`、`SQLTEXT` 和 `SQLUDT`|无。|NULLABLE|  
 |字符 LOB|`SQLNTEXT`|无。|NULLABLE|  
@@ -249,7 +249,7 @@ ms.locfileid: "48201037"
 |字符串|`SQLCHAR`、`SQLVARYCHAR`、`SQLNCHAR` 和 `SQLNVARCHAR`|无。|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
->  若要大容量导出或导入 SQLXML 数据，请在格式文件中使用下列数据类型之一：SQLCHAR 或 SQLVARYCHAR（数据以客户端代码页或排序规则隐含的代码页的形式发送）、SQLNCHAR 或 SQLNVARCHAR（数据以 Unicode 的形式发送）或者 SQLBINARY 或 SQLVARYBIN（数据不经任何转换直接发送）。  
+>  若要大容量导出或导入 SQLXML 数据，请在格式化文件中使用下列数据类型之一：SQLCHAR 或 SQLVARYCHAR （数据在客户端代码页或排序规则隐含的代码页中发送）、 SQLNCHAR 或 SQLNVARCHAR （以 unicode 格式发送数据），或者 SQLBINARY 或 SQLVARYBIN （不经任何转换发送数据）。  
   
  有关值数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)。  
   
@@ -308,9 +308,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. 对字符数据字段和表列进行相同的排序  
  下面的示例显示了一个 XML 格式化文件，该文件描述一个包含三个字符数据字段的数据文件。 格式化文件将数据文件映射到包含三列的表中。 数据字段与表中的列一一对应。  
   
- **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **表 （行）：** Person （Age int，FirstName varchar （20），LastName varchar(30))  
   
- **数据文件（记录）：** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **数据文件 （记录）：** 年龄\<选项卡 > Firstname\<选项卡 > 姓氏\<返回 >  
   
  以下 XML 格式化文件从数据文件读取数据到表中。  
   
@@ -321,7 +321,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -346,9 +346,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. 对数据字段和表列进行不同的排序  
  下面的示例显示了一个 XML 格式化文件，该文件描述一个包含三个字符数据字段的数据文件。 格式化文件将数据文件映射到包含三列（与数据文件的字段排序方式不同）的表中。  
   
- **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **表 （行）：** Person （Age int，FirstName varchar （20），LastName varchar(30))  
   
- **数据文件**（记录）：Age\<tab>Lastname\<tab>Firstname\<return>  
+ **数据文件**（记录）：年龄\<选项卡 > Lastname\<选项卡 > 名字\<返回 >  
   
  在 `<RECORD>` 元素中，格式化文件将所有三个字段中的数据值表示为字符数据。  
   
@@ -357,7 +357,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -381,9 +381,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="c-omitting-a-data-field"></a>C. 省略数据字段  
  下面的示例显示了一个 XML 格式化文件，该文件描述一个包含四个字符数据字段的数据文件。 格式化文件将数据文件映射到包含三列的表中。 第二个数据字段不与任何表列对应。  
   
- **表（行）：** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **表 （行）：** Person (Age int，FirstName varchar （20），LastName Varchar(30))  
   
- **数据文件（记录）：** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **数据文件 （记录）：** 年龄\<选项卡 > employeeID\<选项卡 > Firstname\<选项卡 > 姓氏\<返回 >  
   
  在 `<RECORD>` 元素中，格式化文件将所有四个字段中的数据值表示为字符数据。 对于每个字段，TERMINATOR 属性指示位于数据值后面的终止符。  
   
@@ -391,7 +391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ```  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -423,7 +423,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -465,7 +465,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -484,7 +484,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  

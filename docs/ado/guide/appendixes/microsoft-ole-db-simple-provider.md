@@ -15,12 +15,12 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604637"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209046"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单的提供程序概述
 Microsoft OLE DB 简单提供程序 (OSP) 允许访问已为其提供程序已编写使用任何数据的 ADO [OLE DB 简单提供程序 (OSP) 工具包](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 简单的提供程序用于访问需要唯一重要的 OLE DB 支持，如内存中数组或 XML 文档的数据源。
@@ -57,13 +57,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  XML DSO 使用内置的试探法来将 XML 树中的节点转换为分层结构中的各章**记录集**。
@@ -73,8 +73,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  请注意项目组合和信息标记不会出现在层次结构**记录集**。 有关 XML DSO 如何将 XML 树转换为层次结构的说明**记录集**，请参阅下面的规则。 下一节中讨论 $Text 列。

@@ -19,12 +19,12 @@ ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: baf827dbedeb8a822a729e27d08fca4fa6b7f95a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acdd99c590f05fbe21777416dcd56234a6a797d0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172087"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417438"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>RestoreEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
   将指定的加密密钥重新应用于报表服务器数据库。  
@@ -64,7 +64,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="remarks"></a>备注  
  如果报表服务器数据库中已经存在报表服务器的条目，则删除它。 然后，使用指定的加密密钥和报表服务器的公钥创建新条目。  
   
- 该方法是调用之后时最有效[DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md)方法，这会清除加密密钥的列表。  
+ 在调用清除加密密钥列表的 [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) 方法之后调用该方法最有效。  
   
 ## <a name="requirements"></a>要求  
  **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

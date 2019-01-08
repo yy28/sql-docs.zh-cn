@@ -20,16 +20,16 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04daf57a348f20c8a5febe8d56f8ed9358b9053
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213691"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLConnect**建立到驱动程序和数据源的连接。 连接句柄所引用有关连接到数据源，包括状态、 事务状态和错误信息的所有信息的存储。  

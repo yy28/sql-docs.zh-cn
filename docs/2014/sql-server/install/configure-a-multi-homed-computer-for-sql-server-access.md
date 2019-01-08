@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
@@ -15,12 +14,12 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4460b94a758a60abe27d8e9f3a90567ecbcbaa13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785619"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
   当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
@@ -58,7 +57,7 @@ ms.locfileid: "48163507"
   
 1.  在其上的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是安装，请单击**启动**，单击**运行**，类型`cmd`，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-2.  在命令提示符窗口中，键入`ipconfig,`，然后按 ENTER 列出此计算机上可用的 IP 地址。  
+2.  在“命令提示符”窗口中，键入 `ipconfig,`，然后按 Enter 列出此计算机上可用的 IP 地址。  
   
     > [!NOTE]  
     >  **ipconfig** 命令有时会列出许多可能的连接，包括已断开的连接。 **ipconfig** 命令可同时列出 IPv4 和 IPv6 地址。  
@@ -100,7 +99,7 @@ ms.locfileid: "48163507"
   
 8.  在 **“协议和端口”** 页上，选择 **TCP**。  
   
-9. 选择 **“指定的本地端口”**。 键入端口号（由逗号分隔），然后单击 **“下一步”**。 在此示例中，您将配置默认端口;因此，如果输入`1433`。  
+9. 选择 **“指定的本地端口”**。 键入端口号（由逗号分隔），然后单击 **“下一步”**。 在本示例中，你将配置默认端口；因此请输入 `1433`。  
   
 10. 在 **“操作”** 页上，查看各选项。 在本示例中，不使用防火墙强制进行安全连接。 因此，请单击 **“允许连接”**，然后单击 **“下一步”**。  
   

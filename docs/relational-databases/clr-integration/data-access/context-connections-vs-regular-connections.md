@@ -13,18 +13,18 @@ ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 63fd25aa796be6f0fce27bfbfa5b7da36d35e2d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4810a7a7d117c498ce74dbe978716900b25d19f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516783"
 ---
 # <a name="context-connections-vs-regular-connections"></a>上下文连接与常规连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   如果要连接到远程服务器，请始终使用常规连接，而不使用上下文连接。 如果您需要连接到存储过程或函数正在其上运行的同一台服务器，则在大多数情况下请使用上下文连接。 这具有一些优势，例如，在同一个事务空间中运行以及不必重新验证。  
   
- 此外，使用上下文连接通常会导致性能更佳和占用更少的资源。 上下文连接是纯进程内连接，因此，它可以跳过网络协议和传输层“直接”与服务器联系，以发送 Transact-SQL 语句和接收结果。 同时跳过验证过程。 下图显示的主要组成部分**SqlClient**托管提供程序，以及不同组件时使用常规连接和使用上下文连接时相互的交互。  
+ 此外，使用上下文连接通常会导致性能更佳和占用更少的资源。 上下文连接是过程仅在建立连接后，因此它可以与服务器联系"直接"通过跳过网络协议和传输层发送 TRANSACT-SQL 语句和接收结果。 同时跳过验证过程。 下图显示的主要组成部分**SqlClient**托管提供程序，以及不同组件时使用常规连接和使用上下文连接时相互的交互。  
   
  ![上下文和常规连接代码路径。](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "代码的上下文和常规连接的路径。")  
   

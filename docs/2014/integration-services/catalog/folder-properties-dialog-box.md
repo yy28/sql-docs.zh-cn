@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscreatefolder.f1
@@ -15,12 +14,12 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dcbd655e33cfc2ad74eacdd0453c40f93b7c373
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6cbca0592074b34250d5d07003494800942affaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155137"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804559"
 ---
 # <a name="folder-properties-dialog-box"></a>“文件夹属性”对话框
   文件夹包含 `SSISDB` 目录中的项目和环境。 每个文件夹都定义应用于该文件夹的内容的权限。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 权限的详细信息 ，请参阅 [catalog.grant_permission（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)。  

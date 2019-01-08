@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - isolating performance problems [SQL Server]
@@ -19,12 +18,12 @@ ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86350dae3a41ffd994110491ab558367866f9bc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115007"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810699"
 ---
 # <a name="isolate-performance-problems"></a>隔离性能问题
   通常同时使用多个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Microsoft Windows 工具比一次只用一个工具隔离数据库性能问题更有效。 例如，图形执行计划功能（也称为“显示计划”）可以迅速识别单个查询中的死锁。 然而，如果同时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 的监视功能，将更容易识别某些其他性能问题。  
@@ -54,6 +53,6 @@ ms.locfileid: "48115007"
   
  [识别瓶颈](identify-bottlenecks.md)  
   
- [监视内存用量](../performance-monitor/monitor-memory-usage.md)  
+ [监视内存使用量](../performance-monitor/monitor-memory-usage.md)  
   
   

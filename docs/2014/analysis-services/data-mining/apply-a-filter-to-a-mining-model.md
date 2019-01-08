@@ -16,12 +16,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512640"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
   如果挖掘结构包含嵌套表，则可以对事例表、嵌套表或两者同时应用筛选器。  
@@ -47,7 +47,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     - 或 -  
+     -或-  
   
      选择该模型。 然后，在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
@@ -67,11 +67,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  单击 **“值”** 文本框，然后在此框中键入一个值。  
   
-     例如，选择`Income`作为列，选择大于运算符 (>)，然后键入`30000`。  
+     例如，依次选择 `Income` 作为列和大于 (>) 运算符，然后键入 `30000`。  
   
 9. 单击网格中的下一行。  
   
-     您所创建的筛选条件自动添加到“表达式”文本框中。 例如，使用 IPv4 地址 `[Income] > '30000'`  
+     您所创建的筛选条件自动添加到“表达式”文本框中。 例如： `[Income] > '30000'`  
   
 10. 单击网格下一行中的“AND/OR”文本框，以添加条件。  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 按步骤 7 和 8 中所述选择一个运算符并键入一个值。  
   
-     例如，选择`Income`作为列再次选择小于运算符 (<)，然后键入`40000`。  
+     例如，再次选择 `Income` 作为列，选择小于 (<) 运算符，然后键入 `40000`。  
   
 12. 单击网格中的下一行。  
   
@@ -97,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      在 **“模型筛选器”** 对话框中，只有这些条件可用于嵌套表，因为您要将事例表限定为包含嵌套表中某一特定值的那些事例。 在下一步中，您将设置嵌套表条件的值。  
   
-4.  单击“值”框，然后单击 **(…)** 按钮以生成一个表达式。  
+4.  单击**值**框中，然后依次 **（...）** 按钮以生成一个表达式。  
   
      **\<名称 > 筛选器**对话框随即打开。 此对话框只能设置当前表的条件，本例中当前表是嵌套表。  
   
@@ -127,7 +127,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)   
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](delete-a-filter-from-a-mining-model.md)  
   

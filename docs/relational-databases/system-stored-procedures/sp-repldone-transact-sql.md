@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_repldone
@@ -17,12 +16,12 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2343d19e81d7d32ee0d4cf9ddf818b2f27a77191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaeebd1aa2d6fe4ea443c7ed18ac157135ae4d64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743451"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747741"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ sp_repldone [ @xactid= ] xactid
   
  所需的参数*xactid*并*xact_seqno*可以通过使用获取**sp_repltrans**或者**sp_replcmds**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_repldone**。  
   
 ## <a name="examples"></a>示例  

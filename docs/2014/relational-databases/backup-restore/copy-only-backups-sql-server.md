@@ -14,12 +14,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf2a1c84bab547e7b3dbc4bd1a930b4605f4052f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149637"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504834"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
   *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
@@ -34,7 +34,7 @@ ms.locfileid: "48149637"
   
 -   仅复制日志备份（仅限于完整恢复模式和大容量日志恢复模式）  
   
-     仅复制日志备份保留当前日志存档点，因此，不影响常规日志备份的序列。 通常不必进行仅复制日志备份。 相反，您可以创建新的常规日志备份（使用 WITH NORECOVERY），然后将该备份与还原序列所需的任何以前的日志备份一起使用。 但是，仅复制日志备份有时可用于执行联机还原。 有关示例，请参阅[示例：读/写文件的联机还原（完整恢复模式）](example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
+     仅复制日志备份保留当前日志存档点，因此，不影响常规日志备份的序列。 通常不必进行仅复制日志备份。 相反，您可以创建新的常规日志备份（使用 WITH NORECOVERY），然后将该备份与还原序列所需的任何以前的日志备份一起使用。 但是，仅复制日志备份有时可用于执行联机还原。 此示例，请参阅[示例：联机还原读 / 写文件的&#40;完全恢复模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
   
      事务日志从不在仅复制备份后出现截断。  
   
@@ -52,18 +52,18 @@ ms.locfileid: "48149637"
   
 -   对于仅复制完整备份：  
   
-     BACKUP DATABASE *database_name* TO\<备份设备*>*  ... WITH COPY_ONLY …  
+     BACKUP DATABASE *database_name* TO\<备份设备*>*  ...使用 COPY_ONLY...  
   
     > [!NOTE]  
     >  使用 DIFFERENTIAL 选项指定时，COPY_ONLY 不起作用。  
   
 -   对于仅复制日志备份：  
   
-     BACKUP LOG *database_name* TO *\<* backup_device*>* … WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO  *\<* 备份设备*>*  ...使用 COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-1.  使用`Backup-SqlDatabase`cmdlet 与`-CopyOnly`参数。  
+1.  将 `Backup-SqlDatabase` cmdlet 与 `-CopyOnly` 参数一起使用。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **创建完整备份或日志备份**  

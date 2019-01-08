@@ -15,19 +15,19 @@ ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7e2a3ff2f7e0f1a224b837eb46aad42840b057c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190707"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362340"
 ---
 # <a name="server-configuration---collation"></a>服务器配置 - 排序规则
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置 – 排序规则”页上修改[!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 排序时所用的排序规则设置。 选择相应选项以匹配其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装或者其他计算机的排序规则设置。  
   
 ## <a name="options"></a>选项  
  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行自定义  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了两个组的排序规则： Windows 排序规则和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则。 您可以为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定不同的排序规则设置，也可以为它们指定相同的排序规则。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了两个组的排序规则：Windows 排序规则和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则。 您可以为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定不同的排序规则设置，也可以为它们指定相同的排序规则。  
   
  默认情况下，对于美国英语系统区域设置，选择的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地化版本的默认排序规则由您的计算机的 Windows 系统区域设置决定。  
   
@@ -35,10 +35,10 @@ ms.locfileid: "48190707"
   
  **注意** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅使用 Windows 排序规则。 如果计划安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间，选择 Windows 排序规则，以确保 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之间结果的一致性。  
   
- 有关详细信息，请参阅 [Collation Settings in Setup](http://go.microsoft.com/fwlink/?LinkId=190977)（安装程序中的排序规则设置）。  
+ 有关详细信息，请参阅 [Collation Settings in Setup](https://go.microsoft.com/fwlink/?LinkId=190977)（安装程序中的排序规则设置）。  
   
 ## <a name="best-practices"></a>最佳实践  
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序使用的 Windows 系统区域设置以及相应的默认排序规则的表的详细信息，请参阅 [Collation Settings in Setup](http://go.microsoft.com/fwlink/?LinkId=190977)（安装程序中的排序规则设置）。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序使用的 Windows 系统区域设置以及相应的默认排序规则的表的详细信息，请参阅 [Collation Settings in Setup](https://go.microsoft.com/fwlink/?LinkId=190977)（安装程序中的排序规则设置）。  
   
  如果可能，请为您的组织使用一个排序规则。 这样就不必为每个数据库、列、表达式或标识符显式指定排序规则。 如果必须使用多个排序规则和代码页设置，请对查询进行编码，以考虑排序规则优先顺序规则。 有关详细信息，请参阅联机丛书主题中的[排序规则优先级 (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)。  
   

@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149207"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372889"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>连接到 Azure SQL Database (SSAS)
   “表导入向导” 的这一页可用于连接到 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
@@ -26,7 +26,7 @@ ms.locfileid: "48149207"
 > [!NOTE]  
 >  若要连接到 Azure DataMarket 数据集，请参阅[连接到报表或数据馈送 (SSAS)](connect-to-a-report-or-data-feed-ssas.md)。  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] 是一个托管的关系数据库，您可以使用 SQL Server 身份验证连接到该数据库。 有关 [!INCLUDE[ssSDS](../includes/sssds-md.md)]的详细信息，请参阅网站 [SQL Database](http://go.microsoft.com/fwlink/?LinkID=157856)。 若要连接到数据源，必须在计算机上安装适当的访问接口。  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] 是一个托管的关系数据库，您可以使用 SQL Server 身份验证连接到该数据库。 有关 [!INCLUDE[ssSDS](../includes/sssds-md.md)]的详细信息，请参阅网站 [SQL Database](https://go.microsoft.com/fwlink/?LinkID=157856)。 若要连接到数据源，必须在计算机上安装适当的访问接口。  
   
 > [!NOTE]  
 >  在此页中选择数据库时，将使用当前用户的凭据。 但是，如果在“模拟信息”页中指定的用户没有足够的权限从所选数据库中读取，则导入将不会成功。  

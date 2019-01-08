@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.location.file
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffa9cad3ef994f3306a485d5a911f2e03eff0f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36833c6eb5fc588edb2d12716ba439140b8a1cbe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211437"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327328"
 ---
 # <a name="edit-a-breakpoint-location"></a>编辑断点位置
   断点位置指定断点在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件中所处的行和字符位置。 您可以编辑断点位置以将断点移至脚本的其他位置，或移至其他脚本。  
@@ -45,5 +43,3 @@ ms.locfileid: "48211437"
  [指定断点操作](specify-a-breakpoint-action.md)   
  [指定断点条件](specify-a-breakpoint-condition.md)   
  [指定断点筛选器](specify-a-breakpoint-filter.md)  
-  
-  

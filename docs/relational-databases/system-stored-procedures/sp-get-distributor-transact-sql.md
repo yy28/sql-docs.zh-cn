@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_get_distributor
@@ -17,12 +16,12 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf685a9dec6f815d30b11db3e4f4933cd7ac19d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccdc8529bb62e4e1db15f0a5ea85a64c5b679abf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634445"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760179"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_get_distributor
 ## <a name="remarks"></a>备注  
  **sp_get_distributor**主要由[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]快照、 事务和合并复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以执行**sp_get_distributor**。 一个非 NULL 结果集返回时，此存储过程执行的成员**db_owner**或**replmonitor**固定数据库角色的成员的分发数据库上**db_owner**上至少一个已发布的数据库的固定的数据库角色。 一个非 NULL 结果集时也会返回此存储的过程执行中的发布访问列表 (PAL) 的用户在至少一个已发布数据库，或在分发数据库的非 SQL Server 发布服务器的 PAL，也可以执行**sp_get_distributor**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 教程：地图报表（报表生成器）| Microsoft Docs
+title: 教程：地图报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098847"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359859"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
   本教程旨在帮助您了解地图功能，您可以使用该功能针对地理背景显示报表数据。  
@@ -63,7 +63,7 @@ ms.locfileid: "48098847"
 10. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器的分步说明，选择数据源、 创建数据集，并运行该向导，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  本教程的预计学时：30 分钟。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48098847"
   
 9. 在查询设计器工具栏中，单击“运行”(**!**)。  
   
-     结果集将显示七列：StoreKey、StoreName、SellingArea、City、County、Sales 和 SpatialLocation。 此数据表示纽约州销售生活消费品的一组商店。 结果集中的每行都包含一个商店标识符、商店名称、用于产品显示的区域、商店所在的市和县、总销售额以及用经度和纬度表示的空间位置。 显示区域范围从 455 平方英尺到 1125 平方英尺。  
+     结果集将显示七列：StoreKey、 StoreName、 SellingArea、 City、 County、 销售和 SpatialLocation。 此数据表示纽约州销售生活消费品的一组商店。 结果集中的每行都包含一个商店标识符、商店名称、用于产品显示的区域、商店所在的市和县、总销售额以及用经度和纬度表示的空间位置。 显示区域范围从 455 平方英尺到 1125 平方英尺。  
   
 10. 单击“下一步” 。  
   
@@ -576,12 +576,12 @@ ms.locfileid: "48098847"
   
 3.  在“名称”中，键入“纽约的商店销售额”。  
   
- 单击 **“保存”**。  
+ 单击“保存” 。  
   
 ## <a name="next-steps"></a>后续步骤  
  到此为止，我们结束了有关如何向报表添加地图的演练。  
   
- 有关详细信息，请参阅[映射&#40;报表生成器和 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)和博客文章[空间数据的制图调整 SQL Server Reporting services](http://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com 上的。  
+ 有关详细信息，请参阅[映射&#40;报表生成器和 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)和博客文章[空间数据的制图调整 SQL Server Reporting services](https://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com 上的。  
   
  有关更多教程，请参阅[教程&#40;报表生成器&#41;](report-builder-tutorials.md)。  
   

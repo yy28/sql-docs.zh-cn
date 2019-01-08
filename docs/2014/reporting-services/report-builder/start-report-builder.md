@@ -16,24 +16,24 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192497"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375319"
 ---
 # <a name="start-report-builder-report-builder"></a>启动报表生成器（报表生成器）
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包含独立和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的报表生成器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可用于本机模式或 SharePoint 集成模式下安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 > [!NOTE]  
->  报表生成器不能安装在基于 Itanium 64 的计算机中。 这适用于[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和报表生成器的独立版本。  
+>  报表生成器不能安装在基于 Itanium 64 的计算机中。 这适用于报表生成器的 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本和独立版本。  
   
  如果[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]将打开报表生成器版本是早期版本的报表生成器，请联系您的管理员可以更新报表管理器和 SharePoint 站点以使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本的报表生成器  
   
- 还可以使用报表生成器的 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本来在已发布到 SharePoint 的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 工作簿上创建报表。 有关使用报表生成器的详细信息[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，请参阅[使用 PowerPivot 数据创建 Reporting Services 报表](http://go.microsoft.com/fwlink/?LinkId=185238)technet.microsoft.com 上。  
+ 还可以使用报表生成器的 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本来在已发布到 SharePoint 的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 工作簿上创建报表。 有关使用报表生成器的详细信息[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，请参阅[使用 PowerPivot 数据创建 Reporting Services 报表](https://go.microsoft.com/fwlink/?LinkId=185238)technet.microsoft.com 上。  
   
- 若要启动报表生成器从独立**启动**菜单上在本地计算机，您或管理员必须直接在您的计算机上安装报表生成器，然后该工具可供你使用。 在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时未安装独立版本；您必须单独下载并安装它。 若要下载报表生成器，请参阅[Microsoft® SQL Server® 2012年报表生成器](http://go.microsoft.com/fwlink/?LinkId=401502)。  
+ 若要启动报表生成器从独立**启动**菜单上在本地计算机，您或管理员必须直接在您的计算机上安装报表生成器，然后该工具可供你使用。 在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时未安装独立版本；您必须单独下载并安装它。 若要下载报表生成器，请参阅[Microsoft® SQL Server® 2012年报表生成器](https://go.microsoft.com/fwlink/?LinkId=401502)。  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>从报表管理器启动 Report Builder ClickOnce  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48192497"
   
      报表生成器将打开，您随后可以在报表服务器上创建报表或打开报表。  
   
-     **请注意**如果**新的文档**菜单未列出**报表生成器报表**，**报表生成器模型**，和**报表数据源**选项，其内容类型需要将添加到 SharePoint 库。 有关详细信息，请参阅[将报表服务器内容类型添加到库&#40;在 SharePoint 集成模式下的 Reporting Services&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=154888)上msdn.microsoft.com。  
+     **请注意**如果**新的文档**菜单未列出**报表生成器报表**，**报表生成器模型**，和**报表数据源**选项，其内容类型需要将添加到 SharePoint 库。 有关详细信息，请参阅[将报表服务器内容类型添加到库&#40;在 SharePoint 集成模式下的 Reporting Services&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)上msdn.microsoft.com。  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>从“开始”菜单启动报表生成器独立版本  
   

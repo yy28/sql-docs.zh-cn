@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -16,12 +15,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169782"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772199"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中处理复制代理配置文件。 每个复制代理的行为都受一组参数控制，这些参数是通过代理配置文件设置的。 每个代理都有一个默认配置文件，有些代理还有一些其他的预定义配置文件；每个代理每次只能使用一个配置文件。  
@@ -92,7 +91,7 @@ ms.locfileid: "48169782"
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
-2.  单击配置文件旁边的属性按钮 (**...**)。  
+2.  单击配置文件旁边的属性按钮 (...)。  
   
 3.  查看“\<ProfileName> 配置文件属性”对话框中的参数和值。  
   
@@ -245,7 +244,7 @@ ms.locfileid: "48169782"
   
     -   （可选） <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 配置文件的说明。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -将此属性设置为`true`如果对此的所有新代理作业<xref:Microsoft.SqlServer.Replication.AgentType>将默认使用此配置文件。  
+    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果默认情况下此 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理作业都将使用此配置文件，则将此属性设置为 `true`。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法以在服务器上创建配置文件。  
   
@@ -279,7 +278,7 @@ ms.locfileid: "48169782"
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为从步骤 1 中获得的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，则指定的名称不正确或服务器上不存在该配置文件。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 `false`，则指定的名称不正确或服务器上不存在该配置文件。  
   
 4.  验证 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 属性是否设置为指示某个客户配置文件的 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>。 您不应该删除 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的值为 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>的配置文件。  
   

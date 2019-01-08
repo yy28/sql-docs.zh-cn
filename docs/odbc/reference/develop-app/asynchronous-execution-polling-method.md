@@ -13,12 +13,12 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701077"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523437"
 ---
 # <a name="asynchronous-execution-polling-method"></a>异步执行（轮询方法）
 在 ODBC 3.8 和 Windows 7 SDK 之前, 是仅在语句函数上允许异步操作。 有关详细信息，请参阅**以异步方式执行语句操作**，本主题中更高版本。  
@@ -135,9 +135,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- 当应用程序调用一个函数来确定是否仍在执行以异步方式时，它必须使用原始语句句柄。 这是因为在每个语句的基础上跟踪异步执行。 应用程序还必须提供有效的其他自变量的值 — 原始参数将执行操作，获取过去的错误检查驱动程序管理器中。 但是，该驱动程序检查语句句柄，并确定以异步方式执行该语句后，它会忽略所有其他参数。  
+ 当应用程序调用一个函数来确定是否仍在执行以异步方式时，它必须使用原始语句句柄。 这是因为在每个语句的基础上跟踪异步执行。 应用程序还必须提供有效的其他自变量的值-原始参数将执行的操作-过去的错误检查驱动程序管理器中。 但是，该驱动程序检查语句句柄，并确定以异步方式执行该语句后，它会忽略所有其他参数。  
   
- 以异步方式执行函数时，使用 — 也就是说，它返回 SQL_STILL_EXECUTING 之后，并在它返回不同的代码 — 应用程序可以将其取消通过调用**SQLCancel**或**SQLCancelHandle**具有相同的语句句柄。 这不保证取消函数执行。 例如，该函数可能具有已完成。 此外，通过返回的代码**SQLCancel**或**SQLCancelHandle**仅指示尝试取消该函数成功，不是它真正取消函数。 若要确定是否已取消该函数，该应用程序再次调用此函数。 如果该函数已被取消，则返回 SQL_ERROR 并且 SQLSTATE HY008 （已取消的操作）。 如果未取消该函数，则返回另一个代码，比如 SQL_SUCCESS、 SQL_STILL_EXECUTING 或使用不同的 SQLSTATE SQL_ERROR。  
+ 以异步方式-执行函数时，即它返回 SQL_STILL_EXECUTING 后，才会返回不同的代码的应用程序可以取消它通过调用**SQLCancel**或**SQLCancelHandle**具有相同的语句句柄。 这不保证取消函数执行。 例如，该函数可能具有已完成。 此外，通过返回的代码**SQLCancel**或**SQLCancelHandle**仅指示尝试取消该函数成功，不是它真正取消函数。 若要确定是否已取消该函数，该应用程序再次调用此函数。 如果该函数已被取消，则返回 SQL_ERROR 并且 SQLSTATE HY008 （已取消的操作）。 如果未取消该函数，则返回另一个代码，比如 SQL_SUCCESS、 SQL_STILL_EXECUTING 或使用不同的 SQLSTATE SQL_ERROR。  
   
  若要禁用特定语句的异步执行时的驱动程序支持语句级异步处理，应用程序调用**SQLSetStmtAttr** sql_attr_async_enable 设置与特性，并将其设置为 SQL_ASYNC_ENABLE_OFF。 如果该驱动程序支持连接级别异步处理，应用程序调用**SQLSetConnectAttr**将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_OFF，禁用异步执行的所有语句连接。  
   

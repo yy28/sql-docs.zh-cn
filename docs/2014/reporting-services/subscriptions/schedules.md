@@ -18,15 +18,15 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 405bb71bc5ceaee65afa70d055c88a75a2326ca9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b59f544894677c75f923c2dd6185c229495e42ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107459"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372779"
 ---
 # <a name="schedules"></a>“计划”
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供共享的计划和报表特定计划，可帮助你控制处理和分发报表。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了共享计划和报表特定计划，可帮助您控制报表的处理和分发。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  
   
  本主题内容：  
   
@@ -64,10 +64,10 @@ ms.locfileid: "48107459"
   
  创建计划时，报表会将计划信息保存在报表服务器的数据库中，或者对于 SharePoint 模式，保存在服务应用程序数据库中。 报表服务器还会创建用于触发计划的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 计划是基于其所在报表服务器的本地时间进行处理的。 其时间格式遵从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统标准。  
   
- 有关如何创建和管理计划的详细信息，请参阅[Create，Modify，and Delete Schedules](create-modify-and-delete-schedules.md)。  
+ 有关如何创建和管理计划的详细信息，请参阅 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供计划操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供计划操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ##  <a name="bkmk_compare"></a> 共享计划和报表特定计划的区别  
  两种类型的计划将产生相同的输出：  
@@ -101,7 +101,7 @@ ms.locfileid: "48107459"
 |在用户定义的订阅中创建、修改或删除报表特定计划|管理单独的订阅|浏览者、报表生成器、我的报表、内容管理员|访问者，成员|  
 |创建、修改或删除所有其他计划操作的报表特定计划|管理报表历史记录，管理所有订阅，管理报表|内容管理员|所有者|  
   
- 有关在纯模式下的安全详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[预定义角色](../security/role-definitions-predefined-roles.md)，[授予对本机模式报表服务器的权限](../security/granting-permissions-on-a-native-mode-report-server.md)和[任务和权限](../security/tasks-and-permissions.md). 对于 SharePoint 模式，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ 有关本地模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的详细信息，请参阅 [预定义角色](../security/role-definitions-predefined-roles.md)、 [授予对本机模式报表服务器的权限](../security/granting-permissions-on-a-native-mode-report-server.md) 和 [任务和权限](../security/tasks-and-permissions.md)。 对于 SharePoint 模式，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 计划和传递处理的工作方式  
  计划和传递处理器提供以下功能：  
@@ -126,7 +126,7 @@ ms.locfileid: "48107459"
   
      在处理事件之前，计划和传递处理器会执行身份验证步骤以验证订阅的所有者有权查看该报表。  
   
- Reporting Services 维护一个针对所有计划操作的事件队列。 它定期轮询队列，检查是否有新事件。 默认情况下，每隔 10 秒扫描一次队列。 可以通过修改更改的间隔`PollingInterval`， `IsNotificationService`，和`IsEventService`RSReportServer.config 文件中的配置设置。 SharePoint 模式还将 RSreporserver.config 用于这些设置，并且值应用于所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
+ Reporting Services 维护一个针对所有计划操作的事件队列。 它定期轮询队列，检查是否有新事件。 默认情况下，每隔 10 秒扫描一次队列。 通过修改 RSReportServer.config 文件中的 `PollingInterval`、`IsNotificationService` 和 `IsEventService` 配置设置可以更改此间隔。 SharePoint 模式还将 RSreporserver.config 用于这些设置，并且值应用于所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="bkmk_serverdependencies"></a> 服务器依赖关系  
  计划和传递处理器需要启动报表服务器服务和 SQL Server 代理。 计划和传递处理功能必须通过启用`ScheduleEventsAndReportDeliveryEnabled`的属性**Reporting Services 的外围应用配置**中基于策略的管理方面。 SQL Server 代理和报表服务器服务必须都在运行，才能执行计划的操作。  
@@ -144,11 +144,11 @@ ms.locfileid: "48107459"
  如果停止报表服务器服务，SQL Server 代理会继续向队列中添加报表处理请求。 来自 SQL Server 代理的状态信息将指示作业成功。 但是，由于报表服务器服务已停止，因此实际上不会发生报表处理。 在您重新启动报表服务器服务之前，请求将在队列中一直累积。 重新启动报表服务器服务后，将按顺序处理队列中的所有报表处理请求。  
   
 ## <a name="see-also"></a>请参阅  
- [创建、 修改和删除报表历史记录中的快照](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [数据驱动订阅](data-driven-subscriptions.md)   
+ [创建、修改和删除报表历史记录中的快照](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [缓存报表 (SSRS)](../report-server/caching-reports-ssrs.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [缓存共享数据集&#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
+ [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [缓存共享数据集 (SSRS)](../report-server/cache-shared-datasets-ssrs.md)  
   
   

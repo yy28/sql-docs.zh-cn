@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198367"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371119"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
   与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以将引用数据的主列表分发给你组织中使用 Excel 的每个人。 可通过安全权限来确定用户可以查看和更新的数据。  
@@ -28,7 +27,7 @@ ms.locfileid: "48198367"
  在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以先使用 Data Quality Services (DQS) 来匹配数据，然后再将其加载到 MDS 中。 这有助于防止 MDS 中的数据重复。  
   
 > [!IMPORTANT]  
->  在将 Master Data Services 和 Data Quality Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 您可以下载[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版本的 Master Data Services 外接程序从 excel[此处](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 在将 Master Data Services 和 Data Quality Services 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的  SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以从 [此处](https://go.microsoft.com/fwlink/?LinkId=328664)下载用于 Excel 的 Master Data Services 外接程序的  SP1 版本。  
   
 ## <a name="terms"></a>术语  
  使用该外接程序时，您可能会遇到以下术语。  

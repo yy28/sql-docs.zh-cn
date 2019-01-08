@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906487"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363709"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升级 SQL Server 故障转移群集实例（安装程序）
   可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装向导或者命令提示符将 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 故障转移群集升级为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
@@ -33,7 +32,7 @@ ms.locfileid: "48906487"
   
  有关命令提示符下使用情况的示例语法的详细信息，请参阅[从命令提示符安装 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  开始之前，请仔细阅读以下重要信息：  
   
 -   [安装故障转移群集前的准备工作](../install/before-installing-failover-clustering.md)  
@@ -46,11 +45,11 @@ ms.locfileid: "48906487"
   
 -   为了确保 Visual Studio 组件可以正确安装， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要求您安装更新。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序会检查此更新是否存在，然后要求您先下载并安装此更新，接下来才能继续 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装。 若要避免在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装期间中断，可在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序之前先按下面所述下载并安装此更新（或安装 Windows Update 上提供的 .NET 3.5 SP1 的所有更新）：  
   
-     如果您在安装[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]在使用 Windows Server 2008 SP2 操作系统的计算机，您可以从所需的更新[此处](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     如果您在安装[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]在使用 Windows Server 2008 SP2 操作系统的计算机，您可以从所需的更新[此处](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      如果您在使用 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP1 或 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 操作系统的计算机上安装 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]，则已包含此更新。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][发行说明](http://go.microsoft.com/fwlink/?LinkId=296445)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
 -   对于本地安装，必须以管理员身份运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
   
@@ -79,9 +78,9 @@ ms.locfileid: "48906487"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 多子网故障转移群集  
  有两个可能的升级方案：  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集当前在单个子网上配置：您必须首先通过启动安装程序并遵循升级过程将现有群集升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 完成现有故障转移群集的升级后，使用 AddNode 功能添加位于不同子网的节点。 确认在群集网络配置页将 IP 地址资源依赖关系更改为 OR。 您现在有了一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集当前在单个子网配置：你必须首先将现有群集升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]，方法是启动安装程序，然后按照升级过程进行操作。 完成现有故障转移群集的升级后，使用 AddNode 功能添加位于不同子网的节点。 确认在群集网络配置页将 IP 地址资源依赖关系更改为 OR。 您现在有了一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集。  
   
-2.  当前使用拉伸 V-LAN 技术在多个子网配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集：您必须首先将现有的群集升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由于拉伸 V-LAN 技术配置单个子网，因此必须将网络配置更改为多个子网，使用 Windows 故障转移群集管理工具更改 IP 地址资源依赖关系，将 IP 依赖关系更改为 OR。  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集当前使用拉伸 V-LAN 技术在多个子网上配置：你必须首先将现有群集升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由于拉伸 V-LAN 技术配置单个子网，因此必须将网络配置更改为多个子网，使用 Windows 故障转移群集管理工具更改 IP 地址资源依赖关系，将 IP 依赖关系更改为 OR。  
   
 ###  <a name="BestPractices"></a> 升级前的最佳做法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集  
  若要避免出现由于重新启动而产生的意外停机时间，在群集节点上运行升级之前，请在所有故障转移群集节点上预安装 .NET Framework 4.0 的不重新引导包。 建议使用以下步骤预安装必备组件：  
@@ -113,7 +112,7 @@ ms.locfileid: "48906487"
   
 4.  如果需要使用安装程序支持文件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将安装它们。 如果安装程序指示您重新启动计算机，请在继续操作之前重新启动。  
   
-5.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
+5.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
 6.  在“产品密钥”页上输入与旧产品版本匹配的新版本的 PID 密钥。 例如，若要升级 Enterprise 故障转移群集，必须提供 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]的 PID 密钥。 单击 **“下一步”** 继续。 请注意，对于同一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的所有故障转移群集节点，用于故障转移群集升级的 PID 密钥必须一致。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../editions-and-components-of-sql-server-2016.md)并[Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
