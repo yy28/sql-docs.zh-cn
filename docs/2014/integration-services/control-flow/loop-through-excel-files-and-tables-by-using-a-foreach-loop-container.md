@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
@@ -15,12 +14,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959344c0c191f390a6f6ec61f05467af1f88107b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048347"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766659"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器，循环遍历 Excel 文件和表
   本主题中的过程介绍如何使用具有相应枚举器的 Foreach 循环容器循环访问文件夹中的 Excel 工作簿或 Excel 工作簿中的表。  
@@ -46,7 +45,7 @@ ms.locfileid: "48048347"
     > [!IMPORTANT]  
     >  若要避免在对使用此 Excel 连接管理器的任务和数据流组件进行配置时出现验证错误，请在 **“Excel 连接管理器编辑器”** 中选择一个现有的 Excel 工作簿。 在您按照下列步骤为 `ConnectionString` 属性配置表达式以后，连接管理器在运行时将不使用此工作簿。 在创建并配置包后，可在“属性”窗口中清除 `ConnectionString` 属性的值。 但是，如果清除此值，要等到 Foreach 循环运行时 Excel 连接管理器的连接字符串属性才会有效。 因此，在使用了连接管理器的任务中，必须将 `DelayValidation` 属性设置为 `True` 以避免出现验证错误。  
     >   
-    >  您还必须使用的默认值`False`为`RetainSameConnection`Excel 连接管理器属性。 如果将此值更改为 `True`，该循环的每次迭代将继续打开第一个 Excel 工作簿。  
+    >  还必须使用 Excel 连接管理器的 `False` 属性的默认值 `RetainSameConnection`。 如果将此值更改为 `True`，该循环的每次迭代将继续打开第一个 Excel 工作簿。  
   
 8.  选择新的 Excel 连接管理器，并在“属性”窗口中单击 **“表达式”** 属性，然后单击省略号。  
   

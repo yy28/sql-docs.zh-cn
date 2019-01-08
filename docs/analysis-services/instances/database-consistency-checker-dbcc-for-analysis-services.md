@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697007"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413084"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>数据库一致性检查器 (DBCC) Analysis services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC 为 Analysis Services 实例上的多维数据库和表格数据库提供按需数据库验证。 你可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查询窗口中执行 DBCC，并在 SQL Server Profiler 或 SSMS 的 xEvent 会话中跟踪 DBCC 输出。  
-命令采用对象定义，如果对象已损坏，则返回空结果集或详细的错误信息。   在本文中，你将了解如何运行命令、解释结果以及解决出现的任何问题。  
+命令采用对象定义，如果对象已损坏，则返回空结果集或详细的错误信息。   在本文中，您将了解如何运行命令、 解释结果，并解决出现的任何问题。  
   
  对于表格数据库，DBCC 执行的一致性检查相当于你每次加载、同步或还原数据库时自动进行的内置验证。  相比之下，对于多维数据库的一致性检查仅当你按需运行 DBCC 时才发生。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "51697007"
  DBCC for Analysis Services 将在位于任何兼容级别的任何 Analysis Services 数据库上执行，前提是该数据库在 SQL Server 2016 实例上运行。 你只需确保为每个数据库类型使用正确的命令语法。  
   
 > [!NOTE]  
->  如果熟悉 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)，很快就会发现 Analysis Services 中 DBCC 的作用域小地多。 Analysis Services 中的 DBCC 是单个命令，专门报告整个数据库或各个对象中的数据损坏。 如果你要考虑其他任务，例如收集信息，请尝试改用 AMO PowerShell 或 XMLA 脚本。
+>  如果您熟悉[DBCC &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)，很快就会发现 Analysis Services 中的 DBCC 的范围更窄。 Analysis Services 中的 DBCC 是单个命令，专门报告整个数据库或各个对象中的数据损坏。 如果你要考虑其他任务，例如收集信息，请尝试改用 AMO PowerShell 或 XMLA 脚本。
   
 ## <a name="permission-requirements"></a>权限要求  
  你必须是 Analysis Services 数据库或服务器管理员（服务器角色的成员）才能运行该命令。 有关说明，请参阅[授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) 或[向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -72,7 +72,7 @@ ms.locfileid: "51697007"
   
 ```  
   
- 若要针对对象链中级别更高的对象运行 DBCC，请删除你不需要的任何较低级别对象 ID 元素：  
+ 若要在更高级别的对象链对象上运行 DBCC，删除不需要任何较低级别对象 ID 元素：  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -200,7 +200,7 @@ Execution complete
   
      下面列出了错误消息。  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>参考：针对多维数据库的一致性检查和错误  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>参考：针对多维数据库一致性检查和错误  
  对于多维数据库，只会验证分区索引。  在执行期间，DBCC 将为每个分区生成一个临时索引，并将该索引与磁盘上保留的索引进行比较。  生成临时索引需要从磁盘上的分区数据中读取所有数据，然后在内存中保存临时索引以供比较。 假设你有其他工作负载，你的服务器在运行 DBCC 执行时，可能会遇到磁盘 IO 和内存消耗较高的情况。  
   
  多维索引损坏检测包括以下检查。 发生对象级别的失败时，此表中的错误将出现在 xEvent 或 Profiler 跟踪中。  
@@ -212,7 +212,7 @@ Execution complete
 |分区索引|验证元数据。<br /><br /> 验证临时索引中的每个成员是否可以在磁盘上段的索引标头文件中找到。|分区段已损坏。|  
 |分区索引|扫描段以查找物理损坏。<br /><br /> 在磁盘上的索引文件中读取临时索引中的每个成员，并验证索引记录的大小是否匹配，以及相同数据页是否标记为具有当前成员的记录。|分区段已损坏。|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>参考：针对表格数据库的一致性检查和错误  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>参考：针对表格数据库一致性检查和错误  
  下表是针对表格对象执行的所有一致性检查列表，以及当检查指示损坏时引发的错误。 发生对象级别的失败时，此表中的错误将出现在 xEvent 或 Profiler 跟踪中。  
   
 ||||  

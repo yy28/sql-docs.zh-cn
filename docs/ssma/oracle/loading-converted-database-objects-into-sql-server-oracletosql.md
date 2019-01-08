@@ -13,12 +13,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: fa7e74d94fba34ebb3ae1e11ccaae308dd14e3e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685255"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204936"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>将转换数据库对象加载到 SQL Server (OracleToSQL)
 Oracle 架构转换为 SQL Server 后，可以加载到 SQL Server 生成的数据库对象。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 此外，SSMA 可以使用 SQL Server 数据库的实际内容更新目标元数据。  
@@ -99,7 +99,7 @@ Oracle 架构转换为 SQL Server 后，可以加载到 SQL Server 生成的数�
   
 4.  若要运行一组语句，在查询编辑器窗口中，选择语句，然后按**F5**密钥。  
   
-有关如何使用查询编辑器中运行脚本的详细信息，请参阅"[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查询"SQL Server 联机丛书中。  
+有关如何使用查询编辑器中运行脚本的详细信息，请参阅" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查询"SQL Server 联机丛书中。  
   
 你可以也运行脚本从命令行使用**sqlcmd**实用程序，并从 SQL Server 代理。 有关详细信息**sqlcmd**，请参阅 SQL Server 联机丛书中的"sqlcmd 实用程序"。 有关 SQL Server 代理的详细信息，请参阅"自动执行管理任务 （SQL Server 代理）"SQL Server 联机丛书中。  
   

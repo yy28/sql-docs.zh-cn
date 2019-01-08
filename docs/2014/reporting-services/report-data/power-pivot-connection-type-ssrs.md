@@ -11,22 +11,22 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166097"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350482"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint PowerPivot 库中发布的 PowerPivot 工作簿检索数据。  
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  PowerPivot 数据源必须发布在 SharePoint 站点上的 PowerPivot 库中。  
   
- 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 PowerPivot for Excel 一起安装，但如果使用不具有此应用程序的计算机，必须下载并安装从 ADOMD.NET [SQL Server 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=192565)。  
+ 为了支持从报表生成器到 PowerPivot 工作簿的连接，您在工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 PowerPivot for Excel 一起安装，但如果使用不具有此应用程序的计算机，必须下载并安装从 ADOMD.NET [SQL Server 2008 R2 功能包](https://go.microsoft.com/fwlink/?LinkId=192565)。  
   
 ## <a name="data-source-type"></a>数据源类型  
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
@@ -53,7 +53,7 @@ ms.locfileid: "48166097"
   
  PowerPivot 工作簿中的数据经过高度压缩；而从 PowerPivot 工作簿中为报表检索的数据未经压缩。 使用查询设计器可指定筛选器和参数，以便将数据限制为仅是报表中所需的数据。  
   
- 与连接到 Analysis Services 多维数据集不同，PowerPivot 模型没有层次结构。 为了向工作簿中的相关切片器提供类似功能，您必须在报表中创建级联参数。 有关详细信息，请参阅[向报表添加级联参数&#40;报表生成器和 SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)。  
+ 与连接到 Analysis Services 多维数据集不同，PowerPivot 模型没有层次结构。 为了向工作簿中的相关切片器提供类似功能，您必须在报表中创建级联参数。 有关详细信息，请参阅 [向报表添加级联参数（报表生成器和 SSRS）](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)中所创建的移动报表中使用。  
   
  在某些情况下，您可能需要调整表达式，以容纳 PowerPivot 模型中的基础数据值。 您可能需要修改表达式，以便将数据转换为正确的数据类型，或者添加或删除聚合函数。 例如，要将数据类型从 String 转换为 Integer，请使用 `=CInt`。 请始终在发布报表之前，验证报表从 PowerPivot 模型中的数据显示预期的值。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48166097"
 -   报表仅包含来自 PowerPivot 数据源的 PowerPivot 数据。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services MDX 查询设计器用户界面&#40;报表生成器&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services MDX 查询设计器用户界面（报表生成器）](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactertrans.f1
@@ -18,26 +17,26 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70fbac16859572c8b18f62fe7645ac6f1c5af77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11aaa19aebce21cc8a0ba08038c1dc58f245ec2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055857"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761819"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
   字符映射表转换将字符串函数（如从小写到大写的转换）应用于字符数据。 此转换操作只对字符串数据类型的列数据执行。  
   
  字符映射表转换可就地转换列数据，也可添加一个转换输出列，将转换后的数据放到新列中。 可以对同一输入列应用一组不同的映射操作，并将结果放到不同的列中。 例如，可对同一列进行大写和小写转换，并将结果放到两个不同列中。  
   
- 某些情况下，映射可能导致数据被截断。 例如，如果将单字节字符映射到采用多字节表示形式的字符，则可能发生截断。 字符映射表转换包含一个错误输出，可用于将截断的数据定向到单独的输出。 有关详细信息，请参阅[数据中的错误处理](../error-handling-in-data.md)。  
+ 某些情况下，映射可能导致数据被截断。 例如，如果将单字节字符映射到采用多字节表示形式的字符，则可能发生截断。 字符映射表转换包含一个错误输出，可用于将截断的数据定向到单独的输出。 有关详细信息，请参阅 [数据中的错误处理](../error-handling-in-data.md)。  
   
  此转换有一个输入、一个输出和一个错误输出。  
   
 ## <a name="mapping-operations"></a>映射操作  
  下表说明了字符映射表转换支持的映射操作。  
   
-|运算|Description|  
+|操作|Description|  
 |---------------|-----------------|  
 |Byte reversal|反转字节顺序。|  
 |Full width|将半角字符映射到全角字符。|  
@@ -69,7 +68,7 @@ ms.locfileid: "48055857"
   
 -   指定要应用于每一列的操作。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 **“字符映射表转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Character Map Transformation Editor](../../character-map-transformation-editor.md)。  
   

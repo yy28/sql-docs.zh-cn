@@ -8,7 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vs.wildcards
 - vswildcardsbuilder
 helpviewer_keywords:
 - searches [SQL Server Management Studio], wildcards
@@ -18,12 +17,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3419d8fb17d11e340eff50331908641929a78d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86985f75446399803e4cac6ed7d883d1c7e1921
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328257"
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
   以下表达式可以替换“查找和替换”对话框的“查找内容”字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  
@@ -47,5 +46,3 @@ ms.locfileid: "48114957"
 ## <a name="see-also"></a>请参阅  
  [搜索和替换](search-and-replace.md)   
  [使用正则表达式搜索文本](search-text-with-regular-expressions.md)  
-  
-  

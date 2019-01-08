@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
@@ -13,12 +12,12 @@ ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5426f8bcaca0ab9c0a9f1c92d8e701e15a8aa0f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c52d22e9c963672495c87912fb9a3989166152f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080047"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759479"
 ---
 # <a name="select-objects-to-transfer"></a>选择要传输的对象
   可以使用此对话框选择对象，以便使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 传输任务将这些对象从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的一个实例传输到另一个实例。  
@@ -33,6 +32,6 @@ ms.locfileid: "48080047"
  [传输登录名任务编辑器（“登录名”页）](../transfer-logins-task-editor-logins-page.md)   
  [传输 SQL Server 对象任务编辑器（“对象”页）](../transfer-sql-server-objects-task-editor-objects-page.md)   
  [传输主存储过程任务编辑器（“存储过程”页）](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [传输错误消息任务编辑器&#40;消息页&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+ [传输错误消息任务编辑器（“消息”页）](../transfer-error-messages-task-editor-messages-page.md)  
   
   

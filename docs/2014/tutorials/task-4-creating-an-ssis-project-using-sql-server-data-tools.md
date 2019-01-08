@@ -1,5 +1,5 @@
 ---
-title: 任务 4： 创建使用 SQL Server Data Tools SSIS 项目 |Microsoft Docs
+title: 任务 4:创建 SSIS 项目使用 SQL Server Data Tools |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 584ba08e49efaf0dc3a8de2a1fa8fd34ac20bfe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a4532b99c63a778c8c6751471b2a30e0ff7186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113268"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390500"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>任务 4：使用 SQL Server Data Tools 创建 SSIS 项目
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>任务 4:使用 SQL Server Data Tools 创建 SSIS 项目
   通过使用在此任务中，创建一个 SSIS 项目**SQL Server Data Tools**来自动执行清理和匹配供应商数据。  
   
 1.  启动 **SQL Server Data Tools**。 单击开始，指向**所有程序**，展开**Microsoft SQL Server 2012**，然后单击**SQL Server Data Tools**。  
@@ -42,6 +42,6 @@ ms.locfileid: "48113268"
 7.  类型**CleanseAndCurate.dtsx**然后按**ENTER**。 请确保**扩展**保持 **.dtsx**。  
   
 ## <a name="next-step"></a>下一步  
- [任务 5：添加数据流任务](task-5-adding-data-flow-task.md)  
+ [任务 5:添加数据流任务](task-5-adding-data-flow-task.md)  
   
   

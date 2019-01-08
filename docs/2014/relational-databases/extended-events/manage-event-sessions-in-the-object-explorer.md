@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801289"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
   本主题讨论您可以在 **“对象资源管理器”** 中执行的将影响扩展事件的操作：  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>导入扩展事件会话模板  
  通过使用 **“对象资源管理器”**，您可导入扩展事件会话的模板。 例如，您可能希望执行此操作以利用从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他实例导出的模板创建会话。  
   
- 要导入扩展事件会话，必须具有必要`ALTER ANY EVENT SESSION`权限。  
+ 若要导入扩展事件会话，则您必须具有必要的 `ALTER ANY EVENT SESSION` 权限。  
   
  在您导入模板文件之前，确保该文件来自受信任的源。 应将模板文件保存到一个使用 NTFS 文件系统的位置，并限制只有获得授权查看信息的用户才可以访问该位置。  
   

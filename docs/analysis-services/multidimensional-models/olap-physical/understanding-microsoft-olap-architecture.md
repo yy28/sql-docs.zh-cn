@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 96188955e60c11e4780ed4ffcf0be637b9e81871
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: d5f6c7eaff4ecced0d2244d9c12b13a0059344fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525047"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 体系结构
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "50147633"
  ![小文件文件夹图标](../../../analysis-services/media/filefolder-small.png "小文件文件夹图标")**国际化注意事项**  
  [Analysis Services 的全球化方案](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [技术参考 ](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141587"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528742"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>“创建属性关系”和“编辑属性关系”对话框（“属性关系设计器”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“创建属性关系”** 对话框定义新的属性关系，以及使用 **“编辑属性关系”** 对话框更改属性关系。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "48141587"
   
 2.  在工具栏上，单击“新建属性关系”图标。  
   
-     — 或 —  
+     -或-  
   
      在属性关系图或“属性”列表中，右键单击属性，然后单击“新建属性关系”。  
   

@@ -17,12 +17,12 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533085"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 属性（ADO MD 单元集）
 检索从单元格[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)使用其坐标。  
@@ -60,7 +60,7 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  序号位置是唯一标识一个单元格内的数字**单元集**。 从概念上讲，单元以编号**单元集**像**单元集**已*p*-维数组，其中*p*是轴的数目。 单元按行优先的顺序排列。 下面是用于计算单元格的序号的公式：  
   
- 如果传递的成员名称作为字符串应用于**项**，成员必须以递增的数值轴标识符的顺序列出。 在轴中，必须以维度嵌套的升序列出成员 — 即，最外面的维度成员出现的第一个，然后跟随的内部维度成员。 应通过单独的字符串，表示每个维度和成员字符串列表应该用逗号分隔。  
+ 如果传递的成员名称作为字符串应用于**项**，成员必须以递增的数值轴标识符的顺序列出。 在一条轴必须在维度嵌套的升序列出成员-，即最外面的维度成员在前后, 跟的内部维度成员。 应通过单独的字符串，表示每个维度和成员字符串列表应该用逗号分隔。  
   
 > [!NOTE]
 >  数据访问接口可能不支持按成员名称检索单元格。 请参阅你的详细信息的提供商的文档。  

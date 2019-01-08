@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723185"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206616"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性组
 
@@ -43,7 +43,7 @@ ms.locfileid: "47723185"
 
 ## <a name="cluster-type-and-failover-mode"></a>群集类型和故障转移模式
 
-为新[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是 Ag 群集类型的介绍。 对于 Linux，有两个有效的值： External 和 None。 外部群集类型是指，将可用性组的下方使用 Pacemaker。 使用外部群集类型需要故障转移模式也设置为 External (中的其他新增[!INCLUDE[sssql17-md](../includes/sssql17-md.md)])。 支持自动故障转移，但与不同的 WSFC 故障转移模式设置为 External，不自动使用 Pacemaker 时。 与不同的 WSFC 后配置可用性组创建可用性组的 Pacemaker 部分。
+为新[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是 Ag 群集类型的介绍。 对于 Linux，有两个有效的值：External 和 None。 外部群集类型是指，将可用性组的下方使用 Pacemaker。 使用外部群集类型需要故障转移模式也设置为 External (中的其他新增[!INCLUDE[sssql17-md](../includes/sssql17-md.md)])。 支持自动故障转移，但与不同的 WSFC 故障转移模式设置为 External，不自动使用 Pacemaker 时。 与不同的 WSFC 后配置可用性组创建可用性组的 Pacemaker 部分。
 
 群集类型为 None 意味着，没有任何要求，也不将可用性组使用，Pacemaker。 即使在配置了Pacemaker的服务器上，如果AG配置的群集类型为None，Pacemaker将不会看到或管理该AG。 为无群集类型仅支持从主以手动方式故障转移到辅助副本。 读取横向扩展方案，以及升级为主要面向具有无创建 AG。 尽管它可以运行灾难恢复或其中任何自动故障转移所需的本地可用性等方案中，不建议。 侦听器情景也是更复杂而无需 Pacemaker。
 
@@ -51,15 +51,15 @@ ms.locfileid: "47723185"
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>所需\_同步\_辅助副本\_到\_提交
 
-熟悉[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是一个设置，由名为 Ag `required_synchronized_secondaries_to_commit`。 这将告知可用性组必须与主数据库保持同步的辅助副本数目。 这使诸如自动故障转移 （仅当与 Pacemaker 群集类型为外部集成），并控制等，主数据库的可用性的行为，如果适当数量的次要副本是联机还是脱机。 若要了解有关此工作原理的详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是默认情况下设置和维护的 Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 您可以手动重写此值。
+熟悉[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是一个设置，由名为 Ag `required_synchronized_secondaries_to_commit`。 这将告知可用性组必须与主数据库保持同步的辅助副本数目。 这使诸如自动故障转移 （仅当与 Pacemaker 群集类型为外部集成），并控制等，主数据库的可用性的行为，如果适当数量的次要副本是联机还是脱机。 若要了解有关此工作原理的详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是默认情况下设置和维护的 Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 您可以手动重写此值。
 
 组合`required_synchronized_secondaries_to_commit`新的序列号 (这存储在`sys.availability_groups`) 通知 Pacemaker 和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，例如，可能发生自动故障转移。 在这种情况下，辅助副本将具有相同的序列号的主数据库，这意味着它最新的最新的所有配置信息。
 
-有三个值可以为设置`required_synchronized_secondaries_to_commit`: 0、 1 或 2。 它们控制在副本变得不可用时所发生的行为。 数字对应于必须与主数据库同步的辅助副本数目。 行为，如下所示是 Linux 下：
+有三个值可以为设置`required_synchronized_secondaries_to_commit`:0、1 或 2。 它们控制在副本变得不可用时所发生的行为。 数字对应于必须与主数据库同步的辅助副本数目。 行为，如下所示是 Linux 下：
 
--   0 – 无自动故障转移是可能由于没有辅助副本是需要进行同步。 主数据库任何时候都可用。
--   1 – 一个辅助副本必须位于与主; 同步状态可以自动故障转移。 可用次要同步副本之前，主数据库不可用。
--   2 – 在三个或多个节点可用性组配置中的两个辅助副本必须与主; 同步可以自动故障转移。
+-   0-无自动故障转移为可能，因为没有任何辅助副本需要同步。 主数据库任何时候都可用。
+-   1-一个辅助副本必须位于与主; 同步状态可以自动故障转移。 可用次要同步副本之前，主数据库不可用。
+-   2 的在三个或多个节点可用性组配置中两个辅助副本必须与主; 同步可以自动故障转移。
 
 `required_synchronized_secondaries_to_commit` 控制不只同步副本，但数据丢失的故障转移行为。 值为 1 或 2，辅助副本时始终需要同步，因此始终将数据冗余。 这意味着不会丢失数据。
 
@@ -147,11 +147,11 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 ![混合 None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分布式的 AG 也可以跨越 OS 边界。 基础 Ag 绑定的规则及其配置方式，例如使用外部被配置为仅限 Linux 的但无法使用 WSFC 配置联接到可用性组。 请参考如下示例：
+分布式的 AG 也可以跨越 OS 边界。 基础 Ag 绑定的规则及其配置方式，例如使用外部被配置为仅限 Linux 的但无法使用 WSFC 配置联接到可用性组。 请看下面的示例：
 
 ![混合 Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

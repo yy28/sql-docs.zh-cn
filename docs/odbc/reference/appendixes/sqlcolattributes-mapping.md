@@ -14,17 +14,17 @@ ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0332e38a96d17589d9aa75bfe2a3c918dcc78d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7a1508d10431ba9975c44a2002faa4e5b913312
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639645"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205336"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 映射
 当应用程序调用**SQLColAttributes**通过 ODBC 3 *.x*驱动程序，将会调用**SQLColAttributes**映射到**SQLColAttribute** ，如下所示：  
   
-> [!NOTE]  
+> [!NOTE]
 >  在中使用的前缀*FieldIdentifier* ODBC 3 中的值 *.x*已从该中使用的 ODBC 2。*x*。 新的前缀为"SQL_DESC";旧的前缀为"SQL_COLUMN"。  
   
 1.  如果应用程序的 ODBC 2。*x*应用程序中， *fDescType*为 SQL_COLUMN_TYPE，且返回的类型为简明的日期时间类型，返回值的日期、 时间和时间戳的代码的驱动程序管理器映射。  
@@ -33,4 +33,4 @@ ms.locfileid: "47639645"
   
  ODBC 3 *.x*驱动程序必须支持所有 ODBC 3 *.x* *FieldIdentifiers*列出**SQLColAttribute**。  
   
- ODBC 3 *.x* SQL_COLUMN_PRECISION 和 SQL_DESC_PRECISION、 SQL_COLUMN_SCALE 和 SQL_DESC_SCALE，和 SQL_COLUMN_LENGTH 和 SQL_DESC_LENGTH 驱动程序必须支持。 这些值则不同，因为精度、 小数位数和长度定义以不同的方式在 ODBC 3 *.x*比 ODBC 2 中。*x*。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。
+ ODBC 3 *.x* SQL_COLUMN_PRECISION 和 SQL_DESC_PRECISION、 SQL_COLUMN_SCALE 和 SQL_DESC_SCALE，和 SQL_COLUMN_LENGTH 和 SQL_DESC_LENGTH 驱动程序必须支持。 这些值则不同，因为精度、 小数位数和长度定义以不同的方式在 ODBC 3 *.x*比 ODBC 2 中。*x*。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。

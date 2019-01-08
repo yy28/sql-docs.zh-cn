@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], information displayed
@@ -15,19 +15,19 @@ ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36a8dc1a6f7d12d0c8064522dc4b7a6c02998a00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210537"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790389"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>自定义关系图中显示的信息量 (Visual Database Tools)
   向数据库关系图中添加表后，会随同该表显示一组属性。 您可以从菜单中选择要显示的信息量，也可以创建自定义属性集。  
   
  选项包括：  
   
--   Standard  
+-   标准  
   
 -   列名  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 647fe2c53dfc02bd53a063f49e3bef4b635137ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 139bda733610f7f4ac54b2d438ba73b29831427c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103489"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784369"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>用于 Excel 的 MDS 外接程序中的数据质量匹配
   随着时间的推移，您将会想要向 MDS 存储库中添加更多的数据。 在添加数据前，将新数据与已在 MDS 中进行管理的数据进行比较可能会很有用，因为这样可以确保不会添加重复数据或不正确的数据。  
@@ -49,7 +48,7 @@ ms.locfileid: "48103489"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|将外部数据与 MDS 管理的数据进行合并以便准备进行比较。|[合并数据&#40;MDS add-in for Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
+|将外部数据与 MDS 管理的数据进行合并以便准备进行比较。|[合并数据（用于 Excel 的 MDS 外接程序）](combine-data-mds-add-in-for-excel.md)|  
 |使用 DQS 知识来查找您的数据中的相似之处。|[匹配相似数据（用于 Excel 的 MDS 外接程序）](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相关内容  

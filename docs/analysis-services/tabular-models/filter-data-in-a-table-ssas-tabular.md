@@ -1,5 +1,5 @@
 ---
-title: 筛选表中的数据 |Microsoft 文档
+title: 在 Analysis Services 表格模型表中筛选数据 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 65b3e9bfc1b4e3c8a246d2732484d835065e82bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9b1fcdda5bd49f8056a6035ec10da8fb52f1c5d1
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039232"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072121"
 ---
 # <a name="filter-data-in-a-table"></a>筛选表数据 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34039232"
   
 1.  单击您要清除其筛选器的列的标题中的箭头。  
   
-2.  单击**清除筛选器从\<列名称 >**。  
+2.  单击**清除筛选器从\<列名 >**。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>清除表的所有筛选器  
   
@@ -47,8 +47,8 @@ ms.locfileid: "34039232"
   
 2.  单击 **“列”** 菜单，然后单击 **“清除所有筛选器”**。  
   
-## <a name="see-also"></a>另请参阅  
- [筛选器和对数据进行排序](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
+## <a name="see-also"></a>请参阅  
+ [筛选器和数据进行排序](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   

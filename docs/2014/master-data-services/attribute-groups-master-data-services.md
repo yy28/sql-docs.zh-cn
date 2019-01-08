@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fc220bf012533eefd054529525175377ebcac610
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73b2409f8e3b5b58be15351e05abd92dfc94ac8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228337"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766739"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性组 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，属性组帮助组织实体中的属性。 如果实体具有很多属性，属性组可以改进实体在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中显示的方式。  
@@ -40,7 +39,7 @@ ms.locfileid: "48228337"
  属性组在 **的** “系统管理” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中进行管理。  
   
 ## <a name="show-or-hide-attribute-groups"></a>显示或隐藏属性组  
- 创建属性组时，对除创建者之外的所有用户自动隐藏它。 有关使组可见的详细信息，请参阅[对用户进行属性组可见&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)。  
+ 创建属性组时，对除创建者之外的所有用户自动隐藏它。 有关使组可见的详细信息，请参阅 [使属性组对用户可见 (Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md)选项卡上。  
   
  如果要隐藏组中的特定属性，可以将 **“拒绝”** 权限分配给该属性。 有关详细信息，请参阅[叶权限 (Master Data Services)](../../2014/master-data-services/leaf-permissions-master-data-services.md)或[合并的权限 (Master Data Services)](../../2014/master-data-services/consolidated-permissions-master-data-services.md)。  
   
@@ -48,13 +47,13 @@ ms.locfileid: "48228337"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的属性组并向其中添加属性。|[创建属性组&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
-|使属性组对用户可见。|[使属性组对用户可见&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
-|更改现有属性组的名称。|[更改属性组名称&#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
-|删除现有属性组。|[删除属性组&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
+|创建新的属性组并向其中添加属性。|[创建属性组 (Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
+|使属性组对用户可见。|[使属性组对用户可见 (Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md)|  
+|更改现有属性组的名称。|[更改属性组名称 (Master Data Services)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
+|删除现有属性组。|[删除属性组 (Master Data Services)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

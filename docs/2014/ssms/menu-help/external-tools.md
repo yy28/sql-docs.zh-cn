@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cefca611c1f09db94c8e2df523121bdc9b2bf819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227630"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328783"
 ---
 # <a name="external-tools"></a>外部工具
   使用此对话框可以将外部工具（如 SQL Server 配置管理器或记事本）添加到“工具”菜单。 通过添加外部工具，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作的同时，便捷地启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，可以在“输出”窗口中显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
@@ -47,7 +45,7 @@ ms.locfileid: "48227630"
  指定要启动的 .exe、.com、.pif、.bat、.cmd 或其他文件的路径。 如果选中“使用输出窗口”复选框，则可以在“输出”窗口中查看 `.bat`、`.com` 和其他文件的输出。  
   
  **参数**  
- 指定在菜单上选择某个工具时传递到该工具的变量。 参数可以指定启动工具或命令时传递给工具或命令的值。 例如，参数值可以指定文件名或目录。 使用“箭头”按钮可以从预定义的参数列表中进行选择。 您可以添加多个参数。 有关预定义参数及其定义的完整列表，请参阅[外部工具的参数](external-tools.md)。 根据所用命令或工具的不同，您还可以输入自定义参数（例如，命令提示符开关）。  
+ 指定在菜单上选择某个工具时传递到该工具的变量。 参数可以指定启动工具或命令时传递给工具或命令的值。 例如，参数值可以指定文件名或目录。 使用“箭头”按钮可以从预定义的参数列表中进行选择。 您可以添加多个参数。 有关预定义参数及其定义的完整列表，请参阅 [外部工具的参数](external-tools.md)。 根据所用命令或工具的不同，您还可以输入自定义参数（例如，命令提示符开关）。  
   
  **初始目录**  
  指定工具的工作目录。 使用“箭头”按钮可以选择目录。 您可以选择多个目录。  
@@ -78,5 +76,3 @@ ms.locfileid: "48227630"
   
 > [!NOTE]  
 >  查看“开始”菜单上 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 快捷方式的属性，即可确认相应文件在计算机上的位置。  
-  
-  

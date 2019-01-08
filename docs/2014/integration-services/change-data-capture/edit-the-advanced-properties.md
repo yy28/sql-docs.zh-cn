@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - advanced
@@ -13,12 +12,12 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae2bab96234a52ba58de68f87bf24455b12256d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94476576eac6c466a0667af8cf1b5e166eaec941
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804610"
 ---
 # <a name="edit-the-advanced-properties"></a>编辑高级属性
   使用 **“高级”** 选项卡可以向 CDC 实例添加特殊属性。  
@@ -35,7 +34,7 @@ ms.locfileid: "48183767"
  有关可以输入的属性的说明，请参阅 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config)中的可用选项表。  
   
 ## <a name="see-also"></a>请参阅  
- [如何管理 CDC 实例](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [如何编辑 CDC 实例属性](how-to-edit-the-cdc-instance-properties.md)  
   
   

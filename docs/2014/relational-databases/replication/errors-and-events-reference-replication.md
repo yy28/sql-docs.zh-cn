@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server replication], troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee17325a02e6b146ef372b4655ae8c437b76cdff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781029"
 ---
 # <a name="errors-and-events-reference-replication"></a>错误和事件参考（复制）
   本部分文档包含与复制相关的多个错误的原因和解决方法的信息。  
@@ -77,7 +76,7 @@ ms.locfileid: "48159747"
 |MSSQL_ENG021642。 请参阅 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)。|异类发布服务器需要链接服务器。 已有一个名为 '%s' 的链接服务器。 请删除链接服务器或另选一个发布服务器名称。|  
 |MSSQL_ENG021663。 请参阅 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)。|找不到源表 [%s].[%s] 的有效主键。|  
 |MSSQL_ENG021684。 请参阅 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)。|与 Oracle 发布服务器‘%s’的管理员登录名关联的权限不足。|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' 必须是有效的 Windows 登录名，且格式为: '计算机\登录名' 或 '域\登录名'。 请参阅 '%s' 的文档。|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|%s 必须是有效的 Windows 登录名的形式：'\' 或者 '域。 请参阅 '%s' 的文档。|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|在继续操作之前，必须通过“%s”添加“%s”代理作业。 请参阅 '%s' 的文档。|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|进程无法在“%2”上执行“%1”。|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|合并进程无法更改“%1”上的生成历史记录。 进行故障排除时，请使用详细的历史日志记录来重新启动同步，并指定要写入的输出文件。|  

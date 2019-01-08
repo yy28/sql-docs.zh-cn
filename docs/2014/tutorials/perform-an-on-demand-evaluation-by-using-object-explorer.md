@@ -11,12 +11,12 @@ ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f950b99b7de4b7e81d75ed9decee47f74a785206
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddb0eeb783f2bdb617ba5c2ac2b18896c23abdcc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536556"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>通过使用对象资源管理器执行按需评估
   在此任务中，您将使用对象资源管理器为 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的单个实例上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]执行最佳实践策略的按需评估。  
@@ -24,7 +24,7 @@ ms.locfileid: "48098107"
 > [!NOTE]  
 >  您还可以通过已注册的服务器评估单个实例上的策略。 有关详细信息，请参阅[执行按需评估使用已注册的服务器通过](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  本课基于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本。  
   
 > [!NOTE]  

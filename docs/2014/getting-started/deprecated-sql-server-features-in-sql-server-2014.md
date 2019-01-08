@@ -11,12 +11,12 @@ ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a90c1387a609ee59dec93b67e0a48bd2af7baf77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4abd066dd2fc971528468fb7104cb0c11e088150
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348787"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 SQL Server 功能
   本主题介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中仍然可用但不推荐使用的功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -32,9 +32,9 @@ ms.locfileid: "48129767"
 ### <a name="slipstream-functionality"></a>补充功能  
  产品更新功能将替换 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 中提供的补充功能。 因此的命令行参数 /*PCUSource*和 /*CUSource*、 与补充应不再使用功能相关联。 这些参数将继续有效，但可能会在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序的将来版本中删除。 /*UpdateSource*参数结合了 Slipstream 参数的功能 /*PCUSource*和 /*CUSource*。  
   
- 有关详细信息中提供的补充功能[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1，请参阅[补充 SQL Server 更新](http://go.microsoft.com/fwlink/?LinkId=219945)(http://go.microsoft.com/fwlink/?LinkId=219945)。  
+ 有关详细信息中提供的补充功能[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1，请参阅[补充 SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945)。  
   
 ## <a name="see-also"></a>请参阅  
- [后向兼容性](../../2014/getting-started/backward-compatibility.md)  
+ [向后兼容性](../../2014/getting-started/backward-compatibility.md)  
   
   

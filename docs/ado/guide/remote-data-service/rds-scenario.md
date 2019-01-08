@@ -14,18 +14,18 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539686"
 ---
 # <a name="rds-scenario"></a>RDS 方案
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 通讯簿应用程序是一种方案演示如何使用远程数据服务 (RDS) 来构建简单、 感知数据的 Web 应用程序 — 联机公司通讯簿。 此方案可用于 Microsoft Visual Basic Scripting Edition (VBScript) 和 COM 的编程人员，以便了解如何使用 RDS，感知数据的 ActiveX 控件，更有经验的软件开发者要生成以数据为中心的 Web 应用程序。  
+ 通讯簿应用程序是演示如何使用远程数据服务 (RDS) 来构建简单、 感知数据的 Web 应用程序-online 公司通讯的方案。 此方案可用于 Microsoft Visual Basic Scripting Edition (VBScript) 和 COM 的编程人员，以便了解如何使用 RDS，感知数据的 ActiveX 控件，更有经验的软件开发者要生成以数据为中心的 Web 应用程序。  
   
  此方案假定你知道如何使用 ActiveX 控件的基本 HTML 布局标记、 使用 DHTML 数据绑定技术和程序。  
   

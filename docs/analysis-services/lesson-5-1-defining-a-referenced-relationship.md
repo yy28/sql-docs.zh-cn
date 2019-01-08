@@ -1,5 +1,5 @@
 ---
-title: 定义被引用的关系 |Microsoft 文档
+title: 定义引用的关系 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7d27a648f91448cd6c53f34149851b255aa6aa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018684"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507618"
 ---
-# <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lesson 5-1-定义被引用的关系
+# <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lesson 5-1-定义引用的关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 在本教程中到目前为止，您定义的每个多维数据集维度都基于一个按主键到外键的关系直接链接到度量值组事实数据表的表。 在本主题的各任务中，你会将“地域”维度通过一个称为“引用维度”的“分销商”维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "34018684"
   
     请注意，“分销商销售-销售额”度量值并未按照“区域”层次结构中的“国家/地区-区域”属性成员正确确定维度。 对于每个“国家/地区-区域”属性成员都重复“分销商销售-销售额”的值。  
   
-    ![分销商销售 Sales Amount 度量值进行维度化](../analysis-services/media/l5-referencedrelationship-1.gif "进行维度化分销商销售 Sales Amount 度量值")  
+    ![确定维度分销商销售-销售额度量值](../analysis-services/media/l5-referencedrelationship-1.gif "确定了维度分销商销售-销售额度量值")  
   
 4.  打开 **Adventure Works DW 2012** 数据源视图的数据源视图设计器。  
   
@@ -47,17 +47,17 @@ ms.locfileid: "34018684"
   
     注意，“地域”多维数据集维度当前与“Internet 销售”度量值组或“分销商销售”度量值组都没有关系。  
   
-8.  单击“客户”维度和“Internet 销售”度量值组相交处的“全名”单元中的省略号按钮 (**…**)。  
+8.  单击省略号按钮 (**...**) 中**全名**相交处的单元格**客户**维度和**Internet Sales**度量值组。  
   
     在“定义关系”对话框中，注意，在 **DimCustomer** 维度表和 **FactInternetSales** 度量值组表之间，根据每个表中的 **CustomerKey** 列定义了“常规”关系。 到目前为止，您在本教程中定义的所有关系都是常规关系。  
   
     下图显示了“定义关系”对话框，其中常规关系是 **DimCustomer** 维度表和 **FactInternetSales** 度量值组表之间的关系。  
   
-    ![定义关系对话框](../analysis-services/media/l5-referencedrelationship-4.gif "定义关系对话框中")  
+    ![定义关系对话框](../analysis-services/media/l5-referencedrelationship-4.gif "定义关系对话框")  
   
 9. 单击“取消”。  
   
-10. 单击“地域”维度和“分销商销售”度量值组相交处的未命名单元中的省略号按钮 (**…**)。  
+10. 单击省略号按钮 (**...**) 中的相交处的未命名单元**Geography**维度和**分销商销售**度量值组。  
   
     在“定义关系”对话框中，可查看当前未定义“地域”多维数据集维度和“分销商销售”度量值组之间的关系。 无法定义常规关系，因为“地域”维度的维度表和“分销商销售”度量值组的事实数据表之间没有直接关系。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34018684"
   
     “分销商”维度中的“地域关键字”属性只能用于将“地域”维度链接到 Reseller Sales 事实数据表。 因为它不能用于浏览，所以不存在将该属性层次结构定义为可见的值。 而且，对该属性层次结构进行排序和优化只能为处理性能带来负面影响。 但是，必须启用该属性，使其作为两个维度之间的链接。  
   
-4.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，单击“维度用法”选项卡，然后单击“分销商销售”度量值组和“地域”多维数据集维度相交处的省略号按钮 (**…**)。  
+4.  切换到多维数据集设计器[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Tutorial 多维数据集，单击**维度用法**选项卡，然后单击省略号按钮 (**...**) 的交叉处**分销商销售**度量值组和**Geography**多维数据集维度。  
   
 5.  在“选择关系类型”列表中，选择“被引用的”。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "34018684"
   
     注意，已选中“具体化”复选框。 这是 MOLAP 维度的默认设置。 在处理过程中，具体化维度属性链接可在维度的 MOLAP 结构中具体化或存储事实数据表和每行的引用维度之间的链接值。 这样做对处理性能和存储要求的影响不大，但会增强查询性能（有时会很显著）。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
     注意，“地域”多维数据集维度现在已链接到“分销商销售”度量值组。 该图标指示此关系是引用维度关系。  
   
@@ -119,12 +119,12 @@ ms.locfileid: "34018684"
   
     请注意，“分销商销售-销售额”度量值现在已按照“区域”用户定义层次结构中的“国家/地区-区域”属性正确确定了维度，如下图所示。  
   
-    ![定义关系对话框](../analysis-services/media/l5-referencedrelationship-5.gif "定义关系对话框中")  
+    ![定义关系对话框](../analysis-services/media/l5-referencedrelationship-5.gif "定义关系对话框")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [定义事实关系](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [属性关系](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
 [定义引用的关系和引用的关系属性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   

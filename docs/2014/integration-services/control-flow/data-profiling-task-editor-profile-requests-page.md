@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
@@ -15,12 +14,12 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 712da8b3c08d5bb73913e0585b7d1f87f5ef7396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189167"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815379"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>数据事件探查任务编辑器（“配置文件请求”页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页，选择和配置需要计算的配置文件。 在单个数据事件探查任务中，可以为多列或多个表或视图中的列组合计算多个配置文件。  
@@ -41,7 +40,7 @@ ms.locfileid: "48189167"
 ### <a name="requests-pane-options"></a>请求窗格选项  
  请求窗格具有下列选项：  
   
- **“视图”**  
+ **视图**  
  选择查看为该任务配置的所有配置文件，还是仅查看其中的一个配置文件。  
   
  请求窗格中的列会根据选择的 **“视图”** 而发生更改。 有关这些列中各列的详细信息，请参阅下一节“请求窗格列”。  
@@ -49,15 +48,15 @@ ms.locfileid: "48189167"
 ### <a name="requests-pane-columns"></a>请求窗格列  
  请求窗格显示的列取决于选定的 **“视图”** ：  
   
--   如果选择查看 **“所有请求”**，则请求窗格会显示两列： **“配置文件类型”** 和 **“请求 ID”**。  
+-   如果选择查看**的所有请求**，则请求窗格会显示两个列：**配置文件类型**并**请求 ID**。  
   
--   如果选择查看五个列配置文件中的一个，则请求窗格会显示四列： **“配置文件类型”**、 **“表或视图”**、 **“列”** 和 **“请求 ID”**。  
+-   如果您选择查看五个列配置文件之一，则请求窗格会显示四列：**配置文件类型**，**表或视图**，**列**，并且**请求 ID**。  
   
--   如果选择查看候选键配置文件，则请求窗格会显示四列：“配置文件类型”、“表或视图”、“键列”和“请求 ID”。  
+-   如果选择查看候选键配置文件，则请求窗格会显示四列：**配置文件类型**，**表或视图**， **KeyColumns**，并且**请求 ID**。  
   
--   如果选择查看函数依赖关系配置文件，则请求窗格会显示五列： **“配置文件类型”**、 **“表或视图”**、 **“决定列”**、 **“依赖列”** 和 **“请求 ID”**。  
+-   如果选择查看函数依赖关系配置文件，则请求窗格会显示五列：**配置文件类型**，**表或视图**，**决定列**，**依赖列**，并且**请求 ID**。  
   
--   如果选择查看值包含配置文件，则请求窗格会显示六列： **“配置文件类型”**、 **“子集端表或视图”**、 **“超集端表或视图”**、 **“子集端列”**、 **“超集端列”** 和 **“请求 ID”**。  
+-   如果您选择查看值包含配置文件，则请求窗格会显示六列：**配置文件类型**，**子集端表或视图**，**超集的端表或视图**，**子集端列**，**超集的端列**，并**请求 ID**。  
   
  以下各节逐一介绍这些列。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48189167"
 |**列长度分布配置文件请求**|计算列长度分布配置文件。<br /><br /> 列长度分布配置文件报告选定列中字符串值的所有不同长度以及每个长度所表示的表中的行的百分比。 此配置文件可以帮助您识别数据中的问题，例如值无效。 例如，在对以两个字符表示的美国州代码列进行事件探查，发现存在超过两个字符的值。|  
 |**列 Null 比率配置文件请求**|列 Null 比率配置文件。<br /><br /> 列 Null 比率配置文件报告选定列中 null 值的百分比。 此配置文件可以帮助您识别数据中的问题，例如，列中 null 值的比率以外偏高。 例如，您对邮政编码列进行事件探查，却发现缺失的邮政编码所占的比例超出允许的范围。|  
 |**列模式配置文件请求**|计算列模式配置文件。<br /><br /> 列模式配置文件报告涵盖字符串列中值的指定百分比的一组正则表达式。 此配置文件可以帮助您识别数据中的问题，如无效字符串。 它还可以建议可用于以后验证新值的正则表达式。 例如，邮政编码列的模式配置文件可能会产生正则表达式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他正则表达式，则数据可能包含无效或格式不正确的值。|  
-|**列统计信息配置文件请求**|选择此选项可使用选定表或视图中所有适用列的默认设置来计算列统计信息配置文件。<br /><br /> 列统计信息配置文件报告以下统计信息最小值、 最大值、 平均值和标准偏差数字列，以及最小值和最大值`datetime`列。 此配置文件可以帮助您识别数据中的问题，如无效值。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。|  
+|**列统计信息配置文件请求**|选择此选项可使用选定表或视图中所有适用列的默认设置来计算列统计信息配置文件。<br /><br /> 列统计信息配置文件报告的统计信息包括：例如，数值列的最小值、最大值、平均值和标准偏差以及 `datetime` 列的最小值和最大值。 此配置文件可以帮助您识别数据中的问题，如无效值。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。|  
 |**列值分布配置文件请求**|计算列值分布配置文件。<br /><br /> 列值分布配置文件报告选定列中所有的非重复值以及每个值所表示的表中的行的百分比。 此配置文件还可以报告其表示内容超过表中指定的行百分比的值。 此配置文件可帮助您识别数据中的问题，例如，列中非重复值的数目不正确。 例如，在对包含美国各州的列进行事件探查时发现，其中存在 50 多个非重复值。|  
 |**函数依赖关系配置文件请求**|计算函数依赖关系配置文件。<br /><br /> 函数依赖关系配置文件报告某列（依赖列）中的值依赖另一列或列集（决定列）中的值的程度。 此配置文件还可以帮助您识别数据中的问题，如无效值。 例如，您探查美国邮政编码列和美国的州列之间的依赖关系。 同一邮政编码应始终对应同一州，但配置文件却发现有违反此依赖关系的情况。|  
 |**值包含配置文件请求**|计算值包含配置文件。<br /><br /> 值包含配置文件计算两列或列集之间值的重叠。 此配置文件还可以确定一个列或列集是否适于用作两个选定表之间的外键。 此配置文件还可以帮助您识别数据中的问题，如无效值。 例如，您对某个 Sales 表的 ProductID 列进行事件探查，却发现该列包含在产品表的 ProductID 列中找不到的值。|  
@@ -131,24 +130,24 @@ ms.locfileid: "48189167"
   
  这些选项根据选定的配置文件而有所差异。 有关单个配置文件类型选项的详细信息，请参阅下面主题：  
   
--   [候选键配置文件请求选项&#40;数据事件探查任务&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候选键配置文件请求选项（数据事件探查任务）](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [列 Null 比率配置文件请求选项&#40;数据事件探查任务&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [列 Null 比率配置文件请求选项（数据事件探查任务）](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列统计信息配置文件请求选项&#40;数据事件探查任务&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列统计信息配置文件请求选项（数据事件探查任务）](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [列值分布配置文件请求选项&#40;数据事件探查任务&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [列值分布配置文件请求选项（数据事件探查任务）](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列长度分布配置文件请求选项&#40;数据事件探查任务&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [列长度分布配置文件请求选项（数据事件探查任务）](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列模式配置文件请求选项&#40;数据事件探查任务&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [列模式配置文件请求选项（数据事件探查任务）](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [函数依赖关系配置文件请求选项&#40;数据事件探查任务&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [函数依赖关系配置文件请求选项（数据事件探查任务）](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含配置文件请求选项&#40;数据事件探查任务&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含配置文件请求选项（数据事件探查任务）](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>请参阅  
- [数据事件探查任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)   
+ [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   
   

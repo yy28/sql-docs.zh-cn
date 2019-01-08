@@ -19,12 +19,12 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847155"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395877"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47847155"
   
 |“列”|类型|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|显示与客户端的句柄相关联的内部 NSO 结构的地址。 可以为 Null。|  
+|**handle_context_address**|**varbinary(8)**|显示与客户端的句柄关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**creation_request_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 null。|  
 |**creation_irp_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 Null。|  
 |**handle_id**|**int**|显示驱动程序分配给此句柄的唯一 ID。 不可为 null。|  
@@ -44,7 +44,7 @@ ms.locfileid: "47847155"
 |**logical_path**|**nvarchar(256)**|显示此句柄打开的文件的逻辑路径名。 这是通过返回的相同路径名 **。路径名**方法**varbinary**(**max**) filestream。 可以为 Null。|  
 |**physical_path**|**nvarchar(256)**|显示文件的实际 NTFS 路径名。 这是通过返回的相同路径名 **。PhysicalPathName**方法**varbinary**(**max**) filestream。 它由跟踪标志 5556 启用。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120164"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207686"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLColumnPrivileges**返回的列和指定表关联的特权的列表。 驱动程序将返回作为结果集对指定的信息*StatementHandle*。  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|Varchar 不为 NULL|列名称。 该驱动程序返回空字符串不具有名称的列。|  
 |授权者 (ODBC 1.0)|5|Varchar|授予权限; 用户的名称如果不适用于数据源为 NULL。<br /><br /> 对于被授权者列中的值与对象的所有者的所有行，GRANTOR 列将为"（_s）"。|  
 |被授权者 (ODBC 1.0)|6|Varchar 不为 NULL|向其授予权限的用户的名称。|  
-|特权 (ODBC 1.0)|7|Varchar 不为 NULL|标识列权限。 可能是以下值之一 (或其他支持的数据源时实现定义):<br /><br /> 选择： 允许被授权者检索数据的列。<br /><br /> INSERT： 允许被授权者提供的新行插入到关联的表中的列数据。<br /><br /> 更新时间： 允许被授权者来更新列中的数据。<br /><br /> 的引用: 被授权者可以引用约束中的列 (例如，唯一、 引用，或检查约束的表)。|  
+|特权 (ODBC 1.0)|7|Varchar 不为 NULL|标识列权限。 可能是以下值之一 (或其他支持的数据源时实现定义):<br /><br /> 选择：允许被授权者检索数据的列。<br /><br /> 插入：允许被授权者提供新行插入到关联的表中的列的数据。<br /><br /> 更新：允许被授权者更新的列中的数据。<br /><br /> 引用：允许被授权者引用约束中的列 (例如，唯一、 引用，或检查约束的表)。|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|指示是否允许被授权者向其他用户; 授予权限"是"、"否"，或"NULL"如果未知或不适用于数据源。<br /><br /> 权限是可授予或没有可授予，而不是两者。 返回的结果集**SQLColumnPrivileges**将永远不会包含除 IS_GRANTABLE 列的所有列都包含相同的值的两个行。|  
   
 ## <a name="code-example"></a>代码示例  

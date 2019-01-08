@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27385486005645f73cd488893c50be12ae2e704b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066528"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767599"
 ---
 # <a name="server-element-dta"></a>服务器元素 (DTA)
   包含要优化的数据库所驻留的服务器的标识信息。  
@@ -41,17 +40,17 @@ ms.locfileid: "48066528"
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**出现次数**|每次需要`DTAInput`元素。|  
+|**出现次数**|每个 `DTAInput` 元素必须出现一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[DTAInput 元素&#40;DTA&#41;](dtainput-element-dta.md)|  
-|**子元素**|[服务器名称元素&#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [服务器的数据库元素&#40;DTA&#41;](database-element-for-server-dta.md)|  
+|**父元素**|[DTAInput 元素 (DTA)](dtainput-element-dta.md)|  
+|**子元素**|[服务器的名称元素 (DTA)](name-element-for-server-dta.md)<br /><br /> [服务器的数据库元素 (DTA)](database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>备注  
- 您可以指定只有一个`Server`元素`DTAInput`元素。 在 DTA XML 架构中，该元素的名称为 **ServerDetailsTypecomplexType** 。 请勿将此`Server`使用的子元素`Configuration`元素。 有关详细信息，请参阅[用于配置的服务器元素 (DTA)](server-element-for-configuration-dta.md)。  
+ 您可以指定只有一个`Server`元素`DTAInput`元素。 在 DTA XML 架构中，该元素的名称为 **ServerDetailsTypecomplexType** 。 请不要将此 `Server` 元素与 `Configuration` 元素的子元素混淆。 有关详细信息，请参阅[用于配置的服务器元素 (DTA)](server-element-for-configuration-dta.md)。  
   
 ## <a name="example"></a>示例  
  以下示例说明如何在 SERVER001 的 **AdventureWorks** 数据库中指定 **Sales.SalesPerson** 表：  

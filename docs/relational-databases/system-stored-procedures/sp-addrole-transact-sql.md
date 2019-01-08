@@ -18,19 +18,19 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b0358f6f9781076b043975dc794f2521aac171ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841895"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212916"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在当前数据库中创建新的数据库角色。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **sp_addrole**包含有关与早期版本的兼容性[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在将来的版本中可能不支持。 使用[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md)相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,7 +43,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
+ [  **@rolename =** ] **'角色**   
  新数据库角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须是有效的标识符 (ID)，并且必须已存在当前数据库中。  
   
  [  **@ownername =**] **'***所有者*****  
@@ -62,7 +62,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
   
  **sp_addrole**不能在用户定义的事务内使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 CREATE ROLE 权限。 如果创建架构，则需要对数据库的 CREATE SCHEMA 权限。 如果*所有者*指定为用户或组，则该用户或组需要模拟。 如果*所有者*指定作为角色，则需要对该角色或该角色的成员的 ALTER 权限。 如果将所有者指定为应用程序角色，则需要对此应用程序角色的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 513a3751baa41293c6a8dd84ab03af5f3d5a3103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759649"
 ---
 # <a name="name-element-for-table-dta"></a>表的名称元素 (DTA)
   指定表名以进行优化。  
@@ -40,13 +39,13 @@ ms.locfileid: "48206317"
 |--------------------|-----------------|  
 |**数据类型和长度**|`string`，介于 1 到 255 个字符之间。|  
 |**默认值**|无。|  
-|**出现次数**|必需的。 一次为每个`Table`元素。|  
+|**出现次数**|必需的。 每个 `Table` 元素一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[表的架构元素&#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**父元素**|[架构的表元素 (DTA)](table-element-for-schema-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145013"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207516"
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
   具体取决于发出该命令的用户的管理权限[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)Analysis (XMLA) 可以在一个会话、 会话、 连接、 服务器进程或相关联的会话上取消命令的 XML 中的命令或连接。  
@@ -36,7 +36,7 @@ ms.locfileid: "50145013"
 ## <a name="canceling-connections"></a>取消连接  
  通过指定中的连接标识符[ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla)的属性**取消**命令时，服务器管理员可以取消所有与给定的连接，包括所有关联的会话运行命令，并取消该连接。  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]无法找到和取消与连接关联的会话，如该实例时数据抽取打开了多个会话提供 HTTP 连接时，不能取消该连接。 如果在执行期间遇到这种情况下**取消**命令时，出现错误。  
   
  服务器管理员可以检索的活动连接数[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例通过检索 DISCOVER_CONNECTIONS 架构行集使用 XMLA**发现**方法。  
@@ -47,7 +47,7 @@ ms.locfileid: "50145013"
 ## <a name="canceling-associated-sessions-and-connections"></a>取消关联的会话和连接  
  可以设置[CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla)属性设为 true 来取消连接、 会话和连接、 会话或 SPID 中指定与关联的命令**取消**命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [发现方法&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
  [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

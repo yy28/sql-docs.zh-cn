@@ -11,12 +11,12 @@ ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538135"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
   在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  
@@ -51,7 +51,7 @@ ms.locfileid: "48100087"
   
 1.  在“管理中心”中，打开“配置服务帐户”页。  
   
-2.  选择 Excel Services 使用的服务应用程序池。 该应用程序池可以是 **“服务应用程序池 - SharePoint Web 服务系统”** 或自定义的应用程序池。 由 Excel Services 使用的托管帐户将出现在该页上。  
+2.  选择 Excel Services 使用的服务应用程序池。 它可能**服务应用程序池-SharePoint Web 服务系统**或自定义应用程序池。 由 Excel Services 使用的托管帐户将出现在该页上。  
   
      对于包括 SharePoint 模式下 Reporting Services 的 SharePoint 场，还要获取 Reporting Services 服务应用程序的帐户信息。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48100087"
   
 5.  选择数据库。 有效选择将为该数据库显示单个 **“模型”** 多维数据集。 单击 **“下一步”** ，然后单击 **“完成”**。  
   
- 在建立连接后，您可以使用数据来创建数据透视表或数据透视图。 有关详细信息，请参阅[在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)。  
+ 在建立连接后，您可以使用数据来创建数据透视表或数据透视图。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
   
 ##  <a name="bkmk_sharepoint"></a> 从 SharePoint 进行连接  
  如果使用的是 PowerPivot for SharePoint，则可在 SharePoint 中创建一个 BI 语义模型连接文件，通过该文件，可重定向到在 Analysis Services 表格模式服务器上运行的数据库。 BI 语义模型连接提供指向数据库的 HTTP 端点。 对于经常要使用 SharePoint 站点上的文档的知识工作者，该连接还简化了表格模型访问。 知识工作者只需要知道 BI 语义模型连接文件的位置或其 URL 就可以访问表格模型数据库。 与服务器位置或数据库名称有关的详细信息封装在 BI 语义模型连接中。 有关创建和使用 BI 语义模型连接文件的详细信息，请参阅[PowerPivot BI 语义模型连接&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)并[创建 BI 语义模型连接到表格模型数据库](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
@@ -115,6 +115,6 @@ ms.locfileid: "48100087"
  在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是该用户对工作簿没有足够的 SharePoint 权限。 该用户必须具有 **“读取”** 权限或更高权限。 “仅查看”权限对于数据访问是不够的。  
   
 ## <a name="see-also"></a>请参阅  
- [表格模型解决方案部署&#40;SSAS 表格&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

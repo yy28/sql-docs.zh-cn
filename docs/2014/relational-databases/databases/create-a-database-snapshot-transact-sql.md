@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb53467361cec415b95f2fe3477f3b0730f33b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768329"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
   创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库快照的唯一方式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支持创建数据库快照。  
@@ -27,11 +26,11 @@ ms.locfileid: "48212197"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
      [最佳做法：命名数据库快照](#Naming)  
   
--   **若要创建数据库快照，请使用：**[TRANSACT-SQL  ](#TsqlProcedure)  
+-   **若要创建数据库快照，请使用：**[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48212197"
   
 -   源数据库必须处于联机状态，除非该数据库是数据库镜像会话中的镜像数据库。  
   
--   若要创建数据库快照在镜像数据库，数据库必须处于同步[镜像状态](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
+-   若要在镜像数据库中创建数据库快照，数据库必须处于同步[镜像状态](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
 -   不能将源数据库配置为可缩放共享数据库。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48212197"
   
 -   [最佳做法：限制数据库快照的数量](#Limiting_Number)  
   
--   [最佳做法：将客户端连接到数据库快照](#Client_Connections)  
+-   [最佳做法：客户端连接到数据库快照](#Client_Connections)  
   
 ####  <a name="Naming"></a> 最佳做法：命名数据库快照  
  创建数据库快照之前，考虑如何命名它们是非常重要的。 每个数据库快照都需要一个唯一的数据库名称。 为了便于管理，数据库快照的名称可以包含标识数据库的信息，例如：  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_getsubscriptiondtspackagename
@@ -17,12 +16,12 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59950856e8be9543d6473cd3207f24f72da264d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df214182e992bf9616ddcb77a4f305ea4f47a4c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717105"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818829"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布***’**  
+ [ **@publication** =] **'***发布*****  
  发布的名称。 **'***出版物***'** 是**sysname**，无默认值。  
   
  [  **@subscriber=**] **'***订阅服务器***’**  
@@ -58,7 +57,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_getsubscriptiondtspackagename**快照复制和事务复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_getsubscriptiondtspackagename**。  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticlecolumndatatype
@@ -17,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9f24f814b7ca4b160c51783f7923274fa33614e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93025676d451444140fad80a993813c0463a2f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206756"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@publication=** ] **'***发布*****  
  Oracle 发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article =** ] **'***文章*****  
+ [  **@article =** ] **'***文章*****  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
  [ **@column** =] **'***列*****  
@@ -80,7 +79,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
  **sp_changearticlecolumndatatype**必须执行用于必须更改每个项目列映射。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changearticlecolumndatatype**。  
   
 ## <a name="see-also"></a>请参阅  

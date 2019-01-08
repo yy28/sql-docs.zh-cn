@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
@@ -14,12 +14,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116781"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203403"
 ---
 # <a name="save-as"></a>另存为
   使用此对话框可以将当前项的实例以指定的文件格式保存到指定位置。 若要显示此对话框中，单击**保存** *\<文件 >* **作为**上**文件**菜单 (其中 *\<文件 >* 是当前项的名称)，或按 ALT + F，一个在代码编辑器中。  
@@ -31,8 +31,8 @@ ms.locfileid: "48116781"
  **文件名**  
  使用此选项可以查看当前的文件名，更改文件名，或在显示的文件和文件夹中进行筛选。 若要在显示的文件和文件夹中进行筛选，请输入要筛选的文件的完整文件名或部分文件名。 可以使用星号 (`*`) 作为通配符。  
   
-> [!TIP]  
->  若要显示位于 Web 和网络位置上的文件，请在“文件名”框中输入 URL 或网络路径。 例如，输入“http://mywebsite”可显示“mywebsite”Web 位置中可用的文件，输入“\\\myserver\myshare”可显示“myserver”上的“myshare”位置中可用的文件。  
+> [!TIP]
+>  若要显示位于 Web 和网络位置上的文件，请在“文件名”框中输入 URL 或网络路径。 例如，输入“<http://mywebsite>”可显示“mywebsite”Web 位置中可用的文件，输入“\\\myserver\myshare”可显示“myserver”上的“myshare”位置中可用的文件。  
   
  **保存类型**  
  使用此选项可为所选项选择新的文件类型。 显示的文件类型包括所选项可转换成的所有可用文件类型。  

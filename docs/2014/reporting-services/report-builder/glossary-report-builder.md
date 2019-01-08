@@ -11,19 +11,19 @@ ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8afbe5f3bd711aac8ac1d7a0dd3d3258a6d4305d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095377"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522380"
 ---
 # <a name="glossary-report-builder"></a>词汇表（报表生成器）
   
   
 |术语|定义|  
 |----------|----------------|  
-|.NET Framework|支持生成、部署和运行下一代应用程序和 Web 服务的必备 Windows 组件。 此组件为现有投资与下一代应用程序和服务间的集成提供了基于标准的高效率多语言环境，并能够快速灵活地解决 Internet 规模应用程序的部署和操作提出的挑战。 .NET Framework 由三个主要部分组成：公共语言运行时、分层的统一类库集和称为 ASP.NET 的 ASP 组件化版本。 请参阅：ASP.NET、公共语言运行时和 .NET Framework 类库。|  
+|.NET Framework|支持生成、部署和运行下一代应用程序和 Web 服务的必备 Windows 组件。 此组件为现有投资与下一代应用程序和服务间的集成提供了基于标准的高效率多语言环境，并能够快速灵活地解决 Internet 规模应用程序的部署和操作提出的挑战。 .NET Framework 由三个主要部分组成：公共语言运行时、分层的统一类库集和称为 ASP.NET 的 ASP 组件化版本。 请参阅：ASP.NET、 公共语言运行时、.NET Framework 类库。|  
 |ActiveX 数据对象 (ActiveX Data Objects)|可访问数据源的组件对象模型对象。 此 API 在 OLE DB 和编程语言（例如 Visual Basic、Visual Basic for Applications、Active Server Pages 和 Microsoft Internet Explorer Visual Basic Scripting）之间提供了一个接口层。|  
 |特别报告 (ad hoc report)|使用访问报表模型的 Report Builder 1.0 生成的 .rdl 报表。|  
 |修饰 (adornment)|附加到窗格或窗口边缘的控件或状态区域（如工具栏或标尺）。|  
@@ -169,7 +169,7 @@ ms.locfileid: "48095377"
 |热度地图 (heat map)|一种地图展示类型，其中，每个多边形的颜色强度对应于相关的分析数据。 例如，范围中较低的值显示为蓝色（冷色），较高的值显示为红色（暖色）。|  
 |层次结构 (hierarchy)|一种按每个成员都有一个父成员和零个或更多个子成员的方式组织维度成员的逻辑树结构。|  
 |高可用性|资源的状态，在这种状态下，资源大部分时间都可由客户端操作和使用，出现中断服务的故障的几率非常低。|  
-|HTML|请参阅另一术语：超文本标记语言 (Hypertext Markup Language)|  
+|HTML|请参阅其他术语：超文本标记语言 (Hypertext Markup Language)|  
 |HTML 查看器 (HTML Viewer)|一个用户界面，包含一个报表工具栏和其他用于处理报表的导航元素。|  
 |超文本标记语言 (Hypertext Markup Language)|用来为 Web 创建文档的一种文本标记语言。 HTML 通过使用各种标记和属性来定义 Web 文档的结构和布局。|  
 |标识符 (identifier)|数据库中对象的名称。|  
@@ -180,16 +180,16 @@ ms.locfileid: "48095377"
 |instance|1.计算机上运行的 SQL Server 副本。 2. 报表项（例如报表部件、子报表、动态成员或组）的特定副本。|  
 |integer|一种数字类别的数据类型，包括 bigint、int、smallint 和 tinyint 数据类型。|  
 |Internet 协议安全 (Internet Protocol security)|计算机使用加密安全服务通过 Internet 协议 (IP) 网络提供私有和安全通信时遵循的规则。|  
-|IPsec|请参阅另一术语：Internet 协议安全 (Internet Protocol security)|  
+|IPsec|请参阅其他术语：Internet 协议安全 (Internet Protocol security)|  
 |ISO|负责开发国际数据通信标准的两个国际标准组织之一。 国际标准化组织 (ISO) 与国际电工委员会 (IEC) 密切合作来定义计算标准。 它们共同发布了 SQL 的 ISO/IEC SQL-92 标准。|  
 |项级角色分配 (item-level role assignment)|一种应用于报表服务器文件夹命名空间中的项目的安全策略。|  
 |项级角色定义 (item-level role definition)|一种安全模板，定义用来控制对报表服务器文件夹命名空间中的项的访问或与该项进行的交互的角色。|  
 |关键绩效指标 (key performance indicator)|(KPI) 一个可量化的标准化指标，反映某个关键业务变量（例如，市场份额）在不同时间的不同情况。|  
-|关键字 (keyword)|SQL Server 中执行特定功能（如定义、操作或访问数据库对象）的保留字。 例如：SELECT、FROM 和 AND。|  
+|关键字 (keyword)|SQL Server 中执行特定功能（如定义、操作或访问数据库对象）的保留字。 例如：SELECT、 FROM、 和 and。|  
 |KPI|请参阅另一术语：关键绩效指标 (key performance indicator)|  
 |标签字段 (label field)|标识相应键字段的标签的报表数据集字段。 参数和数据区域可以显示键字段而非值的标签。|  
 |latency|在一台服务器上完成数据更改到此更改显示在另一台服务器上所用的时间。|  
-|纬度 (latitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的纬度坐标。 有效范围是从 –90.0 到 +90.0。|  
+|纬度 (latitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的纬度坐标。 有效范围是从 -90.0 到 +90.0。|  
 |层 (layer)|在地图报表项中，层指定空间数据的类型和单个类型的表示形式。 一个地图报表项是多个层的容器。|  
 |LCID|标识基于 Windows 的区域设置的数字。|  
 |图例 (legend)|在报表图表、地图或仪表数据区域中，指的是在数据的显示表示形式和基础数据值之间提供指导的元素。|  
@@ -202,7 +202,7 @@ ms.locfileid: "48095377"
 |日志文件 (log file)|包含数据库中所做修改的记录的文件或文件集。|  
 |逻辑名称 (logical name)|SQL Server 用来标识文件的名称。|  
 |逻辑运算符 (logical operators)|运算符 AND、OR 和 NOT。 用于在 WHERE 子句中连接搜索条件。|  
-|经度 (longitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的坐标。 有效范围是从 –180.0 到 +180.0。|  
+|经度 (longitude)|作为世界大地坐标系 (WGS 84) 数据中十进制度数值的坐标。 有效范围是从 -180.0 到 +180.0。|  
 |多对多关系 (many-to-many relationship)|这样的两个表之间的关系：每个表中的行在相关表中都有多个匹配行。 例如，每张销售发票可以包含多个产品，但每个产品可以出现在多张销售发票上。|  
 |多对一关系 (many-to-one relationship)|这样的两个表之间的关系：一个表中的一个行可以与另一个表中的许多行相关。|  
 |地图 (map)|作为标题、不同类型的图例和地图层的容器的报表项。|  
@@ -213,7 +213,7 @@ ms.locfileid: "48095377"
 |主文件 (master file)|随早期的 SQL Server 版本一起安装的文件，用来存储 master、model 和 tempdb 系统数据库和事务日志以及 pubs 示例数据库和事务日志。|  
 |匹配字段 (match fields)|用于在分析数据和空间数据之间建立关系的一组字段。|  
 |矩阵数据区域 (matrix data region)|报表布局上的数据区域，用于提供与交叉表和数据透视表类似的功能。 在运行时，由于报表数据和数据区域是组合在一起的，所以矩阵在页面上沿水平和垂直方向增长。 矩阵单元中的值显示仅限于单元所属行组和列组的交集的聚合值。|  
-|MDX|请参阅另一术语：多维表达式 (Multidimensional Expressions) (MDX)|  
+|MDX|请参阅其他术语：多维表达式 (MDX)|  
 |Mercator 投影 (Mercator projection)|在地图报表项中，指的是 Gerardus Mercator 在 1569 年发现的柱面地图投影。|  
 |元数据|有关数据属性的信息，例如列中的数据类型（numeric、text 等）或列的长度；有关文件的信息，例如其标题、说明、创建日期以及最后修改日期；或者有关数据结构的信息或指定对象设计（例如多维数据集或维度）的信息。|  
 |方法|通过使用 COM 对象执行操作的函数，与在 SQL-DMO、OLE DB 和 ActiveX 数据对象 (ADO) 中一样。|  
@@ -264,7 +264,7 @@ ms.locfileid: "48095377"
 |protocol|使计算机之间可以交换信息的一组标准的格式和过程。|  
 |提供程序|1.OLE DB 访问接口。 2. 提供数据库访问的进程内动态链接库 (DLL)。|  
 |查询参数 (query parameters)|在数据集查询中指定的参数，如 Transact-SQL 查询。|  
-|RDL|请参阅另一术语：报表定义语言 (Report Definition Language)|  
+|RDL|请参阅其他术语：报表定义语言|  
 |记录 (record)|视为一个单元的一组相关字段（列）信息。 在关系数据库中，人们更习惯于将记录称为行。|  
 |矩形 (rectangle)|一个报表项，可用作多个报表项的容器，也可用作报表上的一个图形元素。|  
 |递归层次结构 (recursive hierarchy)|1.将来自包含多个层次结构级别的单个报表数据集的数据组织到分层结构中的层次结构。例如，表示组织层次结构中的经理－雇员关系的报告结构。 2. 在 Master Data Services 中，指的是包括递归关系的派生层次结构。 在实体具有基于域的属性，而该属性基于实体本身时，存在递归关系。|  
@@ -332,12 +332,12 @@ ms.locfileid: "48095377"
 |SKU|一种用来标识一个产品的不同版本的方法；同时也是 stock keeping unit（单品）的首字母缩略词，这是一个标准商业术语。|  
 |切片 (slice)|多维数据集中的一个数据子集，通过用维度成员限制一个或多个维度来指定。|  
 |智能标记 (smart tag)|在 Visual Studio 2005 中，智能标记直接在设计图面上显示关键配置以提高设计时的总体工作效率。|  
-|SMDL|请参阅另一术语：语义模型定义语言 (SMDL) (Semantic Model Definition Language)|  
+|SMDL|请参阅其他术语：语义模型定义语言 (SMDL)|  
 |snapshot|请参阅另一术语：报表快照 (report snapshot)|  
 |排序顺序 (sort order)|在排序规则中用于定义字符在比较运算中的求值方式及其排序顺序的一组规则。|  
 |空间数据 (spatial data)|指定对象在平面或曲面上的位置的数据。 空间数据可以是点、线条或多边形。|  
 |空间数据类型 (spatial data types)|指定表示几何图形（平面）或地理（测地学）信息的数据。|  
-|SQL|请参阅另一术语：结构化查询语言 (Structured Query Language) (SQL)|  
+|SQL|请参阅其他术语：结构化查询语言 (Structured Query Language) (SQL)|  
 |SQL 查询 (SQL query)|一种 SQL 语句，例如 SELECT、INSERT、UPDATE、DELETE 或 CREATE TABLE。|  
 |SQL Server 身份验证|一种机制，用来验证通过指定 SQL Server 登录 ID 和密码连接 SQL Server 实例的尝试。|  
 |SQL Server 登录名|存储在 SQL Server 中的帐户，用户可使用它连接到 SQL Server。|  
@@ -366,11 +366,11 @@ ms.locfileid: "48095377"
 |Windows Management Instrumentation|提供有关托管环境中对象的信息的接口。|  
 |WKB|由开放地理空间联盟 (OGC) 指定的熟知二进制数据表示形式。|  
 |WKT|由开放地理空间联盟 (OGC) 指定的熟知文本数据表示形式。|  
-|WMI|请参阅另一术语：Windows Management Instrumentation|  
+|WMI|请参阅其他术语：Windows Management Instrumentation|  
 |x 轴 (x-axis)|请参阅另一术语：类别 (x) 轴 (category (x) axis)|  
 |y 轴 (y-axis)|请参阅另一术语：值 (y) 轴 (value (y) axis)|  
   
 ## <a name="see-also"></a>请参阅  
- [报表创作概念&#40;报表生成器和 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [报表创作概念（报表生成器和 SSRS）](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

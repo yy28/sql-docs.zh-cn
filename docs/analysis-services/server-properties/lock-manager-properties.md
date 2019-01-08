@@ -1,5 +1,5 @@
 ---
-title: 锁管理器属性 |Microsoft Docs
+title: Analysis Services 锁管理器属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 146bfef500424b7a587c3fb28616a3727086f265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5383fe83963a9b388413b9b829b4fac7fc11788
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033325"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071584"
 ---
 # <a name="lock-manager-properties"></a>锁管理器属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的锁管理器服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **适用于：** 多维和表格服务器模式  
+ **适用范围：** 多维和表格服务器模式  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  **DefaultLockTimeoutMS**  
  有符号 32 位整数属性，用于定义内部锁请求的默认锁超时值（毫秒）。  
   

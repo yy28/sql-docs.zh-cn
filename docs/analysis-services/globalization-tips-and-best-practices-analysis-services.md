@@ -1,5 +1,5 @@
 ---
-title: 全球化提示和最佳做法 (Analysis Services) |Microsoft 文档
+title: 全球化提示和最佳实践 (Analysis Services) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 12b771c40e6c17f1da41f1636b785b7dfc719941
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019384"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202626"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34019384"
   
      在中国和新加坡，Microsoft 技术支持部门通常见到的是简体中文，简体中文以拼音作为首选的排序方式。 建议使用的排序规则是 Chinese_PRC（用于 SQL Server 2000）、Chinese_PRC_90（用于 SQL Server 2005）或 Chinese_Simplified_Pinyin_100（用于 SQL Server 2008 和更高版本）。  
   
-     在中国台湾地区，更常见的是繁体中文，建议使用的是基于笔画数的排序方式：Chinese_Taiwan_Stroke（用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90（用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100（用于 SQL Server 2008 和更高版本）。  
+     在中国台湾地区，更常见的是繁体中文，建议使用的是基于笔画数的排序方式。Chinese_Taiwan_Stroke（用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90（用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100（用于 SQL Server 2008 和更高版本）。  
   
      其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在中国澳门，较常使用的是 Chinese_Traditional_Stroke_Count_100（在 SQL Server 2008 和更高版本上）。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019384"
   
 |语言脚本|区分大小写|  
 |---------------------|----------------------|  
-|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 ID 被认为是相同的：54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**。 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
+|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 ID 被认为是相同的：54321**abcdef**、 54321**ABCDEF**、 54321**AbCdEf**。 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
 |**西里尔语，希腊语，科普特语，亚美尼亚语**|非拉丁语双脚本中的对象标识符（如西里尔语）总是区分大小写。 例如，Измерение 和 измерение 被视为两个不同值，尽管唯一的区别是首字母的大小写。|  
   
  **对象标识符区分大小写的意义**  
@@ -89,7 +89,7 @@ ms.locfileid: "34019384"
   
      你会看到 Adventure Works 示例数据库的法语翻译。  
   
-     ![Excel 数据透视表及法语翻译](../analysis-services/media/ssas-localetest-excel.png "包含法语翻译的 Excel 数据透视表")  
+     ![带有法语翻译的 Excel 数据透视表](../analysis-services/media/ssas-localetest-excel.png "带有法语翻译的 Excel 数据透视表")  
   
  作为后续步骤，可以使用 Server Profiler 来确认区域设置。 单击一个 `Session Initialize` 事件，然后查看下方文本区域中的属性列表以找到 `<localeidentifier>1036</localeidentifier>`。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "34019384"
   
 -   对 Adventure Works 数据库执行 MDX 查询。 查询结果应为法语翻译。  
   
-     ![使用 SSMS 中的法语翻译的 MDX 查询](../analysis-services/media/ssas-localetest-ssms.png "与在 SSMS 中的法语翻译的 MDX 查询")  
+     ![SSMS 中带法语翻译的 MDX 查询](../analysis-services/media/ssas-localetest-ssms.png "SSMS 中带法语翻译的 MDX 查询")  
   
 ##  <a name="bkmk_mdx"></a> 在包含翻译的解决方案中撰写 MDX 查询  
  翻译提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名称的显示信息，但是不翻译相同对象的标识符。 尽可能使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的标识符和键，而不使用翻译后的标题和名称。 例如，使用多维表达式 (MDX) 语句和脚本的成员键而不是成员名称以确保多种语言之间的可移植性。  
@@ -122,7 +122,7 @@ ms.locfileid: "34019384"
   
 3.  **使用 ISO 日期格式表示通用日期和时间信息**  
   
-     一个 [Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx) 提出了这一建议：“我一直对传递到 SQL 或 MDX 中的查询的任何日期字符串使用 ISO 日期格式 yyyy-mm-dd，因为它很明确而且无论客户端或服务器的区域设置如何都将正常工作。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
+     一个[Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx)了这一建议：“我一直对传递到 SQL 或 MDX 中的查询的任何日期字符串使用 ISO 日期格式 yyyy-mm-dd，因为它很明确而且无论客户端或服务器的区域设置如何都将正常工作。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
   
 4.  **使用 Format 函数强制使用特定格式，而不考虑区域语言设置**  
   
@@ -141,7 +141,7 @@ ms.locfileid: "34019384"
   
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 的全球化方案](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [编写国际化 Transact-SQL 语句](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

@@ -5,8 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -17,12 +16,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663525"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206386"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|none|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意： 此选项已弃用。 请改用仅支持复制。|  
+|none|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意：已不推荐使用此选项。 请改用仅支持复制。|  
 |automatic（默认值）|已发布表的架构和初始数据将首先传输到订阅服务器。|  
 |replication support only|如果需要，在项目的订阅服务器上自动生成支持更新订阅的自定义存储过程和触发器。 假定订阅服务器已拥有已发布表的架构和初始数据。 在配置对等事务复制拓扑时，确保该拓扑中所有节点上的数据都相同。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。<br /><br /> *不支持非 SQL Server 发布的订阅。*|  
 |initialize with backup|从发布数据库的备份获取已发布表的架构和初始数据。 假定订阅服务器对发布数据库的备份具有访问权。 指定备份的备份和媒体类型的位置*backupdevicename*并*backupdevicetype*。 在使用此选项时，无需在配置期间停止对等事务复制拓扑。<br /><br /> *不支持非 SQL Server 发布的订阅。*|  
@@ -204,7 +203,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- 是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步管理器。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果为 false，则表示订阅没有在 Windows 同步管理器中注册。 如果为 true，则表示订阅已向 Windows 同步管理器注册，因而可以在不启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的情况下同步。 Oracle 发布服务器不支持。  
+ 是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果为 false，则表示订阅没有在 Windows 同步管理器中注册。 如果为 true，则表示订阅已向 Windows 同步管理器注册，因而可以在不启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的情况下同步。 Oracle 发布服务器不支持。  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  指定可远程激活代理。 *remote_agent_activation*是**位**默认值为 0。  
@@ -213,7 +212,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  不推荐使用此参数，保留它只是为了让脚本能够向后兼容。  
   
  [ @offloadserver= ] '*remote_agent_server_name*'  
- 指定用于远程激活的服务器的网络名称。 *remote_agent_server_name*是**sysname**，默认值为 NULL。  
+ 指定用于远程激活的服务器的网络名称。 *remote_agent_server_name* 是 **sysname**，默认值为 NULL。  
   
  [ @dts_package_name= ] '*dts_package_name*'  
  指定 Data Transformation Services (DTS) 包的名称。 *dts_package_name*是**sysname**默认值为 NULL。 例如，若要指定 DTSPub_Package 包，则该参数将为 `@dts_package_name = N'DTSPub_Package'`。 该参数可用于推送订阅。 若要将 DTS 包信息添加到请求订阅，请使用 sp_addpullsubscription_agent。  
@@ -269,7 +268,7 @@ sp_addsubscription [ @publication = ] 'publication'
  指定订阅应从其开始将更改传递给对等事务复制拓扑中的节点的日志序列号 (LSN)。 用于@sync_typeinitialize from lsn，以确保所有相关事务都复制到新节点的值。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  [ @subscriptionstreams= ] *subscriptionstreams*  
- 每个分发代理允许的连接数，用于将成批更改并行应用于订阅服务器，同时保留在使用单线程时具有的多种事务特征。 *subscriptionstreams*是**tinyint**，默认值为 NULL。 支持使用 1 到 64 之间的值。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器、Oracle 发布服务器和对等订阅均不支持此参数。 每当使用订阅流时，都会在 msreplication_subscriptions 表中添加附加行（每个流一行），且 agent_id 设置为 NULL。  
+ 每个分发代理允许的连接数，用于将成批更改并行应用于订阅服务器，同时保留在使用单线程时具有的多种事务特征。 *subscriptionstreams*是**tinyint**，默认值为 NULL。 支持使用 1 到 64 之间的值。 此参数不支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器，Oracle 发布服务器或对等订阅。 每当使用订阅流时，都会在 msreplication_subscriptions 表中添加附加行（每个流一行），且 agent_id 设置为 NULL。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)]订阅流不适用于配置为传递  的项目。 若要使用订阅流，请改将项目配置为传递存储过程调用。  
@@ -311,14 +310,14 @@ sp_addsubscription [ @publication = ] 'publication'
   
  选择 **sync_type** 选项 *replication support only*、 *initialize with backup*或 *initialize from lsn*时，日志读取器代理必须在执行 **sp_addsubscription**后运行，以便将设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 将 **sync_type** 选项设置为 *Automatic*时，不需要执行任何特殊日志读取器代理操作。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有 sysadmin 固定服务器角色成员或 db_owner 固定数据库角色成员才能执行 sp_addsubscription。 对于请求订阅，在发布访问列表中有登录权的用户可以执行 sp_addsubscription。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

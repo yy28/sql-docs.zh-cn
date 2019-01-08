@@ -24,12 +24,12 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c6bc03334003438fdefbe7feac1e321d9a2e9bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137487"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545348"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
   创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
@@ -48,7 +48,7 @@ ms.locfileid: "48137487"
  或者，您可以在对全文索引进行初始完全填充之后使用更改跟踪对其进行维护。 将出现与更改跟踪关联的较小开销，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护它用来跟踪自上次填充后对基表所做更改的表。 当使用更改跟踪时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护基表或索引视图中已通过更新、删除或插入进行过修改的行的记录。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
   
 > [!NOTE]  
->  表包含`timestamp`列中，可以使用增量填充。  
+>  对于包含 `timestamp` 列的表，可以使用增量填充。  
   
  如果在创建索引期间启用更改跟踪，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在新全文索引创建之后立即对其进行完全填充。 其后，将跟踪更改并将更改传播到全文索引。 有两类更改跟踪：自动（CHANGE_TRACKING AUTO 选项）和手动（CHANGE_TRACKING MANUAL 选项）。 自动更改跟踪为默认行为。  
   
@@ -60,40 +60,40 @@ ms.locfileid: "48137487"
   
      **若要设置使用自动填充的跟踪更改**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ...WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ...SET CHANGE_TRACKING AUTO  
   
      有关详细信息，请参阅本主题后面的示例“E. 更改全文索引以使用自动更改跟踪”。  
   
 -   手动填充  
   
-     如果您指定 CHANGE_TRACKING MANUAL，全文引擎将对全文索引使用手动填充。 完成首次完全填充之后，当修改基表中的数据时将跟踪更改。 但是，这些更改不会传播到全文索引，直至你执行 ALTER FULLTEXT INDEX … START UPDATE POPULATION 语句手动应用更改。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+     如果您指定 CHANGE_TRACKING MANUAL，全文引擎将对全文索引使用手动填充。 完成首次完全填充之后，当修改基表中的数据时将跟踪更改。 但是，这些更改不会传播到全文索引，直至你执行 ALTER FULLTEXT INDEX …START UPDATE POPULATION 语句手动应用更改。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定期调用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
      **启动使用手动填充的跟踪更改**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ...WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ...SET CHANGE_TRACKING MANUAL  
   
      有关详细信息，请参阅本主题后面的示例“C. 使用手动更改跟踪创建全文索引”和“D. 运行手动填充”。  
   
  **若要关闭更改跟踪**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ...WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ...SET CHANGE_TRACKING OFF  
   
 
   
 ### <a name="incremental-timestamp-based-population"></a>基于时间戳的增量填充  
  增量填充是手动填充全文索引的一种替代机制。 您可以对 CHANGE_TRACKING 设置为 MANUAL 或 OFF 的全文索引运行增量填充。 如果全文索引的第一个填充是增量填充，它将对所有行编制索引并使其等效于完全填充。  
   
- 增量填充要求是索引的表必须具有的一个列`timestamp`数据类型。 如果 `timestamp` 列不存在，则无法执行增量填充。 没有的表增量填充请求`timestamp`列会导致完全填充操作。 另外，如果影响表全文索引的任意元数据自上次填充以来发生了变化，则增量填充请求将作为完全填充来执行。 这包括更改任何列、索引或全文索引定义所引起的元数据更改。  
+ 增量填充要求索引表必须具有 `timestamp` 数据类型的列。 如果 `timestamp` 列不存在，则无法执行增量填充。 对不含 `timestamp` 列的表请求增量填充会导致完全填充操作。 另外，如果影响表全文索引的任意元数据自上次填充以来发生了变化，则增量填充请求将作为完全填充来执行。 这包括更改任何列、索引或全文索引定义所引起的元数据更改。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `timestamp` 列标识自上次填充后发生更改的行。 然后，增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 如果对表进行大量插入操作，则使用增量填充会较使用手动填充有效。  
   
- 在填充结束时，全文引擎将记录新的 `timestamp` 值。 此值是最大`timestamp`SQL 收集器遇到的值。 以后再启动增量填充时，将会使用此值。  
+ 在填充结束时，全文引擎将记录新的 `timestamp` 值。 该值是 SQL 收集器遇到的最大 `timestamp` 值。 以后再启动增量填充时，将会使用此值。  
   
  若要运行增量填充，请执行使用 START INCREMENTAL POPULATION 子句的 ALTER FULLTEXT INDEX 语句。  
   
@@ -184,7 +184,7 @@ GO
      使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动对全文索引基表或索引视图的表增量填充。  
   
     > [!IMPORTANT]  
-    >  如果基表或视图不包含的列`timestamp`数据类型，则执行完全填充。  
+    >  如果基表或视图不包含 `timestamp` 数据类型的列，则执行完全填充。  
   
      选项如下所示：  
   

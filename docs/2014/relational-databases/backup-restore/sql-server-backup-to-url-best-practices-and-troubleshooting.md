@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9347a38b1289afa3150cb5354aa85e16516947b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049017"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349992"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
   本主题介绍 SQL Server 备份和还原到 Windows Azure Blob 服务的最佳做法和故障排除提示。  
@@ -41,7 +41,7 @@ ms.locfileid: "48049017"
   
 ## <a name="handling-large-files"></a>处理大型文件  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Windows Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 [Windows Azure 存储 SLA](http://go.microsoft.com/fwlink/?LinkId=271619)具有您需要考虑的 blob 的最大处理时间。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Windows Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 [Windows Azure 存储 SLA](https://go.microsoft.com/fwlink/?LinkId=271619)具有您需要考虑的 blob 的最大处理时间。  
   
 -   使用在**管理备份**部分中建议的 `WITH COMPRESSION` 选项，在备份大型文件时这一点非常重要。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48049017"
   
 -   WITH CREDENTIAL 是一个新选项，在备份到 Windows Azure Blob 存储服务或从中还原时需要该选项。 与凭据有关的失败可能包括：  
   
-     中指定的凭据`BACKUP`或`RESTORE`命令不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
+     `BACKUP` 或 `RESTORE` 命令中指定的凭据不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
   
     ```  
     IF NOT EXISTS  
@@ -89,24 +89,24 @@ ms.locfileid: "48049017"
   
         -   `VERIFYONLY`  
   
-    -   您还可以查看 Windows 事件日志（位于应用程序日志之下，名为“SQLBackupToUrl”），查找相关信息。  
+    -   此外可以通过查看 Windows 事件日志的名称 SQLBackupToUrl 位于应用程序日志中找到信息。  
   
 -   从压缩备份中还原时，您可能看到以下错误：  
   
     -   **发生 SqlException 3284。严重性：16 状态：5**  
-        **在设备上的消息文件标记 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 未对齐。使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
+        **在设备上的消息文件标记 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 未对齐。用于创建备份集的相同块大小重新发布 Restore 语句：'65536' 看起来像一个可能值。**  
   
          要修复此错误，请重新发布指定了 `BACKUP` 的 `BLOCKSIZE = 65536` 语句。  
   
--   由于具有活动租约的 blob 导致的备份错误：失败的备份活动可能源自具有活动租约的 blob。  
+-   由于对其具有活动租约的 blob 的备份过程中出错：失败的备份活动可能会导致 blob 具有活动租约。  
   
      如果重新尝试执行备份语句，备份操作可能失败，出现类似于以下的错误：  
   
-     **“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回错误：(412) 当前 blob 上有租约，但请求中没有指定租约 ID**。  
+     **“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回错误：(412) 当前 blob 上的租约，则在请求中未指定任何租约 ID**。  
   
      如果尝试对具有活动租约的备份 blob 文件执行还原语句，则还原操作失败，出现类似于以下的错误：  
   
-     **异常消息：远程服务器返回了错误：(409)。有冲突。**  
+     **异常消息：远程服务器返回错误：(409) 冲突...**  
   
      发生这种错误时，需要删除 blob 文件。 有关此情形和如何解决此问题的详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48049017"
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。   下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   
--   尽情涂鸦"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失败： 备份到 URL 从远程终结点收到了异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+-   尽情涂鸦"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失败：“备份到 URL”收到来自远程终结点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
   
 -   文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。无法从远程终结点收集错误。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48049017"
   
      备份数据库异常终止。  
   
--   Backupiorequest:: Reportioerror 备份设备上写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+-   Backupiorequest:: Reportioerror 备份设备上写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
   
  如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48049017"
   
  **未选择默认代理设置：**  
   
- 有时，可能由于没有选择默认设置而导致如下代理身份验证错误：文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。备份到 URL”收到来自远程终结点的异常 *。异常消息：远程服务器返回错误：(407)*“必须进行代理身份验证”。  
+ 有时，可能由于没有选择默认设置而导致如下代理身份验证错误：文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。备份到 URL”收到来自远程终结点的异常 *。异常消息：远程服务器返回错误：(407)* **需要代理身份验证**。  
   
  若要解决此问题，请使用以下步骤创建一个配置文件，以允许“备份到 URL”进程使用默认代理设置：  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48049017"
   
     ```  
   
-2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器上，配置文件将置于以下位置： *C:\Program Files\Microsoft SQL Server\MSSQL12。\<实例名 > \MSSQL\Binn*。  
+2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器上，配置文件将置于以下位置：*C:\Program Files\Microsoft SQL Server\MSSQL12。\<实例名 > \MSSQL\Binn*。  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>对 SQL Server 托管备份到 Windows Azure 进行故障排除  
  由于 SQL Server 托管备份构建在“备份到 URL”上，因此上面各节中介绍的故障排除提示适用于使用 SQL Server 托管备份的数据库或实例。  中详细介绍了有关 SQL Server 托管备份到 Windows Azure 进行故障排除信息[故障排除 SQL Server 托管备份到 Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。  

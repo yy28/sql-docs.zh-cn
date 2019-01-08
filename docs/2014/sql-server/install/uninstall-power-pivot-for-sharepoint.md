@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f20575da48685a2f6c2b990169da1baba54ed667
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769769"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>卸载 PowerPivot for SharePoint
   卸载 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装是一个由多个步骤构成的操作，包括准备卸载、从场中删除功能和解决方案以及删除程序文件和注册表设置。  
@@ -27,17 +26,17 @@ ms.locfileid: "48212107"
   
 -   [先决条件](#prereq)  
   
--   [步骤 1：卸载前一览表](#bkmk_before)  
+-   [第 1 步：卸载前一览表](#bkmk_before)  
   
--   [步骤 2：从 SharePoint 删除功能和解决方案](#bkmk_remove)  
+-   [步骤 2:从 SharePoint 删除功能和解决方案](#bkmk_remove)  
   
--   [步骤 3：运行 SQL Server 安装程序以便从本地计算机中删除程序](#bkmk_uninstall)  
+-   [步骤 3:运行 SQL Server 安装程序以便从本地计算机中删除程序](#bkmk_uninstall)  
   
--   [步骤 4： 卸载 PowerPivot for SharePoint 外接程序](#bkmk_addin)  
+-   [步骤 4:卸载 PowerPivot for SharePoint 外接程序](#bkmk_addin)  
   
--   [步骤 5：验证卸载情况](#verify)  
+-   [步骤 5:验证卸载情况](#verify)  
   
--   [步骤 6：卸载后一览表](#bkmk_post)  
+-   [步骤 6:卸载后一览表](#bkmk_post)  
   
 ##  <a name="prereq"></a> 先决条件  
   
@@ -47,8 +46,8 @@ ms.locfileid: "48212107"
   
 -   您必须是 Analysis Services 系统管理员和本地 Administrators 组的成员才能卸载 Analysis Services 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
-##  <a name="bkmk_before"></a> 步骤 1：卸载前一览表  
- 一旦支持查询和数据处理的软件从场中删除后，PowerPivot 数据访问就会被禁用。 作为第一步，您应该主动删除不再正常运行的文件和库。 这样，您可以在卸载软件前解决与“缺少数据”有关的任何问题。  
+##  <a name="bkmk_before"></a> 步骤 1:卸载前一览表  
+ 一旦支持查询和数据处理的软件从场中删除后，PowerPivot 数据访问就会被禁用。 作为第一步，您应该主动删除不再正常运行的文件和库。 这样，可以在卸载软件前解决与“缺少数据”有关的任何问题。  
   
 1.  删除与 PowerPivot for SharePoint 安装关联的所有 PowerPivot 工作簿、文档和库。 一旦卸载软件后，库和文档都将失效。  
   
@@ -64,16 +63,16 @@ ms.locfileid: "48212107"
   
 5.  或者，在停止服务后等上几天，然后再卸载软件。 此步骤并非卸载所必需的，但在您解决可能疏漏的任何数据迁移或技术替代问题时，将能够选择暂时恢复服务。  
   
-##  <a name="bkmk_remove"></a> 步骤 2：从 SharePoint 删除功能和解决方案  
+##  <a name="bkmk_remove"></a> 步骤 2:从 SharePoint 删除功能和解决方案  
  使用 PowerPivot 配置工具从 SharePoint 中删除 PowerPivot 服务和应用程序。  
   
--   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的 **db_owner** 。  
+-   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的“db_owner”。  
   
 -   使用适合 SharePoint 版本的配置工具版本。 不能对 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安装使用这两个工具。  
   
 -   验证“SharePoint 管理”服务是否正在运行。  
   
-1.  **运行配置文件：** 注意，仅当 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装在本地服务器上时，才会列出这些配置工具。请在“开始”  菜单上，指向“所有程序” ，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击以下项之一：  
+1.  **运行配置工具：** 请注意配置工具将仅列出仅当[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安装在本地服务器上。上**启动**菜单，依次指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击以下项之一：  
   
     -   **PowerPivot for SharePoint 2013 配置**  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48212107"
   
 6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。  
   
-7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击 **“运行”** 后，出现以下警告，提醒您将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
+7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当您单击**运行**，出现以下警告，提醒你在批处理模式下处理操作："所有标记为在该工具中有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
 8.  单击 **“是”** 继续操作。  
   
@@ -118,22 +117,22 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  以管理员身份启动 SharePoint Management Shell，然后运行以下命令查看队列中的作业：  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
-3.  检查现有部署的以下信息： **“类型”** 是“收回”或“部署”， **“文件”** 为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+3.  检查现有部署的以下信息：**类型**是收回或部署，**文件**为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
 4.  对于部署或收回与 PowerPivot 解决方案，将复制的 GUID 值**JobId**然后将其粘贴到以下命令 （使用的标记、 复制和粘贴命令外壳的编辑菜单上复制该 GUID）：  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  通过依次单击 **“验证”** 和 **“运行”**，在该配置工具中重试该任务。  
   
  或者，您可以使用 PowerShell 从场中删除功能和解决方案。 有关详细信息，请参阅[powerpivot for SharePoint 的 PowerShell 参考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
-##  <a name="bkmk_uninstall"></a> 步骤 3：运行 SQL Server 安装程序以便从本地计算机中删除程序  
+##  <a name="bkmk_uninstall"></a> 步骤 3:运行 SQL Server 安装程序以便从本地计算机中删除程序  
  删除程序文件时，需运行 SQL Server 安装程序来卸载软件。 卸载程序将删除安装程序已创建的文件和注册表项。 您可以使用“程序和功能”页来卸载软件。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的安装是 SQL Server 安装的一部分。  
   
  可以卸载部分安装而不影响已安装的其他 SQL Server 实例（或同一实例中的功能）。 例如，可以卸载 PowerPivot for SharePoint 而保留安装的其他组件，例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或数据库引擎。  
@@ -146,16 +145,16 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      您可以从安装程序中选择 **PowerPivot** 实例，然后选择 **“Analysis Services”** 和 **“Analysis Services SharePoint 集成”** ，这样就可以只删除该功能，而保留其他功能。  
   
-##  <a name="bkmk_addin"></a> 步骤 4： 卸载 PowerPivot for SharePoint 外接程序  
+##  <a name="bkmk_addin"></a> 步骤 4:卸载 PowerPivot for SharePoint 外接程序  
  如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署具有两个或更多服务器且您安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序，则从安装它的每个服务器卸载 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序以完全卸载所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 文件。 有关详细信息，请参阅[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
-##  <a name="verify"></a> 步骤 5：验证卸载情况  
+##  <a name="verify"></a> 步骤 5:验证卸载情况  
   
 1.  在管理中心的 **“管理服务器上的服务”** 中，连接到卸载了 PowerPivot for SharePoint 的服务器。  
   
-2.  -   如果在卸载[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013，请验证**SQL Server PowerPivot 系统服务**不会再出现在列表中。  
+2.  -   如果您卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，请验证 **“SQL Server PowerPivot 系统服务”** 不再显示在列表中。  
   
-    -   如果在卸载[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010，请验证**SQL Server Analysis Services**并**SQL Server PowerPivot 系统服务**不会再出现在列表中。  
+    -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010，请验证 **SQL Server Analysis Services** 和 **“SQL Server PowerPivot 系统服务”** 不再显示在列表中。  
   
 3.  卸载场中的最后一个 PowerPivot for SharePoint 服务器后，请执行以下操作：  
   
@@ -167,7 +166,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  在“常规应用程序设置”中，验证 **“PowerPivot 管理面板”** 不再出现在该页上。  
   
-##  <a name="bkmk_post"></a> 步骤 6：卸载后一览表  
+##  <a name="bkmk_post"></a> 步骤 6:卸载后一览表  
  使用下表删除在卸载过程中未删除的软件和文件。  
   
 1.  从 `C:\Program Files\Microsoft SQL Server\MSAS12.PowerPivot`删除所有数据文件和子文件夹，然后删除该文件夹。 此步骤还将删除 DATA 目录中以前缓存的文件。  

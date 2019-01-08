@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9926ce7d8ef85533ec7e67f0cd2800d74ee253e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d4c308245312fa4fa80c1f320e874f89a3dec7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194647"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790969"
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
   传输作业任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。  
@@ -44,7 +43,7 @@ ms.locfileid: "48194647"
  传输作业任务将引发报告已传输的作业数的信息事件，而且在覆盖作业时还会引发警告事件。 该任务并不报告作业传输的进度，它仅报告 0% 和 100% 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在该任务的 `ExecutionValue` 属性中定义的执行值返回已传输的作业数。 通过将用户定义的变量分配`ExecValueVariable`传输作业任务，有关作业传输的信息的属性可提供给其他对象在包中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
+ 在该任务的 `ExecutionValue` 属性中定义的执行值返回已传输的作业数。 通过将用户定义的变量分配给传输作业任务的 `ExecValueVariable` 属性，包中的其他对象就可以访问有关作业传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)和[在包中使用变量](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>日志项  
  传输作业任务包括下列自定义日志项：  
@@ -63,9 +62,9 @@ ms.locfileid: "48194647"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [传输作业任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [传输作业任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [传输作业任务编辑器&#40;作业页&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [传输作业任务编辑器（“作业”页）](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

@@ -20,21 +20,21 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dda856d0381b6e9ca8f5a8c9625151c148435edb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22051ca07dbdb732cfcda2f8200b7375f593463
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746425"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202886"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLSetStmtAttr**设置与语句相关的属性。  
   
-> [!NOTE]  
+> [!NOTE]
 >  详细了解驱动程序管理器映射的内容到此函数时 ODBC 3 *.x*应用程序使用 ODBC 2 *.x*驱动程序，请参阅[用于向后映射替换函数应用程序的兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>语法  
@@ -124,11 +124,11 @@ SQLRETURN SQLSetStmtAttr(
   
  信息的格式设置*ValuePtr*取决于指定*属性*。 **SQLSetStmtAttr**接受两个不同的格式之一的属性信息： 字符串或整数值。 该特性的描述中记录了每个消息格式。 此格式适用于为每个属性返回的信息**SQLGetStmtAttr**。 指向的字符串*ValuePtr*的参数**SQLSetStmtAttr**具有长度*StringLength*。  
   
-> [!NOTE]  
+> [!NOTE]
 >  设置在连接级别的语句属性通过调用的能力**SQLSetConnectAttr** ODBC 3 中已弃用 *.x*。 ODBC 3 *.x*应用程序应永远不会在连接级别设置语句属性。 ODBC 3 *.x*不能在连接级别，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句属性，并且可以设置语句属性设置在连接级别或语句级别。  
-  
-> [!NOTE]  
->  ODBC 3 *.x*驱动程序仅需要支持此功能，如果他们应适用于 ODBC 2 *.x*设置 ODBC 2 应用程序都 *.x*在连接级别的语句选项。 有关详细信息，请参阅"设置语句选项在连接级别"下[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中向后兼容性的附录 g： 驱动程序指南。  
+> 
+> [!NOTE]
+>  ODBC 3 *.x*驱动程序仅需要支持此功能，如果他们应适用于 ODBC 2 *.x*设置 ODBC 2 应用程序都 *.x*在连接级别的语句选项。 有关详细信息，请参阅"设置语句选项在连接级别"下[SQLSetConnectOption 映射](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中附录 g:为了向后兼容的驱动程序指南。  
   
 ## <a name="statement-attributes-that-set-descriptor-fields"></a>设置描述符字段的语句属性  
  多个语句属性对应于一个描述符标头字段。 描述符字段的设置中设置这些属性实际结果。 通过调用设置字段**SQLSetStmtAttr**而不是个**SQLSetDescField**描述符句柄不需要获取函数调用的优点。  
@@ -184,7 +184,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR (ODBC 3.0)|SQLULEN * 偏移量添加到要更改的动态参数的绑定指针所指向的值。 如果此字段为非 null，驱动程序取消引用指针，将取消引用的值添加到每个描述符记录 （SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 中的延迟字段并使用新指针值绑定时。 它设置为默认情况下为 null。<br /><br /> 绑定偏移量是始终直接添加到 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 字段。 如果偏移量更改为不同的值，新值是仍直接添加到描述符字段中的值。 新的偏移量不添加到字段值再加上任何早期的偏移量。<br /><br /> 有关详细信息，请参阅[参数绑定偏移量](../../../odbc/reference/develop-app/parameter-binding-offsets.md)。<br /><br /> 设置此语句属性 APD 标头中设置 SQL_DESC_BIND_OFFSET_PTR 字段。|  
 |SQL_ATTR_PARAM_BIND_TYPE (ODBC 3.0)|Sqlulen 生成值，该值指示要用于动态参数的绑定方向。<br /><br /> 此字段设置为 sql_param_bind_by_column （默认值），可以选择按列绑定。<br /><br /> 若要选择按行绑定，此字段设置为结构或实例将绑定到一组的动态参数的缓冲区的长度。 此长度必须包括所有绑定参数和结构或缓冲区以确保当绑定参数的地址与指定的长度递增时，结果将点到下一步中的相同参数的开头的任何填充大小的空间参数集。 使用时*sizeof* ANSI C 中的运算符，将保证该行为。<br /><br /> 有关详细信息，请参阅[绑定的参数的数组](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)。<br /><br /> 设置此语句属性 APD 标头中设置 SQL_DESC_ BIND_TYPE 字段。|  
 |SQL_ATTR_PARAM_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT\*指向 SQLUSMALLINT 值的数组的值用于在 SQL 语句的执行过程中忽略参数。 每个值设置为 SQL_PARAM_PROCEED （适用于要执行的参数） 或 SQL_PARAM_IGNORE （适用于要忽略的参数）。<br /><br /> 通过设置指向 SQL_DESC_ARRAY_STATUS_PTR 到 SQL_PARAM_IGNORE APD 中的数组中的状态值，可以在处理期间忽略的一组参数。 如果其状态的值设置为 SQL_PARAM_PROCEED 或设置数组中的没有元素处理的一组参数。<br /><br /> 此语句属性可以设置为 null 指针，在这种情况下，驱动程序不返回参数状态值。 此属性可以设置在任何时候，但下一次之前未使用的新值**SQLExecDirect**或**SQLExecute**调用。<br /><br /> 没有绑定的参数时，将忽略此属性。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 设置此语句属性 APD 标头中设置 SQL_DESC_ARRAY_STATUS_PTR 字段。|  
-|SQL_ATTR_PARAM_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*值，该值指向数组 SQLUSMALLINT 值包含每行的参数值对的调用后的状态信息**SQLExecute**或**SQLExecDirect**。 此字段是必需的仅当 PARAMSET_SIZE 大于 1。<br /><br /> 状态值可以包含以下值：<br /><br /> SQL_PARAM_SUCCESS： 此参数集的成功执行 SQL 语句。<br /><br /> SQL_PARAM_SUCCESS_WITH_INFO： 成功执行参数; 这一组 SQL 语句但是，诊断数据结构中提供了警告信息。<br /><br /> SQL_PARAM_ERROR： 在处理此套参数时出错。 诊断数据结构中提供了其他错误的信息。<br /><br /> SQL_PARAM_UNUSED： 此参数集是未使用，可能是因为，一些以前的参数集导致中止将来进行处理，出现错误，或因为 SQL_PARAM_IGNORE 设置该集指定的 SQL_ATTR_PARAM_ 数组中的参数OPERATION_PTR。<br /><br /> SQL_PARAM_DIAG_UNAVAILABLE: 驱动程序参数的数组视为一个整体化单元，因此不会生成此级别的错误的信息。<br /><br /> 此语句属性可以设置为 null 指针，在这种情况下，驱动程序不返回参数状态值。 此属性可以设置在任何时候，但下一次之前未使用的新值**SQLExecute**或**SQLExecDirect**调用。 请注意，设置此属性可能会影响由驱动程序实现的输出参数行为。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 将此语句属性设置在 IPD 标头中设置 SQL_DESC_ARRAY_STATUS_PTR 字段。|  
+|SQL_ATTR_PARAM_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*值，该值指向数组 SQLUSMALLINT 值包含每行的参数值对的调用后的状态信息**SQLExecute**或**SQLExecDirect**。 此字段是必需的仅当 PARAMSET_SIZE 大于 1。<br /><br /> 状态值可以包含以下值：<br /><br /> SQL_PARAM_SUCCESS:此参数集的成功执行 SQL 语句。<br /><br /> SQL_PARAM_SUCCESS_WITH_INFO:参数; 这一组已成功执行 SQL 语句但是，诊断数据结构中提供了警告信息。<br /><br /> SQL_PARAM_ERROR:处理此套参数时出错。 诊断数据结构中提供了其他错误的信息。<br /><br /> SQL_PARAM_UNUSED:此参数集为未使用，可能是因为，一些以前的参数集导致中止将来进行处理，出现错误或因为 SQL_PARAM_IGNORE 设置该集指定的 SQL_ATTR_PARAM_OPERATION_PTR 数组中的参数。<br /><br /> SQL_PARAM_DIAG_UNAVAILABLE:该驱动程序将参数的数组作为一个整体化单元，并因此不会生成此级别的错误的信息。<br /><br /> 此语句属性可以设置为 null 指针，在这种情况下，驱动程序不返回参数状态值。 此属性可以设置在任何时候，但下一次之前未使用的新值**SQLExecute**或**SQLExecDirect**调用。 请注意，设置此属性可能会影响由驱动程序实现的输出参数行为。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 将此语句属性设置在 IPD 标头中设置 SQL_DESC_ARRAY_STATUS_PTR 字段。|  
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|SQLULEN\*指向的缓冲区中要返回的已处理，包括错误集的参数集的数量的记录字段。 如果这是 null 指针，则将返回无编号。<br /><br /> 将此语句属性设置在 IPD 标头中设置 SQL_DESC_ROWS_PROCESSED_PTR 字段。<br /><br /> 如果在调用**SQLExecDirect**或**SQLExecute** ，填充此属性指向的缓冲区中未返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，缓冲区的内容是不确定。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。|  
 |则 SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|Sqlulen 生成值，该值指定为每个参数的值的数目。 如果 SQL_ATTR_PARAMSET_SIZE 大于 1，SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR APD 指向数组。 每个数组的基数是此字段的值相等。<br /><br /> 没有绑定的参数时，将忽略此属性。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 将此语句属性设置的 SQL_DESC_ARRAY_SIZE 字段设置 APD 标头中。|  
 |SQL_ATTR_QUERY_TIMEOUT (ODBC 1.0)|对应于为 SQL 语句执行返回给应用程序之前等待的秒数 sqlulen 生成值。 如果*ValuePtr*是等于 0 （默认值），没有任何超时。<br /><br /> 如果指定的超时时间超出了数据源中的最大超时或小于最小超时值，则**SQLSetStmtAttr**替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。<br /><br /> 请注意，该应用程序无需调用**SQLCloseCursor**如果重复使用该语句**选择**语句已超时。<br /><br /> 在此语句属性中设置的查询超时值是在同步和异步模式中有效。|  

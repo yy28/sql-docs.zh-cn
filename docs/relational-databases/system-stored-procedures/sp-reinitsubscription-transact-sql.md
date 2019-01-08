@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_reinitsubscription
@@ -17,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e22ef6cd6ed820bf290125c109ab5e0f772cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785135"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207326"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  [  **@for_schema_change=**] **'***for_schema_change***’**  
  指示发布数据库中的架构更改是否导致重新初始化。 *for_schema_change*是**位**，默认值为 0。 如果**0**，重新激活允许即时更新的发布的活动订阅，只要整个发布而不只是一些其文章中，被重新初始化。 这意味着，架构更改导致启动重新初始化。 如果**1**，活动的订阅不会重新激活，直到运行快照代理。  
   
- [  **@publisher=** ] **'***发布服务器***’**  
+ [ **@publisher=** ] **'***发布服务器*****  
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -83,7 +82,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
  对于自动应用初始快照和发布不允许可更新订阅的订阅，执行此存储过程之后必须运行快照代理，以便准备架构和大容量复制程序文件，并使分发代理随后能够重新同步订阅。  
   
- 对于自动应用初始快照和发布允许可更新订阅的订阅，分发代理使用先前由快照代理创建的最新架构和大容量复制程序文件重新同步订阅。 分发代理重新同步订阅，用户执行后立即**sp_reinitsubscription**，如果分发代理未忙碌; 否则为同步可能会在消息间隔 （指定的分发代理命令提示符参数： **MessageInterval**)。  
+ 对于自动应用初始快照和发布允许可更新订阅的订阅，分发代理使用先前由快照代理创建的最新架构和大容量复制程序文件重新同步订阅。 分发代理重新同步订阅，用户执行后立即**sp_reinitsubscription**，如果分发代理未忙碌; 否则为同步可能会在消息间隔 （指定分发代理命令提示符参数：**MessageInterval**)。  
   
  **sp_reinitsubscription**不起作用的订阅，手动应用初始快照。  
   
@@ -98,7 +97,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色的成员**db_owner**固定的数据库角色或订阅创建者才能执行**sp_reinitsubscription**.  
   
 ## <a name="see-also"></a>请参阅  

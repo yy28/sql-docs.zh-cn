@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208153"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +47,18 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [ **@publication=**] **'***publication***'**  
  包含项目的发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [  **@article=**] **'***文章*****  
+ [ **@article=**] **'***文章*****  
  将更改其属性的项目的名称。 *文章*是**sysname**，默认值为 NULL。  
   
  [  **@property=**] **'***属性*****  
  要更改的项目属性。 *属性*是**nvarchar(100)**。  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  项目属性的新值。 *值*是**nvarchar(255)**。  
   
  下表说明项目的属性和这些属性的值。  
   
-|“属性”|值|Description|  
+|属性|值|Description|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
@@ -68,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
 |**filter**||要用于筛选表（水平筛选）的新存储过程。 默认值为 NULL。 对于对等复制中的发布，此值不能更改。|  
-|**fire_triggers_on_snapshot**|**true**|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意： 对于要复制的触发器的位掩码值*schema_option*必须包含值**0x100**。|  
+|**fire_triggers_on_snapshot**|**true**|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：要复制的触发器的位掩码值*schema_option*必须包含值**0x100**。|  
 ||**false**|应用初始快照时不会执行已复制的用户触发器。|  
 |**identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**ins_cmd**||要执行的 INSERT 语句，否则从日志构造。|  
@@ -95,7 +94,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|复制列级排序规则。|  
 ||**0x2000**|复制与已发布项目源对象关联的扩展属性。|  
 ||**0x4000**|如果在表项目上定义了唯一键，则复制唯一键。|  
-||**0x8000**|使用 ALTER TABLE 语句将表项目上的主键和唯一键作为约束复制。<br /><br /> 注意： 此选项已弃用。 使用**0x80**并**0x4000**相反。|  
+||**0x8000**|使用 ALTER TABLE 语句将表项目上的主键和唯一键作为约束复制。<br /><br /> 注意：已不推荐使用此选项。 使用**0x80**并**0x4000**相反。|  
 ||**0x10000**|以 NOT FOR REPLICATION 方式复制 CHECK 约束，以便在同步期间不强制执行约束。|  
 ||**0x20000**|以 NOT FOR REPLICATION 方式复制 FOREIGN KEY 约束，以便在同步期间不强制执行约束。|  
 ||**而 0x40000 可**|复制与已分区表或已分区索引相关联的文件组。|  
@@ -165,8 +164,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要重新初始化所有现有订阅的属性，请参阅“备注”部分。  
   
- [ **@publisher**=] **'***发布服务器*****  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+ [ **@publisher** =] **'***发布服务器*****  
+ 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*在更改项目属性时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -236,13 +235,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**仅限 func 架构**|**0x01**， **0x20**， **0x2000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x10000000**， **0x20000000**， **0x40000000**，和**0x80000000**|**0x01**， **0x20**， **0x2000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x10000000**， **0x20000000**， **0x40000000**，和**0x80000000**|  
 |**仅限索引的视图架构**|**0x01**， **0x010**， **0x020**， **0x040**， **0x0100**， **0x2000**， **而 0x40000 可**， **0x100000**， **0x200000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x40000000**，并**0x80000000**|**0x01**， **0x010**， **0x020**， **0x040**， **0x0100**， **0x2000**， **而 0x40000 可**， **0x100000**， **0x200000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x40000000**，并**0x80000000**|  
   
-> [!NOTE]  
->  对于排队更新发布*schema_option*的值**0x80**必须启用。 受支持*schema_option*值为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布是： **0x01**， **0x02**， **0x10**， **0x40**， **0x80**， **0x1000**并**0x4000**。  
+> [!NOTE]
+>  对于排队更新发布*schema_option*的值**0x80**必须启用。 受支持*schema_option*值为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]复制时：**0x01**， **0x02**， **0x10**， **0x40**， **0x80**， **0x1000**和**0x4000**。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changearticle**。  
   
 ## <a name="see-also"></a>请参阅  

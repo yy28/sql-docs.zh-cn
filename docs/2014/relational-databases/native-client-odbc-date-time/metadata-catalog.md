@@ -13,12 +13,12 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7f94a0daf7ebd62286aa033c63780e25221e85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136127"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395864"
 ---
 # <a name="catalog-metadata"></a>目录元数据
   本主题描述 `SQLColumns` 和 `SQLProcedureColumns` 返回的列元数据，以及 `SQLGetTypeInfo` 返回的数据类型元数据。  
@@ -45,8 +45,8 @@ ms.locfileid: "48136127"
 |TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
+|LITERAL_SUFFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
 |CREATE_PARAMS|NULL|小数位数|NULL|NULL|小数位数|小数位数|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

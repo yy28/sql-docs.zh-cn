@@ -10,12 +10,12 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5ca907bb6ce3a1f8e298c5ecefa920815cf6a8be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712369"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215294"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>项目设置（转换）(SybaseToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换 Sybase Adaptive Server Enterprise (ASE) 语法来设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的语法。  
@@ -38,9 +38,9 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 转换并将标记为警告  
+**默认/乐观模式：** 将转换并将标记为警告  
   
-**完整模式：** 含有错误标记  
+**完整模式：** 标记为错误  
   
 **LIKE 运算符的转换**  
 指定是否将操作数以匹配 Sybase ASE 行为等。 不同之处在于 Sybase 修剪 like 模式中的尾随空格。 解决方法是使右侧表达式的强制转换为固定的长度数据类型最大精度。  
@@ -51,9 +51,9 @@ ms.locfileid: "47712369"
   
 在模式框中选择转换模式，SSMA 将应用以下设置：  
   
-**默认/Optimistic 模式**： 简单的转换  
+**默认/乐观模式**:简单的转换  
   
-**完整模式**： 强制转换为固定长度  
+**完整模式**:强制转换为固定长度  
   
 **将转换或强制转换为数字类型的空字符串**  
 指定如何处理空或空白字符串与数值类型作为数据类型参数的 CONVERT 或 CAST 表达式内。 此设置有以下选项：  
@@ -64,9 +64,9 @@ ms.locfileid: "47712369"
   
 在模式框中选择转换模式，SSMA 将应用以下设置：  
   
-**默认/Optimistic 模式**： 简单的转换  
+**默认/乐观模式**:简单的转换  
   
-**完整模式**： 空字符串为零的数字  
+**完整模式**:空字符串作为零数字  
   
 **串联的 NULL**  
 此设置指定如何将转换字符串串联为 null。 为此特定设置，可以设置以下选项：  
@@ -77,7 +77,7 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 保留当前的语法  
+**默认/乐观模式：** 保留当前的语法  
   
 **完整模式：** 使用 ISNULL 函数包装  
   
@@ -92,9 +92,9 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 保留当前的语法  
+**默认/乐观模式：** 保留当前的语法  
   
-**完整模式：** 替换空间的所有字符串表达式  
+**完整模式：** 所有字符串表达式都替换为空格  
   
 **转换和强制转换二进制字符串转换**  
 为数字的二进制值的转换可以在不同平台上返回不同的值。 例如，在 x86 处理器，CONVERT (integer，0x00000100) 返回 65536 ASE 中的，将在 256 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 ASE 还会返回不同的值，具体取决于字节顺序。  
@@ -109,7 +109,7 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认模式：** 转换并将标记为警告  
+**默认模式：** 将转换并将标记为警告  
   
 **乐观模式：** 简单的转换  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 转换并将标记为警告  
+**默认/乐观模式：** 将转换并将标记为警告  
   
-**完整模式：** 含有错误标记  
+**完整模式：** 标记为错误  
   
 **相等性检查转换**  
 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure，ANSI_NULLS 设置为 on 时，如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ 任何相等性比较包含 null 值时，SQL Azure 将返回 UNKNOWN。 如果 ANSI_NULLS 为 off，包含 null 值的相等性比较返回 true 时的比较列和表达式或两个表达式都是 null。 通过 Sybase ASE (ANSINULL OFF) 的默认相等比较的行为类似于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 与 ANSI_NULLS OFF。  
@@ -137,12 +137,12 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 简单的转换  
+**默认/乐观模式：** 简单的转换  
   
 **完整模式：** 请考虑为 NULL 值  
   
 **格式字符串**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ 不再支持 SQL Azure *format_string* PRINT 和 RAISERROR 语句中的参数。 *Format_string*变量支持直接在字符串中，将可替换参数，然后替换在运行时参数。 相反，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要通过使用字符串文字或使用变量来生成一个字符串的完整字符串。 有关详细信息，请参阅"打印 ([!INCLUDE[tsql](../../includes/tsql-md.md)])"中的主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ 不再支持 SQL Azure *format_string* PRINT 和 RAISERROR 语句中的参数。 *Format_string*变量支持直接在字符串中，将可替换参数，然后替换在运行时参数。 相反，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要通过使用字符串文字或使用变量来生成一个字符串的完整字符串。 有关详细信息，请参阅"打印 ( [!INCLUDE[tsql](../../includes/tsql-md.md)])"中的主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 当遇到 SSMA *format_string*参数，它可以是生成字符串文本使用的变量或者创建新的变量，然后使用该变量生成的字符串。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 创建新的字符串  
+**默认/乐观模式：** 创建新的字符串  
   
 **完整模式：** 创建新变量  
   
@@ -235,9 +235,9 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 排除列  
+**默认/乐观模式：** 排除列  
   
-**完整模式：** 含有错误标记  
+**完整模式：** 标记为错误  
   
 **存储过程中定义的临时对象**  
 此设置指定是否应在转换期间源元数据中存储的临时对象定义的过程中出现。  
@@ -246,7 +246,7 @@ ms.locfileid: "47712369"
   
 -   选择**否**如果不需要存储对象。  
   
-**默认/乐观模式：** 是  
+**默认/乐观模式：** 用户帐户控制  
   
 **完整模式：** 否  
   
@@ -259,7 +259,7 @@ ms.locfileid: "47712369"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/Full 模式：** 含有错误标记  
+**默认/乐观/Full 模式：** 标记为错误  
   
 **RAISERROR 基本消息数**  
 ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户消息集中存储和可通过**sys.messages**目录视图。 除了 ASE 用户消息开始 20000，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误消息开始 50001。  
@@ -293,9 +293,9 @@ ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../include
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 转换并将标记为警告  
+**默认/乐观模式：** 将转换并将标记为警告  
   
-**完整模式：** 含有错误标记  
+**完整模式：** 标记为错误  
   
 **未解析的标识符**  
 使用此设置指定的 SSMA 显示在输出或错误列表窗格中时无法解析标识符的消息 （警告或错误） 的类型。  
@@ -306,9 +306,9 @@ ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../include
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 转换并将标记为警告  
+**默认/乐观模式：** 将转换并将标记为警告  
   
-**完整模式：** 含有错误标记  
+**完整模式：** 标记为错误  
   
 ## <a name="system-function-options"></a>系统函数选项  
 **CHARINDEX 函数**  
@@ -320,9 +320,9 @@ ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../include
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 保留当前的语法  
+**默认/乐观模式：** 保留当前的语法  
   
-**完整模式：** 替换函数  
+**完整模式：** Replace 函数  
   
 **DATALENGTH 函数**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] / SQL Azure 和 ASE 中的值为单个空格时，DATALENGTH 函数返回的值不同。 在这种情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure，则返回 0 和 ASE 返回 1。  
@@ -333,9 +333,9 @@ ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../include
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 保留当前的语法  
+**默认/乐观模式：** 保留当前的语法  
   
-**完整模式：** 替换函数  
+**完整模式：** Replace 函数  
   
 **INDEX_COL 函数**  
 ASE 支持一个可选*user_id*参数 INDEX_COL 函数中; 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 不支持此参数。 如果您使用*user_id*参数，此函数不能转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 语法。  
@@ -344,7 +344,7 @@ ASE 支持一个可选*user_id*参数 INDEX_COL 函数中; 但是， [!INCLUDE[s
   
 -   若要每次遇到该 INDEX_COL 显示一条错误消息，请选择**含有错误标记**。 SSMA 将不转换对函数的引用，并将标记与错误注释语句。  
   
-**默认/Optimistic/Full 模式：** 含有错误标记  
+**默认/乐观/Full 模式：** 标记为错误  
   
 **INDEX_COLORDER 函数**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 不具有 INDEX_COLORDER 系统函数。  
@@ -355,7 +355,7 @@ ASE 支持一个可选*user_id*参数 INDEX_COL 函数中; 但是， [!INCLUDE[s
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/Full 模式：** 含有错误标记  
+**默认/乐观/Full 模式：** 标记为错误  
   
 **LEFT 和 RIGHT 函数**  
 Left 和 Right 函数在 Sybase 中的行为不同负长度参数。  
@@ -366,9 +366,9 @@ Left 和 Right 函数在 Sybase 中的行为不同负长度参数。
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 保留当前的语法  
+**默认/乐观模式：** 保留当前的语法  
   
-**完整模式：** 替换函数  
+**完整模式：** Replace 函数  
   
 > [!NOTE]  
 > 如果长度参数为文本值而不是复杂表达式，长度值始终被替换而不考虑项目设置为 null。  
@@ -382,7 +382,7 @@ Left 和 Right 函数在 Sybase 中的行为不同负长度参数。
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/Full 模式：** 含有错误标记  
+**默认/乐观/Full 模式：** 标记为错误  
   
 **PATINDEX 函数**  
 指定是否将转换 PATINDEX 函数以匹配 Sybase ASE 行为。 不同之处在于 Sybase 修剪搜索模式中的尾随空格。 解决方法是进行强制转换为固定长度数据类型最大精度，并应用 rtrim 函数要搜索模式的值表达式。  
@@ -393,9 +393,9 @@ Left 和 Right 函数在 Sybase 中的行为不同负长度参数。
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 不使用  
+**默认/乐观模式：** 请勿使用  
   
-**完整模式：** 使用  
+**完整模式：** 改用  
   
 **REPLICATE 函数**  
 REPLICATE 函数重复指定次数的字符串。 在 ASE 中，如果指定要重复字符串零次，则结果为 null。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure，则结果为空字符串。  
@@ -406,7 +406,7 @@ REPLICATE 函数重复指定次数的字符串。 在 ASE 中，如果指定要�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式/完整模式：** 替换函数  
+**默认/乐观模式/完整模式：** Replace 函数  
   
 **TRIM （LTRIM、 RTRIM） 函数**  
 此设置指定是否对 Trim （LTRIM、 RTRIM） 函数的调用替换为 Sybase ASE 等效语法函数或者保留当前的语法。 以下选项将存在对于此特定的设置：  
@@ -417,7 +417,7 @@ REPLICATE 函数重复指定次数的字符串。 在 ASE 中，如果指定要�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式/完整模式：** 替换函数  
+**默认/乐观模式/完整模式：** Replace 函数  
   
 **SUBSTRING 函数**  
 在 ASE 中，该函数`SUBSTRING(expression, start, length)`如果指定的开始值的表达式中的字符数比大，或如果长度等于零，则返回 NULL。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的等效表达式将返回一个空字符串。  
@@ -428,19 +428,19 @@ REPLICATE 函数重复指定次数的字符串。 在 ASE 中，如果指定要�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 保留当前的语法  
+**默认/乐观模式：** 保留当前的语法  
   
-**完整模式：** 替换函数  
+**完整模式：** Replace 函数  
   
 ## <a name="tables"></a>TABLES  
 **添加主键**  
 创建新的主密钥中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表，如果访问表没有主键或唯一索引。  
   
--   **默认模式**: False  
+-   **默认模式**:False  
   
--   **乐观模式**: False  
+-   **乐观模式**:False  
   
--   **完整模式**: True  
+-   **完整模式**:True  
   
 > [!NOTE]  
 > 连接到 SQL Azure 时，它是默认情况下 True。  

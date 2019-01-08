@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a21072b90c0e263e4ac561bdad23aea8f0b1fd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822531"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
   内存优化表由行和索引的集合组成，其中包含行的指针。 在一个内存优化表中，行不能长于 8,060 字节。 了解内存优化表的大小将帮助您了解计算机是否具有足够的内存。  
@@ -40,7 +40,7 @@ ms.locfileid: "48084577"
  内存中的表大小（以字节为单位）计算如下：  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
  哈希索引的大小是在表创建时固定下来的，取决于实际 Bucket 计数。 用索引规范指定的 bucket_count 舍入为最近的 2 次幂以获取 [实际 Bucket 计数]。 例如，如果指定的 bucket_count 为 100000，则索引的 [实际 Bucket 计数] 为 131072。  
@@ -70,14 +70,14 @@ ms.locfileid: "48084577"
   
  下表介绍行正文大小的计算，公式为 [实际行正文大小] = SUM([浅表类型的大小]) + 2 + 2 * [深表类型列数]。  
   
-|部分|Size|注释|  
+|部分|大小|注释|  
 |-------------|----------|--------------|  
 |浅表类型列|SUM([浅表类型的大小])<br /><br /> **各类型的大小如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (精度 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |浅表列填充|可能的值有：<br /><br /> 如果存在深表类型列并且浅表列的总数据大小是奇数，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |深表类型列的偏移数组|可能的值有：<br /><br /> 如果没有深表类型列，则为 0<br /><br /> 否则为 2 + 2 * [深表类型列数]|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |NULL 数组|[可以为 Null 的列数] / 8，舍入为完整字节。|数组每个可以为 Null 的列有一位。 这舍入为完整字节。|  
 |NULL 数组填充|可能的值有：<br /><br /> 如果存在深表类型列并且 NULL 数组的大小为奇数字节，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
-|填充|如果没有深表类型列，则为 0<br /><br /> 如果有深表类型列，则根据浅表列需要的最大对齐添加 0-7 个填充字节。 每个浅表列都需要与上述大小相等的对齐，而 GUID 列需要 1（而不是 16）字节的对齐，数值列始终需要 8（而不是 16）字节的对齐。 所有浅表列间使用最大的对齐要求，添加了 0-7 个字节，现在总大小（不带深表类型列）是所需对齐的数倍。|深表类型为类型 (var)binary 和 (n)(var)char。|  
+|填充|如果没有深表类型列：0<br /><br /> 如果有深表类型列，则根据浅表列需要的最大对齐添加 0-7 个填充字节。 每个浅表列都需要与上述大小相等的对齐，而 GUID 列需要 1（而不是 16）字节的对齐，数值列始终需要 8（而不是 16）字节的对齐。 所有浅表列间使用最大的对齐要求，添加了 0-7 个字节，现在总大小（不带深表类型列）是所需对齐的数倍。|深表类型为类型 (var)binary 和 (n)(var)char。|  
 |固定长度的深表类型列|SUM([固定长度深表类型列的大小])<br /><br /> 各列大小如下：<br /><br /> 对于 char(i) 和 binary(i)，为 i。<br /><br /> 对于 nchar(i)，为 2 * i|固定长度深表类型列是类型为 char(i)、nchar(i) 或 binary(i) 的列。|  
 |可变长度深表类型列 [计算大小]|SUM([可变长度深表类型列的计算大小])<br /><br /> 各列的计算大小如下：<br /><br /> 对于 varchar(i) 和 varbinary(i)，为 i<br /><br /> 对于 nvarchar(i)，为 2 * i|此行仅适用于 [计算行正文大小]。<br /><br /> 可变长度的深表类型列是类型为 varchar(i)、nvarchar(i) 或 varbinary(i) 的列。 计算大小由列的最大长度 (i) 决定。|  
 |可变长度深表类型列 [实际大小]|SUM([可变长度深表类型列的实际大小])<br /><br /> 各列的实际大小如下：<br /><br /> 对于 varchar(i) 为 n，其中 n 是列中存储的字符数。<br /><br /> 对于 nvarchar(i) 为 2 * n，其中 n 是列中存储的字符数。<br /><br /> 对于 varbinary(i) 为 n，其中 n 是列中存储的字节数。|此行仅适用于 [实际行正文大小]。<br /><br /> 实际大小由相应行中各列存储的数据决定。|  
@@ -93,7 +93,7 @@ ms.locfileid: "48084577"
   
  ![具有两个索引的表的行结构。](../../database-engine/media/hekaton-tables-4.gif "具有两个索引的表的行结构。")  
   
- 开始和结束时间戳指示特定行版本的有效时长。 在该时间间隔启动的事务可看到该行版本。 有关更多详细信息，请参阅[内存优化表中的事务](memory-optimized-tables.md)。  
+ 开始和结束时间戳指示特定行版本的有效时长。 在该时间间隔启动的事务可看到该行版本。 有关详细信息，请参阅[内存优化表中的事务](memory-optimized-tables.md)。  
   
  索引指针，指向链中属于该哈希 Bucket 的下行。 下图展示一个表结构，其拥有两列（姓名，城市）、两个索引（一个针对姓名列、一个针对城市列）。  
   
@@ -103,17 +103,17 @@ ms.locfileid: "48084577"
   
  因此，针对姓名的哈希索引的链如下所示：  
   
--   第一个 Bucket：(John, Beijing); (John, Paris); (Jane, Prague)  
+-   第一个存储桶：(John，Beijing);(John，Paris);(Jane，Prague)  
   
--   第二个 Bucket：(Susan, Bogota)  
+-   第二个存储桶：(Susan，Bogota)  
   
  针对城市的索引的链如下所示：  
   
--   第一个 Bucket：(John, Beijing), (Susan, Bogota)  
+-   第一个存储桶：（John，Beijing），（Susan，Bogota）  
   
--   第二个 Bucket：(John, Paris), (Jane, Prague)  
+-   第二个存储桶：（John，Paris），（Jane，Prague）  
   
- 结束时间戳 ∞（无限制）指示此为当前有效的行版本。 该行自该行版本写入以来尚未更新或删除。  
+ 结束时间戳??? （无穷） 指示这是当前有效的版本的行。 该行自该行版本写入以来尚未更新或删除。  
   
  对于大于 200 的时间，该表包含以下行：  
   
@@ -147,7 +147,7 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
- 请注意，此表有一个哈希索引和一个非聚集索引（主键）。 它还有三个固定长度列和一个可变长度列，其中一列可以为 NULL (OrderDescription)。 我们假定 Orders 表有 8379 行，OrderDescription 列值的平均长度为 78 个字符。  
+ 请注意，此表有一个哈希索引和一个非聚集索引（主键）。 它还有三个固定长度列和一个可变长度列，其中一列可以为 NULL (OrderDescription)。 我们假设 Orders 表有 8379 行，OrderDescription 列中的值的平均长度为 78 个字符。  
   
  要确定表大小，首先需要确定索引大小。 两个索引的 bucket_count 都指定为 10000。 这舍入为最近的 2 次幂：16384。 因此，Orders 表的索引的总大小为：  
   
@@ -198,7 +198,7 @@ GO
   
     -   总填充为 24 – 22 = 2 字节。  
   
--   没有固定长度深表类型列（固定长度深表类型列：0）。  
+-   没有固定长度深表类型列 (固定长度深表类型列：为 0。)。  
   
 -   深表类型列的实际大小为 2 * 78 = 156。 唯一的深表类型列 OrderDescription 的类型为 nvarchar。  
   

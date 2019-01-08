@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816329"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
-  包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与相关`USER WITH PASSWORD`身份验证过程中，后者将移动身份验证的范围从[!INCLUDE[ssDE](../../includes/ssde-md.md)]级别为数据库级别。  
+  包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与 `USER WITH PASSWORD` 身份验证过程相关，该过程会将身份验证的范围从[!INCLUDE[ssDE](../../includes/ssde-md.md)]级别转到数据库级别。  
   
 ## <a name="threats-related-to-users"></a>与用户相关的威胁  
- 具有中包含的数据库用户`ALTER ANY USER`权限，例如的成员**db_owner**并**db_securityadmin**固定数据库角色的成员，可以授予访问权限而无需数据库不知情或不允许如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理员。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解这种委托的访问控制，而且要非常谨慎中包含的数据库的用户授予`ALTER ANY USER`权限。 所有数据库所有者都拥有`ALTER ANY USER`权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
+ 具有中包含的数据库用户`ALTER ANY USER`权限，例如的成员**db_owner**并**db_securityadmin**固定数据库角色的成员，可以授予访问权限而无需数据库不知情或不允许如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理员。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解访问控制的这种委托，而且在为包含数据库中的用户授予 `ALTER ANY USER` 权限时要非常谨慎。 所有数据库所有者都拥有 `ALTER ANY USER` 权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>使用 guest 帐户访问其他数据库  
  数据库所有者和拥有 `ALTER ANY USER` 权限的数据库用户可以创建包含数据库用户。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上包含的数据库后，如果其他数据库启用了 [!INCLUDE[ssDE](../../includes/ssde-md.md)]guest **帐户，包含数据库的用户就可以访问** 上的其他数据库。  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- 若要执行跨数据库查询时，必须设置`TRUSTWORTHY`调用数据库上的选项。 例如，如果以上定义的用户 (Carlo) 在 DB1 中，要执行 `SELECT * FROM db2.dbo.Table1;`，则 `TRUSTWORTHY` 设置对于数据库 DB1 必须为 on。 执行以下代码以将`TRUSTWORHTY`上设置。  
+ 若要执行跨数据库查询，必须在调用数据库上设置 `TRUSTWORTHY` 选项。 例如，如果以上定义的用户 (Carlo) 在 DB1 中，要执行 `SELECT * FROM db2.dbo.Table1;`，则 `TRUSTWORTHY` 设置对于数据库 DB1 必须为 on。 执行以下代码以将 `TRUSTWORHTY` 设置为 on。  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

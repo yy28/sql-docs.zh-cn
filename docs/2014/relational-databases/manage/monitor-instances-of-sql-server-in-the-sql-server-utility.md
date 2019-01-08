@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04bf213db416c702aa1ac479cef4f73d8de6986
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212615"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818072"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>在 SQL Server 实用工具中监视 SQL Server 的实例
   
@@ -28,6 +28,6 @@ ms.locfileid: "48212615"
 |[修改资源运行状况策略定义（SQL Server 实用工具）](modify-a-resource-health-policy-definition-sql-server-utility.md)|介绍如何查看或修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源运行状况策略定义。|  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)  
+ [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)  
   
   

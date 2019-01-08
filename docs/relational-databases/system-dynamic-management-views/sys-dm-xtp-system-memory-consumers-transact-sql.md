@@ -19,12 +19,12 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8341ac09af815f2e96eadd1616fd02cc75810644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544034"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ select * from sys.dm_xtp_system_memory_consumers
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|内存消耗者的内部 ID。|  
-|memory_consumer_type|**int**|一个整数，表示有下列值之一的内存消耗者的类型：<br /><br /> 0 - 不应显示。 聚合两个或多个使用者的内存使用量。<br /><br /> 1 – 后备链： 跟踪系统后备链的内存占用情况。<br /><br /> 2-VARHEAP： 跟踪长度可变的堆的内存占用情况。<br /><br /> 4-IO 页池： 跟踪用于 IO 操作的系统页池内存占用情况。|  
-|memory_consumer_type_desc|**nvarchar(16)**|对内存消耗者类型的说明：<br /><br /> 0 - 不应显示。<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|对内存消耗者实例的说明：<br /><br /> VARHEAP: <br />系统堆。 通用。 当前仅用于分配垃圾收集工作项。<br />-或-<br />后备链堆。 后备链在后备链表中包含的项目数达到预先确定的上限（通常约 5,000 项）时使用。<br /><br /> PGPOOL： 对于 IO 系统池有都是三个不同的大小系统 4k 页池、 系统 64k 页池和系统 256k 页池。|  
+|memory_consumer_type|**int**|一个整数，表示有下列值之一的内存消耗者的类型：<br /><br /> 0-它应不会显示。 聚合两个或多个使用者的内存使用量。<br /><br /> 1-后备链：跟踪系统后备链的内存占用情况。<br /><br /> 2-VARHEAP:跟踪长度可变的堆的内存占用情况。<br /><br /> 4-IO 页池：跟踪用于 IO 操作的系统页池的内存占用情况。|  
+|memory_consumer_type_desc|**nvarchar(16)**|对内存消耗者类型的说明：<br /><br /> 0-它应不会显示。<br /><br /> 1-后备链<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|对内存消耗者实例的说明：<br /><br /> VARHEAP: <br />系统堆。 通用。 当前仅用于分配垃圾收集工作项。<br />-或-<br />后备链堆。 后备链在后备链表中包含的项目数达到预先确定的上限（通常约 5,000 项）时使用。<br /><br /> PGPOOL:IO 系统池有三种不同大小，分别为系统 4K 页池、系统 64K 页池和系统 256K 页池。|  
 |lookaside_id|**bigint**|线程本地后备链内存提供程序的 ID。|  
 |pagepool_id|**bigint**|线程本地页池内存提供程序的 ID。|  
 |allocated_bytes|**bigint**|为此消耗者保留的字节数。|  
@@ -55,7 +55,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|仅限内部使用。|  
 |memory_consumer_address|**varbinary**|消耗者的内部地址。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 VIEW SERVER STATE 权限。  
   
 ## <a name="user-scenario"></a>使用方案  

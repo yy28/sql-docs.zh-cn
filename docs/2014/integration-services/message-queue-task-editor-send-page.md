@@ -15,12 +15,12 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516100"
 ---
 # <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“发送”** 页，配置消息队列任务以便从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包发送消息。  
@@ -53,22 +53,22 @@ ms.locfileid: "48095937"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **DataFileMessage**  
- 键入数据文件的路径，或单击省略号 **(…)** 后再定位到相应的文件。  
+ 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **VariableMessage**  
- 键入变量名称，或单击省略号 **(…)** 后再选择相应的变量。 各变量之间用逗号分隔。  
+ 键入变量名称，或单击省略号 (…) 后再选择相应的变量。 各变量之间用逗号分隔。  
   
- **相关主题：** 选择变量  
+ **相关的主题：** 选择变量  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **StringMessage**  
- 键入字符串消息，或单击省略号 **(…)** 后在“输入字符串消息”对话框中键入消息。  
+ 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [消息队列任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [消息队列任务编辑器&#40;接收页&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [消息队列任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [消息队列任务编辑器（“接收”页）](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

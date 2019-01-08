@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlserverregisteredserver.dhelp
@@ -18,12 +18,12 @@ ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ce5e0fd5a9ebf7e265ddf9296c1e20c0ce72daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207337"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764009"
 ---
 # <a name="register-servers"></a>注册服务器
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册服务器使您可以存储服务器连接信息，以供将来连接时使用。有三种方法可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中注册服务器。  
@@ -62,7 +62,7 @@ ms.locfileid: "48207337"
 ## <a name="related-tasks"></a>Related Tasks  
  参考以下主题可以开始使用注册服务器：  
   
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |---------------------|---------------|  
 |注册本地服务器实例|[注册连接的服务器 (SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)|  
 |注册服务器|[创建新的已注册的服务器 (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)|  

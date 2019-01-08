@@ -1,22 +1,24 @@
 ---
-title: 什么是 SQL Server 大数据群集主机实例？ | Microsoft Docs
-description: 本指南介绍了 SQL Server 2019 大数据群集中的主实例。
+title: 主实例是什么？
+titleSuffix: SQL Server 2019 big data clusters
+description: 本指南介绍了 SQL Server 2019 大数据群集 （预览版） 中的 SQL Server 主实例。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221593"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208163"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>什么是 SQL Server 大数据群集主实例？
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>什么是 SQL Server 2019 大数据群集中的主实例？
 
-本文介绍的角色*SQL Server 主实例*SQL Server 2019 大 ata 群集中。 主实例是 SQL Server 大数据群集中运行的 SQL Server 实例[控制平面](big-data-cluster-overview.md#controlplane)。
+本文介绍的角色*SQL Server 主实例*SQL Server 2019 大数据群集中。 主实例是 SQL Server 大数据群集中运行的 SQL Server 实例[控制平面](big-data-cluster-overview.md#controlplane)。
 
 SQL Server 主实例提供了以下功能：
 
@@ -26,7 +28,7 @@ SQL Server 主实例为群集提供从外部访问 TDS 端点。 应用程序或
 
 ## <a name="scale-out-query-management"></a>横向扩展查询管理
 
-SQL Server 主实例包含用于将查询分发中的节点上的 SQL Server 实例之间的横向扩展查询引擎[计算池](concept-compute-pool.md)。 横向扩展查询引擎还提供通过 TRANSACT-SQL 访问权限而无需任何其他配置群集中的所有 Hive 表。 (Hive 的表 CTP 2.1 中不支持)
+SQL Server 主实例包含用于将查询分发中的节点上的 SQL Server 实例之间的横向扩展查询引擎[计算池](concept-compute-pool.md)。 横向扩展查询引擎还提供通过 TRANSACT-SQL 访问权限而无需任何其他配置群集中的所有 Hive 表。 (Hive 的表 CTP 2.2 中不支持)
 
 ## <a name="metadata-and-user-databases"></a>元数据和用户数据库
 
@@ -43,7 +45,7 @@ SQL Server 主实例包含用于将查询分发中的节点上的 SQL Server 实
 
 SQL Server 机器学习服务是一项附加功能到数据库引擎，用于在 SQL Server 中执行 Java、 R 和 Python 代码。 此功能基于 SQL Server 可扩展性框架，这将从核心引擎进程的外部进程中隔离出来，但完全集成，与关系数据作为存储过程、 包含 R 或 Python 语句的 T-SQL 脚本或 Java、 R 或包含 T-SQL 的 Python 代码。
 
-作为 SQL Server 大数据群集的一部分，机器学习服务将在默认情况下 SQL Serevr 主实例上可用。 这意味着，一旦 SQL Server 主实例上启用了外部脚本执行，将为可能要执行 Java 中，使用 sp_execute_external_script 的 R 和 Python 脚本。
+作为 SQL Server 大数据群集的一部分，机器学习服务将在默认情况下的 SQL Server 主实例上可用。 这意味着，一旦 SQL Server 主实例上启用了外部脚本执行，将为可能要执行 Java 中，使用 sp_execute_external_script 的 R 和 Python 脚本。
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>大数据群集中的机器学习服务的优点
 

@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603845"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403712"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注意： 这仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11。**  
+  **注意：这仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11。**  
   
  返回有关每个数据库中使用的网络带宽的信息 **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 逻辑服务器**。 为给定数据库返回的每行总结在一小时内使用的单个方向和类别。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "47603845"
 |-----------------|-----------------|  
 |**time**|占用带宽的时间（小时）。 此视图中的各行以小时为单位。 例如，2009-09-19 02:00:00.000 表示占用带宽的时间是 2009 年 9 月 19 日的凌晨 2:00  到凌晨 3:00。|  
 |**database_name**|占用带宽的数据库的名称。|  
-|**方向**|占用带宽的类型，为以下选项之一：<br /><br /> 入口： 数据移到的[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 出口： 数据正移出[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
-|class|占用带宽的类别，为以下选项之一：<br />内部： Azure 平台内移动的数据。<br />外部： 移出 Azure 平台的数据。<br /><br /> 仅当数据库处于区域之间的连续复制关系，则返回此类 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. 有关详细信息，请参阅本主题后面的“备注”部分。|  
+|**方向**|占用带宽的类型，为以下选项之一：<br /><br /> 入口：移入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的数据。<br /><br /> 出口：移出 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的数据。|  
+|class|占用带宽的类别，为以下选项之一：<br />内部：在 Azure 平台内移动的数据。<br />外部：移出 Azure 平台的数据。<br /><br /> 仅在数据库与区域处于连续复制关系 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 时返回此类别。 如果给定的数据库不参与任何连续复制关系，则不会返回"Interlink"行。 有关详细信息，请参阅本主题后面的"备注"部分。|  
 |**time_period**|峰值或非高峰期，使用情况发生的时间段。 The Peak time is based on the region in which the server was created. 例如，如果在“US_Northwest”地区创建了服务器，则高峰期时间定义为 PST 时间上午 10:00 点 到下午 6:00 太平洋标准时间。|  
 |**数量**|占用的带宽量 (KB)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图选项仅适用于**主**与服务器级别主体登录名的数据库。  
   
 ## <a name="remarks"></a>备注  
@@ -60,8 +60,8 @@ ms.locfileid: "47603845"
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
+|2012-04-21 17:00:00|Db1|流出量|External|Peak|741|  
+|2012-04-21 17:00:00|Db1|流入量|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|内部|Peak|3525|  
   
 ### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>解释 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 的数据方向  

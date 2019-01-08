@@ -15,12 +15,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b8624bd3d3628c5c7499dd32bfa26afe048225c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061967"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211846"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
   配置为 SharePoint 集成模式的报表服务器包含可用于向 SharePoint 库中发送报表的传递扩展插件。  
@@ -71,11 +71,11 @@ ms.locfileid: "48061967"
  文件名和扩展名  
  指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " \< > |# { } %  
   
- Title  
- 指定一个可选`Title`目标库中的报表的属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
+ 标题  
+ 为目标库中的报表指定可选的 `Title` 属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  
- 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： http://mySharePointWeb/MySite/MyDocLib; 其中"http://mySharePointWeb"指示 Web 应用程序，"MySite"是 SharePoint 站点，并"MyDocLib"是可传递报表的位置的 SharePoint 库。  
+ 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： <http://mySharePointWeb/MySite/MyDocLib>; 其中"<http://mySharePointWeb>"指示 Web 应用程序，"MySite"是 SharePoint 站点，并"MyDocLib"是可传递报表的位置的 SharePoint 库。  
   
  不能指定页、站点或列表。 目标容器必须是同一站点上或同一场中的库。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48061967"
   
 ## <a name="see-also"></a>请参阅  
  [创建和管理 SharePoint 模式报表服务器的订阅](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

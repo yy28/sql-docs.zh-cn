@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9131bda927e123d3b718d9a769ef59efff157903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111558"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350867"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
   硬件资源（例如内存、磁盘速度、CPU 速度和计算机体系结构）会影响全文索引和全文查询的性能。  
@@ -37,7 +37,7 @@ ms.locfileid: "48111558"
 -   如果物理内存不足（3GB 限制），则内存可能是瓶颈。 物理内存限制可能存在于所有系统上，而在 32 位系统上，虚拟内存压力可导致全文索引速度降低。  
   
     > [!NOTE]  
-    >  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，全文引擎可以使用 AWE 内存，因为全文引擎是 sqlservr.exe 的一部分。  
+    >  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，全文引擎可以使用 AWE 内存，因为全文引擎是 sqlservr.exe 的一部分。  
   
  如果系统没有硬件瓶颈，则全文搜索的索引性能主要取决于以下因素：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48111558"
   
 -   使用 [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) 语句更新基表的统计信息。 更重要的是，更新聚集索引或全文键的统计信息以进行完全填充。 这有助于多范围填充在表上生成良好的分区。  
   
--   生成辅助索引`timestamp`列，如果你想要提高增量填充的性能。  
+-   如果要提高增量填充的性能，请对 `timestamp` 列生成辅助索引。  
   
 -   在大型多 CPU 计算机上执行完全填充之前，建议您通过设置 `max server memory` 值来暂时限制缓冲池的大小，从而留出足够的内存供 fdhost.exe 进程及操作系统使用。 有关详细信息，请参阅本主题后面的“估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量”。  
   
@@ -126,28 +126,28 @@ ms.locfileid: "48111558"
 > [!IMPORTANT]  
 >  有关公式的基本信息，请参阅<sup>1</sup>， <sup>2</sup>，并<sup>3</sup>下文。  
   
-|平台|估计 fdhost.exe 内存需求量以 mb 为单位，*F*<sup>1</sup>|用于计算最大服务器内存的公式 —*M*<sup>2</sup>|  
+|平台|估计 fdhost.exe 内存需求量 MB-*F*<sup>1</sup>|用于计算最大服务器内存的公式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 最小值 (** *T* **，** 2000年 **) –*`F`*–** 500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 最小值 (** *T* **，** 2000年 **)-*`F`* -** 500|  
+|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
   
- <sup>1</sup>如果正在多个完全填充，则计算每个的 fdhost.exe 内存需求量分别作为*F1*， *F2*，依次类推。 然后计算 M 为 T– sigma(Fi)。  
+ <sup>1</sup>如果正在多个完全填充，则计算每个的 fdhost.exe 内存需求量分别作为*F1*， *F2*，依次类推。 然后计算*M*作为*T * * *-** sigma **(* **F*我**) * *。  
   
  <sup>2</sup> 500 MB 是系统中其他进程所需的内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
   
  <sup>3</sup> 。*ism_size*被假定为 8 MB，对于 x64 平台。  
   
- **示例： 估计 fdhost.exe 的内存需求量**  
+ **示例：估计 fdhost.exe 的内存需求量**  
   
- 此示例针对具有 8GM RAM 和 4 个双核处理器的 AMD64 计算机。 首先计算出 fdhost.exe 所需内存的估计值*F*。 爬网范围数是 `8`。  
+ 此示例针对具有 8GM RAM 和 4 个双核处理器的 AMD64 计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F。 爬网范围数是 `8`。  
   
  `F = 8*10*8=640`  
   
- 下一步计算出的最佳值`max server memory`—*M*。 该系统的可用物理内存总量（以 MB 为单位）—*T*—是 `8192`。  
+ 下一步计算出的最佳值`max server memory` - *M*。 *T*MB-在此系统上可用的物理内存总量*T*-是`8192`。  
   
  `M = 8192-640-500=7052`  
   
- **示例： 设置最大服务器内存**  
+ **示例：设置最大服务器内存**  
   
  此示例使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)和[重新配置](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句来设置`max server memory`的值计算为到*M*在前面的示例, `7052`:  
   
@@ -203,7 +203,7 @@ GO
   
  为了安全起见，筛选器是由筛选器后台程序主机进程加载的。 服务器实例对所有多线程筛选器使用多线程进程，并对所有单线程筛选器使用单线程进程。 如果使用多线程筛选器的文档包含使用单线程筛选器的嵌入文档，全文引擎将启动单线程进程以处理嵌入文档。 例如，在遇到包含 PDF 文档的 Word 文档时，全文引擎使用多线程进程来处理 Word 内容，并启动单线程进程以处理 PDF 内容。 但是，单线程筛选器可能无法在此环境中正常工作，并且可能会破坏筛选进程的稳定性。 在某些频繁出现此类嵌入的环境中，它可能会导致筛选进程崩溃。 如果发生这种情况，全文引擎会将任何失败的文档（如包含嵌入 PDF 内容的 Word 文档）重新传送到单线程筛选进程。 如果频繁进行重新传送，将会导致全文索引进程性能下降。  
   
- 若要解决该问题，必须将容器文档（此处为 Word 文档）的筛选器标记为单线程筛选器。 可以更改筛选器注册表值，以便将给定筛选器标记为单线程筛选器。 若要将标记为单线程筛选器的筛选器，您需要设置**ThreadingModel**到筛选器的注册表值`Apartment Threaded`。 有关单线程单元的信息，请参阅白皮书 [了解和使用 COM 线程模型](http://go.microsoft.com/fwlink/?LinkId=209159)。  
+ 若要解决该问题，必须将容器文档（此处为 Word 文档）的筛选器标记为单线程筛选器。 可以更改筛选器注册表值，以便将给定筛选器标记为单线程筛选器。 若要将标记为单线程筛选器的筛选器，您需要设置**ThreadingModel**到筛选器的注册表值`Apartment Threaded`。 有关单线程单元的信息，请参阅白皮书 [了解和使用 COM 线程模型](https://go.microsoft.com/fwlink/?LinkId=209159)。  
   
   
   

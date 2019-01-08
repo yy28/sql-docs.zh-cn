@@ -10,12 +10,12 @@ ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04b2d0fdd00d9f3001ce1687744a9ecd992f44dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406154"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>系统视图、存储过程、内存中 OLTP 的 DMV 和等待类型
   本主题提供针对许多支持内存中 OLTP 的数据库对象的简短描述，以及指向它们的链接。  
@@ -30,7 +30,7 @@ ms.locfileid: "48144617"
 |[sys.all_sql_modules &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|检查存储过程是否是本机编译存储过程。|**uses_native_compilation**列。|  
 |[sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|检查存储过程是否是本机编译存储过程。|**uses_native_compilation**列。|  
 |[sys.table_types &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|检查表是否经过内存优化。|**is_memory_optimized**列。|  
-|[sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|检查表是否经过内存优化，并检查表的持续性设置。|**持续性**， **durability_desc**，和**is_memory_optimized**列。|  
+|[sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|如果表是内存优化表和检查表的持续性设置，检查。|**持续性**， **durability_desc**，和**is_memory_optimized**列。|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|显示内存优化表的哈希索引。|特定的内存中 OLTP。|  
   
 ### <a name="metadata-functions"></a>元数据函数  

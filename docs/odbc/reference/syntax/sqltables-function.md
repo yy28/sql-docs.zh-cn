@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708355"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212396"
 ---
 # <a name="sqltables-function"></a>SQLTables 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： 打开组  
+ 版本引入了：ODBC 1.0 标准符合性：打开组  
   
  **摘要**  
  **SQLTables**返回的表、 目录或架构名称和特定的数据源中存储的表类型的列表。 驱动程序返回的信息作为结果集。  
@@ -156,7 +156,7 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录有关的某些表而不是其他人，如当驱动程序检索数据时从不同 Dbms，它返回空字符串 ("") 不具有目录这些表。|  
 |按 TABLE_SCHEM (ODBC 1.0)|2|Varchar|架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构有关的某些表而不是其他人，如当驱动程序检索数据时从不同 Dbms，它返回空字符串 ("") 不具有架构的这些表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|表名。|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|表类型名称;以下项之一:"表"、"视图"、"系统表"、"全局临时"、"本地临时"、"别名"、"同义词"或数据源特定于类型名称。<br /><br /> "别名"和"同义词"的含义是特定于驱动程序。|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|表类型名称;以下项之一："表"、"视图"、"系统表"、"全局临时"、"本地临时"、"别名"、"同义词"或数据源特定的类型名称。<br /><br /> "别名"和"同义词"的含义是特定于驱动程序。|  
 |备注 (ODBC 1.0)|5|Varchar|表的说明。|  
   
 ## <a name="example"></a>示例  

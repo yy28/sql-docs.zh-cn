@@ -1,7 +1,8 @@
 ---
-title: 什么是 Azure Data Studio？ | Microsoft Docs
-description: Azure Data Studio 是一个免费的轻型工具，用于管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库; 在 Windows、 macOS 和 Linux 上运行它们正在运行的任何位置。
-ms.custom: tools|sos
+title: 概述
+titleSuffix: Azure Data Studio
+description: Azure Data Studio 是免费的轻型工具，用于管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库运行在 Windows、 macOS 和 Linux。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099779"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030771"
 ---
-# <a name="what-is-includename-sosincludesname-sosmd"></a>什么是[!INCLUDE[name-sos](../includes/name-sos.md)]？
+# <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
 Azure Data Studio是一种跨平台数据库工具，适用于在Windows，MacOS和Linux上使用Microsoft系列内部部署和云数据平台的数据专业人员。
 
