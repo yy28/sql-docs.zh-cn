@@ -1,22 +1,21 @@
 ---
-title: 第 2 课：创建并应用命名标准策略 | Microsoft Docs
+title: 第 2 课：创建并应用命名标准策略 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bd10598b6305a3342dd2097dd9acb573ac51995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805349"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 课：创建并应用命名标准策略
   某些类型的基于策略的管理策略可以创建触发器，以强制要求以后符合策略。 在本课程中，您将创建一个策略以强制执行表命名标准。 然后，尝试创建一个违反该策略的表以对其进行测试。  

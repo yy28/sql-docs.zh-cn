@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668646"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511448"
 ---
 # <a name="type-system---sequence-type-matching"></a>类型系统 - 序列类型匹配
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668646"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>比较表达式返回的原子值类型  
  如果表达式返回的是原子值序列，则您可能必须弄清序列中值的类型。 下列示例说明如何使用序列类型语法来估计表达式返回的原子值类型。  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>示例：确定序列是否为空  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>例如：确定序列是否为空  
  **Empty （)** 序列类型可以使用序列类型表达式，以确定是否返回指定表达式的序列为空序列。  
   
  在下面的示例中，XML 架构允许 <`root`> 元素为空：  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>示例：确定属性值的类型  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>例如：确定属性值的类型  
  有时，您可能希望在进行处理前估计表达式返回的序列类型。 例如，您可能有一个 XML 架构，其中，节点被定义为联合类型。 在下面的示例中，集合中的 XML 架构将属性 `a` 定义为联合类型，该类型的值可以是十进制值，也可以是字符串类型。  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>示例：序列表达式中的基数  
+### <a name="example-cardinality-in-sequence-expressions"></a>例如：在序列表达式中的基数  
  此示例说明基数在序列表达式中的作用。 下列 XML 架构定义了 <`root`> 元素，该元素属于字节类型且可为空。  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  如果两种情况都匹配，`instance of` 表达式将返回 True。  
   
-### <a name="example-querying-against-an-xml-type-column"></a>示例：对 xml 类型列进行查询  
+### <a name="example-querying-against-an-xml-type-column"></a>例如：查询对 xml 类型列  
  在以下示例中，针对的 Instructions 列指定一个查询**xml**中键入[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。 因为它具有关联的架构，因此是类型化 XML 列。 XML 架构定义整数类型的 `LocationID` 属性。 因此，在序列表达式中， `instance of xs:integer?` ，则返回 True。  
   
 ```  
@@ -174,9 +174,9 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>比较表达式返回的节点类型  
  如果表达式返回节点序列，则您可能必须弄清此序列中节点的类型。 下列示例说明如何使用序列类型语法估计表达式返回的节点类型。 您可以使用下列序列类型：  
   
--   **item()** – 与匹配序列中的任何项。  
+-   **item()** -与序列中的任何项匹配。  
   
--   **node （)** – 确定序列是否为节点。  
+-   **node （)** -确定序列是否为节点。  
   
 -   **processing-instruction()** -确定表达式是否返回处理指令。  
   
@@ -186,7 +186,7 @@ WHERE ProductModelID = 7
   
  以下示例说明这些序列类型。  
   
-### <a name="example-using-sequence-types"></a>示例：使用序列类型  
+### <a name="example-using-sequence-types"></a>例如：使用序列类型  
  在此示例中，针对非类型化的 XML 变量执行了若干查询。 这些查询说明序列类型的使用方法。  
   
 ```  

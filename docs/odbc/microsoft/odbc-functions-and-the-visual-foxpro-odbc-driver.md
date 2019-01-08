@@ -21,20 +21,20 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512461"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函数和 Visual FoxPro ODBC 驱动程序
-在本部分中的主题提供的 ODBC API 函数的简短摘要和任何 Visual FoxPro 特定详细信息。  
+在本部分中的主题提供的 ODBC API 函数的简短摘要和任何 Visual FoxPro 特定的详细信息。  
   
 > [!NOTE]  
 >  有关 ODBC 函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC Programmer's Guide"中。  
   
- ODBC API 函数分为以下三种主要类别： 核心级别 API 函数、 级别 1 API 函数和级别 2 API 函数。  
+ ODBC API 函数分为以下三种主要类别：核心级别 API 函数、 级别 1 API 函数和级别 2 API 函数。  
   
 > [!NOTE]  
 >  一些函数的具体取决于数据源指连接到的目录以不同方式行为[免费表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 文件） 或 Visual FoxPro[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbc 文件）。 数据库连接仅支持某些操作。  

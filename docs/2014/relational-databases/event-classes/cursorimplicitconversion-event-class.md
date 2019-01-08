@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bb7b67ebbe95181b1b25797051e639fb1b3e4b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795049"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 事件类
   **CursorImplicitConversion** 事件类描述了应用程序编程接口 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标中发生的游标隐式转换事件。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 执行所请求类型的服务器游标不支持的 Transact-SQL 语句时，就会发生游标隐式转换事件。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一个指示游标类型已更改的错误。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -17,23 +16,23 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192167"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352318"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 表达式
   表达式是生成单个数据值的符号（标识符、文字、函数和运算符）的组合。 简单的表达式可以是单个常量、变量或函数。 更多情况下，表达式较为复杂，会使用多个运算符和函数，并且引用多个列和变量。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，表达式可以用于定义 CASE 语句的条件，创建和更新数据列中的值，为变量赋值，在运行时更新或填充属性，定义优先约束中的约束，以及提供 For 循环容器所使用的表达式。  
   
  表达式基于表达式语言和表达式计算器。 表达式计算器分析表达式，并确定表达式是否按照表达式语言的规则执行。 有关表达式语法和支持的文本和标识符的详细信息，请参阅以下主题：  
   
--   [语法&#40;SSIS&#41;](syntax-ssis.md)  
+-   [语法 (SSIS)](syntax-ssis.md)  
   
--   [文本&#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
+-   [文字 (SSIS)](numeric-string-and-boolean-literals.md)  
   
--   [标识符&#40;SSIS&#41;](identifiers-ssis.md)  
+-   [标识符 (SSIS)](identifiers-ssis.md)  
   
 ## <a name="components-that-use-expressions"></a>使用表达式的组件  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的下列元素可以使用表达式：  
@@ -44,7 +43,7 @@ ms.locfileid: "48192167"
   
 -   变量可以使用表达式来设置其值。 例如，GETDATE() 可以将变量的值设置为当前日期。  
   
--   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 优先约束中使用的表达式的计算结果必须为`true`或`false`。 例如，表达式“\@A > \@B”比较两个用户定义的变量，以确定是否运行受约束任务。  
+-   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 优先约束中使用的表达式的计算结果必须为 `true` 或 `false`。 例如，表达式“\@A > \@B”比较两个用户定义的变量，以确定是否运行受约束任务。  
   
 -   For 循环容器可以使用表达式来生成循环结构使用的初始化语句、计算语句、增量语句。 例如，表达式 \@Counter = 1 初始化循环计数器。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48192167"
  [在数据流组件中使用表达式](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相关内容  
- social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+ social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

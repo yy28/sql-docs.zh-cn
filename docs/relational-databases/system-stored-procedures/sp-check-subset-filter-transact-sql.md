@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_check_TSQL
@@ -22,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c5c3df76ad1e2751f2997eb48899b86beb260e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848495"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791709"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@filtered_table**=] **'***filtered_table*****  
+ [ **@filtered_table** =] **'***filtered_table*****  
  筛选的表的名称。 *filtered_table*是**nvarchar(400)**，无默认值。  
   
  [ **@subset_filterclause** =] **'***subset_filterclause*****  
@@ -73,7 +72,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
  **sp_check_subset_filter**可以执行对任何表中，即使未发布表。 在定义筛选项目之前，此存储过程可以用来验证筛选子句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_check_subset_filter**。  
   
 ## <a name="see-also"></a>请参阅  

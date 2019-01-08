@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545423"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>筛选条件表达式  
  可以定义限制在挖掘模型中使用的事例的筛选器。 此筛选器可应用于事例表中的列和/或嵌套表中的行。  
   
- 筛选条件表达式是简化的 DMX 谓词，与 WHERE 子句相似。 筛选表达式仅限于使用基本数学运算符、标量和列名的公式。 但 EXISTS 运算符是个例外，如果为子查询至少返回一行，则它的计算结果为 true。 可以通过使用常用逻辑运算符 AND、OR 和 NOT 来组合谓词。  
+ 筛选条件表达式是简化的 DMX 谓词，与 WHERE 子句相似。 筛选表达式仅限于使用基本数学运算符、标量和列名的公式。 但 EXISTS 运算符是个例外，如果为子查询至少返回一行，则它的计算结果为 true。 可以通过使用常用逻辑运算符组合谓词：AND、 OR 和 NOT。  
   
  有关与挖掘模型一起使用的筛选器的详细信息，请参阅[挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
@@ -143,7 +143,7 @@ USING <algorithm> [(<parameter list>)]
  参数列表语法如下：  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
 ## <a name="example-1-add-a-model-to-a-structure"></a>示例 1：向结构中添加模型  
@@ -177,7 +177,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>示例 3：将筛选后的模型添加到具有嵌套表的结构中  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>示例 3：将筛选后的模型添加到具有嵌套表的结构  
  下面的示例将一个挖掘模型添加到市场篮挖掘结构的修改后的版本中。 在示例中使用的挖掘结构进行了修改，以添加**区域**列中，其中包含客户区域属性，和一个**Income Group**列，通过对客户收入进行分类值**高**，**中等**，或**低**。  
   
  挖掘结构还包括一个嵌套表，其中列出客户已购买的商品。  
@@ -201,7 +201,7 @@ WITH FILTER (EXISTS (SELECT * FROM [v Assoc Seq Line Items] WHERE
 USING Microsoft_Decision Trees  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

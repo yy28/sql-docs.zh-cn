@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5245bd58ab52af1383cf056ac583729968d79162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203097"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800229"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   本主题介绍如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的所有权重新指派给另一用户。  
   
--   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：**[限制和局限](#Restrictions)，[安全](#Security)  
   
 -   **若要将作业所有权授予其他人，请使用：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48203097"
 >  如果将作业所有权重新指派到的用户不是 **sysadmin** 固定服务器角色的成员，而执行作业的步骤需要代理帐户（例如， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行），则请确保该用户可以访问该代理帐户，否则作业将失败。  
   
 ####  <a name="Permissions"></a> Permissions  
- 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)。  
+ 有关详细信息，请参阅[实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ##  <a name="SSMSProc2"></a> 使用 SQL Server Management Studio  
  **将作业所有权授予其他人**  
@@ -70,7 +70,7 @@ ms.locfileid: "48203097"
   
 2.  在工具栏上，单击 **“新建查询”**。  
   
-3.  在查询窗口中，输入下面的语句，使用[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系统存储过程。 以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  
+3.  在查询窗口中，输入下面的语句，使用[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系统存储过程。 以下示例将所有作业从 `danw` 重新分配给 `fran??oisa`。  
   
     ```  
     USE msdb ;  
@@ -79,14 +79,14 @@ ms.locfileid: "48203097"
     EXEC dbo.sp_manage_jobs_by_login  
         @action = N'REASSIGN',  
         @current_owner_login_name = N'danw',  
-        @new_owner_login_name = N'françoisa' ;  
+        @new_owner_login_name = N'fran??oisa' ;  
     GO  
     ```  
   
 ##  <a name="SMOProc2"></a> 使用 SQL Server 管理对象  
  **将作业所有权授予其他人**  
   
-1.  调用`Job`类通过使用一种编程语言的选择，如 Visual Basic、 Visual C# 或 PowerShell。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  
+1.  通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来调用 `Job` 类。 有关示例代码，请参阅 [在 SQL Server 代理中计划自动管理任务](sql-server-agent.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [执行作业](implement-jobs.md)   

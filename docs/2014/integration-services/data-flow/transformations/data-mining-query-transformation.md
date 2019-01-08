@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1be2f23cbcf39b1b3775ef0a8de592ed71240a45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00b8b6e5004878c3d6c7174ed375f68a2c4d7b4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058597"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796100"
 ---
 # <a name="data-mining-query-transformation"></a>数据挖掘查询转换
   数据挖掘查询转换针对数据挖掘模型执行预测查询。 此转换包含用于创建数据挖掘扩展 (DMX) 查询的查询生成器。 使用查询生成器可创建自定义语句来使用 DMX 语言针对现有挖掘模型计算转换输入数据。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)。  
@@ -37,9 +36,9 @@ ms.locfileid: "48058597"
   
  有关可在 **“数据挖掘查询转换编辑器”** 对话框中设置的属性的详细信息，请单击以下主题之一：  
   
--   [数据挖掘查询转换编辑器&#40;挖掘模型选项卡&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [数据挖掘查询转换编辑器（“挖掘模型”选项卡）](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [数据挖掘查询转换编辑器&#40;挖掘模型选项卡&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [数据挖掘查询转换编辑器（“挖掘模型”选项卡）](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

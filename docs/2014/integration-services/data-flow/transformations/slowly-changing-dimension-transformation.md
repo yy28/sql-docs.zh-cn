@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -18,12 +17,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056187"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352138"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
   渐变维度转换协调数据仓库维度表中的记录更新与插入。 例如，可以用此转换配置转换输出，这些转换输出使用来自 AdventureWorks OLTP 数据库中的 Production.Products 表的数据在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 数据库的 DimProduct 表中插入和更新记录。  
@@ -47,7 +46,7 @@ ms.locfileid: "48056187"
   
 -   变化的属性更改覆盖现有记录。 此类更改等效于类型 1 更改。 渐变维度转换将这些行定向到名为 **“变化的属性更新输出”** 的输出。  
   
--   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将这些行定向到两个输出： **“历史属性插入输出”** 和 **“新输出”**。  
+-   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将定向到两个输出这些行：**历史属性插入输出**并**新建输出**。  
   
 -   固定的属性更改指示不得更改列值。 渐变维度转换检测更改，并可将带有更改的行定向到名为 **“固定的属性输出”** 的输出。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48056187"
  您可以记录“渐变维度”转换对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除“渐变维度”转换执行的对外部数据源的连接、命令和查询中发生的故障。 若要记录“渐变维度”转换对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation"></a>配置渐变维度转换  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -108,6 +107,6 @@ ms.locfileid: "48056187"
   
 ## <a name="related-content"></a>相关内容  
   
--   blogs.msdn.com 上的博客文章 [优化渐变维度向导](http://go.microsoft.com/fwlink/?LinkId=199481)。  
+-   blogs.msdn.com 上的博客文章 [优化渐变维度向导](https://go.microsoft.com/fwlink/?LinkId=199481)。  
   
   

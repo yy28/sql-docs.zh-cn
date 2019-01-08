@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -16,40 +15,40 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0791e226f4c4a1c19ab2dffb7a9e7845e59a418c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a01ae02feae938c952096216b89858c007aee4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351389"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>运行 SQL Server 导入和导出向导
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导为在数据源之间复制数据和构造基本包提供了一种最为简单的方法。 有关向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
   
- 有关演示如何使用 SQL Server 导入和导出向导来创建将数据从 SQL Server 数据库导出到 Microsoft Excel 电子表格的包的视频，请参阅[SQL Server 数据导出到 Excel （SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=131024)。  
+ 有关演示如何使用 SQL Server 导入和导出向导来创建将数据从 SQL Server 数据库导出到 Microsoft Excel 电子表格的包的视频，请参阅[SQL Server 数据导出到 Excel （SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131024)。  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>启动 SQL Server 导入和导出向导  
   
 -   上**启动**菜单，依次指向**所有程序**，指向**Microsoft SQL Server** ，然后单击**导入和导出数据**。  
   
-     — 或 —  
+     -或-  
   
      在中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，右键单击**SSIS 包**文件夹，，然后单击**SSISImport 和导出向导**。  
   
-     — 或 —  
+     -或-  
   
      在中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，然后在**项目**菜单中，单击**SSISImport 和导出向导**。  
   
-     — 或 —  
+     -或-  
   
      在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务器类型，展开数据库，右键单击某个数据库，指向**任务**，然后单击**导入数据**或**导出数据**.  
   
-     — 或 —  
+     -或-  
   
      在命令提示符窗口中运行 DTSWizard.exe（位于 C:\Program Files\Microsoft SQL Server\100\DTS\Binn）。  
   
     > [!NOTE]  
-    >  在 64 位计算机上，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导 (DTSWizard.exe)。 但是，有些数据源（如 Access 或 Excel）只提供 32 位提供程序。 若要使用这些数据源，您可能需要安装并运行 32 位版本的向导。 若要安装 32 位版本的向导，选择任一客户端工具或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在安装过程。  
+    >  在 64 位计算机上，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导 (DTSWizard.exe)。 但是，有些数据源（如 Access 或 Excel）只提供 32 位提供程序。 若要使用这些数据源，您可能需要安装并运行 32 位版本的向导。 若要安装 32 位版本的向导，必须在安装过程中选择“客户端工具”或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入或导出数据  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48100337"
     > [!NOTE]  
     >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 不支持 Oracle BLOB、CLOB、NCLOB、BFILE 和 UROWID 数据类型。 因此，OLE DB 源无法从包含具有上述数据类型的列的表中提取数据。  
   
-     可用数据目标包括[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据访问接口、 OLE DB 访问接口、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、 Excel、 Access 和平面文件目标。  
+     可用数据目标包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据访问接口、OLE DB 访问接口、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、Excel、Access 和平面文件目标。  
   
 3.  为选定的目标类型设置选项。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48100337"
   
     -   指示是否创建新的数据库并设置数据库属性。 下列属性无法配置，因此向导使用指定的默认值：  
   
-        |“属性”|ReplTest1|  
+        |属性|ReplTest1|  
         |--------------|-----------|  
         |排序规则|Latin1_General_CS_AS_KS_WS|  
         |恢复模式|完全|  
@@ -82,7 +81,7 @@ ms.locfileid: "48100337"
   
          如果源是 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供程序，则还可以使用该选项复制查询结果，并提供 DBCommand 字符串作为查询。  
   
-         如果源数据是视图，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导会自动将视图转换到目标中的表。  
+         如果源数据是视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导自动将该视图转换为目标中的表。  
   
     -   指示是否删除目标表然后重新创建，以及是否启用标识插入。  
   
@@ -122,10 +121,10 @@ ms.locfileid: "48100337"
   
      保存包时，可以设置包保护级别，如果该保护级别使用密码，请提供密码。 有关包保护级别的详细信息，请参阅[包中敏感数据的访问控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   
-     如果在启动向导[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]项目中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，不能从向导运行包。 相反，该包将添加到启动该向导的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目中。 然后可以在中运行包[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+     如果向导从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目启动，则无法从向导运行包。 相反，该包将添加到启动该向导的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目中。 然后您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行包。  
   
     > [!NOTE]  
-    >  在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，用于保存由向导创建的包的选项不可用。  
+    >  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，未提供用来保存该向导所创建的包的选项。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144832"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398070"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>了解 DMX Select 语句
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144832"
   
      在这种情况下，您需要钻取到作为数据域的挖掘结构，并查看列中的各行，如“Gender”、“Bike Buyer”等。  
   
- **重要说明：** 或表达式列表中包含的所有内容**其中**子句必须来自于定义的数据域**FROM**子句。 您不能将数据域混用。  
+ **重要：** 在表达式列表中或在包含的所有内容**其中**子句必须来自于定义的数据域**FROM**子句。 您不能将数据域混用。  
   
 ##  <a name="Select_Types"></a> 选择类型  
  语法**选择**语句支持许多不同的任务。 使用下列模式来执行这些任务：  
@@ -100,7 +100,7 @@ ms.locfileid: "50144832"
   
  [返回到选择类型](#Select_Types)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  

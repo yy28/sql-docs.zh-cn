@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
@@ -14,12 +13,12 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2e4abc0b318af1ad13856d4ab6f1ca13e011d76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3a5bc74211fea8a397622d79cf6dd4d9a26df0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088797"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784611"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
   模型是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中最高级别的数据组织。 模型定义了您的主数据管理解决方案中的数据结构。 模型包含以下对象：  
@@ -71,7 +70,7 @@ ms.locfileid: "48088797"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建模型来组织您的主数据。|[创建模型&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|创建模型来组织您的主数据。|[创建模型 (Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |更改现有模型的名称。|[更改模型名称&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |删除现有模型。|[删除模型 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
@@ -81,10 +80,10 @@ ms.locfileid: "48088797"
   
 -   [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [部署模型&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [部署模型 (Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [模型对象权限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [模型对象权限 (Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

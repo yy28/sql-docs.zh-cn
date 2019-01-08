@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5421467aaf516ca3f1f153979916be01f9160d05
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517636"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 表值参数的用法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,14 +58,14 @@ ms.locfileid: "51673106"
   
  表值参数及其列按上一节“完全绑定多行缓冲区情况下的表值参数”所述进行绑定，但是表值参数本身的长度指示器设置为 SQL_DATA_AT_EXEC。 该驱动程序响应 SQLExecute 或 SQLExecuteDirect 按常规方式执行时数据参数的-也就是说，通过返回 SQL_NEED_DATA。 SQLParamData 时驱动程序已准备好接受表值参数的数据，返回的值*ParameterValuePtr*在 SQLBindParameter 中。  
   
- 应用程序使用 SQLPutData 为表值参数以指示表值参数构成列的数据的可用性。 对于表值参数，调用时 SQLPutData *DataPtr*必须始终为 null 和*StrLen_or_Ind*必须是 0 或非数字小于或等于数组大小为指定表值参数缓冲区 ( *ColumnSize* SQLBindParameter 参数)。 0 表示表值参数没有更多的行，驱动程序将继续处理下一个实际过程参数。 当*StrLen_or_Ind*是不为 0，驱动程序将处理表值参数构成列相同的方式为非表值参数绑定参数： 每个表值参数列可以指定其实际数据长度、 SQL_NULL_DATA，或它可以指定通过其长度/指示器缓冲区执行时数据。 表值参数列可以通过传递值重复调用 SQLPutData 像往常一样的字符或二进制值是要分块传递时。  
+ 应用程序使用 SQLPutData 为表值参数以指示表值参数构成列的数据的可用性。 对于表值参数，调用时 SQLPutData *DataPtr*必须始终为 null 和*StrLen_or_Ind*必须是 0 或非数字小于或等于数组大小为指定表值参数缓冲区 ( *ColumnSize* SQLBindParameter 参数)。 0 表示表值参数没有更多的行，驱动程序将继续处理下一个实际过程参数。 当*StrLen_or_Ind*是不为 0，驱动程序将处理表值参数构成列相同的方式为非表值参数绑定参数：每个表值参数列可以指定其实际数据长度、 SQL_NULL_DATA，或者它可以指定通过其长度/指示器缓冲区执行时数据。 表值参数列可以通过传递值重复调用 SQLPutData 像往常一样的字符或二进制值是要分块传递时。  
   
  处理完所有表值参数列后，驱动程序将返回到表值参数以处理更多的表值参数数据行。 因此，对于执行时数据表值参数，驱动程序不遵循通常的顺序扫描绑定参数的方式。 绑定的表值参数进行轮询，直到使用调用 SQLPutData *StrLen_Or_IndPtr*等于 0，届时，驱动程序将跳过表值参数列并将移动到下一个实际的存储的过程参数。  在 SQLPutData 通过指示器值大于或等于 1，驱动程序表值参数列和行按顺序处理直到它具有的所有绑定的行和列的值。 然后驱动程序返回到表值参数。 从 SQLParamData 接收表值参数的标记，对于表值参数调用 SQLPutData (hstmt，NULL，n)，该应用程序必须设置表值参数构成列数据和指示器缓冲区内容下一步的行或行要传递到服务器。  
   
  此方案的示例代码位于在例程`demo_variable_TVP_binding`中[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>从系统目录中检索表值参数元数据  
- 当应用程序具有表值参数的参数的过程调用 SQLProcedureColumns 时，DATA_TYPE 将返回为 SQL_SS_TABLE，并且 TYPE_NAME 是表值参数的表类型的名称。 两个其他列添加到 SQLProcedureColumns 返回的结果集： SS_TYPE_CATALOG_NAME 返回其中定义表值参数的表类型，并且 SS_TYPE_SCHEMA_NAME 返回的架构的名称的目录的名称，定义表类型的表值参数的位置。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 出现在之前的早期版本中已添加的所有驱动程序特定列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和通过 ODBC 自身委托的所有列之后。  
+ 当应用程序具有表值参数的参数的过程调用 SQLProcedureColumns 时，DATA_TYPE 将返回为 SQL_SS_TABLE，并且 TYPE_NAME 是表值参数的表类型的名称。 两个其他列添加到 SQLProcedureColumns 返回的结果集：SS_TYPE_CATALOG_NAME 返回其中定义表值参数的表类型，并且 SS_TYPE_SCHEMA_NAME 返回的架构的名称的目录的名称，where 定义表值参数的表类型。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 出现在之前的早期版本中已添加的所有驱动程序特定列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和通过 ODBC 自身委托的所有列之后。  
   
  不仅将为表值参数填充这些新列，还将为 CLR 用户定义类型参数填充这些新列。 仍将填充 UDT 参数的现有架构和目录列，但是为数据类型提供所需的常见架构和目录列将简化未来的应用程序开发。 （请注意，XML 架构集合稍有不同，未包括在此更改中。）  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191467"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810889"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
   从设计上，从 Oracle 数据库中进行发布几乎与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布一样。 不过，还应注意下列限制和问题：  
@@ -60,7 +59,7 @@ ms.locfileid: "48191467"
   
 -   嵌套表  
   
--   视图  
+-   Views  
   
 -   包、包正文、过程和触发器  
   
@@ -104,7 +103,7 @@ ms.locfileid: "48191467"
   
  还要考虑下列问题：  
   
--   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 处理 NULL 的方式有所不同：对于允许 NULL 值并包含在唯一约束或索引中的列，Oracle 允许存在多个值为 NULL 的行。 而在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，同一列只允许存在一个值为 NULL 的行，以确保唯一性。 不能发布允许 NULL 值的唯一约束或索引，因为对于索引或约束中包含的任何列，如果已发布的表中包含多个值为 NULL 的行，订阅服务器中将出现违反约束的情况。  
+-   Oracle 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以不同方式处理 NULL:Oracle 允许 NULL 值的列允许 null 值的、 唯一约束或索引中包括多个行。 而在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，同一列只允许存在一个值为 NULL 的行，以确保唯一性。 不能发布允许 NULL 值的唯一约束或索引，因为对于索引或约束中包含的任何列，如果已发布的表中包含多个值为 NULL 的行，订阅服务器中将出现违反约束的情况。  
   
 -   测试唯一性时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将忽略字段中的尾随空格，而 Oracle 则不会忽略。  
   

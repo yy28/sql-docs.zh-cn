@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_requestpeerresponse_TSQL
@@ -17,12 +16,12 @@ ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 300ff762ee7fbcefcd593cf3d7dd9ff0e81fcfed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc4c808b60e91faa4c08750b4c48f470ddcb6ee6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782909"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布*****  
+ [ **@publication** =] **'***发布*****  
  要验证其状态的对等拓扑中的发布名称。 *发布*是**sysname**，无默认值。  
   
- [ **@description**=] **'***说明*****  
+ [ **@description**=] **'***说明***’**  
  可用于标识各个状态请求的用户定义信息。 *描述*是**nvarchar(4000)**，默认值为 NULL。  
   
  [ **@request_id** =] *request_id*  
@@ -60,7 +59,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
   
  **sp_requestpeerresponse**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_requestpeerresponse**。  
   
 ## <a name="see-also"></a>请参阅  

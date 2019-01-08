@@ -13,22 +13,22 @@ ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 173588769aa1697e23f0d34ca13916684d2fee59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4cc8ae36dbcc728062e2074d715673a39f95e1d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112707"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535041"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>运行 Analysis Services 部署向导
   在使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导部署 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，可以按照以下方法运行该向导：  
   
--   **交互式** 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导根据输入文件生成一个 XML 部署脚本，并根据用户的输入进行交互式更改。 此向导将任何用户的更改仅应用于部署脚本。 向导不会更改输入文件。 有关输入文件的详细信息，请参阅[了解用于创建部署脚本的输入文件](deployment-script-files-input-used-to-create-deployment-script.md)。  
+-   **交互式** 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导根据输入文件生成一个 XML 部署脚本，并根据用户的输入进行交互式更改。 此向导将任何用户的更改仅应用于部署脚本。 向导不会更改输入文件。 有关输入文件的详细信息，请参阅 [了解用于创建部署脚本的输入文件](deployment-script-files-input-used-to-create-deployment-script.md)。  
   
 -   **从命令提示符**在命令提示符处，运行时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导生成的 XML for Analysis (XMLA) 部署脚本基于用于运行该向导的开关。 该向导可以指导进行下面的任何一项操作：提示用户输入并基于输入更改输入文件；按原样使用输入文件以静默、无人参与模式运行部署；或创建一个以后可能使用的部署脚本。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>交互式运行 Analysis Services 部署向导  
- 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导读取输入文件中的值并向您显示该信息。 可以更改这些输入值 - 例如部署目标、配置设置、部署选项和连接字符串密码 - 或原样保留它们。 如果更改任何输入值，在生成 XMLA 部署脚本时向导将使用这些更改。 但是，向导不会更改输入文件中的任何值。  
+ 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导读取输入文件中的值并向您显示该信息。 您可以修改这些输入值如作为部署目标、 配置设置、 部署选项和连接字符串密码-或原样保留它们。 如果更改任何输入值，在生成 XMLA 部署脚本时向导将使用这些更改。 但是，向导不会更改输入文件中的任何值。  
   
 > [!NOTE]  
 >  如果使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导更改输入值，那么可以在命令提示符处运行向导并将向导设置为以应答文件模式运行。  
@@ -39,7 +39,7 @@ ms.locfileid: "48112707"
   
 -   单击 **“开始”**，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“Analysis Services”**，然后单击 **“部署向导”**。  
   
-     — 或 —  
+     -或-  
   
 -   在中**项目**的文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，双击*\<项目名称 >*.asdatabase 文件。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48112707"
   
  若要以输出模式运行向导，请使用 **/o**开关并提供输出文件名。  
   
- 有关此类命令行开关的详细信息，请参阅[使用部署实用工具部署模型解决方案](deploy-model-solutions-with-the-deployment-utility.md)。  
+ 有关此类命令行开关的详细信息，请参阅 [使用部署实用工具部署模型解决方案](deploy-model-solutions-with-the-deployment-utility.md)。  
   
  下面的过程说明了如何在命令提示符下运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导。  
   

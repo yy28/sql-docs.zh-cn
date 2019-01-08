@@ -1,5 +1,5 @@
 ---
-title: 关系 |Microsoft 文档
+title: Analysis Services 表格模型中的关系 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045301"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072524"
 ---
 # <a name="relationships"></a>关系 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,20 +28,20 @@ ms.locfileid: "34045301"
 >  如果您的模型包含多个关系，则关系图视图可以更好地展现表之间的关系和创建新关系。  
   
   
-##  <a name="what"></a> 优点  
+##  <a name="what"></a> 优势  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
-|CustomerID|名称|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|“属性”|EMail|DiscountRate|OrderID|OrderDate|产品|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
- 这种方法可以用，但会存储大量冗余数据，如每个订单的客户电子邮件地址。 存储成本低廉，但如果电子邮件地址发生更改，就必须确保更新该客户的每一行数据。 针对这一问题，一种解决方法是将数据拆分到多个表中，然后在这些表之间定义关系。 这是中使用的方法*关系数据库*如 SQL Server。 例如，导入模型的某个数据库可以使用三个相关表来表示订单数据：  
+ 这种方法可以用，但会存储大量冗余数据，如每个订单的客户电子邮件地址。 存储成本低廉，但如果电子邮件地址发生更改，就必须确保更新该客户的每一行数据。 针对这一问题，一种解决方法是将数据拆分到多个表中，然后在这些表之间定义关系。 这是中使用的方法*关系数据库*（如 SQL Server）。 例如，导入模型的某个数据库可以使用三个相关表来表示订单数据：  
   
-### <a name="customers"></a>客户  
+### <a name="customers"></a>Customers  
   
-|[CustomerID]|名称|EMail|  
+|[CustomerID]|“属性”|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -55,13 +55,13 @@ ms.locfileid: "34045301"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantity|  
+|[CustomerID]|OrderID|OrderDate|产品|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- 如果从同一数据库导入这些表，则“表导入向导”可以根据 [方括号] 中的列来检测这些表之间的关系，并可以在模型设计器中再现这些关系。 有关详细信息，请参阅本主题中的 [关系的自动检测和推理](#detection) 。 如果从多个源中导入表，则可以中所述地手动创建关系[创建表之间的关系两个](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)。  
+ 如果从同一数据库导入这些表，则“表导入向导”可以根据 [方括号] 中的列来检测这些表之间的关系，并可以在模型设计器中再现这些关系。 有关详细信息，请参阅本主题中的 [关系的自动检测和推理](#detection) 。 如果从多个源导入表，您可以手动创建关系，如中所述[创建表之间的关系两个](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)。  
   
 ### <a name="columns-and-keys"></a>列和键  
  关系基于每个表中包含相同数据的列。 例如，Customers 和 Orders 表可以彼此相关，因为它们都包含存储客户 ID 的列。 在本示例中，列名称相同，但这不是必需的。 只要 Orders 表的所有行都包含也存储在 Customers 表中的 ID，一列可以是 CustomerID，另一列可以是 CustomerNumber。  
@@ -83,7 +83,7 @@ ms.locfileid: "34045301"
   
  下表显示了三个表之间的关系：  
   
-|关系|类型|查找列|列|  
+|关系|类型|查找列|“列”|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一对一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一对多|Customers.CustomerID|Orders.CustomerID|  
@@ -95,9 +95,9 @@ ms.locfileid: "34045301"
  创建关系时，模型设计器必须遵守几项要求：  
   
 ### <a name="single-active-relationship-between-tables"></a>表之间的单个活动关系  
- 多个关系会导致表之间存在不明确的依赖关系。 若要创建准确的计算，需要从一个表到下一个表的单一路径。 因此，每对表之间只能存在一个活动关系。 例如，在 AdventureWorks DW 2012 中，表 DimDate 包含一个列 DateKey，该列与表 FactInternetSales 中的以下三个不同列相关：OrderDate、DueDate 和 ShipDate。 如果您试图导入这些表，则会成功创建第一个关系，但是在创建涉及相同列的后续关系时会接收到下面的错误：  
+ 多个关系会导致表之间存在不明确的依赖关系。 若要创建准确的计算，需要从一个表到下一个表的单一路径。 因此，每对表之间只能存在一个活动关系。 例如，在 AdventureWorks DW 2012 中，表 DimDate 包含一个列 DateKey，与表 FactInternetSales 中的三个不同列相关:OrderDate、 DueDate 和 ShipDate。 如果您试图导入这些表，则会成功创建第一个关系，但是在创建涉及相同列的后续关系时会接收到下面的错误：  
   
- \* 关系： 表 [列 1]-> 表 [列 2] 的状态： 错误的原因： 无法表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
+ \* 关系： 表 [列 1]-> 表 [列 2]-状态： 错误-原因：无法在表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
   
  如果您有两个表并且这两个表之间存在多个关系，则需要导入包含查找列的表的多个副本，并在每对表之间创建一个关系。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "34045301"
  查找列中的数据值必须是唯一的。 也就是说，该列不能包含重复值。 在表格模型中，Null 和空字符串等效于空白，而空白是一种独特的数据值。 这意味着查找列中不能包含多个 Null 值。  
   
 ### <a name="compatible-data-types"></a>兼容的数据类型  
- 源列和查找列中的数据类型必须兼容。 有关数据类型的详细信息，请参阅[数据类型支持](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
+ 源列和查找列中的数据类型必须兼容。 有关数据类型的详细信息，请参阅[支持的数据类型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
   
 ### <a name="composite-keys-and-lookup-columns"></a>组合键和查找列  
  不能在表格模型中使用组合键；必须始终有一列来唯一标识表中的每一行。 如果您试图导入的表中包含基于组合键的现有关系，表导入向导会忽略该关系，因为在表格模型中无法创建该关系。  
@@ -125,7 +125,7 @@ ms.locfileid: "34045301"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many relationships  
  表格模型不支持多对多关系，您不能在模型设计器中添加“联接表”  。 但可以使用 DAX 函数为多对多关系建模。  
   
- 你还可以尝试设置双向交叉筛选器以查看它是否实现同一目的。 有时可以跨多个表关系在保持原样的筛选器上下文的筛选器通过符合多对多关系的要求。 有关详细信息，请参阅 [SQL Server 2016 Analysis Services 中适用于表格模型的双向交叉筛选器](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 。  
+ 你还可以尝试设置双向交叉筛选器以查看它是否实现同一目的。 有时可以跨多个表关系保持筛选器上下文的交叉筛选器通过满足多对多关系的要求。 有关详细信息，请参阅 [SQL Server 2016 Analysis Services 中适用于表格模型的双向交叉筛选器](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 。  
   
 ### <a name="self-joins-and-loops"></a>自联接和循环  
  表格模型表中不允许使用自联接。 自联接是一个表与其自身之间的递归关系。 自联接通常用于定义父子层次结构。 例如，可以将 Employees 表联接到其自身，从而生成显示业务管理链的层次结构。  

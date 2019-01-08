@@ -1,5 +1,5 @@
 ---
-title: 从挖掘模型中删除筛选器 |Microsoft 文档
+title: 从挖掘模型中删除筛选器 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb3897d851c398b9703bf9514fc36cf30922727d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66293cf1be2ced3106e2966a930639c12330a660
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545665"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>从挖掘模型中删除筛选器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34014394"
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     - 或 -  
+     -或-  
   
      选择该模型。 在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "34014394"
   
 3.  按 Backspace 或 Delete 键。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从挖掘模型钻取到事例数据](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [为挖掘模型 & #40; 筛选器Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

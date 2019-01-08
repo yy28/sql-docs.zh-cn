@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138180"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806249"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
@@ -81,7 +80,7 @@ ms.locfileid: "48138180"
   
 -   限制使用大型对象 (LOB) 数据类型。  
   
-     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 数据类型`text`， `ntext`，和`image`不推荐使用。 如果确实要包括 Lob，建议使用的数据类型`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分别。  
+     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 `text`、`ntext` 和 `image`。 如果确实要包括 LOB，建议分别使用数据类型 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。  
   
      对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48138180"
   
 -   降低复制代理的详细级别，在初始测试、监视或调试期间除外。  
   
-     降低分发代理或合并代理的 **–HistoryVerboseLevel** 参数和 **–OutputVerboseLevel** 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
+     降低分发代理或合并代理的 –HistoryVerboseLevel 参数和 –OutputVerboseLevel 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
   
--   使用快照代理、合并代理和分发代理的 **–MaxBCPThreads** 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
+-   使用快照代理、合并代理和分发代理的 –MaxBCPThreads 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
   
--   使用分发代理和合并代理的 **–UseInprocLoader** 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
+-   使用分发代理和合并代理的 –UseInprocLoader 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
   
  代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   

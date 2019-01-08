@@ -14,12 +14,12 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa058add661ba5dc4054a431e0324f97e1efb422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514377"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 对象错误代码
 下表列出了[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象错误代码。 低两个字节的正十进制转换，显示了完整的错误代码和十六进制值的负十进制转换。
@@ -33,7 +33,7 @@ ms.locfileid: "47753088"
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|数据空间属性不是有效的。|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|不能在业务对象上调用方法。|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|此页访问另一个域上的数据。 若要允许此操作吗？ 若要避免出现此消息在 Internet Explorer 中的，您可以安全网站到受信任的站点区域上添加**安全**选项卡**Internet 选项**对话框。|
-|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|无效的 RDS 客户端版本 — — 客户端是比服务器更新。|
+|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|无效的 RDS 客户端版本的客户端是比服务器更新。|
 |**IDS_INVALIDARG**|5376 -2147019520 0x80071500|一个或多个参数均无效。|
 |**IDS_InvalidBindings**|4097 -2146824191 0x800A1001|绑定属性中的错误。|
 |**IDS_InvalidParam**|4110 -2146824172 0x800A1014|一个或多个参数均无效。|

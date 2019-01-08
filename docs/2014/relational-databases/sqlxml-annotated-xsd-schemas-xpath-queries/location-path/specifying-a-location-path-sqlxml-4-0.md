@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -18,12 +16,12 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 699f40750ef8f444de6b7115d34cfc33f834468a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c814d1b486a7ba7736cf19119a66ab0845d33c6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107377"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807229"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路径 (SQLXML 4.0)
   XPath 查询以表达式形式指定。 具有各种各样的表达式。 一个位置路径是一个表达式，它选择相对于上下文节点的一组节点。 对位置路径进行求值的结果为节点集。  

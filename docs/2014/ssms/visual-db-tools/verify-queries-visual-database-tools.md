@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:100644
@@ -16,12 +16,12 @@ ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a36cdaae35bcc58b04e082108596e035b0a45f6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124157"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803339"
 ---
 # <a name="verify-queries-visual-database-tools"></a>验证查询 (Visual Database Tools)
   为了避免问题，可以对所生成的查询进行检查以确保其语法正确。 在 [SQL 窗格](visual-database-tools.md)中输入语句时，此选项尤其有用。  

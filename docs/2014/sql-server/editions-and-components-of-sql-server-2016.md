@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -34,33 +33,33 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798279"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 的版本和组件
   根据应用程序的需要，安装要求会有所不同。 不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够满足单位和个人独特的性能、运行时以及价格要求。 安装哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件还取决于您的具体需要。 下面各节将帮助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的不同版本和可用组件中做出最佳选择。  
   
-## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>主体版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的主要版本  
  下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要版本。 有关详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定义|  
 |---------------------------------------|----------------|  
-|Enterprise（64 位和 32 位）|作为高级版本，[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能 - 可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。|  
+|Enterprise（64 位和 32 位）|作为高级版本，[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能，可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。|  
 |Business Intelligence（64 位和 32 位）|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence 版提供了综合性平台，可支持组织构建和部署安全、可扩展且易于管理的 BI 解决方案。 它提供了令人兴奋的功能，如数据浏览和可视化效果; 基于浏览器功能强大的数据混合功能和增强的集成管理。|  
-|Standard（64 位和 32 位）|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署 - 有助于以最少的 IT 资源获得高效的数据库管理。|  
+|Standard（64 位和 32 位）|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署，有助于以最少的 IT 资源获得高效的数据库管理。|  
   
-## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>专业的版 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的专业版本  
  专业化版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 面向不同的业务工作负荷。 下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的专业化版本。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Description|  
 |---------------------------------------|-----------------|  
 |Web（64 位和 32 位）|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web 版本是一项总拥有成本较低的选择。|  
   
-## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>扩展版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的扩展版本  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 延伸版是针对特定的用户应用而设计的，可免费获取或只需支付极少的费用。 下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的延伸版本。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Description|  

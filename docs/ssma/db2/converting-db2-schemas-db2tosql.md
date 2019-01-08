@@ -10,12 +10,12 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ff31e00ecb56138239a1d6d87de276754e84a5e6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520671"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>转换 DB2 架构 (DB2ToSQL)
 已连接到 DB2 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并将项目设置和数据映射选项，可以将转换到 DB2 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象。  
@@ -33,20 +33,20 @@ ms.locfileid: "51657859"
   
 |DB2 对象|生成 SQL Server 对象|  
 |-----------|----------------------------|  
-|数据类型|**SSMA 映射除下面所列的下列每种类型：**<br /><br />CLOB： 与此类型的工作某些本机函数都不支持 (例如 CLOB_EMPTY())<br /><br />BLOB： 与此类型的工作某些本机函数都不支持 (例如 BLOB_EMPTY())<br /><br />DBLOB： 与此类型的工作某些本机函数都不支持 (例如 DBLOB_EMPTY())|  
-|用户定义类型|**SSMA 映射以下用户：**<br /><br />不同的类型<br /><br />结构化的类型<br /><br />SQL PL 数据类型 – 请注意： 不支持弱游标类型。|  
+|数据类型|**SSMA 映射除下面所列的下列每种类型：**<br /><br />CLOB:与此类型的工作某些本机函数都不支持 (例如 CLOB_EMPTY())<br /><br />BLOB：与此类型的工作某些本机函数都不支持 (例如 BLOB_EMPTY())<br /><br />DBLOB:与此类型的工作某些本机函数都不支持 (例如 DBLOB_EMPTY())|  
+|用户定义类型|**SSMA 映射以下用户：**<br /><br />不同的类型<br /><br />结构化的类型<br /><br />SQL PL 数据类型-注意：不支持弱游标类型。|  
 |特殊寄存器|**SSMA 仅会在下面列出的寄存器：**<br /><br />当前时间戳<br /><br />当前日期<br /><br />当前时间<br /><br />当前时区<br /><br />当前用户<br /><br />SESSION_USER 和用户<br /><br />SYSTEM_USER<br /><br />当前 CLIENT_APPLNAME<br /><br />当前 CLIENT_WRKSTNNAME<br /><br />当前锁定超时<br /><br />当前架构<br /><br />当前服务器<br /><br />当前的隔离<br /><br />其他特殊的注册未映射到 SQL server 语义。|  
 |CREATE TABLE|**SSMA 映射创建表，但存在以下例外：**<br /><br />多维聚类分析 (MDC) 表<br /><br />范围聚集表 (RCT)<br /><br />分区表<br /><br />已分离的表<br /><br />DATA CAPTURE 子句<br /><br />IMPLICITLY 隐藏选项<br /><br />易失性选项|  
 |CREATE VIEW|SSMA 映射使用使用本地检查选项创建视图，但其他选项未映射到 SQL server 语义|  
 |CREATE INDEX|**SSMA 映射创建索引，但存在以下例外：**<br /><br />XML 索引<br /><br />无需重叠 BUSINESS_TIME 选项<br /><br />已分区的子句<br /><br />仅规范选项<br /><br />使用扩展选项<br /><br />MINPCTUSED 选项<br /><br />页拆分选项|  
-|触发器|**SSMA 会在以下触发器语义：**<br /><br />后/每行触发器<br /><br />每个语句后 /FOR 触发<br /><br />之前 / 对于每行，而不是 / 每行触发器|  
+|Triggers|**SSMA 会在以下触发器语义：**<br /><br />后/每行触发器<br /><br />每个语句后 /FOR 触发<br /><br />之前 / 对于每行，而不是 / 每行触发器|  
 |序列|映射。|  
-|SELECT 语句|**SSMA 映射选择有以下例外：**<br /><br />数据更改的表引用子句 – 部分映射，但最终表不受支持<br /><br />表引用子句 – 部分映射，但仅限表的引用、 外部表引用、 analyze_table 表达式集合派生表、 xmltable 表达式未映射到 SQL server 语义<br /><br />段规范子句 – 未映射。<br /><br />继续处理程序子句 – 未映射。<br /><br />类型化相关子句 – 未映射。<br /><br />并发访问解析子句 – 未映射。|  
+|SELECT 语句|**SSMA 映射选择有以下例外：**<br /><br />数据更改的表引用子句-部分映射，但最终表不受支持<br /><br />表引用子句-部分映射，但仅限表的引用、 外部表引用、 analyze_table 表达式集合派生表、 xmltable 表达式未映射到 SQL server 语义<br /><br />段规范子句-未映射。<br /><br />继续处理程序子句-未映射。<br /><br />类型化相关子句-未映射。<br /><br />并发访问解析子句-未映射。|  
 |VALUES 语句|映射。|  
 |INSERT 语句|映射。|  
-|UPDATE 语句|S**SMA 映射更新具有以下例外：**<br /><br />表引用子句 – 仅限-表-引用未映射到 SQL server 语义<br /><br />时间段子句 – 未映射。|  
-|MERGE 语句|**SSMA 将合并映射有以下例外：**<br /><br />单 vs 多个匹配项的每个子句-映射到 SQL server 语义，限制为出现的每个子句<br /><br />信号子句 – 不映射到 SQL Server 语义<br /><br />混合更新和删除子句 – 未映射到 SQL Server 语义<br /><br />段子句 – 不映射到 SQL Server 语义|  
-|DELETE 语句|**SSMA 映射删除但存在以下例外：**<br /><br />表引用子句 – 仅限-表-引用未映射到 SQL server 语义<br /><br />时间段子句 – 不映射到 SQL Server 语义|  
+|UPDATE 语句|S**SMA 映射更新具有以下例外：**<br /><br />表引用子句-仅限-表-引用未映射到 SQL server 语义<br /><br />时间段子句-未映射。|  
+|MERGE 语句|**SSMA 将合并映射有以下例外：**<br /><br />单 vs 多个匹配项的每个子句-映射到 SQL server 语义，限制为出现的每个子句<br /><br />信号子句-不映射到 SQL Server 语义<br /><br />混合的更新和删除子句-未映射到 SQL Server 语义<br /><br />段子句-不映射到 SQL Server 语义|  
+|DELETE 语句|**SSMA 映射删除但存在以下例外：**<br /><br />表引用子句-仅限-表-引用未映射到 SQL server 语义<br /><br />时间段子句-不映射到 SQL Server 语义|  
 |隔离级别和锁类型|映射。|  
 |过程 (SQL)|映射。|  
 |过程 （外部）|需要手动更新。|  
@@ -65,10 +65,10 @@ ms.locfileid: "51657859"
 |RETURN 语句|映射。|  
 |信号语句|不支持条件。 消息可以是可选的。|  
 |WHILE 语句|映射。|  
-|获取诊断语句|**SSMA 会获取诊断有以下例外：**<br /><br />映射 ROW_COUNT –。<br /><br />映射 DB2_RETURN_STATUS –。<br /><br />映射 MESSAGE_TEXT –。<br /><br />DB2_SQL_NESTING_LEVEL-不映射到 SQL Server 语义<br /><br />DB2_TOKEN_STRING-不映射到 SQL Server 语义|  
-|游标|**SSMA 将游标映射有以下例外：**<br /><br />分配游标语句-不映射到 SQL Server 语义<br /><br />将关联的定位符语句-不映射到 SQL Server 语义<br /><br />DECLARE CURSOR 语句-Returnability 子句未映射到 SQL server 语义<br /><br />FETCH 语句 – 部分映射。 仅支持作为目标的变量。 SQLDA 描述符未映射到 SQL server 语义|  
+|获取诊断语句|**SSMA 会获取诊断有以下例外：**<br /><br />映射 ROW_COUNT。<br /><br />映射 DB2_RETURN_STATUS。<br /><br />映射 MESSAGE_TEXT。<br /><br />DB2_SQL_NESTING_LEVEL-不映射到 SQL Server 语义<br /><br />DB2_TOKEN_STRING-不映射到 SQL Server 语义|  
+|游标|**SSMA 将游标映射有以下例外：**<br /><br />分配游标语句-不映射到 SQL Server 语义<br /><br />将关联的定位符语句-不映射到 SQL Server 语义<br /><br />DECLARE CURSOR 语句-Returnability 子句未映射到 SQL server 语义<br /><br />FETCH 语句的部分映射。 仅支持作为目标的变量。 SQLDA 描述符未映射到 SQL server 语义|  
 |变量|映射。|  
-|异常、 处理程序和条件|**SSMA 映射"异常处理"，但存在以下例外：**<br /><br />退出处理程序 – 映射。<br /><br />撤消处理程序 – 映射。<br /><br />继续处理程序 – 未映射。<br /><br />条件-它不映射到 SQL server 语义。|  
+|异常、 处理程序和条件|**SSMA 映射"异常处理"，但存在以下例外：**<br /><br />退出处理程序-映射。<br /><br />撤消处理程序-映射。<br /><br />继续处理程序-未映射。<br /><br />条件-它不映射到 SQL server 语义。|  
 |动态 SQL|未映射。|  
 |Aliases|映射。|  
 |昵称|部分映射。 所需的基础对象的手动处理|  

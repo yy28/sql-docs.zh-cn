@@ -1,5 +1,5 @@
 ---
-title: 域管理：域列表 | Microsoft Docs
+title: 域管理：域列表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0dfc543659bdb8476d880bbe6021d0f3fd27bfd
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032484"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520350"
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
   本主题介绍 **(DQS) 中** “域管理” [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 页的域列表中的控件。 使用此窗格可以选择要对其执行管理操作的域。 将对 **“域管理”** 页中的所有选项卡式页使用此同一窗格。  
@@ -35,7 +35,7 @@ ms.locfileid: "51032484"
  在知识库中创建一个新域。 此命令将显示 **“创建域”** 对话框。 通过右键单击某个域或单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [创建域](../../2014/data-quality-services/create-a-domain.md)。  
   
  **创建所选域的副本**  
- 创建所选域的精确副本，并将其添加到知识库。 其名称将为从中创建该副本的域的名称，并在此名称之后追加“ – Copy”。 通过右键单击某个域，然后单击 **“创建副本”**，或者单击域列表上方的图标，可以使用此命令。 此命令不适用于复合域。  
+ 创建所选域的精确副本，并将其添加到知识库。 其名称将为从中创建该副本的域的名称，并在此名称之后追加“ - Copy”。 通过右键单击某个域，然后单击 **“创建副本”**，或者单击域列表上方的图标，可以使用此命令。 此命令不适用于复合域。  
   
  **从数据文件导入域**  
  从 .dqs 文件导入域。 此命令将显示 **“从数据文件导入”** 对话框，该对话框用于浏览文件系统并为单一域或复合域选择 .dqs 文件。 通过单击域列表上方的图标可以使用此命令。 有关详细信息，请参阅 [从 .dqs 文件导入域](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)。  

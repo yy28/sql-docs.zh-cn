@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e6e3a2ddd7c046051b0d7f89097c7c0a075ca6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98d31c0d4895573059104d43a1ebddd879ba1967
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659006"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813119"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,28 +44,28 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为本地服务器名称。 发布服务器必须为有效服务器。  
   
- [  **@publisher_db =**] **'***publisher_db*****  
+ [  **@publisher_db =**] **'**_publisher_db_  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_type=**] **'***subscriber_type*****  
+ [  **@subscriber_type=**] **'**_subscriber_type_  
  订阅服务器的类型。 *subscriber_type*是**nvarchar(15)**，并且可以**全局**，**本地**或**匿名**。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，本地订阅称为客户端订阅和全局订阅称为服务器订阅。  
   
  [  **@subscription_priority=**] *subscription_priority*  
  子订阅的优先级。 *subscription_priority*是**实际**，默认值为 NULL。 对于本地和匿名订阅，优先级很**0.0**。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。 全局订阅服务器的订阅优先级必须低于 100，因为 100 是发布服务器的优先级。  
   
- [  **@sync_type=**] **'***sync_type*****  
- 订阅同步类型。 *sync_type*是**nvarchar(15)**，默认值为**自动**。 可以是**自动**或**none**。 如果**自动**，架构和已发布表的初始数据首先传输到订阅服务器上。 如果**none**，假定订阅服务器已包含架构和初始数据已发布的表。 始终会传输系统表和数据。  
+ [  **@sync_type=**] **'**_sync_type_  
+ 订阅同步类型。 *sync_type* 是 **nvarchar(15)** ，默认值为 **自动**。 可以是**自动**或**none**。 如果**自动**，架构和已发布表的初始数据首先传输到订阅服务器上。 如果**none**，假定订阅服务器已包含架构和初始数据已发布的表。 始终会传输系统表和数据。  
   
 > [!NOTE]  
 >  我们不建议将值指定为**none**。  
   
- [  **@description=**] **'***说明*****  
+ [  **@description=**] **'**_说明_  
  对该发布订阅的简短说明。 *描述*是**nvarchar(255)**，默认值为 NULL。 此值显示在复制监视器**友好名称**列，该列可用于对受监视发布的订阅进行排序。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -82,7 +81,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
  [!code-sql[HowTo#sp_addmergepullsub_websync_anon](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_2.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addmergepullsubscription**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -19,12 +17,12 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a491b824881f9c308eed30e797e492561c40ad73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ded9395af45d9445f9189f411c7a0911a26e653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144217"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807449"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路径中指定选择谓词 (SQLXML 4.0)
   谓词筛选与轴有关的节点集（类似于 SELECT 语句中的 WHERE 子句）。 在方括号之间指定谓词。 对于要筛选的节点集中的每个节点，将使用该节点作为上下文节点并使用节点集中的节点数作为上下文大小来对谓词表达式求值。 如果对于该节点谓词表达式求值为 TRUE，则该节点将包含在结果节点集中。  
@@ -34,7 +32,7 @@ ms.locfileid: "48144217"
 > [!NOTE]  
 >  有关此 XPath 实现限制的信息和它与 W3C 规范之间的差异，请参阅[使用 XPath 查询简介&#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
-## <a name="selection-predicate-example-1"></a>选择谓词： 示例 1  
+## <a name="selection-predicate-example-1"></a>选择谓词：示例 1  
  以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 子元素具有**CustomerID**值 ALFKI 的属性：  
   
 ```  
@@ -49,7 +47,7 @@ ms.locfileid: "48144217"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>选择谓词： 示例 2  
+## <a name="selection-predicate-example-2"></a>选择谓词：示例 2  
  以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<顺序 >** 孙级**SalesOrderID**属性具有值 1:  
   
 ```  
@@ -64,7 +62,7 @@ ms.locfileid: "48144217"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>选择谓词： 示例 3  
+## <a name="selection-predicate-example-3"></a>选择谓词：示例 3  
  以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 具有一个或多个子级的 **\<ContactName >** 子级：  
   
 ```  
@@ -83,7 +81,7 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>选择谓词： 示例 4  
+## <a name="selection-predicate-example-4"></a>选择谓词：示例 4  
  以下 XPath 表达式选择**\<客户 >** 上下文节点不具有元素子级 **\<ContactName >** 元素子级：  
   
 ```  
@@ -100,7 +98,7 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>选择谓词： 示例 5  
+## <a name="selection-predicate-example-5"></a>选择谓词：示例 5  
  以下 XPath 表达式选择从当前上下文节点所有**\<客户 >** 具有子级的**CustomerID**属性：  
   
 ```  

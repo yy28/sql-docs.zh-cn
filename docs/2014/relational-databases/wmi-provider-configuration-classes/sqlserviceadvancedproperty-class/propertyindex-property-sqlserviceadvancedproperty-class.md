@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - PropertyIndex Property (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22b56698e0848c887be1fdc437a983f6d0dea929
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186aa762c9c176cab2bfa55de17a0a9d7ea3a301
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049797"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351894"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex 属性（SqlServiceAdvancedProperty 类）
   获取或设置属性索引，以指定高级属性在属于所引用服务的高级属性数组中的位置。  
@@ -39,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

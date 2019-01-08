@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f34454f292e7efc92c960930b6a9218edae6a70f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148312"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544232"
 ---
 # <a name="performing-batch-operations-xmla"></a>执行批处理操作 (XMLA)
   可以使用[批处理](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)命令，在 XML for Analysis (XMLA) 运行多个 XMLA 命令，使用单个 XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法。 你可以运行多个命令中包含**批处理**作为单个事务或在每个命令的单个事务中，以串行或并行命令。 您还可以指定的外部绑定和其他属性**批处理**命令用于处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
@@ -23,12 +23,12 @@ ms.locfileid: "50148312"
  **批处理**命令在两种方式之一执行命令：  
   
  **事务性**  
- 如果**事务**的属性**批处理**命令设置为 true 时，**批处理**命令运行命令的所有命令所包含的**批处理**命令在单个事务中 —*事务性*批处理。  
+ 如果**事务**的属性**批处理**命令设置为 true 时，**批处理**命令运行命令的所有命令所包含的**批处理**命令在单个事务 a*事务性*批处理。  
   
  如果事务性批处理中任一命令失败[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回滚任何命令**批处理**失败命令之前运行的命令和**批处理**命令立即结束。 中的任何命令**批处理**尚未运行的命令不会执行。 之后**批处理**命令结束，**批处理**命令会报告失败命令发生的任何错误。  
   
  **非事务性**  
- 如果**事务**属性设置为 false， **Batch**命令运行所包含的每个命令**批处理**命令，在单独的事务 — *非事务性*批处理。 如果非事务性批处理中任一命令失败**批处理**命令会继续运行后失败的命令运行命令。 之后**批处理**命令尝试运行所有命令的**Batch**命令包含时，**批处理**命令报告发生任何错误。  
+ 如果**事务**属性设置为 false， **Batch**命令运行所包含的每个命令**批处理**命令，在单独的事务的*非事务性*批处理。 如果非事务性批处理中任一命令失败**批处理**命令会继续运行后失败的命令运行命令。 之后**批处理**命令尝试运行所有命令的**Batch**命令包含时，**批处理**命令报告发生任何错误。  
   
  返回命令中包含的所有结果**批处理**命令返回在其中命令中包含的相同顺序**批处理**命令。 返回的结果**批处理**命令因是否**批处理**命令是事务性还是非事务性。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "50148312"
     > [!IMPORTANT]  
     >  一个**进程**命令不能包含**绑定**，**数据源**， **DataSourceView**，或**ErrorConfiguration**属性，如果**进程**命令包含在**批处理**命令。 如果你必须指定这些属性**进程**命令，提供必要的信息的相应属性中**Batch**包含的命令**过程**命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [批处理元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)   
  [处理元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

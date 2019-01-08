@@ -1,5 +1,5 @@
 ---
-title: 基本 MDX 查询 (MDX) |Microsoft 文档
+title: 基本 MDX 查询 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7f3a1610f19bc99ce063d815f74906f10ddc2c7f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 61975b6b24cda25454d10eb1eeb5b452cad0f1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026604"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529211"
 ---
-# <a name="mdx-query---the-basic-query"></a>MDX 查询的基本查询
+# <a name="mdx-query---the-basic-query"></a>MDX 查询 - 基本查询
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  基本多维表达式 (MDX) 查询就是 SELECT 语句 - MDX 中最常用的查询。 通过了解 MDX SELECT 语句如何指定结果集、SELECT 语句的语法是怎样的以及如何使用 SELECT 语句创建简单查询，您将切实理解如何使用 MDX 来查询多维数据。  
+  基本的多维表达式 (MDX) 查询是在 MDX 中 SELECT 语句的使用频率最高查询。 通过了解 MDX SELECT 语句如何指定结果集、SELECT 语句的语法是怎样的以及如何使用 SELECT 语句创建简单查询，您将切实理解如何使用 MDX 来查询多维数据。  
   
 ## <a name="specifying-a-result-set"></a>指定结果集  
  在 MDX 中，SELECT 语句可指定一个结果集，其中包含从多维数据集中返回的多维数据子集。 若要指定结果集，MDX 查询必须包含以下信息：  
@@ -35,7 +35,7 @@ ms.locfileid: "34026604"
   
 -   SELECT 子句，用于确定 MDX SELECT 语句的查询轴。 有关在 SELECT 子句中构造查询轴的详细信息，请参阅[指定查询轴的内容 (MDX) ](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)。  
   
--   用于确定将要查询的多维数据集的 FROM 子句。 有关 FROM 子句的详细信息，请参阅 [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)。  
+-   用于确定将要查询的多维数据集的 FROM 子句。 有关 FROM 子句的详细信息，请参阅 [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)。  
   
 -   可选的 WHERE 子句，用于确定在切片器轴上使用哪些成员或元组来限制返回的数据。 有关在 WHERE 子句中构造切片器轴的详细信息，请参阅[指定切片器轴的内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)。  
   
@@ -54,7 +54,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX SELECT 语句支持可选的语法（如 WITH 关键字），支持使用 MDX 函数来创建计算成员以便确定是否包含在轴或切片器轴中，并支持在查询中返回特定单元属性的值。 有关 MDX SELECT 语句的详细信息，请参阅 [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)。  
+ MDX SELECT 语句支持可选的语法（如 WITH 关键字），支持使用 MDX 函数来创建计算成员以便确定是否包含在轴或切片器轴中，并支持在查询中返回特定单元属性的值。 有关 MDX SELECT 语句的详细信息，请参阅 [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)。  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>比较 MDX SELECT 语句的语法与 SQL 语法  
  MDX SELECT 语句所用的语法格式与 SQL 语法相似。 但也有几个基本差异：  
@@ -102,8 +102,8 @@ WHERE ( [Sales Territory].[Southwest] )
   
  有关更多详细示例，请参阅[指定查询轴的内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 和[指定切片器轴的内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [SELECT 语句 & #40;MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)  
   
   

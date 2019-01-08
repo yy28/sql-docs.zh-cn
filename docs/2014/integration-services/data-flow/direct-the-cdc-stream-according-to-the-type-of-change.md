@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bff3b71c0f091bc60d500dfaced02cb62b483753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0f98b373b736b9e7b97e9c5a599812210e4136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069257"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799649"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流
   若要添加并配置 CDC 拆分器转换，包必须包含至少一个数据流任务和一个 CDC 源。  
@@ -41,7 +40,7 @@ ms.locfileid: "48069257"
   
     -   插入输出：定向 INSERT 更改行的输出。  
   
-    -   更新输出：之前/之后 UPDATE 更改行和 Merge 更改行定向的输出。  
+    -   更新输出：定向其中之前/之后 UPDATE 更改行和 Merge 更改行的输出。  
   
 7.  或者，您可以使用 **“高级编辑器”** 对话框配置高级属性。  
   

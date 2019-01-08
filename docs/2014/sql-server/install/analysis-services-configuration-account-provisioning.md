@@ -14,12 +14,12 @@ ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e18073ff783ae8925424551dd62f570e9b2eea6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 095709115c15e770b8ad54678d4a359ab4b04ac8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105817"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351822"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Analysis Services 配置 – 帐户设置
   使用此页可以设置服务器节点，并向要求对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行不受限访问的用户或服务授予管理权限。 安装程序不会自动将本地 Windows 组 BUILTIN\Administrators 添加到要安装的实例的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器管理员角色。 如果您想要将本地管理员组添加到服务器管理员角色，则必须显式指定该组。  
@@ -32,7 +32,7 @@ ms.locfileid: "48105817"
  **指定管理员** - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个服务器管理员。 您指定的用户或组将成为所安装的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器管理员角色的成员。 这些都必须是与安装该软件的计算机处于同一域中的 Windows 域用户帐户。  
   
 > [!NOTE]  
->  用户帐户控制 (UAC) 是一个 Windows 安全功能，它要求在运行管理操作或应用程序之前，先由管理员专门审批。 由于 UAC 在默认情况下处于打开状态，因此系统将提示您允许需要提升权限的特定操作。 您可以配置 UAC 来更改默认行为，或针对特定程序自定义 UAC。 有关 UAC 和 UAC 配置的详细信息，请参阅 [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350)（用户帐户控制分步指南）和 [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351)（用户帐户控制 (Wikipedia)）。  
+>  用户帐户控制 (UAC) 是一个 Windows 安全功能，它要求在运行管理操作或应用程序之前，先由管理员专门审批。 由于 UAC 在默认情况下处于打开状态，因此系统将提示您允许需要提升权限的特定操作。 您可以配置 UAC 来更改默认行为，或针对特定程序自定义 UAC。 有关 UAC 和 UAC 配置的详细信息，请参阅 [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350)（用户帐户控制分步指南）和 [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351)（用户帐户控制 (Wikipedia)）。  
   
 ## <a name="see-also"></a>请参阅  
  [配置服务帐户&#40;Analysis Services&#41;](../../../2014/analysis-services/instances/configure-service-accounts-analysis-services.md)   

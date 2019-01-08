@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ae78c114b9c46fd23d066a37837620441c6e6a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181147"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812349"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用于管理您的 SQL Server 基础架构的集成环境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供用于配置、监视和管理 SQL Server 实例的工具。 此外，它还提供了用于部署、监视和升级数据层组件（如应用程序使用的数据库和数据仓库）的工具以生成查询和脚本。  
@@ -36,7 +36,7 @@ ms.locfileid: "48181147"
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 介绍如何使用  语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器 (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [教程： SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
+ [教程：编写 TRANSACT-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

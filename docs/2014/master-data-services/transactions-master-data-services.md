@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
@@ -14,12 +13,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129047"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798119"
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，每次对成员执行操作时，都记录一个事务。 事务可供所有用户查看并由管理员撤销。 事务显示执行操作的日期、时间和用户以及其他详细信息。 用户可以为事务添加批注，以指示事务发生的时间。  
@@ -57,12 +56,12 @@ ms.locfileid: "48129047"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|通过撤消事务来撤消操作（仅限管理员）。|[撤消事务&#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|通过撤消事务来撤消操作（仅限管理员）。|[撤消事务 (Master Data Services)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [管理员&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [批注&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [批注 (Master Data Services)](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

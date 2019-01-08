@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143437"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798689"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用一般 SQL 跟踪收集器类型的收集组。 此过程分为两个部分：  
@@ -54,7 +54,7 @@ ms.locfileid: "48143437"
   
 6.  在 **“常规”** 选项卡上，请执行下列操作：  
   
-    1.  在 **“跟踪名称”** 框中，键入该跟踪要使用的名称。 对于此示例中，跟踪名称是`SPgt80`。  
+    1.  在 **“跟踪名称”** 框中，键入该跟踪要使用的名称。 在本示例中，跟踪名称为 `SPgt80`。  
   
     2.  在 **“使用模板”** 列表中，选择要用于该跟踪的模板。 在本示例中，请单击“TSQL_SPs”。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48143437"
   
 3.  滚动查看脚本并进行以下替换（在脚本注释文本中注明）：  
   
-    -   将 **SQLTrace Collection Set Name Here** 替换为要为收集组使用的名称。 对于此示例中，命名该收集组`SPROC_CollectionSet`。  
+    -   将 **SQLTrace Collection Set Name Here** 替换为要为收集组使用的名称。 在本示例中，将收集组命名为 `SPROC_CollectionSet`。  
   
     -   将 **SQLTrace Collection Item Name Here** 替换为要为收集项使用的名称。 对于此示例中，命名收集项`SPROC_Collection_Item`。  
   

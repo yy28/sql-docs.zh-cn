@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4dc9070625ab85b80ebe7117adc9d010c291365
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d449e6245b779fd281fc9c8f047a9eb352d56846
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100647"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822761"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT（SSIS 表达式）
   返回包含指定分隔符分隔的标记的字符串中的标记数目。  
@@ -32,7 +31,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  包含分隔符分隔的标记的字符串。  
   
  *delimiter_string*  
- 包含分隔符字符的字符串。 例如，“; ,”包含三个分隔符字符，即一个分号、一个空白空间和一个逗号。  
+ 包含分隔符字符的字符串。 例如，”; ,”包含三个分隔符字符，即一个分号、一个空白空间和一个逗号。  
   
 ## <a name="result-types"></a>结果类型  
  DT_I4  
@@ -51,7 +50,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   您可以使用变量和列作为此表达式的参数。  
   
 ## <a name="expression-examples"></a>表达式示例  
- 在下面的示例中，TOKENCOUNT 函数返回 3，因为该字符串包含三个标记：“01”、“12”、“2011”。  
+ 在以下示例中，TOKENCOUNT 函数返回 3，因为该字符串包含三个标记："01"、"12"、"2011"。  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
@@ -82,6 +81,6 @@ TOKENCOUNT("        a little white dog", " ")
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   

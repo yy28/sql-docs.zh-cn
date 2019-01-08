@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5378f5fc2e62445b55f89cc09b68c414d47c983f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825445"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789189"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@publisher_db** = ] **'***publisher_db***'**  
  发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
   
- [  **@publication=** ] **'***发布*****  
+ [ **@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
   
 ## <a name="result-sets"></a>结果集  
@@ -99,7 +98,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
  在订阅服务器上执行时**sp_replmonitorhelpmergesession**只返回最后五个合并代理会话的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**db_owner**或**replmonitor**分发服务器上的分发数据库或订阅服务器上的订阅数据库上的固定的数据库角色可以执行**sp_replmonitorhelpmergesession**。  
   
 ## <a name="see-also"></a>请参阅  

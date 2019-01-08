@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800659"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
   充当事务复制订阅服务器的表（不包括对等事务复制）可以配置为内存优化表。 其他复制配置与内存优化表不兼容。  
@@ -242,7 +241,7 @@ ms.locfileid: "48128633"
     GO  
     ```  
   
-6.  将架构应用于订阅服务器的数据库，并且保存该架构以供将来使用。  
+6.  将架构应用于订阅服务器的数据库，并保存以供将来使用的架构。  
   
 7.  加载发布服务器（源）数据写入订阅服务器。 在您添加订阅前，不应在发布服务器上更改数据。  可按如下所示使用 BCP：  
   
@@ -302,7 +301,7 @@ GO
   
 -   对于更新要复制到订阅服务器上内存优化表的表的主键，存在一些限制。 有关详细信息，请参阅[将更改复制到主键](#PrimaryKey)。  
   
--   在内存优化表中不支持外键、唯一约束、触发器、架构修改、ROWGUIDCOL、计算列、数据压缩、别名数据类型、版本化和锁。 请参阅[内存中 OLTP 不支持 TRANSACT-SQL 构造](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)有关信息。  
+-   在内存优化表中不支持外键、唯一约束、触发器、架构修改、ROWGUIDCOL、计算列、数据压缩、别名数据类型、版本化和锁。 有关信息，请参阅 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 。  
   
 ##  <a name="Schema"></a> 修改架构文件  
   

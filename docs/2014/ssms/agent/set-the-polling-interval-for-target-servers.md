@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
@@ -14,19 +14,19 @@ ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12f35342d6303559ab41546dc9154a06f9a30eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818679"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>设置目标服务器的轮询间隔
   本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理刷新从主服务器到目标服务器的信息的频率。 作业是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 多服务器作业是主服务器在一台或多台目标服务器上运行的作业。  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：**[安全](#Security)  
   
--   **若要设置目标服务器，使用的轮询间隔：**[SQL Server Management Studio](#SSMS)， [TRANSACT-SQL  ](#TSQL)  
+-   **若要设置目标服务器，使用的轮询间隔：**[SQL Server Management Studio](#SSMS)， [Transact SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  每个目标服务器一次只能运行一个相同作业的实例。 每台目标服务器会定期轮询主服务器，下载分配给目标服务器的任何新作业的一个副本，然后断开连接。 目标服务器在本地运行作业，然后重新连接到主服务器以上载作业结果状态。  
@@ -35,7 +35,7 @@ ms.locfileid: "48091327"
 >  如果在目标服务器试图上载作业状态时无法访问主服务器，则作业将处于假脱机状态，直到可以访问主服务器。  
   
 ###  <a name="Security"></a> 安全性  
- 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 和 [为多服务器环境选择正确的 SQL Server 代理服务帐户](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)。  
+ 有关详细信息，请参阅 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 和 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
  **设置目标服务器的轮询间隔**  

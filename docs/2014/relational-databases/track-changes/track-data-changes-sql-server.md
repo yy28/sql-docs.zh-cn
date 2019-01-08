@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -34,12 +33,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351703"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 各版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持变更数据捕获和更改跟踪，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -59,7 +58,7 @@ ms.locfileid: "48190637"
   
 -   降低了 DML 操作的开销。 同步更改跟踪始终会有一些开销。 但是，使用更改跟踪有助于使开销最小化。 开销通常会低于使用其他解决方案，对于需要使用触发器的解决方案，尤其如此。  
   
--   更改跟踪是基于提交的事务进行的。 更改的顺序基于事务提交时间。 在存在长时间运行和重叠事务的情况下，这样可获得可靠的结果。 使用的自定义解决方案`timestamp`值必须专门设计用于处理这些方案。  
+-   更改跟踪是基于提交的事务进行的。 更改的顺序基于事务提交时间。 在存在长时间运行和重叠事务的情况下，这样可获得可靠的结果。 必须专门设计使用 `timestamp` 值的自定义解决方案，以处理这些情况。  
   
 -   提供可用于配置和管理的标准工具。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供标准的 DDL 语句、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、目录视图和安全权限。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48190637"
  **配置和管理**  
  若要启用或禁用变更数据捕获数据库的调用方[sys.sp_cdc_enable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)或[sys.sp_cdc_disable_db &#40;-&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)必须是固定的服务器成员`sysadmin`角色。 启用或禁用变更数据捕获表级别要求的调用方[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)并[sys.sp_cdc_disable_table &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)必须 sysadmin 角色的成员或成员数据库`database db_owner`角色。  
   
- 使用存储过程来支持变更数据捕获作业管理仅限于服务器的成员`sysadmin`角色和成员的`database db_owner`角色。  
+ 仅限服务器 `sysadmin` 角色成员和 `database db_owner` 角色成员能够使用存储过程来支持变更数据捕获作业管理。  
   
  **更改枚举和元数据查询**  
  若要获取对与捕获实例关联的更改数据的访问，必须为用户授予关联源表中的所有捕获列的选择访问权限。 此外，如果在创建捕获实例时指定了访问控制角色，调用者还必须是指定访问控制角色的成员。 所有数据库用户可通过 public 角色访问用于访问元数据的其他常规变更数据捕获功能，但返回的元数据访问通常也是使用基础源表的选择访问权限以及任何定义的访问控制角色成员控制的。  
@@ -140,7 +139,7 @@ ms.locfileid: "48190637"
   
 -   如果数据库还原到其他服务器，默认情况下将禁用变更数据捕获，并删除所有相关的元数据。  
   
-     若要保留变更数据捕获，请使用`KEEP_CDC`选项还原数据库时。 有关此选项的详细信息，请参阅 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)。  
+     若要保留变更数据捕获，还原数据库时请使用 `KEEP_CDC` 选项。 有关此选项的详细信息，请参阅 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)。  
   
 -   如果数据库在分离后附加到同一服务器或其他服务器，变更数据捕获将保持启用状态。  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48190637"
   
      介绍更改跟踪，提供更改跟踪工作方式的概要说明，并描述更改跟踪如何与其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能进行交互。  
   
--   [Microsoft Sync Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文档。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文档中，“如何使用 SQL Server 更改跟踪”主题包含了详细信息和代码示例。  
+     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文档。 中的文档[!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]，主题"如何：使用 SQL Server 更改跟踪"包含了详细的信息和代码示例。  
   
   
 ## <a name="related-tasks-required"></a>相关任务（必需）  

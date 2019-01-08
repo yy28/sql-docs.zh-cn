@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d81103febe20dd10e0ca6949b3ae77f558f90b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc7f5fb5abe290a24268d6cb813a3b6e365a57da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197057"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791049"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 源编辑器（“错误输出”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
@@ -46,7 +45,7 @@ ms.locfileid: "48197057"
  查看数据源的名称。  
   
  **列**  
- 查看在“SAP BW 源编辑器”对话框的“列”页上选择的外部（源）列。 有关此对话框的详细信息，请参阅[SAP BW 源编辑器&#40;列页&#41;](sap-bw-source-editor-columns-page.md)。  
+ 查看在“SAP BW 源编辑器”对话框的“列”页上选择的外部（源）列。 有关此对话框的详细信息，请参阅 [SAP BW 源编辑器（“列”页）](sap-bw-source-editor-columns-page.md)。  
   
  **错误**  
  指定发生错误时 SAP BW 源组件应执行的操作：忽略错误、重定向行或使组件失败。  
@@ -54,7 +53,7 @@ ms.locfileid: "48197057"
  **截断**  
  指定发生截断时 SAP BW 源组件应执行的操作：忽略错误、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  
@@ -64,8 +63,8 @@ ms.locfileid: "48197057"
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  
- [SAP BW 源编辑器&#40;连接管理器页&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 源编辑器&#40;列页&#41;](sap-bw-source-editor-columns-page.md)   
+ [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 源编辑器（“列”页）](sap-bw-source-editor-columns-page.md)   
  [SAP BW 源编辑器（“高级”页）](sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  
   

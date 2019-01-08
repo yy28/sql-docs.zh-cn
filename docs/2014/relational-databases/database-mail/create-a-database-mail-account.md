@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
@@ -14,21 +13,21 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d066f107460e9671d4f5840271d8c4a466eb968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081379"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798359"
 ---
 # <a name="create-a-database-mail-account"></a>创建数据库邮件帐户
   使用 **“数据库邮件配置向导”** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以创建数据库邮件帐户。  
   
--   **Before you begin:**  [Prerequisites](#Prerequisites)  
+-   **开始之前：**[系统必备组件](#Prerequisites)  
   
--   **使用以下方法创建数据库邮件帐户：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **创建数据库邮件帐户，使用：**[数据库邮件配置向导](#SSMSProcedure)， [Transact SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
+-   **跟进：**[若要配置数据库邮件的后续步骤](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -85,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：用于配置数据库邮件的后续步骤  
+##  <a name="FollowUp"></a> 跟进：配置数据库邮件的后续步骤  
   
 -   [创建数据库邮件配置文件](create-a-database-mail-profile.md)  
   

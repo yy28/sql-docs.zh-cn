@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028c3a2fe26d448373fcb9c4a00d2916a1bb34e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537945"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空间数据的 sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -67,58 +67,58 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Soundex**  
   
--   **Geography:: GeomFromGML**  
+-   **Geography::GeomFromGML**  
   
--   **Geography:: STGeomFromText**  
+-   **Geography::STGeomFromText**  
   
--   **Geography:: STLineFromText**  
+-   **Geography::STLineFromText**  
   
--   **Geography:: STPolyFromText**  
+-   **Geography::STPolyFromText**  
   
--   **Geography:: STMPointFromText**  
+-   **Geography::STMPointFromText**  
   
--   **Geography:: STMLineFromText**  
+-   **Geography::STMLineFromText**  
   
--   **Geography:: STMPolyFromText**  
+-   **Geography::STMPolyFromText**  
   
--   **Geography:: STGeomCollFromText**  
+-   **Geography::STGeomCollFromText**  
   
--   **Geography:: STGeomFromWKB**  
+-   **Geography::STGeomFromWKB**  
   
--   **Geography:: STLineFromWKB**  
+-   **Geography::STLineFromWKB**  
   
--   **Geography:: STPolyFromWKB**  
+-   **Geography::STPolyFromWKB**  
   
--   **Geography:: STMPointFromWKB**  
+-   **Geography::STMPointFromWKB**  
   
--   **Geography:: STMLineFromWKB**  
+-   **Geography::STMLineFromWKB**  
   
--   **Geography:: STMPolyFromWKB**  
+-   **Geography::STMPolyFromWKB**  
   
--   **Geography:: STUnion**  
+-   **Geography::STUnion**  
   
--   **Geography:: STIntersection**  
+-   **Geography::STIntersection**  
   
--   **Geography:: STDifference**  
+-   **Geography::STDifference**  
   
--   **Geography:: STSymDifference**  
+-   **Geography::STSymDifference**  
   
--   **Geography:: STBuffer**  
+-   **Geography::STBuffer**  
   
--   **Geography:: BufferWithTolerance**  
+-   **Geography::BufferWithTolerance**  
   
--   **Geography:: 分析**  
+-   **Geography::分析**  
   
--   **Geography:: 减少**  
+-   **Geography::减少**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>已禁用对象的行为  
  **“索引”**  
   
- 如果聚集的索引被禁用，或者如果强制非聚集索引，则会引发以下错误:"查询处理器是无法生成计划，因为索引 %。\*ls' 在表或视图 ' %。\*ls' 被禁用。" 若要重新启用这些对象，请重新生成索引升级后通过调用**ALTER INDEX ON...重新生成**。  
+ 如果聚集索引被禁用，或者强制使用非聚集索引，则会引发以下错误："查询处理器是无法生成计划，因为索引 %。\*ls' 在表或视图 ' %。\*ls' 被禁用。" 若要重新启用这些对象，请重新生成索引升级后通过调用**ALTER INDEX ON...REBUILD** 来更改选项。  
   
  **堆**  
   
- 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象，请重新生成升级后通过调用**ALTER INDEX 所有 ON...重新生成**。  
+ 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象，请重新生成升级后通过调用**ALTER INDEX 所有 ON...REBUILD** 来更改选项。  
   
 ```  
 // ErrorNumber: 8674  
@@ -143,7 +143,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  

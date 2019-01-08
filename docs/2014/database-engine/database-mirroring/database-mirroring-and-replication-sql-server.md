@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543584"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
   数据库镜像可以与复制一起使用以改进发布数据库的可用性。 数据库镜像涉及一个数据库的两个副本，这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主体数据库。 客户端对主体数据库所做的更新应用到数据库的另一副本（称为镜像数据库）。 镜像涉及将在主体数据库上执行的每个插入、更新或删除操作的事务日志应用到镜像数据库上。  
@@ -75,7 +75,7 @@ ms.locfileid: "48091617"
   
     -   将 **@working_directory** 参数的值设置为主体数据库使用的快照文件夹。  
   
-4.  为 **–PublisherFailoverPartner** 代理参数指定镜像名称。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
+4.  为“-PublisherFailoverPartner”代理参数指定镜像名称。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
   
     -   快照代理（对于所有发布）  
   
@@ -95,9 +95,9 @@ ms.locfileid: "48091617"
   
     -   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [复制代理可执行文件概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     建议将 **–PublisherFailoverPartner** 添加到代理配置文件，然后在配置文件中指定镜像名称。 例如，如果您通过存储过程配置复制，请执行以下操作：  
+     建议将“-PublisherFailoverPartner”添加到代理配置文件，然后在配置文件中指定镜像名称。 例如，如果您通过存储过程配置复制，请执行以下操作：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

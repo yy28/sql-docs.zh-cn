@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distdbproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0412108c9b08e8b3345f4930b4076e10c96ec2ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89b8381de605ab3736afc6ac8e3a7da0d53bf9e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207707"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796879"
 ---
 # <a name="distribution-database-properties"></a>分发数据库属性
   可以使用 **“分发数据库属性”** 对话框查看数据库的多个属性，以及为数据库设置事务保持期和历史记录保持期。  
@@ -39,7 +38,7 @@ ms.locfileid: "48207707"
  为所有类型的复制存储的历史记录元数据的时间长度。  
   
  **队列读取器代理安全性**  
- 队列读取器代理由带有排队更新订阅的事务复制使用。 如果在新建发布向导的 **“发布类型”** 页上选择 **“带有更新订阅的事务发布”** ，将自动创建队列读取器代理。 单击 **“安全设置…”** 可以更改运行代理并连接到分发服务器时所使用的帐户。  
+ 队列读取器代理由带有排队更新订阅的事务复制使用。 如果在新建发布向导的 **“发布类型”** 页上选择 **“带有更新订阅的事务发布”** ，将自动创建队列读取器代理。 单击“安全设置…”可以更改运行代理并连接到分发服务器时所使用的帐户。  
   
  还可以在此页上选择 **“创建队列读取器代理”** （如果已创建该代理，此选项将被禁用），来创建队列读取器代理。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48207707"
 ## <a name="see-also"></a>请参阅  
  [“配置分发”](configure-distribution.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)  
   
   

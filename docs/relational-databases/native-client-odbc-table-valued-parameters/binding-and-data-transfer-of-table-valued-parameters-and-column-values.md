@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64c82908c0ae39146686f12e9a929d423611df85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8b291344939bcbafa7f91080837d2302efb1d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630065"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521923"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>表值参数和列值的绑定及数据传输
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47630065"
   
  可使用属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 为整个表值参数列分配默认值。 单个表值参数列的值，但是，不能分配默认值通过使用在 SQL_DEFAULT_PARAM *StrLen_or_IndPtr* SQLBindParameter 使用。 通过使用 SQL_DEFAULT_PARAM 中的，不能作为一个整体的表值参数设置为默认值*StrLen_or_IndPtr* SQLBindParameter 使用。 如果未遵循这些规则，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 诊断记录将生成具有 SQLSTATE = 07S01 和消息"的默认参数的参数使用无效\<p >"，其中\<p > 为 TVP 在查询语句中的序号。  
   
- 绑定表值参数之后，应用程序随后必须绑定每个表值参数列。 若要执行此操作，该应用程序首先调用 SQLSetStmtAttr 将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号。 然后该应用程序将通过调用以下例程绑定表值参数的列： SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField。 将 SQL_SOPT_SS_PARAM_FOCUS 设置为 0 可还原的常见效果 SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField 对常规顶级参数中。
+ 绑定表值参数之后，应用程序随后必须绑定每个表值参数列。 若要执行此操作，该应用程序首先调用 SQLSetStmtAttr 将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号。 然后该应用程序将表值参数的列绑定通过调用以下例程：SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField。 将 SQL_SOPT_SS_PARAM_FOCUS 设置为 0 可还原的常见效果 SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField 对常规顶级参数中。
  
  注意： 对于 unixODBC 2.3.1 到 2.3.4，设置通过 SQLSetDescField SQL_CA_SS_TYPE_NAME 描述符字段的 TVP 名称时使用 Linux 和 Mac ODBC 驱动程序，unixODBC 不会自动转换 ANSI 和 Unicode 之间具体取决于确切的字符串调用的函数 (SQLSetDescFieldA / SQLSetDescFieldW)。 很有必要为始终使用 SQLBindParameter 或 SQLSetDescFieldW 使用 Unicode (utf-16) 字符串设置 TVP 名称。
   
  对于表值参数本身而言，并未发送或接收实际数据，但对于表值参数的每个构成列而言，发送和接收了数据。 由于表值参数是伪列，因此将使用 SQLBindParameter 的参数，如下所示为不同的属性比其他数据类型，请参阅：  
   
-|参数|非表值参数类型的相关属性，包括列|表值参数的相关属性|  
+|参数|对于非表值参数类型，包括列的相关的属性|表值参数的相关属性|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 对于表值参数列，此属性设置必须与表值参数自身的设置相同。|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 此属性必须为 SQL_PARAM_INPUT。|  
 |*ValueType*|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> 此属性必须为 SQL_C_DEFAULT 或 SQL_C_BINARY。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb9b2d80911c1d2fcdc386a527323af0de6f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780809"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 事件类
   Object:Deleted 事件类指示对象已删除，例如由 DROP INDEX 和 DROP TABLE 语句删除。 此事件类可用于确定是否正在删除对象，例如由通常创建临时存储过程的 ODBC 应用程序删除。  

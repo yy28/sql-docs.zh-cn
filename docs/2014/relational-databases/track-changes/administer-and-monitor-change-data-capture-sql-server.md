@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -15,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc1702fd89a232d6b939dc8300e42925a0da293b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560164"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788899"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
   本主题介绍如何管理和监视变更数据捕获。  
@@ -32,7 +31,7 @@ ms.locfileid: "51560164"
  若要了解捕获作业行为，必须了解 `sp_cdc_scan` 使用可配置参数的方式。  
   
 #### <a name="maxtrans-parameter"></a>maxtrans 参数  
- *maxtrans* 参数用于指定能够在日志的单个扫描循环中处理的最大事务数。 如果在扫描期间要处理的事务数达到此限制，则当前扫描中不包括任何其他事务。 一个扫描循环完成后，已处理的事务数将始终小于或等于 *maxtrans*。  
+ *maxtrans* 参数用于指定能够在日志的单个扫描循环中处理的最大事务数。 如果在该扫描期间要处理的事务数达到该限制，则当前扫描中将不包括任何其他事务。 一个扫描循环完成后，已处理的事务数将始终小于或等于 *maxtrans*。  
   
 #### <a name="maxscans-parameter"></a>maxscans 参数  
  *maxscans* 参数用于指定在返回 (continuous = 0) 或执行 waitfor (continuous = 1) 之前为完成日志扫描可以尝试的最大扫描循环次数。  
@@ -76,7 +75,7 @@ ms.locfileid: "51560164"
  执行清除时，所有捕获实例的低水印会在单个事务中初次更新。 然后，它会尝试从更改表和 cdc.lsn_time_mapping 表中删除过时项。 可配置的阈值用于限制使用任何单个语句中所删除的项数。 对任何单个表执行删除操作失败并不会阻止对其他表尝试执行该操作。  
   
 ### <a name="cleanup-job-customization"></a>清除作业自定义  
- 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于`lsn`而不是时间，任何数量的策略可用于确定的最小`lsn`要保存更改表中。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同的 `lsn` 来清除所有数据库的更改表，但还可以调用基础清除过程，以在捕获实例级别上进行清除。  
+ 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于`lsn`而不是时间，任何数量的策略可用于确定的最小`lsn`要保存更改表中。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同`lsn`来清除所有数据库的更改表，基础清除过程，还可以进行调用以清理在捕获实例级别。  
   
 ##  <a name="Monitor"></a> 监视变更数据捕获进程  
  通过监视变更数据捕获进程，可以确定更改是否正以合理的滞后时间正确写入更改表中。 监视还可以帮助您标识可能发生的任何错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两个动态管理视图，用于帮助你监视变更数据捕获： [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) 和 [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)。  

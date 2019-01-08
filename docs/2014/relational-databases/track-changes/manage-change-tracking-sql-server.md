@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97ed62336cad7f3e1bc0bbe70edd895384336205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808799"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理更改跟踪 (SQL Server)
   本主题说明如何管理更改跟踪。 本主题还说明如何配置安全性以及如何确定使用更改跟踪时对存储和性能的影响。  
@@ -52,7 +51,7 @@ ms.locfileid: "48197747"
 ## <a name="understanding-change-tracking-overhead"></a>了解更改跟踪开销  
  启用表的更改跟踪后，会影响某些管理操作。 下表列出了应当注意的操作和影响。  
   
-|运算|启用更改跟踪后|  
+|操作|启用更改跟踪后|  
 |---------------|-------------------------------------|  
 |DROP TABLE|会删除已删除表的所有更改跟踪信息。|  
 |ALTER TABLE DROP CONSTRAINT|删除 PRIMARY KEY 约束的尝试将失败。 必须先禁用更改跟踪，然后才能删除 PRIMARY KEY 约束。|  

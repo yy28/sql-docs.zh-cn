@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
@@ -15,19 +14,19 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7452c96f624199bb2dca7d1b817b60ce68dafb42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c58df877a98ac5c62aeb7d7ca45beed7f129eaf0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799809"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 连接管理器
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器使包能够使用 .NET 访问接口访问数据源。 此连接管理器通常用于访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等数据源，也用于访问在用 C# 等语言以托管代码编写的自定义任务中通过 OLE DB 和 XML 公开的数据源。  
   
  当您将添加[!INCLUDE[vstecado](../../includes/vstecado-md.md)]到包，连接管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的连接管理器，它将被解析为[!INCLUDE[vstecado](../../includes/vstecado-md.md)]连接在运行时，设置该连接管理器属性，并将添加到连接管理器`Connections`上包的集合。  
   
- `ConnectionManagerType`连接管理器属性设置为`ADO.NET`。 值`ConnectionManagerType`受到限定，以包括连接管理器使用的.NET 提供程序的名称。  
+ 该连接管理器的 `ConnectionManagerType` 属性设置为 `ADO.NET`。 `ConnectionManagerType` 的值受到限定，以包含连接管理器所使用的 .NET 访问接口的名称。  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>ADO.NET 连接管理器故障排除  
  可以记录 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器对外部数据访问接口所做的调用。 使用此日志记录功能，可以对 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器与外部数据源的连接进行故障排除。 若要记录 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "48147548"
   
 |SQL Server 数据类型|结果|  
 |--------------------------|------------|  
-|`time`, `datetimeoffset`|除非包使用参数化 SQL 命令，否则，包将失败。 若要使用参数化 SQL 命令，请在包中使用执行 SQL 任务。 有关详细信息，请参阅 [执行 SQL 任务](../control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../parameters-and-return-codes-in-the-execute-sql-task.md)。|  
+|`time`， `datetimeoffset`|除非包使用参数化 SQL 命令，否则，包将失败。 若要使用参数化 SQL 命令，请在包中使用执行 SQL 任务。 有关详细信息，请参阅 [执行 SQL 任务](../control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../parameters-and-return-codes-in-the-execute-sql-task.md)。|  
 |`datetime2`|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器截断毫秒值。|  
   
 > [!NOTE]  
@@ -45,7 +44,7 @@ ms.locfileid: "48147548"
 ## <a name="adonet-connection-manager-configuration"></a>配置 ADO.NET 连接管理器  
  可以通过下列方式配置 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器：  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
 -   提供配置为满足选定 .NET 访问接口的要求的特定连接字符串。  
   
@@ -61,9 +60,9 @@ ms.locfileid: "48147548"
   
 -   [配置 ADO.NET 连接管理器](../configure-ado-net-connection-manager.md)  
   
- 有关以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>并[连接以编程方式添加](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;的连接](integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](integration-services-ssis-connections.md)  
   
   

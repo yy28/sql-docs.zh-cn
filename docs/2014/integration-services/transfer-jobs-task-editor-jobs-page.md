@@ -15,12 +15,12 @@ ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b9a41fb224d5042c1cc826785ead32376727444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e926047d5423d31307dc344bca5717ca7a77dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535532"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>传输作业任务编辑器（“作业”页）
   可以使用 **“传输作业任务编辑器”** 对话框的 **“作业”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 有关传输作业任务的详细信息，请参阅 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "48105577"
 |**False**|仅复制指定的作业。|  
   
  **JobsList**  
- 单击浏览按钮 **(…)** 可选择要复制的作业。 必须至少选择一个作业。  
+ 单击浏览按钮 (…)，选择要复制的作业。 必须至少选择一个作业。  
   
 > [!NOTE]  
 >  在选择要复制的作业前，请指定 **SourceConnection** 。  
@@ -78,7 +78,7 @@ ms.locfileid: "48105577"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
  [传输作业任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
- [表达式页](expressions/expressions-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [SMO 连接管理器](connection-manager/smo-connection-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 数据访问 |Microsoft 文档
+title: Power Pivot 数据访问 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d6c1b5e8ca611abf821f81761d862a6b0ddde20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 79366c8f07728f0063fa5841f8fc5e0c8e3cc236
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027024"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983898"
 ---
 # <a name="power-pivot-data-access"></a>Power Pivot 数据访问
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "34027024"
   
  并不是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的所有数据都由 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 来处理。 Excel Services 处理工作表中的表格和单元格数据。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 仅处理与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据相对的数据透视表、数据透视图和切片器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [表格模型数据访问](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

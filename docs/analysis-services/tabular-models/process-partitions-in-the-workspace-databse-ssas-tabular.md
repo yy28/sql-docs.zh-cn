@@ -1,5 +1,5 @@
 ---
-title: 在工作区数据库中处理分区 |Microsoft 文档
+title: Analysis Services 工作区数据库中处理分区 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9cd0bd29454c159d77ed2f5d3d8c49c79586ad1d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f81d61411ef8815d23407b9aee1df4cf56e70de
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039871"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072144"
 ---
 # <a name="process-partitions-in-the-workspace-databse"></a>在工作区数据库中处理分区 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34039871"
   
 2.  在 **“模式”** 列表框中，选择以下处理模式之一：  
   
-    |“模式”|Description|  
+    |模式|Description|  
     |----------|-----------------|  
     |**处理默认值**|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成层次结构、计算列和关系。|  
     |**处理全部**|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  
@@ -38,7 +38,7 @@ ms.locfileid: "34039871"
   
 3.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [创建和管理工作区数据库中的分区](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
   

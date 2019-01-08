@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072907"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800909"
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
   实体是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 模型中包含的对象。 每个实体都包含成员，它们是您管理的主数据的行。  
@@ -36,7 +35,7 @@ ms.locfileid: "48072907"
   
  使用要管理的主数据的列表填充该实体。  
   
- 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](derived-hierarchies-master-data-services.md)。  
+ 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](derived-hierarchies-master-data-services.md)。  
   
  还允许实体包含显示层次结构（基于单个实体的不规则结构）和集合（成员子集的一次性组合）。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48072907"
  可以授予用户对实体（包括相关模型对象）的权限。 有关详细信息，请参阅[实体权限 (Master Data Services)](../../2014/master-data-services/entity-permissions-master-data-services.md)。  
   
 ## <a name="entity-examples"></a>实体示例  
- 在下面的示例中，显示具有以下属性的实体：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
+ 下面的示例显示了这些属性的实体：名称、 代码、 Subcategory、 StandardCost、 ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
   
  ![自行车产品实体表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   
@@ -65,18 +64,18 @@ ms.locfileid: "48072907"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新实体。|[创建实体&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|创建新实体。|[创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |指定一个实体可以包含显式层次结构和集合。|[为显式层次结构和集合启用实体&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |更改现有实体的名称。|[更改实体名称&#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|删除现有实体。|[删除实体&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|将权限分配给实体。|[分配模型对象权限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|删除现有实体。|[删除实体 (Master Data Services)](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|将权限分配给实体。|[分配模型对象权限 (Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 -   [模型 (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
   
--   [成员&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [成员 (Master Data Services)](../../2014/master-data-services/members-master-data-services.md)  
   
--   [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

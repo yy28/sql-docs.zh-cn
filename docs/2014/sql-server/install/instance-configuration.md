@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202307"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791293"
 ---
 # <a name="instance-configuration"></a>实例配置
   使用 **安装向导的** “实例配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页面可指定是创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是其命名实例。 如果尚未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则除非您指定命名实例，否则将创建默认实例。  
@@ -40,7 +39,7 @@ ms.locfileid: "48202307"
 ## <a name="options"></a>选项  
  仅限故障转移群集实例 - 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集网络名称。 此名称可用来在网络上标识故障转移群集实例。  
   
- 默认实例或命名实例 - 当您决定是安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是命名实例时，请考虑以下信息：  
+ 默认实例或命名实例 - 当决定是安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例还是命名实例时，请考虑以下信息：  
   
 -   如果计划在数据库服务器上安装单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则该实例应为默认实例。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48202307"
   
 -   如果为实例名称指定 MSSQLServer，将创建默认实例。  
   
--   安装[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]始终作为 powerpivot 命名实例安装。 您不能为此功能角色指定不同的实例名称。  
+-   [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 安装始终安装为命名实例“PowerPivot”。 您不能为此功能角色指定不同的实例名称。  
   
 -   实例名限制为 16 个字符。  
   

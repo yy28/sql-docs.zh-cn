@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -14,22 +13,22 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 17df4d4f8d311be311907d18ad61cbbce05ea397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747929"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>创建订阅视图 (Master Data Services)
   如果想要创建的视图中的数据创建订阅视图[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]供订阅系统使用的数据库。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“集成管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-subscription-view"></a>若要创建订阅视图  
   
@@ -54,11 +53,11 @@ ms.locfileid: "48217588"
   
 9. 如果您从 **“格式”** 列表中选择 **“显式级别”** 或 **“派生级别”** ，则键入要包括在视图中的层次结构中的级别数。  
   
-10. 单击 **“保存”**。  
+10. 单击“保存” 。  
   
 ## <a name="see-also"></a>请参阅  
  [将数据导出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [删除订阅视图 &#40;Master Data Services&#41; ](delete-a-subscription-view-master-data-services.md)   
- [创建版本标志&#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
+ [创建版本标志 (Master Data Services)](create-a-version-flag-master-data-services.md)  
   
   

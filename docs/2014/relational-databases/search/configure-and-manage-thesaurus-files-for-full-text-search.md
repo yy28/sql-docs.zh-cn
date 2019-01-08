@@ -14,12 +14,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220337"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792259"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文查询可以通过使用同义词库来搜索用户指定的字词的同义词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*同义词库*为特定语言定义一组同义词。 系统管理员可以定义两种形式的同义词：扩展集和替换集。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 仅对所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查询以及指定 FORMSOF THESAURUS 子句的任意 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查询执行同义词库匹配操作。  
@@ -29,7 +29,7 @@ ms.locfileid: "48220337"
   
 -   标注字符设置  
   
-     对于给定的同义词库，所有搜索模式或者区分标注字符或者不区分标注字符，例如波形符 (**~**)、锐音符 (**´**) 或元音变音符 (**¨**)（即， *区分重音* 或 *不区分重音*）。 例如，假设您在全文查询中指定要用其他模式替换“café”模式。 如果同义词库不区分重音，全文搜索将替换“café”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“café”模式。 默认情况下，同义词库不区分重音。  
+     对于给定的同义词库，所有搜索模式可以都是敏感或不区分标注如波形符 (**~**)，锐音符标记 (**??**)，或变音符号 (**??**) (即*重音区分*或*不区分重音*)。 例如，假设您指定的模式"自助餐厅??" 替换为全文查询中的其他模式。 全文搜索同义词库是不区分重音，如果替换模式"咖啡馆??" 和"咖啡厅"。 如果同义词库是区分重音，全文搜索将替换仅模式"自助餐厅??"。 默认情况下，同义词库不区分重音。  
   
 -   扩展集  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48220337"
   
   
 ##  <a name="structure"></a> 了解同义词库文件的结构  
- 每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus`的 XML 容器，以及一个包含示例同义词库的注释 `<!--`    `-->`。 在中定义同义词库\<同义词库 > 元素，其中包含定义标注字符设置、 扩展集和替换集的子元素的示例，如下所示：  
+ 每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus` 的 XML 容器，以及一个包含示例同义词库的注释 `<!--`...`-->`。 在中定义同义词库\<同义词库 > 元素，其中包含定义标注字符设置、 扩展集和替换集的子元素的示例，如下所示：  
   
 -   标注字符设置的 XML 结构  
   

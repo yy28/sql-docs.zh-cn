@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - editTabProps
@@ -13,12 +12,12 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de312eefac0c9eaa61374bbf79a628dd3ed9cd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca7f7a34989719565950153c53932f36dc92d2ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804809"
 ---
 # <a name="edit-the-table-properties"></a>编辑表属性
   使用此对话框可编辑所选表中要捕获更改的特定列。 您还可以编辑 **“安全角色”** 和 **“捕获实例”** 信息。  
@@ -41,13 +40,13 @@ ms.locfileid: "48105519"
   
 2.  将捕获实例保存为以下项之一：  
   
-    -   **新建捕获实例**：在此情况下，将保存新的捕获实例并且不删除旧的捕获实例。  
+    -   **新建捕获实例**:在这种情况下保存新的捕获实例并且不删除旧的捕获实例。  
   
-         **注意**：每个表不能具有超过两个捕获实例。 如果已有两个捕获实例，则此选项不可用。  
+         **注意**：您可以不超过两个捕获实例，每个表。 如果已有两个捕获实例，则此选项不可用。  
   
-    -   **替换现有的**：在此情况下，将删除当前捕获实例并且用您创建的捕获实例替换。 如果为此表定义了两个捕获实例，则您必须选择要替换的一个实例。  
+    -   **替换现有**:在这种情况下当前捕获实例被删除并替换为你创建的捕获实例。 如果为此表定义了两个捕获实例，则您必须选择要替换的一个实例。  
   
- **注意**：您可以从 **“表”** 选项卡的表列表中删除某一捕获实例。  
+ **注意**：可以从列表中的表中删除捕获实例**表**选项卡。  
   
  在此对话框中输入完信息后，单击 **“确定”** 以接受更改。  
   

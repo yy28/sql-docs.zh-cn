@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 809586f89288a930a672e2f6daa45fafe7901ec6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00886e865600da44f5b1e92adf175f975d446996
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811809"
 ---
 # <a name="-concatenate-ssis-expression"></a>+（连接）（SSIS 表达式）
   将两个表达式连接为一个表达式。  
@@ -49,7 +48,7 @@ character_expression1 + character_expression2
   
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一表达式的数据类型。 例如，如果字符串“Order date is”和 **OrderDate** 列进行连接， **OrderDate** 中的值将隐式转换为字符串数据类型。 若要连接两个数值，这两个数值都必须显式转换为某种字符串数据类型。  
   
- 连接只能使用一种 BLOB 数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+ 一种连接可以使用只有一个 BLOB 数据类型：DT_TEXT、 DT_NTEXT 或 DT_IMAGE。  
   
  如果任一元素为空，则结果为空。  
   
@@ -70,6 +69,6 @@ FirstName + ' ' + LastName
   
 ## <a name="see-also"></a>请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

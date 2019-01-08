@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705701"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535193"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705701"
   
  Sys.dm_exec_connections、 sys.dm_exec_sessions 和 sys.dm_exec_requests 动态管理视图映射到[sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系统表。  
   
-> **注意：** 来调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用的名称**sys.dm_pdw_nodes_exec_sessions**。  
+> **注意：** 若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_sessions**。  
   
 |列名|数据类型|描述和特定于版本的信息|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|标识与每个活动主连接关联的会话。 不可为 null。|  
 |login_time|**datetime**|建立会话的时间。 不可为 null。|  
-|host_name|**nvarchar(128)**|特定于会话的客户端工作站名称。 对于内部会话，该值为 NULL。 可以为 Null。<br /><br /> **安全说明：** 客户端应用程序提供工作站名称，并且可以提供不准确的数据。 不要将 HOST_NAME 作为安全功能使用。|  
+|host_name|**nvarchar(128)**|特定于会话的客户端工作站名称。 对于内部会话，该值为 NULL。 可以为 Null。<br /><br /> **安全说明：** 客户端应用程序提供工作站名称，也会提供不准确的数据。 不要将 HOST_NAME 作为安全功能使用。|  
 |program_name|**nvarchar(128)**|启动会话的客户端程序的名称。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |host_process_id|**int**|启动会话的客户端程序的进程 ID。 对于内部会话，该值为 NULL。 可以为 Null。|  
 |client_version|**int**|客户端连接到服务器所用接口的 TDS 协议版本。 对于内部会话，该值为 NULL。 可以为 Null。|  
@@ -50,7 +50,7 @@ ms.locfileid: "47705701"
 |login_name|**nvarchar(128)**|当前执行的会话所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 有关创建此会话的原始登录名，请参阅 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]经过身份验证登录名或 Windows 身份验证的域用户名称。 不可为 null。|  
 |nt_domain|**nvarchar(128)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 客户端的 Windows 域（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
 |nt_user_name|**nvarchar(128)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 客户端的 Windows 用户名（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
-|status|**nvarchar(30)**|会话的状态。 可能的值：<br /><br /> **运行**-当前正在运行一个或多个请求<br /><br /> **睡眠**-当前没有运行任何请求<br /><br /> **休眠**– 会话因连接池而重置，目前处于预登录状态。<br /><br /> **Preconnect** -会话是在资源调控器分类器。<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|会话的状态。 可能的值：<br /><br /> **运行**-当前正在运行一个或多个请求<br /><br /> **睡眠**-当前没有运行任何请求<br /><br /> **休眠**-会话因连接池而重置，目前处于预登录状态。<br /><br /> **Preconnect** -会话是在资源调控器分类器。<br /><br /> 不可为 null。|  
 |context_info|**varbinary(128)**|会话的 CONTEXT_INFO 值。 使用由用户设置的上下文信息[SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)语句。 可以为 Null。|  
 |cpu_time|**int**|该会话所占用的 CPU 时间（毫秒）。 不可为 null。|  
 |memory_usage|**int**|该会话所占用的 8 KB 内存页数。 不可为 null。|  
@@ -91,7 +91,7 @@ ms.locfileid: "47705701"
 |open_transaction_count|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 每个会话的打开事务数。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 每个人都可以看到自己的会话信息。  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 需要`VIEW SERVER STATE`权限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]若要查看在服务器上的所有会话。  
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 需要`VIEW DATABASE STATE`若要查看与当前数据库的所有连接。 `VIEW DATABASE STATE` 不能在授予`master`数据库。 
@@ -114,7 +114,7 @@ ms.locfileid: "47705701"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|对于/应用|关系|  
+|From|若要|对于/应用|关系|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|一对零或一对多|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|一对零或一对多|  

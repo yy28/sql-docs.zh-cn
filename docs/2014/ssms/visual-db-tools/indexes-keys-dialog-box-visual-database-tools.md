@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
@@ -13,12 +13,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076789"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806939"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>“索引和键”对话框 (Visual Database Tools)
   使用此对话框可以创建或修改索引、主键和唯一键。 若要访问此对话框，请打开具有索引或键的表定义，右键单击表定义网格，再单击“索引/键”。  
@@ -54,8 +54,8 @@ ms.locfileid: "48076789"
  **名称**  
  显示键或索引的名称。 在创建一个新索引时，将基于表设计器的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
- **Description**  
- 提供一个描述键或索引的位置。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (**…**)。 这可以提供一个更大的文本编写区域。  
+ **说明**  
+ 提供一个描述键或索引的位置。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号按钮 (…)。 这可以提供一个更大的文本编写区域。  
   
  **表设计器类别**  
  展开此项可显示有关“创建为聚集的”的信息。  

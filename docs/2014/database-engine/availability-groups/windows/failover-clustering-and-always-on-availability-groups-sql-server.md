@@ -17,12 +17,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352313"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]是在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中引入的高可用性和灾难恢复解决方案，它要求 Windows Server 故障转移群集 (WSFC)。 此外，尽管 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依赖于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，但您可以使用故障转移群集实例 (FCI) 来为可用性组承载可用性副本。 因此，了解每种群集技术所扮演的角色以及设计您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]环境所需的注意事项十分重要。  
@@ -49,7 +49,7 @@ ms.locfileid: "48167937"
 ### <a name="cross-cluster-migration-of-alwayson-availability-groups-for-os-upgrade"></a>针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移  
  从 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 开始，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持部署的可用性组跨群集迁移到新的 Windows Server 故障转移群集 (WSFC) 群集。 跨群集迁移将一个可用性组或一批可用性组移到新的目标 WSFC 群集，并且所用的停机时间最短。 通过跨群集迁移过程，您可以在升级到 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 群集时维护您的服务级别协议 (SLA)。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]（或更高版本）必须安装并且为目标 WSFC 群集上的 AlwaysOn 启用。 跨群集迁移能否成功取决于对目标 WSFC 群集的详尽计划和准备。  
   
- 有关详细信息，请参阅[针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](http://msdn.microsoft.com/library/jj873730.aspx)。  
+ 有关详细信息，请参阅[针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 和可用性组  
  您可以通过将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集与 WSFC 群集一起实现，在服务器-实例级别设置第二层的故障转移。 可用性副本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的独立实例或 FCI 实例承载。 对于某一给定可用性组，一个 FCI 伙伴只能承载一个副本。 当某一可用性副本正在一个 FCI 上运行时，可用性组的可能所有者列表将只包含活动的 FCI 节点。  
@@ -76,7 +76,7 @@ ms.locfileid: "48167937"
  **可用性组的故障转移策略设置应用于所有副本，无论它位于独立实例还是 FCI 实例中。  
   
 > [!NOTE]  
->  有关详细信息**的节点数**中故障转移群集内和**AlwaysOn 可用性组**不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[支持的功能SQL Server 2012 的版本](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关详细信息**的节点数**中故障转移群集内和**AlwaysOn 可用性组**不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[支持的功能SQL Server 2012 的版本](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 上承载可用性副本的注意事项  
   
@@ -112,19 +112,19 @@ ms.locfileid: "48167937"
   
 -   **博客：**  
   
-     [将 SQL Server 的 Windows 故障转移群集（可用性组或 FCI）配置为有限安全](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [将 SQL Server 的 Windows 故障转移群集（可用性组或 FCI）配置为有限安全](https://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮书：**  
   
-     [AlwaysOn 体系结构指南： 使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   

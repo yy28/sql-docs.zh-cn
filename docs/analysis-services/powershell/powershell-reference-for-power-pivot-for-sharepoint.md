@@ -1,5 +1,5 @@
 ---
-title: Power Pivot for SharePoint 的 PowerShell 参考 |Microsoft 文档
+title: 为 Analysis Services 的 PowerShell 参考 Power Pivot for SharePoint |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 231a7fdeac135743ab38af9fbe4a7c4373c34990
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9228eb879ed1417b31c95d53783d32acf53bcdb4
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027967"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072404"
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>针对 PowerPivot for SharePoint 的 PowerShell 参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34027967"
 |[Set-PowerPivotSystemService cmdlet](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 | SharePoint 2016|  
 |[Update-PowerPivotSystemService cmdlet](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 | SharePoint 2016|  
   
- 注意：以下 Cmdlet 适用于 SharePoint 2010 ，但其并不受 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 支持。  
+ 注意：以下 Cmdlet 仅适用于 SharePoint 2010 的[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]不支持。  
   
 -   Get-PowerPivotEngineService  
   

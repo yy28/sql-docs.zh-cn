@@ -10,15 +10,15 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba5a8d97583dd2ea8938b2fdb4b74dce94c4f047
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142627"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351497"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
-  从开始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和数据访问跟踪 ([数据访问跟踪](http://go.microsoft.com/fwlink/?LinkId=125805)) 已更新，以使其更轻松地从连接环中获得有关连接失败的诊断信息从扩展的事件日志缓冲区和应用程序性能信息。  
+  从开始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和数据访问跟踪 ([数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)) 已更新，以使其更轻松地从连接环中获得有关连接失败的诊断信息从扩展的事件日志缓冲区和应用程序性能信息。  
   
  有关读取扩展事件日志的信息，请参阅[查看事件会话数据](../../../database-engine/view-event-session-data.md)。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "48142627"
 >  该功能只用于故障排除和诊断目的，可能不适合审核或安全目的。  
   
 ## <a name="remarks"></a>备注  
- 对于连接操作，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将发送客户端连接 ID。 如果连接失败，可以访问连接环形缓冲区 ([在 SQL Server 2008 使用连接环形缓冲区解决连接问题](http://go.microsoft.com/fwlink/?LinkId=207752)) 并找到`ClientConnectionID`字段并获取的诊断信息连接失败。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是 16 字节的 GUID。 如果将 `client_connection_id` 操作添加到扩展事件会话中的事件，则还可以在扩展事件输出目标中找到客户端连接 ID。 如果您需要进一步的诊断帮助，则可以启用数据访问跟踪并再次运行连接命令，然后观察数据访问跟踪中的 `ClientConnectionID` 字段以查看是否有失败的操作。  
+ 对于连接操作，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将发送客户端连接 ID。 如果连接失败，可以访问连接环形缓冲区 ([在 SQL Server 2008 使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)) 并找到`ClientConnectionID`字段并获取的诊断信息连接失败。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是 16 字节的 GUID。 如果将 `client_connection_id` 操作添加到扩展事件会话中的事件，则还可以在扩展事件输出目标中找到客户端连接 ID。 如果您需要进一步的诊断帮助，则可以启用数据访问跟踪并再次运行连接命令，然后观察数据访问跟踪中的 `ClientConnectionID` 字段以查看是否有失败的操作。  
   
  如果您使用的中的 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端且连接成功，你可以获取客户端使用的连接 ID`SQL_COPT_SS_CLIENT_CONNECTION_ID`特性[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)。  
   

@@ -13,12 +13,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219237"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352882"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>为 Power View 报表配置表行为属性（SSAS 表格）
   如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
@@ -41,7 +41,7 @@ ms.locfileid: "48219237"
 -   **默认图像** - 指定哪一行提供用于表示行数据的图像（例如，员工记录中的照片 ID）。  
   
 > [!NOTE]  
->  请参阅下面的章节，了解如何从特定显示格式的角度进行布局优化：  [针对特定布局进行优化](#bkmk_optimizeforlayout)。  
+>  下面的章节进行布局优化从角度来看的特定显示格式，请参阅：[针对特定布局进行优化](#bkmk_optimizeforlayout)。  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>打开“表行为”对话框  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48219237"
 3.  在 **“表行为”** 对话框中，设置 **“行标识符”**，然后在此对话框中指定其他属性。  
   
 ## <a name="setting-the-row-identifier-property"></a>设置行标识符属性  
- 在该表中，行标识符指定单一列，其中仅包含唯一值且不包含空值。 “行标识符”属性用于更改分组，以便组不基于行的字段构成，而是基于始终用于唯一标识一行的固定列，无论在特定报表布局中使用哪些字段。  
+ 在该表中，行标识符指定单一列，其中仅包含唯一值且不包含空值。 行标识符属性用于更改分组，以便组不基于行的字段构成，而不是基于始终用于唯一标识行，而不考虑特定的报表布局中使用的字段的固定列。  
   
  设置此属性后，会将默认分组行为从动态分组（基于画布上存在的列）更改为基于行标识符进行汇总的固定分组行为。 更改默认分组行为对于报表布局是相关的，例如矩阵，它原本针对行中的每列进行分组（或显示小计）。  
   
- 在 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中，设置行标识符可以启用以下附加属性： **“保留唯一行”** 属性、 **“默认标签”** 属性和 **“默认图像”** 属性。  
+ 在[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，设置行标识符可以启用以下附加属性：**保留唯一行**属性，**默认标签**属性，以及**默认图像**属性。  
   
  您还可以将 **“行标识符”** 本身用作独立属性，以支持以下各项：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48219237"
  通过设置 **“保留唯一行”** 属性，只要您将应始终重复的一列或多列添加到报表画布，您就可以指定这些列，即使存在重复实例也不例外。 与此行关联的计算值现在将基于每个单独行进行分配，而不是累计到单个行。 当为  **“保留唯一行”** 属性选择列时，请选择其中包含唯一值或几乎都是唯一值的那些列。  
   
 > [!NOTE]  
->  因为最终用户选择的列可能影响分组，这会更改用于表达式计算的筛选器上下文，所以，模型设计者在创建可返回正确结果的度量值时务必小心。 有关详细信息，请参阅 [Power View FAQ](http://go.microsoft.com/fwlink/?LinkId=220674)（Power View 常见问题解答）。  
+>  因为最终用户选择的列可能影响分组，这会更改用于表达式计算的筛选器上下文，所以，模型设计者在创建可返回正确结果的度量值时务必小心。 有关详细信息，请参阅 [Power View FAQ](https://go.microsoft.com/fwlink/?LinkId=220674)（Power View 常见问题解答）。  
   
 ## <a name="setting-a-default-label"></a>设置默认标签  
  此属性指定出现在图块报表的导航条中的标签。 当与默认图像结合使用时，默认标签将出现在图像下方。 如果没有图像，则显示默认标签本身。 当选择默认标签时，请挑选传达有关行的最多信息的列（如名称）。  
@@ -130,7 +130,7 @@ ms.locfileid: "48219237"
   
  ![图表，按默认在字段级别分组](../media/ssas-rptprop-chartfieldgroup.gif "图表，按默认在字段级别分组")  
   
- **之后：基于行标识符进行分组（行标识符变成轴）**  
+ **之后：基于行标识符进行分组 （行标识符变成轴）**  
   
  ![基于行 ID 分组的图表](../media/ssas-rptprop-chartrowid.gif "图表，按行 ID 分组")  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815429"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
   复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的已发布对象进行以下任何架构更改时，默认情况下更改都将传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
@@ -58,7 +57,7 @@ ms.locfileid: "48203027"
   
 -   架构更改需遵守 [!INCLUDE[tsql](../../../includes/tsql-md.md)]规定的所有限制。 例如，ALTER TABLE 不允许对主键列执行 ALTER 语句。  
   
--   仅对初始快照执行数据类型映射。 架构更改不会映射到以前版本的数据类型。 例如，如果该语句`ALTER TABLE ADD datetime2 column`中使用[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，不会将数据类型转换为`nvarchar`为[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]订阅服务器。 在某些情况下，架构更改在发布服务器上受到阻止。  
+-   仅对初始快照执行数据类型映射。 架构更改不会映射到以前版本的数据类型。 例如，如果在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中使用 `ALTER TABLE ADD datetime2 column` 语句，则不会将数据类型转换为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 订阅服务器的 `nvarchar`。 在某些情况下，架构更改在发布服务器上受到阻止。  
   
 -   如果发布被设置为允许传播架构更改，则不论为发布中的项目设置的相关架构选项是什么，都会传播架构更改。 例如，如果选择不复制某个表项目的外键约束，但随后又发出 ALTER TABLE 命令，将外键添加到发布服务器中的表中，那么外键将被添加到订阅服务器中的表中。 若要防止出现这种情况，请在发出 ALTER TABLE 命令之前禁用架构更改的传播。  
   

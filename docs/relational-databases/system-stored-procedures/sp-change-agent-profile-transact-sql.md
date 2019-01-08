@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_change_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f570e8541c2cb2311638158674259c0db2c1ec27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc01fcc8e614235894b46813da3162064e1c28d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828900"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783269"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
  [  **@profile_id=** ] *profile_id*  
  配置文件的 ID。 *profile_id*是**int**，无默认值。  
   
- [  **@property=** ] **'***属性*****  
+ [ **@property=** ] **'***属性*****  
  是该属性的名称。 *属性*是**sysname**，无默认值。  
   
  [ @value= ] 'value'****  
@@ -52,7 +51,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  下表说明可以更改的配置文件属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**description**|配置文件的说明。|  
   
@@ -62,7 +61,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ## <a name="remarks"></a>备注  
  **sp_change_agent_profile**用于所有类型的复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_change_agent_profile**。  
   
 ## <a name="see-also"></a>请参阅  

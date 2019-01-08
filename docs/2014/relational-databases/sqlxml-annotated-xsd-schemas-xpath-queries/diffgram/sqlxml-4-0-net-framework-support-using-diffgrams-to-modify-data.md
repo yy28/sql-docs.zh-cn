@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - data deletions [SQLXML]
@@ -27,12 +25,12 @@ ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29880c52b0d5adb2fdc88b5b9ea30d8903f4ae82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81828ba434bbfeae72083859725701518a8950f6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806099"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>使用 DiffGram 修改 SQLXML 4.0 中的数据
   DiffGram 格式在中引入**数据集**组成部分[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework。 在 .NET Framework 中，您可以创建 DiffGram，并使用它来修改 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表的数据。  

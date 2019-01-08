@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
@@ -15,12 +14,12 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0d35c40dd15db4ed9b7cdc7802f3ef306755569d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205417"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799259"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
   用户的权限基于：  
@@ -51,7 +50,7 @@ ms.locfileid: "48205417"
   
  组 2 具有**只读**对 Product 实体的权限。  
   
- 结果：用户对 Product 实体的有效权限是 **“更新”** 。  
+ 结果：用户的有效权限是**更新**对 Product 实体。  
   
 ## <a name="example-2"></a>示例 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -64,7 +63,7 @@ ms.locfileid: "48205417"
   
  组 2 对 Product 实体具有 **“拒绝”** 权限。  
   
- 结果：用户对 Product 实体的有效权限是 **“拒绝”** 。  
+ 结果：用户的有效权限是**拒绝**对 Product 实体。  
   
 ## <a name="example-3"></a>示例 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -77,10 +76,10 @@ ms.locfileid: "48205417"
   
  组 2 具有**只读**的一组层次结构节点中的成员的权限。  
   
- 结果：用户对这些成员的有效权限是 **“更新”** 。  
+ 结果：用户的有效权限是**更新**的成员。  
   
 ## <a name="see-also"></a>请参阅  
- [如何确定权限&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)   
  [重叠的模型和成员权限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

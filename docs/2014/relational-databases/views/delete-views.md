@@ -15,12 +15,12 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e52ab35b0f75f80a6117995a353b66c320a5294
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513490"
 ---
 # <a name="delete-views"></a>删除视图
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中删除视图 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -51,13 +51,13 @@ ms.locfileid: "48085583"
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
     > [!IMPORTANT]  
-    >  在“删除对象”对话框中单击“显示依赖关系”，打开“view_name***依赖关系”对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
+    >  单击“删除对象”对话框中的“显示依赖关系”，打开“view_name 依赖关系”对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - methods [SMO]
@@ -17,19 +15,19 @@ ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f0e816cce3b43a95cac481e4fe84f5ad11060a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807319"
 ---
 # <a name="calling-methods"></a>调用方法
   方法执行特定任务相关的对象，例如颁发`Checkpoint`对数据库或请求的登录的实例的枚举的列表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  方法针对对象执行操作。 方法可以使用参数并通常具有返回值。 返回值可以是简单数据类型、复杂对象或包含很多成员的结构。  
   
- 使用异常处理检测方法是否成功。 有关详细信息，请参阅[Handling SMO Exceptions](handling-smo-exceptions.md)。  
+ 使用异常处理检测方法是否成功。 有关详细信息，请参阅 [Handling SMO Exceptions](handling-smo-exceptions.md)。  
   
 ## <a name="examples"></a>示例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
@@ -57,7 +55,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>在 Visual Basic 中使用带参数的 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table>对象有一个名为<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 `FillFactor`的数字参数。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
   
 ```  
 Dim srv As Server  
@@ -68,7 +66,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>在 Visual C# 中使用带参数的 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table>对象有一个名为<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 `FillFactor`的数字参数。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 对象具有名为 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的数字参数。  
   
 ```  
 {   
@@ -81,7 +79,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>在 Visual Basic 中使用返回 DataTable 对象的枚举方法  
- 本部分介绍如何调用枚举方法以及如何处理在返回的数据<xref:System.Data.DataTable>对象。  
+ 本节说明如何调用枚举方法以及如何处理返回的 <xref:System.Data.DataTable> 对象中的数据。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回 <xref:System.Data.DataTable> 对象，该对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
   
@@ -105,9 +103,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>在 Visual C# 中使用返回 DataTable 对象的枚举方法  
- 本部分介绍如何调用枚举方法以及如何处理在返回的数据<xref:System.Data.DataTable>对象。  
+ 本节说明如何调用枚举方法以及如何处理返回的 <xref:System.Data.DataTable> 对象中的数据。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A>方法返回系统<xref:System.Data.DataTable>对象。 <xref:System.Data.DataTable>对象需要进一步导航以访问有关的实例的所有可用排序规则信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法返回系统 <xref:System.Data.DataTable> 对象。 <xref:System.Data.DataTable> 对象需要进一步导航以访问有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的所有可用排序规则信息。  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -158,12 +156,12 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>在 Visual Basic 中复制 SMO 对象  
- 此代码示例使用<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>方法来创建一份<xref:Microsoft.SqlServer.Management.Smo.Server>对象。 <xref:Microsoft.SqlServer.Management.Smo.Server>对象表示的实例的连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>在 Visual C# 中复制 SMO 对象  
- 此代码示例使用<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>方法来创建一份<xref:Microsoft.SqlServer.Management.Smo.Server>对象。 <xref:Microsoft.SqlServer.Management.Smo.Server>对象表示的实例的连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 此代码示例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法来创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的副本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象表示与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的一个连接。  
   
 ```  
 {   
@@ -181,12 +179,12 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>在 Visual Basic 中监视服务器进程  
- 你可以获取有关的实例的当前状态类型信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过枚举方法。 该代码示例使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法发现有关当前进程的信息。 它还演示如何使用返回的 <xref:System.Data.DataTable> 对象中的列和行。  
+ 可以通过枚举方法获取有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的当前状态类型信息。 该代码示例使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法发现有关当前进程的信息。 它还演示如何使用返回的 <xref:System.Data.DataTable> 对象中的列和行。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods5](SMO How to#SMO_VBMethods5)]  -->  
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>在 Visual C# 中监视服务器进程  
- 你可以获取有关的实例的当前状态类型信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过枚举方法。 该代码示例使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法发现有关当前进程的信息。 它还演示如何使用返回的 <xref:System.Data.DataTable> 对象中的列和行。  
+ 可以通过枚举方法获取有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的当前状态类型信息。 该代码示例使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法发现有关当前进程的信息。 它还演示如何使用返回的 <xref:System.Data.DataTable> 对象中的列和行。  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

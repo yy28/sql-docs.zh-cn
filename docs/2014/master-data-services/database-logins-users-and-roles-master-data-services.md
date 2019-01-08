@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -18,12 +17,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208987"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795410"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>数据库登录名、用户和角色 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括在承载 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 数据库的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例上自动安装的登录名、用户和角色。 不应对这些登录名、用户和角色做任何修改。  
@@ -37,14 +36,14 @@ ms.locfileid: "48208987"
   
 ## <a name="msdb-users"></a>msdb 用户  
   
-|用户|Description|  
+|“用户”|Description|  
 |----------|-----------------|  
 |`mds_clr_user`|未使用。<br /><br /> 映射到 mds_dlp_login。|  
-|`mds_email_user`|用于通知。<br /><br /> 映射到 mds_email_login。<br /><br /> 是角色 DatabaseMailUserRole 的成员。|  
+|`mds_email_user`|用于通知。<br /><br /> 映射到 mds_email_login。<br /><br /> 是角色的成员：DatabaseMailUserRole。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 数据库用户  
   
-|用户|Description|  
+|“用户”|Description|  
 |----------|-----------------|  
 |`mds_email_user`|用于通知。<br /><br /> 具有针对 mdm 架构的 SELECT 权限。<br /><br /> 具有针对 mdm.MemberGetCriteria 用户定义的表类型的 EXECUTE 权限。<br /><br /> 具有针对 mdm.udpNotificationQueueActivate 存储过程的 EXECUTE 权限。|  
 |**mds_schema_user**|拥有 mdm 和 mdq 架构。 默认架构为 mdm。<br /><br /> 不具有映射到它的登录名。|  
@@ -65,6 +64,6 @@ ms.locfileid: "48208987"
 |**stg**|包含与临时过程有关的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库表、存储过程和视图。 不要删除任何这些对象。 有关临时过程的详细信息，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据库对象安全性&#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [数据库对象安全性 (Master Data Services)](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,12 +14,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 53f6d2d4c902389c900f4851d0ec1973a23f5a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188047"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815129"
 ---
 # <a name="synonyms-database-engine"></a>同义词（数据库引擎）
   同义词是用来实现下列用途的数据库对象：  
@@ -64,7 +64,7 @@ ms.locfileid: "48188047"
   
 |||  
 |-|-|  
-|CONTROL|删除|  
+|CONTROL|DELETE|  
 |在运行 CREATE 语句前执行|Insert|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +75,7 @@ ms.locfileid: "48188047"
 |||  
 |-|-|  
 |SELECT|Insert|  
-|UPDATE|删除|  
+|UPDATE|DELETE|  
 |在运行 CREATE 语句前执行|嵌套的 SELECT|  
   
  在以前说明的上下文中使用同义词时，该基对象会受到影响。 例如，如果某个同义词引用了基对象（表）并且将行插入同义词中，则实际上将行插入到引用的表中。  

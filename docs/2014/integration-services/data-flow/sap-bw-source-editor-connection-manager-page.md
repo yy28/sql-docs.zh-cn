@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37ef852cea67ee021cee7dd182dc4a11132abcea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d491467d16b34207ab74f6ec4d892747e26165e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201257"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802039"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  
@@ -84,7 +83,7 @@ ms.locfileid: "48201257"
  输入服务器名称或网关主机的 IP 地址。 通常，名称或 IP 地址与 SAP 应用程序服务器相同。  
   
  **网关服务**  
- 输入网关服务的名称采用格式`sapgwNN`，其中`NN`是系统编号。  
+ 输入网关服务的名称，格式为 `sapgwNN`，其中 `NN` 是系统编号。  
   
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
@@ -110,7 +109,7 @@ ms.locfileid: "48201257"
  输入服务器名称或网关主机的 IP 地址。 通常，名称或 IP 地址与 SAP 应用程序服务器相同。  
   
  **网关服务**  
- 输入网关服务的名称采用格式`sapgwNN`，其中`NN`是系统编号。  
+ 输入网关服务的名称，格式为 `sapgwNN`，其中 `NN` 是系统编号。  
   
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
@@ -123,7 +122,7 @@ ms.locfileid: "48201257"
  输入与提取关联的请求 ID。  
   
 ## <a name="see-also"></a>请参阅  
- [SAP BW 源编辑器&#40;列页&#41;](sap-bw-source-editor-columns-page.md)   
+ [SAP BW 源编辑器（“列”页）](sap-bw-source-editor-columns-page.md)   
  [SAP BW 源编辑器（“错误输出”页）](sap-bw-source-editor-error-output-page.md)   
  [SAP BW 源编辑器（“高级”页）](sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  

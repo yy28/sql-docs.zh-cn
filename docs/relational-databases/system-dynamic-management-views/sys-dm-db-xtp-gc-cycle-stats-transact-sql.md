@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f6d23e30a589c4924925b834b310921d17ba57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540783"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "47818935"
 |cycle_id|**bigint**|垃圾回收周期的唯一标识符。|  
 |ticks_at_cycle_start|**bigint**|周期开始时的时钟。|  
 |ticks_at_cycle_end|**bigint**|周期结束时的时钟。|  
-|base_generation|**bigint**|数据库中的当前基础代值。 这表示用于标识事务进行垃圾回收的最早活动事务时间戳。 最早活动事务 id 以 16 为增量进行更新。 例如，如果事务 id 为 124、125、126 … 139，则值为 124。 再添加一个事务（例如 140）时，值为 140。|  
+|base_generation|**bigint**|数据库中的当前基础代值。 这表示用于标识事务进行垃圾回收的最早活动事务时间戳。 最早活动事务 id 以 16 为增量进行更新。 例如，如果事务 id 为 124、 125、 126...139，则值为 124。 再添加一个事务（例如 140）时，值为 140。|  
 |xacts_copied_to_local|**bigint**|从事务管道复制到数据库的代阵列中的事务数。|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|每代中的事务数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
 ## <a name="usage-scenario"></a>使用方案  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -18,15 +17,15 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 142a22e07a9abf5a87e63268910de35ff95b79ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 786ede341e899acf2831c5c3e0a6204d3a80b1b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791940"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 并[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包括功能和工具，可用来进行故障排除中的控制流[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include features 和 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包中控制流故障的功能和工具。  
   
 -   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支持容器和任务上的断点。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48216277"
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 提供了调试窗口。  
   
 ## <a name="breakpoints"></a>断点  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器提供了**设置断点**对话框，在其中你可以通过启用中断条件设置断点并挂起指定的包的执行之前可以发生断点的次数。 断点可在包级或单个组件级启用。 如果在任务或容器级上启用中断条件，则在 **“控制流”** 选项卡的设计图面上，相应的任务或容器旁边会显示断点图标。如果在包一级启用中断条件，则在 **“控制流”** 选项卡的标签上显示断点图标。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器提供了 **“设置断点”** 对话框，您可以在其中对断点进行设置：启用中断条件，指定发生多少次断点后就将包的执行挂起。 断点可在包级或单个组件级启用。 如果在任务或容器级上启用中断条件，则在 **“控制流”** 选项卡的设计图面上，相应的任务或容器旁边会显示断点图标。如果在包一级启用中断条件，则在 **“控制流”** 选项卡的标签上显示断点图标。  
   
  在命中断点时，断点图标将会发生改变以帮助识别断点源。 包运行时，可以添加、删除和更改断点。  
   
@@ -43,16 +42,16 @@ ms.locfileid: "48216277"
   
 |中断条件|Description|  
 |---------------------|-----------------|  
-|当任务或容器收到`OnPreExecute`事件。|任务将要执行时调用。 此事件由任务或容器在其运行前一刻引发。|  
-|当任务或容器收到`OnPostExecute`事件。|任务的执行逻辑完成后立即调用。 此事件由任务或容器在其运行后引发。|  
-|当任务或容器收到`OnError`事件。|出现错误时由任务或容器调用。|  
-|当任务或容器收到`OnWarning`事件。|当任务处于不能证明出错但有必要发出警告的状态时调用。|  
-|当任务或容器收到`OnInformation`事件。|需要任务提供信息时调用。|  
-|当任务或容器收到`OnTaskFailed`事件。|任务宿主失败时由其调用。|  
-|当任务或容器收到`OnProgress`事件。|要更新任务执行的进度时调用。|  
-|当任务或容器收到`OnQueryCancel`事件。|在可以取消执行的任务处理中，随时可以调用。|  
-|当任务或容器收到`OnVariableValueChanged`事件。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 变量的 RaiseChangeEvent 必须设置为`true`才能引发此事件。<br /><br /> **\*\* 警告 \*\*** 必须在 **容器** 作用域定义与此断点关联的变量。 如果在包作用域定义变量，则不会命中断点。|  
-|当任务或容器收到`OnCustomEvent`事件。|由任务调用，用于引发自定义的任务定义事件。|  
+|当任务或容器收到 `OnPreExecute` 事件时。|任务将要执行时调用。 此事件由任务或容器在其运行前一刻引发。|  
+|当任务或容器收到 `OnPostExecute` 事件时。|任务的执行逻辑完成后立即调用。 此事件由任务或容器在其运行后引发。|  
+|当任务或容器收到 `OnError` 事件时。|出现错误时由任务或容器调用。|  
+|当任务或容器收到 `OnWarning` 事件时。|当任务处于不能证明出错但有必要发出警告的状态时调用。|  
+|当任务或容器收到 `OnInformation` 事件时。|需要任务提供信息时调用。|  
+|当任务或容器收到 `OnTaskFailed` 事件时。|任务宿主失败时由其调用。|  
+|当任务或容器收到 `OnProgress` 事件时。|要更新任务执行的进度时调用。|  
+|当任务或容器收到 `OnQueryCancel` 事件时。|在可以取消执行的任务处理中，随时可以调用。|  
+|当任务或容器收到 `OnVariableValueChanged` 事件时。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 变量的 RaiseChangeEvent 必须设置为`true`才能引发此事件。<br /><br /> **\*\* 警告 \*\*** 必须在 **容器** 作用域定义与此断点关联的变量。 如果在包作用域定义变量，则不会命中断点。|  
+|当任务或容器收到 `OnCustomEvent` 事件时。|由任务调用，用于引发自定义的任务定义事件。|  
   
  除了对所有任务和容器可用的中断条件外，有些任务和容器还包含用来设置断点的特殊中断条件。 例如，可以在 For 循环容器上启用中断条件，设置一个在循环的每个迭代开始时挂起执行的断点。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48216277"
   
  下表介绍用于描绘执行状态的各种颜色。  
   
-|Color|执行状态|  
+|颜色|执行状态|  
 |-----------|----------------------|  
 |灰色|等待运行|  
 |Yellow|正在运行|  
@@ -114,6 +113,6 @@ ms.locfileid: "48216277"
 |“即时”|用于调试和评估表达式，并打印变量值。|  
   
 ## <a name="see-also"></a>请参阅  
- [包开发的疑难解答工具](troubleshooting-tools-for-package-development.md)  
+ [包开发的故障排除工具](troubleshooting-tools-for-package-development.md)  
   
   

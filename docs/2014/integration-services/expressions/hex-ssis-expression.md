@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hexadecimal data
@@ -14,12 +13,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6892dd643958aed567893dbe873617a0b4128112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f0db458cb94993d36f0d565a7fae64f18f7876e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805159"
 ---
 # <a name="hex-ssis-expression"></a>HEX（SSIS 表达式）
   返回一个表示整数的十六进制值的字符串。  
@@ -45,7 +44,7 @@ HEX(integer_expression)
   
  返回结果不包含限定符，如 0x 前缀。 若要包含前缀，请使用 +（连接）运算符。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](concatenate-ssis-expression.md)。  
   
- HEX 计数法中的字符 A – F 显示为大写字符。  
+ HEX 计数法中的字符 A - F 显示为大写字符。  
   
  产生的整数数据类型的字符串的长度如下所示：  
   
@@ -77,6 +76,6 @@ HEX(@LocaleID)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](functions-ssis-expression.md)  
   
   

@@ -1,10 +1,10 @@
 ---
-title: 教程：编写 Transact-SQL 语句 | Microsoft Docs
+title: 教程：编写 TRANSACT-SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,12 +14,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061460"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807579"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教程：编写 Transact-SQL 语句
   欢迎学习“编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句”教程。 本教程适用于对编写 SQL 语句不熟悉的用户。 本教程通过回顾一些用于创建表和插入数据的基本语句，帮助新用户入门。 本教程使用 [!INCLUDE[tsql](../includes/tsql-md.md)]，后者是 SQL 标准的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 实现。 本教程旨在简介 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言，但不是要取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 课程。 本教程特意选用了简单的语句，因此它们不能代表标准生产数据库中存在的语句的复杂程度。  
@@ -38,7 +38,7 @@ ms.locfileid: "48061460"
  [第 1 课：创建数据库对象](lesson-1-creating-database-objects.md)  
  在本课中，将介绍如何创建数据库、在数据库中创建表、将数据插入到表中、更新数据，然后读取数据。  
   
- [第 2 课：配置数据库对象的权限](lesson-2-configuring-permissions-on-database-objects.md)  
+ [第 2 课：配置对数据库对象的权限](lesson-2-configuring-permissions-on-database-objects.md)  
  在本课中，将介绍如何创建登录名和用户。 还将创建视图和存储过程，再将用户权限授予存储过程。  
   
  [第 3 课：删除数据库对象](lesson-3-1-deleting-database-objects.md)  

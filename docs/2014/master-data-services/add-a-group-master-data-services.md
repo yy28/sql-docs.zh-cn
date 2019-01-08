@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - groups [Master Data Services], adding
@@ -14,17 +13,17 @@ ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d78b69946ebb068933a7691d454a792ad8f1ed07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1245b637eeb31ab8dee9bf498a6d076925d1dae3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814209"
 ---
 # <a name="add-a-group-master-data-services"></a>添加组 (Master Data Services)
   在 **中将某一组添加到** “组” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 列表中，以便开始向 Web 应用程序分配权限。 在该组中的某一用户可以访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，必须为该组提供针对一个或多个功能区域和模型对象的权限。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
@@ -48,7 +47,7 @@ ms.locfileid: "48056787"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [分配功能区域权限&#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [分配功能区域权限 (Master Data Services)](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>请参阅  
  [安全性 (Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  

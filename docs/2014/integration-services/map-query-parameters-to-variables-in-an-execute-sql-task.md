@@ -18,12 +18,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070919"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524990"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将查询参数映射到变量
   本主题介绍如何在执行 SQL 任务中使用参数化 SQL 语句以及在 SQL 语句的变量和参数之间创建映射。  
@@ -106,6 +106,6 @@ ms.locfileid: "48070919"
 ## <a name="see-also"></a>请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   
  [参数和返回代码中执行 SQL 任务](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)  
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
   
   

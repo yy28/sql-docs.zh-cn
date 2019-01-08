@@ -17,19 +17,19 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aca52e23bf392c411063ab48ddd3e4ce9b6ae41
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798369"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
   
-1.  **开始之前：**  [先决条件](#Prerequisites)  
+1.  **开始之前：**[系统必备组件](#Prerequisites)  
   
-2.  **若要升级 DAC，请使用：**  [查看 DAC 的内容](#ViewDACContents)、 [查看数据库更改](#ViewDBChanges)、 [查看升级操作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
+2.  **若要升级 DAC，使用：**[查看 DAC 的内容](#ViewDACContents)，[查看数据库更改](#ViewDBChanges)，[查看升级操作](#ViewUpgradeActions)，[比较 Dac](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  
@@ -39,15 +39,15 @@ ms.locfileid: "43809813"
   
  **在 SQL Server 开发工具中查看 DAC**  
   
-1.  打开 **“文件”** 菜单，选择 **“新建”**，然后选择 **“项目…”**。  
+1.  打开“文件”菜单，选择“新建”，然后选择“项目…”。  
   
 2.  选择 **SQL Server** 项目模板，然后指定 **“名称”**、 **“位置”** 和 **“解决方案名称”**。  
   
-3.  在 **“解决方案资源管理器”** 中，右键单击该项目节点，然后选择 **“属性…”**。  
+3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…”。  
   
 4.  在“项目设置” 选项卡上的“输出类型”部分中，选中“数据层应用程序（.dacpac 文件）”复选框，然后关闭属性对话框。  
   
-5.  在“解决方案资源管理器” 中，右键单击该项目节点，然后选择“导入数据层应用程序…”。  
+5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…”。  
   
 6.  使用“解决方案资源管理器”可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43809813"
   
 1.  创建一个 SMO Server 对象，并且将该对象设置为包含要查看的 DAC 的实例。  
   
-2.  打开`ServerConnection`对象，并连接到同一实例。  
+2.  打开 `ServerConnection` 对象，并连接到同一实例。  
   
 3.  在变量中指定 DAC 名称。  
   
-4.  使用`GetDatabaseChanges()`方法来检索`ChangeResults`对象，并将该对象加入到一个文本文件，以便生成一个简单报表的新，删除，并且已更改的对象。  
+4.  使用 `GetDatabaseChanges()` 方法检索 `ChangeResults` 对象，并且将该对象加入到某个文本文件中以便生成新的、已删除和已更改的对象的简单报表。  
   
 ### <a name="view-database-changes-example-powershell"></a>查看数据库更改示例 (PowerShell)  
  **查看数据库更改示例 (PowerShell)**  
@@ -123,13 +123,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 1.  创建一个 SMO Server 对象，并将该对象设置为包含部署的 DAC 的实例。  
   
-2.  打开`ServerConnection`对象，并连接到同一实例。  
+2.  打开 `ServerConnection` 对象，并连接到同一实例。  
   
-3.  使用`System.IO.File`加载 DAC 包文件。  
+3.  使用 `System.IO.File` 加载 DAC 包文件。  
   
 4.  在变量中指定 DAC 名称。  
   
-5.  使用`GetIncrementalUpgradeScript()`方法来获取升级的 TRANSACT-SQL 语句的列表会运行，并将该列表加入到文本文件。  
+5.  使用 `GetIncrementalUpgradeScript()` 方法可获取升级时将运行的 Transact-SQL 语句的列表，然后将该列表加入到文本文件中。  
   
 6.  关闭用于读取 DAC 包文件的文件流。  
   

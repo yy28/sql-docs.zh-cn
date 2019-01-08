@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergedummyupdate_TSQL
@@ -17,12 +16,12 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e999d4f0d88eee21cf65c2d4e73f767485d6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf771f02ec63260dcda1f8b7fa633f9fb6bf9a07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817769"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
  [  **@source_object=**] **'***source_object*****  
  是源对象的名称。 *source_object*是**nvarchar(386)**，无默认值。  
   
- [  **@rowguid=**] **'***rowguid*****  
+ [  **@rowguid=**] **'***rowguid***’**  
  行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -53,7 +52,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
   
  **sp_mergedummyupdate**如果编写您自己的替代复制冲突查看器 (Wzcnflct.exe) 非常有用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**db_owner**固定的数据库角色可以执行**sp_mergedummyupdate**。  
   
 ## <a name="see-also"></a>请参阅  

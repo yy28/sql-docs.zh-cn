@@ -14,12 +14,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72089aad9a38c488b36fdb65cc94060d70c6482c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104757"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398663"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
   可以对 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表设置处理选项，以决定何时进行数据处理。 还可以为报表处理设置超时值和用于决定是否为当前报表启用报表历史记录的选项。  
@@ -103,11 +103,11 @@ ms.locfileid: "48104757"
   
 ##  <a name="bkmk_set_database_timeout"></a> 设置数据库超时  
   
-1.  使用 Windows PowerShell 设置 SharePoint 报表服务器的数据库超时。 有关详细信息，请参阅"获取和设置报表服务应用程序数据库的属性"部分[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+1.  使用 Windows PowerShell 设置 SharePoint 报表服务器的数据库超时。 有关详细信息，请参阅[用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 中的“获取并设置报表服务应用程序数据库的属性”一节。  
   
 ## <a name="see-also"></a>请参阅  
  [设置报表处理属性](report-server/set-report-processing-properties.md)   
  [缓存报表 (SSRS)](report-server/caching-reports-ssrs.md)   
- [为报表和共享数据集处理设置超时值&#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [为报表和共享数据集处理设置超时值 (SSRS)](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

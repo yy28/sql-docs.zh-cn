@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.hostnamevalue.f1
@@ -13,12 +12,12 @@ ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f116033e54e33bc63893865bdc4339399dde4f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f8f7f1304b0d72cf59467aee16c04481fbd51ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752199"
 ---
 # <a name="hostname-values"></a>HOST_NAME 值
   具有参数化筛选器的合并发布使用 SUSER_SNAME() 和/或 HOST_NAME() 函数筛选数据。 函数在新建发布向导或 **“发布属性”** 对话框中指定。  
@@ -34,7 +33,7 @@ ms.locfileid: "48100749"
   
 ## <a name="see-also"></a>请参阅  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
  [查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)   
  [查看和修改推送订阅属性](view-and-modify-push-subscription-properties.md)   
  [HOST_NAME (Transact-SQL)](/sql/t-sql/functions/host-name-transact-sql)   

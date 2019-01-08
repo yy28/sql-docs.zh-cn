@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - SQL12.AG.MAINTPLAN.LEGACY.F1
@@ -17,12 +16,12 @@ ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff42b55ed8aa80c3e099632cdabbdfc49458982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114347"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803069"
 ---
 # <a name="maintenance-plans"></a>维护计划
   维护计划可创建所需的任务工作流，以确保优化数据库、定期进行备份并确保数据库一致。 维护计划向导还可创建核心维护计划，但手动创建计划具有更大的灵活性。  
@@ -64,7 +63,7 @@ ms.locfileid: "48114347"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建维护计划。|[创建维护计划](create-a-maintenance-plan.md)|  
 |说明如何使用维护计划设计图面创建维护计划。|[创建维护计划（维护计划设计图面）](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |对象资源管理器中可用的文档维护计划功能。|[维护计划节点（对象资源管理器）](../../ssms/object/object-explorer.md)|  

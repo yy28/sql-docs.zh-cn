@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
@@ -15,12 +14,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107199"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798929"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
   稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 当至少能够节省 20% 到 40% 的空间时，才应考虑使用稀疏列。 稀疏列和列集是通过使用 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 语句定义的。  
@@ -116,12 +115,12 @@ ms.locfileid: "48107199"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>更新稀疏列所需的内存中开销  
  当使用稀疏列设计表时，请记住，在更新行时，表中的每个非 NULL 值稀疏列需要 2 个字节的额外开销。 由于此额外的内存要求，当总的行大小（包括此内存开销）超过 8019 但没有列可以推送到行外时，更新可能意外失败，错误为 576。  
   
- 以具有 600 个 bigint 类型的稀疏列的表为例。 如果有 571 个非 Null 列，则磁盘上的总大小为 571 * 12 = 6852 字节。 在包含额外行开销和稀疏列标题之后，这会导致增加大约 6895 个字节。 在磁盘上，该页仍有约 1124 字节可用。 这可以给出其他列可以成功更新的印象。 但是，在更新过程中，内存中有额外开销，此开销为 2\*(非 NULL 值的稀疏列数目)。 在此示例中，包含额外开销 – 2 \* 571 = 1142 字节 – 将磁盘上的行大小增加到约 8037 个字节。 该大小超过最大允许的 8019 个字节。 由于所有列都是固定长度的数据类型，所以无法将其推送到行外。 因此，更新将会失败，错误为 576。  
+ 以具有 600 个 bigint 类型的稀疏列的表为例。 如果有 571 个非 Null 列，则磁盘上的总大小为 571 * 12 = 6852 字节。 在包含额外行开销和稀疏列标题之后，这会导致增加大约 6895 个字节。 在磁盘上，该页仍有约 1124 字节可用。 这可以给出其他列可以成功更新的印象。 但是，在更新过程中，内存中有额外开销，此开销为 2\*(非 NULL 值的稀疏列数目)。 在此示例中，包含额外开销 - 2 \* 571 = 1142 字节 - 将磁盘上的行大小增加到约 8037 个字节。 该大小超过最大允许的 8019 个字节。 由于所有列都是固定长度的数据类型，所以无法将其推送到行外。 因此，更新将会失败，错误为 576。  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>使用稀疏列的限制  
  稀疏列可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，其行为与任何其他列类似，但有以下限制：  
   
--   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不能为以下数据类型： `text`， `ntext`， `image`， `timestamp`，用户定义数据类型`geometry`，或`geography`; 或者有 FILESTREAM 属性。  
+-   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不可以是以下数据类型：`text`、`ntext`、`image`、`timestamp`、用户定义的数据类型、`geometry` 或 `geography`；或者有 FILESTREAM 属性。  
   
 -   稀疏列不能有默认值。  
   
