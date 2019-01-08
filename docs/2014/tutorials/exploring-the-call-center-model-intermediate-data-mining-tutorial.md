@@ -11,22 +11,22 @@ ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518903"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>探索呼叫中心模型（数据挖掘中级教程）
   您已生成了探索模型，现在可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的以下工具来了解有关数据的更多信息。  
   
 -   [Microsoft 神经网络查看器](#bkmk_NNviewer) **:** 此查看器现已推出**挖掘模型查看器**选项卡上的数据挖掘设计器，它旨在帮助您试验数据中的交互性。  
   
--   [Microsoft 一般内容树查看器](#bkmk_genviewer) **:** 该标准查看器提供了有关的模式的深入详细信息和统计信息通过算法生成时发现该模型。  
+-   [Microsoft 一般内容树查看器](#bkmk_genviewer) **:** 该标准查看器提供了有关模式和生成模型时算法发现的统计信息的深入详细信息。  
   
 ##  <a name="bkmk_NNviewer"></a> Microsoft 神经网络查看器  
- 在查看器有三个窗格--**输入**，**输出**，并**变量**。  
+ 在查看器有三个窗格-**输入**，**输出**，并**变量**。  
   
  通过使用**输出**窗格中，可以选择不同的可预测属性或因变量的值。 如果您的模型包含多个可预测属性，则可以选择从特性**输出属性**列表。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48110027"
   
 2.  有关**值**，选择**AM**。  
   
-     **变量**窗格将进行更新以显示模型的影响时 shift **AM**。 所有其他选项保持不变，您将仍然比较最低服务等级和最高服务等级。  
+     **变量**窗格将进行更新以显示模型的影响时 shift **AM**。 所有其他选项保持不变-您将仍然比较最低和最高服务等级。  
   
 3.  有关**值**，选择**PM1**。  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48110027"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>解释查看器中提供的统计信息  
  较长的等待时间是高挂断率的强预测因子，这意味着较差的服务等级。 这似乎是一个明显的结论；但挖掘模型为您提供了一些其他统计数据，以帮助您解释这些趋势。  
   
--   **分数**： 值，该值指示此变量用于区分结果的整体重要性。 分数越高，变量对结果产生的影响就越大。  
+-   **分数**:指示此变量用于区分结果的整体重要性的值。 分数越高，变量对结果产生的影响就越大。  
   
--   **值 1 的概率**： 表示该值对该结果的概率的百分比。  
+-   **值 1 的概率**:表示该值对该结果的概率的百分比。  
   
--   **Value 2 的概率**： 表示该值对该结果的概率的百分比。  
+-   **Value 2 的概率**:表示该值对该结果的概率的百分比。  
   
--   **Value 1 的提升**并**Value 2 的提升**： 表示用于此特定变量预测 Value 1 和 Value 2 结果的影响的分数。 分数越高，使用该变量预测结果时就越准确。  
+-   **值为 1 的提升**并**值为 2 的提升**:表示用于此特定变量预测 Value 1 和 Value 2 结果的影响的分数。 分数越高，使用该变量预测结果时就越准确。  
   
  下表包含首要影响因素的一些示例值。 例如， **value 1 的概率**为 60.6%并**value 2 的概率**为 8.30%，这意味着，当 Average Time Per Issue 位于 44-70 分钟数的范围中时，60.6%的事例发生在具有最高服务等级 (Value 1) 和 8.30%的情况下是在具有最差服务等级 (Value 2)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48110027"
   
 |Attribute|ReplTest1|倾向于\<0.07|倾向于 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087 120.000||分数： 100<br /><br /> Value1 的概率： 舍入到 4.45%<br /><br /> Value2 的概率： 51.94%<br /><br /> Value1 的提升： 0.19<br /><br /> Value2 的提升： 1.94|  
+|Average Time Per Issue|89.087 120.000||分数：100<br /><br /> Value1 的概率：舍入到 4.45%<br /><br /> Value2 的概率：51.94%<br /><br /> Value1 的提升：0.19<br /><br /> Value2 的提升：1.94|  
 |Average Time Per Issue|44.000 70.597|分数：92.35<br /><br /> Value1 的概率：60.06%<br /><br /> Value2 的概率：8.30%<br /><br /> Value1 的提升：2.61<br /><br /> Value2 的提升：0.31||  
   
  [返回页首](#bkmk_NNviewer)  
@@ -152,7 +152,7 @@ WHERE NODE_NAME = '10000000000000000'
  [向呼叫中心结构中添加逻辑回归模型&#40;数据挖掘中级教程&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>请参阅  
- [神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [神经网络模型查询示例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft 神经网络算法技术参考](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [更改挖掘模型中列的离散化](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  

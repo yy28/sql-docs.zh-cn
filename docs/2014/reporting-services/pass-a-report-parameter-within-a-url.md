@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097577"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215856"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   您可以通过在报表 URL 中包含报表参数，将它们传递到报表。 这些 URL 参数不带前缀，因为它们被直接传递到报表处理引擎。  
@@ -27,16 +27,16 @@ ms.locfileid: "48097577"
 > [!IMPORTANT]  
 >  非常重要的一点是，URL 包括用于通过 SharePoint 和 `_vti_bin` HTTP 代理路由请求的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 代理语法。 该代理会向 HTTP 请求中添加某一上下文，该上下文是确保为 SharePoint 模式报表服务器正确执行报表所需要的。  
 >   
->  如果没有包含代理语法，则需要为该参数加上 *rp:* 前缀。  
+>  如果不包含代理语法，则需要给参数加上前缀 rp:。  
   
  所有查询参数都可具有对应的报表参数。 通过传递相应报表参数将查询参数传递给报表。 有关详细信息，请参阅[在关系查询设计器中生成查询（报表生成器和 SSRS）](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  报表参数区分大小写。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  报表参数区分大小写并使用以下特殊字符：  
->   
+> 
 >  -   URL 字符串中的任何空格字符将根据 URL 编码标准被字符“%20”替换。  
 > -   URL 的参数部分中的空格字符将被加号字符 (+) 替换。  
 > -   字符串任何部分中的分号将被字符“%3A”替换。  
@@ -107,7 +107,7 @@ http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [URL 访问&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 访问 (SSRS)](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   
   

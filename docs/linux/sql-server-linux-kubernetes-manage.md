@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518487"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>管理 SQL Server Alwayson 可用性组 Kubernetes
 
@@ -37,7 +37,7 @@ ms.locfileid: "49356358"
 
   更新你的环境的文件。
 
-  - 替换为`<containerName>`与预期的可用性组目标的名称。
+  - 替换为`<containerName>`与预期的可用性组目标的 pod 名称 (例如 mssql2-0)。
   - 如果可用性组不在`ag1`命名空间中，将为`ag1`与命名空间。
 
   此文件定义一个名为故障转移作业`manual-failover`。
@@ -63,7 +63,7 @@ ms.locfileid: "49356358"
   下面的示例返回名为的作业状态`manual-failover`。
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. 删除手动故障转移作业。 
@@ -76,7 +76,7 @@ ms.locfileid: "49356358"
   以下命令将删除该作业。
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## <a name="rotate-credentials"></a>滚动更新凭据
@@ -127,7 +127,7 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
 
   Kubernetes 更新主密钥和`sa`密码的 SQL Server 可用性组中的一个实例。
 
-1. 验证作业已完成。 运行以下命令： 若要验证作业是否已完成，运行 
+1. 验证作业已完成。 运行下面的命令：若要验证作业已完成，运行 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1

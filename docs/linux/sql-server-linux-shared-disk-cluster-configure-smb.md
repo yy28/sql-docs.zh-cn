@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531997"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>配置 SMB-Linux 上的 SQL Server 的故障转移群集实例-
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661935"
 
 本文介绍如何在 Linux 上配置故障转移群集实例 (FCI) 的 SMB 存储。 
  
-在非 Windows 世界中，SMB 通常称为作为通用 Internet 文件系统 (CIFS) 共享和通过 Samba 实现。 在 Windows 世界中，访问 SMB 共享完成这种方式： \\SERVERNAME\SHARENAME。 对于基于 Linux 的 SQL Server 安装，必须为文件夹装载 SMB 共享。
+在非 Windows 世界中，SMB 通常称为作为通用 Internet 文件系统 (CIFS) 共享和通过 Samba 实现。 在 Windows 世界中，访问 SMB 共享进行这种方式：\\SERVERNAME\SHARENAME。 对于基于 Linux 的 SQL Server 安装，必须为文件夹装载 SMB 共享。
 
 ## <a name="important-source-and-server-information"></a>源服务器和服务器的重要信息
 
@@ -102,7 +102,7 @@ ms.locfileid: "47661935"
    *    从现有的 SQL Server 数据目录中删除的文件。 如果成功，将不会收到任何确认。
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    验证已删除的文件。 

@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508870"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文搜索的行为更改
   本主题介绍全文搜索中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
@@ -68,8 +68,8 @@ ms.locfileid: "49461012"
   
 |**术语**|**以前的断字符和词干分析器的结果**|**新断字符和词干分析器的结果**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *（其中字词为无效英文字符）*|‘jěˊÿｑℭžl’|je yq zl|  
-|table's|table’s<br /><br /> 表|table’s|  
+|jěˊÿqℭžl<br /><br /> *（其中字词为无效英文字符）*|jěˊÿqℭžl|je yq zl|  
+|table's|table's<br /><br /> 表|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v z *（其中，v 和 z 为干扰词）*|*（无结果）*|v z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> USD|$100 000 USD<br /><br /> nn100000usd|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461012"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 中全文搜索中的行为更改  
  在[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和更高版本中，全文引擎作为数据库服务集成到关系数据库作为服务器查询和存储引擎基础结构的一部分。 新的全文搜索体系结构可实现以下目的：  
   
--   集成的存储和管理-全文搜索现在直接与的固有存储和管理功能集成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并且 MSFTESQL 服务不再存在。  
+-   集成的存储和管理全文索引搜索现直接与集成的固有存储和管理功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并且 MSFTESQL 服务不再存在。  
   
     -   全文索引存储在数据库文件组内部，而不是在文件系统中。 对数据库执行管理操作（如创建备份）会自动影响其全文索引。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461012"
         > [!NOTE]  
         >  指定全文目录的 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] DDL 语句可正常运行。  
   
--   集成的查询处理 - 新的全文搜索查询处理器是数据库引擎的一部分，并与 SQL Server 查询处理器完全集成。 这表示查询优化器将识别全文查询谓词，并尽可能高效地自动执行它们。  
+-   集成的查询处理的新全文搜索查询处理器是数据库引擎的一部分，并与 SQL Server 查询处理器完全集成。 这表示查询优化器将识别全文查询谓词，并尽可能高效地自动执行它们。  
   
--   增强的管理和故障排除 - 集成的全文搜索提供的工具可以帮助您分析搜索结构，例如全文索引、给定断字符的输出和非索引字配置等。  
+-   增强的管理和故障排除-集成全文搜索提供了工具来帮助您分析搜索结构，例如全文索引、 给定的断字符、 非索引字配置等的输出。  
   
 -   非索引字和非索引字表已替代干扰词和干扰词文件。 非索引字表是一种数据库对象，有助于简化非索引字的可管理性任务，并提高不同服务器实例和环境之间的完整性的一个数据库对象。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b0bb058db269dd052410b9326eeec10de5aa7d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b1175d43e0c4afcfb1b8d166f6ab7854d8c7c10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052388"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773096"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目标编辑器（“映射”页）
   使用 **“SAP BW目标编辑器”** 的 **“映射”** 页将输入列映射到目标列。  
@@ -78,7 +77,7 @@ ms.locfileid: "48052388"
  查看每个可用目标列，而不管是否已对该列进行映射。  
   
 ## <a name="see-also"></a>请参阅  
- [SAP BW 目标编辑器&#40;连接管理器页&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目标编辑器（“连接管理器”页）](sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 目标编辑器（“错误输出”页）](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 目标编辑器（“高级”页）](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW 的 F1 帮助](../microsoft-connector-for-sap-bw-f1-help.md)  

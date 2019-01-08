@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 创建 SQL Server 凭据 |Microsoft Docs
+title: 第 3 课：创建 SQL Server 凭据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7178e1fb1e405dd013387ef97a6a670a0a5c3474
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524925"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>第 3 课：创建 SQL Server 凭据
   在本课中，您将创建凭据以存储用于访问 Windows Azure 存储帐户的安全信息。  
@@ -26,7 +26,7 @@ ms.locfileid: "48211577"
  有关凭据的常规信息，请参阅[凭据&#40;数据库引擎&#41;](security/authentication-access/credentials-database-engine.md)。  
   
 > [!IMPORTANT]  
->  创建 SQL Server 凭据，如下所述的要求是特定于[在 Windows Azure 中的 SQL Server 数据文件](databases/sql-server-data-files-in-microsoft-azure.md)功能。 在 Azure 存储中创建备份过程的凭据的信息，请参阅[第 2 课： 创建 SQL Server 凭据](../tutorials/lesson-2-create-a-sql-server-credential.md)。  
+>  创建 SQL Server 凭据，如下所述的要求是特定于[在 Windows Azure 中的 SQL Server 数据文件](databases/sql-server-data-files-in-microsoft-azure.md)功能。 在 Azure 存储中创建备份过程的凭据的信息，请参阅[第 2 课：创建 SQL Server 凭据](../tutorials/lesson-2-create-a-sql-server-credential.md)。  
   
  若要创建 SQL Server 凭据，请执行以下步骤：  
   
@@ -36,14 +36,14 @@ ms.locfileid: "48211577"
   
 3.  在“标准”工具栏上，单击“新建查询”。  
   
-4.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。 以下语句将创建一个 SQL Server 凭据以存储您的存储容器的共享访问证书。  
+4.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。 下面的语句将创建 SQL Server 凭据以存储你的存储容器的共享访问证书。  
   
     ```tsql  
   
     USE master  
-    CREATE CREDENTIAL credentialname – this name should match the container path and it must start with https.   
+    CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
        WITH IDENTITY='SHARED ACCESS SIGNATURE', -- this is a mandatory string and do not change it.   
-       SECRET = 'sharedaccesssignature' –- this is the shared access signature key that you obtained in Lesson 2.   
+       SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in Lesson 2.   
     GO  
   
     ```  
@@ -60,6 +60,6 @@ ms.locfileid: "48211577"
   
  **下一课：**  
   
- [第 4 课：在 Microsoft Azure 存储中创建数据库](lesson-3-database-backup-to-url.md)  
+ [第 4 课：在 Windows Azure 存储中创建数据库](lesson-3-database-backup-to-url.md)  
   
   

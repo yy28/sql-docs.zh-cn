@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
@@ -15,12 +15,12 @@ ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54942936f01c7702432b531a17566caa05fa8ecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812530"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
   您可以选择工具箱中的项、文本和控件并将其拖至窗体、页和设计器，也可以将这些项从上述源位置拖回到工具箱中，以备将来再次使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，可以将任务拖到“维护计划”上。  

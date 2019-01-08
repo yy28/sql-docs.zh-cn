@@ -1,5 +1,5 @@
 ---
-title: 导入数据挖掘项目使用 Analysis Services 导入向导 |Microsoft 文档
+title: 导入数据挖掘项目使用 Analysis Services 导入向导 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85c2dcce84447c1a6c9d3baa3dcd99cd01e877bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52e98d6916b66c4ab26b2791d023d25bffc4cab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525501"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 导入向导导入数据挖掘项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34014984"
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>从现有数据挖掘项目导入数据源、挖掘结构和挖掘模型  
  在使用模板“从服务器导入（多维和数据挖掘）项目”时，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 会创建一个新的数据挖掘项目，然后从指定的数据挖掘项目复制元数据。 该新项目包含与从中进行导入的 ssASnoversion 数据库相同的数据源、数据源视图、挖掘结构和挖掘模型。 但是，在您更新特定属性并处理对象之前将无法使用该项目，如下所述：  
   
--   数据本身不会从源服务器复制到新数据挖掘项目 - 仅导入数据源和数据源视图的定义。 因此，在完成导入过程并创建对象后，您必须通过定型挖掘结构和依赖模型来用数据填充对象。 可以在数据挖掘设计器中使用命令 **“全部处理”** 来定型模型和结构。  
+-   数据本身不从从源服务器复制到新的数据挖掘项目仅导入的数据源和数据源视图的定义。 因此，在完成导入过程并创建对象后，您必须通过定型挖掘结构和依赖模型来用数据填充对象。 可以在数据挖掘设计器中使用命令 **“全部处理”** 来定型模型和结构。  
   
 -   如果您导入的是已在早期版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建的项目，则数据源可能会使用项目要导入到的服务器上未安装的访问接口。 如果处理导入的挖掘结构时出错，请右键单击每个数据源并选择“打开设计器”以编辑连接字符串和查看提供程序属性。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34014984"
   
      这将自动使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]打开新对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [项目属性](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

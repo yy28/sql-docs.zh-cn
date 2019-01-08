@@ -1,30 +1,31 @@
 ---
-title: 在云中的 SQL Server 入门 |Microsoft Docs
+title: 入门 （Linux) 上云中的 SQL Server
+titleSuffix: SQL Server
 description: 本快速入门介绍如何在 Linux 中所选云上运行 SQL Server。
-author: annashres
-ms.author: annashres
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682975"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160535"
 ---
-# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>快速入门： 在云中运行 SQL Server
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入门：在云中运行 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 在此快速入门中，将 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 或所选的云环境中的 Ubuntu 上安装 SQL Server。 转到[预配 Linux SQL Server 虚拟机在 Azure 门户中](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)在 Azure 中的 Linux 上运行 SQL Server。
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> 如果您选择运行 SQL Server 的付费的版本，然后您需要自带许可 (BYOL)。
 
 ## <a name="amazon-web-services"></a>Amazon Web 服务
 1.  使用至少 2 GB 的内存从 marketplace 中创建 Linux AMI 
@@ -64,4 +65,4 @@ ms.locfileid: "47682975"
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  为远程连接配置： 
     * 转到[防火墙规则](https://console.cloud.google.com/networking/firewalls)
-    * 添加入站的规则以允许 SQL Server 在其侦听的端口上的流量 (默认 tcp: 1433年)
+    * 添加入站的规则以允许 SQL Server 在其侦听的端口上的流量 (默认 tcp:1433)

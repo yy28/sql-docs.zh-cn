@@ -11,12 +11,12 @@ ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8bc8f0d48b2f439b421f205187343b5ca0e2f010
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526663"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>配置 PowerPivot 服务帐户
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装包括支持服务器操作的两个服务。 **SQL Server Analysis Services (PowerPivot)** 服务是一种 Windows 服务，提供应用程序服务器上的 PowerPivot 数据处理和查询支持。 当您在 SharePoint 集成模式下安装 Analysis Services 时，在 SQL Server 安装期间始终为此服务指定登录帐户。  
@@ -41,7 +41,7 @@ ms.locfileid: "48080187"
   
  [故障排除：手动授予管理权限](#updatemanually)  
   
- [故障排除：解决由于管理中心或 SharePoint Foundation Web 应用程序服务密码过期而导致的 HTTP 503 错误](#expired)  
+ [故障排除：解决 HTTP 503 错误由于密码过期管理中心或 SharePoint Foundation Web 应用程序服务](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (PowerPivot) 实例的过期的密码  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48080187"
   
 |要求|Description|  
 |-----------------|-----------------|  
-|设置要求|PowerPivot 系统服务是服务器场中的共享资源，在您创建服务应用程序时变得可用。 在创建服务应用程序时，必须指定服务应用程序池。 可以通过两种方式指定应用程序池：使用 PowerPivot 配置工具或通过 PowerShell 命令。<br /><br /> 您可能已配置了应用程序池标识以便基于唯一帐户运行。 但是，如果您没有这样做，请考虑立即将其更改为基于不同的帐户运行。|  
+|设置要求|PowerPivot 系统服务是服务器场中的共享资源，在您创建服务应用程序时变得可用。 在创建服务应用程序时，必须指定服务应用程序池。 可以通过两种方式指定应用程序池：使用 PowerPivot 配置工具或通过 PowerShell 命令。<br /><br /> 您可能已配置了应用程序池标识以便基于唯一帐户运行。 但是，如果不这样做，请考虑立即将其更改为不同帐户下运行。|  
 |域用户帐户要求|应用程序池标识必须是 Windows 域用户帐户。 禁止使用内置计算机帐户（如 Network Service 或 Local Service）。|  
 |权限要求|此帐户不需要计算机上的本地系统管理员权限。 但是，该帐户对安装在同一计算机上的本地 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 必须具有 Analysis Services 系统管理员权限。 将由 SQL Server 安装程序或当您在管理中心中设置或更改应用程序池标识时自动授予这些权限。<br /><br /> 管理权限是用于将查询转发到 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]所必需的。 在监视运行状况、关闭处于非活动状态的会话和侦听跟踪事件时也需要这些权限。<br /><br /> 该帐户必须对 PowerPivot 服务应用程序数据库具有连接、读取和写入权限。 在创建应用程序时将自动授予这些权限，并且在管理中心中更改权限和密码时将自动更新这些权限。<br /><br /> 在检索文件前 PowerPivot 服务应用程序将检查 SharePoint 用户是否被授权查看数据，但它不模拟用户。 没有针对模拟的权限要求。|  
 |扩展要求|无。|  
@@ -160,7 +160,7 @@ ms.locfileid: "48080187"
   
     1.  右键单击应用程序池名称并选择“高级设置”。  
   
-    2.  选择“标识”  ，然后单击 ... 按钮打开“应用程序池标识”对话框。  
+    2.  选择**标识**单击...按钮以打开应用程序池标识对话框。  
   
     3.  单击 **“设置”**。  
   

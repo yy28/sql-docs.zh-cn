@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066837"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527728"
 ---
 # <a name="create-statistics"></a>创建统计信息
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为表或索引视图的一个或多个列创建查询优化统计信息。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息。  
@@ -34,7 +34,7 @@ ms.locfileid: "48066837"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建统计信息，请使用：**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48066837"
      以下属性显示在“新建表table_name的统计信息”对话框的“筛选器”页面上。  
   
      **筛选表达式**  
-     定义要将哪些数据行包含在筛选的统计信息中。 例如，使用 IPv4 地址 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  在“新建表table_name的统计信息”对话框的“常规”页面上，单击“添加”。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48066837"
   
 #### <a name="to-create-statistics"></a>创建统计信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

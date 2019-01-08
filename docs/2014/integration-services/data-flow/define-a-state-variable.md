@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811629"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
   本过程介绍如何定义用于存储 CDC 状态的包变量。  
@@ -50,10 +49,10 @@ ms.locfileid: "48072559"
 |-----------|-----------------|  
 |(INITIAL)|这是在当前 CDC 组上运行任何包之前的初始状态。 这也是 CDC 状态为空时的状态。|  
 |ILSTART（初始加载已开始）|这是初始加载包已开始、`MarkInitialLoadStart` 操作调用 CDC 控制任务后时的状态。|  
-|ILEND（初始加载已结束）|在初始加载包成功结束时，这是状态后`MarkInitialLoadEnd`操作调用 CDC 控制任务。|  
-|ILUPDATE（初始加载更新）|这是在初始加载后仍在处理初始处理范围期间运行滴送更新包时的状态。 这是之后`GetProcessingRange`操作调用 CDC 控制任务。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
+|ILEND（初始加载已结束）|这是初始加载包已成功结束、`MarkInitialLoadEnd` 操作调用 CDC 控制任务后时的状态。|  
+|ILUPDATE（初始加载更新）|这是在初始加载后仍在处理初始处理范围期间运行滴送更新包时的状态。 这是 `GetProcessingRange` 操作调用 CDC 控制任务后的状态。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
 |TFEND（滴送更新已结束）|这是常规 CDC 运行应该出现的状态。 它指示前一次运行已成功完成，可以开始具有新的处理范围的新一轮运行。|  
-|TFSTART|这是在非初始运行滴送更新包时，状态后`GetProcessingRange`操作调用 CDC 控制任务。<br /><br /> 这表示常规 CDC 运行已启动但尚未完成或尚未完成，完全 (`MarkProcessedRange`)。|  
+|TFSTART|这是在非初始运行滴送更新包时、`GetProcessingRange` 操作调用 CDC 控制任务后的状态。<br /><br /> 这指示已启动常规 CDC 运行，但运行未完成或未完全结束 (`MarkProcessedRange`)。|  
 |TFREDO（重新处理滴送更新）|这是在 TFSTART 之后执行 `GetProcessingRange` 时的状态。 这指示上次运行未成功完成。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
 |ERROR|CDC 组处于 ERROR 状态。|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48072559"
  如果您不将该 CDC 控制任务用于“自动状态持久化”，则必须从持久性存储区中加载该变量值，在该持久性存储区中，在上次包运行时保存了该变量值并且在当前处理范围完成后该变量值将写回持久性存储区。  
   
 ## <a name="see-also"></a>请参阅  
- [CDC 控制任务](../control-flow/cdc-control-task.md)   
- [CDC 控制任务编辑器](../cdc-control-task-editor.md)  
+ [CDC Control Task](../control-flow/cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

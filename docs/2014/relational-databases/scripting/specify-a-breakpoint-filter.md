@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219567"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328707"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
   断点筛选器对断点进行限制，使其仅对指定的计算机、操作系统进程和线程执行操作。 断点筛选器通常在调试并行应用程序时使用。  
@@ -40,9 +38,9 @@ ms.locfileid: "48219567"
   
     -   `MachineName` 是运行数据库引擎实例的计算机。  
   
-    -   `ProcessID`和`ProcessName`是运行数据库引擎实例的操作系统进程。  
+    -   `ProcessID` 和 `ProcessName` 是运行数据库引擎实例的操作系统进程。  
   
-    -   `ThreadID` 并`ThreadName`是运行的操作系统线程[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理、 过程或函数的数据库引擎实例中。  
+    -   `ThreadID` 和 `ThreadName` 是在数据库引擎实例中运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、过程或功能的操作系统线程。  
   
 3.  单击 **“确定”** 实施更改，或单击 **“取消”** 退出而不应用更改。  
   
@@ -50,5 +48,3 @@ ms.locfileid: "48219567"
  [指定断点条件](specify-a-breakpoint-condition.md)   
  [指定命中计数](specify-a-hit-count.md)   
  [指定断点操作](specify-a-breakpoint-action.md)  
-  
-  

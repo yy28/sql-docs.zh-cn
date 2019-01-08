@@ -14,12 +14,12 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7990c1c8524063c16b44464828900450d5241ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777871"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529332"
 ---
 # <a name="using-arrays-of-parameters"></a>使用参数的数组
 若要使用的参数，应用程序调用数组**SQLSetStmtAttr**与*属性*参数则 SQL_ATTR_PARAMSET_SIZE 指定数量的参数集。 它将调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAMS_PROCESSED_PTR 指定驱动程序可以在其中返回集的处理，参数数量的变量的地址的自变量其中包括错误设置。 它将调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAM_STATUS_PTR 为指向数组中要返回其参数值的每一行的状态信息的自变量。 该驱动程序将这些地址存储在它保留为该语句的结构。  
@@ -35,7 +35,7 @@ ms.locfileid: "47777871"
   
 -   在运行时检查支持的参数的数组。 如果可以将 SQL_ATTR_PARAMSET_SIZE 语句属性设置为一个值大于 1，驱动程序支持参数的数组。 通用应用程序和垂直应用程序通常检查的参数的数组的支持在运行时。  
   
- 可通过调用确定的行计数和参数化执行中的结果集的可用性**SQLGetInfo** SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 有关**插入**，**更新**，并**删除**语句，SQL_PARAM_ARRAY_ROW_COUNTS 选项指示是否单独的行计数 （一个用于每个参数集）可用 (SQL_PARC_BATCH) 或是否行数将累加起来，为一个 (SQL_PARC_NO_BATCH)。 有关**选择**语句，SQL_PARAM_ARRAY_SELECTS 选项指示结果集是否可用于每组参数 (SQL_PAS_BATCH) 或只有一个结果集是否可用 (SQL_PAS_NO_BATCH)。 如果该驱动程序不允许结果集 – 生成语句，以使用参数数组执行，SQL_PARAM_ARRAY_SELECTS 返回 SQL_PAS_NO_SELECT。 是否可以与其他类型的语句使用参数的数组，特别是因为这些语句中的参数使用数据源特定于和不遵循 ODBC SQL 语法，它是数据源特定于。  
+ 可通过调用确定的行计数和参数化执行中的结果集的可用性**SQLGetInfo** SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 有关**插入**，**更新**，并**删除**语句，SQL_PARAM_ARRAY_ROW_COUNTS 选项指示是否单独的行计数 （一个用于每个参数集）可用 (SQL_PARC_BATCH) 或是否行数将累加起来，为一个 (SQL_PARC_NO_BATCH)。 有关**选择**语句，SQL_PARAM_ARRAY_SELECTS 选项指示结果集是否可用于每组参数 (SQL_PAS_BATCH) 或只有一个结果集是否可用 (SQL_PAS_NO_BATCH)。 如果该驱动程序不允许结果集生成语句，以使用参数数组执行，SQL_PARAM_ARRAY_SELECTS 返回 SQL_PAS_NO_SELECT。 是否可以特别是因为这些语句中的参数使用数据源特定于和不遵循 ODBC SQL 语法与其他类型的语句，使用参数的数组，它是数据源特定于。  
   
  可以使用指向 SQL_ATTR_PARAM_OPERATION_PTR 语句属性数组忽略的参数的行。 如果数组的元素设置为 SQL_PARAM_IGNORE，从排除的与该元素对应的参数集**SQLExecute**或**SQLExecDirect**调用。 指向由 SQL_ATTR_PARAM_OPERATION_PTR 属性数组分配和填充应用程序和驱动程序读取。 如果提取的行用作输入参数，则行状态数组的值可以使用参数操作数组中。  
   

@@ -13,12 +13,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166377"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523468"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 窗体编辑器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“KPI”选项卡上的“KPI 窗体编辑器”窗格，创建或修改所选的关键绩效指标 (KPI)。  
@@ -61,10 +61,10 @@ ms.locfileid: "48166377"
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  
   
- 建议此表达式返回 –1 和 1 之间的十进制数字。 数字越小表示情况越差，数字越大表示情况越好。  
+ 建议此表达式返回介于-1 和 1 之间的十进制数。 数字越小表示情况越差，数字越大表示情况越好。  
   
 > [!NOTE]  
->  可能有小于 –1 或大于 1 的值，但是它们可能无法被第三方客户端应用程序正确解释。  
+>  -1 或大于 1 的值可能会但可能无法正确解释通过第三方客户端应用程序。  
   
  **趋势**  
  展开此项可以查看“走向图”和“走向表达式”选项。  
@@ -80,10 +80,10 @@ ms.locfileid: "48166377"
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  
   
- 走向表达式可以基于在给定的业务上下文中有意义的任何基于时间的条件。 建议此表达式返回 –1 和 1 之间的十进制数字。 较小的数字表示随着时间的推移情况会越来越差，较大的数字表示随着时间的推移情况会越来越好。  
+ 走向表达式可以基于在给定的业务上下文中有意义的任何基于时间的条件。 建议此表达式返回介于-1 和 1 之间的十进制数。 较小的数字表示随着时间的推移情况会越来越差，较大的数字表示随着时间的推移情况会越来越好。  
   
 > [!NOTE]  
->  可能有小于 –1 或大于 1 的值，但是它们可能无法被第三方客户端应用程序正确解释。  
+>  -1 或大于 1 的值可能会但可能无法正确解释通过第三方客户端应用程序。  
   
  **附加属性**  
  展开此项可以查看“显示文件夹”、“父级 KPI”、“当前时间成员”、“权重”和“说明”选项。  
@@ -112,7 +112,7 @@ ms.locfileid: "48166377"
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  
   
- **Description**  
+ **说明**  
  键入 KPI 的说明（可选）。  
   
 ## <a name="see-also"></a>请参阅  

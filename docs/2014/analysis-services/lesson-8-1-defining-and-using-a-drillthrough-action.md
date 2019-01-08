@@ -11,12 +11,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545314"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定义和使用钻取操作
   如果按事实维度来维度化事实数据，而不正确筛选查询返回的数据，则可能导致查询速度变慢。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
@@ -55,7 +55,7 @@ ms.locfileid: "48090677"
   
 8.  在中**最大行数**框中，键入`10`。  
   
-9. 在中**标题**框中，键入`Drillthrough to Order Details…`。  
+9. 在中**标题**框中，键入`Drillthrough to Order Details...`。  
   
      这些设置将限制返回的行数，并指定在客户端应用程序菜单中将出现的标题。 下图显示了“附加属性”框中的这些设置。  
   

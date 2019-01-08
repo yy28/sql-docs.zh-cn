@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdatatype_mappings
@@ -19,12 +18,12 @@ ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00df6d73813fea7efebb3fa4db3c5e65187f2109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5af1233e81c996e98287a637e01ad1d249671303
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636695"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785089"
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47636695"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|是 DBMS 的名称。 以下是可能的值及其说明。<br /><br /> **MSSQLSERVER**： 目标数据库为 SQL Server 数据库。<br />**ORACLE**： 目标数据库为 Oracle 数据库。<br />**DB2**： 目标为 IBM DB2 数据库。<br />**SYBASE**： 目标为 Sybase 数据库。|  
+|**dbms_name**|**nvarchar(128)**|是 DBMS 的名称。 以下是可能的值及其说明。<br /><br /> **MSSQLSERVER**:目标为 SQL Server 数据库。<br />**ORACLE**:目标为 Oracle 数据库。<br />**DB2**:目标为 IBM DB2 数据库。<br />**SYBASE**:目标为 Sybase 数据库。|  
 |**sql_type**|**nvarchar(128)**|是 SQL Server 数据类型。|  
 |**dest_type**|**nvarchar(128)**|为非 SQL Server 数据类型的名称。|  
 |**dest_prec**|**bigint**|为非 SQL Server 数据类型的精度。|  

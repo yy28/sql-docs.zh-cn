@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672946"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209546"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51672946"
   
 |列名 |数据类型 |Description |  
 |-----------------|---------------|-----------------|  
-|**host_platform** |**nvarchar(256)** |类型的操作系统： Windows 或 Linux |
+|**host_platform** |**nvarchar(256)** |操作系统的类型：Windows 或 Linux |
 |**host_distribution** |**nvarchar(256)** |操作系统的说明。 |
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统版本（版本号） 有关值和说明的列表，请参阅[操作系统版本 (Windows)](/windows/desktop/SysInfo/operating-system-version)。 <br> 对于 Linux，则返回空字符串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 操作系统的 Service Pack 级别。 <br> 对于 Linux，则返回空字符串。 |  
@@ -46,10 +46,10 @@ ms.locfileid: "51672946"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
 `SELECT`上的权限`sys.dm_os_host_info`授予`public`默认情况下的角色。 如果吊销，则需要`VIEW SERVER STATE`服务器上的权限。   
  
->  [!CAUTION]
+> [!CAUTION]
 >  从版本[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.3[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]版本 17 需要`SELECT`权限`sys.dm_os_host_info`若要连接到[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 如果`SELECT`从撤销权限`public`，仅有的登录名`VIEW SERVER STATE`权限可以使用最新版本的 SSMS 连接。 (其他工具，如`sqlcmd.exe`可以连接而无需`SELECT`权限`sys.dm_os_host_info`。)
 
   

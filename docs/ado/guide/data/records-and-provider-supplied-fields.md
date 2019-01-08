@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538054"
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 当[记录](../../../ado/reference/ado-api/record-object-ado.md)打开对象，其源可以是一种开放的当前行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，绝对 URL 或打开与结合使用的相对 URL[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象.  
@@ -41,7 +41,7 @@ ms.locfileid: "47679965"
 ## <a name="special-fields-for-document-source-providers"></a>有关文档的特殊字段源代码提供程序  
  一种特殊类的提供程序，称为*记录源提供程序*、 管理文件夹和文档。 当**记录**对象表示一种文档或者**记录集**对象表示文档的文件夹、 文档源提供程序填充这些对象包含一组独特的描述字段特征的文档而是实际的文档本身。 通常情况下，一个字段包含的引用**Stream**表示的文档。  
   
- 这些字段构成资源**记录**或**记录集**，并且支持它们中的特定提供程序列出[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)。  
+ 这些字段构成资源**记录**或**记录集**列出支持这些中的特定提供程序和[附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)。  
   
  两个常量索引**字段**的资源集合**记录**或**记录集**检索两个常用的字段。 **字段**对象[值](../../../ado/reference/ado-api/value-property-ado.md)属性返回所需的内容。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47679965"
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|只读。 指示资源，这是 PARENTNAME 和 PARSENAME 的串联的绝对 URL。|  
 |RESOURCE_ISHIDDEN|adBoolean|如果资源处于隐藏状态，则为 true。 除非显式创建行集的命令选择的行，其中 RESOURCE_ISHIDDEN 是 True，则会不返回任何行。|  
 |RESOURCE_ISREADONLY|adBoolean|如果资源是只读的则为 true。 尝试打开此资源具有 DBBINDFLAG_WRITE 和将因 DB_E_READONLY 失败。 即使在仅进行读取打开的资源时，可以编辑此属性。|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|指示文档最有可能使用 — 例如，某个律师的简短。 这可能对应于用于创建文档的 Office 模板。|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|指示文档最有可能使用-例如，某个律师的简短。 这可能对应于用于创建文档的 Office 模板。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|指示文档，如指示格式的 MIME 类型"`text/html`"。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|指示在其中存储内容的语言。|  
 |RESOURCE_CREATIONTIME|adFileTime|只读。 指示 FILETIME 结构，其中包含该资源的创建的时间。 该时间以协调世界时 (UTC) 格式报告。|  

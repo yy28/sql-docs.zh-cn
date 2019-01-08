@@ -1,5 +1,5 @@
 ---
-title: 创建和管理透视 |Microsoft 文档
+title: 创建和管理 Analysis Services 表格模型中的透视 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56c8f35aa15debbc064cacd73205234377224a28
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 962b6b90de6d95107d1a4cdd3484a44205afb630
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040591"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071844"
 ---
 # <a name="create-and-manage-perspectives"></a>创建和管理透视 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,19 +31,19 @@ ms.locfileid: "34040591"
   
 ###  <a name="bkmk_edit"></a> 编辑透视  
   
--   若要修改某一透视，请选中和取消选中透视的列中的字段，这将从透视中添加和删除字段对象。  
+-   若要修改某一透视，选中或取消选中透视的列，这将添加从透视中删除字段对象中的字段。  
   
 ###  <a name="bkmk_rename"></a> 重命名透视  
   
--   将鼠标指针悬停在透视的列标题（透视的名称）上时，将出现“重命名”按钮。 若要重命名该透视，请单击 **“重命名”**，然后输入新名称或编辑现有名称。  
+-   当鼠标悬停在透视的列标题 （透视的名称） 上**重命名**按钮将出现。 若要重命名该透视，请单击 **“重命名”**，然后输入新名称或编辑现有名称。  
   
 ###  <a name="bkmk_delete"></a> 删除透视  
   
--   将鼠标指针悬停在透视的列标题（透视的名称）上时，将出现“删除”按钮。 若要删除透视，请单击 **“删除”** 按钮，然后在确认窗口中单击 **“是”** 。  
+-   当鼠标悬停在透视的列标题 （透视的名称） 上**删除**按钮将出现。 若要删除透视，请单击 **“删除”** 按钮，然后在确认窗口中单击 **“是”** 。  
   
 ###  <a name="bkmk_copy"></a> 复制透视  
   
--   在您将鼠标指针悬停在透视的列标题上时， **“复制”** 按钮将出现。 若要创建该透视的副本，请单击 **“复制”** 按钮。 所选透视的副本将作为新透视添加到现有透视的右侧。 新的透视将继承复制的透视的名称，并且“复制”批注将追加到名称的末尾。 例如，如果创建 *Sales* 透视的副本，则新的透视将称作 *Sales – Copy*。  
+-   当您将鼠标悬停在透视的列标题**复制**按钮将出现。 若要创建该透视的副本，请单击 **“复制”** 按钮。 所选透视的副本将作为新透视添加到现有透视的右侧。 新的透视将继承复制的透视的名称，并且“复制”批注将追加到名称的末尾。 例如，如果一份*销售*创建角度来看，新的透视将称作*Sales-Copy*。  
   
 ## <a name="see-also"></a>另请参阅  
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   

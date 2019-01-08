@@ -16,12 +16,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170283"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518108"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>预测（Excel 表分析工具）
   ![预测的按钮在表分析工具功能区](media/tat-forecast.gif "预测表分析工具功能区中的按钮")  
@@ -40,7 +40,7 @@ ms.locfileid: "48170283"
   
 2.  单击**预测**上**分析**选项卡。  
   
-3.  指定要预测的列。 该工具会自动选择数据中具有可预测数据类型（即连续的数值数据）的列。 如果某些具有连续数值数据的列包含许多 null 值或零值，由于缺少数据可能影响结果，该工具可能不会选择这些列。 如果发生这种情况，您可以通过使用解决数据[重新标记&#40;SQL Server 数据挖掘外接程序&#41;](relabel-sql-server-data-mining-add-ins.md)工具。  
+3.  指定要预测的列。 该工具会自动选择的列中具有可预测的数据类型的数据-即，连续数值数据。 如果某些具有连续数值数据的列包含许多 null 值或零值，由于缺少数据可能影响结果，该工具可能不会选择这些列。 如果发生这种情况，您可以通过使用解决数据[重新标记&#40;SQL Server 数据挖掘外接程序&#41;](relabel-sql-server-data-mining-add-ins.md)工具。  
   
 4.  指定包含日期、时间或其他序列标识符的列。 如果您选择的选项**\<无时间戳 >** 该工具将创建一系列基于的源数据中的行的序列。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48170283"
 ### <a name="requirements"></a>要求  
  您预测的列必须包含连续的数值数据，如货币或其他数字。  
   
- 如果可能，您的数据还应包含一列，该列的内容是时间或日期序列。 可以使用数字序列 (1,2,3….) 替代日期和时间数据。 不过，序列列中的值必须是唯一的。 如果出错**预测**工具发现序列列中的重复值。  
+ 如果可能，您的数据还应包含一列，该列的内容是时间或日期序列。 而不是日期和时间数据，可以使用数字序列 (...1 2、 3)。 不过，序列列中的值必须是唯一的。 如果出错**预测**工具发现序列列中的重复值。  
   
  不能使用预测日期**预测**工具。 虽然不会出现错误，但此算法没有设计为将日期用作可预测值。  
   

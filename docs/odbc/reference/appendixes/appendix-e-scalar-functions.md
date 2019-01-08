@@ -1,5 +1,5 @@
 ---
-title: 附录 e： 标量函数 |Microsoft Docs
+title: 附录 E：标量函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631855"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540511"
 ---
 # <a name="appendix-e-scalar-functions"></a>附录 E：标量函数
 ODBC 指定以下类型的标量函数，有关每个相应部分的本附录中提供这些函数类型的详细信息。 函数说明包含关联的语法。  

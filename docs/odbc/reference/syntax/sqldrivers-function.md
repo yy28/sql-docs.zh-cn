@@ -20,16 +20,16 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727529"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214728"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 函数
 **符合性**  
- 版本引入了： ODBC 2.0 标准符合性： ODBC  
+ 版本引入了：ODBC 2.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLDrivers**列出驱动程序说明和驱动程序属性关键字。 执行此函数仅由驱动程序管理器。  

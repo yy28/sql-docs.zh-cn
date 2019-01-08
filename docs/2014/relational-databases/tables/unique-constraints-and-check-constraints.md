@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
@@ -14,12 +13,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8800491b0c4cb576b7255c1be0648b87daebfcc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082307"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772279"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
   UNIQUE 约束和 CHECK 约束是可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中强制数据完整性的两种类型的约束。 这些是重要的数据库对象。  
@@ -46,7 +45,7 @@ ms.locfileid: "48082307"
   
  可以将多个 CHECK 约束应用于单个列。 还可以通过在表级创建 CHECK 约束，将一个 CHECK 约束应用于多个列。 例如，多列 CHECK 约束可用于确认 **country_region** 列值为 **USA** 的任意行是否在 **state** 列中还有一个由两个字符构成的值。 这使得在一个位置可以同时检查多个条件。  
   
- CHECK 约束类似于 FOREIGN KEY 约束，因为可以控制放入列中的值。 但是，它们在确定有效值的方式上有所不同：FOREIGN KEY 约束从其他表获得有效值列表，而 CHECK 约束通过逻辑表达式确定有效值。  
+ CHECK 约束类似于 FOREIGN KEY 约束，因为可以控制放入列中的值。 区别在于确定哪些值是有效的方式：FOREIGN KEY 约束从另一个表，获取有效值的列表，而 CHECK 约束确定有效的值的逻辑表达式。  
   
 > [!CAUTION]  
 >  包括隐式或显式数据类型转换的约束可能会导致某些操作失败。 例如，为表定义的作为分区切换的源的此类约束可能会导致 ALTER TABLE...SWITCH 操作失败。 在约束定义中避免数据类型转换。  

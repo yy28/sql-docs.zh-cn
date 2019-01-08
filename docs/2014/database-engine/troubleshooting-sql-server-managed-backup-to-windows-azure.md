@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120064"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522535"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>排除针对 Microsoft Azure 的 SQL Server 托管备份的故障
   本主题说明可以用来对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]操作期间可能发生的错误进行故障排除的任务和工具。  
@@ -23,7 +23,7 @@ ms.locfileid: "49120064"
 ## <a name="overview"></a>概述  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]已内置检查和故障排除，因此，在许多情况下，由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]进程本身处理内部错误。  
   
- 此类情况的一个示例是删除了备份文件导致日志链中断，从而影响可恢复性 - [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]将找出日志链的中断处并立即安排进行备份。 但是，我们仍建议您监视运行状态，并解决所有需要手动干预的错误。  
+ 这样一种情况的示例是导致中断的日志备份文件的删除链接影响可恢复性-[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]将标识日志链中断和计划的备份，以便立即执行。 但是，我们仍建议您监视运行状态，并解决所有需要手动干预的错误。  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用系统存储过程、系统视图和扩展事件来记录事件和错误。 系统视图和存储过程提供[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置信息、所安排备份的状态以及由扩展事件捕获的错误。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件捕获错误以用于故障排除。 除了记录事件外，SQL Server 智能管理策略还提供运行状态，电子邮件通知作业使用这种状态来提供错误和问题的通知。 有关详细信息请参阅[监视器 SQL Server 托管备份到 Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
@@ -42,43 +42,43 @@ ms.locfileid: "49120064"
 ### <a name="common-causes-of-errors"></a>常见错误原因  
  以下是产生故障的常见错误列表：  
   
-1.  **更改了 SQL 凭据：** 如果凭据的名称由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]已更改或删除，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]将无法再进行备份。 该更改应该应用于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置设置。  
+1.  **更改 SQL 凭据：** 如果凭据的名称由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]发生更改或删除，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]将无法再进行备份。 该更改应该应用于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置设置。  
   
-2.  **更改存储访问密钥值：** 如果为 Windows Azure 帐户中，更改存储密钥值，但使用新值，不更新 SQL 凭据[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]时对存储进行身份验证将失败并且备份将失败数据库配置为使用此帐户。  
+2.  **对存储访问密钥值的更改：** 如果为 Windows Azure 帐户中，更改存储密钥值，但使用新值，不更新 SQL 凭据[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]时对存储进行身份验证将失败，并且无法备份数据库配置为使用此帐户。  
   
-3.  **将更改为 Windows Azure 存储帐户：** 删除或重命名存储帐户没有相应更改 SQL 凭据将导致[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]失败并且没有备份将被移除。 如果删除存储帐户，则务必用有效的存储帐户信息重新配置数据库。 如果重命名了存储帐户或更改了密钥值，请确保这些更改反映在[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用的 SQL 凭据中。  
+3.  **对 Windows Azure 存储帐户的更改：** 删除或重命名存储帐户没有相应更改 SQL 凭据将导致[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]失败并且没有备份将被移除。 如果删除存储帐户，则务必用有效的存储帐户信息重新配置数据库。 如果重命名了存储帐户或更改了密钥值，请确保这些更改反映在[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用的 SQL 凭据中。  
   
-4.  **对数据库属性的更改：** 更改恢复模式或更改名称可能会导致备份失败。  
+4.  **对数据库属性的更改：** 更改恢复模式或更改名称可能导致备份失败。  
   
-5.  **更改恢复模式为：** 如果数据库的恢复模式从完整或大容量日志更改为简单，备份将停止，并通过将跳过该数据库[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 有关详细信息，请参阅[SQL Server 托管备份到 Windows Azure： 互操作性和共存](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+5.  **对恢复模式的更改：** 如果数据库的恢复模式从完整或大容量日志更改为简单，备份将停止，并通过将跳过该数据库[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 有关详细信息，请参阅[SQL Server 托管备份到 Windows Azure:互操作性和共存](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ### <a name="most-common-error-messages-and-solutions"></a>最常见的错误消息和解决方案  
   
 1.  **启用或配置时出错[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     错误：“未能访问存储 URL… 提供有效的 SQL 凭据..." ： 你可能会看到此错误和 SQL 凭据的其他类似错误。  在这种情况下，查看的名称以及 SQL 凭据提供，也存储在 SQL 凭据-存储帐户名称和存储访问密钥的信息并确保它们是最新且有效。  
+     Error:"无法访问存储 URL...提供有效的 SQL 凭据...":您可能会看到此错误和 SQL 凭据的其他类似错误。  在这种情况下，查看的名称以及 SQL 凭据提供，也存储在 SQL 凭据的存储帐户名称和存储访问密钥的信息并确保它们是最新且有效。  
   
-     错误:"... 无法配置数据库...因为它是系统数据库": 你将看到此错误，如果尝试启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]系统数据库。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支持系统数据库备份。  要为系统数据库配置备份，请使用其他 SQL Server 备份计术，如维护计划。  
+     错误:"...无法配置数据库...因为它是系统数据库":你将看到此错误，如果尝试启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]系统数据库。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支持系统数据库备份。  要为系统数据库配置备份，请使用其他 SQL Server 备份计术，如维护计划。  
   
-     错误:"... 提供保持期..." ： 如果你没有指定保留期的数据库或实例，您在第一次配置这些值时，你可能会看到关于保持期的错误。 如果您提供的不是 1 到 30 之间的值，可能也会看到错误。 允许对保持期使用的值为 1 到 30 之间的数字。  
+     错误:"...提供保持期...":如果你没有指定保留期的数据库或实例，您在第一次配置这些值时，可能会看到关于保持期的错误。 如果您提供的不是 1 到 30 之间的值，可能也会看到错误。 允许对保持期使用的值为 1 到 30 之间的数字。  
   
 2.  **电子邮件通知错误：**  
   
-     错误:"数据库邮件未启用..." – 如果启用电子邮件通知，但不是在实例上配置数据库邮件，你将看到此错误。 您必须在实例上配置数据库邮件，才能接收关于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]运行状态的通知。 有关如何启用数据库邮件的信息，请参阅[配置数据库邮件](../relational-databases/database-mail/configure-database-mail.md)。 要使用数据库邮件接收通知，您还必须启用 SQL Server 代理。 有关详细信息，请参阅[开始之前](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)。  
+     Error:"数据库邮件未启用..."-如果启用电子邮件通知，但不是在实例上配置数据库邮件，则会看到此错误。 您必须在实例上配置数据库邮件，才能接收关于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]运行状态的通知。 有关如何启用数据库邮件的信息，请参阅[配置数据库邮件](../relational-databases/database-mail/configure-database-mail.md)。 要使用数据库邮件接收通知，您还必须启用 SQL Server 代理。 有关详细信息，请参阅[开始之前](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)。  
   
      以下是可能看到的与电子邮件通知关联的错误编号的列表：  
   
-    -   错误号: 45209  
+    -   错误号:45209  
   
-    -   错误号: 45210  
+    -   错误号:45210  
   
-    -   ErrorNumber：45211  
+    -   错误号:45211  
   
 3.  **连接错误：**  
   
-    -   **与 SQL 连接相关的错误：** 连接到 SQL Server 实例的问题时，发生这些错误。 扩展事件通过管理通道公开这些类型的错误。 以下是两个扩展事件，对于与此类型的连接问题相关的错误，可能看到这些扩展事件：  
+    -   **与 SQL 连接相关的错误：** 连接到 SQL Server 实例的问题时，会发生这些错误。 扩展事件通过管理通道公开这些类型的错误。 以下是两个扩展事件，对于与此类型的连接问题相关的错误，可能看到这些扩展事件：  
   
-         FileRetentionAdminXEvent，其 event_type 为 SqlError。 有关此错误的详细信息，请查看该事件的 error_code、error_message 和 stack_trace。 error_code 是 SqlException 的错误编号。  
+         FileRetentionAdminXEvent，其 event_type 为 SqlError。 有关此错误的详细信息，请查看该事件的 error_code、error_message 和 stack_trace。 Error_code 是 SqlException 的错误号。  
   
          具有以下消息/消息前缀的 SmartBackupAdminXevent：  
   
@@ -101,11 +101,11 @@ ms.locfileid: "49120064"
 ### <a name="troubleshooting-system-issues"></a>排除系统问题  
  以下是系统（SQL Server、SQL Server 代理）有问题的一些场景及其对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的影响：  
   
--   **Sqlservr.exe 停止响应或停止工作时[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]正在运行：** 如果 SQL Server 停止工作，则 SQL 代理正常关闭，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]也将停止，事件将记录 SQL Agent.out 文件中。  
+-   **Sqlservr.exe 停止响应或停止工作时[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]正在运行：** 如果 SQL Server 停止工作，SQL 代理将正常关闭，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]也将停止，事件将记录 SQL Agent.out 文件中。  
   
      如果 SQL Server 停止响应，则在管理通道中记录事件。  事件日志的一个示例：  
   
-     *Sql 错误 (引擎未响应或收到 sqlException: SqlException:*   
+     *Sql 错误 (引擎未响应或收到 sqlException:SqlException:*   
      *错误代码、 消息和堆栈跟踪将会显示在管理通道 xevent，以及某些额外信息，例如：*   
     *"可能正在遇到 SQL Server 的连接问题。在当前迭代中跳过数据库"*  
   

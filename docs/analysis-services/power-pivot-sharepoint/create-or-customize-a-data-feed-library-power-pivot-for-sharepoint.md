@@ -1,5 +1,5 @@
 ---
-title: 创建或自定义数据馈送的库 (Power Pivot for SharePoint) |Microsoft 文档
+title: 创建或自定义数据馈送的库 (Powerpivot for SharePoint) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519099"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>创建或自定义数据馈送库 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021246"
   
 -   在一个中心位置共享和管理数据服务文档。  
   
--   直观地由一个图标来标识数据服务文档，以便你可以轻松区分从同一库中存储的其他文档出服务文档： ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   通过图标直观地标识数据服务文档，以便你可以轻松地从同一库中存储的其他文档中区分出服务文档：![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  数据馈送库始终包含数据服务文档 (.atomsvc) 文件，并且永远不会包含数据馈送本身。 与由静态 XML 数据构成的数据馈送不同，数据服务文档指定根据请求生成馈送的服务或应用程序的 URL，并且为可重复的导入操作提供可重复使用的连接信息。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34021246"
   
 1.  单击该页左上角的 **“网站操作”** 。  
   
-2.  单击 **“其他选项”**。  
+2.  单击**更多选项**...  
   
 3.  在“库”下，单击 **“数据馈送库”**。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34021246"
   
 6.  在“内容类型”的“允许内容类型的管理?”部分中， 单击 **“是”**。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 #### <a name="step-2-add-the-data-service-document-content-type"></a>步骤 2：添加数据服务文档内容类型  
   
@@ -93,7 +93,7 @@ ms.locfileid: "34021246"
   
 4.  在“可用网站内容类型”中，单击 **“数据服务文档”**，然后单击 **“添加”** 将所选内容类型移至“要添加的内容类型”列表中。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 #### <a name="step-3-verify-data-service-document-configuration"></a>步骤 3：验证数据服务文档配置  
   
@@ -105,9 +105,9 @@ ms.locfileid: "34021246"
   
 4.  在“新建文档”上单击向下箭头，然后选择 **“数据服务文档”**。 此时应该显示“新建数据服务文档”页。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [删除 Power Pivot 数据馈送的库](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [删除 Power Pivot 数据馈送库](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Power Pivot 数据馈送](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

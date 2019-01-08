@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507268"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
@@ -83,13 +83,13 @@ Network=dbnmpntw;
 >  由于 Named Pipes 不使用 TCP/IP 重试算法，因此在很多情况下，Named Pipes 连接尝试可能会在连接到镜像数据库之前超时。  
   
 #### <a name="server-attribute"></a>Server 属性  
- 连接字符串必须包含`Server`属性以提供初始伙伴名称，应标识当前主体服务器实例。  
+ 连接字符串必须包含 `Server` 属性以提供初始伙伴名称，该名称应标识当前主体服务器实例。  
   
  标识服务器实例的最简单方法是指定其名称 <server_name>[\\<SQL_Server_instance_name>]。 例如：  
   
  `Server=Partner_A;`  
   
- 或多个  
+ 或  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  如果仅提供了初始伙伴名称，则应用程序开发人员不需要执行任何操作，也不需要编写除了有关如何重新连接的代码之外的任何代码。  
   
 > [!NOTE]  
->  托管的代码应用程序开发人员提供在故障转移伙伴名称`ConnectionString`的`SqlConnection`对象。 有关使用此连接字符串的信息，请参阅 ADO.NET 文档（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 中包含此文档）中的“Database Mirroring Support in the .NET Framework Data Provider for SQL Server”。  
+>  托管代码应用程序开发人员在 `ConnectionString` 对象的 `SqlConnection` 中提供故障转移伙伴名称。 有关使用此连接字符串的信息，请参阅 ADO.NET 文档（ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 中包含此文档）中的“Database Mirroring Support in the .NET Framework Data Provider for SQL Server”。  
   
 #### <a name="example-connection-string"></a>连接字符串示例  
  例如，为了使用 TCP/IP 显式连接到 Partner_A 或 Partner_B 上的 **AdventureWorks** 数据库，使用 ODBC 驱动程序的客户端应用程序可能会提供以下连接字符串：  

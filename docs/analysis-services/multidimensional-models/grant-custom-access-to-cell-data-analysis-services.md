@@ -1,5 +1,5 @@
 ---
-title: 授予自定义单元数据访问权限 (Analysis Services) |Microsoft 文档
+title: 授予对单元数据 (Analysis Services) 的自定义访问权限 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539042"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授予单元数据的自定义访问权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   单元安全性用于允许或拒绝对多维数据集中度量值数据的访问。 下图显示了作为其角色仅允许访问特定度量值的用户进行连接时，数据透视表中允许和拒绝的度量值的组合。 此示例中， **分销商销售额** 和 **分销商总产品成本** 是通过此角色仅可访问的度量值。 所有其他度量值均被隐式拒绝（以下的下一节“允许访问特定度量值”中提供了用于获得此结果的步骤。）  
   
- ![数据透视表显示允许和拒绝的单元格](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "数据透视表显示允许和拒绝的单元格")  
+ ![数据透视表显示允许和拒绝单元格](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "数据透视表显示允许和拒绝单元格")  
   
  单元权限适用于单元内的数据，而不适用于其元数据。 请注意单元如何在查询结果中仍然可见，其值显示为 **#N/A** ，而非实际单元值。 除非客户端应用程序将该值转换，或者通过设置连接字符串中的 Secured Cell Value 属性指定了另一个值，否则在单元中将出现 **#N/A** 值。  
   
- 要完全隐藏单元，则必须对限制可查看的成员：维度、维度属性和维度属性成员。 有关详细信息，请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)。  
+ 若要完全隐藏单元格，则必须对限制成员维度、 维度属性和维度属性成员的可查看。 有关详细信息，请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)。  
   
  作为管理员，你可以指定角色成员是否具有对多维数据集内单元的读取、有条件读取或读/写权限。 授予对单元的权限是允许的最低级别的安全性，因此在开始应用此级别的权限之前，请谨记以下几点：  
   
@@ -74,7 +74,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  在 Excel 中，使用当前角色连接到多维数据集，并选择全部三个度量值以查看单元安全性的影响。 请注意，拒绝集中的度量值是无法访问的，但计算度量值对用户可见。  
   
- ![Excel 表与可用且不可用 cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "可用且不可用 cellls 与 Excel 表")  
+ ![Excel 表与可用和不可用 cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "可用和不可用 cellls 与 Excel 表")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>设置对计算度量值的“有条件读取”权限  
  单元安全性为设置对参与计算的相关单元的权限提供了一个替代，即“有条件读取”。 再次考虑 **分销商毛利润** 示例。 输入前一节提供的同一 MDX 表达式时，此次将其置于“创建角色” | “单元数据”对话框（在“允许根据单元安全性读取单元内容”下方的文本区域内），在 Excel 中查看时，其结果显而易见。 由于 **分销商毛利润** 视 **分销商销售额** 和 **分销商总产品成本**而定，现无法访问毛利润，因为无法访问其组成部分。  
@@ -87,12 +87,12 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="set-readwrite-permissions-on-a-cell"></a>设置对单元的“读/写”权限  
  对单元的“读/写”权限用于启用回写（假设成员具有对多维数据集本身的“读/写”权限）。 授予的单元级权限不能大于授予的多维数据集级权限。 有关详细信息，请参阅 [Set Partition Writeback](../../analysis-services/multidimensional-models/set-partition-writeback.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 生成器（Analysis Services -多维数据）](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [基本 MDX 脚本 & #40;MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [授予处理权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [授予维度的权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [授予维度数据 & #40; 的自定义访问权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予多维数据集或模型权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [基本 MDX 脚本 (MDX)](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [授予维度的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [授予对维度数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

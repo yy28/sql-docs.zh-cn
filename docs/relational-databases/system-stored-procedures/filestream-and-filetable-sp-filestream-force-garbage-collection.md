@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669086"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540296"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>参数  
- **@dbname** = *database_name***'**  
+ **@dbname** = _database_name_  
  指示要运行垃圾回收器的数据库的名称。  
   
 > [!NOTE]  
@@ -83,7 +83,7 @@ sp_filestream_force_garbage_collection
 垃圾回收 (GC) 依赖于日志截断。 因此，如果使用完整恢复模式的数据库上，最近删除了文件，它们是 GC ed 仅在执行这些事务日志部分的日志备份和日志部分标记为不活动之后。 在使用简单恢复模式的数据库之后, 将发生日志截断`CHECKPOINT`发出对数据库。  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 数据库角色中的成员身份。  
   
 ## <a name="examples"></a>示例  

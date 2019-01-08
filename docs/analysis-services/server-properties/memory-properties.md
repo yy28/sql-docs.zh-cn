@@ -1,5 +1,5 @@
 ---
-title: 内存属性 |Microsoft Docs
+title: Analysis Services 内存属性 |Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264877"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071994"
 ---
 # <a name="memory-properties"></a>内存属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "48264877"
 
 下表简要介绍使用频率较高的内存设置（在参考部分中提供了详细信息）。 仅当 Analysis Services 争夺内存与其他应用程序在同一服务器上配置这些设置：
 
-设置 | 描述
+设置 | Description
 --------|------------
 LowMemoryLimit | 对于多维实例，这是阈值下限，达到该阈值时，服务器首先开始释放分配给不常使用的对象的内存。
 VertiPaqMemoryLimit | 对于表格实例，这是阈值下限，达到该阈值时，服务器首先开始释放分配给不常使用的对象的内存。
@@ -66,7 +66,7 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
  **VertiPaqPagingPolicy**  
   仅针对表格实例，指定服务器内存不足时的分页行为。 以下是有效值：  
   
-设置  |描述  
+设置  |Description  
 ---------|---------
 **0**     |  （默认值为 Azure Analysis Services）禁用分页。 如果内存不足，处理将失败，同时显示内存不足错误。 如果禁用分页，必须向服务帐户授予 Windows 特权。 有关说明，请参阅[配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
 **1**     |  （SQL Server Analysis Services 的默认值）该属性允许使用操作系统页文件 (pagefile.sys) 分页到磁盘。   
@@ -88,7 +88,7 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
  **MemoryHeapType**  
   这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。 SQL Server 2016 SP1 及更高版本的 Analysis Services 中的有效值如下所示：
   
-  设置 | 描述
+  设置 | Description
 --------|------------
 **-1** | （默认）Automatic。 该引擎将决定具体使用哪一个。
 **1** | Analysis Services HEAP。
@@ -100,7 +100,7 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
  **HeapTypeForObjects**  
   这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。 以下是有效值：
   
-   设置 | 描述
+   设置 | Description
 --------|------------
 **-1** | （默认）Automatic。 该引擎将决定具体使用哪一个。
 **0** | Windows LFH 堆。

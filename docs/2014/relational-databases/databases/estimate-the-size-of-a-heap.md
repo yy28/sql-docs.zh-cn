@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -17,12 +16,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0464304a23e53762b3e2eb887383b111764379fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192057"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778419"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估计堆的大小
   可以使用以下步骤估计在堆中存储数据所需的空间量：  
@@ -58,7 +57,7 @@ ms.locfileid: "48192057"
      添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
-    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`导致总定义的表的宽度超过 8,060 字节的列。 每一列的长度仍必须在 8,000 个字节的限制内`varchar`， `nvarchar,``varbinary`，或`sql_variant`列。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+    >  您可以组合 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 列，使得定义的表的总宽度超过 8,060 字节。 每一列的长度仍必须在 8,000 个字节的限制内`varchar`， `nvarchar,``varbinary`，或`sql_variant`列。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
      如果没有可变长度列，请将 ***Variable_Data_Size*** 设置为 0。  
   

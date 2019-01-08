@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779889"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
   本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。  
@@ -40,11 +39,11 @@ ms.locfileid: "48107747"
   
  **Oracle 数据库**  
   
--   Oracle Database 10g 发行版 2：10.2.0.1-10.2.0.5（修补程序集截至 2010 年 4 月）  
+-   Oracle Database 10g 发行版 2:10.2.0.1-10.2.0.5 （修补程序集截至 2010 年 4 月）  
   
--   Oracle Database 11g 发行版 1：11.1.0.6-11.1.0.7（修补程序集截至 2008 年 9 月）  
+-   Oracle Database 11g 发行版 1:11.1.0.6-11.1.0.7 （修补程序集截至 2008 年 9 月）  
   
--   Oracle Database 11g 发行版 2：11.2.0.1-11.2.0.3（修补程序集截至 2011 年 9 月）  
+-   Oracle Database 11g 发行版 2:11.2.0.1-11.2.0.3 （修补程序集截至 2011 年 9 月）  
   
  **SQL Server 数据库**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107747"
   
 -   Oracle 11.x 客户端  
   
- **请注意**： 必须使用此软件根据所安装的 Oracle CDC 设计器控制台的 32 位或 64 位版本。  
+ **注意**：必须使用此软件根据所安装的 Oracle CDC 设计器控制台的 32 位或 64 位版本。  
   
  Oracle CDC 设计器控制台使用 Oracle ODBC 提供程序与源 Oracle 数据库通信。  
   

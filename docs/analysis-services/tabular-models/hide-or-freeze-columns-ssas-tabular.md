@@ -1,5 +1,5 @@
 ---
-title: 隐藏或冻结列 |Microsoft 文档
+title: 隐藏或冻结列在 Analysis Services 表格模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e588e16549a609fe15f0f7d7eaf89a010a5bde2c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 624216b190b0a408305c90224087b1f65a4a8286
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042471"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071964"
 ---
 # <a name="hide-or-freeze-columns"></a>隐藏或冻结列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34042471"
   
 3.  在 **“隐藏和取消隐藏列”** 对话框中，找到要隐藏的每个列，然后取消选中 **“在设计器中”** 和/或 **“在报表中”**。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 ### <a name="to-freeze-columns"></a>冻结列  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34042471"
     > [!NOTE]  
     >  冻结列时，将它移到设计器中表的左侧（或前面）。 解冻该列并不将它移回原始位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表和列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  

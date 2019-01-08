@@ -20,16 +20,16 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203976"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetDiagField**返回包含错误、 警告和状态信息的诊断数据结构 （与指定的句柄关联） 的记录的字段的当前值。  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDiagField(
 ## <a name="diagnostics"></a>诊断  
  **SQLGetDiagField**不会为其自身发送诊断记录。 它使用了以下返回值来报告其自身执行的结果：  
   
--   SQL_SUCCESS： 该函数成功地返回诊断信息。  
+-   SQL_SUCCESS:该函数成功地返回诊断信息。  
   
--   SQL_SUCCESS_WITH_INFO: \* *DiagInfoPtr*太小，无法保存请求的诊断字段。 因此，诊断字段中的数据已被截断。 若要确定发生了截断，应用程序必须进行比较*BufferLength*可用的字节，这写入的实际数目 **StringLengthPtr*。  
+-   SQL_SUCCESS_WITH_INFO:\**DiagInfoPtr*太小，无法保存请求的诊断字段。 因此，诊断字段中的数据已被截断。 若要确定发生了截断，应用程序必须进行比较*BufferLength*可用的字节，这写入的实际数目 **StringLengthPtr*。  
   
--   SQL_INVALID_HANDLE： 句柄为由*HandleType*并*处理*不是有效的句柄。  
+-   SQL_INVALID_HANDLE:指示句柄*HandleType*并*处理*不是有效的句柄。  
   
--   以下项之一出现 SQL_ERROR::  
+-   SQL_ERROR:出现下列情况之一：  
   
     -   *DiagIdentifier*参数不是有效的值之一。  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   使用异步通知时，句柄上的异步操作是不完整。  
   
--   SQL_NO_DATA: *RecNumber*中指定的句柄已存在的诊断记录数大于*处理。* 函数还将为任何正返回 SQL_NO_DATA *RecNumber*如果有没有可供诊断记录*处理*。  
+-   SQL_NO_DATA:*RecNumber*存在的句柄中指定的诊断记录数大于*处理。* 函数还将为任何正返回 SQL_NO_DATA *RecNumber*如果有没有可供诊断记录*处理*。  
   
 ## <a name="comments"></a>注释  
  应用程序通常会调用**SQLGetDiagField**得以实现的三个目标：  
@@ -227,13 +227,13 @@ n-定义 *|"创建域"|SQL_DIAG_CREATE_DOMAIN|
   
  如果有两个或多个状态记录，首先确定记录序列确定按行号。 以下规则适用于按行确定诊断记录的序列：  
   
--   任何行不对应的记录显示在对应于特定行的记录之前，因为 SQL_NO_ROW_NUMBER 被定义为 – 1。  
+-   任何行不对应的记录显示在对应于特定行的记录之前，因为 SQL_NO_ROW_NUMBER 被定义为-1。  
   
--   对于其中的行号是未知的记录会显示前面所有其他记录，因为 SQL_ROW_NUMBER_UNKNOWN 被定义为 – 2。  
+-   对于其中的行号是未知的记录会显示前面所有其他记录，因为 SQL_ROW_NUMBER_UNKNOWN 被定义为-2。  
   
 -   对于适用于特定行的所有记录，记录按 SQL_DIAG_ROW_NUMBER 字段中的值进行排序。 列出所有错误和警告的第一个受影响的行，然后所有错误和警告的下一个都行受影响，等等。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 3 *.x*驱动程序管理器不会进行排序状态记录诊断的队列中如果 SQLSTATE 01S01 （行中的错误） 返回的 ODBC 2 *.x*驱动程序或者如果 SQLSTATE 01S01 （行中的错误） 返回的 ODBC3 *.x*驱动程序时**SQLExtendedFetch**称为或**SQLSetPos**称为已定位与对游标**SQLExtendedFetch**.  
   
  在每个行中，或为所有不对应的行或行号为未知的这些记录或行数等于 SQL_NO_ROW_NUMBER 的所有记录，列出的第一个记录取决于通过使用一组的排序规则。 后第一条记录，影响行的其他记录的顺序是未定义。 应用程序不能假定错误后第一条记录之前警告。 应用程序应扫描以获取有关的失败调用的函数的完整信息的完整的诊断数据结构。  

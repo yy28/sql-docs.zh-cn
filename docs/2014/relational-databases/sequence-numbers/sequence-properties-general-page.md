@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54a6d265c6ad8f7c585a629c2adc997b808d636b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781600"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
   创建一个序列对象并指定其属性。 序列是用户定义的绑定到架构的对象，该对象可根据创建序列所依据的规范来生成数值序列。 这组数值以定义的间隔按升序或降序生成，并且可配置为用尽时重新启动（循环）。 序列不与特定表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便检索其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用一个序列对象，并跨多个行和表协调值。  
@@ -60,7 +59,7 @@ ms.locfileid: "48063237"
  用于在每次调用 **NEXT VALUE FOR** 函数时递增（如果为负数，则为递减）序列对象的值的值。 如果增量是负值，则序列对象为降序，否则为升序。 增量不能为 0。  
   
  **最小值**  
- 指定序列对象的边界。 一个新序列对象的默认最小值是该序列对象的数据类型的最小值。 这是零`tinyint`数据类型和对于所有其他数据类型为负数。  
+ 指定序列对象的边界。 一个新序列对象的默认最小值是该序列对象的数据类型的最小值。 对于 `tinyint` 数据类型，此值为零，对于所有其他数据类型则为负数。  
   
  **最大值**  
  指定序列对象的边界。 一个新序列对象的默认最大值是该序列对象的数据类型的最大值。  
@@ -84,7 +83,7 @@ ms.locfileid: "48063237"
   
  有关创建序列选项的其他信息，请参阅 [CREATE SEQUENCE (Transact-SQL)](/sql/t-sql/statements/create-sequence-transact-sql)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对 SCHEMA 拥有 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 权限。  
   
 ## <a name="see-also"></a>请参阅  

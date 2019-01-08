@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906437"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542696"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>对表或索引启用压缩功能
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对表或索引启用压缩功能。  
@@ -38,7 +38,7 @@ ms.locfileid: "48906437"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要对表或索引启用压缩功能，可使用：**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48906437"
   
      如果选择 **“计划”**，则单击 **“更改计划”**。  
   
-    1.  在 **“新建作业计划”** 对话框的 **“名称”** 框中，输入作业计划的名称。  
+    1.  在“新建作业计划”对话框的“名称”框中，输入作业计划的名称。  
   
     2.  在 **“计划类型”** 列表中选择计划类型：  
   
@@ -140,9 +140,9 @@ ms.locfileid: "48906437"
   
             -   如果选择 **“每月”**，可以选择 **“天”** 或 **“特定日期”**。  
   
-                -   如果选择 **“天”**，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果您要每隔一个月在当月的 15 日运行计划作业，请选择 **“天”** ，在第一个框中输入“15”，在第二个框中输入“2”。 请注意，第二个框中允许的最大数是“99”。  
+                -   如果选择 **“天”**，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”。 请注意，第二个框中允许的最大数是“99”。  
   
-                -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果您要每隔一个月在当月的最后一个工作日运行作业计划，请选择 **“天”**，从第一个列表中选择 **“最后一周”** ，从第二个列表中选择 **“工作日”** ，然后在最后一个框中输入“2”。 还可以从前两个列表中选择“第一周”、“第二周”、“第三周”或“第四周”以及特定工作日（例如星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
+                -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”。 您还可以选择**第一个**，**第二个**，**第三个**，或者**第四个**，以及特定工作日 (例如：星期日或星期三） 前两个列表中。 请注意，最后一个框中允许的最大数是“99”。  
   
         2.  在 **“每天频率”** 下，指定作业计划运行的当天作业计划的重复频率。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48906437"
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 然后执行存储的过程`sp_estimate_data_compression_savings`来返回指定的索引 ID 的估计的大小，就好像使用页压缩设置。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例将执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果要使用 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
   
     ```  
     USE AdventureWorks2012;   

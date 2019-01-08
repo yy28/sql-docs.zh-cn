@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - FlagName Property (ClientSettingsGeneralFlag Class)
@@ -20,12 +18,12 @@ ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a441eea7b24b5427387613b9e5f4d390ec2c964c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221483"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352728"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>FlagName 属性（ClientSettingsGeneralFlag 类）
   获取标志的名称。  
@@ -39,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示服务器设置的常规标志的 [ClientSettingsGeneralFlag 类](clientsettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)  
+ [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

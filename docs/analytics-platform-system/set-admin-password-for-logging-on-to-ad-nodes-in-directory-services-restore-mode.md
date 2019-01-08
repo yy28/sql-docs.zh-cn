@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cd116bbb0305f56302f679881ef0a2a795739eb3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 277f2b8195aa4238a490d37faaf81abdafc0008c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538746"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>设置管理员密码登录到 AD 节点在目录服务还原模式 (DSRM) 中的分析平台系统
 目录服务还原模式 (DSRM) 是用于修复或恢复 Active Directory 域服务 (AD DS) 的启动模式。 它用于登录到设备 AD 节点后未通过 AD DS 或 AD DS 需要还原。 为 DSRM 密码在硬件供应商站点上设备安装过程已初始化，应更改设备管理员。 分析平台系统具有两个 AD DS （域控制器）; **_appliance_domain_-AD01**并 **_appliance_domain_-AD02**。 对于每个设备 AD 节点，使用以下步骤将 DSRM 密码的更改。  
   
 ## <a name="HowToDSRM"></a>若要重置管理员密码  
   
-1.  打开设备 AD 节点上的命令提示符窗口***appliance_domain *– AD*xx***虚拟机。  
+1.  打开设备 AD 节点上的命令提示符窗口***appliance_domain *-AD*xx***虚拟机。  
   
 2.  在命令提示符下键入 `ntdsutil`。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "51641394"
   
 5.  在提示符处，键入新密码。  
   
-6.  对每个设备 AD 虚拟机重复步骤 1 – 5 上面。  
+6.  对每个设备 AD 虚拟机重复步骤 1-5 上面。  
   
     > [!WARNING]  
     > 分析平台系统不支持在域管理员或本地管理员密码的美元符号 （$）。 包含美元符号的密码将验证并将可用，但可能会阻止升级和维护活动。  

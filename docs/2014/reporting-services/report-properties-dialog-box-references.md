@@ -14,12 +14,12 @@ ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec2d6fa40e5f2e6aa7fcfd1d5be40667a518d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 628a94ec8e8c79ec88f8427fd2ea41f158ae6c38
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194327"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539796"
 ---
 # <a name="report-properties-dialog-box-references"></a>“报表属性”对话框 ->“引用”
   选择 **“报表属性”** 对话框中的 **“引用”** 可以添加或删除对报表定义中的表达式所使用的自定义程序集或其他外部程序集以及自定义类实例的引用。  
@@ -29,7 +29,7 @@ ms.locfileid: "48194327"
  列出报表引用的程序集。 该程序集在安装报表设计工具的计算机上以及报表服务器上必须可用。 引用的名称必须匹配的内容 **\<CodeModule >** 完全标记报表定义语言 (.rdl) 文件中。  
   
  **“添加”**  
- 单击该选项可以添加程序集。 单击省略号 (…) 按钮可以打开“打开”对话框，并选择完成报表处理和表达式计算所需的程序集。  
+ 单击该选项可以添加程序集。 单击省略号 （...） 按钮以打开**打开**对话框并选择完成报表处理和表达式计算所需的程序集。  
   
  **删除**  
  若要从列表中删除程序集引用，请选择程序集名并单击“删除”按钮。  
@@ -38,7 +38,7 @@ ms.locfileid: "48194327"
  列出报表使用的类实例。 该类列表仅适用于基于实例的成员，而不适用于静态成员。  
   
  **“添加”**  
- 单击该选项可以添加类引用。 单击省略号 (…) 按钮可以打开“打开”对话框，并选择完成报表处理和表达式计算所需的类。  
+ 单击该选项可以添加类引用。 单击省略号 （...） 按钮以打开**打开**对话框并选择完成报表处理和表达式计算所需的类。  
   
  **删除**  
  若要删除类实例，请选中该实例并单击“删除”按钮。  

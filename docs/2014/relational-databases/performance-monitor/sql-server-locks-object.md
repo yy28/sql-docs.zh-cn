@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Locks object
@@ -13,12 +13,12 @@ ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9999ff5f82fd0a37bc583af36dd1609ba07ce1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126287"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748399"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server Locks 对象
   Microsoft **中的** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了有关各种资源类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁的信息。 锁加在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源上（如在一个事务中读取或修改的行），以防止各种事务并发使用资源。 例如，如果一个排它 (X) 锁被一个事务加在某一表的某一行上，在这个锁被释放前，其他事务都不可以修改这一行。 尽可能少使用锁可提高并发性，从而改善性能。 可以同时监视 **Locks** 对象的多个实例，每个实例代表一个资源类型上的一个锁。  
@@ -48,8 +48,8 @@ ms.locfileid: "48126287"
 |**堆/B 树**|堆或 B 树 (HOBT)。 锁定数据页堆，或索引的 B 树结构。|  
 |**Key**|锁定索引中的某行。|  
 |**元数据**|锁定一些目录信息（又称为元数据）。|  
-|**对象**|锁定表、存储过程、视图等（包括所有数据和索引）。 该对象可以是包含 **sys.all_objects**中某项的任何一个对象。|  
-|**第**|锁定数据库中 8 KB 页。|  
+|**Object**|锁定表、存储过程、视图等（包括所有数据和索引）。 该对象可以是包含 **sys.all_objects**中某项的任何一个对象。|  
+|**页**|锁定数据库中 8 KB 页。|  
 |**RID**|行 ID。 锁定一个堆中的一行。|  
   
 ## <a name="see-also"></a>请参阅  

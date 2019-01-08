@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
@@ -13,12 +12,12 @@ ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05645a9dcf73dff1ffff2f2370260f44ca1e015
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dac7b74969c341b7f68c7dfbf56d2314d9ab4427
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788359"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>“创建 Web 应用程序”对话框（Master Data Services 配置管理器）
   使用“创建 Web 应用程序”  对话框可以创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此 Web 应用程序在“Web 配置”  页上选择的网站中创建。  
@@ -41,7 +40,7 @@ ms.locfileid: "48074649"
 |**确认密码**|重新键入指定用户帐户的密码。 **“密码”** 字段和 **“确认密码”** 字段必须包含相同的密码。|  
   
 ## <a name="see-also"></a>请参阅  
- [Web 配置页&#40;Master Data Services 配置管理器&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [“Web 配置”页（Master Data Services 配置管理器）](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [为 Master Data Services 数据库和网站设置](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web 应用程序要求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [创建主数据管理器 Web 应用程序 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

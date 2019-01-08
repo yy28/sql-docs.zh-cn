@@ -10,12 +10,12 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bffdc944c10a534cffd58a6b9931165f556432b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145377"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353013"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
   下面列出了有助于提高全文查询性能的建议。  
@@ -26,7 +26,7 @@ ms.locfileid: "48145377"
   
 -   使用 [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)重新组织全文目录。 请务必在性能测试之前执行此操作，因为它会导致该目录中全文索引的主合并。  
   
--   仅选择较小的列作为全文键列。 尽管支持 900 个字节的列，但我们建议在全文索引中使用更小的键列。 `int` 和`bigint`提供最佳性能。  
+-   仅选择较小的列作为全文键列。 尽管支持 900 个字节的列，但我们建议在全文索引中使用更小的键列。 `int` 和 `bigint` 可提供最佳性能。  
   
 -   使用整数型全文键可以避免与 **docid** 映射表联接。 因此，整数型全文键可以使查询性能获得数量级的提升，并改进爬网性能。 如果全文键也是聚集索引键，可能会进一步提高性能。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48145377"
 -   对于包含选择性关系谓词的应用程序，如果将使用选择性关系谓词和非选择性全文谓词的查询编写成使用查询优化器，则这样的查询可能会有最佳性能。 这将允许查询优化器决定它是否可以利用谓词或范围下推来生成有效的查询计划。 与将关系数据作为全文数据建立索引相比，此方法更简单，通常也更有效。  
   
 ## <a name="related-resources"></a>相关资源  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements（SQL Server 2008 全文搜索：内在变化与增强功能）](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 全文搜索：内部机制和增强功能](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>请参阅  
  [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

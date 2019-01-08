@@ -14,12 +14,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208511"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352686"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**使用三个级别的连接信息进行分类的关键字。 对于每个关键字，下表指示是否返回有效值列表以及该关键字是否可选。  
@@ -28,8 +28,8 @@ ms.locfileid: "48208511"
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/A|否|返回的数据源的名称**SQLDataSources**。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
-|DRIVER|N/A|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序名称是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
+|DSN|不可用|否|返回的数据源的名称**SQLDataSources**。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
+|DRIVER|不可用|否|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序名称是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
   
 ## <a name="level-2"></a>级别 2  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48208511"
 |介绍了 SQL_COPT_SS_BROWSE_CACHE_DATA。|  
   
 ## <a name="see-also"></a>请参阅  
- [SQLBrowseConnect 函数](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect 函数](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

@@ -18,15 +18,15 @@ ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be63214fb07683f26fc4f03454d350afbbcf8cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779265"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947601"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   删除文档句柄指定的 XML 文档的内部表示形式并使该文档句柄无效。  
   
@@ -49,7 +49,7 @@ sp_xml_removedocument hdoc
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

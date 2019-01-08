@@ -20,16 +20,16 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bd012fc4f3d1e55c27a585600bff7f85459d469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844355"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205186"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 函数
 **符合性**  
- 版本引入了： ODBC 1.0： 在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更高版本操作系统中已过时  
+ 版本引入了：ODBC 1.0:在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更高版本操作系统中已过时  
   
  **摘要**  
  **SQLInstallDriverManager**返回 ODBC 核心组件的安装的目标目录的路径。 实际上，调用程序必须将驱动程序管理器的文件复制到目标目录。  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  如果应用程序安装程序之前安装的较旧版本的驱动程序管理器中，应卸载，然后重新安装，以便核心组件使用情况计数是有效的核心组件。 **SQLRemoveDriverManager**首先应调用要递减的组件使用计数。 **SQLInstallDriverManager**然后应调用来增加的组件使用情况计数。 应用程序安装程序必须将新文件替换为旧的核心组件文件。 文件使用情况计数将保持不变，并使用较旧版本的核心组件文件的其他应用程序现在将使用较新版本文件。  
   
- 在 ODBC 核心组件、 驱动程序和翻译人员的全新安装，应用程序安装程序应在序列中调用以下函数： **SQLInstallDriverManager**， **SQLInstallDriverEx**， **SQLConfigDriver** (与*fRequest* ODBC_INSTALL_DRIVER 的)，然后**SQLInstallTranslatorEx**。 中的核心组件、 驱动程序和翻译人员卸载，应用程序安装程序应在序列中调用以下函数： **SQLRemoveTranslator**， **SQLRemoveDriver**，，然后**SQLRemoveDriverManager**。 这些函数的调用必须按此顺序。 在升级过程中的所有组件，应按顺序调用所有卸载函数，然后按顺序都调用安装的所有函数。  
+ 在 ODBC 核心组件、 驱动程序和翻译人员的全新安装，应用程序安装程序应调用序列中的以下函数：**SQLInstallDriverManager**， **SQLInstallDriverEx**， **SQLConfigDriver** (与*fRequest* ODBC_INSTALL_DRIVER 的)，然后**SQLInstallTranslatorEx**。 中的核心组件、 驱动程序和翻译人员卸载，应用程序安装程序应调用序列中的以下函数：**SQLRemoveTranslator**， **SQLRemoveDriver**，然后**SQLRemoveDriverManager**。 这些函数的调用必须按此顺序。 在升级过程中的所有组件，应按顺序调用所有卸载函数，然后按顺序都调用安装的所有函数。  
   
 ## <a name="related-functions"></a>相关函数  
   

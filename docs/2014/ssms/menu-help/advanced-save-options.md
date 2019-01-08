@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.advancedsaveoptions
@@ -14,12 +14,12 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c90e963bd5e6eb59ef412ec26ed1b56d4c4ef08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771639"
 ---
 # <a name="advanced-save-options"></a>高级保存选项
   使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 访问**高级保存选项**对话框中，在**文件**菜单中，单击**保存**\<查询名称 >**作为.sql**到打开**将文件另存为**对话框中，单击在上的向下箭头**保存**按钮，然后依次**编码保存**。  

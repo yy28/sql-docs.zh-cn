@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07f068a24c60fe82c299387fe859f07296f21df8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510819"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 配置永久性内存 (PMEM)
 
@@ -40,7 +40,7 @@ SQL Server 2019 预览扩展永久性内存的支持 linux，(PMEM) 设备提供
   - 使用 [ndctl] 若要创建的命名空间。
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* -–map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
 
   >[!NOTE]
@@ -67,7 +67,7 @@ ndctl list
 
     ```bash
     mkfs.xfs -f /dev/pmem0
-    mount –o dax,noatime /dev/pmem0 /mnt/dax
+    mount -o dax,noatime /dev/pmem0 /mnt/dax
     xfs_io -c "extsize 2m" /mnt/dax
     ```
 
@@ -75,7 +75,7 @@ ndctl list
 
     ```bash
     mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
-    mount –o dax,noatime /dev/pmem0 /mnt/dax
+    mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
   一旦已配置了 ndctl、 格式化和装入了设备，可以将数据库文件放入其中。 此外可以创建一个新的数据库 

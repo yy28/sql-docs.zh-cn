@@ -1,5 +1,6 @@
 ---
-title: Linux 上的 SQL Server 的 active Directory 身份验证 |Microsoft Docs
+title: Linux 上的 SQL Server 的 active Directory 身份验证
+titleSuffix: SQL Server
 description: 本文概述了 Linux 上的 SQL Server 的 Active Directory 身份验证。
 author: rothja
 ms.date: 02/23/2018
@@ -7,16 +8,16 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 94b3aa8b63b76d03ccd08acf312b3efcf8b45bca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610365"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160395"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 身份验证
 
@@ -39,7 +40,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 若要使用 Active Directory 身份验证，必须在网络上具有 AD 域控制器 (Windows)。
 
-在本教程中，提供了有关如何配置 AD 身份验证详细信息[教程： 使用 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)。 在本教程中，以下列表提供了指向每个部分的摘要：
+在本教程中，提供了有关如何配置 AD 身份验证详细信息[教程：使用 Active Directory 身份验证与 Linux 上的 SQL Server](sql-server-linux-active-directory-authentication.md)。 在本教程中，以下列表提供了指向每个部分的摘要：
 
 1. [加入到 Active Directory 域的 SQL Server 主机](sql-server-linux-active-directory-authentication.md#join)。
 1. [为 SQL Server 创建 AD 用户并设置 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
@@ -53,4 +54,4 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何在 Linux 上实现 SQL Server 的 Active Directory 身份验证的详细信息，请参阅[教程： 使用 Linux 上的 SQL Server 使用 Active Directory 身份验证](sql-server-linux-active-directory-authentication.md)。
+有关如何在 Linux 上实现 SQL Server 的 Active Directory 身份验证的详细信息，请参阅[教程：使用 Active Directory 身份验证与 Linux 上的 SQL Server](sql-server-linux-active-directory-authentication.md)。

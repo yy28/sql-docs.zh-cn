@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
@@ -13,12 +12,12 @@ ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: da77653fa78503a62ec974aa88d41dee020a34d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 521afe37ef58a8b2e325bb513c7bdee2a1ed66a2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089174"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760969"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>“创建数据库邮件配置文件和帐户”对话框（主数据服务配置管理器）
   使用 **“创建数据库邮件配置文件和帐户”** 对话框可为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库创建数据库邮件配置文件和数据库邮件帐户。 此配置文件将用于在业务规则验证失败时通过电子邮件通知用户和组。  

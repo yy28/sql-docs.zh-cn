@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc02c97daa09091c2f7ca4063c32325e0a39a3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e1935b7ffa0acc22183f91cf5c7fe3896c9e1a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176687"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792068"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中开发包的过程中可用于对包进行故障排除的功能和工具。  
@@ -44,9 +43,9 @@ ms.locfileid: "48176687"
   
 -   **在数据源不可用时，将所有包和所有连接设置为脱机工作**。 您可以从 **“SSIS”** 菜单启用 **“脱机工作”** 。 与不同`DelayValidation`属性，**脱机工作**即使打开包之前，选项才可用。 您还可以启用 **“脱机工作”** 以加快设计器中操作的速度，而仅在需要验证包的时候再禁用此选项。  
   
--   **针对在运行时之前无效的包元素配置 DelayValidation 属性**。 对于其配置在设计时无效的包元素，您可以将 `DelayValidation` 设置为 `True` 以防止出现验证错误。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 `DelayValidation`属性可以在包级别或级别的各个任务和容器的包中包含的启用。 通常必须将此属性设置为`True`上相同的包元素在部署包，以防止在运行时相同的验证错误时。  
+-   **针对在运行时之前无效的包元素配置 DelayValidation 属性**。 对于其配置在设计时无效的包元素，您可以将 `DelayValidation` 设置为 `True` 以防止出现验证错误。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 可以在包级或包中的各个任务和容器级启用 `DelayValidation` 属性。 在部署包时，对于相同的包元素，通常必须将此属性设置为 `True`，以防止运行时出现相同的验证错误。  
   
-     `DelayValidation`属性可以设置对数据流任务，但不能对单个数据流组件。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值是`false`，该组件不能识别外部数据源的元数据更改。  
+     可以对数据流任务设置 `DelayValidation` 属性，但不能对单个数据流组件设置该属性。 可以通过将单个数据流组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性设置为 `false` 来实现类似的效果。 但是，当此属性的值为 `false` 时，该组件不能识别外部数据源的元数据的更改。  
   
  如果进行验证时包使用的数据库对象被锁定，则验证过程可能会停止响应。 在这些情况下， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器也会停止响应。 可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 继续验证过程，以结束 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的关联会话。 还可以使用本节中介绍的设置避免此问题。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48176687"
   
 -   **使用数据查看器监视在数据流中移动的数据**。 数据查看器随着数据在源、转换和目标之间的移动显示相关数据值。 数据查看器可以在网格中显示数据。 您可以将数据从数据查看器复制到剪贴板中，然后再将数据粘贴到文件或 Excel 电子表格中。 有关详细信息，请参阅 [将数据查看器添加到数据流](../add-a-data-viewer-to-a-data-flow.md)。  
   
--   **对支持错误输出的数据流组件配置错误输出**。 许多数据流的源、转换和目标也支持错误输出。 通过配置数据流组件的错误输出，可以将包含错误的数据定向到不同的目标。 例如，您可以将失败或截断的数据捕获到一个单独的文本文件中。 也可以将数据查看器附加到错误输出，而且只检查错误数据。 在设计时，错误输出捕获错误的数据值，以帮助您开发可高效处理实际数据的包。 不过，其他故障排除工具和功能仅在设计时有用，而错误输出在生产环境中仍然非常有用。 有关详细信息，请参阅[数据中的错误处理](../data-flow/error-handling-in-data.md)。  
+-   **对支持错误输出的数据流组件配置错误输出**。 许多数据流的源、转换和目标也支持错误输出。 通过配置数据流组件的错误输出，可以将包含错误的数据定向到不同的目标。 例如，您可以将失败或截断的数据捕获到一个单独的文本文件中。 也可以将数据查看器附加到错误输出，而且只检查错误数据。 在设计时，错误输出捕获错误的数据值，以帮助您开发可高效处理实际数据的包。 不过，其他故障排除工具和功能仅在设计时有用，而错误输出在生产环境中仍然非常有用。 有关详细信息，请参阅 [数据中的错误处理](../data-flow/error-handling-in-data.md)。  
   
 -   **捕获处理的行数**。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中运行包时，通过某路径传递的行数将显示在数据流设计器中。 随着数据在路径中的移动，该数量会定期更新。 您还可以将行计数转换添加到数据流中，以捕获变量中的最终行计数。 有关详细信息，请参阅 [Row Count Transformation](../data-flow/transformations/row-count-transformation.md)。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48176687"
  如果在包开发过程中遇到了没有附带说明的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误号，可以在 [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)中查找说明。 目前该列表中不包括故障排除信息。  
   
 ## <a name="see-also"></a>请参阅  
- [包执行的故障排除工具](troubleshooting-tools-for-package-execution.md)   
+ [对包执行进行故障排除的工具](troubleshooting-tools-for-package-execution.md)   
  [数据流性能特点](../data-flow/data-flow-performance-features.md)  
   
   

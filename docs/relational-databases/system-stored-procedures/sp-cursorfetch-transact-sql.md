@@ -18,12 +18,12 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43cf13284789fa599c3f2f7b8841d7fe54e3b2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538824"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_cursorfetch cursor
 |-----------|----------|-----------------|  
 |0x0001|FIRST|提取的第一个缓冲区*nrows*行。 如果*nrows*等于 0，游标位于结果集前面且不返回任何行。|  
 |0x0002|NEXT|提取的下一个缓冲区*nrows*行。|  
-|0x0004|PREV|提取的上一缓冲区*nrows*行。<br /><br /> 请注意： 将 PREV 用于 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
-|0x0008|LAST|最后一个缓冲区中提取*nrows*行。 如果*nrows*等于 0，则游标位于结果集并不返回行之后。<br /><br /> 请注意： 将 LAST 用于 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
-|0x10|ABSOLUTE|提取的缓冲区*nrows*开头的行*rownum*行。<br /><br /> 请注意： 将 ABSOLUTE 用于 DYNAMIC 游标或 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
-|0x20|RELATIVE|提取的缓冲区*nrows*行的行的指定作为起始*rownum*从当前块中的第一行的行的值。 在这种情况下*rownum*可以是负数。<br /><br /> 请注意： 将 RELATIVE 用于 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
+|0x0004|PREV|提取的上一缓冲区*nrows*行。<br /><br /> 注意：将 PREV 用于 FORWARD_ONLY 游标将返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
+|0x0008|LAST|最后一个缓冲区中提取*nrows*行。 如果*nrows*等于 0，则游标位于结果集并不返回行之后。<br /><br /> 注意：将 LAST 用于 FORWARD_ONLY 游标将返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
+|0x10|ABSOLUTE|提取的缓冲区*nrows*开头的行*rownum*行。<br /><br /> 注意：将 ABSOLUTE 用于 DYNAMIC 游标或 FORWARD_ONLY 游标将返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
+|0x20|RELATIVE|提取的缓冲区*nrows*行的行的指定作为起始*rownum*从当前块中的第一行的行的值。 在这种情况下*rownum*可以是负数。<br /><br /> 注意：将 RELATIVE 用于 FORWARD_ONLY 游标将返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
 |0x80|REFRESH|重新填充基础表中的缓冲区。|  
 |0x100|INFO|检索有关游标的信息。 使用返回此信息*rownum*并*nrows*参数。 因此，指定信息时， *rownum*并*nrows*成为输出参数。|  
 |0x200|PREV_NOADJUST|用法类似于 PREV。 但是，如果过早遇到结果集顶部，结果可能有所不同。|  
@@ -80,7 +80,7 @@ sp_cursorfetch cursor
  当指定位值 INFO 时，以下各表显示可能返回的值。  
   
 > [!NOTE]  
->  ： 如果不返回任何行，则缓冲区内容保持不变。  
+>  解码的字符： 如果不返回任何行，则缓冲区内容保持不变。  
   
 |*\<rownum >*|设置为|  
 |------------------|------------|  
@@ -89,12 +89,12 @@ sp_cursorfetch cursor
 |如果定位在结果集后面|-1|  
 |对于 KEYSET 游标和 STATIC 游标|结果集中当前位置的绝对行号|  
 |对于 DYNAMIC 游标|1|  
-|对于 ABSOLUTE|-1 返回集中的最后一行。<br /><br /> -2 返回集中的倒数第二行，依此类推。<br /><br /> 注意： 如果多个行请求提取这种情况下，则返回结果集的最后两行。|  
+|对于 ABSOLUTE|-1 返回集中的最后一行。<br /><br /> -2 返回集中的倒数第二行，依此类推。<br /><br /> 注意：如果在此情况下请求提取多行，则返回结果集的最后两行。|  
   
 |*\<nrows >*|设置为|  
 |-----------------|------------|  
 |如果未打开|0|  
-|对于 KEYSET 游标和 STATIC 游标|通常为当前键集大小。<br /><br /> **– m**如果光标位于异步创建的*m*到此点找不到行。|  
+|对于 KEYSET 游标和 STATIC 游标|通常为当前键集大小。<br /><br /> **-m**如果光标位于异步创建的*m*到此点找不到行。|  
 |对于 DYNAMIC 游标|-1|  
   
 ## <a name="remarks"></a>备注  
@@ -141,7 +141,7 @@ sp_cursorfetch cursor
 |0x0002|当处于负方向中的提取在逻辑上应位于结果集前面时，该提取可能导致将游标位置设置在结果集的开头。|  
 |0x10|快进游标自动关闭。|  
   
- 这些行将作为典型的结果集返回，也即：列格式 (0x2a)、行 (0xd1)，后跟完成 (0xfd)。 元数据标记使用与为 sp_cursoropen 指定的相同格式发送，也即：对于 SQL Server 7.0 用户为 0x81、0xa5 和 0xa4 等。 行状态指示器在具有列名称 rowstat 和数据类型 INT4 的每一行的末尾作为隐藏列发送（类似于 BROWSE 模式）。 此 rowstat 列具有下表中显示的值之一。  
+ 这些行将作为典型的结果集返回，也即：列格式 (0x2a)、行 (0xd1)，后跟完成 (0xfd)。 元数据标记，它是相同的格式与为 sp_cursoropen，指定发送：为 0xa5 和 0xa4 用于 SQL Server 7.0 用户等。 行状态指示器在具有列名称 rowstat 和数据类型 INT4 的每一行的末尾作为隐藏列发送（类似于 BROWSE 模式）。 此 rowstat 列具有下表中显示的值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
@@ -13,12 +12,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54c7a5361a411ff68456504962bbf62298f4ba9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062620"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774419"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
   使用此页可以查看或修改所选数据库的选项。 此页上可用的选项的详细信息，请参阅[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
@@ -28,7 +27,7 @@ ms.locfileid: "48062620"
  通过从列表中进行选择来指定数据库的排序规则。 有关详细信息，请参阅 [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md)。  
   
  **恢复模式**  
- 指定下列模式之一来恢复数据库：“完整”、“大容量日志”或“简单”。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)。  
+ 指定用于恢复数据库的以下模型之一：**完整**，**大容量日志**，或**简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)。  
   
  **兼容级别**  
  指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值有  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)** 和 **SQL Server 2008 (100)**。 当 SQL Server 2005 数据库升级到 SQL Server 2014 时，该数据库的兼容级别将从 90 更改为 100。  在 SQL Server 2014 中不支持 90 兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
@@ -94,11 +93,11 @@ ms.locfileid: "48062620"
  为与所选数据库相关联的 FILESTREAM 数据指定目录名称。  
   
  **FILESTREAM 非事务访问**  
- 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一： **OFF**、 **READ_ONLY**或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../blob/filetables-sql-server.md)。  
+ 指定的非事务性访问文件系统到 FileTables 中存储的 FILESTREAM 数据的以下选项之一：**关闭**， **READ_ONLY**，或**完整**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>杂项  
  **ANSI NULL 默认值**  
- 允许 null 值的所有用户定义数据类型或没有显式定义为的列`NOT NULL`期间`CREATE TABLE`或`ALTER TABLE`语句 （默认状态）。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
+ 在 `NOT NULL` 或 `CREATE TABLE` 语句执行过程中，没有显式定义为 `ALTER TABLE` 的所有用户定义的数据类型或列允许为 Null 值（默认状态）。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF (Transact-SQL)](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
   
  **ANSI NULLS 已启用**  
  指定等于 (`=`) 和不等于 (`<>`) 比较运算符在与 Null 值一起使用时的行为。 可能的值为`True`（开） 和`False`（关闭）。 如果为 `True`，所有与空值的比较的结果值都为 UNKNOWN。 当`False`，非 UNICODE 值与 null 值的比较运算计算结果为`True`如果这两个值均为 NULL。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。  
@@ -146,7 +145,7 @@ ms.locfileid: "48062620"
   
  每当数据库附加到服务器时，都要将 TRUSTWORTHY 设置为 `False`。  
   
- 用于访问数据库的模拟上下文以外的资源的建议的方法是使用证书和签名替代`Trustworthy`选项。  
+ 在模拟上下文内访问数据库以外资源的建议方法是使用证书和签名替代 `Trustworthy` 选项。  
   
  若要设置此属性，请使用 ALTER DATABASE 语句。  
   

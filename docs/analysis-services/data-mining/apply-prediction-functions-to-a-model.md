@@ -1,5 +1,5 @@
 ---
-title: 将预测函数应用于模型 |Microsoft 文档
+title: 将预测函数应用于模型 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540663"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>将预测函数应用于模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "34014874"
     > [!WARNING]  
     >  在您单击 **“结果”** 之前，预测查询生成器不会验证 DMX。 通常，您会发现查询生成器所生成的表达式不是有效 DMX。 典型的原因是，引用的列与可预测列不相关或尝试预测嵌套表中的列（这需要嵌套 SELECT 语句）。 此时，您可以切换到 DMX 视图并继续编辑该语句。  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>示例：创建对聚类分析模型的查询  
+### <a name="example-create-a-query-on-a-clustering-model"></a>例如：聚类分析模型创建查询  
   
-1.  如果没有可用于生成此示例查询的聚类分析模型，请使用[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)创建 [TM_Clustering] 模型。  
+1.  如果没有可用于生成此示例查询的聚类分析模型，请使用 [数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)创建 [TM_Clustering] 模型。  
   
 2.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击模型 [TM_Clustering]，然后选择“生成预测查询”。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "34014874"
     |----------------|--------------|-------------|-------------|  
     |0|群集 8|954|953.948638926372|  
   
- 如果要在该语句中的其他位置添加其他子句（例如，如果要添加 WHERE 子句），则无法使用网格添加该子句，而必须先切换到 DMX 视图。  
+ 如果你想要在语句中的其他位置添加其他子句-例如，如果你想要添加 WHERE 子句-不能将其添加使用网格;必须先切换到 DMX 视图。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

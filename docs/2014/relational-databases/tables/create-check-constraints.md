@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table constraints [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6de6aefacdda4dab4c61c695f5a74e8c6c5b8f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053757"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814409"
 ---
 # <a name="create-check-constraints"></a>创建 CHECK 约束
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在表中创建 CHECK 约束以便指定在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的一列或多列中可接受的数据值。  
@@ -31,7 +30,7 @@ ms.locfileid: "48053757"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具创建新的 CHECK 约束：**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48053757"
   
 1.  在“对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击“约束”，然后单击“新建约束”。  
   
-2.  在 “CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 **(…)**。  
+2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)。  
   
 3.  在 **“CHECK 约束表达式”** 对话框中，键入 CHECK 约束的 SQL 表达式。 例如，若要将 `SellEndDate` 表的 `Product` 列中的条目限制为大于等于 `SellStartDate` 列中的日期的值，或者为 NULL 值，则键入：  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48053757"
   
 #### <a name="to-create-a-new-check-constraint"></a>创建新的 CHECK 约束  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

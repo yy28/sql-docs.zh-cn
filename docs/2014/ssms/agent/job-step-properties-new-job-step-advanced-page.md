@@ -1,10 +1,10 @@
 ---
-title: 作业步骤属性： 新建作业步骤 （高级页） |Microsoft Docs
+title: 作业步骤属性：新建作业步骤 （高级页） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepadvanced.f1
@@ -12,14 +12,14 @@ ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1197d23dda2ecd96adaa6cc49625db25851410c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176537"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767209"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>作业步骤属性：新建作业步骤（“高级”页）
+# <a name="job-step-properties-new-job-step-advanced-page"></a>作业步骤属性：新建作业步骤 （高级页）
   使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性。  
   
 ## <a name="options"></a>选项  
@@ -42,7 +42,7 @@ ms.locfileid: "48176537"
  **...**  
  浏览至用于作业步骤输出的文件。  
   
- **“视图”**  
+ **视图**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
  **将输出追加到现有文件**  
@@ -51,7 +51,7 @@ ms.locfileid: "48176537"
  **记录到表**  
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
- **“视图”**  
+ **视图**  
  在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  
@@ -70,7 +70,7 @@ ms.locfileid: "48176537"
  **...**  
  浏览至用于作业步骤输出的文件。  
   
- **“视图”**  
+ **视图**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
  **将输出追加到现有文件**  
@@ -79,7 +79,7 @@ ms.locfileid: "48176537"
  **记录到表**  
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
- **“视图”**  
+ **视图**  
  在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  
@@ -95,7 +95,7 @@ ms.locfileid: "48176537"
  **...**  
  浏览至用于作业步骤输出的文件。  
   
- **“视图”**  
+ **视图**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
  **将输出追加到现有文件**  
@@ -104,7 +104,7 @@ ms.locfileid: "48176537"
  **记录到表**  
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
- **“视图”**  
+ **视图**  
  在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  
@@ -136,7 +136,7 @@ ms.locfileid: "48176537"
  **记录到表**  
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
- **“视图”**  
+ **视图**  
  在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  

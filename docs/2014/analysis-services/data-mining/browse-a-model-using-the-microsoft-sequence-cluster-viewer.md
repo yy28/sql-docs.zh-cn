@@ -21,12 +21,12 @@ ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5571c8bc684a8d57f8696b3a5630170679c1cf63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 870e0fb8cb24a62a2914281e58915c7749771213
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521191"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 序列分类查看器浏览模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 序列分类查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是用于探析特定数据的顺序分析算法，这些数据所包含的事件可通过以下路径（又称“序列 ”）联系起来。 有关此算法的详细信息，请参阅 [Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "48229467"
 ###  <a name="BKMK_Diagram"></a> 分类关系图  
  **序列分类查看器的** “分类关系图” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 选项卡可显示挖掘模型中的全部分类。 两个分类之间连线的明暗度表示分类的相似程度。 如果明暗度较浅或无明暗度，则表示分类的相似程度较低。 连线的颜色越深，链接的相似性越强。 通过调整分类右侧的滑块，可以调整查看器显示的连线数。 降低滑块将只显示最强链接。  
   
- 默认情况下，明暗度代表分类的总体。 通过使用“明暗度****变量”和“状态”选项，可以选择明暗度代表的属性和状态对。 明暗度越深，特定状态所对应的属性分布范围就越大。 明暗度越浅，分布范围就越小。  
+ 默认情况下，明暗度代表分类的总体。 通过使用**明暗度变量**并**状态**选项，您可以选择的属性和状态对明暗度表示。 明暗度越深，特定状态所对应的属性分布范围就越大。 明暗度越浅，分布范围就越小。  
   
  若要重命名某个群集，请右键单击其节点并选择“重命名群集”。 新名称会在服务器中永久保留。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48229467"
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft 序列聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
  [数据挖掘工具](data-mining-tools.md)   
  [数据挖掘模型查看器](data-mining-model-viewers.md)   
  [使用 Microsoft 分类查看器浏览模型](browse-a-model-using-the-microsoft-cluster-viewer.md)  

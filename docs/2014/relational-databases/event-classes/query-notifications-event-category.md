@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1a707d7fce73294b518988b128c0c5984cc5735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c83ebac20a86cd490fbfdf2dbd099e103d404ced
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066677"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775549"
 ---
 # <a name="query-notifications-event-category"></a>Query Notifications 事件类别
   **Query Notifications** 事件类别包含的事件类报告有关开发人员和管理员可用于监视查询通知并解决其问题的信息。  

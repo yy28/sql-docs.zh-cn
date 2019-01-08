@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091729"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770709"
 ---
 # <a name="dta-utility"></a>dta 实用工具
   **dta** 实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
@@ -41,7 +40,7 @@ ms.locfileid: "48091729"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091729"
  指定要优化的每个数据库的名称。 第一个数据库是默认数据库。 可以指定多个数据库，各数据库名称用逗号进行分隔。例如：  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- 此外，也可以在指定多个数据库时，使用 **–D** 参数逐个指定数据库名称。例如：  
+ 此外，也可以对各个数据库名称使用 -D 参数，从而指定多个数据库。例如：  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  **-D** 参数是必需的。 如果尚未指定 **-d** 参数，则 **dta** 将默认连接到工作负荷中第一个 `USE database_name` 子句指定的数据库。 如果工作负荷中没有显式的 `USE database_name` 子句，则必须使用 **-d** 参数。  
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |参数|默认值|  
 |---------------|-------------------|  
-|*database_name*|使用*database_name* 选项指定的 **database_name** |  
+|*database_name*|使用 -D 选项指定的 database_name|  
 |*owner_name*|**dbo**<br /><br /> 注意： *owner_name*必须是**dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
 |*table_name*|None|  
   
@@ -203,10 +202,10 @@ dta -d AdventureWorks2012 ...
  为优化会话指定一个数字标识符。 如果未指定，则 **dta** 将生成一个 ID 号。 可以使用此标识符查看现有优化会话的信息。 如果不指定 **-ID**值，则必须用 **-s**指定会话名。  
   
  **-ip**  
- 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可以使用 **–n** 选项更改此值。  
+ 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n 选项更改此值。  
   
  **-ipf**  
- 指定计划高速缓存可用作工作负荷。 分析所有数据库的前 1000 个计划缓存事件。 可以使用 **–n** 选项更改此值。  
+ 指定计划高速缓存可用作工作负荷。 分析所有数据库的前 1000 个计划缓存事件。 可使用 -n 选项更改此值。  
   
  **-if** *workload_file*  
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
@@ -218,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |参数|默认值|  
 |---------------|-------------------|  
-|*database_name*|使用*database_name* 选项指定的 **database_name** 。|  
+|*database_name*|使用 -D 选项指定的 database_name|  
 |*owner_name*|**dbo**。|  
 |*table_name*|无。|  
   
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  此示例使用安全连接 (`-E`) 连接到 MyServer 中的 **tpcd1G** 数据库，以分析工作负荷并创建建议。 此示例将输出写入到名为 script.sql 的脚本文件。 如果 script.sql 已存在，由于指定了 **参数，** dta `-F` 将覆盖该文件。 优化会话的运行时间没有限制，以确保完成工作负荷分析 (`-A 0`)。 建议必须至少提供 5% 的改进 (`-m 5`)。 **dta** 应在其最终建议中包含索引和索引视图 (`-fa IDX_IV`)。  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B.限制磁盘使用**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  此示例将数据库总大小（包括原始数据和其他索引）限定为 3 GB (`-B 3000`)，并将输出定向到 d:\result_dir\script1.sql。 该示例的运行时间不会超过 1 小时 (`-A 60`)。  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C.限制优化查询的数量**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  此示例将从 orders_wkld.sql 文件读取的最大查询数限定为 10 (`-n 10`)，并将运行时间设为 15 分钟 (`-A 15`)，以先完成的为准。 要确保所有 10 个查询都得到优化，请用 `-A 0` 指定不受限制的优化时间。 如果时间紧迫，则通过用 `-A` 参数指定用于优化的分钟数来指定适当的时间限制，如本例所示。  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D.优化文件中列出的特定表**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  优化时间为 2 小时 (`-A 120`)，输出将写入 XML 文件 (`-ox XMLTune.xml`)。  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [命令提示实用工具参考&#40;数据库引擎&#41;](../command-prompt-utility-reference-database-engine.md)   
- [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [命令提示实用工具参考（数据库引擎）](../command-prompt-utility-reference-database-engine.md)   
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

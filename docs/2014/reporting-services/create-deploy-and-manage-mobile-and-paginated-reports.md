@@ -17,12 +17,12 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6a5ef9a9ced2399ba5539f8117cc40e5c13db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055257"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352032"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供大量现成的工具和服务，帮助您创建、 部署和管理你的组织的报表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中包括了很多可用于扩展和自定义报告功能的编程特性。  
@@ -67,6 +67,6 @@ ms.locfileid: "48055257"
  ![文件夹图标](media/hlp-16folder.gif "文件夹图标")[功能参考&#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 资源中心](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [SQL Server 资源中心](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674408"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501754"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 设置对话框
 **ODBC Visual FoxPro 设置**对话框中，您可以添加或更改 Visual FoxPro 数据源。  
@@ -31,7 +31,7 @@ ms.locfileid: "51674408"
  **数据源名称**  
  键入你想要使用的数据源的名称。  
   
- **Description**  
+ **说明**  
  键入数据源的说明。  
   
  **数据库类型**  
@@ -60,7 +60,7 @@ ms.locfileid: "51674408"
  选中此复选框，该驱动程序将访问使用数据源的数据时以独占方式打开的 Visual FoxPro 数据库。 以独占方式打开该数据库时，其他用户无法访问数据库或数据库中的表。 以独占方式打开的数据库中的表，则打开为共享。 若要以独占方式打开表，请使用[独占设置](../../odbc/microsoft/set-exclusive-command.md)命令。 禁用此复选框时**数据库类型**设置为**免费表目录**。  
   
  **Null**  
- 确定是否使用 ALTER TABLE 和 CREATE TABLE 创建的列允许 null 值。 如果设置为 Null ON 时，INSERT-SQL 将 null 值插入到插入-SQL 中不包含任何列...VALUE 子句。 如果 Null 为 OFF，则将插入空白。 此外可以控制此选项在传递的连接字符串，如以下代码所示：  
+ 确定是否使用 ALTER TABLE 和 CREATE TABLE 创建的列允许 null 值。 如果设置为 Null ON 时，INSERT-SQL 将 null 值插入到 INSERT-SQL 中不包含任何列...VALUE 子句。 如果 Null 为 OFF，则将插入空白。 此外可以控制此选项在传递的连接字符串，如以下代码所示：  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  

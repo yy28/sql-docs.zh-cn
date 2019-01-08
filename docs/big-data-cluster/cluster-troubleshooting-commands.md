@@ -1,18 +1,20 @@
 ---
-title: 使用 kubectl 监视 SQL Server 大数据群集 |Microsoft Docs
+title: 使用 kubectl 排查监视 /
+titleSuffix: SQL Server 2019 big data clusters
 description: 本文提供用于监视和故障排除 SQL Server 2019 大数据群集 （预览版） 的有用 kubectl 命令。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/15/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a47726e86bd1f10cda4db55bec6eac995344da38
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.custom: seodec18
+ms.openlocfilehash: 0d034058f7cc187caa373f3bdae2569d091c3977
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356589"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030561"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>用于监视和故障排除 SQL Server 大数据群集 Kubectl 命令
 
@@ -189,9 +191,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 如果收到以下错误：*无法侦听端口 8001： 所有侦听器都未能创建具有以下错误： 无法创建侦听器： 错误侦听 tcp4 127.0.0.1:8001: > 绑定： 只有一个使用情况的每个套接字地址 （协议/网络通常情况下允许使用地址/端口）。无法创建侦听器： 错误侦听 tcp6： 地址 [[:: 1]]: 8001： 缺少中的端口 > 解决错误： 无法在任何请求的端口上侦听: [{8001 9090}]*，请确保您没有启动仪表板已从另一个窗口。
+> 如果收到以下错误：*无法侦听端口 8001:所有侦听器都未能创建具有以下错误：无法创建侦听器：错误侦听 tcp4 127.0.0.1:8001: > 绑定：通常情况下允许的每个套接字地址 （协议/网络地址/端口） 只有一个使用情况。无法创建侦听器：错误侦听 tcp6： 地址 [[:: 1]]: 8001： 缺少中的端口 > 解决错误：无法在任何请求的端口上侦听: [{8001 9090}]*，请确保您没有启动仪表板已从另一个窗口。
 
-在浏览器上启动仪表板中，可能会由于在 AKS 群集中，默认情况下启用的 RBAC 权限警告和仪表板使用的服务帐户没有足够的权限访问的所有资源时 (例如， *pod 禁止访问： 用户"系统： serviceaccount:kube-系统： kubernetes 的仪表板"无法列出命名空间"default"中的 pod*)。 运行以下命令，为提供必要的权限来`kubernetes-dashboard`，然后重新启动仪表板：
+在浏览器上启动仪表板中，可能会由于在 AKS 群集中，默认情况下启用的 RBAC 权限警告和仪表板使用的服务帐户没有足够的权限访问的所有资源时 (例如， *禁止 pod:用户"系统： serviceaccount:kube-系统： kubernetes 的仪表板"无法列出命名空间"default"中的 pod*)。 运行以下命令，为提供必要的权限来`kubernetes-dashboard`，然后重新启动仪表板：
 
 ```
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

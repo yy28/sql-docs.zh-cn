@@ -20,16 +20,16 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120076"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204666"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLProcedures**返回的特定数据源中存储的过程名称的列表。 *过程*是用于描述一个通用术语*可执行对象*，或已命名的实体，可以使用输入和输出参数进行调用。 有关过程的详细信息，请参阅[过程](../../../odbc/reference/develop-app/procedures-odbc.md)。  
@@ -131,11 +131,11 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2.0)|1|Varchar|过程目录标识符;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于一些过程，但对于其他操作系统，如当驱动程序检索数据时从不同 Dbms，它返回空字符串 ("") 对于这些没有目录的过程。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|过程架构标识符;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于一些过程，但对于其他操作系统，如当驱动程序检索数据时从不同 Dbms，它返回空字符串 ("") 对于这些没有架构的过程。|  
 |过程名称 (ODBC 2.0)|3|Varchar 不为 NULL|过程标识符。|  
-|NUM_INPUT_PARAMS (ODBC 2.0)|4|N/A|保留供将来使用。 应用程序不应依赖这些结果列中返回的数据。|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/A|保留供将来使用。 应用程序不应依赖这些结果列中返回的数据。|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|N/A|保留供将来使用。 应用程序不应依赖这些结果列中返回的数据。|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|不可用|保留供将来使用。 应用程序不应依赖这些结果列中返回的数据。|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|不可用|保留供将来使用。 应用程序不应依赖这些结果列中返回的数据。|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|不可用|保留供将来使用。 应用程序不应依赖这些结果列中返回的数据。|  
 |备注 (ODBC 2.0)|7|Varchar|对过程的说明。|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|定义过程类型：<br /><br /> SQL_PT_UNKNOWN： 不能确定是否该过程返回值。<br /><br /> SQL_PT_PROCEDURE： 返回的对象是过程;也就是说，它没有返回值。<br /><br /> SQL_PT_FUNCTION： 返回的对象是一个函数;也就是说，它具有返回值。|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|定义过程类型：<br /><br /> SQL_PT_UNKNOWN:无法确定该过程是否返回一个值。<br /><br /> SQL_PT_PROCEDURE:返回的对象是过程;也就是说，它没有返回值。<br /><br /> SQL_PT_FUNCTION:返回的对象是一个函数;也就是说，它具有返回值。|  
   
  *SchemaName*并*ProcName*参数接受搜索模式。 有关有效的搜索模式的详细信息，请参阅[模式值自变量](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
   

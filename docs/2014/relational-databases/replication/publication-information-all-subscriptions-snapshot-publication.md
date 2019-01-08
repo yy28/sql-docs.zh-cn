@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86b43caccd6117d7371b201938acc593b6d63da9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081067"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776939"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>发布信息，所有订阅（快照发布）
   **“所有订阅”** 选项卡显示针对所选快照发布的所有订阅的相关信息。  
@@ -26,13 +25,13 @@ ms.locfileid: "48081067"
 ## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
+-   **排序**:中的一个或多个列的排序**排**对话框。  
   
--   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
+-   **选择显示的列**:选择哪些列显示以及用来显示它们中的顺序**选择列**对话框。  
   
--   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
+-   **筛选器**:筛选列中的值为基础的网格中的行**筛选器设置**对话框。  
   
--   **清除筛选器**：清除网格的任何筛选设置。  
+-   **清除筛选器**:清除网格的任何筛选器设置。  
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48081067"
   
 -   正在重试失败的命令  
   
--   同步  
+-   正在同步  
   
 -   未同步  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48081067"
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 。 有关设置阈值的信息，请参阅[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **订阅**  
- 每个订阅的名称，格式为： *SubscriberName: SubscriptionDatabaseName*。  
+ 每个订阅，请在窗体的名称：*SubscriberName:SubscriptionDatabaseName*。  
   
  **上次同步**  
  分发代理上次运行的时间。 如果正在进行同步，则显示 **“正在进行”** 。  

@@ -20,16 +20,16 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b56a96ce4796f8d4409b6b347b58870039e15d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0878b7c0d6e7cea6f1dcdc90fa7e78a2680546b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666245"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204886"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetInfo**返回有关与连接关联的驱动程序和数据源的常规信息。  
@@ -95,7 +95,7 @@ SQLRETURN SQLGetInfo(
 |IM001|驱动程序不支持此函数|(DM) 对应的驱动程序*ConnectionHandle*不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- 在"信息类型中，"更高版本中此部分，则显示当前定义的信息类型预计的详细信息将定义要充分利用不同的数据源。 由 ODBC; 保留一系列的信息类型驱动程序开发人员必须保留供从 Open Group 自己特定于驱动程序使用的值。 **SQLGetInfo**不执行任何 Unicode 转换或*形式转换*(请参阅[附录 a: ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)的*ODBC 程序员参考*) 为驱动程序定义*信息类型*。 有关详细信息，请参阅[特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。 中返回的信息的格式\* *InfoValuePtr*取决于*信息类型*请求。 **SQLGetInfo**将五个不同的格式之一返回的信息：  
+ 在"信息类型中，"更高版本中此部分，则显示当前定义的信息类型预计的详细信息将定义要充分利用不同的数据源。 由 ODBC; 保留一系列的信息类型驱动程序开发人员必须保留供从 Open Group 自己特定于驱动程序使用的值。 **SQLGetInfo**不执行任何 Unicode 转换或*形式转换*(请参阅[附录 a:ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)的*ODBC 程序员参考*) 的驱动程序定义*信息类型*。 有关详细信息，请参阅[特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。 中返回的信息的格式\* *InfoValuePtr*取决于*信息类型*请求。 **SQLGetInfo**将五个不同的格式之一返回的信息：  
   
 -   以 null 结尾的字符串  
   
@@ -244,7 +244,7 @@ SQLRETURN SQLGetInfo(
 |SQL_MAX_CURSOR_NAME_LEN|SQL_MAX_USER_NAME_LEN|  
   
 ## <a name="scalar-function-information"></a>标量函数信息  
- 以下值的*信息类型*参数返回数据源和驱动程序支持的标量函数的信息。 有关标量函数的详细信息，请参阅[附录 e： 标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。  
+ 以下值的*信息类型*参数返回数据源和驱动程序支持的标量函数的信息。 有关标量函数的详细信息，请参阅[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。  
   
 |||  
 |-|-|  
@@ -338,7 +338,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>在 ODBC 中已过时的信息类型 3.x  
- 以下值的*信息类型*ODBC 3 中已弃用参数 *.x*。 ODBC 3 *.x*驱动程序必须继续支持使用这些信息类型进行向后兼容的 ODBC 2 *.x*应用程序。 (有关这些类型的详细信息，请参阅[SQLGetInfo 支持](../../../odbc/reference/appendixes/sqlgetinfo-support.md)中向后兼容性的附录 g： 驱动程序指南。)  
+ 以下值的*信息类型*ODBC 3 中已弃用参数 *.x*。 ODBC 3 *.x*驱动程序必须继续支持使用这些信息类型进行向后兼容的 ODBC 2 *.x*应用程序。 (有关这些类型的详细信息，请参阅[SQLGetInfo 支持](../../../odbc/reference/appendixes/sqlgetinfo-support.md)中附录 g:驱动程序指南的向后兼容性。）  
   
 |||  
 |-|-|  
@@ -351,10 +351,10 @@ SQLRETURN SQLGetInfo(
  下表按字母顺序列出了每种信息类型、 版本中引入它，ODBC 和及其说明。  
   
  SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
- 一个字符串:"Y"，如果用户可以执行所有过程返回的**SQLProcedures**;"N"如果可能有过程返回，用户不能执行。  
+ 一个字符的字符串："Y"，如果用户可以执行所有过程返回的**SQLProcedures**;"N"如果可能有过程返回，用户不能执行。  
   
  SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
- 一个字符串:"Y"，如果用户保证**选择**返回的所有表的特权**SQLTables**;"N"如果可能存在的表返回该用户无法访问。  
+ 一个字符的字符串："Y"，如果用户保证**选择**返回的所有表的特权**SQLTables**;"N"如果可能存在的表返回该用户无法访问。  
   
  SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  SQLUSMALLINT 值，该值指定该驱动程序可以支持的活动环境的最大数目。 如果没有指定的限制或未知的限制，则将此值设置为零。  
@@ -364,10 +364,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- SQL-92 条目级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 条目级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_ALTER_DOMAIN (ODBC 3.0)  
- 枚举中的子句 SQLUINTEGER 位掩码**ALTER 域**语句，如 SQL-92，支持的数据源中定义。 完整 SQL-92 的兼容级别的驱动程序将始终返回所有的位屏蔽。 返回值"0"意味着**ALTER 域**不支持语句。  
+ 枚举中的子句 SQLUINTEGER 位掩码**ALTER 域**语句，如 SQL-92，支持的数据源中定义。 SQL-92 Full 级别兼容的驱动程序将始终返回所有的位屏蔽。 返回值"0"意味着**ALTER 域**不支持语句。  
   
  此时必须支持此功能的 SQL-92 或 FIPS 符合性级别显示在每位掩码旁边的括号中。  
   
@@ -491,26 +491,26 @@ SQLRETURN SQLGetInfo(
   
  例如，Xbase 驱动程序返回 SQL_CL_START，因为目录 （目录） 名称是表名称，如下所示 \EMPDATA\EMP 开头。DBF。 ORACLE Server 驱动程序返回 SQL_CL_END，因为该目录是末尾的表名，如ADMIN.EMP@EMPDATA。  
   
- SQL-92 完整的级别 – 符合的驱动程序将始终返回 SQL_CL_START。 如果数据源不支持目录，则返回值为 0。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。  
+ SQL-92 完整的级别符合的驱动程序将始终返回 SQL_CL_START。 如果数据源不支持目录，则返回值为 0。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_QUALIFIER_LOCATION。  
   
  SQL_CATALOG_NAME (ODBC 3.0)  
- 一个字符串:"Y"，如果服务器支持目录名称或"N"，如果不是。  
+ 一个字符的字符串："Y"如果服务器支持目录名称或"N"，如果不是。  
   
- SQL-92 完整的级别 – 符合的驱动程序将始终返回"Y"。  
+ SQL-92 完整的级别符合的驱动程序将始终返回"Y"。  
   
  SQL_CATALOG_NAME_SEPARATOR (ODBC 1.0)  
  一个字符串： 数据源定义为目录名称和遵循或它之前的限定的名元素之间的分隔符的字符。  
   
- 如果数据源不支持目录，则返回空字符串。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。 SQL-92 完整的级别 – 符合的驱动程序将始终返回"。"。  
+ 如果数据源不支持目录，则返回空字符串。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。 SQL-92 完整的级别符合的驱动程序将始终返回"。"。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_QUALIFIER_NAME_SEPARATOR。  
   
  SQL_CATALOG_TERM (ODBC 1.0)  
  目录; 数据源供应商的名称字符的字符串例如，"数据库"或者"directory"。 此字符串可以是大写、 较低，或混合大小写。  
   
- 如果数据源不支持目录，则返回空字符串。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。 SQL-92 完整的级别 – 符合的驱动程序将始终返回"目录"。  
+ 如果数据源不支持目录，则返回空字符串。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。 SQL-92 完整的级别符合的驱动程序将始终返回"目录"。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_QUALIFIER_TERM。  
   
@@ -519,27 +519,27 @@ SQLRETURN SQLGetInfo(
   
  以下位掩码用于确定可以使用目录的位置：  
   
- SQL_CU_DML_STATEMENTS = 目录中所有数据操作语言语句支持：**选择**，**插入**，**更新**，**删除**，如果受支持，并**选择更新**和定位 update 和 delete 语句。  
+ SQL_CU_DML_STATEMENTS = 目录中所有数据操作语言语句支持：**选择**，**插入**，**更新**，**删除**，并且支持，**选择更新**和定位 update 和 delete语句。  
   
  SQL_CU_PROCEDURE_INVOCATION = ODBC 过程调用语句中支持目录。  
   
- SQL_CU_TABLE_DEFINITION = 目录中所有表定义语句支持： **CREATE TABLE**， **CREATE VIEW**， **ALTER TABLE**， **DROP TABLE**，并**DROP 视图**。  
+ SQL_CU_TABLE_DEFINITION = 目录中所有表定义语句支持：**创建表**， **CREATE 视图**， **ALTER TABLE**，**删除表**，并且**下拉视图**。  
   
- SQL_CU_INDEX_DEFINITION = 目录中所有索引定义语句支持： **CREATE INDEX**并**DROP INDEX**。  
+ SQL_CU_INDEX_DEFINITION = 所有索引定义语句中支持目录：**创建索引**并**DROP INDEX**。  
   
- SQL_CU_PRIVILEGE_DEFINITION = 所有特权定义语句中支持目录： **GRANT**并**撤消**。  
+ SQL_CU_PRIVILEGE_DEFINITION = 所有特权定义语句中支持目录：**授予**并**撤消**。  
   
- 如果数据源不支持目录，则返回值为 0。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。 SQL-92 完整的级别 – 符合的驱动程序将始终返回所有这些设置的位的位掩码。  
+ 如果数据源不支持目录，则返回值为 0。 若要确定是否支持目录，应用程序调用**SQLGetInfo** SQL_CATALOG_NAME 信息类型。 SQL-92 完整的级别符合的驱动程序将始终返回所有这些设置的位的位掩码。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_QUALIFIER_USAGE。  
   
  SQL_COLLATION_SEQ (ODBC 3.0)  
- 排序规则序列的名称。 这是一个字符串，指示为此服务器设置的默认字符的默认排序规则的名称 (例如，ISO 8859-1 或 EBCDIC)。 如果这是未知的将返回空字符串。 SQL-92 完整的级别 – 符合的驱动程序将始终返回非空字符串。  
+ 排序规则序列的名称。 这是一个字符串，指示为此服务器设置的默认字符的默认排序规则的名称 (例如，ISO 8859-1 或 EBCDIC)。 如果这是未知的将返回空字符串。 SQL-92 完整的级别符合的驱动程序将始终返回非空字符串。  
   
  SQL_COLUMN_ALIAS (ODBC 2.0)  
- 一个字符串:"Y"，如果数据源支持的列别名;否则为"N"。  
+ 一个字符的字符串："Y"，如果数据源支持的列别名;否则为"N"。  
   
- 列别名是可以通过使用 AS 子句指定的选择列表中的列的替代名称。 SQL-92 条目级别 – 符合的驱动程序将始终返回"Y"。  
+ 列别名是可以通过使用 AS 子句指定的选择列表中的列的替代名称。 SQL-92 条目级别符合的驱动程序将始终返回"Y"。  
   
  SQL_CONCAT_NULL_BEHAVIOR (ODBC 1.0)  
  SQLUSMALLINT 值，该值指示数据源如何处理空值的串联值非 NULL 值的字符数据类型列的字符数据类型列：  
@@ -548,7 +548,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CB_NON_NULL = 结果为非 NULL 值的列或列的串联。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回 SQL_CB_NULL。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_CB_NULL。  
   
  SQL_CONVERT_BIGINTSQL_CONVERT_BINARYSQL_CONVERT_BIT SQL_CONVERT_CHAR SQL_CONVERT_GUIDSQL_CONVERT_DATESQL_CONVERT_DECIMALSQL_CONVERT_DOUBLESQL_CONVERT_FLOATSQL_CONVERT_INTEGERSQL_CONVERT_INTERVAL_YEAR_MONTHSQL_CONVERT_INTERVAL_DAY_TIMESQL_CONVERT_LONGVARBINARYSQL_CONVERT_LONGVARCHARSQL_CONVERT_NUMERICSQL_CONVERT_REALSQL_CONVERT_SMALLINTSQL_CONVERT_TIMESQL_CONVERT_TIMESTAMPSQL_CONVERT_TINYINTSQL_CONVERT_VARBINARYSQL_CONVERT_VARCHAR (ODBC 1.0)  
  SQLUINTEGER 的位掩码。 位掩码，指示数据源支持的转换**转换**数据中名为的类型的标量函数*信息类型*。 位掩码为零，如果数据源不支持从数据已命名的类型，包括转换为相同的数据类型的任何转换。  
@@ -575,7 +575,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CN_ANY = 的相关名称支持，并且可以是任何有效的用户定义名称。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回 SQL_CN_ANY。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_CN_ANY。  
   
  SQL_CREATE_ASSERTION (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**创建断言**语句，如 SQL-92，支持的数据源中定义。  
@@ -588,7 +588,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA_CONSTRAINT_INITIALLY_DEFERREDSQL_CA_CONSTRAINT_INITIALLY_IMMEDIATESQL_CA_CONSTRAINT_DEFERRABLESQL_CA_CONSTRAINT_NON_DEFERRABLE  
   
- SQL-92 完整的级别 – 符合的驱动程序始终将返回所有这些选项所支持。 返回值"0"意味着**创建断言**不支持语句。  
+ SQL-92 完整的级别符合的驱动程序始终将返回所有这些选项所支持。 返回值"0"意味着**创建断言**不支持语句。  
   
  SQL_CREATE_CHARACTER_SET (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**创建字符集**语句，如 SQL-92，支持的数据源中定义。  
@@ -597,7 +597,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CCS_CREATE_CHARACTER_SETSQL_CCS_COLLATE_CLAUSESQL_CCS_LIMITED_COLLATION  
   
- SQL-92 完整的级别 – 符合的驱动程序始终将返回所有这些选项所支持。 返回值"0"意味着**创建字符集**不支持语句。  
+ SQL-92 完整的级别符合的驱动程序始终将返回所有这些选项所支持。 返回值"0"意味着**创建字符集**不支持语句。  
   
  SQL_CREATE_COLLATION (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**创建排序规则**语句，如 SQL-92，支持的数据源中定义。  
@@ -606,7 +606,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CCOL_CREATE_COLLATION  
   
- 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回此选项。 返回值"0"意味着**创建排序规则**不支持语句。  
+ 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回此选项。 返回值"0"意味着**创建排序规则**不支持语句。  
   
  SQL_CREATE_DOMAIN (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**创建一个域**语句，如 SQL-92，支持的数据源中定义。  
@@ -632,7 +632,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CS_CREATE_SCHEMASQL_CS_AUTHORIZATIONSQL_CS_DEFAULT_CHARACTER_SET  
   
- SQL-92 中间级别 – 符合的驱动程序将始终返回所支持的 SQL_CS_CREATE_SCHEMA 和 SQL_CS_AUTHORIZATION 选项。 这些值也必须在 SQL-92 条目级别，但作为 SQL 语句不一定支持。 SQL-92 完整的级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ 所支持的 SQL-92 中间级别符合的驱动程序将始终会返回 SQL_CS_CREATE_SCHEMA 和 SQL_CS_AUTHORIZATION 选项。 这些值也必须在 SQL-92 条目级别，但作为 SQL 语句不一定支持。 SQL-92 完整的级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_CREATE_TABLE (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**CREATE TABLE**语句，如 SQL-92，支持的数据源中定义。  
@@ -666,7 +666,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CTR_CREATE_TRANSLATION  
   
- 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回这些选项。 返回值"0"意味着**创建转换**不支持语句。  
+ 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回这些选项。 返回值"0"意味着**创建转换**不支持语句。  
   
  SQL_CREATE_VIEW (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**CREATE VIEW**语句，如 SQL-92，支持的数据源中定义。  
@@ -677,14 +677,14 @@ SQLRETURN SQLGetInfo(
   
  返回值"0"意味着**CREATE VIEW**不支持语句。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回所支持的 SQL_CV_CREATE_VIEW 和 SQL_CV_CHECK_OPTION 选项。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_CV_CREATE_VIEW 和 SQL_CV_CHECK_OPTION 选项，因为支持。  
   
- SQL-92 完整的级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 完整的级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_CURSOR_COMMIT_BEHAVIOR (ODBC 1.0)  
  SQLUSMALLINT 值，该值指示如何**提交**操作会影响游标和数据源 （数据源时提交的事务的行为） 中的预定义的语句。  
   
- 此属性的值将反映下一步设置的当前状态： SQL_COPT_SS_PRESERVE_CURSORS。  
+ 此属性的值将反映下一步设置的当前状态：SQL_COPT_SS_PRESERVE_CURSORS。  
   
  SQL_CB_DELETE = 关闭游标，并删除预定义的语句。 若要将光标同样，应用程序必须 reprepare 并重新执行该语句。  
   
@@ -710,9 +710,9 @@ SQLRETURN SQLGetInfo(
   
  SQL_SENSITIVE = 游标是通过在同一事务中其他游标所做的更改。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回 SQL_UNSPECIFIED 选项，因为受支持。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_UNSPECIFIED 选项，因为受支持。  
   
- 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回 SQL_INSENSITIVE 选项。  
+ 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回 SQL_INSENSITIVE 选项。  
   
  SQL_DATA_SOURCE_NAME (ODBC 1.0)  
  在连接过程中使用的数据源名称字符的字符串。 如果应用程序调用**SQLConnect**，这是值*szDSN*参数。 如果应用程序调用**SQLDriverConnect**或**SQLBrowseConnect**，这是在传递给驱动程序的连接字符串中使用 DSN 关键字的值。 如果连接字符串不包含**DSN**关键字 (例如，当它包含**驱动程序**关键字)，这是一个空字符串。  
@@ -725,13 +725,13 @@ SQLRETURN SQLGetInfo(
  SQL_DATABASE_NAME (ODBC 1.0)  
  如果数据源定义一个命名的对象称为"数据库"的一个字符字符串具有当前在使用中，数据库的名称。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 ODBC 3 *.x*，此返回的值*信息类型*也可以通过调用返回**SQLGetConnectAttr**与*特性*SQL_ATTR_CURRENT_CATALOG 的参数。  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  枚举数据源支持的 SQL-92 的日期时间文字 SQLUINTEGER 位掩码。 请注意，这些是在 SQL-92 规范中列出的日期时间文字独立于定义的 ODBC datetime 文字转义子句。 有关 ODBC datetime 文字转义子句的详细信息，请参阅[日期、 时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
   
- 在下面的列表中的位的位掩码，FIPS 过渡级别 – 符合的驱动程序将始终返回"1"的值。 值为"0"表示不支持 SQL-92 的日期时间文字。  
+ 在下面的列表中的位的位掩码，FIPS 过渡级别符合的驱动程序将始终返回"1"的值。 值为"0"表示不支持 SQL-92 的日期时间文字。  
   
  以下位掩码用于确定支持哪些文本：  
   
@@ -770,9 +770,9 @@ SQLRETURN SQLGetInfo(
  SQL_TXN_SERIALIZABLE = 事务是可序列化。 可序列化事务不允许脏读、 不可重复读取或幻像。  
   
  SQL_DESCRIBE_PARAMETER (ODBC 3.0)  
- 一个字符串:"Y"，如果可以描述参数;"N"，如果不是。  
+ 一个字符的字符串："Y"，如果可以描述参数;"N"，如果不是。  
   
- SQL-92 完整的级别 – 符合的驱动程序通常将返回"Y"，因为它将支持**描述输入**语句。 由于这不会直接指定基础 SQL 支持，但是，描述参数可能不支持，即使在 SQL-92 Full 级别 – 符合的驱动程序。  
+ SQL-92 完整的级别符合的驱动程序通常将返回"Y"，因为它将支持**描述输入**语句。 由于这不会直接指定基础 SQL 支持，但是，描述参数可能不支持，即使在 SQL-92 Full 级别符合的驱动程序。  
   
  SQL_DM_VER (ODBC 3.0)  
  具有版本的驱动程序管理器中的字符字符串。 版本是窗体的 # #。 # #。 # # #。 # # #，其中：  
@@ -838,7 +838,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DA_DROP_ASSERTION  
   
- 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回此选项。  
+ 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回此选项。  
   
  SQL_DROP_CHARACTER_SET (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**DROP 字符集**语句，如 SQL-92，支持的数据源中定义。  
@@ -847,7 +847,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DCS_DROP_CHARACTER_SET  
   
- 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回此选项。  
+ 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回此选项。  
   
  SQL_DROP_COLLATION (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**删除排序规则**语句，如 SQL-92，支持的数据源中定义。  
@@ -856,7 +856,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DC_DROP_COLLATION  
   
- 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回此选项。  
+ 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回此选项。  
   
  SQL_DROP_DOMAIN (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**删除域**语句，如 SQL-92，支持的数据源中定义。  
@@ -865,7 +865,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DD_DROP_DOMAINSQL_DD_CASCADESQL_DD_RESTRICT  
   
- SQL-92 中间级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 中间级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_DROP_SCHEMA (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**DROP SCHEMA**语句，如 SQL-92，支持的数据源中定义。  
@@ -874,7 +874,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DS_DROP_SCHEMASQL_DS_CASCADESQL_DS_RESTRICT  
   
- SQL-92 中间级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 中间级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_DROP_TABLE (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**DROP TABLE**语句，如 SQL-92，支持的数据源中定义。  
@@ -883,7 +883,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DT_DROP_TABLESQL_DT_CASCADESQL_DT_RESTRICT  
   
- FIPS 过渡的级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ FIPS 过渡的级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_DROP_TRANSLATION (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**删除翻译**语句，如 SQL-92，支持的数据源中定义。  
@@ -892,7 +892,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DTR_DROP_TRANSLATION  
   
- 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回此选项。  
+ 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回此选项。  
   
  SQL_DROP_VIEW (ODBC 3.0)  
  枚举中的子句 SQLUINTEGER 位掩码**DROP VIEW**语句，如 SQL-92，支持的数据源中定义。  
@@ -901,7 +901,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DV_DROP_VIEWSQL_DV_CASCADESQL_DV_RESTRICT  
   
- FIPS 过渡的级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ FIPS 过渡的级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_DYNAMIC_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  介绍驱动程序支持的动态游标属性 SQLUINTEGER 位掩码。 此位掩码包含的属性，则第一个的子集第二个子集，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES2。  
@@ -930,11 +930,11 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA1_POS_REFRESH =*操作*SQL_REFRESH 参数支持在调用**SQLSetPos**当光标位于动态游标。  
   
- SQL_CA1_POSITIONED_UPDATE = 的更新，当前的 SQL 游标是动态游标时，支持语句。 （SQL-92 条目级别 – 符合的驱动程序将始终返回此选项与受支持。）  
+ SQL_CA1_POSITIONED_UPDATE = 的更新，当前的 SQL 游标是动态游标时，支持语句。 （SQL-92 条目级别符合的驱动程序将始终返回此选项与受支持。）  
   
- SQL_CA1_POSITIONED_DELETE = 删除，当前的 SQL 游标是动态游标时，支持语句。 （SQL-92 条目级别 – 符合的驱动程序将始终返回此选项与受支持。）  
+ SQL_CA1_POSITIONED_DELETE = 删除，当前的 SQL 游标是动态游标时，支持语句。 （SQL-92 条目级别符合的驱动程序将始终返回此选项与受支持。）  
   
- SQL_CA1_SELECT_FOR_UPDATE = SELECT FOR UPDATE SQL 语句时游标是动态游标支持。 （SQL-92 条目级别 – 符合的驱动程序将始终返回此选项与受支持。）  
+ SQL_CA1_SELECT_FOR_UPDATE = SELECT FOR UPDATE SQL 语句时游标是动态游标支持。 （SQL-92 条目级别符合的驱动程序将始终返回此选项与受支持。）  
   
  SQL_CA1_BULK_ADD =*操作*SQL_ADD 参数支持在调用**SQLBulkOperations**当光标位于动态游标。  
   
@@ -944,7 +944,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA1_BULK_FETCH_BY_BOOKMARK =*操作*SQL_FETCH_BY_BOOKMARK 参数支持在调用**SQLBulkOperations**当光标位于动态游标。  
   
- SQL-92 中间级别 – 符合的驱动程序通常将返回 SQL_CA1_NEXT、 SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 选项受支持，因为它支持通过嵌入 SQL 提取语句可滚动游标。 因为这不会直接确定基础 SQL 支持，但是，可滚动游标可能不受支持，即使对于 SQL-92 中间级别 – 符合的驱动程序。  
+ SQL-92 中间级别符合的驱动程序通常将返回 SQL_CA1_NEXT、 SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 选项受支持，因为它支持通过嵌入 SQL 提取语句可滚动游标。 因为这不会直接确定基础 SQL 支持，但是，可滚动游标可能不受支持，即使对于 SQL-92 中间级别符合的驱动程序。  
   
  SQL_DYNAMIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  介绍驱动程序支持的动态游标属性 SQLUINTEGER 位掩码。 此位掩码包含属性，则第二个的子集第一个子集，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES1。  
@@ -988,7 +988,7 @@ SQLRETURN SQLGetInfo(
  SQL_CA2_SIMULATE_UNIQUE = 驱动程序保证模拟定位更新或 delete 语句将影响只有一行时游标是动态游标。 如果该驱动程序不能保证这一点对于给定的语句， **SQLExecDirect**或**SQLPrepare**返回 SQLSTATE 01001 （游标操作冲突）。 若要设置此行为，应用程序调用**SQLSetStmtAttr**与 SQL_ATTR_SIMULATE_CURSOR 属性设置为 SQL_SC_UNIQUE。  
   
  SQL_EXPRESSIONS_IN_ORDERBY (ODBC 1.0)  
- 一个字符串:"Y"，如果数据源支持中的表达式**ORDER BY**列表;"N"如果不是。  
+ 一个字符的字符串："Y"，如果数据源支持中的表达式**ORDER BY**列表;"N"如果不是。  
   
  SQL_FILE_USAGE (ODBC 2.0)  
  SQLUSMALLINT 值，该值指示如何单层驱动程序直接处理数据源中的文件：  
@@ -1051,9 +1051,9 @@ SQLRETURN SQLGetInfo(
   
  SQL_GB_GROUP_BY_CONTAINS_SELECT = **GROUP BY**子句必须包含选择列表中的所有非聚合的列。 它可以包含不在选择列表中的列。 例如，**选择部门，MAX(SALARY) 从员工组按部门、 期限**。 (ODBC 2.0)  
   
- SQL_GB_NO_RELATION = 中的列**GROUP BY**子句和 select 列表不相关。 选择列表中的非组合、 非聚合列的含义是数据源而定。 例如，**选择部门，薪金从员工组按部门、 期限**。 (ODBC 2.0)  
+ SQL_GB_NO_RELATION = 中的列**GROUP BY**子句和 select 列表不相关。 选择列表中的非组合、 非聚合列的含义是由数据源决定。 例如，**选择部门，薪金从员工组按部门、 期限**。 (ODBC 2.0)  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回 SQL_GB_GROUP_BY_EQUALS_SELECT 选项，因为受支持。 所支持的 SQL-92 Full 级别 – 符合的驱动程序将始终会返回 SQL_GB_COLLATE 选项。 如果支持任何选项，则**GROUP BY**子句不支持数据源。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_GB_GROUP_BY_EQUALS_SELECT 选项，因为受支持。 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回 SQL_GB_COLLATE 选项。 如果支持任何选项，则**GROUP BY**子句不支持数据源。  
   
  SQL_IDENTIFIER_CASE (ODBC 1.0)  
  SQLUSMALLINT 值，如下所示：  
@@ -1150,10 +1150,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_IS_SELECT_INTO  
   
- SQL-92 条目级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 条目级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_INTEGRITY (ODBC 1.0)  
- 一个字符串:"Y"，如果数据源支持完整性增强功能;"N"如果不是。  
+ 一个字符的字符串："Y"，如果数据源支持完整性增强功能;"N"如果不是。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_ODBC_SQL_OPT_IEF。  
   
@@ -1166,7 +1166,7 @@ SQLRETURN SQLGetInfo(
   
  有关这些位掩码的说明，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （和替换"由键集驱动游标"的说明中的"动态游标"）。  
   
- SQL-92 中间级别 – 符合的驱动程序通常将返回 SQL_CA1_NEXT、 SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 选项受支持，因为该驱动程序支持通过嵌入 SQL 提取语句可滚动游标。 因为这不会直接确定基础 SQL 支持，但是，可滚动游标可能不受支持，即使对于 SQL-92 中间级别 – 符合的驱动程序。  
+ SQL-92 中间级别符合的驱动程序通常将返回 SQL_CA1_NEXT、 SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 选项受支持，因为该驱动程序支持通过嵌入 SQL 提取语句可滚动游标。 因为这不会直接确定基础 SQL 支持，但是，可滚动游标可能不受支持，即使对于 SQL-92 中间级别符合的驱动程序。  
   
  SQL_KEYSET_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  介绍驱动程序支持的键集游标属性 SQLUINTEGER 位掩码。 此位掩码包含属性，则第二个的子集第一个子集，请参阅 SQL_KEYSET_CURSOR_ATTRIBUTES1。  
@@ -1178,14 +1178,14 @@ SQLRETURN SQLGetInfo(
  有关这些位掩码的说明，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （和替换"由键集驱动游标"的说明中的"动态游标"）。  
   
  SQL_KEYWORDS (ODBC 2.0)  
- 包含一列以逗号分隔的所有数据源特定关键字的字符串。 此列表不包含特定于 ODBC 的关键字或数据源和 ODBC 使用的关键字。 此列表表示所有保留的关键字;可互操作应用程序不应在对象名称中使用这些单词。  
+ 包含以逗号分隔列表的所有数据源特定关键字的字符串。 此列表不包含特定于 ODBC 的关键字或数据源和 ODBC 使用的关键字。 此列表表示所有保留的关键字;可互操作应用程序不应在对象名称中使用这些单词。  
   
- ODBC 关键字的列表，请参阅[保留关键字](../../../odbc/reference/appendixes/reserved-keywords.md)中[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 **#Define**值 SQL_ODBC_KEYWORDS 包含 ODBC 关键字的以逗号分隔列表。  
+ ODBC 关键字的列表，请参阅[保留关键字](../../../odbc/reference/appendixes/reserved-keywords.md)中[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 **#Define**值 SQL_ODBC_KEYWORDS 包含 ODBC 关键字的以逗号分隔列表。  
   
  附录 C：SQL 语法  
   
  SQL_LIKE_ESCAPE_CLAUSE (ODBC 2.0)  
- 一个字符串： 中的"Y"，如果数据源支持的转义符为百分比字符 （%） 和下划线字符 (_)**等**谓词和驱动程序支持 ODBC 语法的用于定义**等**谓词转义字符;"N"以其他方式。  
+ 一个字符的字符串：中的"Y"，如果数据源支持的转义符为百分比字符 （%） 和下划线字符 (_)**等**谓词和驱动程序支持 ODBC 语法的用于定义**如**谓词转义字符;"N"以其他方式。  
   
  SQL_MAX_ASYNC_CONCURRENT_STATEMENTS (ODBC 3.0)  
  SQLUINTEGER 值，该值指定活动的并发语句的最大数目的驱动程序可以支持对给定连接的异步模式。 如果没有任何特定的限制或未知的限制是，此值为零。  
@@ -1196,7 +1196,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_CATALOG_NAME_LEN (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定数据源中的目录名称的最大长度。 如果没有最大长度限制或长度为未知，则将此值设置为零。  
   
- FIPS 完整的级别 – 符合的驱动程序将返回至少 128。  
+ FIPS 完整的级别符合的驱动程序将返回至少 128。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_MAX_QUALIFIER_NAME_LEN。  
   
@@ -1206,12 +1206,12 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_COLUMN_NAME_LEN (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定数据源中的列名称的最大长度。 如果没有最大长度限制或长度为未知，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 18。 FIPS 中间级别 – 符合的驱动程序将返回至少 128。  
+ FIPS 条目级别符合的驱动程序将返回至少为 18。 FIPS 中间级别符合的驱动程序将返回至少 128。  
   
  SQL_MAX_COLUMNS_IN_GROUP_BY (ODBC 2.0)  
  一个 SQLUSMALLINT 值，指定的列中允许的最大数**GROUP BY**子句。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 6。 FIPS 中间级别 – 符合的驱动程序将返回至少 15。  
+ FIPS 条目级别符合的驱动程序将返回至少为 6。 FIPS 中间级别符合的驱动程序将返回至少 15。  
   
  SQL_MAX_COLUMNS_IN_INDEX (ODBC 2.0)  
  SQLUSMALLINT 值，该值指定在索引中的最大允许的列数。 如果没有指定的限制或未知的限制，则将此值设置为零。  
@@ -1219,17 +1219,17 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_COLUMNS_IN_ORDER_BY (ODBC 2.0)  
  一个 SQLUSMALLINT 值，指定的列中允许的最大数**ORDER BY**子句。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 6。 FIPS 中间级别 – 符合的驱动程序将返回至少 15。  
+ FIPS 条目级别符合的驱动程序将返回至少为 6。 FIPS 中间级别符合的驱动程序将返回至少 15。  
   
  SQL_MAX_COLUMNS_IN_SELECT (ODBC 2.0)  
  选择列表中，指定最大允许的列数 SQLUSMALLINT 值。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 100。 FIPS 中间级别 – 符合的驱动程序将返回至少 250。  
+ FIPS 条目级别符合的驱动程序将返回至少为 100。 FIPS 中间级别符合的驱动程序将返回至少 250。  
   
  SQL_MAX_COLUMNS_IN_TABLE (ODBC 2.0)  
  SQLUSMALLINT 值，该值指定表中的最大允许的列数。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 100。 FIPS 中间级别 – 符合的驱动程序将返回至少 250。  
+ FIPS 条目级别符合的驱动程序将返回至少为 100。 FIPS 中间级别符合的驱动程序将返回至少 250。  
   
  SQL_MAX_CONCURRENT_ACTIVITIES (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定该驱动程序可以支持的连接的活动语句的最大数目。 如果它已挂起、 包含字词"结果"含义中的行的结果，为活动定义语句**选择**操作或受影响的行**插入**，**更新**，或**删除**操作 （例如，行计数），或如果它处于 NEED_DATA 状态。 此值可以反映驱动程序或数据源所强加的限制。 如果没有指定的限制或未知的限制，则将此值设置为零。  
@@ -1239,7 +1239,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_CURSOR_NAME_LEN (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定数据源中的游标名称的最大长度。 如果没有最大长度限制或长度为未知，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 18。 FIPS 中间级别 – 符合的驱动程序将返回至少 128。  
+ FIPS 条目级别符合的驱动程序将返回至少为 18。 FIPS 中间级别符合的驱动程序将返回至少 128。  
   
  SQL_MAX_DRIVER_CONNECTIONS (ODBC 1.0)  
  一个 SQLUSMALLINT 值，指定的最大的驱动程序可以支持为环境的活动连接数。 此值可以反映驱动程序或数据源所强加的限制。 如果没有指定的限制或未知的限制，则将此值设置为零。  
@@ -1249,7 +1249,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_IDENTIFIER_LEN (ODBC 3.0)  
  SQLUSMALLINT，该值指示数据源支持的用户定义名称的字符的最大大小。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 18。 FIPS 中间级别 – 符合的驱动程序将返回至少 128。  
+ FIPS 条目级别符合的驱动程序将返回至少为 18。 FIPS 中间级别符合的驱动程序将返回至少 128。  
   
  SQL_MAX_INDEX_SIZE (ODBC 2.0)  
  SQLUINTEGER 值，该值指定最大允许索引的合并字段中的字节数。 如果没有指定的限制或未知的限制，则将此值设置为零。  
@@ -1260,15 +1260,15 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_ROW_SIZE (ODBC 2.0)  
  SQLUINTEGER 值，该值指定表中的单个行的最大长度。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少 2,000。 FIPS 中间级别 – 符合的驱动程序将返回至少 8,000。  
+ FIPS 条目级别符合的驱动程序将返回至少 2,000。 FIPS 中间级别符合的驱动程序将返回至少 8,000。  
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG (ODBC 3.0)  
- 一个字符串:"Y"如果 SQL_MAX_ROW_SIZE 信息类型包括所有 SQL_LONGVARCHAR 和 SQL_LONGVARBINARY 列的长度的行; 中返回的最大行大小"N"以其他方式。  
+ 一个字符的字符串："Y"，如果最大行大小为 SQL_MAX_ROW_SIZE 信息类型返回的行; 中包括所有 SQL_LONGVARCHAR 和 SQL_LONGVARBINARY 列的长度"N"以其他方式。  
   
  SQL_MAX_SCHEMA_NAME_LEN (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定数据源中的架构名称的最大长度。 如果没有最大长度限制或长度为未知，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 18。 FIPS 中间级别 – 符合的驱动程序将返回至少 128。  
+ FIPS 条目级别符合的驱动程序将返回至少为 18。 FIPS 中间级别符合的驱动程序将返回至少 128。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_MAX_OWNER_NAME_LEN。  
   
@@ -1278,28 +1278,28 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_TABLE_NAME_LEN (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定数据源中的表名称的最大长度。 如果没有最大长度限制或长度为未知，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少为 18。 FIPS 中间级别 – 符合的驱动程序将返回至少 128。  
+ FIPS 条目级别符合的驱动程序将返回至少为 18。 FIPS 中间级别符合的驱动程序将返回至少 128。  
   
  SQL_MAX_TABLES_IN_SELECT (ODBC 2.0)  
  SQLUSMALLINT 值，该值指定表中允许的最大数目**FROM**子句**选择**语句。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- FIPS 条目级别 – 符合的驱动程序将返回至少 15。 FIPS 中间级别 – 符合的驱动程序将返回至少 50。  
+ FIPS 条目级别符合的驱动程序将返回至少 15。 FIPS 中间级别符合的驱动程序将返回至少 50。  
   
  SQL_MAX_USER_NAME_LEN (ODBC 2.0)  
  SQLUSMALLINT 值，该值指定数据源中的用户名称的最大长度。 如果没有最大长度限制或长度为未知，则将此值设置为零。  
   
  SQL_MULT_RESULT_SETS (ODBC 1.0)  
- 一个字符串:"Y"，如果数据源支持多个结果集，"N"，如果不是。  
+ 一个字符的字符串："Y"如果数据源支持多个结果集，"N"，如果不是。  
   
  有关多个结果集的详细信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
  SQL_MULTIPLE_ACTIVE_TXN (ODBC 1.0)  
- 一个字符串:"Y"，如果该驱动程序支持在相同时，"N"的多个活动事务，如果只有一个事务可以在任何时候处于活动状态。  
+ 一个字符的字符串："Y"如果驱动程序支持在相同时，"N"的多个活动事务，如果只有一个事务可以在任何时候处于活动状态。  
   
  返回此信息类型的信息不适用于在分布式事务的情况下。  
   
  SQL_NEED_LONG_DATA_LEN (ODBC 2.0)  
- 一个字符串： 如果不是"Y"，如果数据源需要该值之前的长数据值 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定于数据类型） 的长度发送到数据源，"N"。 有关详细信息，请参阅[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)并[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ 一个字符的字符串：如果不是，"Y"，如果数据源需要该值之前的长数据值 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定的数据类型） 的长度是发送到数据源，"N"。 有关详细信息，请参阅[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)并[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
  SQL_NON_NULLABLE_COLUMNS (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定数据源是否支持 NOT NULL 列中：  
@@ -1308,7 +1308,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_NNC_NON_NULL = 列不能为 null。 (数据源支持**NOT NULL**中的列约束**CREATE TABLE**语句。)  
   
- SQL-92 条目级别 – 符合的驱动程序将返回 SQL_NNC_NON_NULL。  
+ SQL-92 条目级别符合的驱动程序将返回 SQL_NNC_NON_NULL。  
   
  SQL_NULL_COLLATION (ODBC 2.0)  
  指定 null 值在结果集中的排序位置 SQLUSMALLINT 值：  
@@ -1322,7 +1322,7 @@ SQLRETURN SQLGetInfo(
  SQL_NC_START = null 值进行排序的结果集，而不考虑 ASC 或 DESC 关键字开头。  
   
  SQL_NUMERIC_FUNCTIONS (ODBC 1.0)  
- 注意： ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举支持的驱动程序和关联的数据源的标量数字函数 SQLUINTEGER 位掩码。  
   
@@ -1333,11 +1333,11 @@ SQLRETURN SQLGetInfo(
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
  SQLUINTEGER 值，该值指示 ODBC 3 别的 *.x*驱动程序符合的接口。  
   
- SQL_OIC_CORE： 所有 ODBC 驱动程序的最低级别应遵守。 此级别包括基本界面元素，如连接函数、 准备和执行 SQL 语句的函数、 基本的结果集元数据函数，基本的目录函数等。  
+ SQL_OIC_CORE:最低级别的所有 ODBC 驱动程序都都应遵守。 此级别包括基本界面元素，如连接函数、 准备和执行 SQL 语句的函数、 基本的结果集元数据函数，基本的目录函数等。  
   
- SQL_OIC_LEVEL1： 级别包括核心标准符合性级别功能，加上可滚动游标，书签，定位更新和删除，等等。  
+ SQL_OIC_LEVEL1:级别包括核心标准符合性级别功能，加上可滚动游标，书签，定位更新和删除，等等。  
   
- SQL_OIC_LEVEL2: 级别包括第 1 级标准符合性级别功能，加上高级的功能，例如敏感游标;更新、 删除和刷新的书签;存储的过程支持;主键和外键; 的目录函数多目录支持;等等。  
+ SQL_OIC_LEVEL2:级别包括第 1 级标准符合性级别功能，加上高级的功能，例如敏感游标;更新、 删除和刷新的书签;存储的过程支持;主键和外键; 的目录函数多目录支持;等等。  
   
  有关详细信息，请参阅[接口一致性级别](../../../odbc/reference/develop-app/interface-conformance-levels.md)。  
   
@@ -1366,7 +1366,7 @@ SQLRETURN SQLGetInfo(
  有关支持的 SELECT 语句中的关系联接运算符的信息根据 SQL-92 的定义，请参阅 SQL_SQL92_RELATIONAL_JOIN_OPERATORS。  
   
  SQL_ORDER_BY_COLUMNS_IN_SELECT (ODBC 2.0)  
- 一个字符串:"Y"如果中的列**ORDER BY**子句必须内嵌在 select 列表中; 否则为"N"。  
+ 一个字符的字符串："Y"如果中的列**ORDER BY**子句必须内嵌在 select 列表中; 否则为"N"。  
   
  SQL_PARAM_ARRAY_ROW_COUNTS (ODBC 3.0)  
  枚举驱动程序的属性有关的行可用性 SQLUINTEGER 中参数化执行计数。 具有以下值：  
@@ -1388,7 +1388,7 @@ SQLRETURN SQLGetInfo(
  过程; 的数据源供应商的名称字符的字符串例如，"数据库过程"、"存储的过程"，"过程"、"包"存储的查询"。  
   
  SQL_PROCEDURES (ODBC 1.0)  
- 一个字符串:"Y"，如果数据源支持过程，并且该驱动程序支持 ODBC 过程调用语法;"N"以其他方式。  
+ 一个字符的字符串："Y"，如果数据源支持过程和驱动程序支持 ODBC 过程调用语法;"N"以其他方式。  
   
  SQL_POS_OPERATIONS (ODBC 2.0)  
  枚举中的支持操作 SQLINTEGER 位掩码**SQLSetPos**。  
@@ -1404,43 +1404,43 @@ SQLRETURN SQLGetInfo(
   
  SQL_IC_LOWER = 带引号 SQL 中的标识符不区分大小写，并存储在系统目录中的小写。  
   
- SQL_IC_SENSITIVE = 带引号 SQL 中的标识符区分大小写，并存储在系统目录中的混合大小写。 （在 SQL-92 兼容的数据库中，带引号的标识符是始终区分大小写。）  
+ SQL_IC_SENSITIVE = 带引号 SQL 中的标识符区分大小写，并存储在系统目录中的混合大小写。 （在 SQL 92 符合数据库中，带引号的标识符是始终区分大小写。）  
   
  SQL_IC_MIXED = 带引号 SQL 中的标识符不区分大小写，并存储在系统目录中的混合大小写。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回 SQL_IC_SENSITIVE。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_IC_SENSITIVE。  
   
  SQL_ROW_UPDATES (ODBC 1.0)  
- 一个字符串:"Y"，如果由键集驱动或混合游标维护行版本或所有的值中提取行并因此可以检测对行所做的任何用户自上次提取该行的任何更新。 （这仅适用于更新，不适用于删除或插入操作。）该驱动程序可以返回 SQL_ROW_UPDATED 标志将行状态数组何时**SQLFetchScroll**调用。 否则为"N"。  
+ 一个字符的字符串："Y"，如果由键集驱动或混合游标的所有维护行版本或值提取行，因此可以检测对行所做的任何用户自上次提取该行的任何更新。 （这仅适用于更新，不适用于删除或插入操作。）该驱动程序可以返回 SQL_ROW_UPDATED 标志将行状态数组何时**SQLFetchScroll**调用。 否则为"N"。  
   
  SQL_SCHEMA_TERM (ODBC 1.0)  
  为架构; 数据源供应商的名称字符的字符串例如，"所有者"、"授权 ID"或者"架构"。  
   
  可以大写、 较低，或混合大小写中返回的字符串。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回"架构"。  
+ SQL-92 条目级别符合的驱动程序将始终返回"架构"。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_OWNER_TERM。  
   
  SQL_SCHEMA_USAGE (ODBC 2.0)  
  枚举架构可以用于的语句 SQLUINTEGER 位掩码：  
   
- SQL_SU_DML_STATEMENTS = 架构中所有数据操作语言语句支持：**选择**，**插入**，**更新**，**删除**，如果受支持，并**选择更新**和定位 update 和 delete 语句。  
+ SQL_SU_DML_STATEMENTS = 所有数据操作语言语句中支持的架构：**选择**，**插入**，**更新**，**删除**，并且支持，**选择更新**和定位 update 和 delete语句。  
   
  SQL_SU_PROCEDURE_INVOCATION = ODBC 过程调用语句中支持的架构。  
   
- SQL_SU_TABLE_DEFINITION = 架构中所有表定义语句支持： **CREATE TABLE**， **CREATE VIEW**， **ALTER TABLE**， **DROP TABLE**，并**DROP 视图**。  
+ SQL_SU_TABLE_DEFINITION = 所有表定义语句中支持的架构：**创建表**， **CREATE 视图**， **ALTER TABLE**，**删除表**，并且**下拉视图**。  
   
- SQL_SU_INDEX_DEFINITION = 所有索引定义语句中支持的架构： **CREATE INDEX**并**DROP INDEX**。  
+ SQL_SU_INDEX_DEFINITION = 所有索引定义语句中支持的架构：**创建索引**并**DROP INDEX**。  
   
- SQL_SU_PRIVILEGE_DEFINITION = 所有特权定义语句中支持的架构： **GRANT**并**撤消**。  
+ SQL_SU_PRIVILEGE_DEFINITION = 所有特权定义语句中支持的架构：**授予**并**撤消**。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回 SQL_SU_DML_STATEMENTS、 SQL_SU_TABLE_DEFINITION 和 SQL_SU_PRIVILEGE_DEFINITION 选项，因为受支持。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_SU_DML_STATEMENTS、 SQL_SU_TABLE_DEFINITION 和 SQL_SU_PRIVILEGE_DEFINITION 选项，因为受支持。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_OWNER_USAGE。  
   
  SQL_SCROLL_OPTIONS (ODBC 1.0)  
- 注意： ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举支持的可滚动游标滚动选项 SQLUINTEGER 位掩码。  
   
@@ -1496,7 +1496,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SFKD_CASCADESQL_SFKD_NO_ACTIONSQL_SFKD_SET_DEFAULTSQL_SFKD_SET_NULL  
   
- FIPS 过渡的级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ FIPS 过渡的级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_SQL92_FOREIGN_KEY_UPDATE_RULE(ODBC 3.0)  
  枚举中的外键支持的规则 SQLUINTEGER 位掩码**更新**语句，如 SQL-92 中定义。  
@@ -1505,7 +1505,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SFKU_CASCADESQL_SFKU_NO_ACTIONSQL_SFKU_SET_DEFAULTSQL_SFKU_SET_NULL  
   
- SQL-92 完整的级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 完整的级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_SQL92_GRANT(ODBC 3.0)  
  枚举中支持的子句 SQLUINTEGER 位掩码**授予**语句，如 SQL-92 中定义。  
@@ -1576,9 +1576,9 @@ SQLRETURN SQLGetInfo(
  SQL_STANDARD_CLI_CONFORMANCE (ODBC 3.0)  
  在枚举驱动程序符合标准的一个或多个标准 SQLUINTEGER 位掩码。 以下位掩码用于确定驱动程序符合哪些级别：  
   
- SQL_SCC_XOPEN_CLI_VERSION1: 驱动程序符合开放组 CLI 版本 1。  
+ SQL_SCC_XOPEN_CLI_VERSION1:驱动程序符合开放组 CLI 版本 1。  
   
- SQL_SCC_ISO92_CLI: 驱动程序符合 ISO 92 CLI。  
+ SQL_SCC_ISO92_CLI:驱动程序符合 ISO 92 CLI。  
   
  SQL_STATIC_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  介绍驱动程序支持的静态游标属性 SQLUINTEGER 位掩码。 此位掩码包含的属性，则第一个的子集第二个子集，请参阅 SQL_STATIC_CURSOR_ATTRIBUTES2。  
@@ -1589,7 +1589,7 @@ SQLRETURN SQLGetInfo(
   
  有关这些位掩码的说明，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （和替换"静态游标"的说明中的"动态游标"）。  
   
- SQL-92 中间级别 – 符合的驱动程序通常将返回 SQL_CA1_NEXT、 SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 选项受支持，因为该驱动程序支持通过嵌入 SQL 提取语句可滚动游标。 因为这不会直接确定基础 SQL 支持，但是，可滚动游标可能不受支持，即使对于 SQL-92 中间级别 – 符合的驱动程序。  
+ SQL-92 中间级别符合的驱动程序通常将返回 SQL_CA1_NEXT、 SQL_CA1_ABSOLUTE 和 SQL_CA1_RELATIVE 选项受支持，因为该驱动程序支持通过嵌入 SQL 提取语句可滚动游标。 因为这不会直接确定基础 SQL 支持，但是，可滚动游标可能不受支持，即使对于 SQL-92 中间级别符合的驱动程序。  
   
  SQL_STATIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  介绍驱动程序支持的静态游标属性 SQLUINTEGER 位掩码。 此位掩码包含属性，则第二个的子集第一个子集，请参阅 SQL_STATIC_CURSOR_ATTRIBUTES1。  
@@ -1601,7 +1601,7 @@ SQLRETURN SQLGetInfo(
  有关这些位掩码的说明，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES2 （和替换"静态游标"的说明中的"动态游标"）。  
   
  SQL_STRING_FUNCTIONS (ODBC 1.0)  
- 注意： ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举支持的驱动程序和关联的数据源的标量字符串函数 SQLUINTEGER 位掩码。  
   
@@ -1620,7 +1620,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SQ_CORRELATED_SUBQUERIES 位掩码指示支持子查询的所有谓词都支持相关子查询。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回在其中设置所有这些位的位掩码。  
+ SQL-92 条目级别符合的驱动程序将始终返回在其中设置所有这些位的位掩码。  
   
  SQL_SYSTEM_FUNCTIONS (ODBC 1.0)  
  枚举支持的驱动程序和关联的数据源的标量系统函数 SQLUINTEGER 位掩码。  
@@ -1634,7 +1634,7 @@ SQLRETURN SQLGetInfo(
   
  此字符串可以是大写、 较低，或混合大小写。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回"table"。  
+ SQL-92 条目级别符合的驱动程序将始终返回"table"。  
   
  SQL_TIMEDATE_ADD_INTERVALS (ODBC 2.0)  
  枚举支持的驱动程序和 TIMESTAMPADD 标量函数的关联的数据源的时间戳时间间隔 SQLUINTEGER 位掩码。  
@@ -1643,7 +1643,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- FIPS 过渡的级别 – 符合的驱动程序将始终返回在其中设置所有这些位的位掩码。  
+ FIPS 过渡的级别符合的驱动程序将始终返回在其中设置所有这些位的位掩码。  
   
  SQL_TIMEDATE_DIFF_INTERVALS (ODBC 2.0)  
  枚举支持的驱动程序和 TIMESTAMPDIFF 标量函数的关联的数据源的时间戳时间间隔 SQLUINTEGER 位掩码。  
@@ -1652,10 +1652,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- FIPS 过渡的级别 – 符合的驱动程序将始终返回在其中设置所有这些位的位掩码。  
+ FIPS 过渡的级别符合的驱动程序将始终返回在其中设置所有这些位的位掩码。  
   
  SQL_TIMEDATE_FUNCTIONS (ODBC 1.0)  
- 注意： ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举的标量的日期和时间函数的驱动程序和关联的数据源支持 SQLUINTEGER 位掩码。  
   
@@ -1664,7 +1664,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_TD_CURRENT_DATE ODBC 3.0) (ODBC 3.0) SQL_FN_TD_CURRENT_TIME SQL_FN_TD_CURRENT_TIMESTAMP (ODBC 3.0) (ODBC 1.0) SQL_FN_TD_CURDATE SQL_FN_TD_CURTIME (ODBC 1.0) SQL_FN_TD_DAYNAME (ODBC 2.0) SQL_FN_TD_DAYOFMONTH (ODBC 1.0) SQL_FN_TD_DAYOFWEEK (ODBC 1.0) SQL_FN_TD_DAYOFYEAR (ODBC 1.0) SQL_FN_TD_EXTRACT (ODBC 3.0) (ODBC 1.0) SQL_FN_TD_HOUR SQL_FN_TD_MINUTE (ODBC 1.0) SQL_FN_TD_MONTH (ODBC 1.0) SQL_FN_TD_MONTHNAME (ODBC 2.0) SQL_FN_TD_NOW (ODBC 1.0) SQL_FN_TD_QUARTER (ODBC 1.0) SQL_FN_TD_第二个 (ODBC 1.0) SQL_FN_TD_TIMESTAMPADD (ODBC 2.0) SQL_FN_TD_TIMESTAMPDIFF (ODBC 2.0) SQL_FN_TD_WEEK (ODBC 1.0) SQL_FN_TD_YEAR (ODBC 1.0)  
   
  SQL_TXN_CAPABLE (ODBC 1.0)  
- 注意： ODBC 1.0; 中引入的信息类型每个返回值都标有中引入的版本。  
+ 注意：在 ODBC 1.0; 中引入的信息类型每个返回值都标有中引入的版本。  
   
  SQLUSMALLINT 值，描述在驱动程序或数据源中的事务支持：  
   
@@ -1691,7 +1691,7 @@ SQLRETURN SQLGetInfo(
   
  若要设置事务隔离级别，应用程序调用**SQLSetConnectAttr**设置 SQL_ATTR_TXN_ISOLATION 属性。 有关详细信息，请参阅[SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回 SQL_TXN_SERIALIZABLE 所支持。 FIPS 过渡级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 条目级别符合的驱动程序将始终返回 SQL_TXN_SERIALIZABLE 所支持。 FIPS 过渡级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_UNION (ODBC 2.0)  
  枚举对支持 SQLUINTEGER 位掩码**UNION**子句：  
@@ -1700,7 +1700,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_U_UNION_ALL = 数据源支持**所有**中的关键字**UNION**子句。 (**SQLGetInfo**这种情况下返回 SQL_U_UNION 和 SQL_U_UNION_ALL。)  
   
- SQL-92 条目级别 – 符合的驱动程序将始终返回这两种选项所支持。  
+ SQL-92 条目级别符合的驱动程序将始终返回这两种选项所支持。  
   
  SQL_USER_NAME (ODBC 1.0)  
  具有特定的数据库，可以不同于登录名中使用的名称的字符字符串。  
@@ -1709,10 +1709,10 @@ SQLRETURN SQLGetInfo(
  表示与该版本的 ODBC 驱动程序管理器完全符合 Open Group 规范的发布的年份的字符串。  
   
  SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
- 一个字符串:"Y"，如果用户可以执行所有过程返回的**SQLProcedures**;"N"如果可能有过程返回，用户不能执行。  
+ 一个字符的字符串："Y"，如果用户可以执行所有过程返回的**SQLProcedures**;"N"如果可能有过程返回，用户不能执行。  
   
  SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
- 一个字符串:"Y"，如果用户保证**选择**返回的所有表的特权**SQLTables**;"N"如果可能存在的表返回该用户无法访问。  
+ 一个字符的字符串："Y"，如果用户保证**选择**返回的所有表的特权**SQLTables**;"N"如果可能存在的表返回该用户无法访问。  
   
  SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  SQLUSMALLINT 值，该值指定该驱动程序可以支持的活动环境的最大数目。 如果没有指定的限制或未知的限制，则将此值设置为零。  
@@ -1722,10 +1722,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- SQL-92 条目级别 – 符合的驱动程序始终将返回所有这些选项所支持。  
+ SQL-92 条目级别符合的驱动程序始终将返回所有这些选项所支持。  
   
  SQL_ALTER_DOMAIN (ODBC 3.0)  
- 枚举中的子句 SQLUINTEGER 位掩码**ALTER 域**语句，如 SQL-92，支持的数据源中定义。 完整 SQL-92 的兼容级别的驱动程序将始终返回所有的位屏蔽。 返回值"0"意味着**ALTER 域**不支持语句。  
+ 枚举中的子句 SQLUINTEGER 位掩码**ALTER 域**语句，如 SQL-92，支持的数据源中定义。 SQL-92 Full 级别兼容的驱动程序将始终返回所有的位屏蔽。 返回值"0"意味着**ALTER 域**不支持语句。  
   
  此时必须支持此功能的 SQL-92 或 FIPS 符合性级别显示在每位掩码旁边的括号中。  
   

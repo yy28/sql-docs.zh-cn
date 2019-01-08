@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fac6931d7645a778bd332f8bc5e1ef3d2f5059ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ae1ad6aabc87d1cf0d7d92da5b97092c23bc02d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629909"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511935"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
   
  *EDataType*参数枚举[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中的数据类型标记、 不 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLINT2 类型指定一个两个字节的整数：ODBC 类型的 SQL_C_SHORT。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了对 SQLXML 和 SQLUDT 数据类型标记中支持***eDataType***参数。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了对 SQLXML 和 SQLUDT 数据类型标记中支持**_eDataType_** 参数。  
  
  下表列出了有效的枚举数据类型以及相应的 ODBC C 数据类型。
   
@@ -146,20 +146,20 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT2|short int|  
 |SQLINT4|ssNoversion|  
 |SQLINT8|_int64|  
-|SQLINTN|cbIndicator<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLINTN|*cbIndicator*<br /> 1：SQLINT1<br /> 2：SQLINT2<br /> 4：SQLINT4<br /> 8:SQLINT8|  
 |SQLFLT4|FLOAT|  
 |SQLFLT8|FLOAT|  
-|SQLFLTN|cbIndicator<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
+|SQLFLTN|*cbIndicator*<br /> 4：SQLFLT4<br /> 8:SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|cbIndicator<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4：SQLMONEY4<br /> 8:SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|cbIndicator<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4：SQLDATETIM4<br /> 8:SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
@@ -177,7 +177,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>备注  
  使用**bcp_bind**若要将数据从程序变量复制到的表中的快速、 高效的方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前调用此方法或任何其他大容量复制函数。 调用**bcp_init**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制的目标表。 调用时**bcp_init**用于**bcp_bind**并[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，则**bcp_init** *szDataFile*参数，指示数据文件中，设置为 NULL;**bcp_init * * * eDirection*参数设置为 DB_IN。  
+ 调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前调用此方法或任何其他大容量复制函数。 调用**bcp_init**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制的目标表。 调用时**bcp_init**用于**bcp_bind**并[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，则**bcp_init** *szDataFile*参数，指示数据文件中，设置为 NULL;**bcp_init**_eDirection_参数设置为 DB_IN。  
   
  单独**bcp_bind**为每个列调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]你想要复制到其中的表。 所需的后**bcp_bind**的调用进行了，然后调用**bcp_sendrow**将数据的行发送到将程序变量中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支持重新绑定列。  
   

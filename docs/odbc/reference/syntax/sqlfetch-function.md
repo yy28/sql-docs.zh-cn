@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213086"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLFetch**从结果集中提取数据的下一个行集，并返回所有绑定列的数据。  
@@ -39,7 +39,7 @@ ms.locfileid: "47825935"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
 |22001|字符串数据，右截断|长度可变的书签的列返回已被截断。|  
 |22002|需要指示器变量，但未提供|NULL 已提取数据的列中其*StrLen_or_IndPtr*设置**SQLBindCol** (或通过设置 SQL_DESC_INDICATOR_PTR **SQLSetDescField**或**SQLSetDescRec**) 是空指针。|  
-|22003|数值超出范围|返回数字的数值或字符串的一个或多个绑定列可能会造成数字被截断的整个 （而不是小数） 部分。<br /><br /> 有关详细信息，请参阅[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附录 d： 数据类型。|  
+|22003|数值超出范围|返回数字的数值或字符串的一个或多个绑定列可能会造成数字被截断的整个 （而不是小数） 部分。<br /><br /> 有关详细信息，请参阅[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)中附录 d:数据类型。|  
 |22007|日期时间格式无效|在结果集中的字符列已绑定到日期、 时间或时间戳 C 结构和列中的值时，分别，无效的日期、 时间戳。|  
 |22012|被零除|算术表达式中的值返回，这导致除零。|  
 |22015|间隔字段溢出|将分配从精确数字或时间间隔 SQL 类型到 C 间隔类型前导字段中时导致重要数字丢失。<br /><br /> 提取数据到 C 间隔类型时，出现没有 C 间隔类型中的 SQL 类型的值的表示形式。|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  如果 ODBC 3 *.x*应用程序适用于 ODBC 2 *.x*驱动程序，驱动程序管理器将映射**SQLFetch**调用**SQLExtendedFetch**为ODBC 2 *.x*支持的驱动程序**SQLExtendedFetch**。 如果 ODBC 2 *.x*驱动程序不支持**SQLExtendedFetch**，驱动程序管理器映射**SQLFetch**调用**SQLFetch** ODBC 2 中 *.x*驱动程序，可以提取单个行。  
   
- 有关详细信息，请参阅[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中向后兼容性的附录 g： 驱动程序指南。  
+ 有关详细信息，请参阅[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中附录 g:为了向后兼容的驱动程序指南。  
   
 ## <a name="positioning-the-cursor"></a>将光标置于  
  创建结果集时，游标位于结果集的开始之前。 **SQLFetch**提取下一个行集。 它相当于调用**SQLFetchScroll**与*FetchOrientation*设置为 SQL_FETCH_NEXT。 有关游标的详细信息，请参阅[游标](../../../odbc/reference/develop-app/cursors.md)并[块状游标](../../../odbc/reference/develop-app/block-cursors.md)。  
   
- 将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性指定的行集中的行数。 如果行集正在通过提取**SQLFetch**重叠的结果集末尾**SQLFetch**返回的部分行集。 也就是说，S + R-1 大于 L，其中，S 起始行的行集提取，R 是行集大小和 L 是最后一个行在结果集中，然后仅第一个 L – S + 1 行集的行有效。 剩余的行是空并且具有 SQL_ROW_NOROW 的状态。  
+ 将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性指定的行集中的行数。 如果行集正在通过提取**SQLFetch**重叠的结果集末尾**SQLFetch**返回的部分行集。 也就是说，S + R-1 大于 L，其中，S 起始行的行集提取，R 是行集大小和 L 是最后一个行在结果集中，然后的第一个 L S + 1 行集的行有效。 剩余的行是空并且具有 SQL_ROW_NOROW 的状态。  
   
  之后**SQLFetch**返回当前行是行集的第一行。  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
 |在开始之前|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|后端|  
+|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|后端|  
 |后端|后端|  
   
  [1] 如果提取行集大小为发生更改，这是用于上次提取的行集大小。  

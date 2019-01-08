@@ -18,12 +18,12 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c32bc8d9b8cca81c560e12b82f58169b257ca1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535500"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失败|  
-|1FF6|无法返回元数据。<br /><br /> 注意： 这是因为该语句不会生成一个结果集;例如，它是 INSERT 或 DDL 语句。|  
+|1FF6|无法返回元数据。<br /><br /> 注意：原因是语句未生成结果集；例如，它是一个 INSERT 或 DDL 语句。|  
   
 ## <a name="examples"></a>示例  
  当*stmt*已参数化并*scrollopt* PARAMETERIZED_STMT 值为 ON，字符串的格式如下所示：  

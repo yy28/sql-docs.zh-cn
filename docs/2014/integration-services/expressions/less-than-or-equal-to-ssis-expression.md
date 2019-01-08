@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - <= (less than or equal to operator)
@@ -14,12 +13,12 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96575de74fcf783d4e21306770f8a31b3065a794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d10388f6efa55fb2655a21b50b2ebdd58e5b2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754339"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;=（小于或等于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -59,7 +58,7 @@ expression1 <= expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **Date、Time 或 Date/Time** *expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、 时间或日期/时间**两者*expression1*并*expression2*计算结果必须为以下数据类型之一：将 DT_DBDATE、 DT_DATE、 DT_DBTIME、 DT_DBTIME2、 DT_DBTIMESTAMP、 DT_DBTIMESTAMP2、 DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -104,10 +103,10 @@ ListPrice <= 500
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [&#62;&#40;大于&#41; &#40;SSIS 表达式&#41;](greater-than-ssis-expression.md)   
- [&#60;&#40;小于&#41; &#40;SSIS 表达式&#41;](less-than-ssis-expression.md)   
+ [>（大于）（SSIS 表达式）](greater-than-ssis-expression.md)   
+ [>（小于）（SSIS 表达式）](less-than-ssis-expression.md)   
  [>=（大于或等于）（SSIS 表达式）](greater-than-or-equal-to-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

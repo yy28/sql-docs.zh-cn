@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
@@ -14,12 +13,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072197"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351464"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
   当升级的实例[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到最新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您的现有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]包不会自动升级到的当前版本的包格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用。 您必须选择一种升级方法并手动升级包。  
@@ -47,7 +46,7 @@ ms.locfileid: "49072197"
   
 -   将这些包迁移到 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]，然后将这些包升级到 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]。  
   
-     有关将 DTS 包迁移到 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 和 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的信息，请参阅[迁移 Data Transformation Services 包](http://go.microsoft.com/fwlink/?LinkId=251870) (2005) 和[迁移 Data Transformation Services 包](http://go.microsoft.com/fwlink/?LinkId=251871) (2008)。  
+     有关将 DTS 包迁移到 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 和 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的信息，请参阅[迁移 Data Transformation Services 包](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) 和[迁移 Data Transformation Services 包](https://go.microsoft.com/fwlink/?LinkId=251871) (2008)。  
   
 -   通过使用 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] 重新创建 DTS 包。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "49072197"
   
  若要使用[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]来设计包，包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]并[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自定义组件，您需要修改 devenv.exe.config 文件位于*\<驱动器 >*: files\Microsoft Visual Studio 10.0\Common7\IDE。  
   
- 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向至版本 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](http://msdn.microsoft.com/library/twy1dw1e.aspx)。  
+ 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向至版本 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>定位程序集  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
@@ -108,10 +107,10 @@ ms.locfileid: "49072197"
   
 ## <a name="external-resources"></a>外部资源  
   
--   msdn.microsoft.com 上的技术文章 [SSIS 顺利升级到 SQL Server 2012 的 5 个提示](http://go.microsoft.com/fwlink/?LinkId=235321)。  
+-   msdn.microsoft.com 上的技术文章 [SSIS 顺利升级到 SQL Server 2012 的 5 个提示](https://go.microsoft.com/fwlink/?LinkId=235321)。  
   
--   blogs.msdn.com 上的博客文章： [使您的现有自定义 SSIS 扩展插件和应用程序在 Denali 下工作](http://go.microsoft.com/fwlink/?LinkId=238157)。  
+-   blogs.msdn.com 上的博客文章： [使您的现有自定义 SSIS 扩展插件和应用程序在 Denali 下工作](https://go.microsoft.com/fwlink/?LinkId=238157)。  
   
--   channel9.msdn.com 上的网络广播[将 SSIS 包升级到 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=258674)。  
+-   channel9.msdn.com 上的网络广播[将 SSIS 包升级到 SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=258674)。  
   
   

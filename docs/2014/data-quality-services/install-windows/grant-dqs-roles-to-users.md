@@ -10,17 +10,17 @@ ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39acf5a2fd5ccd92e0d897a7a701f8525aadcff8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2c85c5589ba0e7d2def29f4038b77ac4061d70fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541307"
 ---
 # <a name="grant-dqs-roles-to-users"></a>将 DQS 角色授予用户
   本主题介绍如何基于 Windows 主体创建 SQL 登录名，以及如何授予针对 DQS_MAIN 数据库的 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
   
 -   您必须已通过运行 DQSInstaller.exe 文件完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "51032804"
   
 3.  右键单击“安全性”文件夹，指向“新建”，然后单击“登录名”。  
   
-4.  在 **“登录名 - 新建”** 对话框中，在 **“登录名”** 框中指定 Windows 用户的名称，将身份验证类型指定为 **“Windows 身份验证”**，然后单击 **“搜索”** 以验证此用户。  
+4.  在“登录名 - 新建”对话框中，在“登录名”框中指定 Windows 用户的名称，将身份验证类型指定为“Windows 身份验证”，然后单击“搜索”以验证此用户。  
   
 5.  在验证该用户后，在左侧窗格中单击 **“用户映射”** 。  
   
-6.  在右侧窗格中，选中 **DQS_MAIN** 数据库的“映射”列下的复选框，然后根据用户所需的访问级别，在“数据库角色成员身份: DQS_MAIN”窗格中选中 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 复选框。 有关这三个 DQS 角色的信息，请参阅 [DQS Security](../dqs-security.md)。  
+6.  在右窗格中，选择下的复选框**地图**的列**DQS_MAIN**数据库，并选择**dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_operator**中的复选框**数据库角色成员身份：DQS_MAIN**窗格中，具体取决于该用户所需的访问级别。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../dqs-security.md)。  
   
-7.  在 **“登录名 - 新建”** 对话框中，单击 **“确定”** 以便应用更改。  
+7.  在“登录名 - 新建”对话框中，单击“确定”以便应用更改。  
   
     > [!NOTE]  
     >  如果你向某一用户授予 **dqs_administrator** 角色，应用更改，然后重新选中用户权限，则其他两个 DQS 角色复选框（**dq_kb_editor** 和 **dqs_kb_operator**）也将被选中。  

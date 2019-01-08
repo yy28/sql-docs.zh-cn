@@ -14,12 +14,12 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129877"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418648"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   使用 **“执行包”** 对话框可以运行在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上存储的包。  
@@ -44,7 +44,7 @@ ms.locfileid: "48129877"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。  
   
-     您在连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的实例。  
+     正在连接到承载 SSISDB 数据库的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的实例。  
   
 2.  在对象资源管理器中，展开树以便显示 **“Integration Services 目录”** 节点。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48129877"
  选择用于执行包的日志记录级别。 有关详细信息，请参阅 [catalog.set_execution_parameter_value（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)。  
   
  **出错时转储**  
- 指定在包执行过程中发生错误时是否创建一个转储文件。 有关详细信息，请参阅 [生成包执行的转储文件](troubleshooting/generating-dump-files-for-package-execution.md)。  
+ 指定在包执行过程中发生错误时是否创建一个转储文件。 有关详细信息，请参阅 [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)。  
   
  **32 位运行时**  
  指定包将在 32 位系统上执行。  

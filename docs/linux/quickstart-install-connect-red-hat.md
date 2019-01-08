@@ -1,5 +1,6 @@
 ---
-title: 开始使用 Red Hat Enterprise Linux 上的 SQL Server |Microsoft Docs
+title: Red Hat Enterprise Linux 上的 SQL Server 入门
+titleSuffix: SQL Server
 description: 本快速入门介绍如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 或 SQL Server 2019 然后创建和查询使用 sqlcmd 数据库。
 author: rothja
 ms.author: jroth
@@ -8,16 +9,16 @@ ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 794d241773addc5584869eaa2e05cfa316908ce1
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160475"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：在 Red Hat 上安装 SQL Server 并创建数据库
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：安装 SQL Server 和 Red Hat 上创建数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -80,7 +81,7 @@ ms.locfileid: "51669446"
    ```
 
    > [!TIP]
-   > 自由授权以下 SQL Server 2017 版本： Evaluation、 Developer 和 Express。
+   > 以下 SQL Server 2017 版本自由地授予使用许可：评估、 开发人员版和 Express。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。

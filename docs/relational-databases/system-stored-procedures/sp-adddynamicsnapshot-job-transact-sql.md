@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddynamicsnapshot_job
@@ -17,12 +16,12 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5dfdaabc65e98bbad3c6a2df97dfcb32a9c77c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79412d81e0a16443f3fec515d1d866c3aff1804c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771219"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [ **@host_name**=] **'***host_name*****  
  使用创建订阅筛选的数据快照的值进行筛选时的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数。 *host_name*是**sysname**，无默认值。 *host_name*应为 NULL，如果不使用此函数的发布进行动态筛选。  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname*****  
+ [ **@dynamic_snapshot_jobname** =] **'***dynamic_snapshot_jobname*****  
  创建的筛选数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，默认值为 NULL，并且是可选的 OUTPUT 参数。 如果指定， *dynamic_snapshot_jobname*必须解析为分发服务器上唯一作业。 如果不指定，则将自动生成并在结果集中返回一个作业名，该名称的创建方式如下：  
   
 ```  
@@ -77,10 +76,10 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  生成动态快照作业的名称时，您可以截断标准快照作业的名称。  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid*****  
+ [ **@dynamic_snapshot_jobid** =] **'***dynamic_snapshot_jobid*****  
  创建的筛选数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL，并且是可选的 OUTPUT 参数。  
   
- [  **@frequency_type=**] *frequency_type*  
+ [ **@frequency_type=**] *frequency_type*  
  安排筛选数据快照作业所用的频率。 *frequency_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -107,7 +106,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*frequency_interval*是未使用。|  
 |**128**|*frequency_interval*是未使用。|  
   
- [  **@frequency_subday=**] *frequency_subday*  
+ [ **@frequency_subday=**] *frequency_subday*  
  指定的单位*frequency_subday_interval*。 *frequency_subday*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -117,10 +116,10 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** （默认值）|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
+ [ **@frequency_subday_interval=**] *frequency_subday_interval*  
  是的数字*frequency_subday*作业每次执行之间的段。 *frequency_subday_interval*是**int**，默认值为 5。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
+ [ **@frequency_relative_interval=**] *frequency_relative_interval*  
  每月中筛选数据快照作业的发生情况。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -131,19 +130,19 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|第四个|  
 |**16**|上一次|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+ [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
  使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 0。  
   
- [  **@active_start_date=**] *active_start_date*  
+ [ **@active_start_date=**] *active_start_date*  
  第一次安排筛选数据快照作业的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 NULL。  
   
- [  **@active_end_date=**] *active_end_date*  
+ [ **@active_end_date=**] *active_end_date*  
  停止安排筛选数据快照作业的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
+ [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  第一次安排筛选数据快照作业的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
+ [ **@active_end_time_of_day=**] *active_end_time_of_day*  
  停止安排筛选数据快照作业的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
 ## <a name="result-set"></a>结果集  
@@ -163,7 +162,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_adddynamicsnapshot_job**。  
   
 ## <a name="see-also"></a>请参阅  

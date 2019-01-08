@@ -15,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540121"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
   数据层应用程序 (DAC) 是一个逻辑数据库管理实体，用于定义与用户数据库关联的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如表、视图和实例对象（包括登录名）。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署的一个自包含单元，它使数据层开发人员和数据库管理员能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象打包到一个名为“DAC 包”（也称作 DACPAC）的可移植项目中。  
@@ -98,20 +98,20 @@ ms.locfileid: "48214727"
 ## <a name="backup-package-bacpac"></a>备份包 (.bacpac)  
  BACPAC 是一个封装数据库架构以及数据库中存储的数据的项目。 BACPAC 是一个扩展名为 .bacpac 的 Windows 文件。 与 DACPAC 类似，BACPAC 文件是开放的 - BACPAC 的架构内容与 DACPAC 的架构内容相同。 数据是以 JSON 格式存储的。  
   
- 虽然 DACPAC 和 BACPAC 相似，但它们面向的方案不同。 DACPAC 侧重于捕获和部署架构，包括升级现有数据库。 DACPAC 的主要用例是，将严格定义的架构依次部署到开发、测试和生产环境；反之亦然，即捕获生产的架构并将其应用于测试和开发环境。  
+ 虽然 DACPAC 和 BACPAC 相似，但它们面向的方案不同。 DACPAC 侧重于捕获和部署架构，包括升级现有数据库。 DACPAC 是将严密定义的架构部署到开发、 测试、 生产环境中，并反过来主要用例： 捕获生产的架构并将其应用回测试和开发环境。  
   
  另一方面，BACPAC 侧重于捕获架构和数据。 BACPAC 是数据库备份的逻辑等效项，且不能用来升级现有数据库。 BACPAC 的主要用例是，将数据库从一台服务器移动到另一台服务器（或从本地服务器移动到云），并以开放格式对现有数据库进行存档。  
   
  BACPAC 支持两个主要操作：  
   
--   **EXPORT**- 用户可以将数据库的架构和数据导出到 BACPAC。  
+-   **EXPORT** - 用户可以将数据库的架构和数据导出到 BACPAC。  
   
 -   **IMPORT** - 用户可以将架构和数据导入到主机服务器上的新数据库中。  
   
- 数据库管理工具 Server Management Studio、Management Portal for SQL Azure 和 DACFx API 支持这两种功能。  
+ 数据库管理工具支持这两种功能：Server Management Studio、 SQL Azure 管理门户和 DACFx API。  
   
-## <a name="permissions"></a>Permissions  
- 您必须是属于`dbmanager`角色或分配`CREATE DATABASE`创建数据库，包括通过部署 DAC 包创建数据库的权限。 您必须是属于`dbmanager`角色，或分配了`DROP DATABASE`权限才能删除数据库。  
+## <a name="permissions"></a>权限  
+ 用户必须是 `dbmanager` 角色的成员或分配了 `CREATE DATABASE` 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 `dbmanager` 角色的成员或分配了 `DROP DATABASE` 权限才能删除数据库。  
   
 ## <a name="data-tier-application-tasks"></a>数据层应用程序任务  
   

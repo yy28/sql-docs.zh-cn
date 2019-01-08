@@ -13,20 +13,20 @@ ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 43dc992457245de08785afb16e6c8cf71572716e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 73919295dbd53cbaaca3847d5be119e5fe2d0bb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530155"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>创建变量值文件 (MySQLToSQL)
-变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **– v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
+变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **-v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
   
 > [!NOTE]  
 > 1.  变量名称是作为前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，将导致停止控制台执行过程的脚本文件的分析过程中遇到错误。  
 > 2.  转义符**$** 是**$$**。 如果参数的变量或静态值的值将包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是一个变量。  
-> 3.  出于可维护性目的，可以在声明变量`‘variable-group’`元素的逻辑分隔的用户定义的变量。  此元素的使用情况不是必需的。  
+> 3.  出于可维护性目的，可以在声明变量`'variable-group'`元素的逻辑分隔的用户定义的变量。  此元素的使用情况不是必需的。  
   
 **示例：**  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906397"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984098"
 ---
 # <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV) 
 
@@ -93,15 +93,15 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-如果 DMV 不可用于给定行集，则服务器返回错误：`The <schemarowset> request type was not recognized by the server.`所有其他错误表示与语法问题。  
+如果 DMV 不可用于给定行集，则服务器将返回错误：`The <schemarowset> request type was not recognized by the server.` 所有其他错误表示与语法问题。  
 
 架构行集是在两个 SQL Server Analysis Services 协议中所述：   
 
-[[MS-SSAS-T]: SQL Server Analysis Services 表格协议](https://msdn.microsoft.com/library/mt719260)-介绍针对 1200年及更高版本的兼容性级别的表格模型架构行集。
+[[MS-SSAS-T]:SQL Server Analysis Services 表格协议](https://msdn.microsoft.com/library/mt719260)-介绍针对 1200年及更高版本的兼容性级别的表格模型架构行集。
 
-[[MS-SSAS]: SQL Server Analysis Services 协议](https://msdn.microsoft.com/library/ee320606)-介绍用于多维模型和表格模型 1100年和 1103年兼容级别的架构行集。
+[[MS-SSAS]:SQL Server Analysis Services 协议](https://msdn.microsoft.com/library/ee320606)-介绍用于多维模型和表格模型 1100年和 1103年兼容级别的架构行集。
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>[MS-SSAS-T] 中所述的行集： SQL Server Analysis Services 表格协议
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>行集 [MS-SSAS-T] 中所述：SQL Server Analysis Services 表格协议
 
 |行集  |Description  |
 |---------|---------|
@@ -134,7 +134,7 @@ ORDER BY TABLE_NAME ASC
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   提供有关在模型中的表对象的信息。      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|提供有关每个列中的变体对象的信息。|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>在 [MS-SSAS] 中所述的行集： SQL Server Analysis Services 协议
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>行集 [MS-SSAS] 中所述：SQL Server Analysis Services 协议
 
 |行集|Description|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|返回有关用于存储内存中表的数据的列段的信息。|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|包含有关用于表示内存中表的列的列信息。|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|服务器返回有关可用的内存中表的统计信息。|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|包含 DISCOVER_TRACE_COLUMNS 架构行集。|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|包含 DISCOVER_TRACE_EVENT_CATEGORIES 架构行集。|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|包含 DISCOVER_TRACES 架构行集。|  

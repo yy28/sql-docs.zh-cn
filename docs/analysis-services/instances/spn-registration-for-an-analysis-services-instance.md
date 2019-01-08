@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9e55a9a6d7a432a145477bb4af92a0225d92c623
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7b4516470b1b55c697cbfee065dbf53c3187a6a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526497"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "42703580"
  [针对在固定端口上侦听的 SSAS 实例的 SPN 注册](#bkmk_spnFixedPorts)  
   
 ##  <a name="bkmk_scnearios"></a> 在需要 SPN 注册时  
- 在连接字符串上指定“SSPI=Kerberos”的任何客户端连接都将引入针对 Analysis Services 实例的 SPN 注册要求。  
+ 指定的任何客户端连接"SSPI = Kerberos"连接字符串将引入针对 Analysis Services 实例的 SPN 注册要求。  
   
  在下列情况下需要 SPN 注册。 有关详细信息，请参阅 [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "42703580"
 |元素|Description|  
 |-------------|-----------------|  
 |服务类|MSOLAPSvc.3 将服务标识为 Analysis Services 实例。 .3 表示在 Analysis Services 传输中使用的 XMLA-over-TCP/IP 协议的版本。 它与产品发行版无关。 因此，在修订协议本身之前，MSOLAPSvc.3 是针对 SQL Server 2005、2008、2008 R2、2012 和 Analysis Services 的任何将来发行版的正确的服务类。|  
-|主机名称|标识正在运行服务的计算机。 该名称可以是完全限定域名称或 NetBIOS 名称。 应当为二者都注册 SPN。<br /><br /> 为服务器 NetBIOS 名称注册 SPN 时，务必使用 `SetupSPN –S` 检查是否存在重复的注册。 我们不保证 NetBIOS 名称在林中是唯一的，而拥有重复 SPN 注册可能会导致连接失败。<br /><br /> 对于 Analysis Services 负载平衡群集，主机名应该是分配给群集的虚拟名称。<br /><br /> 切勿使用 IP 地址创建 SPN。 Kerberos 使用域的 DNS 解析功能。 指定 IP 地址会绕过该功能。|  
+|主机名称|标识正在运行服务的计算机。 该名称可以是完全限定域名称或 NetBIOS 名称。 应当为二者都注册 SPN。<br /><br /> 为服务器 NetBIOS 名称注册 SPN 时，务必使用 `SetupSPN -S` 检查是否存在重复的注册。 我们不保证 NetBIOS 名称在林中是唯一的，而拥有重复 SPN 注册可能会导致连接失败。<br /><br /> 对于 Analysis Services 负载平衡群集，主机名应该是分配给群集的虚拟名称。<br /><br /> 切勿使用 IP 地址创建 SPN。 Kerberos 使用域的 DNS 解析功能。 指定 IP 地址会绕过该功能。|  
 |端口号|尽管端口号是 SPN 语法的一部分，但在注册 Analysis Services SPN 时切勿指定端口号。 冒号 ( : ) 字符通常用于在标准 SPN 语法中提供端口号，由 Analysis Services 用来指定实例名称。 对于 Analysis Services 实例，假定端口是默认端口 (TCP 2383) 或者 SQL Server Browser 服务分配的端口 (TCP 2382)。|  
 |实例名称|Analysis Services 是可以在同一台计算机上多次安装的可复制的服务。 通过其实例名称标识每个实例。<br /><br /> 该实例名称以冒号 ( : ) 字符作为前缀。 例如，假定一个名为 SRV01 的主机以及一个 SSAS-Tabular 命名实例，则 SPN 应该是 SRV01:SSAS-Tabular。<br /><br /> 请注意，用于指定命名 Analysis Services 实例的语法不同于其他 SQL Server 实例使用的语法。 其他服务使用反斜杠 ( \ ) 在 SPN 中追加实例名称。|  
 |服务帐户|这是 **“MSSQLServerOLAPService”** Windows 服务的启动帐户。 它可以是 Windows 域用户帐户、虚拟帐户、托管服务帐户 (MSA) 或内置帐户，例如服务 SID、NetworkService 或 LocalSystem。 Windows 域用户帐户可按照域 \ 用户格式设置或user@domain。|  
@@ -109,7 +109,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  此示例为在 AdventureWorks 域的域用户帐户 **SSAS-Service** 之下运行的 Analysis Services 默认实例显示 **setspn**语法。  
   
 ```  
-Setspn –s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn -s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
@@ -143,13 +143,13 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
  **Analysis Services 群集的 SPN 语法**  
   
 ```  
-Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>  
+Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>  
 ```  
   
  请记住，Analysis Services 群集中的节点需要使用默认端口 (TCP 2383) 并且在相同的域用户帐户下运行，以便每个节点都具有相同的 SID。 有关详细信息，请参阅 [如何安装群集 SQL Server Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) 。  
   
 ##  <a name="bkmk_spnHTTP"></a> 针对为 HTTP 访问配置的 SSAS 实例的 SPN 注册  
- 根据解决方案要求，您可能已经针对 HTTP 访问配置了 Analysis Services。 如果您的解决方案将 IIS 作为一个中间层组件包括，并且 Kerberos 身份验证是解决方案要求，则您可能需要手动为 IIS 注册 SPN。 有关详细信息，请参阅 [如何配置 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 以便使用 Kerberos 身份验证](http://support.microsoft.com/kb/917409)中的“在运行 IIS 的计算机上配置设置”。  
+ 根据解决方案要求，您可能已经针对 HTTP 访问配置了 Analysis Services。 如果您的解决方案将 IIS 作为一个中间层组件包括，并且 Kerberos 身份验证是解决方案要求，则您可能需要手动为 IIS 注册 SPN。 详细信息，请参阅"在运行 IIS 的计算机上配置设置"中[如何配置 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 以便使用 Kerberos 身份验证](http://support.microsoft.com/kb/917409)。  
   
  就针对 Analysis Services 实例的 SPN 注册而言，在为 TCP 或 HTTP 配置的实例之间没有差别。 使用 MSMDPUMP ISAPI 扩展插件从 IIS 到 Analysis Services 的连接始终是 TCP。  
   
@@ -166,13 +166,13 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [Microsoft BI 身份验证和身份委托](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [使用 Kerberos 进行相互身份验证](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [如何配置 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 以便使用 Kerberos 身份验证](http://support.microsoft.com/kb/917409)   
- [服务主体名称 (Spn) SetSPN 语法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [服务主体名称 (SPN) SetSPN 语法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [我使用哪个 SPN，它如何起作用？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [服务帐户分步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [如何配置 Internet Information Services 上托管的 Web 应用程序时使用 Spn](http://support.microsoft.com/kb/929650)   
+ [在配置托管在 Internet Information Services 上的 Web 应用程序时，如何使用 SPN](http://support.microsoft.com/kb/929650)   
  [什么是服务帐户中的新增功能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [配置 Kerberos 身份验证用于 SharePoint 2010 产品 （白皮书）](http://technet.microsoft.com/library/ff829837.aspx)  
+ [配置用于 SharePoint 2010 产品的 Kerberos 身份验证（白皮书）](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

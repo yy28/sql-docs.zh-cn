@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513911"
 ---
-# <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署脚本文件-分区和角色部署选项
+# <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署脚本文件 - 分区和角色部署选项
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取分区和角色部署选项，以从\<*项目名称*>.deploymentoptions 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用当前的分区和角色部署选项项目何时\<*项目名称*> 创建.deploymentoptions 文件。 有关配置设置的详细信息，请参阅 [了解用于创建部署脚本的输入文件](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "37981037"
   
 -   保留目标数据库中现有的角色和角色成员，不部署任何新的角色。  
   
--   **请注意** 保留现有角色和成员时，与这些角色关联的权限将重置为无。 安全权限包含在这些权限保护的对象中，而非包含在与这些权限关联的安全角色中。 有关如何通过使用 Analysis Service 部署指南处理此行为的详细信息，请参阅 Microsoft 知识库中的“保留角色和成员”。  
+-   **请注意** 保留现有角色和成员时，与这些角色关联的权限将重置为无。 安全权限包含在这些权限保护的对象中，而非包含在与这些权限关联的安全角色中。 有关如何通过使用 Analysis Service 部署指南处理此行为的详细信息，请参阅保留角色和成员在 Microsoft 知识库文章。  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>修改分区和角色部署选项  
  您可能要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的分区和角色选项中存储项目\<*项目名称*>.deploymentoptions 文件。 例如，你可能想保留现有分区、 角色和角色成员，而不是替换所有现有分区、 角色和成员，如下所示\<*项目名称*>.deploymentoptions 文件。  
@@ -50,11 +50,11 @@ ms.locfileid: "37981037"
   
 -   以交互方式运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，然后在 **“分区和角色部署选项”** 页上，为分区和角色指定新的部署选项。  
   
-     — 或 —  
+     -或-  
   
 -   在命令提示符下运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，并将该向导设置为以应答文件模式运行。 （有关应答文件模式的详细信息，请参阅 [运行 Analysis Services 部署向导](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)。）  
   
-     — 或 —  
+     -或-  
   
 -   打开\<*项目名称*>.deploymentoptions 在任何文本编辑器，然后手动更改选项。 PartitionDeployment 的选项是 DeployPartitions，RetainPartitions。 RoleDeployment 的选项为 DeployRolesAndMembers、 DeployRolesRetainMembers、 RetainRoles。
   

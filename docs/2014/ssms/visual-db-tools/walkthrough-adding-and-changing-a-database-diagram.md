@@ -1,10 +1,10 @@
 ---
-title: 演练：添加和更改数据库关系图 | Microsoft Docs
+title: 演练：添加和更改数据库关系图 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,17 +14,17 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822621"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
   本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  为了完成本演练，您需要：  
   
 -   能够访问带有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示例数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "48195517"
   
 3.  右键单击“数据库关系图”节点并选择“新建数据库关系图”。  
   
-     如果此数据库没有创建关系图所必需的对象，则将显示下列消息：**此数据库没有使用数据库关系图创建功能所需的一个或多个支持对象。要创建它们吗？** 选择 **“是”**。  
+     如果数据库没有创建关系图所必需的对象，将显示以下消息：**此数据库不具有一个或多个支持对象所需使用数据库关系图。要创建它们吗？** 选择 **“是”**。  
   
      此时将显示“添加表”对话框。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195517"
   
 1.  右键单击 `Address` 表。 在快捷菜单上，指向“表视图”，再单击“标准”。  
   
-     表的网格将显示三个列：“列名”、“数据类型”和“允许 Null 值”。  
+     表网格将显示三个列：**列名**，**数据类型**，和**允许使用空值**。  
   
 2.  右键单击 `Address` 表，单击“表视图”并选择“键”。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48195517"
   
 2.  在中**选择名称**对话框中，单击**确定**以接受默认名称`Table1`。  
   
-     将显示具有以下三列的新表网格：“列名”、“数据类型”和“允许 Null 值”。  
+     新表网格显示具有三个列：**列名**，**数据类型**，和**允许使用空值**。  
   
 3.  添加以下信息到`Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48195517"
   
 2.  将 `T2col1` 拖动到 `T1col1`。  
   
-     将显示两个对话框：背景中的“外键关系”对话框和前景中的“表和列”对话框。  
+     出现两个对话框：**外键关系**背景中和**表和列**在前景中。  
   
 3.  单击“确定”保存新的关系。  
   

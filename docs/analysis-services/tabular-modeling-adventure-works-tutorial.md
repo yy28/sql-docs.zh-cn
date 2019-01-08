@@ -1,5 +1,5 @@
 ---
-title: 表格建模 （1200年兼容级别） |Microsoft Docs
+title: Analysis Services 表格建模 （1200年兼容级别） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054684"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072174"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>表格建模 （1200年兼容级别）
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "38054684"
   
 本教程并未提供有关以下内容的课程或信息：通过使用 SQL Server Management Studio 管理已部署的表格模型数据库，或者使用报表客户端应用程序连接到已部署的模型以浏览模型数据。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 若要完成本教程，需要以下先决条件：  
   
 -   最新版[SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)。
@@ -78,14 +78,14 @@ ms.locfileid: "38054684"
 |[第 1 课：创建新的表格模型项目](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 分钟。|  
 |[第 2 课：添加数据](../analysis-services/lesson-2-add-data.md)|20 分钟|  
 |[第 3 课：标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)|3 分钟|  
-|[第 4 课： 创建关系](../analysis-services/lesson-4-create-relationships.md)|10 分钟。|  
-|[第 5 课： 创建计算的列](../analysis-services/lesson-5-create-calculated-columns.md)|15 分钟|
-|[第 6 课： 创建度量值](../analysis-services/lesson-6-create-measures.md)|30 分钟|  
+|[第 4 课：创建关系](../analysis-services/lesson-4-create-relationships.md)|10 分钟。|  
+|[第 5 课：创建计算的列](../analysis-services/lesson-5-create-calculated-columns.md)|15 分钟|
+|[第 6 课：创建度量值](../analysis-services/lesson-6-create-measures.md)|30 分钟|  
 |[第 7 课：创建关键绩效指标](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 分钟|  
-|[第 8 课： 创建透视](../analysis-services/lesson-8-create-perspectives.md)|5 分钟|  
-|[第 9 课： 创建层次结构](../analysis-services/lesson-9-create-hierarchies.md)|20 分钟|  
-|[第 10 课： 创建分区](../analysis-services/lesson-10-create-partitions.md)|15 分钟|  
-|[第 11 课： 创建角色](../analysis-services/lesson-11-create-roles.md)|15 分钟|  
+|[第 8 课：创建透视](../analysis-services/lesson-8-create-perspectives.md)|5 分钟|  
+|[第 9 课：创建层次结构](../analysis-services/lesson-9-create-hierarchies.md)|20 分钟|  
+|[第 10 课：创建分区](../analysis-services/lesson-10-create-partitions.md)|15 分钟|  
+|[第 11 课：创建角色](../analysis-services/lesson-11-create-roles.md)|15 分钟|  
 |[第 12 课：在 Excel 中分析](../analysis-services/lesson-12-analyze-in-excel.md)|20 分钟| 
 |[第 13 课：部署](../analysis-services/lesson-13-deploy.md)|5 分钟|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "38054684"
 
   
 ## <a name="next-step"></a>下一步  
-若要开始学习本教程，请继续第一课： [第 1 课：创建新的表格模型项目](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
+要开始学习本教程，请转到第一课：[第 1 课：创建新的表格模型项目](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
   
   
   

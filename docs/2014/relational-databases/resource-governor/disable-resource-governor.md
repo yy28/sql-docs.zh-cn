@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
@@ -13,19 +12,19 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f58c39f80a1fe34314cd2043ca3a7d94e78471fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153557"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761419"
 ---
 # <a name="disable-resource-governor"></a>禁用资源调控器
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 禁用资源调控器。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
   
--   **若要禁用资源调控器，请使用：**[对象资源管理器](#RGOffObjEx)、[资源调控器属性](#RGOffProp)和 [Transact-SQL](#RGOffTSQL)  
+-   **若要禁用资源调控器，请使用：**[对象资源管理器](#RGOffObjEx)，[资源调控器属性](#RGOffProp)， [Transact SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  禁用资源调控器会产生下列结果：  

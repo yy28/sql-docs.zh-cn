@@ -20,16 +20,16 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec1690e8c9f4f0e8c491bedac1a27faf65cde747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f83b8ce83c1433ce7e20f00580100b65be84961
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809916"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209246"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetTypeInfo**返回有关支持的数据源的数据类型的信息。 该驱动程序的 SQL 结果集形式返回的信息。 数据类型适用于在数据定义语言 (DDL) 语句中使用。  
@@ -50,8 +50,8 @@ SQLRETURN SQLGetTypeInfo(
  *StatementHandle*  
  [输入]结果集的语句句柄。  
   
- *数据类型*  
- [输入]SQL 数据类型。 这必须是中的值之一[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)部分的附录 d： 数据类型或特定于驱动程序的 SQL 数据类型。 SQL_ALL_TYPES 指定应返回有关所有数据类型的信息。  
+ *DataType*  
+ [输入]SQL 数据类型。 这必须是中的值之一[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)部分的附录 d:数据类型或特定于驱动程序的 SQL 数据类型。 SQL_ALL_TYPES 指定应返回有关所有数据类型的信息。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -62,7 +62,7 @@ SQLRETURN SQLGetTypeInfo(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02|选项值已更改|指定的语句属性实现运行情况，由于无效，因此已暂时替换一个相近的值。 (调用**SQLGetStmtAttr**来确定暂时被替换的值。)替换值是否为有效*StatementHandle*直到关闭游标。 可以更改的语句属性有： SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 SQL_ATTR_QUERY_TIMEOUT 和 SQL_ATTR_SIMULATE_CURSOR。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|选项值已更改|指定的语句属性实现运行情况，由于无效，因此已暂时替换一个相近的值。 (调用**SQLGetStmtAttr**来确定暂时被替换的值。)替换值是否为有效*StatementHandle*直到关闭游标。 可以更改的语句属性有：Sql_attr_concurrency 设置 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 SQL_ATTR_QUERY_TIMEOUT 和 SQL_ATTR_SIMULATE_CURSOR。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
 |24000|游标状态无效|在打开游标的*StatementHandle，* 并**SQLFetch**或**SQLFetchScroll**已调用一样。 如果此错误返回由驱动程序管理器**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，和如果驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 sql_no_data 为止。<br /><br /> 结果集上打开了*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**尚未调用。|  
 |40001|序列化失败|事务已回滚，由于其他事务与资源死锁。|  
@@ -114,9 +114,9 @@ SQLRETURN SQLGetTypeInfo(
   
 |列名|“列”<br /><br /> number|数据类型|注释|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|1|Varchar 不为 NULL|数据源而定的数据类型名称;例如，"char （）"、"VARCHAR()"、"MONEY"、"长 VARBINARY"或者"CHAR FOR BIT DATA （）"。 应用程序必须使用此名称在**CREATE TABLE**并**ALTER TABLE**语句。|  
-|DATA_TYPE (ODBC 2.0)|2|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 对于 datetime 或间隔数据类型，此列返回的简洁数据类型 （如 SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR_TO_MONTH）。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。|  
-|COLUMN_SIZE (ODBC 2.0)|3|Integer|服务器支持此数据类型的最大列大小。 对于数值数据，这是最大精度。 对于字符串数据，这是以字符为单位的长度。 对于 datetime 数据类型，这是以字符串表示形式 （假定小数秒元素允许的最大精度） 的字符为单位的长度。 列大小不适用的数据类型则返回 NULL。 间隔数据类型，这是文本的时间间隔的字符表示形式中的字符数 (定义的间隔起始精度; 请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)附录 d： 数据类型)。<br /><br /> 列大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
+|TYPE_NAME (ODBC 2.0)|1|Varchar 不为 NULL|数据依赖于源的数据类型名称;例如，"char （）"、"VARCHAR()"、"MONEY"、"长 VARBINARY"或者"CHAR FOR BIT DATA （）"。 应用程序必须使用此名称在**CREATE TABLE**并**ALTER TABLE**语句。|  
+|DATA_TYPE (ODBC 2.0)|2|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 对于 datetime 或间隔数据类型，此列返回的简洁数据类型 （如 SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR_TO_MONTH）。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)中附录 d:数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。|  
+|COLUMN_SIZE (ODBC 2.0)|3|Integer|服务器支持此数据类型的最大列大小。 对于数值数据，这是最大精度。 对于字符串数据，这是以字符为单位的长度。 对于 datetime 数据类型，这是以字符串表示形式 （假定小数秒元素允许的最大精度） 的字符为单位的长度。 列大小不适用的数据类型则返回 NULL。 间隔数据类型，这是文本的时间间隔的字符表示形式中的字符数 (定义的间隔起始精度; 请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)中附录 d:数据类型）。<br /><br /> 列大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|字符或字符用作前缀文本;例如，可用一个单引号 （'） 的字符数据类型或 binary 数据类型; 0 x文字前缀不适用的数据类型则返回 NULL。|  
 |LITERAL_SUFFIX (ODBC 2.0)|5|Varchar|字符或字符用于终止文字;例如，对于字符数据类型; 可用一个单引号 （'）不适用的文本后缀对于数据类型则返回 NULL。|  
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|关键字，使用类型 _ 名称字段中返回的名称时，应用程序可能在括号中指定每个参数对应的逗号分隔的列表。 在列表中的关键字可以是以下任一： 长度、 精度或小数位数。 它们出现在语法要求他们使用的顺序。 例如，将作为小数点 CREATE_PARAMS"精度、 小数位数";对于 VARCHAR CREATE_PARAMS 就等于"长度"。 如果数据类型定义; 没有参数，则返回 NULL例如，整数。<br /><br /> 驱动程序提供 CREATE_PARAMS 文本中使用该国家/地区的语言。|  
@@ -124,15 +124,15 @@ SQLRETURN SQLGetTypeInfo(
 |CASE_SENSITIVE (ODBC 2.0)|8|Smallint（非 NULL）|字符数据类型是否是区分大小写的排序规则和比较中：<br /><br /> SQL_TRUE 如果数据类型是字符数据类型，区分大小写。<br /><br /> 如果数据类型不是字符数据类型或不区分大小写，SQL_FALSE。|  
 |可搜索 (ODBC 2.0)|9|Smallint（非 NULL）|如何在中使用的数据类型**其中**子句：<br /><br /> 如果列不能用于 SQL_PRED_NONE**其中**子句。 （这是 ODBC 2 中的 SQL_UNSEARCHABLE 值相同。*x*。)<br /><br /> SQL_PRED_CHAR 如果中可以使用该列**其中**子句，但仅**如**谓词。 （这是 ODBC 2 中的 SQL_LIKE_ONLY 值相同。*x*。)<br /><br /> SQL_PRED_BASIC 如果中可以使用该列**其中**使用除所有比较运算符的子句**等**(比较、 定量的比较**BETWEEN**， **非重复**， **IN**，**匹配**，并且**UNIQUE**)。 （这是 ODBC 2 中的 SQL_ALL_EXCEPT_LIKE 值相同。*x*。)<br /><br /> 如果列可在 SQL_SEARCHABLE**其中**子句包含任何比较运算符。|  
 |UNSIGNED_ATTRIBUTE (ODBC 2.0)|10|Smallint|数据类型是无符号：<br /><br /> 如果数据类型为无符号，SQL_TRUE。<br /><br /> 如果数据类型有符号，SQL_FALSE。<br /><br /> 如果该属性不是适用于数据类型或数据类型不是数值，则返回 NULL。|  
-|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint（非 NULL）|数据类型是否具有预定义固定精度和小数位数 （这些都是数据源特定），如 money 数据类型：<br /><br /> SQL_TRUE 如果它有预定义的固定的精度和小数位数。<br /><br /> 如果它不具有预定义的固定的精度和小数位数，SQL_FALSE。|  
+|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint（非 NULL）|数据类型是否具有预定义固定精度和小数位数 （这些都是特定于源的数据），如 money 数据类型：<br /><br /> SQL_TRUE 如果它有预定义的固定的精度和小数位数。<br /><br /> 如果它不具有预定义的固定的精度和小数位数，SQL_FALSE。|  
 |AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|数据类型是否自动递增：<br /><br /> SQL_TRUE 数据类型是否为自动递增。<br /><br /> 如果数据类型不是自动递增，SQL_FALSE。<br /><br /> 如果该属性不是适用于数据类型或数据类型不是数值，则返回 NULL。<br /><br /> 应用程序可以将值插入到列都有此属性，但通常不能更新列中的值。<br /><br /> Insert 将变成一个自动递增列，唯一值将在插入时插入到列。 增量未定义，但源特定的数据。 应用程序不应假定启动在任何特定点或增量的自动递增列按任何特定值。|  
-|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|数据类型的数据源而定名称的本地化的版本。 如果是数据源不支持的本地化名称，则返回 NULL。 此名称用于显示唯一，如对话框。|  
-|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|数据源上的数据类型的最小小数位数。 如果数据类型的小数位数是固定的，则 MINIMUM_SCALE 和 MAXIMUM_SCALE 列将同时包含此值。 例如，对于 SQL_TYPE_TIMESTAMP 列可能会有固定小数位数秒的小数部分。 当小数位数不适用时，将返回 NULL。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
-|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|数据源上的数据类型的最大的小数位数。 当小数位数不适用时，将返回 NULL。 如果最大的规模没有单独定义数据源，但改为定义为最大精度相同，则此列包含在 COLUMN_SIZE 列相同的值。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
-|SQL_DATA_TYPE (ODBC 3.0)|16|smallint NOT NULL|SQL 数据类型，因为它的值出现在描述符的 SQL_DESC_TYPE 字段。 此列是与 DATA_TYPE 列，除了间隔和日期时间数据类型相同。<br /><br /> 对于时间间隔和日期时间数据类型，在结果集中的 SQL_DATA_TYPE 字段将返回 SQL_INTERVAL 或 SQL_DATETIME，和 SQL_DATETIME_SUB 字段将返回特定的时间间隔或日期时间数据类型的子代码。 (请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
-|SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则此列包含 datetime/间隔子代码。 对于日期时间和间隔以外的数据类型，此字段为 NULL。<br /><br /> 对于时间间隔或日期时间数据类型，在结果集中的 SQL_DATA_TYPE 字段将返回 SQL_INTERVAL 或 SQL_DATETIME，和 SQL_DATETIME_SUB 字段将返回特定的时间间隔或日期时间数据类型的子代码。 (请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
+|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|与数据源相关的数据类型名称的本地化版本。 如果是数据源不支持的本地化名称，则返回 NULL。 此名称用于显示唯一，如对话框。|  
+|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|数据源上的数据类型的最小小数位数。 如果数据类型的小数位数是固定的，则 MINIMUM_SCALE 和 MAXIMUM_SCALE 列将同时包含此值。 例如，对于 SQL_TYPE_TIMESTAMP 列可能会有固定小数位数秒的小数部分。 当小数位数不适用时，将返回 NULL。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
+|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|数据源上的数据类型的最大的小数位数。 当小数位数不适用时，将返回 NULL。 如果最大的规模没有单独定义数据源，但改为定义为最大精度相同，则此列包含在 COLUMN_SIZE 列相同的值。 有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
+|SQL_DATA_TYPE (ODBC 3.0)|16|smallint NOT NULL|SQL 数据类型，因为它的值出现在描述符的 SQL_DESC_TYPE 字段。 此列是与 DATA_TYPE 列，除了间隔和日期时间数据类型相同。<br /><br /> 对于时间间隔和日期时间数据类型，在结果集中的 SQL_DATA_TYPE 字段将返回 SQL_INTERVAL 或 SQL_DATETIME，和 SQL_DATETIME_SUB 字段将返回特定的时间间隔或日期时间数据类型的子代码。 (请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
+|SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则此列包含 datetime/间隔子代码。 对于日期时间和间隔以外的数据类型，此字段为 NULL。<br /><br /> 对于时间间隔或日期时间数据类型，在结果集中的 SQL_DATA_TYPE 字段将返回 SQL_INTERVAL 或 SQL_DATETIME，和 SQL_DATETIME_SUB 字段将返回特定的时间间隔或日期时间数据类型的子代码。 (请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
 |NUM_PREC_RADIX (ODBC 3.0)|18|Integer|如果数据类型为近似数值类型，此列包含值 2，以指示 COLUMN_SIZE 指定比特数。 对于精确数字类型，此列包含值 10，以指示 COLUMN_SIZE 指定多个十进制数字。 否则，此列为 NULL。|  
-|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|如果数据类型为时间间隔数据类型，此列包含时间间隔前导精度的值。 (请参阅[间隔数据类型精度](../../../odbc/reference/appendixes/interval-data-type-precision.md)附录 d： 数据类型中。)否则，此列为 NULL。|  
+|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|如果数据类型为时间间隔数据类型，此列包含时间间隔前导精度的值。 (请参阅[间隔数据类型精度](../../../odbc/reference/appendixes/interval-data-type-precision.md)附录 d:数据类型。）否则，此列为 NULL。|  
   
  属性的信息可以应用于结果集中的特定列或为数据类型。 **SQLGetTypeInfo**返回数据类型; 与关联的属性有关的信息**SQLColAttribute**返回有关与结果集中列相关联的属性的信息。  
   

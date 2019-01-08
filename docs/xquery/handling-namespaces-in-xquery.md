@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528005"
 ---
 # <a name="handling-namespaces-in-xquery"></a>处理 XQuery 中的命名空间
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  请注意，**命名空间**关键字用于定义新的命名空间前缀"AWMI:"。 随后必须在查询中对该命名空间范围内的所有元素使用此前缀。  
@@ -68,7 +68,7 @@ where ProductModelID=7
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  请注意，在此示例中，使定义的命名空间 `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"` 覆盖了默认命名空间（空命名空间）。 因此，用于查询的路径表达式中将不再含有命名空间前缀。 并且，显示在结果中的元素名称中也不再含有命名空间前缀。 另外，默认命名空间适用于所有元素，但不适用于它们的属性。  
@@ -88,7 +88,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
   
@@ -130,7 +130,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
   

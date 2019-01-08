@@ -16,12 +16,12 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c3688bcd713eab1fed94efab0a5c88f41b7c529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758835"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538777"
 ---
 # <a name="record-object-ado"></a>记录对象 (ADO)
 表示从行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或数据提供程序或返回由半结构化的数据提供程序，如文件或目录的对象。  
@@ -60,7 +60,7 @@ ms.locfileid: "47758835"
   
 -   指示当前的状态**记录**与[状态](../../../ado/reference/ado-api/state-property-ado.md)属性。  
   
--   指示的类型**记录**—*简单*，*集合*，或者*结构化的文档*— 与[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)属性。  
+-   指示的类型**记录** - *简单*，*集合*，或*结构化的文档*-使用[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)属性。  
   
 -   停止与异步操作的执行[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法。  
   

@@ -13,12 +13,12 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509113"
 ---
 # <a name="ado-run-time-errors"></a>ADO 运行时错误
 ADO 错误报告到你的程序为运行时错误。 您的编程语言的错误捕获机制可用于捕获并处理它们。 例如，在 Visual Basic 中，使用**On Error**语句。 在 Visual c + +，这取决于您用来访问 ADO 库的方法。 借助 #import，使用**try catch**块。 否则，需要显式检索错误对象通过调用 c + + 程序员**GetErrorInfo**。 下面的 Visual Basic sub 过程演示了捕获 ADO 错误：
@@ -87,7 +87,7 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- 错误消息中包含每条信息提供的 Visual Basic **Err**对象除**调用**值，该值在此处不适用。 错误编号会通知你哪些错误。 该说明仅在其中不想要自己处理错误的情况下很有用。 只需，可以将其传递到用户。 尽管通常需要使用自定义应用程序的消息，不能预测每个错误;说明提供有关发生的问题的一些线索。 在示例代码中，通过报告了错误**连接**对象。 你将看到对象的类型或以编程方式 ID 此处 — 不是变量的名称。
+ 错误消息中包含每条信息提供的 Visual Basic **Err**对象除**调用**值，该值在此处不适用。 错误编号会通知你哪些错误。 该说明仅在其中不想要自己处理错误的情况下很有用。 只需，可以将其传递到用户。 尽管通常需要使用自定义应用程序的消息，不能预测每个错误;说明提供有关发生的问题的一些线索。 在示例代码中，通过报告了错误**连接**对象。 你将看到该对象的类型或此处的编程 ID 不是变量的名称。
 
 > [!NOTE]
 >  Visual Basic **Err**对象仅包含有关最新的错误的信息。 ADO**错误**系列**连接**对象都包含一个**错误**引发的最新的 ADO 操作每个错误的对象。 使用**错误**集合而不是**Err**对象以处理多个错误。 有关详细信息**错误**集合，请参阅[提供程序错误](../../../ado/guide/data/provider-errors.md)。 但是，如果没有有效**连接**对象， **Err**对象是 ADO 错误的信息的唯一源。

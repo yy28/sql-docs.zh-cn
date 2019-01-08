@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqreader_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6700e0d060e426fef09e8db118b373d7919175a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9424228f5f1bd70c17ebb0f4f421f4f0f923930c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830395"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822321"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_login**=] **'***job_login*****  
+ [ **@job_login** =] **'***job_login*****  
  用于运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 帐户的登录名。 *job_login*是**nvarchar(257)**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
- [ **@job_password**=] **'***job_password*****  
+ [ **@job_password** =] **'***job_password*****  
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
   
 > [!IMPORTANT]  
@@ -67,7 +66,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
   
  在执行时，会取消该队列读取器代理作业[sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_addqreader_agent**。  
   
 ## <a name="see-also"></a>请参阅  

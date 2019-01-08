@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetEnable Method (ClientNetworkProtocol Class)
@@ -20,15 +18,15 @@ ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d0ffbcdea50abcdfaa72ea6814248165a31f8bbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aa192f2dc78a424b1d4c8792044caac0934173a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092927"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348742"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 方法（ClientNetworkProtocol 类）
-  启用指定的客户端网络协议[配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)。  
+  启用指定的客户端网络协议[配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +38,7 @@ object
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个[ClientNetworkProtocol 类](clientnetworkprotocol-class.md)对象，表示使用的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -49,6 +47,6 @@ object
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置客户端网络协议和网络库](http://technet.microsoft.com/library/ms181035.aspx)  
+ [配置客户端网络协议和网络库](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

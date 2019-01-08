@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
@@ -16,12 +15,12 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774649"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>“备份数据库”任务（维护计划）
   使用 **“‘备份数据库’任务”** 对话框可以将备份任务添加到维护计划。 备份数据库非常重要，因为当发生系统或硬件故障（或用户错误）对数据库造成某种破坏时，就需要用备份副本来还原数据。 此任务可用于执行完整备份、差异备份、文件和文件组备份以及事务日志备份。  
@@ -38,7 +37,7 @@ ms.locfileid: "48111327"
  创建一个新的服务器连接，在执行此任务时使用。 下面对 **“新建连接”** 对话框进行了介绍。  
   
  **“数据库”**  
- 指定受此任务影响的数据库。 选择此选项时，此下拉列表会提供以下选项： **“所有数据库”**、 **“所有系统数据库”**、 **“所有用户数据库”** 和 **“特定数据库”**。  
+ 指定受此任务影响的数据库。 选中时，下拉列表提供了以下选项：**所有数据库**，**所有系统数据库**，**所有用户数据库**，**特定数据库**。  
   
  **“所有数据库”**  
  生成的维护计划将对所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库运行维护任务。  
@@ -116,7 +115,7 @@ ms.locfileid: "48111327"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **“刷新”**  
+ **刷新**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  

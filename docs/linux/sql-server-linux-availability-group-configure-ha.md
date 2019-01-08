@@ -1,21 +1,22 @@
 ---
-title: 配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性 |Microsoft Docs
-description: ''
+title: 配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
+titleSuffix: SQL Server
+description: 了解如何在 Linux 上创建 SQL Server 始终在可用性组 (AG) 以实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621075"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201956"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
@@ -177,8 +178,8 @@ ms.locfileid: "47621075"
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -210,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->创建可用性组后，你必须配置与 Pacemaker 等群集技术以实现高可用性的集成。 读取缩放配置通过 Ag，开头[!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)]，则不需要设置群集。
+>创建可用性组后，你必须配置与 Pacemaker 等群集技术以实现高可用性的集成。 使用 Ag，从开始读取缩放配置[!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)]，则不需要设置群集。
 
 如果您遵循本文档中的步骤，则必须尚未群集的可用性组。 下一步是添加该群集。 此配置对读取缩放/负载均衡方案有效，不完整的高可用性。 以实现高可用性，需要将可用性组添加为群集资源。 请参阅[后续步骤](#next-steps)有关的说明。 
 

@@ -15,15 +15,15 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2071ec7d7c9a31a9da8982b583ef7618700db5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504095"
 ---
 # <a name="level-1-interface-conformance"></a>级别 1 接口一致性
-级别 1 接口一致性级别包括核心接口一致性级别功能以及其他功能，如通常都存在于 OLTP 关系 DBMS 的事务。 级别 1 接口 – 符合的驱动程序可让应用程序执行以下操作，除了核心接口一致性级别中的功能：  
+级别 1 接口一致性级别包括核心接口一致性级别功能以及其他功能，如通常都存在于 OLTP 关系 DBMS 的事务。 级别 1 接口符合的驱动程序可让应用程序执行以下操作，除了核心接口一致性级别中的功能：  
   
 |||  
 |-|-|  
@@ -33,6 +33,6 @@ ms.locfileid: "47649315"
 |104|通过调用获取表的主键**SQLPrimaryKeys**。|  
 |105|使用存储的过程，通过 ODBC 转义序列的过程调用，并通过调用查询有关存储过程的数据字典**SQLProcedureColumns**并**SQLProcedures**。 （通过该过程创建和数据源上存储的过程超出了本文档的范围是。）|  
 |106|通过以交互方式浏览可用的服务器，通过调用连接到数据源**SQLBrowseConnect**。|  
-|107|使用 ODBC 函数而不是 SQL 语句来执行某些数据库操作： **SQLSetPos**使用 SQL_POSITION 和 SQL_REFRESH。|  
+|107|使用 ODBC 函数而不是 SQL 语句来执行某些数据库操作：**SQLSetPos**使用 SQL_POSITION 和 SQL_REFRESH。|  
 |108|获取对通过调用生成的批处理和存储的过程的多个结果集的内容访问权限**SQLMoreResults**。|  
 |109|分隔事务跨越多个 ODBC 函数，使用真正的原子性和可指定在 SQL_ROLLBACK **SQLEndTran**。|

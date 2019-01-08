@@ -20,16 +20,16 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651965"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211707"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLBrowseConnect**支持发现和枚举的属性和属性值连接到数据源所需的迭代方法。 每次调用**SQLBrowseConnect**返回连续级别的属性和属性值。 在所有级别都已都枚举，完成与数据源的连接并且返回完整的连接字符串**SQLBrowseConnect**。 返回代码为 SQL_SUCCESS 或 sql_success_with_info 以指示已指定所有连接信息和应用程序现在已连接到数据源。  

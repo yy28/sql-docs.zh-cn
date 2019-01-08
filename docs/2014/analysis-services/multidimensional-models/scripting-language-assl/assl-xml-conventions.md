@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112807"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531414"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 约定
   Analysis Services 脚本语言 (ASSL) 将对象层次结构表示为一组元素类型，其中的每个元素类型定义了可包含的子元素。  
   
  ASSL 使用以下 XML 约定来表示对象层次结构：  
   
--   标准 XML 特性（例如“xml:lang”）除外，所有对象和属性都表示为元素。  
+-   所有对象和属性都表示为元素，如 xml: lang 的标准 XML 特性除外。  
   
 -   元素名称和枚举值遵循 Microsoft.NET Framework 命名约定的 Pascal 大小写格式且没有下划线字符。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112807"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112807"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112807"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112807"
  Analysis Services 使用以下标准 XML 架构定义语言 (XSD) 数据类型：  
   
  `Int`  
- -231 到 231 – 1 范围内的整数值。  
+ -231 到 231-1 范围内的一个整数值。  
   
  `Long`  
- -263 到 263 – 1 范围内的整数值。  
+ 在-263 到 263-1 的范围内的一个整数值。  
   
  `String`  
  符合以下全局规则的字符串值：  

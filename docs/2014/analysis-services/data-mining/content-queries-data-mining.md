@@ -11,12 +11,12 @@ ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209807"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530501"
 ---
 # <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
   内容查询是一种提取有关内部统计信息以及挖掘模型结构信息的一种方式。 有时，内容查询可提供在查看器中不易查看的详细信息。 您还可以使用内容查询的结果以编程方式提取信息以供他用。  
@@ -135,7 +135,7 @@ ms.locfileid: "48209807"
   
  本节提供了几个示例，用来演示选择的算法如何影响存储在模型中的信息类型。 有关挖掘模型内容以及每种模型类型特定的内容的详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Assoc"></a> 示例 1：针对关联模型的内容查询  
+###  <a name="bkmk_Assoc"></a> 示例 1:针对关联模型的内容查询  
  `SELECT FROM <model>.CONTENT`语句返回不同种类的信息，具体取决于您正在查询的模型类型。 对于关联模型，“节点类型” 为一段关键信息。 节点类似于模型内容中的信息的容器。 在关联模型中，表示规则的节点的 NODE_TYPE 值为 8，而表示项集的节点的 NODE_TYPE 值为 7。  
   
  因此，以下查询将返回前 10 个项集，按照 SUPPORT 排序（默认排序）。  
@@ -145,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 下面的查询构建于这些信息之上。 该查询返回三列：节点的 ID、完整规则以及项集右侧的产品（即，预测将作为项集的一部分与其他某些产品关联的产品）。  
+ 下面的查询构建于这些信息之上。 该查询返回三列： 节点、 完整规则和项集右侧的产品 ID-即，预测将作为项集的一部分与其他某些产品关联的产品。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -167,7 +167,7 @@ ORDER BY NODE_SUPPORT DESC
   
  有关更多示例，请参阅 [关联模型查询示例](association-model-query-examples.md)。  
   
-###  <a name="bkmk_DecTree"></a> 示例 2：针对决策树模型的内容查询  
+###  <a name="bkmk_DecTree"></a> 示例 2:针对决策树模型的内容查询  
  决策树模型可用于预测以及分类。  此示例假定您使用模型是为了预测结果，但同时也希望找出可以使用哪些因子或规则来对结果进行分类。  
   
  在决策树模型中，使用节点表示树和叶节点。 每个节点的标题包含指向结果的路径的说明。 因此，若要跟踪任一特定结果的路径，您需要确定包含该结果的节点，然后获取该节点的详细信息。  

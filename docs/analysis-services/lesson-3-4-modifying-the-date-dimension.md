@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 58afef163d7c46c69556ad00bfd201751e61e943
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514565"
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>课程 3-4-修改日期维度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "50753564"
   
 3.  如果未打开“属性”窗口，则打开“属性”窗口，然后单击标题栏上的“自动隐藏”按钮，以便该窗口保持打开状态。  
   
-4.  单击此窗口底部附近的 **NameColumn** 属性字段，然后单击省略号浏览 (**…**) 按钮以打开“名称列”对话框。  
+4.  单击**NameColumn**属性字段在窗口底部附近，然后单击省略号浏览 (**...**) 按钮以打开**名称列**对话框。  
   
 5.  选择位于“源列”列表底部的 **SimpleDate**，然后单击“确定”。  
   
@@ -300,6 +300,6 @@ ms.locfileid: "50753564"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [浏览已部署的多维数据集](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

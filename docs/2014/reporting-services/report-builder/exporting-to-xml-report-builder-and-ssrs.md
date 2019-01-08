@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116397"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204746"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
   XML 呈现扩展插件可以按 XML 格式返回报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。  
@@ -61,14 +61,14 @@ ms.locfileid: "48116397"
   
 |如果所有文本框值都是|分配的数据类型为|  
 |--------------------------------|---------------------------|  
-|`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (或`Decimal`和任何整数或字节数据类型)|**xsd:decimal**|  
-|`Float` (或`Decimal`和任何整数或字节数据类型)|**xsd:float**|  
-|`Double` (或`Decimal`和任何整数或字节数据类型)|**xsd:double**|  
+|`Int16`、`Int32`、`Int64`、`UInt16`、`UInt32`、`UInt64`、`Byte`、`SByte`|**xsd:integer**|  
+|`Decimal`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:decimal**|  
+|`Float`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:float**|  
+|`Double`（或 `Decimal` 和任何整数或字节数据类型）|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
-|`String`, `Char`|**xsd:string**|  
+|`String`， `Char`|**xsd:string**|  
 |其他|**xsd:string**|  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
@@ -81,13 +81,13 @@ ms.locfileid: "48116397"
   
  在该报表元素中还将包含 XML 命名空间定义和架构引用属性。 变量将以粗体形式注明：  
   
- \<**报表**xmlns ="**SchemaName**"xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc %3aschema =true"名称 ="ReportName">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  变量的值如下所示：  
   
 |“属性”|ReplTest1|  
 |----------|-----------|  
-|报表|Report.DataElementName|  
+|报告|Report.DataElementName|  
 |ReportURL|服务器上该报表的 URL 编码形式的绝对 URL。|  
 |SchemaName|Report.SchemaName。 如果为 Null，则为 Report.Name。 如果使用了 Report.Name，则将首先使用 XmlConvert.EncodeLocalName 对其进行编码。|  
 |ReportName|报表的名称。|  
@@ -200,7 +200,7 @@ ms.locfileid: "48116397"
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

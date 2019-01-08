@@ -11,19 +11,19 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e73c0d114744241d18dc7946e852e05b3a2c6e5e
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: b6fdc0b8267f1e995812d573ae80f0f24ee11843
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629550"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404113"
 ---
 # <a name="import-the-sqlps-module"></a>导入 SQLPS 模块
   从 PowerShell 管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的建议的方法是将 `sqlps` 模块导入到 Windows PowerShell 2.0 环境中。 该模块将加载并注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理单元和可管理性程序集。  
   
-1.  **开始之前：**  [安全性](#Security)  
+1.  **开始之前：**[安全](#Security)  
   
-2.  **若要加载模块，请执行以下操作：**  [加载 sqlps 模块](#LoadSqlps)  
+2.  **若要加载的模块：**[加载 sqlps 模块](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>开始之前  
  在将 `sqlps` 模块导入到 Windows PowerShell 后，您可以：  
@@ -57,7 +57,7 @@ ms.locfileid: "51629550"
 ```  
 ## Import the SQL Server Module.  
   
-Import-Module “sqlps” -DisableNameChecking  
+Import-Module "sqlps" -DisableNameChecking  
   
 ```  
   

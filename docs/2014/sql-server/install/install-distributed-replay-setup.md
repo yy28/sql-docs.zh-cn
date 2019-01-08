@@ -11,12 +11,12 @@ ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545383"
 ---
 # <a name="install-distributed-replay-setup"></a>安装 Distributed Replay（安装程序）
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
@@ -87,7 +87,7 @@ ms.locfileid: "48051394"
   
     -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”**。  
   
-     **重要**：在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：  
+     **重要**:在你配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
     -   域用户帐户  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48051394"
   
      不接受组帐户（本地或域）和其他内置帐户（如 Everyone）。  
   
-8.  或者，单击省略号 (…) 按钮以便更改共享功能目录路径。  
+8.  （可选）单击省略号 (...) 按钮，以更改共享功能目录路径。  
   
     1.  在 32 位计算机上，默认安装路径为 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
@@ -134,8 +134,8 @@ ms.locfileid: "48051394"
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 的版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed 的 Replay 要求](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
  [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

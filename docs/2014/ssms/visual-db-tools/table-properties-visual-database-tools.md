@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.tabledesigner
@@ -13,12 +13,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33e75ea1383a597f3e896ad2d7d24f05a7021ac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065377"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812849"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
   如果您在表设计器中右键单击，再选择“属性”，则会在“属性”窗口中显示这些属性。 除非另行说明，否则在选定表后可以在“属性”窗口中编辑这些属性。  
@@ -43,8 +43,8 @@ ms.locfileid: "48065377"
  **数据库名称**  
  显示所选表的数据源的名称。  
   
- **Description**  
- 显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。  
+ **说明**  
+ 显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。  
   
  **架构**  
  显示此表所属的架构的名称。 （仅适用于 Microsoft SQL Server。）  

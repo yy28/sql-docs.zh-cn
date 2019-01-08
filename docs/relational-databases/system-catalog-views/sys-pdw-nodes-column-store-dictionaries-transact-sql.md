@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732767"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520864"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "47732767"
 |**column_id**|**int**|列存储列的 ID。|  
 |**dictionary_id**|**int**|字典的 ID。|  
 |**version**|**int**|字典格式的版本。|  
-|**类型**|**int**|字典类型：<br /><br /> 1 – 哈希字典包含**int**值<br /><br /> 2 – 不使用<br /><br /> 3 – 包含字符串值的哈希字典<br /><br /> 4 – 哈希字典包含**float**值|  
+|**类型**|**int**|字典类型：<br /><br /> 1-哈希字典包含**int**值<br /><br /> 2-不使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 4-哈希字典包含**float**值|  
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disc_size**|**bigint**|字典大小（以字节为单位）。|  
 |**pdw_node_id**|**int**|唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

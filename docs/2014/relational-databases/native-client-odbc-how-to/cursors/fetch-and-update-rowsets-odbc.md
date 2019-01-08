@@ -12,12 +12,12 @@ ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc6a5254afc715a950f2d3c63d02bfca7a1890ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352637"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>提取和更新行集 (ODBC)
     
@@ -25,11 +25,11 @@ ms.locfileid: "48076577"
   
 1.  （可选） 调用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)使用 SQL_ROW_ARRAY_SIZE 若要更改的行集中的行 (R) 数。  
   
-2.  调用[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)获取行集。  
+2.  调用[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)获取行集。  
   
 3.  如果使用绑定列，则在行集的绑定列缓冲区中现在可以使用数据值和数据长度。  
   
-     如果使用未绑定的列，为每个行调用[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)使用 SQL_POSITION 设置游标位置，然后，为每个未绑定列：  
+     如果使用未绑定的列，为每个行调用[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)使用 SQL_POSITION 设置游标位置，然后，为每个未绑定列：  
   
     -   调用[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)最后一个绑定列的行集后，若要获取的数据的一个或多个时间未绑定列。 调用[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)应按列号递增的顺序。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48076577"
   
 4.  设置任意执行时数据 text 或 image 列。  
   
-5.  调用[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)或[SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398)若要设置光标位置，刷新、 更新、 删除或添加该行集内的行。  
+5.  调用[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)或[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)若要设置光标位置，刷新、 更新、 删除或添加该行集内的行。  
   
      如果执行时数据 text 或 image 列用于某个更新或添加操作，则处理它们。  
   

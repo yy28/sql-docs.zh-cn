@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergecleanupmetadata_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 994f24e0b19dac70e6987a0c23d45d5446548689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670581"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210956"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>备注  
  **sp_mergecleanupmetadata**应仅在包含运行的版本的服务器的复制拓扑中使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早于[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1。 仅包含 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 或更高版本的拓扑应使用基于元数据清理的自动保持功能。 运行此存储过程时，请注意运行此存储过程的计算机上的日志文件必然出现和可能出现的大小增长。  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  之后**sp_mergecleanupmetadata**执行时，默认情况下，发布了元数据存储在订阅服务器上的所有订阅**MSmerge_genhistory**， **MSmerge_contents**并**MSmerge_tombstone**标记为要重新初始化，订阅服务器上任何挂起的更改都将丢失，并且当前快照将标记为已过时。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  如果有多个发布数据库，并且任何一个发布使用无限发布保持期 (**@retention**=**0**)，运行**sp_mergecleanupmetadata**不会清除合并复制更改跟踪数据库元数据。 因此，要谨慎使用无限发布保持。  
   
  执行此存储过程时，可以选择是否要重新初始化订阅服务器，通过设置**@reinitialize_subscriber**参数**TRUE** （默认值） 或**FALSE**. 如果**sp_mergecleanupmetadata**情况下执行**@reinitialize_subscriber**参数设置为**TRUE**，快照会重新应用于订阅服务器即使的订阅创建没有初始快照 （例如，如果快照数据和架构已手动应用，或在订阅服务器上已存在）。 将参数设置为**FALSE**应小心，因为如果不重新初始化发布，则必须确保发布服务器和订阅服务器上的数据同步。  
@@ -66,7 +65,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  建议（不是必需）停止对发布和订阅数据库的所有更新。 如果更新继续进行，则重新初始化发布时，上次合并后在订阅服务器上所做的所有更新都将丢失，但会保留数据收敛。  
   
-2.  运行合并代理以执行合并。 我们建议你使用 **– 验证**代理在每个订阅服务器上运行合并代理时的命令行选项。 如果运行的连续模式合并，请参阅*连续模式合并的特别注意事项*在本部分中更高版本。  
+2.  运行合并代理以执行合并。 我们建议你使用 **-验证**代理在每个订阅服务器上运行合并代理时的命令行选项。 如果运行的连续模式合并，请参阅*连续模式合并的特别注意事项*在本部分中更高版本。  
   
 3.  完成所有合并后，请执行**sp_mergecleanupmetadata**。  
   
@@ -82,7 +81,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  停止**所有**发布和订阅数据库的更新。  
   
-2.  运行合并代理以执行合并。 我们建议你使用 **– 验证**代理在每个订阅服务器上运行合并代理时的命令行选项。 如果运行的连续模式合并，请参阅*连续模式合并的特别注意事项*在本部分中更高版本。  
+2.  运行合并代理以执行合并。 我们建议你使用 **-验证**代理在每个订阅服务器上运行合并代理时的命令行选项。 如果运行的连续模式合并，请参阅*连续模式合并的特别注意事项*在本部分中更高版本。  
   
 3.  完成所有合并后，请执行**sp_mergecleanupmetadata**。  
   
@@ -114,7 +113,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_mergecleanupmetadata**。  
   
  若要使用此存储过程，发布服务器运行的必须是 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 订阅服务器必须运行下列任一[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2。  

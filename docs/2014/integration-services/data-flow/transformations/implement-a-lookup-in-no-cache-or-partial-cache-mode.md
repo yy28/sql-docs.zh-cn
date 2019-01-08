@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation
@@ -16,12 +15,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce09e0765f553d2a884a271b7740118a293a9510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb778827f9193cd9fae136e078e353241d2b55ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769739"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
   可以将查找转换配置为使用部分缓存模式或不缓存模式：  
@@ -61,11 +60,11 @@ ms.locfileid: "48089767"
   
     -   单击 **“使用 SQL 查询的结果”**，然后在 **“SQL 命令”** 窗口中生成查询。  
   
-         — 或 —  
+         -或-  
   
          单击 **“生成查询”** ，使用 **“查询生成器”** 提供的图形工具生成一个查询。  
   
-         — 或 —  
+         -或-  
   
          单击 **“浏览”** 从文件中导入 SQL 语句。  
   

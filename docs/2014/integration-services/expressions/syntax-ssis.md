@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
@@ -14,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189297"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351007"
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语法与 C 和 C# 语言使用的语法类似。 表达式可包括多种元素，例如标识符（列和变量）、文字、运算符和函数。 本主题概述了表达式计算器语法在应用于不同的表达式元素时的特殊要求。  
@@ -27,9 +26,9 @@ ms.locfileid: "48189297"
 > [!NOTE]  
 >  在以前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，如果某表达式的计算结果具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型 DT_WSTR 或 DT_STR，则结果将具有 4000 个字符的限制。 这一限制已被取消。  
   
- 有关使用特定运算符和函数的示例表达式，请参阅以下主题中关于每个运算符和函数的主题：[运算符（SSIS 表达式）](operators-ssis-expression.md)和[函数（SSIS 表达式）](functions-ssis-expression.md)。  
+ 有关使用特定运算符和函数的示例表达式，请参阅以下主题中关于每个运算符和函数的主题：[运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)并[函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)。  
   
- 有关使用多个运算符和函数以及标识符和文本的示例表达式，请参阅[高级 Integration Services 表达式的示例](examples-of-advanced-integration-services-expressions.md)。  
+ 有关使用多个运算符和函数以及标识符和文本的示例表达式，请参阅 [高级 Integration Services 表达式的示例](examples-of-advanced-integration-services-expressions.md)。  
   
  有关要在属性表达式中使用的示例表达式，请参阅 [在包中使用属性表达式](use-property-expressions-in-packages.md)。  
   
@@ -81,8 +80,8 @@ ms.locfileid: "48189297"
   
 ## <a name="related-content"></a>相关内容  
   
--   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=217683)。  
+-   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=217683)。  
   
--   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+-   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
   

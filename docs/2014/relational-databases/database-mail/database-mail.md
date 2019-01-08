@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - architecture [SQL Server], Database Mail
@@ -15,12 +14,12 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fea03f3328d2cf19a0f17d4e4339a670b2af9b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132917"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787968"
 ---
 # <a name="database-mail"></a>数据库邮件
   数据库邮件是从 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]中发送电子邮件的企业解决方案。 通过使用数据库邮件，数据库应用程序可以向用户发送电子邮件。 邮件中可以包含查询结果，还可以包含来自网络中任何资源的文件。  
@@ -52,7 +51,7 @@ ms.locfileid: "48132917"
   
 ### <a name="security"></a>安全性  
   
--   默认为关闭：为了减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的外围应用，默认情况下，禁用数据库邮件存储过程。  
+-   默认情况下关闭：为了减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的外围应用，默认情况下，禁用数据库邮件存储过程。  
   
 -   邮件安全性：若要发送数据库邮件，您必须是 **msdb** 数据库中的 **DatabaseMailUserRole** 数据库角色的成员。  
   
@@ -66,13 +65,13 @@ ms.locfileid: "48132917"
   
 ### <a name="supportability"></a>可支持性  
   
--   集成配置：数据库邮件在 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]中维护电子邮件帐户的信息。  
+-   集成的配置：数据库邮件在 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]中维护电子邮件帐户的信息。  
   
 -   日志记录。 数据库邮件将电子邮件活动记录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Microsoft Windows 应用程序事件日志和 **msdb** 数据库的表中。  
   
--   审核：数据库邮件将发送的邮件和附件的副本保留在 **msdb** 数据库中。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
+-   审核：数据库邮件将保留发送邮件和附件的副本**msdb**数据库。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
   
--   支持 HTML：数据库邮件允许您以 HTML 格式发送电子邮件。  
+-   支持 HTML:数据库邮件允许您以 HTML 格式发送电子邮件。  
   
 
   

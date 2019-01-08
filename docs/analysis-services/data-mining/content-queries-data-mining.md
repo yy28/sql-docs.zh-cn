@@ -1,5 +1,5 @@
 ---
-title: 内容查询 （数据挖掘） |Microsoft 文档
+title: 内容查询 （数据挖掘） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a308427ec839c316dbf0e3b215ea6d1506b1fa1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015374"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529052"
 ---
 # <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "34015374"
   
  本节提供了几个示例，用来演示选择的算法如何影响存储在模型中的信息类型。 有关挖掘模型内容以及每种模型类型特定的内容的详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Assoc"></a> 示例 1：针对关联模型的内容查询  
+###  <a name="bkmk_Assoc"></a> 示例 1:针对关联模型的内容查询  
  `SELECT FROM <model>.CONTENT`语句返回不同种类的信息，具体取决于您正在查询的模型类型。 对于关联模型，“节点类型” 为一段关键信息。 节点类似于模型内容中的信息的容器。 在关联模型中，表示规则的节点的 NODE_TYPE 值为 8，而表示项集的节点的 NODE_TYPE 值为 7。  
   
  因此，以下查询将返回前 10 个项集，按照 SUPPORT 排序（默认排序）。  
@@ -144,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 下面的查询构建于这些信息之上。 该查询返回三列：节点的 ID、完整规则以及项集右侧的产品（即，预测将作为项集的一部分与其他某些产品关联的产品）。  
+ 下面的查询构建于这些信息之上。 该查询返回三列： 节点、 完整规则和项集右侧的产品 ID-即，预测将作为项集的一部分与其他某些产品关联的产品。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  有关更多示例，请参阅 [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)。  
   
-###  <a name="bkmk_DecTree"></a> 示例 2：针对决策树模型的内容查询  
+###  <a name="bkmk_DecTree"></a> 示例 2:针对决策树模型的内容查询  
  决策树模型可用于预测以及分类。  此示例假定您使用模型是为了预测结果，但同时也希望找出可以使用哪些因子或规则来对结果进行分类。  
   
  在决策树模型中，使用节点表示树和叶节点。 每个节点的标题包含指向结果的路径的说明。 因此，若要跟踪任一特定结果的路径，您需要确定包含该结果的节点，然后获取该节点的详细信息。  
@@ -195,7 +195,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  有关如何使用分层行集的详细信息，请参阅 MSDN 上的 OLEDB 规范。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [了解 DMX Select 语句](../../dmx/understanding-the-dmx-select-statement.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

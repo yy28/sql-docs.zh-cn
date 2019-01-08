@@ -1,5 +1,5 @@
 ---
-title: Microsoft Time Series Algorithm Technical Reference |Microsoft 文档
+title: Microsoft 时序算法技术参考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d4634a8d926ec62d05317976f4e1bf1a459f0cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bd520413e425ad7ef43eb44511365c43c51022f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535407"
 ---
-# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 时序算法技术参考
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法包括两个用于分析时序的独立的算法：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34019354"
   
  Microsoft 时序算法的工作方式是在某一数据序列中取值，然后尝试将数据适合于某一模式。 如果该数据序列已不是静态的，则该算法将应用差分阶数。 差分阶数中的每个增加都往往使该时序更为静态。  
   
- 例如，如果具有时序 (z1, z2, …, zn) 并且使用一个差分阶数执行计算，则将获取一个新的时序 (y1, y2,…., yn-1)，其中 `yi = zi+1-zi`。 在差分阶数为 2 时，该算法将基于已从第一个阶数方程式派生的 y 时序生成另一个时序 \`(x1, x2, …, xn-2)`。 差分的正确量依赖于数据。 单个差分阶数在显示不变趋势的模型中最常见；第二个差分阶数可指示随着时间而变化的趋势。  
+ 例如，如果具有时序 （z1，z2，...，zn） 并且使用一个差分阶数执行计算，您将获取一个新时序 (y1，y2，...，yn-1)，其中`yi = zi+1-zi`。 在差分阶数为 2 时，该算法将生成另一系列\`（x1，x2，...，xn-2） '，基于已从第一个阶数方程式派生的 y 时序。 差分的正确量依赖于数据。 单个差分阶数在显示不变趋势的模型中最常见；第二个差分阶数可指示随着时间而变化的趋势。  
   
  默认情况下，在 Microsoft 时序算法中使用的差分阶数为 -1，这意味着该算法将自动检测差分阶数的最佳值。 通常，该最佳值为 1（在需要差分时），但在某些情况下，该算法将该值增加到最大值 2。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34019354"
   
  只要 ARIMA_AR_ORDER 的值大于 1，该算法就将时序乘以多项式项。 如果多项式公式的一个项解析为 1 的根或接近 1，则该算法将尝试通过删除该项并将差分阶数增加 1，保持该模型的稳定性。 如果差分阶数已是最大值，则该项将删除并且差分阶数不更改。  
   
- 例如，如果 AR 的值 = 2，则生成的 AR 多项式项可能如下： `1 – 1.4B + .45B^2 = (1- .9B) (1- 0.5B)`。 请注意项 `(1- .9B)` ，它具有大约 0.9 的根。 该算法从多项式公式中清除此项，但无法将差分阶数增加 1，因为该差分阶数已处于最大值 2。  
+ 例如，如果 AR 的值 = 2，则生成的 AR 多项式项可能如下： `1 - 1.4B + .45B^2 = (1- .9B) (1- 0.5B)`。 请注意项 `(1- .9B)` ，它具有大约 0.9 的根。 该算法从多项式公式中清除此项，但无法将差分阶数增加 1，因为该差分阶数已处于最大值 2。  
   
  务须注意的是：唯一能够 **强制** 更改差分阶数的方式就是使用不受支持的参数 ARIMA_DIFFERENCE_ORDER。 这个隐藏参数控制算法对时序执行差分的次数，可以通过键入自定义算法参数来设置该参数。 但是，我们不建议您更改此值，除非您已经做好试验的准备，并且熟悉会涉及到的计算。 还请注意，目前没有任何机制（包括隐藏参数）可供您控制触发差分阶数增加的阈值。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "34019354"
   
  下图演示当 PREDICTION_SMOOTHING 设置为默认值 0.5 时模型如何混合使用这两个算法。 ARIMA 和 ARTXP 开始时权重相等，但随着预测步骤数增加，ARIMA 的权重越来越大。  
   
- ![对于组合时序算法的默认曲线](../../analysis-services/data-mining/media/time-series-mixing-default.gif "多种时序算法的默认曲线")  
+ ![时序算法混合的默认曲线](../../analysis-services/data-mining/media/time-series-mixing-default.gif "时序算法混合的默认曲线")  
   
  而下图演示当 PREDICTION_SMOOTHING 设置为 0.2 时如何混合使用这两个算法。 对于步骤 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]，模型为 ARIMA 加的权重为 0.2，为 ARTXP 加的权重为 0.8。 此后，ARIMA 的权重将按指数规律增大，而 ARTXP 的权重将按指数规律减小。  
   
- ![有关时间系列模型混合 decay 曲线](../../analysis-services/data-mining/media/time-series-blending-curve.gif "时间系列模型混合 decay 曲线")  
+ ![时序模型混合的衰减曲线](../../analysis-services/data-mining/media/time-series-blending-curve.gif "时序模型混合的衰减曲线")  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的参数。  
@@ -115,17 +115,17 @@ ms.locfileid: "34019354"
 |参数|Description|  
 |---------------|-----------------|  
 |*AUTO_DETECT_PERIODICITY*|指定一个介于 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的数值，用于检测周期。 默认值为 0.6。<br /><br /> 如果将此值设置为比较接近于 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]的数，则只检测周期性强的数据的周期。<br /><br /> 如果将此值设置为比较接近于 1 的数，则往往会发现许多接近周期的模式并倾向于自动生成周期提示。<br /><br /> 注意：处理大量的周期提示可能会导致模型定型时间明显延长，不过模型会更精确。|  
-|*COMPLEXITY_PENALTY*|控制决策树的增长。 默认值为 0.1。<br /><br /> 减少该值将增大拆分的几率。 增大该值将减小拆分的几率。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
+|*COMPLEXITY_PENALTY*|控制决策树的增长。 默认值为 0.1。<br /><br /> 减少该值将增大拆分的几率。 增大该值将减小拆分的几率。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*FORECAST_METHOD*|指定要用于分析和预测的算法。 可能值为 ARTXP、ARIMA 或 MIXED。 默认值为 MIXED。|  
-|*HISTORIC_MODEL_COUNT*|指定将要生成的历史模型的数量。 默认值为 1。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
-|*HISTORICAL_MODEL_GAP*|指定两个连续的历史模型之间的时间间隔。 默认值为 10。 该值表示时间单位数，其中单位由模型定义。<br /><br /> 例如，如果将此值设置为 g，则将以 g、2*g、3\*g（依此类推）的时间间隔为被时间段截断的数据生成历史模型。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
+|*HISTORIC_MODEL_COUNT*|指定将要生成的历史模型的数量。 默认值为 1。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
+|*HISTORICAL_MODEL_GAP*|指定两个连续的历史模型之间的时间间隔。 默认值为 10。 该值表示时间单位数，其中单位由模型定义。<br /><br /> 例如，如果将此值设置为 g，则将以 g、2*g、3\*g（依此类推）的时间间隔为被时间段截断的数据生成历史模型。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*INSTABILITY_SENSITIVITY*|控制预测方差超过特定阈值的点，在该点后 ARTXP 算法将禁止预测。 默认值为 1。<br /><br /> 注意：此参数不适用于仅使用 ARIMA 的模型。<br /><br /> 默认值 1 提供与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]相同的行为。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 监视每个预测的规范化标准偏差。 对于任何预测，只要该值超过阈值，时序算法就会返回 NULL 并停止预测过程。<br /><br /> 值 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 将停止不稳定的检测。 这意味着无论方差为多少，都可以创建无限个预测。<br /><br /> 注意：此参数只能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中进行修改。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅使用默认值 1。|  
-|*MAXIMUM_SERIES_VALUE*|指定用于预测的最大值。 此参数与 MINIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，您可以指定任何一天的预测销售数量决不应超过库存产品数量。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
-|*MINIMUM_SERIES_VALUE*|指定可以预测的最小值。 此参数与 MAXIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，可以指定预测的销售额决不应为负数。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
+|*MAXIMUM_SERIES_VALUE*|指定用于预测的最大值。 此参数与 MINIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，您可以指定任何一天的预测销售数量决不应超过库存产品数量。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
+|*MINIMUM_SERIES_VALUE*|指定可以预测的最小值。 此参数与 MAXIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，可以指定预测的销售额决不应为负数。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*MINIMUM_SUPPORT*|指定在每个时序树中生成一个拆分所需的最小时间段数。 默认值为 10。|  
-|*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 下表将列出此参数的可能值：<br /><br /> **上一个**：重复前一时间段中的值。<br /><br /> **平均值**：使用定型时所用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。<br /><br /> **无**：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> <br /><br /> 请注意，如果数据中包含多个序列，这些序列不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对时序模型执行 **PREDICTION JOIN** 时，还使用此参数的值来填补新数据中的空白。|  
+|*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 下表将列出此参数的可能值：<br /><br /> **上一**:重复前一时间段中的值。<br /><br /> **意味着**:使用定型时所用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。<br /><br /> **无**：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> <br /><br /> 请注意，如果数据中包含多个序列，这些序列不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对时序模型执行 **PREDICTION JOIN** 时，还使用此参数的值来填补新数据中的空白。|  
 |*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 {1}。<br /><br /> 请注意，需要使用大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|  
-|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5：默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
+|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5:默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
   
 ### <a name="modeling-flags"></a>建模标志  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
@@ -133,7 +133,7 @@ ms.locfileid: "34019354"
 |建模标志|Description|  
 |-------------------|-----------------|  
 |NOT NULL|指示该列不能包含 Null。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
-|MODEL_EXISTENCE_ONLY|表示该列将被视为具有两个可能状态：Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
+|MODEL_EXISTENCE_ONLY|表示该列将被视为具有两个可能状态:Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
   
 ## <a name="requirements"></a>要求  
  时序模型中必须包含一个含有唯一值的 Key Time 列、输入列以及至少一个可预测列。  
@@ -141,7 +141,7 @@ ms.locfileid: "34019354"
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持特定的输入列内容类型、可预测列内容类型和建模标志，如下表所列。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Key、Key Time 和 Table|  
 |可预测属性|Continuous 和 Table|  
@@ -149,9 +149,9 @@ ms.locfileid: "34019354"
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [时序模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

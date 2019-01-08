@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78aa727d23810524d5bceba6865c7f14ce1eca14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770215"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710768"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含有关与查询关联的每个执行计划信息。  
   
@@ -49,8 +49,8 @@ ms.locfileid: "47770215"
 |**is_forced_plan**|**bit**|计划标记为当用户执行存储的过程时，强制**sys.sp_query_store_force_plan**。 强制机制*不能保证*完全此计划将用于引用查询**query_id**。 强制执行计划将导致重新编译查询，并通常生成完全相同或类似计划到引用的计划**plan_id**。 如果强制执行计划不成功， **force_failure_count**会递增并**last_force_failure_reason**填充含失败原因。|  
 |**is_natively_compiled**|**bit**|计划包括本机编译的内存优化的过程。 (0 = FALSE,1 = TRUE)。|  
 |**force_failure_count**|**bigint**|强制执行此计划已失败的次数。 仅当重新编译查询时，可以递增它 (*不在每次执行*)。 它将重置为 0 每次都**is_plan_forced**从更改**FALSE**到**TRUE**。|  
-|**last_force_failure_reason**|**int**|计划强制失败的原因。<br /><br /> 0： 无故障，否则为错误导致强制失败的错误数<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<其他值 >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文本说明。<br /><br /> ONLINE_INDEX_BUILD： 尝试修改数据，而目标表正在联机生成一个索引查询<br /><br /> INVALID_STARJOIN： 计划包含无效的 StarJoin 规范<br /><br /> 搜索指定的强制计划的计划时允许操作的 TIME_OUT： 优化器超出了数量<br /><br /> NO_DB： 在计划中指定的数据库不存在<br /><br /> HINT_CONFLICT： 无法编译查询，因为计划冲突使用查询提示<br /><br /> DQ_NO_FORCING_SUPPORTED： 无法执行查询，因为计划使用分布式的查询或全文操作的冲突。<br /><br /> NO_PLAN： 查询处理器无法生成查询计划，因为无法验证强制的计划保持有效的查询<br /><br /> 存在 NO_INDEX： 不再计划中指定的索引<br /><br /> VIEW_COMPILE_FAILED： 在由于在计划中引用的索引视图中的问题而无法强制实施查询计划<br /><br /> GENERAL_FAILURE： 常规强制错误 （不涉及与上述原因）|  
+|**last_force_failure_reason**|**int**|计划强制失败的原因。<br /><br /> 0： 无故障，否则为错误导致强制失败的错误数<br /><br /> 8637:ONLINE_INDEX_BUILD<br /><br /> 8683:INVALID_STARJOIN<br /><br /> 8684:TIME_OUT<br /><br /> 8689:NO_DB<br /><br /> 8690:HINT_CONFLICT<br /><br /> 8691:SETOPT_CONFLICT<br /><br /> 8694:DQ_NO_FORCING_SUPPORTED<br /><br /> 8698:NO_PLAN<br /><br /> 8712:NO_INDEX<br /><br /> 8713:VIEW_COMPILE_FAILED<br /><br /> \<其他值 >:GENERAL_FAILURE|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文本说明。<br /><br /> ONLINE_INDEX_BUILD： 尝试修改数据，而目标表正在联机生成一个索引查询<br /><br /> INVALID_STARJOIN： 计划包含无效的 StarJoin 规范<br /><br /> TIME_OUT:搜索指定的强制计划的计划时允许的操作的优化器超出了数<br /><br /> NO_DB:在计划中指定的数据库不存在<br /><br /> HINT_CONFLICT:无法编译查询，因为计划冲突使用查询提示<br /><br /> DQ_NO_FORCING_SUPPORTED:无法执行查询，因为计划使用分布式的查询或全文操作的冲突。<br /><br /> NO_PLAN:查询处理器无法生成查询计划，因为无法验证强制的计划保持有效的查询<br /><br /> NO_INDEX:存在不再计划中指定的索引<br /><br /> VIEW_COMPILE_FAILED:无法强制实施查询计划，由于在计划中引用的索引视图中的问题<br /><br /> GENERAL_FAILURE： 常规强制错误 （不涉及与上述原因）|  
 |**count_compiles**|**bigint**|计划编译统计信息。|  
 |**initial_compile_start_time**|**datetimeoffset**|计划编译统计信息。|  
 |**last_compile_start_time**|**datetimeoffset**|计划编译统计信息。|  
@@ -79,7 +79,7 @@ ms.locfileid: "47770215"
 * 查询优化器超出了允许的操作数
 * 格式不正确的计划 XML
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW DATABASE STATE**权限。  
   
 ## <a name="see-also"></a>请参阅  

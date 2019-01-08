@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
@@ -12,12 +12,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46f40b9da6e127ab295848aa67f9b8588e33fdb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172157"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772729"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>选项 （SQL Server 对象资源管理器的命令）
   在对象资源管理器中右键单击表或视图时，将显示以下两个用于显示表中的行的选项：  

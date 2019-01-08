@@ -1,5 +1,5 @@
 ---
-title: 安全属性 |Microsoft Docs
+title: Analysis Services 安全属性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99678bc9a4a335ef39e10e41112551c751701b8f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 31191e266b017400b8b8aceb2eb912f9bebca3d5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991459"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071724"
 ---
 # <a name="security-properties"></a>安全属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的安全服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **适用于：** 多维和表格服务器模式  
+ **适用范围：** 多维和表格服务器模式  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  **RequireClientAuthentication**  
  一个布尔值属性，指示是否需要客户端身份验证。  
   

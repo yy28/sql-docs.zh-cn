@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
@@ -15,27 +15,27 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf893c3d46530a8d4457e3d7e434be792d5647ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755509"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>打开活动监视器 (SQL Server Management Studio)
-  本主题介绍如何打开活动监视器可以获取有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进程和了解这些进程如何影响的当前实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题还介绍如何设置活动监视器的刷新间隔。  
+  本主题介绍如何打开活动监视器以便获取有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 本主题还介绍如何设置活动监视器的刷新间隔。  
   
  **本主题内容**  
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要打开活动监视器使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **使用以下工具设置刷新间隔：**  [SQL Server Management Studio](#Refresh)  
+-   **若要设置刷新间隔使用：**[SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  活动监视器将在被监视的实例上运行查询以获取有关活动监视器显示窗格的信息。 当刷新间隔设置为小于 10 秒时，运行这些查询所用的时间可能会对服务器性能产生影响。  
@@ -51,7 +51,7 @@ ms.locfileid: "48171657"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>打开 SQL Server Management Studio 中的活动监视器  
   
-1.  上[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]标准工具栏上，单击**活动监视器**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 标准工具栏上，单击 **“活动监视器”**。  
   
 2.  在 **“连接到服务器”** 对话框中，选择服务器名和身份验证模式，然后单击 **“连接”**。  
   

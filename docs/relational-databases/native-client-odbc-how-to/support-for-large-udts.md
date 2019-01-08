@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cfe743a7ae0f86477dbbb1b0cee8099d98784b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c0f2dd58d277f8736c3bab2038add94d1b3dd9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623395"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205466"
 ---
 # <a name="support-for-large-udts"></a>支持大型 UDT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47623395"
 ## <a name="example"></a>示例  
  第一个代码列表是 C# 源代码。 将其粘贴到名为 LargeStringUDT.cs 的文件并将它编译为 DLL。 将 LargeStringUDT.dll 复制到 C 驱动器的根目录中。  
   
- 第二个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表在 master 数据库中创建该程序集。  
+ 第二个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表在 master 数据库中创建程序集。  
   
  使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47623395"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第四个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表从 master 数据库中删除该程序集。  
+ 第四个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表从 master 数据库中删除该程序集。  
   
 ```  
 // LargeStringUDT.cs  

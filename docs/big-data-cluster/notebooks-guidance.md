@@ -1,30 +1,34 @@
 ---
-title: 如何在 SQL Server 2019 预览版中使用笔记本 |Microsoft Docs
-description: ''
+title: 在 Azure Data Studio 中运行 notebook
+titleSuffix: SQL Server 2019 big data clusters
+description: 此文章介绍了如何对 SQL Server 2019 大数据群集在 Azure Data Studio conneected 中运行的 Jupyter 笔记本。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221633"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246606"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
-本文介绍如何在群集上启动 Jupyter 笔记本并开始创作自己的笔记本。 它还演示如何将针对群集的作业提交。
+本文介绍如何在大数据群集上启动 Jupyter 笔记本以及如何开始创作自己的笔记本。 它还演示如何将针对群集的作业提交。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 若要使用笔记本，必须安装以下先决条件：
 
 - [SQL Server 2019 大数据群集](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [SQL Server 2019 扩展 （预览版）](../azure-data-studio/sql-server-2019-extension.md)。
+- [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 扩展**
+   - **Kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -62,7 +66,7 @@ ms.locfileid: "51221633"
 
   ![image5](media/notebooks-guidance/image5.png)
 
-  例如，提供的笔记本中，名称`Test.ipynb`。 单击 **“保存”**。
+  例如，提供的笔记本中，名称`Test.ipynb`。 单击“保存” 。
 
 ![image6](media/notebooks-guidance/image6.png)
 
@@ -105,15 +109,15 @@ Notebook 安装支持使用 PySpark 和 Spark，Spark Magic 内核时，可用�
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-单击下 – 的选项图标上时，还可以查看"单元格选项"
+单击下方的选项图标上时，还可以查看"单元格选项"
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-以下是每个单元格的选项
+以下是有关每个单元格的选项
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-现在，选择 Spark 内核，内核在下拉列表中，然后在 – 在单元格中键入/粘贴
+现在，选择 Spark 内核，内核在下拉列表中，然后在中的单元格类型/粘贴
 
 ![Image15](media/notebooks-guidance/image15.png)
 

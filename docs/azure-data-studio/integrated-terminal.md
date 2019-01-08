@@ -1,7 +1,8 @@
 ---
-title: 在 Azure Data Studio 的集成的终端 |Microsoft Docs
+title: 集成的终端
+titleSuffix: Azure Data Studio
 description: 了解有关 Azure Data Studio 中集成终端。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355978"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030431"
 ---
 # <a name="integrated-terminal"></a>集成的终端
 
@@ -89,7 +90,7 @@ ms.locfileid: "49355978"
 
 ## <a id="key-bindings"></a>终端的键绑定
 
-**视图： 切换集成终端**命令绑定到**Ctrl +'** 快速切换入和移出视图集成终端面板。
+**视图：切换集成终端**命令绑定到**Ctrl +'** 快速切换入和移出视图集成终端面板。
 
 以下是在集成终端中快速导航的键盘快捷方式：
 
@@ -109,16 +110,16 @@ Key|Command
 
 它们分别是：
 
-* `workbench.action.terminal.focus`： 将重点放在终端。 这类似于切换，但主要而不是隐藏它，终端，如果可见。
-* `workbench.action.terminal.focusNext`： 主要终端的下一个实例。
-* `workbench.action.terminal.focusPrevious`： 主要终端的前一个实例。
-* `workbench.action.terminal.kill`： 删除当前终端实例。
-* `workbench.action.terminal.runSelectedText`： 在终端实例中运行所选的文本。
-* `workbench.action.terminal.runActiveFile`： 在终端实例中运行活动的文件。
+* `workbench.action.terminal.focus`设置用户帐户 ：重点放在终端。 这类似于切换，但主要而不是隐藏它，终端，如果可见。
+* `workbench.action.terminal.focusNext`设置用户帐户 ：主要的下一个终端实例。
+* `workbench.action.terminal.focusPrevious`设置用户帐户 ：主要的上一个终端实例。
+* `workbench.action.terminal.kill`设置用户帐户 ：删除当前终端实例。
+* `workbench.action.terminal.runSelectedText`设置用户帐户 ：在终端实例中运行所选的文本。
+* `workbench.action.terminal.runActiveFile`设置用户帐户 ：在终端实例中运行活动的文件。
 
 ### <a name="run-selected-text"></a>运行选定的文本
 
-若要使用`runSelectedText`命令，在编辑器中选择文本并运行命令**终端： 活动的终端中运行所选文本**通过**命令面板**(**Ctrl + Shift + P**). 终端会尝试运行所选的文本：
+若要使用`runSelectedText`命令，在编辑器中选择文本并运行该命令**终端：在活动的终端中运行选定的文本**通过**命令控制板**(**Ctrl + Shift + P**)。 终端会尝试运行所选的文本：
 
 ![运行选定的文本](media/integrated-terminal/terminal_run_selected.png)
 
@@ -128,9 +129,9 @@ Key|Command
 
 用于复制和粘贴的键盘快捷键遵循平台标准：
 
-* Linux: **Ctrl + Shift + C**和**Ctrl + Shift + V**
-* Mac: **Cmd + C**和**Cmd + V**
-* Windows: **Ctrl + C**和**Ctrl + V**
+* Linux:**Ctrl + Shift + C**和**Ctrl + Shift + V**
+* Mac:**Cmd + C**和**Cmd + V**
+* Windows:**Ctrl + C**和**Ctrl + V**
 
 ### <a name="find"></a>查找
 
@@ -145,7 +146,7 @@ Key|Command
 
 ### <a name="rename-terminal-sessions"></a>重命名终端会话
 
-集成终端会话可以现在将使用重命名**终端： 重命名**(`workbench.action.terminal.rename`) 命令。 在终端选择下拉列表中显示的新名称。
+集成终端会话可以现在重命名使用**终端：重命名**(`workbench.action.terminal.rename`) 命令。 在终端选择下拉列表中显示的新名称。
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>强制通过终端的键绑定
 

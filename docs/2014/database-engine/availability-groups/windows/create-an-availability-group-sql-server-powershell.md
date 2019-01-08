@@ -12,12 +12,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8de3870fa115bf8d47917c5855a386e78214b644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211217"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350305"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>创建可用性组 (SQL Server PowerShell)
   本主题说明如何使用 PowerShell cmdlet 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中通过 PowerShell 创建和配置 AlwaysOn 可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
@@ -47,8 +47,8 @@ ms.locfileid: "48211217"
   
 |任务|PowerShell Cmdlet（如果可用）或 Transact-SQL 语句|执行任务的位置**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|`New-SqlHadrEndPoint`|在缺少数据库镜像端点的每个服务器实例上执行。<br /><br /> 注意： 若要更改现有数据库镜像终结点，使用`Set-SqlHadrEndpoint`。|  
-|创建可用性组|首先，将 `New-SqlAvailabilityReplica` cmdlet 与 `-AsTemplate` 参数一起使用，以便为您计划包括在可用性组中的两个可用性副本中的每一个都创建内存中可用性副本对象。<br /><br /> 然后，通过使用创建可用性组`New-SqlAvailabilityGroup`cmdlet 并引用你的可用性副本对象。|在要承载初始主副本的服务器实例上执行。|  
+|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|`New-SqlHadrEndPoint`|在缺少数据库镜像端点的每个服务器实例上执行。<br /><br /> 注意：若要更改现有数据库镜像端点，请使用 `Set-SqlHadrEndpoint`。|  
+|创建可用性组|首先，将 `New-SqlAvailabilityReplica` cmdlet 与 `-AsTemplate` 参数一起使用，以便为您计划包括在可用性组中的两个可用性副本中的每一个都创建内存中可用性副本对象。<br /><br /> 然后，通过使用 `New-SqlAvailabilityGroup` cmdlet 并引用您的可用性副本对象，创建可用性组。|在要承载初始主副本的服务器实例上执行。|  
 |将辅助副本联接到可用性组|`Join-SqlAvailabilityGroup`|在承载辅助副本的各服务器实例上执行。|  
 |准备辅助数据库|`Backup-SqlDatabase` 和 `Restore-SqlDatabase`|在承载主副本的服务器实例上创建备份。<br /><br /> 使用 `NoRecovery` 还原参数在承载辅助副本的各服务器实例上还原备份。 如果文件路径在承载主副本和目标辅助副本的计算机之间存在差异，还要使用 `RelocateFile` 还原参数。|  
 |通过将各辅助数据库联接到可用性组，开始数据同步|`Add-SqlAvailabilityDatabase`|在承载辅助副本的各服务器实例上执行。|  
@@ -59,14 +59,14 @@ ms.locfileid: "48211217"
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [获取 SQL Server PowerShell 帮助](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell 创建和配置可用性组  
   
 > [!NOTE]  
->  若要查看的语法和给定 cmdlet 的示例，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要查看给定 cmdlet 的语法和示例，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中的 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
-1.  将目录更改 (`cd`) 到要承载主副本的服务器实例。  
+1.  将目录 (`cd`) 更改为承载主副本的服务器实例。  
   
 2.  为主副本创建内存中可用性副本对象。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48211217"
   
 7.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-8.  （可选） 使用 Windows`dir`命令来验证新的可用性组的内容。  
+8.  或者，使用 Windows `dir` 命令可以验证新的可用性组的内容。  
   
 > [!NOTE]  
 >  如果服务器实例的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户基于不同的域用户帐户运行，则在各服务器实例上，为其他服务器实例创建一个登录名，并且授予此登录名对本地数据库镜像端点的 CONNECT 权限。  
@@ -93,7 +93,7 @@ ms.locfileid: "48211217"
   
 1.  备份 `MyDatabase` 及其事务日志。  
   
-2.  还原`MyDatabase`及其事务日志，请使用`-NoRecovery`选项。  
+2.  使用 `-NoRecovery` 选项还原 `MyDatabase` 及其事务日志。  
   
 3.  创建主副本的内存中表示形式，它将由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本地实例（名为 `PrimaryComputer\Instance`）承载。  
   
@@ -219,25 +219,25 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **博客：**  
   
-     [AlwaysON-HADRON 学习系列： 启用了 HADRON 的工作线程池用法的数据库](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 学习系列：启用了 HADRON 的工作线程池用法的数据库](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [使用 SQL Server PowerShell 配置 AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
+     [使用 SQL Server PowerShell 配置 AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   
-     [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第一部分： 介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 生成使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮书：**  
   
-     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [针对 SQL Server 2012 的 Microsoft 白皮书](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   

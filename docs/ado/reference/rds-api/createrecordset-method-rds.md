@@ -20,12 +20,12 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516720"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空断开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -41,7 +41,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *对象*  
+ *Object*  
  表示的对象变量[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *ColumnsInfos*  
@@ -51,7 +51,7 @@ object.CreateRecordset(ColumnInfos)
 |---------------|-----------------|  
 |“属性”|列标题的名称。|  
 |类型|数据类型的整数。|  
-|Size|以字符为单位，而不考虑数据类型为宽度的整数。|  
+|大小|以字符为单位，而不考虑数据类型为宽度的整数。|  
 |可空性|布尔值。|  
 |规模 （可选）|此可选属性定义的数值字段的小数位数。 如果未指定此值，数值将被截断为 3 的小数位数。 精度不受影响，但将为三个截断小数点后面的数字个数。|  
   
@@ -62,7 +62,7 @@ object.CreateRecordset(ColumnInfos)
   
  下表列出[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)支持的值为**CreateRecordset**方法。 列出的电话号码是用于定义字段的参考编号。  
   
- 每种数据类型是固定的长度或可变长度。 固定长度的类型应定义大小为 – 1，因为大小是预先确定，仍然需要的大小定义。 长度可变的数据类型允许从 1 到 32767 之间的大小。  
+ 每种数据类型是固定的长度或可变长度。 固定长度的类型应定义大小为-1，因为大小是预先确定，仍然需要的大小定义。 长度可变的数据类型允许从 1 到 32767 之间的大小。  
   
  对于某些变量的数据类型，该类型可强制转换为替换列中记下的类型。 你将看不到之前的替换之后**记录集**创建并填充。 然后您可以检查实际的数据类型，如有必要。  
   

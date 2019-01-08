@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145982"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516741"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中的新增功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,9 +64,9 @@ SQL Server 2017 Analysis Services 中包含了此处所述的功能。 为了充
 
 * 哈希编码首选用于“分组依据”列（通常为维度表值）和外键。 字符串列始终采用哈希编码。
 
-数值列可使用上述任一编码方法。 Analysis Services 开始处理表格时，如果表为空（有或没有分区）或正在执行全表处理操作，则会对每个数值列采用示例值，确定是要应用值编码还是哈希编码。 默认情况下，选择值编码时列中非重复值的示例有足够空间 – 否则哈希编码通常会提供更好的压缩。 使 Analysis Services 基于有关数据分布的进一步信息部分处理列后更改编码方法，并重新启动编码的过程;但是，这会增加处理时间，并且会导致效率低下。 性能优化白皮书更详细地讨论了重新编码，并介绍了如何使用 SQL Server Profiler 检测它。
+数值列可使用上述任一编码方法。 Analysis Services 开始处理表格时，如果表为空（有或没有分区）或正在执行全表处理操作，则会对每个数值列采用示例值，确定是要应用值编码还是哈希编码。 默认情况下，选择值编码时列中非重复值的示例有足够空间-否则哈希编码通常会提供更好的压缩。 使 Analysis Services 基于有关数据分布的进一步信息部分处理列后更改编码方法，并重新启动编码的过程;但是，这会增加处理时间，并且会导致效率低下。 性能优化白皮书更详细地讨论了重新编码，并介绍了如何使用 SQL Server Profiler 检测它。
 
-编码提示，建模器来指定给定事先了解从数据事件探查和/或响应重新编码跟踪事件中的编码方法的首选项。 由于哈希编码列的聚合速度低于值编码列的聚合速度，因此可将值编码指定为针对此类列的提示。 不保证应用首选项。 这是一个提示而不是一种设置。 若要指定编码提示，请在列上设置 EncodingHint 属性。 可能的值为“默认”、“值”和“哈希”。 Model.bim 文件中基于 JSON 的以下元数据片段为 Sales Amount 列指定值编码。
+编码提示，建模器来指定给定事先了解从数据事件探查和/或响应重新编码跟踪事件中的编码方法的首选项。 由于哈希编码列的聚合速度低于值编码列的聚合速度，因此可将值编码指定为针对此类列的提示。 不保证应用首选项。 这是一个提示而不是一种设置。 若要指定编码提示，请在列上设置 EncodingHint 属性。 可能的值为"Default"、"值"和"哈希"。 Model.bim 文件中基于 JSON 的以下元数据片段为 Sales Amount 列指定值编码。
 
 ```
 {
@@ -245,6 +245,6 @@ Filtered Sales:=CALCULATE (
 
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)   
 [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)

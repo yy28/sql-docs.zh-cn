@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524405"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法是熟知的 Apriori 算法的简单实现。  
@@ -77,7 +77,7 @@ ms.locfileid: "50146012"
  在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 您还可以更改参数以编程方式通过使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合在 AMO 中，或使用[MiningModels 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA 中。 下表对各参数进行了说明：  
   
 > [!NOTE]  
->  不能使用 DMX 语句更改现有模型中的参数；在创建模型时必须指定 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中的参数。  
+>  不能使用 DMX 语句; 来更改现有模型中的参数你必须指定参数在 DMX CREATE MODEL 或 ALTER STRUCTURE...ADD MODEL 中的参数。  
   
  *MAXIMUM_ITEMSET_COUNT*  
  指定要生成的最大项集数。 如果不指定任何数目，则使用默认值。  
@@ -162,7 +162,7 @@ ms.locfileid: "50146012"
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 关联算法](microsoft-association-algorithm.md)   
  [关联模型查询示例](association-model-query-examples.md)   
  [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-association-models-analysis-services-data-mining.md)  

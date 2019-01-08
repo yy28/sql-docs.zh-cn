@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509552"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>配置 Power Pivot 服务帐户
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "38984839"
   
  [故障排除：手动授予管理权限](#updatemanually)  
   
- [故障排除：解决由于管理中心或 SharePoint Foundation Web 应用程序服务密码过期而导致的 HTTP 503 错误](#expired)  
+ [故障排除：解决 HTTP 503 错误由于密码过期管理中心或 SharePoint Foundation Web 应用程序服务](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (Power Pivot) 实例的过期密码  
   
@@ -110,7 +110,7 @@ ms.locfileid: "38984839"
   
 |要求|Description|  
 |-----------------|-----------------|  
-|设置要求|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务是服务器场中的共享资源，在你创建服务应用程序时变得可用。 在创建服务应用程序时，必须指定服务应用程序池。 可以通过两种方式指定应用程序池：使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具或通过 PowerShell 命令。<br /><br /> 您可能已配置了应用程序池标识以便基于唯一帐户运行。 但是，如果您没有这样做，请考虑立即将其更改为基于不同的帐户运行。|  
+|设置要求|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务是服务器场中的共享资源，在你创建服务应用程序时变得可用。 在创建服务应用程序时，必须指定服务应用程序池。 可以通过两种方式指定应用程序池：使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具或通过 PowerShell 命令。<br /><br /> 您可能已配置了应用程序池标识以便基于唯一帐户运行。 但是，如果不这样做，请考虑立即将其更改为不同帐户下运行。|  
 |域用户帐户要求|应用程序池标识必须是 Windows 域用户帐户。 禁止使用内置计算机帐户（如 Network Service 或 Local Service）。|  
 |权限要求|此帐户不需要计算机上的本地系统管理员权限。 但是，该帐户对安装在同一计算机上的本地 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 必须具有 Analysis Services 系统管理员权限。 将由 SQL Server 安装程序或当您在管理中心中设置或更改应用程序池标识时自动授予这些权限。<br /><br /> 管理权限是用于将查询转发到 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]所必需的。 在监视运行状况、关闭处于非活动状态的会话和侦听跟踪事件时也需要这些权限。<br /><br /> 该帐户必须对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库具有连接、读取和写入权限。 在创建应用程序时将自动授予这些权限，并且在管理中心中更改权限和密码时将自动更新这些权限。<br /><br /> 在检索文件前 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序将检查 SharePoint 用户是否被授权查看数据，但它不模拟用户。 没有针对模拟的权限要求。|  
 |扩展要求|无。|  
@@ -159,7 +159,7 @@ ms.locfileid: "38984839"
   
     1.  右键单击应用程序池名称并选择“高级设置”。  
   
-    2.  选择“标识”  ，然后单击 ... 按钮打开“应用程序池标识”对话框。  
+    2.  选择**标识**单击...按钮以打开应用程序池标识对话框。  
   
     3.  单击 **“设置”**。  
   

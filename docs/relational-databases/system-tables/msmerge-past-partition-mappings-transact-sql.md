@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_past_partition_mappings
@@ -19,12 +18,12 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0419e6fab53cec8cd0ae266f89b6840701dc1724
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ad8c5db6a067477e3e4e5d349a8faa2adba5199
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638845"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775389"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47638845"
 |**publication_number**|**smallint**|存储中的发布编号**sysmergepublications**。|  
 |**tablenick**|**int**|已发布表的别名。|  
 |**rowguid**|**uniqueidentifier**|给定行的行标识符。|  
-|**partition_id**|**int**|该行所属分区的 ID。 如果行更改与所有订阅服务器相关，则值为 –1。|  
+|**partition_id**|**int**|该行所属分区的 ID。 如果行更改为与所有订阅服务器，则值为-1。|  
 |**生成**|**bigint**|发生分区更改的生成的值。|  
 |**reason**|**tinyint**|仅供内部使用。|  
   

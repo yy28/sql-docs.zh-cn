@@ -1,7 +1,8 @@
 ---
-title: 备份和还原使用 Azure Data Studio 的数据库 |Microsoft Docs
+title: 备份和还原数据库
+titleSuffix: Azure Data Studio
 description: 了解如何备份和还原使用 Azure Data Studio 的数据库
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355908"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207126"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>备份和还原使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>备份和还原数据库使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 您可以在本教學課程中，了解如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 來完成下列工作：
 > [!div class="checklist"]
@@ -33,10 +34,11 @@ ms.locfileid: "49355908"
 
 - [使用 SQL Server 连接和查询 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+本教程需要连接到 SQL Server 数据库。 Azure SQL 数据库还具有自动化备份，因此，Azure Data Studio 不会执行 Azure SQL 数据库备份和还原。 有关详细信息，请参阅[了解有关 SQL 数据库自动备份信息](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)。
 
 ## <a name="backup-a-database"></a>备份数据库
 
-1. 打开 TutorialDB 数据库仪表板 (打开**服务器**侧栏 (**CTRL + G**)，展开**数据库**，右键单击**TutorialDB**，然后选择**管理**)。 
+1. 打开 TutorialDB 数据库仪表板 (打开**服务器**侧栏 (**CTRL + G**)，展开**数据库**，右键单击**TutorialDB**，然后选择**管理**)。
 
 2. 開啟 **Backup database** 對話方塊 (按一下**工作**小工具上的**備份**)。
 
@@ -79,7 +81,7 @@ ms.locfileid: "49355908"
    ![还原 (restore)](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
 
-在本教程中，您学习了如何：
+在本教程中，你将了解：
 > [!div class="checklist"]
 > * 备份数据库 
 > * 查看备份状态

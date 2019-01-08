@@ -1,5 +1,5 @@
 ---
-title: 步骤 2： 初始化主列表框 |Microsoft Docs
+title: 步骤 2：初始化主列表框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206416"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步骤 2：初始化主列表框
 若要声明全局记录和记录集对象，请插入 （常规） （声明） 为 Form1 的以下代码：  
@@ -34,23 +34,23 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=https://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- 此代码实例化的全局的记录和记录集对象。 记录对象`grec`，使用指定为 ActiveConnection URL 打开。 如果 URL 存在，它会打开;如果它尚不存在，则创建它。 请注意，应将为"https://servername/foldername/"与您的环境中有效的 URL。  
+ 此代码实例化的全局的记录和记录集对象。 记录对象`grec`，使用指定为 ActiveConnection URL 打开。 如果 URL 存在，它会打开;如果它尚不存在，则创建它。 请注意，应将为"<https://servername/foldername/>"与您的环境中有效的 URL。  
   
  记录集对象中， `grs`，在该记录的子级上打开`grec`。 然后`lstMain`填充用于发布到的 URL 的资源的文件名称。  
   
 ## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   
- [步骤 1： 设置 Visual Basic 项目](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [步骤 3：填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [第 1 步：设置 Visual Basic 项目](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
+ [步骤 3:填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

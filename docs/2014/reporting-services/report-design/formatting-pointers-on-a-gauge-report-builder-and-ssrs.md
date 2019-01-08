@@ -11,12 +11,12 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 730e9fa68477cbd96261a7036d7a95033db326a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183179"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544255"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
   仪表指针指示仪表的当前值。 默认情况下，添加字段之后，字段中包含的值将聚合为仪表指针显示的一个值。 可以为仪表添加多个指针以便指向基于相同刻度的多个值，也可以添加多个刻度，并为添加的每个刻度各添加一个指针。 向仪表添加字段之后，必须对相应刻度设置最大值和最小值，以便为指针值提供上下文。 您还可以选择设置某一范围的最小值和最大值，该范围在刻度上显示一个关键区域。  
@@ -39,11 +39,11 @@ ms.locfileid: "48183179"
 ##  <a name="DisplayingMultiple"></a> 在仪表上显示多个指针  
  可以为仪表添加多个指针以便指向基于相同刻度的多个值。 这对同时显示较低值和较高值很有用。 若要在仪表上为相同刻度指定多个指针，请右键单击仪表内的任意位置，并单击快捷菜单上的“添加指针”。 或者，也可以通过右键单击仪表内的任意位置，再单击“添加刻度”来添加刻度。 然后，可以添加新指针，该指针将与最新刻度自动关联。  
   
- 指针重叠时，指针的绘制顺序由它们添加到仪表中的顺序确定。 更改数据窗格中的字段顺序无法对指针的绘制顺序进行重新排序。 若要更改多个指针的绘制顺序，请打开“属性”窗格，再单击“指针(…)”。 然后，更改指针在指针集合中的顺序。  
+ 指针重叠时，指针的绘制顺序由它们添加到仪表中的顺序确定。 更改数据窗格中的字段顺序无法对指针的绘制顺序进行重新排序。 若要更改多个指针的绘制顺序，请打开“属性”窗格并单击“指针 (…)”。然后，更改指针在指针集合中的顺序。  
   
   
 ##  <a name="SettingGradients"></a> 在指针顶端上设置渐变  
- 只能在径向仪表上指定可绘制在指针上面或下面的顶端。 所有指针顶端样式都是使用无法修改的内置渐变绘制的。 例外情况是`RoundedDark`样式，您可以在其中指定渐变颜色和渐变样式。  
+ 只能在径向仪表上指定可绘制在指针上面或下面的顶端。 所有指针顶端样式都是使用无法修改的内置渐变绘制的。 但 `RoundedDark` 样式除外，你可以为该样式指定渐变颜色和渐变样式。  
   
   
 ##  <a name="SettingSnappingInterval"></a> 设置对齐间隔  
@@ -58,7 +58,7 @@ ms.locfileid: "48183179"
   
 ## <a name="see-also"></a>请参阅  
  [设置仪表上刻度的格式（报表生成器和 SSRS）](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [设置仪表上的范围的格式&#40;报表生成器和 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [设置仪表上范围的格式（报表生成器和 SSRS）](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)  
   
   

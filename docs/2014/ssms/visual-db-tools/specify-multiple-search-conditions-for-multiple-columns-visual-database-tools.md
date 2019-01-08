@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
@@ -16,12 +16,12 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6fd1c3e162b338d90c75ccb54bae5f94569ce6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771759"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>为多个列指定多个搜索条件 (Visual Database Tools)
   通过在搜索条件中包括多个数据列，可以扩大或缩小查询范围。 例如，您可能希望：  
@@ -59,7 +59,7 @@ ms.locfileid: "48175897"
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>为两个不同的列指定 AND 条件  
   
-1.  在[“条件”窗格](visual-database-tools.md)中，添加要搜索的列。  
+1.  在 [“条件”窗格](visual-database-tools.md)中，添加要搜索的列。  
   
 2.  在要搜索的第一个数据列的“筛选器”列中，指定第一个条件。  
   

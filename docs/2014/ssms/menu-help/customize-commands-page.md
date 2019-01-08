@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.vs.customizecom.f1
-- vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1636d8a99cd337afc1c2ec28f2463455a7b9ff98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328527"
 ---
 # <a name="customize-commands-page"></a>自定义（“命令”页）
   使用此对话框，您可以在工具栏和菜单上添加和删除命令，以及更改用于工具栏按钮或菜单命令的图像。 可以通过在“工具”菜单上单击“自定义”，再单击“命令”，来访问“命令”页。  
@@ -41,5 +40,3 @@ ms.locfileid: "48158407"
   
 ## <a name="see-also"></a>请参阅  
  [自定义菜单和快捷键](../customize-menus-and-shortcut-keys.md)  
-  
-  

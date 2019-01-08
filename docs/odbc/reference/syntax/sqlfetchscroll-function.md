@@ -20,16 +20,16 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146967ebc31d5e7d8176d37ee5b8b0b97b6c0674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540806"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll Function（SQLFetchScroll 函数）
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLFetchScroll**从结果集中提取数据的指定行集，并返回所有绑定列的数据。 绝对或相对位置或书签，可以指定行集。  
@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
 |22001|字符串数据，右截断|长度可变的书签的列返回已被截断。|  
 |22002|需要指示器变量，但未提供|NULL 已提取数据的列中其*StrLen_or_IndPtr*设置**SQLBindCol** (或通过设置 SQL_DESC_INDICATOR_PTR **SQLSetDescField**或**SQLSetDescRec**) 是空指针。|  
-|22003|数值超出范围|返回一个或多个绑定列 （为数字或字符串） 的数字值将导致要截断的数字的整个 （而不是小数） 部分。<br /><br /> 有关详细信息，请参阅[转换将数据从 SQL 到 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)中[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22003|数值超出范围|返回一个或多个绑定列 （为数字或字符串） 的数字值将导致要截断的数字的整个 （而不是小数） 部分。<br /><br /> 有关详细信息，请参阅[转换将数据从 SQL 到 C 数据类型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)中[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
 |22007|日期时间格式无效|在结果集中的字符列已绑定到日期、 时间或时间戳 C 结构和列中的值时，分别，无效的日期、 时间戳。|  
 |22012|被零除|算术表达式中的值返回，这导致除零。|  
 |22015|间隔字段溢出|将分配从精确数字或时间间隔 SQL 类型到 C 间隔类型前导字段中时导致重要数字丢失。<br /><br /> 提取数据到 C 间隔类型时，出现没有 C 间隔类型中的 SQL 类型的值的表示形式。|  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync**尚未调用以完成此句柄上以前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING，如果启用通知模式，则**SQLCompleteAsync**必须要对其进行后期处理并完成该操作的句柄上调用。|  
   
 ## <a name="comments"></a>注释  
- **SQLFetchScroll**从结果集中返回指定行集。 按绝对或相对位置或书签，可以指定行集。 **SQLFetchScroll**结果集中存在时才可以调用 — 即，在调用后，创建结果集和游标结果集中的转移已关闭。 如果任何列的绑定，将这两列中返回的数据。 如果应用程序指定行状态数组或在其中返回读取的行数的缓冲区的指针，则**SQLFetchScroll**返回此信息。 调用**SQLFetchScroll**可以通过调用混合**SQLFetch**但不能在其中调用**SQLExtendedFetch**。  
+ **SQLFetchScroll**从结果集中返回指定行集。 按绝对或相对位置或书签，可以指定行集。 **SQLFetchScroll**可以调用仅在结果集中存在的情况-，即创建结果集调用后和光标位置前结果集的转移关闭。 如果任何列的绑定，将这两列中返回的数据。 如果应用程序指定行状态数组或在其中返回读取的行数的缓冲区的指针，则**SQLFetchScroll**返回此信息。 调用**SQLFetchScroll**可以通过调用混合**SQLFetch**但不能在其中调用**SQLExtendedFetch**。  
   
  有关详细信息，请参阅[使用块状游标](../../../odbc/reference/develop-app/using-block-cursors.md)并[使用可滚动游标](../../../odbc/reference/develop-app/using-scrollable-cursors.md)。  
   
@@ -141,7 +141,7 @@ SQLRETURN SQLFetchScroll(
   
  驱动程序不需要支持所有 fetch 方向;应用程序调用**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （具体取决于游标的类型） 的信息类型来确定哪些提取驱动程序支持的方向。 应用程序将查看这些信息类型中 SQL_CA1_NEXT、 SQL_CA1_RELATIVE、 SQL_CA1_ABSOLUTE 和 WQL_CA1_BOOKMARK 的位屏蔽。 此外，如果游标是只进和 FetchOrientation 不是 SQL_FETCH_NEXT， **SQLFetchScroll**返回 SQLSTATE HY106 （提取类型超出了范围）。  
   
- 将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性指定的行集中的行数。 如果行集正在通过提取**SQLFetchScroll**重叠的结果集末尾**SQLFetchScroll**返回的部分行集。 也就是说，S + R-1 大于 L，其中，S 起始行的行集提取，R 是行集大小和 L 是最后一个行在结果集中，然后仅第一个 L – S + 1 行集的行有效。 剩余的行是空并且具有 SQL_ROW_NOROW 的状态。  
+ 将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性指定的行集中的行数。 如果行集正在通过提取**SQLFetchScroll**重叠的结果集末尾**SQLFetchScroll**返回的部分行集。 也就是说，S + R-1 大于 L，其中，S 起始行的行集提取，R 是行集大小和 L 是最后一个行在结果集中，然后的第一个 L S + 1 行集的行有效。 剩余的行是空并且具有 SQL_ROW_NOROW 的状态。  
   
  之后**SQLFetchScroll**返回当前行是行集的第一行。  
   
@@ -178,9 +178,9 @@ SQLRETURN SQLFetchScroll(
 |*在开始之前*|*在开始之前*|  
 |*CurrRowsetStart = 1*|*在开始之前*|  
 |*1 < CurrRowsetStart < = RowsetSize* <sup>[2]。</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart – RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart-RowsetSize* <sup>[2]</sup>|  
 |*后端和 LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*后端和 LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow – RowsetSize + 1* <sup>[2]。</sup>|  
+|*后端和 LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2]。</sup>|  
   
  [1] **SQLFetchScroll**返回 SQLSTATE 01S06 （尝试提取之前返回的结果集的第一个行集） 和 SQL_SUCCESS_WITH_INFO。  
   
@@ -236,7 +236,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow – RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow-RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 如果提取行的前一个调用后，发生了更改的行集大小，这是新的行集大小。  
@@ -271,7 +271,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- 时**SQLFetchScroll**返回具有相对于当前行集的位置的新行集 — 即 FetchOrientation 是 SQL_FETCH_NEXT、 SQL_FETCH_PRIOR 或 SQL_FETCH_RELATIVE — 它不包括对当前行集的更改当计算新行集的起始位置。 但是，它包含当前行集外，如果能够将其检测出来。 此外，当**SQLFetchScroll**返回具有独立于当前行集的位置的新行集 — 即 FetchOrientation 是 SQL_FETCH_FIRST、 SQL_FETCH_LAST、 SQL_FETCH_ABSOLUTE 或 SQL_FETCH_BOOKMARK — 它包括的是能够检测，即使它们是当前行集中的所有更改。  
+ 当**SQLFetchScroll**返回具有相对于当前行集的位置的新行集，即 FetchOrientation 是 SQL_FETCH_NEXT、 SQL_FETCH_PRIOR 或 SQL_FETCH_RELATIVE-它不包括对当前行集的更改当计算新行集的起始位置。 但是，它包含当前行集外，如果能够将其检测出来。 此外，当**SQLFetchScroll**返回具有独立于当前行集的位置的新行集，即 FetchOrientation 是 SQL_FETCH_FIRST、 SQL_FETCH_LAST、 SQL_FETCH_ABSOLUTE 或 SQL_FETCH_BOOKMARK-它包括的是能够检测，即使它们是当前行集中的所有更改。  
   
  在确定新添加的行内部或外部的当前行集时，被视为部分行集结束处的最后一个有效行;也就是说，其行状态不是 SQL_ROW_NOROW 的最后一行。 例如，假设在光标位于能够检测新添加的行，当前行集是部分行集、 应用程序添加新行，光标将这些行添加到结果集的末尾。 如果应用程序调用**SQLFetchScroll**与设置为 SQL_FETCH_NEXT，FetchOrientation **SQLFetchScroll**返回从开始新添加的第一行的行集。  
   
@@ -327,7 +327,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  在适用于单个行的状态记录每个组，返回 SQLExtendedFetch 的第一个状态记录必须包含 SQLSTATE 01S01 （行中的错误）;**SQLFetchScroll**不会返回此 SQLSTATE。 如果无法返回其他 SQLSTATEs SQLExtendedFetch，它仍必须返回此 SQLSTATE。  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll 和乐观并发  
- 如果游标使用乐观并发，sql_attr_concurrency 设置语句属性，即具有值为 SQL_CONCUR_VALUES 或 SQL_CONCUR_ROWVER — **SQLFetchScroll**更新数据使用的开放式并发值若要检测是否已更改行的源。 发生这种情况每当**SQLFetchScroll**提取的新行集，包括时它 refetches 当前行集。 （它被称为使用 FetchOrientation 设置为 SQL_FETCH_RELATIVE，FetchOffset 设置为 0。）  
+ 如果游标使用乐观并发，即 sql_attr_concurrency 设置语句属性具有值为 SQL_CONCUR_VALUES 或 SQL_CONCUR_ROWVER- **SQLFetchScroll**更新数据使用的开放式并发值若要检测是否已更改行的源。 发生这种情况每当**SQLFetchScroll**提取的新行集，包括时它 refetches 当前行集。 （它被称为使用 FetchOrientation 设置为 SQL_FETCH_RELATIVE，FetchOffset 设置为 0。）  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驱动程序  
  当应用程序调用**SQLFetchScroll**在 ODBC 2.x 驱动程序，驱动程序管理器将映射到此调用**SQLExtendedFetch**。 它将以下值传递的参数**SQLExtendedFetch**。  
@@ -340,7 +340,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |RowCountPtr|将 SQL_ATTR_ROWS_FETCHED_PTR 语句属性由指定的地址。|  
 |RowStatusArray|将 SQL_ATTR_ROW_STATUS_PTR 语句属性由指定的地址。|  
   
- 有关详细信息，请参阅[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中向后兼容性的附录 g： 驱动程序指南。  
+ 有关详细信息，请参阅[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中附录 g:为了向后兼容的驱动程序指南。  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>描述符和 SQLFetchScroll  
  **SQLFetchScroll**描述符与交互的方式相同**SQLFetch**。 有关详细信息，请参阅中的"描述符和 SQLFetchScroll"一节[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)。  

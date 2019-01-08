@@ -13,12 +13,12 @@ ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: cd158f652f198c26ba0a1a489c113a36589fc495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520221"
 ---
 # <a name="managing-backups-oracletosql"></a>管理备份 (OracleToSQL)
 Oracle 备份管理允许您备份和还原表数据之前或之后运行测试。 此外可以管理与管理备份内容对话框中的备份内容。  
@@ -26,7 +26,7 @@ Oracle 备份管理允许您备份和还原表数据之前或之后运行测试�
 ## <a name="oracle-backup-management"></a>Oracle 备份管理  
   
 ### <a name="backup"></a>Backup  
-若要打开备份对话框上的测试人员菜单上，指向 Oracle 备份管理，然后单击备份... 在备份对话框中，您会发现 Oracle 元数据树显示已加载的 Oracle 架构的所有表。 选择要执行备份的一个或多个表。  
+若要打开备份对话框上的测试人员菜单上，指向 Oracle 备份管理，然后单击备份...在备份对话框中，您会发现 Oracle 元数据树显示已加载的 Oracle 架构的所有表。 选择要执行备份的一个或多个表。  
   
 以下按钮位于对话框中：  
   
@@ -37,7 +37,7 @@ Oracle 备份管理允许您备份和还原表数据之前或之后运行测试�
 -   单击**取消**按钮以关闭对话框。  
   
 ### <a name="restore"></a>还原  
-若要打开还原对话框中，在测试人员菜单上，指向 Oracle 备份管理然后单击还原... 可以在其中找到包含在备份中可用的表的树。 选择要还原其数据的一个或多个表。  
+若要打开还原对话框中，在测试人员菜单上，指向 Oracle 备份管理然后单击还原...可以在其中找到包含在备份中可用的表的树。 选择要还原其数据的一个或多个表。  
   
 以下按钮位于对话框中：  
   
@@ -48,7 +48,7 @@ Oracle 备份管理允许您备份和还原表数据之前或之后运行测试�
 -   单击**取消**按钮以关闭对话框。  
   
 ### <a name="managing-backup-contents"></a>管理备份内容  
-若要打开管理备份内容，在测试人员菜单中指向 Oracle 备份管理，然后单击备份内容... 可以在其中找到包含在备份中的表的树。  
+若要打开管理备份内容，在测试人员菜单中指向 Oracle 备份管理，然后单击备份内容...可以在其中找到包含在备份中的表的树。  
   
 以下按钮位于对话框中：  
   
@@ -73,7 +73,7 @@ SQL Server 备份管理可以备份和还原表数据之前或之后运行测试
 -   单击**取消**按钮以关闭对话框。  
   
 ### <a name="restore"></a>还原  
-若要打开还原对话框中，测试人员在菜单上指向 SQL Server 备份管理中，单击还原... 可以在其中找到包含在备份中可用的表的树。 选择要还原其数据的一个或多个表。  
+若要打开还原对话框中，测试人员在菜单上指向 SQL Server 备份管理中，单击还原...可以在其中找到包含在备份中可用的表的树。 选择要还原其数据的一个或多个表。  
   
 以下按钮位于对话框中：  
   
@@ -84,7 +84,7 @@ SQL Server 备份管理可以备份和还原表数据之前或之后运行测试
 -   单击**取消**按钮以关闭对话框。  
   
 ### <a name="managing-backup-contents"></a>管理备份内容  
-若要打开管理备份内容，在测试人员菜单中指向 SQL Server 备份管理，，然后单击备份内容... 可以在其中找到包含在备份中的表的树。  
+若要打开管理备份内容，在测试人员菜单中指向 SQL Server 备份管理，，然后单击备份内容...可以在其中找到包含在备份中的表的树。  
   
 以下按钮位于对话框中：  
   

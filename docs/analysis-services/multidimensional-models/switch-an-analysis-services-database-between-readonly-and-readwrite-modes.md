@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147912"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525880"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "50147912"
   
      记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   
-2.  右键单击该数据库并选择“分离…”  
+2.  右键单击数据库并选择**分离...**  
   
 3.  为要分离的数据库分配一个密码，然后单击 **“确定”** 执行分离命令。  
   
-4.  在对象资源管理器中，右键单击“数据库”文件夹，然后选择“附加…”。  
+4.  在对象资源管理器中右键单击**数据库**文件夹，然后选择**附加...**  
   
-5.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 也可以使用浏览按钮 (**…**) 查找数据库文件夹。  
+5.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，可以使用浏览按钮 (**...**) 以查找数据库文件夹。  
   
 6.  针对该数据库选择读写模式。  
   
@@ -93,7 +93,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   
-2.  右键单击该数据库并选择“分离…”  
+2.  右键单击数据库并选择**分离...**  
   
 3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开一个新的 XMLA 选项卡。  
   
@@ -125,7 +125,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
 9. 执行 XMLA 命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services 中的高可用性和可伸缩性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   

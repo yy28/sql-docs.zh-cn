@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b6a2ffafd3c183cff58a19bb51b8c17353f0bf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7667a086c8fb5b5f7b17e8baf237e14ffafa1188
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071777"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782509"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert 事件类
   SP:CacheInsert 事件类指示存储过程已经插入到过程缓存中。  

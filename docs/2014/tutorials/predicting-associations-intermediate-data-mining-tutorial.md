@@ -11,12 +11,12 @@ ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544271"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>预测关联（数据挖掘中级教程）
   在处理模型后，您可以使用模型中存储的关联的相关信息来创建预测。 在本课程的最后一个任务中，您将了解如何针对所创建的关联模型生成预测查询。 本课程假定您已经熟悉了如何使用预测查询生成器，同时希望了解如何生成针对关联模型的预测查询。 有关详细信息如何使用预测查询生成器，请参阅[数据挖掘查询接口](../../2014/analysis-services/data-mining/data-mining-query-tools.md)。  
@@ -209,7 +209,7 @@ ms.locfileid: "48222799"
  您可以尝试针对多个模型创建一个相似的预测查询，来查看筛选是否会更改预测结果。 有关创建预测和其他类型的查询的详细信息，请参阅[关联模型查询示例](../../2014/analysis-services/data-mining/association-model-query-examples.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [关联模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [使用预测查询生成器创建预测查询](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652465"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542782"
 ---
 # <a name="connection-string-format-and-attributes"></a>连接字符串格式和属性
 > [!IMPORTANT]  
@@ -45,7 +45,7 @@ ms.locfileid: "47652465"
 |DSN|数据源名称中的驱动程序选项卡列出**ODBC 数据源管理器**对话框。|""|  
 |PWD|你想要访问 Oracle 服务器的密码。 此驱动程序支持 Oracle 置于密码的限制。|""|  
 |SERVER|你想要访问 Oracle 服务器的连接字符串。|""|  
-|UID|Oracle Server 用户名。 具体取决于您的系统，此属性可能不为可选 — 也就是说，某些数据库和表可能需要此属性以安全为目的。<br /><br /> 使用"/"用于 Oracle 的操作系统系统身份验证。|""|  
+|UID|Oracle Server 用户名。 具体取决于您的系统，此属性可能不是可有可无-也就是说，某些数据库和表可能需要此属性以安全为目的。<br /><br /> 使用"/"用于 Oracle 的操作系统系统身份验证。|""|  
 |BUFFERSIZE|使用提取的列时的最佳缓冲区大小。<br /><br /> 该驱动程序可优化提取，以便从 Oracle 服务器的一个提取都将返回足够行来填充此大小的缓冲区。 较大的值往往会提高性能，如果您读取大量数据。|65535|  
 |SYNONYMCOLUMNS|当此值为 true (1) 的 SQLColumn （） API 调用返回的列信息。 否则，SQLColumn （） 返回仅对表和视图的列。 Oracle ODBC 驱动程序提供更快地访问时不设置此值。|1|  
 |REMARKS|当此值为 true (1)，该驱动程序返回的备注列[SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)结果集。 Oracle ODBC 驱动程序提供更快地访问时不设置此值。|0|  

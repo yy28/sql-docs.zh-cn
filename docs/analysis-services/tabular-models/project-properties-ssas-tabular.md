@@ -1,5 +1,5 @@
 ---
-title: 项目属性 |Microsoft 文档
+title: Analysis Services 表格模型项目属性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70e631e2594437dc29f8a9d58ed2fdb19e7743c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b695f847ec7f99366e71e76aefe5aecb99cf5933
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044281"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072654"
 ---
 # <a name="project-properties"></a>项目属性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "34044281"
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**Server**|**localhost**|指定一个 Analysis Services 实例。 默认情况下，将模型部署到本地计算机上 Analysis Services 的默认实例。 您可以更改此设置以便指定本地计算机上的命名实例，或指定您有权创建 Analysis Services 对象的任何远程计算机上的任何实例。 通常需要管理员权限。<br /><br /> 可以通过使用“默认部署服务器”属性（位于“工具\选项”对话框的“分析服务器”设置中的“部署”页）更改此属性的默认设置。 有关详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。|  
-|**版本**|**开发人员**|指定模型将部署到的 Analysis Services 服务器的版本。 该服务器版本定义可纳入项目中的不同功能。|  
-|**数据库**|**Model**|指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称将在数据连接或 .rsds 数据连接文件中指定。 建议该名称应反映将使用该模型执行的分析类型，例如 AdventureWorksSalesModel。<br /><br /> 若要防止已部署的模型名称重复，应更改 **“数据库”** 属性名称设置以反映模型的用途。 当用户连接到作为数据源的模型时，他们将看到此名称。|  
+|**版本(Edition)**|**开发人员**|指定模型将部署到的 Analysis Services 服务器的版本。 该服务器版本定义可纳入项目中的不同功能。|  
+|**“数据库”**|**Model**|指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称将在数据连接或 .rsds 数据连接文件中指定。 建议该名称应反映将使用该模型执行的分析类型，例如 AdventureWorksSalesModel。<br /><br /> 若要防止已部署的模型名称重复，应更改 **“数据库”** 属性名称设置以反映模型的用途。 当用户连接到作为数据源的模型时，他们将看到此名称。|  
 |**多维数据集名称**|**Model**|指定报告客户端数据连接中显示的数据库多维数据集名称。|  
 |**版本**|**13.0**|项目将部署到的 Analysis Services 实例的版本。|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34044281"
   
 2.  在 **“属性”** 窗口中，单击某个属性，然后键入值或单击向下箭头选择设置选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [模型属性](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [表格模型解决方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

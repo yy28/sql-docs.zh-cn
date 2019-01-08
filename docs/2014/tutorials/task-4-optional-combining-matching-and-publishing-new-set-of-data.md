@@ -1,5 +1,5 @@
 ---
-title: 任务 4 （可选）： 组合、 匹配和发布新的数据集 |Microsoft Docs
+title: 任务 4 （可选）：组合、 匹配和发布新的数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061747"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353076"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>任务 4（可选）：组合、匹配和发布新数据集
-  随着时间的推移，您将会想要向 MDS 存储库中添加更多的数据。 然后再添加数据，它可用于已托管 MDS，以确保不添加重复或不准确的数据中的数据的新数据进行比较。 在用于 Excel 的 Master Data Services 外接程序中，您可以合并两个工作表的数据并比较数据以在将数据发布到 MDS 前识别并删除重复项。 MDS Excel 外接程序的匹配功能使用 DQS 匹配功能来识别数据中的匹配项。 在本任务中，您将两个工作表中的数据合并到一个工作表中，然后执行匹配活动以在发布到 MDS 前识别并删除重复项。 请参阅[MDS 外接程序中用于 Excel 的数据质量匹配](http://msdn.microsoft.com/library/hh548681.aspx)并[合并数据](http://msdn.microsoft.com/library/hh548680.aspx)主题的更多详细信息。  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>任务 4 （可选）：组合、匹配和发布新数据集
+  随着时间的推移，您将会想要向 MDS 存储库中添加更多的数据。 然后再添加数据，它可用于已托管 MDS，以确保不添加重复或不准确的数据中的数据的新数据进行比较。 在用于 Excel 的 Master Data Services 外接程序中，您可以合并两个工作表的数据并比较数据以在将数据发布到 MDS 前识别并删除重复项。 MDS Excel 外接程序的匹配功能使用 DQS 匹配功能来识别数据中的匹配项。 在本任务中，您将两个工作表中的数据合并到一个工作表中，然后执行匹配活动以在发布到 MDS 前识别并删除重复项。 请参阅[MDS 外接程序中用于 Excel 的数据质量匹配](https://msdn.microsoft.com/library/hh548681.aspx)并[合并数据](https://msdn.microsoft.com/library/hh548680.aspx)主题的更多详细信息。  
   
 1.  启动的新实例**Excel**。 单击**启动**，依次指向**运行**，类型**Excel**，然后单击**确定**。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48061747"
   
 4.  应会看到**主数据资源管理器**右侧的窗格。 如果看不到主数据资源管理器，请单击**显示资源管理器**功能区上的按钮。  
   
-5.  在中**主数据资源管理器**窗口中，选择**供应商**的下拉列表中**模型**。 你应看到该模型具有一个实体：**供应商**。  
+5.  在中**主数据资源管理器**窗口中，选择**供应商**的下拉列表中**模型**。 您应看到该模型具有一个实体：**供应商**。  
   
      ![Excel-主数据资源管理器窗口](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel 的主数据资源管理器窗口")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48061747"
   
 8.  打开**Suppliers.xls**文件 （原始输入的文件包含在教程文件中），并复制所有 （三） 行从**CombineAndCleanse**工作表**Sheet2**。  
   
-9. 切换回**供应商**工作表中**book1 – Microsoft Excel** (不**Cleansed 和匹配供应商列表**Excel) 连接到**MDS**.  
+9. 切换回**供应商**工作表中**书籍 1-Microsoft Excel** (不**Cleansed 和匹配供应商列表**Excel) 连接到**MDS**.  
   
 10. 单击**主数据**菜单栏上。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061747"
   
 25. 单击“确定” 。  
   
-26. 匹配过程应与该供应商标识一个重复**代码： S1**。  
+26. 匹配过程应与该供应商标识一个重复**代码：S1**。  
   
      ![Excel-匹配结果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel-匹配结果")  
   
@@ -111,9 +111,9 @@ ms.locfileid: "48061747"
   
 33. **排序**通过列表**代码**并寻找与记录**S57**并**S66**作为代码。 此外可以使用**筛选器**搜索列表中特定记录的工具栏上的按钮。  
   
-34. 现在，关闭**Book1 – Microsoft Excel**窗口而不保存该文件。  
+34. 现在，关闭**Book1-Microsoft Excel**窗口而不保存该文件。  
   
 ## <a name="next-step"></a>下一步  
- [任务 5：从 Excel 中创建基于域的属性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [任务 5:从 Excel 中创建基于域的属性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

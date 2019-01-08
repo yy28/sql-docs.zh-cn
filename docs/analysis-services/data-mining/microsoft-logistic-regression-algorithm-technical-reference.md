@@ -1,5 +1,5 @@
 ---
-title: Microsoft 逻辑回归算法技术参考 |Microsoft 文档
+title: Microsoft 逻辑回归算法技术参考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ffe5299530f75706a5d7c348bd39d5cc2e883641
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a07998d0b0e1fd5b9123c553f650f00e23e22223
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017014"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530179"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 逻辑回归算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "34017014"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法的实现  
  假定可预测列仅包含两个状态，但您仍希望进行回归分析，以将输入列与可预测列包含特定状态的概率关联起来。 下图展示了将可预测列的状态设置为 1 和 0，计算该列包含特定状态的概率以及对输入变量执行线性回归时将获得的结果。  
   
- ![不佳建模数据使用线性回归](../../analysis-services/data-mining/media/logistic-linear-regression.gif "不良建模数据使用线性回归")  
+ ![正确建模的数据使用线性回归](../../analysis-services/data-mining/media/logistic-linear-regression.gif "正确建模的数据使用线性回归")  
   
  X 轴表示输入列的值。 Y 轴表示可预测列为某状态或其他状态的概率。 此时的问题是，线性回归无法将该列限制在 0 和 1 之间，即使它们分别是该列的最小值和最大值。 解决此问题的一种方法是进行逻辑回归。 逻辑回归将创建一条包含最大和最小约束的 S 形曲线，而不是一条直线。 下图展示的是对上例中的数据进行逻辑回归后得到的结果。  
   
- ![使用逻辑回归数据建模](../../analysis-services/data-mining/media/logistic-regression.gif "使用逻辑回归建模的数据")  
+ ![使用逻辑回归建模的数据](../../analysis-services/data-mining/media/logistic-regression.gif "使用逻辑回归建模的数据")  
   
  请注意这条曲线是如何始终未能高于 1、低于 0 的。 您可以使用逻辑回归来说明哪些输入列对于确定可预测列的状态很重要。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "34017014"
 ### <a name="scoring-inputs"></a>计分输入  
  在神经网络模型或逻辑回归模型中，“计分” 表示将数据中的值转换为一组使用同一刻度值的值，从而可相互进行比较。 例如，假设 Income 的输入范围为 0 到 100,000，而 [Number of Children] 的输入范围为 0 到 5。 转换处理可使你比较每个输入的重要程度，而不用考虑值之间的差异。  
   
- 对于定型集中显示的每个状态，模型均会生成一个输入。 对于离散输入或离散化输入，只要定型集中出现缺失状态，就会创建一个额外的输入，以表示“Missing”状态。 对于连续输入，至多创建两个节点：一个用于缺失值（如果出现在定型数据中），一个用于现有值，即非 Null 值。 使用 z-score 规范化方法 `(x – μ)\StdDev`，将每个输入调整为数值格式。  
+ 对于定型集中显示的每个状态，模型均会生成一个输入。 对于离散输入或离散化输入，只要定型集中出现缺失状态，就会创建一个额外的输入，以表示“Missing”状态。 对于连续输入，至多创建两个节点：一个用于缺失值（如果出现在定型数据中），一个用于现有值，即非 Null 值。 使用 z-score 规范化方法 `(x - μ)\StdDev`，将每个输入调整为数值格式。  
   
  在 z-score 规范化过程中，平均值 ( ) 和标准偏差为对整个定型集计算的结果。  
   
  **连续值**  
   
- 值存在：   `(X – μ)/σ ` （X 为正被编码的实际值）  
+ 值存在时： `(X - μ)/σ ` （X 是要编码的实际值）  
   
  值不存在：    `-   μ/σ `  （负 mu 除以 sigma）  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34017014"
   
  StdDev  `= sqrt(p\(1-p))`  
   
- 值存在：     `\(1 – μ)/σ` （1 减去 mu 除以 sigma 的商）  
+ 值存在时：   `\(1 - μ)/σ` (1 减去 mu 除以 sigma)  
   
- 值不存在：     `(– μ)/σ` （负 mu 除以 sigma）  
+ 值不存在：     `(- μ)/σ` （负 mu 除以 sigma）  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>了解逻辑回归系数  
  虽然统计文献中的用于执行逻辑回归的方法互有区别，但一个共同的特征是评估模型的拟合度。 其中提供有大量的拟合度统计信息，包括比值比和共变数模式。 有关如何度量模型的拟合度的讨论已超出本主题范围，但您可以检索模型中的系数的值，并使用它们来设计您自己的拟合度度量标准。  
@@ -73,9 +73,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- 对于每个输出值，此查询返回系数以及指回相关输入节点的 ID。 此外，还会返回包含输出和截距的行。 每个 X 输入都有自己的系数 (Ci)，但嵌套表仍会包含一个依据下面的公式计算的“free”系数 (Co)：  
+ 对于每个输出值，此查询返回系数以及指回相关输入节点的 ID。 此外，还会返回包含输出和截距的行。 X 每个输入都有自己的系数 (Ci)，但是，嵌套的表还包含"free"系数 (Co)，根据以下公式计算：  
   
- `F(X) = X1*C1 + X2*C2 + … +Xn*Cn + X0`  
+ `F(X) = X1*C1 + X2*C2 + ... +Xn*Cn + X0`  
   
  激活： `exp(F(X)) / (1 + exp(F(X)) )`  
   
@@ -128,25 +128,25 @@ WHERE NODE_TYPE = 23
  适用于挖掘结构列。  
   
  MODEL_EXISTENCE_ONLY  
- 表示列将被视为具有两个可能状态： **Missing** 和 **Existing**。 Null 表示缺失值。  
+ 表示该列将被视为具有两个可能状态:**缺少**并**现有**。 Null 表示缺失值。  
   
  适用于挖掘模型列。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  一个逻辑回归模型必须包含一个键列、输入列和至少一个可预测列。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法支持下表所示的特定输入列内容类型、可预测列内容类型和建模标志。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Discrete、Discretized、Key、Table|  
 |可预测属性|Continuous、Discrete、Discretized|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 逻辑回归算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [逻辑回归模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 神经网络算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

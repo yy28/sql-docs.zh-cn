@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122737"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544326"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>高级时序预测（数据挖掘中级教程）
   通过浏览预测模型，您发现尽管大多数区域的销售额都遵循一个相似的模式，但是某些区域和某些型号（例如，太平洋地区的 M200 型号）却呈现出完全不同的趋势。 您对此并不感到惊奇，因为您知道区域之间的差异很常见，可以由多种因素引起，其中包括市场促销、错误的报告或地理政治事件。  
@@ -44,7 +44,7 @@ ms.locfileid: "48122737"
 ##  <a name="bkmk_newExtendData"></a> 创建新的扩展销售额数据  
  要更新您的销售额数据，您需要获取最新的销售额数字。 特别关注来自太平洋地区的数据，该地区启动了区域性促销以吸引新商店的关注并提升产品知名度。  
   
- 对于此方案，我们假定已从 Excel 工作簿导入数据，该工作簿只包含一些区域三个月的新数据。 您将使用 Transact-SQL 脚本创建一个数据表，然后定义用于预测的数据源视图。  
+ 对于此方案中，我们假定已导数据入包含只需三个月新数据的几个区域的 Excel 工作簿。 您将为数据使用 Transact SQL 脚本，创建一个表，然后定义要用于预测的数据源视图。  
   
 #### <a name="create-the-table-with-new-sales-data"></a>使用新的销售额数据创建表  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122737"
   
      **数据源**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **选择表和视图**： 选择的表，您刚创建的 NewSalesData。  
+     **选择表和视图**:选择刚创建的表 NewSalesData。  
   
 3.  单击 **“完成”**。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122737"
   
 2.  在向导的欢迎页上，单击 **“下一步”**。  
   
-3.  上**选择数据源**页上，选择[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然后单击**下一步**。  
+3.  在 **“选择数据源”** 页上，选择 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然后单击 **“下一步”**。  
   
-4.  在 **“选择表和视图”** 页上，不添加任何表，仅仅单击 **“下一步”**。  
+4.  在页中，**选择表和视图**，不添加任何表-只需单击**下一步**。  
   
 5.  在页上，**完成向导**，键入名称`AllRegions`，然后单击**完成**。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122737"
   
      **数据源**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **选择表和视图**：不选择任何表  
+     **选择表和视图**:不选择任何表  
   
      **名称**：`T1000 Pacific Region`  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48122737"
   
      **名称**：`T1000 Pacific Region`  
   
-     **描述**:**筛选器`vTimeSeries`按区域和型号**  
+     **说明**:**筛选器`vTimeSeries`按区域和型号**  
   
 5.  在“文本”窗格中键入以下查询，然后单击“确定”：  
   

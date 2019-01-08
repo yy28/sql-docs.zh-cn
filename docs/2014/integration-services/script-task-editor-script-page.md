@@ -15,12 +15,12 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959263ce45c5f15adab12625d8af10148d98dc22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198077"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520714"
 ---
 # <a name="script-task-editor-script-page"></a>脚本任务编辑器（“脚本”页）
   使用 **“脚本任务编辑器”** 对话框的 **“脚本”** 页，可以设置脚本属性并指定脚本可以访问的变量。  
@@ -44,13 +44,13 @@ ms.locfileid: "48198077"
  若要更改 VSTA 项目中方法的名称，则必须更改 **EntryPoint** 属性的值。  
   
  **ReadOnlyVariables**  
- 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (**…**) 按钮，然后在“选择变量”对话框中选择变量。  
+ 以逗号分隔的形式键入一列可供脚本使用的只读变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
   
  **ReadWriteVariables**  
- 键入以逗号分隔的可供脚本使用的读/写变量列表，或单击省略号 (**…**) 按钮，然后在“选择变量”对话框中选择变量。  
+ 以逗号分隔的形式键入一列可供脚本使用的读/写变量，或单击省略号 (…) 按钮，然后在“选择变量”对话框中选择变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
@@ -60,11 +60,11 @@ ms.locfileid: "48198077"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [常规页](general-page-of-integration-services-designers-options.md)   
- [脚本任务编辑器&#40;常规页&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
- [表达式页](expressions/expressions-page.md)   
+ [General Page](general-page-of-integration-services-designers-options.md)   
+ [脚本任务编辑器（“常规”页）](../../2014/integration-services/script-task-editor-general-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [脚本任务示例](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [添加、删除、更改包中用户定义变量的作用域](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 611b4cf87158be48cae3bc37ef7311de64c77ddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7f04f586511140b9e21c8eca80ec19b43fa90eb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126217"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510386"
 ---
 # <a name="deploying-an-analysis-services-project"></a>部署 Analysis Services 项目
   若要查看位于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的对象的多维数据集和维度数据，必须将该项目部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中，然后再处理该多维数据集及其维度。 部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中创建定义的对象。 处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中的对象会将基础数据源中的数据复制到多维数据集对象中。 有关详细信息，请参阅[部署 Analysis Services 项目 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)和[配置 Analysis Services 项目属性 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "48126217"
   
 2.  在左窗格的“配置属性”节点中，单击“部署”。  
   
-     查看项目的部署属性。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目配置为将所有项目增量部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，以创建一个与此项目同名的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，并在部署后使用默认处理选项处理这些对象。 有关详细信息，请参阅[配置 Analysis Services 项目属性 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+     查看项目的部署属性。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目配置为将所有项目增量部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，以创建一个与此项目同名的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，并在部署后使用默认处理选项处理这些对象。 有关详细信息，请参阅 [配置 Analysis Services 项目属性 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
     > [!NOTE]  
     >  如果你想要将项目部署到的命名实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]在本地计算机上或在远程服务器实例，更改**服务器**属性设置为相应的实例名称，例如\< *ServerName**>\\<** InstanceName * * >*。  
@@ -45,11 +45,11 @@ ms.locfileid: "48126217"
     > [!NOTE]  
     >  如果您在部署过程中出现错误，则使用 SQL Server Management Studio 检查数据库权限。 您为数据源连接指定的帐户必须在 SQL Server 实例上具有登录名。 双击该登录名可以查看“用户映射”属性。 该帐户必须对 **AdventureWorksDW2012** 数据库具有 db_datareader 权限。  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程项目，然后使用部署脚本将其部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 部署进度将在下列两个窗口中显示：“输出”窗口和“部署进度 – Analysis Services 教程”窗口。  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程项目，然后使用部署脚本将其部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 在两个窗口显示部署的进度：**输出**窗口和**部署进度-Analysis Services Tutorial**窗口。  
   
-     打开“输出”窗口，如果需要，可通过单击“视图”菜单上的“输出”实现。 “输出”窗口显示部署的整体进度。 “部署进度 - Analysis Services 教程”窗口显示部署过程中执行的每个步骤的详细信息。 有关详细信息，请参阅[生成 Analysis Services 项目 (SSDT)](multidimensional-models/build-analysis-services-projects-ssdt.md)和[部署 Analysis Services 项目 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
+     打开“输出”窗口，如果需要，可通过单击“视图”菜单上的“输出”实现。 “输出”窗口显示部署的整体进度。 **部署进度-Analysis Services Tutorial**窗口显示部署过程中执行每个步骤的详细信息。 有关详细信息，请参阅[生成 Analysis Services 项目 (SSDT)](multidimensional-models/build-analysis-services-projects-ssdt.md)和[部署 Analysis Services 项目 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   
-5.  查看“输出”窗口和“部署进度 – Analysis Services 教程”窗口的内容，验证是否已生成、部署和处理多维数据集，并且没有出现错误。  
+5.  查看的内容**输出**窗口和**部署进度-Analysis Services Tutorial**窗口以验证该多维数据集的生成部署，并且不包含错误处理。  
   
 6.  若要隐藏“部署进度 - Analysis Services 教程”窗口，请单击窗口的工具栏上的“自动隐藏”图标（看起来像图钉）。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48126217"
  [浏览多维数据集](lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>请参阅  
- [部署 Analysis Services 项目&#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [配置 Analysis Services 项目属性&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [部署 Analysis Services 项目 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [配置 Analysis Services 项目属性 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

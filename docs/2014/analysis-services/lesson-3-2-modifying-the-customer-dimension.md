@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513271"
 ---
 # <a name="modifying-the-customer-dimension"></a>修改“客户”维度
   可以使用许多不同的方式提高多维数据集中的维度的可用性和功能。 在本主题的各任务中，您将修改“客户”维度。  
@@ -32,11 +32,11 @@ ms.locfileid: "48178117"
   
 3.  以相同方法更改以下属性的名称：  
   
-    -   **英语教育**属性 — 更改为 `Education`  
+    -   **英语教育**特性-将更改为 `Education`  
   
-    -   **英语职业**属性 — 更改为 `Occupation`  
+    -   **英语职业**特性-将更改为 `Occupation`  
   
-    -   **自治区/直辖市名**属性 — 更改为 `State-Province`  
+    -   **自治区/直辖市名**特性-将更改为 `State-Province`  
   
 4.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48178117"
   
 4.  在中**名称**属性字段中，键入`Full Name`。  
   
-5.  在底部的 **NameColumn** 属性字段中单击，然后单击浏览 (**…**) 按钮以打开“名称列”对话框。  
+5.  在单击**NameColumn**属性字段的底部，然后单击浏览 (**...**) 按钮以打开**名称列**对话框。  
   
 6.  选择`FullName`底部**源列**列表，，然后单击**确定**。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48178117"
 8.  在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="defining-attribute-relationships"></a>定义属性关系  
- 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+ 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md) 和 [属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 #### <a name="to-define-attribute-relationships"></a>定义属性关系  
   
@@ -269,6 +269,6 @@ ms.locfileid: "48178117"
  [维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)   
  [从维度中删除属性](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [重命名属性](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [数据源视图中定义命名的计算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名计算 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606809"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205176"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLParamData**使用连同**SQLPutData**提供参数数据在语句执行时，且**SQLGetData**检索流式处理的输出参数数据。  
@@ -61,7 +61,7 @@ SQLRETURN SQLParamData(
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|标识的数据值*ValueType*中的参数**SQLBindParameter**无法为数据类型由标识转换绑定的参数为*ParameterType*中的参数**SQLBindParameter**。<br /><br /> 参数绑定为 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT 不无法转换为标识的数据类型返回的数据值*ValueType*中的参数**SQLBindParameter**。<br /><br /> （如果无法转换为一个或多个行的数据值，但没有成功返回一个或多个行，此函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|22026|字符串数据，长度不匹配|中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo** "Y"，不是指定了较少的数据已发送长参数 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定于数据类型）与*StrLen_or_IndPtr*中的参数**SQLBindParameter**。<br /><br /> 中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**为"Y"，而且比中指定了较少的数据已发送长列 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定于数据类型）对应于已添加或使用更新的数据行中的列长度的缓冲区**SQLBulkOperations**或更新，它**SQLSetPos**。|  
+|22026|字符串数据，长度不匹配|中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo** "Y"，不是指定了较少的数据已发送长参数 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定的数据类型）与*StrLen_or_IndPtr*中的参数**SQLBindParameter**。<br /><br /> 中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**为"Y"，而且比中指定了较少的数据已发送长列 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定的数据类型）对应于已添加或使用更新的数据行中的列长度的缓冲区**SQLBulkOperations**或更新，它**SQLSetPos**。|  
 |40001|序列化失败|事务已回滚，由于其他事务与资源死锁。|  
 |40003|语句完成情况未知|此函数中，在执行期间失败关联的连接，无法确定事务的状态。|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
@@ -82,7 +82,7 @@ SQLRETURN SQLParamData(
   
  当应用程序调用**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**，驱动程序返回 SQL_NEED_如果它需要执行时数据的数据的数据。 随后，应用程序调用**SQLParamData**来确定要发送的数据。 如果该驱动程序需要参数的数据，驱动程序将返回在 *\*ValuePtrPtr*输出缓冲区的应用程序放在行集的缓冲区中的值。 应用程序可以使用此值以确定驱动程序正在请求的参数数据。 如果该驱动程序需要列数据，驱动程序将返回在 *\*ValuePtrPtr*缓冲区列最初已按如下所示绑定到的地址：  
   
- *绑定地址* + *绑定偏移量*+ ((*行号*– 1) x*元素大小*)  
+ *绑定地址* + *绑定偏移量*+ ((*行号*-1) x*元素大小*)  
   
  其中变量定义下表中所示。  
   

@@ -16,17 +16,17 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515792"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>导入和导出包（SSIS 服务）
     
 > [!IMPORTANT]  
->  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
+>  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
  包既可以保存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 数据库的 sysssispackages 表中，也可以保存在文件系统中。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "48178817"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 数据库。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 使您能够导入和导出包，并通过此更改的存储格式和位置的包。 使用导入和导出功能，您可以将包添加到文件系统、包存储区或 msdb 数据库，然后将包从一种存储格式复制为另一种存储格式。 例如，保存在 msdb 中的包可以复制到文件系统中，反之亦然。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了导入和导出包的功能，通过此功能可以更改包的存储格式和位置。 使用导入和导出功能，您可以将包添加到文件系统、包存储区或 msdb 数据库，然后将包从一种存储格式复制为另一种存储格式。 例如，保存在 msdb 中的包可以复制到文件系统中，反之亦然。  
   
  还可以使用 **dtutil** 命令提示实用工具 (dtutil.exe) 将包复制为其他格式。 有关详细信息，请参阅 [dtutil Utility](dtutil-utility.md)。  
   
 ## <a name="to-import-or-export-a-package"></a>导入或导出包  
   
 > [!IMPORTANT]  
->  本主题讨论作为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的一部分的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 向后兼容。 有关在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中管理包的信息，请参阅 [Integration Services (SSIS) 服务器](catalog/integration-services-ssis-server-and-catalog.md)。  
+>  本主题讨论作为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的一部分的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]向后兼容。 有关在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中管理包的信息，请参阅 [Integration Services (SSIS) 服务器](catalog/integration-services-ssis-server-and-catalog.md)。  
   
  您可以从以下位置导出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包，或将包导入以下位置：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48178817"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击 \<“浏览更多...”>，定位要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48178817"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击 \<“浏览更多...”>，定位要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   
@@ -134,6 +134,6 @@ ms.locfileid: "48178817"
 8.  单击 **“确定”** ，完成导出操作。  
   
 ## <a name="see-also"></a>请参阅  
- [包管理&#40;SSIS 服务&#41;](service/package-management-ssis-service.md)  
+ [包管理（SSIS 服务）](service/package-management-ssis-service.md)  
   
   

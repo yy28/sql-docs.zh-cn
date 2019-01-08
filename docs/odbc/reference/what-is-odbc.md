@@ -13,17 +13,17 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622325"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540441"
 ---
 # <a name="what-is-odbc"></a>什么是 ODBC？
 在对计算世界中存在有关 ODBC 的许多误解。 向最终用户，它是 Microsoft® Windows® 控制面板中的图标。 应用程序程序员来说，它是一个库，包含数据访问例程。 许多其他是出人意料的所有数据库访问权限问题的答案。  
   
- 首先，这一 ODBC 是数据库 API 的规范。 此 API 是独立于任何一个 DBMS 或操作系统;尽管此手动使用 C，但 ODBC API 与语言无关。 ODBC API 基于从 Open Group 和 ISO/IEC CLI 规范。 ODBC 3。*x*完全实现这两个这些规范-早期版本的 ODBC 基于这些规范的预备版本，但未完全实现它们，并添加基于屏幕的开发人员经常需要的功能数据库应用程序，如可滚动游标。  
+ 首先，这一 ODBC 是数据库 API 的规范。 此 API 是独立于任何一个 DBMS 或操作系统;尽管此手动使用 C，但 ODBC API 与语言无关。 ODBC API 基于从 Open Group 和 ISO/IEC CLI 规范。 ODBC 3。*x*完全同时这些规范的早期版本的 ODBC 基于这些规范的预备版本，但未完全实现它们的实现，并添加基于屏幕的开发人员经常需要的功能数据库应用程序，如可滚动游标。  
   
  在 ODBC API 函数由特定于 DBMS 的驱动程序的开发人员实现。 应用程序调用这些驱动程序以访问独立于 DBMS 的方式中的数据中的函数。 驱动程序管理器管理应用程序和驱动程序之间的通信。  
   

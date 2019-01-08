@@ -16,12 +16,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d161786019750aae9740ce42ab0a15464b0dfc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160867"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532047"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
   取消异步执行的操作。  
@@ -42,7 +42,7 @@ HRESULT Abort(
  eOperation[in]  
  要中止的操作。 其值应为：  
   
- DBASYNCHOP_OPEN — 要取消的请求应用于对行集的异步打开或填充，或应用于对数据源对象的异步初始化。  
+ 取消 DBASYNCHOP_OPEN 请求适用于异步打开或填充行集或数据源对象的异步初始化。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  

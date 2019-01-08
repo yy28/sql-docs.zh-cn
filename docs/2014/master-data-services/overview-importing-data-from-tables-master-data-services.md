@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -15,15 +14,15 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756809"
 ---
 # <a name="data-import-master-data-services"></a>数据导入 (Master Data Services)
-  创建一个模型中用于存储数据后[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，可以开始添加数据并对中的数据进行更改[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库。   你使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 临时表、存储过程和主数据管理器。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中为数据创建模型后，你可以开始添加数据并在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中对数据进行更改。   你使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 临时表、存储过程和主数据管理器。  
   
  此外可以使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，以将数据添加到 MDS 存储库 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库)。 有关详细信息，请参阅[发布的数据&#40;MDS 外接程序 excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48217807"
      你使用临时存储过程或 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 来加载数据。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，已停止提供对 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的支持。  
+>  在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，弃用对 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的支持。  
   
 ## <a name="deactivating-and-deleting-members"></a>停用和删除成员  
  停用意味着可以重新激活成员。 如果您重新激活某成员，可还原成员的属性以及成员在层次结构和集合中的成员身份。 以前的所有事务都将保持不变。 管理员可以在主数据管理器的“版本管理”  功能区域中查看停用事务。  
@@ -70,11 +69,11 @@ ms.locfileid: "48217807"
 ## <a name="staging-tables-and-stored-procedures"></a>临时表和存储过程  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库包含以下类型的临时表，你可以使用你的数据填充它们。  
   
--   [叶成员临时表&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [叶成员临时表 (Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [合并成员临时表&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合并成员临时表 (Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [关系临时表&#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [关系临时表 (Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  模型中的每个实体都有一个临时表。 表名称指示相应的实体以及实体类型，如叶成员。 下图显示货币、客户和产品实体的临时表。  
   
@@ -103,8 +102,8 @@ ms.locfileid: "48217807"
   
 ## <a name="related-content"></a>相关内容  
   
--   [验证&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [业务规则&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

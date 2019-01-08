@@ -1,7 +1,8 @@
 ---
-title: 教程： 启用五个最慢的查询示例小组件的 Azure Data Studio |Microsoft Docs
+title: 教程：启用五个最慢的查询示例小组件
+titleSuffix: Azure Data Studio
 description: 本教程演示如何启用五个最慢的查询示例上的小组件数据库仪表板。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356238"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030781"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程： 添加*五个最慢的查询*示例小组件设为数据库仪表板
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：添加*五个最慢的查询*示例小组件设为数据库仪表板
 
 本教程演示了添加之一的过程[!INCLUDE[name-sos](../includes/name-sos-short.md)]的内置示例小组件到*数据库仪表板*可以快速查看数据库的五个最慢查询。 你还了解如何查看速度慢的查询的详细信息和查询计划使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]的功能。 在本教程中，你了解如何：
 
@@ -54,7 +55,7 @@ ms.locfileid: "49356238"
 若要添加*缓慢查询小组件*到仪表板，编辑*dashboard.database.widgets*中设置你*用户设置*文件。
 
 1. 打开*用户设置*通过按**Ctrl + Shift + P**以打开*命令面板*。
-2. 类型*设置*在搜索框中，选择**首选项： 打开用户设置**。
+2. 类型*设置*在搜索框中，选择**首选项：打开用户设置**。
 
    ![打开的用户设置命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -171,7 +172,7 @@ ms.locfileid: "49356238"
 
 
 ## <a name="next-steps"></a>后续步骤
-在本教程中，您学习了如何：
+在本教程中，你将了解：
 > [!div class="checklist"]
 > * 在数据库上启用查询存储
 > * 将见解小组件添加到数据库仪表板

@@ -16,23 +16,23 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635865"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542603"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 运行时错误的类型。  
   
  列出了三种形式的错误号：  
   
--   正十进制，十进制格式的完整编号较低的两个字节。 此号码在默认 Visual Basic 错误消息对话框中显示。 例如，运行时的错误"3707"。  
+-   正小数低两个字节的十进制格式的完整编号。 此号码在默认 Visual Basic 错误消息对话框中显示。 例如，运行时的错误"3707"。  
   
--   负十进制 — 完整的错误数的十进制转换。  
+-   完整的错误号的负小数十进制转换。  
   
--   十六进制 — 完整的错误号的十六进制表示形式。 Windows 设备代码为第四个数字。 ADO 错误号的设施代码*A*。例如： 0x800***A***0E7B。  
+-   完整的错误号的十六进制十六进制表示形式。 Windows 设备代码为第四个数字。 ADO 错误号的设施代码*A*。例如：0x800***A***0E7B。  
   
 > [!NOTE]
 >  OLE DB 错误可能会传递到 ADO 应用程序。 通常情况下，可以通过的 Windows 设备代码标识这些*4*。 例如，0x800***4***。  

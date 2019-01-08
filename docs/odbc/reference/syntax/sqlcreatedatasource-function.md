@@ -20,16 +20,16 @@ ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e06c511debbcac9741e178ebfb5c1a8eae0a330
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba02c28f3243b623695e3e087490ef3f73c60385
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620405"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204336"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 函数
 **符合性**  
- 版本引入了： ODBC 2.0  
+ 版本引入了：ODBC 2.0  
   
  **摘要**  
  **SQLCreateDataSource**显示一个对话框，用户可以使用该对话框添加数据源。  

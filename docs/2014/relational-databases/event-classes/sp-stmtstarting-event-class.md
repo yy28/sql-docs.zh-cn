@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 892a3aee2236c93953825d3414b402ce5b49d174
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115867"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761489"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 事件类
   SP:StmtStarting 事件类指示已开始执行存储过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  

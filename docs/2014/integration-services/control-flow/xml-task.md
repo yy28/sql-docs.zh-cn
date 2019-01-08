@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
@@ -16,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa137e5be6f664ae40e7c195e88a99bf87e9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b696dd451c5b6f76419e4fb4cb501e2e62bba24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759319"
 ---
 # <a name="xml-task"></a>XML 任务
   XML 任务用于与 XML 数据配合使用。 使用此任务，包可以检索 XML 文档，使用可扩展样式表语言转换 (XSLT) 样式表和 XPath 表达式对文档应用运算，合并多个文档，还可以验证、比较更新的文档并将其保存到文件和变量。  
@@ -54,7 +53,7 @@ ms.locfileid: "48204187"
 ## <a name="predefined-xml-operations"></a>预定义的 XML 运算  
  XML 任务包含一组用来处理 XML 文档的预定义运算。 下表介绍了这些运算。  
   
-|运算|Description|  
+|操作|Description|  
 |---------------|-----------------|  
 |差异|比较两个 XML 文档。 Diff 运算把源 XML 文档作为基准文档，将其与另一个 XML 文档进行比较，检测二者间的差异，并将差异写入 XML Diffgram 文档。 此运算包含用来自定义比较的属性。|  
 |合并|合并两个 XML 文档。 Merge 运算使用源 XML 文档作为基文档，将第二个文档的内容添加到其中。 此运算可以在基文档内指定合并位置。|  
@@ -71,8 +70,8 @@ ms.locfileid: "48204187"
 |选项|Description|  
 |------------|-----------------|  
 |**IgnoreComments**|该值用于指定是否比较注释节点。|  
-|**IgnoreNamespaces**|该值用于指定是否将元素的命名空间统一资源标识符 (URI) 与其属性名称相比较。 如果此选项设置为`true`，具有相同名称但不同的命名空间的两个元素将被视为是相同的。|  
-|**IgnorePrefixes**|该值用于指定是否比较元素前缀和属性名称。 如果此选项设置为`true,`本地名称相同但不同的命名空间 URI 和前缀的两个元素将被视为相同。|  
+|**IgnoreNamespaces**|该值用于指定是否将元素的命名空间统一资源标识符 (URI) 与其属性名称相比较。 如果将此选项设置为 `true`，则名称部分相同但命名空间不同的两个元素将被视为相同元素。|  
+|**IgnorePrefixes**|该值用于指定是否比较元素前缀和属性名称。 如果将此选项设置为 `true,`，则本地名称相同但命名空间 URI 和前缀不同的两个元素将被视为相同元素。|  
 |**IgnoreXMLDeclaration**|该值用于指定是否比较 XML 声明。|  
 |**IgnoreOrderOfChildElements**|该值用于指定是否比较子元素顺序。 如果将此选项设置为 `true`，则在同级组成的列表中仅位置不同的子元素将被视为相同元素。|  
 |**IgnoreWhiteSpaces**|该值用于指定是否比较空格。|  
@@ -94,7 +93,7 @@ ms.locfileid: "48204187"
 ### <a name="validation-operation"></a>Validation 运算  
  可以将 Validation 运算配置为使用文档类型定义 (DTD) 架构或 XML 架构定义 (XSD) 架构。  
   
- 启用`ValidationDetails`以获取详细的错误输出。 有关详细信息，请参阅 [Validate XML with the XML Task](xml-task.md)。  
+ 启用 `ValidationDetails` 以获取详细错误输出。 有关详细信息，请参阅 [Validate XML with the XML Task](xml-task.md)。  
   
 ## <a name="xml-document-encoding"></a>XML 文档编码  
  XML 任务仅支持合并 Unicode 文档。 这表示 XML 任务只能对采用 Unicode 编码的文档应用 Merge 运算。 使用其他编码将导致 XML 任务失败。  
@@ -120,9 +119,9 @@ ms.locfileid: "48204187"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [XML 任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML 任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [使用 XML 任务验证 XML](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

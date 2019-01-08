@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210847"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536974"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
   如果有适当的权限，您可以使用数据库镜像监视器来监视服务器实例上的镜像数据库的任何子集。 通过监视可以验证数据库镜像会话中是否有数据流动以及数据流动的方式。 数据库镜像监视还有助于排查数据流减少的原因。  
@@ -32,7 +32,7 @@ ms.locfileid: "48210847"
   
 -   每个伙伴的上一个已知角色（主体或镜像）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要监视数据库镜像，必须是 **sysadmin** 固定服务器角色的成员，或是服务器实例上 **msdb** 数据库的 **dbm_monitor** 固定数据库角色的成员。 如果你只是某一个伙伴服务器实例中的 **sysadmin** 或 **dbm_monitor** 的成员，则监视器只能连接到该伙伴；监视器不能从其他伙伴中检索信息。  
   
  如果你只是服务器实例上的 **dbm_monitor** 的成员，你对该服务器实例只具有有限的权限。 您只能查看最新的状态行。 如果使用 **dbm_monitor** 权限连接到服务器实例，数据库镜像监视器将提示你的权限有限。  
@@ -96,7 +96,7 @@ ms.locfileid: "48210847"
 |Command|Description|  
 |-------------|-----------------|  
 |**撤消注册此数据库**|从数据库镜像监视器中删除选定的数据库。|  
-|**设置警告阈值…**|打开 **“设置警告阈值”** 对话框。 在此，系统管理员可以在每个伙伴上启用或禁用数据库警告，并可更改每个警告的阈值。 建议您在两个伙伴上都为给定警告设置阈值，以确保数据库进行故障转移时，警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。<br /><br /> 更新状态表时，只有在性能值处于或高于阈值的情况下，才会将事件写入性能的事件日志。 如果峰值在两次状态更新之间瞬间达到阈值，峰值将丢失。|  
+|**设置警告阈值...**|打开 **“设置警告阈值”** 对话框。 在此，系统管理员可以在每个伙伴上启用或禁用数据库警告，并可更改每个警告的阈值。 建议您在两个伙伴上都为给定警告设置阈值，以确保数据库进行故障转移时，警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。<br /><br /> 更新状态表时，只有在性能值处于或高于阈值的情况下，才会将事件写入性能的事件日志。 如果峰值在两次状态更新之间瞬间达到阈值，峰值将丢失。|  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - addTabs
@@ -13,12 +12,12 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f437cf8a54efcd84f01757b72b278f14a524a8d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f82b6f68d7186d35fd1657cd56c4aa23fcf82b3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107707"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769049"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>将表添加到 CDC 实例
   使用“表选择”对话框可以将 Oracle 源中的附加表添加到 CDC 实例。 选定的表将添加到属性编辑器的 **“表”** 选项卡的列表中。  
@@ -28,14 +27,14 @@ ms.locfileid: "48107707"
  **搜索特定表**  
  按如下所示输入搜索条件，然后单击“搜索”：  
   
--   **架构**：从列表中选择数据库架构。 只有具有该架构的表才会出现在列表中。  
+-   **架构**:从列表中选择数据库架构。 只有具有该架构的表才会出现在列表中。  
   
--   **表名称模式**：输入任意字符串。 将仅显示包含输入的字符串的表。  
+-   **表名称模式**:输入任何字符的字符串。 将仅显示包含输入的字符串的表。  
   
 > [!NOTE]  
 >  您可以在其中一个或全部两个字段中输入条件。  
   
--   **显示前 1000 个匹配表**：默认情况下选中此复选框。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
+-   **显示前 1000 个匹配表**:默认情况下选中此复选框。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
   
  **选择要包括在 CDC 实例中的表**  
  单击要包含的任何表旁边的复选框，然后单击“添加”。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  
@@ -50,7 +49,7 @@ ms.locfileid: "48107707"
   
 ## <a name="see-also"></a>请参阅  
  [如何编辑 CDC 实例属性](how-to-edit-the-cdc-instance-properties.md)   
- [如何管理 CDC 实例](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [为捕获更改选择 Oracle 表](select-oracle-tables-for-capturing-changes.md)  
   
   

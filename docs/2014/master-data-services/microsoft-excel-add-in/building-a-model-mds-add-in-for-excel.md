@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 297441a73dcf2ff6f6e0e1808f863c7641edfa30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0076abb28b486627d12c177d7f301b274239225c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190567"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784447"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>生成模型（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以执行在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中提供的一部分管理功能。  
@@ -34,15 +33,15 @@ ms.locfileid: "48190567"
   
 |任务说明|工具|主题|  
 |----------------------|----------|-----------|  
-|创建模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建模型&#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
+|创建模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建模型 (Master Data Services)](../create-a-model-master-data-services.md)|  
 |创建一个实体。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序、Web 服务或 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[创建实体（用于 Excel 的 MDS 外接程序）](create-an-entity-mds-add-in-for-excel.md)|  
 |创建基于域的属性。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序、Web 服务或 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[创建基于域的属性（用于 Excel 的 MDS 外接程序）](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
-|创建属性组。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建属性组&#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
-|创建业务规则。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建和发布业务规则&#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
+|创建属性组。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建属性组 (Master Data Services)](../create-an-attribute-group-master-data-services.md)|  
+|创建业务规则。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建和发布业务规则 (Master Data Services)](../create-and-publish-a-business-rule-master-data-services.md)|  
 |创建订阅视图。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建订阅视图&#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
-|创建层次结构。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建派生层次结构&#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [创建显式层次结构&#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
-|创建集合。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建集合&#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
-|创建数据版本。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[锁定版本&#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
+|创建层次结构。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建派生层次结构 (Master Data Services)](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [创建显式层次结构 (Master Data Services)](../create-an-explicit-hierarchy-master-data-services.md)|  
+|创建集合。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[创建集合 (Master Data Services)](../create-a-collection-master-data-services.md)|  
+|创建数据版本。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[锁定版本 (Master Data Services)](../lock-a-version-master-data-services.md)|  
 |部署模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序、Web 服务或 MDSModelDeploy 工具。|[使用 MDSModelDeploy 创建模型部署包](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
 ## <a name="related-content"></a>相关内容  
@@ -51,24 +50,24 @@ ms.locfileid: "48190567"
   
 -   [实体 (Master Data Services)](../entities-master-data-services.md)  
   
--   [属性&#40;Master Data Services&#41;](../attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../attributes-master-data-services.md)  
   
--   [基于域的属性&#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 (Master Data Services)](../domain-based-attributes-master-data-services.md)  
   
--   [属性组&#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)  
+-   [属性组 (Master Data Services)](../attribute-groups-master-data-services.md)  
   
--   [业务规则&#40;Master Data Services&#41;](../business-rules-master-data-services.md)  
+-   [业务规则 (Master Data Services)](../business-rules-master-data-services.md)  
   
 -   [将数据导出&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
   
--   [层次结构&#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
+-   [层次结构 (Master Data Services)](../hierarchies-master-data-services.md)  
   
--   [集合&#40;Master Data Services&#41;](../collections-master-data-services.md)  
+-   [集合 (Master Data Services)](../collections-master-data-services.md)  
   
--   [版本&#40;Master Data Services&#41;](../versions-master-data-services.md)  
+-   [版本 (Master Data Services)](../versions-master-data-services.md)  
   
 -   [安全性 (Master Data Services)](../security-master-data-services.md)  
   
--   [部署模型&#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
+-   [部署模型 (Master Data Services)](../deploying-models-master-data-services.md)  
   
   

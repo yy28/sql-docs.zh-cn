@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07a92747b2687acb6556b96eeef0737b236abaf5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c2306f89ba724d6ba799f6bda6ec03f7f6377a97
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980709"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210856"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>配置或修复 Power Pivot for SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "38980709"
   
 3.  将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
   
-4.  **默认帐户：** 在“参数”选项卡上，键入 **“默认帐户用户名”** 的域用户帐户。 此帐户用于设置重要服务，包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
+4.  **默认帐户：** 参数选项卡上，键入的域用户帐户**默认帐户用户名**。 此帐户用于设置重要服务，包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
   
      **通行短语：** 键入通行短语。 如果该 SharePoint 场是新场，则在向该 SharePoint 场中添加新的服务器或应用程序时，需要使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "38980709"
   
  下表说明了用于配置服务器的值。  
   
-|第|输入值|数据源|Description|  
+|第|输入值|源|Description|  
 |----------|-----------------|------------|-----------------|  
 |**配置或修复 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint**|默认帐户|当前用户|默认帐户是用于在场中设置共享服务的域 Windows 用户帐户。 默认帐户用于设置以下项：|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序|  
@@ -116,7 +116,7 @@ ms.locfileid: "38980709"
 ||||-Web 应用程序池标识|  
 ||||-网站集管理员|  
 ||||- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户。|  
-||||默认情况下，使用当前用户的域帐户。<br /><br /> 注意：建议你替换该默认值，除非你配置服务器是为了评估和非生产目的。<br /><br /> 可以使用管理中心在配置或修复后更改服务标识。<br /><br /> 或者，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具中，为以下项指定专用的帐户：|  
+||||默认情况下，使用当前用户的域帐户。<br /><br /> 注意：建议您替换该默认值，除非您配置服务器是为了评估和非生产目的。<br /><br /> 可以使用管理中心在配置或修复后更改服务标识。<br /><br /> 或者，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具中，为以下项指定专用的帐户：|  
 ||||-Web 应用程序，使用“创建默认的 Web 应用程序”页（假定该工具正在为场创建 Web 应用程序）。|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户，使用此工具中的 **“为数据刷新创建无人参与的帐户”** 页。|  
 ||数据库服务器|本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例（如果可用）|如果数据库引擎实例作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装，则该工具将使用此实例名称填充数据库服务器字段。 如果您没有安装数据库引擎，此字段将为空。<br /><br /> “数据库服务器”  是必需参数。 该实例可以是支持 SharePoint 场的任何 SQL Server 版本或发行版。|  
@@ -124,9 +124,9 @@ ms.locfileid: "38980709"
 ||SharePoint 管理中心端口|默认值（如果需要）|如果未配置场，则该工具将提供用于创建场的选项，包括创建指向管理中心的 HTTP 端点。 它会选取一个未在使用中的随机生成的端口号。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([服务器名称]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|用户输入|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器是 Excel Services 启用核心 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能所必需的。 你在此页上键入的服务器名称还将添加到“配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器”页上的列表中。|  
 |**配置新场**|数据库服务器<br /><br /> 场帐户<br /><br /> 通行短语<br /><br /> SharePoint 管理中心端口|默认值（如果需要）|这些设置默认为在主页上输入的设置。|  
-|**创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序**|服务应用程序名称|，则“默认”|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称的默认名称为**默认[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序**。 您可以在该工具中替换为不同的值。|  
-||数据库服务器|，则“默认”|承载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库的数据库服务器。 默认服务器名称与用于该场的数据库服务器相同。 您可以将默认服务器名称替换为其他值。|  
-||数据库名称|，则“默认”|要为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库创建的数据库的名称。 默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|  
+|**创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序**|服务应用程序名称|默认|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称的默认名称为**默认[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序**。 您可以在该工具中替换为不同的值。|  
+||数据库服务器|默认|承载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库的数据库服务器。 默认服务器名称与用于该场的数据库服务器相同。 您可以将默认服务器名称替换为其他值。|  
+||数据库名称|默认|要为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库创建的数据库的名称。 默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|  
 |**创建默认的 Web 应用程序**|Web 应用程序名称|默认值（如果需要）|如果不存在任何 Web 应用程序，该工具将创建一个。 Web 应用程序配置为使用经典模式身份验证，并侦听端口 80。 最大文件上载大小设为 2047，这是 SharePoint 所允许的最大值。 较大的文件上载大小用于容纳将上载到服务器的大型 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件。|  
 ||URL|默认值（如果需要）|该工具将基于服务器名称创建一个 URL，并且使用与 SharePoint 相同的文件命名约定。|  
 ||应用程序池|默认值（如果需要）|该工具在 IIS 中创建默认应用程序池。|  
@@ -137,10 +137,10 @@ ms.locfileid: "38980709"
 ||最大文件大小(MB)|默认值（如果需要）|默认设置为 2047。 SharePoint 文档库也有一个最大大小，且 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 设置不应超过此文档库设置。 有关详细信息，请参阅[配置最大文件上传大小 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。|  
 |**创建网站集**|网站管理员|默认值（如果需要）|此工具将使用默认帐户。 您可以在 **“创建网站集”** 页中覆盖默认帐户。|  
 ||联系人电子邮件|默认值（如果需要）|如果在服务器上配置了 Microsoft Outlook，则该工具将使用当前用户的电子邮件地址。 否则，将使用占位符值。|  
-||网站 URL|默认值（如果需要）|该工具将创建网站 URL，并且使用与 SharePoint 相同的 URL 命名约定。|  
+||站点 URL|默认值（如果需要）|该工具将创建网站 URL，并且使用与 SharePoint 相同的 URL 命名约定。|  
 ||网站标题|默认值（如果需要）|此工具将“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 站点”添加为默认标题。|  
-|**激活网站集中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能**|网站 URL||激活 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能的网站集的 URL。|  
-||为此网站启用高级功能||启用 SharePoint 网站功能“PremiumSite”。|  
+|**激活网站集中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能**|站点 URL||激活 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能的网站集的 URL。|  
+||为此网站启用高级功能||启用 SharePoint 网站功能"PremiumSite"。|  
 |**创建 Secure Store Service 应用程序**|服务应用程序名称|默认值（如果需要）|键入 Secure Store Service 应用程序的名称。|  
 ||数据库服务器|用户输入|键入用于 Secure Store Service 应用程序的数据库服务器的名称。|  
 |**创建 Secure Store Service 应用程序代理**|服务应用程序名称|默认值（如果需要）|键入您在前一页中已键入的 Secure Store Service 应用程序的名称。|  
@@ -150,8 +150,8 @@ ms.locfileid: "38980709"
 |**为 DataRefresh 创建无人参与的帐户**|目标应用程序 ID|默认值（如果需要）|创建一个目标应用程序，以便存储用于无人参与的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新的凭据。<br /><br /> 应用程序 ID 可以是说明文本。|  
 ||目标应用程序的友好名称|默认值（如果需要）||  
 ||无人参与的帐户用户名和密码|默认值（如果需要）|键入由目标应用程序用来运行无人参与数据刷新操作的 Windows 用户帐户的凭据。 有关详细信息，请参阅[在 SharePoint Server 2013 中使用无人参与的服务帐户配置 Excel Services 数据刷新](http://technet.microsoft.com/library/hh525344\(office.15\).aspx)(http://technet.microsoft.com/library/hh525344(office.15).aspx)。|  
-||网站 URL|默认值（如果需要）|键入与目标应用程序关联的网站集的网站 URL。 若要与其他网站集关联，请使用 SharePoint 管理中心。|  
-|**创建 Excel Services 服务应用程序**|服务应用程序名称|默认值（如果需要）|键入服务应用程序名称。 将在 SharePoint 场的数据库服务器上创建同名的服务应用程序数据库。|  
+||站点 URL|默认值（如果需要）|键入与目标应用程序关联的网站集的网站 URL。 若要与其他网站集关联，请使用 SharePoint 管理中心。|  
+|**创建 Excel Services 服务应用程序**|服务应用程序名称|默认值（如果需要）|键入服务应用程序名称。 在 SharePoint 场的数据库服务器上创建具有相同名称的服务应用程序数据库。|  
 |**配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器**|服务应用程序名称|默认值（如果需要）|您在前一页中键入的服务应用程序名称。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器名称||已注册 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的列表。<br /><br /> 在主页上键入的服务器名称将自动添加到此页。|  
 |**将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 外接程序注册为 Excel Services 用法跟踪程序**|服务应用程序名称||您在前一页中键入的服务应用程序名称。|  
@@ -162,7 +162,7 @@ ms.locfileid: "38980709"
  如果该工具创建网站集，它将在数据库服务器上创建内容数据库，并且使用与 SharePoint 相同的文件命名约定。 不能更改内容数据库名称。  
   
 ## <a name="verify-the-configuration"></a>验证配置  
- 请参阅[配置 PowerPivot 和部署解决方案 (SharePoint 2013)](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)的“验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置”部分。  
+ 请参阅"验证[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]配置"部分[配置 Power Pivot 和部署的解决方案&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_nextsteps"></a>后续步骤  
  完成服务器安装后，您应该执行若干安装后任务：  
@@ -189,7 +189,7 @@ ms.locfileid: "38980709"
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>安装数据刷新中使用的数据访问接口和检查用户权限  
  服务器端数据刷新使用户可以在无人参与模式下将更新后的数据重新导入到其工作簿中。 为了成功执行数据刷新，在 SharePoint 模式下运行 Analysis Services 的服务器必须具有最初导入数据所用的相同的数据访问接口。 此外，运行数据刷新的用户帐户通常需要对外部数据源具有读取权限。 请务必检查启用和配置数据刷新的要求，以确保获得成功结果。 有关详细信息，请参阅 [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，数据访问接口会在运行 **spPowerPivot.msi** 安装程序和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置工具时安装。 有关详细信息，请参阅 [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>更改 SharePoint 中的应用程序池和服务标识  
@@ -206,15 +206,15 @@ ms.locfileid: "38980709"
 -   [在 Excel 2013 外接程序中启动 Power Pivot](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)。  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>在 SharePoint 模式下添加其他 Analysis Services 服务器  
- 一段时间后，如果您确定需要额外的数据存储和处理能力，则可以向场中添加更多的在 SharePoint 模式下运行 Analysis Services 的服务器。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，你可在 SharePoint 模式下安装新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，然后配置 Excel Services。 有关详细信息，请参阅 [在 PowerPivot 模式下安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)中的“单台服务器安装之外”部分。  
+ 一段时间后，如果您确定需要额外的数据存储和处理能力，则可以向场中添加更多的在 SharePoint 模式下运行 Analysis Services 的服务器。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，你可在 SharePoint 模式下安装新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，然后配置 Excel Services。 有关详细信息，请参阅"的单服务器安装之外"部分的[在 Power Pivot 模式下安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
 ## <a name="additional-resources"></a>其他资源  
  ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[提交反馈和联系信息通过 SQL Server 反馈](https://feedback.azure.com/forums/908035-sql-server)。  
   
 ## <a name="see-also"></a>请参阅  
  [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [Power Pivot 配置工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [在管理中心中管理和配置 PowerPivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

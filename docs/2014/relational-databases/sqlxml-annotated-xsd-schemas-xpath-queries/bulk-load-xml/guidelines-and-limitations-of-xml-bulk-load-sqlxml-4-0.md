@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
@@ -15,12 +13,12 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f8bb180ef8c0b7483ce8bab27d11804ac81a387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7a569bbc5672b0fc5996507e37ed250721bd2fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774919"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大容量加载的指导原则和限制 (SQLXML 4.0)
   在使用 XML 大容量加载时，您应该熟悉以下指导原则和限制：  
@@ -31,7 +29,7 @@ ms.locfileid: "48082657"
   
 -   将检查 XML 文档是否格式正确，但不对其进行验证。  
   
-     XML 大容量加载检查 XML 文档以确定该文档的格式是否正确；即，确保 XML 符合万维网联合会的 XML 1.0 建议的语法要求。 如果该文档的格式不正确，则 XML 大容量加载将取消处理并返回错误。 对这一要求的唯一例外是在文档为片断时（例如，在文档没有单个根元素时），在此情况下 XML 大容量加载将加载文档。  
+     XML 大容量加载检查 XML 文档以确定它是否是良好的正确的是的以确保 XML 符合万维网联合会的 XML 1.0 建议的语法要求。 如果该文档的格式不正确，则 XML 大容量加载将取消处理并返回错误。 对这一要求的唯一例外是在文档为片断时（例如，在文档没有单个根元素时），在此情况下 XML 大容量加载将加载文档。  
   
      XML 大容量加载不针对在 XML 数据文件中定义或引用的任何 XML 数据或 DTD 架构对文档进行验证。 此外，XML 大容量加载不针对提供的映射架构对 XML 数据文件进行验证。  
   
@@ -159,7 +157,7 @@ ms.locfileid: "48082657"
   
      创建在映射架构中标识的表（数据库必须存在）。 如果在数据库中已存在一个或多个表，SGDropTables 属性确定是否要删除并重新创建这些预先存在的表。  
   
--   如果指定 SchemaGen 属性 (例如，SchemaGen = true)，则创建在映射架构中标识的表。 但 SchemaGen 不会创建这些表上的任何约束 （例如，PRIMARY KEY/FOREIGN KEY 约束中） 有一个例外： 如果构成关系中的主键的 XML 节点被定义为具有 XML 类型的 ID (即，`type="xsd:ID"`为XSD) 和 SGUseID 属性设置为 True 的 SchemaGen，则不仅将创建从主键 ID 中输入了节点，但从映射架构关系创建主键/外键关系。  
+-   如果指定 SchemaGen 属性 (例如，SchemaGen = true)，则创建在映射架构中标识的表。 但 SchemaGen 不会创建这些表上的任何约束 （例如，PRIMARY KEY/FOREIGN KEY 约束中） 有一个例外：如果构成关系中的主键的 XML 节点被定义为具有 XML 类型的 ID (即， `type="xsd:ID"` xsd) 和 SGUseID 属性设置为 True SchemaGen，则不仅主键从创建 ID 类型的节点但从映射架构关系创建主键/外键关系。  
   
 -   SchemaGen 不使用 XSD 架构方面和扩展来生成关系[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]架构。  
   

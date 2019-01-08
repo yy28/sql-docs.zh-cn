@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergearticles
@@ -19,12 +18,12 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 660b42ef3864e5c61d51edfc33c073b804237f45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4834ebec21b69d000a84c6d4fdd5c615f2ca833e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757009"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,8 +84,8 @@ ms.locfileid: "47712565"
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|内容待定。|  
-|**delete_tracking**|**bit**|指示是否复制删除内容。<br /><br /> **0** = 不复制删除<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 时的值*delete_tracking*是**0**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。<br /><br /> 注意： 的值**0**导致非收敛性。|  
-|**compensate_for_errors**|**bit**|指示在同步过程中遇到错误时是否执行补救措施。<br /><br /> **0** = 补救操作已被禁用。<br /><br /> **1** = 无法应用于订阅服务器或发布服务器通常会导致采取补救措施来撤消这些更改，这是合并复制的默认行为的更改。<br /><br /> 注意： 的值**0**导致非收敛性。|  
+|**delete_tracking**|**bit**|指示是否复制删除内容。<br /><br /> **0** = 不复制删除<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 时的值*delete_tracking*是**0**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。<br /><br /> 注意：值为**0**导致非收敛性。|  
+|**compensate_for_errors**|**bit**|指示在同步过程中遇到错误时是否执行补救措施。<br /><br /> **0** = 补救操作已被禁用。<br /><br /> **1** = 无法应用于订阅服务器或发布服务器通常会导致采取补救措施来撤消这些更改，这是合并复制的默认行为的更改。<br /><br /> 注意：值为**0**导致非收敛性。|  
 |**pub_range**|**bigint**|发布服务器标识范围大小。|  
 |**范围**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
 |**threshold**|**int**|标识范围阈值百分比。|  

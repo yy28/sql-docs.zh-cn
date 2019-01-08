@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 63ebce5a8e78829cbdad8dede0be7cb9285c7c37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788450"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507027"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>配置 NFS-Linux 上的 SQL Server 的故障转移群集实例-
 
@@ -101,7 +101,7 @@ NFS 或网络文件系统，是用于共享在 Linux 领域，但未一个 Windo
    * 从现有的 SQL Server 数据目录中删除的文件。 如果成功，将不会收到任何确认。
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    * 验证已删除的文件。 

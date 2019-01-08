@@ -13,12 +13,12 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a3300f448d9bc3df34369963cd4b697ada44211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150538"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352982"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>执行帐户（SSRS 本机模式）
   使用此页可以配置用于无人参与处理的帐户。 只有在其他凭据源不可用的以下特殊情况时，才使用此帐户：  
@@ -36,9 +36,9 @@ ms.locfileid: "48150538"
  您可以使用任何一个 Windows 用户帐户。 为获得最佳结果，请选择拥有读取权限和网络登录权限的帐户，以支持与其他计算机的连接。 对于您希望在报表中使用的任何外部图像或数据文件，它必须拥有对这些文件的读取权限。 切勿指定本地帐户，除非所有报表数据源和外部图像均存储在报表服务器计算机中。 只可将该帐户用于无人参与报表处理。  
   
 > [!NOTE]  
->  如果使用的是带高级服务的 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，则仅当在报表中引用外部图像并且访问该图像文件需要相应权限时才需要配置此帐户。 SQL Server Express 不支持到远程服务器的数据源连接。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如果使用的是带高级服务的 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，则仅当在报表中引用外部图像并且访问该图像文件需要相应权限时才需要配置此帐户。 SQL Server Express 不支持到远程服务器的数据源连接。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
   
- 若要打开此页上，启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器，然后选择**的执行帐户**在导航窗格中。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，并在导航窗格中选择 **“执行帐户”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ## <a name="options"></a>选项  
  **指定执行帐户**  

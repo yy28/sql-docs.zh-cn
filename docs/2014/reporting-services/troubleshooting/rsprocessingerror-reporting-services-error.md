@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207317"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403605"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 错误
     
@@ -56,7 +56,7 @@ ms.locfileid: "48207317"
   
 -   参数可以为 Null 的属性设置为`False`参数中检测到 null 值。  
   
--   数据区域的 Hidden 属性的表达式包含以下错误：对象引用未设置为某个对象的实例。  
+-   数据区域的 Hidden 属性的表达式包含错误：对象引用未设置为某个对象的实例。  
   
 -   表达式包含的函数调用无效或有语法错误。  
   
@@ -76,18 +76,18 @@ ms.locfileid: "48207317"
 -   如果以本地管理员身份在报表服务器上运行，请在日志文件中搜索 `ReportProcessingException`。 日志项包含详细信息。 报表服务器日志文件通常位于 \<drive>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__datetimestamp.log。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../report-server/reporting-services-log-files-and-sources.md)。  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>无法加载表达式宿主程序集。  
- 自定义程序集必须设置了强名称签名和 AllowPartiallyTrustedCallers 属性。 有关详细信息，请参阅[使用报表的自定义程序集](../custom-assemblies/using-custom-assemblies-with-reports.md)并[Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md)。  
+ 自定义程序集必须设置了强名称签名和 AllowPartiallyTrustedCallers 属性。 有关详细信息，请参阅 [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) 和 [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md)。  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>内置全局名称不存在  
  检查表达式的拼写。 内置全局名称、参数名称和字段名称均区分大小写。 在导致错误的表达式中，检查该名称在报表中是否实际存在以及拼写是否正确。 有关详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 ### <a name="parameter-properties-and-null"></a>参数属性和 Null  
- 多值参数不能为 Null。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 多值参数不能为 Null。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>无法处理包含子报表的主报表  
- 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会显示以下消息：“无法处理子报表”。  
+ 必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会显示以下消息：“无法处理子报表。”  
   
- 必须更改主报表或子报表，以便使用相同版本的报表处理器来处理所有报表。 有关报表为何无法进行升级的信息，请参阅[升级报表](../install-windows/upgrade-reports.md)。  
+ 必须更改主报表或子报表，以便使用相同版本的报表处理器来处理所有报表。 有关报表为何无法进行升级的信息，请参阅 [升级报表](../install-windows/upgrade-reports.md)。  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>验证函数调用为 Visual Basic 而不是 SQL  
  可以在针对关系数据库的查询文本中使用 SQL 函数。 不能在查询文本中使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数。  
@@ -105,7 +105,7 @@ ms.locfileid: "48207317"
   
 -   无法计算 \<property name>。 它引用了一个数据集字段，该字段包含一个错误：\<error string>。  
   
- 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>聚合函数调用中指定的作用域无效或有冲突  
  如果 Tablix 单元中包含对表达式的聚合函数调用，报表处理器将使用单元所属的最内部组的作用域来计算表达式。  
@@ -127,12 +127,12 @@ ms.locfileid: "48207317"
   
 ## <a name="see-also"></a>请参阅  
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)   
- [聚合函数参考&#40;报表生成器和 SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [聚合函数引用（报表生成器和 SSRS）](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [表达式示例（报表生成器和 SSRS）](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [常用筛选器（报表生成器和 SSRS）](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Parameters 集合引用&#40;报表生成器和 SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Parameters 集合引用（报表生成器和 SSRS）](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

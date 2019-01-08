@@ -1,7 +1,8 @@
 ---
-title: 创建和自定义 Azure Data Studio 中的键盘快捷键 |Microsoft Docs
-description: 了解如何创建和自定义 Azure Data Studio 中的键盘快捷键。
-ms.custom: tools|sos
+title: 创建和自定义键盘快捷方式
+titleSuffix: Azure Data Studio
+description: 了解如何创建和自定义 Azure Data Studio 中的键盘快捷键
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3452e2e19d237f8ba5135c723e9971c0932ba61c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356468"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030251"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>中的键盘快捷键 [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -28,20 +29,20 @@ ms.locfileid: "49356468"
 
 若要查看所有当前定义的键盘快捷方式：
 
-打开**键盘快捷方式**从编辑器**文件**菜单：**文件** > **首选项** >  **键盘快捷方式**(**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **首选项** > **键盘快捷方式**Mac 上)。
+打开**键盘快捷方式**从编辑器**文件**菜单：**文件** > **首选项** > **键盘快捷方式**(**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **首选项** > **键盘快捷方式**Mac 上)。
 
-除了显示当前键绑定**键盘快捷方式**编辑器列出了可用的命令不具有定义的键盘快捷方式。 **键盘快捷方式**编辑器，您可以轻松地更改、 删除、 重置，并定义新的键绑定。  
+除了显示当前的键绑定**键盘快捷方式**编辑器列出了可用的命令不具有定义的键盘快捷方式。 **键盘快捷方式**编辑器，您可以轻松地更改、 删除、 重置，并定义新的键绑定。  
 
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>编辑现有的键盘快捷方式
 
-若要更改现有的键盘快捷方式的键绑定：
+若要更改现有键盘快捷方式的键绑定：
 
 1. 找到你想要通过使用搜索框或滚动浏览列表更改键盘快捷方式。
    > [!TIP]
    > 搜索由参数、 命令、 通过源等内容，返回所有相关的键盘快捷方式。
 
-1. 右键单击所需的条目并选择**更改键绑定**
+1. 右键单击所需的条目并选择**更改密钥绑定**
 
    ![编辑键盘快捷方式](media/keyboard-shortcuts/change-keybinding.png)
 
@@ -53,7 +54,7 @@ ms.locfileid: "49356468"
 
 若要创建新的键盘快捷方式：
 
-1. 右击某个命令，没有任何键绑定，并选择**添加的键绑定**。
+1. 右击没有任何键绑定，选择某个命令**添加密钥绑定**。
 
    ![创建键盘快捷方式](media/keyboard-shortcuts/add-keybinding.png)
 

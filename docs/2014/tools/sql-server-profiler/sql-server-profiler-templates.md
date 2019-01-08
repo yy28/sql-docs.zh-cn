@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -18,12 +17,12 @@ ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7fe736aae767d9d3ec434c2f62deac4491e2126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084647"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779589"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 模板
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建模板，定义要包含在跟踪中的事件类和数据列。 定义并保存模板后，可以运行跟踪来记录每个选定事件类的数据。 您可以将一个模板用于多个跟踪；模板本身并不会执行。  
@@ -41,7 +40,7 @@ ms.locfileid: "48084647"
 |模板名称|模板用途|事件类|  
 |-------------------|----------------------|-------------------|  
 |SP_Counts|捕获一段时间内存储过程的执行行为。|**SP:Starting**|  
-|Standard|创建跟踪的通用起点。 捕获所运行的全部存储过程和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 用于监视常规数据库服务器活动。|**审核登录**<br /><br /> **审核注销**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
+|标准|创建跟踪的通用起点。 捕获所运行的全部存储过程和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 用于监视常规数据库服务器活动。|**审核登录**<br /><br /> **审核注销**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL|捕获客户端提交给 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句及其发出时间。 用于调试客户端应用程序。|**审核登录**<br /><br /> **审核注销**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Duration|捕获客户端提交给 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句及其执行时间（以毫秒位单位），并按持续时间对其进行分组。 用于识别执行速度慢的查询。|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
 |TSQL_Grouped|捕获提交给 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句及其发出时间。 信息按提交语句的用户或客户端分组。 用于调查某客户端或用户发出的查询。|**审核登录**<br /><br /> **审核注销**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
@@ -61,7 +60,7 @@ ms.locfileid: "48084647"
 >  默认模板针对给定的服务器类型。 更改一个服务器类型的默认模板不会影响其他任何服务器类型的默认模板。 有关设置特定服务器的默认模板的详细信息，请参阅[设置跟踪定义默认值 (SQL Server Profiler)](set-trace-definition-defaults-sql-server-profiler.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [创建跟踪模板&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [创建跟踪模板 (SQL Server Profiler)](create-a-trace-template-sql-server-profiler.md)   
  [修改跟踪模板 (SQL Server Profiler)](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [导出跟踪模板 (SQL Server Profiler)](export-a-trace-template-sql-server-profiler.md)   
  [导入跟踪模板 (SQL Server Profiler)](import-a-trace-template-sql-server-profiler.md)  

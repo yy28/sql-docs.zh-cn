@@ -14,17 +14,17 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511313"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文搜索升级选项
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“全文搜索升级选项”页选择用于此时要升级的数据库的全文搜索升级选项。  
   
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，每个全文检索都驻留在属于文件组的全文目录中，它们均具有物理路径，并被视为数据库文件。 现在，全文目录是表示一组全文检索的逻辑概念，即虚拟对象。 因此，新的全文目录不会视为带有物理路径的数据库文件。 但是，在升级包含数据文件的所有全文目录期间，将在相同磁盘上创建新的文件组。 这可以在升级后维护旧磁盘的 I/O 行为。 该目录的所有全文检索均被放置到新的文件组中（如果存在根路径）。 如果旧的全文目录路径无效，该升级则将全文检索保留在与基表相同的文件组中，或者保留在主文件组中（对于分区表）。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，每个全文检索都驻留在属于文件组的全文目录中，它们均具有物理路径，并被视为数据库文件。 现在，全文目录是一个逻辑概念的虚拟对象的是指一组全文索引。 因此，新的全文目录不会视为带有物理路径的数据库文件。 但是，在升级包含数据文件的所有全文目录期间，将在相同磁盘上创建新的文件组。 这可以在升级后维护旧磁盘的 I/O 行为。 该目录的所有全文检索均被放置到新的文件组中（如果存在根路径）。 如果旧的全文目录路径无效，该升级则将全文检索保留在与基表相同的文件组中，或者保留在主文件组中（对于分区表）。  
   
 ## <a name="options"></a>选项  
  升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，请选择下列全文升级选项之一。  

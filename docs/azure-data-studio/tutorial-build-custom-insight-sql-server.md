@@ -1,7 +1,8 @@
 ---
-title: 教程： 生成 Azure Data Studio 中的自定义见解小组件 |Microsoft Docs
+title: 教程：生成自定义见解小组件
+titleSuffix: Azure Data Studio
 description: 本教程演示如何生成自定义见解小组件并将其添加到 Azure Data Studio 中的数据库和服务器仪表板。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356338"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030031"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>教程： 构建自定义见解小组件
+# <a name="tutorial-build-a-custom-insight-widget"></a>教程：生成自定义见解小组件
 
 本教程演示如何使用你自己的见解查询以生成自定义见解小组件。
 
@@ -163,7 +164,7 @@ ms.locfileid: "49356338"
     ![activesession 见解](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>后续步骤
-在本教程中，您学习了如何：
+在本教程中，你将了解：
 > [!div class="checklist"]
 > * 运行您自己的查询，并在图表中查看
 > * 生成从图表的自定义见解小组件

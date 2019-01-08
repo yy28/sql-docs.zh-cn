@@ -10,12 +10,12 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a68b60a954e6cd89698d4e906f8272f08d6b11e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673155"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399900"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 使用**连接到 MySQL**对话框以连接到你想要迁移的 MySQL 数据库。  
@@ -60,7 +60,7 @@ ms.locfileid: "47673155"
   
 在单击"配置"按钮，会出现一个对话框。 若要使用加密，而连接到 MySQL 数据库，以下三个证书中的文件的对话框中的路径必须被定义 [隐私增强邮件证书 (PEM)]:  
   
--   **SSL 证书颁发机构：** 信任 SSL Ca 的一系列指定文件的路径。  
+-   **SSL 证书颁发机构：** 指定文件的路径具有的信任 SSL Ca 的列表。  
   
 -   **SSL 证书：** 指定要用于建立安全连接的 SSL 证书文件的名称。  
   

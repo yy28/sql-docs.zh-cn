@@ -15,12 +15,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511206"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>“保存数据挖掘查询结果”对话框（“挖掘模型预测”视图）
   使用 **“保存数据挖掘查询结果”** 对话框，可将数据挖掘查询的结果保存到新表中。  
@@ -53,10 +53,10 @@ ms.locfileid: "48090269"
  **添加到数据源视图**  
  （可选）如果希望将表添加到现有数据源中，请选择项目中包含的数据源视图。  
   
- 如果您想在同一数据源中保留模型的所有相关表（如定型数据、预测源数据和查询结果），此选项很有用。  
+ 此选项非常有用，如果你想要保留所有相关的表模型，如定型数据、 预测源数据和查询结果的相同数据源中。  
   
 ## <a name="see-also"></a>请参阅  
- [预测查询生成器&#40;数据挖掘&#41;](prediction-query-builder-data-mining.md)   
+ [预测查询生成器（数据挖掘）](prediction-query-builder-data-mining.md)   
  [数据挖掘查询接口](data-mining/data-mining-query-tools.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](/sql/dmx/data-mining-extensions-dmx-statements)  
   

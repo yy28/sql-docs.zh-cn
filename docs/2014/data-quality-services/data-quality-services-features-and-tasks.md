@@ -10,12 +10,12 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de1f3e5e63784585ce82805bc392ec0d5f6b7e15
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4886ebb992c00d587ac03e5424255bd6d86cd63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531637"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能和任务
   查找任何人（数据管理人员、Data Quality Services 管理员或 SQL Server 管理员）为准备和执行数据质量项目所需的信息。  

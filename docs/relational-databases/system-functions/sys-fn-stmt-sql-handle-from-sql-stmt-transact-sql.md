@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9eddf5cb58b18651acd77afe44758a47b1fd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602846"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537896"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 -   NULL-默认值为 0  
   
--   0 – 无  
+-   0-无  
   
--   1 – 用户  
+-   1-用户  
   
--   2 – 简单  
+-   2-简单  
   
--   3 – 强制  
+-   3-强制  
   
 ## <a name="columns-returned"></a>返回的列  
  下表列出的列的 sys.fn_stmt_sql_handle_from_sql_stmt 返回。  
@@ -69,7 +69,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="remarks"></a>备注  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**EXECUTE**上，对数据库的权限和**删除**查询存储目录视图的权限。  
   
 ## <a name="examples"></a>示例  

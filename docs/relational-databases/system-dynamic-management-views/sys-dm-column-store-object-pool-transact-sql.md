@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70f0a6f6c4dc8ba4e72b30918c882c103c9410f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669105"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544244"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47669105"
 |`column_id`|`int`|列存储列的 ID。 这是对于 DELETE_BITMAP 值为 NULL。| 
 |`row_group_id`|`int`|行组的 ID。|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – 列段。 `object_id` 是段 id。 一个段存储在一个行组中的一个列的所有值。 例如，如果表有 10 个列，是每个行组的 10 个列段。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – 一个包含所有表中的列段的查找信息的全局字典。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-本地字典具有一列相关联。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – 全局字典中的另一种表示。 这提供了对 dictionary_id 有价值的反向查找。 用于创建元组发动机或大容量加载的一部分的压缩的段。<br /><br /> 删除 COLUMN_SEGMENT_DELETE_BITMAP – 跟踪段的位图。 没有每个分区一个删除位图。|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-列段。 `object_id` 是段 id。 一个段存储在一个行组中的一个列的所有值。 例如，如果表有 10 个列，是每个行组的 10 个列段。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-包含查找表中的列段的所有信息的全局字典。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-本地字典具有一列相关联。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-全局字典中的另一种表示。 这提供了对 dictionary_id 有价值的反向查找。 用于创建元组发动机或大容量加载的一部分的压缩的段。<br /><br /> 删除 COLUMN_SEGMENT_DELETE_BITMAP-跟踪段的位图。 没有每个分区一个删除位图。|  
 |`access_count`|`int`|读取或写入此对象的访问的数。|  
 |`memory_used_in_bytes`|`bigint`|使用此对象中的对象池的内存。|  
 |`object_load_time`|`datetime`|当 object_id 已放入对象池的时钟时间。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

@@ -11,17 +11,17 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f0853eb502d810a693e4cc2872710a62c784268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159397"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393410"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>从命令提示符安装 PowerPivot
   您可以从命令行运行安装程序以便安装 SQL Server PowerPivot for SharePoint。 您必须在命令中包含 `/ROLE` 参数并排除 `/FEATURES` 参数。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  必须安装 SharePoint Server 2010 Enterprise Edition Service Pack 1 (SP1)。  
   
  您必须使用域帐户来设置 Analysis Services。  
@@ -37,7 +37,7 @@ ms.locfileid: "48159397"
   
  这两个角色均安装使 PowerPivot for SharePoint 能够在 SharePoint 场中运行的应用程序、配置和部署文件。 指定任何一个角色都将导致安装程序检查 SharePoint 集成所需的硬件和软件要求。  
   
- “现有场”选项假定已经存在 SharePoint 场。 “新建场”选项假定您将创建一个新场；它支持在命令行语法中添加数据库引擎实例，以便可以将该数据库引擎实例作为场的数据库服务器。  
+ “现有场”选项假定已经存在 SharePoint 场。 新建场选项假定您将创建一个新场;它，以便您可以使用数据库引擎实例作为场的数据库服务器支持的命令行语法添加的数据库引擎实例。  
   
  与以往的版本相比，所有的服务器配置任务都作为安装后的任务来执行。 如果要自动执行安装和配置步骤，则可以使用 PowerShell 来配置服务器。 有关详细信息，请参阅[使用 Windows PowerShell 配置 PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 399665103725cec573a790667c9253b25836b076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095947"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207582"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>刷新数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，当你要从 MDS 存储库中获取最新信息但不想打开新工作表时，可刷新数据。 您可以刷新所有单元，也可以刷新所选单元。 如果您插入的列中包含自定义公式或其他不由 MDS 管理但您想要保留的数据，这样做会很有帮助。  
@@ -36,7 +35,7 @@ ms.locfileid: "48095947"
   
 -   如果属性值在 MDS 存储库中发生了更改，工作表中的值将随 MDS 存储库中的值更新。 单元颜色不会更改。  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   在活动工作表中，如果在 MDS 管理的数据之下的行中存在非 MDS 管理的数据，则可能覆盖这些非 MDS 管理的数据。 发生这种情况是由于您刷新了工作表，添加了与非 MDS 管理的数据重叠的 MDS 管理的新数据行。  
 > -   刷新时，将删除 MDS 管理的单元上的注释。  
   
@@ -56,6 +55,6 @@ ms.locfileid: "48095947"
   
 -   [加载数据&#40;MDS add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Master Data Services add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [用于 Microsoft Excel 的 Master Data Services 外接程序](master-data-services-add-in-for-microsoft-excel.md)  
   
   

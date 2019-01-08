@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_merge_agent_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b87abc026d8d4d2b9275fcd57fc56919be3f5a07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769779"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,27 +47,27 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=** ] **'***订阅服务器*****  
+ [  **@subscriber=** ] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@subscriber_db=** ] **'***subscriber_db*****  
+ [  **@subscriber_db=** ] **'***subscriber_db***’**  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
- [  **@property =** ] **'***属性*****  
+ [  **@property =** ] **'***属性***’**  
  要更改的发布属性。 *属性*是**sysname**，无默认值。  
   
- [  **@value =** ] **'***值*****  
+ [  **@value =** ] **'***值***’**  
  新属性值。 *值*是**nvarchar(524)**，默认值为 NULL。  
   
  下表说明了可以更改的合并代理作业属性及对这些属性值的限制。  
   
-|“属性”|ReplTest1|Description|  
+|属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**description**||对订阅的简短说明。|  
 |**merge_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
@@ -93,7 +92,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  发布服务器实例上的运行时[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本，应使用[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)更改运行于分发服务器的推送订阅进行同步的合并代理作业的属性。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**分发服务器上的固定的服务器角色可以执行**sp_MSchange_merge_agent_properties**。  
   
 ## <a name="see-also"></a>请参阅  

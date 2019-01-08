@@ -12,18 +12,18 @@ ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0865d7a7fa43db751646d6f9debd19463a7ba23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dce0abecb352071a22e74cb820408fe5b8851fc3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153449"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352537"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>用于报表设计的 CSDLBI 属性
   本节介绍用于表格建模的 CSDL 扩展插件中将会影响 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查询设计的属性。  
   
 ## <a name="model-attributes"></a>模型属性  
- 这些属性定义的子元素的 CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)元素。  
+ 这些属性定义的子元素的 CSDL [EntityContainer](https://msdn.microsoft.com/library/bb399169.aspx)元素。  
   
 |属性名称|数据类型|Description|  
 |--------------------|---------------|-----------------|  
@@ -48,24 +48,24 @@ ms.locfileid: "48153449"
 |`DefaultLocation`|MemberRef|对其值表示与实体实例相关联的默认位置的字段的引用。 如果省略，则使用实体中的第一个位置字段（如果有）。|  
   
 ## <a name="field-attributes"></a>字段属性  
- CSDL 属性的子元素定义了这些属性或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)元素。  
+ CSDL 属性的子元素定义了这些属性或[NavigationProperty](https://msdn.microsoft.com/library/bb387104.aspx)元素。  
   
 |属性名称|数据类型|Description|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Text|用于在 DAX 查询中引用此实体的标识符。 如果省略，则使用字段名称。|  
-|`Caption`|Text|实体的显示名称。 如果省略，则使用字段的 `ReferenceName`。|  
+|`Caption`|Text|实体的显示名称。 如果省略，该字段的`ReferenceName`使用。|  
 |`Documentation`|Text|帮助业务用户理解字段含义的描述性文本。|  
 |`Hidden`|Boolean|指示是否应显示字段。 默认值为 `false`，表示显示字段。|  
 |`DisplayFolder`|Text|在其中显示此字段的文件夹的名称（完整路径）。 如果省略，则字段显示在模型根中。|  
-|`ContextualNameRule`|Enum|一个值，该值指示是否以及如何基于使用其属性的上下文来修改属性名称。 可能的值为： `None`， `Role`， `Merge`。|  
-|`Alignment`|Enum|一个值，该值指示在表格显示中应该如何对齐字段值。 可能的值有：`Default`、`Center`、`Left`、`Right`。 如果省略，则默认值将基于字段的数据类型确定对齐方式。|  
-|`FormatString`|Text|一个 .NET 格式字符串，指示默认应该如何设置字段值的格式。 如果省略，则假定采用以下格式：<br /><br /> -Datetime 字段： 区域短日期或"d"<br />的浮点字段和整型字段默认值聚合函数： 区域数字或"n"<br />-无默认值整数聚合函数： 区域小数或"d"<br /><br /> 对于所有其他类型的字段，没有任何格式字符串适用。|  
+|`ContextualNameRule`|Enum|一个值，该值指示是否以及如何基于使用其属性的上下文来修改属性名称。 可能的值有：`None`、`Role`、`Merge`。|  
+|`Alignment`|Enum|一个值，该值指示在表格显示中应该如何对齐字段值。 可能的值有：`Default`、`Center`、`Left`、`Right`。 如果省略，默认值将确定基于字段的数据类型的对齐方式。|  
+|`FormatString`|Text|默认情况下应如何格式化字段的值，该值指示一个.NET 格式字符串。 如果省略，则假定采用以下格式：<br /><br /> -Datetime 字段： 区域短日期或"d"<br />的浮点字段和整型字段默认值聚合函数： 区域数字或"n"<br />-无默认值整数聚合函数： 区域小数或"d"<br /><br /> 对于所有其他类型的字段，没有任何格式字符串适用。|  
 |`Units`|Text|适用于字段值以便表示单位的符号。 如果省略，则假定单位未知。|  
-|`Width`|Integer|应为在表格显示中显示字段值而保留的字符的首选宽度。 如果省略，则默认宽度将基于字段的数据类型。|  
-|`SortDirection`|Enum|指示通常如何对字段值进行排序的一个值。 可能的值有：`Default`、`Ascending`、`Descending`。 如果省略，则分配排序方向的默认值将基于字段的数据类型。|  
+|`Width`|Integer|首选的宽度，以在表格显示中显示字段的值应保留的字符。 如果省略，则默认宽度基于字段的数据类型。|  
+|`SortDirection`|Enum|指示通常如何对字段值进行排序的一个值。 可能的值有：`Default`、`Ascending`、`Descending`。 如果省略，默认值将分配排序方向基于字段的数据类型。|  
 |`IsRightToLeft`|Boolean|指示字段是否包含应该从右向左读取的文本。 如果省略，则假定采用模型设置。|  
-|`OrderBy`|MemberRef|对模型内用于定义该字段值的排序顺序的其他字段的引用。 这两个字段的值必须具有 1:1 映射，否则排序行为是未定义的。 如果省略，则基于字段自己的值对字段进行排序。|  
-|`Contents`|Enum|描述字段的子类型或内容的枚举。 如果省略，则假定没有特定的子类型，除非该字段的数据类型为 Binary，在此情况下，假定为 Image。 有关支持的内容类型的完整列表，请参阅 AMO 文档。|  
+|`OrderBy`|MemberRef|对模型内用于定义此字段的值的排序顺序的另一个字段的引用。 这两个字段的值必须具有 1:1 映射，否则排序行为是未定义的。 如果省略，则基于字段自己的值对字段进行排序。|  
+|`Contents`|Enum|描述字段的子类型或内容的枚举。 如果省略，没有特定的子类型被假定，除非该字段的数据类型为 Binary，在这种情况下，假定为 Image。 有关支持的内容类型的完整列表，请参阅 AMO 文档。|  
 |`DefaultAggregateFunction`|Enum|一个值，指示通常用于对此字段进行聚合的默认函数（如果有）。 可能的值有：`None`、`Sum`、`Average`、`Count`、`Min`、`Max`。 如果省略，则假定对于数值字段为 `Sum`，对于所有其他字段则为 `None`。|  
 |`IsSimpleMeasure`|Boolean|指示度量值是否仅为数值字段的简单聚合。 此类聚合可以根据需要在查询中轻松地定义，因此，应该从模型定义中省略此类聚合以便提高性能。 如果省略，则假定为 `false`。|  
 |`Kpi`<br /><br /> `KpiGoal`<br /><br /> `KpiStatus`|子元素|指示度量值元素要用作 KPI。 该 KPI 子元素使用 KpiGoal 和 KpiStauts 元素定义关联的显示图像和目标范围。|  

@@ -20,19 +20,19 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c434f47fdf6dcb17cccee5ca69cefe74971560e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba195d53911264716c73b54ea8c639ca37951e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594708"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418308"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   将当前数据库的事务日志刷新至磁盘，从而强化所有之前已提交的延迟持久事务。  
   
- 如果您出于性能优势原因而选择使用延迟事务持续性，但还想对在服务器崩溃或故障转移时丢失的数据量进行有保证的限制，请定期执行 `sys.sp_flush_log`。 例如，如果您想确保不丢失多于 x 秒的数据，则您需要每隔 x 秒执行一次 `sp_flush_log`。  
+ 如果您出于性能优势原因而选择使用延迟事务持续性，但还想对在服务器崩溃或故障转移时丢失的数据量进行有保证的限制，请定期执行 `sys.sp_flush_log`。 例如，如果你想要确保不丢失多于 x 秒的数据，将执行`sp_flush_log`每隔 x 秒。  
   
  执行 `sys.sp_flush_log` 可保证所有之前提交的延迟持久事务都是持久的。 请参阅概念性主题[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)有关详细信息。  
   

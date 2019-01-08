@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539753"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
   对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
@@ -40,7 +40,7 @@ ms.locfileid: "48188397"
 |反斜杠<sup>1</sup>|\\\|  
 |空终止符 （不可见终止符）<sup>2</sup>|\0|  
 |任何可打印的字符（控制字符是不可打印的，除空值、制表符、换行符和回车之外）|（*、A、t、l 等）|  
-|最长可达 10 个可打印字符的字符串，包括上面列出的部分或全部终止符|（**\t\*\*、end、!!!!!!!!!!、\t—\n 等）|  
+|最长可达 10 个可打印字符的字符串，包括上面列出的部分或全部终止符|（**\t\*\*、end、!!!!!!!!!!、\t-\n 等）|  
   
  <sup>1</sup> t、 n、 r、 0 和 \0 字符一起使用反斜杠转义字符，以生成控制符。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188397"
   
          `Enter field terminator [none]:`  
   
-         通常，默认设置是适当的选择。 但是，对于`char`或`nchar`数据字段，请参阅下一节"使用终止符指南"。 有关在上下文中显示此提示符的示例，请参阅[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
+         通常，默认设置是适当的选择。 但是，有关 `char` 或 `nchar` 数据字段，请参阅下一节“使用终止符指南”。 有关在上下文中显示此提示符的示例，请参阅[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
   
         > [!NOTE]  
         >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
 ### <a name="guidelines-for-using-terminators"></a>使用终止符指南  
- 在某些情况下，一个终结器可用于`char`或`nchar`数据字段。 例如：  
+ 在某些情况下，终止符对 `char` 或 `nchar` 数据字段是很有用的。 例如：  
   
 -   对于数据文件中包含 null 值的数据列，将不会被导入到不能理解前缀长度信息的程序中。  
   

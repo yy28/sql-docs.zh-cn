@@ -15,20 +15,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226267"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520373"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的行为更改
   本主题介绍[!INCLUDE[ssDE](../includes/ssde-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>中的行为更改 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的行为更改  
  在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，如果对其运行查询的 XML 文档包含超过某一特定长度（超过 4020 个字符）的字符串，则查询可能会返回不正确的结果。 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，此类查询将返回正确的结果。  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>中的行为更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的行为更改  
   
 ### <a name="metadata-discovery"></a>元数据发现  
  中的改进[!INCLUDE[ssDE](../includes/ssde-md.md)]开头[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]允许 SQLDescribeCol 以获取更准确描述的预期的结果比在以前版本的返回 SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../relational-databases/native-client/features/metadata-discovery.md)。  
@@ -99,7 +99,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>XML 模式中的 sqlcmd.exe 行为更改  
- 如果在执行 SELECT * from T FOR XML … 时通过 XML 模式（:XML ON 命令）使用 sqlcmd.exe，则会出现行为更改。  
+ 如果具有 XML 模式使用 sqlcmd.exe，则行为的更改 (: XML ON 命令) 时执行 SELECT * from T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 修改了消息  
  在中[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，由 DBCC CHECKIDENT 命令返回的消息已更改仅当它用于重新设定种子*new_reseed_value*若要更改当前标识值。 新的消息是"正在检查标识信息： 当前标识值 '\<当前标识值 >。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”  
@@ -107,7 +107,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  在早期版本中，消息是"正在检查标识信息： 当前标识值\<当前标识值 >'，当前列值 '\<当前列的值 >。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。” 在使用 NORESEED 指定 DBCC CHECKIDENT 时（没有第二个参数或没有重设种子值），该消息保持不变。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML 数据类型的 exist() 函数的行为已更改  
- 行为**exist （)** 比较 XML 数据类型为 0 （零） 值为 null 时，函数已更改。 请参考如下示例：  
+ 行为**exist （)** 比较 XML 数据类型为 0 （零） 值为 null 时，函数已更改。 请看下面的示例：  
   
 ```xml  
 DECLARE @test XML;  

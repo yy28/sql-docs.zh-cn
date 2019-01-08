@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534079"
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，对于物理媒体 （如驱动器或备份磁带） 都被盗的情况下，恶意方可以只还原或附加数据库并浏览的数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -56,7 +56,7 @@ ms.locfileid: "51699440"
   
 下面的示例说明如何加密`AdventureWorksPDW2012`数据库使用一个名为证书`MyServerCert`、 SQL Server PDW 中创建。  
   
-**第一步： 上启用 TDE 的 SQL Server PDW。** 此操作一次才有必要。  
+**第一个：启用 TDE 的 SQL Server PDW 上。** 此操作一次才有必要。  
   
 ```sql  
 USE master;  
@@ -75,7 +75,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**第二个： 创建和备份 master 数据库中的证书。** 此操作才必须使用一次。 可以有一个单独的证书 （推荐），每个数据库也可以保护多个数据库使用一个证书。  
+**第二个：创建并备份 master 数据库中的证书。** 此操作才必须使用一次。 可以有一个单独的证书 （推荐），每个数据库也可以保护多个数据库使用一个证书。  
   
 ```sql  
 -- Create certificate in master  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**上次： 创建 DEK 和使用 ALTER DATABASE 来对用户数据库进行加密。** TDE 保护的每个数据库重复此操作。  
+**最后一个：创建 DEK，并使用 ALTER DATABASE 来对用户数据库进行加密。** TDE 保护的每个数据库重复此操作。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -118,7 +118,7 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
   
 下表提供了 TDE 命令和函数的链接和说明。  
   
-|命令或函数|用途|  
+|命令或函数|目标|  
 |-----------------------|-----------|  
 |[创建数据库加密密钥](../t-sql/statements/create-database-encryption-key-transact-sql.md)|创建一个用于加密数据库的密钥。|  
 |[更改数据库加密密钥](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|更改用于加密数据库的密钥。|  
@@ -128,13 +128,13 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
 ## <a name="catalog-views-and-dynamic-management-views"></a>目录视图和动态管理视图  
 下表显示了 TDE 目录视图和动态管理视图。  
   
-|目录视图或动态管理视图|用途|  
+|目录视图或动态管理视图|目标|  
 |-------------------------------------------|-----------|  
 |[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|显示数据库信息的目录视图。|  
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|显示数据库中的证书的目录视图。|  
 |[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|为每个节点提供有关数据库和数据库加密状态中使用的加密密钥信息的动态管理视图。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 如上表中所述，TDE 的每项功能和每个命令都有各自的权限要求。  
   
 查看 TDE 所涉及的元数据需要`CONTROL SERVER`权限。  
@@ -238,11 +238,11 @@ Tempdb 系统数据库进行加密时使用启用加密[sp_pdw_database_encrypti
   
 升级操作的示例。 替换为`**********`DMK 密码。  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 要替换为虚拟机的操作的示例。  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 在升级期间，如果用户数据库进行加密，并且不提供在没有密码，则升级操作将失败。 在替换期间如果 DMK 存在时，未提供正确的密码操作将跳过 DMK 恢复步骤。 将替换 VM 操作结束时完成所有其他步骤，但该操作将报告结束时失败指示的其他步骤是必需。 在安装日志中 (位于**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 时间戳 > \Detail-Setup**)，结尾附近将显示以下警告。  
   

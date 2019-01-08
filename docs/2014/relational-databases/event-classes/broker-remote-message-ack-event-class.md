@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0018af72f8299ab98604fa11f6bd33b42b5fc833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812259"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送或接收消息确认时， **将生成** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。  
@@ -38,7 +37,7 @@ ms.locfileid: "48175237"
 |**EventSequence**|**int**|此事件的序列号。|51|否|  
 |**EventSubClass**|**nvarchar**|事件子类的类型，提供有关每个事件类的详细信息。 此列可能包含以下值：<br /><br /> **发送带有确认的消息**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已将确认作为已编序的正常消息的一部分发送。<br /><br /> **已发送确认**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已发送确认，但该确认不包括在已编序的正常消息内。<br /><br /> **收到带有确认的消息**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已收到确认，该确认包括在已编序的正常消息内。<br /><br /> **已收到确认**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已收到确认，但该确认不在已编序的正常消息内。|21|用户帐户控制|  
 |**GUID**|**uniqueidentifier**|对话的会话 ID。 此标识符将作为消息的一部分进行传输，并在会话双方之间共享。|54|否|  
-|**HonorBrokerPriority**|**Int**|数据库 HONOR_BROKER_PRIORITY 选项的当前值：0 = OFF、1 = ON。|32|用户帐户控制|  
+|**HonorBrokerPriority**|**Int**|数据库 HONOR_BROKER_PRIORITY 选项的当前值：0 = 关闭; 1 = ON。|32|用户帐户控制|  
 |**HostName**|**nvarchar**|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|用户帐户控制|  
 |**IntegerData**|**int**|包含确认的消息的片段号。|25|否|  
 |**IntegerData2**|**int**|正在进行确认的消息的片段号。|55|否|  
@@ -51,7 +50,7 @@ ms.locfileid: "48175237"
 |**ServerName**|**nvarchar**|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|用户帐户控制|  
-|**StarvationElevation**|**int**|消息发送的优先级高于为会话配置的优先级：0 = false、1 = true。|33|用户帐户控制|  
+|**StarvationElevation**|**int**|消息的会话发送的优先级高于配置的优先级：0 = false,1 = true。|33|用户帐户控制|  
 |**TransactionID**|**bigint**|系统为事务分配的 ID。|4|否|  
   
   

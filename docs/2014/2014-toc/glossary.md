@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519476"
 ---
 # <a name="glossary"></a>词汇表
   
@@ -178,7 +178,7 @@ ms.locfileid: "49120474"
 |证书管理员 Web 门户 (certificate manager Web portal)|在 Certificate Lifecycle Manager (CLM) 服务器上运行的一种 Web 应用程序。 此门户允许证书管理员管理其他用户的证书和智能卡。 证书订阅方和证书管理员 Web 门户全都通过相同的通用资源指示符 (URL) 进行访问；但是，显示的内容基于用户的角色和权限。|  
 |Certificate Profile Update Control|一种 ActiveX 控件，该控件可自动进行客户端计算机上 Certificate Lifecycle Manager (CLM) 配置文件的更新。|  
 |证书吊销 (certificate revocation)|吊销数字证书的过程。|  
-|证书订阅方 (certificate subscriber)|需要证书（可具有智能卡，也可以不具有智能卡）的用户。 证书订阅方可以访问只能对该用户自己的证书执行的少量功能。|  
+|证书订阅方 (certificate subscriber)|需要证书（可具有智能卡，也可以不具有智能卡）的用户。 证书订阅方可以访问少量的函数只对用户自己的证书。|  
 |证书订阅方 Web 门户 (certificate subscriber Web portal)|在 Certificate Lifecycle Manager (CLM) 服务器上运行的一种 Web 应用程序。 此 CLM 服务器组件在自助服务模式下直接与用户交互。 该特定功能基于 Active Directory 组成员身份和权限。 证书订阅方和证书管理员 Web 门户全都通过相同的通用资源指示符 (URL) 进行访问；但是，显示的内容基于用户的角色和权限。|  
 |证书模板 (certificate template)|基于其用途指定证书的格式和内容的一种 Windows 结构。 在从 Windows 企业证书颁发机构 (CA) 请求证书时，证书请求方可以从基于证书模板的多种证书类型中进行选择。|  
 |更改应用方 (change applier)|为成批的更改执行冲突检测、冲突处理和更改应用的对象。|  
@@ -212,16 +212,16 @@ ms.locfileid: "49120474"
 |CLM 审核 (CLM Audit)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许生成和显示 CLM 策略模板、在配置文件模板内定义管理策略以及生成 CLM 报告。|  
 |CLM 凭据 (CLM credentials)|可用于向 Certificate Lifecycle Manager (CLM) 验证用户身份的用户帐户信息。 这些凭据可以采用域凭据或一次性密码的形式。|  
 |CLM 注册 (CLM Enroll)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许用户指定在使用模板颁发证书时收集的工作流和数据。 此扩展权限仅适用于配置文件模板。|  
-|CLM 注册代理 (CLM Enrollment Agent)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许用户或组代表其他用户执行证书请求。 颁发的证书的主题将包含目标用户的名称，而非请求者的名称。|  
+|CLM 注册代理 (CLM Enrollment Agent)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许用户或组代表其他用户执行证书请求。 颁发的证书的使用者将包含目标用户的名称，而不是请求者的名称。|  
 |CLM 恢复 (CLM Recover)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许从证书颁发机构数据库启动加密密钥恢复。|  
-|CLM 续订 (CLM Renew)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许启动、运行或完成注册请求。 此续订请求将用具有新有效期的新证书替换用户的接近其到期日期的证书。|  
+|CLM 续订 (CLM Renew)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许启动、运行或完成注册请求。 续订请求将替换为接近其到期日期使用具有新有效期的新证书的用户的证书。|  
 |CLM 报告 (CLM reports)|与 Certificate Lifecycle Manager (CLM) 内的凭据管理活动相关的审核信息。|  
 |CLM 请求注册 (CLM Request Enroll)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许启动、运行或完成注册请求。|  
 |CLM 请求恢复 (CLM Request Recover)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许从证书颁发机构数据库启动加密密钥恢复。|  
-|CLM 请求续订 (CLM Request Renew)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许启动、运行或完成注册请求。 此续订请求将用具有新有效期的新证书替换用户的接近其到期日期的证书。|  
-|CLM 请求撤消 (CLM Request Revoke)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许在某一证书的有效期到期前撤消该证书。 例如，如果某一用户的计算机或智能卡的安全性受到威胁（被盗），此时就需要撤消证书。|  
-|CLM 请求取消阻止智能卡 (CLM Request Unblock Smart Card)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它支持重置智能卡的用户个人标识号 (PIN)，并且允许访问智能卡上的密钥材料以便重新建立该材料。|  
-|CLM 撤消 (CLM Revoke)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许在某一证书的有效期到期前撤消该证书。 例如，如果某一用户的计算机或智能卡的安全性受到威胁（被盗），此时就需要撤消证书。|  
+|CLM 请求续订 (CLM Request Renew)|Active Directory 中的一种 Certificate Lifecycle Manager (CLM) 扩展权限，它允许启动、运行或完成注册请求。 续订请求将替换为接近其到期日期使用具有新有效期的新证书的用户的证书。|  
+|CLM 请求撤消 (CLM Request Revoke)|Certificate Lifecycle Manager (CLM) 扩展允许吊销的证书的证书的有效期过期之前的 Active Directory 中的权限。 这是必需的一个示例是当用户的计算机或智能卡安全性受到威胁 （被盗）。|  
+|CLM 请求取消阻止智能卡 (CLM Request Unblock Smart Card)|Certificate Lifecycle Manager (CLM) 扩展允许智能卡的用户个人标识号 (PIN) 重置的 Active Directory 中的权限，允许访问密钥材料，智能卡上，以便重新建立该材料。|  
+|CLM 撤消 (CLM Revoke)|Certificate Lifecycle Manager (CLM) 扩展允许吊销的证书的证书的有效期过期之前的 Active Directory 中的权限。 这是必需的一个示例是当用户的计算机或智能卡安全性受到威胁 （被盗）。|  
 |时钟向量 (clock vector)|表示对副本的更新的时钟向量元素的集合。 在 0 和时钟周期数之间发生的任何更改都将包含在该向量中。|  
 |时钟向量元素 (clock vector element)|表示对副本的更改的由副本密钥和时钟周期数构成的一对值。|  
 |CLR 函数 (CLR function)|通过引用 SQL Server 程序集创建的函数，其实现在 .NET Framework 公共语言运行时 (CLR) 中创建的程序集中定义。|  
@@ -543,7 +543,7 @@ ms.locfileid: "49120474"
 |dump|出于存档目的或为了确保文件的安全而对程序、磁盘或数据进行的复制。|  
 |转储设备 (dump device)|包含备份介质的磁带机或磁盘驱动器。|  
 |动态游标 (dynamic cursor)|一种打开时可以反映对基础数据所做的数据修改的游标。|  
-|动态筛选器 (dynamic filter)|可以在合并复制中使用的行筛选器，通过它可以基于系统函数或用户定义的函数（例如 SUSER_SNAME()）限制复制到订阅服务器的数据。|  
+|动态筛选器 (dynamic filter)|可以在合并复制中使用的行筛选器，通过它可以基于系统函数或用户定义的函数（例如：SUSER_SNAME()）限制复制到订阅服务器的数据。|  
 |动态锁定 (dynamic locking)|SQL Server 用来确定要在任一时刻使用的最具成本效益的锁的过程。|  
 |动态管理函数 (dynamic management function)|返回 SQL Server 中有关值、对象和设置的服务器状态信息的一组内置函数中的一种。|  
 |动态管理视图 (dynamic management view)|返回 SQL Server 中有关值、对象和设置的服务器状态信息的一组内置视图。|  
@@ -782,7 +782,7 @@ ms.locfileid: "49120474"
 |起始磁带 (initial tape)|使用磁带备份设备的介质集中，介质簇中的第一个磁带。|  
 |内部联接 (inner join)|通过比较源表间共享的列的值，从多个源表检索行的操作。 内部联接排除在其他源表中没有匹配行的源表中的行。|  
 |亲身身份验证 (in-person authentication)|用于完成证书请求事务的物理身份验证。 例如，请求解锁其个人标识号 (PIN) 的最终用户将亲自拜访其证书管理员，并且提供含有标识（例如员工徽章或驱动程序许可证）的亲身身份验证。|  
-|InProc|COM 对象的代码从某一 DLL 文件加载并且位于与客户端相同的进程中的一种情况。|  
+|InProc|以下情况，其中 COM 对象的代码是从 DLL 文件加载并且位于与客户端相同的进程。|  
 |输入适配器 (input adapter)|从外部源（如数据库、文件、股票资讯、网络端口、制造设备等）接受传入事件流的一种适配器。|  
 |输入成员 (input member)|其值直接从数据源加载而不是从其他数据计算得到的成员。|  
 |输入集 (input set)|提供给多维表达式 (MDX) 值表达式的数据集，表达式使用这些数据进行运算。|  
@@ -841,11 +841,11 @@ ms.locfileid: "49120474"
 |关键绩效指标 (key performance indicator)|用于跟踪战略目标、目标、计划、行动或业务流程的绩效的预定义的度量。 KPI 是针对目标进行评估的。 这是直接获取自数据源的显式和可度量的值。 关键绩效指标 (KPI) 用于度量特定领域（例如每个客户的收入）中的绩效。|  
 |键范围锁 (key range lock)|用于锁定表中记录之间范围的锁，以防止对一组记录进行虚拟添加或虚拟删除。 它确保可序列化事务。|  
 |密钥恢复 (key recovery)|恢复用户的私钥的过程。|  
-|密钥恢复代理 (Key Recovery Agent)|与证书管理员合作来恢复用户的私钥的指定用户。 一个特定的证书模板将应用于密钥恢复代理。|  
+|密钥恢复代理 (Key Recovery Agent)|指定适用于恢复用户的私钥的证书管理员的用户。 一个特定的证书模板将应用于密钥恢复代理。|  
 |由键集驱动的游标 (keyset-driven cursor)|一种打开时显示其他用户对其成员行所做的更新效果（但不显示插入或删除效果）的游标。|  
 |知识 (knowledge)|与每个参与者看到和维护的所有变更有关的元数据。|  
 |KPI|用于跟踪战略目标、目标、计划、行动或业务流程的绩效的预定义的度量。 KPI 是针对目标进行评估的。 这是直接获取自数据源的显式和可度量的值。 关键绩效指标 (KPI) 用于度量特定领域（例如每个客户的收入）中的绩效。|  
-|KRA|与证书管理员合作来恢复用户的私钥的指定用户。 一个特定的证书模板将应用于密钥恢复代理。|  
+|KRA|指定适用于恢复用户的私钥的证书管理员的用户。 一个特定的证书模板将应用于密钥恢复代理。|  
 |非 Unicode 程序的语言 (Language for non-Unicode programs)|一个“区域和语言选项”设置，为特定计算机指定默认代码页和关联的位图字体文件，此设置影响特定计算机的所有用户。 通过指定默认代码页和字体，为一种操作系统语言版本编写的非 Unicode 应用程序可以直接在其他操作系统语言版本上正确运行。|  
 |语言服务分析器 (language service parser)|用于描述源代码中标记的功能和范围的组件。|  
 |语言服务扫描器 (language service scanner)|用于标识源代码中标记的类型的组件。 此信息用于语法突出显示和快速标识可触发其他操作（例如括号匹配）的标记类型。|  
@@ -969,7 +969,7 @@ ms.locfileid: "49120474"
 |Microsoft SQL Server|Microsoft 关系数据库管理和分析系统的一个系列，用于实现电子商务、业务线和数据仓库解决方案。|  
 |Microsoft SQL Server 2008 Express|Microsoft SQL Server 2008 的轻型可嵌入版本。|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Microsoft 关系数据库设计和管理系统，用于实现电子商务、业务线和数据仓库解决方案。|  
-|Microsoft SQL Server 2008 Express with Tools|SQL Server Express 数据平台的一个免费、易于使用的版本，包括图形管理工具 SQL Server Management Studio (SMSS) Express。|  
+|Microsoft SQL Server 2008 Express with Tools|SQL Server Express 数据平台的一个免费、易于使用的版本，包括图形管理工具SQL Server Management Studio (SMSS) Express。|  
 |Microsoft SQL Server 联机丛书 (Microsoft SQL Server Books Online)|电子文档的集合，包括 Microsoft SQL Server 随附的完整文档。|  
 |Microsoft SQL Server 商业智能 (Microsoft SQL Server Business Intelligence)|一种基于 Microsoft SQL Server 的数据基础结构和商业智能平台，由 Microsoft SQL Server Integration Services、关系引擎、Master Data Services、Reporting Services 和 Analysis Services 构成。|  
 |Microsoft SQL Server Compact|Microsoft 关系数据库管理和分析系统，用于实现电子商务、业务线和数据仓库解决方案。|  
@@ -1028,7 +1028,7 @@ ms.locfileid: "49120474"
 |nickname|与合并复制系统表一起使用时，是指已知具有指定级别的更新数据的另一台订阅服务器的名称。|  
 |niladic 函数|没有任何输入参数的函数。|  
 |NLS API|32 位 Windows 中的一组系统函数，包含基于语言和文化习俗的信息。|  
-|node|同步提供程序及其关联的副本。|  
+|节点|同步提供程序及其关联的副本。|  
 |干扰词 (noise word)|诸如“的”或“此”的字词，它们对于搜索几乎没用，或者爬网程序在创建索引时应忽略它们。|  
 |非聚集索引 (nonclustered index)|一种索引键值的逻辑顺序不同于表中相应行的物理顺序的基于 B 树的索引。 此索引包含指向表数据存储位置的行定位器。|  
 |非包含数据库 (non-contained database)|一种 SQL Server 数据库，它在其中安装了数据库的 SQL Server 数据库引擎实例中存储数据库设置和元数据，并要求登录 master 数据库以进行身份验证。|  
@@ -1091,7 +1091,7 @@ ms.locfileid: "49120474"
 |并行处理 (parallel processing)|只能在包含两个或多个同时运行的处理器的计算机上运行的处理方法。 在将某一任务分发到可用处理器的方式上，并行处理不同于多处理。 在多处理中，一个进程可以划分为多个连续的块，一个处理器管理对数据库的访问，另一个处理器对数据进行分析，第三个处理器处理向屏幕上的图形输出。 使用执行并行处理的系统的程序员必须找到划分任务的方法，以便或多或少在可用处理器之间平均分配任务。|  
 |参数化查询 (parameterized query)|通过参数接受输入值的查询。|  
 |参数化报表 (parameterized report)|通过参数接受输入值的发布报表。|  
-|参数化行筛选器 (parameterized row filter)|可以在合并复制中使用的行筛选器，通过它可以基于系统函数或用户定义的函数（例如 SUSER_SNAME()）限制复制到订阅服务器的数据。|  
+|参数化行筛选器 (parameterized row filter)|可以在合并复制中使用的行筛选器，通过它可以基于系统函数或用户定义的函数（例如：SUSER_SNAME()）限制复制到订阅服务器的数据。|  
 |部分备份 (partial backup)|主文件组、每个读-写文件组和任意指定的可选文件中所有数据的备份。 只读数据库的部分备份仅包含主文件组。|  
 |数据库部分还原 (partial database restore)|只还原数据库的一部分，包括它的主文件组，可能还包括一个或多个辅助文件组。 其他文件组保持永久脱机，尽管可以在以后还原它们。|  
 |部分差异备份 (partial differential backup)|相对于上一次部分备份（基准备份）有差异的部分备份。 对于只读数据库，部分差异备份仅包含主文件组。|  
@@ -1186,7 +1186,7 @@ ms.locfileid: "49120474"
 |私钥 (private key)|用于公钥算法的密钥对中机密的那一半。 私钥通常用于解密对称会话密钥、对数据进行数字签名或解密已经用相应的公钥加密的数据。|  
 |主动缓存|多维数据集中管理数据过时的一种机制，通过这种机制，MOLAP 存储中的对象在缓存中自动更新和处理，查询则重定向到 ROLAP 存储。|  
 |过程缓存 (procedure cache)|SQL Server 内存池的一部分，用于存储 Transact-SQL 批处理、存储过程和触发器的执行计划。|  
-|配置文件模板 (profile template)|所有 Certificate Lifecycle Manager (CLM) 管理活动的核心。 该配置文件模板提供单个管理单元，其中包含用户社区在证书的整个生命周期中可能要求的多个证书所需的所有信息。 配置文件模板还包含与这些证书的最终位置有关的信息，证书可以是基于软件的（即，存储于本地计算机上）或基于硬件的（存储于智能卡上）。 配置文件模板不能既包含基于软件的证书，又包含基于智能卡的证书。|  
+|配置文件模板 (profile template)|所有 Certificate Lifecycle Manager (CLM) 管理活动的核心。 该配置文件模板提供单个管理单元，包括用于管理可能会要求用户社区在证书的生命周期的多个证书所需的所有信息。 配置文件模板还包含与这些证书的最终位置有关的信息，证书可以是基于软件的（即，存储于本地计算机上）或基于硬件的（存储于智能卡上）。 配置文件模板不能既包含基于软件的证书，又包含基于智能卡的证书。|  
 |利润图|一种图形，显示与使用不同的数据模型相关联的理论上的利润增长。|  
 |可编程 (programmable)|能够接受用于执行任务或操作的指令。 能够可编程是计算机的特征。|  
 |属性页|在界面中显示对象的相关信息的对话框。|  
@@ -1464,10 +1464,10 @@ ms.locfileid: "49120474"
 |sleep|暂停操作但不终止。|  
 |切片 (slice)|多维数据集中的一个数据子集，通过用维度成员限制一个或多个维度来指定。|  
 |切片器 (Slicers)|提供一次单击筛选控件的一种功能，通过这些控件，可以很轻松地缩小数据集的正查看部分的范围。|  
-|滑动窗口 (sliding window)|具有固定长度 L 的窗口，该窗口根据流事件沿时间线移动。 针对时间线上的每个事件都创建一个在该事件的开始时间开始的新窗口。|  
+|滑动窗口 (sliding window)|沿时间线根据流的事件移入固定长度 L 的窗口。 时间线上的每个事件，创建一个新窗口以开始事件的开始时间。|  
 |补充 (slipstream)|将更新、修补程序或 Service Pack 集成到原始软件的基本安装文件中，以便生成的文件允许单步安装更新的软件。|  
 |补充安装 (slipstream installation)|一种安装类型，它将操作系统或程序的基本安装文件与其 Service Pack、更新或修补程序相集成，并通过一个步骤安装它们。|  
-|智能卡 (smart card)|一种塑料装置（大小相当于信用卡或更小），具有嵌入式微处理器和所用的少量存储空间，并具有访问代码，以支持基于证书的身份验证。 智能卡可安全地存储证书、公钥和私钥、密码以及其他类型的个人信息。|  
+|智能卡 (smart card)|塑料 （信用卡大小或较小） 设备具有嵌入式的微处理器和少量使用，具有访问代码，以启用基于证书的身份验证的存储。 智能卡可安全地存储证书、公钥和私钥、密码以及其他类型的个人信息。|  
 |智能卡个性化控制 (Smart Card Personalization Control)|一种 ActiveX 控件，该控件可自动在客户端计算机上执行所有 Certificate Lifecycle Manager (CLM) 智能卡应用程序管理活动。|  
 |智能卡配置文件 (smart card profile)|在使用配置文件模板（只包括基于智能卡的证书模板）执行请求时创建的 Lifecycle Manager (CLM) 配置文件。|  
 |智能卡读卡器 (smart card reader)|计算机中安装的一种装置，支持使用智能卡实现增强的安全功能。|  
@@ -1581,7 +1581,7 @@ ms.locfileid: "49120474"
 |非索引字 (stopword)|通常频繁出现在文档中但并没有传达有用信息的字词。|  
 |存储引擎 (storage engine)|SQL Server 的一个组件，负责管理数据库中的原始物理数据。  例如，向磁盘读取数据就是一个由存储引起处理的任务。|  
 |存储位置|可以在其中找到特定项的位置：磁盘、磁带或类似介质上的寻址位置或唯一标识的位置。|  
-|存储过程 (stored procedure)|SQL 语句和可选控制流语句的预编译集合，以一个名称存储并作为一个单元处理。 它们存储在 SQL 数据库中，并可以通过来自应用程序的一个调用而运行。|  
+|存储过程|SQL 语句和可选控制流语句的预编译集合，以一个名称存储并作为一个单元处理。 它们存储在 SQL 数据库中，并可以通过来自应用程序的一个调用而运行。|  
 |存储过程冲突解决程序 (stored procedure resolver)|所调用的用于处理基于行更改的冲突的程序（这些冲突是在冲突解决程序所注册到的项目中遇到的）。|  
 |流 (stream)|字节序列的抽象，例如文件、I/O 设备、进程中通信管道、TCP/IP 套接字或进行后台处理的打印作业。 复合文件中流与存储之间的关系类似于文件与文件夹之间的关系。|  
 |流使用者 (stream consumer)|使用查询输出的结构或设备。 示例包括：输出适配器或另一个运行的查询。|  
@@ -1775,7 +1775,7 @@ ms.locfileid: "49120474"
 |见证服务器 (witness server)|在数据库镜像中，是指负责监视主体服务器和镜像服务器状态，并且默认情况下在主体服务器出现故障时可以启动自动故障转移的服务器实例。 数据库镜像会话只能有一个可选的见证服务器（或“见证”）。|  
 |WMI|Microsoft 对 Distributed Management Task Force (DMTF) Web-based Enterprise Management (WBEM) 计划的扩展。|  
 |WMI 查询语言 (WMI Query Language)|ANSI SQL 的一个子集，进行了适合 Windows Management Instrumentation (WMI) 的语义更改。|  
-|工作簿 (workbook)|在电子表格程序中，指包含许多相关工作表的文件。|  
+|工作簿|在电子表格程序中，指包含许多相关工作表的文件。|  
 |工作负荷调控器 (workload governor)|一个 Microsoft SQL Server 工具，用于当同时处于活动状态的操作超过八个时限制数据库引擎实例的性能。|  
 |工作负荷组|在资源调控器中，根据应用于每个请求的分类规则被认为是相似的会话请求的容器。 利用工作负荷组可对资源占用进行聚合监视并可将统一策略应用至组中的所有请求。|  
 |工作站 (workstation)|连接到网络的微计算机或终端。|  
@@ -1785,7 +1785,7 @@ ms.locfileid: "49120474"
 |x 轴 (x-axis)|网格、图表或图形上具有水平和垂直维度的水平参考线。|  
 |XML for Analysis|一种规范，描述支持对驻留在万维网上的数据源进行数据访问的开放标准。|  
 |XMLA|一种规范，描述支持对驻留在万维网上的数据源进行数据访问的开放标准。|  
-|XQuery|一种函数查询语言，广泛适用于各种从 Quilt、XPath 和 XQL 派生的 XML 数据类型。 Ipedo 和 Software AG 分别针对 XQuery 语言实现了自己的 W3C 建议规范版本。 也称为 XML 查询和 XQL。|  
+|XQuery|一种函数查询语言，广泛适用于各种从 Quilt、XPath 和 XQL 派生的 XML 数据类型。 Ipedo 和 Software AG 分别针对 XQuery 语言实现了自己的 W3C 建议规范版本。 也称作：XML 查询和 XQL。|  
 |XSL|一个 XML 词汇表，用来通过定义呈现规则的样式表将 XML 数据转换为其他形式（如 HTML）。|  
 |XSL 转换 (XSL Transformation)|一种基于 XML 的声明语言，用于显示或转换 XML 数据。|  
 |XSLT|一种基于 XML 的声明语言，用于显示或转换 XML 数据。|  

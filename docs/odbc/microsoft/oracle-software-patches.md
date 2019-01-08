@@ -14,12 +14,12 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a4ac67e1a593cdfd7e67d789289bd1a5ece1467
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845915"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515312"
 ---
 # <a name="oracle-software-patches"></a>Oracle 软件修补程序
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ ms.locfileid: "47845915"
   
 2.  导航到以下目录： /server/wgt_tech/server/windowsNT。  
   
-3.  若要下载 Windows 95、 Windows 98 和 Windows NT/Windows 2000 的最相关的修补程序，导航到你的 Oracle 版本子目录 — 7.3 或 8.0。 两个子目录为 /73patchsets 和 /80patchsets。  
+3.  若要下载 Windows 95、 Windows 98 和 Windows NT/Windows 2000 的最相关的修补程序，导航到你的 Oracle-7.3 或 8.0 版本的子目录。 两个子目录为 /73patchsets 和 /80patchsets。  
   
 4.  若要下载修补程序用于 Oracle 的网络技术，任一 SQL * Net 或 Net8，导航到以下目录: / 网络。  
   

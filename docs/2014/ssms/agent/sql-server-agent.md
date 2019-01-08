@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
@@ -13,12 +13,12 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e0f1e8f3e76ffbe84495fc7bae6229a1b590089
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211927"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783879"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”。  
@@ -73,7 +73,7 @@ ms.locfileid: "48211927"
   
  有关详细信息，请参阅 [创建计划并将计划附加到作业](create-and-attach-schedules-to-jobs.md)。  
   
-### <a name="alerts"></a>Alerts  
+### <a name="alerts"></a>警报  
  “警报”  是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
   
  警报可以响应下列任一条件：  
@@ -166,7 +166,7 @@ ms.locfileid: "48211927"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |介绍如何配置 SQL Server 代理。|[配置 SQL Server 代理](configure-sql-server-agent.md)|  
 |介绍如何启动、停止和暂停 SQL Server 代理服务。|[启动、停止或暂停 SQL Server 代理服务](start-stop-or-pause-the-sql-server-agent-service.md)|  
 |介绍为 SQL Server 代理服务指定帐户时的注意事项。|[为 SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)|  

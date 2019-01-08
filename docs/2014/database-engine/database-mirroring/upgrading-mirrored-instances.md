@@ -14,12 +14,12 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509417"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升级服务器实例时最大限度地减少镜像数据库的停机时间
   升级到的服务器实例时[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，你可以减少每个镜像数据库的停机时间仅一次的手动故障转移到按顺序进行升级，称为*滚动升级*。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的服务器实例，然后对镜像数据库进行手动故障转移，升级以前的主体服务器，恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的服务器实例上运行的镜像会话的编号和布局。  
@@ -69,7 +69,7 @@ ms.locfileid: "48219857"
     > [!IMPORTANT]  
     >  如果镜像服务器与主体服务器在地理位置上存有一定距离，则可能不适宜进行滚动升级。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”对话框中的[镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”选项更改为“不带自动故障转移功能的高安全(同步)”。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：更改**操作模式**选项设为**不带自动故障转移 （同步） 的高安全性**通过[镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)的**数据库属性**对话框。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：将事务安全设置为 FULL。 有关详细信息，请参阅[更改数据库镜像会话中的事务安全 (Transact-SQL)](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
@@ -78,13 +78,13 @@ ms.locfileid: "48219857"
 1.  如果镜像会话包括见证服务器，则建议您在执行滚动升级之前删除该见证服务器。 否则，在升级镜像服务器实例时，数据库的可用性将取决于仍然连接至主体服务器实例的见证服务器。 删除见证服务器之后，可以在滚动升级过程中随时对其进行升级，而不会有数据库停机的风险。  
   
     > [!NOTE]  
-    >  有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
     -   [从数据库镜像会话删除见证服务器 (SQL Server)](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>执行滚动升级  
   
-1.  为了最大限度地减少停机时间，我们建议：通过更新任何当前在其所有镜像会话中均为镜像服务器的镜像伙伴开始滚动升级。 此时，可能需要更新多个服务器实例。  
+1.  若要尽量减少停机时间，我们建议：通过更新任何镜像服务器目前在其所有镜像会话的镜像伙伴开始滚动升级。 此时，可能需要更新多个服务器实例。  
   
     > [!NOTE]  
     >  在滚动升级过程中可以随时升级见证服务器。 例如，如果某个服务器实例在会话 1 中为镜像服务器，在会话 2 中为见证服务器，则可以立即升级此服务器实例。  
@@ -126,9 +126,9 @@ ms.locfileid: "48219857"
   
 1.  可以选择使用下列方法之一返回高性能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”对话框中的 [镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”选项更改为“高性能(同步)”。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：更改**操作模式**选项设为**高性能 （异步）** 通过[镜像页](../../relational-databases/databases/database-properties-mirroring-page.md)的**数据库属性**对话框。  
   
-    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中：使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
+    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>将见证服务器重新添加到镜像会话中  
   

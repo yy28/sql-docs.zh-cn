@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0767dd90db2411571c420d9439156dd195c72aac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081349"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754123"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>在 Windows PowerShell 中加载 SMO 程序集
   本主题介绍如何在不使用 SQL Server PowerShell 提供程序的 Windows PowerShell 脚本中加载 SQL Server 管理对象 (SMO) 程序集。  
@@ -30,7 +29,7 @@ ms.locfileid: "48081349"
   
 -   您需要从不使用该提供程序或 cmdlet 的另一种语言（例如 C# 或 Visual Basic）移植 SMO 代码。  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>示例：加载 SQL Server 管理对象  
+## <a name="example-loading-the-sql-server-management-objects"></a>例如：加载 SQL Server 管理对象  
  下面的代码加载 SMO 程序集：  
   
 ```  

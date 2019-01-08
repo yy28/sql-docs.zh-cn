@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519090"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什么&#39;包含在 Office 数据挖掘外接程序
   安装 Office 2013 数据挖掘外接程序时，如果选择所有安装选项，将添加以下工具栏和模板：  
@@ -31,7 +31,7 @@ ms.locfileid: "48157627"
   
 -   [Excel 数据挖掘客户端&#40;SQL Server 数据挖掘外接程序&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     此外接程序提供每项数据挖掘任务可能都需要的工具 - 从清理数据并从中抽样到执行建模、测试模型准确性和执行交叉验证。 还可管理并记载模型以及通过模板生成 DMX 查询。  
+     该外接程序提供了可能需要-从清理和抽样到执行建模、 测试模型准确性和执行交叉验证数据，几乎每个数据挖掘任务的工具。 还可管理并记载模型以及通过模板生成 DMX 查询。  
   
      有经验的数据挖掘者将可以轻松访问 SQL Server 数据挖掘中的所有工具，包括模型导入和导出、预测查询和内容查询。  
   

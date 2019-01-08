@@ -20,12 +20,12 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543825"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ ms.locfileid: "47601365"
 |package_guid|**uniqueidentifier**|公开此操作的包的 GUID。 与 sys.dm_xe_packages.package_id 存在多对一关系。 不可为 null。|  
 |description|**nvarchar(256)**|操作的说明。 由包的作者设置说明。 不可为 null。|  
 |capabilities|**int**|说明对象功能的位图。 可以为 Null。|  
-|capabilities_desc|**nvarchar(256)**|列出对象的所有功能。 可以为 Null。<br /><br /> **适用于所有对象类型的功能**<br /><br /> —<br />                                **专用**。 可供内部使用并且无法通过 CREATE/ALTER EVENT SESSION DDL 访问的唯一对象。 审核事件和目标属于此类别，此外，在内部使用的少量对象也属于此类别。<br /><br /> ===============<br /><br /> **事件功能**<br /><br /> —<br />                                **No_block**。 事件位于无论任何原因都无法阻塞的关键代码路径中。 具有此功能的事件无法添加到指定 NO_EVENT_LOSS 的任何事件会话中。<br /><br /> ===============<br /><br /> **适用于所有对象类型的功能**<br /><br /> —<br />                                **Process_whole_buffers**。 目标一次使用多个事件的缓冲区，而不是逐个使用事件。<br /><br /> —<br />                        **单一实例**。 在某一进程中只能存在目标的一个实例。 尽管多个事件会话可以引用相同的单个目标，但实际上只有一个实例，并且该实例将仅看到一次各唯一的事件。 如果将目标添加到全都收集同一个事件的多个会话，这一点非常重要。<br /><br /> —<br />                                **Synchronous**。 在控制权返回到调用代码行之前，将对正在生成事件的线程执行目标。|  
+|capabilities_desc|**nvarchar(256)**|列出对象的所有功能。 可以为 Null。<br /><br /> **适用于所有对象类型的功能**<br /><br /> -<br />                                **专用**。 可供内部使用并且无法通过 CREATE/ALTER EVENT SESSION DDL 访问的唯一对象。 审核事件和目标属于此类别，此外，在内部使用的少量对象也属于此类别。<br /><br /> ===============<br /><br /> **事件功能**<br /><br /> -<br />                                **No_block**。 事件位于无论任何原因都无法阻塞的关键代码路径中。 具有此功能的事件无法添加到指定 NO_EVENT_LOSS 的任何事件会话中。<br /><br /> ===============<br /><br /> **适用于所有对象类型的功能**<br /><br /> -<br />                                **Process_whole_buffers**。 目标一次使用多个事件的缓冲区，而不是逐个使用事件。<br /><br /> -<br />                        **单一实例**。 在某一进程中只能存在目标的一个实例。 尽管多个事件会话可以引用相同的单个目标，但实际上只有一个实例，并且该实例将仅看到一次各唯一的事件。 如果将目标添加到全都收集同一个事件的多个会话，这一点非常重要。<br /><br /> -<br />                                **Synchronous**。 在控制权返回到调用代码行之前，将对正在生成事件的线程执行目标。|  
 |type_name|**nvarchar(60)**|pred_source 和 pred_compare 对象的名称。 可以为 Null。|  
 |type_package_guid|**uniqueidentifier**|包的 GUID，此包公开此对象所操作的类型。 可以为 Null。|  
 |type_size|**int**|数据类型的大小（单位为字节）。 仅限于有效的对象类型。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|多对一|  
   

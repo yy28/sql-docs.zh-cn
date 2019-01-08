@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - ClientNetworkProtocol Class
@@ -20,12 +18,12 @@ ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26d1667f80547d81e9bda47d66dd3cf7df4b3bbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071247"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780799"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 类
   [ClientNetworkProtocol 类](clientnetworkprotocol-class.md)表示网络协议允许使用的实例进行通信的客户端实例上安装[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络。  

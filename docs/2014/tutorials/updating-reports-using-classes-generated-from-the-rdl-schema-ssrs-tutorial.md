@@ -15,12 +15,12 @@ ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 361f3094e1a40cbfc6075888b2be13f42d74c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136047"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349378"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>使用从 RDL 架构生成的类更新报表（SSRS 教程）
   本教程说明了如何通过使用 XML 架构定义工具 (Xsd.exe) 生成的类，可用于序列化和反序列化报表定义文件 （.rdl 和.rdlc） [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>类。  
@@ -54,17 +54,17 @@ ms.locfileid: "48136047"
   
 -   已将 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库安装到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例中。  
   
--   报表服务器上已安装了报表。 本教程使用示例报表 Company Sales 2012。 有关示例报表的详细信息，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+-   报表服务器上已安装了报表。 本教程使用示例报表 Company Sales 2012。 有关示例报表的详细信息，请参阅[SQL Server Reporting Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 > [!NOTE]  
->  安装过程中不会自动安装示例，但是您可以随时安装这些示例。 有关示例的信息，请参阅[SQL Server 产品示例](http://go.microsoft.com/fwlink/?LinkId=182887)。  
+>  安装过程中不会自动安装示例，但是您可以随时安装这些示例。 有关示例的信息，请参阅[SQL Server 产品示例](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **估计的时间才能完成本教程：** 30 分钟  
+ **若要完成本教程的估计的时间：** 30 分钟  
   
 ## <a name="tasks"></a>“任务”  
  [第 1 课：创建 RDL 架构 Visual Studio 项目](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [第 2 课：使用 xsd 工具从 RDL 架构生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [第 2 课：从 RDL 架构使用 xsd 工具生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
  [第 3 课：从报表服务器加载报表定义](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48136047"
   
  [第 5 课：将报表定义发布到报表服务器](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [第 6 课： 运行 RDL 架构应用程序&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [第 6 课：运行 RDL 架构应用程序&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>请参阅  
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  

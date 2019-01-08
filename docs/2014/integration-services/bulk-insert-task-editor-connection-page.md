@@ -15,12 +15,12 @@ ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b150ecf09dcf2c96c05ac690a366c6d2711586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523637"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“连接”** 页，指定大容量插入操作的源和目标以及使用的格式。  
@@ -31,7 +31,7 @@ ms.locfileid: "48226857"
  **“连接”**  
  在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
   
- **相关主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相关的主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)，[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  键入目标表或视图的名称，或在列表中选择表或视图。  
@@ -51,7 +51,7 @@ ms.locfileid: "48226857"
   
  如果通过使用平面文件连接管理器来访问源文件，则大容量插入任务不会使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)、[平面文件连接管理器](connection-manager/flat-file-connection-manager.md)、[平面文件连接管理器编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)、[平面文件连接管理器编辑器（“列”页）](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)、[平面文件连接管理器编辑器（“高级”页）](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)， [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)，[平面文件连接管理器](connection-manager/flat-file-connection-manager.md)，[平面文件连接管理器编辑器&#40;&#41; ](general-page-of-integration-services-designers-options.md)，[平面文件连接管理器编辑器&#40;列页&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)，[平面文件连接管理器编辑器&#40;高级页&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **刷新表**  
  刷新表和视图的列表。  
@@ -60,7 +60,7 @@ ms.locfileid: "48226857"
   
 ### <a name="format--use-file"></a>Format = 使用文件  
  **FormatFile**  
- 键入格式化文件的路径，或单击省略号按钮 **(…)** 定位到该格式化文件。  
+ 键入格式化文件的路径，或单击省略号按钮“(…)”定位到该格式化文件。  
   
 ### <a name="format--specify"></a>Format = 指定  
  `RowDelimiter`  
@@ -71,9 +71,9 @@ ms.locfileid: "48226857"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [大容量插入任务编辑器&#40;常规页&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
- [大容量插入任务编辑器&#40;选项页&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [表达式页](expressions/expressions-page.md)   
+ [大容量插入任务编辑器（“常规”页）](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [大容量插入任务编辑器（“选项”页）](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [控制流](control-flow/control-flow.md)  
   
