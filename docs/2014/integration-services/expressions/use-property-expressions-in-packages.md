@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -20,12 +19,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6dd870de31e6b3be65cac62cda84c3e9c9635c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085727"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373369"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
@@ -53,10 +52,10 @@ ms.locfileid: "48085727"
   
  一个属性只能使用一个属性表达式，一个属性表达式只能应用于一个属性。 但是，您可以生成多个相同的属性表达式，并将它们分配给不同的属性。  
   
- 某些属性是通过使用来自枚举器的值来设置的。 在属性表达式中引用枚举器成员时，必须使用与枚举器成员的友好名称等价的数值。 例如，如果属性表达式设置`LoggingMode`属性，它使用来自值`DTSLoggingMode`枚举，属性表达式必须使用 0、 1 或 2 而不是友好名称`Enabled`， `Disabled`，或`UseParentSetting`。 有关详细信息，请参阅 [属性表达式中的枚举常量](enumerated-constants-in-property-expressions.md)。  
+ 某些属性是通过使用来自枚举器的值来设置的。 在属性表达式中引用枚举器成员时，必须使用与枚举器成员的友好名称等价的数值。 例如，如果属性表达式设置 `LoggingMode` 属性，而该属性使用来自 `DTSLoggingMode` 枚举的值，则属性表达式必须使用 0、1 或 2 而不是友好名称 `Enabled`、`Disabled` 或 `UseParentSetting`。 有关详细信息，请参阅 [属性表达式中的枚举常量](enumerated-constants-in-property-expressions.md)。  
   
 ## <a name="property-expression-user-interface"></a>属性表达式用户界面  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一套工具，用于构建和管理属性表达式。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了一组用于生成和管理属性表达式的工具。  
   
 -   **“表达式”** 页，在任务、For 循环容器和 Foreach 容器的自定义编辑器中提供。 利用 **“表达式”** 页可以编辑表达式，查看任务、Foreach 循环或 For 循环所使用的属性表达式的列表。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48085727"
   
  ![属性表达式的用户界面](../media/ssis-propertyexpressionui.gif "属性表达式的用户界面")  
   
- 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮 “(…)”，以打开“属性表达式编辑器”对话框。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 **(…)** 以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。  
+ 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮“(…)”，以打开“属性表达式编辑器”对话框。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 (…) 以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。  
   
  还可以从 **“属性表达式编辑器”** 对话框打开 **“表达式生成器”** 对话框。  
   
@@ -105,9 +104,9 @@ ms.locfileid: "48085727"
 |Foreach 枚举器|加载配置之后<br /><br /> 验证之前<br /><br /> 执行之前<br /><br /> 每个循环枚举之前|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>在 Foreach 循环中使用属性表达式  
- 通常需要实现属性表达式来设置 Foreach 循环容器内部使用的连接管理器的 `ConnectionString` 属性值。 枚举器将其当前值映射到循环的每个迭代上的变量后，属性表达式可以使用此变量的值更新值的`ConnectionString`属性动态。  
+ 通常需要实现属性表达式来设置 Foreach 循环容器内部使用的连接管理器的 `ConnectionString` 属性值。 在枚举器将其当前值映射到与每个循环迭代有关的某个变量后，属性表达式可以使用此变量的值动态更新 `ConnectionString` 属性的值。  
   
- 如果希望将属性表达式与 Foreach 循环所使用的文件、多个文件、平面文件和多平面文件连接管理器的 `ConnectionString` 属性一起使用，则应当考虑以下情况。 通过将 `MaxConcurrentExecutables` 属性设置为大于 1 的值或值 -1，可以将包配置为同时运行多个可执行文件。 值为 -1 将使得可同时运行的可执行文件最大数目等于处理器数加 2。 若要避免并行执行可执行文件时出现负面结果，值 `MaxConcurrentExecutables` 应设置为 1。 如果`MaxConcurrentExecutables`未设置为 1，则值`ConnectionString`属性不能保证，结果是不可预测。  
+ 如果希望将属性表达式与 Foreach 循环所使用的文件、多个文件、平面文件和多平面文件连接管理器的 `ConnectionString` 属性一起使用，则应当考虑以下情况。 通过将 `MaxConcurrentExecutables` 属性设置为大于 1 的值或值 -1，可以将包配置为同时运行多个可执行文件。 值为 -1 将使得可同时运行的可执行文件最大数目等于处理器数加 2。 若要避免并行执行可执行文件时出现负面结果，值 `MaxConcurrentExecutables` 应设置为 1。 如果 `MaxConcurrentExecutables` 不设置为 1，则无法保证 `ConnectionString` 属性的值正确无误，结果将是不可预测的。  
   
  例如，请考虑使用一个 Foreach 循环枚举文件夹中的文件，检索文件名，然后使用“执行 SQL 任务”将每个文件名插入表中。 如果 `MaxConcurrentExecutables` 不设置为 1，那么如果两个“执行 SQL 任务”实例试图同时写入表中，则会发生写入冲突。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48085727"
   
  如果包名称为 EmailRowCountPP，曾经在 2005 年 3 月 4 日运行，运行的持续时间为 9 秒钟，则该表达式的求值结果为下面的字符串。  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression--> 包：(EmailRowCountPP)启动： 2005 年 3 月 4 日上午 11:06:18 持续时间： 9 秒。  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>电子邮件正文的属性表达式  
  下面的属性表达式可用于设置发送邮件任务的 MessageSource 属性。 该表达式使用字符串文字、用户定义的变量和串联 (+) 运算符的组合。 用户定义变量命名为 `nasdaqrawrows`、 `nyserawrows`和 `amexrawrows`。 字符串“\n”指明是一个回车符。  
@@ -137,11 +136,11 @@ ms.locfileid: "48085727"
   
  Rows Processed:  
   
- NASDAQ: 7058  
+ NASDAQ:7058  
   
- NYSE: 3528  
+ 纽约证券交易所：3528  
   
- AMEX: 1102  
+ AMEX:1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>执行进程任务的可执行文件属性的属性表达式  
  下面的属性表达式可以用于设置执行进程任务的 Executable 属性。 该表达式使用字符串文字、运算符和函数的组合。 该表达式使用 DATEPART 和 GETDATE 函数以及条件运算符。  
@@ -168,9 +167,9 @@ ms.locfileid: "48085727"
   
 ## <a name="external-resources"></a>外部资源  
   
--   [表达式和配置荧光笔 (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [表达式和配置荧光笔 (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+-   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>请参阅  
  [在包中使用变量](../use-variables-in-packages.md)  

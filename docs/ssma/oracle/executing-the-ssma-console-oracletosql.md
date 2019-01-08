@@ -14,12 +14,12 @@ ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 84194cf92cfd4c6270697aa1c3fd4f475df956ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714085"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409224"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>执行 SSMA 控制台 (OracleToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。 控制台应用程序在本部分中使用作为枚举的某些标准脚本文件命令。  
@@ -30,7 +30,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 **Command**  
   
 创建新的项目  
-                  ： 创建新的 SSMA 项目。  
+                  解码的字符：创建新的 SSMA 项目。  
   
 **脚本**  
   
@@ -63,7 +63,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
 **Command**  
   
-打开项目： 打开现有项目。  
+打开项目：打开现有的项目。  
   
 **脚本**  
   
@@ -160,7 +160,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <force-load>  
@@ -273,7 +273,7 @@ generate-assessment-report
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -294,7 +294,7 @@ generate-assessment-report
 ## <a name="migration-script-file-commands"></a>迁移脚本文件命令  
 迁移命令将目标数据库架构转换为源架构和数据迁移到目标服务器。  
   
-设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 **Command**  
   
@@ -347,7 +347,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <convert-schema  
@@ -415,7 +415,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-或多个  
+或  
   
 ```xml  
 <migrate-data  
@@ -459,7 +459,7 @@ convert-schema
 ```  
   
 ## <a name="manageability-script-file-commands"></a>可管理性的脚本文件命令  
-可管理性命令可帮助将与源数据库同步目标数据库对象。 设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+可管理性命令可帮助将与源数据库同步目标数据库对象。 设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 **Command**  
   
@@ -504,7 +504,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target  
@@ -513,7 +513,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -569,7 +569,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -578,7 +578,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -589,7 +589,7 @@ convert-schema
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>脚本生成的脚本文件命令  
-生成脚本命令执行双重任务： 它们帮助节省控制台输出中的脚本文件;并记录到控制台或根据你指定的参数文件的 T-SQL 的输出。  
+生成脚本命令执行双重任务：它们帮助节省控制台输出中的脚本文件;并记录到控制台或根据你指定的参数文件的 T-SQL 的输出。  
   
 **Command**  
   
@@ -628,7 +628,7 @@ save-as-script
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <save-as-script  
@@ -704,7 +704,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-或多个  
+或  
   
 ```  
 <convert-sql-statement  
@@ -727,7 +727,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-或多个  
+或  
   
 ```  
 <convert-sql-statement  

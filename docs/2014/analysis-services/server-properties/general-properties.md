@@ -39,17 +39,17 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905757"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369139"
 ---
 # <a name="general-properties"></a>常规属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
- **适用于：** 多维和表格服务器模式，除非另外说明。  
+ **适用范围：** 多维和表格服务器模式下，除非另有说明  
   
 ## <a name="non-specific-category"></a>非特定类别  
  `AdminTimeout`  
@@ -69,10 +69,10 @@ ms.locfileid: "48905757"
  `CommitTimeout`  
  一个整数属性，它指定服务器出于提交事务的目的将等待获取写入锁的时间（毫秒）。 通常需要一个等待时间，因为服务器必须等待其他锁释放，然后才能获取提交事务的写入锁。  
   
- 此属性的默认值为零 (0)，指示服务器将无限期等待。 有关与锁相关的属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 此属性的默认值为零 (0)，指示服务器将无限期等待。 有关与锁相关的属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  `CoordinatorBuildMaxThreads`  
- 有符号 32 位整数属性，用于定义为生成分区索引分配的最大线程数。 如果增加此值，则可加快分区索引速度，同时增加内存使用的开销。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 有符号 32 位整数属性，用于定义为生成分区索引分配的最大线程数。 如果增加此值，则可加快分区索引速度，同时增加内存使用的开销。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  `CoordinatorCancelCount`  
  有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。  
@@ -84,7 +84,7 @@ ms.locfileid: "48905757"
   
  `CoordinatorExecutionMode` 在表格服务器模式下将被忽略。  
   
- 此属性的默认值为 -4，指示将服务器限制为每个处理器 4 个并行操作。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 此属性的默认值为 -4，指示将服务器限制为每个处理器 4 个并行操作。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  `CoordinatorQueryMaxThreads`  
  有符号 32 位整数属性，用于定义在查询解析期间每个分区段的最大线程数。 并发用户数越少，此值就会越高，同时会增加内存开销。 相反，如果并发用户数很大，则此值就可能降低。  
@@ -96,7 +96,7 @@ ms.locfileid: "48905757"
  字符串属性，用于标识存储数据的目录的名称。  
   
  `DeploymentMode`  
- 确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为服务器模式。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
+ 确定 Analysis Services 服务器实例的操作上下文。 此属性称为服务器模式对话框、 消息和文档中。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
   
  此属性的有效值包括以下项：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48905757"
 > [!NOTE]  
 >  被此事件取消的查询和进程将报告以下错误消息：“`Server: The operation has been cancelled`”  
   
- 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout` 适用于多维数据集处理命令和写回操作。  

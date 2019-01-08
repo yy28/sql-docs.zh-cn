@@ -14,12 +14,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3226e759ab1a92cdfa3a251c1803a54ed9ed010a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140777"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358549"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   使用 SQLPutData 发送 65,535 字节以上的数据时，以下限制适用 (对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本 4.21 a) 或 400 KB 的 sql_longvarchar （适用于 SQL Server 版本在 6.0 及更高版本) 的数据 (`text`)、 SQL_WLONGVARCHAR (`ntext`) 或SQL_LONGVARBINARY (`image`) 列：  
@@ -51,7 +51,7 @@ ms.locfileid: "48140777"
   
  *DataPtr*参数将被忽略，但是必须设置为非 NULL 值。 详细信息，请参阅部分中的可变 TVP 行绑定上[绑定和 Data Transfer of Table-Valued 参数和列值](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 如果*StrLen_Or_Ind*值不是 SQL_DEFAULT_PARAM 也介于 0 到 SQL_PARAMSET_SIZE (即*ColumnSize* SQLBindParameter 参数)，则返回错误。 此错误导致 SQLPutData 返回 SQL_ERROR：SQLSTATE=HY090，“字符串或缓冲区长度无效”。  
+ 如果*StrLen_Or_Ind*值不是 SQL_DEFAULT_PARAM 也介于 0 到 SQL_PARAMSET_SIZE (即*ColumnSize* SQLBindParameter 参数)，则返回错误。 此错误导致 SQLPutData 返回 SQL_ERROR:SQLSTATE = HY090，"字符串或缓冲区长度无效"。  
   
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48140777"
  `SQLPutData` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLPutData 函数](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData 函数](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

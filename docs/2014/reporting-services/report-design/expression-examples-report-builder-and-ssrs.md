@@ -26,12 +26,12 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e32c6ed01887fb47cb8051ba78fb92b6558a5abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6453f983a2137039a1a16d115daeb9fad855f771
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099436"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358559"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
   表达式通常在报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](add-an-expression-report-builder-and-ssrs.md)。  
@@ -55,17 +55,17 @@ ms.locfileid: "48099436"
   
  有关特定用途的表达式示例，请参阅以下主题：  
   
--   [组表达式示例&#40;报表生成器和 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [组表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  
   
--   [筛选器公式示例&#40;报表生成器和 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [筛选器公式示例（报表生成器和 SSRS）](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [常用筛选器&#40;报表生成器和 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+-   [常用筛选器（报表生成器和 SSRS）](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [报表和组变量集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [报表和组变量集合引用（报表生成器和 SSRS）](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- 有关简单表达式和复杂表达式、使用表达式的位置、以及表达式中可以包含的引用类型的详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)下的主题。 有关为计算聚合而计算表达式时所处上下文的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+ 有关简单表达式和复杂表达式、使用表达式的位置、以及表达式中可以包含的引用类型的详细信息，请参阅 [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。 有关为计算聚合而计算表达式时所处上下文的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 若要了解如何编写使用许多本主题中的表达式示例所用的函数和运算符的表达式，请参阅 [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md)。  
+ 若要了解如何编写使用许多函数和运算符在本主题中，但在编写的报表的上下文中的表达式示例所用的表达式，请参阅[教程：表达式简介](../tutorial-introducing-expressions.md)。  
   
  表达式编辑器包含内置函数的层次结构视图。 选择函数时，“值”窗格中会显示代码示例。 有关详细信息，请参阅[表达式对话框](../expression-dialog-box.md)或[表达式对话框&#40;报表生成器&#41;](../expression-dialog-box-report-builder.md)。  
   
@@ -78,19 +78,19 @@ ms.locfileid: "48099436"
  报表中的许多表达式都包含函数。 您可以使用这些函数来设置数据格式、应用逻辑和访问报表元数据。 可以编写使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库、 <xref:System.Convert> 和 <xref:System.Math> 命名空间中的函数的表达式。 您可以从其他程序集或自定义代码中向函数添加引用。 还可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中的类，其中包括 <xref:System.Text.RegularExpressions>。  
   
 ###  <a name="VisualBasicFunctions"></a> Visual Basic 函数  
- 您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数来处理文本框中所显示的数据，或者处理参数、属性或报表其他区域中所用的数据。 本部分举例说明了其中的一些函数。 有关详细信息，请参阅 [Visual Basic Runtime Library Members](http://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
+ 您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数来处理文本框中所显示的数据，或者处理参数、属性或报表其他区域中所用的数据。 本部分举例说明了其中的一些函数。 有关详细信息，请参阅 [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了许多自定义格式选项，例如，特定日期格式。 有关详细信息，请参阅 MSDN 上的 [格式化类型](http://go.microsoft.com/fwlink/?LinkId=112024) 。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了许多自定义格式选项，例如，特定日期格式。 有关详细信息，请参阅 MSDN 上的 [格式化类型](https://go.microsoft.com/fwlink/?LinkId=112024) 。  
   
 #### <a name="math-functions"></a>数学函数  
   
--   `Round`函数可用于将为最接近整数的数字舍入。 下面的表达式将 1.3 舍入为 1：  
+-   `Round` 函数可用于将数字舍入为最接近的整数。 下面的表达式将 1.3 舍入为 1：  
   
     ```  
     = Round(1.3)  
     ```  
   
-     此外可以编写表达式以将舍入到多个你的值指定，类似于`MRound`在 Excel 中的函数。 用某个生成整数的因子乘以该值，对数字进行舍入，然后除以同一因子。 例如，若要将 1.3 舍入到 .2 (1.4) 的最接近的倍数，请使用下面的表达式：  
+     您也可以编写表达式以将某个值舍入到您指定的倍数，类似于 Excel 中的 `MRound` 函数。 用某个生成整数的因子乘以该值，对数字进行舍入，然后除以同一因子。 例如，若要将 1.3 舍入到 .2 (1.4) 的最接近的倍数，请使用下面的表达式：  
   
     ```  
     = Round(1.3*5)/5  
@@ -98,7 +98,7 @@ ms.locfileid: "48099436"
   
 ####  <a name="DateFunctions"></a> 日期函数  
   
--   `Today`函数可提供当前日期。 此表达式可用在文本框中以在报表上显示日期，或用在参数中以根据当前日期筛选数据。  
+-   `Today` 函数可提供当前日期。 此表达式可用在文本框中以在报表上显示日期，或用在参数中以根据当前日期筛选数据。  
   
     ```  
     =Today()  
@@ -110,7 +110,7 @@ ms.locfileid: "48099436"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   `Year`函数可显示特定日期的年份。 您可以使用此表达式将日期组合在一起，或者将年份显示为一组日期的标签。 此表达式可以提供一组给定的销售订单日期的年份。 `Month`函数和其他函数也可用来处理日期。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 文档。  
+-   `Year` 函数可显示某个特定的日期的年份。 您可以使用此表达式将日期组合在一起，或者将年份显示为一组日期的标签。 此表达式可以提供一组给定的销售订单日期的年份。 `Month` 函数和其他函数也可用于日期操作。 有关详细信息，请参阅[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]文档。  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -138,7 +138,7 @@ ms.locfileid: "48099436"
     =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
     ```  
   
--   `CDate` 函数将值转换为日期。 `Now`函数将返回包含当前日期和时间根据您的系统的日期值。 `DateDiff` 返回一个指定两个日期值之间的时间间隔数的长整型值。  
+-   `CDate` 函数将值转换为日期。 `Now` 函数根据您的系统返回包含当前日期和时间的日期值。 `DateDiff` 返回一个指定两个日期值之间的时间间隔数的长整型值。  
   
      以下示例显示了当前年份的开始日期  
   
@@ -155,17 +155,17 @@ ms.locfileid: "48099436"
 -   以下表达式生成介于 SellStartDate 和 LastReceiptDate 之间的间隔年。 这些字段在两个不同的数据集内，即 DataSet1 和 DataSet2。 [First 函数（报表生成器和 SSRS）](report-builder-functions-first-function.md)是一个聚合函数，它返回 DataSet1 中 SellStartDate 的第一个值和 DataSet2 中 LastReceiptDate 的第一个值。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
--   `DatePart`函数返回包含给定的日期值的指定的组件的一个整数值。下面的表达式返回 DataSet1 中 SellStartDate 的第一个值的年份。 指定数据集作用域是因为报表中有多个数据集。  
+-   `DatePart` 函数返回一个整型值，该值包含给定日期值的指定组件。以下表达式返回 DataSet1 中 SellStartDate 的第一个值的年份。 指定数据集作用域是因为报表中有多个数据集。  
   
     ```  
     =Datepart("yyyy", First(Fields!SellStartDate.Value, "DataSet1"))  
   
     ```  
   
--   `DateSerial`函数将返回表示指定的年、 月和日设置为午夜的时间信息的日期值。 以下示例显示了基于当前月的上一个月的结束日期。  
+-   `DateSerial` 函数返回一个代表指定年、月和日的日期值，其时间信息设置为午夜。 以下示例显示了基于当前月的上一个月的结束日期。  
   
     ```  
     =DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)  
@@ -219,7 +219,7 @@ ms.locfileid: "48099436"
      以下示例的作用与上面的示例相同，另外在所选值列表之前显示文本字符串。  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -242,7 +242,7 @@ ms.locfileid: "48099436"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   通过指定键字段，您可以使用`LookupSet`函数来从一个对多关系的数据集中检索一组值。 例如，一个人可以有多个电话号码。 在下面的示例中，假定数据集 PhoneList 在每一行中包含一个人员标识符和电话号码。 `LookupSet` 返回一个值数组。 下面的表达式将返回值合并到单个字符串中，并且显示 ContactID 指定的人士的电话号码的列表：  
+-   通过指定键字段，您可以使用 `LookupSet` 函数为一对多关系从数据集检索一组值。 例如，一个人可以有多个电话号码。 在下面的示例中，假定数据集 PhoneList 在每一行中包含一个人员标识符和电话号码。 `LookupSet` 返回值的数组。 下面的表达式将返回值合并到单个字符串中，并且显示 ContactID 指定的人士的电话号码的列表：  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -271,7 +271,7 @@ ms.locfileid: "48099436"
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   使用多个`IIF`函数 (也称为"嵌套 Iif") 返回的值根据三个值之一`PctComplete`。 下面的表达式可放置在文本框的填充颜色中，从而根据文本框中的值更改背景色。  
+-   使用多个 `IIF` 函数（也称为“嵌套 IIF”）可以根据 `PctComplete` 的值返回三个值中的一个。 下面的表达式可放置在文本框的填充颜色中，从而根据文本框中的值更改背景色。  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -279,7 +279,7 @@ ms.locfileid: "48099436"
   
      值大于或等于 10 时，显示绿色背景；介于 1 和 9 之间时，显示蓝色背景；小于 1 时，显示红色背景。  
   
--   若要获取相同的功能以不同的方式使用`Switch`函数。 如果您要测试三个或更多条件，`Switch` 函数将非常有用。 `Switch` 函数可返回与序列中计算结果为 True 的第一个表达式相关联的值：  
+-   还有另一种方法可以实现相同功能，即使用 `Switch` 函数。 如果您要测试三个或更多条件，`Switch` 函数将非常有用。 `Switch` 函数可返回与序列中计算结果为 True 的第一个表达式相关联的值：  
   
     ```  
     =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
@@ -293,13 +293,13 @@ ms.locfileid: "48099436"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   测试的值`PhoneNumber`字段，并返回"无值"，它是否`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); 否则返回电话号码值。 此表达式可用于控制报表项中的文本框的值。  
+-   测试 `PhoneNumber` 字段的值，如果为 `null`（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`），则返回“无值”；否则返回电话号码值。 此表达式可用于控制报表项中的文本框的值。  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   测试的值`Department`字段，然后返回子报表名称或`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 此表达式可用于条件性钻取子报表。  
+-   测试 `Department` 字段的值，然后返回子报表名称或 `null`（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`）。 此表达式可用于条件性钻取子报表。  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -323,13 +323,13 @@ ms.locfileid: "48099436"
   
 #####  <a name="Sum"></a> Sum  
   
--   `Sum`函数可以在组或数据区域中的值求和。 此函数在组的组头或组尾中非常有用。 下面的表达式显示 Order 组或数据区域中的数据之和：  
+-   `Sum` 函数可以对某个组或数据区域中的值求和。 此函数在组的组头或组尾中非常有用。 下面的表达式显示 Order 组或数据区域中的数据之和：  
   
     ```  
     =Sum(Fields!LineTotal.Value, "Order")  
     ```  
   
--   此外可以使用`Sum`函数进行条件聚合计算。 例如，如果数据集包含名为 State 的字段，其可能的值为 Not Started、Started、Finished，则将下列表达式放置在组头中时将只计算 Finished 值的聚合总数。  
+-   还可以使用 `Sum` 函数进行条件聚合计算。 例如，如果数据集包含名为 State 的字段，其可能的值为 Not Started、Started、Finished，则将下列表达式放置在组头中时将只计算 Finished 值的聚合总数。  
   
     ```  
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
@@ -339,7 +339,7 @@ ms.locfileid: "48099436"
   
 -   `RowNumber` 函数，如果用在数据区域内的文本框中，则显示表达式所在文本框中的每个实例的行号。 此函数可用于为表中的各行编号。 还可以用于更复杂的情况，如根据行数插入分页符。 有关详细信息，请参阅本主题中的 [分页符](#PageBreaks) 。  
   
-     为 `RowNumber` 指定的作用域可控制开始重新计数的时间。 `Nothing`关键字表示该函数将从开始计数的最外面的数据区域中的第一行。 若要在嵌套数据区域中开始计数，可使用该数据区域的名称。 若要在某个组中开始计数，可使用该组的名称。  
+     为 `RowNumber` 指定的作用域可控制开始重新计数的时间。 `Nothing` 关键字表示该函数将从最外面的数据区域中的第一行开始计数。 若要在嵌套数据区域中开始计数，可使用该数据区域的名称。 若要在某个组中开始计数，可使用该组的名称。  
   
     ```  
     =RowNumber(Nothing)  
@@ -504,9 +504,9 @@ ms.locfileid: "48099436"
  您可以在报表中使用自定义代码。 自定义代码嵌入在报表中，或存储在报表使用的自定义程序集中。 有关自定义代码的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用组变量自定义聚合  
- 您可以初始化特定组作用域的本地组变量的值，然后在表达式中包含对该变量的引用。 可以将组变量和自定义代码一起使用的方法之一是实现自定义聚合。 有关详细信息，请参阅 [Using Group Variables in Reporting Services 2008 for Custom Aggregation](http://go.microsoft.com/fwlink/?LinkId=128714)（在 Reporting Services 2008 使用组变量自定义聚合）。  
+ 您可以初始化特定组作用域的本地组变量的值，然后在表达式中包含对该变量的引用。 可以将组变量和自定义代码一起使用的方法之一是实现自定义聚合。 有关详细信息，请参阅 [Using Group Variables in Reporting Services 2008 for Custom Aggregation](https://go.microsoft.com/fwlink/?LinkId=128714)（在 Reporting Services 2008 使用组变量自定义聚合）。  
   
- 有关变量的详细信息，请参阅[报表和组变量集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)。  
+ 有关变量的详细信息，请参阅 [报表和组变量集合引用（报表生成器和 SSRS）](built-in-collections-report-and-group-variables-references-report-builder.md)。  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>取消运行时的 Null 值或零值  
  处理报表时，表达式中某些值的计算结果可能为 Null 值或未定义。 这将创建运行时错误，从而导致在文本框中显示 **#Error** ，而不是计算后的表达式。 `IIF` 函数对此行为特别敏感，因为它不同于 If-Then-Else 语句，`IIF` 语句的每一部分在传递到测试 `true` 或 `false` 的例程之前，都要进行计算（包括函数调用）。 如果 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 为 NOTHING，则语句 **将在所呈现的报表中生成** #Error `Fields!Sales.Value` 。  
@@ -542,10 +542,10 @@ ms.locfileid: "48099436"
      这有助于避免发生运行时异常。 您现在可以在文本框的 `Color` 属性中使用 `=IIF(Me.Value < 0, "red", "black")` 之类的表达式，以便有条件地基于这些值是大于还是小于 0 来显示文本。  
   
 ## <a name="see-also"></a>请参阅  
- [筛选器公式示例&#40;报表生成器和 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [筛选器公式示例（报表生成器和 SSRS）](filter-equation-examples-report-builder-and-ssrs.md)   
  [组表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [常用筛选器&#40;报表生成器和 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+ [常用筛选器（报表生成器和 SSRS）](commonly-used-filters-report-builder-and-ssrs.md)  
   
   

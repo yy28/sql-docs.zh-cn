@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be0252386717bb2e9cffcef45918a0dd85d06b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652929"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591551"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ]  **'* * * 登录* **'** 是 Windows 组，Windows 登录名的名称或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名映射到新数据库用户。Windows 组和 Windows 登录名的名称必须用在窗体中的 Windows 域名限定*域*\\*登录*; 例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *登录名*是**sysname**，无默认值。  
+ [  **@loginame =** ] **'**_登录_   
+ 映射到新数据库用户的 Windows 组、Windows 登录名或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的名称。 Windows 组和 Windows 登录名的名称必须用在窗体中的 Windows 域名限定*域*\\*登录名*; 例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *登录名*是**sysname**，无默认值。  
   
- [  **@name_in_db=**] **'***name_in_db***'** [**输出**]  
+ [  **@name_in_db=**] **'**_name_in_db_**'** [**输出**]  
  新数据库用户的名称。 *name_in_db*是输出变量，其数据类型为**sysname**，和默认值为 NULL。 如果未指定，否则*登录名*使用。 如果指定为 OUTPUT 变量，其值为 NULL， **@name_in_db**设置为*登录*。 *name_in_db*必须已存在当前数据库中。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -56,7 +57,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
   
  **sp_grantdbaccess**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**固定的数据库角色或**db_accessadmin**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  

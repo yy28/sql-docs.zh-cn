@@ -11,15 +11,15 @@ ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9ddd8c6de8574f10b131427cc4ff6fc8de8d5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376779"
 ---
 # <a name="data-flow-taps"></a>数据分流
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 引入了一项新功能，您可以在运行时添加数据分流点上包的数据流路径并将数据分流点将输出发送到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 引入了一个新功能，可用来在运行时在包数据流路径上添加数据分流点，并将数据分流点的输出定向到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  
   
 1.  通过使用 [catalog.create_execution（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database)存储过程，创建包的执行实例。  
   
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>列出所有数据分流点  
- 您也可以使用 catalog.execution_data_taps 视图列出所有数据分流点。 下面的示例提取一个规范执行实例（ID：54）的数据分流点。  
+ 您也可以使用 catalog.execution_data_taps 视图列出所有数据分流点。 下面的示例提取了规范执行实例的数据分流点 (ID:54)。  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
@@ -78,7 +78,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  启用详细日志记录级别并添加数据分流点会增加数据集成解决方案所执行的 I/O 操作数。 因此，建议仅出于故障排除目的添加数据分流点。  
   
 ## <a name="video"></a>视频  
- 此 [video on TechNet](http://technet.microsoft.com/sqlserver/dn600163) 演示了如何在 SQL Server 2012 SSISDB 目录中添加/使用数据分流点，从而有助于以编程方式对包进行调试并在运行时捕获部分结果。 它还讨论了如何列出/删除这些数据分流点，并讨论了在 SSIS 包中使用数据分流点的最佳实践。  
+ 此 [video on TechNet](https://technet.microsoft.com/sqlserver/dn600163) 演示了如何在 SQL Server 2012 SSISDB 目录中添加/使用数据分流点，从而有助于以编程方式对包进行调试并在运行时捕获部分结果。 它还讨论了如何列出/删除这些数据分流点，并讨论了在 SSIS 包中使用数据分流点的最佳实践。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [调试数据流](troubleshooting/debugging-data-flow.md)  

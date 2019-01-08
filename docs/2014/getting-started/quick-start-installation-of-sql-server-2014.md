@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223377"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366639"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 安装快速入门
     
@@ -52,7 +52,7 @@ ms.locfileid: "48223377"
   
  您可以单独安装每个组件，也可以选择上面列出的组件的组合。 若要作出最佳选择的版本和组件中提供[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请参阅[各版本和 SQL Server 2014 的组件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有 32 位和 64 位版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序支持以下安装选项：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有 32 位和 64 位两种版本可用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序支持以下安装选项：  
   
 -   **安装向导**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48223377"
   
      请参阅[SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)有关安装的过程信息[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]故障转移群集。  
   
- 默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 以外的其他 SQL Server 版本，若要安装示例数据库和示例代码，请参阅 [CodePlex 网站](http://go.microsoft.com/fwlink/?LinkId=87843)。 若要了解对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]示例数据库和示例代码的支持，请参阅 [数据库和示例概述](http://go.microsoft.com/fwlink/?LinkId=110391)。  
+ 默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 以外的其他 SQL Server 版本，若要安装示例数据库和示例代码，请参阅 [CodePlex 网站](https://go.microsoft.com/fwlink/?LinkId=87843)。 若要了解对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]示例数据库和示例代码的支持，请参阅 [数据库和示例概述](https://go.microsoft.com/fwlink/?LinkId=110391)。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装  
  无论使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装向导还是命令提示符安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，安装过程都包括下列一个或多个步骤：  
@@ -118,7 +118,7 @@ ms.locfileid: "48223377"
 |介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 支持的升级途径。|[支持的升级](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
 |介绍升级顾问，这是一种对 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 实例进行分析以识别已知升级问题的工具。|[使用升级顾问来准备升级](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
 |介绍 Distributed Replay 实用工具，这是一种可以使用多台计算机重播跟踪数据并模拟任务关键型工作负荷的工具。 通过在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 升级前和升级后在测试服务器上执行重播，可以测量性能差异，并查找您的应用程序可能与升级版本不兼容的问题。|[使用 Distributed Replay 实用工具准备升级](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
-|列出在升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后可能会影响应用程序的重要更改。|[后向兼容性](backward-compatibility.md)|  
+|列出在升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后可能会影响应用程序的重要更改。|[向后兼容性](backward-compatibility.md)|  
 |要将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的独立实例升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的过程主题。|[升级到 SQL Server 2014 使用安装向导&#40;安装程序&#41;](../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
 |用于将某一 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本升级到其他版本的过程主题。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](../database-engine/install-windows/supported-version-and-edition-upgrades.md)。|[升级到 SQL Server 2014 的另一版本&#40;安装程序&#41;](../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)|  
 |在所有故障转移群集节点上，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 都支持 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 分别从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 故障转移群集。 查看此主题的详细信息。|[升级 SQL Server 故障转移群集](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
@@ -129,7 +129,7 @@ ms.locfileid: "48223377"
 |Description|主题|  
 |-----------------|-----------|  
 |提供的链接指向用于安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的不同组件的主题和用于安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的过程主题。|[安装 SQL Server 2014](../database-engine/install-windows/install-sql-server.md)|  
-|查看该主题可了解如何在 Windows Server Core 上安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|[在 Server Core 上安装 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
+|查看该主题可了解如何在 Windows Server Core 上安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 。|[在 Server Core 上安装 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
 |查看该主题可向 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的现有实例中添加单独的功能。|[将功能添加到 SQL Server 2014 的实例&#40;安装程序&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
 |查看此主题以创建新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例。|[创建新的 SQL Server 故障转移群集（安装程序）](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |使用此主题可管理现有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例中的节点。|[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  

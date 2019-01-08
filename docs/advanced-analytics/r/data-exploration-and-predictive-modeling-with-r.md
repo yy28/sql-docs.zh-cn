@@ -1,5 +1,5 @@
 ---
-title: 数据浏览和预测性建模在 SQL Server 机器学习中使用 R |Microsoft Docs
+title: 数据浏览和使用 R 的 SQL Server 机器学习服务的预测性建模
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984709"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432340"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>数据浏览和使用 SQL Server 中的 R 构建预测模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍了对数据科学过程是可以通过与 SQL Server 集成的改进。
 
-适用范围： SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
+适用范围：SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
 
 ## <a name="the-data-science-process"></a>数据科学过程
 
@@ -30,7 +30,7 @@ ms.locfileid: "38984709"
 + 数据移动可能速度慢、 效率不高，或不安全
 + R 本身也存在性能与伸缩性限制
 
-当你需要移动和分析大量数据，或者使用的数据集不适合计算机上可供使用的内存时，这些缺点就会变得更明显。
+当需要移动和分析大量数据，或使用不适合在计算机上可用的内存的数据集时，这些缺点变得更加明显。
 
 新的、 可缩放的包和 R 函数中包含[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]帮助您克服其中许多难题。 
 
@@ -62,15 +62,15 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
   
      有关这些包以及如何使用它们的详细信息，请参阅[什么是 RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction)并[RevoPemaR 入门](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)。 
 
-+ **MicrosoftML**包含一系列高度优化的机器学习算法和 Microsoft 数据科学团队的数据转换。 许多算法还使用 Azure 机器学习中。 有关详细信息，请参阅[使用 MicrosoftML 包](../../advanced-analytics/using-the-microsoftml-package.md)。
++ **MicrosoftML**包含一系列高度优化的机器学习算法和 Microsoft 数据科学团队的数据转换。 许多算法还使用 Azure 机器学习中。 有关详细信息，请参阅[SQL Server 中的 MicrosoftML](ref-r-microsoftml.md)。
 
 ### <a name="r-development-tools"></a>R 开发工具
 
 当开发 R 解决方案，请务必下载 Microsoft R 客户端。 此免费下载包括支持远程计算上下文和可缩放 alorithms 所需的库：
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：** R 运行时的一个分发版以及一组包（例如 Intel 数学内核库），用于提升标准 R 操作的性能。  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** R 运行时和提升标准 R 操作性能的包，例如 Intel 数学内核库，一组的分发。  
   
-+ **RevoScaleR：** 一个可用来将计算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 R 包。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]。 它还包括一组常用 R 函数，这些函数在重新设计后具有更好的性能和可伸缩性。 你可以通过 **rx** 前缀来标识这些性能已改善的函数。 它还包括了针对各种源的增强数据提供程序；这些函数具有前缀 **Rx**。
++ **RevoScaleR:** R 包，可将计算推送到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] 的用户。 它还包括一组常用 R 函数，这些函数在重新设计后具有更好的性能和可伸缩性。 你可以通过 **rx** 前缀来标识这些性能已改善的函数。 它还包括了针对各种源的增强数据提供程序；这些函数具有前缀 **Rx**。
 
 你可以使用支持 R，例如任何基于 Windows 的代码编辑器[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或 RStudio。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 的下载包还包括 R 的常用命令行工具，例如 RGui.exe。
 
@@ -103,4 +103,4 @@ RevoScaleR 包还允许更改 *执行上下文*。 这意味着，不管是完�
 
 [Base R 函数和 ScaleR 函数之对比](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[用于处理 SQL Server 的 ScaleR 函数](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[SQL Server 中的 RevoScaleR 库](ref-r-revoscaler.md)

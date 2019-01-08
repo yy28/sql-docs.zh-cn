@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04746f7694e4f3bef2a946398f0bc9d1e1808a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739325"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591621"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
  [ **@principal_id=** ] *principal_id*  
  是数据库用户或角色中的 ID **msdb**关联要列出的数据库。 *principal_id*是**int**，默认值为 NULL。 任一*principal_id*或*principal_name*可能指定。  
   
- [ **@principal_name=** ] **'***principal_name***'**  
+ [  **@principal_name=** ] **'**_principal_name_  
  是数据库用户或角色中的名称**msdb**关联要列出的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*可能指定。  
   
  [  **@profile_id=** ] *profile_id*  
  关联要列出的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
- [  **@profile_name=** ] **'***profile_name*****  
+ [  **@profile_name=** ] **'**_profile_name_  
  关联要列出的配置文件的名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -74,7 +74,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
  **sysmail_help_principalprofile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

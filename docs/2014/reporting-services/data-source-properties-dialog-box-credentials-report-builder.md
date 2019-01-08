@@ -13,12 +13,12 @@ ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21fad41528bfc47ae2b117db68e73320109c98be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207427"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374740"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>“数据源属性”对话框 -&gt;“凭据”（报表生成器）
   在 **“数据源属性”** 对话框中选择 **“凭据”** 可以显示和修改用于连接到报表中的嵌入数据源的凭据。 您所提供的凭据用于访问数据源以便预览报表。 有关凭据的详细信息，请参阅 [在报表生成器中指定凭据](../../2014/reporting-services/specify-credentials-in-report-builder.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "48207427"
  选择此选项可以使用 Windows 身份验证。  
   
  **使用此用户名和密码**  
- 选择此选项可以提供特定用户名和密码。 对于嵌入数据源，在将报表服务器项目发布到目标服务器时，用户名和密码将保存为数据库的存储凭据。 如果要将用户名和密码用作 Windows 凭据，则可以在目标服务器上更改已发布共享数据源的属性。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]文档中的[创建、删除或修改共享数据源（报表管理器）](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。  
+ 选择此选项可以提供特定用户名和密码。 对于嵌入数据源，在将报表服务器项目发布到目标服务器时，用户名和密码将保存为数据库的存储凭据。 如果要将用户名和密码用作 Windows 凭据，则可以在目标服务器上更改已发布共享数据源的属性。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]文档中的[创建、删除或修改共享数据源（报表管理器）](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。  
   
  **用户名**  
  键入用于登录数据源的用户名。  
@@ -47,7 +47,7 @@ ms.locfileid: "48207427"
   
  对于某些数据扩展插件，必须在报表服务器上配置无人参与的执行帐户。  
   
- 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文档中的[从外部数据源中添加数据(SSRS)](report-data/add-data-from-external-data-sources-ssrs.md)和 [配置无人参与的执行帐户（SSRS 配置管理器）](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中相应数据源类型的主题。  
+ 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文档中的[从外部数据源中添加数据(SSRS)](report-data/add-data-from-external-data-sources-ssrs.md)和 [配置无人参与的执行帐户（SSRS 配置管理器）](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中相应数据源类型的主题。  
   
 ## <a name="see-also"></a>请参阅  
  [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

@@ -1,5 +1,5 @@
 ---
-title: 获取有关 SQL Server 机器学习的 R 和 Python 包信息 |Microsoft Docs
+title: 获取 R 和 Python 包信息-SQL Server 机器学习服务
 description: 确定 R 和 Python 包版本中，验证安装，并获取 SQL Server R Services 或机器学习服务上已安装的包的列表。
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291533"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645366"
 ---
 #  <a name="get-r-and-python-package-information"></a>获取 R 和 Python 包信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 
 ### <a name="r"></a>R
 
-下面的示例使用 R 函数`installed.packages()`中[!INCLUDE[tsql](..\..\includes\tsql-md.md)]存储过程来获得的当前实例的 R_SERVICES 库中已安装的包的矩阵。 此脚本返回说明文件中的包名称和版本字段，将返回仅名称。
+下面的示例使用 R 函数`installed.packages()`在[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程来获得的当前实例的 R_SERVICES 库中已安装的包的矩阵。 此脚本返回说明文件中的包名称和版本字段，将返回仅名称。
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -142,7 +142,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ 如果找到包，则返回一条消息:"命令已成功完成。"
++ 如果找到包，则返回一条消息："命令已成功完成"。
 
 + 如果无法找到或加载包，可能会包含文本时出错:"没有名为 MissingPackageName 程序包"
 

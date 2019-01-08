@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b70cb96a7ed5f0b7df229a0d5de59e14a4e6f77
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983689"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414834"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表格模型中支持的数据类型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "38983689"
   
 ||||  
 |-|-|-|  
-|**模型中的数据类型**|**DAX 中的数据类型**|**Description**|  
+|**模型中的数据类型**|**DAX 中的数据类型**|**说明**|  
 |整数|一个 64 位（八字节）整数值*<br /><br /> 注意：<br />         DAX 公式不支持因太小而无法保存说明中列出的最小值的数据类型。|没有小数位的数字。 整数可以是正数或负数，但必须是介于 -9,223,372,036,854,775,808 (-2^63) 和 9,223,372,036,854,775,807 (2^63-1) 之间的整数。|  
 |小数|一个 64 位（八字节）实数*<br /><br /> 注意：<br />         DAX 公式不支持因太小而无法保存说明中列出的最小值的数据类型。|实数是可具有小数位的数字。 实数涵盖很广范围的值：<br /><br /> 从 -1.79E +308 到 -2.23E -308 的负值<br /><br /> 零<br /><br /> 从 2.23E -308 到 1.79E + 308 的正值<br /><br /> 但是，有效位数限制为 17 个小数位。|  
 |Boolean|Boolean|True 或 False 值。|  
-|文本|String|一个 Unicode 字符数据字符串。 可以是字符串、 数字或以文本格式表示的日期。|  
+|Text|String|一个 Unicode 字符数据字符串。 可以是字符串、 数字或以文本格式表示的日期。|  
 |date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
-|N/A|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
+|不可用|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
  \* 如果你尝试导入具有很大的数值数据，导入可能会失败并出现以下错误：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "38983689"
   
  如果您指定的参数列中的数据与函数所需的数据类型不兼容，DAX 在许多情况下将返回错误。 但是，只要可能，DAX 会尝试隐式将数据转换为所需的数据类型。 例如：  
   
--   您可以将数字（例如“123”）作为字符串键入。 DAX 分析字符串并尝试将其指定为数字数据类型。  
+-   作为一个字符串，可以键入一个数字，例如"123，"。 DAX 分析字符串并尝试将其指定为数字数据类型。  
   
 -   您可以将 TRUE + 1 并且获取结果 2，因为 TRUE 隐式转换为数字 1 并且将执行运算 1+1。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "38983689"
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|空白|错误|  
-|BLANK AND BLANK|BLANK|错误|  
+|BLANK AND BLANK|空白|错误|  
   
  有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一节中关于各 DAX 函数的单独主题。  
   

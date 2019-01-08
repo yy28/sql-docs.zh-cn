@@ -13,17 +13,17 @@ ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191067"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354315"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>连接到 Microsoft SQL Server Parallel Data Warehouse (SSAS)
   “表导入向导”的这一页可用于指定用于连接到 Microsoft SQL Server Parallel Data Warehouse (PDW) 的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
- SQL Server PDW 是一种扩展性很强的工具，它通过大规模并行处理以很低的成本提供高性能。 有关 SQL Server PDW 的详细信息，请参阅网站 [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。 可以使用 SQL Server 身份验证连接到的数据仓库。 若要连接到数据源，必须在计算机上安装适当的访问接口。  
+ SQL Server PDW 是一种扩展性很强的工具，它通过大规模并行处理以很低的成本提供高性能。 有关 SQL Server PDW 的详细信息，请参阅网站 [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)。 可以使用 SQL Server 身份验证连接到的数据仓库。 若要连接到数据源，必须在计算机上安装适当的访问接口。  
   
 > [!NOTE]  
 >  在此页中选择数据库时，将使用当前用户的凭据。 但是，如果在“模拟信息”页中指定的用户没有足够的权限从所选数据库中读取，则导入将不会成功。  

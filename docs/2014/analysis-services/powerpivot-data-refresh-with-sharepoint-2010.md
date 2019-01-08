@@ -15,12 +15,12 @@ ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af27b0571ef073a5ada2937b93b6cc0487974d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143738"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365549"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>使用 SharePoint 2010 进行 PowerPivot 数据刷新
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 数据刷新是在服务器端计划的操作，它对外部数据源进行查询以便更新在内容库中存储的 Excel 2010 工作簿中嵌入的 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 数据。  
@@ -30,25 +30,25 @@ ms.locfileid: "48143738"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和 SharePoint Server 2013 Excel Services 使用不同的体系结构的数据刷新[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]数据模型。 新的体系结构利用 Excel Services 作为主要组件加载 PowerPivot 数据模型。 以前的数据刷新体系结构依赖在 SharePoint 模式下运行 PowerPivot 系统服务和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的服务器来加载数据模型。 有关详细信息，请参阅[使用 SharePoint 2013 的 PowerPivot 数据刷新](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和 SharePoint Server 2013 Excel Services 将不同的体系结构用于 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 数据模型的数据刷新。 新的体系结构利用 Excel Services 作为主要组件加载 PowerPivot 数据模型。 以前的数据刷新体系结构依赖在 SharePoint 模式下运行 PowerPivot 系统服务和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的服务器来加载数据模型。 有关详细信息，请参阅[使用 SharePoint 2013 的 PowerPivot 数据刷新](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)。  
   
  **本主题内容：**  
   
- [步骤 1： 启用 Secure Store Service 并生成主密钥](#bkmk_services)  
+ [第 1 步：启用 Secure Store Service 并生成主密钥](#bkmk_services)  
   
- [步骤 2： 关闭你不想要支持的凭据选项](#bkmk_creds)  
+ [步骤 2:关闭你不想要支持的凭据选项](#bkmk_creds)  
   
- [步骤 3： 创建目标应用程序来存储数据刷新中使用的凭据](#bkmk_stored)  
+ [步骤 3:创建目标应用程序来存储数据刷新中使用的凭据](#bkmk_stored)  
   
- [步骤 4： 配置服务器用于可缩放的数据刷新](#bkmk_scale)  
+ [步骤 4:为可缩放的数据刷新配置服务器](#bkmk_scale)  
   
- [步骤 5： 安装用于导入 PowerPivot 数据的数据访问接口](#bkmk_installdp)  
+ [步骤 5:安装用于导入 PowerPivot 数据的数据访问接口](#bkmk_installdp)  
   
- [步骤 6： 授予创建计划和访问外部数据源的权限](#bkmk_accounts)  
+ [步骤 6:授予创建计划和访问外部数据源的权限](#bkmk_accounts)  
   
- [步骤 7： 启用数据刷新的工作簿升级](#bkmk_upgradewrkbk)  
+ [步骤 7:启用数据刷新的工作簿升级](#bkmk_upgradewrkbk)  
   
- [步骤 8： 验证数据刷新配置](#bkmk_verify)  
+ [步骤 8:验证数据刷新配置](#bkmk_verify)  
   
  [为数据刷新修改配置设置](#bkmk_config)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48143738"
   
  在您确保已配置了服务器环境和权限后，数据刷新可供使用。 若要使用数据刷新，SharePoint 用户需要针对 PowerPivot 工作簿创建一个计划，以便指定执行数据刷新的频率。 通常由将文件发布到 SharePoint 的工作簿所有者或作者来创建该计划。 该用户为其拥有的工作簿创建并管理数据刷新计划。 有关详细信息，请参阅[计划数据刷新&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。  
   
-##  <a name="bkmk_services"></a> 步骤 1： 启用 Secure Store Service 并生成主密钥  
+##  <a name="bkmk_services"></a> 步骤 1:启用安全存储区服务并生成主密钥  
  要运行数据刷新作业以及连接到使用存储凭据的外部数据源，PowerPivot 数据刷新依赖 Secure Store Service 来提供所需的凭据。  
   
  如果您是使用“新服务器”选项安装 PowerPivot for SharePoint 的，则已为您配置 Secure Store Service。 对于所有其他安装方案，您必须创建和配置服务应用程序并为 Secure Store Service 生成主密钥。  
@@ -96,9 +96,9 @@ ms.locfileid: "48143738"
   
 15. 单击“确定” 。  
   
- 必须先启用存储区服务操作的日志记录审核功能（有助于故障排除），然后才能使用该功能。 有关如何启用日志记录的详细信息，请参阅[配置安全的存储区服务 (SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294)。  
+ 必须先启用存储区服务操作的日志记录审核功能（有助于故障排除），然后才能使用该功能。 有关如何启用日志记录的详细信息，请参阅[配置安全的存储区服务 (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)。  
   
-##  <a name="bkmk_creds"></a> 步骤 2： 关闭你不想要支持的凭据选项  
+##  <a name="bkmk_creds"></a> 步骤 2:关闭不希望支持的凭据选项  
  PowerPivot 数据刷新在数据刷新计划中提供三个凭据选项。 工作簿所有者在计划数据刷新时会选择其中一个选项，由此决定用来运行数据刷新作业的帐户。 作为管理员，您可以决定可供计划所有者使用的凭据选项。  
   
  要运行数据刷新，必须至少提供一个选项。  
@@ -117,13 +117,13 @@ ms.locfileid: "48143738"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- 默认情况下启用此凭据选项。 启用此凭据选项后，PowerPivot 系统服务将在 Secure Store Service 中生成一个目标应用程序，用来存储计划所有者输入的用户名和密码。 使用此命名约定创建生成的目标应用程序： PowerPivotDataRefresh_\<guid >。 为每一组 Windows 凭据都创建一个目标应用程序。 如果由 PowerPivot 系统服务拥有的目标应用程序已存在，并且该应用程序存储着计划定义者输入的用户名和密码，则 PowerPivot 系统服务将使用该目标应用程序而不会另外新建。  
+ 默认情况下启用此凭据选项。 启用此凭据选项后，PowerPivot 系统服务将在 Secure Store Service 中生成一个目标应用程序，用来存储计划所有者输入的用户名和密码。 使用此命名约定创建生成的目标应用程序：PowerPivotDataRefresh_\<guid >。 为每一组 Windows 凭据都创建一个目标应用程序。 如果由 PowerPivot 系统服务拥有的目标应用程序已存在，并且该应用程序存储着计划定义者输入的用户名和密码，则 PowerPivot 系统服务将使用该目标应用程序而不会另外新建。  
   
- 此凭据选项的主要优点是简便易用。 由于系统为您创建了目标应用程序，所以几乎不需要执行进一步的工作。 此外，使用计划所有者（很可能就是工作簿创建者）的凭据运行数据刷新简化了之后的权限要求。 此用户很可能已经拥有针对目标数据库的权限。 以此人的 Windows 用户身份运行数据刷新时，所有指定“当前用户”的数据连接都将自动执行。  
+ 此凭据选项的主要优点是简便易用。 由于系统为您创建了目标应用程序，所以几乎不需要执行进一步的工作。 此外，使用计划所有者（很可能就是工作簿创建者）的凭据运行数据刷新简化了之后的权限要求。 此用户很可能已经拥有针对目标数据库的权限。 当使用此人的 Windows 用户标识，任何数据连接指定的数据刷新运行时将会自动运行当前用户。  
   
  此选项的缺点是不易管理。 尽管目标应用程序是自动创建的，但它们不会随着帐户信息的更改自动删除或更新。 密码过期策略可能导致这些目标应用程序过期。 使用过期凭据的数据刷新作业将无法启动。 出现这种情况时，计划所有者需要通过提供数据刷新计划中的当前用户名和密码值来更新自己的凭据。 此时将创建一个新的目标应用程序。 之后随着用户不断添加和修改他们数据刷新计划中的凭据信息，您会发现自己的系统上存在大量自动生成的目标应用程序。  
   
- 当前无法确定哪些目标应用程序是活动的，哪些不活动；也无法通过特定目标应用程序回溯到使用它的数据刷新计划。 通常，您应该不对这些目标应用程序执行任何操作，因为删除它们可能会破坏现有的数据刷新计划。 删除仍在使用的目标应用程序将导致数据刷新失败，同时在工作簿的数据刷新历史记录页中显示消息“未找到目标应用程序”。  
+ 当前无法确定哪些目标应用程序是活动的，哪些不活动；也无法通过特定目标应用程序回溯到使用它的数据刷新计划。 通常，您应该不对这些目标应用程序执行任何操作，因为删除它们可能会破坏现有的数据刷新计划。 删除仍在使用的目标应用程序将导致数据刷新失败并显示消息，"目标应用程序找不到"，使其不显示该工作簿的数据刷新历史记录页。  
   
  如果选择禁用此凭据选项，则可以安全地删除为 PowerPivot 数据刷新生成的所有目标应用程序。  
   
@@ -139,14 +139,14 @@ ms.locfileid: "48143738"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> 步骤 3： 创建目标应用程序来存储数据刷新中使用的凭据  
+##  <a name="bkmk_stored"></a> 步骤 3:创建用于存储数据刷新中所使用的凭据的目标应用程序  
  一旦配置了 Secure Store Service，SharePoint 管理员就可以创建目标应用程序以使存储的凭据可用于数据刷新，包括无人参与的 PowerPivot 数据刷新帐户或者用于运行数据刷新作业或连接到外部数据源的任何其他帐户。  
   
  回想上一部分中所述的内容，您需要创建目标应用程序才能使特定凭据选项可用。 具体而言，您必须为 PowerPivot 无人参与的数据刷新帐户以及要在数据刷新操作中使用的其他任何存储凭据创建目标应用程序。  
   
  有关如何创建包含存储的凭据的目标应用程序的详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)并[为 PowerPivot 数据刷新配置存储的凭据&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
-##  <a name="bkmk_scale"></a> 步骤 4： 配置服务器用于可缩放的数据刷新  
+##  <a name="bkmk_scale"></a> 步骤 4:配置服务器用于可扩展的数据刷新  
  默认情况下，每个 PowerPivot for SharePoint 安装都支持按需查询和计划的数据刷新。  
   
  对于每个安装，您都可以指定 Analysis Services 服务器实例是同时支持查询和计划的数据刷新，还是专用于特定类型的操作。 如果场中安装有多个 PowerPivot for SharePoint，在您发现作业出现延迟或失败的情况下，可以考虑将某台服务器专用于数据刷新操作。  
@@ -155,15 +155,15 @@ ms.locfileid: "48143738"
   
  有关详细信息，请参阅[配置专用数据刷新或 Query-Only 处理&#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)。  
   
-##  <a name="bkmk_installdp"></a> 步骤 5： 安装用于导入 PowerPivot 数据的数据访问接口  
+##  <a name="bkmk_installdp"></a> 步骤 5:安装用于导入 PowerPivot 数据的数据访问接口  
  数据刷新操作基本上是对检索原始数据的导入操作的重复。 这意味着用于在 PowerPivot 客户端应用程序中导入数据的数据访问接口也必须安装在 PowerPivot 服务器上。  
   
  您必须是本地管理员才能在 Windows 服务器上安装数据访问接口。 如果您安装其他驱动程序，请确保在 SharePoint 场中安装了 PowerPivot for SharePoint 的每台计算机上安装这些驱动程序。 如果您在场中具有多个 PowerPivot 服务器，则必须在每个服务器上都安装这些访问接口。  
   
  请记住，SharePoint 服务器是 64 位应用程序。 请务必安装您准备用于支持数据刷新操作的数据访问接口的 64 位版本。  
   
-##  <a name="bkmk_accounts"></a> 步骤 6： 授予创建计划和访问外部数据源的权限  
- 工作簿所有者或作者必须具有 **“参与讨论”** 权限才能计划针对工作簿的数据刷新。 给定此权限级别后，工作簿所有者或作者可以打开和编辑工作簿的数据刷新配置页，以便指定用于刷新数据的凭据和计划信息。  
+##  <a name="bkmk_accounts"></a> 步骤 6:授予创建计划和访问外部数据源所需的权限  
+ 工作簿所有者或作者必须具有 **“参与讨论”** 权限才能计划针对工作簿的数据刷新。 给定此权限级别，他或她可以打开和编辑工作簿的数据刷新配置页来指定的凭据和计划用于刷新数据的信息。  
   
  除 SharePoint 权限之外，还必须检查针对外部数据源的数据库权限，以确保数据刷新过程中使用的帐户对该数据具有足够的访问权限。 确定权限要求时需要您仔细评估，因为您需要授予的权限将根据工作簿中的连接字符串和运行数据刷新作业所用的用户身份而有所不同。  
   
@@ -171,11 +171,11 @@ ms.locfileid: "48143738"
   
  运行数据刷新时，服务器会使用最初导入数据时创建的连接字符串向外部数据源发送连接请求。 刷新数据期间，需要再次使用该连接字符串中指定的服务器位置、数据库名称和身份验证参数来访问相同的数据源。 不能为了刷新数据而修改连接字符串及其整体构造。 在数据刷新过程中只能按原样再次使用连接字符串。 在某些情况下，如果您使用 Windows 身份验证之外的方式连接数据源，则可以覆盖该连接字符串中的用户名和密码。 本主题下文将对此进行详细解释。  
   
- 对于多数工作簿，针对连接的默认身份验证选项是使用可信连接或 Windows 集成安全性，这导致连接字符串中包含 `SSPI=IntegratedSecurity` 或 `SSPI=TrustedConnection`。 在数据刷新期间使用此连接字符串时，用于运行数据刷新作业的帐户将成为“当前用户”。 因此，此帐户需要对通过可信连接访问的所有外部数据源都具有读取权限。  
+ 对于多数工作簿，针对连接的默认身份验证选项是使用可信连接或 Windows 集成安全性，这导致连接字符串中包含 `SSPI=IntegratedSecurity` 或 `SSPI=TrustedConnection`。 在数据刷新过程中使用此连接字符串时，用来运行数据刷新作业的帐户将成为当前用户。 因此，此帐户需要对通过可信连接访问的所有外部数据源都具有读取权限。  
   
  **您是否启用 PowerPivot 无人参与的数据刷新帐户？**  
   
- 如果是，则应授予该帐户针对数据刷新期间所访问数据源的读取权限。 此帐户之所以需要读取权限，是因为在使用默认身份验证选项的工作簿中，无人参与的帐户将成为数据刷新期间的“当前用户”。 除非计划所有者覆盖连接字符串中的凭据，否则此帐户将需要对组织中频繁使用的所有数据源都拥有读取权限。  
+ 如果是，则应授予该帐户针对数据刷新期间所访问数据源的读取权限。 刷新此帐户为何需要读取权限，是因为使用的默认身份验证选项的工作簿中的无人参与的帐户将当前用户期间数据的原因。 除非计划所有者覆盖连接字符串中的凭据，否则此帐户将需要对组织中频繁使用的所有数据源都拥有读取权限。  
   
  **是否使用凭据选项 2： 允许计划所有者输入 Windows 用户名和密码？**  
   
@@ -225,17 +225,17 @@ ms.locfileid: "48143738"
   
  在了解哪些帐户需要数据访问权限后，您可以开始检查在 PowerPivot 工作簿中最常用的数据源的权限。 从频繁使用的任何数据仓库或报告数据库开始，但同时也要询问您最活跃的 PowerPivot 用户，了解他们所用的数据源。 掌握数据源列表后，则可以开始检查各个数据源，确保权限设置正确。  
   
-##  <a name="bkmk_upgradewrkbk"></a> 步骤 7： 启用数据刷新的工作簿升级  
+##  <a name="bkmk_upgradewrkbk"></a> 步骤 7:为数据刷新启用工作簿升级  
  默认情况下，在 PowerPivot for SharePoint 的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 版本上，无法将使用 PowerPivot for Excel 的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本创建的工作簿配置用于计划数据刷新。 如果在 SharePoint 环境中同时托管 PowerPivot 工作簿的较新版本和较旧版本，则必须先升级所有 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 工作簿，然后才能安排在服务器上对这些工作簿执行自动数据刷新。  
   
-##  <a name="bkmk_verify"></a> 步骤 8： 验证数据刷新配置  
+##  <a name="bkmk_verify"></a> 步骤 8:验证数据刷新配置  
  若要验证数据刷新，您必须具有发布到 SharePoint 站点的 PowerPivot 工作簿。 您必须具有针对该工作簿的“参与讨论”权限，以及访问数据刷新计划中包括的任何数据源所需的权限。  
   
  在创建计划时，选择**也尽快刷新**复选框以立即运行数据刷新。 随后可以检查该工作簿的数据刷新历史记录页，验证刷新是否成功。 请记住“PowerPivot 数据刷新计时器作业”每分钟运行一次。 所以至少也需要同样长的时间才能得到关于数据刷新成功与否的确认。  
   
  务必尝试您计划支持的所有凭据选项。 例如，如果配置了 PowerPivot 无人参与的数据刷新帐户，请验证使用该选项是否成功执行了数据刷新。 有关计划和查看状态信息的详细信息，请参阅[计划数据刷新&#40;PowerPivot for SharePoint&#41; ](schedule-a-data-refresh-powerpivot-for-sharepoint.md)并[查看数据刷新历史记录&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- 如果数据刷新失败，请参阅[解决 PowerPivot 数据刷新](http://go.microsoft.com/fwlink/?LinkID=223279)可能的解决方案的 TechNet wiki 上的页。  
+ 如果数据刷新失败，请参阅[解决 PowerPivot 数据刷新](https://go.microsoft.com/fwlink/?LinkID=223279)可能的解决方案的 TechNet wiki 上的页。  
   
 ##  <a name="bkmk_config"></a> 为数据刷新修改配置设置  
  每个 PowerPivot 服务应用程序都具有影响数据刷新操作的配置设置。 本节介绍如何修改这些设置。  

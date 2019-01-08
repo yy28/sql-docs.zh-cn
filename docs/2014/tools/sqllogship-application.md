@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
@@ -13,12 +12,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8e31a24d54b9f1c8013c67628fbe6e279604a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123637"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590051"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
@@ -31,29 +30,29 @@ ms.locfileid: "48123637"
   
 sqllogship  
 -server  
-instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ –verboselevellevel ] [ –logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
+instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [ -verboselevellevel ] [ -logintimeouttimeout_value ] [ -querytimeouttimeout_value ]  
 ```  
   
 ## <a name="arguments"></a>参数  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  指定将在其上运行操作的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 要指定的服务器实例取决于所指定的日志传送操作。 对于 **-backup**， *instance_name* 必须为日志传送配置中主服务器的名称。 对于 **-copy** 或 **-restore**， *instance_name* 必须为日志传送配置中辅助服务器的名称。  
   
- **-backup** *primary_id*  
+ **-backup** _primary_id_  
  执行主数据库的备份操作，此数据库的主 ID 由 *primary_id*指定。 可以通过从 [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) 系统表选择此 ID 或通过使用 [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) 存储过程来获取此 ID。  
   
  备份操作将在备份目录中创建日志备份。 然后， **sqllogship** 应用程序会根据文件保持期清除任何旧备份文件。 接着，此应用程序记录在主服务器和监视服务器上执行备份操作的历史记录。 最后，此应用程序会运行 [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql)，根据保持期清除旧的历史记录信息。  
   
- **-copy** *secondary_id*  
+ **-copy** _secondary_id_  
  执行复制操作，以便复制指定辅助服务器上一个或多个辅助数据库的备份，辅助数据库的辅助 ID 由 *secondary_id*指定。 可以通过从 [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) 系统表选择此 ID 或通过使用 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 存储过程来获取此 ID。  
   
  此操作将备份文件从备份目录复制到目标目录。 然后， **sqllogship** 应用程序会记录在辅助服务器和监视服务器上执行复制操作的历史记录。  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  在指定辅助服务器上对一个或多个辅助数据库执行还原操作，辅助数据库的辅助 ID 由 *secondary_id*指定。 可以通过使用 **sp_help_log_shipping_secondary_database** 存储过程获取此 ID。  
   
  目标目录中在最近还原点之后创建的所有备份文件都将还原到一个或多个辅助数据库中。 然后， **sqllogship** 应用程序会根据文件保持期清除任何旧备份文件。 接着，此应用程序记录在辅助服务器和监视服务器上执行还原操作的历史记录。 最后，此应用程序会运行 **sp_cleanup_log_shipping_history**，根据保持期清除旧的历史记录信息。  
   
- **–verboselevel** *level*  
+ **-verboselevel** _级别_  
  指定要添加到日志传送历史记录的消息的级别。 *level* 是以下整数之一：  
   
 |level|Description|  
@@ -64,11 +63,11 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |**3**|输出信息性消息、警告和错误处理消息。 这是默认值。|  
 |4|输出所有调试消息和跟踪消息。|  
   
- **–logintimeout** *timeout_value*  
- 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。默认值为 15 秒。 timeout_value 为 int。  
+ **-logintimeout** _timeout_value_  
+ 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。默认值为 15 秒。 *timeout_value* 为 **int**_._  
   
- **-querytimeout** *timeout_value*  
- 指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 timeout_value 为 int。  
+ **-querytimeout** _timeout_value_  
+ 指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 *timeout_value* 为 **int**_._  
   
 ## <a name="remarks"></a>备注  
  我们建议您尽可能使用备份、复制和还原作业来执行备份、复制和还原操作。 若要从批处理操作或其他应用程序启动这些作业，请调用 [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) 存储过程。  
@@ -77,10 +76,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  **Sqllogship** x:\Program Files\Microsoft SQL Server\120\Tools\Binn 目录中安装应用程序，SqlLogShip.exe。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy**还是 **-restore** 选项。  
   
-|选项|目录访问权限|Permissions|  
+|选项|目录访问权限|权限|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要对备份目录的读/写访问权限。|需要与 BACKUP 语句相同的权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。|  
 |**-copy**|需要对备份目录的读取访问权限以及对复制目录的写入访问权限。|需要与 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 存储过程相同的权限。|  

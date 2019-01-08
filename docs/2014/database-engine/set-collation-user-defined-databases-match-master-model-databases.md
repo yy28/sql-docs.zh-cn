@@ -12,12 +12,12 @@ ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6aea5507c008d608b7fcc9e50c7defcdff90924d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190397"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371079"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致
   此规则检查用户定义的数据库是否是使用与 master 或 model 相同的数据库排序规则进行定义的。  
@@ -48,9 +48,9 @@ ms.locfileid: "48190397"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft 知识库文章 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Microsoft 知识库文章 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [如何： 从命令提示符安装 SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [如何：从命令提示符安装 SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>请参阅  
  [使用基于策略的管理来监视和强制执行最佳实践](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

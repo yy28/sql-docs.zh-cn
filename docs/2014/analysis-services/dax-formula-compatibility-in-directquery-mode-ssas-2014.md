@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100318"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372659"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2014)
 可以使用数据分析表达式语言 (DAX) 在 Analysis Services 表格模型中，创建度量值和使用其他自定义公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 工作簿中的数据模型和 Power BI Desktop 数据模型。 在大多数方面，在这些环境中创建的模型是相同的并可以使用相同的度量值、 关系和 Kpi，等等。但是，如果创建 Analysis Services 表格模型并将其部署在 DirectQuery 模式下，有一些限制，可以使用的公式。 本主题概述了这些差异，列出了在兼容级别 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式下，不支持的函数并列出了支持的函数但可能返回不同的结果。  
   
-在本主题中，我们使用术语*内存中模型*若要引用的表格模型，这是完全托管在表格模式下运行的 Analysis Services 服务器上的内存中缓存的数据。 我们使用*DirectQuery 模型*来指代已创作和/或在 DirectQuery 模式下部署的表格模型。 有关 DirectQuery 模式下的信息，请参阅[DirectQuery 模式 （SSAS 表格）](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
+在本主题中，我们使用术语*内存中模型*若要引用的表格模型，这是完全托管在表格模式下运行的 Analysis Services 服务器上的内存中缓存的数据。 我们使用*DirectQuery 模型*来指代已创作和/或在 DirectQuery 模式下部署的表格模型。 有关 DirectQuery 模式下的信息，请参阅[DirectQuery 模式 （SSAS 表格）](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>内存中和 DirectQuery 模式之间的差异  
@@ -51,16 +51,16 @@ ms.locfileid: "50100318"
 通常，DAX 在内存中模型内更能容忍数据类型不匹配，并最多尝试两次对值进行隐式转换，如本节中所述。 但是，将根据关系引擎的规则，对在 DirectQuery 模式下发送到关系数据存储区的公式进行计算，且这些公式失败的可能性更高。  
   
 **字符串和数字的比较**  
-示例： `“2” < 3`  
+示例： `"2" < 3`  
   
 此公式比较文本字符串与数字。 对于 DirectQuery 模式和内存中模型，此表达式均为 **true** 。  
   
 在内存中模型中，结果为 **true** ，因为作为字符串的数字将隐式转换为数值数据类型，以便与其他数字进行比较。 SQL 还隐式将作为比较所用数字的文本数字转换为数值数据类型。  
   
-请注意，这表示在行为方面与 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]的第一个版本发生了变化，此时将返回 **false**，因为文本“2”始终被视为大于任何数字。  
+请注意，这表示从第一个版本的行为更改[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]，这将返回**false**，这是因为文本"2"始终被视为大于任何数字。  
   
 **文本与布尔值的比较**  
-示例： `“VERDADERO” = TRUE`  
+示例： `"VERDADERO" = TRUE`  
   
 此表达式比较文本字符串与布尔值。 通常，对于 DirectQuery 或内存中模型，将字符串值与布尔值进行比较将导致错误。 此规则的唯一例外是当字符串包含字词 **true** 或 **false**时；如果字符串包含 true 或 false 值之一，则将执行到布尔值的转换，此时将发生比较，并给出逻辑结果。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "50100318"
 -   在比较中以及在与 EXACT、AND、OR、 &amp;&amp;或 || 结合使用时，布尔值始终被当作逻辑值。  
   
 **从字符串转换为布尔值**  
-在内存中模型和 DirectQuery 模型中，只允许从以下这些字符串转换为布尔值： **“”** （空字符串）、 **“true”**、 **“false”**；其中，空字符串转换为 false 值。  
+在内存中和 DirectQuery 模型中，只允许转换为布尔值从以下这些字符串： **""** （空字符串）， **"true"**， **"false"**; 其中一个空字符串强制转换为 false 值。  
   
 将任何其他字符串转换为布尔数据类型会导致错误。  
   
@@ -92,10 +92,10 @@ ms.locfileid: "50100318"
 使用内存中数据存储区的模型所支持的日期文本格式范围比 SQL Server 支持的日期字符串格式的范围更加有限。 然而，DAX 支持自定义日期和时间格式。  
   
 **从字符串转换为非布尔值的其他类型**  
-当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
+当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允许从数字转换为字符串**  
-示例： `CONCATENATE(102,”,345”)`  
+示例： `CONCATENATE(102,",345")`  
   
 在 SQL Server 中，不允许从数字转换为字符串。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "50100318"
 **在 DirectQuery 中不支持两次尝试转换**  
 当第一次转换失败时，内存中模型常常尝试第二次转换。 这在 DirectQuery 模式下绝不会发生。  
   
-示例： `TODAY() + “13:14:15”`  
+示例： `TODAY() + "13:14:15"`  
   
 在此表达式中，第一个参数具有类型 **datetime** ；第二个参数具有类型 **string**。 但是，将以不同方式处理组合操作数时的转换。 DAX 将执行从 **string** 到 **double**的隐式转换。 在内存中模型内，公式引擎尝试直接转换为 **double**；如果失败，它将尝试将字符串转换为 **datetime**。  
   
@@ -129,11 +129,11 @@ ms.locfileid: "50100318"
 但是，同一公式在内存中模型内使用时会返回一个 8 字节整数。 这是因为公式引擎不检查是否出现了数值溢出。  
   
 **具有空白的 LOG 函数返回不同的结果**  
-SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此，以下公式在 DirectQuery 模式下返回错误，但在内存中模式下返回无穷大 (–inf)。  
+SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此，下面的公式在 DirectQuery 模式下，但返回无穷大返回错误 (-inf) 在内存中模式下。  
   
 `EXAMPLE: LOG(blank())`  
   
-同样的限制应用于其他对数函数：LOG10 和 LN。  
+同样的限制适用于其他对数函数：LOG10 和 LN。  
   
 有关 DAX 中的 **blank** 数据类型的详细信息，请参阅 [DAX 语法参考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -259,18 +259,18 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
 此外，在 SQL Server 中，一些文本函数支持 Excel 中未提供的其他参数。 如果公式需要缺少的参数，则在内存中模型内可能获得不同的结果或错误。  
   
 **使用 LEFT、RIGHT 等返回字符的运算可能返回正确的字符但大小写不同，或者不返回结果。**  
-示例： `LEFT([“text”], 2)`  
+示例： `LEFT(["text"], 2)`  
   
 在 DirectQuery 模式下，所返回的字符的大小写始终与数据库中存储的字母完全相同。 但是，xVelocity 引擎针对值的压缩和编制索引使用不同的算法以提高性能。  
   
 默认情况下使用 Latin1_General 排序规则，它不区分大小写，但区分重音。 因此，如果一个文本字符串的多个实例为小写、大写或混合大小写，则所有实例都被视为相同的字符串，索引中只存储字符串的第一个实例。 针对存储的字符串执行的所有文本函数都将检索编入索引的表单的指定部分。 因此，此示例公式将使用第一个实例作为输入，针对整列返回相同的值。  
   
-[表格模型中的字符串存储和排序规则](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[表格模型中的字符串存储和排序规则](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 这种行为也适用于其他文本函数，包括 RIGHT、MID 等。  
   
 **字符串长度影响结果**  
-示例： `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+示例： `SEARCH("within string", "sample target  text", 1, 1)`  
   
 如果您使用 SEARCH 函数某个搜索字符串，并且目标字符串大于此内部包含的字符串，DirectQuery 模式将引发错误。  
   
@@ -283,21 +283,21 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
 在内存中模型内，公式遵循 Excel 的行为，它将源字符串和替换字符串串联起来，返回 CACalifornia。  
   
 **字符串中间的隐式 TRIM**  
-示例： `TRIM(“ A sample sentence with leading white space”)`  
+示例： `TRIM(" A sample sentence with leading white space")`  
   
 DirectQuery 模式将 DAX TRIM 函数转换为 SQL 语句 `LTRIM(RTRIM(<column>))`。 因此，将只删除前导和尾随空格。  
   
 相比较而言，内存中模型内的相同公式将遵循 Excel 的行为，删除字符串内的空格。  
   
 **隐式 RTRIM 并使用 LEN 函数**  
-示例： `LEN(‘string_column’)`  
+示例： `LEN('string_column')`  
   
 与 SQL Server 类似，DirectQuery 模式自动从字符串列的末尾删除空格；也即，它执行隐式 RTRIM。 因此，如果字符串具有尾随空格，则使用 LEN 函数的公式可能返回不同的值。  
   
 **内存中模式支持 SUBSTITUTE 的其他参数**  
-示例： `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+示例： `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-示例： `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+示例： `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 在 DirectQuery 模式下，只能使用此函数具有三 (3) 个参数的版本：对列的引用、旧文本和新文本。 如果您使用第二个公式，将引发错误。  
   
@@ -429,7 +429,7 @@ RAND
   
 RANDBETWEEN  
   
-**时间智能函数： 开始和结束日期**  
+**时间智能函数：开始和结束日期**  
   
 DATESQTD  
   
@@ -453,7 +453,7 @@ SAMEPERIODLASTYEAR
   
 PARALLELPERIOD  
   
-**时间智能函数： 余额**  
+**时间智能函数：余额**  
   
 OPENINGBALANCEMONTH  
   
@@ -467,7 +467,7 @@ CLOSINGBALANCEQUARTER
   
 CLOSINGBALANCEYEAR  
   
-**时间智能函数： 上一个和下一期**  
+**时间智能函数：上一个和下一期**  
   
 PREVIOUSDAY  
   
@@ -485,7 +485,7 @@ NEXTQUARTER
   
 NEXTYEAR  
   
-**时间智能函数： 期间和时段计算**  
+**时间智能函数：时间段和时段计算**  
   
 STARTOFMONTH  
   
@@ -505,7 +505,7 @@ LASTDATE
   
 DATEADD  
   
-## <a name="see-also"></a>请参阅  
-[DirectQuery 模式（SSAS 表格）](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>另请参阅  
+[DirectQuery 模式（SSAS 表格）](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

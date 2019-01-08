@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - SqlServerAlias Class
@@ -20,12 +18,12 @@ ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d913f28415c708ad09b419732ebef4e26b607ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377887"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 类
   [SqlServerAlias 类](sqlserveralias-class.md)类表示服务器连接别名。  
@@ -36,9 +34,9 @@ ms.locfileid: "48221407"
   
 -   客户端连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例侦听备用命名管道。  
   
- **注意：** [SqlServerAlias 类](sqlserveralias-class.md)继承`Put`从提供程序类的方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
+ **注意：**[SqlServerAlias 类](sqlserveralias-class.md)继承`Put`从提供程序类的方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
   
 ## <a name="see-also"></a>请参阅  
- [配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)  
+ [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -21,12 +21,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054729"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362779"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
   主题中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供的 XML 数据进行本机存储`xml`数据类型。 您可以选择将与变量或列的关联的 XSD 架构`xml`通过 XML 架构集合的类型。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
@@ -48,7 +48,7 @@ ms.locfileid: "48054729"
  还可以使用 XML 架构集合类型化 XML 变量、参数和列。  
   
 ##  <a name="ddl"></a> 用于管理架构集合的 DDL  
- 可以在数据库中创建 XML 架构集合并将其关联的变量和列与`xml`类型。 为了管理数据库中的架构集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 语句：  
+ 可以在数据库中创建 XML 架构集合，并将它们与 `xml` 类型的变量和列相关联。 为了管理数据库中的架构集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 语句：  
   
 -   [CREATE XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) 可将架构组件导入到数据库。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054729"
   
 -   [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) 删除整个 XML 架构集合及其所有组件。  
   
- 若要使用 XML 架构集合及其包含的架构，必须首先使用 CREATE XML SCHEMA COLLECTION 语句创建架构集合及其包含的架构。 创建架构集合后，您可以创建的变量和列`xml`键入并将其与关联的架构集合。 注意，创建架构集合之后，各种架构组件存储在元数据中。 还可以使用 ALTER XML SCHEMA COLLECTION 向现有架构添加更多组件或向现有集合添加新架构。  
+ 若要使用 XML 架构集合及其包含的架构，必须首先使用 CREATE XML SCHEMA COLLECTION 语句创建架构集合及其包含的架构。 创建架构集合之后，您可以创建 `xml` 类型的变量和列，并将其与架构集合进行关联。 注意，创建架构集合之后，各种架构组件存储在元数据中。 还可以使用 ALTER XML SCHEMA COLLECTION 向现有架构添加更多组件或向现有集合添加新架构。  
   
  若要删除架构集合，请使用 DROP XML SCHEMA COLLECTION 语句。 它将删除包含在集合中的所有架构并删除集合对象。 请注意，只有在满足 [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) 中所述的条件时，才能删除架构集合。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48054729"
   
  这些在下列示例中进行了说明。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>示例：枚举 XML 架构集合中的 XML 命名空间  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例如：枚举 XML 架构集合中的 XML 命名空间  
  对 XML 架构集合“myCollection”使用下面的查询：  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>示例：枚举 XML 架构集合的内容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例如：枚举 XML 架构集合的内容  
  以下语句枚举关系架构 dbo 中的 XML 架构集合“myCollection”的内容。  
   
 ```  
@@ -190,12 +190,12 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  可以为获取集合中的单个 XML 架构`xml`数据类型实例作为第三个参数指定的目标命名空间**xml_schema_namespace （)**。 下面的示例说明了这一点。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>示例：从 XML 架构集合输出指定的架构  
- 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“http://www.microsoft.com/books”的 XML 架构。  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例如：输出指定的架构从 XML 架构集合  
+ 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“<https://www.microsoft.com/books>”的 XML 架构。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>查询 XML 架构  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   编写对 XML 架构命名空间的目录视图的 Transact-SQL 查询。  
   
--   创建包含 `xml` 数据类型列的表以存储 XML 架构并将它们加载到 XML 类型系统。 可以通过使用查询 XML 列`xml`数据类型方法。 另外，还可以对此列生成 XML 索引。 但是，使用此方法时，应用程序必须保持 XML 列中存储的 XML 架构和 XML 类型系统之间的一致性。 例如，如果从 XML 类型系统中删除 XML 架构命名空间，还必须从表中删除它以保持一致性。  
+-   创建包含 `xml` 数据类型列的表以存储 XML 架构并将它们加载到 XML 类型系统。 可以使用 `xml` 数据类型方法查询 XML 列。 另外，还可以对此列生成 XML 索引。 但是，使用此方法时，应用程序必须保持 XML 列中存储的 XML 架构和 XML 类型系统之间的一致性。 例如，如果从 XML 类型系统中删除 XML 架构命名空间，还必须从表中删除它以保持一致性。  
   
 ## <a name="see-also"></a>请参阅  
  [查看存储 XML 架构集合](../xml/view-a-stored-xml-schema-collection.md)   

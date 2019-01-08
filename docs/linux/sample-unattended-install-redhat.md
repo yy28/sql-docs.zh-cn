@@ -1,5 +1,6 @@
 ---
-title: Red Hat Enterprise Linux 上的 SQL Server 的无人参与的安装 |Microsoft Docs
+title: Red Hat Enterprise Linux 上的 SQL Server 的无人参与的安装
+titleSuffix: SQL Server
 description: SQL Server 脚本示例-Red Hat Enterprise Linux 上的无人参与安装
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 12fd72edb9d8d2909bbbaa3a1e327bd358bcb8c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d82789f3b74c245654061162cf3a3a41bd75f75
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838375"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160515"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>示例： 无人参与的 SQL Server 安装脚本的 Red Hat Enterprise Linux
+# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>示例：Red Hat Enterprise Linux 的无人参与的 SQL Server 安装脚本
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -25,7 +26,7 @@ ms.locfileid: "47838375"
 > [!TIP]
 > 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[快速入门： Red Hat](quickstart-install-connect-red-hat.md)。 有关其他安装程序的信息，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - 需要至少 2 GB 的内存来在 Linux 上运行 SQL Server。
 - 必须在文件系统**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。

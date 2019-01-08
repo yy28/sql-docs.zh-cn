@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119323"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374119"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理员可以通过本主题提供的信息了解在将报表发布到报表服务器、运行时呈现报表以及将报表保存到文件系统时报表的大小限制。 本主题还提供了有关如何度量报表服务器数据库大小的实践指南，并介绍了快照大小对服务器性能的影响。  
@@ -53,14 +53,14 @@ ms.locfileid: "49119323"
  仅在呈现到 Excel 格式时，才对报表大小有严格限制。 工作表不能超过 65536 行或 256 列。 其他呈现格式没有这些限制，因此大小仅受服务器上资源量的限制。 有关 Excel 文件限制的详细信息，请参阅[将报表导出为其他文件类型&#40;报表生成器和 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Planning for Scalability and Performance with Reporting Services](http://go.microsoft.com/fwlink/?LinkID=70650) （规划 Reporting Services 的扩展性和性能）和 [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](http://go.microsoft.com/fwlink/?LinkID=77519)（使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试）。  
+>  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容:[使用 Reporting Services 规划可伸缩性和性能](https://go.microsoft.com/fwlink/?LinkID=70650)并[使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](https://go.microsoft.com/fwlink/?LinkID=77519)。  
   
 ## <a name="measuring-snapshot-storage"></a>度量快照存储  
  任何给定快照的大小都与报表中的数据量成正比。 快照通常比报表服务器上存储的其他项大得多。 快照大小通常在几 MB 到几十 MB 之间。 如果报表非常大，则可能会看到更大的快照。 根据使用快照的频率以及配置报表历史记录的方式，报表服务器数据库所需的磁盘空间量可能会在短期内迅速增加。  
   
  默认情况下， **reportserver** 和 **reportservertempdb** 数据库设置为自动增长。 尽管数据库大小会自动增大，但绝不会自动减小。 如果 **reportserver** 数据库由于您删除了快照而具有多余容量，则必须手动减少容量，以恢复磁盘空间。 同样，如果 **reportservertempdb** 增大以容纳超高的交互式报表量，则减少容量之前，磁盘空间分配将始终保持此设置。  
   
- 若要度量报表服务器数据库的大小，可以运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。 定期计算数据库总大小有助于合理估计在一段时间内如何为报表服务器数据库分配空间。 以下语句用于度量当前使用的空间量 （这些语句假设使用默认数据库名称）：  
+ 若要度量报表服务器数据库的大小，可以运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。 定期计算数据库总大小有助于合理估计在一段时间内如何为报表服务器数据库分配空间。 下面的语句用于测量当前使用的空间量（这些语句假设你使用的是默认数据库名称）：  
   
 ```  
 USE ReportServer  

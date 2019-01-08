@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
@@ -16,12 +15,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb074ec8723eb0f8f35df5d32aaebe9122e1bfc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b76916940175e9a3b3acf7c157ffe05d2b2aebf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203107"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351768"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
   WMI 事件观察器任务以使用 Management Instrumentation 查询语言 (WQL) 事件查询指定所关注事件的方式来监视 Windows Management Instrumentation (WMI) 事件。 可以将 WMI 事件观察器任务用于下列目的：  
@@ -39,7 +38,7 @@ ms.locfileid: "48203107"
 -   [WMI 数据读取器任务](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>WQL 查询  
- WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)中的 Windows Management Instrumentation 文档。  
+ WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)中的 Windows Management Instrumentation 文档。  
   
 > [!NOTE]  
 >  WMI 类因 Windows 版本的不同而异。  
@@ -92,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [WMI 事件观察器任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [WMI 事件观察器任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [WMI 事件观察器任务编辑器&#40;WMI 选项页&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [WMI 事件观察器任务编辑器（“WMI 选项”页）](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

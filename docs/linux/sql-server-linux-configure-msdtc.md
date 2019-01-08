@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269670"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513186"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)
 
@@ -101,7 +101,7 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing"></a>配置端口路由
 
-配置 Linux 服务器路由表，以便在端口 135 上的 RPC 通信重定向到 SQL Server **network.rpcport**。 Iptable 规则可能不会保留在重新启动时，因此，以下命令还提供用于在重新启动后还原规则的说明。
+配置 Linux 服务器路由表，以便在端口 135 上的 RPC 通信重定向到 SQL Server **network.rpcport**。 在不同的分发上转发的端口的配置机制可能会有所不同。 在不使用 firewalld 服务分发版，iptable 规则是高效机制来实现此目的。 此类 distrubution 的示例是 Ubuntu 16.04 和 SUSE Enterprise Linux v12。 Iptable 规则可能不会保留在重新启动时，因此，以下命令还提供用于在重新启动后还原规则的说明。
 
 1. 创建端口 135 的路由规则。 在以下示例中，端口 135 定向到在上一节中定义的 RPC 端口 13500。 替换为`<ipaddress>`与你的服务器的 IP 地址。
 
@@ -132,10 +132,16 @@ sudo firewall-cmd --reload
    iptables-restore < /etc/iptables.conf
    ```
 
-**Iptables 保存**并**iptables 还原**命令提供了基本的机制来保存和还原 iptables 条目。 根据 Linux 分发版，那里可能更高级的或自动完成选项可用。 例如，Ubuntu 备用方法是**iptables 持久**包让项保持不变。 对于 Red Hat Enterprise Linux，你可能能够使用 firewalld 服务或者 (通过使用 – 防火墙 cmd 配置实用程序添加-转发的端口或类似的选项) 创建持久的端口转发规则而不是使用 iptables。
+**Iptables 保存**并**iptables 还原**命令提供了基本的机制来保存和还原 iptables 条目。 根据 Linux 分发版，那里可能更高级的或自动完成选项可用。 例如，Ubuntu 备用方法是**iptables 持久**包让项保持不变。 
+
+上使用 firewalld 服务分发版，同一个服务可以使用这两个打开的端口上的服务器和内部端口转发。 例如，在 Red Hat Enterprise Linux，应使用 firewalld 服务 (通过防火墙 cmd 配置实用程序-添加-转发的端口或类似的选项) 来创建和管理永久性端口转发规则而不是使用 ip 表。
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> 前面的步骤假定的固定的 IP 地址。 如果您的 SQL Server 实例的 IP 地址发生更改 （由于手动干预或 DHCP），则必须删除并重新创建路由规则。 如果需要重新创建或删除现有的路由规则，可以使用以下命令以删除旧`RpcEndPointMapper`规则：
+> 前面的步骤假定的固定的 IP 地址。 如果您的 SQL Server 实例的 IP 地址发生更改 （由于手动干预或 DHCP），必须删除并重新创建路由规则，如果它们使用 iptables 创建。 如果需要重新创建或删除现有的路由规则，可以使用以下命令以删除旧`RpcEndPointMapper`规则：
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2016 中的 R Services |Microsoft Docs
+title: SQL Server 2016 的 SQL Server 机器学习服务中的 R Services
 description: 对关系数据，包括数据科学和统计建模和预测分析、 数据可视化等集成的 R 任务的 SQL Server 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 17d0aa51d43ad9592a075ae91be88c857035b15f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659926"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596508"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ R Services 是 SQL Server 2016 数据库引擎实例的附加组件，用于在 
 
 R Services 包括 R 的基本分发，与 Microsoft 的企业 R 包重叠，以便你可以加载和处理多个核心上的大量数据，并将结果聚合成一个统一输出。 Microsoft 的 R 函数和算法专为规模和实用性而设计：在 Microsoft 设计和支持的商业服务器产品中提供预测分析、统计建模、数据可视化功能和领先的机器学习算法。 
 
-R 库包括 RevoScaleR、MicrosoftML 等。 由于 R Services 与数据库引擎集成，你可以使分析与数据位于较近的位置，并消除与数据移动相关的成本和安全风险。
+R 库包括[ **RevoScaleR**](ref-r-revoscaler.md)， [ **MicrosoftML (R)**](ref-r-microsoftml.md)，等等。 由于 R Services 与数据库引擎集成，你可以使分析与数据位于较近的位置，并消除与数据移动相关的成本和安全风险。
 
 > [!Note]
 > R Services 已在 SQL Server 2017 中重命名为 [SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)，以反映添加了 Python。
@@ -34,7 +34,7 @@ SQL Server 2016 仅适用于 R。 下表介绍了 SQL Server 2016 中的功能�
 | 组件 | Description |
 |-----------|-------------|
 | SQL Server 快速启动板服务 | 用于管理外部 R 运行时和 SQL Server 实例之间的通信的服务。 |
-| R 包 | [**RevoScaleR**](revoscaler-overview.md)是主库的此库中的可缩放。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。 此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)**](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)供了辅助函数，用于将R脚本放入T-SQL存储过程、向数据库注册存储过程以及从R开发环境中运行存储过程。<br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md)用于在 R 中指定的 MDX 查询|
+| R 包 | [**RevoScaleR**](ref-r-revoscaler.md)是主库的此库中的可缩放。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。 此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)**](ref-r-microsoftml.md)添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。 <br/>[**sqlRUtils** ](ref-r-sqlrutils.md)供了辅助函数，用于将R脚本放入T-SQL存储过程、向数据库注册存储过程以及从R开发环境中运行存储过程。<br/>[**olapR** ](ref-r-olapr.md)用于在 R 中指定的 MDX 查询|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版。其中包括包和解释器。 请始终使用安装程序安装的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。  |
 | R 示例和脚本 |  开源 R 和 RevoScaleR 包中包括内置数据集，以便你可以使用预安装的数据来创建和运行脚本 |
@@ -58,12 +58,12 @@ SQL Server 2016 仅适用于 R。 下表介绍了 SQL Server 2016 中的功能�
 
 + [安装 SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)
 
-**步骤 2:** 使用以下任何一种教程获得实践经验:：
+**步骤 2:** 获得亲身体验使用这些教程之一：
 
-+ [教程： 了解使用 R 的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [教程： 使用 R 的端到端演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [教程：了解使用 R 的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教程：使用 R 的端到端演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**步骤 3:** 添加您喜欢的R包，并将它们与Microsoft提供的包一起使用
+**步骤 3:** 添加你最喜欢的 R 程序包并使用它们以及由 Microsoft 提供的包
 
 + [SQL Server 的 R 包管理](install-additional-r-packages-on-sql-server.md)
 

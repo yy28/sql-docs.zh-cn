@@ -11,19 +11,19 @@ ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5ba084d6912d7f60b124b28ea8635aa37d8259f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f735e1a46e5b42ec226d3d885dad00d11dcc39f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222286"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589356"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>将报表保存到您的计算机（报表生成器）
   在报表生成器中，可以将报表定义保存到您的计算机。 不过，将报表保存到您的计算机后，其他用户将不能查看这些报表，并且引用共享数据源或存储报表项（如图像和子报表）的报表可能不能在外部运行。 建议将报表保存到报表服务器或 SharePoint 站点。  
   
 ### <a name="to-save-a-report"></a>若要保存报表  
   
-1.  从“报表生成器”按钮，单击 **“保存”**。 此时，将打开“另存为***\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“保存”**。 此时，将打开“另存为”“\<报表项>”对话框。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用 **“另存为”** 选项可以更改位置。  
@@ -36,7 +36,7 @@ ms.locfileid: "48222286"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>将报表另存为不同名称  
   
-1.  从“报表生成器”按钮，单击 **“另存为”**。 此时，将打开“另存为***\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“另存为”**。 此时，将打开“另存为”“\<报表项>”对话框。  
   
 2.  找到计算机上要保存该报表的位置。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48222286"
 ## <a name="see-also"></a>请参阅  
  [查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表&#40;报表生成器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [保存报表&#40;报表生成器&#41;](report-builder/saving-reports-report-builder.md)   
+ [保存报表（报表生成器）](report-builder/saving-reports-report-builder.md)   
  [将报表导出为其他文件类型（报表生成器和 SSRS）](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c57e90b9a7fbe4846698f04e3cde808eed64985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624735"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405180"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |5|CLR_PROCEDURE|由于 CLR 存储过程可能会返回第一个结果，无法确定结果。|  
 |6|CLR_TRIGGER|由于 CLR 触发器可能会返回第一个结果，无法确定结果。|  
 |7|EXTENDED_PROCEDURE|由于扩展存储过程可能会返回第一个结果，无法确定结果。|  
-|8|UNDECLARED_PARAMETER|由于结果集的一个或多个列的数据类型可能取决于未声明的参数，无法确定结果。|  
+|8|UNDECLARED_PARAMETER|无法确定结果，因为一个或多个结果集的列的数据类型可能依赖于未声明的参数。|  
 |9|RECURSION|由于批处理包含递归语句，无法确定结果。|  
 |10|TEMPORARY_TABLE|无法确定结果，因为批处理包含临时表，并且不受**sp_describe_first_result_set** 。|  
 |11|UNSUPPORTED_STATEMENT|无法确定结果，由于批处理包含不支持的语句**sp_describe_first_result_set** (例如，FETCH、 REVERT 等。)。|  
 |12|OBJECT_TYPE_NOT_SUPPORTED|\@传递给函数的 object_id 不是支持 （即不是存储的过程）|  
 |13|OBJECT_DOES_NOT_EXIST|\@系统目录中找不到传递给函数的 object_id。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有执行权限\@tsql 自变量。  
   
 ## <a name="examples"></a>示例  

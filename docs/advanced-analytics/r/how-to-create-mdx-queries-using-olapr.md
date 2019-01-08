@@ -1,5 +1,6 @@
 ---
-title: 如何创建 MDX 查询中使用 olapR 中 SQL Server 机器学习的 R |Microsoft Docs
+title: 如何在 R 中使用 olapR-SQL Server 机器学习服务创建 MDX 查询
+description: 使用 SQL Server 中的 olapR 包库 R 语言脚本中编写 MDX 查询。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fe2749e6f70522fbd010d5af78890dfe897426b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 77804e6499519309e7ade41cc7260d2356a56731
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696926"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432380"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 创建 MDX 查询
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,9 +74,9 @@ ms.locfileid: "51696926"
 
 下面的示例基于 AdventureWorks 数据市场和多维数据集项目，因为该项目是广泛可用，在多个版本中，包括可轻松地将还原到 Analysis Services 的备份文件。 如果没有现有的多维数据集，获取示例多维数据集使用这些选项之一：
 
-+ 创建多维数据集，可在这些示例中按照 Analysis Services 教程第 4 课：[创建的 OLAP 多维数据集](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ 创建多维数据集，可在这些示例中的 Analysis Services 教程第 4 课：[创建的 OLAP 多维数据集](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ 下载为备份，将现有多维数据集并将其还原到的 Analysis Services 实例。 例如，此站点提供了完全处理的多维数据集，以压缩格式： [Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件，并再将其还原为 SSAS 实例。 有关详细信息，请参阅[备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
++ 下载为备份，将现有多维数据集并将其还原到的 Analysis Services 实例。 例如，此站点提供了完全处理的多维数据集，以压缩格式：[Adventure Works 多维模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件，并再将其还原为 SSAS 实例。 有关详细信息，请参阅[备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.带切片器的基本 MDX
 
@@ -199,6 +200,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> 程序集组件|
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [在 R 中使用来自 OLAP 多维数据集的数据](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

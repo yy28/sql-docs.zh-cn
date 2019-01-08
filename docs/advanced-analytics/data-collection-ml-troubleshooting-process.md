@@ -1,5 +1,5 @@
 ---
-title: 解决 SQL Server 的用于机器学习的数据收集
+title: 机器学习-SQL Server 机器学习服务的数据集合疑难解答
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,53 +7,53 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9b0fdd8d198675720188d6ab2417be97a9280c57
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708405"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644986"
 ---
-# <a name="troubleshoot-data-collection-for-machine-learning"></a>解决机器学习的数据收集
+# <a name="troubleshoot-data-collection-for-machine-learning"></a>机器学习的数据集合疑难解答
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本指南介绍你应使用时尝试解决上你自己的问题或与 Microsoft 客户的帮助支持的数据收集方法。 
+本文介绍了你尝试时应使用来解决自己的问题或帮助 Microsoft 客户支持的数据收集方法。
 
-**适用于：** SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务 （R 和 Python）
+**适用范围：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务 （R 和 Python）
 
+## <a name="sql-server-version-and-edition"></a>SQL Server 版本和版本类别
 
-## <a name="sql-server-version-and-edition"></a>SQL Server 版本和版本
-
-SQL Server 2016 R Services 是要包括集成的 R 支持的 SQL Server 的第一个版本。 SQL Server 2016 Service Pack 1 (SP1) 包括多个主要的改进，包括执行外部脚本功能。 如果你是 SQL Server 2016 客户，则应考虑安装 SP1 或更高版本。
+SQL Server 2016 R Services 是 SQL Server 包含 R 的集成的支持的第一个版本。 SQL Server 2016 Service Pack 1 (SP1) 包含几个主要的改进，包括运行外部脚本的能力。 如果你是 SQL Server 2016 客户，则应考虑安装 SP1 或更高版本。
 
 SQL Server 2017 添加 Python 语言集成。 在早期版本中，无法获取 Python 功能集成。
 
-有关帮助获取版本和版本，请参阅本文中，其中的每个列出的内部版本号[SQL Server 版本](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)。
+有关帮助获取版本和版本，请参阅本文中，这将为每个列出的内部版本号[SQL Server 版本](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)。
 
-根据你正在使用的 SQL Server 的版本，某些机器学习功能可能不可用，或限制。 下列的企业、 开发人员、 标准和 Express 版本中的机器学习功能的文章列表。
+具体取决于正在使用的 SQL Server 版本，某些机器学习功能可能不可用，或限制。 以下文章列表上的 Enterprise、 Developer、 Standard 和 Express 版本中的机器学习功能。
 
-* [版本和 SQL Server 支持的功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [通过 SQL Server 的版本的 R 和 Python 功能](r/differences-in-r-features-between-editions-of-sql-server.md)
+* [版本和支持的 SQL Server 功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
+* [R 和 Python 版本的 SQL Server 的功能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 ## <a name="r-language-and-tool-versions"></a>R 语言和工具版本
 
-通常情况下，当你选择了 R 服务功能或机器学习服务功能安装的 Microsoft R 的版本确定通过 SQL Server 内部版本号。 如果升级或修补程序的 SQL Server 时，还必须升级或修补程序及其 R 组件。
+一般情况下，选择 R Services 功能或机器学习服务功能时安装的 Microsoft R 的版本确定通过 SQL Server 内部版本号。 如果您升级或修补 SQL Server，还必须升级或修补程序及其 R 组件。
 
-有关版本和 R 组件下载链接列表，请参阅[安装没有 internet 访问权限的机器学习组件](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access)。 在计算机上具有 internet 访问权限，所需的 R 版本是标识，并自动安装。
+有关发布和下载 R 组件的链接的列表，请参阅[安装没有 internet 访问权限的机器学习组件](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access)。 在具有 internet 访问的计算机，所需的 R 版本是标识，并自动安装。
 
-可从该过程称为绑定中的 SQL Server 数据库引擎的单独升级 R Server 组件。 因此，具体取决于安装的 SQL Server 版本和是否具有服务器迁移到最新的 R 版本可能会与不同的 SQL Server 中运行 R 代码时所用的 R 版本。
+就可以单独从称为绑定的过程中的 SQL Server 数据库引擎升级 R Server 组件。 因此，具体取决于安装的 SQL Server 版本以及是否具有服务器迁移到最新的 R 版本可能与不同的 SQL Server 中运行 R 代码时使用的 R 版本。
 
 ### <a name="determine-the-r-version"></a>确定 R 版本
 
-若要确定 R 版本的最简单方法是通过运行如下所示语句来获取运行时属性：
+若要确定 R 版本的最简单方法是通过运行如下所示的语句获取的运行时属性：
 
-```SQL
+```sql
 exec sp_execute_external_script
        @language = N'R'
        , @script = N'
 # Transform R version properties to data.frame
 OutputDataSet <- data.frame(
-  property_name = c("R.version", "Revo.version"), 
+  property_name = c("R.version", "Revo.version"),
   property_value = c(R.Version()$version.string, Revo.version$version.string),
   stringsAsFactors = FALSE)
 # Retrieve properties like R.home, libPath & default packages
@@ -67,10 +67,10 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 ```
 
-> [!TIP] 
-> 如果 R Services 未工作，请尝试从 RGui 运行 R 的脚本部分。
+> [!TIP]
+> 如果不使用 R Services，请尝试从 RGui 运行 R 脚本部分。
 
-作为最后一招，您可以打开要确定安装的版本的服务器上的文件。 为此，请找到 rlauncher.config 文件，以获取 R 运行时和当前工作目录的位置。 我们建议您创建并打开文件的副本，以便不会意外更改任何属性。
+作为最后的手段，您可以打开要确定安装的版本的服务器上的文件。 若要执行此操作，找到 rlauncher.config 文件，以获取 R 运行时和当前工作目录的位置。 我们建议您创建并打开文件的副本，以便不会意外更改的任何属性。
 
 * SQL Server 2016
   
@@ -90,23 +90,21 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-
-R 控制台在启动时显示的版本信息。 例如，以下版本表示 SQL Server 自 2017 年 1 CTP 2.0 的默认配置：
+在 R 控制台在启动时显示的版本信息。 例如，以下版本表示 SQL Server 2017 CTP 2.0 的默认配置：
 
     *Microsoft R Open 3.3.3*
-    
-    *The enhanced R distribution from Microsoft*
-    
-    *Microsoft packages Copyright (C) 2017 Microsoft*
-    
-    *Loading Microsoft R Server packages, version 9.1.0.*
 
+    *The enhanced R distribution from Microsoft*
+
+    *Microsoft packages Copyright (C) 2017 Microsoft*
+
+    *Loading Microsoft R Server packages, version 9.1.0.*
 
 ## <a name="python-versions"></a>Python 版本
 
-有多种方法可获取的 Python 版本。 最简单方法是从 Management Studio 或任何其他 SQL 查询工具运行此语句：
+有几种方法可获取 Python 版本。 最简单方法是从 Management Studio 或任何其他 SQL 查询工具运行此语句：
 
-```SQL
+```sql
 -- Get Python runtime properties:
 exec sp_execute_external_script
        @language = N'Python'
@@ -121,47 +119,46 @@ OutputDataSet = pandas.DataFrame(
 with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 ```
 
-如果机器学习服务未运行，则可以通过查看 pythonlauncher.config 文件来确定已安装的 Python 版本。 我们建议您创建并打开文件的副本，以便不会意外更改任何属性。
+如果未运行机器学习服务，可以通过查看 pythonlauncher.config 文件来确定已安装的 Python 版本。 我们建议您创建并打开文件的副本，以便不会意外更改的任何属性。
 
-1. 对于 SQL Server 自 2017 年 1 仅： `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. 对于 SQL Server 2017 仅： `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. 获取的值**PYTHONHOME**。
 3. 获取当前工作目录的值。
 
-
 > [!NOTE]
-> 如果你已在 SQL Server 2017 安装 Python 和 R，工作目录和工作人员帐户的库共享 R 和 Python 语言。
+> 如果已在 SQL Server 2017 中安装 Python 和 R，工作目录和辅助角色帐户的池共享的 R 和 Python 语言。
 
-## <a name="are-multiple-instances-of-r-or-python-installed"></a>R 的多个实例或 Python 已安装？
+## <a name="are-multiple-instances-of-r-or-python-installed"></a>多个实例的 R 或 Python 安装？
 
-检查以确定是否在计算机上安装的 R 库的多个副本。 如果可能发生这种重复：
+检查是否在计算机上安装的 R 库的多个副本。 如果，则可能发生这种重复：
 
-* 在安装期间选择 R Services （数据库） 和 R Server （独立）。 
-* 安装 Microsoft R 除了 SQL Server 的客户端。
-* 一组不同的 R 库已通过使用适用于 Visual Studio、 R Studio、 Microsoft R 客户端或另一个的 R IDE R 工具安装。
+* 在安装期间选择 R Services （数据库内） 和 R Server （独立版）。
+* 安装 Microsoft R Client 除了 SQL Server。
+* Visual Studio、 R Studio、 Microsoft R 客户端，或另一个 R IDE 中使用的 R 工具安装一组不同的 R 库。
 * 计算机托管了多个 SQL Server 实例和多个实例使用机器学习。
 
 此规则也适用于 Python。
 
-如果你找到安装的多个库或运行时，请确保你获取仅由 SQL Server 实例使用的 Python 或 R 运行时与关联的错误。
+如果您发现安装了多个库或运行时，请确保您获得仅与 SQL Server 实例使用的 Python 或 R 运行时关联的错误。
 
-## <a name="origin-of-errors"></a>源的错误
+## <a name="origin-of-errors"></a>错误的来源
 
-你尝试运行 R 代码时看到的错误可能来自于任何以下源：
+当您尝试运行 R 代码时遇到的错误可能来自任何以下源：
 
-- SQL Server 数据库引擎，包括存储的过程 sp_execute_external_script
-- SQL Server 受信任的快速启动板 
-- 扩展性框架，包括 R 和 Python 启动器和附属进程的其他组件
-- 提供程序，如 Microsoft 打开数据库连接 (ODBC)
-- R 语言
+* SQL Server 数据库引擎，包括存储的过程 sp_execute_external_script
+* SQL Server 受信任的快速启动板
+* 其他组件的可扩展性框架，包括 R 和 Python 启动器和附属进程
+* 提供程序，如 Microsoft 开放式数据库连接 (ODBC)
+* R 语言
 
-当使用第一次的服务时，它可能很难判断哪些消息来源于哪些服务。 我们建议你捕获确切的消息文本中，不仅能在其中你将看到消息的上下文。 请注意你要用于运行机器学习代码的客户端软件：
+与第一次服务时，将很难判断哪些消息来源于哪些服务。 我们建议您捕获确切的消息文本中，不仅在其中看到消息的上下文。 请注意你要用于运行机器学习代码的客户端软件：
 
-- 你是否正在使用 Management Studio？ 外部应用程序？
-- 在远程客户端，或直接在存储过程中，你将运行 R 代码？
+* 使用 Management Studio？ 外部应用程序？
+* 在远程客户端，或直接在存储过程是否正在运行 R 代码？
 
 ## <a name="sql-server-log-files"></a>SQL Server 日志文件
 
-获取最新的 SQL Server 错误日志。 错误日志的完整集包含以下默认日志目录中的文件：
+获取最新的 SQL Server 错误日志。 错误日志的完整集包括的以下默认日志目录中的文件：
 
 * SQL Server 2016
   
@@ -171,17 +168,16 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.SQL2016\MSSQL\Log\ExtensibilityLog`
 
-> [!NOTE] 
-> 确切的文件夹名称取决于实例名称。
+> [!NOTE]
+> 确切的文件夹名称而异的实例名称。
 
+## <a name="errors-returned-by-spexecuteexternalscript"></a>返回 sp_execute_external_script 的错误
 
-## <a name="errors-returned-by-spexecuteexternalscript"></a>返回的 sp_execute_external_script 错误
+运行 sp_execute_external_script 命令时，如果有，获取，返回的错误的完整文本。
 
-如果有的话，在运行 sp_execute_external_script 命令，就会将返回的错误的完整文本。 
+若要排除在考虑之外的 R 或 Python 的问题，可以运行此脚本，它启动 R 或 Python 运行时并来回传递数据。
 
-要将 R 或 Python 问题在考虑之外，你可以运行此脚本，它启动 R 或 Python 运行时并来回传递数据。
-
-**R**
+**适用于 R**
 
 ```sql
 exec sp_execute_external_script @language =N'R',  
@@ -191,7 +187,7 @@ with result sets (([hello] int not null));
 go
 ```
 
-**For Python**
+**用于 Python**
 
 ```sql
 exec sp_execute_external_script @language =N'Python',  
@@ -201,11 +197,11 @@ with result sets (([hello] int not null));
 go
 ```
 
-## <a name="errors-generated-by-the-extensibility-framework"></a>扩展性框架生成的错误
+## <a name="errors-generated-by-the-extensibility-framework"></a>可扩展性框架所生成的错误
 
-SQL Server 生成单独的外部脚本语言运行时日志。 这些错误不由 Python 或 R 语言生成。 从 SQL Server，包括特定于语言的启动器和其附属进程中的可扩展性组件生成它们时。
+SQL Server 生成单独的外部脚本语言运行时的日志。 这些错误不由 Python 或 R 语言生成。 生成时将其从 SQL Server，包括特定于语言的启动器和其附属进程中的可扩展性组件。
 
-你可以从以下默认位置获取这些日志：
+可以从以下默认位置获取这些日志：
 
 * SQL Server 2016
   
@@ -215,99 +211,97 @@ SQL Server 生成单独的外部脚本语言运行时日志。 这些错误不�
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
 
-> [!NOTE] 
-> 确切的文件夹名称因不同而异的实例名称。 根据您配置，该文件夹可能是不同的驱动器上。
+> [!NOTE]
+> 根据实例名称的确切的文件夹名称有所不同。 具体取决于您的配置，该文件夹可能是不同的驱动器上。
 
-例如，下面的日志消息的 extensibility framework 与相关：
+例如，与可扩展性框架相关的以下日志消息：
 
 * *用户 MSSQLSERVER01 LogonUser 失败*
   
-  这可能表示运行外部脚本的工作帐户无法访问的实例。
+  这可能表示运行外部脚本的辅助角色帐户无法访问实例。
 
-* *InitializePhysicalUsersPool 失败* 
+* *InitializePhysicalUsersPool 失败*
   
-  此消息可能表示你的安全设置，使安装程序，无法创建运行外部脚本所需的工作人员帐户的池。
+  此消息可能意味着您的安全设置将阻止安装程序创建辅助角色帐户来运行外部脚本所需的池。
 
-* *安全上下文管理器初始化失败* 
+* *安全上下文管理器初始化失败*
 
 * *附属会话管理器初始化失败*
 
 ## <a name="system-events"></a>系统事件
 
-1. 打开 Windows 事件查看器，并搜索**系统事件**日志中是否包含字符串的消息*快速启动板*。 
+1. 打开 Windows 事件查看器，并搜索**系统事件**日志中是否包含字符串的消息*快速启动板*。
 2. 打开 ExtLaunchErrorlog 文件，并查找字符串*ErrorCode*。 查看与错误代码关联的消息。
 
-例如，下面的消息是与 SQL Server 扩展性框架相关的常见系统错误： 
+例如，下面的消息是与 SQL Server 可扩展性框架相关的常见系统错误：
 
 * *SQL Server 快速启动板 (MSSQLSERVER) 服务启动因以下错误而失败：  <text>*
 
-* *服务未响应及时启动或控制请求。* 
+* *该服务未响应及时的开始或控制请求。*
 
-* *等待要连接的 SQL Server 快速启动板 (MSSQLSERVER) 服务时达到超时时间 （120000 毫秒为单位）。* 
+* *等待要连接的 SQL Server 快速启动板 (MSSQLSERVER) 服务时达到超时时间 （120000 毫秒为单位）。*
 
 ## <a name="dump-files"></a>转储文件
 
-如果要调试的认识，可以使用转储文件来分析快速启动板中的失败。
+如果您非常了解调试，可以使用转储文件来分析快速启动板中的失败。
 
-1. 找到包含 SQL Server 安装程序启动日志的文件夹。 例如，SQL Server 2016 中的默认路径是 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log。
-2. 打开特定于扩展性的 bootstrap 日志子文件夹。
-3. 如果你需要提交支持请求，请将此文件夹的全部内容添加到压缩文件。 例如，C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog。
+1. 找到包含 SQL Server 安装程序启动日志的文件夹。 例如，在 SQL Server 2016 中，默认路径为 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log。
+2. 打开特定于可扩展性的 bootstrap 日志子文件夹。
+3. 如果你需要提交支持请求，将此文件夹的全部内容添加到一个压缩文件。 例如，C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog。
   
-确切的位置可能会与不同在系统上，并且它可能以外 C 驱动器的驱动器上。 请务必安装机器学习的实例中获取的日志。 
-
+确切位置上您的系统，可能会有所不同，它可能是 C 驱动器以外的驱动器上。 请务必安装机器学习的实例获取的日志。
 
 ## <a name="configuration-settings"></a>配置设置
 
-本部分列出了其他组件或运行 R 或 Python 脚本时，可以是错误的源的提供程序。
+本部分列出了其他组件或在运行 R 或 Python 脚本时，可以是错误的源的提供程序。
 
 ### <a name="what-network-protocols-are-available"></a>提供了哪些网络协议？
 
-机器学习服务需要以下网络协议，对于扩展性组件间的内部通信和与外部 R 或 Python 客户端通信。
+机器学习服务需要以下网络协议的可扩展性组件之间的内部通信和与外部 R 或 Python 客户端进行通信。
 
 * Named pipes
 * TCP/IP
 
-打开 SQL Server 配置管理器以确定是否安装了一种协议，如果已安装，以确定是否启用。
+打开 SQL Server 配置管理器来确定是否安装了一种协议，如果已安装，以确定是否启用。
 
 ### <a name="security-configuration-and-permissions"></a>安全配置和权限
 
-辅助帐户：
+对于辅助角色帐户：
 
-1. 在 Control Panel 中，打开**用户和组**，并找到用于运行外部脚本作业组。 默认情况下，组是**SQLRUserGroup**。
-2. 验证的组存在，并且它包含至少一个辅助进程帐户。
-3. 在 SQL Server Management Studio，选择的实例 R 或 Python 作业要运行中，选择**安全**，然后确定是否存在 SQLRUserGroup 一个登录名。
+1. 在控制面板中，打开**用户和组**，并找到用于运行外部脚本作业的组。 默认情况下，组是**SQLRUserGroup**。
+2. 验证的组存在，并且包含至少一个辅助角色帐户。
+3. 在 SQL Server Management Studio 中，选择的实例，其中将运行 R 或 Python 的作业，选择**安全**，然后再来决定是否存在 SQLRUserGroup 的登录。
 4. 查看用户组的权限。
 
-单个用户帐户：
+为单个用户帐户：
 
-1. 确定实例是否支持混合模式身份验证、 仅限，SQL 登录或 Windows 身份验证。 此设置会影响您的 R 或 Python 代码要求。
-2. 每个用户都需要运行 R 代码，确定所需的每个数据库，其中将从 R 编写对象、 将访问数据，或将创建对象的权限级别。
-3. 若要启用脚本执行，创建角色，或将用户添加到下列角色，根据需要：
+1. 确定实例是否支持混合模式身份验证、 SQL 登录名或仅使用 Windows 身份验证。 此设置会影响你的 R 或 Python 代码的要求。
+2. 对于每个用户都需要运行 R 代码，确定所需的每个数据库，将从 R 编写对象、 将访问数据，或将创建对象的权限级别。
+3. 若要启用脚本执行，请创建角色，或将用户添加到以下角色中，根据需要：
 
-   - 以外的所有*db_owner*： 需要执行任意外部脚本。
-   - *db_datawriter*： 若要从 R 或 Python 写入结果。 
-   - *db_ddladmin*： 若要创建新对象。 
-   - *db_datareader*： 读取使用 R 或 Python 代码的数据。 
-4. 请注意是否在安装 SQL Server 2016 时更改了任何默认的启动帐户。
-5. 如果用户需要安装新的 R 包，或者使用其他用户已安装的 R 包，你可能需要启用的实例上的管理包，然后分配其他权限。 有关详细信息，请参阅[启用或禁用 R 包管理](r\r-package-how-to-enable-or-disable.md)。
+   - 以外的所有*db_owner*:需要执行任何外部脚本。
+   - *db_datawriter*:若要从 R 或 Python 写入结果。
+   - *db_ddladmin*:若要创建新对象。
+   - *db_datareader*:若要读取 R 或 Python 代码使用的数据。
+4. 请注意当你安装 SQL Server 2016 时是否更改任何默认的启动帐户。
+5. 如果用户需要安装新的 R 包或使用其他用户已安装的 R 包，您可能需要在实例上启用包管理并分配其他权限。 有关详细信息，请参阅[启用或禁用 R 包管理](r/r-package-how-to-enable-or-disable.md)。
 
-### <a name="what-folders-are-subject-to-locking-by-antivirus-software"></a>防病毒软件锁定受到哪些文件夹？
+### <a name="what-folders-are-subject-to-locking-by-antivirus-software"></a>锁定的防病毒软件受到哪些文件夹？
 
-防病毒软件可以锁定文件夹，这将阻止这两个安装程序的机器学习功能和成功的脚本执行。 确定 SQL Server 树中的任何文件夹是否受到病毒扫描。
+防病毒软件可以锁定的文件夹，从而阻止这两个安装程序的机器学习功能和成功的脚本执行。 确定 SQL Server 树中的任何文件夹是否受到病毒扫描。
 
-但是，多个服务或功能安装在实例上，它可能很难枚举的实例使用的所有可能的文件夹。 例如，如果添加新功能，必须标识新的文件夹，并且排除。
+但是，当实例上安装了多个服务或功能，它可能很难枚举的实例使用的所有可能的文件夹。 例如，添加新功能，必须标识新的文件夹，并排除。
 
-此外，某些功能创建新文件夹动态在运行时。 例如，内存中 OLTP 表、 存储的过程和函数所有在运行时创建新目录。 通常，这些文件夹名称包含的 Guid，并且无法预测。 SQL Server 受信任的启动板为 R 创建新的工作目录和 Python 作业编写脚本。
+此外，某些功能的新文件夹动态创建在运行时。 例如，内存中 OLTP 表、 存储的过程和函数所有在运行时创建新目录。 通常，这些文件夹名称包含 Guid，并且无法预测。 SQL Server Trusted Launchpad 创建新的工作目录为 R 和 Python 脚本的作业。
 
-由于它可能不能排除所需的 SQL Server 进程和其功能的所有文件夹，我们建议你都排除整个 SQL Server 实例目录树。
+因为它可能不是可以排除所需的 SQL Server 进程和及其功能的所有文件夹，我们建议你都排除整个 SQL Server 实例目录树。
 
-### <a name="is-the-firewall-open-for-sql-server-does-the-instance-support-remote-connections"></a>是 SQL Server 的打开防火墙？ 实例是否支持远程连接？
+### <a name="is-the-firewall-open-for-sql-server-does-the-instance-support-remote-connections"></a>是 SQL Server 防火墙打开？ 该实例是否支持远程连接？
 
 1. 若要确定 SQL Server 是否支持远程连接，请参阅[配置远程服务器连接](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)。
 
-2. 确定是否已为 SQL Server 创建防火墙规则。 出于安全原因，在默认安装中，它可能无法远程 R 或 Python 的客户端才能连接到的实例。 有关详细信息，请参阅[故障排除连接到 SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
-
+2. 确定是否已为 SQL Server 创建防火墙规则。 出于安全原因，在默认安装中，它可能无法远程 R 或 Python 客户端来连接到的实例。 有关详细信息，请参阅[故障排除连接到 SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[解决 SQL Server 中的机器学习](machine-learning-troubleshooting-faq.md)
+[对 SQL Server 中的机器学习进行故障排除](machine-learning-troubleshooting-faq.md)

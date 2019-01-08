@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -17,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155367"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353902"
 ---
 # <a name="xml-source"></a>XML 源
   XML 源读取 XML 数据文件，并用数据填充源输出中的列。  
@@ -66,7 +65,7 @@ ms.locfileid: "48155367"
 ## <a name="configuration-of-the-xml-source"></a>XML 源的配置  
  XML 源支持三种不同的数据访问模式。 您可以指定 XML 数据文件的文件位置、包含文件位置的变量或包含 XML 数据的变量。  
   
- XML 源包括`XMLData`和`XMLSchemaDefinition`可以加载包时通过属性表达式更新的自定义属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)、[在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)和 [XML 源自定义属性](xml-source-custom-properties.md)。  
+ XML 源包括可以在加载包时通过属性表达式进行更新的 `XMLData` 和 `XMLSchemaDefinition` 自定义属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../expressions/integration-services-ssis-expressions.md)、[在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)和 [XML 源自定义属性](xml-source-custom-properties.md)。  
   
  XML 源支持多个常规输出和多个错误输出。  
   
@@ -96,6 +95,6 @@ ms.locfileid: "48155367"
  [使用 XML 源提取数据](xml-source.md)  
   
 ## <a name="related-content"></a>相关内容  
- curatedviews.cloudapp.net 上的专业回答： [如何创建 SSIS 包的 XML 目标](http://go.microsoft.com/fwlink/?LinkId=321993)。  
+ curatedviews.cloudapp.net 上的专业回答： [如何创建 SSIS 包的 XML 目标](https://go.microsoft.com/fwlink/?LinkId=321993)。  
   
   

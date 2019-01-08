@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergedeleteconflictrows
@@ -17,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 270ca534b5527efa9dea52b107166bb445965b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595675"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591171"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +41,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。  
   
- [  **@source_object=**] **'***source_object*****  
+ [  **@source_object=**] **'**_source_object_  
  是源对象的名称。 *source_object*是**nvarchar(386)**，默认值为 NULL。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  是发布服务器的名称。*发布服务器*是**sysname**，默认值为 NULL。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_  
  是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  
@@ -60,7 +59,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|删除冲突的源对象。|  
 |**rowguid**|**uniqueidentifier**|删除冲突的行标识符。|  
-|**conflict_type**|**int**|指示冲突类型的代码：<br /><br /> **1** = UpdateConflict： 在行级别检测到冲突。<br /><br /> **2** = ColumnUpdateConflict： 在列级检测到冲突。<br /><br /> **3** = UpdateDeleteWinsConflict： 删除在冲突中获胜。<br /><br /> **4** = UpdateWinsDeleteConflict： 冲突中落选的已删除的 rowguid 将记录在此表。<br /><br /> **5** = UploadInsertFailed： 无法在发布服务器上应用插入从订阅服务器。<br /><br /> **6** = DownloadInsertFailed： 无法在订阅服务器上应用插入从发布服务器。<br /><br /> **7** = UploadDeleteFailed： 无法将删除在订阅服务器上载到发布服务器。<br /><br /> **8** = DownloadDeleteFailed： 无法为发布服务器上的删除下载到订阅服务器。<br /><br /> **9** = UploadUpdateFailed： 无法在发布服务器上应用在订阅服务器上的更新。<br /><br /> **10** = DownloadUpdateFailed： 发布服务器上的更新无法应用于订阅服务器。|  
+|**conflict_type**|**int**|指示冲突类型的代码：<br /><br /> **1** = UpdateConflict:在行级别检测到冲突。<br /><br /> **2** = ColumnUpdateConflict:在列级检测到冲突。<br /><br /> **3** = UpdateDeleteWinsConflict:删除在冲突中获胜。<br /><br /> **4** = UpdateWinsDeleteConflict:冲突中落选的已删除的 rowguid 将记录在此表。<br /><br /> **5** = UploadInsertFailed:无法在发布服务器上应用插入从订阅服务器。<br /><br /> **6** = DownloadInsertFailed:无法在订阅服务器上应用插入从发布服务器。<br /><br /> **7** = UploadDeleteFailed:到发布服务器，无法上载在订阅服务器上删除。<br /><br /> **8** = DownloadDeleteFailed:删除发布服务器上的无法下载到订阅服务器。<br /><br /> **9** = UploadUpdateFailed:无法在发布服务器上应用在订阅服务器上的更新。<br /><br /> **10** = DownloadUpdateFailed:在发布服务器上的更新无法应用于订阅服务器。|  
 |**reason_code**|**Int**|与上下文相关的错误代码。|  
 |**reason_text**|**varchar(720)**|与上下文相关的错误说明。|  
 |**origin_datasource**|**varchar(255)**|冲突的起源。|  
@@ -73,7 +72,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ## <a name="remarks"></a>备注  
  **sp_helpmergedeleteconflictrows**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergedeleteconflictrows**。  
   
 ## <a name="see-also"></a>请参阅  

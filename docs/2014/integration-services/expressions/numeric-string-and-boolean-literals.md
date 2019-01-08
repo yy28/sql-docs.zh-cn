@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -18,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8555d2789c7466f65fd17d90282b164a068674c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198829"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363899"
 ---
 # <a name="literals-ssis"></a>文字 (SSIS)
   表达式可以包含数值、字符串和布尔文字。 表达式计算器支持多种数值，例如整数、小数和浮点常量。 表达式计算器还支持数值中包含科学记数法和指定表达式计算器如何处理值的 long 和 float 后缀。  
@@ -55,12 +54,12 @@ ms.locfileid: "48198829"
   
 |正则表达式|Description|  
 |------------------------|-----------------|  
-|{D}+{IS}|一个整型数值，具有至少一个数字 (D)，还可以包含长整型和/或无符号后缀 (IS)。  示例：457、785u、986L 和 7945ul。|  
-|{D}+{E}{FS}|一个非整型数值，具有至少一个数字 (D)、科学计数法和 long 或 float 后缀。  示例：4E8l、13e-2f 和 5E+L。|  
-|{D}*"."{D}+{E}?{FS}|一个包含小数位的非整型数值，具有至少有一个数字 (D) 的小数部分、一个指数 (E)（可选）和一个 float 或 long 标识符 (FS)。 此数值的数据类型为 DT_R4 或 DT_R8。  示例：6.45E3f、.89E-2l 和 1.05E+7F。|  
-|{D}+"."{D}*{E}?{FS}|一个非整型数值，具有至少一个有效数字 (D)、一个小数位、一个指数 (E) 和一个 float 或 long 标识符 (FS)。 此数值的数据类型为 DT_R4 或 DT_R8。  示例：1.E-4f、4.6E6L 和 8.365E+2f。|  
+|{D}+{IS}|一个整型数值，具有至少一个数字 (D)，还可以包含长整型和/或无符号后缀 (IS)。  示例：457、 785u、 986l 和 7945ul。|  
+|{D}+{E}{FS}|一个非整型数值，具有至少一个数字 (D)、科学计数法和 long 或 float 后缀。  示例：4E8l、 13e-2f 和 5e+l。|  
+|{D}*"."{D}+{E}?{FS}|一个包含小数位的非整型数值，具有至少有一个数字 (D) 的小数部分、一个指数 (E)（可选）和一个 float 或 long 标识符 (FS)。 此数值的数据类型为 DT_R4 或 DT_R8。  示例：6.45 e 3 f、.89e-2l 和 1.05E + 7F。|  
+|{D}+"."{D}*{E}?{FS}|一个非整型数值，具有至少一个有效数字 (D)、一个小数位、一个指数 (E) 和一个 float 或 long 标识符 (FS)。 此数值的数据类型为 DT_R4 或 DT_R8。  示例：1.E 4f、 4.6E6L 和 8.365E + 2f。|  
 |{D}*.{D}+|具有一定精度和小数位数的非整型数值。 它具有一个小数位和带有至少一个数字 (D) 的小数部分。 此数值的数据类型为 DT_NUMERIC。  示例：.9、5.8 和 0.346。|  
-|{D}+.{D}*|具有一定精度和小数位数的非整型数值。 它至少具有一个有效数字 (D) 和一个小数位。 此数值的数据类型为 DT_NUMERIC。  示例：6.、0.2 和 8.0。|  
+|{D}+.{D}*|具有一定精度和小数位数的非整型数值。 它至少具有一个有效数字 (D) 和一个小数位。 此数值的数据类型为 DT_NUMERIC。  示例：6。、 0.2 和 8.0。|  
 |#{D}+|沿袭标识符。 它由井号 (#) 字符和至少一个数字 (D) 组成。 示例：#123。|  
 |0[xX]{H}+{uU}|以十六进制格式表示的数值。 其中包含一个零、一个大写或小写 x、至少一个大写 H 和无符号后缀（可选）。 示例：0xFF0A 和 0X000010000U。|  
   
@@ -118,6 +117,6 @@ ms.locfileid: "48198829"
 >  在表达式中，布尔值文字必须用空格分隔。  
   
 ## <a name="related-content"></a>相关内容  
- pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=217683)。  
+ pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=217683)。  
   
   

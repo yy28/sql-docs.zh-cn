@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 12/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,20 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 309970ba762b5e616cce10a21d1ef23bfd9097e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740465"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590111"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中正在执行的每个请求的信息。  
-  
-> [!NOTE]  
->  若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。 由此动态管理视图返回的时间值不包括在抢先模式下花费的时间。  
+返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中正在执行的每个请求的信息。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +40,7 @@ ms.locfileid: "47740465"
 |request_id|**int**|请求的 ID。 在会话的上下文中是唯一的。 不可为 null。|  
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
 |status|**nvarchar(30)**|请求的状态。 可以是下列选项之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />挂起<br /><br /> 不可为 null。|  
-|command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />Insert<br />UPDATE<br />删除<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
+|command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />Insert<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
 |sql_handle|**varbinary(64)**|请求的 SQL 文本的哈希映射。 可以为 Null。|  
 |statement_start_offset|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句开始位置的字符数。 可以与 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 动态管理函数一起使用，以便为请求检索当前正在执行的语句。 可以为 Null。|  
 |statement_end_offset|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句结束位置的字符数。 可以与 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 动态管理函数一起使用，以便为请求检索当前正在执行的语句。 可以为 Null。|  
@@ -99,60 +97,97 @@ ms.locfileid: "47740465"
 |is_resumable |**bit** |**适用范围**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示请求是否可恢复索引操作。 |  
 |page_resource |**binary(8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 字节十六进制表示形式的页面资源如果`wait_resource`列包含一个页面。 |
 
-## <a name="permissions"></a>Permissions  
- 如果用户具有`VIEW SERVER STATE`服务器上的权限，用户会执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户会看到仅为当前会话。 `VIEW SERVER STATE` 不能在授予[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]因此`sys.dm_exec_requests`始终被限制为当前连接。 
+## <a name="remarks"></a>备注 
+若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。 由此动态管理视图返回的时间值不包括在抢先模式下花费的时间。
+
+执行中的并行请求时[行模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配工作线程进行协调工作线程负责完成为其分配任务。 在此 DMV 仅处理协调器线程是可见的请求。 列**读取**，**写入**， **logical_reads**，以及**row_count**是**不更新**为协调器线程。 列**wait_type**， **wait_time**， **last_wait_type**， **wait_resource**，和**granted_query_memory**都**只更新一次**处理协调器线程。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+
+## <a name="permissions"></a>权限
+如果用户具有`VIEW SERVER STATE`服务器上的权限，用户会执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户会看到仅为当前会话。 `VIEW SERVER STATE` 不能在授予[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]因此`sys.dm_exec_requests`始终被限制为当前连接。
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. 查找用于运行批处理的查询文本  
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. 查找用于运行批处理的查询文本
+
  以下示例查询 `sys.dm_exec_requests` 以查找感兴趣的查询并从输出复制其 `sql_handle`。  
-  
-```  
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
-  
- 然后，为了获取语句文本，将复制的 `sql_handle` 与系统函数 `sys.dm_exec_sql_text(sql_handle)` 一起使用。  
-  
-```  
+
+然后，为了获取语句文本，将复制的 `sql_handle` 与系统函数 `sys.dm_exec_sql_text(sql_handle)` 一起使用。  
+
+```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
 GO  
-```  
-  
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 查找运行的批处理持有的所有锁  
- 下面的示例查询**sys.dm_exec_requests**若要查找感兴趣的批处理并复制其`transaction_id`输出中。  
-  
-```  
+```
+
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 查找运行的批处理持有的所有锁
+
+下面的示例查询**sys.dm_exec_requests**若要查找感兴趣的批处理并复制其`transaction_id`输出中。
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
+GO
+```
+
+然后，若要查找锁信息，请使用复制`transaction_id`系统函数与**sys.dm_tran_locks**。  
+
+```sql
+SELECT * FROM sys.dm_tran_locks
+WHERE request_owner_type = N'TRANSACTION'
+    AND request_owner_id = < copied transaction_id >;
 GO  
-```  
-  
- 然后，若要查找锁信息，请使用复制`transaction_id`系统函数与**sys.dm_tran_locks**。  
-  
-```  
-SELECT * FROM sys.dm_tran_locks   
-WHERE request_owner_type = N'TRANSACTION'   
-    AND request_owner_id = < copied transaction_id >;  
-GO  
-```  
-  
-### <a name="c-finding-all-currently-blocked-requests"></a>C. 查找当前阻塞的所有请求  
- 下面的示例查询**sys.dm_exec_requests**来查找有关阻止的请求信息。  
-  
-```  
+```
+
+### <a name="c-finding-all-currently-blocked-requests"></a>C. 查找当前阻塞的所有请求
+
+下面的示例查询**sys.dm_exec_requests**来查找有关阻止的请求信息。  
+
+```sql
 SELECT session_id ,status ,blocking_session_id  
-    ,wait_type ,wait_time ,wait_resource   
-    ,transaction_id   
-FROM sys.dm_exec_requests   
+    ,wait_type ,wait_time ,wait_resource
+    ,transaction_id
+FROM sys.dm_exec_requests
 WHERE status = N'suspended';  
 GO  
 ```  
-  
-## <a name="see-also"></a>请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+
+### <a name="d-ordering-existing-requests-by-cpu"></a>D. 排序现有请求 CPU
+
+```sql
+SELECT 
+   req.session_id
+   , req.start_time
+   , cpu_time 'cpu_time_ms'
+   , object_name(st.objectid,st.dbid) 'ObjectName' 
+   , substring
+      (REPLACE
+        (REPLACE
+          (SUBSTRING
+            (ST.text
+            , (req.statement_start_offset/2) + 1
+            , (
+               (CASE statement_end_offset
+                  WHEN -1
+                  THEN DATALENGTH(ST.text)  
+                  ELSE req.statement_end_offset
+                  END
+                    - req.statement_start_offset)/2) + 1)
+       , CHAR(10), ' '), CHAR(13), ' '), 1, 512)  AS statement_text  
+FROM sys.dm_exec_requests AS req  
+   CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) as ST
+   ORDER BY cpu_time desc;
+GO
+```
+
+## <a name="see-also"></a>请参阅
+
+- [动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [与执行相关的动态管理视图和函数](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
+- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
+- [sys.dm_exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

@@ -13,12 +13,12 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1742c706d4a89999c28c5cb29d260eed2c0d0334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104587"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362399"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教程 (SSRS)
   本部分包含有关的教程[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
@@ -39,9 +39,9 @@ ms.locfileid: "48104587"
  按照本教程中的步骤来学习如何使用 ReportViewer 控件来创建包含参数的钻取报表和筛选器。  
   
 ## <a name="see-also"></a>请参阅  
- [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
- [CodePlex (reporting Services 示例 http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
- [TechNet WIKI: SQL Server 2012 示例 (http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [Picnic 数据集 （示例数据） (http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=245471)   
+ [CodePlex (reporting Services 示例 https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
+ [TechNet WIKI:SQL Server 2012 示例 (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [Picnic 数据集 （示例数据） (https://go.microsoft.com/fwlink/?linkID=219108)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

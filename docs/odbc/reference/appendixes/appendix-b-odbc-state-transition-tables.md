@@ -1,5 +1,5 @@
 ---
-title: 附录 b： 状态转换表 |Microsoft Docs
+title: 附录 B：状态转换表 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55fb40d6aa9b235837c761cf1362374d5c77d96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646215"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541065"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>附录 B：ODBC 状态转换表
-本附录中的表显示如何 ODBC 函数导致的环境、 连接、 语句和描述符状态转换。 环境、 连接、 语句或描述符的状态通常决定了可以使用相应类型的句柄 （环境、 连接、 语句或描述符） 的函数可以调用时。 环境、 连接、 语句和描述符状态重叠大致下图中所示。 例如，连接的确切重叠状态 C5，C6 和语句状态 S1 到 S12 是数据源而定，因为事务在不同时间开始对不同的数据源和描述符状态 D1i （隐式已分配的描述符） 取决于描述符与之关联的语句的状态，状态 D1e （显式已分配的描述符） 时不依赖于状态的任何语句。 每个状态的说明，请参阅[环境转换](../../../odbc/reference/appendixes/environment-transitions.md)，[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)，[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述符转换](../../../odbc/reference/appendixes/descriptor-transitions.md)、 本附录中更高版本。  
+# <a name="appendix-b-odbc-state-transition-tables"></a>附录 B：状态转换表
+本附录中的表显示如何 ODBC 函数导致的环境、 连接、 语句和描述符状态转换。 环境、 连接、 语句或描述符的状态通常决定了可以使用相应类型的句柄 （环境、 连接、 语句或描述符） 的函数可以调用时。 环境、 连接、 语句和描述符状态重叠大致下图中所示。 例如，连接的确切重叠状态 C5，C6 和语句状态 S1 到 S12 是数据源决定的因为事务在不同时间开始对不同的数据源和描述符状态 D1i （隐式已分配的描述符） 取决于描述符与之关联的语句的状态，状态 D1e （显式已分配的描述符） 时不依赖于状态的任何语句。 每个状态的说明，请参阅[环境转换](../../../odbc/reference/appendixes/environment-transitions.md)，[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)，[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述符转换](../../../odbc/reference/appendixes/descriptor-transitions.md)、 本附录中更高版本。  
   
  环境和连接状态重叠，如下所示：  
   
@@ -43,17 +43,18 @@ ms.locfileid: "47646215"
   
  转换表中的每个条目可以是下列值之一：  
   
--   **--** ，执行该函数后状态不变。  
+-   **--** 的执行该函数后保持状态不变。  
   
 -   **E**  
-     ***n*** ， **C*n***， **S*n***， 或 **D*n*** -环境、 连接、 语句或描述符状态将移到指定的状态。  
-  
--   **(IH)** — 无效句柄传递给函数。 如果句柄是句柄为空或已有效句柄的类型不正确-例如，传递了当语句句柄时所需的连接句柄，该函数返回 SQL_INVALID_HANDLE;否则，该行为是未定义并可能严重。 仅当其是处于指定状态调用函数的唯一可能的结果时，会显示此错误。 此错误不会更改状态，始终检测由驱动程序管理器中，由括号。  
+
+     **_n_**  ， **C_n_**， **S_n_**，或者**D_n_** -环境、 连接、 语句或描述符状态将更改为指定的状态。  
+ 
+-   **(IH)** -无效的句柄传递给函数。 如果句柄是句柄为空或已有效句柄的类型不正确-例如，连接句柄时传递语句句柄所需-该函数返回 SQL_INVALID_HANDLE;否则，该行为是未定义并可能严重。 仅当其是处于指定状态调用函数的唯一可能的结果时，会显示此错误。 此错误不会更改状态，始终检测由驱动程序管理器中，由括号。  
   
 -   **NS** -下一步的状态。 就像通过异步状态不已经过该语句，语句转换都是相同的。 例如，假设创建结果集的语句将由于从 S1 状态进入状态 S11 **SQLExecDirect**返回 SQL_STILL_EXECUTING。 处于状态 S11 NS 表示法表示语句转换的创建结果集的那些状态 S1 中的语句的相同。 如果**SQLExecDirect**返回错误，该语句将保留在 S1 状态; 如果成功，将该语句设置为状态 S5; 如果它需要数据时，将该语句设置为状态 S8; 并且如果仍在执行，它保持状态 S11。  
-  
--   ***XXXXX***或 **(*XXXXX*)** — 向转换表; 相关的 SQLSTATE检测到由驱动程序管理器的 SQLSTATEs 被括在括号中。 该函数返回 SQL_ERROR 并且指定的 SQLSTATE，但状态不会更改。 例如，如果**SQLExecute**之前，调用**SQLPrepare**，它将返回 SQLSTATE HY010 （函数序列错误）。  
-  
+
+-   **_XXXXX_** 或 **(*XXXXX*)** -的 SQLSTATE 相关向转换表;检测到由驱动程序管理器的 SQLSTATEs 被括在括号中。 该函数返回 SQL_ERROR 并且指定的 SQLSTATE，但状态不会更改。 例如，如果**SQLExecute**之前，调用**SQLPrepare**，它将返回 SQLSTATE HY010 （函数序列错误）。  
+
 > [!NOTE]  
 >  表不会显示与不会更改状态的转换表不相关的错误。 例如，当**SQLAllocHandle**环境状态 E1 中调用，并返回 SQLSTATE HY001 （内存分配错误），环境将保持状态 E1; 的环境转换表中未显示这**SQLAllocHandle**。  
   

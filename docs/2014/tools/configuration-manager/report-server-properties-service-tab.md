@@ -1,22 +1,21 @@
 ---
-title: 报表服务器属性 （服务选项卡） |Microsoft Docs
+title: Report Server 属性（“服务”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478278f6cc0c097fd8ced85ae42990d31b2578c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159017"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803419"
 ---
 # <a name="report-server-properties-service-tab"></a>报表服务器属性（“服务”选项卡）
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报表服务器服务。 如果属性值呈浅灰色，则不能使用此应用程序更改。  
@@ -50,9 +49,9 @@ ms.locfileid: "48159017"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：此服务无法启动。  
+-   禁用：此服务无法启动。  
   
- **State**  
+ **状态**  
  指示此服务是正在运行、已停止还是已禁用。  
   
 ## <a name="see-also"></a>请参阅  

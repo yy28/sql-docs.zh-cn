@@ -14,20 +14,20 @@ ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bc8edc3a898223c49cdf79b1d1691898cc8cc28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47b0d30ac70ff3b7974f7d0530b9fb50494ac424
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168507"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354336"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
-  [ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkId=45250)定义的 ODBC 驱动程序应如何解释**SQLSetEnvAttr**属性来自于 ODBC 2 编写的应用程序的规范。*x*或 ODBC 3。*x* API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合这些规则。  
+  [ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)定义的 ODBC 驱动程序应如何解释**SQLSetEnvAttr**属性来自于 ODBC 2 编写的应用程序的规范。*x*或 ODBC 3。*x* API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合这些规则。  
   
  由控制的属性之一**SQLSetEnvAttr**是是否连接池是要使用。 如果连接池用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序*DriverCompletion*时使用连接参数必须设置为 SQL_DRIVER_NOPROMPT [SQLDriverConnect](sqldriverconnect.md)或**SQLConnect**。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLSetEnvAttr 函数](http://go.microsoft.com/fwlink/?LinkId=59369)   
+ [SQLSetEnvAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59369)   
  [ODBC API 实现细节](odbc-api-implementation-details.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fbc636a4dcf67b6bdeaa17088405ffe079e50d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82e7d14acc5117da28b608e742ad34afa5b652a5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096957"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420328"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合并的权限（主数据服务）
   合并权限应用到实体的所有合并成员的属性值。  
@@ -47,13 +47,13 @@ ms.locfileid: "48096957"
 |----------------|-----------------|  
 |**只读**|显示属性，但是用户不能更改属性值。|  
 |**Update**|显示属性，用户可以更改属性值。|  
-|**拒绝**|不显示属性。<br /><br /> 注意：不能明确拒绝对 Name 和 Code 属性的访问权限。|  
+|**拒绝**|不显示属性。<br /><br /> 注意：不能明确拒绝访问 Name 和 Code 属性。|  
   
 ## <a name="see-also"></a>请参阅  
- [分配模型对象权限&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [分配模型对象权限 (Master Data Services)](assign-model-object-permissions-master-data-services.md)   
  [叶权限&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [模型对象权限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [模型对象权限 (Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

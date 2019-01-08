@@ -1,20 +1,22 @@
 ---
-title: 如何将数据引入到 SQL Server 数据池使用 TRANSACT-SQL |Microsoft Docs
+title: 将数据引入到 SQL Server 数据池
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教程演示如何将数据引入到具有 sp_data_pool_table_insert_data 存储过程的 SQL Server 2019 大数据群集 （预览版） 的数据池。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 142a2db6bc841947a83ada4dc24c59de4e58df8f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221693"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432440"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程： 将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
 
 本教程演示如何使用 TRANSACT-SQL 将数据加载到[数据池](concept-data-pool.md)的 SQL Server 2019 大数据群集 （预览版）。 使用 SQL Server 大数据群集时，可以引入并分布在数据池实例从各种源的数据。
 
@@ -30,17 +32,17 @@ ms.locfileid: "51221693"
 
 ## <a id="prereqs"></a> 先决条件
 
-* [部署 Kubernetes 上的大数据群集](deployment-guidance.md)。
-* [安装 Azure Data Studio 和 SQL Server 2019 扩展](deploy-big-data-tools.md)。
-* [将示例数据加载到群集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [大数据工具](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 扩展**
+- [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>在数据池中创建外部表
 
 以下步骤创建外部表中名为的数据池**web_clickstream_clicks_data_pool**。 此表可以然后使用作为位置的数据引入到大数据群集。
 
-1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](deploy-big-data-tools.md#master)。
+1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
 1. 在该连接上双击**服务器**窗口以显示 SQL Server 主实例的服务器仪表板。 选择**新查询**。
 
@@ -66,7 +68,7 @@ ms.locfileid: "51221693"
       );
    ```
   
-1. 在 CTP 2.1 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. CTP 2.2 中的数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
 
 ## <a name="load-data"></a>加载数据
 

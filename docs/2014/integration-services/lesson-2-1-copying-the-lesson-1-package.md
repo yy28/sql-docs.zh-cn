@@ -1,24 +1,23 @@
 ---
-title: 步骤 1：复制第 1 课包 | Microsoft Docs
+title: 步骤 1：复制第 1 课包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0237707fb5342b490806e3d0b8a2f32b3929ab38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87b0564ddd3fada522b70858341da4ab08c5092e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376060"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>步骤 1：复制 Lesson 1 包
+# <a name="step-1-copying-the-lesson-1-package"></a>步骤 1：复制第 1 课包
   在本任务中，将为第 1 课中创建的 Lesson 1.dtsx 包创建一个副本。 如果未完成第 1 课的学习，则可以向项目添加本教程中附带的已完成 Lesson 1 包，然后再对其进行复制。 将使用这一新副本来完成第 2 课剩余部分。  
   
 ### <a name="to-create-the-lesson-2-package"></a>创建 Lesson 2 包  
@@ -49,11 +48,11 @@ ms.locfileid: "48118641"
   
 3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-4.  单击浏览“(...)”按钮，导航到计算机上的“Lesson 1.dtsx”，然后单击“打开”。  
+4.  单击“浏览(…)”按钮，导航到计算机上的“Lesson 1.dtsx”，然后单击“打开”。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48118641"
 5.  按先前过程中的步骤 3-8 中所述，复制并粘贴 Lesson 1 包。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2：添加和配置 Foreach 循环容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+ [步骤 2:添加和配置 Foreach 循环容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

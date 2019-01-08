@@ -19,17 +19,17 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126868"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360469"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>公共语言运行时 (CLR) 集成的使用方案和示例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括可以用来了解公共语言运行时 (CLR) 集成的可编程性功能的示例应用程序、包示例和多个编码示例。  
   
- 完成 Visual Studio 项目中实现这些示例和其他材料，请访问[Microsoft SQL Server 社区项目和 CodePlex 上的示例](http://go.microsoft.com/fwlink/?LinkID=193935)。  
+ 完成 Visual Studio 项目中实现这些示例和其他材料，请访问[Microsoft SQL Server 社区项目和 CodePlex 上的示例](https://go.microsoft.com/fwlink/?LinkID=193935)。  
   
 |“属性”|Description|  
 |----------|-----------------|  

@@ -1,22 +1,21 @@
 ---
-title: 步骤 1：创建新的 Integration Services 项目 | Microsoft Docs
+title: 步骤 1：创建新的 Integration Services 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 363c3c86c9c98c17d937b1ea766fd2015f985218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eff00a91c6fff1caee5e5fc41dd6d59f8635f78f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147137"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377401"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>步骤 1：创建新的 Integration Services 项目
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建包，第一步是创建一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 此项目包含在数据转换解决方案中使用的数据源、数据源视图和包等对象的模板。  
@@ -26,7 +25,7 @@ ms.locfileid: "48147137"
 > [!NOTE]  
 >  本教程需要 Microsoft SQL Server Data Tools。  
 >   
->  有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](http://msdn.microsoft.com/data/hh297027)。  
+>  有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](https://msdn.microsoft.com/data/hh297027)。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   
@@ -47,6 +46,6 @@ ms.locfileid: "48147137"
 7.  在“解决方案资源管理器”工具栏中，右键单击“Package.dtsx”，再单击“重命名”，将默认包重命名为 **Lesson 1.dtsx**。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2：添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [步骤 2:添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 任务 6： 导入的值从 Cleanse Supplier List 项目 |Microsoft Docs
+title: 任务 6：导入值从 Cleanse Supplier List 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359849"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>任务 6：从 Cleanse Supplier List 项目导入值
-  在该任务中，您将导入在清理过程中收集的数据质量知识。 请参阅[清理项目值导入到域](http://msdn.microsoft.com/library/hh479581.aspx)主题的更多详细信息。 您还将知识库导出到 DQS 文件发布已更新前**供应商**知识库。  
+  在该任务中，您将导入在清理过程中收集的数据质量知识。 请参阅[清理项目值导入到域](https://msdn.microsoft.com/library/hh479581.aspx)主题的更多详细信息。 您还将知识库导出到 DQS 文件发布已更新前**供应商**知识库。  
   
 1.  在主页面中的**DQS 客户端**，单击**右箭头**旁边**供应商**下**最近的知识库**单击**域管理**。  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48137637"
 14. 单击**确定**消息框上。  
   
 ## <a name="next-step"></a>下一步  
- [第 3 课：匹配数据以便从供应商列表中删除重复项](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [第 3 课：从供应商列表匹配数据以便删除重复项](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

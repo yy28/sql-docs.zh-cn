@@ -15,23 +15,23 @@ ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b2873f23046893c93b472168044ad7f67cb7866
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53dca3cc167299a9a1a4b30820d1ad8104756929
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118817"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369749"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 数据读取器任务编辑器（“WMI 选项”页）
   可以使用“WMI 数据读取器任务编辑器”对话框的“WMI 选项”页，指定 Windows Management Instrumentation 查询语言 (WQL) 查询的源和查询结果的目标。  
   
- 若要了解此任务，请参阅 [WMI Data Reader Task](control-flow/wmi-data-reader-task.md)。 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
+ 若要了解此任务，请参阅 [WMI Data Reader Task](control-flow/wmi-data-reader-task.md)。 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
   
 ## <a name="static-options"></a>静态选项  
  **WMIConnectionName**  
  从列表中选择 WMI 连接管理器，或单击“\<新建 WMI 连接…>”，新建一个连接管理器。  
   
- **相关主题：**[WMI 连接管理器](connection-manager/wmi-connection-manager.md)和 [WMI 连接管理器编辑器](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **相关的主题：**[WMI 连接管理器](connection-manager/wmi-connection-manager.md)， [WMI 连接管理器编辑器](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  选择任务运行的 WQL 查询的源类型。 此属性具有下表所列的选项。  
@@ -66,13 +66,13 @@ ms.locfileid: "48118817"
  **WQLQuerySource**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 变量  
  **WQLQuerySource**  
  从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="destinationtype-dynamic-options"></a>DestinationType 动态选项  
   
@@ -80,18 +80,18 @@ ms.locfileid: "48118817"
  **目标**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = 变量  
  **目标**  
  从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI 数据读取器任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [表达式页](expressions/expressions-page.md)   
+ [WMI 数据读取器任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [WMI 事件观察器任务](control-flow/wmi-event-watcher-task.md)  
   
   

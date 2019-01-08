@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -28,15 +27,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126527"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377867"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 排序规则一起使用的字符数据类型，如`char`和`varchar`规定代码页和对应字符可表示该数据类型。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 `char` 和 `varchar` 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
   
  在为您的服务器、数据库、列或表达式选择排序规则时，也在向您的数据分配某些特征，这些特征将会影响数据库中许多操作的结果。 例如，使用 ORDER BY 构造查询时，结果集的排序顺序可能取决于应用于该数据库的排序规则或 COLLATE 子句中在查询的表达式级别规定的排序规则。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48126527"
 |选项|Description|  
 |------------|-----------------|  
 |区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果不选择此选项，则排序规则将不区分大小写。 即 SQL Server 在排序时将大写字母和小写字母视为相同。 通过指定 _CI，可以显式选择不区分大小写。|  
-|区分重音 (_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 SQL Server 在排序时将重音字符和非重音字符视为相同。 通过指定 _AI，可以显式选择不区分重音。|  
+|区分重音 (_AS)|区分重音字符和非重音字符。 例如，a 不等于???。 如果未选择此选项，则排序规则将不区分重音。 即 SQL Server 在排序时将重音字符和非重音字符视为相同。 通过指定 _AI，可以显式选择不区分重音。|  
 |区分假名 (_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 SQL Server 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|  
 |区分全半角 (_WS)|区分全角字符和半角字符。 如果未选择此选项，SQL Server 在排序时将把同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|  
   
@@ -70,9 +69,9 @@ ms.locfileid: "48126527"
  SQL Server 排序规则  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_*) 提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本兼容的排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较将会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文实例时可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_*)，以便与现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则是在安装过程中定义的，因此在以下情况下确保慎重指定排序规则设置：  
->   
+> 
 >  -   应用程序代码依赖早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则的行为。  
 > -   必须存储反映多种语言的字符数据。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48126527"
   
  除了更改服务器的排序规则外，无法更改系统数据库的排序规则。  
   
- 数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在`tempdb`系统数据库，将使用该实例的排序规则。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 `tempdb` 之间的字符数据的查询可能会失败。 您可以通过在查询中指定 COLLATE 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](/sql/t-sql/statements/collations)。  
+ 数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在 `tempdb` 系统数据库中，该数据库将使用实例的排序规则。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 `tempdb` 之间的字符数据的查询可能会失败。 您可以通过在查询中指定 COLLATE 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](/sql/t-sql/statements/collations)。  
   
  列级排序规则  
  当您创建或更改表时，可使用 COLLATE 子句指定每个字符串列的排序规则。 如果未指定排序规则，则为该列分配数据库的默认排序规则。  
@@ -102,7 +101,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Locale_Defn"></a> 区域设置  
- 区域设置是与位置或区域性相关联的一组信息。 它可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)。  
+ 区域设置是与位置或区域性相关联的一组信息。 它可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。  
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
@@ -114,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> Unicode 支持  
- Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储反映多种语言的字符数据，请始终使用 Unicode 数据类型 (`nchar`， `nvarchar`，并`ntext`) 而不是非 Unicode 数据类型 (`char`， `varchar`，并`text`)。  
+ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储的字符数据反映多种语言，则应始终使用 Unicode 数据类型（`nchar`、`nvarchar` 和 `ntext`），而不要使用非 Unicode 数据类型（`char`、`varchar` 和 `text`）。  
   
  非 Unicode 数据类型有明显的局限性， 这是因为非 Unicode 计算机只能使用单个代码页。 通过使用 Unicode 您可能会体验到性能提升，因为需要较少的代码页转换。 必须在数据库级、列级或表达式级单独选择 Unicode 排序规则，因为在服务器级不支持 Unicode 排序规则。  
   
@@ -211,11 +210,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Related_Content"></a> 相关内容  
- [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)  
+ [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)  
+ ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Unicode Consortium 网站](http://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Unicode Consortium 网站](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>请参阅  
  [包含数据库的排序规则](../databases/contained-database-collations.md)   

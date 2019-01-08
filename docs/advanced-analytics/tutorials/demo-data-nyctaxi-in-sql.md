@@ -1,5 +1,5 @@
 ---
-title: 下载 NYC 出租车演示数据和脚本适用于嵌入的 R 和 Python （SQL Server 机器学习） |Microsoft Docs
+title: 下载适用于嵌入的 R 和 Python-SQL Server 机器学习的 NYC 出租车演示数据和脚本
 description: 有关下载纽约市出租车示例数据和创建数据库的说明。 在 SQL Server Python 和 R 语言教程显示如何在 SQL Server 存储过程和 T-SQL 函数中嵌入脚本中使用数据。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 25ac1b4884b0d12de9de59f44ba02ac9fec7e952
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701339"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645019"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC 出租车演示数据的 SQL Server Python 和 R 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何设置由从公共数据组成的一个示例数据库[纽约市出租车和礼车委员会](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。 在多个 R 和 Python 的教程中的 SQL Server 上的数据库内分析使用此数据。 若要使示例代码更快地运行，我们创建了具有代表性的 1%抽样数据。 在系统上的数据库备份文件是略微超过 90 MB，提供在主要数据表中的 1.7 万行。
+本文介绍如何设置由从公共数据组成的一个示例数据库[纽约市出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。 在多个 R 和 Python 的教程中的 SQL Server 上的数据库内分析使用此数据。 若要使示例代码更快地运行，我们创建了具有代表性的 1%抽样数据。 在系统上的数据库备份文件是略微超过 90 MB，提供在主要数据表中的 1.7 万行。
 
 若要完成此练习中，您应有[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或另一个工具，可以还原数据库备份文件和运行 T-SQL 查询。
 
@@ -55,16 +55,16 @@ ms.locfileid: "51701339"
 
 下表总结了在 NYC 出租车演示数据库中创建的对象。
 
-|**对象名称**|**对象类型**|**Description**|
+|**对象名称**|**对象类型**|**说明**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | “数据库” | 创建一个数据库和两个表：<br /><br />dbo.nyctaxi_sample 表： 包含主 NYC 出租车数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 NYC 出租车数据集 1%样本插入此表。<br /><br />dbo.nyc_taxi_models 表： 用于保存已训练的高级的分析模型。|
+|**NYCTaxi_Sample** | “数据库” | 创建一个数据库和两个表：<br /><br />dbo.nyctaxi_sample 表：包含主 NYC 出租车数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 NYC 出租车数据集 1%样本插入此表。<br /><br />dbo.nyc_taxi_models 表：用于保存已训练的高级的分析模型。|
 |**fnCalculateDistance** |标量值函数 (scalar-valued function) | 计算上车和下车位置之间的直接距离。 在使用此函数[创建数据功能](sqldev-create-data-features-using-t-sql.md)，[训练和保存模型](sqldev-train-and-save-a-model-using-t-sql.md)并[操作 R 模型](sqldev-operationalize-the-model.md)。|
 |**fnEngineerFeatures** |表值函数 (table-valued function) | 创建新的数据功能，用于为模型定型。 在使用此函数[创建数据功能](sqldev-create-data-features-using-t-sql.md)并[实施 R 模型](sqldev-operationalize-the-model.md)。|
 
 
 使用 R 和 Python 脚本找到各种教程中创建的存储的过程。 下表总结了从多个课程运行脚本时可以选择添加对 NYC 出租车演示数据库的存储的过程。
 
-|**存储的过程**|**语言**|**Description**|
+|**存储的过程**|**语言**|**说明**|
 |-------------------------|------------|---------------|
 |**RxPlotHistogram** |R | 调用 RevoScaleR rxHistogram 函数绘制变量的直方图，然后返回将绘图作为二进制对象。 在使用此存储的过程[浏览和可视化数据](sqldev-explore-and-visualize-the-data.md)。|
 |**RPlotRHist** |R| 创建使用 Hist 函数的图形，并将输出保存为本地 PDF 文件。 在使用此存储的过程[浏览和可视化数据](sqldev-explore-and-visualize-the-data.md)。|
@@ -88,7 +88,7 @@ ms.locfileid: "51701339"
 
 3. 在数据库中是**nyctaxi_sample**包含数据集的表。 已针对通过添加基于集的计算进行优化的表[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。 运行此语句生成表上的快速摘要。
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

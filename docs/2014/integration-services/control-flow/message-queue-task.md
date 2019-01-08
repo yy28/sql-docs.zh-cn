@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
@@ -18,12 +17,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31175748ef4f7998eae15dcd2a2c03e878abe071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b144e8e3ca5bcf96b588e8579dcdb52faa9e4f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165147"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360919"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
@@ -38,7 +37,7 @@ ms.locfileid: "48165147"
   
  发送或接收消息时，“消息队列”任务使用以下四种消息类型之一：数据文件、字符串、变量的字符串消息或变量。 仅在接收消息时才能使用针对变量消息类型的字符串消息。  
   
- 任务使用 MSMQ 连接管理器连接到消息队列。 有关详细信息，请参阅 [MSMQ 连接管理器](../connection-manager/msmq-connection-manager.md)。 有关消息队列的详细信息，请参阅 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022)。  
+ 任务使用 MSMQ 连接管理器连接到消息队列。 有关详细信息，请参阅 [MSMQ 连接管理器](../connection-manager/msmq-connection-manager.md)。 有关消息队列的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)。  
   
  消息队列任务要求安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的 **“要安装的组件”** 页或 **“功能选择”** 页上选择安装某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，将同时安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集。 这些组件对特定任务是有用的，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能将受到限制。 例如， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项会安装设计包所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，但不安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，因此消息队列任务不起作用。 为了确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] “要安装的组件” **页上选择** 。 有关安装和运行“消息队列”任务的详细信息，请参阅 [安装 Integration Services](../install-windows/install-integration-services.md)。  
   
@@ -48,11 +47,11 @@ ms.locfileid: "48165147"
 ## <a name="message-types"></a>消息类型  
  可以按下列方式配置消息队列任务提供的消息类型：  
   
--   `Data file` 消息指定一个文件包含的消息。 在接收消息时，可以将任务配置为保存文件、覆盖现有文件以及指定该任务可从中接收消息的包。  
+-   `Data file` 消息指定文件包含消息。 在接收消息时，可以将任务配置为保存文件、覆盖现有文件以及指定该任务可从中接收消息的包。  
   
--   `String` 消息以字符串形式指定的消息。 在接收消息时，可以将任务配置为比较接收到的字符串和用户定义字符串，并根据对比结果执行操作。 字符串比较可以是完全匹配、区分大小写或不区分大小写，或者使用子字符串。  
+-   `String` 消息将消息指定为字符串。 在接收消息时，可以将任务配置为比较接收到的字符串和用户定义字符串，并根据对比结果执行操作。 字符串比较可以是完全匹配、区分大小写或不区分大小写，或者使用子字符串。  
   
--   `String message to variable` 源消息指定发送到目标变量的字符串。 可以将任务配置为使用完全匹配、不区分大小写或子字符串的比较方式来比较接收到的字符串和用户定义字符串。 这种消息类型只能在任务接收消息时使用。  
+-   `String message to variable` 将源消息指定为发送到目标变量的字符串。 可以将任务配置为使用完全匹配、不区分大小写或子字符串的比较方式来比较接收到的字符串和用户定义字符串。 这种消息类型只能在任务接收消息时使用。  
   
 -   `Variable` 指定消息包含一个或多个变量。 可以将任务配置为指定消息中所包含变量的名称。 在接收消息时，可以将任务配置为指定任务从中接收消息的包和作为消息目标的变量。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48165147"
   
 -   如果消息存储在 `Data file` 中，则覆盖现有文件。  
   
--   消息文件另存为不同的文件名称，如果消息使用`Data file message`类型。  
+-   如果消息使用 `Data file message` 类型，则将消息文件另存为其他文件名。  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>消息队列任务可用的自定义日志记录消息  
  下表列出了消息队列任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
@@ -89,11 +88,11 @@ ms.locfileid: "48165147"
 ## <a name="configuration-of-the-message-queue-task"></a>消息队列任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
   
--   [消息队列任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [消息队列任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [消息队列任务编辑器&#40;接收页&#41;](../message-queue-task-editor-receive-page.md)  
+-   [消息队列任务编辑器（“接收”页）](../message-queue-task-editor-receive-page.md)  
   
--   [消息队列任务编辑器&#40;发送页&#41;](../message-queue-task-editor-send-page.md)  
+-   [消息队列任务编辑器（“发送”页）](../message-queue-task-editor-send-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

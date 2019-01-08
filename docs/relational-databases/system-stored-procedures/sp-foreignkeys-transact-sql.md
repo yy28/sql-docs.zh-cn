@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605175"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589939"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_server =** ] **'***table_server*****  
+ [  **@table_server =** ] **'**_table_server_  
  要为其返回表信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
   
- [  **@pktab_name =** ] **'***pktab_name*****  
+ [  **@pktab_name =** ] **'**_pktab_name_  
  包含主键的表的名称。 *pktab_name*是**sysname**，默认值为 NULL。  
   
- [  **@pktab_schema =** ] **'***pktab_schema*****  
+ [  **@pktab_schema =** ] **'**_pktab_schema_  
  包含主键的架构的名称。 *pktab_schema*是**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含所有者名称。  
   
- [  **@pktab_catalog =** ] **'***pktab_catalog*****  
+ [  **@pktab_catalog =** ] **'**_pktab_catalog_  
  包含主键的目录的名称。 *pktab_catalog*是**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该名称包含数据库名称。  
   
- [  **@fktab_name =** ] **'***fktab_name*****  
+ [  **@fktab_name =** ] **'**_fktab_name_  
  是具有外键的名称。 *fktab_name*是**sysname**，默认值为 NULL。  
   
- [  **@fktab_schema =** ] **'***fktab_schema*****  
+ [  **@fktab_schema =** ] **'**_fktab_schema_  
  包含外键的架构的名称。 *fktab_schema*是**sysname**，默认值为 NULL。  
   
- [  **@fktab_catalog =** ] **'***fktab_catalog*****  
+ [  **@fktab_catalog =** ] **'**_fktab_catalog_  
  包含外键的目录的名称。 *fktab_catalog*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  
   
 ## <a name="result-sets"></a>结果集  
- 多种 DBMS 产品支持表的三部分命名 (*目录 ***。*** 架构 ***。*** 表*)，这将表现在结果集。  
+ 多种 DBMS 产品支持表的三部分命名 (_目录_**。**_架构_**。**_表_)，这将表现在结果集。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -95,7 +95,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ## <a name="remarks"></a>备注  
  **sp_foreignkeys**查询的 FOREIGN_KEYS 行集**IDBSchemaRowset**对应的 OLE DB 访问接口的接口*table_server*。 *Table_name*， *table_schema*， *table_catalog*，以及*列*参数传递给此接口的行进行限制返回。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

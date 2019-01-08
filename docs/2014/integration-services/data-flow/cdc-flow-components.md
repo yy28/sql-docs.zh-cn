@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 306d810d844140caf0d3ee0e5cfe04fcae55e3fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120135"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359999"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -43,7 +42,7 @@ ms.locfileid: "49120135"
 ### <a name="version-support"></a>版本支持  
  用于 SSIS 的 CDC 组件支持下列 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 产品：  
   
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Microsoft   
+-   Microsoft [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
   
 -   Microsoft [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 或 2010  
   
@@ -136,7 +135,7 @@ ms.locfileid: "49120135"
   
  CDC 状态变量的值需要在持久存储中维护，应该在启动 CDC 处理之前读取该值，并应在处理完成后与当前状态一同保存。 加载和存储 CDC 状态的任务可由 SSIS 开发人员处理，但是 CDC 控制组件可以通过在数据库表中维护 CDC 状态值来自动处理此任务。  
   
-## <a name="security-considerations"></a>安全注意事项  
+## <a name="security-considerations"></a>需要考虑的安全性因素  
  本节列出了与在 SSIS 中使用 CDC 组件相关的一些安全注意事项。  
   
 ### <a name="access-authorization-to-change-data"></a>针对更改数据的访问授权  
@@ -205,17 +204,17 @@ ms.locfileid: "49120135"
   
 ## <a name="related-content"></a>相关内容  
   
--   mattmasson.com 上的博客文章 [SSIS 中针对 SQL Server 2012 的 CDC](http://go.microsoft.com/fwlink/?LinkId=242543)。  
+-   mattmasson.com 上的博客文章 [SSIS 中针对 SQL Server 2012 的 CDC](https://go.microsoft.com/fwlink/?LinkId=242543)。  
   
--   blogs.msdn.com 上有关设置 CDC 服务的博客文章 [SQL Server 2012 中 Oracle 的 CDC](http://go.microsoft.com/fwlink/?LinkId=247827)。  
+-   blogs.msdn.com 上有关设置 CDC 服务的博客文章 [SQL Server 2012 中 Oracle 的 CDC](https://go.microsoft.com/fwlink/?LinkId=247827)。  
   
--   social.technet.microsoft.com 上的技术文章 [安装 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)。  
+-   social.technet.microsoft.com 上的技术文章 [安装 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)。  
   
--   social.technet.microsoft.com 上的技术文章 [解决 Microsoft Change Data Capture for Oracle by Attunity 中的配置问题](http://go.microsoft.com/fwlink/?LinkId=252960)。  
+-   social.technet.microsoft.com 上的技术文章 [解决 Microsoft Change Data Capture for Oracle by Attunity 中的配置问题](https://go.microsoft.com/fwlink/?LinkId=252960)。  
   
--   social.technet.microsoft.com 上的技术文章 [解决 Microsoft Change Data Capture for Oracle by Attunity 中的 CDC 实例错误问题](http://go.microsoft.com/fwlink/?LinkId=252961)。  
+-   social.technet.microsoft.com 上的技术文章 [解决 Microsoft Change Data Capture for Oracle by Attunity 中的 CDC 实例错误问题](https://go.microsoft.com/fwlink/?LinkId=252961)。  
   
--   technet.microsoft.com 上的视频 [使用 SQL Server Integration Services 2012 时 Oracle 数据库的 CDC（SQL Server 视频）](http://technet.microsoft.com/sqlserver/jj218898)。  
+-   technet.microsoft.com 上的视频 [使用 SQL Server Integration Services 2012 时 Oracle 数据库的 CDC（SQL Server 视频）](https://technet.microsoft.com/sqlserver/jj218898)。  
   
 ## <a name="see-also"></a>请参阅  
  [CDC 控制任务](../control-flow/cdc-control-task.md)  

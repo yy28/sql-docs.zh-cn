@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -21,12 +20,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1a426f91af1f284cc0e60505dc2fcbfae9c4ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147549"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377559"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为管理员提供了一种特殊的诊断连接，以供在无法与服务器建立标准连接时使用。 即使在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不响应标准连接请求时，管理员也可以使用此诊断连接访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便执行诊断查询并解决问题。  
@@ -37,7 +36,7 @@ ms.locfileid: "48147549"
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 ## <a name="connecting-with-dac"></a>使用 DAC 连接  
  默认情况下，只能从服务器上运行的客户端建立连接。 不允许进行网络连接，除非它们是使用带 [remote admin connections 选项](remote-admin-connections-server-configuration-option.md)的 sp_configure 存储过程配置的。  
@@ -55,7 +54,7 @@ ms.locfileid: "48147549"
   
 -   DAC 最初尝试连接到与登录帐户关联的默认数据库。 连接成功后，可以连接到 master 数据库。 如果默认数据库脱机或不可用，则连接返回错误 4060。 但是，如果使用以下命令覆盖默认数据库，改为连接到 master 数据库，则连接会成功：  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      由于只要启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，就能保证 master 数据库处于可用状态，因此建议使用 DAC 连接到 master 数据库。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48147549"
   
 -   查询目录视图。  
   
--   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、 DBCC FREESYSTEMCACHE、 DBCC DROPCLEANBUFFERS`,`和 DBCC SQLPERF。 请勿运行需要消耗大量资源的命令，如 **DBCC** CHECKDB、DBCC DBREINDEX 或 DBCC SHRINKDATABASE。  
+-   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 和 DBCC SQLPERF。 请勿运行需要消耗大量资源的命令，如 **DBCC** CHECKDB、DBCC DBREINDEX 或 DBCC SHRINKDATABASE。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL\<spid> 命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
   
@@ -94,16 +93,16 @@ ms.locfileid: "48147549"
   
  DAC 端口由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时动态分配。 当连接到默认实例时，DAC 会避免在连接时对 SQL Server Browser 服务使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解决协议 (SSRP) 请求。 它先通过 TCP 端口 1434 进行连接。 如果失败，则通过 SSRP 调用来获取端口。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有侦听 SSRP 请求，则连接请求将返回错误。 若要了解 DAC 所侦听的端口号，请参阅错误日志。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为接受远程管理连接，则必须使用显式端口号启动 DAC：  
   
- sqlcmd–Stcp: \<server>,\<port>  
+ **sqlcmd Stcp:** *\<服务器 >，\<端口 >*  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志列出了 DAC 的端口号，默认情况下为 1434。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只接受本地 DAC 连接，请使用以下命令和环回适配器进行连接：  
   
- **sqlcmd – S127.0.0.1**，`1434`  
+ **sqlcmd S127.0.0.1**，`1434`  
   
 ## <a name="example"></a>示例  
  在此示例中，管理员发现服务器 `URAN123` 不响应，因此要诊断该问题。 为此，用户激活 `sqlcmd` 命令提示实用工具，并使用 `URAN123` 指明 DAC 连接到服务器 `-A` 。  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  现在，管理员可以执行查询来诊断问题，并且可以终止停止响应的会话。  
   

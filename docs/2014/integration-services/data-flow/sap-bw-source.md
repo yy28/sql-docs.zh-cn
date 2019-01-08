@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159965"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374742"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
   SAP BW 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件。 因此，SAP BW 源从 SAP Netweaver BW 版本 7 系统提取数据，并将这些数据提供给 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据流。  
@@ -107,7 +106,7 @@ ms.locfileid: "48159965"
   
     -   对于“E - 仅提取”选项，提供请求 ID。  
   
--   指定字符串转换规则。 (例如，将根据是否在 SAP Netweaver BW 系统为 Unicode 或不是，所有字符串都转换或都转换所有字符串转换为`varchar`或`nvarchar`)。  
+-   指定字符串转换规则。 （例如，根据 SAP Netweaver BW 是否为 Unicode 转换所有字符串，或者将所有字符串转换为 `varchar` 或 `nvarchar`）。  
   
 -   使用您选择的选项预览要提取的数据。  
   
@@ -115,18 +114,18 @@ ms.locfileid: "48159965"
   
  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  
   
- 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](http://go.microsoft.com/fwlink/?LinkID=137090)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
+ 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server 2008 Integration Services 与 SAP BI 7.0 一起使用](https://go.microsoft.com/fwlink/?LinkID=137090)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 设计器配置源  
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的 SAP BW 源属性的详细信息，请单击以下主题之一：  
   
--   [SAP BW 源编辑器&#40;连接管理器页&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 源编辑器（“连接管理器”页）](sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 源编辑器&#40;列页&#41;](sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 源编辑器（“列”页）](sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 源编辑器&#40;错误输出页&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 源编辑器（“错误输出”页）](sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 源编辑器&#40;高级页&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 源编辑器（“高级”页）](sap-bw-source-editor-advanced-page.md)  
   
  在配置 SAP BW 源的同时，您还可使用各种对话框查找 SAP Netweaver BW 对象或预览源数据。 有关这些对话框的详细信息，请单击以下主题之一进行了解：  
   

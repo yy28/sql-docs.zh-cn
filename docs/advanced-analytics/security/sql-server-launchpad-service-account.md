@@ -1,5 +1,5 @@
 ---
-title: SQL Server 快速启动板服务帐户配置 |Microsoft Docs
+title: SQL Server 快速启动板服务帐户配置 SQL Server 机器学习服务
 description: 如何修改用于 SQL Server 上的外部脚本执行的 SQL Server 快速启动板服务帐户。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 8af27f3bc9fb3e5b602ef6ad5555d9bd8c6720ca
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: aa4d6c38423a805ef672761e3f202061ed842304
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419112"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596371"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server 快速启动板服务配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,12 +62,14 @@ ms.locfileid: "49419112"
 
 下表列出了的高级的设置[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，及其允许值。
 
-|**设置名称**|**类型**|**Description**|
+|**设置名称**|**类型**|**说明**|
 |----|----|----|
-|作业\_清理\_ON\_退出|Integer |这是一项内部设置仅 – 请不要更改此值。 </br></br>指定是否为每个外部运行时会话创建的临时工作文件夹应清理完成会话后。 此设置有助于调试。 </br></br>支持的值为**0** （禁用） 或**1** （启用）。 </br></br>默认值为 1，退出时删除含义日志文件。|
-|跟踪\_级别|Integer |出于调试目的配置 MSSQLLAUNCHPAD 的跟踪详细级别。 这会影响由 LOG_DIRECTORY 设置指定的路径中的跟踪文件。 </br></br>支持的值为： **1** （错误）， **2** （性能） **3** （警告）， **4** （信息）。 </br></br>默认值为 1，这意味着只输出错误。|
+|作业\_清理\_ON\_退出|Integer |这是一项内部设置仅-不更改此值。 </br></br>指定是否为每个外部运行时会话创建的临时工作文件夹应清理完成会话后。 此设置有助于调试。 </br></br>支持的值为**0** （禁用） 或**1** （启用）。 </br></br>默认值为 1，退出时删除含义日志文件。|
+|跟踪\_级别|Integer |出于调试目的配置 MSSQLLAUNCHPAD 的跟踪详细级别。 这会影响由 LOG_DIRECTORY 设置指定的路径中的跟踪文件。 </br></br>支持的值为：**1** （错误）， **2** （性能）， **3** （警告）， **4** （信息）。 </br></br>默认值为 1，这意味着只输出错误。|
 
 所有设置采用键-值对的格式，每项设置单独占用一行。 例如，若要更改的跟踪级别，需要添加行`Default: TRACE_LEVEL=4`。
+
+<a name="bkmk_EnforcePolicy"></a>
 
 ## <a name="enforcing-password-policy"></a>强制实施密码策略
 

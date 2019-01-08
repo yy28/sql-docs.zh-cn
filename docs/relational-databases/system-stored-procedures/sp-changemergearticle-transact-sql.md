@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752265"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823141"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +46,18 @@ sp_changemergearticle [ @publication = ] 'publication'
  [ **@publication=**] **'***publication***'**  
  包含该项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [ **@article=**] **'***文章*****  
  要更改的项目的名称。 *文章*是**sysname**，无默认值。  
   
  [  **@property=**] **'***属性*****  
  给定项目和发布的要更改的属性。 *属性*是**nvarchar(30)**，并可以将值中的一个表中列出。  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  是指定的属性的新值。 *值*是**nvarchar(1000)**，并可以将值中的一个表中列出。  
   
  下表说明项目的属性和这些属性的值。  
   
-|“属性”|值|Description|  
+|属性|值|Description|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|允许对项目使用交互式冲突解决程序。|  
 ||**false**|不允许对项目使用交互式冲突解决程序。|  
@@ -67,7 +66,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|将订阅服务器上的 INSERT 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
 ||**0x20**|将订阅服务器上的 UPDATE 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
 ||**0x40**|将订阅服务器上的 DELETE 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
-|**column_tracking**|**true**|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意： 不能使用列级跟踪，当发布超过 246 列的表。|  
+|**column_tracking**|**true**|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意：当发布超过 246 列的表时，列级跟踪无法使用。|  
 ||**false**|关闭列级跟踪，保留行级冲突检测。 仅适用于表项目。|  
 |**compensate_for_errors**|**true**|同步过程中发生错误时执行补救措施。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 ||**false**|不执行补救措施，这是默认行为。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> **\*\* 重要\* \*** 尽管受影响的行中的数据看起来有点不收敛，就立即解决的任何错误，可以应用更改和数据也会收敛。 如果在另一个发布，再选择的值已发布项目的源表*compensate_for_errors*必须是两个项目相同的。|  
@@ -86,7 +85,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**partition_options**|**0**|项目的筛选是静态的，或者不会为每个分区生成唯一数据子集（即“重叠”分区）。|  
 ||**1**|分区是重叠的，订阅服务器上执行的 DML 更新无法更改行所属的分区。|  
 ||**2**|对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收到相同的分区。|  
-||**3**|对项目的筛选将为每个订阅生成唯一的不重叠分区。<br /><br /> 注意： 如果指定的值**3**有关**partition_options**，可以仅单个订阅的每个分区的这篇文章中的数据。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。|  
+||**3**|对项目的筛选将为每个订阅生成唯一的不重叠分区。<br /><br /> 注意：如果指定的值**3**有关**partition_options**，可以仅单个订阅的每个分区的这篇文章中的数据。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。|  
 |**pre_creation_command**|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 ||**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 ||**删除**|删除该表，然后重新创建一个表。|  
@@ -150,7 +149,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|不通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 |NULL（默认值）||返回支持的值的列表*属性*。|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
@@ -241,7 +240,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergearticle**。  
   
 ## <a name="see-also"></a>请参阅  

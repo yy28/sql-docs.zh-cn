@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0463360db65621a90f270c2eedb87972c6bd986b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088539"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979453"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
   表值函数是返回表的用户定义函数。  
@@ -45,11 +45,11 @@ ms.locfileid: "48088539"
  表值参数即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 表值参数提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 表值参数还有助于减少到服务器的往返次数。 可以将数据作为表值参数发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关表值参数的详细信息，请参阅[使用表值参数（数据引擎）](../tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>输出参数和表值函数  
- 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 你必须指定该参数通过引用并应用\<out （) > 属性以表示输出参数，如以下所示：  
+ 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 你必须按引用指定参数并应用\<out （) > 属性以表示输出参数，如以下所示：  
   
 ```vb  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)  
 ```  
   
@@ -175,7 +175,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>示例：返回 SQL Server 查询的结果  
- 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 请参阅[ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843)有关下载 AdventureWorks 的详细信息。  
+ 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 请参阅[ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843)有关下载 AdventureWorks 的详细信息。  
   
  将源代码文件命名为 FindInvalidEmails.cs 或 FindInvalidEmails.vb。  
   

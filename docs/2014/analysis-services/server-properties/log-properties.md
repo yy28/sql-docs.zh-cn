@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b72ef3d7579cdcd8e1d3be83d7caf8d202d1bca7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204837"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374589"
 ---
 # <a name="log-properties"></a>日志属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的日志服务器属性 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
@@ -86,7 +86,7 @@ ms.locfileid: "48204837"
  在服务器执行处理操作期间使用的一个默认属性。  
   
  **ErrorLog\KeyErrorAction**  
- 指定发生 `KeyNotFound` 错误时服务器执行的操作。 对此错误的有效响应包括：  
+ 指定发生 `KeyNotFound` 错误时服务器所执行的操作。 对此错误的有效响应包括：  
   
 -   `ConvertToUnknown` 指示服务器将错误键值分配给未知成员。  
   
@@ -103,25 +103,25 @@ ms.locfileid: "48204837"
   
 -   `StopProcessing` 指示服务器在达到错误限制时停止处理。  
   
--   `StopLogging` 指示服务器在达到错误限制时停止记录错误，但允许处理继续。  
+-   `StopLogging` 指示服务器在达到错误限制时停止记录错误，但允许继续处理。  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- 指定发生 `KeyNotFound` 错误时服务器执行的操作。 对此错误的有效响应包括：  
+ 指定发生 `KeyNotFound` 错误时服务器所执行的操作。 对此错误的有效响应包括：  
   
--   `IgnoreError` 指示服务器继续处理但不记录该错误或针对键错误限制进行计数。 通过忽略该错误，您可以继续处理而不会增加错误计数或将错误记录至屏幕或日志文件。 有关记录具有数据完整性问题，无法添加到数据库。 该记录或者将被弃用，或者聚合到未知成员，具有情况由 `KeyErrorAction` 属性确定。  
+-   `IgnoreError` 指示服务器继续处理而不记录错误或一直计数至键错误限制。 通过忽略该错误，您可以继续处理而不会增加错误计数或将错误记录至屏幕或日志文件。 有关记录具有数据完整性问题，无法添加到数据库。 该记录或者被弃用，或者聚合到未知成员，具体情况由 `KeyErrorAction` 属性决定。  
   
--   `ReportAndContinue` 指示服务器记录该错误，针对键错误限制进行计数，并继续处理。 触发错误的记录被弃用或转换为未知成员。  
+-   `ReportAndContinue` 指示服务器记录错误、一直将错误计数至键错误限制并继续处理。 触发错误的记录被弃用或转换为未知成员。  
   
 -   `ReportAndStop` 指示服务器记录错误并立即停止处理，而不管键错误限制如何。 触发错误的记录被弃用或转换为未知成员。  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- 指定发现重复键时服务器所执行的操作。 有效值包括 `IgnoreError`（用于继续处理，就好像未发生错误）、`ReportAndContinue`（用于记录错误并继续处理）和 `ReportAndStop`（用于记录错误并立即停止处理，即使错误计数低于错误限制时也如此）。  
+ 指定发现重复键时服务器所执行的操作。 `IgnoreError`有效值包括用于继续处理（就好像该错误没有发生）的 `ReportAndContinue`、用于记录错误并继续处理的 `ReportAndStop` 以及用于记录错误并立即停止处理（即使错误计数低于错误限制）的 。  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- 指定在将 Null 键转换为未知成员后服务器所执行的操作。 有效值包括 `IgnoreError`（用于继续处理，就好像未发生错误）、`ReportAndContinue`（用于记录错误并继续处理）和 `ReportAndStop`（用于记录错误并立即停止处理，即使错误计数低于错误限制时也如此）。  
+ 指定在将 Null 键转换为未知成员后服务器所执行的操作。 `IgnoreError`有效值包括用于继续处理（就好像该错误没有发生）的 `ReportAndContinue`、用于记录错误并继续处理的 `ReportAndStop` 以及用于记录错误并立即停止处理（即使错误计数低于错误限制）的 。  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- 指定 `NullProcessing` 针对维度属性设置为 `Error` 时服务器执行的操作。 给定属性中不允许有 Null 值时，将生成错误。 此错误配置属性会通知下一步报告该错误，并继续进行处理，直至达到错误限制。 有效值包括 `IgnoreError`（用于继续处理，就好像未发生错误）、`ReportAndContinue`（用于记录错误并继续处理）和 `ReportAndStop`（用于记录错误并立即停止处理，即使错误计数低于错误限制时也如此）。  
+ `NullProcessing`指定 `Error` 针对某个维度属性设置为  时服务器所执行的操作。 给定属性中不允许有 Null 值时，将生成错误。 此错误配置属性会通知下一步报告该错误，并继续进行处理，直至达到错误限制。 `IgnoreError`有效值包括用于继续处理（就好像该错误没有发生）的 `ReportAndContinue`、用于记录错误并继续处理的 `ReportAndStop` 以及用于记录错误并立即停止处理（即使错误计数低于错误限制）的 。  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  在服务器执行处理操作期间使用的一个默认属性。  
@@ -199,7 +199,7 @@ ms.locfileid: "48204837"
  此属性的默认值为 false，指示服务器不会自动创建日志表，并且不记录查询事件。  
   
 > [!NOTE]  
->  有关配置查询日志的详细信息，请参阅 [配置 Analysis Services 查询日志](http://go.microsoft.com/fwlink/?LinkId=81890)。  
+>  有关配置查询日志的详细信息，请参阅 [配置 Analysis Services 查询日志](https://go.microsoft.com/fwlink/?LinkId=81890)。  
   
 ## <a name="trace"></a>跟踪  
  **Trace\TraceBackgroundDistributionPeriod**  

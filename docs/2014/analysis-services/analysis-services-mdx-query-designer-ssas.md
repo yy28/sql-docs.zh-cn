@@ -13,12 +13,12 @@ ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89818073559b3a6b6faab919691a62899b442e3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113417"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357285"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 查询设计器 (SSAS)
   Analysis Services 多维表达式 (MDX) 查询设计器提供了图形用户界面，可帮助你为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源创建 MDX 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动所选多维数据集的成员，以生成可检索要使用的数据的 MDX 查询。  
@@ -60,18 +60,18 @@ ms.locfileid: "48113417"
  不支持从文件导入 .mdx 查询。  
   
 > [!NOTE]  
->  有关 MDX 的详细信息以及有关 MDX 查询设计器的常规信息，请参阅 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=98335)中的“MDX 查询编辑器（Analysis Services - 多维数据）”。  
+>  有关 MDX 的详细信息以及有关 MDX 查询设计器的常规信息，请参阅 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?linkid=98335)中的“MDX 查询编辑器（Analysis Services - 多维数据）”。  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>设计模式下的图形 MDX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表列出了这些按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
 |![更改为 MDX 查询视图](media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|切换到命令类型 MDX。|  
 |![刷新结果数据](media/rsqdicon-refresh.gif "Refresh result data")|刷新数据源的元数据。|  
-|![添加计算的成员](media/rsqdicon-addcalculatedmember.gif "添加计算的成员")|显示 **“计算成员生成器”** 对话框。|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。|  
 |![切换显示空单元格](media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](media/rsqdicon-autoexecute.gif "AutoExecute the query")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
 |![“显示聚合”按钮](media/rsqdicon-showaggregations.gif "Show Aggregations button")|在“数据”窗格中显示聚合。|  
@@ -109,7 +109,7 @@ ms.locfileid: "48113417"
   
 -   **编辑为文本**  
   
--   **添加计算成员**(![添加计算的成员](media/rsqdicon-addcalculatedmember.gif "添加计算的成员"))  
+-   **添加计算成员** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **显示空单元格**（![切换显示空单元格](media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
   

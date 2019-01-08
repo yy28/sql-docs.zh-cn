@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
@@ -14,12 +13,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32b0b350d7b23b41573a147f095705546b0d8b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214737"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818238"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以在目标实例处于脱机状态或无法启动时，从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地或远程实例查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件。  
@@ -46,7 +45,7 @@ ms.locfileid: "48214737"
   
 -   [SqlErrorLogFile 类](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) （本主题显示如何检索有关指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件的信息。）  
   
-##  <a name="BeforeYouBegin"></a> 权限  
+##  <a name="BeforeYouBegin"></a> Permissions  
  若要连接到脱机日志文件，您必须在本地和远程计算机上同时具有以下权限：  
   
 -   针对 **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。 有关详细信息，请参阅本节后面的“验证 WMI 权限”过程。  

@@ -1,5 +1,5 @@
 ---
-title: 将示例数据添加到设计模式中的 DirectQuery 模型 |Microsoft 文档
+title: 将示例数据添加到在设计模式下的 Analysis Services 的 DirectQuery 模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ca4c4c2a00eed80e709602084cf5de427134977
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041631"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071534"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在设计模式下将示例数据添加到 DirectQuery 模型中
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "34041631"
 >  即使在空模型的 DirectQuery 模式下，也始终都能查看每个表的小型内置行集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，请单击“表” > “表属性”来查看 50 行的数据集。  
   
 ## <a name="create-a-sample-partition"></a>创建示例分区
- 这些说明适用于在创建或升级到 1200年或更高的兼容性级别的表格模型。 较低兼容性级别的模型使用不同的属性来获取缓存数据。 有关属性说明，请参阅 [在 SSMS 中启用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 。  
+ 这些说明适用于表格模型在创建或升级到兼容性级别为 1200年或更高版本。 较低兼容性级别的模型使用不同的属性来获取缓存数据。 有关属性说明，请参阅 [在 SSMS 中启用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 。  
   
 1.  在 SQL Server Data Tools 中，请在关系图或数据视图中单击事实数据表以打开其属性页。 事实数据表提供模型中聚合的数值数据和度量值。 你可以具有多个事实数据表。  
   
 2.  单击“表” > “属性”以打开“分区管理”对话框。  
   
-    请注意默认分区是 **（直接查询）\<表名 >**。 这是完整数据视图。 不要删除此分区。 部署模型时会使用此分区。  
+    请注意，默认分区是 **（直接查询）\<表名称 >**。 这是完整数据视图。 不要删除此分区。 部署模型时会使用此分区。  
   
 4.  选择分区，然后单击“复制”。  
 

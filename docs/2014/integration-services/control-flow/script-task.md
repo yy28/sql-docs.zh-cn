@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
@@ -17,12 +16,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38586615ce582ed4534bf23612bfca64b53af461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371319"
 ---
 # <a name="script-task"></a>脚本任务
   脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
@@ -69,13 +68,13 @@ ms.locfileid: "48224407"
   
 |日志项|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|报告在脚本中实现日志记录的结果。 任务写入日志项每次调用`Log`方法的`Dts`对象。 然后，在运行代码时编写这些条目。 有关详细信息，请参阅 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)。|  
+|`ScriptTaskLogEntry`|报告在脚本中实现日志记录的结果。 该任务在每次调用 `Log` 对象的 `Dts` 方法时都编写一个日志条目。 然后，在运行代码时编写这些条目。 有关详细信息，请参阅 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
   
--   [脚本任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [脚本任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [脚本任务编辑器&#40;脚本页&#41;](../script-task-editor-script-page.md)  
+-   [脚本任务编辑器（“脚本”页）](../script-task-editor-script-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   
@@ -90,6 +89,6 @@ ms.locfileid: "48224407"
   
 ## <a name="related-content"></a>相关内容  
   
--   shareourideas.com 上的技术文章 [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
+-   shareourideas.com 上的技术文章 [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
   
   

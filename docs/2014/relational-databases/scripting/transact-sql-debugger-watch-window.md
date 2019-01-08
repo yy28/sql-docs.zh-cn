@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba5a2b12d4f80f497491fef208d5eb0f29f1104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213479"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328747"
 ---
 # <a name="watch-window"></a>“监视”窗口
-  **“监视”** 窗口显示有关所选表达式的信息。 最多可以有四个监视窗口： **“监视 1”**、 **“监视 2”、“监视 3”** 和 **“监视 4”**。 这些表达式是在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧范围内求值的。 只有在调试模式下才可监视变量和表达式。  
+  **“监视”** 窗口显示有关所选表达式的信息。 可以最多四个监视窗口：**观看 1**，**观看 2，观看 3**，和**观看 4**。 这些表达式是在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧范围内求值的。 只有在调试模式下才可监视变量和表达式。  
   
 ## <a name="task-list"></a>任务列表  
  **访问“监视”窗口**  
@@ -46,7 +44,7 @@ ms.locfileid: "48213479"
   
 -   通过向一个或多个变量、参数或系统函数应用运算符而生成的表达式，如 @IntegerCounter + 1 或 FirstName + LastName。  
   
--   返回单个值的 Transact-SQL 语句，如 SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
+-   返回单个值，如 TRANSACT-SQL 语句：SELECT CharacterCol FROM MyTable 其中 PrimaryKey = 1。  
   
  **ReplTest1**  
  显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器对“名称”中指定的表达式求值后所返回的值。  
@@ -65,5 +63,3 @@ ms.locfileid: "48213479"
  [“调用堆栈”窗口](transact-sql-debugger-call-stack-window.md)   
  [“快速监视”对话框](transact-sql-debugger-quickwatch-dialog-box.md)   
  [表达式 (Transact-SQL)](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

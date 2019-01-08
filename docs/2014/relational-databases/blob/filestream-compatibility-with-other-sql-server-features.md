@@ -13,12 +13,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 287392869ef22492f0f3b5ac850ec4ecd58515ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623b0139d70cec0574aaf9b68e37a1ad6f4f9eaf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084627"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355214"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 与其他 SQL Server 功能的兼容性
   由于 FILESTREAM 数据存在于文件系统中，因此本主题提供了将 FILESTREAM 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的以下功能一起使用时的一些注意事项、指南和限制：  
@@ -69,7 +69,7 @@ ms.locfileid: "48084627"
  可以将发布服务器上启用了 FILESTREAM 属性的 `varbinary(max)` 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”对话框，或使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 `varbinary(max)` 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议你复制 FILESTREAM 属性，除非您要复制数据到[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑指定的架构选项。  
   
 > [!NOTE]  
->  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](http://go.microsoft.com/fwlink/?LinkId=103810)。  
+>  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](https://go.microsoft.com/fwlink/?LinkId=103810)。  
   
 ### <a name="considerations-for-transactional-replication"></a>事务复制的注意事项  
  如果您使用为事务复制发布的表中的 FILESTREAM 列，请注意以下事项：  
@@ -78,18 +78,18 @@ ms.locfileid: "48084627"
   
 -   max text repl size 选项用于指定可以插入到为复制发布的列中的最大数据量。 此选项可用来控制复制的 FILESTREAM 数据的大小。  
   
--   如果您指定架构选项用于复制 FILESTREAM 属性，但您筛选出`uniqueidentifier`FILESTREAM 所需的列，或指定不复制该列的 UNIQUE 约束，则复制操作不复制 FILESTREAM属性。 该列将只作为 `varbinary(max)` 列复制。  
+-   如果您指定了用于复制 FILESTREAM 属性的架构选项，但您筛选出了 FILESTREAM 所需的 `uniqueidentifier` 列或指定不复制对该列的 UNIQUE 约束，则复制操作不复制 FILESTREAM 属性。 该列将只作为 `varbinary(max)` 列复制。  
   
 ### <a name="considerations-for-merge-replication"></a>合并复制的注意事项  
  如果您使用为合并复制发布的表中的 FILESTREAM 列，请注意以下事项：  
   
--   合并复制和 FILESTREAM 都需要数据类型的列的`uniqueidentifier`来标识表中的每个行。 如果相应的表中没有这样的列，合并复制会自动添加一列。 合并复制要求该列具有 ROWGUIDCOL 属性集和默认值 NEWID() 或 NEWSEQUENTIALID()。 除这些要求外，FILESTREAM 还要求为该列定义一个 UNIQUE 约束。 这些要求将产生以下结果：  
+-   合并复制和 FILESTREAM 都需要一个数据类型为 `uniqueidentifier` 的列来标识表中的每一行。 如果相应的表中没有这样的列，合并复制会自动添加一列。 合并复制要求该列具有 ROWGUIDCOL 属性集和默认值 NEWID() 或 NEWSEQUENTIALID()。 除这些要求外，FILESTREAM 还要求为该列定义一个 UNIQUE 约束。 这些要求将产生以下结果：  
   
     -   如果您向已经为合并复制发布的表添加 FILESTREAM 列，请确保 `uniqueidentifier` 列具有 UNIQUE 约束。 如果该列不具有 UNIQUE 约束，请向发布数据库中的该表添加一个命名约束。 默认情况下，合并复制将发布此项架构更改，此更改将应用于每个订阅数据库。  
   
          如果您已按照说明手动添加了 UNIQUE 约束，并且要删除合并复制，则您必须先删除 UNIQUE 约束；否则，复制删除操作将失败。  
   
-    -   默认情况下，合并复制使用 NEWSEQUENTIALID()，因为与 NEWID() 相比，它可以提供更高的性能。 如果添加`uniqueidentifier`到将在指定 newsequentialid （） 作为默认值为合并复制发布的表的列。  
+    -   默认情况下，合并复制使用 NEWSEQUENTIALID()，因为与 NEWID() 相比，它可以提供更高的性能。 如果您要向将为合并复制发布的表添加 `uniqueidentifier` 列，请指定 NEWSEQUENTIALID() 作为默认值。  
   
 -   合并复制包括为复制大型对象类型而进行的优化。 这种优化由 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @stream_blob_columns 参数控制。 如果您设置了用于复制 FILESTREAM 属性的架构选项，则 @stream_blob_columns 参数值将设置为 `true`。 通过使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，可以替代这种优化。 此存储过程支持您将 @stream_blob_columns 设置为 `false`。 如果您要将 FILESTREAM 列添加到已经为合并复制发布的表中，建议您使用 sp_changemergearticle 将该选项设置为 `true`。  
   

@@ -13,12 +13,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181462"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373010"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 远程 BLOB 存储区 (RBS) 是一个可选的附加组件，它允许数据库管理员在商用存储解决方案中存储二进制大型对象，而不是直接存储在主数据库服务器上。  
@@ -50,22 +50,22 @@ ms.locfileid: "48181462"
 ## <a name="rbs-requirements"></a>RBS 要求  
  对于存储 BLOB 元数据的主数据库服务器，RBS 要求安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。 但是，如果使用提供的 FILESTREAM 提供程序，则可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上存储 BLOB 本身。  
   
- RBS 包括 FILESTREAM 提供程序，因此，您可以使用 RBS 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上存储 BLOB。 如果要使用 RBS 在其他存储解决方案中存储 BLOB，则必须使用为该存储解决方案开发的第三方 RBS 提供程序，或者使用 RBS API 开发自定义 RBS 提供程序。 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)上以学习资源的形式提供了在 NTFS 文件系统中存储 BLOB 的示例提供程序。  
+ RBS 包括 FILESTREAM 提供程序，因此，您可以使用 RBS 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上存储 BLOB。 如果要使用 RBS 在其他存储解决方案中存储 BLOB，则必须使用为该存储解决方案开发的第三方 RBS 提供程序，或者使用 RBS API 开发自定义 RBS 提供程序。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)上以学习资源的形式提供了在 NTFS 文件系统中存储 BLOB 的示例提供程序。  
   
 ## <a name="rbs-security"></a>RBS 安全性  
  当您使用自定义提供程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外存储 BLOB 时，这些 BLOB 可能会被绕过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全系统的其他进程所利用。 请确保您使用适合于自定义提供程序所使用的存储介质的权限和加密选项保护存储的 BLOB。  
   
 ##  <a name="rbsresources"></a> RBS 资源  
  **RBS 文档**  
- RBS 文档包括在 Windows 安装程序包中。 如果您想要不安装 RBS 就查看 RBS 文档，则可以在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] MSDN 库 [中在线查看该文档的](http://go.microsoft.com/fwlink/?LinkId=210192)版本。  
+ RBS 文档包括在 Windows 安装程序包中。 如果您想要不安装 RBS 就查看 RBS 文档，则可以在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] MSDN 库 [中在线查看该文档的](https://go.microsoft.com/fwlink/?LinkId=210192)版本。  
   
  **RBS 白皮书**  
- 你可以下载 Microsoft Word 文档格式的白皮书“[远程 BLOB 存储区](http://go.microsoft.com/fwlink/?LinkId=210422)”，它提供有关安装和配置 RBS 的详细信息。  
+ 你可以下载 Microsoft Word 文档格式的白皮书“[远程 BLOB 存储区](https://go.microsoft.com/fwlink/?LinkId=210422)”，它提供有关安装和配置 RBS 的详细信息。  
   
  **RBS 示例**  
- [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 示例演示如何开发 RBS 应用程序，如何开发和安装自定义 RBS 提供程序。  
+ [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 示例演示如何开发 RBS 应用程序，如何开发和安装自定义 RBS 提供程序。  
   
  **RBS 博客**  
- [RBS 博客](http://go.microsoft.com/fwlink/?LinkId=210315) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
+ [RBS 博客](https://go.microsoft.com/fwlink/?LinkId=210315) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
   
   

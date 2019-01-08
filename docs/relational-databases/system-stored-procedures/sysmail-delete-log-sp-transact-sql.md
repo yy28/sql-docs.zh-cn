@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649198"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588453"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@logged_before** =] **'***logged_before*****  
+ [ **@logged_before** =] **'**_logged_before_  
  删除之前的日期和时间所指定的项*logged_before*参数。 *logged_before*是**datetime**默认值为 NULL。 NULL 指示所有日期。  
   
- [ **@event_type** = ] **'***event_type***'**  
+ [ **@event_type** =] **'**_event_type_  
  删除日志条目的类型指定为*event_type*。 *event_type*是**varchar(15)** ，无默认值。 有效输入包括**成功**，**警告**，**错误**，以及**信息性**。 NULL 指示所有事件类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -56,7 +56,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
  删除数据库邮件日志中的项不会从数据库邮件表中删除电子邮件项。 使用[sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)若要从数据库邮件表中删除电子邮件。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色才能访问此过程。  
   
 ## <a name="examples"></a>示例  

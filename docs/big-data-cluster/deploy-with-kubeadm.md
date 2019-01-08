@@ -1,30 +1,32 @@
 ---
-title: 使用 SQL Server 2019 部署 kubeadm 配置 Kubernetes |Microsoft Docs
+title: 使用 kubeadm 配置 Kubernetes
+titleSuffix: SQL Server 2019 big data clusters
 description: 了解如何配置多个 Ubuntu 16.04 上的 Kubernetes 或用于 SQL Server 2019 大数据群集 （预览版） 部署 18.04 计算机 （物理或虚拟）。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 7b6c6aeced930bfdd17915e2acc130fc4446f4a5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221773"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210276"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>配置 SQL Server 2019 部署多台计算机上的 Kubernetes
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>配置用于 SQL Server 2019 大数据群集 （预览版） 部署多台计算机上的 Kubernetes
 
 本文提供有关如何使用的示例**kubeadm**若要配置用于 SQL Server 2019 大数据群集 （预览版） 部署多台计算机上的 Kubernetes。 在此示例中，多个 Ubuntu 16.04 或 18.04 LTS 计算机 （物理或虚拟） 是目标。 如果要部署到不同的 Linux 平台，你必须更改一些命令，以匹配你的系统。  
 
 > [!TIP] 
 > 有关配置 Kubernetes 的示例脚本，请参阅[创建 Kubernetes 群集使用 Ubuntu 16.04 LTS 或 18.04 LTS 上 Kubeadm](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - 多个 Linux 物理机或虚拟机，以使用群集
-- 建议的配置： 8 个 Cpu，32 GB 的内存，并至少 100 GB 的存储，每台计算机
+- 建议的配置：8 个 Cpu，32 GB 的内存，并至少 100 GB 的存储，每台计算机
 - 群集中的三个计算机的最小值
 
 ## <a name="prepare-the-machines"></a>准备计算机
@@ -143,4 +145,4 @@ kubectl get nodes
 
 在本文中的步骤配置多台 Ubuntu 计算机上的 Kubernetes 群集。 下一步是部署 SQL Server 2019 大数据群集。 有关说明，请参阅以下文章：
 
-[部署 Kubernetes 上的 SQL Server 2019 CTP 2.1](deployment-guidance.md#deploy)
+[部署 Kubernetes 上的 SQL Server 2019 CTP 2.2](deployment-guidance.md#deploy)

@@ -1,62 +1,53 @@
 ---
-title: SQL Server Python 教程 |Microsoft Docs
+title: SQL Server 2017 Python 教程概述-SQL Server 机器学习
+description: Python 教程： SQL Server 2017 数据库内分析的简介。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5cafb253cea118148bd654ea770234843f742838
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383332"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046457"
 ---
-# <a name="sql-server-python-tutorials"></a>SQL Server Python 教程
+# <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文提供了一系列教程和示例演示了如何使用 Python 与 SQL Server 2017。 通过这些示例和演示，你将了解：
+本文介绍有关在数据库内分析的 Python 教程[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。 
 
-+ 如何从 T-SQL 运行 Python
-+ 远程和本地计算上下文和如何执行 Python 代码中使用 SQL Server 计算机是什么
-+ 如何在存储过程中包装 Python 代码
-+ 优化 SQL 生产环境中的 Python 代码
-+ 用于在应用程序中嵌入机器学习的实际方案
++ 了解如何自动换行和存储过程中运行 Python 代码。
++ 序列化并将基于 Python 的模型保存到 SQL Server 数据库。
++ 了解有关远程和本地计算上下文，以及何时使用它们。
++ 探索数据科学和机器学习任务的 Microsoft Python 模块。
 
-有关要求和安装程序的信息，请参阅[先决条件](#bkmk_Prerequisites)。
+<a name="bkmk_pythontutorials"></a>
 
-## <a name="bkmk_pythontutorials"></a>Python 教程
+## <a name="python-quickstarts-and-tutorials"></a>Python 快速入门和教程
 
-+ [在 T-SQL 中运行 Python](run-python-using-t-sql.md)
+| 链接 | Description |
+|------|-------------|
+| [快速入门：SQL Server 中的"hello world"Python 脚本](quickstart-r-run-using-tsql.md) | 了解如何在 T-SQL 中调用 Python 的基础知识。 |
+| [快速入门：创建、 定型和 SQL Server 中使用存储过程中使用 Python 模型](quickstart-python-train-score-in-tsql.md) | 介绍了在提供输入和存储的过程执行的存储过程中嵌入 Python 代码的机制。 |
+| [教程：使用 revoscalepy 创建模型](use-python-revoscalepy-to-create-model.md) | 演示如何从远程 Python 终端中，使用 SQL Server 计算上下文中运行代码。 应为一定程度上熟悉的 Python 工具和环境。 提供用于创建模型使用的示例代码， **rxLinMod**，从新建**revoscalepy**库。 |
+| [教程：面向 SQL 开发人员了解数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md) | 本端到端演练演示如何构建完整的 Python 解决方案使用 T-SQL 存储过程的过程。 包含所有 Python 代码都。|
 
-   了解如何在 T-SQL，使用 SQL Server 2016 中率先采用的扩展性机制调用 Python 的基础知识。
+<a name ="bkmk_samples"></a>
 
-+ [创建机器学习中使用 revoscalepy Python 模型](use-python-revoscalepy-to-create-model.md)
-
-   本课程演示如何运行代码从远程 Python 终端，使用 SQL Server 计算上下文。 应为一定程度上熟悉的 Python 工具和环境。 提供用于创建模型使用的示例代码， **rxLinMod**，从新建**revoscalepy**库。 
-
-+ [SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)
-
-    本端到端演练演示如何构建完整的 Python 解决方案使用 T-SQL 存储过程的过程。 包含所有 Python 代码都。
-
-
-## <a name="python-samples"></a>Python 示例
+## <a name="code-samples"></a>代码示例
 
 这些示例和演示 SQL Server 开发团队提供的突出显示您可以在实际应用程序中使用嵌入式的分析方法。
 
-+ [构建预测模型使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
+| 链接 | Description |
+|------|-------------|
+| [构建预测模型使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 介绍了雪橇租赁公司如何使用机器学习来预测未来的租赁情况，可帮助业务和人员计划以满足未来的需求。 |
+| [执行客户使用 Python 和 SQL Server 聚类分析](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | 了解如何使用 k 均值算法执行无人监督聚类分析的客户。 |
 
-  介绍了雪橇租赁公司如何使用机器学习来预测未来的租赁情况，可帮助业务和人员计划以满足未来的需求。
+## <a name="see-also"></a>另请参阅
 
-  > [!TIP]
-  > 现在包括本机计分从 Python 模型 ！
-
-+ [执行客户使用 Python 和 SQL Server 聚类分析](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
-
-    了解如何使用 k 均值算法执行无人监督聚类分析的客户。
-
-## <a name="see-also"></a>请参阅
-
-[SQL Server 的 R 教程](sql-server-r-tutorials.md)
++ [到 SQL Server 的 Python 扩展](../concepts/extension-python.md)
++ [SQL Server 机器学习服务教程](machine-learning-services-tutorials.md)

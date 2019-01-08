@@ -15,17 +15,17 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b284f16b082c174b0e3f335819fd11e6800f24f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 598ce51e4270e419e925d7aa82516e27ed3bf230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189307"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370729"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 事件观察器任务编辑器（“常规”页）
   可以使用 **“WMI 事件观察器任务编辑器”** 对话框的 **“常规”** 页，对 WMI 事件观察器任务进行命名和说明。  
   
- 若要了解此任务，请参阅 [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md)。 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
+ 若要了解此任务，请参阅 [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md)。 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -34,13 +34,13 @@ ms.locfileid: "48189307"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入 WMI 事件观察器任务的说明。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI 事件观察器任务编辑器&#40;WMI 选项页&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
- [表达式页](expressions/expressions-page.md)   
+ [WMI 事件观察器任务编辑器（“WMI 选项”页）](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [WMI 数据读取器任务](control-flow/wmi-data-reader-task.md)  
   
   

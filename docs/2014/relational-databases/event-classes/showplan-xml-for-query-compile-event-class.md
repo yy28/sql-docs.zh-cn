@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b7f0027b92671328b835aa7ec2af6695eb3eea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369669"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile 事件类
   当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编写某个 SQL 语句时，将发生 Showplan XML For Query Compile 事件类。 包括 thisevent 类以标识 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 Showplan 运算符。  
   
  由于 Showplan XML For Query Compile 事件类显示完整的编写时数据，因此包含该事件类的跟踪可能会使性能明显降低。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。  
   
- Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=41740)上找到，也可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
+ Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkId=41740)上找到，也可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Showplan XML for Query Compile 事件类数据列  
   

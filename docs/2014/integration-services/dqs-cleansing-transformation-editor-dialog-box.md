@@ -14,12 +14,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062460"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978413"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>“DQS 清除转换编辑器”对话框
   可使用 Data Quality Services (DQS) 通过“DQS 清除转换编辑器”对话框来更正数据。 有关详细信息，请参阅 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "48062460"
  为所连接的数据源选择现有的 DQS 知识库。 有关 DQS 知识库的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
  **加密连接**  
- 指定是否对连接加密，以便对 DQS 服务器与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]之间的数据传输进行加密。  
+ 指定是否加密连接，以便对 DQS 服务器之间的数据传输进行加密和[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
   
  **可用域**  
  列出可用于选定知识库的域。 存在两种类型的域：单一域和包含两个或两个以上的单一域的复合域。  

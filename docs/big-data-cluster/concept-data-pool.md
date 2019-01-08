@@ -1,22 +1,24 @@
 ---
-title: 什么是 SQL 大数据群集数据池？ | Microsoft Docs
+title: 数据池有哪些？
+titleSuffix: SQL Server 2019 big data clusters
 description: 本指南介绍了 SQL Server 2019 大数据群集中的数据池。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: 088d6681910aad6a02205c812ff0e5a9d7d090ee
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050759"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030801"
 ---
-# <a name="what-is-a-sql-big-data-clusters-data-pool"></a>什么是 SQL 大数据群集数据池？
+# <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 大数据群集中的数据池有哪些？
 
-本文介绍的角色*SQL Server 数据池*SQL Server 2019 预览大数据群集中。 以下部分介绍的体系结构和功能的 SQL 数据池。
+本文介绍的角色*SQL Server 数据池*SQL Server 2019 大数据群集 （预览版） 中。 以下部分介绍的体系结构和功能的 SQL 数据池。
 
 ## <a name="data-pool-architecture"></a>数据池体系结构
 

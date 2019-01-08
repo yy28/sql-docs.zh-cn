@@ -23,12 +23,12 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4bf1f7abd985c7ef3544a722351a2d049f6ea83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145662"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370899"
 ---
 # <a name="processing-objects-xmla"></a>处理对象 (XMLA)
   在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理指的是或系列的指导的数据转换为业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
@@ -120,7 +120,7 @@ ms.locfileid: "50145662"
 ### <a name="code"></a>代码  
   
 ```  
-<Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
   </Object>  
@@ -135,7 +135,7 @@ ms.locfileid: "50145662"
 ### <a name="code"></a>代码  
   
 ```  
-<Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process ProcessAffectedObjects="true" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     <CubeID>Adventure Works DW</CubeID>  

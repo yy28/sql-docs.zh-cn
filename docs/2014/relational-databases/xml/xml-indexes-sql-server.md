@@ -33,15 +33,15 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368119"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
-  可以在创建 XML 索引`xml`数据类型列。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
+  可以对 `xml` 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
   
 -   对 XML 列进行查询在您的工作负荷中很常见。 必须考虑数据修改过程中的 XML 索引维护开销。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48106957"
   
 -   辅助 XML 索引  
   
- `xml` 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持下列类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
+ `xml` 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引，支持以下类型的辅助索引：路径、 值和属性。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
   
 > [!NOTE]  
 >  除非为使用 `xml` 数据类型正确设置了数据库选项，否则无法创建或修改 XML 索引。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](use-full-text-search-with-xml-columns.md)。  
@@ -61,7 +61,7 @@ ms.locfileid: "48106957"
  XML 实例作为二进制大型对象 (BLOB) 存储在 `xml` 类型列中。 这些 XML 实例可以很大，并且存储的 `xml` 数据类型实例的二进制表示形式最大可以为 2 GB。 如果没有索引，则运行时将拆分这些二进制大型对象以计算查询。 此拆分可能非常耗时。 例如，请看以下查询：  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -72,12 +72,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  为了选择满足 `WHERE` 子句中条件的 XML 实例，表 `Production.ProductModel` 的每行中的 XML 二进制大型对象 (BLOB) 将在运行时拆分。 然后，计算 `(/PD:ProductDescription/@ProductModelID[.="19"]`方法中的表达式 `exist()` )。 此运行时拆分有可能开销较大，这取决于存储在列中的实例的大小和数目。  
   
- 如果应用程序环境中经常查询 XML 二进制大型对象 (Blob)，则它会帮助到索引`xml`类型列。 但是，在数据修改过程中维护索引会带来开销。  
+ 如果在应用程序环境中经常查询 XML 二进制大型对象 (BLOB)，则对 `xml` 类型列创建索引很有用。 但是，在数据修改过程中维护索引会带来开销。  
   
 ## <a name="primary-xml-index"></a>主 XML 索引  
  主 XML 索引对 XML 列中 XML 实例内的所有标记、值和路径进行索引。 若要创建主 XML 索引，相应 XML 列所在的表必须对该表的主键创建了聚集索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此主键将主 XML 索引中的行与包含此 XML 列的表中的行关联起来。  
   
- 主 XML 索引是中的 XML Blob 的已拆分和持久的表示形式`xml`数据类型列。 对于列中的每个 XML 二进制大型对象 (BLOB)，索引将创建数个数据行。 该索引中的行数大约等于 XML 二进制大型对象中的节点数。 当查询检索完整的 XML 实例时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会提供此 XML 列中的实例。 XML 实例中的查询使用主 XML 索引，并可以通过使用索引本身返回标量值或 XML 子树。  
+ 主 XML 索引是 `xml` 数据类型列中的 XML BLOB 的已拆分和持久的表示形式。 对于列中的每个 XML 二进制大型对象 (BLOB)，索引将创建数个数据行。 该索引中的行数大约等于 XML 二进制大型对象中的节点数。 当查询检索完整的 XML 实例时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会提供此 XML 列中的实例。 XML 实例中的查询使用主 XML 索引，并可以通过使用索引本身返回标量值或 XML 子树。  
   
  每行存储以下节点信息：  
   
@@ -106,7 +106,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  例如，以下查询将返回存储的摘要信息`CatalogDescription``xml`类型列中的`ProductModel`表。 只有当产品型号的目录说明中还存储 <`Features`> 说明时，该查询才会返回 <`Summary`> 信息。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  关于主 XML 索引，为 `exist()` 方法中指定的表达式按顺序搜索与每个 XML 二进制大型对象相对应的索引中的行，而不是拆分基表中的每个 XML 二进制大型对象实例。 如果路径是在索引中的 Path 列中找到的，则从主 XML 索引检索 <`Summary`> 元素及其子树，并将它们转换为 XML 二进制大型对象以作为 `query()` 方法的结果。  
@@ -148,7 +148,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  以下查询介绍了适用 PATH 索引的情形：  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -172,8 +172,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -190,7 +190,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  例如，对于产品样式 `19`，以下查询使用 `ProductModelID` 方法检索 `ProductModelName` 属性值和 `value()` 属性值。 使用 PROPERTY 索引代替主 XML 索引或其他辅助 XML 索引可以使执行速度更快。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

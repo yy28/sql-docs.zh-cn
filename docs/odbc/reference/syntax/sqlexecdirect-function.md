@@ -20,16 +20,16 @@ ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ed580bd89dc7bf4c1f0af520f43f6ca8d616a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733725"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590701"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLExecDirect**执行可准备对象的语句，使用参数标记变量的当前值，如果在语句中存在任何参数。 **SQLExecDirect**是提交一次性执行的 SQL 语句的最快方法。  
@@ -86,7 +86,7 @@ SQLRETURN SQLExecDirect(
 |22015|间隔字段溢出|*\*StatementText*包含一个确切的数值或时间间隔参数，当转换到 SQL 数据类型的时间间隔，导致重要数字丢失。<br /><br /> *\*StatementText*包含多个字段是间隔参数，当转换为数值数据类型列中，没有表示形式具有数值数据类型。<br /><br /> *\*StatementText*包含已分配到的时间间隔 SQL 类型的参数数据，并且在时间间隔内 SQL 类型的 C 类型的值没有表示形式。<br /><br /> 分配为精确数字或间隔时导致重要数字丢失 C 间隔类型到 SQL 类型的输入/输出或输出参数。<br /><br /> 输入/输出或输出参数分配给一个 C 间隔结构，间隔数据结构中的数据没有表示形式。|  
 |22018|转换指定的字符值无效|*\*StatementText*包含 C 类型的为准确或近似数值、 日期时间或间隔数据类型; 该列的 SQL 类型是字符数据类型; 和列中的值不是有效的绑定 C 类型的文本。<br /><br /> SQL 类型时返回的输入/输出或输出参数，已准确或近似数值、 日期时间或间隔数据类型;C 类型为 SQL_C_CHAR;和列中的值不是有效的绑定的 SQL 类型的文本。|  
 |22019|无效的转义字符|\**StatementText*包含了包含一个 SQL 语句**等**谓词以及**转义**中**其中**子句和转义符的长度之后的字符**转义**不是等于 1。|  
-|22025|无效的转义序列|\**StatementText*包含了包含一个 SQL 语句"**等***模式值***转义***转义符*"中**其中**子句和后面的模式值中的转义字符的字符不是之一"%"或"_"。|  
+|22025|无效的转义序列|\**StatementText*包含了包含一个 SQL 语句"**等**_模式值_**转义**_转义符_"中**其中**子句和后面的模式值中的转义字符的字符不是之一"%"或"_"。|  
 |23000|完整性约束冲突|**StatementText*包含了一个包含参数的 SQL 语句。 参数值为空的定义为 NOT NULL 列关联的表中的列、 列约束为仅包含唯一值，却提供了重复的值或违反了某个其他的完整性约束。|  
 |24000|游标状态无效|在光标*StatementHandle*通过**SQLFetch**或**SQLFetchScroll**。 如果此错误返回由驱动程序管理器**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，和如果驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 sql_no_data 为止。<br /><br /> 游标已打开但未在定位*StatementHandle*。<br /><br /> **StatementText*包含和定位的 update 或 delete 语句，游标早于开始日期的结果集或结果集的末尾之后位置。|  
 |34000|无效的游标名称|**StatementText*包含和定位的 update 或 delete 语句，正在执行的语句所引用的游标未打开。|  
@@ -108,7 +108,7 @@ SQLRETURN SQLExecDirect(
 |HY009|使用空指针无效|(DM) **StatementText*是空指针。|  
 |HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLExecDirect**调用函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) 参数*TextLength*小于或等于为 0 但不是等于 SQL_NTS。<br /><br /> 参数值，设置**SQLBindParameter**、 是空指针和参数长度值不是 0，SQL_NULL_DATA，SQL_DATA_AT_EXEC，SQL_DEFAULT_PARAM，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 参数值，设置**SQLBindParameter**、 不是空指针; C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR; 和参数长度值是小于 0，但不是 SQL_NTS、 SQL_NULL_DATA、 SQL_DATA_AT_EXEC、 SQL_DEFAULT_参数，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 参数长度值受**SQLBindParameter**为设置为 SQL_DATA_AT_EXEC; 的 SQL 类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源特定于数据类型; 和 SQL_NEED_LONG_DATA_LEN 信息在键入**SQLGetInfo**是"Y"。|  
+|HY090|字符串或缓冲区长度无效|(DM) 参数*TextLength*小于或等于为 0 但不是等于 SQL_NTS。<br /><br /> 参数值，设置**SQLBindParameter**、 是空指针和参数长度值不是 0，SQL_NULL_DATA，SQL_DATA_AT_EXEC，SQL_DEFAULT_PARAM，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 参数值，设置**SQLBindParameter**、 不是空指针; C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR; 和参数长度值是小于 0，但不是 SQL_NTS、 SQL_NULL_DATA、 SQL_DATA_AT_EXEC、 SQL_DEFAULT_参数，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 参数长度值受**SQLBindParameter**为设置为 SQL_DATA_AT_EXEC; 的 SQL 类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源特定的数据类型; 和 SQL_NEED_LONG_DATA_LEN 信息在键入**SQLGetInfo**是"Y"。|  
 |HY105|无效的参数类型|为参数指定的值*InputOutputType*中**SQLBindParameter** SQL_PARAM_OUTPUT，而该参数是输入的参数。|  
 |HY109|无效的游标位置|\**StatementText*包含和定位的 update 或 delete 语句，光标被定位 (通过**SQLSetPos**或**SQLFetchScroll**) 上的行已删除或无法提取。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
@@ -139,7 +139,7 @@ SQLRETURN SQLExecDirect(
  如果书签被打开，并且执行的查询不能支持书签，则驱动程序应尝试强制为通过更改属性值并返回 SQLSTATE 01S02 支持书签环境 （选项值已更改）。 如果不能更改的属性，则驱动程序应返回 SQLSTATE 为 HY024 （无效的属性值）。  
   
 > [!NOTE]  
->  当使用连接池时，应用程序必须执行 SQL 语句，如更改数据库或数据库的上下文**使用***数据库*语句在 SQL Server 中，这会更改使用数据源的目录。  
+>  当使用连接池时，应用程序必须执行 SQL 语句，如更改数据库或数据库的上下文**使用**_数据库_语句在 SQL Server 中，这会更改使用数据源的目录。  
   
 ## <a name="code-example"></a>代码示例  
  请参阅[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)， [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)，并[示例 ODBC 程序](../../../odbc/reference/sample-odbc-program.md)。  

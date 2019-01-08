@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210797"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754229"
 ---
 # <a name="implement-sql-server-agent-security"></a>实现 SQL Server 代理安全性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使数据库管理员能够在一个安全上下文中运行每个作业步骤，这个安全上下文只具有执行该作业步骤所需的权限，这是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理决定的。 若要为某个特定的作业步骤设置权限，可以创建一个具有所需权限的代理，然后将该代理分配给该作业步骤。 一个代理可以指定给多个作业步骤。 对于需要相同权限的作业步骤，可以使用同一个代理。  
@@ -57,7 +57,7 @@ ms.locfileid: "48210797"
   
 -   请不要将 NT 管理帐户指定为服务帐户或代理帐户。  
   
--   请注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理有权互相访问资产。 这两项服务共享一个进程空间，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 sysadmin。  
+-   请注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理有权互相访问资产。 这两项服务共享一个进程空间，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 sysadmin。  
   
 -   当 TSX 使用 MSX 进行登记时，MSX sysadmins 将获得对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 TSX 实例的完全控制权。  
   
@@ -65,13 +65,13 @@ ms.locfileid: "48210797"
   
 -   ACE 取决于 SSDP 拥有的以下配置 DLL，因为这些 DLL 的 API 是由 ACE 调用的：  
   
-    -   **SCO** – Microsoft.SqlServer.Configuration.Sco.dll，包括针对虚拟帐户的新 SCO 验证  
+    -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll，包括针对虚拟帐户的新 SCO 验证  
   
-    -   **Cluster** – Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extension** - Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>请参阅  
  [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)   

@@ -12,12 +12,12 @@ ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1feeffea47ae383168f06edc357c7dbe69aaefe4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5258e08abd322025b3f7349a6d22fdbdd046d4f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373839"
 ---
 # <a name="result-set-sample"></a>结果集示例
   有时，在通读查询结果时能够执行命令（而不需要打开新的连接并将所有结果读入内存）很有用。 ADO.NET 2.0 中的多个活动的结果集 (MARS) 功能就是一种能够帮助您实现以上操作的技术。 目前，用于服务器端编程的进程内的提供程序不能实现 MARS。 若要消除此限制，可以使用服务器端游标。 此示例说明如何使用服务器端游标解决对服务器端编程缺少 MARS 支持的问题。  
@@ -27,12 +27,12 @@ ms.locfileid: "48212387"
   
  除了可以在结果集中前后移动以外，此类的 API 与数据读取器相似；并且即使结果集处于打开状态，也可以在连接时发出其他命令。此实现过程经过较大程度的简化，可令该示例易于理解。 更有效的实现将提取多行来避免提取的每行的数据库周转。 与用查询的所有结果填充数据集比较，使用此类可以大大减少内存需求量，这对于服务器端编程是非常重要的。 此示例还说明如何使用“允许部分受信任的调用方”属性来指示结果集程序集是可以安全地从其他程序集进行调用的库。 与使用不安全的权限注册调用程序集相比，此方法稍微复杂一些，但要安全许多。 该方法更安全的原因是：它将调用程序集注册为安全的程序集，调用程序集将限制相关资源脱离服务器并防止对服务器的完整性造成损害。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要创建和运行此项目，必须安装下列软件：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](http://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](http://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开发人员[网站](https://go.microsoft.com/fwlink/?linkid=62796)提供的 AdventureWorks 数据库  
   
 -   .NET Framework SDK 2.0 或更高版本，或 Microsoft Visual Studio 2005 或更高版本。 您可以免费获取 .NET Framework SDK。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48212387"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48212387"
 ## <a name="sample-code"></a>示例代码  
  下面是此示例的代码列表。  
   
- 此代码用于库 `ResultSet.`  
+ `ResultSet.`此代码用于库   
   
  C#  
   

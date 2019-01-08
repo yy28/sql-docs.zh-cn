@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361069"
 ---
 # <a name="create-package-configurations"></a>创建包配置
   使用 **“包配置组织程序”** 对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
@@ -111,14 +111,14 @@ ms.locfileid: "48140637"
   
 ## <a name="external-resources"></a>外部资源  
   
--   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](http://go.microsoft.com/fwlink/?LinkId=165643)   
+-   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)   
   
--   www.sqlis.com 上的博客文章 [使用代码创建包 – 包配置](http://go.microsoft.com/fwlink/?LinkId=217663)。  
+-   博客文章[代码的包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上的。  
   
--   blogs.msdn.com 上的博客文章 [API 示例 - 以编程方式将配置文件添加到包](http://go.microsoft.com/fwlink/?LinkId=217664)。  
+-   博客文章[API 示例-以编程方式将配置文件添加到包](https://go.microsoft.com/fwlink/?LinkId=217664)，blogs.msdn.com 上的。  
   
 ## <a name="see-also"></a>请参阅  
- [包配置](../../2014/integration-services/package-configurations.md)   
+ [“包配置”](../../2014/integration-services/package-configurations.md)   
  [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [以编程方式使用变量](building-packages-programmatically/working-with-variables-programmatically.md)  
   

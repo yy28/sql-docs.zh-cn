@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657507"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979403"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安装和配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 AdventureWorks 下载链接和安装说明。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 对于该示例的完整版本，使用 SQL Server 评估/开发人员/企业版。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
@@ -101,6 +101,6 @@ AdventureWorks 下载链接和安装说明。
 1. 选择**创建**创建新 SQL 数据库，这是在 AdventureWorksLT 数据库的已还原的副本。 
 
 
-## <a name="see-also"></a>请参阅
-[有关 SQL Server Management Studio 教程](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+## <a name="see-also"></a>另请参阅
+[SQL Server Management studio 教程](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [有关 SQL Server 数据库引擎教程](../relational-databases/database-engine-tutorials.md)

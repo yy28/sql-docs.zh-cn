@@ -10,12 +10,12 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737815"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408314"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL)
 Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
@@ -25,7 +25,7 @@ Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项�
   
 **Command**  
   
-创建新的项目： 创建一个新的 SSMA 项目。  
+创建新的项目：创建新的 SSMA 项目。  
   
 **脚本**  
   
@@ -62,7 +62,7 @@ Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项�
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
@@ -72,7 +72,7 @@ Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项�
   
 **Command**  
   
-打开项目： 打开现有项目。  
+打开项目：打开现有的项目。  
   
 **脚本**  
   
@@ -95,7 +95,7 @@ Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项�
   
 **Command**  
   
-保存项目： 将保存迁移项目。  
+保存项目：保存迁移项目。  
   
 **脚本**  
   
@@ -106,7 +106,7 @@ Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项�
 ```  
 **Command**  
   
-关闭项目： 关闭迁移项目。  
+关闭项目：关闭迁移项目。  
   
 **脚本**  
   
@@ -149,7 +149,7 @@ connect-source-database
 ```  
 **Command**  
   
-负载 access 数据库： 用于加载访问数据库文件  
+负载 access 数据库：用于加载访问数据库文件  
   
 **脚本**  
   
@@ -158,7 +158,7 @@ connect-source-database
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <load-access-database>  
@@ -192,7 +192,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <force-load>  
@@ -305,7 +305,7 @@ generate-assessment-report
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -325,7 +325,7 @@ generate-assessment-report
 ## <a name="migration-script-file-commands"></a>迁移脚本文件命令  
 迁移命令将目标数据库架构转换为源架构和数据迁移到目标服务器。  
   
-设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 **Command**  
   
@@ -377,7 +377,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <convert-schema  
@@ -437,7 +437,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-或多个  
+或  
   
 ```xml  
 <migrate-data  
@@ -452,7 +452,7 @@ convert-schema
 ```  
 **Command**  
   
-链接表： 此命令将源 （访问） 表链接到目标表。  
+链接表：此命令可链接到目标表的源表 （访问）。  
   
 **脚本**  
   
@@ -467,7 +467,7 @@ convert-schema
   
 </link-tables>  
 ```  
-或多个  
+或  
   
 ```xml  
 <link-tables>  
@@ -478,7 +478,7 @@ convert-schema
 ```  
 **Command**  
   
-取消链接表： 此命令将取消链接的目标表中的源表 （访问）。  
+取消链接的表：此命令将取消链接的目标表中的源表 （访问）。  
   
 **脚本**  
   
@@ -493,7 +493,7 @@ convert-schema
   
 </unlink-tables>  
 ```  
-或多个  
+或  
   
 ```xml  
 <unlink-tables>  
@@ -508,7 +508,7 @@ convert-schema
   
 **Command**  
   
-映射架构： 架构映射的源数据库到目标架构。  
+映射架构：源数据库到目标架构的架构映射。  
   
 **脚本**  
   
@@ -527,7 +527,7 @@ convert-schema
 ## <a name="manageability-commands"></a>可管理性命令  
 可管理性命令可帮助将与源数据库同步目标数据库对象。  
   
-设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 **Command**  
   
@@ -572,7 +572,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target  
@@ -581,7 +581,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -637,7 +637,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -646,7 +646,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -696,7 +696,7 @@ save-as-script
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <save-as-script  

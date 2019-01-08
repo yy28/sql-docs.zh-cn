@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100370"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419876"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
 
@@ -131,7 +131,7 @@ SQL 语句和资源类控制的操作：
   
 -   UPDATE  
   
--   删除  
+-   DELETE  
   
 -   还原时在设备中具有多个计算节点还原的数据库。  
   

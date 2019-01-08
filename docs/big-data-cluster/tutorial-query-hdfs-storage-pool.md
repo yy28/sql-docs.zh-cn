@@ -1,22 +1,24 @@
 ---
-title: 如何在 SQL Server 大数据群集中的查询 HDFS |Microsoft Docs
+title: 查询存储池中的 HDFS 数据
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教程演示如何查询 SQL Server 2019 大数据群集 （预览版） 中的 HDFS 数据。 你对在存储池中的数据创建外部表，然后运行查询。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644116"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432170"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程： SQL Server 大数据群集中查询 HDFS
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中的查询 HDFS
 
-本教程演示如何查询中的 SQL Server 2019 大数据群集的 HDFS 数据。
+本教程演示如何查询 SQL Server 2019 大数据群集 （预览版） 中的 HDFS 数据。
 
 在本教程中，您学习如何：
 
@@ -27,19 +29,19 @@ ms.locfileid: "49644116"
 > [!TIP]
 > 如果您愿意，可以下载并运行本教程中的所有命令的脚本。 有关说明，请参阅[数据虚拟化示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub 上。
 
-## <a name="prerequisites"></a>必要條件
+## <a id="prereqs"></a> 先决条件
 
-- [部署 Kubernetes 上的大数据群集](deployment-guidance.md)。
-- [安装 Azure Data Studio 和 SQL Server 2019 扩展](deploy-big-data-tools.md)。
-- [将示例数据加载到群集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [大数据工具](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 扩展**
+- [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>创建到 HDFS 的外部表
 
 存储池包含 web 点击流数据存储在 HDFS 中的 CSV 文件中。 使用以下步骤来定义可以访问该文件中的数据的外部表。
 
-1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](deploy-big-data-tools.md#master)。
+1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
 2. 在该连接上双击**服务器**窗口以显示 SQL Server 主实例的服务器仪表板。 选择**新查询**。
 

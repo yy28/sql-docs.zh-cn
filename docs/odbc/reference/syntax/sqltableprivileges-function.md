@@ -20,16 +20,16 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 099582fa557d9e970db3b38c4fb95ae677bb5274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678315"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204076"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges Function（SQLTablePrivileges 函数）
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLTablePrivileges**返回的表和关联与每个表的权限列表。 该驱动程序返回对指定的语句作为结果集的信息。  
@@ -130,7 +130,7 @@ SQLRETURN SQLTablePrivileges(
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|表名。|  
 |授权者 (ODBC 1.0)|4|Varchar|授予权限; 用户的名称如果不适用于数据源为 NULL。<br /><br /> 对于被授权者列中的值与对象的所有者的所有行，GRANTOR 列将为"（_s）"。|  
 |被授权者 (ODBC 1.0)|5|Varchar 不为 NULL|向其授予权限的用户的名称。|  
-|特权 (ODBC 1.0)|6|Varchar 不为 NULL|表的权限。 可能有以下操作，否则数据源特定权限。<br /><br /> 选择： 该被授权者可以检索的表的一个或多个列的数据。<br /><br /> INSERT： 允许被授权者要插入到表中包含一个或多个列的数据的新行。<br /><br /> 更新时间： 允许被授权者更新的表的一个或多个列中的数据。<br /><br /> 删除： 允许被授权者从表中删除的数据行。<br /><br /> 的引用: 被授权者可以引用约束中的表的一个或多个列 (例如，唯一、 引用，或检查约束的表)。<br /><br /> 通过给定的表权限允许被授权者的作用域是操作的数据源而定。 例如，UPDATE 特权可能允许 grantee 更新一个数据源的表中的所有列和为其授权者具有 UPDATE 特权的其他数据源的那些列。|  
+|特权 (ODBC 1.0)|6|Varchar 不为 NULL|表的权限。 可能有以下操作，否则数据源特定权限。<br /><br /> 选择：允许被授权者检索表的一个或多个列的数据。<br /><br /> 插入：允许被授权者插入新行插入表中包含一个或多个列的数据。<br /><br /> 更新：允许被授权者更新中的表的一个或多个列的数据。<br /><br /> 删除：允许被授权者从表中删除的数据行。<br /><br /> 引用：允许被授权者引用约束中的表的一个或多个列 (例如，唯一、 引用，或检查约束的表)。<br /><br /> 通过给定的表权限允许被授权者的作用域是操作的由数据源决定。 例如，UPDATE 特权可能允许 grantee 更新一个数据源的表中的所有列和为其授权者具有 UPDATE 特权的其他数据源的那些列。|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|指示是否允许被授权者向其他用户; 授予权限"是"、"否"，或如果未知或不适用于数据源，则为 NULL。<br /><br /> 特权是可授予或但不是同时可不授予。 返回的结果集**SQLColumnPrivileges**将永远不会包含除 IS_GRANTABLE 列的所有列都包含相同的值的两个行。|  
   
 ## <a name="code-example"></a>代码示例  

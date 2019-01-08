@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145652"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542205"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -58,7 +58,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
 ## <a name="examples"></a>示例  
  你可使用 Adventure Works 多维数据集在 SSMS 中的 MDX 查询窗口中尝试下面的示例。  
   
- **示例 1 – 演示最简语法**  
+ **示例 1-演示最简语法**  
   
  第一个示例演示最简语法**DrilldownLevel**。 所需的唯一参数是集表达式。 请注意，运行此查询时，你着手的父 [All Categories] 和下一级别的成员: [Accessories] 和 [Bikes] 等。 虽然这个示例很简单，但它所演示的基本用途**DrilldownLevel**函数，即深化到下一个级别。  
   
@@ -67,7 +67,7 @@ SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sal
 FROM [Adventure Works]  
 ```  
   
- 示例 2 – 使用显式索引级别的替代语法  
+ 示例 2-使用显式索引级别的替代语法  
   
  此示例演示了替代语法，该语法通过数字表达式指定索引级别。 在本例中，索引级别是 0。 对于从零开始的索引，这是最低级别。  
   
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
  请注意，结果集与之前的查询完全相同。 通常，不必设置索引级别，除非你想要从特定级别开始深化。 将索引值设置为 1，然后设置为 2，重新运行之前的查询。 索引值设置为 1 时，你会看到深化从层次结构中的第二个级别开始。 索引值设置为 2 时，深化从第三个级别（本示例中的最高级别）开始。 数字表达式越高，索引级别越高。  
   
- **示例 3 – 演示级别表达式**  
+ **示例 3-演示级别表达式**  
   
  下面的示例显示如何使用级别表达式。 基于代表层次结构的集，使用级别表达式可让你在层次结构中选择开始深化的级别。  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **示例 4 – 包括计算的成员**  
+ **示例 4-包括计算的成员**  
   
  添加时，设置结果的底部将显示计算的成员的最后一个示例所示**include_calculated_members**标志。 请注意，该标志被指定为第四个参数。  
   
@@ -117,7 +117,7 @@ FROM [Adventure Works]
   
  如果仅删除标志，然后重新运行该查询，你会得到与减去计算成员 [West Coast] 相同的结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

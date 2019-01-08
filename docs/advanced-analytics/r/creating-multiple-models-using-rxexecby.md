@@ -1,5 +1,6 @@
 ---
-title: 创建多个模型使用 rxExecBy （SQL Server 机器学习） |Microsoft Docs
+title: 创建多个模型使用 rxExecBy-SQL Server 机器学习服务
+description: 使用 RevoScaleR 库从 rxExecBy 函数生成多个小型模型对存储在 SQL Server 的计算机数据。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b83abad65689e3e12310251d09199f5aa0e7c3cb
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5d61d7fee7afbf28f4ef72b7ecbae02853f52d25
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085123"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645296"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>使用 rxExecBy 创建多个模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 CTP 2.0 包括一个新的函数**rxExecBy**，支持并行处理的多个相关模型。 而不是训练一个非常大的模型基于多个类似的实体中的数据，数据科研人员可以非常快速地创建多个相关的模型，每个使用特定于单个实体的数据。
+**RxExecBy** RevoScaleR 中的函数支持多个相关模型的并行处理。 而不是训练一个大型模型基于多个类似的实体中的数据，数据科研人员可以快速创建多个相关的模型，每个使用特定于单个实体的数据。 
 
-例如，假设是设备失败进行监视和捕获的许多不同类型的设备的数据。 通过使用 rxExecBy，您可以提供单个大型数据集作为输入、 指定的分层数据集，如设备类型的列，然后创建各个设备的多个模型。
+例如，假设您正在监视设备故障，捕获的许多不同类型的设备的数据。 通过使用 rxExecBy，您可以提供单个大型数据集作为输入、 指定的分层数据集，如设备类型的列，然后创建各个设备的多个模型。
 
-此过程已被称为"愉悦 parallel"处理某种程度上繁重的数据科学家或充其量枯燥的过程，并使其快速、 简单的操作的任务，因此。
+此用例具有称为["愉悦 parallel"](https://en.wikipedia.org/wiki/Embarrassingly_parallel)因为这会破坏大型的复杂的问题，以进行并发处理的组成部分。
 
 此方法的典型应用程序包括预测单个家庭智能电表、 创建单独的产品行的收入预测或创建专门针对于各银行分支机构的贷款审批的模型。
 
@@ -37,7 +38,7 @@ RevoScaleR 中的 rxExecBy 函数专为大规模并行处理到多个的小型�
 
 ## <a name="rxexecby-syntax-and-examples"></a>rxExecBy 语法和示例
 
-**rxExecBy**采用四个输入、 一个输入正在进行分区的数据集或数据源对象上指定**密钥**列。 该函数将返回每个分区的输出。 输出的形式取决于作为参数传递的函数，例如，如果通过如 rxLinMod 的建模函数，您可以返回每个分区的数据集单独训练的模型。
+**rxExecBy**采用四个输入、 一个输入正在进行分区的数据集或数据源对象上指定**密钥**列。 该函数将返回每个分区的输出。 形式的输出取决于作为参数传递的函数。 例如，如果通过如 rxLinMod 的建模函数，您可以返回每个分区的数据集单独训练的模型。
 
 ### <a name="supported-functions"></a>支持的函数
 
@@ -51,7 +52,7 @@ RevoScaleR 中的 rxExecBy 函数专为大规模并行处理到多个的小型�
 
 下面的示例演示如何创建使用航班数据集，其中 [DayOfWeek] 列进行了分区的多个模型。 用户定义函数中， `delayFunc`，通过调用 rxExecBy 应用于每个分区。 该函数将单独的模型创建的星期一、 星期二，依此类推。
 
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language = N'R'
 , @script = N'
@@ -68,7 +69,7 @@ OutputDataSet <- rxExecBy(airlineData, c("DayOfWeek"), delayFunc)
 
 如果收到错误， `varsToPartition is invalid`，检查是否正确键入的键列或列的名称。 R 语言是区分大小写。
 
-请注意，此示例中不适用于 SQL Server，并且你可以在许多情况下只需使用 SQL 对数据进行分组，这样就可以实现更好的性能。 但是，使用 rxExecBy，您可以创建并行作业从。
+此特定示例中不适用于 SQL Server，并且您可以在许多情况下实现更好的性能的使用 SQL 对数据进行分组。 但是，使用 rxExecBy，您可以创建并行作业从。
 
 下面的示例说明了在 R 中，使用 SQL Server 计算上下文作为过程：
 

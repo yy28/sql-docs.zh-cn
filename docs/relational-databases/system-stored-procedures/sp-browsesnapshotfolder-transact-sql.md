@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsesnapshotfolder
@@ -17,12 +16,12 @@ ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fffd6e0131c00194ae65fb425b202add18cd23f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bd85e4d3e76df8cf5fe0b30350fb1a02959516f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785225"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591151"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  包含项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=**] **'***订阅服务器*****  
+ [  **@subscriber=**] **'**_订阅服务器上_  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db=**] **'***subscriber_db*****  
+ [  **@subscriber_db=**] **'**_subscriber_db_  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,7 +65,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
   
  如果将发布设置为同时在发布服务器的工作目录和发布服务器的快照文件夹中生成快照文件，则结果集将包含两行。 第一行包含发布快照文件夹，第二行包含发布服务器工作目录。 **sp_browsesnapshotfolder**可用于确定生成快照文件的目录。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_browsesnapshotfolder**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050785"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509687"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>运行 Analysis Services 部署向导
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38050785"
 -   **从命令提示符**在命令提示符处，运行时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导生成部署脚本基于用于运行该向导的开关。 该向导可以指导进行下面的任何一项操作：提示用户输入并基于输入更改输入文件；按原样使用输入文件以静默、无人参与模式运行部署；或创建一个以后可能使用的部署脚本。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>交互式运行 Analysis Services 部署向导  
- 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导读取输入文件中的值并向您显示该信息。 可以更改这些输入值 - 例如部署目标、配置设置、部署选项和连接字符串密码 - 或原样保留它们。 如果更改任何输入的值，该向导将生成部署脚本时使用这些更改。 但是，向导不会更改输入文件中的任何值。  
+ 进行交互式运行时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导读取输入文件中的值并向您显示该信息。 您可以修改这些输入值如作为部署目标、 配置设置、 部署选项和连接字符串密码-或原样保留它们。 如果更改任何输入的值，该向导将生成部署脚本时使用这些更改。 但是，向导不会更改输入文件中的任何值。  
   
 > [!NOTE]  
 >  如果使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导更改输入值，那么可以在命令提示符处运行向导并将向导设置为以应答文件模式运行。  
@@ -37,7 +37,7 @@ ms.locfileid: "38050785"
   
 -   单击**启动** > **Microsoft SQL Server** > **部署向导**。  
   
-     — 或 —  
+     -或-  
   
 -   在中**项目**的文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，双击\<项目名称 >.asdatabase 文件。
     > [!NOTE]  

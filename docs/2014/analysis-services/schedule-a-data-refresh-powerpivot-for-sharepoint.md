@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178457"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363839"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>计划数据刷新 (PowerPivot for SharePoint)
   您可以计划数据刷新，以便自动获取对您发布到 SharePoint 站点的 Excel 工作簿内的 PowerPivot 数据的更新。  
@@ -148,16 +148,16 @@ ms.locfileid: "48178457"
   
  此时将出现历史记录页，其中显示当前 Excel 工作簿中 PowerPivot 数据的所有刷新活动的完整记录，包括最近数据刷新操作的状态。  
   
- 在某些情况下，您可能会看到实际处理时间不同于您指定的时间。 如果服务器上的处理负荷繁重，将发生此情况。 在负荷繁重的情况下，[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 服务实例将等待，直到释放了足够的系统资源后才开始数据刷新。  
+ 在某些情况下，您可能会看到实际处理时间不同于您指定的时间。 如果服务器上的处理负荷繁重，将发生此情况。 在负荷繁重的情况下， [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 服务实例将等待，直到释放了足够的系统资源后才开始数据刷新。  
   
  在刷新操作完成时，必须签入工作簿。 此时，将用刷新后的数据保存工作簿。 如果该文件已签出，则数据刷新将跳到下一计划时间。  
   
  如果您看到意外的状态消息（例如，刷新操作失败或被取消），则可以通过检查权限和服务器可用性来调查该问题。  
   
- 查看 TechNet WIKI 上的 PowerPivot 数据刷新故障排除页，帮助解决数据刷新问题。 有关详细信息，请参阅 [解决 PowerPivot 数据刷新问题](http://go.microsoft.com/fwlink/?LinkId=251594)。  
+ 查看 TechNet WIKI 上的 PowerPivot 数据刷新故障排除页，帮助解决数据刷新问题。 有关详细信息，请参阅 [解决 PowerPivot 数据刷新问题](https://go.microsoft.com/fwlink/?LinkId=251594)。  
   
 > [!NOTE]  
->  SharePoint 管理员可通过在管理中心查看 PowerPivot 管理面板中的合并数据刷新报告来帮助您排除数据刷新问题。 有关详细信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
+>  SharePoint 管理员可通过在管理中心查看 PowerPivot 管理面板中的合并数据刷新报告来帮助您排除数据刷新问题。 有关详细信息，请参阅 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 SharePoint 2010 的 PowerPivot 数据刷新](powerpivot-data-refresh-with-sharepoint-2010.md)   

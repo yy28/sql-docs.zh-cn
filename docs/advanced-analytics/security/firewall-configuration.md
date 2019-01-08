@@ -1,6 +1,6 @@
 ---
-title: SQL Server 机器学习服务的防火墙配置 |Microsoft Docs
-description: 如何为 SQL Server 机器学习服务中配置防火墙。
+title: 防火墙配置的 SQL Server 机器学习服务
+description: 如何配置防火墙以允许从 SQL Server 机器学习服务的出站连接。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d2bf36ea9a7c7a0b193dc4613f6a36f58e66014a
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: fc89855364e8bfdb2c1e5de1f58d87ae57886db9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419052"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431940"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>SQL Server 机器学习服务的防火墙配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

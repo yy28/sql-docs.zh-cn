@@ -15,12 +15,12 @@ ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4078161203f335c295a660e7bd4e8e3e18ea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8db9bcef48b28594187aab34fb0049689d907a47
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150437"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376229"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>升级后，新的保留关键字不能用作标识符
   升级顾问检测到所使用的某些词为保留关键字。 保留关键字不能用作标识符或对象名称，除非该名称用分隔符分割。  
@@ -57,7 +57,7 @@ ms.locfileid: "48150437"
   
  [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)  
   
- [分隔的标识符 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkId=112509)  
+ [分隔的标识符 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

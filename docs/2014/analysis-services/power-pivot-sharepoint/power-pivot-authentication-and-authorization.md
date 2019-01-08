@@ -11,12 +11,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165747"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377857"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 身份验证和授权
   在 SharePoint 2010 场中运行的 PowerPivot for SharePoint 部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 PowerPivot 内容和操作，因为所有与 PowerPivot 相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 PowerPivot 共享服务执行所有与 PowerPivot 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 PowerPivot 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
@@ -25,7 +25,7 @@ ms.locfileid: "48165747"
   
  单击下面的链接可阅读本主题中的特定部分：  
   
- [使用经典模式登录要求 Windows 身份验证](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Windows 身份验证（使用经典模式登录）要求](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [PowerPivot 操作要求用户授权](#UserConnections)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48165747"
 |场或服务管理员|安装、启用和配置服务和应用程序。<br /><br /> 使用 PowerPivot 管理面板和查看管理报表。|  
 |完全控制|在网站集级别激活 PowerPivot 功能集成。<br /><br /> 创建 PowerPivot 库。<br /><br /> 创建数据馈送库。|  
 |参与|添加、编辑、删除和下载 PowerPivot 工作簿。<br /><br /> 配置数据刷新。<br /><br /> 基于 SharePoint 站点上的 PowerPivot 工作簿创建新的工作簿或报表。<br /><br /> 在数据馈送库中创建数据服务文档|  
-|读取|将 PowerPivot 工作簿作为外部数据源访问，其中，工作簿 URL 是在某一连接对话框（例如，在 Excel 的数据连接向导）中显式输入的。|  
+|读取|访问 PowerPivot 工作簿作为外部数据源，工作簿 URL 显式输入在连接对话框中 （例如，在 Excel 的数据连接向导）。|  
 |仅查看|查看 PowerPivot 工作簿。<br /><br /> 查看数据刷新历史记录。<br /><br /> 将本地工作簿连接到 SharePoint 站点上的 PowerPivot 工作簿，以其他方法重新设定其数据的作用。<br /><br /> 下载该工作簿的一个快照。 该快照是数据的静态副本，没有切片器、筛选器、公式或数据连接。 该快照的内容类似于从浏览器窗口复制单元值。|  
   
 ##  <a name="excel"></a> PowerPivot 工作簿的 Excel Services 安全注意事项  
@@ -115,6 +115,6 @@ ms.locfileid: "48165747"
  [配置 PowerPivot 服务帐户](configure-power-pivot-service-accounts.md)   
  [配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot 安全体系结构](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot 安全体系结构](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 在 SQL Server 2019 机器学习服务安装中的差异 |Microsoft Docs
+title: SQL Server 2019-SQL Server 机器学习服务中的差异
+description: 了解什么是 R 和 Python SQL Server 机器学习扩展 SQL Server 2019 预览版本中的新增功能。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/08/2018
@@ -8,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bd03c4c1dfb019238785b5284b4cceffc95c3a2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878150"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432830"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 机器学习服务安装在 SQL Server 2019 之间的差异  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "48878150"
 为当前的默认值创建符号链接**R_SERVICES**并**PYTHON_SERIVCES**作为 SQL Server 安装程序的一部分。 如果不想要创建此链接，一种替代方法是所有应用程序包读取的权限授予指向文件夹的层次结构。
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [安装 SQL Server 机器学习在 Windows 上的服务](sql-machine-learning-services-windows-install.md)
 

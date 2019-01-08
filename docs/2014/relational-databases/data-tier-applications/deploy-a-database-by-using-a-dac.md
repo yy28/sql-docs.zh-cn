@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362809"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
   使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
@@ -52,7 +52,7 @@ ms.locfileid: "48050469"
 ###  <a name="Security"></a> 安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC BACPAC 文件中且没有密码。 在导入此 BACPAC 时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>权限  
  此向导需要对源数据库具有 DAC 导出权限。 登录名至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。  
   
  此向导需要对目标实例或服务器的 DAC 导入权限。 登录名必须是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员，或者是 **dbcreator** 固定服务器角色的成员并且具有 ALTER ANY LOGIN 权限。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
@@ -66,7 +66,7 @@ ms.locfileid: "48050469"
   
 3.  展开 **“数据库”** 节点。  
   
-4.  右键单击要部署的数据库，选择 **“任务”**，然后选择 **“将数据库部署到 SQL Azure…”**  
+4.  右键单击要部署的数据库，选择 “任务”，然后选择“将数据库部署到 SQL Azure…”  
   
 5.  完成向导对话框：  
   
@@ -87,22 +87,22 @@ ms.locfileid: "48050469"
   
 -   **下一步** - 进入 **“部署设置”** 页。  
   
--   **取消** – 取消操作并关闭向导。  
+-   **取消** - 取消操作并关闭向导。  
   
 ##  <a name="Deployment_settings"></a> “部署设置”页  
  使用此页可以指定目标服务器并提供有关新数据库的详细信息。  
   
  **本地主机：**  
   
--   **服务器连接** – 指定服务器连接详细信息，然后单击 **“连接”** 来验证连接。  
+-   **服务器连接** - 指定服务器连接详细信息，然后单击“连接”来验证连接。  
   
--   **新数据名称** – 指定新数据库的名称。  
+-   **新数据库名称** - 指定新数据库的名称。  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库设置：**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本** – 从下拉菜单中选择 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的版本。  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本** - 从下拉菜单中选择 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的版本。  
   
--   **最大数据库大小** – 从下拉菜单中选择最大数据库大小。  
+-   **最大数据库大小** - 从下拉菜单中选择最大数据库大小。  
   
  **其他设置：**  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050469"
 ## <a name="using-a-net-framework-application"></a>使用 .Net Framework 应用程序  
  **使用 .Net Framework 应用程序中的 DacStoreExport() 和 Import() 方法来部署数据库。**  
   
- 若要查看代码示例，请下载有关 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)的 DAC 示例应用程序  
+ 若要查看代码示例，请下载有关 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)的 DAC 示例应用程序  
   
 1.  创建一个 SMO Server 对象，并将该对象设置为包含要部署的数据库的实例或服务器。  
   
-2.  打开`ServerConnection`对象，并连接到同一实例。  
+2.  打开 `ServerConnection` 对象，并连接到同一实例。  
   
-3.  使用`Export`方法的`Microsoft.SqlServer.Management.Dac.DacStore`类型将数据库导出到 BACPAC 文件。 指定要导出的数据库的名称以及指向将用于放置 BACPAC 文件的文件夹的路径。  
+3.  使用 `Export` 类型的 `Microsoft.SqlServer.Management.Dac.DacStore` 方法将数据库导出到 BACPAC 文件。 指定要导出的数据库的名称以及指向将用于放置 BACPAC 文件的文件夹的路径。  
   
 4.  创建一个 SMO Server 对象，并将该对象设置为目标实例或服务器。  
   
-5.  打开`ServerConnection`对象，并连接到同一实例。  
+5.  打开 `ServerConnection` 对象，并连接到同一实例。  
   
-6.  使用`Import`方法的`Microsoft.SqlServer.Management.Dac.DacStore`类型导入 BACPAC。 指定导出创建的 BACPAC 文件。  
+6.  使用 `Import` 类型的 `Microsoft.SqlServer.Management.Dac.DacStore` 方法导入 BACPAC。 指定导出创建的 BACPAC 文件。  
   
 ## <a name="see-also"></a>请参阅  
  [数据层应用程序](data-tier-applications.md)   

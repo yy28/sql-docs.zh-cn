@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], public profiles
@@ -15,12 +14,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071811"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979133"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
   使用 **数据库邮件配置向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。  
@@ -53,7 +52,7 @@ ms.locfileid: "49071811"
   
 -   在 **“管理配置文件和帐户”** 页上，选择 **“创建新配置文件”** 选项，然后单击 **“下一步”**。  
   
--   在 **“新建配置文件”** 页上，指定配置文件的名称、说明并添加要包括在配置文件中的帐户，然后单击 **“下一步”**。  
+-   上**新的配置文件**页上，指定配置文件名称、 说明并添加要帐户包括在配置文件，然后单击**下一步**。  
   
 -   在 **“完成该向导”** 页上，检查要执行的操作，然后单击 **“完成”** 以完成创建新配置文件。  
   
@@ -191,7 +190,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*默认配置文件状态*'  
   
-     其中*@profile_name*是配置文件中，名称和*@principal_name*指示这是一个公共配置文件， *@is_default*确定这配置文件是数据库用户或角色的默认值。  
+     其中，@profile_name 是配置文件的名称，@principal_name 指示其为公共配置文件，@is_default 确定此配置文件是数据库用户还是角色的默认值。  
   
  以下示例创建了一个数据库邮件帐户和一个数据库邮件专用配置文件，然后将帐户添加到该配置文件中并授予对该配置文件的公共访问权限。  
   

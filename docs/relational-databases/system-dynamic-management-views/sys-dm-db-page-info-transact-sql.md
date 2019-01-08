@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150198"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732074"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -118,11 +118,11 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 `sys.dm_db_page_info` 可用来代替`DBCC PAGE`语句在许多情况下，但返回仅页标头的信息，不页的正文。 `DBCC PAGE` 仍将需要其中的页面的全部内容所需的用例。
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>在与其他 Dmv 一起使用
-一个重要用例的`sys.dm_db_page_info`是将它加入与其他 dmv，用来显示页的信息。  为了帮助实现此用例，新列调用`page_resource`公开页 8 字节十六进制格式的信息已添加。 此列已添加到`sys.dm_exec_processes`和`sys.sysprocesses`，将添加到在将来根据需要其他 Dmv。
+一个重要用例的`sys.dm_db_page_info`是将它加入与其他 dmv，用来显示页的信息。  为了帮助实现此用例，新列调用`page_resource`公开页 8 字节十六进制格式的信息已添加。 此列已添加到`sys.dm_exec_requests`和`sys.sysprocesses`，将添加到在将来根据需要其他 Dmv。
 
 一个新的函数`sys.fn_PageResCracker`，采用`page_resource`作为输入，并输出包含一行`database_id`，`file_id`和`page_id`。  然后可以使用此函数以便之间的联接`sys.dm_exec_requests`或`sys.sysprocesses`和`sys.dm_db_page_info`。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要`VIEW DATABASE STATE`数据库中的权限。  
   
 ## <a name="examples"></a>示例  
@@ -146,7 +146,7 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   

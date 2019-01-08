@@ -1,7 +1,8 @@
 ---
-title: Azure 数据 Studio SQL Server 2019 扩展 （预览版） |Microsoft Docs
+title: SQL Server 2019 扩展 （预览版）
+titleSuffix: Azure Data Studio
 description: SQL Server 2019 预览适用于 Azure Data Studio 扩展
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -11,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 6ce44d22675be344aaa1f08632e39bfdf9c190b3
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269810"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432810"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展 （预览版）
 
-SQL Server 2019 扩展 （预览版） 提供预览支持新功能和工具支持的寄送[!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]。 这包括支持预览版[SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)，一个集成[笔记本体验](../big-data-cluster/notebooks-guidance.md)，PolyBase [Create External Table 向导](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)，以及[Azure 资源浏览器](azure-resource-explorer.md)。
+SQL Server 2019 扩展 （预览版） 提供新功能和工具支持的寄送的预览支持[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 这包括支持预览版[SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)，一个集成[笔记本体验](../big-data-cluster/notebooks-guidance.md)，PolyBase [Create External Table 向导](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)，以及[Azure 资源浏览器](azure-resource-explorer.md)。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安装 SQL Server 2019 扩展 （预览版）
 
@@ -30,9 +31,9 @@ SQL Server 2019 扩展 （预览版） 提供预览支持新功能和工具支�
 
    |平台|下载|发布日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6日日 |0.8.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6日日 |0.8.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6日日 |0.8.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6 日 |0.8.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6 日 |0.8.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6 日 |0.8.0
 
 1. 在 Azure Data Studio 中选择**安装 VSIX 包中的扩展插件**从**文件**菜单，然后选择已下载的.vsix 文件。
 
@@ -41,6 +42,8 @@ SQL Server 2019 扩展 （预览版） 提供预览支持新功能和工具支�
 1. 選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
 
 1. 重新加载后，该扩展将安装依赖项。 你可以查看在输出窗口中，进度，可能需要几分钟的时间。
+
+1. 依赖项后完成的安装，关闭并重新打开 Azure Data Studio。 **SQL Server 大数据群集**之前重新启动 Azure Data Studio，连接类型不可用。
 
 ## <a name="release-notes-v080"></a>发行说明 (v0.8.0)
 *笔记本*:

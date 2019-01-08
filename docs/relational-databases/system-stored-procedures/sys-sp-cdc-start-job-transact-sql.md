@@ -20,12 +20,12 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d6598d507f936af43b7c81734b6d67e7a4c0e7f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 842f7a9f677312501a92a42301017eedaee0f5d4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725385"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589141"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [[  **@job_type=** ] **'***job_type***** ]  
+ [[  **@job_type=** ] **'**_job_type_ ]  
  要添加的作业类型。 *job_type*是**nvarchar(20)** 默认值为**捕获**。 有效输入包括**捕获**并**清理**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -54,7 +54,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="remarks"></a>备注  
  管理员可以使用 sys.sp_cdc_start_job 显式启动捕获作业或清除作业。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ## <a name="examples"></a>示例  

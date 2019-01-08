@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855915"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204556"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLEndTran**请求与连接关联的所有语句上的所有活动操作的提交或回滚操作。 **SQLEndTran**还可以请求与环境相关联的所有连接执行的提交或回滚操作。  
@@ -132,13 +132,13 @@ SQLRETURN SQLEndTran(
   
 -   该驱动程序未返回确认事务未完成的以下消息之一：  
   
-    -   25S03： 回滚事务  
+    -   25S03:事务回滚  
   
-    -   40001： 序列化失败  
+    -   40001:序列化失败  
   
-    -   40002： 完整性约束  
+    -   40002:完整性约束  
   
-    -   HYC00： 未实现的可选功能  
+    -   HYC00:未实现的可选功能  
   
  如果**SQLEndTran**调用了上一个环境句柄，它的连接的另一个满足上述条件，连接到相同的驱动程序的所有连接将会都处于挂起状态。  
   

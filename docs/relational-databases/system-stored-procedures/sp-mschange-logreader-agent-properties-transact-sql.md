@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_logreader_agent_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39939b70e6e474df0935f4fbbbc94692b0ffde06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30f7ee9e8488fad2311adae55f973bab8a22ec22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692808"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770289"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher_login**=] **'***publisher_login***’**  
  连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，无默认值。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的 Windows 帐户*job_login*将使用当连接到发布服务器。  
   
- [ **@publisher_password**=] **'***publisher_password*****  
+ [ **@publisher_password** =] **'***publisher_password*****  
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，无默认值。  
   
  [ **@job_login**=] **'***job_login***’**  
@@ -91,7 +90,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  发布服务器实例上的运行时[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本，应使用[sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)更改日志读取器代理的属性。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**分发服务器上的固定的服务器角色可以执行**sp_MSchange_logreader_agent_properties**。  
   
 ## <a name="see-also"></a>请参阅  

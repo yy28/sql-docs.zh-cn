@@ -15,18 +15,18 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354033"
 ---
 # <a name="preview-view"></a>“预览”视图
   使用 **“预览”** 视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。  
   
 > [!IMPORTANT]  
->  当[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]运行时作为 RemoteApp，报表不能显示在**预览版**中查看[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 RemoteApp 程序是通过远程桌面服务进行远程访问的程序。 有关详细信息，请参阅[TS RemoteApp 分步指南](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
+>  当 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 作为 RemoteApp 运行时，无法在  的“预览” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]视图中显示报表。 RemoteApp 程序是通过远程桌面服务进行远程访问的程序。 有关详细信息，请参阅[TS RemoteApp 分步指南](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
   
 ## <a name="options"></a>选项  
  使用工具栏可以管理预览功能。  
@@ -61,7 +61,7 @@ ms.locfileid: "48206767"
  **停止呈现**  
  选择此选项可以停止呈现进程。  
   
- **“刷新”**  
+ **刷新**  
  选择此选项可以刷新数据缓存并再次运行报表。  
   
  **打印**  

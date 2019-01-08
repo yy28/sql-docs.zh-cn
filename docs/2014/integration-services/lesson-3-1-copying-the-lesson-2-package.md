@@ -1,22 +1,21 @@
 ---
-title: 步骤 1：复制第 2 课包 | Microsoft Docs
+title: 步骤 1：复制第 2 课包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45a536e151432a2f2edbac55362af9ea2f2feb55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bcc6c331908f33df3b324ff7061b38065e36981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205539"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360880"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>步骤 1：复制 Lesson 2 包
   在本任务中，将为第 2 课中创建的 Lesson 2.dtsx 包创建一个副本。 或者，可以将本教程中附带的已完成的 Lesson 2 包添加到项目中，然后再对其进行复制。 将使用这个新副本来完成第 3 课的剩余部分。  
@@ -49,11 +48,11 @@ ms.locfileid: "48205539"
   
 3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
   
-4.  单击浏览 **(…)** 按钮，导航到计算机上的“Lesson 2.dtsx”，然后单击“打开”。  
+4.  单击浏览 (…) 按钮，导航到计算机上的“Lesson 2.dtsx”，然后单击“打开”。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48205539"
 5.  按先前过程中的步骤 3-8 中所述，复制并粘贴 Lesson 3 包。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2：添加并配置日志记录](lesson-3-2-adding-and-configuring-logging.md)  
+ [步骤 2:添加和配置日志记录](lesson-3-2-adding-and-configuring-logging.md)  
   
   

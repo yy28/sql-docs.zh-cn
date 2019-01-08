@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,12 +15,12 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0870de459be9999979797579bf577cd7daab816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377549"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   本主题介绍如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志。  
@@ -29,7 +29,7 @@ ms.locfileid: "48070887"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除 SQL Server 代理作业步骤日志，可使用：**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48070887"
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>删除 SQL Server 代理作业步骤日志  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48070887"
  有关详细信息，请参阅[sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)。  
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
- 通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `DeleteJobStepLogs` 类的 `Job` 方法。 有关详细信息，请参阅[SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 `DeleteJobStepLogs` 类的 `Job` 方法。 有关详细信息，请参阅[SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   
 ```  
 -- Uses PowerShell to delete all job step log files that have ID values larger than 5.  

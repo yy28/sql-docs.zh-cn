@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
@@ -35,15 +34,15 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e168c23035722174451d316ef53b14be3cc5c8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127877"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804549"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
-  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用维护计划向导创建单个服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
+  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单个服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
   
  **本主题内容**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48127877"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   [创建维护计划在 SQL Server Management Studio 中使用维护计划向导](#SSMSProcedure)  
   
@@ -95,7 +94,7 @@ ms.locfileid: "48127877"
   
     5.  如果您选择了 **“整个计划统筹安排或无计划”**，则在 **“计划”** 下面单击 **“更改”**。  
   
-        1.  在 **“新建作业计划”** 对话框的 **“名称”** 框中，输入作业计划的名称。  
+        1.  在“新建作业计划”对话框的“名称”框中，输入作业计划的名称。  
   
         2.  在 **“计划类型”** 列表中选择计划类型：  
   
@@ -119,9 +118,9 @@ ms.locfileid: "48127877"
   
                 -   如果选择 **“每月”**，可以选择 **“天”** 或 **“特定日期”**。  
   
-                    -   如果选择 **“天”**，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果您要每隔一个月在当月的 15 日运行计划作业，请选择 **“天”** ，在第一个框中输入“15”，在第二个框中输入“2”。 请注意，第二个框中允许的最大数是“99”。  
+                    -   如果选择 **“天”**，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”。 请注意，第二个框中允许的最大数是“99”。  
   
-                    -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果您要每隔一个月在当月的最后一个工作日运行作业计划，请选择 **“天”**，从第一个列表中选择 **“最后一周”** ，从第二个列表中选择 **“工作日”** ，然后在最后一个框中输入“2”。 还可以从前两个列表中选择“第一周”、“第二周”、“第三周”或“第四周”以及特定工作日（例如星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
+                    -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”。 您还可以选择**第一个**，**第二个**，**第三个**，或者**第四个**，以及特定工作日 (例如：星期日或星期三） 前两个列表中。 请注意，最后一个框中允许的最大数是“99”。  
   
             2.  在 **“每天频率”** 下，指定作业计划运行的当天作业计划的重复频率。  
   
@@ -151,7 +150,7 @@ ms.locfileid: "48127877"
     > [!NOTE]  
     >  你在此处选择的任务将确定在“选择维护任务顺序”页之后将需要完成的页。  
   
-8.  在 **“选择维护任务顺序”** 页上，选择一个任务，然后单击 **“上移…”** 或 **“下移…”** 以更改其执行顺序。 完成操作后，或如果您对当前任务的顺序感到满意时，请单击 **“下一步”**。  
+8.  在“选择维护任务顺序”页上，选择一个任务，然后单击“上移…”或“下移…”以更改其执行顺序。 完成操作后，或如果您对当前任务的顺序感到满意时，请单击 **“下一步”**。  
   
     > [!NOTE]  
     >  如果你在上面的“选择计划属性”页中选择了“每项任务单独计划”，则无法在此页上更改维护任务的顺序。  
@@ -210,7 +209,7 @@ ms.locfileid: "48127877"
   
 #### <a name="define-the-index-tasks"></a>定义索引任务  
   
-1.  在 **“定义重新组织索引任务”** 页上，选择用来移动索引页以提高搜索顺序效率的服务器。 此任务使用 `ALTER INDEX … REORGANIZE` 语句。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。 完成后，单击 **“下一步”**。  
+1.  在 **“定义重新组织索引任务”** 页上，选择用来移动索引页以提高搜索顺序效率的服务器。 此任务使用 `ALTER INDEX ... REORGANIZE` 语句。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。 完成后，单击 **“下一步”**。  
   
      此页还提供以下选项：  
   
@@ -224,9 +223,9 @@ ms.locfileid: "48127877"
      指定受此任务影响的表或索引。 在“对象”框中选择 **“表和视图”** 时不可用。  
   
      “压缩大型对象”复选框  
-     在可能的情况下，释放表和视图的空间。 此选项使用 `ALTER INDEX … LOB_COMPACTION = ON`。  
+     在可能的情况下，释放表和视图的空间。 此选项使用 `ALTER INDEX ... LOB_COMPACTION = ON`。  
   
-2.  在“定义重新生成索引任务”页上，选择你将重新创建多个索引的数据库。 此任务使用 `ALTER INDEX … REBUILD PARTITION` 语句。 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。）完成后，单击“下一步”。  
+2.  在“定义重新生成索引任务”页上，选择你将重新创建多个索引的数据库。 此任务使用 `ALTER INDEX ... REBUILD PARTITION` 语句。 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。）完成后，单击“下一步”。  
   
      此页还提供以下选项：  
   
@@ -255,7 +254,7 @@ ms.locfileid: "48127877"
      使用 `SORT_IN_TEMPDB` 选项，该选项确定在索引创建过程中生成的中间排序结果的临时存储位置。 如果不需要执行排序操作，或者可以在内存中执行排序，则忽略 `SORT_IN_TEMPDB` 选项。  
   
      “重建索引时保持索引联机”复选框  
-     使用 `ONLINE` 选项，用户可以在索引操作期间访问基础表或聚集索引数据以及任何关联的非聚集索引。 选择此选项将激活用于重新生成不允许联机重新生成的索引的其他选项： **“不重新生成索引”** 和 **“脱机重新生成索引”**。  
+     使用 `ONLINE` 选项，用户可以在索引操作期间访问基础表或聚集索引数据以及任何关联的非聚集索引。 选择此选项将激活用于重新生成不允许联机重新生成索引的其他选项：**不重新生成索引**并**脱机重新生成索引**。  
   
     > [!NOTE]  
     >  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -408,7 +407,7 @@ ms.locfileid: "48127877"
     |**压缩备份**|单击此选项可压缩备份，而不考虑服务器级别默认值。<br /><br /> **\*\* 重要说明 \*\*** 默认情况下，压缩会大大提高 CPU 使用率，并且压缩进程占用的额外 CPU 可能会对并发操作造成不利影响。 因此，您可能需要在会话中创建低优先级的压缩备份，其 CPU 使用率受资源调控器限制。 有关详细信息，请参阅本主题后面的 [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制。|  
     |**不压缩备份**|单击此选项可创建未压缩的备份，而不考虑服务器级别默认值。|  
   
-2.  在“定义备份数据库（差异）任务”页上，选择要对其运行部分备份的数据库。 有关此页上可用选项的详细信息，请参阅上述步骤 16 中列出的定义。 此任务使用 `BACKUP DATABASE … WITH DIFFERENTIAL` 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。  完成后，单击 **“下一步”**。  
+2.  在“定义备份数据库（差异）任务”页上，选择要对其运行部分备份的数据库。 有关此页上可用选项的详细信息，请参阅上述步骤 16 中列出的定义。 此任务使用 `BACKUP DATABASE ... WITH DIFFERENTIAL` 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。  完成后，单击 **“下一步”**。  
   
 3.  在“定义备份数据库（事务日志）任务”页上，选择要对事务日志运行备份的数据库。 有关此页上可用选项的详细信息，请参阅上述步骤 16 中列出的定义。 此任务使用 `BACKUP LOG` 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。 完成后，单击 **“下一步”**。  
   

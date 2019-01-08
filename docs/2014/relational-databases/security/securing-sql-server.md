@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192517"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359559"
 ---
 # <a name="securing-sql-server"></a>保护 SQL Server
   可将保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视为一系列步骤，它涉及四个方面：平台、身份验证、对象（包括数据）以及访问系统的应用程序。 下列主题将指导您完成创建和实现有效安全计划的过程。  
   
- 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [网站上找到有关](http://go.microsoft.com/fwlink/?LinkID=31629) 安全性的详细信息。 此类信息包括最佳实践指南和安全清单。 此网站还包含最新的 Service Pack 信息和下载。  
+ 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [网站上找到有关](https://go.microsoft.com/fwlink/?LinkID=31629) 安全性的详细信息。 此类信息包括最佳实践指南和安全清单。 此网站还包含最新的 Service Pack 信息和下载。  
   
 ## <a name="platform-and-network-security"></a>平台与网络安全性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的平台包括物理硬件和将客户端连接到数据库服务器的联网系统，以及用于处理数据库请求的二进制文件。  
@@ -76,7 +76,7 @@ ms.locfileid: "48192517"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序文件|[SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级提供了增强的安全性。 若要确定可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的最新 Service Pack，请访问 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) 网站。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级提供了增强的安全性。 若要确定可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的最新 Service Pack，请访问 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) 网站。  
   
  您可以使用以下脚本来确定系统上安装的 Service Pack。  
   

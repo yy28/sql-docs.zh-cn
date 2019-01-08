@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636895"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588457"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@sp_name =** ] **'***name***'**  
+ [  **@sp_name =** ] **'**_名称_  
  用于返回目录信息的过程名。 *名称*是**nvarchar(390)**，默认值为 NULL。 支持通配符模式匹配。  
   
- [  **@sp_owner =** ] **'***架构***’**  
+ [  **@sp_owner =** ] **'**_架构_  
  过程所属架构的名称。 *架构*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认过程可见性规则将应用。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前架构包含具有指定名称的过程，则返回此过程。 如果指定了非限定存储过程，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]按以下顺序搜索此过程：  
@@ -57,10 +57,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   当前数据库中的 **dbo** 架构。  
   
- [  **@qualifier =** ] **'***限定符***’**  
- 过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持窗体中的表的三部分命名方式 (*限定符 ***。*** 架构 ***。*** 名称*。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ [  **@qualifier =** ] **'**_限定符_  
+ 过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持窗体中的表的三部分命名方式 (_限定符_**。**_架构_**。**_名称_。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
- [  **@fUsePattern =** ] **'***fUsePattern***’**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_  
  确定是否将下划线 (_)、百分号 (%) 或 方括号 ([ ]) 解释为通配符。 *fUsePattern*是**位**，默认值为 1。  
   
  **0** = 启用模式匹配为关闭状态。  
@@ -90,7 +90,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
  **sp_stored_procedures**等效于**SQLProcedures** ODBC 中。 返回的结果按排序**PROCEDURE_QUALIFIER**， **PROCEDURE_OWNER**，并**PROCEDURE_NAME**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

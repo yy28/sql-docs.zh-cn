@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361959"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
   
 > [!NOTE]  
->  有关模糊查找转换的详细信息（包括性能和内存限制），请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
+>  有关模糊查找转换的详细信息（包括性能和内存限制），请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
   
  模糊查找转换与查找转换之间的不同之处在于：它使用了模糊匹配。 查找转换使用同等联接在引用表中查找匹配的记录。 它返回带有至少一个匹配记录的记录，并且返回没有匹配记录的记录。 与此相比较，模糊查找转换使用模糊匹配返回引用表中一个或多个接近的匹配项。  
   
@@ -120,18 +119,18 @@ ms.locfileid: "48106387"
 ## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊查找转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引。 这些临时表和索引的大小与引用表中的行数和标记数以及模糊查找转换所创建的标记数成比例；因此，它们有可能会占用相当大的磁盘空间。 该转换也会查询这些临时表。 因此，应该考虑将模糊查找转换连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的非生产实例中，在生产服务器只有有限的可用磁盘空间时，尤其应该如此。  
   
- 如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。 如果模糊查找转换使用的引用表位于生产服务器上，您应该考虑将该表复制到非生产服务器，并将模糊查找转换配置为访问该副本。 这样做可以防止查找查询占用生产服务器上的资源。 此外，如果模糊查找转换维护匹配索引（即如果 MatchIndexOptionsis 设置为 **GenerateAndMaintainNewIndex**），则转换可以在执行数据清理操作的过程中锁定引用表，以防止其他用户和应用程序访问该表。  
+ 如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。 如果模糊查找转换使用的引用表位于生产服务器上，您应该考虑将该表复制到非生产服务器，并将模糊查找转换配置为访问该副本。 这样做可以防止查找查询占用生产服务器上的资源。 此外，如果模糊查找转换维护匹配索引（即如果 MatchIndexOptionsis 设置为“GenerateAndMaintainNewIndex”），则转换可以在执行数据清理操作的过程中锁定引用表，以防止其他用户和应用程序访问该表。  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>配置模糊查找转换  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“模糊查找转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [模糊查找转换编辑器&#40;引用表选项卡&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [模糊查找转换编辑器（“引用表”选项卡）](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [模糊查找转换编辑器&#40;列选项卡&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [模糊查找转换编辑器（“列”选项卡）](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [模糊查找转换编辑器&#40;高级选项卡&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [模糊查找转换编辑器（“高级”选项卡）](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

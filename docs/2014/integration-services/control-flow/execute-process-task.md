@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
@@ -15,12 +14,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02f00d9846176edabb2da486906b5d1946c94124
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b50470b6b12226cc14a837331b45ed0e16e4cfd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205617"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366829"
 ---
 # <a name="execute-process-task"></a>执行进程任务
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
@@ -40,9 +39,9 @@ ms.locfileid: "48205617"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [执行进程任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [执行进程任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [执行进程任务编辑器&#40;处理页&#41;](../execute-process-task-editor-process-page.md)  
+-   [执行进程任务编辑器（“进程”页）](../execute-process-task-editor-process-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
@@ -61,22 +60,22 @@ ms.locfileid: "48205617"
   
  可以使用表达式设置执行进程任务的各种属性。  
   
- 当你使用**StandardInputVariable**属性配置执行进程任务以提供输入时，调用`Console.ReadLine`从应用程序来读取输入的方法。 有关详细信息，请参阅 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 主题。  
+ 当你使用**StandardInputVariable**属性配置执行进程任务以提供输入时，调用`Console.ReadLine`从应用程序来读取输入的方法。 有关详细信息，请参阅 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 主题。  
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
--   如果您使用 Microsoft Visual Basic 编写应用程序，请设置`My.Application.CommandLineArgs`属性。 下面的示例设置 `My.Application.CommandLineArgs` 属性以检索两个参数：  
+-   如果使用 Microsoft Visual Basic 编写应用程序，请设置 `My.Application.CommandLineArgs` 属性。 下面的示例设置 `My.Application.CommandLineArgs` 属性以检索两个参数：  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     有关详细信息，请参阅 [参考中的](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 属性 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 这一主题。  
+     有关详细信息，请参阅 [参考中的](https://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 属性 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 这一主题。  
   
 -   如果使用 Microsoft Visual C# 编写该应用程序，请使用 `Main` 方法。  
   
-     有关详细信息，请参阅 C# 编程指南中的 [命令行参数（C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=129406)这一主题。  
+     有关详细信息，请参阅 C# 编程指南中的 [命令行参数（C# 编程指南）](https://go.microsoft.com/fwlink/?LinkId=129406)这一主题。  
   
  执行进程任务还包括 **StandardOutputVariable** 和 **StandardErrorVariable** 属性，用来分别指定使用该应用程序的标准输出和错误输出的变量。  
   

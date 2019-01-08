@@ -1,5 +1,5 @@
 ---
-title: 表格模型分区 |Microsoft Docs
+title: Analysis Services 表格模型分区 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146282"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072644"
 ---
 # <a name="tabular-model-partitions"></a>表格模型分区 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "50146282"
   
  无需每晚处理 Sales2010-2001 分区中的数据；但是，因为之前十个会计年度的销售数据仍偶尔会因为产品退货和其他调整而发生更改，所以还必须定期进行处理，这样，将每月处理 Sales2010-2001 分区中的数据。 SalesOld 分区中的数据从不会发生变化，因此只是每年处理一次。  
   
- 当进入 2012 会计年度时，新的 Sales2012 分区添加到模型的 Sales 表。 然后，Sales2011 分区可以与 Sales2010-2001 分区合并，并重命名为 Sales2011-2002。 从新的 Sales2011-2002 分区中删除 2001 会计年度中的数据，并移入到 SalesOld 分区。 然后，处理所有分区以反映数据更改。  
+ 当进入 2012年会计年度，新的 Sales2012 分区添加到模型的 Sales 表。 然后，Sales2011 分区可以与 Sales2010-2001 分区合并，并重命名为 Sales2011-2002。 从新的 Sales2011-2002 分区中删除 2001 会计年度中的数据，并移入到 SalesOld 分区。 然后，处理所有分区以反映数据更改。  
   
- 如何实现组织的表格模型的分区策略在很大程度上取决于特定模型数据处理需求和可用的资源。  
+ 如何实现组织的表格模型的分区策略很大程度上将取决于特定模型的数据处理需求和可用资源。  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
  为了在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建、管理和处理分区，您必须具有在安全角色中定义的适当的 Analysis Services 权限。 每个安全角色都具有以下权限之一：  
@@ -74,7 +74,7 @@ Analysis Services 包括包含两个或多个分区的表的并行处理，从�
 ##  <a name="bkmk_process_partitions"></a> 处理分区  
  可以通过使用 **中的** “分区” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 对话框或使用脚本独立于其他分区处理（刷新）分区。 处理具有以下选项：  
   
-|“模式”|Description|  
+|模式|Description|  
 |----------|-----------------|  
 |处理默认值|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成层次结构、计算列和关系。|  
 |处理全部|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  

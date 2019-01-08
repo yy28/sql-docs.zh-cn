@@ -12,17 +12,17 @@ ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f3f8a777704123834a12062b9cbac978960af91c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156477"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371369"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>使可用性组脱机 (SQL Server)
   本主题介绍如何在 [!INCLUDE[tsql](../includes/tsql-md.md)] 和更高版本中通过使用 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] ，将某一 AlwaysOn 可用性组从 ONLINE 状态转换为 OFFLINE 状态。 对于同步提交数据库没有数据丢失，因为如果任何同步提交副本未同步，OFFLINE 操作将引发错误并且保持可用性组处于 ONLINE 状态。 保持可用性组处于联机状态将保护未同步的同步提交数据库，以防可能的数据丢失。 可用性组脱机后，其数据库将不可用于客户端，并且您无法使可用性组重新联机。 因此，使某一可用性组处于脱机状态只会将该可用性组的资源从一个 WSFC 群集迁移到另一个 WSFC 群集。  
   
- 在 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]的跨群集迁移过程中，如果任何应用程序直接连接到某一可用性组的主副本，则该可用性组必须置于脱机状态。 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间进行操作系统升级。 典型的情形是将 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 的跨群集迁移用于升级到 [!INCLUDE[win8](../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../includes/win8srv-md.md)] 的操作系统升级。 有关详细信息，请参阅[针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](http://msdn.microsoft.com/library/jj873730.aspx)。  
+ 在 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]的跨群集迁移过程中，如果任何应用程序直接连接到某一可用性组的主副本，则该可用性组必须置于脱机状态。 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间进行操作系统升级。 典型的情形是将 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 的跨群集迁移用于升级到 [!INCLUDE[win8](../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../includes/win8srv-md.md)] 的操作系统升级。 有关详细信息，请参阅[针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
 
   
@@ -65,9 +65,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="FollowUp"></a> 跟进：在可用性组处于脱机状态后  
   
--   **OFFLINE 操作的日志记录：**  启动了 OFFLINE 操作的 WSFC 节点的标识存储于 WSFC 群集日志和 SQL ERRORLOG 中。  
+-   **OFFLINE 操作的日志记录：** 已启动了 OFFLINE 操作的 WSFC 节点的标识存储在 WSFC 群集日志和 SQL ERRORLOG 中。  
   
--   **如果你在使可用性组脱机之前未删除该可用性组侦听程序：**  如果要将该可用性组迁移到其他 WSFC 群集，请删除该侦听程序的 VNN 和 VIP。 你可以通过使用故障转移群集管理控制台、 [Remove-ClusterResource](http://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell cmdlet 或 [cluster.exe](http://technet.microsoft.com/library/ee461015\(WS.10\).aspx)删除侦听程序的 VNN 和 VIP。 请注意，在 Windows 8 上不推荐使用 cluster.exe。  
+-   **如果您使组脱机之前未删除可用性组侦听器：** 如果您将可用性组迁移到另一个 WSFC 群集，删除的 VNN 和 VIP 的侦听器。 你可以通过使用故障转移群集管理控制台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)删除侦听程序的 VNN 和 VIP。 请注意，在 Windows 8 上不推荐使用 cluster.exe。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -77,9 +77,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [SQL Server 2012 技术文章](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [SQL Server 2012 技术文章](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组&#40;SQL Server&#41;](availability-groups/windows/always-on-availability-groups-sql-server.md)  

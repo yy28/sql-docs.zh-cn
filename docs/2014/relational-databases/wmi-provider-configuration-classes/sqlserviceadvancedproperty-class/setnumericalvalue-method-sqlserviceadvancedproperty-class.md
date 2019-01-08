@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetNumericalValue Method (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e576d103c84208ed66f803b562c1c5913082cdec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07c54d34b3fa7c874142395e5113b90799dcbe6f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226437"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373759"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue 方法（SqlServiceAdvancedProperty 类）
   设置属性的数值。  
@@ -42,7 +40,7 @@ NumValue
 ```  
   
 ## <a name="parts"></a>组成部分  
- 对象  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](sqlserviceadvancedproperty-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
@@ -58,6 +56,6 @@ NumValue
  属性值类型必须为 Numeric，才能将属性设置为数值。  
   
 ## <a name="see-also"></a>请参阅  
- [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f0963c1f703d471827f60514181e976051abb8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125797"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368179"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 集成的性能
   本主题讨论了一些增强的性能的设计选择[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与集成[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 公共语言运行时 (CLR)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48125797"
  编译过程生成的函数指针可以在运行时通过本机代码调用。 对于标量值用户定义函数，可基于每行调用此函数。 为最大程度地降低在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 之间转换的成本，包含任何托管调用的语句都具有一个标识目标应用程序域的启动步骤。 该标识步骤减少每行的转换成本。  
   
 ## <a name="performance-considerations"></a>性能注意事项  
- 以下内容概述了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中特定于 CLR 集成的性能注意事项。 可以在中找到更多详细的信息"[SQL Server 2005 中使用 CLR 集成](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 网站上。 有关托管的代码性能的常规信息可在"[提高.NET 应用程序性能和可伸缩性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 网站上。  
+ 以下内容概述了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中特定于 CLR 集成的性能注意事项。 可以在中找到更多详细的信息"[SQL Server 2005 中使用 CLR 集成](https://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 网站上。 有关托管的代码性能的常规信息可在"[提高.NET 应用程序性能和可伸缩性](https://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 网站上。  
   
 ### <a name="user-defined-functions"></a>用户定义函数  
  相较于 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 用户定义函数，CLR 函数可以从更快的调用路径中受益。 此外，同 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 相比，托管代码在过程代码、计算和字符串操作方面具有决定性性能优势。 需要大量计算且不执行数据访问的 CLR 函数采用托管代码编写的效果更好。 但是与 CLR 集成相比，[!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数的确可以更有效地执行数据访问。  

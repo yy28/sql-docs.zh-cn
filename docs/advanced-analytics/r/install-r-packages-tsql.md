@@ -1,6 +1,6 @@
 ---
-title: 使用 T-SQL （创建外部库） 在 SQL Server 机器学习服务上安装 R 包 |Microsoft Docs
-description: 将新的 R 包添加到 SQL Server 2017 机器学习服务 （数据库内）
+title: 使用 T-SQL （创建外部库） 来安装 R 包的 SQL Server 机器学习服务
+description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 897bafaaf5ec32c417bb5d9625ce6cef22d6e783
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6e910f1c3b29522b11f1faa83db890d399bf3680
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699385"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645046"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>使用 T-SQL （创建外部库） 在 SQL Server 2017 机器学习服务上安装 R 包
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-SQL （创建外部库） 在 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何在其中启用机器学习的 SQL Server 实例上安装新的 R 包。 有多种方法可供选择。 使用 T-SQL 最适合服务器管理员不熟悉。
@@ -48,7 +48,7 @@ ms.locfileid: "51699385"
 
 例如，以下语句名称作为包的来源 miniCRAN 存储库包含**randomForest**包，以及其依赖项。 
 
-```SQL
+```sql
 CREATE EXTERNAL LIBRARY randomForest
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
@@ -60,13 +60,13 @@ WITH (LANGUAGE = 'R');
 
 如果已成功创建库，可以通过调用存储过程内 SQL Server 中运行包。
     
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language =N'R',
 @script=N'library(randomForest)'
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [获取包信息](determine-which-packages-are-installed-on-sql-server.md)
 + [R 教程](../tutorials/sql-server-r-tutorials.md)

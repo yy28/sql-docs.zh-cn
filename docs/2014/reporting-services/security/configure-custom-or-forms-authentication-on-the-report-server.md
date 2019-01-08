@@ -14,12 +14,12 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3417491298352ac6cc72ce5543542142a412d89e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591fc282f6e60f97d4b900e3b88f727d554535e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176717"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366099"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
   Reporting Services 提供了可扩展的体系结构，该体系结构允许您插入自定义的或基于窗体的身份验证模块。 如果部署要求不包含 Windows 集成安全性或基本身份验证，则可考虑实现自定义的身份验证扩展插件。 使用自定义身份验证的最常见情形是支持对 Web 应用程序的 Internet 或 Extranet 访问。 使用自定义身份验证扩展插件替换默认的 Windows 身份验证扩展插件，可更好地控制如何授予外部用户访问报表服务器的权限。  
@@ -29,7 +29,7 @@ ms.locfileid: "48176717"
 > [!NOTE]  
 >  若要创建自定义身份验证扩展插件，需要自定义代码并掌握 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 安全性方面的专业知识。 如果您不希望创建自定义身份验证扩展插件，则可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 组和帐户，但应大幅减小报表服务器部署的范围。 有关自定义身份验证的详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。  
   
- 此外，如果希望在与 SharePoint 产品集成的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境中使用窗体身份验证或自定义身份验证扩展插件，则必须将 SharePoint 站点配置为使用您所选的身份验证方法。 有关在 SharePoint 中配置身份验证的详细信息，请参阅 [Developer Network (MSDN) 上的](http://go.microsoft.com/fwlink/?LinkId=115575) Authentication Samples [!INCLUDE[msCoName](../../includes/msconame-md.md)] 身份验证示例。  
+ 此外，如果希望在与 SharePoint 产品集成的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境中使用窗体身份验证或自定义身份验证扩展插件，则必须将 SharePoint 站点配置为使用您所选的身份验证方法。 有关在 SharePoint 中配置身份验证的详细信息，请参阅 [Developer Network (MSDN) 上的](https://go.microsoft.com/fwlink/?LinkId=115575) Authentication Samples [!INCLUDE[msCoName](../../includes/msconame-md.md)] 身份验证示例。  
   
 ### <a name="to-configure-a-report-server-to-use-custom-authentication"></a>将报表服务器配置为使用自定义身份验证  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48176717"
     </Authentication>  
     ```  
   
-4.  将它粘贴到的现有条目 <`Authentication`>。  
+4.  将其粘贴在 <`Authentication`> 的现有条目上。  
   
      请注意，不能将 `Custom` 与其他身份验证类型一起使用。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48176717"
     <authentication mode = "Forms" />  
     ```  
   
-8.  查找`identity impersonate`并将其设置为`False`。  
+8.  查找 `identity impersonate` 并将其设置为 `False`。  
   
     ```  
     <identity impersonate = "false" />  
@@ -76,13 +76,13 @@ ms.locfileid: "48176717"
     <authentication mode = "Forms" />  
     ```  
   
-11. 查找`identity impersonate`并将其设置为`False`。  
+11. 查找 `identity impersonate` 并将其设置为 `False`。  
   
     ```  
     <identity impersonate = "false" />  
     ```  
   
-12. 添加`PassThroughCookies`到配置文件的元素结构。 有关详细信息，请参阅 [配置报表管理器以便传递自定义身份验证 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
+12. 将 `PassThroughCookies` 元素结构添加到配置文件中。 有关详细信息，请参阅 [配置报表管理器以便传递自定义身份验证 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
 13. 保存该文件。  
   
@@ -91,10 +91,10 @@ ms.locfileid: "48176717"
 15. 重新启动报表服务器以清除当前打开的任何会话。  
   
 ## <a name="see-also"></a>请参阅  
- [实现安全扩展插件](../extensions/security-extension/implementing-a-security-extension.md)   
+ [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
  [针对报表服务器的身份验证](authentication-with-the-report-server.md)   
  [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
- [报表服务器上配置基本身份验证](configure-basic-authentication-on-the-report-server.md)   
+ [在报表服务器上配置基本身份验证](configure-basic-authentication-on-the-report-server.md)   
  [在报表服务器上配置 Windows 身份验证](configure-windows-authentication-on-the-report-server.md)  
   
   
