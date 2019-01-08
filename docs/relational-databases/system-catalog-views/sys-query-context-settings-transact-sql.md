@@ -1,7 +1,7 @@
 ---
 title: sys.query_context_settings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de36098ec2c2792e45724cdb023897b1482ac9cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638485"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710648"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含有关影响上下文设置与查询关联的语义信息。 有大量的上下文设置中提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]影响查询语义 （定义查询的正确的结果）。 相同的查询文本不同设置下编译可能会产生不同的结果 （具体取决于基础数据）。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47638485"
 |**language_id**|**smallint**|语言的 id。 有关详细信息，请参阅[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |**date_format**|**smallint**|日期格式。 有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|日期第一个值。 有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**status**|**varbinary(2)**|位屏蔽字段以指示查询或执行查询时的上下文的类型。 <br />列的值可以是 （以十六进制格式表示） 的多个标志的组合：<br /><br /> 0x0-常规查询 （没有特定的标志）<br /><br /> 0x1-已通过游标 Api 存储过程之一执行查询<br /><br /> 0x2-通知查询<br /><br /> 0x4-内部查询<br /><br /> 0x8-没有通用的参数化自动参数化查询<br /><br /> 0x10-游标提取刷新查询<br /><br /> 0x20-查询能耗在游标更新请求<br /><br /> 0x40-初始结果集返回时打开的游标 （游标自动提取）<br /><br /> 0x80 – 加密的查询<br /><br /> 0x100 – 在行级别安全性谓词的上下文中的查询|  
+|**status**|**varbinary(2)**|位屏蔽字段以指示查询或执行查询时的上下文的类型。 <br />列的值可以是 （以十六进制格式表示） 的多个标志的组合：<br /><br /> 0x0-常规查询 （没有特定的标志）<br /><br /> 0x1-已通过游标 Api 存储过程之一执行查询<br /><br /> 0x2-通知查询<br /><br /> 0x4-内部查询<br /><br /> 0x8-没有通用的参数化自动参数化查询<br /><br /> 0x10-游标提取刷新查询<br /><br /> 0x20-查询能耗在游标更新请求<br /><br /> 0x40-初始结果集返回时打开的游标 （游标自动提取）<br /><br /> 0x80-加密的查询<br /><br /> 0x100-在行级别安全性谓词的上下文中的查询|  
 |**required_cursor_options**|**int**|用户指定的游标选项，例如游标类型。|  
 |**acceptable_cursor_options**|**int**|为了支持语句的执行，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以隐式转换采用的游标选项。|  
 |**merge_action_type**|**smallint**|触发器执行计划用作的结果的类型**合并**语句。<br /><br /> 0 表示非触发器计划，不会执行的结果作为触发器计划**合并**语句或作为的结果执行的触发器计划**合并**语句，以便仅指定**删除**操作。<br /><br /> 1 指示**插入**的结果作为运行的触发器计划**合并**语句。<br /><br /> 2 表示**更新**的结果作为运行的触发器计划**合并**语句。<br /><br /> 3 表示**删除**的结果作为运行的触发器计划**合并**包含相应语句**插入**或者**更新**操作。<br /><br /> <br /><br /> 对于由级联操作运行的嵌套触发器，此值，此操作**合并**导致级联的语句。|  
@@ -48,7 +48,7 @@ ms.locfileid: "47638485"
 |**is_replication_specific**|**bit**|用于复制。|  
 |**is_contained**|**varbinary(1)**|1 表示包含的数据库。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW DATABASE STATE**权限。  
   
 ## <a name="see-also"></a>请参阅  

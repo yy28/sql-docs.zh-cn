@@ -20,16 +20,16 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76d3189285cdca20f503284cbbf3b439383a0655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542170"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLColAttribute**结果集中返回列的描述符信息。 描述符信息返回为字符串、 一个依赖于描述符的值或一个整数值。  
@@ -77,7 +77,7 @@ SQLRETURN SQLColAttribute (
   
 -   如果*CharacterAttributePtr* SQL_LEN_BINARY_ATTR 的结果是指向二进制缓冲区中，在应用程序的位置的指针 (*长度*) 中的宏*BufferLength*。 这会在负值*BufferLength*。  
   
--   如果*CharacterAttributePtr*是为固定长度的数据类型，指针*BufferLength*必须是以下值之一： SQL_IS_INTEGER、 SQL_IS_UNINTEGER、 SQL_SMALLINT 或 SQLUSMALLINT。  
+-   如果*CharacterAttributePtr*是为固定长度的数据类型，指针*BufferLength*必须是以下值之一：SQL_IS_INTEGER、 SQL_IS_UNINTEGER、 SQL_SMALLINT 或 SQLUSMALLINT。  
   
  *StringLengthPtr*  
  [输出]指向用于返回的总字节数 （不包括字符数据的 null 终止字节） 的缓冲区可用于在返回 **CharacterAttributePtr*。  
@@ -153,26 +153,26 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_BASE_TABLE_NAME (ODBC 3.0)|*CharacterAttributePtr*|包含的列的基表的名称。 如果基表名称不能定义或不适用，则此变量包含空字符串。<br /><br /> 将从 IRD 的只读字段的 SQL_DESC_BASE_TABLE_NAME 记录字段返回此信息。|  
 |SQL_DESC_CASE_SENSITIVE (ODBC 1.0)|*NumericAttributePtr*|如果将列视为排序规则和比较的区分大小写为，SQL_TRUE。<br /><br /> 如果列均不被视为排序规则和比较的区分大小写，或为非字符类型，SQL_FALSE。|  
 |SQL_DESC_CATALOG_NAME (ODBC 2.0)|*CharacterAttributePtr*|包含的列的表的目录。 返回的值是实现定义如果列是表达式或列是视图的一部分。 如果数据源不支持目录或目录名称不能确定，则返回空字符串。 此 VARCHAR 记录字段不超过 128 个字符。|  
-|SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|简洁数据类型。<br /><br /> 对于日期时间和间隔数据类型，此字段返回的简洁数据类型;例如，SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR。 (有关详细信息，请参阅[数据类型标识符和描述符](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)附录 d： 数据类型中。)<br /><br /> 将从 IRD 的 SQL_DESC_CONCISE_TYPE 记录字段返回此信息。|  
+|SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|简洁数据类型。<br /><br /> 对于日期时间和间隔数据类型，此字段返回的简洁数据类型;例如，SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR。 (有关详细信息，请参阅[数据类型标识符和描述符](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)中附录 d:数据类型。）<br /><br /> 将从 IRD 的 SQL_DESC_CONCISE_TYPE 记录字段返回此信息。|  
 |SQL_DESC_COUNT (ODBC 1.0)|*NumericAttributePtr*|在结果集中可用的列数。 如果结果集中没有任何列，这会返回 0。 中的值*ColumnNumber*忽略参数。<br /><br /> 从 IRD 的 SQL_DESC_COUNT 标头字段中返回此信息。|  
-|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|若要显示列中的数据所需的字符的最大数目。 有关显示大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
+|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|若要显示列中的数据所需的字符的最大数目。 有关显示大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|如果列具有固定的精度和非零规模的数据源特定于，SQL_TRUE。<br /><br /> 如果列不具有固定的精度和非零规模的数据源特定于，SQL_FALSE。|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|列标签或标题。 例如，一个名为 EmpName 列可能被标记为雇员姓名或可能会带有一个别名。<br /><br /> 如果列不具有标签，则返回的列名称。 如果列是未标记的和未命名，则返回空字符串。|  
-|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|可以是数字值的最大值或实际的字符长度的字符字符串或二进制数据类型。 这是固定长度的数据类型的最大字符长度或可变长度数据类型的实际字符长度。 其值始终不包括结束字符字符串的 null 终止字节。<br /><br /> 将从 IRD 的 SQL_DESC_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|可以是数字值的最大值或实际的字符长度的字符字符串或二进制数据类型。 这是固定长度的数据类型的最大字符长度或可变长度数据类型的实际字符长度。 其值始终不包括结束字符字符串的 null 终止字节。<br /><br /> 将从 IRD 的 SQL_DESC_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的字符或驱动程序会识别为此数据类型的文字的前缀的字符。 此字段包含空字符串数据类型为其文字前缀不适用。 有关详细信息，请参阅[文字前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的字符或驱动程序会识别为此数据类型的文字的后缀的字符。 此字段包含空字符串数据类型为其文本后缀不适用。 有关详细信息，请参阅[文字前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的数据类型可能不同于常规的数据类型名称的任何本地化 （本机语言） 名称。 如果没有本地化的名称，则返回空字符串。 此字段是仅出于显示目的。 字符串的字符集与区域设置相关并通常是服务器的默认字符集。|  
 |SQL_DESC_NAME (ODBC 3.0)|*CharacterAttributePtr*|如果要将它应用列别名。 如果列别名不适用，则返回的列名称。 在任一情况下，SQL_DESC_UNNAMED 设置为 SQL_NAMED。 如果没有任何列名称或列别名，则返回空字符串和 SQL_DESC_UNNAMED 设置为 SQL_UNNAMED。<br /><br /> 将从 IRD 的 SQL_DESC_NAME 记录字段返回此信息。|  
 |SQL_DESC_NULLABLE (ODBC 3.0)|*NumericAttributePtr*|SQL_ 可以为 NULL 的列可以具有 NULL 值; 如果如果列不具有 NULL 值;，SQL_NO_NULLS或 SQL_NULLABLE_UNKNOWN 如果不知道列是否接受 NULL 值。<br /><br /> 将从 IRD 的 SQL_DESC_NULLABLE 记录字段返回此信息。|  
 |SQL_DESC_NUM_PREC_RADIX (ODBC 3.0)|*NumericAttributePtr*|近似数字数据类型中的 SQL_DESC_TYPE 字段的数据类型时，此 SQLINTEGER 字段将包含值为 2，因为 SQL_DESC_PRECISION 字段包含的位数。 如果中的 SQL_DESC_TYPE 字段的数据类型为精确数字数据类型，此字段将包含值为 10，因为 SQL_DESC_PRECISION 字段包含的小数位数。 此字段设置为 0 表示所有非数字数据类型。|  
-|SQL_DESC_OCTET_LENGTH (ODBC 3.0)|*NumericAttributePtr*|字符字符串或二进制数据类型长度 （字节）。 对于固定长度的字符或二进制类型，这是以字节为单位的实际长度。 对于可变长度字符或二进制类型，这是以字节为单位的最大长度。 此值不包括 null 终止符。<br /><br /> 将从 IRD 的 SQL_DESC_OCTET_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型。|  
+|SQL_DESC_OCTET_LENGTH (ODBC 3.0)|*NumericAttributePtr*|字符字符串或二进制数据类型长度 （字节）。 对于固定长度的字符或二进制类型，这是以字节为单位的实际长度。 对于可变长度字符或二进制类型，这是以字节为单位的最大长度。 此值不包括 null 终止符。<br /><br /> 将从 IRD 的 SQL_DESC_OCTET_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |SQL_DESC_PRECISION (ODBC 3.0)|*NumericAttributePtr*|一个数字值，该值为数值数据类型表示适用的精度。 对于数据类型 SQL_TYPE_TIME SQL_TYPE_TIMESTAMP，并表示时间间隔，其值的所有间隔数据类型都是适用精度的秒的小数部分。<br /><br /> 将从 IRD 的 SQL_DESC_PRECISION 记录字段返回此信息。|  
 |SQL_DESC_SCALE (ODBC 3.0)|*NumericAttributePtr*|一个数字值，该值是数值数据类型的适用小数位数。 对于 DECIMAL 和 NUMERIC 数据类型，这是定义的小数位数。 对于所有其他数据类型未定义它。<br /><br /> 将从 IRD 的规模记录字段返回此信息。|  
 |SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|包含的列的表的架构。 返回的值是实现定义如果列是表达式或列是视图的一部分。 如果数据源不支持架构或架构名称不能确定，则返回空字符串。 此 VARCHAR 记录字段不超过 128 个字符。|  
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|如果列不能在 WHERE 子句中使用，SQL_PRED_NONE。 （这是 ODBC 2 中的 SQL_UNSEARCHABLE 值相同。*x*。)<br /><br /> 如果在 WHERE 子句，但只能与 LIKE 谓词，则可以使用列，SQL_PRED_CHAR。 （这是 ODBC 2 中的 SQL_LIKE_ONLY 值相同。*x*。)<br /><br /> 如果可以使用类似于除外的所有比较运算符的 WHERE 子句中使用该列，SQL_PRED_BASIC。 （这是 ODBC 2 中的 SQL_EXCEPT_LIKE 值相同。*x*。)<br /><br /> 如果可以使用任何比较运算符的 WHERE 子句中使用该列，SQL_PRED_SEARCHABLE。<br /><br /> 列键入 SQL_LONGVARCHAR 和 SQL_LONGVARBINARY 通常返回 SQL_PRED_CHAR。|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|包含该列的表的名称。 返回的值是实现定义如果列是表达式或列是视图的一部分。<br /><br /> 如果无法确定表名，则返回空字符串。|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|一个数字值，该值指定 SQL 数据类型。<br /><br /> 当*ColumnNumber*相等长度可变的书签的为 0，返回 SQL_BINARY 和 SQL_INTEGER 返回定长书签的。<br /><br /> 对于日期时间和间隔数据类型，此字段返回详细数据类型： SQL_DATETIME 或 SQL_INTERVAL。 (有关详细信息，请参阅[数据类型标识符和描述符](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)附录 d： 数据类型。<br /><br /> 将从 IRD 的 SQL_DESC_TYPE 记录字段返回此信息。 **注意：** 能够对 ODBC 2。*x*驱动程序，请改用 SQL_DESC_CONCISE_TYPE。|  
-|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|数据源而定的数据类型名称;"例如，CHAR"、"VARCHAR"、"MONEY"、"长 VARBINARY"或者"CHAR FOR BIT DATA （）"。<br /><br /> 如果该类型是未知的则返回空字符串。|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|一个数字值，该值指定 SQL 数据类型。<br /><br /> 当*ColumnNumber*相等长度可变的书签的为 0，返回 SQL_BINARY 和 SQL_INTEGER 返回定长书签的。<br /><br /> 对于日期时间和间隔数据类型，此字段返回详细数据类型：SQL_DATETIME 或 SQL_INTERVAL。 (有关详细信息，请参阅[数据类型标识符和描述符](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)中附录 d:数据类型。<br /><br /> 将从 IRD 的 SQL_DESC_TYPE 记录字段返回此信息。 **注意：** 若要对 ODBC 2 起作用。*x*驱动程序，请改用 SQL_DESC_CONCISE_TYPE。|  
+|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|数据源相关的数据类型名称;"例如，CHAR"、"VARCHAR"、"MONEY"、"长 VARBINARY"或者"CHAR FOR BIT DATA （）"。<br /><br /> 如果该类型是未知的则返回空字符串。|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED 或 SQL_UNNAMED。 如果 IRD SQL_DESC_NAME 字段包含的列别名或列名，则返回 SQL_NAMED。 如果没有列名称或列别名，则返回 SQL_UNNAMED。<br /><br /> 将从 IRD 的 SQL_DESC_UNNAMED 记录字段返回此信息。|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 如果列是无符号 （或不是数字）。<br /><br /> 如果列已签名，SQL_FALSE。|  
 |SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|该列被描述为定义的常数的值：<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE 介绍结果集中的列、 不在基表中的列的可更新性。 结果集列所基于的基列的可更新性可能不同于此字段中的值。 某列是否可更新可以基于数据类型、 用户权限和结果集自身的定义。 如果不清楚是否可更新列，则应返回 SQL_ATTR_READWRITE_UNKNOWN。|  

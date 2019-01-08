@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,12 +19,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5de6cba6d67f6b023f14306bfc41a85dbae8023d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162087"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763259"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升级复制脚本（复制 Transact-SQL 编程）
   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件可用于以编程方式配置复制拓扑。 有关详细信息，请参阅[复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)。  
@@ -92,7 +91,7 @@ ms.locfileid: "48162087"
   
     -   对于请求订阅，请更新 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) 的执行，为 **@job_name** 和 **@job_password** 提供用于在订阅服务器上运行分发代理的 Windows 凭据。 此操作将在执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建请求订阅](../create-a-pull-subscription.md)。  
   
-    -   对于推送订阅，请在发布服务器上执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定 **@subscriber**、 **@subscriber_db**、 **@publication**，并为 **@job_name** @job_login **@job_password**指定在分发服务器上运行分发代理所使用的 Windows 凭据，同时指定此代理作业的计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此操作将在执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)后完成。 有关详细信息，请参阅 [创建推送订阅](../create-a-push-subscription.md)。  
+    -   对于推送订阅，请在发布服务器上执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定 **@subscriber**、 **@subscriber_db**、 **@publication**，并为 **@job_name** @job_login **@job_password**指定在分发服务器上运行分发代理所使用的 Windows 凭据，同时指定此代理作业的计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)。 此操作将在执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)后完成。 有关详细信息，请参阅 [Create a Push Subscription](../create-a-push-subscription.md)。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>升级用于配置合并发布的脚本  
   

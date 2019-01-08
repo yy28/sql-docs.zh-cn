@@ -1,5 +1,5 @@
 ---
-title: 第 1 课： 创建新的表格模型项目 |Microsoft Docs
+title: 第 1 课：创建新的表格模型项目 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040855"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410767"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 课：创建新的表格模型项目
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，您将在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建一个新的空白表格模型项目。 创建新项目之后，您可以使用表导入向导开始添加数据。 本课程还提供了创作环境，在 SSDT 中的表格模型的简要介绍。  
   
-学完本课的估计时间： **10 分钟**  
+学完本课的预计时间：**10 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 本主题是表格模型创作教程中的第一课。 若要完成本课程中，您必须安装 SQL Server 实例上的 AdventureWorksDW 示例数据库。 若要了解详细信息，请参阅[表格建模&#40;Adventure Works 教程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)。  
   
 ## <a name="create-a-new-tabular-model-project"></a>创建新的表格模型项目  
@@ -50,7 +50,7 @@ ms.locfileid: "38040855"
       
     如果未在兼容级别列表框中看到 SQL Server 2016 RTM (1200)，则表示使用的不 SQL Server Data Tools 的最新版本。 若要获取最新版本，请参阅 [安装 SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)。  
 
-    如果你使用最新版本的 SSDT，你还可以选择 SQL Server 2017 (1400)。 不过，若要完成的第 13 课： 部署，你将需要将部署到的 SQL Server 2017 或 Azure 服务器。
+    如果你使用最新版本的 SSDT，你还可以选择 SQL Server 2017 (1400)。 不过，若要完成第 13 课：部署，你将需要将部署到的 SQL Server 2017 或 Azure 服务器。
       
     如果你想将已完成的表格模型部署到运行早期版本的 SQL Server 的不同 Analysis Services 实例，仅建议选择较早的兼容性级别。 更低的兼容性级别不支持集成工作区。 若要了解详细信息，请参阅 [兼容级别](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。   
   
@@ -87,7 +87,7 @@ ms.locfileid: "38040855"
   
 
 ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 2 课： 添加数据](../analysis-services/lesson-2-add-data.md)。
+请转到下一课：[第 2 课：将数据添加](../analysis-services/lesson-2-add-data.md)。
 
   
   

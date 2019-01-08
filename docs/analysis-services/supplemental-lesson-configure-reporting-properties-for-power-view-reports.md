@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e9122ab6f783e6b845c1a961c133d66e58e933e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544285"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>补充课程-为 Power View 报表配置报表属性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本补充课程中，您将设置报表的 AW Internet 销售项目属性。 通过报表属性，最终用户可以更轻松地在 Power View 中选择和显示模型数据。 您还可以设置属性以隐藏特定的列和表，并创建新数据以在图表中使用。   
   
-学完本课的估计时间： **30 分钟**  
+学完本课的预计时间：**30 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 本补充课程是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
 为了完成这一特定的补充课程，您还必须具备以下各项：  
   
@@ -33,17 +33,17 @@ ms.locfileid: "38033426"
 ## <a name="model-properties-that-affect-reporting"></a>影响报表的模型属性  
 当创作表格模型时，您可以对单独的列和表设置某些属性，以增强最终用户在 Power View 中的报表体验。 此外，您还可以创建其他模型数据，以支持数据可视化和特定于报表客户端的其他功能。 对于示例 Adventure Works Internet Sales Model，您将进行以下某些更改：  
   
--   **添加新数据** – 使用 DAX 公式在计算列中添加新数据，会以更易于在图表中显示的格式创建日期信息。  
+-   **添加新数据**-使用 DAX 公式在计算列中添加新数据更轻松地在图表中显示的格式创建日期信息。  
   
 -   **隐藏对最终用户无用的表和列** -“隐藏”属性控制是否在报表客户端中显示表和表列。 所隐藏的项仍然是模型的一部分，且保持可用于查询和计算。  
   
--   **启用一次单击表** – 默认情况下，如果最终用户在字段列表中单击了某个表，将不会发生任何操作。 若要更改此行为，以便在单击表后会将该表添加到报表，需要针对您要在表中包含的每列设置“默认字段集”。 将对最终用户最可能要使用的表列设置此属性。  
+-   **启用一次单击表**-默认情况下，会发生任何操作如果最终用户单击字段列表中的表。 若要更改此行为，以便在单击表后会将该表添加到报表，需要针对您要在表中包含的每列设置“默认字段集”。 将对最终用户最可能要使用的表列设置此属性。  
   
 -   **根据需要设置分组** -“保留唯一行”属性确定列中的值是否应按其他字段（如标识符字段）中的值进行分组。 对于包含重复值的列（如“Customer Name”列，具有多个名为 John Smith 的客户），务必依据“行标识符”字段进行分组（保留唯一行），以便向最终用户提供正确的结果。  
   
 -   **设置数据类型和数据格式** - 默认情况下，Power View 根据列数据类型应用规则，以确定字段是否可用作度量值。 因为 Power View 中的每个数据可视化还具有有关在何处可放置度量值和非度量值的规则，所以，务必在模型中设置此数据类型或覆盖默认值，以实现你希望向最终用户展示的行为。  
   
--   **设置“按列排序”** 属性 –“按列排序”属性指定列中的值是否应按其他字段中的值进行排序。 例如，在包含月份名称的 Month Calendar 列中，按列 Month Number 进行排序。  
+-   **设置按列排序**属性-**按列排序**属性指定列中的值是否应按排序不同字段中的值。 例如，在包含月份名称的 Month Calendar 列中，按列 Month Number 进行排序。  
   
 ## <a name="hide-tables-from-client-tools"></a>从客户端工具中隐藏表  
 因为 Product 表中已经有了 Product Category 计算列和 Product Subcategory 计算列，所以没有必要向客户端应用程序显示 Product Category 表和 Product Subcategory 表。  
@@ -129,7 +129,7 @@ ms.locfileid: "38033426"
 7.  对“Product” 表重复上述步骤，同时选择“Product Id”列作为“行标识符”，并在“保留唯一行”列表框中选择“Product Name”列。 对于“默认标签”，选择“Product Alternate Id”。  
   
 ## <a name="reporting-properties-for-columns"></a>列的报表属性  
-对于列而言，您可以设置许多基本列属性和特定的报表属性，以改善模型报表体验。 例如，用户可能不需要看到每个表中的每一列。 就像前面您通过使用列的“隐藏”属性隐藏 Product Category 表和 Product Subcategory 表一样，您可以隐藏表中原本应显示的特定列。 其他属性（如“数据格式”和“按列排序”）也可能影响列数据出现在报表中的方式。 您可以现在对特定的列设置上述某些属性。 其他列不要求您执行任何操作，下面也没显示它们。  
+对于列而言，您可以设置许多基本列属性和特定的报表属性，以改善模型报表体验。 例如，用户可能不需要看到每个表中的每一列。 就像隐藏 Product Category 和 Product Subcategory 表更早版本，通过使用列的 Hidden 属性，您可以隐藏特定列的表，否则所示。 其他属性（如“数据格式”和“按列排序”）也可能影响列数据出现在报表中的方式。 您可以现在对特定的列设置上述某些属性。 其他列不要求您执行任何操作，下面也没显示它们。  
   
 您将只在此处设置一些不同的列属性，但其他属性还有很多。 有关详细信息有关列报表属性的详细信息，请参阅[列属性](../analysis-services/tabular-models/column-properties-ssas-tabular.md)SQL Server 联机丛书中。  
   
@@ -143,11 +143,11 @@ ms.locfileid: "38033426"
   
 4.  重复这些步骤，同时为每个指定的表设置以下列和报表属性。 将所有其他属性保留为其默认设置。  
   
-    注意：对于所有日期列，请确保“数据类型”为“日期”。  
+    注意：对于所有日期列，请确保**数据类型**是**日期**。  
   
     **Customer**  
   
-    |“列”|“属性”|ReplTest1|  
+    |“列”|属性|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|数据格式|短日期|  
@@ -155,9 +155,9 @@ ms.locfileid: "38033426"
     **Date**  
   
     > [!NOTE]  
-    > 因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择 Date 表作为模型日期表，并且选择 Date 表中的 Date 列作为要用作唯一标识符的列，所以，Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅[指定标记为日期表用于时间智能](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server 联机丛书中。  
+    > 因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择了日期表作为模型日期表，并且已选择日期表中的 Date 列作为要用作唯一标识符的列，所以 Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅[指定标记为日期表用于时间智能](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server 联机丛书中。  
   
-    |“列”|“属性”|ReplTest1|  
+    |“列”|属性|ReplTest1|  
     |----------|------------|---------|  
     |date|数据格式|短日期|  
     |Day Number of Week|Hidden|True|  
@@ -174,14 +174,14 @@ ms.locfileid: "38033426"
   
     **地域**  
   
-    |“列”|“属性”|ReplTest1|  
+    |“列”|属性|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |“列”|“属性”|ReplTest1|  
+    |“列”|属性|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|默认标签|True|  
@@ -191,7 +191,7 @@ ms.locfileid: "38033426"
   
     **Internet Sales**  
   
-    |“列”|“属性”|ReplTest1|  
+    |“列”|属性|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

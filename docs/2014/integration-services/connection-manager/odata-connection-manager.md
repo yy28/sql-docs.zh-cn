@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756639"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
   OData 连接管理器允许包连接到 OData 源。 OData 源组件使用 OData 连接管理器连接到 OData 源并使用来自服务的数据。 请参阅[OData 源](../data-flow/odata-source.md)部分，了解详细信息，包括这些组件的安装说明。  
@@ -24,11 +23,11 @@ ms.locfileid: "48136627"
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>向 SSIS 包添加连接管理器  
  可以通过三种方式向 SSIS 包添加新 OData 连接管理器：  
   
--   单击 **“OData 源编辑器”** 中的 **“新建…”**  
+-   单击“OData 源编辑器”中的“新建…”按钮  
   
 -   右键单击**连接管理器**中的文件夹**解决方案资源管理器**然后单击**新连接管理器**。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
--   在中右击**连接管理器**包设计器中，然后选择底部窗格**新建连接...**. 为 **“连接管理器类型”** 选择 **“ODATA”**。  
+-   在中右击**连接管理器**包设计器中，然后选择底部窗格**新建连接...**.为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
 ## <a name="connection-manager-authentication"></a>连接管理器身份验证  
  OData 连接管理器支持两种身份验证模式。  
@@ -49,7 +48,7 @@ ms.locfileid: "48136627"
   
 |||  
 |-|-|  
-|“属性”|Description|  
+|属性|Description|  
 |Url|服务文档的 URL。|  
 |UserName|要用于基本身份验证的用户名。|  
 |Password|要用于基本身份验证的密码。|  

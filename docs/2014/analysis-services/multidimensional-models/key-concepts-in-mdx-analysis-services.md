@@ -17,17 +17,17 @@ ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b13e80ce8ad0c721ea7cbde0188d73fec15b2e89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049537"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512800"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 中的重要概念 (Analysis Services)
   在使用多维表达式 (MDX) 查询多维数据或创建多维数据集中的 MDX 表达式之前，有必要了解多维的概念和术语。  
   
- 最好从已了解的数据汇总示例开始，然后查看 MDX 如何与之相关。 这是一个在 Excel 中创建的数据透视表，由 Analysis Services 示例多维数据集中的数据填充。  
+ 最好从已了解的数据汇总示例开始，然后查看 MDX 如何与之相关。 下面是创建在 Excel 中使用的 Analysis Services 示例多维数据集的数据填充数据透视表。  
   
  ![数据透视表的度量值和维度标注](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "度量值和维度调出的数据透视表")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48049537"
  每个属性都具有与其关联的数据值或成员的集合。 在我们的示例中，“国家/地区分组”属性的成员包括欧洲、北美和太平洋地区。 **成员** 表示属于某个属性的实际数据值。  
   
 > [!NOTE]  
->  数据建模的一个方面就是形式化数据本身已包含的模式和关系。 处理自然层次结构中的数据时，与国家/地区-区域-城市的情况一样，可通过创建一个 **属性关系**来形式化该关系。 “属性关系”是属性间的一对多关系，例如州（省市自治区）和城市间的关系 – 一个州（省市自治区）有多个城市，而一个城市只能属于一个州（省市自治区）。 在模型中创建属性关系可加速查询性能，因此最好在数据支持的情况下创建属性关系。 可在 SQL Server Data Tools 中的维度设计器中创建属性关系。 请参阅 [Define Attribute Relationships](attribute-relationships-define.md)。  
+>  数据建模的一个方面就是形式化数据本身已包含的模式和关系。 处理自然层次结构中的数据时，与国家/地区-区域-城市的情况一样，可通过创建一个 **属性关系**来形式化该关系。 属性关系是一个对多关系属性，例如省市自治区和城市之间的关系之间-状态具有多个城市，但一个城市只能属于一个状态。 在模型中创建属性关系可加快查询性能，因此它是最佳做法来创建它们，如果数据支持它。 可在 SQL Server Data Tools 中的维度设计器中创建属性关系。 请参阅 [Define Attribute Relationships](attribute-relationships-define.md)。  
   
  Excel 中的模型元数据显示在数据透视表字段列表中。  将上面的数据透视表与下面的字段列表进行比较。 注意，字段列表包含“销售区域”、“组”、“国家/地区”和“区域”（元数据），而数据透视表仅包含成员（数据值）。 了解图标的样子有助于轻松地将部分多维模型与 Excel 中的数据透视表关联起来。  
   
@@ -78,10 +78,10 @@ ms.locfileid: "48049537"
   
 -   中间级别（如果属性层次结构为父子层次结构）（稍后将详细介绍）。  
   
--   包含所有子属性的聚合值的“(全部)”成员。 此外，还可以选择在“(全部)”级别不适用于数据时可将其隐藏或关闭。 例如，虽然“产品代码”是数字，但对所有“产品代码”求和、计算其平均数或进行其他方式的聚合是没有意义的。  
+-   包含所有子属性的聚合值的“(全部)”成员。 （可选） 可以隐藏或关闭的 （全部） 级别时它没有意义的数据。 例如，尽管产品代码是数值，但它没有意义进行求和或求平均值或其他方式的所有产品代码的聚合。  
   
 > [!NOTE]  
->  BI 开发人员经常设置属性层次结构的属性，以实现客户端应用程序的某些行为，或获得某些性能优势。 例如，可针对属性设置 AttributeHierarchyEnabled=False，此时“(全部)”成员没有意义。 或者，可能只是想隐藏“(全部)”成员，此时可设置 AttributeHierarchyVisible=False。 有关属性的详细信息，请参阅 [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md) 。  
+>  BI 开发人员经常设置属性层次结构的属性，以实现客户端应用程序的某些行为，或获得某些性能优势。 例如，将设置 AttributeHierarchyEnabled = False 属性为其 （全部） 成员没有意义。 或者，可能只是想隐藏“(全部)”成员，此时可设置 AttributeHierarchyVisible=False。 有关属性的详细信息，请参阅 [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md) 。  
   
 ## <a name="navigation-hierarchies"></a>导航层次结构  
  在数据透视表中（至少在本实例中），展开行和列轴以显示较低级别的属性。 可展开的树形结构是通过模型中创建的导航层次结构实现的。  在 AdventureWorks 示例模型中，“销售区域”维度包含以“国家/地区分组”开头、后面依次为“国家/地区”和“区域”的多级层次结构。  
@@ -92,20 +92,20 @@ ms.locfileid: "48049537"
   
 |||  
 |-|-|  
-|![调出平衡层次结构的 PivotTable](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "调出平衡层次结构的 PivotTable")|**均衡层次结构** 是顶级成员与任何叶成员之间存在相同级别数的层次结构。<br /><br /> **自然层次结构** 是从基础数据中自然产生的层次结构。 常见的示例是“国家/地区-区域-城市”、“年-月-日”或“类别-子类别-模型”，每个从属级别都以可预测的方式从父级中流出。<br /><br /> 在多维模型中，大多数层次结构都是均衡层次结构，其中许多也属于自然层次结构。<br /><br /> 另一个相关的建模术语是`user-defined hierarchy`，常用于与属性层次结构形成对比。 它仅仅表示由 BI 开发人员创建的层次结构，与 Analysis Services 在您定义属性时自动生成的属性层次结构相反。|  
+|![调出平衡层次结构的 PivotTable](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "调出平衡层次结构的 PivotTable")|**均衡层次结构** 是顶级成员与任何叶成员之间存在相同级别数的层次结构。<br /><br /> **自然层次结构** 是从基础数据中自然产生的层次结构。 常见的示例是“国家/地区-区域-城市”、“年-月-日”或“类别-子类别-模型”，每个从属级别都以可预测的方式从父级中流出。<br /><br /> 在多维模型中，大多数层次结构都是均衡层次结构，其中许多也属于自然层次结构。<br /><br /> 另一个相关的建模术语是`user-defined hierarchy`，该术语常用于与属性层次结构形成对比。 它仅仅表示由 BI 开发人员创建的层次结构，与 Analysis Services 在您定义属性时自动生成的属性层次结构相反。|  
   
  **不均衡层次结构**  
   
 |||  
 |-|-|  
-|![调出不规则层次结构的 PivotTable](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "调出不规则层次结构的 PivotTable")|**不规则层次结构** 或 **不均衡层次结构** 是顶级与叶成员之间存在不同级别数的层次结构。 同样，这也是由 BI 开发人员创建的层次结构，但在这种情况下数据中存在间隔。<br /><br /> 在 AdventureWorks 示例模型中，“销售区域”阐释了不规则层次结构，因为在本示例中，美国具有其他国家/地区不存在的额外的级别 (“区域”)。<br /><br /> 如果客户端应用程序不能以较好的方式来处理不规则层次结构，则该层次结构对于 BI 开发人员是一个挑战。 在 Analysis Services 模型中，可以创建一个显式定义多级别数据间的关系的 **父子层次结构** ，以便消除一个级别与下一个级别的关联方式的不明确性。 请参阅[父-子层次结构](parent-child-dimension.md)有关详细信息。|  
+|![调出不规则层次结构的 PivotTable](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "调出不规则层次结构的 PivotTable")|**不规则层次结构** 或 **不均衡层次结构** 是顶级与叶成员之间存在不同级别数的层次结构。 同样，它是由 BI 开发人员，创建的层次结构，但在这种情况下有数据中的空白。<br /><br /> 在 AdventureWorks 示例模型中，“销售区域”阐释了不规则层次结构，因为在本示例中，美国具有其他国家/地区不存在的额外的级别 (“区域”)。<br /><br /> 如果客户端应用程序不能以较好的方式来处理不规则层次结构，则该层次结构对于 BI 开发人员是一个挑战。 在 Analysis Services 模型中，可以创建一个显式定义多级别数据间的关系的 **父子层次结构** ，以便消除一个级别与下一个级别的关联方式的不明确性。 请参阅 [Parent-Child Hierarchy](parent-child-dimension.md) 。|  
   
 ## <a name="key-attributes"></a>键属性  
  模型是依赖键和索引进行关联的相关对象的集合。 Analysis Services 模型也是如此。 每个维度（等同于关系模型中的表）均存在一个键属性。 **键属性** 用于事实数据表（度量值组）的外键关系。 维度中的所有非键属性均（直接或间接）链接至键属性。  
   
- 键属性通常是（但并非总是） **粒度属性**。 粒度是指数据内详细信息的级别或精度的级别。 同样，常见示例为理解相关内容提供最快的途径。 考虑日期值：对于日常销售，需要按天指定的日期值；对于配额，只需按季度即可，但如果分析数据包含体育事件的比赛结果，则粒度最好为毫秒。 粒度就是数据值的精度级别。  
+ 键属性通常是（但并非总是） **粒度属性**。 粒度是指数据内详细信息的级别或精度的级别。 同样，常见示例为理解相关内容提供最快的途径。 考虑日期值：对于日常销售，需要按天指定的日期值；对于配额，只需季度即可，但如果分析数据包含体育事件的比赛结果，则粒度最好为毫秒。 粒度就是数据值的精度级别。  
   
- 另一个示例是货币：财务应用程序跟踪货币值时可能会精确到多位小数位数，而本地学校基金筹集可能只需最接近美元的值。 因为想要避免存储不必要的数据，所以了解粒度非常重要。 删除时间戳中的毫秒或销售额中的分可在该详细信息级别与分析无关时节省存储和处理时间。  
+ 另一个示例是货币： 财务应用程序跟踪货币值时可能到多位小数位数，而本地学校基金筹集可能只需最接近美元的值。 因为想要避免存储不必要的数据，所以了解粒度非常重要。 删除时间戳中的毫秒或销售额中的分可在该详细信息级别与分析无关时节省存储和处理时间。  
   
  若要设置粒度属性，请使用 SQL Server Data Tools 中多维数据集设计器的“维度用法”选项卡。 在 AdventureWorks 示例模型中，“日期”维度的键属性是“日期”键。 对于“销售订单”，粒度属性等同于键属性。 对于“销售目标”，粒度级别是季度，因此粒度属性相应地设置为“日历季度”。  
   
@@ -124,36 +124,36 @@ ms.locfileid: "48049537"
  **单元格** 是指度量值维度成员的成员与多维数据集中各个属性层次结构的成员相交处所在的空间。  
   
 ## <a name="other-modeling-terms"></a>其他建模术语  
- 本节介绍一系列不太适合其他章节，但仍需了解的概念和术语。  
+ 本部分包含一系列概念和术语的不太适合其他章节，但仍需要了解的有关。  
   
  **计算成员** 是在查询时间定义和计算的维度成员。 可以在用户查询或 MDX 计算脚本中定义计算成员，并将其存储在服务器上。 一个计算成员对应于定义该成员的维度中的多个维度表行。  
   
  **非重复计数** 是用于只应计数一次的数据项的一种特殊的度量值。 AdventureWorks 示例模型包括针对“Internet 订单”、“分销商订单”和“销售订单”的非重复计数度量值。  
   
- **度量值组** 是一个或多个度量值的集合。 其中大多数度量值组是用户定义的，可用于将相关度量值保留在一起。 非重复计数度量值是一个例外。 非重复计数度量值始终置于仅包含非重复度量值的专用度量值组中。 该度量值组不会显示在数据透视表示例中，但会作为度量值的命名集合显示在数据透视表字段列表中。  
+ **度量值组** 是一个或多个度量值的集合。 其中大多数度量值组是用户定义的，可用于将相关度量值保留在一起。 非重复计数度量值是一个例外。 非重复计数度量值始终置于仅包含非重复度量值的专用度量值组中。 不能看到在数据透视表的示例图中，度量值组，但它会显示在数据透视表字段列表中，作为度量值的命名集合。  
   
- **度量值维度** 是包含多维数据集中所有度量值的维度。 它不会在 SQL Server Data Tools 中生成的多维模型中显示，但它仍然存在。 度量值维度包含度量值，因此它的所有成员通常都是聚合的（通常采用求和或计数方式）。  
+ **度量值维度** 是包含多维数据集中所有度量值的维度。 不会公开在多维模型中，您在 SQL Server Data Tools 中生成，但它仍然存在。 度量值维度包含度量值，因此它的所有成员通常都是聚合的（通常采用求和或计数方式）。  
   
- **数据库维度和多维数据集维度**。 可以在模型中定义独立的维度，该维度之后将包含在同一模型中任意数量的多维数据集中。 将维度添加到多维数据集时，该维度被称为多维数据集维度。 作为对象资源管理器中的独立项单独存在于项目中时，该维度被称为数据库维度。 为什么要进行区别？ 因为这样可以单独设置其属性。 在产品维度中，您将看到两个术语都有使用，因此值得了解其各自的含义。  
+ **数据库维度和多维数据集维度**。 可以在模型中定义独立的维度，该维度之后将包含在同一模型中任意数量的多维数据集中。 当多维数据集添加维度时，它被称为多维数据集维度。 本身在项目中，作为独立项目在对象资源管理器，它被称为数据库维度。 为什么要进行区别？ 因为这样可以单独设置其属性。 在产品文档中，您将看到两个词使用，因此有必要了解它们的含义。  
   
 ## <a name="next-steps"></a>后续步骤  
  现在，您已掌握重要的概念和术语，可以继续了解这些进一步阐述 Analysis Services 中的基本概念的附加主题：  
   
--   [基本 MDX 查询&#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
+-   [基本 MDX 查询 (MDX)](mdx/mdx-query-the-basic-query.md)  
   
--   [基本 MDX 脚本&#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
+-   [基本 MDX 脚本 (MDX)](mdx/the-basic-mdx-script-mdx.md)  
   
--   [多维建模&#40;Adventure Works 教程&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
+-   [多维建模（Adventure Works 教程）](../multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [多维数据集空间](mdx/cube-space.md)   
+ [Cube Space](mdx/cube-space.md)   
  [元组](mdx/tuples.md)   
  [Autoexists](mdx/autoexists.md)   
- [使用成员、 元组和集&#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [使用成员、元组和集 (MDX)](mdx/working-with-members-tuples-and-sets-mdx.md)   
  [直观合计和非直观合计](mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 脚本编写基础知识&#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX 语言参考&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多维表达式&#40;MDX&#41;引用](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [MDX 查询基础知识 (Analysis Services)](mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 脚本编写基础知识 (Analysis Services)](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 语言参考 (MDX)](/sql/mdx/mdx-language-reference-mdx)   
+ [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

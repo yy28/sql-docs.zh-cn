@@ -1,5 +1,5 @@
 ---
-title: 对挖掘模型应用筛选器 |Microsoft 文档
+title: 对挖掘模型应用筛选器 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519262"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     - 或 -  
+     -或-  
   
      选择该模型。 然后，在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
@@ -81,7 +81,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>向挖掘模型中的嵌套表添加筛选器  
   
-1.  在**\<名称 > 模型筛选器**对话框框中，单击下的网格中的空行**挖掘结构列**。  
+1.  在中**\<名称 > 模型筛选器**对话框框中，单击下的网格中的空行**挖掘结构列**。  
   
 2.  从下拉列表中选择嵌套表的名称。  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      在 **“模型筛选器”** 对话框中，只有这些条件可用于嵌套表，因为您要将事例表限定为包含嵌套表中某一特定值的那些事例。 在下一步中，您将设置嵌套表条件的值。  
   
-4.  单击“值”框，然后单击 **(…)** 按钮以生成一个表达式。  
+4.  单击**值**框中，然后依次 **（...）** 按钮以生成一个表达式。  
   
      **\<名称 > 筛选器**对话框随即打开。 此对话框只能设置当前表的条件，本例中当前表是嵌套表。  
   
@@ -119,8 +119,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     > [!NOTE]  
     >  如果手动更改筛选表达式的任意部分，则会禁用该网格，以后只能在文本编辑模式下编辑筛选表达式。 若要恢复网格编辑模式，必须清除筛选表达式并重新开始。  
   
-## <a name="see-also"></a>另请参阅  
- [为挖掘模型 & #40; 筛选器Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

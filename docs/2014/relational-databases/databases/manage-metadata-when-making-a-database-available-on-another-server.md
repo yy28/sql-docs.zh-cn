@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -35,12 +34,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785989"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>当数据库在其他服务器实例上可用时管理元数据 (SQL Server)
   本主题与下列情况有关：  
@@ -135,7 +134,7 @@ ms.locfileid: "48198497"
   
  若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master**中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
   
- 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD ='password'****。 建议您通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) 和 [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)。  
+ 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD **='***密码*****。 我们建议，然后通过执行以下语句启用自动解密数据库主密钥：ALTER MASTER KEY 添加 ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) 和 [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)。  
   
  有关如何启用镜像数据库主秘钥自动加密的详细信息，请参阅[设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48198497"
   
  [[返回页首]](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （在服务器级别）  
   
 ### <a name="server-level-event-notifications"></a>服务器级事件通知  
  服务器级事件通知存储在 **msdb**中。 因此，如果数据库应用程序依赖于服务器级事件通知，则必须在目标服务器实例上重新创建该事件通知。 若要查看服务器实例上的事件通知，请使用 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) 目录视图。 有关详细信息，请参阅 [Event Notifications](../service-broker/event-notifications.md)。  
@@ -354,7 +353,7 @@ ms.locfileid: "48198497"
  [[返回页首]](#information_entities_and_objects)  
   
 ## <a name="see-also"></a>请参阅  
- [Contained Databases](contained-databases.md)   
+ [包含的数据库](contained-databases.md)   
  [将数据库复制到其他服务器](copy-databases-to-other-servers.md)   
  [数据库分离和附加 (SQL Server)](database-detach-and-attach-sql-server.md)   
  [故障转移到日志传送辅助服务器 (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   

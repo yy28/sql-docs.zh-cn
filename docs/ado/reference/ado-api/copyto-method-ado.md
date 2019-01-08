@@ -17,12 +17,12 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad973b69d9f85b731e417e502225036ae714ae63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658641"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529614"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 复制指定的数目的字符或字节 (具体取决于[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[Stream](../../../ado/reference/ado-api/stream-object-ado.md)到另一个**Stream**对象。  
@@ -42,10 +42,10 @@ Stream.CopyTo DestStream, NumChars
 >  *DestStream*参数不能的代理**Stream**对象，因为这需要访问的专用接口上**Stream**不能为远程连接到的对象客户端。  
   
  *numChars*  
- 可选。 **整数**值，该值指定要从当前源中的位置复制的字节或字符数**Stream**到目标**Stream**。 默认值为 – 1，指定从当前位置到复制所有字符或字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
+ 可选。 **整数**值，该值指定要从当前源中的位置复制的字节或字符数**Stream**到目标**Stream**。 默认值为-1，指定从当前位置到复制所有字符或字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
   
 ## <a name="remarks"></a>备注  
- 此方法将指定的字符数或字节数，从当前指定的位置开始复制[位置](../../../ado/reference/ado-api/position-property-ado.md)属性。 如果指定的数量大于可用的之前的字节数**EOS**，然后仅字符或字节数从当前位置到**EOS**复制。 如果的值*NumChars*为 – 1，或省略，所有字符或字节从当前的位置开始都复制。  
+ 此方法将指定的字符数或字节数，从当前指定的位置开始复制[位置](../../../ado/reference/ado-api/position-property-ado.md)属性。 如果指定的数量大于可用的之前的字节数**EOS**，然后仅字符或字节数从当前位置到**EOS**复制。 如果的值*NumChars*为-1，或省略，所有字符或字节从当前的位置开始都复制。  
   
  如果已存在的字符或目标流中的字节，所有内容，而只复制的结束位置的点保留，并且不被截断。 **位置**变得紧跟复制的最后一个字节的字节。 如果你想要这些字节截断，则调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
   

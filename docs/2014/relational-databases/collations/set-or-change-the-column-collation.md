@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
@@ -14,15 +13,15 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e864a2e4320bbdac3af4f5db2fd0cccfe32fd712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154987"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795069"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
-  您可以重写的数据库排序规则`char`， `varchar`， `text`， `nchar`， `nvarchar`，并`ntext`数据通过指定特定列的表不同的排序规则并使用以下值之一：  
+  可以覆盖 `char`、`varchar`、`text`、`nchar`、`nvarchar` 和 `ntext` 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
   
 -   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48154987"
  使用 **tempdb**时， [COLLATE](/sql/t-sql/statements/collations) 子句包括了 *database_default* 选项，以此来指定对于该连接，临时表中的列使用当前用户数据库的默认排序规则而非 **tempdb**的排序规则。  
   
 ## <a name="collations-and-text-columns"></a>排序规则和文本列  
- 您可以插入或更新中的值`text`列的排序规则是不同于数据库的默认排序规则的代码页。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会隐式地将这些值转换为该列的排序规则。  
+ 如果 `text` 列的排序规则不同于数据库默认排序规则的代码页，则可以在该列中插入值或更新该列中的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会隐式地将这些值转换为该列的排序规则。  
   
 ## <a name="collations-and-tempdb"></a>排序规则和 tempdb  
  每次启动 **时，都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。该数据库与 **model** 数据库具有相同的默认排序规则。 这通常与实例的默认排序规则相同。 如果为创建的用户数据库指定的默认排序规则与 **model**的排序规则不同，则该用户数据库与 **tempdb**的默认排序规则也不同。 所有临时存储过程或临时表都创建和存储在 **tempdb**中。 这意味着临时表中的所有隐式列以及临时存储过程中的所有强制默认常量、变量和参数都具有与可比较对象（在永久表和存储过程中创建）不同的排序规则。  
@@ -88,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- 由于 **tempdb** 使用默认的服务器排序规则，而 `TestPermTab.Col1` 使用其他排序规则，因此 SQL Server 会返回如下错误：“无法解决等于运算中 'Latin1_General_CI_AS_KS_WS' 与 'Estonian_CS_AS' 之间的排序规则冲突。”  
+ 因为**tempdb**使用默认服务器排序规则和`TestPermTab.Col1`使用不同的排序规则，SQL Server 会返回此错误："不能解决之间 'Latin1_General_CI_AS_KS_WS' 与 'Estonian_CS_AS' 等中的排序规则冲突操作。"  
   
  为防止出现此错误，可以使用下列方法之一：  
   

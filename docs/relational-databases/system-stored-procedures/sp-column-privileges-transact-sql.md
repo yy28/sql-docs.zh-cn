@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f8ded0dfc540ab695342fc1765bf53e880ec0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538056"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  如果当前用户拥有具有指定名称的表，则返回该表的列。 如果*table_owner*未指定当前用户不拥有具有指定的表和*table_name*，sp_column 权限具有指定的表查找*table_name*由数据库所有者拥有。 如果有，则返回该表的列。  
   
  [ @table_qualifier=] '*table_qualifier*  
- 表限定符的名称。 *table_qualifier*是*sysname*，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 表限定符的名称。 *table_qualifier*是*sysname*，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [ @column_name=] '*列*  
  只获取一列目录信息时所用的单独的列。 *列*是**nvarchar (** 384 **)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示在 sys.columns 表中列出的列名称。 *列*可以包括使用通配符匹配模式的基础 DBMS 的通配符。 为了达到最佳的互操作性，网关客户端应只采用 ISO 标准模式匹配（% 和 _ 通配符）。  
@@ -75,7 +75,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>备注  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以用 GRANT 语句授予权限，用 REVOKE 语句除去权限。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

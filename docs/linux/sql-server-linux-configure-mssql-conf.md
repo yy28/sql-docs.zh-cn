@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658809"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401892"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -590,8 +590,8 @@ accepteulaml = Y
 |选项 |Description |
 |--- |--- |
 |**network.forceencryption** |如果为 1，然后[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]强制所有连接进行加密。 默认情况下，此选项为 0。 |
-|**network.tlscert** |证书的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 TLS。 示例：`/etc/ssl/certs/mssql.pem`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议将访问限制文件使用到`chown mssql:mssql <file>; chmod 400 <file>`。 |
-|**network.tlskey** |私钥的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 TLS。 示例：`/etc/ssl/private/mssql.key`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议将访问限制文件使用到`chown mssql:mssql <file>; chmod 400 <file>`。 |
+|**network.tlscert** |证书的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 TLS。 例如： `/etc/ssl/certs/mssql.pem`  证书文件必须是可由 mssql 帐户访问。 Microsoft 建议将访问限制文件使用到`chown mssql:mssql <file>; chmod 400 <file>`。 |
+|**network.tlskey** |私钥的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 TLS。 例如：`/etc/ssl/private/mssql.key`  证书文件必须是可由 mssql 帐户访问。 Microsoft 建议将访问限制文件使用到`chown mssql:mssql <file>; chmod 400 <file>`。 |
 |**network.tlsprotocols** |允许通过 SQL Server 的哪个 TLS 协议以逗号分隔列表。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 始终会尝试协商的最强的允许的协议。 如果客户端不支持任何允许的协议，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]拒绝连接尝试。  对于兼容性，默认情况下，（1.2、 1.1 和 1.0） 允许所有支持的协议。  如果你的客户端支持 TLS 1.2，Microsoft 建议允许仅 TLS 1.2。 |
 |**network.tlsciphers** |指定允许哪些密码[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]TLS 的。 此字符串的格式必须每[OpenSSL 的密码列表格式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)。 一般情况下，不需要更改此选项。 <br /> 默认情况下，允许以下密码： <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 文件的路径 |

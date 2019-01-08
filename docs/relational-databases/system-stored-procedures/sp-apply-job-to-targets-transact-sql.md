@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641706"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537834"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id =**] *job_id*  
  要应用于指定目标服务器或目标服务器组的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_  
  要应用于指定的相关目标服务器或目标服务器组的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [ **@target_server_groups =**]  **'***target_server_groups***'**  
+ [  **@target_server_groups =**] **'**_target_server_groups_  
  以逗号分隔的目标服务器组的列表，指定的作业将应用于这些服务器组。 *target_server_groups*是**nvarchar(2048)**，默认值为 NULL。  
   
- [ **@target_servers=** ] **'***target_servers***'**  
+ [  **@target_servers=** ] **'**_target_servers_  
  以逗号分隔的目标服务器的列表，指定的作业将应用于这些服务器。 *target_servers*是**nvarchar(2048)**，默认值为 NULL。  
   
- [  **@operation=** ] **'***操作*****  
+ [  **@operation=** ] **'**_操作_  
  确定是将指定的作业应用于指定的目标服务器或目标服务器组，还是将其从指定的目标服务器或目标服务器组中移除。 *操作*是**varchar(7)**，使用默认值为 APPLY。 有效的操作是**APPLY**并**删除**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -67,7 +67,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>备注  
  **sp_apply_job_to_targets**提供一种简便方法应用 （或删除） 某个作业从多个目标服务器，并且是调用的替代方法**sp_add_jobserver** (或**sp_delete_jobserver**)一次为每个所需的目标服务器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色才能执行此过程。  
   
 ## <a name="examples"></a>示例  

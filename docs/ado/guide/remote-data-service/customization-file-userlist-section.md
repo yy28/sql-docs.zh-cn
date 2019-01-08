@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce5c4b0a789572e58db7068911a9abae7475fcb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557855"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516746"
 ---
 # <a name="customization-file-userlist-section"></a>自定义文件 UserList 部分
 **Userlist**部分是关于**连接**的相同部分与部分*标识符*参数。  
@@ -38,7 +38,7 @@ ms.locfileid: "51557855"
 |组成部分|Description|  
 |----------|-----------------|  
 |*userName*|*用户名*表示使用此连接的人员。 有效的用户名称与 IIS 建立**Service Manager**对话框。|  
-|***accessRights***|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** — 用户可以读取的数据源。<br />-   **ReadWrite** — 用户可以读取或写入到数据源。|  
+|***accessRights***|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
   
 ## <a name="see-also"></a>请参阅  
  [自定义文件 Connect 部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

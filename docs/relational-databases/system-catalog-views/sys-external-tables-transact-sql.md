@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702715"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516286"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47702715"
 |reject_type|**tinyint**|对于通过 HADOOP 外部数据源的外部表，这是查询外部数据时被拒绝的行计数的方法。|值-已拒绝的行数。<br /><br /> 百分比-已拒绝的行的百分比。|  
 |reject_value|**float**|对于通过 HADOOP 外部数据源的外部表：<br /><br /> 有关*reject_type =* 值，这是行拒绝使查询失败前允许的数量。<br /><br /> 有关*reject_type* = 百分比，这是行拒绝使查询失败前允许的百分比。||  
 |reject_sample_value|**int**|有关*reject_type* = 百分比，这是要加载，成功或失败之前计算已拒绝的行的百分比, 的行数。|如果 reject_type = VALUE。|  
-|distribution_type|**int**|对于 SHARD_MAP_MANAGER 外部数据源对外部表，这是对基础表的行的数据分布。|0 – Sharded<br /><br /> 1 – 复制<br /><br /> 2 – 轮循机制|  
+|distribution_type|**int**|对于 SHARD_MAP_MANAGER 外部数据源对外部表，这是对基础表的行的数据分布。|0-分片<br /><br /> 1-复制<br /><br /> 2-轮循机制|  
 |distribution_desc|**nvarchar(120)**|对于 SHARD_MAP_MANAGER 外部数据源对外部表，这是显示为字符串的分布类型。||  
 |sharding_column_id|**int**|对于对 SHARD_MAP_MANAGER 外部数据源和分片分布的外部表，这是列的包含分片密钥值的列 ID。||  
 |remote_schema_name|**sysname**|对于 SHARD_MAP_MANAGER 外部数据源对外部表，这是基础表 （如果不同于其中定义外部表的架构） 在远程数据库的位置的架构。||  
 |remote_object_name|**sysname**|对于 SHARD_MAP_MANAGER 外部数据源对外部表，这是远程数据库 （如果从外部表的名称不同） 上的基础表的名称。||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

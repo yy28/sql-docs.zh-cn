@@ -20,12 +20,12 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510001"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "47780315"
 |**server_specification_id**|**Int**|ID **server_specification**。|  
 |**create_date**|**日期时间**|审核服务器规范的创建日期。|  
 |**modified_date**|**日期时间**|审核服务器规范的上次修改日期。|  
-|**is_state_enabled**|**tinyint**|审核规范状态：<br /><br /> 0 - 禁用<br /><br /> 1 – 启用|  
+|**is_state_enabled**|**tinyint**|审核规范状态：<br /><br /> 0-禁用<br /><br /> 1-启用|  
 |**audit_GUID**|**uniqueidentifier**|包含此规范的审核的 GUID。 在服务器启动期间成员服务器审核规范的枚举过程中使用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，不得被拒绝主体**VIEW ANY DEFINITION**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

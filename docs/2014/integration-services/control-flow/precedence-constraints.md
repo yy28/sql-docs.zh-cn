@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -18,12 +17,12 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d233d2ee94a611c63e8466102c66bd01e77b0513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063457"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349666"
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
@@ -75,12 +74,12 @@ ms.locfileid: "48063457"
 -   失败要求优先可执行文件失败，受约束的可执行文件便可运行。  
   
 > [!NOTE]  
->  成员相同的优先约束`Precedence Constraint`集合，才能组成逻辑与条件。 例如，不能组合来自两个 Foreach 循环容器的优先约束。  
+>  优先约束必须为相同 `Precedence Constraint` 集合的成员，才能组成逻辑与条件。 例如，不能组合来自两个 Foreach 循环容器的优先约束。  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>优先约束的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的信息，请参阅[优先约束编辑器](../precedence-constraint-editor.md)。  
+ 有关可以在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的信息，请参阅 [优先约束编辑器](../precedence-constraint-editor.md)。  
   
  有关如何以编程方式设置这些属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>。  
   
@@ -96,7 +95,7 @@ ms.locfileid: "48063457"
      本主题提供有关如何设置优先约束的默认行为以及如何用默认优先约束来连接可执行文件的信息，请参阅：  
   
 ## <a name="related-content"></a>相关内容  
- social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+ social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>请参阅  
  [将表达式添加到优先约束](../add-expressions-to-precedence-constraints.md)   

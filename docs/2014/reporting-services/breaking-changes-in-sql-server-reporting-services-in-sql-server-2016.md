@@ -15,12 +15,12 @@ ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1bc91211f646129ca0686ae5d8bffe2371ba0a57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adf846eaa23b7be875605fd5d1cc93811fce9e3f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537334"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 的 SQL Server Reporting Services 中的重大更改
   本主题介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 您在升级时，或在自定义脚本或报表中可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48076117"
 -   [SQL Server 2008 R2 Reporting Services 重大更改](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 重大更改  
- 有没有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的重大更改[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
+ 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中没有针对 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的重大更改。  
   
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 重大更改  
   
@@ -43,14 +43,14 @@ ms.locfileid: "48076117"
   
  `http://<Server name>/ReportServer`  
   
- 现在要求您在 URL 路径中包括 SharePoint 网站。 例如，如果您的网站名称是“`videos`”并且使用了“`sites`”前缀，则 URL 将如下所示：  
+ 现在要求您在 URL 路径中包括 SharePoint 网站。 例如，如果你的站点名称为`videos`，使用`sites`前缀，URL 将如下所示：  
   
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>SharePoint 模式命令行安装的更改  
  输入设置 **/RSINSTALLMODE** 仅用于本机模式安装，不用于 SharePoint 模式安装。 例如，在不支持以下[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:**了 /RSINSTALLMODE ="DefaultSharePointMode"**。 使用 **/RSSHPINSTALLMODE="DefaultSharePointMode"** 来代替该输入设置。  
   
- 下面的语句是完整安装命令和参数集的示例： **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …. /RSSHPINSTALLMODE="DefaultSharePointMode"**  
+ 下面的语句是完整安装命令和参数集的示例： **setup /ACTION = install /FEATURES = SQL，RS / = Denali_INST1.../RSSHPINSTALLMODE ="DefaultSharePointMode"**  
   
  在命令行安装的详细信息，请参阅[命令提示符下安装的 Reporting Services SharePoint 模式和本机模式](install-windows/install-reporting-services-at-the-command-prompt.md)。  
   
@@ -59,25 +59,25 @@ ms.locfileid: "48076117"
   
  下面的列表中包括受这些更改影响的组件和工作流：  
   
--   使用的自定义应用程序[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]WMI 提供程序[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在 SharePoint 模式下。  
+-   在 SharePoint 模式下将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI 提供程序用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的自定义应用程序。  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器、rskeymgmt.exe 和 rsconfig.exe。 而不是使用这些实用程序用于配置的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 模式下，使用 SharePoint 管理中心和 PowerShell。  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器、rskeymgmt.exe 和 rsconfig.exe。 代替使用这些实用工具配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，使用 SharePoint 管理中心和 PowerShell。  
   
--   SQL Server Management Studio：客户无法使用类似 <machine_name>/<instance_name> 的语法引用服务器。 从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版本开始，建议的方法是使用 SharePoint 站点 URL。 例如， **http://<sharepoint_server>/<sharePoint_site&gt**。 从开始[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，SharePoint 站点 URL 是唯一支持的语法。  
+-   SQL Server Management Studio：客户无法使用类似 <machine_name>/<instance_name> 的语法引用服务器。 从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版本开始，建议的方法是使用 SharePoint 站点 URL。 例如， **http://<sharepoint_server>/<sharePoint_site&gt**。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，SharePoint 站点 URL 是唯一支持的语法。  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>报表模型设计器在 SQL Server Data Tools 中不提供  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 不再支持报表模型项目。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 中将不提供报表模型设计器。 无法创建新的报表模型项目或打开现有项目中的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，您不能创建或更新报表模型。 若要更新报表模型，可以使用[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]或更早的工具。 您可以继续使用报表模型作为在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 工具（例如报表生成器和报表设计器）中创作的报表中的数据源。 用来创建查询以便从报表模型提取报表数据的查询设计器将继续以供[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 不再支持报表模型项目。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中将不提供报表模型设计器。 无法在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建新的报表模型项目或打开现有项目，并且无法创建或更新报表模型。 若要更新报表模型，可以使用 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或更早的工具。 您可以继续使用报表模型作为在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 工具（例如报表生成器和报表设计器）中创作的报表中的数据源。 你用来创建查询以便从报表模型提取报表数据的查询设计器将继续在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中提供。  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services 重大更改  
- 本部分介绍中的重大更改[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
+ 本节介绍 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的重大更改。  
   
 > [!NOTE]  
 >  因为 SQL Server 2008 R2 是 SQL Server 2008 的次版本升级，所以，我们建议您也查看 SQL Server 2008 部分的内容。  
   
 ### <a name="expanded-csv-data-renderer"></a>扩展的 CSV 数据呈现器  
- 在中[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，CSV 文件包括图表和仪表数据。 依赖于以前的 CSV 文件结构的应用程序将不再有效，因为针对图表和仪表添加了其他列。  
+ 在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，CSV 文件包括图表和仪表数据。 依赖于以前的 CSV 文件结构的应用程序将不再有效，因为针对图表和仪表添加了其他列。  
   
- 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [导出到 CSV 文件（报表生成器和 SSRS）](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)中处理数据。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 中的 SQL Server Reporting Services 的行为更改](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   

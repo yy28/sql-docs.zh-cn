@@ -18,12 +18,12 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24fb1fc483762798219e9d40ba3c096cc15acea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1832768a98dff17b0b59d9b3cf81f40f03ab34ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645645"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538152"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@job_id =** ] *job_id*  
  要添加步骤的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_  
  要添加步骤的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -72,15 +72,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@step_id =** ] *step_id*  
  作业步骤的序列标识号。 步骤标识数字开始**1**并无间断递增。 如果在现有序列中插入一个步骤，则将自动调整序列号。 如果提供了值*step_id*未指定。 *step_id*是**int**，默认值为 NULL。  
   
- [ **@step_name =** ] **'***step_name***'**  
+ [  **@step_name =** ] **'**_step_name_  
  步骤的名称。 *step_name*是**sysname**，无默认值。  
   
- [ **@subsystem =** ] **'***subsystem***'**  
+ [  **@subsystem =** ] **'**_子系统_  
  使用的子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务，才能执行*命令*。 *子系统*是**nvarchar(40)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**|活动脚本<br /><br /> **\*\* 重要 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**|活动脚本<br /><br /> **\*\* 重要提示** \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|操作系统命令或可执行程序|  
 |'**分发**|复制分发代理作业|  
 |'**快照**|复制快照代理作业|  
@@ -93,7 +93,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**|PowerShell 脚本|  
 |'**TSQL**（默认值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句|  
   
- [  **@command=** ] **'***命令*****  
+ [  **@command=** ] **'**_命令_  
  执行的命令**SQLServerAgent**服务通过*子系统*。 *命令*是**nvarchar （max)**，默认值为 NULL。 SQL Server 代理提供标记替换功能；在编写软件程序时，它可提供与变量相同的灵活性。  
   
 > [!IMPORTANT]  
@@ -104,11 +104,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  有关这些令牌和更新作业步骤以使用新的标记语法的详细信息，请参阅[作业步骤中使用令牌](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
->  对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI(property)****。 请注意，在此版本中，对标记的使用扩展至所有警报。  
+>  对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：**A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**。，和**WMI (** _属性_**)**。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
 >  如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
   
- [  **@additional_parameters=** ] **'***参数*****  
+ [  **@additional_parameters=** ] **'**_参数_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *参数*是**ntext**，默认值为 NULL。  
   
  [ **@cmdexec_success_code =** ] *code*  
@@ -140,13 +140,13 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@on_fail_step_id=** ] *fail_step_id*  
  该步骤失败时要执行此作业中步骤的 ID 和*fail_action*是**4**。 *fail_step_id*是**int**，默认值为**0**。  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **'**_server_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*是**nvarchar(30)**，默认值为 NULL。  
   
- [  **@database_name=** ] **'***数据库*****  
+ [  **@database_name=** ] **'**_数据库_  
  要在其中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤的数据库的名称。 *数据库*是**sysname**，默认值为 NULL，这种情况下**主**使用数据库。 不允许用方括号 ([ ]) 将名称括起来。 对于 ActiveX 作业步骤，*数据库*是该步骤使用的脚本语言的名称。  
   
- [ **@database_user_name=** ] **'***user***'**  
+ [  **@database_user_name=** ] **'**_用户_  
  执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤时要使用的用户帐户的名称。 *用户*是**sysname**，默认值为 NULL。 当*用户*上为 NULL，在作业所有者的用户上下文中的步运行*数据库*。  只有在作业所有者是 SQL Server sysadmin 时，SQL Server 代理才包括此参数。 如果是这样，则给定的 Transact-SQL 步骤将在给定的 SQL Server 用户名的上下文中执行。 如果作业所有者不是 SQL Server sysadmin，则 TRANSACT-SQL 步骤将始终在拥有该作业的登录名的上下文中执行和@database_user_name参数将被忽略。  
   
  [  **@retry_attempts=** ] *retry_attempts*  
@@ -158,7 +158,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@os_run_priority =** ] *run_priority*  
  保留。  
   
- [ **@output_file_name=** ] **'***file_name***'**  
+ [  **@output_file_name=** ] **'**_file_name_  
  用于保存该步骤输出的文件的名称。 *file_name*是**nvarchar(200)**，默认值为 NULL。 *file_name*可以包含一个或多个下列出的令牌*命令*。 仅上运行的命令中，此参数才有效[!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**， **PowerShell**， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]子系统。  
   
  [  **@flags=** ]*标志*  
@@ -177,7 +177,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@proxy_id** = ] *proxy_id*  
  运行该作业步骤的代理 id 号。 *proxy_id*是类型**int**，默认值为 NULL。 如果没有*proxy_id*指定，则没有*proxy_name*指定，且未*user_name*的服务帐户运行该作业步骤的指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'**_proxy_name_  
  作业步骤作为代理运行时，代理的名称。 *proxy_name*是类型**sysname**，默认值为 NULL。 如果没有*proxy_id*指定，则没有*proxy_name*指定，且未*user_name*的服务帐户运行该作业步骤的指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -195,7 +195,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  代理可以由标识*proxy_name*或*proxy_id*。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

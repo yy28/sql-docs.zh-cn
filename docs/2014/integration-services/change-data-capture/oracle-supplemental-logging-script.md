@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3736ebcdcf189ab377624b962a119de864130668
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daa62b343adca72d28da5d83469409ed476a210e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184497"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782499"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 补充日志记录脚本
   此对话框显示 Oracle 补充日志记录脚本。  
@@ -38,7 +37,7 @@ ms.locfileid: "48184497"
  将脚本复制到剪贴板。 在就绪后，在 Oracle 数据库管理员 (DBA) 需要检查和执行补充日志记录脚本时，您可以将该脚本粘贴到您需要的任何位置。  
   
 ## <a name="see-also"></a>请参阅  
- [如何管理 CDC 实例](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [管理 CDC 实例](manage-a-cdc-instance.md)  
   
   

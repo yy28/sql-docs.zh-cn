@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521934"
 ---
 # <a name="explicit-data-type-conversion-function"></a>显式数据类型转换函数
 根据 SQL 数据类型定义指定显式数据类型转换。  
@@ -29,7 +29,7 @@ ms.locfileid: "47668345"
   
  格式**转换**函数是：  
   
- **转换 (** *value_exp*， *data_type * * *)**  
+ **转换 (** *value_exp*， _data_type_**)**  
   
  该函数返回指定的值*value_exp*转换为指定*data_type*，其中*data_type*是以下关键字之一：  
   

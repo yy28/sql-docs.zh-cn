@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,15 +16,15 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797659"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改关系的外键端。 修改表的外键会更改哪些列与主键表中的列相关。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改关系的外键端。 修改表的外键会更改与主键表中的列相关的列。  
   
  **本主题内容**  
   
@@ -33,7 +32,7 @@ ms.locfileid: "48130627"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **修改外键，使用：**  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48130627"
      根据约束对创建或重新启用约束前表中的全部已有数据进行验证。  
   
      **表和列规范类别**  
-     展开此项可显示哪些表中的哪些列用作关系中的外键和主键（或唯一键）。 若要编辑或定义这些值，请单击属性字段右侧的省略号按钮 (**…**)。  
+     展开此项可显示哪些表中的哪些列用作关系中的外键和主键（或唯一键）。 若要编辑或定义这些值，请单击属性字段右侧的省略号按钮 (…)。  
   
      **外键基表**  
      显示哪个表包含用作所选关系中外键的列。  
@@ -103,7 +102,7 @@ ms.locfileid: "48130627"
      **名称**  
      显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
-     **Description**  
+     **说明**  
      描述该关系。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号 **(...)**。 这可以提供一个更大的文本编写区域。  
   
      **表设计器类别**  

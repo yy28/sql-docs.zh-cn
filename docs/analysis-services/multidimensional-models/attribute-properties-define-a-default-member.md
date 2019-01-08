@@ -1,5 +1,5 @@
 ---
-title: 定义默认成员 |Microsoft 文档
+title: 定义默认成员 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e112d0cfdd1e4558dcad1888531774357ce0102a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020914"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516732"
 ---
-# <a name="attribute-properties---define-a-default-member"></a>特性属性-定义默认成员
+# <a name="attribute-properties---define-a-default-member"></a>特性属性 - 定义默认成员
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在查询中不包括特性层次结构的情况下，可以使用特性层次结构的默认成员来计算表达式。 如果查询包括的特性层次结构或用户层次结构包含产生特性层次结构的特性，那么将忽略默认成员。 这是因为将使用查询中指定的成员。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "34020914"
   
  属性的 **DefaultMember** 设置应用于该属性所参与的每个层次结构。 您不能在一个维度中针对不同的层次结构使用不同的设置。 例如，如果 [1998] 成员是“[年]”属性的默认成员，则该设置应用于维度中的每个层次结构。 在这种情况下， **DefaultMember** 设置不能在一个层次结构中为 [1998]，而在另一个层次结构中为 [1997]。  
   
- 如果您为不自然聚合的层次结构中特定级别定义默认成员，则必须定义在层次结构中位于该级别之上的所有级别的默认成员。 例如，在层次结构“全部 - 国家（地区）- 气候”中，您不能定义“气候”的默认成员，除非定义了“国家（地区）”的默认成员。 执行此操作失败会导致查询时错误。  
+ 如果您为不自然聚合的层次结构中特定级别定义默认成员，则必须定义在层次结构中位于该级别之上的所有级别的默认成员。 例如，在层次结构中所有国家/地区气候，不能定义的默认成员的气候除非定义国家/地区的默认成员。 执行此操作失败会导致查询时错误。  
   
- 当层次结构中的各级别自然聚合时，您可以为层次结构中的任意属性定义默认成员，而不考虑该层次结构中的其他属性。 例如，在层次结构“国家（地区）- 省市自治区 - 市县”中，您可以在不定义“省市自治区”或“国家（地区）”的默认成员的情况下为“市县”（例如，[市县].[蒙特利尔]）定义默认成员。  
+ 当层次结构中的各级别自然聚合时，您可以为层次结构中的任意属性定义默认成员，而不考虑该层次结构中的其他属性。 例如，在层次结构的国家/地区-省-城市，可以定义城市如 [City] 默认成员。[蒙特利尔] 而无需定义默认成员，状态或国家/地区。  
   
-## <a name="see-also"></a>另请参阅  
- [配置 & #40;所有 & #41;属性层次结构的级别](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>请参阅  
+ [配置属性层次结构的“(全部)”级别](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

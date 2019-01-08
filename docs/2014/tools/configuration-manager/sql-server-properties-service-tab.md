@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d69ded06359dfc7f5f7c71864d3be6b64de6f7af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227316"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779309"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
   使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
@@ -50,9 +49,9 @@ ms.locfileid: "48227316"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：此服务无法启动。  
+-   禁用：此服务无法启动。  
   
- **State**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
+ **状态**  
+ 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
   
   

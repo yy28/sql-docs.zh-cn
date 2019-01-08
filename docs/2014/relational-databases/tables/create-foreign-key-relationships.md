@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1b52e98fe47049640a2ee5a3240d9ad43961bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128768"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794769"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。  
@@ -29,7 +28,7 @@ ms.locfileid: "48128768"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **为创建外键关系，使用：**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48128768"
   
 4.  在 **“选定的关系”** 列表中单击该关系。  
   
-5.  单击右侧网格中的“表和列规范” ，再单击该属性右侧的省略号 (**…**)。  
+5.  单击右侧网格中的“表和列规范”，再单击该属性右侧的省略号 (…)。  
   
 6.  在“表和列”对话框中，从“主键”下拉列表中选择要位于关系主键方的表。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48128768"
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>在新表中创建外键  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48128768"
   
 #### <a name="to-create-a-foreign-key-in-an-existing-table"></a>在现有表中创建外键  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

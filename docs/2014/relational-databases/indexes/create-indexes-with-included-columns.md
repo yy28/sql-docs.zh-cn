@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168807"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540837"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，添加包含列（或非键列）以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
@@ -47,7 +47,7 @@ ms.locfileid: "48168807"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建带有非键列的索引，请使用：**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48168807"
   
 -   只能对非聚集索引定义非键列。  
   
--   所有数据类型除外`text`， `ntext`，和`image`可以用作非键列。  
+-   除了 `text`、`ntext` 和 `image` 之外的所有数据类型都可以用作非键列。  
   
 -   精确或不精确的确定性计算列都可以是非键列。 有关详细信息，请参阅 [计算列上的索引](indexes-on-computed-columns.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48168807"
   
     -   将列的为空性从 NOT NULL 改为 NULL。  
   
-    -   增加的长度`varchar`， `nvarchar`，或`varbinary`列。  
+    -   增加 `varchar`、`nvarchar` 或 `varbinary` 列的长度。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -100,13 +100,13 @@ ms.locfileid: "48168807"
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在 **“索引键列”** 选项卡下，单击 **“添加…”**。  
+6.  在“索引键列”选项卡下，单击“添加…”。  
   
 7.  在“从table_name中选择列”对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   
-9. 在 **“包含性列”** 选项卡下，单击 **“添加…”**。  
+9. 在“包含性列”选项卡下，单击“添加…”。  
   
 10. 在“从table_name中选择列”对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48168807"
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>创建带有非键列的索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

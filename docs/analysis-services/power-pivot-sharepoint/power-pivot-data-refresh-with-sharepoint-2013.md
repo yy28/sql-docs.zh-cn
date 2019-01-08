@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 数据刷新与 SharePoint 2013 |Microsoft 文档
+title: Power Pivot 数据刷新与 SharePoint 2013 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 34208a7b3e3f782bcb93d46ab29099fe609f9925
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5df94dc555aead1225bcb791456e7dc87c0b7590
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024874"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214958"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 Power Pivot 数据刷新
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,36 +42,36 @@ ms.locfileid: "34024874"
 ||||  
 |-|-|-|  
 ||Excel 2013 工作簿|Excel 2010 工作簿|  
-|触发数据刷新|**交互：** 经过身份验证的用户<br /><br /> **计划：** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务|  
+|触发数据刷新|**交互：** Authenticated User<br /><br /> **计划：**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务|  
 |从内容数据库加载工作簿|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |在 Analysis Services 实例上加载数据模型|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |将处理命令发送到 Analysis Services 实例|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务|  
 |更新工作簿数据|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
-|将工作簿和数据模型保存到内容数据库|**交互：** 不适用<br /><br /> **计划：** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
+|将工作簿和数据模型保存到内容数据库|**交互：** 不可用<br /><br /> **计划：** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
   
  下表总结了配置为使用在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server 的 SharePoint 2013 场中支持的刷新功能：  
   
 |工作簿的创建位置|计划的数据刷新|交互式刷新|  
 |-------------------------|----------------------------|-------------------------|  
 |2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel|不提供支持。 升级工作簿 **(\*)**|不提供支持。 升级工作簿 **(\*)**|  
-|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel|Supported|不提供支持。 升级工作簿 **(\*)**|  
-|Excel 2013|Supported|Supported|  
+|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel|是否支持|不提供支持。 升级工作簿 **(\*)**|  
+|Excel 2013|是否支持|是否支持|  
   
  **(\*)** 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_interactive_refresh"></a> 交互式数据刷新  
  SharePoint Server 2013 Excel Services 中的交互式或手动数据刷新可以使用原始数据源中的数据来刷新数据模型。 在您通过注册 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器来配置 Excel Services 应用程序并在 SharePoint 模式下运行后，交互式数据刷新将可用。 有关详细信息，请参阅[管理 Excel Services 数据模型设置 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)。  
   
-> [!NOTE]  
->  交互式数据刷新仅可用于在 Excel 2013 中创建的工作簿。 如果你尝试刷新某一 Excel 2010 工作簿，Excel Services 将显示如下错误消息：“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 操作失败: 该工作簿是在较早版本的 Excel 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中创建的，在升级该文件之前无法进行刷新”。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+> [!NOTE]
+>  交互式数据刷新仅可用于在 Excel 2013 中创建的工作簿。 如果你尝试刷新的 Excel 2010 工作簿，Excel Services 将显示错误消息类似于"[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]操作失败：在较旧版本的 Excel 中创建工作簿和[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]之前升级该文件无法刷新"。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  **交互式刷新的关键相关点：**  
   
 -   交互式数据刷新仅刷新当前用户会话中的数据。 这些数据并不自动保存回 SharePoint 内容数据库中的工作簿项。  
   
--   **凭据：** 交互式数据刷新可将当前登录用户的标识作为凭据或存储的凭据来连接到数据源。 所使用的凭据取决于为与外部数据源的工作簿连接而定义的 Excel Services 身份验证设置。  
+-   **凭据：** 交互式数据刷新可将当前登录用户的标识作为凭据或存储过程来连接到数据源。 所使用的凭据取决于为与外部数据源的工作簿连接而定义的 Excel Services 身份验证设置。  
   
--   **支持的工作簿：**  在 Excel 2013 中创建的工作簿。  
+-   **支持的工作簿：** 在 Excel 2013 中创建的工作簿。  
   
  **刷新数据：**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34024874"
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> 带有工作簿数据连接和交互式数据刷新的 Windows 身份验证  
  Excel Services 向 Analysis Services 服务器发送一个处理命令，该命令指示该服务器模拟某一用户帐户。 为了获取足以执行用户模拟-委托进程的系统权限，该 Analysis Services 服务帐户要求对本地服务器具有“以操作系统方式执行”特权。 该 Analysis Services 服务器还需要能够将用户的凭据委托给数据源。 查询结果被发送到 Excel Services。  
   
- 典型用户体验：当某个客户在包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型的 Excel 2013 工作簿中选择“刷新所有连接”时，将会看到如下错误消息：  
+ 典型用户体验：当客户在包含的 Excel 2013 工作簿中选择"刷新所有连接"[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]模型，他们将看到如下错误消息类似于下面：  
   
 -   **外部数据刷新失败：** 处理工作簿中的数据模型时出错。 请重试。 无法刷新此工作簿中的一个或多个数据连接。  
   
@@ -98,21 +98,21 @@ ms.locfileid: "34024874"
   
  **对于 SQL Native Client：**  
   
--   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“20102481-39c8-4d21-bf63-68f583ad22bb”的不当对象“DataSource”，但尚未使用。  OLE DB 或 ODBC 错误：与 SQL Server 建立连接时发生了与网络相关的或特定于实例的错误。 找不到或无法访问服务器。 请检查实例名称是否正确以及 SQL Server 是否配置为允许远程连接。 有关详细信息，请参阅 SQL Server 联机丛书。08001；SSL 提供程序：要求的安全包不存在；08001；客户端无法建立连接；08001；客户端不支持加密；08001。  ，ConnectionName：ThisWorkbookDataModel，工作簿：book1.xlsx。  
+-   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“20102481-39c8-4d21-bf63-68f583ad22bb”的不当对象“DataSource”，但尚未使用。  OLE DB 或 ODBC 错误：与 SQL Server 建立连接时发生了与网络相关的或特定于实例的错误。 找不到或无法访问服务器。 请检查实例名称是否正确以及 SQL Server 是否配置为允许远程连接。 有关详细信息，请参阅 SQL Server 联机丛书。08001；SSL 提供程序：请求的安全包不存在；08001；客户端无法建立连接；08001；客户端不支持加密；08001。  ，ConnectionName：ThisWorkbookDataModel，工作簿：book1.xlsx。  
   
  **对于 Microsoft OLE DB Provider for SQL Server：**  
   
--   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“6e711bfa-b62f-4879-a177-c5dd61d9c242”的不当对象“DataSource”，但尚未使用。 OLE DB 或 ODBC 错误。 ，ConnectionName：ThisWorkbookDataModel，作业簿：OLEDB Provider.xlsx。  
+-   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“6e711bfa-b62f-4879-a177-c5dd61d9c242”的不当对象“DataSource”，但尚未使用。 OLE DB 或 ODBC 错误。 ，ConnectionName：ThisWorkbookDataModel，工作簿：OLEDB Provider.xlsx。  
   
  **对于 .NET Framework Data Provider for SQL Server：**  
   
--   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“f5fb916c-3eac-4d07-a542-531524c0d44a”的不当对象“DataSource”，但尚未使用。  高级关系引擎中存在错误。 在使用托管 IDbConnection 接口时，出现以下异常：未能加载文件或程序集“System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”或它的某一个依赖项。 未提供所需的模拟级别，或提供的模拟级别无效。 (HRESULT 异常: 0x80070542)”。  ，ConnectionName：ThisWorkbookDataModel，工作簿：NETProvider.xlsx。  
+-   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“f5fb916c-3eac-4d07-a542-531524c0d44a”的不当对象“DataSource”，但尚未使用。  高级关系引擎中存在错误。 在使用托管 IDbConnection 接口时，出现以下异常：无法加载文件或程序集“System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”或其依赖项之一。 未提供所需的模拟级别，或提供的模拟级别无效。 （HRESULT 异常：0x80070542）。  ，ConnectionName：ThisWorkbookDataModel，工作簿：NETProvider.xlsx。  
   
  **配置步骤摘要** ：若要对本地服务器配置 **“以操作系统方式执行”** 特权，请执行以下操作：  
   
 1.  在 SharePoint 模式下运行的 Analysis Services 服务器上，将 Analysis Services 服务帐户添加到“以操作系统方式执行”特权：  
   
-    1.  运行“`secpol.msc`”  
+    1.  运行"`secpol.msc`"  
   
     2.  依次单击 **“本地安全策略”**、 **“本地策略”** 和 **“用户权限分配”**。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "34024874"
   
 -   **凭据：** 使用存储的凭据。 不要使用当前用户的标识。  
   
--   **支持的工作簿：** 使用 Excel 2010 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 外接程序或使用 Excel 2013 创建的工作簿。 不支持在具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 外接程序的 Excel 2010 中创建的工作簿。 请将工作簿升级到至少是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+-   **支持的工作簿：** 创建使用的工作簿[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]用于 Excel 2010 外接程序或使用 Excel 2013。 不支持在具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 外接程序的 Excel 2010 中创建的工作簿。 请将工作簿升级到至少是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  要显示 **“管理数据刷新”** 页，请执行以下操作：  
   
@@ -164,12 +164,12 @@ ms.locfileid: "34024874"
  ![管理数据刷新上下文菜单](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "管理数据刷新上下文菜单")  
   
 > [!TIP]  
->  有关刷新联机工作簿从 SharePoint 的信息，请参阅[具有从 SharePoint Online （白皮书） 的嵌入式 Power Pivot 模型刷新 Excel 工作簿](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
+>  有关 online 刷新工作簿从 SharePoint 的信息，请参阅[使用内置的 Power Pivot 模型从 SharePoint Online （白皮书） 刷新 Excel 工作簿](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中计划的数据刷新体系结构  
  下图总结了 SharePoint 2013 和 SQL Server 2012 SP1 中的数据刷新体系结构。  
   
- ![SQL Server 2012 SP1 数据刷新体系结构](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "的 SQL Server 2012 SP1 数据刷新体系结构")  
+ ![SQL Server 2012 SP1 数据刷新的体系结构](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "的 SQL Server 2012 SP1 数据刷新体系结构")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -182,7 +182,7 @@ ms.locfileid: "34024874"
 |||对计时器作业和配置页的计划的数据刷新请求管理。 该服务管理从服务应用程序数据库读入和读出数据的请求，并且使用 Excel Services 触发数据刷新。|  
 |||使用情况处理和相关计时器作业。|  
 |**(4)**|Excel 计算服务|负责加载数据模型。|  
-|**(5)**|Secure Store Service|如果工作簿中的身份验证设置配置为 **“使用已经过身份验证的用户的帐户”** 或 **“无”**，则在安全存储区目标应用程序 ID 中存储的凭据将用于数据刷新。 有关详细信息，参阅本主题中的 [其他身份验证注意事项](#datarefresh_additional_authentication) 部分。|  
+|**(5)**|Secure Store Service|如果工作簿中的身份验证设置配置为**使用已经过身份验证的用户帐户**或**None**，安全存储区目标应用程序 ID 中存储的凭据用于数据刷新。 有关详细信息，参阅本主题中的 [其他身份验证注意事项](#datarefresh_additional_authentication) 部分。|  
 |**(6)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新计时器作业|指示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务与 Excel Services 进行连接以便刷新数据模型。|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 要求适当的数据访问接口和客户端库，以便处于 SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器可以访问数据源。  
@@ -191,15 +191,15 @@ ms.locfileid: "34024874"
 >  因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务不再加载或保存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型，所以用于在应用程序服务器上缓存模型的大多数设置不适用于 SharePoint 2013 场。  
   
 ## <a name="data-refresh-log-data"></a>数据刷新日志数据  
- **使用情况数据：** 你可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中查看数据刷新使用情况数据。 要查看使用情况数据，请执行以下操作：  
+ **使用情况数据：** 您可以查看数据刷新使用情况数据在[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]管理仪表板。 要查看使用情况数据，请执行以下操作：  
   
 1.  在 SharePoint 管理中心中，在“常规应用程序设置”组中单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板”。  
   
-2.  在该面板的底部，查看 **“数据刷新 - 最近的活动”** 和 **“数据刷新 - 最近的失败”**。  
+2.  在仪表板的底部，请参阅**数据刷新-最近的活动**并**数据刷新-最近的失败**。  
   
 3.  有关使用情况数据以及如何启用它的详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
- **诊断日志数据：** 您可以查看与数据刷新相关的 SharePoint 诊断日志数据。 首先，在 SharePoint 管理中心的“监视”页中确认针对“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务”的诊断日志记录的配置。 对于要记入日志的“严重程度最低的事件”，您可能需要增加日志记录的级别。 例如，暂时将该值设置为 **“详细”** ，然后重新运行数据刷新操作。  
+ **诊断日志数据：** 您可以查看与数据刷新相关的 SharePoint 诊断日志数据。 首先，在 SharePoint 管理中心的“监视”页中确认针对“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务”的诊断日志记录的配置。 可能需要增加的级别为"严重程度最低的事件"日志记录到日志。 例如，暂时将该值设置为 **“详细”** ，然后重新运行数据刷新操作。  
   
  日志项包含：  
   
@@ -212,11 +212,11 @@ ms.locfileid: "34024874"
 ##  <a name="datarefresh_additional_authentication"></a> 其他身份验证注意事项  
  在 Excel 2013 中， **“Excel Services 身份验证设置”** 对话框中的设置确定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用于数据刷新的 Windows 标识。  
   
--   **使用已经过身份验证的用户的帐户**：Excel Services 基于当前登录的用户的标识执行数据刷新。  
+-   **使用已经过身份验证的用户帐户**:Excel Services 基于当前登录的用户的标识执行数据刷新。  
   
--   **使用存储的帐户**：假定为 SharePoint Secure Store Service 应用程序 ID，Excel Services 使用该 ID 检索用户名和密码，以便对数据刷新进行身份验证。  
+-   **使用存储的帐户**:假定为 SharePoint 安全存储区服务应用程序 ID，Excel Services 使用该 ID 检索用户名和密码，以便对数据刷新进行身份验证。  
   
--   **无**：使用 Excel Services 的 **“无人参与服务帐户”** 。 该服务帐户与某一安全存储区代理相关联。 在 **“Excel Services 应用程序设置”** 页上配置 **“外部数据”** 部分中的设置。  
+-   **无**：Excel Services**无人参与服务帐户**使用。 该服务帐户与某一安全存储区代理相关联。 在 **“Excel Services 应用程序设置”** 页上配置 **“外部数据”** 部分中的设置。  
   
  打开身份验证设置对话框：  
   
@@ -226,7 +226,7 @@ ms.locfileid: "34024874"
   
 3.  在 **“工作簿连接”** 对话框中，选择连接，然后单击 **“属性”**。  
   
-4.  在 **“连接属性”** 对话框中，单击 **“定义”**，然后单击 **“身份验证设置…”** 按钮。  
+4.  在中**连接属性**对话框中，单击**定义**，然后单击**身份验证设置...** 按钮。  
   
  ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
@@ -235,9 +235,9 @@ ms.locfileid: "34024874"
 ##  <a name="bkmk_moreinformation"></a> 详细信息  
  [Power Pivot 数据刷新故障排除](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
- [SharePoint 2013 中的 excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)。  
+ [SharePoint 2013 中的 excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Power Pivot 模式下安装 Analysis Services。](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

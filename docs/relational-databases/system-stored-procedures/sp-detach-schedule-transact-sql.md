@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7ba1ee6a8fae84d0371c30758fcd2be1098b60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649265"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536374"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_detach_schedule
  [ **@job_id=** ] *job_id*  
  要从中删除计划的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_  
  要从中删除计划的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ sp_detach_schedule
  [ **@schedule_id=** ] *schedule_id*  
  要从作业中删除的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
- [  **@schedule_name=** ] **'***schedule_name*****  
+ [  **@schedule_name=** ] **'**_schedule_name_  
  要从作业中删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ sp_detach_schedule
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

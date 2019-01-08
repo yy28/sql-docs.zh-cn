@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069427"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529358"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>创建提升图、利润图或分类矩阵
   可以使用五个基本步骤为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘模型创建准确性图表：  
@@ -70,7 +70,7 @@ ms.locfileid: "48069427"
   
     -   选择 **“使用挖掘结构测试事例”** 选项可以使用已作为挖掘结构维持数据集的一部分定义的测试事例的完整集合。  
   
-    -   若要使用外部数据，请选择“指定其他数据集”选项。   数据集必须可用作数据源视图。   单击浏览 (**…**) 按钮可选择要用于准确性图表的数据表。 有关详细信息，请参阅 [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md)。  
+    -   若要使用外部数据，请选择“指定其他数据集”选项。   数据集必须可用作数据源视图。   单击浏览 (**...**) 按钮以选择要用于准确性图表的数据表。 有关详细信息，请参阅 [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md)。  
   
          如果您使用的是外部数据集，则可以选择筛选输入数据集。 有关详细信息，请参阅 [将筛选器应用于模型测试数据](apply-filters-to-model-testing-data.md)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48069427"
      与每个成功销售相关联的收入金额。  
   
 ## <a name="see-also"></a>请参阅  
- [提升图&#40;Analysis Services-数据挖掘&#41;](lift-chart-analysis-services-data-mining.md)   
- [分类矩阵&#40;Analysis Services-数据挖掘&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [提升图（Analysis Services - 数据挖掘）](lift-chart-analysis-services-data-mining.md)   
+ [分类矩阵（Analysis Services - 数据挖掘）](classification-matrix-analysis-services-data-mining.md)  
   
   

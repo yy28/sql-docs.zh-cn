@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
@@ -14,12 +13,12 @@ ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb2a9c0ebdc6616940f09c2b8770dbefa6ca15e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d29154f00659680bbd0dd7106d65fe1e058ad7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201267"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793599"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^（位异或）（SSIS 表达式）
   对两个整数值执行“位异或”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果一位是 0，另一对应位是 1，则相应结果位设置为 1。 如果两位都是 0 或两位都是 1，则相应结果位设置为 0。  
@@ -94,9 +93,9 @@ ReorderPoint ^ SafetyStockLevel
  00000110  
   
 ## <a name="see-also"></a>请参阅  
- [&#124;&#124;&#40;逻辑或&#41; &#40;SSIS 表达式&#41;](logical-or-ssis-expression.md)   
- [&#124;&#40;按位异或&#41; &#40;SSIS 表达式&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [||（逻辑或）（SSIS 表达式）](logical-or-ssis-expression.md)   
+ [|（位异或）（SSIS 表达式）](bitwise-inclusive-or-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 仲裁：见证服务器如何影响数据库可用性（数据库镜像） | Microsoft Docs
+title: 仲裁：见证服务器如何影响数据库可用性 （数据库镜像） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067547"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525029"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：见证服务器如何影响数据库可用性（数据库镜像）
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：见证服务器如何影响数据库可用性 （数据库镜像）
   每当为数据库镜像会话设置见证服务器时，都需要“仲裁  ”。 仲裁是数据库镜像会话中两个或多个服务器实例彼此连接时存在的一种关系。 仲裁通常包括三个互连的服务器实例。 设置见证服务器时，必须具有仲裁才能使用数据库。 仲裁旨在用于具有自动故障转移功能的高安全性模式，可确保一个数据库一次只属于一个伙伴。  
   
  如果特定的服务器实例与镜像会话断开连接，则该实例将失去仲裁。 如果没有连接任何服务器实例，则会话将失去仲裁，并无法使用数据库。 可以进行的仲裁有三种：  
@@ -104,7 +104,7 @@ ms.locfileid: "48067547"
 ## <a name="see-also"></a>请参阅  
  [数据库镜像运行模式](database-mirroring-operating-modes.md)   
  [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [数据库镜像见证服务器](database-mirroring-witness.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)   
  [数据库镜像期间可能出现的故障](possible-failures-during-database-mirroring.md)   
  [镜像状态 (SQL Server)](mirroring-states-sql-server.md)  
   

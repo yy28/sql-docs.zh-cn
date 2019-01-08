@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.query.addtable
@@ -13,12 +13,12 @@ ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c48943a14c4b49a58b60e25a954cda04bf2dbad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052217"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781499"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>“添加表”对话框（查询和视图设计器）(Visual Database Tools)
   使用此对话框可以向查询或视图中添加表、视图、用户定义函数或同义词。  
@@ -39,7 +39,7 @@ ms.locfileid: "48052217"
  **同义词**  
  列出可以向“关系图”窗格中添加的同义词。 若要添加某个同义词，请选择该同义词，再单击“添加”。 若要同时添加多个同义词，请选中这些同义词，再单击“添加”。  
   
- **“刷新”**  
+ **刷新**  
  更新该列表以包含自上次检索该列表以来对数据库做出的所有更改。  
   
  **“添加”**  

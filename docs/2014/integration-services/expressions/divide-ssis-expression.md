@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - / (divide)
@@ -14,12 +13,12 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c5739fc30656871c23b3a3c2b6e8ae9953b63c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf72606d04d02cda0ec656509f56fc636ee1f6e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203757"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810189"
 ---
 # <a name="divide-ssis-expression"></a>除（SSIS 表达式）
   用第一个数值表达式除以第二个数值表达式。  
@@ -34,7 +33,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>参数  
  *被除数*  
- 被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
+ 被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services Data Types](../data-flow/integration-services-data-types.md)。  
   
  *除数*  
  除数的数值表达式。 *divisor* 可以是除 0 之外的任意有效的数值表达式。  
@@ -68,6 +67,6 @@ ListPrice / StandardCost
   
 ## <a name="see-also"></a>请参阅  
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

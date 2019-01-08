@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c768b2d64c38fdda66d6abeea0aef2010b4dfe35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514081"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ sp_columns [ @table_name = ] object
  如果当前用户拥有一个具有指定名称的对象，则返回该对象的列。 如果*所有者*未指定当前用户不拥有具有指定的对象和*对象*， **sp_columns**查找具有指定的对象*对象*由数据库所有者拥有。 如果存在这样的对象，则返回该对象的列。  
   
  [ **@table_qualifier****=**] *qualifier*  
- 对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持三部分命名的对象 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
+ 对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持三部分命名的对象 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
   
  [  **@column_name=**]*列*  
  一个单独的列，当只需要目录信息的一列时可使用该参数。 *列*是**nvarchar(384)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示的列名称，如下所示**syscolumns**表。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
@@ -93,7 +93,7 @@ sp_columns [ @table_name = ] object
   
  <sup>1</sup>的详细信息，请参阅 Microsoft ODBC 文档。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对架构的 SELECT 和 VIEW DEFINITION 权限。  
   
 ## <a name="remarks"></a>备注  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - namespaces property
@@ -20,12 +18,12 @@ ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03635a138874c010225174e854bd6e5e3c13d3ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29ce7218735ba78ec4bcb5594b422eda7d327c24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200907"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763349"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>执行带命名空间的 XPath 查询（SQLXML 托管类）
   XPath 查询可以包含命名空间。 如果架构元素为限定命名空间（使用目标命名空间），则针对该架构的 XPath 查询必须指定该命名空间。  

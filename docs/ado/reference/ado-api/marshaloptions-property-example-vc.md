@@ -15,15 +15,15 @@ ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2460acf8e95e623e6817aa8a0c70db5429de359
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615165"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527091"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 属性示例 (VC++)
-此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定哪些行发送回服务器，所有行或仅修改的行。  
+此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定哪些行发送到服务器的所有行或仅修改的行。  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  

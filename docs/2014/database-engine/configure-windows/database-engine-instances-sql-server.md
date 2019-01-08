@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157947"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640738"
 ---
 # <a name="database-engine-instances-sql-server"></a>数据库引擎实例 (SQL Server)
-  实例[!INCLUDE[ssDE](../../includes/ssde-md.md)]是一份`sqlservr.exe`作为操作系统服务运行的可执行文件。 每个实例管理几个系统数据库以及一个或多个用户数据库。 每台计算机都可以运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例。 应用程序连接到实例，以便在实例管理的数据库中执行任务。  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例是作为操作系统服务运行的 `sqlservr.exe` 可执行程序的副本。 每个实例管理几个系统数据库以及一个或多个用户数据库。 每台计算机都可以运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例。 应用程序连接到实例，以便在实例管理的数据库中执行任务。  
   
 ## <a name="instances"></a>实例  
  一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例作为处理所有应用程序请求的服务操作，以便使用该实例管理的任何数据库中的数据。 它是应用程序所发出连接请求（登录名）的目标。 如果应用程序和实例分别位于单独的计算机上，则连接通过网络连接运行。 如果应用程序和实例位于同一台计算机上，则 SQL Server 连接可作为网络连接或内存中连接运行。 完成连接后，应用程序通过连接将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句发送给实例。 实例将这些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句解析为针对数据库中的数据和对象的操作；并且如果已将所需权限授予了登录凭据，，则实例会执行这些工作。 检索的任何数据都将返回到应用程序，同时还返回错误之类的任何消息。  
@@ -46,7 +45,7 @@ ms.locfileid: "48157947"
 |介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 来捕获传入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的应用程序请求的跟踪。 可在以后为活动（例如性能测试或问题诊断）重播这些跟踪。|[SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |介绍变更数据捕获 (CDC) 和更改跟踪功能以及如何使用这些功能来跟踪数据库中的数据更改。|[跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |介绍如何使用日志文件查看器来查找和查看不同日志（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作业历史记录、SQL Server 日志和 Windows 事件日志）中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和消息。|[日志文件查看器](../../relational-databases/logs/log-file-viewer.md)|  
-|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问来分析数据库并为解决潜在的性能问题提出建议。|[数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问来分析数据库并为解决潜在的性能问题提出建议。|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |介绍在不接受标准连接时，生产数据库管理员如何与实例建立诊断连接。|[用于数据库管理员的诊断连接](diagnostic-connection-for-database-administrators.md)|  
 |介绍如何使用不推荐使用的远程服务器功能来从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的一个实例访问另一个实例。 此功能的首选机制是链接服务器。|[远程服务器](remote-servers.md)|  
 |介绍 Service Broker 的消息传递和应用程序排队功能，并提供指向 Service Broker 文档的指针。|[Service Broker](sql-server-service-broker.md)|  

@@ -21,12 +21,12 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3f19fed072e693de6bbebb53354eae8c0bfaa0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827905"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536402"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ EXEC managed_backup.sp_backup_config_advanced
  启用托管的备份上特定数据库的数据库名称。 如果为 NULL 或 *，则此托管的备份适用于服务器上的所有数据库。  
   
  @encryption_algorithm  
- 备份过程中用于加密备份文件的加密算法的名称。 @encryption_algorithm是**SYSNAME**。 在首次为数据库配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时，它是必需的参数。 指定**NO_ENCRYPTION**如果不希望加密备份文件。 在更改 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置时，此参数是可选参数；如果不指定，则会保留现有的配置值。 为此参数允许的值为：  
+ 备份过程中用于加密备份文件的加密算法的名称。 @encryption_algorithm是 **SYSNAME**。 在首次为数据库配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时，它是必需的参数。 指定**NO_ENCRYPTION**如果不希望加密备份文件。 更改时[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置设置，此参数是可选的-如果参数未指定，则会保留现有的配置值。 为此参数允许的值为：  
   
 -   AES_128  
   
@@ -69,7 +69,7 @@ EXEC managed_backup.sp_backup_config_advanced
  加密程序，可以是任一证书的类型或 ASYMMETRIC_KEY"。 @encryptor_type是**nvarchar （32)**。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  
   
  @encryptor_name  
- 要用于加密备份的现有证书或非对称密钥的名称。 @encryptor_name是**SYSNAME**。 如果使用非对称密钥，则必须使用扩展密钥管理 (EKM) 进行配置。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  
+ 要用于加密备份的现有证书或非对称密钥的名称。 @encryptor_name是 **SYSNAME**。 如果使用非对称密钥，则必须使用扩展密钥管理 (EKM) 进行配置。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  
   
  有关详细信息，请参阅[可扩展的密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
@@ -81,7 +81,7 @@ EXEC managed_backup.sp_backup_config_advanced
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求的成员身份**db_backupoperator**数据库角色的**ALTER ANY CREDENTIAL**权限，并且**EXECUTE**权限**sp_delete_backuphistory**存储过程。  
   
 ## <a name="examples"></a>示例  

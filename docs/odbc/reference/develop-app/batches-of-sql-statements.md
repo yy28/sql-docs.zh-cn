@@ -15,12 +15,12 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531237"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 语句的批处理
 一批 SQL 语句是一组两个或多个 SQL 语句或单个 SQL 语句具有相同的效果的一组两个或多个 SQL 语句。 在某些实现中，整个批处理语句之前，执行任何结果都可用。 这主要是通常比单个提交语句，因为通常可以减少网络流量和数据源有时可以优化执行一批 SQL 语句有效。 在其他实现中，调用**SQLMoreResults**触发批处理中的下一个语句执行。 ODBC 支持以下类型的批处理：  
@@ -40,7 +40,7 @@ ms.locfileid: "47775096"
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **过程**如果过程包含多个 SQL 语句，它被视为可一批 SQL 语句。 例如，下面的 SQL Server 特定语句创建返回的结果集包含有关客户和结果集列出所有打开该客户销售订单信息的过程：  
+-   **过程**如果过程包含多个 SQL 语句，它被视为可一批 SQL 语句。 例如，以下特定于 SQL Server 的语句将创建返回的结果集包含有关客户和结果集列出所有打开该客户销售订单信息的过程：  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  

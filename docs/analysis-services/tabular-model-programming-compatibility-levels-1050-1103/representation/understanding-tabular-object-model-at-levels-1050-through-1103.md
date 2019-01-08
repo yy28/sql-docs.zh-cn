@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146412"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526786"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>了解 1050 到 1103 级别的表格对象模型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "50146412"
   
  请参阅[层次结构表示形式&#40;表格&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md)有关的详细说明如何创建和操作层次结构表示形式。  
   
-### <a name="key-performance-indicator-kpi--representation"></a>关键绩效指标 (KPI) 表示形式  
+### <a name="key-performance-indicator--kpi--representation"></a>关键绩效指标表示形式的 KPI  
  KPI 用于根据目标值度量基础度量值定义的值的性能。 就 AMO 对象而言，KPI 表示形式具有一对多映射关系。 通过使用以下 AMO 对象来表示 KPI:`xref:Microsoft.AnalysisServices.MdxScript.Commands%2A`和`xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A`是主要的必需的对象。  请注意，这并不意味着前面提到的 AMO 对象中的所有包含对象可在建模时使用。  
   
 > [!NOTE]  

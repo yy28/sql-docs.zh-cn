@@ -1,22 +1,21 @@
 ---
-title: 步骤 5：测试第 4 课教程包 | Microsoft Docs
+title: 步骤 5：测试第 4 课教程包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c689797309d1a5cbad3d964514b45a3c824d576c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90c8b7ffa8ca9995b8258ff87c59b34605fb1a53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073767"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747669"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>步骤 5：测试第 4 课教程包
   在运行时，损坏的文件 Currency_BAD.txt 将无法在 Currency Key 查找转换中生成匹配。 由于 Currency Key 查找的错误输出现在已配置为将失败的行重定向到新的失败的行目标，因此该组件不会失败，并且包会成功地运行。 所有失败的错误行都将写入 ErrorOutput.txt。  

@@ -1,5 +1,5 @@
 ---
-title: 关联模型查询示例 |Microsoft 文档
+title: 关联模型查询示例 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb268ffeb4b7f997876b7fc28dfb773b971aaf1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0c4f09cf3110c202caeaa5079a3124bd64ffedae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020014"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519223"
 ---
 # <a name="association-model-query-examples"></a>关联模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34020014"
 ##  <a name="bkmk_top2"></a> 查找有关模型的信息  
  所有挖掘模型都公开算法根据标准化架构（即挖掘模型架构行集）所了解的内容。 可以使用建数据挖掘扩展插件 (DMX) 语句或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程来对挖掘模型架构行集创建查询。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，还可使用类似 SQL 的语法，直接将架构行集作为系统表来查询。  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1：使用 DMX 获取模型元数据  
+###  <a name="bkmk_Query1"></a> 示例查询 1:使用 DMX 获取模型元数据  
  以下查询返回有关关联模型 `Association`的基本元数据，例如模型名称、存储模型的数据库以及模型中子节点的数目。 此查询使用 DMX 内容查询从模型的父节点中检索元数据：  
   
 ```  
@@ -71,7 +71,7 @@ WHERE NODE_TYPE = 1
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2：从架构行集中获取其他元数据  
+###  <a name="bkmk_Query2"></a> 示例查询 2:从架构行集中获取其他元数据  
  通过查询数据挖掘架构行集，可以找到在 DMX 内容查询中返回的相同信息。 不过，架构行集还提供其他一些列，例如上次处理模型的日期、挖掘结构和用作可预测属性的列的名称。  
   
 ```  
@@ -94,7 +94,7 @@ WHERE MODEL_NAME = 'Association'
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3：检索模型的原始参数  
+###  <a name="bkmk_Query3"></a> 示例查询 3:检索模型的原始参数  
  以下查询返回一个列，该列包含有关创建模型时使用的参数设置的详细信息。  
   
 ```  
@@ -112,7 +112,7 @@ WHERE MODEL_NAME = 'Association'
 ## <a name="finding-information-about-rules-and-itemsets"></a>查找有关规则和项集的信息  
  关联模型有两个常见用途：查找有关常见项集的信息以及提取有关特定规则和项集的详细信息。 例如，您可能希望提取评为当前特别受关注的规则的列表，或创建最常见项集的列表。 您可以使用 DMX 内容查询来检索此类信息， 也可使用 **“Microsoft 关联查看器”** 浏览该信息。  
   
-###  <a name="bkmk_Query4"></a> 示例查询 4：检索项集和产品列表  
+###  <a name="bkmk_Query4"></a> 示例查询 4:正在检索项集和产品的列表  
  以下查询检索全部项集，同时还将检索列出每个项集中包含的产品的嵌套表。 NODE_NAME 列包含模型内项集的唯一 ID，而 NODE_CAPTION 给出项目的文本说明。 本例中对嵌套表进行了平展处理，这样，包含两个产品的项集在结果中生成了两行。 如果客户端支持分层数据，则可以忽略 FLATTENED 关键字。  
   
 ```  
@@ -135,7 +135,7 @@ WHERE NODE_TYPE = 7
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> 示例查询 5：返回排在前 10 位的项集  
+###  <a name="bkmk_Query5"></a> 示例查询 5:返回前 10 个项集  
  本例演示如何使用 DMX 在默认情况下提供的某些分组和排序函数。 当按照每个节点的支持对项集排序时，该查询返回排在前 10 位的项集。 请注意，无需对结果进行显式分组，这与 Transact-SQL 中不同。不过，只能在每个查询中使用一个聚合函数。  
   
 ```  
@@ -159,8 +159,8 @@ WHERE NODE_TYPE = 7
   
  另一个说明对关联模型的查询非常有用的示例是返回各种规则和项集的置信度，以便可以比较不同跨区销售策略的有效性。 以下示例说明如何创建这些查询。  
   
-###  <a name="bkmk_Query6"></a> 示例查询 6：预测关联项目  
- 此示例使用在[数据挖掘中级教程（Analysis Services - 数据挖掘）](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b)中创建的关联模型。 它演示如何创建一个预测查询，该查询告诉您应向已购买某种特定产品的客户推荐哪些产品。 此种类型的查询称为单独查询，在该查询中，使用 **SELECT…UNION** 语句向模型提供所需的值。 由于对应于新值的可预测模型列为嵌套表，因此必须使用某一 **SELECT** 子句将新值映射到嵌套表列 `[Model]`，再使用另一 **SELECT** 子句将嵌套表列映射到事例级别列 `[v Assoc Seq Line Items]`。 如果在该查询中添加 INCLUDE-STATISTICS 关键字，则可看到推荐的概率和支持。  
+###  <a name="bkmk_Query6"></a> 示例查询 6:预测关联的项  
+ 此示例使用在[数据挖掘中级教程（Analysis Services - 数据挖掘）](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b)中创建的关联模型。 它演示如何创建一个预测查询，该查询告诉您应向已购买某种特定产品的客户推荐哪些产品。 此类型的查询，其中提供到模型中的值**选择...UNION**语句，称为单独查询。 由于对应于新值的可预测模型列为嵌套表，因此必须使用某一 **SELECT** 子句将新值映射到嵌套表列 `[Model]`，再使用另一 **SELECT** 子句将嵌套表列映射到事例级别列 `[v Assoc Seq Line Items]`。 如果在该查询中添加 INCLUDE-STATISTICS 关键字，则可看到推荐的概率和支持。  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -174,7 +174,7 @@ AS t
   
  示例结果：  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283|0.252696|  
 |Water Bottle|2866|0.19262|0.175205|  
@@ -182,7 +182,7 @@ AS t
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> 示例查询 7：确定相关项集的置信度  
+###  <a name="bkmk_Query7"></a> 示例查询 7:确定相关项集的置信度  
  尽管规则可用于生成建议，但在对数据集内的模式的更深入分析中，项集作用更大。 例如，如果对前面示例查询返回的建议不满意，则可以检查包含产品 A 的其他项集，以更好地了解是否产品 A 是人们在购买各种产品时倾向于购买的附件，或者是否产品 A 与购买特定产品有很强的关联性。 浏览这些关系的最简单方法是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联查看器中筛选项集，但也可使用查询检索这些信息。  
   
  以下示例查询返回包含 Water Bottle 项目（包括单项 Water bottle）的所有项集。  
@@ -219,19 +219,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
-|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
-|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
-|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
-|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回预测值的方差。|  
+|[IsDescendant (DMX)](../../dmx/isdescendant-dmx.md)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
+|[IsInNode (DMX)](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
+|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
+|[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
+|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
+|[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
+|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
+|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回预测值的方差。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 关联算法技术参考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [关联模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

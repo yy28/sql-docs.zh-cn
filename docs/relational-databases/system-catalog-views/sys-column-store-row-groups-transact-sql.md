@@ -20,12 +20,12 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bff4582f8bf46d094db2a1689ad8c9fd6de92185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531663"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47782895"
 |**row_group_id**|**int**|与此行组关联的行组编号。 这在分区中是唯一的。<br /><br /> -1 = 内存中表的结尾。|  
 |**delta_store_hobt_id**|**bigint**|增量存储区中打开的行组的 hobt_id。<br /><br /> 如果在增量存储行组不为 NULL。<br /><br /> 对于内存中表的结尾为 NULL。|  
 |State|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 逻辑删除|  
-|**state_description**|**nvarchar(60)**|行组的持久状态的说明：<br /><br /> INVISIBLE - 从增量存储区中的数据进行生成过程中的隐藏压缩段。 读操作将使用增量存储区，直至完成不可见的压缩段。 然后，新段变为可见，并删除源增量存储区。<br /><br /> OPEN – 正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> CLOSED – 一个已填充的行组，但尚未由元组搬运者进程压缩。<br /><br /> COMPRESSED – 已填充和压缩的行组。|  
+|**state_description**|**nvarchar(60)**|行组的持久状态的说明：<br /><br /> 从增量存储中的数据进行生成过程中不可见的隐藏压缩的段。 读操作将使用增量存储区，直至完成不可见的压缩段。 然后，新段变为可见，并删除源增量存储区。<br /><br /> 打开-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充，但尚未由元组搬运者进程压缩的行组。<br /><br /> 压缩的已填充和压缩的行组。|  
 |**total_rows**|**bigint**|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|**bigint**|行组中标记为已删除的总行数。 对于 DELTA 行组，此值始终为 0。|  
 |**size_in_bytes**|**bigint**|对于 DELTA 和 COLUMNSTORE 行组，指的是此行组中所有数据的大小（不包括元数据和共享字典），以字节为单位。|  
@@ -56,7 +56,7 @@ ms.locfileid: "47782895"
   
  如果列存储行组已填充，它将进行压缩并停止接受新行。 当从压缩组中删除行时，这些行将保留但标记为已删除。 对压缩组的更新将实现为压缩组中的删除以及对打开组的插入。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  返回表的信息，如果用户具有**VIEW DEFINITION**表的权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

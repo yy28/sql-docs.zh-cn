@@ -13,12 +13,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81be4bb3802888a8471308135775723c9ba0fd9e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184947"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419858"
 ---
 # <a name="configure-report-manager-native-mode"></a>配置报表管理器（本机模式）
   报表管理器是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择 **“以默认的本机模式配置安装”** 选项，则可以将报表管理器与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并有选择地进行配置。 还可以在安装完成后配置报表管理器。 本主题提供有关以下报表管理器配置方案的信息：  
@@ -50,7 +50,7 @@ ms.locfileid: "48184947"
   
      安装使用本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例时，报表管理器默认为启用状态。 但是在以下情况下可以关闭报表管理器：如果有提供等效功能的自定义前端应用程序，如果仅希望使用 SOAP 或 URL 访问接口访问报表服务器，或者如果正在从其他报表服务器实例使用报表管理器。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要使用报表管理器，必须满足下列前提条件：  
   
 -   必须拥有最小配置的报表服务器。 有关对报表服务器进行最小配置的详细信息，请参阅[配置报表服务器（Reporting Services 本机模式）](configure-a-report-server-reporting-services-native-mode.md)。  
@@ -81,7 +81,7 @@ ms.locfileid: "48184947"
   
 1.  在文本编辑器中打开 **RSReportServer.config** 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS12.\<实例名>\Reporting Services\ReportServer。  
   
-2.  查找`ReportServerURL`。  
+2.  查找 `ReportServerURL`。  
   
 3.  将其替换为相应报表服务器实例的 URL。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48184947"
   
     1.  在文本编辑器中打开 RSReportServer.config。 默认情况下，它位于 \Program Files\Microsoft SQL Server\MSRS11。\< *instancename*> services\reportserver。  
   
-    2.  查找`ReportServerURL`。  
+    2.  查找 `ReportServerURL`。  
   
     3.  将其替换为远程报表服务器实例的 URL。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "48184947"
   
 8.  关闭不使用的服务器功能：  
   
-    -   在报表管理器计算机上关闭`WebServiceAndHTTPAccessEnabled`和`ScheduleEventsAndReportDeliveryEnabled`。  
+    -   在报表管理器计算机上，关闭 `WebServiceAndHTTPAccessEnabled` 和 `ScheduleEventsAndReportDeliveryEnabled`。  
   
-    -   在报表服务器计算机上关闭`ReportManagerEnabled`。  
+    -   在报表服务器计算机上，关闭 `ReportManagerEnabled`。  
   
  关于关闭功能的详细信息，请参阅 [打开或关闭 Reporting Services 功能](turn-reporting-services-features-on-or-off.md)。  
   
@@ -172,14 +172,14 @@ ms.locfileid: "48184947"
  有关如何修改配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 关于禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的功能的详细信息，请参阅[打开或关闭 Reporting Services 功能](turn-reporting-services-features-on-or-off.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
  [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
- [配置 URL &#40;SSRS 配置管理器&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [配置 URL（SSRS 配置管理器）](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [验证 Reporting Services 安装](../install-windows/verify-a-reporting-services-installation.md)   
  [自定义 HTML 查看器和报表管理器的样式表](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
  [打开或关闭 Reporting Services 功能](turn-reporting-services-features-on-or-off.md)   
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)   
  [RSReportServer 配置文件](rsreportserver-config-configuration-file.md)   
- [为本地管理配置本机模式报表服务器&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [为本地管理配置本机模式报表服务器 (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
   

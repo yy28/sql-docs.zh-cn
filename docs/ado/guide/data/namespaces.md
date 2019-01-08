@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534736"
 ---
 # <a name="namespaces"></a>命名空间
 XML 暂留格式在 ADO 中使用以下四个命名空间。  
@@ -38,7 +38,7 @@ XML 暂留格式在 ADO 中使用以下四个命名空间。
 > [!IMPORTANT]
 >  架构标记的 ID 必须是"RowsetSchema，"并使用来指代当前行集的架构的命名空间必须指向"#RowsetSchema。"  
   
- 请注意，该命名空间前缀 — 冒号和等号之间的部分 — 是任意的。  
+ 请注意命名空间的冒号和等号之间的部分的前缀是任意的。  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

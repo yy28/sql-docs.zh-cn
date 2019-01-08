@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69645
@@ -13,12 +13,12 @@ ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c726b1a79544af126201f827b18ad4c69113b4b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61707b6ca955ee137cbbc93a6a108dc3930e1b12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181967"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770149"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>“查询参数”对话框 (Visual Database Tools)
   使用此对话框可为查询中定义的参数输入值。 在执行包含需要最终用户在运行时输入的参数的查询时，将显示此对话框。  

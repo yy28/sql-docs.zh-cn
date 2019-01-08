@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - nested triggers option
@@ -13,12 +12,12 @@ ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7c543af9a55d11124827704510eba6fe035f1fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09dfdb2bfaaadc29a3a70c949380a5e3cd1a0512
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157757"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639253"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>配置 nested triggers 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **nested triggers** 选项控制 AFTER 触发器是否可以级联。 即执行某项操作将启动另一个触发器，而该触发器又将启动另外一个，依此类推。 如果 **nested triggers** 设置为 0，AFTER 触发器不能级联。 如果 **嵌套触发器** 设置为 1（默认值），AFTER 触发器最多能级联 32 级。 不管此选项如何设置，INSTEAD OF 触发器都可以嵌套。  
@@ -27,7 +26,7 @@ ms.locfileid: "48157757"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **配置 nested triggers 选项，使用：**  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48157757"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置嵌套触发器选项之后](#FollowUp)  
+-   **跟进：**[在配置 nested 的 triggers 选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -78,7 +77,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置 nested triggers 选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置 nested 的 triggers 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>请参阅  

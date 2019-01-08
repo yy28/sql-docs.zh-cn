@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addtabletocontents_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aa1013de0030a21152a38e11a3dcb0fe12a02bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638235"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810939"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@table_name=**] **'***table_name***'**  
+ [  **@table_name=**] **'**_table_name_  
  是表的名称。 *table_name*是**sysname**，无默认值。  
   
- [  **@owner_name=**] **'***owner_name*****  
+ [  **@owner_name=**] **'**_owner_name_  
  是表的名称。 *owner_name*是**sysname**，默认值为 NULL。  
   
- [  **@filter_clause=** ] **'***filter_clause*****  
+ [  **@filter_clause=** ] **'**_filter_clause_  
  指定一个筛选子句，该子句控制应将新加载的数据的哪些行添加到合并跟踪表。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。 如果*filter_clause*是**null**，所有大容量加载的行已添加。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,7 +57,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
  中的行*table_name*由其**rowguidcol**和引用添加到合并跟踪表。 **sp_addtabletocontents**大容量复制数据到使用合并复制发布的表之后，应使用。 该存储过程将启动对已复制行的跟踪，并确保下一次同步中包括这些新行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addtabletocontents**。  
   
 ## <a name="see-also"></a>请参阅  

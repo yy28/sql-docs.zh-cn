@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78c4085a674bce6cca75394ee2c7f376c14d6a93
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f9a8e08fc230a24e3d00f2b13ec4ccb6c039dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535467"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "50146022"
   
  ![模型包含元数据、 模式和绑定](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "模型包含元数据、 模式和绑定")  
   
- 元数据指定模型的名称和存储模型的服务器以及模型的定义，包括生成模型时所使用的挖掘结构中的列、处理模型时应用的任何筛选器的定义以及用于分析数据的算法。 所有这些选择（数据列及其数据类型、筛选器和算法）会极大地影响分析结果。  
+ 元数据指定模型的名称和存储模型的服务器以及模型的定义，包括生成模型时所使用的挖掘结构中的列、处理模型时应用的任何筛选器的定义以及用于分析数据的算法。 所有这些选择的数据列并且其数据类型、 筛选器和算法具有极大地影响分析结果。  
   
  例如，您可以使用相同的数据来创建多个模型，并且可以使用聚类分析算法、决策树算法和 Naïve Bayes 算法。 每种模型类型都可以创建可用于进行预测的模式、项集、规则或公式的不同集合。 通常，每个算法都以不同方式对数据进行分析，因此，生成的模型的“内容”  也按不同的结构进行组织。 在一种模型中，数据和模式可以按“分类” 进行分组；在另一种模型中，数据可以组织为对其进行划分和定义的树、分支和规则。  
   
- 该模型还受到您对其进行定型的数据的影响：如果您以不同方式筛选数据或者在分析过程中使用不同的种子，则甚至是对相同挖掘结构进行定型的模型也会生成不同结果。 但是，实际数据并不存储于模型中，只存储汇总统计信息，而实际数据驻留在挖掘结构中。 如果您已在定型时对数据创建了筛选器，则筛选器定义也与模型对象一起保存。  
+ 该模型还受到您对其进行定型的数据的影响：如果您以不同方式筛选数据或者在分析过程中使用不同的种子，则甚至是对相同挖掘结构进行定型的模型也会生成不同结果。 但是，实际数据不存储在仅限模型的摘要统计信息存储，而实际数据驻留在挖掘结构中。 如果您已在定型时对数据创建了筛选器，则筛选器定义也与模型对象一起保存。  
   
  该模型将包含一组绑定，这些绑定将指回到挖掘结构中缓存的数据。 如果已在结构中缓存数据，但在处理后未清除这些数据，则使用这些绑定可以从结果钻取到支持这些结果的事例。 但是，实际数据存储在结构缓存中，而不是模型中。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "50146022"
   
 -   选择最适合于分析任务的算法。  
   
--   从结构中选择要在模型中使用的列，并且指定使用这些列的方式，即哪些列包含您要预测的结果、哪些列仅用于输入，等等。  
+-   选择结构，使用在模型中，并指定要如何在使用此列中的列包含你想要预测的结果哪些列仅用于输入，依此类推。  
   
 -   （可选）设置参数以微调算法所执行的处理。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "50146022"
   
 -   DMX ALTER STRUCTURE ADD MODEL 语句可用于向现有结构中添加新的挖掘模型 如果要基于相同数据集试验不同模型，请使用此方法。  
   
- 还可以通过编程方式、使用 AMO 或 XML/A 或者使用 Excel 数据挖掘客户端等其他客户端创建挖掘模型。 有关详细信息，请参阅以下主题：  
+ 还可以通过编程方式、使用 AMO 或 XML/A 或者使用 Excel 数据挖掘客户端等其他客户端创建挖掘模型。 有关详细信息，请参阅下列主题：  
   
  [挖掘模型体系结构](#bkmk_mdlArch)  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50146022"
 |使用数据填充模型，或更新模型中的数据|[处理挖掘模型](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |使用 OLAP 模型|[创建数据挖掘维度](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库对象（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

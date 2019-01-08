@@ -10,12 +10,12 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5b17e7b054552c96c6fb3ff861c22b4e87e394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674825"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531761"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 本文列出了每个版本中的 MySQL 更改 SSMA。 
@@ -189,7 +189,7 @@ SSMA for MySQL 的 2010 年 7 月版本包含以下功能：
   
 4.  **对象转换为改进：**  
   
-    -   MySQL 元数据库对象 – 过程、 函数、 视图、 触发器和语句的转换。  
+    -   MySQL 元数据库对象的过程、 函数、 视图、 触发器和语句的转换。  
     -   针对表中的空间数据类型的有限的支持。  
     -   将 MySQL 函数转换为 SQL Server 存储过程  
     -   若要应用对象转换期间的 SQL 模式和字符集映射的选项  

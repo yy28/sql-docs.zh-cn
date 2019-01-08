@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c93de6cb7c4b084a178633691f0874f704811e2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075557"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788457"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
   服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务选择一个帐户，可选帐户如下：  
@@ -91,19 +91,19 @@ ms.locfileid: "48075557"
   
  <sup>4</sup>请参阅下面的限制 4。  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：针对多服务器管理使用非管理帐户  
- 目标服务器可能无法登记到主服务器，并出现以下错误信息：“登记操作失败”。  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1:针对多服务器管理使用非管理帐户  
+ 登记到主服务器的目标服务器可能会因以下错误消息："登记操作失败。"  
   
- 若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 有关详细信息，请参阅 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：针对多服务器管理使用本地系统帐户  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2:针对多服务器管理使用本地系统帐户  
  仅当主服务器和目标服务器位于同一台计算机中，并在本地系统帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务时，才支持多服务器管理。 如果使用此配置，则在将目标服务器登记到主服务器时返回以下消息：  
   
  “请确保 <target_server_computer_name> 的代理启动帐户拥有以 targetServer 身份登录的权限”。  
   
  您可以忽略此信息性消息。 登记操作将成功完成。 有关详细信息，请参阅 [创建多服务器环境](create-a-multiserver-environment.md)。  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>限制 3：在网络服务帐户为 SQL Server 用户时使用该帐户  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>限制 3:在网络服务帐户为 SQL Server 用户时使用该帐户  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在网络服务帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务，并显式授予网络服务帐户以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户身份登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限，则可能无法启动代理。  
   
  为了解决此问题，请重新启动运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机。 此操作仅需执行一次。  

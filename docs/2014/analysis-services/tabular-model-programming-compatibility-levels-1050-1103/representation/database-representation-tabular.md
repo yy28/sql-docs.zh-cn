@@ -12,12 +12,12 @@ ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02fd33d8adf1ccee042f09c8b102401d5ba94435
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4470dc85b33930e136a9c2c1bbf47b1597753be5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519885"
 ---
 # <a name="database-representationtabular"></a>数据库表示形式（表格）
   在表格模式下，数据库为表格模型中所有对象的容器。  
@@ -38,10 +38,10 @@ ms.locfileid: "48116277"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -55,7 +55,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO 中的数据库  
  在使用 AMO 管理数据库对象时，请从 <xref:Microsoft.AnalysisServices.Server> 对象开始操作。 然后在数据库集合中搜索您的数据库或通过向集合添加一个数据库来创建新数据库。  
   
- 下面的代码段演示用于连接服务器，以及在确定数据库不存在之后创建空数据库的步骤：  
+ 下面的代码段显示了连接到服务器并创建一个空数据库的步骤，检查完后数据库不存在：  
   
 ```  
   
@@ -88,6 +88,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅此表格 AMO 2012 示例; 中的源代码具体查看以下源文件： Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
+ 若要实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅“表格 AMO 2012”示例中的源代码；具体来讲，请查看以下源文件：Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
   
   

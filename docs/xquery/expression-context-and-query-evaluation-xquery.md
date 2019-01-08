@@ -19,21 +19,21 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 872b14f2b9ced766086d98af74e5ea9d1129d6df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501928"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>表达式上下文和查询计算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   表达式的上下文是用于分析和计算表达式的信息。 下面是计算 XQuery 的两个阶段：  
   
--   **静态上下文**– 这是查询编译阶段。 根据可用信息，有时会在对查询进行静态分析过程中产生错误。  
+-   **静态上下文**-这是查询编译阶段。 根据可用信息，有时会在对查询进行静态分析过程中产生错误。  
   
--   **动态上下文**– 这是查询执行阶段。 即使查询没有静态错误（如在查询编译过程中产生的错误），查询也可能在执行过程中返回错误。  
+-   **动态上下文**-这是查询执行阶段。 即使查询没有静态错误（如在查询编译过程中产生的错误），查询也可能在执行过程中返回错误。  
   
 ## <a name="static-context"></a>静态上下文  
  静态上下文初始化指的是将有关对表达式进行的静态分析的所有信息放在一起的过程。 在静态上下文初始化中，要完成下列内容：  

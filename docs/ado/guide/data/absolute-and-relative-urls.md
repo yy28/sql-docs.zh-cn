@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604877"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541933"
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 URL
 URL 指定存储在本地或网络计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等 *。*  
@@ -58,7 +58,7 @@ URL 指定存储在本地或网络计算机上的目标的位置。 目标可以
  此外可以通过打开定义上下文**记录**或**记录集**对象，表示一个目录，因为这些对象已有隐式或显式声明**连接**指定上下文的对象。  
   
 ## <a name="scoped-operations"></a>作用域内的操作  
- 上下文还定义了作用域 — 即，目录和子目录可以参与后续操作。 **记录**对象有多个作用域内的方法作用于一个目录和所有子目录。 这些方法包括[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，并[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)。  
+ 上下文还定义了作用域-即，目录和子目录可以参与后续操作。 **记录**对象有多个作用域内的方法作用于一个目录和所有子目录。 这些方法包括[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，并[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)。  
   
 ## <a name="relative-urls-as-command-text"></a>为命令文本的相对 Url  
  可以指定要通过键入字符串中的数据源上执行的命令*CommandText*的参数**连接**对象的[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法，并在*源*的参数**记录集**对象的[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法。  

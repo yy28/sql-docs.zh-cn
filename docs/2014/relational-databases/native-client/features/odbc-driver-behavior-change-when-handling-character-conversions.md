@@ -10,12 +10,12 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61fc912e97ebdf5503cc3569df9ca8e763478494
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540183"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>处理字符转换时 ODBC 驱动程序行为的变化
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序 (SQLNCLI11.dll) 更改了它执行 SQL_WCHAR * (NCHAR/NVARCHAR/NVARCHAR(MAX)) 和 SQL_CHAR\* （CHAR/VARCHAR/NARCHAR(MAX)) 转换。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 驱动程序时，ODBC 函数（如 SQLGetData、SQLBindCol、SQLBindParameter）返回 (-4) SQL_NO_TOTAL 作为长度/指示符参数。 以前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序返回的长度值可能不正确。  
@@ -49,7 +49,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
  查询：  `select convert(varchar(36), '123')`  
   
 ```  
-SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
+SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|Description|  
@@ -64,11 +64,11 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
    SQLNumCols(...iTotalCols...)  
    for(int iCol = 1; iCol < iTotalCols; iCol++) {  
       WCHAR* pBufOrig, pBuffer = new WCHAR[100];  
-      SQLGetData(.... iCol … pBuffer, 100, &iSize);   // Get original chunk  
+      SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get original chunk  
       while(NOT ALL DATA RETREIVED (SQL_NO_TOTAL, ...) ) {  
          pBuffer += 50;   // Advance buffer for data retrieved  
          // May need to realloc the buffer when you reach current size  
-         SQLGetData(.... iCol … pBuffer, 100, &iSize);   // Get next chunk  
+         SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get next chunk  
       }  
    }  
 }  
@@ -78,7 +78,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
  查询：  `select convert(varchar(36), '1234567890')`  
   
 ```  
-SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecting String Data Right Truncation behavior  
+SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|Description|  
@@ -92,7 +92,7 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
  `select @p1 = replicate('B', 1234)`  
   
 ```  
-SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters  
+SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|Description|  
@@ -101,7 +101,7 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|-   **SQLFetch**返回没有更多的数据。<br />-   **SQLMoreResults**返回没有更多的数据。<br />长度指示 (-4) SQL_NO_TOTAL，因为未转换的数据的其余部分。<br />-原始缓冲区包含 63 个字节和 NULL 终止符。 缓冲区被保证为以 NULL 结束。|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>执行 CHAR 和 WCHAR 转换  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序提供几种执行 CHAR 和 WCHAR 转换的方式。 逻辑类似于处理 blob（varchar(max)、nvarchar(max)、…）：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序提供几种执行 CHAR 和 WCHAR 转换的方式。 逻辑是类似于处理 blob （varchar （max)、 nvarchar （max），...）：  
   
 -   数据保存到或使用绑定时截断到指定的缓冲区**SQLBindCol**或**SQLBindParameter**。  
   

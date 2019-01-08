@@ -1,22 +1,21 @@
 ---
-title: 步骤 4：测试第 5 课教程包 | Microsoft Docs
+title: 步骤 4：测试第 5 课教程包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c9054cdbba90a3d0323a46e29aa4a860fbca7c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29154120646f74da7471f44a1630b3d99afefa4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747479"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>步骤 4：测试第 5 课教程包
   在运行时，包从运行时更新的变量中获取 `Directory` 属性的值，而不是使用在创建包时指定的原始目录名。 该变量的值由 SSISTutorial.dtsConfig 文件填充。  
@@ -41,6 +40,6 @@ ms.locfileid: "48060887"
 2.  该包运行完成后，请在 **“调试”** 菜单上单击 **“停止调试”**。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 6 课：对项目部署模型使用参数](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [第 6 课：使用项目部署模型使用参数](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

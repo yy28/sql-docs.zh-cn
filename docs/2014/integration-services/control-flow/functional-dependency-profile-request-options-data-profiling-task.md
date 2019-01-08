@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b86f926c4f62d934515f58bd61608016edb6880a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 426f5044087fdf39732626ee8461b0d8c47f3a39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790999"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“函数依赖关系配置文件请求”** 设置选项。 函数依赖关系配置文件报告一个列（依赖列）中的值对另一个列或另一个列集（决定列）中的值的依赖程度。 此配置文件还有助于标识数据中的问题，如值无效。 例如，您对邮政编码列与美国的州列之间的依赖关系进行事件探查， 在此配置文件中，同一邮政编码应始终对应相同的州，但配置文件发现依赖关系冲突。  
@@ -121,7 +120,7 @@ ms.locfileid: "48085517"
  指定要在输出中报告的函数依赖关系冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **ThresholdSetting**时，才会禁用该选项。  
   
 ## <a name="see-also"></a>请参阅  
- [数据事件探查任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)   
+ [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)  
   
   

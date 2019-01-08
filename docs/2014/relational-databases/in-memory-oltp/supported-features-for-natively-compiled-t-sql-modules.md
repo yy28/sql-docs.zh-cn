@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48fd9be77e8b72ee25211bbf52a70f7989785f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514244"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>本机编译的存储过程中支持的构造
   本主题列出了本机编译存储过程的支持的功能 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -34,9 +34,9 @@ ms.locfileid: "48091237"
   
 -   [排序限制](#los)  
   
- 有关编译存储的过程中以本机方式支持的数据类型的信息，请参阅[支持的数据类型](supported-data-types-for-in-memory-oltp.md)。  
+ 有关本机编译存储过程中支持的数据类型的信息，请参阅 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)。  
   
- 不支持的构造的完整信息以及有关如何解决本机编译存储过程中不支持的功能的一些信息，请参阅[Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
+ 有关不支持的构造的完整信息以及有关如何处理本机编译的存储过程中不支持的某些功能的信息，请参阅 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)。 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
 ##  <a name="pncsp"></a> 本机编译存储过程中的可编程性  
  支持以下各项：  
@@ -89,13 +89,13 @@ ms.locfileid: "48091237"
   
 -   恒等函数：SCOPE_IDENTITY  
   
--   NULL 函数：ISNULL  
+-   NULL 函数说明：ISNULL  
   
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
   
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
   
--   转换操作：CAST 和 CONVERT。 不支持在 Unicode 与非 Unicode 字符串（n(var)char 和 (var)char）之间进行转换。  
+-   转换：CAST 和 CONVERT。 不支持在 Unicode 与非 Unicode 字符串（n(var)char 和 (var)char）之间进行转换。  
   
 -   系统函数：@@rowcount。 本机编译存储过程中的语句会更新 @@rowcount，因此，可使用本机编译存储过程中的 @@rowcount 来确定受在该本机编译存储过程中执行的上条语句影响的行数。 但是，@@rowcount 在本机编译存储过程执行开始和结束时会重置为 0。  
   
@@ -130,26 +130,26 @@ ms.locfileid: "48091237"
   
 -   SELECT 列表中的变量赋值。  
   
--   当… 和  
+-   WHERE...和  
   
  <sup>1</sup> ORDER BY 和 TOP 支持在本机编译存储过程中，有一些限制：  
   
--   对于不支持`DISTINCT`中`SELECT`或`ORDER BY`子句。  
+-   在 `DISTINCT` 或 `SELECT` 子句中不支持 `ORDER BY`。  
   
 -   在 `WITH TIES` 子句中不支持 `PERCENT` 或 `TOP`。  
   
--   `TOP` 结合`ORDER BY`中使用常量时，不支持超过 8,192`TOP`子句。 当查询包含联接或聚合函数时，该限制数可能降低。 （例如，对于一个联接（两个表），限制为 4,096 行。 对于两个联接（三个表），限制为 2,730 行。）  
+-   在 `TOP` 子句中使用常量时，结合使用 `ORDER BY` 与 `TOP` 不支持超过 8,192。 当查询包含联接或聚合函数时，该限制数可能降低。 （例如，对于一个联接（两个表），限制为 4,096 行。 对于两个联接（三个表），限制为 2,730 行。）  
   
      可通过将行数存储在变量中来获得多于 8,192 的结果：  
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  不过，与使用变量相比，在 `TOP` 子句中使用常量将提供更好的性能。  
   
- 这些限制不适用于解释[!INCLUDE[tsql](../../includes/tsql-md.md)]上内存优化表的访问。  
+ 这些限制不适用于针对内存优化表的解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问。  
   
 ##  <a name="auditing"></a> 审核  
  在本机编译存储过程中支持过程级审核。 不支持语句级审核。  
@@ -172,7 +172,7 @@ ms.locfileid: "48091237"
 ##  <a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
   
- 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：**消息 41398、级别 16、状态 1、程序 *\<procedureName>*、行 *\<lineNumber>*，TOP 运算符最多可返回 8192 行；已请求 *\<number>*。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，系统可能会显示如下错误信息：**消息 41398、 级别 16，状态 1，过程*\<过程名称 >*，行 *\<lineNumber >* ，TOP 运算符可返回最多 8192 行;*\<数 >* 请求。**  
   
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
   
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **对返回行数的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
+ **对返回行的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
   
 -   在查询中使用 JOIN。  JOIN 对该限制的影响依赖于查询计划。  
   

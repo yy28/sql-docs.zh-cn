@@ -15,12 +15,12 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33259a56faa19dda2403996b6d6d8930ec2a87be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514502"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的转义序列
 通常的 Dbms 实现的语言功能，例如外部联接和标量函数调用数。 但是，这些功能的语法往往是特定于 DBMS 的即使标准语法定义各种标准团体。 因此，ODBC 定义包含以下语言功能的标准语法的转义序列：  
@@ -44,12 +44,12 @@ ms.locfileid: "47705995"
 ```  
   
 ## <a name="remarks"></a>备注  
- 转义序列进行识别和分析由驱动程序，它的转义序列替换为特定于 DBMS 的语法。 有关转义序列语法的详细信息，请参阅[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附录 c: SQL 语法中。  
+ 转义序列进行识别和分析由驱动程序，它的转义序列替换为特定于 DBMS 的语法。 有关转义序列语法的详细信息，请参阅[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附录 c： 驱动器中SQL 语法。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*，这是标准的转义序列语法: **-(\*供应商 (***供应商名称***)，产品 (***产品名称***) * * * 扩展* **\*)--**  
+>  在 ODBC 2。*x*，这是标准的转义序列语法： **-(\*供应商 (**_供应商名称_**)，产品 (** _产品名称_**)**_扩展_  **\*)-**  
 >   
->  此语法中，除了速记形式语法定义的窗体： **{***扩展***}**  
+>  此语法中，除了速记形式语法定义的窗体： **{**_扩展_**}**  
 >   
 >  在 ODBC 3。*x*、 转义序列的长格式已被弃用，并以独占方式使用的简写形式。  
   

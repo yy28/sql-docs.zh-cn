@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571217"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398170"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parameters  
  *pInstanceNames*  
- [输出] 该函数返回时，将包含用户的工作站上命名的和默认的 LocalDB 实例的名称。  
+ [输出]此函数返回时，包含名为两个名称和默认的用户的工作站上的 LocalDB 实例。  
   
  *lpdwNumberOfInstances*  
- [输入/输出]在输入时，包含的实例中的名称的槽数*pInstanceNames*缓冲区。 输出时，包含在用户工作站上找到的 LocalDB 实例数。  
+ [输入/输出]在输入时，包含的实例中的名称的槽数*pInstanceNames*缓冲区。 在输出时，包含用户的工作站上找到的 LocalDB 实例数。  
   
 ## <a name="returns"></a>返回  
  S_OK  

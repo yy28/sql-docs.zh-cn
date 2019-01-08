@@ -18,17 +18,17 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86ddad2fe62bcd84c55cd97d3765dc898db8e39f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108247"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513342"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 实用工具
   `sqlcmd` 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的即席、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 `sqlcmd`，或要生成可使用 `sqlcmd` 运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 `sqlcmd`实用程序通常使用以下方式：  
   
--   用户以交互方式输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，依次单击 **“开始”**、 **“所有程序”**，指向 **“附件”**，然后单击 **“命令提示符”**。 在命令提示符处，键入`sqlcmd`跟所需的选项的列表。 有关支持的选项的完整列表`sqlcmd`，请参阅[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
+-   用户以交互方式输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，依次单击 **“开始”**、 **“所有程序”**，指向 **“附件”**，然后单击 **“命令提示符”**。 在命令提示符处，键入 `sqlcmd`，后面跟随所需的选项列表。 有关支持的选项的完整列表`sqlcmd`，请参阅[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
 -   用户通过下列方式提交 `sqlcmd` 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可以显示在命令提示符处。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48108247"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     或多个  
+     或  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -110,9 +110,9 @@ ms.locfileid: "48108247"
   
  在未指定输入文件或查询的情况下执行命令时，`sqlcmd` 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例，然后显示一个新行，其中包含 `1>` 并且后面跟着一个闪烁的下划线（称为 `sqlcmd` 提示符）。 `1` 表示这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的第一行，而 `sqlcmd` 提示符则是您键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
   
- 在 `sqlcmd` 提示符中，可以键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 `sqlcmd` 命令，如 `GO` 和 `EXIT`。 每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在称为“语句缓存”的缓冲区中。 这些语句发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]键入后`GO`命令并按 ENTER。 若要退出`sqlcmd`，类型`EXIT`或`QUIT`新行的开头。  
+ 在 `sqlcmd` 提示符中，可以键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 `sqlcmd` 命令，如 `GO` 和 `EXIT`。 每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在称为“语句缓存”的缓冲区中。 键入 `GO` 命令并按 Enter 键后，这些语句将发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要退出`sqlcmd`，类型`EXIT`或`QUIT`新行的开头。  
   
- 若要清除语句缓存，请键入`:RESET`。 键入`^C`导致`sqlcmd`退出。 在发出 `^C` 命令后，还可以用 `GO` 停止语句缓存的执行。  
+ 若要清除语句缓存，请键入 `:RESET`。 键入`^C`导致`sqlcmd`退出。 在发出 `^C` 命令后，还可以用 `GO` 停止语句缓存的执行。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 通过输入可以编辑交互式会话中输入的语句 **: ED**命令和`sqlcmd`提示符。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入`GO`以运行修改后[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48108247"
   
  这表示文件夹 `C:\` 为当前文件夹，如果您指定文件名，则 Windows 将在此文件夹中查找这个文件。  
   
- 类型`sqlcmd`连接到的默认实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]窗口将对本地计算机和在命令提示符的内容：  
+ 键入 `sqlcmd` 连接到本地计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例，命令提示符窗口的内容为：  
   
  `C:\>sqlcmd`  
   
@@ -485,7 +485,7 @@ ms.locfileid: "48108247"
   
 -   -N 开关，客户端使用它来请求加密连接。 此选项等同于 ADO.net 选项 `ENCRYPT = true`。  
   
--   –C 开关，客户端用来将其配置为隐式信任服务器证书且不对其进行验证。 此选项等同于 ADO.net 选项 `TRUSTSERVERCERTIFICATE = true`。  
+-   -C 开关，客户端用来将其配置为隐式信任服务器证书且不对其进行验证。 此选项等同于 ADO.net 选项 `TRUSTSERVERCERTIFICATE = true`。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务并不支持 SQL Server 实例上所有可用的 `SET` 选项。 当将相应的 `SET` 选项设置为 `ON` 或 `OFF`时，下面的选项将引发错误：  
   
@@ -511,21 +511,21 @@ ms.locfileid: "48108247"
  使用 Windows 凭据进行连接并对通信加密：  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  使用 Windows 凭据进行连接并信任服务器证书：  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -534,28 +534,28 @@ SQLCMD –E –N –C
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -T  
   
 ```  
   
  使用 Windows 凭据进行连接、对通信加密并信任服务器证书：  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

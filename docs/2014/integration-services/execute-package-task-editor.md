@@ -15,12 +15,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504520"
 ---
 # <a name="execute-package-task-editor"></a>执行包任务编辑器
   可以使用执行包任务编辑器来配置执行包任务。 执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -48,7 +48,7 @@ ms.locfileid: "48119037"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对执行包任务的说明。  
   
 ##  <a name="package"></a> 设置“包”页上的选项  
@@ -56,7 +56,7 @@ ms.locfileid: "48119037"
  为项目中的子包选择“项目引用”。 为位于包外部的子包选择 **“外部引用”** 。  
   
 > [!NOTE]  
->  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 有关转换的详细信息，请参阅[将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
+>  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 有关转换的详细信息，请参阅 [将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
   
  **密码**  
  如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
@@ -91,7 +91,7 @@ ms.locfileid: "48119037"
  **“连接”**  
  在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
   
- **相关主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相关的主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)，[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  键入子包的名称，或单击省略号 (…) 再定位到包。  
@@ -100,7 +100,7 @@ ms.locfileid: "48119037"
  **“连接”**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  显示包的名称。  

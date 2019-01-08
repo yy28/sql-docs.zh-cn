@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -17,19 +16,19 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e3c468524f470a11ec73ace3c5feffaa2f52ead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049667"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800619"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>缓存、刷新和复制监视器性能
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器旨在有效地监视生产系统中的大量计算机。 系统定期对复制监视器用来执行计算和收集数据的查询进行缓存和刷新。 缓存可减少在复制监视器中查看不同页时所需的查询和计算次数，并可很好地满足多个用户的监视需要。  
   
  缓存刷新由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业“用于分发的复制监视刷新器” 进行处理。 作业是连续运行的，但缓存刷新计划取决于上次刷新后等待的特定时间：  
   
--   如果上次创建缓存后，代理历史记录有更改，则等待时间是以下时间中的最小值：4 秒或创建上一个缓存所用的时间。  
+-   如果上次创建缓存后，代理历史记录有更改，则等待时间是以下时间中的最小值：4 秒;或创建上一个缓存所需的时间量。  
   
 -   如果上次创建缓存后，代理历史记录没有更改（可能有其他更改），则等待时间是以下时间中的最大值：30 秒或创建上一个缓存所用的时间。  
   

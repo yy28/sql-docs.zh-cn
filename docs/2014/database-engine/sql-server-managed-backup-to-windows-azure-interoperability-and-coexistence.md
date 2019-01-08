@@ -1,5 +1,5 @@
 ---
-title: SQL Server 托管备份到 Windows Azure： 互操作性和共存 |Microsoft Docs
+title: 到 Windows Azure 的 SQL Server 托管的备份：互操作性和共存 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509136"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server 托管备份到 Windows Azure：互操作性和共存
-  本主题介绍[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中若干功能的互操作性和共存情况。 这些功能包括以下各项：AlwaysOn 可用性组、数据库镜像、备份维护计划、日志传送、即席备份、分离数据库和删除数据库。  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>到 Windows Azure 的 SQL Server 托管的备份：互操作性和共存
+  本主题介绍[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中若干功能的互操作性和共存情况。 这些功能包括：AlwaysOn 可用性组、 数据库镜像、 备份维护计划、 日志传送、 即席备份、 分离数据库和 Drop Database。  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn 可用性组  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]支持完全配置为 Windows Azure 解决方案的 AlwaysOn 可用性组。 不支持仅本地或混合 AlwaysOn 可用性组配置。 有关详细信息和其他注意事项，请参阅[为可用性组设置 SQL Server 托管备份到 Windows Azure](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ 配置为 Windows 支持的仅限 Azure 的解决方案的 AlwaysOn 可用性组[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 不支持仅本地或混合 AlwaysOn 可用性组配置。 有关详细信息和其他注意事项，请参阅[为可用性组设置 SQL Server 托管备份到 Windows Azure](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>数据库镜像  
  仅主体数据库上支持[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 如果将主体数据库和镜像数据库都配置为使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，则跳过镜像数据库，不进行备份。 但是，在故障转移的情况下，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]将在镜像完成角色切换并联机后开始备份过程。 在这种情况下，备份将存储在新的容器中。 如果未将镜像配置为使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，则在进行故障转移的情况下，不进行任何备份。 建议同时在主体和镜像上配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，以便在进行故障转移的情况下可继续备份。  
@@ -55,7 +55,7 @@ ms.locfileid: "48184237"
   
  **Data Protection Manager (DPM) 基于备份：** Microsoft Data Protection Manager 可执行完整和增量备份。 增量备份是在创建 T 日志备份之后执行日志截断的日志备份。 因此，不支持为同一数据库同时配置 DPM 和 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
   
- **第三方工具或脚本：** 的任何第三方工具或脚本的执行日志备份导致日志截断不符合[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，和不受支持。  
+ **第三方工具或脚本：** 任何第三方工具或脚本的执行日志备份导致日志截断不符合[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，和不受支持。  
   
  如果有[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]启用对数据库实例，并且想要创建即席备份可以使用[smart_admin.sp_backup_on_demand &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)存储过程，如前面所述部分。 如果还需要在 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 之外定期安排备份，则可使用“仅复制备份”。  有关详细信息，请参阅[仅复制备份 (SQL Server)](../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   

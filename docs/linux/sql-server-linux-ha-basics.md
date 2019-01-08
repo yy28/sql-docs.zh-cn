@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665667"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533070"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>对于 Linux 部署 SQL Server 可用性基础知识
 
@@ -39,15 +39,15 @@ ms.locfileid: "51665667"
 2. 更常用和安全意识的方式运行操作是使用`sudo`之前执行任何操作。 在此示例的许多文章使用`sudo`。
 
 一些常用命令，其中每个都有各种开关和可以在线研究的选项：
--   `cd` – 将目录更改
--   `chmod` – 更改文件或目录的权限
--   `chown` – 更改文件或目录的所有权
--   `ls` – 显示目录的内容
--   `mkdir` – 驱动器上创建文件夹 （目录）
+-   `cd` -将目录更改
+-   `chmod` -更改的文件或目录的权限
+-   `chown` -更改文件或目录的所有权
+-   `ls` -显示目录的内容
+-   `mkdir` -驱动器上创建文件夹 （目录）
 -   `mv` -将文件从一个位置移动到另一个
--   `ps` – 显示所有工作进程
--   `rm` – 删除本地服务器上的文件
--   `rmdir` – 删除文件夹 （目录）
+-   `ps` -显示的所有工作进程
+-   `rm` -删除服务器上的本地文件
+-   `rmdir` -删除文件夹 （目录）
 -   `systemctl` -启动、 停止或启用服务
 -   文本编辑器命令。 在 Linux 上，有各种文本编辑器选项，如 vi 和 emacs。
 
@@ -68,7 +68,7 @@ Linux 上以及在基于 Windows 的安装上，可以存在权限问题等内�
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-将文件 MyAGCert.cer 复制到另一台服务器上指定的文件夹。 请注意，您必须有权限 – 和可能是复制该密钥，因此该文件的所有权-`chown`可能还需要复制之前采用。 同样，在接收端适当的用户需要访问和操作该文件。 例如，若要还原该证书文件，`mssql`用户必须能够访问它。
+将文件 MyAGCert.cer 复制到另一台服务器上指定的文件夹。 请注意，必须拥有权限的和可能是复制该密钥，因此该文件的所有权-`chown`可能还需要复制之前采用。 同样，在接收端适当的用户需要访问和操作该文件。 例如，若要还原该证书文件，`mssql`用户必须能够访问它。
 
 Samba，这是服务器消息块 (SMB) 的 Linux 变体，也可用于创建共享访问的 UNC 路径如`\\SERVERNAME\SHARE`。 有关配置 Samba 的详细信息，请参阅以下链接，了解每个分布区中的信息：
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
@@ -86,27 +86,27 @@ Samba，这是服务器消息块 (SMB) 的 Linux 变体，也可用于创建共�
 
 | 端口号 | 类型     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | （如果使用） 的 samba – 终结点映射程序                                                                                          |
-| 137         | UDP      | Samba （如果使用） – NetBIOS 名称服务                                                                                      |
-| 138         | UDP      | Samba （如果使用） – NetBIOS 数据报                                                                                          |
-| 139         | TCP      | Samba （如果使用） – NetBIOS 会话                                                                                           |
-| 445         | TCP      | （如果使用） 的 samba – SMB 通过 TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 默认端口;如果需要，可以更改与 `mssql-conf set network.tcpport <portnumber>`                       |
+| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 135         | TCP      | Samba （如果使用） 的终结点映射程序                                                                                          |
+| 137         | UDP      | （如果使用） 的 samba-名称服务                                                                                      |
+| 138         | UDP      | （如果使用） 的 samba-NetBIOS 数据报                                                                                          |
+| 139         | TCP      | （如果使用） 的 samba-NetBIOS 会话                                                                                           |
+| 445         | TCP      | （如果使用） 的 samba-SMB 通过 TCP                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的默认端口;如果需要，可以更改与 `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS （如果使用）                                                                                                               |
 | 2224        | TCP      | Pacemaker-通过使用 `pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker-必需 Pacemaker 远程节点                                                                    |
-| 3260        | TCP      | 可以在中更改 iSCSI 发起程序 （如果使用） – `/etc/iscsi/iscsid.config` (RHEL)，但应匹配的 iSCSI 目标端口 |
+| 3260        | TCP      | 可以在中更改 iSCSI 发起程序 （如果使用）- `/etc/iscsi/iscsid.config` (RHEL)，但应匹配的 iSCSI 目标端口 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的默认端口用于可用性组终结点;创建终结点时可以更改                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | Pacemaker-如果使用多播的 UDP 所需的 Corosync                                                                     |
 | 5405        | UDP      | Pacemaker-所需的 Corosync                                                                                            |
 | 21064       | TCP      | Pacemaker-所需的资源使用 DLM                                                                                 |
 | 变量    | TCP      | 可用性组终结点端口;默认为 5022                                                                                           |
-| 变量    | TCP      | NFS – 的端口`LOCKD_TCPPORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                              |
-| 变量    | UDP      | NFS – 的端口`LOCKD_UDPPORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                              |
-| 变量    | TCP/UDP  | NFS – 的端口`MOUNTD_PORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                                |
-| 变量    | TCP/UDP  | NFS – 的端口`STATD_PORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                                 |
+| 变量    | TCP      | NFS 的端口`LOCKD_TCPPORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                              |
+| 变量    | UDP      | NFS 的端口`LOCKD_UDPPORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                              |
+| 变量    | TCP/UDP  | NFS 的端口`MOUNTD_PORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                                |
+| 变量    | TCP/UDP  | NFS 的端口`STATD_PORT`(位于`/etc/sysconfig/nfs`RHEL 上)                                                 |
 
 为 Samba 可能使用的其他端口，请参阅[Samba 端口用法](https://wiki.samba.org/index.php/Samba_Port_Usage)。
 
@@ -121,7 +121,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安装[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]包可用性
-在基于 Windows 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]安装，而有些则不然甚至进行基本引擎安装时，安装某些组件。 在仅限 Linux[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]引擎作为安装过程的一部分安装。 其他所有内容是可选的。 为高度可用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 下的实例，应使用安装两个包[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]:[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理 (*mssql server 代理*) 和高可用性 (HA) 包 (*mssql server-ha*)。 虽然[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理是可选的从技术上讲，它是[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]的作业的计划程序，并为所需的日志传送，因此建议安装。 在基于 Windows 的安装中，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理不可选。
+在基于 Windows 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]安装，而有些则不然甚至进行基本引擎安装时，安装某些组件。 在仅限 Linux[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]引擎作为安装过程的一部分安装。 其他所有内容是可选的。 为高度可用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 下的实例，应使用安装两个包[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]:[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理 (*mssql server 代理*) 和高可用性 (HA) 包 (*mssql server-ha*)。 虽然[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理是可选的从技术上讲，它是[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]的作业的计划程序，并为所需的日志传送，因此建议安装。 在基于 Windows 的安装中，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理不可选。
 
 >[!NOTE]
 >对于那些新接触[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理是[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]的内置作业计划程序。 它是可使用计划备份和其他类似的常用方法[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]维护。 与基于 Windows 的安装不同[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]其中[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理是一种完全不同的服务，在 Linux 上，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]代理在上下文中运行[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]本身。
@@ -134,12 +134,12 @@ sudo firewall-cmd --permanent --add-service=high-availability
 与先前所述，当前支持由 Microsoft 承载和 Fci 的唯一聚类分析机制是使用 Corosync Pacemaker。 本部分介绍的基本信息来了解该解决方案，以及如何规划和部署它的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]配置。
 
 ### <a name="ha-add-onextension-basics"></a>高可用性在加载/扩展基本知识
-所有当前受支持分发版提供高可用性加载-在/扩展，它基于聚类分析堆栈 Pacemaker。 此堆栈包含两个关键组件： Pacemaker 和 Corosync。 堆栈的所有组件都包括：
+所有当前受支持分发版提供高可用性加载-在/扩展，它基于聚类分析堆栈 Pacemaker。 此堆栈包含两个关键组件：Pacemaker 和 Corosync。 堆栈的所有组件都包括：
 -   Pacemaker-聚类分析组件，在群集的计算机之间执行诸如坐标的核心。
--   Corosync – 一个框架和一组 api，提供了诸如仲裁、 重新启动失败进程等的能力。
--   libQB – 等日志记录提供内容。
--   资源代理 – 提供，以便可以将应用程序与 Pacemaker 的集成的特定功能。
--   围墙代理 – 脚本/功能帮助隔离节点，如果它们时遇到问题处理它们。
+-   Corosync-一个框架和一组 api，提供了诸如仲裁、 重新启动失败进程等的能力。
+-   libQB-提供日志记录等内容。
+-   资源代理的特定功能提供，以便可以将应用程序与 Pacemaker 的集成。
+-   围墙代理的脚本/功能帮助隔离节点，如果它们时遇到问题处理它们。
     
 > [!NOTE]
 > 群集堆栈通常称为 Linux 世界上的 Pacemaker。
@@ -169,7 +169,7 @@ WSFC 和 Pacemaker 群集具有资源的概念。 资源是在群集中，如磁
 
 Pacemaker 具有标准版和克隆的资源。 克隆资源是一种是在所有节点上同时运行。 示例是为实现负载均衡的多个节点运行的 IP 地址。 获取为 Fci 创建的任何资源使用标准资源，因为在任何给定时间，只有一个节点可以承载 FCI。
 
-创建 AG 时，它需要名为多状态的资源的克隆资源的一种专用的形式。 虽然 AG 只能有一个主副本，可用性组本身正在运行，在所有节点，它已配置为在，并就有可能使等只读访问权限。 这是节点的"实时"使用，因为资源都具有两个状态的概念： 主 / 从。 有关详细信息，请参阅[多状态的资源： 具有多个模式的资源](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)。
+创建 AG 时，它需要名为多状态的资源的克隆资源的一种专用的形式。 虽然 AG 只能有一个主副本，可用性组本身正在运行，在所有节点，它已配置为在，并就有可能使等只读访问权限。 这是节点的"实时"使用，因为资源都具有两个状态的概念： 主 / 从。 有关详细信息，请参阅[多状态的资源：具有多个模式的资源](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)。
 
 #### <a name="resource-groupssets"></a>资源组/设置
 类似于 WSFC 中的角色，Pacemaker 群集具有资源组的概念。 资源组 （在 SLES 中称为一） 是一系列资源，它们共同发挥作用，并可以故障转移从一个节点到另一个作为单个单元。 资源组不能包含配置为 master/slave; 的资源因此，它们不能用于 Ag。 尽管可以为 Fci 使用的资源组，但它不是通常推荐的配置。
@@ -200,7 +200,7 @@ Wsfc 监视参与节点的状态，并出现问题时处理它们。 Wsfc 的更
 #### <a name="cluster-log-location"></a>群集日志位置
 Pacemaker 群集的日志位置因分发而异。
 -   RHEL 和 SLES- `/var/log/cluster/corosync.log`
--   Ubuntu – `/var/log/corosync/corosync.log`
+-   Ubuntu — `/var/log/corosync/corosync.log`
 
 若要更改默认日志记录位置，请修改`corosync.conf`。
 
@@ -213,8 +213,8 @@ Pacemaker 群集的日志位置因分发而异。
 谈到 Ag 和 Fci 下虚拟化，请确保给定的 Pacemaker 群集的节点设置反相关性。 配置以实现高可用性在 AG 或 FCI 配置中，托管的 Vm 时[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]应永远不会在同一个虚拟机监控程序主机上运行。 例如，如果部署两个节点 FCI，则需要*至少*三个虚拟机监控程序主机，非常有某处个托管节点的 Vm 继续出现主机故障时，尤其是如果使用的功能如 Live迁移或 vMotion。
 
 有关更多详细信息，请参阅：
--   Hyper V 文档 –[使用来宾群集实现高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   白皮书 （编写为基于 Windows 的部署，但大部分概念仍适用） –[规划高度可用的任务关键型 SQL Server 部署使用 VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Hyper V 文档-[使用来宾群集实现高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   白皮书 （编写为基于 Windows 的部署，但大部分概念仍适用）-[规划高度可用的任务关键型 SQL Server 部署使用 VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >HYPER-V 尚不支持使用 STONITH RHEL 与 Pacemaker 群集。 支持之前，有关详细信息和更新，请查阅[RHEL 高可用性群集的支持策略](https://access.redhat.com/articles/29440#3physical_host_mixing)。

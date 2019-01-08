@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server destination
@@ -17,12 +16,12 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e78121e3e55cb921da9e48618b67bc997dba28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24f0adb1564882697bf862407cda8dfaee44cd23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791019"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目标大容量加载数据
   若要添加并配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，则包必须已包含至少一个数据流任务和一个数据源。  
@@ -55,7 +54,7 @@ ms.locfileid: "48201277"
     > [!NOTE]  
     >  目标自动映射名称相同的列。  
   
-9. 单击 **“高级”** ，并设置大容量加载选项： **“保留标识”**、 **“保留空值”**、 **“表锁”**、 **“检查约束”** 和 **“激发触发器”**。  
+9. 单击**高级**并设置大容量加载选项：**保留标识**，**保留 null**，**表锁**， **Check 约束**，并且**激发触发器**。  
   
      也可以指定要插入的第一个和最后一个输入行、在插入操作停止前可以出现的最大错误数以及插入据以排序的列。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48201277"
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 目标](sql-server-destination.md)   
+ [SQL Server Destination](sql-server-destination.md)   
  [Integration Services 转换](transformations/integration-services-transformations.md)   
  [Integration Services 路径](integration-services-paths.md)   
  [数据流任务](../control-flow/data-flow-task.md)  

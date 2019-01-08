@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Web synchronization, security architecture
@@ -13,12 +12,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fecb188c4a793c2742e28d7b1c76193b901ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190557"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804379"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步的安全体系结构
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以对 Web 同步安全性的配置进行细粒度控制。 本主题提供了 Web 同步配置中可包括的所有组件以及这些组件之间的连接信息的综合列表。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -47,7 +46,7 @@ ms.locfileid: "48190557"
 |身份验证类型|指定身份验证的位置|  
 |----------------------------|-------------------------------------------|  
 |Windows 身份验证。|合并代理 (A) 在为其指定的 Windows 用户的上下文中建立连接。|  
-|仅在指定下列值时，才使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>为<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A>。<br /><br /> 合并代理命令行： 值为**0**有关**SubscriberSecurityMode**。|RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A>。<br /><br /> 合并代理命令行： **-SubscriberLogin** 和 **-SubscriberLogin**。|  
+|仅在指定下列值时，才使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：<br /><br /> RMO：为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A> 值。<br /><br /> 合并代理命令行： 值为**0**有关**SubscriberSecurityMode**。|RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A>。<br /><br /> 合并代理命令行： **-SubscriberLogin** 和 **-SubscriberLogin**。|  
   
 ## <a name="c-connection-to-an-outgoing-proxy-server"></a>C. 连接到传出代理服务器  
  仅当存在限制访问订阅服务器内部网络的传出代理服务器时，才为此连接指定 Windows 用户。  
@@ -61,8 +60,8 @@ ms.locfileid: "48190557"
   
 |身份验证类型|指定身份验证的位置|  
 |----------------------------|-------------------------------------------|  
-|如果指定下列值之一，则将使用基本身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**0**有关**@internet_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>为<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>。<br /><br /> 合并代理命令行： 值为**0**有关 **-InternetSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@internet_login** 的 **@internet_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)参数。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>。<br /><br /> 合并代理命令行： **-InternetLogin** 和 **-InternetPassword**。|  
-|集成身份验证\*如果指定以下值之一，则使用：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**1**有关**@internet_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>为<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>。<br /><br /> 合并代理命令行： 值为**1**有关 **-InternetSecurityMode**。|合并代理 (A) 在为其指定的 Windows 用户的上下文中建立连接。|  
+|如果指定下列值之一，则将使用基本身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**0**有关**@internet_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO：为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A> 值。<br /><br /> 合并代理命令行： 值为**0**有关 **-InternetSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@internet_login** 的 **@internet_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)参数。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>。<br /><br /> 合并代理命令行： **-InternetLogin** 和 **-InternetPassword**。|  
+|集成身份验证\*如果指定以下值之一，则使用：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**1**有关**@internet_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO：为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A> 值。<br /><br /> 合并代理命令行： 值为**1**有关 **-InternetSecurityMode**。|合并代理 (A) 在为其指定的 Windows 用户的上下文中建立连接。|  
   
  * 仅当所有计算机都位于同一域中或位于建立了与每个其他的信任关系的多个域中，可以使用集成身份验证。  
   
@@ -86,22 +85,22 @@ ms.locfileid: "48190557"
   
 |身份验证类型|指定身份验证的位置|  
 |----------------------------|-------------------------------------------|  
-|如果指定下列值之一，则将使用 Windows 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**1**有关**@publisher_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>为<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>。<br /><br /> 合并代理命令行： 值为**1**有关 **-PublisherSecurityMode**。|合并代理在为连接到 IIS (D) 而指定的 Windows 用户的上下文中与发布服务器建立连接。 如果发布服务器和 IIS 位于不同的计算机中并且将集成身份验证用于连接 (D)，则必须在运行 IIS 的计算机上启用 Kerberos 委托。 有关详细信息，请参阅 Windows 文档。|  
-|如果指定下列值之一，则将使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**0**有关**@publisher_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>为<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>。<br /><br /> 合并代理命令行： 值为**0**有关 **-PublisherSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@publisher_login** 的 **@publisher_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)参数。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>。<br /><br /> 合并代理命令行： **-PublisherLogin** 和 **-PublisherPassword**。|  
+|如果指定下列值之一，则将使用 Windows 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**1**有关**@publisher_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO：为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> 值。<br /><br /> 合并代理命令行： 值为**1**有关 **-PublisherSecurityMode**。|合并代理在为连接到 IIS (D) 而指定的 Windows 用户的上下文中与发布服务器建立连接。 如果发布服务器和 IIS 位于不同的计算机中并且将集成身份验证用于连接 (D)，则必须在运行 IIS 的计算机上启用 Kerberos 委托。 有关详细信息，请参阅 Windows 文档。|  
+|如果指定下列值之一，则将使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**0**有关**@publisher_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO：为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> 值。<br /><br /> 合并代理命令行： 值为**0**有关 **-PublisherSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@publisher_login** 的 **@publisher_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)参数。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>。<br /><br /> 合并代理命令行： **-PublisherLogin** 和 **-PublisherPassword**。|  
   
 ## <a name="f-connection-to-the-distributor"></a>F. 连接到分发服务器  
  在运行 IIS 的计算机上承载的合并复制协调器还与分发服务器建立连接。 合并复制协调器使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器。 Windows 用户或指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名必须符合以下条件：  
   
 -   位于发布访问列表 (PAL) 中。 有关详细信息，请参阅[保护发布服务器](secure-the-publisher.md)。  
   
--   与分发数据库中的某个数据库用户相关联。 用户可以为`Guest`用户。  
+-   与分发数据库中的某个数据库用户相关联。 用户可以为 `Guest` 用户。  
   
  快照共享通常位于分发服务器上。 有关快照共享的详细信息，请参阅本主题后面的“H. 访问快照共享”部分。  
   
 |身份验证类型|指定身份验证的位置|  
 |----------------------------|-------------------------------------------|  
-|如果指定下列值之一，则将使用 Windows 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**1**有关**@distributor_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>为<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>。<br /><br /> 合并代理命令行： 值为**1**有关 **-DistributorSecurityMode**。|合并代理在为连接到 IIS (D) 而指定的 Windows 用户的上下文中与分发服务器建立连接。 如果分发服务器和 IIS 位于不同的计算机中并且将集成身份验证用于连接 (D)，则必须在运行 IIS 的计算机上启用 Kerberos 委托。 有关详细信息，请参阅 Windows 文档。|  
-|如果指定下列值之一，则将使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**0**有关**@distributor_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>为<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>。<br /><br /> 合并代理命令行： 值为**0**有关 **-DistributorSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@distributor_login** 的 **@distributor_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)参数。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> 合并代理命令行： **-DistributorLogin** 和 **-DistributorPassword**。|  
+|如果指定下列值之一，则将使用 Windows 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**1**有关**@distributor_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO：为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> 值。<br /><br /> 合并代理命令行： 值为**1**有关 **-DistributorSecurityMode**。|合并代理在为连接到 IIS (D) 而指定的 Windows 用户的上下文中与分发服务器建立连接。 如果分发服务器和 IIS 位于不同的计算机中并且将集成身份验证用于连接 (D)，则必须在运行 IIS 的计算机上启用 Kerberos 委托。 有关详细信息，请参阅 Windows 文档。|  
+|如果指定下列值之一，则将使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值为**0**有关**@distributor_security_mode**参数[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO：为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> 值。<br /><br /> 合并代理命令行： 值为**0**有关 **-DistributorSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@distributor_login** 的 **@distributor_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)参数。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> 合并代理命令行： **-DistributorLogin** 和 **-DistributorPassword**。|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. 连接到 FTP 服务器  
  仅当在将快照应用到订阅服务器之前，将快照文件从 FTP 服务器（而不是 UNC 位置）下载到运行 IIS 的计算机上时，才为该连接指定 Windows 用户。 有关详细信息，请参阅[通过 FTP 传输快照](../transfer-snapshots-through-ftp.md)。  

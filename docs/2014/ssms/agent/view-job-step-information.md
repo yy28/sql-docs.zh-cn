@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying job step information
@@ -15,12 +15,12 @@ ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b9b10fae03f35ae7ceb237304b35b80880d636f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222977"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786089"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
   本主题说明如何在“作业步骤属性”对话框中查看作业步骤的详细信息。 它还包括有关查看作业步骤输出的信息。  
@@ -29,7 +29,7 @@ ms.locfileid: "48222977"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看作业步骤信息，可使用：**  
   

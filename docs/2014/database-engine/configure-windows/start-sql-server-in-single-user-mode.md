@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
@@ -14,12 +13,12 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeb0e1c28885e8611c1ae57a21a05c1265b6349c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090147"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640888"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
   在某些情况下，可能必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup option -m **在单用户模式下启动**实例。 例如，您可能要更改服务器配置选项或恢复已破坏的 master 数据库或其他系统数据库。 这两个操作都需要在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
@@ -47,7 +46,7 @@ ms.locfileid: "48090147"
   
  为解决此问题，请执行以下过程：  
   
-1.  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高级属性中删除 –m 启动参数。  
+1.  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高级属性中删除 -m 启动参数。  
   
 2.  使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源脱机。  
   
@@ -56,14 +55,14 @@ ms.locfileid: "48090147"
   
 4.  从群集管理器或故障转移群集管理控制台验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源仍处于脱机状态。  
   
-5.  现在使用以下命令连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且执行必需的操作：SQLCMD -E -S\<servername>。  
+5.  连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在使用以下命令并执行必需的操作：SQLCMD-E-S\<服务器名 >。  
   
 6.  一旦完成该操作后，关闭命令提示符并且通过群集管理器使 SQL 和其他资源返回联机状态。  
   
 ## <a name="see-also"></a>请参阅  
  [启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [用于数据库管理员的诊断连接](diagnostic-connection-for-database-administrators.md)   
- [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [检查点 (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [数据库引擎服务启动选项](database-engine-service-startup-options.md)  

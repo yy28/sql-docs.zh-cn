@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4ebac7cac4a62dde5c89aa3e37146c78eb79d19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146853"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535430"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 执行 DDL 任务编辑器（DDL 页）
   可以使用“Analysis Services 执行 DDL 任务编辑器”对话框的 **DDL** 页指定与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的连接，以及提供有关数据定义语言 (DDL) 语句的源的信息。  
@@ -31,7 +31,7 @@ ms.locfileid: "50146853"
  **“连接”**  
  在列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击“\<新建连接...>”并使用“添加 Analysis Services 连接管理器”对话框新建一个连接。  
   
- **相关主题：**[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  
+ **相关的主题：**[添加 Analysis Services 连接管理器对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)， [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  指定 DDL 语句的源类型。 此属性具有下表所列的选项：  
@@ -46,21 +46,21 @@ ms.locfileid: "50146853"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = 直接输入  
  **数据源**  
- 键入 DDL 语句，或单击省略号 **(…)**，然后在“DDL 语句”对话框中键入语句。  
+ 键入 DDL 语句，或单击省略号 (…)，然后在“DDL 语句”对话框中键入语句。  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = 文件连接  
  **数据源**  
  在列表中选择“文件连接”，或单击“\<新建连接...>”并使用“文件连接管理器”对话框新建一个连接。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)  
+ **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = 变量  
  **数据源**  
  在列表中选择一个变量，或单击“\<新建变量...>”并使用“添加变量”对话框新建一个变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
+ **相关的主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services 执行 DDL 任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
  [“表达式”页](expressions/expressions-page.md)   

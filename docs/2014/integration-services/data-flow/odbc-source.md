@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2238676493cce8a732055dea853e7368fe817865
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b928b54236929238c404597f4ba1eeeddb427ccc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054357"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790639"
 ---
 # <a name="odbc-source"></a>ODBC 源
   ODBC 源通过使用数据库表、视图或 SQL 语句，从支持 ODBC 的数据库中提取数据。  
@@ -38,9 +37,9 @@ ms.locfileid: "48054357"
 ## <a name="error-handling"></a>错误处理  
  ODBC 源有一个错误输出。 组件的错误输出包括以下输出列：  
   
--   **错误代码**：与当前错误相对应的编号。 有关错误的列表，请参阅您正在使用的支持 ODBC 的数据库文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
+-   **错误代码**:与当前错误相对应的编号。 有关错误的列表，请参阅您正在使用的支持 ODBC 的数据库文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
   
--   **错误列**：导致错误（针对转换错误）的源列。  
+-   **错误列**:导致错误 （针对转换错误） 的源列。  
   
 -   标准的输出数据列。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "48054357"
 ## <a name="extract-options"></a>提取选项  
  ODBC 源在“批处理”或“逐行”模式下操作。 使用的模式由 **FetchMethod** 属性确定。 下表对这些模式进行了说明。  
   
--   **批处理**：组件将基于发现的 ODBC 访问接口功能尝试使用最高效的提取方法。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
+-   **批处理**:组件将尝试使用最高效的提取方法基于发现的 ODBC 访问接口功能。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
   
--   **逐行**：组件使用 SQLFetch 来一次一行的检索行。  
+-   **行由行**:组件使用 SQLFetch 来一次检索行。  
   
  有关 **FetchMethod** 属性的详细信息，请参阅 [ODBC Source Custom Properties](odbc-source-custom-properties.md)。  
   
@@ -71,11 +70,11 @@ ms.locfileid: "48054357"
   
  有关详细信息，请参阅下列主题之一：  
   
--   [ODBC 源编辑器&#40;连接管理器页&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 源编辑器（“连接管理器”页）](../odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC 源编辑器&#40;列页&#41;](../odbc-source-editor-columns-page.md)  
+-   [ODBC 源编辑器（“列”页）](../odbc-source-editor-columns-page.md)  
   
--   [ODBC 源编辑器&#40;错误输出页&#41;](../odbc-source-editor-error-output-page.md)  
+-   [ODBC 源编辑器（“错误输出”页）](../odbc-source-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -87,14 +86,14 @@ ms.locfileid: "48054357"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [ODBC 源编辑器&#40;错误输出页&#41;](../odbc-source-editor-error-output-page.md)  
+-   [ODBC 源编辑器（“错误输出”页）](../odbc-source-editor-error-output-page.md)  
   
--   [ODBC 源编辑器&#40;列页&#41;](../odbc-source-editor-columns-page.md)  
+-   [ODBC 源编辑器（“列”页）](../odbc-source-editor-columns-page.md)  
   
--   [ODBC 源编辑器&#40;连接管理器页&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 源编辑器（“连接管理器”页）](../odbc-source-editor-connection-manager-page.md)  
   
 -   [使用 ODBC 源提取数据](odbc-source.md)  
   
--   [ODBC 源自定义属性](odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
   
   

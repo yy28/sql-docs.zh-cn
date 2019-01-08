@@ -10,12 +10,12 @@ ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9f53d3878ec6f5eb9c0996d7162fed792bf4930
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9c0913ab07b006b845af081be0722da89f2ecd23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515814"
 ---
 # <a name="end-the-domain-management-activity"></a>结束域管理活动
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中完成、关闭或取消域管理活动。 由于向导不执行域管理，因此，可以从域管理活动的任意页面中使用下面描述的控件。  
@@ -24,11 +24,11 @@ ms.locfileid: "51033364"
  **“完成”**  
  单击可完成域管理。 将显示一个弹出窗口，支持您执行以下操作：  
   
--   **是 - 发布知识库并退出**：将发布该知识库，以供当前用户或他人使用。 将不锁定该知识库，该知识库（在知识库表中）的状态将设置为空，且域管理和知识发现活动都将可用。 您将返回到“打开知识库”屏幕。  
+-   **是-发布知识库并退出**:为当前用户或他人使用，将发布该知识库。 将不锁定该知识库，该知识库（在知识库表中）的状态将设置为空，且域管理和知识发现活动都将可用。 您将返回到“打开知识库”屏幕。  
   
--   **否 - 保存对知识库所做的工作并退出**：将保存您的工作，该知识库将保持锁定状态，且该知识库的状态将设置为“在工作”。 域管理和知识发现活动都将可用。 您将返回到主页。  
+-   **否-保存所做工作知识库并退出**:将保存您的工作，该知识库将保持锁定状态，以及知识库的状态将设置为在工作中。 域管理和知识发现活动都将可用。 您将返回到主页。  
   
--   **取消 - 停留在当前屏幕上**：系统将关闭弹出窗口并使您返回“域管理”屏幕。  
+-   **取消-停留在当前屏幕上**:将关闭弹出窗口，您将返回到域管理屏幕。  
   
  **取消**  
  单击可终止域管理活动，不保存所做的工作，并返回到 DQS 主页。  

@@ -13,12 +13,12 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 19991410178a97b64d427feb56ce622e06c76570
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071587"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506128"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从数据库删除数据库镜像。  数据库所有者可以随时通过从数据库中删除镜像来手动停止数据库镜像会话。  
@@ -69,7 +69,7 @@ ms.locfileid: "48071587"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> 跟进：在删除数据库镜像之后  
+##  <a name="FollowUp"></a> 跟进：删除数据库镜像  
   
 > [!NOTE]  
 >  有关删除镜像的影响的信息，请参阅[删除数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。  
@@ -99,7 +99,7 @@ ms.locfileid: "48071587"
   
 -   [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](database-mirroring-establish-session-windows-authentication.md)  
   
--   [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [示例：设置数据库镜像使用证书&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   

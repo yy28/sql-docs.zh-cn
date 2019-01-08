@@ -1,5 +1,5 @@
 ---
-title: MDX 函数引用 (MDX) |Microsoft 文档
+title: MDX 函数引用 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9137655ce59efbfa13466fe50f8142987b0ec81a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542476"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函数参考 (MDX)
 
 
-  Analysis Services 提供多维表达式 (MDX) 语法中的函数使用。 函数可以在任何有效的 MDX 语句中使用，并且经常用于查询、自定义汇总定义以及其他计算。 本部分提供有关 MDX 函数的信息。  
+  Analysis Services 提供的多维表达式 (MDX) 语法中的函数的用法。 函数可以在任何有效的 MDX 语句中使用，并且经常用于查询、自定义汇总定义以及其他计算。 本部分提供有关 MDX 函数的信息。  
   
  可以使用下面这些表按返回值的类别来查找函数，也可以从按字母顺序排列的目录中按名称来选择函数。  
   
@@ -58,16 +58,16 @@ ms.locfileid: "34742006"
   
 |函数|Description|  
 |--------------|-----------------|  
-|[上级&#40;MDX&#41;](../mdx/ancestor-mdx.md)|返回某个成员在指定级别或距离上的祖先。|  
+|[祖先&#40;MDX&#41;](../mdx/ancestor-mdx.md)|返回某个成员在指定级别或距离上的祖先。|  
 |[ClosingPeriod &#40;MDX&#41;](../mdx/closingperiod-mdx.md)|返回某个成员在指定级别上的后代中的最后一个同级。|  
-|[Cousin &#40;MDX&#41;](../mdx/cousin-mdx.md)|返回与指定的子成员在父成员下方具有相同的相对位置的子成员。|  
+|[它的同级&#40;MDX&#41;](../mdx/cousin-mdx.md)|返回与指定的子成员在父成员下方具有相同的相对位置的子成员。|  
 |[CurrentMember &#40;MDX&#41;](../mdx/currentmember-mdx.md)|返回迭代过程中指定的维度或层次结构的当前成员。|  
 |[DataMember &#40;MDX&#41;](../mdx/datamember-mdx.md)|返回系统生成的、与某个维度的非叶成员相关联的数据成员。|  
 |[DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)|返回维度或层次结构的默认成员。|  
 |[FirstChild &#40;MDX&#41;](../mdx/firstchild-mdx.md)|返回成员的第一个子成员。|  
 |[FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)|返回成员的父成员的第一个子成员。|  
 |[项&#40;成员&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)|返回指定元组中的成员。|  
-|[Lag &#40;MDX&#41;](../mdx/lag-mdx.md)|返回在所在维度中位置比指定成员靠前且靠前位数为指定位数的成员。|  
+|[延隔时间&#40;MDX&#41;](../mdx/lag-mdx.md)|返回在所在维度中位置比指定成员靠前且靠前位数为指定位数的成员。|  
 |[LastChild &#40;MDX&#41;](../mdx/lastchild-mdx.md)|返回指定成员的最后一个子成员。|  
 |[LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)|返回指定成员的父成员的最后一个子成员。|  
 |[导致&#40;MDX&#41;](../mdx/lead-mdx.md)|返回在所在维度中位置比指定成员靠后且靠后位数为指定位数的成员。|  
@@ -98,13 +98,13 @@ ms.locfileid: "34742006"
 |[计数&#40;元组&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)|返回元组中的维度数。|  
 |[协变&#40;MDX&#41;](../mdx/covariance-mdx.md)|返回两个序列用有偏差总体公式对集求得的总体协方差。|  
 |[CovarianceN &#40;MDX&#41;](../mdx/covariancen-mdx.md)|返回两个序列用无偏差总体公式对集求得的样本协方差。|  
-|[DistinctCount &#40;MDX&#41;](../mdx/distinctcount-mdx.md)|返回集中非重复的非空元组的数目。|  
+|[非重复计数&#40;MDX&#41;](../mdx/distinctcount-mdx.md)|返回集中非重复的非空元组的数目。|  
 |[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|返回由逻辑测试确定的两个值之一。|  
-|[LinRegIntercept &#40;MDX&#41;](../mdx/linregintercept-mdx.md)|一组线性回归计算，并返回回归线中的截距的值 y = ax + b。|  
-|[LinRegPoint &#40;MDX&#41;](../mdx/linregpoint-mdx.md)|一组线性回归计算，并返回的值*y*在回归行中，y = ax + b。|  
+|[LinRegIntercept &#40;MDX&#41;](../mdx/linregintercept-mdx.md)|一组线性回归计算，并返回回归线的截距值 y = ax + b。|  
+|[LinRegPoint &#40;MDX&#41;](../mdx/linregpoint-mdx.md)|线性回归的一组计算并返回的值*y*中回归线，y = ax + b。|  
 |[LinRegR2 &#40;MDX&#41;](../mdx/linregr2-mdx.md)|对集进行线性回归计算，并返回确定系数 R2。|  
-|[LinRegSlope &#40;MDX&#41;](../mdx/linregslope-mdx.md)|一组中，线性回归计算，并在回归行中，返回的值的斜率 y = ax + b。|  
-|[LinRegVariance &#40;MDX&#41;](../mdx/linregvariance-mdx.md)|一组中，线性回归计算，并返回与回归线，关联的方差 y = ax + b。|  
+|[LinRegSlope &#40;MDX&#41;](../mdx/linregslope-mdx.md)|线性回归的一组，并返回中回归线的斜率的值 y = ax + b。|  
+|[LinRegVariance &#40;MDX&#41;](../mdx/linregvariance-mdx.md)|对集进行线性回归计算，并返回与回归线，相关的方差 y = ax + b。|  
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|返回用 MDX 表达式对同一数据库中另一个指定的多维数据集求得的值。|  
 |[最大&#40;MDX&#41;](../mdx/max-mdx.md)|返回对集求值的数值表达式的最大值。|  
 |[中值&#40;MDX&#41;](../mdx/median-mdx.md)|返回对集求值的数值表达式的中值。|  
@@ -113,7 +113,7 @@ ms.locfileid: "34742006"
 |[预测&#40;MDX&#41;](../mdx/predict-mdx.md)|返回用数值表达式对数据挖掘模型求得的值。|  
 |[级别&#40;MDX&#41;](../mdx/rank-mdx.md)|返回指定元组在指定集中的排名（从 1 开始）。|  
 |[RollupChildren &#40;MDX&#41;](../mdx/rollupchildren-mdx.md)|使用指定的一元运算符，通过汇总指定成员的子成员的值，从而返回所生成的值。|  
-|[Stddev &#40;MDX&#41;](../mdx/stddev-mdx.md)|别名[Stdev &#40;MDX&#41;](../mdx/stdev-mdx.md)。|  
+|[标准偏差&#40;MDX&#41;](../mdx/stddev-mdx.md)|别名[Stdev &#40;MDX&#41;](../mdx/stdev-mdx.md)。|  
 |[总体标准偏差&#40;MDX&#41;](../mdx/stddevp-mdx.md)|别名[StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md)。|  
 |[Stdev &#40;MDX&#41;](../mdx/stdev-mdx.md)|返回数值表达式用无偏差总体公式对集求得的样本标准偏差。|  
 |[StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md)|返回数值表达式用有偏差总体公式对集求得的总体标准偏差。|  
@@ -131,7 +131,7 @@ ms.locfileid: "34742006"
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|返回通过将计算成员添加到指定集而生成的集。|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|返回包含所指定维度、层次结构或级别的所有成员（包括计算成员）的集。|  
-|[上级&#40;MDX&#41;](../mdx/ancestors-mdx.md)|返回由成员的指定级别或距离的所有祖先构成的集。|  
+|[祖先&#40;MDX&#41;](../mdx/ancestors-mdx.md)|返回由成员的指定级别或距离的所有祖先构成的集。|  
 |[祖先&#40;MDX&#41;](../mdx/ascendants-mdx.md)|返回指定成员的祖先集（包含该成员本身）。|  
 |[轴&#40;MDX&#41;](../mdx/axis-mdx.md)|返回轴中定义的集。|  
 |[BottomCount &#40;MDX&#41;](../mdx/bottomcount-mdx.md)|按升序对集进行排序，并返回指定数目的最小值元组。|  
@@ -141,7 +141,7 @@ ms.locfileid: "34742006"
 |[叉积&#40;MDX&#41;](../mdx/crossjoin-mdx.md)|返回一个或多个集的叉积。|  
 |[CurrentOrdinal &#40;MDX&#41;](../mdx/currentordinal-mdx.md)|返回迭代过程中集内的当前迭代数。|  
 |[后代&#40;MDX&#41;](../mdx/descendants-mdx.md)|返回成员在指定级别或距离上的后代集，可以选择包括或不包括其他级别的后代。|  
-|[非重复&#40;MDX&#41;](../mdx/distinct-mdx.md)|返回从指定集中删除了重复元组后得到的集。|  
+|[Distinct &#40;MDX&#41;](../mdx/distinct-mdx.md)|返回从指定集中删除了重复元组后得到的集。|  
 |[DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)|将某个集的成员深化到该集中所表示的最低级别的下一级，或者深化到该集中所表示的某一任意指定的成员级别的下一级。|  
 |[DrilldownLevelBottom &#40;MDX&#41;](../mdx/drilldownlevelbottom-mdx.md)|将集中某一指定级别上的最底层成员深化到下一个级别。|  
 |[DrilldownLevelTop &#40;MDX&#41;](../mdx/drilldownleveltop-mdx.md)|将集中某一指定级别上最顶端的成员深化到下一个级别。|  
@@ -161,11 +161,11 @@ ms.locfileid: "34742006"
 |[LastPeriods &#40;MDX&#41;](../mdx/lastperiods-mdx.md)|返回指定成员之前（包含该成员）的成员集。|  
 |[成员&#40;设置&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)|返回某个维度、级别或层次结构中的成员集。|  
 |[Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)|按照时间维度中的年级别的约束，从给定成员所在的级别返回一组同级成员，从第一个同级成员开始到给定成员为止。|  
-|[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|返回由 MDX 格式的字符串指定的成员组成的集。|  
+|[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|返回由 MDX 格式的字符串指定的成员的集。|  
 |[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)|以集的形式返回一个或多个集的叉积，不包括空元组和没有关联事实数据表数据的元组。|  
-|[顺序&#40;MDX&#41;](../mdx/order-mdx.md)|排列指定集的成员，可以选择保留或打乱原有的层次结构。|  
+|[订单&#40;MDX&#41;](../mdx/order-mdx.md)|排列指定集的成员，可以选择保留或打乱原有的层次结构。|  
 |[PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)|按照时间维度中的指定级别的约束，从给定成员所在的级别返回一组同级成员，从第一个同级成员开始到给定成员为止。|  
-|[Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)|为给定成员，与第一个同级的开始和结束与约束通过将给定成员属于同一级别返回一组同级成员*季度*时间维度中的级别。|  
+|[Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)|从与给定成员，从第一个同级成员开始和结尾的约束将给定成员相同的级别返回一组同级成员*季度*时间维度中的级别。|  
 |[同级&#40;MDX&#41;](../mdx/siblings-mdx.md)|返回指定成员的同级，包括该成员本身。|  
 |[StripCalculatedMembers &#40;MDX&#41;](../mdx/stripcalculatedmembers-mdx.md)|返回通过从指定的集中删除计算成员而生成的集。|  
 |[StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)|返回由 MDX 格式的字符串指定的集。|  
@@ -175,11 +175,11 @@ ms.locfileid: "34742006"
 |[TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)|按降序对集进行排序，并返回指定数目的最大值元素。|  
 |[TopPercent &#40;MDX&#41;](../mdx/toppercent-mdx.md)|按降序对集进行排序，并返回一个最大值元组集，该元组集的累积合计等于或小于指定的百分比。|  
 |[TopSum &#40;MDX&#41;](../mdx/topsum-mdx.md)|对集进行排序并返回累计合计至少达到指定值的最前面的元素。|  
-|[联合&#40;MDX&#41;](../mdx/union-mdx.md)|返回两个集的并集，可以选择保留重复项。|  
+|[Union &#40;MDX&#41;](../mdx/union-mdx.md)|返回两个集的并集，可以选择保留重复项。|  
 |[Unorder &#40;MDX&#41;](../mdx/unorder-mdx.md)|从指定集中删除任何强制排序。|  
 |[VisualTotals &#40;MDX&#41;](../mdx/visualtotals-mdx.md)|返回通过动态计算指定集内子成员的合计而生成的集，可以选择在得到的单元集内对父成员名称应用某种模式。|  
 |[Wtd &#40;MDX&#41;](../mdx/wtd-mdx.md)|按照时间维度中的周级别的约束，从给定成员所在的级别返回一组同级成员，从第一个同级成员开始到给定成员为止。|  
-|[Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)|为给定成员，与第一个同级的开始和结束与约束通过将给定成员属于同一级别返回一组同级成员*年*时间维度中的级别。|  
+|[Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)|从与给定成员，从第一个同级成员开始和结尾的约束将给定成员相同的级别返回一组同级成员*年*时间维度中的级别。|  
   
 ## <a name="string-functions"></a>字符串函数  
   
@@ -190,19 +190,19 @@ ms.locfileid: "34742006"
 |[生成&#40;MDX&#41;](../mdx/generate-mdx.md)|将一个集应用于另一个集中的每个成员，然后对得到的集求并集。 另外，此函数返回通过用字符串表达式对集求值而创建的串联字符串。|  
 |[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|返回由逻辑测试确定的两个值之一。|  
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|返回用 MDX 表达式对同一数据库中另一个指定的多维数据集求得的值。|  
-|[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|返回与指定成员对应的 MDX 格式的字符串。|  
+|[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|返回与指定成员对应的 MDX 格式字符串。|  
 |[名称&#40;MDX&#41;](../mdx/name-mdx.md)|返回维度、层次结构、级别或成员的名称。|  
-|[属性&#40;MDX&#41;](../mdx/properties-mdx.md)|返回一个包含成员属性值的字符串，或返回一个强类型值。|  
+|[属性 (MDX)](../mdx/properties-mdx.md)|返回一个包含成员属性值的字符串，或返回一个强类型值。|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|返回与指定集对应的 MDX 格式的字符串。|  
-|[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|返回与指定元组对应的 MDX 格式的字符串。|  
-|[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|返回指定的维度、层次结构、级别或成员的唯一名称。|  
+|[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|返回与指定元组对应的 MDX 格式字符串。|  
+|[唯一名称&#40;MDX&#41;](../mdx/uniquename-mdx.md)|返回指定的维度、层次结构、级别或成员的唯一名称。|  
 |[用户名&#40;MDX&#41;](../mdx/username-mdx.md)|返回当前连接的域名和用户名。|  
   
 ## <a name="subcube-functions"></a>子多维数据集函数  
   
 |函数|Description|  
 |--------------|-----------------|  
-|[这&#40;MDX&#41;](../mdx/this-mdx.md)|返回当前的子多维数据集。|  
+|[此 (MDX)](../mdx/this-mdx.md)|返回当前的子多维数据集。|  
 |[离开&#40;MDX&#41;](../mdx/leaves-mdx.md)|返回指定维度、成员或元组中的叶成员集。|  
   
 ## <a name="tuple-functions"></a>元组函数  
@@ -211,7 +211,7 @@ ms.locfileid: "34742006"
 |--------------|-----------------|  
 |[当前&#40;MDX&#41;](../mdx/current-mdx.md)|返回迭代过程中集内的当前元组。|  
 |[项&#40;元组&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|返回某个集中的元组。|  
-|[根&#40;MDX&#41;](../mdx/root-mdx.md)|返回组成的元组**所有**多维数据集、 维度或元组中每个属性层次结构中的成员。|  
+|[根&#40;MDX&#41;](../mdx/root-mdx.md)|返回一个元组组成**所有**中每个属性层次结构中多维数据集、 维度或元组的成员。|  
 |[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md)|返回由 MDX 格式的字符串指定的元组。|  
   
 ## <a name="other-functions"></a>其他函数  
@@ -221,6 +221,6 @@ ms.locfileid: "34742006"
 |[错误&#40;MDX&#41;](../mdx/error-mdx.md)|引发错误，根据需要可以选择提供指定的错误消息。|  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 语言参考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)  
   
   

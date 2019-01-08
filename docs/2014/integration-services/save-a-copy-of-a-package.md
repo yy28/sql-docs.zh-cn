@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532177"
 ---
 # <a name="save-a-copy-of-a-package"></a>保存一个包副本 
   此过程介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 **msdb** 数据库。 指定保存包副本的位置时，也能够更新包的名称。  
@@ -46,7 +46,7 @@ ms.locfileid: "48193407"
   
 5.  如果保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请指定身份验证类型；如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，还请提供用户名和密码。  
   
-6.  若要指定包路径，请键入路径或单击浏览按钮 **(…)** ，以指定包的位置。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
+6.  若要指定包路径，请键入路径或单击浏览按钮 (…)，以指定包的位置。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
   
      如果选择 **SQL Server** 作为 **“包路径”** 选项，则包路径由 **msdb** 中的逻辑文件夹和包名称构成。 例如，如果包 DownloadMonthlyData 与 MSDB 文件夹中的 Finance 文件夹（ **msdb**中的根逻辑文件夹的默认名称）相关联，则名为 DownloadMonthlyData 的包的包路径为 MSDB/Finance/DownloadMonthlyData  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48193407"
   
 7.  查看包保护级别。  
   
-8.  还可以单击“保护级别”旁边的 **(…)** 浏览按钮，更改保护级别。  
+8.  还可以单击“保护级别”旁边的 (…) 浏览按钮，更改保护级别。  
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193407"
 9. 单击“确定” 。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;包](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)   
  [配置 Integration Services 服务&#40;SSIS 服务&#41;](service/integration-services-service-ssis-service.md)  
   
   

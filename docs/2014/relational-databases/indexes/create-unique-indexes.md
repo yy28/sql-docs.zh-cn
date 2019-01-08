@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35ef352eda0d712098ce0453caccf4bc2422b4b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540914"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的唯一索引。 唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 创建 UNIQUE 约束和创建与约束无关的唯一索引并没有明显的区别。 进行数据验证的方式相同，而且对于唯一索引是由约束创建的还是手动创建的，查询优化器并不加以区分。 但是，创建列的 UNIQUE 约束会使索引目标更清晰。 有关 UNIQUE 约束的详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "48122617"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建表的唯一索引，使用：**  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48122617"
   
 7.  在主网格中，在“(常规)”下，选择“类型”，然后从列表中选择“索引”。  
   
-8.  选择“列”，然后单击省略号 **(…)**。  
+8.  选择“列”，然后单击省略号 (…)。  
   
 9. 在 **“索引列”** 对话框中的 **“列名”** 下，选择要编制索引的列。 最多可选择 16 列。 为获得最佳的性能，请只为每个索引选择一列或两列。 对于所选的每一列，指定索引是以升序还是以降序来排列此列的值。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48122617"
   
 11. 在主网格中，在“(常规)”下，选择“是唯一的”，然后从列表中选择“是”。  
   
-12. 可选：在主网格中，在 **“表设计器”** 下，选择 **“忽略重复键”** ，然后从列表中选择 **“是”** 。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
+12. 可选:在主网格中下,**表设计器**，选择**忽略重复键**，然后选择**是**从列表中。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
   
 13. 单击 **“关闭”**。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "48122617"
   
 6.  选中 **“唯一”** 复选框。  
   
-7.  在 **“索引键列”** 下，单击 **“添加…”**。  
+7.  在“索引键列”下，单击“添加…”。  
   
 8.  在“从table_name选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48122617"
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>创建表的唯一索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

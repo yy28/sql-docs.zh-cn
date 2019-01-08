@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086487"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815569"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
   通过使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器，您可以通过以下列方式监视事务复制和合并复制性能：  
@@ -76,7 +75,7 @@ ms.locfileid: "48086487"
   
     |很好|好|一般|较差|严重|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   对于合并复制，性能质量独立于任意一个阈值（行处理阈值确定是否在 **“状态”** 列中显示 **“‘严重’状态下的性能”** 值）。 性能质量通过将具有相同连接类型（拨号或 LAN）的发布的单个订阅性能与订阅的平均历史性能进行比较来确定。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果包含 50 或 50 多次更改的同步不到五次，或最新同步中的更改少于 50 次，复制监视器将不显示值。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086487"
   
     |很好|好|一般|较差|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  如何查看订阅信息的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   

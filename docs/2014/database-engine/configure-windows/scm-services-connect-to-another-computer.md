@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
@@ -13,12 +12,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fecf123299d81f1d1b39c62c7ab1ecb2368f98dd
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072091"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639294"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>连接到其他计算机（SQL Server 配置管理器）
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中连接到其他计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。  
@@ -64,7 +63,7 @@ ms.locfileid: "49072091"
   
 10. 右键单击“SQL Server 配置管理器” ，再单击“从此处新建窗口” 。  
   
-11. 上**窗口**菜单上，单击**控制台根节点**，若要切换回第一个窗口，然后删除该窗口。  
+11. 在“窗口”菜单上，单击“控制台根节点”，切换回第一个窗口，并删除该窗口。  
   
 12. 上**文件**菜单上，单击**另存为**，并将该文件保存在所需的文件夹，使用的相应文件名`.msc`文件扩展名。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], backup compression default option
@@ -14,12 +13,12 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f3bafe77bc1b7a31827c9db1c5eb65ac4af125b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7907a8e1187169c8c7581e3ad5f81eef2dde15b2
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059267"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640728"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>查看或配置 backup compression default 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看或配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] backup compression default [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **backup compression default** 选项确定默认情况下服务器实例是否创建压缩的备份。 当安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时， **backup compression default** 选项关闭。  
@@ -32,7 +31,7 @@ ms.locfileid: "48059267"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **查看或配置 backup compression default 选项，使用：**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48059267"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置备份压缩默认选项之后](#FollowUp)  
+-   **跟进：**[在配置 backup compression default 选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

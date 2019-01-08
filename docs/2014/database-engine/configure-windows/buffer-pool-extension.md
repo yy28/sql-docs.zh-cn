@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21e055290abaf9edd4fffaa6b2179af70915086e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a48a5cb8b5fb317c40a2106b4ee433e49188d783
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063297"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640648"
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中引入的缓冲池扩展提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 缓冲池的非易失性随机存取内存（即固态硬盘）扩展的无缝集成，从而显著提高 I/O 吞吐量。 并非每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本均提供了缓冲池扩展。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "48063297"
   
  数据和索引页从磁盘读入缓冲池，修改后的页（也称为脏页）写回磁盘。 服务器和数据库检查点上的内存压力会造成缓冲区缓存中的热（活动）脏页被逐出缓存并写入机械磁盘，然后又读回到缓存中。 这些 I/O 操作通常是 4 到 16 KB 数据的小型随机读和写操作。 小型随机 I/O 模式会导致频繁搜索、机械磁盘臂争用、I/O 滞后时间延长以及系统的总 I/O 吞吐量减少。  
   
- 解决这些 I/O 瓶颈的典型方法是添加更多 DRAM，或者添加高性能 SAS 主轴。 虽然这些方法很有用，但它们有重大缺点：DRAM 比数据存储驱动器更昂贵，增加主轴数会增加硬件购置的资本支出，并且功耗和部件故障概率都会提高，从而增加运行成本。  
+ 解决这些 I/O 瓶颈的典型方法是添加更多 DRAM，或者添加高性能 SAS 主轴。 虽然这些方法很有用，但它们具有明显缺点：DRAM 比数据存储驱动器更昂贵，增加主轴数会增加硬件购置的资本支出，并且功耗和部件故障概率都会提高，从而增加运行成本。  
   
  缓冲池扩展功能通过非易失性存储器（通常为 SSD）来扩展缓冲池缓存。 由于这种扩展，缓冲池可以容纳更大的数据库工作集，可强制在 RAM 和 SSD 之间对 I/O 分页。 这会有效地将小型随机 I/O 从机械磁盘卸载到固态硬盘。 由于固态硬盘滞后时间短且具有更佳随机 I/O 性能，缓冲池扩展可显著提高 I/O 吞吐量。  
   

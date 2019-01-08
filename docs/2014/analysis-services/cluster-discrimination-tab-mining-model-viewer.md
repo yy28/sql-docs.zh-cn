@@ -13,17 +13,17 @@ ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc00f10403f748db0802f288ca66e6582429155c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075057"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400370"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>“分类对比”选项卡（挖掘模型查看器）
   可以使用 **“分类对比”** 选项卡，对聚类分析模型中的两个现有分类进行比较。 可以查看属性和值的各种组合在分类中的显示方式。  
   
- **有关详细信息，请参阅** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)和[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **有关详细信息：**[Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)，[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -48,12 +48,12 @@ ms.locfileid: "48075057"
 |-|-|  
 |**变量**|挖掘模型中的属性。|  
 |**值**|在 **“变量”** 中选择的属性的值。|  
-|**倾向于\<聚类 1 >**|左侧的条形图表示所选属性-值对代表“群集 1”中的所选群集的概率。 可以将鼠标指针悬停在条形上方来查看以百分比表示的值。 请注意，即使值为零，也并不意味着分类中必定会缺少属性-值，只不过分布会极力地倾向于一个分类而不顾及其他分类。|  
+|**倾向于\<聚类 1 >**|左侧的条形图表示所选属性-值对代表“群集 1”中的所选群集的概率。 可以将鼠标指针悬停在条形上方来查看以百分比表示的值。 请注意，即使值为零，它并不意味着属性值中必定会缺少该群集，只需分发强烈优于另一个有助于一个群集。|  
 |**倾向于\<分类 2 >**|右侧的条形图表示所选属性-值对代表“群集 2”中的所选群集的概率。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

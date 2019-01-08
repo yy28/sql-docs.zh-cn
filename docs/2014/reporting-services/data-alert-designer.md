@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518006"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
   使用数据警报设计器创建和编辑数据警报定义。 警报定义是元数据的一个集合，包括您感兴趣的报表数据、报表数据必须满足才能创建数据警报实例和发送数据警报消息的规则、警报消息的收件人等。  
@@ -76,9 +76,9 @@ ms.locfileid: "49120114"
 ### <a name="rules-and-clauses"></a>规则和子句  
  数据更改的作用域以及警报规则中的规则定义触发警报的数据更改。 数据更改的作用域如下：  
   
--   **任何数据具有**— 数据中至少一个值符合该条件指定的规则。  
+-   **任何数据具有** - 数据中至少一个值符合该条件指定的规则。  
   
--   **没有任何数据具有**— 数据中没有任何值符合该条件指定的规则。  
+-   **没有任何数据具有** - 数据中没有任何值符合该条件指定的规则。  
   
  一个规则可包含零个、一个或多个子句。 多个规则由 AND 逻辑运算符组合在一起。 如果该列具有字符串数据类型，则规则可包含使用 OR 运算符组合的多个子句。 下面的内容显示仅使用一个子句的基本规则、使用 AND 运算符组合的多个规则、使用一个或多个 OR 子句的多个规则。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "49120114"
  有关如何生成电子邮件的详细信息，请参阅 [Reporting Services 数据警报](../ssms/agent/alerts.md)。  
   
 ##  <a name="CreateAlert"></a> 创建数据警报定义  
- 如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果报表已参数化，您可能需要使用不同的参数值以确保数据运行报表显示在报表中感兴趣。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
+ 如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果对此报表进行参数化，你可能需要使用不同的参数值来运行此报表，从而确保你感兴趣的数据出现在此报表中。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
   
  ![从 SharePoint 库打开警报设计器](media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   

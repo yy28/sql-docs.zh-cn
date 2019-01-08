@@ -11,28 +11,28 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155447"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617137"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>将报表服务器内容类型添加到库中（SharePoint 集成模式下的 Reporting Services）
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供用于管理共享的数据源 (.rsds) 文件、 报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件的预定义的 SharePoint 内容类型。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供预定义的 SharePoint 内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  若要将内容类型添加到库，您必须为站点管理员或拥有“完全控制”级权限。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型和内容类型管理将自动启用从下列选项创建的现有网站集中的所有文档库**商业智能中心**站点模板。  
+ 将自动在所有文档库中为从以下“商业智能中心” [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]**站点模板类型创建的现有站点集启用** 内容类型和内容类型管理。  
   
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 集成之后创建的站点将不启用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型。  
   
 > [!TIP]  
->  如果有**不**内容类型的库，首先启用内容类型管理，然后启用以前配置[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型。 请参阅在单个文档库中启用内容类型管理的过程。  
+>  如果您 **不** 具有为某个库以前配置的内容类型，则首先启用内容类型的管理，然后启用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型。 请参阅在单个文档库中启用内容类型管理的过程。  
   
- **短视频：** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
+ **简短视频：**[(SSRS)启用在 SharePoint2010.wmv 中的内容类型](http://www.youtube.com/watch?v=yqhm3DrtT1w)(http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
   
  **本主题内容：**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48155447"
   
 5.  刷新浏览器，然后为 **“报表服务器集成功能”** 单击 **“激活”**。  
   
-     ![rs_reportserver_integration_deactive](media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+    ![停用](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> 为单个文档库启用内容类型管理 (SharePoint 2013)  
   
@@ -113,11 +113,11 @@ ms.locfileid: "48155447"
   
     -   外接程序已安装，但网站集功能“报表服务器集成功能”未处于活动状态。 在“站点设置” 中验证网站集功能。  
   
-    -   所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]内容类型已添加到库。 如果所有内容类型都是某个库的一部分，则从 **“添加内容类型”** 页中删除该组。 如果您删除一个或多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型，则组 **“SQL Server Reporting Services 内容类型”** 将在 **“添加内容类型”** 页上可见。  
+    -   所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型都已添加到该库中。 如果所有内容类型都是某个库的一部分，则从 **“添加内容类型”** 页中删除该组。 如果您删除一个或多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型，则组 **“SQL Server Reporting Services 内容类型”** 将在 **“添加内容类型”** 页上可见。  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 为单个文档库启用内容类型管理 (SharePoint 2010)  
   
-1.  打开要为其启用多个内容类型的库。 在库的菜单栏上，应能看到以下菜单项： **“新建”**、 **“上载”**、 **“操作”** 和 **“设置”**。 如果未看到 **“设置”**，则说明您没有添加内容类型的权限。  
+1.  打开要为其启用多个内容类型的库。 在库的菜单栏上，应能看到以下菜单：**新**，**上传**，**操作**，并且**设置**。 如果未看到 **“设置”**，则说明您没有添加内容类型的权限。  
   
 2.  在 **“库工具”** 功能区上单击 **“库”**。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48155447"
 4.  单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [SharePoint 站点和列表权限参考，为报表服务器项](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [报表服务器项的 SharePoint 站点和列表权限参考](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [启动报表生成器&#40;报表生成器&#41;](report-builder/start-report-builder.md)  
   
   

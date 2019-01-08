@@ -12,12 +12,12 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512950"
 ---
 # <a name="creating-test-cases-oracletosql"></a>创建测试用例 (OracleToSQL)
 使用测试用例向导来创建测试。 此向导允许您通过选择测试并验证对象和指定的测试参数创建测试用例。  

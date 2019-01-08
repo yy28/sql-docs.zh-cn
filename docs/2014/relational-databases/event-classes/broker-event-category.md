@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 602113da86b3d8ffdc79484b35dab59749844a01
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145642"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784569"
 ---
 # <a name="broker-event-category"></a>Broker 事件类别
   **Broker** 事件类别包含一般的 Service Broker 事件。  
@@ -44,7 +43,7 @@ ms.locfileid: "50145642"
   
  还为 Service Broker 提供了两个安全审核事件。 有关这些事件的详细信息，请参阅 [Audit Broker Login 事件类](audit-broker-login-event-class.md) 和 [Audit Broker Conversation 事件类](audit-broker-conversation-event-class.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [“安全审核”事件类别](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

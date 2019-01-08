@@ -10,12 +10,12 @@ ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48166ece4bdbfb8472890c61ee4a33e3ce4243d0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 26bb897211866e4bec0c027c1f7986919589038d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032224"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519376"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 更新后升级 SQLCLR 程序集
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是引用 Microsoft .NET Framework 4 程序集的 SQL 公共语言运行时 (SQLCR) 例程的集合。 如果在计算机上安装的任何 .NET Framework 更新影响任何此类引用的 .NET Framework 程序集，则将导致全局程序集缓存 (GAC) 中的程序集的模块版本 ID (MVID) 发生更改。 这样会导致 GAC 中的引用程序集与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的程序集之间的 MVID 不匹配。  
@@ -23,12 +23,12 @@ ms.locfileid: "51032224"
  如果 .NET Framework 更新要求您重新启动 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机，则受到影响的 SQLCLR 程序集将自动升级，以便修复在重新启动 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机时产生的 MVID 不匹配问题。 但是，对于不要求您重新启动 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机的 .NET Framework 更新，由于在您尝试使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 连接到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]时程序集的 MVID 中的不匹配，将出现错误：  
   
 ```  
-A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe –upgradedlls.  
+A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe -upgradedlls.  
 ```  
   
  若要修复此问题，必须升级 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中受影响的 SQLCLR 程序集。 为此，您可以使用 **upgradedlls** 命令行参数运行 DQSInstaller.exe 文件，以跳过重新创建 DQS 数据库，而只升级受影响的程序集。 这样可确保保留您的知识库、数据质量项目以及 DQS 中的任何其他数据。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
   
 -   您必须作为 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机上 Administrators 组的成员登录。  
   

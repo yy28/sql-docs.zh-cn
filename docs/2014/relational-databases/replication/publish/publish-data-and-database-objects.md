@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -42,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777129"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
   创建发布时，可以选择希望发布的表和其他数据库对象。 您可以使用复制来发布下列数据库对象。  
@@ -58,7 +57,7 @@ ms.locfileid: "48227107"
 |已分区表|X|X|  
 |存储过程 - 定义（[!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR）|X|X|  
 |存储过程 - 执行（[!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR）|X|否|  
-|视图|X|X|  
+|Views|X|X|  
 |索引视图|X|X|  
 |作为表的索引视图|X|否|  
 |用户定义类型 (CLR)|X|X|  
@@ -198,7 +197,7 @@ ms.locfileid: "48227107"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过“项目属性 - \<项目>”**** 对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>将数据发布到运行 SQL Server 早期版本的订阅服务器  
   
@@ -219,7 +218,7 @@ ms.locfileid: "48227107"
   
 -   如果在多个支持排队更新订阅的事务发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |“属性”|sp_addarticle 中的参数|  
+    |属性|sp_addarticle 中的参数|  
     |--------------|---------------------------------|  
     |标识范围管理|**@auto_identity_range** （已弃用）和 **@identityrangemangementoption**|  
     |发布服务器标识范围|**@pub_identity_range**|  
@@ -230,7 +229,7 @@ ms.locfileid: "48227107"
   
 -   如果在多个合并发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |“属性”|sp_addmergearticle 中的参数|  
+    |属性|sp_addmergearticle 中的参数|  
     |--------------|--------------------------------------|  
     |列跟踪|**@column_tracking**|  
     |架构选项|**@schema_option**|  

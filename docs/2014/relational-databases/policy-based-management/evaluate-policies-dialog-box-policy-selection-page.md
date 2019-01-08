@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.runnow.f1
@@ -12,12 +12,12 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3c45cc239c1c8fa3539b168ab3f322cd757e25f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780949"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>“评估策略”对话框，“策略选择”页
   此对话框用于评估基于策略的管理策略。 选择 **“评估结果”** 页后，可以将策略应用于目标集中不符合这些策略的项。  
@@ -32,13 +32,13 @@ ms.locfileid: "48151577"
  **Server**  
  选择此选项可连接到包含所需策略的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。  
   
- **策略: 策略**  
+ **策略：策略**  
  单击可打开指定策略的“策略”对话框。  
   
- **策略: 类别**  
+ **策略：类别**  
  策略的类别。 此框是只读的。  
   
- **策略: 方面**  
+ **策略：分面**  
  策略所实现的方面。 此框是只读的。  
   
  **评估**  

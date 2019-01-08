@@ -14,12 +14,12 @@ ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37d8d67300ec29a2b346f5f6b958c1955d08db0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256e964e556421db62dc8f52fdc6bc759c3a200a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792165"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536862"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo（文本文件驱动程序）
 > [!NOTE]  
@@ -29,9 +29,9 @@ ms.locfileid: "47792165"
   
 -   SQL_FILE_NOT_SUPPORTED-驱动程序不是单个层驱动程序。  
   
--   SQL_FILE_TABLE — 单层驱动程序将视为表中的数据源的文件。  
+-   SQL_FILE_TABLE-单层驱动程序将视为表中的数据源的文件。  
   
--   SQL_FILE_QUALIFIER — 单层驱动程序将视为一个限定符的数据源中的文件。  
+-   SQL_FILE_QUALIFIER-单层驱动程序将视为一个限定符的数据源中的文件。  
   
  ODBC 驱动程序返回 SQL_FILE_TABLE Textdriver，因为每个文件是一个表。  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524471"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform system 防病毒软件
 如果你的数据中心需要防病毒软件，使用这些准则在分析平台系统上安装防病毒软件。 我们建议不要安装防病毒软件，除非它是数据中心的硬性要求。  
@@ -46,13 +46,13 @@ ms.locfileid: "51699109"
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>虚拟机 (Vm) 的排除列表  
 若要在 Vm 上安装防病毒软件，排除以下目录和文件的列表。 这些不应通过防病毒软件扫描。  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01**和 ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01**并 **_appliance_domain_-AD02**  
   
 -   无限制  
   
@@ -62,15 +62,15 @@ ms.locfileid: "51699109"
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_-VMM**  
   
 -   无限制  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_-WDS**  
   
 -   无限制  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

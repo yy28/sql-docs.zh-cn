@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512246"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。内容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,8 +46,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
- **SELECT FROM** *\<模型 > * * *。内容** 语句可以返回特定于每个算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 可以使用**SELECT FROM\<模型 >。内容**语句来返回模型的 NODE_RULE 列中的值。  
+## <a name="remarks"></a>备注  
+ **SELECT FROM** _\<模型 >_**。内容**语句可以返回特定于每个算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 可以使用**SELECT FROM\<模型 >。内容**语句来返回模型的 NODE_RULE 列中的值。  
   
  下表列出了挖掘模型内容中包含的列。  
   
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|与节点相对应的属性的名称。|  
 |NODE_NAME|节点的名称。|  
 |NODE_UNIQUE_NAME|节点在模型中的唯一名称。|  
-|NODE_TYPE|表示节点类型的整数。 实例时都提供 SQL Server 登录名。|  
+|NODE_TYPE|表示节点类型的整数。 .|  
 |NODE_GUID|节点 GUID。 如果没有 GUID，则为 NULL。|  
 |NODE_CAPTION|与节点关联的标签或标题， 主要用于显示目的。 如果不存在标题，则返回 NODE_NAME。|  
 |CHILDREN_CARDINALITY|节点所具有的子节点的数目。|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  预期的结果：  
   
- 由于该模型是一个决策树模型，所以模型父节点的后代中包含一个边际统计信息节点、一个表示可预测属性的节点以及多个包含输入属性和值的节点。 有关详细信息，请参阅[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 由于该模型是一个决策树模型，所以模型父节点的后代中包含一个边际统计信息节点、一个表示可预测属性的节点以及多个包含输入属性和值的节点。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
 ## <a name="using-the-flattened-keyword"></a>使用 FLATTENED 关键字  
  挖掘模型内容常常将模型的相关重要信息包含在嵌套表列中。 您可以使用 FLATTENED 关键字，从嵌套表列中检索数据，而无需使用支持分层行集的提供程序。  
@@ -121,9 +121,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|@shouldalert|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
  下面的示例演示如何使用嵌套 select 语句，仅从嵌套表返回部分列。 您可以通过对嵌套表的表名使用别名来简化显示，如下所示。  
   
@@ -137,11 +137,11 @@ WHERE NODE_TYPE = 26
   
  示例结果：  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|  
+|TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>请参阅  
  [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   

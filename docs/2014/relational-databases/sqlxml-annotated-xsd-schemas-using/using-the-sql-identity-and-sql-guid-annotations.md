@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:guid
@@ -25,12 +23,12 @@ ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40cfd0a589682f9c9a07fc4db1bb62f2e934ada7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb953042707054a7dbfdee697b986e7e65f7059b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786179"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 批注
   您可以指定`sql:identity`并`sql:guid`映射到数据库列中的任何节点上的 XSD 架构中的批注[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 updategram 格式支持 `updg:at-identity` 和 `updg:guid` 属性，而 DiffGram 格式不支持这些属性。 `updg:at-identity` 属性定义在更新 IDENTITY 类型列时的行为。 `updg:guid` 属性使您可以获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 GUID 值，并将其用于 updategram 中。 有关详细信息和工作示例，请参阅[使用 XML Updategram 插入数据&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  
@@ -42,7 +40,7 @@ ms.locfileid: "48061477"
  可以针对复杂内容元素定义 `sql:identity` 和 `sql:guid` 批注。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 批注  
- 您可以在映射到 IDENTITY 类型的数据库列的任何节点上的 XSD 架构中指定 `sql:identity` 批注。 为该批注指定的值定义如何更新 IDENTITY 类型的列（通过使用 updategram 中提供的值来修改列，或者通过忽略该值而针对该列采用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的值）。  
+ 您可以在映射到 IDENTITY 类型的数据库列的任何节点上的 XSD 架构中指定 `sql:identity` 批注。 为此批注指定的值定义如何更新 IDENTITY 类型的列 (通过使用在 updategram 中提供的值来修改列或通过在这种情况下忽略该值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-生成的值用于此列)。  
   
  可以为 `sql:identity` 批注分配两个值：  
   

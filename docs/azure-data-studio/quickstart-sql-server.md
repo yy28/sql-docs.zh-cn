@@ -1,7 +1,8 @@
 ---
-title: 快速入门：使用Azure Data Studio连接和查询SQL Server |Microsoft Docs
+title: 快速入门：连接和查询 SQL Server
+titleSuffix: Azure Data Studio
 description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 SQL Server 并运行查询
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356088"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030281"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接和查询 SQL Server
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 SQL Server 连接和查询 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门显示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到SQL Server，然后使用Transact-SQL（T-SQL）语句创建[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程中使用的*TutorialDB*。
 
 ## <a name="prerequisites"></a>必要条件
@@ -44,10 +45,10 @@ ms.locfileid: "49356088"
  
     - **服务器名称：** localhost
     - **身份验证类型：** SQL 登录名  
-    - **用户名：** SQL 服务器用户名  
+    - **用户名：** SQL Server 的用户名称  
     - **密码：** SQL 服务器的密码  
     - **数据库名称：** 将此字段留空 
-    - **服务器组：** \<默认\>  
+    - **服务器组：**\<默认\>  
 
    ![新连接屏幕](media/quickstart-sql-server/new-connection-screen.png)
 

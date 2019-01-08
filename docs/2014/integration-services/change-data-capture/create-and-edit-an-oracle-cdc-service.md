@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - createSrv
@@ -13,12 +12,12 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2de12fd6ada3fc70511ebc49f85da30306e7cac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150397"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785459"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
   您从 CDC 服务配置控制台创建和编辑新的 Oracle CDC Windows 服务。  
@@ -37,7 +36,7 @@ ms.locfileid: "48150397"
 > [!NOTE]  
 > 在编辑服务时，此选项不可用。 不能更改已存在的 Windows 服务的名称。  
   
- **Description**  
+ **说明**  
  键入有助于标识该服务的说明。  
   
  **服务帐户**  
@@ -57,14 +56,14 @@ ms.locfileid: "48150397"
   
      可以将本地或域 Windows 帐户用于该服务帐户。 在此情况下，必须为该帐户输入 **“密码”** 。 该帐户可以用于本地主机或域帐户。 请确保在 Windows 控制面板中使用本地服务更改帐户时更新密码。  
   
- **服务器名称**：选择要连接到的目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（例如 \\<computer_name>\\<instance_name>\\）。 默认情况下，显示上次连接到的服务器实例。  
+ **服务器名称**:选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到实例 (例如，  **\\ \\< 计算机名 >\\< 实例名称 >**)。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
  选择下列选项之一：  
   
--   **Windows 身份验证**：如果您选择此选项，则 Oracle CDC 服务将使用服务帐户标识连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例正在不同的计算机上运行，则必须将 Windows 身份验证用于域帐户。  
+-   **Windows 身份验证**:如果选择此选项，则 Oracle CDC 服务连接到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的服务帐户标识。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例正在不同的计算机上运行，则必须将 Windows 身份验证用于域帐户。  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须为您要使用的 **登录名键入** “用户名” **和** “密码” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 Oracle CDC 服务在连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时使用这些凭据。  
+-   **SQL Server 身份验证**:如果选择此选项，则必须键入**用户名**并**密码**为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]你想要使用的登录名。 Oracle CDC 服务在连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时使用这些凭据。  
   
  Oracle CDC 服务使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名仅需是公共固定服务器角色的成员，无需其他权限。 在添加了新的 Oracle CDC 实例后，该登录名将获取对关联的 **CDC 数据库的** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限。  
   
@@ -75,13 +74,13 @@ ms.locfileid: "48150397"
  **选项**  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
--   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
+-   **连接超时**:键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
   
--   **执行超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
+-   **执行超时值**:键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
--   **加密连接**：选择 **“加密连接”** 将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间的通信。  
+-   **对连接进行加密**:选择**加密连接**Oracle CDC 服务和目标之间的通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的加密的连接。  
   
--   **高级**：根据需要键入任何其他连接属性。  
+-   **高级**：如有必要，请键入任何其他连接属性。  
   
  **主密码**  
  输入 Oracle CDC Windows 服务用来保护 Oracle 日志挖掘凭据的密码。  

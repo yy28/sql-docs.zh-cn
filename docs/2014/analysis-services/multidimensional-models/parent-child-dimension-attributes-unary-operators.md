@@ -15,12 +15,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e69e7f66b633a218ad5a2fb77cd44047c9810ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544391"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>父子维度中的一元运算符
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包含父子关系的维度中，可以为父属性的所有非计算成员指定将确定其自定义汇总的一元（或自定义汇总）运算符列。 计算出父成员的值后，一元运算符就将应用于成员。 父属性中的 **UnaryOperatorColumn** (**Usage**=Parent) 指定了数据源视图中包含一元运算符的表列。 存储在此列中的自定义汇总运算符的值将应用于属性的每个成员。  
@@ -34,7 +34,7 @@ ms.locfileid: "48131599"
 |一元运算符|Description|  
 |--------------------|-----------------|  
 |+（加号）|成员的值将添加到在该成员之前发生的同级成员的聚合值中。 如果没有为属性定义一元运算符列，那么，这是默认运算符。|  
-|-（减号）|从成员之前发生的同级成员的聚合值中减去该成员的值。|  
+|-（负号）|从成员之前发生的同级成员的聚合值中减去该成员的值。|  
 |*（星号）|成员的值乘以在该成员之前发生的同级成员的聚合值。|  
 |/（斜杠）|成员的值除以在该成员之前发生的同级成员的聚合值。|  
 |~（代字号）|忽略成员的值。|  

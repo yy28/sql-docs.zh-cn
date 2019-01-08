@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206527"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515448"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>创建预测（数据挖掘基础教程）
   已测试挖掘模型的准确性，并决定你感到满意结果后，您然后可以在使用预测查询生成器来生成预测**挖掘模型预测**对数据挖掘模型中的选项卡设计器。  
@@ -157,7 +157,7 @@ ms.locfileid: "48206527"
   
         2.  键入将包含查询结果的表的名称。   
   
-        3.  使用选项，**添加到数据源视图**，若要创建表，然后将其添加到现有的数据源视图。 如果您想在同一数据源视图中保留模型的所有相关表（如定型数据、预测源数据和查询结果），此选项很有用。  
+        3.  使用选项，**添加到数据源视图**，若要创建表，然后将其添加到现有的数据源视图。 这是如果你想要保留所有相关的表模型，如定型数据、 预测源数据和查询结果-在同一数据源视图很有用。  
   
         4.  使用选项，**覆盖如果存在**，若要使用的最新结果更新现有的表。  
   

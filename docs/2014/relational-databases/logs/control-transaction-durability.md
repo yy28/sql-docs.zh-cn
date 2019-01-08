@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - delayed durability
@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147158"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818349"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作迟缓提交）。  
@@ -91,14 +91,14 @@ ms.locfileid: "48147158"
  您作为 DBA，可以控制用户是否可通过以下语句对数据库使用延迟事务持续性。 您必须使用 ALTER DATABASE 来设置延迟持续性设置。  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
  [默认] 使用此设置时，不管提交级别设置如何 (DELAYED_DURABILITY=[ON | OFF])，对数据库提交的所有事务都是完全持久事务。 无需更改和重新编译存储过程。 这样能确保任何数据都不会因延迟持续性面临风险。  
   
  `ALLOWED`  
- 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { *OFF* | ON }。 有关详细信息，请参阅 [原子块级别控制 - 本机编译存储过程](control-transaction-durability.md#compiledproccontrol) 和 [提交级别控制 – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) 。  
+ 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }。 有关详细信息，请参阅 [原子块级别控制 - 本机编译存储过程](control-transaction-durability.md#compiledproccontrol)和[提交级别控制 – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol)。  
   
  `FORCED`  
  使用此设置，对数据库提交的每个事务都是延迟持久事务。 无论事务指定完全持久 (DELAYED_DURABILITY = OFF) 还是不进行任何指定，事务都是延迟持久事务。 当数据库适合使用延迟事务持续性，并且您不希望更改任何应用程序代码时，此设置很有用。  
@@ -119,14 +119,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **示例代码：**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
@@ -138,7 +138,7 @@ END
 |`DELAYED_DURABILITY = OFF`|原子块启动新的完全持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|  
 |`DELAYED_DURABILITY = ON`|原子块启动新的延迟持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|  
   
-###  <a name="bkmk_T-SQLControl"></a> 提交级别控制 –[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+###  <a name="bkmk_T-SQLControl"></a> 提交级别控制 -[!INCLUDE[tsql](../../includes/tsql-md.md)]  
  COMMIT 语法已扩展，您可以强制实施延迟事务持续性。 如果 DELAYED_DURABILITY 在数据库级别设置为 DISABLED 或 FORCED（请参阅上文），则忽略此 COMMIT 选项。  
   
 ```tsql  
@@ -159,8 +159,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` 数据库级事务。|事务是完全持久事务。|事务是完全持久事务。|事务是延迟持久事务。|  
 |`DELAYED_DURABILITY = ON` 数据库级事务。|事务是完全持久事务。|事务是延迟持久事务。|事务是延迟持久事务。|  
-|`DELAYED_DURABILITY = OFF` 跨数据库或分布式的事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
-|`DELAYED_DURABILITY = ON` 跨数据库或分布式的事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
+|`DELAYED_DURABILITY = OFF` 跨数据库或分布式事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
+|`DELAYED_DURABILITY = ON` 跨数据库或分布式事务。|事务是完全持久事务。|事务是完全持久事务。|事务是完全持久事务。|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>如何强制执行事务日志刷新  
  有两种方法可以强制将事务日志刷新到磁盘。  

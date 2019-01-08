@@ -11,12 +11,12 @@ ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081537"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523331"
 ---
 # <a name="modifying-the-product-dimension"></a>修改“产品”维度
   在本主题下的任务中，将使用命名计算为产品系列提供更具说明性的名称，在“产品”维度中定义一个层次结构，并为该层次结构指定“(全部)”成员名称。 还可以按显示文件夹组合各个属性。  
@@ -58,7 +58,7 @@ ms.locfileid: "48081537"
   
 2.  在“维度结构”选项卡的“属性”窗格中，选择“产品系列”。  
   
-3.  在屏幕右侧的“属性”窗口中，单击窗口底部的“NameColumn”属性字段，然后单击浏览 (**…**) 按钮以打开“名称列”对话框。 （可能需要单击屏幕右侧的“属性”选项卡以打开“属性”窗口。）  
+3.  在屏幕右侧的属性窗口中，单击**NameColumn**属性字段在窗口的底部，然后单击浏览 (**...**) 按钮以打开**名称列**对话框。 （可能需要单击屏幕右侧的“属性”选项卡以打开“属性”窗口。）  
   
 4.  选择`ProductLineName`底部**源列**列表，，然后单击**确定**。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48081537"
   
 5.  在“维度结构”选项卡的“属性”窗格中，选择“产品密钥”。  
   
-6.  在“属性”窗口中，单击“NameColumn”属性字段，然后单击省略号浏览 (**…**) 按钮以打开“名称列”对话框。  
+6.  在属性窗口中，单击**NameColumn**属性字段，，然后单击省略号浏览 (**...**) 按钮以打开**名称列**对话框。  
   
 7.  选择“源列”列表中的“EnglishProductName”，然后单击“确定”。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48081537"
 9. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="defining-attribute-relationships"></a>定义属性关系  
- 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+ 如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可加快维度、分区和查询处理的速度。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md) 和 [属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 #### <a name="to-define-attribute-relationships"></a>定义属性关系  
   
@@ -183,8 +183,8 @@ ms.locfileid: "48081537"
  [修改“日期”维度](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>请参阅  
- [数据源视图中定义命名的计算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [创建用户定义的层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
- [配置&#40;所有&#41;属性层次结构的级别](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [在数据源视图中定义命名计算 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [创建用户定义层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
+ [配置属性层次结构的“(全部)”级别](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

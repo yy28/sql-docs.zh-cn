@@ -1,5 +1,5 @@
 ---
-title: 创建提升图、 利润图或分类矩阵 |Microsoft 文档
+title: 创建提升图、 利润图或分类矩阵 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57d8dac4999f5b788b1114e6e7aa4156b6cd6419
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519116"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>创建提升图、利润图或分类矩阵
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "34015384"
   
     -   选择 **“使用挖掘结构测试事例”** 选项可以使用已作为挖掘结构维持数据集的一部分定义的测试事例的完整集合。  
   
-    -   若要使用外部数据，请选择“指定其他数据集”选项。   数据集必须可用作数据源视图。   单击浏览 (**…**) 按钮可选择要用于准确性图表的数据表。 有关详细信息，请参阅 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)。  
+    -   若要使用外部数据，请选择“指定其他数据集”选项。   数据集必须可用作数据源视图。   单击浏览 (**...**) 按钮以选择要用于准确性图表的数据表。 有关详细信息，请参阅 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)。  
   
          如果您使用的是外部数据集，则可以选择筛选输入数据集。 有关详细信息，请参阅 [将筛选器应用于模型测试数据](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)。  
   
@@ -108,8 +108,8 @@ ms.locfileid: "34015384"
      **单项收入**  
      与每个成功销售相关联的收入金额。  
   
-## <a name="see-also"></a>另请参阅  
- [提升图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [分类矩阵 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [提升图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [分类矩阵（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

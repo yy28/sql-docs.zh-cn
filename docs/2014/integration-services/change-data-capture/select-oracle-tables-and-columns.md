@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - selTabCol
@@ -13,12 +12,12 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c02f4a98ad0ee4d7b73fe20041a03b53b34b2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7f97d7d1671aada299b685981e81d62010df24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051368"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788339"
 ---
 # <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
   使用“选择 Oracle 表和列”页可以从捕获了更改的 Oracle 源数据库选择表。 该页具有以下元素：  
@@ -27,15 +26,15 @@ ms.locfileid: "48051368"
  **表列表**  
  此表列表具有三列：  
   
--   **Oracle 表名称**：表的名称，包括表架构。  
+-   **Oracle 表名称**:包括表架构的表的名称。  
   
--   **捕获实例**：用于命名特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。  
+-   **捕获实例**:用于映射到名称特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。  
   
      如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>`。 捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。  
   
      可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
   
--   **安全角色**：用于控制对更改数据的访问的数据库访问控制角色的名称。  
+-   **安全角色**:访问控制角色，用于控制对更改数据的访问的数据库的名称。  
   
      可单击此列的任意单元格对 **security_role**进行手动编辑。  
   

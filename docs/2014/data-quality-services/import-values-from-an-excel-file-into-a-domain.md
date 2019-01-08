@@ -14,12 +14,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b6da26bc764c8ac3c02b9f6a8972127f9248d56
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f195461d11b84860ab7fdf5539eca17946894ad3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032057"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507703"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
   本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入到知识库的详细信息，请参阅[在知识发现中从 Excel 文件中导入域](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  
@@ -62,15 +62,15 @@ ms.locfileid: "51032057"
   
 10. 单击“确定” 。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
   
-11. 确认“导入完成”显示在 **“导入域值”** 对话框中。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
+11. 确认“导入完成”显示在“导入域值”对话框中。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
   
-12. 对于未成功导入的那些值，单击 **“日志”** 可显示 **“导入域值 – 失败值”** 对话框，从而查看导入操作失败的原因。 **“失败值”** 列将显示未能从 Excel 文件导入到域中的值， **“原因”** 列将说明导入失败的原因。 单击 **“复制到剪贴板”** 可以将 **“失败值”** 表复制到剪贴板上，从而可以将该表复制到其他程序中，例如复制到 Excel 电子表格或记事本文件中。 单击 **“确定”** 关闭 **“失败值”** 对话框。  
+12. 对于未成功导入的那些值，单击“日志”可显示“导入域值 – 失败值”对话框，从而查看导入操作失败的原因。 **“失败值”** 列将显示未能从 Excel 文件导入到域中的值， **“原因”** 列将说明导入失败的原因。 单击 **“复制到剪贴板”** 可以将 **“失败值”** 表复制到剪贴板上，从而可以将该表复制到其他程序中，例如复制到 Excel 电子表格或记事本文件中。 单击 **“确定”** 关闭 **“失败值”** 对话框。  
   
 13. 单击 **“确定”** 将完成导入操作并且关闭该对话框。 在导入成功完成后， **“域值”** 页上的域值列表将刷新并且将包含新导入的值。 筛选器将更改为 **“所有值”** ，并且 **“仅显示新内容”** 将被选中。 如果在导入操作后选中了 **“仅显示新内容”** ，将仅显示从 Excel 文件导入的值。  
   
 14. 单击 **“完成”** 将值添加到知识库。  
   
-##  <a name="FollowUp"></a> 跟进：在将值从 Excel 文件导入到域后  
+##  <a name="FollowUp"></a> 跟进：导入值从 Excel 文件到域后  
  在将值导入到某个域中之后，您可以对该域执行其他域管理任务，可以执行知识发现以便向该域添加知识，或者可以向该域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Synonyms"></a> 导入同义词  
@@ -111,7 +111,7 @@ ms.locfileid: "51032057"
   
     -   预期的格式为：第一列将是前导值，第二列和以后的列将是同义词。  
   
-    -   您可以在同一行或不同行中导入多个同义词。 例如，如果您要导入“NYC”和“New York City”作为“New York”的同义词，则可以导入在第 1 列中具有“New York”、在第 2 列中具有“NYC”、在第 3 列中具有“New York City”的单个行；或者，您可以导入在第 1 列中具有“New York”、在第 2 列中具有“NYC”的一行，以及在第一列中具有“New York”、在第 2 列中具有“New York City”的另一行。 请注意，如果值“New York”已在域中存在，将只添加同义词，并且用户在导入过程中将不会收到指示该值已存在的错误消息。 如果第一个值已不存在，则它将被添加到域中。  
+    -   您可以在同一行或不同行中导入多个同义词。 例如，如果你要导入“NYC”和“New York City”作为“New York”的同义词，则可以导入在第 1 列中具有“New York”、在第 2 列中具有“NYC”、在第 3 列中具有“New York City”的单个行；或者，您可以导入在第 1 列中具有“New York”、在第 2 列中具有“NYC”的一行，以及在第一列中具有“New York”、在第 2 列中具有“New York City”的另一行。 请注意，如果值“New York”已在域中存在，将只添加同义词，并且用户在导入过程中将不会收到指示该值已存在的错误消息。 如果第一个值已不存在，则它将被添加到域中。  
   
  下列规则适用于要用于导入的 Excel 文件：  
   

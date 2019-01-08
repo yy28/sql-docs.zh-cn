@@ -14,19 +14,19 @@ ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d37ee863bbc14bbaa3c73a2c5781e080e81ee63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161767"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516555"
 ---
 # <a name="data-mining-solutions"></a>数据挖掘解决方案
   数据挖掘解决方案是一个包含一个或多个数据挖掘项目的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案。  
   
  本节中的主题提供了有关如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]设计和实现集成数据挖掘解决方案的信息。 有关数据挖掘设计过程和相关工具的概述，请参阅 [Data Mining Concepts](data-mining-concepts.md)。  
   
- 有关对数据挖掘有用的其他项目类型的详细信息，请参阅[数据挖掘解决方案的相关项目](data-mining-solutions.md)。  
+ 有关对数据挖掘有用的其他项目类型的详细信息，请参阅 [数据挖掘解决方案的相关项目](data-mining-solutions.md)。  
   
  [关系与。多维解决方案](#bkmk_RelMD)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48161767"
  [解决方案演练](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> 关系与。多维解决方案  
- 数据挖掘解决方案可基于多维数据（即现有多维数据集）、纯关系数据（例如，数据仓库中的表和视图）、文本文件、Excel 工作簿或其他外部数据源。  
+ 数据挖掘解决方案可以是基于多维数据-即，将现有多维数据集-或纯关系数据，如表和视图中的数据仓库，在或上的文本文件，Excel 工作簿或其他外部数据源。  
   
 -   可以在现有多维数据库解决方案中创建数据挖掘对象。  
   
@@ -79,13 +79,13 @@ ms.locfileid: "48161767"
   
 |“任务”|主题|  
 |-----------|------------|  
-|测试您创建的模型，验证定型数据的质量并创建代表数据挖掘模型的准确性的图表。|[测试和验证&#40;数据挖掘&#41;](testing-and-validation-data-mining.md)|  
+|测试您创建的模型，验证定型数据的质量并创建代表数据挖掘模型的准确性的图表。|[测试和验证（数据挖掘）](testing-and-validation-data-mining.md)|  
 |通过用数据填充结构及相关模型来定型模型。 使用新数据更新和扩展模型。|[处理数据挖掘对象](processing-data-mining-objects.md)|  
 |通过对定型数据应用筛选器、选择其他算法或设置高级算法参数来自定义挖掘模型。|[自定义挖掘模型和结构](customize-mining-models-and-structure.md)|  
-|通过对在定型模式下使用的数据应用筛选器来自定义挖掘模型。|[向结构中添加挖掘模型&#40;Analysis Services-数据挖掘&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|通过对在定型模式下使用的数据应用筛选器来自定义挖掘模型。|[向结构中添加挖掘模型（Analysis Services - 数据挖掘）](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |更新和管理数据挖掘解决方案。|链接 TBD|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘教程&#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [数据挖掘教程 (Analysis Services)](../data-mining-tutorials-analysis-services.md)  
   
   

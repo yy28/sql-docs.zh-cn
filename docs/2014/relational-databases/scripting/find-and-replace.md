@@ -7,22 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.quickfind
-- vs.find
-- vs.findreplace.quickreplace
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6c2e057c542e6b3c0d9ff475b697efb7bea51b6
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152517"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328817"
 ---
 # <a name="find-and-replace"></a>查找和替换
   使用 **“查找和替换”** 对话框可以在文件中查找特定文本，并且可以选择是否替换文本。 根据 **“查找和替换”** 对话框打开方式的不同，将显示不同版本的对话框，其中的选项会稍有差异。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速查找”** ，可打开包含查找选项的对话框，但其中不包含替换选项。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速替换”** ，可打开包含查找选项和替换选项的对话框。  
@@ -127,5 +123,3 @@ ms.locfileid: "48152517"
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

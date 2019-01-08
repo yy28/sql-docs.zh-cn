@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514057"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>通过使用已注册的服务器执行按需评估
   您可以通过使用已注册的服务器对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例执行最佳实践策略的按需评估。 您可以使用本地服务器组或中央管理服务器。  
@@ -24,8 +24,8 @@ ms.locfileid: "48182417"
 > [!NOTE]  
 >  您可以对运行 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或者 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的更高版本的服务器组成员执行最佳实践策略的按需评估。 但是，如果存在引用在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 中不支持的策略的一些属性，则您可能会接收异常错误。  
   
-## <a name="prerequisites"></a>必要條件  
- 要执行此任务，您必须在已注册的服务器中已配置一个或多个服务器注册。 有关详细信息，请参阅以下主题：  
+## <a name="prerequisites"></a>先决条件  
+ 要执行此任务，您必须在已注册的服务器中已配置一个或多个服务器注册。 有关详细信息，请参阅下列主题：  
   
 -   [创建或编辑服务器组 (SQL Server Management Studio)](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48182417"
 8.  若要查看某个策略的详细的结果，请单击中的策略**结果**表。 **目标详细信息**表显示了每个实例的详细信息。  
   
 ## <a name="next-lesson"></a>下一课  
- [课程 2：定期评估最佳做法策略](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [第 2 课：评估按计划定期的最佳实践策略](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>请参阅  
  [监视和强制执行最佳实践，通过使用基于策略的管理](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

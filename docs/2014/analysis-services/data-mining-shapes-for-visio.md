@@ -16,17 +16,17 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512635"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 数据挖掘形状
   Visio 数据挖掘形状提供为显示数据挖掘模型而自定义的各种模板。 通过使用这些模板，您可以连接到已创建的模型和创建交互式演示文稿来说明数据挖掘的结果。  
   
- 模板与静态图表和屏幕捕获相比有众多优势 - 模板与底层的数据挖掘模型交互，这些模型存储在 Analysis Services 实例上，通过这些模型，可自定义显示挖掘模型中模式的方式。 可折叠和展开树模型、对数据节点进行筛选或按属性进行筛选以及显示概率和系数等模型统计信息。  
+ 模板提供许多优于静态图表和屏幕捕获-它们与 Analysis Services 实例存储的基础数据挖掘模型进行交互，让您自定义挖掘模型中的模式的显示方式。 可折叠和展开树模型、对数据节点进行筛选或按属性进行筛选以及显示概率和系数等模型统计信息。  
   
  ![DM](media/dm-stencil.gif "DM")  
   

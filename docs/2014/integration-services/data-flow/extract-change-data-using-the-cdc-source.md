@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29e8c0afa66e5f6f667ef9435470146109f5676d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a96c531302c92e61e2a2e0b9feb875d0a1097c43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140652"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805189"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 源提取更改数据
   若要添加并配置 CDC 源，则包必须已包含至少一个数据流任务和一个 CDC 控制任务。  
@@ -45,15 +44,15 @@ ms.locfileid: "48140652"
   
 8.  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
-    -   **所有**：返回当前 CDC 范围中的更改，但没有 **“更新前”** 值。  
+    -   **所有**:返回当前 CDC 范围中没有的情况下所做的更改**更新前**值。  
   
-    -   **全部且具有旧值**：返回当前 CDC 处理范围中的更改，包括旧值（“更新前”）。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
+    -   **全部且具有旧值**:返回当前 CDC 处理范围包括旧值中的更改 (**更新前**)。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
   
-    -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
+    -   **Net**:返回每个源行修改当前 CDC 处理范围中只有一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
-    -   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$\<column-name>\__Changed 的布尔值列（指示当前更改行中已更改的列）。  
+    -   **具有更新掩码的净值**:此模式类似于一般的净值模式，但它还添加了命名模式的布尔值列 **__ $\<列名称 >\___changed** ，指示已更改的列，在当前更改行。  
   
-    -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
+    -   **净值且具有合并**:此模式非常类似于一般的净值模式，但使用 Insert 和 Update 操作合并到单个合并操作 (UPSERT)。  
   
 9. 选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅[定义状态变量](define-a-state-variable.md)。  
   
@@ -72,8 +71,8 @@ ms.locfileid: "48140652"
 15. 单击“确定” 。  
   
 ## <a name="see-also"></a>请参阅  
- [CDC 源编辑器&#40;连接管理器页&#41;](../cdc-source-editor-connection-manager-page.md)   
- [CDC 源编辑器&#40;列页&#41;](../cdc-source-editor-columns-page.md)   
- [CDC 源编辑器&#40;错误输出页&#41;](../cdc-source-editor-error-output-page.md)  
+ [CDC 源编辑器（“连接管理器”页）](../cdc-source-editor-connection-manager-page.md)   
+ [CDC 源编辑器（“列”页）](../cdc-source-editor-columns-page.md)   
+ [CDC 源编辑器（“错误输出”页）](../cdc-source-editor-error-output-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 创建数据源 (SSAS 多维) |Microsoft 文档
+title: 创建数据源 (SSAS 多维) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027044"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410314"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>创建数据源（SSAS 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,17 +68,17 @@ ms.locfileid: "34027044"
   
 3.  在 **“选择如何定义连接”** 页中，选择 **“基于现有连接或新连接创建数据源”** ，然后单击 **“新建”** 以便打开 **“连接管理器”**。  
   
-     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分，我们假定一个 SQL Server 数据库连接。  
+     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分，我们假定 SQL Server 数据库连接。  
   
 4.  选择要用于该连接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或本机 OLE DB 访问接口。  
   
-     新连接的默认访问接口是“本机 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
+     新连接的默认访问接口是“本机 OLE DB\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
   
      您可以选择一个不同的访问接口来访问其他数据源。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支持的访问接口和关系数据库的列表，请参阅 [支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
 5.  输入选定访问接口连接到基础数据源所需的信息。 如果选中“本机 OLE DB\SQL Server Native Client”访问接口，请输入以下信息：  
   
-    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果服务器作为命名实例安装，则必须包括实例名称 (例如， \<computername >\\< instancename\>)。  
+    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果服务器作为命名实例安装，则必须包括实例名称 (例如，\<计算机名 >\\< 实例名\>)。  
   
     2.  **“登录到服务器”** 指定将对连接进行身份验证的方式。 **“使用 Windows 身份验证”** 使用 Windows 身份验证。 **“使用 SQL Server 身份验证”** 为支持混合模式身份验证的 Windows Azure SQL Database 或 SQL Server 实例指定数据库用户登录名。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34027044"
   
 5.  查找并选择您所添加的表。 右键单击该表，然后选择“新建关系”。 选择包含匹配数据的源列和目标列。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

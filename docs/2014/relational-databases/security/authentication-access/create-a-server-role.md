@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d80795317ae9a1d486df2894ab68ee22dfdfc7c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532133"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建新的服务器角色。  
@@ -32,7 +32,7 @@ ms.locfileid: "48170727"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建新的服务器角色，请使用：**  
   
@@ -69,13 +69,13 @@ ms.locfileid: "48170727"
   
 3.  右键单击“服务器角色”文件夹，然后选择“新建服务器角色…”。  
   
-4.  在“新建服务器角色 - server_role_name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称。  
+4.  在 **新的服务器角色-* * * server_role_name*对话框中，在**常规**页上，输入中的新服务器角色的名称**服务器角色名称**框。  
   
-5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 **(…)** 打开“选择服务器登录名或角色”对话框。  
+5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 (…) 打开“选择服务器登录名或角色”对话框。  
   
 6.  在“安全对象”下，选择一个或多个服务器级别的安全对象。 当选择安全对象时，可以向此服务器角色授予或拒绝针对该安全对象的权限。  
   
-7.  在 **“权限: 显式”** 框中，选中相应的复选框以针对选定的安全对象授予、授予再授予或拒绝此服务器角色的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
+7.  在**权限：显式**框中，选中复选框可授予、 授予再授予或拒绝此服务器角色的选定的安全对象的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
   
 8.  在 **“成员”** 页上，使用 **“添加”** 按钮将代表个人或组的登录名添加到新的服务器角色。  
   

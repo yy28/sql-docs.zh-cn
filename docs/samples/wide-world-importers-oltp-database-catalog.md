@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798026"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617618"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 数据库目录
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WideWorldImporters 使用少量的架构，因此很容易地了解数据库系�
 - 所有架构、 表、 列、 索引和 check 约束都有扩展属性，可用于标识对象或列的用途说明。 内存优化表是一种例外，因为它们当前不支持扩展的属性。
 - 如果没有具有相同的左侧组件的另一个非聚集索引，所有外键将自动编制索引。
 - 自动编号在表中基于序列。 这些序列是更轻松地使用链接的服务器和类似环境比标识列。 内存优化表使用标识列，因为它们不支持在 SQL Server 2016 中。
-- 单个序列 (TransactionID) 用于这些表： CustomerTransactions、 SupplierTransactions 和 StockItemTransactions。 此示例演示如何使一组表具有一个序列。
+- 单个序列 (TransactionID) 用于这些表：CustomerTransactions、 SupplierTransactions 和 StockItemTransactions。 此示例演示如何使一组表具有一个序列。
 - 某些列具有适当的默认值。
 
 ### <a name="security-schemas"></a>安全架构
@@ -161,7 +161,7 @@ WideWorldImporters 使用少量的架构，因此很容易地了解数据库系�
 
 这些是由客户端应用程序，如 Web 前端的过程。
 
-|过程|用途|
+|过程|目标|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|让用户 (从`Application.People`) 以有权访问该网站。|
 |ChangePassword|更改用户的密码 （适用于不使用外部身份验证机制的用户）。|
@@ -183,11 +183,11 @@ ETL 过程使用此架构中的存储的过程。 他们获得所需的时间范
 
 模拟插入销售和采购的工作负荷。 主存储的过程是`PopulateDataToCurrentDate`，用于插入截至当前日期的示例数据。
 
-|过程|用途|
+|过程|目标|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|重新创建过程的数据所需负载模拟。 这需要将数据添加至当前日期。|
 |Configuration_RemoveDataLoadSimulationProcedures|数据模拟完成后，这再次删除过程。|
-|DeactiveTemporalTablesBeforeDataLoad|删除所有临时表的临时特性，并在适用的情况下，应用触发器，以便可以进行更改，就好像它们已在以前的日期不是 sys 时态表允许正在应用。|
+|DeactivateTemporalTablesBeforeDataLoad|删除所有临时表的临时特性，并在适用的情况下，应用触发器，以便可以进行更改，就好像它们已在以前的日期不是 sys 时态表允许正在应用。|
 |PopulateDataToCurrentDate|用于引入截至当前日期的数据。 之前，应运行从一个初始备份还原数据库之后的任何其他配置选项。|
 |ReactivateTemporalTablesAfterDataLoad|重新建立临时表，其中包括的数据一致性检查。 （将删除关联的触发器）。|
 
@@ -196,7 +196,7 @@ ETL 过程使用此架构中的存储的过程。 他们获得所需的时间范
 
 使用这些过程来配置示例。 它们用于企业版功能适用于 standard edition 版本的示例，还可添加审核和全文索引。
 
-|过程|用途|
+|过程|目标|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|如果该成员不是角色中向角色添加成员|
 |Configuration_ApplyAuditing|Adds 审核。 服务器审核适用于标准版本的数据库。对于 enterprise edition 添加附加的数据库审核。|
@@ -215,7 +215,7 @@ ETL 过程使用此架构中的存储的过程。 他们获得所需的时间范
 
 若要配置数据库中的序列的过程。
 
-|过程|用途|
+|过程|目标|
 |-----------------------------|---------------------|
 |ReseedAllSequences|为所有序列调用过程 ReseedSequenceBeyondTableValue。|
 |ReseedSequenceBeyondTableValue|用于在任何表，它使用相同的序列中重新定位值之外的下一个序列值。 （如 DBCC CHECKIDENT 为标识列等效的序列，但可能多个表之间)。|

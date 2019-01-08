@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777909"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [  **@publication=** ] **'**_发布_  
  添加合并筛选的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=** ] **'***文章*****  
+ [  **@article=** ] **'**_文章_  
  添加合并筛选的项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@filtername=** ] **'***filtername*****  
+ [  **@filtername=** ] **'**_filtername_  
  筛选的名称。 *filtername*是一个必需的参数。 *filtername*是**sysname**，无默认值。  
   
- [  **@join_articlename=** ] **'***join_articlename*****  
+ [  **@join_articlename=** ] **'**_join_articlename_  
  是到子项目中，指定的父项目*一文*，必须使用指定的联接子句联接*join_filterclause*，从而确定满足子项目中的行合并筛选器的筛选器条件。 *join_articlename*是**sysname**，无默认值。 该项目必须位于由给定的发布中*发布*。  
   
  [  **@join_filterclause=** ] *join_filterclause*  
@@ -68,7 +67,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 > [!CAUTION]  
 >  仅将此参数设置为**1**如果可保证唯一性的父项目的基础表中具有的联接列上的约束。 如果*join_unique_key*设置为**1**非收敛性的数据不正确，可能会发生。  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
  确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。 如果存储的过程检测到更改确实需要新快照，将发生错误，并且将进行任何更改。  
@@ -114,7 +113,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergefilter](../../relational-databases/replication/codesnippet/tsql/sp-addmergefilter-transa_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addmergefilter**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 属性关系 |Microsoft 文档
+title: 属性关系 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9035cc2c0d3308848b570ae6c157c9d70cd77cc9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9eddac84f4db92770daa2bbf32b51597f84eb3f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542765"
 ---
 # <a name="attribute-relationships"></a>的维度设计器中，可以在“维度结构”视图的
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度中的属性将始终与直接或间接的键属性。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：  
+  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度内的属性始终直接或间接与相关的键属性。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：  
   
 -   在键属性与绑定到主维度表中各列的每个非键属性之间定义。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34022344"
   
 -   性别  
   
--   EMail  
+-   电子邮件  
   
 -   City  
   
@@ -64,21 +64,21 @@ ms.locfileid: "34022344"
   
 -   与“客户”属性具有属性关系的“市县”属性。  
   
- 有关导航多维数据集中的数据，你还可以创建用户定义层次结构，不表示自然层次结构数据中的 (这种行为称为*即席*或*reporting*层次结构)。 例如，您可以基于 `{Age, Gender}` 创建用户定义层次结构。 尽管自然层次结构是在聚合结构和索引结构（这两种结构对源数据中的自然关系进行了解释，并且对用户隐藏）的基础上形成，但是用户无法看到两种层次结构的行为差异。  
+ 对于导航多维数据集中的数据，还可以创建不表示自然层次结构数据中的用户定义层次结构 (称为*即席*或*reporting*层次结构)。 例如，您可以基于 `{Age, Gender}` 创建用户定义层次结构。 用户不会看到任何区别在于两个层次结构的行为方式，尽管自然层次结构可以利用聚合和索引结构-向用户隐藏的源数据中的自然关系该帐户。  
   
- **SourceAttribute**级别的属性确定哪些属性用于描述级别。 **KeyColumns**属性上的属性提供成员数据源视图中指定的列。 **NameColumn**属性上的属性可以指定不同的名称列的成员。  
+ **SourceAttribute**级别的属性将确定哪些属性用于说明该级别。 **KeyColumns**特性的属性提供成员的数据源视图中指定的列。 **NameColumn**属性可以指定不同的名称列的成员。  
   
- 若要使用的用户定义的层次结构中定义级别[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、**维度设计器**允许你选择相关表中的数据源视图包含中的维度属性、 维度表中的列多维数据集。 有关创建用户定义的层次结构的详细信息，请参阅[Create User-Defined 层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)。  
+ 若要使用用户定义层次结构中定义的级别[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，则**维度设计器**允许你的数据源视图中包含的相关表中选择维度属性、 维度表中的列多维数据集。 有关创建用户定义的层次结构的详细信息，请参阅[创建用户定义层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)。  
   
- 在 Analysis Services 中，通常对成员的内容进行假定。 叶成员没有后代，并且包含派生自基础数据源的数据。 非叶成员则具有后代，并且包含派生自对子成员执行的聚合的数据。 在聚合级别中，各成员基于其从属级别的聚合。 因此，当**IsAggregatable**属性设置为**False**上级别的源属性，没有可聚合属性应添加为与其上级别。  
+ 在 Analysis Services 中，通常对成员的内容进行假定。 叶成员没有后代，并且包含派生自基础数据源的数据。 非叶成员则具有后代，并且包含派生自对子成员执行的聚合的数据。 在聚合级别中，各成员基于其从属级别的聚合。 因此，当**IsAggregatable**属性设置为**False**级别源特性，没有可聚合属性应添加为级别上面的级别。  
   
 ## <a name="defining-an-attribute-relationship"></a>定义属性关系  
  创建属性关系时的主要约束是确保，对于属性关系引用的属性，属性关系所属的属性中的任何成员的值不超过一个。 例如，如果您在“市县”属性与“省市自治区”属性之间定义了关系，则每个市县只能与单个省市自治区相关。  
   
 ## <a name="attribute-relationship-queries"></a>属性关系查询  
- 你可以使用 MDX 查询要从中检索数据属性关系，成员属性的形式与**属性**MDX 关键字**选择**语句。 有关如何使用 MDX 来检索成员属性的详细信息，请参阅[使用成员属性&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)。  
+ 可以使用 MDX 查询从特性关系，成员属性的窗体中的数据检索与**属性**MDX 关键字**选择**语句。 有关如何使用 MDX 检索成员属性的详细信息，请参阅[使用成员属性&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [用户层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   

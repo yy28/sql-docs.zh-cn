@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ea75578bdd1cfd67255ab8c76149920452d1245
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e6d813848a45326ee9a74ea38616ceef9dd02cd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670796"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524052"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51670796"
  有关**xml**数据类型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序对 COLUMN_SIZE 报告 SQL_SS_LENGTH_UNLIMITED 来表示大小不受限制。  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo 和表值参数  
- 表值参数的表类型实际上是元类型，即用于定义其他类型的类型。 因此，它无需通过 SQLGetTypeInfo 公开。 应用程序必须使用 SQLTables，而不是 SQLGetTypeInfo，以检索与表值参数一起使用的表类型的元数据。  
+ 表值参数的表类型实际上是元类型-这是，用于定义其他类型的类型。 因此，它无需通过 SQLGetTypeInfo 公开。 应用程序必须使用 SQLTables，而不是 SQLGetTypeInfo，以检索与表值参数一起使用的表类型的元数据。  
   
  检索的元数据的表值参数，有关详细信息，请参阅[语句属性该 Affect Table-Valued 参数](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)。  
   

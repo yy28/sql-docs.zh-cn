@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851882"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617577"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
  [ @LockMode=] '*lock_mode*  
- 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 可以是任意以下值：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**排他**.  
+ 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 该值可以是下列任意值：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**独占**。  
   
  [ @LockOwner=] '*指定的 lock_owner*  
  锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*指定的 lock_owner*值是**事务**，也可由默认设置还是显式指定，sp_getapplock 必须在从事务内执行。  
@@ -92,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  只有 @DbPrincipal 参数中指定的数据库主体成员才能获取指定该主体的应用程序锁。 dbo 和 db_owner 角色成员被隐式视为所有角色成员。  
   
- 可以使用 sp_releaseapplock 显式释放锁。 如果某个应用程序为同一锁资源多次调用 sp_getapplock，则必须调用 sp_releaseapplock 同样次数才能释放锁。  
+ 可以使用 sp_releaseapplock 显式释放锁。 如果某个应用程序为同一锁资源多次调用 sp_getapplock，则必须调用 sp_releaseapplock 同样次数才能释放锁。  当用打开锁`Transaction`锁所有者、 提交或回滚事务时释放锁。
   
  如果为同一锁资源多次调用 sp_getapplock，但是在所有请求中指定的锁模式与现有模式不同，则对资源的影响将是两个锁模式的联合。 多数情况下，这意味着将锁模式提升为现有模式或新请求模式中更强的模式。 在最终释放锁之前，即使出现锁释放调用，也会一直保持这一更强的模式。 例如，在以下调用顺序中，将以 `Exclusive` 模式而非 `Shared` 模式控制资源。  
   
@@ -137,7 +137,7 @@ GO
   
  使用 sys.dm_tran_locks 动态管理视图或 sp_lock 系统存储过程检查锁信息，或使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视锁。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

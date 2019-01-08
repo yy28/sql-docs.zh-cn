@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教程第 11 课： 创建角色 |Microsoft Docs
+title: Analysis Services 教程第 11 课：创建角色 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,37 +9,37 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 90742e38b3948a0fc64df4908d6a0daadf0793e9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ee28eb36fcd9e14210bc2a1411460100156f4a2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076968"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544346"
 ---
 # <a name="create-roles"></a>创建角色
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-在本课程中，将创建角色。 角色通过限制访问权限仅这些用户属于角色成员提供模型数据库对象和数据安全性。 每个角色都使用单个权限进行定义：“无”、“读取”、“读取和处理”、“处理”或“管理员”。 可以通过使用角色管理器中创作模型期间定义角色。 在部署某一模型后，可以通过使用 SQL Server Management Studio (SSMS) 来管理角色。 若要了解详细信息，请参阅[角色](../tabular-models/roles-ssas-tabular.md)。
+在本课程中，将创建角色。 角色通过限制访问权限仅这些用户属于角色成员提供模型数据库对象和数据安全性。 每个角色定义有单一权限：无、 读取、 读取和进程、 进程或管理员。 可以通过使用角色管理器中创作模型期间定义角色。 在部署某一模型后，可以通过使用 SQL Server Management Studio (SSMS) 来管理角色。 若要了解详细信息，请参阅[角色](../tabular-models/roles-ssas-tabular.md)。
   
 > [!NOTE]  
 > 创建角色对于完成本教程不是必需的。 默认情况下，你当前登录时所用的帐户具有管理员权限的模型。 但是，若要浏览使用报告客户端在组织中其他用户，必须创建至少一个角色具有读取权限并将这些用户添加为成员。  
   
 创建三个角色：  
   
--   **销售经理**– 此角色可以包括在你想要对所有模型对象和数据具有读取权限的组织中的用户。  
+-   **销售经理**-此角色可以包括在你想要对所有模型对象和数据具有读取权限的组织中的用户。  
   
--   **Sales Analyst US** – 此角色可以包括希望只是为了能够浏览与在美国的销售相关的数据在组织中的用户。 对于此角色，您使用 DAX 公式来定义*行筛选器*，限制要浏览仅对美国的数据成员。  
+-   **Sales Analyst US** -此角色可以包括希望只是为了能够浏览与在美国的销售相关的数据在组织中的用户。 对于此角色，您使用 DAX 公式来定义*行筛选器*，限制要浏览仅对美国的数据成员。  
   
--   **管理员**– 此角色可以包括你想要具有管理员权限，允许无限制访问权限和对模型数据库执行管理任务的权限的用户。  
+-   **管理员**-此角色可以包括你想要具有管理员权限，允许无限制访问权限和对模型数据库执行管理任务的权限的用户。  
   
-因为贵组织中的 Windows 用户和组帐户是唯一的，所以您可以从您的特定组织向成员添加帐户。 但是，对于本教程，您还可以将成员保留为空。 您测试每个角色的效果更高版本中第 12 课： 在 Excel 中分析。  
+因为贵组织中的 Windows 用户和组帐户是唯一的，所以您可以从您的特定组织向成员添加帐户。 但是，对于本教程，您还可以将成员保留为空。 更高版本在第 12 课中测试每个角色的效果：在 Excel 中分析。  
   
-学完本课的估计时间： **15 分钟**  
+学完本课的预计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 10 课： 创建分区](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)。  
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 10 课：创建分区](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>创建角色  
   
@@ -55,7 +55,7 @@ ms.locfileid: "43076968"
 
     ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
-5.  可选： 单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+5.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>创建 Sales Analyst US 用户角色  
   
@@ -74,7 +74,7 @@ ms.locfileid: "43076968"
     行筛选器公式必须解析为布尔 (TRUE/FALSE) 值。 通过此公式中，指定的国家/地区区域代码值为"US"行对用户可见。  
     ![作为 lesson11-角色-筛选器](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
-6.  可选： 单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+6.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-an-administrator-user-role"></a>若要创建的管理员用户角色  
   
@@ -84,12 +84,12 @@ ms.locfileid: "43076968"
   
 3.  向此角色授予**管理员**权限。  
   
-4.  可选： 单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
+4.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
   
   
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 12 课： 在 Excel 中分析](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)。
+[第 12 课：在 Excel 中分析](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)。
 
   
   

@@ -14,12 +14,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106457"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543700"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>预测向导（Excel 数据挖掘外接程序）
   ![数据挖掘功能区中的关联向导](media/dmc-forecast.gif "数据挖掘功能区中的关联向导")  
@@ -67,7 +67,7 @@ ms.locfileid: "48106457"
     -   **使用临时模型**。 如果您选择此选项，模型将不会被保存到服务器。 在您关闭 Excel 时，临时模型将被删除。  
   
 ### <a name="requirements"></a>要求  
- 您的数据中应至少包括一个可用作时序的列。 此列中的值应当唯一且连续，也就是说，没有间隔。 在运行此向导之前，请按时序列以升序顺序对数据进行排序。  
+ 您的数据中应至少包括一个可用作时序的列。 此列中的值应是唯一的且持续-也就是说，应该有无间隔。 在运行此向导之前，请按时序列以升序顺序对数据进行排序。  
   
  如果您的数据中不包括时间或日期列，可以指定任意数值序列或由向导创建一个数值序列。 如果您选择由向导创建序列排序列，请确保在启动向导之前按您所希望的方式对其他列进行了排序。  
   

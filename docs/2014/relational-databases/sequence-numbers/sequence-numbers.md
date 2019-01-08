@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
@@ -17,12 +16,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d0446aaf5508ad0d2655245f441d4da81a6c79c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106857"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753379"
 ---
 # <a name="sequence-numbers"></a>序列号
   序列是一种用户定义的架构绑定对象，它根据创建该序列时采用的规范生成一组数值。 这组数值以定义的间隔按升序或降序生成，并且可根据要求循环（重复）。 序列不与表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便接收其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用某一序列对象并且跨多行和表协调值键。  
@@ -31,7 +30,7 @@ ms.locfileid: "48106857"
   
  与在插入行时生成的标识列值不同，应用程序可以通过调用 [NEXT VALUE FOR](/sql/t-sql/functions/next-value-for-transact-sql) 函数在插入行之前获取下一序列号。 在调用 NEXT VALUE FOR 时分配该序列号，即使在该序列号永远也不插入某个表中时也是如此。 此 NEXT VALUE FOR 函数可用作表定义中某个列的默认值。 使用 [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) 可一次获取某个范围的多个序列号。  
   
- 序列可定义为任何整数数据类型。 如果未指定的数据类型，序列将默认为`bigint`。  
+ 序列可定义为任何整数数据类型。 如果未指定数据类型，则序列将默认为 `bigint`。  
   
 ## <a name="using-sequences"></a>使用序列  
  在以下情况下将使用序列，而非标识列：  

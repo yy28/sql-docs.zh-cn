@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523973"
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用本机查询导入数据
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "37981099"
 2. 在中**查询编辑器**，单击**查询** > **新查询** > **空白查询**
 3. 在编辑栏中，键入
     ```
-    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
+    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM ...")
     ```
 4. 若要创建表，请在**查询**，右键单击查询，并选择**创建新表**。 新表将具有与查询相同的名称。
 

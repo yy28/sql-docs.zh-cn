@@ -1,5 +1,5 @@
 ---
-title: 定义未知的成员和 Null 处理属性 |Microsoft 文档
+title: 定义未知的成员和 Null 处理属性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019574"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525924"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lesson 4-7-定义未知的成员和 Null 处理属性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "34019574"
   
     **DimProductCategory (dbo)** 表即被添加到“包含的对象”列表中。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“格式”菜单上，指向“自动布局”，再单击“关系图”。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34019574"
   
 9. 在“属性”窗格中，将此新属性的名称更改为“类别”。  
   
-10. 在“属性”窗口中的 **NameColumn** 属性字段中单击，然后单击浏览 (**…**) 按钮以打开“名称列”对话框。  
+10. 在属性窗口中，单击**NameColumn**属性字段，然后单击浏览 (**...**) 按钮以打开**名称列**对话框。  
   
 11. 选择“源列”列表中的 **EnglishProductCategoryName**，然后单击“确定”。  
   
@@ -98,11 +98,11 @@ ms.locfileid: "34019574"
   
 13. 在“属性”窗格中，将此新属性的名称更改为“子类别”。  
   
-14. 在“属性”窗口中的 **NameColumn** 属性字段中单击，然后单击浏览“(…)”按钮以打开“名称列”对话框。  
+14. 在属性窗口中，单击**NameColumn**属性字段，然后单击浏览 **（...）** 按钮以打开**名称列**对话框。  
   
 15. 选择“源列”列表中的 **EnglishProductSubcategoryName**，然后单击“确定”。  
   
-16. 创建一个名为“产品类别”的新用户定义层次结构，该层次结构从上至下包含下列级别：“类别”、“子类别”和“产品名称”。  
+16. 创建新用户定义的层次结构称为**产品类别**具有以下级别，从上到下的顺序：**类别**，**子类别**，和**产品名称**。  
   
 17. 将“所有产品”指定为“产品类别”用户定义层次结构的 **AllMemberName** 属性的值。  
   
@@ -176,10 +176,10 @@ ms.locfileid: "34019574"
   
     请注意，在“产品名称”级别上显示了所有程序集组件，如下图所示。  
   
-    ![显示程序集组件的产品名称级别](../analysis-services/media/l4-assemblycomponents-1.gif "产品名称级别显示程序集组件")  
+    ![产品名称级别显示程序集组件](../analysis-services/media/l4-assemblycomponents-1.gif "产品名称级别显示程序集组件")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 5 课： 定义维度和度量值组之间的关系](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[第 5 课：定义维度和度量值组之间的关系](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

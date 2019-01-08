@@ -18,17 +18,17 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170177"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532457"
 ---
 # <a name="securables"></a>安全对象
   安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  
   
-## <a name="securable-scope-server"></a>安全对象范围：服务器  
+## <a name="securable-scope-server"></a>安全对象范围：“服务器”  
  **服务器** 安全对象范围包含以下安全对象：  
   
 -   可用性组 (availability group)  
@@ -41,7 +41,7 @@ ms.locfileid: "48170177"
   
 -   “数据库”  
   
-## <a name="securable-scope-database"></a>安全对象范围：数据库  
+## <a name="securable-scope-database"></a>安全对象范围：“数据库”  
  **数据库** 安全对象范围包含以下安全对象：  
   
 -   应用程序角色  
@@ -74,7 +74,7 @@ ms.locfileid: "48170177"
   
 -   对称密钥  
   
--   用户  
+-   “用户”  
   
 ## <a name="securable-scope-schema"></a>安全对象范围：架构  
  **架构** 安全对象范围包含以下安全对象：  
@@ -83,7 +83,7 @@ ms.locfileid: "48170177"
   
 -   XML 架构集合  
   
--   对象 – 对象类包含以下成员：  
+-   对象 - 对象类包含以下成员：  
   
     -   Aggregate  
   

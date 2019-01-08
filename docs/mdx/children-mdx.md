@@ -1,5 +1,5 @@
 ---
-title: 子级 (MDX) |Microsoft 文档
+title: 子级 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d61eb168b01e9b6d48c4c003ba28d0f977026906
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533411"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -32,7 +32,7 @@ Member_Expression.Children
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **子级**函数将返回包含指定成员的子级的自然排序的集。 如果指定的成员没有子成员，则此函数返回一个空集。  
   
 ## <a name="example"></a>示例  
@@ -43,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例返回中的所有成员**度量值**维度列在轴上，这包括所有计算的成员、 和的一组的所有子级`[Product].[Model Name]`属性从在行轴上的层次结构**Adventure Works**多维数据集。  
+ 下面的示例返回中的所有成员**度量值**维度在列轴上这包括所有计算的成员、 和的所有子级集`[Product].[Model Name]`属性层次结构行轴上的，从**Adventure Works**多维数据集。  
   
 ```  
 SELECT  
@@ -56,9 +56,9 @@ FROM
   
 |发行版本|历史记录|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**内容已更改：**<br /> -更新语法和参数以提高清晰度。<br /><br /> -添加更新的示例。|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**更改的内容：**<br /> -更新语法和参数以提高清晰度。<br /><br /> -添加了更新的示例。|  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

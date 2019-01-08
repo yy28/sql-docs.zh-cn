@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64aeaec2c78360fa082f98db33ebd47a91171348
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146222"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508545"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "50146222"
   
  例如，在分类树中，支持值指示具有所描述的属性组合的事例数。  
   
- 在决策树中，树中每个级别的支持的总数等于其父节点的支持数。 例如，如果某个包含 1200 个事例的模型按性别平分，然后按 Income 的三个值 Low、Medium 和 High（节点 (2) 的子节点，即节点 (4)、(5) 和 (6)）再平分，事例总数将总是与节点 (2) 的事例数相同。  
+ 在决策树中，树中每个级别的支持的总数等于其父节点的支持数。 例如，如果包含 1200 个事例的模型按性别，并且再平分由三个值的收入低、 中和高的子节点的节点 (2) 节点 (4)，(5) 和 (6)，始终等于相同数量的情况下为节点 (2)。  
   
 |节点 ID 和节点属性|支持计数|  
 |---------------------------------|-------------------|  
@@ -208,7 +208,7 @@ ms.locfileid: "50146222"
 |3|连续|指示此属性的值是一个连续数值，因此可以由平均值以及偏差和标准偏差表示。|  
 |4|离散|指示值（数字或文本）被视为离散值。<br /><br /> **注意** 离散值也可能处于缺失状态；不过，在进行计算时，它们的处理方式不同。 有关信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。|  
 |5|离散化|指示该属性包含已离散化的数值。 该值将是一个带格式的字符串，描述离散化存储桶。|  
-|6|现有|指示属性具有连续数值，并且这些值已经在数据中提供（与缺失或推导的值不同）。|  
+|6|Existing|指示属性具有连续数值，并且这些值已经在数据中提供（与缺失或推导的值不同）。|  
 |7|系数|指示一个表示系数的数值。<br /><br /> 系数是一个在计算依赖变量的值时要应用的值。 例如，如果您的模型创建了一个基于年龄预测收入的回归公式，则在将年龄与收入相关联的公式中将使用系数。|  
 |8|得分|指示表示某个属性的得分的数值。|  
 |9|统计信息|指示表示回归量的统计信息的数值。|  
@@ -238,7 +238,7 @@ ms.locfileid: "50146222"
   
 -   **节点概率** 始终小于或等于 **边际概率**。  
   
- 例如，如果决策树中所有客户的总人数按性别平分（并且没有值缺失），则子节点的概率应为 .5。 接下来，假设每个性别节点再根据收入级别（High、Medium 和 Low）平分。 这种情况下，每个子节点的 MARGINAL_PROBABILITY 分数应始终为 .33，而 NODE_PROBABILTY 值将是指向该节点的所有概率的乘积，因此始终小于 MARGINAL_PROBABILITY 值。  
+ 例如，如果决策树中所有客户的总人数按性别平分（并且没有值缺失），则子节点的概率应为 .5。 但是，假设根据收入级别的每个性别节点也同样划分-High、 Medium 和 Low。 这种情况下，每个子节点的 MARGINAL_PROBABILITY 分数应始终为 .33，而 NODE_PROBABILTY 值将是指向该节点的所有概率的乘积，因此始终小于 MARGINAL_PROBABILITY 值。  
   
 |节点/属性和值的级别|边际概率|节点概率|  
 |----------------------------------------|--------------------------|----------------------|  
@@ -256,9 +256,9 @@ ms.locfileid: "50146222"
   
  下表提供了指向每种算法的主题的链接：  
   
--   **模型内容主题** ：说明每个算法类型的每个节点类型的含义，并提供有关特定模型类型中最受关注的节点的指南。  
+-   **模型内容主题：** 说明每种算法类型，每个节点类型的含义，并提供有关哪些节点最感兴趣的特定模型类型中的指导。  
   
--   **查询主题** ：提供针对特定模型类型的查询的示例，以及关于如何解释这些结果的指南。  
+-   **查询主题：** 提供了有关如何解释结果的针对特定模型类型和指南的查询的示例。  
   
 |算法或模型类型|模型内容|查询挖掘模型|  
 |-----------------------------|-------------------|----------------------------|  
@@ -292,7 +292,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您还可以通过启动与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并查询系统表来访问数据挖掘架构行集中的信息。 有关详细信息，请参阅[数据挖掘架构行集 (SSA)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   

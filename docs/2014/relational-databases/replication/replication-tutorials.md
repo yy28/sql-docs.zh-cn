@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e72a4e076cad8b939e6f40d3332d4c80fa27887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d57e12535bad09c1ddf1f89e87cba17e364f19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112832"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784817"
 ---
 # <a name="replication-tutorials"></a>复制教程
   在复制教程中，您将学习如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]安装和运行复制拓扑。  

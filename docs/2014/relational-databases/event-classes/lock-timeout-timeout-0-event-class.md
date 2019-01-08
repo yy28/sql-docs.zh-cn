@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a65f4256abebd2b5ab9fb80e4f2ca91c1056c079
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 312cda4fd588336d8be42c82a20392c8d0b80664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191077"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780729"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件类
   **Lock:Timeout (timeout > 0)** 事件类指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 此事件类除了不包括超时值为 0 的任何事件外，其行为与 **Lock:Timeout** 事件类相同。  
@@ -34,7 +33,7 @@ ms.locfileid: "48191077"
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|用户帐户控制|  
 |BinaryData|`image`|锁资源标识符。|2|用户帐户控制|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|用户帐户控制|  
-|DatabaseID|`int`|发生超时的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示数据库的名称，如果`ServerName`在跟踪中捕获的数据列并且服务器可用。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
+|DatabaseID|`int`|发生超时的数据库的 ID。 如果在跟踪中捕获 `ServerName` 数据列而且服务器可用，则 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
 |DatabaseName|`nvarchar`|发生超时的数据库的名称。|35|用户帐户控制|  
 |Duration|`bigint`|事件占用的时间（微秒）。|13|用户帐户控制|  
 |EndTime|`datetime`|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。|15|用户帐户控制|  
@@ -46,7 +45,7 @@ ms.locfileid: "48191077"
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|用户帐户控制|  
 |LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|用户帐户控制|  
 |LoginSid|`image`|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|用户帐户控制|  
-|“模式”|`int`|事件已接收的或正在请求的状态。<br /><br /> 0 = NULL<br /><br /> 1 = Sch-S<br /><br /> 2 = Sch-M<br /><br /> 3 = S<br /><br /> 4 = U<br /><br /> 5 = X<br /><br /> 6 = IS<br /><br /> 7 = IU<br /><br /> 8 = IX<br /><br /> 9 = SIU<br /><br /> 10 = SIX<br /><br /> 11 = UIX<br /><br /> 12 = BU<br /><br /> 13 = RangeS-S<br /><br /> 14 = RangeS-U<br /><br /> 15 = RangeI-N<br /><br /> 16 = RangeI-S<br /><br /> 17 = RangeI-U<br /><br /> 18 = RangeI-X<br /><br /> 19 = RangeX-S<br /><br /> 20 = RangeX-U<br /><br /> 21 = RangeX-X|32|用户帐户控制|  
+|模式|`int`|事件已接收的或正在请求的状态。<br /><br /> 0 = NULL<br /><br /> 1 = Sch-S<br /><br /> 2 = Sch-M<br /><br /> 3 = S<br /><br /> 4 = U<br /><br /> 5 = X<br /><br /> 6 = IS<br /><br /> 7 = IU<br /><br /> 8 = IX<br /><br /> 9 = SIU<br /><br /> 10 = SIX<br /><br /> 11 = UIX<br /><br /> 12 = BU<br /><br /> 13 = RangeS-S<br /><br /> 14 = RangeS-U<br /><br /> 15 = RangeI-N<br /><br /> 16 = RangeI-S<br /><br /> 17 = RangeI-U<br /><br /> 18 = RangeI-X<br /><br /> 19 = RangeX-S<br /><br /> 20 = RangeX-U<br /><br /> 21 = RangeX-X|32|用户帐户控制|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|用户帐户控制|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|用户帐户控制|  
 |ObjectID|`int`|对象的 ID（如果可用且适用）。|22|用户帐户控制|  
@@ -54,7 +53,7 @@ ms.locfileid: "48191077"
 |OwnerID|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|用户帐户控制|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|用户帐户控制|  
 |ssSqlProfiler|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 并以 login2 的身份，执行语句`SessionLoginName`显示 Login1 和`LoginName`显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并以 Login2 身份执行语句，则 `SessionLoginName` 将显示 Login1，而 `LoginName` 则显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|`int`|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |TextData|`ntext`|依赖于跟踪中捕获的事件类的文本值。|1|用户帐户控制|  

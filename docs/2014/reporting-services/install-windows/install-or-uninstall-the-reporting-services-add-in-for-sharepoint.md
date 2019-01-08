@@ -11,12 +11,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b6b360af5bd4e10bff706377caa91927bdd8d00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ae99e33bb51b38afd92ad815662947f645bf8dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055507"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392090"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序（SharePoint 2010 和 SharePoint 2013）
   在 SharePoint 服务器上运行用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装包 (rsSharePoint.msi)，以在 SharePoint 部署中启用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 这些功能包括 Power View、一个报表查看器 Web 部件、一个 URL 代理端点、一些内容类型和一些应用程序页，使用它们可以创建、查看及管理 SharePoint 站点上的报表、报表模型、数据源和其他报表服务器内容。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是在 SharePoint 模式下运行的报表服务器的必需组件。 可以从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导或通过从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包下载 rsSharePoint.msi 来安装此外接程序。 有关外接程序和下载页的版本列表，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "48055507"
 -   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
 ##  <a name="bkmk_prereq"></a> 先决条件  
- 将报表服务器与 SharePoint 产品的实例集成需要若干步骤，安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是其中的一步。 有关使用 SharePoint 模式下的要求的完整集合的详细信息，请参阅[的硬件和软件要求 SharePoint 模式下的 Reporting Services](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)。 有关安装和配置的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
+ 将报表服务器与 SharePoint 产品的实例集成需要若干步骤，安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是其中的一步。 有关针对使用 SharePoint 模式全套要求的详细信息，请参阅 [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)。 有关安装和配置的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
   
 -   如果将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与具有多个 Web 前端应用程序的 SharePoint 场集成，则将该外接程序安装到场中每台具有 Web 服务器前端的计算机上。 仅对将要用于访问报表服务器内容的 Web 前端执行此操作。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48055507"
   
 -   SharePoint 2010 产品准备工具安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 外接程序的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能所需的外接程序的新版本。  
   
-     如果您运行 SharePoint 产品准备工具，仍需要安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。  
+     如果您运行 SharePoint 产品准备工具，仍需要安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 外接程序的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本。  
   
--   如果您在安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序第一次，则在运行 SharePoint 产品准备工具，你将看到以下对话框，该值指示准备工具未安装为较新的外接程序的较旧版本检测到的版本。 这是预期行为  
+-   如果您是第一次安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 外接程序的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本，则在运行 SharePoint 产品准备工具时，将会看到以下对话框，指示该准备工具未安装该外接程序的较旧版本，因为已检测到了较新版本。 这是预期行为  
   
      ![已安装 SSRS 外接程序。](../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "已安装 SSRS 外接程序。")  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48055507"
   
 -   **安装向导：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")的新增功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]外, 接程序可以安装通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
   
--   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **rsSharepoint.msi:** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
     > [!NOTE]  
     >  如果你将 **/q** 开关用于无提示命令行安装，将不显示最终用户许可协议。 对此软件的使用受到许可协议控制并且由您负责遵守该许可协议，而与安装方法无关。  
@@ -108,22 +108,22 @@ Rssharepoint.msi /?
   
 1.  下载安装程序 (`rsSharepoint.msi`) 为[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
-2.  以管理员身份运行`rsSharepoint.msi`以运行安装向导。 向导将显示“欢迎”页、软件许可条款和注册信息页。 安装程序将在以下路径下创建文件夹，并将文件复制到该文件夹中：  
+2.  以管理员身份运行 `rsSharepoint.msi` 以启动安装向导。 向导将显示“欢迎”页、软件许可条款和注册信息页。 安装程序将在以下路径下创建文件夹，并将文件复制到该文件夹中：  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
-     或多个  
+     或  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  在 SharePoint 管理中心配置报表服务器设置和功能激活。 . 有关安装和配置的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式下，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
+3.  在 SharePoint 管理中心配置报表服务器设置和功能激活。 . 有关安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅 [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
 ###  <a name="bkmk_files_only_installation"></a> “仅文件”安装  
  若要安装文件但跳过自定义操作安装阶段，则可以从命令行中使用 SKIPCA 选项来运行 rssharepoint.msi：  
   
 1.  使用 **管理员权限**打开命令提示符。  
   
-2.  运行以下命令：  
+2.  运行下面的命令：  
   
     ```  
     Msiexec.exe /i rsSharePoint.msi SKIPCA=1  
@@ -138,7 +138,7 @@ Rssharepoint.msi /?
   
 2.  运行自定义操作可执行文件：  
   
-    1.  导航到包含文件的文件夹`rsCustomAction.exe`。 此文件通过外接程序的“仅文件”安装复制到您的计算机。 `rsCustomAction.exe` 中位于 **%temp%** 目录。 要导航到此文件，请从命令提示符键入以下信息：  
+    1.  导航到包含文件 `rsCustomAction.exe` 的文件夹。 此文件通过外接程序的“仅文件”安装复制到您的计算机。 `rsCustomAction.exe` 中位于 **%temp%** 目录。 要导航到此文件，请从命令提示符键入以下信息：  
   
          **CD %temp%**。  
   
@@ -153,7 +153,7 @@ Rssharepoint.msi /?
     3.  更改生效所需的时间可能因您的服务器环境而异。 您还可以运行 **iisreset** 以强制实施更快的更新。  
   
 ### <a name="quiet-installation-for-scripting"></a>用于脚本撰写的静默安装  
- 你可以使用 **/q** 或 **/quiet** 开关，进行不显示任何对话框或警告的“静默”安装。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
+ 你可以使用 /q 或 /quiet 开关，进行不显示任何对话框或警告的“静默”安装。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
   
 > [!NOTE]  
 >  如果你将 **/q** 开关用于无提示命令行安装，将不显示最终用户许可协议。 对此软件的使用受到许可协议控制并且由您负责遵守该许可协议，而与安装方法无关。  
@@ -162,7 +162,7 @@ Rssharepoint.msi /?
   
 1.  使用 **管理员权限**打开命令提示符。  
   
-2.  运行以下命令：  
+2.  运行下面的命令：  
   
     ```  
     Msiexec.exe /i rsSharePoint.msi /q  
@@ -177,7 +177,7 @@ Rssharepoint.msi /?
   
  卸载外接程序会删除用于在报表服务器上处理报表的服务器集成功能。 它还将从 SharePoint 管理中心删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页和其他自定义 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页。 您可能还想删除在受影响的 SharePoint 站点上不再使用的所有报表和其他报表服务器项。 在删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序后，它们不会再运行。  
   
- 若要卸载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序，必须具有[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]安装仍在运行。 如果先卸载 SharePoint 2010，则必须重新安装该卸载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。  
+ 若要卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，必须使 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 安装仍处于运行状态。 如果先卸载 SharePoint 2010，则必须重新安装该产品才能卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。  
   
  卸载外接程序的步骤与卸载独立服务器和服务器场的步骤相同。 安装程序将删除在安装过程中添加的程序文件和所有配置设置。  
   
@@ -218,7 +218,7 @@ Rssharepoint.msi /?
   
 1.  使用 **管理员权限**打开命令提示符。  
   
-2.  运行以下命令：  
+2.  运行下面的命令：  
   
     ```  
     Msiexec.exe /uninstall rsSharePoint.msi LocalOnly=1  
@@ -230,7 +230,7 @@ Rssharepoint.msi /?
   
 1.  使用 **管理员权限**打开命令提示符。  
   
-2.  运行以下命令：  
+2.  运行下面的命令：  
   
     ```  
     rsCustomAction.exe /p  
@@ -243,7 +243,7 @@ Rssharepoint.msi /?
   
 1.  使用 **管理员权限**打开命令提示符。  
   
-2.  运行以下命令：  
+2.  运行下面的命令：  
   
     ```  
     msiexec.exe /f rssharepoint.msi  
@@ -308,6 +308,6 @@ Rssharepoint.msi /?
   
 ## <a name="see-also"></a>请参阅  
  [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)   
- [Reporting Services 报表服务器&#40;SharePoint 模式&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
+ [Reporting Services 报表服务器（SharePoint 模式）](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
   
   

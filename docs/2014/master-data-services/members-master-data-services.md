@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b07719a39cd8f82561bd92635dcba8e97ffee532
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8125a27eed225a137a5665d87c923271cb592859
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096037"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793129"
 ---
 # <a name="members-master-data-services"></a>成员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，成员是物理主数据。 例如，成员可以是 Product 实体中的 Road-150 自行车或 Customer 实体中的特定客户。  
@@ -51,7 +50,7 @@ ms.locfileid: "48096037"
 -   在显式层次结构中，合并成员可以是层次结构中其他成员的父级，也可以是子级。  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>使用层次结构和集合组织成员  
- 层次结构和集合可用于分组成员便于报告或分析。 有关详细信息，请参阅[层次结构&#40;Master Data Services&#41; ](hierarchies-master-data-services.md)并[集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)。  
+ 层次结构和集合可用于分组成员便于报告或分析。 有关详细信息，请参阅 [层次结构 (Master Data Services)](hierarchies-master-data-services.md) 和 [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)。  
   
 ## <a name="member-example"></a>成员示例  
  在下面的示例中，每个成员均包含 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性值。  
@@ -62,11 +61,11 @@ ms.locfileid: "48096037"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的叶成员。|[创建叶成员&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
-|创建新的合并成员。|[创建合并的成员&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|删除现有成员或集合。|[删除成员或集合&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|重新激活已删除的成员或集合。|[重新激活成员或集合&#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|更新成员的属性值。|[更改属性类型&#40;MDS add-in for Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|创建新的叶成员。|[创建叶成员 (Master Data Services)](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
+|创建新的合并成员。|[创建合并成员 (Master Data Services)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|删除现有成员或集合。|[删除成员或集合 (Master Data Services)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|重新激活已删除的成员或集合。|[重新激活成员或集合 (Master Data Services)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|更新成员的属性值。|[更改属性类型（用于 Excel 的 MDS 外接程序）](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 |在层次结构中移动成员。|[层次结构中移动成员&#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
@@ -75,16 +74,16 @@ ms.locfileid: "48096037"
   
 -   [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [层次结构&#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
+-   [层次结构 (Master Data Services)](hierarchies-master-data-services.md)  
   
--   [集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
--   [叶权限&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [叶权限 (Master Data Services)](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [合并的权限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
--   [筛选器运算符&#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
+-   [Filter 运算符 (Master Data Services)](../../2014/master-data-services/filter-operators-master-data-services.md)  
   
   

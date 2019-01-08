@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8edbfcc8637b1c7246f4a06470eeafcd0d67724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cec0a0378acceef269b17c93cdc0e2f5e816e437
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149597"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789769"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>自定义工作流 XML 说明 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当工作流启动时，<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法由 SQL Server MDS Workflow Integration Service 调用。 此方法将有关触发工作流业务规则的项的元数据和数据作为 XML 块接收。 有关实现工作流处理程序的代码示例，请参阅[自定义工作流示例 &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)。  

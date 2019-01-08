@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512781"
 ---
 # <a name="attribute-relationships"></a>的维度设计器中，可以在“维度结构”视图的
   在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度内的属性始终直接或间接与相关的键属性。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：  
@@ -80,7 +80,7 @@ ms.locfileid: "48081582"
   
 -   与“客户”属性具有属性关系的“市县”属性。  
   
- 对于导航多维数据集中的数据，还可以创建不表示自然层次结构数据中的用户定义层次结构 (称为*即席*或*reporting*层次结构)。 例如，您可以基于 `{Age, Gender}` 创建用户定义层次结构。 尽管自然层次结构是在聚合结构和索引结构（这两种结构对源数据中的自然关系进行了解释，并且对用户隐藏）的基础上形成，但是用户无法看到两种层次结构的行为差异。  
+ 对于导航多维数据集中的数据，还可以创建不表示自然层次结构数据中的用户定义层次结构 (称为*即席*或*reporting*层次结构)。 例如，您可以基于 `{Age, Gender}` 创建用户定义层次结构。 用户不会看到任何区别在于两个层次结构的行为方式，尽管自然层次结构可以利用聚合和索引结构-向用户隐藏的源数据中的自然关系该帐户。  
   
  级别的 `SourceAttribute` 属性确定用于说明该级别的特性。 特性的 `KeyColumns` 属性指定数据源视图中提供成员的列。 特性的 `NameColumn` 属性可以指定成员的其他名称列。  
   

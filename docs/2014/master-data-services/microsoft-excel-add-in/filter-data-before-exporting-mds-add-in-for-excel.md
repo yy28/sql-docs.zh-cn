@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 828205b1786d2539e81dd54317ab0dc0a15e8a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3bbbc189df4a004f18e8b23dba22a6a9469e3a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793007"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>加载前筛选数据（用于 Excel 的 MDS 外接程序）
   在中[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，当你想要限制的大小或要加载到 Excel 的数据的作用域筛选数据。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -54,6 +53,6 @@ ms.locfileid: "48111891"
 ## <a name="see-also"></a>请参阅  
  [加载数据&#40;MDS add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [“筛选器”对话框 &#40;MDS Add-in for Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [对列重新排序&#40;MDS add-in for Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [对列重新排序（用于 Excel 的 MDS 外接程序）](reorder-columns-mds-add-in-for-excel.md)  
   
   

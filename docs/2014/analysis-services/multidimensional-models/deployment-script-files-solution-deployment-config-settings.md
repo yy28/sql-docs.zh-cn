@@ -17,12 +17,12 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 126a0814bb30018c6bcc8fca21c71dd8da84a6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519416"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>为解决方案部署指定配置设置
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取分区和角色部署选项，在部署脚本中使用\<*项目名称*>.configsettings 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用当前项目的配置设置来创建\<*项目名称*>.configsettings 文件。  
@@ -46,17 +46,17 @@ ms.locfileid: "48179517"
  若要修改分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，则必须更改此信息内的\<*项目名称*>.configsettings 文件中，如下面的过程中所述。 无法更改项目中的分区和角色设置，因为*\<项目名称 >* **属性页**中的对话框[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不显示这些选项。  
   
 > [!NOTE]  
->  配置设置可应用于所有对象，也可仅应用于新创建的对象。 仅当要将其他对象部署到以前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中，并且不希望覆盖现有对象时，才将配置设置应用于新创建的对象。 若要指定配置设置应用于所有对象还是仅新创建的设置此选项\<*项目名称*>.deploymentoptions 文件。 有关详细信息，请参阅[指定分区和角色部署选项](deployment-script-files-partition-and-role-deployment-options.md)。  
+>  配置设置可应用于所有对象，也可仅应用于新创建的对象。 仅当要将其他对象部署到以前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中，并且不希望覆盖现有对象时，才将配置设置应用于新创建的对象。 若要指定配置设置应用于所有对象还是仅新创建的设置此选项\<*项目名称*>.deploymentoptions 文件。 有关详细信息，请参阅 [指定分区和角色部署选项](deployment-script-files-partition-and-role-deployment-options.md)。  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>在生成输入文件后更改配置设置  
   
 -   以交互方式运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，然后在 **“配置设置”** 页上，为要部署的对象指定配置设置。  
   
-     — 或 —  
+     -或-  
   
 -   在命令提示符下运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，并设置向导，使其以应答文件模式运行。 有关应答文件模式的详细信息，请参阅 [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)。  
   
-     — 或 —  
+     -或-  
   
 -   修改\<*项目名称*> 使用任何文本编辑器来.configsettings 文件。  
   

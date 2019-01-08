@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - partitions [SMO]
@@ -17,20 +15,20 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f98d4337dbd5a43adf1e83d80b24b8286193e19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787159"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用表和索引分区
-  数据可以存储通过使用提供的存储算法[Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)。 分区可以使大型表和索引更易于管理并且更灵活。  
+  可以使用 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)所提供的存储算法来存储数据。 分区可以使大型表和索引更易于管理并且更灵活。  
   
 ## <a name="index-and-table-partitioning"></a>索引和表分区  
  通过该功能可以将索引和表数据分散到各个分区中的多个文件组。 分区函数定义如何根据某些列（称为分区依据列）中的值将表或索引的行映射到一组分区。 分区方案将分区函数指定的每个分区映射到一个文件组。 这样，您便可以制定相应存档策略，用以将表扩展到多个文件组，因而也可扩展到多个物理设备。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database>对象包含一系列<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>对象表示实现的分区函数和一系列<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>描述如何将数据映射到文件组的对象。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 对象包含表示已实现的分区函数的 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 对象的集合，以及描述如何将数据映射到文件组的 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 对象的集合。  
   
  每个 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 属性中指定其使用的分区方案，并在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定列。  
   
@@ -38,12 +36,12 @@ ms.locfileid: "48166107"
  对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio.NET 中创建 Visual Basic SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)并[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>在 Visual Basic 中为表设置分区方案  
- 代码示例演示如何创建分区函数和分区方案为`TransactionHistory`表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]示例数据库。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
+ 此代码示例说明如何为 `TransactionHistory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建分区函数和分区方案。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBPartition1](SMO How to#SMO_VBPartition1)]  -->  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>在 Visual C# 中为表设置分区方案  
- 代码示例演示如何创建分区函数和分区方案为`TransactionHistory`表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]示例数据库。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
+ 此代码示例说明如何为 `TransactionHistory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建分区函数和分区方案。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
   
 ```  
 {   
@@ -91,7 +89,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>在 PowerShell 中为表设置分区方案  
- 代码示例演示如何创建分区函数和分区方案为`TransactionHistory`表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]示例数据库。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
+ 此代码示例说明如何为 `TransactionHistory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建分区函数和分区方案。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

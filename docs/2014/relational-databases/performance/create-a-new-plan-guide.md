@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a792063b76beebfba4d0d7179e5bc5ed394d3f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207747"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519874"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建计划指南。 计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，您需要指定要优化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
@@ -31,7 +31,7 @@ ms.locfileid: "48207747"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建计划指南，请使用：**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48207747"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   sp_create_plan_guide 的参数必须以显示的顺序提供。 提供的参数的值时`sp_create_plan_guide`，必须显式指定名称的所有参数或根本未。 例如，如果指定了 `@name =`，则也必须指定 `@stmt =`、`@type =` 等。 同样，如果`@name =`省略并仅提供参数值，也必须省略其余的参数名称，并提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
+-   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 `sp_create_plan_guide` 的参数提供值时，所有参数名称都必须显式指定，或全部不指定。 例如，如果指定了 `@name =`，则也必须指定 `@stmt =`、`@type =` 等。 同样，如果省略了 `@name =` 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
 -   您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48207747"
   
 1.  单击加号以便展开您要在其中创建计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。  
+2.  右键单击**计划指南**文件夹，然后选择**新建计划指南...**.  
   
 3.  在 **“新建计划指南”** 对话框的 **“名称”** 框中，输入计划指南的名称。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48207747"
   
 #### <a name="to-create-a-plan-guide"></a>创建计划指南  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57e581985a4fcc5b7d1055748f87aed40c06a5a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629625"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819059"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  要更改的发布的名称。 *发布*是**sysname**，默认值为 NULL。 此发布必须已经存在且必须符合标识符规则。  
   
- [  **@subscriber=**] **'***订阅服务器*****  
+ [  **@subscriber=**] **'**_订阅服务器上_  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db=**] **'***subscriber_db*****  
+ [  **@subscriber_db=**] **'**_subscriber_db_  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
- [  **@property=**] **'***属性*****  
+ [  **@property=**] **'**_属性_  
  是要为给定发布更改的属性。 *属性*是**sysname**，可以是表中的值之一。  
   
- [  **@value=**] **'***值*****  
+ [  **@value=**] **'**_值_  
  为指定的新值*属性*。 *值*是**nvarchar(255)**，可以是表中的值之一。  
   
-|“属性”|ReplTest1|Description|  
+|属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**description**||对该合并订阅的说明。|  
 |**priority**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  
@@ -87,7 +86,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergesubscription**。  
   
 ## <a name="see-also"></a>请参阅  

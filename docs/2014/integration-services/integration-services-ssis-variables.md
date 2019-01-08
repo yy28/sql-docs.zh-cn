@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069737"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772569"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
   变量存储 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其容器、任务和事件处理程序在运行时可以使用的值。 脚本任务和脚本组件中的脚本也可以使用变量。 将任务和容器按顺序组织为工作流的优先约束在其约束定义包含表达式时可以使用变量。  
@@ -46,7 +45,7 @@ ms.locfileid: "48069737"
 ## <a name="system-and-user-defined-variables"></a>系统变量和用户定义变量  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持两种类型的变量：用户定义变量和系统变量。 用户定义变量由包开发人员定义，系统变量由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定义。 可以创建包所需数量的用户定义变量，但不能另外创建系统变量。  
   
- 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅[执行 SQL 任务](control-flow/execute-sql-task.md)和[执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
+ 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅 [执行 SQL 任务](control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
 > [!NOTE]  
 >  用户定义变量和系统变量的名称是区分大小写的。  
@@ -139,11 +138,11 @@ ms.locfileid: "48069737"
  指定变量值的数据类型。  
   
 ## <a name="configuring-variables"></a>配置变量  
- 可以通过 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅[“变量”窗口](../../2014/integration-services/variables-window.md)。  
+ 有关可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [“变量”窗口](../../2014/integration-services/variables-window.md)。  
   
- 若要了解有关变量的属性，以及有关如何以编程方式设置这些属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.Variable>。  
+ 若要了解变量属性的详细信息，以及关于以编程方式设置这些属性的详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Variable>。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [添加、删除、更改包中用户定义变量的作用域](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

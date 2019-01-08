@@ -10,12 +10,12 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e324435b6b67574a111f9cd95671f5b2aa6824d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 79f3ac8efa0e629ddfd82d5945973c86a661fe75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032424"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52576786"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   对于现有的 DQS 安装，您可以从命令提示符运行 DQSInstaller.exe 文件，以便一次性将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，并在稍后使用 .dqsb 文件一次性将所有知识库导入其他 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 有关从命令提示符运行 DQSInstaller.exe 的详细信息，请参阅 [从命令提示符运行 DQSInstaller.exe](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) 中的 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "51032424"
 -   若要将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，请通过命令提示符使用 `exportkbs` 参数并使用要将知识库导出到的位置的完整路径和文件名来运行 DQSInstaller.exe。 例如，将所有知识库导出到 C: 驱动器中的 DQSBackup.dqsb 文件：  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "51032424"
 -   若要在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]时将所有知识库导出到 DQS 备份文件，请通过命令提示符使用 `uninstall` 并使用要将知识库导出到的位置的完整路径和文件名来运行 DQSInstaller.exe。 例如，将所有知识库导出到 C: 驱动器中的 DQSBackup.dqsb 文件，然后卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]：  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "51032424"
  通过命令提示符使用 `importkbs` 参数并使用要从中导入知识库的位置的完整路径和文件名来运行 DQSInstaller.exe 文件。 例如，从 C: 驱动器中的 DQSBackup.dqsb 文件导入所有知识库：  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
  如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中存在使用要导入的知识库的名称的知识库，则导入的知识库名称将追加一条下划线 (_)，后跟从 1 开始的整数值。 例如，如果“CompanyName”域重复，则导入的域名称将为“CompanyName_1”。  

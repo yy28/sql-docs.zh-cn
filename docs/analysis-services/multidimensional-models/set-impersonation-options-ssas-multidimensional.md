@@ -1,5 +1,5 @@
 ---
-title: 设置模拟选项 (SSAS-多维) |Microsoft 文档
+title: 设置模拟选项 (SSAS-多维) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026154"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533814"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>设置模拟选项（SSAS - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026154"
  对话框中的所有选项都可用，但并非所有选项都适合每种情况。 使用以下信息来确定最适合于您的情况的选项。  
   
  **使用特定用户名和密码**  
- 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用此格式中指定的 Windows 用户帐户的安全凭据： *\<域名 >***\\***\<用户帐户名称 >*。  
+ 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用按以下格式指定的 Windows 用户帐户的安全凭据：*\<域名 >***\\***\<用户帐户名 >*。  
   
  选择此选项可使用一个专用的最小权限的 Windows 用户标识，该用户标识是您为数据访问目的而专门创建的。 例如，如果您定期创建用于检索在报表中使用的数据的通用帐户，则可以在此处指定该帐户。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026154"
  对于 DMX OPENQUERY 语句、本地多维数据集和挖掘模型，即使您选择服务帐户选项，也将使用当前用户的凭据。 外部绑定不支持此服务帐户选项。  
   
 > [!NOTE]  
->  如果服务帐户不具有对 Analysis Services 实例的管理员权限，在处理多维数据集的数据挖掘模型时会出错。 有关详细信息，请参阅 [挖掘结构：数据源是 OLAP 多维数据集时的处理问题](http://go.microsoft.com/fwlink/?LinkId=251610)。  
+>  如果服务帐户不具有对 Analysis Services 实例的管理员权限，在处理多维数据集的数据挖掘模型时会出错。 有关详细信息，请参阅[挖掘结构：数据源 OLAP 多维数据集的处理问题](http://go.microsoft.com/fwlink/?LinkId=251610)。  
   
  **使用当前用户的凭据**  
  选择此选项将使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象使用当前用户的安全凭据来处理外部绑定、DMX OPENQUERY、本地多维数据集和挖掘模型。  
@@ -76,7 +76,7 @@ ms.locfileid: "34026154"
  “默认值”或“继承”  
  此对话框对于在数据库级别设置的模拟选项使用“默认值”；而对于在数据源级别设置的模拟选项使用“继承”。  
   
- **“数据源 - 继承”选项**  
+ **数据源-继承选项**  
   
  在数据源级别， **“继承”** 指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 应使用父对象的模拟选项。 在多维模型中，父对象是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 通过选择 **“继承”** 选项，您可为此数据源以及属于同一个数据库的其他数据源集中管理模拟设置。 为使此选项有意义，请在数据库级别选择一个特定的 Windows 用户名和密码。 否则，结合对数据源使用 **“继承”** 以及对数据库使用 **“默认值”** 等效于使用服务帐户选项。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "34026154"
   
  有关数据库级别的默认设置的详细信息，请参阅[设置多维数据库属性 (Analysis Services)](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)。  
   
- **“数据库 – 默认值”选项**  
+ **数据库的默认选项**  
 
  对于多维数据库， **“默认值”** 意味着使用服务帐户，并将当前用户用于数据挖掘操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建数据源（SSAS 多维）](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [设置数据源属性 & #40;SSAS 多维 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [设置数据源属性（SSAS 多维）](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

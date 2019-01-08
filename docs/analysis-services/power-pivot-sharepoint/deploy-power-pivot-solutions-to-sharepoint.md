@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544269"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>将 Power Pivot 解决方案部署到 SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "38984759"
   
  [先决条件：确认 Web 应用程序使用经典模式身份验证](#bkmk_classic)  
   
- [步骤 1：部署场解决方案](#bkmk_farm)  
+ [第 1 步：部署场解决方案](#bkmk_farm)  
   
- [步骤 2：将 Power Pivot Web 应用程序解决方案部署到管理中心](#deployCA)  
+ [步骤 2:将 Power Pivot Web 应用程序解决方案部署到管理中心](#deployCA)  
   
- [步骤 3：将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序](#deployUI)  
+ [步骤 3:将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序](#deployUI)  
   
  [重新部署或收回解决方案](#retract)  
   
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  返回值应为 **false**。 如果返回值为“True” ，则不能使用此 Web 应用程序访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
-##  <a name="bkmk_farm"></a> 步骤 1：部署场解决方案  
+##  <a name="bkmk_farm"></a> 步骤 1:部署场解决方案  
  本部分将向你演示如何使用 PowerShell 部署解决方案，但你也可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具来完成此任务。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  在安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 后，此任务只需要执行一次。  
@@ -57,7 +57,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  运行以下 cmdlet 以便添加场解决方案。  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      该 cmdlet 返回解决方案的名称、其解决方案 ID 和 Deployed=False。 在下一步骤中，您将部署解决方案。  
@@ -65,10 +65,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  运行下一个 cmdlet 以便部署场解决方案：  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 步骤 2：将 Power Pivot Web 应用程序解决方案部署到管理中心  
+##  <a name="deployCA"></a> 步骤 2:将 Power Pivot Web 应用程序解决方案部署到管理中心  
  在您部署了场解决方案后，必须将 Web 应用程序解决方案部署到管理中心。 此步骤将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理仪表板添加到管理中心。  
   
 1.  使用 **“以管理员身份运行”** 选项打开 SharePoint 2010 Management Shell。  
@@ -82,7 +82,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  运行以下 cmdlet 以便添加场解决方案。  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      该 cmdlet 返回解决方案的名称、其解决方案 ID 和 Deployed=False。 在下一步骤中，您将部署解决方案。  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  现在，Web 应用程序解决方案已部署到管理中心，您可以使用管理中心完成所有其余配置步骤。  
   
-##  <a name="deployUI"></a> 步骤 3：将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序  
+##  <a name="deployUI"></a> 步骤 3:将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序  
  在上一个任务中，您将 Powerpivotwebapp.wsp 部署到了管理中心。 在这一部分，你可以在支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的每个现有 Web 应用程序上部署 powerpivotwebapp.wsp。 如果您在以后添加更多的 Web 应用程序，请确保对于这些附加的 Web 应用程序都重复执行此步骤。  
   
 1.  在管理中心的“系统设置”中，单击 **“管理场解决方案”**。  
@@ -149,7 +149,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 ## <a name="see-also"></a>请参阅  
  [升级 Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [在管理中心中管理和配置 PowerPivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [使用 Windows PowerShell 配置 Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
   

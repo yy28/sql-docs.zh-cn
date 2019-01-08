@@ -21,12 +21,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44ffc8084af6917a8df84c5a204df96112441723
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148322"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542586"
 ---
 # <a name="performing-batch-operations-xmla"></a>执行批处理操作 (XMLA)
   可以使用[批处理](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)命令，在 XML for Analysis (XMLA) 运行多个 XMLA 命令，使用单个 XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法。 可以作为单个事务或者每个命令为一个事务，以串行或并行方式运行 `Batch` 命令中包含的多个命令。 您还可以指定的外部绑定和其他属性`Batch`命令为处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
@@ -35,12 +35,12 @@ ms.locfileid: "50148322"
  `Batch` 以下列两种方式之一执行命令：  
   
  **事务性**  
- 如果`Transaction`的属性`Batch`命令设置为 true，`Batch`命令运行命令的命令所包含的所有`Batch`命令在单个事务中 —*事务*批处理。  
+ 如果`Transaction`的属性`Batch`命令设置为 true，`Batch`命令运行命令的命令所包含的所有`Batch`在单个事务的命令*事务*批处理。  
   
  如果事务性批处理中任一命令失败[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回滚任何命令`Batch`失败命令之前运行的命令和`Batch`命令立即结束。 `Batch` 命令中尚未运行的任何命令都不再执行。 `Batch` 命令结束后，`Batch` 命令将报告失败命令发生的所有错误。  
   
  **非事务性**  
- 如果`Transaction`属性设置为 false，`Batch`命令在运行所包含的每个命令`Batch`命令，在单独的事务 —*非事务性*批处理。 如果非事务性批处理中的任一命令失败，`Batch` 命令会继续执行失败命令后的命令。 `Batch` 命令尝试运行 `Batch` 命令包含的所有命令后，`Batch` 命令将报告发生的所有错误。  
+ 如果`Transaction`属性设置为 false，`Batch`命令在运行所包含的每个命令`Batch`命令，在单独的事务 a*非事务性*批处理。 如果非事务性批处理中的任一命令失败，`Batch` 命令会继续执行失败命令后的命令。 `Batch` 命令尝试运行 `Batch` 命令包含的所有命令后，`Batch` 命令将报告发生的所有错误。  
   
  `Batch` 命令中包含的各命令返回的所有结果以这些命令包含在 `Batch` 命令中的顺序返回。 `Batch` 命令返回的结果根据 `Batch` 命令是事务性的还是非事务性的而不同。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "50148322"
     > [!IMPORTANT]  
     >  如果 `Process` 命令包含在 `Bindings` 命令中，则 `DataSource` 命令不能包含 `DataSourceView`、`ErrorConfiguration`、`Process` 或 `Batch` 属性。 如果必须为 `Process` 命令指定这些属性，请在包含 `Batch` 命令的 `Process` 命令的相应属性中提供必要的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [批处理元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)   
  [处理元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)   
  [多维模型对象处理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072291"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788479"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +48,12 @@ sp_changemergepublication [ @publication= ] 'publication'
  [  **@property=**] **'***属性*****  
  给定发布的要更改的属性。 *属性*是**sysname**，可以是值中的一个列在后面的表。  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  指定属性的新值。 *值*是**nvarchar(255)**，可以是值中的一个列在后面的表。  
   
  下表说明的发布，可以更改，以及限制对这些属性值的属性。  
   
-|“属性”|ReplTest1|Description|  
+|属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|允许匿名订阅。|  
 ||**false**|不允许匿名订阅。|  
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|将发布信息从 Active Directory 上删除。|  
 |**replicate_ddl**|**1**|复制在发布服务器上执行的数据定义语言 (DDL) 语句。|  
 ||**0**|不复制 DDL 语句。|  
-|**保留期**||这是**int**表示的数*retention_period_unit*单元要保存为给定发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意： 对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。|  
+|**保留期**||这是**int**表示的数*retention_period_unit*单元要保存为给定发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意：对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。|  
 |**retention_period_unit**|**day**|按天指定保持期。|  
 ||**week**|按周指定保持期。|  
 ||month|按月指定保持期。|  
@@ -119,13 +118,13 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**非活动状态**|发布处于非活动状态。|  
 |**sync_mode**|**本机**或<br /><br /> **bcp 本机**|将所有表的本机模式大容量复制程序输出用于初始快照。|  
 ||**character**<br /><br /> 或**bcp 字符**|将所有表的字符模式大容量复制程序输出用于初始快照，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器必须执行此操作。|  
-|**use_partition_groups**<br /><br /> 注意： 在使用 partition_groups 后，如果要恢复为使用**setupbelongs**，并设置**use_partition_groups = false**中**changemergearticle**，这可能不是正确反映后拍摄快照。 快照生成的触发器符合分区组的要求。<br /><br /> 与此方案的解决方法是将状态设置为 Inactive，修改**use_partition_groups**，然后将状态设置为处于活动状态。|**true**|发布使用预计算分区。|  
+|**use_partition_groups**<br /><br /> 注意：在使用 partition_groups 后，如果要恢复为使用**setupbelongs**，并设置**use_partition_groups = false**中**changemergearticle**，这可能不正确反映后拍摄快照。 快照生成的触发器符合分区组的要求。<br /><br /> 与此方案的解决方法是将状态设置为 Inactive，修改**use_partition_groups**，然后将状态设置为处于活动状态。|**true**|发布使用预计算分区。|  
 ||**false**|发布不使用预计算分区。|  
 |**validate_subscriber_info**||列出用于检索订阅服务器信息的函数。 然后，验证要用于订阅服务器的动态筛选条件以验证是否对信息进行了一致的分区。|  
 |**web_synchronization_url**||用于 Web 同步的 Internet URL 的默认值。|  
 |NULL（默认值）||返回支持的值的列表*属性*。|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  确认此存储过程所执行的操作可能会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定更改发布不使快照。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
@@ -190,7 +189,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergepublication**。  
   
 ## <a name="see-also"></a>请参阅  

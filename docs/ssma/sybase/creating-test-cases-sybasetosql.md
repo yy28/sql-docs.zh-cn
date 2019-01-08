@@ -12,12 +12,12 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514940"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>创建测试用例 (SybaseToSQL)
 使用测试用例向导来创建测试。 此向导允许您通过选择测试并验证对象和指定的测试参数创建测试用例。  

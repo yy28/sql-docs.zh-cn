@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7bb964c435a641afb1fb5ac288d1f341ba45d716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c8ef9f6a2bcc4fb9b5f78bbc968693d348319e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147009"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793339"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>数据质量匹配列（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，匹配数据后，在功能区上的“数据质量”组中，可单击“显示详细信息”以显示提供匹配详细信息的列。  
@@ -31,8 +30,8 @@ ms.locfileid: "48147009"
 |**SCORE**|表示组中的记录与透视记录的相似程度。 该得分是由 DQS 确定的。 如果没有显示任何得分，则该记录是其他记录的透视记录，或者找不到匹配项。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据质量匹配中的 MDS 外接程序 excel](data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [匹配相似数据 &#40;MDS Add-in for Excel&#41;](match-similar-data-mds-add-in-for-excel.md)   
+ [用于 Excel 的 MDS 外接程序中的数据质量匹配](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [匹配相似数据（用于 Excel 的 MDS 外接程序）](match-similar-data-mds-add-in-for-excel.md)   
  [数据匹配](../../data-quality-services/data-matching.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518979"
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度设计器，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中配置现有数据库维度。 可以使用维度设计器执行下列任务：  
@@ -43,7 +43,7 @@ ms.locfileid: "48177817"
   
 |Tab|Description|  
 |---------|-----------------|  
-|**维度结构**|使用此选项卡可以处理维度结构 - 为维度检查或创建数据源视图架构，使用属性以及组织用户定义层次结构中的属性。|  
+|**维度结构**|使用此选项卡上，若要使用的维度到结构检查或创建数据源视图架构对于维度，以处理特性，以及组织中用户定义的层次结构的属性。|  
 |**属性关系**|使用此选项卡可以创建、修改或删除维度的属性关系。|  
 |**翻译**|使用此选项卡可以不同的语言添加和编辑维度元数据的翻译。|  
 |**浏览者**|使用此选项卡可检查已处理维度的成员和审查维度元数据的翻译。|  
@@ -53,7 +53,7 @@ ms.locfileid: "48177817"
  [维度特性属性参考](dimension-attribute-properties-reference.md)  
  说明如何定义和配置维度属性。  
   
- [创建用户定义的层次结构](user-defined-hierarchies-create.md)  
+ [创建用户定义层次结构](user-defined-hierarchies-create.md)  
  说明如何定义和配置用户定义层次结构。  
   
  [定义属性关系](attribute-relationships-define.md)  

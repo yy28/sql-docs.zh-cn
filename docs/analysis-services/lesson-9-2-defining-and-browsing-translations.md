@@ -1,5 +1,5 @@
 ---
-title: 定义和浏览翻译 |Microsoft 文档
+title: 定义和浏览翻译 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63fd44d7ec62b9033f4371e7e2d38306757c647
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018914"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535015"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lesson 9-2-定义和浏览翻译
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "34018914"
   
 6.  在“月份名称”属性的“标题”对象行中，在“西班牙语(西班牙)”翻译列中键入 **Mes del Año**，并在“法语(法国)”翻译列中键入 **Mois d'Année**。  
   
-    请注意，输入这些翻译时，会出现省略号 (**…**)。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
+    请注意，当你输入这些翻译，省略号 (**...**) 显示。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
   
-7.  在“月份名称”属性的“西班牙语(西班牙)”翻译中单击省略号 (**…**)。  
+7.  单击省略号 (**...**) 用于**西班牙语 （西班牙）** 翻译**月份名称**属性。  
   
     “翻译属性数据”对话框将出现。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34018914"
   
     ![数据翻译属性对话框](../analysis-services/media/l9-translations-4.gif "翻译属性数据对话框")  
   
-9. 单击“确定”，然后在“月份名称”属性的“法语(法国)”翻译中单击省略号 (**…**)。  
+9. 单击**确定**，然后单击省略号 (**...**) 用于**法语 （法国）** 翻译**月份名称**属性。  
   
 10. 在“翻译列”列表中，选择“FrenchMonthName”，然后单击“确定”。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34018914"
   
     每个多维数据集对象的元数据将以默认语言显示，如下图所示。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
   
-    ![默认语言翻译选项卡中的](../analysis-services/media/l9-translations-5.gif "默认翻译选项卡中的语言")  
+    ![默认语言在选项卡中的翻译](../analysis-services/media/l9-translations-5.gif "默认在选项卡中的翻译的语言")  
   
 2.  在“翻译”选项卡的工具栏上，单击“新建翻译”按钮。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34018914"
   
     注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 而是以西班牙语形式出现在名为“Ventas del lnternet”的新显示文件夹中，如下图所示。  
   
-    ![Repopulated 元数据窗格](../analysis-services/media/l9-translations-6.gif "Repopulated 元数据窗格")  
+    ![元数据窗格中 Repopulated](../analysis-services/media/l9-translations-6.gif "Repopulated 元数据窗格")  
   
 6.  在“元数据”窗格中，右键单击“Cantidad de las Ventas del Internet”，然后选择“添加到查询”。  
   
@@ -117,16 +117,16 @@ ms.locfileid: "34018914"
   
     注意，月份名称将以西班牙语显示，如下图所示。  
   
-    ![在数据窗格中的月份名称的西班牙语](../analysis-services/media/l9-translations-7.gif "西班牙语在数据窗格中的月份名称")  
+    ![在数据窗格中的月份名称西班牙语](../analysis-services/media/l9-translations-7.gif "在西班牙语中在数据窗格中的月份名称")  
   
 10. 在工具栏上，选择“语言”列表中的“法语(法国)”。  
   
     注意，月份名称现在将以法语显示，并且度量值名称现在也以法语显示。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 10 课： 定义管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
+[第 10 课：定义管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [维度转换](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
 [多维数据集翻译](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)  
 [Analysis Services 中的翻译支持](../analysis-services/translation-support-in-analysis-services.md)  

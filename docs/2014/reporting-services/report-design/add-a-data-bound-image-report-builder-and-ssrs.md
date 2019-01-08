@@ -11,12 +11,12 @@ ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a82bf63ca0c70543d816cbd191b1ff9a36ced317
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9883e7e21e58424fbc6280ad99ac323becd9b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526343"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>添加数据绑定图像（报表生成器和 SSRS）
   报表可以包括对存储在数据库中的图像的引用。 此类图像称为“数据绑定图像”。 例如，在产品列表中产品名称旁边显示的图片就是数据绑定图像。  
@@ -42,16 +42,16 @@ ms.locfileid: "48211467"
   
 7.  在 **“使用此字段”** 中，选择在您的报表中包含图像的字段。  
   
-8.  在 **“使用此 MIME 类型”** 中，选择图像的 MIME 类型或文件格式，如 bmp。  
+8.  在“使用此 MIME 类型”中，选择图像的 MIME 类型或文件格式，如 bmp。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      在报表设计图面上将出现图像占位符。  
   
 ## <a name="see-also"></a>请参阅  
- [映像&#40;报表生成器和 SSRS&#41;](images-report-builder-and-ssrs.md)   
- [在报表中嵌入图像&#40;报表生成器和 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [添加外部图像&#40;报表生成器和 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [图像（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)   
+ [在报表中嵌入图像（报表生成器和 SSRS）](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [添加外部图像（报表生成器和 SSRS）](add-an-external-image-report-builder-and-ssrs.md)   
  [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

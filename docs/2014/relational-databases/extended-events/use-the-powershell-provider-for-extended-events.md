@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185077"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752839"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件。 XEvent 子文件夹位于 SQLSERVER 驱动器下。 您可以使用以下任意一种方法访问该文件夹：  
   
--   在命令提示符处，键入`sqlps`，然后按 ENTER。 键入 `cd xevent`，然后按 Enter。 在这里，可以使用**cd**和`dir`命令 (或**Set-location**并**Get-childitem** cmdlet) 导航到的服务器名称和实例名称。  
+-   在命令提示符处，键入 `sqlps`，然后按 Enter。 键入 `cd xevent`，然后按 Enter。 在这里，可以使用**cd**和`dir`命令 (或**Set-location**并**Get-childitem** cmdlet) 导航到的服务器名称和实例名称。  
   
 -   在对象资源管理器中，展开实例名称，展开“管理”，右键单击“扩展事件”，然后单击“启动 PowerShell”。 这将在以下路径中启动 PowerShell：  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185077"
   
 -   脚本必须使用 .ps1 扩展名保存。  
   
--   PowerShell 执行策略必须允许脚本运行。 若要设置执行策略，请使用 **Set-Executionpolicy** cmdlet。 (详细信息，请键入`get-help set-executionpolicy -detailed`，然后按 ENTER。)  
+-   PowerShell 执行策略必须允许脚本运行。 若要设置执行策略，请使用 **Set-Executionpolicy** cmdlet。 （有关详细信息，请键入 `get-help set-executionpolicy -detailed`，然后按 Enter）。  
   
  下面的脚本将创建一个名为“TestSession”的新会话。  
   

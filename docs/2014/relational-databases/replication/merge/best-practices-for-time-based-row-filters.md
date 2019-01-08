@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
@@ -13,12 +12,12 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786139"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
   应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 `GETDATE()` 函数的查询来实现此功能。 请考虑以下行筛选器语句：  
@@ -50,13 +49,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>使用基于时间的行筛选器时的建议  
  下面的方法提供了基于时间进行筛选的强大而直接的途径：  
   
--   将列添加到数据类型的表`bit`。 此列用来指示是否应复制行。  
+-   向表中添加数据类型为 `bit` 的一列。 此列用来指示是否应复制行。  
   
 -   使用引用新列而非基于时间的列的行筛选器。  
   
 -   创建一个 SQL Server 代理作业（通过另一种机制计划的作业），该作业在合并代理计划运行之前更新列。  
   
- 此方法解决使用的不足之处`GETDATE()`或另一种基于时间的方法并避免了必须确定何时为分区计算筛选器问题。 考虑 **Events** 表的以下示例：  
+ 此方法解决了使用 `GETDATE()` 或其他基于时间的方法时的缺点，并避免了必须确定何时为分区对筛选器求值的问题。 考虑 **Events** 表的以下示例：  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

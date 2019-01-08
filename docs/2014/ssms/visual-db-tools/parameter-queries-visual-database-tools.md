@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
@@ -12,12 +12,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815739"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>参数查询 (Visual Database Tools)
   在某些情况下，您需要创建可以使用多次但每次使用不同值的查询。 例如，可能经常运行一个查询以查找某位作者编写的所有 `title_ids` 。 可以为每次请求运行相同的查询，只是每次使用的作者 ID 或姓名不同。  
@@ -31,7 +31,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>可以使用参数的位置  
- 您可以将参数用作文本值（文本值或数值）的占位符。 最常见的情况是，在单个行或组的搜索条件中（即在 SQL 语句的 WHERE 或 HAVING 子句中）使用参数作为占位符。  
+ 可以将参数用作文本值（文本值或数值）的占位符。 最常见的情况是，在单个行或组的搜索条件中（即在 SQL 语句的 WHERE 或 HAVING 子句中）使用参数作为占位符。  
   
  您可以在表达式中使用参数作为占位符。 例如，可能希望在每次运行查询时，通过提供不同的折扣值来计算打折价格。 为此，可以指定以下表达式：  
   

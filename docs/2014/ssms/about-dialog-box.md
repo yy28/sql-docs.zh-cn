@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - status information [SQL Server Management Studio]
@@ -13,12 +13,12 @@ ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1150ba7467e4dc732cc0ddf3ea1d12df5bd77a76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179077"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769419"
 ---
 # <a name="about-dialog-box"></a>“关于”对话框
   “关于”对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中，[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”菜单中。  

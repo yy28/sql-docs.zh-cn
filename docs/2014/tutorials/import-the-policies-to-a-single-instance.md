@@ -11,17 +11,17 @@ ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 04c0170d33b07ea39b8c08ee194eb0cd63b4e64e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128307"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522850"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>将策略导入到单个实例
   在此任务中，您将要计划的最佳实践策略导入到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的单个实例上的基于策略的管理中。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  您必须在运行 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 或更高版本的服务器上执行此过程。  
   
 ### <a name="import-the-best-practices-policies-for-the-database-engine"></a>为数据库引擎导入最佳实践策略  

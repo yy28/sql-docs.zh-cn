@@ -13,12 +13,12 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707875"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527454"
 ---
 # <a name="comments-on-hellodata"></a>对 HelloData 的注释
 HelloData 应用程序将指导逐步典型的 ADO 应用程序的基本操作： 获取、 查看、 编辑和更新数据。 当你启动应用程序时，单击第一个按钮**获取数据**。 这将运行**GetData**子例程。  
@@ -74,4 +74,4 @@ HelloData 应用程序将指导逐步典型的 ADO 应用程序的基本操作�
  有关如何更新数据的详细信息，包括要执行的操作时数据时的服务器更改你**记录集**是断开连接，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。  
   
 ## <a name="formunload"></a>Form_Unload  
- **Form_Unload**子例程是重要的原因。 首先，由于这是一个示例应用程序，Form_Unload 清理对应用程序退出前对数据库所做的更改。 其次，该代码演示如何直接从一种开放执行命令**连接**通过使用对象**Execute**方法。 最后，它显示了执行针对数据源的不返回行 – 查询 （更新查询） 的示例。
+ **Form_Unload**子例程是重要的原因。 首先，由于这是一个示例应用程序，Form_Unload 清理对应用程序退出前对数据库所做的更改。 其次，该代码演示如何直接从一种开放执行命令**连接**通过使用对象**Execute**方法。 最后，它显示了执行针对数据源的非返回行的查询 （更新查询） 的示例。

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727115"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860090"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "47727115"
 |first_row_time|**bigint**|打开第一行时的时间戳（毫秒）。|  
 |last_row_time|**bigint**|打开最后一行时的时间戳（毫秒）。|  
 |close_time|**bigint**|关闭时的时间戳（毫秒）。|  
-|elapsed_time_ms|**bigint**|目标节点的操作迄今为止使用的总占用时间（毫秒）。|  
-|cpu_time_ms|**bigint**|目标节点的操作迄今为止使用的总 CPU 时间（毫秒）。|  
+|elapsed_time_ms|**bigint**|总运行时间 （以毫秒为单位） 到目前为止使用的目标节点的操作。|  
+|cpu_time_ms|**bigint**|到目前为止的目标节点的操作的总 CPU 时间 （以毫秒为单位） 使用。|  
 |database_id|**smallint**|包含要对其进行读写的对象的数据库的 ID。|  
 |object_id|**int**|要对其进行读写的对象的标识符。 引用 sys.objects.object_id。|  
 |index_id|**int**|打开其行级的索引（如果有）。|  
@@ -73,7 +73,7 @@ ms.locfileid: "47727115"
 |segment_read_count|**int**|迄今为止的段预读数。|  
 |segment_skip_count|**int**|迄今为止跳过的段数。| 
 |actual_read_row_count|**bigint**|运算符应用驻留谓词之前读取的行数。| 
-|estimated_read_row_count|**bigint**|**适用于：** 开头[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估计剩余谓词应用之前，操作员要读取的行数。|  
+|estimated_read_row_count|**bigint**|**适用范围：** 从[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估计剩余谓词应用之前，操作员要读取的行数。|  
   
 ## <a name="general-remarks"></a>一般备注  
  如果查询计划节点没有任何 IO，则所有与 IO 相关的计数器均设置为 NULL。  
@@ -84,20 +84,30 @@ ms.locfileid: "47727115"
   
 -   如果存在并行扫描，则此 DMV 将报告处理扫描的每个并行线程的计数器。
  
- 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，标准查询执行统计信息分析基础结构存在同时使用轻量查询执行统计信息分析基础结构。 新查询执行统计信息分析基础结构极大地减少了收集按运算符查询执行统计信息，如实际行数的性能开销。 可以使用全局启用此功能启动[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，或使用 query_thread_profile 扩展的事件时自动打开。
+从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，标准查询执行统计信息分析基础结构存在同时使用轻量查询执行统计信息分析基础结构。 新查询执行统计信息分析基础结构极大地减少了收集按运算符查询执行统计信息，如实际行数的性能开销。 可以使用全局启用此功能启动[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，或使用 query_thread_profile 扩展的事件时自动打开。
 
 >[!NOTE]
 > 轻型查询执行统计信息分析基础结构以减少对性能的影响下不支持 CPU 和经过的时间。
 
- 设置统计信息 XML ON 和 SET STATISTICS PROFILE ON 始终使用旧查询执行统计信息分析基础结构。
-  
-## <a name="permissions"></a>Permissions  
+设置统计信息 XML ON 和 SET STATISTICS PROFILE ON 始终使用旧查询执行统计信息分析基础结构。
+
+若要启用输出 sys.dm_exec_query_profiles 中的执行以下步骤：
+
+在[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 和更高版本使用 SET STATISTICS PROFILE ON 或 SET STATISTICS XML ON 与正在调查的查询。 这使分析基础结构，其中执行 SET 命令的会话的输出结果为 DMV。 如果你正在调查从应用程序运行的查询，不能启用与它的 SET 选项，可以创建扩展事件使用 query_post_execution_showplan 事件，它会将分析基础结构上。 
+
+在中[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，您可以或者开启[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)或使用 query_thread_profile 扩展的事件。
+
+>[!NOTE]
+> 正在调查该查询必须启动后已启用分析基础结构。 如果查询已运行，启动扩展事件会话不会产生 sys.dm_exec_query_profiles 中的结果。
+
+
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
    
 ## <a name="examples"></a>示例  
- 步骤 1： 登录到你打算使用 sys.dm_exec_query_profiles 运行的查询将分析的会话。 若要配置用于探查的查询上使用 SET STATISTICS PROFILE。 在同一会话中运行你的查询。  
+ 步骤 1：登录一个会话，在此会话中，你计划运行将使用 sys.dm_exec_query_profiles 分析的查询。 若要配置用于探查的查询上使用 SET STATISTICS PROFILE。 在同一会话中运行你的查询。  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 步骤 2： 登录到不同于在其中运行查询的会话的第二个会话。  
+ 步骤 2：登录第二个会话，该会话与运行查询的会话不同。  
   
  以下语句总结当前在会话 54 中运行的查询的进度。 为此，它基于每个节点的所有线程计算输出行的总数，然后将其与该节点的输出行的估算数目进行比较。  
   

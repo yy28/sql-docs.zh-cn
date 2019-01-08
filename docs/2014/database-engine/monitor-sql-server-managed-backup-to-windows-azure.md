@@ -10,12 +10,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3406468961dcd5817fb88b5a30098177ec6ac67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529962"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>监视 SQL Server 托管备份到 Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]内置多种措施，可在备份过程中找出问题和错误，如有可能，再通过纠正措施纠正这些问题。  但是，有一些需要用户干预的情况。 本主题介绍可用于确定备份的整体运行状况和标识需解决的任何错误的工具。  
@@ -125,15 +125,15 @@ GO
   
  **通知体系结构：**  
   
--   **基于策略的管理：** 设置了两个策略来监视备份运行状况：**智能管理系统运行状况策略**，和**智能管理用户操作运行状况策略**。 智能管理系统运行状况策略评估严重错误（例如 SQL 凭据无效或缺少 SQL 凭据、连接错误），并且报告系统的运行状况。 这些问题通常要求手动操作以便纠正基本问题。 智能管理用户操作运行状况策略评估警告，例如损坏的备份等。  这些问题可能无需任何操作，只是对某一事件的警告。 此类问题应该由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理自动负责处理。  
+-   **基于策略的管理：** 两个策略设置来监视备份运行状况：**智能管理系统运行状况策略**，并**智能管理用户操作运行状况策略**。 智能管理系统运行状况策略评估严重错误（例如 SQL 凭据无效或缺少 SQL 凭据、连接错误），并且报告系统的运行状况。 这些问题通常要求手动操作以便纠正基本问题。 智能管理用户操作运行状况策略评估警告，例如损坏的备份等。  这些问题可能无需任何操作，只是对某一事件的警告。 此类问题应该由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理自动负责处理。  
   
--   **SQL Server 代理**作业： 使用包含三个作业步骤的 SQL Server 代理作业执行通知。 在第一个作业步骤中，它将进行检测以便查看[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是为数据库还是实例配置的。 如果它发现启用并配置了[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，则它执行第二步：执行一个 PowerShell cmdlet，后者通过评估 SQL Server 基于策略的管理策略，评估运行状况。 如果它发现错误或警告，则它将失败，而这将触发第三步：第三步发出一个电子邮件通知，其中含有错误/警告报表。  但是，默认情况下不启用此 SQL Server 代理作业。 若要启用电子邮件通知作业，请使用**smart_admin.sp_set_backup_parameter**系统存储过程。  下面的过程更详细地说明了这些步骤：  
+-   **SQL Server 代理**作业：使用包含三个作业步骤的 SQL Server 代理作业执行通知。 在第一个作业步骤中，它将进行检测以便查看[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是为数据库还是实例配置的。 如果它发现启用并配置了[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，则它执行第二步：执行一个 PowerShell cmdlet，后者通过评估 SQL Server 基于策略的管理策略，评估运行状况。 如果找到错误或警告，它失败，则触发第三个步骤：第三个步骤发送电子邮件通知错误/警告报表。  但是，默认情况下不启用此 SQL Server 代理作业。 若要启用电子邮件通知作业，请使用**smart_admin.sp_set_backup_parameter**系统存储过程。  下面的过程更详细地说明了这些步骤：  
   
 ##### <a name="enabling-email-notification"></a>启用通知电子邮件  
   
 1.  如果尚未配置数据库邮件，使用中所述的步骤[配置数据库邮件](../relational-databases/database-mail/configure-database-mail.md)。  
   
-2.  将数据库设置为用于 SQL Server 警报系统的邮件系统： 右键单击**SQL Server 代理**，选择**警报系统**，检查**启用邮件配置文件**框中，选择**数据库邮件**作为**邮件系统**，然后选择以前创建的邮件配置文件。  
+2.  将数据库设置为用于 SQL Server 警报系统的邮件系统：右键单击**SQL Server 代理**，选择**警报系统**，检查**启用邮件配置文件**框中，选择**数据库邮件**作为**邮件系统**，然后选择以前创建的邮件配置文件。  
   
 3.  在查询窗口中运行以下查询并提供要将通知发送到的电子邮件地址：  
   
@@ -199,7 +199,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>使用 PowerShell 设置自定义运行状况监视  
  **Test-sqlsmartadmin** cmdlet 可用于创建自定义运行状况监视。 例如，可在实例级别配置前一部分中所述的通知选项。  如果将若干 SQL Server 实例配置为使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，则可使用 PowerShell cmdlet 创建脚本，为所有实例收集备份的状态和运行状况。  
   
- **Test-sqlsmartadmin** cmdlet 评估的错误和警告返回由 SQL Server 基于策略的管理策略，并且报告汇总状态。  默认情况下，此 cmdlet 使用系统策略。 若要包括任何自定义策略，请使用 `–AllowUserPolicies` 参数。  
+ **Test-sqlsmartadmin** cmdlet 评估的错误和警告返回由 SQL Server 基于策略的管理策略，并且报告汇总状态。  默认情况下，此 cmdlet 使用系统策略。 若要包括任何自定义策略，请使用 `-AllowUserPolicies` 参数。  
   
  下面是一个示例 PowerShell 脚本，它基于系统策略以及任何创建的用户策略返回错误和警告的报告：  
   
@@ -250,16 +250,16 @@ smart_backup_files;
   
  以下详细介绍返回的不同状态：  
   
--   **Available-a:** 这是正常的备份文件。 备份已完成，并已确认 Windows Azure 存储中有该备份可用。  
+-   **用-a:** 这是正常的备份文件。 备份已完成，并已确认 Windows Azure 存储中有该备份可用。  
   
--   **正在复制 – b:** 此状态是专门为可用性组数据库。 如果 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 检测到备份日志链中断，则它将首先尝试找出可能导致备份链中断的备份。 在查找备份文件时，它尝试将文件复制到 Windows Azure 存储。 在进行复制过程时，它将显示此状态。  
+-   **Copy in Progress-b:** 此状态是专门为可用性组数据库。 如果 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 检测到备份日志链中断，则它将首先尝试找出可能导致备份链中断的备份。 在查找备份文件时，它尝试将文件复制到 Windows Azure 存储。 在进行复制过程时，它将显示此状态。  
   
--   **Copy Failed-f:** 类似于 Copy In Progress，这是专门用于可用性组数据库。 如果复制过程失败，则将状态标为 F。  
+-   **复制失败-f:** 类似于 Copy In Progress，这是专门用于可用性组数据库。 如果复制过程失败，则将状态标为 F。  
   
--   **Corrupted-c:** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是无法通过多个尝试后执行 RESTORE HEADER_ONLY 命令验证备份文件存储中的，会将标记此文件为已损坏。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份以确保损坏的文件不会导致备份链中断。  
+-   **损坏的 c:** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是无法通过多个尝试后执行 RESTORE HEADER_ONLY 命令验证备份文件存储中的，会将标记此文件为已损坏。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份以确保损坏的文件不会导致备份链中断。  
   
--   **Deleted-d:** Windows Azure 存储中找不到相应的文件。 如果删除的文件导致备份链中断，则 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份。  
+-   **已删除-d:** 在 Windows Azure 存储中找不到相应的文件。 如果删除的文件导致备份链中断，则 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份。  
   
--   **Unknown-u:** 此状态指示[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]尚未能够验证文件是否存在以及 Windows Azure 存储中的其属性。 下次运行此过程时（大约每 15 分钟一次），将更新此状态。  
+-   **未知-u:** 此状态指示[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]尚未能够验证文件是否存在以及 Windows Azure 存储中的其属性。 下次运行此过程时（大约每 15 分钟一次），将更新此状态。  
   
   

@@ -11,12 +11,12 @@ ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119297"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518975"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>“数据集筛选器或模型筛选器”对话框
   此对话框帮助您生成可应用于数据集的筛选器。  数据集可以是用于测试的外部数据集，也可以是挖掘模型的事例数据。 根据筛选器是用于外部数据集还是用于挖掘模型，对话框的名称会发生更改。  
@@ -32,7 +32,7 @@ ms.locfileid: "48119297"
 > [!TIP]  
 >  若要根据原始定型数据的子集测试准确性，可以添加用于将定型集定义为外部测试数据的数据源视图，然后在“数据集筛选器”网格中添加条件。  
   
- **有关详细信息，请参阅**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
+ **详细信息：**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>选项  
  **条件**  
@@ -43,7 +43,7 @@ ms.locfileid: "48119297"
 |**和/或**|选择运算符以联接多个条件。|  
 |**挖掘结构列**|单击此项可选择数据源，然后单击网格中的连续行可添加数据源中的列。<br /><br /> 网格中的第一行指定数据源视图。 选择数据源视图后， **“挖掘结构列”** 会显示一个表图标， **“值”** 字段显示为此数据源定义的所有条件的组合。<br /><br /> 选择数据源后， **“挖掘结构列”** 框提供一个显示该数据源中各个列的下拉列表。|  
 |**“运算符”**|从列表中选择运算符。|  
-|**ReplTest1**|对于表， **“值”** 字段显示应用于数据源的所有筛选器的组合。 还可单击文本框右侧的生成“(...)”按钮来打开“筛选器”对话框并生成条件。|  
+|**ReplTest1**|对于表， **“值”** 字段显示应用于数据源的所有筛选器的组合。 您也可以单击生成 **（...）** 按钮右侧的文本框中，打开**筛选器**对话框并生成条件。|  
   
  **表达式**  
  显示使用网格生成的条件组。  

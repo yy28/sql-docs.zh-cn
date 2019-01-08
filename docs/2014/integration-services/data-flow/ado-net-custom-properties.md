@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c04ffa97900e7fd392b5c8b53a2ba7cdb0c5d8dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79e6f6956cd9406bad988ad8076526478f6cf69b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773139"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自定义属性
   **源自定义属性**  
@@ -41,7 +40,7 @@ ms.locfileid: "48221527"
   
  下表介绍了 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标的自定义属性。 所有属性均可读/写。 这些属性在 **“ADO NET 目标编辑器”** 中不可用，但可以使用 **“高级编辑器”** 进行设置。  
   
-|“属性”|数据类型|Description|  
+|属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|向服务器发送的批中的行数。 值 **0** 指示批大小与内部缓冲区大小匹配。 此属性的默认值为 **0**。|  
 |CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。|  

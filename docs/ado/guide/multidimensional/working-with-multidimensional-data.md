@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350264"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507248"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 一个*单元集*是多维数据的查询的结果。 它包含的轴，通常不超过四个轴，通常只有两个或三个集合。 *轴*是来自一个或多个维度的成员的集合，用于查找或筛选多维数据集中的特定值。  
@@ -33,13 +33,13 @@ ms.locfileid: "51350264"
   
 -   销售人员  
   
--   Geography （自然层次结构） — 大洲、 国家/地区、 州等  
+-   Geography （自然层次结构） 的大洲、 国家/地区、 州等  
   
--   季度-季度、 月、 天  
+-   季度-季度，几个月，天  
   
 -   Years  
   
--   度量值-销售，PercentChange，BudgetedSales  
+-   度量值的销售额，PercentChange BudgetedSales  
   
 -   Products  
   
@@ -50,19 +50,19 @@ ms.locfileid: "51350264"
   
  此单元集的特征如下所示：  
   
--   轴维度： 季度，销售人员，Geography  
+-   轴维度：季度，销售人员，Geography  
   
--   筛选维度： 度量值，年中，产品  
+-   筛选器的维度：度量值，年中，产品  
   
--   两个轴: （x 或轴 0） 的列和行 （y 或轴 1）  
+-   两个轴：（x 或轴 0） 的列和行 （y 或轴 1）  
   
 -   x 轴： 两个嵌套的维度，销售人员和地理位置  
   
--   y 轴： 季度维度  
+-   y 轴：季度维度  
   
- X 轴包含两个嵌套的维度： 销售人员和地理位置。 从地理位置，选择四个成员： 西雅图，波士顿，美国南部和日本。 两个成员从销售人员选择： 情人和 Nash。 这会生成总共八位 (8 = 4 * 2) 此轴上。  
+ X 轴包含两个嵌套的维度：销售人员和地理位置。 从地理位置，选择四个成员：西雅图，波士顿，美国南部和日本。 从销售人员选择两个成员：情人和 Nash。 这会生成总共八位 (8 = 4 * 2) 此轴上。  
   
- 每个坐标表示为具有两个成员的位置 — 一个来自销售人员维度，地域维度中的另一个：  
+ 每个坐标表示为具有两个成员的一个从销售人员维度和地域维度中的另一个位置：  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,7 +76,7 @@ ms.locfileid: "51350264"
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- 单元集、 单元格、 轴和位置都表示 ADO MD 中的相应对象：[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)，[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，和[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ 单元集、 单元格、 轴和位置都表示 ADO MD 中的相应对象：[单元集内](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)，[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，并且[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

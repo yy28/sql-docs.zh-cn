@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
@@ -14,12 +13,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 680cb75aa3a302b8aa889f009a6fd080eb3cd1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786689"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
   本主题列出配置和使用 Oracle 发布服务器时可能会引发的一系列问题。  
@@ -206,7 +205,7 @@ ms.locfileid: "48223499"
 ## <a name="oracle-error-ora-01555"></a>Oracle 错误 ORA-01555  
  下列 Oracle 数据库错误与快照复制无关；而与 Oracle 如何构造读取一致数据视图相关：  
   
- “ORA-01555: 快照太旧”  
+ "ORA-01555:快照太旧"  
   
  Oracle 使用名为“回滚段”的对象在发出 SQL 语句的时间点处构造读取一致数据视图。 回滚信息被其他并发会话覆盖时，可能出现“快照太旧”错误。 在 Oracle 9i 之前的版本中，推荐使用增加回滚段的大小和/或数量，并将较大事务分配给特定的回滚段来降低此错误的出现频率。  
   

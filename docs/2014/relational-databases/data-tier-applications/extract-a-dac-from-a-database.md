@@ -21,19 +21,19 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acf3974a9406e974f6d294584cb732c12b0718e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527186"
 ---
 # <a name="extract-a-dac-from-a-database"></a>从数据库中提取 DAC
   使用“提取数据层应用程序向导”或 Windows PowerShell 脚本可以从现有 SQL Server 数据库提取数据层应用程序 (DAC) 包。 提取过程将创建一个 DAC 包文件，其中包含数据库对象及其相关实例级别元素的定义。 例如，一个 DAC 包文件包含数据库表、存储过程、视图、用户以及映射到数据库用户的登录名。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
   
--   **若要提取 DAC，使用：**[提取数据层应用程序向导](#UsingDACExtractWizard)， [PowerShell  ](#ExtractDACPowerShell)  
+-   **若要提取 DAC，使用：**[提取数据层应用程序向导](#UsingDACExtractWizard)， [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
  您可以从驻留在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更高版本的实例上的数据库中提取 DAC。 如果对已从 DAC 部署的数据库运行提取进程，则仅提取数据库中对象的定义。 该进程不会引用中注册的 DAC `msdb` (**主**中[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 该提取进程不注册当前数据库引擎实例中的 DAC 定义。 有关注册 DAC 的详细信息，请参阅 [Register a Database As a DAC](register-a-database-as-a-dac.md)。  

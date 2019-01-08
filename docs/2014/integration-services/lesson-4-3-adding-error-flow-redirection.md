@@ -1,22 +1,21 @@
 ---
-title: 步骤 3：添加错误流重定向 | Microsoft Docs
+title: 步骤 3：添加错误流重定向 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051307"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747919"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>步骤 3：添加错误流重定向
   如上一个任务中所示，当 Lookup Currency Key 转换尝试对产生错误的已损坏示例平面文件进行处理时，该转换无法生成匹配。 由于转换针对错误输出使用了默认设置，因此，任何错误都将导致该转换失败。 当转换失败时，该包的其余部分也将失败。  
@@ -97,6 +96,6 @@ ms.locfileid: "48051307"
 13. 单击“确定”关闭“脚本转换编辑器”对话框。  
   
 ## <a name="next-steps"></a>后续步骤  
- [第 4 步： 添加平面文件目标](lesson-4-4-adding-a-flat-file-destination.md  
+ [第 4 步：添加平面文件目标] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

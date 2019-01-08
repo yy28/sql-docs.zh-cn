@@ -13,17 +13,17 @@ ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55c4bd42e1a025543bfb249c82453903670e713f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea021ed6e3613d4a39641c582e0b091ebfe1a6f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102667"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519665"
 ---
 # <a name="cluster-disk-selection"></a>群集磁盘选择
   使用 **安装向导的** “群集磁盘选择” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集选择共享群集磁盘资源。 群集磁盘用于存放 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。  
   
- 共享的群集磁盘不是必要条件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]群集安装。 SMB 文件服务器是为支持的存储[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]故障转移群集安装，并可以通过使用指定**数据库引擎 – 数据目录**完成安装前的页。  
+ 共享的群集磁盘不是必要条件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]群集安装。 SMB 文件服务器是为支持的存储[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]故障转移群集安装，并可以通过使用指定**数据库引擎-数据目录**完成安装前的页。  
   
 > [!WARNING]  
 >  如果选择了要安装 Analysis Services，您必须指定共享群集磁盘。  

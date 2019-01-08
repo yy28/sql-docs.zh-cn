@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518725"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "47711005"
 |**column_master_key_id**|**int**|列主密钥的 ID。|  
 |**create_date**|**datetime**|创建列主密钥的日期。|  
 |**modify_date**|**datetime**|列主密钥的上次修改日期。|  
-|key_store_provider_name|**sysname**|包含 CMK 列主密钥存储提供程序的名称。 允许的值包括：<br /><br /> MSSQL_CERTIFICATE_STORE – 如果列主密钥存储为证书存储区。<br /><br /> 用户定义的值，如果列主密钥存储的自定义类型。|  
+|key_store_provider_name|**sysname**|包含 CMK 列主密钥存储提供程序的名称。 允许的值包括：<br /><br /> MSSQL_CERTIFICATE_STORE-如果列主密钥存储为证书存储区。<br /><br /> 用户定义的值，如果列主密钥存储的自定义类型。|  
 |**在 key_path**|**nvarchar(4000)**|键的列主密钥存储特定于的路径。 路径的格式取决于列主密钥存储类型。 例如：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 对于自定义列主密钥存储，开发人员负责定义哪些项的路径为自定义列主密钥存储。|  
-|**allow_enclave_computations**|**bit**|指示列主密钥是否已启用 enclave 的 （如果使用此主密钥加密的列加密密钥可用于在服务器端安全 enclaves 计算）。 有关详细信息，请参阅[Always Encrypted 与安全 enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
+|**allow_enclave_computations**|**bit**|指示列主密钥是否已启用 enclave 的 （如果使用此主密钥加密的列加密密钥可用于在服务器端安全 enclaves 计算）。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
 |signature|**varbinary(max)**|数字签名的**key_path**并**allow_enclave_computations**，生成使用列主密钥，引用**key_path**。|
 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW ANY COLUMN MASTER KEY**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

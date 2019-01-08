@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e474e9f8a933fb00a2d06062668ad3af7f64ccfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528243"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
   在角色切换过程中，数据库镜像功能中断服务的时间取决于角色切换的类型和原因。  
@@ -45,7 +45,7 @@ ms.locfileid: "48156467"
  故障转移时间主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间（有关镜像服务器如何处理日志记录的详细信息，请参阅[数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。 有关估计故障转移时间的信息，请参阅本主题后面的“估计故障转移重做速度”。  
   
 > [!IMPORTANT]  
->  如果在先创建，后更改索引或表的事务中发生故障转移，则故障转移占用的时间可能长于通常所需的时间。  例如，在执行某些操作期间，进行故障转移可能会延长故障转移的时间，这些操作包括：BEGIN TRANSACTION，对表执行的 CREATE INDEX 以及 SELECT INTO。 在通过 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句完成事务之前，该事务中故障转移时间延长的可能性一直存在。  
+>  如果在先创建，后更改索引或表的事务中发生故障转移，则故障转移占用的时间可能长于通常所需的时间。  例如，在以下一系列操作期间的故障转移可能会增加故障转移时间：BEGIN TRANSACTION，对表创建索引和 SELECT INTO 表。 在通过 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句完成事务之前，该事务中故障转移时间延长的可能性一直存在。  
   
 ### <a name="the-redo-queue"></a>重做队列  
  前滚数据库涉及应用镜像服务器上的重做队列中当前存在的任何日志记录。 “重做队列”  包括已写入镜像服务器的磁盘上、但尚未在镜像数据库中前滚的日志记录。  
@@ -53,7 +53,7 @@ ms.locfileid: "48156467"
  数据库的故障转移时间取决于镜像服务器前滚重做队列中日志的速度，此速度反过来主要由系统硬件和当前的工作负荷决定。 主体数据库可能会非常忙，以至于主体服务器将日志传送到镜像服务器的速度远远大于镜像服务器前滚日志的速度。 在这种情况下，当镜像服务器前滚重做队列中的日志时，故障转移可能占用大量时间。 若要了解重做队列当前的大小，请使用数据库镜像性能对象中的 **Redo Queue** 计数器。 有关详细信息，请参阅 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
   
 ### <a name="estimating-the-failover-redo-rate"></a>估计故障转移重做速度  
- 可以使用生产数据库的测试副本测量前滚日志记录所需的时间（“重做速度 ”）。  
+ 可以使用生产数据库的测试副本测量前滚日志记录所需的时间（“重做速度”）。  
   
  估计故障转移过程中的前滚时间所用的方法取决于重做阶段中镜像服务器使用的线程数。 线程数取决于以下情况：  
   

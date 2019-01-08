@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
@@ -20,12 +20,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 382b2212ef32e47b0045285ad497f2d476099c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762479"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例注册到现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，以便将其性能和配置作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例进行监视。 实用工具控制点 (UCP) 每隔 15 分钟从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例收集配置和性能信息。 此信息存储在 UCP 上的实用工具管理数据仓库 (UMDW) 中；该 UMDW 文件名是 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能数据与策略进行比较，以便帮助标识资源使用瓶颈和整合机会。  
@@ -92,7 +92,7 @@ ms.locfileid: "48152727"
  若要继续，请单击 **“下一步”**。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的实例  
- 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击 **“连接…”**。 以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](../../ssms/f1-help/connect-to-server-database-engine.md)。  
+ 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](../../ssms/f1-help/connect-to-server-database-engine.md)。  
   
  若要继续，请单击 **“下一步”**。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48152727"
 > [!NOTE]  
 >  如果连接是加密的，则使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
   
- 若要继续，请单击 **“连接…”**。  
+ 若要继续，请单击“连接...”。  
   
 ##  <a name="Proxy_configuration"></a> 实用工具收集组帐户  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 Windows 域帐户。 此帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 此外，也可以使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 若要满足验证要求，请使用以下准则来指定帐户。  
@@ -169,12 +169,12 @@ ms.locfileid: "48152727"
 >   
 >  执行 Transact-SQL 语句或批处理时发生了异常。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  其他信息: 无法获取有关 Windows NT 组/用户 '\<DomainName\AccountName>' 的信息，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
+>  其他信息：无法获取有关 Windows NT 组/用户的信息\<DomainName\AccountName >，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
 >   
 >  有关排除此故障的详细信息，请参阅 [SQL Server 实用工具故障排除](../../database-engine/troubleshoot-the-sql-server-utility.md)。  
   
 > [!IMPORTANT]  
->  不要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例上“实用工具信息”收集组的任何属性，并且不要手动打开或关闭数据收集，因为数据收集由实用工具代理作业控制。  
+>  不要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例上“实用工具信息”收集组的任何属性，并且不要手动打开或关闭数据收集，因为数据收集由实用工具代理作业控制。  
   
  在完成注册实例向导后，在 SSMS 的 **“实用工具资源管理器导航”** 窗格中单击 **“托管实例”** 节点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已注册实例将显示在 **“实用工具资源管理器内容”** 窗格的列表视图中。  
   

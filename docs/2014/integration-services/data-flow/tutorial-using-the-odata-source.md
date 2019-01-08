@@ -1,22 +1,21 @@
 ---
-title: 教程： 使用 OData 源 [SSIS] |Microsoft Docs
+title: 教程：使用 OData 源 [SSIS] |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154997"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805149"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>教程：使用 OData 源 [SSIS]
   本教程介绍了从示例 Northwind OData 服务 (http://services.odata.org/V3/Northwind/Northwind.svc/)) 提取 Employees 集合，然后将它加载到某一平面文件中的过程。  
@@ -43,7 +42,7 @@ ms.locfileid: "48154997"
   
 4.  双击 **“OData 源”** 组件可启动 **“OData 源编辑器”** 对话框。  
   
-5.  单击 **“新建…”** 可添加新的 OData 连接管理器。  
+5.  单击“新建…”可添加新的 OData 连接管理器。  
   
 6.  为 **“服务文档位置”** 输入 OData 服务 URL。 它可以是指向服务文档的 URL，也可以是指向特定馈送或实体的 URL。 在本教程中，键入[ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
   

@@ -13,12 +13,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d83dcaf8ea6f674ae1086d2d02f9423a3bb98358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 872b0ffa2cc08c90430ec703cea984ad7d274339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527983"
 ---
 # <a name="update-statistics"></a>更新统计信息
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更新 [!INCLUDE[tsql](../../includes/tsql-md.md)]中表或索引视图的查询优化统计信息。 默认情况下，查询优化器已根据需要更新统计信息以改进查询计划；但在某些情况下，您可以通过使用 UPDATE STATISTICS 或存储过程 `sp_updatestats` 来比默认更新更频繁地更新统计信息，提高查询性能。  
@@ -29,7 +29,7 @@ ms.locfileid: "48053411"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要更新统计信息对象，请使用：**  
   
@@ -58,13 +58,13 @@ ms.locfileid: "48053411"
   
 5.  右键单击要更新的统计信息对象，然后选择“属性”。  
   
-6.  在“统计信息属性 – statistics_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”。  
+6.  在 **统计信息属性-* * * statistics_name*对话框中，选择**更新这些列的统计信息**复选框，然后单击**确定**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-update-a-specific-statistics-object"></a>更新特定的统计信息对象  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48053411"
   
 #### <a name="to-update-all-statistics-in-a-table"></a>更新表中的所有统计信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48053411"
   
 #### <a name="to-update-all-statistics-in-a-database"></a>更新数据库中的所有统计信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

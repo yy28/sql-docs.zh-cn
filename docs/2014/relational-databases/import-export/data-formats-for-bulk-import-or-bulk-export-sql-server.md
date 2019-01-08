@@ -13,12 +13,12 @@ ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1a3d143148b912379f81a65d73f9f8895f2d10e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 676b5a8d8d05c5cb26a30eaa1b1fe9426ac30ea7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140867"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510044"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于批量导入或导出的数据格式 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以接受字符数据格式或本机二进制数据格式的数据。 当在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他应用程序（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel）或其他数据库服务器（例如，Oracle 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间移动数据时，请使用字符格式。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输数据时才可以使用本机格式。  
@@ -32,14 +32,14 @@ ms.locfileid: "48140867"
 ##  <a name="ComponentsAndConcepts"></a> 用于大容量导入或导出的数据格式  
  下表列出了不同数据显示方式和操作的源或目标一般适合使用的数据格式。  
   
-|运算|本机|Unicode 本机|字符|Unicode 字符|  
+|操作|本机|Unicode 本机|字符|Unicode 字符|  
 |---------------|------------|--------------------|---------------|-----------------------|  
-|使用不包含任何扩展字符或双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。 除非使用格式化文件，否则这些表的定义必须相同。|是<sup>1</sup>|—|—|—|  
-|对于 `sql_variant` 列，最好使用本机数据格式，因为本机数据格式可以保留每一个 `sql_variant` 值的元数据，这一点不同于字符格式或 Unicode 格式。|用户帐户控制|—|—|—|  
-|使用包含扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|—|用户帐户控制|—|—|  
-|大容量导入其他程序生成的文本文件中的数据。|—|—|用户帐户控制|—|  
-|将数据大容量导出到要在其他程序中使用的文本文件中。|—|—|用户帐户控制|—|  
-|使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|—|—|—|用户帐户控制|  
+|使用不包含任何扩展字符或双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。 除非使用格式化文件，否则这些表的定义必须相同。|是<sup>1</sup>|-|-|-|  
+|对于 `sql_variant` 列，最好使用本机数据格式，因为本机数据格式可以保留每一个 `sql_variant` 值的元数据，这一点不同于字符格式或 Unicode 格式。|用户帐户控制|-|-|-|  
+|使用包含扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|用户帐户控制|-|-|  
+|大容量导入其他程序生成的文本文件中的数据。|-|-|用户帐户控制|-|  
+|将数据大容量导出到要在其他程序中使用的文本文件中。|-|-|用户帐户控制|-|  
+|使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|-|-|用户帐户控制|  
   
  <sup>1</sup>中的数据大容量导出的最快方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用时**bcp**。  
   

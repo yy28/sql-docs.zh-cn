@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
@@ -13,22 +12,22 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f275a3f900feee3679456cf9d77d1ad03a028a18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76c46959327cdaf7a65cb7814e7ab0abf001eb28
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056699"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793050"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>更改属性名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改属性的名称。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-change-an-attribute-name"></a>若要更改属性名称  
   
@@ -51,8 +50,8 @@ ms.locfileid: "48056699"
 9. 单击 **“保存属性”**。  
   
 ## <a name="see-also"></a>请参阅  
- [创建文本属性&#40;Master Data Services&#41;](create-a-text-attribute-master-data-services.md)   
- [删除属性 &#40;Master Data Services&#41;](delete-an-attribute-master-data-services.md)   
- [属性&#40;Master Data Services&#41;](attributes-master-data-services.md)  
+ [创建文本属性 (Master Data Services)](create-a-text-attribute-master-data-services.md)   
+ [删除属性 (Master Data Services)](delete-an-attribute-master-data-services.md)   
+ [属性 (Master Data Services)](attributes-master-data-services.md)  
   
   

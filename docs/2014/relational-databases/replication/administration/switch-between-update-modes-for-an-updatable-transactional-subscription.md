@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -15,12 +14,12 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe5d710c29f8f63a1ee09eab322b23f74dbe2ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057897"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785189"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切换可更新事务性订阅的更新模式
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中切换可更新事务订阅的更新模式。 可以使用新建订阅向导，为可更新的订阅指定模式。 有关使用此向导时设置模式的信息，请参阅[查看和修改请求订阅属性](../view-and-modify-pull-subscription-properties.md)。  
@@ -50,17 +49,17 @@ ms.locfileid: "48057897"
   
 3.  右键单击要为其设置更新模式的订阅，然后单击 **“设置更新方法”**。  
   
-4.  在“设置更新方法 - \<订阅服务器>: \<订阅数据库>”对话框中，选择“立即更新”或“排队更新”。  
+4.  在中**设置更新方法-\<订阅服务器 >:\<订阅数据库 >** 对话框中，选择**立即更新**或**排队更新**。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>设置请求订阅的更新模式  
   
-1.  在“订阅属性 - \<发布服务器>: \<发布数据库>”对话框中，为“订阅服务器更新方法”选项选择“立即复制所做的更改”或“排队更改”的值。  
+1.  在中**订阅属性-\<发布服务器 >:\<发布数据库 >** 对话框中，选择值**立即复制更改**或**对更改进行排队**有关**订阅服务器更新方法**选项。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 有关访问“订阅属性 - \<发布服务器>: \<发布数据库>”对话框的详细信息，请参阅[查看和修改请求订阅属性](../view-and-modify-pull-subscription-properties.md)。  
+ 有关访问的详细信息**订阅属性-\<发布服务器 >:\<发布数据库 >** 对话框中，请参阅[查看和修改请求订阅属性](../view-and-modify-pull-subscription-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

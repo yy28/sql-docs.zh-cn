@@ -1,5 +1,5 @@
 ---
-title: 定义数据库维度 |Microsoft 文档
+title: 定义数据库维度，|Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025854"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534713"
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "34025854"
   
  维度设计器中有三个不同的选项卡，下表对这些选项卡进行了说明。  
   
-|选项卡|Description|  
+|Tab|Description|  
 |---------|-----------------|  
-|**维度结构**|使用此选项卡可以处理维度结构 - 为维度检查或创建数据源视图架构，使用属性以及组织用户定义层次结构中的属性。|  
+|**维度结构**|使用此选项卡上，若要使用的维度到结构检查或创建数据源视图架构对于维度，以处理特性，以及组织中用户定义的层次结构的属性。|  
 |**属性关系**|使用此选项卡可以创建、修改或删除维度的属性关系。|  
 |**翻译**|使用此选项卡可以不同的语言添加和编辑维度元数据的翻译。|  
 |**浏览者**|使用此选项卡可检查已处理维度的成员和审查维度元数据的翻译。|  
@@ -50,7 +50,7 @@ ms.locfileid: "34025854"
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  说明如何定义和配置维度属性。  
   
- [创建用户定义的层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [创建用户定义层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  说明如何定义和配置用户定义层次结构。  
   
  [定义属性关系](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  

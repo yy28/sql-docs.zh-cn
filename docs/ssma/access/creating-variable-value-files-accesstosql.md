@@ -10,20 +10,20 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1a2840fbdf8fbafae3b4a8e17c200c32d4da65f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669776"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542059"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL)
-变量值文件是 XML 文件包含的命令 （如源或目标服务器名称） 的服务器迁移而频繁更改的参数值。 大量的数据库迁移发生时，创建和使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **– v**在命令行开关。 此行为有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
+变量值文件是 XML 文件包含的命令 （如源或目标服务器名称） 的服务器迁移而频繁更改的参数值。 大量的数据库迁移发生时，创建和使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **-v**在命令行开关。 此行为有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
   
 > [!NOTE]  
 > -  变量名称是作为前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，在脚本文件的分析过程将会出错，导致拖延症控制台执行过程。  
 > -  转义符**$** 是**$$**。 如果参数的变量或静态值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是一个变量。  
-> -  出于可维护性目的，可以在声明变量`‘variable-group’`用户定义的变量的逻辑分隔的元素。  此元素的使用情况不是必需的。  
+> -  出于可维护性目的，可以在声明变量`'variable-group'`用户定义的变量的逻辑分隔的元素。  此元素的使用情况不是必需的。  
   
 **示例：**  
   
@@ -94,6 +94,6 @@ ms.locfileid: "51669776"
 ## <a name="next-step"></a>下一步  
 在操作控制台中的下一步是[创建服务器连接文件&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [创建服务器连接文件 （访问）](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

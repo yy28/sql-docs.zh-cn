@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - equal operator (==)
@@ -14,12 +13,12 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0cdceaa69a6d98862d464994e0fbdb127d42c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2f539a48bf503de1f84bf490d565782ca685f05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796149"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
   执行比较来确定两个表达式是否相等。 在执行比较前表达式计算器会自动转换多种数据类型。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
@@ -53,7 +52,7 @@ expression1 == expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **Date、Time 或 Date/Time** *expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、 时间或日期/时间**两者*expression1*并*expression2*计算结果必须为以下数据类型之一：将 DT_DBDATE、 DT_DATE、 DT_DBTIME、 DT_DBTIME2、 DT_DBTIMESTAMP、 DT_DBTIMESTAMP2、 DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -82,7 +81,7 @@ expression1 == expression2
   
 -   **Binary** ： *expression1* 和 *expression2* 的计算结果必须为 DT_BYTES 数据类型。  
   
--   **BLOB** ： *expression1* 和 *expression2* 的计算结果必须为同一 BLOB（二进制大型对象块）数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB**两者*expression1*并*expression2*计算结果必须为相同的二进制大型对象块 (BLOB) 数据类型：DT_TEXT、 DT_NTEXT 或 DT_IMAGE。  
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../data-flow/integration-services-data-types.md)。  
   
@@ -104,8 +103,8 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [\!=（不等于）（SSIS 表达式）](equal-ssis-expression.md)   
+ [!=（不等于）（SSIS 表达式）](equal-ssis-expression.md)   
  [运算符优先级和结合性](operator-precedence-and-associativity.md)   
- [运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](operators-ssis-expression.md)  
   
   

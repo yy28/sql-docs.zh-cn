@@ -12,12 +12,12 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103387"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530616"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode 提供了一种替代方法[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)用于指定列格式。 Ibcpsession:: Bcpcolfmt，这会设置单个列格式属性，与 IBCPSession2::BCPSetBulkMode 设置所有属性。  
@@ -63,18 +63,18 @@ HRESULT BCPSetBulkMode (
 |`E_OUTOFMEMORY`|内存不足错误。|  
   
 ## <a name="remarks"></a>备注  
- 可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` 来指定查询语句。  
+ 可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 icommandprepare:: Prepare 方法返回一个错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
  下表列出了 property 参数的常量。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的 – c 选项。Exe 文件，以及使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLCHARACTER`。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的 – w 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的 – N 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`如果列类型是字符串或`BCP_TYPE_DEFAULT`如果不是字符串。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的 – n 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_DEFAULT`。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。Exe 文件，以及使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLCHARACTER`。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`如果列类型是字符串或`BCP_TYPE_DEFAULT`如果不是字符串。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为`BCP_TYPE_DEFAULT`。|  
   
  有关使用 IBCPSession2::BCPSetBulkMode 不冲突的 ibcpsession:: Bcpcontrol 选项，可以调用 ibcpsession:: Bcpcontrol 和 IBCPSession2::BCPSetBulkMode。 例如，可以调用使用 ibcpsession:: Bcpcontrol`BCP_OPTION_FIRST`和 IBCPSession2::BCPSetBulkMode。  
   
@@ -99,7 +99,7 @@ BCPReadFmt();
   
 ```  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPSetBulkMode();  
 ```  
   
@@ -120,7 +120,7 @@ BCPColFmt();
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPReadFmt();  
 ```  
   

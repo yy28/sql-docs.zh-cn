@@ -1,5 +1,5 @@
 ---
-title: 第 12 课： 创建角色 |Microsoft Docs
+title: 第 12 课：创建角色 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,35 +9,35 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ec7afeddeeb4aae53f1368f55e2af5ec3ffcd0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512931"
 ---
-# <a name="lesson-11-create-roles"></a>第 11 课： 创建角色
+# <a name="lesson-11-create-roles"></a>第 11 课：创建角色
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色都使用单个权限进行定义：“无”、“读取”、“读取和处理”、“处理”或“管理员”。 可以通过使用角色管理器中创作模型期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 若要了解详细信息，请参阅[角色](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
+在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色定义有单一权限：无、 读取、 读取和进程、 进程或管理员。 可以通过使用角色管理器中创作模型期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 若要了解详细信息，请参阅[角色](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
 > [!NOTE]  
 > 创建角色对于完成本教程不是必需的。 默认情况下，您当前登录的帐户对于模型将具有管理员权限。 但是，若要允许组织使用报告客户端浏览该模型中的其他用户，必须创建至少一个角色具有读取权限并将这些用户添加为成员。  
   
 您将创建三个角色：  
   
--   **销售经理**– 此角色可以包括在你想要对所有模型对象和数据具有读取权限的组织中的用户。  
+-   **销售经理**-此角色可以包括在你想要对所有模型对象和数据具有读取权限的组织中的用户。  
   
--   **Sales Analyst US** – 此角色可以包括希望只是为了能够浏览与在美国的销售相关的数据在组织中的用户。 对于此角色，使用 DAX 公式来定义“行筛选器”，该筛选器将成员限制为只能浏览针对美国的数据。  
+-   **Sales Analyst US** -此角色可以包括希望只是为了能够浏览与在美国的销售相关的数据在组织中的用户。 对于此角色，使用 DAX 公式来定义“行筛选器”，该筛选器将成员限制为只能浏览针对美国的数据。  
   
--   **管理员**– 此角色可以包括你想要具有管理员权限，允许无限制访问权限和对模型数据库执行管理任务的权限的用户。  
+-   **管理员**-此角色可以包括你想要具有管理员权限，允许无限制访问权限和对模型数据库执行管理任务的权限的用户。  
   
-因为贵组织中的 Windows 用户和组帐户是唯一的，所以您可以从您的特定组织向成员添加帐户。 但是，对于本教程，您还可以将成员保留为空。 在稍后的第 12 课“在 Excel 中分析”中，您将仍可以测试每个角色的影响。  
+因为贵组织中的 Windows 用户和组帐户是唯一的，所以您可以从您的特定组织向成员添加帐户。 但是，对于本教程，您还可以将成员保留为空。 您仍能够测试每个角色的影响，更高版本中第 12 课：在 Excel 中分析。  
   
-学完本课的估计时间： **15 分钟**  
+学完本课的预计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在之前在本课程中执行的任务，您应已完成上一课：[第 10 课： 创建分区](../analysis-services/lesson-10-create-partitions.md)。  
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 10 课：创建分区](../analysis-services/lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>创建角色  
   
@@ -53,7 +53,7 @@ ms.locfileid: "37985879"
 
     ![作为表格-lesson11-新的角色](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
-5.  可选： 单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+5.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>创建 Sales Analyst US 用户角色  
   
@@ -69,10 +69,10 @@ ms.locfileid: "37985879"
     =DimGeography[CountryRegionCode] = "US" 
     ```
     
-    行筛选器公式必须解析为布尔 (TRUE/FALSE) 值。 利用此公式，您可指定只有 Country Region Code 值为“US”的行才对用户可见。  
+    行筛选器公式必须解析为布尔 (TRUE/FALSE) 值。 通过此公式中，指定的国家/地区区域代码值为"US"行，对用户可见。  
     ![作为表格-lesson11-角色-筛选器](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
-6.  可选：单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+6.  可选:单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-an-administrator-user-role"></a>若要创建的管理员用户角色  
   
@@ -82,11 +82,11 @@ ms.locfileid: "37985879"
   
 3.  向此角色授予**管理员**权限。  
   
-4.  可选：单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
+4.  可选:单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
   
   
 ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 12 课： 在 Excel 中分析](../analysis-services/lesson-12-analyze-in-excel.md)。
+请转到下一课：[第 12 课：在 Excel 中分析](../analysis-services/lesson-12-analyze-in-excel.md)。
 
   
   

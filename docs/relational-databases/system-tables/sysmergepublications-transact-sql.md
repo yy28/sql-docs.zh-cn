@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepublications
@@ -19,12 +18,12 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a7ed15f4c971cdd7489084717f2a11ecd9a2e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790274"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748420"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "47790274"
 |**allow_synctoalternate**|**bit**|指定是否允许备用同步伙伴与该发布服务器同步。 **0**表示不允许同步伙伴。|  
 |**validate_subscriber_info**|**nvarchar(500)**|列出用于检索订阅服务器信息和验证订阅服务器上的参数化行筛选条件的函数。|  
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 一个有效的 GUID 指定 Active Directory 中发布该发布，GUID 是相应的 Active Directory 发布对象**objectGUID**。 如果为 NULL，则将不在 Active Directory 中发布该发布。|  
-|**backward_comp_level**|**int**|数据库兼容级别。 可以是下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|数据库兼容级别。 可以是以下值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**达到**|**int**|允许的最大并发合并进程数。 值为**0**此属性则表示没有在任何给定时间运行的并发合并进程数没有限制。 此属性设置以指明可以对合并发布一次运行的并发合并进程数限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允许针对合并发布运行的最大并发筛选数据快照会话数。 如果**0**，可以针对任何给定时间上的发布同时运行的并发筛选的数据快照会话的最大数目没有限制。 此属性对可以同时对合并发布运行的最大并发快照进程数设置限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
 |**use_partition_groups**|**smallint**|指定发布是否使用预计算分区。|  
@@ -82,7 +81,7 @@ ms.locfileid: "47790274"
 |**snapshot_jobid**|**binary(16)**|订阅服务器可以启动快照生成进程时，标识生成快照的代理作业。|  
 |**allow_web_synchronization**|**bit**|指定是否为 Web 同步启用发布位置**1**表示 Web 同步启用发布。|  
 |**web_synchronization_url**|**nvarchar(500)**|指定用于 Web 同步的 Internet URL 的默认值。|  
-|**allow_partition_realignment**|**bit**|指示对发布服务器上的行所做的修改导致了更改其分区时，是否向订阅服务器发送删除指令。<br /><br /> **0** = 数据来自旧分区将保留在订阅服务器，其中对此发布服务器上的数据所做的更改不会复制到此订阅服务器，但在订阅服务器上所做的更改将复制到发布服务器上。<br /><br /> **1** = 删除到订阅服务器以通过删除不是不再属于订阅服务器的分区的数据来反映分区更改的结果。<br /><br /> 有关详细信息，请参阅[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意： 数据留在订阅服务器上，当此值为**0**应视为如同它是只读的; 但是，这不严格强制复制系统。|  
+|**allow_partition_realignment**|**bit**|指示对发布服务器上的行所做的修改导致了更改其分区时，是否向订阅服务器发送删除指令。<br /><br /> **0** = 数据来自旧分区将保留在订阅服务器，其中对此发布服务器上的数据所做的更改不会复制到此订阅服务器，但在订阅服务器上所做的更改将复制到发布服务器上。<br /><br /> **1** = 删除到订阅服务器以通过删除不是不再属于订阅服务器的分区的数据来反映分区更改的结果。<br /><br /> 有关详细信息，请参阅[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意：当此值为保留在订阅服务器上的数据**0**应视为如同它是只读的; 但是，这不严格强制复制系统。|  
 |**retention_period_unit**|**tinyint**|定义在定义时使用的单位*保留*，可以是下列值之一：<br /><br /> **0** = 天。<br /><br /> **1** = 周。<br /><br /> **2** = 月。<br /><br /> **3** = 年。|  
 |**decentralized_conflicts**|**int**|指示是否在导致冲突的订阅服务器上存储冲突记录：<br /><br /> **0** = 记录不存储在订阅服务器冲突。<br /><br /> **1** = 的冲突记录存储在订阅服务器。|  
 |**generation_leveling_threshold**|**int**|指定生成中包含的更改次数。 生成是指传递到发布服务器或订阅服务器的更改的集合。|  

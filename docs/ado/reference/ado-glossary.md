@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e60c8f979b52293e2320a1a84cecd17c83caaad4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530395"
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -37,7 +37,7 @@ ms.locfileid: "47681725"
  在查询中，如 COUNT、 AVG 或 STDEV 计算表的列中使用的所有行的值的函数。 在编写表达式和编程中，可以使用 SQL 聚合函数 （包括上面列出的三个） 和域聚合函数来确定的各种统计信息。  
   
  alias  
- 授予对列或表达式中的 SQL SELECT 语句，通常更短或更有意义的备用名称。 例如，BobSales 是以下 SELECT 语句中的别名:"选择作为从 SalesDB BobSales wr Sales"。 可以使用别名将动态分配 DataControl 对象上的控件绑定到的列。  
+ 授予对列或表达式中的 SQL SELECT 语句，通常更短或更有意义的备用名称。 例如，BobSales 是以下 SELECT 语句中的别名："选择作为从 SalesDB BobSales wr Sales"。 可以使用别名将动态分配 DataControl 对象上的控件绑定到的列。  
   
  单元线程  
  COM 线程的模型对对象的所有调用都发生在一个线程。 在单元线程处理，COM 同步，并将调用封送。 另请参阅*COMmddefcom*。  
@@ -96,7 +96,7 @@ ms.locfileid: "47681725"
  使对象能够在联网环境中而不考虑开发各个语言或在其所在的计算机上进行互操作的一种二进制标准。 基于 COM 的技术包括 ActiveX 控件、 自动化和链接和嵌入 (OLE) 对象。 COM 允许对象向其他组件和主机应用程序公开其功能。 它定义了对象如何公开本身和跨进程和跨网络这种公开的工作原理。 COM 还定义了对象的生命周期。  
   
  COM 组件  
- 二进制文件，如.dll、.ocx 和某些.exe 文件 —，支持 COM 标准，用于提供对象。 此类文件包含一个或多个类工厂、 COM 类、 注册表项机制、 加载代码等的代码。  
+ 二进制文件-例如.dll、.ocx 和某些.exe 文件-提供对象支持 COM 标准的。 此类文件包含一个或多个类工厂、 COM 类、 注册表项机制、 加载代码等的代码。  
   
  比较运算符  
  运算符比较两个表达式并返回一个布尔值。  

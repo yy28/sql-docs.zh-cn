@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
@@ -14,12 +14,12 @@ ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87d4ea836aa77899985555f0f103651d74578b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112918"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780430"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自动联接表 (Visual Database Tools)
   将两个或多个表添加到查询中时， [查询和视图设计器](visual-database-tools.md) 会尝试确定它们是否相关。 如果相关，查询和视图设计器将自动在表示表或表结构对象的矩形之间添加联接线。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ecfed53ebcecf38bbd46a6d3b15d1a8a8c741fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156017"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769509"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   直接在 XML 输入文件中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本工作负荷。  
@@ -40,21 +39,21 @@ ms.locfileid: "48156017"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|`Weight`|可选。 为指定的事件指定查询加权系数（重要性系数）。 使用`float`数据类型指定加权。 例如，`Weight`="100.01"。 可为 `Weight` 指定的最小值为“0”。|  
+|`Weight`|可选。 为指定的事件指定查询加权系数（重要性系数）。 使用 `float` 数据类型指定加权。 例如，`Weight`="100.01"。 可为 `Weight` 指定的最小值为“0”。|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
 |特征|Description|  
 |--------------------|-----------------|  
-|**数据类型和长度**|`string`长度不受限制。|  
+|**数据类型和长度**|`string`，无限长。|  
 |**默认值**|无。|  
-|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须指定`EventString`、 一个`File`，或`Database`子元素`Workload`父级，但只有一种类型使用。 例如，如果指定的工作负荷`EventString`元素，则你不能同时指定具有的工作负荷`File`同一 XML 输入文件中的元素。|  
+|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 `EventString` 指定子元素 `File`、`Database` 或 `Workload`，但只能使用一种类型。 例如，如果指定了具有 `EventString` 元素的工作负荷，则不能在相同的 XML 输入文件中指定具有 `File` 元素的工作负荷。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[工作负荷元素&#40;DTA&#41;](workload-element-dta.md)|  
+|**父元素**|[工作负荷元素 (DTA)](workload-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

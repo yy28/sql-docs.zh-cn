@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662296"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509821"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大容量加载进程**sql： 映射**按预期的 XSD 架构中批注 — 也就是说，如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试在相应列中存储相关联的数据。  
+  XML 大容量加载进程**sql： 映射**批注，预期的 XSD 架构，则如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试在相应列中存储相关联的数据。  
   
  XML 大容量加载忽略未映射的元素和属性 (因为它们不描述在架构中，或使用在 XSD 架构中批注**sql： 映射 ="false"**)。 未映射的所有数据都将进入溢出列中，如果这样的列通过使用指定**sql:overflow-字段**。  
   

@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_validatemergesubscription
@@ -17,12 +16,12 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c142ab2f8de6db1bfdd288734a47f6a4e9e6946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cf4e8ee65a752bb9b8a9a5b2301453316548cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746555"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802469"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] **'***发布*****  
+ [**@publication=**] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=** ] **'***订阅服务器*****  
+ [  **@subscriber=** ] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@subscriber_db=** ] **'***subscriber_db*****  
+ [  **@subscriber_db=** ] **'***subscriber_db***’**  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
  [  **@level=** ]*级别*  
@@ -66,7 +65,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_validatemergesubscription**合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_validatemergesubscription**。  
   
 ## <a name="see-also"></a>请参阅  

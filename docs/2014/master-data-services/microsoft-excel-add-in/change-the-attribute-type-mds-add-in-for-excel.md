@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056077"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783939"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>更改属性类型（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，数据类型或允许的字符数不正确时，管理员可以更改属性类型。  
@@ -26,12 +25,12 @@ ms.locfileid: "48056077"
 > [!NOTE]  
 >  不能更新“名称”或“代码”列的类型或长度。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../administrators-master-data-services.md)。  
   
 -   必须存在现有的模型、实体和属性。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48056077"
   
 -   更改属性的数据类型。  
   
--   生成不包含任何值的带有后缀“_old”的属性的副本。 这称为**弃用**属性。  
+-   生成带有后缀"_old"不包含任何值的属性的副本。 这称为**弃用**属性。  
   
  但是，原始属性的所有现有依赖项将指向此不推荐使用的属性，而非指向已更改的属性。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48056077"
 >  更改具有现有数据及相关实体的 MDS 属性的数据类型会很麻烦，特别是当存在依赖于实体的已声明的业务规则或订阅视图时。 最佳做法是从足够灵活可包含所需值的数据类型开始。 例如，字符串开始时可能会比较小，但是可能随着时间的推移需要延长，因此请考虑最坏的情况。 额外的文本字符串长度可能会成为负担（例如，宽 GUI 文本框很难适应屏幕），因此，请避免过长的字符串长度。  
   
 ## <a name="see-also"></a>请参阅  
- [属性&#40;Master Data Services&#41;](../attributes-master-data-services.md)   
+ [属性 (Master Data Services)](../attributes-master-data-services.md)   
  [生成模型（用于 Excel 的 MDS 外接程序）](building-a-model-mds-add-in-for-excel.md)  
   
   

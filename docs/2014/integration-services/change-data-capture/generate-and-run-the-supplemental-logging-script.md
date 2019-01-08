@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - supLog
@@ -13,12 +12,12 @@ ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcfeca9b451f0238a7148cbb9f1f60d4719ebe3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d7ba428b22044c8138b57fadd87dc190bd51865
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169907"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779969"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>生成和运行补充日志记录脚本
   使用“为捕获变更设置表”页可对 Oracle 源数据库运行一个将设置补充日志记录的脚本。  

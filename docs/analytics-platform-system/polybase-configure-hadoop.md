@@ -9,25 +9,25 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236933"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527815"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
 本文介绍如何在 Hadoop 中的查询外部数据的 APS 设备上使用 PolyBase。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 Hadoop 遵循其新版本的“Major.Minor.Version”模式，且主要和次要版本中支持的所有版本均受支持。 支持以下 Hadoop 提供程序：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
- - Linux 上的 Hortonworks HDP 2.1 - 2.6
+ - Linux 上的 Hortonworks HDP 2.1-2.6
  - Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
  - Linux 上的 Cloudera CDH 4.3  
- - Linux 上的 Cloudera CDH 5.1 – 5.5、5.9 - 5.13
+ - Cloudera CDH 5.1-5.5、 5.9-5.13 Linux 上
 
 ### <a name="configure-hadoop-connectivity"></a>配置 Hadoop 连接
 

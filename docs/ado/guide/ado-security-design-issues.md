@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: a879e05e5c2df68058d9351b217382366ae80a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532349"
 ---
 # <a name="ado-security-design-features"></a>ADO 安全设计功能
 以下各节介绍安全设计功能在 ActiveX 数据对象 (ADO) 2.8 和更高版本。 这些更改是在 ADO 中 2.8 为了提高安全性。 ADO 6.0 中，包含在 Windows Vista 中的 Windows DAC 6.0 中，是功能上等效于 ADO 2.8，它包括在 Windows XP 和 Windows Server 2003 中的 MDAC 2.8。 本主题提供有关如何最好地保护 ADO 2.8 或更高版本中的应用程序的信息。
@@ -66,7 +66,7 @@ Website, click OK, otherwise click Cancel.
 -   如果站点不会出现在受信任的站点区域列表中，代码会阻止，并且对本地文件访问被拒绝。
 
     > [!NOTE]
-    >  在 ADO 2.8 和更高版本中，用户不是向你发出警报或建议将站点添加到受信任的站点区域列表。 因此的受信任的站点列表管理是那些要部署或支持基于网站的应用程序需要访问本地文件系统的责任。
+    >  在 ADO 2.8 和更高版本中，用户不是向你发出警报或建议将站点添加到受信任的站点区域列表。 因此的受信任的站点列表管理是那些要部署或支持要求对本地文件系统的访问基于 Web 站点的应用程序的责任。
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>阻止到记录集对象上的 ActiveCommand 属性访问
  Internet Explorer 中运行时，ADO 2.8 现在阻止访问[ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md)活动的属性**记录集**对象并返回错误。 无论页面是否来自受信任的站点列表中注册网站发生此错误。

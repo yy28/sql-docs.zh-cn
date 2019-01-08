@@ -1,5 +1,5 @@
 ---
-title: MemberToStr (MDX) |Microsoft 文档
+title: MemberToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9bd0b59cca8560ae615e7044f13161a01f26835b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528475"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
 
-  返回与指定成员对应的多维表达式 (MDX) 格式的字符串。  
+  返回与指定成员对应的多维表达式 MDX 格式字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,8 +32,8 @@ MemberToStr(Member_Expression)
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 此函数返回包含成员的唯一名称的字符串。 它通常用于将某一成员的唯一名称返回到外部函数。  
+## <a name="remarks"></a>备注  
+ 此函数返回包含成员的唯一名称的字符串。 它通常用于将成员的唯一名称传递给外部函数。  
   
 ## <a name="example"></a>示例  
  下例返回字符串 [Geography].[Geography].[Country].&[United States]：  
@@ -47,6 +47,6 @@ MemberToStr(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

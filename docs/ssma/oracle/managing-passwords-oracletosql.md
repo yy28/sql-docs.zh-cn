@@ -13,12 +13,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: efe58d365cacd0f163299ce6c030bdc34a4b76cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c6b99dfd27655894456a1b0957c8c42f31819e1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520109"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密码 (OracleToSQL)
 本部分是如何确保数据库密码和导入或导出跨服务器的过程：  
@@ -34,15 +34,15 @@ SSMA 允许你保护你的数据库的密码。
   
 指定一个有效的密码，使用以下三种方法之一：  
   
-1.  **明文形式：** 键入的 value 属性的密码节点中的数据库密码。 服务器连接文件的脚本文件的服务器部分中的服务器定义节点下找到它。  
+1.  **清除文本：** 在密码节点的值属性中键入数据库密码。 服务器连接文件的脚本文件的服务器部分中的服务器定义节点下找到它。  
   
-    密码以明文形式是不安全的。 因此，将会遇到以下警告消息在控制台输出中： *"服务器&lt;服务器 id&gt;密码是提供不安全的明文形式 SSMA 控制台应用程序提供了一个选项来保护通过加密的密码，请参阅帮助文件了解详细信息在 SSMA 中的 – securepassword 选项。"*  
+    密码以明文形式是不安全的。 因此，您将遇到以下警告消息中的控制台输出：*"服务器&lt;服务器 id&gt;密码是提供不安全的明文形式 SSMA 控制台应用程序提供了一个选项来保护通过加密的密码，请参阅-securepassword 选项 SSMA 帮助文件中的详细信息信息。*  
   
-    **加密的密码：** 指定的密码，在这种情况下，存储在本地计算机中 ProtectedStorage.ssma 以加密形式。  
+    **加密的密码：** 在这种情况下，指定的密码，在本地计算机中 ProtectedStorage.ssma 以加密形式存储。  
   
     -   **保护密码**  
   
-        -   执行`SSMAforOracleConsole.exe`与`–securepassword`，并在命令行传递包含中的服务器定义部分的密码节点的连接或脚本文件的服务器添加开关。  
+        -   执行`SSMAforOracleConsole.exe`与`-securepassword`，并在命令行传递包含中的服务器定义部分的密码节点的连接或脚本文件的服务器添加开关。  
   
         -   在提示符下，要求用户输入数据库密码并确认它。  
   
@@ -52,7 +52,7 @@ SSMA 允许你保护你的数据库的密码。
             
                 Specify password
                 
-                C:\SSMA\SSMAforOracleConsole.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -60,7 +60,7 @@ SSMA 允许你保护你的数据库的密码。
             
             示例 2：
             
-                C:\SSMA\SSMAforOracleConsole.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -72,20 +72,20 @@ SSMA 允许你保护你的数据库的密码。
     
     -   **删除加密的密码**  
   
-        执行`SSMAforOracleConsole.exe`与`–securepassword`和`–remove`开关在命令行传递的服务器 id，以从本地计算机上存在受保护的存储文件中删除加密的密码。  
+        执行`SSMAforOracleConsole.exe`与`-securepassword`和`-remove`开关在命令行传递的服务器 id，以从本地计算机上存在受保护的存储文件中删除加密的密码。  
         
         例如：  
         
-            C:\SSMA\SSMAforOracleConsole.EXE –securepassword –remove all
-            C:\SSMA\SSMAforOracleConsole.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
+            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
   
     -   **列出其密码进行加密的服务器 Id**  
   
-        执行`SSMAforOracleConsole.exe`与`–securepassword`和`–list`切换通过在命令行列出了其密码已加密的服务器 id。  
+        执行`SSMAforOracleConsole.exe`与`-securepassword`和`-list`切换通过在命令行列出了其密码已加密的服务器 id。  
   
         例如：  
         
-            C:\SSMA\SSMAforOracleConsole.EXE –securepassword –list  
+            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
   
     > [!NOTE]  
     > 1.  在脚本或服务器连接文件中提及的明文密码将优先于受保护的文件中的加密密码。  
@@ -98,13 +98,13 @@ SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上
 
     Export password
     
-    Enter password for protecting the exported file C:\SSMA\SSMAforOracleConsole.EXE –securepassword –export all "machine1passwords.file"
+    Enter password for protecting the exported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforOracleConsole.EXE –p –e "OracleDB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforOracleConsole.EXE -p -e "OracleDB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -114,13 +114,13 @@ SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上
 
     Import an encrypted password
     
-    Enter password for protecting the imported file C:\SSMA\SSMAforOracleConsole.EXE –securepassword –import all "machine1passwords.file"
+    Enter password for protecting the imported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforOracleConsole.EXE –p –i "OracleDB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforOracleConsole.EXE -p -i "OracleDB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
