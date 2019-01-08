@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111497"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414784"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   标准订阅是由希望通过电子邮件传递报表或将报表传递到共享文件夹的各个用户所创建的订阅。 标准订阅始终通过其所基于的报表来定义。  
@@ -27,7 +27,7 @@ ms.locfileid: "48111497"
  创建订阅的用户拥有该订阅。 每个用户都可以修改或删除自己所拥有的订阅。  
   
 > [!NOTE]  
->  从开始[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可以以编程方式转移其所有权的订阅。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 开始，你可以以编程方式传递订阅所有权。 没有可用于传递订阅所有权的用户界面。 有关详细信息，请参阅<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  具体取决于**RSReportServer.config**配置文件设置，用户可能能够向订阅添加更多的用户 (例如，经理可以添加的电子邮件地址或其直接报告，以便他们会收到一份报表）。 是否支持此功能取决于在定义单独的订阅时“收件人:”字段是否可见。 有关详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "48111497"
   
 -   若要使用文件共享传递，必须先定义目标文件夹。 有关详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
- 必须先将报表数据源配置为使用存储的凭据或不使用凭据，然后才可以订阅报表。 有关详细信息，请参阅[在 Reporting Services 数据源中存储凭据](../report-data/store-credentials-in-a-reporting-services-data-source.md)。 否则， **“新建订阅”** 按钮将不可用。  
+ 必须先将报表数据源配置为使用存储的凭据或不使用凭据，然后才可以订阅报表。 有关详细信息，请参阅 [在 Reporting Services 数据源中存储凭据](../report-data/store-credentials-in-a-reporting-services-data-source.md)。 否则， **“新建订阅”** 按钮将不可用。  
   
  本主题不介绍如何创建数据驱动订阅。 有关如何创建数据驱动的订阅的说明，请参阅[创建数据驱动订阅（SSRS 教程）](../create-a-data-driven-subscription-ssrs-tutorial.md)或在报表管理器中“创建数据驱动的订阅”页的联机帮助。  
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> 创建文件共享订阅  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器中的 **“内容”** 页上，导航到要订阅的报表。 单击报表以打开它。  
   
@@ -153,9 +153,9 @@ ms.locfileid: "48111497"
 >  报表服务器管理员无法从一个位置管理在给定的报表服务器上正在使用的所有单独的订阅。 但是，报表服务器管理员可以访问每个单独的订阅来进行修改或删除。  
   
 ##  <a name="bkmk_delete_subscription"></a> 删除订阅  
- 删除订阅  
+ 删除订阅”  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器的全局工具栏上，单击 **“我的订阅”** ，并导航到要修改或删除的订阅。  
   
@@ -175,9 +175,9 @@ ms.locfileid: "48111497"
  [任务和权限](../security/tasks-and-permissions.md)   
  [创建和管理 SharePoint 模式报表服务器的订阅](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)   
- [数据驱动订阅](data-driven-subscriptions.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
+ [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
  [使用我的订阅](use-my-subscriptions-native-mode-report-server.md)  
   
   

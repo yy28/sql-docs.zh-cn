@@ -11,12 +11,12 @@ ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d8e61f4f82df496a475717b34f0ce54db07d4a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065288"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413685"
 ---
 # <a name="site-settings-page-report-manager"></a>“站点设置”页（报表管理器）
   使用“站点设置”页可以更改应用程序标题，为报表历史记录限制和报表处理超时值设置服务器范围的默认值，管理系统级角色分配以及管理共享计划。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  
@@ -33,11 +33,11 @@ ms.locfileid: "48065288"
   
 2.  单击页面顶部的 **“站点设置”**。 这会打开该站点的“常规属性”页。  
   
-     **注意：** 如果您没有看到**站点设置**选项在菜单中，您没有所需的权限，有关详细信息，请参阅的"站点设置"部分[配置为在本机模式报表服务器本地管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+     **注意：** 如果没有看到**站点设置**选项菜单中，您没有所需的权限，有关详细信息，请参阅的"站点设置"部分[为本地管理配置本机模式报表服务器&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="options"></a>选项  
  **名称**  
- 指定要使用的此实例的标题[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]报表管理器。 默认情况下，标题是"[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"。  
+ 指定用于此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 报表管理器实例的标题。 默认情况下，标题是"[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"。  
   
  **选择报表历史记录的默认设置**  
  为要保留的报表历史副本数选择默认值。 此默认值为报表历史记录的相关限制提供了初始设置。 您可以在报表级别更改这些设置。 有关详细信息，请参阅[“快照选项”属性页（报表管理器）](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)。  
@@ -56,21 +56,21 @@ ms.locfileid: "48065288"
   
  **本机模式报表服务器：** 在本机模式安装中，默认 URL 将采用格式为 http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application。  
   
- SharePoint 集成的模式： 默认 URL 将采用格式为 http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application。"  
+ SharePoint 集成模式下：默认 URL 将采用格式为 http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application。"  
   
  **应用**  
  单击此选项可保存对报表服务器所做的更改。  
   
- **Security**  
+ **安全性**  
  单击此链接可打开“系统角色分配”页，在该页可以向预定义的系统角色分配用户和组帐户。  
   
  **计划**  
  单击此链接将打开“计划”页，在该页可以预定义供用户选择以用于其报表和订阅的共享计划。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [授予对本机模式报表服务器的权限](security/granting-permissions-on-a-native-mode-report-server.md)   
- [预定义的角色](security/role-definitions-predefined-roles.md)   
+ [预定义角色](security/role-definitions-predefined-roles.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccf2d3bc2b9bd40a141cae19a22ffde56ea16dd6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674296"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401952"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51674296"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id 和 step_index 构成此视图的键。 与请求关联的唯一数字 id。|请参阅中的 ID [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |step_index|**int**|此步骤的一系列步骤组成该请求中的位置。|0 到 (n-1)，为包含 n 个步骤的请求。|  
-|operation_type|**nvarchar(128)**|表示通过此步骤的操作的类型。|'MoveOperation','OnOperation','RandomIDOperation','RemoteOperation','ReturnOperation','ShuffleMoveOperation','TempTablePropertiesOperation','DropDiagnosticsNotifyOperation', ‘HadoopShuffleOperation', ‘HadoopBroadCastOperation', ‘HadoopRoundRobinOperation'|  
+|operation_type|**nvarchar(128)**|表示通过此步骤的操作的类型。|MoveOperation、 OnOperation、 RandomIDOperation、 针对以下、 ReturnOperation、 ShuffleMoveOperation、 TempTablePropertiesOperation、 DropDiagnosticsNotifyOperation、 HadoopShuffleOperation、 HadoopBroadCastOperationHadoopRoundRobinOperation|  
 |distribution_type|**nvarchar(32)**|执行步骤的位置。|AllComputeNodes、 AllDistributions、 ComputeNode、 分发、 AllNodes、 SubsetNodes、 SubsetDistributions'，' 未指定。|  
 |location_type|**nvarchar(32)**|执行步骤的位置。|计算、 Head 或者 DMS。 所有的数据移动步骤显示 DMS。|  
 |status|**nvarchar(32)**|此步骤的状态|挂起、 正在运行，Complete、 Failed、 UndoFailed、 PendingCancel，取消，撤消，中止|  

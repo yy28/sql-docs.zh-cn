@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f55c922c1424235203505a6ba17bbec56972c9f7
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400810"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396512"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>使用并行数据仓库 (PDW) 的临时数据库
 SQL Server 并行数据仓库 (PDW) 使用临时数据库来暂时在加载过程中存储数据。 默认情况下，SQL Server PDW 作为临时数据库，可能会导致表碎片使用目标数据库。 若要减少表的碎片，可以创建用户定义的临时数据库。 或者，当从加载失败的回滚不是一个问题，可以使用 fastappend 加载模式下通过跳过的临时表并加载直接到目标表来提高性能。  

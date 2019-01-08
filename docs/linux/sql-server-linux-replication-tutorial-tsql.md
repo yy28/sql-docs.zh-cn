@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: 9b1d86b56e836a9b9b7bf575d5e9353a962894ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390829"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405312"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 配置复制
 
@@ -35,7 +35,7 @@ ms.locfileid: "49390829"
 
 可以使用配置所有的复制配置[复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 若要完成本教程中，将需要：
 
 - Linux 上的 SQL Server 的最新版本的 SQL Server 的两个实例
@@ -285,12 +285,12 @@ ms.locfileid: "49390829"
 > * 配置订阅服务器 
 > * 运行复制作业
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 有关复制的详细信息，请参阅[SQL Server 复制文档](../relational-databases/replication/sql-server-replication.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
-[Linux 上的概念： SQL Server 复制](sql-server-linux-replication.md)
+[概念：Linux 上的 SQL Server 复制](sql-server-linux-replication.md)
 
 [复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。

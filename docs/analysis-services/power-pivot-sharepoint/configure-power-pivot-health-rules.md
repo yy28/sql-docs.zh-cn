@@ -1,5 +1,5 @@
 ---
-title: 配置 Power Pivot 运行状况规则 |Microsoft 文档
+title: 配置 Power Pivot 运行状况规则 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: befe9b69e50ee6b57caef8275dce81139b977d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aae3b89c52f5d1d8524681a3a4fd2eda9ab73907
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027154"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398060"
 ---
 # <a name="configure-power-pivot-health-rules"></a>配置 Power Pivot 运行状况规则
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "34027154"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意：** 将为 SQL Server Analysis Services 实例和 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序单独配置运行状况规则设置。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅[运行状况规则参考 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md)主题中的“版本”列，或可以运行以下 Windows PowerShell 命令来查看已安装的规则。  
+ **注意：** SQL Server Analysis Services 实例的单独配置运行状况规则设置和[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]服务应用程序。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅主题中的"版本"列[运行状况规则参考&#40;Powerpivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md)，或者，可以运行以下 Windows PowerShell 命令以查看已安装的规则。  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **本主题内容：**  
@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [配置用于评估应用程序稳定性的运行状况规则（Power Pivot 服务应用程序）](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  必须是服务应用程序管理员才能更改 Analysis Services 实例和 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序的配置属性。  
   
 ##  <a name="bkmk_view"></a> 查看 Power Pivot 运行状况规则  
@@ -64,7 +64,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  在页面的顶部，选择 SharePoint 场中包含 Analysis Services 实例的服务器（在下图中，该服务器的名称为 AW-SRV033）。 **“SQL Server Analysis Services”** 将出现在服务列表中。  
   
-     ![屏幕快照的管理服务在服务器页上](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-servicesonserver.gif "屏幕截图的管理服务在服务器页上")  
+     ![屏幕截图的管理服务服务器页](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-servicesonserver.gif "屏幕截图的管理服务服务器页")  
   
 3.  单击 **SQL Server Analysis Services**。  
   
@@ -73,27 +73,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      CPU 资源分配不足（默认值是 80%）  
      如果 Analysis Services 服务器进程 (msmdsrv.exe) 的 CPU 资源占用率在超过 4 小时的时段内保持为或高于 80%（通过“数据收集间隔”设置指定），则将触发此运行状况规则。  
   
-     此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services 没有足够的 CPU 资源，无法执行所请求的操作”。  
+     此配置设置对应于以下规则定义上**查看问题和解决**页：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:Analysis Services 没有足够的 CPU 资源来执行请求的操作。**  
   
      系统上的 CPU 资源不足（默认值为 90%）  
      如果服务器的 CPU 资源在超过 4 小时的时段内保持为或高于 90%（通过“数据收集间隔”设置指定），则将触发此运行状况规则。 将总体 CPU 使用率作为基于运行状况的负载平衡算法的一部分来进行度量，该算法将 CPU 使用率作为服务器运行状况的度量进行监视。  
   
-     此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 总体 CPU 使用率过高”。  
+     此配置设置对应于以下规则定义上**查看问题和解决**页：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:总体 CPU 使用率是太高。**  
   
      内存不足阈值（默认值为 5%）  
      在 SharePoint 应用程序服务器上，SQL Server Analysis Services 实例应该始终保留总是不会使用的少量内存。 因为对于其主要操作而言服务器是受到内存限制的，所以，令服务器在运行时永远不会达到其上限可使服务器保持最佳运行状态。 该 5% 的未使用内存是按占分配给 Analysis Services 的内存的百分比计算的。 例如，如果您具有 200 GB 的总内存，并且 Analysis Services 被分配了总内存的 80%（也就是 160 GB），则 5% 的未使用内存为 160 GB 的 5%（也就是 8 GB）。  
   
-     此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services 没有足够的内存，无法执行请求的操作”。  
+     此配置设置对应于以下规则定义上**查看问题和解决**页：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:Analysis Services 没有足够的内存来执行请求的操作。**  
   
      最大连接数（默认值为 100）  
      如果与 Analysis Services 实例的连接数在超过 4 小时的时段内保持为或多于 100（通过“数据收集间隔”设置指定），则将触发此运行状况规则。 此默认值是任意的（它不基于您服务器的硬件规范或用户活动），因此，您可以根据您环境中的服务器容量和用户活动来增大或减小该值。  
   
-     此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 连接数较高表明应部署更多服务器以处理当前负载”。  
+     此配置设置对应于以下规则定义上**查看问题和解决**页：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:连接数目较高指示应部署更多服务器以处理当前负载。**  
   
      磁盘空间不足（默认值为 5%）  
      每次请求数据库时，磁盘空间都将用于缓存 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据。 此规则可告知您磁盘空间不足这一情况。 默认情况下，在备份文件夹所在的磁盘驱动器上，如果磁盘空间低于 5%，将触发此运行状况规则。 有关磁盘使用情况的详细信息，请参阅 [配置磁盘空间使用情况 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
-     此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 在缓存 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据的驱动器上，磁盘空间不足”。  
+     此配置设置对应于以下规则定义上**查看问题和解决**页：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:磁盘空间不足的驱动器上其中[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]缓存数据。**  
   
      数据收集间隔（小时）  
      可指定用于计算触发运行状况规则所使用的数字的数据收集期间。 虽然会对系统进行持续监视，但会使用在预定义间隔内生成的数据来计算用于触发运行状况规则警告的阈值。 默认间隔为 4 小时。 服务器将检索在前 4 个小时内收集到的系统和使用率数据，以计算用户连接数、磁盘空间使用率以及 CPU 与内存使用率。  
@@ -104,18 +104,18 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  在“服务应用程序”页中，单击“默认 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序”。  
   
-     ![屏幕快照的 ManageService 应用程序页](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "的 ManageService 屏幕快照应用程序页")  
+     ![ManageService 应用程序的屏幕截图页面](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "ManageService 应用程序的屏幕截图页面")  
   
 3.  将打开 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板。 单击 **“操作”** 列表中的 **“配置服务应用程序设置”** 以打开服务器应用程序设置页。  
   
-     ![仪表板的屏幕截图专注于操作列表](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "的仪表板，屏幕截图专注于操作列表")  
+     ![屏幕截图的仪表板，专注于操作列表](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "的仪表板中，屏幕截图专注于操作列表")  
   
 4.  在“运行状况规则设置”中，修改以下设置：  
   
      加载与连接之比（默认值为 20%）  
      如果加载事件的数目相对于连接事件的数目而言较高，则会触发此运行状况规则，因为这表明服务器卸载数据库的速度可能过快，或者缓存减少设置过高。  
   
-     此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 加载事件数与连接数的比值过高”。  
+     此配置设置对应于以下规则定义上**查看问题和解决**页：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:加载事件与连接比过高。**  
   
      数据收集间隔（默认值为 4 小时）  
      可指定用于计算触发运行状况规则所使用的数字的数据收集期间。 虽然会对系统进行持续监视，但会使用在预定义间隔内生成的数据来计算用于触发运行状况规则警告的阈值。 默认间隔为 4 小时。 服务器将检索在前 4 个小时内收集到的系统和使用率数据，以计算加载与连接之比。  
@@ -125,9 +125,9 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      有关使用情况数据收集的详细信息，请参阅[配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
-     此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]使用情况数据未按预期频率进行更新”。  
+     此配置设置对应于以下规则定义上**查看问题和解决**页：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:使用情况数据未按照预期频率进行更新。**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置磁盘空间使用情况 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Power Pivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   

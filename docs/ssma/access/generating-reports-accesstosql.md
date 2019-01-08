@@ -10,12 +10,12 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b5138dea4cfea23d77dae5d4bc766b4c2738f4e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe6f45b2e35761fac5f8c49012b1eb370645bcb1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659059"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412764"
 ---
 # <a name="generating-reports-accesstosql"></a>生成报告 (AccessToSQL)
 在对象树中级别的 SSMA 控制台中生成使用命令来执行某些活动的报告。  
@@ -45,8 +45,8 @@ ms.locfileid: "51659059"
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|verbose=”false”|生成活动的汇总的报告。|  
-    |2|verbose=”true”|生成的每个活动的摘要和详细状态报告。|  
+    |1|详细 ="false"|生成活动的汇总的报告。|  
+    |2|详细 ="true"|生成的每个活动的摘要和详细状态报告。|  
   
     > [!NOTE]  
     > 上面指定的报表详细级别设置是适用于生成评估报告、 convert 架构、 迁移数据命令。  
@@ -56,8 +56,8 @@ ms.locfileid: "51659059"
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|report-errors=”false”|没有错误的详细信息 / 警告 / 信息消息。|  
-    |2|report-errors=”true”|详细的错误 / 警告 / 信息消息。|  
+    |1|报告错误 ="false"|没有错误的详细信息 / 警告 / 信息消息。|  
+    |2|报告错误 ="true"|详细的错误 / 警告 / 信息消息。|  
   
     > [!NOTE]  
     > 上面指定的错误报告设置是适用于生成评估报告、 convert 架构、 迁移数据命令。  
@@ -87,7 +87,7 @@ ms.locfileid: "51659059"
 ### <a name="synchronize-target"></a>同步目标：  
 该命令**同步目标**已**报表-到错误**参数，它指定为同步操作的错误报告的位置。 然后，按名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
   
-**注意：** 如果给定的文件夹路径，则报表-错误-到参数将成为命令同步的目标的一个可选属性。  
+**注意：** 如果未指定文件夹路径，报表-错误-到参数将成为的命令同步的目标的可选属性。  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -102,9 +102,9 @@ ms.locfileid: "51659059"
   
 />  
 ```  
-**对象名称：** 指定考虑进行同步 （如果还没有单个对象名或组对象名称） 的对象。  
+**对象名称：** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
   
-**-error:** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
+**错误：** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
 -   作为警告报告总数  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51659059"
 ### <a name="refresh-from-database"></a>刷新从数据库：  
 该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
   
-**注意：** 如果给定的文件夹路径，则报表-错误-到参数将成为命令同步的目标的一个可选属性。  
+**注意：** 如果未指定文件夹路径，报表-错误-到参数将成为的命令同步的目标的可选属性。  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -134,7 +134,7 @@ ms.locfileid: "51659059"
 ```  
 **对象名称：** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
   
-**-error:** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
+**错误：** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
 -   作为警告报告总数  
   

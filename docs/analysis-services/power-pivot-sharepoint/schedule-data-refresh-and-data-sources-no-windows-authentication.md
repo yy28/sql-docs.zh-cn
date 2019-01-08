@@ -1,5 +1,5 @@
 ---
-title: 计划数据刷新和数据源-无 Windows 身份验证 |Microsoft 文档
+title: 计划数据刷新和数据源-无 Windows 身份验证 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4c7a5a66ff831c94129c2833d74d0eeeb65de30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027767"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408546"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>计划数据刷新和数据源-无 Windows 身份验证
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,15 +28,15 @@ ms.locfileid: "34027767"
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh：** 此安全存储区目标应用程序 ID 使用 Windows 身份验证进行设置。  
+-   **（1) PowerPivotDatarefresh:** 安全存储区目标应用程序 ID 使用 windows 身份验证设置。  
   
--   **(2) OracleAuthentication：** 此安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
+-   **（2) OracleAuthentication:** 安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
   
--   **(3)** 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**“无人参与的数据刷新帐户”，将**服务应用程序配置为使用目标应用程序“PowerPivotDataRefresh”。  
+-   **(3)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序是配置为使用目标应用程序"PowerPivotDataRefresh"的用于**无人参与的数据刷新帐户**。  
   
 -   **(4)** PowerPivot 工作簿使用 Oracle 数据。 工作簿刷新设置指定数据源连接以使用凭据的目标应用程序 **(2)** 。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
   
 -   存在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34027767"
   
 4.  在 **“创建新的安全存储区目标应用程序”** 页上，配置下列值：  
   
-    -   **目标应用程序 ID：** PowerPivotDataRefresh。  
+    -   **目标应用程序 ID:** PowerPivotDataRefresh。  
   
     -   **显示名称：** PowerPivotDataRefresh。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34027767"
   
     -   **目标应用程序类型：** 组。  
   
-    -   **目标应用程序页 URL：** 无。  
+    -   **目标应用程序页 URL:** 无。  
   
 5.  单击“下一步” 。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34027767"
   
 8.  在 **“成员资格设置”** 页上，添加至少一个 **“目标应用程序管理员”** ，然后添加需要目标应用程序的访问权限的成员。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 10. 一个新的目标应用程序 ID 会添加到列表中。 选择目标应用程序 ID，然后单击**设置凭据**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "34027767"
   
 4.  在 **“创建新的安全存储区目标应用程序”** 页上，配置下列值：  
   
-    -   **目标应用程序 ID：** OracleAuthentication。  
+    -   **目标应用程序 ID:** OracleAuthentication。  
   
     -   **显示名称：** OracleAuthentication。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34027767"
   
     -   **目标应用程序类型：** 组。  
   
-    -   **目标应用程序页 URL：** 无。  
+    -   **目标应用程序页 URL:** 无。  
   
 5.  单击“下一步” 。  
   
@@ -108,19 +108,19 @@ ms.locfileid: "34027767"
   
 8.  在 **“成员资格设置”** 页上，添加至少一个 **“目标应用程序管理员”** ，然后添加需要目标应用程序的访问权限的成员。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 10. 一个新的目标应用程序 ID 会添加到列表中。 选择目标应用程序 ID，然后单击**设置凭据**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
 11. 键入 Oracle 用户 ID 和 Oracle 密码，然后单击 **“确定”**。  
   
- 详细信息，请参阅"若要为 SQL Server 身份验证创建目标应用程序"一节中[与 SQL Server 身份验证 (SharePoint Server 2013) 使用 Secure Store](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
+ 有关详细信息，请参阅"为 SQL Server 身份验证创建目标应用程序中[使用安全存储区与 SQL Server 身份验证 (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>配置 Power Pivot 服务应用程序  
   
 1.  在 SharePoint 管理中心中，单击“管理服务应用程序”。  
   
-2.  单击 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序的名称，例如“默认的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”。  
+2.  单击名称你[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序，例如"默认[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序"。  
   
 3.  在“操作”节中，单击 **“配置服务应用程序设置”** 。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "34027767"
   
 ## <a name="to-configure-the-workbook"></a>配置工作簿  
   
-1.  浏览到你的工作簿中[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库和单击**管理数据刷新**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  浏览到工作簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库并单击**管理数据刷新**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  如果出现 **“数据刷新历史记录”** 页，单击 **“配置计划”**。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "34027767"
   
 10. 在“ID:”  框中，键入 **OracleAuthentication**。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
      如果出现类似以下的错误消息： `The provided Secure Store target application is either incorrectly configured or does not exist`。  
   
@@ -167,6 +167,6 @@ ms.locfileid: "34027767"
   
 -   [配置 SharePoint 2013 中的 Secure Store Service](http://technet.microsoft.com/library/ee806866.aspx)。  
   
--   请参阅 [使用 SharePoint 2013 和 SQL Server 2012 SP1 进行 Power Pivot 数据刷新 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)中的“计划的数据刷新”部分。  
+-   请参阅的"计划数据刷新"部分[Power Pivot 数据刷新与 SharePoint 2013 和 SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)。  
   
   

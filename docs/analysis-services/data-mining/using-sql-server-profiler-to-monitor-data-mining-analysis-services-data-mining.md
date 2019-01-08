@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 事件探查器监视数据挖掘 |Microsoft 文档
+title: 使用 SQL Server Profiler 监视数据挖掘 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a40a02e3fd19ac853c7c4b291bbc3875229c747f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818493"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server 事件探查器监视数据挖掘（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,8 +39,8 @@ ms.lasthandoff: 05/10/2018
   
  通过查看跟踪日志中的命令语句，还可以看到由客户端发送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器的复杂语句（包括对系统存储过程的调用）的语法。 您可以借助该信息进行调试，或者也可以将有效语句用作创建新预测查询或模型的模板。 有关可以通过跟踪捕获的存储过程调用的一些示例，请参阅 [群集模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+## <a name="see-also"></a>请参阅  
+
  [使用 SQL Server 扩展事件监视 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

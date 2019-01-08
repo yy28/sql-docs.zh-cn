@@ -10,12 +10,12 @@ ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103277"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408904"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>在虚拟机环境下使用内存中 OLTP
   服务器虚拟化可以帮助你改进应用程序配置、维护、可用性和备份/恢复流程，进而降低 IT 资本和运营成本并提高 IT 效率。 由于近年来的技术进步，可以更轻松地使用虚拟化来合并复杂的数据库工作负载。 本主题说明了在虚拟化环境中使用 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 的最佳做法。  

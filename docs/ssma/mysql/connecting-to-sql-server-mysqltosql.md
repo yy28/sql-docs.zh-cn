@@ -13,12 +13,12 @@ ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2827824224488cbaad99df0784159a5231a7eade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412284"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server，必须连接到 SQL Server 目标实例。 连接时，SSMA 获取有关 SQL Server 实例中的所有数据库的元数据，并在 SQL Server 元数据资源管理器中显示数据库元数据。 SSMA 存储的连接，但不存储密码的 SQL Server 实例的信息。  
@@ -62,7 +62,7 @@ ms.locfileid: "47773935"
   
 5.  对于安全的连接，将添加两个控件，**加密连接**并**TrustServerCertificate**复选框。 仅当**加密连接**处于选中状态， **TrustServerCertificate**复选框是否可见。 当**加密连接**已选中 (true) 和**TrustServerCertificate**处于未选中状态 (false)，它将验证 SQL Server SSL 证书。 验证服务器证书是 SSL 握手过程的一部分，这可确保服务器是要连接到的正确服务器。 若要确保这一点，必须在客户端和服务器端上安装证书。  
   
-6.  单击连接。  
+6.  单击“连接”。  
   
 **更高版本兼容性**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47773935"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (版本： 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (版本： 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Version:13.x)|SQL Azure|  
+|**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (版本：9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (版本：10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Version:13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|用户帐户控制|是|是|是|用户帐户控制||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||用户帐户控制|是|是|用户帐户控制||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||用户帐户控制|是|用户帐户控制||  

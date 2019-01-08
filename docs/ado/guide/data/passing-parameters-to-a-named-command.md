@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773385"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505706"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>将参数传递给命名命令
 只需命令的结果作为传递*出*变量的已命名的命令参数已参数化的命令可为传入的*中*命名命令的变量。  
@@ -77,21 +77,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 请注意，所有输入的参数必须在之前的任何输出变量和参数的数据类型必须匹配或可以转换为与相应的字段。 以下语句：  
+ 请注意，所有输入的参数必须在之前的任何输出变量和参数的数据类型必须匹配或可以转换为与相应的字段。 以下语句-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- — 将导致错误的数据类型不匹配，因为必需的输入的参数的**字符串**类型，不是**整数**类型。  
+ -将导致错误的数据类型不匹配，因为必需的输入的参数的**字符串**类型，不是**整数**类型。  
   
- 以下调用：  
+ 以下调用-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- — 虽然有效，但会产生空结果集，因为在数据库中不存在任何此类记录。  
+ -虽然有效，但会产生空结果集，因为在数据库中不存在任何此类记录。  
   
 ## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

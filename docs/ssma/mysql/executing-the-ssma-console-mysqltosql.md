@@ -18,12 +18,12 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd560a17c10b5e076236195107d0a9154921422a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701805"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411254"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。  
@@ -59,7 +59,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
    overwrite-if-exists="<true/false>"   (optional)  
   
-   project-type==”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”   (optional)  
+   project-type=="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"   (optional)  
   
 />  
 ```  
@@ -94,7 +94,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
 **Command**  
   
-保存项目： 将保存迁移项目。  
+保存项目：保存迁移项目。  
   
 **脚本**  
   
@@ -106,7 +106,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 **Command**  
   
 关闭项目  
-                  ： 关闭迁移项目。  
+                  解码的字符：关闭迁移项目。  
   
 **脚本**  
   
@@ -118,7 +118,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 **Command**  
   
 关闭项目  
-                  ： 关闭迁移项目。  
+                  解码的字符：关闭迁移项目。  
   
 **脚本**  
   
@@ -286,7 +286,7 @@ generate-assessment-report
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -307,7 +307,7 @@ generate-assessment-report
 ## <a name="migration--script-file-commands"></a>迁移脚本文件命令  
 迁移命令将目标数据库架构转换为源架构和数据迁移到目标服务器。  
   
-设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 **Command**  
   
@@ -360,7 +360,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <convert-schema  
@@ -402,7 +402,7 @@ convert-schema
 ```xml  
 <migrate-data  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true">  
   
@@ -420,7 +420,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-或多个  
+或  
   
 ```xml  
 <migrate-data  
@@ -429,7 +429,7 @@ convert-schema
   
    object-type="<object-category>"  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true"/>  
 ```  
@@ -463,7 +463,7 @@ convert-schema
 可管理性命令可帮助将与源数据库同步目标数据库对象。  
   
 > [!NOTE]  
-> 设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+> 设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 **Command**  
   
@@ -508,7 +508,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target  
@@ -517,7 +517,7 @@ convert-schema
   
   object-type="<object-category>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -573,7 +573,7 @@ convert-schema
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -582,7 +582,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -593,7 +593,7 @@ convert-schema
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>脚本生成的脚本文件命令  
-生成脚本命令执行双重任务： 它们帮助节省控制台输出中的脚本文件;并记录到控制台或根据你指定的参数文件的 T-SQL 的输出。  
+生成脚本命令执行双重任务：它们帮助节省控制台输出中的脚本文件;并记录到控制台或根据你指定的参数文件的 T-SQL 的输出。  
   
 **Command**  
   
@@ -626,20 +626,20 @@ save-as-script
   
    object-type="<object-category>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
    overwrite="<true/false>"   (optional)  
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <save-as-script  
   
    metabase="<source/target>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
       <metabase-object object-name="<object-name>"  
   
@@ -708,7 +708,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-或多个  
+或  
   
 ```  
 <convert-sql-statement  
@@ -733,7 +733,7 @@ convert-sql-statement
   
 />  
 ```  
-或多个  
+或  
   
 ```  
 <convert-sql-statement  

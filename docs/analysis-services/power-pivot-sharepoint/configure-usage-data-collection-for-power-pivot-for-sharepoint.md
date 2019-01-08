@@ -1,5 +1,5 @@
 ---
-title: 配置为使用情况数据收集 (Power Pivot for SharePoint |Microsoft 文档
+title: 配置使用情况数据收集 (Power Pivot for SharePoint |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026874"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420278"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>配置使用情况数据收集 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "34026874"
 ##  <a name="jobs"></a> 配置使用情况数据收集中使用的计时器作业  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器运行状况和使用情况数据通过两个计时器作业移到使用情况数据收集系统中的不同位置。  
   
--   “Microsoft SharePoint Foundation 使用情况数据导入”计时器作业将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用情况数据移到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库。  
+-   "Microsoft SharePoint Foundation 使用情况数据导入"计时器作业将移[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用情况与[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序数据库。  
   
--   “[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板处理计时器作业”将数据移到向内置管理报告提供数据的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中。  
+-   "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]管理面板处理计时器作业"将数据与[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿的内置管理报告的数据源。  
   
  如果需要更频繁地刷新出现在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的管理报告，则按照以下步骤执行。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34026874"
   
      数据实际在发生下一个事件时被数据。 仅当系统处理某一事件时，才检查对使用情况数据历史记录的限制。  
   
-3.  单击 **“确定”**。  
+3.  单击“确定” 。  
   
  有关如何收集和存储使用情况数据的详细信息，请参阅 [PowerPivot 使用情况数据收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "34026874"
   
      超出此限制的任何请求输入“超出” 类别。 对于“超出” 类别，没有可配置的阈值。 根据您在“长请求上限”中指定的上限推断出该值。 属于“超出”类别的请求的运行时间长于您定义的 SLA 所允许的时间。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ##  <a name="ttr"></a> 指定向使用情况数据收集系统报告查询统计信息的频率  
  生成报告的时间间隔指定向使用情况数据收集系统报告查询统计信息的频率。 查询统计信息在进程中累积，并且定期作为单个事件报告。 您可以调整该时间间隔以便写入日志文件的间隔更长或更短。  
@@ -161,7 +161,7 @@ ms.locfileid: "34026874"
   
      如果您将该值提高得过多，则在报告之前可能会丢失统计信息。 例如，服务重新启动将导致查询统计信息丢失。 相反，如果内置活动报告中显示数据不足，请考虑减少该时间间隔以便更频繁地获取生成报告事件。  
   
-3.  单击 **“确定”**。  
+3.  单击“确定” 。  
   
 ##  <a name="openconfig"></a> 打开“Power Pivot 服务应用程序”页以访问配置设置  
  您必须是场管理员或服务管理员才能修改服务应用程序设置。 如果在场中定义了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则必须单独修改每个应用程序。  
@@ -186,11 +186,11 @@ ms.locfileid: "34026874"
 |**Usage data history**|365（以天为单位）|Integer|0 指定无限制，但您也可以设置使历史数据过期并将自动删除它的上限。 有限保留期的有效值为 1 到 5000（单位为天）。|  
 |一般响应上限|500（以毫秒为单位）|Integer|设置定义一般请求-响应交换的上限。 在 0 到 500 毫秒之间完成的任何请求都是一般请求，并且出于报告目的将被忽略。|  
 |快速响应上限|1000（以毫秒为单位）|Integer|设置定义快速请求-响应交换的上限。|  
-|预期响应上限|3000（以毫秒为单位）|Integer|设置定义预期请求-响应交换的上限。|  
+|“预期响应上限”|3000（以毫秒为单位）|Integer|设置定义预期请求-响应交换的上限。|  
 |长时间运行响应上限|10000（以毫秒为单位）|Integer|设置定义长时间运行的请求-响应交换的上限。 超出此上限的任何请求都属于“超出”类别，因此没有上限。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置设置参考 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Power Pivot 使用情况数据收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
+ [PowerPivot 使用情况数据收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c9c10d013d6585208a5f30d98169d8eab71b75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066667"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399430"
 ---
 # <a name="database-engine-configuration---user-instance"></a>数据库引擎配置 - 用户实例
   使用 **“用户实例”** 页可以为不具有管理员权限的用户生成单独的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并可以将用户添加到管理员角色中。  

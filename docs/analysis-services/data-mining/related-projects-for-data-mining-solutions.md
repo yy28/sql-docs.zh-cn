@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘解决方案的相关项目 |Microsoft 文档
+title: 数据挖掘解决方案的相关项目 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019454"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415604"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019454"
  [语义索引](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供了组件和功能所需的数据准备和定型阶段的数据挖掘项目。 虽然您可使用其他工具（如脚本）执行很多数据清除或准备任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在数据挖掘方面具有众多优势：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供数据挖掘项目的数据准备和定型阶段所需的组件和功能。 虽然您可使用其他工具（如脚本）执行很多数据清除或准备任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在数据挖掘方面具有众多优势：  
   
 -   将任务表示为工作流的一部分，可对其进行重复、自动化、分支或扩展。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34019454"
   
  **数据流组件**  
   
--   [CDC 数据流组件](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [CDC 流组件](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [有条件拆分转换](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019454"
   
  有关如何将 Reporting Services 作为数据源与 DMX 查询一起使用的详细信息，请参阅以下链接：  
   
- [从数据挖掘模型 & #40; DMX & #41; 中检索数据& #40;SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [从数据挖掘模型检索数据 (DMX) (SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [针对 DMX & #40; analysis Services 连接类型SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  但是，不需要将 DMX 用作数据源。 用于数据挖掘的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件还支持将预测查询的结果保存到关系数据库中。 如果已建立用于使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]更新模型的工作流，则将预测和其他数据挖掘查询结果保存到 SQL Server 可使您能够使用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 进行报告，并能使用其他不与 DMX 建立接口连接的工具。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019454"
   
  有关详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
- 全文检索后存储的词的版本是一个压缩格式的标记。 对全文检索进行的后续查询将基于相应的语言规则生成特定词的多种变形形式，以确保生成所有可能的匹配项。 例如，即使存储的标记可能为“run”，查询引擎也会查询词“running”、“ran”和“runner”，因为这些词都是根词“run”正常派生的语形学变体。  
+ 全文检索后存储的词的版本是一个压缩格式的标记。 对全文检索进行的后续查询将基于相应的语言规则生成特定词的多种变形形式，以确保生成所有可能的匹配项。 例如，尽管存储的标记可能为"run"，查询引擎还会查询词"运行"、"ran"和"runner，"因为这些是根词"run"的定期派生词的变体。  
   
  还可以创建和生成用户同义词库以存储同义词并获得更佳搜索结果，或对字词进行分类。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 有关详细信息，请参阅 [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "34019454"
   
 -   不是所有的全文语言都支持语义索引。 有关支持的语言的列表，请参阅 [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型解决方案 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [表格模型解决方案](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   

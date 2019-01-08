@@ -19,12 +19,12 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fcd30c5935b2d99d98c4bce2d9895498c509154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b25594feb96fe10f0a04ad0ab542fd582089759
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781465"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411624"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,20 +35,20 @@ ms.locfileid: "47781465"
   
  有关详细信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-|**列**|**类型**|**Description**|  
+|**列**|**类型**|**说明**|  
 |----------------|--------------|---------------------|  
 |database_id|ssNoversion|与句柄关联的数据库的 ID。|  
 |object_id|ssNoversion|与句柄关联的 FileTable 的对象 ID。|  
 |handle_id|ssNoversion|唯一的句柄上下文标识符。 通过使用[sp_kill_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)存储过程来终止特定句柄。|  
 |file_object_type|ssNoversion|句柄的类型。 此类型指示句柄针对其打开的层次结构的级别，即：数据库或项。|  
-|file_object_type_desc|nvarchar(120)|“UNDEFINED”、<br />“SERVER_ROOT”、<br />“DATABASE_ROOT”、<br />“TABLE_ROOT”、<br />“TABLE_ITEM”|  
+|file_object_type_desc|nvarchar(120)|"未定义"<br />"SERVER_ROOT"<br />"DATABASE_ROOT"<br />"TABLE_ROOT"<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary(8)|包含发起请求的进程的唯一标识符。|  
 |correlation_thread_id|varbinary(8)|包含发起请求的线程的唯一标识符。|  
 |file_context|varbinary(8)|指向此句柄使用的文件对象的指针。|  
 |state|ssNoversion|句柄的当前状态。 可处于活动、已关闭或已终止状态。|  
-|state_desc|nvarchar(120)|“ACTIVE”、<br />“CLOSED”、<br />“KILLED”|  
+|state_desc|nvarchar(120)|"活动"，<br />"已关闭"<br />"终止"|  
 |current_workitem_type|ssNoversion|此句柄当前正在由哪一状态处理。|  
-|current_workitem_type_desc|nvarchar(120)|“NoSetWorkItemType”、<br />“FFtPreCreateWorkitem”、<br />“FFtGetPhysicalFileNameWorkitem”、<br />“FFtPostCreateWorkitem”、<br />“FFtPreCleanupWorkitem”、<br />“FFtPostCleanupWorkitem”、<br />“FFtPreCloseWorkitem”、<br />“FFtQueryDirectoryWorkItem”、<br />“FFtQueryInfoWorkItem”、<br />“FFtQueryVolumeInfoWorkItem”、<br />“FFtSetInfoWorkitem”、<br />“FFtWriteCompletionWorkitem”、|  
+|current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType"<br />"FFtPreCreateWorkitem"<br />"FFtGetPhysicalFileNameWorkitem"<br />"FFtPostCreateWorkitem"<br />"FFtPreCleanupWorkitem"<br />"FFtPostCleanupWorkitem"<br />"FFtPreCloseWorkitem"<br />"FFtQueryDirectoryWorkItem"<br />"FFtQueryInfoWorkItem"<br />"FFtQueryVolumeInfoWorkItem"<br />"FFtSetInfoWorkitem"<br />"FFtWriteCompletionWorkitem"|  
 |fcb_id|BIGINT|FileTable 文件控制块 ID。|  
 |item_id|varbinary(892)|文件或目录的项 ID。 对于服务器根句柄可能为 Null。|  
 |is_directory|bit|这是一个目录。|  

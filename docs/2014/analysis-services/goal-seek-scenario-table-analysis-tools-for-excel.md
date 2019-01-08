@@ -15,19 +15,19 @@ ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e3b99c917b6f272f4af325a35712f059313742c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172557"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400460"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>目标查找应用场景（Excel 表分析工具）
   ![表分析工具中的目标查找按钮](media/tat-goalseek.gif "目标查找表分析工具中的按钮")  
   
  **目标查找**应用场景工具是补充[怎么办](what-if-scenario-table-analysis-tools-for-excel.md)应用场景工具。 **假设**工具用于指出更改，带来的影响而**目标查找**工具用于指出必须更改才能获得所需的结果的基础因素。  
   
- 例如，假定您的目标是增加客户满意度。 可以使用**目标查找**分析，以确定哪些因素将是最有可能提高客户满意度，并确定这些改变是否经济高效。  
+ 例如，假设你的目标是增加客户满意度。 可以使用**目标查找**分析，以确定哪些因素将是最有可能提高客户满意度，并确定这些改变是否经济高效。  
   
  该工具完成分析后，它会在源数据表中创建两个新列。 这些列显示*可能性*，可以获得目标的结果，并建议的更改，如果有的话。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172557"
   
 2.  单击**方案**，然后选择**目标查找**。  
   
-3.  在中**应用场景分析： 目标查找**对话框中，选择包含目标的列的值从列表中。  
+3.  在**应用场景分析：目标查找**对话框中，选择包含目标的列的值从列表中。  
   
 4.  指定要达到的值。  
   

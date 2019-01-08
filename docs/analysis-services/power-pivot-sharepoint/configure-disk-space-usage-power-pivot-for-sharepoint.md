@@ -1,5 +1,5 @@
 ---
-title: 配置磁盘空间使用情况 (Power Pivot for SharePoint) |Microsoft 文档
+title: 配置磁盘空间使用情况 (Powerpivot for SharePoint) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024744"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409194"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>配置磁盘空间使用情况 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34024744"
   
  备份文件夹为在本地计算机的内存中加载的所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库提供公共的缓存存储区。 如果在场中定义了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则这些应用程序都可以使用本地服务器来加载并随后缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 数据加载和缓存都是 Analysis Services 服务器操作。 同样，将在 Analysis Services 实例级别在备份文件夹上管理总磁盘空间使用量。 因此在 SharePoint 应用程序服务器上运行的单个 SQL Server Analysis Services 实例上设置限制磁盘空间使用的配置设置。  
   
- 缓存仅包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库存储在单个父文件夹（备份文件夹）下的多个文件中。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库旨在用作 Excel 工作簿的内部数据，所以数据库名称基于 GUID 而非说明性。 下的 GUID 文件夹 **\<serviceApplicationName >** 是的父文件夹[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据库。 在多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库加载到服务器上时，为每个数据库都创建附加的文件夹。  
+ 缓存仅包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库存储在单个父文件夹（备份文件夹）下的多个文件中。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库旨在用作 Excel 工作簿的内部数据，所以数据库名称基于 GUID 而非说明性。 下的 GUID 文件夹 **\<serviceApplicationName >** 是父文件夹的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据库。 在多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库加载到服务器上时，为每个数据库都创建附加的文件夹。  
   
  因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据可以加载到场中的任何 Analysis Services 实例上，所以也可以在场中的多个计算机上缓存相同的数据。 与磁盘空间使用情况相比，此行为更为看重性能，但如果数据已经可用于磁盘，用户可以更快地访问数据。  
   
@@ -50,11 +50,11 @@ ms.locfileid: "34024744"
   
  在系统级别，您可以创建电子邮件警报，在磁盘空间不足时通知您。 Microsoft 系统中心包括电子邮件警报功能。 您还可以使用文件服务器资源管理器、任务计划程序或 PowerShell 脚本来设置警报。 以下链接提供一些有用的信息，可帮助您设置在磁盘空间不足时发出的通知：  
   
--   [在文件服务器资源管理器中的新增](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
+-   [什么是文件服务器资源管理器的新增](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
   
--   [文件服务器资源管理器的 Windows Server 2008 R2 分步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [适用于 Windows Server 2008 R2 文件服务器资源管理器分步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
   
--   [Windows Server 2008 上设置低磁盘空间警报](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 上设置磁盘空间不足警报](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制用于存储缓存文件的磁盘空间量  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024744"
   
 3.  在“磁盘使用情况”中，设置“总磁盘空间”的值 (GB) 以便设置用于缓存的空间量的上限。 默认值为 0，它允许 Analysis Services 使用所有可用磁盘空间。  
   
-4.  在“磁盘使用情况”的“删除最后‘n’小时缓存的数据库”设置中，指定用于在磁盘空间达到最大限制时清空缓存的上次使用的条件。  
+4.  磁盘使用情况，在**删除缓存的数据库中最后 'n' 小时**设置，指定磁盘空间达到最大限制时清空缓存的上次使用的条件。  
   
      默认值为 4 小时，这表示 4 小时或更长时间未处于活动状态的所有数据库都将从文件系统中删除。 处于非活动状态但仍在内存中的数据库将被卸载，然后从文件系统中删除。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "34024744"
 ## <a name="next-steps"></a>后续步骤  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装提供运行状况规则，以便可以在服务器运行状况、配置或可用性中检测到问题时采取纠正措施。 其中某些规则使用配置设置来确定触发运行状况规则的条件。 如果您在主动优化服务器性能，则最好还要检查这些设置以便确保默认值最适合您的系统。 有关详细信息，请参阅 [配置 PowerPivot 运行状况规则](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

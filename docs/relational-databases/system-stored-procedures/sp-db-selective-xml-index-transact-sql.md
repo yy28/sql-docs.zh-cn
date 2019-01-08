@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07145e608c850a877a984c7467da6b8974f0d151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744595"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415154"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47744595"
  要对其启用或禁用选择性 XML 索引的数据库名称。 如果*db_name*为 NULL，则假定为当前数据库。  
   
  [ **@action =** ] **'***操作*****   
- 确定是启用还是禁用该索引。 如果传递了“on”、“true”、“off”或“false”之外的其他值，则会引发错误。  
+ 确定是启用还是禁用该索引。 如果 on 传递 true，off 或 false 之外的其他值，将引发错误。  
   
 ```  
   

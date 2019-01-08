@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643835"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395420"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在本地 SQL Server 升级到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server
 
 数据迁移助手的 Azure Vm 或 Azure SQL 数据库上提供 SQL Server 内部部署和更高版本的 SQL Server 的升级或迁移到 SQL Server 的无缝的评估。
 
-本文提供有关使用数据迁移助手到更高版本的 SQL Server 或 Azure Vm 上的 SQL Server 升级本地 SQL Server 的分步说明。   
+本文提供有关使用数据迁移助手到更高版本的 SQL Server 或 Azure Vm 上的 SQL Server 升级本地 SQL Server 的分步说明。   
 
 ## <a name="create-a-new-migration-project"></a>创建新的迁移项目
 
@@ -65,9 +65,9 @@ ms.locfileid: "49643835"
    > [!NOTE]
    > 您可以将迁移设置应用于要迁移，通过在左窗格中选择服务器的所有数据库。 通过在左窗格中选择数据库，还可以使用特定的设置配置单独的数据库。
 
-    A. 指定**由备份操作的源和目标 SQL 服务器共享位置访问**。 请确保运行源的服务帐户 SQL Server 实例具有写入权限的共享位置和目标服务帐户具有读取共享位置上的权限。
+    a. 指定**由备份操作的源和目标 SQL 服务器共享位置访问**。 请确保运行源的服务帐户 SQL Server 实例具有写入权限的共享位置和目标服务帐户具有读取共享位置上的权限。
 
-    B. 指定要还原的数据和目标服务器上的事务日志文件的位置。
+    b. 指定要还原的数据和目标服务器上的事务日志文件的位置。
 
     ![添加数据库页](../dma/media/AddDatabases.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "49643835"
 
    ![若要将数据库备份复制到不同位置的选项](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. 选择“下一步” 。
+5. 选择“**下一步**”。
 
 数据迁移助手对备份文件夹、 数据和日志文件位置执行验证。 如果任何验证失败，解决选项，然后选择**下一步**。
 
@@ -108,8 +108,8 @@ ms.locfileid: "49643835"
 
 2. 查看已保存的文件以获取有关登录名迁移的详细信息，然后验证所做的更改。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据迁移助手 (DMA)](../dma/dma-overview.md)
-- [数据迁移助手： 配置设置](../dma/dma-configurationsettings.md)
-- [数据迁移助手： 最佳实践](../dma/dma-bestpractices.md)
+- [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)
+- [数据迁移助手：最佳做法](../dma/dma-bestpractices.md)

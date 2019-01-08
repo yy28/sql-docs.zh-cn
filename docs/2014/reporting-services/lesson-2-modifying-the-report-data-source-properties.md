@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：修改报表数据源属性 | Microsoft Docs
+title: 第 2 课：修改报表数据源属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3dbc789b561702d21d705d1b9d362f7f3c01d7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416658"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 课：修改报表数据源属性
   在本课中，您将使用报表管理器来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。 在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
   
  您还将修改数据集和报表以便使用参数来筛选 `[Order]` 上的报表，这样，订阅可为特定的顺序和呈现格式输出不同的报表实例。  
@@ -53,19 +53,19 @@ ms.locfileid: "48159617"
   
 6.  单击 **“安全存储在报表服务器中的凭据”**。  
   
-7.  输入用户名（使用 *domain\user* 格式）和密码。 如果您没有权限访问[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库，请指定登录名。  
+7.  输入用户名（使用 *domain\user* 格式）和密码。 如果您没有访问 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库的权限，请指定具有此权限的登录名。  
   
-8.  单击 **“在与数据源建立连接时用作 Windows 凭据”**，再单击 **“确定”**。 如果不使用域帐户 (例如，如果使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录名)，请不要单击此复选框。  
+8.  单击 **“在与数据源建立连接时用作 Windows 凭据”**，再单击 **“确定”**。 如果没有使用域帐户（例如，如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录），请不要单击该复选框。  
   
 9. 若要验证是否能连接到数据源，请单击 **“测试连接”** 。  
   
 10. 单击 **“应用”**。  
   
-11. 查看报表以验证报表是否以指定的凭据运行。 若要查看报表，请单击“查看”  选项卡。请注意打开报表后，您必须选中雇员姓名，然后单击**查看报表**按钮，以查看报表。  
+11. 查看报表以验证报表是否以指定的凭据运行。 若要查看报表，请单击“查看”  选项卡。注意，报表处于打开状态后，必须选中雇员姓名，然后单击 **“查看报表”** 按钮，以查看该报表。  
   
 ##  <a name="bkmk_modify_dataset"></a> 修改 AdventureWorksDataset  
   
-1.  打开 Sales Orders 报表中 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开 Sales Orders 报表。  
   
 2.  右键单击数据集 `AdventureWorksDataset`，然后单击“数据集属性”。  
   
@@ -114,16 +114,16 @@ ms.locfileid: "48159617"
   
          ![报表查看器中的使用参数区域可见](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "参数区可见的报表查看器")  
   
-8.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。  
+8.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 在表教程中使用的项目属性的详细信息，请参阅将报表发布到报表服务器 （可选） 一节的[第 6 课：添加分组和总计&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ##  <a name="bkmk_redeploy"></a> 若要重新部署报表  
   
-1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。  
+1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 在表教程中使用的项目属性的详细信息，请参阅将报表发布到报表服务器 （可选） 一节的[第 6 课：添加分组和总计&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”**。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已成功配置了报表，从而可使用已存储凭据获取数据。 接下来，将使用报表管理器中的“数据驱动订阅”页来指定订阅。 请参阅 [第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
+ 您已成功配置了报表，从而可使用已存储凭据获取数据。 接下来，将使用报表管理器中的“数据驱动订阅”页来指定订阅。 请参阅[第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [管理报表数据源](report-data/manage-report-data-sources.md)   

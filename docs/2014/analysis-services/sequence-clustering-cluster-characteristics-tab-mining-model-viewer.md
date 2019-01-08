@@ -13,19 +13,19 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196853"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414845"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类特征”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类特征”** 选项卡提供了定义序列分类的特征的详细列表。 这些特征可包括简单属性-值对以及状态间的转换。  
   
  可以使用此顺序分析和聚类分析模型视图，来深化到分类内容并查看代表分类的序列。  
   
- **有关详细信息，请参阅** [Microsoft 顺序分析和聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)和[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **有关详细信息：**[Microsoft 序列聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -52,8 +52,8 @@ ms.locfileid: "48196853"
 |**概率**|该列会显示一个栏，用于指示此特征（简单属性-值对或某些状态组合）是当前分类的成员的相对概率。<br /><br /> 可以将鼠标悬停在该栏的上方，来显示特征的频率值。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

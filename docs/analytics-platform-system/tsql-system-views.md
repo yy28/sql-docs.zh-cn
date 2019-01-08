@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 826c3ca1faa58660efa3cf01781918fcc230bd6d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0cf828263d8d3c70fc9b972bbc584b73397cbf91
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700566"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400400"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>分析平台系统并行数据仓库的系统视图
 系统视图的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。

@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416388"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>SQL Server 托管备份到 Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]管理并自动执行将 SQL Server 备份到 Windows Azure Blob 存储服务。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用的备份策略基于保持期和数据库中的事务工作负载。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支持指定保持期的时间点还原。   
@@ -58,7 +58,7 @@ ms.locfileid: "50100248"
   
  **Windows Azure 存储服务**由[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]用于存储备份文件。    中的详细信息中所述的概念、 结构和创建 Windows Azure 存储帐户的要求[Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts)一部分**SQL Server 备份到 URL**本主题。  
   
- **SQL 凭据**用于存储对 Windows Azure 存储帐户进行身份验证所需的信息。 SQL 凭据对象存储帐户名称和访问密钥信息。 有关详细信息，请参阅[Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)主题中**SQL Server 备份到 URL**主题。 有关如何创建 SQL 凭据，以存储 Windows Azure 存储身份验证信息的演练，请参阅[第 2 课： 创建 SQL Server 凭据](../../tutorials/lesson-2-create-a-sql-server-credential.md)。  
+ **SQL 凭据**用于存储对 Windows Azure 存储帐户进行身份验证所需的信息。 SQL 凭据对象存储帐户名称和访问密钥信息。 有关详细信息，请参阅[Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)主题中**SQL Server 备份到 URL**主题。 有关如何创建 SQL 凭据，以存储 Windows Azure 存储身份验证信息的演练，请参阅[第 2 课：创建 SQL Server 凭据](../../tutorials/lesson-2-create-a-sql-server-credential.md)。  
   
 ###  <a name="Concepts_Components"></a> 概念和关键组件  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]是一项管理备份操作的功能。 它将存储中的元数据**msdb**数据库，并使用系统作业写入完整数据库备份和事务日志备份。  
@@ -95,7 +95,7 @@ ms.locfileid: "50100248"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用 SQL Server 实例名称命名所有数据库（可用性数据库除外）的 Windows Azure 存储容器。  而使用可用性组 GUID 命名可用性数据库的 Windows Azure 存储容器。  
   
- 按照以下约定命名非可用性数据库的备份文件：使用数据库名称的前 40 个字符、不含“-”的数据库 GUID 以及时间戳创建名称。 在各段之间插入下划线字符作为分隔符。 完整备份使用 **.bak** 文件扩展名，日志备份使用 **.log** 。 对于可用性组数据库，除了上方所述的文件命名约定之外，还在 40 个字符的数据库名称后添加可用性组数据库 GUID。 可用性组数据库 GUID 值为 sys.databases 中 group_database_id 的值。  
+ 按照以下约定命名非可用性数据库的备份文件:使用数据库名称的数据库 GUID 的前 40 个字符创建名称而无需-，以及时间戳。 在各段之间插入下划线字符作为分隔符。 完整备份使用 **.bak** 文件扩展名，日志备份使用 **.log** 。 对于可用性组数据库，除了上方所述的文件命名约定之外，还在 40 个字符的数据库名称后添加可用性组数据库 GUID。 可用性组数据库 GUID 值为 sys.databases 中 group_database_id 的值。  
   
  **完整数据库备份：** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]代理安排完整数据库备份，如果以下为真。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "50100248"
 ###  <a name="support_limits"></a> 支持限制  
  以下是对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一些特定限制：  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]代理只支持数据库完整备份和日志备份。  不支持文件备份自动化。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 代理只支持以下数据库备份：完整备份和日志备份。  不支持文件备份自动化。  
   
 -   当前支持使用 Transact-SQL 进行[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]操作。 可通过使用扩展事件来进行监视和故障排除。 仅在配置 SQL Server 实例的存储和保持期默认设置以及根据 SQL Server 基于策略的管理策略监视备份状态和整体运行状况时支持 PowerShell 和 SMO。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "50100248"
   
 -   恢复模式：只支持设置为完整或大容量日志模式的数据库。  不支持设置为简单恢复模式的数据库。  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可能有一些限制。 有关详细信息，请参阅[SQL Server 托管备份到 Windows Azure： 互操作性和共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可能有一些限制。 有关详细信息，请参阅[SQL Server 托管备份到 Windows Azure:互操作性和共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -152,15 +152,15 @@ ms.locfileid: "50100248"
 |-|-|  
 |**任务说明**|**主题**|  
 |基本任务包括：为数据库配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]或在实例级别配置默认设置，在实例或数据库级别禁用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，暂停和重新启动[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|[针对 Microsoft Azure 的 SQL Server 托管备份 - 保留和存储设置](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**教程：** 配置和监控的分步说明[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|[针对 Microsoft Azure 设置 SQL Server 托管备份](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**教程：** 配置和监控的分步说明[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可用性组中的数据库。|[为可用性组设置针对 Microsoft Azure 的 SQL Server 托管备份](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**教程：** 配置和监控 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的分步说明。|[针对 Microsoft Azure 设置 SQL Server 托管备份](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**教程：** 配置和监控可用性组中数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的分步说明。|[为可用性组设置针对 Microsoft Azure 的 SQL Server 托管备份](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |与监视[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相关的工具、概念和任务。|[监视针对 Microsoft Azure 的 SQL Server 托管备份](sql-server-managed-backup-to-microsoft-azure.md)|  
 |对[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]进行故障排除的工具和步骤。|[排除针对 Microsoft Azure 的 SQL Server 托管备份的故障](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Azure Blob 存储服务使用 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server 备份到 URL](sql-server-backup-to-url.md)   
- [SQL Server 托管备份到 Windows Azure： 互操作性和共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
+ [到 Windows Azure 的 SQL Server 托管的备份：互操作性和共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [排除针对 Microsoft Azure 的 SQL Server 托管备份的故障](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

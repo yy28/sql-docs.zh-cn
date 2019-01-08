@@ -11,12 +11,12 @@ ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 91db405d30b3d7dbcfc351b6a7a0c95e5238902a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 362ead31e7cb7b1a35411fa6f8b211e65342a721
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099765"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393727"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>导出到 PDF 文件（报表生成器和 SSRS）
   PDF 呈现扩展插件可将报表呈现为特定格式的文件，以便在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 6 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。  
@@ -68,7 +68,7 @@ ms.locfileid: "48099765"
 |`Subject`|`Description` RDL 元素。|  
 |`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 产品的名称和版本。|  
 |`Producer`|呈现扩展插件的名称和版本。|  
-|`CreationDate`|报表执行时间，以 PDF`datetime`格式。|  
+|`CreationDate`|报表执行时间，以 PDF `datetime` 格式表示。|  
   
   
   
@@ -112,7 +112,7 @@ ms.locfileid: "48099765"
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179427"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400470"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>关联向导（Excel 数据挖掘客户端）
   ![数据挖掘功能区中的关联向导](media/dmc-associate.gif "数据挖掘功能区中的关联向导")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179427"
   
     -   如果降低规则的概率，则会降低组合在整个数据集上下文中被视为重要组合所必须满足的要求。  
   
-     **提示：** 是创建使用支持和概率的不同组合的多个挖掘模型的一个好办法。 若要跟踪对每个模型使用了哪些设置，可以使用**文档模型**for Excel 和使用数据挖掘客户端中提供向导**Detailed**报告的选项。 有关详细信息，请参阅[记录挖掘模型&#40;数据挖掘的 Excel 外接程序&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)。  
+     **提示：** 它是创建使用支持和概率的不同组合的多个挖掘模型的一个好办法。 若要跟踪对每个模型使用了哪些设置，可以使用**文档模型**for Excel 和使用数据挖掘客户端中提供向导**Detailed**报告的选项。 有关详细信息，请参阅[记录挖掘模型&#40;数据挖掘的 Excel 外接程序&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)。  
   
 6.  （可选） 单击**参数**可更改算法参数以及自定义挖掘模型的行为。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179427"
   
          例如，在您希望单击特定的项集和查看源数据时，钻取很有用。  
   
-    -   **使用临时模型**。 如果您不希望在服务器上保存模型，请选择此选项。 在您关闭 Excel 时，临时模型将被删除。  
+    -   **使用临时模型**。 如果不希望在服务器上保存的模型，请选择此选项。 在您关闭 Excel 时，临时模型将被删除。  
   
 9. 该向导分析所有可能存在的组合，然后创建一个报表，其中包含项集和规则。  
   

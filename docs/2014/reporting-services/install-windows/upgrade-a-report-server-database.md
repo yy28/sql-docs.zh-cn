@@ -15,19 +15,19 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dde7b2d66e7b2aebb67de799facf9016f3cd48e9
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b0881bc82edd5a3d7fd8ca726c34cbf99de1b172
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851805"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413004"
 ---
 # <a name="upgrade-a-report-server-database"></a>升级报表服务器数据库
   报表服务器数据库可为一个或多个报表服务器实例提供存储。 因为报表服务器数据库架构可能会因为推出新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本而有所变化，所以要求数据库版本与使用的报表服务器实例的版本相匹配。 大多数情况下，报表服务器数据库可以自动升级，您不需要执行任何具体操作。  
   
- **本机模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式中，报表服务器数据库实际包含两个数据库，其默认名称分别为“ReportServer”和“ReportServerTempDB”。  
+ **本机模式：** 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]纯模式下，报表服务器数据库实际包含两个数据库，其默认名称分别为"ReportServer 和 ReportServerTempDB"。  
   
- **SharePoint 模式下：** 中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式报表服务器数据库实际上是集合的数据库的每个实例创建[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序。  
+ **SharePoint 模式：** 在中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式报表服务器数据库实际上是集合的数据库的每个实例创建[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序。  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>如何升级本机模式报表服务器数据库  
  以下列表指出了升级报表服务器数据库的各种情况：  

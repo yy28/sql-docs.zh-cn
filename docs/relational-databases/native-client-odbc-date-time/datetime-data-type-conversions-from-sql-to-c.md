@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed4e0738b9473295157c88fb7ee54804a5ebd75d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b370d18c6c5c1a90be370aeef2f910713a51695b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598535"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418578"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>由 SQL 到 C 的 datetime 数据类型转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47598535"
 |21|如果缓冲区足以容纳 SQL_SS_TIMESTAMPOFFSET_STRUCT，则按照 SQL_SS_TIMESTAMPOFFSET_STRUCT 返回值。 否则，生成具有 SQLSTATE 22003 和消息“数值超出了范围”的诊断记录。|  
 |22|在提取日期之前，将值转换为客户端时区。 这提供了与其他时间戳偏移量类型转换的一致性。 如果在此转换过程中发生错误，则生成具有 SQLSTATE 22008 和消息“日期时间字段溢出”的诊断记录。 这可能会导致日期与通过简单截断获得的值不同。|  
   
- 本主题中的表格列出了返回客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在指定服务器类型 SQLBindParameter 与服务器上的实际类型不匹配，将由服务器执行的隐式转换和返回到客户端的类型将匹配通过 SQLBindParameter 中指定的类型。 如果服务器的转换规则与上表中列出的规则不同，这可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是当前日期。  
+ 本主题中的表格列出了返回客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在指定服务器类型 SQLBindParameter 与服务器上的实际类型不匹配，将由服务器执行的隐式转换和返回到客户端的类型将匹配通过 SQLBindParameter 中指定的类型。 不同于上表中列出的内容服务器的转换规则时，这可能导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是当前日期。  
   
 ## <a name="see-also"></a>请参阅  
  [日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

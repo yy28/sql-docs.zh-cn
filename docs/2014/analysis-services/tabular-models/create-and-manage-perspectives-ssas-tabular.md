@@ -13,12 +13,12 @@ ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6a8fb56ea065fea1a4077dcc1aae9ebc49d14da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25f8de0649f82abbcc6ceb4ac6a92844de04b4b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502284"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>创建和管理透视（SSAS 表格）
   透视定义某一模型的可查看子集，借此您可以将注意力集中在该模型中的特定业务或特定应用上。 本主题中的任务说明如何使用模型设计器中的 **“透视”** 对话框来创建和管理透视。  
@@ -46,22 +46,22 @@ ms.locfileid: "48121687"
   
 ###  <a name="bkmk_edit"></a> 编辑透视  
   
--   若要修改某一透视，请选中和取消选中透视的列中的字段，这将从透视中添加和删除字段对象。  
+-   若要修改某一透视，选中或取消选中透视的列，这将添加从透视中删除字段对象中的字段。  
   
 ###  <a name="bkmk_rename"></a> 重命名透视  
   
--   将鼠标指针悬停在透视的列标题（透视的名称）上时，将出现“重命名”按钮。 若要重命名该透视，请单击 **“重命名”**，然后输入新名称或编辑现有名称。  
+-   当鼠标悬停在透视的列标题 （透视的名称） 上**重命名**按钮将出现。 若要重命名该透视，请单击 **“重命名”**，然后输入新名称或编辑现有名称。  
   
 ###  <a name="bkmk_delete"></a> 删除透视  
   
--   将鼠标指针悬停在透视的列标题（透视的名称）上时，将出现“删除”按钮。 若要删除透视，请单击 **“删除”** 按钮，然后在确认窗口中单击 **“是”** 。  
+-   当鼠标悬停在透视的列标题 （透视的名称） 上**删除**按钮将出现。 若要删除透视，请单击 **“删除”** 按钮，然后在确认窗口中单击 **“是”** 。  
   
 ###  <a name="bkmk_copy"></a> 复制透视  
   
--   在您将鼠标指针悬停在透视的列标题上时， **“复制”** 按钮将出现。 若要创建该透视的副本，请单击 **“复制”** 按钮。 所选透视的副本将作为新透视添加到现有透视的右侧。 新的透视将继承复制的透视的名称，并且“复制”批注将追加到名称的末尾。 例如，如果创建 *Sales* 透视的副本，则新的透视将称作 *Sales – Copy*。  
+-   当您将鼠标悬停在透视的列标题**复制**按钮将出现。 若要创建该透视的副本，请单击 **“复制”** 按钮。 所选透视的副本将作为新透视添加到现有透视的右侧。 新的透视将继承复制的透视的名称，并且“复制”批注将追加到名称的末尾。 例如，如果一份*销售*创建角度来看，新的透视将称作*Sales-Copy*。  
   
 ## <a name="see-also"></a>请参阅  
- [透视&#40;SSAS 表格&#41;](perspectives-ssas-tabular.md)   
- [层次结构&#40;SSAS 表格&#41;](hierarchies-ssas-tabular.md)  
+ [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
+ [层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)  
   
   

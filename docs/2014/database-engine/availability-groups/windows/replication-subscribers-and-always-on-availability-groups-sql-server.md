@@ -14,12 +14,12 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0617135d1e7a07d30f4581783cefb7add601c88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8968754a797c3f3b1a7e66886f7874c9bc13c5d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153225"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390661"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
   当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务订阅服务器，如果订阅使用的是订阅服务器的可用性组侦听器的名称，则分发代理会自动继续复制。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  
@@ -81,7 +81,7 @@ GO
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>在订阅服务器可用性组发生故障转移后恢复合并代理  
  进行合并复制时，复制管理员必须手动重新配置订阅服务器，步骤如下：  
   
-1.  执行`sp_subscription_cleanup`删除旧的订阅服务器订阅。 在新的主副本（以前为辅助副本）上执行此操作。  
+1.  执行 `sp_subscription_cleanup` 删除订阅服务器的旧订阅。 在新的主副本（以前为辅助副本）上执行此操作。  
   
 2.  通过从新快照开始创建新订阅来重新创建订阅。  
   

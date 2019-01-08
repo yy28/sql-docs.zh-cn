@@ -13,12 +13,12 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: faecf1d3a7ab820ef01a25ea67b2313ab03e056a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c358b0b4285a6512b2c0ac5db101bd7eed0f2ba5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657397"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409904"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 数据迁移到 SQL Server-Azure SQL DB (SybaseToSQL)
 已成功加载到 Sybase Adaptive Server Enterprise (ASE) 数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 中，您可以将数据从迁移到 ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
@@ -92,10 +92,10 @@ ms.locfileid: "51657397"
   
     -   用于执行**服务器端数据迁移**，选择**服务器端数据迁移引擎**选项**项目设置**对话框。  
   
-4.  右键单击**架构**在 Sybase 元数据资源管理器，然后单击**迁移数据**。 此外可以将迁移为单个对象或类别的对象的数据： 右键单击该对象或其父文件夹，然后选择**迁移数据**选项。  
+4.  右键单击**架构**在 Sybase 元数据资源管理器，然后单击**迁移数据**。 此外可以将迁移为单个对象或类别的对象的数据：右键单击该对象或其父文件夹，然后选择**迁移数据**选项。  
   
     > [!NOTE]  
-    > 如果 SQL Server 实例上未安装 SSMA for Sybase 的扩展包，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，时遇到以下错误: SSMASQL Server 上找不到数据的迁移组件，无法在服务器端数据迁移。 请检查是否正确安装的扩展包。 单击**取消**终止数据迁移。  
+    > 如果 SQL Server 实例上未安装 SSMA for Sybase 的扩展包，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，时遇到以下错误：SQL Server 上找不到 SSMA 数据迁移组件，无法在服务器端数据迁移。 请检查是否正确安装的扩展包。 单击**取消**终止数据迁移。  
   
 5.  在中**连接到 Sybase ASE**对话框中，输入连接凭据，然后单击**Connect**。 连接到 Sybase ASE 的详细信息，请参阅[连接到 Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   

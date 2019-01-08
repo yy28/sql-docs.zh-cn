@@ -21,12 +21,12 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a36ad2d94982a0e536f223ceff187a04632baa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647045"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391650"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name 引用了保留的系统池**  
- 池名称“INTERNAL”和“DEFAULT”是为系统池保留的。  将数据库显式绑定至两者之一将是无效的。  如果输入了系统池名称，则返回以下错误：  
+ 池名称"INTERNAL"和"默认"保留为系统池。  将数据库显式绑定至两者之一将是无效的。  如果输入了系统池名称，则返回以下错误：  
 *资源池 %s 是系统资源池。系统资源池可能不显式绑定到使用此过程的数据库。*  
   
 ```  
@@ -153,7 +153,7 @@ END
 -   需要 CONTROL SERVER 权限。  
   
 ## <a name="see-also"></a>请参阅  
- [将具有内存优化表的数据库绑定至资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [数据库与资源池绑定的指南，请参阅主题](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

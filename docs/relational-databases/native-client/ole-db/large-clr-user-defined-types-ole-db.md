@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6aa758ccf6734f78dada6887d07e30f962728929
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c69c9ea5e3274b22748839e0eda4af60289fabc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853104"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416114"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -123,13 +123,13 @@ ms.locfileid: "47853104"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|N/A|支持 (5)|N/A|  
-|DBTYPE_WSTR|支持 (2)、(5)|N/A|支持 (3)、(5)、(6)|N/A|  
-|DBTYPE_BSTR|支持 (2)、(5)|N/A|支持 (3)、(5)|N/A|  
-|DBTYPE_STR|支持 (2)、(5)|N/A|支持 (3)、(5)|N/A|  
-|DBTYPE_IUNKNOWN|支持 (6)|N/A|支持 (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|N/A|支持 (3)、(5)|N/A|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|N/A|N/A|N/A|  
+|DBTYPE_BYTES|支持 (5)|不可用|支持 (5)|不可用|  
+|DBTYPE_WSTR|支持 (2)、(5)|不可用|支持 (3)、(5)、(6)|不可用|  
+|DBTYPE_BSTR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_STR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_IUNKNOWN|支持 (6)|不可用|支持 (6)|不可用|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不可用|不可用|不可用|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   

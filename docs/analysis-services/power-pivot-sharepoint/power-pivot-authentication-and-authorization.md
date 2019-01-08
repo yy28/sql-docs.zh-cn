@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983462"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402642"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 身份验证和授权
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "38983462"
 |场或服务管理员|安装、启用和配置服务和应用程序。<br /><br /> 使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板和查看管理报表。|  
 |完全控制|在网站集级别激活 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能集成。<br /><br /> 创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。<br /><br /> 创建数据馈送库。|  
 |参与|添加、编辑、删除和下载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。<br /><br /> 配置数据刷新。<br /><br /> 基于 SharePoint 站点上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿创建新的工作簿和报表。<br /><br /> 在数据馈送库中创建数据服务文档|  
-|读取|将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿作为外部数据源访问，其中，工作簿 URL 是在某一连接对话框（例如，在 Excel 的数据连接向导）中显式输入的。|  
+|读取|访问[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿作为外部数据源，工作簿 URL 显式输入在连接对话框中 （例如，在 Excel 的数据连接向导）。|  
 |仅查看|查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。<br /><br /> 查看数据刷新历史记录。<br /><br /> 将本地工作簿连接到 SharePoint 站点上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，以其他方法重新配置其数据的作用。<br /><br /> 下载该工作簿的一个快照。 该快照是数据的静态副本，没有切片器、筛选器、公式或数据连接。 该快照的内容类似于从浏览器窗口复制单元值。|  
   
 ##  <a name="excel"></a> Power Pivot 工作簿的 Excel Services 安全注意事项  
@@ -112,7 +112,7 @@ ms.locfileid: "38983462"
   
 ## <a name="see-also"></a>请参阅  
  [配置 Power Pivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot 安全体系结构](http://go.microsoft.com/fwlink/?linkID=220970)  
   

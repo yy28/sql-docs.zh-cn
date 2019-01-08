@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教程补充课程： 动态安全性 |Microsoft Docs
+title: Analysis Services 教程补充课程：动态安全性 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 15ff0eebd7cbbb0815544b18f0f042ef411a3657
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084590"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398421"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>补充课程 - 动态安全性
 
@@ -24,13 +24,13 @@ ms.locfileid: "43084590"
   
 若要实现动态安全性，您将表添加到您的模型包含那些可以连接到模型并浏览模型对象和数据的用户的用户名。 使用本教程创建的模型是 Adventure Works; 的上下文中但是，若要完成本课程中，必须添加一个包含来自自己域的用户表。 添加的用户名称不需要的密码。 若要使用您自己域的用户的小型示例创建 EmployeeSecurity 表，您使用粘贴功能粘贴 Excel 电子表格中的员工数据。 在实际方案中，包含用户名的表通常是实际数据库中的表作为数据源;例如，实际的 DimEmployee 表。  
   
-若要实现动态安全性，您可以使用两个 DAX 函数： [USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)并[LOOKUPVALUE 函数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 通过使用 LOOKUPVALUE 函数，该公式指定 EmployeeSecurity 表中的值。 公式随后将传递给 USERNAME 函数，后者指定登录的用户的用户名的值属于此角色。 之后，该用户只能浏览此角色的行筛选器指定的数据。 在此方案中，您指定销售员工只能浏览的成员的销售区域的 Internet 销售数据。  
+若要实现动态安全性，您可以使用两个 DAX 函数：[USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)并[LOOKUPVALUE 函数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 通过使用 LOOKUPVALUE 函数，该公式指定 EmployeeSecurity 表中的值。 公式随后将传递给 USERNAME 函数，后者指定登录的用户的用户名的值属于此角色。 然后，用户可以浏览仅指定的角色的行筛选器的数据。 在此方案中，您指定销售员工只能浏览的成员的销售区域的 Internet 销售数据。  
   
 这些任务是此 Adventure Works 表格模型方案所特有的，但并不一定适用于实际的应用场景。 每个任务都包含描述任务目的的附加信息。  
   
-学完本课的估计时间： **30 分钟**  
+学完本课的预计时间：**30 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
 本文补充课程是表格建模教程应按顺序完成的一部分。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43084590"
   
 1.  在表格模型资源管理器 >**数据源**，右键单击您的连接，并单击**导入新表**。  
 
-    如果出现“模拟凭据”对话框，请键入您在“第 2 课：添加数据”中使用的模拟凭据。
+    如果出现模拟凭据对话框中，键入在第 2 课中所使用的模拟凭据：添加数据。
   
 2.  在导航器中，选择**DimSalesTerritory**表，并单击**确定**。    
   
@@ -116,7 +116,7 @@ AdventureWorksDW 示例数据库中的 DimEmployee 表包含来自 AdventureWork
 在此任务中，您可以创建用户角色。 此角色包括定义 DimSalesTerritory 表中的哪些行对用户可见的行筛选器。 一个对多关系的方向与 DimSalesTerritory 相关的所有其他表，然后应用筛选器。 您还可以应用筛选器来保护整个 EmployeeSecurity 表无法查询的任何用户角色的成员。  
   
 > [!NOTE]  
-> 您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果你将用户添加为成员为 Sales Employees by Territory 角色在创建角色的成员也存在于[第 11 课： 创建角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)，获得权限组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，用户具有角色的组合确定的更高权限。  
+> 您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果你将用户添加为成员为 Sales Employees by Territory 角色也存在于角色的成员在创建[第 11 课：创建角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)，获得权限组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，用户具有角色的组合确定的更高权限。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>创建 Sales Employees by Territory 用户角色  
   

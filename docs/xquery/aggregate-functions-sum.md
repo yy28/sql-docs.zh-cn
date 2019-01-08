@@ -16,12 +16,12 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8806b2c00a839e11d5d3ff7be1d4c3cbbdcc059c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f626eb9f5c1b654428175dc456910b183fe0c3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662207"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420498"
 ---
 # <a name="aggregate-functions---sum"></a>聚合函数 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   不支持跨基类型边界混合类型的序列。  
   
--   sum((xs:double(“INF”), xs:double(“-INF”))) 将引发域错误。  
+-   Sum((xs:double("INF") xs:double("-INF"))) 引发域错误。  
   
 ## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  

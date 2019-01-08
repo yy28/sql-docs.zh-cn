@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643945"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410404"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 本文列出了每个版本中添加的数据迁移助手 (DMA)。
@@ -33,9 +33,9 @@ DMA 4.1 版版本引入了对在本地 SQL Server 数据库迁移到 Azure SQL �
 
 - **兼容性问题**。 DMA 还标识与相关的以下几个方面的兼容性问题：
 
-    - 重大更改： 可能会中断迁移到目标数据库的功能的特定架构对象。  我们建议在数据库迁移后修复这些架构对象。
-    - 行为更改： 报告的架构对象可能会继续运行，但它们可能会表现出不同的行为，例如性能下降。
-    - 信息性问题： 这些对象不会影响迁移，但可能已弃用的功能的 SQL Server 版本。
+    - 重大更改：可能会中断迁移到目标数据库的功能特定的架构对象。  我们建议在数据库迁移后修复这些架构对象。
+    - 行为更改：报告的架构对象可能会继续运行，但它们可能会表现出不同的行为，例如性能下降。
+    - 信息性问题：这些对象不会影响迁移，但可能已弃用的功能的 SQL Server 版本。
 
 评估完成后，使用我们[Azure 数据库迁移服务](https://azure.microsoft.com/services/database-migration/)(DMS) 来执行迁移到 Azure SQL 数据库托管实例将 SQL Server 数据库。  同时支持 DMS[脱机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)（一次性） 和[联机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)（最小停机时间） 数据库迁移到 Azure SQL 数据库托管实例。
 
@@ -120,10 +120,10 @@ DMA 的 1.0 版版本是初始版本，它提供了：
     - 行为更改
     - 已弃用的功能
 - 发现的数据库可以受益于升级到目标 SQL Server 平台中的新功能。 任何发现结果被称为功能的建议，并在分为以下几个方面：
-    - “性能”
+    - 性能
     - 安全性
-    - 存储器
+    - 存储
 -   若要执行评估的现代用户体验。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [数据迁移助手概述](../dma/dma-overview.md)

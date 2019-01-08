@@ -10,12 +10,12 @@ ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407215"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>管理内存中 OLTP 的内存
   内存优化表要求存在足够的内存，以便将所有行和索引保留在内存中。 因为内存是有限的资源，所以了解和管理系统的内存使用情况非常重要。 本节中的主题介绍一些常见的内存使用和管理方案。  

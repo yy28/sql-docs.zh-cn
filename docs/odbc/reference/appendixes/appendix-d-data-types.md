@@ -1,5 +1,5 @@
 ---
-title: 附录 d： 数据类型 |Microsoft Docs
+title: 附录 D：数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfaecb5b3705e2c5affe8c2cda3e42eeaddf4156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669375"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504019"
 ---
 # <a name="appendix-d-data-types"></a>附录 D：数据类型
-ODBC 定义的数据类型的两个集： SQL 数据类型和 C 数据类型。 SQL 数据类型表示存储在数据源的数据的数据类型。 C 数据类型表示应用程序缓冲区中存储的数据的数据类型。  
+ODBC 定义数据类型的两个的集：SQL 数据类型以及 C 数据类型。 SQL 数据类型表示存储在数据源的数据的数据类型。 C 数据类型表示应用程序缓冲区中存储的数据的数据类型。  
   
  SQL 数据类型由每个 DBMS 根据 SQL-92 标准定义。 对于 SQL-92 标准中指定的每个 SQL 数据类型，ODBC 定义的类型标识符，即 **#define**值，该值是作为中的 ODBC 函数的参数传递或返回结果集的元数据中。 只有 SQL-92 不支持 ODBC 的数据类型是的位 （ODBC SQL_BIT 类型具有不同的特征）、 BIT_VARYING、 TIME_WITH_TIMEZONE、 TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驱动程序负责将数据源特定于 SQL 数据类型映射到 ODBC SQL 数据类型标识符和特定于驱动程序的 SQL 数据类型标识符。 SQL 数据类型的实现描述符 SQL_DESC_CONCISE_TYPE 字段中指定。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135887"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752080"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供程序在与文件路径相似的结构中公开 SQL Server 实例中的对象集。 您可以使用 Windows PowerShell cmdlet 导航提供程序路径，并且创建自定义驱动器以便缩短需键入的路径。  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>创建自定义驱动器  
  **创建和使用自定义驱动器**  
   
-1.  使用 `New-PSDrive` 可以定义自定义驱动器。 使用`Root`参数来指定自定义驱动器名称表示的路径。  
+1.  使用 `New-PSDrive` 可以定义自定义驱动器。 使用 `Root` 参数可以指定自定义驱动器名称表示的路径。  
   
-2.  引用路径导航 cmdlet 中的自定义驱动器名称如`Set-Location`。  
+2.  在 `Set-Location` 之类的路径导航 cmdlet 中引用自定义驱动器名称。  
   
 ### <a name="custom-drive-example-powershell"></a>自定义驱动器示例 (PowerShell)  
  此示例创建一个名为 AWDB 的虚拟驱动器，该驱动器映射到 AdventureWorks2012 示例数据库的已部署副本的节点。 然后，使用该虚拟驱动器导航到数据库中的表。  
@@ -131,7 +130,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [使用 SQL ServerPowerShell 路径](work-with-sql-server-powershell-paths.md)   
  [将 URN 转换为 SQL Server 提供程序路径](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

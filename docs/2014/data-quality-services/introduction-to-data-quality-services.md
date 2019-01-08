@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6dcc318a7bcd4bdbf8a8f4466e0a15bed155761c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030976"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392243"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
   使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的数据质量解决方案，数据专员或 IT 专业人员可以维护数据的质量并确保数据满足业务使用的要求。 DQS 是一种知识驱动型解决方案，该解决方案通过计算机辅助方式和交互方式来管理数据源的完整性和质量。 使用 DQS 可以发现、生成和管理有关您数据的知识。 然后可以使用该知识执行数据清理、匹配和事件探查。 还可以在 DQS 数据质量项目中利用引用数据访问接口的基于云的服务。  
@@ -44,7 +44,7 @@ ms.locfileid: "51030976"
   
 -   **监视：** 跟踪和确定数据质量活动的状态。 通过监视，您可以验证数据质量解决方案是否达到设计目的。 有关详细信息，请参阅 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)。  
   
--   **知识库：** Data Quality Services 是知识驱动型解决方案，它根据您使用 DQS 生成的知识分析数据。 这使您可以创建数据质量过程，这些过程不断增强有关您的数据的知识，从而不断提高数据质量。  
+-   **知识库：** Data Quality Services 是知识驱动解决方案，用于分析数据根据您使用 DQS 生成的知识。 这使您可以创建数据质量过程，这些过程不断增强有关您的数据的知识，从而不断提高数据质量。  
   
  下图显示了 DQS 过程：  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -17,12 +15,12 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47c73cfe13a0fe611e2323694cca82738e618787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120309"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749069"
 ---
 # <a name="creating-extended-stored-procedures"></a>创建扩展存储过程
     
@@ -64,7 +62,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) 是 Microsoft 特定的编译器扩展名。 如果您的编译器不支持此指令，则应在 DEF 文件的 EXPORTS 部分之下导出此函数。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开始使用跟踪标志-t260 开始，或者如果具有系统管理员特权的用户运行 DBCC TRACEON (260)，并且如果扩展存储过程 DLL 不支持 __getxpversion （），一条警告消息 (错误 8131： 扩展存储的过程DLL '%' 不导出\__GetXpVersion().) 打印到错误日志。 (请注意， \__GetXpVersion() 以两个下划线开头。)  
+ 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开始使用跟踪标志-t260 开始，或者如果具有系统管理员特权的用户运行 DBCC TRACEON (260)，并且如果扩展存储过程 DLL 不支持 __getxpversion （），一条警告消息 (错误 8131:扩展存储的过程 DLL '%' 不导出\__GetXpVersion().) 打印到错误日志。 (请注意， \__GetXpVersion() 以两个下划线开头。)  
   
  如果扩展存储过程 DLL 导出 __GetXpVersion()，但函数返回的版本低于服务器所要求的版本，则会向错误日志中打印一条警告消息，其中说明函数返回的版本和服务器预期的版本。 如果收到此消息，您要返回不正确的值从\__GetXpVersion()，或您正在使用早的 srv.h 版本进行编译。  
   

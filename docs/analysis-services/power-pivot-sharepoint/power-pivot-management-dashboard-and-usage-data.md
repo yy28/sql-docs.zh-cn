@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099928"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419698"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理仪表板和使用情况数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "50099928"
  为帮助你开始自定义报表制作， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板提供了一个 Office 数据连接 (.odc) 文件用于连接到源工作簿。 例如，您可以在 Excel 中使用 .odc 文件来创建其他报表。  
   
 > [!NOTE]  
->  编辑此文件以避免当尝试在 Excel 中使用 .odc 文件时出现以下错误：“数据源初始化失败”。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
+>  编辑文件，以避免当尝试在 Excel 中使用 .odc 文件时出现以下错误：“数据源初始化失败”。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
   
  你必须是场或服务管理员，才能生成基于管理中心内的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的报表。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "50099928"
   
     7.  单击键入连接的名称，然后单击 **“下一步”**。  
   
-    8.  在“指定 MDX 查询”中，单击 **“设计”** 打开 MDX 查询设计器以组合您要使用的数据。 **如果您看到错误消息** “属性名称‘编辑模式’格式不正确”，请验证编辑了 .ODC 文件。  
+    8.  在指定 MDX 查询中，单击**设计**以打开 MDX 查询设计器以组合您要使用的数据**如果你看到错误消息**"编辑模式的属性名称格式不正确。"，验证你的编辑。ODC 文件。  
   
     9. 单击 **“确定”** ，然后单击 **“完成”**。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50099928"
   
     9. 在“指定 MDX 查询”中，单击 **“设计”** 打开 MDX 查询设计器以组合您要使用的数据，然后创建数据透视表或数据透视图报表以便在 Excel 中直观显示数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   

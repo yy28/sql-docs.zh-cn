@@ -12,17 +12,17 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 321c452c816f765642d14142a64ab88f5ecb9cdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198787"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393290"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
   说明 FileTable 中用于存储文件的目录结构。  
   
-##  <a name="HowToDirectories"></a> 如何在 FileTable 中使用目录和路径  
+##  <a name="HowToDirectories"></a> 如何：在 FileTable 中使用目录和路径  
  您可以使用以下 3 个函数以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 FileTable 目录：  
   
 |为得到这一结果|使用此函数|  
@@ -31,7 +31,7 @@ ms.locfileid: "48198787"
 |获取 FileTable 中文件或目录的绝对或相对 UNC 路径。|[GetFileNamespacePath (Transact-SQL)](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |通过提供路径，获取 FileTable 中指定文件或目录的路径定位器 ID 值。|[GetPathLocator (Transact-SQL)](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 如何使用相对路径编写可移植代码  
+##  <a name="BestPracticeRelativePaths"></a> 如何：使用相对路径编写可移植代码  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 可通过使用 [FileTableRootPath (Transact SQL )](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 和 [GetFileNamespacePath (Transact-SQL)](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 函数组合在运行时获取文件的完整路径，如下例所示。 默认情况下，`GetFileNamespacePath` 函数返回数据库根路径下的文件的相对路径。  
   
 ```tsql  

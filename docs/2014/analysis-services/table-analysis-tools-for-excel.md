@@ -14,12 +14,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049067"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391895"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel 表分析工具
   中的数据挖掘工具**分析**工具栏是开始使用数据挖掘的最简单方法。 每个工具都会对您的数据的分布和类型自动进行分析，并且设置参数以确保结果有效。 您就无需选择某一算法或配置复杂的参数。  
@@ -34,7 +34,7 @@ ms.locfileid: "48049067"
  **分析关键影响因素**工具使用 Microsoft 朴素贝叶斯算法。  
   
  [检测类别&#40;Excel 表分析工具&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- 通过该工具，可以添加任何数据集和应用聚类分析来找到数据分组。 它用于找到相似之处和创建组以便进一步分析。  
+ 通过该工具，可以添加任何数据集和应用聚类分析来找到数据分组。 它可用于找到相似之处和创建组来进一步分析。  
   
  **检测类别**工具使用 Microsoft 聚类分析算法。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48049067"
  **预测**工具使用 Microsoft 时序算法。  
   
  [突出显示异常值&#40;Excel 表分析工具&#41;](highlight-exceptions-table-analysis-tools-for-excel.md)  
- 该工具对数据表中的模式进行分析，查找不适合该模式的行和值。 然后，您可以查看和更正它们并重新运行模型，或者对值进行标记以便以后执行操作。  
+ 此工具分析数据的表中的模式，查找不适合该模式的行和值。 然后，您可以查看和更正它们并重新运行模型，或者对值进行标记以便以后执行操作。  
   
  **突出显示异常**工具使用 Microsoft 聚类分析算法。  
   

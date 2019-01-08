@@ -12,12 +12,12 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ae3f3363c8cedee988f55875fab5d15e58114238
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843295"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400430"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>将 Sybase ASE 架构映射到 SQL Server 架构 (SybaseToSQL)
 在 Sybase Adaptive Server Enterprise (ASE)，每个数据库都有一个或多个架构。 默认情况下，SSMA 将数据库和架构中的所有对象都迁移到同一个数据库和架构中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 但是，自定义 ASE 之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库和架构。  
@@ -48,11 +48,11 @@ ASE 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure �
   
 -   映射到 SQL Server  
   
-您可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库与目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与之有连接使用 SSMA 数据库。 是否要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将会有一条消息提示 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。在同步过程中将创建它。是否要继续？"** 单击是。 同样，您可以映射到目标下不存在架构的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将在同步过程中创建的数据库。  
+您可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库与目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与之有连接使用 SSMA 数据库。 是否要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将会有一条消息提示 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。在同步过程中将创建它。是否想要继续？"** 单击是。 同样，您可以映射到目标下不存在架构的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将在同步过程中创建的数据库。  
   
 -   映射到 SQL Azure  
   
-到连接的目标 SQL Azure 数据库或连接的目标 SQL Azure 数据库中的任何架构，可以将源数据库的映射。 如果将源架构映射到连接的目标数据库，任何非现有架构，则将会有一条消息，提示 **"架构不存在目标元数据中。在同步过程中将创建它。您想要继续吗？"** 单击是。  
+到连接的目标 SQL Azure 数据库或连接的目标 SQL Azure 数据库中的任何架构，可以将源数据库的映射。 如果将源架构映射到已连接的目标数据库下的任何不存在架构，则将会有一条消息提示 **"架构中不存在目标元数据。在同步过程中将创建它。你想要继续吗？"** 单击是。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>还原为默认数据库和架构  
 如果自定义 ASE 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 架构，可以还原为默认值的映射。  

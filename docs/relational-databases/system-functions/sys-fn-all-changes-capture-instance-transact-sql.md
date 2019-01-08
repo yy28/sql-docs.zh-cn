@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072051"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409064"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  然后，将位标志追加到在 @update_flag_list 参数中标识的每个列的结果集的末尾。 有关**的所有更改**包装器，则位标志将始终为 NULL，如果 __CDC_OPERATION 为有 '，'I' 或 'UO'。 如果\__CDC_OPERATION 是 ' UN '，该标志将设置为 1 或 0，具体取决于更新操作是否导致对列的更改。  
   
- 变更数据捕获配置模板“实例化架构的 CDC 包装 TVF”显示如何使用 sp_cdc_generate_wrapper_function 存储过程以获取某个架构的已定义查询函数的所有包装函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](../../ssms/template/template-explorer.md)。  
+ 变更数据捕获配置模板实例化 CDC 架构包装 Tvf 显示了如何使用 sp_cdc_generate_wrapper_function 存储过程来获取所有架构的已定义的查询函数的包装器函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](../../ssms/template/template-explorer.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

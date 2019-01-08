@@ -16,12 +16,12 @@ ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c54ca4bfa793ed704691d7a757ffb5de16dc96e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 265b3353d3b91f053a431da9929d010bc823fb2b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097507"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410544"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>查看模型（Office 数据挖掘外接程序）
   Excel 数据挖掘外接程序提供了下列方式来浏览您创建的分析模型：  

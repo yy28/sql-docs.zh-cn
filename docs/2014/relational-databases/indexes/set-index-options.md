@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 429a0d7d29864cb3aeca313f5e69638014ff2887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408267"
 ---
 # <a name="set-index-options"></a>设置索引选项
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引的属性。  
@@ -39,7 +39,7 @@ ms.locfileid: "48215117"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **修改索引的属性，使用：**  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48215117"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   使用 ALTER INDEX 语句中的 SET 子句，将以下选项立即应用到索引：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
+-   以下选项立即应用于索引的 ALTER INDEX 语句中使用的 SET 子句：ALLOW_PAGE_LOCKS、 ALLOW_ROW_LOCKS、 IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
   
--   使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重新生成索引时，可以设置以下选项：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING（仅 CREATE INDEX）。  
+-   通过使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重新生成索引时，可以设置以下选项：PAD_INDEX、 FILLFACTOR、 SORT_IN_TEMPDB、 IGNORE_DUP_KEY、 STATISTICS_NORECOMPUTE、 ONLINE、 ALLOW_ROW_LOCKS、 ALLOW_PAGE_LOCKS、 MAXDOP 和 DROP_EXISTING (仅 CREATE INDEX)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48215117"
   
 #### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>查看表中所有索引的属性  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "48215117"
   
 #### <a name="to-set-the-properties-of-an-index"></a>设置索引的属性  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

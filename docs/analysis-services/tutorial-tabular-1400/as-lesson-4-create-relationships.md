@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教程第 4 课： 创建关系 |Microsoft Docs
+title: Analysis Services 教程第 4 课：创建关系 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063728"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394513"
 ---
 # <a name="create-relationships"></a>创建关系
 
@@ -22,11 +22,11 @@ ms.locfileid: "43063728"
 
 在本课程中，将验证导入数据时自动创建的关系和不同的表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，DimProduct 表和 DimProductSubcategory 表基于每个产品属于某个子类别的事实具有某种关系。 若要了解详细信息，请参阅[关系](../tabular-models/relationships-ssas-tabular.md)。
   
-学完本课的估计时间： **10 分钟**  
+学完本课的预计时间：**10 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 3 课： 标记为日期表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。 
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 3 课：标记为日期表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>查看现有关系并添加新关系  
 
@@ -50,7 +50,7 @@ ms.locfileid: "43063728"
   
 2.  单击之间的实线**DimCustomer**表和**DimGeography**表。 这两个表之间的实线显示了此关系处于活动状态，也就是说，当计算 DAX 公式时默认情况下使用。  
   
-    请注意**GeographyKey**中的列**DimCustomer**表和**GeographyKey**中的列**DimGeography**现在表同时每个出现在一个框。 在关系中使用这些列。 关系的属性现在也显示在“属性”窗口中。  
+    请注意**GeographyKey**中的列**DimCustomer**表和**GeographyKey**中的列**DimGeography**现在表同时每个出现在一个框。 在关系中使用这些列。 关系的属性现在也显示在**属性**窗口。  
   
     > [!TIP]  
     > 此外可以使用管理关系对话框以显示表格格式中的所有表之间的关系。 在表格模型资源管理器，右键单击**关系** > **管理关系**。
@@ -65,7 +65,7 @@ ms.locfileid: "43063728"
     |用户帐户控制|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |用户帐户控制|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    如果缺少任意关系，请验证您的模型包括以下各表： DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同时间之间的任何关系相同的数据源连接中的表导入这些表将不会创建，并且必须手动创建。 如果没有关系出现，则表示在数据源没有任何关系。 您可以手动创建这些数据模型中。
+    如果缺少任意关系，则验证您的模型包括以下各表：DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同时间之间的任何关系相同的数据源连接中的表导入这些表将不会创建，并且必须手动创建。 如果没有关系出现，则表示在数据源没有任何关系。 您可以手动创建这些数据模型中。
 
 ### <a name="take-a-closer-look"></a>更详细地介绍
 
@@ -102,7 +102,7 @@ ms.locfileid: "43063728"
   
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 5 课： 创建计算的列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。
+[第 5 课：创建计算的列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。
   
   
   

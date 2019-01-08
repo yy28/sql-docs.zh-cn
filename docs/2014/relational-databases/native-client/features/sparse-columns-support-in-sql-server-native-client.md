@@ -14,12 +14,12 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bb29c58c579675ffb84d8e4c26a4b4db8779f2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79151d13f5b90e7da8ea50d3472d05ed46423e2e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074677"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403522"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的稀疏列支持
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持稀疏列。 有关中的稀疏列的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[使用稀疏列](../../tables/use-sparse-columns.md)并[使用列集](../../tables/use-column-sets.md)。  

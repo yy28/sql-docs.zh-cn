@@ -15,17 +15,17 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1406c93a798df2b19f49d3a83123221826d1bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170817"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395151"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services SharePoint 模式安装（SharePoint 2010 和 SharePoint 2013）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 SharePoint 模式下是服务器组件，提供报表生成和传送，基于集合[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 产品。  
   
- 在 SharePoint 模式下运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 和数据警报功能。 有关 SharePoint 模式下的功能的详细信息，请参阅 [Reporting Services 报表服务器](../reporting-services-report-server.md)中的“按服务器模式划分的功能支持和行为差异”部分。  
+ 在 SharePoint 模式下运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 和数据警报功能。 有关 SharePoint 模式下的功能的详细信息，请参阅"支持和行为差异的服务器模式划分的功能"一节中[Reporting Services 报表服务器](../reporting-services-report-server.md)  
   
  对于 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，需要两个基本安装：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48170817"
   
  若要安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装介质。  
   
- 有关高级的部署方案的说明，请参阅[部署核对清单： Reporting Services、 Power View 和 PowerPivot for SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署核对清单： 安装到现有的 Reporting ServicesSharePoint 场](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)。  
+ 有关高级的部署方案的说明，请参阅[部署核对清单：Reporting Services、 Power View 和 PowerPivot for SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署核对清单：Reporting Services 安装到现有 SharePoint 场](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [支持的 SharePoint 和 Reporting Services 服务器及外接程序的组合&#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
@@ -47,13 +47,13 @@ ms.locfileid: "48170817"
   
  [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
- [在哪里可以找到 Reporting Services 外接程序用于 SharePoint 产品](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
+ [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [向场中添加另一个报表服务器&#40;SSRS 横向扩展&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [向场中添加另一个报表服务器（SSRS 扩展）](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [向场中添加另一个 Reporting Services Web 前端](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [为 Reporting Services 服务应用程序配置电子邮件&#40;SharePoint 2010 和 SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2010 和 SharePoint 2013）](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [用于 SSRS 服务应用程序的设置订阅和警报](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
@@ -61,6 +61,6 @@ ms.locfileid: "48170817"
   
 ## <a name="see-also"></a>请参阅  
  [数据警报体系结构和工作流](../reporting-services-data-alerts.md#AlertingWF)   
- [适用于警报管理员的数据警报管理器](../data-alert-manager-for-alerting-administrators.md)  
+ [向管理员提出警报的数据警报管理器](../data-alert-manager-for-alerting-administrators.md)  
   
   

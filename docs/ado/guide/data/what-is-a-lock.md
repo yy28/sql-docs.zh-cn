@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813075"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501763"
 ---
 # <a name="what-is-a-lock"></a>什么是锁定？
 锁定是 DBMS 将访问限制为多用户环境中的行的过程。 以独占方式锁定行或列，不允许其他用户访问锁定的数据，直到锁被释放。 这可确保两个用户不能同时更新行中的同一列。  
   
- 锁会从资源角度来看很高，应仅在需要时保持数据完整性。 在数据库中的数百或数千个用户可能会尝试访问的记录每秒 — 如数据库连接到 Internet，不必要的锁定可能会迅速导致应用程序中的性能下降。  
+ 锁会从资源角度来看很高，应仅在需要时保持数据完整性。 在数据库中的数百或数千个用户可能会尝试访问的记录每秒-如数据库连接到 Internet 的不必要的锁定可快速导致性能降低应用程序中。  
   
  您可以控制如何在数据源和 ADO 游标库管理通过选择适当的锁定选项的并发。  
   

@@ -11,12 +11,12 @@ ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15034c7bdf1dd32f173e3c2f9eebacda8b72fc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187349"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407974"
 ---
 # <a name="create-a-report-data-source"></a>创建报表数据源
   为了 Power View 可连接到多维模型，您必须在 SharePoint 库中创建一个共享的报表数据源定义（也称为 .rsds 文件）。 该 .rsds 文件指定用于连接到多维模型的 Analysis Services 服务器实例、连接类型、连接字符串以及凭据的名称。 当用户单击 .rsds 时，将在浏览器中打开新的空白 Power View 报表（.rdlx 文件）。  
@@ -51,14 +51,14 @@ ms.locfileid: "48187349"
   
 5.  在 **“连接字符串”** 中，指定 Analysis Services 服务器名称、数据库名称、多维数据集名称和所有可选设置。  
   
-     连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  如果有多个多维数据集，必须指定多维数据集名称。  
   
-     （可选）多维数据集可以有透视，这些透视为用户提供一个选择视图，其中在客户端上只能看到某些维度和/或度量值组。 若要指定透视，请输入透视名称作为 Cube 属性的值： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     （可选）多维数据集可以有透视，这些透视为用户提供一个选择视图，其中在客户端上只能看到某些维度和/或度量值组。 若要指定透视，请输入透视名称作为 Cube 属性的值： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     （可选）多维数据集可以具有为模型内各种语言指定的元数据和数据翻译。 为了查看翻译（数据和元数据），需要向连接字符串添加“Locale Identifier”属性： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     （可选）多维数据集可以具有为模型内各种语言指定的元数据和数据翻译。 为了查看翻译 （数据和元数据） 需要将"区域设置标识符"属性添加到连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  在 **“凭据”** 中，指定报表服务器如何获取访问外部数据源的凭据。  
   

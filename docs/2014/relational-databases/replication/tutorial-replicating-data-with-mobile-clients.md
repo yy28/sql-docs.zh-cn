@@ -1,11 +1,10 @@
 ---
-title: 教程：使用移动客户端复制数据 | Microsoft Docs
+title: 教程：使用移动客户端复制数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5a95b157761cc9a61d09271b5e081a65cd45998
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750969"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>教程：使用移动客户端复制数据
   复制是解决中央服务器和偶尔连接的移动客户端之间的数据移动问题的好方法。 使用复制向导可以轻松地配置和管理复制拓扑。 本教程演示如何为移动客户端配置复制拓扑。  
@@ -27,7 +26,7 @@ ms.locfileid: "48056237"
  在本教程中，您将使用合并复制将数据从中央数据库发布到一个或多个移动用户，以便每个用户都能获得唯一筛选的数据子集。 第一课介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建发布。 后面几课演示如何创建和同步订阅。  
   
 ## <a name="requirements"></a>要求  
- 本教程适用于熟悉数据库基本操作但复制经验不足的用户。 在开始本教程的学习之前，必须已完成 [教程：准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)的学习。  
+ 本教程适用于熟悉数据库基本操作但复制经验不足的用户。 在开始本教程之前，必须完成[教程：准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)。  
   
  若要使用本教程，系统中必须安装下列组件：  
   
@@ -47,13 +46,13 @@ ms.locfileid: "48056237"
 > [!NOTE]  
 >  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器。  
   
- **本教程的预计学时：30 分钟。**  
+ **估计的时间才能完成本教程中：30 分钟。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程  
   
 -   [第 1 课：使用合并复制发布数据](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [第 2 课：创建合并发布订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [第 2 课：创建对合并发布的订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
  [开始教程](merge/merge-replication.md)  
   

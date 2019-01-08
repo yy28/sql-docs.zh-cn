@@ -1,5 +1,5 @@
 ---
-title: Microsoft 顺序分析算法技术参考 |Microsoft 文档
+title: Microsoft 序列聚类分析算法技术参考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016464"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418378"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "34016464"
  默认值为 64。  
   
  MAXIMUM_STATES  
- 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，则算法将使用该属性最常见的状态，并将视剩余状态为 **Missing**。  
+ 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，算法将使用该属性的最常见状态并将剩余状态视为**Missing**。  
   
  默认值为 100。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34016464"
  适用于挖掘结构列。  
   
  MODEL_EXISTENCE_ONLY  
- 表示列将被视为具有两个可能状态： **Missing** 和 **Existing**。 Null 视为 **Missing** 值。  
+ 表示该列将被视为具有两个可能状态:**缺少**并**现有**。 Null 视为 **Missing** 值。  
   
  适用于挖掘模型列。  
   
@@ -123,22 +123,22 @@ ms.locfileid: "34016464"
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Table 和 Ordered|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized、Table 和 Ordered|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
--   将 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支持序列预测，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   将 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持序列预测，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法支持钻取，支持使用 OLAP 挖掘模型和数据挖掘维度。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [序列聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [序列聚类分析模型 & #40; 挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

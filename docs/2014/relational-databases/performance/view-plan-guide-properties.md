@@ -15,12 +15,12 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67a6c074b6b2b65ef264118bd367e55920b166c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114047"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411814"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -29,7 +29,7 @@ ms.locfileid: "48114047"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **查看计划指南的属性，使用：**  
   
@@ -89,14 +89,14 @@ ms.locfileid: "48114047"
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>查看计划指南的属性  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
-    -- If a plan guide named “Guide1” already exists in the AdventureWorks2012 database, delete it.  
+    -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
@@ -124,7 +124,7 @@ ms.locfileid: "48114047"
        hints,  
        is_disabled  
     FROM sys.plan_guides  
-    WHERE name = N’Guide1’;  
+    WHERE name = N'Guide1';  
     GO  
     ```  
   

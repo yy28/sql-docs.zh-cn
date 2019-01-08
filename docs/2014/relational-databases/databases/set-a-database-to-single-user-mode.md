@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], database option
@@ -13,12 +12,12 @@ ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a96597efbbc167cf0680c59971fd52797d018e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221457"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749029"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>将数据库设置为单用户模式
   本主题说明了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将用户定义数据库设置为单用户模式。 单用户模式指定一次只有一个用户可访问数据库，该模式通常用于维护操作。  
@@ -31,7 +30,7 @@ ms.locfileid: "48221457"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要将数据库设置为单用户模式，请使用：**  
   

@@ -21,18 +21,18 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 528f05021626fe22543f8ddcd3ed06215d618b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dec3a2821e2b92d431680b49e37a7b9819887b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177472"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505555"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 导入批量数据 (SQL Server)
   本主题概述了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 语句和 INSERT...SELECT * FROM OPENROWSET(BULK...) 语句将数据从某一数据文件大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 本主题还说明了使用 BULK INSERT 和 OPENROWSET(BULK...) 以及使用这些方法从远程数据源大容量导入数据的安全注意事项。  
   
 > [!NOTE]  
->  在使用 BULK INSERT 或 OPENROWSET(BULK ) 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本是如何处理模拟的。 有关详细信息，请参阅本主题后面的“安全注意事项”。  
+>  在使用 BULK INSERT 或 OPENROWSET(BULK...) 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本处理模拟的方式。 有关详细信息，请参阅本主题后面的“安全注意事项”。  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT 语句  
  BULK INSERT 将数据从数据文件加载到表中。 此功能与 **bcp** 命令的 **in** 选项提供的功能相似，但是数据文件将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程读取。 有关 BULK INSERT 语法的说明，请参阅 [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
@@ -64,14 +64,14 @@ ms.locfileid: "48177472"
   
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK ) 函数  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…) 函数  
  通过调用 OPENROWSET 函数并指定 BULK 选项，访问 OPENROWSET 大容量行集提供程序。 使用 OPENROWSET(BULK...) 函数可以通过 OLE DB 访问接口连接到远程数据源（如数据文件）以访问远程数据。  
   
  若要大容量导入数据，请从 INSERT 语句中的 SELECT...FROM 子句调用 OPENROWSET(BULK...)。 大容量导入数据的基本语法如下：  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- 在 INSERT 语句中使用时，OPENROWSET(BULK...) 支持表提示。 BULK 子句除了接受 TABLOCK 等常规表提示之外，还可以接受下列专用表提示：IGNORE_CONSTRAINTS（仅忽略 CHECK 约束）、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 有关详细信息，请参阅[表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)。  
+ 在 INSERT 语句中使用时，OPENROWSET(BULK...) 支持表提示。 除了常规表提示，如 TABLOCK，BULK 子句可以接受下列专用的表提示：IGNORE_CONSTRAINTS （仅忽略 CHECK 约束）、 IGNORE_TRIGGERS、 KEEPDEFAULTS 和 KEEPIDENTITY。 有关详细信息，请参阅[表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)。  
   
  有关 BULK 选项的更多使用信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   

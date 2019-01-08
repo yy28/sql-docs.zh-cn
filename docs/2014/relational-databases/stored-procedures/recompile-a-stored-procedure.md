@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e65b458f81e6a09b31d7be2bdffa40547e3c215
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098207"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406536"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 有三种方法来执行此操作：`WITH RECOMPILE`选项在过程定义中或当调用过程时，`RECOMPILE`各个语句上或通过使用查询提示`sp_recompile`系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
@@ -31,7 +31,7 @@ ms.locfileid: "48098207"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要重新编译存储过程，请使用：**  
   

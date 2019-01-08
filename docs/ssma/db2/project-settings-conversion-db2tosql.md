@@ -10,12 +10,12 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d2be16142733fe7c54558781e6f916d3c17e7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717015"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392471"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>项目设置 （转换） (DB2ToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 语法设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法。  
@@ -64,18 +64,18 @@ ms.locfileid: "47717015"
   
 **默认值或全模式：** 否  
   
-**乐观模式：** 是  
+**乐观模式：** 用户帐户控制  
   
 ### <a name="default-schema-mapping"></a>默认架构映射  
 此设置指定如何将 DB2 架构映射到 SQL Server 架构。 此设置中提供了两个选项：  
   
-1.  **到数据库的架构：** 在此模式下 DB2 架构 sch1 将映射到 SQL Server 数据库 sch1' 中 'dbo' SQL Server 架构的默认情况下。  
+1.  **到数据库的架构：** 在此模式下 DB2 架构中 sch1 将映射到 SQL Server 数据库 sch1' 中 'dbo' SQL Server 架构的默认情况下。  
   
 2.  **对架构的架构：** 在此模式下 DB2 架构 sch1 将映射到连接对话框中提供的默认 SQL Server 数据库中的 sch1 SQL Server 架构的默认情况下。  
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/Full 模式：** 到数据库的架构  
+**默认/乐观/Full 模式：** 到数据库的架构  
   
 ### <a name="conversion-ways-of-merge-statement"></a>MERGE 语句的转换方法  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47717015"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/Full 模式：** 使用 MERGE 语句  
+**默认/乐观/Full 模式：** 使用 MERGE 语句  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>将调用转换为使用默认自变量的子程序  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函数不支持函数调用中省略的参数。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函数和过程不支持默认参数值的形式的表达式。  
@@ -99,7 +99,7 @@ ms.locfileid: "47717015"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="convert-count-function-to-countbig"></a>将 COUNT 函数转换为 COUNT_BIG  
 如果 COUNT 函数可能会返回值大于 2147483647，即 2<sup>31</sup>-1，应将函数转换为 COUNT_BIG。  
@@ -110,7 +110,7 @@ ms.locfileid: "47717015"
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认值或全模式：** 是  
+**默认值或全模式：** 用户帐户控制  
   
 **乐观模式：** 否  
   
@@ -125,7 +125,7 @@ ms.locfileid: "47717015"
   
 **默认/乐观模式：** 否  
   
-**完整模式：** 是  
+**完整模式：** 用户帐户控制  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>使用 SET NULL 引用操作上的列的转换外键不为 NULL  
 DB2，可以创建外键约束，其中 SET NULL 操作无法可能执行，因为被引用列中不允许 null 值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许此类外的密钥配置。  
@@ -151,7 +151,7 @@ SSMA 可以将对包装函数的调用转换为对该过程的调用。 这将�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic/Full 模式：** 在可能的情况  
+**默认/乐观/Full 模式：** 在可能的情况  
   
 ### <a name="convert-lock-table-statements"></a>转换锁 TABLE 语句  
 SSMA 可以将多个锁表语句转换为表提示。 SSMA 无法转换包含分区，子分区，任何锁表语句@dblink，和 NOWAIT 子句，并将标记此类语句转换错误消息。  
@@ -174,7 +174,7 @@ SSMA 可以将多个锁表语句转换为表提示。 SSMA 无法转换包含分
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="convert-open-for-statements-for-ref-cursor-out-parameters"></a>将转换为 REF CURSOR OUT 参数打开 FOR 语句  
 在 DB2，打开 FOR 语句可用于返回的结果与 OUT 参数类型 REF CURSOR 的子程序集。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，存储的过程直接返回 SELECT 语句的结果。  
@@ -187,7 +187,7 @@ SSMA 可以转换为多个打开 FOR 语句的 SELECT 语句。
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="convert-record-as-a-list-of-separates-variables"></a>将记录转换为将变量的列表  
 SSMA 可以将 DB2 记录转换到分隔变量和具有特定结构的 XML 变量。  
@@ -198,7 +198,7 @@ SSMA 可以将 DB2 记录转换到分隔变量和具有特定结构的 XML 变�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>SUBSTR 函数将调用转换为的子字符串函数调用  
 SSMA 可以转换到 DB2 SUBSTR 函数调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**子字符串**函数调用，具体取决于参数的数目。 如果 SSMA 不能转换 SUBSTR 函数调用，或不支持的参数数目，SSMA 将转换为 SUBSTR 函数调用的自定义的 SSMA 函数调用。  
@@ -209,7 +209,7 @@ SSMA 可以转换到 DB2 SUBSTR 函数调用[!INCLUDE[ssNoVersion](../../include
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观模式：** 是  
+**默认/乐观模式：** 用户帐户控制  
   
 **完整模式：** 否  
   
@@ -253,7 +253,7 @@ SSMA 可以转换在两种方法中的 PL/SQL 子类型：
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="convert-tochardate-format"></a>转换 TO_CHAR （日期，格式）  
 SSMA 可以转换为 DB2 TO_CHAR(date, format) sysdb 数据库中的过程。  
@@ -264,7 +264,7 @@ SSMA 可以转换为 DB2 TO_CHAR(date, format) sysdb 数据库中的过程。
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 使用 TO_CHAR_DATE 函数  
+**默认/乐观模式：** 使用 TO_CHAR_DATE 函数  
   
 **完整模式：** 使用 TO_CHAR_DATE_LS 函数 （NLS 护理）  
   
@@ -280,7 +280,7 @@ SSMA 可以转换 DB2 事务处理语句：
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="emulate-db2-null-behavior-in-order-by-clauses"></a>模拟在 ORDER BY 子句中的 DB2 null 行为  
 NULL 值进行排序以不同的方式在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 DB2:  
@@ -301,7 +301,7 @@ SSMA 可以模拟 DB2 的 ORDER BY 行为，通过检查 NULL 值。 它然后�
   
 **默认/乐观模式：** 否  
   
-**完整模式：** 是  
+**完整模式：** 用户帐户控制  
   
 ### <a name="emulate-row-count-exceptions-in-select"></a>模拟中选择的行计数异常  
 如果带 INTO 子句的 SELECT 语句不返回任何行，DB2 引发 NO_DATA_FOUND 异常。 如果该语句返回两个或多个行，将引发 TOO_MANY_ROWS 异常。 中的已转换的语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会引发任何异常，如果从一个不同的行计数。  
@@ -312,7 +312,7 @@ SSMA 可以模拟 DB2 的 ORDER BY 行为，通过检查 NULL 值。 它然后�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="generate-error-for-dbmssqlparse"></a>为 DBMS_SQL 生成错误。分析  
   
@@ -338,16 +338,16 @@ SSMA 可以模拟 DB2 的 ORDER BY 行为，通过检查 NULL 值。 它然后�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/Optimistic 模式：** 添加带触发器的表的行 ID 列  
+**默认/乐观模式：** 添加带触发器的表的行 ID 列  
   
-**完整模式：** 是  
+**完整模式：** 用户帐户控制  
   
 ### <a name="generate-unique-index-on-rowid-column"></a>生成行 ID 列的唯一索引  
 指定是否 SSMA 是否生成唯一的索引列上生成的行 ID 列。 如果选项设置为"是"，生成唯一索引和唯一索引如果设置为"否"，不生成行 ID 列上。  
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="local-modules-conversion"></a>本地模块转换  
 定义嵌套的 DB2 子程序 （在独立存储过程或函数中声明） 转换的类型。  
@@ -380,7 +380,7 @@ DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]串联的字符�
   
 **默认/乐观模式：** 否  
   
-**完整模式：** 是  
+**完整模式：** 用户帐户控制  
   
 ### <a name="use-isnull-in-concat-function-calls"></a>CONCAT 函数调用中使用 ISNULL  
 CONCAT 函数调用中使用 ISNULL 语句来模拟 DB2 行为。 以下选项是存在此设置：  
@@ -393,7 +393,7 @@ CONCAT 函数调用中使用 ISNULL 语句来模拟 DB2 行为。 以下选项�
   
 **默认/乐观模式：** 否  
   
-**完整模式：** 是  
+**完整模式：** 用户帐户控制  
   
 ### <a name="use-native-convert-function-when-possible"></a>使用本机的转换函数在可能的情况  
   
@@ -403,7 +403,7 @@ CONCAT 函数调用中使用 ISNULL 语句来模拟 DB2 行为。 以下选项�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观模式：** 是  
+**默认/乐观模式：** 用户帐户控制  
   
 **完整模式：** 否  
   
@@ -429,7 +429,7 @@ DB2 作为一种方法可立即获得已删除的值提供的 RETURNING 子句�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>将在 INSERT 语句中的 RETURNING 子句转换为输出  
 DB2 作为一种方法可立即获得插入的值提供的 RETURNING 子句。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 OUTPUT 子句提供了此功能。  
@@ -440,7 +440,7 @@ DB2 作为一种方法可立即获得插入的值提供的 RETURNING 子句。 [
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>将 UPDATE 语句中的 RETURNING 子句转换为输出  
 DB2 作为一种方法可立即获得更新后的值提供的 RETURNING 子句。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 OUTPUT 子句提供了此功能。  
@@ -451,7 +451,7 @@ DB2 作为一种方法可立即获得更新后的值提供的 RETURNING 子句�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 是  
+**默认/乐观/Full 模式：** 用户帐户控制  
   
 ## <a name="sequence-conversion"></a>序列转换  
   

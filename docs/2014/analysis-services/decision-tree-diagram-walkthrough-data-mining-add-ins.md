@@ -16,12 +16,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079707"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391227"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>决策树关系图演练 （数据挖掘外接程序）
   如果您已创建决策树模型，则可以使用决策树形状或依赖关系网络形状在 Visio 创建自定义关系图。 本主题介绍可以执行使用的自定义**决策树**形状和以下控件：  
@@ -55,7 +55,7 @@ ms.locfileid: "48079707"
   
 6.  上**选择决策树**页上，选择要显示的树。  
   
-     树对导致已建模的特定结果的交互进行建模；因此，即使模型包含多个结果，也可以一次仅显示一个树。  
+     树模型会导致已建模; 特定结果的交互因此，即使您的模型包含多个结果，您可以一次显示只有一个树。  
   
 7.  在中**选择决策树**对话框中，您还可以设置这些呈现选项：  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48079707"
      **调整页大小**  
      此控件适用于早期 HTML 版本。 使用 Visio 页上，调整控件的大小  
   
-     **Description**  
+     **说明**  
      在选择树的一个节点后，单击此选项可显示有关该节点情况的详细信息。  
   
 2.  使用**重新布局页面**在 Visio 中的选项**设计**功能区尝试使用各种树布局。  

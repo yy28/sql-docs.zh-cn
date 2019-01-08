@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079417"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418458"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>查询（SQL Server 数据挖掘外接程序）
   ![查询模型按钮、 数据挖掘功能区](media/dmc-query.gif "查询模型按钮、 数据挖掘功能区")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079417"
   
  **查询**向导还提供了一种高级的编辑器来创建或修改数据挖掘模型、 生成自定义查询，或使用结构中的其他工具，例如嵌套数据集不受支持。  
   
--   使用文本编辑器可以键入数据挖掘扩展插件 (DMX) 语句或粘贴在别处创建的数据挖掘扩展插件语句。  
+-   使用文本编辑器可以键入或粘贴在别处创建数据挖掘扩展插件 (DMX) 语句中。  
   
 -   使用交互式查询生成器可在模版和对话框的帮助下编写自定义 DMX 语句。  
   

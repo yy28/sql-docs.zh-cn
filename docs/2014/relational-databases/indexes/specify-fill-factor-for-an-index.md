@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7fe5ffc867063d745a01ed12024acc536f8f634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188077"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398810"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
   本主题说明什么是填充因子以及如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定索引的填充因子值。  
@@ -36,7 +36,7 @@ ms.locfileid: "48188077"
   
      [性能注意事项](#Performance)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **为索引指定填充因子，使用：**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48188077"
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>使用表设计器指定填充因子  
   
-1.  在对象资源管理器中，单击加号以便展开包含您要指定索引填充因子的表的数据库。  
+1.  在对象资源管理器中，单击加号以便展开包含你要指定索引填充因子的表的数据库。  
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
@@ -83,11 +83,11 @@ ms.locfileid: "48188077"
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
-1.  在对象资源管理器中，单击加号以便展开包含您要指定索引填充因子的表的数据库。  
+1.  在对象资源管理器中，单击加号以便展开包含你要指定索引填充因子的表的数据库。  
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  单击加号以展开您要指定索引的填充因子的表。  
+3.  单击加号以展开要指定索引的填充因子的表。  
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48188077"
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>在现有索引中指定填充因子  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48188077"
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>为索引指定填充因子的其他方法  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

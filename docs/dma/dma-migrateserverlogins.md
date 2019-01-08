@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 20084c0fadbccab9c920cb81b29cf30cb2cf739c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643805"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392620"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>迁移 SQL Server 登录名使用数据迁移助手
 
@@ -50,8 +50,8 @@ ms.locfileid: "49643805"
 
 - 建议您查看迁移结果以了解的登录名迁移和任何建议的迁移后操作的总体状态。
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>资源
 
 [数据迁移助手 (DMA)](../dma/dma-overview.md)
 
-[数据迁移助手： 配置设置](../dma/dma-configurationsettings.md)
+[数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

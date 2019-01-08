@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7c933c9ae730810b198266cb9b2b3086169092
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832115"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393591"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47832115"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id 和 step_index 构成此视图的键。<br /><br /> 与请求关联的唯一数字 id。|请参阅中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|request_id 和 step_index 构成此视图的键。<br /><br /> 此步骤的一系列步骤组成该请求中的位置。|0 到 (n-1)，为包含 n 个步骤的请求。|  
-|operation_type|**nvarchar(35)**|表示此步骤的操作的类型。|**DMS 查询计划操作：** ReturnOperation、 执行、 MoveOperation、 为 BroadcastMoveOperation、 ShuffleMoveOperation、 针对以下、 CopyOperation、 DistributeReplicatedTableMoveOperation<br /><br /> **SQL 查询计划操作：** OnOperation、 针对以下<br /><br /> **其他查询计划操作：** MetaDataCreateOperation、 RandomIDOperation<br /><br /> **对于读取外部操作：** HadoopShuffleOperation、 HadoopRoundRobinOperation、 HadoopBroadcastOperation<br /><br /> **有关 MapReduce 的外部操作：** HadoopJobOperation、 HdfsDeleteOperation<br /><br /> **对于写入外部操作：** ExternalExportDistributedOperation、 ExternalExportReplicatedOperation、 ExternalExportControlOperation<br /><br /> 详细信息，请参阅"了解查询计划"中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。|  
+|operation_type|**nvarchar(35)**|表示此步骤的操作的类型。|**DMS 查询计划操作：** ReturnOperation、 执行、 MoveOperation、 为 BroadcastMoveOperation、 ShuffleMoveOperation、 针对以下、 CopyOperation、 DistributeReplicatedTableMoveOperation<br /><br /> **SQL 查询计划操作：** OnOperation，针对以下<br /><br /> **其他查询计划操作：** MetaDataCreateOperation'，'RandomIDOperation<br /><br /> **对于读取的外部操作：** HadoopShuffleOperation'，'HadoopRoundRobinOperation'，'HadoopBroadcastOperation<br /><br /> **有关 MapReduce 的外部操作：** HadoopJobOperation'，'HdfsDeleteOperation<br /><br /> **对于写入的外部操作：** ExternalExportDistributedOperation'，'ExternalExportReplicatedOperation'，'ExternalExportControlOperation<br /><br /> 详细信息，请参阅"了解查询计划"中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。|  
 |distribution_type|**nvarchar(32)**|此步骤中将进行的分布的类型。|AllNodes、 AllDistributions、 AllComputeNodes、 ComputeNode、 分发、 SubsetNodes、 SubsetDistributions、 未指定|  
 |location_type|**nvarchar(32)**|其中步骤正在运行。|计算、 控制，DMS|  
 |status|**nvarchar(32)**|此步骤的状态。|挂起、 正在运行、 完成、 失败、 UndoFailed、 PendingCancel，已取消、 撤消、 已中止|  

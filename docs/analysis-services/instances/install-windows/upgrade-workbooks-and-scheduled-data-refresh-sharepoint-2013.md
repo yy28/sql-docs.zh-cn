@@ -1,5 +1,5 @@
 ---
-title: 升级工作簿和计划的数据刷新 (SharePoint 2013) |Microsoft 文档
+title: 升级工作簿和计划的数据刷新 (SharePoint 2013) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6d2b264ca7f6910e3d652d560b276e4056fdc66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018714"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505225"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  本主题说明了在以前的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 环境中创建的工作簿的用户体验，以及如何升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
+  本主题说明了在以前的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 环境中创建的工作簿的用户体验，以及如何升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新功能的详细信息，请参阅[What's New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917)。  
   
 > [!WARNING]  
 >  对于在服务器上自动升级的工作簿，不能回滚升级。 一旦升级某一工作簿后，它就将保持升级状态。 若要使用以前的版本，可以将以前的工作簿重新发布到 SharePoint，还原以前的版本，或者回收工作簿。 有关在 SharePoint 中还原或回收文档的详细信息，请参阅 [通过使用回收站和版本控制计划保护内容](http://go.microsoft.com/fwlink/?LinkId=238669)。  
@@ -41,18 +41,18 @@ ms.locfileid: "34018714"
 |创建于|\<|支持和行为|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 如果为 SharePoint 场中的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系统服务启用了“自动升级”，则工作簿将在文档库中自动升级。<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|**体验：** 用户可与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 工作簿将自动升级文档库中的，如果启用了自动升级是[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中 SharePoint 场中，系统服务<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|**体验：** 用户可与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|  
 |**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel**|不支持|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。 计划数据刷新可用。<br /><br /> **升级：** 不支持自动升级。 用户可以将其工作簿手动升级到 Office 2013 版本。<br /><br /> **计划数据刷新：** 支持。|  
 |**Excel 2013**|不支持|不支持|所有功能|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> 从 2008 R2 工作簿升级到 SQL Server 2012 Service Pack 1 (SP1) 工作簿  
  本节介绍了如何从 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 工作簿升级到 SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2013 工作簿。  
   
- **行为更改：** 在 SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 中使用时，SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿将不会自动升级。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿。  
+ **行为更改：** SQL Server 2008 R2[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿将不会自动升级时在 SQL Server 2012 SP1 中使用[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]适用于 SharePoint 2013。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿。  
   
  2008 R2 工作簿将在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 中打开，但计划的数据刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：  
   
- “该工作簿包含不支持的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 模型”。 该工作簿中的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 模型采用 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 格式。 支持的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 模型如下：  
+ "该工作簿包含不支持[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模型。 该工作簿中的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 模型采用 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 格式。 支持的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 模型如下：  
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018714"
   
  升级工作簿将解决在以前版本的工作簿上尝试计划的数据刷新时出现的以下错误：  
   
- “针对使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的以前版本创建的工作簿的刷新操作不可用。”  
+ "刷新操作的时间使用的以前版本创建的工作簿[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]不可用。"  
   
  **如何升级工作簿**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "34018714"
   
  升级工作簿将解决在以前版本的工作簿上尝试计划的数据刷新时出现的以下错误：  
   
- “针对使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的以前版本创建的工作簿的刷新操作不可用。”  
+ "刷新操作的时间使用的以前版本创建的工作簿[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]不可用。"  
   
  **如何升级工作簿**  
   
@@ -126,7 +126,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
  若要启用自动工作簿升级，请运行以下命令：  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  升级工作簿后，可使用计划数据刷新和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 外接程序中的新功能。  
@@ -158,10 +158,10 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  向下滚动到 MSOLAP。 验证 MSOLAP.5 已列在系统上安装的 OLAP 访问接口中。 验证 MSOLAP | CurVer 设置为 MSOLAP.5  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将 Power Pivot 迁移到 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [升级 Power Pivot for SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Analysis Services 中的新增功能](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [查看数据刷新历史记录&#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [查看数据刷新历史记录 (PowerPivot for SharePoint)](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

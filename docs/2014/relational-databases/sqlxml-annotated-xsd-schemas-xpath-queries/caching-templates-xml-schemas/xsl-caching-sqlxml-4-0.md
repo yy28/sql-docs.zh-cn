@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff1d92a054d85c52e5b69044a2c25da31eb35705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c23a208a0276a2a3eb71f493aa7e5ce7fad0928
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749239"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 缓存 (SQLXML 4.0)
   缓存 XSL 样式表可提高性能。 如果 XSL 缓存设置为 ON，则在第一次执行之后，XSL 样式表将保留在内存中；这可以提高后续处理的性能。 默认设置为 ON。  

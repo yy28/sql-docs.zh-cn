@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9826f15be35c001f1b951f3b2a3750fa9aba925b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418672"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回缓存存储过程的聚合性能统计信息。 该视图为每个缓存的存储过程计划都返回一行，行的生存期与存储过程保持缓存状态的时间一样长。 在从缓存中删除存储过程时，也将从该视图中删除对应行。 此时，Performance Statistics SQL 跟踪事件将引发类似于**sys.dm_exec_query_stats**。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。  
   
 > [!NOTE]
 > 初始查询**sys.dm_exec_procedure_stats**可能会产生不准确的结果，如果没有在服务器上当前正在执行的工作负荷。 可以通过重新运行查询来确定更准确的结果。  
@@ -72,15 +72,15 @@ ms.locfileid: "47663386"
 |**last_elapsed_time**|**bigint**|经过的时间，以微秒为单位，最近完成的执行存储过程。|  
 |**min_elapsed_time**|**bigint**|最小运行时间，以微秒为单位，任何已完成执行此存储过程。|  
 |**max_elapsed_time**|**bigint**|最大运行时间，以微秒为单位，任何已完成执行此存储过程。|  
-|**total_spills**|**bigint**|执行此存储过程自编译后溢出总页数。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|页面数超出了上次执行存储的过程时，溢出。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|在单次执行期间曾扩散此存储过程的页面的最小数目。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|在单次执行期间曾扩散此存储过程的页面的最大数目。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_spills**|**bigint**|执行此存储过程自编译后溢出总页数。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|页面数超出了上次执行存储的过程时，溢出。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|在单次执行期间曾扩散此存储过程的页面的最小数目。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|在单次执行期间曾扩散此存储过程的页面的最大数目。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|对于此分布的节点标识符。<br /><br />**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup>对于本机编译存储过程启用统计信息收集后，辅助角色收集时间以毫秒为单位。 如果查询执行不到 1 毫秒，则该值将为 0。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

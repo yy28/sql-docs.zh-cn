@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501905"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>与 QName 相关的函数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   如果 *$paramLocal*指定值不是 xs: ncname 类型的正确词汇格式中，会返回空序列，并表示动态错误。  
   
--   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此， **expanded-qname （)** 函数不能用于 XML 构造。 例如，当构造节点（如 `<e> expanded-QName(…) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
+-   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不支持从 xs:QName 类型转换为任何其他类型。 因此， **expanded-qname （)** 函数不能用于 XML 构造。 例如，当构造节点（如 `<e> expanded-QName(...) </e>`）时，其值就必须是非类型化的。 这就要求您将 `expanded-QName()` 返回的 xs:QName 类型值转换为 xdt:untypedAtomic。 但是，不支持此操作。 在本主题的后面的示例中给出了一种解决方案。  
   
 -   您可以修改或比较现有的 QName 类型值。 例如，`/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")`元素的值进行比较 <`e`>，返回的 qname **expanded-qname （)** 函数。  
   
@@ -201,7 +201,7 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>实现限制  
- 一个日期和时间限制： **expanded-qname （)** 函数接受空序列，第二个参数，并将返回空，而不是第二个参数不正确时引发运行时错误。  
+ 还有一个限制：**Expanded-qname （)** 函数接受空序列，第二个参数，并将返回空，而不是第二个参数不正确时引发运行时错误。  
   
 ## <a name="see-also"></a>请参阅  
  [与 Qname 相关的函数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

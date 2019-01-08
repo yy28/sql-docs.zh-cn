@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395230"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>配置本机模式报表服务器扩展部署（SSRS 配置管理器）
 
@@ -111,9 +111,9 @@ ms.locfileid: "51606847"
 3.  在扩展部署页上，选择报表服务器实例正在等待联接部署，然后单击**添加服务器**。  
   
     > [!NOTE]  
-    >  **问题：** 尝试将一个 Reporting Services 报表服务器实例联接到扩展部署时，你可能遇到类似“拒绝访问”的错误消息。  
+    >  **问题：** 当您尝试将 Reporting Services 报表服务器实例联接到扩展部署时，可能会遇到类似拒绝访问错误消息。  
     >   
-    >  **解决方法：** 从第一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥并将该密钥还原到第二个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。  
+    >  **解决方法：** 重新启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]从第一个加密密钥[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例，并将密钥还原到第二个[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。  
   
 4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“报表管理器 URL”。  
   

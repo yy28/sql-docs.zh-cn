@@ -11,25 +11,25 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196577"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404192"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>通过使用行筛选器实现动态安全性
   在本补充课程中，您将另外创建一个实现动态安全性的角色。 动态安全性提供了基于当前登录用户的用户名或登录 ID 的行级别安全性。 若要了解详细信息，请参阅[角色（SSAS 表格）](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
  若要实现动态安全性，您必须向模型中添加一个表，该表中包含那些可以创建与模型的连接作为数据源并可浏览模型对象和数据的用户的 Windows 用户名。 您使用本教程创建的模型位于 Adventure Works Corp. 上下文中；但是，若要完成本课程，您必须添加一个表，其中包含来自您自己域的用户。 您不需要将添加的用户名的密码。 若要使用您自己域中的少量示例用户创建一个 Employee Security 表，您需要使用粘贴功能，从 Excel 电子表格中粘贴员工数据。 在实际应用场景中，包含添加到模型中的用户名的表通常将使用实际数据库中的表作为数据源；例如，实际的 dimEmployee 表。  
   
- 为了实现动态安全性，您将使用两个新的 DAX 函数： [USERNAME 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)并[LOOKUPVALUE 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 之后，该用户只能浏览此角色的行筛选器指定的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
+ 为了实现动态安全性，您将使用两个新的 DAX 函数：[USERNAME 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)并[LOOKUPVALUE 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 然后，用户可以浏览仅指定的角色的行筛选器的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
   
  若要完成本补充课程，您将需要完成一系列任务。 这些任务是此 Adventure Works 表格模型方案所特有的，但并不一定适用于实际的应用场景。 每个任务都包含描述任务目的的附加信息。  
   
- 学完本课的估计时间： **30 分钟**  
+ 学完本课的预计时间：**30 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  本补充课程主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>将 dimSalesTerritory 表添加到 AW Internet Sales 表格模型项目中  
@@ -41,7 +41,7 @@ ms.locfileid: "48196577"
   
 2.  在“现有连接”对话框中，确认已选中“Adventure Works DB from SQL”数据源连接，然后单击“打开”。  
   
-     如果出现“模拟凭据”对话框，请键入您在“第 2 课：添加数据”中使用的模拟凭据。  
+     如果出现模拟凭据对话框中，键入在第 2 课中所使用的模拟凭据：添加数据。  
   
 3.  在“选择如何导入数据”页上，保持选中“从表和视图的列表中进行选择，以便选择要导入的数据”，然后单击“下一步”。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48196577"
      注意，此关系的 Active 属性为 False，表示它不活动。 这是因为 Internet Sales 表已有另一个在度量值中使用的活动关系。  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>在客户端应用程序中隐藏 Employee Security 表  
- 在此任务中，您将隐藏 Employee Security 表，使其不显示在客户端应用程序的字段列表中。 请记住，隐藏表并不会保护表安全。 用户仍可以查询 Employee Security 表数据，如果他们知道怎么查询的话。 若要保护 Employee Security 表数据的安全，以阻止用户能够查询其任何数据，您将需要在后面的任务中应用筛选器。  
+ 在本任务中，将隐藏 Employee Security 表，防止它显示在客户端应用程序的字段列表中。 请记住，隐藏表并不会保护表安全。 用户仍可以查询 Employee Security 表数据，如果他们知道怎么查询的话。 若要保护 Employee Security 表数据的安全，以阻止用户能够查询其任何数据，您将需要在后面的任务中应用筛选器。  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>在客户端应用程序中隐藏 Employee 表  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48196577"
  在此任务中，您将创建一个新的用户角色。 此角色将包含一个行筛选器，用于定义 Sales Territory 表的哪些行对用户可见。 然后，此筛选器将在一对多关系方向中应用于与 Sales Territory 相关的所有其他表。 您还将应用一个简单的筛选器，使属于此角色成员的所有用户都无法查询整个 Employee Security 表。  
   
 > [!NOTE]  
->  您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果将某一用户添加为 Sales Employees by Territory 角色的成员，而该用户也同时作为在[第 12 课：创建角色](../analysis-services/lesson-11-create-roles.md)中创建的角色的成员，则将获得权限组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，该用户将具有角色组合所确定的更大权限。  
+>  您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果你将用户添加为成员为 Sales Employees by Territory 角色也存在于角色的成员在创建[第 12 课：创建角色](../analysis-services/lesson-11-create-roles.md)，您将获得权限组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，该用户将具有角色组合所确定的更大权限。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>创建 Sales Employees by Territory 用户角色  
   

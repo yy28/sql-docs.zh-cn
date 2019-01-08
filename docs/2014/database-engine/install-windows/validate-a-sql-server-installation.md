@@ -12,12 +12,12 @@ ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0473a30a3c32b83a312aea92705f3f8e6e0b4dab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018122"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415686"
 ---
 # <a name="validate-a-sql-server-installation"></a>验证 SQL Server 安装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发现报告可用于验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和在计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 **已安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能发现报告**显示的所有报表[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]产品和功能本地服务器上安装。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心的 **“工具”** 页上提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能发现报告。  

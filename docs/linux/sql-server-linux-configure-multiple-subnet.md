@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396170"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>配置多子网 Alwayson 可用性组和故障转移群集实例
 
@@ -24,7 +24,7 @@ ms.locfileid: "47637466"
 
 ## <a name="vlan-based-solution"></a>基于 VLAN 的解决方案
  
-**先决条件**： 对于 VLAN 基于解决方案中，每台服务器参与可用性组或 FCI 需要两个网卡 (Nic) 为正确的可用性 （双端口 NIC 是单一物理服务器上的故障点），以便它可以在分配的 IP 地址其本机的子网，以及一个 VLAN 上。 其中不包括任何其他网络需要，如 iSCSI，还需要其自身的网络。
+**先决条件**:对于基于 VLAN 的解决方案，参与可用性组或 FCI 的每台服务器需要两个网卡 (Nic) 以正确的可用性 （双端口 NIC 是单一物理服务器上的故障点），，，以便可以将有关其本机的子网，以及一个 IP 地址分配在 VLAN。 其中不包括任何其他网络需要，如 iSCSI，还需要其自身的网络。
 
 AG 或 FCI 的 IP 地址创建 VLAN 上完成。 在以下示例中，VLAN 具有 192.168.3 的子网。*x*，因此创建 AG 或 FCI 的 IP 地址是 192.168.3.104。 任何其他需要配置，因为没有分配到 AG 或 FCI 的单个 IP 地址。
 

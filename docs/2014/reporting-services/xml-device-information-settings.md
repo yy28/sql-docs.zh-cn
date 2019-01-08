@@ -14,12 +14,12 @@ ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ead3f5a4fcca7e096a73994cbb35f8a6075f8c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74154a3cf39f3ba06346acea3c00d5e2ad8f563c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394624"
 ---
 # <a name="xml-device-information-settings"></a>XML 设备信息设置
   下表列出以 XML 格式呈现时的设备信息设置。  
@@ -29,12 +29,12 @@ ms.locfileid: "48202937"
 |`XSLT`|要应用于 XML 文件的 XSLT 的报表服务器命名空间中的路径，例如 `/Transforms/myxslt`。 该 xsl 文件必须是报表服务器上的已发布资源，并且您必须通过报表服务器项路径访问它。 将在报表中指定的 XSLT 之后应用此设置的值。 如果应用 `XSLT` 设置，则将忽略 `OmitSchema` 设置。|  
 |**MIMEType**|XML 文件的多用途 Internet 邮件扩展 (MIME) 类型。|  
 |**UseFormattedValues**|指示在生成 XML 数据时是否呈现文本框的格式化值。 如果值为 false，则指示使用文本框的基础值。|  
-|**Indented**|指示是否生成缩进的 XML。 默认值`false`生成非缩进的压缩 XML。|  
+|**Indented**|指示是否生成缩进的 XML。 默认值 `false` 生成非缩进的压缩 XML。|  
 |`OmitNamespace`|指示是否从 XML 中忽略默认命名空间。<br /><br /> 如果为 true，则 XML 未指定默认命名空间。<br /><br /> 如果为 false，则 XML 使用报表的 DataSchema 属性值指定默认命名空间。 该 DataSchema 属性默认为报表名称。<br /><br /> 默认值是 `false`。|  
-|`OmitSchema`|指示是否从 XML 中忽略架构位置。 该位置为 SchemaLocation 属性。 OmitSchema 的默认值依赖于 OmitNamespace 的值：<br /><br /> 如果 OmitNamespace = False，则 OmitSchema =`False`默认情况下。 用户可以通过设置 OmitSchema = True，覆盖该默认值。<br /><br /> 如果 OmitNamespace = True，则 OmitSchema 将起到 `True` 的作用，无论为 OmitShema 显式配置的值如何。|  
+|`OmitSchema`|指示是否从 XML 中忽略架构位置。 该位置为 SchemaLocation 属性。 OmitSchema 的默认值依赖于 OmitNamespace 的值：<br /><br /> 如果 OmitNamespace = False，则默认 OmitSchema = `False`。 用户可以通过设置 OmitSchema = True，覆盖该默认值。<br /><br /> 如果 OmitNamespace = True，则 OmitSchema 将起到 `True` 的作用，无论为 OmitShema 显式配置的值如何。|  
 |**编码**|.NET Framework 支持的字符编码的 Internet 编号分配机构 (IANA) 名称。 默认值是 `UTF-8`。 其他值的示例包括 ASCII、UTF-7 和 UTF-16。|  
 |**FileExtension**|所生成的文件使用的文件扩展名。|  
-|**架构**|指示是否呈现 XML 架构定义 (XSD) 或是否呈现实际 XML 数据。 值为`true`指示将呈现 XML 架构。 默认值是 `false`。|  
+|**架构**|指示是否呈现 XML 架构定义 (XSD) 或是否呈现实际 XML 数据。 值为 `true` 指示将呈现 XML 架构。 默认值是 `false`。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

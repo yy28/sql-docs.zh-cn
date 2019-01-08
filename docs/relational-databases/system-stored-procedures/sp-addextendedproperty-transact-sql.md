@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689215"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321743"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,14 +66,13 @@ sp_addextendedproperty
  有效输入包括：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
   
 > [!IMPORTANT]  
->  将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除在级别 1 类型对象的扩展属性中指定 USER 作为级别 0 类型的功能。 改用 SCHEMA 作为级别 0 类型。 例如，在定义表的扩展属性时，指定表的架构而不是用户名。 将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除指定 TYPE 作为级别 0 类型的功能。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来的  版本中将删除在级别 1 类型对象的扩展属性中指定 USER 作为级别 0 类型的功能。 改用 SCHEMA 作为级别 0 类型。 例如，在定义表的扩展属性时，指定表的架构而不是用户名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来的  版本中将删除指定 TYPE 作为级别 0 类型的功能。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
  [ @level0name=] {'*level0_object_name*}  
  所指定的级别 0 对象类型的名称。 *level0_object_name*是**sysname**默认值为 NULL。  
   
  [ @level1type=] {'*level1_object_type*}  
- 级别 1 对象的类型。 *level1_object_type*是**varchar （128)**，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
-  
+ 级别 1 对象的类型。 *level1_object_type*是**varchar （128)**，默认值为 NULL。 有效输入包括聚合、 默认值、 函数、 LOGICAL FILE NAME、 过程、 队列、 规则、 序列、 同义词、 表、 TABLE_TYPE、 类型、 视图、 XML 架构集合和 NULL。    
  [ @level1name=] {'*level1_object_name*}  
  所指定的级别 1 对象类型的名称。 *level1_object_name*是**sysname**，默认值为 NULL。  
   
@@ -87,7 +86,7 @@ sp_addextendedproperty
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 为了指定扩展的属性中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库分为三个级别： 0、 1 和 2。 级别 0 是最高级别，定义为在数据库作用域内包含的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。  
+ 为了指定扩展属性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的对象分为三个级别：0、1 和 2。 级别 0 是最高级别，定义为在数据库作用域内包含的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。  
   
  引用某个级别中的对象必须用拥有或包含它们的更高级别对象的名称进行限制。 例如，当将扩展属性添加到表列（级别 2）时，还必须指定包含该列的表名（级别 1）以及包含该表的架构（级别 0）。  
   
@@ -100,10 +99,10 @@ sp_addextendedproperty
 ## <a name="replicating-extended-properties"></a>复制扩展属性  
  仅在发布服务器和订阅服务器之间的初始同步中复制扩展属性。 如果在初始同步之后添加或修改扩展属性，则不会复制该更改。 有关如何复制数据库对象的详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
-## <a name="schema-vs-user"></a>架构与User  
+## <a name="schema-vs-user"></a>架构与“用户”  
  建议不要在将扩展属性应用于数据库对象时指定 USER 作为级别 0 类型，因为这会导致名称解析不明确。 例如，假定用户 Mary 拥有两个架构（Mary 和 MySchema），并且这两个架构都包含名为 MyTable 的表。 如果 Mary 将扩展的属性添加到表 MyTable 并指定 **@level0type = N'USER'**，  **@level0name = Mary**，它不是扩展的属性应用于哪个表清除。 为了保持向后兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将属性应用于名为 Mary 的架构中包含的表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  db_owner 和 db_ddladmin 固定数据库角色的成员可以向任何对象添加扩展属性，但以下情况例外：db_ddladmin 不能向数据库本身添加属性，也不能向用户或角色中添加属性。  
   
  用户可以将扩展属性添加到他们所拥有的对象中，或者添加到他们对其具有 ALTER 或 CONTROL 权限的对象中。  

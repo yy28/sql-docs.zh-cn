@@ -10,12 +10,12 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: ecc3f711c90f46c17de54a6c3659d84b7756b25e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61b706145f708e9b2e8a04ba4e7bc574c503a742
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773895"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407859"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL)
 在 Oracle 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将迁移到的 Oracle 架构中的所有对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]命名的架构的数据库。 但是，自定义 Oracle 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
@@ -50,7 +50,7 @@ Oracle 架构概念的将映射到[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 -   映射到 SQL Server  
   
-您可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库与目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与之有连接使用 SSMA 数据库。 是否要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将会有一条消息提示 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。在同步过程中将创建它。是否要继续？"** 单击是。 同样，您可以映射到目标下不存在架构的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将在同步过程中创建的数据库。  
+您可以将源数据库映射到任何目标数据库。 默认情况下映射源数据库与目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与之有连接使用 SSMA 数据库。 是否要映射的目标数据库上不存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将会有一条消息提示 **"目标中不存在的数据库和/或架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。在同步过程中将创建它。是否想要继续？"** 单击是。 同样，您可以映射到目标下不存在架构的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将在同步过程中创建的数据库。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>还原为默认数据库和架构  
 如果自定义的 Oracle 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构，可以还原为默认值的映射。  

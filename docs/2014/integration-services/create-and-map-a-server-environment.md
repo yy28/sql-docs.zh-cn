@@ -16,20 +16,20 @@ ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d77393b3289c00ad88925711287b2ef789bc093d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1116cc2e1040326237a31039fa2b52618c3f559e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408224"
 ---
 # <a name="create-and-map-a-server-environment"></a>创建和映射服务器环境
-  您创建服务器环境来指定已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的项目中所含包的运行时值。 您可以随后针对特定包、入口点包或给定项目中的所有包，将环境变量映射到参数。 入口点包通常是执行子包的父包。  
+  创建服务器环境来指定已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的项目中所含包的运行时值。 您可以随后针对特定包、入口点包或给定项目中的所有包，将环境变量映射到参数。 入口点包通常是执行子包的父包。  
   
 > [!IMPORTANT]  
 >  对于给定的执行，只能使用单个服务器环境中包含的值来执行包。  
   
- 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](catalog/ssis-catalog.md) 中的 **服务器环境、服务器变量和服务器环境引用**一节。  
+ 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](catalog/ssis-catalog.md) 中的“服务器环境、服务器变量和服务器环境引用”一节。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48090316"
   
     3.  输入环境变量的 **“值”** 。  
   
-         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](catalog/ssis-catalog.md) 中的 **环境变量**一节。  
+         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](catalog/ssis-catalog.md) 中的“环境变量”一节。  
   
     4.  通过选中或取消选中 **“敏感”** 复选框，指示该变量是否包含敏感值。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48090316"
 7.  若要编写环境的脚本，请单击 **“脚本”**。 默认情况下，该脚本显示在一个新的查询编辑器窗口中。  
   
     > [!TIP]  
-    >  在您对环境属性进行了更改（例如添加变量）后，并且在 **“环境属性”** 对话框中单击 **“确定”** 前，需要单击 **“脚本”** 。 否则，将不会生成脚本。  
+    >  对环境属性进行了更改（例如添加变量）后，并且在“环境属性”对话框中单击“确定”前，需要单击“脚本”。 否则，将不会生成脚本。  
   
 8.  单击 **“确定”** 保存对环境属性的更改。  
   

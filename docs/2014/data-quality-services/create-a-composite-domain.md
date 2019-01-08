@@ -13,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9b2efda76c0e1005a298e67b139233a96796522b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030324"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413767"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建复合域。 复合域由应用于单个数据字段的一个或多个单一域组成。 有关复合域的详细信息，请参阅[管理复合域](../../2014/data-quality-services/managing-a-composite-domain.md)。  
@@ -79,11 +79,11 @@ ms.locfileid: "51030324"
   
 4.  请为 **“分析方法”** 选择下列选项之一：  
   
-    -   **引用数据**：根据引用数据服务 (RDS) 格式化数据的方式分析字段的值。 Data Quality Services 将复合域中的值发送到 RDS，RDS 根据复合域中的域返回更正和分析后的数据。  
+    -   **引用数据**:分析根据如何通过引用数据服务 (RDS) 格式化数据字段的值。 Data Quality Services 将复合域中的值发送到 RDS，RDS 根据复合域中的域返回更正和分析后的数据。  
   
-    -   **按顺序**：根据复合域中域的顺序分析字段的值。 第一个值将加入第一个域中，第二个值加入第二个域中，依此类推。  
+    -   **按顺序**:分析根据复合域中域的顺序的字段的值。 第一个值将加入第一个域中，第二个值加入第二个域中，依此类推。  
   
-    -   **分隔符**：基于在选择“分隔符”后显示的单选按钮中选择的分隔符分析该字段的值。 可以是 **“制表符”**、 **“分号”**、 **“逗号”**、 **“空格”** 或 **“其他”**。 如果选择 **“其他”**，则输入将作为分隔符的值。  
+    -   **分隔符**:分析字段的值根据选择的单选按钮中的分隔符时显示选择的分隔符。 可以是 **“制表符”**、 **“分号”**、 **“逗号”**、 **“空格”** 或 **“其他”**。 如果选择 **“其他”**，则输入将作为分隔符的值。  
   
 5.  如果您为分析方法选择了 **“分隔符”** ，还可以选择 **“基于知识的分析”**。 有关详细信息，请参阅 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "51030324"
  在创建复合域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services 使您能够基于知识分析数据，而不仅仅是基于分隔符或顺序。 当复杂源数据映射到复合域并且您未使用引用数据服务时，使用基于知识的分析。 您可以使用基于知识的分析将数据源中的数据分析到相关的单一域。 使用基于知识的分析，DQS 将首先尝试使用知识将复杂数据分析到单一域。 如果可能，它将字符串的组成部分表示为在一个或多个域中，并将字符串分析到其不同的域中。 例如，假设你将“John B. Doe”作为由全名复合域表示的全名字段中的复杂值。 如果 DQS 确定“John”在 First Name 域中，而确定“Doe”在 Last Name 域中，则 DQS 将基于域知识将“B.” 添加到 Middle Name 域中。  
+ Data Quality Services 使您能够基于知识分析数据，而不仅仅是基于分隔符或顺序。 当复杂源数据映射到复合域并且您未使用引用数据服务时，使用基于知识的分析。 您可以使用基于知识的分析将数据源中的数据分析到相关的单一域。 使用基于知识的分析，DQS 将首先尝试使用知识将复杂数据分析到单一域。 如果可能，它将字符串的组成部分表示为在一个或多个域中，并将字符串分析到其不同的域中。 例如，假设你将“John B. Doe”作为由全名复合域表示的全名字段中的复杂值。 如果 DQS 确定“John”在 First Name 域中，而确定“Doe”在 Last Name 域中，则 DQS 将基于域知识将“B.”添加进去。 添加到 Middle Name 域中。  
   
  仅当您也选择基于分隔符的分析时，才使用基于知识的分析。 基于知识的分析不能代替分隔符分析，但可以增强其功能。 仅当没有知识可让您进行分析时，DQS 才使用分隔符来进行分析。 在某些情况下，DQS 可通过基于知识的分析来确定一些分析，然后确定通过基于分隔符的分析来确定其他分析。  
   

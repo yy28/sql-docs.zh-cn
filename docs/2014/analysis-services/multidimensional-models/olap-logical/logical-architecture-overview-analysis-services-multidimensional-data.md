@@ -15,12 +15,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416488"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
   Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统的 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**指代作为 PowerPivot for SharePoint，用于加载和查询工作簿中的 Excel 或 PowerPivot 数据模型已安装的 Analysis Services 实例。  
@@ -48,7 +48,7 @@ ms.locfileid: "48091447"
  每个数据库对象都包含一个或多个多维数据集对象。 多维数据集通过其度量值和维度定义。 多维数据集中的度量值和维度派生自数据源视图中的表和视图，此数据源视图是多维数据集所基于的视图，或者是通过度量值定义和维度定义生成的视图。  
   
 ## <a name="object-inheritance"></a>对象继承  
- ASSL 对象模型包含有多个重复元素组。 例如，元素组“`Dimensions` contain `Hierarchies`”可定义元素的维度层次结构。 `Cubes` 和 `MeasureGroups` 都包含元素组“`Dimensions` contain `Hierarchies`”。  
+ ASSL 对象模型包含有多个重复元素组。 例如，元素组"`Dimensions`包含`Hierarchies`，"定义维度层次结构的元素。 `Cubes` 和 `MeasureGroups` 都包含元素组“`Dimensions` contain `Hierarchies`”。  
   
  除非显式重写，否则元素将会从更高级别继承这些重复元素组的详细信息。 例如，`Translations` 的 `CubeDimension` 与其祖先元素 `Translations` 的 `Cube` 相同。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "48091447"
  此处显示的示例仅包含一个事实数据表。 如果多维数据集具有多个事实数据表，则会将每个事实数据表中的度量值组织到度量值组中，并且通过已定义的维度关系使每个度量值组都与一组特定的维度相关。 这些关系是通过指定数据源视图中的参与表以及关系的粒度来定义的。 **相关的主题：**[维度关系](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [多维模型数据库&#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
+ [多维模型数据库 (SSAS)](../multidimensional-model-databases-ssas.md)  
   
   

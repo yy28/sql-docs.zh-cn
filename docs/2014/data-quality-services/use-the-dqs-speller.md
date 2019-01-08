@@ -10,12 +10,12 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44169d3d7b2744b06af31eb6212383db3a0f8b36
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032774"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412944"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼写检查器会检查域中字符串值的语法、拼写和句子结构。 拼写检查器是独立的客户端功能，不与服务器端引擎集成并且对当前流或状态没有影响。 拼写检查器会标识它认为可能是错误的那些字符串值，然后在对域值进行其他手动更改的相同位置用红色的下划线标记这些字符串值。 这些位置包括：  
@@ -64,7 +64,7 @@ ms.locfileid: "51032774"
   
 6.  如果您要将值添加到字典中，则单击 **“添加到字典”**。 红色下划线将从值中消失。  
   
-##  <a name="FollowUp"></a> 跟进：在使用拼写检查器后  
+##  <a name="FollowUp"></a> 跟进：使用拼写检查器后  
  在您运行了拼写检查器后，完成域处于其中的活动以便使用拼写检查器建议的更正。 如果在域发现、域管理或匹配策略活动中，则发布知识库以使拼写检查器分析的结果可用于知识库中。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="How"></a> 拼写检查器的原理  

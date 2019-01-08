@@ -18,12 +18,12 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657845"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321793"
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
 包含所有[参数](../../../ado/reference/ado-api/parameter-object.md)的对象[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
@@ -45,7 +45,7 @@ ms.locfileid: "47657845"
   
 2.  调用带有参数和显式追加到参数的存储的过程时**参数**具有集合**追加**，返回的值输出参数应追加到**参数**集合。 返回值必须先追加到**参数**集合。 使用**追加**添加到的其他参数**参数**按定义顺序的集合。 例如，存储的过程 SPWithParam 具有两个参数。 第一个参数， *InParam*，为输入的参数定义为以便您可以排除 (20)，而第二个参数*OutParam*，以便您可以排除 (20) 作为定义的输出参数。 可以使用以下代码返回的值输出参数来检索。  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -55,7 +55,7 @@ ms.locfileid: "47657845"
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47657845"
   
 3.  调用带有参数和通过调用配置的参数的存储的过程时**项**方法**参数**集合，该存储过程的返回值/输出参数可以从检索**参数**集合。 例如，存储的过程 SPWithParam 具有两个参数。 第一个参数， *InParam*，为输入的参数定义为以便您可以排除 (20)，而第二个参数*OutParam*，以便您可以排除 (20) 作为定义的输出参数。 可以使用以下代码返回的值输出参数来检索。  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

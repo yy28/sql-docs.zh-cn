@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049487"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412474"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>创建数据源（SSAS 多维）
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维模型中，数据源对象表示与您正从其处理（或导入）数据的数据源的连接。 一个多维模型必须包含至少一个数据源对象，但您可以添加更多对象以便合并来自若干数据仓库的数据。 使用本主题中的说明可为您的模型创建数据源对象。 有关在此对象上设置属性的详细信息，请参阅[设置数据源属性（SSAS 多维）](set-data-source-properties-ssas-multidimensional.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48049487"
 >  默认情况下， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不会将密码与连接字符串一起保存。 如果未保存密码，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在需要密码时提示您输入密码。 如果选择保存密码，则密码以加密格式存储在数据连接字符串中。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用包含数据源的数据库的数据库加密密钥加密该数据源的密码信息。 对连接信息进行加密之后，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户或密码，否则无法恢复加密的信息。 有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>为数据挖掘对象定义模拟信息  
- 数据挖掘查询可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户的上下文中执行，但是还可以在提交此查询的用户的上下文中执行，也可以在指定用户的上下文中执行。 执行查询所在的上下文可能会影响查询结果。 对于数据挖掘`OPENQUERY`类型操作，你可能想要执行上下文的当前用户或指定用户 （无论用户是否执行查询） 的上下文中而不是服务帐户的上下文中的数据挖掘查询。 这使得查询使用受限安全凭据执行。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模拟当前用户或模拟指定用户，则请选择 **“使用特定用户名和密码”** 选项或 **“使用当前用户的凭据”** 选项。  
+ 数据挖掘查询可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户的上下文中执行，但是还可以在提交此查询的用户的上下文中执行，也可以在指定用户的上下文中执行。 执行查询所在的上下文可能会影响查询结果。 对于数据挖掘 `OPENQUERY` 类型操作，您可能希望数据挖掘查询在当前用户的上下文中执行或在指定用户（无论此用户是否执行此查询）的上下文中执行，而不是在服务帐户的上下文中执行。 这使得查询使用受限安全凭据执行。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模拟当前用户或模拟指定用户，则请选择 **“使用特定用户名和密码”** 选项或 **“使用当前用户的凭据”** 选项。  
   
 ##  <a name="bkmk_steps"></a> 使用数据源向导创建数据源  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049487"
   
 3.  在 **“选择如何定义连接”** 页中，选择 **“基于现有连接或新连接创建数据源”** ，然后单击 **“新建”** 以便打开 **“连接管理器”**。  
   
-     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分，我们假定一个 SQL Server 数据库连接。  
+     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分，我们假定 SQL Server 数据库连接。  
   
 4.  选择要用于该连接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或本机 OLE DB 访问接口。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48049487"
   
 -   将一个数据源指定主数据源。 主数据源是用于创建数据源视图的数据源。  
   
--   主数据源必须支持`OpenRowset`函数。  有关 SQL Server 中该函数的详细信息，请参阅 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>。  
+-   主数据源必须支持 `OpenRowset` 函数。   有关 SQL Server 中该函数的详细信息，请参阅 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>。  
   
  使用以下方法可合并来自多个数据源的数据：  
   

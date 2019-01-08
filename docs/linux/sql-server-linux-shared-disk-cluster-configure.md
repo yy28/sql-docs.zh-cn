@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085463"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397099"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例的 SQL Server 上 Linux (RHEL)
 
@@ -35,7 +35,7 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供服务器级
 
 有关概念性信息，请参阅[SQL Server 故障转移群集实例 (FCI) 在 Linux 上](sql-server-linux-shared-disk-cluster-concepts.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 若要完成以下端到端方案，需要两台计算机部署两个节点群集和存储的另一台服务器。 以下步骤概述了如何配置这些服务器。
 
@@ -57,7 +57,7 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供服务器级
     ```
 
     > [!NOTE] 
-    > 在设置时，生成的 SQL Server 实例和放置在一个服务器主密钥`var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
+    > 在设置时，生成的 SQL Server 实例和放置在一个服务器主密钥`var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，其标识不是在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
 1.  在主节点上为 Pacemaker 创建 SQL server 登录名并授予登录权限以运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪个节点正在运行 SQL Server。 
 
@@ -131,10 +131,10 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供服务器级
    sudo firewall-cmd --reload
    ```
 
-   > 如果使用的是没有内置高可用性配置的其他防火墙，则需要打开以下端口，Pacemaker 才能与群集中的其他节点通信
+   > 如果正在使用不具有内置的高可用性配置的另一个防火墙，则需要为 Pacemaker 将无法与群集中的其他节点通信打开以下端口
    >
-   > * TCP：端口 2224、3121、21064
-   > * UDP：端口 5405
+   > * TCP：端口 2224、 3121、 21064
+   > * UDP:端口 5405
 
 1. 在每个节点上安装 Pacemaker 包。
 

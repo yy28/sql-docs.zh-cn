@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cabebb91ecb7d276066cb0f1c6a2f09c633d0ba0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676526"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420528"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>故障转移群集实例-Linux 上的 SQL Server
 
@@ -59,7 +59,7 @@ Pacemaker 群集只能有最多 16 个节点时涉及到 Corosync，因此单个
 在 FCI 在 DNS 中的名称应为 Pacemaker 群集中创建的 FCI 资源名称相同。
 必须在 DNS 中注册的名称和 IP 地址。
 
-## <a name="shared-storage"></a>共享存储
+## <a name="shared-storage"></a>共享的存储
 所有 Fci，不管它们是在 Linux 或 Windows Server 都要求某种形式的共享存储。 此存储将呈现给可能可以承载 FCI 的所有服务器，但只有一台服务器可以存储使用 fci，在任何给定时间。 适用于 Linux 下的共享存储选项包括：
 
 - iSCSI

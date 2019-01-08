@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223167"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505455"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以获取有关用户定义函数的定义或属性的信息。 您可能需要查看函数的定义，以理解其数据从源表中派生的方式或查看函数所定义的数据。  
@@ -35,7 +35,7 @@ ms.locfileid: "48223167"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要获取有关函数的信息，请使用：**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48223167"
   
 4.  右键单击要查看其属性的函数，然后选择“属性”。  
   
-     以下属性将显示在“函数属性 – *function_name*”对话框。  
+     以下属性将显示在“函数属性 - function_name”对话框。  
   
      **“数据库”**  
      包含此函数的数据库的名称。  

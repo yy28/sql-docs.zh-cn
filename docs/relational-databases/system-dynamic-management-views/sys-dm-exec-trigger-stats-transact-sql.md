@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf9299896fb03ea8eb947b5fb5ab9f1967e7d7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649197"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403532"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,17 +64,17 @@ ms.locfileid: "47649197"
 |**last_elapsed_time**|**bigint**|最近完成此触发器的执行所用的时间（微秒）。|  
 |**min_elapsed_time**|**bigint**|最短已用时间，以微秒为单位，此触发器的任何已完成执行。|  
 |**max_elapsed_time**|**bigint**|最大运行时间，以微秒为单位，此触发器的任何已完成执行。| 
-|**total_spills**|**bigint**|执行此触发器自编译后溢出总页数。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|页数溢出的上次执行触发器。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|此触发器在单次执行期间曾扩散的页面中最小的数。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|此触发器在单次执行期间曾扩散最大页数。<br /><br /> **适用于**： 从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_spills**|**bigint**|执行此触发器自编译后溢出总页数。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|页数溢出的上次执行触发器。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|此触发器在单次执行期间曾扩散的页面中最小的数。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|此触发器在单次执行期间曾扩散最大页数。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
   
 ## <a name="remarks"></a>备注  
- 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。  
+ 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。  
 
 查询完成后，将更新该视图中的统计信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 创建关系 |Microsoft Docs
+title: 第 4 课：创建关系 | Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792027"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411294"
 ---
-# <a name="lesson-4-create-relationships"></a>第 4 课： 创建关系
+# <a name="lesson-4-create-relationships"></a>第 4 课：创建关系
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，将验证导入数据时自动创建的关系并在不同表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，DimProduct 表和 DimProductSubcategory 表基于每个产品属于某个子类别的事实具有某种关系。 若要了解详细信息，请参阅[关系](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
   
-学完本课的估计时间： **10 分钟**  
+学完本课的预计时间：**10 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在之前在本课程中执行的任务，您应已完成上一课：[第 3 课： 标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)。 
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 3 课：标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>查看现有关系并添加新关系  
 当使用表导入向导导入数据时，您从 AdventureWorksDW 数据库有七个表。 通常情况下，当您从关系源导入数据，将自动与数据一起导入现有关系。 但是，在继续创作模型之前，您应验证正确创建了表之间的这些关系。 对于本教程，您还会添加三个新关系。  
@@ -41,7 +41,7 @@ ms.locfileid: "42792027"
   
 2.  单击之间的实线**DimCustomer**表和**DimGeography**表。 这两个表之间的实线表明此关系处于活动状态，也即，当计算 DAX 公式时，默认情况下将使用此关系。  
   
-    请注意**GeographyKey**中的列**DimCustomer**表和**GeographyKey**中的列**DimGeography**现在表同时每个出现在一个框。 此演示它们在关系中使用的列。 关系的属性现在也显示在“属性”窗口中。  
+    请注意**GeographyKey**中的列**DimCustomer**表和**GeographyKey**中的列**DimGeography**现在表同时每个出现在一个框。 此演示它们在关系中使用的列。 关系的属性现在也显示在**属性**窗口。  
   
     > [!TIP]  
     > 除了使用模型设计器关系图视图中，还可以使用管理关系对话框以显示表格格式中的所有表之间的关系。 右键单击**关系**在表格模型资源管理器，然后单击**管理关系**。 管理关系对话框中显示导入数据时自动创建的关系。  
@@ -56,7 +56,7 @@ ms.locfileid: "42792027"
     |用户帐户控制|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |用户帐户控制|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    如果缺少任何上表中的关系，请验证您的模型包括以下各表： DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
+    如果缺少任何上表中的关系，则验证您的模型包括以下各表：DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
 
 ### <a name="take-a-closer-look"></a>更详细地介绍
 在关系图视图中，您将看到一个箭头、 一个星号，以及显示表之间的关系的线条上的数字。
@@ -91,7 +91,7 @@ ms.locfileid: "42792027"
      ![作为-表格-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 5 课： 创建计算列](../analysis-services/lesson-5-create-calculated-columns.md)。
+请转到下一课：[第 5 课：创建计算的列](../analysis-services/lesson-5-create-calculated-columns.md)。
   
   
   

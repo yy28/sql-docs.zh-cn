@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -30,12 +30,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de0e30a3d0b7daf014753c225ca34bf7a1b0cd17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133027"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753589"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 例如， **SQL Server Locks** 对象包含名为 **Number of Deadlocks/sec** 和 **Lock Timeouts/sec**的计数器。  
@@ -105,13 +105,13 @@ ms.locfileid: "48133027"
 |[SQLServer:Locks](sql-server-locks-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行的单个锁请求的信息，如锁超时和死锁。 这个对象可有多个实例。|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存使用量的信息，如当前分配的锁结构总数。|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|提供有关用于存储对象（如存储过程、触发器和查询计划）的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓存的信息。|  
-|[SQLServer: Resource Pool Stats](sql-server-resource-pool-stats-object.md)|提供了有关资源调控器资源池统计的信息。|  
+|[SQLServer:资源池统计信息](sql-server-resource-pool-stats-object.md)|提供了有关资源调控器资源池统计的信息。|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的信息。|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|提供有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询各个方面的信息，如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 收到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句的批数。|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|提供了有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中活动事务的信息，如事务总数和快照事务数。|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|执行自定义监视。 每个计数器可以是一个自定义的存储过程，也可以是任何返回一个被监视值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
-|[SQLServer: Wait Statistics](sql-server-wait-statistics-object.md)|提供有关等待的信息。|  
-|[SQLServer: Workload Group Stats](sql-server-workload-group-stats-object.md)|提供了有关资源调控器工作负荷组统计的信息。|  
+|[SQLServer:等待统计信息](sql-server-wait-statistics-object.md)|提供有关等待的信息。|  
+|[SQLServer:工作负荷组统计信息](sql-server-workload-group-stats-object.md)|提供了有关资源调控器工作负荷组统计的信息。|  
   
 ##  <a name="SQLServerReplicationPOs"></a> SQL Server 复制性能对象  
  下表列出了为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制提供的性能对象：  

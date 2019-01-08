@@ -1,5 +1,5 @@
 ---
-title: 创建 Analysis Services 项目 (SSDT) |Microsoft 文档
+title: 创建 Analysis Services 项目 (SSDT) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1634c864ba88afbcd9489732c5507800709f9931
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025250"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503393"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>创建 Analysis Services 项目 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "34025250"
   
 5.  若要将新项目添加到现有解决方案，请在“解决方案”下拉列表中选择“添加到解决方案”。  
   
-     - 或 -  
+     -或-  
   
      若要创建新的解决方案，请在“解决方案”下拉列表中选择“创建新解决方案”。 若要为新解决方案创建新的文件夹，请选择 **“创建解决方案的目录”**。 在 **“解决方案名称”** 中，键入新解决方案的名称。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ##  <a name="bkmk_NewUsingWizard"></a> 使用现有的 Analysis Services 数据库创建新项目  
  使用导入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库向导可以基于现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象创建项目。 在基于现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，此数据库的元数据将在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目中打开。 可以在项目中修改这些对象，而不会影响原始对象，然后可以将这些对象部署到相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（如果部署属性指定该数据库）或部署到新创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以进行比较测试。 直到部署更改之后，所做的更改才会影响现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
@@ -68,7 +68,7 @@ ms.locfileid: "34025250"
   
 2.  在 **“新建项目”** 对话框的 **“Visual Studio 已安装的模板”** 类别中，选择 **“导入 Analysis Services 数据库”**。  
   
-3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击 **“确定”**。  
+3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击“确定” 。  
   
 4.  在 **“欢迎使用导入 Analysis Services 数据库向导”** 页上，单击 **“下一步”**。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "34025250"
   
 |文件夹|Description|  
 |------------|-----------------|  
-|数据源|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的数据源。 您可以使用数据源向导创建这些对象并可在数据源设计器中对其进行编辑。|  
+|“数据源”|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的数据源。 您可以使用数据源向导创建这些对象并可在数据源设计器中对其进行编辑。|  
 |数据源视图|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的数据源视图。 您可以使用数据源视图向导创建这些对象并可在数据源视图设计器中对其进行编辑。|  
 |多维数据集|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的多维数据集。 您可以使用多维数据集向导创建这些对象并可在多维数据集设计器中对其进行编辑。|  
 |维度|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的维度。 您可以使用维度向导创建这些对象并可在维度设计器中对其进行编辑。|  
@@ -127,7 +127,7 @@ ms.locfileid: "34025250"
   
 |文件类型|Description|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目定义文件 (.dwproj)|包含了有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中定义和包含的项、配置和程序集引用的元数据。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目定义文件 (.dwproj)|包含了有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中定义和包含的项、配置和程序集引用的元数据。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目用户设置 (.dwproj.user)|包含了特定用户的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目配置信息。|  
 |数据源文件 (.ds)|包含了用于定义数据源的元数据的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 元素。|  
 |数据源视图文件 (.dsv)|包含了用于定义数据源视图的元数据的 ASSL 元素。|  
@@ -145,16 +145,16 @@ ms.locfileid: "34025250"
   
 |类别|项模板|Description|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目项|多维数据集|启动多维数据集向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的多维数据集。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目项|多维数据集|启动多维数据集向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的多维数据集。|  
 ||数据源|启动数据源向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据源。|  
-||数据源视图|启动数据源视图向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据源视图。|  
+||“数据源视图”|启动数据源视图向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据源视图。|  
 ||数据库角色|向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新数据库角色，然后为此新数据库角色显示角色设计器。|  
 ||维度|启动维度向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新的数据库维度。|  
 ||挖掘结构|启动数据挖掘向导以向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目添加一个新挖掘结构及关联的挖掘模型。|  
   
-## <a name="see-also"></a>另请参阅  
- [配置 Analysis Services 项目属性 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [生成 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [部署 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>请参阅  
+ [配置 Analysis Services 项目属性 (SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [生成 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

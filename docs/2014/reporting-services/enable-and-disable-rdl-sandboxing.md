@@ -11,12 +11,12 @@ ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220657"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415275"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>启用和禁用 RDL 沙盒
   通过 RDL（报表定义语言）沙盒处理功能，您可以在多个用户使用报表服务器的单个 Web 场的情况下检测到和限制单个用户使用的特定类型的资源。 相关的示例是宿主服务方案，在此方案中，您可能维护多个用户（并且可能是不同的公司）使用的报表服务器的单个 Web 场。 作为报表服务器管理员，您可以启用此功能以帮助实现以下目标：  
@@ -35,10 +35,10 @@ ms.locfileid: "48220657"
   
 -   表达式中的命名参数。  
   
- 本主题介绍了在每个元素 <`RDLSandboxing`> RSReportServer.Config 文件中的元素。 有关如何修改此文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 服务器跟踪日志记录与 RDL 沙盒处理功能相关的活动。 有关跟踪日志的详细信息，请参阅[报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)。  
+ 本主题介绍 RSReportServer.Config 文件中 <`RDLSandboxing`> 元素内的各元素。 有关如何修改此文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 服务器跟踪日志记录与 RDL 沙盒处理功能相关的活动。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>配置示例  
- 下面的示例显示了设置和示例值 <`RDLSandboxing`> RSReportServer.Config 文件中的元素。  
+ 下面的示例显示了 RSReportServer.Config 文件中 <`RDLSandboxing`> 元素的设置和示例值。  
   
 ```  
 <RDLSandboxing>  
@@ -47,8 +47,8 @@ ms.locfileid: "48220657"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -69,10 +69,10 @@ ms.locfileid: "48220657"
 |**类型**|在 RDL 表达式内允许的成员的列表。|  
 |**Allow**|RDL 表达式中允许的一个类型或一组类型。|  
 |**Namespace**|**Allow** 的属性，它是包含应用于 Value 的一个或多个类型的命名空间。 此属性不区分大小写。|  
-|`AllowNew`|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例。<br /><br /> 注意： 当`RDLSandboxing`启用时，不能在 RDL 表达式中，而不考虑的设置创建新数组`AllowNew`。|  
+|`AllowNew`|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例。<br /><br /> 注意：当`RDLSandboxing`启用时，不能在 RDL 表达式中，而不考虑的设置创建新数组`AllowNew`。|  
 |**ReplTest1**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值 **\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
 |**成员**|对于在类型 \<Types> 元素中包括的类型的列表，为在 RDL 表达式中不允许的成员名称的列表。|  
-|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 注意：在为某一成员指定了 **Deny** 后，不允许所有类型的具有此名称的所有成员。|  
+|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 注意：在为某一成员指定了 Deny 后，不允许所有类型的具有此名称的所有成员。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>当启用 RDL 沙盒处理时使用表达式  
  您可以修改 RDL 沙盒处理功能，以便通过以下方式管理表达式使用的资源：  
@@ -119,7 +119,7 @@ ms.locfileid: "48220657"
   
 -   将该新类添加到允许列表中。  
   
- 若要添加[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]到允许列表中，.NET Framework 函数将来自 Microsoft.VisualBasic 命名空间的相应类型添加到允许列表。  
+ 若要将 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 函数添加到允许列表，请将来自 Microsoft.VisualBasic 命名空间的相应类型添加到该允许列表。  
   
  若要将 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 类型关键字添加到允许列表，请将相应的 CLR 类型添加到该允许列表。 例如，若要使用[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 关键字`Integer`，添加以下 XML 片段 **\<RDLSandboxing >** 元素：  
   
@@ -142,9 +142,9 @@ ms.locfileid: "48220657"
   
 -   在您向允许列表中的类型添加成员时。  
   
--   当您更新[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]报表服务器上。  
+-   在您更新报表服务器上的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 时。  
   
--   在您将报表服务器升级到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的更高版本时。  
+-   在您将报表服务器升级到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的更高版本时。  
   
 -   在您更新报表服务器以处理更高版本的 RDL 架构时，因为新成员可能已添加到 RDL 类型中。  
   

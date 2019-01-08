@@ -10,12 +10,12 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee69a982dd16d165be9a808cb923b342157b4cf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a114e51ad6f2841cbd6368208bac6771e3b97ed0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163547"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392741"
 ---
 # <a name="modify-user-defined-functions"></a>修改用户定义函数
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的用户定义函数。 按如下所述修改用户定义函数将不会更改函数的权限，并且也不会影响任何依赖的函数、存储过程或触发器。  
@@ -26,7 +26,7 @@ ms.locfileid: "48163547"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要修改用户定义函数，请使用：**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48163547"
   
 #### <a name="to-modify-a-user-defined-function"></a>修改用户定义函数  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -11,12 +11,12 @@ ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e701bb22a2350d90fdaf4ab461aa70063eab97b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120957"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408174"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  
@@ -28,16 +28,16 @@ ms.locfileid: "48120957"
   
  若要将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器，请完成以下任务：  
   
-1.  创建一个 SSISDB 目录（如果您尚未创建）。 有关详细信息，请参阅 [创建 SSIS 目录](catalog/ssis-catalog.md)。  
+1.  创建一个 SSISDB 目录（如果尚未创建）。 有关详细信息，请参阅 [创建 SSIS 目录](catalog/ssis-catalog.md)。  
   
-2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明： [将项目转换为项目部署模型](#convert)  
+2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明：[若要将项目转换为项目部署模型](#convert)  
   
     -   如果在 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]中创建了项目，默认情况下该项目使用项目部署模型。  
   
     -   如果您在早期版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中创建了项目，则在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中打开项目文件之后，将该项目转换为项目部署模型。  
   
         > [!NOTE]  
-        >  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到项目中的包可共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
+        >  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到项目中的包可共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
          根据您是从 **还是从** 运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，该向导将执行不同的转换任务。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48120957"
   
      有关包升级的详细信息，请参阅 [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 包升级向导升级 Integration Services 包](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-3.  将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明： [将项目部署到 Integration Services 服务器](#deploy)。  
+3.  将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明：[若要将项目部署到 Integration Services 服务器](#deploy)。  
   
 4.  （可选）创建已部署项目的环境。 有关详细信息，请参阅 [创建和映射服务器环境](../../2014/integration-services/create-and-map-a-server-environment.md)。  
   

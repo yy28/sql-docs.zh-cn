@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221287"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502912"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)
   生成一个 SQL 脚本，用来向用户授予运行报表服务器所需的报表服务器数据库和其他数据库的权限。 调用者需要能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器并能够执行该脚本。  
@@ -84,20 +84,20 @@ out Int32 HRESULT);
 |LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Local Service|错误 – 参见下方内容。|  
-|NT AUTHORITY\LocalService|Local Service|错误 – 参见下方内容。|  
+|(S-1-5-19)|Local Service|错误 - 参见下方内容。|  
+|NT AUTHORITY\LocalService|Local Service|错误 - 参见下方内容。|  
   
  在 [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]上，如果使用的是内置帐户，且报表服务器数据库是远程数据库，将返回错误。  
   
- 如果`LocalService`指定内置帐户和报表服务器数据库位于远程，则返回错误。  
+ 如果指定了 `LocalService` 内置帐户，且报表服务器数据库是远程数据库，将返回错误。  
   
  如果 *IsWindowsUser* 为 true，且 *UserName* 中提供的值需要转换，则 WMI 提供程序会确定报表服务器数据库是位于同一计算机上还是远程计算机上。 为了确定该数据库是否安装在本地，WMI 提供程序会将 DatabaseServerName 属性与下面的值列表进行对比评估。 如果发现结果匹配，则数据库为本地数据库。 否则，为远程数据库。 比较时不区分大小写。  
   
 |DatabaseServerName 的值|示例|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
 |\<MachineFQDN>|example.redmond.microsoft.com|  

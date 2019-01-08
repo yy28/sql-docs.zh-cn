@@ -16,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 961517ce1fe0c68b355b12b7749f13bdb9fb0d59
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 54551e68d80b675ba040373c5c6bc8055a2162a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570832"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415864"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51570832"
   
 ## <a name="parameters"></a>Parameters  
  *pVersionNames*  
- [输出] 包含用户工作站上可用的 LocalDB 版本的名称。  
+ [输出]包含用户的工作站上的 LocalDB 版本的名称。  
   
  *lpdwNumberOfVersions*  
  [输入/输出]在输入上持有的槽中的版本数*pVersionNames*缓冲区。   

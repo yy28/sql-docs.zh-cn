@@ -11,12 +11,12 @@ ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149627"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404882"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>创建和管理层次结构（SSAS 表格）
   可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
@@ -42,7 +42,7 @@ ms.locfileid: "48149627"
   
 2.  键入层次结构的名称。  
   
- 您可以将其他列拖到层次结构的父级别中，这将复制这些列。 将子级别放到层次结构中您希望其出现的位置。  
+ 可以将其他列拖到层次结构的父级别，这将复制这些列。 将子级别放到层次结构中您希望其出现的位置。  
   
 > [!NOTE]  
 >  如果您多选度量值以及一个或多个列，或者如果您从多个表中选择列，则在上下文菜单中将禁用“创建层次结构”命令。  
@@ -96,7 +96,7 @@ ms.locfileid: "48149627"
   
 ## <a name="see-also"></a>请参阅  
  [表格模型设计器&#40;SSAS 表格&#41;](../tabular-model-designer-ssas-tabular.md)   
- [层次结构&#40;SSAS 表格&#41;](hierarchies-ssas-tabular.md)   
- [度量值&#40;SSAS 表格&#41;](measures-ssas-tabular.md)  
+ [层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)   
+ [度量值（SSAS 表格）](measures-ssas-tabular.md)  
   
   

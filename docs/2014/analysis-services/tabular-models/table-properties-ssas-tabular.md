@@ -13,12 +13,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169017"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401030"
 ---
 # <a name="table-properties-ssas-tabular"></a>表属性（SSAS 表格）
   本主题介绍表格模型表属性。 此处所述的属性不同于“编辑表属性”对话框中的那些属性，后者可以定义从源导入哪些列。  
@@ -32,9 +32,9 @@ ms.locfileid: "48169017"
 ##  <a name="bkmk_properties"></a> 表的属性  
  **基本**  
   
-|“属性”|默认设置|Description|  
+|属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
-|**连接名称**|\<连接名称 >|与表的数据源的连接名称。<br /><br /> 若要编辑连接，请单击该按钮。|  
+|**连接名称**|\<连接名称 >|与表的数据源连接的名称。<br /><br /> 若要编辑连接，请单击该按钮。|  
 |**Hidden**|False|指定是否在报表客户端字段列表中隐藏表。|  
 |**分区**||表的分区不能显示在 **“属性”** 窗口中。 若要查看、创建或编辑分区，请单击该按钮以打开分区管理器。|  
 |**源数据**||表的源数据不能显示在 **“属性”** 窗口中。 若要查看或编辑源数据，请单击该按钮以打开“编辑表属性”对话框。|  
@@ -45,7 +45,7 @@ ms.locfileid: "48169017"
   
  有关报表属性的详细说明和配置信息，请参阅 [Power View 报表属性（SSAS 表格）](properties-ssas-tabular.md)。  
   
-|“属性”|默认设置|Description|  
+|属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**默认字段集**|||  
 |表行为|||  

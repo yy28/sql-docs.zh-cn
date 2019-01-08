@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145907"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401362"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>浏览决策树模型（数据挖掘基础教程）
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树算法预测哪些列影响基于定型集中的其余列做出的自行车购买决策。  
@@ -28,7 +28,7 @@ ms.locfileid: "48145907"
   
  在这种情况下，该模型预测 Bike Buyer，只有一个列，因此只需查看一个树。 如果有多个树，可以使用**树**框来选择另一个树。  
   
- 当您查看`TM_Decision_Tree`模型在决策树查看器中，您可以看到左侧和右侧图表的最重要的属性。 “最重要”意味着这些属性对结果的影响最大。 沿着该树越向下走的属性（图表右侧）的影响越小。  
+ 当您查看`TM_Decision_Tree`模型在决策树查看器中，您可以看到左侧和右侧图表的最重要的属性。 "最重要"意味着这些属性具有最大的影响结果。 沿着该树越向下走的属性（图表右侧）的影响越小。  
   
  在此示例中，在预测自行车购买行为时，年龄是最重要的因素。 模型按年龄对客户进行分组，然后显示每个年龄组的下一个较重要的属性。 例如，在年龄为 34 到 40 的客户组中，拥有的汽车数是仅次于年龄的预测因子。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48145907"
   
  由于您在创建结构和模型时启用了钻取，因此，可以从模型事例和挖掘结构中检索详细的信息，其中包括挖掘模型中所不包含的列（例如，emailAddress 和 FirstName）。  
   
- 有关详细信息，请参阅[钻取查询（数据挖掘）](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 有关详细信息，请参阅 [钻取查询（数据挖掘）](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 #### <a name="to-drill-through-to-case-data"></a>钻取到事例数据  
   

@@ -19,12 +19,12 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5c89e1d4ee1ec4b3590f6b9e0a738561cd61e1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63bf65118f876a0677592bfe1dd8056b05397f71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740917"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406674"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47740917"
 |“列”|类型|Description|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|显示包含来自驱动程序的 I/O 请求的 NSO 内存块的内部地址。 不可为 null。|  
-|**current_spid**|**smallint**|显示当前 SQL Server 的连接的系统进程 ID (SPID)。 不可为 null。|  
+|**current_spid**|**smallint**|显示当前 SQL Server 的连接的系统进程 id (SPID)。 不可为 null。|  
 |**request_type**|**nvarchar(60)**|显示 I/O 请求包 (IRP) 类型。 可能的请求类型为 REQ_PRE_CREATE、REQ_POST_CREATE、REQ_RESOLVE_VOLUME、REQ_GET_VOLUME_INFO、REQ_GET_LOGICAL_NAME、REQ_GET_PHYSICAL_NAME、REQ_PRE_CLEANUP、 REQ_POST_CLEANUP、REQ_CLOSE、REQ_FSCTL、REQ_QUERY_INFO、REQ_SET_INFO、 REQ_ENUM_DIRECTORY、REQ_QUERY_SECURITY 和 REQ_SET_SECURITY。 不可为 Null。|  
 |**request_state**|**nvarchar(60)**|显示 NSO 中 I/O 请求的状态。 可能的值为 REQ_STATE_RECEIVED、REQ_STATE_INITIALIZED、REQ_STATE_ENQUEUED、 REQ_STATE_PROCESSING、REQ_STATE_FORMATTING_RESPONSE、REQ_STATE_SENDING_RESPONSE、REQ_STATE_COMPLETING 和 REQ_STATE_COMPLETED。 不可为 null。|  
 |**request_id**|**int**|显示驱动程序分配给此请求的唯一请求 ID。 不可为 null。|  
@@ -42,10 +42,10 @@ ms.locfileid: "47740917"
 |**handle_id**|**int**|指示命名空间句柄 ID。 这是 NSO 特定的标识符，并且在实例之间是唯一的。 不可为 null。|  
 |**client_thread_id**|**varbinary(8)**|显示源自该请求的客户端应用程序的线程 ID。<br /><br /> **\*\* 警告\* \*** 这是有意义的仅当客户端应用程序运行在 SQL Server 的同一台计算机上。 当客户端应用程序正在远程运行时**client_thread_id**显示某些系统进程，用于代表远程客户端的工作的线程 ID。<br /><br /> 可以为 Null。|  
 |**client_process_id**|**varbinary(8)**|如果客户端应用程序在 SQL Server 所在的同一台计算机上运行，则显示客户端应用程序的进程 ID。 对于远程客户端，这将显示代表客户端应用程序工作的系统进程 ID。 可以为 Null。|  
-|**handle_context_address**|**varbinary(8)**|显示与客户端的句柄相关联的内部 NSO 结构的地址。 可以为 Null。|  
+|**handle_context_address**|**varbinary(8)**|显示与客户端的句柄关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID 以及与该句柄相关联的所有请求。 它是返回的值**get_filestream_transaction_context**函数。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

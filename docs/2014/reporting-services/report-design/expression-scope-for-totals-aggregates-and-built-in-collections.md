@@ -11,12 +11,12 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204877"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412024"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）
   在编写表达式时，您会发现在很多情况下都会使用“作用域”  一词。 作用域可以指定要用于计算表达式的数据、呈现的页面上的文本框集、可基于切换显示或隐藏的报表项集。 “作用域”  一词出现在与表达式计算、聚合函数语法和条件可见性相关的主题中以及有关这些范畴的错误消息中。 使用以下说明有助于区分“作用域”  适用的含义：  
@@ -71,7 +71,7 @@ ms.locfileid: "48204877"
      以下表达式生成介于 SellStartDate 和 LastReceiptDate 之间的间隔年。 这些字段在两个不同的数据集内，即 DataSet1 和 DataSet2。 [First 函数（报表生成器和 SSRS）](report-builder-functions-first-function.md)是一个聚合函数，它返回 DataSet1 中 SellStartDate 的第一个值和 DataSet2 中 LastReceiptDate 的第一个值。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **域作用域** ：也称作同步作用域。 适用于针对嵌套数据区域的表达式计算的一种数据作用域类型。 域作用域用于指定跨某一组的所有实例的聚合，以便可以对齐并轻松地比较嵌套实例。 例如，您可以对齐在表中嵌入的迷你图的范围和高度，以便值排成一行。  
@@ -133,7 +133,7 @@ ms.locfileid: "48204877"
 ##  <a name="Indicators"></a> 为指示器同步范围  
  若要指定要用于指示器集的数据值，您必须指定一个作用域。 根据包含指示器的数据区域的布局，您可以指定一个作用域或包含作用域。 例如，在与销售额类别相关联的组标题行中，一组箭头（向上、向下、横向）可以指示相对于阈值的销售值。 包含作用域是包含指示器的表或矩阵的名称。  
   
- 有关详细信息，请参阅[设置同步作用域（报表生成器和 SSRS）](set-synchronization-scope-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [设置同步作用域（报表生成器和 SSRS）](set-synchronization-scope-report-builder-and-ssrs.md)。  
   
   
   
@@ -151,27 +151,27 @@ ms.locfileid: "48204877"
   
  在 Tablix 数据区域中，若要创建一个明细效果（其中，您单击文本框可以展开表以便显示更多的数据），您必须对组设置 **“可见性”** 属性，并且在与某一包含组相关联的组标题中选择作为切换文本框。  
   
- 有关详细信息，请参阅[为项添加展开或折叠操作（报表生成器和 SSRS）](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [为项添加展开或折叠操作（报表生成器和 SSRS）](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
   
   
 ##  <a name="Sort"></a> 指定用于同步排序顺序的排序表达式  
  在您向某一表列添加交互式排序按钮时，可为具有公共包含作用域的多个项同步排序。 例如，您可以向某一矩阵中的列标题添加一个排序按钮，并且将包含作用域指定为绑定到该矩阵的数据集的名称。 在用户单击排序按钮时，不仅对矩阵行进行排序，而且还对绑定到相同数据集的图表的图表序列组进行排序。 这样，可以同步依赖于该数据集的所有数据区域，以便显示相同的排序顺序。  
   
- 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
   
   
 ##  <a name="Nulls"></a> 取消单元中的 Null 值或零值  
- 对于大多数报表，计算的作用域为组时可以创建多个具有零 (0) 或 Null 值的单元。 若要减少报表中的混乱，请添加在聚合值为 0 时返回空白的表达式。 详细信息，请参阅"示例取消 Null 或零值的"中[表达式示例&#40;报表生成器和 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
+ 对于大多数报表，计算的作用域为组时可以创建多个具有零 (0) 或 Null 值的单元。 若要减少报表中的混乱，请添加在聚合值为 0 时返回空白的表达式。 有关详细信息，请参阅 [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)。  
   
   
   
 ## <a name="see-also"></a>请参阅  
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [组表达式示例（报表生成器和 SSRS）](group-expression-examples-report-builder-and-ssrs.md)   
- [创建递归层次结构组&#40;报表生成器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式（报表生成器和 SSRS）](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

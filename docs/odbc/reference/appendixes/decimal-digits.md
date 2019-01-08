@@ -16,12 +16,12 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506077"
 ---
 # <a name="decimal-digits"></a>十进制数字
 *十进制数字*的 decimal 和 numeric 数据类型指小数点右侧或数据的小数位数的最大位数。 近似的浮点数字列或参数，小数位数是未定义，因为小数点右侧的位数不固定。 对于 datetime 或间隔秒数部分包含的数据，十进制数字被指数据的秒数部分在小数点右侧的位数。  
@@ -33,7 +33,7 @@ ms.locfileid: "47694445"
 |SQL 类型|十进制数字|  
 |--------------|--------------------|  
 |所有字符和二进制类型 [a]|不适用|  
-|SQL_DECIMAL<br />SQL_NUMERIC|定义的小数点右侧的数字个数。 例如，定义为 NUMERIC(10,3) 列的小数位数为 3。 这可以是负数，而无需使用指数表示法; 支持非常大的数字的存储例如，"12000"可以存储为"12"作为增量小数。|  
+|SQL_DECIMAL<br />SQL_NUMERIC|定义的小数点右侧的数字个数。 例如，定义为 NUMERIC(10,3) 列的小数位数为 3。 这可以是负数，而无需使用指数表示法; 支持非常大的数字的存储例如，"12000"可以存储为"12"小数位数为-3。|  
 |SQL_DECIMAL 和 SQL_NUMERIC [a] 以外的所有精确数字类型|0|  
 |所有近似数据类型 [a]|不适用|  
 |SQL_TYPE_DATE，并使用没有秒组件 [a] 的所有间隔类型|不适用|  

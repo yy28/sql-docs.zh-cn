@@ -14,12 +14,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196987"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420388"
 ---
 # <a name="connect-to-a-data-mining-server"></a>连接到数据挖掘服务器
   ![连接按钮](media/misc-connection.gif "连接按钮")  
@@ -68,7 +68,7 @@ ms.locfileid: "48196987"
   
  **我的连接; 断开未丢失我的所有工作？**  
   
- 如果终止与服务器的连接，您的结果和数据将不会丢失，因为它们存储在 Excel 中。 但是，如果您创建了一些临时模型，则在一个较短的时间后这些模型将从服务器中删除。 因此，如果您暂时失去连接，有时候这些模型将不会被删除。  
+ 如果终止与服务器的连接，您的结果和数据将不会丢失，因为它们存储在 Excel 中。 但是，如果您创建了一些临时模型，则在一个较短的时间后这些模型将从服务器中删除。 因此如果暂时失去连接，一段时间模型不会被删除。  
   
  生成的任何数据或结果将不丢失，因为所有报表和表存储在 Excel 中。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48196987"
   
 2.  查看连接活动日志，并且通过查看列和可预测输出定位模型（举例）。  
   
-     高级用户：如果您熟悉 DMX 或 XMLA，则可以将语句复制到文件以供以后使用。  
+     高级的用户：如果您熟悉 DMX 或 XMLA，您可以将语句复制到文件以备今后使用。  
   
 3.  在您找到临时模型和结构的名称，打开**管理模型**和选择的模型。  
   

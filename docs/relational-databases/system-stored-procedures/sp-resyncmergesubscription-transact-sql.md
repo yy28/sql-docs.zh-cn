@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_resyncmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fb59abb80a1a7f8454d7aa97f227e4746675b03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 087bb377be29db42f4e58ede6cfb0a823459501b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810381"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747549"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
  值为**0**有关*resync_type*参数，它将所有更改重新都应用自初始快照后，可能会占用大量资源，但也许非常少比完全重新初始化。 例如，如果初始快照在一个月前传递，则该值将使得重新应用上个月的数据。 如果初始快照包含 1 GB 的数据，但是在上个月开始的更改量包含 2 MB 的已更改数据，则重新应用数据与重新应用全部 1 GB 快照相比更有效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_resyncmergesubscription**。  
   
 ## <a name="see-also"></a>请参阅  

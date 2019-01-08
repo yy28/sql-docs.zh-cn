@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e9f8894376712472c13479a32503954ad2694d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506325"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -67,13 +67,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
  <sup>*</sup> 键的数据类型与相同基表中的全文键列的数据类型。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此函数是公用的，因此不需要任何特殊权限。  
   
 ## <a name="remarks"></a>备注  
  下表说明了使用一个、两个或三个参数的效果。  
   
-|参数列表|结果|  
+|此参数列表...|具有此结果...|  
 |--------------------------|----------------------|  
 |*table_id*|当仅调用使用了*table_id*参数，sp_fulltext_keymappings 返回所有全文键 (Key) 值从指定的基础表，以及与每个键对应的 DocId。 包括挂起删除的键。<br /><br /> 此函数对于排除各种问题十分有用。 如果所选的全文键不是整数数据类型，它对于查看全文索引内容尤为有用。 这涉及到联接的结果及 sp_fulltext_keymappings **sys.dm_fts_index_keywords_by_document**。 有关详细信息，请参阅[sys.dm_fts_index_keywords_by_document &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> 但是，我们通常建议在可能的情况下使用指定了特定全文键或 DocID 的参数执行 sp_fulltext_keymappings。 与返回完整的键映射相比，这种方法要高效许多，尤其是在处理超大表的时候，对于这些表，返回整个键映射的性能开销可能过于巨大。|  
 |*table_id*， *docid*|如果只有*table_id*并*docid*指定了*docid*必须是非 Null 并在指定的表中指定一个有效的 DocId。 若要隔离基表中与特定全文索引的 DocID 对应的自定义全文键，此函数十分有用。|  

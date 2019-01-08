@@ -10,15 +10,15 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce83a5fae673d32fd86523fa13ef8b67b74b780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 267d39335cd0bf74134030f3bb2af4a11e652319
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137599"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391061"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>对高可用性、灾难恢复的 SQL Server Native Client 支持
-  本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的支持（[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 新增功能）。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的支持（[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 新增功能）。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本：可读辅助副本 （AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序连接到故障转移的可用性组中的某个数据库，则原始连接将被断开，并且应用程序必须打开一个新连接，以便在故障转移后继续工作。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "48137599"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
  在连接到 SQL Server 2012 可用性组侦听器或 SQL Server 2012 故障转移群集实例时，应始终指定 `MultiSubnetFailover=Yes`。 `MultiSubnetFailover` 可加快 SQL Server 2012 中所有可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移过程中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将会主动重试 TCP 连接。  
   
- `MultiSubnetFailover` 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 当为连接指定 `MultiSubnetFailover=Yes` 时，客户端将以比操作系统的默认 TCP 重新传输间隔更快的速度重试建立 TCP 连接。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
+ `MultiSubnetFailover` 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 当`MultiSubnetFailover=Yes`指定对于连接，客户端会比操作系统的默认 TCP 重新传输间隔更快地重试 TCP 连接尝试。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
   
  有关连接字符串关键字的详细信息，请参阅 [将连接字符串关键字用于 SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- 指定`MultiSubnetFailover=Yes`时连接到的内容以外的可用性组侦听器或故障转移群集实例可能会导致性能下降，和不受支持。  
+ 如果在连接到非可用性组侦听器或非故障转移群集实例时指定了 `MultiSubnetFailover=Yes`，可能会对性能造成负面影响，因此不支持这样做。  
   
  使用以下准则可以连接到可用性组或故障转移群集实例中的服务器：  
   
@@ -56,23 +56,23 @@ ms.locfileid: "48137599"
   
 2.  如果应用程序使用 `ApplicationIntent=ReadWrite`（在下面论述）且将辅助副本位置配置为只读访问。  
   
- 如果主副本配置为拒绝只读工作负荷且连接字符串包含连接将失败`ApplicationIntent=ReadOnly`。  
+ 如果将主副本配置为拒绝只读工作负荷且连接字符串包含 `ApplicationIntent=ReadOnly`，连接将失败。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>升级以便使用来自数据库镜像的多子网群集  
  如果连接字符串中已存在 `MultiSubnetFailover` 和 `Failover_Partner` 连接关键字，将出现连接错误。 如果使用 `MultiSubnetFailover` 且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误。  
   
- 如果您将当前使用数据库镜像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序升级到多子网方案，则应删除 `Failover_Partner` 连接属性并且使用设置为 `MultiSubnetFailover` 的 `Yes` 替换它，并且还应使用可用性组侦听器替换连接字符串中的服务器名称。 如果连接字符串使用`Failover_Partner`和`MultiSubnetFailover=Yes`，驱动程序将生成错误。 但是，如果连接字符串使用`Failover_Partner`并`MultiSubnetFailover=No`(或`ApplicationIntent=ReadWrite`)，该应用程序将使用数据库镜像。  
+ 如果您将当前使用数据库镜像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序升级到多子网方案，则应删除 `Failover_Partner` 连接属性并且使用设置为 `MultiSubnetFailover` 的 `Yes` 替换它，并且还应使用可用性组侦听器替换连接字符串中的服务器名称。 如果连接字符串使用 `Failover_Partner` 和 `MultiSubnetFailover=Yes`，则驱动程序将生成错误。 但是，如果连接字符串使用 `Failover_Partner` 和 `MultiSubnetFailover=No`（或 `ApplicationIntent=ReadWrite`），则应用程序将使用数据库镜像。  
   
  如果数据库镜像用于可用性组中的主数据库，并且 `MultiSubnetFailover=Yes` 用于连接到主数据库（而非连接到可用性组侦听器）的连接字符串中，则驱动程序将返回错误。  
   
 ## <a name="specifying-application-intent"></a>指定应用程序意向  
  如果 `ApplicationIntent=ReadOnly`，在连接到某一启用了 AlwaysOn 的数据库时，客户端将请求读取工作负荷。 服务器在连接时和在执行 USE 数据库语句的过程中将强制该意向，但仅针对启用了 AlwaysOn 的数据库。  
   
- `ApplicationIntent`关键字不适用于早期的只读数据库。  
+ `ApplicationIntent` 关键字不适用于早期的只读数据库。  
   
  数据库可允许或禁止目标 AlwaysOn 数据库上的读取工作负荷。 (这通过`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`并`SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。)  
   
- `ApplicationIntent`关键字用于启用只读路由。  
+ `ApplicationIntent` 关键字用于启用只读路由。  
   
 ## <a name="read-only-routing"></a>只读路由  
  只读路由是一项可确保数据库只读副本的可用性的功能。 启用只读路由：  

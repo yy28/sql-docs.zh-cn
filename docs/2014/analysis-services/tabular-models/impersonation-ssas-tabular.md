@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145592"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391860"
 ---
 # <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
@@ -38,7 +38,7 @@ ms.locfileid: "50145592"
   
  用于模拟的凭据不同于当前登录的用户所采用的凭据。 在创作模型时，将登录的用户凭据用于特定的客户端操作。  
   
- 理解指定和保护模拟凭据的方式以及当前登录用户的凭据和其他凭据所用于的上下文之间的差异是十分重要的。  
+ 请务必了解如何指定和保护模拟凭据，以及在这两个当前登录用户的凭据以及何时需要使用其他凭据的上下文之间的差异。  
   
  **理解服务器端凭据**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "50145592"
   
  同样，对于已创建的现有模型，您可以使用 **“编辑表属性”** 对话框预览并筛选导入到表中的数据。 此处的预览和筛选功能在功用上与“表导入向导”的 **“选择表和视图”** 页上的 **“预览并筛选”** 功能相同。  
   
- “预览并筛选”功能与“表属性”和“分区管理器”对话框均为进程中客户端操作；也就是说，在此操作过程中所做的工作不同于连接到数据源和从数据源提取数据的方式；后两种操作都是服务器端操作。 用于预览和筛选数据的凭据是用户当前登录所用的凭据。 客户端操作始终使用当前用户的 Windows 凭据来连接到数据源。  
+ “预览并筛选”功能与“表属性”和“分区管理器”对话框均为进程中客户端操作；也就是说，在此操作过程中所做的工作不同于连接到数据源和从数据源提取数据的方式；后两种操作都是服务器端操作。 用于预览和筛选数据的凭据是用户当前登录所用的凭据。 客户端操作始终使用当前用户的 Windows 凭据连接到数据源。  
   
  由于在服务器端和客户端操作期间对凭据的使用是分隔开来的，因此，可能导致用户使用“预览并筛选”功能或“表属性”对话框所看到的内容（客户端操作）与导入或处理期间提取的数据（服务器端操作）出现不匹配。 如果当前登录的用户所用的凭据和指定的模拟凭据不同，则根据数据源所要求的凭据，在 **“预览并筛选”** 功能或 **“表属性”** 对话框中看到的数据与在导入或处理期间提取的数据可能会不同。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "50145592"
   
  对于部署到 Analysis Services 服务器的模型，可以通过单击省略号 （...） 的配置模拟信息**数据源模拟信息**属性中的**数据库属性**对话框中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)   
  [数据源（SSAS 表格）](../data-sources-ssas-tabular.md)   
  [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)  

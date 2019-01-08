@@ -1,5 +1,5 @@
 ---
-title: 创建报表数据源 |Microsoft 文档
+title: 创建报表数据源 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf4b8048392121c37b6f4f13584aa2fd18a90984
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6e811f9114a484f7b0b68ca9782b9b60e366383
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026964"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393320"
 ---
 # <a name="create-a-report-data-source"></a>创建报表数据源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "34026964"
   
 5.  在 **“连接字符串”** 中，指定 Analysis Services 服务器名称、数据库名称、多维数据集名称和所有可选设置。  
   
-     连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  如果有多个多维数据集，必须指定多维数据集名称。  
   
-     （可选）多维数据集可以有透视，这些透视为用户提供一个选择视图，其中在客户端上只能看到某些维度和/或度量值组。 若要指定透视，请输入透视名称作为 Cube 属性的值： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     （可选）多维数据集可以有透视，这些透视为用户提供一个选择视图，其中在客户端上只能看到某些维度和/或度量值组。 若要指定透视，请输入透视名称作为 Cube 属性的值： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     （可选）多维数据集可以具有为模型内各种语言指定的元数据和数据翻译。 为了查看翻译（数据和元数据），需要向连接字符串添加“Locale Identifier”属性： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     （可选）多维数据集可以具有为模型内各种语言指定的元数据和数据翻译。 为了查看翻译 （数据和元数据） 需要将"区域设置标识符"属性添加到连接字符串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  在 **“凭据”** 中，指定报表服务器如何获取访问外部数据源的凭据。  
   

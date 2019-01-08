@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c43ec2c3b010d43c25b1b9f2740480952a9e9ff8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660137"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402322"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 
@@ -82,7 +82,7 @@ ms.locfileid: "51660137"
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| | **名称** | 此用于标识出虚拟设备集。 必须遵循的规则 CreateFileMapping() 所使用的名称。 除反斜杠之外的任何字符 (\)可能会使用。 这是一个字符串。 建议将用户的产品或公司名称和数据库名称作为字符串的前缀。 |
+| | **名称** | 此用于标识出虚拟设备集。 必须遵循的规则 CreateFileMapping() 所使用的名称。 除反斜杠之外的任何字符 (\)可能会使用。 这是一个字符串。 建议前缀与用户的产品或公司名称和数据库名称的字符串。 |
 | |**cfg** | 这是虚拟设备集的配置。 有关详细信息，请参阅本文档后面的"配置"。
 
 | 返回值 | 参数 | 解释
@@ -163,7 +163,7 @@ ms.locfileid: "51660137"
 | ----- | ----- | ------ |
 | |**timeout** |此为等待的时间（毫秒）。 使用 INFINTE 以无限期等待。 使用 0 以轮询一条命令。 如果当前无可用的命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端则会决定后续操作。
 | |**超时** |此为等待的时间（毫秒）。 使用 INFINTE 或负值以无限期等待。 使用 0 以轮询一条命令。 如果在超时过期之前无可用的命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端则会决定后续操作。
-| |**ppCmd** |成功返回命令后，参数将返回要执行的命令的地址。 返回的内存是只读的。 完成命令后，此指针会被传递到 CompleteCommand 例程。 有关每条命令的详细信息，请参阅本文档后面的“命令”。
+| |**ppCmd** |成功返回命令后，参数将返回要执行的命令的地址。 返回的内存是只读的。 完成命令后，此指针会被传递到 CompleteCommand 例程。 有关每个命令的详细信息，请参阅本文档后面的"命令"。
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
@@ -177,7 +177,7 @@ ms.locfileid: "51660137"
 
 ## <a name="clientvirtualdevicecompletecommand"></a>ClientVirtualDevice::CompleteCommand
 
-**用途**此函数用于通知命令已完成的 SQL Server。 应返回相应的完成命令信息。 有关详细信息，请参阅本文档后面的“命令”。
+**用途**此函数用于通知命令已完成的 SQL Server。 应返回相应的完成命令信息。 有关详细信息，请参阅本文档后面的"命令"。
 
 **语法** 
 
@@ -193,7 +193,7 @@ ms.locfileid: "51660137"
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
 | |**pCmd** |这是命令从 ClientVirtualDevice::GetCommand 以前返回的地址。
-| |**completionCode** |这是表示完成状态的状态代码。 必须为所有命令返回此参数。 返回的代码应适合正在执行的命令。 ERROR_SUCCESS 用于在所有情况下代表成功执行的命令。 有关可能代码的完整列表，请参阅文件 vdierror.h。 有关每条命令的典型状态代码列表，请参阅本文档后面的“命令”。
+| |**completionCode** |这是表示完成状态的状态代码。 必须为所有命令返回此参数。 返回的代码应适合正在执行的命令。 ERROR_SUCCESS 用于在所有情况下代表成功执行的命令。 有关可能代码的完整列表，请参阅文件 vdierror.h。 在本文档后面将在"命令"中显示的每个命令的典型状态代码列表。
 | |**bytesTransferred** |这是已成功传输的字节数。 仅对数据传输命令 Read 和 Write 返回此值。
 | |**position** |这是针对 GetPosition 命令仅响应。
         
@@ -224,7 +224,7 @@ ms.locfileid: "51660137"
 | ----- | ----- | ------ |
 | |**NOERROR**|已成功发布中止通知。
 
-**备注**在任何时候，客户端可以选择中止 BACKUP 或 RESTORE 操作。 此例程会发出应停止所有操作的信号。 整个虚拟设备组的状态将进入异常终止状态。 在所有设备上未返回进一步的命令。 自动完成所有未完成的命令，返回 ERROR_OPERATION_ABORTED 作为完成代码。 在 ClientVirtualDeviceSet::Close 安全终止任何对提供到客户端的缓冲区未完成的使用后，客户端应调用它。 有关详细信息，请参阅本文档前面的“异常终止”部分。
+**备注**在任何时候，客户端可以选择中止 BACKUP 或 RESTORE 操作。 此例程会发出应停止所有操作的信号。 整个虚拟设备组的状态将进入异常终止状态。 在所有设备上未返回进一步的命令。 自动完成所有未完成的命令，返回 ERROR_OPERATION_ABORTED 作为完成代码。 在 ClientVirtualDeviceSet::Close 安全终止任何对提供到客户端的缓冲区未完成的使用后，客户端应调用它。 有关详细信息，请参阅本文档前面的"异常终止"。
 
 ## <a name="clientvirtualdevicesetclose"></a>ClientVirtualDeviceSet::Close
 
@@ -249,7 +249,7 @@ ms.locfileid: "51660137"
 **备注**Close 的调用是应释放使用的虚拟设备集的所有资源的客户端声明。 调用 Close 前，客户端须确保已终止涉及到数据缓冲区和虚拟设备的所有活动。 Close 会使由 OpenDevice 返回的所有虚拟设备接口失效。
 在返回 Close 调用后，允许客户端在虚拟设备集接口上发出一个 Create 调用。 此类调用将为后续的 BACKUP 或 RESTORE 操作创建新的虚拟设备集。
 如果在一台或多台虚拟设备处于打开状态时调用 Close，则会返回 VD_E_OPEN。 在这种情况下，如果可能，将内部触发 SignalAbort 以确保正确关闭。 将释放 VDI 资源。 客户端应等待每个设备上调用 clientvirtualdeviceset:: Close 前发出的 VD_E_CLOSE 指示。 如果客户端知道虚拟设备集已处于异常终止状态，则它应不会收到 GetCommand 发出的 VD_E_CLOSE 指示，并且共享缓冲区上的活动被终止后，它则可以调用 ClientVirtualDeviceSet::Close。
-有关详细信息，请参阅本文档前面的“异常终止”部分。
+有关详细信息，请参阅本文档前面的"异常终止"。
 
 ## <a name="clientvirtualdevicesetopeninsecondary"></a>ClientVirtualDeviceSet::OpenInSecondary
 

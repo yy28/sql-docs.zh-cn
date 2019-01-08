@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
-ms.openlocfilehash: f60b16d1fba4e6c6b46615e5a5fd512db20ab854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3288bb18a4bc8d87b9be1eb8f57bbc66555b9db5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703795"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401344"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上 SQL Server 的性能功能演练
 
@@ -64,7 +64,7 @@ ms.locfileid: "47703795"
 SQL Server 提供的内存中 OLTP 功能可极大提升应用程序系统的性能。  《评估指南》中的本节内容将介绍如何创建存储在内存中的内存优化表，以及创建无需编译或解释即可访问表的本机编译的存储过程。
 
 ### <a name="configure-database-for-in-memory-oltp"></a>配置内存中 OLTP 的数据库
-1. 建议将数据库的兼容级别至少设置为 130，以使用内存中 OLTP。  使用以下查询检查 AdventureWorks 的当前兼容性级别：  
+1. 建议将数据库设置为至少 130，以使用内存中 OLTP 的兼容性级别。  使用以下查询检查 AdventureWorks 的当前兼容性级别：  
 
    ```sql
    USE AdventureWorks
@@ -83,7 +83,7 @@ SQL Server 提供的内存中 OLTP 功能可极大提升应用程序系统的性
    GO
    ```
 
-2. 当事务同时涉及基于磁盘的表和内存优化表时，事务的内存优化部分必须在名为“快照”的事务隔离级别运行。  若要可靠地对跨容器事务中的内存优化表强制执行此级别，请执行以下脚本：
+2. 当事务涉及基于磁盘的表和内存优化表时，必须在事务隔离级别运行事务的内存优化部分名为快照。  若要可靠地对跨容器事务中的内存优化表强制执行此级别，请执行以下脚本：
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
@@ -159,7 +159,7 @@ SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL �
 ### <a name="learn-more-about-in-memory-oltp"></a>了解有关内存中 OLTP 的详细信息
 有关内存中 OLTP 的详细信息，请参阅以下主题：
 
-- [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [快速入门 1:更快的 Transact SQL 性能的内存中 OLTP 技术](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [迁移到内存中 OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [通过使用内存优化获得更快的临时表和表变量](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [内存使用情况的监视和故障排除](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

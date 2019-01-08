@@ -13,12 +13,12 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843075"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409494"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须连接到你想要迁移的 MySQL 数据库。 连接时，SSMA 中获取有关所有 MySQL 架构的元数据，然后在 MySQL 的元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  
@@ -71,7 +71,7 @@ ms.locfileid: "47843075"
   
     在单击"配置"按钮，会出现一个对话框。 若要使用加密，而连接到 MySQL 数据库，以下三个证书中的文件的对话框中的路径必须被定义 [隐私增强邮件证书 (PEM)]:  
   
-    -   **SSL 证书颁发机构：** 信任 SSL Ca 的一系列指定文件的路径。  
+    -   **SSL 证书颁发机构：** 指定文件的路径具有的信任 SSL Ca 的列表。  
   
     -   **SSL 证书：** 指定要用于建立安全连接的 SSL 证书文件的名称。  
   

@@ -1,5 +1,5 @@
 ---
-title: 自定义挖掘模型和结构 |Microsoft 文档
+title: 自定义挖掘模型和结构 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57679e535c796f018cd535773e3766b54243e63e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c4c951d294ab57e19b4114380fd4692b9fc8151
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019594"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411364"
 ---
 # <a name="customize-mining-models-and-structure"></a>自定义挖掘模型和结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34019594"
   
 -   删除具有很多唯一值的列，或删除实际是参考数据、对分析没有用（如地址或中间名）的列。  
   
- 不必实际从挖掘结构删除列；您可以仅将列标记为 **“忽略”**。 将列从此挖掘模型中删除，但它仍可用于结构内的其他挖掘模型或在钻取查询中引用。  
+ 您不必实际从挖掘结构中; 删除列您可以只将列标记为**忽略**。 将列从此挖掘模型中删除，但它仍可用于结构内的其他挖掘模型或在钻取查询中引用。  
   
 ### <a name="creating-aliases-for-model-columns"></a>为模型列创建别名  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建挖掘模型时，它将使用挖掘结构中的列名称。 您可以为挖掘模型中的任何列添加别名。 这样可以使列内容或用法更易于理解，还可以缩短名称从而便于创建查询。 当您要创建列的副本并使用描述性名称时，别名也很有帮助。  
@@ -87,14 +87,14 @@ ms.locfileid: "34019594"
   
  每个算法类型的主题还将列出可以与基于该算法的模型一起使用的预测函数。  
   
-|属性名称|适用于|  
+|属性名称|适用对象|  
 |-------------------|----------------|  
 |AUTO_DETECT_PERIODICITY|[Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 神经网络算法技术参考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
@@ -125,8 +125,8 @@ ms.locfileid: "34019594"
 |SPLIT_METHOD|[Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [物理体系结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [物理体系结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
   

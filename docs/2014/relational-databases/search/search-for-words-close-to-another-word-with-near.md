@@ -20,12 +20,12 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502842"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
   可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函数中使用邻近词 (NEAR) 来搜索相互邻近的字词或短语。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以按任意顺序或您指定的顺序搜索词或短语。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 同时支持以前[通用邻近词](#Generic_NEAR)，其现已弃用，并且[自定义邻近词](#Custom_NEAR)，这是中的新增功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
@@ -51,7 +51,7 @@ ms.locfileid: "48149017"
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [，...*n* ]  
   
  |  
   
@@ -107,9 +107,9 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- 不能将自定义邻近词与通用邻近词 (*term1* NEAR *term2*)、年代词（ISABOUT …）或加权词（FORMSOF …）组合使用。  
+ 不能合并自定义邻近词与通用邻近词 (*term1* NEAR *term2*)、 年代词 (ISABOUT...) 或加权的词 (FORMSOF...)。  
   
-### <a name="example-using-the-custom-proximity-term"></a>示例：使用自定义邻近词  
+### <a name="example-using-the-custom-proximity-term"></a>例如：使用自定义邻近词  
  以下示例在 `Production.Document` 示例数据库的 `AdventureWorks2012` 表中搜索包含与字词“bracket”在同一文档中的字词“reflector”的所有文档摘要。  
   
 ```  
@@ -156,7 +156,7 @@ GO
 ##  <a name="Generic_NEAR"></a> 不推荐使用的通用邻近词  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我们建议你使用[自定义邻近词](#Custom_NEAR)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我们建议您使用 [自定义邻近词](#Custom_NEAR)。  
   
  通用邻近词表明指定的搜索词必须全部出现在一个文档中匹配项才能返回，而与搜索词之间非搜索词的数目（距离）无关。 基本语法为：  
   
@@ -184,9 +184,9 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- 不能将通用邻近词与 `NEAR((term1,term2),5)`等自定义邻近词、加权词 (ISABOUT …) 或年代词 (FORMSOF …) 组合使用。  
+ 您不能合并通用邻近词与自定义邻近词，如`NEAR((term1,term2),5)`、 加权的词 (ISABOUT...) 或年代词 (FORMSOF...)。  
   
-### <a name="example-using-the-generic-proximity-term"></a>示例： 使用通用邻近词  
+### <a name="example-using-the-generic-proximity-term"></a>例如：使用通用邻近词  
  下面的示例使用通用邻近词在一个有字词“bracket”的文档中搜索字词“reflector”。  
   
 ```  

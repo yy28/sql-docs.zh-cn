@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393750"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   开头[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，报表部件可以发布到报表服务器和重复使用在其他报表中以及由其他用户，如果他们具有适当的权限。  
@@ -52,7 +52,7 @@ ms.locfileid: "48123247"
   
  (*) 表明它是在此版本中新推出的。  
   
-|“属性”|Description|报表部件<br /><br /> 库搜索条件|  
+|属性|Description|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
 |“属性”|这是用户可在报表部件库中搜索的条件之一。|用户帐户控制|  
 |Description|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|用户帐户控制|  
@@ -92,10 +92,10 @@ ms.locfileid: "48123247"
 -   报表部件使用与现有“资源”项类型相同的权限策略。 在一个文件夹内，从安全性继承角度来说，传统的资源项与报表部件之间没有差异。 报表部件将继承与同一文件夹中的图像相同的权限策略。 在需要这一区别时，可为所需的报表部件配置项级别安全性。 否则，应将报表部件放置于配置了正确权限的单独文件夹中。  
   
 ## <a name="see-also"></a>请参阅  
- [报表部件和报表生成器中的数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [报表生成器中的报表部件和数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [报表部件的常规属性页&#40;报表管理器&#41;](../general-properties-page-report-parts-report-manager.md)   
  [移动项页&#40;报表管理器&#41;](../move-items-page-report-manager.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [报表设计器中的报表部件 (SSRS)](report-parts-in-report-designer-ssrs.md)  
   

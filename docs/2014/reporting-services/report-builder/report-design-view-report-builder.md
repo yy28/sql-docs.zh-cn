@@ -22,12 +22,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439519"
 ---
 # <a name="report-design-view-report-builder"></a>报表设计视图（报表生成器）
   报表生成器窗口旨在帮助您轻松组织报表资源并快速生成所需报表。 设计图面位于窗口中央，功能区位于上方，“报表数据”、“分组”和“属性”窗格及“报表部件库”分别位于左侧、下方和右侧。 设计图面用于添加和组织报表项。 功能区将传统菜单项分为多个类别，使您可以轻松查找和使用它们。 这些窗格可帮助您添加、选择和组织报表资源，以及更改报表项属性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48225027"
 ##  <a name="Ribbon"></a> 功能区  
  功能区用于帮助您快速查找完成任务所需的命令。 命令以逻辑组的形式进行组织，而逻辑组集中在选项卡下。 每个选项卡与一种活动类型（如插入报表项或设置文本格式）相关。  
   
- 在报表设计视图中，功能区划分为以下选项卡：主文件夹、插入和视图。 如果无法在功能区上找到某个任务，则可以单击某些功能区组右下部的箭头，打开与其相关的对话框。 不能最小化或删除功能区，或用工具栏和菜单将其替换。  
+ 在报表设计视图中，在功能区划分为以下选项卡：主文件夹、 插入和视图。 如果无法在功能区上找到某个任务，则可以单击某些功能区组右下部的箭头，打开与其相关的对话框。 不能最小化或删除功能区，或用工具栏和菜单将其替换。  
   
  在运行模式下，功能区具有一个选项卡上，**运行**。  
   
@@ -101,11 +101,11 @@ ms.locfileid: "48225027"
   
  有关“报表数据”窗格中各项的详细信息，请参阅以下主题：  
   
--   [内置的全局和用户引用&#40;报表生成器和 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [内置的全局和用户引用（报表生成器和 SSRS）](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [映像&#40;报表生成器和 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [图像（报表生成器和 SSRS）](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -144,13 +144,13 @@ ms.locfileid: "48225027"
  根据相应的属性，可以从下拉列表中设置属性值、键入值或单击 `<Expression>` 来创建表达式。  
   
 ### <a name="changing-the-properties-pane-view"></a>更改“属性”窗格视图  
- 默认情况下，“属性”窗格中显示的属性是按大的类别（例如操作、边框、填充、字体和常规）分类的。 每个类别都有一组与其相关联的属性。 例如，“字体”类别内会列出以下属性：Color、FontFamily、FontSize、FontStyle、FontWeight、LineHeight 和 TextDecoration。 如果愿意，可以按字母顺序排列该窗格内列出的所有属性。 这会删除类别并按字母顺序列出所有属性，而不考虑类别。  
+ 默认情况下，“属性”窗格中显示的属性是按大的类别（例如操作、边框、填充、字体和常规）分类的。 每个类别都有一组与其相关联的属性。 例如，字体类别中列出了以下属性：Color、 FontFamily、 FontSize、 FontStyle、 FontWeight、 LineHeight 和 TextDecoration。 如果愿意，可以按字母顺序排列该窗格内列出的所有属性。 这会删除类别并按字母顺序列出所有属性，而不考虑类别。  
   
- “属性”窗格顶部有三个按钮：“按分类顺序”、“按字母顺序”和“属性页”。 单击“按分类顺序”和“按字母顺序”按钮可在“属性”窗格视图之间切换。 单击 **“属性页”** 按钮可打开所选报表项的属性对话框。  
+ 属性窗格有三个按钮窗格的顶部：类别中，按字母顺序排列，和属性页。 单击“按分类顺序”和“按字母顺序”按钮可在“属性”窗格视图之间切换。 单击 **“属性页”** 按钮可打开所选报表项的属性对话框。  
   
   
 ##  <a name="GroupPane"></a> “分组”窗格 (Report Builder)  
- 使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 “分组”窗格有两个窗格：“行组”和“列组”。 选定数据区域后，“分组”窗格会将该数据区域内的所有组显示为一个层次结构列表；子组以缩进的方式显示在其父组下方。  
+ 使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 分组窗格有两个窗格：行组和列组。 当选中的数据区域时，分组窗格将该数据区域内的所有组都显示为层次结构列表：子组显示在其父组下缩进。  
   
  ![嵌套行组和列组的“分组”窗格](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
   

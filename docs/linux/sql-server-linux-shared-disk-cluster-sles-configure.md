@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667986"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408864"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
 
@@ -25,7 +25,7 @@ ms.locfileid: "51667986"
 
 有关群集配置、 资源代理选项、 管理、 最佳实践和建议的详细信息，请参阅[SUSE Linux Enterprise 高 Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 若要完成以下端到端方案，需要两台计算机部署两个节点群集和另一台服务器来配置 NFS 共享。 以下步骤概述了如何配置这些服务器。
 
@@ -45,13 +45,13 @@ ms.locfileid: "51667986"
     ```
 
     > [!NOTE]
-    > 为 SQL Server 实例生成并放置在一个服务器主密钥在安装时`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。
+    > 为 SQL Server 实例生成并放置在一个服务器主密钥在安装时`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，其标识不是在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。
 4. 在主节点上为 Pacemaker 创建 SQL server 登录名并授予登录权限以运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪个节点正在运行 SQL Server。
 
     ```bash
     sudo systemctl start mssql-server
     ```
-    使用“sa”帐户连接到 SQL Server 主数据库并运行以下命令：
+    连接到 SQL Server master 数据库，使用 sa 帐户，并运行以下命令：
 
     ```tsql
     USE [master]
@@ -60,7 +60,7 @@ ms.locfileid: "51667986"
     GRANT VIEW SERVER STATE TO <loginName>
     ```
 5. 在主节点上，停止并禁用 SQL Server。
-6. 按照说明进行操作[SUSE 文档中](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)若要配置和更新每个群集节点的主机文件。 “主机”文件必须包含每个群集节点的 IP 地址和名称。
+6. 按照说明进行操作[SUSE 文档中](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)若要配置和更新每个群集节点的主机文件。 主机文件必须包含的 IP 地址和每个群集节点的名称。
 
     若要检查当前节点的 IP 地址，请运行：
 
@@ -123,7 +123,7 @@ ms.locfileid: "51667986"
     - [配置客户端](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > 建议按照 SUSE 的最佳做法和建议高度可用的 NFS 存储：[可用的高度 NFS 存储使用 DRBD 和 Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)。
+    > 建议按照 SUSE 的最佳做法和建议高度可用的 NFS 存储：[高度可用的 NFS 存储使用 DRBD 和 Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)。
 
 2. 验证 SQL Server 是否已成功通过新文件路径启动。 对每个节点均执行此操作。 此时，一次应只有一个节点运行 SQL Server。 它们不能同时运行，因为两者将同时尝试访问数据文件（要避免同时在两个节点上意外启动 SQL Server，请使用文件系统群集资源来确保共享未由不同的节点装载两次）。 以下命令可启动 SQL Server，检查状态，然后停止 SQL Server。
 
@@ -196,8 +196,8 @@ ms.locfileid: "51667986"
 
 以下步骤介绍如何为 SQL Server 配置群集资源。 有两个需要自定义的设置。
 
-- **SQL Server 资源名称**： 群集的 SQL Server 资源的名称。 
-- **超时值**： 超时值是使资源联机时群集所等待的时间量。 对于 SQL Server，这是预期 SQL Server，花费的时间`master`数据库联机。 
+- **SQL Server 资源名称**:群集 SQL Server 资源的名称。 
+- **超时值**:超时值为使资源联机时群集所等待的时间量。 对于 SQL Server，这是预期 SQL Server，花费的时间`master`数据库联机。 
 
 更新以下脚本为您的环境中的值。 在一个节点上运行，以配置并启动群集服务。
 

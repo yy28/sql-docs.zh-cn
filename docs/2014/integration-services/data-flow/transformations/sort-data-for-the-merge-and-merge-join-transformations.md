@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6f20391528b56bedca42e62ff9ae1f54111f3604
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460592"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751529"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  
@@ -39,7 +38,7 @@ ms.locfileid: "49460592"
   
      排序转换使用 Windows 排序规则对字符串值进行排序。  
   
-     — 或 —  
+     -或-  
   
 -   首先使用 Transact-SQL CAST 运算符将 `varchar` 值转换为 `nvarchar` 值，然后再使用 Transact-SQL ORDER BY 子句对数据进行排序。  
   

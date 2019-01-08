@@ -1,5 +1,5 @@
 ---
-title: 高可用性和 Analysis Services 中的可伸缩性 |Microsoft 文档
+title: 高可用性和 Analysis Services 中的可伸缩性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700898"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439499"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 中的高可用性和可伸缩性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "35700898"
 
 - 当前不支持主动/主动。 对于 Analysis Services 而言，主动/被动（故障转移）是唯一支持的 WSFC 配置。
 - 当聚类分析 Analysis Services 时，请确保参与群集的任何节点都运行在完全相同或高度相似的硬件上，且每个节点的操作上下文在操作系统版本和 Service Pack、Analysis Services 版本和 Service Pack（或累积更新）以及服务器模式方面都是相同的。
-- 请避免将一个被动节点作为另一个工作负荷的主动节点重新使用。 如果节点无法同时处理两个工作负荷，倘若发生实际的故障转移情况，那么计算机利用率的任何短期增益都将丢失。
+- 避免重新调整用途被动节点作为另一个工作负荷的活动节点。 如果节点无法同时处理两个工作负荷，倘若发生实际的故障转移情况，那么计算机利用率的任何短期增益都将丢失。
  
- 白皮书 [如何安装群集 SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)中提供了有关在故障转移群集中部署 Analysis Services 的深入说明和背景信息。 此指南虽然是针对 SQL Server 2012 编写的，但同样适用于更高版本的 Analysis Services。  
+ 本白皮书中提供了深入说明和有关故障转移群集中部署 Analysis Services 的背景信息：[如何安装群集 SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)。 此指南虽然是针对 SQL Server 2012 编写的，但同样适用于更高版本的 Analysis Services。  
   
 ## <a name="see-also"></a>请参阅  
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [强制对 Analysis Services 表格数据库的 NUMA 关联](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Analysis Services 案例研究： 使用表格模型中大规模商业解决方案](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [对 Analysis Services 表格数据库强制 NUMA 相关性](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Analysis Services 案例研究：在大型商用解决方案中使用表格模型](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

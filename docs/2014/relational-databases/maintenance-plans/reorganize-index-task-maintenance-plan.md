@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.defrag.f1
@@ -15,12 +14,12 @@ ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5580534dac0249dd71f2ad2d0b5868a293a91d84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101147"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747419"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>“重新组织索引”任务（维护计划）
   使用“‘重新组织索引’任务”对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
@@ -51,7 +50,7 @@ ms.locfileid: "48101147"
   
      生成的维护计划将只对所选数据库运行维护任务。 如果选择此选项，则必须至少在列表中选择一个数据库。  
   
- **对象**  
+ **Object**  
  将“选择”网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
@@ -73,7 +72,7 @@ ms.locfileid: "48101147"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **“刷新”**  
+ **刷新**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  

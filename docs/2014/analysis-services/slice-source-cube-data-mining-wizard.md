@@ -13,12 +13,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089987"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416648"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>对源多维数据集进行切片（数据挖掘向导）
    可以使用“对源多维数据集进行切片”对话框限制用于为模型定型的数据。 通常一个多维数据集包含与很多不同维度和属性有关的数据，例如所有商店、所有区域和所有产品。 定型无限的属性组合的模型是不现实的，因此您使用此对话框选择要在定型模型中使用的特定集合。  
@@ -29,16 +29,16 @@ ms.locfileid: "48089987"
   
 -   [设置分区切片属性&#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [创建和管理本地分区&#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [创建和管理本地分区 (Analysis Services)](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  请注意，动态 MDX 函数（如 [Generate (MDX)](/sql/mdx/generate-mdx) 或 [Except (MDX)](/sql/mdx/except-mdx-function)）在分区的切片属性中不受支持。 你必须通过使用显式元组或成员引用定义切片。  
 >   
 >  例如，而不是使用[:&#40;范围&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)可以定义的范围，你需要枚举分属特定年份的每个成员。  
 >   
->  如果需要定义复杂的切片，我们建议使用 XMLA Alter 脚本在切片中定义元组。 然后，可以使用 ascmd 命令行工具或 SSIS [Analysis Services 执行 DDL 任务](../integration-services/control-flow/analysis-services-execute-ddl-task.md)运行该脚本并立即再处理分区创建指定的成员集。  
+>  如果需要定义复杂的切片，我们建议使用 XMLA Alter 脚本在切片中定义元组。 然后，你可以使用 ascmd 命令行工具或 SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 运行该脚本并立即创建指定的成员集，之后再处理分区。  
   
- **有关详细信息，请参阅**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **Dimension**  
@@ -52,7 +52,7 @@ ms.locfileid: "48089987"
  **“运算符”**  
  选择要在生成切片表达式中使用的运算符。  
   
- 例如，如果您选择了“地理”作为层次结构，可以选择运算符 =，然后键入“Europe”作为筛选器以仅获取欧洲的多维数据集数据。  
+ 例如，如果你选择在层次结构的地理位置，您可以选择运算符 =，然后键入"Europe"作为筛选器，以仅获取欧洲的多维数据集数据。  
   
  **筛选表达式**  
  键入要作为针对所选维度筛选多维数据集时的标准的表达式。  

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503281"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
 以下分步说明可帮助您可以使用数据迁移助手的本地 SQL Server 或 SQL Server Azure Vm 上的运行升级或迁移到 Azure SQL 数据库执行成功缩放的评估。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - 指定工具的计算机将会启动 DMA 在网络上。 请确保此计算机已连接到 SQL Server 目标。
 - 下载并安装：
@@ -70,7 +70,7 @@ ms.locfileid: "51601817"
 - SQL Server 表
 
 ### <a name="if-using-a-csv-file"></a>如果使用的 CSV 文件
-在使用 csv 文件导入数据，请确保有只有两个列的数据 –**实例名称**并**数据库名称**，和列不包含标头行。
+如果使用 csv 文件导入数据，请确保有只有两个列的数据-**实例名称**并**数据库名称**，和列不包含标头行。
  
  ![csv 文件内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -218,7 +218,7 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 本部分是报表，其中显示了实例数据库的准备情况的主要部分。 此报表具有向下钻取层次的结构：
 - InstanceDatabase
 - ChangeCategory
-- Title
+- 标题
 - ObjectType
 - ImpactedObjectName
 

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099711"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401020"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>确定 Analysis Services 实例的服务器模式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services 可以在以下三种服务器模式之一下安装：多维和数据挖掘（默认模式）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
+  Analysis Services 可以安装在以下三种服务器模式之一下：多维和数据挖掘 （默认值）， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
   
  服务器模式确定您创建和部署的解决方案的类型。 如果您没有安装服务器软件并且想要知道服务器安装在哪一模式下，则可以使用本主题中的信息确定该模式。 有关特定模式中功能可用性的详细信息，请参阅[比较表格和多维解决方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50099711"
 >  不要更改 **DeploymentMode** 属性的值。 不支持在安装服务器后手动更改该属性。  
   
 ## <a name="about-the-deploymentmode-property"></a>关于 DeploymentMode 属性  
- **DeploymentMode** 属性确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为服务器模式。 此属性基于您安装 Analysis Services 的方式由安装程序启动。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
+ **DeploymentMode** 属性确定 Analysis Services 服务器实例的操作上下文。 此属性称为服务器模式对话框、 消息和文档中。 此属性基于您安装 Analysis Services 的方式由安装程序启动。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
   
  此属性的有效值包括以下项：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "50099711"
   
  每个模式与其他模式都是互斥的。 配置为表格模式的服务器不能运行包含多维数据集和维度的 Analysis Services 数据库。 如果基础计算机硬件能够支持，则您可以在同一台计算机上安装 Analysis Services 的多个实例并且对每个实例进行配置以便使用不同的部署模式。 请记住，Analysis Services 是一种消耗大量资源的应用程序。 仅推荐对于高端服务器，才在同一个系统上部署多个实例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [在多维和数据挖掘模式下安装 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Power Pivot for SharePoint 2010 安装](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   

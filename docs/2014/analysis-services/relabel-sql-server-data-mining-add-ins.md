@@ -15,12 +15,12 @@ ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd98b0225caad7d6cd723e462eca031750d96d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049027"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414604"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>重新标记（SQL Server 数据挖掘外接程序）
   ![重新标记工具的 office 13 图标](media/dm13-relabel.gif "重新标记工具的 Office 13 图标")  

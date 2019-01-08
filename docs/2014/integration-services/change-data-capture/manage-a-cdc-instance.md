@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - manIns
@@ -13,12 +12,12 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c51d2242ec06b4cb68cb054f9214566b0dbf3946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748259"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 实例
   您可以使用 CDC 设计器控制台查看与您创建的实例有关的信息，以及管理实例操作。  
@@ -66,42 +65,42 @@ ms.locfileid: "48099277"
  **“状态”**  
  此选项卡提供有关 CDC 实例的当前状态的信息和统计信息。 其中包含以下信息。  
   
--   **状态**：一个指示 CDC 实例的当前状态的图标。 下面将介绍这些状态。  
+-   **状态**:一个指示 CDC 实例的当前状态的图标。 下面将介绍这些状态。  
   
     |||  
     |-|-|  
-    |![错误](../media/error.gif "错误")|**错误**。 Oracle CDC 实例因为发生了不可重试的错误而未运行。 以下子状态可用：<br /><br /> **配置不当**：发生了需要手动干预的配置错误。<br /><br /> **要求提供密码**：没有为 Oracle CDC 实例设置密码或密码无效。<br /><br /> **意外**。 所有其他不可恢复错误。|  
-    |![正常](../media/okay.gif "Okay")|**正在运行**：CDC 实例正在运行并且正在处理更改记录。 以下子状态可用。<br /><br /> **空闲**：所有更改记录都已处理并且存储在目标更改表中。 没有活动事务。<br /><br /> **正在处理**：存在正处理、但尚未写入更改表的更改记录。|  
-    |![停止](../media/stop.gif "停止")|**已停止**：CDC 实例未在运行。 该已停止状态指示 CDC 实例已正常停止。|  
-    |![暂停](../media/paused.gif "暂停")|**已暂停**：CDC 实例正在运行，但由于可重试错误处理已挂起。 以下子状态可用：<br /><br /> **断开连接**：无法建立到源 Oracle 数据库的连接。 在连接恢复时会继续处理。<br /><br /> **存储**：存储已满。 在其他存储变为可用时将继续处理。<br /><br /> **记录器**：记录器连接到 Oracle，但由于临时问题（例如，所需的事务日志不可用）无法读取 Oracle 事务日志。|  
+    |![错误](../media/error.gif "错误")|**错误**。 Oracle CDC 实例因为发生了不可重试的错误而未运行。 以下子状态可用：<br /><br /> **配置错误**:配置错误发生了需要手动干预。<br /><br /> **需要密码**:为 Oracle CDC 实例设置无密码或密码无效。<br /><br /> **意外**。 所有其他不可恢复错误。|  
+    |![正常](../media/okay.gif "Okay")|**运行**:CDC 实例正在运行，并且正在处理更改记录。 以下子状态可用。<br /><br /> **空闲**:已处理并存储在目标更改表中所有更改记录。 没有活动事务。<br /><br /> **处理**:有正在进程但尚未写入更改表的更改记录。|  
+    |![停止](../media/stop.gif "停止")|**停止**:CDC 实例未在运行。 该已停止状态指示 CDC 实例已正常停止。|  
+    |![已暂停](../media/paused.gif "已暂停")|**暂停**:CDC 实例正在运行，但由于可重试错误处理已挂起。 以下子状态可用：<br /><br /> **断开连接**:无法建立到源 Oracle 数据库的连接。 在连接恢复时会继续处理。<br /><br /> **存储**:存储已满。 在其他存储变为可用时将继续处理。<br /><br /> **记录器**:记录器连接到 Oracle，但无法读取 Oracle 事务日志由于临时问题，例如，所需的事务日志不可用。|  
   
--   **详细状态**：当前子状态。  
+-   **详细状态**:当前子状态。  
   
--   **状态消息**：有关当前状态的详细信息。  
+-   **状态消息**:有关当前状态的详细信息。  
   
--   **时间戳**：上次从状态表中读取 CDC 状态时的 UTC 时间。  
+-   **时间戳**:从状态表中读取的最后一个 CDC 状态时的 UTC 时间。  
   
--   **当前正处理**：您在此部分中监视下列信息。  
+-   **当前正在处理**:监视此部分中的以下信息。  
   
-    -   **上一个事务时间戳**：写入更改表的上一个事务的本地时间。  
+    -   **最后一个事务时间戳**:上次写入更改表的事务的本地时间。  
   
-    -   **上一个更改时间戳**：Oracle CDC 实例在源 Oracle 数据库事务日志中看到的最近更改的本地时间。 它提供了读取 Oracle 事务日志时与 CDC 实例的当前延迟有关的信息。  
+    -   **上次更改时间戳**:Oracle CDC 实例在源 Oracle 数据库事务日志中看到的最新更改的本地时间。 它提供了读取 Oracle 事务日志时与 CDC 实例的当前延迟有关的信息。  
   
-    -   **事务日志头 CN**：从 Oracle 事务日志读取的最近更改号 (CN)。  
+    -   **事务日志头 CN**:最新更改号 (CN) 读取 Oracle 事务日志。  
   
-    -   **事务日志尾 CN**：用于恢复或重新启动 CDC 实例的更改号。 在发生重新启动或任何其他类型的失败（包括群集故障转移）时 Oracle CDC 实例将重新定位到此位置。  
+    -   **事务日志尾 CN**:用于恢复或重新启动 CDC 实例的更改号。 在发生重新启动或任何其他类型的失败（包括群集故障转移）时 Oracle CDC 实例将重新定位到此位置。  
   
-    -   **当前 CN**：在源 Oracle 数据库（而非事务日志）中看到的最后的更改号 (SCN)。  
+    -   **当前 CN**:最后的更改号 (SCN) 源 Oracle 数据库 （而非事务日志） 中看到。  
   
-    -   **活动事务**：Oracle CDC 实例正在处理但尚未决定（提交/回退）的源 Oracle 事务的当前数目。  
+    -   **活动事务**:尚未决定 （提交/回滚） 的 Oracle CDC 实例正在处理且不是源 Oracle 事务的当前数目。  
   
-    -   **暂存事务**：暂存到 [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) 表的当前源 Oracle 事务的数目。  
+    -   **暂存事务**:当前源 Oracle 事务的数目为暂存[cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)表。  
   
--   **计数器**：您在此部分中监视下列信息。  
+-   **计数器**:监视此部分中的以下信息。  
   
-    -   **完成的事务数**：自上次重置 CDC 实例后完成的事务数。 此计数中不包括那些不包含有关表的事务。  
+    -   **完成的事务**:自上次重置 CDC 实例后完成的事务数。 此计数中不包括那些不包含有关表的事务。  
   
-    -   **写入的更改数**：已写入 SQL Server 更改表的更改的数目。  
+    -   **写入的更改**:更改写入到 SQL Server 的数量更改表。  
   
  **Oracle**  
  显示与 CDC 实例及其与 Oracle 数据库的连接有关的信息。 此选项卡为只读。 若要编辑这些属性，请在左侧窗格中右键单击实例，然后选择“属性”；或者在右侧窗格中单击“属性”以打开“\<实例> 属性”对话框。  

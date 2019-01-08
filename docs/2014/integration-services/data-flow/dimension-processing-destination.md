@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd8b33e330a2edd9d6c93cb9ab00c68783ae5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8b3e0e7b353ad37aeb3ce87e39bdfc52d2cbcb0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135417"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749459"
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
   维度处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 维度。 有关维度的详细信息，请参阅[维度（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
@@ -47,11 +46,11 @@ ms.locfileid: "48135417"
   
  有关可在 **“维度处理目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [维度处理目标编辑器&#40;连接管理器页&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [维度处理目标编辑器（“连接管理器”页）](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [维度处理目标编辑器&#40;映射页&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [维度处理目标编辑器（“映射”页）](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [维度处理目标编辑器&#40;高级页&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [维度处理目标编辑器（“高级”页）](../dimension-processing-destination-editor-advanced-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

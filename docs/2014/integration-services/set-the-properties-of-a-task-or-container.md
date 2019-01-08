@@ -13,12 +13,12 @@ ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1e8c6381aaf8afd848831c8599c4534a77b179e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc33585e165b8cdac2f7d46c322741b3eb1756c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503731"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>设置任务或容器的属性
   可以使用 **“属性”** 窗口设置任务和容器的大多数属性。 但任务集合的属性以及因过于复杂而无法使用 **“属性”** 窗口设置的属性不在此列。 例如，不能在 **“属性”** 窗口中配置 Foreach 循环容器使用的枚举器。 您必须使用任务或容器编辑器来设置这些复杂的属性。 大多数任务和容器编辑器都有多个节点，而每个节点都包含相关属性。 节点的名称指出了节点所包含属性的主题。  
@@ -38,7 +38,7 @@ ms.locfileid: "48084787"
 5.  在 **“属性”** 窗口中，更新属性值。  
   
     > [!NOTE]  
-    >  大部分属性可以通过直接在文本框中键入值或者从列表中选择值的方式进行设置。 但是，某些属性比较复杂，并且具有自定义的属性编辑器。 若要设置属性，请在文本框中单击，然后单击生成按钮 ( **…** ) 打开自定义编辑器。  
+    >  大部分属性可以通过直接在文本框中键入值或者从列表中选择值的方式进行设置。 但是，某些属性比较复杂，并且具有自定义的属性编辑器。 若要设置属性，请在文本框中单击，然后单击生成按钮 (…) 打开自定义编辑器。  
   
 6.  也可以创建属性表达式来动态更新任务或容器的属性。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
