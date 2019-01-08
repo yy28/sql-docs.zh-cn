@@ -13,12 +13,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 70ebcc5773d17f6f0f6fe714367f4bf487f3a0db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686265"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205806"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
 将包部署到 Integration Services 服务器后，可使用以下任一方法在 Scale Out 中运行它们：
@@ -33,7 +33,7 @@ ms.locfileid: "47686265"
 
 1. 打开“在 Scale Out 中执行包”对话框。
 
-    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 中，连接到 Integration Services 服务器。 在对象资源管理器中，展开树，显示“Integration Services 目录” 下的节点。 右键单击 **SSISDB** 节点或者要运行的项目或包，然后单击“在 Scale Out 中执行” 。
+    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]中，连接到 Integration Services 服务器。 在对象资源管理器中，展开树，显示“Integration Services 目录” 下的节点。 右键单击 **SSISDB** 节点或者要运行的项目或包，然后单击“在 Scale Out 中执行” 。
 
 2. 选择包并设置选项。
 
@@ -117,7 +117,7 @@ GO
 
 设置此默认执行模式后，就不再需要在调用 `[catalog].[create_execution]` 存储过程时指定 @runinscaleout 参数。 包会在 Scale Out 中自动运行。 
 
-![执行模式](media\exe-mode.PNG)
+![执行模式](media/exe-mode.PNG)
 
 要将默认执行模式切换回来以便不按默认 Scale Out 模式运行包，请将“服务器范围内的默认执行模式”设置为“服务器”。
 
