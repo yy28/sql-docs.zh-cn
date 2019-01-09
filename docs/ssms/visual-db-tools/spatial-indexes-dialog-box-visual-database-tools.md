@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e5b9b4d25c7fd6f0384c3390e09c4b427228ebb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509363"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589611"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "52509363"
 **允许页锁定**  
 指定对此索引是否允许页级锁定。 允许或禁用页级锁定会影响数据库性能。  
   
-**重复计算** **统计数据**  
+**重新计算统计数据**  
 指定在创建索引后是否计算新的统计数据。 重新计算统计数据会降低索引的生成速度，但通常会提高查询性能。  
   
 **允许行锁定**  

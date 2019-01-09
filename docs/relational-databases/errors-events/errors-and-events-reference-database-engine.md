@@ -14,15 +14,15 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48483caed9b6056fb87183210af0c2ba3014067f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0cc8fb9f921c80d77094f19c561d9d428520199a
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667466"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046437"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>错误和事件参考（数据库引擎）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本节包含需要进一步说明的所选的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息。  
   
 ## <a name="in-this-section"></a>本节内容  
