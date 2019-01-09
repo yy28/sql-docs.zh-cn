@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio 用户和工作区设置 |Microsoft Docs
-description: 如何修改 Azure Data Studio 用户和工作区设置。
-ms.custom: tools|sos
+title: 用户和工作区设置
+titleSuffix: Azure Data Studio
+description: 如何通过修改用户和工作区设置自定义 Azure Data Studio。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355948"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030501"
 ---
-# <a name="user-and-workspace-settings"></a>用户和工作区设置
+# <a name="modify-user-and-workspace-settings"></a>修改用户和工作区设置
 
 很容易地配置[!INCLUDE[name-sos](../includes/name-sos-short.md)]根据需要通过设置。 几乎每个属于[!INCLUDE[name-sos](../includes/name-sos-short.md)]的编辑器、 用户界面和功能的行为有选项可以修改。
 
@@ -30,7 +31,7 @@ ms.locfileid: "49355948"
 
 菜单命令**文件** > **首选项** > **设置**(**代码** >  **首选项** > **设置**Mac 上) 提供的入口点，若要配置用户和工作区设置。 提供的默认设置的列表。 将复制你想要将更改为适当的任何设置`settings.json`文件。 在右侧的选项卡，可以在用户和工作区设置文件之间快速切换。
 
-您还可以打开中的用户和工作区设置**命令面板**(**Ctrl + Shift + P**) 与**首选项： 打开用户设置**和**首选项： 打开工作区设置**或使用键盘快捷方式 (**Ctrl +，**)。
+您还可以打开中的用户和工作区设置**命令面板**(**Ctrl + Shift + P**) 与**首选项：打开用户设置**和**首选项：打开设置工作区**或使用键盘快捷方式 (**Ctrl +，**)。
 
 以下示例禁用在编辑器中的行号，并配置的代码行来自动缩进。
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229987"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823511"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
   在设计快照和事务复制的备份和还原策略时，需要考虑三个方面：  
@@ -149,7 +148,7 @@ ms.locfileid: "48229987"
   
          有关如何指定订阅服务器已包含数据的详细信息，请参阅 [Initialize a Subscription Manually](../initialize-a-subscription-manually.md)。  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>发布数据库：带有更新订阅的事务复制  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>发布数据库：具有更新订阅的事务复制  
   
 1.  还原发布数据库的最新备份。 转到步骤 2。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48229987"
   
          有关如何指定订阅服务器已包含数据的详细信息，请参阅 [Initialize a Subscription Manually](../initialize-a-subscription-manually.md)。  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>发布数据库：对等事务复制  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>发布数据库：@loopback_detection  
  在下列步骤中，复制数据库 **A**、 **B**和 **C** 位于对等事务复制拓扑中。 数据库 **A** 和 **C** 处于联机状态，并且可以正常工作；数据库 **B** 是要还原的数据库。 在此介绍的过程，尤其是步骤 7、10 和 11，非常类似于向对等拓扑添加节点时所需的过程。 执行这些步骤最简单的方法是使用配置对等拓扑向导，但是您也可以使用存储过程。  
   
 1.  运行分发代理以同步数据库 **A** 和 **C** 上的订阅。转到步骤 2。  
@@ -322,7 +321,7 @@ ms.locfileid: "48229987"
   
 2.  还原订阅数据库的最新备份。 转到步骤 3。  
   
-3.  如果订阅数据库仅包含推送订阅，则转到步骤 4。 如果订阅数据库包含请求订阅，则询问以下问题：订阅信息是否是当前的？ 数据库是否包含故障发生时设置的所有表和选项？ 如果是，则转到步骤 4。 如果否，则重新初始化订阅。 恢复完成。  
+3.  如果订阅数据库仅包含推送订阅，则转到步骤 4。 如果订阅数据库包含任何请求订阅，提出以下问题：是最新的订阅信息？ 数据库是否包含故障发生时设置的所有表和选项？ 如果是，则转到步骤 4。 如果否，则重新初始化订阅。 恢复完成。  
   
 4.  若要同步订阅服务器，运行分发代理。 恢复完成。  
   

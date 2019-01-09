@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - accMsDes
@@ -13,12 +12,12 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 899fb8b6a98832533ec62011bb42ed249c96dbd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a1a46e47dc7c40bf3747c4be55290a02bf6d9d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066437"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770849"
 ---
 # <a name="access-the-cdc-designer-console"></a>访问 CDC 设计器控制台
   您可以从安装了 CDC 设计器控制台的计算机访问该控制台。 有关安装的详细信息，请参阅“安装”。  
@@ -37,7 +36,7 @@ ms.locfileid: "48066437"
   
 -   **Windows 身份验证**  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
+-   **SQL Server 身份验证**:如果选择此选项，则必须键入**登录名**并**密码**中的用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到。  
   
  该登录名必须具有允许访问 MSXCDCDB 数据库的数据库角色。 建议该登录名还具有访问要使用的任何其他数据库的权限，否则，该用户将无法查看这些数据库中的数据。  
   
@@ -51,12 +50,12 @@ ms.locfileid: "48066437"
  键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
  **加密连接**  
- 选择“加密连接”将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间的通信。**高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
+ 选择**加密连接**Oracle CDC 服务和目标之间的通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的加密的连接。**高级**:单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
  **高级**  
  单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
- 有关“高级连接属性”对话框的信息，请参阅[高级连接属性](advanced-connection-properties.md)。  
+ 有关“高级连接属性”对话框的信息，请参阅 [高级连接属性](advanced-connection-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [针对 CDC 设计器的 SQL Server 连接所需权限](sql-server-connection-required-permissions-for-the-cdc-designer.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112739"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782839"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并复制的 Web 同步选项支持使用 HTTPS 协议跨 Internet 复制数据。 若要使用 Web 同步，首先需要执行以下配置操作：  
@@ -76,9 +75,9 @@ ms.locfileid: "48112739"
   
  **配置 IIS 以实现 Web 同步**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][配置 IIS 以实现 Web 同步](configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置 IIS 以实现 Web 同步](configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[配置 IIS 7 以实现 Web 同步](configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置 IIS 7 以实现 Web 同步](configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>创建 Web 园  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器支持每个线程处理两个并发同步操作。 超出此限制可能导致复制侦听器停止响应。 为 replisapi.dll 分配的线程数由应用程序池的 Maximum Worker Processes 属性来确定。 默认情况下，此属性设置为 1。  
@@ -125,7 +124,7 @@ ms.locfileid: "48112739"
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“ 代”度量的，代是指每个项目的变更集。 使用指定的批处理中的生成数 –`DownloadGenerationsPerBatch`和 –`UploadGenerationsPerBatch`的合并代理参数。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“ 代”度量的，代是指每个项目的变更集。 使用指定的批处理中的生成数的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的合并代理参数。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](agents/replication-agent-profiles.md)。  
   
