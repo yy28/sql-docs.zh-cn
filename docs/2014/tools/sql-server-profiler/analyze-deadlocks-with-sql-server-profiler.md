@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -20,19 +19,19 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780679"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
   
  若要跟踪死锁事件，请将 **Deadlock graph** 事件类添加到跟踪。 此事件类会在跟踪中的 **TextData** 数据列中填充有关死锁中涉及的进程和对象的 XML 数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可将 XML 文档提取到死锁 XML (.xdl) 文件，你稍后可在 SQL Server Management Studio 中查看该文件。 您可以配置 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，将 **Deadlock graph** 事件提取到一个包含了所有 **Deadlock graph** 事件的文件中，或提取到多个单独的文件中。 可以通过下列任一方法进行提取：  
   
--   在配置跟踪时，使用 **“事件提取设置”** 选项卡。请注意，只有在 **“事件选择”** 选项卡上选择了 **Deadlock graph** 事件，才会出现此选项卡。  
+-   在配置跟踪时，使用 **“事件提取设置”** 选项卡。请注意，只有在 “事件选择” 选项卡上选择了 **Deadlock graph** 事件，才会出现此选项卡。  
   
 -   使用 **“文件”** 菜单上的 **“提取 SQL Server 事件”** 选项。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48176577"
  数据库对象。例如，表、索引或行。  
   
  边  
- 进程和资源之间的关系。 一个`request`边缘进程等待资源时出现。 `owner`资源等待进程时发生边缘。 边说明中包括了锁模式。 例如， **“模式: X”**。  
+ 进程和资源之间的关系。 当进程等待资源时，将出现 `request` 边。 当资源等待进程时，将出现 `owner` 边。 边说明中包括了锁模式。 例如，**“模式:X**。  
   
 ## <a name="deadlock-process-node"></a>死锁进程节点  
  在等待图形中，进程节点包含有关进程的信息。 下表介绍了进程的组件。  

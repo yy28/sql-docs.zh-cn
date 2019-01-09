@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changedistributor_password
@@ -17,12 +16,12 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e64397d7282960b580beda8cbe52c4c7092844b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 0d7471bb847028b0b2cab0e71bf6fe33e044c3e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670815"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819156"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_changedistributor_password [ @password= ] 'password'
   
 ## <a name="arguments"></a>参数  
  [ **@password=**] **'***密码*****  
- 是的新密码。 *密码*是**sysname**，无默认值。 如果分发服务器是本地的密码**distributor_admin**更改系统登录名。  
+ 是的新密码。 *密码* 是 sysname** ，无默认值。 如果分发服务器是本地的密码**distributor_admin**更改系统登录名。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -51,7 +50,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changedistributor_password**。  
   
 ## <a name="see-also"></a>请参阅  

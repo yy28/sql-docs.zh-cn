@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - sa account
@@ -15,12 +14,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119784"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641558"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server
   本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
@@ -66,7 +65,7 @@ ms.locfileid: "49119784"
   
 6.  单击`OK`，右键单击服务器名称，并重新启动的消息，显示后，然后单击**重新启动**。  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启之后，你的服务器将处于单用户模式。 请确保[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理未运行。 如果启动，它将占用您唯一的连接。  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启之后，你的服务器将处于单用户模式。 请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理未在运行。 如果启动，它将占用您唯一的连接。  
   
 8.  在 Windows 8 启动屏幕上，右键单击 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的图标。 在屏幕的底部，选择““以管理员身份运行” 。 （这会将您的管理员凭据传递到 SSMS。）  
   

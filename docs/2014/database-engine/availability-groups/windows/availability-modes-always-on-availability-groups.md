@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129037"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376309"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式（AlwaysOn 可用性组）
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，“可用性模式”是一个副本属性，该属性确定某一给定可用性副本是否可在同步提交模式下运行。 对于每个可用性副本，必须为同步提交模式或异步提交模式配置可用性模式。  如果主要副本配置为“异步提交模式”，则它不会等待任何次要副本将传入的事务日志记录写入磁盘（以便强制写入日志）。 如果某一给定的辅助副本配置为异步提交模式，则主副本不会等待该辅助副本强制写入日志。 如果主要副本和某一给定次要副本都配置为同步提交模式，则主要副本将等待次要副本，以便确认它已强制写入日志（除非次要副本在主要副本的会话超时期限内未能使用 ping 命令联系上主要副本）。  
@@ -32,7 +32,7 @@ ms.locfileid: "48129037"
   
   
 ##  <a name="SupportedAvModes"></a> 受支持的可用性模式  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持异步提交模式和同步提交模式这两种可用性模式：  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持两种可用性模式的异步提交模式和同步提交模式下，按如下所示：  
   
 -   异步提交模式是一种灾难恢复解决方案，适合于可用性副本的分布距离较远的情况。 如果每个辅助副本都在异步提交模式下运行，则主副本不会等待任何辅助副本强制写入日志， 而会在将日志记录写入本地日志文件后，立即将事务确认发送到客户端。 主副本使用与针对异步提交模式配置的辅助副本相关的最小事务滞后运行。  如果为当前主副本配置了异步提交可用性模式，则它将通过异步方式为所有辅助副本提交事务，而不管这些副本各自的可用性模式设置如何。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48129037"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客： SQL Server AlwaysOn 官方团队博客](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

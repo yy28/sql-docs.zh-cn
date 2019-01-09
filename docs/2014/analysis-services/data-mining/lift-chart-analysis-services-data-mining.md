@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119397"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398011"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
-  一个**提升图**以图形方式表示的挖掘模型时比较提供针对随机推测，改进和度量的变化*提升*分数。 通过比较您的数据集的不同部分以及不同模型的提升分数，您可以确定哪一模型最佳，以及数据集中多大百分比的事例可从应用该模型的预测中获益。  
+  一个**提升图**以图形方式表示的挖掘模型时比较提供针对随机推测，改进和度量的变化*提升*分数。 通过比较您的数据集的各个部分以及不同模型的提升分数，您可以确定哪个模型最佳，以及数据集中的事例的百分比受益于应用模型的预测。  
   
  对于提升图，您可为具有相同可预测属性的多个模型比较预测的准确性。 您还可为单个结果（可预测属性的单个值）或所有结果（指定属性的所有值）评估预测的准确性。  
   
@@ -71,8 +71,8 @@ ms.locfileid: "48119397"
 |向所有客户发送目标邮件|0.71|47.40%|61.38%|  
 |向 30 岁以下的客户发送目标邮件|0.85|51.81%|46.62%|  
 |随机推测模型||31.00%||  
-|向所有客户发送目标邮件的理想模型||62.48%||  
-|向 30 岁以下的客户发送目标邮件的理想模型||65.28%||  
+|理想模型：向所有客户发送目标邮件||62.48%||  
+|理想模型：向 30 岁以下的客户发送目标邮件||65.28%||  
   
  [返回页首](#bkmk_Top)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48119397"
  [返回页首](#bkmk_Top)  
   
 ## <a name="see-also"></a>请参阅  
- [测试和验证&#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
   
   

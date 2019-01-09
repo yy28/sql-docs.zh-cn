@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: MT
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409694"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]包含特定于商业智能解决方案的增强功能的环境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供。  
@@ -62,7 +62,7 @@ ms.locfileid: "48906297"
   
 -   **数据集** 每个数据集都包括一个查询，该查询指定要从数据源中检索的数据。 展开数据集可查看由数据集查询指定的字段集合。  
   
-     在针对多维数据集的某些查询设计器中，您可以在“筛选器”窗格中指定筛选器，并且指示是否创建报表参数。 如果您指定了报表参数选项，则将自动创建一个特殊的数据集，以便填充该参数的有效值列表。  默认情况下，该数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
+     在针对多维数据集的某些查询设计器中，您可以在“筛选器”窗格中指定筛选器，并且指示是否创建报表参数。 如果指定报表参数选项，则将自动创建一个特殊的数据集，以便填充该参数的有效值列表。  默认情况下，该数据集不显示在“报表数据”窗格中。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
 -   **报表参数** 报表参数的列表。 参数可手动创建，也可以在数据集查询包括查询参数时自动创建。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48906297"
   
 -   **报表属性** 选择可打开 **“报表属性”** 对话框。 在此对话框中，您可以分配常规报表属性（如作者姓名和网格间距）以及指定报表布局的属性（如列数和页面大小）。 还可以包括自定义代码、对程序集和类的引用，以及数据输出元素、数据转换和数据架构的名称。  
   
--   **视图** 在报表设计器的选项卡“设计”和“预览”之间切换。  
+-   **视图**两个报表设计器选项卡之间切换：“设计”和“预览”。  
   
 -   **页眉** 添加或删除报表的页眉。 删除页眉时，页眉中的所有项都将被删除。  
   

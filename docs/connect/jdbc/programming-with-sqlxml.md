@@ -43,11 +43,11 @@ ms.locfileid: "47754895"
 ## <a name="readable-and-writable-sqlxml-objects"></a>可读写的 SQLXML 对象  
  下表列出 JDBC API 提供的 setter、getter 和 updater 方法所支持的 SQLXML 对象类型。 表中的列引用以下内容：  
   
--   “方法名”列列出 JDBC API 中受支持的 getter、setter 和 updater 方法。  
+-   “方法名”列列出 JDBC API 中受支持的 getter、setter 和 updater 方法。   
   
--   “Getter SQLXML 对象”列表示由 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法创建的 SQLXML 对象。  
+-   “Getter SQLXML 对象”列表示由 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法创建的 SQLXML 对象。   
   
--   Setter SQLXML 对象列表示由 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。 请注意，下面的 setter 方法仅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。  
+-   Setter SQLXML 对象列表示由 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。  请注意，下面的 setter 方法仅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建的 SQLXML 对象。  
   
 |方法名称|Getter SQLXML 对象<br /><br /> （可读）|Setter SQLXML 对象<br /><br /> （可写）|  
 |-----------------|-------------------------------------------|-------------------------------------------|  

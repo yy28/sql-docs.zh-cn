@@ -130,7 +130,7 @@ ms.locfileid: "52514565"
 14. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="providing-unique-dimension-member-names"></a>提供唯一的维度成员名称  
-在此任务中，将创建由 **EnglishMonthName****CalendarQuarter** 和 **CalendarSemester** 属性使用的用户友好名称列。  
+在此任务中，将创建由 **EnglishMonthName** **CalendarQuarter** 和 **CalendarSemester** 属性使用的用户友好名称列。  
   
 #### <a name="to-provide-unique-dimension-member-names"></a>提供唯一的维度成员名称  
   

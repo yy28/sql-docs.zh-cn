@@ -1,5 +1,5 @@
 ---
-title: 定义事实关系 |Microsoft 文档
+title: 定义事实关系 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e960315b16828dfcfc21f4899c2643883ad18327
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018184"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518836"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lesson 5-2-定义事实关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 用户有时需要按事实数据表中的数据项定义度量值的维度，或者查询事实数据表中其他特定的相关信息，例如与特定销售情况有关的发票号或采购订单号。 当根据此类事实数据表项定义维度时，则将该维度称为“事实维度”。 事实维度也称为退化维度。 若要将相关的事实数据表行（例如所有与特定发票号有关的行）组合在一起，事实维度将非常有用。 尽管可以将此信息置于关系数据库中一个单独的维度表内，但为此信息创建单独的维度表没有任何益处，因为维度表与事实数据表按照同一速度增长，只会创建重复的数据并增加不必要的复杂性。  
   
-在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]内，您可以确定是否在 MOLAP 维度结构中复制事实维度数据以提高查询性能，或者是否将事实维度定义为 ROLAP 维度，以节省存储空间，但要牺牲查询性能。 以 MOLAP 存储模式存储维度时，除了在度量值组的分区中存储维度成员外，所有维度成员还都存储在高度压缩的 MOLAP 结构的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例内。 以 ROLAP 存储模式存储维度时，只有维度定义存储在 MOLAP 结构中，而维度成员本身则在查询时从基础关系事实数据表中查询。 可以根据事实维度的查询频率、典型查询返回的行数、查询的性能以及处理成本来确定适当的存储模式。 将维度定义为 ROLAP 时，并不要求使用该维度的所有多维数据集也以 ROLAP 存储模式进行存储。 可以对每个维度的存储模式单独进行配置。  
+在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]内，您可以确定是否在 MOLAP 维度结构中复制事实维度数据以提高查询性能，或者是否将事实维度定义为 ROLAP 维度，以节省存储空间，但要牺牲查询性能。 以 MOLAP 存储模式存储维度时，除了在度量值组的分区中存储维度成员外，所有维度成员还都存储在高度压缩的 MOLAP 结构的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例内。 存储维度使用 ROLAP 存储模式，只有维度定义存储在 MOLAP 结构的维度成员本身查询从基础关系事实表在查询时。 可以根据事实维度的查询频率、典型查询返回的行数、查询的性能以及处理成本来确定适当的存储模式。 将维度定义为 ROLAP 时，并不要求使用该维度的所有多维数据集也以 ROLAP 存储模式进行存储。 可以对每个维度的存储模式单独进行配置。  
   
 定义事实维度时，可以将事实维度和度量值组之间的关系定义为事实关系。 以下约束适用于事实关系：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34018184"
   
 14. 在“Internet 销售订单详细信息”维度的维度设计器的“属性”窗格中，选择“销售订单编号”，然后将“属性”窗口中的“名称”属性更改为“产品说明”。  
   
-15. 在“名称列”属性单元中，单击浏览按钮 **(…)**。 在“名称列”对话框中，从“源表”列表中选择“产品”，为“源列”选择“EnglishProductName”，然后单击“确定”。  
+15. 在中**NameColumn**属性单元中，单击浏览按钮 **（...）**.在“名称列”对话框中，从“源表”列表中选择“产品”，为“源列”选择“EnglishProductName”，然后单击“确定”。  
   
 16. 将“数据源视图”窗格中“InternetSales”表内的“SalesOrderNumber”列拖到“特性”窗格，以将“销售订单编号”属性添加到维度中。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "34018184"
   
     注意，“Internet 销售订单详细信息”多维数据集维度自动配置为具有事实关系，如唯一图标所示。  
   
-2.  在“Internet 销售”度量值组和“Internet 销售订单详细信息”维度相交处，单击“项说明”单元内的浏览按钮 (**…**)，以查看事实关系属性。  
+2.  单击浏览按钮 (**...**) 中**项说明**处的交集单元格**Internet Sales**度量值组和**Internet 销售订单详细信息**维度，为查看事实关系属性。  
   
     将打开“定义关系”对话框。 注意，您无法配置任何一种属性。  
   
     下图显示了“定义关系”对话框中的事实关系属性。  
   
-    ![定义关系对话框](../analysis-services/media/l5-factrelationship-2.gif "定义关系对话框中")  
+    ![定义关系对话框](../analysis-services/media/l5-factrelationship-2.gif "定义关系对话框")  
   
 3.  单击“取消”。  
   
@@ -116,12 +116,12 @@ ms.locfileid: "34018184"
   
     下图显示了上述步骤的结果。  
   
-    ![标注的 Internet Sales Sales Amount](../analysis-services/media/l5-factrelationship-3.gif "标注的 Internet Sales Sales Amount")  
+    ![Internet 销售-销售额的维度划分](../analysis-services/media/l5-factrelationship-3.gif "维度划分的 Internet 销售-销售额")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [定义多对多关系](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定义事实关系和事实关系属性](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

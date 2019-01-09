@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670465"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589940"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,38 +56,38 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** = ] *account_id*  
  要更新的帐户 ID。 *account_id*是**int**，默认值为 NULL。 在至少一个*account_id*或*account_name*必须指定。 如果两个都指定，则过程将更改帐户的名称。  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** =] **'**_account_name_  
  要更新的帐户名。 *account_name*是**sysname**，默认值为 NULL。 在至少一个*account_id*或*account_name*必须指定。 如果两个都指定，则过程将更改帐户的名称。  
   
- [ **@email_address** = ] **'***email_address***'**  
+ [ **@email_address** =] **'**_email_address_  
  发件人的新电子邮件地址。 该地址必须是 Internet 电子邮件地址。 该地址中的服务器名称就是数据库邮件用于从该帐户发送邮件的服务器。 *email_address*是**nvarchar （128)**，默认值为 NULL。  
   
- [ **@display_name** =] **'***display_name*****  
+ [ **@display_name** =] **'**_display_name_  
  从该帐户发出的电子邮件中使用的新显示名称。 *display_name*是**nvarchar （128)**，无默认值。  
   
- [ **@replyto_address** =] **'***replyto_address*****  
+ [ **@replyto_address** =] **'**_replyto_address_  
  从该帐户发出的电子邮件的答复标题中使用的新地址。 *replyto_address*是**nvarchar （128)**，无默认值。  
   
- [ **@description** = ] **'***description***'**  
+ [ **@description** =] **'**_说明_  
  对帐户的新说明。 *描述*是**nvarchar(256)**，默认值为 NULL。  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
+ [ **@mailserver_name** =] **'**_server_name_  
  该帐户要使用的 SMTP 邮件服务器的新名称。 运行的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须能够解析*server_name*为 IP 地址。 *server_name*是**sysname**，无默认值。  
   
- [ **@mailserver_type** = ] **'***server_type***'**  
+ [ **@mailserver_type** =] **'**_server_type_  
  邮件服务器的新类型。 *server_type*是**sysname**，无默认值。 值 **'SMTP'** 支持。  
   
  [ **@port** = ] *port_number*  
  邮件服务器的新端口号。 *port_number*是**int**，无默认值。  
   
- [ **@timeout** =] **'***超时*****  
+ [ **@timeout** =] **'**_超时_  
  单个电子邮件信息的 SmtpClient.Send 的超时参数。 *超时*是**int**以秒为单位，无默认值。  
   
- [ **@username** =] **'***用户名*****  
+ [ **@username** =] **'**_用户名_  
  登录到邮件服务器时使用的新用户名。 *用户名称*是**sysname**，无默认值。  
   
- [ **@password** =] **'***密码*****  
- 登录到邮件服务器时使用的新密码。 *密码*是**sysname**，无默认值。  
+ [ **@password** =] **'**_密码_  
+ 登录到邮件服务器时使用的新密码。 *密码* 是 sysname** ，无默认值。  
   
  [ **@use_default_credentials** =] use_default_credentials  
  指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**为 bit，无默认值。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为 0 时，数据库邮件使用**@username**并**@password**上的 SMTP 服务器进行身份验证。 如果**@username**并**@password**为 NULL，则它将使用匿名身份验证。 在指定此参数之前，请洽询您的 SMTP 管理员  
@@ -103,7 +103,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
  存储的过程**sysmail_update_account_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -16,15 +16,15 @@ ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 16808a0bfa3956c19a0e472e778d37308b993462
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092291"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363009"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  本主题概述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的升级和迁移选项。 有两种用于升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的常规方法：  
+  本主题将概述的升级和迁移选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有两种用于升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的常规方法：  
   
 -   **升级：** 升级服务器和实例上当前安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 这通常称为“就地”升级。 对于从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器的一种模式升级到另一模式，不支持就地升级。 例如，不能将本机模式报表服务器升级到 SharePoint 模式报表服务器。 您可以将报表项从一个模式迁移到另一个模式。 有关详细信息，请参阅后面本文档和相关的主题的本机到 SharePoint 迁移部分[示例 Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
@@ -57,12 +57,12 @@ ms.locfileid: "48092291"
 ##  <a name="bkmk_known_issues"></a> 已知的升级问题和最佳做法  
  有关可以升级的受支持版本的详细列表，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
-> [!TIP]  
+> [!TIP]
 >  有关与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的问题相关的最新信息，请参阅以下内容：  
->   
->  -   [SQL Server 2014 发行说明](http://go.microsoft.com/fwlink/?LinkID=296445)。  
-> -   [SQL Server 2014 Reporting Services 提示、技巧和故障排除](http://go.microsoft.com/fwlink/?LinkID=391254)。  
-> -   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升级顾问。 有关详细信息，请参阅[Reporting Services 升级问题&#40;升级顾问&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)并[如何： 安装升级顾问](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)。  
+> 
+>  -   [SQL Server 2014 发行说明](https://go.microsoft.com/fwlink/?LinkID=296445)。  
+> -   [SQL Server 2014 Reporting Services 提示、技巧和故障排除](https://go.microsoft.com/fwlink/?LinkID=391254)。  
+> -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级顾问。 有关详细信息，请参阅[Reporting Services 升级问题&#40;升级顾问&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)并[如何：安装升级顾问](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)。  
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48092291"
   
 -   查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的安全最佳实践和指南。 有关详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   
--   运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]报表服务器计算机上的升级顾问以确定可能妨碍成功升级任何问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
+-   在报表服务器计算机上运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级顾问，以确定可能妨碍成功升级的任何问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
   
 -   备份对称密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48092291"
   
 -   备份对 IIS 中现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虚拟目录的任何自定义。  
   
--   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书将导致升级失败，且会将类似于以下的错误消息写入 Reporting Services 日志文件： **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site**。  
+-   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书将导致升级失败并且类似于以下错误消息将写入 Reporting Services 日志文件：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:未在网站上配置安全套接字层 (SSL) 证书。**.  
   
  在升级生产环境之前，务必在与生产环境具有相同配置的生产前环境中运行测试升级。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "48092291"
   
  当选择了一个要升级的现有报表服务器实例时，升级过程即开始。  
   
-1.  如果报表服务器数据库位于远程计算机上，而您没有更新该数据库的权限，则安装程序将提示您提供更新远程报表服务器数据库的凭据。 请务必提供有凭据`sysadmin`或数据库更新权限。  
+1.  如果报表服务器数据库位于远程计算机上，而您没有更新该数据库的权限，则安装程序将提示您提供更新远程报表服务器数据库的凭据。 请确保提供具有 `sysadmin` 或数据库更新权限的凭据。  
   
 2.  安装程序检查阻止升级的条件或设置并读取配置设置。 示例包括在报表服务器上部署的自定义扩展插件。 如果升级受阻，则必须修改您的安装以便不再阻止升级，或者迁移到新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例。 有关详细信息，请参阅升级顾问文档。  
   
@@ -155,17 +155,17 @@ ms.locfileid: "48092291"
   
     3.  不升级其他客户端工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和联机丛书）。 若要获得这些工具的新版本，可以在运行安装程序时添加它们。 其早期版本将与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本并存。 如果安装了示例，则会保留早期版本。 安装程序不支持升级 SQL Server 示例。  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为单独下载。 有关详细信息，请参阅 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkID=325512)。  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为单独下载。 有关详细信息，请参阅 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512)。  
   
 6.  安装程序重用服务控制管理器中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器服务的服务条目。 此服务条目包括报表服务器 Windows 服务帐户。  
   
 7.  安装程序基于 IIS 中的现有虚拟目录设置保留新的 URL。 安装程序可能不会删除 IIS 中的虚拟目录，所以请确保在完成升级之后手动删除它们。  
   
-8.  安装程序将报表服务器数据库升级到新架构并通过为角色添加数据库所有者权限来修改 `RSExecRole`。 此步骤仅在您要从升级时出现[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SP1 之前。  
+8.  安装程序将报表服务器数据库升级到新架构并通过为角色添加数据库所有者权限来修改 `RSExecRole`。 仅当正在从 SP1 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升级时，才会执行此步骤。  
   
 9. 安装程序合并配置文件中的设置。 添加新条目时，使用当前安装的配置文件作为基础。 不会删除过时的条目，但是在升级完成后，报表服务器不会再读取它们。 升级不会删除旧日志文件、过时的 RSWebApplication.config 文件或 IIS 中的虚拟目录设置。 升级不会删除 SQL Server 2005 报表设计器、Management Studio 或其他客户端工具。 如果不再需要它们，请确保在升级完成后删除这些文件和工具。  
   
- **迁移：** 迁移到本机模式安装的上一版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是支持的版本，本主题前面列出的所有相同的步骤。 有关详细信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ **迁移：** 对于本文前面列出的所有支持的版本，将以前版本的本机模式安装迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的步骤是相同的。 有关详细信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   
@@ -199,20 +199,20 @@ ms.locfileid: "48092291"
 > [!IMPORTANT]  
 >  由于需要升级不同技术，下面的某些方案将需要将 SharePoint 环境停止运行。 如果您的情况不允许停机，则需要完成迁移，而非就地升级。  
   
-### <a name="includesssql11includessssql11-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **起始环境：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]。，SharePoint 2010。  
+### <a name="includesssql11includessssql11-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的受支持版本升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **起始环境：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]，SharePoint 2010。  
   
- **结束环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010 或 SharePoint 2013。  
+ **结束环境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010 或 SharePoint 2013。  
   
--   **SharePoint 2010：** 支持就地升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但此升级方案需要 SharePoint 环境停机时间。  
+-   **SharePoint 2010：** 支持就地升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但此升级方案需要 SharePoint 环境停机。  
   
      如果您还希望结束环境运行 SharePoint 2013，则需完成 SharePoint 2010 到 SharePoint 2013 的数据库附加升级。  
   
--   **SharePoint 2013：** SharePoint 2013 不支持从 SharePoint 2010 就地升级。 但是支持**数据库附加升级**过程。 该行为不同于升级到 SharePoint 2010，在后者，客户可以在两个基本的升级方法（就地升级和数据库附加升级）之间进行选择。  
+-   **SharePoint 2013:** SharePoint 2013 不支持从 SharePoint 2010 就地升级。 但是支持 **数据库附加升级**  过程。 该行为不同于升级到 SharePoint 2010，在后者，客户可以在两个基本的升级方法（就地升级和数据库附加升级）之间进行选择。  
   
      如果您具有与 SharePoint 2010 相集成的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装，则不能就地升级 SharePoint 服务器。 不过，您可以将内容数据库和服务应用程序数据库从 SharePoint 2010 场迁移到 SharePoint 2013 场。  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 的受支持版本升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **起始环境：** SQL Server 2008 R2、SharePoint 2010。  
   
  **结束环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
@@ -221,14 +221,14 @@ ms.locfileid: "48092291"
   
 -   在场中的每个 Web 前端上安装用于 SharePoint 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 外接程序的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本。 您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导或通过下载外接程序安装该外接程序。  
   
--   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装可为每台“报表服务器”升级 SharePoint 模式。SQL Server 安装向导将安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务并创建新的服务应用程序。  
+-   运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装以升级每个报表服务器的 SharePoint 模式。SQL Server 安装向导将安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务并创建新的服务应用程序。  
   
      如果您还希望结束环境运行 SharePoint 2013，则需完成 SharePoint 2010 到 SharePoint 2013 的数据库附加升级。  
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **起始环境：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2、SharePoint 2007。  
+ **起始环境：**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2，SharePoint 2007。  
   
  **结束环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "48092291"
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   
-### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SQL Server 2005 SP2 至   
  **起始环境：** SQL Server 2005 SP2、SharePoint 2007。  
   
  **结束环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
@@ -279,11 +279,11 @@ ms.locfileid: "48092291"
   
  将报表服务器安装移到另一台计算机会使保护加密密钥（这些加密密钥用于为报表服务器数据库中存储的敏感数据提供安全保障）的哈希无效。 使用该数据库的每个报表服务器实例都有其加密密钥副本，在当前计算机对其定义时将使用服务帐户的标识对其进行加密。 如果更改计算机，则即使在新计算机上使用同一帐户名称，服务也无法访问其密钥。  
   
- 若要在新的报表服务器计算机上重新建立可逆加密，必须还原先前备份的密钥。 报表服务器数据库中存储的完整密钥集由对称密钥值和服务标识信息组成，后者用于限制密钥的访问，使密钥仅可供存储它的报表服务器实例使用。 在密钥还原过程中，报表服务器将用密钥的新版本替换密钥的现有副本。 新版本包括当前计算机上定义的计算机标识值和服务标识值。 有关详细信息，请参阅以下主题：  
+ 若要在新的报表服务器计算机上重新建立可逆加密，必须还原先前备份的密钥。 报表服务器数据库中存储的完整密钥集由对称密钥值和服务标识信息组成，后者用于限制密钥的访问，使密钥仅可供存储它的报表服务器实例使用。 在密钥还原过程中，报表服务器将用密钥的新版本替换密钥的现有副本。 新版本包括当前计算机上定义的计算机标识值和服务标识值。 有关详细信息，请参阅下列主题：  
   
--   SharePoint 模式： 请参阅的"密钥管理"部分[管理 Reporting Services SharePoint 服务应用程序](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+-   SharePoint 模式：请参阅的"密钥管理"部分[管理 Reporting Services SharePoint 服务应用程序](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
--   本机模式：请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-    本机模式：请参阅[备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   
@@ -305,11 +305,11 @@ ms.locfileid: "48092291"
 > [!NOTE]  
 >  有关 SharePoint 数据库附加升级的详细信息，请参阅下列文章：  
   
--   [升级到 SharePoint 2013 的过程概述](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)。  
+-   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688)。  
   
--   [清理前升级到 SharePoint 2013 的准备工作](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [清理前升级到 SharePoint 2013 的准备工作](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
   
--   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   

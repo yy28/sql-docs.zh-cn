@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changereplicationserverpasswords_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d83b849aebe44ca94a130127fbe8dc0af4af8322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760230"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  要更改的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的名称。 *登录名*是**nvarchar(257)**，无默认值  
   
  [ **@password**  =] **'***密码*****  
- 要存储的新密码为指定*登录名*。 *密码*是**sysname**，无默认值。  
+ 要存储的新密码为指定*登录名*。 *密码* 是 sysname** ，无默认值。  
   
 > [!NOTE]  
 >  更改复制密码后，必须停止并重新启动使用该密码的每个代理，这样代理的更改才能生效。  
@@ -74,7 +73,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="remarks"></a>备注  
  **sp_changereplicationserverpasswords**用于所有类型的复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changereplicationserverpasswords**。  
   
 ## <a name="see-also"></a>请参阅  

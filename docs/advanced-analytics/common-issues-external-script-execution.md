@@ -1,27 +1,25 @@
 ---
-title: 快速启动板服务和 SQL Server 中的外部脚本执行的常见问题 |Microsoft Docs
+title: 快速启动板服务和外部脚本执行的 SQL Server 机器学习服务的常见问题
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701445"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644917"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>使用快速启动板服务和 SQL Server 中的外部脚本执行常见的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- SQL Server Trusted Launchpad 服务对 R 和 Python 支持外部脚本执行。 在 SQL Server 2016 R Services，SP1 将提供服务。 SQL Server 2017 包括快速启动板 ervice 作为开头几安装的一部分。
+ SQL Server Trusted Launchpad 服务对 R 和 Python 支持外部脚本执行。 在 SQL Server 2016 R Services，SP1 将提供服务。 SQL Server 2017 包括快速启动板服务在初始安装的一部分。
 
 多个问题会阻止从开始，包括配置问题或更改，或缺少的网络协议的快速启动板。 本文提供许多问题的疑难解答的指引。 对于任何我们错过了，您可以发布到的问题[Machine Learning Server 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)。
-
-**适用于：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务
 
 ## <a name="determine-whether-launchpad-is-running"></a>确定是否正在运行快速启动板
 
@@ -69,7 +67,7 @@ ms.locfileid: "51701445"
 
 若要解决此问题，在 SQL Server Management Studio，安全管理员可以 SQL 登录名或 Windows 用户帐户修改通过运行以下脚本：
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -85,9 +83,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 - 当你尝试运行 R 脚本时，生成的错误：
 
-    * *无法启动“R”脚本的运行时。请检查“R”运行时的配置。
+    * *无法启动“R”脚本的运行时。请检查“R”运行时的配置。*
 
-    * *发生外部脚本错误。无法启动运行时。
+    * *发生外部脚本错误。无法启动运行时。*
 
 - 生成的错误[!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md)]服务：
 
@@ -129,9 +127,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 重新启动该服务通常解决了问题，以便可以运行机器学习脚本。 如果在重新启动未解决此问题，请注意的路径和中的自变量**二进制文件路径**属性，然后执行以下操作：
 
-    A. 查看启动程序的.config 文件，并确保工作目录无效。
+    a. 查看启动程序的.config 文件，并确保工作目录无效。
 
-    B. 确保 Launchpad 使用的 Windows 组可以连接到 SQL Server 实例，如中所述[上一节](#bkmk_LaunchpadTS)。
+    b. 确保 Launchpad 使用的 Windows 组可以连接到 SQL Server 实例。
 
     c. 如果服务属性的任何更改，重新启动 Launchpad 服务。
 
@@ -171,7 +169,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 若要确定实例使用的 R 包库的位置，打开 SQL Server Management Studio （或任何其他数据库查询工具），连接到的实例，然后运行以下存储的过程：
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```
@@ -211,7 +209,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 > [!NOTE] 
 > 在较旧系统中，快速启动板可能无法启动如果 8dot3 表示法要求。 更高版本中已删除此要求。 SQL Server 2016 R Services 的客户应安装以下项之一：
-> * SQL Server 2016 SP1 和 CU1: [for SQL Server 累积更新 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)。
+> * SQL Server 2016 SP1 和 CU1:[SQL Server 的累积更新 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)。
 > * SQL Server 2016 RTM、 累积更新 3 和这[修补程序](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)，这是按需提供。
 
 使用 R 的兼容性，SQL Server 2016 R Services （数据库） 所需位置安装该功能以支持通过使用短文件名创建的驱动器*8dot3 表示法*。 8.3 文件名也称为*短文件名*，并用与早期版本的 Microsoft Windows 或作为长文件名的替代方法的兼容性。

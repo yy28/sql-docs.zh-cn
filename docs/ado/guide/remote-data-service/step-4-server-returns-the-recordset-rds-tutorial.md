@@ -24,7 +24,7 @@ ms.locfileid: "51559654"
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 将检索到 RDS**记录集**向窗体可以发送回客户端对象 (也就是说，它*封送***记录集**)。 转换和如何发送的确切形式取决于是否在服务器位于 Internet 或 intranet，本地网络，或者是一个动态链接库。 但是，此详细信息并不重要;将发送所有相关问题是该 RDS**记录集**返回给客户端。  
+ 将检索到 RDS**记录集**向窗体可以发送回客户端对象 (也就是说，它*封送* **记录集**)。 转换和如何发送的确切形式取决于是否在服务器位于 Internet 或 intranet，本地网络，或者是一个动态链接库。 但是，此详细信息并不重要;将发送所有相关问题是该 RDS**记录集**返回给客户端。  
   
  客户端侧**记录集**返回对象并将其分配给本地变量。  
   
