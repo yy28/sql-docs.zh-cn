@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5078fec6dd0661f42e4e1104257671672efb6403
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0218602b8f46d15f4d2d809df95e0500b51180ab
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642665"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328287"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 调试器 -“错误列表”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
+   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
   
 ## <a name="features-of-the-error-list"></a>“错误列表”的功能  
  **“错误列表”** 提供下列功能：  
@@ -91,5 +89,3 @@ ms.locfileid: "51642665"
   
  **项目**  
  显示包含相应脚本文件的项目的名称。  
-  
-  

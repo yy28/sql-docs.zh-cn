@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - default lightweight pooling
@@ -21,17 +20,17 @@ ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 319d7057d9d25f952abd90a83d742daa8fdb3996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 552a86ba168ab121210b42cc0e462f8fdcbea84b
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079927"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639365"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>lightweight pooling 服务器配置选项
   使用“轻型池”选项可以减少有时在对称多处理 (SMP) 环境下遇到的、与过多的上下文切换有关的系统开销。 如果出现过多的上下文切换，轻型池可以通过上下文切换内联化，从而降低用户/内核环的转换频率，达到提高吞吐量的目的。  
   
- 纤程模式专用于 UMS 工作线程的上下文切换是性能的关键瓶颈的某些情况。 因为这种情况很少出现，所以纤程模式很少增强典型系统上的性能或可扩展性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 中改进的上下文切换也减少了对纤程模式的需求。 我们建议您不要使用纤程模式计划日常操作。 这是因为它会抑制上下文切换优点的正常发挥，并且使用线程本地存储区 (TLS) 或线程所有的对象（如互斥体，一种 Win32 内核对象）的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件在纤程模式下无法正常工作。  
+ 纤程模式专用于 UMS 工作线程的上下文切换是性能的关键瓶颈的某些情况。 因为这种情况很少出现，所以纤程模式很少增强典型系统上的性能或可扩展性。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 中改进的上下文切换也减少了对纤程模式的需求。 我们建议您不要使用纤程模式计划日常操作。 这是因为它会抑制上下文切换优点的正常发挥，并且使用线程本地存储区 (TLS) 或线程所有的对象（如互斥体，一种 Win32 内核对象）的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件在纤程模式下无法正常工作。  
   
  将 **lightweight pooling** 设置为 1 将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 切换到纤程模式计划。 该选项的默认值为 0。  
   
@@ -47,6 +46,6 @@ ms.locfileid: "48079927"
  [clr enabled 服务器配置选项](clr-enabled-server-configuration-option.md)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
- [“启用 CLR”服务器配置选项](clr-enabled-server-configuration-option.md)  
+ [clr enabled 服务器配置选项](clr-enabled-server-configuration-option.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SSMS 中启用 DirectQuery 模式 |Microsoft Docs
+title: 在 SSMS 中的 Analysis Services DirectQuery 模式下启用 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700585"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072204"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中启用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51700585"
   
 -   最后一步是通过执行查询来确认 DirectQuery 模式是可以操作的。  
   
-## <a name="step-1-check-the-compatibility-level"></a>步骤 1：查看兼容级别  
+## <a name="step-1-check-the-compatibility-level"></a>步骤 1：检查兼容性级别  
  用于定义数据访问权限的属性在不同兼容级别是不同的。 预备步骤是查看数据库属于什么兼容级别。  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到具有表格模型的实例。  
@@ -55,7 +55,7 @@ ms.locfileid: "51700585"
   
  将表格模型更改为 DirectQuery 模式时，新的数据存储模式会立即生效。  
   
-## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>步骤 2a：将表格 1200 数据库切换成 DirectQuery 模式  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>步骤 2a:将表格 1200年数据库切换成 DirectQuery 模式  
   
 1.  在对象资源管理器中，右键单击数据库 >“属性” > “模型” > “默认模式”。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "51700585"
   
     |||  
     |-|-|  
-    |**有效值**|**Description**|  
+    |**有效值**|**说明**|  
     |**DirectQuery**|将针对后端关系数据库来执行查询，使用的数据源连接是为模型定义的。<br /><br /> 系统会将对模型进行的查询转换为本机数据库查询，并将其重定向到数据源。<br /><br /> 处理已设置为 DirectQuery 模式的模型时，仅编译和部署元数据。 数据本身是在模型外部，位于操作性数据源的数据库文件中。|  
     |**导入**|将按 MDX 或 DAX 格式针对表格数据库来执行查询。<br /><br /> 处理已设置为“导入”模式的模型时，将从后端数据源检索数据并将其存储在磁盘上。 加载数据库时，会将数据整个复制到内存中进行极快速的表扫描和查询。<br /><br /> 这是表格模型的默认模式，是某些（非关系）数据源的唯一模式。|  
   
-## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>步骤 2b：将表格 1100-1103 数据库切换成 DirectQuery 模式  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>步骤 2b:将表格 1100-1103年数据库切换成 DirectQuery 模式  
   
 1.  在对象资源管理器中，右键单击数据库 >“属性” > “数据库” > “DirectQueryMode”。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51700585"
   
     |||  
     |-|-|  
-    |**有效值**|**Description**|  
+    |**有效值**|**说明**|  
     |**InMemory**|查询只使用缓存的内存中数据。|  
     |**InMemorywithDirectQuery**|查询默认使用缓存，除非在客户端的连接字符串中指定了其他项。<br /><br /> 这是一种混合模式，可将分区逐个配置为使用内存中模式或 DirectQuery 模式。|  
     |**DirectQuery**|查询仅使用关系数据源。|  
@@ -91,9 +91,9 @@ ms.locfileid: "51700585"
   
 -   你可以将缓存上的分区配置为从不处理用于 DirectQuery 模式的主分区，并且主分区必须始终引用关系数据源。 有许多方法可以使用分区来优化模型设计和报表体验。 有关详细信息，请参阅[DirectQuery 模型中定义的分区](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。  
   
--   在部署了模型后，您可以更改首选连接方法。 例如，您可以使用混合模式来进行测试，并且仅在全面测试了使用该模型的所有报表或查询后，才将模型切换到“仅限 DirectQuery”  模式。 有关详细信息，请参阅[设置或更改 DirectQuery 的首选连接方法](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)。  
+-   在部署了模型后，您可以更改首选连接方法。 例如，您可以使用混合模式来进行测试，并且仅在全面测试了使用该模型的所有报表或查询后，才将模型切换到“仅限 DirectQuery”  模式。 有关详细信息，请参阅 [设置或更改 DirectQuery 的首选连接方法](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)。  
   
-## <a name="step-3-check-the-connection-properties-on-the-database"></a>步骤 3：查看数据库的连接属性  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>步骤 3：检查数据库的连接属性  
  切换为 DirectQuery 可能会更改连接的安全上下文，具体取决于数据源连接的设置情况。 更改数据访问模式时，请查看模拟和连接字符串属性，确保登录名可以用于连接到后端数据库。  
   
  查看 **Configure Analysis Services for Kerberos constrained delegation** 中的 [配置 Analysis Services 以实现可信委托](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 部分，了解针对 DirectQuery 方案委派用户身份时的背景信息。  
@@ -124,7 +124,7 @@ ms.locfileid: "51700585"
   
 3.  在跟踪中，你会看到针对关系数据库执行查询的证据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [兼容性级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -22,12 +20,12 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9ea8423567f7ad8f5dcfff4ee0c57d37c87fe98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 135ca9d30b6baa9d5f358409c9a49fb3d0fc61e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112932"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772159"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
   本主题说明如何使用在 updategram 中指定的映射架构（XSD 或 XDR）来处理更新。 在 updategram 中，您可以使用映射到表和列中的元素和属性在 updategram 中的带批注的映射架构的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定映射架构时，updategram 中指定的元素和属性名称必须映射为该映射架构的元素和属性。  
@@ -115,7 +113,7 @@ ms.locfileid: "48112932"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用在映射架构中指定的父子关系插入记录  
- 架构元素可以相互关联。 **\<Sql: relationship >** 元素指定架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
+ 架构元素可以相互关联。  **\<Sql: relationship >** 元素指定架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
   
  以下映射架构 (SampleSchema.xml) 由两个元素组成**\<顺序 >** 并 **\<OD >**:  
   

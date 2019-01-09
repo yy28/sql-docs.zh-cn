@@ -14,12 +14,12 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a72bb27e95da931fac146fe6bc827b71cdb8460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520647"
 ---
 # <a name="current-record-and-size-of-recordset"></a>当前记录和记录集的大小
 本部分介绍如何在此示例中找到光标的当前位置**记录集**中[JScript 代码示例返回一个记录集](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "47828615"
 ## <a name="size-of-recordset"></a>记录集的大小  
  若要查看的大小**记录集**对象，获取的值**Recordset.RecordCount**属性。 此值是一个长整数，指示中的记录数**记录集**。 如果数据集从 OLEDB 访问接口返回适用于 Microsoft SQL Server，此值将使返回的行数。 读取**RecordCount**属性对已关闭**记录集**将导致错误。  
   
- 如果不确定的记录数，该属性的值为 – 1。  
+ 如果不确定的记录数，该属性的值为-1。  
   
  值**RecordCount**属性还依赖于提供程序和使用的游标类型的功能。 对于只进游标，值为-1。 对于静态或键集游标，值是实际返回中的记录数**记录集**对象。 对于动态游标，值为-1 或的记录，具体取决于数据源的实际数目。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47828615"
   
  在某些情况下，提供程序或光标是无法确定**RecordCount**而无需第一个数据源中提取所有记录的值。 若要确保准确计数，请调用**记录集**。**MoveLast**方法之前调用**Recordset.RecordCount**。  
   
- 该示例**记录集**对象使用获取[JScript 代码示例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)使用只进游标，因此调用**RecordCount**对此对象总是会导致 – 1。 如果您更改的调用的代码行**记录集**。**打开**方法，如以下示例所示**RecordCount**属性将返回实际提取的记录数。  
+ 该示例**记录集**对象使用获取[JScript 代码示例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)使用只进游标，因此调用**RecordCount**对此对象始终会为-1。 如果您更改的调用的代码行**记录集**。**打开**方法，如以下示例所示**RecordCount**属性将返回实际提取的记录数。  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   

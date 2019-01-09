@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362909"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
   地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -32,7 +32,7 @@ ms.locfileid: "49072321"
   
 -   **空间数据源。** 提供空间数据的源的位置或连接，例如，包含空间数据的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例和数据库的名称，或是 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的名称。  
   
--   **空间数据的第三方站点。** 来自空间数据源，是包含用于指定位置的一系列坐标的字段。  
+-   **Spatial data.** 来自空间数据源，是包含用于指定位置的一系列坐标的字段。  
   
 -   **分析数据。** 用于改变地图显示的分析数据，例如，年度商店销售额。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "49072321"
   
     -   [基本图、气泡图和分析图之间有什么区别？](#MapType)  
   
-    -   **选择地图可视化： 多边形**  
+    -   **选择地图可视化：多边形**  
   
-    -   **选择地图可视化： 线条**  
+    -   **选择地图可视化：行**  
   
-    -   **选择地图可视化： 点**  
+    -   **选择地图可视化：点**  
   
 4.  **选择数据源的连接**。 选择或创建一个与包含要在地图上显示的分析数据的外部数据源的数据源连接。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "49072321"
   
  添加地图或地图层并预览报表之后，您可以更改在向导中设置的地图和地图层选项。 有关详细信息，请参阅[自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 有关地图的详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。 有关向报表添加地图的分步说明，请参阅[教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)。  
+ 有关地图的详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。 若要向报表添加地图的分步说明，请参阅[教程：地图报表&#40;报表生成器&#41;](../tutorial-map-report-report-builder.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "49072321"
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器中，将 .shp 文件及 .dbf 文件同时添加到报表项目中，然后将该 .shp 文件的名称指定为空间数据源。  
   
 ###  <a name="GetShapefiles"></a> 在何处可以获取 ESRI 形状文件？  
- 在网络上提供 ESRI 形状文件。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
+ 在网络上提供 ESRI 形状文件。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
   
 ###  <a name="SqlServerSpatial"></a> 什么是 SQL Server 空间查询？  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 空间查询是一种数据集查询，该查询指定来自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 关系数据库的 SQLGeometry 或 SQLGeography 数据类型的数据。  
@@ -149,7 +149,7 @@ ms.locfileid: "49072321"
   
  在查询设计器中运行该查询时，结果集显示一列，其中的空间数据显示为文本。 例如，一行可能包含作为一个点的空间数据，而下一行可能包含定义一组点的空间数据。 每行都成为一个地图元素。 您可以改变每个图元素的显示，将其作为不可分的单元。  
   
- 有关详细信息，请参阅 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)中的“空间数据类型”。  
+ 有关详细信息，请参阅 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?linkid=120955)中的“空间数据类型”。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -196,9 +196,9 @@ ms.locfileid: "49072321"
   
 -   **混合：** 显示组合起来的 **“道路”** 和 **“空中”** 视图。  
   
- 有关图块的详细信息，请参阅 [Bing 地图图块系统](http://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+ 有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划地图"中[Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中。  
+ 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划地图"中[Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中。  
   
  有关自定义图块层的其他方式的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49072321"
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ## <a name="see-also"></a>请参阅  
- [报表故障排除：地图报表（报表生成器和 SSRS）](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [规划地图报表（报表生成器和 SSRS）](plan-a-map-report-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5e6cf3c0be2ec3ab8587bd086c99b32e718cd78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801849"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
   指定数据库引擎优化顾问优化建议（索引和分区集）可用的最大空间 (MB)。  
@@ -39,7 +38,7 @@ ms.locfileid: "48069443"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|**数据类型和长度**|`unsignedInt`长度没有限制。|  
+|**数据类型和长度**|`unsignedInt`，长度没有限制。|  
 |**默认值**|无。|  
 |**出现次数**|可选。 仅能对 `TuningOptions` 元素使用一次。|  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48069443"
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 (DTA)](tuningoptions-element-dta.md)|  
 |**子元素**|None|  
   
 ## <a name="remarks"></a>备注  
@@ -59,7 +58,7 @@ ms.locfileid: "48069443"
   
  默认存储大小不包括非聚集索引和索引视图。  
   
- 如果指定的值`StorageBoundInMB`元素超过了实际磁盘空间，数据库引擎优化顾问会返回一个错误消息，但继续进行优化。 优化完成之后，如果决定实现建议，则可增加磁盘空间。  
+ 如果为 `StorageBoundInMB` 元素指定的值超出了磁盘空间的实际大小，则数据库引擎优化顾问会返回一个错误消息，但继续进行优化。 优化完成之后，如果决定实现建议，则可增加磁盘空间。  
   
 ## <a name="example"></a>示例  
   

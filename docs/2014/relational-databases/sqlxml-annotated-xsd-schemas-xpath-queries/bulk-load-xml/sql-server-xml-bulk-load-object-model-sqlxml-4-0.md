@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], object model
@@ -33,12 +31,12 @@ ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fadb3edffa2d7e8030ecaaf95c6a5236aad67cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750469"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大容量加载对象模型包含 SQLXMLBulkLoad 对象。 该对象支持以下方法和属性。  
@@ -47,7 +45,7 @@ ms.locfileid: "48080527"
  Execute  
  通过使用作为参数提供的架构文件和数据文件（或流），大容量加载数据。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  BulkLoad  
  指定是否应执行大容量加载。 此属性很有用，如果你想要只生成的架构 （请参阅按照 SchemaGen、 SGDropTables 和 SGUseID 属性），并且执行大容量加载。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将执行。 当此属性设置为 FALSE 时，XML 大容量加载将不执行。  
   

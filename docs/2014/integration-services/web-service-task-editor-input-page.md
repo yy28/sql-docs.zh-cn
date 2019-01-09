@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515153"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服务任务编辑器（“输入”页）
   可以使用 **“Web 服务任务编辑器”** 对话框的 **“输入”** 页，指定 Web 服务、Web 方法和作为输入提供给 Web 方法的值。 可通过直接在“值”列中键入字符串或在“值”列中选择变量来提供这些值。  
@@ -35,7 +35,7 @@ ms.locfileid: "48056687"
  从列表中为要执行的任务选择 Web 方法。  
   
  **WebMethodDocumentation**  
- 键入对 Web 方法的说明，或单击浏览按钮 **(…)**，再在“Web 方法文档”对话框中键入说明。  
+ 键入对 Web 方法的说明，或单击浏览按钮 (…)，再在“Web 方法文档”对话框中键入说明。  
   
  **名称**  
  列出为 Web 方法提供的输入名称。  
@@ -54,8 +54,8 @@ ms.locfileid: "48056687"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web 服务任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [Web 服务任务编辑器&#40;输出页&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Web 服务任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [Web 服务任务编辑器（“输出”页）](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f6d38ab1f6320faaf31eed394315043d67bb33b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63511e175a98e366bfeb4d02ba3085d8e9943813
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053577"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368399"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
   本主题说明如何使用 SharePoint 管理中心或 PowerShell 备份和还原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 本主题包含：  
@@ -32,13 +32,13 @@ ms.locfileid: "48053577"
 ###  <a name="bkmk_Restrictions"></a> 限制和局限  
   
 > [!NOTE]  
->  通过使用 SharePoint 备份和还原功能，可以部分地备份和还原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 **需要执行其他步骤** ，本主题中介绍了这些步骤。 备份过程当前 **不** 备份无人参与的执行帐户 (UEA) 或对 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据库的 Windows 身份验证的加密密钥和凭据。  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 **需要执行其他步骤** ，本主题中介绍了这些步骤。 备份过程当前 **不** 备份无人参与的执行帐户 (UEA) 或对 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据库的 Windows 身份验证的加密密钥和凭据。  
   
 ###  <a name="bkmk_recommendations"></a> 建议  
   
 -   启动 SharePoint 备份之前备份加密密钥。 如果您没有备份加密密钥，则在还原服务应用程序之后将无法访问加密的数据。 您将需要删除加密数据。  
   
--   如果验证你[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序使用 UEA 还是 Windows 身份验证来访问数据库。 如果正在使用其中一个，请验证正确的凭据，以便在还原过程之后可以正确地配置该服务应用程序。  
+-   验证您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序是正在使用 UEA 还是 Windows 身份验证来访问数据库。 如果正在使用其中一个，请验证正确的凭据，以便在还原过程之后可以正确地配置该服务应用程序。  
   
 -   查看在与备份文件相同的文件夹中创建的 SharePoint 备份日志。 该文件通常名为 **spbackup.log**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48053577"
 3.  验证您的服务应用程序是使用 UEA 还是 Windows 身份验证来访问数据库。 如果确实使用这两种方法，请记下凭据，以便在还原服务应用程序之后，可以使用这些凭据配置服务应用程序。  
   
 ### <a name="backup-the-encryption-keys-using-central-administration"></a>使用管理中心备份加密密钥  
- 有关备份 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
+ 有关备份 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
   
 ###  <a name="bkmk_centraladmin"></a> 使用 SharePoint 管理中心备份服务应用程序  
  若要备份服务应用程序，请完成以下步骤：  
@@ -63,18 +63,18 @@ ms.locfileid: "48053577"
   
 3.  单击“下一步” 。  
   
-4.   键入 **“备份位置:”** 的路径，然后单击“开始备份”  
+4.    键入 **“备份位置:”** 的路径，然后单击“开始备份”  
   
 5.  重复上述过程，而不是选择服务应用程序，展开 **“共享服务代理”** 节点，然后选择服务应用程序代理。 该应用程序将具有 **“SQL Server Reporting Services 服务应用程序代理”** 类型。  
   
  有关详细信息，请参阅 SharePoint 文档中的以下主题：  
   
- [SharePoint 文档中的备份服务应用程序 (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748601.aspx)。  
+ [SharePoint 文档中的备份服务应用程序 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)。  
   
- [备份服务应用程序 (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [备份服务应用程序 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>验证执行帐户和数据库身份验证  
- **执行帐户** ：验证您的服务应用程序是否正在使用执行帐户：  
+ **执行帐户：** 验证你的服务应用程序是否正在使用执行帐户：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48053577"
   
 4.  如果配置了执行帐户，则当需要还原服务应用程序备份时，您需要知道凭据。 在知道正确的凭据之前，请不要继续执行备份和还原过程。  
   
- **数据库身份验证** ：验证您的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
+ **数据库身份验证：** 验证你的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48053577"
   
 3.  从 **“顶部组件”** 列表中选择服务应用程序备份，然后单击 **“下一步”**。  
   
-4.  选择你[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]应用程序，然后单击**下一步**。  
+4.  选择您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 应用程序，然后单击 **“下一步”**。  
   
 5.  在 **“登录名和密码”** 部分中，键入登录名的密码。 登录名框中应填充服务应用程序在备份之前使用的登录名。  
   
@@ -121,15 +121,15 @@ ms.locfileid: "48053577"
   
  有关详细信息，请参阅 SharePoint 文档中的以下主题：  
   
- [还原服务应用程序 (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)。  
+ [还原服务应用程序 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)。  
   
  [还原服务应用程序 (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)。  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>使用管理中心还原加密密钥  
- 有关还原信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]加密密钥，请参阅的"加密密钥"部分[管理 Reporting Services SharePoint 服务应用程序](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)。  
+ 有关还原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>配置执行帐户和数据库身份验证  
- **执行帐户** ：如果您的服务应用程序正在使用执行帐户，请完成一些步骤对它进行配置：  
+ **执行帐户：** 如果你的服务应用程序正在使用执行账户，请完成下列步骤对它进行配置：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48053577"
   
 5.  单击“确定” 。  
   
- **数据库身份验证** ：如果您的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
+ **数据库身份验证：** 如果你的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   

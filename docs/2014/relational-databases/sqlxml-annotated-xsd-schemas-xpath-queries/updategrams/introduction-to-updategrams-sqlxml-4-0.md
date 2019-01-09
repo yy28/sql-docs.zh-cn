@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -24,12 +22,12 @@ ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d53bd692371861e12ebbd323af2741da146bc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82f6c6d8e7ecfa3a1ca29805c186d601ed65bd00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113326"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782929"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 简介 (SQLXML 4.0)
   您可以修改 （插入、 更新或删除） 中的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从现有 XML 文档通过使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函数。  
@@ -110,7 +108,7 @@ ms.locfileid: "48113326"
  使用默认映射（在 updategram 中未指定映射架构）时，如果是以元素为中心的映射，则 updategram 元素映射到表并且子元素映射到列。如果是以属性为中心的映射，则属性映射到列。  
   
 ### <a name="element-centric-mapping"></a>以元素为中心的映射  
- 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。 **\<Person.Contact >** 元素包含 **\<FirstName >** 并 **\<LastName >** 子元素。 这些子元素是属性的 **\<Person.Contact >** 元素。  
+ 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。  **\<Person.Contact >** 元素包含 **\<FirstName >** 并 **\<LastName >** 子元素。 这些子元素是属性的 **\<Person.Contact >** 元素。  
   
  由于此 updategram 未指定映射架构，updategram 使用隐式映射，其中 **\<Person.Contact >** 元素映射到 Person.Contact 表，其子元素映射到 FirstName 和姓氏列。  
   

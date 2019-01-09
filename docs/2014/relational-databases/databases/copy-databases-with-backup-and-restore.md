@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -19,12 +18,12 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787829"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过还原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的用户数据库备份来创建新数据库。 但是， **无法还原使用**早期版本创建的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份。 此外，任何早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都无法还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份。  
@@ -33,7 +32,7 @@ ms.locfileid: "48057187"
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用与早期版本不同的默认路径。 因此，若要还原在早期版本的默认位置中创建的数据库备份，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 有关移动数据库文件的详细信息，请参阅本主题中后面的“移动数据库文件”。  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>使用备份和还原复制数据库的一般步骤  
- 使用备份和还原将数据库复制到其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，源计算机和目标计算机可以是运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何平台。  
+ 使用备份和还原将数据库复制到其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，源计算机和目标计算机可以是运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何平台。  
   
  一般步骤如下：  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48057187"
   
     -   如果无法覆盖现有文件，则会出现还原错误。  
   
- 若要避免错误和意外的结果，则还原操作前，可以使用[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)历史记录表的数据库文件和日志文件中您计划还原的备份。  
+ 若要避免错误和意外结果，则在还原操作前，您可以使用 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) 历史记录表确定备份中您计划还原的数据库文件和日志文件。  
   
 ## <a name="moving-the-database-files"></a>移动数据库文件  
  如果由于前面提到的原因，无法将数据库备份中的文件还原到目标计算机上，则必须在还原这些文件时将它们移到新的位置。 例如：  

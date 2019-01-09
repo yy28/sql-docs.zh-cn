@@ -17,12 +17,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08531e4b0ecfcda02fa1dd1e2c3125b557e41cb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183977"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514514"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>添加或删除用户定义层次结构
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”选项卡上的维度中添加或删除用户定义的层次结构。  
@@ -54,16 +54,16 @@ ms.locfileid: "48183977"
   
 -   在“维度结构” 选项卡上的“层次结构”窗格中，单击要删除的用户定义的层次结构。 在工具栏上，单击 **“删除”**。  
   
-     — 或者 —  
+     - 或 -  
   
 -   在“层次结构”窗格中右键单击要删除的用户定义的层次结构，然后单击“删除”。  
   
-     — 或者 —  
+     - 或 -  
   
 -   将该用户定义的层次结构拖出设计图面。  
   
 ## <a name="see-also"></a>请参阅  
  [用户层次结构](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [创建用户定义的层次结构](user-defined-hierarchies-create.md)  
+ [创建用户定义层次结构](user-defined-hierarchies-create.md)  
   
   

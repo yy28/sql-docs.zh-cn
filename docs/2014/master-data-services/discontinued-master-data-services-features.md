@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d54486dfbedc54b8b21e4f515682fab00ebe057c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1466883d27fb87aeae1e4b51f5826696abc3abb6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201420"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761299"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中不再支持的 Master Data Services 功能
   此主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中不再可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。  
@@ -63,7 +62,7 @@ ms.locfileid: "48201420"
   
  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，不能再将成员导出到 Excel。 若要使用在 Excel 中的成员，请使用[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]。  
   
-### <a name="transactions"></a>中的  
+### <a name="transactions"></a>事务  
  在中**资源管理器**功能区域中，用户将无法再还原他们自己的事务。 以前，用户可以还原他们中的数据所做的更改**资源管理器**。 管理员仍可以还原中的所有用户的事务**版本管理**功能区域。  
   
  批注现在是永久性的，且无法删除。 以前，批注被视为事务，可以通过还原事务来删除批注。  

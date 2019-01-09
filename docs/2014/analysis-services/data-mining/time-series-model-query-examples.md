@@ -21,12 +21,12 @@ ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729f50c43b277b6456d834e7706c026b36cddfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4098a1b5eade3705e10ab609c47454564a18101d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067987"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511415"
 ---
 # <a name="time-series-model-query-examples"></a>时序模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 例如，时序模型的内容查询可能提供有关检测到的周期性结构的其他详细信息，而预测查询可能给出接下来 5-10 个时间段的预测。 您还可以使用查询来检索有关模型的元数据。  
@@ -54,7 +54,7 @@ ms.locfileid: "48067987"
 ## <a name="getting-information-about-a-time-series-model"></a>获取有关时序模型的信息  
  模型内容查询可以提供有关模型的基本信息，例如创建模型时使用的参数、上次处理模型的时间。 以下示例说明了使用数据挖掘架构行集查询模型内容的基本语法。  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1：检索模型的周期提示  
+###  <a name="bkmk_Query1"></a> 示例查询 1:检索模型的周期提示  
  可通过查询 ARIMA 树或 ARTXP 树检索在时序内找到的周期。 但是，已完成的模型中的周期可能与创建模型时指定为提示的周期不同。 若要检索创建模型时作为参数提供的提示，可以使用以下 DMX 语句来查询挖掘模型内容架构行集：  
   
 ```  
@@ -74,7 +74,7 @@ WHERE MODEL_NAME = '<model name>'
 > [!NOTE]  
 >  此处已将结果截断以提高可读性。  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2：检索 ARIMA 模型的公式  
+###  <a name="bkmk_Query2"></a> 示例查询 2:检索 ARIMA 模型的公式  
  通过查询单个树中的任何节点，可以检索 ARIMA 模型的公式。 请记住，ARIMA 模型中的每个树都表示不同的周期，如果有多个数据序列，则每个数据序列都将有自己的周期树集。 因此，若要检索特定数据序列的公式，必须先标识树。  
   
  例如，TA 前缀表示该节点是 ARIMA 树的一部分，而 TS 前缀用于 ARTXP 树。 通过查询 NODE_TYPE 值为 27 的节点的模型内容可以找到所有的 ARIMA 根树。 也可以使用 ATTRIBUTE_NAME 值查找特定数据序列的 ARIMA 根节点。 该查询示例查找表示 R250 型号在 Europe 地区销售数量的 ARIMA 节点。  
@@ -100,13 +100,13 @@ WHERE NODE_NAME = 'TA00000007'
   
 |短公式|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- 有关如何解释此信息的详细信息，请参阅[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 有关如何解释此信息的详细信息，请参阅 [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3：检索 ARTXP 模型的公式  
+###  <a name="bkmk_Query3"></a> 示例查询 3:检索 ARTXP 模型的公式  
  对于 ARTxp 模型，将在树的每个级别存储不同的信息。 有关 ARTxp 模型的结构，以及如何解释公式中的信息的详细信息，请参阅[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
  下面的 DMX 语句检索部分 ARTxp 树的信息，表示 R250 型号在 Europe 的销售数量。  
@@ -124,7 +124,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- 有关如何解释此信息的详细信息，请参阅[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 有关如何解释此信息的详细信息，请参阅 [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>创建针对时序模型的预测  
  从 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]开始，可以在时序模型中添加新数据并自动将新数据合并到模型中。 您可以通过下列两种方式之一向时序挖掘模型添加新数据：  
@@ -136,13 +136,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> 理解替换和扩展操作的行为  
  在时序模型中添加新数据时，可以指定是否扩展或替换定型数据：  
   
--   **扩展：** 在您扩展某一数据序列时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在现有定型数据的末尾添加新数据。 定型事例的数量也会增加。  
+-   **扩展：** 在扩展数据序列时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]现有定型数据的结尾处添加新数据。 定型事例的数量也会增加。  
   
      扩展模型事例对于使用新数据持续更新模型很有用。 例如，如果要使定型集随时间增长，则只需扩展该模型。  
   
-     若要扩展数据，则创建`PREDICTION JOIN`对时序模型，指定新数据源，并使用`EXTEND_MODEL_CASES`参数。  
+     若要扩展数据，请在时序模型上创建一个 `PREDICTION JOIN`，指定新数据源，然后使用 `EXTEND_MODEL_CASES` 参数。  
   
--   **替换：** 当您在数据系列中替换数据时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将保留定型模型，但使用新数据值替换全部或部分现有定型事例。 因此，定型数据的大小永远不会发生变化，但事例本身却可以使用更新的数据不断进行替换。 如果您提供了足够的新数据，则可以使用全新的序列替换定型数据。  
+-   **将为：** 当替换数据序列中的数据时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]保留定型的模型，但使用新的数据值替换现有的定型事例的全部或部分。 因此，定型数据的大小永远不会发生变化，但事例本身却可以使用更新的数据不断进行替换。 如果您提供了足够的新数据，则可以使用全新的序列替换定型数据。  
   
      如果您想对一组事例的某个模型定型，然后将该模型应用到不同的数据序列，则替换模型事例非常有用。  
   
@@ -179,7 +179,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> 使用 REPLACE_MODEL_CASES 进行预测  
  在替换模型中的事例时，模型的大小将保持不变，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将替换模型中的各个事例。 这对于交叉预测以及需要让定型数据集的大小保持一致的情形很有用。  
   
- 例如，您的一个商店的销售数据不足。 您可以对位于特定地区的所有商店的销售量计算平均值，然后定型一个模型，以此来创建一个常规模型。 然后，若要进行预测的销售数据不足的商店，你创建`PREDICTION JOIN`上仅为该商店的新销售数据。 在进行此操作时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会保留从地区模型中派生的模式，而使用各个商店的数据替换现有的定型事例。 最后，您的预测值将更为接近各个商店的趋势线。  
+ 例如，您的一个商店的销售数据不足。 您可以对位于特定地区的所有商店的销售量计算平均值，然后定型一个模型，以此来创建一个常规模型。 然后，为了对销售数据不足的商店进行预测，可以仅为该商店创建一个有关新销售数据的 `PREDICTION JOIN`。 在进行此操作时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会保留从地区模型中派生的模式，而使用各个商店的数据替换现有的定型事例。 最后，您的预测值将更为接近各个商店的趋势线。  
   
  使用 `REPLACE_MODEL_CASES` 参数时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会连续将新事例添加到事例集的末尾，并从事例集的开头删除相应数量的事例。 如果您要添加的新数据比原始定型集中的数据多， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将丢弃最早的数据。 如果您提供了足够的新值，则预测可以基于全新的数据。  
   
@@ -210,11 +210,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |预测函数|用法|  
-|[延隔时间&#40;DMX&#41;](/sql/dmx/lag-dmx)|返回当前事例的日期与定型集的最近日期之间的若干时间段。<br /><br /> 该函数的一个典型用途是标识最近的定型事例，以使您可以检索有关这些事例的详细数据。|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|返回指定的可预测列的节点 ID。<br /><br /> 该函数的一个典型用途是标识生成特定预测值的节点，以使您可以查看与该节点关联的事例，或者检索公式和其他详细信息。|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|返回指定的可预测列中预测的标准偏差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|返回指定可预测列的预测方差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
-|[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)|返回时序的历史预测值或未来预测值。<br /><br /> 还可以通过使用常规预测函数 [Predict (DMX)](/sql/dmx/predict-dmx) 来查询时序模型。|  
+|[Lag (DMX)](/sql/dmx/lag-dmx)|返回当前事例的日期与定型集的最近日期之间的若干时间段。<br /><br /> 该函数的一个典型用途是标识最近的定型事例，以使您可以检索有关这些事例的详细数据。|  
+|[PredictNodeId (DMX)](/sql/dmx/predictnodeid-dmx)|返回指定的可预测列的节点 ID。<br /><br /> 该函数的一个典型用途是标识生成特定预测值的节点，以使您可以查看与该节点关联的事例，或者检索公式和其他详细信息。|  
+|[PredictStdev (DMX)](/sql/dmx/predictstdev-dmx)|返回指定的可预测列中预测的标准偏差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
+|[PredictVariance (DMX)](/sql/dmx/predictvariance-dmx)|返回指定可预测列的预测方差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
+|[PredictTimeSeries (DMX)](/sql/dmx/predicttimeseries-dmx)|返回时序的历史预测值或未来预测值。<br /><br /> 还可以通过使用常规预测函数 [Predict (DMX)](/sql/dmx/predict-dmx) 来查询时序模型。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](/sql/dmx/general-prediction-functions-dmx)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
@@ -222,6 +222,6 @@ AND NODE_TYPE = 15
  [数据挖掘查询](data-mining-queries.md)   
  [Microsoft 时序算法](microsoft-time-series-algorithm.md)   
  [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)   
- [时序模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

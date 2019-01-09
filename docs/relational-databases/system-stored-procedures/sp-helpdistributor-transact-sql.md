@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790257"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591391"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,43 +50,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@distributor=**] **'***分发服务器上***’** 输出  
+ [  **@distributor=**] **'**_分发服务器上_输出  
  是分发服务器的名称。 分发服务器是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
   
- [  **@distribdb=**] **'***distribdb***’** 输出  
+ [  **@distribdb=**] **'**_distribdb_输出  
  是分发数据库的名称。 *distribdb*是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
   
- [  **@directory=**] **'***directory***’** 输出  
+ [  **@directory=**] **'**_目录_输出  
  是工作目录。 *目录*是**nvarchar(255)**，默认值为**%**，这是唯一返回结果集的值。  
   
- [  **@account=**] **'***帐户***输出**  
+ [  **@account=**] **'**_帐户_**输出**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户。 *帐户*是**nvarchar(255)**，默认值为**%**，这是唯一返回结果集的值。  
   
- [  **@min_distretention=**] *min_distretention * * * 输出**  
+ [  **@min_distretention=**] _min_distretention_**输出**  
  最小分发保持期（以小时为单位）。 *min_distretention*是**int**，默认值为 **-1**。  
   
- [  **@max_distretention=**] *max_distretention * * * 输出**  
+ [  **@max_distretention=**] _max_distretention_**输出**  
  最大分发保持期（以小时为单位）。 *max_distretention*是**int**，默认值为 **-1**。  
   
- [  **@history_retention=**] *history_retention * * * 输出**  
+ [  **@history_retention=**] _history_retention_**输出**  
  历史记录保持期（以小时为单位）。 *history_retention*是**int**，默认值为 **-1**。  
   
- [  **@history_cleanupagent=**] **'***history_cleanupagent***输出**  
+ [  **@history_cleanupagent=**] **'**_history_cleanupagent_**输出**  
  是历史记录清除代理的名称。 *history_cleanupagent*是**nvarchar(100)**，默认值为**%**，这是唯一返回结果集的值。  
   
- [  **@distrib_cleanupagent =**] **'***distrib_cleanupagent***输出**  
+ [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**输出**  
  是分发清除代理的名称。 *distrib_cleanupagent*是**nvarchar(100)**，默认值为**%**，这是唯一返回结果集的值。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
- [  **@local=**] **'***本地***’**  
+ [  **@local=**] **'**_本地_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否应获得本地服务器值。 *本地*是**nvarchar(5)**，默认值为 NULL。  
   
- [  **@rpcsrvname=**] **'***rpcsrvname***输出**  
+ [  **@rpcsrvname=**] **'**_rpcsrvname_**输出**  
  发出远程过程调用的服务器的名称。 *rpcsrvname*是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
   
- [ **@publisher_type**=] **'***publisher_type***输出**  
+ [ **@publisher_type**=] **'**_publisher_type_**输出**  
  发布服务器的类型。 *publisher_type*是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
   
 ## <a name="result-sets"></a>结果集  
@@ -115,7 +114,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  如果在执行时指定一个或多个输出参数**sp_helpdistributor**、 设置为 NULL 的所有输出参数都分配值在退出和不返回任何结果集。 如果未指定输出参数，则返回结果集。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  以下结果集列或输出参数返回到的成员**sysadmin**发布服务器上的固定的服务器角色和**db_owner**上对发布数据库的固定的数据库角色：  
   
 |结果集列|输出参数|  

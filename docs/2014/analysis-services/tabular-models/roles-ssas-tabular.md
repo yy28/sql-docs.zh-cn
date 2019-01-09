@@ -11,12 +11,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181367"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419848"
 ---
 # <a name="roles-ssas-tabular"></a>角色（SSAS 表格）
   在表格模型中，角色定义模型的成员权限。 每个角色都包含成员（按 Windows 用户名或按 Windows 组）和权限（读取、处理、管理员）。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。  
@@ -41,7 +41,7 @@ ms.locfileid: "48181367"
 -   [相关任务](#bkmk_rt)  
   
 ##  <a name="bkmk_underst"></a> 了解角色  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用角色来管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和数据的安全性。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中有两种类型的角色：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用角色来管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和数据的安全性。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中有两种类型的角色：  
   
 -   服务器角色，它是一个固定角色，用于提供对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的管理员访问权限。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48181367"
   
  每个角色都可以定义下列权限之一：  
   
-|Permissions|Description|使用 DAX 进行行筛选|  
+|权限|Description|使用 DAX 进行行筛选|  
 |-----------------|-----------------|----------------------------|  
 |None|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
 |读取|允许成员查询数据（基于行筛选器），但是无法看到 SSMS 中的模型数据库，无法更改模型数据库架构，并且用户无法处理模型。|应用行筛选器。 用户仅能看见在行筛选器 DAX 公式中指定的数据。|  
@@ -76,15 +76,15 @@ ms.locfileid: "48181367"
   
  只能为具有“读取”和“读取和处理”权限的角色定义行筛选器。 默认情况下，如果没有为某一特定表定义行筛选器，则具有“读取”和“读取和处理”权限的角色的成员将能够查询表中的所有行，除非交叉筛选应用于其他表。  
   
- 一旦为特定表定义了行筛选器后，求值结果必须为 TRUE/FALSE 值的 DAX 公式将定义可供该特定角色的成员进行查询的行。 未包含在 DAX 公式中的行将不可查询。 例如，对于具有以下行筛选器表达式的 Customers 表，Sales 角色的成员将只能看到 USA 中的客户：=Customers [Country] = “USA”。  
+ 一旦为特定表定义了行筛选器后，求值结果必须为 TRUE/FALSE 值的 DAX 公式将定义可供该特定角色的成员进行查询的行。 未包含在 DAX 公式中的行将不可查询。 例如，对于 Sales 角色的成员，Customers 表的以下行筛选器表达式中， *= Customers [Country] ="USA"*，Sales 角色的成员将只能查看美国境内的客户。  
   
  行筛选器应用于指定的行以及相关行。 如果表具有多个关系，则筛选器将安全性应用于处于活动状态的关系。 行筛选器将与为相关表定义的其他行筛选器相交，例如：  
   
 |表|DAX 表达式|  
 |-----------|--------------------|  
-|地区|=Region[Country]=”USA”|  
-|ProductCategory|=ProductCategory[Name]=”Bicycles”|  
-|中的|=Transactions[Year]=2008|  
+|地区|= 区域 [Country] ="USA"|  
+|ProductCategory|= ProductCategory [名称] ="自行车"|  
+|事务|=Transactions[Year]=2008|  
   
  这些权限对于 Transactions 表的净效果是，将允许成员查询客户位于 USA、产品类别是自行车并且年份是 2008 的数据行。 用户将无法查询 USA 之外的任何事务、不是自行车的任何事务或者不在 2008 年发生的任何事务，除非用户是授予了这些权限的其他角色。  
   
@@ -130,17 +130,17 @@ ms.locfileid: "48181367"
 |7|销售和营销|  
   
 ##  <a name="bkmk_testroles"></a> 测试角色  
- 在创作模型项目时，可以使用“在 Excel 中分析”功能来测试已定义的角色的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”** 时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户名、角色和一个用于连接作为数据源的工作区模型的透视。 有关详细信息，请参阅[在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)。  
+ 在创作模型项目时，可以使用“在 Excel 中分析”功能来测试已定义的角色的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”** 时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户名、角色和一个用于连接作为数据源的工作区模型的透视。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
   
 ##  <a name="bkmk_rt"></a> 相关任务  
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建和管理角色&#40;SSAS 表格&#41;](create-and-manage-roles-ssas-tabular.md)|本主题中的任务说明如何使用 **“角色管理器”** 对话框来创建和管理角色。|  
+|[创建和管理角色（SSAS 表格）](create-and-manage-roles-ssas-tabular.md)|本主题中的任务说明如何使用 **“角色管理器”** 对话框来创建和管理角色。|  
   
 ## <a name="see-also"></a>请参阅  
- [透视&#40;SSAS 表格&#41;](perspectives-ssas-tabular.md)   
- [在 Excel 中分析&#40;SSAS 表格&#41;](analyze-in-excel-ssas-tabular.md)   
+ [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
+ [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)   
  [USERNAME 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [LOOKUPVALUE 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [CUSTOMDATA 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

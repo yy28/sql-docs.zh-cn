@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -16,12 +15,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050005"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766539"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务可负责处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，如表格模型、多维数据集、维度和挖掘模型。  
@@ -58,7 +57,7 @@ ms.locfileid: "48050005"
   
  此任务常与大容量插入任务或数据流任务结合使用，前者将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，后者实现将数据加载到表中的数据流。 例如，数据流任务可能具有数据流，该数据流从联机事务性数据库 (OLTP) 数据库中提取数据，并将数据加载到数据仓库中的事实数据表，然后调用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务来处理根据数据仓库构建的多维数据集。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
   
 ## <a name="error-handling"></a>错误处理  
   
@@ -67,9 +66,9 @@ ms.locfileid: "48050005"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [Analysis Services 处理任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services 处理任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services 处理任务编辑器&#40;Analysis Services 页&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Analysis Services 处理任务编辑器（Analysis Services 页）](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

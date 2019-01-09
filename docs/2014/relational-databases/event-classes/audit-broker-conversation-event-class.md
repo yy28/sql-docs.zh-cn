@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a52cbbcfd898b60255779b91e4dd68fb326749
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795181"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建了 **Audit Broker Conversation** 事件以报告与 Service Broker 对话安全有关的审核消息。  

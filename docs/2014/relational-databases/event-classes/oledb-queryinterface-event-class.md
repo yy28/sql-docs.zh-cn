@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54459f4c31854c11a2285c072b8e5d20ca510807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174987"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763619"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件类
   **发出 OLE DB** QueryInterface [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来调用分布式查询和远程存储过程时，会发生 **OLEDB QueryInterface** 事件类。 包括跟踪（这些跟踪监视与分布式查询和远程存储过程相关的问题）中的事件类。  
@@ -52,7 +51,7 @@ ms.locfileid: "48174987"
 |NTUserName|`nvarchar`|Windows 用户名。|6|用户帐户控制|  
 |ProviderName|`nvarchar`|OLE DB 访问接口的名称。|46|用户帐户控制|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|用户帐户控制|  
-|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 并以 login2 的身份，执行语句`SessionLoginName`显示 Login1 和`LoginName`显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
+|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并以 Login2 身份执行语句，则 `SessionLoginName` 将显示 Login1，而 `LoginName` 则显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|`int`|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |TextData|`nvarchar`|在 OLE DB 调用中发送和接收的参数。|1|否|  

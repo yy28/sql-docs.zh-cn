@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教程第 10 课： 创建分区 |Microsoft Docs
+title: Analysis Services 教程第 10 课：创建分区 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091325"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401140"
 ---
 # <a name="create-partitions"></a>创建分区
 
@@ -22,11 +22,11 @@ ms.locfileid: "43091325"
 
 在本课程中，你创建分区来将 FactInternetSales 表划分为较小的逻辑部分，可以处理 （刷新） 独立于其他分区。 默认情况下，在模型中包括的每个表具有一个分区，其中包括所有表的列和行。 对于 FactInternetSales 表中，我们想要将数据划分按年份;为每个表的五年的一个分区。 然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区](../tabular-models/partitions-ssas-tabular.md)。 
   
-学完本课的估计时间： **15 分钟**  
+学完本课的预计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 9 课： 创建层次结构](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。  
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 9 课：创建层次结构](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>创建分区  
   
@@ -44,7 +44,7 @@ ms.locfileid: "43091325"
 
     ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  在筛选行对话框中，在**显示行，其中： OrderDate**，保留**是晚于或等于**，然后在日期字段中，输入**2010 年 1 月 1 日**。 将保留**并**运算符选择，然后选择**早**，然后在日期字段中，输入**2011 年 1 月 1 日**，然后单击**确定**。
+6.  在筛选行对话框中，在**显示行，其中：OrderDate**，保留**是晚于或等于**，然后在日期字段中，输入**2010 年 1 月 1 日**。 将保留**并**运算符选择，然后选择**早**，然后在日期字段中，输入**2011 年 1 月 1 日**，然后单击**确定**。
 
     ![作为-lesson10-筛选的行](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
@@ -117,4 +117,4 @@ ms.locfileid: "43091325"
   
  ## <a name="whats-next"></a>下一步是什么？
 
-转到下一课：[第 11 课： 创建角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)。 
+请转到下一课：[第 11 课：创建角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)。 

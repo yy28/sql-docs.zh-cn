@@ -17,19 +17,19 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6264b245667d4378e126151616bd1e936000fcd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712587"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205286"
 ---
 # <a name="bookmark-c-data-type"></a>书签 C 数据类型
 书签 C 数据类型允许应用程序来检索一个书签。 书签 C 类型仅用于检索可以是变量的长度; 的书签值它们不应转换为其他数据类型。 应用程序将检索从第 0 列的结果与设置的书签**SQLBulkOperations** （带有 SQL_ADD 的操作）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 有关详细信息，请参阅[书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  
   
  下表列出的值*CType*书签 C 数据类型中，键入从 SQL 实现书签 C 数据类型，并且此类数据定义的 ODBC C 数据类型。H.  
   
-> [!NOTE]  
+> [!NOTE]
 >  已弃用 SQL_C_BOOKMARK 数据类型。 ODBC 3 *.x*应用程序不应使用 SQL_C_BOOKMARK。 ODBC 3 *.x*驱动程序需要仅当他们想要使用 ODBC 2 支持 SQL_C_BOOKMARK。*x*使用它的应用程序。 当应用程序适用于 ODBC 2 时，驱动程序管理器映射到 SQL_C_BOOKMARK SQL_C_VARBOOKMARK。*x*驱动程序。  
   
 |C 类型标识符|ODBC C typedef|C 类型|  

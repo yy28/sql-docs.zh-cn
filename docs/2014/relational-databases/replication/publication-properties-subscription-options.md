@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080517"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753849"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
   可以使用 **“发布属性”** 对话框的 **“订阅选项”** 页，查看和设置与订阅关联的发布级别属性。 属性分为以下类别：  
@@ -36,7 +35,7 @@ ms.locfileid: "48080517"
   
 ### <a name="creation-and-synchronization"></a>创建和同步  
  **允许匿名订阅**  
- 确定是否允许匿名请求订阅。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
+ 确定是否允许匿名请求订阅。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
   
  **可附加的订阅数据库**  
  确定是否可以通过附加订阅数据库的副本来创建订阅（对于快照发布和事务发布，要求将选项 **“快照始终可用”** 设置为 **True** ）。  
@@ -85,10 +84,10 @@ ms.locfileid: "48080517"
   
 ### <a name="updatable-subscriptions"></a>可更新订阅  
  **“允许排队更新订阅”**  
- 确定是否允许立即将订阅服务器数据更改复制到发布服务器。 此选项是只读选项；只有在创建发布后，才能启用更新订阅。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)中切换可更新事务订阅的更新模式。  
+ 确定是否允许立即将订阅服务器数据更改复制到发布服务器。 此选项是只读选项；只有在创建发布后，才能启用更新订阅。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
  **“允许对等订阅”**  
- 确定是否允许将订阅服务器数据更改加入队列并在稍后复制到发布服务器。 此选项是只读选项；只有在创建发布后，才能启用更新订阅。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)中切换可更新事务订阅的更新模式。  
+ 确定是否允许将订阅服务器数据更改加入队列并在稍后复制到发布服务器。 此选项是只读选项；只有在创建发布后，才能启用更新订阅。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
  **集中报告冲突**  
  确定是仅报告发布服务器上发生冲突的数据更改，还是同时报告发布服务器和订阅服务器上发生冲突的数据更改（需要选项 **“允许排队更新订阅”**）。 此选项是只读选项；对于用新建发布向导创建的发布，该选项默认设置为 **True** ，并且不能在创建发布后更改。 如果值为 **True** ，则表示只在发布服务器上报告冲突。 只能在报告冲突的位置查看冲突。  
@@ -107,7 +106,7 @@ ms.locfileid: "48080517"
   
 ### <a name="filtering"></a>筛选  
  **允许参数化筛选器**  
- 根据发布是否使用参数化筛选器设置此选项。 此选项始终是只读的。 有关详细信息，请参阅 [参数化行筛选器](merge/parameterized-filters-parameterized-row-filters.md)。  
+ 根据发布是否使用参数化筛选器设置此选项。 此选项始终是只读的。 有关详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **验证订阅服务器**  
  确定在验证订阅服务器是否具有正确的数据分区时，将使用哪些函数。 用逗号分隔多个值。 有关详细信息，请参阅[验证合并订阅服务器的分区信息](validate-partition-information-for-a-merge-subscriber.md)。  

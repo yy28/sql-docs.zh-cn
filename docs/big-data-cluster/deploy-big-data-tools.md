@@ -1,67 +1,59 @@
 ---
-title: 连接到大数据群集使用 Azure Data Studio 的 SQL Server |Microsoft Docs
-description: 了解如何连接到 SQL Server 2019 大数据群集使用 Azure Data Studio。
+title: 安装大数据工具
+titleSuffix: SQL Server 2019 big data clusters
+description: 了解如何安装与 SQL Server 2019 大数据群集 （预览版） 配合使用的工具。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 2327b7db3b21c972a98719a1126c46011bd9691a
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643785"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431301"
 ---
-# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>连接到 SQL Server 大数据群集使用 Azure Data Studio
+# <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
-本文介绍如何安装 Azure Data Studio，SQL Server 2019 扩展 （预览版），然后连接到的大数据群集。 新的 SQL Server 2019 扩展包括支持预览版[SQL Server 2019 大数据群集](big-data-cluster-overview.md)，一个集成[笔记本体验](notebooks-guidance.md)，和 PolyBase [Create External Table 向导](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+本指南介绍了客户端工具应在管理，用于创建、 安装和使用 SQL Server 2019 大数据群集 （预览版）。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="install-azure-data-studio"></a>安装 Azure 数据 Studio
+## <a name="big-data-cluster-tools"></a>大数据群集工具
 
-若要安装 Azure Data Studio，请参阅[下载并安装最新版本的 Azure Data Studio](../azure-data-studio/download.md)。
+下表列出了常用的大数据群集工具以及如何安装它们：
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>安装 SQL Server 2019 扩展 （预览版）
+| 工具 | Required | Description | 安装 |
+|---|---|---|---|
+| **mssqlctl** | 用户帐户控制 | 用于安装和管理大数据群集的命令行工具。 | [安装](deploy-install-mssqlctl.md) |
+| **kubectl**<sup>1</sup> | 用户帐户控制 | 监视基础 Kuberentes 群集的命令行工具 ([的详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **Azure Data Studio** | 用户帐户控制 | 用于查询 SQL Server 的跨平台图形化工具 ([的详细信息](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安装](../azure-data-studio/download.md) |
+| **SQL Server 2019 扩展** | 用户帐户控制 | 适用于支持连接到大数据群集的 Azure Data Studio 的扩展。 此外提供了数据虚拟化向导。 | [安装](../azure-data-studio/sql-server-2019-extension.md) |
+| **Azure CLI**<sup>2</sup> | 适用于 AKS | 用于管理 Azure 服务的新式命令行界面。 与 AKS 的大数据群集部署一起使用 ([的详细信息](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安装](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **mssql-cli** | 可选 | 新式命令行接口，用于查询 SQL Server ([的详细信息](https://github.com/dbcli/mssql-cli/blob/master/README.rst))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **sqlcmd** | 对于某些脚本 | 用于查询 SQL Server 的传统命令行工具 ([的详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **curl** <sup>3</sup> | 对于某些脚本 | 将使用的 Url 的数据传输的命令行工具。 | [Windows](https://curl.haxx.se/windows/) \| Linux： 安装 curl 包 |
 
-若要安装扩展，请参阅[安装 SQL Server 2019 扩展 （预览版）](../azure-data-studio/sql-server-2019-extension.md)。
+<sup>1</sup>必须使用 kubectl 版本 1.10 或更高版本。 此外，Kubectl 的版本应为加上或减去的 Kubernetes 群集的一个次要版本。 如果你想要 kubectl 客户端上安装特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) （在 Windows 10 上使用 cmd.exe 而非 Windows PowerShell 运行 curl）。
 
-## <a name="connect-to-the-cluster"></a>连接到群集
+<sup>2</sup> ，必须使用 Azure CLI 2.0.4 或更高版本。 运行`az --version`如果需要查找版本。
 
-当连接到的大数据群集时，可以选择要连接到 SQL Server[主实例](concept-master-instance.md)或 HDFS/Spark 网关。 以下部分说明如何连接到每个。
+<sup>3</sup>如果在 Windows 10 上运行**curl**从命令提示符处运行时已在你的路径。 对于其他版本的 Windows，下载**curl**使用的链接，并将其放在你的路径中。
 
-## <a id="master"></a> 主实例
+## <a name="which-tools-are-required"></a>需要哪些工具？
 
-1. 在 Azure Data Studio，按**F1** > **新连接**。
+上表提供了所有与大数据群集配合使用的常见工具。 所需的工具取决于你的方案。 但一般情况下，以下工具是最重要的管理、 连接和查询群集：
 
-1. 在中**连接类型**，选择**Microsoft SQL Server**。
+- **mssqlctl**
+- **Kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 扩展**
 
-1. 键入 SQL Server 主实例中的 IP 地址**服务器名称**(例如：  **\<IP 地址\>、 31433**)。
-
-1. 输入 SQL 登录名**用户名**并**密码**。
-
-1. 更改**数据库名称**到**high_value_data**数据库。
-
-   ![连接到主实例](./media/deploy-big-data-tools/connect-to-cluster.png)
-
-1. 按**Connect**，并**Server 仪表板**应显示。
-
-## <a id="hdfs"></a> HDFS/Spark 网关
-
-1. 在 Azure Data Studio，按**F1** > **新连接**。
-
-1. 在中**连接类型**，选择**SQL Server 大数据群集**。
-
-1. 键入中的大数据群集的 IP 地址**服务器名称**。
-
-1. 输入`root`有关**用户**并指定**密码**到大数据群集。
-
-   ![连接到 HDFS/Spark 网关](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
-
-1. 按**Connect**，并**Server 仪表板**应显示。
+在某些情况下仅需要其余的工具。 **Azure CLI**可用于管理与 AKS 部署关联的 Azure 服务。 **mssql cli**是一种可选的但有用的工具，可用于连接到群集中的 SQL Server 主实例和从命令行运行查询。 并**sqlcmd**并**curl**是必需的如果你打算使用 GitHub 脚本安装示例数据。
 
 ## <a name="next-steps"></a>后续步骤
 
-若要在 Azure Data Studio 中运行 notebook，请参阅[如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)。
+有关大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。

@@ -11,20 +11,20 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063837"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351013"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中不再推荐使用的 SQL Server 功能
   本主题介绍升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后不再可用的功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中没有停止使用的功能。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>停止使用的 Active Directory Helper 服务  
  Active Directory Helper 服务和相关组件已删除。 下表列出了已删除的关联组件：  
@@ -36,12 +36,12 @@ ms.locfileid: "48063837"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>SQL Server 2008 R2 中停止使用的功能  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Reporting Services 中的 64 位平台支持  
- 在中启动[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]，则[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]组件不再支持运行 Windows Server 2003 或 Windows Server 2003 R2 的基于 Itanium 的服务器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 继续支持其他 64 位操作系统，包括 Windows Server 2008 for Itanium-Based Systems 和 Windows Server 2008 R2 for Itanium-Based Systems。 若要在 Windows Server 2003 或 Windows Server 2003 R2 的基于 Itanium 的系统版本上从具有 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 安装升级到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，您必须首先升级操作系统。  
+ 从 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 开始，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件不再支持运行 Windows Server 2003 或 Windows Server 2003 R2 的基于 Itanium 的服务器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 继续支持其他 64 位操作系统，包括 Windows Server 2008 for Itanium-Based Systems 和 Windows Server 2008 R2 for Itanium-Based Systems。 若要在 Windows Server 2003 或 Windows Server 2003 R2 的基于 Itanium 的系统版本上从具有 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 安装升级到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，您必须首先升级操作系统。  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 中已不再使用的功能  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL Server Express 安装中已不再使用的 SQL-DMO  
- 用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 SQL-DMO 已从 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 中删除。 我们建议您尽快修改当前使用此功能的应用程序。 如果必须支持为 SQL-DMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express，安装中的向后兼容性组件[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]功能包[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230)。 请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 进行新的开发工作。  
+ 用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 SQL-DMO 已从 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 中删除。 我们建议您尽快修改当前使用此功能的应用程序。 如果必须支持为 SQL-DMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express，安装中的向后兼容性组件[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]功能包[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=51230)。 请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 进行新的开发工作。  
   
 ### <a name="discontinued-option-for-web-assistant"></a>已不再使用的用于 Web 助手的选项  
  用于启用 Web 助手的 `sp_configure` 选项已从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中删除。 建议改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 。  

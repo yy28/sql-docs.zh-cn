@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 050269e2c7183c8b4c318749bc3adc93be056119
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664826"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414074"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51664826"
   
  **SQLColumns**可以对静态服务器游标执行。 尝试执行**SQLColumns**对可更新的 （动态或键集） 游标将返回 sql_success_with_info 以指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过接受由两部分名称来支持链接服务器上的表报告信息*CatalogName*参数：*Linked_Server_Name.Catalog_Name*。  
   
  适用于 ODBC 2。*x*应用程序不使用中的通配符*TableName*， **SQLColumns**返回任何信息的表的名称匹配*TableName*和当前用户所拥有的。 如果当前用户拥有其名称与匹配任何表*TableName*参数， **SQLColumns**返回有关其他用户拥有的任何表的信息的表名称与相匹配*TableName*参数。 适用于 ODBC 2。*x*使用通配符，应用程序**SQLColumns**返回匹配的所有表的名称匹配*TableName*。 适用于 ODBC 3。*x*应用程序**SQLColumns**返回匹配的所有表的名称匹配*TableName*而不考虑所有者或是否使用了通配符。  
   

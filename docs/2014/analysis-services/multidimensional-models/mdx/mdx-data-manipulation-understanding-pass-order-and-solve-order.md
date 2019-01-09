@@ -19,12 +19,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d8d1797bc1ffdf937e37fb1ffae075691a892ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083007"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511008"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>理解传递次序和求解次序 (MDX)
   当某个多维数据集是 MDX 脚本的计算结果时，该多维数据集可能会经历许多计算阶段，具体取决于与计算有关的各种功能的使用情况。 每个阶段称为一个计算传递。  
@@ -38,7 +38,7 @@ ms.locfileid: "48083007"
 ## <a name="solve-order"></a>求解次序  
  求解次序决定了出现相互竞争的表达式时的计算优先级。 在一个传递中，求解次序决定了两点：  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的次序。  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的次序。  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算自定义成员、计算成员、自定义汇总和计算单元的次序。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48083007"
 > [!NOTE]  
 >  您可以针对 Adventure Works 示例多维数据库运行这些 MDX 查询。 可以从 codeplex 站点下载 [AdventureWorks 多维模型 SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) 示例。  
   
-### <a name="query-1differences-in-income-and-expenses"></a>查询 1 - 收入与支出之间的差额  
+### <a name="query-1-differences-in-income-and-expenses"></a>查询 1-收入与支出的差异  
  对于第一个 MDX 查询，通过构造一个与以下示例类似的简单 MDX 查询，计算每年的销售与成本之间的差额：  
   
 ```  
@@ -95,7 +95,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>查询 2 - 支出后的收益百分比  
+### <a name="query-2-percentage-of-income-after-expenses"></a>查询 2-支出后的收益百分比  
  对于第二个查询，通过使用下面的 MDX 查询，计算每年扣除支出后的收益百分比：  
   
 ```  
@@ -123,10 +123,10 @@ FROM [Adventure Works]
   
  第一个查询与第二个查询在结果集方面的差异来自计算成员位置的不同。 在第一个查询中，计算成员是 ROWS 轴的一部分，而在第二个查询中，计算成员是 COLUMNS 轴的一部分。 下一个查询将两个计算成员合并到一个 MDX 查询中，这种位置上的不同在这个查询中就会变得非常重要。  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>查询 3 - 合并后的年差额和净收益计算  
- 在最后这个查询中，将上面两个示例合并成一个 MDX 查询，此时由于要同时对列和行进行计算，因此求解次序变得重要起来。 若要确保正确的顺序进行计算，定义使用进行计算的顺序`SOLVE_ORDER`关键字。  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查询 3 组合年差额和净收益计算  
+ 在最后这个查询中，将上面两个示例合并成一个 MDX 查询，此时由于要同时对列和行进行计算，因此求解次序变得重要起来。 为了确保按正确的顺序进行计算，请使用 `SOLVE_ORDER` 关键字定义进行计算的顺序。  
   
- `SOLVE_ORDER` 关键字指定 MDX 查询或 `CREATE MEMBER` 命令中计算成员的求解次序。 使用整数值`SOLVE_ORDER`关键字是相对的不需要以零开始，也不需要是连续的。 该值只是告诉 MDX 基于通过计算具有较大求解次序值的成员得出的值来计算成员。 如果未定义计算的成员`SOLVE_ORDER`关键字，默认值的计算成员将为零。  
+ `SOLVE_ORDER` 关键字指定 MDX 查询或 `CREATE MEMBER` 命令中计算成员的求解次序。 `SOLVE_ORDER` 关键字使用的整数值是相对的，不要求从零开始，也不要求是连续的。 该值只是告诉 MDX 基于通过计算具有较大求解次序值的成员得出的值来计算成员。 如果不使用 `SOLVE_ORDER` 关键字定义计算成员，计算成员的默认值将为零。  
   
  例如，如果合并前面两个查询示例中使用的计算，则两个计算成员 `Year Difference` 和 `Profit Margin`将相交于 MDX 查询示例的结果数据集中的一个单元中。 确定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 如何计算此单元的唯一方式是通过求解次序。 根据两个计算成员的求解次序，用于构造此单元的公式将生成不同的结果。  
   
@@ -164,7 +164,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- 或多个  
+ 或  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -214,9 +214,9 @@ FROM [Adventure Works]
  求解次序可能会成为需要处理的非常复杂的问题，尤其是在具有很多维度而维度涉及计算成员、自定义汇总公式或计算单元的多维数据集中，更是如此。 当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算 MDX 查询时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将考虑给定传递中涉及的所有内容的求解次序值，包括 MDX 查询中指定的多维数据集的维度。  
   
 ## <a name="see-also"></a>请参阅  
- [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
- [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
- [CREATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [操作数据&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass (MDX)](/sql/mdx/calculationcurrentpass-mdx)   
+ [CalculationPassValue (MDX)](/sql/mdx/calculationpassvalue-mdx)   
+ [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)   
+ [操作数据 (MDX)](mdx-data-manipulation-manipulating-data.md)  
   
   

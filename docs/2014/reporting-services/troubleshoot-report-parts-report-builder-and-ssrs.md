@@ -11,12 +11,12 @@ ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43bbb27fc94d9fc7a32fb95b90e0b4e2cd53bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360249"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>报表部件故障排除（报表生成器和 SSRS）
   下面的这些技巧可在您使用报表部件时对您有所帮助。  
@@ -27,7 +27,7 @@ ms.locfileid: "48189317"
  若要查看您和您的同事拥有哪些权限，请咨询报表服务器管理员。  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>在我搜索已上载到 SharePoint 服务器的报表部件时，我看不到它们。 为什么看不到？  
- 如果报表部件是您手动上载到 SharePoint 文档库中的，而非通过使用报表生成器发布的，则这些报表部件在报表部件库中可能不出现。 用于库搜索的报表服务器可能需要与 SharePoint 文档库的内容保持同步。 有关详细信息，请参阅[激活报表服务器文件同步功能在 SharePoint 管理中心内](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com 上。  
+ 如果报表部件是您手动上载到 SharePoint 文档库中的，而非通过使用报表生成器发布的，则这些报表部件在报表部件库中可能不出现。 用于库搜索的报表服务器可能需要与 SharePoint 文档库的内容保持同步。 有关详细信息，请参阅[激活报表服务器文件同步功能在 SharePoint 管理中心内](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com 上。  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>为何其他人在其报表中看不到图像？  
  如果您发布的报表部件是指向某一图像文件的链接，则该报表部件实际上只是链接。 如果其他人在将图像报表部件添加到其报表后看不到图像，则他们可能对您链接到的图像不具备权限。  
@@ -44,6 +44,6 @@ ms.locfileid: "48189317"
  如果报表项具有循环引用，则您无法将其作为报表部件发布。 例如，某一报表项指向一个数据集，而该数据集又指向一个参数。 而该参数又指向该数据集。 您将需要首先删除其中一个引用，然后才能发布该报表部件。  
   
 ## <a name="see-also"></a>请参阅  
- [报表部件的&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)  
   
   

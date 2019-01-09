@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033574"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750359"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 
@@ -99,7 +99,7 @@ Ssdt 版本 17.0 RC 及更高版本支持在 Linux 上的 SQL Server。
 
 5. 检查的发布状态**数据工具操作**窗口。
 
-6. 单击**视图 Reulst**或**查看脚本**可以发布您在 Linux 上的 SQL Server 上的结果的数据库的详细信息，请参阅。
+6. 单击**查看结果**或**查看脚本**若要查看的数据库的详细信息发布在 Linux 上的 SQL Server 上的结果。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,12 +107,12 @@ Ssdt 版本 17.0 RC 及更高版本支持在 Linux 上的 SQL Server。
 
 ## <a name="next-steps"></a>后续步骤
 
-如果不熟悉 T-SQL，请参阅[教程：编写 Transact-SQL 语句]和 [事务处理 SQL 参考 （数据库引擎）]。
+如果您熟悉 T-SQL，请参阅[教程：编写 TRANSACT-SQL 语句]并[Transact-SQL 引用（数据库引擎）]。
 
 有关开发数据库与 SQL 数据工具的详细信息，请参阅[SSDT MSDN 文档]
 
 [下载并安装 Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN 文档]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[教程：编写 Transact-SQL 语句]:https://msdn.microsoft.com/library/ms365303.aspx
-[事务处理 SQL 参考 （数据库引擎）]:https://msdn.microsoft.com/library/bb510741.aspx
+[教程：编写 TRANSACT-SQL 语句]:https://msdn.microsoft.com/library/ms365303.aspx
+[Transact-SQL 引用（数据库引擎）]:https://msdn.microsoft.com/library/bb510741.aspx

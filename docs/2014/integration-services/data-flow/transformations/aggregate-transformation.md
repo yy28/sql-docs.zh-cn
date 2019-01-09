@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf39c69a6211e67d68a9206dad2687caad180
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750219"
 ---
 # <a name="aggregate-transformation"></a>聚合转换
   聚合转换将聚合函数（如 Average）应用于列值，并将结果复制到转换输出。 除聚合函数以外，转换还提供 GROUP BY 子句，用于指定所要聚合的组。  
@@ -31,10 +30,10 @@ ms.locfileid: "48205527"
 ## <a name="operations"></a>操作  
  聚合转换支持下列运算。  
   
-|运算|Description|  
+|操作|Description|  
 |---------------|-----------------|  
 |Group by|将数据集划分为组。 任何数据类型的列都可用于分组。 有关详细信息，请参阅 [GROUP BY (Transact-SQL)](/sql/t-sql/queries/select-group-by-transact-sql)。|  
-|SUM|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)。|  
+|Sum|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)。|  
 |平均值|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 [AVG (Transact-SQL)](/sql/t-sql/functions/avg-transact-sql)。|  
 |Count|返回组中的项数。 有关详细信息，请参阅 [COUNT (Transact-SQL)](/sql/t-sql/functions/count-transact-sql)。|  
 |Count distinct|返回组中的唯一非空值的数量。|  
@@ -101,7 +100,7 @@ ms.locfileid: "48205527"
   
  聚合转换是异步过程，也就是说它并非逐行地占用和发布数据， 而是占用整个行集，执行其分组和聚合操作，然后发布结果。  
   
- 此转换不传递任何列，而是在数据流中为发布的数据创建新列。 只有应用聚合函数的输入列或转换用于分组的输入列才复制到转换输出。 例如，聚合转换输入可能有三列： **CountryRegion**、 **City**和 **Population**。 转换按 **CountryRegion** 列分组，并对 **Population** 列应用 Sum 函数。 因此，输出不包含 **City** 列。  
+ 此转换不传递任何列，而是在数据流中为发布的数据创建新列。 只有应用聚合函数的输入列或转换用于分组的输入列才复制到转换输出。 例如，聚合转换输入可能有三列：**CountryRegion**，**市/县**，和**填充**。 转换按 **CountryRegion** 列分组，并对 **Population** 列应用 Sum 函数。 因此，输出不包含 **City** 列。  
   
  也可将多个输出添加到聚合转换，并将每个聚合定向到不同输出。 例如，如果聚合转换应用 Sum 和 Average 函数，则可以将每个聚合定向到不同输出。  
   
@@ -109,13 +108,13 @@ ms.locfileid: "48205527"
   
  聚合转换具有一个输入和一个或多个输出。 它不支持错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 **“聚合转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [聚合转换编辑器&#40;聚合选项卡&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [聚合转换编辑器（“聚合”选项卡）](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [聚合转换编辑器&#40;高级选项卡&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [聚合转换编辑器（“高级”选项卡）](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

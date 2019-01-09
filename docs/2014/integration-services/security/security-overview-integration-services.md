@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -21,15 +20,15 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ee84e7cd1e8d652283eb758af7396257fecf7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35376c36361bd7453ed925c8b0be5721aa120037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761199"
 ---
 # <a name="security-overview-integration-services"></a>安全性概述 (Integration Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含多层，这些层提供了丰富灵活的安全环境。 这些安全层使用数字签名、包属性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色和操作系统权限。 其中的大部分安全功能属于标识和访问控制类别。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含多层，这些层提供了丰富灵活的安全环境。 这些安全层使用数字签名、包属性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色和操作系统权限。 其中的大部分安全功能属于标识和访问控制类别。  
   
 ## <a name="identity-features"></a>标识功能  
  通过在包中实现标识功能，可达到以下目的：  
@@ -76,7 +75,7 @@ ms.locfileid: "48228577"
 ### <a name="controlling-access-to-files-used-by-packages"></a>控制对包使用的文件的访问  
  已配置为使用配置、检查点和日志记录的包所生成的信息将存储在包的外部。 这些信息可能是敏感信息，应该加以保护。 检查点文件只能保存到文件系统中，但配置和日志可以保存到文件系统中，也可以保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的表中。 保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的配置和日志受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性的保护，但是写入文件系统的信息需要额外的安全保护措施。  
   
- 有关详细信息，请参阅[访问包使用的文件](../access-to-files-used-by-packages.md)。  
+ 有关详细信息，请参阅 [访问包使用的文件](../access-to-files-used-by-packages.md)。  
   
 #### <a name="storing-package-configurations-securely"></a>安全地存储包配置  
  包配置可以保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中，也可以保存到文件系统。  

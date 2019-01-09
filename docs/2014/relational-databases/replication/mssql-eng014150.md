@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014150 error
@@ -13,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 032651d75eb4210005765f82adbb4d504ee2a316
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136817"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758909"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -58,6 +57,6 @@ ms.locfileid: "48136817"
  [复制日志读取器代理](agents/replication-log-reader-agent.md)   
  [复制合并代理](agents/replication-merge-agent.md)   
  [复制队列读取器代理](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [复制快照代理](agents/replication-snapshot-agent.md)  
   
   

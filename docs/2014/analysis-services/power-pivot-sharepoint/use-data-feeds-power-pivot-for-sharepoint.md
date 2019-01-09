@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178127"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365009"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用数据馈送 (PowerPivot for SharePoint)
   数据馈送是从联机数据源生成并流向目标文档或应用程序的一个或多个数据流。 如果使用 PowerPivot for Excel，数据馈送可帮助您将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 PowerPivot 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  
@@ -38,7 +38,7 @@ ms.locfileid: "48178127"
 ##  <a name="prereq"></a> 先决条件  
  您必须具有 PowerPivot for Excel 才能将数据馈送导入 Excel 2010。  
   
- 您必须具有以 Atom 1.0 格式提供数据的 Web 服务或数据服务。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 2010 能够以这种格式提供数据。  
+ 您必须具有以 Atom 1.0 格式提供数据的 Web 服务或数据服务。  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 2010 能够以这种格式提供数据。  
   
  在将 SharePoint 列表导出为数据馈送之前，必须在该 SharePoint 服务器上安装 ADO.NET Data Services。 有关详细信息，请参阅 [安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48178127"
 ##  <a name="rsreport"></a> 从 Reporting Services 报表创建数据馈送  
  如果已部署 SQL Server 2008 R2 Reporting Services，则可以使用新的 Atom 呈现扩展插件从现有报表生成数据馈送。 为了获得最佳结果，您的工作站上应装有 Excel 2010 以及 PowerPivot for Excel。 PowerPivot 客户端应用程序将启动，以响应数据馈送导出操作，并在表和列流入时自动添加和关联这些表和列。  
   
- 有关如何从报表导出数据馈送的说明，请参阅[报表生成器帮助文件](http://go.microsoft.com/fwlink/?LinkId=154494)中的[基于报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
+ 有关如何从报表导出数据馈送的说明，请参阅[报表生成器帮助文件](https://go.microsoft.com/fwlink/?LinkId=154494)中的[基于报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  若要设置重复执行的数据刷新计划，以便将报表数据重新导入到已发布到 SharePoint 库的 PowerPivot 工作簿中，必须将报表服务器配置为与 SharePoint 进行集成。 有关使用 PowerPivot for SharePoint 和 Reporting Services 组合在一起的详细信息，请参阅[配置和管理报表服务器的&#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)。  

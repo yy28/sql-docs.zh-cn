@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -17,12 +15,12 @@ ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0b19bf27cdc94e70908f81523a092ba022c41601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157677"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795429"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 访问用于配置管理的 WMI 提供程序
   本节描述如何根据用于计算机管理的 WMI 提供程序执行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation 查询语言 (WQL) 语句。  
@@ -37,7 +35,7 @@ ms.locfileid: "48157677"
   
 3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击 **“连接”**。  
   
-4.  单击**查询**。 键入用于返回在本地计算机上运行的当前服务的查询：**选择\*从 SqlService。** 单击 **“应用”**。  
+4.  单击**查询**。 键入的查询来返回本地计算机上运行的当前服务：**选择\*SQLSERVICE。** 单击 **“应用”**。  
   
 5.  通过添加 `WHERE ServiceName = "MSSQLSERVER"`，进一步细化查询。  
   

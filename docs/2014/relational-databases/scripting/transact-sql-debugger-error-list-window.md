@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,15 +16,15 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ba949c2cb835296c1442fcac4d5984a051bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f120bfd20e2b912aaf5b045faa1e052ba4191
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216357"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328467"
 ---
 # <a name="error-list-window-management-studio"></a>“错误列表”窗口 (Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
+   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
   
 ## <a name="features-of-the-error-list"></a>“错误列表”的功能  
  **“错误列表”** 提供下列功能：  
@@ -76,7 +74,7 @@ ms.locfileid: "48216357"
  **默认顺序**  
  显示一个整数，该整数指示相应项的生成次序。  
   
- **Description**  
+ **说明**  
  显示相应错误项的文本。 较长的说明会自动换行。  
   
  **文件**  
@@ -90,5 +88,3 @@ ms.locfileid: "48216357"
   
  **项目**  
  显示包含相应脚本文件的项目的名称。  
-  
-  

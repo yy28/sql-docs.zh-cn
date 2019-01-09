@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120279"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419038"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>使用替换数据进行时序预测（数据挖掘中级教程）
   在本任务中，您将基于全球范围内的销售额数据生成新模型。 然后，将创建一个将全球范围内的销售额模型应用于某个单独区域的预测查询。  
   
 ## <a name="building-a-general-model"></a>生成通用模型  
- 记住您对原始挖掘模型的结果分析揭示在某些区域和产品系列上存在较大的差异。 例如，M200 型号在北美的销售很强，而 T1000 型号的销售则不是这样。 但是，分析是十分复杂的，因为某些系列没有太多数据，或者数据在不同的时间点开始。 还缺少一些数据。  
+ 记住您对原始挖掘模型的结果分析揭示在某些区域和产品系列上存在较大的差异。 例如，M200 型号在北美的销售很强，而 T1000 型号的销售则不是这样。 但是，分析被复杂，因为某些系列没有太多数据或在不同的点开始时间的数据。 还缺少一些数据。  
   
  ![时序预测 M200 和 T1000 数量](../../2014/tutorials/media/6series-defaultforecasting.gif "时序预测 M200 和 T1000 数量")  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48120279"
   
     -   为序列键和时间键选择以下列：  
   
-         关键时间： ReportingDate  
+         键时间：ReportingDate  
   
-         键： 区域  
+         密钥：地区  
   
     -   为 `Input` 和 `Predict` 选择以下列：  
   
@@ -163,6 +163,6 @@ AND
   
 ## <a name="see-also"></a>请参阅  
  [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries (DMX)](/sql/dmx/predicttimeseries-dmx)  
   
   

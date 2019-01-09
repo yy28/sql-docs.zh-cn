@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], creating
@@ -15,12 +14,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88367f2c01be6ba0cf6edaf2760d3f1e8f2c9482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f527d9767a6e821d0d4d5527fcad70e37f16e3c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799109"
 ---
 # <a name="create-a-database"></a>创建数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建数据库。  
@@ -35,7 +34,7 @@ ms.locfileid: "48073219"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建数据库，使用：**  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48073219"
   
 4.  若要通过接受所有默认值创建数据库，请单击 **“确定”**；否则，请继续后面的可选步骤。  
   
-5.  若要更改所有者名称，请单击 (**…**) 选择其他所有者。  
+5.  若要更改所有者名称，请单击 (…) 选择其他所有者。  
   
     > [!NOTE]  
     >  “使用全文检索”选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  

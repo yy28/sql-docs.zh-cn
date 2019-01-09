@@ -1,5 +1,5 @@
 ---
-title: 理解传递次序和求解次序 (MDX) |Microsoft 文档
+title: 理解传递次序和求解次序 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4b865293cb9c76fb46e8fe12befb2a000d21907
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025954"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545397"
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 数据操作-了解传递顺序和求解次序
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34025954"
 ## <a name="solve-order"></a>求解次序  
  求解次序决定了出现相互竞争的表达式时的计算优先级。 在一个传递中，求解次序决定了两点：  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的次序。  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的次序。  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算自定义成员、计算成员、自定义汇总和计算单元的次序。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34025954"
 > [!NOTE]  
 >  您可以针对 Adventure Works 示例多维数据库运行这些 MDX 查询。 可以从 codeplex 站点下载 [AdventureWorks 多维模型 SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) 示例。  
   
-### <a name="query-1differences-in-income-and-expenses"></a>查询 1 - 收入与支出之间的差额  
+### <a name="query-1-differences-in-income-and-expenses"></a>查询 1-收入与支出的差异  
  对于第一个 MDX 查询，通过构造一个与以下示例类似的简单 MDX 查询，计算每年的销售与成本之间的差额：  
   
 ```  
@@ -86,7 +86,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>查询 2 - 支出后的收益百分比  
+### <a name="query-2-percentage-of-income-after-expenses"></a>查询 2-支出后的收益百分比  
  对于第二个查询，通过使用下面的 MDX 查询，计算每年扣除支出后的收益百分比：  
   
 ```  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
  第一个查询与第二个查询在结果集方面的差异来自计算成员位置的不同。 在第一个查询中，计算成员是 ROWS 轴的一部分，而在第二个查询中，计算成员是 COLUMNS 轴的一部分。 下一个查询将两个计算成员合并到一个 MDX 查询中，这种位置上的不同在这个查询中就会变得非常重要。  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>查询 3 - 合并后的年差额和净收益计算  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查询 3 组合年差额和净收益计算  
  在最后这个查询中，将上面两个示例合并成一个 MDX 查询，此时由于要同时对列和行进行计算，因此求解次序变得重要起来。 为了确保按正确的顺序进行计算，请使用 **SOLVE_ORDER** 关键字定义计算顺序。  
   
  **SOLVE_ORDER** 关键字指定 MDX 查询或 **CREATE MEMBER** 命令中计算成员的求解次序。 **SOLVE_ORDER** 关键字使用的整数值是相对的，不要求从零开始，也不要求是连续的。 该值只是告诉 MDX 基于通过计算具有较大求解次序值的成员得出的值来计算成员。 如果不使用 **SOLVE_ORDER** 关键字定义计算成员，计算成员的默认值将为零。  
@@ -204,10 +204,10 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>其他注意事项  
  求解次序可能会成为需要处理的非常复杂的问题，尤其是在具有很多维度而维度涉及计算成员、自定义汇总公式或计算单元的多维数据集中，更是如此。 当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算 MDX 查询时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将考虑给定传递中涉及的所有内容的求解次序值，包括 MDX 查询中指定的多维数据集的维度。  
   
-## <a name="see-also"></a>另请参阅  
- [CalculationCurrentPass & #40;MDX & #41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue & #40;MDX & #41;](../../../mdx/calculationpassvalue-mdx.md)   
- [创建成员语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [操作数据 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>请参阅  
+ [CalculationCurrentPass (MDX)](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue (MDX)](../../../mdx/calculationpassvalue-mdx.md)   
+ [CREATE MEMBER 语句 (MDX)](../../../mdx/mdx-data-definition-create-member.md)   
+ [操作数据 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

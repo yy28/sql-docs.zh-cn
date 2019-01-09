@@ -1,7 +1,8 @@
 ---
-title: 在 Azure 数据工作室中创建的代码段 |Microsoft Docs
+title: 创建可重用的代码段
+titleSuffix: Azure Data Studio
 description: 了解如何创建和使用 Azure 数据 Studio 中的 SQL 代码段
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bcf50d192b679b250ce6f4baac8f9e0179080ea
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384132"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030261"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>创建和使用代码片段来快速创建中的 TRANSACT-SQL (T-SQL) 脚本 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -51,7 +52,7 @@ ms.locfileid: "49384132"
 
 您可以定义自己的代码段。 若要打开的 SQL 代码段文件进行编辑：
 
-1. 打开*命令面板*(**Shift + Ctrl + P**)，和类型*截图*，然后选择**首选项： 打开用户代码片段**:
+1. 打开*命令面板*(**Shift + Ctrl + P**)，然后键入*截图*，并选择**首选项：打开用户代码片段**:
 
    ![替换模板字段](media/code-snippets/user-snippets.png)
 

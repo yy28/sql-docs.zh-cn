@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538160"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 访问接口允许 ADO 连接到通过 ADSI 异类目录服务。 这样，ADO 应用程序只读访问权限对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务，除了任何符合 LDAP 的目录服务和 Novell 目录服务。 ADSI 本身基于提供程序模型，以便如果没有新的提供程序让访问到另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程，并支持 Unicode。  
@@ -65,7 +65,7 @@ ADSDSOObject
 |*Root*|指示**ADsPath**对象从其开始搜索 （即，搜索的根）。|  
 |*Filter*|指示 RFC 1960 格式中的搜索筛选器。|  
 |*属性*|指示要返回的特性的以逗号分隔列表。|  
-|*范围*|可选。 一个**字符串**，它指定搜索范围。 可以为以下各项之一：<br /><br /> -基础-搜索基对象 （搜索的根）。<br />-OneLevel-搜索只有一个级别。<br />-子树 — 搜索整个子树。|  
+|*范围*|可选。 一个**字符串**，它指定搜索范围。 可以为以下各项之一：<br /><br /> -基础-搜索基对象 （搜索的根）。<br />-OneLevel-搜索只有一个级别。<br />-子树搜索整个子树。|  
   
  例如：  
   
@@ -90,7 +90,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **标准的 ADO 记录集属性的可用性：**  
   
-|“属性”|可用性|  
+|属性|可用性|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
@@ -110,7 +110,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|  
 |[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
+|[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
 |[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
   
  **标准的 ADO 记录集方法的可用性：**  

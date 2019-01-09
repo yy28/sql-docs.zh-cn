@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication_snapshot_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b17c17686195f202b4a7e99f9f9ea5374f24be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1f001752ee67253297917746ff50eeb61a3ff1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764745"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203626"
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +144,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
  [ **@job_login** =] **'job_login**   
- 用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器来说，这是无法更改的。  
+ 用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 这是无法更改为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
  [  **@job_password =** ] **'job_password**   
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，默认值为 NULL。 创建新的快照代理作业时，必须提供此参数。  
@@ -165,7 +164,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_changepublication_snapshot**快照复制、 事务复制和合并复制中使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changepublication_snapshot**。  
   
 ## <a name="see-also"></a>请参阅  

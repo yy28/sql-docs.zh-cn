@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -26,15 +25,15 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a359d584125a2b332e178d03d03cc75f4f4ad1f1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: cb9f243d05b741fcc803f29f5703c1e02a6244d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353705"
 ---
 # <a name="dtutil-utility"></a>Encrypt
-  **dtutil** 命令提示实用工具用于管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 该实用工具可以复制、移动、删除包，也可以验证包是否存在。 可对存储于以下三个位置之一的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包执行上述操作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区和文件系统。 如果此实用工具要访问存储在 **msdb**中的包，命令提示符可能要求输入用户名和密码。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则命令提示符要求输入用户名和密码。 如果缺少用户名， **dtutil** 将尝试使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 包的存储类型由 `/SQL`、`/FILE` 和 `/DTS` 选项标识。  
+   **dtutil** 命令提示实用工具用于管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 该实用工具可以复制、移动、删除包，也可以验证包是否存在。 可对存储于以下三个位置之一的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包执行上述操作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区和文件系统。 如果此实用工具要访问存储在 **msdb**中的包，命令提示符可能要求输入用户名和密码。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则命令提示符要求输入用户名和密码。 如果缺少用户名， **dtutil** 将尝试使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 包的存储类型由 `/SQL`、`/FILE` 和 `/DTS` 选项标识。  
   
  **dtutil** 命令提示实用工具不支持使用命令文件或重定向。  
   
@@ -94,9 +93,9 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] password|指定与 SQL 选项一起使用的密码，用于连接到使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目标实例。 如果在不包含 *DESTPASSWORD* 选项的命令行中指定 *DTSUSER* ，则将生成错误。<br /><br /> 请注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。|  
 |/DestS[erver] server_instance|指定与任何导致目标被保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的操作一起使用的服务器名称。 该选项用于在保存 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包时，标识一个非本地或非默认的服务器。 在不包含与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关联的操作的命令行中指定 DESTSERVER 是错误的。 *SIGN SQL*、 *COPY SQL*或 *MOVE SQL* 选项的相应命令都可与该选项结合使用。<br /><br /> 通过在服务器名中添加反斜杠和实例名称，可以指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称。|  
 |/DestU[ser] username|指定与 SIGN SQL、COPY SQL 和 MOVE SQL 选项一起使用的用户名，以连接到使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 在不包含 *DESTUSER* 、 *SIGN SQL*或 *COPY SQL*选项的命令行中指定 *MOVE SQL* 是错误的。|  
-|/Dump *process ID*|（可选）使指定进程（ **dtexec** 实用工具或 **dtsDebugHost.exe** 进程）暂停，并创建调试转储文件 .mdmp 和 .tmp。<br /><br /> 请注意：若要使用 **/Dump**选项，则必须具有“调试程序”用户权限 (SeDebugPrivilege)。<br /><br /> 若要查找要暂停的进程的 *process ID* ，请使用 Windows 任务管理器。<br /><br /> 默认情况下[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]将调试转储文件存储在文件夹中， *\<驱动器 >*: \Program Files\Microsoft SQL Server\120\Shared\ErrorDumps。<br /><br /> 有关 **dtexec** 实用工具和 **dtsDebugHost.exe** 进程的详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md) 和 [Building, Deploying, and Debugging Custom Objects](extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。<br /><br /> 有关调试转储文件的详细信息，请参阅 [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)。<br /><br /> 请注意：调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。|  
+|/Dump *process ID*|（可选）使指定进程（ **dtexec** 实用工具或 **dtsDebugHost.exe** 进程）暂停，并创建调试转储文件 .mdmp 和 .tmp。<br /><br /> 注意：若要使用 **/dump**选项，您必须分配调试程序用户权限 (SeDebugPrivilege)。<br /><br /> 若要查找要暂停的进程的 *process ID* ，请使用 Windows 任务管理器。<br /><br /> 默认情况下[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]将调试转储文件存储在文件夹中， *\<驱动器 >*: \Program Files\Microsoft SQL Server\120\Shared\ErrorDumps。<br /><br /> 有关 **dtexec** 实用工具和 **dtsDebugHost.exe** 进程的详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md) 和 [Building, Deploying, and Debugging Custom Objects](extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。<br /><br /> 有关调试转储文件的详细信息，请参阅 [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)。<br /><br /> 注意：调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。|  
 |/DT[S] filespec|指定要对其执行操作的 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包位于 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区中。 filespec 参数必须包括以 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区的根开头的文件夹路径。 默认情况下，该配置文件中的根文件夹的名称为“MSDB”和“File System”。 必须使用双引号分隔包含空间的路径。<br /><br /> 如果指定 DT[S] 选项的命令行中还有以下任一选项，则返回 DTEXEC_DTEXECERROR：<br /><br /> `FILE`<br /><br /> `SQL`<br /><br /> `SOURCEUSER`<br /><br /> `SOURCEPASSWORD`<br /><br /> `SOURCESERVER`|  
-|/En[crypt] {SQL &#124; FILE}; Path;ProtectionLevel[;password]|（可选）。 使用指定的保护级别和密码对加载的包进行加密，并将其保存到 *Path*中指定的位置。 *ProtectionLevel*确定是否需要密码：<br />SQL - Path 为目标包名称。<br />FILE - Path 为包的完全限定路径和文件名。<br />DTS - 当前不支持该选项。<br /><br /> *ProtectionLevel* 选项：<br />级别 0：提取敏感信息。<br />级别 1：使用本地用户凭据对敏感信息进行加密。<br />级别 2：使用必需的密码对敏感信息进行加密。<br />级别 3：使用必需的密码对包进行加密。<br />级别 4：使用本地用户凭据对包进行加密。<br />级别 5：包使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 存储加密。|  
+|/En[crypt] {SQL &#124; FILE}; Path;ProtectionLevel[;password]|（可选）。 使用指定的保护级别和密码对加载的包进行加密，并将其保存到 *Path*中指定的位置。 *ProtectionLevel*确定是否需要密码：<br />SQL - Path 为目标包名称。<br />FILE - Path 为包的完全限定路径和文件名。<br />DTS - 当前不支持该选项。<br /><br /> *ProtectionLevel* 选项：<br />级别 0：条带敏感信息。<br />级别 1:使用本地用户凭据进行加密的敏感信息。<br />级别 2:使用所需的密码进行加密的敏感信息。<br />级别 3:使用所需的密码进行加密包。<br />级别 4:使用本地用户凭据进行加密包。<br />级别 5：包使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 存储加密。|  
 |/Ex[ists]|（可选）。 用于确定包是否存在。 **dtutil** 尝试查找用 *SQL*、 *DTS* 或 *FILE* 选项指定的包。 如果 **dtutil** 找不到指定的包，则返回 DTEXEC_DTEXECERROR。|  
 |/FC[reate] {SQL &#124; DTS};ParentFolderPath;NewFolderName|（可选）。 创建一个新文件夹，该文件夹的名称是在 *NewFolderName*中指定的。 新文件夹的位置由 *ParentFolderPath*指示。|  
 |/FDe[lete] {SQL &#124; DTS}[;ParentFolderPath;FolderName]|（可选）。 从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中删除由 FolderName 中的名称指定的文件夹。 要删除的文件夹的位置由 *ParentFolderPath*指示。|  
@@ -106,7 +105,7 @@ dtutil /option [value] [/option [value]]...
 |/FR[ename] {SQL &#124; DTS} [;ParentFolderPath; OldFolderName;NewFolderName]|（可选）。 重命名 [!INCLUDE[ssIS](../includes/ssis-md.md)] 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的文件夹。 *ParentFolderPath* 是要重命名的文件夹的位置。 *OldFolderName* 是文件夹的当前名称， *NewFolderName* 是要为文件夹提供的新名称。|  
 |/H[elp] option|显示详细的文本帮助，该帮助可以显示 **dtutil** 的各个选项并说明其用法。 该选项参数是可选的。 如果包含该参数，则帮助文本将包含有关指定选项的详细信息。 以下示例将显示所有选项的帮助：<br /><br /> `dtutil /H`<br /><br /> 下列两个示例显示如何使用 /H 选项显示特定选项（本例中为 /Q [uiet] 选项）的详细帮助：<br /><br /> `dtutil /Help Quiet`<br /><br /> `dtutil /H Q`|  
 |/I[DRegenerate]|为包创建新的 GUID 并更新包 ID 属性。 复制包后，包 ID 保持不变；因此，对于两个包，日志文件包含的 GUID 相同。 该操作为新复制的包创建新的 GUID，以便将其与原始包区分开。|  
-|/M[ove] {SQL &#124; File &#124; DTS}; pathandname|指定对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的移动操作。 若要使用该参数，请先使用 **/FI**、 **/SQ**或 **/DT** 选项指定包的位置。 然后指定 **Move** 操作。 此操作需要两个由分号分隔的参数：<br /><br /> 目标参数可指定 *SQL*、 *FILE*或 *DTS*。 *SQL* 目标可包含 *DESTUSER*、 *DESTPASSWORD*和 *DESTSERVER* 选项。<br /><br /> pathandname 参数指定包位置：SQL 使用包路径和包名称，FILE 使用 UNC 或本地路径，DTS 使用相对于 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区的根目录的位置。 如果目标为 *FILE* 或 *DTS*，则路径参数将不包含文件名， 而使用指定位置的包名称作为文件名。<br /><br /> <br /><br /> 当`MOVE`操作已经有一个包的目标处**dtutil**提示您确认你想要覆盖这个包。 回答 `Y` 将覆盖包，回答 `N` 将结束程序。 如果该命令包含 *QUIET* 选项，则将不显示任何提示，并覆盖任何现有包。|  
+|/M[ove] {SQL &#124; File &#124; DTS}; pathandname|指定对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包的移动操作。 若要使用该参数，请先使用 **/FI**、 **/SQ**或 **/DT** 选项指定包的位置。 然后指定 **Move** 操作。 此操作需要两个由分号分隔的参数：<br /><br /> 目标参数可指定 *SQL*、 *FILE*或 *DTS*。 *SQL* 目标可包含 *DESTUSER*、 *DESTPASSWORD*和 *DESTSERVER* 选项。<br /><br /> *Pathandname*参数指定包位置：*SQL*使用的包路径和包名称*文件*使用 UNC 或本地路径，以及*DTS*使用相对于根目录的位置[!INCLUDE[ssIS](../includes/ssis-md.md)]包存储区。 如果目标为 *FILE* 或 *DTS*，则路径参数将不包含文件名， 而使用指定位置的包名称作为文件名。<br /><br /> <br /><br /> 当`MOVE`操作已经有一个包的目标处**dtutil**提示您确认你想要覆盖这个包。 回答 `Y` 将覆盖包，回答 `N` 将结束程序。 如果该命令包含 *QUIET* 选项，则将不显示任何提示，并覆盖任何现有包。|  
 |/Q[uiet]|在执行包含 `COPY`、`MOVE` 或 `SIGN` 选项的命令时，停止可能显示的确认提示。 如果目标计算机中已经存在与指定包同名的包，或者如果已经对指定包进行了签名，则将显示这些提示。|  
 |/R[emark] text|向命令行中添加注释。 该注释参数是可选的。 如果注释文本包含空格，则文本必须用引号引起来。 可以在一个命令行中包含多个 REM 选项。|  
 |/Si[gn] {SQL &#124; File &#124; DTS}; path; hash|对 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包进行签名。 此操作使用三个由分号分隔的必要参数：<br /><br /> 目标参数可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目标可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 选项。<br /><br /> Path 参数指定要操作的包的位置。<br /><br /> Hash 参数指定以长度可变的十六进制字符串表示的证书标识符。<br /><br /> <br /><br /> **\*\* 重要提示** \*\*** 在配置为检查包签名时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 仅检查数字签名是否存在、是否有效以及是否来自可信来源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 不检查包是否已更改。<br /><br /> 有关详细信息，请参阅[使用数字签名标识包的源](security/identify-the-source-of-packages-with-digital-signatures.md)。|  
@@ -265,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  此示例中用到的哈希并不是真正的哈希。  
   
- 有关详细信息，请参阅 [使用 Authenticode 签名和检查代码](http://go.microsoft.com/fwlink/?LinkId=78100)中的 CertMgr 部分。  
+ 有关详细信息，请参阅 [使用 Authenticode 签名和检查代码](https://go.microsoft.com/fwlink/?LinkId=78100)中的 CertMgr 部分。  
   
 ### <a name="encrypt-examples"></a>加密示例  
  以下示例使用完全包加密和密码将基于文件的 PackageToEncrypt.dtsx 加密为基于文件的 EncryptedPackage.dts。 加密所用的密码是 *EncPswd*。  

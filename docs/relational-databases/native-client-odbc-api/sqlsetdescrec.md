@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f13ba1492c3edaeaf179e9bcda0e4df3923f80
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d6ee8de284043d3acf3c0d58eed51e6710ffe51f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669286"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536845"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51669286"
   
  下表介绍了参数和描述符字段之间的映射。  
   
-|参数|非表值参数类型的相关属性，包括表值参数列|表值参数的相关属性|  
+|参数|对于非表值参数类型，包括表值参数列的相关的属性|表值参数的相关属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*类型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*子类型*|忽略|对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录，请将它设置为 SQL_DESC_DATETIME_INTERVAL_CODE。|  

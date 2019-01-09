@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128587"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795029"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函数
   返回具有给定版本的所有 SQL Server Express LocalDB 实例。  
@@ -42,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parameters  
  *pInstanceNames*  
- [输出] 该函数返回时，将包含用户的工作站上命名的和默认的 LocalDB 实例的名称。  
+ [输出]此函数返回时，包含名为两个名称和默认的用户的工作站上的 LocalDB 实例。  
   
  *lpdwNumberOfInstances*  
- [输入/输出]在输入时，包含的实例中的名称的槽数*pInstanceNames*缓冲区。 输出时，包含在用户工作站上找到的 LocalDB 实例数。  
+ [输入/输出]在输入时，包含的实例中的名称的槽数*pInstanceNames*缓冲区。 在输出时，包含用户的工作站上找到的 LocalDB 实例数。  
   
 ## <a name="returns"></a>返回  
  S_OK  

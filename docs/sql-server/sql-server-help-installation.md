@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514535"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202446"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 脱机帮助和帮助查看器
 
@@ -176,7 +176,7 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 
 **在 SSMS 17.x 中查看 SQL Server 联机帮助**
 
-- 在“帮助”菜单中单击“查看帮助”。 [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 中的最新 SQL Server 2016/2017 文档在浏览器中显示。 
+- 在“帮助”菜单中单击“查看帮助”。 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 中的最新 SQL Server 2016/2017 文档在浏览器中显示。 
 
    ![查看帮助](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -207,7 +207,7 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 1. 请指向“帮助”菜单上的“设置帮助首选项”，并选择“在浏览器中启动”或“在帮助查看器中启动”。 
 2. 当这些选项可用时， 请在对话框内按 F1，或单击“帮助”或“?”图标，以便在所选环境中查看上下文相关的联机主题。
 
->  [!NOTE]
+> [!NOTE]
 >  F1 帮助仅在联机状态可用。 F1 帮助不提供脱机资源。 
 
 ## <a name="systems-without-internet-access"></a>没有 internet 访问权限的系统

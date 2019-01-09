@@ -20,12 +20,12 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518811"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "47617895"
 |**column_id**|**int**|从 1 开始的列存储列的 ID。 第一列具有 ID = 1，第二个列的 ID = 2，等等。|  
 |**dictionary_id**|**int**|可以有两种类型的字典，全局和本地、 与列段相关联。 0 dictionary_id 表示在所有列段 （一个用于每个行组） 为该列之间共享的全局字典。|  
 |**version**|**int**|字典格式的版本。|  
-|**类型**|**int**|字典类型：<br /><br /> 1 – 哈希字典包含**int**值<br /><br /> 2 – 不使用<br /><br /> 3 – 包含字符串值的哈希字典<br /><br /> 4 – 哈希字典包含**float**值<br /><br /> 有关字典的详细信息，请参阅[列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)。|  
+|**类型**|**int**|字典类型：<br /><br /> 1-哈希字典包含**int**值<br /><br /> 2-不使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 4-哈希字典包含**float**值<br /><br /> 有关字典的详细信息，请参阅[列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)。|  
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disc_size**|**bigint**|字典大小（以字节为单位）。|  
 |**partition_id**|**bigint**|指示分区 ID。 是在数据库中唯一。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  所有列都要求至少对表具有 VIEW DEFINITION 权限。 以下各列返回 null，除非用户也具有**选择**权限： last_id、 entry_count、 data_ptr。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

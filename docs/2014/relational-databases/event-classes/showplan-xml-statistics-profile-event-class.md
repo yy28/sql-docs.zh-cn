@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21ff35b73d7bbda93c0760e881b8e19f5c860792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea60aef999f871f28e21839ce0d7808aad0727b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115777"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356127"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile 事件类
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan XML Statistics Profile 事件类。 包括 Showplan XML Statististics Profile 事件类可识别 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 Showplan 运算符。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan XML Statistics Profile 事件类。 包括 Showplan XML Statististics Profile 事件类可识别 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 Showplan 运算符。  
   
  由于 Showplan XML Statistics Profile 事件类显示完整的编写时数据，因此包含该事件类的跟踪可能会使性能明显降低。 若要最大限度地降低引起的开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪操作。  
   
- Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=41740)上找到，也可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
+ Showplan XML 文档具有与之关联的架构。 此架构可在 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkId=41740)上找到，也可作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分。  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Showplan XML Statistics Profile 事件类数据列  
   

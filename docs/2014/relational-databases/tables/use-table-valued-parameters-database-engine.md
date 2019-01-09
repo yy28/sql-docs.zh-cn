@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - DECLARE
@@ -19,12 +18,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9603f76f90b8481905077c04cb78cb6d9aa47d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794839"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
   表值参数是使用用户定义的表类型来声明的。 使用表值参数，可以不必创建临时表或许多参数，即可向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或例程（如存储过程或函数）发送多行数据。  
@@ -43,7 +42,7 @@ ms.locfileid: "48226657"
   
  [示例](#Example)  
   
-##  <a name="Benefits"></a> 优点  
+##  <a name="Benefits"></a> 优势  
  就像其他参数一样，表值参数的作用域也是存储过程、函数或动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本。 同样，表类型变量也与使用 DECLARE 语句创建的其他任何局部变量一样具有作用域。 可以在动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句内声明表值变量，并且可以将这些变量作为表值参数传递到存储过程和函数。  
   
  表值参数具有更高的灵活性，在某些情况下，可比临时表或其他传递参数列表的方法提供更好的性能。 表值参数具有以下优势：  

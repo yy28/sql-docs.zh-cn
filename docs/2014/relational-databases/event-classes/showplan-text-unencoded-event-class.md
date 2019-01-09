@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,15 +14,15 @@ ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5862e1c52b186a034ebce4955f70ddf9baca9342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188137"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801259"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 事件类
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，将发生 Showplan Text (Unencoded) 事件类。 除了事件信息被格式化为字符串而不是二进制数据之外，此事件类与 Showplan Text 事件类相同。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，将发生 Showplan Text (Unencoded) 事件类。 除了事件信息被格式化为字符串而不是二进制数据之外，此事件类与 Showplan Text 事件类相同。  
   
  所包含的信息是 Showplan All、Showplan XML 或 Showplan XML Statistics Profile 事件类中可用信息的子集。  
   

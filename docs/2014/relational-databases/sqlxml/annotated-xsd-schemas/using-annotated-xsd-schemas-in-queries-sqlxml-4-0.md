@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - queries [SQLXML]
@@ -23,17 +21,17 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15da4e4aba1162be479972de48c5ba4b0cf63107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37c7f266fbfa09a4cd8fea463ba224e9ec2b4534
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800371"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查询中使用带批注的 XSD 架构 (SQLXML 4.0)
   通过在模板中针对 XSD 架构指定 XPath 查询，可以针对带批注的架构指定查询以从数据库检索数据。  
   
- **\<Sql:xpath-查询 >** 元素允许您指定针对带批注的架构定义的 XML 视图的 XPath 查询。 带批注的架构对其执行 XPath 查询的由使用`mapping-schema`的属性 **\<sql:xpath-查询 >** 元素。  
+  **\<Sql:xpath-查询 >** 元素允许您指定针对带批注的架构定义的 XML 视图的 XPath 查询。 带批注的架构对其执行 XPath 查询的由使用`mapping-schema`的属性 **\<sql:xpath-查询 >** 元素。  
   
  模板是包含一个或多个查询的有效 XML 文档。 FOR XML 和 XPath 查询返回文档片段。 模板用作文档片段的容器；因此，模板提供了一种指定单个顶级元素的方法。  
   

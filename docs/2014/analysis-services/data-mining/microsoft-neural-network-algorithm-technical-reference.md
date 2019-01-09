@@ -29,12 +29,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521119"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络使用由最多三层神经元（即感知器）组成的“多层感知器”网络（也称为“反向传播 Delta 法则”网络）。 这些层分别是输入层、可选隐藏层和输出层。  
@@ -103,7 +103,7 @@ ms.locfileid: "48217647"
   
  **离散值**  
   
- Μ = p – 状态的先验概率  
+ Μ = p-一种状态的先验概率  
   
  StdDev = sqrt(p(1-p))  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48217647"
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 神经网络算法](microsoft-neural-network-algorithm.md)   
- [神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [神经网络模型查询示例](neural-network-model-query-examples.md)  
   
   

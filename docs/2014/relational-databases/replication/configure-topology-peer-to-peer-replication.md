@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208217"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776459"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
   可以使用 **“配置拓扑”** 页执行常见的配置任务，如添加新节点、删除节点，以及在现有节点之间添加新连接。 在此向导的 **“发布”** 页上选定的节点会显示在设计图面上。 若要指定配置选项，请右键单击某个节点、连接或者设计图面。  
@@ -63,7 +62,7 @@ ms.locfileid: "48208217"
   
 ### <a name="options-for-each-node"></a>每个节点的选项  
  **添加新的对等连接**  
- 在两个节点之间添加连接。 例如，如果要在节点 A 和节点 B 之间添加连接，则复制会添加两个订阅：第一个订阅使节点 A 可以接收来自节点 B 上的发布的更改，第二个订阅使节点 B 可以接收来自节点 A 上的发布的更改。  
+ 在两个节点之间添加连接。 例如，如果添加节点 A 和节点 B 之间的连接，复制会添加两个订阅：第一个使节点 A 可以接收来自节点 B 上的发布的更改和第二个使节点 B 可以接收来自节点 a。 在为发布的更改  
   
  **删除对等节点**  
  从拓扑中删除节点。 例如，如果删除了节点 C，则该节点上的发布也会删除。 节点 A 和节点 C 以及节点 B 和节点 C 之间的订阅也会删除。 而节点 C 上的数据库不会删除，发布和分发也不会禁用。  

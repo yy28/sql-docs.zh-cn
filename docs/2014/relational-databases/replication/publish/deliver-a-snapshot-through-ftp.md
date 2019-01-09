@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777559"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过 FTP 传递快照。  
@@ -33,7 +32,7 @@ ms.locfileid: "48192577"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **通过 FTP 传递快照，使用：**  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48192577"
   
 1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。  
   
-    -   **“FTP 快照”** 页，用于快照发布和事务发布以及运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的发布服务器的合并发布。  
+    -    **“FTP 快照”** 页，用于快照发布和事务发布以及运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的发布服务器的合并发布。  
   
     -   **“FTP 快照和 Internet”** 页，用于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器的合并发布。  
   
@@ -140,11 +139,11 @@ ms.locfileid: "48192577"
   
 1.  在发布服务器上，对发布数据库执行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 将下列值之一指定给 **@property** ，将该设置的新值指定给 **@value**：  
   
-    -   `ftp_address` -用于传递快照的 FTP 服务器的地址。  
+    -   `ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
-    -   `ftp_port` -FTP 服务器所使用的端口。  
+    -   `ftp_port` - FTP 服务器所使用的端口。  
   
-    -   `ftp_subdirectory` -用于 FTP 快照的默认 FTP 目录的子目录。  
+    -   `ftp_subdirectory` - 用于 FTP 快照的默认 FTP 目录的子目录。  
   
     -   `ftp_login` - 用于连接到 FTP 服务器的登录名。  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192577"
   
 1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 将下列值之一指定给 **@property** ，将该设置的新值指定给 **@value**：  
   
-    -   `ftp_address` -用于传递快照的 FTP 服务器的地址。  
+    -   `ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
-    -   `ftp_port` -FTP 服务器所使用的端口。  
+    -   `ftp_port` - FTP 服务器所使用的端口。  
   
-    -   `ftp_subdirectory` -用于 FTP 快照的默认 FTP 目录的子目录。  
+    -   `ftp_subdirectory` - 用于 FTP 快照的默认 FTP 目录的子目录。  
   
     -   `ftp_login` - 用于连接到 FTP 服务器的登录名。  
   

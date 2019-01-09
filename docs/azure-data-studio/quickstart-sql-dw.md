@@ -1,7 +1,8 @@
 ---
-title: 快速入门： 连接和查询 Azure SQL 数据仓库使用 Azure Data Studio |Microsoft Docs
-description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 SQL 数据库并运行查询
-ms.custom: tools|sos
+title: 快速入门：连接和查询 Azure SQL 数据仓库
+titleSuffix: Azure Data Studio
+description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 Azure SQL 数据仓库并运行查询
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355728"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030751"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据仓库中的数据
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据仓库中的数据
 
 本快速入门演示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 Azure SQL 数据仓库，然后使用 TRANSACT-SQL 语句来创建、 插入和选择数据。 
 
@@ -47,7 +48,7 @@ ms.locfileid: "49355728"
    | **身份验证** | SQL 登录名| 在本教程中使用 SQL 身份验证。 |
    | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
-   | **是否保存密码？** | 是或否 | 如果您不想要每次都输入密码，请选择是。 |
+   | **是否保存密码？** |  是或否 | 如果您不想要每次都输入密码，请选择是。 |
    | **数据库名称** | *将保留为空* | 要连接到的数据库的名称。 |
    | **服务器组** | 选择<Default> | 如果你创建服务器组，您可以设置为特定的服务器组。 | 
 
@@ -80,9 +81,9 @@ ms.locfileid: "49355728"
 
 ## <a name="create-a-table"></a>创建表
 
-查询编辑器仍连接到*主*数据库中，但我们想要创建的表中*TutorialDB*数据库。 
+查询编辑器仍然连接到*master*数据库，但我们想在*TutorialDB*数据库中创建一个表。 
 
-1. 更改到的连接上下文**TutorialDB**:
+1. 将连接上下文更改为**TutorialDB**:
 
    ![更改上下文](media/quickstart-sql-database/change-context.png)
 
@@ -90,7 +91,7 @@ ms.locfileid: "49355728"
 1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
 
    > [!NOTE]
-   > 可以将其追加或覆盖在编辑器中前面的查询。 请注意，单击**运行**执行所选查询。 如果未选择任何项，则单击**运行**执行所有查询编辑器中。
+   > 您可以将其追加到编辑器中，或者覆盖编辑器中的前一个查询。 注意，单击**运行**只执行所选的查询。 如果没有选择，单击**运行**执行编辑器中的所有查询。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'

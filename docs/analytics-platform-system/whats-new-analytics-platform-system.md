@@ -1,6 +1,6 @@
 ---
-title: 什么是分析平台系统 – 向外缩放数据仓库中的新增功能
-description: 请参阅什么是 Microsoft® 分析平台系统承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备中的新增功能。
+title: 什么是分析平台系统-向外缩放数据仓库中的新增功能
+description: 请参阅什么是 Microsoft Analytics Platform System 承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备中的新增功能。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,25 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700355"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626351"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
-请参阅什么是最新的设备更新为 Microsoft® Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
+请参阅什么是最新的设备更新为 Microsoft Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## <a name="aps-cu73"></a>APS CU7.3
+发布日期-2018 年 12 月
+
+### <a name="common-subexpression-elimination"></a>常见子表达式消除
+APS CU7.3 可以提高查询性能与在 SQL 查询优化器的公用子表达式消除。 改进提高了两种方法中的查询。 第一个好处是可以识别并消除此类表达式帮助减少 SQL 编译时间。 第二个和更重要的好处是这些冗余的子表达式的数据移动操作将消除因此执行时间的查询变得更快。 可以找到此功能的详细的说明[此处](common-sub-expression-elimination.md)。
+
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>对于 Informatica 10.2.0 APS Informatica 连接器已发布
+我们为您发布了有关 APS Informatica 版本 10.2.0 使用 Informatica 连接器的新版本。 可以从下载新连接器[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。
+
+#### <a name="supported-versions"></a>支持的版本
+| APS 版本 | Informatica PowerCenter | 驱动程序 |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 和更高版本 | 10.2.0 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
 发布日期-2018 年 10 月
 
 ### <a name="support-for-tls-12"></a>支持 TLS 1.2
-APS CU7.2 支持 TLS 1.2。 客户端计算机到 APS 和 APS 节点内部进行通信可以立即被设置为仅通过 TLS1.2 进行通信。 SSDT、 SSIS 和 Dwloader 设置为仅通过 TLS 1.2 进行通信的客户端计算机上安装了之类的工具现在可以连接到 AP 使用 TLS 1.2。 默认情况下，AP 将支持 TLS （1.0、 1.1 和 1.2） 的所有版本的向后兼容性。 如果你想要设置 APS 设备到 stictly 使用 TLS 1.2，您可以通过更改注册表设置。 
+APS CU7.2 支持 TLS 1.2。 客户端计算机到 APS 和 APS 节点内部进行通信可以立即被设置为仅通过 TLS1.2 进行通信。 SSDT、 SSIS 和 Dwloader 设置为仅通过 TLS 1.2 进行通信的客户端计算机上安装了之类的工具现在可以连接到 AP 使用 TLS 1.2。 默认情况下，AP 将支持 TLS （1.0、 1.1 和 1.2） 的所有版本的向后兼容性。 如果你想要设置 APS 设备为严格使用 TLS 1.2，您可以为此更改注册表设置。 
 
-请参阅[AP 上配置 TLS1.2](configure-tls12-aps.md)有关详细信息。
+有关详细信息，请参阅[AP 上配置 TLS1.2](configure-tls12-aps.md)。
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>为 PolyBase 支持 Hadoop 加密区域
 PolyBase 现在可以进行通信到 Hadoop 加密区域。 请参阅 APS 中所需的配置更改[配置的 Hadoop 安全性](polybase-configure-hadoop-security.md#encryptionzone)。
@@ -85,7 +101,7 @@ APS 支持 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/databa
 ### <a name="bug-fixes"></a>Bug 修复
 我们已升级到 SQL Server 2016 SP2 CU2 APS CU7.1 使用。 升级解决了如下所述的一些问题。
 
-| Title | Description |
+| 标题 | Description |
 |:---|:---|
 | **潜在的元组搬运者进程死锁** |升级分布式事务和元组发动机后台线程中修复，长期的合作可能导致死锁。 在安装后 CU7.1，TF634 用于停止为 SQL Server 启动参数或全局跟踪标志的元组发动机的客户可以放心删除它。 | 
 | **某些 lag/lead 查询失败** |将错误的嵌套的 lag/lead 函数使用 CCI 表的某些查询现已修复此升级。 | 
@@ -101,9 +117,9 @@ APS 2016 后，才可以升级到 AU7。 APS AU7 中的新增功能如下：
 APS AU7 创建，并默认情况下将自动更新统计信息。 若要更新统计信息设置，管理员可以使用中的新功能切换菜单项[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能开关](appliance-feature-switch.md)控制不符、 自动更新和异步更新统计信息的行为。 此外可以更新使用的统计信息设置[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)语句。
 
 ### <a name="t-sql"></a>T-SQL
-选择@var现在支持。 有关详细信息，请参阅 [选择本地变量] （/ sql/t-sql/language-elements/select-local-variable-transact-sql） 
+选择@var现在支持。 有关详细信息，请参阅[选择本地变量](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-现在支持哈希和 ORDER GROUP 查询提示。 有关详细信息，请参阅 [Hints(Transact-SQL)-查询] （/sql/t-sql/查询/提示-transact-sql 的查询）
+现在支持哈希和 ORDER GROUP 查询提示。 有关详细信息，请参阅[Hints(Transact-SQL)-查询 ](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>功能开关
 APS AU7 引入了中的功能切换[Configuration Manager](launch-the-configuration-manager.md)。 AutoStatsEnabled 和 DmsProcessStopMessageTimeoutInSeconds 现在都可以由管理员更改的可配置选项。

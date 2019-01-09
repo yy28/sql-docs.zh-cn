@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], solutions
@@ -17,15 +17,15 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7961a7c40665004ec979d3a7ed361f93715d7b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194407"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818729"
 ---
 # <a name="solution-explorer"></a>解决方案资源管理器
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“解决方案资源管理器”窗格提供了用于管理项（如数据库脚本、查询、数据连接和文件）的容器（称为项目）。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“解决方案资源管理器”窗格提供了用于管理项（如数据库脚本、查询、数据连接和文件）的容器（称为项目）。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
   
  “解决方案”包含一个或多个项目，以及定义整个解决方案所需的文件和元数据。 “项目”是一组文件和相关的元数据（如连接信息）。 解决方案和项目所包含的“项”表示创建数据库解决方案所需的脚本、查询、连接信息和文件。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48194407"
   
 |||  
 |-|-|  
-|**Description**|**主题**|  
+|**说明**|**主题**|  
 |介绍如何在解决方案中收集一个或多个项目。|[解决方案 (SQL Server Management Studio)](solutions-sql-server-management-studio.md)|  
 |介绍如何创建项目并添加项（如脚本和连接）。|[项目 (SQL Server Management Studio)](projects-sql-server-management-studio.md)|  
 |介绍如何将解决方案或单独的项目集成到源代码管理系统。|[解决方案资源管理器源代码管理](../../database-engine/solution-explorer-source-control.md)|  

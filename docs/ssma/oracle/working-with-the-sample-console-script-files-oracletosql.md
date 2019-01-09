@@ -14,12 +14,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 2eb30c45af544fc57c0d3dfd328ce2d4c2246746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152d8ba2964c8485a1f158b71717067fdea948a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675305"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406014"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>使用示例控制台脚本文件 (OracleToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -45,7 +45,7 @@ ms.locfileid: "47675305"
   
     -   连接到源和目标服务器的详细信息，请参阅[创建服务器连接文件&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 。  
   
--   **VariableValueFileSample.xml:** 已使用示例控制台中的所有变量的都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需替换为示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行参数传递。  
+-   **VariableValueFileSample.xml:** 所有变量已使用在示例控制台都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需替换为示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行参数传递。  
   
     变量值文件的详细信息，请参阅[创建的变量值文件&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47675305"
   
     -   `source-schema:` 指定转换所需的源数据库。  
   
-    -   `sql-server-schema`： 指定是要迁移到目标数据库  
+    -   `sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库  
   
     **命令名**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47675305"
   
     **Attribute**  
   
-    `object-name`： 指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
+    `object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
     **命令名**  
   

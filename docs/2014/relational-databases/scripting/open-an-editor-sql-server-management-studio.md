@@ -11,12 +11,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110697"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513010"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
   本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
@@ -27,18 +27,18 @@ ms.locfileid: "48110697"
 ### <a name="limitations-and-restrictions"></a>限制和局限  
  如果与其他站点上使用非重复代码页的用户共享文件，则应使用相应的 Unicode 代码页保存文件，以避免读取该文件时出错。 此外，在保存用于 UNIX 或 Macintosh 的文件时，请确保使用相应的文档格式来保存文件。 在 **“文件”** 菜单上，单击 **“另存为”**，再单击 **“保存”** 按钮旁边向下箭头中的 **“编码保存”** ，然后在 **“行尾”** 下选择 **Unix** 或 **Macintosh**。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  在代码编辑器中执行的操作会受到为您用于登录的身份验证帐户所授予的权限的约束。 例如，如果您使用 Windows 身份验证打开一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，则无法执行引用您的 Windows 登录帐户无权访问的对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-## <a name="how-to-open-editors"></a>如何打开编辑器  
+## <a name="how-to-open-editors"></a>如何：打开的编辑器  
  本节介绍如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开各种编辑器。  
   
 ### <a name="using-the-filenew-menu"></a>使用“文件”/“新建”菜单  
  在 **“文件”** 菜单上，单击 **“新建”**，然后选择一个查询编辑器选项：  
   
--   **使用当前连接查询** – 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开一个类型与当前连接相关联的新的编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后使用 **“使用当前连接查询”**， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
+-   **使用当前连接查询** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开一个类型与当前连接相关联的新的编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后使用 **“使用当前连接查询”**， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
   
--   **数据库引擎查询** – 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例所需的信息。  
+-   **数据库引擎查询** - 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例所需的信息。  
   
 -   **Analysis Services MDX 查询** - 打开一个新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所需的信息。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "48110697"
 ### <a name="using-the-toolbar"></a>使用工具栏  
  在 **“标准”** 工具栏上，单击下列按钮之一：  
   
--   **新建查询** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开一个类型与当前连接相关联的新编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后单击 **“新建查询”** 按钮， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
+-   **新建查询** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开一个类型与当前连接相关联的新编辑器窗口。 该编辑器窗口使用与当前连接相同的身份验证信息。 例如，如果您在对象资源管理器中选择一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，然后单击 **“新建查询”** 按钮， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将使用相同的身份验证信息打开一个连接到同一实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器。  
   
--   **数据库引擎查询** – 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例所需的信息。  
+-   **数据库引擎查询** - 打开一个新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例所需的信息。  
   
 -   **Analysis Services MDX 查询** - 打开一个新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询编辑器和一个对话框，以获取连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所需的信息。  
   

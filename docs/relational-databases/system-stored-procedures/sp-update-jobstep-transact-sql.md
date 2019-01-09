@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aca8858c65a900c085eba9d91461c4b3dc57b7fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772975"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591521"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,22 +65,22 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  步骤所属的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。 任一*job_id*或*job_name*必须指定但不能同时指定两者。  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_  
  步骤所属的作业的名称。 *job_name*是**sysname**，默认值为 NULL。 任一*job_id*或*job_name*必须指定但不能同时指定两者。  
   
  [ **@step_id =**] *step_id*  
  要修改的作业步骤的标识号。 不能更改该标识号。 *step_id*是**int**，无默认值。  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'**_step_name_  
  步骤的新名称。 *step_name*是**sysname**，默认值为 NULL。  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **'**_子系统_  
  使用 Microsoft SQL Server 代理执行子系统*命令*。 *子系统*是**nvarchar(40)**，默认值为 NULL。  
   
- [  **@command =**] **'***命令***’**  
+ [  **@command =**] **'**_命令_  
  通过执行命令*子系统*。 *命令*是**nvarchar （max)**，默认值为 NULL。  
   
- [ **@additional_parameters =**] **'***parameters***'**  
+ [  **@additional_parameters =**] **'**_参数_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
@@ -112,13 +112,13 @@ sp_update_jobstep
  [ **@on_fail_step_id =**] *fail_step_id*  
  在此步骤失败时执行的作业步骤的标识号并*fail_action*是**4**。 *fail_step_id*是**int**，默认值为 NULL。  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **'**_server_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*是**nvarchar （128)**，默认值为 NULL。  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **'**_数据库_  
  要在其中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤的数据库的名称。 *数据库*是**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
- [ **@database_user_name =**] **'***user***'**  
+ [  **@database_user_name =**] **'**_用户_  
  执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤时要使用的用户帐户的名称。 *用户*是**sysname**，默认值为 NULL。  
   
  [ **@retry_attempts =**] *retry_attempts*  
@@ -130,7 +130,7 @@ sp_update_jobstep
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **'**_file_name_  
  用于保存该步骤输出的文件的名称。 *file_name*是**nvarchar(200)**，默认值为 NULL。 此参数只对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系统中运行的命令有效。  
   
  若要将 output_file_name 重新设置回 NULL，必须设置*output_file_name*为空字符串 () 或字符串的空白字符，但您不能使用**CHAR(32)** 函数。 例如，按如下所示将此参数设置为空字符串：  
@@ -151,7 +151,7 @@ sp_update_jobstep
  [ **@proxy_id**= ] *proxy_id*  
  作业步骤作为代理运行时，代理的 ID 号。 *proxy_id*是类型**int**，默认值为 NULL。 如果没有*proxy_id*指定，则没有*proxy_name*指定，且未*user_name*的服务帐户运行该作业步骤的指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'**_proxy_name_  
  作业步骤作为代理运行时，代理的名称。 *proxy_name*是类型**sysname**，默认值为 NULL。 如果没有*proxy_id*指定，则没有*proxy_name*指定，且未*user_name*的服务帐户运行该作业步骤的指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -162,7 +162,7 @@ sp_update_jobstep
   
  更新作业步骤将增加作业的版本号。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

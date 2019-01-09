@@ -20,16 +20,16 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602675"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212419"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **符合性**  
- 版本引入了： ODBC 2.0  
+ 版本引入了：ODBC 2.0  
   
  **摘要**  
  **SQLManageDataSources**显示一个对话框，可使用该用户可以设置、 添加和删除数据源中的系统信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "47602675"
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![ODBC 数据源管理器对话框](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- 该对话框中显示三个选项卡下的系统信息中列出的数据源：**用户 DSN**，**系统 DSN**，并**文件 DSN**。 如果用户双击数据源或选择数据源并单击**配置**， **SQLManageDataSources**调用**ConfigDSN**设置 ODBC_CONFIG_ 与 DLL 中DSN 选项。  
+ 该对话框中显示三个选项卡下的系统信息中列出的数据源：**用户 DSN**，**系统 DSN**，和**文件 DSN**。 如果用户双击数据源或选择数据源并单击**配置**， **SQLManageDataSources**调用**ConfigDSN**设置 ODBC_CONFIG_ 与 DLL 中DSN 选项。  
   
  如果用户单击**外**， **SQLManageDataSources**显示**创建新的数据源**对话框中，如下图中所示。  
   

@@ -20,16 +20,16 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d48d9742f9b3fafe77f441226961218f47c6005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213436"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLFreeStmt**与特定报表关联的处理将停止、 关闭任何打开的游标语句，挂起的结果，放弃与相关联，或 （可选） 释放与语句句柄关联的所有资源。  
@@ -50,13 +50,13 @@ SQLRETURN SQLFreeStmt(
  *选项*  
  [输入]以下选项之一：  
   
- SQL_ 关闭： 关闭与关联的光标*StatementHandle* （如果已定义），并放弃所有挂起结果。 应用程序可以通过重新打开该游标更高版本执行**选择**使用相同或不同的参数值重试语句。 如果没有光标处于打开状态，此选项不起的应用程序。 **SQLCloseCursor**还可以调用来关闭游标。 有关详细信息，请参阅[关闭游标](../../../odbc/reference/develop-app/closing-the-cursor.md)。  
+ SQL_ 关闭：关闭与关联的光标*StatementHandle* （如果已定义），并放弃所有挂起结果。 应用程序可以通过重新打开该游标更高版本执行**选择**使用相同或不同的参数值重试语句。 如果没有光标处于打开状态，此选项不起的应用程序。 **SQLCloseCursor**还可以调用来关闭游标。 有关详细信息，请参阅[关闭游标](../../../odbc/reference/develop-app/closing-the-cursor.md)。  
   
- SQL_DROP： 此选项已弃用。 调用**SQLFreeStmt**与*选项*SQL_DROP 的映射在驱动程序管理器向[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ SQL_DROP:已弃用此选项。 调用**SQLFreeStmt**与*选项*SQL_DROP 的映射在驱动程序管理器向[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
- SQL_UNBIND： 设置为 0，释放所有列缓冲区 ARD SQL_DESC_COUNT 字段绑定通过**SQLBindCol**的给定*StatementHandle*。 这不会解除绑定，书签列;为此，请为书签列 ARD SQL_DESC_DATA_PTR 字段设置为 NULL。 请注意，是否在共享的多个语句是显式分配描述符上执行此操作，则该操作会影响共享描述符的所有语句的绑定。 有关详细信息，请参阅[概述的检索结果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
+ SQL_UNBIND:设置为 0，释放所有列缓冲区 ARD SQL_DESC_COUNT 字段受**SQLBindCol**的给定*StatementHandle*。 这不会解除绑定，书签列;为此，请为书签列 ARD SQL_DESC_DATA_PTR 字段设置为 NULL。 请注意，是否在共享的多个语句是显式分配描述符上执行此操作，则该操作会影响共享描述符的所有语句的绑定。 有关详细信息，请参阅[概述的检索结果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
   
- SQL_RESET_PARAMS: APD SQL_DESC_COUNT 字段设置为 0，释放所有设置的参数缓冲区**SQLBindParameter**的给定*StatementHandle*。 如果共享的多个语句是显式分配描述符上执行此操作，则此操作将影响所有共享描述符的语句的绑定。 有关详细信息，请参阅[绑定参数](../../../odbc/reference/develop-app/binding-parameters-odbc.md)。  
+ SQL_RESET_PARAMS:APD SQL_DESC_COUNT 字段设置为 0，释放所有设置的参数缓冲区**SQLBindParameter**的给定*StatementHandle*。 如果共享的多个语句是显式分配描述符上执行此操作，则此操作将影响所有共享描述符的语句的绑定。 有关详细信息，请参阅[绑定参数](../../../odbc/reference/develop-app/binding-parameters-odbc.md)。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  

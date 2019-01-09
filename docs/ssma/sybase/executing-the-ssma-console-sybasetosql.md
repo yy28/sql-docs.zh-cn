@@ -19,12 +19,12 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 517c96deaf37934e82c1161c66b8e5825d1b14b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780437"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406404"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>执行 SSMA 控制台 (SybaseToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。 接下来的几节详细介绍相同。  
@@ -57,7 +57,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
   overwrite-if-exists="<true/false>" (optional)  
   
-   project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
+   project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
 覆盖如果-共存的属性是**false**默认情况下。  
@@ -136,7 +136,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 **语法示例：**  
   
 ```xml  
-<force-load metabase=”<source/target>” >  
+<force-load metabase="<source/target>" >  
   
   <metabase-object object-name="<object-name>"/>  
   
@@ -219,7 +219,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
   object-type="<object-category>"  
   
-  write-summary-report-to="<file-name/folder-name>”             (optional)  
+  write-summary-report-to="<file-name/folder-name>"             (optional)  
   
   verbose="<true/false>"                       (optional)  
   
@@ -231,7 +231,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -296,7 +296,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <convert-schema  
@@ -352,7 +352,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
   
 </migrate-data>  
 ```  
-或多个  
+或  
   
 ```xml  
 <migrate-data  
@@ -370,7 +370,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 迁移准备命令开始架构源和目标数据库之间的映射。  
   
 > [!NOTE]  
-> 设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+> 设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 ### <a name="map-schema"></a>映射架构  
 此命令提供的架构映射的源数据库到目标架构。  
@@ -391,7 +391,7 @@ sql-server-schema="<target-schema>"/>
 可管理性命令可帮助将与源数据库同步目标数据库对象。  
   
 > [!NOTE]  
-> 设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
+> 设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
 ### <a name="synchronize-target"></a>同步目标  
 此命令将目标对象与目标数据库同步。  
@@ -431,7 +431,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target  
@@ -440,7 +440,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-或多个  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -492,7 +492,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -501,7 +501,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-或多个  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -546,7 +546,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或多个  
+或  
   
 ```xml  
 <save-as-script  
@@ -620,7 +620,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-或多个  
+或  
   
 ```  
 <convert-sql-statement  
@@ -645,7 +645,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或多个  
+或  
   
 ```  
 <convert-sql-statement  

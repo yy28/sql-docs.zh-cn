@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘向导 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 数据挖掘向导 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936a09c286b3732b6259d1ada9c8e720ab812074
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0f2773117b2578f22af63ed022a61f1eeb283295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511471"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34016874"
   
 -   您要将哪些列或属性用于预测？ 哪些列或属性适合用作分析的输入？  
   
--   应使用哪种算法？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
+-   应使用哪种算法？  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
   
 -   您是否需要能针对统一数据集来测试模型？ 如果需要，请考虑使用为测试保留一些数据的选项。 您可以选择一个百分比，并根据需要用指定行数设置其上限。  
   
@@ -46,10 +46,10 @@ ms.locfileid: "34016874"
   
  接下来，您将创建挖掘结构和一个关联的数据挖掘模型。 您也可以只创建挖掘结构并在稍后添加模型，但先创建测试模型通常最为轻松。  
   
-###  <a name="BKMK_Relational"></a>关系 vs。OLAP 挖掘模型  
+###  <a name="BKMK_Relational"></a> 关系与。OLAP 挖掘模型  
  为您提供的下一个重要选项可让您确定是使用关系数据源还是使模型基于多维 (OLAP) 数据。  
   
- 此时，数据挖掘向导分为两个路径，具体取决于您的数据源是关系数据源还是位于多维数据集中。 除数据选择进程之外，所有内容（算法选择、用于添加维持数据集的功能等）都是相同的，但选择多维数据集数据比使用关系数据略为复杂一些。 （如果您基于多维数据集创建模型，则在最后还会获得一些其他选项。）  
+ 此时，数据挖掘向导分为两个路径，具体取决于您的数据源是关系数据源还是位于多维数据集中。 除数据选择进程之外的其他所有内容都是相同的算法，能够添加维持数据集选择，等的但选择多维数据集数据比使用关系数据稍微有些复杂。 （如果您基于多维数据集创建模型，则在最后还会获得一些其他选项。）  
   
  有关每个选项的演练的详细说明，请参阅下列主题：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34016874"
 ### <a name="choosing-an-algorithm"></a>选择算法  
  接下来，您必须决定处理数据时要使用的算法。 此决定可能很难做出。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每种算法都有不同的功能并会产生不同的结果，因此，在确定最适合您的数据和业务问题的模型之前，您可以试用多种不同的模型。 请参阅以下主题以查看每种算法最适合的任务的说明：  
   
- [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  同样，可以使用不同的算法创建多个模型，也可以更改算法的参数来创建不同的模型。 您不应局限于所选的算法，最好的方法是对同一数据创建几个不同的模型。  
   
@@ -77,13 +77,13 @@ ms.locfileid: "34016874"
 ### <a name="additional-features"></a>其他功能  
  为了帮助您选择正确的数据和正确配置数据源，数据挖掘向导还提供了以下功能：  
   
--   **自动检测数据类型**：该向导将检查列值的唯一性和分布情况，然后提供建议的最佳数据类型和数据使用类型。 您可以从列表中选择值来覆盖这些建议。  
+-   **自动检测数据类型**:该向导将检查的唯一性和分布的列的值，然后建议的最佳的数据类型，并使用类型的数据。 您可以从列表中选择值来覆盖这些建议。  
   
--   **变量建议**：您可以单击对话框并启动用于计算模型中包含的各个列之间的关联的分析器，并确定在当前给定模型配置的情况下，是否有任何列可能成为结果属性的预测器。 您可以通过键入其他值来覆盖这些建议。  
+-   **变量建议**:您可以单击对话框中，并启动用于计算的各个模型中包括列之间的关联，并确定任何列是否可能成为预测器的结果属性给定模型配置到目前为止的分析器。 您可以通过键入其他值来覆盖这些建议。  
   
--   **功能选择**：大多数算法都将自动检测作为良好的预测器的列并优先使用这些列。 在包含的值过多的列中，将应用 *功能选择* 来减少数据的基数并增大找到有用模式的机会。 您可以使用模型参数来影响功能选择行为。  
+-   **功能选择**:大多数算法将自动检测是良好的预测器和使用这些列的列。 在包含的值过多的列中，将应用 *功能选择* 来减少数据的基数并增大找到有用模式的机会。 您可以使用模型参数来影响功能选择行为。  
   
--   **自动多维数据集切片**：如果挖掘模型基于 OLAP 数据源，则会自动提供使用多维数据集属性对模型进行切片的功能。 这对于创建基于多维数据集数据子集的模型很适用。  
+-   **自动多维数据集切片**:如果您的挖掘模型基于 OLAP 数据源，会自动提供的功能对模型进行切片通过使用多维数据集属性。 这对于创建基于多维数据集数据子集的模型很适用。  
   
 ### <a name="completing-the-wizard"></a>完成向导  
  向导中的最后一步是对挖掘结构和关联的挖掘模型进行命名。 根据创建的模型类型，您还具有以下重要选项：  
@@ -99,19 +99,19 @@ ms.locfileid: "34016874"
 ## <a name="related-content"></a>相关内容  
  若要了解有关在创建数据挖掘模型时需做出的决策的详细信息，请参阅以下链接：  
   
- [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [内容类型 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [数据类型 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [数据类型（数据挖掘）](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [功能选择 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [功能选择（数据挖掘）](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [缺失值 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
- [在挖掘模型的钻取](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [对挖掘模型的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)  
   

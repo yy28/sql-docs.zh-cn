@@ -15,12 +15,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538676"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
   使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
@@ -29,15 +29,15 @@ ms.locfileid: "48090227"
   
 ## <a name="options"></a>选项  
  **HTTPConnection**  
- 在列表中选择一个连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- **相关主题：**[HTTP 连接管理器](connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **相关的主题：**[HTTP 连接管理器](connection-manager/http-connection-manager.md)， [HTTP 连接管理器编辑器&#40;服务器页&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 **(…)** 找到此文件。  
+ 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 (…) 并定位到该文件。  
   
  如果您已经将该 WSDL 文件手动下载到计算机，请选择此文件。 但是，如果尚未下载该 WSDL 文件，请执行以下步骤：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48090227"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入 Web 服务任务的说明。  
   
  **“下载 WSDL”**  
@@ -73,8 +73,8 @@ ms.locfileid: "48090227"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web 服务任务编辑器&#40;输入页&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Web 服务任务编辑器&#40;输出页&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Web 服务任务编辑器（“输入”页）](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Web 服务任务编辑器（“输出”页）](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   
