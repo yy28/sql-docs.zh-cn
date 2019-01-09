@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d07d683b217b4f4eff6c9cfd1c6275ab4a9e5ca1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642354"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214879"
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
   如果计算机上当前安装了 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本，可以升级到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -36,16 +36,16 @@ ms.locfileid: "51642354"
 ## <a name="before-upgrading-integration-services"></a>升级 Integration Services 前的准备工作  
  建议您在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前先运行升级顾问。 如果将现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所采用的新的包格式，则可能会遇到升级顾问报表问题。  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL Server 2012 版已不支持迁移或运行 Data Transformation Services (DTS) 包。 不再提供以下 DTS 功能：  
->   
+> 
 >  -   DTS 运行时  
 > -   DTS API  
 > -   用于将 DTS 包迁移到下一版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   中对 DTS 包维护的支持 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   执行 DTS 2000 包任务  
 > -   升级 DTS 包的顾问扫描。  
->   
+> 
 >  有关其他已停止的功能的信息，请参阅 [SQL Server 2016 中已停止使用的 Integration Services 功能](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)。  
   
 ## <a name="upgrading-integration-services"></a>升级 Integration Services  

@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f29f5b662266a789f7aad6bdfb151df999e8ad67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26e845e9d4e7d1ad34e902b0d37fe60cda33f5f0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807895"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206926"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,13 +44,13 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  credential_name  
  指定要更改的数据库作用域凭据的名称。  
   
- IDENTITY ='identity_name'****  
+ IDENTITY ='identity_name'  
  指定从服务器外部进行连接时要使用的帐户名称。 要从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。  有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
     
   
- SECRET ='secret'****  
+ SECRET ='secret'  
  指定发送身份验证所需的机密内容。 从 Azure Blob 存储导入文件时需要 *secret*。 在其他用途中，*secret* 可能是可选的。   
->  [!WARNING]
+> [!WARNING]
 >  SAS 密钥值可以“?”（问号）开头。 使用 SAS 密钥时，必须删除前导“?”。 否则会阻止操作。    
   
 ## <a name="remarks"></a>Remarks  

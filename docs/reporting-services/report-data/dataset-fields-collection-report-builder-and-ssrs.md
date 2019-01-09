@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90b1e966a2f62877e658658048b12427bca109cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031856"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202406"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>数据集字段集合（报表生成器和 SSRS）
   数据集字段表示来自数据连接的数据。 字段可以表示数值数据，也可以表示非数值数据。 示例包括销售额、总销售额、客户名称、数据库标识符、URL、图像、空间数据和电子邮件地址。 在设计图面上，字段显示为报表项（如文本框、表和图表）中的表达式。  
@@ -55,7 +55,7 @@ ms.locfileid: "50031856"
 ### <a name="using-extended-field-properties"></a>使用扩展字段属性  
  支持多维查询的数据源（例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）支持字段的字段属性。 字段属性显示在查询的结果集中，但是在 **“报表数据”** 窗格中不可见。 它们仍可在报表中使用。 若要引用字段的属性，请将该字段拖到报表中，然后将默认属性 **Value** 更改为所需属性的字段名。 例如，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中，可以定义多维数据集单元格中的值格式。 通过使用字段属性 **FormattedValue**可使用已格式化值。 若要直接使用该格式化值，而不是使用一个值，然后再设置文本框的格式属性，请将该字段拖到该文本框中，然后将默认表达式 `=Fields!FieldName.Value` 更改为 `=Fields!FieldName.FormattedValue`。  
   
-> [!NOTE]  
+> [!NOTE]
 >  并非所有的 **Field** 属性均可用于所有数据源。 针对所有的数据源定义 **Value** 和 **IsMissing** 属性。 仅当数据源提供了其他预定义的属性（例如，多维数据源的 **Key**、 **UniqueName**和 **ParentUniqueName** ）时，才支持这些属性。 某些数据访问接口支持自定义属性。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。 例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
   

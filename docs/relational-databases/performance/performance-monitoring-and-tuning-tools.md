@@ -16,15 +16,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 90380da3b0cd76154dc8ab60e5efeadd9bf9de1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91a1c007add2810588f7b41499c046336d5bc322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528492"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371479"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "52528492"
   
 |事件或活动|扩展事件|SQL Server 事件探查器|分布式重播|系统监视器|活动监视器|Transact-SQL|错误日志|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|走向分析|用户帐户控制|是||用户帐户控制||||  
+|走向分析|是|是||是||||  
 |重播捕获的事件||是（从单台计算机）|是（从多台计算机）|||||  
-|临时监视|是<sup>1</sup>|用户帐户控制|||是|是|用户帐户控制|  
-|生成警报||||用户帐户控制||||  
-|图形界面|用户帐户控制|是||是|是||用户帐户控制|  
-|在自定义应用程序内使用|用户帐户控制|是<sup>2</sup>||||用户帐户控制||  
+|临时监视|是<sup>1</sup>|是|||是|是|是|  
+|生成警报||||是||||  
+|图形界面|是|是||是|是||是|  
+|在自定义应用程序内使用|是|是<sup>2</sup>||||是||  
   
  <sup>1</sup> 使用 [SQL Server Management Studio XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)    
  <sup>2</sup> 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 系统存储过程。  

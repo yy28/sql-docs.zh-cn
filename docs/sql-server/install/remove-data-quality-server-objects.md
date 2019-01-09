@@ -10,19 +10,19 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e286f90ddbe008346f70654ca4d9daa24dccb739
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528383"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215523"
 ---
 # <a name="remove-data-quality-server-objects"></a>删除数据质量服务器对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   从 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例中卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或者完全删除具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例并不删除某些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象，包括 DQS 数据库。 这意味着，如果您使用 SQL Server 安装程序卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，并不会丢失您的 DQS 数据。 在卸载过程完成后，您必须手动删除这些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]前，请考虑通过将所有现有知识库导出到 .dqsb 文件来备份这些知识库，以供以后使用该文件来将所有知识库导入回新的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 只能从命令提示符使用适当的命令行参数来运行 DQSInstaller.exe，以导出和导入所有 DQS 知识库。 有关详细信息，请参阅 [使用 DQSInstaller.exe 导出和导入 DQS 知识库](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
 > -   在删除 DQS 数据库之前，如果您想要保留数据库，则考虑备份数据库，在以后可以使用备份来还原数据。 有关此操作的信息，请参阅 [管理 DQS 数据库](../../data-quality-services/manage-dqs-databases.md)。  
   

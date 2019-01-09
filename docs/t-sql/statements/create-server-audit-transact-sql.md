@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834755"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979943"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ SHUTDOWN
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. 创建一个以文件为目标的服务器审核  
- 下面的示例创建一个名为 `HIPPA_Audit` 的服务器审核，它以二进制文件为目标，而且不带选项。  
+ 下面的示例创建一个名为 `HIPAA_Audit` 的服务器审核，它以二进制文件为目标，而且不带选项。  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
@@ -168,7 +168,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. 创建一个带有选项且以 Windows 应用程序日志为目标的服务器审核  
- 下面的示例创建一个名为 `HIPPA_Audit` 的服务器审核，它以 Windows 应用程序日志作为目标集。 每秒向队列中写入一次，在遇到故障时将关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎。  
+ 下面的示例创建一个名为 `HIPAA_Audit` 的服务器审核，它以 Windows 应用程序日志作为目标集。 每秒向队列中写入一次，在遇到故障时将关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎。  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

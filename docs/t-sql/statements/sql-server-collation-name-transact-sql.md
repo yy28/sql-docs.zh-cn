@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f9c71473034dd4787de1862752c274d9e8dd740
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 765f825a690af65ec4740975cc21c5364d133bb5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810585"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211396"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 排序规则名称 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SELECT * FROM sys.fn_helpcollations()
 WHERE name LIKE 'SQL%';  
 ```  
 
->  [!NOTE]  
+> [!NOTE]
 >  对于排序顺序 ID 80，请使用代码页为 1250 的任何 Window 排序规则，并使用二进制顺序。 例如：Albanian_BIN、Croatian_BIN、Czech_BIN、Romanian_BIN、Slovak_BIN、Slovenian_BIN。  
   
 ## <a name="see-also"></a>另请参阅  

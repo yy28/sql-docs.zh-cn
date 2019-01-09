@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02053fed0f366945d08e0551d64aeb8a3ed6f33a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13678d9b3d522e65ff1f9e895020bb0fde020bef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619535"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751910"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
 
@@ -66,8 +65,8 @@ ms.locfileid: "47619535"
   
 ## <a name="see-also"></a>另请参阅  
  [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)   
- [用户和组 &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [用户和组 (Master Data Services)](../master-data-services/users-and-groups-master-data-services.md)   
+ [功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  

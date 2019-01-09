@@ -14,12 +14,12 @@ ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 705c71cd3b6872bfa8fe08509ed3d46b2799c445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41f6e01b027049f5ac418aa9199cf9e576aebd0a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848155"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208506"
 ---
 # <a name="create-user-defined-aggregates"></a>创建用户定义聚合
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47848155"
   
 -   使用 CREATE AGGREGATE 语句创建引用已注册程序集的用户定义聚合函数。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中部署 SQL Server 项目将在为该项目指定的数据库中注册程序集。 部署项目还会在数据库中为使用 **SqlUserDefinedAggregate** 属性注释的所有类定义创建用户定义聚合。 有关详细信息，请参阅 [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md)。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  默认情况下，关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 CLR 代码的功能。 可以创建、更改和删除将引用托管代码模块的数据库对象，但是不能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用，除非使用 [sp_configure (Transact-SQL)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) 启用了 [clr enabled](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)选项。  
   
  **创建、修改或删除程序集**  

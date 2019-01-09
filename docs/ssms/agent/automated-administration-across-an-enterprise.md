@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbd32c13badb86db8dae7156b14ca3f93f97d76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6949ff07fccb7de14a597b754e7f2beeaa9bfe8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710645"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206286"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47710645"
 包含有关使用非管理 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的本地系统帐户如何影响多服务器环境的信息。  
   
 [在目标服务器上设置加密选项](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-包含有关在目标服务器上设置 MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理注册表子项的信息。  
+包含有关在目标服务器上设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理注册表子项 MsxEncryptChannelOptions 的信息。  
   
 [管理整个企业内的作业](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 包含有关检查作业状态、更改作业的目标服务器、同步目标服务器时钟以及轮询主服务器以获取当前作业状态的信息。  

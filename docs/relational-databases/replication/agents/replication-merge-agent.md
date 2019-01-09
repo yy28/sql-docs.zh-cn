@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d9760d692e30a7d33828f27202ba7818c1ac047
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523461"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590221"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,55 +113,55 @@ replmerg [-?]
  **-?**  
  输出所有可用的参数。  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  订阅服务器数据库的名称。  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  包含订阅的初始快照的文件夹路径。  
   
  **-Continuous**  
  指定代理是否尝试连续轮询已复制的事务。 如果指定了该参数，即使没有事务挂起，代理也将在轮询间隔期间轮询来自源的已复制事务。  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  指定合并代理用于在目标上应用更改的目标线程数。 在上载过程中，目标是发布服务器；在下载过程中，目标是订阅服务器。 默认值为 4。  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  分发服务器登录名。  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  分发服务器密码。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  指定分发服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认设置），值 **1** 指示 Windows 身份验证模式。  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  将更改从发布服务器下载到订阅服务器时要在单个批次中处理的生成数。 生成的定义是每个项目中属于一个逻辑组的更改。 可靠的通信链接的默认值为 100。 不可靠的通信链接的默认值为 10。  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  将发布服务器上的更改下载到订阅服务器时要在单个批次中读取的更改数。 默认值为 100。  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  将发布服务器上的更改下载到订阅服务器时要在单个批次中应用的更改数。 默认值为 100。  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  当发布使用参数化行筛选器时所筛选数据快照文件的位置。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -179,7 +179,7 @@ replmerg [-?]
  有关详细信息，请参阅[安全性概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
- > [!WARNING]  
+> [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 **@subscriber_upload_options** 的 **sp_addmergearticle** 。  
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
@@ -209,16 +209,16 @@ replmerg [-?]
 |**1**|强制所有生成进行收敛。|  
 |**2**|强制所有生成进行收敛并更正损坏的沿袭。 当指定此值时，请指定应更正何处的沿袭：发布服务器、订阅服务器，还是发布服务器和订阅服务器。|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  分发服务器的 FTP 服务网络地址。 如果不指定，则使用 **Distributor** 。  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  用于连接到 FTP 服务的用户密码。  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  分发服务器 FTP 服务的端口号。 如果不指定，则使用 FTP 服务的默认端口号 (21)。  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  用于连接到 FTP 服务的用户名。 如果不指定，则使用 anonymous。  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -231,16 +231,16 @@ replmerg [-?]
 |**2**|默认值。 记录每个会话状态的增量会话详细信息和项目级别会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。 同时还会记录代理状态消息。|  
 |**3**|除了将更多地记录代理进度消息之外，其他与 **-HistoryVerboseLevel** = **2**时相同。|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  本地计算机的网络名。 默认为本地计算机名称。  
   
  **-InteractiveResolution** [**0**|**1**]  
  指定在同步期间发生冲突时是否使用交互式冲突解决方法。 默认值为 **0**，指示不使用交互式冲突解决方法。  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  指定连接到需要进行身份验证的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器 ISAPI DLL 时所使用的登录名。  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  指定连接到需要进行身份验证的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器 ISAPI DLL 时所使用的密码。  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
@@ -255,36 +255,36 @@ replmerg [-?]
  **-InternetSecurityMode** [**0**|**1**]  
  指定在 Web 同步期间连接到 Web 服务器时所使用的 IIS 安全模式。 值为 **0** ，表示为基本身份验证，值为 **1** ，表示为 Windows 集成身份验证（默认）。  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器 ISAPI DLL 的连接超时之前等待的秒数。  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制侦听器 ISAPI DLL 的 URL。 必须指定此属性。  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将合并代理标记为可疑。 默认值为 **300** 秒。  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  登录超时前等待的秒数。 默认值为 15 秒。  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  等待创建生成或更改批的秒数或下载到客户端的秒数。 默认值为 **1** 秒。  
   
  Makegeneration 是准备要下载到订阅服务器的发布服务器更改的进程，这可能是下载期间的性能瓶颈。 如果 makegeneration 进程已按 **-MakeGenerationInterval**指定的间隔运行，则将为当前同步会话跳过该进程。 此操作将有助于同步并发，在订阅服务器不希望下载更改时尤为有用。  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数目为 **MaxBcpThreads** 与在发布数据库的系统表 **sysmergeschemachange** 中列出的大容量复制请求数这二者中的较小者。 **MaxBcpThreads** 的值必须大于 0，并且不存在任何硬编码的上限。 默认值为 **1**。  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  指定应从发布服务器下载到订阅服务器的已更改行的最大数量。 下载的行数可能会由于以下原因大于指定的最大值：处理了所有生成或可能运行了并行的目标线程，这两种情况在第一次传递中均会处理至少 100 个更改。 默认情况下将发送所有已准备好下载的更改。  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  指定应从订阅服务器上载到发布服务器的已更改行的最大数量。 上载的行数可能会由于以下原因大于指定的最大值：处理了所有生成或可能运行了并行的目标线程，这两种情况在第一次传递中均会处理至少 100 个更改。 默认情况下将发送所有已准备好上载的更改。  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  指定是否基于发布的保持期从 [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、 [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、 [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)、 [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)和 [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 中删除元数据。 默认值为 **1**，指示应执行清除操作。 值为 **0** 指示不应自动执行清除操作。  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -296,34 +296,34 @@ replmerg [-?]
  **-PacketSize**  
  数据包大小（按字节计）。 默认值为 4096（字节）。  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  查询发布服务器或订阅服务器有无数据更改的频率（以秒为单位）。 默认值为 60 秒。  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  发布服务器登录名。 如果 **PublisherSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  发布服务器密码。 如果 **PublisherSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  查询超时前等待的秒数。默认值为 300 秒。 当此值大于 1800 时，合并代理还将使用 **QueryTimeout** 的值来确定等待生成分区快照的时间。  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  指定合并代理用于枚举来自源的更改的源线程数。 在上载过程中，源是订阅服务器；在下载过程中，源是发布服务器。 默认值为 **3**。  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  当运行的并发合并进程数达到由 **@max_concurrent_merge** 的 **@max_concurrent_merge**。 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 为 **2** （允许建立到 Jet 数据库的连接，而无需 ODBC 数据源名称 (DSN)），则为 Jet 数据库（.mdb 文件）的路径。  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -339,10 +339,10 @@ replmerg [-?]
 > [!NOTE]  
 >  如果使用值 **2** 或 **3**，则必须在 **SubscriberDatabasePath** 选项中指定订阅服务器的数据库路径。  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  订阅服务器登录名。 如果 **SubscriberSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  订阅服务器密码。 如果 **SubscriberSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -360,13 +360,13 @@ replmerg [-?]
  **-SyncToAlternate** [ **0|1**]  
  指定合并代理是否在订阅服务器和备用发布服务器之间进行同步。 值为 **1** 表示它是备用发布服务器。 默认值为 **0**。  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  将订阅服务器上的更改上载到发布服务器时要在单个批次处理的生成数。 生成的定义是每个项目中属于一个逻辑组的更改。 可靠的通信链接的默认值为 **100**。 不可靠的通信链接的默认值为 **1**。  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  将订阅服务器上的更改上载到发布服务器时要在单个批次中读取的更改数。 默认值为 **100**。  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  将订阅服务器上的更改上载到发布服务器时要在单个批次中应用的更改数。 默认值为 **100**。  
   
  **-UseInprocLoader**  
@@ -385,7 +385,7 @@ replmerg [-?]
 > [!NOTE]  
 >  如果订阅服务器与发布服务器上的数据类型不同，则使用二进制校验和或校验和进行的验证可能会错误地报告失败。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-replicated-data.md)的“数据验证的注意事项”部分。  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  在连续模式下对订阅进行验证的频率（单位为分钟）。 默认值为 **60** 分钟。  
   
 ## <a name="remarks"></a>Remarks  

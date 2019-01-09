@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3421dd1189edf648f1e512851223f5baceaef8ff
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: ad41d2f0c0274aeaefdfcbe0b33fca6de1e0454a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018872"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978923"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,16 +77,15 @@ SELECT TOP ( number )
  建议将新的空间索引分割用于在 Nearest Neighbor 查询中使用的索引。 有关空间索引分割的详细信息，请参阅 [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例显示可以使用空间索引的 Nearest Neighbor 查询。 该示例使用 `Person.Address` 数据库中的 `AdventureWorks2012` 表。  
+ 下面的代码示例显示可以使用空间索引的 Nearest Neighbor 查询。 该示例使用 `Person.Address` 数据库中的 `AdventureWorks2016` 表。  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 WHERE SpatialLocation.STDistance(@g) IS NOT NULL  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  在 SpatialLocation 列上创建一个空间索引，以便了解 Nearest Neighbor 查询如何使用空间索引。 有关创建空间索引的详细信息，请参阅 [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)。  
@@ -95,12 +94,11 @@ ORDER BY SpatialLocation.STDistance(@g);
  下面的代码示例显示不能使用空间索引的 Nearest Neighbor 查询。  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  该查询缺少在语法部分中指定的窗体中使用 **的** WHERE `STDistance()` 子句，因此它无法使用空间索引。  

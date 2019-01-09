@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531492"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205326"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 帮助和反馈
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ SQL Server Management Studio (SSMS) 团队也会密切关注 SQL Server [User Vo
 - [安装和升级](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [高可用性和灾难恢复](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
 - [SQL Server 工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [安全性](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [复制](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
@@ -85,7 +85,7 @@ SQL Server Management Studio (SSMS) 团队也会密切关注 SQL Server [User Vo
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>我想要参与编辑 SQL Server 文档
 
-###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![编辑内容](../includes/media/edit-topic-pencil.png) 编辑内容
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![编辑内容](../includes/media/edit-topic-pencil.png) 编辑内容
 你是否发现有关我们文档的任何问题？ 或者是否可以提供可改进文档的内容？ 你可以自己编辑 docs.microsoft.com 上的内容。 这样做不仅可以改进我们的文档，还可以获得页面贡献者的殊荣！ 有关详细信息，请访问 [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)。 
 
 SQL 内容团队会对所有公众贡献的内容进行审核，确保技术准确性和一致性。 

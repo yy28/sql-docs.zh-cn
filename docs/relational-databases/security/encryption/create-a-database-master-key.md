@@ -1,7 +1,7 @@
 ---
 title: 创建数据库主密钥 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: vanto
@@ -14,45 +14,35 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7e908f096b923deb54dc39c7ef73c3a78740b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3034dc76a64e25b614b1871247369214199c36b
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650507"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997489"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建数据库主密钥。  
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建数据库主密钥。
   
- **本主题内容**  
+## <a name="security"></a>Security  
   
--   **开始之前：**  
+### <a name="permissions"></a>Permissions  
+要求对数据库具有 CONTROL 权限。  
   
-     [Security](#Security)  
+## <a name="using-transact-sql"></a>使用 Transact-SQL  
   
--   [使用 Transact-SQL 创建数据库主密钥](#TsqlProcedure)  
+### <a name="to-create-a-database-master-key"></a>创建数据库主密钥  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+1. 选择密码来对存储于该数据库中的主密钥副本进行加密。  
   
-###  <a name="Security"></a> 安全性  
+2. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-####  <a name="Permissions"></a> Permissions  
- 要求对数据库具有 CONTROL 权限。  
+3. 在标准菜单栏上，单击 **“新建查询”**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-#### <a name="to-create-a-database-master-key"></a>创建数据库主密钥  
-  
-1.  选择密码来对存储于该数据库中的主密钥副本进行加密。  
-  
-2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
-  
-3.  在标准菜单栏上，单击 **“新建查询”**。  
-  
-4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
-  
-    ```  
+    ```sql
     -- Creates a database master key for the "AdventureWorks2012" database.   
     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
     USE AdventureWorks2012;  
@@ -62,5 +52,3 @@ ms.locfileid: "47650507"
     ```  
   
  有关详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-master-key-transact-sql.md)。  
-  
-  

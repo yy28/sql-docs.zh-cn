@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030526"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202586"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>报表生成器函数 - 聚合函数
   按照数据访问接口的定义返回指定表达式的自定义聚合。  
@@ -47,7 +47,7 @@ Aggregate(expression, scope)
   
  可以通过更改 **“将小计行解释为详细信息”** 选项（位于 **“数据集属性”** 对话框）的值，来更改此默认行为。 此选项设置为 **True**时，包括服务器聚合在内的所有数据都会显示为详细信息数据。 当设置为 **False**时，服务器聚合显示为总计。 此属性的设置影响链接到此数据集的所有数据区域。  
   
-> [!NOTE]  
+> [!NOTE]
 >  引用 **Aggregate** 的报表项所包含的所有组都必须具有其组表达式的简单字段引用，例如， `[FieldName]`。 您不能在使用复杂组表达式的数据区域中使用 **Aggregate** 。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件，查询必须包括 **LevelProperty** 类型（而不是 **MemberProperty**类型）的 MDX 字段，才能支持使用 **Aggregate**函数的聚合。  
   
  *Expression* 可以包含对嵌套聚合函数的调用，但具有以下例外和条件：  

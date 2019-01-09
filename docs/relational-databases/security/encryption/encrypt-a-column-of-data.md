@@ -1,7 +1,7 @@
 ---
 title: 加密数据列 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -17,61 +17,52 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650365"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997539"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。  
+
+## <a name="security"></a>Security  
   
- **本文内容**  
-  
--   **开始之前：**  
-  
-     [Security](#Security)  
-  
--   [使用 Transact-SQL 对数据列进行加密](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+### <a name="permissions"></a>Permissions  
  下面的权限是执行以下步骤所必需的：  
   
--   针对数据库的 CONTROL 权限。  
+- 针对数据库的 CONTROL 权限。  
   
--   针对数据库的 CREATE CERTIFICATE 权限。 只有 Windows 登录名、SQL Server 登录名和应用程序角色才能拥有证书。 其他组和角色不能拥有证书。  
+- 针对数据库的 CREATE CERTIFICATE 权限。 只有 Windows 登录名、SQL Server 登录名和应用程序角色才能拥有证书。 其他组和角色不能拥有证书。  
   
--   对表的 ALTER 权限。  
+- 对表的 ALTER 权限。  
   
--   针对密钥的某些权限，并且必须未被拒绝授予 VIEW DEFINITION 权限。  
+- 针对密钥的某些权限，并且必须未被拒绝授予 VIEW DEFINITION 权限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+## <a name="using-transact-sql"></a>使用 Transact-SQL  
 
-要使用下面的示例，必须具有数据库主密钥。 如果数据库目前没有数据库主密钥，可通过执行以下语句并提供密码来创建主密钥：   
-```  
+要使用下面的示例，必须具有数据库主密钥。 如果数据库目前没有数据库主密钥，可通过执行以下语句并提供密码来创建主密钥：
+
+```sql  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
+
 请始终备份数据库主密钥。 有关数据库主密钥的详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-master-key-transact-sql.md)。
 
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>使用包含验证器的对称加密对数据列进行加密  
+### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>使用包含验证器的对称加密对数据列进行加密  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2. 在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
-    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -120,15 +111,15 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>使用简单对称加密对数据列进行加密  
+### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>使用简单对称加密对数据列进行加密  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2. 在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
   
@@ -185,5 +176,3 @@ PASSWORD = '<some strong password>';
 -   [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY (Transact-SQL)](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  

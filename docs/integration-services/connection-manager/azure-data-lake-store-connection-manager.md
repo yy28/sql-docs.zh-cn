@@ -14,12 +14,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 3e9caa6e272e4b1e2479f0abf10547e52721049c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5db5df2a209cf9f291c37f960cdd9b2947966061
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719265"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531102"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 连接管理器
 SQL Server Integration Services (SSIS) 包可通过下列两种身份验证类型之一使用 Azure Data Lake Store 连接管理器连接 Azure Data Lake Storage Gen1 帐户：
@@ -28,7 +28,7 @@ SQL Server Integration Services (SSIS) 包可通过下列两种身份验证类�
 
 Azure Data Lake Store 连接管理器是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
 
->   [!NOTE]
+> [!NOTE]
 > 若要确保 Azure Data Lake Store 连接管理器和使用它的组件（即 Data Lake Storage Gen1 源和 Data Lake Storage Gen1 目标）可连接到服务，请确保在 [此处](https://www.microsoft.com/download/details.aspx?id=49492)下载最新版本的 Azure 功能包。 
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>配置 Azure Data Lake Store 连接管理器
@@ -44,7 +44,7 @@ Azure Data Lake Store 连接管理器是[适用于 Azure 的 SQL Server Integrat
     
         2. 选择“测试连接”以测试连接。 如果你或租户管理员以前未允许 SSIS 访问你的 Data Lake Storage Gen1 数据，请在出现提示时选择“接受”。 若要深入了解此同意体验，请参阅 [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)（将应用程序与 Azure Active Directory 集成）。
     
-        >   [!NOTE] 
+        > [!NOTE] 
         > 如果选择了“Azure AD 用户标识”身份验证选项，则不支持多重身份验证和 Microsoft 帐户身份验证。
     
     2. 如果选择“Azure AD 服务标识” 身份验证选项，请执行以下操作：

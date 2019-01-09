@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390480"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211206"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   您可以通过在报表 URL 中包含报表参数，将它们传递到报表。 这些 URL 参数不带前缀，因为它们被直接传递到报表处理引擎。  
@@ -28,12 +28,12 @@ ms.locfileid: "52390480"
   
  所有查询参数都可具有对应的报表参数。 通过传递相应报表参数将查询参数传递给报表。 有关详细信息，请参阅[在关系查询设计器中生成查询（报表生成器和 SSRS）](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  报表参数区分大小写。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  报表参数区分大小写并使用以下特殊字符：  
->   
+> 
 >  -   URL 字符串中的任何空格字符将根据 URL 编码标准被字符“%20”替换。  
 > -   URL 的参数部分中的空格字符将被加号字符 (+) 替换。  
 > -   字符串任何部分中的分号将被字符“%3A”替换。  
