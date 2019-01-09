@@ -162,7 +162,7 @@ items:
       - name: 第 4-5 课 - 根据辅助属性对属性成员进行排序
         href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
       - name: 第 4-6 课 - 指定用户定义层次结构中属性之间的属性关系
-        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+        href: lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
       - name: 第 4-7 课 - 定义未知成员和 Null 处理属性
         href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
     - name: 第 5 课：定义维度和度量值组之间的关系
@@ -489,8 +489,6 @@ items:
           href: ./multidimensional-models/set-data-source-properties-ssas-multidimensional.md
         - name: 为数据源连接设置模拟选项
           href: ./multidimensional-models/set-impersonation-options-ssas-multidimensional.md
-        - name: 多维模型编程
-          href: ./multidimensional-models/multidimensional-model-programming.md
       - name: 数据源视图
         href: ./multidimensional-models/data-source-views-in-multidimensional-models.md
         items:
@@ -707,7 +705,7 @@ items:
           href: ./multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
       - name: KPI
         href: ./multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md
-      - name: 操作
+      - name: 操作概述
         href: ./multidimensional-models/actions-in-multidimensional-models.md
         items:
         - name: 操作
@@ -1357,6 +1355,7 @@ items:
       - name: 安全属性
         href: ./server-properties/security-properties.md
       - name: 线程池属性
+        href: ./server-properties/thread-pool-properties.md
     - name: 监视 Analysis Services
       items:
       - name: 监视工具
@@ -1418,8 +1417,6 @@ items:
         href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
       - name: 分析管理对象 (AMO)
         href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-      - name: 架构行集
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: 表格 1103 及更低版本
       items:
       - name: 针对兼容级别 1103 及更低级别的表格模型编程
@@ -1430,8 +1427,6 @@ items:
         href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
       - name: IMDEmbeddedData 接口
         href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
-      - name: 架构行集
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
       - name: 表示
         items:
         - name: 连接表示形式（表格）
@@ -1463,11 +1458,9 @@ items:
     - name: 多维模型编程
       href: ./multidimensional-models/multidimensional-model-programming.md
     - name: 分析管理对象 (AMO)
-      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+      href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
     - name: Analysis Services 脚本语言 (ASSL)
       href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: 架构行集
-      href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: XML for Analysis (XMLA)
       href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: ADOMD.NET
@@ -1530,9 +1523,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: 跟踪事件
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: feee35408dd9439862dce7ca043184bf2d9fd05f
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ee7868cfee9c8f087ffd43959ccfa7f30b643b7e
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302910"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785998"

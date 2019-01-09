@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_senddone
@@ -22,12 +20,12 @@ ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51589cea0306f7a9fe3e4074c586c7c89892d9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361039"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone（扩展存储过程 API）
     
@@ -85,6 +83,6 @@ count
  请勿从 SRV_CONNECT 处理程序调用 srv_senddone。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

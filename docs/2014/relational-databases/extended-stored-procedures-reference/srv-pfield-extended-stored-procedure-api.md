@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_pfield
@@ -22,12 +20,12 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6243ceb9d96c5cb3c681aea8832ba35f45e80703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170071"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353857"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield（扩展存储过程 API）
     
@@ -89,6 +87,6 @@ len
  指向一个以 null 值结束的字符串的指针，该字符串包含 SRV_PROC 结构中指定字段的当前值。 如果此字段为空，则返回指向空字符串的有效指针，并且 len 包含 0。 如果此字段为未知，则返回 NULL 并且 len 包含值 -1。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的详细信息，请访问[安全开发人员中心](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的详细信息，请访问[安全开发人员中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 和 macOS 上安装 Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600797"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984058"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -138,7 +138,8 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> Ubuntu 18.04 支持需要驱动程序版本 17.2 或更高版本。
+> - Ubuntu 18.04 支持需要驱动程序版本 17.2 或更高版本。
+> - Unixodbc 开发人员包 2.3.1 不可用在 Ubuntu 14.04 上。   
 
 ### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan)、 macOS 10.12 (Sierra) 和 macOS 10.13 (High Sierra)
 
@@ -369,7 +370,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE：```glibc, libuuid1, krb5, openssl, unixODBC```
 
-每个这些包反过来有其自己的依赖项，可能会或可能不会显示在系统上。 有关此问题的常规解决方案，请参阅分发的包管理器文档： [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
+每个这些包反过来有其自己的依赖项，可能会或可能不会显示在系统上。 有关此问题的常规解决方案，请参阅分发的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 它也是很常见手动下载所有依赖包并将它们一起放安装在计算机上，然后手动安装反过来，每个包使用[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 包。
 
@@ -509,7 +510,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |---------------|-----------------|  
 |libmsodbcsql 17。X.so.X.X 或 libmsodbcsql 13。X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 并在`/opt/microsoft/msodbcsql/lib64/`为 Driver 13。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/opt/microsoft/msodbcsql17/include/`Driver 17 并在`/opt/microsoft/msodbcsql/include/`为 Driver 13。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> 注意：你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/opt/microsoft/msodbcsql17/include/`Driver 17 并在`/opt/microsoft/msodbcsql/include/`为 Driver 13。 |
 |LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`Driver 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`Driver 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
 
@@ -520,7 +521,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|包含该驱动程序所有功能的动态库 (`dylib`) 文件。 此文件安装在`/usr/local/lib/`。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`Driver 17 并在`[driver .dylib directory]../share/msodbcsql/resources/en_US/`为 Driver 13。 | 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/usr/local/include/msodbcsql17/`Driver 17 并在`/usr/local/include/msodbcsql/`为 Driver 13。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> 注意：你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/usr/local/include/msodbcsql17/`Driver 17 并在`/usr/local/include/msodbcsql/`为 Driver 13。 |
 |LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`Driver 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`Driver 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
 

@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：数据库引擎优化顾问中的基本导航 | Microsoft Docs
+title: 第 1 课：数据库引擎优化顾问基本导览 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071801"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201776"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 课：数据库引擎优化顾问中的基本导航
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 课：数据库引擎优化顾问基本导览
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 数据库引擎优化顾问提供了一种基于图形用户界面 (GUI) 的方式来查看优化会话和优化建议报表。 本课程将介绍如何启动工具以及如何配置显示。 在本课程的结尾，您将了解启动工具的各种方式以及如何配置其显示，从而支持定期执行的优化任务。  
 
@@ -62,7 +62,7 @@ ms.locfileid: "49071801"
   
 -   右窗格包含“常规”和“优化选项”选项卡。 在此可以定义数据库引擎优化会话。 在“常规”选项卡中，键入优化会话的名称，指定要使用的工作负荷文件或表，并选择要在该会话中优化的数据库和表。 工作负荷是对要优化的一个或多个数据库执行的一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 优化数据库时，数据库引擎优化顾问使用跟踪文件、跟踪表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本或 XML 文件作为工作负荷输入。 在“优化选项”选项卡上，可以选择希望数据库引擎优化顾问在分析过程中考虑的物理数据库设计结构（索引或索引视图）和分区策略。 在此选项卡上，还可以指定数据库引擎优化顾问优化工作负载使用的最大时间。 默认情况下，数据库引擎优化顾问优化工作负荷的时间为一个小时。  
   
-> [!NOTE]  
+> [!NOTE]
 > 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 脚本时，数据库引擎优化顾问可接受 XML 文件作为输入。 有关详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动并使用数据库引擎优化顾问 [中的“从](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)查询编辑器中启动数据库引擎优化顾问”一节。  
   
 ## <a name="configure-tool-options-and-layout"></a>配置工具选项和布局 

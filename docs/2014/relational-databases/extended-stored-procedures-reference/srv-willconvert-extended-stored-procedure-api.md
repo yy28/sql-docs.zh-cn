@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_willconvert
@@ -22,12 +20,12 @@ ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56a3036741a5e4833ab8033dc036993e465725a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0af2ec4471dc24af0fdb02576adad312ed35069f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193207"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377499"
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
     
@@ -64,7 +62,7 @@ desttype
  有关每种数据类型的说明，请参阅[数据类型（扩展存储过程 API）](data-types-extended-stored-procedure-api.md)。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>请参阅  
  [srv_convert（扩展存储过程 API）](srv-convert-extended-stored-procedure-api.md)  
