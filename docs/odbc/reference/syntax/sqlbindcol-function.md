@@ -20,16 +20,16 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5092ae588c69c28fcfa243101b57f97da75e8681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515947"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLBindCol**将应用程序数据缓冲区绑定到结果集中的列。  
@@ -52,10 +52,10 @@ SQLRETURN SQLBindCol(
  [输入]语句句柄。  
   
  *ColumnNumber*  
- [输入]要绑定的列集的结果数。 列中从 0 开始，其中第 0 列书签列的列顺序递增编号。 如果未使用书签 — 也就是说，SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_OFF — 然后列号从 1 开始。  
+ [输入]要绑定的列集的结果数。 列中从 0 开始，其中第 0 列书签列的列顺序递增编号。 如果不使用书签-也就是说，SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_OFF-然后列号从 1 开始。  
   
  *TargetType*  
- [输入]C 数据类型的标识符\* *TargetValuePtr*缓冲区。 当它从数据源检索数据**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，或者**SQLSetPos**、驱动程序将数据转换为此类型;当其将数据发送到数据源**SQLBulkOperations**或**SQLSetPos**，驱动程序将数据从这种类型转换。 有关有效的 C 数据类型和类型标识符的列表，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型中的部分。  
+ [输入]C 数据类型的标识符\* *TargetValuePtr*缓冲区。 当它从数据源检索数据**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，或者**SQLSetPos**、驱动程序将数据转换为此类型;当其将数据发送到数据源**SQLBulkOperations**或**SQLSetPos**，驱动程序将数据从这种类型转换。 有关有效的 C 数据类型和类型标识符的列表，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 中的部分数据类型。  
   
  如果*TargetType*参数中的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段设置为间隔数据类型，默认时间间隔的前导精度 (2) 和默认时间间隔的秒精度 (6)，ARD，分别用于数据。 如果*TargetType*参数是 SQL_C_NUMERIC，默认的精度 （驱动程序定义） 和 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置默认小数位数 (0)，用于数据。 如果任何默认精度或小数位数不适当，应用程序显式应通过调用设置适当的描述符字段**SQLSetDescField**或**SQLSetDescRec**。  
   
@@ -69,11 +69,11 @@ SQLRETURN SQLBindCol(
  *BufferLength*  
  [输入]长度 **TargetValuePtr*以字节为单位的缓冲区。  
   
- 驱动程序使用*BufferLength*以免超出末尾的编写\* *TargetValuePtr*缓冲时它将返回长度可变的数据，如字符或二进制数据。 请注意，该驱动程序，它返回字符数据时都计的 null 终止字符\* *TargetValuePtr*。\**TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
+ 驱动程序使用*BufferLength*以免超出末尾的编写\* *TargetValuePtr*缓冲时它将返回长度可变的数据，如字符或二进制数据。 请注意，该驱动程序，它返回字符数据时都计的 null 终止字符\* *TargetValuePtr*。 **TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
   
  当驱动程序返回固定长度的数据，如整数或日期结构时，驱动程序会忽略*BufferLength*并假定缓冲区足够大以保存数据。 因此，务必要为固定长度的数据分配缓冲区足够大的应用程序或驱动程序将写入缓冲区的结束。  
   
- **SQLBindCol**返回 SQLSTATE HY090 （字符串或缓冲区长度无效） 时*BufferLength*是小于 0，但不是在时*BufferLength*为 0。 但是，如果*TargetType*指定字符的类型，不应设置应用程序*BufferLength*为 0，因为兼容 ISO CLI 的驱动程序返回 SQLSTATE HY090 （字符串或缓冲区长度无效），用例。  
+ **SQLBindCol**返回 SQLSTATE HY090 （字符串或缓冲区长度无效） 时*BufferLength*是小于 0，但不是在时*BufferLength*为 0。 但是，如果*TargetType*指定字符的类型，不应设置应用程序*BufferLength*为 0，因为符合 ISO CLI 的驱动程序返回 SQLSTATE HY090 （字符串或缓冲区长度无效），用例。  
   
  *StrLen_or_IndPtr*  
  延迟的输入/输出要绑定到的列的长度/指示器缓冲区的指针。 **SQLFetch**并**SQLFetchScroll**此缓冲区中返回值。 **SQLBulkOperations**检索一个值，从该缓冲区何时*操作*是 SQL_ADD、 SQL_UPDATE_BY_BOOKMARK，还是 SQL_DELETE_BY_BOOKMARK。 **SQLBulkOperations**返回一个值，在此缓冲区何时*操作*是 SQL_FETCH_BY_BOOKMARK。 **SQLSetPos**返回一个值，在此缓冲区何时*操作*是 SQL_REFRESH; 它检索一个值，从该缓冲区时*操作*是 SQL_UPDATE。  
@@ -126,7 +126,7 @@ SQLRETURN SQLBindCol(
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY090|字符串或缓冲区长度无效|(DM) 的参数指定的值*BufferLength*小于 0。<br /><br /> (DM) 驱动程序是 ODBC 2。*x*驱动程序， *ColumnNumber*参数设置为 0，并为该参数指定的值*BufferLength*不是等于 4。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持指定的组合来转换*TargetType*参数和特定于驱动程序的 SQL 数据类型的相应列。<br /><br /> 自变量*ColumnNumber*为 0 时，该驱动程序不支持书签。<br /><br /> 该驱动程序支持仅 ODBC 2。*x*和参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的 C 间隔数据类型的任何[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持指定的组合来转换*TargetType*参数和特定于驱动程序的 SQL 数据类型的相应列。<br /><br /> 自变量*ColumnNumber*为 0 时，该驱动程序不支持书签。<br /><br /> 该驱动程序支持仅 ODBC 2。*x*和参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的 C 间隔数据类型的任何[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中附录 d:数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
 |HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
   
@@ -144,7 +144,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>绑定列  
  若要将列绑定，应用程序调用**SQLBindCol** ，并将传递列号、 类型、 地址和长度的数据缓冲区和长度/指示器缓冲区的地址。 有关如何使用这些地址的信息，请参阅"缓冲区的地址，"更高版本在本部分中。 有关绑定列的详细信息，请参阅[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  
   
- 使用这些缓冲区被延迟;也就是说，应用程序将绑定中对其**SQLBindCol**但该驱动程序会从其他函数访问它们-即**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 它是应用程序的责任，以确保在指定指针**SQLBindCol**保持有效，前提是该绑定将保持有效。 如果应用程序允许这些指针变为无效-例如，将释放缓冲区，然后调用一个预计这些无效的函数，结果是不确定。 有关详细信息，请参阅[延迟的缓冲区](../../../odbc/reference/develop-app/deferred-buffers.md)。  
+ 使用这些缓冲区被延迟;也就是说，应用程序将绑定中对其**SQLBindCol**但该驱动程序访问它们中的其他函数-即**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 它是应用程序的责任，以确保在指定指针**SQLBindCol**保持有效，前提是该绑定将保持有效。 如果该应用程序允许这些指针变为无效-例如，它将释放缓冲区-，然后调用预计这些无效的函数，结果不确定。 有关详细信息，请参阅[延迟的缓冲区](../../../odbc/reference/develop-app/deferred-buffers.md)。  
   
  绑定保持有效，直到它替换为新的绑定，该列为未绑定，或释放该语句。  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>缓冲区地址  
  *缓冲区地址*是数据或长度/指示器缓冲区的实际地址。 它将写入到缓冲区 （如期间提取时间） 之前，驱动程序计算的缓冲区地址。 从下面的公式，使用中指定的地址计算*TargetValuePtr*并*StrLen_or_IndPtr*自变量、 绑定偏移量和行号：  
   
- *绑定地址* + *绑定偏移量*+ ((*行号*– 1) x*元素大小*)  
+ *绑定地址* + *绑定偏移量*+ ((*行号*-1) x*元素大小*)  
   
  其中公式的变量定义如下表中所述。  
   
