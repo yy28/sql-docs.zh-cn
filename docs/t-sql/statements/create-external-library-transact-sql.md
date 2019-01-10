@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538800"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205156"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-将 R 包从指定的字节流或文件路径上传到数据库。
+从指定的字节流或文件路径上传 R 包文件至数据库。 此语句充当一种通用机制，数据库管理员上传任何新的外部语言运行时（当前仅为 R）和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目时要使用此机制。 
 
-数据库管理员上传任何新的外部语言运行时（R、Python、Java 等）以及 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的操作系统平台所需的项目时，此语句可作为通用机制发挥作用。 
-
-当前仅支持 R 包和 Windows 平台。 计划在之后发布的版本中提供对 Python 和 Linux 的支持。
+在 SQL Server 2017 及更高版本中，支持 R 语言和 Windows 平台。 计划在之后发布的版本中提供对 Python 和 Linux 的支持。
 
 ## <a name="syntax"></a>语法
 
@@ -94,7 +92,7 @@ WITH ( LANGUAGE = 'R' )
 
 为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。 
 
-在 SQL Server 2017 版本中，Windows 是唯一支持的平台。
+Windows 是当前唯一受支持的平台。
 
 ## <a name="remarks"></a>Remarks
 

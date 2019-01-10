@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a857b51bf884a1bec30e28935591946da43ef390
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072937"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756609"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
-  查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可以使用配置查询存储[ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)选项。  
+  查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 选项来配置查询存储。  
   
 ||  
 |-|  
-|**适用于**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([获取它](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**适用对象**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([获取它](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
 >  目前这是预览功能。 为了使用查询存储，你必须承认并同意查询存储的实现遵从你的许可协议的预览条款（如企业协议、Microsoft Azure 协议或 Microsoft 在线订阅协议），以及任何适用于 [Microsoft Azure 预览版的补充使用条款](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)。  
@@ -33,7 +32,7 @@ ms.locfileid: "48072937"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>通过使用 Management Studio 中的查询存储页  
   
-1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。 (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2016年版[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。)  
+1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。 （要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版。）  
   
 2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48072937"
   
 #### <a name="by-using-transact-sql-statements"></a>通过使用 Transact-SQL 语句  
   
-1.  使用`ALTER DATABASE`语句来启用查询存储。 例如：  
+1.  使用 `ALTER DATABASE` 语句来启用查询存储。 例如：  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -71,7 +70,7 @@ ms.locfileid: "48072937"
   
 -   分析特定数据库的资源（CPU、I/O 和内存）使用模式。  
   
- 查询存储包含两个存储；用于永久保存执行计划信息的 **计划存储** ，以及用于永久保存执行统计信息的 **运行时统计信息存储** 。 可存储的受限制的查询计划应用商店中的唯一计划数`max_plans_per_query`配置选项。 为增强性能，通过异步方式向这两个存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
+ 查询存储包含两个存储；用于永久保存执行计划信息的 **计划存储** ，以及用于永久保存执行统计信息的 **运行时统计信息存储** 。 `max_plans_per_query` 配置选项限制了计划存储中查询可存储的唯一计划数。 为增强性能，通过异步方式向这两个存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
   
  以下查询返回查询存储中查询和计划的相关信息。  
   
@@ -91,7 +90,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![查询存储](../../database-engine/media/querystore.PNG "查询存储")  
   
- 选择**回归查询**，打开**回归查询**窗格中的[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。 “回归查询”窗格将显示查询存储中的查询和计划。 借助顶部的下拉列表框，可基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
+ 在选择“回归查询” 后，打开 **中的“回归查询”**[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 借助顶部的下拉列表框，可基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -115,14 +114,14 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口通过 INTERVAL_LENGTH_MINUTES 进行配置。  
   
- 查询`sys.database_query_store_options`视图，以确定查询存储的当前选项。  
+ 查询 `sys.database_query_store_options` 视图以确定查询存储的当前选项。  
   
  若要深入了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来设置选项，请参阅 [选项管理](#OptionMgmt)。  
   
  
   
 ##  <a name="Related"></a> 相关视图、功能和过程  
- 查询存储区可以查看和管理通过[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]或通过使用以下视图和过程。  
+ 可通过 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或使用以下视图和过程来查看和管理查询存储。  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
@@ -206,9 +205,9 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 请注意不允许任意值 - 应使用以下值之一：1、5、10、15、30 和 60。  
+ 请注意，不允许使用任意值-应使用以下项之一：1、 5、 10、 15、 30 和 60。  
   
- 通过公开间隔的新值`sys.database_query_store_options`视图。  
+ 通过 `sys.database_query_store_options` 视图公开时间间隔的新值。  
   
  如果查询存储已满，请使用以下语句来扩展存储。  
   
@@ -276,11 +275,11 @@ DEALLOCATE adhoc_queries_cursor;
   
  你可以使用其他逻辑来定义自己的过程，以清理对你而言不再重要的数据。  
   
- 上面的示例使用`sp_query_store_remove_query`扩展存储的过程来删除不必要的数据。 你还可以使用其他两个过程。  
+ 以上示例使用 `sp_query_store_remove_query` 扩展存储过程来删除不必要的数据。 你还可以使用其他两个过程。  
   
--   `sp_query_store_reset_exec_stats` – 清除给定计划的运行时统计信息。  
+-   `sp_query_store_reset_exec_stats` -清除给定计划的运行时统计信息。  
   
--   `sp_query_store_remove_plan` – 删除单个计划。  
+-   `sp_query_store_remove_plan` -删除单个计划。  
   
 
   
@@ -500,7 +499,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> 维护查询性能稳定性  
- 执行的查询的多个时间你可能会注意到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用不同的计划，导致不同资源利用率和持续时间。 借助查询存储，你可以轻松检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来查询执行强制执行此最优计划。  
+ 对于执行多次的查询，你可能注意到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用了会导致不同资源利用率和持续时间的不同计划。 借助查询存储，你可以轻松检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来查询执行强制执行此最优计划。  
   
  你还可以使用参数（自动参数化或手动参数化）来标识某一查询内不一致的查询性能。 你可以在不同计划中标识出对所有或大多数参数值而言足够快和最佳的计划，并强制执行此计划；为更大范围的用户方案保留可预测的性能。  
   
@@ -510,9 +509,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- 当使用`sp_query_store_force_plan`只可以强制执行了查询存储记录为该查询的计划的计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已使用执行 Q1 的哪些计划。  
+ 在使用 `sp_query_store_force_plan` 时，你只可以强制执行查询存储记录为该查询计划的那些计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已使用执行 Q1 的哪些计划。  
   
- **删除强制执行查询的计划。** 若要再次依靠[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查询优化器来计算最佳查询计划，请使用`sp_query_store_unforce_plan`来取消强制执行为查询选择的计划。  
+ **删除强制执行查询的计划。** 若要再次依靠 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 查询优化器来计算最佳查询计划，请使用 `sp_query_store_unforce_plan` 来取消强制执行为查询选定的计划。  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

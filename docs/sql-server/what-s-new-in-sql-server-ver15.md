@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711828"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207776"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能
 
@@ -27,72 +27,74 @@ ms.locfileid: "52711828"
 - 在 Linux 上针对 [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) 安装。
 - [在 Docker 上运行 SQL Server 2019](../linux/quickstart-install-connect-docker.md)。
 
-## <a name="ctp-21"></a>CTP 2.1
+## <a name="ctp-22"></a>CTP 2.2
 
-社区技术预览版 (CTP) 2.1 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公开发行版。 以下是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 的新增功能或增强功能。
-
-- [大数据群集](#bigdatacluster)
-  - 部署 Python 和 R 应用
-- [数据库引擎](#databaseengine)
-  - 智能查询处理添加标量 UDF 内联
-  - 截断错误消息已改进，包括表名和列名以及截断值
-  - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装中支持 UTF-8 排序规则
-  - 在图形匹配查询中使用派生表或视图别名
-  - 改进了用于统计信息阻塞的诊断数据
-  - 混合缓冲池
-  - 静态数据掩码
-- [工具](#tools)
-  - Azure Data Studio
-
-## <a name="ctp-20"></a>CTP 2.0 
-
-社区技术预览版 (CTP) 2.0 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 第一个公开发行版。 以下是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 的新增功能或增强功能。
+社区技术预览版 (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公开发行版。 此版本包含来自 CTP 历史版本的改进功能，可修复 bug、增强安全性和优化性能。 此外，下面是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2 的新增功能或增强功能。
 
 - [大数据群集](#bigdatacluster)
-  - 在 Kubernetes 上部署带 SQL 和 Spark Linux 容器的大数据群集
-  - 从 HDFS 访问大数据
-  - 使用 Spark 运行高级分析和机器学习
-  - 使用 Spark 将数据流式传输到 SQL 数据池
-  - 使用 Azure Data Studio 运行提供 notebook 体验的查询书籍
+  - 在大数据群集上使用 Azure Data Studio 中的 SparkR
 
 - [数据库引擎](#databaseengine)
-  - UTF-8 支持
-  - 可恢复联机索引创建允许索引创建，以在发生中断后恢复
-  - 聚集列存储联机索引生成和重新生成
-  - 具有安全 Enclave 的 Always Encrypted
-  - 智能查询处理
-  - Java 语言可编程性扩展
-  - SQL 图形功能
-  - 针对联机和可恢复 DDL 操作的数据库范围的配置设置
-  - AlwaysOn 可用性组 - 辅助副本连接重定向
-  - 数据发现和分类 - 本机内置于 SQL Server
-  - 对永久性内存设备的扩展支持
-  - 支持 `DBCC CLONEDATABASE` 中的列存储统计信息
-  - 向 `sp_estimate_data_compression_savings` 添加的新选项
-  - SQL Server 机器学习服务故障转移群集
-  - 默认情况下启用轻量查询分析基础结构
-  - 新 PolyBase 连接器
-  - 新 `sys.dm_db_page_info` 系统函数返回页面信息
+  - 将 UTF-8 字符编码与 SQL Server 复制结合使用。
+
+## <a name="previous-ctps"></a>CTP 历史版本
+
+CTP 早期版本为 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 增添或增强了以下功能。
+
+- [大数据群集](#bigdatacluster) 
+  - 在 Kubernetes 上部署带 SQL 和 Spark Linux 容器的大数据群集 (CTP 2.0)
+  - 从 HDFS 访问大数据 (CTP 2.0)
+  - 使用 Spark 运行高级分析和机器学习 (CTP 2.0)
+  - 使用 Spark 将数据流式传输到 SQL 数据池 (CTP 2.0)
+  - 使用 Azure Data Studio 运行提供 notebook 体验的查询书籍 (CTP 2.0)
+  - 部署 Python 和 R 应用 (CTP 2.1)
+
+- [数据库引擎](#databaseengine)
+  - UTF-8 支持 (CTP 2.0)
+  - 借助可恢复的联机索引创建，可创建索引以在发生中断后恢复 (CTP 2.0)
+  - 聚集列存储联机索引生成和重新生成 (CTP 2.0)
+  - 具有安全 Enclave 的 Always Encrypted (CTP 2.0)
+  - 智能查询处理 (CTP 2.0)
+  - Java 语言可编程性扩展 (CTP 2.0)
+  - SQL 图形功能 (CTP 2.0)
+  - 针对联机和可恢复 DDL 操作的数据库范围的配置设置 (CTP 2.0)
+  - AlwaysOn 可用性组 - 辅助副本连接重定向 (CTP 2.0)
+  - 数据发现和分类 - 本机内置于 SQL Server (CTP 2.0)
+  - 对永久性内存设备的扩展支持 (CTP 2.0)
+  - 支持 `DBCC CLONEDATABASE` 中的列存储统计信息 (CTP 2.0)
+  - 向 `sp_estimate_data_compression_savings` 添加的新选项 (CTP 2.0)
+  - SQL Server 机器学习服务故障转移群集 (CTP 2.0)
+  - 默认情况下启用轻量查询分析基础结构 (CTP 2.0)
+  - 新 PolyBase 连接器 (CTP 2.0)
+  - 新 `sys.dm_db_page_info` 系统函数返回页面信息 (CTP 2.0)
+  - 智能查询处理添加标量 UDF 内联 (CTP 2.1)
+  - 截断错误消息已改进，包括表名和列名以及截断值 (CTP 2.1)
+  - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装中支持 UTF-8 排序规则 (CTP 2.1)
+  - 在图形匹配查询中使用派生表或视图别名 (CTP 2.1)
+  - 改进了用于统计信息阻塞的诊断数据 (CTP 2.1)
+  - 混合缓冲池 (CTP 2.1)
+  - 静态数据掩码 (CTP 2.1)
 
 - [Linux 上的 SQL Server](#sqllinux)
-  - 复制支持
-  - 支持 Microsoft 分布式事务处理协调器 (MSDTC)
-  - Docker 容器上使用 Kubernetes 的 AlwaysOn 可用性组
-  - OpenLDAP 支持第三方 AD 提供商
-  - Linux 上的机器学习
-  - 新建容器注册表
-  - 新的基于 RHEL 的容器映像
-  - 内存压力通知
+  - 复制支持 (CTP 2.0)
+  - 支持 Microsoft 分布式事务处理协调器 (MSDTC) (CTP 2.0)
+  - Docker 容器上使用 Kubernetes 的 AlwaysOn 可用性组 (CTP 2.0)
+  - OpenLDAP 支持第三方 AD 提供商 (CTP 2.0)
+  - Linux 上的机器学习 (CTP 2.0)
+  - 新建容器注册表 (CTP 2.0)
+  - 新的基于 RHEL 的容器映像 (CTP 2.0)
+  - 内存压力通知 (CTP 2.0)
 
 - [Master Data Services](#mds)
-  - 已替换 Silverlight 控件
+  - 已替换 Silverlight 控件 (CTP 2.0)
 
-- [Security](#security)
-  - SQL Server 配置管理器中的证书管理
+- [安全性](#security)
+  - SQL Server 配置管理器中的证书管理 (CTP 2.0)
 
 - [工具](#tools)
-  - SQL Server Management Studio (SSMS) 18.0（预览版）
-  - Azure Data Studio
+  - SQL Server Management Studio (SSMS) 18.0（预览版）(CTP 2.0)
+  - Azure Data Studio (CTP 2.0)
+  - Azure Data Studio (CTP 2.1)
 
 请继续阅读了解有关这些功能的详细信息。
 
@@ -100,6 +102,7 @@ ms.locfileid: "52711828"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [大数据群集](../big-data-cluster/big-data-cluster-overview.md)支持新方案，包括以下内容：
 
+- 在大数据群集上使用 Azure Data Studio 中的 SparkR。 (CTP 2.2)
 - [部署 Python 和 R 应用](../big-data-cluster/big-data-cluster-create-apps.md)。 (CTP 2.1)
 - 在 Kubernetes 上部署带 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 Spark Linux 容器的大数据群集 (CTP 2.0)
 - 从 HDFS 访问大数据 (CTP 2.0)
@@ -107,17 +110,17 @@ ms.locfileid: "52711828"
 - 使用 Spark 将数据流式传输到 SQL 数据池 (CTP 2.0)
 - 在 [Azure Data Studio](../sql-operations-studio/what-is.md) 中运行提供 notebook 体验的查询书籍。 (CTP 2.0)
  
-[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
+[!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> 数据库引擎
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入或增强了数据库引擎的以下新功能
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 向 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 引入或强化了以下新功能
 
 ### <a name="scalar-udf-inlining-ctp-21"></a>标量 UDF 内联 (CTP 2.1)
 
 标量 UDF 内联自动将标量用户定义函数 (UDF) 转换为关系表达式，并将其嵌入调用 SQL 查询，从而提高利用标量 UDF 的工作负载性能。 标量 UDF 内联有助于实现基于成本的 UDF 内部操作优化，并产生面向集合的并行高效计划，而不是低效、迭代、串行执行计划。 在数据库兼容性级别 150 下默认启用此功能。
 
-有关详细信息，请参阅[标量 UDF 内联](../relational-databases/user-defined-functions/scalar-udf-inlining.md)
+有关详细信息，请参阅[标量 UDF 内联](../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
 
 ### <a name="truncation-error-message-improved-to-include-table-and-column-names-and-truncated-value-ctp-21"></a>截断错误消息已改进，包括表名和列名以及截断值 (CTP 2.1)
 
@@ -125,29 +128,25 @@ ms.locfileid: "52711828"
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-新错误消息 2628 为数据截断问题提供更多上下文，从而简化了故障排查过程。 对于 CTP 2.1，这是一个选择加入错误消息，需要启用[跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460。
-
-### <a name="utf-8-support-ctp-21"></a>UTF-8 支持 (CTP 2.1)
-
-增加了在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安装期间对默认选择 UTF-8 排序规则的支持。
+新错误消息 2628 为数据截断问题提供更多上下文，从而简化了故障排查过程。 对于 CTP 2.1 和 CTP 2.2，这是一个“选择加入”错误消息，需要启用[跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460。
 
 ### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>改进了用于统计信息阻塞的诊断数据 (CTP 2.1)
 
-SQL Server 2019 预览版为等待同步统计信息更新操作的长时间运行查询提供了改进的诊断数据。 如果 `SELECT` 在继续执行查询之前等待同步统计信息更新操作完成，则动态管理视图 `sys.dm_exec_requests` 列 `command` 显示 `SELECT (STATMAN)`。  此外，新的等待类型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 会显示在 `sys.dm_os_wait_stats` 动态管理视图中。 它显示了针对同步统计信息刷新操作耗费的实例级别累计时间。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为等待同步统计信息更新操作的长时间运行查询提供了改进的诊断数据。 如果 `SELECT` 在继续执行查询之前等待同步统计信息更新操作完成，则动态管理视图 `sys.dm_exec_requests` 列 `command` 显示 `SELECT (STATMAN)`。  此外，新的等待类型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 会显示在 `sys.dm_os_wait_stats` 动态管理视图中。 它显示了针对同步统计信息刷新操作耗费的实例级别累计时间。
 
 ### <a name="static-data-masking-ctp-21"></a>静态数据掩码 (CTP 2.1)
 
-SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据掩码来清理 SQL Server 数据库副本中的敏感数据。 静态数据掩码有助于创建净化的数据库副本，其中所有敏感信息的更改方式使得副本可与非生产用户共享。 静态数据掩码可用于开发、测试、分析和业务报告、符合性、故障排除以及无法将特定数据复制到不同环境的任何其他情况。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了静态数据掩码。 可以使用静态数据掩码来清理 SQL Server 数据库副本中的敏感数据。 静态数据掩码有助于创建净化的数据库副本，其中所有敏感信息的更改方式使得副本可与非生产用户共享。 静态数据掩码可用于开发、测试、分析和业务报告、符合性、故障排除以及无法将特定数据复制到不同环境的任何其他情况。
 
 静态数据掩码在列级别操作。 选择要对其应用掩码的列，并为所选的每列指定一个掩码函数。 静态数据掩码会复制数据库，然后将指定的掩码函数应用于各列。
 
 #### <a name="static-data-masking-vs-dynamic-data-masking"></a>静态数据掩码与动态数据掩码
 
-数据掩码是在数据库上应用掩码以隐藏敏感信息并将其替换为新数据或经过清理的数据的过程。 Microsoft 提供两个掩码选项，静态数据掩码和动态数据掩码。 在 SQL Server 2017 中已引入动态数据掩码。 下表将比较这两种解决方案：
+数据掩码是在数据库上应用掩码以隐藏敏感信息并将其替换为新数据或经过清理的数据的过程。 Microsoft 提供两个掩码选项，静态数据掩码和动态数据掩码。 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中已引入动态数据掩码。 下表将比较这两种解决方案：
 
-|静态数据掩码 |动态数据屏蔽
-|:----|:----
-|发生在数据库副本上 <br/><br/>无法检索原始数据<br/><br/>掩码发生在存储级别<br/><br/>所有用户均可访问相同的掩码数据<br/><br/>针对整个团队范围具有持续访问权限|发生在原始数据库上<br/><br/>原始数据保持不变<br/><br/>掩码在查询时发生<br/><br/>掩码因用户权限不同而异 <br/><br/>严格的用户特定访问权限限制
+|静态数据掩码 |动态数据屏蔽|
+|:----|:----|
+|发生在数据库副本上 <br/><br/>无法检索原始数据<br/><br/>掩码发生在存储级别<br/><br/>所有用户均可访问相同的掩码数据<br/><br/>针对整个团队范围具有持续访问权限|发生在原始数据库上<br/><br/>原始数据保持不变<br/><br/>掩码在查询时发生<br/><br/>掩码因用户权限不同而异 <br/><br/>严格的用户特定访问权限限制|
 
 ### <a name="database-compatibility-level-ctp-20"></a>数据库兼容性级别 (CTP 2.0)
 
@@ -157,13 +156,19 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
-### <a name="utf-8-support-ctp-20"></a>UTF-8 支持 (CTP 2.0)
+### <a name="utf-8-support-ctp-22"></a>UTF-8 支持 (CTP 2.2)
 
 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，或作为文本数据的数据库级或列级排序规则。 `CHAR` 和 `VARCHAR` 数据类型允许使用 UTF-8，并在创建或将对象的排序规则更改为带有 `UTF8` 后缀的排序规则时启用 UTF-8。 
 
-例如：将 `LATIN1_GENERAL_100_CI_AS_SC` 更改为 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 SQL Server 2012 中所引入的。 `NCHAR` 和 `NVARCHAR` 仅允许 UTF-16 编码，并保持不变。
+例如：将 `LATIN1_GENERAL_100_CI_AS_SC` 更改为 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中所引入的。 `NCHAR` 和 `NVARCHAR` 仅允许 UTF-16 编码，并保持不变。
 
 此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 Latin 字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
+
+有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。
+
+CTP 2.1 现支持在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安装期间对默认选择 UTF-8 排序规则。
+
+CTP 2.2 现支持将 UTF-8 字符编码与 SQL Server 复制结合使用。
 
 ### <a name="resumable-online-index-create-ctp-20"></a>可恢复联机索引创建 (CTP 2.0)
 
@@ -204,7 +209,7 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
 
 加密操作包括列加密和列加密密钥轮换。 现在可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 来发布这些操作，并且它们不需要将该数据移出数据库。 安全 enclave 向一组更广泛的方案提供 Always Encrypted，包括以下两个要求：  
 
-- 其中一个要求是保护敏感数据，以防具有高特权但未经授权的用户对其进行访问，包括数据库管理员、系统管理员、云操作员或恶意软件。
+- 要求敏感数据受到保护，防止具有高特权但未经授权的用户（包括数据库管理员、系统管理员、云操作员或恶意软件用户）对其进行访问。
 - 另一个要求是数据库系统支持对受保护数据的丰富计算。
 
 有关详细信息，请参阅[具有安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
@@ -237,12 +242,11 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
 
 ### <a id="programmability"></a> Java 语言可编程性扩展 (CTP 2.0)
 
-- Java 语言扩展（预览版）：使用 Java 语言扩展来执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 Java 代码。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，向 SQL Server 实例添加“机器学习服务（数据库内）”功能时，将安装此扩展。
+- **Java 语言扩展 （预览版）**：使用 Java 语言扩展来执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 Java 代码。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例添加“机器学习服务（数据库内）”功能时将安装此扩展。
 
 ### <a id="sqlgraph"></a> SQL 图形功能
 
 - 在图形匹配查询中使用派生表或视图别名 (CTP 2.1)使用 `MATCH` 语法中的视图和派生表别名对 SQL Server 2019 预览支持进行图形查询。 若要在 `MATCH` 中使用这些别名，必须使用 `UNION ALL` 运算符在一组节点或一组边界表上创建视图和派生表。 节点或边界表不一定包含筛选器。 在要查询图中两个或更多个实体之间的异类实体或异类连接的情况下，在 `MATCH` 查询中使用派生表和视图别名的功能非常有用。
-
 
 - 通过 `MERGE` DML 中的支持匹配 (CTP 2.0)，可以指定单个语句中的图形关系，而不是单独的 `INSERT`、`UPDATE` 或 `DELETE` 语句。 使用 `MERGE` 语句中的 `MATCH` 谓词将节点或边界表中的当前图形数据与新数据合并。 此功能启用边界表上的 `UPSERT` 方案。 用户现在可以使用单个合并语句在两个节点之间插入一个新的边界或更新现有边界。
 
@@ -258,17 +262,17 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
   - `WHEN_SUPPPORTED` 选项允许支持的联机或可恢复操作并运行索引不支持的脱机或不可恢复操作。
   - `OFF` 选项允许执行所有脱机且不可恢复索引操作的当前行为，除非在 DDL 语句中显式指定。
 
-若要替代默认设置，请在 index create 和 rebuild 命令中包含“联机”或“可恢复”选项。  
+要替代默认设置，请在 index create 和 rebuild 命令中包含 `ONLINE` 或 `RESUMABLE` 选项。  
 
 如果没有此功能，则必须直接在索引 DDL 语句（如 index create 和 rebuild）中指定“联机”和“可恢复”选项。
 
-详细信息：有关可恢复的索引操作的详细信息，请参阅[可恢复联机索引创建](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)。
+有关可恢复的索引操作的详细信息，请参阅[可恢复联机索引创建](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)。
 
 ### <a id="ha"></a>AlwaysOn 可用性组 - 更多同步副本 (CTP 2.0)
 
 - 最多五个同步副本：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 将同步副本的最大数目从 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中的 3 增加到 5。 可以配置此组的 5 个副本在该组中进行自动故障转移。 有 1 个主要副本，以及 4 个同步的次要副本。
 
-- 次要副本到主要副本连接重定向：它允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 此功能允许在不使用侦听器的情况下进行连接重定向。 在以下情况下使用次要副本到主要副本连接重定向：
+- **主要副本到辅助副本连接重定向**：允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 此功能允许在不使用侦听器的情况下进行连接重定向。 在以下情况下使用次要副本到主要副本连接重定向：
 
   - 群集技术不提供侦听器功能。
   - 重定向较为复杂的多子网配置。
@@ -301,7 +305,7 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
     - 在一些非 Microsoft 网站上，永久性内存有时会通俗地称为“pmem”。
 
 > [!NOTE]
-> 对于此预览版，永久性内存设备上的文件启用只在 Linux 上可用。 Windows 上的 SQL Server 支持从 SQL Server 2016 开始的永久性内存设备。
+> 对于此预览版，永久性内存设备上的文件启用只在 Linux 上可用。 Windows 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持自 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 起开始提供的永久性内存设备。
 
 ### <a name="hybrid-buffer-pool-ctp-21"></a>混合缓冲池 (CTP 2.1)
 
@@ -311,25 +315,25 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>支持 DBCC CLONEDATABASE 中的列存储统计信息 (CTP 2.0)
 
-`DBCC CLONEDATABASE` 创建仅限架构的数据库副本，其中包括在不复制数据的情况下对查询性能问题进行故障排除所需的所有元素。  在以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，该命令不会复制所需的统计信息来准确地对列存储索引查询进行故障排除，且需要手动步骤来捕获此信息。 现在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，DBCC CLONEDATABASE 自动捕获列存储索引的统计信息 blob，因此不再需要任何手动步骤。
+`DBCC CLONEDATABASE` 创建仅限架构的数据库副本，其中包括在不复制数据的情况下对查询性能问题进行故障排除所需的所有元素。  在以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，该命令不会复制所需的统计信息来准确地对列存储索引查询进行故障排除，且需要手动步骤来捕获此信息。 现在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，`DBCC CLONEDATABASE` 自动捕获列存储索引的统计信息 blob，因此不再需要任何手动步骤。
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>向 sp_estimate_data_compression_savings 添加了新选项 (CTP 2.0)
 
-`sp_estimate_data_compression_savings` 返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。  此过程当前支持三个选项：`NONE`、`ROW` 和 `PAGE`。 SQL Server 2019 引入了两个新选项：`COLUMNSTORE` 和 `COLUMNSTORE_ARCHIVE`。 如果使用标准或存档列存储压缩在表中创建列存储索引，可以使用这些新选项来估计节省的空间。
+`sp_estimate_data_compression_savings` 返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。  此过程当前支持三个选项：`NONE`、`ROW` 和 `PAGE`。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了两个新选项：`COLUMNSTORE` 和 `COLUMNSTORE_ARCHIVE`。 如果使用标准或存档列存储压缩在表中创建列存储索引，可以使用这些新选项来估计节省的空间。
 
 ### <a id="ml"></a> SQL Server 机器学习服务故障转移群集和基于分区的建模 (CTP 2.0)
 
-- 基于分区的建模：使用添加到 `sp_execute_external_script` 的新参数来处理每个数据分区的外部脚本。 此功能支持训练多个小型模型（每个数据分区一个模型）而不是一个大型模型。
+- **基于分区的建模**：使用添加到 `sp_execute_external_script` 的新参数来处理每个数据分区的外部脚本。 此功能支持训练多个小型模型（每个数据分区一个模型）而不是一个大型模型。
 
-- Windows Server 故障转移群集：在 Windows Server 故障转移群集上配置机器学习服务的高可用性。
+- **Windows Server 故障转移群集**：在 Windows Server 故障转移群集上配置机器学习服务的高可用性。
 
 有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
 ### <a name="lightweight-query-profiling-infrastructure-enabled-by-default-ctp-20"></a>默认情况下启用轻量查询分析基础结构 (CTP 2.0)
 
-相比标准分析技术，轻量查询分析基础结构 (LWP) 能够更有效地提供查询性能数据。 现在，默认情况下启用轻量分析。 已在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 中引入此功能。 轻量分析提供查询执行统计信息集合机制，预期开销为 2% CPU，而标准查询分析机制的开销高达 75% CPU。 在早期版本中，默认禁用此功能。 数据库管理员可通过[跟踪标志 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 来启用它。 
+相比标准分析机制，轻量查询分析基础结构 (LWP) 能够更有效地提供查询性能数据。 现在，默认情况下启用轻量分析。 已在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 中引入此功能。 轻量分析提供查询执行统计信息集合机制，预期开销为 2% CPU，而标准查询分析机制的开销高达 75% CPU。 在早期版本中，默认禁用此功能。 数据库管理员可通过[跟踪标志 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 来启用它。 
 
-有关轻量分析的详细信息，请参阅[开发人员选择：随时随地查询进度](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)。
+有关此轻量分析的详细信息，请参阅[查询分析基础结构](../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ### <a id="polybase"></a> 新 PolyBase 连接器
 
@@ -351,9 +355,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="sqllinux"></a> Linux 上的 SQL Server
 
-### <a name="ctp-20"></a>CTP 2.0 
-
-- 复制支持：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 Linux 上的 SQL Server 复制。 使用 SQL 代理的 Linux 虚拟机可以是发布服务器、分发服务器上或订阅服务器。 
+- **复制支持 (CTP 2.0)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 Linux 上的 SQL Server 复制。 使用 SQL 代理的 Linux 虚拟机可以是发布服务器、分发服务器上或订阅服务器。 
 
   创建以下类型的发布：
   - 事务性
@@ -362,26 +364,26 @@ FROM sys.dm_exec_requests AS d
 
   配置复制 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或使用[复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
-- 支持 Microsoft 分布式事务处理协调器 (MSDTC)：Linux 上的 SQL Server 2019 支持 Microsoft 分布式事务处理协调器 (MSDTC)。 有关详细信息，请参阅[如何在 Linux 上配置 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
+- **支持 Microsoft 分布式事务处理协调器 (MSDTC) (CTP 2.0)**：Linux 上的 SQL Server 2019 支持 Microsoft 分布式事务处理协调器 (MSDTC)。 有关详细信息，请参阅[如何在 Linux 上配置 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
 
-- Docker 容器上使用 Kubernetes 的 AlwaysOn 可用性组：Kubernetes 可以协调运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的容器，以提供一组高度可用的数据库，其中包含 SQL Server AlwaysOn 可用性组。 Kubernetes 运算符部署一个 StatefulSet，其中包括带 mssql-server container 的容器和运行状况监视器。
+- **Docker 容器上使用 Kubernetes 的 AlwaysOn 可用性组 (CTP 2.2)**：Kubernetes 可以协调运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的容器，以提供一组高度可用的数据库，其中包含 SQL Server AlwaysOn 可用性组。 Kubernetes 运算符部署一个 StatefulSet，其中包括带 mssql-server container 的容器和运行状况监视器。
 
-- **OpenLDAP 支持第三方 AD 提供商**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 OpenLDAP，以便第三方提供商加入 Active Directory。
+- **OpenLDAP 支持第三方 AD 提供商 (CTP 2.0)**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 OpenLDAP，它允许第三方提供商加入 Active Directory。
 
-- Linux 上的机器学习：Linux 现支持 SQL Server 2019 机器学习服务（数据库内）。 支持包括 `sp_execute_external_script` 存储过程。 有关如何在 Linux 上安装机器学习服务的说明，请参阅[在 Linux 上安装 SQL Server 2019 机器学习服务 R 和 Python 支持](../linux/sql-server-linux-setup-machine-learning.md)。
+- **Linux 上的机器学习 (CTP 2.0)**：Linux 现支持 SQL Server 2019 机器学习服务（数据库内）。 支持包括 `sp_execute_external_script` 存储过程。 有关如何在 Linux 上安装机器学习服务的说明，请参阅[在 Linux 上安装 SQL Server 2019 机器学习服务 R 和 Python 支持](../linux/sql-server-linux-setup-machine-learning.md)。
 
-- 新容器注册表：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像现在均位于 Microsoft 容器注册表。 Microsoft 容器注册表是用于分发 Microsoft 产品容器的官方容器注册表。 此外，现发布了已认证的基于 RHEL 映像。
+- **新容器注册表 (CTP 2.1)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像现均位于 Microsoft 容器注册表中。 Microsoft 容器注册表是用于分发 Microsoft 产品容器的官方容器注册表。 此外，现发布了已认证的基于 RHEL 映像。
 
   - Microsoft 容器注册表：`mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - 经认证的基于 RHEL 的容器映像：`mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
 ## <a id="mds"></a> Master Data Services (CTP 2.0) 
 
-- 用 HTML 替代 Silverlight 控件：Master Data Services (MDS) 门户不再依赖 Silverlight。 所有以前的 Silverlight 组件均已替换为 HTML 控件。
+- **用 HTML 替代 Silverlight 控件**：Master Data Services (MDS) 门户不再依赖 Silverlight。 所有以前的 Silverlight 组件均已替换为 HTML 控件。
 
 ## <a id="security"></a>安全性 (CTP 2.0)
 
-- SQL Server 配置管理器中的证书管理：SSL/TLS 证书被广泛用于保护对 SQL Server 实例的访问。 证书管理现已集成到 SQL Server 配置管理器，以简化诸如以下常见任务：
+- **SQL Server 配置管理器中的证书管理**：SSL/TLS 证书广泛用于保护对 SQL Server 实例的访问。 证书管理现已集成到 SQL Server 配置管理器，以简化诸如以下常见任务：
 
   - 查看和验证安装在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的证书。 
   - 查看即将到期的证书。
@@ -393,7 +395,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>工具
 
-- [Azure Data Studio](../azure-data-studio/what-is.md)：此前以预览版名称 SQL Operations Studio 发布，Azure Data Studio 是一个轻量、新式、开源的跨平台桌面工具，用于数据开发和管理中的最常见任务。 使用 Azure Data Studio，可以在 Windows、macOS 和 Linux 上连接到本地和云中的 SQL Server。 使用 Azure Data Studio，可以：
+- [**Azure Data Studio**](../azure-data-studio/what-is.md)：此前以预览版名称 SQL Operations Studio 发布，Azure Data Studio 是一个轻量、新式、开源的跨平台桌面工具，用于数据开发和管理中的最常见任务。 使用 Azure Data Studio，可以在 Windows、macOS 和 Linux 上连接到本地和云中的 SQL Server。 使用 Azure Data Studio，可以：
 
   - 更新到 [SQL Server 2019（预览）扩展](../azure-data-studio/sql-server-2019-extension.md)。 (CTP 2.1)
   - 在现代开发环境中使用快如闪电的 Intellisense、代码段和源代码管理集成编辑和运行查询。 (CTP 2.0) 
@@ -407,15 +409,15 @@ FROM sys.dm_exec_requests AS d
 
 - [SQL Server Management Studio (SSMS) 18.0（预览版）](../ssms/sql-server-management-studio-ssms.md)
 
-  - 支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。(CTP 2.0)
-  - 支持具有安全 Enclave 的 Always Encrypted。(CTP 2.0)
-  - 更小的下载大小。(CTP 2.0)
-  - 现基于 Visual Studio 2017 独立 Shell。(CTP 2.0)
-  - 有关完整列表，请参阅 [SSMS 更改日志](../ssms/sql-server-management-studio-changelog-ssms.md)。(CTP 2.0)
+  - 支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 (CTP 2.0)
+  - 支持具有安全 enclave 的 Always Encrypted。 (CTP 2.0)
+  - 减小了下载大小。 (CTP 2.0)
+  - 现基于 Visual Studio 2017 独立 Shell。 (CTP 2.0)
+  - 有关完整列表，请参阅 [SSMS 更改日志](../ssms/sql-server-management-studio-changelog-ssms.md)。 (CTP 2.0)
 
 ## <a name="other-services"></a>其他服务
 
-自 CTP 2.1 开始，[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 不会为以下服务引入新功能：
+自 CTP 2.2 起，[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 不为以下服务引入新功能：
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
