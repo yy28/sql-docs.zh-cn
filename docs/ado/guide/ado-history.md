@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709555"
@@ -32,10 +32,10 @@ ms.locfileid: "47709555"
  *外部受信任的区域不允许硬盘驱动器访问。*
 在跨域脚本涉及非信任的站点，将禁用以下操作： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**、 与结合使用**adCmdFile**标志或使用 Microsoft OLE DB 永久性提供程序 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和***Stream.LoadFromFile***对仅限物理文件进行操作。* 
+ **Recordset.Open** *，* **Recordset.Save** *，* **Stream.SaveToFile** *，和* **Stream.LoadFromFile** *对仅限物理文件进行操作。*
 现在，这些方法验证文件句柄指向仅限物理文件。
 
- **Recordset.ActiveCommand***返回错误时调用的 HTML/ASP 页中。* 
+ **Recordset.ActiveCommand** *返回错误时调用的 HTML/ASP 页中。* 
 这可以防止**命令**对象被误用。
 
  *数***记录集***返回嵌套***形状***命令的上限。* 
