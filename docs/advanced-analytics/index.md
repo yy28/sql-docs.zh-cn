@@ -3,21 +3,24 @@ title: R 和 Python 机器学习和编程扩展文档 - SQL Server 机器学习
 description: R 和 Python 位于 SQL Server 中，使用内置的数据科学建模和机器学习算法进行大规模的企业数据分析。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 01/09/2019
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7eb5083f17ab08f19b689b3550f979f88495f604
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596538"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206243"
 ---
+# <a name="sql-server-machine-learning"></a>SQL Server 机器学习
+
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-# <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server 机器学习和编程扩展文档
+
+## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server 机器学习和编程扩展文档
 
 了解如何通过我们的快速入门、教程和操作方法文章，在常驻的关系数据上使用 R 和 Python 外部库和语言。 R 和 Python 库位于 [SQL Server 机器学习](what-is-sql-server-machine-learning.md)中，包括基本分布、数据科学模型、机器学习算法和函数，用于进行大规模高性能分析，而无需跨网络传输数据。 
 
@@ -31,7 +34,8 @@ ms.locfileid: "53596538"
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sql-server-2017"
-# <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server 机器学习 R 和 Python 文档
+
+## <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server 机器学习 R 和 Python 文档
 
 了解如何通过我们的快速入门、教程和操作方法文章，在常驻的关系数据上使用 R 和 Python 外部库和语言。 R 和 Python 库位于 [SQL Server 机器学习](what-is-sql-server-machine-learning.md)中，包括基本分布、数据科学模型、机器学习算法和函数，用于进行大规模高性能分析，而无需跨网络传输数据。 
 
