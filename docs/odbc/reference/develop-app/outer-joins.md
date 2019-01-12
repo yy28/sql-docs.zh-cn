@@ -14,12 +14,12 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513995"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135707"
 ---
 # <a name="outer-joins"></a>外部联接
 ODBC 支持 SQL-92 左、 右和完全外部联接语法。 外部联接转义序列  
@@ -28,7 +28,7 @@ ODBC 支持 SQL-92 左、 右和完全外部联接语法。 外部联接转义�
   
  其中*外部联接*是  
   
- *表引用*{**LEFT&#124;右&#124;完整} 外部联接**{*表引用* &#124; *外部联接*} **ON** *搜索条件*  
+ *表引用*{**LEFT&#124;右&#124;完整} 外部联接**{*表引用* &#124; *外部联接*} **ON** _搜索条件_  
   
  *表引用*指定表名，并*搜索条件*指定之间的联接条件*表引用*。  
   

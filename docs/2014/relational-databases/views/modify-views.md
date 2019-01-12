@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513226"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135077"
 ---
 # <a name="modify-views"></a>修改视图
   视图定义之后，您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改其定义而无需删除并重新创建视图。  
@@ -70,7 +70,7 @@ ms.locfileid: "52513226"
   
     3.  右键单击要删除的表的标题栏，然后选择“删除”。  
   
-4.  在“文件”菜单上，单击“保存***视图名称”。  
+4.  在“文件”菜单上，单击“保存”以保存_视图名称_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

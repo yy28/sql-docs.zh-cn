@@ -14,12 +14,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98b2b9e94ea6474d2e10e1da9282c37af9bb0c27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814389"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132568"
 ---
 # <a name="create-unique-constraints"></a>创建唯一约束
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建唯一约束，以便确保在未参与主键的特定列中不输入重复值。 创建唯一约束会自动创建相应的唯一索引。  
@@ -55,7 +55,7 @@ ms.locfileid: "52814389"
   
 4.  在“常规”下的网格中，单击“类型”，然后从该属性右侧的下拉列表框中选择“唯一键”。  
   
-5.  在“文件”菜单上，单击“保存table name”。  
+5.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

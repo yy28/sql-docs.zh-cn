@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538531"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136017"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52538531"
   
 -   程序集是受支持的程序集之一。 有关详细信息，请参阅[支持的.NET Framework 库](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
--   使用 **CREATE ASSEMBLY FROM * * *\<位置 >，* 中提供了所有引用的程序集和其依赖项和*\<位置 >*。  
+-   正在使用**创建程序集从**_\<位置 >，_ 和中提供了所有引用的程序集和其依赖项*\<位置 >*.  
   
--   使用 **CREATE ASSEMBLY FROM * * *\<字节...>，* 和所有引用指定通过空格分隔的字节。  
+-   正在使用**创建程序集从**_\<字节...>，_ 和所有引用指定通过空格分隔的字节。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**程序集都必须满足以下条件：  

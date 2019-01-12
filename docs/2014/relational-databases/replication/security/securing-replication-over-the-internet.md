@@ -13,12 +13,12 @@ ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0af2d4357c74d9ce7bec74e1b787ed259b04977
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797343"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132517"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
   Internet 上的复制非常灵活，对移动订阅方而言尤为如此，但必须适当地配置 Internet 复制以确保具有足够的安全性。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议使用下列两种技术之一在 Internet 上安全地共享信息：  
@@ -39,6 +39,6 @@ ms.locfileid: "52797343"
   
 ## <a name="see-also"></a>请参阅  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)  
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)  
   
   

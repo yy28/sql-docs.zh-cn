@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206566"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135037"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@distribution_db=**] **'***distribution_db*****  
+ [  **@distribution_db=**] **'**_distribution_db_  
  是分发数据库的名称。 *distributor_db*是**sysname**，无默认值。 复制代理使用该参数连接到发布服务器。  
   
  [ **@security_mode=**] *security_mode*  
@@ -62,26 +62,26 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
   
- [ **@login=**] **'***登录*****  
+ [  **@login=**] **'**_登录_  
  登录。 此参数是必需的如果*security_mode*是**0**。 login 的数据类型为 sysname，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
- [ **@password=**] **'***密码*****]  
+ [  **@password=**] **'**_密码_]  
  是的密码。 *密码*是**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
   
- [ **@working_directory=**] **'***working_directory*****  
+ [  **@working_directory=**] **'**_working_directory_  
  用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)**，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 名称应按 UNC 格式指定。  
 
  对于 Azure SQL 数据库，请使用`\\<storage_account>.file.core.windows.net\<share>`。
 
- [ **@storage_connection_string =**] **'***storage_connection_string*****  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_  
  是必需的 SQL 数据库。 使用下存储访问密钥从 Azure 门户 > 设置。
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [ **@trusted=**] **'***受信任*****  
+ [  **@trusted=**] **'**_受信任_  
  该参数已不推荐使用，提供它只是为了向后兼容。 *受信任*是**nvarchar(5)**，并将其设置为任何内容，但是**false**将导致错误。  
   
  [  **@encrypted_password=**] *encrypted_password*  
@@ -95,7 +95,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0** （默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**1**|非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
   
- [ **@publisher_type** =] **'***publisher_type*****  
+ [ **@publisher_type**=] **'**_publisher_type_  
  指定当发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的发布服务器类型。 *publisher_type*数据类型为 sysname，并可以是下列值之一。  
   
 |ReplTest1|Description|  

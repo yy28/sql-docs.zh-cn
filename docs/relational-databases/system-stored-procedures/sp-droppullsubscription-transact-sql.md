@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d796c5e7b309ef33bf30eba851b3aedb6c1e6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823931"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134047"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'**_发布服务器上_  
  远程服务器名。 *发布服务器*是**sysname**，无默认值。 如果**所有**，删除的订阅是在所有服务器的发布服务器。  
   
- [ **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'**_publisher_db_  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 **所有**表示所有发布服务器数据库。  
   
- [ **@publication=** ] **'***发布*****  
+ [  **@publication=** ] **'**_发布_  
  为发布名称。 *发布*是**sysname**，无默认值。 如果**所有**，针对所有发布删除的订阅。  
   
  [ **@reserved=** ]*保留*  

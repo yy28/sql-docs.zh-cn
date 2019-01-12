@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -16,12 +16,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26d4399d453519f317ff64b4a2d70ae6f7e98d3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757089"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132707"
 ---
 # <a name="replication-agent-executables-concepts"></a>复制代理可执行文件概念
   可以使用下列方法以编程方式控制复制代理：  
@@ -47,7 +47,7 @@ ms.locfileid: "52757089"
  调用复制代理时，您可以使用性能配置文件，以自动向代理可执行文件传递一组已定义的参数。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例说明如何从命令提示符调用复制代理。 复制代理也可以使用复制管理对象 (RMO) 来调用。 有关详细信息，请参阅[同步订阅（复制）](../synchronize-subscriptions-replication.md)。  
+ 下面的示例说明如何从命令提示符调用复制代理。 复制代理也可以使用复制管理对象 (RMO) 来调用。 有关详细信息，请参阅[同步订阅（复制）](../synchronize-data.md)。  
   
 > [!NOTE]  
 >  为便于阅读，这些示例中添加了换行符。 但在批处理文件中，命令必须位于一行中。  

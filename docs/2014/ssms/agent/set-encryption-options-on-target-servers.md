@@ -14,17 +14,17 @@ ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9443319c17c2148284d606aebcad89db38de12eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781469"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132997"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>在目标服务器上设置加密选项
   如果您无法在主服务器和某些或所有目标服务器之间的安全套接字层 (SSL) 加密通信中使用证书，但希望对它们之间的通道进行加密，则请将目标服务器配置为使用所需的安全级别。  
   
- 若要为特定的主服务器/目标服务器通信通道配置相应的所需安全级别，请将目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的注册表子项 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<instance_name>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** 设置为下列值之一。 \<instance_name> 的值是 MSSQL.n。 例如， **MSSQL.1** 或 **MSSQL.3**。  
+ 若要为特定的主服务器/目标服务器通信通道配置相应的所需安全级别，请将目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的注册表子项 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<instance_name>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** 设置为下列值之一。 \<*instance_name*> 的值为 **MSSQL.**_n_。 例如， **MSSQL.1** 或 **MSSQL.3**。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

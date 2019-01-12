@@ -12,12 +12,12 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e34d70b84e20f8c4f65e09baad9d8388aa96fca3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806209"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134937"
 ---
 # <a name="subscriber-types"></a>订阅服务器类型
   进行合并发布时可以指定发布必须支持的订阅服务器的类型。 选择订阅服务器类型将会设置“发布兼容级别 ”，该级别可确定发布能够使用哪些功能。  
@@ -39,6 +39,5 @@ ms.locfileid: "52806209"
  [发布数据和数据库对象](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   
- [属性参考（复制）](properties-reference-replication.md)  
-  
+
   

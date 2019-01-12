@@ -12,18 +12,18 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ccf1a79b2dc27bbc49628d11a0c6fb0cf0e4e50
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816619"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135367"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
   如果在此向导的 **“可更新订阅”** 页上选择 **“复制”** ，则必须在与发布服务器建立连接的订阅服务器上指定一个帐户以立即更新订阅。 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 即使在 **“可更新订阅”** 页上选择 **“对更改进行排队并在可能时提交”** ，也需要使用此帐户，因为默认情况下，新建订阅向导将排队更新配置为在必要时可切换到立即更新。  
   
 > [!IMPORTANT]  
->  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 syncobj_\<HexadecimalNumber>），请将其权限授予在每个订阅服务器上配置的帐户。  
+>  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 **syncobj_**_\<HexadecimalNumber>_），请将其权限授予在每个订阅服务器上配置的帐户。  
   
  有三种连接类型可以选择：  
   

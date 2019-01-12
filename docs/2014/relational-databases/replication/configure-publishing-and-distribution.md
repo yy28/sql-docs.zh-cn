@@ -14,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013e2234b33d9277cabb60d95bf2c8db783e93cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350077"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135857"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置发布和分发。  
@@ -28,7 +28,7 @@ ms.locfileid: "53350077"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Security"></a> 安全性  
- 有关详细信息，请参阅[保护部署（复制）](security/secure-deployment-replication.md)。  
+ 有关详细信息，请参阅[安全复制部署](security/view-and-modify-replication-security-settings.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - \<分发服务器>”对话框中的属性。 如果要配置分发服务器以使 **db_owner** 固定数据库角色的成员可以创建发布，或者要配置一个非发布服务器的远程分发服务器，请使用配置分发向导。  

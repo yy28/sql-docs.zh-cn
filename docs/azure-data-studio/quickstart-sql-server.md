@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 9e25008836b72ac8860953c5a1f98c13d7540d92
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030281"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143447"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 SQL Server 连接和查询 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门显示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到SQL Server，然后使用Transact-SQL（T-SQL）语句创建[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程中使用的*TutorialDB*。
@@ -28,7 +28,7 @@ ms.locfileid: "53030281"
 - [安装[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
 如果您无权访问SQL Server，请从以下链接中选择您的平台（确保记住您的SQL登录名和密码！）：
-- [Windows - 下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [Windows - 下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS - 在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 - [Linux-下载 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -您只需按照创建和查询数据的步骤进行操作即可。
 

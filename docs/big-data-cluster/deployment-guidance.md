@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 4d4e39da3176223305fe02a8931ff9d2c34a64c4
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246746"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206344"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -77,7 +77,7 @@ SQL Server 大数据群集至少需要版本最低为 Kubernetes 的 v1.10 服�
 kubectl config view
 ```
 
-## <a name="define-environment-variables"></a>定义环境变量
+## <a id="env"></a> 定义环境变量
 
 可以使用一组环境变量传递给自定义群集配置`mssqlctl create cluster`命令。 环境变量的大部分都是可选的 with 根据下面的默认值。 请注意，环境变量，例如需要用户输入的凭据。
 

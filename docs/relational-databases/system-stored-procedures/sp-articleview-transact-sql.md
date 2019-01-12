@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cda4e884608c10e75ab4c33a89fcf23a1919fc0d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202038"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132857"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  包含项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article=**] **'***文章*****  
+ [  **@article=**] **'**_文章_  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [ **@view_name=**] **'***view_name*****  
+ [  **@view_name=**] **'**_view_name_  
  定义已发布项目的视图的名称。 *view_name*是**nvarchar(386)**，默认值为 NULL。  
   
- [  **@filter_clause=**] **'***filter_clause*****  
+ [  **@filter_clause=**] **'**_filter_clause_  
  是定义水平筛选器的限制 (WHERE) 子句。 当输入限制子句时，将省略 WHERE 关键字。 *filter_clause*是**ntext**，默认值为 NULL。  
   
  [  **@change_active =** ] *change_active*  
@@ -69,14 +69,14 @@ sp_articleview [ @publication = ] 'publication'
   
  **1**指定更改项目可能导致快照无效，如果有现有订阅需要新快照，向其授予权限将现有快照标记为过时并生成新快照。  
   
- [  **@force_reinit_subscription =]** *force_reinit_subscription*  
+ [  **@force_reinit_subscription =]** _force_reinit_subscription_  
  确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
   
  **0**指定对项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化订阅，则会发生错误，并且不进行任何更改。  
   
  **1**指定更改项目会导致现有订阅重新初始化，并授予重新初始化订阅发生的权限。  
   
- [ **@publisher** =] **'***发布服务器*****  
+ [ **@publisher**=] **'**_发布服务器上_  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

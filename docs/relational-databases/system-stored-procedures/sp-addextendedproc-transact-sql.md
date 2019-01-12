@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c66f3ac4395e3985d6881ddb085db1d9a71c366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713215"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133007"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@functname =** ] **'***过程*****  
+ [  **@functname =** ] **'**_过程_  
  在动态链接库 (DLL) 内调用的函数名称。 *过程*是**nvarchar(517)**，无默认值。 *过程*选择可以在窗体中包含所有者名称*owner.function*。  
   
- [ **@dllname =** ] **'***dll*****  
+ [  **@dllname =** ] **'**_dll_  
  包含该函数的 DLL 名称。 *dll*是**varchar(255)**，无默认值。 建议指定 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,7 +66,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 > [!IMPORTANT]  
 >  升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，未使用完整路径注册的现有 DLL 将无法工作。 若要更正此问题，请使用**sp_dropextendedproc**若要注销该 DLL，然后重新注册其与**sp_addextendedproc**，指定完整路径。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_addextendedproc**。  
   
 ## <a name="examples"></a>示例  

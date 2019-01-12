@@ -16,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af1d0e22b4dab79ac7ac9b8d91c198c349280655
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823141"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134317"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x100000000**|使用此选项用于复制 FILESTREAM 属性，如果在指定**varbinary （max)** 列。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 包含 FILESTREAM 列的表复制[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑如何设置此架构选项。 请参阅相关的选项**0x800000000**。|  
 ||**0x200000000**|将日期和时间数据类型转换 (**日期**，**时间**， **datetimeoffset**，以及**datetime2**) 中引入[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]在早期版本的支持的数据类型为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
-||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建的对象的详细信息，请参阅[执行脚本之前和之后应用快照](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
+||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建的对象的详细信息，请参阅[执行脚本之前和之后应用快照](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
 ||**0x1000000000**|将公共语言运行时 (CLR) 用户定义类型 (Udt) 转换为**varbinary （max)** ，以便类型为 UDT 的列能够复制到订阅服务器正在运行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||**0x2000000000**|将转换**hierarchyid**数据类型设置为**varbinary （max)** ，以便类型的列**hierarchyid**可以复制到订阅服务器正在运行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关如何使用详细信息**hierarchyid**列中复制的表，请参阅[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|复制表的任何筛选的索引。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
@@ -213,7 +213,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 -   **logical_record_level_conflict_resolution**  
   
- 指定的值为 3 时**partition_options**，会清除元数据只要运行合并代理和分区的快照会更快过期。 使用此选项时，应考虑启用订阅服务器请求的分区快照。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+ 指定的值为 3 时**partition_options**，会清除元数据只要运行合并代理和分区的快照会更快过期。 使用此选项时，应考虑启用订阅服务器请求的分区快照。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
  设置时**column_tracking**属性，如果已在其他合并发布，发布了表跟踪的列必须是基于此表的现有项目正在使用的值相同。 此参数只适用于表项目。  
   

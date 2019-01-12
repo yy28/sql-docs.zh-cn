@@ -12,12 +12,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ad635cc5dea991c1857831d874de6482b5a9b0d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816857"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133727"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
     
@@ -48,7 +48,7 @@ ms.locfileid: "52816857"
 ## <a name="user-action"></a>用户操作  
  以下步骤可以帮助您解决这个问题。 如果任何一个步骤能正确启动日志读取器代理，则没有必要完成剩余的步骤。  
   
--   检查日志读取器代理的历史记录，查找可能导致此错误的其他任何错误。 有关在复制监视器中查看代理状态和错误详细资料的信息，请参阅[查看与发布关联的代理的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+-   检查日志读取器代理的历史记录，查找可能导致此错误的其他任何错误。 在复制监视器中查看代理状态和错误详细资料的信息，请参阅[查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   检查 [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) 的输出，查找连接到已发布数据库的具体进程标识号(SPID)。 关闭所有可能运行 **sp_repldone**、 **sp_replcmds**或 **sp_replshowcmds**的连接。  
   

@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792283"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135827"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改发布属性。  
@@ -192,8 +192,8 @@ ms.locfileid: "52792283"
  [更改发布和项目属性](change-publication-and-article-properties.md)   
  [对发布数据库进行架构更改](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [在发布中添加和删除项目 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
- [查看发布的信息和执行其任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [从发布中添加和删除项目](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [查看和修改项目属性](view-and-modify-article-properties.md)  
   
   

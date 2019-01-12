@@ -3,7 +3,7 @@ title: 发行说明和更改日志
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 发行说明
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030341"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143657"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 最新发行说明和更改日志
 
-**[下载 11 月版 ！](download.md)**
+**[下载 1 月份发行版 ！](download.md)**
+
+
+## <a name="january-2019-january-release"></a>2019 年 1 月 （1 月份发行版）
+
+发布日期：2019 年 1 月 9 日，  
+版本：1.3.8
+
+- 添加 Windows 的新用户安装程序。 与现有系统安装程序中，不同的是新用户的安装程序不需要管理员权限。 这样还可以更轻松的升级体验的非管理员。
+- Azure Active Directory 身份验证支持。
+- 宣布推出 Idera SQL DM 性能 Insights （预览版）。
+- 在 SQL Server 导入扩展中的数据层应用程序向导支持。
+- 更新到[SQL Server 2019 预览版扩展](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- SQL Server Profiler 的改进。
+- 针对大量查询 （预览版） 流式处理的结果。
+- 社区扩展： sp_executesql to sql 和新的数据库。
+- 解决[bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)。
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="november-2018-november-release"></a>2018 年 11 月 （年 11 月发行版）
 
@@ -35,6 +53,7 @@ ms.locfileid: "53030341"
 - 升级到.Net Core 的 SQL 工具服务 2.2 预览版 3 （适用于最终 AAD 支持）
 
 ### <a name="bug-fixes"></a>Bug 修复
+
 - 修复[发出 # 2933年](https://github.com/Microsoft/azuredatastudio/issues/2933):连接到 Azure SQL DB 中断
 - 修复[发出 # 2914年](https://github.com/Microsoft/azuredatastudio/issues/2914):"参数无效"异常扩展 OE 数据库节点
 - 修复[发出 # 2935年](https://github.com/Microsoft/azuredatastudio/pull/2935):在查询结果中正确显示多行消息
@@ -44,8 +63,6 @@ ms.locfileid: "53030341"
 - 修复[发出 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047):添加用于连接到 SQL Server 命令行接口
 - 修复[发出 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031):添加查询计划的主题支持
 - ...
-
-有关详细信息，请参阅[更改日志](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="october-2018-october-release"></a>2018 年 10 月 （年 10 月发行版）
 
@@ -146,7 +163,7 @@ ms.locfileid: "53030341"
 - 修复[发出 # 2129年](https://github.com/Microsoft/azuredatastudio/pull/2129):切换选项卡时保存编辑数据滚动位置。
 - 修复[发出 # 2152年](https://github.com/Microsoft/azuredatastudio/issues/2152):结果网格行指示器从零开始。
 
-## <a name="known-issues"></a>已知问题
+### <a name="known-issues"></a>已知问题
 
 - [问题 # 2371年](https://github.com/Microsoft/azuredatastudio/issues/2371)另存为 Excel 仅保存的数据的第一行
 - [问题 # 2150年](https://github.com/Microsoft/azuredatastudio/issues/2150):无法连接到容器中的 SQL 的 Ubuntu 16.04 上

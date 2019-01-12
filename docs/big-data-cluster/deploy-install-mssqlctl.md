@@ -1,5 +1,6 @@
 ---
-title: 安装用于管理 SQL 2019 大数据群集 mssqlctl |Microsoft Docs
+title: 安装 mssqlctl
+titleSuffix: SQL Server 2019 big data clusters
 description: 了解如何安装 mssqlctl 工具用于安装和管理 SQL Server 2019 大数据群集 （预览版）。
 author: rothja
 ms.author: jroth
@@ -7,12 +8,12 @@ manager: craigg
 ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5133134a45a4110abc0a1a7a3eebe1c5ac7b6ebd
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
-ms.translationtype: MT
+ms.openlocfilehash: 5bf02506034bcdb3a2370e3678da935a6eb6d0cf
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432100"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206143"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>安装 mssqlctl 来管理 SQL Server 2019 大数据群集
 

@@ -1,7 +1,7 @@
 ---
 title: 未联接辅助数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 59c8c7e13faf5c3ed9874779c2f9b38faaf33791
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5ca86d30647ea0dd2841248a512725aabb5617b7
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358939"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206293"
 ---
 # <a name="secondary-database-is-not-joined"></a>未联接辅助数据库
     
@@ -42,7 +42,7 @@ ms.locfileid: "53358939"
  此辅助数据库未联接到可用性组。 此辅助数据库的配置不完整。  
   
 ## <a name="possible-solution"></a>可能的解决方法  
- 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio 将辅助副本联接到可用性组。 有关将辅助副本联接到可用性组的详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](https://msdn.microsoft.com/en-sg/library/ff878473\(en-us,SQL.110\).aspx)。  
+ 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio 将辅助副本联接到可用性组。 有关将辅助副本联接到可用性组的详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff878473\(en-us,SQL.110\).aspx)。  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

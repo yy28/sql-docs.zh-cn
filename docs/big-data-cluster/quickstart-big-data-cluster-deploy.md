@@ -5,162 +5,238 @@ description: 演练的 SQL Server 2019 大数据群集 （预览版） 在 Azure
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
-ms.translationtype: MT
+ms.openlocfilehash: 29dda6e0f3849d22568c3e7893dc0926f28144a6
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531152"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206283"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
-在此快速入门中，你将在默认配置适用于开发/测试环境中在 AKS 上中部署 SQL Server 2019 大数据群集 （预览版）。
+在本快速入门使用示例部署脚本部署到 Azure Kubernetes 服务 (AKS) 的 SQL Server 2019 大数据群集 （预览版）。 
 
-> [!NOTE]
-> AKS 是只需一个位置移动到主机 Kubernetes。 大数据群集可以部署到 Kubernetes 中，而不考虑基础结构。 有关详细信息，请参阅[如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)。
+> [!TIP]
+> AKS 是适用于大数据群集的托管 Kubernetes 的只有一个选项。 若要了解有关其他部署选项以及如何自定义部署选项，请参阅[如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)。
 
-除了 SQL 主实例中，群集包含一个计算池实例、 一个数据池实例和两个存储池实例。 数据将保留使用使用 AKS 默认存储类的 Kubernetes 永久性卷。 若要进一步自定义你的配置，请参阅中的环境变量[部署指南](deployment-guidance.md)。
-
-如果你想要运行脚本，以创建 AKS 群集和在同一时间安装的大数据群集，请参阅[部署大数据群集在 Azure Kubernetes 服务 (AKS) SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
+此处使用默认大数据群集部署由 SQL 主实例、 一个计算池实例、 两个数据池实例和两个存储池实例组成。 数据将保留使用使用 AKS 默认存储类的 Kubernetes 永久性卷。 在本快速入门中使用的默认配置是适用于开发/测试环境。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="prerequisites"></a>先决条件
 
-本快速入门教程要求您已具有的最低版本为 v1.10 中配置了 AKS 群集。 有关详细信息，请参阅[部署在 AKS 上](deploy-on-aks.md)指南。
-
-- [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
+- 一个 Azure 订阅。
+- [大数据工具](deploy-big-data-tools.md):
+   - **mssqlctl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-   - **Kubectl**
-   - **mssqlctl**
+   - **Azure CLI**
 
-## <a name="verify-aks-configuration"></a>验证 AKS 配置
+## <a name="log-in-to-your-azure-account"></a>登录到你的 Azure 帐户
 
-部署 AKS 群集后，可以执行以下 kubectl 命令来查看群集配置。 请确保该 kubectl 指向正确的群集上下文。
+该脚本使用 Azure CLI 自动执行创建 AKS 群集。 之前运行脚本后，你必须登录到 Azure 帐户和 Azure CLI 在至少一次。 从命令提示符处运行以下命令。
 
-```bash
-kubectl config view
+```
+az login
 ```
 
-## <a name="define-environment-variables"></a>定义环境变量
+## <a name="download-the-deployment-script"></a>下载部署脚本
 
-根据使用的 Windows 或 Linux/macOS 客户端设置环境变量所需的部署大数据群集略有不同。  选择以下步骤使用具体取决于哪个操作系统。
+本快速入门可自动创建的大数据群集上使用 python 脚本的 AKS**部署的 sql-大的数据-aks.py**。 如果已安装的 python **mssqlctl**，您应能够在本快速入门中成功运行该脚本。 
 
-在继续之前，请注意以下重要准则：
+在 Windows PowerShell 或 Linux bash 提示符处，运行以下命令以从 GitHub 下载部署脚本。
 
-- 在中[命令窗口](https://docs.microsoft.com/visualstudio/ide/reference/command-window)，引号包含环境变量中。 如果使用引号来包装一个密码，密码中包含引号。
-- 在 bash 中，该变量中不包括引号。 我们的示例使用双引号`"`。
-- 您可以将密码设置环境变量为您希望的任何内容，但请确保它们是足够复杂并且不使用`!`， `&`，或`'`字符。
-- `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器后，通过在容器中运行 `echo $MSSQL_SA_PASSWORD`，可发现指定的 `MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，更改你`sa`密码根据最佳实践[此处](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
-
-初始化以下环境变量。  它们所需的部署大数据群集：
-
-### <a name="windows"></a>Windows
-
-使用命令窗口 (而不是 PowerShell)，配置以下环境变量：
-
-```cmd
-SET ACCEPT_EULA=Y
-SET CLUSTER_PLATFORM=aks
-
-SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+```
+curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/aks/deploy-sql-big-data-aks.py"
 ```
 
-### <a name="linuxmacos"></a>Linux/macOS
+## <a name="run-the-deployment-script"></a>运行部署脚本
 
-初始化以下环境变量：
+使用以下步骤来运行部署脚本。 此脚本将在 Azure 中创建的 AKS 服务，然后将 SQL Server 2019 大数据群集部署到 AKS。 此外可以修改与其他脚本[环境变量](deployment-guidance.md#env)若要创建自定义部署。
 
-```bash
-export ACCEPT_EULA="Y"
-export CLUSTER_PLATFORM="aks"
+1. 使用以下命令运行脚本：
 
-export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
+   ```
+   python deploy-sql-big-data-aks.py
+   ```
 
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
-export DOCKER_PRIVATE_REGISTRY="1"
+   > [!NOTE]
+   > 如果您有 python3 和 python2 在客户端计算机且位于该路径，则必须使用 python3 运行命令： `python3 deploy-sql-big-data-aks.py`。
+
+1. 出现提示时，输入以下信息：
+
+   | ReplTest1 | Description |
+   |---|---|
+   | **Azure 订阅 ID** | 要用于 AKS 的 Azure 订阅 ID。 可通过运行列出的所有订阅和其 Id`az account list`从另一个命令行。 |
+   | **Azure 资源组** | 要创建 AKS 群集的 Azure 资源组名称。 |
+   | **Docker 用户名** | 向你的有限公共预览版的一部分提供的 Docker 用户名。 |
+   | **Docker 密码** | Docker 密码提供给你的有限公共预览版的一部分。 |
+   | **Azure 区域** | 新的 AKS 群集的 Azure 区域 (默认**westus**)。 |
+   | **机大小** | [虚拟机大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)要用于 AKS 群集中的节点 (默认**Standard_L4s**)。 |
+   | **辅助角色节点** | 在 AKS 群集中的辅助角色节点数 (默认**3**)。 |
+   | **群集名称** | 在 AKS 群集和大数据群集的名称。 仅大小写字母数字字符，且没有空格，必须是群集的名称。 (默认**sqlbigdata**)。 |
+   | **密码** | 有关控制器、 HDFS/Spark 网关和主实例密码 (默认**MySQLBigData2019**)。 |
+   | **控制器用户** | 控制器用户的用户名 (默认值：**管理员**)。 |
+
+   > [!IMPORTANT]
+   > 在群集中的每个永久性卷声明需要附加的磁盘。 目前，大数据群集需要 21 永久性卷声明。 当选择 Azure 虚拟机大小和节点数，请确保可以跨节点附加的磁盘总数大于或等于 21。 例如， [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)计算机大小支持 16 个附加的磁盘，因此，三个节点表示可附加 48 磁盘。
+
+   > [!NOTE]
+   > `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建部署之后,`MSSQL_SA_PASSWORD`环境变量是可发现通过运行`echo $MSSQL_SA_PASSWORD`主实例容器中。 出于安全考虑，更改你`sa`部署后的主实例上的密码。 有关详细信息，请参阅[更改 SA 密码](../linux/quickstart-install-connect-docker.md#sapassword)。
+
+1. 该脚本将首先创建 AKS 群集使用您指定的参数。 此步骤需要几分钟的时间。
+
+   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
+
+## <a name="monitor-the-status"></a>监视状态
+
+该脚本会创建 AKS 群集后，将设置必需的环境变量前面指定的设置。 然后，它调用**mssqlctl**部署 AKS 上的大数据群集。
+
+客户端命令窗口将输出的部署状态。 在部署过程中，您应看到一系列消息，它正在等待控制器 pod:
+
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-> [!NOTE]
-> 在有限的公共预览期，若要下载 SQL Server 大数据群集映像的 Docker 凭据由 Microsoft 提供向每个客户。 若要请求访问权限，注册[此处](https://aka.ms/eapsignup)，并指定你感兴趣，若要试用 SQL Server 大数据群集。
+10 到 20 分钟后，您应会收到通知，正在运行的控制器 pod:
 
-## <a name="deploy-a-big-data-cluster"></a>部署大数据群集
-
-若要部署 Kubernetes 群集上的 SQL Server 2019 CTP 2.2 大数据群集，运行以下命令：
-
-```bash
-mssqlctl create cluster <your-cluster-name>
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-> [!NOTE]
-> 群集的名称必须是仅小写字母数字字符，不留空格。 将在具有与群集相同的名称的命名空间中创建的大数据群集的所有 Kubernetes 项目指定名称。
+> [!IMPORTANT]
+> 整个部署可能需要很长时间由于下载的大数据群集组件的容器映像所需的时间。 但是，也不会花费几个小时。 如果遇到你的部署的问题，请参阅[部署故障排除](deployment-guidance.md#troubleshoot)一部分部署的指导文章。
 
-命令窗口或命令行程序返回的部署状态。 此外可以通过不同的命令窗口中运行以下命令检查部署状态：
+## <a name="inspect-the-cluster"></a>检查群集
 
-```bash
-kubectl get all -n <your-cluster-name>
-kubectl get pods -n <your-cluster-name>
-kubectl get svc -n <your-cluster-name>
-```
+在部署期间，随时可以使用 kubectl 或群集管理门户来检查状态和运行大数据群集有关的详细信息。
 
-运行，可以查看更精细的状态和配置每个 pod:
-```bash
-kubectl describe pod <pod name> -n <your-cluster-name>
-```
+### <a name="use-kubectl"></a>使用 kubectl
+
+打开一个新的命令窗口以使用**kubectl**在部署过程。
+
+1. 运行以下命令以获取整个群集的状态摘要：
+
+   ```
+   kubectl get all -n <your-cluster-name>
+   ```
+
+1. 检查 kubernetes 服务和以下及其内部和外部终结点**kubectl**命令：
+
+   ```
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+1. 此外可以检查状态的 kubernetes pod 使用以下命令：
+
+   ```
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+1. 了解有关使用以下命令特定 pod 的详细信息：
+
+   ```
+   kubectl describe pod <pod name> -n <your-cluster-name>
+   ```
 
 > [!TIP]
 > 有关如何监视和排查部署问题的更多详细信息，请参阅[部署故障排除](deployment-guidance.md#troubleshoot)一部分部署的指导文章。
 
-## <a name="open-the-cluster-administration-portal"></a>打开群集管理门户
+### <a name="use-the-cluster-administration-portal"></a>使用群集管理门户
 
-控制器 pod 运行后，可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`service-proxy-lb`(例如： **https://\<ip 地址\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
+控制器 pod 运行后，你可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`service-proxy-lb`(例如： **https://\<ip 地址\>: 30777/门户**)。 用于登录到门户的凭据匹配的值**控制器用户**并**密码**你在部署脚本中指定。
 
-可以通过在 bash 或 cmd 窗口中运行此命令获取服务代理 lb 服务的 IP 地址：
+可以获取的 IP 地址**服务代理 lb**服务通过在 bash 或 cmd 窗口中运行以下命令：
 
 ```bash
 kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> 访问 web 页，因为我们要使用自动生成的 SSL 证书时，您将看到一条安全警告。 在将来的版本中，我们将提供的功能来提供自己的签名的证书。
+> CTP 2.2 中您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。 此外，CTP 2.2 中不显示 SQL Server 主实例的状态。
 
-## <a name="connect-to-the-big-data-cluster"></a>连接到大数据群集
+## <a name="connect-to-the-cluster"></a>连接到群集
 
-部署脚本已成功完成后，可以获取 IP 地址的 SQL Server 主实例和 Spark/HDFS 终结点使用如下所述的步骤。 所有群集终结点将都显示在也以方便引用群集管理门户中的服务终结点部分。
+部署脚本完成后，输出会通知您成功：
 
-Azure 提供了到 AKS 的 Azure 负载均衡器服务。 运行以下命令在 cmd 或 bash 窗口：
-
-```bash
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-寻找**外部 IP**分配给服务的值。 连接到 SQL Server 主实例使用的 IP 地址`endpoint-master-pool`在端口 31433 (Ex:  **\<ip 地址\>、 31433**) 和 SQL Server 大数据群集终结点使用的外部 IP`service-security-lb`服务。   大数据群集终结点是可在此与 HDFS 进行交互，并提交 Spark 作业通过 Knox。
+大数据群集现在部署在 AKS 的 SQL 服务器。 你现在可以使用 Azure Data Studio 连接到 SQL Server 主实例和使用 Azure Data Studio 的 HDFS/Spark 终结点。
+
+### <a id="master"></a> 主实例
+
+SQL Server 主实例是包含关系的 SQL Server 数据库的传统 SQL Server 实例。 以下步骤介绍如何连接到使用 Azure Data Studio 的主实例。
+
+1. 从命令行中，查找使用以下命令在主实例的 IP:
+
+   ```
+   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   ```
+
+1. 在 Azure Data Studio，按**F1** > **新连接**。
+
+1. 在中**连接类型**，选择**Microsoft SQL Server**。
+
+1. 键入 SQL Server 主实例中的 IP 地址**服务器名称**(例如：**\<IP 地址\>、 31433**)。
+
+1. 输入 SQL 登录名**用户名**(`SA`) 和**密码**（在部署脚本中输入的密码）。
+
+1. 将目标更改**数据库名称**到一个关系数据库。
+
+   ![连接到主实例](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
+
+1. 按**Connect**，并**Server 仪表板**应显示。
+
+### <a id="hdfs"></a> HDFS/Spark 网关
+
+**HDFS/Spark 网关**使你能够连接才能与 HDFS 存储池和运行 Spark 作业。 以下步骤介绍如何使用 Azure Data Studio 进行连接。
+
+1. 从命令行中，查找使用以下命令在 HDFS/Spark 网关的 IP 地址：
+
+   ```
+   kubectl get svc service-security-lb -n <your-cluster-name>
+   ```
+ 
+1. 在 Azure Data Studio，按**F1** > **新连接**。
+
+1. 在中**连接类型**，选择**SQL Server 大数据群集**。
+   
+   > [!TIP]
+   > 如果没有看到**SQL Server 大数据群集**连接类型，请确保已安装[SQL Server 2019 扩展](../azure-data-studio/sql-server-2019-extension.md)和已完成的扩展后重启 Azure Data Studio正在安装。
+
+1. 键入中的大数据群集的 IP 地址**服务器名称**（不指定端口）。
+
+1. 输入`root`有关**用户**并指定**密码**到大数据群集部署脚本中输入。
+
+   ![连接到 HDFS/Spark 网关](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
+
+1. 按**Connect**，并**Server 仪表板**应显示。
+
+## <a name="clean-up"></a>清理
+
+如果要在 Azure 中测试 SQL Server 大数据群集，则应删除 AKS 群集时已完成，以避免产生意外的费用。 如果你想要继续使用它，则不要删除群集。
+
+> [!WARNING]
+> 以下步骤停止 SQL Server 大数据群集中删除 AKS 群集。 如果您有任何数据库或你想要保留的 HDFS 数据，这些数据之前备份在删除该群集。
+
+运行以下 Azure CLI 命令在 Azure 中删除大数据群集和 AKS 服务 (替换`<resource group name>`与**Azure 资源组**部署脚本中指定):
+
+```azurecli
+az group delete -n <resource group name>
+```
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，已部署 SQL Server 大数据群集，请尝试一些新功能：
+现在，已部署 SQL Server 大数据群集，可以加载示例数据并浏览的教程：
 
 > [!div class="nextstepaction"]
-> [如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)
+> [教程：将示例数据加载到 SQL Server 2019 大数据群集](tutorial-load-sample-data.md)

@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366849"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136047"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>安装 SQL Server，并使用 SMB 文件共享作为存储选项
   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，在安装系统数据库（Master、Model、MSDB 和 TempDB）和[!INCLUDE[ssDE](../../includes/ssde-md.md)]用户数据库时可以选择 Server Message Block (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
@@ -98,11 +98,11 @@ ms.locfileid: "53366849"
     > [!NOTE]  
     >  对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限应被限制为： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户和具有管理服务器角色的 Windows 用户。  
   
-     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，授予格式的计算机帐户的权限: * < 域名 >***\\***< 计算机名 > ***$**。  
+     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，则按以下格式为计算机帐户授予权限：<domain_name>**\\**<computer_name>**$**。  
   
     > [!NOTE]  
     >  -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，如果 SMB 文件共享指定为存储选项，则需要将域帐户指定为服务帐户。 对于 SMB 文件共享，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后系统帐户只能指定为服务帐户。  
-    > -   虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 <domain_name>\\<computer_name>$ 格式设置计算机帐户。  
+    > -   虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 _<domain_name>_**\\**_<computer_name>_**$** 格式设置计算机帐户。  
   
 -   用于安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帐户应该对用作数据目录的 SMB 文件共享文件夹或群集安装过程中的任何其他数据文件夹（用户数据库目录、用户数据库日志目录、TempDB 目录、TempDB 日志目录、备份目录）具有 FULL CONTROL 权限。  
   

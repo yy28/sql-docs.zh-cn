@@ -15,12 +15,12 @@ ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cce9b961c2830b670bb862dee88284a18ed7eb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c33c5adeb748f3a714112faf7410684413cf0cd5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363299"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134677"
 ---
 # <a name="performing-bulk-copy-operations"></a>执行大容量复制操作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制功能支持将大量数据传输到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表或视图中，或从其中传出。 也可以通过指定 SELECT 语句将数据传出。 可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和操作系统的数据文件（比如 ASCII 文件）之间移动数据。 数据文件可以有不同格式；定义格式是为了对格式文件中的数据进行大容量复制。 也可以选择将数据加载到程序变量中，然后使用大容量复制函数和方法将数据传输到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -95,7 +95,7 @@ ms.locfileid: "53363299"
   
 -   **ISupportErrorInfo**  
   
- 特定于访问接口的属性 SSPROP_FASTLOADOPTIONS、SSPROP_FASTLOADKEEPNULLS 和 SSPROP_FASTLOADKEEPIDENTITY 控制 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口大容量复制行集的行为。 中指定了属性*rgProperties*的成员 * rgPropertySets ***IOpenRowset**参数成员。  
+ 特定于访问接口的属性 SSPROP_FASTLOADOPTIONS、SSPROP_FASTLOADKEEPNULLS 和 SSPROP_FASTLOADKEEPIDENTITY 控制 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口大容量复制行集的行为。 中指定了属性*rgProperties*的成员_rgPropertySets_**IOpenRowset**参数成员。  
   
 |属性 ID|Description|  
 |-----------------|-----------------|  

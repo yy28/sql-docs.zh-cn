@@ -2,7 +2,7 @@
 title: 从命令行 (SQL Server) 中运行数据迁移助手 |Microsoft Docs
 description: 了解如何从命令行来评估要迁移的 SQL Server 数据库运行数据迁移助手
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: c308dc9e0f05ec8abed83a75a3a1d0ea396fd46c
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643985"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226394"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
-版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
+版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
 
 > [!NOTE]
 > Dmacmd.exe 支持仅运行评估。 目前不支持迁移。
@@ -45,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | N
 |`/AssessmentName`     |   评估项目的名称   | Y
 |`/AssessmentDatabases`     | 连接字符串的以空格分隔列表。 数据库名称 （初始目录） 是区分大小写。 | Y
-|`/AssessmentTargetPlatform`     | 用于评估，支持的值的目标平台： SqlServer2012、 SqlServer2014、 SqlServer2016 和 AzureSqlDatabaseV12。 默认值是 SqlServer2016   | N
+|`/AssessmentTargetPlatform`     | 目标平台，用于评估，支持的值：SqlServer2012、 SqlServer2014、 SqlServer2016 和 AzureSqlDatabaseV12。 默认值是 SqlServer2016   | N
 |`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | Y <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。
 |`/AssessmentEvaluateRecommendations`     | 运行功能推荐        | Y <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
@@ -96,13 +96,13 @@ Catalog=DatabaseName;Integrated Security=true"
 **目标平台 SQL Azure 数据库的单一数据库评估将结果保存到.json 和.csv 文件**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -122,24 +122,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>使用 CLI 的 azure SQL 数据库 SKU 建议
-
-> [!IMPORTANT]
-> SKU 建议为 Azure SQL 数据库是当前可用于迁移 SQL Server 2016 或更高版本。
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -234,6 +216,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [数据迁移助手](https://aka.ms/get-dma)下载。
 - 文章[标识适当 Azure SQL 数据库的 SKU 的本地数据库](https://aka.ms/dma-sku-recommend-sqldb)。

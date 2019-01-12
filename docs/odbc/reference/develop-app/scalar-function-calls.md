@@ -13,17 +13,17 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e02a217579e70a3b7461037750a919efec14458
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515468"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132569"
 ---
 # <a name="scalar-function-calls"></a>标量函数调用
 标量函数返回每一行的值。 例如，该绝对值标量函数将数值列作为参数并返回列中的每个值的绝对值。 用于调用标量函数转义序列  
   
- **{fn** *标量函数* **}**  
+ **{fn** _标量函数_ **}**  
   
  其中*标量函数*是中列出的函数之一[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。 有关标量函数转义序列的详细信息，请参阅[标量函数转义序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)附录 c： 驱动器中SQL 语法。  
   
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  应用程序应使用的最大互操作性**转换**标量函数，以确保标量函数的输出所需的类型。 **转换**函数将数据从一个 SQL 数据类型转换为指定的 SQL 数据类型。 语法**转换**函数  
   
- **转换 (** *value_exp* **，** _data_type_**)**  
+ **转换 (** _value_exp_ **，** _data_type_**)**  
   
  其中*value_exp*是一个列名称，另一个标量函数或文本值的结果并*data_type*是匹配的关键字 **#define**用的名称SQL 数据类型标识符，如中所定义[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，使用以下 SQL 语句**转换**请确保函数的输出**CURDATE**函数是日期，而不是时间戳列或字符数据：  
   

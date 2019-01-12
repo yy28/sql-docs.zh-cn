@@ -18,12 +18,12 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b9390b198ddcb9a54691a7f33b8f52d520356d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292419"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226584"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 与静态类型化
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51292419"
   
  如果要求在隐式转换后进行弱类型化，则静态类型检查可保证只有带有正确基数的允许使用类型的值才会被传递到运算。 对于"string"+ 1，它识别出"string"的静态类型是**xs: string**。 由于这是不允许使用的类型**+** 引发操作，类型错误。  
   
- 在将任意表达式 E2 与任意表达式 E1 的结果相加 (E1 + E2) 的情况下，静态类型推导将首先确定 E1 和 E2 的静态类型，然后检查它们的静态类型是否为该运算允许使用的类型。 例如，如果 E1 的静态类型可以是**xs: string**或**xs: integer**、 静态类型检查会发出类型错误、 运行的时即使一些值可能为整数。 相同会出现这种情况，如果 E1 的静态类型**xs: integer\***。 因为**+** 操作只能接受一个整数值和 E1 可能会返回零或大于 1，静态类型检查会发出错误。  
+ 在将任意表达式 E2 与任意表达式 E1 的结果相加 (E1 + E2) 的情况下，静态类型推导将首先确定 E1 和 E2 的静态类型，然后检查它们的静态类型是否为该运算允许使用的类型。 例如，如果 E1 的静态类型可以是**xs: string**或**xs: integer**、 静态类型检查会发出类型错误、 运行的时即使一些值可能为整数。 相同会出现这种情况，如果 E1 的静态类型**xs: integer&#42;**。 因为**+** 操作只能接受一个整数值和 E1 可能会返回零或大于 1，静态类型检查会发出错误。  
   
  如前面所述，类型推导经常推断出不同于所传递数据的、用户不了解的数据类型。 在这些情况下，用户就必须重写查询。 以下为一些常见的情况：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51292419"
 ## <a name="type-checking-of-union-types"></a>联合类型的类型检查  
  由于类型检查，联合类型需要小心处理。 下列示例中说明了其中两个问题。  
   
-### <a name="example-function-over-union-type"></a>示例：联合类型的函数  
+### <a name="example-function-over-union-type"></a>例如：联合类型的函数  
  例如，以下联合类型的 <`r`> 的元素定义：  
   
 ```  
@@ -86,7 +86,7 @@ ms.locfileid: "51292419"
   
  在 XQuery 上下文中，"average"函数`fn:avg (//r)`将返回静态错误，因为 XQuery 编译器无法添加不同类型的值 (**xs: int**， **xs: float**或**xs:双精度**) 的 <`r`> 元素中的参数**fn:avg()**。 若要解决此问题，请将函数调用重写为 `fn:avg(for $r in //r return $r cast as xs:double ?)`。  
   
-### <a name="example-operator-over-union-type"></a>示例：联合类型的运算符  
+### <a name="example-operator-over-union-type"></a>例如：联合类型的运算符  
  加法运算（“+”）要求使用精确类型的操作数。 因此，表达式 `(//r)[1] + 1` 将返回静态错误，该错误包含前面所述的 <`r`> 元素的类型定义。 一种解决办法是将其重写为 `(//r)[1] cast as xs:int? +1`，其中“?”表示取 0 或 1 值。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求带有“?”的“cast as”，这是因为任何转换都可能由于运行时错误而导致产生空序列。  
   
 ## <a name="see-also"></a>请参阅  

@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520801"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134917"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中对主体授予权限。  
@@ -65,7 +65,7 @@ ms.locfileid: "52520801"
   
 4.  右键单击某一存储过程，然后选择“属性”。  
   
-5.  在 **存储过程属性-* * * stored_procedure_name*对话框中的，在选择页上，选择下**权限**。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
+5.  在中**存储过程属性-**_stored_procedure_name_对话框中的，在选择页上，选择下**权限**。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
   
 6.  完成后，单击 **“确定”**。  
   

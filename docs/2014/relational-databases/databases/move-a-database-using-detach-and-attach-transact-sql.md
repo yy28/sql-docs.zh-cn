@@ -17,12 +17,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 872ab7a5b8b173ad2250542c96be2a22d916409c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757519"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136097"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](move-user-databases.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "52757519"
     > [!IMPORTANT]  
     >  对于生产数据库，请将数据库和事务日志存放在不同的磁盘上。  
   
-     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\Servername\\Sharename\\Path\\Filename**。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
+     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式： **\\\\**_服务器名称_**\\**_共享名_**\\**_路径_**\\**_文件名_。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
   
 3.  通过执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来附加移动的数据库及其日志（可选）：  
   

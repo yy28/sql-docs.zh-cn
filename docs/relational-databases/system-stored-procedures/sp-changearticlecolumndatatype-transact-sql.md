@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e93025676d451444140fad80a993813c0463a2f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206756"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133557"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=** ] **'***发布*****  
+ [  **@publication=** ] **'**_发布_  
  Oracle 发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article =** ] **'***文章*****  
+ [  **@article =** ] **'**_文章_  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [ **@column** =] **'***列*****  
+ [ **@column**=] **'**_列_  
  要更改数据类型映射的列的名称。 *列*是**sysname**，无默认值。  
   
- [ **@type**  =] **'***类型*****  
+ [ **@type** =] **'**_类型_  
  是的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中的数据类型。 *类型*是**sysname**，默认值为 NULL。  
   
  [ **@length** =]*长度*  
@@ -66,7 +66,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**=]*精度*  
  目标列中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的精度。 *精度*是**bigint**，默认值为 NULL。  
   
- [ **@publisher** =] **'***发布服务器*****  
+ [ **@publisher**=] **'**_发布服务器上_  
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

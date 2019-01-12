@@ -15,12 +15,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20dce5a584d7ae990b25dd10312c9474bd08c873
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749059"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134637"
 ---
 # <a name="detach-a-database"></a>分离数据库
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中分离数据库。 分离的文件将会予以保留，并且可以使用带有 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 选项的 CREATE DATABASE 重新附加它们。 这些文件可以移动并附加到其他服务器上。  
@@ -85,7 +85,7 @@ ms.locfileid: "52749059"
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 *< number_of_active_connections> * * * 个活动连接**-例如：**1 个活动连接**。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 _< number_of_active_connections>_**个活动连接**-例如：**1 个活动连接**。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   

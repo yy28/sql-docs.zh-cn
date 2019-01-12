@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823302"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134728"
 ---
 # <a name="best-practices-for-replication-administration"></a>复制管理最佳实践
   在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除了遵循本主题中介绍的最佳实践指导原则之外，还请仔细阅读常见问题解答主题，以了解常见的问题：[复制管理员常见问题解答](frequently-asked-questions-for-replication-administrators.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "52823302"
 ## <a name="validate-data-periodically"></a>定期验证数据  
  复制不要求验证，但建议对事务复制和合并复制定期运行验证。 验证允许您验证订阅服务器上的数据与发布服务器上的数据是否匹配。 验证成功表示当时发布服务器上的所有更改已复制到订阅服务器上（如果订阅服务器支持更新，则订阅服务器上的所有更改也复制到发布服务器上）并且两个数据库是同步的。  
   
- 建议根据发布数据库的备份计划执行验证。 例如，如果发布数据库有一个每周执行一次的完整备份，则可以在每周完成备份后运行一次验证。 有关详细信息，请参阅[验证已复制的数据](../validate-replicated-data.md)。  
+ 建议根据发布数据库的备份计划执行验证。 例如，如果发布数据库有一个每周执行一次的完整备份，则可以在每周完成备份后运行一次验证。 有关详细信息，请参阅[验证已复制的数据](../validate-data-at-the-subscriber.md)。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>如果有必要，使用代理配置文件更改代理参数  
  代理配置文件为设置复制代理参数提供了一个便利的方法。 也可以在代理命令行上指定参数，但通常更适合使用预定义的代理配置文件或创建新的配置文件（如果需要更改参数值）。 例如，如果使用合并复制并且订阅服务器从宽带连接转为拨号连接，这时可考虑使用合并代理的“慢速链接”  配置文件，此配置文件使用一组更适合慢速通信链接的参数。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
@@ -148,6 +148,6 @@ ms.locfileid: "52823302"
  有关详细信息，请参阅[对发布数据库进行架构更改](../publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [管理（复制）](administration-replication.md)  
+ [复制管理常见问题解答](frequently-asked-questions-for-replication-administrators.md)  
   
   

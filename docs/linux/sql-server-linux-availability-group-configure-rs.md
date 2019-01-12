@@ -5,18 +5,17 @@ description: 了解如何在 Linux 上配置 SQL Server 始终在可用性组 (A
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 60cdef13ec46ab1f859d17f724863f67939e6b6f
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203866"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206493"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上配置读取缩放 SQL Server 可用性组
 
@@ -24,8 +23,8 @@ ms.locfileid: "53203866"
 
 你可以在 Linux 上配置 SQL Server 始终在可用性组 (AG) 的读取缩放工作负荷。 存在两种类型的 AG 体系结构。 为实现高可用性体系结构使用群集管理器来改善的业务连续性。 此体系结构还可以包括读取缩放副本。 若要创建高可用性体系结构，请参阅[配置 SQL Server Always On 可用性组以实现高可用性 Linux 上](sql-server-linux-availability-group-configure-ha.md)。 其他体系结构只支持读取缩放工作负载。 本文介绍如何在不使用群集管理器的情况下创建 AG，用于读取缩放工作负载。 此体系结构仅提供读取缩放。 它不提供高可用性。
 
->[!NOTE]
->设置有 `CLUSTER_TYPE = NONE` 的可用性组可包括不同操作系统平台上托管的副本。 它无法支持高可用性。 
+> [!NOTE]
+> 设置有 `CLUSTER_TYPE = NONE` 的可用性组可包括不同操作系统平台上托管的副本。 它无法支持高可用性。 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -84,7 +83,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>后续步骤
 
-* [配置分布式可用性组](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [了解有关可用性组的详细信息](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [配置分布式可用性组](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [了解有关可用性组的详细信息](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [执行强制的手动故障转移](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

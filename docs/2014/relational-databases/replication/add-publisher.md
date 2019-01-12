@@ -1,5 +1,5 @@
 ---
-title: 添加发布服务器 | Microsoft Docs
+title: 添加发布服务器对话框
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817489"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133297"
 ---
-# <a name="add-publisher"></a>添加发布服务器
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>SQL Server 复制添加发布服务器对话框 
   可以使用 **“添加发布服务器”** 对话框，将一个或多个发布服务器添加到复制监视器的左窗格中。 添加发布服务器之后，如果在左窗格中选择发布服务器，将在右窗格中显示该发布服务器的有关信息。  
   
 ## <a name="options"></a>选项  

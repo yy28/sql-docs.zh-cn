@@ -2,7 +2,7 @@
 title: 确定适当的 Azure SQL 数据库 SKU 的本地数据库 （数据迁移助手） |Microsoft Docs
 description: 了解如何使用数据迁移助手来识别你的本地数据库的权限 Azure SQL 数据库 SKU
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544108"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226494"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>确定适当的 Azure SQL 数据库 SKU 的本地数据库
 
@@ -30,9 +30,6 @@ ms.locfileid: "52544108"
 
 > [!NOTE] 
 > 此功能目前仅通过命令行接口 (CLI)。 将在即将发布的版本中添加支持此功能通过 DMA 用户界面。
-
-> [!IMPORTANT]
-> SKU 建议为 Azure SQL 数据库是当前可用于迁移 SQL Server 2016 或更高版本。
 
 以下说明可帮助您确定 Azure SQL 数据库 SKU 的建议和使用数据迁移助手预配到 Azure，关联的数据库。
 
@@ -66,7 +63,7 @@ ms.locfileid: "52544108"
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     

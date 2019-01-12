@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030741"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131417"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 导入扩展 （预览版）
 
@@ -56,7 +56,7 @@ SQL Server 导入扩展 （预览版） 将 SQL 表转换为.txt 和.csv 文件�
     ![打开导入向导](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. 此页提供了所选的操作的摘要。 此外可以查看您的表插入不论成功与否。 
 
-    您可以单击**做，请****上一步**如果你需要进行的更改，或**导入新文件**快速导入另一个文件。
+    您可以单击**完成后上, 一步**如果你需要进行的更改，或**导入新文件**快速导入另一个文件。
     ![打开导入向导](media/sql-server-import-extension/import-wizard-summary.png)
 1. 如果您的表已成功通过验证导入刷新您的目标数据库或表名称上运行 SELECT 查询。
 

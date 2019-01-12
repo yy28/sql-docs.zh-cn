@@ -14,12 +14,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a28ee9f405e589e7956be4391f22d9ea2a46388
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815519"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135518"
 ---
 # <a name="distribution-agent-security"></a>分发代理安全性
   使用 **“分发代理安全性”** 对话框可以指定用于运行分发代理的 Windows 帐户。 对于推送订阅，分发代理在分发服务器上运行；对于请求订阅，分发代理在订阅服务器上运行。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户也称为“进程帐户 ”，因为代理进程是在此帐户下运行。 该对话框中可用的其他选项取决于访问对话框的方式：  
@@ -94,7 +94,7 @@ Persist Security Info=False;Connection Pooling=True;
  字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理”  选项设置为 **False**。 需要为“初始目录”  选项指定一个值以标识订阅数据库。 有关详细信息，请参阅 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [管理复制中的登录名和密码](security/manage-logins-and-passwords-in-replication.md)   
+ [管理复制中的登录名和密码](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [复制代理安全模式](security/replication-agent-security-model.md)   
  [复制代理概述](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

@@ -20,15 +20,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811990"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133567"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
-  复制代理安全模式允许精细地控制在其下运行复制代理和建立连接的帐户：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[管理复制中的登录名和密码](manage-logins-and-passwords-in-replication.md)。  
+  复制代理安全模式允许精细地控制在其下运行复制代理和建立连接的帐户：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[管理复制中的登录名和密码](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
 > [!IMPORTANT]  
 >  **sysadmin** 固定服务器角色的成员配置复制时，可以配置复制代理来模拟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理帐户。 不指定复制代理的登录名和密码即可完成此操作；但是不推荐这种方法。 作为最佳安全做法，建议以本主题后面的“代理所需权限”部分中介绍的最小权限来为每个代理指定一个帐户。  
@@ -92,7 +92,7 @@ ms.locfileid: "52811990"
   
 ## <a name="see-also"></a>请参阅  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)   
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)   
  [保护快照文件夹](secure-the-snapshot-folder.md)  
   
   

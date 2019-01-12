@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125935"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134827"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>将脚本另存为项目或解决方案
   熟悉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的开发人员会喜欢使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的解决方案资源管理器。 您可以将支持您业务的脚本分组为多个脚本项目，然后将各个脚本项目作为一个解决方案进行集中管理。 将脚本置于脚本项目和解决方案中后，便可将其视为一个组同时打开，或者同时保存到 Visual SourceSafe 之类的源代码管理产品中。 脚本项目包括可使脚本正确执行的连接信息，还包括非脚本文件，例如支持文本文件。  
@@ -58,7 +58,7 @@ ms.locfileid: "48125935"
     > [!NOTE]  
     >  如果需要更多的空间来键入查询，请按 Shift+Alt+Enter 切换到全屏显示模式。  
   
-11. 在解决方案资源管理器中，右键单击 **SQLQuery1**，再单击“重命名”。 键入 **Check Workorders****.sql** 作为查询的新名称并按 Enter。  
+11. 在解决方案资源管理器中，右键单击 **SQLQuery1**，再单击“重命名”。 类型**Check Workorders.sql**作为查询然后按 enter 键的新名称。  
   
 12. 若要保存解决方案和脚本项目，请在“文件”菜单中，单击“全部保存”。  
   

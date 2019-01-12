@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507268"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132537"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 属性  
  连接字符串必须包含 `Server` 属性以提供初始伙伴名称，该名称应标识当前主体服务器实例。  
   
- 标识服务器实例的最简单方法是指定其名称 <server_name>[\\<SQL_Server_instance_name>]。 例如：  
+ 标识服务器实例的最简单方法是指定其名称 *<server_name>*[**\\**_<SQL_Server_instance_name>_]。 例如：  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |ODBC 驱动程序|`Failover_Partner`|  
 |ActiveX 数据对象 (ADO)|`Failover Partner`|  
   
- 标识服务器实例的最简单方法是指定其名称 <server_name>[\\<SQL_Server_instance_name>]。  
+ 标识服务器实例的最简单方法是指定其名称 *<server_name>*[**\\**_<SQL_Server_instance_name>_]。  
   
  另外，还可以在 `Failover Partner` 属性中提供 IP 地址和端口号。 如果首次连接到数据库时初始连接尝试失败，则到故障转移伙伴的连接尝试将不会依赖于 DNS 和 SQL Server Browser。 建立连接后，便会使用故障转移伙伴名称覆盖故障转移伙伴名称，因此，如果发生故障转移，则重定向的连接将需要 DNS 和 SQL Server Browser。  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  重试时间使用以下公式进行计算：  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0.08 **&#42;** _LoginTimeout_**)**  
   
  其中， *PreviousRetryTime* 初始值为 0。  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |舍入|*RetryTime* 计算|每次尝试的重试时间|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2.4 秒|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3.6 秒|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4.8 秒|  
+|1|0 **+ (** 0.08 **&#42;** 15 **)**|1.2 秒|  
+|2|1.2 **+ (** 0.08 **&#42;** 15 **)**|2.4 秒|  
+|3|2.4 **+ (** 0.08 **&#42;** 15 **)**|3.6 秒|  
+|4|3.6 **+ (** 0.08 **&#42;** 15 **)**|4.8 秒|   
   
  下图说明了这些后续连接尝试的重试时间，每个重试时间均超时。  
   

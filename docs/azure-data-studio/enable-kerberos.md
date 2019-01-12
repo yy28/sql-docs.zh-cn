@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030211"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143321"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>连接[!INCLUDE[name-sos](../includes/name-sos-short.md)]到 SQL Server 使用 Windows 身份验证的 Kerberos 
 
@@ -27,7 +27,7 @@ ms.locfileid: "53030211"
 ## <a name="prerequisites"></a>必要條件
 
 - 访问 Windows 已加入域的计算机才能查询在 Kerberos 域控制器。
-- SQL Server 应配置为允许 Kerberos 身份验证。 对于 Unix 上运行的客户端驱动程序，集成身份验证是仅支持使用 Kerberos。 设置 Sql Server 使用 Kerberos 进行身份验证的详细信息可在[此处](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)。 应为每个想要连接到 Sql Server 实例注册 Spn。 列出的 SQL Server Spn 格式的详细信息[此处](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server 应配置为允许 Kerberos 身份验证。 对于 Unix 上运行的客户端驱动程序，集成身份验证是仅支持使用 Kerberos。 设置 Sql Server 使用 Kerberos 进行身份验证的详细信息可在[此处](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)。 应为每个想要连接到 Sql Server 实例注册 Spn。 列出的 SQL Server Spn 格式的详细信息[此处](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>正在检查 Sql Server 是否有 Kerberos 设置

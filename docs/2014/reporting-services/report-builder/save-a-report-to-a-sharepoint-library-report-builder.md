@@ -11,12 +11,12 @@ ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1e84fc33d61079aa4b606637043ee10497253dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a053a0a27be8d53c0f5ba403822f2f946d02604
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113797"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132267"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>将报表保存到 SharePoint 库（报表生成器）
   若要将报表保存到配置为 SharePoint 集成模式的报表服务器，必须找到 SharePoint 服务器并建立与报表服务器的连接。 在报表定义中，对与报表相关的项的所有引用都必须使用特定于 SharePoint 报表服务器的值。 相关项包括子报表、钻取报表和基于 Web 的图像等资源。 有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](../report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
@@ -25,7 +25,7 @@ ms.locfileid: "48113797"
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>将报表保存到 SharePoint 站点  
   
-1.  从“报表生成器”按钮，单击 **“保存”**。 此时，将打开“另存为***\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“保存”**。 此时，将打开“另存为”“\<报表项>”对话框。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用 **“另存为”** 选项可以更改位置。  

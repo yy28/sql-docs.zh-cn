@@ -12,12 +12,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4daea476dd9d533d8a16365a5260905f9fb22d29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804299"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133509"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>订阅，分发服务器到订阅服务器的历史记录（事务订阅）
   **“分发服务器到订阅服务器的历史记录”** 选项卡显示有关分发代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
@@ -62,7 +62,7 @@ ms.locfileid: "52804299"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看与订阅关联的代理的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
  [复制代理概述](agents/replication-agents-overview.md)  
   

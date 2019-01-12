@@ -17,12 +17,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164597"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131807"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建索引视图。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。  
@@ -55,7 +55,7 @@ ms.locfileid: "48164597"
   
 -   查询优化器使用该索引视图生成查询计划。  
   
-    |SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|  
+    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -86,11 +86,11 @@ ms.locfileid: "48164597"
   
 -   创建索引时，IGNORE_DUP_KEY 选项必须设置为 OFF（默认设置）。  
   
--   在视图定义中，表必须由两部分组成的名称（即 schema.tablename**）引用。  
+-   在视图定义中，必须使用两部分名称（即 _schema_**.**_tablename_ ）来引用表。  
   
 -   必须已使用 WITH SCHEMABINDING 选项创建了在视图中引用的用户定义函数。  
   
--   视图中引用的任何用户定义函数都必须由两部分组成的名称（即 schema.function**）引用。  
+-   在视图中引用的任何用户定义函数都必须由两部分组成的名称 _schema_**.**_function_引用。  
   
 -   用户定义函数的数据访问属性必须为 NO SQL，外部访问属性必须是 NO。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48164597"
   
 -   在视图定义中使用的 CLR 函数和 CLR 用户定义类型方法必须具有下表所示的属性设置。  
   
-    |“属性”|注意|  
+    |属性|注意|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|必须显式声明为 Microsoft .NET Framework 方法的属性。|  
     |PRECISE = TRUE|必须显式声明为 .NET Framework 方法的属性。|  
@@ -131,7 +131,7 @@ ms.locfileid: "48164597"
 -   如果视图定义包含 GROUP BY 子句，则唯一聚集索引的键只能引用 GROUP BY 子句中指定的列。  
   
 ###  <a name="Recommendations"></a> 建议  
- 引用索引视图中的 `datetime` 和 `smalldatetime` 字符串文字时，建议使用确定性日期格式样式将文字显式转换为所需日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST 与 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。 所涉及的字符字符串转换为隐式转换的表达式`datetime`或`smalldatetime`被视为具有不确定性。 这是因为结果取决于服务器会话的 LANGUAGE 和 DATEFORMAT 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`listopad`在不同语言中表示不同的月份。 同样，在 `DATEADD(mm,3,'2000-12-01')`表达式中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于 DATEFORMAT 设置解释 `'2000-12-01'` 字符串。  
+ 引用索引视图中的 `datetime` 和 `smalldatetime` 字符串文字时，建议使用确定性日期格式样式将文字显式转换为所需日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST 与 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。 将字符串隐式转换为 `datetime` 或 `smalldatetime` 所涉及的表达式被视为具有不确定性。 这是因为结果取决于服务器会话的 LANGUAGE 和 DATEFORMAT 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`listopad`在不同语言中表示不同的月份。 同样，在 `DATEADD(mm,3,'2000-12-01')`表达式中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于 DATEFORMAT 设置解释 `'2000-12-01'` 字符串。  
   
  非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48164597"
   
 #### <a name="to-create-an-indexed-view"></a>创建索引视图  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -10,12 +10,12 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a114e51ad6f2841cbd6368208bac6771e3b97ed0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392741"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133597"
 ---
 # <a name="modify-user-defined-functions"></a>修改用户定义函数
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的用户定义函数。 按如下所述修改用户定义函数将不会更改函数的权限，并且也不会影响任何依赖的函数、存储过程或触发器。  
@@ -70,7 +70,7 @@ ms.locfileid: "52392741"
   
 5.  在查询窗口中，对 ALTER FUNCTION 语句进行必要的更改。  
   
-6.  在“文件” 菜单上，单击“保存 function_name”。  
+6.  在“文件”菜单上，点击“保存”function_name。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

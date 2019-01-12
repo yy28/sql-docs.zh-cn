@@ -16,12 +16,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e723c42dd41c21abb2c11059b8706a098f7fcfd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353345"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135537"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建推送订阅。 有关为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器创建推送订阅的信息，请参阅[为非 SQL Server 订阅服务器创建订阅](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
@@ -93,7 +93,7 @@ ms.locfileid: "53353345"
   
     -   如果的值**allow_push**是**0**，执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，并指定**allow_push**为 **@property**并`true`有关**@value**。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber** ，将 **@destination_db**。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新 subscription 的信息，请参阅[创建事务发布的可更新订阅](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber** ，将 **@destination_db**。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新 subscription 的信息，请参阅[创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列各项：  
   

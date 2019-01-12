@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a196ef879c176fe731fe85b2de7962d70edff7b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541175"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226614"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -114,24 +114,21 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
-      estimated_gain = (regressedPlanExecutionCount+recommendedPlanExecutionCount)
-                  *(regressedPlanCpuTimeAverage-recommendedPlanCpuTimeAverage)/1000000,
-      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount, 'YES','NO')
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
 FROM sys.dm_db_tuning_recommendations
-  CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
-            [current plan_id] int '$.regressedPlanId',
-            [recommended plan_id] int '$.recommendedPlanId',
-
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
             regressedPlanErrorCount int,
             recommendedPlanErrorCount int,
-
             regressedPlanExecutionCount int,
             regressedPlanCpuTimeAverage float,
             recommendedPlanExecutionCount int,
             recommendedPlanCpuTimeAverage float
-
-          ) as planForceDetails;
+          ) AS planForceDetails;
 ```
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
@@ -176,7 +173,7 @@ FROM sys.dm_db_tuning_recommendations
 
 ### <a name="alternative---manual-index-management"></a>替代项-手动索引管理
 
-不自动索引管理，用户将需要手动查询[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)视图，以查找索引可能会提高性能，请创建索引使用的详细信息此视图中，以及手动监视性能的查询中提供。 若要查找应删除的索引，用户应监视很少使用的查找索引的索引操作的使用情况统计的信息。
+不自动索引管理，用户将需要手动查询[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)查看，或使用中的性能仪表板报表[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]到可能的查找索引提高性能、 创建使用此视图中提供的详细信息的索引和手动监视性能的查询。 若要查找应删除的索引，用户应监视很少使用的查找索引的索引操作的使用情况统计的信息。
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 可以简化此过程。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析工作负荷，标识无法与新的索引，更快地执行的查询，并确定未使用或重复的索引。 查找有关标识应在进行更改的索引的详细信息[Azure 门户中查找索引建议](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)。
 

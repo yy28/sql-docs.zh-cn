@@ -13,17 +13,17 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51618b0103a168ab72cab676fdf76ec1da8c3a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788599"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135497"
 ---
 # <a name="secure-the-distributor"></a>保护分发服务器的安全
   下列复制代理连接到分发服务器：日志读取器代理、快照代理、队列读取器代理、分发代理以及合并代理。 在遵守授予必要的最低权限并保护所有密码的存储这一原则的同时，为每个代理提供适当的登录名非常重要。  
   
--   有关管理登录名和密码的信息，请参阅[管理复制中的登录名和密码](manage-logins-and-passwords-in-replication.md)。  
+-   有关管理登录名和密码的信息，请参阅[管理复制中的登录名和密码](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
 -   有关每个代理所需权限的详细信息，请参阅 [Replication Agent Security Model](replication-agent-security-model.md)。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "52788599"
  [查看和修改复制安全设置](view-and-modify-replication-security-settings.md)   
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)  
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)  
   
   

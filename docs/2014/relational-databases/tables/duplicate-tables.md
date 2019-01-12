@@ -15,12 +15,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea98f596638d19994d76606ae136204ae5f8d419
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823921"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132437"
 ---
 # <a name="duplicate-tables"></a>复制表
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，通过创建新表后从现有表复制列信息，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中复制现有表。  
@@ -63,7 +63,7 @@ ms.locfileid: "52823921"
   
 6.  在 **“编辑”** 菜单上，单击 **“粘贴”**。  
   
-7.  在“文件”菜单上，单击“保存table name”。  
+7.  从“文件”菜单上，单击“保存”表格名称。  
   
 8.  在 **“选择名称”** 对话框中，键入新表的名称，然后单击 **“确定”**。  
   

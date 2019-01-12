@@ -12,12 +12,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7652f9ebacf5e673738c4144878870eb156d944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780939"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132357"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>定期评估基于策略的管理策略
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中按计划评估基于策略的管理策略。  
@@ -53,7 +53,7 @@ ms.locfileid: "52780939"
   
 5.  右键单击要评估其计划的策略，然后选择“属性”。  
   
-6.  在“打开策略 - policy_name”对话框的“评估模式”列表中，选择“按计划”。  
+6.  上**打开策略-**_policy_name_对话框中，在**评估模式**列表中，选择**按计划**。  
   
 7.  在 **“计划”** 中，单击 **“选取”** 指定现有的计划，或 **“新建”** 创建新的计划。  
   

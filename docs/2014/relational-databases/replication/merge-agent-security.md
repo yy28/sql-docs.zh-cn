@@ -14,12 +14,12 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47571fcfe6b11945ab910f40feeb35145ab8d2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af3d3490957114d6ba7731b49435dc7e90122f90
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765079"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134687"
 ---
 # <a name="merge-agent-security"></a>合并代理安全性
   可以使用 **“合并代理安全性”** 对话框指定用于运行合并代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 对于推送订阅，合并代理在分发服务器上运行；对于请求订阅，合并代理在订阅服务器上运行。 Windows 帐户也称为“进程帐户 ”，因为代理进程是在此帐户下运行。 该对话框中可用的其他选项取决于访问对话框的方式：  
@@ -82,7 +82,7 @@ ms.locfileid: "52765079"
  连接订阅服务器所用的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户必须至少为订阅数据库中的 **db_owner** 固定数据库角色的成员。  
   
 ## <a name="see-also"></a>请参阅  
- [管理复制中的登录名和密码](security/manage-logins-and-passwords-in-replication.md)   
+ [管理复制中的登录名和密码](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [复制代理安全模式](security/replication-agent-security-model.md)   
  [复制代理概述](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

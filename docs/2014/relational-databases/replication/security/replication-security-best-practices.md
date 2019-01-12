@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781169"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135927"
 ---
 # <a name="replication-security-best-practices"></a>复制安全最佳实践
   复制在分布式环境（从单个域中的 Intranet 到在不受信任的域之间通过 Internet 访问数据的应用程序）中移动数据。 理解在这些不同环境下保护复制连接的最佳方法非常重要。  
@@ -37,7 +37,7 @@ ms.locfileid: "52781169"
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
--   以不同的 Windows 帐户运行每个复制代理，并对所有复制代理连接使用 Windows 身份验证。 有关指定帐户的详细信息，请参阅[管理复制中的登录名和密码](manage-logins-and-passwords-in-replication.md)。  
+-   以不同的 Windows 帐户运行每个复制代理，并对所有复制代理连接使用 Windows 身份验证。 有关指定帐户的详细信息，请参阅[管理复制中的登录名和密码](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
 -   仅对每个代理授予其所需的权限。 有关详细信息，请参阅 [Replication Agent Security Model](replication-agent-security-model.md)中的“代理所需权限”部分。  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781169"
  [保护订阅服务器](secure-the-subscriber.md)   
  [保护分发服务器](secure-the-distributor.md)   
  [保护发布服务器](secure-the-publisher.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)  
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)  
   
   

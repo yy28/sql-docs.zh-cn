@@ -8,12 +8,12 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 8bccadd8fbce9fe2a8cc6f16db75dbd09f3d1ed0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 4d3ca6a3e43781b35bfd24f04ee1cf0483b1eb05
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264359"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206263"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>连接到 SQL Server 大数据群集使用 Azure Data Studio
 
@@ -29,7 +29,7 @@ ms.locfileid: "53264359"
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 
-当连接到的大数据群集时，可以选择要连接到 SQL Server[主实例](concept-master-instance.md)或 HDFS/Spark 网关。 以下部分说明如何连接到每个。
+当连接到的大数据群集时，可以选择要连接到 SQL Server 主实例或 HDFS/Spark 网关。 以下部分说明如何连接到每个。
 
 ## <a id="master"></a> 主实例
 
@@ -79,6 +79,9 @@ SQL Server 主实例是包含关系的 SQL Server 数据库的传统 SQL Server 
 1. 在 Azure Data Studio，按**F1** > **新连接**。
 
 1. 在中**连接类型**，选择**SQL Server 大数据群集**。
+
+   > [!TIP]
+   > 如果没有看到**SQL Server 大数据群集**连接类型，请确保已安装[SQL Server 2019 扩展](../azure-data-studio/sql-server-2019-extension.md)和已完成的扩展后重启 Azure Data Studio正在安装。
 
 1. 键入中的大数据群集的 IP 地址**服务器名称**（不指定端口）。
 

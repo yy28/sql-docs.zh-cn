@@ -12,12 +12,12 @@ ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5624b58f95ca6a5f47af6269a2bd4cbc6a30033b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f2a0aa29f032dfed7202430aeb44b20e05c78c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758189"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134967"
 ---
 # <a name="mssqleng014161"></a>MSSQL_ENG014161
     
@@ -35,7 +35,7 @@ ms.locfileid: "52758189"
 ## <a name="explanation"></a>解释  
  使用复制可以对一些情况启用警告。 这些情况包括超过了事务订阅的指定滞后时间。 滞后时间是指在发布服务器上提交数据更改到在订阅服务器上提交相应更改之间所用的时间。  
   
- 使用复制监视器或 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)启用警告时，请指定阈值以确定何时触发警告。 达到或超过该阈值时，复制监视器中将显示警告，并且将一个事件写入 Windows 事件日志。 达到阈值还会触发 SQL Server 代理警报。 有关详细信息，请参阅[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以编程方式监视复制](monitor/monitoring-replication-overview.md)。  
+ 使用复制监视器或 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)启用警告时，请指定阈值以确定何时触发警告。 达到或超过该阈值时，复制监视器中将显示警告，并且将一个事件写入 Windows 事件日志。 达到阈值还会触发 SQL Server 代理警报。 有关详细信息，请参阅[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以编程方式监视复制](monitoring-replication.md)。  
   
 ## <a name="user-action"></a>用户操作  
  如果订阅超过滞后时间阈值，则必须确定是系统发生性能问题还是应当调整阈值。 配置复制后，请确立一个性能基准，以便于确定复制在通常用于应用程序和拓扑的常见工作负荷中的行为方式。 在此基准中包含滞后时间，以便可以设置适当的阈值。  

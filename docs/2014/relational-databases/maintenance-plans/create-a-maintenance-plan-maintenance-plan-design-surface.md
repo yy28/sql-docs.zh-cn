@@ -12,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775789"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132782"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
@@ -55,7 +55,7 @@ ms.locfileid: "52775789"
   
 3.  右键单击“维护计划”  文件夹，然后选择“新建维护计划” 。  
   
-4.  在 **“新建维护计划”** 对话框的 **“名称”** 框中，为该计划键入一个名称，然后单击 **“确定”**。 这将打开工具箱和 *maintenance_plan_name* **[设计]** 图面，其中包含在主网格中创建的 **Subplan_1** 子计划。  
+4.  在 **“新建维护计划”** 对话框的 **“名称”** 框中，为该计划键入一个名称，然后单击 **“确定”**。 这将打开工具箱和 _maintenance_plan_name_ **[设计]** 图面，其中包含在主网格中创建的 **Subplan_1** 子计划。  
   
      在设计空间的标头中提供以下选项。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52775789"
   
         1.  如果您选择了 **“生成文本文件报告”**，则选择 **“创建新文件”** 或 **“追加到文件”**。  
   
-        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号 **（...）** 中的文件夹或文件名称中选择的路径和 **定位文件夹-* * * server_name*或 **定位数据库文件-* * * server_name*对话框。  
+        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号 **（...）** 并选择中的文件夹或文件名称的路径**定位文件夹-**_server_name_或**定位数据库文件-**_server_name_对话框。  
   
         3.  如果您选择 **“将报告发送给电子邮件收件人”**，则在 **“代理操作员”** 列表上，选择以电子邮件形式发送的报告的收件人。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52775789"
   
 12. 若要在日志文件查看器中查看结果，请在“对象资源管理器” 中右键单击“维护计划”  文件夹或特定维护计划，然后选择“查看历史记录” 。  
   
-     还提供以下选项 **日志文件查看器-* * * server_name*对话框。  
+     还提供以下选项**日志文件查看器-**_server_name_对话框。  
   
      **加载日志**  
      打开一个对话框，您可以在其中指定要加载的日志文件。  

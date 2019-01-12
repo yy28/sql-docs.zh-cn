@@ -1,7 +1,7 @@
 ---
 title: 可用性副本未联接 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb42a01a13ad35845133676aa59ef74453487fba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358159"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206253"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性副本未联接
     
@@ -42,7 +42,7 @@ ms.locfileid: "53358159"
  辅助副本未联接到可用性组。 要将某一可用性副本成功联接到可用性组，联接状态必须为“已联接独立实例”(1) 或“已联接故障转移群集”(2)。  
   
 ## <a name="possible-solution"></a>可能的解决方法  
- 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio 将辅助副本联接到可用性组。 有关将辅助副本联接到可用性组的详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](https://msdn.microsoft.com/en-sg/library/ff878473\(en-us,SQL.110\).aspx)。  
+ 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio 将辅助副本联接到可用性组。 有关将辅助副本联接到可用性组的详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff878473\(en-us,SQL.110\).aspx)。  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

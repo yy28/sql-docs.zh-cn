@@ -23,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5f5b1b235cf3cf3a97198a97ee6a8520a6034635
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797950"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134667"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>执行包实用工具 (DtExecUI) UI 参考
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 可以从打开此用户界面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或通过键入`dtexecui`在命令提示符，是通过使用在运行包的替代方法**DTExec**命令提示工具。  
@@ -67,7 +67,7 @@ ms.locfileid: "52797950"
 |||  
 |-|-|  
 |ReplTest1|Description|  
-|**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
+|**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 **/USER** _username_ 和 **/PASSWORD** _password_ options to the comm和 prompt.|  
 |**文件系统**|当包驻留在文件系统时选择此选项。|  
 |**SSIS 包存储区**|当包驻留在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区时选择此选项。|  
   

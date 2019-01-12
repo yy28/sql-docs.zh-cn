@@ -23,12 +23,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527498"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226514"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_优化\_建议 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,7 @@ ms.locfileid: "52527498"
  返回的信息`sys.dm_db_tuning_recommendations`时更新数据库引擎标识潜在查询性能回归，因而不会持久保留。 建议将一直保留，直到仅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新启动。 如果要在服务器回收后保留，数据库管理员应定期制作备份副本的优化建议。 
 
  `currentValue` 字段中`state`列可能具有以下值：
+ 
  | “登录属性” | Description |
  |--------|-------------|
  | `Active` | 建议处于活动状态且未尚未应用。 用户可以采用建议脚本并手动执行。 |
@@ -88,27 +89,95 @@ ms.locfileid: "52527498"
 
  在详细信息列的统计信息不会显示运行时计划统计信息 （例如，当前 CPU 时间）。 建议详细信息在回归检测时执行，并描述原因[!INCLUDE[ssde_md](../../includes/ssde_md.md)]标识性能回归。 使用`regressedPlanId`并`recommendedPlanId`查询[查询存储目录视图](../../relational-databases/performance/how-query-store-collects-data.md)查找确切的运行时计划统计信息。
 
-## <a name="using-tuning-recommendations-information"></a>使用优化建议信息  
-可以使用以下查询以获取[!INCLUDE[tsql](../../includes/tsql-md.md)]将解决此问题的脚本：  
+## <a name="examples-of-using-tuning-recommendations-information"></a>使用优化建议信息的示例  
+
+### <a name="example-1"></a>示例 1
+获取生成以下[!INCLUDE[tsql](../../includes/tsql-md.md)]会强制任何给定查询的良好计划的脚本：  
  
 ```sql
 SELECT name, reason, score,
-        JSON_VALUE(details, '$.implementationDetails.script') as script,
-        details.* 
+    JSON_VALUE(details, '$.implementationDetails.script') AS script,
+    details.* 
 FROM sys.dm_db_tuning_recommendations
-    CROSS APPLY OPENJSON(details, '$.planForceDetails')
-                WITH (  query_id int '$.queryId',
-                        regressed_plan_id int '$.regressedPlanId',
-                        last_good_plan_id int '$.recommendedPlanId') as details
-WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
+CROSS APPLY OPENJSON(details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressed_plan_id int '$.regressedPlanId',
+            last_good_plan_id int '$.recommendedPlanId') AS details
+WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
-  
- 有关可用于查询建议视图中的值的 JSON 函数的详细信息，请参阅[JSON 支持](../../relational-databases/json/index.md)中[!INCLUDE[ssde_md](../../includes/ssde_md.md)]。
+### <a name="example-2"></a>示例 2
+获取生成以下[!INCLUDE[tsql](../../includes/tsql-md.md)]会强制任何给定的查询和估计性能提升的附加信息的良好计划的脚本：
+
+```sql
+SELECT reason, score,
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+FROM sys.dm_db_tuning_recommendations
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+          ) AS planForceDetails;
+```
+
+### <a name="example-3"></a>示例 3
+获取生成以下[!INCLUDE[tsql](../../includes/tsql-md.md)]强制任何给定的查询和其他信息，包括查询文本的良好计划和查询存储中存储的查询计划的脚本：
+
+```sql
+WITH cte_db_tuning_recommendations
+AS (SELECT reason,
+        score,
+        query_id,
+        regressedPlanId,
+        recommendedPlanId,
+        current_state = JSON_VALUE(state, '$.currentValue'),
+        current_state_reason = JSON_VALUE(state, '$.reason'),
+        script = JSON_VALUE(details, '$.implementationDetails.script'),
+        estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+        error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+    FROM sys.dm_db_tuning_recommendations
+    CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+    WITH ([query_id] int '$.queryId',
+        regressedPlanId int '$.regressedPlanId',
+        recommendedPlanId int '$.recommendedPlanId',
+        regressedPlanErrorCount int,    
+        recommendedPlanErrorCount int,
+        regressedPlanExecutionCount int,
+        regressedPlanCpuTimeAverage float,
+        recommendedPlanExecutionCount int,
+        recommendedPlanCpuTimeAverage float
+        )
+    )
+SELECT qsq.query_id,
+    qsqt.query_sql_text,
+    dtr.*,
+    CAST(rp.query_plan AS XML) AS RegressedPlan,
+    CAST(sp.query_plan AS XML) AS SuggestedPlan
+FROM cte_db_tuning_recommendations AS dtr
+INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
+    AND rp.plan_id = dtr.regressedPlanId
+INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
+    AND sp.plan_id = dtr.recommendedPlanId
+INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
+INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
+```
+
+有关可用于查询建议视图中的值的 JSON 函数的详细信息，请参阅[JSON 支持](../../relational-databases/json/index.md)中[!INCLUDE[ssde_md](../../includes/ssde_md.md)]。
   
 ## <a name="permissions"></a>权限  
 
-上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+需要`VIEW SERVER STATE`中的权限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。   
+需要`VIEW DATABASE STATE`中的数据库权限[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 
 ## <a name="see-also"></a>请参阅  
  [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)   

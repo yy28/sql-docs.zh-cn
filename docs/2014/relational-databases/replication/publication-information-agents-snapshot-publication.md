@@ -12,12 +12,12 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a50c6e27b57ec24c50f72a1dbea89f429dec19e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762521"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135747"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>发布信息，代理（快照发布）
   **“代理”** 选项卡显示所选发布的快照代理的摘要信息。  
@@ -47,7 +47,7 @@ ms.locfileid: "52762521"
 -   已完成  
   
  **代理**  
- 快照代理。 这是与快照发布关联的唯一代理。 分发代理与此发布的订阅关联。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 快照代理。 这是与快照发布关联的唯一代理。 分发代理与此发布的订阅关联。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  **上次启动时间**  
  代理上次启动的时间。  
@@ -60,8 +60,7 @@ ms.locfileid: "52762521"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看发布的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [查看与发布关联的代理的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   
   

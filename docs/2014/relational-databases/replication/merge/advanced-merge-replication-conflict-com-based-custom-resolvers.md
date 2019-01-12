@@ -13,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823519"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134947"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   与默认解决机制相比，自定义冲突解决程序提供了更大的灵活性，可以实现使用复制数据的应用程序所需的业务逻辑。 基于 COM 的自定义冲突解决程序是一个动态链接库 (DLL)，它实现了 **ICustomResolver** COM 接口、方法、属性以及其他专为解决冲突设计的支持接口和类型定义。  
@@ -32,7 +32,7 @@ ms.locfileid: "52823519"
   
 -   要解决的行更改类型（例如更新、插入和删除）以及是否在上载和/或下载合并更改过程中调用冲突解决程序。 可以指定一种类型的更改、所有更改或任何组合。 默认的合并冲突解决程序处理自定义冲突解决程序未处理的所有冲突。  
   
--   是否在解决冲突时使用列跟踪。 当列级跟踪处于开启状态时，只有那些存在冲突的行中的数据才标志为冲突，否则合并这些数据。 但是，解决冲突的方式与行级跟踪相同：优先级入选方覆盖整行数据（但数据可以是来自发布服务器、订阅服务器的混合值，也可以是既不来自发布服务器也不来自订阅服务器的某些更改值）。 有关详细信息，请参阅 [检测并解决合并复制冲突](advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+-   是否在解决冲突时使用列跟踪。 当列级跟踪处于开启状态时，只有那些存在冲突的行中的数据才标志为冲突，否则合并这些数据。 但是，解决冲突的方式与行级跟踪相同：优先级入选方覆盖整行数据（但数据可以是来自发布服务器、订阅服务器的混合值，也可以是既不来自发布服务器也不来自订阅服务器的某些更改值）。 有关详细信息，请参阅 [检测并解决合并复制冲突](advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  若要实现基于 COM 的自定义冲突解决程序，请参阅 [为合并项目实现自定义冲突解决程序](../implement-a-custom-conflict-resolver-for-a-merge-article.md)。  
   

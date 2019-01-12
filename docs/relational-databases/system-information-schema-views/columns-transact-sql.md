@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6666f717881d30c7232a7b83b3f6a6c59925df71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f6a14751ea8a0b268c846935e5058c10d79b4d60
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658097"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131777"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为当前数据库中当前用户可访问的每一列返回一行。  
   
- 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA * * *。** view_name *。  
+ 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA**_.view_name_。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **&#42;&#42;重要&#42; &#42;** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|表名。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|列名称。|  
 |**ORDINAL_POSITION**|**int**|列标识号。|  
@@ -57,7 +57,7 @@ ms.locfileid: "51658097"
 |**COLLATION_SCHEMA**|**nvarchar(** 128 **)**|始终返回 NULL。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|如果列为字符数据，则返回排序规则的唯一名称或**文本**数据类型。 否则，返回 NULL。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|如果此列是别名数据类型，则此列是在其中创建用户定义数据类型的数据库的名称。 否则，返回 NULL。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果列是用户定义数据类型，则此列将返回该用户定义数据类型的架构名称。 否则，返回 NULL。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果列是用户定义数据类型，则此列将返回该用户定义数据类型的架构名称。 否则，返回 NULL。<br /><br /> **&#42;&#42;重要&#42; &#42;** 请勿使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
 |**DOMAIN_NAME**|**nvarchar(** 128 **)**|如果列是用户定义数据类型，则此列是该用户定义数据类型的名称。 否则，返回 NULL。|  
   
 ## <a name="remarks"></a>备注  

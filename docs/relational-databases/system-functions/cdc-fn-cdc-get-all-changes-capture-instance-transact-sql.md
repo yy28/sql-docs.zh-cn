@@ -17,19 +17,19 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4614ab97c2f5726c1c5382fbe87b9198f9cf2f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800725"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136027"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为在指定日志序列号 (LSN) 范围内应用到源表的每项更改返回一行。 如果源行在该间隔内有多项更改，则每项更改都会表示在返回的结果集中。 除了返回更改数据外，四个元数据列还提供了将更改应用到另一个数据源所需的信息。 行筛选选项可控制元数据列的内容以及结果集中返回的行。 当指定“all”行筛选选项时，针对每项更改将只有一行来标识该更改。 当指定“all update old”选项时，更新操作会表示为两行：一行包含更新之前已捕获列的值，另一行包含更新之后已捕获列的值。  
   
- 此枚举函数是在对源表启用变更数据捕获时创建的。 函数名称派生的采用格式 **cdc.fn_cdc_get_all_changes_***capture_instance*其中*capture_instance*是源表时为捕获实例指定的值启用了变更数据捕获。  
+ 此枚举函数是在对源表启用变更数据捕获时创建的。 函数名称派生的采用格式**cdc.fn_cdc_get_all_changes_**_capture_instance_其中*capture_instance*是指定的捕获的值为变更数据捕获启用源表时的实例。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +77,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |**__$update_mask**|**varbinary(128)**|位掩码，为捕获实例标识的每个已捕获列均对应于一个位。 此值将所有定义的位设置为 1 **__ $operation** = 1 或 2。 当 **__ $operation** = 3 或 4，则只有那些对应已更改列的位设置为 1。|  
 |\<捕获的源表列>|不定|函数返回的其余列是在创建捕获实例时标识的已捕获列。 如果已捕获列的列表中未指定任何列，则将返回源表中的所有列。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。 如果调用方不具有查看源数据的权限，该函数将返回错误 229 ("的 SELECT 权限被拒绝对对象 'fn_cdc_get_all_changes_...'，数据库\<数据库名称 >'，架构 'cdc'。")。  
   
 ## <a name="remarks"></a>备注  

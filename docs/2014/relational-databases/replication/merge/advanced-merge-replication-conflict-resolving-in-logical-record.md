@@ -13,17 +13,17 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 379357c8598fbdfddedfaa6b3cc5952e2a9119c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786069"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135617"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
   本主题介绍使用逻辑记录时冲突检测和冲突解决方法的各种可能组合。 多个节点更改同一数据，或者合并复制遇到某些类型的错误（如复制更改时违反了约束）时，合并复制中会出现冲突。 有关冲突检测和解决的详细信息，请参阅 [高级合并复制冲突的检测和解决](advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
- 若要指定项目的冲突跟踪和解决方法级别，请参阅 [为合并项目指定冲突跟踪和解决方法级别](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)。  
+ 若要指定项目的冲突跟踪和解决方法级别，请参阅 [为合并项目指定冲突跟踪和解决方法级别](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)。  
   
 ## <a name="conflict-detection"></a>冲突检测  
  检测逻辑记录中的冲突的方法由两个项目属性决定： **column_tracking** 和 **logical_record_level_conflict_detection**。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更高版本还支持逻辑记录级检测。  

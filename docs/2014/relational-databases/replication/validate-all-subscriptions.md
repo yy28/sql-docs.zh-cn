@@ -14,12 +14,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0f9161e0b083afe8a57c396ba9d6e1db68755c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b33cfe47cebba4c24c90ad41ce1b218192d128f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799599"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135957"
 ---
 # <a name="validate-all-subscriptions"></a>验证所有订阅
   可以使用 **“验证所有订阅”** 对话框，指定下次运行各个订阅的合并代理时应验证对合并发布的所有订阅。 验证的结果显示在复制监视器中。 有关详细信息，请参阅 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  
@@ -34,6 +34,6 @@ ms.locfileid: "52799599"
  除了可在发布服务器和订阅服务器上对行进行计数之外，还可使用二进制校验和算法来计算所有数据的校验和。 如果行计数失败，则不计算校验和。 此选项对 [!INCLUDE[ssEW](../../includes/ssew-md.md)]无效。  
   
 ## <a name="see-also"></a>请参阅  
- [验证已复制的数据](validate-replicated-data.md)  
+ [验证已复制的数据](validate-data-at-the-subscriber.md)  
   
   

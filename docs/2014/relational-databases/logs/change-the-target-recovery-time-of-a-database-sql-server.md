@@ -10,12 +10,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36be65b9e359d4fe115e2b410db181f049c1eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766819"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131447"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>更改数据库的目标恢复时间 (SQL Server)
   本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置和更改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库的目标恢复时间。 默认情况下，目标恢复时间为 0，数据库使用“自动检查点”  （由 **recovery interval** 服务器选项控制）。 如果将目标恢复时间设置为大于 0，数据库将使用“间接检查点”  并为此数据库建立恢复时间上限。  
@@ -57,7 +57,7 @@ ms.locfileid: "52766819"
   
 2.  按如下所示使用以下 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)语句：  
   
-     TARGET_RECOVERY_TIME =target_recovery_time { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      大于 0（默认值）时，指定在发生崩溃的情况下指定数据库的恢复时间上限。  

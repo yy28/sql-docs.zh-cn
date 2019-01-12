@@ -16,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0fb57b14b27fd2682efae9da8befae6c5454f1d1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375629"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132117"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改复制安全设置。 例如，您可能需要将日志读取器代理到发布服务器的连接从 SQL Server 身份验证更改为 Windows 集成身份验证，或者您可能需要在 Window 帐户密码更改后更改用于运行代理作业的凭据。 有关每个代理所需权限的信息，请参阅[复制代理安全模型](replication-agent-security-model.md)。  
@@ -572,10 +572,10 @@ ms.locfileid: "53375629"
 ## <a name="see-also"></a>请参阅  
  [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [升级复制脚本（复制 Transact-SQL 编程）](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [管理复制中的登录名和密码](manage-logins-and-passwords-in-replication.md)   
+ [管理复制中的登录名和密码](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [复制代理安全模式](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)   
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

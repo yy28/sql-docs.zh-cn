@@ -19,12 +19,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d067f6cd8981780efa057f7367cd5282c7e668a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 064b6e915b2b1fbc7de1ef9b280bc406d7fc92e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203336"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132337"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
   在创建发布后，可以添加和删除项目。 可以随时添加项目，但删除项目所需的操作取决于复制的类型和删除项目的时间。  

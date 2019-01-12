@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541822"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134397"
 ---
 # <a name="create-views"></a>创建视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建视图。 可以将视图用于以下用途：  
@@ -70,7 +70,7 @@ ms.locfileid: "52541822"
   
 6.  在 **“条件窗格”** 中，选择列的其他排序或筛选条件。  
   
-7.  在“文件”菜单上，单击“保存***视图名称”。  
+7.  在“文件”菜单上，单击“保存”以保存_视图名称_。  
   
 8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
   

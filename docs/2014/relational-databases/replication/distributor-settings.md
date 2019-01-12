@@ -1,5 +1,5 @@
 ---
-title: 分发服务器设置 | Microsoft Docs
+title: 分发服务器设置对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ccd710e20ba1cb280b60dea72bad368e80505846
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753209"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132317"
 ---
-# <a name="distributor-settings"></a>分发服务器设置
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 复制分发服务器设置对话框
   使用 **“分发服务器设置”** 对话框，可以更改已添加到复制监视器左窗格中的分发服务器的设置。  
   
 ## <a name="options"></a>选项  

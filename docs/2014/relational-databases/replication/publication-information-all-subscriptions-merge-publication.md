@@ -12,12 +12,12 @@ ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a7139c51aaa960fd2806ba1d969f6057e8f95e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761529"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135917"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>发布信息，所有订阅（合并发布）
   **“所有订阅”** 选项卡显示所选合并发布的所有订阅的相关信息。  
@@ -103,8 +103,7 @@ ms.locfileid: "52761529"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看订阅的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [查看与订阅关联的代理的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
  [合并复制的 Web 同步](web-synchronization-for-merge-replication.md)  
   

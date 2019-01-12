@@ -13,12 +13,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c411b3f032931dfe0964fe008d7fa1b5598d6423
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822951"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134797"
 ---
 # <a name="modify-primary-keys"></a>修改主键
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的主键。 您可以通过更改列顺序、索引名称、聚集选项或填充因子，修改表的主键。  
@@ -59,7 +59,7 @@ ms.locfileid: "52822951"
     |定义填充因子|展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。 有关填充因子及其用途的详细信息，请参阅 [为索引指定填充因子](../indexes/specify-fill-factor-for-an-index.md)。|  
     |更改列顺序|选择“列”，再单击属性右侧的省略号 (…)。 在  **“索引列”** 对话框中，将这些列从主键中删除。 然后，按所需顺序重新添加这些列。 若要将某列从键中移除，只需将其列名从 **“列”** 名称列表名称中移除即可。|  
   
-4.  在“文件”菜单上，单击“保存table name”。  
+4.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改主键**  

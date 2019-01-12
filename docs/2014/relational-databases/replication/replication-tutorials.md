@@ -14,12 +14,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2d57e12535bad09c1ddf1f89e87cba17e364f19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784817"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135389"
 ---
 # <a name="replication-tutorials"></a>复制教程
   在复制教程中，您将学习如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]安装和运行复制拓扑。  
@@ -40,6 +40,6 @@ ms.locfileid: "52784817"
  学习如何使用合并复制在服务器与仅偶尔连接的一个或多个客户端之间交换数据。  
   
 ## <a name="see-also"></a>请参阅  
- [安全性和保护（复制）](security/security-and-protection-replication.md)  
+ [SQL Server 复制安全性](security/view-and-modify-replication-security-settings.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cb4757d454343b48d5eea74d10d66cdbaa7a52a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817187"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134107"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  将复制其快照内容的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@destination_folder=**] **'***destination_folder*****  
+ [  **@destination_folder=**] **'**_destination_folder_  
  是的发布快照内容要复制的名称。 *destination_folder*是**nvarchar(255)**，无默认值。 *Destination_folder*可以如另一台服务器、 网络驱动器或可移动媒体 （如 Cd-rom 或可移动磁盘） 的备用位置。  
   
- [ **@subscriber=**] **'***订阅服务器*****  
+ [  **@subscriber=**] **'**_订阅服务器上_  
  订阅服务器的名称。 *订阅服务器*数据类型为 sysname，默认值为 NULL。  
   
- [ **@subscriber_db=**] **'***subscriber_db*****  
+ [  **@subscriber_db=**] **'**_subscriber_db_  
  是订阅数据库的名称。 *subscriber_db*数据类型为 sysname，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -62,7 +62,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_copysnapshot**。  
   
 ## <a name="see-also"></a>请参阅  
- [备用快照文件夹位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [备用快照文件夹位置](../../relational-databases/replication/snapshot-options.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

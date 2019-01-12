@@ -10,12 +10,12 @@ ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812289"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133257"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改 SQL Server 代理主作业的步骤。  
@@ -56,13 +56,13 @@ ms.locfileid: "52812289"
   
 4.  右键单击要修改步骤的作业，然后选择“属性”。  
   
-5.  在 **作业属性-* * * job_name*对话框中的**选择页**，选择**步骤**。  
+5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”。  
   
-6.  单击**编辑**以打开 **作业步骤属性-* * * job_step_name*对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性：新建作业步骤&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)并[作业步骤属性：新建作业步骤&#40;高级页&#41;](job-step-properties-new-job-step-advanced-page.md)。  
+6.  单击**编辑**以打开**作业步骤属性-**_job_step_name_对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性：新建作业步骤&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)并[作业步骤属性：新建作业步骤&#40;高级页&#41;](job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成后，单击 **“确定”**。  
   
-8.  在 **作业属性-* * * job_name*对话框中，单击**确定**。  
+8.  在中**作业属性-**_job_name_对话框中，单击**确定**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

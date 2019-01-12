@@ -13,12 +13,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f58b96f2b8d95f31eeb89c9e0796b39a221b0a66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786119"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133317"
 ---
 # <a name="article-options-for-merge-replication"></a>合并复制的项目选项
   有许多用于合并表项目的选项，可以使用这些选项自定义复制行为以满足应用程序的需要。 使用合并复制可执行以下操作：  
@@ -29,11 +29,11 @@ ms.locfileid: "52786119"
   
 -   指定复制触发器和系统表不能跟踪一个或多个项目的删除操作。 此选项在许多应用方案中都非常有用。 其中包括那些使用不需要复制的批处理删除操作的应用方案。 有关详细信息，请参阅[使用条件性删除跟踪优化合并复制性能](optimize-merge-replication-performance-with-conditional-delete-tracking.md)。  
   
--   指定项目的处理顺序以确保项目按照应用程序要求的顺序处理。 有关详细信息，请参阅[指定合并项目的处理顺序](specify-the-processing-order-of-merge-articles.md)。  
+-   指定项目的处理顺序以确保项目按照应用程序要求的顺序处理。 有关详细信息，请参阅[指定合并复制属性](../publish/specify-merge-replication-properties.md)。  
   
 -   指定应将一组相关记录作为一个单元进行处理（默认情况下，合并复制逐行处理对表的更改）。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)。  
   
--   在一个拓扑中的多个节点上更改相同数据的情况下使用冲突检测和解决方法。 有关详细信息，请参阅 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+-   在一个拓扑中的多个节点上更改相同数据的情况下使用冲突检测和解决方法。 有关详细信息，请参阅 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 -   指定架构选项（例如，是否将约束和触发器复制到订阅服务器）。 有关详细信息，请参阅 [指定架构选项](../publish/specify-schema-options.md)。  
   

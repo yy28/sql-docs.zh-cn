@@ -12,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810889"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136057"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
   从设计上，从 Oracle 数据库中进行发布几乎与从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中进行发布一样。 不过，还应注意下列限制和问题：  
@@ -135,7 +135,7 @@ ms.locfileid: "52810889"
   
 -   Oracle 发布的订阅服务器不能从备份中自动初始化。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持两种验证：二进制验证和行计数验证。 Oracle 发布服务器支持行计数验证。 有关详细信息，请参阅[验证已复制的数据](../validate-replicated-data.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持两种验证：二进制验证和行计数验证。 Oracle 发布服务器支持行计数验证。 有关详细信息，请参阅[验证已复制的数据](../validate-data-at-the-subscriber.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 Oracle 发布服务器支持字符模式快照。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52810889"
   
     -   不能通过 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) 更改 **@job_login** 参数，但可以更改密码。  
   
- 有关复制安全性的详细信息，请参阅[安全性和保护（复制）](../security/security-and-protection-replication.md)。  
+ 有关复制安全性的详细信息，请参阅[SQL Server 复制安全性](../security/view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Oracle 发布服务器的管理注意事项](administrative-considerations-for-oracle-publishers.md)   

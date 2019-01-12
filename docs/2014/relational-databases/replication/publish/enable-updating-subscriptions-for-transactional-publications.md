@@ -14,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784889"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135947"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>对事务发布启用更新订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中对事务发布启用更新订阅。  
@@ -37,7 +37,7 @@ ms.locfileid: "52784889"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以在新建发布向导的 **“发布类型”** 页上对事务发布启用更新订阅。 有关使用此向导的详细信息，请参阅[创建发布](create-a-publication.md)。 不能在创建发布之后启用更新订阅。  
   
- 若要使用更新订阅，还必须在新建订阅向导中配置一些选项。 有关详细信息，请参阅 [创建事务发布的可更新订阅](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
+ 若要使用更新订阅，还必须在新建订阅向导中配置一些选项。 有关详细信息，请参阅 [创建事务发布的可更新订阅](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 #### <a name="to-enable-updating-subscriptions"></a>启用更新订阅  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52784889"
   
 4.  向发布添加项目。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
   
-5.  在订阅服务器上，创建此发布的更新订阅。 有关详细信息，请参阅 [创建事务发布的可更新订阅](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
+5.  在订阅服务器上，创建此发布的更新订阅。 有关详细信息，请参阅 [创建事务发布的可更新订阅](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>创建支持排队更新订阅的发布  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52784889"
   
 5.  向发布添加项目。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
   
-6.  在订阅服务器上，创建此发布的更新订阅。 有关详细信息，请参阅 [创建事务发布的可更新订阅](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
+6.  在订阅服务器上，创建此发布的更新订阅。 有关详细信息，请参阅 [创建事务发布的可更新订阅](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>为允许排队更新订阅的发布更改冲突策略  
   
@@ -105,11 +105,11 @@ ms.locfileid: "52784889"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>请参阅  
- [设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [事务复制的发布类型](../transactional/publication-types-for-transactional-replication.md)   
+ [设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [事务复制的发布类型](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [将 sqlcmd 与脚本变量结合使用](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 Analysis Services 向后兼容性 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072424"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185073"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 向后兼容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072424"
 本文描述了中功能可用性和当前版本和以前的版本之间行为的更改。
 
 ## <a name="deprecated-features"></a>已弃用的功能
-一个*弃用的功能*将停用从产品中未来版本中，但仍支持并包含在当前版本，以保持向后兼容性。 建议您停止使用新的和现有项目中已弃用的功能以保持与将来的版本兼容。
+一个*弃用的功能*将停用从产品中未来版本中，但仍支持并包含在当前版本，以保持向后兼容性。 建议您停止使用新的和现有项目中已弃用的功能以保持与将来的版本兼容。 文档不会更新为已弃用的功能。
 
 在此版本中已弃用以下功能：
   

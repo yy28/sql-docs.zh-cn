@@ -12,12 +12,12 @@ ms.assetid: 636566db-ffcf-4109-8c11-15b8c7cb9cd9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 243b9b1658e2a0b34626e973799127b19ddc0e11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 86ec01db387d1c130ab593e99e5ef66a73259cf6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806739"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132614"
 ---
 # <a name="mssqleng020572"></a>MSSQL_ENG020572
     
@@ -33,7 +33,7 @@ ms.locfileid: "52806739"
 |消息正文|在验证失败之后，订阅服务器“%s”对发布“%s”中项目“%s”的订阅已被重新初始化。|  
   
 ## <a name="explanation"></a>解释  
- 根据发布服务器上的数据对订阅服务器上的数据进行验证，数据不匹配；因此验证失败。 在指定应该执行的验证时，选择了如果验证失败则应重新初始化订阅的选项。 重新初始化订阅包括在订阅服务器上应用新的快照。 有关验证的详细信息，请参阅 [Validate Replicated Data](validate-replicated-data.md)。  
+ 根据发布服务器上的数据对订阅服务器上的数据进行验证，数据不匹配；因此验证失败。 在指定应该执行的验证时，选择了如果验证失败则应重新初始化订阅的选项。 重新初始化订阅包括在订阅服务器上应用新的快照。 有关验证的详细信息，请参阅 [Validate Replicated Data](validate-data-at-the-subscriber.md)。  
   
 ## <a name="user-action"></a>用户操作  
  在订阅服务器上应用了新的快照后，发布服务器和订阅服务器上的数据将会匹配。  

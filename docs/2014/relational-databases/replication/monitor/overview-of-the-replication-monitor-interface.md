@@ -13,12 +13,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b03c94ccfd50dc1c031c7e25f548e61ab1de1ac5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815719"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134577"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>复制监视器界面概述
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器提供一个以发布服务器为主或以分发服务器为主的视图，以两个窗格的形式显示所有复制活动。 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
@@ -104,7 +104,7 @@ ms.locfileid: "52815719"
   
      此选项卡显示所有类型的复制所用代理和作业的详细信息。 使用该选项卡，还可以启动和停止每个代理和作业。  
   
- 有关详细信息，请参阅[为发布服务器查看信息和执行任务（复制监视器）](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
+ 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
   
  复制监视器还为发布服务器节点提供了上下文菜单。 右键单击左窗格中的发布服务器，可以执行下列操作：  
   
@@ -177,7 +177,7 @@ ms.locfileid: "52815719"
   
          可用的错误消息提供代理不运行的详细原因，并为解决与发布关联的代理的问题提供一个起点。  
   
- 有关详细信息，请参阅[为发布查看信息和执行任务（复制监视器）](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)和[为与发布关联的代理查看信息和执行任务（复制监视器）](view-information-and-perform-tasks-for-publication-agents.md)。  
+ 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
   
  复制监视器还为发布节点提供了上下文菜单。 右键单击左窗格中的发布，可以执行下列操作：  
   
@@ -216,7 +216,7 @@ ms.locfileid: "52815719"
   
          此选项卡提供同步过程中处理的每个项目的详细统计信息，包括每个处理阶段（上载更改、下载更改等）所用的时间。 该选项卡可以帮助准确定位导致减速的特定表，并且是解决合并订阅的性能问题的最佳位置。  
   
- 有关详细信息，请参阅[为订阅查看信息和执行任务（复制监视器）](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)和[为与订阅关联的代理查看信息和执行任务（复制监视器）](view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>查看与代理配置文件相关的信息并执行与其相关的任务  
  复制监视器中包含多个管理代理配置文件的对话框。 代理配置文件是代理的参数集，用于确定代理的行为。 有关详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。 这些对话框包括：  

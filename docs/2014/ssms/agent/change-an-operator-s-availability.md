@@ -22,12 +22,12 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbe4b5e5605964d027e496a56b4dbf0836baaae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801769"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135677"
 ---
 # <a name="change-an-operator39s-availability"></a>更改操作员的可用性
   本主题介绍了如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改操作员接收警报通知的计划。  
@@ -63,7 +63,7 @@ ms.locfileid: "52801769"
   
 4.  右键单击要启用或禁用的操作员，选择“属性”，然后单击“常规”选项卡。  
   
-5.  在“operator_name属性”对话框中，选中或取消选中“启用”复选框。  
+5.  在“operator_name 属性”对话框中，选中或清除“启用”复选框。  
   
 6.  单击“确定” 。  
   

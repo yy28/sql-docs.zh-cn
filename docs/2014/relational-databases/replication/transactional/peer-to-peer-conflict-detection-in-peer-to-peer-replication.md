@@ -13,12 +13,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03a7640f95242538d01c8f135a005729b15042b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813961"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135442"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>对等复制中的冲突检测
   通过对等事务复制，可以在拓扑中的任何节点插入、更新或删除数据并将数据更改传播到其他节点。 由于可在任何节点上更改数据，因此在不同节点上进行的数据更改可能会相互冲突。 如果在多个节点上修改了某一行，则将该行传播给其他节点时会导致冲突甚至丢失更新。  
@@ -26,7 +26,7 @@ ms.locfileid: "52813961"
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更高版本中的对等复制提供了在对等拓扑中启用冲突检测的选项。 此选项将有助于防止出现因未检测到的冲突而引发的各种问题，包括不一致的应用程序行为和丢失的更新。 启用该选项后，默认情况下，发生冲突的更改将被视为导致分发代理失败的关键错误。 发生冲突时，拓扑将始终处于不一致的状态，直至冲突得以解决而且拓扑中的数据保持一致。  
   
 > [!NOTE]  
->  为了避免潜在的数据不一致性，即便已经启用了冲突检测功能，也应尽力避免对等拓扑中发生冲突。 为了确保仅在某一个节点上执行特定行的写入操作，访问并更改数据的应用程序必须对其插入、更新和删除操作进行分区。 分区可确保在一个节点上对给定行进行的修改可以在其他节点修改该行之前，与拓扑中的所有其他节点同步。 如果应用程序需要完善的冲突检测与解决功能，请使用合并复制。 有关详细信息，请参阅[合并复制](../merge/merge-replication.md)和[检测并解决合并复制冲突](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+>  为了避免潜在的数据不一致性，即便已经启用了冲突检测功能，也应尽力避免对等拓扑中发生冲突。 为了确保仅在某一个节点上执行特定行的写入操作，访问并更改数据的应用程序必须对其插入、更新和删除操作进行分区。 分区可确保在一个节点上对给定行进行的修改可以在其他节点修改该行之前，与拓扑中的所有其他节点同步。 如果应用程序需要完善的冲突检测与解决功能，请使用合并复制。 有关详细信息，请参阅[合并复制](../merge/merge-replication.md)和[检测并解决合并复制冲突](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>了解冲突和冲突检测  
  在单个数据库中，不同应用程序对同一行进行的更改不会导致冲突。 原因在于，事务已经过序列化，并使用锁定来处理并发更改。 在异步分布式系统（如对等复制）中，事务独立作用于每个节点，而且没有用来跨多个节点对事务进行序列化的机制。 可以使用两阶段提交之类的协议，但是这会显著影响性能。  
@@ -92,7 +92,7 @@ ms.locfileid: "52813961"
   
     3.  使用冲突查看器验证检测到的冲突，并确定所涉及的行、冲突类型以及入选方。 冲突可基于您在配置过程中指定的发起方 ID 值来解决：源自具有最高 ID 的节点的行将在冲突中入选。 有关详细信息，请参阅[查看事务发布的数据冲突 (SQL Server Management Studio)](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  
   
-    4.  运行验证步骤以确保发生冲突的行能够正确收敛。 有关详细信息，请参阅[验证已复制的数据](../validate-replicated-data.md)。  
+    4.  运行验证步骤以确保发生冲突的行能够正确收敛。 有关详细信息，请参阅[验证已复制的数据](../validate-data-at-the-subscriber.md)。  
   
         > [!NOTE]  
         >  如果在执行该步骤之后数据不一致，则必须在具有最高优先级的节点上手动更新行，然后允许从该节点传播所做的更改。 如果拓扑中不再有发生冲突的更改，则所有节点将保持一致状态。  

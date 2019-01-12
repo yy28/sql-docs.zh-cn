@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f38ef40a1e64544d077f30031fe128070cef2fd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133847"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@database=**] **'***数据库*****  
+ [  **@database=**] **'**_数据库_  
  是分发数据库的名称。 *数据库*是**sysname**，无默认值。  
   
- [ **@property=**] **'***属性*****  
+ [  **@property=**] **'**_属性_  
  要更改的给定数据库的属性。 *属性*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -53,7 +53,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|最小分发保持期。|  
 |NULL（默认值）|所有可用*属性*打印值。|  
   
- [ **@value=**] **'***值*****  
+ [  **@value=**] **'**_值_  
  是指定的属性的新值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

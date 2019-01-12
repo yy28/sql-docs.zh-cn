@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 732d0bc450c23413fb31c7336e93dbf3dc785bec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662776"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143267"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51662776"
   
 ||  
 |-|  
-|**适用于**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
+|**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,11 +35,11 @@ ms.locfileid: "51662776"
 |event_package_guid|**uniqueidentifier**|包含事件的包的 GUID。 不可为 null。|  
 |event_predicate|**nvarchar(2048)**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求拥有 VIEW DATABASE STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
-截至 2015年-07-13 sys.dm_xe_objects 是一个不包含其名称中的 _database 这些 XEvents Dmv。 不是拼写错误或以下表的右侧列中的错误。 名称是 Microsoft SQL Server 和 Azure SQL 数据库中相同的。 GeneMi。  
+截至 2015年-07-13 sys.dm_xe_objects 是一个不包含其名称中的 _database 这些 XEvents Dmv。 不是拼写错误或以下表的右侧列中的错误。 名称是 Microsoft SQL Server 和 Azure SQL 数据库中相同的。  
   
 |From|若要|关系|  
 |--------|------|----------------|  

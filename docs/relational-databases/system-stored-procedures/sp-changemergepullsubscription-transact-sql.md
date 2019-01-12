@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784679"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136127"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，默认值为 %。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 %。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 %。  
   
- [ **@property=**] **'***属性*****  
+ [  **@property=**] **'**_属性_  
  要更改的属性的名称。 *属性*是**sysname**，可以是表中的值之一。  
   
- [ **@value=**] **'***值*****  
+ [  **@value=**] **'**_值_  
  是指定的属性的新值。 *值*是**nvarchar(255)**，可以是表中的值之一。  
   
 |属性|ReplTest1|Description|  

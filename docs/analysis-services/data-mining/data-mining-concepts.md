@@ -1,6 +1,6 @@
 ---
 title: 数据挖掘概念 |Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,28 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981999"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185133"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> 数据挖掘是在 SQL Server Analysis Services 2017 中弃用。 文档不会更新为已弃用的功能。 若要了解详细信息，请参阅[Analysis Services 向后兼容性 (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md)。
+
   数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
   
  这些模式和趋势可以被收集在一起并定义为“数据挖掘模型” 。 挖掘模型可以应用于特定的方案，例如：  
   
--   **预测**：估计销售量、预测服务器负载或服务器停机时间  
+-   **预测**:估计销售量、预测服务器负载或服务器停机时间  
   
--   **风险和概率**：选择目标邮递的最佳客户、确定风险方案的可能保本点、将概率分配给诊断或其他结果  
+-   **风险和概率**:选择目标邮递的最佳客户、确定风险方案的可能保本点、将概率分配给诊断或其他结果  
   
--   **建议**：确定哪些产品有可能一起销售并生成建议  
+-   **建议**:确定哪些产品有可能一起销售并生成建议  
   
--   **查找序列**：分析购物车中的客户选择，并预测接下来可能发生的事件  
+-   **查找序列**:分析购物车中的客户选择，并预测接下来可能发生的事件  
   
--   **分组**：将客户或事件划分到相关的项目分类，分析和预测相关性  
+-   **分组**:将客户或事件划分到相关的项目分类，分析和预测相关性  
   
  生成挖掘模型是大型过程的一部分，此过程包括从提出相关数据问题并创建模型以解答这些问题到将模型部署到工作环境的所有事情。 此过程可以使用下列六个基本步骤进行定义：  
   

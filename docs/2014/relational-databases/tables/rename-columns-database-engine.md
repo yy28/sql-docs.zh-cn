@@ -14,12 +14,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc2cc36a309f74c63ad13f93c9d5e76fb9140900
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770219"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135967"
 ---
 # <a name="rename-columns-database-engine"></a>重命名列（数据库引擎）
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表列。  
@@ -64,7 +64,7 @@ ms.locfileid: "52770219"
   
 2.  在 **“列名”** 下，选择要更改的名称，并键入新名称。  
   
-3.  在“文件”菜单上，单击“保存table name”。  
+3.  在“文件”菜单上，单击“保存”以保存表名。  
   
 > [!NOTE]  
 >  您也可以在 **“列属性”** 选项卡中更改列名。选择要更改名称的列，并为 **“名称”** 键入新值。  

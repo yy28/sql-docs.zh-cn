@@ -1,7 +1,7 @@
 ---
 title: SQLSetConnectAttr |Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7167f88fd1cc3b349df9543080caf6d571322c40
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306254"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206373"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "53306254"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了对新的事务隔离属性 SQL_COPT_SS_TXN_ISOLATION 的支持。 将 SQL_COPT_SS_TXN_ISOLATION 设置为 SQL_TXN_SS_SNAPSHOT 指示事务将在快照隔离级别下发生。  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION 可以用于设置除 SQL_TXN_SS_SNAPSHOT 之外的所有其他隔离级别。 如果要使用快照隔离，必须通过 SQL_COPT_SS_TXN_ISOLATION 设置 SQL_TXN_SS_SNAPSHOT。 但是，可以使用 SQL_ATTR_TXN_ISOLATION 或 SQL_COPT_SS_TXN_ISOLATION 来检索该隔离级别。  
+> SQL_ATTR_TXN_ISOLATION 可以用于设置除 SQL_TXN_SS_SNAPSHOT 之外的所有其他隔离级别。 如果要使用快照隔离，必须通过 SQL_COPT_SS_TXN_ISOLATION 设置 SQL_TXN_SS_SNAPSHOT。 但是，可以使用 SQL_ATTR_TXN_ISOLATION 或 SQL_COPT_SS_TXN_ISOLATION 来检索该隔离级别。  
   
  将 ODBC 语句属性升级为连接属性可能导致意外结果。 可以将向服务器请求用于结果集处理的游标的语句属性升级为连接属性。 例如，将 ODBC 语句属性 SQL_ATTR_CONCURRENCY 设置为比默认 SQL_CONCUR_READ_ONLY 更受限制的值会导致驱动程序为对连接提交的所有语句使用动态游标。 对连接的语句执行 ODBC 目录函数将返回 SQL_SUCCESS_WITH_INFO 和一个诊断记录，该记录指示游标行为已更改为只读。 如果尝试对同一连接执行包含 COMPUTE 子句的 Transact-SQL SELECT 语句，将会失败。  
   
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_IS_OFF|默认值。 登录时将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证用于验证用户标识符和密码。|  
 |SQL_IS_ON|使用 Windows 身份验证模式来验证用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问权限。|  
 
-< 名称 ="sqlcoptssmarsenabled"></a>
+<a name="sqlcoptssmarsenabled"></a>
 ## <a name="sqlcoptssmarsenabled"></a>SQL_COPT_SS_MARS_ENABLED  
  此属性启用或禁用多个活动结果集 (MARS)。 默认情况下，禁用 MARS。 应在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前设置此属性。 打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接后，MARS 在连接的生存期内将保持启用或禁用状态。  
   
@@ -315,7 +316,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  有关快照隔离的详细信息，请参阅[使用快照隔离](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
-## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP  
+## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
+
  不再支持该属性。  
 
 <a name="sqlcoptssuserdata"></a>
@@ -333,7 +335,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_YES|在代码页转换过程中遇到数据丢失时生成警告。|  
 |SQL_WARN_NO|（默认）在代码页转换过程中遇到数据丢失时不生成警告。|  
   
-## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SQLSetConnectAttr 对服务主体名称 (SPN) 的支持  
+## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SQLSetConnectAttr 对服务主体名称 (SPN) 的支持
+
  可以使用 SQLSetConnectAttr 设置新的连接属性 SQL_COPT_SS_SERVER_SPN 和 SQL_COPT_SS_FAILOVER_PARTNER_SPN 的值。 打开连接时不能设置这些属性；如果在打开连接时尝试设置这些属性，将返回错误 HY011 并显示消息“此时操作无效”。 （SQLSetConnectOption 还可设置这些值。）  
   
  有关 Spn 的详细信息，请参阅[服务主体名称&#40;的 Spn&#41;客户端连接中&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
@@ -344,7 +347,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  有关 SQL_COPT_SS_CONNECTION_DEAD 的详细信息，请参阅[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)并[连接到数据源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)。  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>示例
+
  此示例记录性能数据。  
   
 ```  
@@ -388,7 +392,8 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
+
  [SQLSetConnectAttr 函数](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API 实现的详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1ba79898fe1f218e51b8eda10f2fb91784a8d7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133837"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
   **Bcp**大容量复制数据的实例之间[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式的数据文件。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
@@ -90,7 +90,7 @@ ms.locfileid: "52757349"
   
  也可以使用 `d-` 显式指定数据库名称。  
   
- **in** *data_file* | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
+ **in** _data_file_ | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
  指定大容量复制的方向，具体如下：  
   
 -   **in** 从文件复制到数据库表或视图。  
@@ -104,7 +104,7 @@ ms.locfileid: "52757349"
  *所有者*  
  表或视图的所有者的名称。 如果执行该操作的用户拥有指定的表或视图，则*owner* 是可选的。 如果未指定 *owner*，并且执行该操作的用户不是指定的表或视图的所有者，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将返回错误消息，而且该操作将取消。  
   
- **"** *query* **"**  
+ **"** _query_ **"**  
  一个返回结果集的 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询。 如果该查询返回多个结果集，则只将第一个结果集复制到数据文件，而忽略其余的结果集。 将查询用双引号括起来，将查询中嵌入的任何内容用单引号括起来。 从查询大容量复制数据时，也必须指定**queryout** 。  
   
  只要在执行 bcp 语句之前存储过程内引用的所有表均存在，查询就可以引用该存储过程。 例如，如果存储过程生成一个临时表，则 **bcp** 语句便会失败，因为该临时表只在运行时可用，而在语句执行时不可用。 在这种情况下，应考虑将存储过程的结果插入表中，然后使用 **bcp** 将数据从表复制到数据文件中。  
@@ -115,12 +115,12 @@ ms.locfileid: "52757349"
  view_name  
  将数据复制到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**) 时为目标视图名称，从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中复制数据时 (**out**) 为源视图名称。 只有其中所有列都引用同一个表的视图才能用作目标视图。 有关将数据复制到视图的限制的详细信息，请参阅[《INSERT &#40;Transact-SQL&#41;》](/sql/t-sql/statements/insert-transact-sql)。  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  指定服务器发出或接收的每个网络数据包的字节数。 可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] （或 **sp_configure** 系统存储过程）来设置服务器配置选项。 但是，可以使用此选项逐个替代服务器配置选项。 *packet_size* 的取值范围为 4096 到 65535 字节，默认为 4096 字节。  
   
  增大数据包可以提高大容量复制操作的性能。 如果无法得到请求的较大数据包，则使用默认值。 **bcp** 实用工具生成的性能统计信息可以显示所用的数据包大小。  
   
- **-b** *batch_size*  
+ **-b** _batch_size_  
  指定每批导入数据的行数。 每个批次均作为一个单独的事务进行导入并记录，在提交之前会导入整批。 默认情况下，数据文件中的所有行均作为一个批次导入。 若要将行分为多个批次进行操作，请指定小于数据文件中的行数的 *batch_size* 。 如果任何批次的事务失败，则将只回滚当前批次中的插入。 已经由已提交事务导入的批次不会受到将来失败的影响。  
   
  不使用此选项结合 **-h"** ROWS_PER_BATCH  **= *`bb`*"** 选项。  
@@ -141,12 +141,12 @@ ms.locfileid: "52757349"
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|客户端使用的默认代码页。 未指定 **-C** 时使用的默认代码页。|  
 |RAW|不进行代码页间的转换。 因为不进行转换，所以这是最快的选项。|  
-|*code_page*|特定的代码页编号，例如 850。<br /><br /> **\*\* 重要\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持代码页 65001(utf-8 编码）。|  
+|*code_page*|特定的代码页编号，例如 850。<br /><br /> **&#42;&#42;重要&#42; &#42;**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持代码页 65001(utf-8 编码）。|  
   
  `-d` *database_name*  
  指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果`-d` *database_name*和三个部分构成的名称 (*database_name.schema.table*，作为第一个参数传递给 bcp.exe) 指定，将发生错误，因为不能指定两次数据库名称。如果*database_name*开始使用连字符 （-） 或正斜杠 （/），不要添加之间有空格`-d`和数据库名称。  
   
- **-e** *err_file*  
+ **-e** _err_file_  
  指定错误文件的完整路径，此文件用于存储 **bcp** 实用工具无法从文件传输到数据库的所有行。 **bcp** 命令产生的错误消息将被发送到用户的工作站。 如果不使用此选项，则不会创建错误文件。  
   
  如果 *err_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-e** 与 *err_file* 值之间包含空格。  
@@ -158,7 +158,7 @@ ms.locfileid: "52757349"
   
  **-E** 选项有一个特殊的权限要求。 有关详细信息，请参阅本主题后面的“备注”。  
   
- **-f** *format_file*  
+ **-f** _format_file_  
  指定格式化文件的完整路径。 此选项的含义取决于使用它的环境，具体如下：  
   
 -   如果 **-f** 与 **format** 选项一起使用，则将为指定的表或视图创建指定的 *format_file* 。 若要创建 XML 格式化文件，请同时指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。  
@@ -170,12 +170,12 @@ ms.locfileid: "52757349"
   
  如果 *format_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-f** 与 *format_file* 值之间包含空格。  
   
- **-F** *first_row*  
+ **-F** _first_row_  
  指定要从表中导出或从数据文件导入的第一行的编号。 此参数需要大于 (>) 0 的值但小于 (\<) 或总的行数等于 （=）。 如果未指定此参数，则默认为文件的第一行。  
   
  *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F**_first_row_ 的值从 1 开始。  
   
- **-h"** *hint*[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,**... *n*] **"**  
  指定向表或视图中大容量导入数据时要用到的提示。  
   
  ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
@@ -184,7 +184,7 @@ ms.locfileid: "52757349"
  ROWS_PER_BATCH **=**_bb_  
  每批数据的行数（即 *bb*）。 在未指定 **-b** 时使用，这将导致整个数据文件作为单个事务发送到服务器。 服务器根据 *bb*值优化大容量加载。 默认情况下，ROWS_PER_BATCH 是未知的。  
   
- KILOBYTES_PER_BATCH **=** *cc*  
+ KILOBYTES_PER_BATCH **=** _cc_  
  每批的以千字节计数的近似数据量（即 *cc*）。 默认情况下，KILOBYTES_PER_BATCH 是未知的。  
   
  TABLOCK  
@@ -204,12 +204,12 @@ ms.locfileid: "52757349"
 >  **bcp** 现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。  
   
 > [!NOTE]  
->  **-m** *max_errors* 开关不适用于约束检查。  
+>  **-m** _max_errors_ 开关不适用于约束检查。  
   
  FIRE_TRIGGERS  
  与 **in** 参数一同指定，在目标表中定义的任何插入触发器都将在大容量复制操作期间运行。 如果未指定 FIRE_TRIGGERS，将不运行任何插入触发器。 对于 **out**、**queryout** 和 **format** 参数，将忽略 FIRE_TRIGGERS。  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  指定包含每个数据字段的命令提示问题的响应，使用交互模式下执行大容量复制时的响应文件的名称 (**-n**， `-c`， `-w`，或 **-N**未指定)。  
   
  如果 *input_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-i** 与 *input_file* 值之间包含空格。  
@@ -217,15 +217,15 @@ ms.locfileid: "52757349"
  **-k**  
  指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
- **-K** *application_intent*  
+ **-K** _application_intent_  
  连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K**，bcp 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读辅助副本 （AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
- **-L** *last_row*  
+ **-L** _last_row_  
  指定要从表中导出或从数据文件中导入的最后一行的编号。 此参数需要大于 (>) 0 的值但小于 (\<) 或最后一行的行数等于 （=）。 如果未指定此参数，则默认为文件的最后一行。  
   
  *last_row* 可以是一个最大为 2^63-1 的正整数值。  
   
- **-m** *max_errors*  
+ **-m** _max_errors_  
  指定取消 **bcp** 操作之前可能出现的语法错误的最大数目。 语法错误是指将数据转换为目标数据类型时的错误。 *max_errors* 总数不包括只能在服务器中检测到的错误，如约束冲突。  
   
  无法由 **bcp** 实用工具复制的行将被忽略，并计为一个错误。 如果未包括此选项，则默认值为 10。  
@@ -247,12 +247,12 @@ ms.locfileid: "52757349"
   
  可忽略该警告。 解决此警告的一个方法是使用 **-n** 来替代 **-N**。  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
   
  如果 *output_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-o** 与 *output_file* 值之间包含空格。  
   
- **-P** *password*  
+ **-P** _password_  
  指定登录 ID 的密码。 如果未使用此选项， **bcp** 命令将提示输入密码。 如果在命令提示符的末尾使用此选项，但不提供密码，则 **bcp** 将使用默认密码 (NULL)。  
   
 > [!IMPORTANT]  
@@ -271,7 +271,7 @@ ms.locfileid: "52757349"
   
  有关详细信息，请参阅本主题后面的“备注”。  
   
- **-r** *row_term*  
+ **-r** _row_term_  
  指定行终止符。 默认的行终止符是 **\n** （换行符）。 使用此参数可替代默认行终止符。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中以十六进制表示法指定行终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
@@ -281,7 +281,7 @@ ms.locfileid: "52757349"
  **-R**  
  指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中。 默认情况下，将忽略区域设置。  
   
- **-S** *server_name*[ **\\**_instance_name_]  
+ **-S** _server_name_[ **\\**_instance_name_]  
  指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果未指定服务器，则 **bcp** 实用工具将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果从网络或本地命名实例上的远程计算机中运行 **bcp** 命令，则必须使用此选项。 若要连接到服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例，请仅指定 *server_name*。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例，请指定 *server_name**_\\_** instance_name*。  
   
  `-t` *field_term*  
@@ -294,7 +294,7 @@ ms.locfileid: "52757349"
  **-T**  
  指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 不需要网络用户的安全凭据 login_id 和 password。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  指定用于连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的登录 ID。  
   
 > [!IMPORTANT]  

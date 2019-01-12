@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544638"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134997"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
   本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
@@ -191,7 +191,7 @@ ms.locfileid: "52544638"
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 *< number_of_active_connections> * * * 个活动连接**-例如：**1 个活动连接**。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 _< number_of_active_connections>_**个活动连接**-例如：**1 个活动连接**。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "52544638"
   
 8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”** 下，单击 **“添加”**。  
   
-9. 在 **定位数据库文件-* * * server_name*对话框中，选择要附加到新服务器，并单击的数据库文件**确定**。  
+9. 在中**定位数据库文件-**_server_name_对话框中，选择要附加到新服务器，并单击的数据库文件**确定**。  
   
      在 **“附加数据库”** 对话框中提供了以下选项。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52544638"
      **删除**  
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
-     **"** *<database_name>* **”数据库详细信息**  
+     **"** _<database_name>_ **”数据库详细信息**  
      显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)。  
   
     > [!NOTE]  

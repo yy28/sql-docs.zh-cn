@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2f08fa101e2a53696e58f15413ec08c301a9e890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596937"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131937"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @loginame **=** ] **'***登录*****  
+ [ @loginame **=** ] **'**_登录_  
  要从固定服务器角色中删除的登录名。 *登录名* 是 **sysname** ，无默认值。 *登录名*必须存在。  
   
- [ @rolename **=** ] **'***角色*****  
+ [ @rolename **=** ] **'**_角色_  
  服务器角色的名称。 *角色* 是 **sysname** ，默认值为 NULL。 *角色*必须是以下值之一：  
   
 -   sysadmin  
@@ -74,7 +74,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
   
  不能在用户定义的事务内执行 sp_dropsrvrolemember。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要成员身份上 sysadmin 固定服务器角色或这两个 ALTER ANY LOGIN 权限的服务器和从中删除成员的角色的成员身份。  
   
 ## <a name="examples"></a>示例  

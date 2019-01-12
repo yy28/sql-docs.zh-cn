@@ -20,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3eba894a08df8a491df428cd5f34b4c9850ffae0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205916"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131497"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   参数化行筛选器允许将不同分区的数据发送到不同的订阅服务器，而无需创建多个发布（在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，参数化筛选器称为“动态筛选器”）。 分区是表中行的子集；根据创建参数化行筛选器时选择的设置，已发布表中的每一行可以仅属于一个分区（生成不重叠的分区），也可以属于两个或多个分区（生成重叠分区）。  

@@ -15,12 +15,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d98c19c91fe05c2d283192b97d063c0b8d26e3c
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785968"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132277"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
   复制快照代理是一个可执行文件，用于准备快照文件（其中包含已发布表和数据库对象的架构及数据），然后将这些文件存储在快照文件夹中，并在分发数据库中记录同步作业。  
@@ -135,7 +135,7 @@ ms.locfileid: "53785968"
  > [!NOTE]  
  >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，”Server”参数应设置为 SQL Server 的完全限定名称。
   
- 有关详细信息，请参阅[安全性概述（复制）](../security/security-overview-replication.md)。  
+ 有关详细信息，请参阅[SQL Server 复制安全性](../security/view-and-modify-replication-security-settings.md)。  
   
  **-FieldDelimiter** _field_delimiter_  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制数据文件中用于标记字段末尾的字符或字符序列。 默认值为 \n\<x$3>\n。  

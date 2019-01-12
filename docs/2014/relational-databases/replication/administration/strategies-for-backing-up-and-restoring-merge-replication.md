@@ -15,22 +15,19 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757475"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131907"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
   对于合并复制，请定期备份下列数据库：  
   
--   发布服务器上的发布数据库  
-  
--   分发服务器上的分发数据库  
-  
--   各个订阅服务器上的订阅数据库  
-  
+-   发布服务器上的发布数据库   
+-   分发服务器上的分发数据库    
+-   各个订阅服务器上的订阅数据库    
 -   发布服务器、分发服务器和所有订阅服务器上的 **master** 和 **msdb** 系统数据库。 当备份这些数据库中的一个数据库或相关的复制数据库时，应同时备份这些数据库。 例如，应在备份发布数据库的同时备份发布服务器上的 **master** 和 **msdb** 数据库。 如果还原发布数据库，请确保 **master** 和 **msdb** 数据库在复制配置和设置方面与发布数据库保持一致。  
   
  如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，则当与复制相关的设置发生更改时，应执行备份。 有关详细信息，请参阅 [需要已更新备份的常用操作](common-actions-requiring-an-updated-backup.md)。  

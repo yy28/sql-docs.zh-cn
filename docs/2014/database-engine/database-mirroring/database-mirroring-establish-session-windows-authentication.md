@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508411"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135520"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)
     
@@ -63,13 +63,13 @@ ms.locfileid: "52508411"
   
 4.  若要将主体服务器设置为镜像数据库中的伙伴，请连接到镜像服务器，然后执行下面的语句：  
   
-     ALTER DATABASE <database_name> SET PARTNER =<server_network_address>  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
      其中，*<database_name>* 是要镜像的数据库的名称（此名称在两个伙伴上相同），*<server_network_address>* 是主体服务器的服务器网络地址。  
   
      服务器网络地址的语法如下：  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<strong>://</strong>\<*system-address>*<strong>:</strong>\<*port>*  
   
      其中，\<system-address> 是明确标识目标计算机系统的字符串，\<port> 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52508411"
   
 5.  若要将镜像服务器设置为主体数据库中的伙伴，请连接到主体服务器，然后执行下面的语句：  
   
-     ALTER DATABASE <database_name> SET PARTNER =<server_network_address>  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
      有关详细信息，请参阅步骤 4。  
   

@@ -12,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776939"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135727"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>发布信息，所有订阅（快照发布）
   **“所有订阅”** 选项卡显示针对所选快照发布的所有订阅的相关信息。  
@@ -69,8 +69,7 @@ ms.locfileid: "52776939"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看订阅的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [查看与订阅关联的代理的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532133"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133287"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建新的服务器角色。  
@@ -69,7 +69,7 @@ ms.locfileid: "52532133"
   
 3.  右键单击“服务器角色”文件夹，然后选择“新建服务器角色…”。  
   
-4.  在 **新的服务器角色-* * * server_role_name*对话框中，在**常规**页上，输入中的新服务器角色的名称**服务器角色名称**框。  
+4.  在中**新的服务器角色-**_server_role_name_对话框中，在**常规**页上，输入中的新服务器角色的名称**服务器角色名称**框。  
   
 5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 (…) 打开“选择服务器登录名或角色”对话框。  
   

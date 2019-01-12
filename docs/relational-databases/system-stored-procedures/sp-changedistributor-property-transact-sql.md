@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f769e45d80dd54c6e006297e46ee9cf8ad2da92e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819129"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133897"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@property=**] **'***属性*****  
+ [  **@property=**] **'**_属性_  
  给定分发服务器的属性。 *属性*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -47,7 +47,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|在不记录进度消息的情况下代理可以运行的最大分钟数。|  
 |NULL（默认值）|所有可用*属性*打印值。|  
   
- [ **@value=**] **'***值*****  
+ [  **@value=**] **'**_值_  
  给定分发服务器属性的值。 *值*是**varchar(255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
