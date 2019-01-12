@@ -8,12 +8,13 @@ manager: craigg
 ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5bf02506034bcdb3a2370e3678da935a6eb6d0cf
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
-ms.translationtype: HT
+ms.technology: big-data-cluster
+ms.openlocfilehash: cb012492811383154d10358e1c3ee40c422e3813
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206143"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241688"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>安装 mssqlctl 来管理 SQL Server 2019 大数据群集
 
