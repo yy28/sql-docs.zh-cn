@@ -14,12 +14,12 @@ ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff65f1f4d5042e3b7c401a47e7c9df795dd681b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c86e79928bdadb129ed0aa591e4bd035ffe22c1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777860"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128997"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>备用快照文件夹位置
   通过使用备用快照位置，可以将快照文件存储在默认位置以外的位置，默认位置通常在分发服务器上。 备用位置可以在另一台服务器、网络驱动器或可移动介质（如 CD-ROM 或可移动磁盘）上。  
@@ -36,7 +36,7 @@ ms.locfileid: "52777860"
   
  **指定备用快照位置**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[指定备用快照文件夹位置 &#40;SQL Server Management Studio&#41;](publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md) 
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[指定一个备用快照文件夹位置](snapshot-options.md#snapshot-folder-locations) 
   
 -   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程：[配置快照属性（复制 Transact-SQL 编程）](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

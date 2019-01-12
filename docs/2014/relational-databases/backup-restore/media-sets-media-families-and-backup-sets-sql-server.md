@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197307"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129887"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不熟悉的读者。 本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于备份介质的格式、备份介质和备份设备之间的对应关系、备份介质上备份的组织结构，以及介质集和介质簇的若干注意事项。 本主题还介绍在第一次使用备份介质或在使用新介质集替代旧介质集之前对备份介质进行初始化和格式化的步骤，如何覆盖介质集中的旧备份集，以及如何将新备份集追加到介质集。  
   
 > [!NOTE]  
->  有关详细信息，SQL Server 备份到 Windows Azure Blob 存储服务、 查看，请[Windows Azure Blob 存储服务使用 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  有关 SQL Server 备份到 Windows Azure Blob 存储服务的详细信息，请参阅 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
@@ -106,7 +106,7 @@ ms.locfileid: "48197307"
 ### <a name="backup-sets"></a>备份集  
  成功的备份操作将向介质集中添加一个“备份集”  。 从备份所属的介质集方面对备份集进行说明。 如果备份介质只包含一个介质簇，则该簇包含整个备份集。 如果备份介质包含多个介质簇，则备份集分布在各个介质簇之间。 在每个介质上，备份集都包含说明备份集的标头。  
   
- 下面的示例演示[!INCLUDE[tsql](../../includes/tsql-md.md)]创建介质集被调用的语句`MyAdvWorks_MediaSet_1`为[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库使用三个磁带机作为备份设备：  
+ 下例显示一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，该语句使用三个磁带机作为备份设备，为 `MyAdvWorks_MediaSet_1` 数据库创建一个名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的介质集。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -140,7 +140,7 @@ WITH
   
  ![分布在 3 个媒体集磁带上的第二个备份集](../../database-engine/media/bnr-mediaset-appendedto.gif "分布在 3 个媒体集磁带上的第二个备份集")  
   
- 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE = backup_set_file_number 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的差异数据库备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。  
+ 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE **=**_backup_set_file_number_ 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的数据库差异备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -219,7 +219,7 @@ GO
  对于磁带标头，适当地保留标头还是很有帮助的。 对于磁盘备份介质，只覆盖备份操作中指定的备份设备所使用的文件；磁盘上的其他文件不受影响。 覆盖备份时，保留现有的所有介质标头，同时将新的备份创建为备份设备中的第一个备份。 如果没有现有的介质标头，将自动编写一个带相关介质名称和介质描述的有效介质标头。 如果现有的介质标头无效，备份操作将终止。 如果介质为空，则使用给定的 MEDIANAME、MEDIAPASSWORD 和 MEDIADESCRIPTION（如果存在）生成新的介质标头。  
   
 > [!IMPORTANT]  
->  从[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，MEDIAPASSWORD 选项不再可用于创建备份。 但仍可以还原使用密码创建的备份。  
+>  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，MEDIAPASSWORD 选项不再可用于创建备份。 但仍可以还原使用密码创建的备份。  
   
  存在下列任一条件时不覆盖备份介质：  
   

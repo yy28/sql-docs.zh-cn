@@ -14,12 +14,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e35b5020eef6b7a884a0490d882c82e2775c8952
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3142a78fcf3a2413e43b1a7598b5d3b282aba1c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805779"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127667"
 ---
 # <a name="subscriber-properties"></a>订阅服务器属性
   “订阅服务器属性”对话框包含与运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的订阅服务器有关的信息。  
@@ -40,7 +40,7 @@ ms.locfileid: "52805779"
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   
- [属性参考（复制）](properties-reference-replication.md)   
+
  [订阅发布](subscribe-to-publications.md)  
   
   

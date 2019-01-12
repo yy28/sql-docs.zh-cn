@@ -12,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813989"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125377"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>教程：准备用于复制的服务器
   在配置复制拓扑之前，制定安全计划是非常重要的。 本教程向您介绍如何更好地保护复制拓扑以及如何配置分发，这是复制数据的第一步。 开始其他教程之前，必须先完成本教程。  
@@ -49,6 +49,6 @@ ms.locfileid: "52813989"
   
 ## <a name="see-also"></a>请参阅  
  [“配置分发”](configure-distribution.md)   
- [安全性和保护（复制）](security/security-and-protection-replication.md)  
+ [SQL Server 复制安全性](security/view-and-modify-replication-security-settings.md)  
   
   

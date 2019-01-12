@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d96dd15857847e739600f087fa63b2c34453d27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816039"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125365"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  要从中删除项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article=**] **'***文章*****  
+ [  **@article=**] **'**_文章_  
  要从给定发布中删除的项目的名称。 *文章*是**sysname**，无默认值。 如果**所有**，将删除指定的合并发布中的所有现有项目。 即使*一文*是**所有**，发布仍必须分开删除文章。  
   
  [ **@ignore_distributor=**] *ignore_distributor*  

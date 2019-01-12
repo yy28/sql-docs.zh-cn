@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806249"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129277"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
@@ -76,7 +76,7 @@ ms.locfileid: "52806249"
   
     -   对于合并复制，使用业务逻辑处理程序会更有效。 有关详细信息，请参阅[合并同步期间执行业务逻辑](../merge/execute-business-logic-during-merge-synchronization.md)。  
   
-     如果在为合并复制发布的表中使用触发器来维护引用完整性，请指定表的处理顺序，以减少合并代理所需的重试次数。 有关详细信息，请参阅[指定合并项目的处理顺序](../merge/specify-the-processing-order-of-merge-articles.md)。  
+     如果在为合并复制发布的表中使用触发器来维护引用完整性，请指定表的处理顺序，以减少合并代理所需的重试次数。 有关详细信息，请参阅[指定合并复制属性](../publish/specify-merge-replication-properties.md)。  
   
 -   限制使用大型对象 (LOB) 数据类型。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52806249"
   
      当需要将大量更改发送到订阅服务器时，用新快照重新初始化这些更改可能比使用复制分别移动每个更改要快。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   
-     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="snapshot-considerations"></a>快照注意事项  
   

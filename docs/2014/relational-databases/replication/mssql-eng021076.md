@@ -12,12 +12,12 @@ ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d06582e86ec7fca388dce6a3b073d9eb3d1314a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 23bd163d63fa3939e35facc49cb3be7f8f07ff91
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771947"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129287"
 ---
 # <a name="mssqleng021076"></a>MSSQL_ENG021076
     
@@ -38,7 +38,7 @@ ms.locfileid: "52771947"
 ## <a name="user-action"></a>用户操作  
  如果发布的快照代理自订阅创建以来一直未启动，或者自上次您选择重新初始化订阅以来一直未启动，则启动快照代理并让它在启动分发代理之前完成。 有关详细信息，请参阅[创建并应用快照](create-and-apply-the-snapshot.md)。  
   
- 如果快照代理没有完成，请检查快照代理历史记录以查找错误并将其消除。 有关在复制监视器中查看代理状态和错误详细资料的信息，请参阅[查看与发布关联的代理的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+ 如果快照代理没有完成，请检查快照代理历史记录以查找错误并将其消除。 在复制监视器中查看代理状态和错误详细资料的信息，请参阅[查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 此操作可能会提供找到该错误和/或其他错误消息的步骤，具体取决于错误的上下文。  
   

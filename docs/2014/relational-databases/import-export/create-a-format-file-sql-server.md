@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9df741090bf896019c6d1c4ede5215982497cb3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366989"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126697"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
@@ -34,7 +34,7 @@ ms.locfileid: "53366989"
 ## <a name="creating-a-non-xml-format-file"></a>创建非 XML 格式化文件  
  若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项还需要 **-f** 选项，例如：  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  为区分非 XML 格式化文件，我们建议使用 .fmt 作为文件扩展名，例如 MyTable.fmt。  
@@ -61,7 +61,7 @@ ms.locfileid: "53366989"
   
 |限定符|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
+|**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
@@ -91,7 +91,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |限定符|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
+|**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
@@ -135,7 +135,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## <a name="creating-an-xml-format-file"></a>创建 XML 格式化文件  
  若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项始终要求 **-f** 选项，若要创建 XML 格式化文件，还必须指定 **-x** 选项，例如：  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 >  为区分 XML 格式化文件，我们建议使用 .xml 作为文件扩展名，例如 MyTable.xml。  
@@ -161,7 +161,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |限定符|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
+|**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
 |**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则 **-t**开关是不必要。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
@@ -201,7 +201,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |限定符|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
+|**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   

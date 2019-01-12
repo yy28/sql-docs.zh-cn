@@ -16,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797659"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129617"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改关系的外键端。 修改表的外键会更改与主键表中的列相关的列。  
@@ -139,7 +139,7 @@ ms.locfileid: "52797659"
   
     -   **设置默认值** 如果表的所有外键列均已定义默认值，则将值设置成为该列定义的默认值。  
   
-4.  在“文件”菜单上，单击“保存table name”。  
+4.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改外键**  

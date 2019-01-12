@@ -16,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b15212edcb043ed86e3d2cd18c5f33624660692
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208153"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130677"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  包含项目的发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [ **@article=**] **'***文章*****  
+ [  **@article=**] **'**_文章_  
  将更改其属性的项目的名称。 *文章*是**sysname**，默认值为 NULL。  
   
- [  **@property=**] **'***属性*****  
+ [  **@property=**] **'**_属性_  
  要更改的项目属性。 *属性*是**nvarchar(100)**。  
   
- [ **@value=**] **'***值*****  
+ [  **@value=**] **'**_值_  
  项目属性的新值。 *值*是**nvarchar(255)**。  
   
  下表说明项目的属性和这些属性的值。  
@@ -114,7 +114,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x100000000**|使用此选项用于复制 FILESTREAM 属性，如果在指定**varbinary （max)** 列。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 包含 FILESTREAM 列的表复制[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑如何设置此架构选项。<br /><br /> 请参阅相关的选项**0x800000000**。|  
 ||**0x200000000**|将日期和时间数据类型转换 (**日期**，**时间**， **datetimeoffset**，以及**datetime2**) 中引入的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]在早期版本的支持的数据类型为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
-||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建的对象的详细信息，请参阅[执行脚本之前和之后应用快照](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
+||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建的对象的详细信息，请参阅[执行脚本之前和之后应用快照](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
 ||**0x1000000000**|将公共语言运行时 (CLR) 用户定义类型 (Udt) 大于 8000 字节到转换**varbinary （max)** ，以便类型为 UDT 的列能够复制到订阅服务器正在运行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||**0x2000000000**|将转换**hierarchyid**数据类型设置为**varbinary （max)** ，以便类型的列**hierarchyid**可以复制到订阅服务器正在运行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关如何使用详细信息**hierarchyid**列中复制的表，请参阅[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|复制表的任何筛选的索引。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
@@ -155,7 +155,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要生成新快照的属性，请参阅“备注”部分。  
   
- [**@force_reinit_subscription=] * * * force_reinit_subscription*  
+ [  **@force_reinit_subscription=]**_force_reinit_subscription_  
  确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
   
  **0**指定对项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
@@ -164,7 +164,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要重新初始化所有现有订阅的属性，请参阅“备注”部分。  
   
- [ **@publisher** =] **'***发布服务器*****  
+ [ **@publisher**=] **'**_发布服务器上_  
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

@@ -14,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780079"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125420"
 ---
 # <a name="secure-the-subscriber"></a>保护订阅服务器的安全
   合并代理和分发代理连接到订阅服务器。 这些连接可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录或 Windows 登录上下文环境中建立。 在遵循授予必要的最小权限并且保护所有密码的存储的原则下，为这些代理提供合适的登录名十分重要。 有关每个代理所需权限的信息，请参阅 [Replication Agent Security Model](replication-agent-security-model.md)。  
@@ -50,10 +50,10 @@ ms.locfileid: "52780079"
 > [!IMPORTANT]  
 >  若要指定连接信息，请使用存储过程 [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)。 还可以使用新订阅向导的 **“用于可更新订阅的登录名”** 页，该页可调用 **sp_link_publication**。 在某些情况下，如果订阅服务器运行的是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) 或更高版本，而发布服务器运行的是早期版本，则该存储过程可能会失败。 如果在这种情形下存储过程失败，请将发布服务器升级到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 或更高版本。  
   
- 有关详细信息，请参阅[创建事务发布的可更新订阅](../create-updatable-subscription-transactional-publication-transact-sql.md)和[查看和修改复制安全性设置](view-and-modify-replication-security-settings.md)。  
+ 有关详细信息，请参阅[创建事务发布的可更新订阅](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)和[查看和修改复制安全性设置](view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 syncobj_\<HexadecimalNumber>），请将其权限授予在每个订阅服务器上配置的帐户。  
+>  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 **syncobj_**_\<HexadecimalNumber>_），请将其权限授予在每个订阅服务器上配置的帐户。  
   
 ## <a name="queued-updating-subscriptions"></a>排队更新订阅  
  当配置排队更新订阅时，请谨记以下两个与安全性相关的方面：  
@@ -76,6 +76,6 @@ ms.locfileid: "52780079"
 ## <a name="see-also"></a>请参阅  
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)  
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)  
   
   

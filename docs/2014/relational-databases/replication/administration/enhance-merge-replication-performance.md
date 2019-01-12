@@ -19,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772017"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129117"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
   在考虑 [增强事务复制性能](enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于合并复制的其他几个方面。  
@@ -144,6 +144,6 @@ ms.locfileid: "52772017"
   
 -   使用复制监视器中的 **“同步历史记录”** 选项卡监视同步性能。  
   
-     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息的详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 查看详细统计信息的详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
   

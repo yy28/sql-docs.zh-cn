@@ -13,12 +13,12 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d0337ea25181ab45426353e69a4f37124aa33bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352057"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126537"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例如：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
   下面的查询返回描述文档结构的 XML-DATA 架构。  
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由 Schema*n* 组成，其中 n 是一个整数。  
+>  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由组成**Schema_n_** 其中**_n_** 是一个整数。  
   
  通过指定 `XMLSCHEMA` 选项，您可以针对结果请求 XSD 架构。  
   

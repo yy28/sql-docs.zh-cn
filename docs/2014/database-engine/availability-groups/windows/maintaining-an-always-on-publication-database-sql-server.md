@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143757"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126978"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>维护 AlwaysOn 发布数据库 (SQL Server)
   本主题讨论了在使用 AlwaysOn 可用性组时维护发布数据库的特殊注意事项。  
@@ -68,7 +68,7 @@ ms.locfileid: "48143757"
     > [!NOTE]  
     >  在删除包含已发布的成员数据库的可用性组时，或在删除可用性组中的已发布的数据库时，已发布的数据库的所有副本都将处于“正在恢复”状态。 这些副本在还原之后都将显示为已发布的数据库。 只应与发布元数据一起保留一份副本。 若要对已发布的数据库副本禁用复制，首先应删除该数据库中的所有订阅和发布。  
   
-     运行`sp_dropsubscription`以删除发布订阅。 确保将参数 *@ignore_distributributor* 设置为 1，以便为分发服务器上活动的发布数据库保留元数据。  
+     运行 `sp_dropsubscription` 以删除发布订阅。 确保将参数 *@ignore_distributributor* 设置为 1，以便为分发服务器上活动的发布数据库保留元数据。  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "48143757"
         @ignore_distributor = 1;  
     ```  
   
-     运行`sp_droppublication`以删除所有发布。 同样，确保将参数 *@ignore_distributor* 设置为 1，以便为分发服务器上活动的发布数据库保留元数据。  
+     运行 `sp_droppublication` 以删除所有发布。 同样，确保将参数 *@ignore_distributor* 设置为 1，以便为分发服务器上活动的发布数据库保留元数据。  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -106,14 +106,14 @@ ms.locfileid: "48143757"
   
 -   [复制、 更改跟踪、 更改数据捕获和 AlwaysOn 可用性组&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [复制订阅服务器和 AlwaysOn 可用性组&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## <a name="see-also"></a>请参阅  
  [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组： 互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性组：互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
   
   

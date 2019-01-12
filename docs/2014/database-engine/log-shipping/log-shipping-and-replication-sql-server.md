@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e107acad4bfd844478c47cfc5c19aa947c74bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104107"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126998"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>日志传送和复制 (SQL Server)
   日志传送涉及单个数据库的两个副本，而这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主数据库。 通过日志传送将客户端对主数据库所做的更新传播到数据库的另一副本（称为辅助数据库）。 日志传送涉及将由主数据库上执行的每个插入、更新或删除所组成的事务日志应用到辅助数据库上。  
@@ -109,12 +109,12 @@ ms.locfileid: "48104107"
   
     -   如果发布未经筛选，则应能通过与最新订阅服务器同步来更新发布数据库。  
   
-    -   如果发布经过筛选，则可能无法更新发布数据库。 假设有一个按如下方式分区的表：每个订阅仅收到一个区域（北部、东部、南部和西部）的客户数据。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。 在这种情况下，建议重新初始化所有订阅，以使发布服务器和订阅服务器中的数据收敛。 有关详细信息，请参阅 [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)。  
+    -   如果发布经过筛选，则可能无法更新发布数据库。 请考虑一个表，该表的分区使每个订阅只接收一个区域的客户数据：北、东、南和西。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。 在这种情况下，建议重新初始化所有订阅，以使发布服务器和订阅服务器中的数据收敛。 有关详细信息，请参阅 [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
      如果与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本的订阅服务器同步，则订阅无法匿名；它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。 有关详细信息，请参阅 [同步数据](../../relational-databases/replication/synchronize-data.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [复制功能和任务](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)   
  [关于日志传送 (SQL Server)](about-log-shipping-sql-server.md)   
  [数据库镜像和复制 (SQL Server)](../database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

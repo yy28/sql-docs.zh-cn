@@ -13,12 +13,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dea87fd8144863d8098c88ee9e038cebda0b0060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816649"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129797"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   复制限制用户以用户登录名映射到的角色执行的特定操作。 复制向 **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色和发布访问列表 (PAL) 中的登录名授予了特定权限。  
@@ -51,6 +51,6 @@ ms.locfileid: "52816649"
   
 ## <a name="see-also"></a>请参阅  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)  
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)  
   
   

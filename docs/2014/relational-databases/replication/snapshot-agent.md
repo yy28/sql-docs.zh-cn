@@ -14,12 +14,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5f9f869c076365a4c1f10a9ffacbf4a3cbae009
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7cccde764edca2b5552fb22490d971fe095c707e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777549"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126867"
 ---
 # <a name="snapshot-agent"></a>快照代理
   **“快照代理”** 对话框显示有关快照代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
@@ -64,7 +64,7 @@ ms.locfileid: "52777549"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看与发布关联的代理的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
  [复制代理概述](agents/replication-agents-overview.md)  
   

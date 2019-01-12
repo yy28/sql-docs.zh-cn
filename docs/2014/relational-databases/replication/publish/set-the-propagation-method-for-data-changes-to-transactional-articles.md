@@ -13,12 +13,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10862df13f154ecc2e144952db16652c70a2abf4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 661ec0fca03349f4b833a9fa3128bd539a2cc267
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785169"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127192"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>为事务项目的数据更改设置传播方法
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务项目的数据更改设置传播方法。  
@@ -116,11 +116,11 @@ ms.locfileid: "52785169"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
   
-    -   @ins_cmd - 指定 CALL sp_MSins_article_name 的值，其中，article_name 是为 @article 指定的值。  
+    -   **@ins_cmd** -指定的值<strong>CALL sp_MSins_*article_name*</strong>，其中**_article_name_** 为指定的值 **@article**.  
   
-    -   @del_cmd - 指定 CALL sp_MSdel_article_name 或 XCALL sp_MSdel_article_name 的值，其中 article_name 是为 @article 指定的值。  
+    -   **@del_cmd** -指定的值<strong>CALL sp_MSdel_*article_name*</strong> 或<strong>XCALL sp_MSdel_*article_name*</strong>，其中**_article_name_** 是为 _ * 指定的值@article* *。  
   
-    -   @upd_cmd - 指定 SCALL sp_MSupd_article_name、 CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 @article 指定的值。  
+    -   **@upd_cmd** -指定的值<strong>SCALL sp_MSupd_*article_name*</strong>，<strong>调用 sp_MSupd_*article_name*</strong>， <strong>XCALL sp_MSupd__article_name*</strong>，或<strong>MCALL sp_MSupd_* article_name *</strong>，其中_**article_name**_ 的值指定用于**@article**。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  
@@ -136,11 +136,11 @@ ms.locfileid: "52785169"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
   
-    -   @ins_cmd - 指定 CALL sp_MSins_article_name 的值，其中，article_name 是为 @article 指定的值。  
+    -   **@ins_cmd** -指定的值<strong>CALL sp_MSins_*article_name*</strong>，其中_**article_name**_ 为指定的值 **@article**.  
   
-    -   @del_cmd - 指定 CALL sp_MSdel_article_name 或 XCALL sp_MSdel_article_name 的值，其中 article_name 是为 @article 指定的值。  
+    -   **@del_cmd** -指定的值<strong>CALL sp_MSdel_*article_name*</strong> 或<strong>XCALL sp_MSdel_*article_name*</strong>，其中_**article_name**_ 为指定值**@article**。  
   
-    -   @upd_cmd - 指定 SCALL sp_MSupd_article_name、 CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 @article 指定的值。  
+    -   **@upd_cmd** -指定的值<strong>SCALL sp_MSupd_*article_name*</strong>，<strong>调用 sp_MSupd_*article_name*</strong>， <strong>XCALL sp_MSupd_*article_name*</strong>， <strong>MCALL sp_MSupd_*article_name*</strong>，其中 _**article_name**_ 为指定的值**@article**。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  
@@ -160,6 +160,6 @@ ms.locfileid: "52785169"
   
 ## <a name="see-also"></a>请参阅  
  [指定如何传播事务项目的更改](../transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [创建、修改和删除发布和项目（复制）](create-modify-and-delete-publications-and-articles-replication.md)  
+ [创建发布](create-a-publication.md)  
   
   

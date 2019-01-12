@@ -14,12 +14,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 880f2f6fc155338aa65637fbc71402ba7ec55821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800209"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127878"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>配置快照属性（复制 Transact-SQL 编程）
   可以使用复制存储过程以编程方式定义和修改快照属性，使用的存储过程取决于发布的类型。  
@@ -101,7 +101,7 @@ ms.locfileid: "52800209"
 ## <a name="see-also"></a>请参阅  
  [备用快照文件夹位置](../alternate-snapshot-folder-locations.md)   
  [压缩的快照](../compressed-snapshots.md)   
- [在应用快照之前和之后执行脚本](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [在应用快照之前和之后执行脚本](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [通过 FTP 传输快照](../transfer-snapshots-through-ftp.md)   
  [更改发布和项目属性](change-publication-and-article-properties.md)  

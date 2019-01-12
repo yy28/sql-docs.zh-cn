@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590561"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125967"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 课：使用事务复制发布数据
   在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 **示例数据库中发布** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)。  

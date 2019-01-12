@@ -16,12 +16,12 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30f7ee9e8488fad2311adae55f973bab8a22ec22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3db4c300cad5f38b46b73b2edc065a5b98ec90f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770289"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130807"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher** = ] **'***publisher***'**  
+ [ **@publisher** =] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db***’**  
+ [  **@publisher_db=** ] **'**_publisher_db_  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
@@ -58,19 +58,19 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  **1**指定 Windows 身份验证。  
   
- [ **@publisher_login**=] **'***publisher_login***’**  
+ [ **@publisher_login**=] **'**_publisher_login_  
  连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，无默认值。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的 Windows 帐户*job_login*将使用当连接到发布服务器。  
   
- [ **@publisher_password** =] **'***publisher_password*****  
+ [ **@publisher_password**=] **'**_publisher_password_  
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，无默认值。  
   
- [ **@job_login**=] **'***job_login***’**  
+ [ **@job_login**=] **'**_job_login_  
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，无默认值。 *这是无法更改为非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
   
- [ **@job_password**=] **'***job_password***’**  
+ [ **@job_password**=] **'**_job_password_  
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
   
- [ **@publisher_type**=] **'***publisher_type***’**  
+ [ **@publisher_type**=] **'**_publisher_type_  
  当发布服务器未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中运行时指定该发布服务器类型。 *publisher_type*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  

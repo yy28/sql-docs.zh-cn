@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a670dcf5d011bf30f7196d04b3338d05d6095ee5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661096"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126837"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@tsqlbatch=**] **'***tsqlbatch*****  
+ [  **@tsqlbatch =**] **'**_tsqlbatch_  
  是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理信息是所需的参数。 *tsqlbatch*是**nvarchar （max)** 或隐式转换为**nvarchar （max)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -64,7 +64,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**CHAR_OCTET_LENGTH**|**int**|以字节为单位的最大长度**字符**或**二进制**数据类型参数。 对于所有其他数据类型，此列返回 NULL。 此值始终为 NULL。|  
 |**ORDINAL_POSITION**|**int**|参数在批处理中的顺序位置。 如果参数名称重复多次，则此列使用第一次出现的序号。 第一个参数的序号为 1。 该列始终返回值。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行的权限**sp_batch_params**授予**公共**。  
   
 ## <a name="examples"></a>示例  

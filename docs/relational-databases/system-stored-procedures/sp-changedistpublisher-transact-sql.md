@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819177"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128227"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@property=** ] **'***属性*****  
+ [  **@property=** ] **'**_属性_  
  要更改的给定发布服务器的属性。 *属性*是**sysname**可以是下列值之一。  
   
- [ @value= ] 'value'****  
+ [ **@value=** ] **'**_value_**'**  
  为给定属性的值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
- [ **@storage_connection_string =**] **'***storage_connection_string*****  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_  
  SQL 数据库托管实例需要的、 应与 Azure SQL 数据库存储卷的访问密钥相匹配。 
 
 

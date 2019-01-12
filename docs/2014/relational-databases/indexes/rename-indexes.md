@@ -14,12 +14,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5925e277b6e1585612147918b469427e4aa92968
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395780"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127837"
 ---
 # <a name="rename-indexes"></a>重命名索引
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1**的索引，但同一表中不能有两个名为 **XPK_1**的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  
@@ -66,7 +66,7 @@ ms.locfileid: "52395780"
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”菜单上，单击“保存table_name”。  
+8.  在“文件”菜单上，单击“保存”以保存 _table_name_。  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>通过使用对象资源管理器重命名索引  
   

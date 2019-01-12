@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e1daefbc5625aaf034a9be9218a59daf5286cc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f432950cadf2b30b84dc00fd900737bfe21f81b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094018"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124887"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建完整数据库备份。  
   
 > [!NOTE]  
->  有关 SQL Server 备份到 Windows Azure Blob 存储服务的信息，请参阅 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  有关 SQL Server 备份到 Microsoft Azure Blob 存储服务的信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  **本主题内容**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48094018"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建完整数据库备份，请使用：**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48094018"
 ###  <a name="Security"></a> 安全性  
  针对数据库备份，TRUSTWORTHY 设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
- 开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]`PASSWORD`和`MEDIAPASSWORD`选项不再可用于创建备份。 不过，您仍可以还原使用密码创建的备份。  
+ 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，`PASSWORD` 和 `MEDIAPASSWORD` 选项不可再用于创建备份； 不过，您仍可以还原使用密码创建的备份。  
   
 ####  <a name="Permissions"></a> Permissions  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
@@ -191,7 +191,7 @@ ms.locfileid: "48094018"
     |选项|“说明”|  
     |------------|-----------------|  
     |*database*|要备份的数据库。|  
-    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } =physical_backup_device_name<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
+    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
     |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项 *o*。 有关某些基本 WITH 选项的信息，请参阅步骤 2。|  
   
 2.  （可选）指定一个或多个 WITH 选项。 下面描述了几个基本 WITH 选项。 有关所有 WITH 选项的详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。  
@@ -204,10 +204,10 @@ ms.locfileid: "48094018"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          仅在 SQL Server 2014 或更高版本中，指定要使用的加密算法以及要用于保护加密的证书或非对称密钥。  
   
-         描述**=** { **'*`text`*'** | **@ * * * text_variable* }  
+         描述**=** { **'*`text`*'** | **@**_text_变量_}  
          指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
-         NAME = { backup_set_name | @backup_set_name_var }  
+         NAME **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
          指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。  
   
     -   基本备份集 WITH 选项：  
@@ -216,7 +216,7 @@ ms.locfileid: "48094018"
   
          或者，若要将备份介质格式化，可以使用 FORMAT 选项：  
   
-         FORMAT [ , MEDIANAME = { media_name | @media_name_variable } ] [ , MEDIADESCRIPTION = { text | @text_variable } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text_variable_ } ]  
          当您第一次使用介质或者希望覆盖所有现有数据时可以使用 FORMAT 子句。 根据需要，可以为新介质指定介质名称和说明。  
   
         > [!IMPORTANT]  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-1.  使用`Backup-SqlDatabase`cmdlet。 若要显式指示这是完整数据库备份，指定 **-BackupAction**使用其默认值的参数`Database`。 对于完整数据库备份而言，此参数是可选的。  
+1.  使用 `Backup-SqlDatabase` cmdlet。 若要显式指示这是完整数据库备份，指定 **-BackupAction**使用其默认值的参数`Database`。 对于完整数据库备份而言，此参数是可选的。  
   
      下面的示例在服务器实例 `MyDB` 的默认备份位置创建数据库 `Computer\Instance`的完整数据库备份。 此示例也可以指定 `-BackupAction Database`。  
   

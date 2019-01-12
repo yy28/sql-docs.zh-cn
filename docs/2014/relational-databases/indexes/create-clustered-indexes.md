@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516221"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126157"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的聚集索引。 除了个别表之外，每个表都应该有聚集索引。 聚集索引除了可以提高查询性能之外，还可以按需重新生成或重新组织来控制表碎片。 也可以对视图创建聚集索引。 （ [描述的聚集索引和非聚集索引](clustered-and-nonclustered-indexes-described.md)主题中定义了聚集索引。）  
@@ -86,7 +86,7 @@ ms.locfileid: "52516221"
   
 4.  在“索引键列”下，单击“添加…”。  
   
-5.  在“从table_name中选择列”对话框中，选中要添加到聚集索引的表列的复选框。  
+5.  在“从表格名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框。  
   
 6.  单击“确定” 。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "52516221"
   
 9. 单击 **“关闭”**。  
   
-10. 在“文件”菜单上，单击“保存table_name”。  
+10. 在“文件”菜单上，单击“保存”以保存 _table_name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

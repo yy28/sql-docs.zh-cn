@@ -18,12 +18,12 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3c0d60d5c20651e525d573f8367f1aff4824f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601375"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130517"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @loginame**=** ] **'***登录*****  
- 将添加到固定服务器角色中的登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
+ [ @loginame **=** ] **'**_登录_  
+ 将添加到固定服务器角色中的登录名。 *登录名* 是 **sysname** ，无默认值。 *登录名*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
   
- [ @rolename**=** ] **'***角色*****  
+ [ @rolename **=** ] **'**_角色_  
  要添加登录名的固定服务器角色的名称。 *角色*是**sysname**，默认值为 NULL，并且必须是下列值之一：  
   
 -   sysadmin  
@@ -78,7 +78,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
  不能在用户定义的事务内执行 sp_addsrvrolemember。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有要添加新成员的角色中的成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -21,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781939"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128557"
 ---
 # <a name="synchronize-data"></a>同步数据
   同步数据是指在订阅服务器上应用初始快照后，在发布服务器和订阅服务器之间传播数据和架构更改的过程。 同步可按下列方式发生：  
@@ -69,6 +69,6 @@ ms.locfileid: "52781939"
 -   合并复制支持业务逻辑处理程序。 使用业务逻辑处理程序框架，可以编写一个在合并同步过程中调用的托管代码程序集。 程序集包括可以响应同步过程中的许多状况的业务逻辑：数据更改、冲突和错误。 有关详细信息，请参阅[合并同步期间执行业务逻辑](merge/execute-business-logic-during-merge-synchronization.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [检测并解决合并复制冲突](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [检测并解决合并复制冲突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

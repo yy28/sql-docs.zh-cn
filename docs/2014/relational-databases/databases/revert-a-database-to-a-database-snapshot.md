@@ -13,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125647"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
   如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
@@ -99,7 +99,7 @@ ms.locfileid: "52774349"
   
      恢复操作要求对源数据库具有 RESTORE DATABASE 权限。 若要恢复数据库，请使用下列 Transact-SQL 语句：  
   
-     RESTORE DATABASE database_name FROM DATABASE_SNAPSHOT =database_snapshot_name  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      其中， *database_name* 是源数据库的名称， *database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
   

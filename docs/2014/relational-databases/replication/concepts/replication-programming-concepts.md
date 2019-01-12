@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -14,12 +14,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d66c7950a5d610a50ca6bce84f4b973c4ec9983
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788999"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129137"
 ---
 # <a name="replication-programming-concepts"></a>复制编程概念
   在开发使用复制功能的应用程序之前，应该先完成以下常规计划步骤：  
@@ -81,7 +81,7 @@ ms.locfileid: "52788999"
   
  以下主题提供安全性方面的信息：  
   
--   [安全性和保护（复制）](../security/security-and-protection-replication.md)  
+-   [SQL Server 复制安全性](../security/view-and-modify-replication-security-settings.md)  
   
 -   [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

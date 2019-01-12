@@ -13,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748719"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125847"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
   下列问题和解答就复制数据库管理员所面临的多种任务提供指导。  
@@ -42,9 +42,9 @@ ms.locfileid: "52748719"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>订阅何时可用？何时可以使用订阅数据库？  
  将快照应用于订阅数据库之后，即可使用订阅。 即使订阅数据库在此之前就可以访问，但在应用快照之前，不应使用数据库。 使用复制监视器检查快照生成和应用的状态：  
   
--   快照由快照代理生成。 请在复制监视器中某个发布的 **“代理”** 选项卡中查看快照生成的状态。 有关详细信息，请参阅[查看信息并执行与发布关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+-   快照由快照代理生成。 请在复制监视器中某个发布的 **“代理”** 选项卡中查看快照生成的状态。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
--   快照由分发代理或合并代理应用。 请在复制监视器的 **“分发代理”** 页或 **“合并代理”** 页中查看快照应用的状态。 有关详细信息，请参阅[查看信息并执行与订阅关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+-   快照由分发代理或合并代理应用。 请在复制监视器的 **“分发代理”** 页或 **“合并代理”** 页中查看快照应用的状态。 
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>如果分发代理或合并代理启动时快照代理尚未完成，会出现什么情况？  
  如果分发代理或合并代理和快照代理同时运行，不会引发错误。 但是，必须注意下列事项：  
@@ -94,7 +94,7 @@ ms.locfileid: "52748719"
  此信息可通过 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和许多复制存储过程获得。 有关详细信息，请参阅 [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md)。  
   
 ### <a name="does-replication-encrypt-data"></a>复制是否加密数据？  
- 否。 复制不对数据库中存储的数据或网络上传输的数据加密。 有关详细信息，请参阅[安全概述（复制）](../security/security-overview-replication.md)主题的“加密”部分。  
+ 否。 复制不对数据库中存储的数据或网络上传输的数据加密。 有关详细信息，请参阅本主题的"加密"部分[SQL Server 复制安全性](../security/view-and-modify-replication-security-settings.md)。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>如何在 Internet 上复制数据？  
  使用以下方式在 Internet 上复制数据：  
@@ -140,7 +140,7 @@ ms.locfileid: "52748719"
   
 -   直接在订阅数据库上执行 GRANT 语句。  
   
--   使用快照后脚本来执行这些语句。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](../execute-scripts-before-and-after-the-snapshot-is-applied.md)。  
+-   使用快照后脚本来执行这些语句。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   
 -   使用存储过程 [sp_addscriptexec](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) 执行语句。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52748719"
  是。 对于复制所涉及数据库有许多特别注意事项。 有关详细信息，请参阅 [备份和还原复制的数据库](back-up-and-restore-replicated-databases.md)。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>复制是否影响事务日志的大小？  
- 合并复制和快照复制不影响事务日志的大小，但事务复制会影响。 如果数据库包括一个或多个事务发布，则只有将与这些发布有关的所有事务传递到分发数据库之后才会截断日志。 如果事务日志增长得过大，而且日志读取器代理按计划运行，请考虑缩短运行间隔。 或者，将日志读取器代理设置为以连续模式运行。 如果将其设置为以连续模式运行（默认值），请确保它正在运行。 有关检查日志读取器代理状态的详细信息，请参阅[查看信息并执行与发布关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+ 合并复制和快照复制不影响事务日志的大小，但事务复制会影响。 如果数据库包括一个或多个事务发布，则只有将与这些发布有关的所有事务传递到分发数据库之后才会截断日志。 如果事务日志增长得过大，而且日志读取器代理按计划运行，请考虑缩短运行间隔。 或者，将日志读取器代理设置为以连续模式运行。 如果将其设置为以连续模式运行（默认值），请确保它正在运行。 检查日志读取器代理状态的详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  此外，如果在发布数据库或分发数据库中设置了选项“sync with backup”，则直到备份了所有事务后，才会截断事务日志。 如果事务日志增长过大，而且已设置了此选项，请考虑缩短事务日志备份间的间隔。 有关备份和还原涉及到事务复制的数据库的详细信息，请参阅[快照复制和事务复制的备份和还原策略](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52748719"
 ## <a name="replication-maintenance"></a>复制维护  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>如何确定订阅服务器的数据是否与发布服务器的数据同步？  
- 使用验证。 验证报告给定订阅服务器是否与发布服务器同步。 有关详细信息，请参阅[验证已复制的数据](../validate-replicated-data.md)。 验证不会提供与某些行是否未正确同步有关的信息，而 [tablediff 实用工具](../../../tools/tablediff-utility.md) 可以提供此信息。  
+ 使用验证。 验证报告给定订阅服务器是否与发布服务器同步。 有关详细信息，请参阅[验证已复制的数据](../validate-data-at-the-subscriber.md)。 验证不会提供与某些行是否未正确同步有关的信息，而 [tablediff 实用工具](../../../tools/tablediff-utility.md) 可以提供此信息。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>如何向现有发布添加表？  
  不必为了添加表（或另一个对象）而停止发布数据库或订阅数据库上的活动。 通过“发布属性 - \<发布>”对话框或存储过程 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 和 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 将表添加到发布。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -207,7 +207,7 @@ ms.locfileid: "52748719"
  从数据库删除复制所需的操作取决于数据库是作为发布数据库、订阅数据库使用，还是同时作为这两种数据库使用。  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>如何确定是否存在要复制的事务或行？  
- 对于事务复制，请使用存储过程或复制监视器中的 **“未分发的命令”** 选项卡。 有关详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 对于事务复制，请使用存储过程或复制监视器中的 **“未分发的命令”** 选项卡。 有关详细信息，请参阅[查看复制的命令和分发数据库中的其他信息&#40;复制 TRANSACT-SQL 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  对于合并复制，请使用 **sp_showpendingchanges**存储过程。 有关详细信息，请参阅 [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52748719"
   
 -   将命令传递到订阅服务器所需的估计时间。 如果此值大于生成快照并将其应用于订阅服务器所需的时间，请考虑重新初始化订阅服务器。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   
- 有关详细信息，请参阅 [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) 和[查看信息并执行与订阅关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 有关详细信息，请参阅[sp_replmonitorsubscriptionpendingcmds &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="replication-and-other-database-features"></a>复制和其他数据库功能  
   
@@ -229,7 +229,7 @@ ms.locfileid: "52748719"
  是。 没有需要特别注意的事项，因为所有数据都存储在群集上的一组磁盘中。  
   
 ## <a name="see-also"></a>请参阅  
- [管理（复制）](administration-replication.md)   
+ [复制管理常见问题解答](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

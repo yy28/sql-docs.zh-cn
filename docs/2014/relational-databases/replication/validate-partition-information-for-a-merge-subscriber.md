@@ -14,12 +14,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a95d55aa0d2722719f799af9f69f6a3b3c14689
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805849"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127567"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>验证合并订阅服务器的分区信息
   在为合并发布定义参数化行筛选器时，将使用引用订阅服务器信息（如订阅服务器的登录名）的函数。 默认情况下，每次同步前和快照应用于订阅服务器时，复制都将根据此函数验证订阅服务器信息。 验证过程确保每个订阅服务器的数据都进行了正确的分区。 验证行为由 **validate_subscriber_info** 发布属性控制，此属性可以使用 [sp_changemergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 或在“发布属性”对话框的“订阅选项”页上进行更改。 有关更改发布属性的详细信息，请参阅 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)。  
@@ -34,9 +34,9 @@ ms.locfileid: "52805849"
  合并代理验证分区时，除了对筛选表达式使用的所有函数返回的值验证分区之外，代理还会检查快照的生成是否先于令其无效的更改，如元数据清除操作或架构更改。 如果分区快照太旧，合并代理将返回一个错误，并且必须根据当前常规快照为此订阅服务器重新生成分区快照。  
   
 ## <a name="see-also"></a>请参阅  
- [管理（复制）](administration/administration-replication.md)   
- [复制管理最佳做法](administration/best-practices-for-replication-administration.md)   
+ [复制管理常见问题解答](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
  [重新初始化订阅](reinitialize-subscriptions.md)   
- [验证已复制的数据](validate-replicated-data.md)  
+ [验证已复制的数据](validate-data-at-the-subscriber.md)  
   
   

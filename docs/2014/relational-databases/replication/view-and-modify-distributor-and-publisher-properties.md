@@ -15,12 +15,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90eb7b166316533b68fdc128fb6ecc65e1820efb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361329"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131137"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改分发服务器和发布服务器属性。  
@@ -204,6 +204,6 @@ ms.locfileid: "53361329"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [分发服务器和发布服务器信息脚本](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [查看发布服务器的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

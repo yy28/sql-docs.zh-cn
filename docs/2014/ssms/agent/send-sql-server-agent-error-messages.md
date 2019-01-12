@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779039"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130168"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
   本主题介绍如何配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中通过 net send 的方式来发送其错误消息。  
@@ -66,7 +66,7 @@ ms.locfileid: "52779039"
   
 2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在 **SQL Server 代理属性-* * * server_name*对话框中的**错误日志**上**常规**页上，键入你想要发送的用户名或计算机名称中的错误消息**Net send 收件人**框。  
+3.  在中**SQL Server 代理属性-**_server_name_对话框中的**错误日志**上**常规**页上，键入用户名称或你想要发送错误的计算机名称中的消息**Net send 收件人**框。  
   
 4.  单击“确定” 。  
   

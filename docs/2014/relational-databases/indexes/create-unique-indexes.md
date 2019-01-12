@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540914"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127227"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的唯一索引。 唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 创建 UNIQUE 约束和创建与约束无关的唯一索引并没有明显的区别。 进行数据验证的方式相同，而且对于唯一索引是由约束创建的还是手动创建的，查询优化器并不加以区分。 但是，创建列的 UNIQUE 约束会使索引目标更清晰。 有关 UNIQUE 约束的详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
@@ -124,7 +124,7 @@ ms.locfileid: "52540914"
   
 13. 单击 **“关闭”**。  
   
-14. 在“文件”菜单上，单击“保存table_name”。  
+14. 在“文件”菜单上，单击“保存”以保存 _table_name_。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用对象资源管理器创建唯一索引  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52540914"
   
 7.  在“索引键列”下，单击“添加…”。  
   
-8.  在“从table_name选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+8.  在“从 table_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
 9. 单击“确定” 。  
   

@@ -16,12 +16,12 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbfef6f848aaa0d9dddcef68aaa3af8aca4c0880
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dc236b4b022a80c7c1cbd4aa4239200b17840db6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823801"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126877"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@subscriber=** ] **'***订阅服务器*****  
+ [  **@subscriber=** ] **'**_订阅服务器上_  
  要删除的订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [ **@reserved=** ] **'***保留*****  
+ [  **@reserved=** ] **'**_保留_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@ignore_distributor =** ] *ignore_distributor*  

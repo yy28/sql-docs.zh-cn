@@ -16,19 +16,19 @@ ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a26d1f9b1e8ff7cf9ed127dc78a02827952d411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772195"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129467"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定的操作会影响哪些记录。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|如果不存在[筛选器](../../../ado/reference/ado-api/filter-property.md)应用于**记录集**，影响所有记录。<br /><br /> 如果**筛选器**属性设置为字符串条件 (如"作者 = Smith")，则该操作会影响当前的一章中可见的记录。<br /><br /> 如果**筛选器**属性设置为的成员[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或数组的书签，则该操作将影响的所有行**记录集**。 **注意：****adAffectAll**隐藏在 Visual Basic 对象浏览器中。  |  
+|**adAffectAll**|3|如果不存在[筛选器](../../../ado/reference/ado-api/filter-property.md)应用于**记录集**，影响所有记录。<br /><br /> 如果**筛选器**属性设置为字符串条件 (如"作者 = Smith")，则该操作会影响当前的一章中可见的记录。<br /><br /> 如果**筛选器**属性设置为的成员[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或数组的书签，则该操作将影响的所有行**记录集**。 **注意： adAffectAll**隐藏在 Visual Basic 对象浏览器中。|  
 |**adAffectAllChapters**|4|影响所有记录中的所有同级章节**记录集**，包括那些通过任何不可见**筛选器**当前应用。|  
 |**adAffectCurrent**|1|会影响仅当前记录。|  
 |**adAffectGroup**|2|影响满足当前的记录[筛选器](../../../ado/reference/ado-api/filter-property.md)属性设置。 必须设置**筛选器**属性设置为**FilterGroupEnum**值或数组**书签**要使用此选项。|  

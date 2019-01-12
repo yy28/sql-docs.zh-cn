@@ -12,12 +12,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25dc706689ec136a5423de8051fecd3c6071d5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d77f8d6acb449bc9aa2298dbcba9782fd7bc07e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762379"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127433"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;代理名称&gt; 代理安全性
   使用“\<代理名称> 代理安全性”页，你可以指定用来运行分发代理（对于事务复制和快照复制）或合并代理（对于合并复制）的帐户，并与复制拓扑中的计算机建立连接。 有关代理要求的权限及复制安全的最佳实践的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全性最佳做法](security/replication-security-best-practices.md)。  
@@ -54,8 +54,8 @@ ms.locfileid: "52762379"
 ## <a name="see-also"></a>请参阅  
  [查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)   
  [查看和修改推送订阅属性](view-and-modify-push-subscription-properties.md)   
- [管理复制中的登录名和密码](security/manage-logins-and-passwords-in-replication.md)   
+ [管理复制中的登录名和密码](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [复制代理安全模式](security/replication-agent-security-model.md)   
- [安全性和保护（复制）](security/security-and-protection-replication.md)  
+ [SQL Server 复制安全性](security/view-and-modify-replication-security-settings.md)  
   
   

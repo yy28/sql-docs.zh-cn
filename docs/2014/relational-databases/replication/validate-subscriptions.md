@@ -14,12 +14,12 @@ ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdab726dcfe30e2a6309fce49ca02914bc802d6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781409"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127117"
 ---
 # <a name="validate-subscriptions"></a>验证多个订阅
   可以使用 **“验证多个订阅”** 对话框，指定在下次运行各个订阅的分发代理时应验证对事务发布的订阅。 验证的结果显示在复制监视器中。 有关详细信息，请参阅 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  
@@ -35,6 +35,6 @@ ms.locfileid: "52781409"
  单击此项可访问 **“订阅验证选项”** 对话框，使用此对话框可以指定是使用行计数验证还是使用二进制校验和验证。  
   
 ## <a name="see-also"></a>请参阅  
- [验证已复制的数据](validate-replicated-data.md)  
+ [验证已复制的数据](validate-data-at-the-subscriber.md)  
   
   

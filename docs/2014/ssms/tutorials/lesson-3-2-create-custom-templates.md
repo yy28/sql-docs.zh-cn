@@ -14,12 +14,12 @@ ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215577"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127247"
 ---
 # <a name="create-custom-templates"></a>创建自定义模板
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 附带用于许多常见任务的模板，但模板的真正作用在于它能为必须频繁创建的复杂脚本创建自定义模板。 在本练习中，您将创建带有较少参数的简单脚本，但是模板也适用于较长的重复脚本。  
@@ -67,7 +67,7 @@ ms.locfileid: "48215577"
   
 10. 在查询编辑器中，键入 **EXECUTE dbo.WorkOrdersForBlade**，然后按 F5 执行查询。 确认“结果”窗格返回 Blade 的工作订单列表。  
   
-11. 编辑模板脚本 （在步骤 7 中的脚本），使用参数替换的产品名称 Blade ***< * product_name**， `nvarchar(50)`，**名称*> * * *，四个位置。  
+11. 编辑模板脚本 （在步骤 7 中的脚本），使用参数替换的产品名称 Blade  <strong>*<* product_name</strong>， `nvarchar(50)`，<strong>名称*>*</strong>  ，四个位置。  
   
     > [!NOTE]  
     >  参数需要三个元素：要替换的参数的名称、该参数的数据类型以及该参数的默认值。  

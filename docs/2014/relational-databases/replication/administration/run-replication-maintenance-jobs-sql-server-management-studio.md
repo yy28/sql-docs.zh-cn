@@ -12,26 +12,21 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19faa0690069d6c16be7591547f4a242ac2469fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805573"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128387"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>执行复制维护作业 (SQL Server Management Studio)
   复制使用下列维护作业：  
   
--   **重新初始化数据验证失败的订阅**  
-  
--   **代理历史记录清除：分发**  
-  
--   **分发的复制监视刷新器。**  
-  
--   **复制代理检查**  
-  
--   **分发清除：分发**  
-  
+-   **重新初始化数据验证失败的订阅**
+-   **代理历史记录清除：分发**
+-   **分发的复制监视刷新器。**
+-   **复制代理检查**
+-   **分发清除：分发**
 -   **过期订阅清除**  
   
  从  的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. 有关启动复制监视器的信息，请参阅[启动复制监视器](../monitor/start-the-replication-monitor.md)。 在“作业属性 - \<作业>”对话框中查看和修改每个作业的属性，可从同一文件夹和选项卡中访问此对话框。  
@@ -74,7 +69,7 @@ ms.locfileid: "52805573"
   
 ## <a name="see-also"></a>请参阅  
  [启动和停止复制代理 (SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [查看发布服务器的信息和执行其任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [复制代理管理](../agents/replication-agent-administration.md)  
   
   

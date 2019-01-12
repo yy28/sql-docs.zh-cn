@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770139"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129405"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x100000000**|使用此选项用于复制 FILESTREAM 属性，如果在指定**varbinary （max)** 列。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 包含 FILESTREAM 列的表复制[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑如何设置此架构选项。 请参阅相关的选项**0x800000000**。|  
 |**0x200000000**|将日期和时间数据类型转换 (**日期**，**时间**， **datetimeoffset**，以及**datetime2**) 中引入[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]数据在早期版本的支持类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
-|**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建的对象的详细信息，请参阅[执行脚本之前和之后应用快照](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
+|**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建的对象的详细信息，请参阅[执行脚本之前和之后应用快照](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关的选项**0x100000000**。|  
 |**0x1000000000**|将公共语言运行时 (CLR) 用户定义类型 (Udt) 转换为**varbinary （max)** ，以便类型为 UDT 的列能够复制到订阅服务器正在运行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 |**0x2000000000**|将转换**hierarchyid**数据类型设置为**varbinary （max)** ，以便类型的列**hierarchyid**可以复制到订阅服务器正在运行的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 有关如何使用详细信息**hierarchyid**列中复制的表，请参阅[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 |**0x4000000000**|复制表的任何筛选的索引。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
@@ -296,7 +296,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  如果在另一个发布，再选择的值已发布项目的源表*partition_options*必须是两个项目相同的。  
   
  [  **@processing_order=** ] *processing_order*  
- 指示合并发布中项目的处理顺序。 *processing_order*是**int**，默认值为 0。 **0**指定项目未经排序，以及任何其他值表示此项目处理顺序的序数值。 项目按值的由低到高顺序进行处理。 如果两个项目具有相同的值，处理顺序由顺序中的项目别名[sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)系统表。 有关详细信息，请参阅[指定合并项目的处理顺序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
+ 指示合并发布中项目的处理顺序。 *processing_order*是**int**，默认值为 0。 **0**指定项目未经排序，以及任何其他值表示此项目处理顺序的序数值。 项目按值的由低到高顺序进行处理。 如果两个项目具有相同的值，处理顺序由顺序中的项目别名[sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)系统表。 有关详细信息，请参阅[指定合并复制属性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  定义在包含客户端订阅的订阅服务器上进行更新的限制。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。 *subscriber_upload_options*是**tinyint**，可以是下列值之一。  
@@ -358,11 +358,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  如果指定的值**3**有关*partition_options*，可以仅单个订阅的每个分区的这篇文章中的数据。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。  
   
- 指定的值为 3 时*partition_options*，元数据清除只要运行合并代理，并且分区的快照会更快过期。 使用此选项时，应考虑启用订阅服务器请求的分区快照。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+ 指定的值为 3 时*partition_options*，元数据清除只要运行合并代理，并且分区的快照会更快过期。 使用此选项时，应考虑启用订阅服务器请求的分区快照。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
  添加具有静态水平筛选器，请使用*subset_filterclause*到现有发布的文章已参数化筛选器需要重新初始化订阅。  
   
- 指定时*processing_order*，我们建议在项目顺序值，之间留出间隙便于您在以后设置新值。 例如，如果您有三个项目 Article1、 Article2 和 Article3，则设置*processing_order*到 10、 20 和 30，而不是 1、 2 和 3。 有关详细信息，请参阅[指定合并项目的处理顺序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
+ 指定时*processing_order*，我们建议在项目顺序值，之间留出间隙便于您在以后设置新值。 例如，如果您有三个项目 Article1、 Article2 和 Article3，则设置*processing_order*到 10、 20 和 30，而不是 1、 2 和 3。 有关详细信息，请参阅[指定合并复制属性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
 ## <a name="default-schema-option-table"></a>默认架构选项表  
  此表描述了如果 NULL 值指定为存储过程所设置的默认值*schema_option*，这取决于项目类型。  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2d1e07fca7c18bdecba265a9e69994a9f728e9ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398611"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124707"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在分析平台系统中配置 Windows Server Update Services (WSUS)
 这些说明将引导你完成使用 Windows Server Update Services (WSUS) 配置向导以配置 WSUS 以分析平台系统的步骤。 你需要先将软件更新应用到该设备配置 WSUS。 VMM 虚拟机的设备上已安装 WSUS。  
@@ -55,7 +55,7 @@ ms.locfileid: "52398611"
   
     1.  在中**服务器管理器仪表板**，然后在**工具**菜单中，单击**Windows Server Update Services**。  
   
-    2.  在左窗格中**Update Services**窗口中，单击以展开的虚拟机管理节点服务器 (***appliance_domain *-VMM**)，然后单击**选项**。  
+    2.  在左窗格中**Update Services**窗口中，单击以展开的虚拟机管理节点服务器 (**_appliance_domain_VMM**)，然后单击**选项**。  
   
     3.  在中**选项**窗格中，单击**WSUS 服务器配置向导**以启动配置向导。  
   

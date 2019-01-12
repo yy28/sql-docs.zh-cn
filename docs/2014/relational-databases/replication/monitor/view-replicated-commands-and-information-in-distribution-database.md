@@ -17,12 +17,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87cb1034499afe331f78278b43986528a78d9674
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2bff82764256eebb02141bf2e1fafd86dce026e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758069"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125767"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>查看分发数据库中复制的命令和其他信息（复制 Transact-SQL 编程）
   在使用事务复制时，事务命令在分发代理将其传播到所有订阅服务器或订阅服务器中的分发代理请求更改之前存储在分发数据库中。 使用复制存储过程可以编程方式查看分发数据库中的这些挂起的命令。 有关详细信息，请参阅[复制存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)。  
@@ -38,6 +38,6 @@ ms.locfileid: "52758069"
 2.  在分发服务器的分发数据库中，执行 [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)。 （可选）为 **@article_id**。 （可选）为 **@publisher_database_id**指定发布数据库的 ID，此 ID 可以从 **sys.databases** 目录视图的 [database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列获得。  
   
 ## <a name="see-also"></a>请参阅  
- [以编程方式监视复制](monitoring-replication-overview.md)  
+ [以编程方式监视复制](../monitoring-replication.md)  
   
   

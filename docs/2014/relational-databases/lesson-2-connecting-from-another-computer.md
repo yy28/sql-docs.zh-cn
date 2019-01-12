@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367189"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127207"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
   为了增强安全性， [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在初始安装时不能从其他计算机对其进行访问。 本课介绍如何启用协议，配置端口以及配置 Windows 防火墙，以便从其他计算机进行连接。  
@@ -44,7 +44,7 @@ ms.locfileid: "53367189"
     > [!NOTE]  
     >  您可能同时拥有 32 位和 64 位选项。  
   
-2.  在中**SQL Server 配置管理器**，展开**SQL Server 网络配置**，然后单击**协议**  *\<InstanceName>*。  
+2.  在中**SQL Server 配置管理器**，展开**SQL Server 网络配置**，然后单击**协议**  _\<InstanceName>_。  
   
      默认实例（未命名实例）作为 **MSSQLSERVER**列出。 如果您已经安装了某个命名实例，则您提供的名称将会列出。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 作为 **SQLEXPRESS**安装，除非你在安装过程中更改了该名称。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367189"
   
 2.  在“连接到服务器”对话框中，确认是否已在“服务器类型”框中选中“数据库引擎”。  
   
-3.  在“服务器名称”框中，键入 **tcp:** 以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 tcp:<computer_name>。 在命名实例的示例中，请键入 tcp:<computer_name>,49172****。  
+3.  在“服务器名称”框中，键入 **tcp:** 以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 **tcp:**_<computer_name>_。 在命名实例的示例中，请键入 **tcp:**_<computer_name>_**,49172**。  
   
     > [!NOTE]  
     >  如果你在“服务器名称”框中省略 **tcp:**，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  

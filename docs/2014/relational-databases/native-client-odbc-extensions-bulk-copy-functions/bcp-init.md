@@ -18,12 +18,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125467"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131167"
 ---
 # <a name="bcpinit"></a>bcp_init
   初始化大容量复制操作。  
@@ -60,7 +60,7 @@ eDirection
   
  如果*eDirection*为 DB_OUT， *szTable*也可以是数据库视图的名称。  
   
- 如果*eDirection*为 DB_OUT，并且使用指定的 SELECT 语句[bcp_control](bcp-control.md)之前[bcp_exec](bcp-exec.md)调用时，**bcp_init * * * szTable*必须设置为 NULL。  
+ 如果*eDirection*为 DB_OUT，并且使用指定的 SELECT 语句[bcp_control](bcp-control.md)之前[bcp_exec](bcp-exec.md)调用时， **bcp_init** _szTable_必须设置为 NULL。  
   
  *szDataFile*  
  要向内或向外复制的用户文件的名称。 如果复制数据的过程直接从变量使用[bcp_sendrow](bcp-sendrow.md)，请设置*szDataFile*为 NULL。  

@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813979"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126427"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813979"
   
  若要启用事务发布的可更新订阅，请参阅 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)。  
   
- 若要创建事务发布的可更新订阅，请参阅 [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
+ 若要创建事务发布的可更新订阅，请参阅 [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 ## <a name="switching-between-update-modes"></a>在更新模式之间切换  
  使用可更新订阅时，可以指定订阅使用一种更新模式，然后在应用程序需要时再切换到另一种更新模式。 例如，可以指定订阅使用立即更新，但如果因系统故障而导致网络连接断开，则切换到排队更新。  
@@ -124,7 +124,7 @@ ms.locfileid: "52813979"
   
 ## <a name="see-also"></a>请参阅  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [事务复制的发布类型](publication-types-for-transactional-replication.md)   
+ [事务复制](transactional-replication.md)   
  [发布数据和数据库对象](../publish/publish-data-and-database-objects.md)   
  [订阅发布](../subscribe-to-publications.md)  
   

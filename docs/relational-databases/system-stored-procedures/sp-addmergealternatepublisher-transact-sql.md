@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaf907b0db55306ebd341ed727174f3531c947f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777731"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129297"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_发布服务器上_  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_发布_  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@alternate_publisher=**] **'***alternate_synchronization_partner*****  
+ [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_  
  是备用发布服务器的名称。 *alternate_synchronization_partner*是**sysname**，无默认值。  
   
- [ **@alternate_publisher_db=**] **'***alternate_publisher_db*****  
+ [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_  
  备用发布服务器上的发布数据库的名称。 *alternate_publisher_db*是**sysname**，无默认值。  
   
- [ **@alternate_publication=**] **'***alternate_synchronization_partner*****  
+ [  **@alternate_publication=**] **'**_alternate_synchronization_partner_  
  备用同步伙伴上的发布的名称。 *alternate_synchronization_partner*是**sysname**，无默认值。  
   
- [ **@alternate_distributor=**] **'***alternate_distributor*****  
+ [  **@alternate_distributor=**] **'**_alternate_distributor_  
  备用同步伙伴的分发服务器的名称。 *alternate_distributor*是**sysname**，无默认值。  
   
- [ **@friendly_name=**] **'***friendly_name*****  
+ [  **@friendly_name=**] **'**_friendly_name_  
  显示名称，通过该名称可以标识构成备用同步伙伴的发布服务器、发布和分发服务器之间的关联。 *friendly_name*是**nvarchar(255)**，默认值为 NULL。  
   
- [ **@reserved=**] **'***保留*****  
+ [  **@reserved=**] **'**_保留_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -12,12 +12,12 @@ ms.assetid: a15eef3f-219f-45d3-8286-6a864c85a723
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16180621b22534adca219aa3c36be78853a506c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90a0fdb76c93500ba4472ed1082f6c54e56d1f3e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805579"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129599"
 ---
 # <a name="mssqleng014162"></a>MSSQL_ENG014162
     
@@ -35,7 +35,7 @@ ms.locfileid: "52805579"
 ## <a name="explanation"></a>解释  
  使用复制可以对一些情况启用警告。 这包括超出了为同步合并发布服务器和订阅服务器间的更改所指定的时间长度。 可以为 LAN 连接和拨号连接指定不同的连接次数。  
   
- 使用复制监视器或 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)启用警告时，请指定阈值以确定何时触发警告。 达到或超过该阈值时，复制监视器中将显示警告，并且将一个事件写入 Windows 事件日志。 达到阈值还会触发 SQL Server 代理警报。 有关详细信息，请参阅[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以编程方式监视复制](monitor/monitoring-replication-overview.md)。  
+ 使用复制监视器或 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)启用警告时，请指定阈值以确定何时触发警告。 达到或超过该阈值时，复制监视器中将显示警告，并且将一个事件写入 Windows 事件日志。 达到阈值还会触发 SQL Server 代理警报。 有关详细信息，请参阅[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以编程方式监视复制](monitoring-replication.md)。  
   
 ## <a name="user-action"></a>用户操作  
  如果订阅超过持续时间阈值，则必须确定系统是否存在性能问题，或是否应调整阈值。 配置复制后，请确立一个性能基准，以便于确定复制在通常用于应用程序和拓扑的常见工作负荷中的行为方式。 将同步持续时间包括在该基准中，以便可以为阈值设置合适的值。  

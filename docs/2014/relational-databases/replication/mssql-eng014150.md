@@ -12,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758909"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126077"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -48,7 +48,7 @@ ms.locfileid: "52758909"
 -   复制维护作业。  
   
 ## <a name="user-action"></a>用户操作  
- 日志读取器代理、队列读取器代理和分发代理通常连续运行，而其他代理通常则按需要或按计划运行。 如果认为某个代理无法完成运行，请检查该代理的状态。 有关详细信息，请参阅 [Monitor Replication Agents](agents/replication-agents.md)。  
+ 日志读取器代理、队列读取器代理和分发代理通常连续运行，而其他代理通常则按需要或按计划运行。 如果认为某个代理无法完成运行，请检查该代理的状态。 有关详细信息，请参阅 [Monitor Replication Agents](agents/replication-agents-overview.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [复制代理管理](agents/replication-agent-administration.md)   

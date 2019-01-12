@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ffb78d301762f9b7edcb78a2ba062db6fe662f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540016"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126167"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>核心级别 API 函数（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "52540016"
 |**SQLCancel**|取消语句句柄，hstmt 上的处理。 在某些情况下，Oracle 不允许取消的正在运行的语句。 这意味着将继续运行的语句，直到 Oracle 完成的过程时，Oracle ODBC 驱动程序取消这段时间的语句的结果。|  
 |**SQLColAttributes**|在结果集中返回列的描述符信息。 描述符信息返回为字符串、 一个 32 位依赖于描述符的值或一个整数值。|  
 |**SQLConnect**|连接到数据源。 若要使用 Oracle 操作系统身份验证，请指定"/"作为*szUID*参数和""作为*szAuthStr*参数。|  
-|**SQLDescribeCol**|返回名称、 类型、 精度、 小数位数和给定的结果列的为 null 性。 **注意：****SQLDescribeCol**报告为 SQL_VARCHAR 的计算的列。|  
+|**SQLDescribeCol**|返回名称、 类型、 精度、 小数位数和给定的结果列的为 null 性。 **注意：SQLDescribeCol**报告为 SQL_VARCHAR 的计算的列。|  
 |**SQLDisconnect**|关闭连接。 如果共享环境中启用连接池和应用程序调用**SQLDisconnect**上在该环境中的连接，连接将返回到连接池，并且仍可用于使用其他组件同一个共享的环境中。|  
 |**SQLError**|返回有关最后一个错误的错误或状态信息。 驱动程序保持堆栈或可返回的错误的列表*hstmt*， *hdbc*，并*henv*参数，具体取决于如何在调用**SQLError**进行。 每个语句后刷新错误队列。 通常检索 Oracle 错误消息，否则为空。|  
 |**SQLExecDirect**|执行新的、 尚未准备好的 SQL 语句。 如果在语句中存在任何参数，驱动程序将使用参数标记变量的当前值。 如果表、 视图或字段名称包含空格，将名称括在返回引号标记。 例如，如果您的数据库包含名为的表*My Table*和字段*My Field*，括起来的标识符的每个元素如下所示：<br /><br /> 选择\`我的表\`。 \`我 Field1\`，;\`我的表\`。\`我 Field2\` FROM\`我的表|  

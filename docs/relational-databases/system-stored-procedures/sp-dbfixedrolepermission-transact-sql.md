@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 833fc69629e76aaf4e6b7b86f0ac2afcef812878
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719795"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126207"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@rolename =** ] **'***角色*****  
- 有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定数据库角色的名称。 *角色*是**sysname**，默认值为 NULL。 如果*角色*未指定，则显示所有固定的数据库角色的权限。  
+ [  **@rolename =** ] **'**_角色_  
+ 有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定数据库角色的名称。 *角色* 是 **sysname** ，默认值为 NULL。 如果*角色*未指定，则显示所有固定的数据库角色的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -75,7 +75,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
  结果集包括可执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和该数据库角色的成员可执行的其他特殊操作。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203277"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127067"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'**_名称_  
  警报的名称。 该名称显示在为响应警报而发送的电子邮件或寻呼消息中。 它必须是唯一的并且可以包含百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
   
  [ **@message_id =** ] *message_id*  
@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
   
  例如，当警报在短时间内重复产生时，通过设置该值就有可能避免发送重复的电子邮件。  
   
- [ **@notification_message =** ] **'***notification_message***'**  
+ [  **@notification_message =** ] **'**_notification_message_  
  发送给操作员的电子邮件的一部分的可选附加消息**网络发送**，或寻呼通知。 *notification_message*是**nvarchar(512)**，默认值为 NULL。 指定*notification_message*对于添加特殊说明如补救过程很有用。  
   
  [ **@include_event_description_in =** ] *include_event_description_in*  
@@ -94,16 +94,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|寻呼程序|  
 |**4**|**net send**|  
   
- [ **@database_name =** ] **'***database***'**  
+ [  **@database_name =** ] **'**_数据库_  
  只有其中出现错误时才能触发警报的数据库。 如果*数据库*未提供，而不考虑发生错误的位置触发警报。 *数据库*是**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
- [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [  **@event_description_keyword =** ] **'**_event_description_keyword_pattern_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误说明必须与之类似的字符序列。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword_pattern*是**nvarchar(100)**，默认值为 NULL。 此参数可用于筛选对象名称 (例如， **%customer_table%**)。  
   
  [ **@job_id =** ] *job_id*  
  为响应该警报而运行的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_  
  为响应该警报而执行的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中实现。 *raise_snmp_trap*是**tinyint**，默认值为 0。  
   
- [ **@performance_condition =** ] **'***performance_condition*****  
+ [  **@performance_condition =** ] **'**_performance_condition_  
  格式表示的值*itemcomparatorvalue*。 *performance_condition*是**nvarchar(512)** 默认值为 NULL，并包含这些元素。  
   
 |格式元素|Description|  
@@ -121,13 +121,13 @@ sp_add_alert [ @name = ] 'name'
 |*Comparator*|下列运算符之一：>、< 或 =|  
 |*ReplTest1*|计数器的数值|  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'**_类别_  
  警报类别的名称。 *类别*是**sysname**，默认值为 NULL。  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'**_wmi_namespace_  
  用于查询事件的 WMI 命名空间。 *wmi_namespace*是**sysname**，默认值为 NULL。 只支持本地服务器上的命名空间。  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **'**_wmi_query_  
  用于指定警报的 WMI 事件的查询。 *wmi_query*是**nvarchar(512)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

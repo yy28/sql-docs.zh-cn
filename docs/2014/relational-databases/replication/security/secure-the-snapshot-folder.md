@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753949"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127797"
 ---
 # <a name="secure-the-snapshot-folder"></a>保护快照文件夹的安全
   快照文件夹是存储快照文件的目录；建议将该目录专门用于存储快照。 请授予快照代理对该文件夹的写入权限，并确保仅为合并代理或分发代理访问文件夹时所用的 Windows 帐户授予读取权限。 与该代理相关联的 Windows 帐户必须是访问远程计算机上快照文件夹的域帐户。  
@@ -54,7 +54,7 @@ ms.locfileid: "52753949"
  [备用快照文件夹位置](../alternate-snapshot-folder-locations.md)   
  [使用快照初始化订阅](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性和保护（复制）](security-and-protection-replication.md)   
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)   
  [通过 FTP 传输快照](../transfer-snapshots-through-ftp.md)  
   
   

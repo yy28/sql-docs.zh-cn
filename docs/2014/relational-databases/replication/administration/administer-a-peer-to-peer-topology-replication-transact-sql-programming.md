@@ -14,12 +14,12 @@ ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0254902ce6e2b67b29cbdf2d9a4544036a0d747b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773379"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126847"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理对等拓扑（复制 Transact-SQL 编程）
   管理对等拓扑类似于管理典型的事务复制拓扑，但有许多需要特别注意的地方。 管理对等拓扑的主要区别在于，有些更改需要让系统“停止” 。 为了停止系统，需要停止对所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "52773379"
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
 ## <a name="see-also"></a>请参阅  
- [管理（复制）](administration-replication.md)   
+ [复制管理常见问题解答](frequently-asked-questions-for-replication-administrators.md)   
  [SQL Server 数据库的备份和还原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [对等事务复制](../transactional/peer-to-peer-transactional-replication.md)  
   

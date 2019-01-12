@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761447"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129415"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
   可以使用两种**注册数据层应用程序向导**或 Windows PowerShell 脚本可以生成描述现有数据库中的对象的数据层应用程序 (DAC) 定义并注册中的DAC定义`msdb`系统数据库 (**主**中[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
@@ -101,7 +101,7 @@ ms.locfileid: "52761447"
   “取消”- 终止向导而不注册 DAC。  
   
 ### <a name="validating-objects"></a>验证对象  
- **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 SchemaName.ObjectName** 确定当前正在验证的对象。  
+ **检查**  _SchemaName_ **。** _ObjectName_ **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 _SchemaName_**.**_ObjectName_ 确定当前正在验证的对象。  
   
  **\< 以前**-返回到**设置属性**页以便更改条目。  
   

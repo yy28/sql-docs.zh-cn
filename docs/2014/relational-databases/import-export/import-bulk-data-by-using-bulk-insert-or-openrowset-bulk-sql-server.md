@@ -21,12 +21,12 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1dec3a2821e2b92d431680b49e37a7b9819887b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505555"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127577"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 导入批量数据 (SQL Server)
   本主题概述了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 语句和 INSERT...SELECT * FROM OPENROWSET(BULK...) 语句将数据从某一数据文件大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 本主题还说明了使用 BULK INSERT 和 OPENROWSET(BULK...) 以及使用这些方法从远程数据源大容量导入数据的安全注意事项。  
@@ -102,7 +102,7 @@ ms.locfileid: "52505555"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows，使得一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可以通过转发已经过身份验证的 Windows 用户的凭据来连接到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这种安排称为“模拟”  或“委托” 。 在使用 BULK INSERT 或 OPENROWSET 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本是如何处理用户模拟的安全性的。 用户模拟允许数据文件保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程或用户所在的计算机以外的另一台计算机上。 例如，如果 **Computer_A** 上的用户具有对 **Computer_B** 上的数据文件的访问权限，而且凭据委托已设置妥当，则用户可以连接到运行在 **Computer_C** 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，访问 **Computer_B** 中的数据文件以及将数据从该文件大容量导入到 **Computer_C** 中的表中。  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>从远程数据文件中大容量导入  
- 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 从其他计算机中大容量导入数据，必须在两台计算机之间共享数据文件。 若要指定共享数据文件，请使用它的通用命名约定 (UNC) 名称，其一般形式为：\\\\Servername\\Sharename\\Path\\Filename**。 此外，用来访问该数据文件的帐户必须具有读取远程磁盘上的文件所需的权限。  
+ 若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 从其他计算机中大容量导入数据，必须在两台计算机之间共享数据文件。 指定共享数据文件时，请使用它的通用命名约定 (UNC) 名称，其一般形式为 **\\\\**_服务器名_**\\**_共享名_**\\**_路径_**\\**_文件名_。 此外，用来访问该数据文件的帐户必须具有读取远程磁盘上的文件所需的权限。  
   
  例如，下面的 `BULK INSERT` 语句会将名为 `SalesOrderDetail` 的数据文件中的数据大容量导入到 `AdventureWorks` 数据库的 `newdata.txt`表。 此数据文件驻留在系统 `\dailyorders` 的 `salesforce` 网络共享目录下的 `computer2` 共享文件夹中。  
   

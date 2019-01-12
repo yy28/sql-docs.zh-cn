@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762779"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130847"
 ---
 # <a name="create-a-job-category"></a>创建作业类别
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理对象在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建作业类别。  
@@ -48,7 +48,7 @@ ms.locfileid: "52762779"
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别server_name” 对话框中，单击“添加”。  
+4.  在“管理作业类别” _server_name_ 对话框中，单击“添加” 。  
   
 5.  在新对话框的 **“名称”** 框中，输入新作业类别的名称。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52762779"
   
 7.  单击“确定” 。  
   
-8.  在“管理作业类别server_name” 对话框中，单击“刷新”，确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
+8.  在“管理作业类别” _server_name_ 对话框中，单击“刷新”  以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   
  有关这些对话框的详细信息，请参阅[作业类别：管理作业类别](job-categories-manage-job-categories.md)并[作业类别属性和新的作业类别](job-categories-properties-new-job-category.md)。  
   

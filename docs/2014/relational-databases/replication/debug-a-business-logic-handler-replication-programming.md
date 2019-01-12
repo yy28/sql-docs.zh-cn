@@ -1,5 +1,5 @@
 ---
-title: 调试业务逻辑处理程序（复制编程）| Microsoft Docs
+title: 调试业务逻辑处理程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761509"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128757"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>调试业务逻辑处理程序（复制编程）
   在同步合并订阅时，可以使用业务逻辑处理程序调用自定义业务逻辑。 有关详细信息，请参阅[合并同步期间执行业务逻辑](merge/execute-business-logic-during-merge-synchronization.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "52761509"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>在本地计算机上调试业务逻辑处理程序  
   
-1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)和[创建、修改和删除发布和项目（复制）](publish/create-modify-and-delete-publications-and-articles-replication.md)。  
+1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)并[创建发布](publish/create-a-publication.md)。  
   
 2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。  
   

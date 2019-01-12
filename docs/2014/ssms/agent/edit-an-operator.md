@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127587"
 ---
 # <a name="edit-an-operator"></a>编辑运算符
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对操作员能否接收通知进行编辑，并编辑他们的电子邮件地址、寻呼地址和 net send 地址。  
@@ -66,7 +66,7 @@ ms.locfileid: "52764199"
   
 4.  右键单击要编辑的操作员，然后选择“属性”。  
   
-     若要深入了解“operator_name属性”对话框包含的可用选项，请参阅：  
+     有关“operator_name 属性”对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性和新运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

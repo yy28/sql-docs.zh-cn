@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209126"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131237"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'**_发布_  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [ **@property =** ] **'***属性*****  
+ [  **@property =** ] **'**_属性_  
  要更改的发布属性。 *属性*是**nvarchar(255)**。  
   
- [ **@value =** ] **'***值*****  
+ [  **@value =** ] **'**_值_  
  新属性值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
  下表说明了可以更改的发布属性以及对这些属性值的限制。  
@@ -130,7 +130,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0**指定对项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   - **1**指定对项目的更改会导致现有订阅重新初始化，并授予重新初始化订阅发生的权限。  
   
-[ **@publisher** = ] **'***publisher***'**  
+[ **@publisher** =] **'**_发布服务器上_  
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
   > [!NOTE]  

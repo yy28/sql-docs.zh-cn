@@ -15,12 +15,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb997c180d614169600ad32e3206332aaa7deb10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 311862d3612760da88d62f3ab51a5ca16d554b0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782079"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131247"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改唯一约束。  
@@ -63,7 +63,7 @@ ms.locfileid: "52782079"
     |设置聚集选项|在“表设计器”下的网格中，选择“创建为群集索引”，再从下拉列表中选择“是”创建群集索引，或选择“否”创建非群集索引。 对于每个表，只允许存在一个聚集索引。 如果此表中已经存在聚集索引，则您必须首先对原始索引清除此设置。|  
     |定义填充因子|在 **“表设计器”** 下的网格中，展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。|  
   
-5.  在“文件”菜单上，单击“保存table name”。  
+5.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> **修改唯一约束**  
   

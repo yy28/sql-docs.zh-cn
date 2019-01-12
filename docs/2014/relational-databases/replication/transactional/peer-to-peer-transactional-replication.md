@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770079"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127187"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   对等复制通过在多个服务器实例（又称为“节点” ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
@@ -43,7 +43,7 @@ ms.locfileid: "52770079"
  对等复制包括了在对等拓扑中启用冲突检测的选项。 此选项有助于防止因未检测到的冲突引起的各种问题，包括不一致的应用程序行为和丢失更新。 启用该选项后，默认情况下，发生冲突的更改被视为导致分发代理失败的关键错误。 发生冲突时，拓扑将始终处于不一致的状态，直至手动解决冲突并使拓扑中的数据一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
 > [!NOTE]  
->  为了避免潜在的数据不一致性，即便已经启用了冲突检测功能，也应尽力避免对等拓扑中发生冲突。 为了确保仅在某一个节点上执行特定行的写入操作，访问并更改数据的应用程序必须对其插入、更新和删除操作进行分区。 分区可确保在一个节点上对给定行的修改可以在其他节点修改该行之前，与拓扑中所有其他节点同步。 如果应用程序需要完善的冲突检测与解决功能，请使用合并复制。 有关详细信息，请参阅[合并复制](../merge/merge-replication.md)和[检测并解决合并复制冲突](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+>  为了避免潜在的数据不一致性，即便已经启用了冲突检测功能，也应尽力避免对等拓扑中发生冲突。 为了确保仅在某一个节点上执行特定行的写入操作，访问并更改数据的应用程序必须对其插入、更新和删除操作进行分区。 分区可确保在一个节点上对给定行的修改可以在其他节点修改该行之前，与拓扑中所有其他节点同步。 如果应用程序需要完善的冲突检测与解决功能，请使用合并复制。 有关详细信息，请参阅[合并复制](../merge/merge-replication.md)和[检测并解决合并复制冲突](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 ## <a name="peer-to-peer-topologies"></a>对等拓扑  
  下列方案说明了对等复制的典型应用。  
@@ -171,6 +171,6 @@ ms.locfileid: "52770079"
 ## <a name="see-also"></a>请参阅  
  [管理对等拓扑（复制 Transact-SQL 编程）](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [快照复制和事务复制的备份和还原策略](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [事务复制的发布类型](publication-types-for-transactional-replication.md)  
+ [事务复制的发布类型](transactional-replication.md)  
   
   

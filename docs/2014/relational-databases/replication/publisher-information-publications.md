@@ -1,5 +1,5 @@
 ---
-title: 发布服务器信息，发布 | Microsoft Docs
+title: SQL Server 复制发布服务器信息对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812169"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128907"
 ---
-# <a name="publisher-information-publications"></a>发布服务器信息，发布
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server 复制发布服务器信息对话框
   **“发布”** 选项卡提供在左窗格中选择的发布服务器的所有发布的摘要信息。  
   
 ## <a name="options"></a>选项  
@@ -84,7 +84,7 @@ ms.locfileid: "52812169"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看发布服务器的信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   
   

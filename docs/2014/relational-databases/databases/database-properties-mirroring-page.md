@@ -12,12 +12,12 @@ ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3411b259ddb3dd5ce3e4247335eb51d226aa617f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788660"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124947"
 ---
 # <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
   从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
@@ -47,7 +47,7 @@ ms.locfileid: "52788660"
   
  服务器网络地址的基本语法如下：  
   
- TCP**://***fully_qualified_domain_name***:***port*  
+ TCP **://**_fully_qualified_domain_name_**:**_port_  
   
  其中  
   
@@ -122,7 +122,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**高性能(异步)**|空(如果存在，尚未使用但会话需要仲裁)|为获得最佳性能，镜像数据库始终在某种程度上滞后于主体数据库，永远无法完全同步。 但是，数据库之间的异步间隔通常很小。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像停止。 但如果该会话没有见证服务器（推荐）或见证服务器已连接到镜像服务器，则镜像服务器将保持可作为热备用服务器访问；数据库所有者可以强制该服务镜像服务器实例（可能会造成数据丢失）。|  
 |**不带自动故障转移功能的高安全(同步)**|否|保证将所有提交的事务都写入镜像服务器的磁盘上。 如果伙伴彼此连接在一起，便可进行手动故障转移。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止但仍可以作为热备用；数据库所有者可以强制让镜像服务器实例来提供服务（但这样做可能会丢失数据）。|  
-|**带自动故障转移功能的高安全(同步)**|是（必需）|通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择“带自动故障转移功能的高安全级（同步）”选项。 只要伙伴彼此连接在一起，便可进行手动故障转移。 **\*\* 重要提示 \*\*** 如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步运行模式中，所有提交的事务都保证会受到保护，写入到镜像服务器的磁盘上。 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> 如果主体服务器实例变为不可用，则会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
+|**带自动故障转移功能的高安全(同步)**|是（必需）|通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择“带自动故障转移功能的高安全级（同步）”选项。 只要伙伴彼此连接在一起，便可进行手动故障转移。 **&#42;&#42; 重要提示 &#42;&#42;** 如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步运行模式中，所有提交的事务都保证会受到保护，写入到镜像服务器的磁盘上。 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> 如果主体服务器实例变为不可用，则会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
   
  在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”** 来保存更改。  
   

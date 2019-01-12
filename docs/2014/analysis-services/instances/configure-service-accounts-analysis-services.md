@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362829"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125497"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
   产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "53362829"
 ## <a name="logon-account-recommendations"></a>登录帐户推荐  
  在故障转移群集中，Analysis Services 的所有实例应配置为使用 Windows 域用户帐户。 将相同帐户分配给所有实例。 有关详情，请参见 [如何群集 Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) 。  
   
- 独立实例应使用默认虚拟帐户， **NT Service\MSSQLServerOLAPService**对于默认实例中，或 **NT Service\MSOLAP$ * * * 实例名称*对于命名实例。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
+ 单独的实例应使用默认虚拟帐户，针对默认实例使用 **NT Service\MSSQLServerOLAPService** ，或针对命名实例使用 **NT Service\MSOLAP$**_instance-name_ 。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>向 Analysis Services 授予权限  
  此部分阐释了 Analysis Services 用于本地、内部操作所需的权限，例如，启动可执行程序、读取配置文件和从数据目录加载数据库。 若要查找关于设置外部数据访问的权限以及与其他服务和应用程序的互操作性的指南，请进一步参阅此主题中的 [授予特定服务器操作的其他权限](#bkmk_tasks) 。  

@@ -16,12 +16,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf36beb01ee7d31b78e6bdf06921bc460bcbbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199207"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127427"
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 脚本环境，以管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例和这些实例中的对象。 还可以在与脚本环境非常类似的环境中生成并运行包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 Xquery 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。  
@@ -60,7 +60,7 @@ ms.locfileid: "48199207"
   
 -   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“文件”/“打开”菜单在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中打开此文件。  
   
--   使用 **-i * * * input_file*参数来运行此文件`sqlcmd`实用程序。  
+-   使用 **-i**_input_file_参数来运行此文件`sqlcmd`实用程序。  
   
 -   通过 **PowerShell 脚本中的** Invoke-Sqlcmd **cmdlet 使用** -QueryFromFile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数运行此文件。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "48199207"
 |任务说明|主题|  
 |----------------------|-----------|  
 |介绍如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的代码和文本编辑器来以交互方式开发、调试和运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本|[查询和文本编辑器 (SQL Server Management Studio)](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|介绍如何使用`sqlcmd`实用工具来运行[!INCLUDE[tsql](../../includes/tsql-md.md)]从命令提示符下，包括能够以交互方式开发脚本的脚本。|[sqlcmd 操作指南主题](../../database-engine/sqlcmd-how-to-topics.md)|  
+|介绍如何使用 `sqlcmd` 实用工具从命令提示符运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，包括以交互方式开发脚本的能力。|[sqlcmd 操作指南主题](../../database-engine/sqlcmd-how-to-topics.md)|  
 |介绍如何将 SQL Server 组件集成到 Windows PowerShell 2.0 环境中，然后生成 PowerShell 脚本以便管理 SQL Server 实例和对象。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |介绍如何使用 **“生成和发布脚本”** 向导创建从数据库重新创建一个或多个对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|[生成脚本 (SQL Server Management Studio)](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
- [教程：编写 Transact-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教程：编写 TRANSACT-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

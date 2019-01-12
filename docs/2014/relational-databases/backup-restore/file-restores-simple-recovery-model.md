@@ -19,12 +19,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47fd5d47ea064a6aa783132ff052f8b95a6f2941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150427"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126897"
 ---
 # <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
   本主题仅适用于至少包含一个只读辅助文件组的简单模式数据库。  
@@ -46,7 +46,7 @@ ms.locfileid: "48150427"
      有关联机页和文件还原支持的信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  如果你想要脱机文件还原的数据库，使数据库脱机之前通过执行以下命令启动还原顺序[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)语句：ALTER DATABASE *database_name*设置为离线。  
   
 
   
@@ -62,13 +62,13 @@ ms.locfileid: "48150427"
   
  该还原序列仅包含两个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 第一个语句还原辅助文件（即文件 `A`），这是使用 WITH NORECOVERY 还原的。 第二项操作是还原其他两个文件（ `B` 和 `C` ），这两个文件是使用 WITH RECOVERY 从不同的备份设备还原的：  
   
-1.  RESTORE DATABASE database FILE = name_of_file_A  
+1.  RESTORE DATABASE *database* FILE **=**_name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE database FILE name_of_file_B,name_of_file_C*=*  
+2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   
@@ -76,9 +76,9 @@ ms.locfileid: "48150427"
   
 ### <a name="examples"></a>示例  
   
--   [示例：只读文件的联机还原（简单恢复模式）](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [示例：联机还原只读文件的&#40;简单恢复模式&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [示例：主文件组和一个其他文件组的脱机还原（完整恢复模式）](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [示例：主服务器和一个其他文件组的脱机还原&#40;完全恢复模式&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48150427"
   
   
 ## <a name="see-also"></a>请参阅  
- [备份和还原：互操作性和共存 (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存&#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](differential-backups-sql-server.md)   
  [完整文件备份 (SQL Server)](full-file-backups-sql-server.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   

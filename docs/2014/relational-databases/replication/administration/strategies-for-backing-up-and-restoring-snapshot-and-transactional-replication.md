@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823511"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125227"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
   在设计快照和事务复制的备份和还原策略时，需要考虑三个方面：  
@@ -117,7 +117,7 @@ ms.locfileid: "52823511"
   
          有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         有关验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+         有关如何验证命令的详细信息，请参阅[查看复制的命令和分发数据库中的其他信息&#40;复制 TRANSACT-SQL 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  从发布服务器、分发服务器和订阅服务器中删除复制配置，然后重新创建配置。 重新创建订阅时，指定订阅服务器已包含数据。 还原完成。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823511"
   
          有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         有关验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+         有关如何验证命令的详细信息，请参阅[查看复制的命令和分发数据库中的其他信息&#40;复制 TRANSACT-SQL 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  使用 [tablediff 实用工具](../../../tools/tablediff-utility.md) 或其他工具手动将发布服务器和订阅服务器同步。 这使您能够从订阅数据库恢复发布数据库备份中未包含的数据。 转到步骤 c。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823511"
   
      有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)。  
   
-     有关验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     有关如何验证命令的详细信息，请参阅[查看复制的命令和分发数据库中的其他信息&#40;复制 TRANSACT-SQL 编程&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md)并[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 3.  如果使用的是排队更新订阅，则连接到每台订阅服务器，并从订阅数据库中的 [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) 表中删除所有行。 转到步骤 4。  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823511"
   
     2.  将所有发布标记为要验证。 重新初始化所有验证失败的订阅。 恢复完成。  
   
-         有关验证的详细信息，请参阅 [Validate Replicated Data](../validate-replicated-data.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../reinitialize-subscriptions.md)。  
+         有关验证的详细信息，请参阅 [Validate Replicated Data](../validate-data-at-the-subscriber.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../reinitialize-subscriptions.md)。  
   
 #### <a name="msdb-database-distributor"></a>msdb 数据库（分发服务器）  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823511"
   
 4.  将所有发布标记为要验证。 重新初始化所有验证失败的订阅。 恢复完成。  
   
-     有关验证的详细信息，请参阅 [Validate Replicated Data](../validate-replicated-data.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../reinitialize-subscriptions.md)。  
+     有关验证的详细信息，请参阅 [Validate Replicated Data](../validate-data-at-the-subscriber.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../reinitialize-subscriptions.md)。  
   
 #### <a name="master-database-distributor"></a>master 数据库（分发服务器）  
   

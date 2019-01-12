@@ -16,12 +16,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 529d83451c897359152520aecbece856ef7e6ded
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538196"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125507"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建筛选索引。 筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
@@ -111,7 +111,7 @@ ms.locfileid: "52538196"
   
 6.  在“索引键列”下，单击“添加…”。  
   
-7.  在“从table_name选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+7.  在“从 table_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   

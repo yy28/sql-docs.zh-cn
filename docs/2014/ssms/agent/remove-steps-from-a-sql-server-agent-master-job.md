@@ -10,12 +10,12 @@ ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bebe86c19482a7a86d1b19e19f0ac43292c8ece
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782860"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127807"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除 SQL Server 代理主作业中的步骤。  
@@ -56,7 +56,7 @@ ms.locfileid: "52782860"
   
 4.  右键单击要从中删除步骤的作业，然后选择“属性”。  
   
-5.  在 **作业属性-* * * job_name*对话框中的**选择页**，选择**步骤**。  
+5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”。  
   
 6.  在 **“作业步骤列表”** 下，选择要删除的作业步骤，然后单击 **“删除”**。  
   

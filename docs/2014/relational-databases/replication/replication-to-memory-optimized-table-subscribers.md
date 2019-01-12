@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800659"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127767"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
   充当事务复制订阅服务器的表（不包括对等事务复制）可以配置为内存优化表。 其他复制配置与内存优化表不兼容。  
@@ -317,6 +317,6 @@ GO
  内存优化表的主键无法更新。 若要复制订阅服务器上的主键更新，请修改更新存储过程以便将该更新作为删除和插入对提供。  
   
 ## <a name="see-also"></a>请参阅  
- [复制功能和任务](replication-features-and-tasks.md)  
+ [SQL Server 复制](sql-server-replication.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9be5a177978adfdfae364784ff8d6c5436f54b0d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819339"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126052"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
   配置链接服务器以支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之外对 OLE DB 数据源执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access 和 Excel。 链接服务器具有以下优点：  
@@ -78,7 +78,7 @@ ms.locfileid: "52819339"
   
  还可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”，选择“新建”，再选择“链接服务器”。 通过右键单击链接服务器名称并选择“删除”，可以删除链接服务器定义。  
   
- 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称应采用格式*linked_server_name.catalog***。*`schema` *。 * * * object_name*。  
+ 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称应采用格式_linked_server_name.catalog_**。_`schema`_.**_object_name_。  
   
 > [!NOTE]  
 >  可以定义链接服务器指回（环回）到在其上定义它们的服务器。 当在单服务器网络中测试使用分布式查询的应用程序时，环回服务器是很有用的。 环回链接服务器专用于测试，许多操作（如分布式事务）不支持该服务器。  

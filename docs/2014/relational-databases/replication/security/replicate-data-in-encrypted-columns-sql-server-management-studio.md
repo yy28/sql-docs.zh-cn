@@ -14,12 +14,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00bec2a06d024b4c1482b0e9865c58ea6d1e985d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766149"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127167"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
   通过使用复制，您可以发布加密的列数据。 若要在订阅服务器上解密并使用此数据，则订阅服务器上也必须有用于在发布服务器上加密该数据的密钥。 复制并不提供安全机制来传输加密密钥。 您必须在订阅服务器上手动重新创建加密密钥。 本主题说明如何在发布服务器上加密列并确保订阅服务器上提供有加密密钥。  
@@ -86,7 +86,7 @@ ms.locfileid: "52766149"
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
 ## <a name="see-also"></a>请参阅  
- [安全性概述（复制）](security-overview-replication.md)   
+ [SQL Server 复制安全性](view-and-modify-replication-security-settings.md)   
  [在两个服务器上创建相同的对称密钥](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

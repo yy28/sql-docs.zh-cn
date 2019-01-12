@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513805"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127437"
 ---
 # <a name="bcpbind"></a>bcp_bind
   将程序变量中的数据绑定到表列，以便大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>备注  
  使用**bcp_bind**若要将数据从程序变量复制到的表中的快速、 高效的方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 调用[bcp_init](bcp-init.md)之前调用此方法或任何其他大容量复制函数。 调用**bcp_init**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制的目标表。 调用时**bcp_init**用于**bcp_bind**并[bcp_sendrow](bcp-sendrow.md)，则**bcp_init** *szDataFile*参数，指示数据文件中，设置为 NULL;**bcp_init**_eDirection_参数设置为 DB_IN。  
+ 调用[bcp_init](bcp-init.md)之前调用此方法或任何其他大容量复制函数。 调用**bcp_init**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制的目标表。 调用时**bcp_init**用于**bcp_bind**并[bcp_sendrow](bcp-sendrow.md)，则**bcp_init** _szDataFile_参数，指示数据文件中，设置为 NULL;**bcp_init**_eDirection_参数设置为 DB_IN。  
   
  单独**bcp_bind**为每个列调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]你想要复制到其中的表。 所需的后**bcp_bind**的调用进行了，然后调用**bcp_sendrow**将数据的行发送到将程序变量中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支持重新绑定列。  
   

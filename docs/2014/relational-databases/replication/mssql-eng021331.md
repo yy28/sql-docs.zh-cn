@@ -12,12 +12,12 @@ ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26e0f33ef996f47fe4be2b3be034111187033f94
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63becb9b07114b6e0ae0589664ae80d82f8babb2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753759"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126177"
 ---
 # <a name="mssqleng021331"></a>MSSQL_ENG021331
     
@@ -39,7 +39,7 @@ ms.locfileid: "52753759"
  请确保已为快照文件夹指定正确的路径，并且在发布服务器上运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户具有足够的权限。  
   
 ## <a name="see-also"></a>请参阅  
- [指定默认快照位置 (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)   
+ [指定默认快照位置](snapshot-options.md#snapshot-folder-locations)   
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)   
  [初始化事务订阅（不使用快照）](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

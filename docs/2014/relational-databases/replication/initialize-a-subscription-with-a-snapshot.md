@@ -13,12 +13,12 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71c0b884fea0ceab1da3beba770414e1af14b74a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776439"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131107"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照初始化订阅
   在创建发布后，通常会创建一个初始快照，并将其复制到快照文件夹中（默认情况下，使用新建发布向导创建的合并发布将会执行此操作）。 此快照然后将在订阅的初始同步期间由分发代理（对于事务发布和快照发布）或合并代理（对于合并发布）应用于订阅服务器。 快照过程取决于发布的类型：  
@@ -43,7 +43,7 @@ ms.locfileid: "52776439"
   
 -   压缩快照，以便在可移动介质上进行存储或者通过速度较低的网络进行传输。 有关详细信息，请参阅 [Compressed Snapshots](compressed-snapshots.md)。  
   
--   在应用快照之前或之后执行 Transact-SQL 脚本。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](execute-scripts-before-and-after-the-snapshot-is-applied.md)。  
+-   在应用快照之前或之后执行 Transact-SQL 脚本。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   
 -   使用文件传输协议 (FTP) 传输快照文件。 有关详细信息，请参阅[通过 FTP 传输快照](transfer-snapshots-through-ftp.md)。  
   

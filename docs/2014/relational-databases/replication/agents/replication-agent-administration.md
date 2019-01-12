@@ -22,12 +22,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49729948f284af9ec2a638f7da3da4b248521653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762489"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130447"
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
   复制代理执行许多与复制有关的任务，其中包括创建架构和数据副本、检测发布服务器或订阅服务器上的更新以及在服务器之间传播更改。 默认情况下，复制代理在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业步骤下运行。 由于这些代理完全是可执行文件，因此可以从命令行和批处理脚本直接调用它们。 每个复制代理支持一组运行时参数，用于控制代理的运行方式；这些参数在代理配置文件或命令行中指定。  
@@ -69,7 +69,7 @@ ms.locfileid: "52762489"
   
     -   队列读取器代理  
   
-     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅[为与发布关联的代理查看信息和执行任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52762489"
   
     -   合并代理  
   
-     通过以下选项卡访问与这些代理相关联的信息和任务：**订阅监视列表**（适用于每个发布服务器） 或**的所有订阅**（适用于每个发布） 选项卡。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     通过以下选项卡访问与这些代理相关联的信息和任务：**订阅监视列表**（适用于每个发布服务器） 或**的所有订阅**（适用于每个发布） 选项卡。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="independent-and-shared-agents"></a>独立代理和共享代理  
  独立代理是为一个订阅提供服务的代理。 共享代理为多个订阅提供服务；如果使用同一共享代理的多个订阅需要同步，则在默认情况下，它们会排队等候，共享代理一次为一个订阅提供服务。 使用独立代理会减少滞后时间，因为只要订阅需要同步，独立代理就可以为其提供服务。 合并复制始终使用独立代理，而事务复制在默认情况下为在新建发布向导中创建的发布使用独立代理（在早期的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本中，事务复制在默认情况下使用共享代理）。  

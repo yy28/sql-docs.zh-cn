@@ -14,12 +14,12 @@ ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c92a2d943ecbe571bd87268a7096d2adf51a06c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 47711a7e974373e9da4ac8068295029d88accaf6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534288"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125617"
 ---
 # <a name="numeric-functions"></a>数值函数
 下表介绍 ODBC 标量函数集中包含的数值函数。 通过调用**SQLGetInfo**与*信息类型*的 SQL_NUMERIC_FUNCTIONS，应用程序可以确定由驱动程序支持的数值的函数。  
@@ -36,27 +36,27 @@ ms.locfileid: "52534288"
   
 |函数|Description|  
 |--------------|-----------------|  
-|**ABS (** *则 numeric_exp* **)** (ODBC 1.0)|返回的绝对值*则 numeric_exp*。|  
-|**ACOS (** *float_exp* **)** (ODBC 1.0)|返回的反余弦*float_exp*作为角度以弧度表示。|  
-|**ASIN (** *float_exp* **)** (ODBC 1.0)|返回的反正弦*float_exp*作为角度以弧度表示。|  
-|**ATAN (** *float_exp* **)** (ODBC 1.0)|返回的反正切*float_exp*作为角度以弧度表示。|  
-|**ATAN2 (** *float_exp1*， _float_exp2_**)** (ODBC 2.0)|返回的反正切值*x*并*y*指定的坐标*float_exp1*并*float_exp2*，分别为角度，以弧度为单位表示。|  
-|**CEILING (** *则 numeric_exp* **)** (ODBC 1.0)|返回的最小整数大于或等于*则 numeric_exp*。 返回值是相同的数据类型作为输入参数。|  
-|**COS (** *float_exp* **)** (ODBC 1.0)|返回的余弦*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
-|**COT (** *float_exp* **)** (ODBC 1.0)|返回的余切*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
-|**度 (** *则 numeric_exp* **)** (ODBC 2.0)|返回从转换为度数*则 numeric_exp*弧度为单位。|  
-|**EXP (** *float_exp* **)** (ODBC 1.0)|返回的指数值*float_exp*。|  
-|**FLOOR (** *则 numeric_exp* **)** (ODBC 1.0)|返回小于或等于最大整数*则 numeric_exp*。 返回值是相同的数据类型作为输入参数。|  
-|**日志 (** *float_exp* **)** (ODBC 1.0)|返回自然对数*float_exp*。|  
-|**LOG10 (** *float_exp* **)** (ODBC 2.0)|返回基数为 10 的对数*float_exp*。|  
-|**MOD (** *integer_exp1*， _integer_exp2_**)** (ODBC 1.0)|返回余数 （取模） *integer_exp1*除以*integer_exp2*。|  
+|**ABS (** _则 numeric_exp_ **)** (ODBC 1.0)|返回的绝对值*则 numeric_exp*。|  
+|**ACOS (** _float_exp_ **)** (ODBC 1.0)|返回的反余弦*float_exp*作为角度以弧度表示。|  
+|**ASIN (** _float_exp_ **)** (ODBC 1.0)|返回的反正弦*float_exp*作为角度以弧度表示。|  
+|**ATAN (** _float_exp_ **)** (ODBC 1.0)|返回的反正切*float_exp*作为角度以弧度表示。|  
+|**ATAN2 (** _float_exp1_， _float_exp2_**)** (ODBC 2.0)|返回的反正切值*x*并*y*指定的坐标*float_exp1*并*float_exp2*，分别为角度，以弧度为单位表示。|  
+|**CEILING (** _则 numeric_exp_ **)** (ODBC 1.0)|返回的最小整数大于或等于*则 numeric_exp*。 返回值是相同的数据类型作为输入参数。|  
+|**COS (** _float_exp_ **)** (ODBC 1.0)|返回的余弦*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
+|**COT (** _float_exp_ **)** (ODBC 1.0)|返回的余切*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
+|**度 (** _则 numeric_exp_ **)** (ODBC 2.0)|返回从转换为度数*则 numeric_exp*弧度为单位。|  
+|**EXP (** _float_exp_ **)** (ODBC 1.0)|返回的指数值*float_exp*。|  
+|**FLOOR (** _则 numeric_exp_ **)** (ODBC 1.0)|返回小于或等于最大整数*则 numeric_exp*。 返回值是相同的数据类型作为输入参数。|  
+|**日志 (** _float_exp_ **)** (ODBC 1.0)|返回自然对数*float_exp*。|  
+|**LOG10 (** _float_exp_ **)** (ODBC 2.0)|返回基数为 10 的对数*float_exp*。|  
+|**MOD (** _integer_exp1_， _integer_exp2_**)** (ODBC 1.0)|返回余数 （取模） *integer_exp1*除以*integer_exp2*。|  
 |**PI （)** (ODBC 1.0)|浮点值形式返回 pi 的常量值。|  
-|**POWER (** *则 numeric_exp*， _integer_exp_**)** (ODBC 2.0)|返回的值*则 numeric_exp*的幂*integer_exp*。|  
-|**弧度 (** *则 numeric_exp* **)** (ODBC 2.0)|返回从转换为弧度数*则 numeric_exp*度。|  
+|**POWER (** _则 numeric_exp_， _integer_exp_**)** (ODBC 2.0)|返回的值*则 numeric_exp*的幂*integer_exp*。|  
+|**弧度 (** _则 numeric_exp_ **)** (ODBC 2.0)|返回从转换为弧度数*则 numeric_exp*度。|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|返回随机浮点值使用*integer_exp*作为可选的种子值。|  
-|**ROUND (** *则 numeric_exp*， _integer_exp_**)** (ODBC 2.0)|返回*则 numeric_exp*舍入到*integer_exp*放置的小数点右侧。 如果*integer_exp*为负，*则 numeric_exp*舍入到&#124; *integer_exp* &#124;将放置到小数点左侧。|  
-|**登录 (** *则 numeric_exp* **)** (ODBC 1.0)|返回的符号的指示器*则 numeric_exp*。 如果*则 numeric_exp*小于零，-1 返回。 如果*则 numeric_exp*等于零，则返回 0。 如果*则 numeric_exp*是大于零，则返回 1。|  
-|**SIN (** *float_exp* **)** (ODBC 1.0)|返回的正弦*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
-|**SQRT (** *float_exp* **)** (ODBC 1.0)|返回的平方根*float_exp*。|  
-|**TAN (** *float_exp* **)** (ODBC 1.0)|返回的正切*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
-|**截断 (** *则 numeric_exp*， _integer_exp_**)** (ODBC 2.0)|返回*则 numeric_exp*被截尾取*integer_exp*放置的小数点右侧。 如果*integer_exp*为负，*则 numeric_exp*将被截断为&#124; *integer_exp* &#124;将放置到小数点左侧。|
+|**ROUND (** _则 numeric_exp_， _integer_exp_**)** (ODBC 2.0)|返回*则 numeric_exp*舍入到*integer_exp*放置的小数点右侧。 如果*integer_exp*为负，*则 numeric_exp*舍入到&#124; *integer_exp* &#124;将放置到小数点左侧。|  
+|**登录 (** _则 numeric_exp_ **)** (ODBC 1.0)|返回的符号的指示器*则 numeric_exp*。 如果*则 numeric_exp*小于零，-1 返回。 如果*则 numeric_exp*等于零，则返回 0。 如果*则 numeric_exp*是大于零，则返回 1。|  
+|**SIN (** _float_exp_ **)** (ODBC 1.0)|返回的正弦*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
+|**SQRT (** _float_exp_ **)** (ODBC 1.0)|返回的平方根*float_exp*。|  
+|**TAN (** _float_exp_ **)** (ODBC 1.0)|返回的正切*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
+|**截断 (** _则 numeric_exp_， _integer_exp_**)** (ODBC 2.0)|返回*则 numeric_exp*被截尾取*integer_exp*放置的小数点右侧。 如果*integer_exp*为负，*则 numeric_exp*将被截断为&#124; *integer_exp* &#124;将放置到小数点左侧。|

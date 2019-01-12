@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f309bf2f339347c6d29000b45bdaab602b3bd752
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760729"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131077"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象更改作业类别的成员身份。  
@@ -56,13 +56,13 @@ ms.locfileid: "52760729"
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别server_name” 对话框中，选择要编辑的作业类别，然后单击“查看作业”。  
+4.  在“管理作业类别” _server_name_ 对话框中，选择要编辑的作业类别，然后单击“查看作业” 。  
   
 5.  选中 **“显示所有作业”** 复选框。  
   
 6.  若要向类别中添加作业，请在主网格中选中与作业对应的 **“选择”** 列中的复选框。 若要从类别中删除作业，请清除该框。 完成后，单击 **“确定”**。  
   
-7.  关闭“管理作业类别server_name” 对话框。  
+7.  关闭“管理作业类别” _server_name_ 对话框。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   

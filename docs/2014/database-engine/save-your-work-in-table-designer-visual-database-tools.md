@@ -14,12 +14,12 @@ ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090281"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130797"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>在表设计器中保存您的工作 (Visual Database Tools)
   可以保存对表设计器中打开的表所做的更改。  
@@ -28,7 +28,7 @@ ms.locfileid: "48090281"
   
 1.  单击表设计器中的任意位置。  
   
-2.  从**文件**菜单中，选择 **保存 * * * tablename*。  
+2.  从“文件”菜单中，选择“保存 tablename”。  
   
 3.  在“保存”对话框中，单击“是”以更新数据库。  
   

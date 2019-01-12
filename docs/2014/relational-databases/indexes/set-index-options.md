@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408267"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130187"
 ---
 # <a name="set-index-options"></a>设置索引选项
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引的属性。  
@@ -78,7 +78,7 @@ ms.locfileid: "52408267"
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”菜单上，选择“保存table_name”。  
+8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性  
   

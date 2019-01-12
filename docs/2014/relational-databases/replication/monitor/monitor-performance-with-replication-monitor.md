@@ -19,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815569"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126417"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
   通过使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器，您可以通过以下列方式监视事务复制和合并复制性能：  
@@ -85,16 +85,16 @@ ms.locfileid: "52815569"
     |---------------|----------|----------|----------|  
     |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
- 如何查看订阅信息的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 有关如何查看订阅信息的详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>使用跟踪令牌确定滞后时间  
  事务复制使您可以通过在发布数据库的事务日志中插入一个令牌（少量数据）并记录到达分发服务器和订阅服务器所用的时间，来测量系统的滞后时间。 使用令牌还可以识别数据是否未到达分发服务器或订阅服务器。 有关详细信息，请参阅 [为事务复制测量滞后时间和验证连接](measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>查看合并复制的详细同步性能  
- 对于合并复制，复制监视器会显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息的详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 对于合并复制，复制监视器会显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 查看详细统计信息的详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>查看事务及事务复制的传递时间  
- 对于事务复制，复制监视器显示分发数据库中尚未分发到订阅服务器的事务数以及分发这些事务的估计时间的信息。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 对于事务复制，复制监视器显示分发数据库中尚未分发到订阅服务器的事务数以及分发这些事务的估计时间的信息。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [监视复制](../monitoring-replication.md)   

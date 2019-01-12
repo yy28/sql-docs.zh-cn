@@ -18,12 +18,12 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f41868f4ffa8a542475ef7c4be304d8636f87d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f91537880615fd7075db67ff8d89835944d1a79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802139"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125877"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "52802139"
 |**fast_multicol_updateproc**|**bit**|指定是否已启用合并代理来使用一条 UPDATE 语句在同一行的多个列中应用更改。<br /><br /> **0** = 为每个列的独立更新已更改的问题。<br /><br /> **1** = 发出 UPDATE 语句，这会导致要到在一个语句中的多个列进行更新。|  
 |**check_permissions**|**int**|当合并代理更改应用到发布服务器验证将为表级权限的位图。 *check_permissions*可以具有下列值之一：<br /><br /> **0x00** = 不检查权限。<br /><br /> **0x10** = 检查发布服务器上的权限，才能上载订阅服务器上的插入。<br /><br /> **0x20** = 检查发布服务器上的权限，才能上载订阅服务器上所做的更新。<br /><br /> **0x40** = 可以上载订阅服务器上的 delete 操作之前检查发布服务器上的权限。|  
 |**maxversion_at_cleanup**|**int**|清除了元数据的最高版本。|  
-|**processing_order**|**int**|指示合并发布; 中的项目的处理顺序其中的值**0**指示项目未排序，并从最低到最高值的顺序处理项目。 如果两个项目具有相同值，将对其进行并发处理。 有关详细信息，请参阅[指定合并项目的处理顺序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。|  
+|**processing_order**|**int**|指示合并发布; 中的项目的处理顺序其中的值**0**指示项目未排序，并从最低到最高值的顺序处理项目。 如果两个项目具有相同值，将对其进行并发处理。 有关详细信息，请参阅[指定合并复制属性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。|  
 |**published_in_tran_pub**|**bit**|指示合并发布中的项目也将在事务发布中发布。<br /><br /> **0** = 文章未在事务项目中发布。<br /><br /> **1** = 事务项目中也发布了一文。|  
 |**upload_options**|**tinyiny**|定义是否可以在订阅服务器上进行更改或从订阅服务器上载更改，可以为下列值之一：<br /><br /> **0** = 在订阅服务器上所做的更新没有限制; 所有更改都上载到发布服务器。<br /><br /> **1** = 允许在订阅服务器上，进行更改，但不是将其上载到发布服务器。<br /><br /> **2** = 不允许在订阅服务器上进行更改。|  
 |**轻型**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

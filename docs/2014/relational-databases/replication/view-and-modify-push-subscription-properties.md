@@ -17,12 +17,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ff13200783ab81e8402fe4bc97774898c97f85e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810929"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127257"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>查看和修改推送订阅属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改推送订阅属性。  
@@ -140,8 +140,8 @@ ms.locfileid: "52810929"
 7.  （可选）若要查看新设置，请调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> 方法重新加载此订阅的属性。  
   
 ## <a name="see-also"></a>请参阅  
- [为订阅查看信息和执行其任务（复制监视器）](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [复制安全最佳做法](security/replication-security-best-practices.md)   
+ [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [订阅发布](subscribe-to-publications.md)  
   
   
