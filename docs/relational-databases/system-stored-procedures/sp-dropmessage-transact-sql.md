@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725035"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124147"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_dropmessage [ @msgnum = ] message_number
  [ **@msgnum =** ] *message_number*  
  要删除的消息号。 *message_number*必须是一个消息号大于 50000 的用户定义的消息。 *message_number*是**int**，默认值为 NULL。  
   
- [ **@lang =** ] **'***语言*****  
+ [  **@lang =** ] **'**_语言_  
  要删除的消息语言。 如果**所有**指定的所有语言版本*message_number*将被删除。 *语言*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -53,7 +53,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**并**serveradmin**固定服务器角色的成员。  
   
 ## <a name="remarks"></a>备注  

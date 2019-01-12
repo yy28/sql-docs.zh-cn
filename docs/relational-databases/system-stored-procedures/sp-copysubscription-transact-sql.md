@@ -16,19 +16,19 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29c038fb212774015f90da0ed8855e8d46c18d09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0580ccfaa0505e027cedb5824aca26b6dbe51574
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783489"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124307"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
->  不推荐使用可附加的订阅功能，未来的版本中将删除该功能。 在新的开发工作中不要使用此功能。 对于使用参数化筛选器分区的合并发布，建议您使用分区快照的新功能，这些功能可简化大量订阅的初始化。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。 对于未分区的发布，可以使用备份来初始化订阅。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+>  不推荐使用可附加的订阅功能，未来的版本中将删除该功能。 在新的开发工作中不要使用此功能。 对于使用参数化筛选器分区的合并发布，建议您使用分区快照的新功能，这些功能可简化大量订阅的初始化。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。 对于未分区的发布，可以使用备份来初始化订阅。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
  复制具有请求订阅但无推送订阅的订阅数据库。 仅可复制单个文件数据库。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -44,13 +44,13 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@filename =**] **'***file_name***'**  
+ [  **@filename =**] **'**_file_name_  
  指定保存数据文件 (.mdf) 副本的完整路径（包括文件名）。 *文件名*是**nvarchar(260)**，无默认值。  
   
- [ **@temp_dir=**] **'***temp_dir*****  
+ [  **@temp_dir=**] **'**_temp_dir_  
  包含临时文件的目录的名称。 *temp_dir*是**nvarchar(260)**，默认值为 NULL。 如果为 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用默认数据目录。 该目录应有足够的空间可容纳具有保持所有组合的订阅服务器数据库文件大小的文件。  
   
- [ **@overwrite_existing_file=**] **'***overwrite_existing_file*****  
+ [  **@overwrite_existing_file=**] **'**_overwrite_existing_file_  
  可选布尔标志，该标志指定是否覆盖现有文件中指定的同名**@filename**。 *overwrite_existing_file*是**位**，默认值为**0**。 如果**1**，它将覆盖指定的文件**@filename**，如果它存在。 如果**0**，如果该文件存在，并且不覆盖该文件存储的过程将失败。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -67,7 +67,7 @@ sp_copysubscription [ @filename = ] 'file_name'
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_copysubscription**。  
   
 ## <a name="see-also"></a>请参阅  
- [备用快照文件夹位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [备用快照文件夹位置](../../relational-databases/replication/snapshot-options.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

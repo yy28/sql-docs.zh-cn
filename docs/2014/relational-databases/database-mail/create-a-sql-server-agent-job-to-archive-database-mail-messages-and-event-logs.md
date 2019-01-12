@@ -15,12 +15,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 357678ea7a6f76554cbafade965ee6c847480d67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813559"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124227"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
   数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
@@ -47,11 +47,11 @@ ms.locfileid: "52813559"
   
 -   第一个过程创建一个名为“存档数据库邮件”的作业，其中包含下列步骤。  
   
-    1.  将所有邮件从数据库邮件表中复制到一个格式为 DBMailArchive_<year_month> 且用上一个月份命名的新表中。  
+    1.  将所有邮件从数据库邮件表中复制到一个格式为 **DBMailArchive_**_<year_month>_ 且用上一个月份命名的新表中。  
   
-    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 DBMailArchive_Attachments_<year_month> 且用上一个月份命名的新表中。  
+    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 **DBMailArchive_Attachments_**<year_month> 且用上一个月份命名的新表中。  
   
-    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 DBMailArchive_Log_<year_month> 且用上一个月份命名的新表中。  
+    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 **DBMailArchive_Log_**<year_month> 且用上一个月份命名的新表中。  
   
     4.  从数据库邮件表中删除已传输邮件项的记录。  
   

@@ -14,12 +14,12 @@ ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c45dc872cd75640f244c55863cdbace607812a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 873a16f8e6dcc73b4f2b3da5727d49207252ca63
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815339"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124277"
 ---
 # <a name="compressed-snapshots"></a>压缩的快照
   如果要在慢速网络上传输快照，或者将快照存储到可移动介质上而未压缩的快照太大而不适于存储在介质上，则应该压缩快照文件。 在这些情况下，压缩快照文件很有用，但压缩增加了生成和应用快照的时间。  
@@ -33,7 +33,7 @@ ms.locfileid: "52815339"
   
  **压缩和传输快照文件**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[压缩快照文件 &#40;SQL Server Management Studio&#41;](publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[压缩快照文件 &#40;SQL Server Management Studio&#41;](snapshot-options.md#compress-snapshot-files)  
   
 -   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程：[配置快照属性（复制 Transact-SQL 编程）](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

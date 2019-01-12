@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f57719bae769a75d704454af03af82689715644d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506303"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124441"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>连接到分析平台系统中的设备节点
 此文章介绍了连接到分析平台系统设备的每个节点的各种方法。  
@@ -30,7 +30,7 @@ ms.locfileid: "52506303"
 |||  
 |-|-|  
 |**Node**|**访问控制方案**|  
-|控制节点|使用 web 浏览器访问管理控制台中，在控制节点运行。 有关详细信息，请参阅[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。<br /><br />所有客户端应用程序和工具连接到控制节点，无论连接使用以太网或 InfiniBand。<br /><br />若要配置以太网连接到控制节点，使用的控制节点的群集 IP 地址和端口**17001**。 例如，"192.168.0.1,17001"。<br /><br />若要配置到控制节点的 InfiniBand 连接，请使用 ***appliance_domain *-SQLCTL01**和端口**17001**。 通过使用 ***appliance_domain *-SQLCTL01**，设备 DNS 服务器会将服务器连接到活动的 InfiniBand 网络。 若要配置非设备服务器以使用此选项，请参阅[配置无线带宽技术网络适配器](configure-infiniband-network-adapters.md)。<br /><br />设备管理员连接到控制节点，以执行管理操作。 例如，设备管理员从控制节点执行以下操作：<br /><br />配置使用的分析平台系统**dwconfig.exe**配置工具。|  
+|控制节点|使用 web 浏览器访问管理控制台中，在控制节点运行。 有关详细信息，请参阅[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。<br /><br />所有客户端应用程序和工具连接到控制节点，无论连接使用以太网或 InfiniBand。<br /><br />若要配置以太网连接到控制节点，使用的控制节点的群集 IP 地址和端口**17001**。 例如，"192.168.0.1,17001"。<br /><br />若要配置到控制节点的 InfiniBand 连接，请使用 <strong>*appliance_domain*-SQLCTL01</strong>和端口**17001**。 通过使用 <strong>*appliance_domain*-SQLCTL01</strong>，设备 DNS 服务器会将服务器连接到活动的 InfiniBand 网络。 若要配置非设备服务器以使用此选项，请参阅[配置无线带宽技术网络适配器](configure-infiniband-network-adapters.md)。<br /><br />设备管理员连接到控制节点，以执行管理操作。 例如，设备管理员从控制节点执行以下操作：<br /><br />配置使用的分析平台系统**dwconfig.exe**配置工具。|  
 |计算节点|计算节点连接将定向由控制节点。 计算节点的 IP 地址永远不会作为参数输入到应用程序的命令。<br /><br />对于加载，备份、 远程表复制和 Hadoop 和 SQL Server PDW 不发送或接收直接并行计算节点和非设备节点或服务器之间的数据。 这些应用程序通过连接到控制节点中，使用 SQL Server PDW 连接和控制节点然后指示 SQL Server PDW 的计算节点和非设备服务器之间建立通信。<br /><br />例如，这些数据传输操作的操作以并行方式直接连接到计算节点：<br /><br />从加载服务器加载到 SQL Server PDW。<br /><br />备份数据库从 SQL Server PDW 到备份服务器。<br /><br />备份服务器将数据库还原到 SQL Server PDW 中。<br /><br />从 SQL Server PDW 查询 Hadoop 数据。<br /><br />SQL Server PDW 数据导出到外部 Hadoop 表中。<br /><br />如果将 SQL Server PDW 表复制到远程 SMP SQL Server 数据库。|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>连接到以太网和 InfiniBand 网络  

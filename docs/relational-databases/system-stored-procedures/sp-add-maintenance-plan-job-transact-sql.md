@@ -18,12 +18,12 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1705c6b171c047b525d888e6e5839cd816cb9979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f941269d1e42e1adc09dce2a6937b900e0aaa13
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716435"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123477"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@plan_id =**] **'***plan_id*****  
+ [  **@plan_id =**] **'**_plan_id_  
  指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效的 id。  
   
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'**_job_id_  
  指定要与维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效的 id。 若要创建的作业，请执行**sp_add_job**，或使用 SQL Server Management Studio。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -57,7 +57,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ## <a name="remarks"></a>备注  
  **sp_add_maintenance_plan_job**必须从运行**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_maintenance_plan_job**。  
   
 ## <a name="examples"></a>示例  

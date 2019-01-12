@@ -15,12 +15,12 @@ ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b930defb70b64bd006026870389fc509b755c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789006"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124587"
 ---
 # <a name="rename-tables-database-engine"></a>重命名表（数据库引擎）
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表。  
@@ -64,7 +64,7 @@ ms.locfileid: "52789006"
   
 4.  若要取消此操作，请在离开此字段前按 Esc 键。  
   
-5.  从“文件”菜单中，选择“保存table name”。  
+5.  从“文件”菜单中，选择“保存表名”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

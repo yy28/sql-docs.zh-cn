@@ -14,12 +14,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d64d1d589d00222c7c48b4a5516dba8bd1185406
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752638"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125018"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步请求订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]复制代理 [或复制管理对象 (RMO) 在](agents/replication-agents-overview.md)中同步请求订阅。  
@@ -43,7 +43,7 @@ ms.locfileid: "52752638"
 5.  单击 **“关闭”**。  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- 可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步请求订阅。 被调用的复制代理可执行文件将取决于请求订阅所属的发布的类型。 有关详细信息，请参阅 [Replication Agents](agents/replication-agents.md)。  
+ 可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步请求订阅。 被调用的复制代理可执行文件将取决于请求订阅所属的发布的类型。 有关详细信息，请参阅 [Replication Agents](agents/replication-agents-overview.md)。  
   
 > [!NOTE]  
 >  复制代理使用通过命令提示符启动该代理的用户的 Windows 身份验证凭据连接到本地服务器。 这些 Windows 凭据还在使用 Windows 集成身份验证连接到远程服务器时使用。  

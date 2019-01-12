@@ -19,12 +19,12 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57bc3a40cfaa600c27c0bded34d62a1f68060390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d947f319c56c29c0d3dbe4ce88c38055c59dfc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607325"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124107"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@server =** ] **'***server***'**  
+ [  **@server =** ] **'**_server_  
  要为其设置选项的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
- [  **@optname =** ] **'***option_name***’**  
+ [  **@optname =** ] **'**_option_name_  
  为指定的服务器设置的选项。 *option_name*是**varchar (** 35 **)**，无默认值。 *option_name*可以是以下值之一。  
   
 |ReplTest1|Description|  
@@ -66,7 +66,7 @@ sp_serveroption [@server = ] 'server'
 |**使用远程排序规则**|确定是使用远程列的排序规则还是使用本地服务器的排序规则。<br /><br /> 如果 **，则返回 true**，使用远程列的排序规则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源和排序规则中指定**排序规则名称**用于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源。<br /><br /> 如果**false**，分布式的查询将始终使用本地服务器的默认排序规则时**排序规则名称**和远程列的排序规则将被忽略。 默认值为 **false**。 ( **False**值是在中使用的排序规则语义兼容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。)|  
 |**远程过程事务升级**|使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果此选项是 TRUE （或上） 调用远程存储的过程启动分布式的事务，并用 MS DTC 登记该事务。 调用远程存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是事务创建者，负责控制事务的完成。 当为连接发出后续 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句时，主控实例请求 MS DTC 在所涉及的计算机间管理分布式事务的完成。<br /><br /> 在启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务后，可以对已定义为链接服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例调用远程存储过程。 链接服务器全部登记在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务中，而 MS DTC 确保对每台链接服务器完成该事务。<br /><br /> 如果此选项设置为 FALSE（或 OFF），则对链接服务器调用远程存储过程时将不会把本地事务提升为分布式事务。<br /><br /> 如果进行服务器对服务器过程调用前，事务已是分布式事务，则该选项不起作用。 对链接服务器进行的过程调用将在同一分布式事务下运行。<br /><br /> 如果进行服务器对服务器过程调用前，连接中不存在活动事务，则该选项不起作用。 然后，将对没有活动事务的链接服务器运行此过程。<br /><br /> 该选项的默认值为 TRUE（或 ON）。|  
   
- [  **@optvalue =**] **'***option_value*****  
+ [  **@optvalue =**] **'**_option_value_  
  指定是否*option_name*应启用 (**TRUE**或**上**) 还是禁用 (**FALSE**或**关闭**). *option_value*是**varchar (** 10 **)**，无默认值。  
   
  *option_value*可能是一个非负整数来**连接超时**并**查询超时**选项。 有关**排序规则名称**选项， *option_value*可能是排序规则名称或 NULL。  
@@ -77,7 +77,7 @@ sp_serveroption [@server = ] 'server'
 ## <a name="remarks"></a>备注  
  如果**排序规则兼容**选项设置为 TRUE，**排序规则名称**自动将设置为 NULL。 如果**排序规则名称**设置为非 null 值，**排序规则兼容**自动将设置为 FALSE。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LINKED SERVER 权限。  
   
 ## <a name="examples"></a>示例  

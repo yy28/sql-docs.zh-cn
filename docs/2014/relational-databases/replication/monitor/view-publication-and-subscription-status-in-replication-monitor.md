@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786739"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123927"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息：  
@@ -53,11 +53,8 @@ ms.locfileid: "52786739"
   
  **查看发布和订阅状态**  
   
--   复制监视器：[查看信息并执行任务的发布&#40;复制监视器&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)并[查看信息和执行订阅任务&#40;复制监视器&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   复制监视器：[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。
   
- **查看代理的详细信息**  
-  
--   复制监视器：[查看信息并与发布相关联的代理执行任务&#40;复制监视器&#41;](view-information-and-perform-tasks-for-publication-agents.md)并[查看信息并执行与订阅关联的代理任务&#40;复制监视器&#41;](view-information-and-perform-tasks-for-subscription-agents.md)。  
   
 ## <a name="publication-status-values"></a>发布状态值  
  下表按优先级顺序显示了发布状态值及其对应的图标。  

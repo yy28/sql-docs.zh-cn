@@ -14,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a3125ef66a88b8d7c47324e67b1a263581a925d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788719"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124167"
 ---
 # <a name="snapshot-agent-security"></a>快照代理安全性
   可以使用 **“快照代理安全性”** 对话框指定以下内容：  
@@ -55,7 +55,7 @@ ms.locfileid: "52788719"
  用于连接的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户至少必须是发布数据库中的 **db_owner** 固定数据库角色的成员。  
   
 ## <a name="see-also"></a>请参阅  
- [管理复制中的登录名和密码](security/manage-logins-and-passwords-in-replication.md)   
+ [管理复制中的登录名和密码](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [复制代理安全模式](security/replication-agent-security-model.md)   
  [复制代理概述](agents/replication-agents-overview.md)   
  [复制安全最佳做法](security/replication-security-best-practices.md)  

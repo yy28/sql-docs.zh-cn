@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bbf909004f6b3d809babfb99b1787728194bd140
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524111"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100853"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@msgnum****=** ] *msg_id*  
+ [  **\@msgnum =** ] *msg_id*  
  消息的 ID。 *msg_id*是**int**默认值为 NULL。 *msg_id*用户定义的错误消息可以是 50,001 和 2,147,483,647 之间的整数。 组合*msg_id*并*语言*必须是唯一的; 如果的 ID 已存在指定的语言返回错误。  
   
- [  **@severity =** ]*严重性*  
+ [ **\@严重性 =** ]*严重性*  
  是错误的严重级别。 *严重性*是**smallint**默认值为 NULL。 有效级别的范围为 1 到 25。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
- [  **@msgtext =** ] **'**_msg_  
+ [ **\@消息正文 =** ] **'**_msg_  
  错误消息的文本。 *msg*是**nvarchar(255)** 默认值为 NULL。  
   
- [  **@lang =** ] **'**_语言_  
+ [  **\@lang =** ] **'**_语言_  
  消息所用的语言。 *语言*是**sysname**默认值为 NULL。 因为可以在同一服务器上安装多个语言*语言*指定编写每个消息所用的语言。 当*语言*是省略，语言为该会话是默认语言。  
   
- [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- 是否在消息发生时将其写入 Windows 应用程序日志。 **@with_log** 是**varchar(5)** 默认值为 FALSE。 如果为 TRUE，则错误始终写入 Windows 应用程序日志。 如果为 FALSE，则错误不会始终写入 Windows 应用程序日志，但仍然可以写入，具体取决于错误是如何引发的。 只有的成员**sysadmin**服务器角色可以使用此选项。  
+ [  **\@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
+ 是否在消息发生时将其写入 Windows 应用程序日志。 **\@with_log**是**varchar(5)** 默认值为 FALSE。 如果为 TRUE，则错误始终写入 Windows 应用程序日志。 如果为 FALSE，则错误不会始终写入 Windows 应用程序日志，但仍然可以写入，具体取决于错误是如何引发的。 只有的成员**sysadmin**服务器角色可以使用此选项。  
   
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
- [ **@replace** *=* ] **'**_替换_  
+ [ **\@替换为 =** ] **'**_替换为_  
  如果指定为字符串*替换为*，用新的消息文本和严重级别覆盖现有错误消息。 *替换*是**varchar(7)** 默认值为 NULL。 必须指定此选项，如果*msg_id*已存在。 如果替换美国英语消息，为具有相同的所有其他语言中的所有消息替换英语消息，严重性级别*msg_id*。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721266"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123988"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tblname=** ] **'***table_or_indexed_view_name*****  
+ [  **@tblname=** ] **'**_table_or_indexed_view_name_  
  要对其显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name*是**nvarchar(776)**，无默认值。  
   
- [ **@flagc=** ] **'***stats_value*****  
+ [  **@flagc=** ] **'**_stats_value_  
  将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  当*stats_flag*是未指定，显示当前 AUTO_UPDATE_STATISTICS 设置。 *stats_value*是**varchar(10)**，默认值为 NULL。  
   
- [ **@indname=** ] **'***statistics_name*****  
+ [  **@indname=** ] **'**_statistics_name_  
  要对其显示或更新 AUTO_UPDATE_STATISTICS 选项的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
   
  *statistics_name*是**sysname**，默认值为 NULL。  
@@ -83,7 +83,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  对于内存优化表，AUTO_UPDATE_STATISTICS 始终为 OFF。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要更改 AUTO_UPDATE_STATISTICS 选项需要成员身份 n **db_owner**固定数据库角色或 ALTER 权限*table_name*。若要显示 AUTO_UPDATE_STATISTICS 选项要求中的成员身份**公共**角色。  
   
 ## <a name="examples"></a>示例  

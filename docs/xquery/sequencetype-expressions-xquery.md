@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661846"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124557"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  如果 **？** 未指定出现指示符，则`sequence of`返回 True 时，才`Expression`键入匹配`Type`指定和`Expression`返回单一实例。  
   
- **请注意**加号 (**+**) 和星号 (**\***) 中不支持出现指示符[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **请注意**加号 (**+**) 和星号 (**&#42;**) 中不支持出现指示符[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  下面的示例说明如何使用**的实例**XQuery 运算符。  
   
@@ -139,7 +139,7 @@ where ProductModelID=19
  该查询返回 True。  
   
 ### <a name="example-c"></a>示例 C  
- 使用联合类型时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 `instance of` 表达式有一个限制：具体来说，当某个元素或属性的类型为联合类型时，`instance of` 可能无法确定其准确的类型。 因此，查询将返回 False，除非用于 SequenceType 中的原子类型在简单类型层次结构中是表达式的实际类型的最高父级。 即以 SequenceType 指定的原子类型必须是任意简单类型的直接子级。 有关类型层次结构的信息，请参阅[XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
+ 使用联合类型时`instance of`中的表达式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]有一个限制：具体而言，当元素或属性的类型是联合类型时，`instance of`可能无法确定确切的类型。 因此，查询将返回 False，除非用于 SequenceType 中的原子类型在简单类型层次结构中是表达式的实际类型的最高父级。 即以 SequenceType 指定的原子类型必须是任意简单类型的直接子级。 有关类型层次结构的信息，请参阅[XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
   
  下一个查询示例将执行以下操作：  
   
@@ -401,7 +401,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     结果如下：  
+     下面是结果：  
   
     ```  
     <a>2002-05-25Z</a>  

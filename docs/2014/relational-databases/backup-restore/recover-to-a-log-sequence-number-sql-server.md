@@ -21,12 +21,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e88773137297430763f5ddd47cf7b95030f53d87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050377"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124247"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>恢复到日志序列号 (SQL Server)
   本主题仅与使用完整恢复模式或大容量日志恢复模式的数据库相关。  
@@ -41,7 +41,7 @@ ms.locfileid: "48050377"
  发生重大事件的日志记录的 LSN 对于构造正确的还原顺序可能很有用。 因为 LSN 是有顺序的，所以可以比较它们是否相等（即 **\<**、 **>**、 **=**、 **\<=**、 **>=**）。 构造还原顺序时，这种比较很有用。  
   
 > [!NOTE]  
->  Lsn 是数据类型的值`numeric`(25，0)。 算术运算（例如加法或减法）对 LSN 没有任何意义，请不要与 LSN 一起使用。  
+>  LSN 是数据类型为 `numeric` 的值 (25,0)。 算术运算（例如加法或减法）对 LSN 没有任何意义，请不要与 LSN 一起使用。  
   
 
   
@@ -64,11 +64,11 @@ ms.locfileid: "48050377"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>还原到 LSN 的 Transact-SQL 语法  
  通过使用 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句，可以在 LSN 处或刚好在 LSN 之前停止，如下所示：  
   
--   使用 WITH STOPATMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
+-   使用 WITH STOPATMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
   
      STOPATMARK 前滚到 LSN，并且前滚中包括该日志记录。  
   
--   使用 WITH STOPBEFOREMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
+-   使用 WITH STOPBEFOREMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
   
      STOPBEFOREMARK 前滚到 LSN，并从前滚中排除该日志记录。  
   

@@ -16,12 +16,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e400c24476df7d9e663f17c71425f11b5155058
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641008"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123947"
 ---
 # <a name="remote-servers"></a>远程服务器
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "52641008"
 >  请尽可能使用 Windows 身份验证。  
   
 ### <a name="remote-server-security-example"></a>远程服务器安全性示例  
- 以下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装为例： **serverSend** 和 **serverReceive**。 配置 **serverReceive** 以将传入登录名从 **serverSend**（称为 **Sales_Mary**）映射到 **serverReceive**（称为 **Alice**）中的经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 将另一个来自于 serverSend（称为 Joe）的传入登录名映射到 serverReceive（称为 Joe）中经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。  
+ 以下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装为例： **serverSend** 和 **serverReceive**。 配置 **serverReceive** 以将传入登录名从 **serverSend**（称为 **Sales_Mary**）映射到 **serverReceive**（称为 **Alice**）中的经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 将另一个传入帐户从 **serverSend**（称为 **Joe**）映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive _（称为_ Joe **）中的经过**身份验证的登录帐户。  
   
  下面的 Transact-SQL 代码示例将 `serverSend` 配置为对 `serverReceive` 执行 RPC。  
   

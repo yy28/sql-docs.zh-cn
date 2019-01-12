@@ -15,12 +15,12 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9d254bc40b8a4f36bd73913a33729d3235dd8dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6df7b90915fd7ba91a2b577abc710e708b792ec1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061807"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124287"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  
@@ -31,7 +31,7 @@ ms.locfileid: "48061807"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“属性”**。 “\<项目>***属性页*”对话框即会打开。  
+2.  在 **“项目”** 菜单上，单击 **“属性”**。 “\<项目>属性页”对话框即会打开。  
   
 3.  选择发布到 SharePoint 站点所用的 **“配置”** 。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "48061807"
   
 ## <a name="see-also"></a>请参阅  
  [将报表发布到 SharePoint 库](publish-a-report-to-a-sharepoint-library.md)   
- [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [“项目属性页”对话框](../tools/project-property-pages-dialog-box.md)   
- [设置部署属性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [设置部署属性 (Reporting Services)](../tools/set-deployment-properties-reporting-services.md)   
  [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)   
- [将 Office 数据连接&#40;.odc&#41;报表&#40;的 Reporting Services SharePoint 集成模式下&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

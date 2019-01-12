@@ -14,12 +14,12 @@ ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9177d4039b6005b024c7c7465e70f676a607f9e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804189"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123447"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用仅下载项目优化合并复制的性能
   合并复制提供了两种不同的项目类型以满足不同的应用程序需要。 根据应用程序的需要，发布可以包含下列项目类型中的一个或多个：  
@@ -41,7 +41,7 @@ ms.locfileid: "52804189"
   
  仅下载项目与客户端订阅一起使用：如果项目设计为仅下载项目，则不能在使用客户端订阅的订阅服务器上插入、更新或删除该项目的行。 使用服务器订阅类型的发布服务器和订阅服务器（通常是指将数据重新发布到其他订阅服务器的订阅服务器）可以插入、更新和删除数据。 有关客户端订阅的详细信息，请参阅[订阅发布](../subscribe-to-publications.md)。  
   
- 若要将某个项目指定为仅下载项目，请参阅 [指定合并表项目仅用于下载](../publish/specify-that-a-merge-table-article-is-download-only.md)。  
+ 若要将某个项目指定为仅下载项目，请参阅 [指定合并表项目仅用于下载](../publish/specify-merge-replication-properties.md#download-only)。  
   
 ## <a name="using-different-article-types-in-your-applications"></a>在应用程序中使用不同的项目类型  
  通过了解应用程序的要求，可以在最大灵活性和最佳性能之间找到平衡点。 例如，在发布服务器和订阅服务器上都存在大量冲突和更改的应用程序将使用由标准项目组成的发布。 有些应用程序（如销售人员自动化应用程序）可能包含存在潜在冲突的项目以及作为查找表的其他项目，这些项目可以指定为仅下载项目。 数据输入应用程序（如销售点系统和现场人员自动化应用程序）通常以消除冲突的方式对数据进行严格的分区，使一个订阅服务器上的数据永远不会到另一个订阅服务器上。 在这些情况下，不重叠的分区、仅下载项目和预计算分区的组合可以提供最好的性能和最大的伸缩性。 有关不重叠分区和预计算分区的详细信息，请参阅 [参数化行筛选器](parameterized-filters-parameterized-row-filters.md)。  

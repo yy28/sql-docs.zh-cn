@@ -11,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373219"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100882"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 `geometry` 或 `geography`）的数据的表列。  
@@ -127,7 +127,7 @@ ms.locfileid: "53373219"
 >  可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句显式指定此分割方案。  
   
 ##### <a name="the-bounding-box"></a>边界框  
- 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 边界框由四个坐标`(`*最小 x 坐标 ***，*** 最小 y* `)`并`(`*最大 x ***，*** 最大 y* `)`，其中存储为空间索引的属性。 这些坐标所表示的意义如下：  
+ 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 边界框由四个坐标`(`_最小 x 坐标_**，**_最小 y_ `)`并`(`_最大 x_**，**_最大 y_`)`，其中存储为空间索引的属性。 这些坐标所表示的意义如下：  
   
 -   x-min 是边界框左下角的 x 坐标。  
   
@@ -140,11 +140,11 @@ ms.locfileid: "53373219"
 > [!NOTE]  
 >  这些坐标通过 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 BOUNDING_BOX 子句指定。  
   
- `(`*最小 x 坐标 ***，*** 最小 y* `)`并`(`*最大 x ***，*** 最大 y* `)`坐标确定的位置和边界框的尺寸。 边界框的外部空间视作一个编号为 0 的单元。  
+ `(`_最小 x 坐标_**，**_最小 y_ `)`并`(`_最大 x_**，**_最大 y_ `)`坐标确定的位置和边界框的尺寸。 边界框的外部空间视作一个编号为 0 的单元。  
   
  空间索引将分解边界框的内部空间。 网格层次结构的第 1 级网格将填充边界框。 若要在网格层次结构中放置几何对象，空间索引会将该对象的坐标与边界框的坐标进行比较。  
   
- 下图显示了由定义的点`(`*最小 x 坐标 ***，*** 最小 y* `)`并`(`*最大 x ***，*** 最大 y* `)`的边界框坐标。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
+ 下图显示了由定义的点`(`_最小 x 坐标_**，**_最小 y_ `)`并`(`_最大 x_ **，**_最大 y_ `)`的边界框坐标。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
   
  ![显示坐标和单元 0 的边界框。](../../database-engine/media/spndx-bb-4x4-objects.gif "显示坐标和单元 0 的边界框。")  
   

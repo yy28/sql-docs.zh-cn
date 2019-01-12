@@ -14,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813960"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124427"
 ---
 # <a name="replication-monitor"></a>复制监视器
   此部分文档包含有关复制监视器的信息。 根据复制类型和所监视的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的不同，监视器中显示的页和对话框也会有所不同。  
@@ -31,15 +31,7 @@ ms.locfileid: "52813960"
 -   [分发服务器设置](distributor-settings.md)  
   
 -   [分发服务器信息 - 发布](distributor-information-publications.md)  
-  
--   [分发服务器信息，订阅监视列表（事务发布，SQL Server 2005 和更高版本）](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [分发服务器信息，订阅监视列表（合并发布，SQL Server 2005 和更高版本）](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [分发服务器信息，订阅监视列表（快照发布，SQL Server 2005 和更高版本）](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [分发服务器信息 - 代理](distributor-information-agents.md)  
-  
+
 -   [发布服务器设置](publisher-settings.md)  
   
 -   [发布服务器信息 - 发布](publisher-information-publications.md)  
@@ -80,8 +72,6 @@ ms.locfileid: "52813960"
   
 -   [订阅 - 同步历史记录（合并订阅，SQL Server 2005 和更高版本）](subscription-synchronization-history.md)  
   
--   [订阅 - 同步历史记录（合并订阅，SQL Server 2000）](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [订阅 - 分发服务器到订阅服务器的历史记录（快照订阅）](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [日志读取器代理](log-reader-agent.md)  
@@ -97,6 +87,5 @@ ms.locfileid: "52813960"
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
- [属性参考（复制）](properties-reference-replication.md)  
   
   

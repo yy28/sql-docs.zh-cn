@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4e4a9e1cc36590555ab33632c97c73cbeb3d8e0f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365610"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124817"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>什么&#39;SQL Server 2014 中的 s
   本主题总结了中的新增功能的详细的链接[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，并总结了服务包 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -38,8 +38,6 @@ ms.locfileid: "53365610"
  **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不到以下引入重大的新功能：**  
   
 -   [新增功能&#40;集成服务&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
-  
--   [新增功能&#40;复制&#41;](../relational-databases/replication/what-s-new-replication.md)  
   
 -   [新增功能&#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
@@ -65,7 +63,7 @@ ms.locfileid: "53365610"
 -    **空间本机实现：** 中引入的空间查询性能得到显著提高[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 到本机实现。 有关详细信息，请参阅[知识库文章 KB3107399](https://support.microsoft.com/en-us/kb/3107399)。
 
 ### <a name="supportability-and-diagnostics-improvements"></a>可支持性和诊断改进
--   **克隆数据库：** 克隆数据库是一个新的 DBCC 命令，增强了对现有生产数据库克隆架构和不含数据的元数据进行故障排除。 使用命令创建克隆`DBCC clonedatabase('source_database_name', 'clone_database_name')`。  **注意：** 克隆的数据库不应用于生产环境。 使用以下命令确定是否已从克隆数据库生成一个数据库： `select DATABASEPROPERTYEX('clonedb', 'isClone')`。 返回值**1**指示数据库创建时的 clonedatabase **0**指示它不是克隆。
+-   **克隆数据库：** 克隆数据库是一个新的 DBCC 命令，增强了对现有生产数据库克隆架构和不含数据的元数据进行故障排除。 使用命令创建克隆`DBCC clonedatabase('source_database_name', 'clone_database_name')`。  注意：克隆的数据库不应用于生产环境。 使用以下命令确定是否已从克隆数据库生成一个数据库： `select DATABASEPROPERTYEX('clonedb', 'isClone')`。 返回值**1**指示数据库创建时的 clonedatabase **0**指示它不是克隆。
 -   **Tempdb 可支持性：** 新的错误日志消息，指明 tempdb 文件的数目和大小/tempdb 数据文件在服务器启动时存在的自动增长。
 -   **数据库即时文件初始化日志记录：** 新的错误日志消息，指明服务器 statup，数据库即时文件初始化 （启用/禁用） 的状态上。
 -   **在调用堆栈中的模块名称：** Xevent 调用堆栈现包含模块名称 + 而不是绝对地址的偏移量。

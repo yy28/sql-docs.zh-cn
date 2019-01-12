@@ -12,12 +12,12 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5e89ca1fc43c140a4c6fa9aa8f610f5b86d7ef9
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 6958283a8988fd005a491a80f626c1a3d1ef77ba
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640438"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124339"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>配置 max text repl size 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **最大文本 repl 大小**选项指定的最大大小 （以字节为单位） `text`， `ntext`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`， `xml`，和`image`可以添加到数据复制的列或单个 INSERT、 UPDATE、 WRITETEXT 或 UPDATETEXT 语句中的已捕获的列。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
@@ -88,7 +88,7 @@ GO
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>请参阅  
- [复制功能和任务](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   

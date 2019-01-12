@@ -20,26 +20,26 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d718e6c2108b26406b0e141aa7b5df91f91d730
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 907e7d73651075a122cfb6b7e4a8d3eac44f072c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662816"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124317"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为具有当前数据库中的当前用户授受的权限的每列返回一行。  
   
- 若要从这些视图检索信息，请指定完全限定的名称 **INFORMATION_SCHEMA。 * * * view_name*。  
+ 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。**_view_name_。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**授权者**|**nvarchar(** 128 **)**|授权者。|  
 |**被授权者**|**nvarchar(** 128 **)**|被授权者。|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **&#42;&#42;重要&#42; &#42;** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**sysname**|表名。|  
 |**COLUMN_NAME**|**sysname**|列名称。|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特权的类型。|  
