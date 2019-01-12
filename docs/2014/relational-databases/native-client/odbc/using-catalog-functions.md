@@ -17,12 +17,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997855d160108abe530affdd2b28e464076fbbb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077007"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100632"
 ---
 # <a name="using-catalog-functions"></a>使用目录函数
   所有数据库都具有一个包含该数据中存储的数据的结构。 此结构的定义以及权限等其他信息存储在目录（作为一组系统表实现）中，也称为数据字典。  
@@ -43,7 +43,7 @@ ms.locfileid: "48077007"
   
      返回链接服务器包含的目录的列表。  
   
- 链接的服务器名称和目录名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用由两部分组成的名称的目录中的获取信息*linked_server_name ***。*** 目录*有关*CatalogName*对以下 odbc 目录函数：  
+ 链接的服务器名称和目录名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用由两部分组成的名称的目录中的获取信息_linked_server_name_**。**_目录_有关*CatalogName*对以下 odbc 目录函数：  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077007"
   
 -   **SQLTables**  
   
- 由两部分*linked_server_name ***。*** 目录*也支持*FKCatalogName*并*PKCatalogName*上[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)。  
+ 由两部分_linked_server_name_**。**_目录_还支持*FKCatalogName*并*PKCatalogName*上[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要以下文件：  
   

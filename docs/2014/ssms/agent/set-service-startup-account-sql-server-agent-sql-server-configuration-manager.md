@@ -14,12 +14,12 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26412fd6727049019b289fd0245e4ebf7f826dc1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375529"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100613"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务启动帐户定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在运行时所用的 Windows 帐户及其网络权限。 本主题说明了如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置管理器设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代理服务帐户。  
@@ -71,9 +71,9 @@ ms.locfileid: "53375529"
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”**。  
   
-6.  在详细信息窗格中，右键单击“SQL Server 代理(server_name)”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”。  
+6.  在详细信息窗格中，右键单击“SQL Server 代理 (server_name)”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”。  
   
-7.  在“SQL Server 代理(server_name)属性”对话框的“登录”选项卡中，选择“登录身份”下的以下选项之一：  
+7.  在“SQL Server 代理 (server_name)”的“属性”对话框的“登录”选项卡中，选择“登录身份”下的以下选项之一：  
   
     -   **内置帐户**：如果你的作业仅需要本地服务器中的资源，则选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](https://msdn.microsoft.com/library/ms191543.aspx)。  
   

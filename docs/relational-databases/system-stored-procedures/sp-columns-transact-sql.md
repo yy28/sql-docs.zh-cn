@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514081"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100502"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,21 +46,21 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@table_name=**] *object*  
+ [  **\@table_name =**]*对象*  
  用于返回目录信息的对象的名称。 *对象*可以是表、 视图或另一个对象，其中包含如表值函数的列。 *对象*是**nvarchar(384)**，无默认值。 支持通配符模式匹配。  
   
- [ **@table_owner****=**] *owner*  
+ [  **\@table_owner =**]*所有者*  
  用于返回目录信息的对象的对象所有者。 *所有者*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认对象可见性规则将应用。  
   
  如果当前用户拥有一个具有指定名称的对象，则返回该对象的列。 如果*所有者*未指定当前用户不拥有具有指定的对象和*对象*， **sp_columns**查找具有指定的对象*对象*由数据库所有者拥有。 如果存在这样的对象，则返回该对象的列。  
   
- [ **@table_qualifier****=**] *qualifier*  
+ [  **\@table_qualifier =**]*限定符*  
  对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持三部分命名的对象 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
   
- [  **@column_name=**]*列*  
+ [  **\@column_name =**]*列*  
  一个单独的列，当只需要目录信息的一列时可使用该参数。 *列*是**nvarchar(384)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示的列名称，如下所示**syscolumns**表。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
   
- [ **@ODBCVer=**] *ODBCVer*  
+ [  **\@ODBCVer =**] *ODBCVer*  
  是正在使用的 ODBC 版本。 *ODBCVer*是**int**，默认值为 2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 版本 2 和 3 之间的行为差异，请参阅 ODBC **SQLColumns**规范。  
   
 ## <a name="return-code-values"></a>返回代码值  

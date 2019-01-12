@@ -19,12 +19,12 @@ ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 72b47b9dada82f66ec0cb97b1f9a4dec8aebdbdf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748209"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099952"
 ---
 # <a name="view-the-windows-application-log-windows"></a>查看 Windows 应用程序日志 (Windows)
   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Windows 应用程序日志后，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话都将新事件写入该日志。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志不同，不是每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时都创建新的应用程序日志。  
@@ -35,7 +35,7 @@ ms.locfileid: "52748209"
   
 2.  在事件查看器中，单击 **“应用程序”**。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”列中的 MSSQLSERVER 项（命名实例以 MSSQL$<instance_name> 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件由 **SQLAgent$**\<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search**项标识。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”列中的 **MSSQLSERVER** 项（命名实例以 **MSSQL$**_<instance_name>_ 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件由 **SQLAgent$**\<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search**项标识。  
   
 4.  若要查看另一台计算机的日志，请右键单击“事件查看器”，再单击“连接到另一台计算机”，并完成“选择计算机”对话框。  
   

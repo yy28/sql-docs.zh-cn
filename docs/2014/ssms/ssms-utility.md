@@ -16,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777809"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100452"
 ---
 # <a name="ssms-utility"></a>Ssms 实用工具
   **Ssms**实用工具打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果指定， **Ssms** 还可以与服务器建立连接并打开查询、脚本、文件、项目和解决方案。  
@@ -51,16 +51,16 @@ ms.locfileid: "52777809"
  *solutionfile*  
  指定要打开的解决方案。 该参数必须包含解决方案文件的完整路径。  
   
- [**-S** *servername*]  
+ [**-S** _servername_]  
  服务器名称  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
  数据库名称  
   
- [**-U** *username*]  
+ [**-U** _username_]  
  通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证进行连接时的用户名  
   
- [**-P** *password*]  
+ [**-P** _password_]  
  通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证进行连接时的密码  
   
  [**-E**]  
@@ -69,7 +69,7 @@ ms.locfileid: "52777809"
  [**-nosplash**]  
  阻止 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 在打开时显示初始屏幕。 在带宽有限的情况下，通过终端服务连接到运行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的计算机上时，使用此选项。 该参数不区分大小写，并且可放在其他参数前后  
   
- [**-log***[filename]?*]  
+ [**-log**_[filename]?_]  
  将 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活动记录到指定的文件中以便进行故障排除  
   
  [**-?**]  

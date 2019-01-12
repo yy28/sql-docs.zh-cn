@@ -16,12 +16,12 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 693c36cf0c23004f0538595ac75e1aa5d5039a33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768469"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100232"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的信息。  
@@ -57,7 +57,7 @@ ms.locfileid: "52768469"
   
 4.  右键单击包含要查看的信息的警报，然后选择“属性”。  
   
-     若要深入了解“alert_name警报属性”对话框中包含的可用选项，请参阅：  
+     有关 alert_name“警报属性”对话框中包含的可用选项的详细信息，请参阅：  
   
     -   [警报属性-新建警报&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

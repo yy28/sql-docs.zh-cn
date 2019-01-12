@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8356014a1b5406f2cd33d5166b5feea7339d782e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370049"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100262"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>在添加或修改可用性副本时指定端点 URL (SQL Server)
   若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 “端点 URL”标识数据库镜像端点的传输协议 - TCP、服务器实例的系统地址以及与端点关联的端口号。  
@@ -39,7 +39,7 @@ ms.locfileid: "53370049"
 ##  <a name="SyntaxOfURL"></a> 端点 URL 的语法  
  端点 URL 的语法采用以下形式：  
   
- TCP*://\<system-address>:\<port>**  
+ TCP<strong>://</strong>*\<system-address>*<strong>:<strong>*\<port>*  
   
  其中  
   
@@ -47,15 +47,15 @@ ms.locfileid: "53370049"
   
     -   因为 Windows Server 故障转移群集 (WSFC) 群集的节点处于相同的域，所以，您可以使用计算机系统的名称，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：[<IPv6_address>]****。  
+    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：**[**_<IPv6_address>_**]**。  
   
          若要了解系统的 IP 地址，则在 Windows 命令提示符处，输入 **ipconfig** 命令。  
   
     -   保证完全限定域名的有效性。 它是在不同位置具有不同形式的本地定义的地址字符串。 通常（但并不总是），完全限定域名是一个复合名称，包含计算机名称和一系列句点分隔的域段，其格式为：  
   
-         *computer_name* **。** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **。** _domain_segment_[...**.**_domain_segment_]  
   
-         其中， computer_name 是运行服务器实例的计算机的网络名称，domain_segment[....domain_segment] 是服务器的其余域信息；例如：`localinfo.corp.Adventure-Works.com`。  
+         其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[...**.**_domain_segment_] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
   
          在公司或组织内确定域段的内容和数量。 有关详细信息，请参阅本主题后面的 [查找完全限定域名](#Finding_FQDN)。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "53370049"
   
  若要形成完全限定的域名，请将 *<host_name>* 和 *<Primary_Dns_Suffix>* 的值连接一起，如下所示：  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  例如，IP 配置  
   

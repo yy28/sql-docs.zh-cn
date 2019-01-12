@@ -12,12 +12,12 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50067da1853795279216b16f7c12119bc03f38c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789089"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100362"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
   计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为计算列指定一个表达式。  
@@ -66,7 +66,7 @@ ms.locfileid: "52789089"
   
 5.  从“持久化”子属性的下拉菜单上选择“是”或“否”，以指示该数据是否持久。  
   
-6.  在“文件”菜单上，单击“保存table name”。  
+6.  在“文件”菜单上，单击“保存”以保存表名。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>将计算列定义添加到现有列中  
   

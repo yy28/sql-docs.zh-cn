@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211835"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100472"
 ---
 # <a name="specify-parameters"></a>指定参数
   通过指定过程参数，调用程序可以将值传递给过程的主体。 在执行过程期间，这些值可以用于各种目的。 如果将参数标记为 OUTPUT 参数，则过程参数还可以将值返回给调用程序。  
@@ -63,10 +63,10 @@ GO
  显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc 需要使用三个参数，分别名为 \@first、\@second和 \@third，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  如果以 **/@parameter =***value* 格式提供了一个参数值，则必须按此格式提供所有的后续参数。 如果未按格式 \@parameter =value****** 传递参数值，必须按 CREATE PROCEDURE 语句中所列参数顺序（从左到右）提供值。  
+>  如果以 **\@parameter =**_value_ 格式提供参数值，必须按此格式提供所有后续参数。 如果未按格式 **\@parameter =**_value_ 传递参数值，必须按 CREATE PROCEDURE 语句中所列参数顺序（从左到右）提供值。  
 > 
 > [!WARNING]
->  任何采用 \@parameter =value****** 格式传入的参数如果拼写错误，就会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成错误，并阻止过程执行。  
+>  任何采用 **\@parameter =**_value_ 格式传入的参数如果拼写错误，就会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成错误，并阻止过程执行。  
   
 ## <a name="specifying-parameter-data-types"></a>指定参数数据类型  
  在 CREATE PROCEDURE 语句中声明时，必须使用数据类型定义参数。 参数的数据类型确定了在调用过程时该参数所接受值的类型和范围。 例如，如果用 `tinyint` 数据类型定义参数，则在传入该参数时只接受 0 到 255 之间的数值。 如果用与数据类型不兼容的值执行过程，将返回一个错误。  
@@ -126,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 虽然可以省略已提供默认值的参数，但只能截断参数列表。 例如，如果过程有 5 个参数，可以省略第 4 个和第 5 个参数。 不过，只要有第 5 个参数，就不能跳过第 4 个参数，除非采用 \@parameter =value****** 格式提供参数。  
+ 虽然可以省略已提供默认值的参数，但只能截断参数列表。 例如，如果过程有 5 个参数，可以省略第 4 个和第 5 个参数。 不过，只要有第 5 个参数，就不能跳过第 4 个参数，除非采用 **\@parameter =**_value_ 格式提供参数。  
   
 ## <a name="specifying-parameter-direction"></a>指定参数方向  
  参数的方向可以为输入（表明将值传递给过程的主体），也可以为输出（表明过程将值返回给调用程序）。 默认为输入参数。  

@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5801a38e22a0c638e9daee1e448158941499b19f
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502983"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100782"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ```  
   
 ## <a name="arguments"></a>参数  
- **N'** *plan_guide_name*   
+ **N'** _plan_guide_name_   
  指定被删除、启用或禁用的计划指南。 *plan_guide_name*解析为当前数据库。 如果未指定，否则*plan_guide_name*默认值为 NULL。  
   
  DROP  

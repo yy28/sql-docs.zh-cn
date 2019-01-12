@@ -13,12 +13,12 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb6f8f381b0cc284e0db2816fd56dd130f60de07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758209"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100574"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>查看或修改基于策略的管理条件的属性
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或修改基于策略的管理条件的属性。  
@@ -54,7 +54,7 @@ ms.locfileid: "52758209"
   
 4.  单击加号以便展开 **“条件”** 文件夹。  
   
-5.  右键单击要查看或编辑的条件，然后选择“属性”。 若要深入了解“打开条件 - condition_name”对话框中的可用选项，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)、[“打开条件”对话框，“依赖策略”页](open-condition-dialog-box-dependent-policies-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑”（条件）对话框](advanced-edit-condition-dialog-box.md)。  
+5.  右键单击要查看或编辑的条件，然后选择“属性”。 有关详细信息中的可用选项**打开条件-**_condition_name_对话框中，请参阅[创建新条件或打开条件对话框，常规页](../../integration-services/general-page-of-integration-services-designers-options.md)，[打开条件对话框，依赖策略页](open-condition-dialog-box-dependent-policies-page.md)，[创建新的条件或描述页-打开条件对话框](create-new-condition-or-open-condition-dialog-box-description-page.md)，并[高级编辑&#40;条件&#41;对话框](advanced-edit-condition-dialog-box.md)。  
   
 6.  完成后，单击 **“确定”**。  
   

@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415634"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099962"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)]中表或索引视图的当前查询优化统计信息。 统计信息对象包含一个带有统计信息的相关元数据的标题、一个带有统计信息对象第一个键列中的值的分布的直方图，以及一个用于度量各列之间的相关性的密度向量。 有关直方图和密度向量的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL) ](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  

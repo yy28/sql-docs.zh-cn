@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781260"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100792"
 ---
 # <a name="view-resource-governor-properties"></a>查看资源调控器属性
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“资源调控器属性”页创建或配置资源调控器实体（如资源池和工作负荷组）。  
@@ -73,7 +73,7 @@ ms.locfileid: "52781260"
  通过选中或清除复选框来启用或禁用资源调控器。  
   
  **资源池**  
- 通过使用提供的网格创建或更改资源池配置。 此网格使用预定义的内部和默认池的信息进行填充。 通过单击池中某行的第一列来选择要处理的池。 若要创建新的资源池，请单击带星号 (**\***) 前缀的行。  
+ 通过使用提供的网格创建或更改资源池配置。 此网格使用预定义的内部和默认池的信息进行填充。 通过单击池中某行的第一列来选择要处理的池。 若要创建新的资源池，请单击的行的前缀为星号 (**&#42;**)。  
   
  **名称**  
  指定资源池的名称。  
@@ -93,7 +93,7 @@ ms.locfileid: "52781260"
  有关详细信息，请参阅[创建资源池&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)。  
   
  **资源池的工作负荷组**  
- 通过使用提供的网格创建或更改工作负荷组配置。 此网格使用预定义的内部和默认组的信息进行填充。 通过单击池中某行的第一列来选择要处理的组。 若要创建新的工作组，请单击带星号 (**\***) 前缀的行。  
+ 通过使用提供的网格创建或更改工作负荷组配置。 此网格使用预定义的内部和默认组的信息进行填充。 通过单击池中某行的第一列来选择要处理的组。 若要创建新的工作负荷组，请单击的行的前缀为星号 (**&#42;**)。  
   
  **名称**  
  指定工作负荷组的名称。  

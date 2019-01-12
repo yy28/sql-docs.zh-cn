@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398810"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100712"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
   本主题说明什么是填充因子以及如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定索引的填充因子值。  
@@ -79,7 +79,7 @@ ms.locfileid: "52398810"
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”菜单上，选择“保存table_name”。  
+8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   

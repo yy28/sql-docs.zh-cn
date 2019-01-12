@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36aa1bbfd37642e66b232a1b532ff114397841d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788430"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100492"
 ---
 # <a name="system-data-collection-set-reports"></a>系统数据收集组报表
   数据收集器提供了每个系统数据收集组的历史记录报表。 下面的每个报表都使用管理数据仓库中存储的数据：  
@@ -56,7 +56,7 @@ ms.locfileid: "52788430"
  图形下面的表列出了数据收集时间和相应的使用情况数据。  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>数据库的磁盘使用情况：<数据库名称> 子报表  
- 在单击“磁盘使用情况收集组”报表的摘要表中的数据库名称后，系统会显示“数据库 <database_name> 的磁盘使用情况”子报表。 此报表提供了数据库的数据文件和事务日志文件空间使用情况的数值和图形明细。 数据文件的空间使用情况是按分配给索引页、未分配的空间、数据页以及未使用空间的百分比进行分类的。 这些类别定义如下：  
+ 在你单击磁盘使用情况收集组报表的摘要表中的数据库名称后，系统会显示“数据库 <database_name> 的磁盘使用情况”子报表。 此报表提供了数据库的数据文件和事务日志文件空间使用情况的数值和图形明细。 数据文件的空间使用情况是按分配给索引页、未分配的空间、数据页以及未使用空间的百分比进行分类的。 这些类别定义如下：  
   
 |类别|定义|  
 |--------------|----------------|  

@@ -18,12 +18,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d092939ca68c0d556b33c2f74b6cd4925061716
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778339"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100312"
 ---
 # <a name="write-international-transact-sql-statements"></a>编写国际化 Transact-SQL 语句
   如果遵循以下指导原则，则使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的数据库和数据库应用程序将变得更易于在语言之间移植，或者将支持多种语言：  
@@ -36,11 +36,11 @@ ms.locfileid: "52778339"
   
     -   ADO、OLE DB 和 ODBC 应用程序应使用下列 ODBC 时间戳、日期和时间转义子句：  
   
-         { ts'yyyy-mm-ddhh:mm:ss[.fff] '}，如：{ ts'1998-09-24 10:02:20' }****  
+         **{ts'** yyyy**-**_mm_**-**_ddhh_**:** _mm_**:**_ss_[**。**_fff_] **'}** 如： **{ts'** 1998年**-** 09**-** 24 10 **:** 02 **:** 20 **}**  
   
-         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** such as: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** such as: **{ d'** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** such as: **{ t'** 10:02:20 **'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
   
     -   使用其他 API 的应用程序或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本、存储过程和触发器都应使用未分隔数值字符串。 例如 *yyyymmdd* 为 19980924。  
   

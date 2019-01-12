@@ -13,12 +13,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14bc2f8445f61cb8cbafb94770c646df4d6a48bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748489"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100662"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定将在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的列中输入的默认值。 如果您没有分配默认值，并且将该列保留为空白，则：  
@@ -71,7 +71,7 @@ ms.locfileid: "52748489"
     > [!NOTE]  
     >  若要输入数值默认值，请输入该数字。 对于对象或函数，请输入其名称。 对于字母数字默认值，请输入该值，两边用单引号引起来。  
   
-4.  在“文件”菜单上，单击“保存table name”。  
+4.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

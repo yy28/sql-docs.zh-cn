@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505455"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100552"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以获取有关用户定义函数的定义或属性的信息。 您可能需要查看函数的定义，以理解其数据从源表中派生的方式或查看函数所定义的数据。  

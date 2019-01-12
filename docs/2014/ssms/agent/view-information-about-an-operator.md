@@ -17,12 +17,12 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 361511051bec6cc33f3062c0c4da13fe8a39329b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751049"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100322"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员的信息。  
@@ -66,7 +66,7 @@ ms.locfileid: "52751049"
   
 4.  右键单击要查看的操作员，然后选择“属性”。  
   
-     若要深入了解“operator_name属性”对话框包含的可用选项，请参阅：  
+     有关“operator_name 属性”对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性和新运算符&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

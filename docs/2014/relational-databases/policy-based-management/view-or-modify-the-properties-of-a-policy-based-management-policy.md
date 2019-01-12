@@ -13,12 +13,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a61e48294d39c955e806b8dd4f127bf8bfec2027
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758149"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100222"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>查看或修改基于策略的管理策略的属性
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或修改基于策略的管理策略的属性。  
@@ -46,7 +46,7 @@ ms.locfileid: "52758149"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
-1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[“查看策略”对话框](view-policies-dialog-box.md)。  
+1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 有关详细信息中的可用选项**查看策略-**_object_name_对话框中，请参阅[查看策略对话框](view-policies-dialog-box.md)。  
   
 2.  完成后，单击“关闭”。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52758149"
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要查看或修改的策略，然后选择“属性”。 若要深入了解“打开策略 - policy_name”对话框中的可用选项，请参阅[“创建新策略”或“打开策略”对话框，“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)和[“创建新策略”或“打开策略”对话框，“说明”页](create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  右键单击要查看或修改的策略，然后选择“属性”。 有关详细信息中的可用选项**打开策略-**_policy_name_对话框中，请参阅[创建新策略或打开策略对话框，常规页](../../integration-services/general-page-of-integration-services-designers-options.md)并[创建新策略或描述页-打开策略对话框](create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 6.  完成后，单击 **“确定”**。  
   

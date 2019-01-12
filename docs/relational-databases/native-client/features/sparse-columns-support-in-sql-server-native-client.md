@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c725b20233f027700ec4033ac869aab6a8a0fc9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0e21bd33bd181dc4075b74256047336562d11fb4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404612"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100573"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的稀疏列支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "52404612"
   
  对于 queryout 操作，在处理显式引用的列的方式上没有变化。 column_set 列具有与 XML 列相同的行为，并且稀疏性对于命名稀疏列的处理没有影响。  
   
- 但是，如果 queryout 用于导出并且引用的稀疏列属于按名称的稀疏列集的成员，则不能执行向类似结构表的直接导入。 这是因为 BCP 使用与 select 操作一致的元数据进行导入，并且无法将 column_set 成员列与此元数据进行匹配**\***。 若要单独导入 column_set 成员列，必须对引用所需 column_set 列的表定义一个视图，并且必须使用该视图执行导入操作。  
+ 但是，如果 queryout 用于导出并且引用的稀疏列属于按名称的稀疏列集的成员，则不能执行向类似结构表的直接导入。 这是因为 BCP 使用元数据与一致**选择&#42;** 导入操作并且不能以匹配**column_set**成员列与此元数据。 若要单独导入 column_set 成员列，必须对引用所需 column_set 列的表定义一个视图，并且必须使用该视图执行导入操作。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

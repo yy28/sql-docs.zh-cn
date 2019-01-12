@@ -17,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39e9db45723d32fd78eef35c5600d05b54999e61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749211"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100872"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用分离和附加来升级数据库 (Transact-SQL)
   本主题说明如何使用分离和附加操作在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中升级数据库。 在附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，数据库将立即变为可用，然后会自动进行升级。  
@@ -88,7 +88,7 @@ ms.locfileid: "52749211"
     > [!IMPORTANT]  
     >  对于生产数据库，请将数据库和事务日志存放在不同的磁盘上。  
   
-     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\Servername\\Sharename\\Path\\Filename**。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
+     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式： **\\\\**_服务器名称_**\\**_共享名_**\\**_路径_**\\**_文件名_。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
   
 3.  通过执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来附加移动的数据库及其日志（日志为可选项）：  
   

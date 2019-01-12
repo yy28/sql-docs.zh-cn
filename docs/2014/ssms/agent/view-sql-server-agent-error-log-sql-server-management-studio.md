@@ -16,12 +16,12 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 798d9f09bcfa2c9f73b0b70b795ebb53cfb97a79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823061"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100772"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
   本主题介绍如何使用  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代理错误日志。  
@@ -70,7 +70,7 @@ ms.locfileid: "52823061"
   
 4.  右键单击要查看的错误日志，并选择“查看代理日志”。  
   
-     “日志文件查看器 - server_name”对话框中提供以下选项：  
+     中提供了以下选项**日志文件查看器-**_server_name_对话框：  
   
      **加载日志**  
      打开一个对话框，您可以在其中指定要加载的日志文件。  

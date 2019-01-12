@@ -19,12 +19,12 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827495"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100616"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*  
  为实例名称。 *instance_name*是**sysname** ，默认值为本地实例，如果为 NULL。  
   
-> **注意：***instance_name*必须是完全限定的实例名称，其中包含计算机名称和实例名称，格式*computerName* \\ *instanceName*。    
+> **注意：**_instance_name_必须是完全限定的实例名称，其中包含计算机名称和实例名称，格式*computerName* \\ *instanceName*。    
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -54,7 +54,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
  若要查看当前的实例名称，请查询[syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)系统视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  
