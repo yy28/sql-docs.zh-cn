@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04163593c48a22bebdd933881b165af3418e0dfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690685"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135867"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@rolename =** ] **'***角色*****  
+ [  **@rolename =** ] **'**_角色_  
  新应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须是有效标识符，并且不能存在于当前数据库中。  
   
  应用程序角色名称可以包含 1 到 128 个字符，包括字母、符号及数字。 角色名称不能包含反斜杠 (\\)，也不为 NULL 或空字符串 （"）。  
   
- [ **@password =** ] **'***密码*****  
- 激活应用程序角色所需的密码。 *密码*是**sysname**，无默认值。 *密码*不能为 NULL。  
+ [  **@password =** ] **'**_密码_  
+ 激活应用程序角色所需的密码。 *密码* 是 **sysname** ，无默认值。 *密码*不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -72,7 +72,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 > [!IMPORTANT]  
 >  Microsoft ODBC**加密**选项不受**SqlClient**。 如果您可以，请在运行时提示用户输入应用程序角色凭据。 不要将凭据存储在一个文件中。 如果必须使凭据持久化，请使用 CryptoAPI 函数将它们加密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。 如果尚未存在具有与新角色相同名称和所有者的架构，则还需要拥有对该数据库的 CREATE SCHEMA 权限。  
   
 ## <a name="examples"></a>示例  

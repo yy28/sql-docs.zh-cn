@@ -1,6 +1,6 @@
 ---
-title: 将 SQLRUserGroup 添加为数据库用户-SQL Server 机器学习服务
-description: 对于使用隐式身份验证的环回连接，将 SQLRUserGroup 添加为数据库用户，以便辅助角色帐户可以登录到服务器，用于返回到调用用户标识转换。
+title: 将 SQLRUserGroup 添加为 SQL Server 登录名的 SQL Server 机器学习服务
+description: 对于使用隐式身份验证的环回连接，将 SQLRUserGroup 添加为 SQL Server 登录名，以便辅助角色帐户可以登录到服务器，用于返回到调用用户标识转换。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432350"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143417"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>将 SQLRUserGroup 添加为数据库用户
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>将 SQLRUserGroup 添加为 SQL Server 登录名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-创建数据库登录名[SQLRUserGroup](../concepts/security.md#sqlrusergroup)时[循环后连接](../../advanced-analytics/concepts/security.md#implied-authentication)在脚本中指定*可信连接*，和用于执行对象的标识包含你的代码是 Windows 用户帐户。
+创建一个 SQL Server 登录名[SQLRUserGroup](../concepts/security.md#sqlrusergroup)时[循环后连接](../../advanced-analytics/concepts/security.md#implied-authentication)在脚本中指定*可信连接*，和用于执行对象的标识包含你的代码是 Windows 用户帐户。
 
 受信任的连接是必须`Trusted_Connection=True`连接字符串中。 当 SQL Server 收到指定的受信任的连接请求时，它会检查当前的 Windows 用户的标识是否具有登录名。 对于作为辅助角色帐户正在执行的外部进程 (如从 MSSQLSERVER01 **SQLRUserGroup**)，请求失败，因为这些帐户默认情况下将不具有登录名。
 

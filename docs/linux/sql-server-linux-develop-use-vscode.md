@@ -1,128 +1,126 @@
 ---
-title: 使用适用于 SQL Server Visual Studio Code 的 mssql 扩展 |Microsoft Docs
-description: 本教程演示如何使用适用于 VS Code 的 mssql 扩展。 此扩展，可编辑，在 VS Code 中运行的 Transact SQL 脚本。
+title: 使用适用于 Linux 上的 SQL Server Visual Studio Code 的 mssql 扩展 |Microsoft Docs
+description: 使用适用于 Visual Studio Code 的 mssql 扩展编辑和 Linux 上运行 SQL Server Transact SQL 脚本。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/17/2017
+ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 583c7ac13b49370b333e80568c4b52885b58dcf3
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033624"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100562"
 ---
-# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 创建和运行 SQL Server 的 TRANSACT-SQL 脚本
+# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-on-linux"></a>使用 Visual Studio Code 创建和运行在 Linux 上的 TRANSACT-SQL 脚本
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何使用**mssql**适用于 Visual Studio Code (VS Code) 要开发 SQL Server 数据库扩展。
+本文介绍如何使用*mssql*适用于 Visual Studio Code 开发在 Linux 中的 SQL Server 数据库扩展。
 
-Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码编辑器，支持扩展。 [**Mssql** VS Code 的扩展]使您能够连接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查询并查看结果。
+## <a name="install-and-start-visual-studio-code"></a>安装并启动 Visual Studio Code
 
-## <a name="install-vs-code"></a>安装 VS Code
-1. 如果尚未安装 VS Code[下载并安装 VS Code]在计算机上。
+Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码编辑器，支持扩展。 
 
-2. 启动 VS Code。
+1. [下载并安装 Visual Studio Code]在计算机上。
+   
+1. 启动 Visual Studio Code。
+   
+   >[!NOTE]
+   >如果通过 xrdp 远程桌面会话连接时，Visual Studio Code 未启动，请参阅[不工作时使用 XRDP 连接在 Ubuntu 上的 VS Code](https://github.com/Microsoft/vscode/issues/3451)。
 
 ## <a name="install-the-mssql-extension"></a>安装 mssql 扩展
-以下步骤说明了如何安装 mssql 扩展。 
 
-1. 按**CTRL + SHIFT + P** (或**F1**) 在 VS Code 中打开命令面板。 
+[适用于 Visual Studio Code 的 mssql 扩展]可让你连接到 SQL Server，使用 TRANSACT-SQL (T-SQL) 查询并查看结果。
 
-2. 选择**安装扩展**并键入**mssql**。
-   > [!TIP] 
-   > 对于 macOS， **CMD**键相当**CTRL** Linux 和 Windows 上的密钥。
-
-2. 单击安装**mssql**。 
+1. 在 Visual Studio Code 中，选择**视图** > **命令面板**，或按**Ctrl**+**Shift** +**P**，或按**F1**以打开**命令面板**。 
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
-
-3. **Mssql**扩展需要一分钟的时间安装。 请等待通知安装成功的提示。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
-
-   > [!NOTE]
-   > 对于 macOS，则必须安装 OpenSSL。 这是 mssql 扩展使用 .Net Core 的先决条件。 请按照**安装必备**中的步骤[.NET Core说明]。 也可在 macOS 终端运行以下命令。
-   >
-   >   ```bash
-   >   brew update
-   >   brew install openssl
-   >   ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-   >   ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-   >   ```
+1. 在中**命令面板**，选择**扩展：安装扩展**从下拉列表。 
    
-   > [!NOTE]
-   > 对于 Windows 8.1、 Windows Server 2012 或更低版本，必须下载并安装[Windows 10 通用 C 运行时]。 下载并打开 zip 文件。 然后根据当前 OS 配置运行安装程序（.msu 文件）。
+1. 在中**扩展**窗格中，键入*mssql*。
+   
+1. 选择**SQL Server (mssql)** 扩展，并选择**安装**。 
+   
+   ![安装 mssql 扩展](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)   
+   
+1. 安装完成后，选择**重新加载**启用扩展。 
 
 ## <a name="create-or-open-a-sql-file"></a>创建或打开 SQL 文件
 
-**Mssql**扩展启用 mssql 命令和 T-SQL IntelliSense 在编辑器中将语言模式设置为时**SQL**。
+Mssql 扩展启用 mssql 命令和 T-SQL IntelliSense 在代码编辑器中将语言模式设置为时**SQL**。
 
-1. 按**CTRL + N**。 默认情况下，Visual Studio Code 将打开一个新的“纯文本”文件。 
+1. 选择**文件** > **新文件**或按**Ctrl**+**N**。 默认情况下，visual Studio Code 打开新的纯文本文件。 
 
-2. 按**CTRL + K，M**并更改语言模式设置为**SQL**。 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 500px;" />
-
-3. 也可使用 .sql 文件扩展打开现有文件。 将语言模式将自动**SQL**扩展名为.sql 的文件。  
+1. 选择**纯文本**上的较低的状态栏或按**Ctrl**+**K** > **M**，并选择**SQL**从语言下拉列表。 
+   
+   ![SQL 语言模式](./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png)   
+   
+如果打开现有的文件具有 *.sql*文件扩展名，将语言模式将自动设置为 SQL。  
 
 ## <a name="connect-to-sql-server"></a>连接到 SQL Server
 
-以下步骤演示了如何使用 VS Code 连接到 SQL Server。
+请按照下列步骤创建连接配置文件和连接到 SQL Server。
 
-1. 在 VS Code 中，按 CTRL+SHIFT+P（或 F1）打开命令面板。
-
-2. 类型**sql**以显示 mssql 命令。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 500px;" />
+> [!TIP] 
+> 您还可以创建和编辑连接配置文件中的用户设置文件 (*settings.json*)。 若要打开设置文件，请选择**文件** > **首选项** > **设置**。 有关详细信息，请参阅[管理连接配置文件]。
    
+1. 按**Ctrl**+**Shift**+**P**或**F1**打开**命令面板**. 
+   
+1. 类型*sql*以显示 mssql 命令或键入*sqlcon*，然后选择**MS SQL:连接**从下拉列表。
+   
+   ![mssql 命令](./media/sql-server-linux-develop-use-vscode/vscode-commands.png)   
+   
+   >[!NOTE]
+   >SQL 文件，如空的 SQL 文件创建时，必须具有焦点在代码编辑器中的才可以执行 mssql 命令。 
 
-3. 选择**MS SQL： 连接**命令。 您只需键入**sqlcon**然后按**ENTER**。
-
-4. 选择**创建连接配置文件**。 这将为 SQL Server 实例创建连接配置文件。
-
-5. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 ENTER 继续。 
-
-   下表描述了连接配置文件的属性。
-
-   | 设置 | Description |
-   |-----|-----|
-   | **服务器名称** | SQL Server 实例名称。 对于本教程中，使用**localhost**连接到计算机上的本地 SQL Server 实例。 如果要连接到远程 SQL Server，请输入目标 SQL Server 计算机的名称，或它的 IP 地址。 如果需要为您的 SQL Server 实例指定端口，使用逗号分隔的名称。 例如对于运行在端口 1401年上的本地服务器，输入**localhost，1401年**。 |
-   | **[可选]数据库名称** | 要使用的数据库。 对于本教程的目的，不指定数据库，并按**ENTER**以继续。 |
-   | **用户名** | 输入拥有访问服务器上数据库权限的用户名。 对于本教程中，使用默认**SA** SQL Server 安装过程中创建的帐户。 |
-   | **密码（SQL 登录名）** | 输入指定用户的密码。 | 
-   | **是否保存密码？** | 类型**是**来保存密码。 否则，请键入**否**每次使用连接配置文件时提示输入密码。 |
-   | **[可选]输入此配置文件的名称** | 连接配置文件名称。 例如，可以命名该配置文件**localhost 配置文件**。 
-
-   > [!Tip] 
-   > 可在用户设置文件 (settings.json) 中创建和编辑连接配置文件。 通过选择打开设置文件**首选项**，然后**用户设置**VS Code 菜单中。 有关详细信息，请参阅[管理连接配置文件]。
-
-6. 按 ESC 键关闭提示配置文件已创建并连接的提示消息。
-
+1. 选择**创建连接配置文件**为您的 SQL Server 中创建新的连接配置文件。
+   
+1. 按照提示指定为新的连接配置文件的属性。 指定每个值后，按**Enter**以继续。 
+   
+   1. **服务器名称或 ADO 连接字符串**:指定 SQL Server 实例名称。 使用*localhost*连接到本地计算机上的 SQL Server 实例。 若要连接到远程 SQL Server，请输入目标 SQL Server 的名称或其 IP 地址。 如果您需要指定端口，使用逗号分隔的名称。 例如，对于运行在端口 1401年上的本地服务器，请输入*localhost，1401年*。 
+      
+      >[!NOTE]
+      >此外可以为你的数据库，按输入的 ADO 连接字符串**Enter**，可以选择名称连接配置文件，然后按**Enter**再次进行连接，该配置文件。 
+      
+   1. **数据库名称**（可选）：要使用的数据库。 若要创建新的数据库，不指定数据库名称，然后按**Enter**以继续。 
+      
+   1. **身份验证类型**:按**Enter**以选择**SQL 登录名**。 
+      
+   1. **用户名称**:输入拥有访问服务器上数据库权限的用户名。
+      
+   1. **密码**:输入指定用户的密码。
+      
+   1. **保存密码**:按**Enter**以选择**是**和保存密码。 选择**否**每次使用的连接配置文件时提示输入密码。 
+      
+   1. **配置文件名称**（可选）：键入一个名称为连接配置文件，如*localhost 配置文件*。 
+   
+   选择后**Enter**，Visual Studio Code 创建连接配置文件，并连接到 SQL Server。 
+   
    > [!TIP]
-   > 如果连接失败，首次尝试诊断中的错误消息从问题**输出**在 VS Code 中的面板 (选择**输出**上**视图**菜单)。 然后查看[连接故障排除建议]。
+   > 如果连接失败，请尝试以诊断问题中的错误消息**输出**Visual Studio Code 中的面板。 若要打开**输出**面板中，选择**视图** > **输出**。 此外查看[连接故障排除建议]。
+   
+1. 验证您在较低的状态栏中的连接。
+   
+  ![连接状态](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)   
+   
+## <a name="create-a-sql-database"></a>创建 SQL 数据库
 
-7. 在状态栏中验证连接。
+1. 在前面启动新的 SQL 文件中键入*sql*以显示可编辑的代码片段的列表。 
 
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
-
-## <a name="create-a-database"></a>创建数据库
-
-1. 在编辑器中，键入**sql**以显示可编辑的代码片段的列表。 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png" alt="SQL snippets" style="width: 500px;" />
-
-2. 选择**sqlCreateDatabase**。
-
-3. 在段中，键入**TutorialDB**数据库名称。
-
+  ![SQL 代码段](./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png)   
+   
+1. 选择**sqlCreateDatabase**。
+   
+1. 在段中，替换`DatabaseName`与`TutorialDB`:
+   
    ```sql
+   -- Create a new database called 'TutorialDB'
+   -- Connect to the 'master' database to run this snippet
    USE master
    GO
    IF NOT EXISTS (
@@ -134,36 +132,31 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
    GO
    ```
    
-4. 按**CTRL + SHIFT + E**执行 Transact-SQL 命令。 在查询窗口中查看结果。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 500px;" />
-
-   > [!TIP]
-   > 可以自定义为 mssql 扩展命令绑定的快捷键。 请参阅[自定义快捷键]。
+1. 按**Ctrl**+**Shift**+**E**执行 Transact-SQL 命令。 在查询窗口中查看结果。
+   
+  ![创建数据库邮件](./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png)   
+   
+> [!TIP]
+> 您可以自定义 mssql 命令的快捷键。 请参阅[自定义快捷键]。
 
 ## <a name="create-a-table"></a>创建表
 
-1. 删除编辑器窗口中的内容。
-
-2. 按**F1**显示命令面板。
-
-3. 类型**sql**在命令面板中显示的 SQL 命令或类型**sqluse**有关**MS sql: use Database**命令。
-
-4. 单击**MS sql: use Database**，然后选择**TutorialDB**数据库。 此操作会将上下文更改为上一节中创建的新数据库。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
-
-3. 在编辑器中，键入**sql**以显示代码段，然后选择**sqlCreateTable**然后按**输入**。
-
-4. 在段中，键入**员工**表名称。
-
-5. 按**选项卡**，然后键入**dbo**架构名称。
-
-   > [!NOTE]
-   > 添加片段之后，必须键入表名和架构名，而无效从 VS Code 编辑器中更改焦点。
-
-6. 更改的列名称**Column1**到**名称**并**Column2**到**位置**。
-
+1. 删除代码编辑器窗口的内容。
+   
+1. 按**Ctrl**+**Shift**+**P**或**F1**打开**命令面板**. 
+   
+1. 类型*sql*以显示 mssql 命令或键入*sqluse*，然后选择**MS sql: use Database**命令。
+   
+1. 选择新**TutorialDB**数据库。 
+   
+   ![使用数据库](./media/sql-server-linux-develop-use-vscode/vscode-use-database.png)   
+   
+1. 在代码编辑器中，键入*sql*若要显示这些代码片段，请选择**sqlCreateTable**，然后按**Enter**。
+   
+1. 在段中，键入*员工*表名称和*dbo*架构名称。
+   
+1. 创建列，如下面的代码中所示：
+   
    ```sql
    -- Create a new table called 'Employees' in schema 'dbo'
    -- Drop the table if it already exists
@@ -179,12 +172,12 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
    );
    GO
    ```
-
-7. 按**CTRL + SHIFT + E**创建表。
+   
+1. 按**Ctrl**+**Shift**+**E**创建表。
 
 ## <a name="insert-and-query"></a>插入和查询
 
-1. 添加以下语句将四个行插入**员工**表。 然后选择所有行。
+1. 添加以下语句将四个行插入**员工**表。 
 
    ```sql
    -- Insert rows into table 'Employees'
@@ -203,68 +196,66 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
    FROM dbo.Employees as e
    GO
    ```
-
+   
    > [!TIP]
-   > 键入时，可使用 T-SQL IntelliSense 协助。
-   >   <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 500px;" />
-
-2. 按**CTRL + SHIFT + E**执行命令。 两个结果集显示在**结果**窗口。 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
+   > 键入时，使用 T-SQL IntelliSense 来帮助完成该语句。
+   >![T-SQL 的 IntelliSense](./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png)   
+   
+1. 按**Ctrl**+**Shift**+**E**执行命令。 两个结果集显示在**结果**窗口。 
+   
+   ![结果](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)   
 
 ## <a name="view-and-save-the-result"></a>查看并保存结果
-
-1. 上**视图**菜单中，选择**切换编辑器组布局**以切换到垂直或水平拆分布局。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-split.png" alt="Vertical split" style="width: 500px;" />
-
-2. 单击**结果**并**消息**面板标头来折叠和展开面板。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 500px;" />
-
+   
+1. 选择**视图** > **编辑器布局** > **翻转布局**以切换到垂直或水平拆分布局。
+   
+1. 选择**结果**并**消息**面板标头来折叠和展开面板。
+   
+   ![切换标头](./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png)   
+   
    > [!TIP]
    > 可以自定义 mssql 扩展的默认行为。 请参阅[自定义扩展选项]。
-
-2. 单击第二个结果网格上的最大化网格图标放大网格。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png" alt="Maximize grid" style="width: 500px;" />
-
+   
+1. 选择要放大这些结果的第二个结果网格上的最大化网格图标。
+   
+   ![最大化网格](./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png)   
+   
    > [!NOTE]
-   > T-SQL 脚本具有两个或多个结果网格时，会显示最大化图标。
+   > T-SQL 脚本生成两个或多个结果网格时，将显示最大化图标。
+   
+1. 通过右键单击网格中打开网格上下文菜单。 
+   
+   ![上下文菜单](./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png)   
+   
+1. 选择**全**。
+   
+1. 再次打开网格上下文菜单，然后选择**另存为 JSON**保存到结果 *.json*文件。
+   
+1. 为 JSON 文件指定文件名。 
+   
+1. 验证 JSON 文件保存，并在 Visual Studio Code 中打开。
+   
+   ![将另存为 JSON](./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png)   
 
-3. 使用网格上的鼠标右键打开网格上下文菜单。 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
-
-4. 选择**全**。
-
-5. 打开网格上下文菜单，然后选择**另存为 JSON**若要将结果保存的.json 文件。
-
-6. 为 JSON 文件指定文件名。 对于本教程中，键入**employees.json**。
-
-7. 验证 JSON 文件是否已保存，是否已在 VS Code 中打开。
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
+如果需要保存和运行 SQL 脚本更高版本，为管理或更大的开发项目中，将使用脚本另存 *.sql*扩展。
 
 ## <a name="next-steps"></a>后续步骤
 
-在实际情况中，你可能会创建一个稍后要保存和运行的脚本（用于管理或作为大型开发项目的一部分）。 在这种情况下，将保存的脚本 **.sql**扩展。
-
-如果不熟悉 T-SQL，请参阅[教程：编写 Transact-SQL 语句]和 [Transact-SQL 引用（数据库引擎）]。
+如果您熟悉 T-SQL，请参阅[教程：编写 TRANSACT-SQL 语句]并[Transact-SQL 引用（数据库引擎）]。
 
 有关使用或提供 mssql 扩展的详细信息，请参阅[mssql 扩展项目 wiki]。
 
-使用 VS Code 的详细信息，请参阅[Visual Studio Code 文档](https://code.visualstudio.com/docs)。
+使用 Visual Studio Code 的详细信息，请参阅[Visual Studio Code 文档](https://code.visualstudio.com/docs)。
 
-[**mssql** VS Code 的扩展]:https://aka.ms/mssql-marketplace
-[下载并安装 VS Code]:https://code.visualstudio.com/Download
-[.NET Core说明]:https://www.microsoft.com/net/core
+[适用于 Visual Studio Code 的 mssql 扩展]:https://aka.ms/mssql-marketplace
+[下载并安装 Visual Studio Code]:https://code.visualstudio.com/Download
+[.Net Core instructions]:https://www.microsoft.com/net/core
 [管理连接配置文件]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [连接故障排除建议]:./sql-server-linux-troubleshooting-guide.md#connection
 [自定义快捷键]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[教程：编写 Transact-SQL 语句]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL 引用（数据库引擎）]:https://msdn.microsoft.com/library/bb510741.aspx
+[教程：编写 TRANSACT-SQL 语句]:https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements
+[Transact-SQL 引用（数据库引擎）]:https://docs.microsoft.com/sql/t-sql/language-reference
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[Windows 10 通用 C 运行时]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
+[Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [自定义扩展选项]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [mssql 扩展项目 wiki]: https://github.com/Microsoft/vscode-mssql/wiki

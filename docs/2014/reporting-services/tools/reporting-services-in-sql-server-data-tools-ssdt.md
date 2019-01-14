@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: df8e06b5de6824ee33fb8e923411ecf3e24e2ca9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409694"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125137"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]包含特定于商业智能解决方案的增强功能的环境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供。  
@@ -40,7 +40,7 @@ ms.locfileid: "52409694"
 ##  <a name="bkmk_ReportServerProjects"></a> 报表服务器项目  
  安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]后，在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中可以使用下列项目模板：  
   
--   **报表服务器项目。** 选择“报表服务器项目”时，将打开报表设计器。 报表服务器项目是一个由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 安装的商业智能项目模板，可在 **“新建项目”** 对话框中找到它。 有关详细信息，请参阅[向报表项目添加新报表或现有报表 (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)。报表服务器项目属性适用于 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 项目中的所有报表和共享数据源。 这些属性包括报表服务器的 URL 以及报表和共享数据源的文件夹名称。 使用 **“项目属性页”** 对话框可查看当前属性值。 若要打开此对话框，请在**项目**菜单上，单击*\<项目名称 >* **属性**。  
+-   **报表服务器项目。** 选择“报表服务器项目”时，将打开报表设计器。 报表服务器项目是一个由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 安装的商业智能项目模板，可在 **“新建项目”** 对话框中找到它。 有关详细信息，请参阅[向报表项目添加新报表或现有报表 (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md)。报表服务器项目属性适用于 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 项目中的所有报表和共享数据源。 这些属性包括报表服务器的 URL 以及报表和共享数据源的文件夹名称。 使用 **“项目属性页”** 对话框可查看当前属性值。 若要打开此对话框，请在**项目**菜单上，单击_\<项目名称 >_ **属性**。  
   
 -   **报表服务器项目向导。** 选择报表服务器向导项目时，将自动创建一个报表服务器项目并打开报表向导。 在该向导中，您可以根据每个页面上的说明来创建报表：创建到数据源的连接字符串，设置数据源凭据，设计查询，添加表或矩阵数据区域，指定报表数据和组，选取字体和颜色样式，将报表发布到报表服务器，在本地预览报表。 使用该向导创建报表之后，您可以通过使用报表服务器项目中的报表设计器来更改报表数据和报表设计器。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52409694"
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> 源代码管理  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。**  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自定义报表模板  
  若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于\<驱动器 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  

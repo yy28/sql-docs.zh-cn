@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091257"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134087"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
@@ -185,15 +185,15 @@ ms.locfileid: "48091257"
 ##  <a name="Prereqs"></a> 有关使用复制的先决条件、限制和注意事项  
  本节介绍使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]部署复制时的注意事项，包括先决条件、限制和建议。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先决条件  
   
 -   在使用事务复制并且发布数据库位于可用性组中时，发布服务器和分发服务器都必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 订阅服务器可以使用较低级别的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 -   在使用合并复制并且发布数据库位于某一可用性组中时：  
   
-    -   推送订阅：发布服务器和分发服务器都必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+    -   推送订阅：发布服务器和分发服务器必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-    -   请求订阅：发布服务器、分发服务器和订阅服务器数据库都必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
+    -   请求订阅：发布服务器、分发服务器和订阅服务器的数据库必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 上。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
   
 -   不支持将分发数据库放置在可用性组上。  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091257"
   
 -   [维护 AlwaysOn 发布数据库&#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -253,7 +253,7 @@ ms.locfileid: "48091257"
  [复制订阅服务器和 AlwaysOn 可用性组&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组： 互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [AlwaysOn 可用性组：互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [关于变更数据捕获 (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [关于更改跟踪 (SQL Server)](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)   

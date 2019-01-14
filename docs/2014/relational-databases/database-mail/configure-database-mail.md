@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371179"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131487"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
   本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
@@ -394,7 +394,7 @@ ms.locfileid: "53371179"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- 使用“从 <instance_name> 发送测试电子邮件”页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
+ 使用**从 _<instance_name>_ 发送测试电子邮件**页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
   
  **数据库邮件配置文件**  
  从列表中选择数据库邮件配置文件。 这是必填字段。 如果没有显示配置文件，则没有配置文件或您不具有选择配置文件的权限。 使用 **数据库邮件配置向导** 可以创建和配置配置文件。 如果没有列出配置文件，请使用数据库邮件配置向导来创建要使用的配置文件。  

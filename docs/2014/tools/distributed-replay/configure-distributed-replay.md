@@ -10,12 +10,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39f81a2e2d1762ac60ba34490844b123d3ae8fbe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376689"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124567"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播配置详细信息在分布式重播控制器、客户端以及安装有管理工具的位置的 XML 文件中指定。 这些文件包括下面的文件：  
@@ -121,7 +121,7 @@ ms.locfileid: "53376689"
   
 |设置|XML 元素|Description|允许的值|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标实例（测试服务器）|`<Server>`|指定要连接的服务器名和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名。|*server_name*[\\*instance_name*]<br /><br /> 不能使用“`localhost`”或“`.`”来表示本地主机。|否，如果已通过使用管理工具的 **-s***target server* 参数和“重播”选项指定服务器名称。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标实例（测试服务器）|`<Server>`|指定要连接的服务器名和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名。|*server_name*[\\*instance_name*]<br /><br /> 不能使用“`localhost`”或“`.`”来表示本地主机。|否，如果已通过使用管理工具的 **-s** _target server_ 参数和“重播”选项指定服务器名称。|  
 |顺序模式|`<SequencingMode>`|指定用于事件计划的模式。|`synchronization` &#124; `stress`|否。 默认情况下，该值为 `stress`。|  
 |压力调整粒度|`<StressScaleGranularity>`|指定服务配置文件标识符 (SPID) 上的所有连接在压力模式下是应该一起调整 (SPID) 还是单独调整 (Connection)。|SPID &#124; Connection|是。 默认情况下，该值为 `SPID`。|  
 |连接时间刻度|`<ConnectTimeScale>`|用于调整压力模式下的连接时间。|介于 `1` 和 `100`之间的整数。|否。 默认情况下，该值为 `100`。|  

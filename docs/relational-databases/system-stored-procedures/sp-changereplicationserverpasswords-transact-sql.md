@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760230"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125707"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证  
   
- [ **@login**  =] **'***登录*****  
+ [ **@login** =] **'**_登录_  
  要更改的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的名称。 *登录名*是**nvarchar(257)**，无默认值  
   
- [ **@password**  =] **'***密码*****  
- 要存储的新密码为指定*登录名*。 *密码* 是 sysname** ，无默认值。  
+ [ **@password** =] **'**_密码_  
+ 要存储的新密码为指定*登录名*。 *密码* 是 **sysname** ，无默认值。  
   
 > [!NOTE]  
 >  更改复制密码后，必须停止并重新启动使用该密码的每个代理，这样代理的更改才能生效。  
   
- [ **@server**  =] **'***server*****  
+ [ **@server** =] **'**_server_  
  要为其更改存储密码的服务器连接。 *服务器*是**sysname**，可以是下列值之一：  
   
 |ReplTest1|Description|  

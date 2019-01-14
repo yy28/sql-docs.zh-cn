@@ -13,17 +13,17 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa7fb107e67d529c656a49b271744757a1a73746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651315"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128057"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、时间和时间戳文本
 日期、 时间和时间戳文本的转义序列是  
   
- **{***-类型* **'** *值* **}**   
+ **{**_-类型_ **'** _值_ **}**  
   
  其中*文本类型*下表中列出的值之一。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47651315"
   
  [1] 的数字文本，其中包含秒组成部分的时间戳间隔中小数点右侧位数是依赖于的秒精度，因为 SQL_DESC_PRECISION 描述符字段中包含。 (有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   
- 有关日期、 时间和时间戳转义序列的详细信息，请参阅[日期、 时间和时间戳转义序列](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)附录 c: SQL 语法中。  
+ 有关日期、 时间和时间戳转义序列的详细信息，请参阅[日期、 时间和时间戳转义序列](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)附录 c： 驱动器中SQL 语法。  
   
  例如，这两个以下的 SQL 语句更新销售订单 1023 Orders 表中的打开的日期。 第一个语句使用的转义序列语法。 第二个语句的日期列中使用 Oracle Rdb 本机语法并不是可互操作。  
   

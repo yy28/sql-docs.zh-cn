@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822591"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135807"
 ---
 # <a name="change-publication-and-article-properties"></a>更改发布和项目属性
   在创建发布后，可以更改大多数发布和项目属性，但有些发布和项目属性要求重新生成快照和/或重新初始化订阅。 本主题提供有关更改时需要以上一种或两种操作的所有属性的信息。  
@@ -93,7 +93,7 @@ ms.locfileid: "52822591"
 |更改目标表所有者。|**sp_changemergearticle**|**destination_owner**|新建快照。<br /><br /> 重新初始化订阅。|  
   
 ## <a name="see-also"></a>请参阅  
- [管理（复制）](../administration/administration-replication.md)   
+ [复制管理常见问题解答](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [创建并应用快照](../create-and-apply-the-snapshot.md)   
  [重新初始化订阅](../reinitialize-subscriptions.md)   
  [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

@@ -18,12 +18,12 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 172602fcaff2764256c9aa7b3e660c2400abdfd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06198932c654bf7e8d855b4a008b3de3401dda1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596445"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131507"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
+ [  **@rolename =** ] **'**_角色_  
  是应用程序角色的名称。 *角色* 是 **sysname** ，无默认值。 *角色*必须存在于当前数据库。  
   
- [  **@newpwd =** ] **'***密码*****  
- 应用程序角色的新密码。 *密码* 是 sysname** ，无默认值。 *密码*不能为 NULL。  
+ [  **@newpwd =** ] **'**_密码_  
+ 应用程序角色的新密码。 *密码* 是 **sysname** ，无默认值。 *密码*不能为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用密码为空。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
@@ -58,7 +58,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ## <a name="remarks"></a>备注  
  **sp_approlepassword**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。  
   
 ## <a name="examples"></a>示例  
