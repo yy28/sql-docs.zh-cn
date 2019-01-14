@@ -14,14 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b42d5ae09ef078e98f1343a4e4e7bfda7ac6566b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c72154e0cb963e5a3c819c064155bd8ea869aa85
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698185"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257212"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -33,7 +34,7 @@ ms.locfileid: "51698185"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用 Analysis Services 命令和/或查询创建 SQL Server 作业步骤，请使用：**  
   
@@ -59,7 +60,7 @@ ms.locfileid: "51698185"
   
 -   只有 **sysadmin** 固定服务器角色的成员才可以将作业步骤输出写入到文件中。 如果运行作业步骤的用户是 **msdb** 数据库中 **SQLAgentUserRole** 数据库角色的成员，则输出只能写入表中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会将作业步骤输出写入 **msdb** 数据库中的 **sysjobstepslog** 表。  
   
--   有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+-   有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -129,8 +130,8 @@ ms.locfileid: "51698185"
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="https://www.w3.org/2001/XMLSchema"
-                xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  

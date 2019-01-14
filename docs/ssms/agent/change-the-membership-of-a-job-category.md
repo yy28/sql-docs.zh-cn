@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e56b8180caf8beec9a0371e79e847fd4ff2e30d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701105"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131127"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51701105"
   
 -   **开始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要更改作业类别的成员身份，请使用**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "51701105"
 ## <a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="Security"></a>安全性  
-有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -63,13 +63,13 @@ ms.locfileid: "51701105"
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别server_name” 对话框中，选择要编辑的作业类别，然后单击“查看作业”。  
+4.  在“管理作业类别” _server_name_ 对话框中，选择要编辑的作业类别，然后单击“查看作业” 。  
   
 5.  选中 **“显示所有作业”** 复选框。  
   
 6.  若要向类别中添加作业，请在主网格中选中与作业对应的 **“选择”** 列中的复选框。 若要从类别中删除作业，请清除该框。 完成后，单击 **“确定”**。  
   
-7.  关闭“管理作业类别server_name” 对话框。  
+7.  关闭“管理作业类别” _server_name_ 对话框。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

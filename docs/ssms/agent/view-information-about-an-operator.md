@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702555"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256392"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51702555"
   
 -   **开始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要查看有关操作员的信息，可使用：**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51702555"
   
 4.  右键单击要查看的操作员，然后选择“属性”。  
   
-    若要深入了解“operator_name属性”对话框包含的可用选项，请参阅：  
+    有关“operator_name 属性”对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性 - 新建操作员（“常规”页）](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

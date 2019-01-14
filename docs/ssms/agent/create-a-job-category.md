@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7dbc000d71d7d2cda2d299de476346103f2d2a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701945"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134307"
 ---
 # <a name="create-a-job-category"></a>创建作业类别
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51701945"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要创建作业类别，可使用：**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "51701945"
 多服务器类别仅存在于主服务器上。 主服务器上仅提供了一个默认作业类别：“[未分类(多服务器)]”。 下载多服务器作业后，其类别将在目标服务器上更改为“来自 MSX 的作业”  。  
   
 ### <a name="Security"></a>安全性  
-有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51701945"
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别server_name” 对话框中，单击“添加”。  
+4.  在“管理作业类别” _server_name_ 对话框中，单击“添加” 。  
   
 5.  在新对话框的 **“名称”** 框中，输入新作业类别的名称。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "51701945"
   
 7.  单击“确定” 。  
   
-8.  在“管理作业类别server_name” 对话框中，单击“刷新”，确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
+8.  在“管理作业类别” _server_name_ 对话框中，单击“刷新”  以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   
 有关这些对话框的详细信息，请参阅 [作业类别 - 管理作业类别](../../ssms/agent/job-categories-manage-job-categories.md) 和 [作业类别属性 - 新建作业类别](../../ssms/agent/job-categories-properties-new-job-category.md)。  
   

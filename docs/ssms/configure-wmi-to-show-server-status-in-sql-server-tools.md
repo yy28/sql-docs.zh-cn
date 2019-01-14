@@ -14,12 +14,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93a01e3d3c687485bb9d330dfe8e97c31cc65cef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9309df663b0754b28a9ec1397fb5bfa1ad1beabc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609826"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134707"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>在 SQL Server 工具中将 WMI 配置为显示服务器状态
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47609826"
   
 6.  向“组或用户名称”框中添加一个组或用户，并将其选中。  
   
-7.  在“<group or user>权限”框中，为希望远程检测服务状态的用户选择“远程启用”权限的“允许”列。  
+7.  在“<group or user> 权限”框中，为希望远程检测服务状态的用户选择“远程启用”权限的“允许”列。  
   
 ## <a name="see-also"></a>另请参阅  
 [启动、停止或暂停 SQL Server 代理服务](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

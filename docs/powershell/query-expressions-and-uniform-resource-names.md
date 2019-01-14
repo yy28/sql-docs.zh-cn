@@ -14,14 +14,15 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58c8f0734db28e80fbc07f1826f1dc51ea9300e9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672046"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256472"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元使用与 XPath 表达式相似的两种类型的表达式。 查询表达式是指定一组条件的字符串，用于枚举对象模型层次结构中的一个或多个对象。 统一资源名称 (URN) 是一种特定类型的查询表达式字符串，用于唯一标识单个对象。  
@@ -111,7 +112,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
 ## <a name="remarks"></a>Remarks  
- 查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](https://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
+ 查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
   
  查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  
   
