@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519341"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135577"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,9 +87,9 @@ ms.locfileid: "52519341"
   
  **配置 IIS 以实现 Web 同步**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>创建 Web 园  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器支持每个线程处理两个并发同步操作。 超出此限制可能导致复制侦听器停止响应。 为 replisapi.dll 分配的线程数由应用程序池的 Maximum Worker Processes 属性来确定。 默认情况下，此属性设置为 1。  
@@ -136,7 +136,7 @@ ms.locfileid: "52519341"
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“ 代”度量的，代是指每个项目的变更集。 每个批次中代的数量是使用合并代理的 -DownloadGenerationsPerBatch 和 -UploadGenerationsPerBatch 参数指定的。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“ 代”度量的，代是指每个项目的变更集。 每个批次中代的数量是使用合并代理的 **DownloadGenerationsPerBatch** 和 **UploadGenerationsPerBatch** 参数指定的。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519341"
   
 -   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (Replisapi.dll) 的帐户也是要在同步期间连接到发布服务器和分发服务器的帐户。 此帐户必须映射到发布服务器和分发服务器上的 SQL 登录帐户。 有关详细信息，请参阅[配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)中的“设置 SQL Server 复制侦听器的权限”一节。  
   
--   可以使用 FTP 将快照从发布服务器传递到运行 IIS 的计算机。 快照始终使用 HTTPS 从运行 IIS 的计算机传递到订阅服务器。 有关详细信息，请参阅[通过 FTP 传输快照](../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+-   可以使用 FTP 将快照从发布服务器传递到运行 IIS 的计算机。 快照始终使用 HTTPS 从运行 IIS 的计算机传递到订阅服务器。 有关详细信息，请参阅[通过 FTP 传输快照](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 -   如果复制拓扑中的服务器位于防火墙之后，则需要在防火墙中打开端口以便启用 Web 同步。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52519341"
   
     -   运行 IIS 的计算机通常通过端口 1433 连接到发布服务器或分发服务器（默认实例）。 当发布服务器或分发服务器是某台服务器上的命名实例，且该服务器具有另一个默认实例时，则通常通过端口 1500 连接到命名实例。  
   
-    -   如果运行 IIS 的计算机与分发服务器被防火墙隔离开来，且快照传送使用的是 FTP 共享，则必须打开用于 FTP 的端口。 有关详细信息，请参阅[通过 FTP 传输快照](../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+    -   如果运行 IIS 的计算机与分发服务器被防火墙隔离开来，且快照传送使用的是 FTP 共享，则必须打开用于 FTP 的端口。 有关详细信息，请参阅[通过 FTP 传输快照](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 > [!IMPORTANT]  
 >  打开防火墙的端口可能会使服务器受到恶意攻击。 请确保在打开端口之前了解防火墙系统。 有关详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
