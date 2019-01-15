@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215646"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128362"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -272,7 +272,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 #### <a name="on-options"></a>ON 选项  
    这些选项指定创建该索引时所在的文件组。  
   
-*partition_scheme_name* **(** *column_name* **)**  
+*partition_scheme_name* **(** _column_name_ **)**  
    指定分区方案，该方案定义要将已分区索引的分区映射到的文件组。 必须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 使数据库中存在该分区方案。 
    *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。 column_name 不限于索引定义中的列。 在对列存储索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引列。  
    如果未指定 partition_scheme_name 或 filegroup 且该表已分区，则索引会与基础表使用相同分区依据列并被放入同一分区方案中。  

@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523066"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129007"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,36 +71,22 @@ ms.locfileid: "52523066"
 ## <a name="creating-publications"></a>创建发布  
  若要创建发布，请提供下列信息：  
   
--   分发服务器。  
-  
--   快照文件的位置。  
-  
--   发布数据库。  
-  
--   要创建的发布的类型（快照发布、事务发布、具有可更新订阅的事务发布或合并发布）。  
-  
--   包含在发布中的数据和数据库对象（项目）。  
-  
--   用于所有发布类型的静态行筛选器和列筛选器，以及用于合并发布的参数化行筛选器和联接筛选器。  
-  
--   快照代理计划。  
-  
--   运行下列代理时使用的帐户：所有发布的快照代理；所有事务发布的日志读取器代理；允许更新订阅的事务发布的队列读取器代理。  
-  
+-   分发服务器。    
+-   快照文件的位置。    
+-   发布数据库。    
+-   要创建的发布的类型（快照发布、事务发布、具有可更新订阅的事务发布或合并发布）。    
+-   包含在发布中的数据和数据库对象（项目）。   
+-   用于所有发布类型的静态行筛选器和列筛选器，以及用于合并发布的参数化行筛选器和联接筛选器。   
+-   快照代理计划。    
+-   运行下列代理时使用的帐户：所有发布的快照代理；所有事务发布的日志读取器代理；允许更新订阅的事务发布的队列读取器代理。    
 -   发布的名称和说明。  
   
- 有关如何使用发布的信息，请参阅下列主题：  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [定义项目](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [删除发布](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ 有关如何使用发布的信息，请参阅下列主题：    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [定义项目](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [删除发布](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [删除项目](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523066"
 ## <a name="publishing-tables"></a>发布表  
  最经常发布的对象就是表。 下列链接提供其他与发布表有关的区域的信息：  
   
--   [筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  为复制发布表时，可以指定应将哪些架构对象复制到订阅服务器。例如，已声明的引用完整性（主键约束、引用约束和唯一约束）、索引、用户 DML 触发器（不能复制的 DDL 触发器）、扩展属性和排序规则。 仅在发布服务器和订阅服务器之间的初始同步中复制扩展属性。 如果在初始同步之后添加或修改扩展属性，则不会复制该更改。  
@@ -199,7 +182,7 @@ ms.locfileid: "52523066"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 可通过**项目属性 - \<**_项目_**>** 对话框和以下存储过程更改对象所有者：**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>将数据发布到运行 SQL Server 早期版本的订阅服务器  
   
@@ -220,7 +203,7 @@ ms.locfileid: "52523066"
   
 -   如果在多个支持排队更新订阅的事务发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |“属性”|sp_addarticle 中的参数|  
+    |属性|sp_addarticle 中的参数|  
     |--------------|---------------------------------|  
     |标识范围管理|**@auto_identity_range** （已弃用）和 **@identityrangemangementoption**|  
     |发布服务器标识范围|**@pub_identity_range**|  
@@ -231,7 +214,7 @@ ms.locfileid: "52523066"
   
 -   如果在多个合并发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |“属性”|sp_addmergearticle 中的参数|  
+    |属性|sp_addmergearticle 中的参数|  
     |--------------|--------------------------------------|  
     |列跟踪|**@column_tracking**|  
     |架构选项|**@schema_option**|  

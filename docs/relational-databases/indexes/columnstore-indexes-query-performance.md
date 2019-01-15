@@ -1,7 +1,7 @@
 ---
 title: 列存储索引 - 查询性能 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637135"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255272"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   有助于实现列存储索引旨在提供的快速查询性能的建议。    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>字符串谓词下推    
-在设计数据仓库架构时，建议的架构建模是使用星型架构或雪花型架构，其中包括一个或多个事实数据表和多个维度表。 [事实数据表](https://en.wikipedia.org/wiki/Fact_table) 存储业务度量值或事务，而 [维度表](https://en.wikipedia.org/wiki/Dimension_table) 存储分析事实数据需要跨越的维度。    
+在设计数据仓库架构时，建议的架构建模是使用星型架构或雪花型架构，其中包括一个或多个事实数据表和多个维度表。 [事实数据表](https://wikipedia.org/wiki/Fact_table) 存储业务度量值或事务，而 [维度表](https://wikipedia.org/wiki/Dimension_table) 存储分析事实数据需要跨越的维度。    
     
 例如，事实可以是一条表示某一特定区域中某一特定产品的销售额的记录，而维度则表示一组区域、产品等。 事实数据表和维度表通过主键/外键关系进行连接。 最常用的分析查询将一个或多个维度表与事实数据表进行联接。    
     
-让我们设想一个维度表 `Products`。 典型的主键是通常用字符串数据类型表示的 `ProductCode`。 为提高查询性能，最佳做法是创建代理键（通常为整数列），从事实数据表引用维度表中的行。    
+让我们设想一个维度表 `Products`。 典型的主键是通常用字符串数据类型表示的 `ProductCode`。 为提高查询性能，最佳做法是创建代理键（通常为整数列），从事实数据表引用维度表中的行。    
     
 列存储索引非常高效地运行具有联接/涉及数值的谓词或基于整数的键的分析查询。 但是，在很多客户工作负荷中，我们发现使用基于字符串的列链接事实/维度表，结果是使用列存储索引的查询性能并不如预期。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通过将包含字符串列的谓词下推到 SCAN 节点，使用基于字符串的列显著提高了分析的性能。    
     
@@ -161,7 +162,7 @@ FROM FactResellerSalesXL_CCI
 ## <a name="see-also"></a>另请参阅    
  [列存储索引设计指南](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [列存储索引数据加载指南](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
- [开始使用列存储适进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
+ [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [针对数据仓库的列存储索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
  [列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   

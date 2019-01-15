@@ -13,12 +13,12 @@ ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7d0dfc6a391c049c8050d4289bbf67b8d97e84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02c2ccc27445c12f65508e0d3a28f0fead14a02b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661185"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133047"
 ---
 # <a name="mssqleng020575"></a>MSSQL_ENG020575
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47661185"
 |消息正文|订阅服务器“%s”对发布“%s”中项目“%s”的订阅已通过数据验证。|  
   
 ## <a name="explanation"></a>解释  
- 根据发布服务器上的数据对订阅服务器上的数据进行验证，并且数据匹配；因此验证通过。 有关验证的详细信息，请参阅 [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)。  
+ 根据发布服务器上的数据对订阅服务器上的数据进行验证，并且数据匹配；因此验证通过。 有关验证的详细信息，请参阅 [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)  

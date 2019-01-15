@@ -19,15 +19,15 @@ ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 6b66adec9b814a08b6174cc454a5f68220ba9656
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 02469a92e530521a32fab9cf126acd51c859312a
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349687"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143187"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>使用计划指南指定查询参数化行为
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   当 PARAMETERIZATION 数据库选项设置为 SIMPLE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器可以选择参数化查询。 这意味着查询中包含的任何文字值都用参数来替换。 此过程称为简单参数化。 SIMPLE 参数化生效后，将无法控制参数化哪些查询，不参数化哪些查询。 不过，您可以通过将 PARAMETERIZATION 数据库选项设置为 FORCED 来指定参数化数据库中的所有查询。 此过程称为强制参数化。  
   
  可以通过下列方式使用计划指南来覆盖数据库的参数化行为：  

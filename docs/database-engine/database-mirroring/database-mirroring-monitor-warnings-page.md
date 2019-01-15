@@ -13,12 +13,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 635fe088e51c17e1367eaaeab7e528e2f12e5dd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5324e48c091f7bc4f999795f28f19f943217f7d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529681"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126127"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52529681"
 |**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|指定在主体服务器实例上生成警告之前，发送队列中可以累积的事务的分钟数。 该警告有助于测量数据丢失的可能性（以时间计），并且特别适用于高性能模式。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|  
 |**如果镜像提交开销超过了阈值则发出警告**|指定在主体服务器上生成警告之前，每个事务可允许的平均延迟的毫秒数。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。 该值只适用于高安全模式。|  
   
- **“** *<server_instance>* **”的阈值**  
+ **“** _<server_instance>_ **”的阈值**  
  针对每个警告，显示一个服务器实例的当前的用户指定阈值（如果存在）。 该服务器实例的完整实例名在对应的列标题中指定。  
   
  有关详细信息，请参阅本主题后面的“备注”。  
@@ -50,7 +50,7 @@ ms.locfileid: "52529681"
  有关详细信息，请参阅本主题后面的“备注”。  
   
 ## <a name="remarks"></a>Remarks  
- 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”**。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示“等待数据...”。  
+ 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则在每个单元格中，网格都将根据实例是默认实例还是命名实例来显示“未连接到 _<SYSTEM_NAME>_”或“未连接到 _<SYSTEM_NAME>_**\\**_<instance_name>_”。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示“等待数据...”。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”。  
   

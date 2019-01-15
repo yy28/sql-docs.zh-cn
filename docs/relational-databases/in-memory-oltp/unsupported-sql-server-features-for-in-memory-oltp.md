@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391540"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254953"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>内存中 OLTP 不支持的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52391540"
 |“数据库”|Allowed|描述|  
 |---------------|-------------|-----------------|  
 | 用户数据库、模型和 msdb。 | 否 | 多数情况下，不支持跨数据库查询和事务。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外。 此时，master 数据库可进行只读访问。 |
-| 资源数据库和 tempdb | 用户帐户控制 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制。
+| 资源数据库和 tempdb | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制。
 
 
 ## <a name="scenarios-not-supported"></a>不支持的方案  

@@ -15,12 +15,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0bcb10caa86474eafab14cb8347e9e28885a137
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 225ee4520fc69a5beb711d750527cab4807e17ca
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815935"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126777"
 ---
 # <a name="replication-developer-documentation"></a>复制开发人员文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,5 @@ ms.locfileid: "47815935"
  [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  介绍如何使用复制代理可执行文件。  
   
- [开发人员指南：操作指南主题（复制）](../../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)  
- 提供与复制相关的操作指南主题的列表。  
   
   

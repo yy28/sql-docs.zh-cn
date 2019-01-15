@@ -13,12 +13,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f772f42cc4afd6d187f4d53b0077f4417009f180
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59271c303494cf4e1e3dbb52be204c76ce767271
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129047"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>刷新复制监视器中的数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47855925"
 2.  在“订阅 \<SubscriptionName>”详细信息窗口中，单击“操作”，然后单击“自动刷新”。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
   
 ## <a name="see-also"></a>另请参阅  
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d48c5860c097b8d027c23ead603094f9637d8368
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 271dd589a4bab4d6d7117eeb62d36dfcc32bf6a2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128647"
 ---
 # <a name="add-publisher"></a>添加发布服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "52513925"
  **“添加”**  
  单击可选择要添加的发布服务器的类型，单击后将启动 **“连接到服务器”** 对话框。 相应的选项包括：  
   
--   “添加 SQL Server 发布服务器...”  
+-   **添加 SQL Server 发布服务器...**  
   
      使用 **“连接到服务器”** 对话框连接到发布服务器。  
   
--   “添加 Oracle 发布服务器...”  
+-   **添加 Oracle 发布服务器...**  
   
      使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
--   “指定分发服务器并添加其发布服务器...”  
+-   **指定分发服务器并添加其发布服务器...**  
   
      使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “连接到服务器” **对话框连接到与一个或多个发布服务器关联的** 分发服务器。  
   
@@ -70,6 +70,6 @@ ms.locfileid: "52513925"
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
