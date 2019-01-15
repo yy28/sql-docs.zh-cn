@@ -8,13 +8,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-manager: kenvh
-ms.openlocfilehash: 98f49213afaaac17ea41a366bf4888043cc61045
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: craigg
+ms.openlocfilehash: 8862c6333673ddf69314f4a64c11c8b044484b69
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529436"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069793"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL server 驱动程序历史记录
 
@@ -80,21 +80,21 @@ Microsoft/Windows 数据访问组件 (MDAC/WDAC) 都附带有和支持的 Window
 
 MDAC/WDAC 包含以下组件：
 
-* **ODBC:** Microsoft 开放式数据库连接 (ODBC) 接口是一个 C 编程语言界面，使应用程序从各种数据库管理系统 (DBMS) 访问数据。 使用此 API 的应用程序被限制为访问仅关系数据源。
-* **OLE DB:** OLE DB 是一组用于访问各种数据存储中的数据的 COM 接口。 OLE DB 访问接口存在访问数据库、 文件系统、 消息存储中，目录服务、 工作流和文档存储中的数据。
-* **ADO:** ActiveX 数据对象 (ADO) 提供高级的编程模型。 虽然有点不太高性能比直接编码到 OLE DB 或 ODBC ADO 非常简单易用。 可以从 Microsoft Visual Basic Scripting Edition (VBScript) 或 Microsoft JScript 等脚本语言，使用它。
-* **ADOMD:** ADO 多维 (ADOMD) 是与多维数据提供程序，如 Microsoft OLAP 访问接口，也称为 Microsoft Analysis Services 提供程序一起使用。 自 MDAC 2.0 以来，没有主要的增强功能，具有对它进行。
+* **ODBC**Microsoft 开放式数据库连接 (ODBC) 接口是一个 C 编程语言界面，使应用程序从各种数据库管理系统 (DBMS) 访问数据。 使用此 API 的应用程序被限制为访问仅关系数据源。
+* **OLE DB**OLE DB 是一组用于访问各种数据存储中的数据的 COM 接口。 OLE DB 访问接口存在访问数据库、 文件系统、 消息存储中，目录服务、 工作流和文档存储中的数据。
+* **ADO**ActiveX 数据对象 (ADO) 提供高级的编程模型。 虽然有点不太高性能比直接编码到 OLE DB 或 ODBC ADO 非常简单易用。 可以从 Microsoft Visual Basic Scripting Edition (VBScript) 或 Microsoft JScript 等脚本语言，使用它。
+* **ADOMD:**.ADO 多维 (ADOMD) 是与多维数据提供程序，如 Microsoft OLAP 访问接口，也称为 Microsoft Analysis Services 提供程序一起使用。 自 MDAC 2.0 以来，没有主要的增强功能，具有对它进行。
 * **ADOX:** DDL 和安全 (ADOX) 的 ADO 扩展来创建和修改数据库、 表、 索引或存储的过程的定义。 ADOX 可使用任何提供程序。 Microsoft Jet OLE DB 访问接口提供对 ADOX，完全支持，而 Microsoft SQL Server OLE DB 访问接口提供有限的支持。
-* **Microsoft SQL Server 网络库：** SQL 服务器的网络库允许 SQLOLEDB 和 SQLODBC 与 SQL Server 数据库进行通信。 已弃用以下 SQL Server 网络库在 MDAC/WDAC 版本： Banyan Vines、 AppleTalk、 ServerNet、 IPX/SPX、 Giganet 和 RPC。 TCP/IP 和 Named Pipes 将继续支持和 64 位 Windows 操作系统上可用。
-* **MSDASQL:** Microsoft OLE DB Provider for ODBC (MSDASQL) 允许在 OLE DB 和 ADO （它在内部使用 OLEDB） 通过 ODBC 驱动程序访问数据源生成的应用程序。 MSDASQL 是 OLEDB 访问接口连接到 ODBC，而不是数据库。 它旨在好似一架桥从 OLE DB 的 ODBC 驱动程序时没有直接的 OLE DB 提供程序存在的数据源。 MSDASQL 附带 Windows 操作系统和 Windows Server 2008 和 Vista SP1 是第一个 Windows 版本包括 64 位版本的技术。
+* **Microsoft SQL Server 网络库：** SQL Server 网络库允许 SQLOLEDB 和 SQLODBC 与 SQL Server 数据库进行通信。 已弃用以下 SQL Server 网络库在 MDAC/WDAC 版本：Banyan Vines、 AppleTalk、 ServerNet、 IPX/SPX、 Giganet 和 RPC。 TCP/IP 和 Named Pipes 将继续支持和 64 位 Windows 操作系统上可用。
+* **MSDASQL:** Microsoft OLE DB Provider for ODBC (MSDASQL) 允许应用程序访问数据源的 ODBC 驱动程序通过 OLE DB 和 ADO （它在内部使用 OLEDB） 上构建的。 MSDASQL 是 OLEDB 访问接口连接到 ODBC，而不是数据库。 它旨在好似一架桥从 OLE DB 的 ODBC 驱动程序时没有直接的 OLE DB 提供程序存在的数据源。 MSDASQL 附带 Windows 操作系统和 Windows Server 2008 和 Vista SP1 是第一个 Windows 版本包括 64 位版本的技术。
 
 ### <a name="deprecated-mdacwdac-components"></a>不推荐使用的 MDAC/WDAC 组件
 
 这些组件在当前版本的 MDAC/WDAC 中仍受支持，但它们可能在将来的版本中删除。 当开发新应用程序，Microsoft 建议您不要使用这些组件。 此外，在升级或修改现有应用程序，则删除这些组件的任何依赖。
 
-* **SQLOLEDB:** Microsoft OLE DB Provider for SQL Server (SQLOLEDB)，它支持对 Microsoft SQL Server 的访问，已弃用。 其连接到 SQL Server 的未来版本可能不支持。 在 Windows 7 后，将从操作系统删除连接到版本早于 SQL Server 7 的功能。 新的应用程序应使用 Microsoft OLE DB 驱动程序的 SQL Server (MSOLEDBSQL)，它支持新的 SQL Server 功能。 现有的应用程序应该迁移到 Microsoft OLE DB 驱动程序适用于 SQL Server 也以提高性能、 可靠性和可支持性。 有关详细信息，请参阅[更新到 OLE DB 驱动程序的应用程序适用于 SQL Server 从 MDAC](oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。
+* **SQLOLEDB:** Microsoft OLE DB Provider for SQL Server (SQLOLEDB)，它支持对 Microsoft SQL Server 的访问，已被弃用。 其连接到 SQL Server 的未来版本可能不支持。 在 Windows 7 后，将从操作系统删除连接到版本早于 SQL Server 7 的功能。 新的应用程序应使用 Microsoft OLE DB 驱动程序的 SQL Server (MSOLEDBSQL)，它支持新的 SQL Server 功能。 现有的应用程序应该迁移到 Microsoft OLE DB 驱动程序适用于 SQL Server 也以提高性能、 可靠性和可支持性。 有关详细信息，请参阅[更新到 OLE DB 驱动程序的应用程序适用于 SQL Server 从 MDAC](oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。
 * **SQLODBC:** Microsoft SQL Server ODBC 驱动程序 (SQLODBC)，它支持对 Microsoft SQL Server 的访问，已被弃用。 其连接到 SQL Server 的未来版本可能不支持。 在 Windows 7 后，将从操作系统删除连接到版本早于 SQL Server 7 的功能。 新的应用程序应使用 Windows，支持新的 SQL Server 功能上的 SQL Server 的 Microsoft ODBC 驱动程序。 现有的应用程序应该迁移到 Microsoft ODBC Driver for SQL Server 也以提高性能、 可靠性和可支持性。 有关相关信息，请参阅[更新到 SQL Server Native Client 应用程序从 MDAC](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。
-* **Microsoft Jet 数据库引擎 4.0:** 从 2.6 版开始，MDAC 不再包含 Jet 组件。 换而言之，MDAC 2.6，2.7、 2.8 不包含 Microsoft Jet、 Microsoft Jet OLE DB 访问接口或 ODBC 桌面数据库驱动程序，Jet 数据访问对象 (DAO)。 Microsoft Jet 数据库引擎 4.0 组件输入功能不推荐使用的状态和持续的工程设计，并成为 Windows 2000 中的 Microsoft Windows 的一部分以来未收到的增强功能级别。
+* **Microsoft Jet 数据库引擎 4.0:** MDAC 2.6 版从开始，不再包含 Jet 组件。 换而言之，MDAC 2.6，2.7、 2.8 不包含 Microsoft Jet、 Microsoft Jet OLE DB 访问接口或 ODBC 桌面数据库驱动程序，Jet 数据访问对象 (DAO)。 
 
   没有可用的 64 位版本的 Jet 数据库引擎、 Jet OLEDB 驱动程序、 Jet ODBC 驱动程序或 Jet DAO。 有关详细信息，请参阅[知识库文章 957570](https://support.microsoft.com/kb/957570)。 在 64 位版本的 Windows，32 位 Jet Windows WOW64 子系统下运行。 WOW64 的详细信息，请参阅[MSDN WOW64 文档](/windows/desktop/WinProg64/wow64-implementation-details)。 本机 64 位应用程序无法在 WOW64 中运行的 32 位 Jet 驱动程序与通信。
 
@@ -106,15 +106,15 @@ MDAC/WDAC 包含以下组件：
   > [!NOTE]
   > SQL Server 应用程序还可以访问 2007 Office System 和更早版本，文件从 SQL Server 异类数据连接和集成服务功能，通过 2007 Office 系统驱动程序。 此外，64 位 SQL Server 应用程序可以访问 32 位 Jet 和 2007 Office System 文件在 64 位 Windows 上使用 32 位 SQL Server Integration Services (SSIS)。
 
-* **MSDADS:** 使用 Microsoft OLE DB 访问接口的数据整理 (MSDADS)，可以创建密钥、 字段或行集之间的层次结构关系应用程序中。 自 MDAC 2.1 不进行了任何主要功能的增强功能。 已弃用此提供程序。 Microsoft 建议你使用 XML，而不是 MSDADS。
+* **MSDADS:** 使用 Microsoft OLE DB 提供程序的数据整理 (MSDADS)，可以在应用程序中创建密钥、 字段或行集之间的层次结构关系。 自 MDAC 2.1 不进行了任何主要功能的增强功能。 已弃用此提供程序。 Microsoft 建议你使用 XML，而不是 MSDADS。
 * **Oracle ODBC 和 Oracle OLE DB:** Microsoft Oracle ODBC 驱动程序 (Oracle ODBC) 和 Microsoft OLE DB Provider for Oracle (Oracle OLE DB) 提供对 Oracle 数据库服务器的访问。 它们使用 Oracle 调用接口 (OCI) 版本 7 生成的并提供对 Oracle 7 的完全支持。 此外，它使用 Oracle 7 仿真对于 Oracle 8 数据库提供有限的支持。 Oracle 不再支持使用 OCI 版本 7 调用的应用程序。 不推荐使用这些技术。 如果使用 Oracle 数据源，则应迁移到 Oracle 提供的驱动程序和提供程序。
 * **RDS:** 远程数据服务 (RDS) 是用于在 Internet 或 Intranet 访问远程 ADO 记录集对象的专有 Microsoft 机制。 RDS 是不推荐使用;已自 MDAC 2.1 到 RDS 没有主要功能的增强功能。 Microsoft 发布了.NET Framework 中，具有广泛的 SOAP 功能并将 RDS 组件。 在 Windows 7 后，将从操作系统删除所有 RDS 服务器组件。
 * **JRO:** Jet 复制对象 (JRO) 已弃用。 中与 Jet 的 ADO 使用 JRO (*.mdb) 数据库来创建和压缩 Jet 数据库 (.mdb) 以及执行 Jet 复制管理。MDAC 2.7 将其上一版本。JRO 不能在 64 位 Windows 操作系统上。Microsoft Access 2007 文件格式中不支持 JRO (*.accdb)。
 * **16 位 ODBC 支持：** 如果使用的 16 位应用程序，则应迁移到 32 位应用程序。 16 位功能已弃用，并且正在从 64 位操作系统中删除。 有关详细信息，请参阅[知识库文章 896458](https://support.microsoft.com/kb/896458)。
 * **OLEDB 简单的提供程序 (MSDAOSP):** OLEDB 简单的提供程序提供了一个框架，用于快速构建简单的数据通过 OLE DB 访问接口。 MSDAOSP 已弃用。
-* **ODBC 游标库：** ODBC 游标库 (ODBCCR32.dll) 提供了有限的客户端的数据游标。 已不推荐使用 ODBC 游标库;你的应用程序可以使用服务器端游标实现来替换。
-* **OLE DB 进程外接口远程处理：** OLEDB 接口远程处理 (msdaps.dll) 已尝试允许 OLE DB 提供程序以进程外运行。 OLEDB 进程外接口远程处理不推荐使用。
-* **AppleTalk 和 Banyan Vines SQL 网络库：** Banyan Vines、 AppleTalk、 ServerNet、 IPX/SPX、 Giganet 和 RPC SQL 网络库不推荐使用。 如果使用任何一种技术，则应修改应用程序以使用其中一个其他网络库，如 TCP/IP 和命名管道。
+* **ODBC 游标库**ODBC 游标库 (ODBCCR32.dll) 提供了有限的客户端的数据游标。 已不推荐使用 ODBC 游标库;你的应用程序可以使用服务器端游标实现来替换。
+* **OLE DB 接口的进程外远程处理：** OLEDB 接口远程处理 (msdaps.dll) 已尝试允许 OLE DB 提供程序以进程外运行。 OLEDB 进程外接口远程处理不推荐使用。
+* **AppleTalk 和 Banyan Vines SQL 网络库：** 不推荐使用 Banyan Vines、 AppleTalk、 ServerNet、 IPX/SPX、 Giganet 和 RPC SQL 网络库。 如果使用任何一种技术，则应修改应用程序以使用其中一个其他网络库，如 TCP/IP 和命名管道。
 
 ### <a name="mdacwdac-releases"></a>MDAC/WDAC 版本
 
@@ -129,7 +129,7 @@ MDAC/WDAC 包含以下组件：
   * MDAC 2.8 的 32 位版本也已发布到 MDAC Web 站点已发布给客户的 Windows Server 2003 时。
   * MDAC 2.8 的 64 位版本使用 64 位版本的 Windows Server 2003 和 Windows XP 发布。
 
-* **Windows 数据访问组件 (WDAC):** MDAC 已更名为 WDAC-"Windows 数据访问组件"从 Windows Vista 和 Windows Server 2008 开始。 WDAC 是作为操作系统的一部分，并不是可单独用于再分发。 WDAC 的可维护性均受操作系统的生命周期。
+* **Windows 数据访问组件**MDAC 其名称更改为 WDAC-"Windows 数据访问组件"从 Windows Vista 和 Windows Server 2008 开始。 WDAC 是作为操作系统的一部分，并不是可单独用于再分发。 WDAC 的可维护性均受操作系统的生命周期。
 
   分别使用 32 位和 64 位版本的 Windows 操作系统，发布的 WDAC 的 32 位和 64 位版本。
 
@@ -139,7 +139,11 @@ MDAC/WDAC 包含以下组件：
 
 以下组件被视为已过时：
 
-* **Db-library:** DB 库是一个特定于 SQL Server 的编程模型，其中包含 C Api。 SQL Server 6.5 以来已有的 Db-library 没有功能的增强功能。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
-* **(E SQL) 的嵌入式 SQL:** E SQL 是特定于 SQL Server 的编程模型，在 Visual C 代码中嵌入的 TRANSACT-SQL 语句。 无需增强功能具有已对 SQL Server 6.5 E SQL。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
+* **DB-Library:** DB 库是特定于 SQL Server 的编程模型，其中包含 C Api。 SQL Server 6.5 以来已有的 Db-library 没有功能的增强功能。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
+* **(E SQL) 的嵌入式的 SQL:** E SQL 是特定于 SQL Server 的编程模型，在 Visual C 代码中嵌入的 TRANSACT-SQL 语句。 无需增强功能具有已对 SQL Server 6.5 E SQL。 它的最终版本与 SQL Server 2000，将不能移植到 64 位 Windows 操作系统。
 * **数据访问对象 (DAO):** DAO 提供对 JET （访问） 数据库的访问。 此 API 可用于从 Microsoft Visual Basic、 Microsoft Visual c + + 和脚本语言。 它已包含在 Microsoft Office 2000 和 Office XP。 DAO 3.6 是这项技术的最终版本。 它不会在 64 位 Windows 操作系统上可用。
 * **远程数据对象 (RDO):** RDO 设计为专门用于访问远程 ODBC 关系数据源，并更轻松地使用 ODBC，而无需复杂的应用程序代码。 它是随 Microsoft Visual Basic 版本 4、 5 和 6。 RDO 2.0 版是这项技术的最终版本。
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
