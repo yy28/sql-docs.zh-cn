@@ -1,7 +1,7 @@
 ---
 title: SQL Server 次要副本到主要副本读/写连接重定向 - Always On 可用性组 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600522"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206303"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 引入了 Always On 可用性组的次要副本到主要副本读/写连接重定向。 读/写连接重定向适用于任何操作系统平台。 它允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 
@@ -53,8 +54,8 @@ ms.locfileid: "51600522"
 
 在 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 中，`READ_WRITE_ROUTING_URL` 已添加到 `<add_replica_option>` 规范。 请参阅下列主题： 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) 未设置（默认值） 
@@ -156,7 +157,8 @@ GO
 
 如果连接字符串中指定的 SQL Server 实例不可用（发生中断），则无论目标服务器上的副本扮演何种角色，连接都将失败。 若要避免长时间的应用程序故障时间，请在连接字符串中配置备用 `FailoverPartner`。 应用程序必须实现重试逻辑，以适应在实际故障转移期间未联机的主要副本和次要副本。 有关连接字符串的信息，请参阅 [SqlConnection.ConnectionString 属性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)。
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

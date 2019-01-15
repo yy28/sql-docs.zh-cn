@@ -5,7 +5,7 @@ ms.date: 11/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672626"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299704"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672626"
  [配置分发](../../../relational-databases/replication/configure-distribution.md)  
  本节中的主题介绍如何使用 RMO 配置发布和分发。  
   
- [创建、修改和删除发布和项目（复制）](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  本节中的主题介绍如何使用 RMO 创建、删除和修改发布和项目。  
   
  [订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)  
  本节中的主题介绍如何使用 RMO 创建、删除和修改订阅。  
   
- [保护复制拓扑](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [保护复制拓扑](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  本节中的主题介绍如何使用 RMO 查看和修改安全设置。  
   
- [同步订阅（复制）](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [同步订阅（复制）](../../../relational-databases/replication/synchronize-data.md)  
  本节中的主题介绍如何同步订阅。  
   
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  本节中的主题介绍如何以编程方式监视复制拓扑。  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO 编程简介  

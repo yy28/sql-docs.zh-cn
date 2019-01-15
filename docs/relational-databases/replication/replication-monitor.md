@@ -15,12 +15,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799465"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124597"
 ---
 # <a name="replication-monitor"></a>复制监视器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,6 @@ ms.locfileid: "47799465"
 -   [分发服务器设置](../../relational-databases/replication/distributor-settings.md)  
   
 -   [分发服务器信息 - 发布](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [分发服务器信息，订阅监视列表（事务发布，SQL Server 2005 和更高版本）](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [分发服务器信息，订阅监视列表（合并发布，SQL Server 2005 和更高版本）](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [分发服务器信息，订阅监视列表（快照发布，SQL Server 2005 和更高版本）](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [分发服务器信息 - 代理](../../relational-databases/replication/distributor-information-agents.md)  
   
 -   [发布服务器设置](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799465"
   
 -   [发布信息 - 代理（事务发布）](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [发布信息 - 代理（合并发布）](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [发布信息 - 代理（合并发布）](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [发布信息 - 代理（快照发布）](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [发布信息 - 跟踪令牌（事务发布，SQL Server 2005 和更高版本）](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -81,8 +72,6 @@ ms.locfileid: "47799465"
 -   [订阅 - 分发服务器到订阅服务器的历史记录（事务订阅）](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [订阅 - 同步历史记录（合并订阅，SQL Server 2005 和更高版本）](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [订阅 - 同步历史记录（合并订阅，SQL Server 2000）](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [订阅 - 分发服务器到订阅服务器的历史记录（快照订阅）](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -98,7 +87,6 @@ ms.locfileid: "47799465"
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [属性参考（复制）](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

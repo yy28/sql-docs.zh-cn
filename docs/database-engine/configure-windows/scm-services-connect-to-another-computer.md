@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072140"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135767"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服务 - 连接到其他计算机
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49072140"
   
 8.  在“添加/删除管理单元”  窗口中，单击“确定” 。  
   
-9. 依次展开“计算机管理（\<计算机名称>）”**** 和“服务和应用程序”。  
+9. 依次展开“计算机管理（\<计算机名称>）”和“服务和应用程序”。  
   
 10. 右键单击“SQL Server 配置管理器” ，再单击“从此处新建窗口” 。  
   

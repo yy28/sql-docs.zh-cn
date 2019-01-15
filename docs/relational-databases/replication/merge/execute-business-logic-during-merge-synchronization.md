@@ -18,12 +18,12 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 083a4ccb00c834fba4f250aa1a2063b76ad9bd86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f8e1433d9157aed6a933d5117417be1a4fcc1c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407624"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133739"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合并同步期间执行业务逻辑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407624"
   
 -   应用程序编程接口 (API) 引用： <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   有关如何实现业务逻辑处理程序的说明：[实现合并项目的业务逻辑处理程序](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   有关如何实现业务逻辑处理程序的说明：[为合并项目实现业务逻辑处理程序](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>业务逻辑处理程序用途  
  合并同步进程可以调用业务逻辑处理程序来执行：  

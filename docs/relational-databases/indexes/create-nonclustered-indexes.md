@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73ff25f7de2ce3dcaffa962025ef8d93e535e75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e0431b913366b4e4ccb34bea7a00f0cf003a82e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527062"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134427"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "52527062"
   
 8.  单击 **“关闭”**。  
   
-9. 在“文件”菜单上，单击“保存table_name”。  
+9. 在“文件”菜单上，单击“保存”以保存 _table_name_。  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>使用对象资源管理器创建非聚集索引  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52527062"
   
 6.  在“索引键列”下，单击“添加…”。  
   
-7.  在“从table_name中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
+7.  在“从 table_name 中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   

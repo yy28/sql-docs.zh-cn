@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7af5deae7c09461f2c0fa057aeb3271daf2737a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b6b7ba063a25df92335b5727c7c29fcb69a7221
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824997"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241558"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 语句 - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -90,7 +90,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|写入标签的备份软件名称。|  
 |**SoftwareVendorId**|**int**|写入备份的软件供应商的唯一供应商标识号。|  
 |**MediaDate**|**datetime**|标签的写入日期和时间。|  
-|**Mirror_Count**|**int**|介质集中的镜像服务器数 (1-4)。<br /><br /> 注意：在媒体集中为不同镜像服务器写入的标签是相同的。|  
+|**Mirror_Count**|**int**|介质集中的镜像服务器数 (1-4)。<br /><br /> 注意：在介质集中为不同镜像服务器写入的标签是相同的。|  
 |**IsCompressed**|**bit**|备份是否已压缩：<br /><br /> 0 = 未压缩<br /><br /> 1 = 已压缩|  
   
 > [!NOTE]  

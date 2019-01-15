@@ -10,15 +10,15 @@ ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: b59552181d7137cfbcccb00b8b9fd0473402acc1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: eea7817f088215be0a370873824cfaa5467f3cc4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327937"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143617"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>将查询提示附加到计划指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   计划指南中可以使用有效查询提示的任何组合。 当计划指南与某一查询匹配时，计划指南提示子句中指定的 OPTION 子句将先添加到该查询中，然后该查询才会进行编译和优化。 如果与计划指南匹配的查询已包含 OPTION 子句，则计划指南中指定的查询提示将替换查询中已存在的查询提示。 但是，对于要与已包含 OPTION 子句的查询匹配的计划指南，在 sp_create_plan_guide 语句中指定要匹配的查询文本时，必须包含查询的 OPTION 子句。 若要将计划指南中指定的提示添加到查询中已存在的提示，而不是替换已存在的提示，则必须在计划指南的 OPTION 子句中同时指定原始提示和附加提示。  
   
 > [!CAUTION]  

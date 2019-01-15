@@ -14,12 +14,12 @@ ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a6d8354fcb7b2e53f37cc66736a188a7d9f21d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e02c3ba6176e6f35bbcc8ba59f6d5fb97a4adacb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706705"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135458"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 复制冲突查看器和交互式冲突解决程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "47706705"
  [查看事务发布的数据冲突 (SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [对等复制中的冲突检测](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [排队更新冲突的检测和解决](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
- [属性参考（复制）](../../relational-databases/replication/properties-reference-replication.md)  
+ [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
   
   

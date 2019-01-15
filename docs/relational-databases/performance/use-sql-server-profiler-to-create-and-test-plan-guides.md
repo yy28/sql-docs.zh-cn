@@ -22,15 +22,15 @@ ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3303a71ab9075cc69c778943fa6171dc36ef0ee8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bc1fb5a5d5c397c8d7eb1a3d784394b46ca5a6fe
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372769"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143427"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 创建和测试计划指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在创建计划指南时，可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来捕获完全匹配的查询文本，以供 *sp_create_plan_guide* 存储过程的 **statement_text** 参数使用。 这有助于确保计划指南在编译时与查询匹配。 创建计划指南后，还可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来测试计划指南是否确实与查询匹配。 通常，应使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来验证查询是否与计划指南匹配，从而测试计划指南。  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 捕获查询文本  

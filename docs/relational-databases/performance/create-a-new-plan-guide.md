@@ -15,15 +15,15 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: fdad0764a1ada0bd4e9ae4c3c605bb1afd6515ed
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328697"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143517"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，需要指定要优化的语句以及包含要使用的查询提示的 OPTION 子句。 或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
 
 计划指南将固定查询计划和/或查询提示应用于查询。

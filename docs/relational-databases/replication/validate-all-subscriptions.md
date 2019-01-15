@@ -15,12 +15,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09f60a9bb0a550dd91a2006be408bb25d2df42a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 849bd9e2d6c76f58e38b8f854d31686cef0ccfec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686817"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134887"
 ---
 # <a name="validate-all-subscriptions"></a>验证所有订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47686817"
  除了可在发布服务器和订阅服务器上对行进行计数之外，还可使用二进制校验和算法来计算所有数据的校验和。 如果行计数失败，则不计算校验和。 此选项对 [!INCLUDE[ssEW](../../includes/ssew-md.md)]无效。  
   
 ## <a name="see-also"></a>另请参阅  
- [验证已复制的数据](../../relational-databases/replication/validate-replicated-data.md)  
+ [验证已复制的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

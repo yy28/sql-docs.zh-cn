@@ -10,15 +10,15 @@ ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 53d7789b1122bd098655546c0e3b1987cb6a364d
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 6dd1148be3e8b01bb8db9150106903c862207c57
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306134"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143037"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>将现有查询计划应用到计划指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以将现有查询计划应用到 OBJECT 或 SQL 类型的计划指南。 当您注意到对于特定查询现有的执行计划比优化器选择的计划执行得更好时，应用现有查询计划的计划指南将非常有用。  
   
  下面的示例为简单的临时 SQL 语句创建一个计划指南。 在计划指南中，直接在 `@hints` 参数中为查询指定 XML 显示计划，从而为该语句提供了所需的查询计划。 该示例首先通过执行 SQL 语句在计划缓存中生成一个计划。 对于此示例，假定所生成的计划就是所需的计划，不需要做进一步的查询优化。 此查询的 XML 显示计划可通过查询 `sys.dm_exec_query_stats`、 `sys.dm_exec_sql_text`和 `sys.dm_exec_text_query_plan` 动态管理视图获得，并可以分配给 `@xml_showplan` 变量。 然后，将 `@xml_showplan` 变量传递给 `sp_create_plan_guide` 语句中的 `@hints` 参数。 也可以使用 [sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md) 存储过程从计划缓存中的查询计划中创建计划指南。  

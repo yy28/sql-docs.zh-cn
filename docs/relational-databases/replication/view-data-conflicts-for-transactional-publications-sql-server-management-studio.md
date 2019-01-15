@@ -15,16 +15,16 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9764117e9c69a0581c0399b54c9b78ae694dec88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0df33614cbb10708c6438db69807a1ec3c78d4c3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540257"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129868"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>查看事务发布的数据冲突 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 复制冲突查看器中，您可以查看对等事务复制和具有排队更新订阅的事务复制的冲突。 有关如何检测和解决冲突的信息，请参阅[对等复制中的冲突检测](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)和[设置排队更新冲突解决选项 (SQL Server Management Studio)](../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 复制冲突查看器中，您可以查看对等事务复制和具有排队更新订阅的事务复制的冲突。 有关如何检测和解决冲突的信息，请参阅[对等复制中的冲突检测](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)和[设置排队更新冲突解决选项 (SQL Server Management Studio)](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
  冲突数据的可用性取决于复制的类型和冲突保持期：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "52540257"
   
     -   在上部网格中选择一行或多行，再单击 **“删除”**，即从冲突元数据表中删除相应行。  
   
-    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息。  
+    -   单击属性按钮 (**...**) 查看有关冲突所涉及的列的详细信息。  
   
     -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”**。 输入一个值，或单击浏览按钮 (**...**)，然后导航到相应文件。 单击 **“确定”** 关闭 **“选项”** 对话框。  
   

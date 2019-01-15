@@ -18,12 +18,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f018f3415d0ee99eedb3c086e308a84c61cdc058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c7be0bb2b8864fc7720753e2af8a372c57a4ec3e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542901"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124957"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52542901"
   
  ![Web 同步组件和数据流](../../relational-databases/replication/media/web-sync01.gif "Web 同步组件和数据流")  
   
- Web 同步选项仅适用于请求订阅；所以，合并代理始终在订阅服务器上运行。 此合并代理可以是标准合并代理、合并代理 ActiveX 控件或者通过复制管理对象 (RMO) 提供同步的应用程序。 若要指定运行 IIS 的计算机的位置，请对合并代理使用 -InternetUrl 参数。  
+ Web 同步选项仅适用于请求订阅；所以，合并代理始终在订阅服务器上运行。 此合并代理可以是标准合并代理、合并代理 ActiveX 控件或者通过复制管理对象 (RMO) 提供同步的应用程序。 若要指定运行 IIS 的计算机的位置，请对合并代理使用 **–InternetUrl** 参数。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (Replisapi.dll) 在运行 IIS 的计算机上配置，负责处理从发布服务器和订阅服务器发送给服务器的消息。 拓扑中的每个节点都使用合并复制协调器 (Replrec.dll) 处理 XML 数据流。  
   

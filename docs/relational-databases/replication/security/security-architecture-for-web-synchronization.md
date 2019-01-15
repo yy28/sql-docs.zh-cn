@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719005"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124657"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步的安全体系结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47719005"
 |如果指定下列值之一，则将使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]：为 **SubscriberSecurityMode** 的 **@distributor_security_mode** 参数指定值 [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)参数。<br />-   RMO：为 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> 指定 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 值。<br />-   合并代理命令行：为 **-DistributorSecurityMode** 指定了值 **0** 时。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@distributor_login** 的 **@distributor_password** 和 [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)参数。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> 合并代理命令行： **-DistributorLogin** 和 **-DistributorPassword**。|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. 连接到 FTP 服务器  
- 仅当在将快照应用到订阅服务器之前，将快照文件从 FTP 服务器（而不是 UNC 位置）下载到运行 IIS 的计算机上时，才为该连接指定 Windows 用户。 有关详细信息，请参阅[通过 FTP 传输快照](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+ 仅当在将快照应用到订阅服务器之前，将快照文件从 FTP 服务器（而不是 UNC 位置）下载到运行 IIS 的计算机上时，才为该连接指定 Windows 用户。 有关详细信息，请参阅[通过 FTP 传输快照](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)。  
   
 |身份验证类型|指定身份验证的位置|  
 |----------------------------|-------------------------------------------|  

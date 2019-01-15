@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 40035d23d7414aa00f44f22411244ca7452ccafd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534438"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124867"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "52534438"
 |不带自动故障转移的高安全性模式|保证所有已提交的事务均在镜像服务器的磁盘上受到保护。 日志读取器代理仅复制那些在镜像服务器上受保护的事务。 如果镜像服务器不可用，则主体服务器禁止数据库中的进一步活动；因此，日志读取器代理没有事务可以复制。|  
   
 ## <a name="see-also"></a>另请参阅  
- [复制功能和任务](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)   
  [日志传送和复制 (SQL Server)](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

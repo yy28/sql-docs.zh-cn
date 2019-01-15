@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 05dcf3c0c5850b95aa9d657ee228138b0ca0e57d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637621"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256842"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导中的数据类型映射
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导中，可在新的目标表和目标文件中设置列的名称、数据类型和数据类型属性，但不能指定列值的自定义转换。 因此，从源到目标的数据类型内置映射非常重要。  
@@ -41,7 +41,7 @@ ms.locfileid: "51637621"
   
 <dtm:DataTypeMappings  
     xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

@@ -15,12 +15,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c76fe140a6cfd6e8d4cc2f83e3c0f3143a15708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834115"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134267"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>通过逻辑记录对相关行的更改进行分组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47834115"
   
 -   逻辑记录中包含的项目不支持使用业务逻辑处理程序或自定义冲突解决程序的自定义冲突解决方法。  
   
--   如果在包含参数化筛选器的发布中使用逻辑记录，必须用每台订阅服务器分区的快照初始化相应的订阅服务器。 如果用其他方法初始化订阅服务器，那么合并代理将会失败。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+-   如果在包含参数化筛选器的发布中使用逻辑记录，必须用每台订阅服务器分区的快照初始化相应的订阅服务器。 如果用其他方法初始化订阅服务器，那么合并代理将会失败。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 -   包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  
   

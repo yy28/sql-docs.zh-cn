@@ -18,12 +18,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6f9122b7f25454266fcb50e6b41b43c17a92f6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: af29563d48e888444cc6f29e45c0d4ebc794213d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662227"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256012"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,13 +82,13 @@ ms.locfileid: "51662227"
 ## <a name="finding-more-information"></a>查找详细信息  
  以下文档由 World Wide Web 联合会 (W3C) 发布，其中包含唯一粒子归属约束的技术说明：  
   
- “XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation”：  
+ "XML Schema Part 1:建立第二版 - W3C 已修正的提议推荐":  
   
--   第 3.8.6 节：Constraints on Model Group Schema Components  
+-   第 3.8.6 节:模型组架构组件的相关约束  
   
--   附录 H：Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   附录 H:唯一粒子归属约束（非标准）的分析  
   
- 若要查看该文档，请访问 [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
+ 若要查看该文档，请访问 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

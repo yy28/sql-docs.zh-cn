@@ -15,12 +15,12 @@ ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58db5b7c1317f2bddffc1375bdfac6c5246e4ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 767c8f3eb96182fad541cac224759e065ae4ac3a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767355"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131265"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47767355"
  若要使用其中的一个模块，请在 **“转到”** 菜单上选择该模块。 当前选择的模块拥有导航窗格和详细信息窗格的内容、详细信息窗格中的用户交互以及对内容和状态的查询。  
   
 > [!NOTE]  
->  有关这些监视器的详细信息，请参阅 [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md) 和 [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)。  
+>  有关这些监视器的详细信息，请参阅 [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md) 和 [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
   

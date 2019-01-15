@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6eaf2a4e5deb782533b945e85209c6ed7f2200db
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cf513a21429d26e9f0cc346b26177f1ea90dbbaf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202606"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130207"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 无论 fillfactor 的值有多小，中间级索引页上的行数永远都不会小于两行。  
   
- FILLFACTOR = fillfactor  
+ FILLFACTOR =fillfactor  
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  
   
 > [!NOTE]  

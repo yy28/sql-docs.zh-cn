@@ -15,12 +15,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15e2f27c58a49643563c5e25f577d6d738b719a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ec0db9af18be44617103b15c8c66c40ef695f3d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638382"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124507"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "47638382"
   
 -   分区快照作业上次运行的时间。  
   
- 尽管在初始化新订阅时可以按需生成由两部分构成的快照的第二部分，但通过下面的过程可以控制此快照的生成方式，并在最方便的时候预生成该快照。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+ 尽管在初始化新订阅时可以按需生成由两部分构成的快照的第二部分，但通过下面的过程可以控制此快照的生成方式，并在最方便的时候预生成该快照。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-view-information-on-existing-partitions"></a>查看有关现有分区的信息  
   
@@ -163,6 +163,6 @@ ms.locfileid: "47638382"
   
 ## <a name="see-also"></a>另请参阅  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

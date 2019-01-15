@@ -13,15 +13,15 @@ ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 2956139cd00b939ef8262c3d3115644dbe8ca7fd
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 3c7e540b4f5c614f54d15f16ae5f5589c5138518
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328247"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143527"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>为参数化查询创建计划指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   TEMPLATE 计划指南与参数化为指定形式的独立查询匹配。  
   
  以下示例创建一个计划指南，它与被参数化为指定格式的任何查询匹配，并使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 强制执行查询参数化。 下列两个查询在语法上是等价的，差别只是它们的常量文字值。  

@@ -29,12 +29,12 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ee5082535620d05c96b505b1920b8036d92f5e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843095"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124777"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,10 +65,10 @@ AS PARTITION partition_function_name
  ALL  
  指定所有分区都映射到在 file_group_name 中提供的文件组，或映射到主文件组（如果指定了 [PRIMARY]）。 如果指定了 ALL，则只能指定一个 file_group_name。  
   
- file_group_name | [ PRIMARY ] [ ,...n]  
+ file_group_name[ PRIMARY ] [ ,...n] |   
  指定用来持有由 partition_function_name 指定的分区的文件组的名称。 数据库中必须已存在 file_group_name。  
   
- 如果指定了 [PRIMARY]，则分区将存储于主文件组中。 如果指定了 ALL，则只能指定一个 file_group_name。 分区分配到文件组的顺序是从分区 1 开始，按文件组在 [,...n] 中列出的顺序进行分配 **。在 [,...n] 中，可以多次指定同一个 file_group_name**。 如果 n 不足以拥有在 partition_function_name 中指定的分区数，则 CREATE PARTITION SCHEME 将失败，并返回错误。  
+ 如果指定了 [PRIMARY]，则分区将存储于主文件组中。 如果指定了 ALL，则只能指定一个 file_group_name。 分区分配到文件组的顺序是从分区 1 开始，按文件组在 [,...n] 中列出的顺序进行分配。 在 [,...n] 中，可以多次指定同一个 file_group_name。 如果 n 不足以拥有在 partition_function_name 中指定的分区数，则 CREATE PARTITION SCHEME 将失败，并返回错误。  
   
  如果 partition_function_name 生成的分区数少于文件组数，则第一个未分配的文件组将标记为 NEXT USED，并且出现显示命名 NEXT USED 文件组的信息。 如果指定了 ALL，则单独的 file_group_name 将为该 partition_function_name 保持它的 NEXT USED 属性。 如果在 ALTER PARTITION FUNCTION 语句中创建了一个分区，则 NEXT USED 文件组将再接收一个分区。 若要再创建一个未分配的文件组来拥有新的分区，请使用 ALTER PARTITION SCHEME。  
   
