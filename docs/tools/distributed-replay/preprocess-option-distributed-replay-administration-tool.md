@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502712"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129437"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>Parameters  
- **-m** *控制器*  
+ **-m** _控制器_  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  指定控制器上输入跟踪文件的完整路径，例如 `D:\Mytrace.trc`。 **-i** 参数是必需的。  
   
  如果同一目录中存在滚动更新文件，则会自动加载并使用这些文件。 文件必须遵循文件滚动更新命名约定，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`…`Mytrace_n.trc`。  
@@ -48,7 +48,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 > [!NOTE]  
 >  如果要在控制器以外的其他计算机上使用管理工具，则需要将输入跟踪文件复制到控制器上，以便可以对此参数使用本地路径。  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  指定控制器上用于存储中间文件的目录。 **-d** 参数是必需的。  
   
  需要满足以下要求：  
@@ -61,14 +61,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   不支持 UNC 路径。  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  预处理配置文件的完整路径；当预处理配置文件存储在其他位置时，用于指定该配置文件的位置。 此参数可以是 UNC 路径，也可以是您运行管理工具的计算机上的本地路径。  
   
  如果不需要筛选，或者不想修改最大空闲时间，则 **-c** 参数不是必需的。  
   
  如果不使用 **-c** 参数，将使用默认预处理配置文件 `DReplay.exe.preprocess.config`。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  指定显示状态消息的频率（以秒为单位）。  
   
  如果未指定 **-f** ，则默认间隔为 30 秒。  
