@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506831"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226684"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 插入到数据库列（包括加密列）中的值将作为绑定参数传递（请参阅 [SQLBindParameter 函数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)）。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 如果插入到 SSN 或 BirthDate 列中的值作为查询语句中嵌入的文本传递，查询会失败，因为该驱动程序不会尝试加密或其他处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
 
-- 插入到 SSN 列的参数的 SQL 类型设置为 SQL_CHAR，映射到**char** SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果参数的类型设置为 SQL_WCHAR，映射到**nchar**，查询将失败，因为始终加密不支持从加密的 nchar 值为加密的 char 值的服务器端转换。 请参阅[ODBC 程序员参考-附录 d： 数据类型](https://msdn.microsoft.com/library/ms713607.aspx)有关的数据类型映射信息。
+- 插入到 SSN 列的参数的 SQL 类型设置为 SQL_CHAR，映射到**char** SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果参数的类型设置为 SQL_WCHAR，映射到**nchar**，查询将失败，因为始终加密不支持从加密的 nchar 值为加密的 char 值的服务器端转换。 请参阅[ODBC 程序员参考-附录 d:数据类型](https://msdn.microsoft.com/library/ms713607.aspx)有关的数据类型映射信息。
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制为了检索查询参数的元数据而往返的次数
 
-如果为连接启用了 Always Encrypted，默认情况下，驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，将返回每个参数，以允许要进行加密的驱动程序的与加密相关信息。 以上行为可确保高级别的客户端应用程序的透明度： 应用程序 （和应用程序开发人员） 不需要知道哪些查询在访问加密的列，只要面向加密的列的值传递给参数中的驱动程序。
+如果为连接启用了 Always Encrypted，默认情况下，驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，将返回每个参数，以允许要进行加密的驱动程序的与加密相关信息。 以上行为可确保实现针对客户端应用程序的高级别透明性：应用程序（和应用程序开发人员）不需要知道哪些查询在访问加密列，只需将面向加密列的值传递到参数中的驱动程序即可。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每个语句始终加密行为
 
@@ -538,7 +538,7 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>大容量复制加密列
 
-利用[SQL 大容量复制函数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)并**bcp**实用程序使用始终加密自 ODBC Driver 17 for SQL Server 支持。 纯文本 （加密上的插入和已解密上检索） 和已加密文本 （按原样传输） 可以插入和检索使用大容量复制 （bcp_ *） Api 并**bcp**实用程序。
+利用[SQL 大容量复制函数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)并**bcp**实用程序使用始终加密自 ODBC Driver 17 for SQL Server 支持。 纯文本 （加密上的插入和已解密上检索） 和已加密文本 （按原样传输） 可以插入和检索使用大容量复制 (bcp_&#42;) 的 Api 和**bcp**实用程序。
 
 - 若要检索已加密文本 （例如，对于大容量加载到不同的数据库） 的 varbinary （max） 形式，而无需连接`ColumnEncryption`选项 (或将其设置为`Disabled`)，并且执行 BCP OUT 操作。
 
@@ -546,7 +546,7 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 - 要将已加密文本插入 varbinary （max） 的形式 （例如上面检索到），请将`BCPMODIFYENCRYPTED`选项设为 TRUE，并且执行 BCP IN 操作。 为了使生成的数据以便进行解密，请确保目标列的 CEK 是与最初从其获取已加密文本相同。
 
-使用时**bcp**实用程序： 控制`ColumnEncryption`设置，请使用-D 选项并指定包含所需的值的 DSN。 若要插入已加密文本，请确保`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`启用的用户的设置。
+使用时**bcp**实用程序：控制`ColumnEncryption`设置，请使用-D 选项并指定包含所需的值的 DSN。 若要插入已加密文本，请确保`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`启用的用户的设置。
 
 操作对加密列时下, 表提供的操作的摘要：
 

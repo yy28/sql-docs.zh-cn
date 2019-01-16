@@ -11,12 +11,12 @@ ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cba6e20e1e2efbd17ca677f06c07ac0a4a27648c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24eef3e97f87d60db624605b19420e5fd562360b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669915"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213776"
 ---
 # <a name="validating-user-input"></a>验证用户输入
 
@@ -26,7 +26,7 @@ ms.locfileid: "47669915"
 
 在客户端代码中验证用户输入是非常重要的，这样，您就无需浪费时间往返服务器。 在服务器上验证存储过程的参数以捕获无效的和跳过客户端验证的输入，这同样非常重要。
 
-有关 SQL 注入和如何避免此攻击的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“SQL 注入”。 有关验证存储过程参数的详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 联机丛书中的“存储过程 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])”和从属主题。
+有关 SQL 注入和如何避免此攻击的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“SQL 注入”。 有关验证存储过程参数的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“存储过程 ([!INCLUDE[ssDE](../../includes/ssde_md.md)])”和从属主题。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,37 +1,35 @@
 ---
-title: DSN 和连接字符串关键字和适用于 SQL Server 的 ODBC 驱动程序中使用的属性 |Microsoft Docs
+title: DSN 和连接字符串关键字的 ODBC 驱动程序的 SQL Server |Microsoft Docs
 ms.custom: ''
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+ms.reviewer: MightyPen
 ms.author: v-jizho2
+author: karinazhou
 manager: craigg
-ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512854"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306234"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和连接字符串关键字和属性
 
 此页列出 SQLSetConnectAttr 和 SQLGetConnectAttr，SQL Server ODBC 驱动程序中的连接字符串和 Dsn，关键字和连接属性。
 
-
-
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支持/的 DSN 连接字符串关键字和连接属性
 
-下表列出了可用的关键字以及为每个平台 (l: Linux; 属性M: Mac;W: Windows)。 单击关键字或更多详细信息的属性。
+下表列出了可用关键字以及为每个平台 （l： 属性Linux ; M:Mac;W:Windows： 单击关键字或更多详细信息的属性。
 
-| DSN / 连接字符串关键字 | 连接属性 | 平台 | 
+| DSN / 连接字符串关键字 | 连接属性 | 平台 |
 |-|-|-|
 | [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Address](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) |  [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
+| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ApplicationIntent](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_APPLICATION_INTENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssapplicationintent) | LMW |
 | [AttachDBFileName](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ATTACHDBFILENAME](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssattachdbfilename) | LMW |
@@ -67,7 +65,7 @@ ms.locfileid: "51512854"
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | W |
 | [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | W |
-| [transparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | LMW |
+| [TransparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | LMW |
 | [Trusted_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_INTEGRATED_SECURITY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssintegratedsecurity) | LMW |
 | [TrustServerCertificate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRUST_SERVER_CERTIFICATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstrustservercertificate) | LMW |
 | [UID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -78,7 +76,7 @@ ms.locfileid: "51512854"
 | | [SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_ASYNC_DBC_PCALLBACK](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_ASYNC_DBC_PCONTEXT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
-| | [SQL_ATTR_ASYNC_ENABLE 设置](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
+| | [SQL_ATTR_ASYNC_ENABLE](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | W |
 | | [SQL_ATTR_AUTO_IPD](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | | [SQL_ATTR_AUTOCOMMIT](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_AUTOCOMMIT) | LMW |
 | | [SQL_ATTR_CONNECTION_DEAD](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
@@ -103,7 +101,7 @@ ms.locfileid: "51512854"
 | | [SQL_COPT_SS_BROWSE_SERVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseserver) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREDATA](dsn-connection-string-attribute.md#sqlcoptsscekeystoredata) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sqlcoptsscekeystoreprovider) | LMW |
-| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md#sqlcoptssclientconnectionid) | LMW |
+| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | LMW |
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
@@ -163,7 +161,7 @@ ms.locfileid: "51512854"
 > [!NOTE]
 > 使用时`Authentication`关键字或属性，显式指定`Encrypt`设置连接字符串中所需的值为 / DSN / 连接属性。 请参阅[将连接字符串关键字用于 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)有关详细信息。
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption-SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
 控制透明列加密 （始终加密）。 请参阅[使用始终加密 (ODBC)](using-always-encrypted-with-the-odbc-driver.md)有关详细信息。
 
@@ -173,13 +171,13 @@ ms.locfileid: "51512854"
 |禁用|SQL_CE_DISABLED|（默认值）禁用始终加密。|
 | |SQL_CE_RESULTSETONLY|启用解密 （结果和返回值）。|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution-SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 控件的透明网络 IP 解析功能，交互使用 MultiSubnetFailover 以允许更快地重新连接尝试。 请参阅[使用透明网络 IP 解析](using-transparent-network-ip-resolution.md)有关详细信息。
 
 | 关键字值 | 属性值| 描述 |
 |-|-|-|
-|用户帐户控制|SQL_IS_ON|（默认）启用透明网络 IP 解析。|
+|是|SQL_IS_ON|（默认）启用透明网络 IP 解析。|
 |否|SQL_IS_OFF|禁用透明网络 IP 解析。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
@@ -189,7 +187,7 @@ ms.locfileid: "51512854"
 | 关键字值 | 描述 |
 |-|-|
 |否|（默认值）Sp_describe_first_result_set 用于元数据，如果可用。 |
-|用户帐户控制| 使用 SET FMTONLY 元数据。 |
+|是| 使用 SET FMTONLY 元数据。 |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
 

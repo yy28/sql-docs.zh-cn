@@ -30,12 +30,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a20913ac99f7c4cf32ae31c55cdf027f2db360c1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292703"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100942"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,16 +86,16 @@ sqldiag
  **/?**  
  显示使用信息。  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  设置 **SQLdiag** 要使用的配置文件。 默认情况下， **/I** 设置为 SQLDiag.Xml。  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  将 **SQLdiag** 输出重定向到指定文件夹。 如果未指定 **/O** 选项，则 **SQLdiag** 输出结果将会写入 **SQLdiag** 启动文件夹下名为 SQLDIAG 的子文件夹中。 如果 SQLDIAG 文件夹不存在，则 **SQLdiag** 将会尝试创建该文件夹。  
   
 > [!NOTE]  
 >  输出文件夹位置相对于可使用 **/P**指定的支持文件夹的位置。 若要为输出文件夹设置一个完全不同的位置，请为 **/O**指定完整的目录路径。  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  设置支持文件夹路径。 默认情况下，将 **/P** 设置为存放 **SQLdiag** 可执行文件的文件夹。 支持文件夹包含 **SQLdiag** 支持文件，如 XML 配置文件、Transact-SQL 脚本以及该实用工具在收集诊断信息过程中所使用的其他文件。 如果使用该选项指定一个备用的支持文件路径，则 **SQLdiag** 会自动将其所需的支持文件复制到指定的文件夹（如果这些文件尚未存在）。  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ sqldiag
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  设置 **SQLdiag** 在其启动时，是覆盖还是重命名输出文件夹。 可用选项包括：  
   
  1 = 覆盖输出文件夹（默认）  
@@ -113,12 +113,12 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** 在启动时不会将输出追加到当前输出文件夹。 它只能覆盖默认的输出文件夹（选项 1）或重命名该文件夹（选项 2），然后将输出写入名为 SQLDIAG 的新默认输出文件夹。  
   
- **/M** *machine1* [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  覆盖在配置文件中指定的计算机。 默认情况下，配置文件为 SQLDiag.Xml，也可以使用 **/I** 参数进行设置。 如果指定多台计算机，请用空格分隔各个计算机名称。  
   
  使用 *@machinelistfile* 可指定要存储在配置文件中的计算机列表文件名。  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  设置 **SQLdiag** 输出文件夹文件所用的文件压缩类型。 可用选项包括：  
   
  0 = 无（默认）  
@@ -153,7 +153,7 @@ sqldiag
   
  请注意， **SQLdiag** 使用运行实用工具的计算机上的本地时间。  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  _SQLdiag_application_name_  
  使你可针对同一个 **实例运行多个** SQLdiag [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的实例。  
   
  每个 *SQLdiag_application_name* 标识不同的 **SQLdiag**的实例。 *SQLdiag_application_name* 实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称之间没有任何关系。  
@@ -162,11 +162,11 @@ sqldiag
   
  例如：  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  _SQLdiag_application_name_  
   
  它也可与 **/R** 选项一起使用，以将特定的 **SQLdiag** 实例注册为服务。 例如：  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** 会自动在为 *SQLdiag_application_name*指定的实例名称之前添加前缀 DIAG$。 如果你将 **SQLdiag** 注册为服务，则上述操作会提供有意义的服务名称。  
@@ -202,7 +202,7 @@ sqldiag
   
  也可使用 **net start** 命令启动该服务：  
   
- **net**  **start SQLDIAG**  
+ **net  start SQLDIAG**  
   
  **/U**  
  将 **SQLdiag** 撤消注册为服务。  
@@ -229,7 +229,7 @@ sqldiag
   
  只有指定 **SQLdiag** 命名实例的 **/A**参数才可以与 **START**、 **STOP**或 **STOP_ABORT** 一起使用，以控制特定的 **SQLdiag** 服务实例。 例如：  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>安全要求  
  除非以通用模式（通过指定 **SQLdiag** 命令行参数）运行 **SQLdiag** ，否则，运行 **SQLdiag** 的用户必须为 Windows **Administrators** 组的成员和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定服务器角色的成员。 默认情况下， **SQLdiag** 使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但是它也支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证。  

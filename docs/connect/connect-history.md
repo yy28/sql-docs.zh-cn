@@ -98,7 +98,7 @@ MDAC/WDAC 包含以下组件：
 
   没有可用的 64 位版本的 Jet 数据库引擎、 Jet OLEDB 驱动程序、 Jet ODBC 驱动程序或 Jet DAO。 有关详细信息，请参阅[知识库文章 957570](https://support.microsoft.com/kb/957570)。 在 64 位版本的 Windows，32 位 Jet Windows WOW64 子系统下运行。 WOW64 的详细信息，请参阅[MSDN WOW64 文档](/windows/desktop/WinProg64/wow64-implementation-details)。 本机 64 位应用程序无法在 WOW64 中运行的 32 位 Jet 驱动程序与通信。
 
-  Microsoft 建议使用而不是 Microsoft Jet [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)开发新的、 需要关系数据存储区的 Microsoft Access 应用程序时。 这些新的或转换后的 Jet 应用程序可以继续使用 Jet 使用 Microsoft Office 2003 和更早的文件 （.mdb 和.xls） 的目的进行非主数据存储。 但是，对于这些应用程序，你应计划将 Jet 迁移到 2007 Office 系统驱动程序。 你可以[下载 2007 Office System Driver](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891)，可用于读取和写入到预先存在的文件 （.mdb 和.xls） 的 Office 2003 或 Office 2007 （*.accdb，*.xlsm、 *.xlsx 和 *.xlsb） 文件格式中。
+  Microsoft 建议使用而不是 Microsoft Jet [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)开发新的、 需要关系数据存储区的 Microsoft Access 应用程序时。 这些新的或转换后的 Jet 应用程序可以继续使用 Jet 使用 Microsoft Office 2003 和更早的文件 （.mdb 和.xls） 的目的进行非主数据存储。 但是，对于这些应用程序，你应计划将 Jet 迁移到 2007 Office 系统驱动程序。 你可以[下载 2007 Office System Driver](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891)，可用于读取和写入到预先存在的文件 （.mdb 和.xls） 的 Office 2003 或 Office 2007 （*.accdb， *.xlsm、 *.xlsx 和 *.xlsb） 文件格式中。
 
   > [!IMPORTANT]
   > 请阅读有关特定的用量限制 2007 Office 系统最终用户许可协议。

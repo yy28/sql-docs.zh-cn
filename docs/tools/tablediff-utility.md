@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fdb89ebbfebe6ea8e47857347428cb27d4d41530
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293143"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128507"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,58 +81,58 @@ tablediff
  [ **-?** ]  
  返回支持参数的列表。  
   
- **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
- 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 命名实例的 source_server_name\\instance_name**。  
+ **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
+ 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _命名实例的_**\\**_source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
- **-sourcedatabase** *source_database*  
+ **-sourcedatabase** _source_database_  
  源数据库的名称。  
   
- **-sourcetable** *source_table_name*  
+ **-sourcetable** _source_table_name_  
  正在检查的源表的名称。  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema** _source_schema_name_  
  源表的架构所有者。 默认情况下，表所有者假定为 dbo。  
   
- **-sourcepassword** *source_password*  
+ **-sourcepassword** _source_password_  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到源服务器时所使用的登录帐户的密码。  
   
 > [!IMPORTANT]  
 >  可能的话，请在运行时提供安全凭据。 如果必须在脚本文件中存储凭据，则应保护文件以防止未经授权的访问。  
   
- **-sourceuser** *source_login*  
+ **-sourceuser** _source_login_  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到源服务器时所使用的登录帐户。 如果未提供 *source_login* ，则连接到源服务器时使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定源表。  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 命名实例的 destination_server_name\\instance_name**。  
+ **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
+ 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _命名实例的_**\\**_destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
- **-destinationdatabase** *subscription_database*  
+ **-destinationdatabase** _subscription_database_  
  目标数据库的名称。  
   
- **-destinationtable** *destination_table*  
+ **-destinationtable** _destination_table_  
  目标表的名称。  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema** _destination_schema_name_  
  目标表的架构所有者。 默认情况下，表所有者假定为 dbo。  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword** _destination_password_  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到目标服务器时所使用的登录帐户的密码。  
   
 > [!IMPORTANT]  
 >  可能的话，请在运行时提供安全凭据。 如果必须在脚本文件中存储凭据，则应保护文件以防止未经授权的访问。  
   
- **-destinationuser** *destination_login*  
+ **-destinationuser** _destination_login_  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到目标服务器时所使用的登录帐户。 如果未提供 *destination_login* ，则连接到该服务器时使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定目标表。  
   
- **-b** *large_object_bytes*  
+ **-b** _large_object_bytes_  
  大型对象数据类型列中要比较的字节数，这些数据类型包括：**text****ntext**、**image****varchar(max)****nvarchar(max)** 和 **varbinary(max)**。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
   
- **-bf**  *number_of_statements*  
+ **-bf**  _number_of_statements_  
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 选项时要写入到当前 **脚本文件中的** 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements*时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
   
  **-c**  
@@ -141,28 +141,28 @@ tablediff
  **-dt**  
  删除 *table_name*指定的结果表（如果该表已经存在）。  
   
- **-et** *table_name*  
+ **-et** _table_name_  
  指定要创建的结果表的名称。 如果该表已经存在，则必须使用 **-DT** ，否则操作将失败。  
   
  **-f** [ *file_name* ]  
  生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本，以使目标服务器中的表与源服务器中的表实现收敛。 （可选）可以指定生成的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件的名称和路径。 如果未指定 *file_name* ，则会在运行实用工具的目录中生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
   
- **-o** *output_file_name*  
+ **-o** _output_file_name_  
  输出文件的完整名称和路径。  
   
  **-q**  
  通过只比较行数和架构可以执行快速比较。  
   
- **-rc** *number_of_retries*  
+ **-rc** _number_of_retries_  
  实用工具重试失败操作的次数。  
   
- **-ri**  *retry_interval*  
+ **-ri**  _retry_interval_  
  两次重试之间的等待间隔（秒）。  
   
  **-strict**  
  对源架构和目标架构进行严格比较。  
   
- **-t** *connection_timeouts*  
+ **-t** _connection_timeouts_  
  设置与源服务器和目标服务器连接时的连接超时时间（秒）。  
   
 ## <a name="return-value"></a>返回值  
@@ -174,7 +174,7 @@ tablediff
 |**2**|存在表差异|  
   
 ## <a name="remarks"></a>Remarks  
- **tablediff** 实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
+ tablediff 实用工具不能用于非 -[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  不支持包含 **sql_variant** 数据类型列的表。  
   

@@ -1,7 +1,7 @@
 ---
 title: 使用带批注的 XSD 架构中的查询 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,18 +23,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48773fe5b4238f74c88bd8fb91f425ce96fd4359
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7d6fd994c25acae6a27d5c66c18f1c2a7d7b3a77
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665316"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256852"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查询中使用带批注的 XSD 架构 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   通过在模板中针对 XSD 架构指定 XPath 查询，可以针对带批注的架构指定查询以从数据库检索数据。  
   
- **\<Sql:xpath-查询 >** 元素允许您指定针对带批注的架构定义的 XML 视图的 XPath 查询。 带批注的架构对其执行 XPath 查询的由使用**映射架构**的属性 **\<sql:xpath-查询 >** 元素。  
+  **\<Sql:xpath-查询 >** 元素允许您指定针对带批注的架构定义的 XML 视图的 XPath 查询。 带批注的架构对其执行 XPath 查询的由使用**映射架构**的属性 **\<sql:xpath-查询 >** 元素。  
   
  模板是包含一个或多个查询的有效 XML 文档。 FOR XML 和 XPath 查询返回文档片段。 模板用作文档片段的容器；因此，模板提供了一种指定单个顶级元素的方法。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "51665316"
  例如，请看下面这个带批注的架构：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -76,7 +76,7 @@ ms.locfileid: "51665316"
   
 ```  
 <ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema1' sql:is-mapping-schema='1'>  
   <xsd:element name='Employees' ms:relation='HumanResources.Employee'>  
@@ -89,7 +89,7 @@ ms.locfileid: "51665316"
   </xsd:element>  
 </xsd:schema>  
   
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema2' sql:is-mapping-schema='1'>  
   <xsd:element name='Contacts' ms:relation='Person.Contact'>  

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 88160c2580b0b11e5de10e5b91e240a2355285f7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a237fcd5b03f8013e4a6514b87322695e6a0cf9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660436"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206166"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 创建有效的连接字符串
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "51660436"
   
  连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 组件将从指定别名的注册表中读取服务器、协议和端口的值，然后创建一个格式为 `tcp:<servername>[\<instancename>],<port>` 或 `tcp:<IPAddress>[\<instancename>],<port>`的连接字符串。  
   
-> [!NOTE]  
->  默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火墙关闭端口 1433。 由于 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过端口 1433 进行通信，因此，如果你将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 TCP/IP 侦听传入客户端连接，则必须重新打开该端口。 有关配置防火墙的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何将防火墙配置为允许 SQL Server 访问”，或者查阅防火墙文档。  
+> [!NOTE]
+>  默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火墙关闭端口 1433。 由于 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过端口 1433 进行通信，因此，如果你将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 TCP/IP 侦听传入客户端连接，则必须重新打开该端口。 有关配置防火墙的信息，请参阅“如何为 SQL Server Access 配置防火墙”（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）或查看你的防火墙文档。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完全支持 Internet 协议版本 4 (IPv4) 和 Internet 协议版本 6 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器接受 IPv4 和 IPv6 格式的 IP 地址。 有关 IPv6 的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“使用 IPv6 进行连接”。  
   
@@ -169,7 +169,7 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  若要了解如何将网络协议指定为 **sqlcmd** 参数，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何使用 sqlcmd.exe 连接到数据库引擎”。  
+>  有关以 sqlcmd 参数的形式指定网络协议的信息，请参阅“如何：使用 sqlcmd.exe 连接到数据库引擎”（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Shared Memory 协议创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

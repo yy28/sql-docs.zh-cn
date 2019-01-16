@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c36ae89563490257ccc9db78c7386642a71f0ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398422"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211817"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本主题介绍 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 对于高可用性及灾难恢复（[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]）的支持。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 的详细信息，请参阅 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 联机丛书。  
+  本主题介绍 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 对于高可用性和灾难恢复的支持 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的详细信息，请参阅 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 联机丛书。  
   
- 在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版中，您可以先在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增了以下[连接属性](../../connect/jdbc/setting-the-connection-properties.md)：  
+ 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，可以在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增了以下[连接属性](../../connect/jdbc/setting-the-connection-properties.md)：  
   
 -   **multiSubnetFailover**  
   
@@ -40,11 +40,11 @@ ms.locfileid: "52398422"
 * 如果有超过 64 个 IP 地址，则忽略 transparentNetworkIPResolution
 * 如果 transparentNetworkIPResolution 为 true，首次连接尝试使用的超时值为 500 毫秒。 连接尝试的其余部分遵循相同的逻辑如下所示 multiSubnetFailover 功能。 
 
-> [!NOTE]  
-如果你是使用 Microsoft JDBC Driver 4.2 （或降低） 适用于 SQL Server，并且**multiSubnetFailover**为 false，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]尝试连接到第一个 IP 地址。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 无法建立与第一个 IP 地址的连接，则连接将失败。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将不会尝试连接到与此服务器关联的任何后续 IP 地址。 
-
-  
-> [!NOTE]  
+> [!NOTE]
+> 如果你是使用 Microsoft JDBC Driver 4.2 （或降低） 适用于 SQL Server，并且**multiSubnetFailover**为 false，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]尝试连接到第一个 IP 地址。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 无法建立与第一个 IP 地址的连接，则连接将失败。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将不会尝试连接到与此服务器关联的任何后续 IP 地址。 
+> 
+> 
+> [!NOTE]
 >  增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于可用性组进行故障转移而可能使连接失败，您应实现连接重试逻辑，重试失败的连接，直至重新连接。  
   
  
@@ -52,13 +52,13 @@ ms.locfileid: "52398422"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
  在连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=true。 multiSubnetFailover 可加快 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所有可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将积极地重试 TCP 连接。  
   
- multiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将尝试通过试图连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库。 为连接指定 MultiSubnetFailover=true 后，客户端将在比操作系统的默认 TCP 重传间隔更短的时间内重试 TCP 连接尝试。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
+ multiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将尝试通过试图连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库。 如果对连接指定的是 MultiSubnetFailover=true，客户端重试 TCP 连接尝试的速度快于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
   
  有关详细信息中的连接字符串关键字[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)。  
   
  如果在连接到非可用性组侦听程序或故障转移群集实例时指定 multiSubnetFailover=true，则可能会对性能造成负面影响，因此不支持这样做。  
   
- 如果未安装安全管理器，默认情况下，Java 虚拟机将缓存虚拟 IP 地址 (VIP) 一段时间（由您的 JDK 实现和 Java 属性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 定义）。 如果已安装 JDK 安全管理器，默认情况下，Java 虚拟机将缓存 VIP 且不会刷新缓存。 您应将 Java 虚拟机缓存的“生存时间”(networkaddress.cache.ttl) 设置为“一天”。 如果您未将默认生存时间更改为“一天（左右）”，则添加或更新 VIP 后，不会清除 Java 虚拟机缓存中的旧值。 有关 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的详细信息，请参阅[ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
+ 如果未安装安全管理器，默认情况下，Java 虚拟机将缓存虚拟 IP 地址 (VIP) 一段时间（由您的 JDK 实现和 Java 属性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 定义）。 如果已安装 JDK 安全管理器，默认情况下，Java 虚拟机将缓存 VIP 且不会刷新缓存。 您应将 Java 虚拟机缓存的“生存时间”(networkaddress.cache.ttl) 设置为“一天”。 如果未将默认值更改为“一天（左右）”，则添加或更新 VIP 后，不会清除 Java 虚拟机缓存中的旧值。 有关 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的详细信息，请参阅[ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
   
  使用以下准则可以连接到可用性组或故障转移群集实例中的服务器：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52398422"
   
 -   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
   
--   基于以下身份验证类型，使用 multiSubnetFailover 连接属性的应用程序的行为不受到影响：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
+-   基于以下身份验证类型，使用 multiSubnetFailover 连接属性的应用程序的行为将不会受到影响：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
   
 -   增加 loginTimeout 的值，以延长故障转移时间并减少应用程序连接重试次数。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: e6585c78b26199c7ae5194e37d152db91aab1224
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba1cb702faef5826158f9f65e9bb36d794934a5a
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396311"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991770"
 ---
 # <a name="download-and-install-sqlpackage"></a>下载并安装 sqlpackage
 
@@ -26,8 +26,8 @@ sqlpackage 在 Windows、 macOS 和 Linux 上运行。
 |平台|下载|发布日期|版本|生成
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 年 10 月 24日日|18.0|15.0.4200.1|
-|macOS.NET Core （预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2044514)|2018 年 11 月 15日日 | - |13.0.0.0|
-|Linux.NET Core （预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2044263)|2018 年 11 月 15日日 | - |13.0.0.0|
+|macOS.NET Core （预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2044514)|2018 年 11 月 15 日 | - |15.0.4240.1|
+|Linux.NET Core （预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2044263)|2018 年 11 月 15 日 | - |15.0.4240.1|
 
 有关最新版本的详细信息，请参阅[发行说明](sqlpackage-release-notes.md)。
 
@@ -65,8 +65,9 @@ sqlpackage 在 Windows、 macOS 和 Linux 上运行。
    ```bash
    cd ~
    mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
-   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
+   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   chmod a+x ~/sqlpackage/sqlpackage
    source ~/.bashrc
    sqlpackage
    ```
@@ -77,7 +78,7 @@ sqlpackage 在 Windows、 macOS 和 Linux 上运行。
    **Debian:**
 
    ```bash
-   sudo apt-get install libuwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat：**

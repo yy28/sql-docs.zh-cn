@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ae488cfeabc3d506bc53b455f0df6149c537765d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 125b3de50e127e4b1e7d567da58b71f58e2f72aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605277"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980283"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "51605277"
   
 -   安全性：指定的 SPN 是否会泄露受保护的信息？  
   
--   可靠性：若要能够使用默认 SPN， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例运行时使用的服务帐户必须具有足够的特权才能对 KDC 更新 Active Directory。  
+-   可靠性：若要能够使用默认 SPN，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例运行时使用的服务帐户必须具有足够的特权才能对 KDC 更新 Active Directory。  
   
 -   方便性和位置透明性：如果应用程序的数据库移到其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，则将如何影响该应用程序的 SPN？ 如果使用数据库镜像，则这种情况适用于主体服务器及其故障转移伙伴。 如果服务器更改意味着必须更改 SPN，则这种情况将如何影响应用程序？ 是否将管理所有更改？  
   

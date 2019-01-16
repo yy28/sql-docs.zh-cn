@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0572f9ef57b5d1ba17383cf758f612b0c6eec81f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bfd659028d02c7b37dcf31c36b587ce5f3550661
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677686"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256812"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>记录生成过程 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "51677686"
  例如，考虑下面的 XSD 架构片段：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -116,7 +116,7 @@ ms.locfileid: "51677686"
  现在，请考虑在以下带批注的 XSD 架构中指定的 XML 视图。 此架构使用 **\<sql: relationship >** 指定 Cust 和 CustOrder 表之间的关系。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -221,12 +221,12 @@ ms.locfileid: "51677686"
 ## <a name="exceptions-to-the-record-generation-rule"></a>记录生成规则的例外情况  
  如果节点属于 IDREF 或 IDREFS 类型，则在它进入作用域时，XML 大容量加载不为该节点生成记录。 您必须确保在架构的同一位置存在记录的完整描述。 **Dt: type ="nmtokens"** 批注将被忽略，就像忽略 IDREFS 类型。  
   
- 例如，考虑下面的 XSD 架构描述**\<客户 >** 并**\<顺序 >** 元素。 **\<客户 >** 元素包含**OrderList** IDREFS 类型的属性。 **\<Sql: relationship >** 标记指定的客户和订单列表之间的一个对多关系。  
+ 例如，考虑下面的 XSD 架构描述**\<客户 >** 并**\<顺序 >** 元素。 **\<客户 >** 元素包含**OrderList** IDREFS 类型的属性。  **\<Sql: relationship >** 标记指定的客户和订单列表之间的一个对多关系。  
   
  以下是架构：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

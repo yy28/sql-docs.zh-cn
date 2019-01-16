@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540666"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213066"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "52540666"
  有关如何移动 master 数据库的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“移动系统数据库”主题。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#*) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅[!INCLUDE[tsql](../../includes/tsql-md.md)]联机丛书中的“跟踪标志 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )”主题。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#*) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“跟踪标志（[!INCLUDE[tsql](../../includes/tsql-md.md)]）”主题。  
   
 > [!CAUTION]  
 >  您可能会看到在 Internet 上描述的其他未记录的启动参数和跟踪标志。 创建未记录的启动参数和跟踪标志是为了满足某些不常见问题或者强制测试所需的某些条件。 使用未记录的启动参数可能会导致意外结果。 除非 Microsoft 客户支持服务部门指示，否则不要使用未记录的参数。  
@@ -63,7 +63,7 @@ ms.locfileid: "52540666"
   
 |参数|简短说明|  
 |---------------|-----------------------|  
-|-m|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
+|-M|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |-T1204|返回参与死锁的锁的资源和类型，以及受影响的当前命令。|  
 |-T1224|基于锁数禁用锁升级。|  
 |-T3608|禁止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动启动和恢复除 master 数据库之外的任何数据库。|  
@@ -80,6 +80,6 @@ ms.locfileid: "52540666"
 -   如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置为在域帐户下运行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用该域帐户。  
   
 ## <a name="books-online-references"></a>联机丛书参考  
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何配置服务器启动选项（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何：配置服务器启动选项（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
   
   

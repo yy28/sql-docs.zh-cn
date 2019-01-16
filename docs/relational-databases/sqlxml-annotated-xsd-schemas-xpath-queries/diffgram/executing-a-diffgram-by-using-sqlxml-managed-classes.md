@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e2d67e4958f89e908a5a5cec7f1e0a68853650d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7cc93018aab2c81d6a4fda873f3a8da04b909de2
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661630"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256762"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML 托管类执行 DiffGram
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51661630"
 </ROOT>  
 ```  
   
- **\<之前 >** 块包括**\<客户 >** 元素 (**diffgr: id ="Customer1"**)。 **\<DataInstance >** 块包括相应**\<客户 >** 元素具有相同**id**。**\<客户 >** 中的元素 **\<NewDataSet >** 还指定了**diffgr: haschanges ="modified"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr: haschanges**属性未指定，DiffGram 处理逻辑将忽略此元素，则不执行任何更新。  
+ **\<之前 >** 块包括**\<客户 >** 元素 (**diffgr: id ="Customer1"**)。  **\<DataInstance >** 块包括相应**\<客户 >** 元素具有相同**id**。**\<客户 >** 中的元素 **\<NewDataSet >** 还指定了**diffgr: haschanges ="modified"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr: haschanges**属性未指定，DiffGram 处理逻辑将忽略此元素，则不执行任何更新。  
   
  以下是 C# 教程应用程序代码演示如何使用 SQLXML 托管类执行上面的 DiffGram 和更新两个表 (Cust、 Ord) 还将创建在**tempdb**数据库。  
   
@@ -99,7 +99,7 @@ class Test
 2.  将以下 XSD 架构 (DiffGramSchema.xml) 保存在某个文件夹中：  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
       <xsd:documentation>  

@@ -12,15 +12,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 86cafa8d0eddb0e1c729d091fda974b901ebc49d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7454fb16f69045b791c9ae8a2b2156ab1894f988
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690205"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590871"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;服务名称&gt; 属性（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  [!INCLUDE[ssNS](../../includes/ssns-md.md)] 以名称格式为 NS$<user_configured name> 的服务的形式实现。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。 此选项卡有可能不列出任何属性。  
+  [!INCLUDE[ssNS](../../includes/ssns-md.md)] 以名称格式为 **NS$**_<user_configured name>_ 的服务的形式实现。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。 此选项卡有可能不列出任何属性。  
   
   

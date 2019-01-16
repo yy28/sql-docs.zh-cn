@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 31e71f63e1cb06fdc38af291668f32552e5659b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538917"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589991"
 ---
 # <a name="osql-utility"></a>osql 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,10 +70,10 @@ osql
 > [!NOTE]  
 >  鉴于网络上广播的特点， **osql** 可能不会及时接收来自所有服务器的响应。 因此，每次调用该选项所返回的服务器列表都可能不同。  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  用户登录 ID。 登录 ID 区分大小写。  
   
- **-P** *password*  
+ **-P** _password_  
  用户指定的密码。 如果未使用 **-P** 选项， **osql** 将提示输入密码。 如果在命令提示符的末尾使用 **-P** 选项而不提供密码， **osql** 将使用默认密码 (NULL)。  
   
 > [!IMPORTANT]  
@@ -96,31 +96,31 @@ C:\>osql
  **-E**  
  使用可信连接而不请求密码。  
   
- **-S** _服务器\_名称_[ **\\**_实例\_名称_]  
+ **-S** _server\_name_[ **\\**_instance\_name_]  
  指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
   
- **-H** *wksta_name*  
+ **-H** _wksta_name_  
  工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who**显示。 如果不指定此选项，则采用当前计算机名称。  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  启动 *osql* 时发出一个 USE **db_name**语句。  
   
- **-l** *time_out*  
+ **-l** _time_out_  
  指定 **osql** 登录超时之前的秒数。登录到 **osql** 的默认超时时间为 8 秒。  
   
- **-t** *time_out*  
+ **-t** _time_out_  
  指定命令超时之前的秒数。如果未指定 *time_out* 值，则命令将不会超时。  
   
- **-h** *headers*  
+ **-h** _headers_  
  指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用的是 -1，参数和设置之间就不得有空格（可以是 -h-1，但不能是 -h -1）。  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  指定列分隔符字符，默认值为空格。 若要使用对操作系统有特殊含义的字符（例如 | ; & < >），请将该字符用双引号 (") 括起来。  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  允许用户设置屏幕输出的宽度。 默认为 80 个字符。 当输出行达到其最大屏幕宽度时，会拆分为多行。  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  允许您请求不同大小的数据包。 *packet_size* 的有效值介于 512 和 65535 之间。 默认值 **osql** 是服务器默认值。 执行较大的脚本时，各个 GO 命令之间的 SQL 语句的数量是庞大的，因此增大数据包可以提高性能。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 的测试表明大容量复制操作的最快设置通常为 8192。 可以请求更大的数据包，但如果请求不能得到批准，则 **osql** 会将此值默认为服务器的默认值。  
   
  **-e**  
@@ -129,16 +129,16 @@ C:\>osql
  **-I**  
  将 QUOTED_IDENTIFIER 连接选项设置为开启。  
   
- **-D** *data_source_name*  
+ **-D** _data_source_name_  
  连接到某个通过用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 ODBC 驱动程序定义的 ODBC 数据源。 **osql** 连接使用该数据源中指定的选项。  
   
 > [!NOTE]  
 >  此选项不适用于为其他驱动程序定义的数据源。  
   
- **-c** *cmd_end*  
+ **-c** _cmd_end_  
  指定命令终止符。 默认情况下，可以在行中输入一个单独的 GO 来终止命令，并将该命令发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 如果要重置命令终止符，请勿使用对操作系统有特殊含义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 保留字或字符，无论其前面是否有反斜杠。  
   
- **-q "** *query* **"**  
+ **-q "** _query_ **"**  
  启动 **osql** 时执行查询，但在查询完成时不退出 **osql** 。 （注意查询语句不应包含 GO）。 如果从批处理文件中发出查询，请使用 %variables 或环境 %variables%。 例如：  
   
 ```  
@@ -148,22 +148,22 @@ osql -E -q "select name, object_id from %table%"
   
  将查询用双引号括起来，将查询中嵌入的任何内容用单引号括起来。  
   
- **-Q"** *query* **"**  
+ **-Q"** _query_ **"**  
  执行查询并立即退出 **osql**。 将查询用双引号括起来，将查询中嵌入的任何内容用单引号括起来。  
   
  **-n**  
  从输入行中删除编号和提示符号 (>)。  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  自定义错误消息的显示。 显示指定的或更高严重级别的错误的消息数、状态和错误级别。 不显示低于指定级别的错误的信息。 使用 **-1** 可以指定返回所有标题及其消息，即使是信息型消息。 如果使用 **-1**，则在参数和设置之间不能有空格（可以是 **-m-1**，不能是 **-m -1**）。  
   
  **-r** { **0**| **1**}  
  将消息输出重定向到屏幕 (**stderr**)。 如果不指定参数，或指定参数为 **0**，则仅重定向严重级别为 11 或更高的错误信息。 如果指定参数为 **1**，则将重定向所有的消息输出（包括“print”）。  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  标识包含一批 SQL 语句或存储过程的文件。 小于 (**\<**) 比较运算符可以代替 **-i**使用。  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  标识从 **osql**接收输出的文件。 大于 (**>**) 比较运算符可以代替 **-o**使用。  
   
  如果 *input_file* 不是 Unicode 并且未指定 **-u** ，则以 OEM 格式存储 *output_file* 。 如果 *input_file* 是 Unicode 或指定了 **-u** ，则以 Unicode 格式存储 *output_file* 。  
@@ -194,7 +194,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  **-n**、 **-O** 和 **-D** 选项不再受 **osql**支持。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql**启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
   
  如果启动 **osql**时不指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用环境变量，如 **osqluser=(**_user_**)** 或 **osqlserver=(**_server_**)**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
@@ -209,7 +209,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 命令  
  除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **中的**语句外，还可以使用以下命令。  
   
-|Command|说明|  
+|Command|描述|  
 |-------------|-----------------|  
 |GO|执行上一个 GO 命令之后输入的所有语句。|  
 |RESET|清除已输入的所有语句。|  

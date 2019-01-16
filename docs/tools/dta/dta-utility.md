@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529125"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590191"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ dta
  **-?**  
  显示使用信息。  
   
- **-A** *time_for_tuning_in_minutes*  
+ **-A** _time_for_tuning_in_minutes_  
  指定优化时间限制（分钟）。 **dta** 使用指定的时间优化工作负荷，并生成一个包含建议的物理设计更改的脚本。 默认情况下， **dta** 采用的优化时间为 8 小时。 指定 0 允许不限制优化时间。 **dta** 可能在限制时间之前完成整个工作负荷的优化。 但是，为确保整个工作负荷都得到优化，我们建议您指定不受限制的优化时间 (-A 0)。  
   
  **-a**  
  优化工作负荷和应用建议时不作提示。  
   
- **-B** *storage_size*  
+ **-B** _storage_size_  
  指定推荐的索引和分区可以使用的最大空间 (MB)。 优化多个数据库时，建议对所有数据库都进行空间计算。 默认情况下， **dta** 采用下列存储大小中较小的一个：  
   
 -   当前原始数据大小的三倍，包括数据库中表的堆和聚集索引的总大小。  
@@ -96,13 +96,13 @@ dta
   
  默认存储大小不包括非聚集索引和索引视图。  
   
- **-C** *max_columns_in_index*  
+ **-C** _max_columns_in_index_  
  指定 **dta** 推荐的索引中的最大列数。 最大值为 1024。 默认情况下，此参数设置为 16。  
   
- **-c** *max_key_columns_in_index*  
+ **-c** _max_key_columns_in_index_  
  指定 **dta** 推荐的索引中的最大键列数。 默认值为 16，允许该最大值。 **dta** 也会考虑创建带有包含列的索引。 建议的包含列的索引可能会超出此参数中指定的列数。  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  指定要优化的每个数据库的名称。 第一个数据库是默认数据库。 可以指定多个数据库，各数据库名称用逗号进行分隔。例如：  
   
 ```  
@@ -129,7 +129,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  指定优化工作负荷时 **dta** 连接到的第一个数据库。 只能为此参数指定一个数据库。 例如：  
   
 ```  
@@ -145,7 +145,7 @@ dta -d AdventureWorks2012 ...
  **-E**  
  使用可信连接而不请求密码。 必须使用指定登录 ID 的 **-E** 参数或 **-U** 参数。  
   
- **-e** *tuning_log_name*  
+ **-e** _tuning_log_name_  
  指定 **dta** 记录其无法优化的事件的表或文件的名称。 表的创建位置是执行优化的服务器。  
   
  如果使用表，则用以下格式指定其名称： *[database_name].[owner_name].table_name*。 下表显示了每个参数的默认值：  
@@ -154,7 +154,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|使用 -D 选项指定的 database_name||  
 |*owner_name*|**dbo**|*owner_name* 必须为 **dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
-|*table_name*|无||  
+|*table_name*|None||  
   
  如果使用文件，则指定 .xml 作为其扩展名。 例如，TuningLog.xml。  
   
@@ -164,10 +164,10 @@ dta -d AdventureWorks2012 ...
  **-F**  
  允许 **dta** 覆盖现有的输出文件。 如果已经存在同名输出文件，并且没有指定 **-F** ，则 **dta**将返回错误。 你可以使用具有 **-of** 、 **-or**或 **-ox**的 **-F**。  
   
- **-fa** *physical_design_structures_to_add*  
- 指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时， **dta** 将使用默认值 **-fa****IDX**。  
+ **-fa** _physical_design_structures_to_add_  
+ 指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时，dta 将使用默认值 -fa IDX。  
   
-|ReplTest1|说明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引视图。|  
 |IDX|仅限索引。|  
@@ -185,32 +185,32 @@ dta -d AdventureWorks2012 ...
 |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 
   
- **-fk** *keep_existing_option*  
+ **-fk** _keep_existing_option_  
  指定 **dta** 在生成其建议时必须保留的现有物理设计结构。 下表列出并介绍了可以为此参数指定的值：  
   
-|ReplTest1|说明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|NONE|无现有结构|  
+|无|无现有结构|  
 |ALL|所有现有结构|  
 |ALIGNED|所有分区对齐结构。|  
 |CL_IDX|表中的所有聚集索引|  
 |IDX|表中的所有聚集索引和非聚集索引|  
   
- **-fp** *partitioning_strategy*  
+ **-fp** _partitioning_strategy_  
  指定 **dta** 建议的新物理设计结构（索引和索引视图）是否应进行分区以及如何进行分区。 下表列出并介绍了可以为此参数指定的值：  
   
-|ReplTest1|说明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |无|不分区|  
 |FULL|完全分区（选择该值可增强性能）|  
 |ALIGNED|仅限对齐分区（选择该值可增强可管理性）|  
   
- ALIGNED 表示在 **dta** 生成的建议中，每个建议的索引都完全按定义该索引的基础表所用的方式进行分区。 索引视图中的非聚集索引与索引视图对齐。 只能为此参数指定一个值。 默认值为 **-fp****NONE**。  
+ ALIGNED 表示在 **dta** 生成的建议中，每个建议的索引都完全按定义该索引的基础表所用的方式进行分区。 索引视图中的非聚集索引与索引视图对齐。 只能为此参数指定一个值。 默认值为 -fp NONE。  
   
- **-fx** *drop_only_mode*  
+ **-fx** _drop_only_mode_  
  指定 **dta** 仅考虑删除现有物理设计结构。 没有考虑任何新的物理设计结构。 如果指定此选项， **dta** 将评估现有物理设计结构的使用情况，并建议删除很少使用的结构。 此参数不带任何值， 它不能与 **-fa**、 **-fp**或 **-fk ALL** 参数一起使用。  
   
- **-ID** *session_ID*  
+ **-ID** _session_ID_  
  为优化会话指定一个数字标识符。 如果未指定，则 **dta** 将生成一个 ID 号。 可以使用此标识符查看现有优化会话的信息。 如果不指定 **-ID**值，则必须用 **-s**指定会话名。  
   
  **-ip**  
@@ -223,11 +223,11 @@ dta -d AdventureWorks2012 ...
 |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
      
   
- **-if** *workload_file*  
+ **-if** _workload_file_  
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
   
- **-it** *workload_trace_table_name*  
- 指定包含用于优化的工作负荷跟踪的表名。 按以下格式指定名称：[database_name].[owner_name].table_name。  
+ **-it** _workload_trace_table_name_  
+ 指定包含用于优化的工作负荷跟踪的表名。 如果使用表，则用以下格式指定其名称：[*database_name*]**.**[*owner_name*]**.**_table_name_。  
   
  下表显示了每个参数的默认值：  
   
@@ -240,16 +240,16 @@ dta -d AdventureWorks2012 ...
 > [!NOTE]  
 >  *owner_name* 必须为 **dbo**。 如果指定了其他任何值，则 **dta** 执行将失败并返回错误。 另请注意，必须指定一个工作负荷表或一个工作负荷文件。  
   
- **-ix** *input_XML_file_name*  
+ **-ix** _input_XML_file_name_  
  指定包含 **dta** 输入信息的 XML 文件的名称。 该文件必须是符合 DTASchema.xsd 的有效 XML 文档。 在命令提示符中指定的优化选项参数将覆盖与其冲突的此 XML 文件中的相应值。 唯一的例外情况是：在计算模式下，在 XML 输入文件中输入用户指定的配置。 例如，如果在 XML 输入文件的 **Configuration** 元素中输入了配置，并将 **EvaluateConfiguration** 元素指定为优化选项之一，则 XML 输入文件中指定的优化选项将覆盖命令提示符中输入的任何优化选项。  
   
- **-m** *minimum_improvement*  
+ **-m** _minimum_improvement_  
  指定推荐的配置必须满足的最小改进百分比。  
   
- **-N** *online_option*  
+ **-N** _online_option_  
  指定是否联机创建物理设计结构。 下表列出并说明了可为此参数指定的值：  
   
-|ReplTest1|说明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |OFF|建议的物理设计结构都无法联机创建。|  
 |ON|所有建议的物理设计结构都可以联机创建。|  
@@ -257,7 +257,7 @@ dta -d AdventureWorks2012 ...
   
  如果索引是联机创建的，则在其对象定义中追加 ONLINE = ON。  
   
- **-n** *number_of_events*  
+ **-n** _number_of_events_  
  指定 **dta** 应在工作负荷中优化的事件数。 如果指定此参数，并且工作负荷是包含持续时间信息的跟踪文件，则 **dta** 将按持续时间的降序优化事件。 此参数可用于比较物理设计结构的两个配置。 若要比较两个配置，请为这两个配置指定相同的要优化的事件数，再为这两个配置指定不受限制的优化时间。如下所示：  
   
 ```  
@@ -266,7 +266,7 @@ dta -n number_of_events -A 0
   
  在此示例中，必须指定不受限制的优化时间 (`-A 0`)。 否则，数据库引擎优化顾问将采用默认的 8 小时优化时间。
  
- **-I** *time_window_in_hours*   
+ **-I** _time_window_in_hours_   
    指定的时间长度 （以小时为单位） 时执行的查询必须具有为其视为 dta 优化时使用 **-iq**选项 （查询存储中的工作负荷）。 
 ```  
 dta -iq -I 48  
@@ -278,31 +278,31 @@ dta -iq -I 48
 
 
   
- **-or** *output_script_file_name*  
+ **-or** _output_script_file_name_  
  指定 **dta** 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本将建议写入指定的文件名和目标。  
   
  可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-or** 和 **-ox**时更应注意。  
   
- **-ox** *output_xml_report_file_name*  
+ **-or** _output_xml_report_file_name_  
  指定 **dta** 使用 XML 将建议写入输出报告。 如果提供了文件名，建议就会被写入该文件名。 否则， **dta** 将使用会话名生成文件名，并将该文件名写入当前目录。  
   
  可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-of** 和 **-ox**时更应注意。  
   
- **-F** *output_XML_file_name*  
+ **-ox** _output_XML_file_name_  
  指定 **dta** 使用 XML 文件将建议写入指定的文件名和目标。 请确保数据库引擎优化顾问有写入目标目录的权限。  
   
  可以将 **-F** 与此选项一起使用。 请确保文件名是唯一的，尤其在使用了 **-of** 和 **-or**时更应注意。  
   
- **-P** *password*  
+ **-P** _password_  
  指定登录 ID 的密码。 如果未使用此选项， **dta** 将提示输入密码。  
   
  **-q**  
  设置静默模式。 不向控制台写入信息，其中包括进度和标题信息。  
   
- **-rl** *analysis_report_list*  
+ **-rl** _analysis_report_list_  
  指定要生成的分析报告列表。 下表列出并说明了可为此参数指定的值：  
   
-|ReplTest1|报表|  
+|ReplTest1|报告|  
 |-----------|------------|  
 |ALL|所有分析报告|  
 |STMT_COST|语句开销报告|  
@@ -327,13 +327,13 @@ dta -iq -I 48
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** *server_name*[ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  指定要连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机和实例的名称。 如果未指定 *server_name* ，则 **dta** 将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果连接到命名实例或从网络中的远程计算机执行 **dta** ，则必须使用此选项。  
   
- **-s** *session_name*  
+ **-s** _session_name_  
  指定优化会话的名称。 如果未指定 **-ID** ，则必须使用此选项。  
   
- **-Tf** *table_list_file*  
+ **-Tf** _table_list_file_  
  指定包含要优化的一组表的文件名。 文件中列出的每个表应另起一行。 表名的命名应限定为三个部分，例如， **AdventureWorks2012.HumanResources.Department**。 为了调用表的扩展功能，可以选择在现有表名后加上一个数字，指示表中的预定行数。 数据库引擎优化顾问在优化或评估引用这些表的工作负荷中的语句时，将考虑这些预定行数。 请注意， *number_of_rows* 计数和 *table_name*之间可以有一个或多个空格。  
   
  以下是 *table_list_file*的文件格式：  
@@ -348,12 +348,12 @@ dta -iq -I 48
   
  如果省略 **-Tf** 和 **-Tl** 参数，则将考虑对指定数据库中的所有用户表进行优化。  
   
- **-Tl** *table_list*  
+ **-Tl** _table_list_  
  在命令提示符中指定要优化的一组表。 各表名间用逗号分隔。 如果使用 **-D** 参数只指定一个数据库，则无需使用数据库名限定表名。 在其他情况下，使用以下格式的完全限定名： *database_name.schema_name.table_name* ，每个表都必须使用此格式。  
   
  此参数是使用表列表文件 (**-Tf**) 的替代方法。 如果同时使用 **-Tl** 和 **-Tf** ，则 **dta** 将失败并返回错误。  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  指定用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录 ID。  
   
  **-u**  
@@ -362,7 +362,7 @@ dta -iq -I 48
  **-x**  
  启动优化会话，然后退出。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  按 Ctrl+C 一次可停止优化会话，并可根据 **dta** 此时已完成的分析生成建议。 系统将提示您确定是否要生成建议。 再次按 Ctrl+C 停止优化会话，而不生成建议。  
   
 ## <a name="examples"></a>示例  

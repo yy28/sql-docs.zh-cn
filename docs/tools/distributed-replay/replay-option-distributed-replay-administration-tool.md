@@ -11,12 +11,12 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511159"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125937"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重播选项（分布式重播管理工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>Parameters  
- **-m** *控制器*  
+ **-m** _控制器_  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  指定控制器上用于存储中间文件的目录。 **-d** 参数是必需的。  
   
  需要满足以下要求：  
@@ -55,11 +55,11 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 -   不支持 UNC 路径。  
   
  **-o**  
- 捕获客户端的重播活动，并将其保存到一个结果跟踪文件中，该文件的路径由客户端配置文件 `<ResultDirectory>` 的 `DReplayClient.xml` 元素指定。  
+ 捕获客户端的重播活动，并将其保存到一个结果跟踪文件中，该文件的路径由客户端配置文件 `<ResultDirectory>` 的 `DReplayClient.xml`元素指定。  
   
  如果 -o 参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  指定应针对其重播分布式工作负荷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目标实例。 必须以 **server_name[\instance name]** 格式指定此参数。  
   
  不能使用“`localhost`”或“`.`”作为目标服务器。  
@@ -68,18 +68,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  如果使用 **-s** 参数，则将忽略重播配置文件 `<Server>` 部分中的 `<ReplayOptions>` 元素。  
   
- **-w** *clients*  
+ **-w** _clients_  
  此必需的参数是一个逗号分隔列表 （不含空格），用来指定应参与分布式重播的客户端的计算机名称。 不允许使用 IP 地址。 注意，客户端必须已向控制器注册。  
   
 > [!NOTE]  
 >  当客户端服务启动时，每个客户端都向客户端配置文件中指定的控制器注册。  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  重播配置文件的完整路径；当该文件存储在其他位置时，用于指定该位置。  
   
  若要使用重播配置文件 **的默认值，则不需要** -c `DReplay.exe.replay.config`参数。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  指定显示状态的频率（以秒为单位）。  
   
  如果未指定 **-f** ，则默认间隔为 30 秒。  

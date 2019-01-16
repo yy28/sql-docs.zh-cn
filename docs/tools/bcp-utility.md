@@ -29,19 +29,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: MTE75
+ms.openlocfilehash: d174865431ba6734c1a12f4e8b58ab700864bba8
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712498"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143537"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 有关如何在 Linux 上使用 bcp，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
-
- > 有关使用 Azure SQL 数据仓库使用 bcp 的详细信息，请参阅[使用 bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+> 有关如何在 Linux 上使用 bcp，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+> 
+> 有关使用 Azure SQL 数据仓库使用 bcp 的详细信息，请参阅[使用 bcp 加载数据](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
   大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52712498"
 
 版本号：15.0 <br>
 生成号：15.0.1000.34<br>
-发布日期： 2018 年 10 月 18 日
+发布日期2018 年 10 月 18日日
 
 SQLCMD 的新版本支持 Azure AD 身份验证，包括对 SQL 数据库、 SQL 数据仓库和始终加密功能的多重身份验证 (MFA) 支持。
 新的 BCP 支持 Azure AD 身份验证，包括多重身份验证 (MFA) 支持用于 SQL 数据库和 SQL 数据仓库。
@@ -172,7 +172,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-d** _**database\_name**_<a name="d"></a>   
  指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果指定了 **-d** database_name 和包含三部分的名称（database_name.schema.table，作为第一个参数传递给 bcp.exe），则将发生错误，因为不能两次指定数据库名称。如果 database_name 以连字符 (-) 或正斜杠 (/) 开头，则不会在 **-d** 和数据库名称之间添加空格。  
   
- **-e**  _**err\_文件**_<a name="e"></a>  
+ **-e** _**err\_file**_<a name="e"></a>  
  指定错误文件的完整路径，此文件用于存储 **bcp** 实用工具无法从文件传输到数据库的所有行。 **bcp** 命令产生的错误消息将被发送到用户的工作站。 如果不使用此选项，则不会创建错误文件。  
   
  如果 *err_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-e** 与 *err_file* 值之间包含空格。  
@@ -251,7 +251,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    若要启用交互式身份验证，请提供-G 选项与用户名 (-U)，但不提供密码。   
 
-   下面的示例将使用 Azure AD 交互模式下，该值指示用户名的用户是指的 AAD 帐户的数据导出。 这是在上一节中使用的同一示例： *Azure Active Directory 用户名和密码*。  
+   下面的示例将使用 Azure AD 交互模式下，该值指示用户名的用户是指的 AAD 帐户的数据导出。 这是在上一节中使用的同一示例：*Azure Active Directory 用户名和密码：*  
 
    交互模式要求提供密码才能手动输入，或者将启用，多重身份验证的帐户完成配置的 MFA 身份验证方法。 
 
@@ -298,7 +298,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   > **bcp** 现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。
   
   > [!NOTE]
-  >  **-m** *max_errors* 开关不适用于约束检查。
+  > **-m** *max_errors* 开关不适用于约束检查。
   
 * **FIRE_TRIGGERS**  
 与 **in** 参数一同指定，在目标表中定义的任何插入触发器都将在大容量复制操作期间运行。 如果未指定 FIRE_TRIGGERS，将不运行任何插入触发器。 对于 **out**、 **queryout**和 **format** 参数，将忽略 FIRE_TRIGGERS。  
@@ -312,7 +312,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
 **-K** _**application\_intent**_<a name="K"></a>   
-连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K**，bcp 实用工具将不支持连接到 Always On 可用性组中的辅助副本。 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
+连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K** ，bcp 实用工具将不支持连接到 Always On 可用性组中的辅助副本。 有关详细信息，请参阅 [活动次要副本：可读次要副本（Always On 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
 **-L** _**last\_row**_<a name="L"></a>  
 指定要从表中导出或从数据文件中导入的最后一行的编号。 此参数的值应大于 (>) 0，小于 (<) 或等于 (=) 最后一行的编号。 如果未指定此参数，则默认为文件的最后一行。  
@@ -341,7 +341,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  可忽略该警告。 解决此警告的一个方法是使用 **-n** 来替代 **-N**。  
   
- **-o** _**输出\_文件**_<a name="o"></a>  
+ **-o** _**output\_file**_<a name="o"></a>  
  指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
   
  如果 *output_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-o** 与 *output_file* 值之间包含空格。  
@@ -365,7 +365,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  有关详细信息，请参阅本主题后面的 [备注](#remarks)。  
   
- **-r** _**行\_术语**_<a name="r"></a>  
+ **-r** _**row\_term**_<a name="r"></a>  
  指定行终止符。 默认的行终止符是 **\n** （换行符）。 使用此参数可替代默认行终止符。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中以十六进制表示法指定行终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
@@ -377,7 +377,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  -S server\_name [\\instance\_name]<a name="S"></a> 指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 如果未指定服务器，则 **bcp** 实用工具将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果从网络或本地命名实例上的远程计算机中运行 **bcp** 命令，则必须使用此选项。 若要连接到服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例，请仅指定 *server_name*。 要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请指定 server\_name\\instance\_name。  
   
- **-t** _**字段\_术语**_<a name="t"></a>  
+ **-t** _**field\_term**_<a name="t"></a>  
  指定字段终止符。 默认的字段终止符是 **\t** （制表符）。 使用此参数可以替代默认字段终止符。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中以十六进制表示法指定字段终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
@@ -596,7 +596,7 @@ bcp -v
   
  该示例假定你使用混合模式身份验证，必须使用 **-U** 开关指定登录 ID。 并且，除非你连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例，否则请使用 **-S** 开关指定系统名称和实例名称（可选）。  
 
-在命令提示符处，输入以下命令： \(系统将提示你输入密码。\)
+在命令提示符处输入以下命令：\(系统将提示你输入密码。\)
 ```  
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
@@ -709,6 +709,6 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
   
 ## <a name="feedback"></a>反馈
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 客户端工具论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 客户端工具论坛](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

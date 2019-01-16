@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c07b0bb4659f9b1b05573bf952842486f9ec72e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420448"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125837"
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,12 +53,12 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-你可以选择指定协议和端口来连接到服务器。 例如， **Server = tcp:***servername***，12345**。 请注意，唯一支持的 Linux 和 macOS 的驱动程序的协议是`tcp`。
+你可以选择指定协议和端口来连接到服务器。 例如， **Server = tcp:**_servername_**，12345**。 请注意，唯一支持的 Linux 和 macOS 的驱动程序的协议是`tcp`。
 
 若要连接到静态端口上的命名实例，请使用 Server=servername,port_number<b></b>。 不支持连接到动态端口。  
 
 可以选择将 DSN 信息添加到模板文件并执行以下命令，以将其添加到 `~/.odbc.ini`：
- - **odbcinst-i-s-f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 你可以验证您的驱动程序是否正常工作使用`isql`要测试连接，也可以使用以下命令：
  - **bcp out OutFile.dat-S master.INFORMATION_SCHEMA.TABLES <server> -U <name> -P <password>**  
@@ -72,7 +72,7 @@ Server = [protocol:]server[,port]
 
 无论 **Encrypt** 和 **TrustServerCertificate**的设置如何，服务器登录凭据（用户名和密码）都始终处于加密状态。 下表显示了 **Encrypt** 和 **TrustServerCertificate** 设置的效果。  
 
-||**TrustServerCertificate = 否**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|  
 |**Encrypt=yes**|检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书中使用者公用名 (CN) 或使用者可选名称 (SAN) 中的名称（或 IP 地址）应与连接字符串中指定的服务器名称（或 IP 地址）完全匹配。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。|  
