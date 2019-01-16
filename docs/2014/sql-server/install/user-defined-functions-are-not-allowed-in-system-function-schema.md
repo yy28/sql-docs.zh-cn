@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540011"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254272"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema 中不允许使用用户定义函数
   升级顾问检测到的未记录的用户所拥有的用户定义函数**system_function_schema**。 不能通过指定此用户创建用户定义的系统功能。 **System_function_schema**用户名不存在，并且这是与此名称关联的用户 ID (UID = 4) 保留供**sys**架构和被限制为仅供内部使用。  
@@ -55,7 +55,7 @@ ms.locfileid: "52540011"
   
 4.  替换为对引用**system_function_schema**与**dbo**包含用户定义函数 DDL 语句的所有脚本中。  
   
-5.  修改脚本，它们调用这些函数来使用任一两个部分组成的名称 dbo **。 * * * function_name*，或三部分组成的名称*database_name ***。** dbo。* function_name *。  
+5.  修改脚本，它们调用这些函数使用两个部分组成的名称 dbo **。**_function_name_，或三部分组成的名称_database_name_**。** dbo。*function_name*。  
   
  有关详细信息，请参阅 SQL Server 联机丛书的下列主题：  
   

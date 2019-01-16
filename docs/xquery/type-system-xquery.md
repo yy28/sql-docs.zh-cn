@@ -24,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668657"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254782"
 ---
 # <a name="type-system-xquery"></a>类型系统 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 对于架构类型是强类型语言，对于非类型化的数据是弱类型语言。 预定义的 XQuery 类型包括：  
   
--   XML 架构中的内置类型**https://www.w3.org/2001/XMLSchema**命名空间。  
+-   XML 架构中的内置类型**http://www.w3.org/2001/XMLSchema**命名空间。  
   
--   中定义的类型**https://www.w3.org/2004/07/xpath-datatypes**命名空间。  
+-   中定义的类型**http://www.w3.org/2004/07/xpath-datatypes**命名空间。  
   
  本主题还说明了下列内容：  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
  此类型化信息是由与该列关联的 XML 架构集合提供的。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>在 XPath 数据类型命名空间中定义的类型  
- 中定义的类型**https://www.w3.org/2004/07/xpath-datatypes**命名空间具有预定义的前缀**xdt**。 这些类型的限制条件如下：  
+ 中定义的类型**http://www.w3.org/2004/07/xpath-datatypes**命名空间具有预定义的前缀**xdt**。 这些类型的限制条件如下：  
   
 -   在创建 XML 架构集合时无法使用这些类型。 这些类型的 XQuery 类型系统中使用，用于[XQuery 与静态类型化](../xquery/xquery-and-static-typing.md)。 可以将其转换为原子类型，例如， **xdt: untypedatomic**，在**xdt**命名空间。  
   
@@ -110,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  

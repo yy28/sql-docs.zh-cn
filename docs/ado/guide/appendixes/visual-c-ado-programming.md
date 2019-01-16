@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997589"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257042"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 编程
 ADO API 参考介绍 ADO 应用程序编程接口 (API) 使用 Microsoft Visual Basic 类似的语法的功能。 ADO 程序员的目标的受众是所有用户，但采用不同语言，例如 Visual Basic、 Visual c + + (带和不带 **#import**指令)，和 Visual J + + 中 （与 ADO/WFC 类包）。  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  例如，**命令**对象**ActiveConnection**属性声明与为的可选语法**获取**_ActiveConnection_并**PutRef**_ActiveConnection_。 **PutRef**的语法是一个不错的选择，因为在实践中，通常需要将一种开放**连接**对象 (即**连接**对象指针) 在此属性。 但是，**记录集**对象具有**获取**-，**放**-，和**PutRef**_ActiveConnection_操作，但没有替代语法。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>集合、 GetItem 方法和项属性  
+
  ADO 定义了多个集合，包括**字段**，**参数**，**属性**，以及**错误**。 在 Visual c + + **GetItem (_索引_)** 方法返回集合的成员。 *索引*是**变体**，其值是数字索引的集合中的成员或包含的成员的名称的字符串。  
   
  **__Declspec(property...)** 编译器指令声明**项**属性设置为每个集合的可选语法的基本**GetItem()** 方法。 替代语法使用方括号括起来，看起来类似于数组引用。 一般情况下，两种形式如以下所示：  

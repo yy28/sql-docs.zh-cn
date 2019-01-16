@@ -11,14 +11,17 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 77e818109424b5f0d9dea3b495da4e927c506366
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160535"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299234"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入门：在云中运行 SQL Server
+
+  > [!div class="nextstepaction"]
+  > [请分享你有关 SQL Docs 表的内容的反馈 ！](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -27,9 +30,9 @@ ms.locfileid: "53160535"
 > [!NOTE]
 > 如果您选择运行 SQL Server 的付费的版本，然后您需要自带许可 (BYOL)。
 
-## <a name="amazon-web-services"></a>Amazon Web 服务
+## <a name="amazon-web-services"></a>Amazon Web Services
 1.  使用至少 2 GB 的内存从 marketplace 中创建 Linux AMI 
-    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Ssh 连接到与 AMI
@@ -55,7 +58,7 @@ ms.locfileid: "53160535"
     
 ## <a name="google-cloud-platform"></a>Google 云平台
 1.  创建具有至少 2 GB 的内存从云启动器的 Linux 映像 
-    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  连接到的映像与 ssh 配合使用

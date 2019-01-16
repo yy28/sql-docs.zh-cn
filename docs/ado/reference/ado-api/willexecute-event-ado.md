@@ -17,12 +17,12 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623485"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255500"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**连接上执行的挂起命令之前调用事件。  
@@ -65,7 +65,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** ，可检查和修改挂起的执行参数。 此事件可能会返回挂起的命令被取消的请求。  
   
 > [!NOTE]
->  如果原始的源**命令**是一个由指定的流[CommandStream 属性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)属性，分配到一个新字符串 **WillExecute * * * 源*参数将更改的源**命令**。 **CommandStream**属性将被清除并且[CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)属性将更新与新的源。 指定的原始流**CommandStream**将发布的无法访问。  
+>  如果原始的源**命令**是一个由指定的流[CommandStream 属性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)属性，分配到一个新字符串**WillExecute** _源_参数将更改的源**命令**。 **CommandStream**属性将被清除并且[CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)属性将更新与新的源。 指定的原始流**CommandStream**将发布的无法访问。  
   
  如果从的原始设置不同的新的源字符串的方言[Dialect 属性](../../../ado/reference/ado-api/dialect-property.md)属性 (这对应于**CommandStream**)，必须通过设置指定正确的方言**方言**属性所引用的命令对象*pCommand*。  
   

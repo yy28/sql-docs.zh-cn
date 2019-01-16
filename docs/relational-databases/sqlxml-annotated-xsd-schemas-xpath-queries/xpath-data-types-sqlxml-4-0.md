@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670402"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256922"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51670402"
  XPath 具有三种数据类型：**字符串**，**数量**，并**布尔**。 **数**数据类型始终是 IEEE 754 双精度浮点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)** 数据类型是 XPath 到最接近**数**。 但是， **float(53)** 而言并不是 IEEE 754。 例如，NaN（非数字）和 infinity 均未使用。 尝试将转换为非数值字符串**数**和尝试除以零将导致错误。  
   
 ## <a name="xpath-conversions"></a>XPath 转换  
- 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 XPath 语言规范，XML 路径语言 (XPath) 版本 1.0 W3C 推荐建议，1999 年 10 月 8，可以在 W3C Web 站点上找到 https://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
+ 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 XPath 语言规范，XML 路径语言 (XPath) 版本 1.0 W3C 推荐建议，1999 年 10 月 8，可以在 W3C Web 站点上找到 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath 运算符分为四个类别：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51670402"
 |两者均不是节点集。|将转换的两个操作数**数**，然后进行比较。|将两个操作数均转换为常见类型，然后进行比较。 将转换为**布尔**如果有任一项**布尔**，**数**如果有任一项**数**; 否则为将转换为**字符串**.|  
   
 > [!NOTE]  
->  因为 XPath 关系运算符始终将转换为其操作数**数量**，**字符串**不可能进行比较。 为了包括日期比较，SQL Server 2000，提供了此向 XPath 规范的变体： 关系运算符比较时**字符串**到**字符串**、 节点集到**字符串**，或字符串值的节点集与字符串的值的节点集，**字符串**比较 (不**数**比较) 执行。  
+>  因为 XPath 关系运算符始终将转换为其操作数**数量**，**字符串**不可能进行比较。 为了包括日期比较，SQL Server 2000 提供了此向 XPath 规范的变体：关系运算符比较时**字符串**到**字符串**、 节点设置为**字符串**，或字符串值的节点集与字符串的值的节点集， **字符串**比较 (不**数**比较) 执行。  
   
 ## <a name="node-set-conversions"></a>节点集转换  
  节点集转换并非始终都是直观的。 节点集转换为**字符串**通过集中执行仅第一个节点的字符串值。 节点集转换为**数量**通过将其转换为**字符串**，然后将转换**字符串**到**数**。 节点集转换为**布尔**通过测试其是否存在。  
@@ -74,7 +74,7 @@ ms.locfileid: "51670402"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，节点-设置-到-**字符串**或节点的设置-到-**数**未实现 XPath 规范所述的转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，基于 W3C XPath 规范，XPath 查询`Order[OrderDetail/@UnitPrice > 10.0]`的第一个选择以下顺序**OrderDetail**具有**UnitPrice**大于 10.0。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此 XPath 查询选择以下任何顺序**OrderDetail**具有**UnitPrice**大于 10.0。  
   
- 转换为**布尔**产生存在测试; 因此，XPath 查询`Products[@Discontinued=true()]`等效于 SQL 表达式"Products.Discontinued is not null"，非 SQL 表达式"Products.Discontinued = 1"。 若要使查询等效于后者的 SQL 表达式，第一次节点-将该集转换为非**布尔**类型，如**数**。 例如 `Products[number(@Discontinued) = true()]` 。  
+ 转换为**布尔**产生存在测试; 因此，XPath 查询`Products[@Discontinued=true()]`等效于 SQL 表达式"Products.Discontinued is not null"，非 SQL 表达式"Products.Discontinued = 1"。 若要使查询等效于后者的 SQL 表达式，第一次节点-将该集转换为非**布尔**类型，如**数**。 例如，`Products[number(@Discontinued) = true()]`。  
   
  因为如果运算符对于节点集中任一节点为 TRUE，则大多数运算符均定义为 TRUE；所以，在节点集为空时，这些运算的计算结果始终为 FALSE。 因此，如果 A 为空，则 `A = B` 和 `A != B` 均为 FALSE，并且 `not(A=B)` 和 `not(A!=B)` 均为 TRUE。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "51670402"
   
 |XDR 数据类型|等效<br /><br /> XPath 数据类型|使用的 SQL Server 转换|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
+|Nonebin.base64bin.hex|不可用|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  

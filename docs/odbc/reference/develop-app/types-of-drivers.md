@@ -16,18 +16,18 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619685"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256952"
 ---
 # <a name="types-of-drivers"></a>驱动程序类型
 ODBC 驱动程序可以进行分类，如下所示：  
   
 -   **32 位 ODBC 2。**  
-     ***x*驱动程序**的 32 位驱动程序的：  
+     **_x_驱动程序**的 32 位驱动程序的：  
   
     -   导出仅 ODBC 2 *.x*函数。  
   

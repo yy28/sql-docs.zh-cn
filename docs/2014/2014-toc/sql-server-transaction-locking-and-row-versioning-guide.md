@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd65d3335c7eb57c69f4fe6a37042376efc71bf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375589"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300604"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 事务锁定和行版本控制指南
   在任意数据库中，事务管理不善常常导致用户很多的系统中出现争用和性能问题。 随着访问数据的用户数量的增加，拥有能够高效地使用事务的应用程序也变得更为重要。 本指南说明 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用的锁定和行版本控制机制，以确保每个事务的物理完整性并提供有关应用程序如何高效控制事务的信息。  
@@ -152,7 +152,7 @@ GO
   
  在下面的示例中，第三个 `INSERT` 语句产生运行时重复主键错误。 由于前两个 `INSERT` 语句成功地执行并且提交，因此它们在运行时错误之后被保留下来。  
   
-```  
+```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
@@ -296,7 +296,7 @@ GO
 |未提交读|隔离事务的最低级别，只能保证不读取物理上损坏的数据。 在此级别上，允许脏读，因此一个事务可能看见其他事务所做的尚未提交的更改。|  
 |已提交读|允许事务读取另一个事务以前读取（未修改）的数据，而不必等待第一个事务完成。 [!INCLUDE[ssDE](../includes/ssde-md.md)]保留写锁（在所选数据上获取）直到事务结束，但是一执行 SELECT 操作就释放读锁。 这是[!INCLUDE[ssDE](../includes/ssde-md.md)]默认级别。|  
 |可重复读|[!INCLUDE[ssDE](../includes/ssde-md.md)]保留在所选数据上获取的读锁和写锁，直到事务结束。 但是，因为不管理范围锁，可能发生虚拟读取。|  
-|可序列化|隔离事务的最高级别，事务之间完全隔离。 [!INCLUDE[ssDE](../includes/ssde-md.md)]保留在所选数据上获取的读锁和写锁，在事务结束时释放它们。 SELECT 操作使用分范围的 WHERE 子句时获取范围锁，主要为了避免虚拟读取。<br /><br /> **注意：** 在请求可序列化隔离级别时，复制的表上的 DDL 操作和事务可能失败。 这是因为复制查询使用的提示可能与可序列化隔离级别不兼容。|  
+|可序列化|隔离事务的最高级别，事务之间完全隔离。 [!INCLUDE[ssDE](../includes/ssde-md.md)]保留在所选数据上获取的读锁和写锁，在事务结束时释放它们。 SELECT 操作使用分范围的 WHERE 子句时获取范围锁，主要为了避免虚拟读取。<br /><br /> 注意：在请求可序列化隔离级别时，复制的表上的 DDL 操作和事务可能失败。 这是因为复制查询使用的提示可能与可序列化隔离级别不兼容。|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还支持使用行版本控制的其他两个事务隔离级别。 一个是已提交读隔离的实现，另一个是事务隔离级别（快照）。  
   

@@ -17,31 +17,31 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721905"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256222"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE 和 INSERT 语句
 基于 SQL 的应用程序通过执行对表进行更改**更新**，**删除**，并**插入**语句。 这些语句是最小 SQL 语法的一致性级别的一部分，必须支持的所有驱动程序和数据源。  
   
  这些语句的语法是：  
   
- **更新***表名称*   
+ **更新**_表名称_  
   
- **设置***列标识符* **=** {*表达式* &#124; **NULL**}  
+ **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**，** *列标识符* **=** {*表达式* &#124; **NULL**}]...  
+ [**,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
   
- [**其中***搜索条件*]  
+ [**WHERE** _search-condition_]  
   
- **DELETE FROM** *l e-n*[**其中***搜索条件*]  
+ **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** *l e-n*[**(* * * 列标识符*[* *，** *列标识符*]...**)**]  
+ **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
   
- {*查询规范* &#124; **值 (***插入值* [**，** *插入值*]...**)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
   
  请注意，*查询规范*元素是仅在核心应用程序和扩展 SQL 语法和的中有效*表达式*并*搜索条件*元素变得更在核心应用程序和扩展 SQL 语法中复杂。  
   

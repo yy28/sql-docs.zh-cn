@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211006"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255682"
 ---
 # <a name="xml-persistence-format"></a>XML 暂留格式
 ADO 使用 utf-8 编码的 XML 流，它仍然存在。  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  架构演示了命名空间、 架构部分和数据部分的声明。 架构部分包含行、 ShipperID、 CompanyName 和 Phone 的定义。  
   
- 架构定义符合[W3C XML 数据规范](https://www.w3.org/TR/1998/NOTE-XML-data/)（尽管在 Internet Explorer 5 中将不进行验证） 可以完全验证。 XML 数据当前是记录集暂留的唯一支持的架构格式。  
+ 架构定义符合[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)（尽管在 Internet Explorer 5 中将不进行验证） 可以完全验证。 XML 数据当前是记录集暂留的唯一支持的架构格式。  
   
  数据节中有三个行包含运货商有关的信息。 对于空的行集，数据部分可能为空，但\<rs： 数据 > 标记必须存在。 不包含数据，您可以编写标记速记简单地\<rs： 数据 / >。 前缀为"rs"任何标记指示它是由 urn： 架构定义的命名空间中的 microsoft-com:rowset。  
   

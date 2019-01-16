@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512802"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300184"
 ---
 # <a name="sql-graph-architecture"></a>SQL 图形体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51512802"
  
 ![sql 图形体系结构](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql 图形数据库体系结构")   
 
-图 1: SQL 图形数据库体系结构
+图 1:SQL 图形数据库体系结构
  
 ## <a name="node-table"></a>节点表
 节点表表示关系图架构中的实体。 每次节点将创建一个表，以及用户定义列中，隐式`$node_id`创建列后，可唯一标识数据库中给定的节点。 中的值`$node_id`自动生成的是的组合`object_id`的该节点表和内部生成的 bigint 值。 但是，当`$node_id`选择列，显示中的 JSON 字符串形式的计算的值。 此外，`$node_id`是伪列，映射到在其中的十六进制字符串与内部名称。 当选择`$node_id`从表中，列名称将显示为`$node_id_<hex_string>`。 在查询中使用伪列名称是推荐的方法来查询内部`$node_id`应避免列和十六进制字符串，使用内部名称。
@@ -58,7 +58,7 @@ ms.locfileid: "51512802"
 
 ![朋友的 person 表](../../relational-databases/graphs/media/person-friends-tables.png "/people/person 节点和好友边缘表")   
 
-图 2： 节点和边界表的表示形式
+图 2：节点和边界表的表示形式
 
 
 
@@ -97,13 +97,15 @@ ms.locfileid: "51512802"
 
 `sys.columns` 此外将存储在节点或边界表中创建的隐式列的信息。 以下信息可以检索从 sys.columns，但是，用户不能选择这些列从一个节点或边界表。 
 
-节点表中的隐式列  
+节点表中的隐式列
+
 |列名    |数据类型  |is_hidden  |注释  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |内部`graph_id`列  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |外部节点`node_id`列  |
 
-边缘表中的隐式列  
+边缘表中的隐式列
+
 |列名    |数据类型  |is_hidden  |注释  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |内部`graph_id`列  |
@@ -138,7 +140,7 @@ ms.locfileid: "51512802"
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 现已扩展为支持创建表 AS 节点或 AS 边界。 请注意，边缘表可能会或可能没有任何用户定义的特性。  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|可以更改节点和边缘表的关系表，使用的相同方式`ALTER TABLE`。 用户可以添加或修改用户定义的列、 索引或约束。 但是，更改内部图表列，喜欢`$node_id`或`$edge_id`，将导致错误。  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |用户可以对伪列和用户定义的节点和边缘表中的列创建索引。 支持所有索引类型，包括聚集和非聚集列存储索引。  |
-|创建边缘约束    |[边缘约束&#40;Transact SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |用户可以立即创建边缘表以强制实施特定的语义的边缘约束和维护数据完整性  |
+|创建边缘约束    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |用户可以立即创建边缘表以强制实施特定的语义的边缘约束和维护数据完整性  |
 |DROP TABLE |[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)  |在关系表，使用的相同方式删除节点和边界表`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点和支持级联的删除边缘节点或节点表在删除时。 建议删除节点表后，如果用户删除该节点表手动维护完整性的关系图中的节点连接到任何边缘。  |
 
 
@@ -146,7 +148,7 @@ ms.locfileid: "51512802"
 |任务   |相关的文章  |说明
 |---  |---  |---  |
 |Insert |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)|插入节点表与关系表中插入无异。 值`$node_id`自动生成列。 尝试插入中的值`$node_id`或`$edge_id`列将导致错误。 用户必须提供相应的值`$from_id`和`$to_id`插入边缘表时的列。 `$from_id` 并`$to_id`是`$node_id`给定的边连接节点的值。  |
-|删除 | [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|可以在相同的方式删除节点或边界表中的数据，因为从关系表中删除它。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点和支持级联的删除边缘节点在删除时。 建议，无论何时删除节点，到该节点的所有连接边，也将删除维护的关系图的完整性。  |
+|DELETE | [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|可以在相同的方式删除节点或边界表中的数据，因为从关系表中删除它。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点和支持级联的删除边缘节点在删除时。 建议，无论何时删除节点，到该节点的所有连接边，也将删除维护的关系图的完整性。  |
 |UPDATE |[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  |可以使用 UPDATE 语句更新用户定义的列中的值。 更新内部图表列中， `$node_id`， `$edge_id`，`$from_id`和`$to_id`不允许。  |
 |MERGE |[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` 在节点或边界表上支持语句。  |
 
@@ -155,7 +157,7 @@ ms.locfileid: "51512802"
 |任务   |相关的文章  |说明
 |---  |---  |---  |
 |SELECT |[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)|节点和边缘表作为内部存储，因此在节点和边界表上支持大多数 SQL Server 或 Azure SQL 数据库中的表支持的操作  |
-|MATCH  | [匹配&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)|引入了匹配项的内置支持模式匹配和遍历关系图。  |
+|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|引入了匹配项的内置支持模式匹配和遍历关系图。  |
 
 
 

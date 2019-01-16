@@ -19,12 +19,12 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e9f4aa4cf1ab8694947411f5565250c6544d92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659106"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256232"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_syscollector_create_collector_type
  [ @collector_type_uid = ] '*collector_type_uid*'  
  是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**并且如果它为的 NULL，它将自动创建并作为 OUTPUT 返回。  
   
- [ @name =] '*名称*  
+ [ @name = ] '*name*'  
  收集器类型的名称。 *名称*是**sysname** ，并且必须指定。  
   
- [ @parameter_schema =] '*parameter_schema*  
+ [ @parameter_schema = ] '*parameter_schema*'  
  此收集器类型的 XML 架构。 *parameter_schema*是**xml**默认值为 NULL。  
   
- [ @parameter_formatter =] '*parameter_formatter*  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
  是用于转换 XML 以便在收集组属性页中使用的模板。 *parameter_formatter*是**xml**默认值为 NULL。  
   
  [@collection_package_id = ] *collection_package_id*  
@@ -68,7 +68,7 @@ sp_syscollector_create_collector_type
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="example"></a>示例  
@@ -79,7 +79,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

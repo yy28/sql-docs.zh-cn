@@ -11,16 +11,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143057"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298714"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
+  > [!div class="nextstepaction"]
+  > [请分享你有关 SQL Docs 表的内容的反馈 ！](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上运行。
+
 
 下载并安装最新版本中，*年 1 月发布*:
 
@@ -190,7 +194,7 @@ ms.locfileid: "54143057"
 
 2. 右键单击顶部的**用户设置**选项卡，然后单击**在资源管理器中展现**
 
-   ![显示在浏览器](./media/download/reveal-in-explorer.png)
+   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
 
 3. 复制此文件夹中的所有文件并保存在本地驱动器上易于查找的位置，例如 Documents 文件夹。
 

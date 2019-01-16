@@ -1,7 +1,7 @@
 ---
 title: 带批注的 XSD 架构 (SQLXML 4.0) 简介 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e97004dd3b8d28da571f66ba91782f408ee18ede
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04e34b343ba92fcd8602f2b296e90de2a147fbba
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674276"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255942"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>带批注的 XSD 架构简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "51674276"
  必须包含有效的 XSD 架构 **\<xsd: schema >** 元素定义，如下所示：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <!-- additional schema definitions here -->  
 </xsd:schema>  
 ```  
   
- **\<Xsd: schema >** 元素派生自的 XML 架构命名空间规范 https://www.w3.org/2001/XMLSchema 。  
+ **\<Xsd: schema >** 元素派生自的 XML 架构命名空间规范 http://www.w3.org/2001/XMLSchema 。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 架构的批注  
  您可以对 XSD 架构使用批注来描述数据库映射、查询数据库并返回 XML 文档形式的结果。 使用批注可将 XSD 架构映射到数据库表和列。 可以对 XSD 架构创建的 XML 视图指定 XPath 查询来查询数据库并获取 XML 形式的结果。  
@@ -61,7 +61,7 @@ ms.locfileid: "51674276"
  在 XSD 架构中，使用命名空间指定批注**urn： 架构-microsoft-com:mapping-架构**。 下面的示例中所示，指定的命名空间的最简单方法是指定它在 **\<xsd: schema >** 标记。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 ...  
 </xsd:schema>  
@@ -73,7 +73,7 @@ ms.locfileid: "51674276"
  在以下示例中，XSD 架构包含的 **\<Person.Contact >** 元素。 **\<员工 >** 元素具有**ContactID**属性和 **\<FirstName >** 并 **\<姓氏 >** 子元素：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
   <xsd:element name="Contact" >  
    <xsd:complexType>  
      <xsd:sequence>  
@@ -91,7 +91,7 @@ ms.locfileid: "51674276"
  向该 XSD 架构添加批注以将其元素和属性映射到数据库表和列：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  
@@ -121,15 +121,15 @@ ms.locfileid: "51674276"
 ## <a name="other-resources"></a>其他资源  
  有关 XML 架构定义语言 (XSD)、XML Path 语言 (XPath) 和可扩展样式表语言转换 (XSLT) 的详细信息，请访问以下网站：  
   
--   XML 架构第 0 部分： 入门，W3C 建议 (https://www.w3.org/TR/xmlschema-0/)  
+-   XML 架构第 0 部分：入门，W3C 建议 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 架构第 1 部分： 结构、 W3C 建议 (https://www.w3.org/TR/xmlschema-1/)  
+-   XML 架构第 1 部分：结构、 W3C 建议 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML 架构第 2: datatypes，W3C 建议 (https://www.w3.org/TR/xmlschema-2/)  
+-   XML 架构第 2: datatypes，W3C 建议 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML 路径语言 (XPath) (https://www.w3.org/TR/xpath)  
+-   XML 路径语言 (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL 转换 (XSLT) (https://www.w3.org/TR/xslt)  
+-   XSL 转换 (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>请参阅  
  [带批注的架构的安全注意事项&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

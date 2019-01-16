@@ -18,12 +18,12 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 470543f0016a01d10f6fff06383216ff984649fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e7c73e33a1f19acb2158ced848c220b2b7af447
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656287"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254152"
 ---
 # <a name="sequence-and-qnames-xquery"></a>序列和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ WHERE ProductModelID=7;
   
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <step1> Step 1 description goes here </step1>  
@@ -135,19 +135,19 @@ WHERE ProductModelID=7;
   
 |Prefix|URI|  
 |------------|---------|  
-|xs|https://www.w3.org/2001/XMLSchema|  
-|xsi|https://www.w3.org/2001/XMLSchema-instance|  
-|xdt|https://www.w3.org/2004/07/xpath-datatypes|  
-|fn|https://www.w3.org/2004/07/xpath-functions|  
+|xs|http://www.w3.org/2001/XMLSchema|  
+|xsi|http://www.w3.org/2001/XMLSchema-instance|  
+|xdt|http://www.w3.org/2004/07/xpath-datatypes|  
+|fn|http://www.w3.org/2004/07/xpath-functions|  
 |（无前缀）|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`https://www.w3.org/XML/1998/namespace`|  
+|xml|`http://www.w3.org/XML/1998/namespace`|  
 |（无前缀）|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  创建每个数据库有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
   
 > [!NOTE]  
->  此实现不支持`local`前缀中的 XQuery 规范中所述 https://www.w3.org/2004/07/xquery-local-functions 。  
+>  此实现不支持`local`前缀中的 XQuery 规范中所述 http://www.w3.org/2004/07/xquery-local-functions 。  
   
 ## <a name="see-also"></a>请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)  

@@ -1,7 +1,7 @@
 ---
 title: sp_addmergepullsubscription_agent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,14 +16,15 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba75dc83e8fb4ce5a9ad31876b2b2592b22b7197
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c49ade60bdbdbdc04fe7ec5b2ec221c10037982
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791779"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256532"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   向合并发布添加一个用于计划请求订阅同步的新代理作业。 此存储过程在订阅服务器的订阅数据库中执行。  
@@ -102,7 +103,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@publisher_security_mode =** ] *publisher_security_mode*  
+ [ **@publisher_security_mode =** ] *publisher_security_mode*  
  同步时连接到发布服务器所使用的安全模式。 *publisher_security_mode*是**int**，默认值为 1。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果**1**，指定 Windows 身份验证。  
   
 > [!IMPORTANT]  
@@ -117,7 +118,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [  **@publisher_encrypted_password =** ]*publisher_encrypted_password*  
+ [ **@publisher_encrypted_password =** ]*publisher_encrypted_password*  
  设置*publisher_encrypted_password*不再受支持。 尝试将此项设置**位**参数**1**将导致错误。  
   
  [  **@subscriber =** ] **'订阅服务器**   
@@ -126,7 +127,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@subscriber_db =** ] **'subscriber_db**   
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_security_mode =** ] *subscriber_security_mode*  
+ [ **@subscriber_security_mode =** ] *subscriber_security_mode*  
  同步时连接到订阅服务器所使用的安全模式。 *subscriber_security_mode*是**int**，默认值为 1。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果**1**，指定 Windows 身份验证。  
   
 > [!NOTE]  
@@ -147,7 +148,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@distributor =** ] **'分发服务器**   
  是分发服务器的名称。 *分发服务器*是**sysname**，默认值为*发布服务器*; 即，发布服务器也是分发服务器。  
   
- [  **@distributor_security_mode =** ] *distributor_security_mode*  
+ [ **@distributor_security_mode =** ] *distributor_security_mode*  
  是同步时连接到分发服务器时要使用的安全模式。 *distributor_security_mode*是**int**，默认值为 0。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  
   
 > [!IMPORTANT]  
@@ -162,10 +163,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [  **@encrypted_password =** ] *encrypted_password*  
+ [ **@encrypted_password =** ] *encrypted_password*  
  设置*encrypted_password*不再受支持。 尝试将此项设置**位**参数**1**将导致错误。  
   
- [  **@frequency_type =** ] *frequency_type*  
+ [ **@frequency_type =** ] *frequency_type*  
  安排合并代理的频率。 *frequency_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -183,7 +184,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  指定的值**64**使合并代理在连续模式下运行。 这相当于设置 **-连续**代理参数。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
- [  **@frequency_interval =** ] *frequency_interval*  
+ [ **@frequency_interval =** ] *frequency_interval*  
  合并代理在星期几运行。 *frequency_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -200,7 +201,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**10**|周末|  
 |NULL（默认值）||  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
+ [ **@frequency_relative_interval =** ] *frequency_relative_interval*  
  合并代理的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -212,10 +213,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**16**|上一次|  
 |NULL（默认值）||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
+ [ **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 NULL。  
   
- [  **@frequency_subday =** ] *frequency_subday*  
+ [ **@frequency_subday =** ] *frequency_subday*  
  在指定期内重新安排计划的频率。 *frequency_subday*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -226,13 +227,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**8**|Hour|  
 |NULL（默认值）||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
+ [ **@frequency_subday_interval =** ] *frequency_subday_interval*  
  间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
  [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  第一次安排合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
+ [ **@active_end_time_of_day =** ] *active_end_time_of_day*  
  停止安排合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
  [ **@active_start_date =** ] *active_start_date*  
@@ -248,7 +249,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
- [  **@merge_jobid =** ] *merge_jobid*  
+ [ **@merge_jobid =** ] *merge_jobid*  
  作业 ID 的输出参数。 *merge_jobid*是**binary(16)**，默认值为 NULL。  
   
  [  **@enabled_for_syncmgr =** ] **'enabled_for_syncmgr**   
@@ -257,7 +258,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@ftp_address =** ] **'ftp_address**   
  仅为保持向后兼容。  
   
- [  **@ftp_port =** ] *ftp_port*  
+ [ **@ftp_port =** ] *ftp_port*  
  仅为保持向后兼容。  
   
  [  **@ftp_login =** ] **'ftp_login**   
@@ -295,11 +296,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@dynamic_snapshot_location =** ] **'dynamic_snapshot_location** ]   
  在使用已筛选的数据快照时要读取的快照文件所在文件夹的路径。 *dynamic_snapshot_location*是**nvarchar(260)**，默认值为 NULL。 有关详细信息，请参阅 [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
- [  **@use_web_sync =** ] *use_web_sync*  
+ [ **@use_web_sync =** ] *use_web_sync*  
  指示已启用 Web 同步。 *use_web_sync*是**位**，默认值为 0。 **1**指定，可以使用 HTTP 通过 internet 同步请求订阅。  
   
  [  **@internet_url =** ] **'执行**   
- 用于 Web 同步的复制侦听器 (REPLISAPI.DLL) 的位置。 *执行*是**nvarchar(260)**，默认值为 NULL。 *执行*是一个完全限定的 URL，格式`https://server.domain.com/directory/replisapi.dll`。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `https://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
+ 用于 Web 同步的复制侦听器 (REPLISAPI.DLL) 的位置。 *执行*是**nvarchar(260)**，默认值为 NULL。 *执行*是一个完全限定的 URL，格式`http://server.domain.com/directory/replisapi.dll`。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `http://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
   
  [  **@internet_login =** ] **'internet_login**   
  合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时所用的登录名。 *internet_login*是**sysname**，默认值为 NULL。  
@@ -310,7 +311,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [  **@internet_security_mode =** ] *internet_security_mode*  
+ [ **@internet_security_mode =** ] *internet_security_mode*  
  合并代理在 Web 同步过程中使用 HTTPS 连接到 Web 服务器时所用的身份验证方法。 *internet_security_mode*是**int**可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -321,7 +322,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  建议您将基本身份验证与 Web 同步结合使用。 若要使用 Web 同步，必须与 Web 服务器进行 SSL 连接。 有关详细信息，请参阅 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。  
   
- [  **@internet_timeout =** ] *internet_timeout*  
+ [ **@internet_timeout =** ] *internet_timeout*  
  Web 同步请求过期之前的时间长度（以秒为单位）。 *internet_timeout*是**int**，默认值为**300**秒。  
   
  [  **@hostname =** ] **'主机名**   
@@ -353,10 +354,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="see-also"></a>请参阅  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

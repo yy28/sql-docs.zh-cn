@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31d486f24d9c06926462be856d9102a9a457bb7b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558714"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256382"
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个部分标头包含方括号 (**[]**) 包含类型和参数。 四个部分类型由文本的字符串指示**连接**， **sql**， **userlist**，或者**日志**。 参数是字符串、 默认值、 用户指定的标识符，或执行任何操作。  
@@ -55,7 +55,7 @@ identifier
   
  在以下情况下使用特定的节：  
   
--   一个**连接**如果客户端的值部分连接字符串关键字，使用部分"**数据源 = * * * 值*"，匹配**连接**部分标识符 *.*  
+-   一个**连接**如果客户端的值部分连接字符串关键字，使用部分"**数据源 =**_值_"，匹配**连接**部分标识符 *。*  
   
 -   **Sql**如果客户端命令字符串包含与匹配的字符串，则使用部分**sql**部分标识符。  
   

@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674156"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256592"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ ms.locfileid: "51674156"
  以下 XSD 映射架构有**\<客户 >**， **\<顺序 >**，以及 **\<OD >** 将映射到元素数据库中的 Sales.Customer、 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 表。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "51674156"
  以下 XSD 映射架构通过使用提供的表的 XML 视图**\<学生 >**， **\<课程 >**，以及**\<注册>** 元素。 **IDREFS**属性映射架构中的指定这些元素之间的关系。 **StudentIDList**特性，可以在**\<课程 >** 元素是**IDREFS**类型属性，它引用 Enrollment 表中的 StudentID 列。 同样， **enrolledin 属性**特性，可以在**\<学生 >** 元素是**IDREFS**类型属性，它是指在注册中的 CourseID 列表。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

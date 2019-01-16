@@ -17,18 +17,18 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541911"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255792"
 ---
 # <a name="types-of-applications"></a>应用程序类型
 ODBC 应用程序可以进行分类，如下所示：  
   
 -   **纯 ODBC 2。**  
-     ***x*应用程序**的 32 位应用程序的：  
+     **_x_应用程序**的 32 位应用程序的：  
   
     -   调用仅 ODBC 2。*x*函数 (包括 ODBC 1.0 函数**SQLSetParam**)。 这包括 ODBC 1。*x*已经移植到 32 位的应用程序。  
   
@@ -37,10 +37,10 @@ ODBC 应用程序可以进行分类，如下所示：
     -   已不被重新编译使用 ODBC 3.5 标头。  
   
 -   **纯 ODBC 2。**  
-     ***x*重新编译应用程序**纯 ODBC 2。*x*已被重新编译使用 ODBC 3.5 标头文件的应用程序通过设置 ODBCVER = 0x0250。  
+     **_x_重新编译应用程序**纯 ODBC 2。*x*已被重新编译使用 ODBC 3.5 标头文件的应用程序通过设置 ODBCVER = 0x0250。  
   
 -   **纯 ODBC 2。**  
-     ***x* Unicode 应用程序**纯 ODBC 2。*x*重新编译应用程序符合 Unicode 的并使用 SQL_WCHAR 数据类型。  
+     **_x_ Unicode 应用程序**纯 ODBC 2。*x*重新编译应用程序符合 Unicode 的并使用 SQL_WCHAR 数据类型。  
   
 -   **纯打开组和 ISO**-**符合 ODBC 应用程序的**的 32 位应用程序的：  
   

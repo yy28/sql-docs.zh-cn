@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d800875c3255866463aee95ff6446f740ace03fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 429d881953477592e6d65a601c85778dbcbbc339
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671066"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257142"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 支持 - 使用大容量加载
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51671066"
  若要从托管环境使用 SQLXML 大容量加载 COM 对象，需要添加对此对象的项目引用。 这将围绕该大容量加载 COM 对象生成一个托管的包装接口。  
   
 > [!NOTE]  
->  托管的 XML 大容量加载不使用托管流并且要求围绕本机流的包装。 SQLXML 大容量加载组件将不在多线程环境中运行（“[MTAThread]”属性）。 如果尝试在多线程环境中运行大容量加载组件，获取具有以下附加信息的 InvalidCastException 异常:"接口 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失败。" 解决方法是使包含大容量加载对象单线程可访问的对象 (例如，通过使用 **[STAThread]** 特性，如示例所示)。  
+>  托管的 XML 大容量加载不使用托管流并且要求围绕本机流的包装。 SQLXML 大容量加载组件将不在多线程环境中运行（“[MTAThread]”属性）。 如果您尝试在多线程环境中运行大容量加载组件，可具有以下附加信息的 InvalidCastException 异常："接口 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失败。" 解决方法是使包含大容量加载对象单线程可访问的对象 (例如，通过使用 **[STAThread]** 特性，如示例所示)。  
   
  本主题提供一个 C# 应用程序的工作示例，用于将 XML 数据大容量加载到数据库中。 请按照以下步骤创建工作示例：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51671066"
 2.  将以下架构保存在文件 (schema.xml) 中：  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  
