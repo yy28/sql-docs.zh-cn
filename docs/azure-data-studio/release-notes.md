@@ -3,7 +3,7 @@ title: 发行说明和更改日志
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 发行说明
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,26 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143657"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361677"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 最新发行说明和更改日志
 
-**[下载 1 月份发行版 ！](download.md)**
+**[下载并安装最新版本 ！](download.md)**
 
+
+## <a name="january-hotfix-2019-january-hotfix-release"></a>年 1 月修补程序 2019 （年 1 月修补程序版本）
+
+发布日期：2019 年 1 月 16日日  
+版本：1.3.9
+
+版本 1.3.9 修复 1.3.8 中发现的一些问题。 有关详细信息，请参阅[年 1 月修补程序版本](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)。
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="january-2019-january-release"></a>2019 年 1 月 （1 月份发行版）
 
@@ -37,8 +46,6 @@ ms.locfileid: "54143657"
 - 针对大量查询 （预览版） 流式处理的结果。
 - 社区扩展： sp_executesql to sql 和新的数据库。
 - 解决[bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)。
-
-有关详细信息，请参阅[更改日志](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="november-2018-november-release"></a>2018 年 11 月 （年 11 月发行版）
 
