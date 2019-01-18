@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328549"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254692"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 进行开发
 
@@ -40,14 +40,14 @@ REST API 请求/响应对可分解为五个组件：
 
 * HTTP 请求消息标头字段：
 
-    * 所需的 [ HTTP 方法](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)（也称为操作或谓词），它告知该服务你请求的操作类型。 Reporting Services REST API 支持 DELETE、GET、HEAD、PUT、POST 和 PATCH 方法。
+    * 所需的 [ HTTP 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)（也称为操作或谓词），它告知该服务你请求的操作类型。 Reporting Services REST API 支持 DELETE、GET、HEAD、PUT、POST 和 PATCH 方法。
     * 指定的 URI 和 HTTP 方法所需的其他可选的标头字段。
 
 * 可选的 HTTP 请求消息正文字段，用于支持 URI 和 HTTP 操作。 例如，POST 操作包含作为复杂参数传递的 MIME 编码对象。 对于 POST 或 PUT 操作，还应在 `Content-type` 请求标头中指定正文的 MIME 编码类型。 某些服务要求使用特定的 MIME 类型，如 `application/json`。
 
 * HTTP 响应消息标头字段：
 
-    * [HTTP 状态代码](https://www.w3.org/Protocols/HTTP/HTRESP.html)，包括从 2xx 成功代码到 4xx 或 5xx 错误代码在内的各种代码。 或者，可能返回服务定义的状态代码，如 API 文档中所指示。
+    * [HTTP 状态代码](http://www.w3.org/Protocols/HTTP/HTRESP.html)，包括从 2xx 成功代码到 4xx 或 5xx 错误代码在内的各种代码。 或者，可能返回服务定义的状态代码，如 API 文档中所指示。
     * 可选的其他标头字段，用于支持请求的响应，例如 `Content-type` 响应标头。
 
 * 可选的 HTTP 响应消息正文字段：

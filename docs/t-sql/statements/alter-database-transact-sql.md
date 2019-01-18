@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d67a43a1732ccbbecb7ffe3b6099acf315c86ecb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203106"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135317"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -138,7 +138,7 @@ CURRENT
   
 指定应更改当前使用的数据库。  
   
-MODIFY NAME *=***new_database_name  
+MODIFY NAME = new_database_name  
 使用指定的名称 new_database_name 重命名数据库。  
   
 COLLATE collation_name  
@@ -378,7 +378,7 @@ CURRENT
 
 指定应更改当前使用的数据库。  
   
-MODIFY NAME *=***new_database_name  
+MODIFY NAME = new_database_name  
 
 使用指定的名称 new_database_name 重命名数据库。 以下示例将 `db1` 数据库的名称更改为 `db2`：   
 

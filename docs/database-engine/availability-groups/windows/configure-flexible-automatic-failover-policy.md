@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208556"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126577"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>为 Always On 可用性组配置灵活的自动故障转移策略
 
@@ -113,7 +113,7 @@ ms.locfileid: "53208556"
   
 2.  在将可用性副本添加到可用性组中时，请使用 **New-SqlAvailabilityGroup** cmdlet。 在修改现有可用性副本时，请使用 **Set-SqlAvailabilityGroup** cmdlet。  
   
-    -   若要设置故障转移条件级别，请使用 FailureConditionLevel level 参数，其中 level 为以下值之一：  
+    -   若要设置故障转移条件级别，请使用 **FailureConditionLevel**_level_ 参数，其中 *level* 为以下值之一：  
   
         |ReplTest1|级别|当出现以下情况时，自动启动故障转移…|  
         |-----------|-----------|-------------------------------------------|  
@@ -125,7 +125,7 @@ ms.locfileid: "53208556"
   
          有关故障转移条件级别的更多信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
-         例如，以下命令会将现有可用性组 `AG1`的故障条件级别更改为一级。  
+         例如，以下命令会将现有可用性组 `AG1` 的故障条件级别更改为一级。  
   
         ```  
         Set-SqlAvailabilityGroup `   
@@ -133,7 +133,7 @@ ms.locfileid: "53208556"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   若要设置运行状况检查超时阈值，则使用 HealthCheckTimeoutn 参数，其中 n 是一个从 15000 毫秒（15 秒）到 4294967295 毫秒的整数。 默认值为 30000 毫秒（30 秒）。  
+    -   若要设置运行状况检查超时阈值，则使用 **HealthCheckTimeout**_n_ 参数，其中 *n* 是介于 15000 毫秒（15 秒）和 4294967295 毫秒之间的一个整数。 默认值为 30000 毫秒（30 秒）。  
   
          例如，以下命令会将现有可用性组 `AG1`的运行状况检查超时阈值更改为 120,000 毫秒（2 分钟）。  
   

@@ -19,12 +19,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a70a9808f51ff102d62159d524007101aa2d3dd8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212326"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133219"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>配置 AlwaysOn 可用性组的次要副本备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "53212326"
   
 2.  （可选）配置要添加或修改的每个可用性副本的备份优先级。 此优先级由承载主副本的服务器实例用来确定哪一副本应该用于针对可用性组中某一数据库的自动备份请求（选择具有最高优先级的副本）。 该优先级可以是 0 和 100 之间（含 0 和 100）的任何数字。 优先级 0 指示副本不应视作支持备份请求的候选。  默认设置为 50。  
   
-     在将可用性副本添加到可用性组中时，使用 **New-SqlAvailabilityReplica** cmdlet。 在修改现有可用性副本时，使用 **Set-SqlAvailabilityReplica** cmdlet。 在任一情况下，指定 BackupPriorityn 参数，其中 n 是一个介于 0 和 100 之间的值。  
+     在将可用性副本添加到可用性组中时，使用 **New-SqlAvailabilityReplica** cmdlet。 在修改现有可用性副本时，使用 **Set-SqlAvailabilityReplica** cmdlet。 在任一情况下，指定 **BackupPriority**_n_ 参数，其中 *n* 是一个介于 0 和 100 之间的值。  
   
      例如，以下命令会将可用性副本 `MyReplica` 的备份优先级设置为 **60**。  
   

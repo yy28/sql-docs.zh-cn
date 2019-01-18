@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ae569fa5f7a15435fc69f84fd4254c692e1eb1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205236"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126507"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "53205236"
   
     -   对于 IBM DB2，该数据库是在 DB2 连接字符串的“初始目录”  属性中指定的，DB2 连接字符串可以在此过程后面介绍的 **“其他连接选项”** 字段中输入。  
   
-8.  在“分发代理安全性”页上，单击订阅服务器旁边的属性按钮 (...) 来打开“分发代理安全性”对话框。  
+8.  在 **“分发代理安全性”** 页上，单击订阅服务器旁边的属性按钮 (**...**) 来打开 **“分发代理安全性”** 对话框。  
   
 9. 在 **“分发代理安全性”** 对话框中：  
   

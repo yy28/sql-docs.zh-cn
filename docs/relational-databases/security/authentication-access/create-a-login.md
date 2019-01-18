@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209096"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125577"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "53209096"
  **“用户映射”** 页将列出可应用于登录名的所有可能的数据库以及这些数据库上的数据库角色成员身份。 选定的数据库将确定对登录名可用的角色成员身份。 此页还将提供以下选项：  
   
  **映射到此登录名的用户**  
- 选择此登录名可以访问的数据库。 选择某个数据库时，其有效的数据库角色将会显示在“数据库角色成员身份：*database_name*”窗格中。  
+ 选择此登录名可以访问的数据库。 选择某个数据库时，其有效的数据库角色将会显示在“数据库角色成员身份：_database_name_”窗格中。  
   
  **地图**  
  允许登录名访问下面列出的数据库。  
@@ -149,10 +149,10 @@ ms.locfileid: "53209096"
  **默认架构**  
  指定用户的默认架构。 首次创建用户时，其默认架构是 **dbo**。 可以指定并不存在的默认架构。 对于已映射到 Windows 组、证书或非对称密钥的用户，无法为其指定默认架构。  
   
- **已启用 Guest 帐户：***database_name*  
+ **已启用 Guest 帐户：**_database_name_  
  只读属性，指示所选数据库是否已启用 Guest 帐户。 可使用 Guest 帐户的 **“登录属性”** 对话框的 **“状态”** 页来启用或禁用 Guest 帐户。  
   
- **数据库角色成员身份：***database_name*  
+ **数据库角色成员身份：**_database_name_  
  选择用户在指定数据库中的角色。 在每个数据库中，所有用户都是 **public** 角色的成员，并且不能被删除。 有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
 ### <a name="securables"></a>安全对象  

@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213126"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128008"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53213126"
   
 ### <a name="creation-and-synchronization"></a>创建和同步  
  **允许匿名订阅**  
- 确定是否允许匿名请求订阅。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
+ 确定是否允许匿名请求订阅。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
   
  **可附加的订阅数据库**  
  确定是否可以通过附加订阅数据库的副本来创建订阅（对于快照发布和事务发布，要求将选项 **“快照始终可用”** 设置为 **True** ）。  
@@ -59,7 +59,7 @@ ms.locfileid: "53213126"
  确定是否使用独立于此数据库的其他发布的代理。 此选项是只读选项；对于用新建发布向导创建的发布，该选项默认设置为 **True** ，并且不能在创建发布后更改。 有关详细信息，请参阅[复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
  **“快照始终可用”**  
- 确定是否在每次运行快照代理时创建快照文件（需要 **“独立的分发代理”**）。 此选项是只读选项；如果在新建发布向导的 **“快照代理”** 页上选择了 **“立即创建快照并使快照保持可用状态，以初始化订阅”** ，此选项将设置为 **True** （默认值）。 有关详细信息，请参阅[创建并应用快照](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
+ 确定是否在每次运行快照代理时创建快照文件（需要 **“独立的分发代理”**）。 此选项是只读选项；如果在新建发布向导的 **“快照代理”** 页上选择了 **“立即创建快照并使快照保持可用状态，以初始化订阅”** ，此选项将设置为 **True** （默认值）。 有关详细信息，请参阅[创建并应用快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
  **允许从备份文件初始化**  
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否允许使用备份文件来初始化订阅。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  

@@ -17,12 +17,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa0b0edbc46917930975cbbe7cbc9b4067579b68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212016"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135817"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>配置对 Always On 可用性组的次要副本的只读访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
   
 2.  在将可用性副本添加到可用性组中时，使用 **New-SqlAvailabilityReplica** cmdlet。 在修改现有可用性副本时，使用 **Set-SqlAvailabilityReplica** cmdlet。 相关参数如下：  
   
-    -   若要配置辅助角色的连接访问，请指定 ConnectionModeInSecondaryRole secondary_role_keyword 参数，其中 secondary_role_keyword 等于以下值之一：  
+    -   若要配置辅助角色的连接访问，请指定 **ConnectionModeInSecondaryRole**_secondary_role_keyword_ 参数，其中 *secondary_role_keyword* 等于以下值之一：  
   
          **AllowNoConnections**  
          不允许直接连接到辅助副本中的数据库，且不支持读取这些数据库。 这是默认设置。  
@@ -170,7 +170,7 @@ GO
          **AllowAllConnections**  
          允许针对辅助副本中的数据库的所有连接进行只读访问。  
   
-    -   若要配置主要角色的连接访问，请指定 ConnectionModeInPrimaryRole primary_role_keyword参数，其中 primary_role_keyword 等于以下值之一：  
+    -   若要配置主要角色的连接访问，请指定 **ConnectionModeInPrimaryRole**_primary_role_keyword_参数，其中 *primary_role_keyword* 等于以下值之一：  
   
          **AllowReadWriteConnections**  
          不允许 Application Intent 连接属性设置为 ReadOnly 的连接。 在 Application Intent 属性设置为 ReadWrite 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  

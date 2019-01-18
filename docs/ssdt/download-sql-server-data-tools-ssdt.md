@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2769749327f01af9548ad608a42e6d030fd3842
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516005"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300682"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。
 
@@ -60,7 +60,7 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 **版本信息**  
   
 版本号：15.8.2  
-内部版本号：14.0.16182.0  
+生成号：14.0.16182.0  
 发布日期：2018 年 11 月 5 日  
 
 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
@@ -109,13 +109,16 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 有关可用选项，请运行 `SSDT-Setup-ENU.exe /help`
 
+> [!NOTE]
+> 如果使用完整版本的 Visual Studio 2017，请仅为 SSDT 创建脱机文件夹，并从该新建文件夹运行 `SSDT-Setup-ENU.exe`（请勿将 SSDT 添加到另一个 Visual Studio 2017 脱机布局）。 如果将 SSDT 布局添加到现有 Visual Studio 脱机布局，则无法在其中创建必要的运行时 (.exe) 组件。
+
 ## <a name="supported-sql-versions"></a>受支持的 SQL 版本
   
 |项目模板|支持的 SQL 平台|  
 |-------------------|--------------------|  
 关系数据库|  SQL Server 2005* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL Database<br /><br />Azure SQL 数据仓库（仅支持查询；尚不支持数据库项目）<br /><br />  * SQL Server 2005 支持已停止提供，<br /><br /> 请转至官方支持的 SQL 版本|
   |Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 - SQL Server 2017|
-  |Integration Services 包| SQL Server 2012 - SQL Server 2017    |
+  |Integration Services 包| SQL Server 2014 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
 SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4.1：[下载数据层应用程序框架 (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508)。

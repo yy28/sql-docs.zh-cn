@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e526bbe9191aa83cedd45c2115b3cb4b54a937d2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207086"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136077"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "53207086"
 **-PollingInterval** 参数指定为要复制的事务查询已发布数据库的事务日志的频率。 默认值为 5 秒。 如果减小此值，日志的轮询将更加频繁，这会使事务从发布数据库传递到分发数据库的滞后时间较低。 但是，应该对较低滞后时间的需要和因频繁轮询导致的服务器上增加的负荷之间进行平衡。   
   
 #### <a name="maxcmdsintran"></a>MaxCmdsInTran
-- 要解决意外、一次性瓶颈，请使用日志读取器代理的 -MaxCmdsInTran 参数。  
+- 要解决意外、一次性瓶颈，请使用日志读取器代理的 **–MaxCmdsInTran** 参数。  
   
--MaxCmdsInTran 参数指定日志读取器向分发数据库写入命令时组成一个事务的语句的最大数量。 使用此参数能够使日志读取器代理和分发代理在订阅服务器上应用命令时将发布服务器上的大事务（由许多命令组成）分成若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0 ，这将保持发布服务器的事务边界。 此参数不适用于 Oracle 发布服务器。  
+**–MaxCmdsInTran** 参数指定日志读取器向分发数据库写入命令时组成一个事务的语句的最大数量。 使用此参数能够使日志读取器代理和分发代理在订阅服务器上应用命令时将发布服务器上的大事务（由许多命令组成）分成若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0 ，这将保持发布服务器的事务边界。 此参数不适用于 Oracle 发布服务器。  
   
    > [!WARNING]  
    >  **MaxCmdsInTran** 并非始终开启。 其之所以存在，是为了解决某人在单个事务中意外执行了大量 DML 操作（在整个事务进入分发数据库并持有锁之前，导致命令分发延迟等）的问题。 如果你经常遇到这种情况，请审查应用程序并找到减少事务大小的方法。  
@@ -112,9 +112,9 @@ ms.locfileid: "53207086"
 ### <a name="distribution-agent"></a>分发代理
 
 #### <a name="subscriptionstreams"></a>SubscriptionStreams
-- 为分发代理增加 -SubscriptionStreams 参数。  
+- 为分发代理增加 –SubscriptionStreams 参数。  
   
--SubscriptionStreams 参数可以显著提高聚合复制吞吐量。 它使到一台订阅服务器的多个连接可以并行应用批量更改，同时在使用单线程时保持多个事务特征的存在。 如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
+**–SubscriptionStreams** 参数可以显著提高聚合复制吞吐量。 它使到一台订阅服务器的多个连接可以并行应用批量更改，同时在使用单线程时保持多个事务特征的存在。 如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
   
 可以使用 [sp_addsubscription (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 **@subscriptionstreams** 来指定此代理参数的值。  
 

@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203876"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242280"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -518,7 +518,7 @@ RESTART
   
 **监视选项**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 每当另一个百分比完成时显示一条消息，并用于测量进度。 如果省略百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。  
   
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。  
@@ -564,14 +564,14 @@ NOUNLOAD
 > [!NOTE]  
 > 如果不想进行日志备份，则请使用简单恢复模式。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 备份日志的尾部并使数据库处于 RESTORING 状态。 当将故障转移到辅助数据库或在执行 RESTORE 操作前保存日志尾部时，NORECOVERY 很有用。  
   
 若要执行最大程度的日志备份（跳过日志截断）并自动将数据库置于 RESTORING 状态，请同时使用 `NO_TRUNCATE` 和 `NORECOVERY` 选项。  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 备份日志的尾部并使数据库处于只读和 STANDBY 状态。 将 STANDBY 子句写入备用数据（执行回滚，但需带进一步还原选项）。 使用 STANDBY 选项等同于 BACKUP LOG WITH NORECOVERY 后跟 RESTORE WITH STANDBY。  
   
@@ -1113,7 +1113,7 @@ RESTART
   
 **监视选项**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 每当另一个百分比完成时显示一条消息，并用于测量进度。 如果省略百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。  
   
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。  

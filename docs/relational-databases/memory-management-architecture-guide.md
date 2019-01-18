@@ -1,7 +1,7 @@
 ---
 title: 内存管理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 31ebb5ef9994c3c853b8163f4f2ba58e8cbe7d3b
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328977"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206443"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Windows 虚拟内存管理器  
@@ -70,7 +71,10 @@ ms.locfileid: "53328977"
 > [!NOTE]
 > 旧版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可在 32 位操作系统上运行。 在 32 位操作系统上访问超过 4 GB 的内存需要地址窗口化扩展插件 (AWE) 对内存进行管理。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位操作系统上运行，则不需要。 有关 AWE 的详细信息，请参阅 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文档中的[进程地址空间](https://msdn.microsoft.com/library/ms189334.aspx)和[管理大型数据库的内存](https://msdn.microsoft.com/library/ms191481.aspx)。   
 
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
+
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对内存管理的更改
+
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，使用五种不同的机制分配内存：
 -  **单页分配器 (SPA)** 它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
 -  **多页分配器 (MPA)**，用于需要 8 KB 以上的内存分配。

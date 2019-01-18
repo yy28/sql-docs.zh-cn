@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215148"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127707"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   合并代理：在命令行中或通过代理配置文件指定 **-Hostname** 参数的值。 有关合并代理的详细信息，请参阅 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)。 有关代理配置文件的详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>使用参数化筛选器初始化发布的订阅  
- 在合并发布中使用参数化行筛选器时，复制将使用由两部分构成的快照初始化各个订阅。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+ 在合并发布中使用参数化行筛选器时，复制将使用由两部分构成的快照初始化各个订阅。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="using-the-appropriate-filtering-options"></a>使用适当的筛选选项  
  使用参数化筛选器时，您可以控制两个关键方面：  
@@ -174,7 +174,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   项目只能存在于一个发布中；项目不能重新发布。  
   
--   发布必须允许订阅服务器启动快照处理。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+-   发布必须允许订阅服务器启动快照处理。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ##### <a name="additional-considerations-for-join-filters"></a>联接筛选器的其他注意事项  
   
