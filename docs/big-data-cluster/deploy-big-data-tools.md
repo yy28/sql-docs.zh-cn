@@ -5,17 +5,17 @@ description: 了解如何安装与 SQL Server 2019 大数据群集 （预览版�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 54ea67e8b85d4e9a1a8cdbe4b40cf1bb9c3f1062
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241598"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372632"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -38,7 +38,14 @@ ms.locfileid: "54241598"
 | **sqlcmd** | 对于某些脚本 | 用于查询 SQL Server 的传统命令行工具 ([的详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | 对于某些脚本 | 将使用的 Url 的数据传输的命令行工具。 | [Windows](https://curl.haxx.se/windows/) \| Linux： 安装 curl 包 |
 
-<sup>1</sup>必须使用 kubectl 版本 1.10 或更高版本。 此外，Kubectl 的版本应为加上或减去的 Kubernetes 群集的一个次要版本。 如果你想要 kubectl 客户端上安装特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) （在 Windows 10 上使用 cmd.exe 而非 Windows PowerShell 运行 curl）。
+<sup>1</sup>必须使用 kubectl 版本 1.10 或更高版本。 此外，kubectl 的版本应为加上或减去的 Kubernetes 群集的一个次要版本。 如果你想要 kubectl 客户端上安装特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) （在 Windows 10 上使用 cmd.exe 而非 Windows PowerShell 运行 curl）。 
+
+> [!TIP]
+> 若要与之前部署的群集在 Azure Kubernetes 服务 (AKS) 使用 kubectl，必须设置的群集上下文与以下 Azure CLI 命令：
+>
+>    ```azurecli
+>    az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>
+>    ```
 
 <sup>2</sup> ，必须使用 Azure CLI 2.0.4 或更高版本。 运行`az --version`如果需要查找版本。
 
@@ -49,7 +56,7 @@ ms.locfileid: "54241598"
 上表提供了所有与大数据群集配合使用的常见工具。 所需的工具取决于你的方案。 但一般情况下，以下工具是最重要的管理、 连接和查询群集：
 
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 扩展**
 

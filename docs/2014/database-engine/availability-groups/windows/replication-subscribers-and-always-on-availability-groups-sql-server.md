@@ -1,7 +1,7 @@
 ---
 title: 复制订阅服务器和 AlwaysOn 可用性组 (SQL Server) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/16/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,15 +14,15 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8968754a797c3f3b1a7e66886f7874c9bc13c5d3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390661"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372677"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
-  当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务订阅服务器，如果订阅使用的是订阅服务器的可用性组侦听器的名称，则分发代理会自动继续复制。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  
+  当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务复制推送订阅服务器，分发代理将继续复制自动故障转移后如果使用 AG 侦听器名称创建的订阅。 对于事务复制请求订阅服务器，分发代理会继续复制自动故障转移后，如果使用 AG 侦听器名称和原始的订阅服务器已启动并运行创建的订阅。 这是因为分发代理作业仅在原始订阅服务器 （主副本的可用性组） 上创建。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  
   
 ## <a name="what-is-supported"></a>支持的操作  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持订阅服务器的自动故障转移、事务订阅服务器的自动故障转移以及合并订阅服务器的手动故障转移。 不支持可用性数据库上分发服务器的故障转移。 AlwaysOn 不能与 Websync 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact 应用场景结合使用。  
