@@ -12,16 +12,16 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406684"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380879"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52406684"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看统计信息属性，请使用：**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52406684"
      显示存储统计信息的数据库对象的名称。  
   
      **INDEX 统计信息 statistics_name**  
-     此文本框显示从统计信息对象返回的属性。 此属性分为三个部分：统计信息头、密度向量和直方图。  
+     此文本框显示从统计信息对象返回的属性。 此属性可分为三个部分：统计信息头、密度向量和直方图。  
   
      下面的信息介绍结果集中为统计信息头返回的列。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "52406684"
      下面的信息介绍结果集中为密度向量返回的列。  
   
      **All Density**  
-     密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **Average Length**  
      存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。  

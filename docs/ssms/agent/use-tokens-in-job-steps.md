@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e3e1f9dffef09e3799be462e287705eef3b2e30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0efaf8bd3fb62aa673adbb91281e365882d283bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532606"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205386"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "52532606"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过代理，你可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤脚本中使用标记。 如果在编写作业步骤时使用标记，则可以为您提供编写软件程序时使用变量所提供的灵活性。 在作业步骤脚本中插入令牌之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理便会在运行时 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系统执行作业步骤之前替换此不标记。  
   
-> [!IMPORTANT]  
-> 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的标记语法已发生更改。 因此，作业步骤中使用的所有标记现在必须附带转义宏，否则，这些作业步骤将会失败。 下列部分说明了使用转义宏和更新使用标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤：“了解标记用法”、“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记和宏”以及“更新作业步骤以使用宏”。 此外，使用方括号调用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 代理作业步骤标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法（例如，“`[DATE]`”）也已发生更改。 现在，必须用括号将令牌名称括起来，并在令牌语法的开头加上美元符号 (`$`)。 例如：  
->   
+> [!IMPORTANT]
+> 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的标记语法已发生更改。 因此，作业步骤中使用的所有标记现在必须附带转义宏，否则，这些作业步骤将会失败。 下列部分说明了使用转义宏和更新使用标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤：“了解标记用法”、“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记和宏”以及“更新作业步骤以使用宏。” 此外，使用方括号调用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 代理作业步骤标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法（例如，“`[DATE]`”）也已发生更改。 现在，必须用括号将令牌名称括起来，并在令牌语法的开头加上美元符号 (`$`)。 例如：  
+> 
 > `$(ESCAPE_`*宏名*`(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>了解标记用法  
   
 > [!IMPORTANT]  
-> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(**_property_**)**。 请注意，在此版本中，对标记的使用扩展至所有警报。  
+> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI（属性）。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
 > 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记替换简单且有效： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记替换简单且有效：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
   
 例如，您可以在作业步骤中使用以下语句输出数据库的名称：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "52532606"
 ## <a name="updating-job-steps-to-use-macros"></a>更新作业步骤以使用宏  
 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 开始，包含不带转义宏的标记的作业步骤将失败，并返回错误消息，指示作业步骤包含一个或多个必须在作业运行之前使用宏进行更新的标记。  
   
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] 知识库文章 915845： [在 SQL Server 2005 Service Pack 1 中使用标记的 SQL Server 代理作业步骤将失败](https://support.microsoft.com/kb/915845)提供的脚本。可以使用此脚本通过 **ESCAPE_NONE** 宏更新所有使用标记的作业步骤。 使用此脚本之后，我们建议你尽快查看使用标记的作业步骤，并将 **ESCAPE_NONE** 宏替换为适用于作业步骤上下文的转义宏。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] 知识库文章 915845：[在 SQL Server 2005 Service Pack 1 中使用标记的 SQL Server 代理作业步骤将失败](https://support.microsoft.com/kb/915845)中提供了脚本。可以使用此脚本通过 ESCAPE_NONE 宏更新所有使用标记的作业步骤。 使用此脚本之后，我们建议你尽快查看使用标记的作业步骤，并将 **ESCAPE_NONE** 宏替换为适用于作业步骤上下文的转义宏。  
   
 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，然后在“警报系统”页上选中或清除“为警报的所有作业响应替换标记”复选框。  
   

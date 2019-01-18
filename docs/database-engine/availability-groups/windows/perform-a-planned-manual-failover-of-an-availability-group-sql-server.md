@@ -1,6 +1,7 @@
 ---
-title: 执行可用性组的计划手动故障转移 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 执行可用性组的计划手动故障转移
+description: 本主题介绍如何执行 Always On 可用性组的计划手动故障转移。
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854055"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212156"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的计划手动故障转移 (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的计划手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移类似于所有 AlwaysOn 可用性组的故障转移，将次要副本转换为主要角色。 故障转移同时会将先前的主要副本转换为次要角色。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "47854055"
     -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [获取有关 SQL Server PowerShell 的帮助](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a>跟进：在对可用性组进行手动故障转移后 
+##  <a name="FollowUp"></a> 跟进：在对可用性组进行手动故障转移后 
  如果故障转移到可用性组的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外，请调整 Windows Server 故障转移群集节点的仲裁投票以反映新的可用性组配置。 有关详细信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。 
 
 <a name = "ReadScaleOutOnly"><a/>

@@ -10,23 +10,23 @@ helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ca79a8ca6510431714ccd9a2f37bb322ebb75b56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26ce42d2c28fcb991ac8127b8806cde4156fa4d6
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638855"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380408"
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除工作负荷组或资源池。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要删除工作负荷组，请使用：**[对象资源管理器](#DelWGObjEx)、[资源调控器属性](#DelWGRGProp)和 [Transact-SQL](#DelWGTSQL)  
+-   **若要删除工作负荷组，请使用：**[对象资源管理器](#DelWGObjEx)、[Resource Governor 属性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果工作负荷组中包含活动会话，则不能删除该组。  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [创建工作负荷组](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)   

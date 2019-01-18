@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791749"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教程通过一个简单示例，介绍了如何创建数据驱动订阅，生成筛选报表输出并将其保存到文件共享，解释了数据驱动订阅的概念。 

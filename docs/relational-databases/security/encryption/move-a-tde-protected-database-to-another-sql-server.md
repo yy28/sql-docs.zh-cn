@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521106"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590261"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "52521106"
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
      **“状态”**  
-     显示以下状态之一： **“就绪”** 或 **“未就绪”**。  
+     显示以下状态之一：“就绪”或“未就绪”。  
   
      **消息**  
      **“消息”** 列可显示关于数据库的如下信息：  
@@ -233,7 +233,7 @@ ms.locfileid: "52521106"
      **删除**  
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
-     **"** *<database_name>* **”数据库详细信息**  
+     **"** _<database_name>_ **”数据库详细信息**  
      显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)。  
   
     > [!NOTE]  

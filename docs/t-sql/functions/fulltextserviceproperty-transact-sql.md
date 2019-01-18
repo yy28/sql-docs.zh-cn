@@ -21,12 +21,12 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c56e70fc866c3666107677338feb3285cabb38b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812175"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206156"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ FULLTEXTSERVICEPROPERTY ('property')
  property  
  包含全文服务级别属性名称的表达式。 下表列出了这些属性，并提供对返回的信息的说明。  
   
-> [!NOTE]  
->  以后的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除下列属性：ConnectTimeout、DataTimeout 和 ResourceUsage。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
+> [!NOTE]
+>  未来版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将删除以下属性：ConnectTimeout、DataTimeout 和 ResourceUsage。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
   
-|“属性”|ReplTest1|  
+|属性|ReplTest1|  
 |--------------|-----------|  
 |**ResourceUsage**|返回 0。 支持它仅仅是为了保持向后兼容。|  
 |**ConnectTimeout**|返回 0。 支持它仅仅是为了保持向后兼容。|  

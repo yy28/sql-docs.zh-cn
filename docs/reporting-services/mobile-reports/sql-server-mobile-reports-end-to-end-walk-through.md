@@ -1,19 +1,21 @@
 ---
-title: SQL Server 移动报表：端到端演练 | Microsoft Docs
-ms.date: 11/07/2017
+title: SQL Server 移动报表：端到端演练
+description: 在 Reporting Services Web 门户上使用 SQL Server 移动报表发布服务器创建任何屏幕大小的移动报告，并在 Power BI 移动应用程序中查看它们。
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813760"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209706"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -30,14 +32,14 @@ ms.locfileid: "51813760"
 ## <a name="before-we-start"></a>准备工作  
 若要继续，需要准备这些产品：  
   
-* 若要创建数据源和 KPI、发布数据集和移动报表，需要访问 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)。  
-* [若要创建共享数据集](../install-windows/install-report-builder.md)。  
+* 要创建数据源和 KPI，以及发布数据集和移动报表，需要访问 [Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)。  
+* 要创建共享数据集，请[安装报表生成器](../install-windows/install-report-builder.md)。  
 * 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
-*  或：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
+*  或者：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
 * 查看结果： 
   *   [注册 Power BI 服务](https://go.microsoft.com/fwlink/?LinkID=513879) 并
-  *  [下载 Power BI 移动应用](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
+  *  [下载 Power BI 移动应用](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
 
   
 ## <a name="create-a-shared-data-source"></a>创建共享数据源  
@@ -77,7 +79,7 @@ ms.locfileid: "51813760"
 4. 在“名称”字段中，输入保存数据源的服务器名称，格式如下：   
    
    名称： https://localhost/ReportServer  
-   项的类型：Data Sources (*.rsds)  
+   项类型：数据源 (*.rsds)  
    
 5. 单击“打开” ，并导航到在该服务器上创建的数据源。  
    
@@ -281,7 +283,9 @@ ms.locfileid: "51813760"
   
     ![PBI_iPad_SSMRP_LeftNavBiggr](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png)  
       
->**提示**：点击选项图标 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) 可随时在 Reporting Services Web 门户中的 Reporting Services 移动报表和 Power BI 服务中的仪表板之间移动。   
+> [!TIP]
+> 点击选项图标 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) 可随时在 Reporting Services Web 门户中的 Reporting Services 移动报表和 Power BI 服务中的仪表板之间移动。  
+
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>在 Power BI 应用中查看 KPI 和移动报表  
   
@@ -297,12 +301,10 @@ ms.locfileid: "51813760"
   
 KPI 和移动报表显示在 Reporting Services Web 门户中它们所在的相同文件夹中。   
   
-### <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅  
  
--  [iPad 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
--  [iPhone 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI for iOS)  
--  [Android 手机 Power BI 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
--  [Windows 10 设备 Power BI 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  查看 iOS 和 Android 版 [Power BI 移动应用中的本地报表服务器移动报表和 KPI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports)
+-  查看[适用于 Windows 10 设备的 Power BI 移动应用中的本地报表服务器移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
 

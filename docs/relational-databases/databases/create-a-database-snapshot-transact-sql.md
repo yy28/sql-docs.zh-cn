@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a418de7f83355fedfed135665f699f62714572dc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560314"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205936"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51560314"
 
 - 源数据库不得包含 MEMORY_OPTIMIZED_DATA 文件组。 有关详细信息，请参阅 [内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 > 有关其他重要事项的信息，请参阅 [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
 ##  <a name="Recommendations"></a> 建议  

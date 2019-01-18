@@ -1,6 +1,7 @@
 ---
-title: 执行可用性组的强制手动故障转移 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 执行可用性组的强制手动故障转移
+description: 本主题介绍如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 对 Always On 可用性组执行强制故障转移（可能会丢失数据）。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,21 +16,21 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 750d2ff9bae2caca15af2535b220b22781b65d4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a11d29e7cd8a44f052ad5e0b9ed9278d79174b39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604557"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208676"
 ---
-# <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
+# <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的强制手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。 强制故障转移是一种在不可能进行 [计划的手动故障转移](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 时严格限制用于灾难恢复的手动故障转移。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 因此，我们强烈建议您仅在以下情况下才强制故障转移：您必须立即将服务还原到可用性组并且您愿意承担丢失数据的风险。  
   
  执行强制故障转移之后，可用性组故障转移到的故障转移目标将变成新的主副本。 剩余辅助副本中的辅助数据库将会挂起并且必须手动恢复。 当以前的主副本变为可用时，该副本将转换为辅助角色，这导致以前的主数据库变成辅助数据库并转换为 SUSPENDED 状态。 在恢复某一给定的辅助数据库之前，您可能能够从其还原丢失的数据。 但请注意，在其任何辅助数据库被挂起时，事务日志截断在给定的主数据库上被延迟。  
   
 > [!IMPORTANT]  
->  在恢复辅助数据库之前，不会与主数据库进行数据同步。 有关恢复辅助数据库的信息，请参阅本文后面部分的 [跟进：强制故障转移后的重要任务](#FollowUp) 。  
+>  在恢复辅助数据库之前，不会与主数据库进行数据同步。 有关恢复辅助数据库的信息，请参阅本文后面部分的[跟进：强制故障转移后的重要任务](#FollowUp)。  
   
  在以下紧急情况下需要执行强制的故障转移：  
   
@@ -46,7 +47,7 @@ ms.locfileid: "51604557"
     >  在 WSFC 群集具有运行状况正常的仲裁时，如果对已同步的辅助副本发出强制故障转移命令，则该副本实际将执行计划的手动故障转移。  
   
 > [!NOTE]  
->  有关强制故障转移的先决条件和建议的详细信息，以及使用强制故障的示例应用场景，请参阅本主题后面部分的 [示例应用场景：使用故障转移从灾难性故障中恢复](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)。  
+>  有关强制故障转移的先决条件和建议的详细信息，以及使用强制故障转移从灾难性故障中恢复的示例应用场景，请参阅本主题后面部分的[示例应用场景：使用强制故障转移从灾难性故障中恢复](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)。  
   
 -   **开始之前：**  
   
@@ -58,7 +59,7 @@ ms.locfileid: "51604557"
   
      [强制仲裁后避免数据丢失的可能方法](#WaysToAvoidDataLoss)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要强制故障转移（可能丢失数据），请使用：**  
   
@@ -70,7 +71,7 @@ ms.locfileid: "51604557"
   
 -   **跟进：**[强制故障转移后的重要任务](#FollowUp)  
   
--   **示例应用场景** [使用强制故障转移从灾难性故障中恢复](#ExampleRecoveryFromCatastrophy)  
+-   **示例应用场景：**[使用强制故障转移从灾难性故障中恢复](#ExampleRecoveryFromCatastrophy)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -155,7 +156,7 @@ ms.locfileid: "51604557"
   
 4.  这将启动“故障转移可用性组向导”。 有关详细信息，请参阅本主题后面的 [使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   
-5.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面的 [跟进：强制故障转移后的重要任务](#FollowUp)。  
+5.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面部分的[跟进：强制故障转移后的重要任务](#FollowUp)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **强制故障转移（可能丢失数据）**  
@@ -174,7 +175,7 @@ ms.locfileid: "51604557"
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
-3.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面的 [跟进：强制故障转移后的重要任务](#FollowUp)。  
+3.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面部分的[跟进：强制故障转移后的重要任务](#FollowUp)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **强制故障转移（可能丢失数据）**  
@@ -210,17 +211,17 @@ ms.locfileid: "51604557"
     > [!NOTE]  
     >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
-3.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面的 [跟进：强制故障转移后的重要任务](#FollowUp)。  
+3.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面部分的[跟进：强制故障转移后的重要任务](#FollowUp)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：强制故障转移后的重要任务  
+##  <a name="FollowUp"></a>跟进：强制故障转移后的重要任务  
   
 1.  执行强制故障转移之后，故障转移到的辅助副本将变成新的主副本。 但是，要使客户端可访问可用性副本，您可能需要重新配置 WSFC 仲裁或调整可用性组的可用性模式配置，如下所示：  
   
-    -   **如果你故障转移到 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外：** 调整 WSFC 节点的仲裁投票以反映新的可用性组配置。 如果承载目标辅助副本的 WSFC 节点不具有 WSFC 仲裁投票，则可能需要强制 WSFC 仲裁。  
+    -   如果将故障转移到 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外：调整 WSFC 节点的仲裁投票，以反映新的可用性组配置。 如果承载目标辅助副本的 WSFC 节点不具有 WSFC 仲裁投票，则可能需要强制 WSFC 仲裁。  
   
         > [!NOTE]  
         >  仅当两个可用性副本（包含之前的主副本）都配置为使用同步提交模式和自动故障转移时， [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 才存在。  
@@ -233,7 +234,7 @@ ms.locfileid: "51604557"
   
         -   [在无仲裁情况下强制启动 WSFC 群集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   **如果你故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外：** 我们建议你考虑调整新的主要副本上和其他次要副本上的可用性模式和故障转移模式，以反映你所需的同步提交模式和自动故障转移配置。  
+    -   如果将故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外：我们建议你考虑调整新的主副本上和其他辅助副本上的可用性模式和故障转移模式，以反映你所需的同步提交模式和自动故障转移配置。  
   
         > [!NOTE]  
         >  只有在当前主副本配置为同步提交模式时， [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 才存在。  
@@ -274,8 +275,8 @@ ms.locfileid: "51604557"
   
     -   [备份事务日志 (SQL Server)](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> 示例应用场景：使用故障转移从灾难性故障中恢复  
- 如果主副本失败并且没有同步的辅助副本可用，则强制可用性组进行故障转移可能是适当的反应。 强制执行故障转移是否合适取决于以下几个方面：(1) 您是否预期到主副本处于脱机状态的时间超过您的服务级别协议 (SLA) 的容限，(2) 您是否愿意为使主数据库更快处于可用状态，而承担数据可能丢失的风险。 如果您决定可用性组需要强制故障转移，则实际的强制故障转移将是多步骤过程中的一个步骤。  
+##  <a name="ExampleRecoveryFromCatastrophy"></a> 示例应用场景：使用强制故障转移从灾难性故障中恢复  
+ 如果主副本失败并且没有同步的辅助副本可用，则强制可用性组进行故障转移可能是适当的反应。 强制执行故障转移是否合适取决于以下几个方面：(1) 你是否考虑过主副本处于脱机状态的时间超过你的服务级别协议 (SLA) 的容限，(2) 你是否愿意为使主数据库更快处于可用状态，而承担数据可能丢失的风险。 如果您决定可用性组需要强制故障转移，则实际的强制故障转移将是多步骤过程中的一个步骤。  
   
  为了说明使用强制故障转移从灾难性故障中恢复所需的步骤，本主题提供了一个可能的灾难恢复应用场景。 此示例应用场景假定某一可用性组的原始拓扑结构由一个主数据中心和一个远程数据中心构成。主数据中心承载三个同步提交可用性副本，包括主副本；而远程数据中心承载两个异步提交辅助副本。 下图说明了此示例可用性组的原始拓扑结构。 该可用性组由一个多子网 WSFC 群集承载，并且在主数据中心具有三个节点（**节点 01**、 **节点 02**和 **节点 03**），在远程数据中心有两个节点（**节点 04** 和 **节点 05**）。  
   
@@ -318,7 +319,7 @@ ms.locfileid: "51604557"
   
 ||步骤|链接|  
 |-|----------|-----------|  
-|**1.**|主数据中心中的节点返回到联机状态，并且重新建立与 WSFC 群集的通信。 其可用性副本将作为具有挂起的数据库的辅助副本进入联机状态，数据库管理员将需要手动尽快恢复这些数据库中的每个数据库。|[恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> 提示：如果你担心在故障转移后主数据库上可能会丢失数据，则应该尝试在同步提交辅助数据库上创建已挂起数据库的数据库快照。 请记住，在其任何辅助数据库被挂起时，事务日志截断在主数据库上被延迟。 此外，只要任何本地数据库保持挂起状态，则同步提交辅助副本的同步运行状况将无法转换到 HEALTHY。|  
+|**1.**|主数据中心中的节点返回到联机状态，并且重新建立与 WSFC 群集的通信。 其可用性副本将作为具有挂起的数据库的辅助副本进入联机状态，数据库管理员将需要手动尽快恢复这些数据库中的每个数据库。|[恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> 提示：如果您担心在故障转移后主数据库上可能会丢失数据，则应该尝试在同步提交辅助数据库上创建已挂起数据库的数据库快照。 请记住，在其任何辅助数据库被挂起时，事务日志截断在主数据库上被延迟。 此外，只要任何本地数据库保持挂起状态，则同步提交辅助副本的同步运行状况将无法转换到 HEALTHY。|  
 |**2.**|在恢复数据库后，数据库管理员暂时将新的主副本更改为同步提交模式。 这涉及两个步骤：<br /><br /> 1) 将一个脱机可用性副本更改为异步提交模式。<br /><br /> 2) 将新的主副本更改为同步提交模式。 注意：此步骤将使已恢复的同步提交辅助数据库能够成为 SYNCHRONIZED。|[更改可用性副本的可用性模式 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
 |**3.**|在 **节点 03** 上同步提交次要副本（原始主要副本）进入 HEALTHY 同步状态后，数据库管理员将执行到该副本的计划的手动故障转移，使其再次成为主要副本。 **节点 04** 上的副本将恢复成为辅助副本。|[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [使用 AlwaysOn 策略查看可用性组的运行状况 (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|数据库管理员将连接到新的主副本，并且：<br /><br /> 1) 将以前的主副本（在远程中心中）更改回异步提交模式。<br /><br /> 2) 将主数据中心中的异步提交辅助副本更改回同步提交模式。|[更改可用性副本的可用性模式 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
@@ -348,7 +349,7 @@ ms.locfileid: "51604557"
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   

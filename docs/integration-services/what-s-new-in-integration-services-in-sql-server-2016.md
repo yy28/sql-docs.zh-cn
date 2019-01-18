@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640194"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205836"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "51640194"
   
 -   管理对象模型 (MOM) API  
   
- 有关详细信息，请参阅 [部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md。  
+ 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ####  <a name="encrypted"></a> 支持 SSIS 目录中的 Always Encrypted  
  SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供始终加密功能支持。 有关详细信息，请参阅以下博客文章。  
@@ -200,7 +200,7 @@ ms.locfileid: "51640194"
  SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。  可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。 
 
 ####  <a name="CustomLogging"></a> SSIS 目录中的全新自定义日志记录级别  
- 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。  SQL Server 2016 增加了 RuntimeLineage 日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
+ 旧版 SSIS 目录允许在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。 SQL Server 2016 增加了 RuntimeLineage 日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
 
 ####  <a name="ErrorColumn"></a> 数据流中错误对应的列名称  
  当您将重定向的数据流中包含到错误输出的错误的行时，输出会包括顺序错误发生，但不会显示的列的名称的列的数值标识符。 现在可以通过多种方式来查找和显示发生了错误的列的名称。  
@@ -213,7 +213,7 @@ ms.locfileid: "51640194"
   
 -   在脚本组件或自定义数据流组件中，调用 IDTSComponentMetadata100 接口的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。  
   
- 有关此方面改进的详细信息，请参阅 SSIS 开发人员 Bo Fan 的下述博客文章： [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)（SSIS 数据流的错误列改进）。  
+ 有关此方面改进的详细信息，请参阅 SSIS 开发人员 Bo Fan 的下述博客文章：[Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)（SSIS 数据流的错误列改进）。  
   
 > [!NOTE]  
 >  （后续版本扩展了此支持。 有关详细信息，请参阅 [提供对错误列名称的扩展支持](#getidstring) 和 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  
@@ -326,7 +326,7 @@ ms.locfileid: "51640194"
    
  ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > 如果为 SSIS 开发自定义扩展插件，请参阅 [支持自定义组件中的多目标](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 和 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)（使 SSIS 自定义扩展插件获得用于 SQL Server 2016 的 SSDT 2015 多版本支持的支持）。  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>改进了 SQL Server Management Studio 的管理体验

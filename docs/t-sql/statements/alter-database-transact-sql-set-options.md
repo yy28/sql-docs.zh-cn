@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215383"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 
@@ -350,7 +350,7 @@ ON
   
 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
   
-AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选统计信息。  
+AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选的统计信息。  
   
 默认值为 ON。 建议您对于大多数数据库使用默认设置。  
   
@@ -510,7 +510,7 @@ EMERGENCY
 数据库标记为 READ_ONLY，禁用日志记录，并且仅限 sysadmin 固定服务器角色的成员访问。 EMERGENCY 主要用于故障排除。 例如，可以将由于损坏了日志文件而标记为可疑的数据库设置为 EMERGENCY 状态。 这样，系统管理员便可对数据库进行只读访问。 只有 sysadmin 固定服务器角色的成员才可以将数据库设置为 EMERGENCY 状态。  
   
 > [!NOTE]  
-> **权限：** 若要将数据库更改为脱机或紧急状态，必须对主题数据库拥有 ALTER DATABASE 权限。 服务器级别 ALTER ANY DATABASE 权限是将数据库从脱机状态移到联机状态所必需的。  
+> **权限：** 对主题数据库的 ALTER DATABASE 权限是将数据库更改为脱机或紧急状态所必需的。 服务器级别 ALTER ANY DATABASE 权限是将数据库从脱机状态移到联机状态所必需的。  
   
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 state 和 state_desc 列，或者查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 Status 属性，来确定此选项的状态。 有关详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
   
@@ -668,7 +668,7 @@ DIRECTORY_NAME = *\<directory_name>*
   
 **\<mixed_page_allocation_option> ::=**  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。 
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } 控制数据库能否使用混合区为表或索引的前 8 页创建初始页面。  
  
@@ -695,7 +695,7 @@ FORCED
   
 **\<query_store_options> ::=**  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 打开|关闭|清除[全部]  
 控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。 有关详细信息，请参阅 [查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md)。 
@@ -866,7 +866,7 @@ NEW_BROKER
 指定数据库应接收新的 Broker 标识符。 由于该数据库被视为新的 Service Broker，所以将立即删除数据库中的所有现有会话，而不生成结束对话框消息。 必须使用新标识符重新创建任何引用旧 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符的路由。  
   
 ERROR_BROKER_CONVERSATIONS  
-指定启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递。 这将保留数据库的现有 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将结束数据库中的所有会话，并显示错误消息。 这样，您的应用程序即可为现有会话执行定期清理。  
+指定启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递。 这会保留数据库的现有 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将结束数据库中的所有会话，并显示错误消息。 这样，您的应用程序即可为现有会话执行定期清理。  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1115,25 +1115,25 @@ NO_WAIT
   
 |选项类别|可与其他选项一起指定|可以使用 WITH \<termination> 子句|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option>|用户帐户控制|用户帐户控制|  
-|\<db_user_access_option>|用户帐户控制|用户帐户控制|  
-|\<db_update_option>|用户帐户控制|用户帐户控制|  
-|\<delayed_durability_option>|用户帐户控制|用户帐户控制|  
-|\<external_access_option>|用户帐户控制|否|  
-|\<cursor_option>|用户帐户控制|否|  
-|\<auto_option>|用户帐户控制|否|  
-|\<sql_option>|用户帐户控制|否|  
-|\<recovery_option>|用户帐户控制|否|  
-|\<target_recovery_time_option>|否|用户帐户控制|  
+|\<db_state_option>|是|是|  
+|\<db_user_access_option>|是|是|  
+|\<db_update_option>|是|是|  
+|\<delayed_durability_option>|是|是|  
+|\<external_access_option>|是|否|  
+|\<cursor_option>|是|否|  
+|\<auto_option>|是|否|  
+|\<sql_option>|是|否|  
+|\<recovery_option>|是|否|  
+|\<target_recovery_time_option>|否|是|  
 |\<database_mirroring_option>|否|否|  
 |ALLOW_SNAPSHOT_ISOLATION|否|否|  
-|READ_COMMITTED_SNAPSHOT|否|用户帐户控制|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|用户帐户控制|用户帐户控制|  
-|\<service_broker_option>|用户帐户控制|否|  
-|DATE_CORRELATION_OPTIMIZATION|用户帐户控制|用户帐户控制|  
-|\<parameterization_option>|用户帐户控制|用户帐户控制|  
-|\<change_tracking_option>|用户帐户控制|用户帐户控制|  
-|\<db_encryption_option>|用户帐户控制|否|  
+|READ_COMMITTED_SNAPSHOT|否|是|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|是|是|  
+|\<service_broker_option>|是|否|  
+|DATE_CORRELATION_OPTIMIZATION|是|是|  
+|\<parameterization_option>|是|是|  
+|\<change_tracking_option>|是|是|  
+|\<db_encryption_option>|是|否|  
   
 通过设置以下选项之一来清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存：  
   
@@ -1242,7 +1242,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. 启用查询存储  
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 下面的示例启用查询存储并配置查询存储参数。  
   
@@ -1472,7 +1472,7 @@ ON
   
 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
   
-AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选统计信息。  
+AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选的统计信息。  
   
 默认值为 ON。 建议您对于大多数数据库使用默认设置。  
   
@@ -1946,20 +1946,20 @@ NO_WAIT
   
 |选项类别|可与其他选项一起指定|可以使用 WITH \<termination> 子句|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|用户帐户控制|否|  
-|\<change_tracking_option>|用户帐户控制|用户帐户控制|  
-|\<cursor_option>|用户帐户控制|否|  
-|\<db_encryption_option>|用户帐户控制|否|  
-|\<db_update_option>|用户帐户控制|用户帐户控制|  
-|\<db_user_access_option>|用户帐户控制|用户帐户控制|  
-|\<delayed_durability_option>|用户帐户控制|用户帐户控制|  
-|\<parameterization_option>|用户帐户控制|用户帐户控制|  
+|\<auto_option>|是|否|  
+|\<change_tracking_option>|是|是|  
+|\<cursor_option>|是|否|  
+|\<db_encryption_option>|是|否|  
+|\<db_update_option>|是|是|  
+|\<db_user_access_option>|是|是|  
+|\<delayed_durability_option>|是|是|  
+|\<parameterization_option>|是|是|  
 |ALLOW_SNAPSHOT_ISOLATION|否|否|  
-|READ_COMMITTED_SNAPSHOT|否|用户帐户控制|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|用户帐户控制|用户帐户控制|  
-|DATE_CORRELATION_OPTIMIZATION|用户帐户控制|用户帐户控制|  
-|\<sql_option>|用户帐户控制|否|  
-|\<target_recovery_time_option>|否|用户帐户控制|  
+|READ_COMMITTED_SNAPSHOT|否|是|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|是|是|  
+|DATE_CORRELATION_OPTIMIZATION|是|是|  
+|\<sql_option>|是|否|  
+|\<target_recovery_time_option>|否|是|  
   
 ## <a name="examples"></a>示例  
   
@@ -2243,7 +2243,7 @@ ON
   
 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
   
-AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选统计信息。  
+AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。 此选项也适用于筛选的统计信息。  
   
 默认值为 ON。 建议您对于大多数数据库使用默认设置。  
   

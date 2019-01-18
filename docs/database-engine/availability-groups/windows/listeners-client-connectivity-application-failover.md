@@ -1,6 +1,7 @@
 ---
-title: 侦听器、客户端连接、应用程序故障转移 | Microsoft Docs
-ms.custom: ''
+title: 连接到可用性组侦听器
+description: 包含有关在故障转移之前和之后连接到 Always On 可用性组侦听器的信息。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408884"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214698"
 ---
-# <a name="listeners-client-connectivity-application-failover"></a>侦听器、客户端连接、应用程序故障转移
+# <a name="connect-to-an-always-on-availability-group-listener"></a>连接到 Always On 可用性组侦听器 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题包含有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
   
@@ -241,13 +242,13 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [可用性组侦听器简介](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) （SQL Server Always On 团队博客）  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [将客户端连接到数据库镜像会话 (SQL Server)](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

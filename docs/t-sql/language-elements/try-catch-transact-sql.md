@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545755"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997579"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) 返回错误消息的完整文本。 该文本包括为所有可替换参数提供的值，如长度、对象名或时间。  
   
- 如果是在 CATCH 块的作用域之外调用这些函数，则这些函数返回空值。 可以从 CATCH 块作用域内的任何位置使用这些函数检索错误消息。 例如，下面的脚本显示了包含错误处理函数的存储过程。 在 `CATCH` 构造的 `TRY...CATCH` 块中，调用了该存储过程并返回有关错误的信息。  
+如果是在 CATCH 块的作用域之外调用这些函数，则这些函数返回空值。 可以从 CATCH 块作用域内的任何位置使用这些函数检索错误消息。 例如，下面的脚本显示了包含错误处理函数的存储过程。 在 `CATCH` 构造的 `TRY...CATCH` 块中，调用了该存储过程并返回有关错误的信息。  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -146,17 +146,19 @@ END CATCH;
   
 -   当系统管理员使用 KILL 语句终止会话时。  
   
- 如果以下类型的错误的发生级别与 TRY…CATCH 构造的执行等级相同，则 CATCH 块不会处理这些错误：  
+如果以下类型的错误的发生级别与 TRY…CATCH 构造的执行等级相同，则 CATCH 块不会处理这些错误：  
   
 -   编写错误，例如禁止运行批处理的语法错误。  
   
 -   语句级重新编写过程中出现的错误，例如由于名称解析延迟而造成在编写后出现对象名解析错误。  
+-   对象名解析错误   
+
   
- 这些错误会被返回到运行批处理、存储过程或触发器的级别。  
+这些错误会被返回到运行批处理、存储过程或触发器的级别。  
   
- 如果某个错误在 TRY 块内的编写或语句级别重新编写过程中并在较低的执行级别（例如，执行 sp_executesql 或用户定义存储过程时）发生，则该错误会在低于 TRY…CATCH 构造的级别上发生，并由相关联的 CATCH 块处理。  
+如果某个错误在 TRY 块内的编写或语句级别重新编写过程中并在较低的执行级别（例如，执行 sp_executesql 或用户定义存储过程时）发生，则该错误会在低于 TRY…CATCH 构造的级别上发生，并由相关联的 CATCH 块处理。  
   
- 以下示例显示在存储过程中执行相同的 `SELECT` 语句时，由 `TRY...CATCH` 语句生成的对象名解析错误是如何不被 `CATCH` 构造捕捉，却被 `SELECT` 块捕捉的。  
+以下示例显示在存储过程中执行相同的 `SELECT` 语句时，由 `TRY...CATCH` 语句生成的对象名解析错误是如何不被 `CATCH` 构造捕捉，却被 `SELECT` 块捕捉的。  
   
 ```sql  
 BEGIN TRY  

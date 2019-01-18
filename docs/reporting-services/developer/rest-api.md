@@ -1,20 +1,21 @@
 ---
 title: 使用 Reporting Services 的 REST API 进行开发 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 05/25/2018
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seodec18
+ms.date: 12/12/2018
+ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514400"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328549"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 进行开发
 
@@ -33,7 +34,7 @@ REST API 请求/响应对可分解为五个组件：
 * **请求 URI**，其中包括：`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`。 虽然请求 URI 包含在请求消息标头中，但此处将单独进行调用，因为大多数语言或框架都要求将其与请求消息分开传递。
 
     * URI 方案：指示用于传输请求的协议。 例如，`http` 或 `https`。
-    * URI 主机：指定承载 REST 服务终结点的服务器域名或 IP 地址，例如 `myserver.contoso.com`。
+    * URI 主机：指定通过 REST 服务终结点的服务器域名或 IP 地址，例如 `myserver.contoso.com`。
     * 资源路径：指定资源或资源集合，其中可能包含服务在做资源抉择时使用的多个段。 例如：`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` 可用于获取 CatalogItem 的指定属性。
     * 查询字符串（可选）：提供其他简单参数，例如 API 版本或资源选择条件。
 

@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537a2da418940ef267305078f0375d6c51716677
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: fcd61180cde6b346351230f39b3503f2ecb51298
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970338"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980133"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -135,7 +135,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C. 对分区中的行进行排名  
+### <a name="c-ranking-rows-within-a-partition"></a>C:对分区中的行进行排名  
  下面的示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
   
 ```  

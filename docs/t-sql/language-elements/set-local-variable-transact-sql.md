@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697323"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589631"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +127,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  指定 SET 语句包含游标的声明。  
   
  SCROLL  
- 指定游标支持所有提取选项：FIRST、LAST、NEXT、PRIOR、RELATIVE 和 ABSOLUTE。 如果还指定了 FAST_FORWARD，则不能指定 SCROLL。  
+ 指定游标支持所有提取选项：FIRST、LAST、NEXT、PRIOR、RELATIVE 以及 ABSOLUTE。 如果还指定了 FAST_FORWARD，则不能指定 SCROLL。  
   
  FORWARD_ONLY  
  指定游标仅支持 FETCH NEXT 选项。 只能以一个方向、从第一行到最后一行检索游标。 如果没有使用 STATIC、KEYSET 或 DYNAMIC 关键字指定 FORWARD_ONLY，游标将作为 DYNAMIC 实现。 如果 FORWARD_ONLY 和 SCROLL 均未指定，那么除非指定了 STATIC、KEYSET 或 DYNAMIC 关键字，否则默认值为 FORWARD_ONLY。 对于 STATIC、KEYSET 和 DYNAMIC 游标，SCROLL 为默认值。  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  变量只能用在表达式中，不能代替对象名或关键字。 若要构造动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，请使用 EXECUTE。  
   
- SET @cursor_variable 的语法规则不包含 LOCAL 和 GLOBAL 关键字。 当使用 SET @cursor_variable = CURSOR... 语法时，根据 default to local cursor 数据库选项的设置，游标将创建为 GLOBAL 或 LOCAL。  
+ SET @cursor_variable 的语法规则不包含 LOCAL 和 GLOBAL 关键字。 使用 SET @cursor_variable = CURSOR... 语法时，根据 default to local cursor 数据库选项的设置，游标将创建为 GLOBAL 或 LOCAL。  
   
  即使游标变量引用全局游标，它们也始终是局部变量。 如果游标变量引用全局游标，则该游标既有全局游标引用，也有局部游标引用。 有关详细信息，请参阅示例 C。  
   

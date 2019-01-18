@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f7b2bcac47cc24f5de6f58d712708082eb17010
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8dd7bd746704b2913ef6d88951080451741ab38
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676319"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886942"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路径表达式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,9 +93,9 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |路径表达式|ReplTest1|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
-|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
+|$.people[1]|{ "name":"Jane",  "surname": null, "active": true }|  
 |$.people[1].surname|null|  
-|$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
+|$|{ "people": [ { "name":"John",  "surname":"Doe" },<br />   { "name":"Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>内置函数如何处理重复的路径  
  如果 JSON 文本包含重复属性，例如，同一级别上有两个同名的键，JSON_VALUE 和 JSON_QUERY 函数将仅返回第一个与路径匹配的值。 若要分析包含重复键的 JSON 对象并返回所有值，请使用 OPENJSON，如下面的示例中所示。  
@@ -110,10 +110,6 @@ FROM OPENJSON(@json,'$.person.info')
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
   
-### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
-  
-若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
-
 ### <a name="microsoft-videos"></a>Microsoft 视频
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：

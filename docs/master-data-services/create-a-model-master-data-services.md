@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398775"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748829"
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
 
@@ -57,21 +56,21 @@ ms.locfileid: "52398775"
   
  对于创建的每个模型，系统都会在网格中添加一行（其中包含八列）。 八个列是：  
   
--   状态：模型状态。 单击“保存模型”按钮后，系统会显示![正在更新](../master-data-services/media/mds-model-status-updating.png "Updating")图像，表示模型正在更新。 如果创建或编辑模型时出现错误，系统会显示![错误](../master-data-services/media/mds-model-status-error.png "Error")图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
+-   **状态**：模型状态。 单击“保存模型”按钮后，系统会显示![正在更新](../master-data-services/media/mds-model-status-updating.png "Updating")图像，表示模型正在更新。 如果创建或编辑模型时出现错误，系统会显示![错误](../master-data-services/media/mds-model-status-error.png "Error")图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
   
--   名称：模型名称。  
+-   **名称**：模型名称。  
   
--   说明：模型说明。  
+-   **说明**：模型描述。  
   
--   日志保留天数：日志可保留该模型的天数。  
+-   **日志保留天数**：日志可为该模型保留的天数。  
   
--   创建者：创建模型的用户的用户名。  
+-   **创建者**：创建模型的用户的用户名。  
   
--   创建的日期和时间：创建模型的日期和时间。  
+-   **创建日期和时间**：创建模型的日期和时间。  
   
--   更新者：上次更新模型的用户的用户名。  
+-   **更新者**：上次更新模型的用户的用户名。  
   
--   创建的日期和时间：上次更新模型的日期和时间。  
+-   **更新日期和时间**：上次更新模型的日期和时间。  
   
 ## <a name="next-steps"></a>Next Steps  
   

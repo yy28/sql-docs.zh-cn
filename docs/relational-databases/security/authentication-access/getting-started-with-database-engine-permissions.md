@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410854"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202656"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +175,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   可以使用 `sys.database_principals` 视图查看数据库中的用户和用户定义的角色。  
   
--   可以使用 `sys.server_permissions` 视图查看授予登录名和用户定义的固定服务器角色的权限。 此视图在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 中不可用。  
+-   可以使用 `sys.server_permissions` 视图查看授予登录名和用户定义的固定服务器角色的权限。 此视图在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中不可用。  
   
 -   可以使用 `sys.database_permissions` 视图查看授予用户和用户定义的固定数据库角色的权限。  
   
@@ -203,7 +203,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- 若要返回服务器角色的成员（仅限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ），请执行以下语句。  
+ 若要返回服务器角色的成员（仅限 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]），请执行以下语句。  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  

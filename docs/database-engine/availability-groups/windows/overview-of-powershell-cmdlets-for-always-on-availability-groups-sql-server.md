@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性组的 PowerShell Cmdlet 概述
+description: '关于可用于管理 AlwaysOn 可用性组的不同 PowerShell cmdlet 的参考。 '
+ms.custom: seodec18
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4491943f13e515bda4d46285b1a1e0dd52dfd9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597866"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203766"
 ---
-# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 可用性组的 PowerShell Cmdlet 概述 (SQL Server)
+# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 可用性组的 PowerShell Cmdlet 概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是专门设计用于系统管理的基于任务的命令行 Shell 和脚本语言。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供一组 PowerShell cmdlet，支持您部署、管理和监视可用性组、可用性副本和可用性数据库。  

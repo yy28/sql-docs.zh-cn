@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734605"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216056"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>确定有效的数据库引擎权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 本文介绍如何确定谁对 SQL Server 数据库引擎中的各种对象拥有权限。 SQL Server 针对数据库引擎实现两个权限系统。 角色固定的旧系统拥有预先配置的权限。 从 SQL Server 2005 开始，提供了更灵活、更精确的系统。 （本文中的信息同样适用于 SQL Server 2005 及更高版本。 某些类型的权限在某些版本的 SQL Server 中不可用。）
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * 有效权限是这两种权限系统的聚合。 
 >  * 拒绝权限超控授予权限。 
 >  * 如果某个用户是 sysadmin 固定服务器角色的成员，则不会进一步检查权限，因此不会强制执行拒绝。 
@@ -51,24 +51,24 @@ ms.locfileid: "47734605"
 ## <a name="older-fixed-role-permission-system"></a>旧的固定角色权限系统
 
 固定服务器角色和固定数据库角色拥有不可更改的预先配置的权限。 若要确定谁是固定服务器角色的成员，请执行以下查询：    
->  [!NOTE] 
+> [!NOTE]
 >  不适用于无法使用服务器级别权限的 SQL 数据库或 SQL 数据仓库。 SQL Server 2012 中已添加 `sys.server_principals` 的 `is_fixed_role` 列。 更低版本的 SQL Server 不需要此列。  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * 所有登录名都是 public 角色的成员，不可删除。 
->  * 此查询将检查 master 数据库中的表，但可以在本地产品上的任何数据库中执行此查询。 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-若要确定谁是固定数据库角色的成员，请在每个数据库中执行以下查询。
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ SELECT DP1.name AS DatabaseRoleName,
 ### <a name="server-permissions"></a>服务器权限
 
 以下查询返回在服务器级别授予或拒绝的权限列表。 只能在 master 数据库中执行此查询。   
->  [!NOTE] 
+> [!NOTE]
 >  不能在 SQL 数据库或 SQL 数据仓库中授予或查询服务器级权限。   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>数据库权限
+### Database Permissions
 
-以下查询返回在数据库级别授予或拒绝的权限列表。 只能在每个数据库中执行此查询。   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

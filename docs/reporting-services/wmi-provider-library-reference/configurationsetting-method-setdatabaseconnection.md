@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701ba6cbdcc95895d55bd7db0fcc4468089f665f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f897c935cdd4c267440ccd5393e48dd718461c15
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538097"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206006"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 方法 - SetDatabaseConnection
   设置与特定报表服务器数据库的报表服务器数据库连接。  
@@ -78,7 +78,7 @@ public void BackupEncryptionKey(string Server,
   
  SetDatabaseConnection 方法不会检查报表服务器是否可以使用指定的数据连接到报表服务器数据库。  
   
- 在第一次设置时，将根据以下处理器来设置 ConnectionPoolSize 属性：ConnectionPoolSize = #Processors * 75。  
+ 在第一次设置时，将根据以下处理器来设置 ConnectionPoolSize 属性：ConnectionPoolSize = 处理器数 * 75。  
   
  SetDatabaseConnection 方法不会向指定的帐户授予权限。 您必须为需要访问报表服务器数据库的每一帐户调用 [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) 方法，然后运行所生成的脚本。  
   

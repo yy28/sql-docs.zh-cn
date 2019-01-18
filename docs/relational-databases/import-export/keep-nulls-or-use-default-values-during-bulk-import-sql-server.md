@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf9ffc5d71e046c32322d20bc9b59c7fb5a25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b1c9e8bda9bbabcc94aa7b384b3e7ffef053de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856165"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590201"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或使用默认值 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "47856165"
 |Command|Qualifier|限定符类型|  
 |-------------|---------------|--------------------|  
 |bcp|-k|开关|  
-|BULK INSERT|KEEPNULLS**\***|参数|  
+|BULK INSERT|KEEPNULLS\*|参数|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|N/A|N/A|  
   
-**\*** 对于 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)，如果默认值不可用，则必须将表列定义为允许 NULL 值。 
+\* 对于 [ BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)，如果默认值不可用，则必须将表列定义为允许 NULL 值。 
   
 > [!NOTE]
 > 这些限定符通过这些大容量导入命令禁止检查表上的 DEFAULT 定义。  然而，对于任何并发 INSERT 语句，都需要 DEFAULT 定义。

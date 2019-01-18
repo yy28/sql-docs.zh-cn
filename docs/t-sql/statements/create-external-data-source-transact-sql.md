@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506412"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980003"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 有关 RDBMS 的分步教程，请参阅[跨数据库查询（纵向分区）入门（预览）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/)。  
 
 **BLOB_STORAGE**   
-此类型仅用于批量操作，对于 Azure Blob 存储和容器，`LOCATION` 必须是有效的 URL。 请勿将 /、文件名或共享访问签名参数放在 `LOCATION` URL 的末尾。 如果 Blob 对象不是公共的，则需要 `CREADENTIAL`。 例如： 
+此类型仅用于批量操作，对于 Azure Blob 存储和容器，`LOCATION` 必须是有效的 URL。 请勿将 /、文件名或共享访问签名参数放在 `LOCATION` URL 的末尾。 如果 Blob 对象不是公共的，则需要 `CREDENTIAL`。 例如： 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -329,7 +329,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
 ## <a name="locking"></a>锁定  
  在 EXTERNAL DATA SOURCE 对象上采用共享锁。  
   
-##  <a name="examples"></a> 示例：SQL Server 2016  
+##  <a name="examples"></a>示例：SQL Server 2016  
   
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. 创建外部数据源以引用 Hadoop  
 若要创建外部数据源以引用 Hortonworks 或 Cloudera Hadoop 群集，请指定 Hadoop Namenode 的计算机名称或 IP 地址以及端口。  
@@ -401,7 +401,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>示例：Azure SQL 数据库
+## <a name="examples-azure-sql-database"></a>示例：Azure SQL Database
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. 创建分片映射管理器外部数据源
 若要创建外部数据源以引用 SHARD_MAP_MANAGER，请指定承载 Azure SQL 数据库中的分片映射管理器或 Azure 虚拟机上的 SQL Server 数据库的逻辑服务器名称。
@@ -445,7 +445,7 @@ WITH (
 ## <a name="examples-azure-sql-data-warehouse"></a>示例：Azure SQL 数据仓库
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. 创建外部数据源以引用 Azure Data Lake Store
-Azure Data Lake Store 连接基于 ADLS URI 和 Azure Acitve directory 应用程序的服务主体。 可以在[使用 Azure Active Directory 进行 Data Lake Store 服务到服务身份验证](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)中找到有关创建此应用程序的文档。
+Azure Data Lake Store 连接基于 ADLS URI 和 Azure Active Directory 应用程序的服务主体。 可以在[使用 Azure Active Directory 进行 Data Lake Store 服务到服务身份验证](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)中找到有关创建此应用程序的文档。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.

@@ -1,20 +1,21 @@
 ---
 title: 使用 SQL Server 移动报表发布服务器创建移动报表 | Microsoft Docs
 description: 了解适用于移动设备的 Reporting Services 移动报表，它可连接到本地数据，且具有多种类型的数据可视化效果。
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710858"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213056"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 移动报表发布服务器创建移动报表
 了解 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，其针对移动设备进行了优化，可连接到本地数据，且具有多种类型的数据可视化效果。 
@@ -35,10 +36,10 @@ ms.locfileid: "52710858"
 这些文章可帮助你入门。
 -  下载 [SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [创建 Reporting Services 移动报表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [端到端演练：在 SQL Server Reporting Services 中创建移动报表和 KPI](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)（Christopher Finlan 的博客）  
-- [设计为先还是数据为先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：决定是先使用模拟数据设计报表，还是使用自己的数据开始。  
+-  [End-to-end walkthrough:Create mobile reports and KPIs in SQL Server Reporting Services（端到端演练：在 SQL Server Reporting Services 中创建移动报表和 KPI）](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)（Christopher Finlan 博客）  
+- [设计优先还是数据优先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：决定是先使用模拟数据设计报表，还是使用自己的数据开始。  
 - [用于 Reporting Services 移动报表的数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)：使用来自共享数据集的数据，或从 Excel 工作簿准备数据，以在移动报表中使用。
-- [Reporting Services 中移动报表和 KPI 的数据刷新工作原理](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) （Christopher Finlan 的博客）：了解如何设置共享数据集的缓存，以便控制刷新数据的频率并提升报表性能。
+- [How data refresh works in mobile reports and KPIs in Reporting Services（在 Reporting Services 中移动报表和 KPI 的数据刷新工作原理）](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)（Christopher Finlan 博客）：了解如何设置共享数据集的缓存，以便控制刷新数据的频率并提升报表性能。
 - [移动报表中的可视化效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [移动报表中的仪表](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [移动报表中的地图](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
@@ -46,9 +47,8 @@ ms.locfileid: "52710858"
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI 移动应用中的 SSRS 移动报表
 
--  查看[移动应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
--  查看 [Android 设备 Power BI 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
--  [Windows 10 设备 Power BI 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  在 iOS 和 Android 版 Power BI 移动应用中查看 [Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
+-  在适用于 Windows 10 设备的 Power BI 应用中查看 [Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)   
 
 ## <a name="see-also"></a>另请参阅  
   

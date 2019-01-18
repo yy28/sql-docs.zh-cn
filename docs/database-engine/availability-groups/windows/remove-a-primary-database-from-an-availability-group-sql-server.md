@@ -1,6 +1,7 @@
 ---
-title: 从可用性组中删除主数据库 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 从可用性组中删除主数据库
+description: 使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 从 Always On 可用性组中删除主数据库的步骤。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae9f27f97cc49192c1398a75528d66239649df70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5fb0b24d51c383466cf91e6e691717170c290f4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700368"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201996"
 ---
-# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>从可用性组中删除主数据库 (SQL Server)
+# <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>从 Always On 可用性组中删除主数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 从 Always On 可用性组中删除主数据库和对应的辅助数据库。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "47700368"
   
      [先决条件和限制](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除可用性数据库，请使用：**  
   

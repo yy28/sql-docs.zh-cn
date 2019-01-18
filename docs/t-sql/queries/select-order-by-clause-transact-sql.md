@@ -1,7 +1,7 @@
 ---
 title: ORDER BY 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530227"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980273"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  可以指定多个排序列。 别名必须是唯一的。 ORDER BY 子句中的排序列的顺序定义了排序结果集的结构。 也就是说，按第一列对结果集进行排序，然后按第二列对排序列表进行排序，依此类推。  
   
- ORDER BY 子句中引用的列名必须明确对应于选择列表中的列，或对应于 FROM 子句中指定的表中定义的列。  
+ ORDER BY 子句中引用的列名必须明确对应于选择列表中的列或列别名，或对应于 FROM 子句中指定的表中定义的列。 如果 ORDER BY 子句引用选择列表中的列别名，则必须单独使用列别名，而不是作为 ORDER BY 子句中的某些表达式的一部分，例如：
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE collation_name  
  指定应根据 collation_name 中指定的排序规则执行 ORDER BY 操作，而不是根据表或视图中所定义的列的排序规则。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于类型为 char、varchar、nchar 和 nvarchar 的列。  
@@ -188,7 +195,7 @@ ORDER BY order_by_expression
   
  请参阅本主题后面的“示例”部分中的“在单个事务中运行多个查询”示例。  
   
- 如果一致的执行计划在分页解决方案中至关重要，应考虑使用 OFFSET 和 FETCH 参数的 OPTIMIZE FOR 查询提示。 请参阅本主题后面的“示例”部分中的“指定 OFFSET 和 FETCH 值的表达式”。 有关 OPTIMZE FOR 的详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
+ 如果一致的执行计划在分页解决方案中至关重要，应考虑使用 OFFSET 和 FETCH 参数的 OPTIMIZE FOR 查询提示。 请参阅本主题后面的“示例”部分中的“指定 OFFSET 和 FETCH 值的表达式”。 有关 OPTIMIZE FOR 的详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="examples"></a>示例  
   

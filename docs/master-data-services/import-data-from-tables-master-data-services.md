@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 11a14e772d1d4ceda80f0ba0e78852fb083a9f22
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 29d0b40b947bc9a19839005cfc81c9ed3446b318
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697925"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759969"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>从表导入数据 (Master Data Services)
 
@@ -35,7 +34,7 @@ ms.locfileid: "51697925"
   
  **添加、更新和删除 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的数据**  
   
-1.  准备要导入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中相应临时表的成员，包括必需字段的提供值。 有关临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+1.  准备要导入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中相应临时表的成员，包括必需字段的提供值。 有关临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
     -   叶成员的表为 stg.\<name>_Leaf，其中 \<name> 指代相应的实体。 有关所需字段的信息，请参阅[叶成员临时表 (Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   

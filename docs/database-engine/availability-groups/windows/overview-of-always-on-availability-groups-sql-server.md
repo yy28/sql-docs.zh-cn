@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性组概述 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: AlwaysOn 可用性组概述
+description: 关于用于配置和管理 AlwaysOn 可用性组的核心概念的介绍。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec3ca3bc16f7967128efc617844717dcf5e57270
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ab315e41607d528a1d34be6e61a6344350eb240
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509278"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215254"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "52509278"
  可用性组支持的复制环境适用于一组离散用户数据库，称为“可用性数据库”。 可以创建可用性组以实现高可用性 (HA) 或读取缩放。 HA 可用性组是一组共同实现故障转移的数据库。 读取缩放可用性组是一组复制到其他 SQL Server 实例以实现只读工作负荷的数据库。 一个可用性组支持一组主数据库以及一至八组对应的辅助数据库。 辅助数据库 *不是* 备份。 应继续定期备份您的数据库及其事务日志。  
   
 > [!TIP]  
->  您可以创建主数据库的任何类型的备份。 也可以创建辅助数据库的日志备份和仅复制完整备份。 有关详细信息，请参阅[活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。   
+>  您可以创建主数据库的任何类型的备份。 也可以创建辅助数据库的日志备份和仅复制完整备份。 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。   
 
  每组可用性数据库都由一个“可用性副本” 承载。 有两种类型的可用性副本：一个“主副本” 和一到四个“辅助副本”。 它承载主数据库和一至八个“辅助副本” ，其中每个副本承载一组辅助数据库，并用作可用性组的潜在故障转移目标。 可用性组在可用性副本级别进行故障转移。 可用性副本仅在数据库级别提供冗余（针对一个可用性组中的该组数据库）。 故障转移不是由诸如因数据文件丢失或事务日志损坏而使数据库成为可疑数据库等数据库问题导致的。  
   
@@ -124,11 +125,11 @@ ms.locfileid: "52509278"
   
 -   **对辅助副本执行备份操作**  
   
-     次要副本支持对完整数据库、文件或文件组执行日志备份和 [仅复制](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 备份。 您可以配置可用性组，以便为备份指定一个首选位置。 理解 SQL Server 不强制使用首选备份位置十分重要，因为它对即席备份没有影响。 对此首选备份位置的解释取决于您为给定可用性组中的每个数据库撰写作业脚本的逻辑（如果有）。 对于单独的可用性副本，您可以指定对此副本（相对于同一可用性组中其他副本）执行备份的优先级。 有关详细信息，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)概念。  
+     次要副本支持对完整数据库、文件或文件组执行日志备份和 [仅复制](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 备份。 您可以配置可用性组，以便为备份指定一个首选位置。 理解 SQL Server 不强制使用首选备份位置十分重要，因为它对即席备份没有影响。 对此首选备份位置的解释取决于您为给定可用性组中的每个数据库撰写作业脚本的逻辑（如果有）。 对于单独的可用性副本，您可以指定对此副本（相对于同一可用性组中其他副本）执行备份的优先级。 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **对一个或多个辅助副本（可读辅助副本）的只读访问权限**  
   
-     可以对任何可用性副本进行配置，以便允许在其履行辅助角色时对其本地数据库进行只读访问，尽管不会完全支持某些操作。 此外，如果您想要禁止在主副本上产生只读工作负荷，则可以将副本配置为在以主角色运行时仅允许读写访问。 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
+     可以对任何可用性副本进行配置，以便允许在其履行辅助角色时对其本地数据库进行只读访问，尽管不会完全支持某些操作。 此外，如果您想要禁止在主副本上产生只读工作负荷，则可以将副本配置为在以主角色运行时仅允许读写访问。 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
      如果某一可用性组当前拥有一个可用性组侦听程序以及一个或多个可读次要副本，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以将读意向连接请求路由到其中一个可读次要副本（*只读路由*）。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)概念。  
   
@@ -155,17 +156,17 @@ ms.locfileid: "52509278"
   
 -   **博客：**  
   
-     [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第二部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 2 部分：使用 Always On 生成关键任务高可用性解决方案）  
   
 -   **白皮书：**  
   
@@ -183,7 +184,7 @@ ms.locfileid: "52509278"
  [对内存中 OLTP 数据库的高可用性支持](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [活动次要副本：次要副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   

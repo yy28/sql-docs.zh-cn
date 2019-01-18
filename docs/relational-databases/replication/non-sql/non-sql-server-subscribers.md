@@ -21,17 +21,17 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f8d06d55c31698629fed1521f54eaca8521d9d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc0ce16aabdf9ea1bfdafce6f6c06cce7aa181b3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710375"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203146"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
+下列非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
   
  不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
   
@@ -60,7 +60,7 @@ Oracle 版本信息：
 有关创建 Oracle 和 IBM DB2, 订阅的信息，请参阅 [Oracle 订阅服务器](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)的解决方案。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>非 SQL Server 订阅服务器的注意事项  
- 在复制到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器时，请牢记下列注意事项：  
+ 在复制到非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器时，请牢记下列注意事项：  
   
 ### <a name="general-considerations"></a>一般注意事项  
   
@@ -86,7 +86,7 @@ Oracle 版本信息：
   
 -   如果在发布中添加或删除项目，必须重新初始化对非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的订阅。  
   
--   所有非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器支持的约束只有：NULL 和 NOT NULL。 主键约束按唯一索引复制。  
+-   所有非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器支持的约束都只有：NULL 和 NOT NULL。 主键约束按唯一索引复制。  
   
 -   不同的数据库处理 NULL 值的方式不同，这将影响空白值、空字符串和 NULL 的显示方式， 而显示方式又影响在定义了唯一约束的列中插入值的行为。 例如，Oracle 允许唯一列中有多个 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅允许唯一列中存在一个 NULL 值。  
   

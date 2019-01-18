@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520522"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589231"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52520522"
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，然后单击“*<InstanceName>* 的”。  
+2.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，然后单击“_<InstanceName>_ 的”。  
   
     默认实例（未命名实例）作为 **MSSQLSERVER** 列出。 如果您已经安装了某个命名实例，则您提供的名称将会列出。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 作为 **SQLEXPRESS**安装，除非你在安装过程中更改了该名称。  
   

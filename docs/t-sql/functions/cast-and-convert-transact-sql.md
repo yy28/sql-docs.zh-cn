@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191067"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210777"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52191067"
 
 这些函数将表达式由一种数据类型转换为另一种数据类型。  
 
-示例：更改输入数据类型
+**示例：** 更改输入数据类型
 
 **强制转换**
 ```sql  
@@ -103,7 +103,7 @@ style
 ## <a name="date-and-time-styles"></a>Date 和 Time 样式  
 对于日期或时间数据类型的 expression，style 可以具有下表所示的某个值。 其他值作为 0 进行处理。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，在从日期和时间类型转换为 datetimeoffset 时支持的唯一样式是 0 或 1。 所有其他转换样式均返回错误 9809。
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用科威特算法来支持阿拉伯样式的日期格式。
   
 |不带世纪数位 (yy) (<sup>1</sup>)|带世纪数位 (yyyy)|Standard|输入/输出 (<sup>3</sup>)|  
@@ -167,9 +167,9 @@ style
   
 |ReplTest1|“输出”|  
 |---|---|
-|**0** （默认值）|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取两位数<br /><br />示例：4235.98。|  
-|**1**|小数点左侧每三位数字之间以逗号分隔，小数点右侧取两位数<br /><br />示例：3,510.92。|  
-|**2**|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取四位数<br /><br />示例：4235.9819。|  
+|**0** （默认值）|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取两位数<br /><br />例如：4235.98。|  
+|**1**|小数点左侧每三位数字之间以逗号分隔，小数点右侧取两位数<br /><br />例如：3,510.92。|  
+|**2**|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取四位数<br /><br />例如：4235.9819。|  
 |**126**|转换为 char(n) 或 varchar(n) 时，等同于样式 2|  
   
 ## <a name="xml-styles"></a>xml 样式

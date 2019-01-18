@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535538"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553209"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   SSISDB 目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -412,7 +412,7 @@ ms.locfileid: "52535538"
   
     ```  
   
-3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅 [如何备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅[如何备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  通过执行以下操作，生成 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 脚本。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)。  
   
@@ -436,7 +436,7 @@ ms.locfileid: "52535538"
   
 ### <a name="to-restore-the-ssis-database"></a>还原 SSIS 数据库  
   
-1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请通过运行 sp_configure 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [clr enabled 选项](https://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果要将 SSISDB 数据库还原到从不创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请通过运行 `sp_configure` 存储过程来启用公共语言运行时 (clr)。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [clr enabled 选项](https://go.microsoft.com/fwlink/?LinkId=231855)。  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ ms.locfileid: "52535538"
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开本地服务器，然后展开“Integration Services 目录” 。  
   
-3.  右键单击“SSISDB”，然后选择“数据库升级”以启动 SSISDB 升级向导。  
+3.  右键单击“SSISDB”，然后选择“数据库升级”以启动 SSISDB 升级向导。 或者通过使用提升的权限在本地服务器上运行 `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` 来启动 SSISDB 升级向导。
   
-     ![启动 SSISDB 升级向导](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "启动 SSISDB 升级向导")  
-  
+     ![启动 SSISDB 升级向导](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  在“选择实例”  页上，选择本地服务器上的 SQL Server 实例。  
   
     > [!IMPORTANT]  
@@ -587,7 +587,7 @@ ms.locfileid: "52535538"
   
 ###  <a name="Firsttime"></a> 为 AlwaysOn 配置 SSIS 支持  
   
--   [步骤 1：创建 Integration Services 目录](#Step1)  
+-   [第 1 步：创建 Integration Services 目录](#Step1)  
   
 -   [步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组](#Step2)  
   
@@ -610,7 +610,7 @@ ms.locfileid: "52535538"
   
 4.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”  ，使 [catalog.startup](../system-stored-procedures/catalog-startup.md) 存储过程在每次重启 SSIS 服务器后运行。 该存储过程对 SSISDB 目录的操作状态进行维护。 它可以修复当 SSIS 服务器实例出现故障时正在运行的任何包的状态。  
   
-5.  输入 **密码**，然后单击“确定” 。 该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [备份数据库主密钥](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
+5.  输入 **密码**，然后单击“确定” 。 该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
 ####  <a name="Step2"></a> 步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组  
 将 SSISDB 数据库添加到 AlwaysOn 可用性组的方法与将任何其他用户数据库添加到可用性组的方法几乎相同。 请参阅 [使用可用性组向导](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
@@ -655,9 +655,9 @@ ms.locfileid: "52535538"
   
 3.  在 **主节点**上升级 SSISDB 数据库。 在 SQL Server Management Studio 内的“对象资源管理器” 中，展开“Integration Services 目录” ，右键单击“SSISDB” ，然后选择“数据库升级” 。 按照“SSISDB 升级向导”  中的说明来升级数据库。 在主节点上，本地启动 SSIDB 升级向导。  
   
-4.  按照 [步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组](#Step2) 中的说明将 SSISDB 添加回可用性组。  
+4.  按照[步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组](#Step2)中的说明将 SSISDB 添加回可用性组。  
   
-5.  按照 [步骤 3：为 AlwaysOn 启用 SSIS 支持](#Step3)中的说明执行。  
+5.  按照[步骤 3：为 AlwaysOn 启用 SSIS 支持](#Step3)中的说明进行操作。  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   

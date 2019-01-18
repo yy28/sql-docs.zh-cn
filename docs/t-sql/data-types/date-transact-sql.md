@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533022"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980333"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52533022"
   
 ## <a name="date-description"></a>date 说明
   
-|“属性”|ReplTest1|  
+|属性|ReplTest1|  
 |--------------|-----------|  
 |语法|**date**|  
 |用法|DECLARE \@MyDate date<br /><br /> CREATE TABLE Table1 ( Column1 date)|  
@@ -66,7 +66,7 @@ ms.locfileid: "52533022"
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|mon 表示采用当前语言的完整月份名称或月份缩写。 逗号是可选的，且忽略大小写。<br /><br /> 为避免不确定性，请使用四位数年份。<br /><br /> 如果没有指定日，则默认为当月第一天。|  
   
-|ISO 8601|说明|  
+|ISO 8601|描述|  
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|与 SQL 标准相同。 这是唯一定义为国际标准的格式。|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52533022"
 |yyyy-mm-ddTZD|专为用于 XML/SOAP 而支持的格式。<br /><br /> TZD 是时区指示符（Z 或 +hh:mm 或 -hh:mm）：<br /><br /> -   hh:mm 表示时区偏移量。 hh 是两位数，范围为 0 到 14，它表示时区偏移量中的小时数。<br />-   MM 是两位数，范围为 0 到 59，它表示时区偏移量中的额外分钟数。<br />-   +（加）或 -（减）是时区偏移量中必须包含的符号。 这两个符号表示用协调世界时 (UTC) 加上或减去时区偏移量以得出本地时间。 时区偏移量的有效范围为 -14:00 到 +14:00。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>对 ANSI 和 ISO 8601 的遵从性  
-date 符合公历的 ANSI SQL 标准定义：“备注 85 - Datetime 数据类型将允许存储日期范围从 0001-01-01 CE 到 9999-12-31 CE 之间的公历格式的日期。”
+date 符合公历的 ANSI SQL 标准定义：“备注 85 - Datetime 数据类型将允许存储日期范围从 0001–01–01 CE 到 9999–12–31 CE 之间的公历格式的日期。”
   
 默认字符串文字格式（用于下级客户端）将遵照 SQL 标准格式（定义为 YYYY-MM-DD）。 该格式与 ISO 8601 对 DATE 的定义相同。
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-如果转换到 smalldatetime，日期值位于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 范围中，会复制日期部分，且时间部分设置为 00:00:00.000。 当 date 值不在 smalldatetime 值的范围内时，会引发错误消息 242：“从 date 数据类型到 smalldatetime 数据类型的转换生成超出范围的值。”，smalldatetime 值将设置为 NULL。 下面的代码显示将 `date` 值转换为 `smalldatetime` 值的结果。
+如果转换到 smalldatetime，日期值位于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 范围中，会复制日期部分，且时间部分设置为 00:00:00.000。 当 date 值不在 smalldatetime 值范围之内时，引发错误消息 242：“将 date 数据类型转换为 smalldatetime 数据类型将导致值超出范围”，并且 smalldatetime 值设置为 NULL。 下面的代码显示将 `date` 值转换为 `smalldatetime` 值的结果。
   
 ```sql
 DECLARE @date date= '1912-10-25';  

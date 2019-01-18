@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cbede7141154147bbb714d00d794d4b8af7cf8e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696397"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979374"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ INFORMATION_TYPE_ID
 ## <a name="remarks"></a>Remarks  
 
 - 只能向单个对象添加一个分类。 向已进行分类的对象添加分类将覆盖现有分类。
-- 可以使用单个 `ADD SENSITIVITY CLASSIFICTION` 语句对多个对象进行分类。
+- 可以使用单个 `ADD SENSITIVITY CLASSIFICATION` 语句对多个对象进行分类。
 - 系统视图 [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 可用于检索数据库的敏感度分类信息。
 
 
 ## <a name="permissions"></a>Permissions
 
-需要“ALTER ANY SENSITIVITY CLASSIFICATION”权限。 “ALTER ANY SENSITIVITY CLASSIFICATION”由数据库权限“ALTER”或服务器权限“CONTROL SERVER”隐含。
+需要“ALTER ANY SENSITIVITY CLASSIFICATION”权限。 “ALTER ANY SENSITIVITY CLASSIFICATION”由数据库权限“ALTER”或服务器权限“CONTROL SERVER”表示。
 
 
 ## <a name="examples"></a>示例  
@@ -119,7 +119,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## <a name="see-also"></a>另请参阅  
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c35eed3e73a80a2fcaf060e094c31938d0692414
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 511be25daa32daa1a8d80707043280171f76edbc
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697225"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980213"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -663,7 +663,7 @@ WHERE NOT EXISTS
 ;
 
 RENAME OBJECT dbo.[DimProduct]          TO [DimProduct_old];
-RENAME OBJECT dbo.[DimpProduct_upsert]  TO [DimProduct];
+RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 ```
 

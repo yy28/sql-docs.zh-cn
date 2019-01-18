@@ -15,15 +15,15 @@ helpviewer_keywords:
 - lightweight query profiling
 - lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 42c1612916ec1de69e02ce50febd6a2820cd9684
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5b60d4190ad25dd57098ef4cd107f1838886a767
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412604"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368409"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52412604"
 > [!NOTE]
 > 在内部，实时查询统计信息利用 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV。
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 > [!WARNING]  
 > 此功能主要用于故障排除。 使用此功能会明显降低整体查询性能，尤其是在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  

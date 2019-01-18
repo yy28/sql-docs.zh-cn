@@ -1,6 +1,7 @@
 ---
-title: “指定可用性组选项”页（新建可用性组向导/添加数据库向导）| Microsoft Docs
-ms.custom: ''
+title: “指定可用性组选项”页（可用性组向导）- SQL Server | Microsoft Docs
+ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c68b1d85be8dd4e5533a1aca16348fd1ee66bf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec4f98310707922abfe32a1fbd771d71da777907
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699951"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203553"
 ---
-# <a name="specify-availability-group-options-page"></a>“指定可用性组选项”页
+# <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性组的“指定可用性组选项”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主题介绍“指定可用性组名称”页中的选项。 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]均使用此主题。  
   

@@ -13,12 +13,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bdda5d95544df6b7cd7cc4108c3bd21dc8f50d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779155"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591531"
 ---
 # <a name="object-dependencies"></a>对象依赖关系
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "47779155"
 使用此对话框可在更改或删除所选对象之前了解其依赖关系。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
-“依赖 <selected object> 的对象”  
+依赖于 \<所选对象> 的对象  
 单击此按钮将列出依赖于所选对象的对象，以及依赖关系跟踪所涉及的对象。  
   
-“<selected object> 依赖的对象”  
+\<所选对象> 依赖的对象  
 单击此按钮将列出所选对象所依赖的并且依赖关系跟踪涉及的对象。  
   
 **依赖关系**  

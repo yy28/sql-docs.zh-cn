@@ -26,16 +26,16 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da4ea3844087ea5b130060b8cc37a6bfa4c355bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522267"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414182"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>创建已分区表和已分区索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52522267"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建已分区表或索引，使用：**  
   
@@ -204,7 +204,7 @@ ms.locfileid: "52522267"
   
                 -   如果选择 **“天”**，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”。 请注意，第二个框中允许的最大数是“99”。  
   
-                -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”。 还可以从前两个列表中选择“第一周”、“第二周”、“第三周”或“第四周”以及特定工作日（例如星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
+                -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”。 还可以从前两个列表中选择“第一周”、“第二周”、“第三周”或“第四周”以及特定工作日（例如：星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
   
         2.  在 **“每天频率”** 下，指定作业计划运行的当天作业计划的重复频率。  
   

@@ -1,6 +1,7 @@
 ---
-title: 可用性模式（AlwaysOn 可用性组）| Microsoft Docs
-ms.custom: ''
+title: 可用性组的可用性模式之间的差异
+description: 关于 AlwaysOn 可用性组的不同可用性模式的说明。
+ms.custom: seodec18
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544043"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53206366"
 ---
-# <a name="availability-modes-always-on-availability-groups"></a>可用性模式（AlwaysOn 可用性组）
+# <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>AlwaysOn 可用性组的可用性模式之间的差异
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，“可用性模式”是一个副本属性，该属性确定某一给定可用性副本是否可在同步提交模式下运行。 对于每个可用性副本，必须为同步提交模式、异步提交模式或仅配置模式配置可用性模式。  如果主要副本配置为“异步提交模式”，则它不会等待任何次要副本将传入的事务日志记录写入磁盘（以便强制写入日志）。 如果某一给定的辅助副本配置为异步提交模式，则主副本不会等待该辅助副本强制写入日志。 如果主要副本和某一给定次要副本都配置为同步提交模式，则主要副本将等待次要副本，以便确认它已强制写入日志（除非次要副本在主要副本的会话超时期限内未能使用 ping 命令联系上主要副本）。 
@@ -32,18 +33,6 @@ ms.locfileid: "52544043"
 
 > [!NOTE]  
 >  如果某一辅助副本超过了主副本的会话超时期限，则主副本将暂时切换到该辅助副本的异步提交模式。 在该辅助副本重新与主副本连接后，它们将恢复同步提交模式。  
-  
- **本主题内容：**  
-  
--   [受支持的可用性模式](#SupportedAvModes)  
-  
--   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
-  
--   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> 受支持的可用性模式  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持三种可用性模式：异步提交模式、同步提交模式和仅配置模式，如下所示：  
@@ -66,8 +55,8 @@ ms.locfileid: "52544043"
   
 |当前主副本|自动故障转移目标|具有以下节点的同步提交模式行为|具有以下节点的异步提交模式行为|能否自动故障转移|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 和 03|04|用户帐户控制|  
-|02|01|01 和 03|04|用户帐户控制|  
+|01|02|02 和 03|04|是|  
+|02|01|01 和 03|04|是|  
 |03||01 和 02|04|否|  
 |04|||01、02 和 03|否|  
   
@@ -185,7 +174,7 @@ ms.locfileid: "52544043"
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

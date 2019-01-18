@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526608"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202876"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和旧的包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -76,7 +76,7 @@ ms.locfileid: "52526608"
 
 如果在默认情况下更改 SSIS 服务帐户，可能须向非默认服务账户授予其他权限，才能成功部署包。 如果非默认服务帐户不具有所需权限，可能会收到以下错误消息。
 
-执行用户定义的例程或聚合“deploy_project_internal”期间，发生 .NET Framework 错误：System.ComponentModel.Win32Exception: 客户端不具有所需的权限。
+*在执行用户定义例程或聚合 "deploy_project_internal" 期间出现 .NET Framework 错误：System.ComponentModel.Win32Exception：客户端没有所需的特权。*
 
 此错误通常是因为缺少 DCOM 权限造成的。 若要修复此错误，请执行以下操作。
 
@@ -90,7 +90,7 @@ ms.locfileid: "52526608"
 8.  单击“确定”两次，然后关闭“组件服务”控制台。
 
 有关本部分中描述的错误和 SSIS 服务帐户所需权限的详细信息，请参阅以下博客文章。  
-[System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端不具有所需权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+[System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端没有所需权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  
@@ -102,14 +102,14 @@ ms.locfileid: "52526608"
   
 1.  创建一个 SSISDB 目录（如果尚未创建）。 有关详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
-2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明： [将项目转换为项目部署模型](#convert)  
+2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明：[将项目转换为项目部署模型](#convert)  
   
     -   如果在 [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 中或更高版本中创建了项目，则默认情况下该项目使用项目部署模型。  
   
     -   如果您在早期版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中创建了项目，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中打开项目文件之后，将该项目转换为项目部署模型。  
   
         > [!NOTE]  
-        >  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到项目中的包可共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+        >  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到项目中的包可共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
   
          根据您是从 **还是从** 运行 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，该向导将执行不同的转换任务。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52526608"
   
      有关包升级的详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 包升级向导升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-3.  将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明： [将项目部署到 Integration Services 服务器](#deploy)。  
+3.  将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明：[将项目部署到 Integration Services 服务器](#deploy)。  
   
 4.  （可选）创建已部署项目的环境。 
   
@@ -273,7 +273,7 @@ static void Main()
   
 2.  如果项目和所有包都通过了兼容测试，则单击 **“确定”** 以转换包。  
   
-> **注意：** 若要将项目转换为项目部署模型，请使用 **Integration Services 项目转换向导**。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意：** 若要将项目转换为项目部署模型，请使用 **“Integration Services 项目转换向导”**。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署向导
   **Integration Services 部署向导** 支持两种部署模型：
@@ -295,7 +295,7 @@ static void Main()
 
  - 在 SQL Server 安装文件夹下搜索可执行文件 ISDeploymentWizard.exe；例如：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
  
- > **注意：** 如果显示“简介”页，则单击“下一步”切换到“选择源”页。 
+ > **注意：** 在“简介”  页上单击“下一步”  ，切换到“选择源”  页。 
  
  对于每个部署模型，此页上的设置会有所不同。 基于你在此页中选择的模型，按照 [Project Deployment Model](#ProjectModel) 部分或 [Package Deployment Model](#PackageModel) 部分的步骤进行操作。  
   
@@ -409,13 +409,13 @@ static void Main()
   
  您还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署项目和执行包。 有关详细信息，请参阅“另请参见”  部分中的主题。  
   
-> [!TIP]  
+> [!TIP]
 >  您可以通过执行以下操作为下面的过程中列出的存储过程轻松地生成 Transact-SQL 语句，但 catalog.deploy_project 除外：  
->   
+> 
 >  1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，在对象资源管理器中展开“Integration Services 目录”  节点，然后导航到您要执行的包。  
 > 2.  右键单击该包，然后单击“执行”。  
 > 3.  根据需要，设置参数值、连接管理器属性和 **“高级”** 选项卡中的选项（例如，日志记录级别）。  
->   
+> 
 >      有关日志记录级别的详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
 > 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“查询编辑器”窗口中。  
   
@@ -513,7 +513,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。  
   
 > [!NOTE]  
->  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+>  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
   
  **您希望做什么？**  
   

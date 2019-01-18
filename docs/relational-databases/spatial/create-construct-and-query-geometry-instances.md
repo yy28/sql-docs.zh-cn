@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9115aa7ed39102557243ddcc24754b3c7f5453bc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a488bba170b9df5fd896b85c880bb26388e3d252
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521840"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980193"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ ms.locfileid: "52521840"
   
 -   **LineString** 和 **MultiLineString** 边界由起始点和终点形成，并删除那些出现次数为偶数的点。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');  
 SELECT @g.STBoundary().ToString();  
@@ -256,7 +256,7 @@ SELECT @g.STBoundary().ToString();
   
  **Polygon** 或 **MultiPolygon** 实例的边界是其环的集合。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0), (1 1, 1 2, 2 2, 2 1, 1 1))');  
 SELECT @g.STBoundary().ToString();  
@@ -264,14 +264,12 @@ SELECT @g.STBoundary().ToString();
   
  **返回实例的边界**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
-  
-  
+   
 ###  <a name="envelope"></a> 包络线  
  **geometry**实例的“包络线”又称为“边界框”，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
   
  **返回实例的包络线**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
-  
   
 ###  <a name="closure"></a> 闭合  
  闭合的 **geometry** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
@@ -300,8 +298,8 @@ SELECT @g.STBoundary().ToString();
  **设置或返回实例的 SRID**  
  [STSrid](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)  
   
- 此属性可以进行修改。  
-  
+> [!NOTE]
+> 此属性可以进行修改。  
   
 ##  <a name="rel"></a> 确定几何图形实例之间的关系  
  **geometry** 数据类型提供了许多内置方法，你可以使用这些方法确定两个 **geometry** 实例之间的关系。  
@@ -339,47 +337,48 @@ SELECT @g.STBoundary().ToString();
  **确定两个几何图形中的点之间的最短距离**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-  
 ##  <a name="defaultsrid"></a> 几何图形实例默认 SRID 为零  
  **中** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认 SRID 为 0。 利用 **geometry** 空间数据，执行计算是不需要空间实例的指定 SRID 的；因此，实例可驻留在未定义的平面空间。 若要在 **geometry** 数据类型方法的计算中指明未定义的平面空间， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 SRID 0。  
   
 ##  <a name="examples"></a> 示例  
- 以下两个示例显示了如何添加和查询几何图形数据。  
+以下两个示例显示了如何添加和查询几何图形数据。  
   
--   第一个示例创建了带有标识列和 `geometry` 列 `GeomCol1`的表。 第三列将 `geometry` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geometry`实例，一行包含 `Polygon` 实例。  
+### <a name="example-a"></a>示例 A。
+此示例创建了一个带有标识列和 `geometry` 列 `GeomCol1` 的表。 第三列将 `geometry` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geometry`实例，一行包含 `Polygon` 实例。  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
+
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeomCol1 geometry,   
+    GeomCol2 AS GeomCol1.STAsText() 
+  );  
+GO  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
+GO  
+```  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeomCol1 geometry,   
-        GeomCol2 AS GeomCol1.STAsText() );  
-    GO  
+### <a name="example-b"></a>示例 B。
+此示例使用 `STIntersection()` 方法返回此前插入的两个 `geometry` 实例相交的点。  
   
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
-  
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
-    GO  
-    ```  
-  
--   第二个示例使用 `STIntersection()` 方法返回此前插入的两个 `geometry` 实例相交的点。  
-  
-    ```  
-    DECLARE @geom1 geometry;  
-    DECLARE @geom2 geometry;  
-    DECLARE @result geometry;  
-  
-    SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geom1.STIntersection(@geom2);  
-    SELECT @result.STAsText();  
-    ```  
-  
+```sql  
+DECLARE @geom1 geometry;  
+DECLARE @geom2 geometry;  
+DECLARE @result geometry;  
+
+SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geom1.STIntersection(@geom2);  
+SELECT @result.STAsText();  
+```  
   
 ## <a name="see-also"></a>另请参阅  
  [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  

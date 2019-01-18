@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -15,12 +14,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d39d78d9fef6756804f69c8fb49ed1e880d94767
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bbad98239ef2aabbea33a1874e5e6f3efad51c55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395381"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783609"
 ---
 # <a name="database-object-security-master-data-services"></a>数据库对象安全性 (Master Data Services)
 
@@ -49,11 +48,11 @@ ms.locfileid: "52395381"
   
 |操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
-|创建、更新和删除叶成员及其属性。|stg.name_Leaf|必需：INSERT<br /><br /> 可选：SELECT 和 UPDATE|  
+|创建、更新和删除叶成员及其属性。|stg.name_Leaf|必需：Insert<br /><br /> 可选:SELECT 和 UPDATE|  
 |将数据从叶临时表加载到相应的 MDS 数据库表中。|stg.udp_name_Leaf|在运行 CREATE 语句前执行|  
-|创建、更新和删除合并成员及其属性。|stg.name_Consolidated|必需：INSERT<br /><br /> 可选：SELECT 和 UPDATE|  
+|创建、更新和删除合并成员及其属性。|stg.name_Consolidated|必需：Insert<br /><br /> 可选:SELECT 和 UPDATE|  
 |将数据从合并临时表加载到相应的 MDS 数据库表中。|stg.udp_name_Consolidated|在运行 CREATE 语句前执行|  
-|在一个显式层次结构中移动成员。|stg.name_Relationship|必需：INSERT<br /><br /> 可选：SELECT 和 UPDATE|  
+|在一个显式层次结构中移动成员。|stg.name_Relationship|必需：Insert<br /><br /> 可选:SELECT 和 UPDATE|  
 |将数据从关系临时表加载到相应的 MDS 表中。|stg.udp_name_Relationship|在运行 CREATE 语句前执行|  
 |查看在数据从临时表插入到 MDS 数据库表时发生的错误。|stg.udp_name_Relationship|SELECT|  
   

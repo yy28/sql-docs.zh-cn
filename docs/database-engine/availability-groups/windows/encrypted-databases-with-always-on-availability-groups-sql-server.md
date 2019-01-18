@@ -1,6 +1,7 @@
 ---
-title: 具有 AlwaysOn 可用性组的加密数据库 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 将加密数据库添加到可用性组
+description: 将加密（或最近解密的）数据库添加到 Always On 可用性组的步骤。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12ee0cb358d64b0f81872c8c1d0d3fcf36d3a815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf22a6a15d85f3e5ad6ffc24a9ce371f43b34206
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784755"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215483"
 ---
-# <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>具有 AlwaysOn 可用性组的加密数据库 (SQL Server)
+# <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>将加密数据库添加到 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题包含有关在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中将当前加密或最近解密的数据库与 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]一起使用的信息。  

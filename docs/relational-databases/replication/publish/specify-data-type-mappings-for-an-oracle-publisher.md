@@ -15,12 +15,12 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4e6bfd2b9762aac697c41aa852d482cbcb2c0d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e83f1a2e61a26e54713a5dae9dd2ef7cc092479
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659115"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212356"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 发布服务器的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47659115"
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 可以使用复制存储过程，以编程方式指定自定义数据类型映射。 还可以设置在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库管理系统 (DBMS) 间映射数据类型时使用的默认映射。 有关详细信息，请参阅 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)。  
+ 可以使用复制存储过程，以编程方式指定自定义数据类型映射。 还可以设置在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库管理系统 (DBMS) 间映射数据类型时使用的默认映射。 有关详细信息，请参阅 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)。  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>在创建属于 Oracle 发布的项目时定义自定义数据类型映射  
   

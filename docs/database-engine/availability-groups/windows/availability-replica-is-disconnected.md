@@ -1,6 +1,7 @@
 ---
-title: 断开可用性副本的连接 | Microsoft Docs
-ms.custom: ''
+title: 可用性组的可用性副本连接已断开
+description: 确定在 AlwaysOn 可用性组中副本连接断开的可能原因。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d070f183fbe5b09016af950cfad9e6da60e90c6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9f699a5f23998d5891ccbfe56ce0a3f31b12e0cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605737"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207376"
 ---
-# <a name="availability-replica-is-disconnected"></a>断开可用性副本的连接
+# <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>AlwaysOn 可用性组中的可用性副本连接已断开
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>简介  

@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542524"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591881"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ GO
 * 一个经常被引用的执行计划，该计划的开销从未等于零。 除非遇到内存不足和当前开销为零的情况，否则该计划保留在计划缓存中，不会被删除。
 * 插入的一个即席执行计划，并且在内存不足情况出现之前没有再次引用该计划。 由于即席计划在初始化后当前开销为零，因此在[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]检查执行计划时，会发现当前开销为零，于是从计划缓存中删除该计划。 如果不存在内存不足的情况，当前开销为零的即席执行计划将保留在计划缓存中。
 
-若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。
+若要从缓存中手动删除单个计划或所有计划，请使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。
 
 ### <a name="recompiling-execution-plans"></a>重新编译执行计划
 
@@ -572,7 +572,7 @@ WHERE ProductSubcategoryID = 4;
 参数化在单条 Transact-SQL 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，参数的名称和数据类型在此列中已提交批的文本前面，如 (\@1 tinyint)。
 
 > [!NOTE]
-> 参数名称是任意的。 用户或应用程序不必拘泥于特定的命名顺序。 另外，下面的内容可能会因 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本以及 Service Pack 升级版本而异：参数名称、要参数化的文字的选择以及参数化文本中的空格。
+> 参数名称是任意的。 用户或应用程序不必拘泥于特定的命名顺序。 此外，以下内容可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和 Service Pack 升级版之间进行更改：参数名称、参数化文字的选择以及参数化文本中的间距。
 
 #### <a name="data-types-of-parameters"></a>参数数据类型
 
@@ -1026,8 +1026,8 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 |基于 A 列的表分区 |在每个表分区中查找 B 列 |
 |----|----|
 |表分区 1：A < 10   |B=50, B=100, B=150 |
-|表分区 2：A >= 10 AND A < 20   |B=50, B=100, B=150 |
-|表分区 3：A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|表分区 2：A >= 10 和 A < 20   |B=50, B=100, B=150 |
+|表分区 3：A >= 20 和 A < 30   |B=50, B=100, B=150 |
 |表分区 4：A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳实践

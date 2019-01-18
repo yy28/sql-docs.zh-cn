@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -19,12 +18,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed15741a0565cda9735b4e2d851e1b025deea224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8780bd1545793f08e51e2e0804d03d8a3e98178e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760164"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>数据库登录名、用户和角色 (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47607345"
 |用户|描述|  
 |----------|-----------------|  
 |**mds_clr_user**|未使用。 映射到 mds_dlp_login。|  
-|**mds_email_user**|用于通知。<br /><br /> - 映射到 mds_email_login。<br /><br /> - 是角色 DatabaseMailUserRole 的成员。|  
+|**mds_email_user**|用于通知。<br /><br /> - 映射到 mds_email_login。<br /><br /> - 是以下角色的成员：DatabaseMailUserRole。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 数据库用户  
   

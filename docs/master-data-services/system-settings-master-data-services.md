@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -15,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
+ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507287"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738113"
 ---
 # <a name="system-settings-master-data-services"></a>系统设置 (Master Data Services)
 
@@ -113,7 +112,7 @@ ms.locfileid: "52507287"
 |**用于通知的主数据管理器 URL**|**MDMRootURL**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web 应用程序的 URL，在电子邮件通知的链接中使用，例如 `https://constoso/mds`。|  
 |**通知电子邮件间隔**|**NotificationInterval**|发送电子邮件通知的频率（以秒为单位）。 默认值为 **120** 秒（2 分钟）。|  
 |**单个电子邮件中的通知数**|**NotificationsPerEmail**|将在单个通知电子邮件中列出的验证问题的最大数目。 如果存在其他问题，则这些问题将不包括在该电子邮件中，但可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中进行查看。|  
-|**默认电子邮件格式**|**EmailFormat**|所有电子邮件通知的格式。 默认值为 **HTML** 或 **1**。 数据库设置 **2** 表示 **“文本”**。<br /><br /> 注意：可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中为单个用户替代此设置，只需在用户的“常规”  选项卡上更改和保存“电子邮件格式”  即可。|  
+|**默认电子邮件格式**|**EmailFormat**|所有电子邮件通知的格式。 默认值为 **HTML** 或 **1**。 数据库设置 **2** 表示 **“文本”**。<br /><br /> 注意：可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中覆盖单个用户的这一设置，只需在用户的“常规”选项卡上更改和保存“电子邮件格式”即可。|  
 |**用于电子邮件地址的正则表达式**|**EmailRegExPattern**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“用户和组权限”** 功能区域，用于验证在用户的 **“常规”** 即可。有关正则表达式的详细信息，请参阅 MSDN Library 中的 [正则表达式语言元素](https://go.microsoft.com/fwlink/?LinkId=164401) 。|  
 |**数据库邮件帐户**|**EmailProfilePrincipalAccount**|显示发送电子邮件通知时要使用的数据库邮件帐户。 默认配置文件为 **mds_email_user**。|  
 |**数据库邮件配置文件**|**DatabaseMailProfile**|发送电子邮件通知时要使用的数据库邮件配置文件。 默认值为空。|  
@@ -129,6 +128,11 @@ ms.locfileid: "52507287"
 |配置管理器设置|系统设置|描述|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“用户和组权限”** 功能区域，应用 **“层次结构成员”** 选项卡上设置的用户和组权限的频率（以秒为单位）。 默认值为 **3600** 秒（60 分钟）。|  
+
+##  <a name="Performance"></a> 性能设置  
+|配置管理器设置|系统设置|描述|  
+|-----------------------------------|--------------------|-----------------|  
+|**启用性能改进设置**|**PerformanceImprovementEnable**|我们默认启用此设置（设置为 1），使加载权限相关页面具有良好的性能。 但在此情况下，创建/修改实体、属性、用户或组性能不佳。 为避免这种情况，可以禁用此设置（设置为 0）。 随后更改此设置。 必须运行命令“EXEC [mdm].[udpPerformanceToggleSwitch];”，以确保视图和数据正确无误。|  
   
  有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   

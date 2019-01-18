@@ -19,30 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c4bf49266f87dcc569ca6bca52c5a8d82119bb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510865"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626264"
 ---
 # <a name="create-a-database-schema"></a>创建数据库架构
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建架构。  
-  
- **本主题内容**  
-  
--   **开始之前：**  
-  
-     [限制和局限](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **若要创建架构，可使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -75,6 +61,9 @@ ms.locfileid: "52510865"
 5.  在 **“架构所有者”** 框中，输入要拥有该架构的数据库用户或角色的名称。 或者，单击 **“搜索”** 以打开 **“搜索角色和用户”** 对话框。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+> [!NOTE]
+> 如果要使用 SSMS 针对 Azure SQL 数据库或 Azure SQL 数据仓库创建架构，则不会显示对话框。 将需要运行生成的“创建架构模板 T-SQL 语句”。
   
 ### <a name="additional-options"></a>其他选项  
  “架构 - 新建”对话框还在两个其他页上提供了选项：“权限”和“扩展属性”。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99dbf8f5a9ba634899360b86d7f778d73a30de80
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cf58aa27b8b426dca887d24fbfe15158263c8ae2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020601"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212697"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
   自定义报表项设计时组件是一种可在 Visual Studio 报表设计器环境中使用的控件。 自定义报表项设计时组件可提供能接受拖放操作的激活的设计图面，可与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器集成，且可提供自定义属性编辑器。  
@@ -24,7 +24,7 @@ ms.locfileid: "50020601"
   
  在开发环境中使用设计时组件设置的属性可通过宿主设计环境序列化和反序列化，然后存储为报表定义语言 (RDL) 文件中的元素。 报表由报表处理器执行时，使用设计时组件设置的属性将由报表处理器传递给自定义报表项运行时组件，后者将呈现自定义报表项，并将自定义报表项传递回报表处理器。  
   
-> [!NOTE]  
+> [!NOTE]
 >  自定义报表项设计时组件以 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 组件的形式实现。 本文档将介绍自定义报表项设计时组件所特有的实现细节。 有关使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发组件的详细信息，请参阅 MSDN 库中的 [Visual Studio 中的组件](https://go.microsoft.com/fwlink/?LinkId=116576)。  
   
  有关完全实现的自定义报表项的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
@@ -190,12 +190,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
   
--   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
+-   演练：Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
   
 ## <a name="see-also"></a>另请参阅  
  [自定义报表项体系结构](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [创建自定义报表项运行时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [如何部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何：部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

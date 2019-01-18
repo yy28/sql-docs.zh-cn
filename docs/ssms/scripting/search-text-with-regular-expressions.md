@@ -7,8 +7,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,25 +17,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538798"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53329027"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
+
+正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
   
-#### <a name="to-find-using-regular-expressions"></a>使用正则表达式进行查找  
+## <a name="find-using-regular-expressions"></a>使用正则表达式进行查找  
   
 1.  若要在“快速查找”、“在文件中查找”、“快速替换”或“在文件中替换”操作过程中，在“查找内容”字段中启用正则表达式，请选中“查找选项”下的“使用”，然后选择“正则表达式”。  
   
 2.  **“查找内容”** 字段旁边的 **“引用列表”** 三角形按钮将变为可用状态。 单击此按钮可显示一组最常用的正则表达式。 如果选择了表达式生成器中的某个项，则可将该项插入 **“查找内容”** 字符串。  
   
 > [!NOTE]  
->  **“查找内容”** 字符串中使用的正则表达式与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程中的有效正则表达式相比，语法上存在差异。 例如，在“查找和替换”对话框中，大括号 {} 用于表示带标记的表达式。 所以，表达式“zo{1}”将匹配所有“zo”后带标记 1 的匹配项，如“Alonzo1”和“Gonzo1”。 但在 .NET Framework 中，{} 符号用于表示量词。 因此，表达式“zo{1}”将匹配所有“z”后跟一个“o”的匹配项，如匹配“zone”，但不匹配“zoo”。  
+> **“查找内容”** 字符串中使用的正则表达式与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程中的有效正则表达式相比，语法上存在差异。 例如，在“查找和替换”对话框中，大括号 {} 用于表示带标记的表达式。 所以，表达式“zo{1}”将匹配所有“zo”后带标记 1 的匹配项，如“Alonzo1”和“Gonzo1”。 但在 .NET Framework 中，{} 符号用于表示量词。 因此，表达式“zo{1}”将匹配所有“z”后跟一个“o”的匹配项，如匹配“zone”，但不匹配“zoo”。  
   
  下表对 **“引用列表”** 中提供的正则表达式进行了说明。  
   
@@ -137,5 +136,3 @@ ms.locfileid: "52538798"
 ## <a name="see-also"></a>另请参阅  
  [搜索和替换](../../relational-databases/scripting/search-and-replace.md)   
  [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

@@ -20,12 +20,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f20b2f1b29c6ba175237e2e4f47cb5cf6fa0a610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066bd086fcbe9b69cc49821651302cd2102cd671
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771825"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214086"
 ---
 # <a name="full-database-backups-sql-server"></a>完整数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47771825"
   
  ![显示数据库备份之间的工作丢失风险](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "显示数据库备份之间的工作丢失风险")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>例如 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>示例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  下面的示例说明了如何使用 WITH FORMAT 覆盖任意现有备份并创建新介质集，从而创建一个完整数据库备份。  
   
 ```  
@@ -70,7 +70,7 @@ GO
   
  有关如何创建日志备份的信息，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>例如 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>示例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  下面的示例说明了如何使用 WITH FORMAT 覆盖任意现有备份并创建新介质集，从而创建一个完整数据库备份。 然后，此示例将备份事务日志。 在现实情况下，您必须执行一系列的定期日志备份。 在此示例中， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库设置为使用完整恢复模式。  
   
 ```  

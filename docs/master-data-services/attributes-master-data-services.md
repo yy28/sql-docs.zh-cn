@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -19,12 +18,12 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a1469df51ddfebdbbe08c177f3f7a4a0b130fd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d782a7863d8e6ed029a201b4b309817d2e2a12c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796055"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813359"
 ---
 # <a name="attributes-master-data-services"></a>属性 (Master Data Services)
 
@@ -63,7 +62,7 @@ ms.locfileid: "47796055"
 -   如果包含浮点数，值可能无法“往返转换”。 如果某一运算将原始浮点数转换为其他形式，而相反运算将已转换形式转换回浮点数，并且最终生成的浮点数与原始浮点数相等，则值被认为是往返转换。 因为在转换过程中一个或多个最小有效位缺失或更改，所以该往返转换可能失败。  
   
 ## <a name="attribute-examples"></a>属性示例  
- 在下面的示例中，实体具有 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性。 这些属性描述成员。 每个成员由一行属性值表示。  
+ 在以下示例中，该实体具有以下属性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
   
  ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   

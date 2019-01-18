@@ -1,6 +1,7 @@
 ---
-title: SQL Server 2016 可用性组的群集 DTC | Microsoft Docs
-ms.custom: ''
+title: 如何为可用性组群集 DTC 服务
+description: '介绍为 AlwaysOn 可用性组群集 Microsoft 分布式事务处理协调器 (DTC) 服务的要求和步骤。 '
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601377"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203306"
 ---
-# <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 可用性组的群集 DTC
+# <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何为 AlwaysOn 可用性组群集 DTC 服务
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

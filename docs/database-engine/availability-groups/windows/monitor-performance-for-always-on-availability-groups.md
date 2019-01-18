@@ -1,6 +1,7 @@
 ---
-title: 监视 Always On 可用性组的性能 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 监视可用性组的性能
+description: 本文介绍同步过程，演示如何计算一些关键指标，并提供一些常见性能故障排除方案的链接。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601147"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203346"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,8 +136,8 @@ ms.locfileid: "51601147"
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO/RPO 公式中使用的性能计数器
 
 - redo_queue_size (KB) [用于 RTO 中]：重做队列大小是 RTO last_received_lsn 和 last_redone_lsn 之间的事务日志大小。 last_received_lsn 是标识一个点的日志块 ID，在该点之前，所有日志块都已由承载此辅助数据库的次要副本接收。 Last_redone_lsn 是在辅助数据库上重做的上一个日志记录的日志序列号。 基于这两个值，可找到起始日志块 (last_received_lsn) 和结束日志块 (last_redone_lsn) 的 ID。 然后，这两个日志块之间的空间可以表示尚未重做的事务日志块数。 以千字节 (KB) 为单位。
--  redo_rate（KB / 秒）[用于 RTO 中]：一个累积值，表示运行时间内在辅助数据库上已重做的事务日志数 (KB)（以千字节(KB) /秒为单位）。 
-- last_commit_time（日期）[用于 RPO 中]：对于主数据库，last_commit_time 是上一个事务的提交时间。 对于辅助数据库，last_commit_time 是主数据库上事务（已在辅助数据库上成功强化）的上次提交时间。 由于辅助设备上的此值应与主设备上的相同值同步，因此这两个值之间的任何差异都是数据丢失 (RPO) 的估计值。  
+-  redo_rate（KB/秒）[用于 RTO 中]：一个累积值，表示运行时间内在辅助数据库上已重做的事务日志数 (KB)（以千字节 (KB)/秒为单位）。 
+- last_commit_time (Datetime) [用于 RPO 中]：对于主数据库，last_commit_time 是上一个事务的提交时间。 对于辅助数据库，last_commit_time 是主数据库上事务（已在辅助数据库上成功强化）的上次提交时间。 由于辅助设备上的此值应与主设备上的相同值同步，因此这两个值之间的任何差异都是数据丢失 (RPO) 的估计值。  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>使用 DMV 估计 RTO 和 RPO
 
@@ -328,7 +329,7 @@ ms.locfileid: "51601147"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>监视 RTO 和 RPO  
- 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第二部分：扩展运行状况模型）中给出的 GUI 教程。  
+ 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）中给出的 GUI 教程。  
   
  [估计故障转移时间 (RTO)](#BKMK_RTO) 和[估计可能的数据丢失 (RPO)](#BKMK_RPO) 中的故障转移时间和可能的数据丢失计算的元素，可方便地用作策略管理方面数据库副本状态中的性能指标（请参阅[查看 SQL Server 对象上基于策略的管理方面](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)）。 可以按计划监视这两个指标，并在指标分别超过 RTO 和 RPO 时发出警报。  
   
@@ -358,7 +359,7 @@ ms.locfileid: "51601147"
   
     -   **名称**：`RTO`  
   
-    -   **Facet**：数据库副本状态  
+    -   **Facet**：**数据库副本状态**  
   
     -   **字段**：`Add(@EstimatedRecoveryTime, 60)`  
   
@@ -372,7 +373,7 @@ ms.locfileid: "51601147"
   
     -   **名称**：`RPO`  
   
-    -   **Facet**：数据库副本状态  
+    -   **Facet**：**数据库副本状态**  
   
     -   **字段**：`@EstimatedDataLoss`  
   
@@ -386,7 +387,7 @@ ms.locfileid: "51601147"
   
     -   **名称**：`IsPrimaryReplica`  
   
-    -   **Facet**可用性组  
+    -   **Facet**：**可用性组**  
   
     -   **字段**：`@LocalReplicaRole`  
   
@@ -408,7 +409,7 @@ ms.locfileid: "51601147"
   
              此设置确保仅在本地可用性副本是其主要副本的可用性组上对策略进行评估。  
   
-        -   **评估模式**：按计划  
+        -   **评估模式**：**按计划**  
   
         -   **计划**：CollectorSchedule_Every_5min  
   
@@ -422,7 +423,7 @@ ms.locfileid: "51601147"
   
         -   **说明**：当前副本的 RTO 超过 10 分钟，假定发现和故障转移的开销为 1 分钟。应立即调查相应服务器实例上的性能问题。  
   
-        -   **要显示的文本**：RTO 已超出！  
+        -   **要显示的文本**：**超过了 RTO！**  
   
 8.  使用以下规范创建第二个[基于策略的管理策略](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)：  
   
@@ -434,7 +435,7 @@ ms.locfileid: "51601147"
   
         -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
   
-        -   **评估模式**：按计划  
+        -   **评估模式**：**按计划**  
   
         -   **计划**：CollectorSchedule_Every_30min  
   
@@ -446,7 +447,7 @@ ms.locfileid: "51601147"
   
         -   **说明**：可用性数据库已超过时间为 1 小时的 RPO。应立即调查可用性副本上的性能问题。  
   
-        -   **要显示的文本**：RPO 已超出！  
+        -   **要显示的文本**：**超过了 RPO！**  
   
  操作完成后，会创建两个新的 SQL Server 代理作业，每个策略评估计划都会有一个作业。 这些作业的名称应以“syspolicy_check_schedule”开头。  
   
@@ -457,8 +458,8 @@ ms.locfileid: "51601147"
   
 |应用场景|描述|  
 |--------------|-----------------|  
-|[疑难解答：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
-|[疑难解答：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
+|[故障排除：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
+|[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
 |[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
   
 ##  <a name="BKMK_XEVENTS"></a>有用的扩展事件  

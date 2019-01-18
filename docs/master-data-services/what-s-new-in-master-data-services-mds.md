@@ -5,19 +5,18 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392337"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764599"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
@@ -82,7 +81,7 @@ ms.locfileid: "52392337"
   
  现在，可以在模型级别显式为用户分配管理员权限。 这意味着，如果以后在模型子树（例如实体级别）中为该用户分配了权限，该用户不会失去此管理员权限。  
   
- 在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我们通过引入以下新权限来提供等级更高的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
+ 在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我们通过引入以下新权限来提供更高级别的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
   
  升级到 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，旧权限将转换为下表中所示的新权限。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "52392337"
 |最初安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的用户拥有服务器管理员权限。|用户拥有超级用户功能权限|  
 |用户在模型级别拥有“更新”权限，但在模型子树中没有权限，因此也是隐式的模型管理员。|用户在模型级别拥有显式管理员权限。|  
 |用户拥有只读权限。|用户拥有“读取”访问权限。|  
-|用户拥有“更新”权限。|用户拥有所有四种访问权限：“创建”、“更新”、“删除”和“读取”。|  
+|用户拥有“更新”权限。|用户拥有以下四种访问权限：“创建”、“更新”、“删除”和“读取”。|  
 |用户拥有“拒绝”权限|用户拥有“拒绝”权限|  
   
  有关权限的详细信息，请参阅[安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)。  

@@ -22,15 +22,15 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a4b22ca8bec9f12778cae94d31de77c9cbe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789135"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951589"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录名。 您可以在具有众多显式或隐式上下文切换的会话中使用该函数返回原始登录的标识。  
   
@@ -48,11 +48,13 @@ ORIGINAL_LOGIN( )
   
 ## <a name="remarks"></a>Remarks  
  该函数在审核原始连接上下文的标识时非常有用。 但是 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 和 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) 之类的函数返回当前的执行上下文，ORIGINAL_LOGIN 返回该会话中首次连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录的标识。  
-  
- 针对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 返回 NULL。  
+ 
   
 ## <a name="examples"></a>示例  
- 以下示例将当前会话的执行上下文从语句的调用方切换到 `login1`。 函数 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 用于返回当前会话用户（上下文切换到的用户）和原始登录帐户。  
+ 以下示例将当前会话的执行上下文从语句的调用方切换到 `login1`。 函数 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 用于返回当前会话用户（上下文切换到的用户）和原始登录帐户。 
+ 
+  >[!NOTE]
+  > 尽管 Azure SQL 数据库上支持 ORIGINAL_LOGIN 函数，但由于 Azure SQL 数据库上不支持 Execute as LOGIN，因此以下脚本将失败。 
   
 ```  
 USE AdventureWorks2012;  

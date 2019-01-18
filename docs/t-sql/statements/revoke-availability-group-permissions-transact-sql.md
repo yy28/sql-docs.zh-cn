@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: daaaa615a778314556f9684800bdc2a56cd7a5ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524332"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980143"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE 可用性组权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## <a name="permissions"></a>Permissions  
- 需要对可用性组的 CONTROL 权限或对服务器的 ALTER ANY AVAILABILTIY GROUP 权限。  
+ 需要具有针对可用性组的 CONTROL 权限或针对服务器的 ALTER ANY AVAILABILITY GROUP 权限。  
   
 ## <a name="examples"></a>示例  
   

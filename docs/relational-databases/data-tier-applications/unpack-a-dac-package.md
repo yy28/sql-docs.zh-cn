@@ -14,18 +14,18 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6fd8dc38147cd3053aaf1720f9c3b30ea0ac512
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e75565d69b2a5a1ac2cf5d6a9d512fffbcf768f5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810353"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590721"
 ---
 # <a name="unpack-a-dac-package"></a>解压缩 DAC 包
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用“解压缩数据层应用程序”对话框可以从数据层应用程序 (DAC) 包解压缩脚本和文件。 这些脚本和文件放置在一个文件夹中，您可以在使用该 DAC 包将 DAC 部署到生产系统中之前查看该文件夹。 一个 DAC 的内容也可与解压缩到其他文件夹中的其他包的内容进行比较。  
   
-1.  **开始之前：**  [安全性](#Security)  
+1.  **开始之前：**[安全性](#Security)  
   
 2.  **若要解压缩 DAC，请使用：**[“解压缩数据层应用程序”对话框](#UnpackDACDial)、[检查 DAC 包的内容](#ExamDACPack)  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711198"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372479"
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "52711198"
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
- 有关方案的详细说明，请参阅 [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) （Query Store：数据库的网络流量数据记录器）博客。  
+ 有关方案的详细说明，请参阅 [Query Store:A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)（查询存储：适用于数据库的飞行数据记录器）博客。  
   
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>识别并优化资源使用排名靠前的查询  
  虽然你的工作负荷可能会生成数千个查询，但通常情况下，使用大部分系统资源的实际上只是其中一部分查询，因此你只需要注意这部分查询。 通常情况下，在资源使用排名靠前的查询中，你会发现有些查询是回归性查询，有些查询则可在进一步优化后获得性能改善。  
   
- 开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面分成三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。  此外，还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
+ 开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面将分为三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。  此外，还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   

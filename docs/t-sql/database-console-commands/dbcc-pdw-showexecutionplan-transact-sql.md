@@ -12,12 +12,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 532a19a4fca82e200b9499672cf48f736cfd3f4b
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d69a9393c990c16357287ac31433780c3b7e27a4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226319"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979833"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -89,7 +89,7 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-基于上述查询的结果，使用 sql_spid 和 pdw_node_id 作为 DBCC PDW_SHOWEXEUCTIONPLAN 的参数。 例如，以下命令会显示 pdw_node_id 201001 和 sql_spid 375 的执行计划。
+基于上述查询的结果，使用 sql_spid 和 pdw_node_id 作为 DBCC PDW_SHOWEXECUTIONPLAN 的参数。 例如，以下命令会显示 pdw_node_id 201001 和 sql_spid 375 的执行计划。
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  

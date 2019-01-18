@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2811871ff8d7a190eedd2ebf93fc74639f1c44b9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503569"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215876"
 ---
 # <a name="data-flow"></a>数据流
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
@@ -109,7 +109,7 @@ ms.locfileid: "52503569"
 ## <a name="transformations"></a>转换  
  转换的功能非常广泛。 转换可以执行如更新、汇总、清除、合并和分发数据等任务。 可以修改列中的值、查找表中的值、清理数据以及聚合列值。  
   
- 转换的输入和输出定义传入和传出数据的列。 根据对数据执行的操作，一些转换具有一个输入和多个输出，而其他转换具有多个输入和一个输出。 转换还可以包含错误输出，它们提供关于发生的错误以及失败的数据的信息，例如，无法转换为整数数据类型的字符串数据。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型不限制转换可以包含的输入、常规输出和错误输出的数目。 您可以创建自定义转换，这些转换可实现多个输入、常规输出和错误输出的任意组合。  
+ 转换的输入和输出定义传入和传出数据的列。 根据对数据执行的操作，一些转换具有一个输入和多个输出，而其他转换具有多个输入和一个输出。 转换还可以包含错误输出，它们提供关于发生的错误以及失败的数据信息：例如，无法转换为整数数据类型的字符串数据。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型不限制转换可以包含的输入、常规输出和错误输出的数目。 您可以创建自定义转换，这些转换可实现多个输入、常规输出和错误输出的任意组合。  
   
  转换的输入被定义为一个或多个输入列。 某些 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 转换还可以引用外部列作为输入。 例如 OLE DB 命令转换的输入包含外部列。 输出列是转换添加到数据流的列。 常规输出和错误输出都包含输出列。 这些输出列转而充当数据流中下一个组件（其他转换或目标）的输入列。  
   
@@ -179,18 +179,18 @@ ms.locfileid: "52503569"
  源有输出，目标有输入，而转换既有输入，又有输出。 此外，可将许多数据流组件配置为使用错误输出。  
   
 ### <a name="inputs"></a>输入  
- 目标和转换具有输入。 输入包含一个或多个输入列，如果数据流组件已配置为使用外部列，则输入列可引用外部列。 输入可配置为监视和控制数据流，例如，可指定在出现错误时组件是应失败，忽略错误，还是将错误行重定向至错误输出。 还可为输入指派说明，或更新输入名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输入进行配置。 有关 **“高级编辑器”** 的详细信息，请参阅 [Integration Services User Interface](../../integration-services/integration-services-user-interface.md)。  
+ 目标和转换具有输入。 输入包含一个或多个输入列，如果数据流组件已配置为使用外部列，则输入列可引用外部列。 输入可配置为监视和控制数据流：例如，可指定在出现错误时组件是应失败、忽略错误，还是将错误行重定向至错误输出。 还可为输入指派说明，或更新输入名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输入进行配置。 有关 **“高级编辑器”** 的详细信息，请参阅 [Integration Services User Interface](../../integration-services/integration-services-user-interface.md)。  
   
 ### <a name="outputs"></a>输出  
  源和转换始终具有输出。 输出包含一个或多个输出列，如果数据流组件已配置为使用外部列，则输出列可引用外部列。 可对输出进行配置以提供对数据的下游处理有用的信息。 例如，可指示输出是否已排序。 还可为输出提供说明或更新输出名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输出进行配置。  
   
 ### <a name="error-outputs"></a>错误输出  
- 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列： **ErrorCode** 和 **ErrorColumn**。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
+ 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列：ErrorCode 和 ErrorColumn。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
   
  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
 ### <a name="columns"></a>“列”  
- 输入、输出和错误输出是列的集合。 每一列都可配置，并取决于列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”对话框。  
+ 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”对话框。  
   
 ## <a name="paths"></a>路径  
  路径连接数据流组件。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以查看和修改路径属性，查看路径开始点的输出元数据，以及将数据查看器附加到路径。  

@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 1b25f4ecde0a80aef19e94b2d1f1b572529bcfd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e4d5dbd9f7b419437481acb3306fc88a237fcc5d
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412684"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732064"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 SQL Server 或 Azure SQL 数据库中
 
@@ -174,7 +173,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 ## <a name="next-steps"></a>后续步骤
 
-- 了解如何在设计环境中调试包和排查包问题。 从此处开始：[包开发的故障排除工具][Troubleshooting Tools for Package Development]。
+- 了解如何在设计环境中调试包和排查包问题。 从此处开始：[包开发的疑难解答工具][Troubleshooting Tools for Package Development]。
 
 - 了解如何将 SSIS 项目和包部署到 Integration Services 服务器或其他存储位置。 从此处开始：[项目和包的部署][Deployment of Projects and Packages]。
 

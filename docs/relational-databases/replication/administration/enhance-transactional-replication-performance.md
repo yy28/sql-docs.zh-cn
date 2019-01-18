@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535757"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207086"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52535757"
   
      将代理设置为连续运行而不是创建频繁的计划（如每分钟）会提高复制性能，因为代理不必启动和停止。 将分发代理设置为连续运行后，以低滞后时间将更改传播到拓扑中连接的其他服务器。 有关详细信息，请参阅：  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步计划](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[指定同步计划](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>分发代理和日志读取器代理参数  
 代理配置文件参数经常调整，以增加具有高流量 OLTP 系统的日志读取器和分发代理的吞吐量。 
@@ -146,7 +146,7 @@ ms.locfileid: "52535757"
 - Dist: Delivered Trans/sec 性能计数器的值始终是 0。
 - Dist: Delivery Latency 性能计数器报告值增加，直到解决线程死锁问题。
 
-SQL Server 联机丛书中的“复制分发代理”主题包含有关 SubscriptionStreams 参数的以下描述：“如果一个连接未能执行或提交，所有连接将中止当前批处理，代理将使用单个流重试失败的批处理。”
+SQL Server 联机丛书中的“复制分发代理”主题包含对以下 SubscriptionStreams 参数的说明：“如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。”
 
 分发代理使用一个会话来重试之前不能应用的批处理。 分发代理成功应用批处理后，将继续使用多个会话，无需重新启动。
 
@@ -156,7 +156,7 @@ SQL Server 联机丛书中的“复制分发代理”主题包含有关 Subscrip
 提交一组事务的开销是固定的；通过不经常提交大量事务，就可以将开销分散在大量数据上。  增加 CommitBatchSize（最多 200）可提升性能，因为将向订阅服务器提交更多事务。 但是，增大此参数的优势因应用更改的开销由其他因素（例如包含日志的最大磁盘 I/O）限制而降低。 另外，需要考虑以下权衡问题：必须回滚任何导致分发代理重新开始的失败并重新应用大量事务。 对于不可靠的网络，越小的值导致失败的几率越小，如果导致失败，将回滚并重新应用较少量事务。  
   
 
-##<a name="see-more"></a>查看详细信息
+## <a name="see-more"></a>查看详细信息
   
 [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

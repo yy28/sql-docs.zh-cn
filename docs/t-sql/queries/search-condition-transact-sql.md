@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699795"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979513"
 ---
 # <a name="search-condition-transact-sql"></a>搜索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -190,7 +190,7 @@ ms.locfileid: "51699795"
  根据是在列表中包含还是排除某表达式，指定对该表达式的搜索。 搜索表达式可以是常量或列名，而列表可以是一组常量，更常用的是子查询。 将一组值用圆括号括起来。 有关详细信息，请参阅 [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)。  
   
  subquery  
- 可以视为受限的 SELECT 语句，与 SELECT 语句中的 \<query_expresssion> 相似。 不允许使用 ORDER BY 子句和 INTO 关键字。 有关详细信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
+ 可以视为受限的 SELECT 语句，与 SELECT 语句中的 \<query_expression> 相似。 不允许使用 ORDER BY 子句和 INTO 关键字。 有关详细信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
  ALL  
  与比较运算符和子查询一起使用。 如果为子查询检索的所有值都满足比较运算，则为 \<predicate> 返回 TRUE；如果并非所有值都满足比较运算或子查询未向外部语句返回行，则返回 FALSE。 有关详细信息，请参阅 [ALL (Transact SQL)](../../t-sql/language-elements/all-transact-sql.md)。  

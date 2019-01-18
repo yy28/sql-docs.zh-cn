@@ -22,12 +22,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 864377bee6ee587e95321338d0c1a46f5c7523e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742975"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591751"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,6 +122,9 @@ ms.locfileid: "47742975"
  服务器级别操作组涵盖了整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的操作。 例如，如果将相应操作组添加到服务器审核规范中，则将记录任何数据库中的任何架构对象访问检查。 在数据库审核规范中，仅记录该数据库中的架构对象访问。  
   
  服务器级别的操作不允许对数据库级别的操作进行详细筛选。 实现详细操作筛选需要数据库级别的审核，例如，对 Employee 组中登录名的 Customers 表执行的 SELECT 操作进行的审核。 在用户数据库审核规范中不要包括服务器范围的对象，例如系统视图。  
+
+ > [!NOTE]
+ > 由于启用事务级别审核所需的开销，从 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 开始，除非已启用通用标准符合性，否则将默认禁用事务级别审核。  如果已禁用通用标准符合性，仍能够通过 TRANSACTION_GROUP 将操作添加到审核规范，但实际上不会收集任何事务操作。  如果想要通过 TRANSACTION_GROUP 配置任何审核操作，从 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 及更高版本开始，请确保通过启用通用标准符合性，来启用事务级别审核基础结构。  请注意，从 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP1 CU2 开始，事务级别审核也可使用跟踪标志 3427 禁用。
   
 ## <a name="database-level-audit-action-groups"></a>数据库级别审核操作组  
  数据库级别审核操作组是类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全审核事件类的操作。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)。  

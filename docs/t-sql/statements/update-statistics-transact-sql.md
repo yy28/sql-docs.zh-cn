@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586290"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531062"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-UPDATE STATISTICS schema_name . ] table_name   
+UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
     [ WITH   
        {  
@@ -164,7 +164,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = max_degree_of_parallelism  
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
  在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   

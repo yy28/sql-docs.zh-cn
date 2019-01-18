@@ -5,8 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 keywords:
 - 了解 SQL
@@ -14,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 96c174676d00e646191aa3620b2e0a884b44616b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809439"
 ---
 # <a name="learn-sql-server-master-data-services"></a>了解 SQL Server Master Data Services
 
@@ -37,7 +36,7 @@ ms.locfileid: "51695805"
 ## <a name="samples"></a>示例  
 * 了解有关如何使用模型、实体和层次结构在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中构造数据的详细信息，请尝试安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]时附带的示例模型。 有关部署示例的说明，请参阅 [部署示例模型和数据](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。   
   
-    有关示例模型的 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新的信息，请参阅 [SQL Server 示例：模型部署包](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+    有关示例模型的 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新信息，请参阅 [SQL Server 示例：模型部署包](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
 * 有关如何自定义你和你的用户与 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的交互方式的演示，请尝试使用 SQL Server 示例附带的 MDS C# 控制台应用程序示例。 可以从此 [GitHub 存储库](https://github.com/Microsoft/sql-server-samples)以 .zip 文件格式下载 SQL Server 示例。  
   

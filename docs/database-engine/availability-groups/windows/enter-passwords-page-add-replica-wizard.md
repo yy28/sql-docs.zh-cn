@@ -1,6 +1,7 @@
 ---
-title: “输入密码”页（添加副本向导）| Microsoft Docs
-ms.custom: ''
+title: 可用性组的“输入密码”页（添加副本向导）
+description: 关于在 SQL Server Management Studio 的“添加副本”向导中的“输入密码”页上找到的属性的说明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11b171ef067bd5abdc29d306421b956792f1a55b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7472049d96abf98f55dcc90486012b33ba13ba66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790575"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215038"
 ---
-# <a name="enter-passwords-page-add-replica-wizard"></a>输入密码页（添加副本向导）
+# <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>AlwaysOn 可用性组的“输入密码”页（添加副本向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本帮助主题介绍了“输入密码”  页中的选项。 本主题适用于 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409044"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209063"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
 
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器保存您的更改。 然后，必须手动重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 这使您可以选择最适合您的业务要求的重新启动时间。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务重新启动后，AlwaysOn 将启用，而且 IsHadrEnabled 服务器属性将设置为 1。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   您在目标计算机上必须具有相应的用户权限或被委托了相应的授权才能连接到该计算机。  
 > -   您正在管理的计算机名称显示在控制台树中的“计算机管理”旁边的括号中。  
   
@@ -226,7 +226,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  
   
- 可以在 Server Core 上使用 [SQLdiag Utility](../../tools/sqldiag-utility.md) 一文中指定的语法在管理员命令提示符下启动该实用工具。  
+ 可以在 Server Core 上使用以下文章中指定的语法在管理员命令提示符下启动该实用工具：[SQLdiag 实用工具](../../tools/sqldiag-utility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

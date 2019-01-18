@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409894"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210427"
 ---
 # <a name="row-level-security"></a>行级安全性
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52409894"
   
  可使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及作为 [内联表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)创建的谓词来实现 RLS。  
   
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[获取](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[获取](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
 > [!NOTE]
 > Azure SQL 数据仓库仅支持筛选谓词。 Azure SQL 数据仓库当前不支持阻止谓词。
@@ -52,7 +52,7 @@ ms.locfileid: "52409894"
   
  对表中的行级数据的访问将受到定义为内联表值函数的安全谓词的限制。 随后调用该函数，并由安全策略进行实施。 对于筛选谓词，应用程序不知道从结果集中筛选的行；如果筛选了所有行，则返回空集。 对于阻止谓词，违反该谓词的任何操作将失败并出错。  
   
- 从基表中读取数据时会应用筛选谓词，它会影响所有获取操作：SELECT、DELETE（即用户无法删除筛选的行）和 UPDATE（用户无法更新已筛选的行，但可以更新行，以便以后对其进行筛选）。 阻止谓词影响所有写入操作。  
+ 从基表中读取数据时会应用筛选器谓词，它们会影响所有 Get 操作：SELECT、DELETE（即用户无法删除筛选的行）和 UPDATE（用户无法更新已筛选的行，但可以更新行，以便以后对其进行筛选）。 阻止谓词影响所有写入操作。  
   
 -   AFTER INSERT 和 AFTER UPDATE 谓词可以防止用户将行更新为违反该谓词的值。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52409894"
   
 -   UPDATE 的阻止谓词根据 BEFORE 和 AFTER 拆分为单独的操作。 因此，举例来说，你无法阻止用户将某行的值更新为大于当前值。 如果需要这种逻辑，你必须对 DELETED 和 INSERTED 中间表使用触发器来引用旧值和新值。  
   
--   如果谓词函数使用的列都未更改，则优化器不会检查 AFTER UPDATE 阻止谓词。 例如：Alice 无法将薪水更改为大于 100,000，但可以更改薪水已大于 100,000（因而违反了谓词）的员工的地址。  
+-   如果谓词函数使用的列都未更改，则优化器不会检查 AFTER UPDATE 阻止谓词。 例如：Alice 无法将薪水更改为大于 100,000，但可以更改薪水已超过 100,000（因而违反了谓词）的员工的地址。  
   
 -   批量操作 API（包括 BULK INSERT）未发生变化。 这意味着，阻止谓词 AFTER INSERT 将应用于批量插入操作，就像普通的插入操作一样。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "52409894"
   
 -   避免在谓词函数中使用过多表联接以便使性能最大化。  
   
- 避免使用依赖于会话特定的 [SET 选项](../../t-sql/statements/set-statements-transact-sql.md)的谓词逻辑：如果用户可以执行任意查询，则其逻辑依赖于会话特定的 **SET** 选项的谓词函数可能会透漏信息，不过，这种逻辑很少在实际应用程序中使用。 例如，将字符串隐式转换为 **datetime** 的谓词函数可能会根据当前会话的 **SET DATEFORMAT** 选项筛选不同的行。 一般而言，谓词函数应遵守以下规则：  
+ 避免使用依赖于会话特定 [SET 选项](../../t-sql/statements/set-statements-transact-sql.md)的谓词逻辑：如果用户可以执行任意查询，则其逻辑依赖于会话特定的 SET 选项的谓词函数可能会透漏信息，不过，这种逻辑很少在实际应用程序中使用。 例如，将字符串隐式转换为 **datetime** 的谓词函数可能会根据当前会话的 **SET DATEFORMAT** 选项筛选不同的行。 一般而言，谓词函数应遵守以下规则：  
   
 -   谓词函数不应将字符串隐式转换为 **date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**，也不应执行相反的转换，因为这些转换受 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md) 和 [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) 选项的影响。 应改用 **CONVERT** 函数并显式指定样式参数。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52409894"
 -   谓词函数不应将串联字符串与 **NULL** 进行比较，因为这种行为受 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 选项的影响。  
    
   
-##  <a name="SecNote"></a> 安全说明：旁路攻击  
+##  <a name="SecNote"></a>安全说明：旁路攻击  
  **恶意安全策略管理员：** 观察到以下这点十分重要：具有足够权限来基于敏感列创建安全策略并且有权创建或更改内联表值函数的恶意安全策略管理员可以与另一个对表具有选择权限的用户串通，通过恶意创建旨在使用旁路攻击推断数据的内联表值函数来泄漏数据。 此类攻击需要进行串通（或向恶意用户授予过多权限），并且可能需要多次反复修改策略（需要删除谓词以便中断架构绑定的权限）、修改内联表值函数并重复对目标表运行选择语句。 建议根据需要限制权限，并监视任何可疑活动（如不断更改与行级别安全性相关的策略和内联表值函数）。  
   
  **精心设计的查询：** 通过使用精心设计的查询可能会造成信息泄露。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 会让恶意用户知道 John Doe 的薪金是 100000 美元。 即使采用安全谓词来防止恶意用户直接查询其他人的薪金，用户仍然可以确定查询何时返回被零除异常。  
@@ -165,7 +165,7 @@ ms.locfileid: "52409894"
   
 -   **更改跟踪** 更改跟踪可能会将要筛选的行的主键透露给具有 **SELECT** 和 **VIEW CHANGE TRACKING** 权限的用户。 实际数据值不会泄漏；只会透露已更新/插入/删除具有 B 主键的行的列 A 这一事实。 如果主键包含机密元素（如社会安全号码），这会产生问题。 但是，在实践中，此 **CHANGETABLE** 几乎始终与原始表联接以获取最新数据。  
   
--   **全文搜索** 对于使用以下全文搜索和语义搜索函数的查询，预期到性能会下降，因为引入了附加的联接来应用行级别安全性，并避免泄露应筛选的行的主键： **CONTAINSTABLE**、 **FREETEXTTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
+-   **全文搜索** 对于使用以下全文搜索和语义搜索函数的查询，预期到性能会下降，因为引入了附加的联接来应用行级别安全性，并避免泄露应筛选的行的主键：CONTAINSTABLE、FREETEXTTABLE、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
   
 -   **列存储索引** RLS 与聚集和非聚集列存储索引兼容。 但是，由于行级别安全性应用了一个函数，优化器可能会修改查询计划，从而不会使用批处理模式。  
   

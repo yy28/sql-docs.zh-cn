@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性组环形缓冲区 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 使用环形缓冲区获取有关可用性组的运行状况信息
+description: 使用 SQL Server 环形缓冲区获取有关 AlwaysOn 可用性组的特定诊断信息。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bc5ccc83285ead5a5d5de55742380d0af5766b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26f6cd91a0b2af905d863d398245c672657092dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642386"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208296"
 ---
-# <a name="always-on-availability-groups-ring-buffers"></a>Always On 可用性组环形缓冲区
+# <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>使用环形缓冲区获取有关 AlwaysOn 可用性组的运行状况信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可从 SQL Server 环形缓冲区或 sys.dm_os_ring_buffers 动态管理视图 (DMV) 获取某些 Always On 可用性组诊断信息。 环形缓冲区是在 SQL Server 启动过程中创建的，记录了 SQL Server 系统内的内部诊断警报。 它们不受支持，但仍可在排除问题时从其中提取有价值的信息。 当 SQL Server 挂起或崩溃时，这些环形缓冲区可提供另一诊断源。  
   

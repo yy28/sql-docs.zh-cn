@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605155"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215148"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  例如，为雇员 Pamela Ansman-Wolfe 分配的雇员 ID 为 280。 为此雇员创建订阅时，为 HOST_NAME() 值指定雇员 ID 值（在此例中为 280）。 合并代理连接到发布服务器时，会将 HOST_NAME() 返回的值与表中的值进行比较，并仅下载 **EmployeeID** 列中值为 280 的行。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  HOST_NAME() 函数会返回 **nchar** 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 **@subset_filterclause** @allow_partition_realignment [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，而此验证会失败，因为计算机名称无法转换为 **int**中，参数化筛选器称为“动态筛选器”）。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆盖 HOST_NAME() 值**  

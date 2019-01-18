@@ -1,6 +1,7 @@
 ---
-title: 为 AlwaysOn 可用性组配置复制 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 使用可用性组配置复制
+description: 使用 AlwaysOn 可用性组配置复制。
+ms.custom: seodec18
 ms.date: 07/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1242b8b3e9f29cabdb840b405df8dba9f96fd959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b790bcd89f4ad22a78b6a0da43b4d86642e518c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687193"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208477"
 ---
-# <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
+# <a name="configure-replication-with-always-on-availability-groups"></a>使用 AlwaysOn 可用性组配置复制
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -244,7 +245,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ## <a name="see-also"></a>另请参阅  
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
   
   

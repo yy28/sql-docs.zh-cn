@@ -1,6 +1,7 @@
 ---
-title: 从可用性组中删除辅助数据库 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 从可用性组中删除辅助数据库
+description: 使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 从 AlwaysOn 可用性组中删除辅助数据库的步骤。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f08d9b924f8bfd223490694de0f6160f5f9962
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632675"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213546"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>从可用性组中删除辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "47632675"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除辅助数据库，请使用：**  
   
@@ -41,7 +42,7 @@ ms.locfileid: "47632675"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：**  [从可用性组中删除辅助数据库之后](#FollowUp)  
+-   **跟进：**[从可用性组中删除辅助数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -113,7 +114,7 @@ ms.locfileid: "47632675"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：从可用性组中删除辅助数据库之后  
+##  <a name="FollowUp"></a>跟进：从可用性组中删除辅助数据库之后  
  删除辅助数据库之后，它不再加入到可用性组中，有关删除的辅助数据库的所有信息都会被可用性组丢弃。 删除的辅助数据库处于 RESTORING 状态。  
   
 > [!TIP]  

@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e028d1238a0bb41207d5a88f4c219dac7cb392cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5c262a6cd29767f627e3827dff93078679867389
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696595"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760089"
 ---
 # <a name="business-rule-actions-master-data-services"></a>业务规则操作 (Master Data Services)
 
@@ -55,7 +54,7 @@ ms.locfileid: "51696595"
 |**必需**|所选属性是 **“必需”** 的，这意味着它不能为 Null 或为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**无效**|所选属性 **“无效”**。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**必须包含模式**|所选属性 **必须包含指定的模式** 。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。<br /><br /> 此操作对文本和链接值有效。|  
-|**必须是唯一的**|所选属性 **“必须是唯一的”** ，无论它们是独立的，还是与其他定义属性组合。<br /><br /> **最佳实践：** 将此操作与必需条件相结合，以确保订阅系统中索引字段的有效性。<br /><br /> 此操作对文本、数字、日期和链接值有效。<br /><br /> **注意**：如果第一个属性的类型为 DateTime，则不能将其与 Numeric 属性或 Text 属性类型结合使用。 如果第一个属性的类型为 Numeric，则不能将其与 DateTime 类型的属性结合使用。|  
+|**必须是唯一的**|所选属性 **“必须是唯一的”** ，无论它们是独立的，还是与其他定义属性组合。<br /><br /> **最佳做法：** 将此操作与必需条件相结合，以确保订阅系统中索引字段的有效性。<br /><br /> 此操作对文本、数字、日期和链接值有效。<br /><br /> **注意**：如果第一个属性的类型为 DateTime，则不能将其与 Numeric 属性或 Text 属性类型结合使用。 如果第一个属性的类型为 Numeric，则不能将其与 DateTime 类型的属性结合使用。|  
 |**必须具有以下值之一**|所选属性 **“必须具有以下值之一”** ，它是在列表中指定的。<br /><br /> 此操作对文本值有效。|  
 |**必须大于**|所选属性 **“必须大于”** 特定属性、特定属性值或者为空。<br /><br /> 此操作对文本、数字和日期值有效。|  
 |**必须等于**|所选属性 **“必须等于”** 已定义的属性值、另一个属性或者为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  

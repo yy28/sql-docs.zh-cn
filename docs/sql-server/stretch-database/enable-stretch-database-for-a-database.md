@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dda58d512602c5d592078275106eefc7ca26ebda
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696401"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596888"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "51696401"
   
  在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在数据库上启用 Stretch Database 也需要 CONTROL DATABASE 权限。  
 
- >   [!NOTE]
- > 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
+> [!NOTE]
+> 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
  
 ## <a name="before-you-get-started"></a>开始操作之前  
   
@@ -42,7 +42,7 @@ ms.locfileid: "51696401"
   
 -   具有创建新 Azure 服务器或选择现有 Azure 服务器所需的连接和登录名信息。  
   
-##  <a name="EnableTSQLServer"></a> 先决条件：在服务器上启用 Stretch Database  
+##  <a name="EnableTSQLServer"></a>先决条件：在服务器上启用 Stretch Database  
  必须先在本地服务器上启用 Stretch Database，然后才能在数据库或表上启用它。 此操作需要 sysadmin 或 serveradmin 权限。  
   
 -   如果你拥有必要的管理权限，“为数据库启用 Stretch”向导将会为服务器配置 Stretch。  

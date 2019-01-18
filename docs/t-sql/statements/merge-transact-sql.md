@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970518"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980013"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -251,7 +251,7 @@ SET
  指定目标表上的一个或多个索引的名称或 ID，以执行与源表的隐式联接。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<output_clause>  
- 不按照任何特定顺序为 *target_table* 中更新、插入或删除的每一行返回一行。 **$action** 可在 output 子句中指定。 **$action** 是 **nvarchar(10)** 类型的列，它为每行返回以下三个值之一：“INSERT”、“UPDATE”或“DELETE”，具体取决于对该行执行的操作。 有关该子句的参数的详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
+ 不按照任何特定顺序为 *target_table* 中更新、插入或删除的每一行返回一行。 **$action** 可在 output 子句中指定。 $action 是类型为 nvarchar(10) 的列，它返回每一行中 3 个值中的一个：'INSERT'、'UPDATE' 或 'DELETE'，返回哪个值取决于对该行执行的操作。 有关该子句的参数的详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  指定使用优化器提示来自定义数据库引擎处理语句的方式。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. 使用 MERGE 在单个语句中对表执行 INSERT 和 UPDATE 操作  
  一种常见的应用场景是在存在匹配行时更新表中的一个或多个列，或在不存在匹配行时将数据作为新行插入。 此操作一般通过将参数传递给包含相应 UPDATE 和 INSERT 语句的存储过程来执行。 借助 MERGE 语句，将可以在单个语句中一起执行这两项任务。 下面的示例显示了 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中一个同时包含 INSERT 语句和 UPDATE 语句的存储过程。 随后，此示例对该过程进行了修改，以使用单个 MERGE 语句执行等效的操作。  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -389,7 +389,7 @@ GO
 ### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. 使用 MERGE 在单个语句中对表执行 UPDATE 和 DELETE 操作  
  下面的示例使用 MERGE 根据 `ProductInventory` 表中已处理的订单，每天更新 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库中的 `SalesOrderDetail` 表。 通过减去每天对 `Quantity` 表中的每种产品所下的订单数，更新 `ProductInventory` 表的 `SalesOrderDetail` 列。 如果某种产品的订单数导致该产品的库存量下降到 0 或更少，则从 `ProductInventory` 表中删除该产品对应的行。  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -416,7 +416,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. 借助派生的源表，使用 MERGE 对目标表执行 UPDATE 和 INSERT 操作  
  下面的示例使用 MERGE 以更新或插入行的方式来修改 `SalesReason` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表。 当源表中的 `NewName` 值与目标表 (`Name`) 的 `SalesReason` 列中的值匹配时，就会更新此目标表中的 `ReasonType` 列。 当 `NewName` 的值不匹配时，就会将源行插入到目标表中。 此源表是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数指定源表的多个行。 有关在派生表中使用表值构造函数的详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。 该示例还说明了如何在表变量中存储 OUTPUT 子句的结果，并且说明存储结果之后如何通过执行返回已插入和更新的行的计数的简单选择操作来汇总 MERGE 语句的结果。  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -440,7 +440,7 @@ GROUP BY Change;
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. 将 MERGE 语句的执行结果插入到另一个表中  
  下面的示例捕获从 MERGE 语句的 OUTPUT 子句返回的数据，并将该数据插入到另一个表中。 MERGE 语句根据在 `Quantity` 表中处理的订单更新 `ProductInventory` 数据库中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的 `SalesOrderDetail` 列。 本示例捕获已更新的行并将这些行插入到用于跟踪库存变化的另一个表中。  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  

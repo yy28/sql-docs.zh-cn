@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cd332393a0d605f2ae0e519e6a449fe49bff3477
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420428"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215766"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  尝试修复报告的所有错误。 这些修复可能会导致一些数据丢失。  
-    
+    
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 选项是受支持的功能，但是，它可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 
 >
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  使 DBCC CHECKDB 获取锁，而不使用内部数据库快照。 这包括一个短期数据库排他 (X) 锁。 TABLOCK 可使 DBCC CHECKDB 在负荷较重的数据库上运行得更快，但 DBCC CHECKDB 运行时会减少数据库上可获得的并发性。  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK 限制执行的检查；DBCC CHECKCATALOG 未对数据库运行并且 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 数据未进行验证。
     
@@ -155,14 +155,14 @@ PHYSICAL_ONLY
 DATA_PURITY  
  使 DBCC CHECKDB 检查数据库中是否存在无效或越界的列值。 例如，DBCC CHECKDB 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列。  
  默认情况下将启用列值完整性检查，并且不需要使用 DATA_PURITY 选项。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的数据库，默认情况下不启用列值检查，直到 DBCC CHECKDB WITH DATA_PURITY 已在数据库中正确运行为止。 然后，DBCC CHECKDB 将默认检查列值完整性。 有关从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级数据库会对 CHECKDB 有何影响的详细信息，请参阅本主题的“备注”部分。  
-    
+    
 > [!WARNING]
 > 如果指定了 PHYSICAL_ONLY，则不执行列完整性检查。
     
- 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 和更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
+ 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 及更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
     
  对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 会使用资源调控器 MAXDOP 值（如 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  

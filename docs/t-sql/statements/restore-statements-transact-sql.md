@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524592"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980313"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 还原使用 BACKUP 命令所做的 SQL 数据库备份。 
@@ -167,7 +167,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   

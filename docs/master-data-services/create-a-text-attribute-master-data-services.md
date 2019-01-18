@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
@@ -15,12 +14,12 @@ ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0e74d369ccc79bead39e3214fa73be5333ede070
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227c43c52fda16e8c521ecefe9771dc5ea5a41e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854803"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759389"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>创建文本属性 (Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "47854803"
   
 -   **更新者**：上次更新属性的用户的用户名。  
   
--   **创建时间**：上次更新属性的日期和时间。  
+-   **更新时间**：上次更新属性的日期和时间。  
   
 ### <a name="to-create-a-text-attribute"></a>创建文本属性  
   
@@ -97,7 +96,7 @@ ms.locfileid: "47854803"
 ## <a name="see-also"></a>另请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [创建基于域的属性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

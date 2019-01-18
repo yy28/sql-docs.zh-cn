@@ -15,22 +15,22 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558724"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980443"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 **数据库邮件配置向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。 有关邮件配置文件的详细信息，请参阅[数据库邮件配置文件](database-mail-configuration-objects.md)。
+  使用 **数据库邮件配置向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。 有关邮件配置文件的详细信息，请参阅 [数据库邮件配置文件](database-mail-configuration-objects.md)。
   
 -   **开始之前：**[先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **使用以下方法创建数据库邮件的专用配置文件：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
+-   **若要创建数据库邮件专用配置文件，请使用：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
   
--   **使用以下方法创建数据库邮件的公共配置文件：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
+-   **若要创建数据库邮件公共配置文件，请使用：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558724"
   
 -   在 **“管理配置文件和帐户”** 页上，选择 **“创建新配置文件”** 选项，然后单击 **“下一步”**。  
   
--   在 **“新建配置文件”** 页上，指定配置文件的名称、说明并添加要包括在配置文件中的帐户，然后单击 **“下一步”**。  
+-   在“新建配置文件”页上，指定配置文件的名称、说明并添加要包括在配置文件中的帐户，然后单击“下一步”。  
   
 -   在 **“完成该向导”** 页上，检查要执行的操作，然后单击 **“完成”** 以完成创建新配置文件。  
   

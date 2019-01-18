@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性组策略 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 使用组策略评估可用性组的运行状况
+description: 了解如何查看 AlwaysOn 仪表板用来提供可用性组运行状况信息的组系统策略。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,16 +11,16 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 84671e20e11b992231db007392b0157a7d0a2875
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b409c3d4811bd713478fa9b83c4904c6fb4bd789
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405112"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212066"
 ---
-# <a name="always-on-availability-groups-policies"></a>Always On 可用性组策略
+# <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>使用组策略评估 AlwaysOn 可用性组的运行状况
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Always On 仪表板使用 Always On 可用性组系统策略向用户提供有关可用性组运行状况的信息。 它们对可用性组运行问题的初始故障排除非常有用。 可扩展这些策略并将其用于自定义 Always On 仪表板，也可立即运行这些策略以报告所需运行状况信息。  
+  AlwaysOn 仪表板使用 AlwaysOn 可用性组系统策略向用户提供有关可用性组运行状况的信息。 它们对可用性组运行问题的初始故障排除非常有用。 可扩展这些策略并将其用于自定义 Always On 仪表板，也可立即运行这些策略以报告所需运行状况信息。  
   
  有 14 条针对可用性组的系统策略。 有关每条策略的详细信息，请参阅[针对 Always On 可用性组运行问题的 Always On 策略 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
@@ -33,6 +34,6 @@ ms.locfileid: "52405112"
 3.  要查看所有可用性组系统策略，请单击“选择页”窗格中的“策略选择”。  
   
 ## <a name="next-steps"></a>后续步骤  
- [Always On 运行状况模型，第 2 部分：扩展运行状况模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)。  
+ [The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）。  
   
   

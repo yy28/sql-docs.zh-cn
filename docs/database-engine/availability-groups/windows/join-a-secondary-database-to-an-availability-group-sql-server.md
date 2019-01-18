@@ -1,6 +1,7 @@
 ---
-title: 将辅助数据库联接到可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 将辅助数据库联接到可用性组
+description: 使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 将辅助数据库加入 AlwaysOn 可用性组的步骤。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0486e6de8b53a416f80ad88eaec57c658984c050
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcda8c38e842f6799d799c97263c1443ad065ad8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209487"
 ---
-# <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>将辅助数据库联接到可用性组 (SQL Server)
+# <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>将辅助数据库联接到 AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 将辅助数据库联接到 Always On 可用性组。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "47728455"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要准备辅助数据库，请使用：**  
   

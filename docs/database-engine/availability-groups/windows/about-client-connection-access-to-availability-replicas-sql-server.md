@@ -1,6 +1,7 @@
 ---
-title: 关于对可用性副本的客户端连接访问 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性组中连接到副本的客户端连接的类型
+description: 了解客户端可以与 SQL Server 中 Always On 可用性组的主要或次要副本建立的连接的不同类型。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206486"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性组中连接到副本的客户端连接的类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在 AlwaysOn 可用性组中，你可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为次要副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
   
@@ -34,18 +35,6 @@ ms.locfileid: "51602667"
   
 > [!NOTE]  
 >  有关处理客户端连接请求的可用性组侦听程序的信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
-  
- **本主题内容：**  
-  
--   [辅助角色支持的连接访问类型](#ConnectAccessForSecondary)  
-  
--   [主角色支持的连接访问类型](#ConnectAccessForPrimary)  
-  
--   [连接访问配置如何影响客户端连接](#HowConnectionAccessAffectsConnectivity)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> 辅助角色支持的连接访问类型  
  辅助角色对于客户端连接支持三种备选方式，如下所示：  
@@ -121,7 +110,7 @@ ms.locfileid: "51602667"
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

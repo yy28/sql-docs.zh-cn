@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f1fe0dc073063958af85019c7626d572b38810af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d67a43a1732ccbbecb7ffe3b6099acf315c86ecb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203106"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -433,7 +433,7 @@ MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB)
 |1024 GB|N/A|√|√|√|√ (D)|  
 |从 1024 GB 到最大 4096 GB，增量为 256 GB*|N/A|N/A|N/A|N/A|√|√|  
   
-\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。  P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，以下区域当前提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、美国弗吉尼亚州政府、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关基于 DTU 的模型的资源限制的其他详细信息，请参阅[基于 DTU 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。  
+\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。  P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关基于 DTU 的模型的资源限制的其他详细信息，请参阅[基于 DTU 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。  
 
 基于 DTU 的模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服务层的有效值。
  
@@ -558,7 +558,7 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
   
 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
-在以下应用场景中也会刷新过程缓存：对具有默认选项的数据库运行多个查询。 然后，删除数据库。    
+在下列情况下，也会刷新过程缓存：针对具有默认选项的数据库运行多个查询。 然后，删除数据库。    
   
 ## <a name="viewing-database-information"></a>查看数据库信息  
 
@@ -719,7 +719,7 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
   
 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
-在以下应用场景中也会刷新过程缓存：对具有默认选项的数据库运行多个查询。 然后，删除数据库。    
+在下列情况下，也会刷新过程缓存：针对具有默认选项的数据库运行多个查询。 然后，删除数据库。    
   
 ## <a name="viewing-database-information"></a>查看数据库信息  
 
@@ -808,11 +808,11 @@ MODIFY NAME = new_database_name
 MAXSIZE  
 默认为 245,760 GB (240 TB)。  
 
-适用于：“已针对弹性进行优化”性能层
+**适用范围：**“已针对弹性进行优化”性能层
 
 允许的最大数据库大小。 数据库大小不能超出 MAXSIZE。 
 
-适用于：“已针对计算进行优化”性能层
+**适用范围：**“已针对计算进行优化”性能层
 
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。  压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。 
   

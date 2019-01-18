@@ -13,12 +13,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e03624a7db0cc28a15a92e9cc1ffff98e9cf4514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227f488e3393352ae083576676b7934b722b0ce9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203716"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>连接到 Oracle 源数据库
   使用“Oracle 源”页可提供连接到 Oracle 源数据库所需的信息。 CDC 实例将读取您连接到的 Oracle 数据库的重做日志。  
@@ -37,11 +37,11 @@ ms.locfileid: "47648199"
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在您连接到的 Oracle 数据库中为用户键入 **“用户名”** 和 **“密码”** 。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”。  
   
-> [!NOTE]  
+> [!NOTE]
 >  用户必须在 Oracle 数据库中被授予以下权限才能成为日志挖掘用户。  
->   
+> 
 >  -   SELECT on \<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
@@ -55,7 +55,7 @@ ms.locfileid: "47648199"
 > -   SELECT on ALL OBJECTS  
 > -   SELECT on DBA OBJECTS  
 > -   SELECT on ALL TABLES  
->   
+> 
 >  如果无法将上述任何权限授予 V$xxx，则向其授予 V_S$xxx。  
   
  **测试连接**  

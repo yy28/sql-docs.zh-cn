@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661716"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206436"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  排序顺序指定数据值的排序方式。 它影响数据比较的结果。 数据的排序通过使用排序规则而实现，且可使用索引对排序进行优化。    
     
 ##  <a name="Unicode_Defn"></a> Unicode 支持    
-Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储的字符数据反映 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中存在多种语言，则应使用 Unicode (UTF-16) 数据类型（**nchar**、**nvarchar** 和 **ntext**），而不要使用非 Unicode 数据类型（**char**、**varchar** 和 **text**）。 或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用已启用 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（**char** 和 **varchar**）将变为 Unicode (UTF-8) 数据类型。 
+Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储的字符数据反映 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中存在多种语言，则应使用 Unicode (UTF-16) 数据类型（nchar、nvarchar 和 ntext），而不要使用非 Unicode 数据类型（char、varchar 和 text）。 或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用已启用 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（**char** 和 **varchar**）将变为 Unicode (UTF-8) 数据类型。 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不会更改以前存在的 Unicode (UTF-16) 数据类型（**nchar**、**nvarchar** 和 **ntext**）的行为。   

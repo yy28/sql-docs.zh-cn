@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418664"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212126"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52418664"
   
  若要结合使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本，你需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover**的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
   
-> **错误消息：**“关键字不受支持的‘applicationintent’”  
+> **错误消息：**“关键字不受支持的 "applicationintent"”  
   
  当在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串中包含一个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 属性但是服务器无法识别该属性时，显示此消息。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 用户界面中单击“测试连接”按钮以及预览报表（如果在报表服务器上启用远程错误）时，将显示所述的错误消息。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52418664"
   
  创建和发布报表的方式将决定您在何处编辑连接字符串：  
   
--   **本机模式：** 为已发布到本机模式报表服务器的共享数据源和报表使用 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] 。  
+-   **本机模式：** 为已发布到本机模式报表服务器的共享数据源和报表使用 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)]。  
   
 -   **SharePoint 模式：** 对于已发布到 SharePoint 服务器的报表，使用文档库内的 SharePoint 配置页。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52418664"
   
 -   有关可用性组侦听程序的详细信息，请参阅[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- **注意事项：** 在从主副本接收数据更改时，辅助副本一般会有延迟。 以下因素可能影响主副本和辅助副本之间的更新滞后时间：  
+ **注意事项：** 在从主要副本接收数据更改时，辅助副本一般会有延迟。 以下因素可能影响主副本和辅助副本之间的更新滞后时间：  
   
 -   辅助副本数目。 向配置中每增加一个辅助副本，延迟时间将增加。  
   
@@ -113,9 +113,9 @@ ms.locfileid: "52418664"
   
 -   **本地预览：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .Net framework 4.0，并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性。  
   
--   **远程或服务器模式预览：** 如果在将报表发布到报表服务器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]中使用预览后，您看到与以下内容相似的错误，指出您正在预览报表服务器上的报表而该报表服务器上未安装针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
+-   **远程或服务器模式预览：** 如果在将报表发布到报表服务器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中使用预览后，你看到与以下内容相似的错误，指出你正在预览报表服务器上的报表而该报表服务器上未安装针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
   
-> **错误消息：**“关键字不受支持的‘applicationintent’”  
+> **错误消息：**“关键字不受支持的 "applicationintent"”  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 报表服务器数据库和可用性组  
  Reporting Services 和 Power BI 报表服务器为将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和报表服务器数据库结合使用提供了有限的支持。 可以在 AG 中将报表服务器数据库配置为副本的一部分；但是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在发生故障转移时不会自动将另一副本用于报表服务器数据库。 不支持使用 MultiSubnetFailover 与报表服务器数据库。  
@@ -144,9 +144,9 @@ ms.locfileid: "52418664"
   
  本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，将服务应用程序数据库名称配置为作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[为 SharePoint 服务器配置和管理 SQL Server 可用性组 (](https://go.microsoft.com/fwlink/?LinkId=245165)https://go.microsoft.com/fwlink/?LinkId=245165)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  SharePoint 模式的报表服务器使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序数据库和 SharePoint 内容数据库之间的同步过程。 将报表服务器数据库和内容数据库一起维护很重要。 您应考虑在同一可用性组中配置它们以便它们作为一个整体进行故障转移和恢复。 请考虑下列方案：  
->   
+> 
 >  -   您还原或故障转移到一个内容数据库副本，该数据库未收到与报表服务器数据库所收到内容相同的最近更新。  
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 同步过程将检测内容数据库中项列表与报表服务器数据库中项列表的差异。  
 > -   同步过程将删除或更新内容数据库中的项。  
@@ -156,11 +156,11 @@ ms.locfileid: "52418664"
   
 -   创建可用性组并配置“侦听器 DNS 名称” 。  
   
--   **主要副本：** 将报表服务器数据库配置为单个可用性组的一部分，并创建包含所有报表服务器数据库的主要副本。  
+-   **主要副本：** 将报表服务器数据库配置为单个可用性组的一部分并创建包含所有报表服务器数据库的主副本。  
   
--   **辅助副本：** 创建一个或多个辅助副本。 将数据库从主副本复制到辅助副本的常用方法为使用“RESTORE WITH NORECOVERY”将数据库恢复到每个辅助副本。 有关创建次要副本和验证数据同步是否正常工作的详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+-   **次要副本：** 创建一个或多个辅助副本。 将数据库从主副本复制到辅助副本的常用方法为使用“RESTORE WITH NORECOVERY”将数据库恢复到每个辅助副本。 有关创建次要副本和验证数据同步是否正常工作的详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
--   **报表服务器凭据：** 您需要在针对主副本创建的辅助副本上创建相应的报表服务器凭据。 具体的步骤取决于您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境中使用什么类型的身份验证以及 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务帐户、Windows 用户帐户或 SQL Server 身份验证。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+-   **报表服务器凭据：** 你需要在针对主要副本创建的辅助副本上，创建相应的报表服务器凭据。 具体的步骤取决于您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境中使用什么类型的身份验证以及 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务帐户、Windows 用户帐户或 SQL Server 身份验证。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
 -   更新数据库连接以使用侦听器 DNS 名称。 对于本机模式的报表服务器，在 **配置管理器中更改** “报表服务器数据库名称” [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 对于 SharePoint 模式，为 **服务应用程序更改** 数据库服务器名称 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。  
   

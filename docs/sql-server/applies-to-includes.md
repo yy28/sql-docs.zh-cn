@@ -3,27 +3,27 @@ title: SQL Server 文档 include 文件 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614755"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731954"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server include 文件，用于版本控制和 applies-to
 
-通过使用 Markdown 中的 Include 文件，可以轻松修改文档中的引用，而无需更改各个文章的实际文本。 在 SQL 内容中有三种类型的 include 文件：SQL 版本、applies-to 和引用文本。 SQL 版本 include 用于指示讨论的 SQL 版本，例如 SQL Server 2016 或 2017。 applies-to include 指示文档适用于什么 SQL 产品和服务，例如 Linux 上的 SQL Server 或 Azure SQL 数据库。 引用文本 include 不属于其他两个类别，例如“Get Help” include - 客户可用于获得 SQL 相关帮助的链接列表。
+通过使用 Markdown 中的 Include 文件，可以轻松修改文档中的引用，而无需更改各个文章的实际文本。 在 SQL 内容世界中，include 文件有三种类型：SQL 版本、applies-to 和引用文本。 SQL Server 版本 include 文件用于指示讨论的 SQL 版本，例如 SQL Server 2016 或 2017。 applies-to include 文件指示文档适用于什么 SQL 产品和服务，例如 Linux 上的 SQL Server 或 Azure SQL 数据库。 引用文本 include 文件不属于其他两个类别，例如“Get Help” include - 客户可用于获得 SQL Server 相关帮助的链接列表。
 
-本文仅用作前两种类型的 includes 的参考点。 可通过 [sql-docs 存储库](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)浏览 include 文件的完整列表。
+本文仅用作前两种类型的 include 文件的参考点。 可通过 [sql-docs 存储库](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)浏览 include 文件的完整列表。
 
-## <a name="sql-server-version-includes"></a>SQL Server 版本 include
+## <a name="sql-server-version-include-files"></a>SQL Server 版本 include 文件
 
 SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 这样一来，如果名称发生了某些更改，将更新 include 文件，而不是手动更新每个文章的值。 这些 include 文件用作产品名称的占位符，但尚未在所有 SQL 文档中一致地使用。 SQL Server vNext 是指尚不具有版本号的 SQL 的未来版本，它在此情况中是一个特例。  
 
@@ -41,9 +41,9 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server（非特定于版本）
+## <a name="sql-server-applies-to-non-version-specific"></a>SQL Server Applies-to（非特定版本）
 
-这些 applies-to include 忽略 SQL Server 的版本。
+这些 applies-to include 文件忽略 SQL Server 的版本。
 
 | 文件名| Markdown 示例 |图像|
 | :-------------| :----------| :-------------------|
@@ -63,9 +63,9 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server（特定于版本）
+## <a name="sql-server-applies-to-version-specific"></a>SQL Server Applies-to（特定版本）
 
-这些 applies-to include 指定文档适用的 SQL 版本。
+这些 applies-to include 文件指定文档适用的 SQL 版本。
 
  文件名| Markdown 示例 |图像|
 | :-------------| :----------| :-------------------|
@@ -107,9 +107,9 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="analysis-services-applies-to"></a>Analysis Services Applies-to
 
-这些 applies-to include 用于 Analysis Services 文档。
+这些 applies-to include 文件用于 Analysis Services 文档。
 
 | 文件名| Markdown 示例 |图像|
 | :-------------| :----------| :-------------------|
@@ -124,9 +124,9 @@ SQL 内容写入程序经常需要添加 SQL Server 的产品名称和版本。 
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Reporting Services
+## <a name="reporting-services-applies-to"></a>Reporting Services Applies-to
 
-这些 applies-to include 用于 Reporting Services 文档。
+这些 applies-to include 文件用于 Reporting Services 文档。
 
 | 文件名| Markdown 示例 |图像|
 | :-------------| :----------| :-------------------|

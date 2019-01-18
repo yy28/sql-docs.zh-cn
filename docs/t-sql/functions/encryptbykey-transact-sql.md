@@ -21,12 +21,12 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f146b9aed0e8d5cf94e2028c83d7eb751202c309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746335"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265958"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密函数与 ANSI_PADDING OFF 设置一起使用会因隐式转换而导致数据可能丢失。 有关 ANSI_PADDING 的详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例所说明的功能依赖于在[如何加密数据列](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)中创建的密钥和证书。  
+ 以下示例中阐释的功能依赖于在[如何：加密数据列](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)。  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 使用对称密钥加密字符串  
  以下示例向 `Employee` 表添加列，然后加密存储在 `NationalIDNumber` 列中的社会安全号码的值。  
@@ -128,7 +128,7 @@ GO
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   

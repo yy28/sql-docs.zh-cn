@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 83c8d424aac2ad04100330a518cd2b4686e361b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f564b281ce65462cd8c6305c5989f6ac2b884d8
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674695"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53379899"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的模板配置资源调控器。  
   
--   **开始之前：**  [权限](#Permissions)  
+-   **开始之前：**[权限](#Permissions)  
   
 -   **若要创建工作负荷组，使用：**  [模板](#ConfRGTemplate)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47674695"
 6.  若要运行查询，请单击 **“执行”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

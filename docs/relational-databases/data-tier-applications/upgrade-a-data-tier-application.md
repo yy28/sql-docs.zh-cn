@@ -23,20 +23,20 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514038"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589691"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用“升级数据层应用程序向导”或 Windows PowerShell 脚本可以更改当前部署的数据层应用程序 (DAC) 的架构和属性，以便匹配在 DAC 的新版本中定义的架构和属性。  
   
--   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
+-   **开始之前：**[选择 DAC 升级选项](#ChoseDACUpgOptions)、[限制和局限](#LimitationsRestrictions)、[先决条件](#Prerequisites)、[安全性](#Security)、[权限](#Permissions)  
   
--   **若要升级 DAC，请使用：**[升级数据层应用程序向导](#UsingDACUpgradeWizard)、[PowerShell](#UpgradeDACPowerShell)  
+-   若要升级 DAC，请使用：[升级数据层应用程序向导](#UsingDACUpgradeWizard)、[PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  DAC 升级是一个就地过程，此过程更改现有数据库的架构以匹配在新版本的 DAC 中定义的架构。 这一新版本的 DAC 在 DAC 包文件中提供。 有关创建 DAC 包的详细信息，请参阅 [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)。  

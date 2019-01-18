@@ -1,6 +1,7 @@
 ---
-title: 次要副本上的活动次要副本备份 - AlwaysOn 可用性组 | Microsoft Docs
-ms.custom: ''
+title: 卸载可用性组次要副本的支持备份
+description: 了解卸载 Always On 可用性组次要副本时所支持的不同备份类型。
+ms.custom: seodec18
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7243fe3bece2241e1b6bb48e911b4952bc93c823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209436"
 ---
-# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>活动次要副本：次要副本备份（AlwaysOn 可用性组）
+# <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>卸载可用性组次要副本的支持备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持在辅助副本上执行备份操作。 备份操作可能会给 I/O 和 CPU 带来很大的压力（使用备份压缩）。 将备份负荷转移到已同步或正在同步的辅助副本后，您可以使用承载第一层工作负荷的主副本的服务器实例上的资源。  
@@ -58,7 +59,7 @@ ms.locfileid: "47834455"
   
 1.  配置可用性组以便指定要对其执行备份的可用性副本。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 中的 AUTOMATED_BACKUP_PREFERENCE 和 BACKUP_PRIORITY 参数。  
   
-2.  为承载作为执行备份候选的可用性副本的每个服务器实例上的每个可用性数据库都创建编写了脚本的备份作业。 有关详细信息，请参阅 [配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。  
+2.  为承载作为执行备份候选的可用性副本的每个服务器实例上的每个可用性数据库都创建编写了脚本的备份作业。 有关详细信息，请参阅“跟进：配置次要副本备份之后”部分，见[配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **配置辅助副本备份**  

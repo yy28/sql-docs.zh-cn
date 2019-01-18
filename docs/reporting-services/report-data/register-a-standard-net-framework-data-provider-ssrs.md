@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 18a447d64711fb59aaa73183357acf39d90fd3ec
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 453b31328c732833756a39a56389aa7640346817
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030766"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215636"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  
   
- 第三方数据提供程序不一定提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供的所有功能。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。 若要了解扩展 .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序的功能，请参阅 [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。  
+ 第三方数据提供程序不一定提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供的所有功能。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。 若要了解扩展 . [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序的功能，请参阅 [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。  
   
  安装和注册数据访问接口需要管理员凭据。  
   

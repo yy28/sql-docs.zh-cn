@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516640"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209096"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "52516640"
 ##  <a name="Background"></a> 背景  
  登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  
   
-> **注意：** 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 必须使用混合模式身份验证。 有关详细信息，请参阅 [选择身份验证模式](../../../relational-databases/security/choose-an-authentication-mode.md)。  
+> **注意：** 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]必须使用混合模式身份验证。 有关详细信息，请参阅 [选择身份验证模式](../../../relational-databases/security/choose-an-authentication-mode.md)。  
   
  可以向作为安全主体的登录名授予权限。 登录名的作用域是整个 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。 可将作用域为整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的权限（例如 **CREATE ENDPOINT** 权限）授予一个登录名。  
   
-> **注意：** 当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+> **注意：** 当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ##  <a name="Security"></a> Security  
 
@@ -62,7 +62,7 @@ ms.locfileid: "52516640"
   
      如果单击“搜索…”：  
   
-    1.  在“选择此对象类型”下，单击“对象类型…”以打开“对象类型”对话框，并选择以下的任意或全部选项：“内置安全主体”、“组”和“用户”。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
+    1.  在“选择此对象类型”下，单击“对象类型…”以打开“对象类型”对话框，并选择以下任意或全部选项：“内置安全主体”、“组”和“用户”。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
   
     2.  在“从此位置”下，单击“位置…”以打开“位置”对话框，并选择一个可用的服务器位置。 完成后，单击 **“确定”**。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52516640"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- “登录名 - 新建”对话框还在四个其他页面上提供了选项：“服务器角色”、“用户映射”、“安全对象”和“状态”。  
+ “登录名 - 新建”对话框中还提供了其他四个页面上选项：“服务器角色”、“用户映射”、“安全对象”和“状态”。  
   
 ### <a name="server-roles"></a>“服务器角色”  
  **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项包括：  
@@ -165,15 +165,15 @@ ms.locfileid: "52516640"
   
 1.  单击 **“搜索”**。  
   
-2.  在“添加对象”对话框中，选择以下选项之一：“特定对象…”、“特定类型的所有对象…”或“服务器 server\_name”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在“添加对象”对话框中，选择以下选项之一：“特定对象...”、“所有类型的对象...”或“服务器 server\_name”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > 注意：如果选择“服务器_server\_name_”，将使用该服务器的所有安全对象自动填充上部网格。  
+    > **注意：** 如果选择“服务器 server\_name”，将使用该服务器的所有安全对象自动填充上部网格。  
   
 3.  如果选择“特定对象…”：  
   
     1.  在“选择对象”对话框中的“选择这些对象类型”下，单击“对象类型…”。  
   
-    2.  在 **“选择对象类型”** 对话框中，选择以下的任意或全部对象类型： **“端点”**、 **“登录名”**、 **“服务器”**、 **“可用组”** 和 **“服务器角色”**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  在“选择对象类型”对话框中，选择以下任意或全部对象类型：“端点”、“登录名”、“服务器”、“可用性组”和“服务器角色”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  在“输入要选择的对象名称(示例)”下，单击“浏览…”。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "52516640"
   
     5.  在 **“选择对象”** 对话框中，单击 **“确定”**。  
   
-4.  如果选择“特定类型的所有对象…”，则在“选择对象类型”对话框中，选择以下的任意或全部对象类型：“端点”、“登录名”、“服务器”、“可用性组”和“服务器角色”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  如果选择“所有类型的对象…”，请在“选择对象类型”对话框中，选择以下任意或全部对象类型：“端点”、“登录名”、“服务器”、“可用性组”和“服务器角色”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  

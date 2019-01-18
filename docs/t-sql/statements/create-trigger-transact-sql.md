@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2ee63ff261df82926fd67f5014c09f894160d14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970508"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213736"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>参数
 OR ALTER  
- 适用范围：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。 
+ **适用对象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。 
   
  只有在触发器已存在时才对其进行有条件地更改。 
   
@@ -262,7 +262,7 @@ SELECT * FROM deleted;
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许通过表或视图的 INSTEAD OF 触发器来更新 **text**、**ntext** 或 **image** 列。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(MAX)**、**nvarchar(MAX)** 和 **varbinary(MAX)** 数据。  
   
  对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  

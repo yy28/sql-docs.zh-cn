@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410904"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531072"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "52410904"
 
 *   “在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。 找不到服务器或服务器无法访问。 请验证实例名称是正确的，且将 SQL Server 配置为允许远程连接。 " 
 
-*   “(提供程序: 命名管道提供程序，错误: 40 - 无法打开到 SQL Server 的连接) (Microsoft SQL Server，错误: 53)”或“(提供程序: TCP 提供程序，错误: 0 - 此主机不存在。) (Microsoft SQL Server，错误: 11001)” 
+*   “（提供程序：命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）（Microsoft SQL Server，错误：53）”或“（提供程序：TCP 提供程序，错误：0 - 此主机不存在。）（Microsoft SQL Server，错误：11001）” 
 
 此错误通常意味着找不到 SQL Server 计算机，或者 TCP 端口号要么未知，要么不是正确的端口号，要么被防火墙阻止。
 
->  [!TIP]
+> [!TIP]
 >  有关交互式故障排除页面，请参阅 [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] 客户支持服务中的 [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)（解决到 SQL Server 的连接问题）。
 
 ### <a name="not-included"></a>不包含的信息
@@ -64,8 +64,8 @@ ms.locfileid: "52410904"
     2.  在日志查看器中，单击工具栏上的“筛选器”按钮。 在“消息包含文本”框中，键入**服务器正在侦听**，单击“应用筛选器”，然后单击“确定”。
     3.  应列出一条类似于“服务器正在侦听 [ 'any' \<ipv4> 1433]”的消息。 此消息表示，此 SQL Server 实例正在侦听此计算机上的所有 IP 地址（针对 IP 版本 4）和侦听 TCP 端口 1433。 （TCP 端口 1433 通常是由数据库引擎使用的端口。 一个端口只允许由一个 SQL Server 实例使用，因此，如果安装了多个 SQL Server 实例，某些实例必须使用其他端口号。）请记下由你尝试连接到的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例使用的端口号。 
 
-    >    [!NOTE] 
-    >    可能会列出 IP 地址 127.0.0.1。 它称为环回适配器地址，只能从同一台计算机上的进程连接到该地址。 它可用于故障排除，但你不能使用它从另一台计算机进行连接。
+    > [!NOTE] 
+    > 可能会列出 IP 地址 127.0.0.1。 它称为环回适配器地址，只能从同一台计算机上的进程连接到该地址。 它可用于故障排除，但你不能使用它从另一台计算机进行连接。
 
 ## <a name="enable-protocols"></a>启用协议
 
@@ -98,20 +98,20 @@ ms.locfileid: "52410904"
 |默认实例|计算机名称|ACCNT27|
 |命名实例|计算机名称\实例名称|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  当从同一台计算机上的客户端应用程序连接到 SQL Server 时，将使用共享内存协议。 共享内存是一种本地命名管道，因此有时会遇到管道方面的错误。
 
 如果此时收到一个错误，则必须先解决它，然后才能继续操作。 有许多可能属于问题的情况。 你的登录名可能未获权进行连接。 你的默认数据库可能已丢失。
 
->    [!NOTE] 
+> [!NOTE]
 >    某些传递到客户端的错误消息故意不提供足够的信息来排查问题。 这是一项安全功能，目的是避免为攻击者提供有关 SQL Server 的信息。 若要查看有关错误的完整信息，请查找 SQL Server 错误日志。 那里提供了详细信息。 如果收到错误 18456“用户登录失败”，联机丛书主题 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 包含有关错误代码的其他信息。 Aaron Bertrand 的博客[故障排除错误 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx) 中提供了非常详细的错误代码列表。 你可以在对象资源管理器的“管理”部分中使用 SSMS（如果可以连接）查看错误日志。 否则，可以使用 Windows 记事本程序查看错误日志。 默认位置因版本而异，且可以在安装过程中更改。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的默认位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
 
 4.   如果可以使用共享内存进行连接，请使用 TCP 测试连接。 你可以通过在名称前指定 **tcp:** 来强制建立 TCP 连接。 例如：
 
 |连接到：|类型：|例如：|
 |-----------------|---------------|-----------------|
-|默认实例|tcp:计算机名称|tcp:ACCNT27|
-|命名实例|tcp:计算机名称\实例名称|tcp:ACCNT27\PAYROLL|
+|默认实例|tcp：计算机名称|tcp:ACCNT27|
+|命名实例|tcp：计算机名称\实例名称|tcp:ACCNT27\PAYROLL|
   
 如果可以使用共享内存进行连接，但不能使用 TCP 进行连接，则必须修复 TCP 问题。 最有可能的问题是未启用 TCP。 若要启用 TCP，请参阅上面的 **启用协议** 步骤。
 
@@ -144,7 +144,7 @@ ms.locfileid: "52410904"
   * 启动 SQL Server Browser 服务。 返回到“收集 SQL Server 实例的相关信息”一节的第 1.d 节。
   * SQL Server Browser 服务被防火墙阻止。 请在防火墙中打开 UDP 端口 1434。 返回到 **在防火墙中打开端口**一节。 （请确保打开的是 UDP 端口，而非 TCP 端口。 这两个端口非常不同。）
   * UDP 端口 1434 信息被路由器阻止。 UDP 通信（用户数据报协议）未设计为可通过路由器。 这可以防止网络被低优先级的流量占满。 你也许可以将路由器配置为转发 UDP 流量，或者可以决定在连接时始终提供端口号。
-  * 如果客户端计算机正在使用 Windows 7 或 Windows Server 2008（或更新的操作系统），UDP 流量可能会被客户端操作系统删除，因为来自服务器的响应会从所查询 IP 地址以外的 IP 地址返回。 这是一项安全功能，目的是阻止“宽松源映射”。 有关详细信息，请参阅联机丛书主题 **故障排除：超时时间已到** 的 [多个服务器 IP 地址](https://msdn.microsoft.com/library/ms190181.aspx)一节。 这篇文章来自 SQL Server 2008 R2，但大体内容仍然适用。 你也许可以将客户端配置为使用正确的 IP 地址，或者可以决定在连接时始终提供端口号。
+  * 如果客户端计算机正在使用 Windows 7 或 Windows Server 2008（或更新的操作系统），UDP 流量可能会被客户端操作系统删除，因为来自服务器的响应会从所查询 IP 地址以外的 IP 地址返回。 这是一项安全功能，目的是阻止“宽松源映射”。 有关详细信息，请参阅联机丛书主题[故障排除：超时时间已到](https://msdn.microsoft.com/library/ms190181.aspx)的“多个服务器 IP 地址”一节。 这篇文章来自 SQL Server 2008 R2，但大体内容仍然适用。 你也许可以将客户端配置为使用正确的 IP 地址，或者可以决定在连接时始终提供端口号。
      
 3. 可以使用 IP 地址（对于命名实例，则为 IP 地址和实例名称）进行连接之后，尝试使用计算机名称（对于命名实例，则为计算机名称和实例名称）进行连接。 将 `tcp:` 放在计算机名称的前面，以强制建立 TCP/IP 连接。 例如，对于名为 `ACCNT27`的计算机上的默认实例，请使用 `tcp:ACCNT27` ；对于该计算机上名为 `PAYROLL`的命名实例，请使用 `tcp:ACCNT27\PAYROLL` 。如果可以使用 IP 地址进行连接，但不能使用计算机名称进行连接，则表明存在名称解析问题。 返回到 **测试 TCP/IP 连接**一节的第 4 节。
 

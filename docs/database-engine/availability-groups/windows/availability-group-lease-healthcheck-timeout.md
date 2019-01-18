@@ -1,6 +1,7 @@
 ---
-title: SQL Server 可用性组租用运行状况检查超时 | Microsoft Docs
-ms.custom: ''
+title: 可用性组租用运行状况检查超时机制
+description: 针对 AlwaysOn 可用性组的租用、群集和运行状况检测时间的机制和指南。
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393980"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209076"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>租用、群集和运行状况检查超时机制和指南 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
 硬件、软件和群集配置的差异以及运行时间和性能的不同应用程序要求需要针对租用、群集和运行状况检查超时值进行特定配置。 某些应用程序和工作负载需要更积极的监控才能限制硬故障后的停机时间。 其他需要对临时网络问题有更大的容忍度和高资源使用率的等待时间，而对于较慢的故障转移则可以。 
 
@@ -128,7 +129,7 @@ WSFC 配置中有四个值负责确定群集超时值
    
 ### <a name="health-check-values"></a>运行状况检查值 
 
-由两个值控制 Always On 运行状况检查：FailureConditionLevel 和 HealthCheckTimeout。 FailureConditionLevel 指示由 `sp_server_diagnostics` 报告的特定故障条件的容差级别，HealthCheckTimeout 配置资源 DLL 可以在没有从 `sp_server_diagnostics` 接收更新的情况下运行的时间。 `sp_server_diagnostics` 的更新间隔始终为 HealthCheckTimeout/3。 
+两个值控制 AlwaysOn 运行状况检查：FailureConditionLevel 和 HealthCheckTimeout。 FailureConditionLevel 指示由 `sp_server_diagnostics` 报告的特定故障条件的容差级别，HealthCheckTimeout 配置资源 DLL 可以在没有从 `sp_server_diagnostics` 接收更新的情况下运行的时间。 `sp_server_diagnostics` 的更新间隔始终为 HealthCheckTimeout/3。 
 
 要配置故障转移条件级别，请使用 `CREATE` 或 `ALTER` `AVAILABILITY GROUP` 语句的 `FAILURE_CONDITION_LEVEL = <n>` 选项，其中 `<n>` 是 1 到 5 之间的整数。 以下命令将 AG 'AG1' 的故障条件级别设置为 1： 
 

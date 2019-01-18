@@ -1,6 +1,7 @@
 ---
-title: 维护 AlwaysOn 发布数据库 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 将复制的发布服务器数据库作为可用性组的一部分管理
+description: '有关如何管理和维护在 SQL 复制中充当发布服务器并且还加入 Always On 可用性组的数据库的说明。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5d6b88887e20f29c4d8e123143544f8c76d60fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600326"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208726"
 ---
-# <a name="maintaining-an-always-on-publication-database-sql-server"></a>维护 AlwaysOn 发布数据库 (SQL Server)
+# <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>将复制的发布服务器数据库作为 Always On 可用性组的一部分管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题将探讨使用 AlwaysOn 可用性组时维护发布数据库的特殊注意事项。  
@@ -121,7 +122,7 @@ ms.locfileid: "47600326"
 ## <a name="see-also"></a>另请参阅  
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
   
   

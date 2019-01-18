@@ -30,12 +30,12 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29cdf6bcf1d79042b0469719341f823ba778dcdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761415"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979253"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ AS condition_expression
   
  若要获取关于规则的报告，请使用 sp_help。 若要显示某条规则的文本，请以该规则的名称作为参数来执行 sp_helptext。 若要重命名规则，请使用 sp_rename。  
   
- 在创建同名的新规则之前，必须使用 DROP RULE 删除原有规则，而在删除原有规则之前，必须先使用 sp_unbindrule 取消绑定。 若要取消规则与列的绑定，请使用 sp_unbindrule。  
+ 在创建同名的新规则之前，必须使用 DROP RULE 删除原有规则，而在此之前，必须先使用 sp_unbindrule 取消绑定。 若要取消规则与列的绑定，请使用 sp_unbindrule。  
   
  可以在不取消绑定原有规则的情况下将新规则绑定到列或数据类型；新规则将覆盖原有规则。 绑定到列的规则始终优先于绑定到别名数据类型的规则。 将规则绑定到列时，将替换已经绑定到该列的别名数据类型的规则。 但是，将规则绑定到数据类型时，不会替换绑定到该别名数据类型的列的规则。 下表显示了当规则绑定到列以及绑定到已存在规则的别名数据类型时有效的优先级。  
   

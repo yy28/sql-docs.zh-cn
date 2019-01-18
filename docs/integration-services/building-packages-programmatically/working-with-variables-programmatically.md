@@ -23,12 +23,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b163dd722797a7d3c4ec3fdec0551350005507ee
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642204"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203956"
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
   变量提供一种在包、容器、任务和事件处理程序中动态设置值和控制进程的方式。 优先约束还可使用变量来控制数据流流向不同任务的方向。 变量具有多种用途：  
@@ -159,7 +159,7 @@ End Module
  请注意，所有作用域在系统命名空间内的变量都可用于该包。 有关详细信息，请参阅 [System Variables](../../integration-services/system-variables.md)。  
   
 ## <a name="namespaces"></a>命名空间  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]（[!INCLUDE[ssIS](../../includes/ssis-md.md)]）提供了两个供变量驻留的默认命名空间；用户和系统命名空间。 默认情况下，开发人员所创建的任何自定义变量都会添加到用户命名空间中。 系统变量驻留在系统命名空间中。 可以创建除用户命名空间以外的其他命名空间以保存自定义变量，可以更改用户命名空间的名称，但是不能在系统命名空间中添加变量或修改其中的变量，也不能向不同的命名空间分配系统变量。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供了两个供变量驻留的默认命名空间；“用户”和“系统”命名空间。 默认情况下，开发人员所创建的任何自定义变量都会添加到用户命名空间中。 系统变量驻留在系统命名空间中。 可以创建除用户命名空间以外的其他命名空间以保存自定义变量，可以更改用户命名空间的名称，但是不能在系统命名空间中添加变量或修改其中的变量，也不能向不同的命名空间分配系统变量。  
   
  可用的系统变量互有差异，具体取决于容器类型。 有关包、容器、任务和事件处理器可用的系统变量的列表，请参阅[系统变量](../../integration-services/system-variables.md)。  
   

@@ -17,12 +17,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 254fa32ff939f7e84c361cd5baae4c99d4c42715
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff355276e4e154d47fc9b5c2124c16b296836eaa
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539677"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591591"
 ---
 # <a name="ssms-utility"></a>Ssms 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,10 +53,10 @@ Ssms
  *solutionfile*  
  指定要打开的解决方案。 该参数必须包含解决方案文件的完整路径。  
   
- [**-S** *servername*]  
+ [**-S** _servername_]  
   服务器名称  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
   数据库名称  
 
  [-G] 使用 Active Directory 身份验证进行连接。 连接类型的确定取决于是否包含 -P 和/或 -U。
@@ -66,10 +66,10 @@ Ssms
 
   请注意，当前不支持“Active Directory - 通用且具有 MFA 支持”。 
   
-[**-U** *username*]  
+[**-U** _username_]  
  使用“SQL 身份验证”或“Active Directory - 密码”进行连接时的用户名称  
   
-[**-P** *password*]  
+[**-P** _password_]  
  使用“SQL 身份验证”或“Active Directory - 密码”进行连接时的密码
   
 [**-E**]  
@@ -78,7 +78,7 @@ Ssms
 [**-nosplash**]  
  阻止 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 在打开时显示初始屏幕。 在带宽有限的情况下，通过终端服务连接到运行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的计算机上时，使用此选项。 该参数不区分大小写，并且可放在其他参数前后  
   
-[**-log***[filename]?*]  
+[**-log**_[filename]?_]  
  将 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活动记录到指定的文件中以便进行故障排除  
   
 [**-?**]  

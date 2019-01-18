@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: b1960771504184706bf21e9746a4fa3c784aad3b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712488"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212417"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -58,9 +58,9 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
 |“登录属性”|用于确定 KPI 磁贴颜色的数值。 有效值为 1（绿色）、0（琥珀色）和 -1（红色）。|  
 |趋势集|用于图表可视化的逗号分隔的数值。 也可以将其设置为具有表示走向的值的数据集列。|  
   
-> **警告**：虽然可以在设计时使用用于“状态”  字段的单词，如果要刷新数据集，还是应当使用数值。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  
-  
-> **请注意**：“值”、“目标”和“状态”字段只能从数据集结果的第一行选择一个值。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
+> **警告**：虽然可以在设计时使用用于“状态”字段的单词，如果要刷新数据集，还是应使用数值。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  
+> 
+> **注意**：“值”、“目标”和“状态”字段只能从数据集结果的第一行选择一个值。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
   
 若要使用来自共享数据集的数据，则可以执行以下操作。  
   

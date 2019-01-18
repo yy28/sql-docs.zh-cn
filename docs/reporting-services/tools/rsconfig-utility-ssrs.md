@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525347"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213656"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  
@@ -92,7 +92,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>指定内置帐户  
- 此示例显示如何配置报表服务器，以便在连接本地报表服务器数据库时使用内置帐户。 请注意，未使用 **-u** 参数。 支持的内置帐户值包括本地系统的 NT AUTHORITY\SYSTEM 和网络服务的 NT AUTHORITY\NETWORKSERVICE（仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ）。  
+ 此示例显示如何配置报表服务器，以便在连接本地报表服务器数据库时使用内置帐户。 请注意，未使用 **-u** 参数。 支持的内置帐户值包括本地系统的 NT AUTHORITY\SYSTEM 和网络服务的 NT AUTHORITY\NETWORKSERVICE（仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]）。  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  

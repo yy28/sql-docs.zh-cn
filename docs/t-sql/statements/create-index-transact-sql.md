@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518328"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980499"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -301,9 +301,12 @@ ON partition_scheme_name ( column_name )
  ON "default"  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)]。  
   
- 为默认文件组创建指定索引。  
+ 在表或视图所在的文件组或分区方案上创建指定索引。  
   
- 在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+ 在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+ 
+> [!NOTE]  
+> “default”不表示 CREATE INDEX 上下文中的数据库默认文件组。 这与 CREATE TABLE 不同，在 CREATE TABLE 中，“default”会在数据库默认文件组上找到表。
   
  [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -452,7 +455,7 @@ DROP_EXISTING = { ON | OFF }
 ONLINE = { ON | OFF }  
 指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。  
   
-> [!NOTE]  
+> [!NOTE]
 > 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ON  
@@ -533,11 +536,11 @@ MAXDOP = max_degree_of_parallelism
   
  有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 > 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能的列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  DATA_COMPRESSION  
- 为指定的索引、分区号或分区范围指定数据压缩选项。 这些选项如下：  
+ 为指定的索引、分区号或分区范围指定数据压缩选项。 选项如下所示：  
   
  无  
  不压缩索引或指定的分区。  
@@ -557,11 +560,11 @@ ON PARTITIONS ( { \<partition_number_expression> | \<range> } [ ,...n ] )
   
  可以按以下方式指定 \<partition_number_expression>：  
   
--   提供一个分区号，例如：ON PARTITIONS (2)。  
--   提供若干单独分区的分区号并用逗号将它们隔开，例如：ON PARTITIONS (1, 5)。  
+-   提供分区号，例如：ON PARTITIONS (2)。  
+-   为多个单个分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1,5)。  
 -   同时提供范围和单个分区，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
- \<range> 可以指定为以单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
+ \<range> 可指定为由单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
  
@@ -655,7 +658,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 > 在对表进行分区时，如果分区键列尚未出现在非唯一聚集索引中时，它们将由[!INCLUDE[ssDE](../../includes/ssde-md.md)]添加到索引中。 索引列的合并后的大小（不将包含列计算在内）加上任何添加的分区列在非唯一聚集索引中不能超过 1800 字节。  
   
 ## <a name="computed-columns"></a>计算列  
- 可以对计算列创建索引。 此外，计算列可以具有 PERSISTED 属性。 这意味着[!INCLUDE[ssDE](../../includes/ssde-md.md)]在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]对列创建了索引并且该索引由某查询引用，则会使用这些持久值。  
+ 可以对计算列创建索引。 此外，计算列可以具有 PERSISTED 属性。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对列创建了索引并且该索引由某查询引用，则会使用这些持久值。  
   
  若要对计算列建立索引则该计算列必须具有确定性并精确。 但是，使用 PERSISTED 属性会将可建立索引的计算列类型扩展为包含以下类型：  
   
@@ -1049,7 +1052,7 @@ CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABL
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
@@ -1078,7 +1081,7 @@ CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 

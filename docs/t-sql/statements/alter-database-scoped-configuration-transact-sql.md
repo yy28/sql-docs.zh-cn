@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641498"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069783"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -168,7 +168,7 @@ XTP_QUERY_EXECUTION_STATISTICS = { ON |OFF  }
 
 如果该选项为“开”，或通过 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用了统计信息收集，则收集对本机编译的 T-SQL 模块的语句级别执行统计信息。
 
-有关本机编译的 T-SQL 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的性能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
+有关本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的性能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
@@ -210,20 +210,20 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 允许为[全局临时表](create-table-transact-sql.md)设置自动删除功能。 默认值为 ON，这意味着如果没有任何会话使用全局临时表，系统会自动删除该表。 如果设置为 OFF，需要使用 DROP TABLE 语句显式删除或将在服务器重启时自动删除该表。
 
-- 在 Azure SQL 数据库逻辑服务器中，可以在逻辑服务器的单个用户数据库中设置此选项。
-- 在 SQL Server 和 Azure SQL 数据库托管实例中，要在 `TEMPDB` 中设置此选项且单个用户数据库的设置不起作用。
+- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 逻辑服务器中，可以在逻辑服务器的单个用户数据库中设置此选项。
+- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例中，要在 `TempDB` 中设置此选项且单个用户数据库的设置不起作用。
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **适用对象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-允许用户在数据库或语句范围内启用或禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 SQL 数据库中自适应查询处理的一个功能。 有关详细信息，请参阅[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)
+允许用户在数据库或语句范围内启用或禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自适应查询处理的一个功能。 有关详细信息，请参阅[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **适用对象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-允许用户在数据库或语句范围内启用或禁用自适应联接，同时将数据库兼容性级别维持在 140 或更高。 自适应联接是 SQL Server 2017 中推出的[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)的一个功能。
+允许用户在数据库或语句范围内启用或禁用自适应联接，同时将数据库兼容性级别维持在 140 或更高。 自适应联接是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)的一个功能。
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
@@ -233,66 +233,62 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ## <a name="Permissions"></a> Permissions
 
-需要在数据库中执行 ALTER ANY DATABASE SCOPE CONFIGURATION。 用户若具有针对数据库的 CONTROL 权限，便可授予此权限。
+需要数据库上的 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 用户若具有针对数据库的 CONTROL 权限，便可授予此权限。
 
 ## <a name="general-remarks"></a>一般备注
-
 虽然可以为辅助数据库配置不同于主数据库的作用域内配置设置，但所有辅助数据库都使用相同的配置。 无法为各辅助数据库配置不同的设置。
 
 执行此语句会清除当前数据库中的过程缓存，这意味着需要重新编译所有查询。
 
 对于 3 部分名称查询，采用查询的当前数据库连接设置，在当前数据库上下文中编译的 SQL 模块（例如过程、函数和触发器）除外，因此应使用其所在的数据库的选项。
 
-ALTER_DATABASE_SCOPED_CONFIGURATION 事件添加为可用于触发 DDL 触发器的 DDL 事件，且是 ALTER_DATABASE_EVENTS 触发器组的子项。
+`ALTER_DATABASE_SCOPED_CONFIGURATION` 事件添加为可用于触发 DDL 触发器的 DDL 事件，并且是 `ALTER_DATABASE_EVENTS` 触发器组的子元素。
 
 将对数据库执行数据库范围的配置设置，这意味着还原或附加一个给定数据库时，将保留现有的配置设置。
 
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
 ### <a name="maxdop"></a>MAXDOP
-
 精细设置可以替代全局设置，而资源调控器可以限制所有其他 MAXDOP 设置。 MAXDOP 设置的逻辑如下：
 
-- 查询提示可替代 sp_configure 和数据库作用域内设置。 如果为工作负荷组设置了资源组 MAXDOP：
+- 查询提示替代 `sp_configure` 和数据库作用域内配置。 如果为工作负荷组设置了资源组 MAXDOP：
 
-  - 如果查询提示设置为 0，则其会由资源调控器设置替代。
+  - 如果查询提示设置为零 (0)，则其会由资源调控器设置替代。
 
-  - 如果查询提示未设置为 0，则其会受资源调控器设置限制。
+  - 如果查询提示未设置为零 (0)，则其会受资源调控器设置限制。
 
-- 如果不存在受资源调控器设置限制的查询提示，则 DB 作用域内设置（除非为 0）会替代 sp_configure 设置。
+- 如果不存在受资源调控器设置限制的查询提示，则数据库作用域内配置（除非为零）会替代 `sp_configure` 设置。
 
-- sp_configure 设置由资源调控器设置替代。
+- `sp_configure` 设置由资源调控器设置替代。
 
 ### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
-QUERYTRACEON 提示用于启用旧版查询优化器或查询优化器修补程序时，会成为查询提示和数据库作用域内配置设置之间的 OR 条件，也就是说，如果启用了两者中任一一个，都会应用这些选项。
+`QUERYTRACEON` 提示用于通过 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本或查询优化器修补程序启用 SQL Server 7.0 的默认查询优化器时，会成为查询提示和数据库范围配置设置之间的 OR 条件，也就是说，如果启用了两者中任意一个，都会应用数据库作用域内配置。
 
-### <a name="geodr"></a>GeoDR
+### <a name="geo-dr"></a>异地灾难恢复
 
-可读辅助数据库（Always On 可用性组和 Azure SQL 数据库异地复制数据库）通过检查数据库状态来使用辅助值。 尽管重新编译不会在故障转移时发生，且从技术上讲，新的主数据库具有使用辅助数据库设置的查询，但是，主数据库和辅助数据库的设置仅在工作负荷不同时才有所相同，因此已缓存查询使用的是最佳设置，而新查询选择适合它们的新设置。
+可读的辅助数据库（Always On 可用性组和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 异地复制数据库），通过检查数据库的状态来使用辅助值。 尽管重新编译不会在故障转移时发生，且从技术上讲，新的主数据库具有使用辅助数据库设置的查询，但是，主数据库和辅助数据库的设置仅在工作负荷不同时才有所相同，因此已缓存查询使用的是最佳设置，而新查询选择适合它们的新设置。
 
 ### <a name="dacfx"></a>DacFx
 
-由于 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL 数据库和 SQL Server 2016 及更高版本的 SQL Server 中的一项新功能，并且会影响数据库架构，因此架构导出（有或没有数据）无法导入到较早版本的 SQL Server，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的导出无法导入到下级服务器。
+由于 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）中的新功能，可影响数据库模式，因此架构的导出（有数据或没有数据）无法导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的旧版本（如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]）。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的导出无法导入到下级服务器。
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
-此选项仅适用于支持 WITH(ONLINE= 语法的 DDL 语句。 XML 索引不受影响。
+此选项仅适用于支持 `WITH (ONLINE = <syntax>)` 的 DDL 语句。 XML 索引不受影响。
 
 ### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
 
-此选项仅适用于支持 WITH(RESUMABLE= syntax) 的 DDL 语句。 XML 索引不受影响。
+此选项仅适用于支持 `WITH (RESUMABLE = <syntax>)` 的 DDL 语句。 XML 索引不受影响。
 
 ## <a name="metadata"></a>元数据
 
 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 系统视图提供有关数据库作用域内配置的信息。 数据库作用域内配置选项仅在 sys.database_scoped_configurations 中显示，因为它们是服务器范围内默认设置的替代项。 [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 系统视图仅显示服务器范围内的设置。
 
 ## <a name="examples"></a>示例
-
 以下示例演示 ALTER DATABASE SCOPED CONFIGURATION 的用法
 
 ### <a name="a-grant-permission"></a>A. 授予权限
-
 本示例为用户 [Joe] 授予执行 ALTER DATABASE SCOPED CONFIGURATION 所需的权限。
 
 ```sql
@@ -300,7 +296,6 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>B. 设置 MAXDOP
-
 本示例在异地复制方案中为主数据库设置 MAXDOP = 1，为辅助数据库设置 MAXDOP = 4。
 
 ```sql
@@ -315,7 +310,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>C. 设置 LEGACY_CARDINALITY_ESTIMATION
-
 本示例在异地复制方案中为辅助数据库将 LEGACY_CARDINALITY_ESTIMATION 设置为 ON。
 
 ```sql
@@ -329,7 +323,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. 设置 PARAMETER_SNIFFING
-
 本示例在异地复制方案中为主数据库将 PARAMETER_SNIFFING 设置为 OFF。
 
 ```sql
@@ -349,7 +342,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. 设置 QUERY_OPTIMIZER_HOTFIXES
-
 在异地复制方案中为主数据库将 QUERY_OPTIMIZER_HOTFIXES 设置为 ON。
 
 ```sql
@@ -357,7 +349,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. 清除过程缓存
-
 本示例清除了过程缓存（仅可用于主数据库）。
 
 ```sql
@@ -365,8 +356,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ```
 
 ### <a name="g-set-identitycache"></a>G. 设置 IDENTITY_CACHE
-
-**适用对象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]（此功能为公共预览版）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 本示例禁用了标识缓存。
 
@@ -375,8 +365,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
-
-适用于：[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 本示例可在第一次编译批处理时启用要存储在缓存中的已编译计划存根。
 
@@ -385,7 +374,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>I. 设置 ELEVATE_ONLINE
-
 适用范围：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，且作为公共预览版功能
 
 此示例将 ELEVATE_ONLINE 设置为 FAIL_UNSUPPORTED。
@@ -395,8 +383,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. 设置 ELEVATE_RESUMABLE
-
-适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
+适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
 此示例将 ELEVATE_RESUMABLE 设置为 WHEN_SUPPORTED。
 

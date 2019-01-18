@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 97f3e713cc130456c40765ad84678739e7c6e6f3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529920"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204208"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>数据库镜像 - 建立会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "52529920"
   
  准备好镜像数据库后（请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)），便可以建立数据库镜像会话。 主体服务器实例、镜像服务器实例和见证服务器实例都必须是单独的服务器实例，并位于单独的主机系统中。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  我们建议您在非高峰时段配置数据库镜像，因为配置镜像会影响性能。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  给定的服务器实例可以参与到多个具有相同或不同伙伴的并发数据库镜像会话中。 某个服务器实例可能在某些会话中是伙伴，而在其他会话中则是见证服务器。 镜像服务器实例必须与主体服务器实例运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 并非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].的每个版本都提供数据库镜像。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>建立数据库镜像会话  
@@ -44,7 +44,7 @@ ms.locfileid: "52529920"
      数据库镜像会话中的每个服务器实例都需要一个数据库镜像端点。 如果端点不存在，则必须先创建。  
   
     > [!NOTE]  
-    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 数据库镜像可以使用两种类型的传输安全功能：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)。  
+    >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 两种类型的传输安全性可用于数据库镜像：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅 [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)。  
   
      在每台主体服务器和镜像服务器上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的伙伴，你可以为终结点分配伙伴角色 (ROLE**=** PARTNER)。 如果还要将该服务器用于其他数据库镜像会话中的见证服务器，则请将端点的角色分配为 ALL。  
   

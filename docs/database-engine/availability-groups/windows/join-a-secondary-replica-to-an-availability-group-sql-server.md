@@ -1,6 +1,7 @@
 ---
-title: 将次要副本联接到可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 将辅助副本联接到可用性组
+description: 使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 将辅助副本联接到 Always On 可用性组的步骤。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c3bbe1e99f11626b42a1bf6aee0b54e823a7fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632805"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213151"
 ---
-# <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本联接到可用性组 (SQL Server)
+# <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>将辅助副本联接到 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来将辅助副本联接到 Always On 可用性组。 在将某一辅助副本添加到一个 Always On 可用性组后，这个辅助副本必须联接到该可用性组。 该联接副本操作必须在承载辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上执行。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "47632805"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要准备辅助数据库，请使用：**  
   
@@ -118,7 +119,7 @@ ms.locfileid: "47632805"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：配置辅助数据库  
+##  <a name="FollowUp"></a>跟进：配置辅助数据库  
  对于该可用性组中的每个数据库，您在承载辅助副本的服务器实例上需要辅助数据库。 您可以在将辅助副本联接到可用性组之前或之后，按如下所述配置辅助数据库：  
   
 1.  通过将 RESTORE WITH NORECOVERY 用于每个还原操作，将各个主数据库的最近数据库和日志备份还原到承载辅助副本的服务器实例。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  

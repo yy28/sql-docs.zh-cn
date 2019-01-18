@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], monitoring system
 - Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6bca272809116f41a16ef033814fb354ffe46ce2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513669"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368519"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>服务器性能和活动监视
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +69,9 @@ ms.locfileid: "52513669"
 
 > [!IMPORTANT]
 > 后续部分将介绍使用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方法。  
-> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的 Microsoft.SqlServer.Management.Trace 命名空间也已弃用。   
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用。   
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-> 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 探查器](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE] 
 > 针对 Analysis Services 工作负荷的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 尚未弃用，我们将继续提供支持。

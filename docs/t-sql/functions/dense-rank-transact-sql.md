@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39fc8df8126858b6114297a1c8bfb75bd5340850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311e6ee0e470aa01933967c648c0f8e5c3ac503e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668095"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979425"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -175,7 +175,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D. 对分区中的行进行排名  
+### <a name="d-ranking-rows-within-a-partition"></a>D:对分区中的行进行排名  
 此示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 `DENSE_RANK` 按 `SalesTerritoryGroup` 对行集进行分区，并按 `SalesAmountQuota` 对结果集进行排序。  
   
 ```  

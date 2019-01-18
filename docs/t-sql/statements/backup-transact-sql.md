@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203876"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -247,11 +247,11 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 
 指定用于备份操作的逻辑备份设备或物理备份设备。  
   
-{ logical_device_name | **@** logical\_device\_name\_var } 适用范围：SQL Server   
+{ logical_device_name | @logical\_device\_name\_var } 适用范围：SQL Server   
 要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量（@logical\_device\_name\_var= 逻辑备份设备名称）或任何字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
-{ DISK | TAPE | URL} **=** { **'** physical\_device\_name **'** | **@** physical\_device\_name\_var | 'NUL' } 适用范围：磁盘、磁带和用于 SQL Server 的 URL。 
-指定磁盘文件或磁带设备，或者 Microsoft Azure 存储服务。 此 URL 格式用于创建到 Microsoft Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 有关教程的信息，请参阅[教程：SQL Server 备份和还原到 Microsoft Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
+{ DISK | TAPE | URL} = { 'physical\_device\_name' | @physical\_device\_name\_var | 'NUL' } 适用范围：磁盘、磁带和用于 SQL Server 的 URL。 
+指定磁盘文件或磁带设备，或者 Microsoft Azure 存储服务。 此 URL 格式用于创建到 Microsoft Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教程，请参阅[教程：将 SQL Server 备份和还原到 Microsoft Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
 
 > [!NOTE] 
 > NUL 磁盘设备将弃用发送给它的所有信息，且仅应用于测试。 这不适用于生产用途。
@@ -259,7 +259,7 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 > [!IMPORTANT]  
 > 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，备份到 URL 时只能备份到单个设备。 备份到 URL 时，若要备份到多个设备，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
   
-URL 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+**URL 适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 如果某一磁盘设备不存在，也可以在 BACKUP 语句中指定它。 如果存在物理设备且 BACKUP 语句中未指定 INIT 选项，则备份将追加到该设备。  
  
@@ -295,7 +295,7 @@ MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三�
 指定要用于备份操作的选项。  
   
 CREDENTIAL  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
 仅在创建到 Microsoft Azure Blob 存储服务的备份时使用。  
   
 FILE_SNAPSHOT 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。

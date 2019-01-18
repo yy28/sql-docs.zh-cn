@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525724"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591471"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   数据层应用程序 (DAC) 是一个逻辑数据库管理实体，用于定义与用户数据库关联的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如表、视图和实例对象（包括登录名）。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署的一个自包含单元，它使数据层开发人员和数据库管理员能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象打包到一个名为“DAC 包”（也称作 DACPAC）的可移植项目中。  
   
  BACPAC 是一个封装数据库架构以及数据库中存储的数据的相关项目。  
@@ -109,7 +109,7 @@ ms.locfileid: "52525724"
   
 -   **IMPORT** - 用户可以将架构和数据导入到主机服务器上的新数据库中。  
   
- 数据库管理工具 SQL Server Management Studio、Azure 门户和 DACFx API 支持这两种功能。  
+ 数据库管理工具：SQL Server Management Studio、Azure 门户和 DACFx API 支持这两种功能。  
   
 ## <a name="permissions"></a>Permissions  
  用户必须是 **dbmanager** 角色的成员或分配了 **CREATE DATABASE** 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 **dbmanager** 角色的成员或分配了 **DROP DATABASE** 权限才能删除数据库。  

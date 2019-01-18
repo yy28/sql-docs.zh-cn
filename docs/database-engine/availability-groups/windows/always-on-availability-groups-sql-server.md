@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性组：高可用性和灾难恢复解决方案
+description: Always On 可用性组是 SQL Server 高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案，具有更强大的功能。 了解此功能的基本信息和基本功能。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,19 +17,19 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d7c6025066140354278d0f67f6a6a3c6898ab17
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a55c61cff17e0cf583ba86296b12061d75389240
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606627"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202396"
 ---
-# <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
+# <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性组：高可用性和灾难恢复解决方案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个高可用性和灾难恢复解决方案，可提供用于替代数据库镜像的企业级方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 你可选择将辅助数据库用于进行只读访问和/或某些备份操作。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
   
- 可用性组在可用性副本级别进行故障转移。 故障转移不是由数据库问题导致的，例如，因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等情况。  
+ 可用性组在可用性副本级别进行故障转移。 故障转移不是由诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等此类数据库问题导致的。  
  
  >[!NOTE]
  >此可用性功能的完整正式名称为 AlwaysOn 可用性组。 其缩写为 AG，而非 AOAG 或 AAG。 
@@ -51,11 +52,11 @@ ms.locfileid: "51606627"
   
 -   支持几种形式的可用性组故障转移：自动故障转移、计划的手动故障转移（通常简称为“手动故障转移”）和强制的手动故障转移（通常简称为“强制故障转移”）。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)概念。  
   
--   使你能够将给定的可用性副本配置为支持以下一种或两种活动辅助功能：  
+-   使您能够将给定的可用性副本配置为支持以下一种或两种活动辅助功能：  
   
-    -   利用只读连接访问，与副本的只读连接可以在此副本作为辅助副本运行时访问和读取其数据库。 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
+    -   利用只读连接访问，与副本的只读连接可以在此副本作为辅助副本运行时访问和读取其数据库。 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
-    -   当副本作为辅助副本运行时，对副本的数据库执行备份操作。 有关详细信息，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)概念。  
+    -   当副本作为辅助副本运行时，对副本的数据库执行备份操作。 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
      通过使用活动辅助功能，可更好地利用辅助硬件资源，从而提高 IT 效率并降低成本。 此外，通过将读意向应用程序和备份作业转移到辅助副本，有助于提高针对主副本的性能。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "51606627"
   
         -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 向现有可用性组添加一个或多个辅助副本。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)。  
   
-        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 启动对可用性组的手动故障转移。 根据你指定为故障转移目标的辅助副本的配置和状态，该向导可以指定计划的手动故障转移或强制手动故障转移。 有关详细信息，请参阅[使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 启动对可用性组的手动故障转移。 根据您指定为故障转移目标的辅助副本的配置和状态，该向导可以指定计划的手动故障转移或强制手动故障转移。 有关详细信息，请参阅[使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。  
   
     -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 监视 AlwaysOn 可用性组、可用性副本和可用性数据库，并且评估 AlwaysOn 策略的结果。 有关详细信息，请参阅[使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)。  
   
@@ -155,15 +156,15 @@ ms.locfileid: "51606627"
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第二部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 2 部分：使用 Always On 生成关键任务高可用性解决方案）  
   
 -   **白皮书：**  
   

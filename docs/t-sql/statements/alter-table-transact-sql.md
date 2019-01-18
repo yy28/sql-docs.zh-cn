@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 56dff4af5345359e5da37e4aae355f5c56b8228a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503654"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980474"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -733,7 +733,7 @@ OFF
   
  指定一个位置以移动聚集索引的叶级别中的当前数据行。 表被移至新位置。 此选项仅适用于创建聚集索引的约束。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样。 如果指定了“default”，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
 { CHECK | NOCHECK } CONSTRAINT  
@@ -791,7 +791,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 在版本 V12 成为只读格式之前，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 和 SQL 数据库生成的非聚集列存储索引。 必须将非聚集列存储索引重新生成为当前格式（可更新），才能执行任何 PARTITION 操作。  
   
 SET ( FILESTREAM_ON = { partition_scheme_name | filestream_filegroup_name |         "default" | "NULL" })  
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILESTREAM`。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILESTREAM`。  
   
 指定 FILESTREAM 数据的存储位置。  
   
@@ -892,12 +892,12 @@ REBUILD WITH ( \<rebuild_option> )
  列集的名称。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 如果某个表包含稀疏列，则不能向该表添加列集。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
- **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
  启用或禁用针对 FileTable 的系统定义约束。 仅可与 FileTable 一起使用。  
   
  SET ( FILETABLE_DIRECTORY = directory_name )  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILETABLE`。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILETABLE`。  
   
  指定与 Windows 兼容的 FileTable 目录名称。 此名称应在数据库的所有 FileTable 目录名称中唯一。 无论 SQL 排序规则如何设置，唯一性比较都不区分大小写。 仅可与 FileTable 一起使用。  
 ```    
@@ -1008,7 +1008,7 @@ IF EXISTS
  可以通过在 ALTER COLUMN 子句中指定列数据类型的新大小来更改列的长度、精度或小数位数。 如果列中存在数据，则新大小不能小于数据的最大大小。 此外，不能在某个索引中定义该列，除非该列的数据类型为 varchar、nvarchar 或 varbinary 并且该索引不是 PRIMARY KEY 约束的结果。 请参见示例 P。  
   
 ## <a name="locks-and-alter-table"></a>锁和 ALTER TABLE  
- ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在 `ALTER TABLE...SWITCH` 操作中，源表和目标表都需要锁。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响超大型表中所有行的更改，例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本上删除列或者用默认值添加 NOT NULL 列，可能需要较长时间才能完成，并将生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
+ ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在 `ALTER TABLE...SWITCH` 操作中，源表和目标表都需要锁。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响超大型表中所有行的更改（例如删除列，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本上添加具有默认值的 NOT NULL 列）可能需要较长时间才能完成，并将生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以联机操作的形式添加 NOT NULL 列  
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 开始，当默认值为“运行时常量”时，添加具有该默认值的 NOT NULL 列是一个联机操作。 这意味着不论表中有多少行都几乎可以在瞬间完成该操作。 这是因为表中的现有行在操作期间不更新；相反，默认值仅存储在该表的元数据中，并且按需在访问这些行的查询中查找该值。 这种行为是自动的；无需在 ADD COLUMN 语法之外额外执行其他语法来执行该联机操作。 运行时常量是一个表达式，它可以在运行时为表中的每行生成相同的值，而与其确定性无关。 例如，常量表达式“My temporary data”或系统函数 GETUTCDATETIME() 均为运行时常量。 相反，函数 `NEWID()` 或 `NEWSEQUENTIALID()` 就不是运行时常量，因为这些函数为表中每行都生成唯一值。 添加具有非运行时常量的默认值的 NOT NULL 列始终脱机执行，并且在该操作期间需要一个排他 (SCH-M) 锁。  
@@ -1938,11 +1938,11 @@ WITH
   
 |分区|是否有数据？|边界范围|  
 |---------------|---------------|--------------------|  
-|1|用户帐户控制|OrderDate < '2004-01-01'|  
-|2|用户帐户控制|'2004-01-01' <= OrderDate < '2005-01-01'|  
-|3|用户帐户控制|'2005-01-01' <= OrderDate< '2006-01-01'|  
-|4|用户帐户控制|'2006-01-01'<= OrderDate < '2007-01-01'|  
-|5|用户帐户控制|'2007-01-01' <= OrderDate|  
+|1|是|OrderDate < '2004-01-01'|  
+|2|是|'2004-01-01' <= OrderDate < '2005-01-01'|  
+|3|是|'2005-01-01' <= OrderDate< '2006-01-01'|  
+|4|是|'2006-01-01'<= OrderDate < '2007-01-01'|  
+|5|是|'2007-01-01' <= OrderDate|  
   
 -   分区 1（有数据）：OrderDate < '2004-01-01'  
 -   分区 2（有数据）：'2004-01-01' <= OrderDate < '2005-01-01'  

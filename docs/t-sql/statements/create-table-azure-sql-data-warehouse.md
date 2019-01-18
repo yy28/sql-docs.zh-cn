@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703815"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980475"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -484,18 +484,18 @@ WITH
  在此示例中，数据将分类到以下分区中：  
   
 -   分区 1：列 <= 10   
--   分区 2：10 < 列 <= 20   
--   分区 3：20 < 列 <= 30   
--   分区 4：30 < 列 <= 40   
+-   分区 2：10 < 列 < = 20   
+-   分区 3：20 < 列 < = 30   
+-   分区 4：30 < 列 < = 40   
 -   分区 5：40 < 列  
   
  如果将此同一个表分区为 RANGE RIGHT 而非 RANGE LEFT（默认），数据将分类到以下分区中：  
   
 -   分区 1：列 < 10  
--   分区 2：10 <= 列 < 20   
--   分区 3：20 <= 列 < 30    
--   分区 4：30 <= 列 < 40   
--   分区 5：40 <= 列  
+-   分区 2：10 < = 列 < 20   
+-   分区 3：20 < = 列 < 30    
+-   分区 4：30 < = 列 < 40   
+-   分区 5：40 < = 列  
   
 ### <a name="OnePartition"></a> I. 使用一个分区创建已分区表  
  以下示例使用一个分区创建已分区表。 它不指定任何边界值，所以有一个分区。  

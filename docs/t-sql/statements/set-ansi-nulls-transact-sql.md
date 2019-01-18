@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c82f0b10a692f4f1d146a6916657186d17632a15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2d84c426bddf4a896a3be1f79ea85e3b718fd4e
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597466"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069763"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -58,13 +58,13 @@ SET ANSI_NULLS ON
 ```
 
 ## <a name="remarks"></a>Remarks  
- 当 SET ANSI_NULLS 为 ON 时，即使 column_name 中包含空值，使用 WHERE column_name = NULL 的 SELECT 语句仍返回零行。 即使 column_name 中包含非空值，使用 WHERE column_name <> NULL 的 SELECT 语句仍返回零行。  
+当 ANSI_NULLS 为 ON 时，即使 column_name 中包含空值，使用 WHERE column_name = NULL 的 SELECT 语句仍返回零行。 即使 column_name 中包含非空值，使用 WHERE column_name <> NULL 的 SELECT 语句仍返回零行。  
   
- 当 SET ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name = NULL 的 SELECT 语句返回 column_name 中包含空值的行。 使用 WHERE column_name <> NULL 的 SELECT 语句返回列中包含非空值的行。 此外，使用 WHERE column_name <> XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行。  
+当 ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name = NULL 的 SELECT 语句返回 column_name 中包含空值的行。 使用 WHERE column_name <> NULL 的 SELECT 语句返回列中包含非空值的行。 此外，使用 WHERE column_name <> XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行。  
   
- 当 SET ANSI_NULLS 为 ON 时，所有对 null 值的比较均取值为 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，如果数据值为 NULL，则所有数据对空值的比较将取值为 TRUE。 如果未指定 SET ANSI_NULLS，则应用当前数据库的 ANSI_NULLS 选项设置。 有关 ANSI_NULLS 数据库选项的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+当 ANSI_NULLS 为 ON 时，所有对 null 值的比较均取值为 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，如果数据值为 NULL，则所有数据对空值的比较将取值为 TRUE。 如果未指定 SET ANSI_NULLS，则应用当前数据库的 ANSI_NULLS 选项设置。 有关 ANSI_NULLS 数据库选项的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
 
- 下表显示 ANSI_NULLS 的设置如何通过 NULL 值和非 NULL 值影响大量布尔表达式的结果。  
+下表显示 ANSI_NULLS 的设置如何通过 NULL 值和非 NULL 值影响大量布尔表达式的结果。  
   
 |布尔表达式|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
 |---------------|---------------|------------|  
@@ -79,16 +79,16 @@ SET ANSI_NULLS ON
 |NULL IS NOT NULL|FALSE|FALSE|  
 |1 IS NOT NULL|TRUE|TRUE|  
 
- 仅当某个比较操作数是值为 NULL 的变量或文字 NULL 时，SET ANSI_NULLS ON 才会影响比较。 如果比较双方是列或复合表达式，则该设置不会影响比较。  
+仅当某个比较操作数是值为 NULL 的变量或文字 NULL 时，SET ANSI_NULLS ON 才会影响比较。 如果比较双方是列或复合表达式，则该设置不会影响比较。  
   
- 为使脚本按预期运行，不管 ANSI_NULLS 数据库选项或 SET ANSI_NULLS 的设置如何，请在可能包含空值的比较中使用 IS NULL 和 IS NOT NULL。  
+为使脚本按预期运行，不管 ANSI_NULLS 数据库选项或 SET ANSI_NULLS 的设置如何，请在可能包含空值的比较中使用 IS NULL 和 IS NOT NULL。  
   
- 在执行分布式查询时应将 SET ANSI_NULLS 设置为 ON。  
+在执行分布式查询时应将 SET ANSI_NULLS 设置为 ON。  
   
- 对计算列或索引视图创建或更改索引时，SET ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误消息，该错误消息会列出所有违反所需值的 SET 选项。 另外，在执行 SELECT 语句时，如果 SET ANSI_NULLS 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略计算列或视图的索引值并解析选择操作，就好像表或视图没有这样的索引一样。  
+对计算列或索引视图创建或更改索引时，SET ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误消息，该错误消息会列出所有违反所需值的 SET 选项。 另外，在执行 SELECT 语句时，如果 SET ANSI_NULLS 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略计算列或视图的索引值并解析选择操作，就好像表或视图没有这样的索引一样。  
   
 > [!NOTE]  
->  ANSI_NULLS 是在处理计算列或索引视图的索引时必须设置为所需值的七个 SET 选项之一。 还必须将选项 ANSI_PADDING、ANSI_WARNINGS、ARITHABORT、QUOTED_IDENTIFIER 和 CONCAT_NULL_YIELDS_NULL 设置为 ON，而必须将 NUMERIC_ROUNDABORT 设置为 OFF。  
+> ANSI_NULLS 是在处理计算列或索引视图的索引时必须设置为所需值的七个 SET 选项之一。 此外，`ANSI_PADDING`、`ANSI_WARNINGS`、`ARITHABORT`、`QUOTED_IDENTIFIER` 和 `CONCAT_NULL_YIELDS_NULL` 选项还必须设置为 ON，而 `NUMERIC_ROUNDABORT` 必须设置为 OFF。  
   
  进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口会自动将 ANSI_NULLS 设置为 ON。 该设置可以在 ODBC 数据源、ODBC 连接属性或 OLE DB 连接属性（它们在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之前在应用程序中设置）中进行配置。 SET ANSI_NULLS 的默认值为 OFF。  
   
@@ -98,11 +98,10 @@ SET ANSI_NULLS ON
   
  要查看此设置的当前设置，请运行以下查询：
   
-```  
+```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
 IF ( (32 & @@OPTIONS) = 32 ) SET @ANSI_NULLS = 'ON';  
-SELECT @ANSI_NULLS AS ANSI_NULLS;  
-  
+SELECT @ANSI_NULLS AS ANSI_NULLS;   
 ```  
   
 ## <a name="permissions"></a>Permissions  
@@ -111,7 +110,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ## <a name="examples"></a>示例  
  以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还表明，`IS NULL` 不受 `SET ANSI_NULLS` 设置的影响。  
   
-```  
+```sql  
 -- Create table t1 and insert values.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 values (NULL),(0),(1);  
@@ -176,7 +175,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
@@ -189,5 +187,4 @@ DROP TABLE dbo.t1;
  [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)  
-  
   

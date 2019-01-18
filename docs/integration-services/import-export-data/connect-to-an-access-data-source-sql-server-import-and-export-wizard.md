@@ -11,12 +11,12 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49ec9733634d0b8eb5f6523eb6fd7f416b5f408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829465"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202636"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>连接到 Access 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 **Microsoft Access** 数据源。
@@ -46,8 +46,8 @@ ms.locfileid: "47829465"
  **文件名**  
 指定 Access 文件的路径和文件名。 例如，针对本地计算机上的文件，指定 **C:\\MyData.mdb**；针对网络共享上的文件，指定 **\\\\Sales\\Database\\Northwind.mdb**。 或单击 **“浏览”**。 
 
- >   [!NOTE] 
- > 如果单击“浏览”定位 Access 文件，默认情况下，“打开”对话框会筛选出使用较旧 .MDB 格式和文件扩展名的文件。 不过，该数据提供程序也可以打开使用较新 .ACCDB 格式和文件扩展名的文件。
+> [!NOTE]
+> 如果单击“浏览”定位 Access 文件，默认情况下，“打开”对话框会筛选出使用较旧 .MDB 格式和文件扩展名的文件。 不过，该数据提供程序也可以打开使用较新 .ACCDB 格式和文件扩展名的文件。
   
  **“浏览”**  
  通过使用“打开”对话框定位数据库文件。  

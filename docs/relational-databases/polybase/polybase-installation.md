@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523481"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208793"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -32,22 +32,22 @@ ms.locfileid: "52523481"
 
 - Oracle Java SE Runtime Environment (JRE)。 支持版本 7（从 7.51 开始）和版本 8。 [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 和 [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 都可以正常工作。 转到 [Java SE 下载](https://www.oracle.com/technetwork/java/javase/downloads/index.html)。 如果 JRE 不存在，则安装程序失败。 不支持 JRE9 和 JRE10。
 
-- 最低内存：4 GB。 
+- 最小内存：4 GB。 
    
 - 最小硬盘空间：2 GB。
   
-- 建议：最小值为 16-GB RAM。
+- 建议：至少 16 GB 的 RAM。
    
 - 必须启用 TCP/IP 才能使 PolyBase 正常工作。 SQL Server 的所有版本均默认启用 TCP/IP，Developer 和 Express SQL Server 版本除外。 若要使 PolyBase 在 Developer 和 Express 版本上正常工作，必须启用 TCP/IP 连接。 请参阅[启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
 - MSVC++ 2012。 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > 在每台计算机上仅可在一个 SQL Server 实例上安装 PolyBase。
-
+> 
 > [!IMPORTANT]
->
+> 
 > 若要对 Hadoop 使用计算下推功能，目标 Hadoop 群集必须具有 HDFS、YARN 和 MapReduce 的核心组件且已启用作业历史记录服务器。 PolyBase 通过 MapReduce 提交下推查询，并且从作业历史记录服务器拉取状态。 缺少任一组件，查询都会失败。
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>单节点或 PolyBase 横向扩展组

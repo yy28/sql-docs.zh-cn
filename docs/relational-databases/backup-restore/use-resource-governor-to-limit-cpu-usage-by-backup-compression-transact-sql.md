@@ -17,12 +17,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649355"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210536"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47649355"
 ##  <a name="setup_login_and_user"></a> 为低优先级操作设置登录名和用户  
  本主题中的方案需要低优先级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和用户。 将使用用户名对运行于此登录中的会话进行分类，并将它们路由到限制 CPU 使用的资源调控器工作负荷组。  
   
- 下面的过程介绍了出于此目的设置登录名和用户的步骤，之后给出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例“示例 A：设置登录名和用户 (Transact-SQL)”。  
+ 下面的过程介绍了出于此目的设置登录名和用户的步骤，之后给出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例“示例 A：设置登录名和用户 (Transact-SQL)。”  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>设置用于对会话进行分类的登录名和数据库用户  
   
@@ -200,7 +200,7 @@ GO
  提交事务后，本示例将应用 ALTER WORKLOAD GROUP 或 ALTER RESOURCE POOL 语句中请求的配置更改。  
   
 > [!IMPORTANT]  
->  以下示例使用“示例 A：设置登录名和用户 (Transact-SQL)”中创建的示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的用户名 *domain_name*`\MAX_CPU`。 将此用户名替换为您计划在创建低优先级压缩备份时使用的登录名的用户名。  
+>  以下示例使用示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的用户名，该用户是在“示例 A：设置登录名和用户 (Transact-SQL)” domain_name`\MAX_CPU` 中创建的。 将此用户名替换为您计划在创建低优先级压缩备份时使用的登录名的用户名。  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -262,7 +262,7 @@ GO
  [[返回页首]](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> 使用具有有限 CPU 的会话压缩备份  
- 要在限定了最大 CPU 的会话中创建压缩备份，应当以分类器函数中指定的用户身份登录。 在备份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或选择**压缩备份** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要创建压缩数据库备份，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+ 要在限定了最大 CPU 的会话中创建压缩备份，应当以分类器函数中指定的用户身份登录。 在备份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或选择“压缩备份”([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要创建压缩数据库备份，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>示例 C：创建压缩备份 (Transact-SQL)  
  下面的 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 示例在一个采用新格式的备份文件 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 中创建 `Z:\SQLServerBackups\AdvWorksData.bak`数据库的压缩完整备份。  

@@ -13,24 +13,24 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 876e6cc23bd5b4063c977de44af05c2e43ee002d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672836"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588941"
 ---
 # <a name="monitor-data-tier-applications"></a>监视数据层应用程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   可以从 **(SSMS) 中的** 实用工具资源管理器 **和** 对象资源管理器 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以及系统视图和表中监视数据层应用程序 (DAC)。 此外，可以使用标准数据库和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 监视技术监视 DAC 中包含的数据库中的所有对象。  
   
 ## <a name="before-you-begin"></a>开始之前  
- 如果您将 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的托管实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，与部署的 DAC 有关的信息将合并到 SQL Server 实用工具中。 然后，您可以通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **实用工具资源管理器**，查看与该 DAC 有关的基本运行状况信息。  
+ 如果将 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，与部署的 DAC 有关的信息将合并到 SQL Server 实用工具中。 然后，您可以通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **实用工具资源管理器**，查看与该 DAC 有关的基本运行状况信息。  
   
  SSMS **“对象资源管理器”** 显示与部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个 DAC 有关的基本配置信息，而与该实例是否在 SQL Server 实用工具中进行管理无关。 此外，可以使用与用于监视任何数据库的相同过程来监视与部署的 DAC 相关联的数据库。  
   
 ## <a name="using-the-sql-server-utility"></a>使用 SQL Server 实用工具  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **实用工具资源管理器**中的“已部署的数据层应用程序”详细信息页显示一个面板，该面板报告已部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的托管实例的所有 DAC 的资源利用情况。 该详细信息页的顶部窗格列出每个已部署的 DAC，同时还列出直观的指示器，显示 CPU 和文件资源的使用率是否超出为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具定义的策略。 如果您在列表视图中选择任何 DAC，则进一步的详细信息将显示在该页面的底部窗格的选项卡中。 有关详细信息页上提供的信息的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 实用工具资源管理器中的“已部署的数据层应用程序”详细信息页显示一个面板，该面板报告已部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例的所有 DAC 的资源利用情况。 该详细信息页的顶部窗格列出每个已部署的 DAC，同时还列出直观的指示器，显示 CPU 和文件资源的使用率是否超出为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具定义的策略。 如果您在列表视图中选择任何 DAC，则进一步的详细信息将显示在该页面的底部窗格的选项卡中。 有关详细信息页上提供的信息的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
  在使用“已部署的数据层应用程序”详细信息页迅速确定导致硬件资源利用不足或压力过大的 DAC 后，你可以制订计划以便解决任何问题。 未充分利用其当前硬件资源的多个 DAC 可被合并为单个服务器，从而释放某些服务器以用于其他用途。 如果某一 DAC 对其当前服务器上的资源压力过大，则可以将该 DAC 移到性能更高的服务器上，或者向当前服务器添加更多的资源。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "51672836"
  “已部署的数据层应用程序”详细信息页中的信息来自实用工具管理数据仓库中的数据，实用工具管理数据仓库默认为每 15 分钟收集数据。 还可以使用 **“实用工具管理”** 详细信息页定制该间隔。  
   
 ## <a name="using-object-explorer"></a>使用对象资源管理器  
- SSMS **“对象资源管理器”** 显示与部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个 DAC 有关的基本配置信息。 这包括已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中注册的托管实例，以及无法在“实用工具资源管理器”中查看的独立实例。  
+ SSMS **“对象资源管理器”** 显示与部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个 DAC 有关的基本配置信息。 这包括已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中注册的实例，以及无法在“实用工具资源管理器”中查看的独立实例。  
   
- 查看与部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 DAC 有关的详细信息：  
+ 查看与部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 DAC 有关的详细信息：  
   
 1.  选择“视图/对象资源管理器”菜单。  
   

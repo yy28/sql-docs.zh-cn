@@ -1,7 +1,7 @@
 ---
 title: 内存管理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669396"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328977"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "51669396"
 | |32 位 <sup>1</sup> |64 位|
 |-------|-------|-------| 
 |常规内存 |所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 最大处理虚拟地址空间限制： <br>- 2 GB<br>- 3 GB，带有 /3gb 引导参数 <sup>2</sup> <br>- 4 GB，在 WOW64 <sup>3</sup>上 |所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 最大处理虚拟地址空间限制： <br>- 7 TB，带有 IA64 体系结构（ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本中不支持 IA64）<br>- 操作系统支持的最大值，带有 x64 体系结构 <sup>4</sup>
-|AWE 机制（允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 32 位平台上超过处理虚拟地址空间限制。） |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition、Enterprise Edition 和 Developer Edition：缓冲池最多可以访问 64 GB 内存。|不适用 <sup>5</sup> |
-|“锁定内存页”操作系统 (OS) 权限（允许锁定物理内存，防止 OS 对锁定的内存进行分页。）<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition、Enterprise Edition 和 Developer Edition：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程使用 AWE 机制所必需的。 通过 AWE 机制分配的内存不能出页。 <br> 授予此权限但未启用 AWE 不会对服务器产生影响。 | 仅在必要时使用，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|AWE 机制（允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 32 位平台上超过处理虚拟地址空间限制。） |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 和 Developer 版本：缓冲池支持访问最多 64 GB 的内存。|不适用 <sup>5</sup> |
+|“锁定内存页”操作系统 (OS) 权限（允许锁定物理内存，防止 OS 对锁定的内存进行分页。）<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 和 Developer 版本：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程使用 AWE 机制所需。 通过 AWE 机制分配的内存不能出页。 <br> 授予此权限但未启用 AWE 不会对服务器产生影响。 | 仅在必要时使用，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32 位版本不可用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]作为开头。  
 <sup>2</sup> /3gb 是一个操作系统启动参数。 有关详细信息，请访问 MSDN 库。  
@@ -87,9 +87,9 @@ ms.locfileid: "51669396"
 
 |内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
-|单页分配|用户帐户控制|是，合并到“任意大小”页分配|
+|单页分配|是|是，合并到“任意大小”页分配|
 |多页分配|否|是，合并到“任意大小”页分配|
-|CLR 分配|否|用户帐户控制|
+|CLR 分配|否|是|
 |线程堆栈内存|否|否|
 |从 Windows 直接分配|否|否|
 
@@ -103,6 +103,7 @@ ms.locfileid: "51669396"
 -  需要较大内存缓冲区的备份操作。
 -  需要存储较大输入参数的跟踪操作。
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对“memory_to_reserve”的更改
 在早期版本的 SQL Server（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器保留了一部分进程虚拟地址空间 (VAS)，供多页分配器 (MPA)、CLR 分配器、用于 SQL Server 进程中的线程堆栈的内存分配以及直接 Windows 分配 (DWA) 使用。 这一部分虚拟地址空间也称为“Mem-To-Leave”或“非缓冲池”区域。
 
@@ -115,10 +116,10 @@ ms.locfileid: "51669396"
 |内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
 |单页分配|否|否，合并到“任意大小”页分配|
-|多页分配|用户帐户控制|否，合并到“任意大小”页分配|
-|CLR 分配|用户帐户控制|用户帐户控制|
-|线程堆栈内存|用户帐户控制|用户帐户控制|
-|从 Windows 直接分配|用户帐户控制|用户帐户控制|
+|多页分配|是|否，合并到“任意大小”页分配|
+|CLR 分配|是|是|
+|线程堆栈内存|是|是|
+|从 Windows 直接分配|是|是|
 
 ## <a name="dynamic-memory-management"></a> 动态内存管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的默认内存管理行为是获取尽可能多的内存而不会造成系统内存短缺。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]通过使用 Microsoft Windows 中的内存通知 API 来实现这一点。
@@ -182,7 +183,7 @@ FROM sys.dm_os_process_memory;
 ## <a name="memory-used-by-sql-server-objects-specifications"></a>SQL Server 对象规范使用的内存
 以下列表介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中不同对象所用内存量的近似值。 列出的数值为估计值，根据环境以及创建对象的方式可能有所不同：
 
-* 锁（由锁管理器维护）：64 字节 + 每个所有者 32 字节   
+* 锁（由锁管理器维护）：每个所有者 64 字节 + 32 字节   
 * 用户连接：约为 (3 \* network_packet_size + 94 kb)    
 
 网络数据包大小是表格数据模式 (TDS) 数据包的大小，该数据包用于应用程序和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎之间的通信。 默认的数据包大小为 4 KB，由“网络数据包大小”配置选项控制。
@@ -313,12 +314,12 @@ min memory per query 配置选项设定将为执行查询分配的最小内存�
 > TORN_PAGE_DETECTION 可能使用较少资源，但提供的 CHECKSUM 保护最少。
 
 ## <a name="understanding-non-uniform-memory-access"></a>了解非一致性内存访问
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  能识别非一致性内存访问 (NUMA)，无需特殊配置便可在 NUMA 硬件上顺利地执行。 随着处理器时钟速度的提高和处理器数量的增加，使用这种额外处理能力所需的内存滞后时间越来越难以减少。 为了避开这一问题，硬件供应商提供了大型的 L3 缓存，但这只是一种有限的解决方案。 NUMA 体系结构为此问题提供了可缩放的解决方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已设计为利用基于 NUMA 的计算机而无需更改任何应用程序。 有关详细信息，请参阅 [如何：将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  能识别非一致性内存访问 (NUMA)，无需特殊配置便可在 NUMA 硬件上顺利地执行。 随着处理器时钟速度的提高和处理器数量的增加，使用这种额外处理能力所需的内存滞后时间越来越难以减少。 为了避开这一问题，硬件供应商提供了大型的 L3 缓存，但这只是一种有限的解决方案。 NUMA 体系结构为此问题提供了可缩放的解决方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已设计为利用基于 NUMA 的计算机而无需更改任何应用程序。 有关详细信息，请参阅[如何将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
 
 ## <a name="see-also"></a>另请参阅
 [“服务器内存”服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [读取页](../relational-databases/reading-pages.md)   
 [写入页](../relational-databases/writing-pages.md)   
-[如何将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[如何：将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
 [使用内存优化表的要求](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [使用内存优化表来解决内存不足问题](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

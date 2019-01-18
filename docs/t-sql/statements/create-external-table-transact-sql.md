@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402812"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980533"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -255,8 +255,8 @@ REJECTED_ROW_LOCATION = 目录位置
  请注意，创建外部数据源的登录名必须有权对位于 Hadoop 或 Azure blob 存储中的外部数据源进行读取和写入。  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  ALTER ANY EXTERNAL DATA SOURCE 权限授予任何主体创建和修改任何外部数据源对象的权限，还授予访问数据库上所有数据库作用域凭据的权限。 必须将此权限视为高度特权，因此必须仅授予系统中受信任的主体。
 
 ## <a name="error-handling"></a>错误处理  

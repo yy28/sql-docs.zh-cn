@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e58734bb3487e86b30f561e4e636bbe4851435e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511837"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979953"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,14 +31,13 @@ ms.locfileid: "52511837"
   
 2.  **CircularString** 或 **LineString** 实例的序列必须是连续的。  
   
- 如果 **CompoundCurve** 包含由多个 **CircularString** 和 **LineString** 实例构成的序列，在该序列中，每个实例（最后一个实例除外）的结束端点必须是下一个实例的起始端点。 这意味着，如果在序列中前一个实例的结束点是 (4 3 7 2)，则该序列中的下一个实例的起始点必须是 (4 3 7 2)。 请注意，该点的 Z（标高）和 M（度量）值也必须相同。 如果这两个点之间存在差异，则将引发 `System.FormatException` 。 **CircularString** 中的点不一定必须有 Z 值或 M 值。 如果未向前一个实例的结束点提供 Z 值或 M 值，下一个实例的起始点就不能包含 Z 值或 M 值。 如果前一个序列的结束点是 (4 3)，则后一个序列的起始点必须是 (4 3)；它不能是 (4 3 7 2）。 **CompoundCurve** 实例中的所有点要么不得有 Z 值，要么其 Z 值必须相同。  
+如果 **CompoundCurve** 包含由多个 **CircularString** 和 **LineString** 实例构成的序列，在该序列中，每个实例（最后一个实例除外）的结束端点必须是下一个实例的起始端点。 这意味着，如果在序列中前一个实例的结束点是 (4 3 7 2)，则该序列中的下一个实例的起始点必须是 (4 3 7 2)。 请注意，该点的 Z（标高）和 M（度量）值也必须相同。 如果这两个点之间存在差异，则将引发 `System.FormatException` 。 **CircularString** 中的点不一定必须有 Z 值或 M 值。 如果未向前一个实例的结束点提供 Z 值或 M 值，下一个实例的起始点就不能包含 Z 值或 M 值。 如果前一个序列的结束点是 (4 3)，则后一个序列的起始点必须是 (4 3)；它不能是 (4 3 7 2）。 **CompoundCurve** 实例中的所有点要么不得有 Z 值，要么其 Z 值必须相同。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
- 下图显示了有效的 **CompoundCurve** 类型。  
+下图显示了有效的 **CompoundCurve** 类型。  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
-  
 ### <a name="accepted-instances"></a>接受的实例  
  如果**CompoundCurve** 实例是空实例或者它满足以下条件，则接受该实例。  
   
@@ -47,20 +46,20 @@ ms.locfileid: "52511837"
 2.  **CompoundCurve** 实例中的所有圆弧线段都连接在一起。 每个后续圆弧线段上的第一个点与前一个圆弧线段上的最后一个点相同。  
   
     > [!NOTE]  
-    >  Z 和 M 坐标也要相同。 因此，所有四个坐标 X、Y、Z 和 M 必须相同。  
+    > Z 和 M 坐标也要相同。 因此，所有四个坐标 X、Y、Z 和 M 必须相同。  
   
 3.  所有包含的实例都不是空实例。  
   
- 下面的示例显示接受的 **CompoundCurve** 实例。  
+下面的示例显示接受的 **CompoundCurve** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 ```  
   
- 下面的示例显示未被接受的 **CompoundCurve** 实例。 这些实例引发 `System.FormatException`。  
+下面的示例显示未被接受的 **CompoundCurve** 实例。 这些实例引发 `System.FormatException`。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
@@ -72,28 +71,27 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
   
 2.  **CompoundCurve** 实例包含的所有圆弧线段实例都是有效实例。  
   
- 下面的示例显示有效的 **CompoundCurve** 实例。  
+下面的示例显示有效的 **CompoundCurve** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
-  
 ```  
   
- `@g3` 有效，因为 **CircularString** 实例有效。 有关 **CircularString** 实例的有效性的详细信息，请参阅 [CircularString](../../relational-databases/spatial/circularstring.md)。  
+`@g3` 有效，因为 **CircularString** 实例有效。 有关 **CircularString** 实例的有效性的详细信息，请参阅 [CircularString](../../relational-databases/spatial/circularstring.md)。  
   
- 下面的示例显示无效的 **CompoundCurve** 实例。  
+下面的示例显示无效的 **CompoundCurve** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4, 3 5))';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE((1 1, 1 1))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` 无效，因为第二个实例是无效的 LineString 实例。 `@g2` 无效，因为 **LineString** 实例无效。 `@g3` 无效，因为 **CircularString** 实例无效。 有关有效的 **CircularString** 和 **LineString** 实例的详细信息，请参阅 [CircularString](../../relational-databases/spatial/circularstring.md) 和 [LineString](../../relational-databases/spatial/linestring.md)。  
+`@g1` 无效，因为第二个实例是无效的 LineString 实例。 `@g2` 无效，因为 **LineString** 实例无效。 `@g3` 无效，因为 **CircularString** 实例无效。 有关有效的 **CircularString** 和 **LineString** 实例的详细信息，请参阅 [CircularString](../../relational-databases/spatial/circularstring.md) 和 [LineString](../../relational-databases/spatial/linestring.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -140,7 +138,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- 此示例将产生以下输出：12.566370…，相当于 4∏。 该示例中的 `CompoundCurve` 实例存储一个半径为 2 的圆。 前面的两个代码示例不一定非要使用 `CompoundCurve`。 对于第一个示例， `LineString` 实例将更为简单，对于第二个示例， `CircularString` 实例将更为简单。 然而，下一个示例显示在何种情况下 `CompoundCurve` 提供更好的替代方法。  
+此示例产生输出 `12.5663706143592`，相当于 4∏。 该示例中的 `CompoundCurve` 实例存储一个半径为 2 的圆。 前面的两个代码示例不一定非要使用 `CompoundCurve`。 对于第一个示例， `LineString` 实例将更为简单，对于第二个示例， `CircularString` 实例将更为简单。 然而，下一个示例显示在何种情况下 `CompoundCurve` 提供更好的替代方法。  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. 使用 CompoundCurve 存储一个半圆  
  下面的示例使用 `CompoundCurve` 实例存储一个半圆。  
@@ -179,14 +177,14 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- 输出如下所示：  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circle One11.940039...  
 Circle Two12.566370...  
 ```  
   
- 圆形 2 的周长大约为 4∏，这是周长的实际值。 但是，圆形 1 的周长很不准确。 圆形 1 的 `CompoundCurve` 实例存储一个圆弧线段 (ABC) 和两条直线段（CD、DA)。 `CompoundCurve` 实例必须存储两个圆弧线段（ABC、CDA）才可以定义一个圆形。 `LineString` 实例定义圆形 1 的 `CompoundCurve` 实例中的第二组点（4 2、2 4、0 2）。 必须在 `CircularString` 内部显式声明 `CompoundCurve`实例。  
+圆形 2 的周长大约为 4∏，这是周长的实际值。 但是，圆形 1 的周长很不准确。 圆形 1 的 `CompoundCurve` 实例存储一个圆弧线段 (ABC) 和两条直线段（CD、DA)。 `CompoundCurve` 实例必须存储两个圆弧线段（ABC、CDA）才可以定义一个圆形。 `LineString` 实例定义圆形 1 的 `CompoundCurve` 实例中的第二组点（4 2、2 4、0 2）。 必须在 `CircularString` 内部显式声明 `CompoundCurve`实例。  
   
 ## <a name="see-also"></a>另请参阅  
  [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

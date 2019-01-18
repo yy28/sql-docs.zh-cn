@@ -13,21 +13,21 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b98cab5bffef09bdbbfd353f9f72bbb6d093c9c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9d44df32b29f2c2efaad86386690020fe19818f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508997"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213506"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>“全文索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可以创建全文索引，用于对数据库表中基于文本的列进行全文搜索。 全文索引依赖于常规索引，因此必须先创建常规索引。 常规索引只能对单个非空的列创建，而且最好选择值较小的列而不是选择值较大的列。  
   
-> [!NOTE]  
+> [!NOTE]
 > 若要创建全文索引，必须先使用外部工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或企业管理器）为数据库创建一个全文本目录。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中都不提供全文检索功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)。  
   
 ## <a name="options"></a>选项  
@@ -89,7 +89,7 @@ ms.locfileid: "52508997"
 显示下一次爬网的开始日期和时间。  
   
 **当前或上一次爬网的类型**  
-显示当前或最近一次爬网的类型：“完全”、“增量”、“更新”或“自动传播”。  
+显示当前或最近一次爬网中的类型：“完全”、“增量”、“更新”或“自动传播”。  
   
 **唯一索引名称**  
 显示此数据库中具有唯一单列索引的所有列的名称列表。 这些列可用于创建全文索引。  

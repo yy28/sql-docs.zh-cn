@@ -17,12 +17,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2961e4c8345157df3d8b625ccc7bb45501570793
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 419f8c12e3716d295440dae887591b547af54f32
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675206"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208239"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "51675206"
   
     -   分发服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** ，将 **@job_password**。  
   
-        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用 **@job_login** 和 **@job_password** 指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** ，将 **@job_password**。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
     -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password**。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "51675206"
   
     -   分发服务器中的合并代理运行时所使用的 **@job_login** ，将 **@job_password**。  
   
-        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用 **@job_login** 和 **@job_password** 指定的 Windows 凭据。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** ，将 **@job_password**。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
     -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password**。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "51675206"
   
     -   分发服务器中的分发代理运行时所使用的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，将 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 字段，用于提供分发代理在分发服务器中运行所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
-        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > **注意：** 当 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 固定服务器角色的成员创建订阅时，不需要设置 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   （可选） **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "51675206"
   
     -   分发服务器中的分发代理运行时所使用的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，将 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 字段，用于提供分发代理在分发服务器中运行所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
-        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > **注意：** 当 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 固定服务器角色的成员创建订阅时，不需要设置 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   （可选） **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
   

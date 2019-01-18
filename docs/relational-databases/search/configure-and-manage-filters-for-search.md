@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b18963f7b512d2fa395d53406528a2d813b364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba65abd869322574cd2047be5066aad4b1c30767
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739695"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552949"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>配置和管理搜索筛选器
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,10 +40,14 @@ ms.locfileid: "47739695"
 
 ## <a name="installed-filters"></a>已安装的筛选器 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装它自己的 XML 和 HTML 筛选器。 此外，已在操作系统上安装的任何针对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 专有格式（.doc、.xdoc、.ppt 等）的筛选器也由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载。 若要标识当前加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上的筛选器，请使用 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 存储过程，如下所示：  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> 即使使用提供 .xlsx 支持的 Office 筛选包，SQL Server 也不支持 Strict Open XML 电子表格。  不返回任何错误，SQL Server 只是无法对任何 Strict Open XML 电子表格编制索引。
+
 ## <a name="non-microsoft-filters"></a>非 Microsoft 筛选器
 但是，在可以使用针对非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 格式的筛选器之前，必须将它们手动加载到服务器实例中。 有关安装其他筛选器的信息，请参阅 [查看或更改注册的筛选器和断字符](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   

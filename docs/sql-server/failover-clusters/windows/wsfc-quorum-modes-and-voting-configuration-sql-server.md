@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8cba297aa253fd4f4d7798342ccb4627f8008154
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404092"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215513"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52404092"
 > [!IMPORTANT]  
 >  如果 WSFC 群集因为仲裁失败而被设为脱机，则需要手动干预以便将其重新联机。  
 >   
->  有关详细信息，请参阅： [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
+>  有关详细信息，请参阅：[通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
   
 ##  <a name="QuorumModes"></a> 仲裁模式  
   “仲裁模式”是在 WSFC 群集级别配置的，指示用于仲裁投票的方法。  故障转移群集管理器实用工具将会基于群集中的节点数来建议仲裁模式。  
@@ -88,7 +88,7 @@ ms.locfileid: "52404092"
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中没有仲裁投票的群集节点。  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建议的仲裁投票调整  
  在启用或禁用某一给定 WSFC 节点的投票时，应遵循以下准则：  
@@ -105,16 +105,16 @@ ms.locfileid: "52404092"
   
 -   **故障转移后重新评估投票分配。** 您不希望故障转移到不支持运行状况仲裁的群集配置。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在验证 WSFC 仲裁投票配置时，如果以下任何条件成立，Always On 可用性组向导将显示一个警告。  
->   
+> 
 >  -   承载主副本的群集节点不具有投票  
 > -   辅助副本配置用于自动故障转移并且其群集节点不具有投票。  
 > -   [KB2494036](https://support.microsoft.com/kb/2494036) 未安装在承载可用性副本的所有群集节点上。 此修补程序是在多站点部署中为群集节点添加或删除投票所必需的。 但在单站点部署中，此修补程序通常不是必需的并且您可以放心地忽略该警告。  
-  
-> [!TIP]  
+> 
+> [!TIP]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公开若干系统动态管理视图 (DMV)，可帮助你管理 WSFC 群集配置和节点仲裁投票相关的设置。  
->   
+> 
 >  有关详细信息，请参阅：[sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)[sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)[sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) 和 [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
   
 ##  <a name="RelatedTasks"></a> 相关任务  

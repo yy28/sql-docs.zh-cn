@@ -1,6 +1,7 @@
 ---
-title: 自动初始化 AlwaysOn 可用性组 | Microsoft Docs
-ms.custom: ''
+title: 使用自动种子设定初始化可用性组
+description: 使用自动种子设定为 Always On 可用性组中的每个数据库自动创建次要副本。
+ms.custom: seodec18
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd3f0d0c7b8fe29f6ad64cb5d006d2d8917b6cce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413654"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207526"
 ---
-# <a name="automatically-initialize-always-on-availability-group"></a>自动初始化 Always On 可用性组
+# <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自动种子设定初始化 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2016 推出了可用性组的自动种子设定。 创建具有自动种子设定的可用性组时，SQL Server 将自动为该组中每个数据库创建次要副本。 你不再需要手动备份和还原次要副本。 若要启用自动种子设定，请使用 T-SQL 创建可用性组，或使用最新版的 SQL Server Management Studio。

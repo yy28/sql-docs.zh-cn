@@ -7,27 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd6c508700e22a7ef999e3511610093230e7b613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327997"
 ---
 # <a name="create-a-project"></a>创建项目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 可以在现有解决方案中创建一个或多个项目。  
   
-### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>创建一个新项目并将其添加到解决方案中  
+## <a name="create-a-new-project-and-add-it-to-a-solution"></a>创建一个新项目并将其添加到解决方案中  
   
 1.  在解决方案资源管理器中，选择解决方案。  
   
@@ -96,9 +93,10 @@ ms.locfileid: "47849887"
   
 4.  单击“确定” 。  
   
-您可以设置脚本项目的名称，但文件夹名称则由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 确定，并且不能更改。 可以使用“添加新项目”对话框，为一组公共文件夹配置驱动器和路径说明。 右键单击“解决方案资源管理器”中的解决方案图标，再单击“添加”。 脚本项目文件夹的默认位置是 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\。  
+您可以设置脚本项目的名称，但文件夹名称则由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 确定，并且不能更改。 可以使用“添加新项目”对话框，为一组公共文件夹配置驱动器和路径说明。 右键单击“解决方案资源管理器”中的解决方案图标，再单击“添加”。 脚本项目文件夹的默认位置为：C:\Documents and Settings\\username\My Documents\SQL Server Management Studio\Projects\\。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  
 [在解决方案中添加现有项目](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [向项目添加新项](../../ssms/solution/add-new-items-to-a-project.md)  
@@ -106,4 +104,3 @@ ms.locfileid: "47849887"
 [更改项目的默认位置](../../ssms/solution/change-the-default-location-for-projects.md)  
 [移除或删除项或项目](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [删除解决方案](../../ssms/solution/delete-a-solution.md)  
-  

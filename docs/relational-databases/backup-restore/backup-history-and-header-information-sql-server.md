@@ -34,12 +34,12 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840b6e513e5a1c1cd9408134ced29ac3c22464c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684735"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202616"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47684735"
  有关详细信息，请参阅本主题后面的 [介质标头信息和备份标头信息的比较](#CompareMediaHeaderBackupHeader)。  
   
 ##  <a name="BackupHeader"></a> 备份标头信息  
- 查看备份标头时，将显示有关介质上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份集的信息。 显示的信息包括使用的备份设备类型、备份类型（数据库备份、事务备份、文件备份还是差异数据库备份）以及备份开始和停止的日期/时间。 这些信息对确定还原磁带上的哪个备份集或确定介质上包含哪些备份很有用。  
+ 查看备份标头时，将显示有关介质上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份集的信息。 显示的信息包括使用的备份设备类型、备份类型（数据库备份、事务备份、文件备份还是差异数据库备份）以及备份开始和停止的日期/时间。 这些信息对确定还原磁带上的哪个备份集或确定介质上包含哪些备份很有用。  
   
 > [!NOTE]  
 >  查看备份标头信息时需要扫描整个介质以显示有关介质上每个备份的信息，因此对高容量磁带可能需要很长时间。  

@@ -1,6 +1,7 @@
 ---
-title: 将数据库添加到可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 将数据库添加到可用性组
+description: '使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio，将数据库添加到 AlwaysOn 可用性组。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,46 +15,41 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8e63b4561c56f5d930856758afa464f85a9ab40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857113"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214658"
 ---
-# <a name="availability-group---add-a-database"></a>可用性组 - 添加数据库
+# <a name="add-a-database-to-an-always-on-availability-group"></a>将数据库添加到 AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 将数据库添加到 AlwaysOn 可用性组中。  
   
 -   **开始之前：**  
   
-     [先决条件和限制](#Prerequisites)  
-  
-     [权限](#Permissions)  
-  
+     [先决条件和限制](#Prerequisites)    
+     [权限](#Permissions)    
 -   **若要将数据库添加到可用性组，请使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+     [SQL Server Management Studio](#SSMSProcedure)    
+     [Transact-SQL](#TsqlProcedure)    
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a> 先决条件和限制  
+## <a name="prerequisites-and-restrictions"></a>先决条件和限制  
   
 -   您必须连接到承载主副本的服务器实例。  
   
 -   数据库必须位于承载主副本的服务器实例上并符合可用性数据库的先决条件和限制。 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)配置服务器实例时遇到的典型问题。  
   
-###  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> 安全性  
   
-###  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- **将数据库添加到可用性组**  
+##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
   
@@ -73,11 +69,10 @@ ms.locfileid: "47857113"
   
          在您使用 **“可用性组属性”** 对话框将数据库添加到可用性组后，需要在承载辅助副本的每个服务器实例上配置相应的辅助数据库。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **将数据库添加到可用性组**  
+##  <a name="TsqlProcedure"></a>使用 Transact-SQL  
+
   
-1.  连接到承载主副本的服务器实例。  
-  
+1.  连接到承载主副本的服务器实例。    
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 语句：  
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
@@ -95,8 +90,8 @@ ms.locfileid: "47857113"
   
 3.  在您将数据库添加到可用性组后，需要在承载辅助副本的每个服务器实例上配置相应的辅助数据库。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **将数据库添加到可用性组**  
+##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+
   
 1.  将目录 (**cd**) 更改为托管主副本的服务器实例。  
   

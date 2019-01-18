@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -15,12 +14,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78688e6aa3053ef46f0cd46ca82a06aabe672a77
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702475"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817911"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "51702475"
   
 |权限|描述|  
 |----------------|-----------------|  
-|**读取**|显示成员。<br /><br /> <br /><br /> 注意：如果仅将“读取”权限分配给“根”，则“根”下的成员为只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。|  
+|**读取**|显示成员。<br /><br /> <br /><br /> 注意：如果仅将“读取”权限分配给“根”，则“根”下的成员是只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。|  
 |**创建**|层次结构成员权限中不提供创建权限。|  
 |**Update**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
 |**删除**|显示成员，用户可以删除它们。|  

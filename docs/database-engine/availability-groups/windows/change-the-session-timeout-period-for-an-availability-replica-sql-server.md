@@ -1,6 +1,7 @@
 ---
-title: 更改可用性副本的会话超时期限 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 更改可用性组中副本的会话超时期限
+description: 介绍如何配置 AlwaysOn 可用性组中的副本的会话超时期限。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f617822402bf38730fa3000edc988cdd6ebd4076
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 49c2c6e7f607717ed9639e11d9513f486b5585ff
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533315"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207636"
 ---
-# <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>更改可用性副本的会话超时期限 (SQL Server)
+# <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>更改 AlwaysOn 可用性组中副本的会话超时期限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来配置 AlwaysOn 可用性副本的会话超时期限。 会话超时期限是一个副本属性，用来控制可用性副本等待已连接副本的 ping 响应的时间（秒数），超过该期限则认为连接已失败。 默认情况下，副本等待 ping 响应的时长为 10 秒钟。 此副本属性仅适用于可用性组的给定辅助副本与主副本之间的连接。 有关会话超时期限的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "52533315"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要更改会话超时期限，可使用：**  
   

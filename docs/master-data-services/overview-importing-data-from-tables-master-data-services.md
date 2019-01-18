@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -16,12 +15,12 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 806868f2ee57fc4c89ac9f90a13981d97e125fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d4703d6a5e8438404ba282b09b6af6edf40ea71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788635"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215413"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概述：导入表中数据 (Master Data Services)
 
@@ -31,8 +30,8 @@ ms.locfileid: "47788635"
   
  有关如何添加和修改数据的说明，请参阅[导入表中的数据 (Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md)。  
   
-> [!NOTE]  
->  你还可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，将 Excel 中的数据添加到 MDS 存储库（[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库）中。 有关详细信息，请参阅[概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+> [!NOTE]
+>  你还可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，将 Excel 中的数据添加到 MDS 存储库（[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库）中。 有关详细信息，请参阅[概述：从 Excel 导入数据 (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
   
  在添加和修改数据时，你可以执行以下操作。  
   

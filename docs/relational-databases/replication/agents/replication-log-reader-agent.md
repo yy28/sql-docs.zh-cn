@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c4d5921b96afa532b5aede49de83d949f555f0a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9a3d92e91ec16bf51566575c235271bf69bbd72a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409144"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590332"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,25 +70,25 @@ logread [-?]
  **-?**  
  显示使用信息。  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
   
  **-Continuous**  
  指定代理是否尝试持续轮询所复制的事务。 如果指定了该参数，即使没有事务挂起，代理轮询也将在轮询间隔期间轮询来自源的已复制事务。  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  分发服务器登录名。  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  分发服务器密码。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -108,7 +108,7 @@ logread [-?]
  
  有关详细信息，请参阅[安全性概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)。  
   
- **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
+ **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  为扩展事件 XML 配置文件指定路径和文件名。 通过该扩展事件 XML 配置文件，您可以配置会话并且启用事件跟踪。  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
@@ -120,27 +120,27 @@ logread [-?]
 |**1**|默认值。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
 |**2**|除非记录为空闲消息或长时间运行的作业消息等信息（此时将更新上一记录），否则插入新的历史记录。|  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将日志读取器代理标记为可疑。 默认值为 300 秒。  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  登录超时前等待的秒数。默认值为 15 秒。  
   
- **-LogScanThreshold** *scan_threshold*  
+ **-LogScanThreshold** _scan_threshold_  
  仅限内部使用。  
   
- **-MaxCmdsInTran** *number_of_commands*  
+ **-MaxCmdsInTran** _number_of_commands_  
  指定在日志读取器将命令写入到分发数据库时可分组到一个事务中的语句的最大数目。 如果使用此参数，在发布服务器上的大事务（包含许多命令）应用于订阅服务器时，日志读取器代理和分发代理可将这些大事务拆分为若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0 ，这将保持发布服务器的事务边界。  
   
-> [!NOTE]  
->  对于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布，会忽略此参数。 有关详细信息，请参阅 [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)的“配置事务集作业”部分。  
+> [!NOTE]
+>  对于非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布，会忽略此参数。 有关详细信息，请参阅 [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)的“配置事务集作业”部分。  
   
- **-MessageInterval** *message_interval*  
+ **-MessageInterval** _message_interval_  
  用于历史日志记录的时间间隔。 记录完上一个历史事件后，如达到 **MessageInterval** 值，会开始记录新的历史事件。  
   
  如果源上没有可用的已复制事务，代理将向分发服务器报告无事务消息。 此选项可指定代理在报告另一条无事务消息前将等待多长时间。 在上次处理已复制事务后，如果代理在源上没有检测到任何可用的事务，则总是会报告一条无事务消息。 默认值为 60 秒。  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
@@ -156,34 +156,34 @@ logread [-?]
   
  进行调试时，值 2-4 颇为有用。  
   
- **-PacketSize** *packet_size*  
+ **-PacketSize** _packet_size_  
  数据包大小（按字节计）。 默认值为 4096（字节）。  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  对日志进行已复制事务查询的频率（以秒计）。 默认值为 5 秒。  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  发布服务器登录名。  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  发布服务器密码。  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  查询超时前等待的秒数。默认值为 1800 秒。  
   
- **-ReadBatchSize** *number_of_transactions*  
+ **-ReadBatchSize** _number_of_transactions_  
  每个处理周期从发布数据库的事务日志中读取的最大事务数目，默认值为 500。 代理不断读取批次中的事务，直到从该日志中读取所有事务为止。 Oracle 发布服务器不支持该参数。  
   
- **-ReadBatchThreshold** *number_of_commands*  
+ **-ReadBatchThreshold** _number_of_commands_  
  在复制命令由分发代理发送给订阅服务器之前，从事务日志读取的复制命令的数目。 默认值为 0。 如果未指定此参数，日志读取器代理会一直读取完此日志，或者读取到 **-ReadBatchSize** 中指定的数字（事务数）为止。  
   
  **-RecoverFromDataErrors**  

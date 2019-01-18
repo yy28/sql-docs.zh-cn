@@ -18,12 +18,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e00a6a7ec9efe549ea3a98b0bb0138ca827372ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 95d7af5f6b5c0d1b6a0f162d09cb64b954ce5d09
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558741"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591501"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "51558741"
     GO  
     ```  
   
-2.  使用您选择的方法，将数据库文件（AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log）分别复制到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf。  
+2.  使用所选方法，将数据库文件（AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log）复制到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf。  
   
     > [!IMPORTANT]  
     >  对于生产数据库，请将数据库和事务日志存放在不同的磁盘上。  
   
-     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\Servername\\Sharename\\Path\\Filename**。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
+     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式： **\\\\**_服务器名称_**\\**_共享名_**\\**_路径_**\\**_文件名_。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
   
 3.  通过执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来附加移动的数据库及其日志（可选）：  
   

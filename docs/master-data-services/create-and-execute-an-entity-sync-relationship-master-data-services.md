@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95bf478ba6bb44194f5713a16d0c87b067487551
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4c4ae12021930ba447c3cb01a9830907fb3153
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822911"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
 
@@ -110,17 +109,17 @@ ms.locfileid: "47854618"
 |上次尝试时间|显示上次同步尝试的时间。|  
 |上次成功的时间|显示上次同步尝试成功的时间。|  
   
- 单击索引后可看到以下信息。  
+ 单击索引后可看到以下信息：  
   
--   “上次尝试错误”：显示有关上次同步尝试的错误信息。  
+-   **上次尝试错误**：显示有关上次同步尝试的错误信息。  
   
--   “创建者”：创建同步的用户的用户名。  
+-   **创建者**：创建同步的用户的名称。  
   
--   “创建时间”：创建同步的日期和时间。  
+-   **创建时间**：创建同步的日期和时间。  
   
--   “更新者”：上次更新同步的用户的用户名。  
+-   **更新者**：上次更新同步的用户的名称。  
   
--   “更新时间”：上次更新同步的日期和时间。  
+-   **创建时间**：上次更新同步的日期和时间。  
   
 ## <a name="next-steps"></a>Next Steps  
  [编辑和删除实体同步关系 (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

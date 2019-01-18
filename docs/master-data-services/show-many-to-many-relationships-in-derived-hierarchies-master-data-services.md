@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05fc6068b221bfd21ffdfd0e6f8fff850bab179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797129"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47755565"
   
  请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别”  下方的中间位置，作为唯一级别。 派生层次结构右侧的“预览”  只是显示了 **Employee** 实体的所有成员列表。 左侧的“可用级别”部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
   
- 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如 **Class（通过 ClassRegistration.Student 映射）**。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
+ 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如：Class（通过 ClassRegistration.Student 映射）。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   

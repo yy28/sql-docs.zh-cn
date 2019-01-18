@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7ef52db1ccafaeaf9539974032da3622b23838c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672796"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787089"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>对 Microsoft Azure 启用 SQL Server 托管备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,19 +41,27 @@ ms.locfileid: "51672796"
   
      有关存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
   
-3.  **创建备份文件的 Blob 容器：** 可以在 Azure 管理门户中或者使用 Azure PowerShell 创建 Blob 容器。 以下 `New-AzureStorageContainer` 命令在 `backupcontainer` 存储帐户中创建了一个名为 `managedbackupstorage` 的 Blob 容器。  
+3.  **创建备份文件的 Blob 容器：** 可以在 Azure 管理门户中创建容器，或者可以使用 Azure PowerShell。 以下 `New-AzureStorageContainer` 命令在 `backupcontainer` 存储帐户中创建了一个名为 `managedbackupstorage` 的 Blob 容器。  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **生成共享访问签名 (SAS)：** 要访问容器，必须创建 SAS。 使用某些工具、代码和 Azure PowerShell 可以完成此操作。 以下 `New-AzureStorageContainerSASToken` 命令为一年后过期的 `backupcontainer` Blob 容器创建 SAS 令牌。  
+4.  **生成共享访问签名 (SAS)：** 必须创建 SAS 才能访问容器。 使用某些工具、代码和 Azure PowerShell 可以完成此操作。 以下 `New-AzureStorageContainerSASToken` 命令为一年后过期的 `backupcontainer` Blob 容器创建 SAS 令牌。  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
+    对于 AzureRM，请使用以下命令：
+       ```powershell
+    Connect-AzureRmAccount
+    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+   ```  
   
      此命令的输出将包含容器的 URL 和 SAS 令牌。 以下是一个示例：  
   
@@ -68,7 +76,7 @@ ms.locfileid: "51672796"
     |**容器 URL：**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS 令牌：**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 有关 SAS 的详细信息，请参阅 [共享访问签名，第一部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
+     将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 有关 SAS 的详细信息，请参阅[共享访问签名，第一部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -80,11 +88,11 @@ ms.locfileid: "51672796"
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
     ```  
   
-2.  **确保 SQL Server 代理服务启动且正在运行：** 如果当前未运行 SQL Server 代理，则启动它。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
+2.  **确保 SQL Server 代理服务已启动且正在运行：** 如果 SQL Server 代理当前未运行，请启动它。  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL Server 代理设置为自动运行，以确保可定期进行备份操作。  
   
 3.  **确定保持期：** 确定备份文件的保持期。 以天为单位指定保持期，范围可为 1 到 30。  
   
-4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：** 启动 SQL Server Management Studio 并连接到目标 SQL Server 实例。 在根据要求修改数据库名称、容器 URL 和保持期的值后，从查询窗口中运行以下语句：  
+4.  **启用和配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]：** 启动 SQL Server Management Studio 并连接到目标 SQL Server 实例。 在根据要求修改数据库名称、容器 URL 和保持期的值后，从查询窗口中运行以下语句：  
   
     > [!IMPORTANT]  
     >  若要在实例级别启用托管备份，请为 `NULL` 参数指定 `database_name` 。  
@@ -102,7 +110,7 @@ ms.locfileid: "51672796"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 数据库上的备份操作最多可能需要 15 分钟才能运行。  
   
-5.  **检查扩展事件默认配置：** 通过运行以下 transact-SQL 语句，检查扩展事件配置。  
+5.  **查看扩展事件默认配置：** 通过运行以下 transact-SQL 语句，检查扩展事件设置。  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -116,7 +124,7 @@ ms.locfileid: "51672796"
   
     2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 Transact-SQL 语句：  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 在查询窗口中，运行以下 Transact-SQL 语句：  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -125,9 +133,9 @@ ms.locfileid: "51672796"
   
         ```  
   
-7.  **在 Microsoft Azure 存储帐户中查看备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户中连接到存储帐户。 你将在指定容器中看到任何备份文件。 请注意，你会在启用数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 5 分钟内看到数据库和日志备份。  
+7.  **查看 Microsoft Azure 存储帐户中的备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户连接到存储帐户。 你将在指定容器中看到任何备份文件。 请注意，你会在启用数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 5 分钟内看到数据库和日志备份。  
   
-8.  **监视运行状态：**  你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+8.  **监视运行状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
     ```  
     --  view all admin events  

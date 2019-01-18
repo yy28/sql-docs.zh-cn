@@ -13,12 +13,12 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ceb15bd6f12234bab2a5763ca1d55162c1a7934
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 72b79e02cfdc8bab664df1a47c1e8bfb91743493
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665796"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596658"
 ---
 # <a name="database-properties-query-store-page"></a>数据库属性（查询存储页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51665796"
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+|适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 ## <a name="options"></a>选项  
  操作模式  
@@ -71,5 +71,3 @@ ms.locfileid: "51665796"
 ## <a name="see-also"></a>另请参阅  
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
-  
-  

@@ -18,12 +18,12 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0479fc0d6af9a3bcfe66261713ad7115b61f985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5021b710d780c5f6f35221099f41fc993c492c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841765"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979753"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47841765"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="exceptions"></a>异常  
  如果实例包含对拓边缘，此方法将引发 ArgumentException。  
@@ -80,7 +80,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>C. 通过 CurvePolygon 和 Polygon 的并集生成一个三角形孔。  
+### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-triagonal-hole"></a>C. 基于 CurvePolygon 和一个三角形孔的并集生成一个三角形孔。  
  以下示例通过 `CurvePolygon` 和 `Polygon` 实例的并集生成一个三角形孔。  
   
 ```

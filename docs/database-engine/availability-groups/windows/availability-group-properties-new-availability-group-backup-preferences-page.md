@@ -1,6 +1,7 @@
 ---
-title: 属性：新建可用性组（“备份首选项”页）| Microsoft Docs
-ms.custom: ''
+title: 可用性组属性：新建可用性组（“备份首选项”页）
+description: SQL Server Management Studio 中“新建可用性组”向导的“备份首选项”页上的各种属性的说明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d969bc1db9b38533e82fc1c2a7ca55c0b6464ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49288df6eb302dd3991e9b69b50de14a030a86b6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619017"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207334"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性组属性：新建可用性组（“备份首选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "47619017"
  指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
 > [!IMPORTANT]  
->  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ## <a name="replica-backup-priorities"></a>副本备份优先级  
  此网格将显示每个承载可用性组的副本的服务器实例的当前备份优先级。 使用此网格可以更改一个或多个可用性副本的备份优先级。  
@@ -60,7 +61,7 @@ ms.locfileid: "47619017"
  如果从不希望选择此可用性副本来执行备份，请选择此选项。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
   
 ## <a name="see-also"></a>另请参阅  
- [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：次要副本备份（AlwaysOn 可用性组）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

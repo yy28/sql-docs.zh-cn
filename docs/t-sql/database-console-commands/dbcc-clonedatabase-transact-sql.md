@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: fe1fef76dd083d5b464bd2021aebb0e74e695543
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51acbbb1bac63084a26abb68f461880df1409578
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703915"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204806"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -206,7 +206,7 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. 创建包含架构、统计信息和查询存储的克隆数据库 
-下面的示例创建 AdventureWorks 数据库的克隆，其中包含架构、统计信息和查询存储数据（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本）
+下面的示例创建 AdventureWorks 数据库的克隆，该数据库包含架构、统计信息和查询存储数据（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本）
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -214,7 +214,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. 创建不含统计信息的仅限架构的克隆数据库 
-下面的示例创建 AdventureWorks 数据库的克隆，其中不含统计信息（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 及更高版本）
+下面的示例创建 AdventureWorks 数据库的克隆，该数据库不含统计信息（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 及更高版本）
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS;    
@@ -230,7 +230,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. 创建经验证可用于生产的克隆数据库
-下面的示例创建 AdventureWorks 数据库的克隆，该克隆数据库仅限架构、不含统计信息和查询存储数据，并且经验证可用作生产数据库（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更高版本）。
+下面的示例创建 AdventureWorks 数据库的克隆，该数据库仅限架构、不含统计信息和查询存储数据，并且经验证可用作生产数据库（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更高版本）。
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    

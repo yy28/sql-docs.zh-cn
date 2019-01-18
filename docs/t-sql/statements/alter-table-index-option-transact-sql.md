@@ -15,12 +15,12 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 609769abe425b6ec384c327d873d6264cf35cff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176ab35da4eacd55062fcfb1e452e19c6b733649
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853455"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591291"
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47853455"
  OFF 或未指定 fillfactor  
  考虑到中间级页上的键集，可以将中间级页几乎填满，但至少要为最大索引行留出足够空间。  
   
- FILLFACTOR = fillfactor  
+ FILLFACTOR =fillfactor  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 指定的值必须是 1 到 100 之间的整数。 默认值为 0。  
@@ -162,7 +162,7 @@ ms.locfileid: "47853455"
   
  有关详细信息，请参阅[联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  MAXDOP =max_degree_of_parallelism  
@@ -178,7 +178,7 @@ ms.locfileid: "47853455"
   
  有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  DATA_COMPRESSION  
@@ -214,10 +214,10 @@ ON PARTITIONS ( { \<partition_number_expression> | \<range> } [ ,...n ] ) 适用
 可以按以下方式指定 \<partition_number_expression>：  
   
 -   提供一个分区号，例如：ON PARTITIONS (2)。  
--   提供若干单独分区的分区号并用逗号将它们隔开，例如：ON PARTITIONS (1, 5)。  
+-   为多个单个分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1,5)。  
 -   同时提供范围和单个分区，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
-\<range> 可以指定为以单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
+\<range> 可指定为由单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
   

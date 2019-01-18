@@ -1,6 +1,7 @@
 ---
-title: 将次要副本添加到可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 将次要副本添加到可用性组
+description: 了解如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio (SSMS) 中的“可用性组向导”将次要副本添加到 AlwaysOn 可用性组。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,35 +14,17 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213006"
 ---
-# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本添加到可用性组 (SQL Server)
+# <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>将次要副本添加到 AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题描述了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
-  
--   **开始之前：**  
-  
-     [先决条件和限制](#PrerequisitesRestrictions)  
-  
-     [Security](#Security)  
-  
--   **要添加副本，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **跟进：**[在添加次要副本之后](#FollowUp)  
-  
-## <a name="before-you-begin"></a>开始之前  
- 我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
+
   
 ##  <a name="PrerequisitesRestrictions"></a> 先决条件和限制  
   
@@ -122,7 +105,7 @@ ms.locfileid: "52512334"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：在添加辅助副本之后  
+##  <a name="FollowUp"></a>跟进：在添加次要副本之后  
  若要为现有可用性组添加副本，您必须执行以下步骤：  
   
 1.  连接到将要承载新辅助副本的服务器实例。  

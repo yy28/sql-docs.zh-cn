@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2b85546e79e426f078ff77ab11b4eb9eb076aea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519516"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591641"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52519516"
   
 <a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
  -  从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
- -  然后减去等于“max server memory”控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即堆栈大小<sup>1</sup> * 计算出的最大工作线程数<sup>2</sup> + -g 启动参数<sup>3</sup>（如果未设置 -g，则为 256MB）。 所得结果就是一个实例设置的 max_server_memory 设置。
+ -  然后减去等于“max server memory”控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即_堆栈大小 <sup>1</sup> \* 计算出的最大工作线程数 <sup>2</sup> + -g 启动参数 <sup>3</sup>（如果未设置 -g，则为 256 MB）**_**。 所得结果就是一个实例设置的 max_server_memory 设置。
  
 <sup>1</sup> 有关每个体系结构的线程堆栈大小的信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 

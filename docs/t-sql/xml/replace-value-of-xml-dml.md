@@ -19,12 +19,12 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b413d8948d671b0b3717df94db8cf18ecada004
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 770568bcf8d6a89b350b9cd04ef3ff6cb10a015f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701455"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980363"
 ---
 # <a name="replace-value-of-xml-dml"></a>替换 (XML DML) 的值
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: 向可用性组添加增强的数据库故障转移 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 为可用性组启用增强的数据库故障转移
+description: 启用增强的数据库故障转移的步骤，如果 Always On 可用性组中的数据库不再能够写入事务，则会触发故障转移。
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -13,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dee39cb437011c5e894eb54df91c7282db5fe08
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706135"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211656"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>向可用性组添加增强的数据库故障转移 (SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>向 Always On 可用性组中的数据库启用增强的数据库故障转移
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，如果加入主要副本上的可用性组的数据库无法继续写入事务，即使为进行自动故障转移同步和配置副本，此数据库也无法触发故障转移。

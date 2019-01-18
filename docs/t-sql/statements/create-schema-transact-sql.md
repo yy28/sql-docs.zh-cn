@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808005"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210966"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +123,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  若要允许基于 Windows 组的用户创建和拥有对象，此行为很有必要。 但这种行为可能将导致意外创建架构和用户。 为了避免隐式创建用户和架构，请尽可能显式创建数据库主体和分配默认架构。 或者，在数据库中创建对象时，使用由两部分或三部分组成的对象名称显式声明现有架构。  
 
->  [!NOTE]
->  不能在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隐式创建 Azure Active Directory 用户。 从外部提供程序创建 Azure AD 用户必须检查 AAD 中的用户状态，因此创建用户将会失败，并出现错误 2760：指定的架构名称 "\<user_name@domain>" 不存在或不具有使用权限。 然后出现错误 2759：由于前面的错误，CREATE SCHEMA 失败。 要解决这些错误，请首先从外部提供程序创建 Azure AD 用户，然后重新运行创建该对象的语句。
+> [!NOTE]
+>  不能在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隐式创建 Azure Active Directory 用户。 从外部提供程序创建 Azure AD 用户必须检查 AAD 中的用户状态，因此创建用户将会失败，并出现错误 2760：指定的架构名称“\<user_name@domain>”不存在或不具有使用权限。 然后出现错误 2759：由于前面的错误，CREATE SCHEMA 失败。 要解决这些错误，请首先从外部提供程序创建 Azure AD 用户，然后重新运行创建该对象的语句。
  
   
 ## <a name="deprecation-notice"></a>不推荐使用的声明  

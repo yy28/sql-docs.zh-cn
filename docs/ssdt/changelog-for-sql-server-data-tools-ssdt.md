@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712603"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213446"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "52712603"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT for Visual Studio 2017 (15.8.2)
-内部版本号：14.0.16182.0  
+生成号：14.0.16182.0  
 发布日期：2018 年 11 月 5 日  
 
 ### <a name="whats-new"></a>新增功能
@@ -107,7 +107,7 @@ ms.locfileid: "52712603"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT for Visual Studio 2017 (15.7.0)
-内部版本号：14.0.16165.0  
+生成号：14.0.16165.0  
 发布日期：2018 年 6 月 4 日  
   
 ### <a name="whats-new"></a>新增功能
@@ -131,7 +131,7 @@ ms.locfileid: "52712603"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
-内部版本号：14.0.16162.0  
+生成号：14.0.16162.0  
 发布日期：2018 年 4 月 10 日
   
 ### <a name="whats-new"></a>新增功能
@@ -160,7 +160,7 @@ ms.locfileid: "52712603"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
-内部版本号：14.0.16156.0
+生成号：14.0.16156.0
   
 ### <a name="whats-new"></a>新增功能
 
@@ -184,19 +184,19 @@ ms.locfileid: "52712603"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT for Visual Studio 2017 (15.5.1)
-内部版本号：14.0.16148.0
+生成号：14.0.16148.0
   
 ### <a name="whats-new"></a>新增功能
 
 除了安装程序的以下 bug 修复以外，Visual Studio 2017 (15.5.1) 与版本 15.5.0 相同：
 
 1.  修复安装程序在 SQL Server Integration Services 安装后挂起的问题。
-2.  修复安装失败并出现错误消息：“不支持请求的元文件操作(0x800707D3)”的问题。
+2.  修复了安装失败后会显示以下错误消息的问题：“不支持请求的元文件操作(0x800707D3)”。
 
 除了这两个 bug 修复之外，以下有关 15.5.0 的详细信息也仍适用于 15.5.1
 
 ## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT for Visual Studio 2017 (15.5.0)
-内部版本号：14.0.16146.0
+生成号：14.0.16146.0
   
 ### <a name="whats-new"></a>新增功能
 
@@ -223,7 +223,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 
 ## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 for Visual Studio 2015
-内部版本号：14.0.61712.050
+生成号：14.0.61712.050
 
 ### <a name="whats-new"></a>新增功能
 
@@ -271,7 +271,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT for Visual Studio 2017（15.4.0 预览版）
-内部版本号：14.0.16134.0
+生成号：14.0.16134.0
   
 ### <a name="whats-new"></a>新增功能
 
@@ -302,7 +302,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 for Visual Studio 2015
-内部版本号：14.0.61709.290
+生成号：14.0.61709.290
 
 ### <a name="whats-new"></a>新增功能
 
@@ -393,7 +393,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 - 修复了在 VS 2017 中编译和生成 RDLC 的过程中出现的问题
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT for Visual Studio 2017（15.3.0 预览版）
-内部版本号：14.0.16121.0
+生成号：14.0.16121.0
   
 ### <a name="whats-new"></a>新增功能
 
@@ -410,7 +410,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 
 ## <a name="ssdt-172-for-visual-studio-2015"></a>SSDT 17.2 for Visual Studio 2015
-内部版本号：14.0.61707.300
+生成号：14.0.61707.300
 
 ### <a name="whats-new"></a>新增功能
 
@@ -458,7 +458,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 
 ## <a name="ssdt-171-for-visual-studio-2015"></a>SSDT 17.1 for Visual Studio 2015
-内部版本号：14.0.61705.170
+生成号：14.0.61705.170
 
 ### <a name="whats-new"></a>新增功能
 **AS 项目：**
@@ -488,7 +488,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 - 修复了数据库具有由 HSM 使用 EKM 提供程序进行保护的非对称密钥的相关问题（[Connect 项目](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)）
 
 ## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>SSDT 17.0 for Visual Studio 2015（支持 SQL Server 2017 及以下版本）
-内部版本号：14.0.61704.140
+生成号：14.0.61704.140
 
 ### <a name="whats-new"></a>新增功能
 **数据库项目：**
@@ -590,9 +590,9 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 
 ## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 for Visual Studio 2015（支持 SQL Server 2016 及以下版本）
-发布日期：2016 年 10 月 20日
+已发布：2016 年 10 月 20 日
 
-内部版本号：14.0.61021.0
+生成号：14.0.61021.0
 
 **新增功能**
 
@@ -623,17 +623,17 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 ```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
-在 DacFx 中已添加两个新的 API：DacServices.Publish() 和 DacServices.Script()。 这些 API 还支持通过单个操作执行发布 + 脚本 + 报告操作。 示例用法：
+DacFx 中添加了两个新 API：DacServices.Publish() 和 DacServices.Script()。 这些 API 还支持通过单个操作执行发布 + 脚本 + 报告操作。 示例用法：
 
 ```
 DacServices service = new DacServices(connectionString);
 using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
 var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
 // Call publish and receive deployment script & report in the results
@@ -685,9 +685,9 @@ Console.WriteLine(result.DeploymentReport);
 
 
 ## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 for Visual Studio 2015（SQL Server 2016）
-发布日期：2016 年 9 月 20日
+已发布：2016 年 9 月 20 日
 
-内部版本号：14.0.60918
+生成号：14.0.60918
 
 **新增功能**
 
@@ -725,13 +725,13 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 
 ## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 for Visual Studio 2015（SQL Server 2016）
-发布日期：2016 年 8 月 15日
+已发布：2016 年 8 月 15 日
 
-内部版本号：14.0.60812.0  
+生成号：14.0.60812.0  
 
 **新增功能**
 
-- **发行版本控制和编号：** 现在，发行版按编号顺序而不是按月份标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
+- **发行版本控制和编号：** 现在，发行版按编号顺序而不是按月份进行标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
 - **Analysis Services - 表格模型资源管理器：** 使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
 - **数据库工具 - Always Encrypted**：此发行版提供新的 [Always Encrypted 密钥管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
     - 创建列主密钥或列加密密钥时，单击“更新数据库”后，更改可能不会立即显示在 SQL Server 对象资源管理器中。 若要解决此问题，可在 SQL Server 对象资源管理器中刷新数据库节点。
@@ -765,9 +765,9 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
  
   
 ## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>SSDT July for Visual Studio 2015（SQL Server 2016）  
-发布日期：2016 年 6 月 30 日  
+已发布：2016 年 6 月 30 日  
   
-内部版本号：14.0.60629.0  
+生成号：14.0.60629.0  
   
 **新增功能**  
 * **Always Encrypted 支持：** 对于包含 Always Encrypted 列的数据库，此发行版通过我们的核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
@@ -808,9 +808,9 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
     
 
 ## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>SSDT June for Visual Studio 2015（SQL Server 2016）  
-发布日期：2016 年 6 月 1 日  
+已发布：2016 年 6 月 1 日  
   
-内部版本号：14.0.60525.0 
+生成号：14.0.60525.0 
 
 SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQL Server 2016 RTM 最新更新的支持，并修复了多个 bug。 有关详细信息，请参阅 [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)（SQL Server Data Tools GA 2016 年 6 月更新）。
 

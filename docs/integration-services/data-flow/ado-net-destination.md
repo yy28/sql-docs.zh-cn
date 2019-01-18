@@ -19,12 +19,12 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a462e54379a5a916d6b302f99ef6f44d2148399a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209086"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
@@ -96,14 +96,14 @@ ms.locfileid: "51640006"
   
  如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关“错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果 SQL Server 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标之前使用“执行 SQL 任务”来启用 IDENTITY_INSERT，并在之后再次禁用它。 （标识列属性为列指定一个增量值。 使用 SET IDENTITY_INSERT 语句，可将源表中的显式值插入目标表中的标识列。）  
->   
+> 
 >   若要成功运行 SET IDENTITY_INSERT 语句和加载数据，须执行以下操作。  
 >       1.对“执行 SQL 任务”和 ADO NET 目标使用相同的 ADO.NET 连接管理器。  
 >       2.在连接管理器上，将“RetainSameConnection”属性和“MultipleActiveResultSets”属性设置为“True”。  
 >       3.在 ADO.NET 目标上，将“UseBulkInsertWhenPossible”属性设置为“False”。   
->
+> 
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
 ## <a name="external-resources"></a>外部资源  

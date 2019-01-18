@@ -1,6 +1,7 @@
 ---
-title: 一些可用性数据库的数据同步状态不正常 | Microsoft Docs
-ms.custom: ''
+title: 一些可用性数据库的数据同步状态不正常
+description: 标识 AlwaysOn 可用性组中的一些数据库的数据同步状态不正常的可能原因。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9260f9de24d282b3b6ce5c4e46b4572e01aafa9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ff4ab5ab6da9eaf7a4bf1a5099022c5463d09ef4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604449"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203396"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>一些可用性数据库的数据同步状态不正常
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970379"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328587"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
 
@@ -40,7 +40,7 @@ ms.locfileid: "50970379"
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
-- **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 
@@ -68,7 +68,7 @@ ms.locfileid: "50970379"
 
 - 连接到本地 SQL Server，示例中为 NODE5\SQL2016ST：![连接到本地服务器](media/connect-query-sql-server/connect-on-prem.png)
 
-- 连接到 SQL Azure DB - 示例中为 msftestserver.database.windows.net：![连接到 SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
+- 连接到 SQL Azure DB，示例中为 msftestserver.database.windows.net：![连接到 SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
   > 在本教程中，之前已使用 Windows 身份验证连接到本地 SQL Server，但此方法不支持连接到 SQL Azure DB。 因此，此图像显示使用 SQL 身份验证连接到 SQL Azure DB。 有关详细信息，请参阅 [SQL 本地身份验证](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)。 

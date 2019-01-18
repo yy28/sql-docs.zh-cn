@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 56eaead79ddb85dc9948fabefb9956aa5516e2a9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527133"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207416"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>第 2-2 课 — 添加和配置 Foreach 循环容器
 在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
@@ -25,15 +25,15 @@ ms.locfileid: "52527133"
   
 目前，第 1 课中的平面文件连接管理器只连接一个特定的平面文件。 若要循环地连接该文件夹中的每个平面文件，必须同时对 Foreach 循环容器和平面文件连接管理器进行如下配置：  
   
--   **Foreach 循环容器** ：将该容器的枚举值映射为用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 **ConnectionString** 属性，并循环连接该文件夹中的每个平面文件。  
+-   **Foreach 循环容器：** 将该容器的枚举值映射为用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 **ConnectionString** 属性，并循环连接该文件夹中的每个平面文件。  
   
--   **平面文件连接管理器** ：使用用户定义的变量填充在第 1 课中创建的连接管理器的 **ConnectionString** 属性，以修改该连接管理器。  
+-   **平面文件连接管理器：** 使用用户定义的变量填充在第 1 课中创建的连接管理器的 ConnectionString 属性，以修改该连接管理器。  
   
 本任务中的过程向您显示如何创建和修改 Foreach 循环容器以使用用户定义的包变量，以及如何将数据流任务添加到该循环中。 您将了解改平面文件连接管理器，以便在下一任务中使用用户定义的变量。  
   
 在对该包进行这些修改后，当该包运行时，Foreach 循环容器将循环访问示例数据文件夹中的文件集合。 每次找到一个与条件相匹配的文件时，Foreach 循环容器都会用文件名填充用户定义的变量，将用户定义的变量映射到 Sample Currency Data 平面文件连接管理器的 **ConnectionString** 属性，然后对该文件运行数据流。 因此，在 Foreach 循环的每次迭代中，数据流任务都将使用一个不同的平面文件。  
   
-> [!NOTE]  
+> [!NOTE]
 > 由于 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 区分控制流和数据流，因此添加到控制流的任何循环都不需要对数据流进行修改。 因此，无需更改在第 1 课中创建的数据流。  
   
 ### <a name="to-add-a-foreach-loop-container"></a>添加 Foreach 循环容器  

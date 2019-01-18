@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394514"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980383"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {partition_scheme |  | “default”} 也可在 PRIMARY KEY 约束或 UNIQUE 约束中指定。 这些约束会创建索引。 如果 filegroup 未指定，则索引会存储在已命名文件组中。 如果指定了 "default"，或者根本未指定 ON，则索引将与表存储在同一文件组中。 如果 PRIMARY KEY 约束或 UNIQUE 约束创建聚集索引，则表的数据页将与索引存储在同一文件组中。 如果指定了 CLUSTERED 或约束另外创建了聚集索引，并且指定的 partition_scheme 不同于表定义的 partition_scheme 或 filegroup，或反之，则只接受约束定义，而忽略其他定义。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在此上下文中，default 不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示。 如果指定了“default”，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  在创建分区表后，请考虑将表的 LOCK_ESCALATION 选项设置为 AUTO。 这可通过将锁升级到分区 (HoBT) 级而不是表级来改善并发性。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。  
   
  TEXTIMAGE_ON { filegroup| "default" }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  如果表中没有较大值的列，则不允许使用 TEXTIMAGE_ON。 如果指定了 partition_scheme，则不能指定 TEXTIMAGE_ON。 如果指定了 "default"，或者根本未指定 TEXTIMAGE_ON，则较大值列存储在默认文件组中。 CREATE TABLE 中指定的任何较大值列的数据存储以后都不能进行更改。  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max)、nvarchar(max)、varbinary(max)、xml 和大型 UDT 值直接存储在数据行中（最大限制值为 8000 个字节，只要记录中可以容纳该值）。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间中的行外。 默认值为 0。
-TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在行内的时间。 使用 sp_tableoption 的 large value types out of row 选项将整个 LOB 值存储在行外。 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在行内的时间。 使用 sp_tableoption 的 large value types out of row 选项将整个 LOB 值存储在行外。 
+> 
+> 
+> [!NOTE]
 >  在此上下文中，default 不是关键字。 而是默认文件组的标识符，而且必须进行分隔，如 TEXTIMAGE_ON "default" 或 TEXTIMAGE_ON [default] 中所示。 如果指定了“default”，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  FILESTREAM_ON { partition_scheme_name | filegroup | "default" } 
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  如果要更改的表已存在 INSTEAD OF 触发器 ON UPDATE，则不能定义 ON UPDATE CASCADE、SET NULL 或 SET DEFAULT 操作。  
   
- 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表和 Vendor 表之间具有如下引用关系：ProductVendor.BusinessEntity 外键引用 Vendor.BusinessEntityID 主键。  
+ 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系：ProductVendor.BusinessEntity 外键引用 Vendor.BusinessEntityID 主键。  
   
  如果对 Vendor 表中的行执行 UPDATE 语句，并且为 ProductVendor.BusinessEntityID 指定了 ON UPDATE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新。  
   
@@ -793,13 +793,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  可以按以下方式指定 partition_number_expression：  
   
--   提供分区的分区号，例如，ON PARTITIONS (2)。  
+-   提供分区的分区号，例如：ON PARTITIONS (2)。  
   
--   提供若干单独分区的分区号并用逗号将它们隔开，例如：ON PARTITIONS (1, 5)。  
+-   为多个单个分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1,5)。  
   
--   同时提供范围和单个分区，例如，ON PARTITIONS (2, 4, 6 TO 8)。  
+-   同时提供范围和单个分区，例如：ON PARTITIONS (2, 4, 6 TO 8)  
   
- `<range>` 可以指定为以单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
+ `<range>` 可指定为由单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
   
@@ -930,7 +930,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 Azure SQL 数据库托管实例不支持内存优化表。 
   
- ON 值指示表是否为内存优化表。 内存优化表是内存中 OLTP 功能的一部分，用于优化事务处理的性能。 若要开始使用内存中 OLTP，请参阅[快速入门 1：用于提高 Transact-SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。 有关内存优化表的详细信息，请参阅[内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ ON 值指示表是否为内存优化表。 内存优化表是内存中 OLTP 功能的一部分，用于优化事务处理的性能。 若要开始使用内存中 OLTP，请参阅[快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。 有关内存优化表的详细信息，请参阅[内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  默认值 OFF 指示表是基于磁盘的表。  
   
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

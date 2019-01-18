@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd93fef0add8f773a1acac0635c13f59d8bd5cab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b85685dd15e6eb7dd2350bdeda5befb28959c281
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700965"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202796"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 语法约定 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +113,7 @@ _server\_name_
 ## <a name="applies-to-references"></a>“适用于”引用  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 参考包括与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 相关的文章。   
 
-每篇文章的顶部附近是一个指示哪个产品支持本该要点的部分。 如果省略了某一产品，则文章所述功能在此产品中不可用。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中介绍了可用性组。 “CREATE AVAILABILITY GROUP”一文指明它适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]），因为它不适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+每篇文章的顶部附近是一个指示哪个产品支持本该要点的部分。 如果省略了某一产品，则文章所述功能在此产品中不可用。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中介绍了可用性组。 “创建可用性组”一文指明它适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]），因为它不适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 在某些情况下，文章的常规要点可用于某一产品，但所有参数不受支持。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中介绍了包含的数据库用户。 CREATE USER 语句可用于任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品，但 WITH PASSWORD 语法不能用于较旧版本。 在此情况下，将其他适用部分插入到该文章正文中相应的参数说明中。  
   

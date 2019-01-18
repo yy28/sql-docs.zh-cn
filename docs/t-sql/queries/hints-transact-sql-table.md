@@ -37,12 +37,12 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713365"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306264"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47713365"
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
- [Insert](../../t-sql/statements/insert-transact-sql.md)  
+ [INSERT](../../t-sql/statements/insert-transact-sql.md)  
   
  [SELECT](../../t-sql/queries/select-transact-sql.md)  
   
@@ -69,7 +69,6 @@ ms.locfileid: "47713365"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,9 +126,9 @@ WITH ( \<table_hint> ) [ [, ]...n ]
 存在一些例外情况：只有在使用 WITH 关键字指定表提示时，才支持在 FROM 子句中使用这些提示。 指定表提示时必须使用括号。  
   
 > [!IMPORTANT]  
->  不推荐省略 WITH 关键字：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> 不推荐省略 WITH 关键字：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-使用或不使用 WITH 关键字均可使用的表提示如下：NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT 和 NOEXPAND。 如果指定的表提示不含 WITH 关键字，则必须单独指定该提示。 例如：  
+使用或不使用 WITH 关键字均可使用以下的表提示：NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT 和 NOEXPAND。 如果指定的表提示不含 WITH 关键字，则必须单独指定该提示。 例如：  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -147,7 +146,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 >  用空格而不用逗号分隔提示是一项已弃用的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅“备注”。  
+指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅[使用 NOEXPAND](#using-noexpand)。  
   
 INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多个索引的名称或 ID。 另一供选择的 INDEX = 语法指定单个索引值。 只能为每个表指定一个索引提示。  
@@ -157,7 +156,7 @@ INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多
  如果在单个提示列表中使用了多个索引，则会忽略重复项，其余列出的索引将用于检索表中的行。 索引提示中的索引顺序很重要。 多索引提示还强制执行索引 AND 运算，查询优化器将对所访问的每个索引应用尽可能多的条件。 如果提示索引的集合并未包含查询引用的所有列，则会在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检索所有索引列后执行提取操作以检索其余列。  
   
 > [!NOTE]  
->  如果将引用多个索引的索引提示用于星型联接中的事实数据表，则优化器将忽略索引提示，并返回一个警告消息。 另外，不允许对包含指定索引提示的表执行索引 OR 操作。  
+> 如果将引用多个索引的索引提示用于星型联接中的事实数据表，则优化器将忽略索引提示，并返回一个警告消息。 另外，不允许对包含指定索引提示的表执行索引 OR 操作。  
   
  表提示中的最大索引数为 250 个非聚集索引。  
   
@@ -167,9 +166,9 @@ KEEPIDENTITY
  指定导入数据文件中的标识值用于标识列。 如果不指定 KEEPIDENTITY，则将验证但不导入此列的标识值。查询优化器将根据创建表时指定的种子值和增量值自动分配唯一值。  
   
 > [!IMPORTANT]  
->  如果数据文件不包含表或视图中的标识列的值，并且标识列不是表中的最后一列，则必须跳过标识列。 有关详细信息，请参阅[使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)。 如果成功跳过了一个标识列，则查询优化器自动将标识列的唯一值分配到导入的表行中。  
+> 如果数据文件不包含表或视图中的标识列的值，并且标识列不是表中的最后一列，则必须跳过标识列。 有关详细信息，请参阅[使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)。 如果成功跳过了一个标识列，则查询优化器自动将标识列的唯一值分配到导入的表行中。  
   
-有关在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句中使用此提示的示例，请参阅[批量导入数据时保留标识值 (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)。  
+有关 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 语句中使用此提示的示例，请参阅[批量导入数据时保留标识值 (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)。  
   
 有关检查表的标识值的信息，请参阅 [DBCC CHECKIDENT (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
   
@@ -221,9 +220,9 @@ FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))*
 -   对于分区的索引，不能在 FORCESEEK 提示中指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隐式添加的分区列。  
   
 > [!CAUTION]  
-> 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致在更多情况下出现“无法生成计划”错误。 在未来的版本中，对优化器进行内部修改后可允许考虑更多计划。  
+> 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致更多情况下发生 `Plan cannot be generated` 错误。 在未来的版本中，对查询优化器进行内部修改后可允许考虑更多计划。  
   
-FORCESCAN 适用于：通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1。
+FORCESCAN 适用范围：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 指定查询优化器仅使用索引扫描操作作为引用的表或视图的访问途经。 对于优化器低估受影响的行数并选择一个查找操作而非扫描操作的查询，FORCESCAN 提示很有用。 出现这样的情况时，授予该操作的内存量太小，查询性能将受影响。  
   
 指定 FORCESCAN 时有无 INDEX 提示均可。 与索引提示组合使用 (`INDEX = index_name, FORCESCAN`) 时，查询优化器在访问引用的表时仅考虑通过指定的索引扫描访问路径。 可以带索引提示 INDEX(0) 指定 FORCESCAN，以强制对基表执行表扫描操作。  
@@ -367,7 +366,7 @@ XLOCK
   
 对于 FROM 子句中的每个表，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许存在多个来自以下各个组的表提示：  
 -   粒度提示：PAGLOCK、NOLOCK、READCOMMITTEDLOCK、ROWLOCK、TABLOCK 或 TABLOCKX。  
--   隔离级别提示：HOLDLOCK、NOLOCK、READCOMMITTED、REPEATABLEREAD 和 SERIALIZABLE。  
+-   隔离级别提示：HOLDLOCK、NOLOCK、READCOMMITTED、REPEATABLEREAD、SERIALIZABLE。  
   
 ## <a name="filtered-index-hints"></a>筛选索引提示  
  筛选索引可用作表提示，但如果未涵盖查询选择的所有行，则会导致查询优化器产生错误 8622。 下面是一个无效筛选索引提示的示例。 该示例创建了筛选索引 `FIBillOfMaterialsWithComponentID`，然后将其用作 SELECT 语句的索引提示。 筛选索引谓词包含 ComponentID 为 533、324 和 753 的数据行。 查询谓词也包含 ComponentID 为 533、324 和 753 的数据行，但它扩展了结果集，使之包含 ComponentID 为 855 和 924 的数据行，而筛选索引中则不包含这两行。 因此，查询优化器无法使用此筛选索引提示，并产生错误 8622。 有关详细信息，请参阅 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
@@ -408,7 +407,7 @@ NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯�
   
  另外，必须将 NUMERIC_ROUNDABORT 选项设置为 OFF。  
   
- 若要强制优化器对索引视图使用索引，请指定 NOEXPAND 选项。 仅当查询中也命名了此视图时才能使用此提示。 如果某个查询没有在 FROM 子句中直接命名特定索引视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供用于在此查询中强制使用此视图的提示；但是，即使查询中未直接引用索引视图，查询优化器仍会考虑使用索引视图。  
+ 若要强制优化器对索引视图使用索引，请指定 NOEXPAND 选项。 仅当查询中也命名了此视图时才能使用此提示。 如果某个查询没有在 FROM 子句中直接命名特定索引视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供用于在此查询中强制使用此视图的提示；但是，即使查询中未直接引用索引视图，查询优化器仍会考虑使用索引视图。 使用 NOEXPAND 表提示时，SQL Server 仅自动创建索引视图的统计信息。 忽略此提示可能会导致出现执行计划警告：缺少无法通过手动创建统计信息解决的统计信息。 查询优化期间，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用查询直接引用视图时自动或手动创建的视图统计信息，并使用 NOEXPAND 提示。    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>将表提示用作查询提示  
  也可以使用 OPTION (TABLE HINT) 子句将*表提示*指定为查询提示。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  

@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性组扩展事件 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 配置可用性组扩展事件
+description: SQL Server 定义了特定于 AlwaysOn 可用性组的扩展事件。 可在会话中监视这些扩展事件，以便在对可用性组进行故障排除时帮助诊断根本原因。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,16 +11,16 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413194"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207566"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Always On 可用性组扩展事件
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>配置 AlwaysOn 可用性组扩展事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQL Server 定义了特定于 Always On 可用性组的扩展事件。 可在会话中监视这些扩展事件，以便在对可用性组进行故障排除时帮助诊断根本原因。 可以使用以下查询查看可用性组扩展事件：  
+  SQL Server 定义了特定于 AlwaysOn 可用性组的扩展事件。 可在会话中监视这些扩展事件，以便在对可用性组进行故障排除时帮助诊断根本原因。 可以使用以下查询查看可用性组扩展事件：  
   
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
@@ -185,7 +186,7 @@ GO
   
 |“列”|描述|  
 |------------|-----------------|  
-|“属性”|error_reported<br /><br /> 要筛选的错误号：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
+|“属性”|error_reported<br /><br /> 可筛选的错误号：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
 |类别|错误|  
 |Channel|管理员|  
   
@@ -348,7 +349,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a>error_reported (1480)：数据库副本角色更改  
+###  <a name="BKMK_error_reported_1480"></a> error_reported (1480)：数据库副本角色更改  
  更改可用性副本角色后，此筛选的 error_reported 事件会异步发生。 它指示哪个可用性数据库无法在故障转移过程中更改其预期角色。  
   
 #### <a name="event-information"></a>事件信息  

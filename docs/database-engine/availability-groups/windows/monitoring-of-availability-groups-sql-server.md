@@ -1,6 +1,7 @@
 ---
-title: 监视可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 监视可用性组的工具
+description: '可用于监视 Always On 可用性组的性能和运行状态的各种工具的参考。 '
+ms.custom: seodec18
 ms.date: 06/08/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 283b8fa6d746d7e30b5bae7ff850f4d184a59994
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b5cb038a9cf6c69023888472a8e69fa6f940f015
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601607"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211596"
 ---
-# <a name="monitoring-of-availability-groups-sql-server"></a>监视可用性组 (SQL Server)
+# <a name="tools-to-monitor-always-on-availability-groups"></a>“监视 Always On 可用性组的工具”
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要监视 AlwaysOn 可用性组的属性和状态，可以使用以下工具。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "51601607"
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**“对象资源管理器详细信息”** 窗格显示有关您连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例所承载的可用性组的基本信息。<br /><br /> **\*\* 提示 \*\*** 使用此窗格可以选择多个可用性组、副本或数据库，并能对选定对象执行常规管理任务；例如，从可用性组中删除多个可用性副本或数据库。|[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**“属性”** 对话框使您能够查看可用性组、副本或侦听器的属性，并在某些情况下可更改这些属性的值。|-   [查看可用性组属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)<br />-   [查看可用性副本属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)<br />-   [查看可用性组侦听程序属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)|  
 |系统监视器|**SQLServer:Availability Replica** 性能对象包含性能计数器，可报告可用性副本的相关信息。|[SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|系统监视器|**SQLServer:Database Replica** 性能对象包含性能计数器，可报告给定次要副本上的辅助数据库的相关信息。<br /><br /> SQL Server 中的 **SQLServer:Databases** 对象包含用于监视事务日志活动（但不仅限于此）的性能计数器。 下列计数器特别适用于监视可用性数据库上的事务日志活动： **日志刷新写入时间(秒)**、 **日志刷新次数/秒**、 **日志池缓存未命中数/秒**、 **日志池磁盘读取次数/秒**和 **日志池请求数/秒**。|[SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md) ；和 [SQL Server，数据库对象](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|系统监视器|**SQLServer:Database Replica** 性能对象包含性能计数器，可报告给定次要副本上的辅助数据库的相关信息。<br /><br /> SQL Server 中的 **SQLServer:Databases** 对象包含用于监视事务日志活动（但不仅限于此）的性能计数器。 下列计数器特别适用于监视可用性数据库上的事务日志活动：“日志刷新写入时间(毫秒)”、“日志刷新次数/秒”、“日志池缓存失误数/秒”、“日志池磁盘读取数/秒”和“日志池请求数/秒”。|[SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md) ；和 [SQL Server，数据库对象](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
@@ -41,15 +42,15 @@ ms.locfileid: "51601607"
   
      [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
-     [使用 PowerShell 监视 AlwaysOn 运行状况 - 第 1 部分：基本 Cmdlet 概述](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
+     [Monitoring Always On Health with PowerShell - Part 1:Basic Cmdlet Overview](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)（使用 PowerShell 监视 Always On 运行状况 - 第 1 部分：基本 cmdlet 概述）  
   
-     [使用 PowerShell 监视 AlwaysOn 运行状况 - 第 2 部分：高级 Cmdlet 用法](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
+     [Monitoring Always On Health with PowerShell - Part 2:Advanced Cmdlet Usage](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)（使用 PowerShell 监视 Always On 运行状况 - 第 2 部分：高级 cmdlet 用法）  
   
-     [使用 PowerShell 监视 AlwaysOn 运行状况 - 第 3 部分：简单的监视应用程序](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+     [Monitoring Always On Health with PowerShell - Part 3 :A Simple Monitoring Application](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)（使用 PowerShell 监视 Always On 运行状况 - 第 3 部分：简单的监视应用程序）  
   
-     [使用 PowerShell 监视 AlwaysOn 运行状况 - 第 4 部分：与 SQL Server 代理集成](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+     [Monitoring Always On Health with PowerShell - Part 4 :Integration with SQL Server Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)（使用 PowerShell 监视 Always On 运行状况 - 第 4 部分：与 SQL Server 代理集成）  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.microsoft.com/psssql/)  
   

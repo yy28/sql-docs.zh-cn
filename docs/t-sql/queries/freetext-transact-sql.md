@@ -22,12 +22,12 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8638b820959174c872f731f9f418b03e241389ed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ffd987e0b695fdc0976706e4b6689a9e60527893
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699715"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991880"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51699715"
 > [!NOTE]  
 >  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的全文搜索形式的信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +74,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  freetext_string 是 nvarchar。 将另一个字符数据类型用作输入时，将发生隐式转换。 不能使用大型字符串数据类型 nvarchar(max) 和 varchar(max)。 在下面的示例中，`@SearchWord` 变量（被定义为 `varchar(30)`）导致 `FREETEXT` 谓词中发生隐式转换。  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -88,7 +88,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  由于“参数截取”跨转换无效，因此请使用 nvarchar 以获得更好性能。 本示例将 `@SearchWord` 声明为 `nvarchar(30)`。  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -134,7 +134,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. 使用 FREETEXT 搜索包含指定字符值的单词  
  以下示例搜索包含与 vital、safety、components 相关的单词的所有文档。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Title  
@@ -146,7 +146,7 @@ GO
 ### <a name="b-using-freetext-with-variables"></a>B. 通过变量使用 FREETEXT  
  以下示例使用变量替代具体的搜索词。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30);  

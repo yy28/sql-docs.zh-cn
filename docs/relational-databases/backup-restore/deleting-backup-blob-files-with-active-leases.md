@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663456"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205115"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51663456"
 ## <a name="manage-orphaned-blobs"></a>管理孤立的 blob  
  以下步骤说明在备份或还原活动失败后如何进行清除。 可以使用 PowerShell 脚本来执行所有这些步骤。 以下部分包括一个 PowerShell 脚本示例：  
   
-1.  **标识具有租约的 blob：** 如果你有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。  还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦标识了 blob，我们建议查看列表，在删除 blob 前验证备份文件的有效性。  
+1.  **标识具有租约的 blob：** 如果有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。  还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦标识了 blob，我们建议查看列表，在删除 blob 前验证备份文件的有效性。  
   
 2.  **中断租约：** 获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "51663456"
   
 ###  <a name="Code_Example"></a> PowerShell 脚本示例  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  如果您正在运行 PowerShell 2.0，可能遇到加载 Microsoft WindowsAzure.Storage.dll 程序集的问题。 我们建议升级 [Powershell](https://docs.microsoft.com/powershell/) 以解决该问题。 您也可以为 PowerShell 2.0 使用以下解决方法：  
->   
+> 
 >  -   使用以下语句创建或修改 powershell.exe.config 文件以在运行时加载 .NET 2.0 和 .NET 4.0 程序集：  
->   
+> 
 >     ```  
 >     \<?xml version="1.0"?>   
 >     <configuration>   
@@ -55,7 +55,7 @@ ms.locfileid: "51663456"
 >             <supportedRuntime version="v2.0.50727"/>   
 >         </startup>   
 >     </configuration>  
->   
+> 
 >     ```  
   
  以下示例脚本标识具有活动租约的 blob，然后中断它们。 该示例还演示如何为释放租约 ID 进行筛选。  

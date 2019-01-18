@@ -1,8 +1,8 @@
 ---
-title: 次要副本的自动种子设定 (SQL Server) | Microsoft Docs
-description: 使用自动种子设定初始化次要副本。
+title: 使用自动种子设定初始化可用性组的辅助副本
+description: 使用自动种子设定初始化 SQL 2016 及更高版本中 AlwaysOn 可用性组的辅助副本。
 services: data-lake-analytics
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506690"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306164"
 ---
-# <a name="automatic-seeding-for-secondary-replicas"></a>次要副本的自动种子设定
+# <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自动种子设定初始化 AlwaysOn 可用性组的辅助副本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，初始化 SQL Server Always On 可用性组中的次要副本的唯一方法是使用备份、复制和还原。 SQL Server 2016 引入了用于初始化次要副本的新功能“自动种子设定”。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 最初创建可用性组或将数据库添加到可用性组时，可以使用此新功能。 支持 AlwaysOn 可用性组的所有 SQL Server 版本都支持自动种子设定，并可与传统可用性组和[分布式可用性组](distributed-availability-groups.md)一起使用。
@@ -32,7 +32,7 @@ ms.locfileid: "52506690"
 
 * [对主要副本的性能和事务日志影响](#performance-and-transaction-log-impact-on-the-primary-replica)
 * [磁盘布局](#disklayout)
-* [Security](#security)
+* [安全性](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>对主要副本的性能和事务日志影响
@@ -207,7 +207,7 @@ GO
 例如，以下脚本会创建用于捕获自动种子设定相关事件的扩展事件会话。
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,

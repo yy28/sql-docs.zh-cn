@@ -1,6 +1,7 @@
 ---
-title: 数据库镜像 - AlwaysOn 可用性组 - PowerShell | Microsoft Docs
-ms.custom: ''
+title: 使用 PowerShell 为可用性组创建数据库镜像端点
+description: 介绍如何使用 PowerShell 为 Always On 可用性组创建数据库镜像端点。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,23 +15,23 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 857fe97c4ef19456c4ce755857702bfd19ff8bd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634095"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206376"
 ---
-# <a name="database-mirroring---always-on-availability-groups--powershell"></a>数据库镜像 - AlwaysOn 可用性组 - PowerShell
+# <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>使用 PowerShell 为可用性组创建数据库镜像端点
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题介绍如何使用 PowerShell 创建供 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 使用的数据库镜像端点。  
   
  **本主题内容**  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
--   **若要创建数据库镜像端点，请使用：**[PowerShell](#PowerShellProcedure)  
+-   若要创建数据库镜像端点，请使用：[PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>开始之前  
   

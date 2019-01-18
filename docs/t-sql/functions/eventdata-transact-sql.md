@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords:
 - server instance event data [SQL Server]
 - event notifications [SQL Server], event status
-- events [SQL Server], status infromation
+- events [SQL Server], status information
 - EVENTDATA function
 - status information [SQL Server], events
 - DDL triggers, returning event data
@@ -25,12 +25,12 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 953a4d79d128d2295b5365653f0f7b62647f6069
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701325"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979843"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ EVENTDATA( )
 密码在 `CREATE LOGIN` 或 `ALTER LOGIN` 语句执行时不会显示。 这可以保护登录安全性。  
   
 ## <a name="schemas-returned"></a>返回的架构  
-EVENTDATA 返回数据类型为 xml 的值。 默认情况下，所有事件的架构定义都安装在此目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
+EVENTDATA 返回数据类型为 xml 的值。 默认情况下，所有事件的架构定义都将安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
 [Microsoft SQL Server XML 架构](https://go.microsoft.com/fwlink/?LinkID=31850)网页还具有事件架构。  
   

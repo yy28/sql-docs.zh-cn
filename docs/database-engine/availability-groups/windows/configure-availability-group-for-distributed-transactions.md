@@ -1,6 +1,7 @@
 ---
-title: 为分布式事务配置可用性组 | Microsoft Docs
-ms.custom: ''
+title: 为可用性组配置分布式事务
+description: '介绍如何为 Always On 可用性组内的数据库配置分布式事务。 '
+ms.custom: seodec18
 ms.date: 05/22/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513684"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215666"
 ---
-# <a name="configure-availability-group-for-distributed-transactions"></a>为分布式事务配置可用性组
+# <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 支持所有分布式事务，包括可用性组中的数据库。 本文介绍如何为分布式事务配置可用性组  
@@ -186,10 +187,10 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [分布式事务](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
-[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+[Always On 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [事务 - AlwaysOn 可用性组和数据库镜像](transactions-always-on-availability-and-database-mirroring.md)  
 
 [支持 XA 事务](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[工作原理：会话/SPID (– 2) 的 DTC 事务](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[工作原理：会话/SPID (-2) 的 DTC 事务](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

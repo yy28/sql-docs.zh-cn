@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702955"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755079"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
 
@@ -55,8 +54,8 @@ ms.locfileid: "47702955"
   
     > [!TIP]  
     >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。
-    > [!TIP]  
-    >  若要使用临时表的默认命名，但另一模型中有同名实体，MDS 会自动将标识符（例如 _1、_2）追加到临时表名称中。
+    > [!TIP]
+    > 若要使用临时表的默认命名，但另一模型中有同名实体，MDS 会自动将标识符（例如 _1、_2）追加到临时表名称中。
   
 7.  对于“事务日志类型”字段，请在下拉列表中选择事务日志类型。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "47702955"
 ## <a name="see-also"></a>另请参阅  
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [编辑实体 &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [编辑实体 (Master Data Services)](../master-data-services/edit-an-entity-master-data-services.md)   
  [删除实体 (Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

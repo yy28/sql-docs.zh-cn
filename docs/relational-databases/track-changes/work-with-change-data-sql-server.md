@@ -1,6 +1,6 @@
 ---
 title: 处理变更数据 (SQL Server) | Microsoft Docs
-ms.date: 03/03/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c55ff97602a2c56a54523c68b5ef76a832888676
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405232"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991890"
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   可通过表值函数 (TVF) 为变更数据捕获使用者提供更改数据。 这些函数的所有查询均需要使用两个参数来定义日志序列号 (LSN) 范围，在开发返回的结果集时需要考虑这些序列号。 限定这一间隔的较高和较低 LSN 值均包含在间隔中。  
   
  系统提供了几个函数，以帮助确定用于查询 TVF 的相应 LSN 值。 [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 函数返回与捕获实例有效性间隔关联的最小 LSN。 有效性间隔是指更改数据当前可供其捕获实例使用的时间间隔。 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 函数返回有效性间隔中的最大 LSN。 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 和 [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 函数可帮助将 LSN 值置于常规时间线上。 由于变更数据捕获使用闭合查询间隔，因此，有时需要按顺序生成下一个 LSN 值，以确保在连续查询窗口中不会出现重复更改。 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 和 [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) 函数在需要对 LSN 值进行增量调整时非常有用。  
@@ -73,7 +73,7 @@ ms.locfileid: "52405232"
     > [!NOTE]  
     >  仅当源表具有定义的主键或已使用 @index_name 参数标识了唯一索引时，才支持此选项。  
   
-     **净更改** 函数为每个修改的源表行返回一项更改。 如果在指定间隔内为该行记录了多项更改，列值将反映该行的最终内容。 要确定更新目标环境所需的正确操作，TVF 必须考虑在该间隔内对行执行的初始操作，同时还要考虑对行执行的最终操作。 如果指定了行筛选器选项“all”， **净更改** 查询将返回插入、删除或更新（新值）操作。 此选项始终将更新掩码返回为 Null，这是因为计算聚合掩码会产生开销。 如果需要反映针对某行的所有更改的聚合掩码，请使用“all with mask”选项。 如果下游处理不需要区分插入和更新，请使用“all with merge”选项。 在这种情况下，操作值只采用两个值：1 用于删除，5 用于插入或更新操作。 此选项可避免在确定所派生的操作应该是插入还是更新时所需的附加处理，而且还可在无需区分这些操作时提高查询性能。  
+     **净更改** 函数为每个修改的源表行返回一项更改。 如果在指定间隔内为该行记录了多项更改，列值将反映该行的最终内容。 要确定更新目标环境所需的正确操作，TVF 必须考虑在该间隔内对行执行的初始操作，同时还要考虑对行执行的最终操作。 如果指定了行筛选器选项“all”， **净更改** 查询将返回插入、删除或更新（新值）操作。 此选项始终将更新掩码返回为 Null，这是因为计算聚合掩码会产生开销。 如果需要反映针对某行的所有更改的聚合掩码，请使用“all with mask”选项。 如果下游处理不需要区分插入和更新，请使用“all with merge”选项。 在此情况下，操作值只采用两个值：1 表示删除，5 表示插入或更新操作。 此选项可避免在确定所派生的操作应该是插入还是更新时所需的附加处理，而且还可在无需区分这些操作时提高查询性能。  
   
  从查询函数中返回的更新掩码是一种简洁表示形式，用于标识某一更改数据行中所有更改的列。 通常，只有捕获列的小型子集需要此信息。 有多个函数可以帮助从掩码中提取信息，以使其更便于应用程序直接使用。 函数 [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) 可返回给定捕获实例的命名列的序号位置，而函数 [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) 则可以基于函数调用中传递的序号返回所提供的掩码中该位的奇偶性。 在请求更改数据时，可以结合使用这两个函数从掩码中有效地提取并返回信息。 有关如何使用这些函数的说明，请参阅“使用 All With Mask 枚举净更改”模板。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52405232"
   
  包装所有更改查询的函数的名称是 fn_all_changes_ 后面跟捕获实例名称。 净更改包装使用的前缀是 fn_net_changes_。 两个函数都有三个参数，正如它们的关联的变更数据捕获 TVF 一样。 但是，包装的查询间隔由两个日期时间值限定，而不是由两个 LSN 值限定。 两组函数的 @row_filter_option 参数相同。  
   
- 生成的包装函数支持以下约定，以便系统地遍历变更数据捕获时间线：前一个间隔的 @end_time 参数应用作后一个间隔的 @start_time 参数。 如果遵循此约定，则包装函数负责将日期时间值映射到 LSN 值，并确保不会丢失数据或出现重复数据。  
+ 生成的包装函数支持以下约定，以便系统地遍历变更数据捕获时间线：预计上一个间隔的 @end_time 参数应用作下一个间隔的 @start_time 参数。 如果遵循此约定，则包装函数负责将日期时间值映射到 LSN 值，并确保不会丢失数据或出现重复数据。  
   
  可以生成包装以支持指定的查询时段上的闭合上限或开放上限。 也就是说，调用方可以指定提交时间等于提取间隔的上限的条目是否要包括在该间隔中。 默认情况下，包括上限。  
   

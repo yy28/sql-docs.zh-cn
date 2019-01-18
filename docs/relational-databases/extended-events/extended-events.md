@@ -1,7 +1,7 @@
 ---
-title: 扩展事件 | Microsoft Docs
+title: 扩展事件 - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/23/2016
+ms.date: 12/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,24 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 972e420f75db790321bc8c8eee595f1932e4f451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662417"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531043"
 ---
 # <a name="extended-events"></a>扩展事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件具有高度可伸缩且高度可配置的体系结构，使用户能够按需收集解决性能问题或确定性能问题所需的信息。  
 
-可在此处找到扩展事件的详细信息：
+可在此处找到扩展事件的详细信息：[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)。
 
-- [快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- 博客： [SQL Server 扩展事件](https://blogs.msdn.com/b/extended_events/)
 
-  
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件的优点  
  扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”和“新建会话”），以便创建、修改、显示和分析你的会话数据。  
   

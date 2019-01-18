@@ -19,18 +19,18 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d73910b856702b2785a39fc2b8ad021f1a6d9405
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519011"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591341"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
 -   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
   

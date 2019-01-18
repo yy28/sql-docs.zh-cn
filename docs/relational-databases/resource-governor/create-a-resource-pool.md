@@ -10,24 +10,24 @@ helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 5f992bfd1a132b33b125abd51e9b2fe8bc054756
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93add4b3d9ed4ff71a57845443813c323861145b
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801245"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53379671"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建资源池。 若要了解资源池的主体，请参阅 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要创建资源池，请使用：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **要创建资源池，请使用：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -73,9 +73,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
- [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [更改资源池设置](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)   
  [使用模板配置资源调控器](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   

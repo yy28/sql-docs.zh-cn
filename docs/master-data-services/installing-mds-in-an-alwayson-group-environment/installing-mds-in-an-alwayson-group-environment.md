@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395670"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215816"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -156,8 +156,8 @@ WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一�
 7.  在“摘要”页上，检查是否出现任何警告或错误消息。
 
     请务必修复错误。 但警告可能不表示项目存在问题。 警告消息是指“测试的项目虽符合要求，但有一些需要进行检查”。 例如，图 7 所示为一条“验证磁盘访问延迟”警告，这可能是由于磁盘暂时忙于其他任务，可以忽略此警告。 应当查看每个警告和错误消息的在线文档以获取更多详细信息。 请参阅图 7。
- 
-![验证配置向导、验证页](media/Fig6_ValidationTests.png)
+ 
+    ![验证配置向导、验证页](media/Fig6_ValidationTests.png)
 
     图 6
 
@@ -187,7 +187,7 @@ WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一�
 
 -   不是所有版本的 Windows Server 都具备 WSFC 功能。 请确保你的版本具备该功能。
 
--   请确保你拥有适当特权在 Active Directory 中安装 WSFC。 如有任何问题，请参阅 [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)（故障转移群集分步指南：在 Active Directory 中配置帐户）。
+-   请确保你拥有适当特权在 Active Directory 中安装 WSFC。 如有任何问题，请参阅[故障转移群集分步指南：在 Active Directory 中配置帐户](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)。
 
 有关 WSFC 的更多详细信息，请参阅[故障转移群集](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx)。
 
@@ -305,15 +305,15 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
     对每个副本配置以下“同步提交”、“自动故障转移”和“可读辅助副本”设置。 请参阅图
 17.
 
-    同步提交：确保在数据库的主要副本上提交事务时，在所有其他同步副本上也提交了该事务。 异步提交则不能保证这一点，并且会落后于主要副本。
+    **同步提交**：确保在数据库的主要副本上提交事务时，在所有其他同步副本上也提交了该事务。 异步提交则不能保证这一点，并且会落后于主要副本。
 
     通常只有当两个节点位于同一数据中心时，才能启用同步提交。 如果它们处于不同的数据中心，同步提交会降低数据库的性能。
 
     如果未选中此复选框，则使用异步提交。
 
-    自动故障转移：关闭主要副本，选择自动故障转移时，AG 会自动故障转移到其次要副本。 只有在使用同步提交的副本上才能够启用。
+    **自动故障转移：** 关闭主要副本，选择自动故障转移时，AG 会自动故障转移到其次要副本。 只有在使用同步提交的副本上才能够启用。
 
-    可读辅助副本：默认情况下，用户无法连接到任何次要副本。 用户只能连接到使用只读访问的次要副本。
+    **可读次要副本：** 默认情况下，用户无法连接到任何次要副本。 用户只能连接到使用只读访问的次要副本。
 
 8.  在“指定副本”页上，单击“侦听器”选项卡，执行以下操作。 请参阅图 18。
 
@@ -358,7 +358,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
 3.  单击“故障转移”，对同步副本和异步副本执行故障转移。 此操作是为了验证故障转移是否正确运行，未出现任何问题。
 
- AlwaysOn 的安装已完成。
+ AlwaysOn 的安装已完成。
 
 有关 AlwaysOn 可用性组的详细信息，请参阅 [SQL Server 2016 AlwaysOn 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。
 

@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748479"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ IAM 页根据需要分配给每个分配单元，在文件中的位置也是随�
  
 每个分配单元的链中所链接的 IAM 页 IAM 页有一个标头，指明 IAM 页所映射的区范围的起始区。 IAM 页中还有一个大位图，其中每个位代表一个区。 位图中的第一个位代表范围内的第一个区，第二个位代表第二个区，依此类推。 如果某个位是 0，它所代表的区将不会分配给拥有该 IAM 页的分配单元。 如果这个位是 1，它所代表的区将被分配给拥有该 IAM 页的分配单元。
 
-当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须在当前页中插入新行，而当前页中没有可用空间时，它将使用 IAM 和 PFS 页查找要将该行分配到的页，或者（对于堆或 Text/Image 页）查找具有足够空间容纳该行的页。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用 IAM 页查找分配给分配单元的区。 对于每个区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将搜索 PFS 页，以查看是否有可用的页。 每个 IAM 和 PFS 页覆盖大量数据页，因此一个数据库内只有很少的 IAM 和 PFS 页。 这意味着 IAM 和 PFS 页通常位于内存中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 缓冲池中，所以能够很快找到它们。 对于索引，新行的插入点由索引键设置。 在这种情况下，不会出现上述搜索过程。
+当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须在当前页中插入新行，而当前页中没有可用空间时，它将使用 IAM 和 PFS 页查找要将该行分配到的页，或者（对于堆或 Text/Image 页）查找具有足够空间容纳该行的页。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用 IAM 页查找分配给分配单元的区。 对于每个区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将搜索 PFS 页，以查看是否有可用的页。 每个 IAM 和 PFS 页覆盖大量数据页，因此一个数据库内只有很少的 IAM 和 PFS 页。 这意味着 IAM 和 PFS 页通常位于内存中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 缓冲池中，所以能够很快找到它们。 对于索引，新行的插入点由索引键设置，但是当需要新页面时，将发生先前描述的过程。
 
 仅当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]不能在现有的区中快速找到足以容纳插入行的页时，才将新区分配给分配单元。 
 

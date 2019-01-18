@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 5ebd403911b6247964c5f512e45ce64e72290578
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302430"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376599"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>使用 Query Store 中的工作负荷优化数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52302430"
 在命令行 (dta.exe) 中，选择 **-iq** 选项来选择 Query Store 中的工作负荷。 
 
 选择 Query Store 中的工作负荷时，可通过命令行调用其他两个选项来帮助优化 DTA 的行为。 无法通过 GUI 调用这些选项：
-  1. **要优化的工作负载事件数**：此选项是使用 -n 命令行参数指定的，可让用户控制要优化查询存储中的多少个事件。 默认情况下，DTA 对此选项使用值 1000。 DTA 始终根据总持续时间选择开销最大的事件。 
+  1. **要优化的工作负荷事件数**：此选项使用 -n 命令行参数进行指定，可让用户控制查询存储中要优化的事件数。 默认情况下，DTA 对此选项使用值 1000。 DTA 始终根据总持续时间选择开销最大的事件。 
   
   2. **要优化的事件时限**：由于查询存储包含的查询可能是很久以前执行的，因此，此选项可让用户指定过去的某个时限（以小时为单位），DTA 只考虑优化已执行了该时限的查询。 此选项是使用 **-I** 命令行参数指定的。 
 

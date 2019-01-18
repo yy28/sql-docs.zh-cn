@@ -20,12 +20,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98cdf238c4e88e6121e96fec911ad86ba1a7db7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852345"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206346"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "47852345"
   
      合并复制提供了 API，通过该 API 可以用各种语言（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）将冲突解决程序编写为 COM 对象。 有关详细信息，请参阅 [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
      [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括许多基于 COM 的冲突解决程序。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "47852345"
   
  若要指定合并订阅类型和冲突解决优先级，请参阅  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程和复制管理对象 (RMO) 编程： [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程和复制管理对象 (RMO) 编程：[创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md)和[创建推送订阅](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>交互式冲突解决程序  
  复制提供了一个交互式冲突解决程序用户界面，它可以与默认的基于优先级的冲突解决程序或项目冲突解决程序一起使用。 通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器执行按需同步时，交互式冲突解决程序在运行时显示冲突数据，并让用户选择解决冲突的方式。 有关如何启用交互式解决方法并启动交互式冲突解决程序的详细信息，请参阅 [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
@@ -129,7 +129,7 @@ ms.locfileid: "47852345"
   
  **查看冲突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[查看和解决合并发布的数据冲突 (SQL Server Management Studio)](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[查看和解决合并发布的数据冲突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 -   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   

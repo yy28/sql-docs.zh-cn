@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020460"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596818"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "43020460"
   
 ##  <a name="KnownIssues"></a> 对向导进行故障排除  
  **Stretch Database 向导失败。**  
- 如果尚未在服务器级别启用 Stretch Database，而你在没有系统管理员权限的情况下运行向导以启用它，则向导将失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
+ 如果尚未在服务器级别启用 Stretch Database，而你在没有系统管理员权限的情况下运行向导以启用它，则向导将失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅[先决条件：在服务器上启用 Stretch Database 的权限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
   
 ## <a name="next-steps"></a>后续步骤  
  为 Stretch Database 启用其他表。 监视数据迁移并管理已启用 Stretch 的数据库和表。  

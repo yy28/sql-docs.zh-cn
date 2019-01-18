@@ -14,19 +14,19 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b36adb786bc346f426cc28aeb9960158003cafd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5ec780327f12a4d81063c155aa5d3666b004ea6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210138"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 源
-  “Azure Data Lake Store 源”  组件允许 SSIS 包读取 Azure Data Lake Store 中的数据。 支持的文件格式：文本和 Avro。
+  “Azure Data Lake Store 源”  组件允许 SSIS 包读取 Azure Data Lake Store 中的数据。 支持的文件格式为：文本和 Avro。
   
  “Azure Data Lake Store 源”是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。  
   
->   [!NOTE]
+> [!NOTE]
 > 若要确保 Azure Data Lake Store 连接管理器和使用它的组件（即 Azure Data Lake Store 源和 Azure Data Lake Store 目标）可连接到服务，请确保在 [此处](https://www.microsoft.com/download/details.aspx?id=49492)下载最新版本的 Azure 功能包。 
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>配置 Azure Data Lake Store 源

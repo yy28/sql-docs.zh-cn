@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511772"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980553"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52511772"
   
 -   锁定设备，使事务保持隔离。  
   
--   通过记录设备，保证事务持久性。 对于完全持久的事务，在其提交之前，日志记录将强制写入磁盘。 因此，即使服务器硬件、操作系统或 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 实例自身出现故障，该实例也可以在重新启动时使用事务日志，以将所有未完成的事务自动地回滚到系统出现故障的点。 提交延迟的持久事务后，该事务日志记录将强制写入磁盘。 如果在日志记录强制写入磁盘前系统出现故障，此类事务可能会丢失。 有关延迟事务持续性的详细信息，请参阅主题[事务持续性](../relational-databases/logs/control-transaction-durability.md)。  
+-   通过记录设备，保证事务持久性。 对于完全持久的事务，在其提交之前，日志记录将强制写入磁盘。 因此，即使服务器硬件、操作系统或 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 实例自身出现故障，该实例也可以在重新启动时使用事务日志，将所有未完成的事务自动地回滚到系统出现故障的点。 提交延迟的持久事务后，该事务日志记录将强制写入磁盘。 如果在日志记录强制写入磁盘前系统出现故障，此类事务可能会丢失。 有关延迟事务持续性的详细信息，请参阅主题[事务持续性](../relational-databases/logs/control-transaction-durability.md)。  
   
 -   事务管理特性，强制保持事务的原子性和一致性。 事务启动之后，就必须成功完成（提交），否则[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例将撤消该事务启动之后对数据所做的所有修改。 此操作称为回滚事务，因为它将数据恢复到那些更改发生前的状态。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52511772"
  自动提交模式是 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的默认事务管理模式。 每个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句在完成时，都被提交或回滚。 如果一个语句成功地完成，则提交该语句；如果遇到错误，则回滚该语句。 只要没有显式事务或隐性事务覆盖自动提交模式，与[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的连接就以此默认模式操作。 自动提交模式也是 ADO、OLE DB、ODBC 和 DB 库的默认模式。  
   
  **隐式事务**  
- 当连接以隐性事务模式进行操作时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例将在提交或回滚当前事务后自动启动新事务。 无须描述事务的开始，只需提交或回滚每个事务。 隐性事务模式生成连续的事务链。 通过 API 函数或 [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON 语句，将隐性事务模式设置为打开。  
+ 当连接以隐性事务模式进行操作时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例将在提交或回滚当前事务后自动启动新事务。 无须描述事务的开始，只需提交或回滚每个事务。 隐性事务模式生成连续的事务链。 通过 API 函数或 [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON 语句，将隐性事务模式设置为打开。  此模式也称为 Autocommit OFF，请参阅 [JDBC 中的 setAutoCommit 方法](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md) 
   
  为连接将隐性事务模式设置为打开之后，当[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例首次执行下列任何语句时，都会自动启动一个事务：  
   
@@ -284,22 +284,22 @@ GO
 |未提交读|隔离事务的最低级别，只能保证不读取物理上损坏的数据。 在此级别上，允许脏读，因此一个事务可能看见其他事务所做的尚未提交的更改。|  
 |已提交读|允许事务读取另一个事务以前读取（未修改）的数据，而不必等待第一个事务完成。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]保留写锁（在所选数据上获取）直到事务结束，但是一执行 SELECT 操作就释放读锁。 这是[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]默认级别。|  
 |可重复读|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]保留在所选数据上获取的读锁和写锁，直到事务结束。 但是，因为不管理范围锁，可能发生虚拟读取。|  
-|可序列化|隔离事务的最高级别，事务之间完全隔离。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]保留在所选数据上获取的读锁和写锁，在事务结束时释放它们。 SELECT 操作使用分范围的 WHERE 子句时获取范围锁，主要为了避免虚拟读取。<br /><br /> **注意：** 请求可序列化隔离级别时，复制的表上的 DDL 操作和事务可能失败。 这是因为复制查询使用的提示可能与可序列化隔离级别不兼容。|  
+|可序列化|隔离事务的最高级别，事务之间完全隔离。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]保留在所选数据上获取的读锁和写锁，在事务结束时释放它们。 SELECT 操作使用分范围的 WHERE 子句时获取范围锁，主要为了避免虚拟读取。<br /><br /> 注意：在请求可序列化隔离级别时，复制的表上的 DDL 操作和事务可能失败。 这是因为复制查询使用的提示可能与可序列化隔离级别不兼容。|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还支持使用行版本控制的其他两个事务隔离级别。 一个是已提交读隔离的实现，另一个是事务隔离级别（快照）。  
   
 |行版本控制隔离级别|定义|  
 |------------------------------------|----------------|  
 |已提交读快照|当 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON 时，已提交读隔离使用行版本控制提供语句级读取一致性。 读取操作只需要 SCH-S 表级别的锁，不需要页锁或行锁。 即，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。 用户定义的函数可以返回在包含 UDF 的语句开始后提交的数据。<br /><br /> 如果 `READ_COMMITTED_SNAPSHOT` 数据库选项设置为 OFF（这是默认设置），当前事务运行读取操作时，已提交读隔离使用共享锁来防止其他事务修改行。 共享锁还会阻止语句在其他事务完成之前读取由这些事务修改的行。 两个实现都满足已提交读隔离的 ISO 定义。|  
-|快照|快照隔离级别使用行版本控制来提供事务级别的读取一致性。 读取操作不获取页锁或行锁，只获取 SCH-S 表锁。 读取其他事务修改的行时，读取操作将检索启动事务时存在的行的版本。 当 `ALLOW_SNAPSHOT_ISOLATION` 数据库选项设置为 ON 时，只能对数据库使用快照隔离。 默认情况下，用户数据库的此选项设置为 OFF。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于在快照隔离下运行的显式事务中可以执行的 DDL 操作存在限制。 在快照隔离下，BEGIN TRANSACTION 语句之后不允许使用任何公共语言运行时 (CLR) DDL 语句或下列 DDL 语句：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME。 在隐式事务中使用快照隔离时允许使用这些语句。 根据定义，隐式事务为单个语句，这使得它可以强制应用快照隔离的语义，即便使用 DDL 语句也是如此。 违反此原则会导致错误 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|快照|快照隔离级别使用行版本控制来提供事务级别的读取一致性。 读取操作不获取页锁或行锁，只获取 SCH-S 表锁。 读取其他事务修改的行时，读取操作将检索启动事务时存在的行的版本。 当 `ALLOW_SNAPSHOT_ISOLATION` 数据库选项设置为 ON 时，只能对数据库使用快照隔离。 默认情况下，用户数据库的此选项设置为 OFF。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于在快照隔离下运行的显式事务中可以执行的 DDL 操作存在限制。 在快照隔离下，以下 DDL 语句不允许出现在 BEGIN TRANSACTION 语句后:ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或任何常用语言运行时(CLR) DDL 语句。 在隐式事务中使用快照隔离时允许使用这些语句。 根据定义，隐式事务为单个语句，这使得它可以强制应用快照隔离的语义，即便使用 DDL 语句也是如此。 违反此原则会导致错误 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  下表显示了不同隔离级别导致的并发副作用。  
   
 |隔离级别|脏读|不可重复读|虚拟读取|  
 |---------------------|----------------|------------------------|-------------|  
-|**未提交的读取**|用户帐户控制|是|用户帐户控制|  
-|**已提交的读取**|否|是|用户帐户控制|  
-|**可重复的读取**|否|否|用户帐户控制|  
+|**未提交的读取**|是|是|是|  
+|**已提交的读取**|否|是|是|  
+|**可重复的读取**|否|否|是|  
 |**快照**|否|否|否|  
 |**可序列化**|否|否|否|  
   
@@ -434,11 +434,11 @@ GO
 ||现有的授予模式||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**请求的模式**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**意向共享 (IS)**|用户帐户控制|是|是|是|是|否|  
-|**共享 (S)**|用户帐户控制|是|是|否|否|否|  
-|**更新 (U)**|用户帐户控制|是|否|否|否|否|  
-|**意向排他 (IX)**|用户帐户控制|否|否|是|否|否|  
-|**意向排他共享 (SIX)**|用户帐户控制|否|否|否|否|否|  
+|**意向共享 (IS)**|是|是|是|是|是|否|  
+|**共享 (S)**|是|是|是|否|否|否|  
+|**更新 (U)**|是|是|否|否|否|否|  
+|**意向排他 (IX)**|是|否|否|是|否|否|  
+|**意向排他共享 (SIX)**|是|否|否|否|否|否|  
 |**排他 (X)**|否|否|否|否|否|否|  
   
 > [!NOTE]  
@@ -477,12 +477,12 @@ GO
 ||现有的授予模式|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**请求的模式**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**共享 (S)**|用户帐户控制|是|否|是|是|是|否|  
-|**更新 (U)**|用户帐户控制|否|否|是|否|是|否|  
+|**共享 (S)**|是|是|否|是|是|是|否|  
+|**更新 (U)**|是|否|否|是|否|是|否|  
 |**排他 (X)**|否|否|否|否|否|是|否|  
-|**RangeS-S**|用户帐户控制|是|否|是|是|否|否|  
-|**RangeS-U**|用户帐户控制|否|否|是|否|否|否|  
-|**RangeI-N**|用户帐户控制|是|是|否|否|是|否|  
+|**RangeS-S**|是|是|否|是|是|否|否|  
+|**RangeS-U**|是|否|否|是|否|否|否|  
+|**RangeI-N**|是|是|是|否|否|是|否|  
 |**RangeX-X**|否|否|否|否|否|否|否|  
   
 #### <a name="lock_conversion"></a>转换锁  
@@ -509,7 +509,7 @@ GO
  必须满足下列条件才能发生键范围锁定：  
   
 -   事务隔离级别必须设置为 SERIALIZABLE。  
--   查询处理器必须使用索引来实现范围筛选谓词。 例如，SELECT 语句中的 WHERE 子句可以用以下谓词建立范围条件：ColumnX BETWEEN N'AAA' AND N'CZZ'。 仅当 ColumnX 被索引键覆盖时，才能获取键范围锁。  
+-   查询处理器必须使用索引来实现范围筛选谓词。 例如，SELECT 语句中的 WHERE 子句可以用以下谓词建立范围条件:ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**。 仅当 ColumnX 被索引键覆盖时，才能获取键范围锁。  
   
 #### <a name="examples"></a>示例  
  以下表和索引用作随后的键范围锁定示例的基础。  
@@ -766,7 +766,7 @@ END
   
  除了定义跟踪标志 1204 和 1222 的属性之外，下表还显示了它们之间的相似之处和不同之处。  
   
-|“属性”|跟踪标志 1204 和跟踪标志 1222|仅跟踪标志 1204|仅跟踪标志 1222|  
+|属性|跟踪标志 1204 和跟踪标志 1222|仅跟踪标志 1204|仅跟踪标志 1222|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |输出格式|在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误日志中捕获输出。|主要针对死锁所涉及的节点。 每个节点都有一个专用部分，并且最后一部分说明死锁牺牲品。|返回采用不符合 XML 架构定义 (XSD) 架构的类 XML 格式的信息。 该格式有三个主要部分。 第一部分声明死锁牺牲品； 第二部分说明死锁所涉及的每个进程； 第三部分说明与跟踪标志 1204 中的节点同义的资源。|  
 |标识属性|**SPID:<x\> ECID:<x\>** 标识并行进程中的系统进程 ID 线程。 条目 `SPID:<x> ECID:0`（其中，<x\> 将替换为 SPID 值）表示主线程。 条目 `SPID:<x> ECID:<y>`（其中，<x\> 将替换为 SPID 值，<y\> 大于 0）表示具有相同 SPID 的子线程。<br /><br /> **BatchID**（对于跟踪标志 1222 为 sbid）。 标识代码执行从中请求锁或持有锁的批处理。 多个活动的结果集 (MARS) 禁用后，BatchID 值为 0。 MARS 启用后，活动批处理的值为 1 到 n。 如果会话中没有活动的批处理，则 BatchID 为 0。<br /><br /> **模式**。 指定线程所请求的、获得的或等待的特定资源的锁的类型。 模式可以为 IS（意向共享）、S（共享）、U（更新）、IX（意向排他）、SIX（意向排他共享）和 X（排他）。<br /><br /> **行编号**（对于跟踪标志 1222 为行）。 列出发生死锁时当前批处理中正在执行的语句的行数。<br /><br /> **Input Buf**（对于跟踪标志 1222 为 inputbuf）。 列出当前批处理中的所有语句。|**Node**。 表示死锁链中的项数。<br /><br /> **List**。 锁所有者可能属于以下列表：<br /><br /> **Grant List**。 枚举资源的当前所有者。<br /><br /> **Convert List**。 枚举尝试将其锁转换为较高级别的当前所有者。<br /><br /> **Wait List**。 枚举对资源的当前新锁请求。<br /><br /> **Statement Type**。 说明线程对其具有权限的 DML 语句的类型（SELECT、INSERT、UPDATE 或 DELETE）。<br /><br /> **Victim Resource Owner**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 选择作为牺牲品来中断死锁循环的参与线程。 选定的线程和所有的现有子线程都将终止。<br /><br /> **Next Branch**。 表示死锁循环中涉及的两个或多个具有相同 SPID 的子线程。|**deadlock victim**。 表示选为死锁牺牲品的任务的物理内存地址（请参阅 [sys.dm_os_tasks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)）。 如果任务为无法解析的死锁，则它可能为 0（零）。 不能选择正在回滚的任务作为死锁牺牲品。<br /><br /> **executionstack**。 表示发生死锁时正在执行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码。<br /><br /> **Priority**。 表示死锁优先级。 在某些情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]可能在短时间内改变死锁优先级以更好地实现并发。<br /><br /> **logused**。 任务使用的日志空间。<br /><br /> **owner id**。可控制请求的事务的 ID。<br /><br /> **status**。 任务的状态。 为下列值之一：<br /><br /> >> **pending**。 正在等待工作线程。<br /><br /> >> **runnable**。 可以运行，但正在等待量程。<br /><br /> >> **running**。 当前正在计划程序上运行。<br /><br /> >> **suspended**。 执行已挂起。<br /><br /> >> **done**。 任务已完成。<br /><br /> >> **spinloop**。 正在等待自旋锁释放。<br /><br /> **waitresource**。 任务需要的资源。<br /><br /> **waittime**。 等待资源的时间（毫秒）。<br /><br /> **schedulerid**。 与此任务关联的计划程序。 请参阅 [sys.dm_os_schedulers (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。<br /><br /> **hostname**。 工作站的名称。<br /><br /> **isolationlevel**。 当前事务隔离级别。<br /><br /> **Xactid**。 可控制请求的事务的 ID。<br /><br /> **currentdb**。 数据库的 ID。<br /><br /> **lastbatchstarted**。 客户端进程上次启动批处理执行的时间。<br /><br /> **lastbatchcompleted**。 客户端进程上次完成批处理执行的时间。<br /><br /> **clientoption1 和 clientoption2**。 此客户端连接上的 Set 选项。 这是一个位掩码，包含有关 SET 语句（如 SET NOCOUNT 和 SET XACTABORT）通常控制的选项的信息。<br /><br /> **associatedObjectId**。 表示 HoBT（堆或 b 树）ID。|  
@@ -1128,7 +1128,7 @@ BEGIN TRANSACTION
 ### <a name="behavior-in-summary"></a>行为摘要  
  下表概括了使用行版本控制的快照隔离与已提交读隔离之间的差异。  
   
-|“属性”|使用行版本控制的已提交读隔离级别|快照隔离级别|  
+|属性|使用行版本控制的已提交读隔离级别|快照隔离级别|  
 |--------------|----------------------------------------------------------|------------------------------|  
 |必须设置为 ON 以便启用所需支持的数据库选项。|READ_COMMITTED_SNAPSHOT|ALLOW_SNAPSHOT_ISOLATION|  
 |会话如何请求特定类型的行版本控制。|使用默认的已提交读隔离级别，或运行 SET TRANSACTION ISOLATION LEVEL 语句来指定 READ COMMITTED 隔离级别。 这可以在事务启动后完成。|需要执行 SET TRANSACTION ISOLATION LEVEL 来在事务启动前指定 SNAPSHOT 隔离级别。|  

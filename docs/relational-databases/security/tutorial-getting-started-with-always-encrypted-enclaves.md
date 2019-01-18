@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523552"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046577"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,8 @@ ms.locfileid: "52523552"
 7. 在 SQL Server 计算机上，在提升的 Windows PowerShell 控制台中运行以下命令，告诉 SQL Server 计算机前往何处进行证明。 请确保已指定 HGS 计算机的 IP 地址或 DNS 名称。 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 上述命令的结果应显示 AttestationStatus = Passed。
@@ -245,7 +246,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     3. 在“列主密匙”下拉列表中，选择在上一步骤创建的列主密钥。
     4. 选择“确定”。
 
-## <a name="step-6-encrypt-some-columns-in-place"></a>步骤 6：就地加密位部分列
+## <a name="step-6-encrypt-some-columns-in-place"></a>步骤 6：就地加密部分列
 
 在此步骤中，将加密存储在服务器端 enclave 内 SSN 和“工资”列中的数据，然后对数据进行 SELECT 查询测试。
 

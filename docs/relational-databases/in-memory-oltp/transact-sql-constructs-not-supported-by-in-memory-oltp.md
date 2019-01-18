@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503616"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590761"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ ms.locfileid: "52503616"
 |运算|更新主键列|无法更新内存优化的表和表类型中的主键列。 如果需要更新主键，请删除旧的行并插入包含更新的主键的新行。|  
 |运算|CREATE INDEX|必须使用 **CREATE TABLE** 语句或 **ALTER TABLE** 语句以内联方式指定内存优化表的索引。|  
 |运算|CREATE FULLTEXT INDEX|内存优化的表不支持全文检索。|  
-|运算|架构更改|内存优化表和本机编译存储过程不支持某些架构更改：<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server：支持 ALTER TABLE、ALTER PROCEDURE 和 sp_rename 操作。 不支持其他架构更改，如添加扩展属性。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]：支持 ALTER TABLE 和 ALTER PROCEDURE 操作。 不支持其他架构更改，包括 sp_rename。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]：不支持架构更改。 若要更改内存优化表或本机编译存储过程的定义，首先删除该对象，然后用所需定义重新创建。| 
-|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用“DELETE FROM table”删除所有行，或删除并重新创建该表。|  
+|运算|架构更改|内存优化表和本机编译存储过程不支持某些架构更改：<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server：支持 ALTER TABLE、ALTER PROCEDURE 和 sp_rename 操作。 不支持其他架构更改，如添加扩展属性。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]设置用户帐户 ：支持 ALTER TABLE 和 ALTER PROCEDURE 操作。 不支持其他架构更改，包括 sp_rename。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]：不支持架构更改。 若要更改内存优化表或本机编译存储过程的定义，首先删除该对象，然后用所需定义重新创建。| 
+|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table 删除所有行，或删除并重新创建该表。|  
 |运算|ALTER AUTHORIZATION|不支持更改现有内存优化的表或本机编译的存储过程的所有者。 请删除并重新创建该表或过程来更改所有权。|  
 |运算|ALTER SCHEMA|不支持将现有表或本机编译存储过程传输到另一个架构。 删除并重新创建要在架构之间传输的对象。|  
 |运算|DBCC CHECKTABLE|内存优化表不支持 DBCC CHECKTABLE。 若要验证磁盘上检查点文件的完整性，请执行 MEMORY_OPTIMIZED_DATA 文件组的备份。|  
@@ -104,7 +104,7 @@ ms.locfileid: "52503616"
 |功能|游标|本机编译的存储过程不支持游标。<br /><br /> 从客户端执行该过程时，请使用 RPC 而非游标 API。 对于 ODBC，避免 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 **EXECUTE**，直接指定过程的名称。<br /><br /> 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或另一存储过程执行该过程时，请避免将游标用于本机编译的存储过程。<br /><br /> 创建本机编译的存储过程时，请使用基于集的逻辑或 **WHILE** 循环而不要使用游标。|  
 |功能|非常量参数默认值|将默认值与本机编译的存储过程参数一起使用时，这些值必须为常量。 从参数声明中删除所有通配符。|  
 |功能|EXTERNAL|无法本机编译 CLR 存储过程。 从 CREATE PROCEDURE 语句中删除 AS EXTERNAL 子句或 NATIVE_COMPILATION 选项。|  
-|功能|带编号的存储过程|不能对本机编译的存储过程编号。 从 CREATE PROCEDURE 语句中删除 ; number。|  
+|功能|带编号的存储过程|不能对本机编译的存储过程编号。 从 **CREATE PROCEDURE**_语句中删除_ ; **number** 。|  
 |功能|多行 INSERT ...VALUES 语句|在本机编译的存储过程中无法使用同一 **INSERT** 语句插入多行。 为每行创建 **INSERT** 语句。|  
 |功能|公用表表达式 (CTE)|本机编译的存储过程中不支持公用表表达式 (CTE)。 重写查询。|  
 |功能|COMPUTE|不支持 **COMPUTE** 子句。 从查询中删除它。|  

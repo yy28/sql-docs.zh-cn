@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503415"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207305"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,17 +120,17 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 通过 memory_grant_updated_by_feedback XEvent，可以查看行模式内存授予反馈活动。 
 
-从行模式内存授予反馈开始，将会对实际执行后计划显示两个新查询计划属性：“IsMemoryGrantFeedbackAdjusted”和“LastRequestedMemory”（它们添加到“MemoryGrantInfo”查询计划 XML 元素中）。 
+从行模式内存授予反馈开始，将显示两个新的查询计划属性，用于实际执行后计划：IsMemoryGrantFeedbackAdjusted 和 LastRequestedMemory，它们将添加到 MemoryGrantInfo 查询计划 XML 元素。 
 
 LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节 (KB) 为单位）。 使用 IsMemoryGrantFeedbackAdjusted 属性，可以查看实际查询执行计划内语句的内存授予反馈状态。 下面列出了此属性的可取值：
 
 | IsMemoryGrantFeedbackAdjusted 值 | 描述 |
 |---|---|
-| No: First Execution | 内存授予反馈不调整用于首次编译和相关执行的内存。  |
-| No: Accurate Grant | 如果没有溢出到磁盘，且语句使用至少 50% 的授予内存，就不会触发内存授予反馈。 |
-| No: Feedback disabled | 如果内存授予反馈不断触发，且在内存增加和内存减少操作之间波动，就会对语句禁用内存授予反馈。 |
-| Yes: Adjusting | 内存授予反馈已应用，并且可能会针对下一次执行进行进一步调整。 |
-| Yes: Stable | 内存授予反馈已应用，并且授予内存现在处于稳定状态。也就是说，为上一次执行最后授予的内存是为当前执行授予的内存。 |
+| No:First Execution | 内存授予反馈不调整用于首次编译和相关执行的内存。  |
+| No:Accurate Grant | 如果没有溢出到磁盘，且语句使用至少 50% 的授予内存，就不会触发内存授予反馈。 |
+| No:Feedback disabled | 如果内存授予反馈不断触发，且在内存增加和内存减少操作之间波动，就会对语句禁用内存授予反馈。 |
+| Yes:Adjusting | 内存授予反馈已应用，并且可能会针对下一次执行进行进一步调整。 |
+| Yes:Stable | 内存授予反馈已应用，并且授予内存现在处于稳定状态。也就是说，为上一次执行最后授予的内存是为当前执行授予的内存。 |
 
 > [!NOTE]
 > 公共预览版行模式内存授予反馈计划特性在版本 17.9 及更高版本中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图形查询执行计划内可见。 
@@ -171,7 +171,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -190,7 +190,7 @@ WHERE [fo].[Quantity] = 360;
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 查询将返回一行。 启用实时查询统计信息后，将看到以下计划：

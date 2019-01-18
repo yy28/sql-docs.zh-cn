@@ -1,6 +1,7 @@
 ---
-title: 更改可用性副本的可用性模式 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 更改可用性组内副本的可用性模式
+description: 有关如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 更改 Always On 可用性组中可用性副本的可用性模式的说明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6afbefc04c2495c3f7a08cc0c6d73a4d1ba28880
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd1b07c3d7c9172d52478c2d949f8f3f194a2c0b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610147"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213576"
 ---
-# <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>更改可用性副本的可用性模式 (SQL Server)
+# <a name="change-the-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>更改 Always On 可用性组中副本的可用性模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来更改 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的可用性模式。 可用性模式是一个副本属性，用于控制以异步还是同步方式提交副本。 异步提交模式可使性能最大化，但要牺牲高可用性；它仅支持强制手动故障转移（有可能丢失数据），该故障转移一般称为*强制故障转移*。 *同步提交模式* 更多地强调高可用性而不是性能，并且一旦同步次要副本，即支持手动故障转移（也可以支持自动故障转移）。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "47610147"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要更改可用性副本的可用性模式，可使用：**  
   

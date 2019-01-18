@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97aea59dfeecfdad0348c56b69b24260aa1ea505
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da4308dd95b582d7e2e50c6808fb6d436f73417a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535290"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590121"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>AlwaysOn 可用性组配置疑难解答 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "52535290"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|当前主副本|确保 READ_ONLY_ROUTING_LIST 仅包含承载可读辅助副本的服务器实例。|**标识可读次要副本：** sys.availability_replicas（**secondary_role_allow_connections_desc** 列）<br /><br /> **查看只读路由列表：** sys.availability_read_only_routing_lists<br /><br /> **更改只读路由列表：** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|请确保 Windows 防火墙未在阻止 READ_ONLY_ROUTING_URL 端口。|-|[为数据库引擎访问配置 Windows 防火墙](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中，请确认：<br /><br /> 已启用 SQL Server 远程连接。<br /><br /> 已启用 TCP/IP。<br /><br /> IP 地址已正确配置。|-|[查看或更改服务器属性 (SQL Server)](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|确保 READ_ONLY_ROUTING_URL (TCP://system-address:port)** 包含正确的完全限定的域名 (FQDN) 和端口号。|-|[计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|确保 READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) 包含正确的完全限定域名 (FQDN) 和端口号。|-|[计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|客户端系统|确认客户端驱动程序支持只读路由。|-|[AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -163,7 +163,7 @@ ms.locfileid: "52535290"
   
 -   [Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

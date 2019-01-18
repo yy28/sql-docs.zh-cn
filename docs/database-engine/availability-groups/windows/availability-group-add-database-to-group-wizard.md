@@ -1,6 +1,7 @@
 ---
-title: 可用性组 - 将数据库添加到可用性组向导 | Microsoft Docs
-ms.custom: ''
+title: 使用“可用性组向导”将数据库添加到可用性组
+description: 使用 SQL Server Management Studio 中的“可用性组向导”将数据库添加到 Always On 可用性组。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,34 +16,26 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25bea0c614d55774207692ab275917d7ecdcab2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724245"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211566"
 ---
-# <a name="availability-group---add-database-to-group-wizard"></a>可用性组 - 将数据库添加到可用性组向导
+# <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>使用“可用性组向导”将数据库添加到 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用“将数据库添加到可用性组向导”可帮助你将一个或多个数据库添加到现有的 Always On 可用性组。  
   
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 将次要副本添加到数据库的信息，请参阅 [将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)。  
   
- **本主题内容：**  
-  
--   **开始之前：**  
-  
-     [先决条件和限制](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **若要添加数据库，请使用：**[将数据库添加到可用性组向导 (SQL Server Management Studio)](#SSMSProcedure)  
+
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果你从未向可用性组添加过数据库，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Prerequisites"></a> 先决条件、限制和建议  
+##  <a name="Prerequisites"></a> 先决条件、限制和建议  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -54,15 +47,13 @@ ms.locfileid: "47724245"
   
     -   为了使该向导创建并访问备份，需要指定网络共享。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
   
-     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中创建和配置 AlwaysOn 可用性组。  
+     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用“将数据库添加到可用性组向导”(SQL Server Management Studio)  
- **使用“将数据库添加到可用性组向导”**  
+##  <a name="use-the-new-availability-group-wizard"></a>使用“新建可用性组”向导
   
 1.  在对象资源管理器中，连接到承载可用性组的主副本的服务器实例，然后展开服务器树。  
   
@@ -99,7 +90,7 @@ ms.locfileid: "47724245"
   
 6.  在 **“连接到现有的辅助副本”** 页上，如果承载该可用性组的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例全部作为相同用户帐户中的某个服务运行，则单击 **“全部连接”**。 如果任何服务器实例作为不同帐户下的某个服务运行，则单击每个服务器实例名称右侧的各个 **“连接”** 按钮。  
   
-     有关详细信息，请参阅[连接到现有的辅助副本页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
+     有关详细信息，请参阅[“连接到现有次要副本”页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
 7.  **“验证”** 页验证在此向导中指定的值是否满足新建可用性组向导的要求。 若要进行更改，可以单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击“下一步” 返回到“验证”页，然后单击“重新运行验证”。  
   

@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eec14db312bb6fb2a8fb65bb51e396a4c1be3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be0bccac59c011fc36e8481029d9951cd36cad99
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205396"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 UOW  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  标识分布式事务的工作单元 ID (UOW)。 UOW 是可以从 sys.dm_tran_locks 动态管理视图的 request_owner_guid 列获取的 GUID。 也可以从错误日志中或通过 MS DTC 监视器获取 UOW。 有关监视分布式事务的详细信息，请参阅 MS DTC 文档。  
   
@@ -122,9 +122,9 @@ UOW
  通过重复不带 WITH STATUSONLY 选项的同一 KILL session ID|UOW 语句，可以获得相同的状态报告；但不推荐这样做。 如果在运行新的 KILL 语句之前回滚已完成并且已将 session ID 重新分配给新任务，那么重复 KILL session ID 语句可能会终止新进程。 指定 WITH STATUSONLY 将防止这种情况发生。  
   
 ## <a name="permissions"></a>Permissions  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：** 需要具有 ALTER ANY CONNECTION 权限。 ALTER ANY CONNECTION 包括在 sysadmin 或 processadmin 固定服务器角色的成员身份中。  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** 要求具有 ALTER ANY CONNECTION 权限。 ALTER ANY CONNECTION 包括在 sysadmin 或 processadmin 固定服务器角色的成员身份中。  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]：** 需要具有 KILL DATABASE CONNECTION 权限。 服务器级别主体登录名具有 KILL DATABASE CONNECTION。  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** 需要具有 KILL DATABASE CONNECTION 权限。 服务器级别主体登录名具有 KILL DATABASE CONNECTION。  
   
 ## <a name="examples"></a>示例  
   

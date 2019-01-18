@@ -2,19 +2,19 @@
 title: 使用 DMV 来确定视图的使用情况统计信息和性能
 description: 使用 DMV 来确定视图的使用情况统计信息和性能
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586310"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380658"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 来确定视图的使用情况统计信息和性能
 本文介绍了一些方法和脚本，用于获取使用视图的查询的性能相关信息。 这些脚本的目的是提供在数据库中发现的各种视图的使用指标和性能指标。 
@@ -194,10 +194,4 @@ GO
 ```
 
 ## <a name="see-also"></a>另请参阅
-[动态管理视图和函数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[适用于性能优化的 DMV（视频 - SQL Saturday Pordenone）](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
-[适用于性能优化的 DMV（幻灯片 e 演示 - SQL Saturday Pordenone）](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
-[胶囊形式的 SQL Server 优化（影片 - SQL Saturday Parma）](https://vimeo.com/200980883)    
-[SQL Server 优化概述（幻灯片和演示 - SQL Saturday Parma）](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
-[使用 SQL Server 动态管理视图来优化性能](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
-[SQL Server 2016 最重要的等待类型](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   
+[动态管理视图和函数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

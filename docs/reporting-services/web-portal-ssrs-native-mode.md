@@ -1,25 +1,26 @@
 ---
-title: Web 门户（SSRS 本机模式）| Microsoft Docs
-ms.date: 07/02/2017
+title: 报表服务器的 Web 门户（SSRS 本机模式）| Microsoft Docs
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
+ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711218"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53010288"
 ---
-# <a name="web-portal-ssrs-native-mode"></a>Web 门户（SSRS 本机模式）
+# <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>报表服务器的 Web 门户（SSRS 本机模式）
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services Web 门户是一种基于 Web 的体验，支持查看报表、移动报表和 KPI 以及在报表服务器实例中的各元素间导航。 还可以使用 Web 门户管理单个报表服务器实例。
+Reporting Services 报表服务器的 Web 门户基于 Web 体验。 在门户中，可以查看报表、移动报表、KPI，并浏览报表服务器实例中的元素。 还可以使用 Web 门户管理单个报表服务器实例。
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
@@ -28,23 +29,14 @@ Reporting Services Web 门户是一种基于 Web 的体验，支持查看报表�
 可以使用 Web 门户执行以下任务：
 
 - 查看、搜索、打印和订阅报表。
-
 - 创建、保护和维护文件夹层次结构，以便组织服务器上的项。
-
 - 配置基于角色的安全性，确定对项和操作的访问权限。
-
 - 配置报表执行属性、报表历史记录和报表参数。
-
 - 创建共享计划和共享数据源，以提高计划和数据源连接的可管理性。
-
 - 创建可以将报表展开为大型收件人列表的数据驱动订阅。
-
 - 创建链接报表，以便按不同方式重用现有报表和重新确定其用途。
-
 - 下载常用工具，如报表生成器和移动报表发布服务器。
-
 - [创建 KPI](../reporting-services/working-with-kpis-in-reporting-services.md)。
-
 - 发送反馈或提出功能请求。
 
 使用 Web 门户可以浏览报表服务器文件夹或搜索特定报表。 可以查看报表、报表的常规属性以及在报表历史记录中捕获的报表以前的副本。 根据权限，可能还可以订阅报表，以便将其传递到电子邮件收件箱或文件系统中的共享文件夹。
@@ -63,7 +55,7 @@ Web 门户仅适用于在本机模式下运行的报表服务器。 配置为 Sh
 
 ## <a name="start-and-use-the-web-portal"></a>启动和使用 Web 门户
 
-Web 门户是一种 Web 应用程序，可通过在浏览器窗口的地址栏中键入 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL 将其打开。 启动 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]时，基于你在报表服务器中拥有的权限，所看到的页面、链接和选项会有所不同。 若要执行某项任务，必须为自己分配包括该任务的角色。  如果为某用户分配了具有完整权限的角色，则该用户可以访问用来管理报表服务器的所有应用程序菜单和页。 如果为某用户分配的角色具有查看和运行报表的权限，则该用户只能看到支持这些活动的菜单和页。 对于不同的报表服务器，甚至对于存储在单个报表服务器上的不同报表和文件夹，每个用户可以具有不同的角色分配。
+Web 门户是一种 Web 应用程序，可通过在浏览器窗口的地址栏中键入 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL 将其打开。 启动 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 时，基于在报表服务器中拥有的权限，你所看到的页面、链接和选项会有所不同。 若要执行某项任务，必须为自己分配包括该任务的角色。  如果为某用户分配了具有完整权限的角色，则该用户可以访问用来管理报表服务器的所有应用程序菜单和页。 如果为某用户分配的角色具有查看和运行报表的权限，则该用户只能看到支持这些活动的菜单和页。 对于不同的报表服务器，甚至对于存储在单个报表服务器上的不同报表和文件夹，每个用户可以具有不同的角色分配。
 
 有关角色的详细信息，请参阅 [授予对本机模式报表服务器的权限](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。
 
@@ -104,11 +96,11 @@ Web 门户将项按不同的类别分组。 可用类别如下。
 
 ![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
-与其他资源文件类似，文件将存储在 Reporting Services 内。 选择其中一项会将它们下载到本地桌面。 可以通过将它们上传到报表服务器来保存已做的更改。
+与其他资源文件类似，文件将存储在 Reporting Services 内。 选择其中一项会将它们下载到本地桌面。 可以通过将更改重新上传到报表服务器来保存已做更改。
 
 ## <a name="search-for-items"></a>搜索项目
 
-可以输入搜索术语，然后你将看到你可以访问的所有内容。 结果分为 KPI、报表、数据集和其他项。 然后可以对结果进行交互并将它们添加到你的收藏夹。
+输入搜索术语，并查看可以访问的所有内容。 结果分为 KPI、报表、数据集和其他项。 然后可以对结果进行交互并将它们添加到你的收藏夹。
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 

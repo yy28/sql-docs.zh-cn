@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.openlocfilehash: f2b1ef643fe1d19b0df1ed4efd3b4802789006eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818513"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206186"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>参数
 *OR ALTER*  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  只有在函数已存在时才对其进行有条件地更改。 
  
@@ -345,7 +345,7 @@ RETURNS return_data_type
  ORDER (\<order_clause>) 指定从表值函数中返回结果的顺序。 有关详细信息，请参阅本主题后面的“[在 CLR 表值函数中使用排序顺序](#using-sort-order-in-clr-table-valued-functions)”部分。  
   
  EXTERNAL NAME \<method_specifier> assembly_name.class_name.method_name    
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）
   
  指定创建的函数名称应引用的程序集和方法。  
   
@@ -373,7 +373,7 @@ RETURNS return_data_type
  \<table_type_definition> ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...n ] ) 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
   
  定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。 表始终放在主文件组中。  
   
@@ -397,7 +397,7 @@ RETURNS return_data_type
  指定函数将具有以下一个或多个选项：  
   
  ENCRYPTION  
- **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
   
  指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将 CREATE FUNCTION 语句的原始文本转换为模糊格式。 模糊代码的输出在任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据库文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -585,7 +585,7 @@ INLINE = { ON | OFF }
 ### <a name="computed-column-interoperability"></a>计算列互操作性  
  函数具有下列属性。 这些属性的值确定了函数是否可用于持久化计算列或索引计算列。  
   
-|“属性”|描述|说明|  
+|属性|描述|说明|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|函数是确定性函数还是不确定性函数。|确定性函数中允许本地数据访问。 例如，如果每次使用一组特定输入值和相同数据库状态调用函数时，函数都返回相同结果，则该函数将被标记为确定性函数。|  
 |**IsPrecise**|函数是精确函数还是不精确函数。|不精确函数包含浮点运算之类的运算。|  
@@ -790,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. 创建 CLR 函数  
  此示例会创建 CLR 函数 `len_s`。 在创建该函数之前，程序集 `SurrogateStringFunction.dll` 已在本地数据库中注册。  
   
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83905f449377f02eef8098ff8afdcbf4618ce80f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b487a507dac6a7492f45b2f3dd32df2291bb56cc
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670726"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886682"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>使用具有显式架构的 OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ WITH ( k1 int,
   
 |k1|k2|col3|col4|col5|array_element|  
 |--------|--------|----------|----------|----------|--------------------|  
-|11|*NULL*|"text"|*NULL*|*NULL*|{"k1": 11, "k2": null, "k3": "text"}|  
+|11|*NULL*|"text"|*NULL*|*NULL*|{"k1":11, "k2": null, "k3": "text"}|  
 |21|"text2"|*NULL*|"text4"|{ "data": "text4" }|{"k1": true, "k2": "text2", "k4": { "data": "text4" } }|  
-|31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31, "k2": 32 }|  
-|41|*NULL*|*NULL*|false|{ "data": false }|{"k1": 41, "k2": null,       "k4": { "data": false }    }|  
+|31|"32"|*NULL*|*NULL*|*NULL*|{"k1":31, "k2":32 }|  
+|41|*NULL*|*NULL*|false|{ "data": false }|{"k1":41, "k2": null,       "k4": { "data": false }    }|  
   
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>示例 - 将 JSON 加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
  下面的示例展示了将整个 JSON 对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
@@ -88,10 +88,6 @@ DECLARE @json NVARCHAR(MAX) = '{
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
   
-### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
-  
-若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
-
 ### <a name="microsoft-videos"></a>Microsoft 视频
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：

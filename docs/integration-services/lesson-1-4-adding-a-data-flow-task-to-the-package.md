@@ -11,17 +11,17 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5e73f8578c9ee9be1b30bd95722d9acd0a0e4ca
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e18408d3e96c6b03814beae37238bf52c5c192
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410547"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205896"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>第 1-4 课 - 将数据流任务添加到包
 为源数据和目标数据创建了连接管理器后，下一个任务是在包中添加一个数据流任务。 数据流任务将封装在源和目标之间移动数据的数据流引擎，并提供在移动数据时转换、清除和修改数据的功能。 大部分的数据提取、转换和加载 (ETL) 进程均在数据流任务中完成。  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将数据流从控制流中分隔开来。  
   
 ### <a name="to-add-a-data-flow-task"></a>添加一个数据流任务  

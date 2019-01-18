@@ -11,12 +11,12 @@ ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8fe62a659dce3f672f298c55b7d4308e682c3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac71cce5f8a4fad04ea006c8ea96f0decae9c93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814015"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215776"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>刷新数据（用于 Excel 的 MDS 外接程序）
 
@@ -39,7 +39,7 @@ ms.locfileid: "47814015"
   
 -   如果属性值在 MDS 存储库中发生了更改，工作表中的值将随 MDS 存储库中的值更新。 单元颜色不会更改。  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   在活动工作表中，如果在 MDS 管理的数据之下的行中存在非 MDS 管理的数据，则可能覆盖这些非 MDS 管理的数据。 发生这种情况是由于您刷新了工作表，添加了与非 MDS 管理的数据重叠的 MDS 管理的新数据行。  
 > -   刷新时，将删除 MDS 管理的单元上的注释。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "47814015"
 |任务说明|主题|  
 |----------------------|-----------|  
 |创建与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库的连接。|[连接到 MDS 存储库（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|将 MDS 数据加载到 Excel 中。|[将数据从 Master Data Services 导出到 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|将 MDS 数据加载到 Excel 中。|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 -   [连接（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [概述：将数据导出到 Excel (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [用于 Microsoft Excel 的 Master Data Services 外接程序](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   

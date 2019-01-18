@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536140"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626341"
 ---
 # <a name="sql-injection"></a>SQL 注入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52536140"
   
  以下脚本显示了一个简单的 SQL 注入。 此脚本通过串联硬编码字符串和用户输入的字符串而生成一个 SQL 查询：  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +40,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  用户将被提示输入一个市县名称。 如果用户输入 `Redmond`，则查询将由与下面内容相似的脚本组成：  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  但是，假定用户输入以下内容：  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
  此时，脚本将组成以下查询：  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -86,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   绝不串联未验证的用户输入。 字符串串联是脚本注入的主要输入点。  
   
--   在可能据以构造文件名的字段中，不接受下列字符串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 以及 PRN。  
+-   不接受以下来自可构造文件名的字段中的字符串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 和 PRN。  
   
  如果可能，拒绝包含以下字符的输入。  
   
@@ -101,7 +101,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 ### <a name="use-type-safe-sql-parameters"></a>使用类型安全的 SQL 参数  
  **中的** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集合提供了类型检查和长度验证。 如果使用 **Parameters** 集合，则输入将被视为文字值而不是可执行代码。 使用 **Parameters** 集合的另一个好处是可以强制执行类型和长度检查。 范围以外的值将触发异常。 以下代码段显示了如何使用 **Parameters** 集合：  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +114,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>在存储过程中使用参数化输入  
  存储过程如果使用未筛选的输入，则可能容易受 SQL Injection 攻击。 例如，以下代码容易受到攻击：  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +125,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>在动态 SQL 中使用参数集合  
  如果不能使用存储过程，你仍可使用参数，如以下代码示例所示。  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +136,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>筛选输入  
  筛选输入可以删除转义符，这也可能有助于防止 SQL 注入。 但由于可引起问题的字符数量很大，因此这并不是一种可靠的防护方法。 以下示例可搜索字符串分隔符。  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +146,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>LIKE 子句  
  请注意，如果要使用 `LIKE` 子句，还必须对通配符字符进行转义：  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +155,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>在代码中检查 SQL 注入  
  应审阅调用 `EXECUTE`、 `EXEC`或 `sp_executesql`的所有代码。 可以使用类似如下的查询来帮助您标识包含这些语句的过程。 此查询检查单词 `EXECUTE` 或 `EXEC`后是否存在 1 个、2 个、3 个或 4 个空格。  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -179,12 +179,12 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
   
  使用此方法时，可对 SET 语句进行如下修改：  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +192,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>由数据截断启用的注入  
  如果分配给变量的任何动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 比为该变量分配的缓冲区大，那么它将被截断。 如果攻击者能够通过将意外长度的字符串传递给存储过程来强制执行语句截断，则该攻击者可以操作该结果。 例如，以下脚本创建的存储过程容易受到由截断启用的注入攻击。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +222,7 @@ GO
   
  通过向 128 个字符的缓冲区传递 154 个字符，攻击者便可以在不知道旧密码的情况下为 sa 设置新密码。  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +232,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>使用 QUOTENAME(@variable, '''') 和 REPLACE() 时的截断  
  如果 QUOTENAME() 和 REPLACE() 返回的字符串超过了分配的空间，该字符串将被自动截断。 以下示例中创建的存储过程显示了可能出现的情况。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +269,13 @@ GO
   
  因此，以下语句将把所有用户的密码都设置为在前面的代码中传递的值  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  使用 REPLACE() 时，可以通过超出分配的缓冲区空间来强迫字符串截断。 以下示例中创建的存储过程显示了可能出现的情况。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +314,7 @@ GO
   
  以下计算涵盖所有情况：  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +323,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>使用 QUOTENAME(@variable, ']') 时的截断  
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象的名称被传递给使用 `QUOTENAME(@variable, ']')`形式的语句时，可能发生截断。 下面的示例显示了这种情况。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  

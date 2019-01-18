@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413784"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207786"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 语句 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -84,10 +84,10 @@ FROM <backup_device>
 ## <a name="result-sets"></a>结果集  
  对于给定设备上的每个备份，服务器均发送一行包含以下各列的标头信息：  
   
-> [!NOTE]  
+> [!NOTE]
 >  RESTORE HEADERONLY 会查看介质上的所有备份集。 因此，使用高容量磁带机时，生成此结果集可能需要一些时间。 若要快速查看介质而不获取有关每个备份集的信息，请使用 RESTORE LABELONLY 或指定 FILE = backup_set_file_number。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  由于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式的固有特点，来自其他软件程序的备份集可以与 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份集在同一介质上占有空间。 在由 RESTORE HEADERONLY 返回的结果集中，每一个来自其他软件程序的备份集都占用一行。  
   
 |列名|数据类型|SQL Server 备份集说明|  
@@ -121,7 +121,7 @@ FROM <backup_device>
 |**SoftwareVersionMinor**|**int**|创建备份集的服务器次要版本号。|  
 |**SoftwareVersionBuild**|**int**|创建备份集的服务器内部版本号。|  
 |**MachineName**|**nvarchar(128)**|执行备份操作的计算机名称。|  
-|**标志**|**int**|设置为 1 时单个标志位的含义：<br /><br /> 1 = 日志备份包含大容量日志操作。<br /><br /> 2 = 快照备份。<br /><br /> 4 = 备份时数据库为只读。<br /><br /> 8 = 备份时数据库处于单用户模式。<br /><br /> 16 = 备份包含备份校验和。<br /><br /> 32 = 备份时数据库损坏，但要求备份操作忽略错误继续执行。<br /><br /> 64 = 结尾日志备份。<br /><br /> 128 = 包含不完整元数据的结尾日志备份。<br /><br /> 256 = 包含 NORECOVERY 的结尾日志备份。<br /><br /> 重要提示：我们建议使用单个布尔值列（下面列出了以 HasBulkLoggedData 开始且以 IsCopyOnly 结束的列）代替 Flags。|  
+|**标志**|**int**|设置为 1 时单个标志位的含义：<br /><br /> 1 = 日志备份包含大容量日志操作。<br /><br /> 2 = 快照备份。<br /><br /> 4 = 备份时数据库为只读。<br /><br /> 8 = 备份时数据库处于单用户模式。<br /><br /> 16 = 备份包含备份校验和。<br /><br /> 32 = 备份时数据库损坏，但要求备份操作忽略错误继续执行。<br /><br /> 64 = 结尾日志备份。<br /><br /> 128 = 包含不完整元数据的结尾日志备份。<br /><br /> 256 = 包含 NORECOVERY 的结尾日志备份。<br /><br /> **重要提示：** 建议使用单个布尔值列（下面列出了以 HasBulkLoggedData 开始且以 IsCopyOnly 结束的列）代替 Flags。|  
 |**BindingID**|**uniqueidentifier**|数据库的绑定 ID。 这与 sys.database_recovery_statusdatabase_guid 相对应。 恢复数据库时，会分配一个新值。 另请参阅 FamilyGUID（见下方）。|  
 |**RecoveryForkID**|**uniqueidentifier**|结尾恢复分支的 ID。 此列与 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 表中的 last_recovery_fork_guid 相对应。<br /><br /> 对于数据备份，RecoveryForkID 等于 FirstRecoveryForkID。|  
 |**排序规则**|**nvarchar(128)**|数据库使用的排序规则。|  

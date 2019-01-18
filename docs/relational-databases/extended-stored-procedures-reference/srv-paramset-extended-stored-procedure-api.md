@@ -20,12 +20,12 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 712bdce381d44153e8bf9b0e6c72292cfa1cef72
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f068bbf1196f655f9afd12a5f13fe4d032a862d8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663756"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589042"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,14 +76,14 @@ len
   
 |新数据类型|返回数据长度|  
 |--------------------|------------------------|  
-|**BITN**|**NULL：***len* = 0, data = IG, RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
-|**BIGVARCHAR**|**NULL：***len* = 0, data = IG, RET = 1<br /><br /> **ZERO：***len* = IG, data = IG, RET = 0<br /><br /> **>=255：***len* = max8k, data = valid, RET = 0<br /><br /> **<255：***len* = <8k, data = valid, RET = 1|  
-|**BIGCHAR**|**NULL：***len* = 0, data = IG, RET = 1<br /><br /> **ZERO：***len* = IG, data = IG, RET = 0<br /><br /> **>=255：***len* = max8k, data = valid, RET = 0<br /><br /> **<255：***len* = <8k, data = valid, RET = 1|  
-|**BIGBINARY**|**NULL：***len* = 0, data = IG, RET = 1<br /><br /> **ZERO：***len* = IG, data = IG, RET = 0<br /><br /> **>=255：***len* = max8k, data = valid, RET = 0<br /><br /> **<255：***len* = <8k, data = valid, RET = 1|  
-|**BIGVARBINARY**|**NULL：***len* = 0, data = IG, RET = 1<br /><br /> **ZERO：***len* = IG, data = IG, RET = 0<br /><br /> **>=255：***len* = max8k, data = valid, RET = 0<br /><br /> **<255：***len* = <8k, data = valid, RET = 1|  
-|NCHAR|**NULL：***len* = 0, data = IG, RET = 1<br /><br /> **ZERO：***len* = IG, data = IG, RET = 0<br /><br /> **>=255：***len* = max8k, data = valid, RET = 0<br /><br /> **<255：***len* = <8k, data = valid, RET = 1|  
-|NVARCHAR|**NULL：***len* = 0, data = IG, RET = 1<br /><br /> **ZERO：***len* = IG, data = IG, RET = 0<br /><br /> **>=255：***len* = max8k, data = valid, RET = 0<br /><br /> **<255：***len* = <8k, data = valid, RET = 1|  
-|**NTEXT**|**NULL：***len* = IG, data = IG, RET = 0<br /><br /> **ZERO：***len* = IG, data = IG, RET = 0<br /><br /> **>=255：***len* = IG, data = IG, RET = 0<br /><br /> **\<255：** *len* = IG, data = IG, RET = 0|  
+|**BITN**|**NULL：**_len_ = 0, data = IG, RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|**BIGVARCHAR**|**NULL：**_len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：**_len_ = IG, data = IG, RET = 0<br /><br /> **>=255：**_len_ = max8k, data = valid, RET = 0<br /><br /> **<255：**_len_ = <8k, data = valid, RET = 1|  
+|**BIGCHAR**|**NULL：**_len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：**_len_ = IG, data = IG, RET = 0<br /><br /> **>=255：**_len_ = max8k, data = valid, RET = 0<br /><br /> **<255：**_len_ = <8k, data = valid, RET = 1|  
+|**BIGBINARY**|**NULL：**_len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：**_len_ = IG, data = IG, RET = 0<br /><br /> **>=255：**_len_ = max8k, data = valid, RET = 0<br /><br /> **<255：**_len_ = <8k, data = valid, RET = 1|  
+|**BIGVARBINARY**|**NULL：**_len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：**_len_ = IG, data = IG, RET = 0<br /><br /> **>=255：**_len_ = max8k, data = valid, RET = 0<br /><br /> **<255：**_len_ = <8k, data = valid, RET = 1|  
+|NCHAR|**NULL：**_len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：**_len_ = IG, data = IG, RET = 0<br /><br /> **>=255：**_len_ = max8k, data = valid, RET = 0<br /><br /> **<255：**_len_ = <8k, data = valid, RET = 1|  
+|NVARCHAR|**NULL：**_len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：**_len_ = IG, data = IG, RET = 0<br /><br /> **>=255：**_len_ = max8k, data = valid, RET = 0<br /><br /> **<255：**_len_ = <8k, data = valid, RET = 1|  
+|**NTEXT**|**NULL：**_len_ = IG, data = IG, RET = 0<br /><br /> **ZERO：**_len_ = IG, data = IG, RET = 0<br /><br /> **>=255：**_len_ = IG, data = IG, RET = 0<br /><br /> **\<255：** _len_ = IG, data = IG, RET = 0|  
 |RET = srv_paramset 的返回值||  
 |IG = 将忽略值||  
 |valid = 任何有效的数据指针||  
@@ -98,7 +98,7 @@ len
  使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://www.microsoft.com/en-us/msrc?rtc=1)。  
   
 ## <a name="see-also"></a>另请参阅  
  [srv_paramsetoutput（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  

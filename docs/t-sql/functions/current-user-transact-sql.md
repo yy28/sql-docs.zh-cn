@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de6b10ad7853d34dd1aeaf0248c33e72146d6c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a21adcc5d53bb3685de95f9916487fce486ca104
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819215"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826062"
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,12 +111,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 从模拟上下文使用 CURRENT_USER  
-在此示例中，用户 `Wanida` 执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码。
+在此示例中，用户 `Wanida` 执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码来模拟用户“Arnalfo”。
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Wanida';  
+EXECUTE AS USER = 'Arnalfo';  
 GO  
 SELECT CURRENT_USER;  
 GO  

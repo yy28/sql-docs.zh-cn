@@ -1,6 +1,7 @@
 ---
-title: 监视可用性组 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 使用 Transact-SQL 监视可用性组 (T-SQL)
+description: 有关如何使用 TRANSACT-SQL (T-SQL) 监视 AlwaysOn 可用性组的说明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51b67b193847ea554052d26ac55c8e9b7919478f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832355"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209426"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>监视可用性组 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "47832355"
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) 函数  
  返回有关是否已启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的服务器属性信息；如果已启用，则返回其在服务器实例上是否启动的信息。  
   
- **列名：** IsHadrEnabled、HadrManagerStatus  
+ **列名：** IsHadrEnabled 和 HadrManagerStatus  
   
 ##  <a name="WSFC"></a> 监视 WSFC 群集上的可用性组  
  若要监视 Windows Server 故障转移群集 (WSFC) 群集（承载启用了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的本地服务器实例），请使用以下视图：  
@@ -188,7 +189,7 @@ ms.locfileid: "47832355"
 >  主副本位置是可用性组的权威来源。  
   
 > [!NOTE]  
->  有关可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 性能计数器（ **SQLServer:Database Replica** 性能对象）的信息，请参阅 [SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要监视可用性数据库上的事务日志活动，请使用 **SQLServer:Databases** 性能对象的以下计数器： **日志刷新写入时间(秒)**、 **日志刷新次数/秒**、 **日志池缓存未命中数/秒**、 **日志池磁盘读取次数/秒**和 **日志池请求数/秒**。有关详细信息，请参阅 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
+>  有关可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 性能计数器（ **SQLServer:Database Replica** 性能对象）的信息，请参阅 [SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要监视可用性数据库的事务日志活动，请使用以下 SQLServer:Databases 性能对象计数器：“日志刷新写入时间(毫秒)”、“日志刷新次数/秒”、“日志池缓存失误数/秒”、“日志池磁盘读取数/秒”和“日志池请求数/秒”。有关详细信息，请参阅 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   
 ##  <a name="AGlisteners"></a> 监视可用性组侦听器  
  若要监视 WSFC 群集子网上的可用性组侦听器，请使用以下视图：  

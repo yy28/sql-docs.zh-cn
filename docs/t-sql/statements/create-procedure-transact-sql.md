@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 845031e6002ef992b6f04b053bde9955896591fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512121"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202896"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>参数
 OR ALTER  
- 适用范围：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。  
+ **适用对象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。  
   
  如果过程已存在，则更改该过程。
  
@@ -220,7 +220,7 @@ RECOMPILE
  若要指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]放弃过程内单个查询的查询计划，请在该查询的定义中使用 RECOMPILE 查询提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ENCRYPTION  
- 适用范围：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **适用对象**：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 CREATE PROCEDURE 语句的原始文本转换为模糊格式。 模糊代码的输出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索已解密的过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -236,7 +236,7 @@ EXECUTE AS 子句
  有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
 FOR REPLICATION  
- 适用范围：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **适用对象**：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定为复制创建该过程。 因此，它不能在订阅服务器上执行。 使用 FOR REPLICATION 选项创建的过程可用作过程筛选器，且仅在复制过程中执行。 如果指定了 FOR REPLICATION，则无法声明参数。 对于 CLR 过程，不能指定 FOR REPLICATION。 对于使用 FOR REPLICATION 创建的过程，忽略 RECOMPILE 选项。  
   
@@ -455,7 +455,7 @@ GO
   
 |性能监视器对象名|性能监视器计数器名称|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: Plan Cache Object|Cache Hit Ratio|  
+|SQLServer:Plan Cache Object|Cache Hit Ratio|  
 ||Cache Pages|  
 ||Cache Object Counts*|  
   

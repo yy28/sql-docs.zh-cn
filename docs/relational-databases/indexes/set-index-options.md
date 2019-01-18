@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392881"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588101"
 ---
 # <a name="set-index-options"></a>设置索引选项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52392881"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **修改索引的属性，使用：**  
   
@@ -55,9 +55,9 @@ ms.locfileid: "52392881"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   使用 ALTER INDEX 语句中的 SET 子句，将以下选项立即应用到索引：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
+-   以下选项通过使用 ALTER INDEX 语句中的 SET 子句，立即应用于索引：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
   
--   使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重新生成索引时，可以设置以下选项：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING（仅 CREATE INDEX）。  
+-   通过使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING，可以在重新生成索引时设置下列选项：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING（仅 CREATE INDEX）。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52392881"
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”菜单上，选择“保存table_name”。  
+8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性  
   

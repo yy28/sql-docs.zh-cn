@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699663"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980073"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > 如果想要对整个数据库利用数据库兼容性级别 140，但有理由优先选择映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的基数估计模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是其关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 >  
-> 有关如何评估 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 注意，本文是指兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但同样的方法也适用于转到 140 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+> 有关如何评估 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)。 注意，本文是指兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但同样的方法也适用于转到 140 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 执行以下查询可确定连接到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。  
   
@@ -255,7 +255,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |当视图或内联表值函数中包含 xQuery 方法时，不对该方法所需的 SET 选项进行验证。|当视图或内联表值函数中包含 xQuery 方法时，对该方法所需的 SET 选项进行验证。 如果该方法的 SET 选项设置不正确，将引发一个错误。|Low|  
 |包含行尾字符（回车符和换行符）的 XML 属性值不根据 XML 标准进行规范化。 即返回回车符和换行符，而不是单个换行符。|包含行尾字符（回车符和换行符）的 XML 属性值会根据 XML 标准进行规范化。 也就是说，外部已分析实体（包括文档实体）中的所有换行符都会在输入时进行规范化，方法是将两字符序列 #xD #xA 和后面没有跟 #xA 的所有 #xD 都转换为单个 #xA 字符。<br /><br /> 使用属性来传输包含行尾字符的字符串值的应用程序接收到的这些字符将和提交时有所不同。 若要避免规范化过程，请使用 XML 数字字符实体对所有行尾字符进行编码。|Low|  
 |`ROWGUIDCOL` 和 `IDENTITY` 列属性可能错误地命名为约束。 例如，`CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` 语句可以执行，但约束名不会保留，也无法让用户访问。|`ROWGUIDCOL` 和 `IDENTITY` 列属性不能命名为约束。 返回错误 156。|Low|  
-|使用双向赋值（如 `UPDATE T1 SET @v = column_name = <expression>`）来更新列会产生意外后果，因为在语句执行过程中，可以在其他子句（如 `WHER` 和 `ON` 子句）中使用变量的实时值，而不是使用语句起始值。 这会导致谓词的含义无法预测地逐行变化。<br /><br /> 只有在兼容性级别设置为 90 时，此行为才适用。|使用双向赋值来更新列会产生预期的结果，因为在语句执行过程中，只会访问列的语句起始值。|Low|  
+|使用双向赋值（如 `UPDATE T1 SET @v = column_name = <expression>`）来更新列会产生意外后果，因为在语句执行过程中，可以在其他子句（如 `WHERE` 和 `ON` 子句）中使用变量的实时值，而不是使用语句起始值。 这会导致谓词的含义无法预测地逐行变化。<br /><br /> 只有在兼容性级别设置为 90 时，此行为才适用。|使用双向赋值来更新列会产生预期的结果，因为在语句执行过程中，只会访问列的语句起始值。|Low|  
 |请参阅下面“示例”部分中的“示例 E”。|请参阅下面“示例”部分中的“示例 F”。|Low|  
 |ODBC 函数 {fn CONVERT()} 使用语言的默认日期格式。 对于有些语言，默认格式为 YDM，这会导致在将 CONVERT() 与要求使用 YMD 格式的其他函数（如 `{fn CURDATE()}`）结合使用时出现转换错误。|在转换为 ODBC 数据类型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP 时，ODBC 函数 `{fn CONVERT()}` 使用样式 121（一种独立于语言的 YMD 格式）。|Low|  
 |日期时间内部函数（如 DATEPART）不需要字符串输入值，即可成为有效的日期时间文字。 例如，`SELECT DATEPART (year, '2007/05-30')` 会编译成功。|日期时间内部函数（如 `DATEPART`）需要字符串输入值，才能成为有效的日期时间文字。 在使用无效的日期时间文字时，会返回错误 241。|Low|  

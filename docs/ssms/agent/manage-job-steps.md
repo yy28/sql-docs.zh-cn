@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699066"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211586"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "51699066"
   
 -   命令成功完成时返回的进程退出代码。  
   
--   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是该程序的名称和用于该程序的参数，例如： **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是程序名称以及程序参数，例如：C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"  
   
     > [!NOTE]  
     > 如果系统路径或执行作业步骤的用户的路径指定的目录中不包含此可执行程序，则必须提供可执行程序的完整路径。  
@@ -112,7 +112,7 @@ ms.locfileid: "51699066"
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 脚本作业步骤  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，ActiveX 脚本作业步骤将从 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
   
 创建 ActiveX 脚本作业步骤时，必须执行下列操作：  

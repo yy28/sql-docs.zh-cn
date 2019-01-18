@@ -20,12 +20,12 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5acd726764c2b672287af418f088963a4a5acef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711885"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980543"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ property
 |ReplTest1|描述|返回的值|  
 |---|---|---|
 |**AllowsNull**|允许空值。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
-|**ColumnId**|对应于 sys.columns.column_id 的列 ID 值。|列 ID<br /><br /> 请注意：查询多列时，列 ID 值的序列中可能出现间隔。|  
+|**ColumnId**|对应于 sys.columns.column_id 的列 ID 值。|列 ID<br /><br /> **注意：** 查询多列时，列 ID 值的序列中可能出现间隔。|  
 |**FullTextTypeColumn**|表中的 TYPE COLUMN，其中包含 column 的文档类型信息。|列名称表达式的全文 TYPE COLUMN 的 ID，作为此函数的第二个参数传递。|  
 |**GeneratedAlwaysType**|系统生成的列值。 对应于 sys.columns.generated_always_type|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：有时生成<br /><br /> 1：始终在行首生成<br /><br /> 2：始终在行末生成|  
 |**IsColumnSet**|列为列集。 有关详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
@@ -61,7 +61,7 @@ property
 |**IsCursorType**|过程参数类型为 CURSOR。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsDeterministic**|列是确定性列。 此属性只适用于计算列和视图列。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。 非计算列或视图列。|  
 |**IsFulltextIndexed**|列已注册为全文检索。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
-|**IsHidden**|系统生成的列值。 对应于 sys.columns.is_hidden|**适用范围**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：未隐藏<br /><br /> 1：已隐藏|  
+|**IsHidden**|系统生成的列值。 对应于 sys.columns.is_hidden|**适用范围**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不隐藏<br /><br /> 1：Hidden|  
 |IsIdentity|列使用 IDENTITY 属性。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |IsIdNotForRepl|列检查 IDENTITY_INSERT 设置。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsIndexable**|可以对列进行索引。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  

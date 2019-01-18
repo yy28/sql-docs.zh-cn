@@ -18,12 +18,12 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f83a4174fb599170e466a28ab06eb0d2772fd604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b73851cdfdf180f3acffc8892d757b0f46abe99d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391352"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980293"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "52391352"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  如果 distance 不是数字 (NAN) 或如果 distance 是正或负无穷大，则该方法将引发 ArgumentException。  如果 tolerance 为零 (0) 而不是数字 (NaN)、负数或正/负无穷大，则该方法也将引发 ArgumentException。  
@@ -69,7 +69,7 @@ ms.locfileid: "52391352"
   
  在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException：  
   
- 0.999 \* π * minorAxis \* minorAxis / majorAxis （~0.999 \* 1/2 地球的周长）  
+ 0.999 \* π * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 地球的周长）  
   
  理论缓冲区与计算缓冲区之间的误差为 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 tolerance 参数的值。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
   

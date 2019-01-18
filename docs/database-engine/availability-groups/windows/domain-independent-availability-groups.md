@@ -1,6 +1,7 @@
 ---
-title: 域独立可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 创建域独立可用性组
+description: 创建使用工作组群集的可用性组的步骤。 这使 SQL Server 2016（及更高版本）能够在不需要 Active Directory 域服务的 WSFC 基础上部署 AlwaysOn 可用性组，因此每个服务器不需要属于相同域。
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415074"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211906"
 ---
-# <a name="domain-independent-availability-groups"></a>域独立可用性组
+# <a name="create-a-domain-independent-availability-group"></a>创建域独立可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 AlwaysOn 可用性组 (AG) 需要一个基础 Windows Server 故障转移群集 (WSFC)。 通过 Windows Server 2012 R2 部署 WSFC 始终要求加入 WSFC（也称为节点）的服务器都联接到相同域。 有关 Active Directory 域服务 (AD DS) 的详细信息，请参阅[此处](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)。

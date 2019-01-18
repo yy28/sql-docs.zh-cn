@@ -20,16 +20,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7ddca2a5f33e26cb60a9e45068fcaacc10a294
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 302ad4ce50e3e1bd1b63bd734dcdc4e88cb83fdc
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506571"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380728"
 ---
 # <a name="statistics"></a>统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52506571"
 
 有关详细信息，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下三个步骤从已排序的列值集创建直方图：
 
-- **直方图初始化**：在第一步中，处理始于排序集开始处的一个值序列，并收集 range_high_key、equal_rows、range_rows 和 distinct_range_rows 的最多 200 个值（在此步骤中，range_rows 和 distinct_range_rows 的始终为零）。 已用尽所有输入或已找到 200 个值时，结束第一步。 
+- **直方图初始化**：在第一步中，处理始于排序集开始处的一个值序列，并收集 range_high_key、equal_rows、range_rows 和 distinct_range_rows 的最多 200 个值（在此步骤中，range_rows 和 distinct_range_rows 始终为零）。 已用尽所有输入或已找到 200 个值时，结束第一步。 
 - **使用 Bucket 合并进行扫描**：第二步中，按排序顺序处理从统计信息键前导列算起的每个额外值；将每个相继值添加到最后一个范围或在末尾创建一个新范围（这可能是因输入值已排序所致）。 如果创建了一个新范围，则一对现有相邻范围折叠为单个范围。 选择这对范围以最大限度减少信息丢失。 此方法使用最大差异算法使直方图中的梯级数减至最少，并同时最大化边界值之间的差异。 折叠后，梯级数在整个步骤中保持为 200。
 - **直方图合并**：第三步中，如果未丢失大量信息，可能折叠更多范围。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 因此，即使列包含超过 200 个唯一值，直方图具有的梯级数可能少于 200。 对于仅包含唯一值的列，合并的直方图具有三个梯级（最小梯级数）。
 
@@ -200,7 +200,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>查询从数据的子集中选择数据  
 在查询优化器为单个列和索引创建统计信息时，它为所有行中的值创建统计信息。 在查询从行的某一子集中选择数据时，这一行子集具有唯一的数据分布，筛选统计信息可以改进查询计划。 可以通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句并在此语句中用 [WHERE](../../t-sql/queries/where-transact-sql.md) 子句定义筛选器谓词表达式来创建筛选统计信息。  
   
-例如，使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 时，`Production.Product` 表中的每种产品属于 `Production.ProductCategory` 表中的以下四个类别之一：Bikes（自行车）、Components（部件）、Clothing（服装）和 Accessories（附件）。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
+例如，使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 时，`Production.Product` 表中的每种产品都属于 `Production.ProductCategory` 表中的以下四个类别之一：自行车、组件、服装或附件。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
   
 使用自行车为例，针对所有自行车重量的筛选统计信息将向查询优化器提供更精确的统计信息，并且与全表统计信息或者针对 Weight 列的不存在的统计信息相比，可以改进查询计划质量。 该自行车重量列很适合于筛选统计信息，但如果重量查找的数目相对较少，则不见得适合于筛选索引。 筛选索引所提供的在查找方面的性能提升可能抵不上将筛选索引添加到数据库所导致的额外维护和存储成本。  
   

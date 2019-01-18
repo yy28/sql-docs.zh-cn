@@ -1,6 +1,7 @@
 ---
-title: 故障排除：主要副本的更改未反映在次要副本上（Always On 可用性组 - SQL Server）| Microsoft Docs
-ms.custom: ag-guide
+title: 确定更改在可用性组的辅助副本上不可见的原因 - SQL Server
+ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+ms.custom: ag-guide,seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3604871a67e4d5f642015eab07ca11e301ae286c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feed1ad23a72ef00d264994373e0ef23f4d1c8bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803077"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203476"
 ---
-# <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>故障排除：主要副本的更改未反映在次要副本上
+# <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>确定对主要副本的更改在 Always On 可用性组的次要副本上未得到反映的原因
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。 这种情况下，假定可用性的同步状态正常。 大多数情况下，此问题几分钟后可自行解决。  
   

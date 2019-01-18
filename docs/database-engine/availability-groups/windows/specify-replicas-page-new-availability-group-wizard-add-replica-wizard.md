@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605437"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212476"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51605437"
  如果“可用性副本”网格未列出计划用于托管次要副本的服务器实例，请单击“添加副本”按钮。 如果在混合 IT 环境中配置可用性组（请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)），则可单击“添加 Azure 副本”按钮以在 Windows Azure 中创建具有次要副本的虚拟机。  
   
  **初始角色**  
- 指示新副本最初将执行的角色： **主** 或 **辅助**。  
+ 指示新副本将执行的初始角色：主要或辅助密钥。  
   
  **自动故障转移(最多 3 个)**  
  仅当您希望此可用性副本成为自动故障转移伙伴时，才选中此复选框。 要配置自动故障转移，您必须为初始主副本和一个辅助副本选中此选项。 这两个副本将同时使用同步提交可用性模式。 只有三个副本才能支持自动故障转移。  
@@ -123,7 +123,7 @@ ms.locfileid: "51605437"
  指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
 > [!IMPORTANT]  
->  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)概念。  
+>  没有实施备份首选项设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ### <a name="replica-backup-priorities-grid"></a>“副本备份优先级”网格  
  使用 **“副本备份优先级”** 网格可为可用性组的每个副本指定备份优先级。 该网格包含以下各列：  
@@ -189,9 +189,9 @@ ms.locfileid: "51605437"
  **子网**  
  如果你选择“DHCP”作为网络模式，则使用“子网”下拉列表为承载可用性组的可用性副本的子网选择地址。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在定义可用性组侦听器后，我们强烈建议您执行以下操作：  
->   
+> 
 >  -   请求您的网络管理员将该侦听器的 IP 地址保留为专用。 将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
 > -   将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
   

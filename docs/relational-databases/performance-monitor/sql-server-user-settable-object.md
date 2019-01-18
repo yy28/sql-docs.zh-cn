@@ -5,27 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: cb3c412361acf4e3c059f902c2fc0ae498601d36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a065225cdabe601d0e56323e06bf12fa3abc8847
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522993"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380468"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server User Settable 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   通过 Microsoft **中的** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象可以创建自定义计数器实例。 自定义计数器实例用于监视服务器上现有计数器没有监视到的方面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库唯一具有的组件（例如，记录的客户定单数或产品目录）。  
   
- **User Settable** 对象包含 10 个 Query 计数器实例：从用户计数器 1  到用户计数器 10 。 这些计数器映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程 **sp_user_counter1** 到 **sp_user_counter10**。 由于这些存储过程由用户应用程序执行，因此，这些存储过程设置的值显示在系统监视器中。 计数器可以监视任何单一的整型值，例如，用于计算某产品在一天中获得的订单数的存储过程。  
+ “User Settable”对象包含 10 个查询计数器实例：“用户计数器 1”到“用户计数器 10”。 这些计数器映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程 **sp_user_counter1** 到 **sp_user_counter10**。 由于这些存储过程由用户应用程序执行，因此，这些存储过程设置的值显示在系统监视器中。 计数器可以监视任何单一的整型值，例如，用于计算某产品在一天中获得的订单数的存储过程。  
   
 > [!NOTE]  
 >  系统监视器不会自动轮询用户计数器存储过程。 必须由一个用户应用程序明确执行用户计数器存储过程，以更新计数器值。 可以使用触发器自动更新计数器值。 例如，要创建一个计数器来监视某表中的行数，可以针对执行以下语句的表创建 INSERT 和 DELETE 触发器： `SELECT COUNT(*) FROM table`。 每当由于对表执行了 INSERT 或 DELETE 操作而激发了触发器时，系统监视器计数器就会自动更新。  

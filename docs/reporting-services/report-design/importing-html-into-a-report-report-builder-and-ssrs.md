@@ -1,19 +1,21 @@
 ---
 title: 将 HTML 导入报表（报表生成器和 SSRS）| Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: 了解如何使用文本框向报表中插入从数据集字段中检索到的 HTML 格式的文本。
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ee3c9ffa00fcb76f4b167b5f535099b9f8c57ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8279a0ea362cd6b85045f3ffe3d7ce0caf1ab013
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029726"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214848"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>将 HTML 导入报表（报表生成器和 SSRS）
   可以使用文本框向报表中插入从数据集字段中检索到的 HTML 格式的文本。 文本可以来自于其计算结果为正确格式的 HTML 的任何简单或复杂表达式。 格式化文本可以呈现为支持的所有输出格式，包括 PDF。  
@@ -25,10 +27,7 @@ ms.locfileid: "50029726"
 > [!NOTE]  
 >  导入包含 HTML 标记的文本时，文本框必须始终首先分析数据。 由于仅支持 HTML 标记的子集，因此在呈现报表中显示的 HTML 可能不同于您的原始 HTML。  
   
- 若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+ 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 ## <a name="supported-html-tags"></a>支持的 HTML 标记  
  以下是作为占位符文本定义时将呈现为 HTML 标记的完整列表：  
@@ -37,7 +36,7 @@ ms.locfileid: "50029726"
   
 -   字体：\<FONT>  
   
--   标题、样式和块元素：\<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
+-   标头、样式和块元素：\<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
   
 -   文本格式：\<B>、\<I>、\<U>、\<S>  
   
@@ -63,8 +62,6 @@ ms.locfileid: "50029726"
     -   仅支持采用绝对 CSS 长度单位的有效 RDL 大小值。 支持的单位为：in、cm、mm、pt、pc。  
   
     -   忽略相对 CSS 长度单位，不支持它们。 不支持的单位包括 em、ex、px、%、rem。  
-  
-     有关 CSS 单位的详细信息，请参阅：[CSS 值和单位参考](https://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (https://msdn.microsoft.com/library/ms531211(VS.85).aspx)。  
   
 -   color  
   

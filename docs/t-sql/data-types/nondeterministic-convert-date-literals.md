@@ -13,12 +13,12 @@ ms.author: mikeray
 ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7412b6ee9ad3b551fb91200c7d3f45f3287f6780
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255647"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783359"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>文字日期字符串转换为日期值的不确定性转换
 
@@ -28,7 +28,7 @@ ms.locfileid: "52255647"
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 示例：波兰语中的月份名称
+## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 示例：Polish 中为 Month name
 
 - `SET LANGUAGE Polish;`
 
@@ -75,7 +75,7 @@ SL_Croatian
 
 如果指定为 ymd，则无法保证输出的结果是什么。 “2018”的数值太大无法表示为一天。
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>特定国家/地区
@@ -124,7 +124,7 @@ YMD-Interpretation--?--NotGuaranteed
 
 CAST 和 CONVERT 文档文章列出了可以与 CONVERT 函数一起使用以确定性地控制日期转换的显式代码。 每个月这篇文章都有最高的页面浏览量。
 
-- [CAST 和 CONVERT (Transact SQL)：日期和时间样式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST 和 CONVERT (Transact-SQL)：Date 和 Time 样式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
 - [CAST 和 CONVERT (Transact-SQL)：某些日期时间的转换具有不确定性](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
@@ -137,7 +137,7 @@ CAST 和 CONVERT 文档文章列出了可以与 CONVERT 函数一起使用以确
 
 #### <a name="unicode"></a>Unicode
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 非 Unicode 字符数据在排序规则间的转换也被视为具有不确定性。
 

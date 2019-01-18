@@ -1,6 +1,7 @@
 ---
-title: 创建可用性组 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 使用 Transact-SQL (T-SQL) 创建可用性组
+description: '使用 Transact-SQL (T-SQL) 创建 AlwaysOn 可用性组的步骤。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44944c4dcc4c3f4b8cc45ee6f3ba57863316b9de
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512502"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213016"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>创建可用性组 (Transact-SQL)
+# <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 创建 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在启用了 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上创建和配置可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
   
@@ -30,13 +31,13 @@ ms.locfileid: "52512502"
   
      [先决条件](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
      [任务和相应 Transact-SQL 语句摘要](#SummaryTsqlStatements)  
   
--   **若要创建和配置可用性组，请使用：**  [Transact-SQL](#TsqlProcedure)  
+-   **若要创建和配置可用性组，请使用：**[Transact-SQL](#TsqlProcedure)  
   
--   **例如：**  [配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)  
+-   **示例：**[配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -73,7 +74,7 @@ ms.locfileid: "52512502"
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 创建和配置可用性组  
   
 > [!NOTE]  
->  有关包含上述各 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的代码示例的配置过程示例，请参阅 [示例：配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)。  
+>  对于包含每个这些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句代码示例的示例配置过程，请参阅[示例：配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)。  
   
 1.  连接到要承载主副本的服务器实例。  
   
@@ -81,9 +82,9 @@ ms.locfileid: "52512502"
   
 3.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-4.  对于可用性组中的每个数据库，通过使用 RESTORE WITH NORECOVERY 还原主数据库的最近的备份，创建辅助数据库。 有关详细信息，请参阅 [示例：使用 Windows 身份验证设置可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)，从还原数据库备份的步骤开始。  
+4.  对于可用性组中的每个数据库，通过使用 RESTORE WITH NORECOVERY 还原主数据库的最近的备份，创建辅助数据库。 有关详细信息，请参阅[示例：使用 Windows 身份验证设置可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)，从还原数据库备份的步骤开始。  
   
-5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
 ##  <a name="ExampleConfigAGWinAuth"></a> 示例：配置使用 Windows 身份验证的可用性组  
  此示例创建一个示例 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 配置过程，该过程使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 设置使用 Windows 身份验证的数据库镜像端点并且创建和配置一个可用性组及其辅助数据库。  
@@ -527,17 +528,17 @@ GO
   
 -   **博客：**  
   
-     [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第二部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 2 部分：使用 Always On 生成关键任务高可用性解决方案）  
   
 -   **白皮书：**  
   

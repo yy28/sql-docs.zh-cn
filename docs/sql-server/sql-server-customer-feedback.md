@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525206"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979643"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>配置 SQL Server 以向 Microsoft 发送反馈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ AND instance_name = '_Total'
     
     注册表项名称 = CustomerFeedback
     
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
     
     {InstanceID} 是指实例类型和实例，如以下示例所示：
 
@@ -91,18 +91,18 @@ AND instance_name = '_Total'
     
     注册表项名称 = CustomerFeedback
     
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 的版本，例如，140 表示 SQL Server 2017
 
-- 对于 SQL Server Management Studio：
+- 对于 SQL Server Management Studio 17：
   
-    子项 = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    子项 = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    注册表项名称 = CustomerFeedback
+    注册表项名称 = UserFeedbackOptIn
 
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
 
     此外，SSMS 17.x 基于 Visual Studio 2015 shell，且 Visual Studio 安装默认支持客户反馈。  
 
@@ -114,6 +114,13 @@ AND instance_name = '_Total'
 
     这些注册表子项上基于注册表的组策略适用于 SQL Server 2017 使用情况数据收集。
 
+- 对于 SQL Server Management Studio 18：
+    
+    子项 = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    注册表项名称 = UserFeedbackOptIn
+
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>设置故障转储收集的注册表子项
 
 与 SQL Server 早期版本的行为类似，SQL Server 2017 Enterprise 客户可以在服务器上配置组策略设置，以选择加入或退出故障转储收集。 这可通过配置基于注册表的策略完成。 相关注册表子项和设置如下所示： 
@@ -124,7 +131,7 @@ AND instance_name = '_Total'
 
     注册表项名称 = EnableErrorReporting
 
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
  
     {InstanceID} 是指实例类型和实例，如以下示例所示： 
 
@@ -139,7 +146,7 @@ AND instance_name = '_Total'
 
     注册表项名称 = EnableErrorReporting
 
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 的版本。 例如，“140”是指 SQL Server 2017。

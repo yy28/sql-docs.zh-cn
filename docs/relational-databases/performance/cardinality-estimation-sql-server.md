@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667026"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328847"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51667026"
 
 -  **独立性：** 假设不同列上的数据分布是独立于彼此的，除非可获取相关性信息且信息可用。
 -  **一致性：** 不同值均匀分布且具有相同的频率。 更确切地说，是在每个[直方图](../../relational-databases/statistics/statistics.md#histogram)步骤中，不同值均匀分布，并且每个值都具有相同的频率。 
--  **包含（简单）：** 用户查询已存在的数据。 例如，对于两个表之间的等值联接，在联接直方图以评估联接选择性之前，考虑每个输入直方图中的谓词选择性<sup>1</sup>。 
+-  **包容（简单）：** 用户查询已存在的数据。 例如，对于两个表之间的等值联接，在联接直方图以评估联接选择性之前，考虑每个输入直方图中的谓词选择性<sup>1</sup>。 
 -  **包含：** 对于 `Column = Constant` 的筛选器谓词，通常假定事实上关联列存在常数。 如果相应的直方图步骤非空，则假定该步骤的其中一个不同值匹配谓词的值。
 
   <sup>1</sup>满足谓词的行计数。
@@ -48,7 +48,7 @@ ms.locfileid: "51667026"
 后续更新从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，意味着兼容性级别为 120 及以上。 级别 120 及以上的 CE 更新中引入了已更新的假设和算法，非常适用于现代数据仓库和 OLTP 工作负荷。 从 CE 70 假设开始，以下模型假设已自 CE 120 起更改：
 
 -  独立性转变为相关性：不同列值的组合不一定独立。 这可能类似于更真实的数据查询。
--  简单包含转变为基础包含：用户可能查询不存在的数据。 例如，对于两个表之间的等值联接，我们使用基本表直方图来评估联接选择性，然后考虑谓词选择性因素。
+-  简单包含转变为基本包含：用户可能查询不存在的数据。 例如，对于两个表之间的等值联接，我们使用基本表直方图来评估联接选择性，然后考虑谓词选择性因素。
   
 **兼容性级别：** 通过使用以下 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，可以确保数据库位于特定级别。  
 
@@ -90,7 +90,7 @@ WHERE OrderAddedDate >= '2016-05-01'; 
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-查询存储：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点。  
+**查询存储：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  

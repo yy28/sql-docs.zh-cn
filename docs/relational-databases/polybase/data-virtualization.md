@@ -1,22 +1,22 @@
 ---
 title: 虚拟化 SQL Server 2019 CTP 2.0 中的外部数据 | Microsoft Docs
-description: ''
+description: 此页面详细介绍了为关系数据源使用“创建外部表”向导的步骤
 author: Abiola
 ms.author: aboke
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f09da2ec6d40f45bfe756fcfe648fd54fd5db6fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416868"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596668"
 ---
-# <a name="use-the-data-external-table-wizard-with-external-tables"></a>对外部表使用数据外部表向导
+# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>对关系数据源使用“外部表”向导
 
 SQL Server 2019 CTP 2.0 的重要方案之一是能够虚拟化数据。 此过程允许将数据保留在其原始位置。 可以虚拟化 SQL Server 实例中的数据，以便可以对这些数据进行查询，如同 SQL Server 中的任何其他表一样。 此过程可以最大限度地减少对 ETL 进程的需求。 此过程可通过使用 PolyBase 连接器来实现。 有关数据虚拟化的详细信息，请参阅 [PolyBase 入门](polybase-guide.md)。
 

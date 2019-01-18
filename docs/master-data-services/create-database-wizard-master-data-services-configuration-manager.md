@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.createdbwiz.f1
@@ -14,12 +13,12 @@ ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9d0e58f0756cdd2d6564e4ef1c352f330e4c06bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c5d1a933d55a747ed444fc83f697d5e290b81509
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797342"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>创建数据库向导（主数据服务配置管理器）
 
@@ -45,7 +44,7 @@ ms.locfileid: "52510671"
 |------------------|-----------------|  
 |**数据库名称**|指定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。|  
 |**SQL Server 默认排序规则**|选择此项可为新数据库使用指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的当前数据库排序规则设置。|  
-|**Windows 排序规则**|指定要用于新数据库的 Windows 排序规则设置。 Windows 排序规则根据关联的 Windows 区域设置来定义字符数据的存储规则。 有关 Windows 排序规则和关联选项的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md)。<br /><br /> 注意：只有在你取消选中“SQL Server 默认排序规则”  框后，“Windows 排序规则”  列表和关联选项才启用。|  
+|**Windows 排序规则**|指定要用于新数据库的 Windows 排序规则设置。 Windows 排序规则根据关联的 Windows 区域设置来定义字符数据的存储规则。 有关 Windows 排序规则和关联选项的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md)。<br /><br /> 注意：只有在取消选中“SQL Server 默认排序规则”框后，“Windows 排序规则”列表和关联选项才启用。|  
   
 ## <a name="administrator-account"></a>管理员帐户  
   

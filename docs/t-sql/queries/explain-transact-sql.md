@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 486d03addff39a0377298dcd1ddfb768046f2aa1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b364a92732be8e12233faf51b03d92154c2a6d28
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417798"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979493"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>参数  
  SQL_statement  
- EXPLAIN 将在其上运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句。 SQL_statement 可以是以下任一命令：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。  
+ EXPLAIN 将在其上运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句。 SQL_statement 可以是以下任何命令：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。  
   
 ## <a name="permissions"></a>Permissions  
  需要 SHOWPLAN 权限和执行 SQL_statement 的权限。 请参阅[权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)。  
@@ -71,13 +71,13 @@ EXPLAIN SQL_statement
   
 |操作类型|内容|示例|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE 和 TRIM_MOVE|具有这些属性的 `<operation_cost>` 元素。 值仅反映本地操作：<br /><br /> -   cost 是本地运算符成本，显示要运行的操作的预估时间（以毫秒为单位）。<br />-   accumulative_cost 是计划中看到的所有操作的总预估时间，包括并行操作的总值，以毫秒为单位。<br />-   average_rowsize 是操作期间行检索和传递的预估平均行大小（以字节为单位）。<br />-   output_rows 是输出（节点）基数，显示输出行数。<br /><br /> `<location>`：操作将在其中发生的节点或分发。 选项为：“Control”、“ComputeNode”、“AllComputeNodes”、“AllDistributions”、“SubsetDistributions”、“Distribution”和“SubsetNodes”。<br /><br /> `<source_statement>`：随机移动的源数据。<br /><br /> `<destination_table>`：数据将移至其中的内部临时表。<br /><br /> `<shuffle_columns>`：（仅适用于 SHUFFLE_MOVE 操作）。 将用作临时表分布列的一个或多个列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`：请参阅上文的 `<operation_cost>`。<br /><br /> `<DestinationCatalog>`：一个或多个目标节点。<br /><br /> `<DestinationSchema>`：在 DestinationCatalog 中的目标架构。<br /><br /> `<DestinationTableName>`：目标表的名称或“TableName”。<br /><br /> `<DestinationDatasource>`：目标数据源的名称或连接信息。<br /><br /> `<Username>` 和 `<Password>`：这些字段表示可能需要目标用户名和密码。<br /><br /> `<BatchSize>`：复制操作 Batch 大小。<br /><br /> `<SelectStatement>`：用于执行复制的 select 语句。<br /><br /> `<distribution>`：在其中执行复制的分发。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
-|MetaDataCreate_Operation|`<source_table>`：用于操作的源表。<br /><br /> `<destionation_table>`：用于操作的目标表。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`：请参阅上文的 `<location>`。<br /><br /> `<sql_operation>`：标识将在节点执行的 SQL 命令。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`：目标目录。<br /><br /> `<DestinationSchema>`：在 DestinationCatalog 中的目标架构。<br /><br /> `<DestinationTableName>`：目标表的名称或“TableName”。<br /><br /> `<DestinationDatasource>`：目标数据源的名称。<br /><br /> `<Username>` 和 `<Password>`：这些字段表示可能需要目标用户名和密码。<br /><br /> `<CreateStatement>`：目标数据库的表创建语句。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
-|RETURN|`<resultset>`：结果集的标识符。|`<resultset>RS_19</resultset>`|  
-|RND_ID|`<identifier>`：创建对象的标识符。|`<identifier>TEMP_ID_260</identifier>`|  
+|BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE 和 TRIM_MOVE|具有这些属性的 `<operation_cost>` 元素。 值仅反映本地操作：<br /><br /> -   cost 是本地运算符成本，显示要运行的操作的预估时间（以毫秒为单位）。<br />-   accumulative_cost 是计划中看到的所有操作的总预估时间，包括并行操作的总值，以毫秒为单位。<br />-   average_rowsize 是操作期间行检索和传递的预估平均行大小（以字节为单位）。<br />-   output_rows 是输出（节点）基数，显示输出行数。<br /><br /> `<location>`设置用户帐户 ：操作将在其中发生的节点或分发。 选项有：“Control”、“ComputeNode”、“AllComputeNodes”、“AllDistributions”、“SubsetDistributions”、“Distribution”和“SubsetNodes”。<br /><br /> `<source_statement>`设置用户帐户 ：随机移动的源数据。<br /><br /> `<destination_table>`设置用户帐户 ：数据将移至其中的内部临时表。<br /><br /> `<shuffle_columns>`设置用户帐户 ：（仅适用于 SHUFFLE_MOVE 操作）。 将用作临时表分布列的一个或多个列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`设置用户帐户 ：请参阅上文的 `<operation_cost>`。<br /><br /> `<DestinationCatalog>`设置用户帐户 ：目标节点。<br /><br /> `<DestinationSchema>`设置用户帐户 ：DestinationCatalog 中的目标架构。<br /><br /> `<DestinationTableName>`设置用户帐户 ：目标表的名称或“TableName”。<br /><br /> `<DestinationDatasource>`设置用户帐户 ：目标数据源的名称或连接信息。<br /><br /> `<Username>` 和 `<Password>`：这些字段表示可能需要目标的用户名和密码。<br /><br /> `<BatchSize>`设置用户帐户 ：复制操作批大小。<br /><br /> `<SelectStatement>`设置用户帐户 ：用于执行复制的 select 语句。<br /><br /> `<distribution>`设置用户帐户 ：在其中执行复制的分发。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|MetaDataCreate_Operation|`<source_table>`设置用户帐户 ：用于操作的源表。<br /><br /> `<destination_table>`设置用户帐户 ：用于操作的目标表。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`设置用户帐户 ：请参阅上文的 `<location>`。<br /><br /> `<sql_operation>`设置用户帐户 ：标识将在节点执行的 SQL 命令。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`设置用户帐户 ：目标目录。<br /><br /> `<DestinationSchema>`设置用户帐户 ：DestinationCatalog 中的目标架构。<br /><br /> `<DestinationTableName>`设置用户帐户 ：目标表的名称或“TableName”。<br /><br /> `<DestinationDatasource>`设置用户帐户 ：目标数据源的名称。<br /><br /> `<Username>` 和 `<Password>`：这些字段表示可能需要目标的用户名和密码。<br /><br /> `<CreateStatement>`设置用户帐户 ：目标数据库的表创建语句。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|RETURN|`<resultset>`设置用户帐户 ：结果集的标识符。|`<resultset>RS_19</resultset>`|  
+|RND_ID|`<identifier>`设置用户帐户 ：所创建对象的标识符。|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  EXPLAIN 仅可应用于可优化的查询，即可基于 EXPLAIN 命令的结果改进或修改的查询。 上面列出了受支持的 EXPLAIN 命令。 尝试将 EXPLAIN 与不受支持的查询类型一起使用将返回错误或回显查询。  
@@ -288,7 +288,7 @@ GO
   
 -   第 20 行开始操作 2。 第 21 行至第 25 行：在所有计算节点上，创建一个名为 TEMP_ID_16893 的临时表。  
   
--   第 26 行开始操作 3。 第 27 行至第 37 行：通过使用广播将数据移动到 TEMP_ID_16893。 提供发送给每个计算节点的查询。 第 37 行指定目标表为 TEMP_ID_16893。  
+-   第 26 行开始操作 3。 第 27 行至第 37 行：通过使用广播移动将数据移动到 TEMP_ID_16893。 提供发送给每个计算节点的查询。 第 37 行指定目标表为 TEMP_ID_16893。  
   
 -   第 38 行开始操作 4。 第 39 行至第 40 行：创建表的随机 ID。 TEMP_ID_16894 是在上面的示例的 ID 编号。 你的编号会不同。  
   

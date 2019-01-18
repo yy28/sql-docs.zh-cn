@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 52b121f7b56032856d2c844c230b915069bf69ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660727"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980373"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "51660727"
 ###  <a name="gml"></a> 用 GML 文本输入构造地域实例  
  **geography** 数据类型提供了一种用 GML（ **geography** 实例的 XML 表示形式）生成 **geography** 实例的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
- 有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
+ 有关地理标记语言的详细信息，请参阅 OGC 规范：[OGC 规范，地理标记语言。](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **用 GML 输入构造任意类型的地域实例**  
  [GeomFromGML（geography 数据类型）](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
@@ -232,41 +232,44 @@ ms.locfileid: "51660727"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用方法时， **geography** 实例之间的关系。 如果要使用 WGS 84（或 SRID 4326）之外的某个空间引用系统中的数据，您需要确定地域空间数据的特定 SRID。  
   
 ##  <a name="examples"></a> 示例  
- 以下示例说明如何添加和查询地理数据。  
+以下示例说明如何添加和查询地理数据。  
   
--   第一个示例创建了带有标识列和 `geography` 列 `GeogCol1`的表。 第三列将 `geography` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geography`实例，一行包含 `Polygon` 实例。  
+### <a name="example-a"></a>示例 A。 
+此示例创建了一个带有标识列和 `geography` 列 `GeogCol1` 的表。 第三列将 `geography` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geography`实例，一行包含 `Polygon` 实例。  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeogCol1 geography,   
-        GeogCol2 AS GeogCol1.STAsText() );  
-    GO  
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeogCol1 geography,   
+    GeogCol2 AS GeogCol1.STAsText()
+   );  
+GO  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
-    GO  
-    ```  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
+GO  
+```  
   
--   第二个示例使用 `STIntersection()` 方法返回此前插入的两个 `geography` 实例相交的点。  
+### <a name="example-b"></a>示例 B。
+此示例使用 `STIntersection()` 方法返回此前插入的两个 `geography` 实例相交的点。  
   
-    ```  
-    DECLARE @geog1 geography;  
-    DECLARE @geog2 geography;  
-    DECLARE @result geography;  
+```sql  
+DECLARE @geog1 geography;  
+DECLARE @geog2 geography;  
+DECLARE @result geography;  
   
-    SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geog1.STIntersection(@geog2);  
-    SELECT @result.STAsText();  
-    ```  
+SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geog1.STIntersection(@geog2);  
+SELECT @result.STAsText();  
+```  
   
 ## <a name="see-also"></a>另请参阅  
  [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  

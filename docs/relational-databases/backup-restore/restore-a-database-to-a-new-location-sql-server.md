@@ -20,12 +20,12 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 966c4fc90b73aea4dbc2c304a047238469b79c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69099375a0c56dadef71f999e34db45b0bc64374
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791729"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590841"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>将数据库还原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47791729"
   
          从下拉列表中选择要还原的数据库。 此列表仅包含已根据 **msdb** 备份历史记录进行备份的数据库。  
   
-    > **注意：** 如果备份是从另一个服务器执行的，则目标服务器不具有指定数据库的备份历史记录信息。 这种情况下，请选择 **“设备”** 以手动指定要还原的文件或设备。  
+    > **注意：** 如果备份是从另一台服务器执行的，则目标服务器不具有指定数据库的备份历史记录信息。 这种情况下，请选择 **“设备”** 以手动指定要还原的文件或设备。  
   
     1.  **“设备”**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47791729"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在**源:设备:数据库**列表框中，选择应还原的数据库名称。  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -135,14 +135,14 @@ ms.locfileid: "47791729"
      *new_database_name*  
      数据库的新名称。  
   
-    >**注意：** 如果要将数据库还原到其他服务器实例，可以使用原始数据库名称而不是新名称。  
+    >**注意：** 如果要将数据库还原到其他服务器实例，则可以使用原始数据库名称而不是新名称。  
   
      *backup_device* [ **,**...*n* ]  
      指定包含 1 到 64 个备份设备的逗号分隔的列表，数据库备份将从这些备份设备中还原。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：  
   
-     { DISK | TAPE } = physical_backup_device_name  
+     { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+     有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
      { **RECOVERY** | NORECOVERY }  
      如果数据库使用完整恢复模式，则可能需要在还原该数据库后应用事务日志备份。 在这种情况下，请指定 NORECOVERY 选项。  
@@ -156,7 +156,7 @@ ms.locfileid: "47791729"
   
      有关详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的“指定备份集”。  
   
-     MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
+     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
      指定由 *logical_file_name_in_backup* 指定的数据或日志文件将还原到 *operating_system_file_name*指定的位置。 请为每个要从备份集还原到新位置的逻辑文件指定 MOVE 语句。  
   
     |选项|描述|  
@@ -168,7 +168,7 @@ ms.locfileid: "47791729"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例通过还原 `MyAdvWorks` 示例数据库的备份创建名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的一个新数据库，该数据库包括两个文件： [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log。 此数据库使用简单恢复模式。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库已经存在于服务器实例上，因此备份中的文件必须还原到一个新位置。 RESTORE FILELISTONLY 语句用于确定数据库中要还原的文件数和名称。 该数据库备份是备份设备上的第一个备份集。  
   
-> **注意：** 备份和还原事务日志的示例（包括时点还原）使用从 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 创建的 `MyAdvWorks_FullRM` 数据库的方式与下面的 `MyAdvWorks` 示例相同。 但是，必须通过使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对最终生成的 `MyAdvWorks_FullRM` 数据库进行更改，以便使用完整恢复模式：ALTER DATABASE <数据库名称> SET RECOVERY FULL。  
+> **注意：** 备份和还原事务日志的示例（包括时点还原）使用从 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 创建的 `MyAdvWorks_FullRM` 数据库的方式与下面的 `MyAdvWorks` 示例相同。 但是，必须通过使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对最终生成的 `MyAdvWorks_FullRM` 数据库进行更改，以便使用完整恢复模式：ALTER DATABASE <database_name> SET RECOVERY FULL。  
   
 ```sql  
 USE master;  
@@ -189,7 +189,7 @@ GO
   
  有关如何创建 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份的示例，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

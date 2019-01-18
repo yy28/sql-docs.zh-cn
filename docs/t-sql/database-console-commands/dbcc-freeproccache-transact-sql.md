@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072041"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979733"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -92,7 +92,7 @@ pool_name 是资源调控器资源池的名称。 pool_name 的数据类型为 s
 ## <a name="remarks"></a>Remarks  
 小心使用 DBCC FREEPROCCACHE 清除计划高速缓存。 清除过程（计划）缓存会逐出所有计划，并且传入查询执行将编译新计划，而不是重复使用任何以前缓存的计划。 
 
-由于新编译数量增加，这可能导致查询性能骤降。 对于计划高速缓存中每个已清除的高速缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志将包含以下信息性消息：“由于 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 高速缓存存储区(计划缓存的一部分)的 %d 次刷新。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
+由于新编译数量增加，这可能导致查询性能骤降。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志将包含以下信息性消息：“由于 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
 
 以下重新配置操作也将清除过程缓存：
 -   访问检查缓存存储桶计数  
@@ -131,7 +131,7 @@ pool_name 是资源调控器资源池的名称。 pool_name 的数据类型为 s
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制与局限  
 无法在事务中运行 DBCC FREEPROCCACHE。
-EXPLAIN 语句中不支持使用 DBCC FREEPROCCAHCE。
+EXPLAIN 语句中不支持使用 DBCC FREEPROCCACHE。
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的元数据  
 运行 DBCC FREEPROCCACHE 时，会向 sys.pdw_exec_requests 系统视图中添加新行。

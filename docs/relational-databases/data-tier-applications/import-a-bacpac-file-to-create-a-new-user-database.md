@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521245"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590681"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52521245"
 2.  导入过程将从导出文件中大容量复制数据。  
   
 ## <a name="sql-server-utility"></a>SQL Server 实用工具  
- 如果您将 DAC 导入到数据库引擎的托管实例，则在下次将实用工具收集组从该实例发送到实用工具控制点时，导入的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
+ 如果将 DAC 导入到数据库引擎的实例，则在下次将实用工具收集组从该实例发送到实用工具控制点时，导入的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
   
 ## <a name="database-options-and-settings"></a>数据库选项和设置  
  默认情况下，在导入过程中创建的数据库将具有来自 CREATE DATABASE 语句的几乎所有默认设置，而例外的是数据库排序规则和兼容级别设置为在 DAC 导出文件中定义的值。 DAC 导出文件将使用来自原始数据库的值。  
@@ -59,7 +59,7 @@ ms.locfileid: "52521245"
  建议您不要从未知或不可信的源导入 DAC 导出文件。 此类文件可能包含恶意代码，这些代码可能会执行非预期的 Transact-SQL 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的导出文件之前，请解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
   
 ## <a name="security"></a>Security  
- 为了提高安全性，SQL Server 身份验证登录名存储在 DAC 导出文件中且没有密码。 在导入该文件时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
+ 为了提高安全性，SQL Server 身份验证登录名存储在 DAC 导出文件中且没有密码。 在导入该文件时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名和分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
 ## <a name="permissions"></a>Permissions  
  DAC 只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员导入，或者由具有 **dbcreator** 固定服务器角色且具有 ALTER ANY LOGIN 权限的登录名导入。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
@@ -101,9 +101,9 @@ ms.locfileid: "52521245"
   
 -   **从本地磁盘导入** - 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
--   **从 Azure 导入** - 从 Microsoft Azure 容器中导入一个 BACPAC 文件。 必须连接到 Microsoft Azure 容器才能验证此选项。 请注意，此选项还要求您为临时文件指定一个本地目录。 将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
+-   **从 Azure 导入** - 从 Microsoft Azure 容器中导入一个 BACPAC 文件。 必须连接到 Microsoft Azure 容器才能验证此选项。 请注意，“从 Azure 导入”选项还要求为临时文件指定一个本地目录。 将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
-     在浏览 Azure 时，你将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 请注意，您可以按 **“名称”**、 **“大小”** 或 **“修改日期”** 对列进行排序。  
+     在浏览 Azure 时，你将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 可以按“名称”、“大小”或“修改日期”对列进行排序。  
   
      若要继续，请指定要导入的 .bacpac 文件，然后单击 **“打开”**。  
   
@@ -122,8 +122,8 @@ ms.locfileid: "52521245"
   
  **对于 Azure SQL 数据库：**  
   
- - **[导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 提供了有关使用 Azure 门户、PowerShell、SSMS 或 SqlPackage 的分步说明。  
- - 有关不同服务层的详细信息，请查阅 **[SQL 数据库选项和性能：了解每个服务层中的可用功能](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 。  
+ - [导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-import/) 提供了有关使用 Azure 门户、PowerShell、SSMS 或 SqlPackage 的分步说明。  
+ - 请查阅 [SQL 数据库选项和性能：了解每个服务层中的可用功能](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)，了解有关不同服务层的详细信息。  
 
 ### <a name="validation-page"></a>“验证”页  
  使用此页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击 **“重新运行验证”** 确保验证成功。  

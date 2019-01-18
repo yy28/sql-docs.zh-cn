@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
@@ -15,12 +14,12 @@ ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6118bc6dd43c13668d2c1fbcbdd593293d40ce81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14c4d735b4bd295577b7e08a5ca6afdfed5aa95c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646775"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777109"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>创建数字属性 (Master Data Services)
 
@@ -57,11 +56,11 @@ ms.locfileid: "47646775"
   
 -   **创建者**：创建属性的用户的用户名。  
   
--   **创建时间**：创建属性的日期和时间。  
+-   **更新时间**：创建属性的日期和时间。  
   
 -   **更新者**：上次更新属性的用户的用户名。  
   
--   “创建时间”：上次更新属性的日期和时间。  
+-   **更新时间**：上次更新属性的日期和时间。  
   
 ### <a name="to-create-a-numeric-attribute"></a>创建数字属性  
   
@@ -102,7 +101,7 @@ ms.locfileid: "47646775"
 ## <a name="see-also"></a>另请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [创建基于域的属性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

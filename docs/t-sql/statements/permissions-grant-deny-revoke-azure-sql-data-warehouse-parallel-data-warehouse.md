@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f73b9d5160989537de72192774bbd7c0157fa29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696775"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979673"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  隐式权限还可继承自覆盖的权限或父级权限。 例如，通过对包含该表的架构具有 UPDATE 权限，或对该表具有 CONTROL 权限，可以继承对某个表的 UPDATE 权限。  
   
 ### <a name="ownership-chaining"></a>所有权链接  
- 当多个数据库对象按顺序互相访问时，该序列便称为“链”。 尽管这样的链不会单独存在，但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遍历链中的链接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 评估对构成对象的权限时的方式与单独访问对象时不同。 所有权链对管理安全性具有重要的影响。 有关所有权链的详细信息，请参阅[所有权链](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教程：所有权链和上下文切换](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
+ 当多个数据库对象按顺序互相访问时，该序列便称为“链”。 尽管这样的链不会单独存在，但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遍历链中的链接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 评估对构成对象的权限时的方式与单独访问对象时不同。 所有权链对管理安全性具有重要的影响。 有关所有权链的详细信息，请参阅[所有权链](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教程：所有权链和上下文切换](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
   
 ## <a name="permission-list"></a>权限列表  
   
@@ -235,7 +235,7 @@ REVOKE
   
 -   UPDATE  
   
--   REFRENCES  
+-   REFERENCES  
   
  有关每种类型的权限定义，请参阅[权限（数据库引擎）](https://msdn.microsoft.com/library/ms191291.aspx)。  
   

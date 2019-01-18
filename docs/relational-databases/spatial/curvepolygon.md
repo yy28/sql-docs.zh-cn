@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658839"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980153"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CurvePolygon** 是由一个外部边界环以及零个或多个内环界定的在拓扑结构上闭合的图面。  
   
 > [!IMPORTANT]  
->  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括 **CurvePolygon** 子类型），请下载白皮书 [SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+> 有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括 **CurvePolygon** 子类型），请下载白皮书 [SQL Server 2012 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
  下面的条件定义一个 **CurvePolygon** 实例的属性：  
   
@@ -31,7 +31,7 @@ ms.locfileid: "51658839"
   
 -   该 **CurvePolygon** 实例的内部是外环和所有内环之间的空间。  
   
- **CurvePolygon** 实例不同于 **Polygon** 实例，因为 **CurvePolygon** 实例可以包含以下圆弧线段： **CircularString** 和 **CompoundCurve**。  
+ CurvePolygon 实例不同于 Polygon 实例，因为 CurvePolygon 实例可以包含以下圆弧线段：CircularString 和 CompoundCurve。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
  下图显示有效的 **CurvePolygon** 图形：  
@@ -46,11 +46,11 @@ ms.locfileid: "51658839"
 3.  起点和终点具有相同的 X 和 Y 坐标。  
   
     > [!NOTE]  
-    >  Z 和 M 值被忽略。  
+    > Z 和 M 值被忽略。  
   
- 下面的示例显示接受的 **CurvePolygon** 实例。  
+下面的示例显示接受的 **CurvePolygon** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +58,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 已被接受，即使在起点和终点具有不同的 Z 值时也是如此，因为 Z 值被忽略。 `@g5` 已被接受，即使 **geography** 类型实例无效时也是如此。  
+`@g3` 已被接受，即使在起点和终点具有不同的 Z 值时也是如此，因为 Z 值被忽略。 `@g5` 已被接受，即使 **geography** 类型实例无效时也是如此。  
   
- 下面的示例引发 `System.FormatException`。  
+下面的示例引发 `System.FormatException`。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` 不被接受，因为起点和终点不具有相同的 Y 值。 `@g2` 不被接受，因为环没有足够的点。  
+`@g1` 不被接受，因为起点和终点不具有相同的 Y 值。 `@g2` 不被接受，因为环没有足够的点。  
   
 ### <a name="valid-instances"></a>有效实例  
- 为使 **CurvePolygon** 实例有效，外环和内环都必须满足以下条件：  
+为使 **CurvePolygon** 实例有效，外环和内环都必须满足以下条件：  
   
 1.  它们只能在单个切点处接触。  
-  
 2.  它们不能彼此交叉。  
-  
 3.  每个环都必须至少包含四个点。  
-  
 4.  每个环都必须是可接受的曲线类型。  
   
- **CurvePolygon** 实例根据其是 **geometry** 还是 **geography** 数据类型，也需要满足特定的条件。  
+**CurvePolygon** 实例根据其是 **geometry** 还是 **geography** 数据类型，也需要满足特定的条件。  
   
 #### <a name="geometry-data-type"></a>geometry 数据类型  
- 一个有效的 **geometryCurvePolygon** 实例必须具有以下属性：  
+一个有效的 **geometryCurvePolygon** 实例必须具有以下属性：  
   
 1.  所有内环都必须包含在外环内。  
-  
 2.  可具有多个内环，但一个外环不能包含另一个内环。  
-  
 3.  环不能与自身或其他环交叉。  
-  
 4.  环只能在单个切点处接触（环接触的点数必须有限）。  
-  
 5.  多边形的内部必须连接。  
   
- 下面的示例显示有效的 **geometryCurvePolygon** 实例。  
+下面的示例显示有效的 **geometryCurvePolygon** 实例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- CurvePolygon 实例具有与 Polygon 实例大体上相同的有效性规则，只有一个例外，就是 CurvePolygon 实例可接受新的圆弧线段类型。 有关有效实例或无效实例的更多示例，请参阅 [Polygon](../../relational-databases/spatial/polygon.md)。  
+CurvePolygon 实例具有与 Polygon 实例大体上相同的有效性规则，只有一个例外，就是 CurvePolygon 实例可接受新的圆弧线段类型。 有关有效实例或无效实例的更多示例，请参阅 [Polygon](../../relational-databases/spatial/polygon.md)。  
   
 #### <a name="geography-data-type"></a>geography 数据类型  
- 一个有效的 **geographyCurvePolygon** 实例必须具有以下属性：  
+一个有效的 **geographyCurvePolygon** 实例必须具有以下属性：  
   
 1.  多边形的内部使用左手定律进行连接。  
-  
 2.  环不能与自身或其他环交叉。  
-  
 3.  环只能在单个切点处接触（环接触的点数必须有限）。  
-  
 4.  多边形的内部必须连接。  
   
- 下面的示例显示一个有效的地理 CurvePolygon 实例。  
+下面的示例显示一个有效的地理 CurvePolygon 实例。  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -182,7 +172,7 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- @g1 和 @g2 都使用相同的外部边界环：一个半径为 5 的圆形，并且它们都使用一个正方形作为内环。  不过，实例 @g1 有效，而实例 @g2 却无效。  @g2 无效的原因在于内环将外环界定的内部空间拆分为四个单独的区域。  下图显示所发生的情况：  
+ `@g1` 和 `@g2` 都使用相同的外部边界环：一个半径为 5 的圆形，并且它们都使用一个正方形作为内环。  不过，实例 `@g1` 有效，而实例 `@g2` 却无效。 @g2 无效的原因在于内环将外环界定的内部空间拆分为四个单独的区域。 下图显示所发生的情况：  
   
 ## <a name="see-also"></a>另请参阅  
  [Polygon](../../relational-databases/spatial/polygon.md)   

@@ -15,17 +15,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1ba86a6f856a1ce35837c483d1148d9b935267
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15fbd4f0e7c731cf6d1a5e71dd98d316b1d104f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670236"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210606"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使你的数据库可移植
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接进行身份验证。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 本主题介绍与传统的登录名/用户模型和 Windows 或服务器级别防火墙规则相比，使用包含的数据库模型的差异和好处。 在特定情况下，可管理性或应用程序业务逻辑可能仍然需要使用传统登录名/用户模型和服务器级别防火墙规则。  
+  使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接进行身份验证。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 本主题介绍与传统的登录名/用户模型和 Windows 或服务器级别防火墙规则相比，使用包含的数据库模型的差异和好处。 在特定情况下，可管理性或应用程序业务逻辑可能仍然需要使用传统登录名/用户模型和服务器级别防火墙规则。  
   
 > [!NOTE]  
 >  随着 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 发展 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务并转向更有保证的 SLA，你可能需要切换到包含的数据库用户模型和数据库范围防火墙规则，以针对给定数据库获得更高可用性的 SLA 和更高的最大登录率。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议立即考虑进行这类更改。  
@@ -57,7 +57,7 @@ ms.locfileid: "51670236"
   
 -   [Azure SQL Database 防火墙](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [如何：配置防火墙设置（Azure SQL 数据库）](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [如何：配置防火墙设置 (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
   

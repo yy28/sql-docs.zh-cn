@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d971857a0d46ff2ed0bd54588558ac74ab5eb549
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119625"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980343"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 触发器函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ UPDATE ( column )
  在 INSERT 操作中，IF UPDATE 将返回 TRUE 值，因为这些列插入了显式值或隐式 (NULL) 值。  
   
 > [!NOTE]  
->  IF UPDATE(column)子句的功能等同于 IF、IF...ELSE 或 WHILE 子句，并且可以使用 BEGIN...END 语句块。 有关详细信息，请参阅[控制流语言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
+>  IF UPDATE(column) 子句的功能等同于 IF、IF...ELSE 或 WHILE 子句，并且可以使用 BEGIN...END 语句块。 有关详细信息，请参阅[控制流语言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
  可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器主体中的任意位置使用 UPDATE(column)。  
   

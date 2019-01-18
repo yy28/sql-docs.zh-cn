@@ -15,16 +15,16 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4e6ffeeeb6c6c39b161c6957677f65843959b13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540223"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205236"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为非 SQL Server 订阅服务器创建订阅。 事务复制和快照复制支持向非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器发布数据。 有关支持的订阅服务器平台的信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中为非 SQL Server 订阅服务器创建订阅。  
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为非 SQL Server 订阅服务器创建订阅。 事务复制和快照复制支持向非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器发布数据。 有关支持的订阅服务器平台的信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中为非 SQL Server 订阅服务器创建订阅。  
   
  **本主题内容**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "52540223"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 若要为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器创建订阅，请执行以下步骤：  
+ 若要为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器创建订阅，请执行以下步骤：  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器上安装并配置适当的客户端软件和 OLE DB 访问接口。 有关详细信息，请参阅 [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "52540223"
  快照代理生成快照后，将显示一条消息，如“[100%] 已生成 17 个项目的快照”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 您可以使用复制存储过程以编程的方式创建对非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的推送订阅。  
+ 可以使用复制存储过程以编程的方式创建对非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的推送订阅。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  

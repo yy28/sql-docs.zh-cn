@@ -1,6 +1,6 @@
 ---
 title: 关于变更数据捕获 (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402742"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991870"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   变更数据捕获可记录应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动。 这样，就可以按易于使用的关系格式提供这些更改的详细信息。 将为修改的行捕获列信息以及将更改应用于目标环境所需的元数据，并将其存储在镜像所跟踪源表的列结构的更改表中。 系统提供了一些表值函数，以便使用者可以系统地访问更改数据。  
   
  此技术针对的数据使用者的一个典型示例是提取、转换和加载 (ETL) 应用程序。 ETL 应用程序以增量方式将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源表中的更改数据加载到数据仓库或数据市场。 虽然数据仓库中的源表的表示形式必须反映源表中的更改，但刷新源副本的端到端技术并不适用。 相反，您需要一种具有特定结构的可靠更改数据流，以便使用者可以将其应用于不同的目标数据表示形式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 变更数据捕获就提供了这一技术。  
@@ -44,7 +44,7 @@ ms.locfileid: "52402742"
   
  应用于源表的每个插入或删除操作在更改表中各占一行。 插入操作生成的行的数据列包含插入后的列值。 删除操作生成的行的数据列包含删除前的列值。 更新操作需要两行数据：一行用于标识更新前的列值，另一行用于标识更新后的列值。  
   
- 更改表中的每一行还包含其他元数据，用于解释更改操作的情况。 __$start_lsn 列标识为更改指定的提交日志序列号 (LSN)。 提交 LSN 不仅标识在同一事务中提交的更改，而且还对这些事务进行排序。 可以使用 \_\_$seqval 列对同一事务中进行的其他更改进行排序。 \_\_$operation 列记录与更改关联的操作：1 = 删除，2 = 插入，3 = 更新（前像），4 = 更新（后像）。 \_\_$update_mask 列是一个可变的位掩码，每个捕获列都有一个对应的定义位。 对于插入和删除项，更新掩码始终设定所有位。 但是，更新行仅设定与更改列对应的那些位。  
+ 更改表中的每一行还包含其他元数据，用于解释更改操作的情况。 __$start_lsn 列标识为更改指定的提交日志序列号 (LSN)。 提交 LSN 不仅标识在同一事务中提交的更改，而且还对这些事务进行排序。 可以使用 \_\_$seqval 列对同一事务中进行的其他更改进行排序。 列 \_\_$operation 记录与更改相关的操作：1 = 删除、2 = 插入、3 = 更新（前映象）、4 = 更新（后映像）。 \_\_$update_mask 列是一个可变的位掩码，每个捕获列都有一个对应的定义位。 对于插入和删除项，更新掩码始终设定所有位。 但是，更新行仅设定与更改列对应的那些位。  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>数据库的变更数据捕获有效性间隔  
  数据库的变更数据捕获有效性间隔是指更改数据可供捕获实例使用的时段。 有效性间隔从为数据库表创建第一个捕获实例时开始，并一直持续到当前时间。  

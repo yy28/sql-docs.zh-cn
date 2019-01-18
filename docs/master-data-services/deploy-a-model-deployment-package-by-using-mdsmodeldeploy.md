@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398196"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823691"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
 
@@ -49,7 +48,7 @@ ms.locfileid: "52398196"
   
 1.  确定您是在部署一个新模型、部署模型的一个克隆副本，还是在更新先前克隆的模型。 有关详细信息，请参阅[模型部署选项 (Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)  
   
-2.  打开管理员命令提示符，然后导航到 MDSModelDeploy.exe。  
+2.  打开管理员：命令提示符，然后导航到 MDSModelDeploy.exe。  
   
     -   如果 MDS 安装在默认位置，则该工具位于 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration  
   
@@ -98,7 +97,7 @@ ms.locfileid: "52398196"
   
  **说明：**  
   
--   如果包中的订阅视图与现有模型中的订阅视图同名，则显示此警告： **Deployer 订阅视图已重命名** ，且视图创建为 *modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
+-   如果包中的订阅视图与现有模型中的订阅视图同名，则显示如下警告：“Deployer 订阅视图已重命名”，并且该视图创建为 modelname.subscriptionviewname。 如果此名称已使用，则不会创建订阅视图。  
   
 -   部署过程具有以下四个步骤：  
   

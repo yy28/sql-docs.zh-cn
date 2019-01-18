@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266078"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -319,7 +319,7 @@ SQL Server 2016 针对导入和导出 JSON 以及处理 JSON 字符串添加了�
 - [COMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/compress-transact-sql.md) 和 [DECOMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/decompress-transact-sql.md) 函数可将值转换入和转换出 GZIP 算法。
 - 添加了 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../t-sql/functions/datediff-big-transact-sql.md) 和 [AT TIME ZONE &#40;Transact-SQL&#41;](../t-sql/queries/at-time-zone-transact-sql.md) 函数以及 [sys.time_zone_info &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 视图，以支持日期和时间交互。
 - 现在可以在数据库级别创建凭据（此外，还包括以前提供的服务器级别凭据）。 有关详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
-- 已将八个新属性添加到 [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md)：InstanceDefaultDataPath、InstanceDefaultLogPath、ProductBuild、ProductBuildType、ProductMajorVersion、ProductMinorVersion、ProductUpdateLevel 和 ProductUpdateReference。
+- 已将 8 个新属性添加到 [SERVERPROPERTY (Transact-SQL)](../t-sql/functions/serverproperty-transact-sql.md)：InstanceDefaultDataPath、InstanceDefaultLogPath、ProductBuild、ProductBuildType、ProductMajorVersion、ProductMinorVersion、ProductUpdateLevel 和 ProductUpdateReference。
 - 已去除 [HASHBYTES &#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md) 函数的 8000 个字节的输入长度限制。
 - 添加了新的字符串函数 [STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) 和 [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md)。
 - 自动增长选项：跟踪标志 1117 已由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 选项取代，跟踪标志 1117 不再有效。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 以及 [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 的新列 is_autogrow_all_files。
@@ -438,10 +438,8 @@ Always On 现在支持加密的数据库。 当你创建新的可用性组、添
 下载最新的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 支持正在开发的、用于连接到 Microsoft Azure 的 Active Directory 身份验证库 (ADAL)。 它取代了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中使用的基于证书的身份验证。
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安装要求安装 .NET 4.6 作为先决条件。 安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 时，安装程序将自动安装 .NET 4.6。
 - 新的查询结果网格支持在从结果网格中复制或保存文本时保留回车符/换行符。 可以从“工具”-“选项”菜单设置此功能。
 - 不再从主功能树安装 SQL Server 管理工具；有关详细信息，请参阅 [安装带有 SSMS 的 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)。
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安装要求 .NET 4.6.1 作为先决条件。 安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 时，安装程序将自动安装 .NET 4.6.1。
 
 ### <a name="upgrade-advisor"></a>升级顾问
 SQL Server 2016 Upgrade Advisor Preview 是一个独立的工具，可让以前版本的用户针对其 SQL Server 数据库运行一组升级规则，以查明重大更改和行为更改与已弃用的功能，以及为采用新功能（例如 Stretch Database）提供帮助。

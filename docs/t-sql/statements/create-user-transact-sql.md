@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,25 +30,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06f59cc72fef384ad68833a3729c862eaa679ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618085"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202556"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  向当前数据库添加用户。 下面列出了十一种类型的用户，并给出了最基本的语法示例：  
+  向当前数据库添加用户。 下面列出了 12 种类型的用户，并给出了最基本的语法示例：  
   
-**基于 master 数据库中登录名的用户**：这是最常见的一种用户类型。  
+**基于 master 数据库中登录名的用户** - 这是最常见的一种用户类型。  
   
 -   基于 Windows Active Directory 帐户的登录名的用户。 `CREATE USER [Contoso\Fritz];`     
 -   基于 Windows 组的登录名的用户。 `CREATE USER [Contoso\Sales];`   
 -   基于使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名的用户。 `CREATE USER Mary;`  
   
-**在数据库中进行身份验证的用户**：建议用来帮助提高数据库的可移植性。  
+**在数据库中进行身份验证的用户** - 建议用来帮助提高数据库的可移植性。  
  始终可用于 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中，只能用于包含的数据库。  
   
 -   基于无登录名的 Windows 用户的用户。 `CREATE USER [Contoso\Fritz];`    
@@ -63,7 +63,7 @@ ms.locfileid: "47618085"
   
 -   基于无登录名但可通过其他 Windows 组中的成员身份连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的 Windows 组的用户。 `CREATE USER [Contoso\Fritz];`  
   
-**无法进行身份验证的用户**：这些用户无法登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**无法进行身份验证的用户** - 这些用户无法登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 -   没有登录名的用户。 不能登录，但可以被授予权限。 `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   基于证书的用户。 不能登录，但可以被授予权限，也可以对模块进行签名。 `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
@@ -74,7 +74,7 @@ ms.locfileid: "47618085"
 ## <a name="syntax"></a>语法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -84,7 +84,7 @@ CREATE USER user_name
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that authenticate at the database  
+-- Users that authenticate at the database  
 CREATE USER   
     {  
       windows_principal [ WITH <options_list> [ ,... ] ]  
@@ -95,7 +95,7 @@ CREATE USER
   
  [ ; ]  
   
---Users based on Windows principals that connect through Windows group logins  
+-- Users based on Windows principals that connect through Windows group logins  
 CREATE USER   
     {   
           windows_principal [ { FOR | FROM } LOGIN windows_principal ]  
@@ -104,7 +104,7 @@ CREATE USER
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that cannot authenticate   
+-- Users that cannot authenticate   
 CREATE USER user_name   
     {  
          WITHOUT LOGIN [ WITH <limited_options_list> [ ,... ] ]  
@@ -125,8 +125,23 @@ CREATE USER user_name
   
 -- SQL Database syntax when connected to a federation member  
 CREATE USER user_name  
-[;]  
-```  
+[;]
+
+-- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+CREATE USER user_name   
+    [   { FOR | FROM } LOGIN login_name  ]  
+    | FROM EXTERNAL PROVIDER
+    [ WITH <limited_options_list> [ ,... ] ]   
+[ ; ]  
+
+<limited_options_list> ::=  
+      DEFAULT_SCHEMA = schema_name 
+    | DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
+```
+
+> [!IMPORTANT]
+> SQL 数据库托管实例的 Azure AD 登录名当前为公共预览版。
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -162,7 +177,7 @@ CREATE USER user_name
  指定在此数据库中用于识别该用户的名称。 *user_name* 为 **sysname**。 它的长度最多是 128 个字符。 在创建基于 Windows 主体的用户时，除非指定其他用户名，否则 Windows 主体名称将成为用户名。  
   
  LOGIN *login_name*  
- 指定要为其创建数据库用户的登录名。 *login_name* 必须是服务器中的有效登录名。 可以是基于 Windows 主体（用户或组）的登录名，也可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 当此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进入数据库时，它将获取正在创建的这个数据库用户的名称和 ID。 在创建从 Windows 主体映射的登录名时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。  
+ 指定要为其创建数据库用户的登录名。 *login_name* 必须是服务器中的有效登录名。 可以是基于 Windows 主体（用户或组）的登录名，也可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 当此 SQL Server 登录名进入数据库时，它将获取正在创建的这个数据库用户的名称和 ID。 在创建从 Windows 主体映射的登录名时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。  
   
  如果 CREATE USER 语句是 SQL 批处理中唯一的语句，则 Windows Azure SQL Database 将支持 WITH LOGIN 子句。 如果 CREATE USER 语句不是 SQL 批处理中唯一的语句或在动态 SQL 中执行，则不支持 WITH LOGIN 子句。  
   
@@ -170,12 +185,12 @@ CREATE USER user_name
  指定服务器为此数据库用户解析对象名时将搜索的第一个架构。  
   
  '*windows_principal*'  
- 指定正为其创建数据库用户的 Windows 主体。 *windows_principal* 可以是 Windows 用户或 Windows 组。 即使 *windows_principal* 没有登录名，也会创建该用户。 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，如果 *windows_principal* 没有登录名，Windows 主体必须通过有登录名的 Windows 组中的成员身份在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中进行身份验证，或者连接字符串必须将包含的数据库指定为初始目录。 在从 Windows 主体创建用户时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。 基于 Active Directory 用户的用户的名称限制为少于 21 个字符。    
+ 指定正为其创建数据库用户的 Windows 主体。 *windows_principal* 可以是 Windows 用户或 Windows 组。 即使 *windows_principal* 没有登录名，也会创建该用户。 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，如果 *windows_principal* 没有登录名，Windows 主体必须通过有登录名的 Windows 组中的成员身份在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中进行身份验证，或者连接字符串必须将包含的数据库指定为初始目录。 在从 Windows 主体创建用户时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。 基于 Active Directory 用户的用户的名称限制为少于 21 个字符。
   
  '*Azure_Active_Directory_principal*'  
  适用范围：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
   
- 指定正为其创建数据库用户的 Azure Active Directory 主体。 *Azure_Active_Directory_principal* 可以是 Azure Active Directory 用户或 Azure Active Directory 组。 （Azure Active Directory 用户不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中拥有 Windows 身份验证登录名；只有数据库用户才能拥有。）连接字符串必须将包含的数据库指定为初始目录。 
+ 指定正为其创建数据库用户的 Azure Active Directory 主体。 Azure_Active_Directory_principal 可以是 Azure Active Directory 用户、Azure Active Directory 组或 Azure Active Directory 应用程序。 （Azure Active Directory 用户不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中拥有 Windows 身份验证登录名；只有数据库用户才能拥有。）连接字符串必须将包含的数据库指定为初始目录。
 
  对于用户，可使用其域主体的完整别名。   
  
@@ -218,9 +233,9 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
 SID = sid  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 仅适用于包含数据库中具有密码的用户（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证）。 指定新数据库用户的 SID。 如果未选择此选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动指派 SID。 使用 SID 参数在具有同一标识 (SID) 的多个数据库中创建用户。 当在多个数据库中创建用户以准备进行 Always On 故障转移时，这非常有用。 若要确定用户的 SID，请查询 sys.database_principals。  
+ 仅适用于包含的数据库中具有密码的用户（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证）。 指定新数据库用户的 SID。 如果未选择此选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动指派 SID。 使用 SID 参数在具有同一标识 (SID) 的多个数据库中创建用户。 当在多个数据库中创建用户以准备进行 Always On 故障转移时，这非常有用。 若要确定用户的 SID，请查询 sys.database_principals。  
   
-ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ]  
+ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
  适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  取消在大容量复制操作期间对服务器进行加密元数据检查。 这使用户能够在表或数据库之间大容量复制加密数据，而无需对数据进行解密。 默认为 OFF。  
@@ -243,7 +258,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ]
   
  WITHOUT LOGIN 子句可创建不映射到 SQL Server 登录名的用户。 它可以作为 guest 连接到其他数据库。 可以将权限分配给这一没有登录名的用户，当安全上下文更改为没有登录名的用户时，原始用户将收到无登录名用户的权限。 请参阅示例 [D. 创建和使用不含登录名的用户](#withoutLogin)。  
   
- 只有映射到 Windows 主体的用户才能包含反斜杠字符 (**\\**)。  
+ 只有映射到 Windows 主体的用户才能包含反斜杠字符 (**\\**)。
   
  不能使用 CREATE USER 创建 guest 用户，因为每个数据库中均已存在 guest 用户。 可通过授予 guest 用户 CONNECT 权限来启用该用户，如下所示：  
   
@@ -252,7 +267,15 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
- 可以在 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 目录视图中查看有关数据库用户的信息。  
+ 可以在 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 目录视图中查看有关数据库用户的信息。
+
+新的语法扩展 FROM EXTERNAL PROVIDER，可用于在 SQL 数据库托管实例中创建服务器级别的 Azure AD 登录名。 使用 Azure AD 登录名，数据库级别的 Azure AD 主体能够映射到服务器级别的 Azure AD 登录名。 若要通过 Azure AD 登录名创建 Azure AD 用户，请使用以下语法：
+
+`CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
+
+在 SQL 数据库托管实例中创建用户时，login_name 必须对应现有的 Azure AD 登录名，否则使用 FROM EXTERNAL PROVIDER 子句只能在 master 数据库中创建没有登录名的 Azure AD 用户。 例如，以下命令将创建容器用户：
+
+`CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> 语法摘要  
  **基于 master 数据库中登录名的用户**  
@@ -325,7 +348,7 @@ GO
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. 基于 SQL Server 登录名创建数据库用户  
- 下面的示例首先创建一个名为 `AbolrousHazem` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，然后在 `AbolrousHazem` 中创建对应的数据库用户 `AdventureWorks2012`。  
+ 下面的示例首先创建一个名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `AbolrousHazem` 登录名，然后在 `AbolrousHazem` 中创建对应的数据库用户 `AdventureWorks2012`。  
   
 ```  
 CREATE LOGIN AbolrousHazem   
@@ -439,8 +462,44 @@ CREATE USER [Chin]
 WITH   
       DEFAULT_SCHEMA = dbo  
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
-```  
-  
+```
+
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. 在 SQL 数据库托管实例中通过 Azure AD 登录名创建 Azure AD 用户
+
+ 若要通过 Azure AD 登录名创建 Azure AD 用户，请使用以下语法。
+
+ 使用授予 `sysadmin` 角色的 Azure AD 登录名登录托管实例。 以下代码可通过登录名 bob@contoso.com 创建 Azure AD 用户 bob@contoso.com。 此登录名是在 [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 示例中创建的。
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
+GO
+```
+
+> [!IMPORTANT]
+> 通过 Azure AD 登录名创建 USER 时，请指定 user_name 作为 LOGIN 的相同 login_name。
+
+支持创建 Azure AD 用户，作为属于组的 Azure AD 登录名中的组。
+
+```sql
+CREATE USER [AAD group] FROM LOGIN [AAD group];
+GO
+```
+
+此外，还可通过属于组的 Azure AD 登录名创建 Azure AD 用户。
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
+GO
+```
+
+### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. 为数据库创建没有 AAD 登录名的 Azure AD 用户
+
+可使用以下语法在 SQL 数据库托管实例数据库（包含的用户）中创建 Azure AD 用户 bob@contoso.com：
+
+```sql
+CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;
+GO
+```
 
 ## <a name="next-steps"></a>后续步骤  
 创建用户后，便可考虑使用 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 语句将用户添加到某个数据库角色。  

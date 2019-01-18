@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545625"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980093"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ SQLDUMPEREDUMPFLAGS
  超时值（毫秒），一旦 SQL Server 失败，SQLDumper 实用工具即在该超时值后生成转储。 默认值为 0，表示完成该转储没有时间限制。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- SQL Server 故障转移群集实例应在什么状况下进行故障转移或重新启动。 默认值是 3，这表示 SQL Server 资源将在出现严重服务器错误时进行故障转移或重新启动。 有关此故障条件级别和其他故障条件级别的详细信息，请参阅[配置 FailureConditionLevel 属性设置](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)。  
+ SQL Server 故障转移群集实例应进行故障转移或重启的状况。 默认值是 3，这表示 SQL Server 资源将在出现严重服务器错误时进行故障转移或重新启动。 有关此故障条件级别和其他故障条件级别的详细信息，请参阅[配置 FailureConditionLevel 属性设置](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)。  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  超时值，即 SQL Server 数据库引擎资源 DLL 在认定 SQL Server 实例不响应之前应等待服务器运行状况信息的时间。 该超时值用毫秒表示。 默认值为 60000 毫秒（60 秒）。  
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  若要标识目标群集，请指定下列值之一：  
   
  *windows_cluster*  
- WSFC 的 netwirj 名称。 您可以指定短名称或者完整的域名称。 为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 解析。 在某些情况下，短名称可能导致混淆，DNS 可能返回错误的 IP 地址。 因此，我们建议您指定完整的域名。  
+ WSFC 的网络名称。 您可以指定短名称或者完整的域名称。 为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 解析。 在某些情况下，短名称可能导致混淆，DNS 可能返回错误的 IP 地址。 因此，我们建议您指定完整的域名。  
   
   > [!NOTE] 
   > 不再支持使用此设置的跨群集迁移。 要执行跨群集迁移，请使用分布式可用性组或其他一些方法（如日志传送）。 
@@ -237,14 +237,14 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  禁用将大型 NUMA 硬件节点拆分为较小 NUMA 节点的自动软件分区。 更改当前使用的值需要重新启动数据库引擎。  
 
-> [!WARNING]  
+> [!WARNING]
 > 使用 SOFT NUMA 选项和 SQL Server 代理时，ALTER SERVER CONFIGURATION 语句的行为存在一些已知问题。  下面是推荐的操作顺序：  
 > 1) 停止 SQL Server 代理实例。  
-> 2) 执行 ALTER SERVER CONFGURATION SOFT NUMA 选项。  
+> 2) 执行 ALTER SERVER CONFIGURATION SOFT NUMA 选项。  
 > 3) 重新启动 SQL Server 实例。  
 > 4) 启动 SQL Server 代理实例。  
   
-**详细信息：** 如果在重新启动 SQL Server 服务之前执行了带有 SET SOFTNUMA 命令的 ALTER SERVER CONFIGURATION，那么当 SQL Server 代理服务停止时，它将执行 T-SQL RECONFIGURE 命令，该命令会将 SOFTNUMA 设置还原回执行 ALTER SERVER CONFIGURATION 之前的状态。 
+**详细信息：** 如果在重启 SQL Server 服务之前执行了带有 SET SOFTNUMA 命令的 ALTER SERVER CONFIGURATION，那么当 SQL Server 代理服务停止时，它将执行 T-SQL RECONFIGURE 命令，该命令会将 SOFTNUMA 设置还原回执行 ALTER SERVER CONFIGURATION 之前的状态。 
   
 ## <a name="general-remarks"></a>一般备注  
  除非另有明确说明，否则此语句不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，它不需要重新启动该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集资源。  
@@ -255,7 +255,7 @@ SQLDUMPEREDUMPFLAGS
 ## <a name="permissions"></a>Permissions  
  对于进程关联选项需要 ALTER SETTINGS 权限。 对于诊断日志和故障转移群集属性选项需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限，对于 HADR 群集上下文选项需要 CONTROL SERVER 权限。  
   
- 需要对缓冲池扩展选项拥有 ALTER SERVER STATE 权限。  
+ 需要拥有针对缓冲池扩展选项的 ALTER SERVER STATE 权限。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 资源 DLL 以本地系统帐户身份运行。 因此，本地系统帐户必须对诊断日志选项中的指定路径具有读写访问权限。  
   

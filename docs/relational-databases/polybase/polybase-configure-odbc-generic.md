@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 414c9650a1ae933e6e472ab09a26e6d26ae503fd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 98e06e3199d4ce8750a4a5956aec6d97c141b33b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49947401"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214252"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>配置 PolyBase 以访问 SQL Server 中的外部数据
 
@@ -33,13 +33,13 @@ ms.locfileid: "49947401"
 
 ![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-  > **重要说明！**
-  >
-  > 为提高查询性能，请确保驱动程序已启用连接池。 可通过“ODBC 数据源管理器”完成此操作。
-
+> **重要说明！**
+> 
+> 为提高查询性能，请确保驱动程序已启用连接池。 可通过“ODBC 数据源管理器”完成此操作。
+> 
 > **注意**
 > 
->在下述步骤 3 中创建外部数据源时，需指定驱动程序的名称（上面圈出的示例）。
+> 在下述步骤 3 中创建外部数据源时，需指定驱动程序的名称（上面圈出的示例）。
 
 ## <a name="create-an-external-table"></a>创建外部表
 

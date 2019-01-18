@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cecdc8a43c2ba8a1c3c6f4a78272a421f2ba87f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e603ba0df7124e1f3ad7b04407d761cc27b5870e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834905"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590323"
 ---
 # <a name="system-data-collection-set-reports"></a>系统数据收集组报表
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47834905"
  图形下面的表列出了数据收集时间和相应的使用情况数据。  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>数据库的磁盘使用情况：<数据库名称> 子报表  
- 在单击“磁盘使用情况收集组”报表的摘要表中的数据库名称后，系统会显示“数据库 <database_name> 的磁盘使用情况”子报表。 此报表提供了数据库的数据文件和事务日志文件空间使用情况的数值和图形明细。 数据文件的空间使用情况是按分配给索引页、未分配的空间、数据页以及未使用空间的百分比进行分类的。 这些类别定义如下：  
+ 在你单击磁盘使用情况收集组报表的摘要表中的数据库名称后，系统会显示“数据库 <database_name> 的磁盘使用情况”子报表。 此报表提供了数据库的数据文件和事务日志文件空间使用情况的数值和图形明细。 数据文件的空间使用情况是按分配给索引页、未分配的空间、数据页以及未使用空间的百分比进行分类的。 这些类别定义如下：  
   
 |类别|定义|  
 |--------------|----------------|  
@@ -89,14 +89,14 @@ ms.locfileid: "47834905"
  使用日历按钮可指定要报告的数据的开始日期、开始时间和持续时间。  
   
 #### <a name="query-statistics-history-report"></a>查询统计信息历史记录报表  
- “按总 CPU 时间排名靠前的查询”图形显示选定时间范围内的各个查询相对于总 CPU 使用率的开销。 若要显示不同的查询相对开销视图，请单击图形下面提供的以下超链接之一：“持续时间”、“I/O 总数”、“物理读取次数”或“逻辑写入次数”。  
+ “按总 CPU 时间排名靠前的查询”图形显示选定时间范围内的各个查询相对于总 CPU 使用率的开销。 若要显示不同的查询相对开销视图，请单击图形下面提供的以下超链接之一：“持续时间”、“I/O 总数”、“物理读取数”或“逻辑写入数”。  
   
  图形下方的表提供其他查询数据。 表中会列出图形中显示的每个查询的相应文本以及详细的统计信息。 请注意，各个图形条以及表中显示的每个查询都是活动链接。 单击某一活动链接可打开相应查询的查询详细信息子报表。  
   
 #### <a name="query-details-subreport"></a>查询详细信息子报表  
  查询详细信息子报表提供完整的查询文本。 查询旁边有一个 **“编辑查询文本”** 超链接。 可以单击此链接在查询编辑器中打开该查询。 查询下面的表中提供了查询执行统计信息，例如，每次查询执行的平均持续时间。  
   
- 将显示查询计划和每次执行的平均持续时间图形。 若要显示不同的查询计划相对开销视图，请单击图形下面显示的任一超链接： **“持续时间”**、 **“物理读取次数”** 或 **“逻辑写入次数”**。 图形线将处于活动状态，您可以单击任意点打开查询计划详细信息子报表。  
+ 将显示查询计划和每次执行的平均持续时间图形。 若要显示不同的查询计划相对开销视图，请单击图形下面显示的任一超链接：“持续时间”、“物理读取数”或“逻辑写入数”。 图形线将处于活动状态，您可以单击任意点打开查询计划详细信息子报表。  
   
  图形下面的表根据每次执行时使用的 CPU 时间显示前 10 个查询计划。 “计划编号”列中的每个数字都是一个活动链接，可以单击这样的链接以打开查询计划详细信息子报表。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "47834905"
   
 |图形|报表说明|  
 |-----------|------------------------|  
-|%CPU|通过单击 %CPU 图形中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系统图形线上的任意点可访问以下子报表。<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：查询统计信息历史记录报表提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中费用最高昂的查询的图。 图形下方的表将列出这些查询，并包含其中每一查询的统计数据。 可以单击某一查询获取其他详细信息。<br /><br /> **系统**：系统 CPU 使用率报表提供了每个处理器的 %CPU 时间的图，并以表格格式显示了每个进程的统计数据。|  
-|内存使用量|通过单击内存使用量图形中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系统图形线上的任意点可访问以下子报表。<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存使用量报表按类型提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程内存使用量、内存计数器以及内部内存占用情况的图，并在表中按组件类型显示了平均内存使用量数据。<br /><br /> **系统**：系统内存使用量报表提供了内存使用量以及缓存和页面命中率的图，并在表中显示了每个进程的工作集和专用字节的相关信息。|  
-|磁盘 I/O 使用情况|通过单击磁盘 I/O 使用情况图形中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系统图形线上的任意点可访问以下子报表。<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 使用情况报表提供了磁盘响应时间和磁盘传输速度的图。 其他表格提供按照磁盘、数据库和文件排列的虚拟文件统计信息。<br /><br /> **系统**：系统磁盘使用情况报表提供了磁盘响应时间、平均磁盘队列长度以及磁盘传输速度的图，并在表中显示了每个进程的 I/O 写入和读取操作的相关信息。|  
+|%CPU|通过单击 %CPU 图形中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系统图形线上的任意点可访问以下子报表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：查询统计信息历史记录提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中最耗费资源的查询的图形。 图形下方的表将列出这些查询，并包含其中每一查询的统计数据。 可以单击某一查询获取其他详细信息。<br /><br /> **系统**：系统 CPU 使用率报表提供每个处理器的 %CPU 时间的图形，并且还提供一个包含每个进程的统计数据的表格。|  
+|内存使用量|通过单击内存使用量图形中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系统图形线上的任意点可访问以下子报表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存使用量报表提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程内存使用量、内存计数器以及按类型排列的内部内存占用情况图形，并且还提供一个表格，其中包含按组件类型排列的平均内存使用量数据。<br /><br /> **系统**：系统内存使用量报表提供内存使用量以及缓存和页面命中率图形，并且还提供一个表格，其中包含每个进程的工作集和专用字节的相关信息。|  
+|磁盘 I/O 使用情况|通过单击磁盘 I/O 使用情况图形中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或系统图形线上的任意点可访问以下子报表。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 使用情况报表提供磁盘响应时间和磁盘传输速率的图形。 其他表格提供按照磁盘、数据库和文件排列的虚拟文件统计信息。<br /><br /> **系统**：系统磁盘使用情况报表提供磁盘响应时间、平均磁盘队列长度以及磁盘传输速率的图形，并且还提供一个表格，其中包含每个进程的 I/O 写入次数和读取次数的相关信息。|  
 |网络使用情况|没有提供额外的报表。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待|“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待”图形显示按照等待类别排列的所执行线程遇到的等待。 单击该图形中的任意段可访问详细报表。 除了提供时间范围较窄的图形 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待统计信息外，此报表还以表格形式提供等待类别的相关信息。 对于每个类别（如 CPU 及其子类别），该表格显示等待数、等待时间以及占总等待时间的百分比。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动|可通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动图形访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动的不同方面。 通过单击 SQL 编译数/秒图形线上的点获取的报表如下所示：<br /><br /> <br /><br /> 连接和会话<br /><br /> 请求<br /><br /> 计划缓存命中率<br /><br /> tempdb 特征|  

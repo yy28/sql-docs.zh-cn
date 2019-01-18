@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702795"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979473"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51702795"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STBuffer()` 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 相似，指定 tolerance = distance\* .001 和 relative  = false。  

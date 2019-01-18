@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6810231163d1674893e55624f333cd023bd95c47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b0c36e72558423b91a6adb8c8ae11e942c301446
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666186"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205666"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ ms.locfileid: "51666186"
   
  这些在下列示例中进行了说明。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>示例：枚举 XML 架构集合中的 XML 命名空间  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例如：枚举 XML 架构集合中的 XML 命名空间  
  对 XML 架构集合“myCollection”使用下面的查询：  
   
 ```  
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>示例：枚举 XML 架构集合的内容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例如：枚举 XML 架构集合的内容  
  以下语句枚举关系架构 dbo 中的 XML 架构集合“myCollection”的内容。  
   
 ```  
@@ -192,8 +192,8 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  可以通过将目标命名空间指定为 **XML_SCHEMA_NAMESPACE()** 的第三个参数，获取集合中单个 XML 架构作为 **xml**数据类型实例。 下面的示例说明了这一点。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>示例：从 XML 架构集合输出指定的架构  
- 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“https://www.microsoft.com/books”的 XML 架构。  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例如：从 XML 架构集合输出指定的架构  
+ 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“<https://www.microsoft.com/books>”的 XML 架构。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

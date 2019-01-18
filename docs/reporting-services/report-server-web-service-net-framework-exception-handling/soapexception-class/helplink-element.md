@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd1990fcb8a8637a120a35e2f8809d7bf48b1ecf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: aedb060067e35c0281b81057666b96bb71d631c9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812760"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589573"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
   Detail 属性的 HelpLink 元素是报表服务器生成的 URL 字符串。 此 URL 指向由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 帮助和支持管理的一个网页，并针对在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中出现的特定错误提供附加帮助和知识库文章。 此 URL 具有以下语法：  
   
- **https://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
+ https://www.microsoft.com/products/ee/transform.aspx?EvtSrc=v_alue_&EvtID=value&ProdName=value&ProdVer=value  
   
  下表列出 HelpLink URL 的参数。  
   

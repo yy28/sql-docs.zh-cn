@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9422b06b96f6fa3e6b6260c2d22a4ec7180315fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be8f60de9e25476f81c42019ba25cdf803ee4ad0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641467"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212536"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -116,7 +116,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]不会缓存该过程的计划，该过程在运行时重新编译。   
   
  ENCRYPTION  
- 适用范围：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+ **适用对象**：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
  指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将 ALTER PROCEDURE 语句的原始文本转换为模糊格式。 模糊代码的输出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据库文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

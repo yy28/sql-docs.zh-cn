@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
@@ -15,12 +14,12 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: df83c7a4fd4e7a335a3ac51aa047ccc09429ced7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca46c6709614184c094bb7d8457f542b734d375d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783229"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "47636317"
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，包是包含可部署模型结构以及来自模型的数据（可选）的 XML 文件。 使用模型包可以将模型的副本从一个 MDS 环境移到另一个环境，或者在现有的 MDS 环境中创建新模型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] MDSModelDeploy 工具与 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 或更高版本中创建的包向后兼容。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy 工具** 与 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 或更高版本中创建的包向后兼容。  
   
 ## <a name="tools-for-deploying-models"></a>用于部署模型的工具  
  若要使用模型包，您可以根据需要使用以下三个工具之一。  

@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514698"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589392"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52514698"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尽力使 DAC 连接成功，但在非常特殊的情况下也可能会出现连接失败。  
   
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="connecting-with-dac"></a>使用 DAC 连接  
  默认情况下，只能从服务器上运行的客户端建立连接。 不允许进行网络连接，除非它们是使用带 [remote admin connections 选项](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)的 sp_configure 存储过程配置的。  
@@ -93,7 +93,7 @@ ms.locfileid: "52514698"
   
  DAC 端口由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时动态分配。 当连接到默认实例时，DAC 会避免在连接时对 SQL Server Browser 服务使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解决协议 (SSRP) 请求。 它先通过 TCP 端口 1434 进行连接。 如果失败，则通过 SSRP 调用来获取端口。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有侦听 SSRP 请求，则连接请求将返回错误。 若要了解 DAC 所侦听的端口号，请参阅错误日志。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为接受远程管理连接，则必须使用显式端口号启动 DAC：  
   
- **sqlcmd -S tcp:***\<server>,\<port>*  
+ sqlcmd -S tcp:\<server>,\<port>  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志列出了 DAC 的端口号，默认情况下为 1434。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只接受本地 DAC 连接，请使用以下命令和环回适配器进行连接：  
   

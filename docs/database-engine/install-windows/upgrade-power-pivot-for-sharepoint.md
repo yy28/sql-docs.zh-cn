@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518307"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209206"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升级 Power Pivot for SharePoint
 
@@ -121,7 +121,7 @@ ms.locfileid: "52518307"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“**在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。是否继续?**”。  
+    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场 **。是否继续?**”。  
   
     8.  单击 **“是”** 继续操作。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "52518307"
   
     3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”** 继续操作。  
   
-    4.  出现以下警告：“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
+    4.  将出现以下警告：“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
   
          此警告指的是报告数据刷新活动的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的工作簿。 如果您已经自定义了这些工作簿，当使用新版本替换现有文件时，对这些工作簿的所有修改都将丢失。  
   
@@ -197,13 +197,13 @@ ms.locfileid: "52518307"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场。 是否继续?”  
+    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
     9. 单击 **“是”** 继续操作。  
   
     10. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求将失败，并显示“无法刷新数据”或“试图执行请求操作期间出错。 请重试。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
-8.  对场中的每个 SQL Server Analysis Services (**) 服务** 重复[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]以下过程：1) 运行 SQL Server 安装程序 2) 运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。  
+8.  对场中的每个 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服务重复以下过程：1) 运行 SQL Server 安装程序 2) 运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。  
   
 9. 请通过执行升级后步骤以及通过检查场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的版本，确认升级成功。 有关详细信息，请参阅本文中的[升级后的验证任务](#verify)以及下面的部分。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "52518307"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  检查现有部署的以下信息： **“类型”** 是“收回”或“部署”， **“文件”** 为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制“JobId”的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）：  
   

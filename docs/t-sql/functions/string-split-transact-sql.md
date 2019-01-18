@@ -18,15 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 93386da795d7e993c0d23c70625290cc8901d8bc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586250"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589971"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
 > [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -126,6 +126,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > 输出的顺序不保证与输入字符串中的子字符串顺序匹配。
   
 ### <a name="c-aggregation-by-values"></a>C. 按值聚合  
 用户必须创建一个报表，表中显示每个标记的产品数量并按产品数量排序，然后只筛选出产品数量在两个以上的标记。  
@@ -153,12 +156,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 查找具有两个指定标记（clothing 和 road）的产品：  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>E. 按一系列值查找行  

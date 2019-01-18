@@ -1,6 +1,7 @@
 ---
-title: 活动次要副本 - 可读次要副本 - AlwaysOn 可用性组 | Microsoft Docs
-ms.custom: ''
+title: 卸载对可用性组的次要副本的只读工作负荷
+description: 了解如何在 SQL Server 上卸载对 AlwaysOn 可用性组的次要副本的只读查询和报表。
+ms.custom: seodec18
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604708"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206266"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本（AlwaysOn 可用性组）
+# <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>卸载对 AlwaysOn 可用性组的次要副本的只读工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本）。 可读辅助副本可以处于异步提交可用性模式或同步提交可用性模式。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
@@ -35,22 +36,6 @@ ms.locfileid: "51604708"
 >  尽管您无法将数据写入辅助数据库，但可以在承载辅助副本的服务器实例上写入读写数据库，包括用户数据库和 **tempdb**之类的系统数据库。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的详细信息，请参阅 [使用侦听程序连接到只读次要副本（只读路由）](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
-  
- **本主题内容：**  
-  
--   [优势](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
-  
--   [可用性组先决条件](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Prerequisites)  
-  
--   [限制和局限](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_LimitationsRestrictions)  
-  
--   [性能注意事项](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Performance)  
-  
--   [容量规划注意事项](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
-  
--   [相关任务](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
-  
--   [相关内容](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
 ##  <a name="bkmk_Benefits"></a> 优势  
  指定与可读辅助副本的只读连接具有以下优点：  
@@ -232,9 +217,9 @@ GO
     |可读辅助副本？|启用了快照隔离或 RCSI 级别隔离？|主数据库|辅助数据库|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
     |否|否|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
-    |否|用户帐户控制|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
-    |用户帐户控制|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
-    |用户帐户控制|用户帐户控制|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |否|是|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
+    |是|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |是|是|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
   
 ##  <a name="bkmk_RelatedTasks"></a> 相关任务  
   
@@ -252,7 +237,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

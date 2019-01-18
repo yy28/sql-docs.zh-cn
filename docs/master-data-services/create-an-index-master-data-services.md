@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20fad19ffa9d5d82c83321f63236b066e3e1c781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849835"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774099"
 ---
 # <a name="create-an-index-master-data-services"></a>创建索引 (Master Data Services)
 
@@ -61,13 +60,13 @@ ms.locfileid: "47849835"
   
  单击索引后可看到以下信息：  
   
--   创建者：创建索引的用户的用户名。  
+-   **创建者**：创建索引的用户的用户名。  
   
--   创建时间：创建索引的日期和时间。  
+-   **创建时间**：创建索引的日期和时间。  
   
--   更新者：上次更新索引的用户的用户名。  
+-   **更新者**：上次更新索引的用户的用户名。  
   
--   更新时间：上次更新索引的日期和时间。  
+-   **更新时间**：上次更新索引的日期和时间。  
   
 ## <a name="next-steps"></a>Next Steps  
  [编辑和删除索引 (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

@@ -16,20 +16,20 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e7e22f164ba8da071a93dff1535b777993e76e2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518670"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590471"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
   
-1.  **开始之前：**  [先决条件](#Prerequisites)  
+1.  **开始之前：**[先决条件](#Prerequisites)  
   
-2.  **若要升级 DAC，请使用：**  [查看 DAC 的内容](#ViewDACContents)、 [查看数据库更改](#ViewDBChanges)、 [查看升级操作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
+2.  若要升级 DAC，请使用：[查看 DAC 的内容](#ViewDACContents)、[查看数据库更改](#ViewDBChanges)、[查看升级操作](#ViewUpgradeActions)、[比较 DAC](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  

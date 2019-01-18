@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7098114ba6a69b65ba689f00a726bb93c93b6a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528786"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980263"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,6 +69,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
@@ -93,7 +94,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -189,7 +190,7 @@ ALTER AVAILABILITY GROUP group_name
 >  若要查看现有可用性组的自动备份首选项，请选择 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目录视图的 automated_backup_preference 或 automated_backup_preference_desc 列。 此外，[sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 可用于确定首选备份副本。  此函数始终对至少一个副本返回 1（即使 `AUTOMATED_BACKUP_PREFERENCE = NONE`）。  
   
  FAILURE_CONDITION_LEVEL = { 1 | 2 | 3 | 4 | 5 }  
- 指定将为此可用性组触发自动故障转移的失败条件。 FAILURE_CONDITION_LEVEL 在组级别设置，但仅针对为同步-提交可用性模式 (AVAILIBILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。 此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，失败条件才可以触发自动故障转移。  
+ 指定将为此可用性组触发自动故障转移的失败条件。 FAILURE_CONDITION_LEVEL 在组级别设置，但仅针对为同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。 此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，失败条件才可以触发自动故障转移。  
   
  仅在主要副本上受支持。  
   
@@ -197,7 +198,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |级别|失败条件|  
 |-----------|-----------------------|  
-|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
+|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅[工作原理：SQL Server Always On 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的 HEALTH_CHECK_TIMEOUT 阈值。<br /><br /> 可用性副本处于失败状态。|  
 |3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 这是默认行为。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  
@@ -209,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值为给定组定义“灵活的故障转移策略”。 此灵活的故障转移策略向您提供对必须导致自动故障转移的条件的精确控制。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
  HEALTH_CHECK_TIMEOUT = milliseconds  
- 指定在 WSFC 群集假定服务器实例速度较慢或挂起前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILIBILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移。  
+ 指定在 WSFC 群集假定服务器实例速度较慢或挂起前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移。  
   
  默认的 HEALTH_CHECK_TIMEOUT 值为 30000 毫秒（30 秒）。 最小值为 15000 毫秒（15 秒），最大值为 4294967295 毫秒。  
   
@@ -223,6 +224,11 @@ ALTER AVAILABILITY GROUP group_name
  
  有关此设置的详细信息，请参阅[数据库级别运行状况检测选项](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
+DTC_SUPPORT  **=** { PER_DB | NONE }  
+指定是否已对此可用性组启用分布式事务。 分布式事务仅适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本中的可用性组数据库，而跨数据库事务仅适用于 [!INCLUDE[ssSQL16](../../includes/sssql15-md.md)] SP2 及以上版本。 `PER_DB` 将创建支持这些事务的可用性组，并且将自动把涉及可用性组中的数据库的跨数据库事务提升为分布式事务。 `NONE` 可阻止将跨数据库事务自动提升为分布式事务，并且不向 DTC 中的稳定 RMID 注册该数据库。 使用 `NONE` 设置时不会阻止分布式事务，但数据库故障转移和自动恢复在某些情况下可能失败。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。 
+ 
+> [!NOTE]
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 2 中引入了对更改可用性组的 DTC_SUPPORT 设置的支持。 此选项无法用于早期版本。 若要在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的早期版本中更改此设置，必须对可用性组再次执行 DROP 和 CREATE 操作。
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  在 SQL Server 2017 中引入。 用于设置需要在主要副本提交事务之前提交的最小数量的同步次要副本。 保证 SQL Server 事务等待至事务日志在最小数量的次要副本上更新为止。 默认值为 0，可提供与 SQL Server 2016 相同的行为。 最小值为 0。 最大值为副本数量减 1。 此选项与同步提交模式中的副本相关。 当副本处于同步提交模式时，对主要副本的写入操作会等待至将次要同步副本上的写入提交到副本数据库事务日志为止。 如果托管次要同步副本的 SQL Server 停止响应，则托管主要副本的 SQL Server 将此次要副本标记为 NOT SYNCHRONIZED（未同步）并继续执行操作。 当无响应的数据库恢复联机状态时，它将处于“未同步”状态，副本将标记为不正常，直到主要副本可再次对其执行同步。 此设置可确保主要副本会等待至最少数量的副本已提交每个事务。 如果最少数量的副本不可用，则主要副本上的提交会失败。 对于群集类型 `EXTERNAL`，可用性组添加到群集资源时，设置会更改。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
@@ -306,7 +312,10 @@ ALTER AVAILABILITY GROUP group_name
  指定您要定义的可用性副本的故障转移模式。  
   
  AUTOMATIC  
- 启用自动故障转移。 仅在指定 VAILABILITY_MODE = SYNCHRONOUS_COMMIT 的情况下才支持 AUTOMATIC。 您可以为最多两个可用性副本（包括主副本）指定 AUTOMATIC。  
+ 启用自动故障转移。 仅在指定 VAILABILITY_MODE = SYNCHRONOUS_COMMIT 的情况下才支持 AUTOMATIC。 可以为最多三个可用性副本（包括主要副本）指定 AUTOMATIC。  
+  
+> [!NOTE]  
+>  在 SQL Server 2016 之前，限制为两个自动故障转移副本，包括主要副本
   
 > [!NOTE]  
 >  SQL Server 故障转移群集实例 (FCI) 不支持通过可用性组来自动进行故障转移，因此，只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
@@ -335,9 +344,9 @@ ALTER AVAILABILITY GROUP group_name
   
 -   0 表示此可用性副本将永远不会被选择执行备份。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
   
- 有关详细信息，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)概念。  
+ 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
- SECONDARY_ROLE **(**...**)**  
+ SECONDARY_ROLE ( ... )  
  指定在此可用性副本当前拥有辅助角色（即它是辅助副本）时将要生效的角色特有设置。 在括号内指定一个或两个辅助角色选项。 如果指定两个选项，则使用以逗号分隔的列表。  
   
  辅助角色选项如下所示：  
@@ -354,7 +363,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  允许针对辅助副本中的数据库的所有连接进行只读访问。  
   
- 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
+ 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  指定要用于此可用性副本的路由读意向连接请求的 URL。 这是 SQL Server 数据库引擎侦听的 URL。 通常，SQL Server 数据库引擎的默认实例侦听 TCP 端口 1433。  
@@ -366,7 +375,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例，应将 Transact-SQL 侦听器配置为使用特定端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- PRIMARY_ROLE **(**...**)**  
+ PRIMARY_ROLE ( ... )  
  指定在此可用性副本当前拥有主角色（即它是主副本）时将要生效的角色特有设置。 在括号内指定一个或两个主角色选项。 如果指定两个选项，则使用以逗号分隔的列表。  
   
  主角色选项如下所示：  
@@ -453,11 +462,11 @@ ALTER AVAILABILITY GROUP group_name
  ADD LISTENER 'dns\_name'( \<add_listener_option> )  
  为此可用性组定义新的可用性组侦听器。 仅在主要副本上受支持。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  创建第一个侦听器之前，强烈建议阅读[创建或配置可用性组侦听程序 (SQL Server)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
->   
+> 
 >  为给定可用性组创建侦听器后，我们强烈建议您执行以下操作：  
->   
+> 
 >  -   请求您的网络管理员将该侦听器的 IP 地址保留为专用。  
 > -   将该侦听器的 DNS 主机名提供给应用程序开发人员，以便在请求与此可用性组的客户端连接时用于连接字符串中。  
   
@@ -561,7 +570,7 @@ ALTER AVAILABILITY GROUP group_name
  指定可用性组侦听器的 IPv6 地址。 例如， `2001::4898:23:1002:20f:1fff:feff:b3a3`。  
   
  PORT = listener_port  
- 指定要由通过 WITH IP 子句指定的可用性组侦听器使用的端口号 (listener_port)。 PORT 是可选的。  
+ 指定端口号 listener_port，以供由 WITH IP 子句指定的可用组侦听器使用。 PORT 是可选的。  
   
  支持默认端口号 1433。 但出于安全考虑，我们建议使用其他端口号。  
   

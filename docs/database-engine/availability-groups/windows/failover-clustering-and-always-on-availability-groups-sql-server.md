@@ -1,6 +1,7 @@
 ---
-title: 故障转移群集和 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 合并故障转移集群与可用性组
+description: 通过合并 SQL Server 故障转移集群实例和 Always On 可用性组的功能，增强高可用性和灾难恢复能力。
+ms.custom: seodec18
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e123661aa5b446c433b5e8813c58696bd5a7921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605447"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213036"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
@@ -61,11 +62,11 @@ ms.locfileid: "51605447"
   
 ||FCI 内的节点|可用性组内的副本|  
 |-|-------------------------|-------------------------------------------|  
-|**使用 WSFC 群集**|用户帐户控制|用户帐户控制|  
+|**使用 WSFC 群集**|是|是|  
 |**保护级别**|实例|“数据库”|  
 |**存储类型**|共享|非共享<br /><br /> 尽管可用性组中的副本不共享存储，但是，由 FCI 承载的副本将使用该 FCI 所要求的共享存储解决方案。 该存储解决方案仅由 FCI 内的节点共享，不在可用性组的副本之间共享。|  
 |**存储解决方案**|直连、SAN、装入点、SMB|取决于节点类型|  
-|**可读辅助副本**|否*|用户帐户控制|  
+|**可读辅助副本**|否*|是|  
 |**适用的故障转移策略设置**|WSFC 仲裁<br /><br /> FCI 特有的<br /><br /> 可用性组设置**|WSFC 仲裁<br /><br /> 可用性组设置|  
 |**故障转移资源**|服务器、实例和数据库|仅数据库|  
   
@@ -115,13 +116,13 @@ ms.locfileid: "51605447"
   
      [将 SQL Server 的 Windows 故障转移群集（可用性组或 FCI）配置为有限安全](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮书：**  
   
-     [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On 体系结构指南：使用故障转移群集实例和可用性组生成高可用性和灾难恢复解决方案](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

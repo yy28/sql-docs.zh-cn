@@ -22,18 +22,18 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 230e57dbbe3b3d2ca88bd6f4fd727555b4fa38b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214818"
 ---
 # <a name="logging-in-to-sql-server"></a>登录到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用任何图形管理工具或从命令提示符处，都可以登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- 使用图形管理工具（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）登录到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例时，系统将会提示您提供服务器名称、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码（如果需要）。 如果使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则不必在每次访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时都提供 SQL Server 登录名。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户自动登录。 如果在混合模式身份验证（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和Windows 身份验证模式）下运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录，则必须提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。 请尽可能使用 Windows 身份验证。  
+ 使用图形管理工具（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）登录到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例时，系统将会提示您提供服务器名称、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码（如果需要）。 如果使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则不必在每次访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时都提供 SQL Server 登录名。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户自动登录。 如果在混合模式身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式）下运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录，则必须提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。 请尽可能使用 Windows 身份验证。  
   
 > [!NOTE]  
 >  如果安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择了区分大小写的排序规则，则您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名也将区分大小写。  

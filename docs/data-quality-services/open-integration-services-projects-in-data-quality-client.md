@@ -11,12 +11,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb91f7c7b570fb678e2b503ed1841c5d3b45dcae
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 23d86191b60cfe4dbcf6793b4765b51b7df66fc1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616278"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591651"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
 
@@ -53,7 +53,7 @@ ms.locfileid: "52616278"
   
     1.  **项目名称**：Integration Services 项目使用以下命名术语列出：“Package.DQS Cleansing_\<DATE>\<TIME>_{GUID}”。 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。   
   
-    2.  **“项目类型”**：在 **“打开项目”** 屏幕中，Integration Services 项目具有 **SSIS** 作为项目类型。  
+    2.  **项目类型**：在“打开项目”屏幕中，Integration Services 项目具有 SSIS 作为项目类型。  
   
      选择一个项目，然后单击 **“下一步”**。  
   

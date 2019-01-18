@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.srvconnect.f1
@@ -14,12 +13,12 @@ ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fcda3ca21d6c8151cc74e5e4272e6a4f94916534
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8465c05dd4aebaeef4bc3d4ed1147c5d93557882
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515112"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796939"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>“连接到 Master Data Services 数据库”对话框
 

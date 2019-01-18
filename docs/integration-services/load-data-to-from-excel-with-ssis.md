@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05d19b94f22187e699999642fe79fbcd08c2548a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545717"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749960"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
@@ -52,7 +52,7 @@ ms.locfileid: "52545717"
 
 如果没有安装 Excel 的连接组件，首先需要下载这些组件，然后才能通过 SSIS 从 Excel 导出数据或将数据导入 Excel。 默认情况下，没有安装 Excel 的连接组件。
 
-在此处下载用于 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版组件可以打开 Excel 早期版本创建的文件。
+从此处下载 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版组件可以打开 Excel 早期版本创建的文件。
 
 ### <a name="notes-about-the-download-and-installation"></a>有关下载和安装说明
 
@@ -64,7 +64,7 @@ ms.locfileid: "52545717"
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
+    如果安装 2016 可再发行组件遇到问题，请改为从此处安装 2010 可再发行组件：[Microsoft Access 数据库引擎 2010 可再发行组件](https://www.microsoft.com/download/details.aspx?id=13255)。 （不再发行 Excel 2013。）
 
 ## <a name="specify-excel"></a> 指定 Excel 作为数据源
 

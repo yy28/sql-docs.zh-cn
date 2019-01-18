@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205016"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 
@@ -74,7 +74,7 @@ ms.locfileid: "50021141"
 ##  <a name="References"></a> 编写复杂表达式  
  表达式可包括对函数、运算符、常量、字段、参数、内置集合中的项以及对嵌入的自定义代码或自定义程序集的引用。  
   
-> [!NOTE]  
+> [!NOTE]
 >  若要开发复杂表达式或使用自定义代码或自定义程序集的表达式，建议您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器。 有关详细信息，请参阅 [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  下表列出了可以包含在表达式中的引用类型：  

@@ -1,6 +1,7 @@
 ---
-title: 配置分布式可用性组（AlwaysOn 可用性组）| Microsoft Docs
-ms.custom: ''
+title: 配置分布式可用性组
+description: '介绍如何创建和配置分布式 Always On 可用性组。 '
+ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603993"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215363"
 ---
-# <a name="configure-distributed-availability-group"></a>配置分布式可用性组  
+# <a name="configure-a-distributed-always-on-availability-group"></a>配置分布式 Always On 可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 若要创建分布式可用性组，必须在每个 Windows Server 故障转移群集 (WSFC) 上创建可用性组和侦听程序。 然后将这些可用性组合并到分布式可用性组中。 以下步骤提供了在 Transact-SQL 中实现此操作的基本示例。 此示例不涵盖创建可用性组和侦听程序的所有详细信息，相反，它着重于突出显示关键要求。 

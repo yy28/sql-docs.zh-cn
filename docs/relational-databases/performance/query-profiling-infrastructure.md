@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617247"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732024"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +59,7 @@ ms.locfileid: "52617247"
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>轻型查询执行统计信息分析基础结构 v1
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）。 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）。 
   
 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，通过引入轻型分析，减少了收集执行计划信息的性能开销。 和标准分析不同，轻型分析不收集 CPU 运行时信息。 但是，轻型分析仍收集行计数和 I/O 使用情况信息。
 
@@ -76,13 +83,13 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> 有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员选择：随时随地查询进度）。 
+> 有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）。 
 
 当运行使用 query_thread_profile 事件的扩展事件会话时，还会使用轻型分析填充 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV，它使用[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)或直接查询 DMV，为所有会话启用实时查询统计。
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>轻型查询执行统计信息分析基础结构 v2
 
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])。 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]）。 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 包括具有最小开销的轻型分析的修订版本。 对于“适用范围”中提到的上述版本，使用[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)也可以全局启用轻型分析。 引入了新的 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 以返回正在进行的请求的查询执行计划。
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>轻型查询执行统计信息分析基础结构 v3
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中已启用轻型分析，跟踪标志 7412 无效。
 
@@ -118,7 +125,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 从轻型分析 v2 开始，其开销很低，任何尚未受 CPU 限制的服务器都可连续运行轻型分析，并允许数据库专业人员随时使用任何正在运行的执行，例如使用活动监视器或直接查询 `sys.dm_exec_query_profiles`，并获取运行时统计信息的查询计划。
 
-有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员选择：随时随地查询进度）。 
+有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）。 
 
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -133,4 +140,4 @@ WITH (MAX_MEMORY=4096 KB,
  [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员选择：随时随地查询进度）
+ [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）

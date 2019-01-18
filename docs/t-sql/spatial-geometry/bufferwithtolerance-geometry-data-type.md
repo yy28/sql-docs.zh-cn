@@ -18,12 +18,12 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1dd1617ff0bcdd30782b5c7890f60aa30258f1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec055010a1769a8a5595ae17f4b3ea1d00c5d26d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700945"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979923"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "51700945"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>异常  
  *tolerance* 参数必须大于零。 如果 *tolerance* <= 0，则引发 `System.ArgumentOutOfRangeException`。  

@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517673"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351048"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -454,7 +454,7 @@ database_name.owner_name.table_name
  只包括添加索引视图建议。 不会为聚集和非聚集索引提供建议。  
   
  **包括筛选的索引**  
- 包括用来添加筛选索引的建议。 只有在选择了下列物理设计结构之一时，此选项才可用： **“索引和索引视图”**、 **“索引”** 或 **“非聚集索引”**。  
+ 包括用来添加筛选索引的建议。 如果选择下列物理设计结构之一，则此选项可用：索引和索引视图、索引或非聚集索引。  
   
  **“索引”**  
  只包括添加聚集和非聚集索引建议。 不会为索引视图提供建议。  

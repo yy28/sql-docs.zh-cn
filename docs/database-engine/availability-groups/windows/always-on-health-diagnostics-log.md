@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性组运行状况诊断日志 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性组的 SQL Server 资源 DLL 运行状况诊断日志
+description: 介绍 SQL Server 资源 DLL 如何监视 AlwaysOn 可用性组的运行状况。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404995"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207756"
 ---
-# <a name="always-on-availability-groups-health-diagnostics-log"></a>Always On 可用性组运行状况诊断日志
+# <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>可用性组的 SQL Server 资源 DLL 运行状况诊断日志
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   为了监视主要可用性副本的运行状况，Windows Server 故障转移群集 (WSFC) 群集运行的 SQL Server 资源 DLL 在名为 [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 的 SQL Server 实例中使用了一个存储过程。  
   
@@ -25,7 +26,7 @@ ms.locfileid: "52404995"
   
  **使用 SQL Server 故障转移群集诊断日志**
  
- 从 sp_server_diagnostics are automatically 收到的所有运行状况诊断 SQL Server 资源 DLL 将自动保存在 SQL Server 实例的默认日志目录中 (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log)。 这些日志称为 SQLDIAG 日志，以 XEL（扩展事件）文件格式保存。 这些 SQL Server 日志目录下的文件采用以下格式：\<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel。 通过查看 SQLDIAG 日志，也许能够确定可用性组资源故障或故障转移事件的根本原因。  
+ 从 sp_server_diagnostics are automatically 收到的所有运行状况诊断 SQL Server 资源 DLL 将自动保存在 SQL Server 实例的默认日志目录中 (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log)。 这些日志称为 SQLDIAG 日志，以 XEL（扩展事件）文件格式保存。 SQL Server 日志目录下的这些文件采用以下格式：\<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel。 通过查看 SQLDIAG 日志，也许能够确定可用性组资源故障或故障转移事件的根本原因。  
   
  要查看 SQLDIAG 日志，请将 .xel 文件拖到 SQL Server Management Studio。  
   

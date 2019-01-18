@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711498"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626396"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询存储功能让你可以探查查询计划选项和性能。 它可帮助你快速找到查询计划更改所造成的性能差异，从而简化了性能疑难解答。 查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。 它按时间窗口将数据分割开来，使你可以查看数据库使用模式并了解服务器上何时发生了查询计划更改。 可以使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 选项来配置查询存储。 
   
@@ -239,7 +239,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```  
   
  > [!NOTE]
- > `INTERVAL_LENGTH_MINUTES` 不允许使用任意值。 可以使用下列值之一：1、5、10、15、30、60 或 1440 分钟。  
+ > `INTERVAL_LENGTH_MINUTES` 不允许使用任意值。 使用下列其中一个：1、5、10、15、30、60 或 1440 分钟。  
   
  间隔的新值通过 **sys.database_query_store_options** 视图公开。  
   

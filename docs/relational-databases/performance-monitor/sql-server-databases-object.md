@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158907"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997569"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158907"
 |**Backup/Restore Throughput/sec**|每秒数据库的备份和还原操作的读取/写入吞吐量。 例如，并行使用多个备份设备或使用更快的设备时，可以测量数据库备份操作性能的变化情况。 数据库的备份或还原操作的吞吐量可以确定备份和还原操作的进程和性能。|  
 |**Bulk Copy Rows/sec**|每秒大容量复制的行数。|  
 |**Bulk Copy Throughput/sec**|每秒大容量复制的数据量 (KB)。|  
-|**Commit table entries**|数据库提交表的内存中部分的大小。 有关详细信息，请参阅 [sys.dm_tran_commit_table (Transact-SQL)](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)。|  
+|**Commit table entries**|数据库提交表的内存部分的大小（行数）。 有关详细信息，请参阅 [sys.dm_tran_commit_table (Transact-SQL)](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)。|  
 |**Data File(s) Size (KB)**|数据库中所有数据文件的累计大小 (KB)，包括任何自动增长。 监视此计数器非常有用，例如可以确定 **tempdb**的准确大小。|  
 |**DBCC Logical Scan Bytes/sec**|每秒数据库控制台命令 (DBCC) 的逻辑读取扫描字节数。|  
 |**Group Commit Time/sec**|每秒的组停滞时间（微秒）。|

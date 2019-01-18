@@ -5,19 +5,18 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526952"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205606"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -36,12 +35,12 @@ ms.locfileid: "52526952"
 有关可帮助你了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 的视频以及其他培训资源的链接，请参阅[了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下载**  
->-   若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**。  
->-   已经拥有 Azure 帐户？  然后转到[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)，启动已安装 SQL Server 的虚拟机。  
- 
+> -   若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**。  
+> -   已经拥有 Azure 帐户？  然后转到[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)，启动已安装 SQL Server 的虚拟机。  
+> 
 > **无法创建 MDS 网站？**
->>请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。
-[无法在 SQL Server 2016 中通过使用低特权帐户创建 MDS 网站](https://aka.ms/mdssupport) 
+> >请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。
+> [无法在 SQL Server 2016 中通过使用低特权帐户创建 MDS 网站](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 和 Silverlight
 - 在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 Web 应用程序站点编写脚本。 否则，浏览到服务器计算机上的站点将失败。
@@ -119,11 +118,11 @@ ms.locfileid: "52526952"
  **使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 设置数据库和网站**  
 
  
-> [!WARNING]  
-    >  启动 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 配置管理器之前，必须[安装 IIS](#InstallIIS)。 否则，Configuration Manager 将显示“Internet Information Services 错误”消息，不能创建 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序。  
-    
+> [!WARNING]
+>  启动 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 配置管理器之前，必须[安装 IIS](#InstallIIS)。 否则，Configuration Manager 将显示“Internet Information Services 错误”消息，不能创建 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序。  
+> 
 > 浏览器要求
->>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。    
+> >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。    
   
 1.  启动 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]，然后单击左窗格中的“数据库配置”。  
   

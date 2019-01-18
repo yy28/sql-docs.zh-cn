@@ -5,8 +5,7 @@ ms.date: 02/13/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - master data services
@@ -14,12 +13,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ba64768a5131fea3f3fee2ef994cdfa274d45695
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38c4cdc0a777fe68d466854a9b2dd7cf1403d07f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531785"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757789"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
 
@@ -53,14 +52,14 @@ ms.locfileid: "52531785"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布]<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> “性能”<br /><br /> 静态内容压缩<br /><br /> Security<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
+|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布］<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> “性能”<br /><br /> 静态内容压缩<br /><br /> Security<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
   
 ### <a name="features"></a>功能 
  在 Windows Server 2012 和 Windows Server 2012 R2 中，可以使用“服务器管理器”来安装以下必需的功能。  
   
 ||  
 |-|  
-|.NET Framework 3.5（包括 .NET 2.0 和 3.0）<br /><br /> .NET Framework 4.5 高级服务<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 激活 [注意：这是必需的。]<br /><br /> TCP 端口共享<br /><br /> Windows 进程激活服务<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API<br/><br/>动态内容压缩|  
+|.NET Framework 3.5（包括 .NET 2.0 和 3.0）<br /><br /> .NET Framework 4.5 高级服务<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 激活［注意：这是必需的。］<br /><br /> TCP 端口共享<br /><br /> Windows 进程激活服务<br /><br /> 进程模型<br /><br /> .NET 环境<br /><br /> 配置 API<br/><br/>动态内容压缩|  
   
  下面是一个示例性的 PowerShell 脚本，用于添加必备的服务器角色和功能。 因环境而异的必备服务器角色和功能。  
   

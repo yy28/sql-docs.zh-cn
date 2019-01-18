@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a876ec35e7cd11b8ac127606bb2e4e7c2c6e2c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 16fa50a7e3dc6b6b2ee86dfcd79f0aa311d9071d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018212"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978874"
 ---
 # <a name="point"></a>点
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,21 +32,24 @@ ms.locfileid: "51018212"
  Geometry 数据类型的 Point 类型表示单个位置，其中 *X* 表示要生成的点的 X 坐标， *Y* 表示要生成的点的 Y 坐标。 *SRID* 表示您希望返回的 **geometry** 实例的空间引用 ID。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个表示点 (3, 4) 的 `geometry Point`实例，该实例的 SRID 为 0。  
+### <a name="example-a"></a>示例 A。
+下面的示例创建一个表示点 (3, 4) 的 `geometry Point`实例，该实例的 SRID 为 0。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT (3 4)', 0);  
 ```  
   
- 下一个示例创建一个表示点 (3, 4) 的 `geometry``Point` 实例，该实例的 Z（仰角）值为 7，M（度量）值为 2.5，默认 SRID 为 0。  
+### <a name="example-b"></a>示例 B。
+下面的示例创建一个表示点 (3, 4) 的 `geometry``Point` 实例，该实例的 Z（仰角）值为 7，M（度量）值为 2.5，默认 SRID 为 0。  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- 最后一个示例返回 `geometry``Point` 实例的 X、Y、Z 和 M 值。  
+### <a name="example-c"></a>示例 C.
+下面的示例返回 `geometry``Point` 实例的 X、Y、Z 和 M 值。  
   
 ```  
 SELECT @g.STX;  
@@ -55,7 +58,8 @@ SELECT @g.Z;
 SELECT @g.M;  
 ```  
   
- Z 和 M 值可以显式指定为 NULL，如下例所示。  
+### <a name="example-d"></a>示例 D。
+Z 和 M 值可以显式指定为 NULL，如下例所示。  
   
 ```  
 DECLARE @g geometry;  

@@ -25,19 +25,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96f5318d1837043507a111d001309a980d3c3cc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f23352e40c7b068eb0341c97c5f86d1b6f07ad66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205886"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定 SELECT 语句返回的 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext** 和 **image** 数据的大小。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -54,7 +54,7 @@ SET TEXTSIZE { number }
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client（10.0 及更高版本）和 ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在连接时会自动指定 `-1`（无限制）。  
   
- **早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 的驱动程序：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序（版本 9）在连接时会自动将 TEXTSIZE 设置为 2147483647。  
+ 早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 的驱动程序：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序（版本 9）在连接时会自动将 TEXTSIZE 设置为 2147483647。  
   
 ## <a name="remarks"></a>Remarks  
  设置 SET TEXTSIZE 会影响 @@TEXTSIZE 函数。  

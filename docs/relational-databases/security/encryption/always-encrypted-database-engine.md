@@ -17,19 +17,19 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675126"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203036"
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted 功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号码）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，始终加密分隔了拥有数据（且可以查看它）的人员与管理数据（但没有访问权限）的人员。 始终加密确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以静态加密数据并利用 Azure 中的存储，将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。  
+ Always Encrypted 功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号码）。 Always Encrypted 允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，始终加密分隔了拥有数据（且可以查看它）的人员与管理数据（但没有访问权限）的人员。 始终加密确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以静态加密数据并利用 Azure 中的存储，将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。  
   
  始终加密使向加密对应用程序透明。 安装在客户端计算机上的启用始终加密的驱动程序通过在客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序以透明方式对存储在加密数据库列（包含在查询结果中）中的数据进行解密。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "51675126"
  客户在营业地本地运行客户端应用程序和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 客户想要委托外部供应商来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 为了保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中存储的敏感数据，客户使用始终加密来确保数据库管理员与应用程序管理员的职责分离。 客户在客户端应用程序可以访问的受信任密钥存储中存储始终加密密钥的纯文本值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员无权访问密钥，因此，无法解密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中存储的敏感数据。  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>客户端在本地，数据在 Azure 中  
- 客户在营业地运行本地客户端应用程序。 应用程序操作 Azure 中托管的数据库中存储的敏感数据（Microsoft Azure 上虚拟机中运行的[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ）。 客户使用始终加密功能并在本地托管的受信任密钥存储中存储始终加密密钥，以确保 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 云管理员无权访问敏感数据。  
+ 客户在营业地运行本地客户端应用程序。 应用程序操作 Azure 中托管的数据库中存储的敏感数据（Microsoft Azure 上虚拟机中运行的 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）。 客户使用始终加密功能并在本地托管的受信任密钥存储中存储始终加密密钥，以确保 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 云管理员无权访问敏感数据。  
   
 ### <a name="client-and-data-in-azure"></a>客户端和数据都在 Azure 中  
  客户在 Microsoft Azure 中托管了一个客户端应用程序（例如辅助角色或 web 角色），该应用程序对在 Azure 中托管的数据库中（在 Microsoft Azure 的虚拟机上运行的 SQL 数据库或 SQL Server）存储的敏感数据进行操作。 由于数据和密钥对托管客户端层的平台的云管理员是公开的，因此“始终加密”功能不提供针对云管理员的完全数据隔离，但是客户仍将从降低安全攻击范围中受益（数据库中的数据始终是加密的）。  
@@ -104,10 +104,10 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 |任务|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|用户帐户控制|是|否|
-|在数据库中创建密钥元数据。|用户帐户控制|是|用户帐户控制|
-|创建具有加密列的新表|用户帐户控制|是|用户帐户控制|
-|对选定的数据库列中的现有数据进行加密|用户帐户控制|是|否|
+|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|是|是|否|
+|在数据库中创建密钥元数据。|是|是|是|
+|创建具有加密列的新表|是|是|是|
+|对选定的数据库列中的现有数据进行加密|是|是|否|
 
 > [!NOTE]
 > 请确保在安全环境中，在非托管数据库的计算机上运行密钥预配或数据加密工具。 否则，敏感数据或密钥可能会泄漏给服务器环境，这将减少使用“始终加密”功能的好处。  

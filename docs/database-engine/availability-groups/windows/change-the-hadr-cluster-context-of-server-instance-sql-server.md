@@ -1,6 +1,7 @@
 ---
-title: 更改服务器实例的 HADR 群集上下文 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 更改管理可用性组中副本元数据的群集
+description: 执行跨群集迁移时，通过更改 SQL Server 实例的 HADR 群集上下文，更改管理 Always On 可用性组中可用性副本元数据的群集。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605698"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202126"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>更改服务器实例的 HADR 群集上下文 (SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>更改管理 Always On 可用性组中副本元数据的群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -37,11 +38,11 @@ ms.locfileid: "51605698"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要切换可用性副本的群集上下文，请使用：**[Transact-SQL](#TsqlProcedure)  
+-   若要切换可用性副本的群集上下文，请使用：[Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**  [在切换可用性副本的群集上下文后](#FollowUp)  
+-   **跟进：**[在切换可用性副本的群集上下文后](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -133,7 +134,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在切换可用性副本的群集上下文后  
+##  <a name="FollowUp"></a>跟进：在切换可用性副本的群集上下文后  
  新的 HADR 群集上下文将立即生效，而不重新启动服务器实例。 HADR 群集上下文设置是持久的实例级别设置，在服务器实例重新启动时也保持不变。  
   
  通过查询 [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) 动态管理视图确认新的 HADR 群集上下文，如下所示：  
@@ -168,7 +169,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 技术文章](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

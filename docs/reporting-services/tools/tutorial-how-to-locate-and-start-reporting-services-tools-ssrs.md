@@ -1,9 +1,11 @@
 ---
 title: 教程：如何查找并启动 Reporting Services 工具 (SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
+description: 本教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建并发布分页和移动 Reporting Services 报表的工具。
+ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, tutorials
@@ -18,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2937ca969b7a277710b8040481d61c68a12e096f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711298"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206216"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
 
@@ -40,7 +42,7 @@ ms.locfileid: "52711298"
 -   管理加密密钥。  
 -   配置无人参与的报表处理和电子邮件报表传递。  
   
- **安装：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时会安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
+**安装：** 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时，会安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>启动 Reporting Services 配置管理器  
   
@@ -66,12 +68,12 @@ ms.locfileid: "52711298"
   
      ![Reporting Services 配置工具](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 配置工具")  
   
- **后续步骤：**[配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+ **后续步骤：**[配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services 配置管理器（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 ##  <a name="web-portal-native-mode"></a>Web 门户（本机模式）  
  使用 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) 可设置权限、管理订阅和计划以及处理报表。 还可以使用 Web 门户查看报表。  
   
- **安装：** Web 门户在安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时进行安装： [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **安装：** 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时，会安装 Web 门户：[安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  必须拥有足够的权限才能打开 Web 门户（最初，只有本地 Administrators 组的成员拥有访问 Web 门户功能的权限）。 Web 门户根据当前用户的角色分配提供不同的页和选项。 没有权限的用户将得到一个空页。 拥有查看报表权限的用户将获得链接，用户点击这些链接可以打开报表。 若要了解有关权限的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
@@ -107,7 +109,7 @@ ms.locfileid: "52711298"
 5.  单击 **“连接”**。 可以扩展根节点以设置服务器属性，修改角色定义或关闭报表服务器功能。  
   
 ##  <a name="bkmk_ssdt"></a> 具有报表设计器和报表向导的 SQL Server Data Tools  
- 你可以选择两种不同的工具来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分页报表：报表设计器和 [报表生成器](#bkmk_report_builder)。  
+ 可以选择两种不同的工具来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分页报告：  报表设计器和[报表生成器](#bkmk_report_builder)。  
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio 中可以找到报表设计器。 报表设计器的设计图面包括选项卡式窗口、向导和用于访问报表创建功能的菜单。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中选择 Report Server 项目或者 Report Server 向导模板后，即可使用此报表设计器工具。 若要了解详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。 
  
@@ -132,7 +134,9 @@ ms.locfileid: "52711298"
  若要掌握有关创建报表的入门知识，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。 若要了解有关在报表设计器中可以使用的查询设计器的详细信息，请参阅 [查询设计工具 (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)的技能。  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)是一个独立的应用程序，可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部创建分页报表。 你可以自定义和更新所有的现有报表，无论这些报表是在报表设计器中还是在早期版本的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建的。 你可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
+ [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)是一个独立的应用程序，可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部创建分页报表。 你可以自定义和更新所有的现有报表，无论这些报表是在报表设计器中还是在早期版本的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建的。 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心进行安装。 
+
+分页报表准备就绪时，将其发布到报表服务器或[将其保存到 Power BI 服务](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service)。 
   
  从 Microsoft 下载中心[下载报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138) 。  
   
@@ -151,7 +155,7 @@ ms.locfileid: "52711298"
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ，你可以创建或打开分页报表了。  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- 使用 [SQL Server 移动报表发布服务器](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) 可创建可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户和移动设备（例如 iPad 和 iPhone）中查看的移动报表。   你可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
+ 使用 [SQL Server 移动报表发布服务器](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 可创建可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户和移动设备（例如 iPad 和 iPhone）中查看的移动报表。   你可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
   
  从 Microsoft 下载中心[下载 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527) 。  
   

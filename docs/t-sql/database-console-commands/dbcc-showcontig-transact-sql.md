@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510709"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213846"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ DBCC SHOWCONTIG
 |**页的每个区的平均页数**|页链中每个区的页数。|  
 |**扫描密度 [最佳计数:实际计数]**|百分比。 这是“最佳计数”与“实际计数”的比率。 如果所有内容都是连续的，则该值为 100；如果该值小于 100，则存在一些碎片。<br /><br /> “最佳计数”是指所有内容连续链接时理想的盘区更改次数。 “实际计数”是指实际的盘区更改次数。|  
 |**逻辑扫描碎片**|扫描索引的叶级页时返回的出错页的百分比。 此数与堆无关。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页指针所指向的页。|  
-|**区扫描碎片**|扫描索引的叶级页时出错区所占的百分比。 此数与堆无关。 对于出错区，包含当前索引页的区在物理上不是包含上一个索引页的区的下一个区。<br /><br /> 注意：如果索引涉及多个文件，则此数字毫无意义。|  
+|**区扫描碎片**|扫描索引的叶级页时出错区所占的百分比。 此数与堆无关。 对于出错区，包含当前索引页的区在物理上不是包含上一个索引页的区的下一个区。<br /><br /> 注意：如果索引跨越多个文件，则此数字无意义。|  
 |**页的每页的平均可用字节数**|扫描的页上平均可用字节数。 此数字越大，则页的填充程度越低。 如果索引不会有很多随机插入，则数字越小越好。 此数字还受行大小影响：行越大，此数字就越大。|  
 |**页的平均页密度(满)**|页的平均密度，以百分比表示。 该值会考虑行大小。 因此，该值可以更准确地指示页的填充程度。 百分比越大越好。|  
   
@@ -132,7 +132,7 @@ DBCC SHOWCONTIG
 |**BestCount**|所有内容连续链接时的区更改理想数量。|  
 |**ActualCount**|区更改实际数量。|  
 |**LogicalFragmentation**|扫描索引的叶级页时返回的出错页的百分比。 此数与堆无关。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页指针所指向的页。|  
-|**ExtentFragmentation**|扫描索引的叶级页时出错区所占的百分比。 此数与堆无关。 对于出错区，包含当前索引页的区在物理上不是包含上一个索引页的区的下一个区。<br /><br /> 注意：如果索引涉及多个文件，则此数字毫无意义。|  
+|**ExtentFragmentation**|扫描索引的叶级页时出错区所占的百分比。 此数与堆无关。 对于出错区，包含当前索引页的区在物理上不是包含上一个索引页的区的下一个区。<br /><br /> 注意：如果索引跨越多个文件，则此数字无意义。|  
   
 如果指定了 WITH TABLERESULTS 和 FAST，则结果集将与指定 WITH TABLERESULTS 时一样，但以下列的值将为 null：
 

@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 833775d4ab032724eb76f80ed51b2548d29bd875
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701746"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206226"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51701746"
   
  DROP INDEX 语句不适用于通过定义 PRIMARY KEY 或 UNIQUE 约束创建的索引。 若要删除该约束和相应的索引，请使用带有 DROP CONSTRAINT 子句的 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本将删除在 `<drop_backward_compatible_index>` 中定义的语法。 请避免在新的开发工作中使用该功能，并考虑修改当前使用该功能的应用程序。 请改用在 `<drop_relational_or_xml_index>` 下指定的语法。 使用向后兼容语法无法删除 XML 索引。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -115,7 +115,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 ## <a name="arguments"></a>参数  
  IF EXISTS  
- **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  仅当索引已存在时对其进行有条件地删除。  
   
@@ -202,7 +202,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  "default"  
  指定生成表的默认位置。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样。 如果指定了“default”，则必须将当前会话的 QUOTED_IDENTIFIER 选项设置为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  FILESTREAM_ON { partition_scheme_name | filestream_filegroup_name | "default" }  
@@ -221,7 +221,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  "default"  
  指定 FILESTREAM 数据的默认位置。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
 ## <a name="remarks"></a>Remarks  

@@ -17,12 +17,12 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc9ea383cf3ef6353e5bfe7d6b346924f13b2468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 904f4c3b82a1f58ae6456820b1fae8e98f1c28dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840605"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590981"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 全文权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  ON FULLTEXT CATALOG ::full-text_catalog_name  
  指定对其撤消权限的全文目录。 需要使用作用域限定符 ::。  
   
- ON FULLTEXT STOPLIST ::full-text_stoplist_name  
+ ON FULLTEXT STOPLIST ::_full-text_stoplist_name_  
  指定要对其撤消权限的全文非索引字表。 需要使用作用域限定符 ::。  
   
  database_principal  

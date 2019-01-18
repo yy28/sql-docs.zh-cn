@@ -1,9 +1,11 @@
 ---
 title: 报表参数（报表生成器和报表设计器）| Microsoft Docs
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: 本主题介绍 Reporting Services 报表参数的常规用法、可设置的属性等内容。
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032076"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215018"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和本机模式
+
   本主题介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表参数的常规用法、可设置的属性等内容。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。 可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和报表设计器中所创建的分页报表中使用报表参数，也可在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中所创建的移动报表中使用。 阅读有关 [报表参数概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)的详细信息。  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和本机模式|  
-  
- 若要尝试自己向报表添加参数，请参阅 [教程：向报表添加参数（报表生成器）](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)中所创建的移动报表中使用。  
+ 
+若要自行尝试向报表中添加参数，请参见[教程：向报表添加参数（报表生成器）](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)。  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> 参数的常规用法  
  下面是一些最常用的使用参数的方法。  
   
- **控制分页和移动报表数据**  
+**控制分页和移动报表数据**  
   
 -   通过编写包含变量的数据集查询，在数据源筛选分页报表数据。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032076"
   
 -   允许用户指定值以对分页报表中的数据进行自定义。 例如，为销售数据的开始日期和结束日期提供两个参数。  
   
- **连接相关报表**  
+**连接相关报表**  
   
 -   使用参数可将主报表关联到钻取报表、子报表和链接报表。 设计一组报表时，您可以将各个报表设计为回答某些特定的问题。 每个报表都可以为相关信息提供不同的视图或不同的详细程度。 若要提供一组相关报表，请为目标报表上的相关数据创建参数。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032076"
   
 -   为多个用户自定义参数集。 基于报表服务器上的销售报表创建两个链接报表。 一个链接报表使用销售人员的预定义参数值，而第二个链接报表使用销售经理的预定义参数值。 两个报表使用相同的报表定义。  
   
- **更改报表显示**  
+**更改报表显示**  
   
 -   通过 URL 请求向报表服务器发送命令，以自定义报表的呈现。 有关详细信息，请参阅 [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md) 和[在 URL 内传递报表参数](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032076"
   
  有关详细信息，请参阅本主题中的 [数据集查询](#bkmk_Dataset_Parameters) 。  
   
- **手动创建参数**  
+**手动创建参数**  
   
- 从“报表数据”窗格中手动创建参数。 您可以配置报表参数，以便用户可以通过交互方式输入值以帮助自定义报表的内容或外观。 也可以对报表参数进行配置，以便用户无法更改预配置值。  
+从“报表数据”窗格中手动创建参数。 您可以配置报表参数，以便用户可以通过交互方式输入值以帮助自定义报表的内容或外观。 也可以对报表参数进行配置，以便用户无法更改预配置值。  
   
 > [!NOTE]  
 >  因为在服务器上对参数实行单独管理，所以重新发布带有新的参数设置的主报表不会覆盖报表上的现有参数设置。  
@@ -137,7 +138,7 @@ ms.locfileid: "50032076"
 ##  <a name="bkmk_Report_Parameters"></a> 报表参数属性  
  可用使用“报表属性”对话框来更改报表属性参数。 下表总结了可以为各个参数设置的属性：  
   
-|“属性”|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |“属性”|键入区分大小写的参数名称。 名称必须以字母开头，可以包含字母、数字、下划线 (_)。 名称中不能包含空格。 对于自动生成的参数，其名称会与数据集查询中的参数相匹配。 默认情况下，手动创建的参数与 ReportParameter1 相类似。|  
 |提示|在报表查看器工具栏上的参数旁边显示的文本。|  
@@ -211,30 +212,9 @@ ms.locfileid: "50032076"
 >  如果报表参数与数据集参数无关联，并且参数值包含在报表中，则报表用户可能会在参数值中键入表达式语法或 URL，并将报表呈现为 Excel 或 HTML 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
 >   
 >  若要降低无意中运行恶意脚本的风险，请仅从可信来源打开呈现的报表。 有关保护报表的详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  
-  
-##  <a name="bkmk_How_To_Topics"></a> 操作指南主题  
- 本节列出的过程分步向您介绍如何使用参数和筛选器。  
-  
--   [添加、更改或删除报表参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [为报表参数添加、更改或删除默认值（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [更改报表参数的顺序（报表生成器和 SSRS）](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [向报表添加级联参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [添加子报表和参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [自定义报表中的参数窗格（报表生成器）](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
 
 ##  <a name="bkmk_Related_Topics"></a> 相关章节  
- [配置 SSRS 报表参数（测验）](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
-  
+
  [教程：向报表添加参数（报表生成器）](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [报表参数概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  

@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 12/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e1027474bc84f3e30862ee43a61b3d199e8549
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 9af12ecd407504e4f04327260ccb446d395c7c9f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970451"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432700"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,9 +96,9 @@ enddate
   
 ## <a name="return-value"></a>返回值  
   
--   每个特定的 datepart 及其相应缩写将返回相同的值。  
+每个特定的 datepart 及其相应缩写将返回相同的值。  
   
-若 bigint 的返回值超出范围（-2,147,483,648 到 +2,147,483,647），`DATEDIFF` 返回错误。  对于 millisecond，startdate 和 enddate 之间的最大差值为 24 天 20 小时 31 分钟 23.647 秒。 对于 second，最大差值为 68 年。
+若 bigint 的返回值超出范围（-2,147,483,648 到 +2,147,483,647），`DATEDIFF` 返回错误。  对于 millisecond，startdate 和 enddate 之间的最大差值为 24 天 20 小时 31 分钟 23.647 秒。 对于 second，最大差值为 68 年 19 天 3 小时 14 分 7 秒。
   
 如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则 `DATEDIFF` 返回 0。
   
@@ -106,12 +106,12 @@ enddate
   
 由于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 仅精确到分钟，因此在 startdate 或 enddate 具有 smalldatetime 值时，返回值中的秒和毫秒将始终设置为 0。
   
-如果只为某个日期数据类型变量指定时间值，`DATEDIFF` 会将所缺日期部分的值设置为默认值：1900-01-01。 如果只为某个时间或日期数据类型的变量指定日期值，`DATEDIFF` 会将所缺时间部分的值设置为默认值：00:00:00。 如果 startdate 和 enddate 中有一个只含时间部分，另一个只含日期部分，`DATEDIFF` 会将所缺时间和日期部分设置为各自的默认值。
+如果只为某个日期数据类型变量指定时间值，`DATEDIFF` 会将所缺日期部分的值设置为默认值：`1900-01-01`。 如果只为某个时间或日期数据类型的变量指定日期值，`DATEDIFF` 会将所缺时间部分的值设置为默认值：`00:00:00`。 如果 startdate 和 enddate 中有一个只含时间部分，另一个只含日期部分，`DATEDIFF` 会将所缺时间和日期部分设置为各自的默认值。
   
 如果 startdate 和 enddate 具有不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高，`DATEDIFF` 会将另一个的所缺部分设置为 0。
   
 ## <a name="datepart-boundaries"></a>datepart 边界  
-以下语句具有相同的 startdate 和 enddate 值。 这些日期是相邻的，它们在时间上相差 0.0000001 秒。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界。 每个语句都返回 1。 如果 startdate 和 enddate 的年份值不同，但它们的日历周值相同，`DATEDIFF` 将对 datepart week 返回 0。
+以下语句具有相同的 startdate 和 enddate 值。 这些日期是相邻的，它们在时间上相差一微秒（0.0000001 秒）。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界。 每个语句都返回 1。 如果 startdate 和 enddate 的年份值不同，但它们的日历周值相同，`DATEDIFF` 将对 datepart week 返回 0。
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -127,11 +127,13 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Remarks  
-在 SELECT、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中使用 `DATEDIFF` <list>。
+在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
   
 `DATEDIFF` 将字符串文字隐式转换为 datetime2 类型。 这就意味着，日期在作为字符串传递时，`DATEDIFF` 不会支持 YDM 格式。 必须先将字符串显式转换为 datetime 或 smalldatetime 类型，然后才能使用 YDM 格式。
   
-指定 SET DATEFIRST 对 `DATEDIFF` 不起作用。 `DATEDIFF` 始终使用星期日作为每周的第一天，确保函数以确定性方式运行。
+指定 `SET DATEFIRST` 对 `DATEDIFF` 没有影响。 `DATEDIFF` 始终使用星期日作为每周的第一天，确保函数以确定性方式运行。
+
+如果 enddate 和 startdate 之间的差值返回一个超出 int 范围的值，`DATEDIFF` 可能会溢出，且其精度为分钟或更高。
   
 ## <a name="examples"></a>示例  
 以下示例使用不同类型的表达式作为 startdate 和 enddate 形参的实参。
@@ -237,11 +239,71 @@ FROM Sales.SalesOrderDetail sod
 WHERE soh.SalesOrderID IN(43659, 58918);  
 GO  
 ```  
+
+### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>I. 查找作为日期部分字符串的 startdate 和 enddate 之间的差异
+
+```sql
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
+DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+
+SET @date1 = '1900-01-01 00:00:00.000'
+SET @date2 = '2018-12-12 07:08:01.123'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 以下示例使用不同类型的表达式作为 startdate 和 enddate 形参的实参。
   
-### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. 为 startdate 和 enddate 指定列  
+### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. 为 startdate 和 enddate 指定列  
 此示例计算一个表的两列中的日期之间所跨越的日边界数。
   
 ```sql
@@ -256,7 +318,7 @@ SELECT TOP(1) DATEDIFF(day, startDate, endDate) AS Duration
 -- Returns: 1  
 ```  
   
-### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. 为 startdate 和 enddate 指定标量子查询和标量函数  
+### <a name="k-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>K. 为 startdate 和 enddate 指定标量子查询和标量函数  
 此示例使用标量子查询和标量函数作为 startdate 和 enddate 的参数。
   
 ```sql
@@ -268,7 +330,7 @@ FROM dbo.DimEmployee;
   
 ```  
   
-### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. 为 startdate 和 enddate 指定常量  
+### <a name="l-specifying-constants-for-startdate-and-enddate"></a>L. 为 startdate 和 enddate 指定常量  
 此示例使用字符常量作为 startdate 和 enddate 的参数。
   
 ```sql
@@ -279,7 +341,7 @@ SELECT TOP(1) DATEDIFF(day,
     '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
 ```  
   
-### <a name="l-specifying-ranking-functions-for-startdate"></a>L. 为 startdate 指定排名函数  
+### <a name="m-specifying-ranking-functions-for-startdate"></a>M. 为 startdate 指定排名函数  
 此示例使用排名函数作为 startdate 的参数。
   
 ```sql
@@ -291,7 +353,7 @@ SELECT FirstName, LastName,
 FROM dbo.DimEmployee;  
 ```  
   
-### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. 为 startdate 指定聚合开窗函数  
+### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>N. 为 startdate 指定聚合开窗函数  
 此示例使用聚合开窗函数作为 startdate 的参数。
   
 ```sql
@@ -307,6 +369,3 @@ FROM dbo.DimEmployee
 [DATEDIFF_BIG (Transact-SQL)](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
-  
-
-

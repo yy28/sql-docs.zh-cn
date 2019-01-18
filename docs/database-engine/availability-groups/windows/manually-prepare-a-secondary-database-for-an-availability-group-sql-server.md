@@ -1,6 +1,7 @@
 ---
-title: 为可用性组手动准备辅助数据库 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 为可用性组准备辅助数据库
+description: 有关如何手动准备辅助数据库以加入 Always On 可用性组的说明。
+ms.custom: seodec18
 ms.date: 07/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8422db4a4888cf217c674954588c04acad675d9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529933"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209296"
 ---
-# <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>为可用性组手动准备数据库 (SQL Server)
+# <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>为 Always On 可用性组准备辅助数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中为 AlwaysOn 可用性组准备辅助数据库。 准备数据库需要两个步骤： 
 

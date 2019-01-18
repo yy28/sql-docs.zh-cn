@@ -19,23 +19,23 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfcb3a58ee61e7cd4404ec32799fbc265acdc8f6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513234"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591351"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用“注册数据层应用程序向导”  或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序 (DAC) 定义，并在 **msdb** 系统数据库（**中为** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]）中注册 DAC 定义。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
 -   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingRegisterDACWizard)、[PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
- 注册过程将创建用于定义数据库中的对象的 DAC 定义。 DAC 定义与数据库的组合构成一个 DAC 实例。 如果在数据库引擎的托管实例上将数据库注册为 DAC，则在下次将实用工具收集组从该实例发送到实用工具控制点时，已注册的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
+ 注册过程将创建用于定义数据库中的对象的 DAC 定义。 DAC 定义与数据库的组合构成一个 DAC 实例。 如果在数据库引擎的实例上将数据库注册为 DAC，则在下次将实用工具收集组从该实例发送到实用工具控制点时，已注册的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库上执行 DAC 注册。 如果已为数据库注册了 DAC，则无法执行 DAC 注册。 例如，如果数据库是通过部署 DAC 创建的，则无法运行 “注册数据层应用程序向导”。  
@@ -109,7 +109,7 @@ ms.locfileid: "52513234"
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>验证对象  
- **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 _SchemaName_**.**_ObjectName_ 确定当前正在验证的对象。  
+ **检查**  _SchemaName_ **。** _ObjectName_ **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 _SchemaName_**.**_ObjectName_ 确定当前正在验证的对象。  
   
  “<上一步”- 返回到“设置属性”页以便更改条目。  
   

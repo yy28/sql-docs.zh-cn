@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712114"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328967"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712114"
   
  下面是设置参数值时应遵循的准则：  
   
- **最大大小 (MB)：** 为 Query Store 在数据库中占用的数据空间指定一个限制。 这是最重要的设置，直接影响 Query Store 的操作模式。  
+ **最大大小 (MB)：** 为查询存储在数据库中占用的数据空间指定一个限制。 这是最重要的设置，直接影响 Query Store 的操作模式。  
   
  当 Query Store 收集查询、执行计划和统计信息时，其在数据库中的大小会一直增长，直至达到此限制。 达到此限制后，Query Store 会自动将操作模式更改为只读，并停止收集新数据，这意味着你的性能分析自此不再精确。  
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **数据刷新间隔：** 定义将收集的运行时统计信息保存到磁盘的频率（以秒为单位，默认为 900 秒，即 15 分钟)。 如果工作负荷不生成大量不同的查询和计划或者你能够在数据库关闭之前撑住更长时间来保留数据，请考虑使用更高的值。 
+ **数据刷新间隔：** 定义将收集的运行时统计信息保存到磁盘的频率（以秒为单位，默认为 900 秒，即 15 分钟）。 如果工作负荷不生成大量不同的查询和计划或者你能够在数据库关闭之前撑住更长时间来保留数据，请考虑使用更高的值。 
  
 > [!NOTE]
 > 如果出现故障转移或关闭命令，使用跟踪标志 7745 会阻止查询存储数据写入磁盘。 请查阅[在任务关键型服务器上使用跟踪标志改善灾难恢复](#Recovery)部分，了解详情。
@@ -99,7 +99,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **基于大小的清理模式：** 指定在 Query Store 数据大小达到限制时，是否启用自动数据清理功能。  
+ **基于大小的清除模式：** 指定在 Query Store 数据大小达到限制时，是否启用自动数据清理功能。  
   
  强烈建议你激活基于大小的清理功能，确保 Query Store 始终以读写模式运行并收集最新数据。  
   
@@ -108,7 +108,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
- **Query Store 捕获模式：** 指定 Query Store 的查询捕获策略。  
+ **查询存储捕获模式：** 指定查询存储的查询捕获策略。  
   
 -   **All** - 捕获所有查询。 这是默认选项。  
   
@@ -159,7 +159,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |查询等待统计信息|分析数据库中最活跃的等待类别和哪些查询对所选等待类别贡献最大。<br />使用此视图分析等待统计信息并识别可能在应用程序中影响用户体验的查询。<br /><br />**适用范围：** 从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始|  
 |跟踪的查询|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|
   
-> [!TIP]  
+> [!TIP]
 > 如需详细了解如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来确定资源使用排名靠前的查询并修复那些因计划选择变化而导致回归的查询，请参阅 [@Azure 博客中的查询存储](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
  如果确定某个查询的性能不够理想，则可根据问题性质进行操作。  
@@ -168,7 +168,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > 上面的图形针对特定的查询计划会显示不同的形状，以下是可能出现的每种形状的对应意义：<br />  
 > |形状|含义|  
 > |-------------------|-------------|

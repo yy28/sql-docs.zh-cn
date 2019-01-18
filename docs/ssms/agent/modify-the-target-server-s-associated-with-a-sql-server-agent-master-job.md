@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 72bd5e48e1b594ac5ff03f489259738f9bca5f86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c0277feaf7063cdbf1e4e37cd97c4f8cb5895f18
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507884"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590361"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>修改与 SQL Server 代理主作业关联的目标服务器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52507884"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要修改与 SQL Server 代理主作业关联的目标服务器，请使用：**  
   

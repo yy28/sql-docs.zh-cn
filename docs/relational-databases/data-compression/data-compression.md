@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533554"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210526"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52533554"
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用列存储和列存储存档压缩  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
   
 ### <a name="basics"></a>基础知识  
  列存储表和索引始终使用列存储压缩进行存储。 您可以通过配置称作存档压缩的附加压缩，进一步减少列存储数据的大小。  为了执行存档压缩， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对数据运行 Microsoft XPRESS 压缩算法。 通过使用以下数据压缩类型添加或删除存档压缩：  
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
      若要删除聚集索引，脱机操作的执行速度很快，因为只删除较高级别的聚集索引。 如果联机删除聚集索引，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须重新生成堆两次，一次针对步骤 1，一次针对步骤 2。  
   
 ## <a name="how-compression-affects-replication"></a>压缩对复制的影响 
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。   
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。   
 如果将数据压缩与复制一起使用，则应注意以下事项：  
 -   当快照代理生成初始架构脚本时，新架构对表及其索引采用相同的压缩设置。 不能仅对表启用压缩，而不对索引启用压缩。  
 -   对于事务复制，项目架构选项决定了必须对哪些依赖对象和属性编写脚本。 有关详细信息，请参阅 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。  
@@ -187,7 +187,7 @@ REBUILD PARTITION = ALL WITH (
 |如果发布服务器上的所有分区均压缩，则压缩订阅服务器上的表，但不复制分区方案。|False|True|检查是否对所有分区均启用了压缩。<br /><br /> 在表级别对压缩编写脚本。|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>压缩对其他 SQL Server 组件的影响 
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
    
  压缩发生在存储引擎中，数据以未压缩状态呈现给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他大部分组件。 这决定了其他组件上的压缩效果仅限于以下方面：  
 -   大容量导入和导出操作  

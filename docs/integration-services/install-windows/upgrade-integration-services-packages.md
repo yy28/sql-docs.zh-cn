@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3f88d384d602e5cca6872fe6e606694e227a7e29
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 02ac3c6522dd97cf0ac2e752894f0c2ba1fc91c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637954"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209946"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
   在将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本时，现有的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 包不会自动升级到当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的包格式。 您必须选择一种升级方法并手动升级包。  
@@ -72,7 +72,7 @@ ms.locfileid: "51637954"
   
 |组件或功能|升级结果|  
 |--------------------------|---------------------|  
-|连接字符串|对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> 使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择 **“更新连接字符串以使用新的提供程序名称”** 选项。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，在“选项”对话框的“常规”页上，选择 **“更新连接字符串以使用新的提供程序名称”** 选项。 有关此选项的详细信息，请参阅“常规页”。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意：在连接字符串存储于配置文件或数据源文件中，或表达式设置了 **ConnectionString** 属性时，不能使用上述过程更新连接字符串。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅 [数据源](../../integration-services/connection-manager/data-sources.md)。|  
+|连接字符串|对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> 使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择 **“更新连接字符串以使用新的提供程序名称”** 选项。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，在“选项”对话框的“常规”页上，选择 **“更新连接字符串以使用新的提供程序名称”** 选项。 有关此选项的详细信息，请参阅“常规页”。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意：在连接字符串存储于配置文件或数据源文件中，或表达式设置了 ConnectionString 属性时，不能使用上述过程更新连接字符串。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅 [数据源](../../integration-services/connection-manager/data-sources.md)。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>依赖于 ADODB.dll 的脚本  
  在未安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的计算机上，可能不能升级或运行显式引用 ADODB.dll 的“脚本任务”和“脚本组件”脚本。 为了升级这些“脚本任务”或“脚本组件”脚本，建议你删除对 ADODB.dll 的依赖关系。  Ado.Net 是建议用于托管代码（如 VB 和 C# 脚本）的替代项。  

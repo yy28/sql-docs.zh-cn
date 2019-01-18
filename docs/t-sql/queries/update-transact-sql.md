@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520848"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980323"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  如果 UPDATE 语句在更新聚集键以及一个或者多个 text、ntext 或 image 列时可以更改多个行，则对这些列的部分更新将作为替换所有值来执行。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 ntext、text 和 image 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大值数据类型  
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>E. 使用 WITH common_table_expression 子句  
- 以下示例为直接或间接用于创建 `PerAssemnblyQty` 的所有部件和组件更新 `ProductAssemblyID 800` 值。 公用表表达式将返回用于直接生成 `ProductAssemblyID 800` 的部件和用于生成这些组件的部件等的层次结构列表。 只修改公用表表达式所返回的行。  
+ 以下示例为直接或间接用于创建 `PerAssemblyQty` 的所有部件和组件更新 `ProductAssemblyID 800` 值。 公用表表达式将返回用于直接生成 `ProductAssemblyID 800` 的部件和用于生成这些组件的部件等的层次结构列表。 只修改公用表表达式所返回的行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  本节中的示例说明了如何使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用一个远程目标表，从而更新该表中的行。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. 使用链接服务器更新远程表中的数据  
- 以下示例更新远程服务器上的表。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。 请注意，您必须为 `@datasrc` 指定有效的服务器名称。  
+ 以下示例更新远程服务器上的表。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkedServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。 请注意，您必须为 `@datasrc` 指定有效的服务器名称。  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  以下示例通过指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行集函数来更新远程表中的行。 在之前例子中创建的链接服务器名称用于此示例。  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. 使用 OPENDATASOURCE 函数更新远程表中的数据  
- 下面的示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数向远程表插入一行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称。 您可能需要为即席分布式查询配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[即席分布式查询服务器配置选项](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数来更新远程表中的行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称。 您可能需要为即席分布式查询配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[即席分布式查询服务器配置选项](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> 更新大型对象数据类型  
  本节中的示例说明了如何更新使用大型对象 (LOB) 数据类型定义的列中的值。  
   

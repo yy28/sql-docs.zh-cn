@@ -1,6 +1,7 @@
 ---
-title: 创建可用性组 (SQL Server PowerShell) | Microsoft Docs
-ms.custom: ''
+title: 使用 PowerShell 创建可用性组
+description: 使用 PowerShell 创建 AlwaysOn 可用性组的步骤。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52b7ef84afca33d899cf74fafa7f6f7bd4dd34ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600687"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209976"
 ---
-# <a name="create-an-availability-group-sql-server-powershell"></a>创建可用性组 (SQL Server PowerShell)
+# <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 创建 AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用 PowerShell cmdlet 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过 PowerShell 创建和配置 AlwaysOn 可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "51600687"
   
      [先决条件、限制和建议](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
      [任务和相应 PowerShell Cmdlet 的摘要](#SummaryPSStatements)  
   
@@ -60,11 +61,11 @@ ms.locfileid: "51600687"
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ###  <a name="SummaryPSStatements"></a> 任务和相应 PowerShell Cmdlet 的摘要  
- 下表列出了涉及配置可用性组的基本任务，并且指出了 PowerShell cmdlet 支持的任务。 必须按照任务在表中出现的顺序执行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]任务。  
+ 下表列出了涉及配置可用性组的基本任务，并且指出了 PowerShell cmdlet 支持的任务。 必须按照任务在表中出现的顺序执行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 任务。  
   
 |任务|PowerShell Cmdlet（如果可用）或 Transact-SQL 语句|执行任务的位置**\***|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
-|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|**New-SqlHadrEndPoint**|在缺少数据库镜像端点的每个服务器实例上执行。<br /><br /> 若要更改现有数据库镜像端点，请使用 **Set-SqlHadrEndpoint**。|  
+|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|**New-SqlHadrEndPoint**|在缺少数据库镜像端点的每个服务器实例上执行。<br /><br /> 注意：若要更改现有数据库镜像端点，请使用 Set-SqlHadrEndpoint。|  
 |创建可用性组|首先，将 **New-SqlAvailabilityReplica** cmdlet 与 **-AsTemplate** 参数一起使用，以便为你计划包括在可用性组中的两个可用性副本中的每一个都创建内存中可用性副本对象。<br /><br /> 然后，通过使用 **New-SqlAvailabilityGroup** cmdlet 并引用你的可用性副本对象，创建可用性组。|在要承载初始主副本的服务器实例上执行。|  
 |将辅助副本联接到可用性组|**Join-SqlAvailabilityGroup**|在承载辅助副本的各服务器实例上执行。|  
 |准备辅助数据库|**Backup-SqlDatabase** 和 **Restore-SqlDatabase**|在承载主副本的服务器实例上创建备份。<br /><br /> 使用 **NoRecovery** 还原参数在承载辅助副本的各服务器实例上还原备份。 如果文件路径在承载主副本和目标辅助副本的计算机之间存在差异，还要使用 **RelocateFile** 还原参数。|  
@@ -236,19 +237,19 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **博客：**  
   
-     [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [使用 SQL Server PowerShell 配置 AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/configuring-alwayson-with-sql-server-powershell/)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第二部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 2 部分：使用 Always On 生成关键任务高可用性解决方案）  
   
 -   **白皮书：**  
   

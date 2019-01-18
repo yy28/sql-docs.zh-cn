@@ -5,26 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 533838b933cbe41e868f921bee6eafe14df44def
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 540774d3b6e41bdadc4f7e9cb06a8302f29f7ff5
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158015"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380378"
 ---
 # <a name="activity-monitor"></a>活动监视器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  活动监视器显示有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例。  
+  活动监视器显示有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例。  
   
- 活动监视器是一个选项卡式文档窗口，它包含以下可展开和可折叠窗格：“概述”、“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近耗费大量资源的查询”。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 你可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
+ 活动监视器是一个带有以下可展开和折叠的窗格的选项卡式文档窗口：“概述”、“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近消耗大量资源的查询”。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 你可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
  
  ## <a name="customize-columns"></a>自定义列 
  对于在“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近耗费大量资源的查询”窗格中包括的列，用以下方式自定义显示内容：  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -14,12 +13,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395385"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766129"
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "52395385"
 |210041|“ROOT”不是有效的成员代码。|MemberCode 值包含单词“ROOT”。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210042|“MDMUNUSED”不是有效的成员代码。|MemberCode 值包含单词“MDMUNUSED”。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210052|由于将 MemberCode 用作基于域的属性值，所以无法停用该代码。|**ImportType** = **3** 或 **4**时，如果将此成员用作其他成员的属性值，则暂存过程失败。 使用 **ImportType5** 或 **6** 将值设置为 NULL，或者在运行暂存过程之前更改值。|叶<br /><br /> 合并|  
-|300002|该成员代码无效。|关系：不存在任何父或子成员代码。<br /><br /> 叶或合并： **ImportType** = **3** 或 **4** 且成员代码不存在。|叶<br /><br /> 合并<br /><br /> 关系|  
+|300002|该成员代码无效。|关系：不存在任何父或子成员代码。<br /><br /> 叶或合并：ImportType = 3 或 4 且成员代码不存在。|叶<br /><br /> 合并<br /><br /> 关系|  
 |300004|该成员代码已存在。|**ImportType** = **1** ，且使用了实体中已存在的成员代码。|叶<br /><br /> 合并|  
 |210011|**RelationshipType** 为 **1**时， **ParentCode** 不能为叶成员。|确保 **ParentCode** 值是合并成员代码。|关系|  
 |210015|对于层次结构和批次，该成员代码在临时表中多次出现。|对于显式层次结构，您在同一批次中多次指定了同一成员的位置。|关系|  

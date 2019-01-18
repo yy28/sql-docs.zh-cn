@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 02920786c8ee3b4fec011dd084a8fb7fc064b69d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807363"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979384"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  更改私钥的保护。  
   
- ENCRYPTION BY PASSWORD ='stongPassword'  
+ ENCRYPTION BY PASSWORD ='strongPassword'  
  指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
   
  DECRYPTION BY PASSWORD ='oldPassword'  

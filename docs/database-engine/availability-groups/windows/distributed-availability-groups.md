@@ -1,6 +1,7 @@
 ---
-title: 分布式可用性组 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 什么是分布式可用性组
+description: 分布式可用性组是一种特殊类型的可用性组，它跨两个单独的可用性组。 加入分布式可用性组的可用性组无需处于同一位置。
+ms.custom: seodec18
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534450"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53381028"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,9 @@ ms.locfileid: "52534450"
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>分布式可用性组的 SQL Server 版本要求
 
-分布式可用性组当前仅适用于通过相同的主要 SQL Server 版本创建的可用性组。 例如，当前必须使用 SQL Server 2016 创建加入分布式可用性组的所有可用性组。 因为 SQL Server 2012 或 2014 中不存在分布式可用性组功能，因此通过这些版本创建的可用性组不能加入分布式可用性组。 
+SQL Server 2017 或更高版本中的分布式可用性组可以混合同一分布式可用性组中的 SQL Server 的主版本。 包含读/写主要副本的 AG 可以是与加入分布式 AG 的其他 AG 相同的版本或更低版本。 其他 AG 可以是相同版本或更高版本。 此方案面向升级和迁移方案。 例如，如果包含读/写主要副本的 AG 是 SQL Server 2016，但你希望升级/迁移到 SQL Server 2017 或更高版本，则可以使用 SQL Server 2017 配置加入分布式 AG 的其他 AG。
+
+因为 SQL Server 2012 或 2014 中不存在分布式可用性组功能，因此通过这些版本创建的可用性组不能加入分布式可用性组。 
 
 > [!NOTE]
 > Standard Edition 或 Standard Edition 和 Enterprise Edition 的组合版本不能配置分布式可用性组。
@@ -85,7 +88,7 @@ ms.locfileid: "52534450"
 * 一个 WSFC 群集加入域，一个 WSFC 群集不加入域。
 * 两个 WSFC 群集都不加入到域。
 
-如果两个 WSFC 群集加入同一域（不受信任的域），创建分布式可用性组时无需执行任何特殊操作。 对于未加入同一域的可用性组和 WSFC 群集，通过证书启用分布式可用性组，方法类似于为独立于域的可用性组创建可用性组。 若要查看如何配置分布式可用性组的证书，请遵循[创建独立于域的可用性组](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)下的步骤 3-13。
+如果两个 WSFC 群集加入同一域（不受信任的域），创建分布式可用性组时无需执行任何特殊操作。 对于未加入同一域的可用性组和 WSFC 群集，通过证书启用分布式可用性组，方法类似于为独立于域的可用性组创建可用性组。 若要查看如何配置分布式可用性组的证书，请遵循[创建独立于域的可用性组](domain-independent-availability-groups.md)下的步骤 3-13。
 
 对于分布式可用性组，每个基础可用性组中的主要副本必须具有彼此的证书。 如果已有未使用证书的终结点，请使用 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) 重新配置这些终结点，以反映证书的使用。
 
@@ -138,7 +141,7 @@ ms.locfileid: "52534450"
 
 ![通过分布式可用性组扩大读取](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-下图显示 AG 1 为两个不同分布式可用性组的主要副本：分布式 AG 1（包含 AG 1 和 AG 2）和分布式 AG 2（包含 AG 1 和 AG 3）。
+下图显示 AG 1 作为两个不同分布式可用性组的主要副本：分布式 AG 1（包含 AG 1 和 AG 2）和分布式 AG 2（包含 AG 1 和 AG 3）。
 
 
 ![使用分布式可用性组扩大读取的另一示例]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)

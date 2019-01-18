@@ -1,6 +1,7 @@
 ---
-title: 读取缩放可用性组 | Microsoft Docs
-ms.custom: ''
+title: 将读取缩放用于可用性组
+description: '关于使用 Always On 可用性组时如何实现读取缩放的说明。 '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622397"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203836"
 ---
-# <a name="read-scale-availability-groups"></a>读取缩放可用性组
+# <a name="use-read-scale-with-always-on-availability-groups"></a>将读取缩放用于 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 可用性组是一种全面的解决方案，赋予了 SQL Server 高可用性功能，并提供集成缩放解决方案。 在典型的数据库应用程序中，有多个客户端运行多种类型的工作负荷。 有时会由于资源限制出现瓶颈。 可以释放资源并增加 OLTP 工作负荷的吞吐量。 还可以提高性能并缩放只读工作负荷。 利用 SQL Server 的最快复制技术，并创建一组复制数据库，分担对只读副本的报告和分析工作负荷。

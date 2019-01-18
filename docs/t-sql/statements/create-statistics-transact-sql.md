@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0bf6e2b9a678d1406e2b9beb8cdda09d3ef704e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523290"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209926"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -197,7 +197,7 @@ CREATE STATISTICS statistics_name
 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 MAXDOP = max_degree_of_parallelism  
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
  在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
@@ -290,11 +290,11 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. 将 CREATE STATISTICS 与 FULLSCAN 和 PERSIST_SAMPLE_PERCENT 一起使用  
  以下示例为 `Contact` 表 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `ContactMail2` 统计信息，并为所有未明确指定采样百分比的后续更新设置 100% 的采样百分比。  
-  
+  
 ```sql  
 CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
 ### Examples using AdventureWorksDW database. 

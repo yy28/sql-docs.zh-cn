@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639064"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204726"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
@@ -176,15 +176,15 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
   
  **说明：**
->还可以通过单击“配置”属性旁的省略号按钮，访问“包配置组织程序”。 “配置”选项出现在包的属性窗口中。  
-  
->配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。    
-  
->在 **“包配置组织程序”** 对话框中，可以启用包以使用配置、添加和删除配置以及设置加载配置的首选顺序。 
- 
->如果包配置按照首选顺序加载，则配置按照从 **“包配置组织程序”** 对话框中显示的列表顶部到列表底部的顺序进行加载。 但是，在运行时，包配置可能不会按照首选顺序加载。 尤其是，父包配置将在其他类型的配置之后加载。  
-  
->如果多个配置设置相同的对象属性，则在运行时使用最后加载的值。  
+> 还可以通过单击“配置”属性旁的省略号按钮，访问“包配置组织程序”。 “配置”选项出现在包的属性窗口中。  
+> 
+> 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。    
+> 
+> 在 **“包配置组织程序”** 对话框中，可以启用包以使用配置、添加和删除配置以及设置加载配置的首选顺序。 
+> 
+> 如果包配置按照首选顺序加载，则配置按照从 **“包配置组织程序”** 对话框中显示的列表顶部到列表底部的顺序进行加载。 但是，在运行时，包配置可能不会按照首选顺序加载。 尤其是，父包配置将在其他类型的配置之后加载。  
+> 
+> 如果多个配置设置相同的对象属性，则在运行时使用最后加载的值。  
   
  从 **“包配置组织程序”** 对话框中，可以运行包配置向导，该向导将指导您完成创建配置的步骤。 若要运行包配置向导，请在 **“包配置组织程序”** 对话框中添加新配置，或编辑现有的配置。 在向导的各页上，您可以选择配置类型，选择是直接访问配置还是使用环境变量，以及选择要在配置中保存的属性。  
   
@@ -212,7 +212,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  在向导完成后，新的配置将添加到 **“包配置组织程序”** 对话框的配置列表中。  
   
-> **注意：** 包配置向导的最后一页“完成向导”列出了配置中的目标属性。 如果希望通过使用 **dtexec** 命令提示符实用工具在运行包时更新属性，则可以通过运行包配置向导来生成表示属性路径的字符串，然后将它们复制并粘贴到命令提示符窗口中，以便用于 **dtexec**的设置选项。  
+> **注意：** 包配置向导的最后一页“完成向导”列出了配置中的目标属性。 如果希望通过使用 **dtexec** 命令提示符实用工具在运行包时更新属性，则可以通过运行包配置向导来生成表示属性路径的字符串，然后将它们复制并粘贴到命令提示符窗口中，以便用于 **dtexec** 的设置选项。  
   
  下表介绍 **“包配置组织程序”** 对话框的配置列表中的各列。  
   
@@ -242,7 +242,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 8.  在“选择要导出的属性”页上，选择要在配置中包括的包对象的属性。 如果配置类型只支持一个属性，则此向导页的标题是“选择目标属性”。 有关详细信息，请参阅 [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md)。  
   
-    > **注意：** 只有 **XML 配置文件** 和 **SQL Server** 配置类型支持在一个配置中包括多个属性。  
+    > **注意：** 只有 **XML 配置文件**和 **SQL Server** 配置类型支持在一个配置中包括多个属性。  
   
 9. 在“完成向导”页上，键入配置的名称，然后单击 **“完成”**。  
   
@@ -257,7 +257,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  如果多个配置更新同一属性，则在配置列表中排列靠后的配置的值将代替在列表中排列靠前的配置的值。 最后加载到属性中的值是在包运行时将要使用的值。 而且，如果包使用直接配置（例如 XML 配置文件）和间接配置（例如环境变量）的组合，那么指向直接配置的位置的间接配置必须在列表中处于靠前位置。  
   
-> **注意：** 如果包配置按照首选顺序加载，则配置按照从“包配置组织程序”对话框中显示的列表顶部到列表底部的顺序进行加载。 但是，在运行时，包配置可能不会按照首选顺序加载。 父包配置将在其他类型的配置之后加载的情况尤其如此。  
+> **注意：** 如果包配置按照首选顺序加载，则配置按照从 **“包配置组织程序”** 对话框中显示的列表顶部到列表底部的顺序进行加载。 但是，在运行时，包配置可能不会按照首选顺序加载。 父包配置将在其他类型的配置之后加载的情况尤其如此。  
   
  在运行时，包配置将更新包对象的属性值。 加载包时，配置中的值将替换开发包时所设置的值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持不同的配置类型。 例如，您可以使用包含多个配置的 XML 文件或包含单个配置的环境变量。 有关详细信息，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
   
@@ -479,7 +479,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表列出了部署实用工具属性。  
   
-|“属性”|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |AllowConfigurationChange|一个指定在部署过程中是否可以更新配置的值。|  
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 **True** 才能创建部署实用工具。|  
@@ -682,7 +682,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  若要在“SSIS 包”对话框中选择该文件夹，请单击“浏览(...)”。但是，该对话框不提供用来选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
   
 > [!NOTE]  
->  如果您没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效”。  
+>  如果没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效。”  
   
  **依靠服务器存储进行加密**  
  选择此项可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的安全功能来帮助保护包。  

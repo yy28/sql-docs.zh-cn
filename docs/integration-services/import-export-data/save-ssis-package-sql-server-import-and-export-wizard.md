@@ -13,12 +13,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001ca15788a47a4089739b10f884ef9a81dfa2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89e15ed8b14c9866e9ad217a973272480eb26c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681685"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204816"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>保存 SSIS 包（SQL Server 导入和导出向导）
   如果在“保存和运行包”页上指定要将设置保存为 SQL Server Integration Services (SSIS) 包，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导显示“保存 SSIS 包”。 在此页上，将指定用于保存由向导创建的包的附加选项。  
@@ -39,7 +39,7 @@ ms.locfileid: "47681685"
  **描述**  
  为包提供说明。 最好说明包的用途，使其一目了然，便于维护。  
   
- **目标**  
+ **Target**  
  之前为包指定的目标（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或文件系统）。 如果要将包保存到其他目标，请返回到“保存并运行包”  页。
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>屏幕截图 - 将包保存在 SQL Server 中

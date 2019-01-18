@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246736"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -107,7 +107,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 现在，可以借助 [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md) 添加 Scale Out Worker。 在连接页中输入 `[SQL Server Availability Group Listener DNS name],[Port]`。
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>在高可用性环境中升级 Scale Out
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>在高可用性环境中升级 Scale Out
 若要在高可用性环境中升级 Scale Out，请按照[适用于 SSIS 目录的 Always On 升级步骤](../catalog/ssis-catalog.md#Upgrade)，在每台计算机上升级 Scale Out 主要角色和 Scale Out 辅助角色，并使用新版 Scale Out 主要角色服务在上述步骤 7 中重新创建 Windows Server 故障转移群集角色。
 
 ## <a name="next-steps"></a>后续步骤

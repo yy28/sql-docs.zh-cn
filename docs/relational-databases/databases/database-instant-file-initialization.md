@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 418fdf1db1dfb6db58ee80b709b267338d2591d8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558224"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204916"
 ---
 # <a name="database-file-initialization"></a>数据库文件初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "51558224"
 ## <a name="instant-file-initialization-ifi"></a>即时文件初始化 (IFI)  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可以在瞬间对数据文件进行初始化，以避免零填充操作。 即时文件初始化可以快速执行上述文件操作。 即时文件初始化功能将回收使用的磁盘空间，而无需使用零填充空间。 相反，新数据写入文件时会覆盖磁盘内容。 日志文件不能立即初始化。  
   
-> [!NOTE]  
+> [!NOTE]
 > 只有在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 或 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 或更高版本中才可以使用即时文件初始化功能。  
-
+> 
 > [!IMPORTANT]
 > 只有在数据文件中才可以使用即时文件初始化功能。 创建日志文件或其大小增长时，将始终零填充该文件。
   
@@ -81,7 +81,7 @@ Database Instant File Initialization: enabled. For security and performance cons
 Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
 ```
 
-**适用于：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 开始）
+**适用范围：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 开始）
 
 ## <a name="security-considerations"></a>需要考虑的安全性因素  
 使用即时文件初始化 (IFI) 时，由于只有在新数据写入文件中时才覆盖删除的磁盘内容，因此，在数据文件的该特定区域中发生某些其他的数据写入前，未授权的主体可能会访问删除的内容。 当数据库文件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之后，可以通过文件中的随机访问控制列表 (DACL) 来降低此信息泄露的风险。 此 DACL 仅允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和本地管理员访问文件。 但是，当文件分离以后，可以由不具有 SE_MANAGE_VOLUME_NAME 的用户或服务访问。 备份数据库时，将需要以下类似考虑：如果未使用适当的 DACL 对备份文件进行保护，则未授权的用户或服务将可以使用删除的内容。  

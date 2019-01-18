@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.createsite.f1
@@ -14,12 +13,12 @@ ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 915a0b6af3569a20275527f982a6cd01a70dae4b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e6f154b19327ce93501e71a4d3b04c8fc5724fc3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696035"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784529"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>“创建网站”对话框（Master Data Services 配置管理器）
 

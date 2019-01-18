@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7a09c5653fe89528c49ade19e044066acfb34cd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 55316e61b2690e56949e7fff3fe209e9b02fa0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403702"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979303"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52403702"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  STBuffer() 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同：指定 tolerance = abs(distance) \* .001 且 relative = false。  

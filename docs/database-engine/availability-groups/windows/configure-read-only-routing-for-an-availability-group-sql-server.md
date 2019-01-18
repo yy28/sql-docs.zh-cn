@@ -1,6 +1,7 @@
 ---
-title: 为可用性组配置只读路由 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 为可用性组配置只读路由
+description: 使用 Transact-SQL (T-SQL) 或 PowerShell 将所有只读流量自动路由到 Always On 可用性组的使用只读路由的次要副本。
+ms.custom: seodec18
 ms.date: 08/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d984799a7ac2ac3c6dd6241e98c3a5af175759b0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4a65105416da0a53327cbcd174062a92d3659529
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527159"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207406"
 ---
-# <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>为可用性组配置只读路由 (SQL Server)
+# <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>为 Always On 可用性组配置只读路由
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要配置 AlwaysOn 可用性组以便在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]中支持只读路由，你可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 *只读路由* 指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将符合条件的只读连接请求路由到可用的 AlwaysOn [可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) （即，配置为在辅助角色下运行时允许只读工作负荷的副本）的能力。 为支持只读路由，可用性组必须具备 [可用性组侦听器](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。 只读客户端必须将其连接请求定向到此侦听器，并且客户端的连接字符串必须将应用程序意向指定为“只读”。 也就是说，它们必须是 *读意向连接请求*。  
 
@@ -39,7 +40,7 @@ ms.locfileid: "52527159"
   
      [为支持只读路由，您需要配置哪些副本属性？](#RORReplicaProperties)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要配置只读路由，可使用：**  
   
@@ -50,7 +51,7 @@ ms.locfileid: "52527159"
     > [!NOTE]  
     >  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]不支持配置只读路由。  
   
--   **跟进：**  [配置只读路由之后](#FollowUp)  
+-   **跟进：**[配置只读路由之后](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -221,7 +222,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：配置只读路由之后  
+##  <a name="FollowUp"></a>跟进：配置只读路由之后  
  在这两种角色中配置当前主副本和可读辅助副本以支持只读路由后，可读辅助副本可接收/读取来自通过可用性组侦听器连接的客户端的读意向连接。  
   
 > [!TIP]  
@@ -274,7 +275,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
--    [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-    [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 -    [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
@@ -288,7 +289,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 
 - [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
 
-- [活动次要副本：可读次要副本 &#40;AlwaysOn 可用性组&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+- [活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
 
 - [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  

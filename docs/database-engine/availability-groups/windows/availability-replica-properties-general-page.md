@@ -1,6 +1,7 @@
 ---
-title: 可用性副本属性（“常规”页）| Microsoft Docs
-ms.custom: ''
+title: 可用性组的可用性副本属性（“常规”页）
+description: SQL Server Management Studio 中“可用性副本属性”页的“常规”页上的各种属性说明。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54105086ff43e11f703df1da6da6c8dba75f0dad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a114666df21424bda445ac852f14752c6372e6d3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611122"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205316"
 ---
-# <a name="availability-replica-properties-general-page"></a>可用性副本属性（“常规”页）
+# <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 可用性组的可用性副本属性（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用此对话框可以查看可用性副本的属性。  
   
@@ -88,7 +89,7 @@ ms.locfileid: "47611122"
  **是**  
  允许与此副本的辅助数据库的所有连接，但仅限读访问。 辅助数据库全都可用于读访问。  
   
- 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
+ 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **会话超时(秒)**  
  超时期限（秒）。 超时期限是指副本接收来自其他副本的消息而等待的最长时间，超过此时间，将主副本和辅助副本之间的连接视为已失败。 会话超时检测辅助副本是否与主副本相连接。 在检测到与辅助副本的连接失败时，主副本将辅助副本视为 NOT_SYNCHRONIZED。 在检测到与辅助副本的连接失败时，辅助副本只会尝试重新连接。  

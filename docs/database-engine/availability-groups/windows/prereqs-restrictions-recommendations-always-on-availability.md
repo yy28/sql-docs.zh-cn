@@ -1,6 +1,7 @@
 ---
-title: 先决条件、限制、建议 - AlwaysOn 可用性组 | Microsoft Docs
-ms.custom: ''
+title: 针对可用性组的先决条件、限制和建议
+description: 有关部署 Always On 可用性组的先决条件、限制和建议的说明。
+ms.custom: seodec18
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -19,14 +20,14 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516463"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202986"
 ---
-# <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>先决条件、限制、建议 - AlwaysOn 可用性组
+# <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本文介绍部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 时的注意事项，包括针对主机、Windows Server 故障转移群集 (WSFC)、服务器实例和可用性组的先决条件、限制和建议。 对于上述各组件，还指出了安全注意事项和所需权限（如果有）。  
@@ -39,10 +40,10 @@ ms.locfileid: "52516463"
   
 ||依赖功能|修补程序|链接|  
 |------|-----------------------|------------|----------|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347： [.Net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347：[.Net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
-###  <a name="SystemRequirements"></a> 清单：要求（Windows 系统）  
+###  <a name="SystemRequirements"></a>清单：要求（Windows 系统）  
  为了支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能，请确保要参与一个或多个可用性组的每台计算机都满足以下基本要求：  
   
 ||要求|链接|  
@@ -58,16 +59,16 @@ ms.locfileid: "52516463"
   
 ###  <a name="ComputerRecommendations"></a> 针对承载可用性副本的计算机的建议（Windows 系统）  
   
--   **类似的系统：**  对于给定的可用性组，所有可用性副本都应在可处理同样的工作负荷的相当的系统上运行。  
+-   **的系统：** 对于给定的可用性组，所有可用性副本都应在可处理同样的工作负荷的相当的系统上运行。  
   
--   **专用网络适配器：**  为获得最佳性能，请为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]使用专用网络适配器（网络接口卡）。  
+-   **专用网络适配器：** 为获得最佳性能，请将专用的网络适配器（网络接口卡）用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
   
--   **足够的磁盘空间：**  服务器实例在其上承载可用性副本的每个计算机都必须为该可用性组中的所有数据库拥有足够的磁盘空间。 请记住，在主数据库增长时，其相应的辅助数据库也增长相同量。  
+-   **足够的磁盘空间：** 服务器实例在其上承载可用性副本的每个计算机都必须为该可用性组中的所有数据库拥有足够的磁盘空间。 请记住，在主数据库增长时，其相应的辅助数据库也增长相同量。  
   
 ###  <a name="PermissionsWindows"></a> 权限（Windows 系统）  
  若要管理 WSFC，用户必须是每个群集节点上的系统管理员。  
   
- 有关用于管理群集的帐户的详细信息，请参阅 [附录 A：故障转移群集要求](https://technet.microsoft.com/library/dd197454.aspx)。  
+ 有关用于管理群集的帐户的详细信息，请参阅[附录 A：故障转移群集要求](https://technet.microsoft.com/library/dd197454.aspx)。  
   
 ###  <a name="RelatedTasksWindows"></a> 相关任务（Windows 系统）  
   
@@ -127,7 +128,7 @@ ms.locfileid: "52516463"
   
 -   [相关内容](#RelatedContentSI)  
   
-###  <a name="PrerequisitesSI"></a> 清单：先决条件（服务器实例）  
+###  <a name="PrerequisitesSI"></a>清单：先决条件（服务器实例）  
   
 ||先决条件|链接|  
 |-|------------------|-----------|  
@@ -167,7 +168,7 @@ ms.locfileid: "52516463"
   
     -   辅助副本上的备份将在备份操作持续时间内包含主副本上的一个线程。  
   
- 有关详细信息，请参阅 [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) （CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师的一篇博客）。  
+ 有关详细信息，请参阅 [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)（CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师博客）。  
   
 ###  <a name="PermissionsSI"></a> 权限（服务器实例）  
   
@@ -186,7 +187,7 @@ ms.locfileid: "52516463"
   
 ###  <a name="RelatedContentSI"></a> 相关内容（服务器实例）  
   
--   [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> 网络连接建议  
  强烈建议为 WSFC 节点之间的通信和可用性副本之间的通信使用相同的网络链接。  如果某些链接失败（甚至间歇性断开），使用单独的网络链接可能会导致意外行为。  
@@ -212,7 +213,7 @@ ms.locfileid: "52516463"
 > [!NOTE]  
 > 故障转移群集实例支持群集共享卷 (CSV)。 有关 CSV 的详细信息，请参阅 [了解故障转移群集中的群集共享卷](https://technet.microsoft.com/library/dd759255.aspx)。  
   
--   **FCI 的群集节点只能托管给定可用性组的一个副本：** 如果在 FCI 上添加可用性副本，作为 FCI 的可能所有者的 WSFC 节点不能托管同一个可用性组的另一个副本。  若要避免可能出现的冲突，建议配置故障转移群集实例的可能所有者。 这将阻止可能会导致单个 WSFC 尝试在同一可用性组上同时承载两个可用性副本的情况的发生。
+-   FCI 的群集节点仅可以托管给定可用性组的一个副本：如果在 FCI 上添加可用性副本，作为 FCI 的可能所有者的 WSFC 节点不能托管同一个可用性组的另一个副本。  若要避免可能出现的冲突，建议配置故障转移群集实例的可能所有者。 这将阻止可能会导致单个 WSFC 尝试在同一可用性组上同时承载两个可用性副本的情况的发生。
   
      此外，其他每个副本都必须由驻留在同一个 Windows Server 故障转移群集中其他群集节点上的 SQL Server 2016 实例托管。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。 
 
@@ -220,11 +221,11 @@ ms.locfileid: "52516463"
   > 使用故障转移群集管理器将托管可用性组的故障转移群集实例移动到已在托管同一个可用性组副本的节点，可能会导致可用性组副本丢失，使其无法在目标节点上重新联机。 故障转移群集的单个节点不能托管同一个可用性组的多个副本。 有关如何发生这种情况以及如何恢复的详细信息，请参阅博客[在可用性组中意外删除副本](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)。 
 
   
--   **FCI 不支持可用性组自动故障转移：**  FCI 不支持可用性组自动故障转移，因此只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
+-   FCI 不支持可用性组自动故障转移：FCI 不支持通过可用性组来自动进行故障转移，因此只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
   
--   **更改 FCI 网络名称：**  如果你需要更改托管可用性副本的 FCI 的网络名称，则需要从副本的可用性组中删除它，然后将它添加回可用性组中。 您不能删除主副本，因此，如果您在重命名承载主副本的 FCI，则应故障转移到某一辅助副本，然后删除之前的主副本并将其添加回去。 请注意，重命名 FCI 可能会更改其数据库镜像端点的 URL。 当您添加副本时，请确保指定当前端点的 URL。  
+-   **更改 FCI 网络名称：** 如果你需要更改托管可用性副本的 FCI 的网络名称，则需要从副本的可用性组中删除它，然后将它添加回可用性组中。 您不能删除主副本，因此，如果您在重命名承载主副本的 FCI，则应故障转移到某一辅助副本，然后删除之前的主副本并将其添加回去。 请注意，重命名 FCI 可能会更改其数据库镜像端点的 URL。 当您添加副本时，请确保指定当前端点的 URL。  
   
-###  <a name="PrerequisitesFCI"></a> 清单：先决条件 (FCI)  
+###  <a name="PrerequisitesFCI"></a>清单：先决条件 (FCI)  
   
 ||先决条件|链接|  
 |-|------------------|----------|  
@@ -242,7 +243,7 @@ ms.locfileid: "52516463"
   
 -   [故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On 体系结构指南：使用故障转移群集实例和可用性组生成高可用性和灾难恢复解决方案](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性组先决条件和限制  
  **本节内容：**  
@@ -257,16 +258,16 @@ ms.locfileid: "52516463"
   
 ###  <a name="RestrictionsAG"></a> 限制（可用性组）  
   
--   **可用性副本必须由一个 WSFC 的不同节点托管：** 对于某个给定可用性组，可用性副本必须由在同一个 WSFC 的不同节点上运行的服务器实例托管。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
+-   可用性副本必须由一个 WSFC 的不同节点承载：对于某个给定可用性组，可用性副本必须由在同一 WSFC 的不同节点上运行的服务器实例承载。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
   
     > [!NOTE]  
     >  同一物理计算机上的多个虚拟机可分别为同一可用性组承载可用性副本，因为每个虚拟机都充当一个单独的计算机。  
   
 -   **唯一的可用性组名称：** 每个可用性组名称在 WSFC 上必须唯一。 可用性组名称的最大长度为 128 个字符。  
   
--   **可用性副本：**  每个可用性组支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
+-   **可用性副本：** 每个可用性组都支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
   
--   **每个计算机的可用性组和可用性数据库的最大数目：** 可以在计算机（VM 或物理机器）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 对每个物理计算机承载 10 个可用性组和 100 个数据库进行了广泛测试。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
+-   每台计算机的可用性组和可用性数据库的最大数目：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 对每个物理计算机承载 10 个可用性组和 100 个数据库进行了广泛测试。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
   
 -   **不要使用故障转移群集管理器来操作可用性组：**  
   
@@ -331,7 +332,7 @@ ms.locfileid: "52516463"
   
 -   [相关任务](#RelatedTasksADb)  
   
-###  <a name="RequirementsDb"></a> 清单：要求（可用性数据库）  
+###  <a name="RequirementsDb"></a>清单：要求（可用性数据库）  
  为了符合添加到可用性组的条件，数据库必须：  
   
 ||要求|链接|  
@@ -342,7 +343,7 @@ ms.locfileid: "52516463"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|是多用户数据库。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**user_access** = 0)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|未使用 AUTO_CLOSE。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_auto_close_on** = 0)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|使用完整恢复模式。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**recovery_model** = 1)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|拥有至少一个完整的数据库备份。<br /><br /> 注意：在将数据库设置为完整恢复模式后，必须执行完整备份，才能启动完整恢复日志链。|[创建完整数据库备份 (SQL Server)](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|拥有至少一个完整的数据库备份。<br /><br /> 注意：将数据库设置为完整恢复模式之后，将需要一个完整的备份来启动完整恢复日志链。|[创建完整数据库备份 (SQL Server)](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|不属于任何现有可用性组。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**group_database_id** = NULL)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|不是为数据库镜像配置的。|[sys.database_mirroring](../../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) （如果数据库未参与镜像，则所有带有“mirroring_”前缀的列将为 NULL。）|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|在将使用 FILESTREAM 的数据库添加到某一可用性组之前，请确保在承载或将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
@@ -355,11 +356,11 @@ ms.locfileid: "52516463"
   
 -   如果辅助数据库的文件路径（包括驱动器号）不同于相应主数据库的路径，则以下限制适用：  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：不支持“完全”选项（在[“选择初始数据同步页”](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)页面上）**  
+    -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：不支持“完全”选项（在[选择初始数据同步页](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)页面上），  
   
-    -   **RESTORE WITH MOVE：**  若要创建辅助数据库，在承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上数据库文件必须是 RESTORED WITH MOVE。  
+    -   **RESTORE WITH MOVE：** 若要创建辅助数据库，在承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上数据库文件必须是 RESTORED WITH MOVE。  
   
-    -   **对添加文件操作的影响：**  以后针对主要副本的添加文件操作在辅助数据库上可能会失败。 此失败可能导致辅助数据库暂停。 而这又会导致辅助副本进入“非同步”状态。  
+    -   对添加文件操作的影响：以后针对主要副本的添加文件操作在辅助数据库上可能会失败。 此失败可能导致辅助数据库暂停。 而这又会导致辅助副本进入“非同步”状态。  
   
         > [!NOTE]  
         >  有关如何处理失败的添加文件操作的详细信息，请参阅[添加文件操作失败的故障排除（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)。  
@@ -384,9 +385,9 @@ ms.locfileid: "52516463"
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

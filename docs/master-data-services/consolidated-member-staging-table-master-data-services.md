@@ -5,8 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
@@ -15,12 +14,12 @@ ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ae29a3e3b604ffdff961389f8acb2eebf2a4c95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5951ff4222ba87af1a405b739d823e7702dda4da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806919"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合并成员临时表 (Master Data Services)
 

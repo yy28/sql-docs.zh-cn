@@ -11,19 +11,19 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ffaef2277d5e6e902078a75fca75df7c6400106
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd0ab995803c9582f91f5a9a732838736ac526
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719238"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207676"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>第 1-1 课 - 创建工作文件夹和环境变量
 在此任务中，您将创建工作文件夹 (C:\DeploymentTutorial) 和新的系统环境变量（`DataTransfer` 和 `LoadXMLData`），在后面的教程任务中您将使用它们。  
   
 工作文件夹位于 C 驱动器的根目录。 如果必须使用其他驱动器或位置，也可以使用其他驱动器或位置。 但是，您需要记下此位置；然后，只要教程引用 DeploymentTutorial 工作文件夹的位置，就使用它。  
   
-在后面的课程中，需将保存到文件系统的包部署到 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的 sysssispackages 表中。 理想的情况是，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包部署到其他计算机。 如果这是不可能的，则仍可以通过将包部署到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例而从本教程中学到许多知识。 在本地计算机和目标计算机上使用的环境变量具有相同的变量名称，但是在变量中存储的值不同。 例如，在本地计算机上，环境变量 `DataTransfer` 的值引用 C:\DeploymentTutorial 文件夹，而在目标计算机上，环境变量 `DataTransfer` 引用 C:\DeploymentTutorialInstall 文件夹。  
+在后面的课程中，将保存到文件系统的包部署到 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的 sysssispackages 表。 理想的情况是，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包部署到其他计算机。 如果这是不可能的，则仍可以通过将包部署到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例而从本教程中学到许多知识。 在本地计算机和目标计算机上使用的环境变量具有相同的变量名称，但是在变量中存储的值不同。 例如，在本地计算机上，环境变量 `DataTransfer` 的值引用 C:\DeploymentTutorial 文件夹，而在目标计算机上，环境变量 `DataTransfer` 引用 C:\DeploymentTutorialInstall 文件夹。  
   
 如果计划部署到本地计算机，则只需要创建一组环境变量；但是，在执行本地部署之前，您需要将环境变量的值更新为相应值。  
   

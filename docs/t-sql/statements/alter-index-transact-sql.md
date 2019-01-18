@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537785"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980413"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -190,7 +190,7 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *partition_number*|未分区的索引、XML 索引、空间索引或已禁用的索引|  
 |IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用范围：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
 |ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用范围：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
-|RESUMABLE = ON  | **All** 关键字不支持可恢复索引。 <br /><br /> 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
+|RESUMABLE = ON  | **All** 关键字不支持可恢复索引。 <br /><br /> **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  有关可以联机执行的索引操作的更详细信息，请参阅[联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
@@ -218,7 +218,7 @@ ALTER INDEX { index_name | ALL }
 > [!NOTE]
 >  重新生成主 XML 索引时，基础用户表在索引操作持续期间不可用。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  对于列存储索引，重新生成操作：  
   
@@ -232,7 +232,7 @@ ALTER INDEX { index_name | ALL }
   
 PARTITION  
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定只重新生成或重新组织索引的一个分区。 如果 index_name 不是已分区索引，则不能指定 PARTITION。  
   
@@ -243,13 +243,13 @@ PARTITION
   
  *partition_number*  
    
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  要重新生成或重新组织已分区索引的分区数。 partition_number 是可以引用变量的常量表达式。 其中包括用户定义类型变量或函数以及用户定义函数，但不能引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 partition_number 必须存在，否则，该语句将失败。  
   
  WITH **(**\<single_partition_rebuild_index_option>**)**  
    
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  SORT_IN_TEMPDB、MAXDOP 和 DATA_COMPRESSION 是在重新生成单个分区 (PARTITION = n) 时可以指定的选项。 不能在单个分区重新生成操作中指定 XML 索引。  
   
@@ -300,7 +300,7 @@ LOB_COMPACTION = OFF
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+ **适用范围：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS 提供将打开或关闭的增量行组强制到列存储中的方式。 使用此选项时，无需重新生成列存储索引即可清空增量行组。  此操作与其他移除和合并碎片整理功能相结合，使得在大多数情况下不再需要重新生成索引。    
 
@@ -313,7 +313,7 @@ SET ( \<set_index option> [ ,... n] )
   
 PAD_INDEX = { ON | OFF }  
    
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定索引填充。 默认为 OFF。  
   
@@ -327,7 +327,7 @@ PAD_INDEX = { ON | OFF }
   
 FILLFACTOR = fillfactor  
  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。  
   
@@ -340,7 +340,7 @@ FILLFACTOR = fillfactor
   
  SORT_IN_TEMPDB = { ON | OFF }  
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定是否在 **tempdb** 中存储排序结果。 默认为 OFF。  
   
@@ -396,7 +396,7 @@ FILLFACTOR = fillfactor
 -   对内部表创建的统计信息。  
 -   使用空间索引或 XML 索引创建的统计信息。  
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  ONLINE **=** { ON | **OFF** } \<同样适用于 rebuild_index_option>  
  指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。  
@@ -426,7 +426,7 @@ FILLFACTOR = fillfactor
 
 RESUMABLE **=** { ON | **OFF**}
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  指定联机索引操作是否可恢复。
 
@@ -436,13 +436,13 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION = time [MINUTES]，与 RESUMABLE = ON 一起使用（要求 ONLINE = ON）。
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 指示可恢复联机索引操作在暂停之前执行的时间（以分钟为单位指定的整数值）。 
 
 ALLOW_ROW_LOCKS = { ON | OFF }  
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定是否允许行锁。 默认值为 ON。  
   
@@ -454,7 +454,7 @@ ALLOW_ROW_LOCKS = { ON | OFF }
   
 ALLOW_PAGE_LOCKS = { ON | OFF }  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  指定是否允许使用页锁。 默认值为 ON。  
   
@@ -469,7 +469,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
   
  MAXDOP = max_degree_of_parallelism  
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  在索引操作期间替代 max degree of parallelism 配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
@@ -503,7 +503,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
  有关何时使用 COMPRESSION_DELAY 的建议，请参阅实时运营分析的列存储索引。  
   
  DATA_COMPRESSION  
- 为指定的索引、分区号或分区范围指定数据压缩选项。 这些选项如下：  
+ 为指定的索引、分区号或分区范围指定数据压缩选项。 选项如下所示：  
   
  无  
  不压缩索引或指定的分区。 这不适用于列存储索引。  
@@ -516,13 +516,13 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
   
  COLUMNSTORE  
    
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE 指定对使用 COLUMNSTORE_ARCHIVE 选项压缩的索引或指定分区进行解压缩。 在还原数据时，将继续通过用于所有列存储索引的列存储压缩对数据进行压缩。  
   
  COLUMNSTORE_ARCHIVE  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE_ARCHIVE 会进一步将指定分区压缩为更小的大小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。  
   
@@ -530,19 +530,19 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
   
  ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 
   
  指定对其应用 DATA_COMPRESSION 设置的分区。 如果索引未分区，则 ON PARTITIONS 参数将产生错误。 如果不提供 ON PARTITIONS 子句，则 DATA_COMPRESSION 选项将应用于分区索引的所有分区。  
   
  可以按以下方式指定 \<partition_number_expression>：  
   
--   提供一个分区号，例如：ON PARTITIONS (2)。  
+-   提供分区号，例如：ON PARTITIONS (2)。  
   
--   提供若干单独分区的分区号并用逗号将它们隔开，例如：ON PARTITIONS (1, 5)。  
+-   为多个单个分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1,5)。  
   
--   同时提供范围和单独的分区：ON PARTITIONS (2, 4, 6 TO 8)。  
+-   提供范围和单个分区：ON PARTITIONS (2, 4, 6 TO 8)。  
   
- \<range> 可以指定为以单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
+ \<range> 可指定为由单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
   
@@ -569,19 +569,19 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  WAIT_AT_LOW_PRIORITY，仅与 **ONLINE=ON** 一起使用。  
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  联机索引重新生成必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY** 表示联机索引重新生成操作将等待低优先级锁，从而允许其他操作在该联机索引生成操作正在等待时继续进行。 省略 WAIT AT LOW PRIORITY 选项等效于 WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)。 有关详细信息，请参阅 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
   
  MAX_DURATION = time [MINUTES]  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  联机索引重新生成锁将在执行 DDL 命令时以低优先级等待的等待时间（以分钟为单位指定的整数值）。 如果操作被阻塞 MAX_DURATION 时间，则将执行某一 ABORT_AFTER_WAIT 操作。 MAX_DURATION 时间始终以分钟为单位，MINUTES 一词可以省略。  
  
  ABORT_AFTER_WAIT = [NONE | SELF | BLOCKERS } ]  
    
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  无  
  继续以普通（常规）优先级等待锁。  
@@ -594,33 +594,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-适用范围：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始  
+**适用对象**：自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起  
 
 恢复已手动或由于失败而暂停的索引操作。
 
 MAX_DURATION，与 **RESUMABLE=ON** 一起使用
 
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 可恢复联机索引操作在恢复之后执行的时间（以分钟为单位指定的整数值）。 该时间过后，如果可恢复操作仍在运行，则它会暂停。
 
 WAIT_AT_LOW_PRIORITY，与 **RESUMABLE=ON** 和 **ONLINE = ON** 一起使用。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  在暂停之后恢复联机索引必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY** 表示联机索引重新生成操作将等待低优先级锁，从而允许其他操作在该联机索引生成操作正在等待时继续进行。 省略 WAIT AT LOW PRIORITY 选项等效于 WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)。 有关详细信息，请参阅 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
 
 
 PAUSE
  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
 暂停可恢复联机索引重新生成操作。
 
 ABORT
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
 中止已声明为可恢复的正在运行或已暂停的索引操作。 必须显式执行 **ABORT** 命令才能终止可恢复索引重新生成操作。 失败或暂停可恢复索引操作不会终止其执行；而是将操作停留在无限期暂停状态。
   
@@ -710,7 +710,7 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
 
 ### <a name="resumable-indexes"></a> 可恢复索引操作
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。 
 -  RESUMABLE 选项对于给定索引在元数据不持久，并且仅适用于当前 DDL 语句的持续时间。 因此，必须显式指定 RESUMABLE = ON 子句才能启用可恢复性。
@@ -840,7 +840,6 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
@@ -884,7 +883,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 将所有打开和关闭的增量行组压缩到列存储中  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+ **适用范围：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  命令 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 将每个打开和关闭的增量行组作为压缩行组压缩到列存储中。 这会清空增量存储，并强制所有行压缩到列存储中。 这在执行许多插入操作之后特别有用，因为这些操作将行存储在一个或多个增量行组中。  
   
@@ -953,7 +952,7 @@ SELECT * FROM sys.column_store_row_groups;
  SELECT 语句的结果表明行组被压缩 (COMPRESSED)，这意味着行组的列段现在被压缩并且存储于列存储中。  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. 脱机重新生成聚集列存储索引的分区  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  
+ **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）  
  
  若要重新生成大型聚集列存储索引的分区，请使用带有分区选项的 ALTER INDEX REBUILD。 此示例重新生成分区 12。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，建议将 REBUILD 替换为 REORGANIZE。  
   
@@ -1009,7 +1008,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. 重新生成表的所有索引并指定选项  
  下面的示例指定了 ALL 关键字。 这将重新生成与 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的表 Production.Product 相关联的所有索引。 其中指定了三个选项。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1018,7 +1017,7 @@ REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON)
   
 下面的示例添加包含低优先级锁选项的 ONLINE 选项，并添加行压缩选项。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1033,16 +1032,16 @@ REBUILD WITH
 ```  
   
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. 通过 LOB 压缩重新组织索引  
- 下面的示例重新整理 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的单个聚集索引。 因为该索引在叶级别包含 LOB 数据类型，所以该语句还会压缩所有包含该大型对象数据的页。 注意，不需要指定 WITH (LOB_COMPACTION) 选项，因为默认值为 ON。  
+ 下面的示例重新整理 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的单个聚集索引。 因为该索引在叶级别包含 LOB 数据类型，所以该语句还会压缩所有包含该大型对象数据的页。 注意，不需要指定 WITH (LOB_COMPACTION = ON) 选项，因为默认值为 ON。  
   
 ```sql  
-ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
+ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);  
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. 设置索引的选项。  
  下面的示例为 `AK_SalesOrderHeader_SalesOrderNumber` 数据库中的索引 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 设置了几个选项。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
@@ -1097,7 +1096,7 @@ GO
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. 重新生成分区索引  
  下面的示例在 `5` 数据库中重新生成一个分区索引为 `IX_TransactionHistory_TransactionDate` 的分区，分区号为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 分区 5 是联机重新生成的，并且对索引重新生成操作获取的每个锁分别应用低优先级锁的 10 分钟等待时间。 如果在此时间无法获取锁来完成索引重新生成，重新生成操作语句就会中止。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 -- Verify the partitioned indexes.  
@@ -1127,7 +1126,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. 联机可恢复索引重新生成
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  下面的示例演示如何使用联机可恢复索引重新生成。 
 

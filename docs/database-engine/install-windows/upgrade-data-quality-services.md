@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601928"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208827"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "51601928"
 
 本文提供的信息介绍如何升级现有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Data Quality Services (DQS) 安装。 升级 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 的过程中，还必须升级 DQS 数据库架构。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   您必须先备份 DQS 数据库，然后才能升级 DQS，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   通过使用当前或早期版本的 Data Quality Client 或 Integration Services 中的 [DQS 清除转换](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，可以连接到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 执行数据质量任务。  
 > -   升级 Data Quality Services 和 Master Data Services 后，用于 Excel 的 Master Data Services 加载项的任何早期版本都将不再适用。 你可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 此处 [下载用于 Excel 的](https://go.microsoft.com/fwlink/?LinkID=506665)版本 Master Data Services 外接程序。  
@@ -61,8 +61,8 @@ ms.locfileid: "51601928"
 
       >[!NOTE]
       >在文件夹路径中，将 [nn] 替换为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的版本号。
-      >- SQL Server 2016：13
-      >- SQL Server 2017：14
+      >- 对于 SQL Server 2016：13
+      >- 对于 SQL Server 2017：14
 
         ```  
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
