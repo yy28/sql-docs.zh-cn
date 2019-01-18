@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> 参数  
  @enable_backup  
- 启用或禁用指定数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup是**位**。 配置时所需的参数[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的第一个实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果要更改的现有[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置中，此参数是可选。 在这种情况下，未指定任何配置值保留其现有值。  
+ 启用或禁用指定数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup是 **位**。 配置时所需的参数[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的第一个实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果要更改的现有[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置中，此参数是可选。 在这种情况下，未指定任何配置值保留其现有值。  
   
  @database_name  
  启用托管的备份上特定数据库的数据库名称。  

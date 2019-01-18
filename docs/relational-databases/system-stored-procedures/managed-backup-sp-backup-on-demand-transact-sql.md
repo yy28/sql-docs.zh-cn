@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_on_demand
  要对其执行备份的数据库的名称。 @database_name是 **SYSNAME**。  
   
  @type  
- 要执行的备份类型：数据库或日志。 @type参数是**nvarchar (32)**。  
+ 要执行的备份类型：数据库或日志。 @type参数是 **nvarchar (32)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
