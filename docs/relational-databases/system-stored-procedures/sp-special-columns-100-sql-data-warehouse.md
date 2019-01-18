@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 205d731e262514c0782cad09af6bf36d24b25bc5
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: fdebe91359fbe9d7c9ef7aaadc38ba096427f651
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254413"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395382"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,27 +44,27 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @table_name=] '*table_name*  
+ [ @table_name=] '*table_name*'  
  用于返回目录信息的表的名称。 *名称*是**sysname**，无默认值。 不支持通配符模式匹配。  
   
- [ @table_owner=] '*table_owner*  
+ [ @table_owner=] '*table_owner*'  
  是用来返回目录信息的表所有者。 *所有者*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认表可见性规则将应用。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有指定的表和*名称*，此过程的指定的表查找*名称*拥有的数据库所有者。 如果存在该表，则返回该表的列。  
   
- [ @qualifier=] '*限定符*  
+ [ @qualifier=] '*qualifier*'  
  表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
- [ @col_type=] '*col_type*  
+ [ @col_type=] '*col_type*'  
  是列类型。 *col_type*是**char (** 1 **)**，默认值为。 键入 R 返回最优列集，该对象通过检索的列，允许中指定的任意一行要进行唯一标识表。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
   
- [ @scope=] '*作用域*  
+ [ @scope=] '*scope*'  
  ROWID 要求的最小作用域。 *作用域*是**char (** 1 **)**，默认值为 t。 作用域为 C 指定 ROWID 只有位于该行上时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
   
- [ @nullable=] '*可以为 null*  
+ [ @nullable=] '*nullable*'  
  指示特殊列能否接受 Null 值。 *可以为 null*是**char (** 1 **)**，默认值为 u。 O 指定特殊列不允许 null 值。 如果值为 U，则指定列可以部分为 Null 值。  
   
- [ @ODBCVer=] '*ODBCVer*  
+ [ @ODBCVer=] '*ODBCVer*'  
  所使用的 ODBC 版本。 *ODBCVer*是**int (** 4 **)**，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 2.0 版和 ODBC 3.0 版之间差别的详细信息，请参阅 ODBC 3.0 版的 ODBC SQLSpecialColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -86,7 +86,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>备注  
  sp_special_columns 与 ODBC 中的 SQLSpecialColumns 等效。 返回的结果按 SCOPE 排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -98,7 +98,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 数据仓库存储的过程](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
