@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596418"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405727"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>教程：让数据科学家使用 R 的数据库内分析
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>教程：适用于 R 数据科学家的 SQL 开发
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本教程中让数据科学家，了解如何生成基于 SQL Server 2016 或 SQL Server 2017 中 R 功能支持的预测性建模的端到端解决方案。 本教程使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 
@@ -43,7 +43,7 @@ ms.locfileid: "53596418"
 或者，可以同时具有的计算机上运行演练[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 R 开发环境，但我们不建议此配置适用于生产环境。 如果你需要将客户端和服务器放在同一计算机上，请务必安装另一组用于从"远程"客户端发送 R 脚本的 Microsoft R 库。 不要使用 SQL Server 实例的程序文件中安装的 R 库。 具体而言，如果使用一台计算机，则需要在这种以支持客户端和服务器操作这些位置的 RevoScaleR 库。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>
 

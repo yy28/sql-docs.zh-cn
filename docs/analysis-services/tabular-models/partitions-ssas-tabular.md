@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dfcebd520cd0efdecf2549a685595fe7a60deec
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 5d26b1b1558ca546fb47660488b15dc777c5ad87
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071814"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405847"
 ---
 # <a name="partitions"></a>“度量值组”
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53071814"
 |主题|Description|  
 |-----------|-----------------|  
 |[创建和管理工作区数据库中的分区](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|介绍如何创建和管理在 SSDT 中使用分区管理器的模型工作区数据库中的分区。|  
-|[在工作区数据库中处理分区](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|说明如何在模型工作区数据库中处理（刷新）分区。|  
+|[在工作区数据库中处理分区](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)|说明如何在模型工作区数据库中处理（刷新）分区。|  
   
 ## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   

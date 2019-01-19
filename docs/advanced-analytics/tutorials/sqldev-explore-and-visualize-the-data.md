@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645496"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405777"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "53645496"
 
 该存储过程返回的图像是一个 varbinary 数据流，显然无法直接查看该图像。 但是，可以使用 **bcp** 实用工具获取此 varbinary 数据，并将其保存为客户端计算机上的图像文件。
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，运行以下语句：
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，运行以下语句：
   
     ```sql
     EXEC [dbo].[RxPlotHistogram]
@@ -114,25 +114,24 @@ ms.locfileid: "53645496"
   
     **结果**
     
-    *绘图*
-    *0xFFD8FFE000104A4649...*
+    *plot* *0xFFD8FFE000104A4649...*
   
-2.  打开 PowerShell 命令提示符并运行以下命令，提供相应的实例名称、 数据库名称、 用户名和凭据作为参数。 对于使用 Windows 标识，您可以替换 **-U**并 **-P**与 **-T**。
+2. 打开 PowerShell 命令提示符并运行以下命令，提供相应的实例名称、 数据库名称、 用户名和凭据作为参数。 对于使用 Windows 标识，您可以替换 **-U**并 **-P**与 **-T**。
   
-     ```powershell
-     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
-     ```
+    ```powershell
+    bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+    ```
 
     > [!NOTE]
     > 对于 bcp 命令开关区分大小写。
   
-3.  如果连接成功，则将提示你输入有关图形文件格式的详细信息。 
+3. 如果连接成功，则将提示你输入有关图形文件格式的详细信息。 
 
    在每个提示符下按 ENTER 以接受默认设置，以下更改除外：
     
-    -   对于 **prefix-length of field plot**，请键入 0
+   + 对于 **prefix-length of field plot**，请键入 0
   
-    -   如果想要保存输出参数供以后重复使用，则键入 **Y** 。
+   + 如果想要保存输出参数供以后重复使用，则键入 **Y** 。
   
     ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 

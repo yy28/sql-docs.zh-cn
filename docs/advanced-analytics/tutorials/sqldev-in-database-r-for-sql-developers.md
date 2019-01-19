@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596338"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405597"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>教程：使用 R 的 SQL 开发人员的数据库内分析
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>教程：SQL 开发人员的 R 数据分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在为 SQL 程序员提供本教程中，了解有关 R 集成的生成和部署的基于 R 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 
+在为 SQL 程序员提供本教程中，了解有关 R 集成的生成和部署的基于 R 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 您将使用 T-SQL、 SQL Server Management Studio，并使用 [机器学习服务] 的数据库引擎实例 ([机器学习服务](../install/sql-machine-learning-services-windows-install.md)和 R 语言支持
 
-本教程向您介绍一种数据建模工作流中使用的 R 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将生成该模型预测某个行程是否可能会导致基于时间、 上移动，距离和上车位置的提示。 在本教程中使用的 R 代码的所有包装在存储过程创建并在 Management Studio 中运行。
+本教程向您介绍一种数据建模工作流中使用的 R 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将生成该模型预测某个行程是否可能会导致基于时间、 上移动，距离和上车位置的提示。 
+
+在本教程中使用的 R 代码的所有包装在存储过程创建并在 Management Studio 中运行。
 
 ## <a name="background-for-sql-developers"></a>面向 SQL 开发人员的背景
 

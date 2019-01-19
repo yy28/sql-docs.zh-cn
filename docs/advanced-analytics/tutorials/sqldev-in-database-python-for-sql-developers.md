@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596678"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405617"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>教程：SQL 开发人员的数据库内 Python 分析
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>教程：SQL 开发人员的 Python 数据分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本教程中的 SQL 编程人员，了解有关 Python 集成通过构建和部署基于 Python 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 
+在本教程中的 SQL 编程人员，了解有关 Python 集成通过构建和部署基于 Python 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 您将使用 T-SQL、 SQL Server Management Studio，并使用数据库引擎实例[机器学习服务](../install/sql-machine-learning-services-windows-install.md)和 Python 语言支持。
 
-本教程向您介绍一种数据建模工作流中使用的 Python 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将使用从 New York City Taxi 和 Limosine 委员会的示例数据并将生成的模型预测某个行程是否可能会导致基于时间、 上移动，距离和上车位置的提示。 在本教程中使用的 Python 代码的所有包装在存储过程创建并在 Management Studio 中运行。
+本教程向您介绍一种数据建模工作流中使用的 Python 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将使用从 New York City Taxi 和 Limosine 委员会的示例数据并将生成的模型预测某个行程是否可能会导致基于时间、 上移动，距离和上车位置的提示。 
+
+在本教程中使用的 Python 代码的所有包装在存储过程创建并在 Management Studio 中运行。
 
 > [!NOTE]
 > 本教程是在 R 和 Python 中可用。 对于 R，请参阅[-数据库内分析 R 开发人员](sqldev-in-database-r-for-sql-developers.md)。

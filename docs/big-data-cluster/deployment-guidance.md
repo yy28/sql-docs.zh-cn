@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242138"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405817"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -53,7 +53,7 @@ SQL Server 大数据群集至少需要版本最低为 Kubernetes 的 v1.10 服�
 
 首次部署 SQL Server 2019 大数据群集之前[安装的大数据工具](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 扩展**
 
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 目前，大数据群集升级到新版本的唯一方法是手动删除并重新创建群集。 每个版本具有的唯一版本**mssqlctl**不是与以前的版本兼容。 此外，如果旧群集必须下载一个新的节点上的图像，最新的映像不可能与在群集上的较旧映像兼容。 若要升级到最新版本，请使用以下步骤：
 
-1. 在删除之前在旧群集，备份数据，和 HDFS 上的 SQL Server 主实例。 对于 SQL Server 主实例，可以使用[SQL Server 备份和还原](data-ingestion-restore-databse.md)。 Hdfs，你[可以在使用数据复制**curl**](data-ingestion-curl.md)。
+1. 在删除之前在旧群集，备份数据，和 HDFS 上的 SQL Server 主实例。 对于 SQL Server 主实例，可以使用[SQL Server 备份和还原](data-ingestion-restore-database.md)。 Hdfs，你[可以在使用数据复制**curl**](data-ingestion-curl.md)。
 
 1. 删除与旧群集`mssqlctl delete cluster`命令。
 
@@ -310,10 +310,10 @@ kubectl get svc -n <your-cluster-name>
 
    | 服务 | Description |
    |---|---|
-   | **终结点的主池** | 可以访问主实例。<br/>(**外部 IP，31433**并**SA**用户) |
-   | **服务 mssql 控制器 lb**<br/>**服务 mssql 控制器 nodeport** | 支持工具和管理群集的客户端。 |
-   | **服务代理 lb**<br/>**服务代理 nodeport** | 提供对访问[群集管理门户](cluster-admin-portal.md)。<br/>(https://**外部 IP**: 30777/门户)|
-   | **服务-安全性-l b**<br/>**服务安全 nodeport** | 提供对 HDFS/Spark 网关的访问。<br/>(**EXTERNAL-IP**并**根**用户) |
+   | **endpoint-master-pool** | 可以访问主实例。<br/>(**外部 IP，31433**并**SA**用户) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | 支持工具和管理群集的客户端。 |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | 提供对访问[群集管理门户](cluster-admin-portal.md)。<br/>(https://**外部 IP**: 30777/门户)|
+   | **service-security-lb**<br/>**service-security-nodeport** | 提供对 HDFS/Spark 网关的访问。<br/>(**EXTERNAL-IP**并**根**用户) |
 
    > [!NOTE]
    > 根据你的 Kubernetes 环境而异的服务名称。 服务名称在部署时在 Azure Kubernetes 服务 (AKS)，以结尾 **-l b**。对于 minikube 和 kubeadm 部署，服务名称结尾 **-nodeport**。

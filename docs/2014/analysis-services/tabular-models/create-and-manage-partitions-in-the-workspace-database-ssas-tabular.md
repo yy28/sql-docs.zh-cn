@@ -13,12 +13,12 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe732d1647acbfdf70dacaddfc4eea3eca479d8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd519c9cafb1358f21af30d2c9ea0522e47768b7
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094797"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405737"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>创建和管理工作区数据库中的分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，可单独处理（刷新）每个分区，也可与其他分区并行处理每个分区。 分区可以提高大型数据库的可扩展性和可管理性。 默认情况下，每个表都具有一个包含所有列的分区。 本主题中的任务描述如何使用 **中的** “分区管理器” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -70,7 +70,7 @@ ms.locfileid: "48094797"
 2.  在 **“分区”** 列表中，选择要删除的分区，然后单击 **“删除”**。  
   
 ## <a name="see-also"></a>请参阅  
- [分区&#40;SSAS 表格&#41;](partitions-ssas-tabular.md)   
- [在工作区数据库中处理分区&#40;SSAS 表格&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [分区（SSAS 表格）](partitions-ssas-tabular.md)   
+ [工作区数据库中处理分区&#40;SSAS 表格&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   
