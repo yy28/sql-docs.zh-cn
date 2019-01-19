@@ -3,20 +3,21 @@ title: 什么&#39;s 新的 SQL Server 机器学习服务
 description: 新的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 机器学习服务的每个版本的功能公告。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432490"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397616"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 机器学习服务中的新增功能 
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 机器学习功能将添加到 SQL Server 中每个版本，随着我们继续展开、 扩展和强化数据平台、 高级的分析和数据科学之间的集成。 
@@ -32,6 +33,7 @@ ms.locfileid: "53432490"
 |   | [Java 语言扩展](java/extension-java.md)Windows 和 Linux 上为 SQL Server 2019 预览版中的新增功能。 您可以提供编译的 Java 代码到 SQL Server 通过将权限分配并将路径设置。 使用 SQL Server 的访问权限的客户端应用程序可以使用数据并运行你的代码通过调用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，相同的过程用于 SQL Server 上的 R 和 Python 集成。 | 
 |  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)引入了使你能够轻松地从已分区数据中生成多个模型的两个新参数。 在本教程中，了解详细信息[在 R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
 |   | 故障转移群集支持现在支持 Windows 和 Linux，假定所有节点上启动 SQL Server Launchpad 服务。 有关详细信息，请参阅[SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 | package | Description |
 |---------|-------------|
-[**revoscalepy**](python/ref-py-revoscalepy.md)| Python 等效于 RevoScaleR。 可以创建用于线性回归和逻辑回归、 决策树、 提升的树和随机林，所有可并行化，并能够在远程计算上下文中正在运行的 Python 模型。 此包支持使用多个数据源和远程计算上下文。 在远程 SQL 服务器上，若要浏览数据或生成模型，而无需移动数据，数据科学家或开发人员可以执行 Python 代码。 |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| Python 等效于 RevoScaleR。 可以创建用于线性回归和逻辑回归、 决策树、 提升的树和随机林，所有可并行化，并能够在远程计算上下文中正在运行的 Python 模型。 此包支持使用多个数据源和远程计算上下文。 在远程 SQL 服务器上，若要浏览数据或生成模型，而无需移动数据，数据科学家或开发人员可以执行 Python 代码。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 包的 Python 等效。 |
 
 ### <a name="pre-trained-models"></a>预定型模型

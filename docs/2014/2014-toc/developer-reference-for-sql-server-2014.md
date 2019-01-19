@@ -12,17 +12,19 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d3a1a2c3c5f1f4bce9a3662e1bc7c7bc49f2836
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351476"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397596"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 的开发人员参考
+
   您可以利用下列功能和技术来开发可访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的数据的应用程序。  
   
 ## <a name="programming-reference-sections"></a>编程参考节  
+
  ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[公共语言运行时&#40;CLR&#41;集成编程概念](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[本机 XML](https://technet.microsoft.com/library/ms191274.aspx)  
@@ -60,6 +62,7 @@ ms.locfileid: "53351476"
  ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标") [Reporting Services 开发人员指南](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>其他编程资源  
+
  开发数据访问应用程序可能需要您使用以下一种或多种技术：  
   
  [在 Visual Studio 中访问数据](https://go.microsoft.com/fwlink/?LinkId=129902)  

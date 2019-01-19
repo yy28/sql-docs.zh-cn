@@ -10,20 +10,22 @@ ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0880f2c8591c1b0bd75bf2d11fe99321bb294e4a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2495b9487a633fff6c5214a07e589f58fafa5e61
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351939"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397636"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 事务日志体系结构和管理
+
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 事务日志是数据库的重要组件，如果系统出现故障，则可能需要使用事务日志将数据库恢复到一致状态。 本指南提供有关事务日志的物理和逻辑体系结构的信息。 了解该体系结构可以提高您在管理事务日志时的效率。  
 
   
 ##  <a name="Logical_Arch"></a> 事务日志逻辑体系结构  
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事务日志按逻辑运行，就好像事务日志是一串日志记录一样。 每条日志记录由一个日志序列号 (LSN) 标识。 每条新日志记录均写入日志的逻辑结尾处，并使用一个比前面记录的 LSN 更高的 LSN。 日志记录按创建时的串行序列存储。 每条日志记录都包含其所属事务的 ID。 对于每个事务，与事务相关联的所有日志记录通过使用可提高事务回滚速度的向后指针挨个链接在一个链中。  
   
  数据修改的日志记录或者记录所执行的逻辑操作，或者记录已修改数据的前像和后像。 前像是执行操作前的数据副本；后像是执行操作后的数据副本。  
@@ -57,6 +59,7 @@ ms.locfileid: "53351939"
  日志文件中从必须存在以确保数据库范围内成功回滚的第一条日志记录到最后写入的日志记录之间的部分称为日志的活动部分，即“活动日志”。 这是进行数据库完整恢复所需的日志部分。 永远不能截断活动日志的任何部分。 这个第一个日志记录的日志序列号 (LSN)，称为最小恢复 LSN (MinLSN)。  
   
 ##  <a name="physical_arch"></a> 事务日志物理体系结构  
+
  数据库中的事务日志映射在一个或多个物理文件上。 从概念上讲，日志文件是一系列日志记录。 从物理上讲，日志记录序列被有效地存储在实现事务日志的物理文件集中。 每个数据库必须至少有一个日志文件。  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在内部将每一物理日志文件分成多个虚拟日志文件。 虚拟日志文件没有固定大小，且物理日志文件所包含的虚拟日志文件数不固定。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在创建或扩展日志文件时动态选择虚拟日志文件的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 尝试维护少量的虚拟文件。 在扩展日志文件后，虚拟文件的大小是现有日志大小和新文件增量大小之和。 管理员不能配置或设置虚拟日志文件的大小或数量。  
@@ -80,6 +83,7 @@ ms.locfileid: "53351939"
  如果日志包含多个物理日志文件，则逻辑日志在回绕到首个物理日志文件始端之前，将沿着所有物理日志文件移动。  
   
 ### <a name="log-truncation"></a>日志截断  
+
  日志截断主要用于阻止日志填充。 日志截断从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的逻辑事务日志中删除不活动的虚拟日志文件，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。 但是，在截断日志前，必须执行检查点操作。 检查点将当前内存中已修改的页（称为“脏页”）和事务日志信息从内存写入磁盘。 执行检查点时，事务日志的不活动部分将标记为可重用。 此后，日志截断可以释放不活动的部分。 有关检查点的详细信息，请参阅[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
  下列各图显示了截断前后的事务日志。 第一个图显示了从未截断的事务日志。 当前，逻辑日志使用四个虚拟日志文件。 逻辑日志开始于第一个逻辑日志文件的前面，并结束于虚拟日志 4。 MinLSN 记录位于虚拟日志 3 中。 虚拟日志 1 和虚拟日志 2 仅包含不活动的日志记录。 这些记录可以截断。 虚拟日志 5 仍未使用，不属于当前逻辑日志。  
@@ -99,6 +103,7 @@ ms.locfileid: "53351939"
  日志截断会由于多种因素发生延迟。 如果日志截断延迟的时间较长，则事务日志可能会填满磁盘空间。 有关信息，请参阅[可能延迟日志截断的因素](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)和[解决事务日志已满的问题（SQL Server 错误 9002）](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
 ##  <a name="WAL"></a> 预写事务日志  
+
  本节说明预写事务日志在将数据修改记录到磁盘的过程中所起的作用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用预写日志 (WAL)，此日志确保在将关联的日志记录写入磁盘后再将数据修改写入磁盘。 这维护了事务的 ACID 属性。  
   
  要了解预写日志的工作方式，了解如何将修改的数据写入磁盘很重要。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护一个缓冲区缓存，在必须检索数据时从其中读取数据页。 在缓冲区缓存中修改页后，不会将其立即写回磁盘；而是将其标记为“脏”。 在将数据页物理写入磁盘之前，可以将其逻辑写入多次。 对于每次逻辑写入，都会在记录修改的日志缓存中插入一条事务日志记录。 在将关联的脏页从缓冲区缓存中删除并写入磁盘之前，必须将这条些日志记录写入磁盘。 检查点进程定期在缓冲区高速缓存中扫描包含来自指定数据库的页的缓冲区，然后将所有脏页写入磁盘。 CHECKPOINT 可创建一个检查点，在该点保证全部脏页都已写入磁盘，从而在以后的恢复过程中节省时间。  
@@ -106,6 +111,7 @@ ms.locfileid: "53351939"
  将修改后的数据页从高速缓冲存储器写入磁盘的操作称为刷新页。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有一个逻辑，它可以在写入关联的日志记录前防止刷新脏页。 日志记录将在提交事务时写入磁盘。  
   
 ##  <a name="Backups"></a> 事务日志备份  
+
  本节介绍了有关如何备份和还原（应用）事务日志的概念。 在完整恢复模式和批量日志恢复模式下，执行例行事务日志备份（“日志备份”）对于恢复数据十分必要。 可以在任何完整备份运行的时候备份日志。 有关恢复模型的详细信息，请参阅 [SQL Server 数据库的备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  在创建第一个日志备份之前，必须先创建完整备份（如数据库备份或一组文件备份中的第一个备份）。 仅使用文件备份还原数据库会较复杂。 因此，建议您尽可能从完整数据库备份开始。 此后，必须定期备份事务日志。 这不仅能最小化工作丢失风险，还有助于事务日志的截断。 通常，事务日志在每次常规日志备份之后截断。  
@@ -115,14 +121,17 @@ ms.locfileid: "53351939"
  若要限制需要还原的日志备份的数量，必须定期备份数据。 例如，可以制定这样一个计划：每周进行一次完整数据库备份，每天进行若干次差异数据库备份。  
   
 ### <a name="the-log-chain"></a>日志链  
+
  日志备份的连续序列称为“日志链”。 日志链从数据库的完整备份开始。 通常，仅当第一次备份数据库时，或者将恢复模式从简单恢复模式切换到完整恢复模式或大容量日志恢复模式之后，才会开始一个新的日志链。 除非在创建完整数据库备份时选择覆盖现有备份集，否则现有的日志链将保持不变。 在该日志链保持不变的情况下，便可从介质集中的任何完整数据库备份还原数据库，然后再还原相应恢复点之前的所有后续日志备份。 恢复点可以是上次日志备份的结尾，也可以是任何日志备份中的特定恢复点。 有关详细信息，请参阅[事务日志备份 (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要将数据库还原到故障点，必须保证日志链是完整的。 也就是说，事务日志备份的连续序列必须能够延续到故障点。 此日志序列的开始位置取决于您所还原的数据备份类型：数据库备份、部分备份或文件备份。 对于数据库备份或部分备份，日志备份序列必须从数据库备份或部分备份的结尾处开始延续。 对于一组文件备份，日志备份序列必须从整组文件备份的开头开始延续。 有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
 ### <a name="restore-log-backups"></a>还原日志备份  
+
  还原日志备份将前滚事务日志中记录的更改，使数据库恢复到开始执行日志备份操作时的状态。 还原数据库时，必须还原在所还原完整数据库备份之后创建的日志备份，或者从您还原的第一个文件备份的开始处进行还原。 通常情况下，在还原最新数据或差异备份后，必须还原一系列日志备份直到到达恢复点。 然后恢复数据库。 这将回滚所有在恢复开始时未完成的事务并使数据库联机。 恢复数据库后，不得再还原任何备份。 有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
 ## <a name="additional-reading"></a>其他阅读主题  
+
  有关事务日志的其他信息，我们建议阅读以下文章和书籍。  
   
  [了解 SQL Server 中的日志记录和恢复（作者：Paul Randall）](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  

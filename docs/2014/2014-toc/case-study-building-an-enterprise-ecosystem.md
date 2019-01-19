@@ -9,14 +9,15 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365230"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397566"
 ---
 # <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>案例研究：构建一个企业生态系统与 Microsoft Dynamics ERP 和 SQL Server 2014 复制的可伸缩性和性能
+
   **摘要：** 本文介绍了以下方案：  
 如何在 SQL Server 2014 中使用事务复制，可跨多个节点分发 Dynamics AX 客户端从事务。 因为数据以实时的方式在节点上进行维护，因此事务复制提供了数据冗余，可用于提高数据的可用性，其中包括适用于更加高效的性能分析的数据。  
 如何在利用事务复制时了解涉及的具体内容，以在 Microsoft Dynamics ERP 中构建高度可伸缩的企业生态系统。 提供高性能和可伸缩性，无需自定义 AX 自带功能。  

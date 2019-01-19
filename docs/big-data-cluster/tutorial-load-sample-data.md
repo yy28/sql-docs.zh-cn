@@ -5,17 +5,17 @@ description: 本教程演示如何将示例数据加载到 SQL Server 大数据�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a89b1bec266f590d6e96365436fe5339b9152f92
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 207d2d01278d96456bcec44814efe76fdae70fdf
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241470"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397506"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 2019 大数据群集
 
@@ -29,7 +29,7 @@ ms.locfileid: "54241470"
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **sqlcmd**
    - **curl**
 
@@ -62,11 +62,11 @@ ms.locfileid: "54241470"
 
    | 参数 | Description |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | 提供你的大数据群集的名称。 |
-   | &LT; SQL_MASTER_IP &GT; | 主实例的 IP 地址。 |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | 主实例 SA 密码。 |
-   | &LT; KNOX_IP &GT; | HDFS/Spark 网关的 IP 地址。 |
-   | &LT; KNOX_PASSWORD &GT; | HDFS/Spark 网关的密码。 |
+   | <CLUSTER_NAMESPACE> | 提供你的大数据群集的名称。 |
+   | <SQL_MASTER_IP> | 主实例的 IP 地址。 |
+   | <SQL_MASTER_SA_PASSWORD> | 主实例 SA 密码。 |
+   | <KNOX_IP> | HDFS/Spark 网关的 IP 地址。 |
+   | <KNOX_PASSWORD> | HDFS/Spark 网关的密码。 |
 
    > [!TIP]
    > 使用[kubectl](cluster-troubleshooting-commands.md)以查找 SQL Server 主实例和 Knox 的 IP 地址。 运行`kubectl get svc -n <your-cluster-name>`并查看主实例的外部 IP 地址 (**终结点的主池**) 和 Knox (**服务-安全性-l b**或**服务-安全性-nodeport**).
@@ -98,11 +98,11 @@ ms.locfileid: "54241470"
 
    | 参数 | Description |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | 提供你的大数据群集的名称。 |
-   | &LT; SQL_MASTER_IP &GT; | 主实例的 IP 地址。 |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | 主实例 SA 密码。 |
-   | &LT; KNOX_IP &GT; | HDFS/Spark 网关的 IP 地址。 |
-   | &LT; KNOX_PASSWORD &GT; | HDFS/Spark 网关的密码。 |
+   | <CLUSTER_NAMESPACE> | 提供你的大数据群集的名称。 |
+   | <SQL_MASTER_IP> | 主实例的 IP 地址。 |
+   | <SQL_MASTER_SA_PASSWORD> | 主实例 SA 密码。 |
+   | <KNOX_IP> | HDFS/Spark 网关的 IP 地址。 |
+   | <KNOX_PASSWORD> | HDFS/Spark 网关的密码。 |
 
    > [!TIP]
    > 使用[kubectl](cluster-troubleshooting-commands.md)以查找 SQL Server 主实例和 Knox 的 IP 地址。 运行`kubectl get svc -n <your-cluster-name>`并查看主实例的外部 IP 地址 (**终结点的主池**) 和 Knox (**服务-安全性-l b**或**服务-安全性-nodeport**).
@@ -110,7 +110,7 @@ ms.locfileid: "54241470"
 1. 运行启动脚本。
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## <a name="next-steps"></a>后续步骤

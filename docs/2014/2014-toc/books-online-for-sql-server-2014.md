@@ -19,20 +19,22 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353915"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397556"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 联机丛书
+
   欢迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 联机丛书。 联机丛书包含任务说明和参考文档，此类信息旨在介绍如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]执行数据管理和商业智能工作。  
   
  **进行试用：**  
  ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转**[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 SQL Server 2014 (SP1) 的详细信息，请参阅[SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。 
   
 ## <a name="sql-server-technologies"></a>SQL Server 技术  
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包括多种数据管理和分析技术。 单击下表中的链接可找到每种技术的功能、任务和参考文档。  
   
 |||  
@@ -46,6 +48,7 @@ ms.locfileid: "53353915"
 |![Reporting Services 图标](media/reportingservices.gif "Reporting Services 图标")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services 提供企业级的 Web 报表功能，从而使您可以创建从多个数据源提取数据的表，发布各种格式的表，以及集中管理安全性和订阅。|  
   
 ## <a name="sql-server-information-on-the-web"></a>Web 上的 SQL Server 信息  
+
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 在多个网站上发布有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的其他信息。  
   
  **SQL Server 网站**  
@@ -63,6 +66,7 @@ ms.locfileid: "53353915"
 -   [XML 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>请参阅  
+
  [SQL Server 配置管理器帮助](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   
