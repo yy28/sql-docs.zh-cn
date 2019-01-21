@@ -82,7 +82,7 @@ ms.locfileid: "52439839"
 
        ![“显示计划分析”窗口](../../relational-databases/performance/media/plancomparison-analysis.png "Showplan Analysis window") 
 
-    2.  通过比较正确的语句对，使用多语句比较计划时“多语句”选项卡非常有用。
+    2.  使用多语句比较计划时，“多语句”选项卡非常有用。它可以比较正确的语句对。
 
         ![比较的计划中的多个语句](../../relational-databases/performance/media/plancomparison-multiple.png "Multiple statements in compared plan")  
 
