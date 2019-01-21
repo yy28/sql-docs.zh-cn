@@ -31,15 +31,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 326b2dd3eed9db3f6ca71cc276fc68314092c181
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698095"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299224"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   标记一个显式本地事务的起始点。 显式事务以 BEGIN TRANSACTION 语句开始，并以 COMMIT 或 ROLLBACK 语句结束。  
 
@@ -67,17 +70,17 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>参数  
  transaction_name  
- 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
+ **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
  
  分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
  @tran_name_variable  
- 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
+ **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
  
  用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。 如果传递给该变量的字符多于 32 个，则仅使用前面的 32 个字符；其余的字符将被截断。  
   
  WITH MARK [ 'description' ]  
-适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
+**适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
 
 指定在日志中标记事务。 description 是描述该标记的字符串。 在将长于 128 个字符的 description 存储到 msdb.dbo.logmarkhistory 表中之前，先将其截断为 128 个字符。  
   
@@ -134,7 +137,7 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- "Server: Msg 3920, Level 16, State 1, Line 3"  
+ “服务器：消息 3920、级别 16、状态 1、第 3 行”  
   
  "WITH MARK option only applies to the first BEGIN TRAN WITH MARK."  
   
@@ -146,7 +149,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用显式事务
-适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
+**适用对象：** SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
 
 本示例使用 AdventureWorks。 
 
@@ -158,7 +161,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. 回滚事务
-适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
+**适用对象：** SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
 
 以下示例显示了回滚事务的效果。 在此示例中，ROLLBACK 语句将回滚 INSERT 语句，但已创建的表仍会存在。
 
@@ -173,7 +176,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. 命名事务 
-适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
+**适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
 
 下面的示例说明如何命名事务。  
   
@@ -191,7 +194,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. 标记事务  
-适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
+**适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
 
 以下示例显示如何标记事务。 将标记事务 `CandidateDelete`。  
   

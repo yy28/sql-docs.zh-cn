@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd3811f05891f7a270e059a7d36296f9d9ab3eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638715"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100892"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +107,8 @@ OBJECTPROPERTY ( id , property )
 |IsRule|任何架构范围内的对象|绑定规则。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|函数|标量值函数。<br /><br /> 1 = 标量值函数<br /><br /> 0 = 非标量值函数|  
 |IsSchemaBound|函数、视图|使用 SCHEMABINDING 创建的绑定到架构的函数或视图。<br /><br /> 1 = 绑定到架构<br /><br /> 0 = 不绑定到架构。|  
-|IsSystemTable|表|系统表。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|表|系统表。<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server 可以验证对象的确定性和精度属性。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|表|表。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|函数|表值函数。<br /><br /> 1 = 表值函数<br /><br /> 0 = 非表值函数|  
 |IsTrigger|任何架构范围内的对象|触发器。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -216,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. 查找属于特定架构的表  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C:查找属于特定架构的表  
  下面的示例返回 dbo 架构中的所有表。  
   
 ```  
@@ -231,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D. 验证某个对象是否为表  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D:验证某个对象是否为表  
  以下示例将测试 `dbo.DimReseller` 是否为 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库中的表。  
   
 ```  

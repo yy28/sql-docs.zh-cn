@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b45bd2df29628717d8cb1b2d1ba66a858a03f7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1fdf5f600cd455803fe102b487e7a39296bc6fb9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521494"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257002"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>生成内联 XSD 架构
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52521494"
  例如：  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
   <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  
@@ -118,7 +118,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
  由于该查询指定了 ELEMENTS 指令，所以产生的 XML 是以元素为中心的。 该查询还指定了 XMLSCHEMA 指令。 因此，将返回一个内联 XSD 架构。 结果如下：  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
@@ -196,7 +196,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  结果如下： 请注意，在内联 XSD 架构中，OrderID 元素被定义了两次。 一个声明将 minOccurs 设置为 0（对应于 CustOrderDetail 表的 OrderID）；另一个声明映射到 `CustOrder` 表的 OrderID 主键列，在这种情况下，minOccurs 默认设置为 1。  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
@@ -223,7 +223,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>元素名称冲突  
  在 FOR XML 中，同一个名称可以用来表示两个子元素。 例如，下面的查询将检索产品的 ListPrice 和 DealerPrice 值，但为这两列指定了同一别名 (Price)。 因此，产生的行集将具有名称相同的两列。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>情况 1：两个子元素是相同类型的非键列而且可以为 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>事例 1：两个子元素是相同类型的非键列而且可以为 NULL  
  在下面的查询中，两个子元素是相同类型的非键列而且可以为 NULL。  
   
 ```  
@@ -243,7 +243,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -281,7 +281,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -305,7 +305,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</xsd:schema>`  
   
- `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">`  
+ `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
   
  `<ProductID>1</ProductID>`  
   
@@ -315,7 +315,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>情况 2：相同类型的一个键列和一个非键列  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>事例 2：相同类型的一个键列和一个非键列  
  下面的查询说明了相同类型的一个键列和一个非键列。  
   
 ```  
@@ -337,7 +337,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -393,7 +393,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  请注意，在内联 XSD 架构中，对应于 Col2 的 <`Col`> 元素的 minOccurs 被设置为 0。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>情况 3：两个不同类型的元素而且对应的列可以为 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>事例 3：两个元素都属于不同的类型而且对应的列可以为 NULL  
  对情况 2 中显示的示例表进行下面的查询：  
   
 ```  
@@ -406,7 +406,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -452,11 +452,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `<Col1>1</Col1>`  
   
- `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col1">1</Col>`  
   
- `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col2">test</Col>`  
   

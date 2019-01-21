@@ -13,12 +13,12 @@ ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55674f575e0355781c5e93515dd0b078af58c51f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe24bc816174f7e3ee21d91bd7c2028427655e3c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764845"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133108"
 ---
 # <a name="mssqleng014151"></a>MSSQL_ENG014151
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +42,11 @@ ms.locfileid: "47764845"
   
 -   重新启动失败的代理，以查看此代理现在是否能正常运行。 有关详细信息，请参阅[启动和停止复制代理 (SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
--   查看代理历史记录和作业历史记录，寻找同时发生的其他错误。 有关在复制监视器中查看代理状态和错误详细资料的信息，请参阅以下主题：  
-  
-    -   有关快照代理、日志读取器代理和队列读取器代理，请参阅[查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
-  
-    -   有关分发代理和合并代理，请参阅[如何查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+-   查看代理历史记录和作业历史记录，寻找同时发生的其他错误。 有关在复制监视器中查看代理状态和错误详细资料的信息，请参阅[使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   验证代理所访问的各计算机之间的基本连接是否正常，然后用实用工具（如 [sqlcmd Utility](../../tools/sqlcmd-utility.md)）连接到每台计算机。 连接时，请使用代理建立连接使用的同一帐户。 有关每个代理帐户所需权限的详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
--   如果在创建或应用快照发生错误时，请检查快照目录中的文件以查找错误。  
+-   如果在创建或应用快照发生错误时，请检查快照目录中的文件以查找错误。 
   
 -   如果错误继续出现，请增加代理的日志记录并指定日志的输出文件。 此操作可能会提供找到该错误和/或其他错误消息的步骤，具体取决于错误的上下文。  
   
@@ -61,6 +57,6 @@ ms.locfileid: "47764845"
  [复制日志读取器代理](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

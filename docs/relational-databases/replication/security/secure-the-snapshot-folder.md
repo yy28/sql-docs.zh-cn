@@ -13,12 +13,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 831d1b43f54e64dd52226f3bc9504e622ce7b99e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617775"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124177"
 ---
 # <a name="secure-the-snapshot-folder"></a>保护快照文件夹的安全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47617775"
 > [!NOTE]  
 >  用户帐户控制 (UAC) 可帮助管理员管理其提升的用户权限（有时称为“特权”） 。 在启用 UAC 的操作系统上运行时，管理员并不使用其管理权限。 相反，他们以标准（非管理）用户的身份执行大多数操作，仅在必要时临时采用其管理权限。 UAC 可以防止对快照共享的管理访问。 因此，必须对快照代理、分发代理和合并代理使用的 Windows 帐户显式授予快照共享权限。 即使 Windows 帐户是管理员组的成员，也必须执行此操作。  
   
- 当通过配置分发向导或新建发布向导来配置分发服务器时，快照文件夹默认为指向本地路径：X:\Program Files\Microsoft SQL Server\\*\<实例*\MSSQL\ReplData。 如果使用远程分发服务器或请求订阅，则必须指定 UNC 网络共享路径（如 \\\\<*computername>* \snapshot），而非本地路径。  
+ 当通过“配置分发向导”或“新建发布向导”来配置分发服务器时，快照文件夹默认为本地路径：X:\Program Files\Microsoft SQL Server\\\<instance>\MSSQL\ReplData。 如果使用远程分发服务器或请求订阅，则必须指定 UNC 网络共享路径（如 \\\\<*computername>* \snapshot），而非本地路径。  
   
  授予对快照文件夹的访问权限时，必须根据对文件夹的访问方式来进行授权。 下面列出了在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 中使用的对话框选项卡：  
   
@@ -53,10 +53,10 @@ ms.locfileid: "47617775"
  有关设置和更改通过 FTP 访问快照的密码的信息，请参阅 [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)主题中的“FTP 快照传递”一节。  
   
 ## <a name="see-also"></a>另请参阅  
- [备用快照文件夹位置](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [修改快照选项](../../../relational-databases/replication/snapshot-options.md)   
  [使用快照初始化订阅](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)   
- [通过 FTP 传输快照](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)  
+ [查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [通过 FTP 传输快照](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)  
   
   

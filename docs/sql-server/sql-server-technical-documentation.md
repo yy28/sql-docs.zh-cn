@@ -21,18 +21,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6da677a558c2af47d49fa7c8f957604ab7fc1b78
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ed5059f50c45e3bcac5d3e17ce1fd09d2fb4fa8
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698833"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300454"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 领域处于领先水平。 本文档可帮助你在 Windows 和 Linux 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。

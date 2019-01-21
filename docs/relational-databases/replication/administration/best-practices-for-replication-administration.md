@@ -14,16 +14,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791c9fc5b7a411a094d6fedc8aa16290baeea234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763345"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130327"
 ---
 # <a name="best-practices-for-replication-administration"></a>复制管理最佳实践
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除了遵循本主题中介绍的最佳做法指导原则之外，还请仔细阅读常见问题解答主题，以了解常见的问题：[复制管理员常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)。  
+  在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除了遵循本主题中介绍的最佳实践指导原则之外，还请仔细阅读常见问题解答主题，以了解常见的问题：[复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)。  
   
  将最佳实践指导原则分成两个部分很有用：  
   
@@ -114,16 +114,16 @@ ms.locfileid: "47763345"
 ## <a name="monitor-the-replication-topology"></a>监视复制拓扑  
  建立复制拓扑并配置阈值和警报后，建议定期监视复制。 监视复制拓扑是部署复制的一个重要方面。 因为复制活动是分布式的，所以跟踪复制过程中涉及的所有计算机的活动和状态非常有必要。 以下工具可用于监视复制：  
   
--   复制监视器是监视复制的最重要的工具，它允许您监视复制拓扑的总体运行状况。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
+-   复制监视器是监视复制的最重要的工具，它允许您监视复制拓扑的总体运行状况。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)。  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和复制管理对象 (RMO) 提供了监视复制的接口。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和复制管理对象 (RMO) 提供了监视复制的接口。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)。  
   
 -   系统监视器也可用于监视复制性能。 有关详细信息，请参阅 [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)。  
   
 ## <a name="validate-data-periodically"></a>定期验证数据  
  复制不要求验证，但建议对事务复制和合并复制定期运行验证。 验证允许您验证订阅服务器上的数据与发布服务器上的数据是否匹配。 验证成功表示当时发布服务器上的所有更改已复制到订阅服务器上（如果订阅服务器支持更新，则订阅服务器上的所有更改也复制到发布服务器上）并且两个数据库是同步的。  
   
- 建议根据发布数据库的备份计划执行验证。 例如，如果发布数据库有一个每周执行一次的完整备份，则可以在每周完成备份后运行一次验证。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-replicated-data.md)。  
+ 建议根据发布数据库的备份计划执行验证。 例如，如果发布数据库有一个每周执行一次的完整备份，则可以在每周完成备份后运行一次验证。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>如果有必要，使用代理配置文件更改代理参数  
  代理配置文件为设置复制代理参数提供了一个便利的方法。 也可以在代理命令行上指定参数，但通常更适合使用预定义的代理配置文件或创建新的配置文件（如果需要更改参数值）。 例如，如果使用合并复制并且订阅服务器从宽带连接转为拨号连接，这时可考虑使用合并代理的“慢速链接”  配置文件，此配置文件使用一组更适合慢速通信链接的参数。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
@@ -150,6 +150,6 @@ ms.locfileid: "47763345"
  有关详细信息，请参阅[对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)  
+ [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395350"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133207"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52395350"
   
 1.  在 **“开始”** 菜单上，选择 **“所有程序”**，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”**。  
   
-2.  展开“SQL Server 网络配置” 、右键单击“  *\<**>*，然后单击“属性” 。  
+2.  展开“SQL Server 网络配置”、右键单击“协议”选择“\<_InstanceName>”，然后单击“属性” 。  
   
 3.  对于渠道绑定和服务绑定，同时在 **“高级”** 选项卡上将 **“扩展保护”** 设置为适当的设置。  
   

@@ -14,18 +14,18 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80a39418149e6bb8767f0b4422c476c223733cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4466c75a8d0e873f2e82954dfff42f00669c1da
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801175"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135647"
 ---
 # <a name="secure-the-distributor"></a>保护分发服务器的安全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   下列复制代理连接到分发服务器：日志读取器代理、快照代理、队列读取器代理、分发代理以及合并代理。 在遵守授予必要的最低权限并保护所有密码的存储这一原则的同时，为每个代理提供适当的登录名非常重要。  
   
--   有关管理登录名和密码的信息，请参阅[管理复制中的登录名和密码](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
+-   有关管理登录名和密码的信息，请参阅[管理复制中的登录名和密码](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
   
 -   有关每个代理所需权限的详细信息，请参阅 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "47801175"
  [查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

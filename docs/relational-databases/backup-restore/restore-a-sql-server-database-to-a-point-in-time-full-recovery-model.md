@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb896309e39a2abe054ce470fd9cec33b690181c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b858639e60419d955a32981ceeac56d8acc42110
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535574"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133177"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52535574"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **如何将 SQL Server 数据库还原到某个时间点，使用：**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "52535574"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称。  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -135,11 +135,11 @@ ms.locfileid: "52535574"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…****  
+ RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…  
   
  恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
   
- 若要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT **=** *time* 。 这样确保了不会超出目标时间。  
+ 若要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT **=** _time_ 。 这样确保了不会超出目标时间。  
   
  **将数据库还原到时间点**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "52535574"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE database_name FROM <backup_device> WITH STOPAT=time, RECOVERY) ****。  
+4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  

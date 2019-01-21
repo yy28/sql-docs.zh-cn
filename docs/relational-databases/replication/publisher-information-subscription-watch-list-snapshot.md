@@ -13,25 +13,25 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9b182e2b148ed379966f71928decbcefbcdda9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f67ec660d736dc3cf1c3dc9653c1339dada924c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780915"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130707"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>发布服务器信息，订阅监视列表（快照）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在运行 **及更高版本的分发服务器上，可以使用** “订阅监视列表” [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 选项卡；此选项卡用于显示所选发布服务器上的所有可用发布中的订阅的相关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡为管理员提供了监视发布服务器上所有复制活动的单一位置：复制监视器根据所选复制类型和在 **“显示”** 下拉列表框中选择的选项，显示所有需要注意的订阅。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
+  在运行 **及更高版本的分发服务器上，可以使用** “订阅监视列表” [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 选项卡；此选项卡用于显示所选发布服务器上的所有可用发布中的订阅的相关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡为管理员提供了监视发布服务器上所有复制活动的单一位置：复制监视器根据所选复制类型以及“显示”下拉列表框中选择的选项，显示需要注意的所有订阅。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
   
 ## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47780915"
   
 -   正在重试失败的命令  
   
--   同步  
+-   正在同步  
   
 -   未同步  
   
@@ -67,17 +67,17 @@ ms.locfileid: "47780915"
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 。 有关设置阈值的信息，请参阅[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **订阅**  
- 每个订阅的名称，格式为： *SubscriberName: SubscriptionDatabaseName*。  
+ 每个订阅的名称，格式为：SubscriberName:SubscriptionDatabaseName。  
   
  **发布**  
- 与订阅同步的发布的名称，格式为： *PublicationDatabaseName: PublicationName*。  
+ 与订阅同步的发布的名称，格式为：PublicationDatabaseName:PublicationName。  
   
  **上次同步**  
  分发代理上次运行的时间。 如果正在进行同步，则显示 **“正在进行”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

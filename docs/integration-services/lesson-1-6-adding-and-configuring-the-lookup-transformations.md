@@ -1,7 +1,7 @@
 ---
-title: 步骤 6：添加并配置查找转换 | Microsoft Docs
+title: 步骤 6：添加和配置查找转换 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,36 +11,37 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8356a7ff8ee0cdb0e55bcd313a01a8ce1fe045ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765565"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143373"
 ---
-# <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>第 1-6 课 - 添加和配置查找转换
-在配置用于从源文件中提取数据的平面文件源后，下一个任务是定义获取 **CurrencyKey** 和 **DateKey**值所需的查找转换。 查找转换通过将指定输入列中的数据联接到引用数据集中的列来执行查找。 引用数据集可以是现有的表或视图，也可以是新表或 SQL 语句的结果。 在本教程中，查找转换使用 OLE DB 连接管理器连接到包含引用数据集的源数据的数据库。  
+# <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>第 1-6 课：添加和配置查找转换
+
+在配置用于从源文件中提取数据的平面文件源后，定义获取 CurrencyKey 和 DateKey 值所需的查找转换。 查找转换通过将指定输入列中的数据联接到引用数据集中的列来执行查找。 引用数据集可以是现有的表或视图，也可以是新表或 SQL 语句的结果。 在本教程中，查找转换使用 OLE DB 连接管理器连接到包含引用数据集的源数据的数据库。  
   
 > [!NOTE]  
-> 还可以配置查找转换，以连接到包含引用数据集的缓存。 有关详细信息，请参阅 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)。  
+> 还可以配置查找转换，以连接到包含引用数据集的缓存。 有关详细信息，请参阅[查找转换](../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
-对于本教程，您将向包中添加以下两个查找转换组件并对其进行配置：  
+在此任务中，将向包中添加以下两个查找转换组件并对其进行配置：  
   
 -   一个转换是根据平面文件中匹配的“CurrencyID”列值对“DimCurrency”维度表的“CurrencyKey”列中的值执行查找。  
   
--   一个转换是根据平面文件中匹配的“CurrencyDate”列值对“DimDate”维度表的“DateKey”列中的值执行查找。  
+-   另一个转换是根据平面文件中匹配的“CurrencyDate”列值对“DimDate”维度表的“DateKey”列中的值执行查找。  
   
-无论在哪种情况下，查找转换都将使用前面创建的 OLE DB 连接管理器。  
+无论在哪种情况下，查找转换都使用前面创建的 OLE DB 连接管理器。  
   
-### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>添加并配置 Lookup Currency Key 转换  
+## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>添加和配置 Lookup Currency Key 转换  
   
 1.  在“SSIS 工具箱”中，展开“公共”，然后将“查找”拖到“数据流”选项卡的设计图面上。将“查找”直接放在“Extract Sample Currency Data”源的下面。  
   
 2.  单击“Extract Sample Currency Data”平面文件源，然后将蓝色箭头拖到新添加的“查找”转换中，以连接这两个组件。  
   
-3.  在“数据流”设计图面上，单击“查找”转换中的“查找”，然后将该名称更改为 **Lookup Currency Key**。  
+3.  在“数据流”设计图面上，选择“查找”转换中的“查找”，然后将该名称更改为“Lookup Currency Key”。  
   
-4.  双击 **Lookup CurrencyKey** 转换，以显示查找转换编辑器。  
+4.  双击“Lookup Currency Key”转换，以显示查找转换编辑器。  
   
 5.  在“常规”页上，进行以下选择：  
   
@@ -52,7 +53,7 @@ ms.locfileid: "47765565"
   
     1.  在“OLE DB 连接管理器”对话框中，确保显示 **localhost.AdventureWorksDW2012**。  
   
-    2.  选择“使用 SQL 查询的结果”，然后键入或复制以下 SQL 语句：  
+    2.  选择“使用 SQL 查询的结果”，然后键入或粘贴以下 SQL 语句：  
   
         ```sql
         SELECT * FROM [dbo].[DimCurrency]
@@ -61,6 +62,7 @@ ms.locfileid: "47765565"
             'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
             'MXN', 'SAR', 'USD', 'VEB')
         ```  
+    3.  选择“预览”验证查询结果。
   
 7.  在“列”页上，进行以下选择：  
   
@@ -68,21 +70,21 @@ ms.locfileid: "47765565"
   
     2.  在“可用查找列”列表中，选中“CurrencyKey”左侧的复选框。  
   
-8.  单击“确定”返回“数据流”设计图面。  
+8.  选择“确定”，返回“数据流”设计图面。  
   
-9. 右键单击“Lookup Currency Key”转换，然后单击“属性”。  
+9. 右键单击“Lookup Currency Key”转换，然后选择“属性”。  
   
-10. 在“属性”窗口中，确认“LocaleID”属性已设置为“英语(美国)”，且“DefaultCodePage”属性已设置为“1252”。  
+10. 在“属性”窗口中，确认“LocaleID”属性为“英语(美国)”，且“DefaultCodePage”属性为“1252”。  
   
-### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>添加并配置 Lookup DateKey 转换  
+## <a name="add-and-configure-the-lookup-date-key-transformation"></a>添加和配置 Lookup Date Key 转换  
   
-1.  在“SSIS 工具箱”中，将“查找”拖到“数据流”设计图面上。 将“查找”直接放置在 **Lookup Currency Key** 转换的下面。  
+1.  在“SSIS 工具箱”中，将“查找”拖到“数据流”设计图面上。 将“查找”直接放置在“Lookup Currency Key”转换的下面。  
   
-2.  单击 **Lookup Currency Key** 转换，并将绿色箭头拖动到新添加的“查找”转换中，以连接这两个组件。  
+2.  选择 Lookup Currency Key 转换，并将蓝色箭头拖动到新的“查找”转换中，以连接这两个组件 。  
   
-3.  在“选择输入输出”对话框中，单击“输出”列表框中的“查找匹配输出”，然后单击“确定”。  
+3.  在“选择输入输出”对话框中，选择“输出”列表框中的“查找匹配输出”，然后选择“确定”。  
   
-4.  在“数据流”设计图面上，在新添加的“查找”转换中单击“查找”，然后将名称更改为 **Lookup Date Key**。  
+4.  在“数据流”设计图面上，在新添加的“查找”转换中选择名称“查找”，然后将名称更改为“Lookup Date Key”。  
   
 5.  双击 **Lookup Date Key** 转换。  
   
@@ -90,9 +92,9 @@ ms.locfileid: "47765565"
   
 7.  在“连接”页上，进行以下选择：  
   
-    1.  在“OLEDB 连接管理器”对话框中，确保已显示 **localhost.AdventureWorksDW2012**。  
+    1.  在“OLEDB 连接管理器”对话框中，确保已显示 localhost.AdventureWorksDW2012。  
   
-    2.  在“使用表或视图”框中，键入或选择 **[dbo].[DimDate]**。  
+    2.  在“使用表或视图”框中，输入或选择 [dbo].[DimDate]。  
   
 8.  在“列”页上，进行以下选择：  
   
@@ -102,17 +104,17 @@ ms.locfileid: "47765565"
   
 9. 在“高级”页上，查看缓存选项。  
   
-10. 单击“确定”返回“数据流”设计图面。  
+10. 选择“确定”，返回“数据流”设计图面。  
   
-11. 双击“Lookup Date Key”转换，然后单击“属性”。  
+11. 双击“Lookup Date Key”转换，然后选择“属性”。
   
-12. 在“属性”窗口中，确认“LocaleID”属性已设置为“英语(美国)”，且“DefaultCodePage”属性已设置为“1252”。  
+12. 在“属性”窗口中，确认“LocaleID”属性为“英语(美国)”，且“DefaultCodePage”属性为“1252”。  
   
-## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[步骤 7：添加并配置 OLE DB 目标](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+## <a name="go-to-next-task"></a>转到下一个任务
+[步骤 7：添加和配置 OLE DB 目标](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
+[查找转换](../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
   

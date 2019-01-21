@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c7262d2ed909729d03563ca0f5aa17f8781ab843
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590221"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125897"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[-InternetProxyPassword internet_proxy_password]  
+[–InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -174,9 +174,9 @@ replmerg [-?]
 |**2**|指定使用 SSL，并验证证书。|  
 
  > [!NOTE]  
- >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，”Server”参数应设置为 SQL Server 的完全限定名称。
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
 
- 有关详细信息，请参阅[安全性概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)。  
+ 有关详细信息，请参阅[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
@@ -246,7 +246,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *internet_proxy_login*  
  指定连接到需要进行身份验证的代理服务器（在 *internet_proxy_server*中定义）时所使用的登录名。  
   
- **-InternetProxyPassword**  *internet_proxy_password*  
+ **–InternetProxyPassword**  *internet_proxy_password*  
  指定连接到需要进行身份验证的代理服务器（在 *internet_proxy_server*中定义）时所使用的密码。  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -383,7 +383,7 @@ replmerg [-?]
 |**3**|验证行计数和二进制校验值。|  
   
 > [!NOTE]  
->  如果订阅服务器与发布服务器上的数据类型不同，则使用二进制校验和或校验和进行的验证可能会错误地报告失败。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-replicated-data.md)的“数据验证的注意事项”部分。  
+>  如果订阅服务器与发布服务器上的数据类型不同，则使用二进制校验和或校验和进行的验证可能会错误地报告失败。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)的“数据验证的注意事项”部分。  
   
  **-ValidateInterval** _validate_interval_  
  在连续模式下对订阅进行验证的频率（单位为分钟）。 默认值为 **60** 分钟。  

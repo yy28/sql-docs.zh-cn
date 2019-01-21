@@ -17,15 +17,15 @@ helpviewer_keywords:
 - file restores [SQL Server], simple recovery model
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a3b7faea7ae15a1927309bcb0463a10efe74bd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 489f5637aea2bc97dfcbb009d45747606b1ad9ae
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534631"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241958"
 ---
 # <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52534631"
      有关对联机页和文件还原的支持的信息，请参阅[数据库引擎功能和任务](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE。  
   
  **本主题内容：**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52534631"
 -   [Restore.SqlRestore 方法（服务器）(SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
 ## <a name="see-also"></a>另请参阅  
- [备份和还原：互操作性和共存 (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

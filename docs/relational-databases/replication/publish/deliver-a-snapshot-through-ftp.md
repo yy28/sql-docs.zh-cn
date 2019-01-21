@@ -1,7 +1,7 @@
 ---
 title: 通过 FTP 传递快照 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,40 +15,28 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2dab89b5eacc0cd8c7bd639cdb2c92b1384dcea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699286"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126187"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过 FTP 传递快照。  
+
+默认情况下，快照存储在定义为通用命名约定 (UNC) 共享的文件夹中。 复制还允许指定用文件传输协议 (FTP) 共享取代 UNC 共享。 若要使用 FTP，必须先配置 FTP 服务器，然后配置要使用 FTP 的发布和一个或多个订阅。 有关如何配置 FTP 服务器的详细信息，请参阅 Internet 信息服务 (IIS) 文档。 如果为发布指定了 FTP 信息，则对此发布的订阅将默认使用 FTP。 仅当运行 IIS 的计算机通过防火墙与分发服务器相隔离时，才会使用 FTP 进行 Web 同步。 在这种情况下，FTP 可用于传输来自分发服务器和运行 IIS 的计算机的快照。 （快照始终使用 HTTPS 传输到订阅服务器。）  
   
- **本主题内容**  
+> [!IMPORTANT]  
+>  建议使用 Microsoft Windows 身份验证和 UNC 共享而不要使用 FTP 共享，因为必须存储 FTP 密码，并且密码以纯文本格式从订阅服务器或运行 IIS 的计算机（使用 Web 同步时）发送到 FTP 服务器。 此外，因为是由单一帐户控制对快照共享的访问，所以不可能确保筛选的合并发布的订阅服务器仅可以从其数据分区访问快照文件。  
   
--   **开始之前：**  
-  
-     [限制和局限](#Restrictions)  
-  
-     [先决条件](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **通过 FTP 传递快照，使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Restrictions"></a> 限制和局限  
+
+## <a name="limitations-and-restrictions"></a>限制和局限  
   
 -   快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用请求订阅，就必须指定一个共享目录作为通用命名约定 (UNC) 路径，例如 \\\ftpserver\home\snapshots。 有关详细信息，请参阅[保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   若要通过文件传输协议 (FTP) 传输快照文件，必须先配置一个 FTP 服务器。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 文档。  
   
@@ -76,14 +64,12 @@ ms.locfileid: "47699286"
   
 3.  指定快照代理应将快照文件写入在步骤 2 中指定的目录。 例如，若要让快照代理将快照文件写入 \\\ftpserver\home\snapshots\ftp，必须在下面两个位置之一指定路径 \\\ftpserver\home\snapshots：  
   
-    -   与发布关联的分发服务器的默认快照位置。  
-  
-         有关指定默认快照位置的详细信息，请参阅[指定默认快照位置 (SQL Server Management Studio)](../../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)。  
-  
+    -   与发布关联的分发服务器的默认快照位置。    
     -   发布的备用快照文件夹位置。 如果压缩快照，则需要指定备用位置。  
+
+有关修改快照文件夹位置属性的详细信息，请参阅[快照选项](../snapshot-options.md)。
   
-         在“发布属性 - \<发布>”对话框的快照页上，在“将文件放入下列文件夹”文本框中输入该路径。 有关备用快照文件夹位置的详细信息，请参阅 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)。  
-  
+
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -186,7 +172,6 @@ ms.locfileid: "47699286"
   
 ## <a name="see-also"></a>另请参阅  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [通过 FTP 传输快照](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
  [更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [使用快照初始化订阅](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   

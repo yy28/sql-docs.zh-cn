@@ -1,7 +1,7 @@
 ---
 title: 教程：将 Azure Blob 存储服务用于 SQL Server 2016 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/07/2016
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,14 +15,15 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 1af4926f367b79c7e4cc9117042d0b21e4f47b77
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302840"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206345"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 欢迎使用“Microsoft Azure Blob 存储服务中使用 SQL Server 2016”教程。 本教程有助于学习如何将 Microsoft Azure Blob 存储服务用于 SQL Server 数据文件和 SQL Server 备份。  
   
@@ -30,7 +31,8 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 
 此教程通过多个部分介绍如何在 Microsoft Azure Blob 存储服务中处理 SQL Server 数据文件。 每个部分专注于某个特定任务，应按顺序完成各部分的内容。 首先，将学习如何使用存储访问策略和共享访问签名在 Blob 存储中新建容器。 然后，学习如何创建 SQL Server 凭据以将 SQL Server 与 Azure Blob 存储相集成。 接下来，将数据库备份到 Blob 存储，并将其还原到 Azure 虚拟机。 然后，使用 SQL Server 2016 文件快照事务日志备份还原到某个时间点和新的数据库。 最后，本教程会演示元数据系统存储过程和函数的使用方法，帮助了解和使用文件快照备份。
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必备条件
+
 若要完成本教程，你必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。 若要使用本教程，你需要一个 Azure 存储帐户、SQL Server Management Studio (SSMS)、本地 SQL Server 实例的访问权限、运行 SQL Server 2016 的 Azure 虚拟机 (VM) 的访问权限和一个 AdventureWorks2016 数据库。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”权限的 db_backupoperator数据库角色。 
 
 - 获取免费的 [Azure 帐户](https://azure.microsoft.com/offers/ms-azr-0044p/)。
@@ -42,6 +44,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 - 将用户帐户分配到 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 角色，并授予[更改任意凭据](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql)权限。 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 创建存储访问策略和共享访问存储
+
 本部分将介绍如何通过使用存储访问策略使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 脚本在 Azure blob 容器上创建共享访问签名。  
   
 > [!NOTE]  
@@ -129,6 +132,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 
 
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2 - 使用共享访问签名创建 SQL Server 凭据
+
 本部分将介绍如何创建凭据以存储 SQL Server 将用于写入上一步中所创建的 Azure 容器或从中读取的安全信息。  
   
 SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源所需的身份验证信息。 凭据中存储了存储容器的 URI 路径以及此容器的共享访问签名。  
@@ -169,6 +173,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 7.  对想要为其提供 Azure 容器访问权限的任何其他 SQL Server 实例重复执行步骤 5 和 6。  
 
 ## <a name="3---database-backup-to-url"></a>3 - 将数据库备份到 URL
+
 本部分将介绍如何将本地 SQL Server 2016 实例中的 AdventureWorks2016 数据库备份到在[第 1 部分](#1---create-stored-access-policy-and-shared-access-storage)中所创建的 Azure 容器。
   
 > [!NOTE]  
@@ -200,6 +205,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 
 
 ## <a name="4----restore-database-to-virtual-machine-from-url"></a>4 - 从 URL 将数据库还原到虚拟机
+
 本部分将介绍如何将 AdventureWorks2016 数据库还原到 Azure 虚拟机中的 SQL Server 2016 实例。
   
 > [!NOTE]  
@@ -235,7 +241,8 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
   
    ![Azure 上容器内的数据文件](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 使用文件快照备份来备份数据库
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 使用文件快照备份来备份数据库
+
 在本部分中，将使用文件快照备份来备份 Azure 虚拟机中的 AdventureWorks2016 数据库，以便使用 Azure 快照执行近乎即时的备份。 有关文件快照备份的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 若要使用文件快照备份来备份 AdventureWorks2016 数据库，请执行以下步骤：  
@@ -275,6 +282,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
     ![Azure 上的快照备份](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6 - 使用文件快照备份生成活动和备份日志
+
 本部分将介绍如何在 AdventureWorks2016 数据库中生成活动，以及如何使用文件快照备份定期创建事务日志备份。 有关使用文件快照备份的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 若要在 AdventureWorks2016 数据库中生成活动并使用文件快照备份定期创建事务日志备份，请执行以下步骤：  
@@ -340,6 +348,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
     ![Azure 容器中的多个快照](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7 - 将数据库还原到一个时间点
+
 在本部分中，需要将 AdventureWorks2016 数据库还原到两个事务日志备份之间的一个时间点。  
   
 借助传统备份来完成时间点还原，需要使用完整数据库备份（可能是差异备份）以及所有达到以及刚刚超过想要还原到的时间点的事务日志文件。 借助文件快照备份，则只需要两个相邻的日志备份文件，这些文件提供想要还原到的时间的目标范围。 由于每个日志备份会创建每个数据库文件（每个数据文件和日志文件）的文件快照，因此只需要两个日志文件快照备份集。  
@@ -378,6 +387,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8 - 从日志备份还原为新数据库
+
 在本部分中，需要将 AdventureWorks2016 数据库作为新数据库从文件快照事务日志备份进行还原。  
   
 在此方案中，是要还原到不同虚拟机上的 SQL Server 实例，以便进行业务分析和报告。 还原到不同虚拟机上的不同实例可将工作负荷卸载到针对此用途调整了大小的专用虚拟机，从而从事务系统中消除资源要求。  
@@ -411,6 +421,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
     ![显示新数据库的数据和日志文件的 Azure 容器](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9 - 管理备份集和文件快照备份
+
 本部分中，将使用 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 系统存储过程删除备份集。 此系统存储过程会删除每个与此备份集关联的数据库文件中的备份文件和文件快照。  
   
 > [!NOTE]  
@@ -440,6 +451,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
     ![显示已删除 2 个文件快照的“结果”窗格](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10 - 删除资源
+
 完成本教程的学习后，为了节省资源，请务必删除本教程中创建的资源组。 
 
 若要删除资源组，请运行以下 powershell 代码：
@@ -463,7 +475,8 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
 [Microsoft Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure 中的数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [将 SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 

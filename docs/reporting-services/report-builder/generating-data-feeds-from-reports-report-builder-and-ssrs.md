@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eeb22433523d9fef88ab5a32f429ce94aca5cbd0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 47524fbb884c7aa8e253b822fe224f8c247836d4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813750"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257132"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
 
@@ -54,7 +54,7 @@ ms.locfileid: "51813750"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- 从此报表生成的 Atom 服务文档包括两个数据馈送：两个动态对等列（Territory 和 Year）各对应一个数据馈送。 下图显示了每个数据馈送的内容。  
+ 该报表生成的 Atom 服务文档包括两个数据馈送，每个数据馈送对应一个动态对等列：Territory 和 Year。 下图显示了每个数据馈送的内容。  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51813750"
 ### <a name="header-section"></a>标题部分  
  以下 XML 代码显示数据馈送的标题部分。  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="https://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   

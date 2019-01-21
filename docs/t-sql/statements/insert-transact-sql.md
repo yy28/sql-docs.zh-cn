@@ -33,18 +33,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e717254256468a04ed4502a63c14dc742a1101a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d91c98dc07b746d070874ea27fb41793379b17f8
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206986"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300524"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 将一行或多行添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的表或视图中。 有关示例，请参阅[示例](#InsertExamples)。  
   

@@ -1,7 +1,7 @@
 ---
 title: 步骤 4：添加平面文件目标 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,55 +11,56 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ed5aa9aab3e53288f2cc482f87b32048d45a56b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b59967b631475fc0f7eb7737fac65022fc18973
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842785"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211018"
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>第 4-4 课 - 添加平面文件目标
-Lookup Currency Key 转换的错误输出将无法执行查找操作的所有数据行重定向到脚本转换。 为了突显相关错误的信息，脚本转换将运行可获取错误说明的脚本。  
+# <a name="lesson-4-4-add-a-flat-file-destination"></a>第 4-4 课：添加平面文件目标
+
+Lookup Currency Key 转换的错误输出将查找失败的所有数据行重定向到脚本转换操作。 为了提供有关发生的错误的详细信息，脚本转换将运行可获取每个错误说明的脚本。  
   
-在本任务中，请将有关失败行的所有这些信息保存到分隔的文件中，以便进行后续处理。 若要保存失败的行，必须为将包含错误数据和平面文件目标的文本文件添加并配置平面文件连接管理器。 通过设置平面文件目标所用平面文件连接管理器的属性，可以指定平面文件目标如何格式化和写入文本文件。 有关详细信息，请参阅 [平面文件连接管理器](../integration-services/connection-manager/flat-file-connection-manager.md) 和 [平面文件目标](../integration-services/data-flow/flat-file-destination.md)。  
+在本任务中，请将有关失败行的所有此类信息保存到带分隔符的文本文件中，以便进行后续处理。 要保存失败的行，请为包含错误数据和平面文件目标的文本文件添加和配置平面文件连接管理器。 通过设置平面文件目标所用平面文件连接管理器的属性，可以指定平面文件目标如何格式化和写入文本文件。 有关详细信息，请参阅[平面文件连接管理器](../integration-services/connection-manager/flat-file-connection-manager.md)和[平面文件目标](../integration-services/data-flow/flat-file-destination.md)。  
   
-### <a name="to-add-and-configure-a-flat-file-destination"></a>添加并配置平面文件目标  
+## <a name="add-and-configure-a-flat-file-destination"></a>添加和配置平面文件目标  
   
-1.  单击 **“数据流”** 选项卡。  
+1.  单击“数据流”选项卡。  
   
-2.  在“SSIS 工具箱”中，展开“其他”，然后将“平面文件目标”拖动到数据流设计图面上。 将“平面文件目标”直接放在“获取错误说明”转换的下面。  
+2.  在“SSIS 工具箱”中，展开“其他目标”，然后将“平面文件目标”拖动到数据流设计图面上。 将“平面文件目标”直接放在“获取错误说明”转换的下面。  
   
-3.  单击“获取错误说明”转换，然后将绿色箭头拖动到新的“平面文件目标”上。  
+3.  选择“获取错误说明”转换，然后将蓝色箭头拖动到新的“平面文件目标”上。  
   
-4.  在“数据流”设计图面上，在新添加的“平面文件目标”转换中单击“平面文件目标”，然后将该名称更改为 **Failed Rows**。  
+4.  在“数据流”设计图面上，在新的“平面文件目标”转换中选择名称“平面文件目标”，然后将该名称更改为“失败的行”。  
   
-5.  右键单击 **Failed Rows** 转换，再单击“编辑”，然后在”平面文件目标编辑器”中单击“新建”。  
+5.  右键单击“失败的行”转换，然后选择“编辑”，然后在”平面文件目标编辑器”中选择“新建”。  
   
-6.  在“平面文件格式”对话框中，确认已选中“带分隔符”，然后单击“确定”。  
+6.  在“平面文件格式”对话框中，确保已选中“带分隔符”，然后选择“确定”。  
   
-7.  在“平面文件连接管理器编辑器”的“连接管理器名称”框中，输入 **Error Data**。  
+7.  在“平面文件连接管理器编辑器”的“连接管理器名称”框中，输入“错误数据”。  
   
-8.  在“平面文件连接管理器编辑器”对话框中，单击“浏览”，然后找到存储文件的文件夹。  
+8.  在“平面文件连接管理器编辑器”对话框中，选择“浏览”，然后找到存储文件的文件夹。  
   
-9. 在“打开”对话框中，对于“文件名”输入 **ErrorOutput.txt**，然后单击“打开”。  
+9. 在“打开”对话框中，对于“文件名”，输入“ErrorOutput.txt”，然后选择“打开”。  
   
-10. 在“平面文件连接管理器编辑器”对话框中，验证“区域设置”框是否包含“英语(美国)”，“代码页”是否包含 1252 (ANSI -Latin I)。  
+10. 在“平面文件连接管理器编辑器”对话框中，确保“区域设置”为“英语(美国)”且“代码页”为“1252 (ANSI -Latin I)”。  
   
-11. 在“选项”窗格中，单击“列”。  
+11. 在“选项”窗格中，选择“列”。  
   
-    注意，除了源数据文件中的列以外，还存在三个新列：ErrorCode、ErrorColumn 和 ErrorDescription。 这三列由 Lookup Currency Key 转换的错误输出和获取错误说明转换中的脚本生成，可用于排查失败行的原因。  
+    除源数据文件中的列之外，还存在三个新列：ErrorCode、ErrorColumn 和 ErrorDescription。 这些列是 Lookup Currency Key 转换的错误输出和用于获取错误说明转换中的脚本。 这些列可用于排查失败行的原因。  
   
-12. 单击“确定” 。  
+12. 选择“确定”。  
   
 13. 在“平面文件目标编辑器”中，清除“覆盖文件中的数据”复选框。  
   
-    清除该复选框可使错误在执行多个包的过程中持续存在。  
+    清除该复选框会通过附加每个新运行的错误输出使错误在执行多个包的过程中持续存在。
   
-14. 在“平面文件目标编辑器”中，单击“映射”来验证所有列是否正确。 您也可以选择重命名目标中的列。  
+14. 在“平面文件目标编辑器”中，选择“映射”以验证所有列是否正确。 您也可以选择重命名目标中的列。  
   
-15. 单击“确定” 。  
+15. 选择“确定”。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="go-to-next-task"></a>转到下一个任务
 [步骤 5：测试第 4 课教程包](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

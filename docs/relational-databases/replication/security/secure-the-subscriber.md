@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504049"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131647"
 ---
 # <a name="secure-the-subscriber"></a>保护订阅服务器的安全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "52504049"
 > [!IMPORTANT]  
 >  若要指定连接信息，请使用存储过程 [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)。 还可以使用新订阅向导的 **“用于可更新订阅的登录名”** 页，该页可调用 **sp_link_publication**。 在某些情况下，如果订阅服务器运行的是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) 或更高版本，而发布服务器运行的是早期版本，则该存储过程可能会失败。 如果在这种情形下存储过程失败，请将发布服务器升级到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 或更高版本。  
   
- 有关详细信息，请参阅[创建事务发布的可更新订阅](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md)和[查看和修改复制安全性设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
+ 有关详细信息，请参阅[创建事务发布的可更新订阅](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)和[查看和修改复制安全性设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 **syncobj_**_\<HexadecimalNumber>_），请将其权限授予在每个订阅服务器上配置的帐户。  
+>  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 syncobj_\<HexadecimalNumber>），请将其权限授予在每个订阅服务器上配置的帐户。  
   
 ## <a name="queued-updating-subscriptions"></a>排队更新订阅  
  当配置排队更新订阅时，请谨记以下两个与安全性相关的方面：  
@@ -73,11 +73,11 @@ ms.locfileid: "52504049"
     > [!IMPORTANT]  
     >  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到订阅服务器，并指定一个不同帐户连接到每个订阅服务器。 如果使用请求订阅，复制始终将连接设置为使用 Windows 身份验证（对于请求订阅，复制无法访问需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的订阅服务器上的元数据）。 这种情况下，请在配置订阅后对连接进行更改，以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。  
   
-     有关详细信息，请参阅“如何创建事务发布的更新订阅 (SQL Server Management Studio)”和[查看和修改复制安全性设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
+     有关详细信息，请参阅如何：创建事务发布的更新订阅 (SQL Server Management Studio) 和[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [安全性和保护（复制）](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbfa998a28696bc4675607f4d6d2bfd20185c91c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d267db0fe3656d860ec3cfe7063da88a069bc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630395"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127757"
 ---
 # <a name="publication-information-agents-merge-publication"></a>发布信息，代理（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "47630395"
 ## <a name="options"></a>选项  
  有关快照代理的详细信息及相关任务，请右键单击该代理的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47630395"
 -   已完成  
   
  **代理**  
- 快照代理。 这是与合并发布关联的唯一代理。 合并代理与此发布的订阅关联。 有关详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 快照代理。 这是与合并发布关联的唯一代理。 合并代理与此发布的订阅关联。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  **上次启动时间**  
  代理上次启动的时间。  
@@ -62,8 +62,7 @@ ms.locfileid: "47630395"
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看发布的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。
   
   

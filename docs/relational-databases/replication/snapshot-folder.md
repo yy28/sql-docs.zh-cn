@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2ad52310599d178fd5bf52bab0edd08c2886f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e3050afe889fd1c7f7de489b7ed6d22d3a50f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714845"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133197"
 ---
 # <a name="snapshot-folder"></a>快照文件夹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47714845"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您将网络共享作为快照文件夹的位置。 其他计算机上的代理无法访问本地路径（以驱动器号开头的路径，如 C:\\）。  
   
 ## <a name="see-also"></a>另请参阅  
- [备用快照文件夹位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [修改快照选项](../../relational-databases/replication/snapshot-options.md)   
  [“配置分发”](../../relational-databases/replication/configure-distribution.md)   
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -16,12 +16,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c701e9fb98bbabe013632a3fd93f91d368ec2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20c748e6dea95ae06c2f0c8364b8720ca0d7a36a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132747"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>高级合并复制冲突 - 交互式解决方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47849225"
   
  若要使用交互式冲突解决程序，必须为每个要求使用该程序的项目和订阅启用交互式解决方法。 为一个或多个项目和订阅启用交互式解决方法后，在合并同步过程中检测到冲突时，将使用交互式冲突解决程序。  
   
- 若要使用交互式冲突解决程序，请参阅[指定合并项目的交互式冲突解决方法](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)和[使用 Windows 同步管理器同步订阅（Windows 同步管理器）](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)。  
+ 若要使用交互式冲突解决程序，请参阅[指定合并复制选项](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)和[使用 Windows 同步管理器同步订阅（Windows 同步管理器）](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  

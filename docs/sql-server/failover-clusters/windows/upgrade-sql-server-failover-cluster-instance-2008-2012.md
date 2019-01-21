@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394142"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257052"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例
 
@@ -46,12 +46,12 @@ ms.locfileid: "52394142"
 
 |                                   | 需要所有服务器对象和 VNN | 需要所有服务器对象和 VNN | 不需要服务器对象/VNN\* | 不需要服务器对象/VNN\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***可用性组？（是/否）***                  | ***是***                              | ***否***                                                            | ***是***    | ***否***    |
+| **是否为可用性组？（是/否）**                  | **是**                              | **否**                                                            | **是**    | **否**    |
 | **群集仅使用 SQL FCI**         | [应用场景 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [应用场景 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [应用场景 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [应用场景 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **群集使用独立实例** | [应用场景 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [应用场景 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [应用场景 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [应用场景 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \*不包括可用性组侦听程序名称
 
-## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>方案 1：采用 SQL Server 可用性组且不使用故障转移群集实例 (FCI) 的 Windows 群集
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>应用场景 1：采用 SQL Server 可用性组且不使用故障转移群集实例 (FCI) 的 Windows 群集
 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序使用可用性组 (AG)，且没有故障转移群集实例，则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 部署，将其迁移到新群集。 此后，可以创建分布式 AG，其中的目标群集为当前生产群集的辅助群集。 这不需要用户升级到 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 或更高版本。
 
 ###  <a name="to-perform-the-upgrade"></a>执行升级
@@ -87,7 +87,7 @@ ms.locfileid: "52394142"
 
 11. 恢复通向侦听程序的流量。
 
-## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>方案 2：采用 SQL Server 故障转移群集实例 (FCI) 的 Windows 群集
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>应用场景 2：采用 SQL Server 故障转移群集实例 (FCI) 的 Windows 群集
 
 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 环境只包括 SQL FCI 实例，则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 环境，将其迁移到新群集。 通过“窃取”旧 SQL FCI 的 VNN 并在新群集上获取这些 VNN，迁移到目标群集。 这将导致额外的停机时间，具体取决于 DNS 传播时间。
 
@@ -120,7 +120,7 @@ ms.locfileid: "52394142"
 
 12. 随着计算机重启后恢复联机，在故障转移群集管理器中启动每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色。
 
-## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>方案 3：兼具 SQL FCI 和 SQL Server 可用性组的 Windows 群集
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>应用场景 3：兼具 SQL FCI 和 SQL Server 可用性组的 Windows 群集
 
 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序未使用任何独立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，仅使用至少包含在一个可用性组中的 SQL FCI，则可以使用类似于“无可用性组，无独立实例”应用场景的方法将其迁移到新的群集。 在将系统表复制到目标 FCI 共享磁盘之前，必须在原始环境中删除所有可用性组。 将所有数据库迁移到目标计算机后，使用相同的架构和侦听程序名称重新创建可用性组。 通过执行此操作，可在目标群集上正确组成和管理 Windows Server 故障转移群集资源。 在迁移之前，必须在目标环境中每台计算机上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用 Always On。
 
@@ -158,7 +158,7 @@ ms.locfileid: "52394142"
 
 16. 在新 AG 中使用原始可用性组侦听程序的名称创建侦听程序。
 
-## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>方案 4：采用独立 SQL Server 实例且不使用可用性组的 Windows 群集
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>应用场景 4：采用独立 SQL Server 实例且不使用可用性组的 Windows 群集
 
 迁移包含独立实例的群集的过程与迁移仅包含 FCI 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集相似，但是不更改 FCI 网络名称群集资源的 VNN，而是更改原始独立计算机的计算机名称，并在目标计算机上“窃取”旧计算机的名称。 与不包含独立实例的应用场景相比，这确实产生了额外的停机时间，因为在获取旧计算机的网络名称之前，无法将目标独立计算机联接到 WSFC。
 
@@ -194,7 +194,7 @@ ms.locfileid: "52394142"
 
 15. 随着计算机重启后恢复联机，在故障转移群集管理器中启动每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色。
 
-## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>方案 5：采用独立 SQL Server 实例以及可用性组的 Windows 群集
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>应用场景 5：采用独立 SQL Server 实例和可用性组的 Windows 群集
 
 对于使用可用性组且包含独立副本的群集，其迁移过程类似于迁移具有 FCI 且使用可用性组的群集。 仍然必须删除原始可用性组并在目标集群上重建；但是，由于迁移独立实例带来的额外开销，产生了额外的停机时间。 在迁移之前，必须在目标环境中的每个 FCI 上启用 Always On。
 
@@ -242,7 +242,7 @@ ms.locfileid: "52394142"
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **数据库** **镜像** **终结点**
+-   **数据库镜像终结点**
 
     从 SQL 的角度来看，数据库镜像终结点与系统表一起迁移到新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在迁移之前，请确保已在防火墙中应用正确的规则，并且没有其他进程在侦听同一端口。
 
@@ -256,17 +256,17 @@ ms.locfileid: "52394142"
 
 ### <a name="replication"></a>复制
 
--   **远程** **分发服务器** 、**发布服务器**、**订阅服务器**
+-   **远程分发服务器、发布服务器、订阅服务器**
 
     分发服务器和发布服务器之间的关系只依赖于承载这二者的计算机的 VNN，该 VNN 可正确解析为新计算机。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业也会随系统表一起正确地迁移，因此各种复制代理能够照常继续执行。 在迁移之前，任何运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理本身或任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业的 Windows 帐户必须在目标环境中拥有相同的权限。 与发布服务器和订阅服务器的通信将照常执行。
 
--   **快照** **文件夹**
+-   **快照文件夹**
 
     在迁移之前，任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能所用的任何网络共享需要可供目标环境中的计算机（具有与原始环境相同的权限）访问。 需要先确保满足此条件才可进行迁移。
 
 ### <a name="service-broker"></a>Service broker
 
--   **Service** **Broker** **端点**
+-   **Service Broker 终结点**
 
     从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的角度来看，没有与终结点相关的问题。 在迁移之前，必须确保没有进程正在侦听同一端口，并且没有任何防火墙规则阻止该端口，或者存在专门允许该端口的防火墙规则。
 
@@ -278,7 +278,7 @@ ms.locfileid: "52394142"
 
     路由取决于目标的虚拟网络名称，在新环境中，计算机名称和 SQL FCI 网络名称的虚拟网络名称都将解析为正确的计算机。 引用的任何其他 VNN 也必须重定向到新计算机。
 
--   **远程** **服务** **绑定**
+-   **远程服务绑定**
 
     迁移后，远程服务绑定按预期运行，因为任何使用远程服务绑定的用户都可正确迁移。
 
@@ -288,7 +288,7 @@ ms.locfileid: "52394142"
 
     作业随系统数据库一起正确迁移。 运行 SQL 代理作业或 SQL 代理本身的任何用户在目标计算机上都具有必备条件中指定的相同权限。
 
--   **警报和** **运算符**
+-   **警报和运算符**
 
     警报和运算符随系统数据库一起正确迁移。
 

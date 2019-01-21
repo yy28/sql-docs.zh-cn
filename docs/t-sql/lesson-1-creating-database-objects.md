@@ -11,15 +11,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7887e63dbe7879a17433dce0bd35c346c860097e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696815"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299284"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
+
 本课将介绍如何创建数据库，在数据库中创建表，然后访问表中的数据并对其进行更改。 由于本课是对使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的简介，因此它未使用或说明为这些语句提供的许多选项。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句可以使用下列方法进行编写并提交到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ：  
@@ -40,7 +44,7 @@ ms.locfileid: "51696815"
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
-- **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 ## <a name="create-a-database"></a>创建数据库
@@ -105,7 +109,7 @@ ms.locfileid: "51696815"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
-基本语法如下：INSERT、表名、列的列表、VALUES，然后是要插入的值的列表。 如果某行的前面有两个连字符，则指示该行为注释，编译器将忽略其文本。 在这种情况下，注释说明允许的语法变体。  
+基本语法为：INSERT、表名、列的列表、VALUES，然后是要插入的值的列表。 如果某行的前面有两个连字符，则指示该行为注释，编译器将忽略其文本。 在这种情况下，注释说明允许的语法变体。  
   
 ### <a name="insert-data-into-a-table"></a>将数据插入到表  
   

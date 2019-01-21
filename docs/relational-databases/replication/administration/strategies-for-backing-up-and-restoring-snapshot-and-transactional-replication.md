@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881cb75b8f58bb20c8418fe18aaab6499b58e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612575"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125267"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "47612575"
   
          有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-         有关验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+         有关如何验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  从发布服务器、分发服务器和订阅服务器中删除复制配置，然后重新创建配置。 重新创建订阅时，指定订阅服务器已包含数据。 还原完成。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47612575"
   
          有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-         有关验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+         有关如何验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  使用 [tablediff 实用工具](../../../tools/tablediff-utility.md) 或其他工具手动将发布服务器和订阅服务器同步。 这使您能够从订阅数据库恢复发布数据库备份中未包含的数据。 转到步骤 c。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47612575"
   
      有关如何运行分发代理的详细信息，请参阅[启动和停止复制代理 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 和[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-     有关验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     有关如何验证命令的详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 3.  如果使用的是排队更新订阅，则连接到每台订阅服务器，并从订阅数据库中的 [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) 表中删除所有行。 转到步骤 4。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47612575"
   
          有关如何指定订阅服务器已包含数据的详细信息，请参阅 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)。  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>发布数据库：对等事务复制  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>发布数据库：@loopback_detection  
  在下列步骤中，复制数据库 **A**、 **B**和 **C** 位于对等事务复制拓扑中。 数据库 **A** 和 **C** 处于联机状态，并且可以正常工作；数据库 **B** 是要还原的数据库。 在此介绍的过程，尤其是步骤 7、10 和 11，非常类似于向对等拓扑添加节点时所需的过程。 执行这些步骤最简单的方法是使用配置对等拓扑向导，但是您也可以使用存储过程。  
   
 1.  运行分发代理以同步数据库 **A** 和 **C** 上的订阅。转到步骤 2。  
@@ -287,7 +287,7 @@ ms.locfileid: "47612575"
   
     2.  将所有发布标记为要验证。 重新初始化所有验证失败的订阅。 恢复完成。  
   
-         有关验证的详细信息，请参阅 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
+         有关验证的详细信息，请参阅 [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
 #### <a name="msdb-database-distributor"></a>msdb 数据库（分发服务器）  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47612575"
   
 4.  将所有发布标记为要验证。 重新初始化所有验证失败的订阅。 恢复完成。  
   
-     有关验证的详细信息，请参阅 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
+     有关验证的详细信息，请参阅 [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。 有关重新初始化的详细信息，请参阅[重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
 #### <a name="master-database-distributor"></a>master 数据库（分发服务器）  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47612575"
   
 2.  还原订阅数据库的最新备份。 转到步骤 3。  
   
-3.  如果订阅数据库仅包含推送订阅，则转到步骤 4。 如果订阅数据库包含请求订阅，则询问以下问题：订阅信息是否是当前的？ 数据库是否包含故障发生时设置的所有表和选项？ 如果是，则转到步骤 4。 如果否，则重新初始化订阅。 恢复完成。  
+3.  如果订阅数据库仅包含推送订阅，则转到步骤 4。 如果订阅数据库包含任何请求订阅，则询问以下问题：订阅信息是否是最新的？ 数据库是否包含故障发生时设置的所有表和选项？ 如果是，则转到步骤 4。 如果否，则重新初始化订阅。 恢复完成。  
   
 4.  若要同步订阅服务器，运行分发代理。 恢复完成。  
   

@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96134ede585acee4b556200e67c7301feef7713
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730895"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125680"
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47730895"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器：[启动和停止复制代理 (SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   复制编程：[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   复制编程：[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>代理配置文件  
  在配置复制时，将在分发服务器上安装一组代理配置文件。 代理配置文件包含一组在代理每次运行时都要使用的参数：在代理启动过程中，每个代理都会登录到分发服务器，并查询其配置文件中的参数。 复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "47730895"
   
     -   队列读取器代理  
   
-     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅[为与发布关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../ relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47730895"
   
     -   合并代理  
   
-     通过下列选项卡访问与这些代理相关联的信息和任务： **“订阅监视列表”** （每个发布服务器都提供）或 **“所有订阅”** 选项卡（所有发布都提供）。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     通过以下选项卡访问与这些代理相关联的信息和任务：“订阅监视列表”（所有发布服务器都提供）或“所有订阅”选项卡（所有发布都提供）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="independent-and-shared-agents"></a>独立代理和共享代理  
  独立代理是为一个订阅提供服务的代理。 共享代理为多个订阅提供服务；如果使用同一共享代理的多个订阅需要同步，则在默认情况下，它们会排队等候，共享代理一次为一个订阅提供服务。 使用独立代理会减少滞后时间，因为只要订阅需要同步，独立代理就可以为其提供服务。 合并复制始终使用独立代理，而事务复制在默认情况下为在新建发布向导中创建的发布使用独立代理（在早期的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本中，事务复制在默认情况下使用共享代理）。  
@@ -89,14 +89,14 @@ ms.locfileid: "47730895"
   
 |清除作业|描述|默认计划|  
 |------------------|-----------------|----------------------|  
-|代理历史记录清除：分发|从分发数据库中删除复制代理历史记录。|每十分钟运行一次|  
-|分发清除：分发|从分发数据库中删除复制的事务。 |每十分钟运行一次|  
+|清除代理历史记录：Distribution|从分发数据库中删除复制代理历史记录。|每十分钟运行一次|  
+|清除分发：Distribution|从分发数据库中删除复制的事务。 |每十分钟运行一次|  
 |过期订阅清除|从发布数据库检测和删除过期的订阅。 在分发服务器上停用在最大分发保持期内尚未同步的订阅。|每天凌晨 1:00 运行| 
 |重新初始化数据验证失败的订阅|检测所有未通过数据验证的订阅并标记它们以进行重新初始化。 下次合并代理或分发代理运行时，订阅服务器上将应用新快照。|无默认调度（默认情况下未启用）。|  
 |复制代理检查|检测未积极记录历史信息的复制代理。 如果作业步骤失败，它将写入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件日志。|每十分钟运行一次。|  
 |分发的复制监视刷新器|刷新复制监视器所使用的缓存的查询。|连续运行。|  
   
 ## <a name="see-also"></a>另请参阅  
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

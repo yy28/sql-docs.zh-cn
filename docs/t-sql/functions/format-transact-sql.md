@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703095"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299594"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 
 返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中以指定的格式和可选的区域性格式化的值。 使用 FORMAT 函数将日期/时间和数字值格式化为识别区域设置的字符串。 对于一般的数据类型转换，请使用 CAST 或 CONVERT。  
@@ -76,11 +76,11 @@ FORMAT ( value, format [, culture ] )
   
 |类别|类型|.NET 类型|  
 |--------------|----------|---------------|  
-|数字|bigint|Int64|  
+|数字|BIGINT|Int64|  
 |数字|ssNoversion|Int32|  
 |数字|SMALLINT|Int16|  
 |数字|TINYINT|Byte|  
-|数字|decimal|SqlDecimal|  
+|数字|Decimal|SqlDecimal|  
 |数字|NUMERIC|SqlDecimal|  
 |数字|FLOAT|双精度|  
 |数字|REAL|Single|  

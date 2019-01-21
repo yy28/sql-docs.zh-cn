@@ -16,14 +16,17 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab2820f37466cfd14a9d29791a7999a70b48dade
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: ed4bb739f6ca74e5e0744af1ed40b37196995213
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383572"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299054"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>启动 SQL Server 导入和导出向导
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 用本主题中介绍的其中一种方式启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导，从支持的任何数据源导入数据和从其中导出数据。
 

@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f794ccc0191454bc900b039af16cd31258821c61
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 81cdc720a23c402a493776c9fba7c0da6c119e60
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591161"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126887"
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,9 +89,9 @@ qrdrsvc [-?]
 |**2**|指定使用 SSL，并验证证书。|  
 
  > [!NOTE]  
- >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，”Server”参数应设置为 SQL Server 的完全限定名称。
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
   
- 有关详细信息，请参阅[安全性概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)。  
+ 有关详细信息，请参阅[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  指定队列读取器运行期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  

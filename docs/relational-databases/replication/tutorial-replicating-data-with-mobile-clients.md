@@ -1,5 +1,5 @@
 ---
-title: 教程：配置服务器和移动客户端之间的复制（合并）| Microsoft Docs
+title: 教程：在服务器和移动客户端之间配置复制（合并）| Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545543"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130717"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教程：配置服务器和移动客户端之间的复制（合并）
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教程：在服务器和移动客户端之间配置复制（合并）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 合并复制是解决中央服务器和偶尔连接的移动客户端之间的数据移动问题的好方法。 使用复制向导可以轻松地配置和管理合并复制拓扑。 
 
@@ -37,7 +37,7 @@ ms.locfileid: "52545543"
 > * 使订阅与合并发布同步。
   
 ## <a name="prerequisites"></a>必备条件  
-本教程面向熟悉数据库基本数据库操作但复制经验不足的用户。 在开始本教程的学习之前，必须已完成[教程：为复制准备 SQL Server](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 的学习。  
+本教程面向熟悉数据库基本数据库操作但复制经验不足的用户。 在开始本教程之前，必须完成[教程：准备 SQL Server 以用于复制](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
 若要完成本教程，需要 SQL Server、SQL Server Management Studio (SSMS) 以及 AdventureWorks 数据库： 
   
@@ -58,7 +58,7 @@ ms.locfileid: "52545543"
 > - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器。 有关此角色的详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
   
   
-本教程的预计学时：60 分钟  
+**学完本教程的估计时间：60 分钟**  
   
 ## <a name="configure-a-publisher-for-merge-replication"></a>为合并复制配置发布服务器
 在本部分中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建合并发布，用于在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中发布 Employee、SalesOrderHeader 和 SalesOrderDetail 表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。  
@@ -82,7 +82,7 @@ ms.locfileid: "52545543"
     ![“发布类型”和“订阅服务器类型”页](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. 在“项目”页上，展开“表”节点。 然后选择以下三个表：Employee、SalesOrderHeader 和 SalesOrderDetail。 选择“下一步” 。  
+6. 在“项目”页上，展开“表”节点。 请选择以下三个表：“Employee”、“SalesOrderHeader”和“SalesOrderDetail”。 选择“下一步” 。  
 
    ![“项目”页上的表选择](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "52545543"
 有关详细信息，请参阅：  
 - [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)  
 - [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [带有参数化筛选器的合并发布的快照](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [带有参数化筛选器的合并发布的快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>使订阅与合并发布同步
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de03858d60e5a8ad21232b2f13d17b880f106ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761985"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242260"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47761985"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要还原页，请使用：**  
   
@@ -136,8 +136,8 @@ ms.locfileid: "47761985"
     |标题|值|  
     |------------|------------|  
     |**名称**|备份集的名称。|  
-    |**组件**|已备份的组件：**数据库**、**文件**或 **\<blank>**（用于事务日志）。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
+    |**组件**|备份组件：“数据库”、“文件”或“\<空白>”（对于事务日志）。|  
+    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
     |**位置**|备份集在卷中的位置。|  

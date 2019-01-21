@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596216"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124577"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47596216"
   
      在此部分中，需要定义端点上所支持的负载。 负载可以为以下多种支持类型中的一种：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker、数据库镜像。 在此部分中，还需要提供语言特定信息。  
   
-> 请注意：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中已删除了本机 XML Web 服务（SOAP/HTTP 终结点）。  
+> **注意：**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中已删除了本机 XML Web 服务（SOAP/HTTP 端点）。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  下列参数仅适用于 TCP 协议选项。  
   
- LISTENER_PORT =listenerPort  
+ LISTENER_PORT listenerPort**=**  
  指定 Service Broker TCP/IP 协议在其上侦听连接的端口号。 按照约定，将使用 4022，但 1024 和 32767 之间的任何数字都有效。  
   
- LISTENER_IP = ALL | (4-part-ip ) | ( "ip_address_v6" )**  
+ LISTENER_IP = ALL | (4-part-ip ) | ( "ip_address_v6" )  
  指定端点将侦听的 IP 地址。 默认值为 ALL。 这表示侦听器将接受任何有效 IP 地址上的连接。  
   
  如果用 IP 地址而不是完全限定域名（`ALTER DATABASE SET PARTNER = partner_IP_address` 或 `ALTER DATABASE SET WITNESS = witness_IP_address`）配置数据库镜像，则在创建镜像端点时必须指定 `LISTENER_IP =IP_address` 而不是 `LISTENER_IP=ALL`。  

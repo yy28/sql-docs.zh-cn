@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509938"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257092"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查询优化助手升级数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ QTA 仅面向可以从查询存储中执行的 `SELECT` 查询。 若编译参�
 QTA 面向 [基数估计器 (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) 版本更改带来的查询回归已知可能的模式。 例如，将数据库从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和数据库兼容性级别 110 升级到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和数据库兼容性级别 140 时，一些查询可能发生回归，因为它们是专为适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (CE 70) 中存在的 CE 版本而设计的。 这并不意味着从 CE 140 还原为 CE 70 是唯一选择。 只要较新版本中的某项特定更改引入了回归，就有可能提示查询只使用上一个 CE 版本中对特定查询更有效的相关部分，同时依然利用 CE 较新版本的所有其他改进。 还能使工作负载中未回归的其他查询获益于较新版 CE 的改进。
 
 由 QTA 搜索到的 CE 模式如下： 
--  **独立性与相关性**：如果独立性假设为特定查询提供的评估更好，那么查询提示 `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` 使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为了说明关联而对筛选器的 `AND` 谓词进行估算时使用最小选择性来生成执行计划。 有关详细信息，请参阅 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
--  **简单包含与基础包含**：如果不同的联接包含为特定查询提供了更好的估计，则查询提示 `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` 使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“简单包含”假设（而不是默认的“基础包含”假设）来生成执行计划。 有关详细信息，请参阅 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
+-  **独立性与相关性**：如果独立性假设为特定查询提供的评估更好，为了说明相关性，查询提示 `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` 会使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成执行计划，方法是在对筛选器的 `AND` 谓词进行估算时使用最小选择性。 有关详细信息，请参阅 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
+-  **简单包含与基础包含**：如果不同的联接包含为特定查询提供了更好的估计，则查询提示 `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` 会使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过使用“简单包含”假设（而不是默认的“基础包含”假设）来生成执行计划。 有关详细信息，请参阅 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
 -  **多语句表值函数 (MSTVF) 固定基数猜测** - 100 行与1 行：如果使用 TVF 默认固定估值 100 行与使用 TVF 固定估值 1 行（对应于 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及早期版本的查询优化器 CE 模型下的默认值）相比，并不能带来更有效的计划，则使用查询提示 `QUERYTRACEON 9488` 生成执行计划。 有关 MSTVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 
 > [!NOTE]
@@ -98,10 +98,10 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
 
        ![新建数据库升级设置窗口](../../relational-databases/performance/media/qta-new-session-settings.png "New database upgrade settings window")
 
-        > [!IMPORTANT]
-        > 建议的“最大大小”是适合于短时间工作负载的任意值。   
-        > 但是，请记住，对于非常密集的工作负载（即可能生成许多不同的计划时），该值可能不足以保存关于基线和数据库升级后的工作负载的信息。   
-        > 如果预料到会出现这种情况，请输入一个合适的较大值。
+       > [!IMPORTANT]
+       > 建议的“最大大小”是适合于短时间工作负载的任意值。   
+       > 但是，请记住，对于非常密集的工作负载（即可能生成许多不同的计划时），该值可能不足以保存关于基线和数据库升级后的工作负载的信息。   
+       > 如果预料到会出现这种情况，请输入一个合适的较大值。
 
 4.  “优化”窗口结束会话配置，并引导完成打开并继续处理会话的后续步骤。 完成后，单击“完成”。
 
@@ -120,7 +120,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
     
     列表包含以下信息：
     -  **会话 ID**
-    -  **会话名称**：系统生成的名称，该名称由数据库名称以及创建会话的日期和时间组成。
+    -  **会话名称**：系统生成的名称由数据库名称以及创建会话的日期和时间组成。
     -  **状态**：会话状态（活动或关闭）。
     -  **说明**：系统生成的说明，包括用户所选的目标数据库兼容性级别以及业务周期工作负载天数。
     -  **开始时间**：创建会话的日期和时间。
@@ -164,7 +164,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
         -  **查询文本**：可通过单击“...”按钮展开的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。
         -  **运行次数**：显示为整个工作负载收集执行该查询的次数。
         -  **基线指标**：升级数据库兼容性之前，为收集基线数据选定的单位为毫秒的指标（持续时间或 CpuTime）。
-        -  **观测的指标**：升级数据库兼容性之后，为收集数据选定的单位为毫秒的指标（持续时间或 CpuTime）。
+        -  **观测到的指标**：升级数据库兼容性之后，为收集数据选定的单位为毫秒的指标（持续时间或 CpuTime）。
         -  **百分比变化**：数据库兼容性升级状态前后所选指标的百分比变化。 负数表示查询的测量的回归数量。
         -  **可优化**：True 或 False，具体取决于查询是否有资格进行试验。
 
@@ -186,10 +186,10 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
     -  **查询文本**：可通过单击“...”按钮展开的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。
     -  **状态**：显示查询的当前试验状态。
     -  **基线指标**：为步骤 2 子步骤 3 中执行的查询选定的单位为毫秒的指标（持续时间或 CpuTime），表示升级数据库兼容性后的回归查询。
-    -  **观测的指标**：为对试验后的查询进行很好的建议优化选定的单位为毫秒的指标（持续时间或 CpuTime），已进行足够好的建议优化。
+    -  **观测到的指标**：为对试验后的查询进行很好的建议优化选定的单位为毫秒的指标（持续时间或 CpuTime），已进行足够好的建议优化。
     -  **百分比变化**：试验状态前后所选指标的百分比变化，表示执行建议的优化后测得的查询的改进量。
     -  **查询选项**：链接到改进查询执行指标的建议提示。
-    -  **可以部署**：True 或 False，具体取决于是否能将建议的查询优化部署为计划指南。
+    -  **可部署**：True 或 False，具体取决于是否能将建议的查询优化部署为计划指南。
 
     ![QTA 步骤 4](../../relational-databases/performance/media/qta-step4.png "QTA Step 4")
 

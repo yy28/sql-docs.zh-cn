@@ -1,7 +1,7 @@
 ---
 title: FOR Clause (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,30 +22,30 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a8f1ce1c1c5a572874b301f326a711bbcfbda8a1
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906267"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143547"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用 FOR 子句指定查询结果的以下查询结果之一。  
+使用 FOR 子句指定查询结果的以下查询结果之一。
   
 -   允许在查看浏览模式游标中的查询结果时通过指定 FOR BROWSE 来更新。  
   
 -   通过指定 FOR XML，将查询结果格式化为 XML。  
   
 -   通过指定 FOR JSON，将查询结果格式化为 JSON 。  
-  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -84,20 +84,21 @@ JSON
         [ , WITHOUT_ARRAY_WRAPPER ]  
     ]  
   
-}  
-```  
+}
+```
   
-## <a name="for-browse"></a>FOR BROWSE  
+## <a name="for-browse"></a>FOR BROWSE
+
  BROWSE  
  指定可以在查看 DB-Library 浏览模式游标中的数据时进行更新。 如果表包括 timestamp 列，并且表有唯一索引，而且在发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 SELECT 语句中 FOR BROWSE 选项位于末尾，则可以在应用程序中浏览该表。  
   
-> [!NOTE]  
->  不能在包括 FOR BROWSE 选项的 SELECT 语句中使用 \<lock_hint> HOLDLOCK。
+> [!NOTE]
+> 不能在包括 FOR BROWSE 选项的 SELECT 语句中使用 \<lock_hint> HOLDLOCK。
   
  FOR BROWSE 不能出现在由 UNION 运算符所联接的 SELECT 语句中。  
   
-> [!NOTE]  
->  如果表的唯一索引键列可为空，并且表在外部联接的内侧，则浏览模式不支持索引。  
+> [!NOTE]
+> 如果表的唯一索引键列可为空，并且表在外部联接的内侧，则浏览模式不支持索引。  
   
  使用浏览模式可以扫描 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的行并逐行更新表中的数据。 若要以浏览模式访问应用程序中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，必须使用下列两个选项之一：  
   
@@ -155,8 +156,7 @@ JSON
     FROM tleft   
     RIGHT JOIN tright   
     ON tleft.c1 = tright.c1   
-    WHERE tright.c1 <> 2 ;  
-  
+    WHERE tright.c1 <> 2 ;
     ```  
   
      请注意“结果”窗格中的以下输出：  
@@ -171,10 +171,11 @@ JSON
   
  在运行 SELECT 查询以便以浏览模式访问表之后，对于 tleft 表中的 c1 列，SELECT 查询的结果集包含两个 Null 值，这是因为在右外部联接语句中定义了该列。 因此，您无法在结果集中区分源自该表的 Null 值和右外部联接语句引入的 Null 值。 如果必须忽略结果集的 Null 值，则可能收到错误结果。  
   
-> [!NOTE]  
->  如果唯一索引中包含的列不接受 Null 值，则结果集中的所有 Null 值都是由右外部联接语句引入的。  
+> [!NOTE]
+> 如果唯一索引中包含的列不接受 Null 值，则结果集中的所有 Null 值都是由右外部联接语句引入的。  
   
-## <a name="for-xml"></a>FOR XML  
+## <a name="for-xml"></a>FOR XML
+
  XML  
  指定以 XML 文档返回查询的结果。 必须指定下列 XML 模式之一：RAW、AUTO、EXPLICIT。 有关 XML 数据和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)。  
   
@@ -190,9 +191,25 @@ JSON
  XMLDATA  
  返回内联 XDR 架构，但不将根元素添加到结果中。 如果指定了 XMLDATA，则 XDR 架构将被追加到文档末尾。  
   
-> [!IMPORTANT]  
->  XMLDATA 指令已弃用。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICIT 模式下，没有 XMLDATA 指令的替代项。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
+> [!IMPORTANT]
+> XMLDATA 指令已弃用。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICIT 模式下，没有 XMLDATA 指令的替代项。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
+禁止显示不需要的换行符：可以使用 SQL Server Management Studio (SSMS) 来发出使用 FOR XML 子句的查询。 有时会返回大量 XML 并在一个网格单元格中显示。 XML 字符串可能比 SSMS 网格单元在单个行上可以容纳的长度更长。 在这些情况下，SSMS 可能会在整个 XML 字符串的长段之间插入换行符。 此类换行可能发生在子某个字符串的中间，不应跨行拆分该子字符串。 可以使用强制转换 AS XMLDATA 来阻止换行符。 使用 FOR JSON PATH 时，此解决方案也适用。 该技巧在 Stack Overflow 上进行了介绍，并显示在以下 Transact-SQL 示例 SELECT 语句中：
+
+- [使用 SQL Server FOR XML：将结果数据类型转换为文本/varchar/字符串等？](https://stackoverflow.com/questions/5655332/using-sql-server-for-xml-convert-result-datatype-to-text-varchar-string-whate/5658758#5658758)
+
+    ```sql
+    SELECT CAST(
+        (SELECT column1, column2
+            FROM my_table
+            FOR XML PATH('')
+        )
+            AS VARCHAR(MAX)
+    ) AS XMLDATA ;
+    ```
+
+<!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
+
  XMLSCHEMA [ ('TargetNameSpaceURI') ]  
  返回内联 XSD 架构。 如果指定该指令（用于返回架构中指定的命名空间），则可以选择指定目标命名空间 URI。 有关详细信息，请参阅 [生成内联 XSD 架构](../../relational-databases/xml/generate-an-inline-xsd-schema.md)。  
   
@@ -234,9 +251,10 @@ ORDER BY LastName, FirstName
 FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;  
 ```  
   
-## <a name="for-json"></a>对于 JSON  
+## <a name="for-json"></a>对于 JSON
+
  JSON  
- 指定 FOR JSON，返回已格式化为 JSON 文本的查询结果。 还必须指定以下 JSON 模式之一：AUTO 或 PATH。 有关 FOR JSON 子句的详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
+ 指定 FOR JSON，返回已格式化为 JSON 文本的查询结果。 还必须指定以下某项 JSON 模式：AUTO 或 PATH。 有关 FOR JSON 子句的详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
  AUTO  
  根据 SELECT 语句的结构  
@@ -257,7 +275,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  有关详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+

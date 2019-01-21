@@ -15,12 +15,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d9093c6ddb4cf4dc94434dec75d0ed48085ca5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcfcdbc86259d59d4bf6ddb925d48e3f7e34d62
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621045"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129027"
 ---
 # <a name="log-reader-agent-security"></a>日志读取器代理安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47621045"
  用于连接的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户至少必须是发布数据库中的 **db_owner** 固定数据库角色的成员。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理复制中的登录名和密码](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [复制中的标识和访问控制](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  

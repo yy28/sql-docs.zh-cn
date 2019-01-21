@@ -15,12 +15,12 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2129289ae91688527156772c43d093851f52190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d37032b9c13d9447ba5879e5e29bd91256c75398
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754375"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133431"
 ---
 # <a name="queue-reader-agent-security"></a>队列读取器代理安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47754375"
  输入 Windows 帐户的密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理复制中的登录名和密码](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [复制的标识和访问控制](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)  

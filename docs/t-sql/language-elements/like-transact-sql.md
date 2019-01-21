@@ -32,15 +32,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05489fa8c36f037ecde7d15f1e1109299bbec7f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625085"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299984"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。 如果任何一个参数不属于字符串数据类型，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会将其转换为字符串数据类型（如果可能）。  
   
@@ -122,17 +125,17 @@ EXEC FindEmployee @EmpLName = 'Barb';
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- FirstName      LastName            City
+ FirstName      LastName            City
  ----------     -------------------- --------------- 
  Angela         Barbariol            Snohomish
  David          Barber               Snohomish
  (2 row(s) affected)  
- ``` 
+ ``` 
  
-## <a name="pattern-matching-by-using-like"></a>使用 LIKE 的模式匹配  
- LIKE 支持 ASCII 模式匹配和 Unicode 模式匹配。 如果所有参数（match_expression、pattern 和 escape_character，如果存在）均为 ASCII 字符数据类型，则执行 ASCII 模式匹配。 如果任何一个参数为 Unicode 数据类型，则所有参数都将转换为 Unicode，并执行 Unicode 模式匹配。 当 Unicode 数据（nchar 或 nvarchar 数据类型）与 LIKE 一起使用时，尾随空格有意义；但对非 Unicode 数据，尾随空格则没有意义。 Unicode LIKE 与 ISO 标准兼容。 ASCII LIKE 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容。  
+## Pattern Matching by Using LIKE  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- 下面的一系列示例显示 ASCII LIKE 模式匹配与 Unicode LIKE 模式匹配所返回的行之间的差异。  
+ The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -219,7 +222,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -233,10 +236,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
+ ``` 
  
-### <a name="b-using-not-like-with-the--wildcard-character"></a>B. 使用带 % 通配符的 NOT LIKE  
- 以下示例在 `PersonPhone` 表中查找区号不是 `415` 的所有电话号码。  
+### B. Using NOT LIKE with the % wildcard character  
+ The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -253,7 +256,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -263,11 +266,11 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
-```  
+(8 row(s) affected)  
+```  
 
-### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
- 以下示例使用 `ESCAPE` 子句和转义符在 `10-15%` 表的列 `c1` 中查找精确字符串 `mytbl2`。  
+### C. Using the ESCAPE clause  
+ The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
   
 ```sql
 USE tempdb;  

@@ -14,20 +14,20 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5532e7916f5713dea0dde30f5afb01634f86367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d17b39369f19736e587fc82507a82fe02f85590
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684745"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124257"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照初始化订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在创建发布后，通常会创建一个初始快照，并将其复制到快照文件夹中（默认情况下，使用新建发布向导创建的合并发布将会执行此操作）。 此快照然后将在订阅的初始同步期间由分发代理（对于事务发布和快照发布）或合并代理（对于合并发布）应用于订阅服务器。 快照过程取决于发布的类型：  
   
--   如果快照用于快照发布、事务发布或不使用参数化筛选器的合并发布，那么快照将包含大容量复制程序 (bcp) 文件中的架构和数据，还包含进行复制所必需的约束、扩展属性、索引、触发器和系统表。 有关创建和应用快照的详细信息，请参阅[创建并应用快照](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
+-   如果快照用于快照发布、事务发布或不使用参数化筛选器的合并发布，那么快照将包含大容量复制程序 (bcp) 文件中的架构和数据，还包含进行复制所必需的约束、扩展属性、索引、触发器和系统表。 有关创建和应用快照的详细信息，请参阅[创建并应用快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
--   如果快照用于使用参数化筛选器的合并发布，则创建快照的过程包括两部分。 首先创建包含复制脚本和已发布对象的架构（但不包含数据）的架构快照。 然后，使用包括脚本、从架构快照复制的架构以及属于订阅分区的数据的快照初始化每个订阅。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+-   如果快照用于使用参数化筛选器的合并发布，则创建快照的过程包括两部分。 首先创建包含复制脚本和已发布对象的架构（但不包含数据）的架构快照。 然后，使用包括脚本、从架构快照复制的架构以及属于订阅分区的数据的快照初始化每个订阅。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
  根据复制的类型以及发布中包含的项目，快照可由不同的文件组成。 这些文件复制到配置分发服务器时指定的默认快照文件夹中，或创建发布时指定的备用快照文件夹中。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "47684745"
 ## <a name="snapshot-options"></a>快照选项  
  使用快照初始化订阅时有许多可用选项。 您可以：  
   
--   指定一个备用快照文件夹位置，以替代默认的快照文件夹位置或者与之并存。 有关详细信息，请参阅 [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)。  
+-   指定一个备用快照文件夹位置，以替代默认的快照文件夹位置或者与之并存。 有关详细信息，请参阅[修改快照选项](../../relational-databases/replication/snapshot-options.md)。  
   
--   压缩快照，以便在可移动介质上进行存储或者通过速度较低的网络进行传输。 有关详细信息，请参阅 [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md)。  
+-   压缩快照，以便在可移动介质上进行存储或者通过速度较低的网络进行传输。 有关详细信息，请参阅 [Compressed Snapshots](../../relational-databases/replication/snapshot-options.md#compressed-snapshots)。 
+
+-   在应用快照之前或之后执行 Transact-SQL 脚本。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   
--   在应用快照之前或之后执行 Transact-SQL 脚本。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。  
-  
--   使用文件传输协议 (FTP) 传输快照文件。 有关详细信息，请参阅[通过 FTP 传输快照](../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+-   使用文件传输协议 (FTP) 传输快照文件。 有关详细信息，请参阅[通过 FTP 传输快照](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [初始化订阅](../../relational-databases/replication/initialize-a-subscription.md)   

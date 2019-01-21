@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535285"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136067"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "52535285"
   
      将订阅服务器升级到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，即可升级订阅服务器上的订阅所用的合并代理。 若要利用众多新功能和性能优化，则需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的合并代理。  
   
--   如果通过快速连接来同步订阅，并通过发布服务器和订阅服务器发送更改，请为合并代理使用 ParallelUploadDownload 参数。  
+-   如果通过快速连接来同步订阅，并通过发布服务器和订阅服务器发送更改，请为合并代理使用 **–ParallelUploadDownload** 参数。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了一个新的合并代理参数：-ParallelUploadDownload。 设置此参数能够使合并代理并行处理上载到发布服务器和下载到订阅服务器的更改。 这对于使用高速网络带宽的大容量环境非常有用。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了一个新的合并代理参数： **–ParallelUploadDownload**。 设置此参数能够使合并代理并行处理上载到发布服务器和下载到订阅服务器的更改。 这对于使用高速网络带宽的大容量环境非常有用。 代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   
     -   [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -136,16 +136,16 @@ ms.locfileid: "52535285"
   
 -   预先生成快照和/或允许订阅服务器在第一次同步时请求生成快照和应用快照。  
   
-     使用以上选项中的一个或两个可以为使用参数化筛选器的发布提供快照。 如果未指定任一选项，将使用一系列的 SELECT 和 INSERT 语句初始化订阅，而不是使用 **bcp** 实用工具；此过程的速度将更慢。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+     使用以上选项中的一个或两个可以为使用参数化筛选器的发布提供快照。 如果未指定任一选项，将使用一系列的 SELECT 和 INSERT 语句初始化订阅，而不是使用 **bcp** 实用工具；此过程的速度将更慢。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>维护与监视注意事项  
   
 -   不定期地重新对合并复制系统表建立索引。  
   
-     在合并复制维护过程中，应不定期检查以下与合并复制相关联的系统表的增长情况： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、 **MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+     在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用复制监视器中的 **“同步历史记录”** 选项卡监视同步性能。  
   
-     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息的详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
   

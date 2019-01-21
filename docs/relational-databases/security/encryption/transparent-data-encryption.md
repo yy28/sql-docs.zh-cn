@@ -1,7 +1,7 @@
 ---
 title: 透明数据加密 (TDE) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2fda42994bb86d1087f22024205f8a521ec530d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210576"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185123"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53210576"
   
  **适用于 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的信息**  
   
- 当将 TDE 与 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 一起使用时， [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]将为你自动创建存储在 master 数据库中的服务器级别的证书。 若要移动 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上的 TDE 数据库，必须解密该数据库、移动该数据库，然后在目标 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新启用 TDE。 有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上 TDE 的分步说明，请参阅 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。  
+ 当将 TDE 与 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 一起使用时，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 将自动创建存储在 master 数据库中的服务器级别证书。 若要在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上移动 TDE 数据库，不需要为移动操作解密数据库。 有关将 TDE 与 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 一起使用的详细信息，请参阅 [Azure SQL 数据库的透明数据加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。  
   
  **适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的信息**  
   

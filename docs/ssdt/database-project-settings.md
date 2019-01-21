@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516018"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143577"
 ---
 # <a name="database-project-settings"></a>数据库项目设置
 使用数据库项目设置可控制数据库、调试和生成配置的各个方面。 这些设置分为以下几类。  
@@ -170,8 +170,7 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
   
 2.  如果对象是用 VB 编写的，则可以先选择 **“语言”** 下拉列表中的“VB”，然后单击 **“高级”** 按钮。 可以在[“高级编译器设置”对话框 (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx) 中找到 VB 选项的说明  
   
-有关更多信息，请参阅[生成配置属性](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
-  
+
 ## <a name="bkmk_build"></a>生成  
 可以为解决方案中的每个数据库项目选择生成配置。 默认情况下有一个配置，但您可以添加自定义配置。 例如，如果您需要一个总是删除并重新创建数据库的自定义配置，您可以选择添加自定义配置。 在包含不同项目类型的解决方案中，可以创建一个自定义解决方案配置，其中包含每个项目的特定生成配置。  
   
@@ -221,9 +220,9 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 |---------|-----------------|---------------|  
 |启动操作|None|指定在调试您的项目时要运行的脚本或外部程序。|  
 |目标连接字符串|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|指定要用作指定生成配置的目标的数据库服务器的连接信息。 默认连接字符串针对动态创建的 SQL Server LocalDB 实例和数据库。|  
-|部署数据库属性|用户帐户控制|指定是否在部署数据库项目时部署或更新 DatabaseProerties.DatabaseProperties 设置。|  
+|部署数据库属性|是|指定是否在部署数据库项目时部署或更新 DatabaseProerties.DatabaseProperties 设置。|  
 |始终重新创建数据库|否|指定是否删除后重新创建数据库，而非执行增量升级。 例如，如果你要针对数据库的干净部署运行数据库单元测试，则可能需要选中此复选框。 如果清除此复选框，则将更新现有数据库，而不是删除并重新创建数据库。|  
-|如果可能发生数据丢失则阻止增量部署|用户帐户控制|指定在更新可能会造成数据丢失的情况下是否应停止部署。 如果选中此复选框，则可能造成数据丢失的更改会导致部署因出现错误而停止，从而防止丢失数据。 例如，在将 `varchar(50)` 列更改为 `varchar(30)`时，部署将会停止。<br /><br />注意：只有当可能发生数据丢失的表中包含数据时，才会阻止部署。 如果不会丢失任何数据，则部署将继续。|  
+|如果可能发生数据丢失则阻止增量部署|是|指定在更新可能会造成数据丢失的情况下是否应停止部署。 如果选中此复选框，则可能造成数据丢失的更改会导致部署因出现错误而停止，从而防止丢失数据。 例如，在将 `varchar(50)` 列更改为 `varchar(30)`时，部署将会停止。<br /><br />**注意**：只有当可能发生数据丢失的表中包含数据时，才会阻止部署。 如果不会丢失任何数据，则部署将继续。|  
 |DROP 目标中但不在项目中的对象|否|指定是否应将目标数据库中存在而数据库项目中不存在的对象作为部署脚本的一部分删除。 您可以排除项目中的一些文件以将它们暂时从生成脚本中移除。 但是，您可能希望在目标数据库中保留这些对象的现有版本。 如果选中“始终重新创建数据库”复选框，该复选框将没有任何作用，因为数据库会被删除。|  
 |不使用 ALTER ASSEMBLY 语句更新 CLR 类型|否|指定在部署更改时，是否使用 ALTER ASSEMBLY 语句来更新公共语言运行时 (CLR) 类型，或者是否将删除并重新创建实例化 CLR 类型的对象。|  
 |高级...|否|一种命令按钮，可用于指定控制部署的事件和行为的选项。|  

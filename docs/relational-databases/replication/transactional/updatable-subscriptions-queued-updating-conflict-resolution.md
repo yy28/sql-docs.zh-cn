@@ -17,12 +17,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ea67ab144a87c2ad77cdaac725d36777cc281ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413fc991d9f908d4390de109dededa07056e5b63
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770755"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125527"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>可更新订阅 - 排队更新冲突的解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ ms.locfileid: "47770755"
   
  **设置排队更新冲突解决策略**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[设置排队更新冲突解决选项 (SQL Server Management Studio)](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   复制 Transact-SQL 编程： [允许更新事务发布的订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。  
+-   复制 Transact-SQL 编程：[允许更新事务发布的订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **查看数据冲突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[查看事务发布的数据冲突 (SQL Server Management Studio)](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[查看事务发布的数据冲突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>发布服务器入选  
  如果将冲突解决设置为服务器入选，将根据发布服务器中的数据保持事务的一致性。 冲突的事务将回滚到启动该事务的订阅服务器。  

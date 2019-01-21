@@ -14,12 +14,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5738e4c46d7223561162d970a2ae9137df721191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b90293de93fd032f7ebc1ee77d839cc2211a7e9d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505332"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136137"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>配置预定义的复制警报 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52505332"
   
 -   **复制：代理自定义关闭**  
   
- 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 有关访问此选项卡的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 有关访问此选项卡的详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅[创建用户定义事件](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52505332"
   
     -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
-         如果警报为“复制: 订阅服务器未通过数据验证”，可以指定复制为此警报所提供的响应作业：选择“执行作业”，然后单击浏览按钮 (…)。在 **“定位作业”** 对话框中，单击 **“浏览”**。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”**。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
+         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：选择“执行作业”，然后单击浏览按钮 (...)。 在 **“定位作业”** 对话框中，单击 **“浏览”**。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”**。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52505332"
   
     -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
-         如果警报为“复制: 订阅服务器未通过数据验证”，可以指定复制为此警报所提供的响应作业：选择“执行作业”，然后单击浏览按钮 (…)。在 **“定位作业”** 对话框中，单击 **“浏览”**。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”**。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
+         如果警报是“复制：订阅服务器未通过数据验证”，可以指定复制为此警报提供的响应作业：选择“执行作业”，然后单击浏览按钮 (...)。 在 **“定位作业”** 对话框中，单击 **“浏览”**。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”**。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   

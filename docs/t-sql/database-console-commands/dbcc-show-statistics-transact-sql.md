@@ -34,12 +34,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f144425f3fffa90d9c123a2c7c8013ac43babcb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234d124260e007cd43a52cc9baa8d2475d1db91a
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726965"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206333"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ DBCC SHOW_STATISTICS 显示表或索引视图的当前查询优化统计信息�
   
 DBCC SHOW_STATISTICS 根据统计信息对象中存储的数据显示标题、直方图和密度向量。 使用以下语法，您可以指定表或索引视图以及目标索引名称、统计信息名称或列名。 本主题说明如何显示统计信息以及如何理解显示的结果。
   
-有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。
+有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -87,7 +87,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ ,n ]  
  如果指定以上一个或多个选项，将根据指定的选项限制该语句返回的结果集。 如果没有指定任何选项，则返回所有统计信息。  
   
  STATS_STREAM 为 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -107,13 +107,13 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |String Index|Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text** 或 **ntext** 类型，则基于其第一个键列创建字符串摘要统计信息。|  
 |筛选表达式|包含在统计信息对象中的表行子集的谓词。 NULL = 未筛选的统计信息。 有关筛选谓词的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。 有关筛选统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Unfiltered Rows|应用筛选表达式前表中的总行数。 如果筛选表达式为 NULL，则 Unfiltered Rows 等于 Rows。|  
-|持久样本百分比|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|持久样本百分比|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用范围：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 下表对指定 DENSITY_VECTOR 时结果集中所返回的列进行了说明。
   
 |列名|描述|  
 |-----------------|-----------------|  
-|All Density|密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
+|All Density|密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
 |Average Length|存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。|  
 |“列”|为其显示 All density 和 Average length 的前缀中的列的名称。|  
   
@@ -125,7 +125,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |RANGE_ROWS|其列值位于直方图梯级内（不包括上限）的行的估算数目。|  
 |EQ_ROWS|其列值等于直方图梯级的上限的行的估算数目。|  
 |DISTINCT_RANGE_ROWS|非重复列值位于直方图梯级内（不包括上限）的行的估算数目。|  
-|AVG_RANGE_ROWS|重复列值位于直方图梯级内（不包括上限）的平均行数（如果 DISTINCT_RANGE_ROWS > 0，则为 RANGE_ROWS / DISTINCT_RANGE_ROWS）。| 
+|AVG_RANGE_ROWS|直方图步骤中具有重复列值的平均行数，不包括上限。 当 DISTINCT_RANGE_ROWS 大于 0 时，通过将 RANGE_ROWS 除以 DISTINCT_RANGE_ROWS 来计算 AVG_RANGE_ROWS。 当 DISTINCT_RANGE_ROWS 为 0 时，AVG_RANGE_ROWS 为直方图步骤返回 1。| 
   
 ## <a name="Remarks"></a> 注释 
 

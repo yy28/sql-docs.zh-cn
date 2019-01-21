@@ -14,18 +14,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b25ee3d20432b5cba03fb745f8d95e51771619ec
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 72de8dd56909ff947b947602ef05860fd367156f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886932"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299374"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 JSON 是一种流行的数据格式，用于在现代 Web 和移动应用程序中交换数据。 JSON 还可用于在日志文件或 Microsoft Azure Cosmos DB 等 NoSQL 数据库中存储非结构化数据。 许多 REST Web 服务以 JSON 文本格式返回结果，或接受采用 JSON 格式的数据。 例如，大多数 Azure 服务（如 Azure 搜索、Azure 存储和 Azure Cosmos DB）都提供返回或使用 JSON 的 REST 终结点。 JSON 也是用于通过 AJAX 调用在网页与 Web 服务器之间交换数据的主要格式。 
 

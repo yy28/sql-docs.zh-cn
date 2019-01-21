@@ -15,12 +15,12 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6b68ec83b2ca493c040855b6adf48d164168c6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4cb6a031e734f7cf655c9f92ef900844dd72001
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131857"
 ---
 # <a name="merge-agent-security"></a>合并代理安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47661055"
   
 -   如果从新建订阅向导访问该对话框，您还可以指定合并代理在建立与订阅服务器（对于推送订阅）或发布服务器和分发服务器（对于请求订阅）的连接时所使用的上下文。 可以使用 Windows 帐户或指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户的上下文来建立连接。  
   
--   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“发布服务器连接”** 行中的属性按钮 ( **...** ) 来指定合并代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+-   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“发布服务器连接”** 行中的属性按钮 ( **...** ) 来指定合并代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何：[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47661055"
  连接订阅服务器所用的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户必须至少为订阅数据库中的 **db_owner** 固定数据库角色的成员。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理复制中的登录名和密码](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [管理复制中的登录名和密码](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

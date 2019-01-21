@@ -18,12 +18,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b8be637da67d9aa083fb4afbc024381c1b83a81
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605297"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132797"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>配置服务器以侦听特定 TCP 端口
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "51605297"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  在“IPn 属性”区域框的“TCP 端口”框中，键入希望此 IP 地址侦听的端口号，然后单击“确定”。 通过逗号分隔，可指定多个端口。
+4.  在 **“IP**_n_ **属性”** 区域框的 **“TCP 端口”** box, type the port number you want this “IP address to listen on, and then click **“确定”**。 通过逗号分隔，可指定多个端口。
 
     > [!NOTE] 
-    > 如果“协议”选项卡上的“全部侦听”设置为“是”，则仅使用 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”值，并将完全忽略各 *IP***n 部分。 如果“全部侦听”设置为“否”，将忽略 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”设置，而改用各 *IP***n 部分的“TCP 端口”、“TCP 动态端口”和“已启用”设置。
-    > 每个 *IP***n 部分的“已启用”设置的默认值为“否”，这样会使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略此 IP 地址，即使它已定义端口。  
+    > 如果“协议”选项卡上的“全部侦听”设置为“是”，则仅使用 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”值，并将完全忽略各 IPn 部分。 如果“全部侦听”设置为“否”，将忽略 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”设置，而改用各 IPn 部分的“TCP 端口”、“TCP 动态端口”和“已启用”设置。
+    > 每个 IPn 部分的“已启用”设置的默认值为“否”，这样会使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略此 IP 地址，即使它已定义端口。  
   
 5.  在控制台窗格中，单击“SQL Server 服务”。  
   

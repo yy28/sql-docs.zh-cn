@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c77e32b019f9b801daaa58e480d4825725f15e8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1f2c1cc7c40e3992f2cd28a777b48e0f927cf87
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697257"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135847"
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51697257"
   
 -   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“文件”/“打开”菜单在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中打开此文件。  
   
--   通过 sqlcmd 实用工具使用 *-i***input_file 参数运行此文件。  
+-   通过 **sqlcmd** 实用工具使用 **-i**_input_file_ 参数运行此文件。  
   
 -   通过 **PowerShell 脚本中的** Invoke-Sqlcmd **cmdlet 使用** -QueryFromFile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数运行此文件。  
   

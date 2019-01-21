@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527922"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226534"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
 可以使用 Team Foundation Build 将 SQL Server 单元测试作为生成验证测试 (BVT) 的一部分运行。 可以配置单元测试以部署数据库、生成测试数据，然后运行选定测试。 如果您不熟悉 Team Foundation Build，则应该在执行本主题中的过程之前查看以下信息：  
@@ -262,7 +262,7 @@ ms.locfileid: "52527922"
   
 9. 单击“确定” 。  
   
-10. 在“基本”组中的“自动测试”中，指定要运行的测试。 默认情况下，将运行解决方案中名为 *test\*.dll 的文件中包含的测试。  
+10. 在“基本”组中的“自动测试”中，指定要运行的测试。 默认情况下，将运行解决方案中名为 \*test\*.dll 的文件中包含的测试。  
   
 11. 在“文件”菜单上，单击“保存 ProjectName”。  
   

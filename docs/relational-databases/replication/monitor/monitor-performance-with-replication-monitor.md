@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515465"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130577"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52515465"
   
     |很好|好|一般|较差|严重|  
     |---------------|----------|----------|----------|--------------|  
-    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
+    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
 -   对于合并复制，性能质量独立于任意一个阈值（行处理阈值确定是否在 **“状态”** 列中显示 **“‘严重’状态下的性能”** 值）。 性能质量通过将具有相同连接类型（拨号或 LAN）的发布的单个订阅性能与订阅的平均历史性能进行比较来确定。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果包含 50 或 50 多次更改的同步不到五次，或最新同步中的更改少于 50 次，复制监视器将不显示值。  
   
@@ -85,21 +85,21 @@ ms.locfileid: "52515465"
   
     |很好|好|一般|较差|  
     |---------------|----------|----------|----------|  
-    |151+%|76 - 150%|26 - 75%|0 - 25%|  
+    |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- 如何查看订阅信息的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 有关查看订阅信息的详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>使用跟踪令牌确定滞后时间  
  事务复制使您可以通过在发布数据库的事务日志中插入一个令牌（少量数据）并记录到达分发服务器和订阅服务器所用的时间，来测量系统的滞后时间。 使用令牌还可以识别数据是否未到达分发服务器或订阅服务器。 有关详细信息，请参阅 [为事务复制测量滞后时间和验证连接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>查看合并复制的详细同步性能  
- 对于合并复制，复制监视器会显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息的详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 对于合并复制，复制监视器会显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>查看事务及事务复制的传递时间  
- 对于事务复制，复制监视器显示分发数据库中尚未分发到订阅服务器的事务数以及分发这些事务的估计时间的信息。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 对于事务复制，复制监视器显示分发数据库中尚未分发到订阅服务器的事务数以及分发这些事务的估计时间的信息。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

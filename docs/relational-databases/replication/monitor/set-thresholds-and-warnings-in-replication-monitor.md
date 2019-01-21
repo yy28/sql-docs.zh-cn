@@ -18,12 +18,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e20f280df7054596f357c4864ef95177ca3e9cf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749600"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135468"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47749600"
   
 2.  单击 **“警告”** 选项卡。若要查看有关此选项卡上的选项的详细信息，请在菜单栏上单击 **“帮助”** 。  
   
-3.  通过选中相应的复选框来启用警告： **“如果订阅将在阈值内过期，则发出警告”** 或 **“如果滞后时间超出阈值，则发出警告”**。  
+3.  通过选中相应的复选框来启用警告：“如果订阅将在阈值内过期，则发出警告”或“如果滞后时间超出阈值，则发出警告”。  
   
 4.  在 **“阈值”** 列中，为警告设置阈值。 例如，如果在步骤 3 中选中了 **“如果滞后时间超出阈值，则发出警告”** ，就可以在 **“阈值”** 列中，选择滞后时间 **“60 秒”** 。  
   
@@ -164,6 +164,6 @@ ms.locfileid: "47749600"
 5.  单击 **“关闭”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

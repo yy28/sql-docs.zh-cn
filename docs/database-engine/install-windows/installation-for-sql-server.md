@@ -17,16 +17,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e85f782e8229d6f1515ba9265cfe3e7c8910318a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9e2042ab57c1135754012042af4199678edf16c4
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603578"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300134"
 ---
 # <a name="sql-server-installation"></a>SQL Server 安装 
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供一个功能树以用来安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件：  
   

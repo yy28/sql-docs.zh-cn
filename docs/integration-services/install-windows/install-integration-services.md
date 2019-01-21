@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d612ad390500bd7e279d90872ed2b08c6afe2428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d1ef66f97683b24014661fb6a1e633ce6ce06ce
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677195"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299914"
 ---
 # <a name="install-integration-services"></a>安装集成服务
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了单个安装程序来安装其包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在内的任一组件或所有组件。 使用安装程序，可以在单台计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或将其与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件一起安装。    
     
  本文重点介绍了在安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之前应了解的重要注意事项。 本文中的信息有助于评估安装选项，以便用户做出适当选择，使安装成功完成。    

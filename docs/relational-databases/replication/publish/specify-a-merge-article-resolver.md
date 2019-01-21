@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821935"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135997"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合并项目冲突解决程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合并项目冲突解决程序。  
+
   
- **本主题内容**  
-  
--   **开始之前：**  
-  
-     [建议](#Recommendations)  
-  
--   **指定合并项目冲突解决程序，使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Recommendations"></a> 建议  
+##  <a name="recommendations"></a>建议  
   
 -   合并复制允许使用下列类型的项目冲突解决程序：  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821935"
     > [!NOTE]  
     >  合并代理可执行文件的默认安装位置为 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM。  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>定义合并项目时指定自定义冲突解决程序  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>定义合并项目时指定自定义冲突解决程序  
   
 1.  如果您打算使用自定义冲突解决程序，请通过上述过程创建和注册冲突解决程序。  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821935"
   
 3.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 **@article_resolver** 指定从步骤 2 获得的冲突解决程序的名称，并使用 **@resolver_info** 参数指定自定义冲突解决程序所需的任何输入内容。 对于基于存储过程的自定义冲突解决程序， **@resolver_info** 为存储过程的名称。 有关 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供的冲突解决程序所需输入内容的详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>为现有合并项目指定或更改自定义冲突解决程序  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>为现有合并项目指定或更改自定义冲突解决程序  
   
 1.  若要确定是否已为项目定义自定义冲突解决程序，或要获取冲突解决程序的名称，请执行 [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)。 如果已为项目定义自定义冲突解决程序，则其名称将显示在 **article_resolver** 字段中。 为冲突解决程序提供的任何输入内容都将显示在结果集的 **resolver_info** 字段中。  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821935"
   
 4.  若要更改自定义冲突解决程序所需的任何输入内容，请再次执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 **resolver_info** @is_dotnet_assembly **@property** 并为 **@value**中指定合并项目冲突解决程序。 对于基于存储过程的自定义冲突解决程序， **@resolver_info** 为存储过程的名称。 有关所需输入内容的详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>撤消注册自定义冲突解决程序  
+## <a name="unregister-a-custom-conflict-resolver"></a>撤消注册自定义冲突解决程序  
   
 1.  在发布服务器上执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，并记下要删除的自定义冲突解决程序在结果集的 **value** 字段中的名称。  
   

@@ -16,12 +16,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41346b81aa56f9ed4d83494092834535611cb905
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794535"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131557"
 ---
 # <a name="replication-security-best-practices"></a>复制安全最佳实践
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47794535"
   
     -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   以不同的 Windows 帐户运行每个复制代理，并对所有复制代理连接使用 Windows 身份验证。 有关指定帐户的详细信息，请参阅[管理复制中的登录名和密码](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
+-   以不同的 Windows 帐户运行每个复制代理，并对所有复制代理连接使用 Windows 身份验证。 有关指定帐户的详细信息，请参阅[复制的标识和访问控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
   
 -   仅对每个代理授予其所需的权限。 有关详细信息，请参阅 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)中的“代理所需权限”部分。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47794535"
   
     -   确保给定代理（例如订阅的分发代理）在每台计算机上都以同一帐户建立连接。  
   
-    -   需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证时，UNC 快照共享通常无法访问（例如，防火墙可能阻止访问）。 在这种情况下，可以通过文件传输协议 (FTP) 将快照传输到订阅服务器。 有关详细信息，请参阅[通过 FTP 传输快照](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+    -   需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证时，UNC 快照共享通常无法访问（例如，防火墙可能阻止访问）。 在这种情况下，可以通过文件传输协议 (FTP) 将快照传输到订阅服务器。 有关详细信息，请参阅[通过 FTP 传输快照](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
@@ -75,6 +75,6 @@ ms.locfileid: "47794535"
  [保护订阅服务器](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [保护分发服务器](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [保护发布服务器](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

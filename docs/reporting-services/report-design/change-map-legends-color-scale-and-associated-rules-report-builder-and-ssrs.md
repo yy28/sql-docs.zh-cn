@@ -31,12 +31,12 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d201186c8e10fb193923a6313f9bd5bd690d69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4b71175eb95acf68f1f7a6d0eb2a2e23f609006
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596395"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134278"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>更改地图图例、色阶和关联的规则（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图中可以包含地图图例、色阶和距离刻度。 地图的这些部分可帮助用户解释地图上的数据可视化。  
@@ -55,7 +55,7 @@ ms.locfileid: "47596395"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>更改图例相对于视区的位置  
   
-1.  在“设计”视图中，右键单击图例，然后打开“*\<报表项>***属性”**页。  
+1.  在“设计”视图中，右键单击图例，然后打开“\<报表项>属性”页。  
   
 2.  在 **“位置”** 中，通过单击指定图例要在视区中显示的相对位置。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
   
 3.  单击 **“图例”**。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
   
 3.  单击 **“应用模板样式”**。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
   
 3.  单击 **“使用调色板实现数据的可视化效果”**。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
   
 3.  单击 **“使用颜色范围实现数据的可视化效果”**。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
   
 3.  单击 **“使用自定义颜色实现数据的可视化效果”**。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
   
 3.  选择“\<使用规则类型>实现数据的可视化效果”选项。 若要使用分布选项，必须根据与层关联的分析数据，在 **“分布”** 页上创建范围。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>规则”。  
   
 3.  验证是否选中了“使用\<规则类型>实现数据的可视化效果”。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
   
 3.  选择要使用的颜色规则选项。 若要在地图图例或色阶中显示项，必须选择“\<使用规则类型>实现数据的可视化效果”选项之一。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>规则”。  
   
 3.  单击 **“图例”**。  
   
@@ -274,7 +274,7 @@ ms.locfileid: "47596395"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击*\<地图元素类型>*“规则”。  
+2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>规则”。  
   
 3.  单击 **“图例”**。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "47596395"
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [报表故障排除：映射报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

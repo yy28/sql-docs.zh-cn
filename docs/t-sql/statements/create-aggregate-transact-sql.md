@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699917"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125987"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  udt_type_name  
  当前数据库中已创建的 CLR 用户定义类型的名称。 如果未指定 udt_schema_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该类型属于当前用户的架构。  
   
- assembly_name [ *.***class_name ]  
+ assembly_name [ .class_name ]  
  指定与用户定义的聚合函数绑定在一起的程序集以及（可选）该程序集所属的架构名称和该程序集中实现该用户定义聚合函数的类名称。 必须先使用 CREATE ASSEMBLY 语句在数据库中创建了该程序集。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符并与该程序集中现有的类名称相匹配。 如果编写类所用的编程语言使用了命名空间（如 C#），则 class_name 可以是命名空间限定名称。 如果未指定 class_name，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定该名称与 aggregate_name 相同。  
   
 ## <a name="remarks"></a>Remarks  

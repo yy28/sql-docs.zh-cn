@@ -1,5 +1,5 @@
 ---
-title: 示例：指定 ELEMENTXSINIL 指令 | Microsoft Docs
+title: 例如：指定 ELEMENTXSINIL 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d8a45b8142a9788ea1aae5bc81193c8a7a3120f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 050681b0b215d8dc8625bf6a4480d47c50c89b55
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660316"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256582"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>示例：指定 ELEMENTXSINIL 指令
+# <a name="example-specifying-the-elementxsinil-directive"></a>例如：指定 ELEMENTXSINIL 指令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   当指定 ELEMENT 指令检索以元素为中心的 XML 时，如果列具有 NULL 值，则 EXPLICIT 模式将不生成相应的元素。 另外，也可以指定 ELEMENTXSINIL 指令以请求为 **xsi:nil** 属性设置为 TRUE 值的 NULL 值生成元素。  
   
@@ -61,7 +61,7 @@ FOR XML EXPLICIT;
   
  下面是部分结果：  
   
- `<Employee xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `EmpID="1" AddressID="249">`  
   

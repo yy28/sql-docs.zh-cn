@@ -16,12 +16,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4225bb49eb60c61ba01575a2269120dff4a427d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559190"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125607"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,13 +107,13 @@ ms.locfileid: "51559190"
     |/ACTION=REBUILDDATABASE|指定安装程序将重新创建系统数据库。|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到 **sysadmin** 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 **NT AUTHORITY\SYSTEM**。|  
-    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明 \*\*** 该 **sa** 帐户是一个广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
+    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> &#42;&#42; 安全说明 &#42;&#42;“sa”是广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
     |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数可选。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序规则。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 数据文件的数目。 此值可以增加至 8 或内核数，以较大者为准。<br /><br /> 默认值：8 或内核数量，以较低者为准。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每个 tempdb 数据文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8。<br /><br /> 允许范围：最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 日志文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64<br /><br /> 允许范围：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8.<br /><br /> 允许的范围：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 日志文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 8，最大值 = 1024。|  
     |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：系统数据目录|  
     |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 日志文件的目录。<br /><br /> 默认值：系统数据目录|  
   

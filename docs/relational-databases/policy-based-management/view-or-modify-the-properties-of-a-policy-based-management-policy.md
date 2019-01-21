@@ -14,12 +14,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e1d7799abc3a930e72a9040c537e99fe7641a641
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf3bb62c4008b870c50c230a6140fff2a6b8b802
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505904"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254504"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>查看或修改基于策略的管理策略的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52505904"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
-1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[“查看策略”对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
+1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[查看策略对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
 2.  完成后，单击“关闭”。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52505904"
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要查看或修改的策略，然后选择“属性”。 若要深入了解“打开策略 - policy_name”对话框中的可用选项，请参阅[“创建新策略”或“打开策略”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[“创建新策略”或“打开策略”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  右键单击要查看或修改的策略，然后选择“属性”。 若要深入了解“打开策略 - policy_name”对话框中的可用选项，请参阅[创建新策略或打开策略对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[创建新策略或打开策略对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 6.  完成后，单击 **“确定”**。  
   

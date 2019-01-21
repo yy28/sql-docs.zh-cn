@@ -13,12 +13,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab01e5745293bd4e50f59358b17a0fa5d06d9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6192da995dac47d974c3c3f2ff6c5f576acc2e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785235"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123958"
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "47785235"
 ## <a name="options"></a>选项  
  若要显示有关代理或作业的信息，请从 **“代理和作业类型”** 下拉菜单中选择。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -198,8 +198,7 @@ ms.locfileid: "47785235"
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

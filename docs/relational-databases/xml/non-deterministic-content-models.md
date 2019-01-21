@@ -14,12 +14,12 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ef6f0f0a8d271780df238f9af175d4a85df7297
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db570a981038f39312d36e749fc300012aed5f7f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656459"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256002"
 ---
 # <a name="non-deterministic-content-models"></a>不确定性内容模型
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,12 +27,12 @@ ms.locfileid: "51656459"
   
  不过从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 开始，如果匹配项约束为 0、1 或不受限制，则会接受不确定性内容模型。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>示例：拒绝的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-rejected"></a>例如：已拒绝的不确定性内容模型  
  下面的示例尝试创建具有不确定的内容模型的 XML 架构。 此代码失败，因为不清楚 `<root>` 元素应有一个包含两个 `<a>` 元素的序列，还是 `<root>` 元素应有两个序列，其中每个序列有一个 `<a>` 元素。  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="1" maxOccurs="2">  
@@ -61,12 +61,12 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>示例：接受的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-accepted"></a>例如：已接受的不确定性内容模型  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本中，会拒绝下面的架构。  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="0" maxOccurs="unbounded">  

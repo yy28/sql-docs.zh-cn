@@ -22,12 +22,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 851431754767545977c43c19b44880c54543872d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613436"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127727"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47613436"
   
  **查看发布和订阅状态**  
   
--   复制监视器：[为发布查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)和[为订阅查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   复制监视器：[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
  **查看代理的详细信息**  
   
--   复制监视器：[为与发布关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)和[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+-   复制监视器：[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。
   
 ## <a name="publication-status-values"></a>发布状态值  
  下表按优先级顺序显示了发布状态值及其对应的图标。  
@@ -113,6 +113,6 @@ ms.locfileid: "47613436"
 |未同步|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
   
 ## <a name="see-also"></a>另请参阅  
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

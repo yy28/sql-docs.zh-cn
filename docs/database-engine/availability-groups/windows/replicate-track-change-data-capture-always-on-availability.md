@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512096"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125947"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,9 +196,9 @@ ms.locfileid: "52512096"
   
 -   在使用合并复制并且发布数据库位于某一可用性组中时：  
   
-    -   推送订阅：发布服务器和分发服务器都必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+    -   推送订阅：发布服务器和分发服务器必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-    -   请求订阅：发布服务器、分发服务器和订阅服务器数据库都必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
+    -   请求订阅：发布服务器、分发服务器和订阅服务器的数据库必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 上。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
   
 -   发布服务器实例满足加入 AlwaysOn 可用性组所需的所有先决条件。 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
@@ -208,10 +208,10 @@ ms.locfileid: "52512096"
 |||||  
 |-|-|-|-|  
 ||**发布服务器**|**分发服务器**|**订阅服务器**|  
-|**事务性**|用户帐户控制<br /><br /> 注意：不包括对双向和相互事务复制的支持。|用户帐户控制|用户帐户控制| 
+|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|是|是| 
 |**P2P**|否|否|否|  
-|**合并**|用户帐户控制|否|否|  
-|**快照**|用户帐户控制|否|用户帐户控制|
+|**合并**|是|否|否|  
+|**快照**|是|否|是|
   
  **不支持将分发服务器数据库用于数据库镜像。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52512096"
   
 -   [维护 AlwaysOn 发布数据库 (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52512096"
  [复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性组：互操作性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [关于变更数据捕获 (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [关于更改跟踪 (SQL Server)](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

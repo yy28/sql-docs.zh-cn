@@ -19,12 +19,12 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d84de9706fe17d490c5bfc423969b748122ef79e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1042ab20755059c0b6730f1bfe810c1b5d46c31b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630416"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129447"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>查看和修改请求订阅属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47630416"
      [复制管理对象 (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框（可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 在“订阅属性 - \<Publisher>:\<PublicationDatabase>”对话框（可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 访问）中，查看发布服务器或订阅服务器的请求订阅属性。 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>从 Management Studio 中的发布服务器查看请求订阅属性  
   
@@ -161,8 +161,8 @@ ms.locfileid: "47630416"
 8.  关闭所有连接。  
   
 ## <a name="see-also"></a>另请参阅  
- [为订阅查看信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531482"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136117"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ ms.locfileid: "52531482"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  将文件移动到新位置。  
 
-4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或服务器。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或服务器。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 5.  通过运行以下查询来验证文件更改。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52531482"
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  对于要移动的每个文件，请使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 运行以下语句。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52531482"
   
 2.  在“SQL Server 服务”节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)**），并选择“属性”。  
   
-3.  在“SQL Server (instance_name) 属性”**** 对话框中，单击“启动参数”选项卡。  
+3.  在“SQL Server (_instance_name_) 属性”对话框中，单击“启动参数”选项卡。  
   
 4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件。 单击 **“更新”** 以保存更改。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "52531482"
 ##  <a name="Resource"></a> 移动 Resource 数据库  
  Resource 数据库的位置是 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\。 无法移动该数据库。  
   
-##  <a name="Follow"></a> 后续操作：移动所有系统数据库后  
+##  <a name="Follow"></a> 后续任务：移动所有系统数据库后  
  如果已将所有系统数据库都移到新的驱动器/卷或移到使用不同驱动器盘符的另一个服务器，请进行下列更新。  
   
 -   更改 SQL Server 代理日志路径。 如果不更新此路径，SQL Server 代理将无法启动。  

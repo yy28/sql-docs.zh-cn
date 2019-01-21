@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67ab5eafeda0ca4c01d21b0fc2379ee7b9efc60d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cac8d0132d5b59d8840071254f9f71a84d2e89ed
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392420"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256522"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
   本节中的主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 此服务不是创建、保存和运行集成服务包所必需的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。  
@@ -74,7 +74,7 @@ ms.locfileid: "52392420"
   
  在一台计算机上可以只安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的一个实例。 该服务并非特定于某个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。 可以使用正在运行该服务的计算机的名称连接到该服务。  
   
- 可以使用以下任一 Microsoft 管理控制台 (MMC) 管理单元来管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务：SQL Server 配置管理器或服务。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中管理包，必须首先确保该服务已启动。  
+ 可以使用以下某项 Microsoft 管理控制台 (MMC) 管理单元来管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务：SQL Server 配置管理器或服务。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中管理包，必须首先确保该服务已启动。  
   
  默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为管理[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 同时安装。 如果未同时安装[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包。 若要管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]某个命名实例或远程实例中存储的包或 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例中存储的包，则必须修改该服务的配置文件。
   
@@ -160,6 +160,28 @@ ms.locfileid: "52392420"
   
 8.  重新启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。  
 
+### <a name="event-logged-when-permissions-are-missing"></a>缺少权限时记录的事件
+
+如果 SQL Server 代理的服务帐户没有 Integration Services DCOM [启动和激活权限]，则 SQL Server 代理执行 SSIS 包作业时，会将以下事件添加到系统事件日志中：
+
+```
+Log Name: System
+Source: **Microsoft-Windows-DistributedCOM**
+Date: 1/9/2019 5:42:13 PM
+Event ID: **10016**
+Task Category: None
+Level: Error
+Keywords: Classic
+User: NT SERVICE\SQLSERVERAGENT
+Computer: testmachine
+Description:
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+and APPID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
+
 ## <a name="configure-the-service"></a>配置服务
  
 安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]时，安装过程会创建并安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件。 此配置文件包含以下设置：  
@@ -187,7 +209,7 @@ ms.locfileid: "52392420"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +254,7 @@ ms.locfileid: "52392420"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  

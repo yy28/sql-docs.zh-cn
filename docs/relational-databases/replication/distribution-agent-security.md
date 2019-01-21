@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 836cbd7d2655b137e76bd8e6616aaaf05657bf6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f13f8769a5f97bab03b9466974c649dd2c5e7129
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662625"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135007"
 ---
 # <a name="distribution-agent-security"></a>分发代理安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47662625"
   
 -   如果从新建订阅向导访问该对话框，您还可以指定分发代理在建立与订阅服务器（对于推送订阅）或分发服务器（对于请求订阅）的连接时所使用的上下文。 可以通过模拟 Windows 帐户，或在指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户的上下文中建立连接。  
   
--   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+-   如果从 **“订阅属性”** 对话框访问该对话框，可通过单击该对话框的 **“订阅服务器连接”** 或 **“分发服务器连接”** 行中的属性按钮 ( **...** ) 来指定分发代理建立连接时所使用的上下文。 有关访问“订阅属性”对话框的详细信息，请参阅[查看和修改推送订阅属性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)和如何：[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   
@@ -96,7 +96,7 @@ Persist Security Info=False;Connection Pooling=True;
  字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理”  选项设置为 **False**。 需要为“初始目录”  选项指定一个值以标识订阅数据库。 有关详细信息，请参阅 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理复制中的登录名和密码](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [复制的标识和访问控制](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

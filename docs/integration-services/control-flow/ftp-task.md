@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f86e1750858ec7fabcb8fab30dcd23b4306ace
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509435"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226634"
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
@@ -40,7 +40,7 @@ ms.locfileid: "52509435"
   
  访问本地文件或本地目录时，FTP 任务使用文件连接管理器或存储在变量中的路径信息。 与此相反，访问远程文件或远程目录时，FTP 任务使用远程服务器上的直接指定路径（在 FTP 连接管理器中指定）或存储在变量中的路径信息。 有关详细信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)。  
   
- 这意味着 FTP 任务可以接收多个文件和删除多个远程文件；但如果使用连接管理器，则该任务只能发送一个文件和删除一个本地文件，因为文件连接管理器只能访问一个文件。 若要访问多个本地文件，FTP 任务必须使用变量来提供路径信息。 例如，包含“C:\Test\\*.txt”的变量所提供的路径可以支持删除或发送 Test 目录中所有以 .txt 为扩展名的文件。  
+ 这意味着 FTP 任务可以接收多个文件和删除多个远程文件；但如果使用连接管理器，则该任务只能发送一个文件和删除一个本地文件，因为文件连接管理器只能访问一个文件。 若要访问多个本地文件，FTP 任务必须使用变量来提供路径信息。 例如，包含“C:\Test\&#42;.txt”的变量所提供的路径可以支持删除或发送 Test 目录中所有以 .txt 为扩展名的文件。  
   
  若要发送多个文件和访问多个本地文件及目录，还可以通过在 Foreach 循环中包含 FTP 任务来多次执行 FTP 任务。 Foreach 循环可以使用 For Each 文件枚举器对目录中的文件进行枚举。 有关详细信息，请参阅 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52509435"
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- **相关主题**： [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题**：[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  指示在 FTP 操作失败时是否终止 FTP 任务。  
@@ -147,13 +147,13 @@ ms.locfileid: "52509435"
  **RemoteVariable**  
  选择现有的用户定义变量，或单击“\<新建变量...>”以创建用户定义变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
  选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关主题** [FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题：**[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 动态选项  
   
@@ -161,13 +161,13 @@ ms.locfileid: "52509435"
  **LocalVariable**  
  选择现有的用户定义变量，或单击“\<新建变量...>”以创建变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
  选择现有文件连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- 相关主题：[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **相关主题**：[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   

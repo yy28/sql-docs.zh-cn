@@ -40,20 +40,20 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505137"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127657"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
   
--   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
+-   **若要配置数据库邮件，请使用**：[数据库邮件配置向导](#DBWizard)，[使用模板](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 有关详细信息，请参阅主题 [Database Mail XPs Server 配置选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 。  
@@ -116,7 +116,7 @@ ms.locfileid: "52505137"
  使用 **“选择配置任务”** 页可以指示每次使用此向导时要完成的任务。 如果您在完成向导前改变了主意，请使用 **“上一步”** 按钮返回此页并选择其他任务。  
   
 > [!NOTE]  
->  如果数据库邮件尚未启用，您将收到以下消息：**“数据库邮件功能不可用。是否要启用此功能？** 回答“是”相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
+>  如果数据库邮件尚未启用，将收到以下消息：**数据库邮件功能不可用。是否要启用此功能？** 回答“是”相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
   
  **通过执行以下任务来设置数据库邮件**  
  执行第一次设置数据库邮件所需的所有任务。 此选项包含所有其他三个选项。  
@@ -155,7 +155,7 @@ ms.locfileid: "52505137"
  键入电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户的回信可能会发送给数据库管理员 danw@Adventure-Works.com。  
   
  **服务器名称**  
- 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 smtp.<your_company>.com****。 如需相关帮助，请询问您的邮件管理员。  
+ 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 **smtp.**_<your_company>_**.com**。 如需相关帮助，请询问您的邮件管理员。  
   
  **端口号**  
  键入此帐户的 SMTP 服务器的端口号。 大多数 SMTP 服务器使用端口 25。  
@@ -420,7 +420,7 @@ ms.locfileid: "52505137"
  [数据库邮件配置向导](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- 使用“从 <instance_name> 发送测试电子邮件”页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
+ 使用**从 _<instance_name>_ 发送测试电子邮件**页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
   
  **数据库邮件配置文件**  
  从列表中选择数据库邮件配置文件。 这是必填字段。 如果没有显示配置文件，则没有配置文件或您不具有选择配置文件的权限。 使用 **数据库邮件配置向导** 可以创建和配置配置文件。 如果没有列出配置文件，请使用数据库邮件配置向导来创建要使用的配置文件。  

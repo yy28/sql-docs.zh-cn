@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668416"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124607"
 ---
 # <a name="upgrade-replicated-databases"></a>升级复制数据库
 
@@ -132,9 +132,9 @@ SQL Server 的升级路径因部署模式而异。 SQL Server 一般情况下提
  在从早期版本还原复制数据库的备份时，若要确保保留复制设置：请还原到与创建备份的服务器和数据库同名的服务器和数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理（复制）](../../relational-databases/replication/administration/administration-replication.md)   
+ [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)  
+ [复制管理常见问题解答](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [副本后向兼容性](../../relational-databases/replication/replication-backward-compatibility.md)   
- [新增功能（复制）](../../relational-databases/replication/what-s-new-replication.md)   
  [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [将复制拓扑升级到 SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

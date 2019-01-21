@@ -15,12 +15,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e6b91d754c477efe14ee0d47192beff5c735138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13a0da50bc9a19728ecd4af6034ffc52849164
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784415"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124067"
 ---
 # <a name="replication-tutorials"></a>复制教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "47784415"
 了解如何配置事务复制，以在完全连接的服务器之间复制数据。 本教程还包括一些基本的错误故障排除方法。 
 
   
-[教程：配置服务器和移动客户端之间的复制（合并）](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
+[教程：在服务器和移动客户端之间配置复制（合并）](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
 
 了解如何配置合并复制，以在服务器与仅偶尔连接的一个或多个客户端之间交换数据。  
   
 ## <a name="see-also"></a>另请参阅  
-[复制的安全性和保护](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [事务复制概述](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

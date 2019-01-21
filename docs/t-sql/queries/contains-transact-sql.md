@@ -35,15 +35,18 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adb6c91dfdbec4bc9e09d83f2adbf0aba6dab998
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531734"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300254"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜索单个词和短语的精确或模糊（不太精确的）匹配项、在一定差别范围内的相近词或加权匹配项。 CONTAINS 是一个谓词，用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中对包含基于字符的数据类型的全文检索列执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索。  
   

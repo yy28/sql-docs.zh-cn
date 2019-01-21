@@ -14,15 +14,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea3ebc57689e6dd0a3da1b0cde158354d7309f2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618075"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242168"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47618075"
   
 -   **为还原顺序准备足够的日志备份：** 您必须备份足够的日志记录才能完成还原顺序。 必要的日志备份（需要时包含 [结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) ）必须在还原顺序开始之前可用。  
   
--   **正确的还原顺序：**  必须先还原紧位于前面的完整数据库备份或差异数据库备份。 然后，在完整数据库备份或差异数据库备份后创建的所有事务日志必须按时间顺序还原。 如果此事务日志链中的事务日志备份丢失或损坏，则您只能还原丢失的事务日志之前的事务日志。  
+-   **正确的还原顺序：** 必须先还原紧位于前面的完整数据库备份或差异数据库备份。 然后，在完整数据库备份或差异数据库备份后创建的所有事务日志必须按时间顺序还原。 如果此事务日志链中的事务日志备份丢失或损坏，则您只能还原丢失的事务日志之前的事务日志。  
   
--   **数据库尚未恢复：**  直到应用完最后一个的事务日志之后，才能恢复数据库。 如果要在还原其中一个中间事务日志备份之后恢复数据库，则在日志链结束之前，除非从完整数据库备份开始重新启动整个还原顺序，否则，将无法还原该点之前的数据库。  
+-   **数据库尚未恢复：** 直到应用完最后一个的事务日志之后，才能恢复数据库。 如果要在还原其中一个中间事务日志备份之后恢复数据库，则在日志链结束之前，除非从完整数据库备份开始重新启动整个还原顺序，否则，将无法还原该点之前的数据库。  
   
     > **提示！** 最佳方法是还原所有日志备份 (RESTORE LOG *database_name* WITH NORECOVERY)。 还原上一次日志备份后，用单独的操作恢复数据库 (RESTORE DATABASE *database_name* WITH RECOVERY)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47618075"
   
  例如，一系列事务日志备份包含一个运行时间长的事务。 该事务的起点记录在第一个事务日志备份中，终点记录在第二个事务日志备份中。 第一个事务日志备份中没有任何关于提交或回滚操作的记录。 如果在应用第一个事务日志备份后运行恢复操作，则运行时间长的事务被视为未完成，并且将回滚事务的第一个事务日志备份中记录的数据修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许在此点后应用第二个事务日志备份。  
   
-> **注意：** 某些情况下可以在日志还原期间显式添加文件。  
+> **注意**：某些情况下可以在日志还原期间显式添加文件。  
   
 ##  <a name="PITrestore"></a> 使用日志备份来还原到故障点  
  假设有下列事件顺序。  
@@ -61,19 +61,19 @@ ms.locfileid: "47618075"
 |晚上 8:00|备份事务日志。|  
 |晚上 9:45|出现故障。|  
   
-> **注意：** 有关此示例备份顺序的说明，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
+> **注意**：有关此示例备份顺序的说明，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要将数据库还原到晚上 9:45（故障点）时的状态， 可以使用以下两种备选过程：  
   
- **备选过程 1：使用最新的完整数据库备份还原数据库**  
+ **替换选项 1：使用最新的完整数据库备份还原数据库**  
   
 1.  失败时创建当前活动事务日志的结尾日志备份。  
   
 2.  不要还原上午 8:00 的 所需的时间长。 相反，应还原下午 6:00 的 这一时间更近的完整数据库备份，然后应用晚上 8:00 的 日志备份和结尾日志备份。  
   
- **备选过程 2：使用较早的完整数据库备份还原数据库**  
+ **替换选项 2：使用较早的完整数据库备份还原数据库**  
   
-> **注意：** 如果因某个问题而无法使用下午 6:00 的完整数据库备份，则此备选过程很有用。 所需的时间长。 此过程比从下午 6:00 的完整数据库备份还原 所需的时间长。  
+> **注意**：如果出现问题，使您无法使用下午 6:00 的完整数据库备份， 所需的时间长。 此过程比从下午 6:00 的完整数据库备份还原 所需的时间长。  
   
 1.  失败时创建当前活动事务日志的结尾日志备份。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "47618075"
   
      此备选过程指出了冗余安全性，该安全性通过维护一系列完整数据库备份中的事务日志链备份来获得。  
   
-> **注意：** 某些情况下，还可以使用事务日志将数据库还原到特定的时间点。 有关详细信息，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+> **注意**：某些情况下，您还可以使用事务日志将数据库还原到特定的时间点。 有关详细信息，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="RelatedTasks"></a> Related tasks  
  **应用事务日志备份**  
   
 -   [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  

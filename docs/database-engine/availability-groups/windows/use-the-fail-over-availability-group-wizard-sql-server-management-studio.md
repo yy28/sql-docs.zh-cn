@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 78bc2ed5285440afa526cc7e6e6ef1e732e4fc9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530011"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255922"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用故障转移可用性组向导 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52530011"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在你首次执行计划的手动故障转移之前，请参阅 [执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
- 在你首次执行强制故障转移之前，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
+ 在首次强制故障转移之前，请参阅“开始之前”和“跟进：强制故障转移之后的重要任务”部分，位于[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 中。  
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52530011"
   
 4.  **“简介”** 页面所显示的信息取决于是否有任何辅助副本可用于计划的故障转移。 如果此页面显示“**执行此可用性组的计划故障转移**”，则您可在不造成数据丢失的情况下对可用性组进行故障转移。  
   
-5.  在“选择新主要副本”页上，在你选择将成为新的主要副本的次要副本（即故障转移目标）之前，你可查看当前主要副本和 WSFC 仲裁的状态。 对于计划的手动故障转移，确保选择其 **“故障转移就绪”** 值为“**无数据丢失**”的辅助副本。 对于强制故障转移的所有可能的故障转移目标，此值将为“数据丢失，警告(#)”，其中 # 指示给定次要副本存在的警告数****。 若要查看给定故障转移目标的警告，请单击其“故障转移就绪”值。  
+5.  在“选择新主要副本”页上，在你选择将成为新的主要副本的次要副本（即故障转移目标）之前，你可查看当前主要副本和 WSFC 仲裁的状态。 对于计划的手动故障转移，确保选择其 **“故障转移就绪”** 值为“**无数据丢失**”的辅助副本。 对于强制故障转移的所有可能的故障转移目标，此值将为“数据丢失，警告(#)”，其中 # 指示给定次要副本存在的警告数。 若要查看给定故障转移目标的警告，请单击其“故障转移就绪”值。  
   
      有关详细信息，请参阅本主题后面的 [“选择新主副本”页](#SelectNewPrimaryReplica)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52530011"
   
      有关详细信息，请参阅 [“结果”页（AlwaysOn 可用性组向导）](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
-11. 在强制故障转移之后，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
+11. 强制故障转移后，请参阅“跟进：强制故障转移之后”部分，位于[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 中。  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>有关此向导独有的页面的帮助  
  本节介绍 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]独有的页面。  
@@ -151,7 +151,7 @@ ms.locfileid: "52530011"
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |**无数据丢失**|此辅助副本当前支持计划的故障转移。 只有当同步提交模式的辅助副本当前与主副本进行同步时，才会出现此值。|  
-|**数据丢失，警告(** *#* **)**|此辅助副本当前支持强制故障转移（可能造成数据丢失）。 只要辅助副本不与主副本进行同步，就会出现此值。 有关可能的数据丢失的信息，请单击数据丢失警告链接。|  
+|**数据丢失，警告(** _#_ **)**|此辅助副本当前支持强制故障转移（可能造成数据丢失）。 只要辅助副本不与主副本进行同步，就会出现此值。 有关可能的数据丢失的信息，请单击数据丢失警告链接。|  
   
  **刷新**  
  单击此按钮可更新网格。  

@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507436"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135357"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "52507436"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>订阅何时可用？何时可以使用订阅数据库？  
  将快照应用于订阅数据库之后，即可使用订阅。 即使订阅数据库在此之前就可以访问，但在应用快照之前，不应使用数据库。 使用复制监视器检查快照生成和应用的状态：  
   
--   快照由快照代理生成。 请在复制监视器中某个发布的 **“代理”** 选项卡中查看快照生成的状态。 有关详细信息，请参阅[查看信息并执行与发布关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+-   快照由快照代理生成。 请在复制监视器中某个发布的 **“代理”** 选项卡中查看快照生成的状态。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
--   快照由分发代理或合并代理应用。 请在复制监视器的 **“分发代理”** 页或 **“合并代理”** 页中查看快照应用的状态。 有关详细信息，请参阅[查看信息并执行与订阅关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+-   快照由分发代理或合并代理应用。 请在复制监视器的 **“分发代理”** 页或 **“合并代理”** 页中查看快照应用的状态。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>如果分发代理或合并代理启动时快照代理尚未完成，会出现什么情况？  
  如果分发代理或合并代理和快照代理同时运行，不会引发错误。 但是，必须注意下列事项：  
@@ -96,7 +96,7 @@ ms.locfileid: "52507436"
  此信息可通过 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和许多复制存储过程获得。 有关详细信息，请参阅 [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)。  
   
 ### <a name="does-replication-encrypt-data"></a>复制是否加密数据？  
- 否。 复制不对数据库中存储的数据或网络上传输的数据加密。 有关详细信息，请参阅[安全概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)主题的“加密”部分。  
+ 否。 复制不对数据库中存储的数据或网络上传输的数据加密。 有关详细信息，请参阅主题[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)的“加密”部分。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>如何在 Internet 上复制数据？  
  使用以下方式在 Internet 上复制数据：  
@@ -142,8 +142,9 @@ ms.locfileid: "52507436"
   
 -   直接在订阅数据库上执行 GRANT 语句。  
   
--   使用快照后脚本来执行这些语句。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。  
-  
+-   使用快照后脚本来执行这些语句。 有关详细信息，请参阅[在应用快照之前和之后执行脚本](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
+
+ 
 -   使用存储过程 [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) 执行语句。  
   
 ### <a name="what-happens-to-permissions-granted-in-a-subscription-database-if-a-subscription-is-reinitialized"></a>如果重新初始化订阅，订阅数据库中授予的权限会怎样？  
@@ -169,7 +170,7 @@ ms.locfileid: "52507436"
  是。 对于复制所涉及数据库有许多特别注意事项。 有关详细信息，请参阅 [备份和还原复制的数据库](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>复制是否影响事务日志的大小？  
- 合并复制和快照复制不影响事务日志的大小，但事务复制会影响。 如果数据库包括一个或多个事务发布，则只有将与这些发布有关的所有事务传递到分发数据库之后才会截断日志。 如果事务日志增长得过大，而且日志读取器代理按计划运行，请考虑缩短运行间隔。 或者，将日志读取器代理设置为以连续模式运行。 如果将其设置为以连续模式运行（默认值），请确保它正在运行。 有关检查日志读取器代理状态的详细信息，请参阅[查看信息并执行与发布关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+ 合并复制和快照复制不影响事务日志的大小，但事务复制会影响。 如果数据库包括一个或多个事务发布，则只有将与这些发布有关的所有事务传递到分发数据库之后才会截断日志。 如果事务日志增长得过大，而且日志读取器代理按计划运行，请考虑缩短运行间隔。 或者，将日志读取器代理设置为以连续模式运行。 如果将其设置为以连续模式运行（默认值），请确保它正在运行。 有关检查日志读取器代理状态的详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  此外，如果在发布数据库或分发数据库中设置了选项“sync with backup”，则直到备份了所有事务后，才会截断事务日志。 如果事务日志增长过大，而且已设置了此选项，请考虑缩短事务日志备份间的间隔。 有关备份和还原涉及到事务复制的数据库的详细信息，请参阅[快照复制和事务复制的备份和还原策略](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
@@ -186,12 +187,12 @@ ms.locfileid: "52507436"
  首先使用 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 或“发布属性 - \<发布>”对话框从发布中删除项目，然后使用 `DROP <Object>` 将其从数据库中删除。 在添加订阅后，就不能从快照发布或事务发布中删除项目，而必须先删除订阅。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已发布的表中添加或删除列？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持对已发布对象进行各种架构更改，包括添加和删除列。 例如，在发布服务器上执行 ALTER TABLE ...DROP COLUMN，该语句将复制到订阅服务器，然后执行以删除列。 运行早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的订阅服务器支持通过存储过程 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 和 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)添加和删除列。 有关详细信息，请参阅[对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持对已发布对象进行各种架构更改，包括添加和删除列。 例如，执行 ALTER TABLE... 在发布服务器上执行 DROP COLUMN，该语句将复制到订阅服务器，然后执行以删除列。 运行早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的订阅服务器支持通过存储过程 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 和 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)添加和删除列。 有关详细信息，请参阅[对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="replication-maintenance"></a>复制维护  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>如何确定订阅服务器的数据是否与发布服务器的数据同步？  
- 使用验证。 验证报告给定订阅服务器是否与发布服务器同步。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-replicated-data.md)。 验证不会提供与某些行是否未正确同步有关的信息，而 [tablediff 实用工具](../../../tools/tablediff-utility.md) 可以提供此信息。  
+ 使用验证。 验证报告给定订阅服务器是否与发布服务器同步。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。 验证不会提供与某些行是否未正确同步有关的信息，而 [tablediff 实用工具](../../../tools/tablediff-utility.md) 可以提供此信息。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>如何向现有发布添加表？  
  不必为了添加表（或另一个对象）而停止发布数据库或订阅数据库上的活动。 通过“发布属性 - \<发布>”对话框或存储过程 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 将表添加到发布。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -209,7 +210,7 @@ ms.locfileid: "52507436"
  从数据库删除复制所需的操作取决于数据库是作为发布数据库、订阅数据库使用，还是同时作为这两种数据库使用。  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>如何确定是否存在要复制的事务或行？  
- 对于事务复制，请使用存储过程或复制监视器中的 **“未分发的命令”** 选项卡。 有关详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[查看信息并执行与订阅关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 对于事务复制，请使用存储过程或复制监视器中的 **“未分发的命令”** 选项卡。 有关详细信息，请参阅[在分发数据库中查看复制的命令和其他信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md)和[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  对于合并复制，请使用 **sp_showpendingchanges**存储过程。 有关详细信息，请参阅 [sp_showpendingchanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)。  
   
@@ -220,7 +221,7 @@ ms.locfileid: "52507436"
   
 -   将命令传递到订阅服务器所需的估计时间。 如果此值大于生成快照并将其应用于订阅服务器所需的时间，请考虑重新初始化订阅服务器。 有关详细信息，请参阅 [重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
- 有关详细信息，请参阅 [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) 和[查看信息并执行与订阅关联的代理任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 有关详细信息，请参阅 [sp_replmonitorsubscriptionpendingcmds (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) 和[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="replication-and-other-database-features"></a>复制和其他数据库功能  
   
@@ -231,7 +232,7 @@ ms.locfileid: "52507436"
  是。 没有需要特别注意的事项，因为所有数据都存储在群集上的一组磁盘中。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)   
+ [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

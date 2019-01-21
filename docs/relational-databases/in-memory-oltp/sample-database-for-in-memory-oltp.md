@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712478"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226694"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712478"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16GB 内存可供 SQL Server 使用。 有关用于内存中 OLTP 的硬件的一般指导，请参阅以下博客文章：[SQL Server 2014 的内存中 OLTP 的硬件注意事项](blog-hardware-in-memory-oltp.md)
+-   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[SQL Server 2014 中的内存中 OLTP 的硬件注意事项](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装内存中 OLTP 示例  
  请按照以下步骤安装示例：  
@@ -148,7 +148,7 @@ ms.locfileid: "52712478"
   
 -   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。
 
   
@@ -313,7 +313,7 @@ ms.locfileid: "52712478"
   
  安装步骤：  
   
-1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[下载 SQL Server 的报表标记语言 (RML)](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[下载适用于 SQL Server 的报表标记语言 (RML)](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
 
 2.  如果出现指示某些文件正在使用的对话框，请单击“继续”  
   
@@ -387,7 +387,7 @@ END
  在以下说明和测量中，使用了一个插入 1000 万个销售订单的工作负荷。 有关如何运行插入 100 万个销售订单的缩减工作负荷的说明，请参阅作为 SQLServer2016CTP3Samples.zip 存档一部分的“In-Memory OLTP\readme.txt”中的说明。  
   
 ##### <a name="memory-optimized-tables"></a>内存优化表  
- 我们首先对内存优化表运行工作负荷。 以下命令打开 100 个线程，每个线程运行 5,000 次迭代。  每次迭代在单独事务中插入 20 个销售订单。 每次迭代进行 20 个插入，对数据库用于生成待插入数据进行补偿。 这会生成总共 20 * 5,000 \* 100 = 10,000,000 个销售订单插入。  
+ 我们首先对内存优化表运行工作负荷。 以下命令打开 100 个线程，每个线程运行 5,000 次迭代。  每次迭代在单独事务中插入 20 个销售订单。 每次迭代进行 20 个插入，对数据库用于生成待插入数据进行补偿。 这会生成总共 20 \* 5,000 \* 100 = 10,000,000 个销售订单插入。  
   
  打开 RML 命令提示符，执行以下命令：  
   
@@ -496,7 +496,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- 可以看到，这些表相当小：SalesOrderHeader_inmem 的大小大约为 7MB，SalesOrderDetail_inmem 的大小大约为 15MB。  
+ 可以看到，这些表相当小：SalesOrderHeader_inmem 的大小大约为 7 MB，SalesOrderDetail_inmem 的大小大约为 15 MB。  
   
  此处比较显著的是为索引分配的内存大小（与表数据大小相比）。 这是因为示例中的哈希索引针对较大数据大小预设了大小。 请注意，哈希索引有固定大小，因而其大小不会随表中的数据大小而增大。  
   

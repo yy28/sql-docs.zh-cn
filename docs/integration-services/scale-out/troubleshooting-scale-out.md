@@ -2,7 +2,7 @@
 title: SQL Server Integration Services (SSIS) Scale Out 故障排除 | Microsoft Docs
 description: 本文介绍如何使用 SSIS Scale Out 解决常见问题
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732486"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206323"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
 
@@ -38,7 +38,7 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 
     在 SSMS 的对象资源管理器中，右键单击“SSISDB”，然后选中“启用 Scale Out 功能”。
 
-    ![是否已启用 Scale Out](media\isenabled.PNG)
+    ![是否已启用 Scale Out](media/isenabled.PNG)
 
     如果属性值为 False，通过调用存储过程 `[catalog].[enable_scaleout]` 启用 Scale Out。
 
@@ -77,11 +77,11 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 ## <a name="could-not-establish-trust-relationship"></a>无法建立信任关系
 
 ### <a name="symptoms"></a>症状
-“System.ServiceModel.Security.SecurityNegotiationException：无法使用授权‘[Machine Name]:[Port]’为 SSL/TLS 安全通道建立信任关系。”
+“System.ServiceModel.Security.SecurityNegotiationException: 无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 安全通道建立信任关系。”。
 
-“System.Net.WebException：基础连接已关闭：无法为 SSL/TLS 安全通道建立信任关系。”
+“System.Net.WebException:已关闭基础连接：无法与 SSL/TLS 安全通道建立信任关系。”
 
-“System.Security.Authentication.AuthenticationException：根据验证流程，远程证书无效。”
+“System.Security.Authentication.AuthenticationException:根据验证过程，远程证书无效。”
 
 ### <a name="solution"></a>解决方案
 1.  如果尚未安装 Scale Out Master 证书，请将其安装到 Scale Out Worker 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
@@ -97,9 +97,9 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.Security.SecurityNegotiationException：无法使用授权‘[Machine Name]:[Port]’为 SSL/TLS 建立安全通道。”
+“System.ServiceModel.Security.SecurityNegotiationException:无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 建立安全通道。”
 
-“System.Net.WebException：请求已中止：无法创建 SSL/TLS 安全通道。”
+“System.Net.WebException:请求已中止：无法创建 SSL/TLS 安全通道。”
 
 ### <a name="solution"></a>解决方案
 通过运行以下命令，检查运行 Scale Out Worker 服务的帐户是否有权访问 Scale Out Worker 证书：
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.Security.MessageSecurityException：HTTP 请求已被禁止，同时客户端身份验证方案为‘匿名’。”
+“System.ServiceModel.Security.MessageSecurityException:HTTP 请求已使用客户端身份验证方案 'Anonymous' 禁止。”
 
-“System.Net.WebException：远程服务器返回错误：(403) 禁止访问。”
+“System.Net.WebException:远程服务器返回错误：(403) 已禁止。”
 
 ### <a name="solution"></a>解决方案
 1.  如果尚未安装 Scale Out Worker 证书，请将其安装到 Scale Out Master 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
@@ -131,21 +131,21 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    值名称：SendTrustedIssuerList 
+    值名称：**SendTrustedIssuerList** 
 
-    值类型：REG_DWORD 
+    值类型：**REG_DWORD** 
 
-    值数据：0 (False)
+    值数据：**0 (False)**
 
 4.  如果不能清理如步骤 2 中所述的所有非自签名证书，将下面的注册表项值设置为 2。
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    值名称：ClientAuthTrustMode 
+    值名称：**ClientAuthTrustMode** 
 
-    值类型：REG_DWORD 
+    值类型：**REG_DWORD** 
 
-    值数据：2
+    值数据：**2**
 
     > [!NOTE]
     > 如果根证书存储中有非自签名证书，客户端证书身份验证将失败。 有关详细信息，请参阅 [Internet Information Services (IIS) 8 可能会拒绝客户端证书请求并随附 HTTP 403.7 或 403.16 错误](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ)。
@@ -154,7 +154,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.CommunicationException：向 https://[Machine Name]:[Port]/ClusterManagement/ 发出 HTTP 请求时出错。*这可能是因为未正确使用 HTTP.SYS 在 HTTPS 事例中配置服务器证书。此外，客户端与服务器之间的安全绑定不匹配，也可能造成该异常。”*
+*“System.ServiceModel.CommunicationException:向 https://[Machine Name]:[Port]/ClusterManagement/ 发出 HTTP 请求时出错。这可能是因为未正确使用 HTTP.SYS 在 HTTPS 事例中配置服务器证书。此外，客户端与服务器之间的安全绑定不匹配，也可能造成该异常。”*
 
 ### <a name="solution"></a>解决方案
 1.  使用以下命令，检查 Scale Out Master 证书是否已正确绑定到主节点上主终结点中的端口：

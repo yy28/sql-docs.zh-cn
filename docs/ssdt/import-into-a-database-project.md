@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143457"
 ---
 # <a name="import-into-a-database-project"></a>导入到数据库项目
 可以通过“导入”从活动的数据库或 .dacpac 使用新项目填充项目，或使用脚本中的新定义更新您项目中的现有对象。 请注意这三种途径存在一些行为差异，下面将进行说明。  
@@ -59,8 +59,7 @@ ms.locfileid: "52400390"
   
 “从脚本导入”过程将不包含预先部署/后期部署脚本、SQLCMD 变量或 RefactorLog 文件。 这些项以及在导入时检测到的任何其他不支持的构造将放入你项目中“脚本”文件夹的 ScriptsIgnoredOnImport.sql 文件。  
   
-有关详细信息，请参阅 [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads) 中的 SSDT 团队论坛。  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>导入加密的对象  
 将加密的对象导入数据库项目时，无法始终从服务器检索对象定义的完整主体。 这样在处理此类对象时，导入行为可能不同。  
   

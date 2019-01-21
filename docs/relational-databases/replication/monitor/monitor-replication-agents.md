@@ -20,12 +20,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33661f3349dccdff96c47fabd540396ebeb9d2ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 192627d1050d7c8c87d99231770ba6bb957ac8c0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837741"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123998"
 ---
 # <a name="monitor-replication-agents"></a>监视复制代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47837741"
   
     -   队列读取器代理  
   
-     通过下列选项卡访问与这些代理关联的信息和任务： **“代理”** （每个发布服务器和发布都提供）和 **“警告”** （每个发布都提供）。 有关详细信息，请参阅[为与发布关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+     通过以下选项卡访问与这些代理相关联的信息和任务：“代理”（可用于每个发布服务器和发布）和“警告”（可用于每个发布）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47837741"
   
     -   合并代理  
   
-     通过下列选项卡访问与这些代理相关联的信息和任务： **“订阅监视列表”** （每个发布服务器都提供）或 **“所有订阅”** 选项卡（所有发布都提供）。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     通过以下选项卡访问与这些代理相关联的信息和任务：“订阅监视列表”（所有发布服务器都提供）或“所有订阅”选项卡（所有发布都提供）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>使用 SQL Server Management Studio 监视复制代理  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 为监视复制代理提供下列对话框：  
@@ -58,7 +58,7 @@ ms.locfileid: "47837741"
   
 -   **“查看同步状态”** （针对所有订阅；使用此对话框可以访问分发代理和合并代理）  
   
- 复制监视器提供有关每个代理的补充信息，并且如果使用了队列读取器代理，它还会对其进行监视。 有关详细信息，请参阅[为与发布关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)、[为与发布关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)和[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 复制监视器提供有关每个代理的补充信息，并且如果使用了队列读取器代理，它还会对其进行监视。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md),
   
 #### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>监视快照代理和日志读取器代理  
   
@@ -119,7 +119,6 @@ ms.locfileid: "47837741"
 5.  单击 **“关闭”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [复制代理概述](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

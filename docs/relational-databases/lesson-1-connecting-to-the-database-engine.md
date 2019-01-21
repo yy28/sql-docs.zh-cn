@@ -11,15 +11,18 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ee35edcce1e72ebea42b429811b558aa61d06296
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302680"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300283"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 安装 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]时，安装哪些工具取决于版本和您的安装选择。 本课将介绍主要的工具以及如何连接并执行一项基本功能（授权多个用户）。  
 

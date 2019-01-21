@@ -11,12 +11,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 373ad4a7b9f8748590939c39709afe7acfdc8344
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8c8588c9fe1aeb5768f27ea57b35f5ce2303bdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854735"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132107"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>更改数据库的目标恢复时间 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "47854735"
 > [!NOTE]  
 >  如果长时间运行的事务导致过多 UNDO 时间，则可能超过给定数据库的目标恢复时间设置为该数据库指定的上限。  
   
--   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要更改目标恢复时间，请使用：**[SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
+-   **要更改目标恢复时间，请使用：**[SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47854735"
   
 2.  按如下所示使用以下 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)语句：  
   
-     TARGET_RECOVERY_TIME =target_recovery_time { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]开始，默认值是 1 分钟。 大于 0（较旧版本的默认值）时，指定在发生崩溃的情况下指定数据库的恢复时间上限。  

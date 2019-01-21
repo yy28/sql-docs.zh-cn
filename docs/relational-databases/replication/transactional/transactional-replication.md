@@ -14,12 +14,12 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791165"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129457"
 ---
 # <a name="transactional-replication"></a>事务复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,5 +72,15 @@ ms.locfileid: "47791165"
   
 ##  <a name="DistributionAgent"></a> 分发代理  
  对于推送订阅，分发代理在分发服务器上运行；对于请求订阅，分发代理在订阅服务器上运行。 该代理将事务从分发数据库移动到订阅服务器中。 如果订阅被标记为需要验证，则分发代理还要检查发布服务器和订阅服务器中的数据是否匹配。  
+
+## <a name="publication-types"></a>发布类型 
+事务复制提供了四种发布类型：  
+  
+|发布类型|描述|  
+|----------------------|-----------------|  
+|标准事务发布|适合于订阅服务器上的所有数据均为只读的拓扑（事务复制在订阅服务器上并不强制如此）。<br /><br /> 默认情况下，在使用 Transact-SQL 或复制管理对象 (RMO) 时创建标准事务发布。 使用新建发布向导时，将通过选择 **“发布类型”** 页上的 **“事务发布”** 来创建标准事务发布。<br /><br /> 有关创建发布的详细信息，请参阅 [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
+|具有可更新订阅的事务发布|此发布类型的特征如下：<br /><br /> - 每个位置都具有相同的数据，使用一个发布服务器和一个订阅服务器。 <br /> - 可以更新订阅服务器上的行<br /> - 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅[可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
+|对等拓扑|此发布类型的特征如下：<br /> - 每个位置都具有相同的数据，兼作发布服务器和订阅服务器。<br /> - 同一行每次只能在一个位置进行更改。<br /> - 支持[冲突检测](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
+|双向事务复制|此发布类型的特征如下：<br />双向复制类似于对等复制，但是它不提供冲突解决方案。 此外，双向复制仅限于 2 台服务器。 <br /><br /> 有关详细信息，请参阅[双向事务复制](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

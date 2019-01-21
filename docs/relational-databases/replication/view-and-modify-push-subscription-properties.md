@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6893e77d7b197d53fe10018430b8be46b11f6faf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 510025046d0509c1ef074ecafaab0a0c78e2bf81
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136037"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>查看和修改推送订阅属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47646225"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以从下列位置查看和修改发布服务器的推送订阅属性：  
   
--   “订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框，可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中获取。  
+-   **“订阅属性 - \<Publisher>:**\<PublicationDatabase>”对话框，该对话框可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中找到。  
   
 -   **“所有订阅”** 选项卡，该选项卡可以从复制监视器中找到。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
@@ -143,8 +143,8 @@ ms.locfileid: "47646225"
 7.  （可选）若要查看新设置，请调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> 方法重新加载此订阅的属性。  
   
 ## <a name="see-also"></a>另请参阅  
- [为订阅查看信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [复制安全最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

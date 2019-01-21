@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bd388ede86a397fa83bf98deb017e294cb280752
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665606"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300154"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
   
 当为了最小化停机时间和风险而计划将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 从 SQL Server 的先前版本进行升级时，有几种方法可以考虑。 你可以执行就地升级、迁移到新安装或者执行滚动升级。 下面的图表将帮助你在这些方法中进行选择。 图表中的每个方法也会在下面进行讨论。 为了有助于你了解图表中的决策点，也请查阅 [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51665606"
   
 -   **存储在 MSDB 中的 Integration Services 包：** 如果要在 MSDB 中存储包，需要使用 [dtutil Utility](../../integration-services/dtutil-utility.md) 编写这些包的脚本或者将其重新部署到新服务器。 在新服务器上使用包之前，需要将包升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
--   **Reporting Services 加密密匙：** 报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。 有关详细信息，请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md) 和 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+-   **Reporting Services 加密密钥：** 报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。 有关详细信息，请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md) 和 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
  新的   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境有了与现有环境相同的系统对象后，则可立即以最小化现有系统的停机时间的方式从现有系统将用户数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 使用备份和还原完成数据库迁移，或者如果你处于 SAN 环境下，则通过重构 LUN 来完成数据库迁移。 两种方法的步骤如以下图表中所述。  
   
@@ -93,23 +93,23 @@ ms.locfileid: "51665606"
   
 新的安装升级所需的步骤根据你是否在使用连接存储或 SAN 存储而存在少许差异。  
   
--   **连接存储环境：** 如果你具有使用连接存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，以下图表和图表内的链接可指导你完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新安装升级所需执行的步骤。  
+-   **连接存储环境：** 如果具有使用连接存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，可通过以下图表和图表内的链接完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新安装升级所需执行的步骤。  
   
      ![为连接存储使用备份和还原的新安装升级方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "为连接存储使用备份和还原的新安装升级方法")  
   
--   **SAN 存储环境：**  如果你具有使用 SAN 存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，以下图表和图表内的链接可指导你完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新安装升级所需执行的步骤。  
+-   **SAN 存储环境：** 如果具有使用 SAN 存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，可通过以下图表和图表内的链接完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新安装升级所需执行的步骤。  
   
      ![为 SAN 存储使用分离和附加的新安装升级方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "为 SAN 存储使用分离和附加的新安装升级方法")  
   
 ## <a name="rolling-upgrade"></a>滚动升级  
  在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下文章中记录了这些方案：  
   
--   AlwaysOn 可用性组：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级AlwaysOn 可用性组副本实例](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
+-   AlwaysOn 可用性组：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级 AlwaysOn 可用性组副本实例](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
 -   故障转移群集实例：有关在此环境中执行滚动升级的详细步骤，请参阅[升级 SQL Server 故障转移群集实例](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)    
--   镜像实例：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级镜像实例](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。    
--   日志传送实例：有关在此环境中执行滚动升级的详细步骤，请参阅[为 SQL Server 升级日志传送 (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)。    
+-   镜像实例：有关在此环境中执行滚动升级的详细步骤，请参阅[升级镜像实例](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。    
+-   日志传送实例：有关在此环境中执行滚动升级的详细步骤，请参阅[为 SQL Server 升级日志传送 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)。    
 -   复制环境：要了解在此环境中执行滚动升级的详细步骤，请参阅[升级复制的数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)。  
--   SQL Server Reporting Services 扩展环境：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
+-   SQL Server Reporting Services 横向扩展部署：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="next-steps"></a>后续步骤
  [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   

@@ -15,12 +15,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a326feef177287953982c94412d9619c716e2e22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7299efbcdca72a100b13d2474f218357605a85
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692945"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125537"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>用条件性删除跟踪优化合并复制的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47692945"
   
  **指定不应跟踪删除**  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[为合并项目指定不应跟踪删除（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[指定合并复制属性](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [合并复制的项目选项](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

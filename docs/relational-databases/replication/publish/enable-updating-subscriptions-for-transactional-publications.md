@@ -15,12 +15,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69993f82e8b32a0bb2dd1702de72cb51d381355a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bb2b72da5f90cf2ff91c386e2a34fed1001de73
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692725"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130097"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>对事务发布启用更新订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47692725"
   
     -   如果无法确定已发布的数据库是否存在日志读取器代理作业，请在发布服务器上对发布数据库执行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。 如果结果集为空，则必须创建一个日志读取器代理作业。  
   
-    -   在发布服务器上，执行[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 将运行该代理时所使用的 Windows 凭据指定给 **@job_name** 和 **@password**中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password**中对事务发布启用更新订阅。  
+    -   在发布服务器上，执行[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 为 **@job_name** 和 **@password**中从 Oracle 数据库创建发布。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password**中对事务发布启用更新订阅。  
   
 2.  如有必要，可为分发服务器创建一个队列读取器代理作业。  
   
@@ -104,11 +104,11 @@ ms.locfileid: "47692725"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../relational-databases/replication/codesnippet/tsql/enable-updating-subscrip_1.sql)]  
   
 ## <a name="see-also"></a>另请参阅  
- [设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [事务复制的发布类型](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [事务复制](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-to-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [将 sqlcmd 与脚本变量结合使用](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   

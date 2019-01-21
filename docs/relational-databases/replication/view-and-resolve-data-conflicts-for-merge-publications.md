@@ -1,7 +1,7 @@
 ---
 title: 查看和解决合并发布的数据冲突 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,14 +15,14 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 787e034767e419cd5f3b41b07364c6a11d908244
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543923"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129377"
 ---
-# <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>查看和解决合并发布的数据冲突
+# <a name="conflict-resolution-for-merge-replication"></a>合并复制的冲突解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可以根据为每个项目指定的冲突解决程序来解决合并发布中的冲突。 默认情况下，解决冲突无需用户干预。 但是，可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 复制冲突查看器中查看冲突，并更改解决的结果。  
   
@@ -32,19 +32,16 @@ ms.locfileid: "52543923"
   
 -   为 **@property** 参数指定 **conflict_retention** 值，并为 [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 **@value** 参数指定保持值。  
   
- 默认情况下，冲突信息存储在下列位置：  
-  
--   如果发布兼容级别为 90RTM 或更高，则存储在发布服务器和订阅服务器上。  
-  
--   如果发布兼容级别低于 80RTM，则存储在发布服务器上。  
-  
+ 默认情况下，冲突信息存储在下列位置：    
+-   如果发布兼容级别为 90RTM 或更高，则存储在发布服务器和订阅服务器上。   
+-   如果发布兼容级别低于 80RTM，则存储在发布服务器上。   
 -   如果订阅服务器运行的是 [!INCLUDE[ssEW](../../includes/ssew-md.md)]，则存储在发布服务器上。 冲突数据不能存储在 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器上。  
   
  冲突信息的存储受 **conflict_logging** 发布属性的控制。 有关详细信息，请参阅 [sp_addmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 和 [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。  
   
  也可以在同步过程中使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 交互式冲突解决程序以交互方式解决冲突。 交互式冲突解决程序可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器获取。 有关详细信息，请参阅[使用 Windows 同步管理器同步订阅（Windows 同步管理器）](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
-### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>查看和解决合并发布的冲突  
+## <a name="resolve-conflicts"></a>解决冲突  
   
 1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到发布服务器（或订阅服务器，若适合的话），然后展开服务器节点。  
   
@@ -65,7 +62,7 @@ ms.locfileid: "52543923"
   
     -   在上部网格中选择一行或多行，然后单击 **“删除”**，这与单击 **“提交入选方”** 按钮的效果相同（不对数据进行任何更改）。  
   
-    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息。  
+    -   单击属性按钮 (**...**) 查看有关冲突所涉及的列的详细信息。  
   
     -   编辑 **“冲突解决入选方”** 或 **“冲突解决落选方”** 列中的数据，然后再提交数据（如果列为灰色，则数据为只读）。  
   
@@ -76,6 +73,55 @@ ms.locfileid: "52543923"
     -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”**。 输入一个值，或单击浏览按钮 (**...**)，然后导航到相应文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
   
 6.  关闭复制冲突查看器。  
+
+
+  
+## <a name="view-conflict-information"></a>查看冲突信息
+在合并复制中解决冲突后，落选行中的数据将写入冲突表中。 这些冲突数据可以使用复制存储过程以编程方式进行查看。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)。 请注意结果集中以下列的值：  
+  
+    -   **centralized_conflicts** - 1 指示冲突行存储在发布服务器上，0 指示冲突行未存储在发布服务器上。  
+  
+    -   **decentralized_conflicts** - 1 指示冲突行存储在订阅服务器上，0 指示冲突行未存储在订阅服务器上。  
+  
+        > [!NOTE]  
+        >  合并发布的冲突日志记录行为是通过使用 **@conflict_logging** 的 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 已不推荐使用 **@centralized_conflicts** 参数。  
+  
+     下表基于为 **@conflict_logging**。  
+  
+    |@conflict_logging 值|centralized_conflicts|decentralized_conflicts|  
+    |------------------------------|----------------------------|------------------------------|  
+    |**发布服务器**|1|0|  
+    |**订阅服务器**|0|1|  
+    |**两者**|1|1|  
+  
+2.  在发布服务器上对发布数据库，或在订阅服务器上对订阅数据库执行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 为 **@publication** 指定值，以便只返回属于特定发布的项目的冲突信息。 这将返回具有冲突的项目的冲突表信息。 请注意任何相关项目的 **conflict_table** 值。 如果项目的 **conflict_table** 值为 NULL，则在该项目中只发生了删除冲突。  
+  
+3.  （可选）查看相关项目的冲突行。 根据步骤 1 中 **centralized_conflicts** 和 **decentralized_conflicts** 的值，请执行下列操作之一：  
+  
+    -   在发布服务器上，对发布数据库执行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 将步骤 1 中的项目的冲突表指定给 **@conflict_table**。 （可选）指定 **@publication** 的值，以便将返回的冲突信息限制为特定发布。 这将会返回落选行的行数据和其他信息。  
+  
+    -   在订阅服务器上，对订阅数据库执行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 将步骤 1 中的项目的冲突表指定给 **@conflict_table**。 这将会返回落选行的行数据和其他信息。  
+  
+## <a name="conflict-where-delete-failed"></a>无法删除的冲突   
+  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)。 请注意结果集中以下列的值：  
+  
+    -   **centralized_conflicts** - 1 指示冲突行存储在发布服务器上，0 指示冲突行未存储在发布服务器上。  
+  
+    -   **decentralized_conflicts** - 1 指示冲突行存储在订阅服务器上，0 指示冲突行未存储在订阅服务器上。  
+  
+        > [!NOTE]  
+        >  合并发布的冲突日志记录行为是通过使用 **@conflict_logging** 的 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 已不推荐使用 **@centralized_conflicts** 参数。  
+  
+2.  在发布服务器上对发布数据库，或在订阅服务器上对订阅数据库执行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 为 **@publication** 指定值，以便只返回属于特定发布的项目的冲突表信息。 这将返回具有冲突的项目的冲突表信息。 请注意任何相关项目的 **source_object** 值。 如果项目的 **conflict_table** 值为 NULL，则在该项目中只发生了删除冲突。  
+  
+3.  （可选）查看删除冲突的冲突信息。 根据步骤 1 中 **centralized_conflicts** 和 **decentralized_conflicts** 的值，请执行下列操作之一：  
+  
+    -   在发布服务器上，对发布数据库执行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 将步骤 1 中发生冲突的源表的名称指定给 **@source_object**。 （可选）指定 **@publication** 的值，以便将返回的冲突信息限制为特定发布。 这将返回发布服务器上存储的删除冲突信息。  
+  
+    -   在订阅服务器上，对订阅数据库执行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 将步骤 1 中发生冲突的源表的名称指定给 **@source_object**。 （可选）指定 **@publication** 的值，以便将返回的冲突信息限制为特定发布。 这将返回订阅服务器上存储的删除冲突信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

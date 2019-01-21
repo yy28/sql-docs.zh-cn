@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539190"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134360"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52539190"
   
     -   对于合并复制，使用业务逻辑处理程序会更有效。 有关详细信息，请参阅[合并同步期间执行业务逻辑](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
-     如果在为合并复制发布的表中使用触发器来维护引用完整性，请指定表的处理顺序，以减少合并代理所需的重试次数。 有关详细信息，请参阅[指定合并项目的处理顺序](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
+     如果在为合并复制发布的表中使用触发器来维护引用完整性，请指定表的处理顺序，以减少合并代理所需的重试次数。 有关详细信息，请参阅[指定合并复制选项](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
 -   限制使用大型对象 (LOB) 数据类型。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539190"
   
      当需要将大量更改发送到订阅服务器时，用新快照重新初始化这些更改可能比使用复制分别移动每个更改要快。 有关详细信息，请参阅 [重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
-     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="snapshot-considerations"></a>快照注意事项  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539190"
   
      压缩备用快照文件夹中的快照文件可以减少快照的磁盘存储空间要求，使快照文件更容易在可移动介质上传输。  
   
-     在某些情况下，压缩的快照可以提高通过网络传输快照文件的性能。 但是，如果压缩快照，则在生成快照文件时需要通过快照代理进行额外处理，而在应用快照文件时需要通过分发代理或合并代理进行额外处理。 在某些情况下，这可能会降低生成快照的速度，并增加应用快照所需的时间。 此外，如果发生网络故障，压缩的快照将无法恢复，因此不适用于不可靠的网络。 在网络中使用压缩的快照时，应仔细权衡这些利弊。 有关详细信息，请参阅 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) 和 [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md)。  
-  
+     在某些情况下，压缩的快照可以提高通过网络传输快照文件的性能。 但是，如果压缩快照，则在生成快照文件时需要通过快照代理进行额外处理，而在应用快照文件时需要通过分发代理或合并代理进行额外处理。 在某些情况下，这可能会降低生成快照的速度，并增加应用快照所需的时间。 此外，如果发生网络故障，压缩的快照将无法恢复，因此不适用于不可靠的网络。 在网络中使用压缩的快照时，应仔细权衡这些利弊。 有关详细信息，请参阅[修改快照选项](../../../relational-databases/replication/snapshot-options.md)。 
 -   考虑手动初始化订阅。  
   
      在某些方案中，如涉及大型初始数据集的方案，使用快照以外的其他方法来初始化订阅更可取。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
@@ -154,11 +153,11 @@ ms.locfileid: "52539190"
   
 -   降低复制代理的详细级别，在初始测试、监视或调试期间除外。  
   
-     降低分发代理或合并代理的 –HistoryVerboseLevel 参数和 –OutputVerboseLevel 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
+     降低分发代理或合并代理的 **–HistoryVerboseLevel** 参数和 **–OutputVerboseLevel** 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
   
--   使用快照代理、合并代理和分发代理的 –MaxBCPThreads 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
+-   使用快照代理、合并代理和分发代理的 **–MaxBCPThreads** 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
   
--   使用分发代理和合并代理的 –UseInprocLoader 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
+-   使用分发代理和合并代理的 **–UseInprocLoader** 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
   
  代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   

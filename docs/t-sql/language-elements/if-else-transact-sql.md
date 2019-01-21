@@ -22,18 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6851ae0f1ff4f5e65ce74db7f351deb3127a1a23
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1b5068b47f1622171ec4d39087cb16fa3d37838f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515208"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299024"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行条件。 如果满足条件，则在 IF 关键字及其条件之后执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：布尔表达式返回 TRUE。 可选的 ELSE 关键字引入另一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，当不满足 IF 条件时就执行该语句：布尔表达式返回 FALSE。  
   

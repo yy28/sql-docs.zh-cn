@@ -1,7 +1,7 @@
 ---
 title: 监视（复制）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,40 +19,39 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3e1b64c1c03a1e81fa83983427efbb60a399418
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c65f93054125090f92eb4924e1007d5b9075c0f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810935"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128187"
 ---
 # <a name="monitoring-replication"></a>监视（复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  监视复制拓扑是部署复制的一个重要方面。 因为复制活动是分布式的，所以跟踪复制过程中涉及的所有计算机的活动和状态非常有必要。 以下工具可用于监视复制：  
+  监视复制拓扑是部署复制的一个重要方面。 因为复制活动是分布式的，所以跟踪复制过程中涉及的所有计算机的活动和状态非常有必要。 使用各种监视工具，可以回答此类常见问题： 
+
+-   我的复制系统是否正常？
+-   哪些订阅比较慢？
+-   我的事务订阅滞后程度如何？
+-   在事务复制中，现在提交的事务要过多久才能到达订阅服务器？
+-   为什么我的合并订阅比较慢？
+-   为什么代理不运行？  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器  
+
+以下工具可用于监视复制：  
   
-     复制监视器是监视复制最重要的工具，它可以显示以发布服务器为中心的所有复制活动视图。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
+-   SQL Server 复制监视器是监视复制最重要的工具，它可以显示以发布服务器为中心的所有复制活动视图。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。 
+-   SQL Server Management Studio - 提供对复制监视器的访问权限。 它还允许你查看当前状态以及由下列代理记录的最后一条消息，还允许你启动和停止每个代理：日志读取器代理、快照代理、合并代理和分发代理。 有关详细信息，请参阅 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+-   **Transact-SQL (T-SQL) 和复制管理对象 (RMO)** - 可通过这两个接口监视来自分发服务器的所有类型的复制。 合并复制还提供从发布服务器监视复制的功能。  
   
-     [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 提供对复制监视器的访问。 它还允许您查看当前状态以及下列代理所记录的最后一条消息，还允许您启动和停止每个代理：日志读取器代理、快照代理、合并代理和分发代理。 有关详细信息，请参阅 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)。  
+-   **复制代理事件的警报** - 复制提供了许多复制代理事件的预定义警报，如有必要，还可创建其他警报。 警报用于触发对某个事件的自动响应和/或用于通知管理员。 有关详细信息，请参阅[对复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和复制管理对象 (RMO)  
+-   **系统监视器** - 对性能监视很有用，它可为复制提供多个计数器。 有关详细信息，请参阅 [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)。  
   
-     两个界面都可用于监视分发服务器上的所有复制类型。 合并复制还提供从发布服务器监视复制的功能。  
-  
--   复制代理事件的警报  
-  
-     复制提供了许多复制代理事件的预定义警报，如果有必要，您还可以创建其他警报。 警报用于触发对某个事件的自动响应和/或用于通知管理员。 有关详细信息，请参阅[对复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
-  
--   系统监视器  
-  
-     系统监视器对性能监视很有用，它可为复制提供多个计数器。 有关详细信息，请参阅 [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)。  
-  
+
 ## <a name="see-also"></a>另请参阅  
- [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
- [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+
   
   

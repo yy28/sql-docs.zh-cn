@@ -19,12 +19,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42b9955b4bae6549e26cefd3739d7a8f624f2ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825175"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255372"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>查看或更改服务器属性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47825175"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看或更改服务器属性，请使用：**  
   
@@ -155,9 +155,9 @@ GO
   
 2.  在 **“SQL Server 配置管理器”** 中，单击 **“SQL Server 服务”**。  
   
-3.  在详细信息窗格中，右键单击“SQL Server (\<instancename>)”****，然后单击“属性”。  
+3.  在详细信息窗格中，右键单击“SQL Server (\<instancename>)”，然后单击“属性”。  
   
-4.  在“SQL Server (\<instancename>) 属性”**** 对话框中，更改“服务”选项卡或“高级”选项卡上的服务器属性，然后单击“确定”。  
+4.  在“SQL Server (\<instancename>)”的“属性”对话框中，更改“服务”选项卡或“高级”选项卡上的服务器属性，然后单击“确定”。  
   
 ##  <a name="FollowUp"></a> 跟进：更改服务器属性之后  
  对于某些属性，可能必须重新启动服务器，才能使更改生效。  

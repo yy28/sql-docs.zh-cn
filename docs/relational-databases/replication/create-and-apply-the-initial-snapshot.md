@@ -1,7 +1,7 @@
 ---
 title: 创建和应用初始快照 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,70 +14,78 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657546"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135607"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+  快照由快照代理在创建发布后生成。 按以下方式生成：  
   
- **本主题内容**  
+-   立即。 默认情况下，在新建发布向导中创建合并发布后会立即生成此发布的快照。    
+-   在计划时间。 在新建发布向导的 **“快照代理”** 页面上指定计划时间，或者在使用存储过程或复制管理对象 (RMO) 时指定计划时间。    
+-   手动。 从命令提示或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]运行快照代理。 有关运行代理的详细信息，请参阅[复制代理可执行文件概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)或[启动和停止复制代理 (SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
--   **创建和应用初始快照，使用：**  
+对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，是否生成快照取决于发布属性 **immediate_sync**的设置。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE（使用 **sp_addpublication**时的默认设置），则仅当自上次快照代理运行以来添加了新订阅时，才会生成快照；订阅服务器必须等待快照代理完成，才能实现同步。  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+默认情况下，快照生成后，它们将保存在位于分发服务器上的默认快照文件夹中。 还可以将快照文件保存在可移动介质（例如可移动磁盘、CD-ROM）上，或者保存在默认快照文件夹以外的位置。 另外，可以压缩文件，以便它们更容易存储和传输以及在订阅服务器上应用快照前后执行脚本。 有关这些选项的详细信息，请参阅 [Snapshot Options](../../relational-databases/replication/snapshot-options.md)。  
   
-     [Transact-SQL](#TsqlProcedure)  
+如果快照用于使用参数化筛选器的合并发布，则创建快照的过程包括两部分。 首先创建包含复制脚本和已发布对象的架构（但不包含数据）的架构快照。 然后，使用包括脚本、从架构快照复制的架构以及属于订阅分区的数据的快照初始化每个订阅。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
-     [复制管理对象 (RMO)](#RMOProcedure)  
+在发布服务器上创建快照并将其存储在默认位置或其他快照位置后，可以将快照传输到订阅服务器并应用。 分发代理（用于快照复制或事务复制）或合并代理（用于合并复制）在初始同步期间将快照传输到订阅服务器上的订阅数据库中并将架构和数据文件应用到此数据库。 默认情况下，如果使用新建订阅向导，在创建订阅后会立即发生初始同步。 此行为由该向导的 **“初始化订阅”** 页面上的 **“初始化时间”** 选项控制。 当初始化订阅后生成快照时，除非订阅标记为重新初始化，否则快照不会应用到订阅服务器。 有关详细信息，请参阅 [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 默认情况下，如果运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，在使用新建发布向导创建发布后，快照代理将立即生成快照。 然后，默认情况下将由分发代理（对于快照复制和事务复制）或合并代理（对于合并订阅）把此快照应用于所有订阅。 还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和复制监视器生成快照。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+在分发代理或合并代理应用初始快照后，该代理将传播后续更新和其他数据修改。 在向订阅服务器分发并应用快照时，只有那些正在等待初始快照或新建快照的订阅服务器会受到影响。 该发布的其他订阅服务器（即那些已经收到对已发布数据的插入、更新、删除或其他修改内容的订阅服务器）不受影响。  
+
+若要查看或修改默认快照文件夹位置，请参阅  
   
-#### <a name="to-create-a-snapshot-in-management-studio"></a>在 Management Studio 中创建快照  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[修改快照选项](../../relational-databases/replication/snapshot-options.md)  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到发布服务器，然后展开服务器节点。  
+-   复制编程和 RMO 编程：[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)  
+
+## <a name="default-snapshot-location"></a>默认快照位置
+
+ 可以在配置分发向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果在未配置为分发服务器的服务器上创建发布，请在新建发布向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[创建发布](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
+ 在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，修改默认快照位置。 有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<发布>”对话框中设置每个发布的快照文件夹。 有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
-3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。  
+### <a name="modify-the-default-snapshot-location"></a>修改默认快照位置  
   
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
+1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (**…**)。  
   
+2.  在“分发服务器属性 - \<分发服务器>”对话框中，为“默认快照文件夹”属性输入一个值。  
+  
+    > [!NOTE]  
+    >  快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用的是请求订阅，则必须指定一个共享目录作为通用命名约定 (UNC) 路径，如 \\\computername\snapshot。 有关详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+## <a name="create-snapshot"></a>创建快照
+默认情况下，如果运行 SQL Server 代理，在使用“新建发布向导”创建发布后，快照代理将立即生成快照。 然后，默认情况下将由分发代理（对于快照复制和事务复制）或合并代理（对于合并订阅）把此快照应用于所有订阅。 还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和复制监视器生成快照。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+
+### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio
+
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到发布服务器，然后展开服务器节点。    
+2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。    
+3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。    
+4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。    
  快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
-#### <a name="to-create-a-snapshot-in-replication-monitor"></a>在复制监视器中创建快照  
+### <a name="in-replication-monitor"></a>在复制监视器中  
   
-1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。  
-  
-2.  右键单击要为其生成快照的发布，再单击 **“生成快照”**。  
-  
+1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。    
+2.  右键单击要为其生成快照的发布，再单击 **“生成快照”**。    
 3.  若要查看快照代理的状态，请单击 **“代理”** 选项卡。有关更多详细信息，请右键单击网格中的快照代理，再单击 **“查看详细信息”**。  
-  
-#### <a name="to-apply-a-snapshot"></a>应用快照  
-  
-1.  快照生成后，通过用分发代理或合并代理同步订阅来应用此快照：  
-  
-    -   如果代理设置为连续运行（事务复制下的默认设置），则快照生成后将自动应用。  
-  
-    -   如果代理设置为根据计划运行，则在安排代理下次运行时应用快照。  
-  
-    -   如果代理设置为按需运行，则在您下次运行代理时应用快照。  
-  
-     有关同步订阅的详细信息，请参阅 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)文件夹中打开。  
-  
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 可通过创建并运行快照代理作业或通过批处理文件运行快照代理可执行文件，以编程方式创建初始快照。 初始快照生成后，该快照将在订阅首次同步时传输并应用到订阅服务器。 如果您在命令提示符处或通过批处理文件运行快照代理，则只要现有快照变为无效，您就需要重新运行此代理。  
+
+## <a name="using-transact-sql"></a>使用 Transact-SQL
+可通过创建并运行快照代理作业或通过批处理文件运行快照代理可执行文件，以编程方式创建初始快照。 初始快照生成后，该快照将在订阅首次同步时传输并应用到订阅服务器。 如果您在命令提示符处或通过批处理文件运行快照代理，则只要现有快照变为无效，您就需要重新运行此代理。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
-  
-#### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>创建并运行快照代理作业以生成初始快照  
-  
+
 1.  创建快照发布、事务发布或合并发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
 2.  执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 **@publication** 以及下列参数：  
@@ -97,8 +105,19 @@ ms.locfileid: "51657546"
   
 4.  在发布服务器上，对发布数据库执行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，并指定步骤 1 中 **@publication** 的值。  
   
-#### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>运行快照代理以生成初始快照  
+## <a name="apply-a-snapshot"></a>应用快照  
+
+### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio
   
+1.  快照生成后，通过用分发代理或合并代理同步订阅来应用此快照：   
+    -   如果代理设置为连续运行（事务复制下的默认设置），则快照生成后将自动应用。   
+    -   如果代理设置为根据计划运行，则在安排代理下次运行时应用快照。    
+    -   如果代理设置为按需运行，则在您下次运行代理时应用快照。  
+  
+     有关同步订阅的详细信息，请参阅 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)文件夹中打开。  
+  
+###   <a name="use-transact-sql"></a>使用 Transact-SQL  
+ 
 1.  创建快照发布、事务发布或合并发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
 2.  向发布添加项目。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
@@ -106,27 +125,18 @@ ms.locfileid: "51657546"
 3.  在命令提示符处或批处理文件中，通过运行 [snapshot.exe](../../relational-databases/replication/agents/replication-snapshot-agent.md) 并指定下列命令行参数，启动 **复制合并代理**：  
   
     -   **-Publication**  
-  
     -   **-Publisher**  
-  
-    -   **-Distributor**  
-  
-    -   **-PublisherDB**  
-  
+    -   **-Distributor**   
+    -   **-PublisherDB**   
     -   **-ReplicationType**  
   
      如果您使用的是 SQL Server 身份验证，则还必须指定下列参数：  
   
-    -   **-DistributorLogin**  
-  
-    -   **-DistributorPassword**  
-  
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
-  
-    -   **-PublisherLogin**  
-  
-    -   **-PublisherPassword**  
-  
+    -   **-DistributorLogin**    
+    -   **-DistributorPassword**   
+    -   **-DistributorSecurityMode** = **@publisher_security_mode**    
+    -   **-PublisherLogin**    
+    -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** = **@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
@@ -249,7 +259,6 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
- [创建并应用快照](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [使用快照初始化订阅](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540937"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143587"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
 在本演练中，将创建一个 SQL Server 单元测试，该测试验证多个存储过程的行为。 创建 SQL Server 单元测试可帮助确定可能会引发不正确的应用程序行为的代码缺陷。 可以将 SQL Server 单元测试和应用程序测试作为一组自动执行的测试的一部分来运行。  
@@ -274,7 +274,7 @@ ms.locfileid: "52540937"
   
 2.  右键单击存储过程之一，然后单击“创建单元测试”以便显示“创建单元测试”对话框。  
   
-3.  选中所有五个存储过程对应的复选框：“Sales.uspCancelOrder” 、“Sales.uspFillOrder” 、“Sales.uspNewCustomer” 、“Sales.uspPlaceNewOrder” 和“Sales.uspShowOrderDetails” 。  
+3.  选中所有五个存储过程对应的复选框：“Sales.uspCancelOrder”、“Sales.uspFillOrder”、“Sales.uspNewCustomer”、“Sales.uspPlaceNewOrder”和“Sales.uspShowOrderDetails”。  
   
 4.  在“项目”下拉列表中，选择“创建新的 Visual C# 测试项目”。  
   
@@ -723,7 +723,7 @@ ms.locfileid: "52540937"
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|通过|  
     |Sales_uspShowOrderDetailsTest|通过|  
-    |Sales_uspFillOrderTest|测试失败并显示以下错误：“ScalarValueCondition 条件(scalarValueCondition2)失败: 结果集 1 第 1 行第 1 列: 值不匹配，实际为‘-100’，应为‘100’”。出现此错误的原因是存储过程的定义包含微小错误。|  
+    |Sales_uspFillOrderTest|失败并出现以下错误：“ScalarValueCondition Condition (scalarValueCondition2) Failed:ResultSet 1 Row 1 Column 1: values do not match, actual '-100' expected '100'.”出现此错误的原因是存储过程的定义包含微小错误。|  
   
     接下来，您将更正该错误并重新运行测试。  
   
@@ -950,7 +950,7 @@ ms.locfileid: "52540937"
   
     测试失败并显示以下错误：  
   
-    测试方法 TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest 引发了异常：System.Data.SqlClient.SqlException：只能取消未结订单。  
+    **测试方法 TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest 引发了异常：System.Data.SqlClient.SqlException：只能取消未结订单。**  
   
     接下来，修改代码以指示应出现异常。  
   
@@ -968,7 +968,7 @@ ms.locfileid: "52540937"
     您指定希望看到特定异常。 您可以选择指定特定错误编号。 如果不添加此属性，单元测试将失败，并且“测试结果”窗口中将显示一则消息  
   
     > [!IMPORTANT]  
-    > 目前，Visual Studio 2012 不支持 ExpectedSqlException 属性。 有关对此进行演练的信息，请参阅 [无法运行“预期的失败”数据库单元测试](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
+    > 目前，Visual Studio 2012 不支持 ExpectedSqlException 属性。 有关对此进行演练的信息，请参阅 [无法运行“预期的失败”数据库单元测试](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
   
 3.  在“文件”菜单上，单击“保存 SqlServerUnitTests1.cs”。  
   

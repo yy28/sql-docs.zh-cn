@@ -41,15 +41,18 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6977a20130073326a50c522edbd47be32f8a117c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601957"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298694"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   本主题说明如何使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]配置管理器、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、命令提示符下的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令、  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 启动、停止、暂停、恢复或重新启动 **、** 代理或 [!INCLUDE[tsql](../../includes/tsql-md.md)]Browser 服务。  
   
@@ -59,7 +62,7 @@ ms.locfileid: "51601957"
   
     -   [其他信息](#MoreInformation)  
   
-    -   [Security](#Security)  
+    -   [安全性](#Security)  
   
 -   **相关说明：**  
   
@@ -128,7 +131,7 @@ ms.locfileid: "51601957"
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
-     因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。 以下是当 Windows 安装在 C 盘时最新的四个版本的路径。  
+     因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。 以下是在 C 盘安装 Windows 的情况下最新的四个版本的路径。  
   
     |||  
     |-|-|  

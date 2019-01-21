@@ -14,18 +14,18 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20ebb8bc0658b7d31388d6f514102fba8db4a8e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131897"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
   
-1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”对话框中，启用使用 Windows 同步管理器对请求订阅进行同步的选项。 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框中启用“使用 Windows 同步管理器对请求订阅进行同步”： 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 2.  通过 Windows 的 **“开始”** 菜单访问同步管理器。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47634305"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>启用使用 Windows 同步管理器对请求订阅进行同步的选项  
   
-1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”对话框的“常规”页上，针对“使用 Windows 同步管理器”选项选择值“启用”。  
+1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框的“常规”页面上，对于“使用 Windows 同步管理器”选项，选择值“启用”。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47634305"
   
 ### <a name="to-use-the-interactive-resolver"></a>使用交互式冲突解决程序  
   
-1.  启用要使用交互式解决方法的项目和订阅。 有关详细信息，请参阅[指定合并项目的交互式冲突解决方法](../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)。  
+1.  启用要使用交互式解决方法的项目和订阅。 有关详细信息，请参阅[指定合并复制属性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
 2.  如果启用了交互式冲突解决，并且一个和多个项目存在冲突，那么在同步管理器开始同步订阅后，交互式冲突解决程序就会自动启动。 交互式冲突解决程序每次显示一个冲突，并为每个冲突提出建议的解决方法（基于创建发布和订阅时指定的冲突解决程序）。  
   

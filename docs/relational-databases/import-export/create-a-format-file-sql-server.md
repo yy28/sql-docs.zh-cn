@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a32e66e87d3e2cdcf9c8f0498ec845c2b8921825
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538075"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255012"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52538075"
 ## <a name="creating-a-non-xml-format-file"></a>创建非 XML 格式化文件  
  若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项还需要 **-f** 选项，例如：  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
 >  为区分非 XML 格式化文件，我们建议使用 .fmt 作为文件扩展名，例如 MyTable.fmt。  
@@ -66,7 +66,7 @@ ms.locfileid: "52538075"
   
 |限定符|描述|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
+|**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
@@ -96,7 +96,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |限定符|描述|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
+|**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
@@ -169,7 +169,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## <a name="creating-an-xml-format-file"></a>创建 XML 格式化文件  
  若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项始终要求 **-f** 选项，若要创建 XML 格式化文件，还必须指定 **-x** 选项，例如：  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 >  为区分 XML 格式化文件，我们建议使用 .xml 作为文件扩展名，例如 MyTable.xml。  
@@ -183,7 +183,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 -   B. 为本机数据创建 XML 格式化文件  
   
- 本示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `HumanResources.Department` 表。 `HumanResources.Department` 表包含四列： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
+ 本示例使用 `HumanResources.Department` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 `HumanResources.Department` 表包含四列： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
@@ -195,9 +195,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |限定符|描述|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
+|**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
-|**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 请注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 **-t** 开关。|  
+|**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 -t 开关。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  
@@ -210,7 +210,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -235,7 +235,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |限定符|描述|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
+|**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
@@ -249,7 +249,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

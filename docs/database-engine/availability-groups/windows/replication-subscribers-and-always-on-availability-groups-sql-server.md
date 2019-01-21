@@ -14,12 +14,12 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80bc2cd3fab4a81d76bac5623fef8f37d3167289
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 46348ec891fba60479633f824a96232290859cd3
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416888"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298504"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "52416888"
   当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务订阅服务器，如果订阅使用的是订阅服务器的可用性组侦听器的名称，则分发代理会自动继续复制。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  
   
 ## <a name="what-is-supported"></a>支持的操作  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持自动对发布服务器和事务订阅服务器进行故障转移。 不支持可用性数据库上分发服务器的故障转移。 合并订阅服务器可以属于可用性组，但必须在故障转移后手动配置新订阅服务器。 可用性组不能与 Websync 和 ssNoVersion Compact 方案结合使用。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持自动对发布服务器和事务订阅服务器进行故障转移。 不支持可用性数据库上分发服务器的故障转移。 合并订阅服务器可以属于可用性组，但必须在故障转移后手动配置新订阅服务器。 可用性组不能与 Websync 和 SQL Server Compact 方案结合使用。  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>如何在 AlwaysOn 环境中创建事务订阅  
  对于事务复制，请执行以下步骤配置订阅服务器可用性组并对其进行故障转移：  

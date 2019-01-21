@@ -13,12 +13,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849fc7c55957fa0f404f2886b983b548282fa7a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2067c4c267cf1b010a2a72a92b402d3f02034a7e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811005"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126611"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ ms.locfileid: "47811005"
   
 -   对于引发此错误的所有情况：  
   
-     检查复制监视器中的错误详细信息，如果代理已停止，请重新启动它。 错误详细信息可能提供关于代理为何无法正常运行的附加信息。 如果代理正在运行，请不要停止和重新启动代理，因为这样会使问题恶化。 有关在复制监视器中查看代理状态和错误详细资料的信息，请参阅以下主题：  
-  
-    -   有关快照代理、日志读取器代理和队列读取器代理，请参阅[查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
-  
-    -   有关分发代理和合并代理，请参阅[如何查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     检查复制监视器中的错误详细信息，如果代理已停止，请重新启动它。 错误详细信息可能提供关于代理为何无法正常运行的附加信息。 如果代理正在运行，请不要停止和重新启动代理，因为这样会使问题恶化。 有关在复制监视器中查看代理状态和错误详细资料的信息，请参阅[使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。    
   
 -   如果由于代理忙而频频引发此错误：  
   
      可能需要重新设计应用程序，以便减少代理进行处理所花费的时间。  
   
-     可以通过 **“作业属性”** 对话框来加大检查代理状态的时间间隔。 有关访问复制作业的此对话框的信息，请参阅[查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
+     可以通过 **“作业属性”** 对话框来加大检查代理状态的时间间隔。 有关访问复制作业的此对话框的信息，请参阅[使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   如果代理无法登录到拓扑中的某台计算机：  
   
@@ -81,6 +77,6 @@ ms.locfileid: "47811005"
  [复制日志读取器代理](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

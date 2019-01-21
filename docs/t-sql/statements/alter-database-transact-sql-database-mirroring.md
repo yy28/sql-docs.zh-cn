@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa5285bee7041b0da548a963087493f4c5cc9b21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530497"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134729"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 数据库镜像 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +175,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  有关详细信息，请参阅 [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)。  
   
  WITNESS \<witness_option>  
- 控制定义数据库镜像见证服务器的数据库属性。 SET WITNESS 子句会影响数据库的两个副本，但只能在主体服务器上指定 SET WITNESS。 如果为会话设置一个见证服务器，则需要仲裁为数据库提供服务，而不用考虑 SAFETY 设置；有关详细信息，请参阅[仲裁：见证如何影响数据库可用性 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 控制定义数据库镜像见证服务器的数据库属性。 SET WITNESS 子句会影响数据库的两个副本，但只能在主体服务器上指定 SET WITNESS。 如果为会话设置了见证，则无论安全设置如何，都需要仲裁来为数据库提供服务；有关更多信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  建议使见证服务器和故障转移伙伴驻留在单独服务器上。 有关见证的信息，请参阅[数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)。  
   

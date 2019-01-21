@@ -13,12 +13,12 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed2ffecb1f73cdafcd00bf12866a852047e5e266
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1137138911519b2e6497525acb39b7de87a4fd63
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516912"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254892"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>查看和修改复制代理命令提示符参数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "52516912"
   
  如果从 **“作业”** 文件夹访问代理作业，则请使用下表来确定代理作业名称和每个代理可用的参数。  
   
-|代理|作业名称|有关参数列表，请参阅...|  
+|代理|作业名称|有关参数列表，请参阅|  
 |-----------|--------------|------------------------------------|  
 |快照代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<整数>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |合并发布分区的快照代理|**Dyn_\<发布服务器>-\<发布数据库>-\<发布>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |日志读取器代理|**\<发布服务器>-\<发布数据库>-\<整数>**|[复制日志读取器代理](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
 |请求订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |推送订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>***|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|请求订阅的分发代理|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|请求订阅的分发代理|\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|[复制队列读取器代理](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   

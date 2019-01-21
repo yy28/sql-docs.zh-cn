@@ -15,12 +15,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: acd6c8da6560b0daed5eb1f029c71619b2e5d0fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502592"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126347"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52502592"
   
  对于每个注册数据库，都将显示以下信息：  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  向数据库镜像监视器注册的镜像数据库的名称。  
@@ -66,9 +66,9 @@ ms.locfileid: "52502592"
  *<PRINCIPAL_SERVER>*  
  当前作为主体服务器实例的伙伴的名称。 该名称采用以下格式：  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ <SYSTEM_NAME>[**\\**<instance_name>]  
   
- 其中，<SYSTEM_NAME> 是服务器实例所在系统的名称。 对于非默认服务器实例，实例名也显示为：<SYSTEM_NAME>\\<instance_name>**。  
+ 其中，<SYSTEM_NAME> 是服务器实例所在系统的名称。 对于非默认服务器实例，实例名也显示为：<SYSTEM_NAME>**\\**<instance_name>。  
   
  *<MIRROR_SERVER>*  
  当前作为镜像服务器实例的伙伴的名称。 格式与主体服务器的格式相同。  
@@ -83,7 +83,7 @@ ms.locfileid: "52502592"
   
  通过选择 **“警告”** 选项卡式页面，系统管理员可以查看数据库的当前警告配置。 在此，管理员可以启动 **“设置警告阈值”** 对话框，以启用并配置一个或多个警告阈值。  
   
- 在选项卡上方的标题中，详细信息窗格将监视器上次刷新状态信息的时间显示为：“上次刷新: \<日期>\<时间>”。 通常，数据库镜像监视器会在不同时间从主体和镜像服务器实例中检索状态信息。 将显示两次刷新时间中较早的时间。  
+ 在选项卡上方的横幅中，详细信息窗格将监视器上次刷新状态信息的时间显示为：“上次刷新：\<date>\<time>”。 通常，数据库镜像监视器会在不同时间从主体和镜像服务器实例中检索状态信息。 将显示两次刷新时间中较早的时间。  
   
 ## <a name="action-menu"></a>“操作”菜单  
  **“操作”** 菜单总是包含以下命令：  

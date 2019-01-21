@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514205"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128347"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52514205"
   
   
 ## <a name="prerequisites"></a>必备条件  
-本教程适用于熟悉数据库基本操作但复制经验不足的用户。 在开始本教程的学习之前，必须已完成[教程：准备用于复制的 SQL Server](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 的学习。  
+本教程适用于熟悉数据库基本操作但复制经验不足的用户。 在开始本教程之前，必须完成[教程：准备 SQL Server 以用于复制](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
 若要完成本教程，需要 SQL Server、SQL Server Management Studio (SSMS) 以及 AdventureWorks 数据库：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52514205"
 > - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，必须使用属于 sysadmin 固定服务器角色成员的登录名连接到发布服务器和订阅服务器。 有关此角色的详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
   
   
-本教程的预计学时：60 分钟  
+**学完本教程的估计时间：60 分钟**  
   
 ## <a name="configure-the-publisher-for-transactional-replication"></a>配置事务复制的发布服务器
 在本节中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中发布“Product”表的筛选子集。 你还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。
@@ -182,7 +182,7 @@ ms.locfileid: "52514205"
   
    ![输入订阅数据库的名称](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. 在“分发代理安全性”页中，选择省略号 (…) 按钮。 在“进程帐户”框中输入 <Publisher_Machine_Name>\repl_distribution，输入此帐户的密码，选择“确定”，然后选择“下一步”。
+8. 在“分发代理安全性”页中，选择省略号 (…)按钮。 在“进程帐户”框中输入 <Publisher_Machine_Name>\repl_distribution，输入此帐户的密码，选择“确定”，然后选择“下一步”。
 
    ![“分发代理安全性”对话框中的分发帐户信息](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -226,7 +226,7 @@ ms.locfileid: "52514205"
   
    A. 选择“跟踪令牌”选项卡。  
    B. 选择“插入跟踪器”。    
-   c. 在以下列中查看跟踪令牌的运行时间： **“发布服务器到分发服务器”**、 **“分发服务器到订阅服务器”**、 **“总滞后时间”**。 值为“挂起”表示令牌尚未到达指定点。
+   c. 在以下各列中查看跟踪令牌的占用时间：“发布服务器到分发服务器”、“分发服务器到订阅服务器”、“总滞后时间”。 值为“挂起”表示令牌尚未到达指定点。
 
    ![跟踪令牌的信息](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
@@ -242,4 +242,4 @@ ms.locfileid: "52514205"
 下一篇文章介绍如何配置合并复制：  
 
 > [!div class="nextstepaction"]
-> [教程：配置服务器和移动客户端之间的复制（合并）](tutorial-replicating-data-with-mobile-clients.md)
+> [教程：在服务器和移动客户端之间配置复制（合并）](tutorial-replicating-data-with-mobile-clients.md)

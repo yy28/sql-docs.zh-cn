@@ -18,12 +18,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35f53ef33d1cf9316fcb7225ab5baf67a3b33383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8b74629bcaea743026c453614f2c69e268b6bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804056"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130927"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>调试业务逻辑处理程序（复制编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47804056"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>在本地计算机上调试业务逻辑处理程序  
   
-1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)和[创建、修改和删除发布和项目（复制）](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)。  
+1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)和[创建发布](../../relational-databases/replication/publish/create-a-publication.md)。  
   
 2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
   

@@ -15,12 +15,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfb463245cc649d010ce6ce97b49170ec37ac9e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 057d3f820ac0f580a6109d5b5c04ea43e8eabd9c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729595"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129707"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>验证合并订阅服务器的分区信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47729595"
  合并代理验证分区时，除了对筛选表达式使用的所有函数返回的值验证分区之外，代理还会检查快照的生成是否先于令其无效的更改，如元数据清除操作或架构更改。 如果分区快照太旧，合并代理将返回一个错误，并且必须根据当前常规快照为此订阅服务器重新生成分区快照。  
   
 ## <a name="see-also"></a>另请参阅  
- [管理（复制）](../../relational-databases/replication/administration/administration-replication.md)   
- [复制管理最佳做法](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+ [复制管理常见问题解答](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [验证已复制的数据](../../relational-databases/replication/validate-replicated-data.md)  
+ [验证已复制的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

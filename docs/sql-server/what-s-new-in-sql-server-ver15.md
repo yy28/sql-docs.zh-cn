@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207776"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300174"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云以及操作系统选项。 本文汇总了 SQL Server 2019 的新增功能。 有关详细信息和已知问题，请参阅 [SQL Server 2019 发行说明](sql-server-ver15-release-notes.md)。
 
@@ -39,7 +42,7 @@ ms.locfileid: "53207776"
 
 ## <a name="previous-ctps"></a>CTP 历史版本
 
-CTP 早期版本为 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 增添或增强了以下功能。
+CTP 早期版本为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 增添或增强了以下功能。
 
 - [大数据群集](#bigdatacluster) 
   - 在 Kubernetes 上部署带 SQL 和 Spark Linux 容器的大数据群集 (CTP 2.0)

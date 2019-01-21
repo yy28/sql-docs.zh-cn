@@ -15,12 +15,12 @@ ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 496ba72f12598157a6cf864538944a96f049e3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d4d6db158fd2cb6f4157508b39c335521f77ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636165"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135667"
 ---
 # <a name="queue-reader-agent"></a>队列读取器代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +66,8 @@ ms.locfileid: "47636165"
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [使用复制监视器查看信息和执行任务](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c65bb6348afa4d095971b5833f26e8e33dd5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666758"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298604"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 按顺序计算变量并返回最初不等于 `NULL` 的第一个表达式的当前值。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` 返回第三个值，因为第三个值是首个为非 Null 的值。 
   
@@ -190,7 +193,7 @@ GO
  (12 row(s) affected)
  ```  
   
-### <a name="c-simple-example"></a>C：简单示例  
+### <a name="c-simple-example"></a>C:简单示例  
  下面的示例演示 `COALESCE` 如何从第一个具有非 Null 值的列中选择数据。 对于此示例，假定 `Products` 表包含此数据：  
   
  ```  
@@ -220,7 +223,7 @@ FROM Products ;
   
  请注意，在第一行中，`FirstNotNull` 值是 `PN1278`，而不是 `Socks, Mens`。 这是因为示例中未将 `Name` 列指定为 `COALESCE` 的参数。  
   
-### <a name="d-complex-example"></a>D：复杂示例  
+### <a name="d-complex-example"></a>D:复杂示例  
  以下示例使用 `COALESCE` 来比较三个列中的值，并仅返回列中找到的非 null 值。  
   
 ```sql  

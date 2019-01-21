@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020391"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226564"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
 Reporting Services 包括电子邮件传递扩展插件，以便可以通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
@@ -109,7 +109,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>用于在邮件中设置“收件人:”字段的配置选项
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>用于设置消息中的“收件人：”字段的配置选项
 根据“管理单独的订阅”任务授予的权限而创建的用户定义订阅包含基于域用户帐户的预设用户名。 用户创建订阅时，“收件人:”  字段中的收件人姓名会使用创建该订阅的人员的域用户帐户自行转换为地址。
 
 如果您所用的 SMTP 服务器或转发器使用了不同于域用户帐户的电子邮件帐户，则 SMTP 服务器尝试将报表传递给该用户时，报表传递会失败。
@@ -183,7 +183,7 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 
 3. 选择要在上面安装 Internet Information Server (IIS) 的服务器，然后选择“下一步”。
 
-4. 在“服务器角色”* 页上选择“下一步”。
+4. 在“服务器角色”页上选择“下一步”。
      
 5. 在“功能”页上，选择“SMTP 服务器”，然后选择“下一步”。
 

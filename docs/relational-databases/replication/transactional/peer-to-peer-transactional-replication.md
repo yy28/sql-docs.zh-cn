@@ -17,12 +17,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58fa9cf55a0ef120266c0398734fc6671402634c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785245"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129307"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>对等事务复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47785245"
  对等复制包括了在对等拓扑中启用冲突检测的选项。 此选项有助于防止因未检测到的冲突引起的各种问题，包括不一致的应用程序行为和丢失更新。 启用该选项后，默认情况下，发生冲突的更改被视为导致分发代理失败的关键错误。 发生冲突时，拓扑将始终处于不一致的状态，直至手动解决冲突并使拓扑中的数据一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
 > [!NOTE]  
->  为了避免潜在的数据不一致性，即便已经启用了冲突检测功能，也应尽力避免对等拓扑中发生冲突。 为了确保仅在某一个节点上执行特定行的写入操作，访问并更改数据的应用程序必须对其插入、更新和删除操作进行分区。 分区可确保在一个节点上对给定行的修改可以在其他节点修改该行之前，与拓扑中所有其他节点同步。 如果应用程序需要完善的冲突检测与解决功能，请使用合并复制。 有关详细信息，请参阅[合并复制](../../../relational-databases/replication/merge/merge-replication.md)和[检测并解决合并复制冲突](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+>  为了避免潜在的数据不一致性，即便已经启用了冲突检测功能，也应尽力避免对等拓扑中发生冲突。 为了确保仅在某一个节点上执行特定行的写入操作，访问并更改数据的应用程序必须对其插入、更新和删除操作进行分区。 分区可确保在一个节点上对给定行的修改可以在其他节点修改该行之前，与拓扑中所有其他节点同步。 如果应用程序需要完善的冲突检测与解决功能，请使用合并复制。 有关详细信息，请参阅[合并复制](../../../relational-databases/replication/merge/merge-replication.md)和[检测并解决合并复制冲突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 ## <a name="peer-to-peer-topologies"></a>对等拓扑  
  下列方案说明了对等复制的典型应用。  
@@ -75,7 +75,7 @@ ms.locfileid: "47785245"
   
  每个地点都有一台数据库服务器和一台应用程序服务器，供支持工程师在输入和更新客户电话的相关信息时使用。 拓扑按时间进行分区。 因此更新只发生在正在办公的节点，然后更新会流动到其他参与数据库。 此拓扑具有下列优点：  
   
--   独立但不孤立：每个办事处都可以独立插入、更新或删除数据，但还可以共享数据，因为数据会复制到其他所有的参与数据库。  
+-   独立但不孤立：每个办事处都可以独立插入、更新或删除数据，但还可以共享数据，因为数据会复制到其他所有参与数据库。  
   
 -   在出现故障或需要维护一个或多个参与数据库时可提供更高的可用性。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47785245"
   
 ||仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|SQL2008 对等和更高版本|SQL2008 对等和更高版本|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|向拓扑添加节点|完整拓扑中有 2 个节点：无需处于静止状态。 改用 `sync_type = 'initialize with backup'`|2 个以上节点：需要处于静止状态。|`sync_type = 'replication support only'`：需要处于静止状态。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：无需处于静止状态。|  
+|向拓扑添加节点|完整拓扑中的 2 个节点：无需处于静止状态。 改用 `sync_type = 'initialize with backup'`|2 个以上节点：需要处于静止状态。|`sync_type = 'replication support only'`设置用户帐户 ：需要处于静止状态。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：无需处于静止状态。|  
   
  拓扑架构更改（添加或删除项目）时需要处于静止状态。 有关详细信息，请参阅[管理对等拓扑（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)。  
   
@@ -169,9 +169,9 @@ ms.locfileid: "47785245"
   
  项目架构更改（添加/删除列）从不需要处于静止状态。  
   
--   添加项目：如果是将项目添加到现有配置中，我们需要使系统静止，在拓扑的每个节点中执行 CREATE TABLE 语句并加载初始数据，然后在拓扑的每个节点中添加新项目。  
+-   添加项目：如果是将项目添加到现有配置中，我们需要使系统处于静止状态，在拓扑的每个节点中执行 CREATE TABLE 语句并加载初始数据，然后在拓扑的每个节点中添加新项目。  
   
--   删除项目：如果我们想要使所有节点中的状态保持一致，就需要使拓扑静止  
+-   删除项目：如果要在所有节点上保持状态一致，则需要使拓扑处于静止状态  
   
  有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)和[管理对等拓扑（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)。  
   
@@ -182,6 +182,6 @@ ms.locfileid: "47785245"
 ## <a name="see-also"></a>另请参阅  
  [管理对等拓扑（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [快照复制和事务复制的备份和还原策略](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [事务复制的发布类型](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [事务复制](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   

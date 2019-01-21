@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748745"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125852"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 发布服务器的设计注意事项和限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47748745"
   
  还要考虑下列问题：  
   
--   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 处理 NULL 的方式有所不同：对于允许 NULL 值并包含在唯一约束或索引中的列，Oracle 允许存在多个值为 NULL 的行。 而在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，同一列只允许存在一个值为 NULL 的行，以确保唯一性。 不能发布允许 NULL 值的唯一约束或索引，因为对于索引或约束中包含的任何列，如果已发布的表中包含多个值为 NULL 的行，订阅服务器中将出现违反约束的情况。  
+-   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以不同方式处理 NULL：对于允许 NULL 值并包含在唯一约束或索引中的列，Oracle 允许存在多个值为 NULL 的行。 而在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，同一列只允许存在一个值为 NULL 的行，以确保唯一性。 不能发布允许 NULL 值的唯一约束或索引，因为对于索引或约束中包含的任何列，如果已发布的表中包含多个值为 NULL 的行，订阅服务器中将出现违反约束的情况。  
   
 -   测试唯一性时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将忽略字段中的尾随空格，而 Oracle 则不会忽略。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47748745"
   
 -   Oracle 发布的订阅服务器不能从备份中自动初始化。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持两种验证：二进制验证和行计数验证。 Oracle 发布服务器支持行计数验证。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-replicated-data.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持两种验证：二进制验证和行计数验证。 Oracle 发布服务器支持行计数验证。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 Oracle 发布服务器支持字符模式快照。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "47748745"
   
     -   不能通过 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 更改 **@job_login** 参数，但可以更改密码。  
   
- 有关复制安全性的详细信息，请参阅[安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)。  
+ 有关复制安全性的详细信息，请参阅[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Oracle 发布服务器的管理注意事项](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   

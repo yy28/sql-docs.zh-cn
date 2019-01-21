@@ -13,12 +13,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 638e52bb473d3aa3b107f5caeed882410ed197cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3616f421a3817f1a3cf56d2e70f5b4fe91927c84
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525536"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256512"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>查看基于策略的管理方面的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52525536"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看某个方面的属性，请使用：**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52525536"
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要查看其属性的方面，然后选择“属性”。 若要深入了解“Facet 属性 - facet_name”对话框中的可用选项，请参阅[“Facet 属性”对话框，“常规”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[“Facet 属性”对话框，“依赖策略”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和[“Facet 属性”对话框，“依赖条件”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
+5.  右键单击要查看其属性的方面，然后选择“属性”。 有关“Facet 属性 -facet_name”对话框中可用选项的详细信息，请参阅[“Facet 属性”对话框、“常规”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)[“Facet 属性”对话框、“依赖策略”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和[“Facet 属性”对话框、“依赖条件”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
   
 6.  完成后，单击“关闭”。  
   

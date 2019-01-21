@@ -18,15 +18,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], about restoring databases
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afc9d46066c435bc14f2e14fedb0a285ac3b95e3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672826"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242038"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,9 +146,9 @@ ms.locfileid: "51672826"
 ##  <a name="DRA"></a> 数据库恢复顾问 (SQL Server Management Studio)  
  数据库恢复顾问简化了制定还原计划的过程，可以很轻松地实现最优的正确还原顺序。 很多已知数据库还原问题和客户所要求的增强功能已得到解决。 数据库恢复顾问引入的主要增强功能包括：  
   
--   **还原计划算法：**  用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
+-   **还原计划算法：** 用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
   
--   **时间点还原：**  数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **时间点还原：** 数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
  有关详细信息，请参阅下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理性博客中有关数据库恢复顾问的信息：  
   

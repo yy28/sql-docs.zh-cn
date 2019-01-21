@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21008fca4e8bb75b9daace2d83cd166dafc79eb9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9c15f88e1bf3e7d07d09c5d92ceff5a3face1ade
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521614"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135407"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52521614"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **查看和修改复制安全设置，使用：**  
   
@@ -144,9 +144,9 @@ ms.locfileid: "52521614"
   
 1.  在发布服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
   
-    -   若要更改运行分发代理并将其连接到分发服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。 在 **“分发代理安全性”** 对话框中指定帐户和密码。  
+    -   若要更改运行分发代理并将其连接到分发服务器的帐户，请单击 **“代理进程帐户”** 行，再单击该行中的属性按钮 (**...**)。 在 **“分发代理安全性”** 对话框中指定帐户和密码。  
   
-    -   若要更改将分发代理连接到订阅服务器的上下文，请单击“订阅服务器连接”行，再单击该行中的属性按钮 (...)。 在 **“输入连接信息”** 对话框中指定上下文。  
+    -   若要更改将分发代理连接到订阅服务器的上下文，请单击 **“订阅服务器连接”** 行，再单击该行中的属性按钮 (**...**)。 在 **“输入连接信息”** 对话框中指定上下文。  
   
          如果使用排队更新订阅，队列读取器代理还将使用为订阅服务器的连接指定的上下文。  
   
@@ -156,11 +156,11 @@ ms.locfileid: "52521614"
   
 1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
   
-    -   若要更改运行分发代理并将其连接到订阅服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。 在 **“分发代理安全性”** 对话框中指定帐户和密码。  
+    -   若要更改运行分发代理并将其连接到订阅服务器的帐户，请单击 **“代理进程帐户”** 行，再单击该行中的属性按钮 (**...**)。 在 **“分发代理安全性”** 对话框中指定帐户和密码。  
   
          如果使用排队更新订阅，队列读取器代理还将使用为订阅服务器的连接指定的上下文。  
   
-    -   若要更改将分发代理连接到分发服务器的上下文，请单击“分发服务器连接”行，再单击该行中的属性按钮 (...)。 在 **“输入连接信息”** 对话框中指定上下文。  
+    -   若要更改将分发代理连接到分发服务器的上下文，请单击 **“分发服务器连接”** 行，再单击该行中的属性按钮 (**...**)。 在 **“输入连接信息”** 对话框中指定上下文。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -168,9 +168,9 @@ ms.locfileid: "52521614"
   
 1.  在发布服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
   
-    -   若要更改运行合并代理并将其连接到发布服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。 在 **“合并代理安全性”** 对话框中指定帐户和密码。  
+    -   若要更改运行合并代理并将其连接到发布服务器的帐户，请单击 **“代理进程帐户”** 行，再单击该行中的属性按钮 (**...**)。 在 **“合并代理安全性”** 对话框中指定帐户和密码。  
   
-    -   若要更改将合并代理连接到订阅服务器的上下文，请单击“订阅服务器连接”行，再单击该行中的属性按钮 (...)。 在 **“输入连接信息”** 对话框中指定上下文。  
+    -   若要更改将合并代理连接到订阅服务器的上下文，请单击 **“订阅服务器连接”** 行，再单击该行中的属性按钮 (**...**)。 在 **“输入连接信息”** 对话框中指定上下文。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -178,15 +178,15 @@ ms.locfileid: "52521614"
   
 1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
   
-    -   若要更改运行合并代理并将其连接到订阅服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。 在 **“合并代理安全性”** 对话框中指定帐户和密码。  
+    -   若要更改运行合并代理并将其连接到订阅服务器的帐户，请单击 **“代理进程帐户”** 行，再单击该行中的属性按钮 (**...**)。 在 **“合并代理安全性”** 对话框中指定帐户和密码。  
   
-    -   若要更改将合并代理连接到发布服务器和分发服务器的上下文，请单击“发布服务器连接”行，再单击该行中的属性按钮 (...)。 在 **“输入连接信息”** 对话框中指定上下文。  
+    -   若要更改将合并代理连接到发布服务器和分发服务器的上下文，请单击 **“发布服务器连接”** 行，再单击该行中的属性按钮 (**...**)。 在 **“输入连接信息”** 对话框中指定上下文。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>更改运行队列读取器代理的帐户  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击分发数据库旁边的属性 (...) 按钮。  
+1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击分发数据库旁边的属性 (**...**) 按钮。  
   
 2.  在“分发数据库属性 - \<数据库>”对话框中，单击“代理进程帐户”文本框旁边的“安全设置”按钮。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52521614"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>更改立即更新请求订阅的安全设置  
   
-1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，单击“发布服务器连接”行，然后单击行中的属性 (…) 按钮。  
+1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，单击“发布服务器连接”行，然后单击行中的属性 (**…**) 按钮。  
   
 2.  在 **“输入连接信息”** 对话框中，请选择下列选项之一：  
   
@@ -574,10 +574,10 @@ ms.locfileid: "52521614"
 ## <a name="see-also"></a>另请参阅  
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [升级复制脚本（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [管理复制中的登录名和密码](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [复制的标识和访问控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [复制代理安全模式](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

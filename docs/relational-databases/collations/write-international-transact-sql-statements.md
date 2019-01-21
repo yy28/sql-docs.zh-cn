@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ab973f34d0bcfb94d3df97e10efcbba69655f8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece5fabc394ff01175273378a2fb7c23ef483cf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724735"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256562"
 ---
 # <a name="write-international-transact-sql-statements"></a>编写国际化 Transact-SQL 语句
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47724735"
   
     -   ADO、OLE DB 和 ODBC 应用程序应使用下列 ODBC 时间戳、日期和时间转义子句：  
   
-         **{ ts'** yyyy**-**_mm_**-_** dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** such as: **{ ts'** 1998**-**09**-**24 10**:**02**:**20**' }**  
+         { ts'yyyy - mm - dd hh : mm : ss [.fff] '}，例如：{ ts'1998-09-24 10:02:20'}  
   
-         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** such as: **{ d'** 1998**-** 09**-** 24 **'}**  
+         { d' yyyy - mm - dd '}，例如：{ d'1998-09-24'}
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** such as: **{ t'** 10:02:20 **'}**  
+         { t' hh : mm : ss '}，例如：{ t'10:02:20'}  
   
     -   使用其他 API 的应用程序或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本、存储过程和触发器都应使用未分隔数值字符串。 例如 *yyyymmdd* 为 19980924。  
   

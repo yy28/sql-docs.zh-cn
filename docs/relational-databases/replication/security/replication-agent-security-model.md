@@ -21,27 +21,27 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37845c4ed204fc8a4486674f3465dc0178087604
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8d0b6013631cf4b6d888f8e96c24dd9cb83146f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850515"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130967"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  可以使用复制代理安全模式，对复制代理运行和建立连接所用的帐户进行精细粒度的控制：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[管理复制中的登录名和密码](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
+  用复制代理安全模式可以对复制代理运行和建立连接所用的帐户进行精细粒度的控制：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[复制的标识和访问控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
   
 > [!IMPORTANT]  
 >  **sysadmin** 固定服务器角色的成员配置复制时，可以配置复制代理来模拟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理帐户。 不指定复制代理的登录名和密码即可完成此操作；但是不推荐这种方法。 作为最佳安全做法，建议以本主题后面的“代理所需权限”部分中介绍的最小权限来为每个代理指定一个帐户。  
   
  和所有可执行文件一样，复制代理在 Windows 帐户的上下文中运行。 它们使用此帐户来建立 Windows 集成安全性连接。 代理在哪个帐户之下运行取决于代理的启动方式：  
   
--   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业启动代理时，默认设置为：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业来启动复制代理时，代理将在配置复制时所指定的帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](../../../ssms/agent/configure-sql-server-agent.md)。  
+-   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业启动代理，默认值为：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业来启动复制代理时，代理将在配置复制时所指定的帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](../../../ssms/agent/configure-sql-server-agent.md)。  
   
--   从 MS-DOS 命令行中直接启动或通过脚本启动代理时：代理在通过命令行运行代理的用户帐户的上下文中运行。  
+-   从 MS-DOS 命令行或直接通过脚本启动代理：代理在命令行上运行代理的用户帐户的上下文中运行。  
   
--   从使用复制管理对象 (RMO) 或 ActiveX 控件的应用程序启动代理时：代理在调用 RMO 或 ActiveX 控件的应用程序的上下文中运行。  
+-   从使用复制管理对象 (RMO) 或 ActiveX 控件的应用程序启动代理：代理在调用 RMO 或 ActiveX 控件的应用程序的上下文中运行。  
   
     > [!NOTE]  
     >  不推荐使用 ActiveX 控件。  
@@ -74,8 +74,8 @@ ms.locfileid: "47850515"
 |日志读取器代理|**\<发布服务器>-\<发布数据库>-\<整数>**|  
 |请求订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<整数>**|  
 |推送订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
-|推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>***|  
-|请求订阅的分发代理|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|  
+|推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
+|请求订阅的分发代理|\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>|  
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "47850515"
   
 ## <a name="see-also"></a>另请参阅  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

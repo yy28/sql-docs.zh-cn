@@ -1,7 +1,7 @@
 ---
 title: 配置具有安全 Enclave 的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534775"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206403"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 扩展现有 [Always Encrypted](always-encrypted-database-engine.md) 功能，以便对敏感数据启动更丰富的功能，同时保持数据的机密性。
@@ -26,14 +27,14 @@ ms.locfileid: "52534775"
 若要设置具有安全 enclave 的 Always Encrypted，请使用以下工作流：
 
 1. 配置主机保护者服务 (HGS) 证明。
-2. 在 SQL Server 计算机上安装 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]。
+2. 在 SQL Server 计算机上安装 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]。
 3. 在客户端/开发计算机上安装工具。
 4. 在 SQL Server 实例中配置 enclave 类型。
 5. 预配已启用 enclave 的密钥。
 6. 对包含敏感数据的列进行加密。
 
->[!NOTE]
->有关如何在 SSMS 中设置测试环境并尝试使用具有安全 enclave 的 Always Encrypted 功能的分步教程，请参阅[教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)。
+> [!NOTE]
+> 有关如何在 SSMS 中设置测试环境并尝试使用具有安全 enclave 的 Always Encrypted 功能的分步教程，请参阅[教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)。
 
 ## <a name="configure-your-environment"></a>配置环境
 
@@ -45,7 +46,7 @@ ms.locfileid: "52534775"
 
 SQL Server：
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 或更高版本
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 或更高版本
 
 Windows：
 
@@ -134,7 +135,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
    ```
 
     > [!NOTE]
-    > 默认情况下丰富计算在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中禁用。 在每次重启 SQL Server 实例之后，都需要使用上述语句启用它们。
+    > 默认情况下，[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中禁用了大量计算。 每次重启 SQL Server 实例之后，都需要使用上述语句启用它们。
 
 ## <a name="provision-enclave-enabled-keys"></a>预配已启用 enclave 的密钥
 
@@ -217,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 在客户端/开发计算机上，打开 Windows PowerShell ISE，并运行以下脚本。
 
-步骤 1：在 Azure Key Vault 中预配列主密钥
+**第 1 步：在 Azure Key Vault 中预配列主密钥**
 
 还可以使用 Azure 门户执行此操作。 有关详细信息，请参阅[通过 Azure 门户管理密钥保管库](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)。
 
@@ -249,7 +250,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resource
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-步骤 2：在数据库中创建列主密钥元数据，创建列加密密钥，并在数据库中创建列加密密钥元数据
+**步骤 2：在数据库中创建列主密钥元数据、创建列加密密钥以及在数据库中创建列加密密钥元数据**
 
 
 ```powershell
@@ -496,13 +497,13 @@ GO
 
 可以通过几种方法对未启用 enclave 的现有列启用 enclave 功能。 选择哪种方法取决于以下几个因素：
 
-- 作用域/粒度：你是否想要为列子集或使用给定列主密钥保护的所有列启用 enclave 功能？
-- 数据大小：包含想要启用 enclave 的列的表的大小是什么？
+- **作用域/粒度：** 你是否想要为列子集或使用给定列主密钥保护的所有列启用 enclave 功能？
+- **数据大小：** 包含要启用 enclave 的列的表的大小是多少？
 - 此外，是否要更改列的加密类型？ 请记住，唯一的随机的加密支持丰富计算（模式匹配、比较运算符）。 如果列使用确定性加密进行加密，还需要使用随机加密对其重新进行加密以解锁 enclave 的完整功能。
 
 下面是用于为现有列启用 enclave 的三种方法：
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>选项 1：轮换列主密钥，将其替换为已启用 enclave 的列主密钥。
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>方法 1：轮换列主密钥，将其替换为已启用 enclave 的列主密钥。
   
 - 优点：
   - 不涉及重新加密数据，因此它通常是最快的方法。 建议对包含大量数据的列采用此方法，对于所有列，需要启用丰富计算，由于已经使用确定性加密，因此不需要重新加密。
@@ -514,7 +515,7 @@ GO
   - 产生密钥管理开销 - 需要创建新的列主密钥并使其可用于查询受影响列的应用程序。  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>选项 2：此方法涉及到两个步骤：1) 轮换列主密钥（如选项 1 所示）2) 使用随机加密重新加密通过确定性加密的列子集，以便为这些列启用丰富计算。
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>方法 2：此方法包括两个步骤：1 ) 轮换列主密钥（如选项 1 所示）和 2 ) 使用随机加密重新加密通过确定性加密的列子集，以便为这些列启用丰富计算。
   
 - 优点：
   - 就地重新加密数据，因此对于包含大量数据的确定性加密列，它是启用丰富查询的建议方法。 请注意，步骤 1 为使用确定性加密的列解锁就地加密，因此步骤 2 可以就地执行。

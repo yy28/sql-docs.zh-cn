@@ -13,12 +13,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47cc4ba5cb66cd810f536940bc896938734dda65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: deb1f9af6d006ff9e524d2f91d61af6269737079
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643355"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129657"
 ---
 # <a name="publisher-information-publications"></a>发布服务器信息，发布
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "47643355"
 ## <a name="options"></a>选项  
  若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择要显示的列**：选择要显示哪些列以及要在 **“选择列”** 对话框中以何种顺序显示它们。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**：根据 **“筛选设置”** 对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47643355"
  状态值 **“‘严重’状态下的性能”** 与事务订阅和合并订阅相关；只有设置阈值后，才可以显示该值。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **发布**  
- 每个发布的名称，格式为 *PublicationDatabaseName: PublicationName*。  
+ 每个发布的名称，格式为 PublicationDatabaseName:PublicationName。  
   
  **订阅**  
  每个发布的订阅数量。  
@@ -86,7 +86,7 @@ ms.locfileid: "47643355"
   
 ## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

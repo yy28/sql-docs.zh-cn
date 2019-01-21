@@ -16,15 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae8ce2b79d49a7754a7049e005c34d4837a0d313
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: d8cb50c87778f3ab5255482213305cd974e4e64a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384152"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300204"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向表添加新列。  
 
@@ -58,7 +61,7 @@ ms.locfileid: "49384152"
     > [!NOTE]  
     >  列属性的默认值在你创建新列时添加，但你可以在“列属性”选项卡中更改这些值。  
   
-6.  在你添加完列后，从“文件” 菜单中，选择“保存” *table name*。  
+6.  在你添加完列后，从“文件” 菜单中，选择“保存” _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

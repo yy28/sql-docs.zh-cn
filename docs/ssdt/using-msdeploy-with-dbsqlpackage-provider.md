@@ -11,23 +11,23 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520955"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256940"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>将 MSDeploy 用于 dbSqlPackage 提供程序
 DbSqlPackage 是一个 MSDeploy 提供程序，可使你与 SQL Server/SQL Azure 数据库交互。 DbSqlPackage 支持以下操作：  
   
--   提取：从活动的 SQL Server 或 SQL Azure 数据库创建数据库快照 (.dacpac) 文件。  
+-   **提取**：从活动的 SQL Server 或 SQL Azure 数据库创建数据库快照 (.dacpac) 文件。  
   
 -   **发布**：增量更新数据库架构以便匹配源 .dacpac 文件的架构。  
   
 -   **DeployReport**：创建将由发布操作完成的更改的 XML 报表。  
   
--   脚本：创建等效于由发布操作执行的脚本的 Transact\-SQL 脚本。  
+-   **脚本**：创建等效于由发布操作执行的脚本的 Transact\-SQL 脚本。  
   
 有关 DACFx 的详细信息，请参阅 [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) 或 [SqlPackage.exe](../tools/sqlpackage.md)（DACFx 命令行工具）上的 DACFx 托管 API 文档。  
   
@@ -47,15 +47,15 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 |谓词|描述|  
 |--------|---------------|  
-|dump|提供 .dacpac 文件中包含的源数据库的信息（包括名称、版本号和说明）。 在命令行上使用以下格式指定源数据库：<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|在命令行上使用以下格式指定 dbSqlPackage 操作：<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />请参阅以下各节以了解同步谓词的有效源和目标参数。|  
+|dump|提供 .dacpac 文件中包含的源数据库的信息（包括名称、版本号和说明）。 在命令行上使用以下格式指定源数据库：<br /><br />msdeploy -verb:dump -source:dbSqlPackage=".dacpac-file-path"|  
+|sync|在命令行上使用以下格式指定 dbSqlPackage 操作：<br /><br />msdeploy -verb:sync -source:dbSqlPackage="input" *[,DbSqlPackage-source-parameters] -*dest:dbSqlPackage="input" [,DbSqlPackage-destination-parameters]<br /><br />请参阅以下各节以了解同步谓词的有效源和目标参数。|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 源  
 dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或是 .dacpac 文件磁盘路径的输入。  指定提供程序输入源的语法如下：  
   
 |输入|，则“默认”|描述|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|不适用|input 是有效的 SQL Server 或 SQL Azure 连接字符串，或磁盘上的 .dacpac 文件的路径。<br /><br />注意：使用连接字符串作为输入源时，支持的唯一连接字符串属性是 InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate 和 ConnectionTimeout。|  
+|**-source:dbSqlPackage=**{*input*}|不适用|input 是有效的 SQL Server 或 SQL Azure 连接字符串，或磁盘上的 .dacpac 文件的路径。<br /><br />**注意**：使用连接字符串作为输入源时，支持的唯一连接字符串属性为 InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate 和 ConnectionTimeout。|  
   
 如果输入源是到实时 SQL Server/SQL Azure 数据库的连接字符串，dbSqlPackage 将从实时 SQL Server/SQL Azure 数据库提取 .dacpac 文件形式的数据库快照。  
   
@@ -84,7 +84,7 @@ dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或
   
 以下目标参数可用于所有 dbSqlPackage 操作：  
   
-|“属性”|，则“默认”|描述|  
+|属性|，则“默认”|描述|  
 |------------|-----------|---------------|  
 |**Action={Publish&#124;DeployReport&#124;Script}**|N/A|可选参数，它们指定要在目标处执行的操作。|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|指定 SqlClr 发布是否删除作为部署计划的一部分的阻塞程序集。 默认情况下，如果必须删除引用程序集，则任何阻塞或引用程序集将阻止程序集更新。|  
@@ -123,7 +123,7 @@ dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或
 |**IgnoreFileSize= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新文件大小之间的差异。|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新填充因子之间的差异。|  
   
-|“属性”|，则“默认”|描述|  
+|属性|，则“默认”|描述|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新全文索引文件的路径之间的差异。|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|指定当您发布到数据库时，是忽略还是更新标识列的种子之间的差异。|  
