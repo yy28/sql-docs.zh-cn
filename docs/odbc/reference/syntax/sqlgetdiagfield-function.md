@@ -1,7 +1,7 @@
 ---
 title: SQLGetDiagField 函数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203976"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420162"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函数
+
 **符合性**  
  版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53203976"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -189,38 +189,59 @@ SQLRETURN SQLGetDiagField(
   
 |SQL 语句<br /><br /> 执行|值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*更改域语句*|"更改域"|SQL_DIAG_ALTER_DOMAIN|  
-|*alter table 语句*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*断言定义*|"创建断言"|SQL_DIAG_CREATE_ASSERTION|  
-|*字符集定义*|"创建字符集"|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*排序规则定义*|"创建排序规则"|SQL_DIAG_CREATE_COLLATION|  
-|*create index 语句*|"创建索引"|SQL_DIAG_CREATE_INDEX|  
-|*create table 语句*|"创建表"|SQL_DIAG_CREATE_TABLE|  
-|*创建视图语句*|"创建视图"|SQL_DIAG_CREATE_VIEW|  
-|*指定的游标*|"选择光标"|SQL_DIAG_SELECT_CURSOR|  
-|*delete 语句定位*|"动态删除游标"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete 语句搜索*|"删除位置"|SQL_DIAG_DELETE_WHERE|  
-n-定义 *|"创建域"|SQL_DIAG_CREATE_DOMAIN|  
-|*drop 断言语句*|"放置断言"|SQL_DIAG_DROP_ASSERTION|  
-|*删除字符组 stmt*|"DROP 字符集"|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop 排序规则语句*|"删除排序规则"|SQL_DIAG_DROP_COLLATION|  
-|*drop 域语句*|"删除域"|SQL_DIAG_DROP_DOMAIN|  
-|*drop index 语句*|"删除索引"|SQL_DIAG_DROP_INDEX|  
-|*drop schema 语句*|"删除架构"|SQL_DIAG_DROP_SCHEMA|  
-|*drop table 语句*|"删除表"|SQL_DIAG_DROP_TABLE|  
-|*drop 转换语句*|"删除转换"|SQL_DIAG_DROP_TRANSLATION|  
-|*drop view 语句*|"删除视图"|SQL_DIAG_DROP_VIEW|  
--语句 *|"授予"|SQL_DIAG_GRANT|  
-|*insert 语句*|"插入"|SQL_DIAG_INSERT|  
-|*ODBC 过程扩展插件*|"CALL"|SQL_DIAG_ 调用|  
-|*revoke 语句*|"撤销"|SQL_DIAG_REVOKE|  
-|*架构定义*|"创建架构"|SQL_DIAG_CREATE_SCHEMA|  
-|*转换定义*|"创建转换"|SQL_DIAG_CREATE_TRANSLATION|  
-|*update 语句定位*|"动态更新游标"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*update 语句搜索*|"更新的位置"|SQL_DIAG_UPDATE_WHERE|  
+|*alter-domain-statement*|"更改域"|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*assertion-definition*|"创建断言"|SQL_DIAG_CREATE_ASSERTION|  
+|*character-set-definition*|"创建字符集"|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*collation-definition*|"创建排序规则"|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|"创建索引"|SQL_DIAG_CREATE_INDEX|  
+|*create-table-statement*|"创建表"|SQL_DIAG_CREATE_TABLE|  
+|*create-view-statement*|"创建视图"|SQL_DIAG_CREATE_VIEW|  
+|*cursor-specification*|"选择光标"|SQL_DIAG_SELECT_CURSOR|  
+|*delete-statement-positioned*|"动态删除游标"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-statement-searched*|"删除位置"|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|"放置断言"|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|"DROP 字符集"|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|"删除排序规则"|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain-statement*|"删除域"|SQL_DIAG_DROP_DOMAIN|  
+|*drop-index-statement*|"删除索引"|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|"删除架构"|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-statement*|"删除表"|SQL_DIAG_DROP_TABLE|  
+|*drop-translation-statement*|"删除转换"|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-view-statement*|"删除视图"|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|"授予"|SQL_DIAG_GRANT|
+|*insert-statement*|"插入"|SQL_DIAG_INSERT|  
+|*ODBC-procedure-extension*|"CALL"|SQL_DIAG_ CALL|  
+|*revoke-statement*|"撤销"|SQL_DIAG_REVOKE|  
+|*schema-definition*|"创建架构"|SQL_DIAG_CREATE_SCHEMA|  
+|*translation-definition*|"创建转换"|SQL_DIAG_CREATE_TRANSLATION|  
+|*update-statement-positioned*|"动态更新游标"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update-statement-searched*|"更新的位置"|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*空字符串*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>状态记录的序列  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>状态记录的序列
+
  状态记录都将放置在基于行的行号和诊断的类型的序列。 驱动程序管理器确定要返回其生成的状态记录中的最终顺序。 该驱动程序确定要返回其生成的状态记录中的最终顺序。  
   
  如果诊断记录所发送的驱动程序管理器和驱动程序，驱动程序管理器负责对数据进行排序。  
@@ -254,7 +275,7 @@ n-定义 *|"创建域"|SQL_DIAG_CREATE_DOMAIN|
   
 |有关信息|请参阅|  
 |---------------------------|---------|  
-|获取多个字段的诊断数据结构|[SQLGetDiagRec 函数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|获取多个字段的诊断数据结构|[SQLGetDiagRec 函数](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

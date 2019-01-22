@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397606"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419788"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397606"
   包含有关与查询关联的每个执行计划信息。  
   
 |列名|数据类型|Description|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|主键。|  
 |**query_id**|**bigint**|外键。 加入[sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
 |**plan_group_id**|**bigint**|计划组的 ID。 游标查询通常需要多个 （填充和提取） 计划。 编译在一起的提取计划都在同一个组，然后填充。<br /><br /> 0 表示计划不在组中。|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397606"
 |**last_execution_time**|**datetimeoffset**|上次执行时间的最后一个引用查询计划的结束的时间。|  
 |**avg_compile_duration**|**float**|计划编译统计信息。|  
 |**last_compile_duration**|**bigint**|计划编译统计信息。|  
-|**plan_forcing_type**|**int**|计划强制类型。<br /><br />
-0：无<br /><br />
-1：MANUAL<br /><br />
-2：自动 | |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文本说明。<br /><br />
-NONE:没有计划强制<br /><br />
-手动：由用户强制执行的计划<br /><br />
-自动：计划强制进行自动优化 |
+|**plan_forcing_type**|**int**|计划强制类型。<br /><br />0：无<br /><br />1：MANUAL<br /><br />2：AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文本说明。<br /><br />NONE:没有计划强制<br /><br />手动：由用户强制执行的计划<br /><br />自动：计划强制进行自动优化|  
 
 ## <a name="plan-forcing-limitations"></a>计划强制限制
 查询存储中具有一种可用于强制查询优化器使用特定执行计划的机制。 但是，有些限制可能会阻止计划强制执行。 

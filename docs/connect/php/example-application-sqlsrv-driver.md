@@ -13,12 +13,12 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c47ecfcb9f7c3c321ad91e45fd3db1e4033e680
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8682d8bf38dc32f9eddc50c8bf32113ebf9e516
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677366"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397526"
 ---
 # <a name="example-application-sqlsrv-driver"></a>示例应用程序（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](..
 1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅[开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)。
 2.  将文本档后面列出的代码复制到两个文件中：adventureworks_demo.php 和 photo.php。  
 3.  将 adventureworks_demo.php 和 photo.php 文件放在 Web 服务器的根目录中。  
-4.  运行应用程序通过启动 https://localhost/adventureworks_demo.php从浏览器。  
+4.  运行应用程序通过启动`https://localhost/adventureworks_demo.php`从浏览器。  
   
 ## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  

@@ -24,16 +24,16 @@ helpviewer_keywords:
 - service master key [SQL Server], modifying
 - DROP ENCRYPTION BY SERVICE MASTER KEY phrase
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d4c4f0e7f2ffce588d01f0544263a398ea4549a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7190892a06eb7684b549e38d6cb417b8bddb6ff0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746225"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361477"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ ALTER MASTER KEY <alter_option>
 ## <a name="remarks"></a>Remarks  
  可使用 REGENERATE 选项重新创建数据库主密钥和所有受该主密钥保护的密钥。 首先使用旧的主密钥对这些密钥进行解密，然后使用新的主密钥对它们进行加密。 在不危及主密钥安全性的前提下，应当将这种大量消耗资源的操作安排在资源需求较低的时段执行。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 SMK 的详细信息，请参阅 [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md)。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 SMK 的详细信息，请参阅 [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md)。  
   
  当使用 FORCE 选项时，即使主密钥不可用，或者服务器不能对所有加密的私钥进行解密，该密钥重新生成的过程也会继续执行。 如果主密钥无法打开，则使用 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) 语句从备份中还原主密钥。 请仅在主密钥无法恢复或解密失败时，才使用 FORCE 选项。 仅由不可恢复密钥加密的信息将会丢失。  
   

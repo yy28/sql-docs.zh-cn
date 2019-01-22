@@ -1,7 +1,7 @@
 ---
 title: SQL Server PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 481e31b23dde3f1fd37ac1af513cf7790dc31250
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349652"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420072"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 支持 Windows PowerShell，Windows PowerShell 是一个功能强大的脚本 shell，管理员和开发人员可以通过它自动执行服务器管理和应用程序部署。 与 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本相比，Windows PowerShell 语言能够支持更复杂的逻辑，这使得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理员能够生成强大的管理脚本。 Windows PowerShell 脚本还可用来管理其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 服务器产品， 这为管理员提供一个跨服务器的公用脚本语言。  
@@ -39,8 +39,7 @@ ms.locfileid: "53349652"
 |介绍用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件、打开 PowerShell 会话和加载 `sqlps` 模块的首选机制。 `sqlps` 模块在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet 以及该提供程序和 cmdlet 使用的 SQL Server 管理对象 (SMO) 程序集中加载。|[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)|  
 |介绍如何仅加载 SMO 程序集而不加载提供程序或 cmdlet。|[在 Windows PowerShell 中加载 SMO 程序集](load-the-smo-assemblies-in-windows-powershell.md)|  
 |介绍如何通过右键单击“对象资源管理器”中的节点来运行 Windows PowerShell 会话。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 启动 Windows PowerShell 会话，加载 `sqlps` 模块，并将 SQL Server 提供程序路径设置为选定的对象。|[从 SQL Server Management Studio 中运行 Windows PowerShell](run-windows-powershell-from-sql-server-management-studio.md)|  
-|介绍如何创建运行 Windows PowerShell 脚本的 SQL Server 代理作业步骤。 然后，可以将作业安排在特定时间或响应事件时运行。|[SQL Server 代理中运行 Windows PowerShell 步骤](run-windows-powershell-steps-in-sql-server-agent.md
-)|  
+|介绍如何创建运行 Windows PowerShell 脚本的 SQL Server 代理作业步骤。 然后，可以将作业安排在特定时间或响应事件时运行。|[在 SQL Server 代理中运行 Windows PowerShell 步骤](run-windows-powershell-steps-in-sql-server-agent.md)|  
 |介绍如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序浏览 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。|[SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)|  
 |介绍如何使用指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 操作（如运行 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本）的 [!INCLUDE[tsql](../includes/tsql-md.md)] cmdlet。|[使用数据库引擎 cmdlet](../database-engine/use-the-database-engine-cmdlets.md)|  
 |介绍如何指定包含 Windows PowerShell 不支持的字符的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 分隔标识符。|[PowerShell 中的 SQL Server 标识符](sql-server-identifiers-in-powershell.md)|  

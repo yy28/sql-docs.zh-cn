@@ -1,7 +1,7 @@
 ---
 title: Integration Services 编程概述 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: integration-services
@@ -20,12 +20,12 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2abb71a0c70a8caaacfee79d346f6c7101846a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5a861a1688748fa20f9a160f69fd06d5903e4fb5
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357808"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420142"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的体系结构是将数据移动和转换与包控制流和管理分开。 有两个截然不同的引擎定义此体系结构，对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程可以扩展这两个引擎并使其自动化。 运行时引擎实现控制流和包管理基础结构，该基础结构使开发人员能够控制执行流并为日志记录、事件处理程序和变量设置选项。 数据流引擎是一个专用高性能引擎，专用于提取、转换和加载数据。 对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程时，将针对这两个引擎进行编程。  
@@ -71,9 +71,7 @@ ms.locfileid: "53357808"
 |Microsoft.SqlServer.RuntimeWrapper.dll|包含用于本机运行时引擎的主互操作程序集 (PIA) 或包装。|  
 |Microsoft.SqlServer.PipelineHost.dll|包含托管数据流引擎。|  
 |Microsoft.SqlServer.PipelineWrapper.dll|包含用于本机数据流引擎的主互操作程序集 (PIA) 或包装。|  
-  
-||  
-|-|  
+
 ![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 操作数据 (MDX) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -15,26 +15,34 @@ ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7fe82be443271e1d679e5da6f0db95dc418cd99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02841248c28561183543b4edef1fb97b3f55f6c9
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188637"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419762"
 ---
 # <a name="manipulating-data-mdx"></a>操作数据 (MDX)
-  多维表达式 (MDX) 可用于以多种方式处理数据。 下列主题介绍了 MDX 语言中一些较高级的数据处理概念：  
-  
-## <a name="in-this-section"></a>本节内容  
-  
+
+多维表达式 (MDX) 可用于以多种方式处理数据。 一文中列出此文章涵盖的一些更高级概念的 MDX 语言中的数据操作。
+
+## <a name="in-this-section"></a>本节内容
+
 |主题|Description|  
 |-----------|-----------------|  
-|[使用 DRILLTHROUGH 检索源数据&#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|介绍如何使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 语句检索适用于多维数据源中的某个单元的源数据行集。|  
-|[使用 RollupChildren 函数&#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|讨论产生影响的 MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)
-[脚本搜索和替换] 函数对多维数据的分析。|  
-|[理解传递次序和求解次序&#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|详细说明求解次序的概念，并介绍了此功能如何影响 MDX 表达式、语句和脚本。|  
-  
-## <a name="see-also"></a>请参阅  
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
-  
-  
+|[使用 DRILLTHROUGH 检索源数据 (MDX)](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|介绍如何使用 MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) 语句检索适用于多维数据源中的某个单元的源数据行集。|  
+|[使用 RollupChildren 函数 (MDX)](mdx-data-manipulation-rollupchildren-function.md)|讨论产生影响的 MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)
+|[理解传递顺序和求解次序 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|详细说明求解次序的概念，并介绍了此功能如何影响 MDX 表达式、语句和脚本。|  
+
+<!-- ??
+|[Script for Search and Replace] function on the analysis of multidimensional data.|
+
+GeneMi is removing this commented row because it is unclear what article its link meant to link to.
+Also, I had to add its leading '|' character, for consistency to aid bulk automated updated to our markdown source code.
+
+GeneMi , 2019/01/19
+-->
+
+## <a name="see-also"></a>请参阅
+
+[MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)

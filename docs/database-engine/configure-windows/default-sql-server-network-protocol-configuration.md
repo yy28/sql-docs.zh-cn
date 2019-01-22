@@ -1,7 +1,7 @@
 ---
 title: 默认 SQL Server 网络协议配置 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 197b694f0ff68b459bff7517bbf5701a0452d48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f98a6e019790e7bc4e102a400c6f28f53c344e92
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622085"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419613"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>默认 SQL Server 网络协议配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +32,16 @@ ms.locfileid: "47622085"
 
 下表介绍了安装之后的配置。
 
-版本 | 存在新安装与以前的安装 | 共享内存 | TCP/IP    | Named pipes
+|版本 | 存在新安装与以前的安装 | 共享内存 | TCP/IP | Named pipes|
 | -------- | -- | -- | -- | --  |  
-Enterprise  | 新安装  | 已启用   | 已启用   | 对于网络连接为禁用。
-Standard    | 新安装  | 已启用   | 已启用   | 对于网络连接为禁用。
-Web | 新安装  | 已启用   | 已启用   | 对于网络连接为禁用。
-开发人员   | 新安装  | 已启用   | 禁用  | 对于网络连接为禁用。
-Evaluation  | 新安装  | 已启用   | 已启用   | 对于网络连接为禁用。
-SQL Server Express  | 新安装  | 已启用   | 禁用  | 对于网络连接为禁用。
-所有版本    | 存在以前的安装但未升级。   | 与全新安装相同  | 与全新安装相同  | 与全新安装相同
-所有版本    | 升级   | 已启用   | 保留以前安装中的设置。    | 保留以前安装中的设置。
+|Enterprise | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
+|Standard | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
+|Web | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
+|开发人员 | 新安装 | 已启用 | 禁用 | 对于网络连接为禁用。|
+|Evaluation | 新安装 | 已启用 | 已启用 | 对于网络连接为禁用。|
+|SQL Server Express | 新安装 | 已启用 | 禁用 | 对于网络连接为禁用。|
+|所有版本 | 存在以前的安装但未升级。 | 与全新安装相同 | 与全新安装相同 | 与全新安装相同|
+|所有版本 | 升级 | 已启用 | 保留以前安装中的设置。 | 保留以前安装中的设置。|
 
 
 >[!NOTE]

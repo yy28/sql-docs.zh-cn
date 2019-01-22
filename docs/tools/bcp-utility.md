@@ -1,7 +1,7 @@
 ---
 title: bcp 实用工具 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 375a20488c8f887a89538ee640e059a96da72a99
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
-ms.translationtype: HT
+ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300574"
+ms.locfileid: "54317827"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "54300574"
 
 版本号：15.0 <br>
 生成号：15.0.1000.34<br>
-发布日期2018 年 10 月 18日日
+发布日期：2018 年 10 月 18日日
 
 SQLCMD 的新版本支持 Azure AD 身份验证，包括对 SQL 数据库、 SQL 数据仓库和始终加密功能的多重身份验证 (MFA) 支持。
 新的 BCP 支持 Azure AD 身份验证，包括多重身份验证 (MFA) 支持用于 SQL 数据库和 SQL 数据仓库。
@@ -110,8 +110,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
 </pre></td></tr></table>  
-  
-## <a name="arguments"></a>参数  
+
+## <a name="arguments"></a>参数
+
  _**data\_file**_<a name="data_file"></a>  
  数据文件的完整路径。 将数据批量导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]时，数据文件将包含要复制到指定的表或视图中的数据。 从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中批量导出数据时，数据文件将包含从表或视图中复制的数据。 路径可以有 1 到 255 个字符。 数据文件最多可包含 2^63 - 1 行。  
   
@@ -428,8 +429,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-x**<a name="x"></a>  
  结合使用 **format** 和 **-f** format_file 选项，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 如果不与 **format** 和 **-f** format_file 一起使用，则将生成错误。  
-  
+
 ## 备注<a name="remarks"></a>
+
  使用 **bcp** 工具时，将安装 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 客户端。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的工具，你所使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 13.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 **bcp /v** 命令。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅 Windows 帮助。  
  
 bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=52676)分开下载。  选择 `ENU\x64\MsSqlCmdLnUtils.msi` 或 `ENU\x86\MsSqlCmdLnUtils.msi`。
@@ -442,16 +444,19 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
  有关准备数据以进行批量导入或导出操作的信息，请参阅[准备用于批量导出或导入的数据 (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
  有关何时在事务日志中记录由批量导入执行的行插入操作的信息，请参阅 [《Prerequisites for Minimal Logging in Bulk Import》](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)（批量导入的最小日志记录的先决条件）。  
-  
-## <a name="native-data-file-support"></a>本机数据文件支持  
+
+## <a name="native-data-file-support"></a>本机数据文件支持
+
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， **bcp** 实用工具支持与 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]兼容的本机数据文件。  
-  
-## <a name="computed-columns-and-timestamp-columns"></a>计算列和 timestamp 列  
+
+## <a name="computed-columns-and-timestamp-columns"></a>计算列和 timestamp 列
+
  数据文件中针对计算列或 **timestamp** 列导入的值将被忽略， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动分配该列的值。 如果数据文件不包含表中的计算列或 **timestamp** 列的值，则可使用格式化文件指定应在导入数据时忽略表中的计算列或 **timestamp** 列； [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动分配该列的值。  
   
  计算列和 **timestamp** 列会照常从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 大容量复制到数据文件中。  
-  
-## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>指定包含空格或引号的标识符  
+
+## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>指定包含空格或引号的标识符
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符可以包含嵌入的空格和引号等字符。 此类标识符必须按以下方式处理：  
   
 -   如果在命令指示符处指定的标识符或文件名包含空格或引号，则需用英文双引号 ("") 将该标识符引起来。  
@@ -469,8 +474,9 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
     -   指定 **-q** 选项，或者  
   
     -   将所有者、表或视图的名称括在方括号 ([]) 中，并用引号引起来。  
-  
-## <a name="data-validation"></a>数据验证  
+
+## <a name="data-validation"></a>数据验证
+
  **bcp** 现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。 例如， **bcp** 现在可以验证：  
   
 -   **float** 或 **real** 数据类型的本机表示形式是否有效。  
@@ -478,8 +484,9 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 -   Unicode 数据的字节数是否为偶数。  
   
  可以在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中批量导入的无效数据类型现在可能无法加载。在早期版本中，仅当客户端尝试访问无效数据时才出现失败。 在大容量加载后查询数据时，添加的验证可最大限度地减少警告。  
-  
-## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>批量导出或导入 SQLXML 文档  
+
+## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>批量导出或导入 SQLXML 文档
+
  若要批量导出或导入 SQLXML 数据，请在格式化文件中使用下列数据类型之一。  
   
 |数据类型|效果|  
@@ -487,8 +494,9 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 |SQLCHAR 或 SQLVARYCHAR|在客户端代码页或排序规则隐含的代码页中发送数据。 其效果和指定 **-c** 开关而不指定格式化文件相同。|  
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。 其效果和指定 **-w** 开关而不指定格式化文件相同。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
-  
-## <a name="permissions"></a>Permissions  
+
+## <a name="permissions"></a>Permissions
+
  **bcp out** 操作要求对源表有 SELECT 权限。  
   
  **bcp in** 操作要求至少对目标表有 SELECT/INSERT 权限。 此外，如果下列任一条件成立，则要求拥有 ALTER TABLE 权限：  
@@ -507,8 +515,9 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
   
 > [!NOTE]
 > 要求对目标表具有 ALTER TABLE 权限是 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]的新要求。 如果用户帐户不具有对目标表的 ALTER TABLE 权限，这项新要求有可能导致不强制使用触发器和约束检查的 **bcp** 脚本失败。
-  
-## <a name="character-mode--c-and-native-mode--n-best-practices"></a>字符模式 (-c) 和本机模式 (-n) 最佳做法  
+
+## <a name="character-mode--c-and-native-mode--n-best-practices"></a>字符模式 (-c) 和本机模式 (-n) 最佳做法
+
  本节提供与字符模式 (-c) 和本机模式 (-n) 有关的一些建议。  
   
 -   （管理员/用户）应尽可能使用本机格式 (-n) 以避免分隔符问题。 使用本机格式可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]进行导出和导入。 如果数据将导入到非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库，则使用 -c 或 -w 选项从[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导出数据。  
@@ -516,8 +525,9 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 -   （管理员）在使用 BCP OUT 时验证数据。 例如，在您使用 BCP OUT、BCP IN，然后又使用 BCP OUT 时，请验证数据正确导出，并且终止符值未用作某个数据值的一部分。 请考虑使用随机的十六进制值覆盖默认的终止符（使用 -t 和 -r 选项），以便避免终止符值和数据值之间的冲突。  
   
 -   （用户）使用长且唯一的终止符（任意字节或字符序列）可以最大程度减少与实际字符串值冲突的可能性。 这可以通过使用 -t 和 -r 选项实现。  
-  
-## <a name="examples"></a>示例  
+
+## <a name="examples"></a>示例
+
  本部分包含以下示例：  
  
 -   A. 标识 **bcp** 实用工具版本
@@ -540,6 +550,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 
 
 ### <a name="example-test-conditions"></a>**示例测试条件**
+
 以下示例使用 SQL Server（从 2016 开始）和 Azure SQL 数据库的 `WideWorldImporters` 示例数据库。  `WideWorldImporters` 可以从下载[ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)。  有关用于还原示例数据库的语法，请参阅 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除了另行指定的位置，该示例假定你使用 Windows 身份验证，并且与运行 **bcp** 命令所针对的服务器实例之间具有可信连接。  会在许多示例中使用一个名为 `D:\BCP` 的目录。
 
 下面的脚本创建 `WideWorldImporters.Warehouse.StockItemTransactions` 表的空副本，然后添加主键约束。  在 SQL Server Management Studio (SSMS) 中运行以下 T-SQL 脚本
@@ -694,22 +705,23 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 ```  
 bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
 ```  
-  
-## <a name="additional-examples"></a>其他示例  
+
+## <a name="additional-examples"></a>其他示例
+
 |以下主题包含有关使用 bcp的示例： |
 |---|
-|用于批量导入或导出的数据格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[批量导入数据时保留标识值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />用于导入或导出数据的格式化文件 (SQL Server)）<br />&emsp;&#9679;&emsp;[创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件批量导入数据 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过表列 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过数据字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件将表列映射到数据文件字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[批量导入和导出 XML 文档的示例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
+|用于批量导入或导出的数据格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[批量导入数据时保留标识值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />用于导入或导出数据的格式化文件 (SQL Server)）<br />&emsp;&#9679;&emsp;[创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件批量导入数据 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过表列 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过数据字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件将表列映射到数据文件字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[批量导入和导出 XML 文档的示例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [准备用于批量导出或导入的数据 (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
-  
-  
+ [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+
 ## <a name="feedback"></a>反馈
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 客户端工具论坛](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)

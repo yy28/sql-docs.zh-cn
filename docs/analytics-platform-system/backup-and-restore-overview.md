@@ -6,28 +6,28 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01585c399d648bbc72d7d2811d24b2558b947bff
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e95415c689fda43c2a9d118713c96d0a1d531904
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400600"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419992"
 ---
 # <a name="backup-and-restore"></a>备份和还原
+
 描述数据如何备份和还原为并行数据仓库 (PDW) 的工作原理。 备份和还原操作用于灾难恢复。 备份和还原还可用来将数据库从一个设备复制到另一个设备。  
     
-## <a name="BackupRestoreBasics"></a>备份和还原的基础知识  
+## <a name="BackupRestoreBasics"></a>备份和还原的基础知识
+
 PDW*数据库备份*，以便它可以用于将原始数据库还原到一台设备的格式存储的工具数据库的副本。  
   
 PDW 数据库备份创建与[备份数据库](../t-sql/statements/backup-database-parallel-data-warehouse.md)t-sql 语句，并且用于格式化[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)语句; 它不可用于任何其他用途。 备份只能还原到一台设备具有相同数量或大量的计算节点。  
   
 <!-- MISSING LINKS
-
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
-
 -->
   
 PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server 备份选项已预先配置为使用备份压缩。 不能设置压缩、校验和、块大小和缓冲区计数等备份选项。  
@@ -36,7 +36,8 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
   
 备份 Windows 文件系统中存储备份的服务器上作为一组文件。 PDW 数据库备份只能还原到 PDW。 但是，您可以通过使用标准 Windows 文件备份过程存档数据库备份从备份服务器到另一个位置。 有关备份服务器的详细信息，请参阅[Acquire 和配置备份服务器](acquire-and-configure-backup-server.md)。  
   
-## <a name="BackupTypes"></a>数据库的备份类型  
+## <a name="BackupTypes"></a>数据库的备份类型
+
 有两种类型的需要备份的数据： 用户数据库和系统数据库 （例如，主数据库）。 PDW 不会备份事务日志。  
   
 完整数据库备份是整个 PDW 数据库的备份。 这是默认备份类型。 用户数据库的完整备份包含数据库用户和数据库角色。 主备份包含登录名。  
@@ -49,7 +50,8 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
   
 若要备份整个设备，你需要执行的所有用户数据库的备份和 master 数据库的备份。  
   
-## <a name="BackupProc"></a>数据库备份过程  
+## <a name="BackupProc"></a>数据库备份过程
+
 下图显示数据库备份期间的数据的流。  
   
 ![PDW 备份过程](media/backup-process.png "PDW 备份过程")  
@@ -82,14 +84,16 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
   
     -   在执行还原之前，不能更改备份的名称。 备份目录的名称必须匹配备份的原始名称的名称。 备份的原始名称位于 backup.xml 文件中的备份目录中。 若要将数据库还原到不同的名称，可以在还原命令中指定新名称。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`。  
   
-## <a name="RestoreModes"></a>数据库还原模式  
+## <a name="RestoreModes"></a>数据库还原模式
+
 完整数据库还原重新创建数据库备份中使用的数据的 PDW 数据库。 通过首先还原完整备份，然后根据需要将还原一个差异备份执行数据库还原。 数据库还原包含数据库用户和数据库角色。  
   
 标头仅还原返回数据库的标头信息。 它不会还原到该设备数据。  
   
 将设备还原是还原整个设备。 这包括还原所有用户数据库和 master 数据库。  
   
-## <a name="RestoreProc"></a>还原过程  
+## <a name="RestoreProc"></a>还原过程
+
 下图显示在数据库还原过程中的数据的流。  
   
 ![还原过程](media/restore-process.png "还原过程")  
@@ -130,7 +134,8 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
 |---------------------------|---------------|  
 |为备份服务器准备服务器。|[获取和配置备份服务器 ](acquire-and-configure-backup-server.md)|  
 |备份数据库。|[备份数据库](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|将数据库还原。|[还原数据库](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|将数据库还原。|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 

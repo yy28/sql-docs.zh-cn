@@ -1,7 +1,7 @@
 ---
 title: 元数据 (Master Data Services) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185007"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419883"
 ---
 # <a name="metadata-master-data-services"></a>元数据 (Master Data Services)
   在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，用户定义元数据是您用于描述模型对象的信息。 例如，您可能要跟踪特定模型或实体的所有者，或者跟踪向实体提供数据的源系统。  
@@ -33,7 +33,7 @@ ms.locfileid: "48185007"
 ## <a name="metadata-entities"></a>元数据实体  
  “元数据”模型包括五个实体，每个实体都表示支持用户定义元数据的一种主数据模型对象。 例如，**模型元数据定义**实体包含成员表示模型，并**属性元数据定义**实体具有表示所有模型中的所有属性的成员。  
   
- 为了定义某一模型对象的元数据，您填充其中一个成员的属性。 例如，在**实体元数据定义**实体，您可以填充 Price 成员的 Description 属性与文本：**销售给客户时的产品价格**。  
+ 为了定义某一模型对象的元数据，您填充其中一个成员的属性。 例如，在**实体元数据定义**实体，您可以填充 Price 成员的 Description 属性与文本：**当销售给客户的产品价格**。  
   
  只要添加或删除支持用户定义元数据的模型对象，元数据模型中的成员就会自动更新。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48185007"
 |任务说明|主题|  
 |----------------------|-----------|  
 |向模型对象添加元数据。|[添加元数据&#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>相关内容  
   

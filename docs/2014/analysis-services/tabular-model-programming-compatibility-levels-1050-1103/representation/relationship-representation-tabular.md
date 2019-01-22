@@ -1,7 +1,7 @@
 ---
 title: 关系表示形式 （表格） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,17 +12,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058897"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420152"
 ---
 # <a name="relationship-representation-tabular"></a>关系表示形式（表格）
   关系是两个数据表之间的联系。 该关系确立两个表中的数据应该如何相关。  
   
- 请参阅[关系表示形式 （表格）](relationship-representation-tabular.md)有关如何创建和操作关系表示形式的详细说明。  
+ 有关如何创建和操作关系表示形式的详细说明，请参阅 [Relationship Representation (Tabular)](relationship-representation-tabular.md) 。  
   
 ## <a name="relationship-representation"></a>关系表示形式  
  在表格模型中，两个表之间可以定义多重关系。 如果在两个表之间定义了多重关系，只能将其中一个定义为模型的默认关系，默认关系命名为“活动”关系；其他所有关系都命名为“非活动”关系。  
@@ -32,8 +32,7 @@ ms.locfileid: "48058897"
   
  下面的代码段演示如何在表格模型中创建关系、如何激活关系，以及如何定义表中的主键（而不是“RowNumber”）。 若要创建处于活动状态的关系，需要在关系的主键表 PKTableName 中定义主键（关系中的一方）。在此显示的示例对 PKColumnName 创建了主键（如果此列中未定义主键）。 创建非活动关系时不需要主键列中的主键。  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

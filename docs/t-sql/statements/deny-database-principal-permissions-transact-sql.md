@@ -24,15 +24,15 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 739abfdbf2d25d5df634e7a085c393af9176a659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749365"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327678"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 数据库主体权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. 拒绝应用程序角色对用户的 IMPERSONATE 权限  
- 以下示例拒绝 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 应用程序角色 `IMPERSONATE` 对用户 `HamithaL` 的 `AccountsPayable17` 权限。  
+ 以下示例拒绝 `IMPERSONATE` 应用程序角色 `HamithaL` 对用户 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的 `AccountsPayable17` 权限。  
   
 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   

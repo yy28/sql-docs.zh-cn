@@ -3,17 +3,17 @@ title: 默认 R 和 Python 包库的 SQL Server 机器学习服务
 description: 通过 SQL Server R Services，R Server 机器学习服务 （数据库内） 和机器学习服务器 （独立版） 安装的 R 和 Python 包
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 01/19/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 907932911ef522383678774f596772904f687dc2
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432327"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419852"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server 中的默认 R 和 Python 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53432327"
 
 使用安装 R 包[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)并[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)在安装期间选择 R 功能时。 
 
-包         | 2016 | 2017 | Description |
+|包         | 2016 | 2017 | Description |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | 用于远程计算上下文，流式处理的数据导入和转换、 建模、 可视化和分析的 rx 函数的并行执行。 |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |用于存储过程中包括 R 脚本。 |
@@ -52,7 +52,7 @@ R 支持包括开放源代码，以便可以调用基础 R 函数并安装其他
 
 |发行版本             | R 版本       |
 |--------------------|-----------------|
-| [SQL Server 2016 R 服务](../install/sql-r-services-windows-install.md) | 3.2.2   | 
+| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
 | [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 你应永远不会手动覆盖 SQL Server 安装程序安装在 web 上找到的较新版本的 R 的版本。 Microsoft R 包以在特定版本的。 修改您的安装可能会破坏稳定性它。
@@ -89,9 +89,9 @@ SQL Server 2017 机器学习是具有 R 和 Python 支持的第一个版本。
 
 |版本和语言  | 默认路径|
 |----------------------|------------|
-| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library|
-| 使用 R 的 SQL Server 2017|C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library |
-| 与 Python 配合使用的 SQL Server 2017 |C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Lib\site 包 |
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| 使用 R 的 SQL Server 2017|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+| 与 Python 配合使用的 SQL Server 2017 |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>独立服务器安装的的文件路径
@@ -100,7 +100,7 @@ SQL Server 2017 机器学习是具有 R 和 Python 支持的第一个版本。
 
 |版本| 安装|默认路径|
 |-------|-------------|------------|
-| SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL server\130\r_server 位置|
+| SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|机器学习服务器，使用 R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
 |SQL Server 2017|机器学习服务器，与 Python 配合使用 |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1476efcf0060344279a1bd78a25057e25c54bb2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5eb2b34e078d6fa48b3b9bc8e0be6b1b6c367732
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519787"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361507"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  无法更改要应用 block 谓词的操作，因为该操作用于唯一标识该谓词。 相反，必须删除该谓词，并为新操作添加一个新的谓词。  
   
  WITH ( STATE = { ON | OFF } )  
- 使安全策略能够或禁止其对目标表强制执行其安全谓词。 如果不指定，则正在创建的安全性策略会被禁用。  
+ 使安全策略能够或禁止其对目标表强制执行其安全谓词。 如果未指定，则将启用正在创建的安全性策略。  
   
  NOT FOR REPLICATION  
  指示当复制代理修改目标对象时不应执行安全策略。 有关详细信息，请参阅[控制同步期间触发器和约束的行为（复制 Transact-SQL 编程）](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  

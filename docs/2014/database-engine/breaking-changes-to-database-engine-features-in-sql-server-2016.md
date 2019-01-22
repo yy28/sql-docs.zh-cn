@@ -1,7 +1,7 @@
 ---
 title: 重大更改数据库引擎 SQL Server 2014 中的功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375269"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420202"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的重大更改
   本主题介绍中的重大更改[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]及更早版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -42,7 +42,6 @@ ms.locfileid: "53375269"
 |ALTER TABLE|ALTER TABLE 语句只允许两部分的表名称 (schema.object)。 在编译时出现错误 117 失败，指定表名现在使用以下格式：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在早期版本中指定格式 server.database.schema.table 会返回错误 4902。 指定格式 .database.schema.table 或 ..schema.table 则会成功。 要解决此问题，请不要使用 4 部分的前缀。|  
 |浏览元数据|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 查询视图时，现在会返回视图的元数据而非基础对象的元数据。 此行为现在匹配浏览元数据的其他方法。|  
 |SOUNDEX|数据库兼容级别为 110 时，SOUNDEX 函数实现的新规则可能导致由该函数计算的值不同于更低兼容级别时计算的值。 在升级到兼容性级别 110 后，可能需要重新生成使用 SOUNDEX 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX (Transact-SQL)](/sql/t-sql/functions/soundex-transact-sql)
- .|  
 |失败的 DML 语句的行计数消息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，DML 语句失败时，[!INCLUDE[ssDE](../includes/ssde-md.md)] 将以一致方式将包含 RowCount:0 的 TDS DONE 令牌发送到客户端。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本中，当 TRY-CATCH 块包含失败的 DML 语句并且该语句由[!INCLUDE[ssDE](../includes/ssde-md.md)]自动参数化或 TRY-CATCH 块所处的级别不同于失败语句的级别时，会向客户端发送不正确的值 -1。 例如，如果 TRY-CATCH 块调用存储过程且该过程中的 DML 语句失败，客户端将错误地收到 -1 值。<br /><br /> 依赖这种不正确行为的应用程序将失败。|  
 |SERVERPROPERTY (Edition)|所安装的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 实例的产品版本。 使用该属性的值确定已安装的产品支持的功能和限制（如最大 CPU 数）。<br /><br /> 根据安装的 Enterprise 版，此方法可返回 Enterprise Edition 或 Enterprise Edition:基于内核授予许可。 根据单个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的最大计算能力来区分 Enterprise 版本。 有关详细信息中的计算能力限制[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，请参阅[Compute Capacity Limits by Edition 的 SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '`*密码*`' HASHED`选项不能用于创建的哈希[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]7 或更早版本。|  
@@ -57,7 +56,7 @@ ms.locfileid: "53375269"
 |sys.dm_os_memory_cache_entries|列 pages_allocated_count 列已重命名为的 pages_kb。|  
 |sys.dm_os_memory_clerks|已删除列 multi_pages_kb。<br /><br /> 列 single_pages_kb 列已重命名为的 pages_kb。|  
 |sys.dm_os_memory_nodes|已重命名以下列：<br /><br /> single_pages_kb 现在是： <br />                            pages_kb<br /><br /> multi_pages_kb 现在是： <br />                            foreign_committed_kb|  
-|sys.dm_os_memory_objects|以下列已重命名。<br /><br /> pages_allocated_count 现在是：<br />                            pages_in_bytes<br /><br /> 现已 max_pages_allocated_count: max_pages_in_bytes|  
+|sys.dm_os_memory_objects|以下列已重命名。<br /><br /> pages_allocated_count 现在是：<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count is now: max_pages_in_bytes|  
 |sys.dm_os_sys_info|已重命名以下列：<br /><br /> physical_memory_in_bytes 现在是： <br />                            physical_memory_kb<br /><br /> bpool_commit_target 现在是： <br />                            committed_target_kb<br /><br /> 现在，bpool_visible 是： <br />                            visible_target_kb<br /><br /> virtual_memory_in_bytes 现在是： <br />                            virtual_memory_kb<br /><br /> bpool_commited 现在是：<br />                            committed_kb|  
 |sys.dm_os_workers|区域设置列已删除。|  
   
@@ -189,9 +188,9 @@ ms.locfileid: "53375269"
   
  以下函数都将新行为所述上方时，才默认命名空间 URI 对应于最终建议中的命名空间，即[ http://www.w3.org/2005/xpath-functions ](http://www.w3.org/2005/xpath-functions)。 数据库兼容性级别为 110 或更高时，默认情况下 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 将默认函数命名空间绑定到此命名空间。 但是，无论兼容性级别如何，使用此命名空间时，这些函数都将具有新行为。  
   
--   **fn: string 的长度**  
+-   **fn:string-length**  
   
--   **fn: substring**  
+-   **fn:substring**  
   
 ##  <a name="KJKatmai"></a> 重大更改，在 SQL Server 2008/SQL Server 2008R2  
  本节包含 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中引入的重大更改。 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中未引入任何更改。  

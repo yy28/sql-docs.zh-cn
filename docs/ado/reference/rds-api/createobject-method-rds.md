@@ -14,12 +14,12 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599528"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419922"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 创建目标业务对象的代理，并返回的指针。 用来与业务对象的通信通过 Internet 发送的请求和数据服务器端存根 （stub） 代理包和封送数据。 对于进程内组件对象，不使用代理，提供只需指向对象的指针。  
@@ -28,17 +28,17 @@ ms.locfileid: "51599528"
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
- 远程数据服务支持以下协议： HTTP、 HTTPS (安全套接字层的 HTTP)、 DCOM 和进程内。  
+ 远程数据服务支持以下协议：HTTP、 HTTPS (安全套接字层的 HTTP)、 DCOM 和进程内。  
   
 |协议|语法|  
 |--------------|------------|  
-|HTTP|集对象 = DataSpace.CreateObject ("ProgId"，"https://awebsrvr")|  
-|HTTPS|集对象 = DataSpace.CreateObject ("ProgId"，"https://awebsrvr")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>Parameters  
- *对象*  
+ *Object*  
  计算结果为一个对象，它在指定的类型的对象变量*ProgID*。  
   
  *DataSpace*  

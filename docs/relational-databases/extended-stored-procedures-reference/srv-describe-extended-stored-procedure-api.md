@@ -20,12 +20,12 @@ ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f7e179c654418ea1c6a0f5d208f4cecebdadd91
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de810e283429f36c52258a53b22addff96be8ba1
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670547"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419893"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ srcdata
  如果应用程序中的列名为 Unicode 格式，则在调用 srv_describe 前需要将该列名转换为服务器的多字节代码页。 有关详细信息，请参阅 [Unicode 数据和服务器代码页](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md)。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [srv_sendrow（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   

@@ -1,7 +1,7 @@
 ---
 title: 使用 AlwaysOn 策略查看可用性组 (SQL Server) 的运行状况 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,12 +12,12 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ff043a40449664385360b073451b0217727a5c0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355233"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420122"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 策略查看可用性组的运行状况 (SQL Server)
   本主题说明在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 通过 AlwaysOn 策略确定 AlwaysOn 可用性组的运行状况。 有关 AlwaysOn 基于策略的管理的信息，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
@@ -61,9 +61,10 @@ ms.locfileid: "53355233"
   
      例如，以下命令显示服务器实例 `Computer\Instance`上运行状况状态为“Error”的所有可用性组。  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups `   
-    | Test-SqlAvailabilityGroup | Where-Object { $_.HealthState -eq "Error" }  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups |
+        Test-SqlAvailabilityGroup |
+        Where-Object { $_.HealthState -eq "Error" }  
     ```  
   
      `Test-SqlAvailabilityReplica`  
@@ -71,7 +72,7 @@ ms.locfileid: "53355233"
   
      例如，以下命令评估可用性组 `MyReplica` 中名为 `MyAg` 的可用性副本的运行状况并输出简短摘要。  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityReplica `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
@@ -81,9 +82,9 @@ ms.locfileid: "53355233"
   
      例如，以下命令评估可用性组 `MyAg` 中所有可用性数据库的运行状况并输出各数据库的简短摘要。  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates `   
-     | Test-SqlDatabaseReplicaState  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates |
+        Test-SqlDatabaseReplicaState  
     ```  
   
      这些 cmdlet 接受以下选项：  
@@ -98,11 +99,10 @@ ms.locfileid: "53355233"
   
      例如，以下 `Test-SqlAvailabilityGroup` 命令指定 `-ShowPolicyDetails` 参数，以为在名为 `MyAg` 的可用性组上执行的每个基于策略的管理 (PBM) 策略显示此 cmdlet 执行的每个策略评估结果。  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityGroup `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName `  
     -ShowPolicyDetails  
-  
     ```  
   
     > [!NOTE]  
@@ -117,13 +117,13 @@ ms.locfileid: "53355233"
 ##  <a name="RelatedContent"></a> 相关内容  
  **SQL Server AlwaysOn 团队博客监视 AlwaysOn 运行状况使用 PowerShell:**  
   
--   [第 1 部分：基本 Cmdlet 概述](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+-   [第 1 部分：Basic Cmdlet Overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)（使用 PowerShell 监视 Always On 运行状况 - 第 1 部分：基本 cmdlet 概述）  
   
--   [第 2 部分：高级的 Cmdlet 用法](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+-   [第 2 部分：Advanced Cmdlet Usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)（使用 PowerShell 监视 Always On 运行状况 - 第 2 部分：高级 cmdlet 用法）  
   
--   [第 3 部分：一个简单的监视应用程序](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [第 3 部分：A Simple Monitoring Application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)（使用 PowerShell 监视 Always On 运行状况 - 第 3 部分：简单的监视应用程序）  
   
--   [第 4 部分：与 SQL Server 代理集成](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+-   [第 4 部分：Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)（使用 PowerShell 监视 Always On 运行状况 - 第 4 部分：与 SQL Server 代理集成）  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

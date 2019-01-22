@@ -14,18 +14,18 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aba0eeb6d3d6450a0493a4cf06a8c58bb21d23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655995"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419732"
 ---
 # <a name="installing-the-software-odbc"></a>安装软件 (ODBC)
 > [!IMPORTANT]  
 >  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
   
- Oracle ODBC 驱动程序是数据访问组件之一。 它随附其他 ODBC 组件，如 ODBC 数据源管理器中，并应已安装。 该驱动程序还可以在下找到"驱动程序和其他下载"在 www.microsoft.com 上的 Microsoft 产品支持服务联机 Web 站点上。  
+ Oracle ODBC 驱动程序是数据访问组件之一。 它随附其他 ODBC 组件，如 ODBC 数据源管理器中，并应已安装。 该驱动程序还可在"驱动程序和其他下载"Microsoft 产品支持服务联机 Web 站点上[www.microsoft.com](https://www.microsoft.com)。  
   
  根据其自身的文档，必须安装网络软件。 Oracle ODBC 驱动程序需要任何特殊安装注意事项，只要支持网络软件。  
   

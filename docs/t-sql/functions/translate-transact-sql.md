@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,19 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 591d2dcbb8a14cff7e4595bdeeab93787f51c5cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980113"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419872"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 在第二个参数中指定的某些字符转换为第三个参数中指定的字符目标集后，返回作为第一个参数提供的字符串。
 
-## <a name="syntax"></a>语法   
+## <a name="syntax"></a>语法
+
 ```
 TRANSLATE ( inputString, characters, translations) 
 ```
@@ -45,7 +47,8 @@ TRANSLATE ( inputString, characters, translations)
 转换   
  是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同。
 
-## <a name="return-types"></a>返回类型   
+## <a name="return-types"></a>返回类型
+
 返回与 `inputString`（第二个参数中的字符被替换为第三个参数中的匹配字符）具有相同数据类型的字符表达式。
 
 ## <a name="remarks"></a>Remarks   
@@ -57,15 +60,19 @@ TRANSLATE ( inputString, characters, translations)
 
 `TRANSLATE` 始终可以感知 SC 排序规则。
 
-## <a name="examples"></a>示例   
+## <a name="examples"></a>示例
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 将方括号和大括号替换为圆括号    
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 将方括号和大括号替换为圆括号
+
 以下查询将输入字符串中的方括号和大括号替换为圆括号：
-```
+
+```sql
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-```
+
+```plain_text
 2*(3+4)/(7-2)
 ```
 
@@ -98,8 +105,10 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. 将 GeoJSON 点转换为 WKT    
-GeoJSON 格式可用于对各种地理数据结构进行编码。 通过 `TRANSLATE` 函数，开发人员可以轻松地将 GeoJSON 点转换为 WKT 格式，反之亦然。 以下查询将输入中的方括号和大括号替换为圆括号：   
+###  <a name="b-convert-geojson-points-into-wkt"></a>B. 将 GeoJSON 点转换为 WKT
+
+GeoJSON 格式可用于对各种地理数据结构进行编码。 通过 `TRANSLATE` 函数，开发人员可以轻松地将 GeoJSON 点转换为 WKT 格式，反之亦然。 以下查询将输入中的方括号和大括号替换为圆括号：
+
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -107,11 +116,9 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-
 |点  |坐标 |  
----------|--------- |
-(137.4  72.3) |[137.4,72.3] |
-
+|---------|--------- |
+|(137.4  72.3) |[137.4,72.3] |
 
 ### <a name="c-use-the-translate-function"></a>C. 使用 TRANSLATE 函数
 
@@ -128,6 +135,7 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
 
 
 ## <a name="see-also"></a>另请参阅
+
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  

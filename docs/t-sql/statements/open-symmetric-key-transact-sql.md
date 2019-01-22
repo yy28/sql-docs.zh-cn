@@ -16,15 +16,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b5fbd7c16e5150c9d547699c26038e435f1e96c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749582"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327588"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
 -   DECRYPTION BY CERTIFICATE：具有对证书的 CONTROL 权限并且知道加密其私钥的密码。  
   
--   DECRYPTION BY ASYMMETRIC KEY：具有对非对称密钥的 CONTROL 权限并知道加密其私钥的密码。  
+-   DECRYPTION BY ASYMMETRIC KEY：具有对非对称密钥的 CONTROL 权限并且知道加密其私钥的密码。  
   
 -   DECRYPTION BY PASSWORD：知道用于加密对称密钥的密码之一。  
   

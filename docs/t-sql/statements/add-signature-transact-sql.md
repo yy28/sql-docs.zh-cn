@@ -15,15 +15,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6a1c422dd7ae2c190f844b70c5a780c0390f86e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812283"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327908"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 通过使用已签名的 BLOB 对存储过程进行签名  
- 下面的示例创建一个新数据库，并创建要在示例中使用的证书。 该示例创建一个简单的存储过程并且对该存储过程进行签名，并且从 `sys.crypt_properties` 检索该签名 BLOB。 最后，将删除并再次添加该签名。 该示例通过使用 WITH SIGNATURE 语法对该工程进行签名。  
+ 下面的示例创建一个新数据库，并创建要在示例中使用的证书。 该示例创建一个简单的存储过程并对其进行签名，然后从 `sys.crypt_properties` 检索该签名 BLOB。 最后，将删除并再次添加该签名。 该示例通过使用 WITH SIGNATURE 语法对该工程进行签名。  
   
 ```  
 CREATE DATABASE TestSignature ;  
